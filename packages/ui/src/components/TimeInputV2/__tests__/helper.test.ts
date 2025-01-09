@@ -32,13 +32,11 @@ describe('Helper functions dateInput', () => {
       h: '01',
       m: '23',
       s: '45',
-      period: 'am',
     })
     expect(formatValue(value2, 24)).toStrictEqual({
       h: '14',
       m: '23',
       s: '45',
-      period: 'pm',
     })
     expect(formatValue(value2, 12)).toStrictEqual({
       h: '02',

@@ -12,7 +12,7 @@ const DEFAULT_VALUE = {
 
 describe('TimeInput', () => {
   test('renders correctly with base props', () =>
-    shouldMatchEmotionSnapshot(<TimeInputV2 />))
+    shouldMatchEmotionSnapshot(<TimeInputV2 label="label" />))
 
   test('renders correctly disabled', () =>
     shouldMatchEmotionSnapshot(<TimeInputV2 label="test" disabled />))

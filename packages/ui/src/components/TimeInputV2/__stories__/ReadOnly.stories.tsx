@@ -4,4 +4,5 @@ export const ReadOnly = Template.bind({})
 
 ReadOnly.args = {
   readOnly: true,
+  label: 'ReadOnly',
 }

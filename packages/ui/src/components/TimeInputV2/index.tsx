@@ -2,13 +2,21 @@ import styled from '@emotion/styled'
 import { AlertCircleIcon, AsteriskIcon } from '@ultraviolet/icons'
 import type { FocusEvent, ReactNode } from 'react'
 import { useEffect, useRef, useState } from 'react'
+import type { LabelProp } from '../../types'
 import { Button } from '../Button'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
-import { EMPTY_TIME, INPUT_SIZE_HEIGHT } from './constants'
+import {
+  DEFAULT_PLACEHOLDER,
+  EMPTY_TIME_12,
+  EMPTY_TIME_24,
+  INPUT_SIZE_HEIGHT,
+  TIME_KEYS,
+} from './constants'
 import {
   canConcat,
   formatValue,
+  getLastTypedChar,
   isAOrP,
   isCompleteHour,
   isNumber,
@@ -20,8 +28,6 @@ export type Time = {
   s: string
   period?: string
 }
-
-const timeKeys: ('h' | 'm' | 's')[] = ['h', 'm', 's']
 
 const TimeInputWrapper = styled(Stack)<{
   'data-readonly': boolean
@@ -46,6 +52,10 @@ const TimeInputWrapper = styled(Stack)<{
   [data-disabled="false"]:focus {
     border-color: ${({ theme }) => theme.colors.primary.borderHover};
     outline: none;
+  }
+
+  &:focus-within {
+    border-color: ${({ theme }) => theme.colors.primary.borderHover};
   }
 
   &[data-size='small'] {
@@ -90,8 +100,6 @@ const TimeInputWrapper = styled(Stack)<{
 
 export const Input = styled.input<{
   'data-size': 'small' | 'medium' | 'large'
-  'data-readonly': boolean
-  'data-disabled': boolean
   'data-period'?: boolean
 }>`
   border: none;
@@ -103,27 +111,28 @@ export const Input = styled.input<{
   text-align: center;
   border-radius: ${({ theme }) => theme.radii.default};
   color: ${({ theme }) => theme.colors.neutral.text};
+  caret-color: transparent;
 
   &[data-size='large'] {
     font-size: ${({ theme }) => theme.typography.body.fontSize};
   }
 
-  &:not([data-disabled="true"]):not([data-readonly="true"]):hover {
+  &:not(:disabled):hover {
     background-color: ${({ theme }) => theme.colors.neutral.backgroundHover};
     color: ${({ theme }) => theme.colors.neutral.textWeak};
   }
 
-  &:not([data-disabled="true"]):not([data-readonly="true"]):active, 
-  :not([data-disabled="true"]):not([data-readonly="true"]):focus{
+  &:not(:disabled):active, 
+  :not(:disabled):focus{
     background-color: ${({ theme }) => theme.colors.neutral.backgroundStrong};
     color:  ${({ theme }) => theme.colors.neutral.text};
   }
 
-  &[data-readonly='true'] {
+  &:read-only {
     cursor: default;
   }
 
-  &[data-disabled='true'] {
+  &:disabled {
     cursor: not-allowed;
     user-select: none;
   }
@@ -146,27 +155,29 @@ padding-inline: ${({ theme }) => theme.space['0.25']};
 `
 
 type TimeInputProps = {
-  label?: ReactNode
   placeholder?: Time
   value?: Time
   clearable?: boolean
   required?: boolean
   labelDescription?: ReactNode
-  helper?: string
+  helper?: ReactNode
   disabled?: boolean
   readOnly?: boolean
   error?: boolean | string
   'data-testid'?: string
-  onChange?: (time: Time, timePeriod?: string) => void
+  onChange?: (value: Time, valuePeriod?: string) => void
   onBlur?: (event: FocusEvent<HTMLInputElement>) => void
   onFocus?: (event: FocusEvent<HTMLInputElement>) => void
   className?: string
   id?: string
   size?: 'small' | 'medium' | 'large'
   timeFormat?: 12 | 24
-}
+  /**
+   * Automatically focus on the element on render. Autofocus is applied to the hour input
+   */
+  autoFocus?: boolean
+} & LabelProp
 
-const DEFAULT_PLACEHOLDER = { h: '00', m: '00', s: '00' } as const
 /**
  * A time input component that allows users to type a time in a 24 or 12-hour format.
  * @experimental This component is experimental and may be subject to breaking changes in the future.
@@ -188,11 +199,13 @@ export const TimeInputV2 = ({
   onFocus,
   className,
   id,
+  autoFocus,
   'data-testid': dataTestId,
   placeholder = DEFAULT_PLACEHOLDER,
 }: TimeInputProps) => {
+  const correctEmpty = timeFormat === 24 ? EMPTY_TIME_24 : EMPTY_TIME_12
   const [time, setTime] = useState<Time>(
-    value ? formatValue(value, timeFormat) : EMPTY_TIME,
+    value ? formatValue(value, timeFormat) : correctEmpty,
   )
 
   const refHours = useRef<HTMLInputElement>(null)
@@ -229,7 +242,7 @@ export const TimeInputV2 = ({
       } else if (
         type === 'm' &&
         newValue.m &&
-        Number.parseInt(newValue.m, 10) >= 10
+        Number.parseInt(newValue.m, 10) >= 6
       ) {
         refSeconds.current?.focus()
       }
@@ -309,7 +322,7 @@ export const TimeInputV2 = ({
   }
 
   return (
-    <Stack gap={0.5} className={className} id={id} data-testid={dataTestId}>
+    <Stack gap={0.5} className={className}>
       <Stack direction="row" gap={1} alignItems="center">
         <Text as="label" prominence="strong" sentiment="neutral" variant="body">
           {label}
@@ -320,9 +333,6 @@ export const TimeInputV2 = ({
             {labelDescription}
           </Text>
         ) : null}
-        {labelDescription && typeof labelDescription !== 'string'
-          ? labelDescription
-          : null}
       </Stack>
       <TimeInputWrapper
         data-readonly={readOnly}
@@ -335,9 +345,12 @@ export const TimeInputV2 = ({
         onBlur={onBlur}
         onFocus={onFocus}
         aria-required={required}
+        onClick={() => refHours.current?.focus()}
+        id={id}
+        data-testid={dataTestId}
       >
         <Stack direction="row">
-          {timeKeys.map(type => {
+          {TIME_KEYS.map(type => {
             const computedRef = () => {
               if (type === 'h') return refHours
               if (type === 'm') return refMinutes
@@ -351,22 +364,43 @@ export const TimeInputV2 = ({
               return 'seconds'
             }
 
+            const computeMaxValue = () => {
+              if (type === 'h' && timeFormat === 12) return 12
+              if (type === 'h' && timeFormat === 24) return 23
+
+              return 59
+            }
+
             return (
-              <Stack key={type} gap={0} direction="row">
+              <Stack key={type} direction="row">
                 <Input
                   value={time[type]}
                   placeholder={placeholder[type]}
                   data-size={size}
-                  data-disabled={disabled}
-                  data-readonly={readOnly}
-                  readOnly
+                  readOnly={readOnly}
                   disabled={disabled}
                   aria-label={`${fullName()}-input`}
                   data-testid={`${fullName()}-input`}
+                  onClick={event => {
+                    event.stopPropagation()
+                  }}
+                  ref={computedRef()}
+                  role="spinbutton"
+                  aria-valuemax={computeMaxValue()}
+                  aria-valuemin={type === 'h' && timeFormat === 12 ? 1 : 0}
+                  aria-valuenow={Number.parseInt(time[type], 10)}
+                  onChange={event => {
+                    if (!readOnly && !disabled) {
+                      const key = getLastTypedChar(
+                        event.target.value,
+                        time[type],
+                      )
+                      if (isNumber(key)) handleChange(type, key)
+                    }
+                  }}
                   onKeyDown={event => {
                     if (!readOnly && !disabled) {
-                      if (isNumber(event.key)) handleChange(type, event.key)
-                      else if (event.key === 'ArrowUp') {
+                      if (event.key === 'ArrowUp') {
                         event.preventDefault()
                         handleIncrease(type)
                       } else if (event.key === 'ArrowDown') {
@@ -381,7 +415,7 @@ export const TimeInputV2 = ({
                       }
                     }
                   }}
-                  ref={computedRef()}
+                  autoFocus={autoFocus && type === 'h'}
                 />
                 {type === 's' ? null : (
                   <CustomText
@@ -399,22 +433,22 @@ export const TimeInputV2 = ({
           {timeFormat === 12 ? (
             <Input
               value={time.period?.toUpperCase()}
-              placeholder={placeholder.period ?? '-M'}
+              placeholder={placeholder.period ?? 'AM'}
               data-size={size}
-              data-disabled={disabled}
-              data-readonly={readOnly}
               data-period
-              readOnly
+              readOnly={readOnly}
               disabled={disabled}
               aria-label="am-pm-input"
               data-testid="am-pm-input"
+              onChange={event => {
+                if (!readOnly && !disabled) {
+                  const key = event.target.value.slice(-1)
+                  if (isAOrP(key)) handleChange('period', key)
+                }
+              }}
               onKeyDown={event => {
                 if (!readOnly && !disabled) {
-                  if (isAOrP(event.key)) handleChange('period', event.key)
-                  else if (
-                    event.key === 'ArrowUp' ||
-                    event.key === 'ArrowDown'
-                  ) {
+                  if (event.key === 'ArrowUp' || event.key === 'ArrowDown') {
                     event.preventDefault()
                     const newTime = {
                       ...time,
@@ -430,28 +464,36 @@ export const TimeInputV2 = ({
                 }
               }}
               ref={refPeriod}
+              onClick={event => event.stopPropagation()}
+              role="spinbutton"
+              aria-valuemax={12}
+              aria-valuemin={0}
+              aria-valuenow={time.period === 'am' ? 0 : 12}
+              aria-valuetext={time.period}
             />
           ) : null}
         </Stack>
-        <Stack direction="row" alignItems="center" gap="1">
-          {error ? <AlertCircleIcon sentiment="danger" /> : null}
-          {clearable ? (
-            <Button
-              aria-label="clear value"
-              disabled={disabled || readOnly}
-              variant="ghost"
-              size="small"
-              icon="close"
-              onClick={event => {
-                event.stopPropagation()
-                setTime(EMPTY_TIME)
-                onChange?.(EMPTY_TIME)
-              }}
-              sentiment="neutral"
-              data-testid="clear"
-            />
-          ) : null}
-        </Stack>
+        {error || clearable ? (
+          <Stack direction="row" alignItems="center" gap="1">
+            {error ? <AlertCircleIcon sentiment="danger" /> : null}
+            {clearable ? (
+              <Button
+                aria-label="clear value"
+                disabled={disabled || readOnly}
+                variant="ghost"
+                size="small"
+                icon="close"
+                onClick={event => {
+                  event.stopPropagation()
+                  setTime(correctEmpty)
+                  onChange?.(correctEmpty)
+                }}
+                sentiment="neutral"
+                data-testid="clear"
+              />
+            ) : null}
+          </Stack>
+        ) : null}
       </TimeInputWrapper>
       {helper || error ? (
         <Text

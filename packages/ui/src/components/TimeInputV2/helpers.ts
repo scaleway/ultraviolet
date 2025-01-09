@@ -56,12 +56,35 @@ export const formatValue = (
     period?: string
   },
   timeFormat: 24 | 12,
-) => ({
-  h: format(value.h, timeFormat, true),
-  m: format(value.m, timeFormat),
-  s: format(value.s, timeFormat),
-  period: computePeriod(
-    value.h,
-    value.period === 'am' || value.period === 'pm' ? value.period : undefined,
-  ),
-})
+) => {
+  const formattedTime: {
+    h: string
+    m: string
+    s: string
+    period?: string
+  } = {
+    h: format(value.h, timeFormat, true),
+    m: format(value.m, timeFormat),
+    s: format(value.s, timeFormat),
+  }
+
+  if (timeFormat === 12) {
+    formattedTime.period = computePeriod(
+      value.h,
+      value.period === 'am' || value.period === 'pm' ? value.period : undefined,
+    )
+  }
+
+  return formattedTime
+}
+
+export const getLastTypedChar = (value: string, oldValue: string) => {
+  // Detect the newly typed character(s)
+  for (let i = 0; i < value.length; i += 1) {
+    if (oldValue[i] !== value[i]) {
+      return value[i]
+    }
+  }
+
+  return ''
+}

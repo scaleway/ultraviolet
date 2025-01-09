@@ -183,6 +183,10 @@ exports[`TimeInput > renders can move with arrow keys - 12-hour format 1`] = `
   outline: none;
 }
 
+.emotion-8:focus-within {
+  border-color: #792dd4;
+}
+
 .emotion-8[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
@@ -268,6 +272,10 @@ exports[`TimeInput > renders can move with arrow keys - 12-hour format 1`] = `
   outline: none;
 }
 
+.emotion-8:focus-within {
+  border-color: #792dd4;
+}
+
 .emotion-8[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
@@ -366,28 +374,33 @@ exports[`TimeInput > renders can move with arrow keys - 12-hour format 1`] = `
   text-align: center;
   border-radius: 0.25rem;
   color: #3f4250;
+  caret-color: transparent;
 }
 
 .emotion-14[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-14:not([data-disabled="true"]):not([data-readonly="true"]):hover {
+.emotion-14:not(:disabled):hover {
   background-color: #e9eaeb;
   color: #727683;
 }
 
-.emotion-14:not([data-disabled="true"]):not([data-readonly="true"]):active,
-.emotion-14:not([data-disabled="true"]):not([data-readonly="true"]):focus {
+.emotion-14:not(:disabled):active,
+.emotion-14:not(:disabled):focus {
   background-color: #e9eaeb;
   color: #3f4250;
 }
 
-.emotion-14[data-readonly='true'] {
+.emotion-14:-moz-read-only {
   cursor: default;
 }
 
-.emotion-14[data-disabled='true'] {
+.emotion-14:read-only {
+  cursor: default;
+}
+
+.emotion-14:disabled {
   cursor: not-allowed;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -417,28 +430,33 @@ exports[`TimeInput > renders can move with arrow keys - 12-hour format 1`] = `
   text-align: center;
   border-radius: 0.25rem;
   color: #3f4250;
+  caret-color: transparent;
 }
 
 .emotion-14[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-14:not([data-disabled="true"]):not([data-readonly="true"]):hover {
+.emotion-14:not(:disabled):hover {
   background-color: #e9eaeb;
   color: #727683;
 }
 
-.emotion-14:not([data-disabled="true"]):not([data-readonly="true"]):active,
-.emotion-14:not([data-disabled="true"]):not([data-readonly="true"]):focus {
+.emotion-14:not(:disabled):active,
+.emotion-14:not(:disabled):focus {
   background-color: #e9eaeb;
   color: #3f4250;
 }
 
-.emotion-14[data-readonly='true'] {
+.emotion-14:-moz-read-only {
   cursor: default;
 }
 
-.emotion-14[data-disabled='true'] {
+.emotion-14:read-only {
+  cursor: default;
+}
+
+.emotion-14:disabled {
   cursor: not-allowed;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -484,7 +502,7 @@ exports[`TimeInput > renders can move with arrow keys - 12-hour format 1`] = `
   padding-inline: 0.125rem;
 }
 
-.emotion-34 {
+.emotion-32 {
   color: #727683;
   font-size: 0.75rem;
   font-family: Inter,Asap,sans-serif;
@@ -496,7 +514,7 @@ exports[`TimeInput > renders can move with arrow keys - 12-hour format 1`] = `
   text-decoration: none;
 }
 
-.emotion-34 {
+.emotion-32 {
   color: #727683;
   font-size: 0.75rem;
   font-family: Inter,Asap,sans-serif;
@@ -543,13 +561,14 @@ exports[`TimeInput > renders can move with arrow keys - 12-hour format 1`] = `
           >
             <input
               aria-label="hours-input"
+              aria-valuemax="12"
+              aria-valuemin="1"
+              aria-valuenow="12"
               class="emotion-14 emotion-15"
-              data-disabled="false"
-              data-readonly="false"
               data-size="medium"
               data-testid="hours-input"
               placeholder="00"
-              readonly=""
+              role="spinbutton"
               value="12"
             />
             <span
@@ -563,13 +582,14 @@ exports[`TimeInput > renders can move with arrow keys - 12-hour format 1`] = `
           >
             <input
               aria-label="minutes-input"
+              aria-valuemax="59"
+              aria-valuemin="0"
+              aria-valuenow="23"
               class="emotion-14 emotion-15"
-              data-disabled="false"
-              data-readonly="false"
               data-size="medium"
               data-testid="minutes-input"
               placeholder="00"
-              readonly=""
+              role="spinbutton"
               value="23"
             />
             <span
@@ -583,35 +603,35 @@ exports[`TimeInput > renders can move with arrow keys - 12-hour format 1`] = `
           >
             <input
               aria-label="seconds-input"
+              aria-valuemax="59"
+              aria-valuemin="0"
+              aria-valuenow="14"
               class="emotion-14 emotion-15"
-              data-disabled="false"
-              data-readonly="false"
               data-size="medium"
               data-testid="seconds-input"
               placeholder="00"
-              readonly=""
+              role="spinbutton"
               value="14"
             />
           </div>
           <input
             aria-label="am-pm-input"
+            aria-valuemax="12"
+            aria-valuemin="0"
+            aria-valuenow="12"
+            aria-valuetext="pm"
             class="emotion-14 emotion-15"
-            data-disabled="false"
             data-period="true"
-            data-readonly="false"
             data-size="medium"
             data-testid="am-pm-input"
-            placeholder="-M"
-            readonly=""
+            placeholder="AM"
+            role="spinbutton"
             value="PM"
           />
         </div>
-        <div
-          class="emotion-2 emotion-1"
-        />
       </div>
       <p
-        class="emotion-34 emotion-5"
+        class="emotion-32 emotion-5"
       >
         helper
       </p>
@@ -803,6 +823,10 @@ exports[`TimeInput > renders can move with arrow keys - 24-hour format 1`] = `
   outline: none;
 }
 
+.emotion-8:focus-within {
+  border-color: #792dd4;
+}
+
 .emotion-8[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
@@ -888,6 +912,10 @@ exports[`TimeInput > renders can move with arrow keys - 24-hour format 1`] = `
   outline: none;
 }
 
+.emotion-8:focus-within {
+  border-color: #792dd4;
+}
+
 .emotion-8[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
@@ -986,28 +1014,33 @@ exports[`TimeInput > renders can move with arrow keys - 24-hour format 1`] = `
   text-align: center;
   border-radius: 0.25rem;
   color: #3f4250;
+  caret-color: transparent;
 }
 
 .emotion-14[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-14:not([data-disabled="true"]):not([data-readonly="true"]):hover {
+.emotion-14:not(:disabled):hover {
   background-color: #e9eaeb;
   color: #727683;
 }
 
-.emotion-14:not([data-disabled="true"]):not([data-readonly="true"]):active,
-.emotion-14:not([data-disabled="true"]):not([data-readonly="true"]):focus {
+.emotion-14:not(:disabled):active,
+.emotion-14:not(:disabled):focus {
   background-color: #e9eaeb;
   color: #3f4250;
 }
 
-.emotion-14[data-readonly='true'] {
+.emotion-14:-moz-read-only {
   cursor: default;
 }
 
-.emotion-14[data-disabled='true'] {
+.emotion-14:read-only {
+  cursor: default;
+}
+
+.emotion-14:disabled {
   cursor: not-allowed;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1037,28 +1070,33 @@ exports[`TimeInput > renders can move with arrow keys - 24-hour format 1`] = `
   text-align: center;
   border-radius: 0.25rem;
   color: #3f4250;
+  caret-color: transparent;
 }
 
 .emotion-14[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-14:not([data-disabled="true"]):not([data-readonly="true"]):hover {
+.emotion-14:not(:disabled):hover {
   background-color: #e9eaeb;
   color: #727683;
 }
 
-.emotion-14:not([data-disabled="true"]):not([data-readonly="true"]):active,
-.emotion-14:not([data-disabled="true"]):not([data-readonly="true"]):focus {
+.emotion-14:not(:disabled):active,
+.emotion-14:not(:disabled):focus {
   background-color: #e9eaeb;
   color: #3f4250;
 }
 
-.emotion-14[data-readonly='true'] {
+.emotion-14:-moz-read-only {
   cursor: default;
 }
 
-.emotion-14[data-disabled='true'] {
+.emotion-14:read-only {
+  cursor: default;
+}
+
+.emotion-14:disabled {
   cursor: not-allowed;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1299,13 +1337,14 @@ exports[`TimeInput > renders can move with arrow keys - 24-hour format 1`] = `
           >
             <input
               aria-label="hours-input"
+              aria-valuemax="23"
+              aria-valuemin="0"
+              aria-valuenow="23"
               class="emotion-14 emotion-15"
-              data-disabled="false"
-              data-readonly="false"
               data-size="medium"
               data-testid="hours-input"
               placeholder="00"
-              readonly=""
+              role="spinbutton"
               value="23"
             />
             <span
@@ -1319,13 +1358,14 @@ exports[`TimeInput > renders can move with arrow keys - 24-hour format 1`] = `
           >
             <input
               aria-label="minutes-input"
+              aria-valuemax="59"
+              aria-valuemin="0"
+              aria-valuenow="23"
               class="emotion-14 emotion-15"
-              data-disabled="false"
-              data-readonly="false"
               data-size="medium"
               data-testid="minutes-input"
               placeholder="00"
-              readonly=""
+              role="spinbutton"
               value="23"
             />
             <span
@@ -1339,13 +1379,14 @@ exports[`TimeInput > renders can move with arrow keys - 24-hour format 1`] = `
           >
             <input
               aria-label="seconds-input"
+              aria-valuemax="59"
+              aria-valuemin="0"
+              aria-valuenow="14"
               class="emotion-14 emotion-15"
-              data-disabled="false"
-              data-readonly="false"
               data-size="medium"
               data-testid="seconds-input"
               placeholder="00"
-              readonly=""
+              role="spinbutton"
               value="14"
             />
           </div>
@@ -1484,6 +1525,10 @@ exports[`TimeInput > renders correctly clearable 1`] = `
   outline: none;
 }
 
+.emotion-6:focus-within {
+  border-color: #792dd4;
+}
+
 .emotion-6[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
@@ -1559,28 +1604,33 @@ exports[`TimeInput > renders correctly clearable 1`] = `
   text-align: center;
   border-radius: 0.25rem;
   color: #3f4250;
+  caret-color: transparent;
 }
 
 .emotion-12[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-12:not([data-disabled="true"]):not([data-readonly="true"]):hover {
+.emotion-12:not(:disabled):hover {
   background-color: #e9eaeb;
   color: #727683;
 }
 
-.emotion-12:not([data-disabled="true"]):not([data-readonly="true"]):active,
-.emotion-12:not([data-disabled="true"]):not([data-readonly="true"]):focus {
+.emotion-12:not(:disabled):active,
+.emotion-12:not(:disabled):focus {
   background-color: #e9eaeb;
   color: #3f4250;
 }
 
-.emotion-12[data-readonly='true'] {
+.emotion-12:-moz-read-only {
   cursor: default;
 }
 
-.emotion-12[data-disabled='true'] {
+.emotion-12:read-only {
+  cursor: default;
+}
+
+.emotion-12:disabled {
   cursor: not-allowed;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1711,13 +1761,14 @@ exports[`TimeInput > renders correctly clearable 1`] = `
           >
             <input
               aria-label="hours-input"
+              aria-valuemax="23"
+              aria-valuemin="0"
+              aria-valuenow="NaN"
               class="emotion-12 emotion-13"
-              data-disabled="false"
-              data-readonly="false"
               data-size="medium"
               data-testid="hours-input"
               placeholder="00"
-              readonly=""
+              role="spinbutton"
               value=""
             />
             <span
@@ -1731,13 +1782,14 @@ exports[`TimeInput > renders correctly clearable 1`] = `
           >
             <input
               aria-label="minutes-input"
+              aria-valuemax="59"
+              aria-valuemin="0"
+              aria-valuenow="NaN"
               class="emotion-12 emotion-13"
-              data-disabled="false"
-              data-readonly="false"
               data-size="medium"
               data-testid="minutes-input"
               placeholder="00"
-              readonly=""
+              role="spinbutton"
               value=""
             />
             <span
@@ -1751,13 +1803,14 @@ exports[`TimeInput > renders correctly clearable 1`] = `
           >
             <input
               aria-label="seconds-input"
+              aria-valuemax="59"
+              aria-valuemin="0"
+              aria-valuenow="NaN"
               class="emotion-12 emotion-13"
-              data-disabled="false"
-              data-readonly="false"
               data-size="medium"
               data-testid="seconds-input"
               placeholder="00"
-              readonly=""
+              role="spinbutton"
               value=""
             />
           </div>
@@ -1971,6 +2024,10 @@ exports[`TimeInput > renders correctly clearable 2`] = `
   outline: none;
 }
 
+.emotion-8:focus-within {
+  border-color: #792dd4;
+}
+
 .emotion-8[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
@@ -2056,6 +2113,10 @@ exports[`TimeInput > renders correctly clearable 2`] = `
   outline: none;
 }
 
+.emotion-8:focus-within {
+  border-color: #792dd4;
+}
+
 .emotion-8[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
@@ -2154,28 +2215,33 @@ exports[`TimeInput > renders correctly clearable 2`] = `
   text-align: center;
   border-radius: 0.25rem;
   color: #3f4250;
+  caret-color: transparent;
 }
 
 .emotion-14[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-14:not([data-disabled="true"]):not([data-readonly="true"]):hover {
+.emotion-14:not(:disabled):hover {
   background-color: #e9eaeb;
   color: #727683;
 }
 
-.emotion-14:not([data-disabled="true"]):not([data-readonly="true"]):active,
-.emotion-14:not([data-disabled="true"]):not([data-readonly="true"]):focus {
+.emotion-14:not(:disabled):active,
+.emotion-14:not(:disabled):focus {
   background-color: #e9eaeb;
   color: #3f4250;
 }
 
-.emotion-14[data-readonly='true'] {
+.emotion-14:-moz-read-only {
   cursor: default;
 }
 
-.emotion-14[data-disabled='true'] {
+.emotion-14:read-only {
+  cursor: default;
+}
+
+.emotion-14:disabled {
   cursor: not-allowed;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -2205,28 +2271,33 @@ exports[`TimeInput > renders correctly clearable 2`] = `
   text-align: center;
   border-radius: 0.25rem;
   color: #3f4250;
+  caret-color: transparent;
 }
 
 .emotion-14[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-14:not([data-disabled="true"]):not([data-readonly="true"]):hover {
+.emotion-14:not(:disabled):hover {
   background-color: #e9eaeb;
   color: #727683;
 }
 
-.emotion-14:not([data-disabled="true"]):not([data-readonly="true"]):active,
-.emotion-14:not([data-disabled="true"]):not([data-readonly="true"]):focus {
+.emotion-14:not(:disabled):active,
+.emotion-14:not(:disabled):focus {
   background-color: #e9eaeb;
   color: #3f4250;
 }
 
-.emotion-14[data-readonly='true'] {
+.emotion-14:-moz-read-only {
   cursor: default;
 }
 
-.emotion-14[data-disabled='true'] {
+.emotion-14:read-only {
+  cursor: default;
+}
+
+.emotion-14:disabled {
   cursor: not-allowed;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -2467,13 +2538,14 @@ exports[`TimeInput > renders correctly clearable 2`] = `
           >
             <input
               aria-label="hours-input"
+              aria-valuemax="12"
+              aria-valuemin="1"
+              aria-valuenow="NaN"
               class="emotion-14 emotion-15"
-              data-disabled="false"
-              data-readonly="false"
               data-size="medium"
               data-testid="hours-input"
               placeholder="00"
-              readonly=""
+              role="spinbutton"
               value=""
             />
             <span
@@ -2487,13 +2559,14 @@ exports[`TimeInput > renders correctly clearable 2`] = `
           >
             <input
               aria-label="minutes-input"
+              aria-valuemax="59"
+              aria-valuemin="0"
+              aria-valuenow="NaN"
               class="emotion-14 emotion-15"
-              data-disabled="false"
-              data-readonly="false"
               data-size="medium"
               data-testid="minutes-input"
               placeholder="00"
-              readonly=""
+              role="spinbutton"
               value=""
             />
             <span
@@ -2507,26 +2580,29 @@ exports[`TimeInput > renders correctly clearable 2`] = `
           >
             <input
               aria-label="seconds-input"
+              aria-valuemax="59"
+              aria-valuemin="0"
+              aria-valuenow="NaN"
               class="emotion-14 emotion-15"
-              data-disabled="false"
-              data-readonly="false"
               data-size="medium"
               data-testid="seconds-input"
               placeholder="00"
-              readonly=""
+              role="spinbutton"
               value=""
             />
           </div>
           <input
             aria-label="am-pm-input"
+            aria-valuemax="12"
+            aria-valuemin="0"
+            aria-valuenow="12"
+            aria-valuetext=""
             class="emotion-14 emotion-15"
-            data-disabled="false"
             data-period="true"
-            data-readonly="false"
             data-size="medium"
             data-testid="am-pm-input"
-            placeholder="-M"
-            readonly=""
+            placeholder="AM"
+            role="spinbutton"
             value=""
           />
         </div>
@@ -2744,6 +2820,10 @@ exports[`TimeInput > renders correctly controlled - 12-hour format 1`] = `
   outline: none;
 }
 
+.emotion-8:focus-within {
+  border-color: #792dd4;
+}
+
 .emotion-8[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
@@ -2829,6 +2909,10 @@ exports[`TimeInput > renders correctly controlled - 12-hour format 1`] = `
   outline: none;
 }
 
+.emotion-8:focus-within {
+  border-color: #792dd4;
+}
+
 .emotion-8[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
@@ -2927,28 +3011,33 @@ exports[`TimeInput > renders correctly controlled - 12-hour format 1`] = `
   text-align: center;
   border-radius: 0.25rem;
   color: #3f4250;
+  caret-color: transparent;
 }
 
 .emotion-14[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-14:not([data-disabled="true"]):not([data-readonly="true"]):hover {
+.emotion-14:not(:disabled):hover {
   background-color: #e9eaeb;
   color: #727683;
 }
 
-.emotion-14:not([data-disabled="true"]):not([data-readonly="true"]):active,
-.emotion-14:not([data-disabled="true"]):not([data-readonly="true"]):focus {
+.emotion-14:not(:disabled):active,
+.emotion-14:not(:disabled):focus {
   background-color: #e9eaeb;
   color: #3f4250;
 }
 
-.emotion-14[data-readonly='true'] {
+.emotion-14:-moz-read-only {
   cursor: default;
 }
 
-.emotion-14[data-disabled='true'] {
+.emotion-14:read-only {
+  cursor: default;
+}
+
+.emotion-14:disabled {
   cursor: not-allowed;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -2978,28 +3067,33 @@ exports[`TimeInput > renders correctly controlled - 12-hour format 1`] = `
   text-align: center;
   border-radius: 0.25rem;
   color: #3f4250;
+  caret-color: transparent;
 }
 
 .emotion-14[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-14:not([data-disabled="true"]):not([data-readonly="true"]):hover {
+.emotion-14:not(:disabled):hover {
   background-color: #e9eaeb;
   color: #727683;
 }
 
-.emotion-14:not([data-disabled="true"]):not([data-readonly="true"]):active,
-.emotion-14:not([data-disabled="true"]):not([data-readonly="true"]):focus {
+.emotion-14:not(:disabled):active,
+.emotion-14:not(:disabled):focus {
   background-color: #e9eaeb;
   color: #3f4250;
 }
 
-.emotion-14[data-readonly='true'] {
+.emotion-14:-moz-read-only {
   cursor: default;
 }
 
-.emotion-14[data-disabled='true'] {
+.emotion-14:read-only {
+  cursor: default;
+}
+
+.emotion-14:disabled {
   cursor: not-allowed;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -3045,7 +3139,7 @@ exports[`TimeInput > renders correctly controlled - 12-hour format 1`] = `
   padding-inline: 0.125rem;
 }
 
-.emotion-34 {
+.emotion-32 {
   color: #727683;
   font-size: 0.75rem;
   font-family: Inter,Asap,sans-serif;
@@ -3057,7 +3151,7 @@ exports[`TimeInput > renders correctly controlled - 12-hour format 1`] = `
   text-decoration: none;
 }
 
-.emotion-34 {
+.emotion-32 {
   color: #727683;
   font-size: 0.75rem;
   font-family: Inter,Asap,sans-serif;
@@ -3104,13 +3198,14 @@ exports[`TimeInput > renders correctly controlled - 12-hour format 1`] = `
           >
             <input
               aria-label="hours-input"
+              aria-valuemax="12"
+              aria-valuemin="1"
+              aria-valuenow="12"
               class="emotion-14 emotion-15"
-              data-disabled="false"
-              data-readonly="false"
               data-size="medium"
               data-testid="hours-input"
               placeholder="00"
-              readonly=""
+              role="spinbutton"
               value="12"
             />
             <span
@@ -3124,13 +3219,14 @@ exports[`TimeInput > renders correctly controlled - 12-hour format 1`] = `
           >
             <input
               aria-label="minutes-input"
+              aria-valuemax="59"
+              aria-valuemin="0"
+              aria-valuenow="23"
               class="emotion-14 emotion-15"
-              data-disabled="false"
-              data-readonly="false"
               data-size="medium"
               data-testid="minutes-input"
               placeholder="00"
-              readonly=""
+              role="spinbutton"
               value="23"
             />
             <span
@@ -3144,35 +3240,35 @@ exports[`TimeInput > renders correctly controlled - 12-hour format 1`] = `
           >
             <input
               aria-label="seconds-input"
+              aria-valuemax="59"
+              aria-valuemin="0"
+              aria-valuenow="7"
               class="emotion-14 emotion-15"
-              data-disabled="false"
-              data-readonly="false"
               data-size="medium"
               data-testid="seconds-input"
               placeholder="00"
-              readonly=""
+              role="spinbutton"
               value="07"
             />
           </div>
           <input
             aria-label="am-pm-input"
+            aria-valuemax="12"
+            aria-valuemin="0"
+            aria-valuenow="0"
+            aria-valuetext="am"
             class="emotion-14 emotion-15"
-            data-disabled="false"
             data-period="true"
-            data-readonly="false"
             data-size="medium"
             data-testid="am-pm-input"
-            placeholder="-M"
-            readonly=""
+            placeholder="AM"
+            role="spinbutton"
             value="AM"
           />
         </div>
-        <div
-          class="emotion-2 emotion-1"
-        />
       </div>
       <p
-        class="emotion-34 emotion-5"
+        class="emotion-32 emotion-5"
       >
         helper
       </p>
@@ -3364,6 +3460,10 @@ exports[`TimeInput > renders correctly controlled - 24-hours format 1`] = `
   outline: none;
 }
 
+.emotion-8:focus-within {
+  border-color: #792dd4;
+}
+
 .emotion-8[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
@@ -3449,6 +3549,10 @@ exports[`TimeInput > renders correctly controlled - 24-hours format 1`] = `
   outline: none;
 }
 
+.emotion-8:focus-within {
+  border-color: #792dd4;
+}
+
 .emotion-8[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
@@ -3547,28 +3651,33 @@ exports[`TimeInput > renders correctly controlled - 24-hours format 1`] = `
   text-align: center;
   border-radius: 0.25rem;
   color: #3f4250;
+  caret-color: transparent;
 }
 
 .emotion-14[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-14:not([data-disabled="true"]):not([data-readonly="true"]):hover {
+.emotion-14:not(:disabled):hover {
   background-color: #e9eaeb;
   color: #727683;
 }
 
-.emotion-14:not([data-disabled="true"]):not([data-readonly="true"]):active,
-.emotion-14:not([data-disabled="true"]):not([data-readonly="true"]):focus {
+.emotion-14:not(:disabled):active,
+.emotion-14:not(:disabled):focus {
   background-color: #e9eaeb;
   color: #3f4250;
 }
 
-.emotion-14[data-readonly='true'] {
+.emotion-14:-moz-read-only {
   cursor: default;
 }
 
-.emotion-14[data-disabled='true'] {
+.emotion-14:read-only {
+  cursor: default;
+}
+
+.emotion-14:disabled {
   cursor: not-allowed;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -3598,28 +3707,33 @@ exports[`TimeInput > renders correctly controlled - 24-hours format 1`] = `
   text-align: center;
   border-radius: 0.25rem;
   color: #3f4250;
+  caret-color: transparent;
 }
 
 .emotion-14[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-14:not([data-disabled="true"]):not([data-readonly="true"]):hover {
+.emotion-14:not(:disabled):hover {
   background-color: #e9eaeb;
   color: #727683;
 }
 
-.emotion-14:not([data-disabled="true"]):not([data-readonly="true"]):active,
-.emotion-14:not([data-disabled="true"]):not([data-readonly="true"]):focus {
+.emotion-14:not(:disabled):active,
+.emotion-14:not(:disabled):focus {
   background-color: #e9eaeb;
   color: #3f4250;
 }
 
-.emotion-14[data-readonly='true'] {
+.emotion-14:-moz-read-only {
   cursor: default;
 }
 
-.emotion-14[data-disabled='true'] {
+.emotion-14:read-only {
+  cursor: default;
+}
+
+.emotion-14:disabled {
   cursor: not-allowed;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -3665,7 +3779,7 @@ exports[`TimeInput > renders correctly controlled - 24-hours format 1`] = `
   padding-inline: 0.125rem;
 }
 
-.emotion-32 {
+.emotion-30 {
   color: #727683;
   font-size: 0.75rem;
   font-family: Inter,Asap,sans-serif;
@@ -3677,7 +3791,7 @@ exports[`TimeInput > renders correctly controlled - 24-hours format 1`] = `
   text-decoration: none;
 }
 
-.emotion-32 {
+.emotion-30 {
   color: #727683;
   font-size: 0.75rem;
   font-family: Inter,Asap,sans-serif;
@@ -3724,13 +3838,14 @@ exports[`TimeInput > renders correctly controlled - 24-hours format 1`] = `
           >
             <input
               aria-label="hours-input"
+              aria-valuemax="23"
+              aria-valuemin="0"
+              aria-valuenow="23"
               class="emotion-14 emotion-15"
-              data-disabled="false"
-              data-readonly="false"
               data-size="medium"
               data-testid="hours-input"
               placeholder="00"
-              readonly=""
+              role="spinbutton"
               value="23"
             />
             <span
@@ -3744,13 +3859,14 @@ exports[`TimeInput > renders correctly controlled - 24-hours format 1`] = `
           >
             <input
               aria-label="minutes-input"
+              aria-valuemax="59"
+              aria-valuemin="0"
+              aria-valuenow="32"
               class="emotion-14 emotion-15"
-              data-disabled="false"
-              data-readonly="false"
               data-size="medium"
               data-testid="minutes-input"
               placeholder="00"
-              readonly=""
+              role="spinbutton"
               value="32"
             />
             <span
@@ -3764,23 +3880,21 @@ exports[`TimeInput > renders correctly controlled - 24-hours format 1`] = `
           >
             <input
               aria-label="seconds-input"
+              aria-valuemax="59"
+              aria-valuemin="0"
+              aria-valuenow="31"
               class="emotion-14 emotion-15"
-              data-disabled="false"
-              data-readonly="false"
               data-size="medium"
               data-testid="seconds-input"
               placeholder="00"
-              readonly=""
+              role="spinbutton"
               value="31"
             />
           </div>
         </div>
-        <div
-          class="emotion-2 emotion-1"
-        />
       </div>
       <p
-        class="emotion-32 emotion-5"
+        class="emotion-30 emotion-5"
       >
         helper
       </p>
@@ -3892,6 +4006,10 @@ exports[`TimeInput > renders correctly disabled 1`] = `
   outline: none;
 }
 
+.emotion-6:focus-within {
+  border-color: #792dd4;
+}
+
 .emotion-6[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
@@ -3967,28 +4085,33 @@ exports[`TimeInput > renders correctly disabled 1`] = `
   text-align: center;
   border-radius: 0.25rem;
   color: #3f4250;
+  caret-color: transparent;
 }
 
 .emotion-12[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-12:not([data-disabled="true"]):not([data-readonly="true"]):hover {
+.emotion-12:not(:disabled):hover {
   background-color: #e9eaeb;
   color: #727683;
 }
 
-.emotion-12:not([data-disabled="true"]):not([data-readonly="true"]):active,
-.emotion-12:not([data-disabled="true"]):not([data-readonly="true"]):focus {
+.emotion-12:not(:disabled):active,
+.emotion-12:not(:disabled):focus {
   background-color: #e9eaeb;
   color: #3f4250;
 }
 
-.emotion-12[data-readonly='true'] {
+.emotion-12:-moz-read-only {
   cursor: default;
 }
 
-.emotion-12[data-disabled='true'] {
+.emotion-12:read-only {
+  cursor: default;
+}
+
+.emotion-12:disabled {
   cursor: not-allowed;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -4051,14 +4174,15 @@ exports[`TimeInput > renders correctly disabled 1`] = `
           >
             <input
               aria-label="hours-input"
+              aria-valuemax="23"
+              aria-valuemin="0"
+              aria-valuenow="NaN"
               class="emotion-12 emotion-13"
-              data-disabled="true"
-              data-readonly="false"
               data-size="medium"
               data-testid="hours-input"
               disabled=""
               placeholder="00"
-              readonly=""
+              role="spinbutton"
               value=""
             />
             <span
@@ -4072,14 +4196,15 @@ exports[`TimeInput > renders correctly disabled 1`] = `
           >
             <input
               aria-label="minutes-input"
+              aria-valuemax="59"
+              aria-valuemin="0"
+              aria-valuenow="NaN"
               class="emotion-12 emotion-13"
-              data-disabled="true"
-              data-readonly="false"
               data-size="medium"
               data-testid="minutes-input"
               disabled=""
               placeholder="00"
-              readonly=""
+              role="spinbutton"
               value=""
             />
             <span
@@ -4093,21 +4218,19 @@ exports[`TimeInput > renders correctly disabled 1`] = `
           >
             <input
               aria-label="seconds-input"
+              aria-valuemax="59"
+              aria-valuemin="0"
+              aria-valuenow="NaN"
               class="emotion-12 emotion-13"
-              data-disabled="true"
-              data-readonly="false"
               data-size="medium"
               data-testid="seconds-input"
               disabled=""
               placeholder="00"
-              readonly=""
+              role="spinbutton"
               value=""
             />
           </div>
         </div>
-        <div
-          class="emotion-2 emotion-1"
-        />
       </div>
     </div>
   </div>
@@ -4217,6 +4340,10 @@ exports[`TimeInput > renders correctly large 1`] = `
   outline: none;
 }
 
+.emotion-6:focus-within {
+  border-color: #792dd4;
+}
+
 .emotion-6[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
@@ -4292,28 +4419,33 @@ exports[`TimeInput > renders correctly large 1`] = `
   text-align: center;
   border-radius: 0.25rem;
   color: #3f4250;
+  caret-color: transparent;
 }
 
 .emotion-12[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-12:not([data-disabled="true"]):not([data-readonly="true"]):hover {
+.emotion-12:not(:disabled):hover {
   background-color: #e9eaeb;
   color: #727683;
 }
 
-.emotion-12:not([data-disabled="true"]):not([data-readonly="true"]):active,
-.emotion-12:not([data-disabled="true"]):not([data-readonly="true"]):focus {
+.emotion-12:not(:disabled):active,
+.emotion-12:not(:disabled):focus {
   background-color: #e9eaeb;
   color: #3f4250;
 }
 
-.emotion-12[data-readonly='true'] {
+.emotion-12:-moz-read-only {
   cursor: default;
 }
 
-.emotion-12[data-disabled='true'] {
+.emotion-12:read-only {
+  cursor: default;
+}
+
+.emotion-12:disabled {
   cursor: not-allowed;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -4376,13 +4508,14 @@ exports[`TimeInput > renders correctly large 1`] = `
           >
             <input
               aria-label="hours-input"
+              aria-valuemax="23"
+              aria-valuemin="0"
+              aria-valuenow="NaN"
               class="emotion-12 emotion-13"
-              data-disabled="false"
-              data-readonly="false"
               data-size="large"
               data-testid="hours-input"
               placeholder="00"
-              readonly=""
+              role="spinbutton"
               value=""
             />
             <span
@@ -4396,13 +4529,14 @@ exports[`TimeInput > renders correctly large 1`] = `
           >
             <input
               aria-label="minutes-input"
+              aria-valuemax="59"
+              aria-valuemin="0"
+              aria-valuenow="NaN"
               class="emotion-12 emotion-13"
-              data-disabled="false"
-              data-readonly="false"
               data-size="large"
               data-testid="minutes-input"
               placeholder="00"
-              readonly=""
+              role="spinbutton"
               value=""
             />
             <span
@@ -4416,20 +4550,18 @@ exports[`TimeInput > renders correctly large 1`] = `
           >
             <input
               aria-label="seconds-input"
+              aria-valuemax="59"
+              aria-valuemin="0"
+              aria-valuenow="NaN"
               class="emotion-12 emotion-13"
-              data-disabled="false"
-              data-readonly="false"
               data-size="large"
               data-testid="seconds-input"
               placeholder="00"
-              readonly=""
+              role="spinbutton"
               value=""
             />
           </div>
         </div>
-        <div
-          class="emotion-2 emotion-1"
-        />
       </div>
     </div>
   </div>
@@ -4539,6 +4671,10 @@ exports[`TimeInput > renders correctly readOnly 1`] = `
   outline: none;
 }
 
+.emotion-6:focus-within {
+  border-color: #792dd4;
+}
+
 .emotion-6[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
@@ -4614,28 +4750,33 @@ exports[`TimeInput > renders correctly readOnly 1`] = `
   text-align: center;
   border-radius: 0.25rem;
   color: #3f4250;
+  caret-color: transparent;
 }
 
 .emotion-12[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-12:not([data-disabled="true"]):not([data-readonly="true"]):hover {
+.emotion-12:not(:disabled):hover {
   background-color: #e9eaeb;
   color: #727683;
 }
 
-.emotion-12:not([data-disabled="true"]):not([data-readonly="true"]):active,
-.emotion-12:not([data-disabled="true"]):not([data-readonly="true"]):focus {
+.emotion-12:not(:disabled):active,
+.emotion-12:not(:disabled):focus {
   background-color: #e9eaeb;
   color: #3f4250;
 }
 
-.emotion-12[data-readonly='true'] {
+.emotion-12:-moz-read-only {
   cursor: default;
 }
 
-.emotion-12[data-disabled='true'] {
+.emotion-12:read-only {
+  cursor: default;
+}
+
+.emotion-12:disabled {
   cursor: not-allowed;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -4698,13 +4839,15 @@ exports[`TimeInput > renders correctly readOnly 1`] = `
           >
             <input
               aria-label="hours-input"
+              aria-valuemax="23"
+              aria-valuemin="0"
+              aria-valuenow="NaN"
               class="emotion-12 emotion-13"
-              data-disabled="false"
-              data-readonly="true"
               data-size="medium"
               data-testid="hours-input"
               placeholder="00"
               readonly=""
+              role="spinbutton"
               value=""
             />
             <span
@@ -4718,13 +4861,15 @@ exports[`TimeInput > renders correctly readOnly 1`] = `
           >
             <input
               aria-label="minutes-input"
+              aria-valuemax="59"
+              aria-valuemin="0"
+              aria-valuenow="NaN"
               class="emotion-12 emotion-13"
-              data-disabled="false"
-              data-readonly="true"
               data-size="medium"
               data-testid="minutes-input"
               placeholder="00"
               readonly=""
+              role="spinbutton"
               value=""
             />
             <span
@@ -4738,20 +4883,19 @@ exports[`TimeInput > renders correctly readOnly 1`] = `
           >
             <input
               aria-label="seconds-input"
+              aria-valuemax="59"
+              aria-valuemin="0"
+              aria-valuenow="NaN"
               class="emotion-12 emotion-13"
-              data-disabled="false"
-              data-readonly="true"
               data-size="medium"
               data-testid="seconds-input"
               placeholder="00"
               readonly=""
+              role="spinbutton"
               value=""
             />
           </div>
         </div>
-        <div
-          class="emotion-2 emotion-1"
-        />
       </div>
     </div>
   </div>
@@ -4875,6 +5019,10 @@ exports[`TimeInput > renders correctly required 1`] = `
   outline: none;
 }
 
+.emotion-8:focus-within {
+  border-color: #792dd4;
+}
+
 .emotion-8[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
@@ -4950,28 +5098,33 @@ exports[`TimeInput > renders correctly required 1`] = `
   text-align: center;
   border-radius: 0.25rem;
   color: #3f4250;
+  caret-color: transparent;
 }
 
 .emotion-14[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-14:not([data-disabled="true"]):not([data-readonly="true"]):hover {
+.emotion-14:not(:disabled):hover {
   background-color: #e9eaeb;
   color: #727683;
 }
 
-.emotion-14:not([data-disabled="true"]):not([data-readonly="true"]):active,
-.emotion-14:not([data-disabled="true"]):not([data-readonly="true"]):focus {
+.emotion-14:not(:disabled):active,
+.emotion-14:not(:disabled):focus {
   background-color: #e9eaeb;
   color: #3f4250;
 }
 
-.emotion-14[data-readonly='true'] {
+.emotion-14:-moz-read-only {
   cursor: default;
 }
 
-.emotion-14[data-disabled='true'] {
+.emotion-14:read-only {
+  cursor: default;
+}
+
+.emotion-14:disabled {
   cursor: not-allowed;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -5043,13 +5196,14 @@ exports[`TimeInput > renders correctly required 1`] = `
           >
             <input
               aria-label="hours-input"
+              aria-valuemax="23"
+              aria-valuemin="0"
+              aria-valuenow="NaN"
               class="emotion-14 emotion-15"
-              data-disabled="false"
-              data-readonly="false"
               data-size="medium"
               data-testid="hours-input"
               placeholder="00"
-              readonly=""
+              role="spinbutton"
               value=""
             />
             <span
@@ -5063,13 +5217,14 @@ exports[`TimeInput > renders correctly required 1`] = `
           >
             <input
               aria-label="minutes-input"
+              aria-valuemax="59"
+              aria-valuemin="0"
+              aria-valuenow="NaN"
               class="emotion-14 emotion-15"
-              data-disabled="false"
-              data-readonly="false"
               data-size="medium"
               data-testid="minutes-input"
               placeholder="00"
-              readonly=""
+              role="spinbutton"
               value=""
             />
             <span
@@ -5083,20 +5238,18 @@ exports[`TimeInput > renders correctly required 1`] = `
           >
             <input
               aria-label="seconds-input"
+              aria-valuemax="59"
+              aria-valuemin="0"
+              aria-valuenow="NaN"
               class="emotion-14 emotion-15"
-              data-disabled="false"
-              data-readonly="false"
               data-size="medium"
               data-testid="seconds-input"
               placeholder="00"
-              readonly=""
+              role="spinbutton"
               value=""
             />
           </div>
         </div>
-        <div
-          class="emotion-2 emotion-1"
-        />
       </div>
     </div>
   </div>
@@ -5206,6 +5359,10 @@ exports[`TimeInput > renders correctly small 1`] = `
   outline: none;
 }
 
+.emotion-6:focus-within {
+  border-color: #792dd4;
+}
+
 .emotion-6[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
@@ -5281,28 +5438,33 @@ exports[`TimeInput > renders correctly small 1`] = `
   text-align: center;
   border-radius: 0.25rem;
   color: #3f4250;
+  caret-color: transparent;
 }
 
 .emotion-12[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-12:not([data-disabled="true"]):not([data-readonly="true"]):hover {
+.emotion-12:not(:disabled):hover {
   background-color: #e9eaeb;
   color: #727683;
 }
 
-.emotion-12:not([data-disabled="true"]):not([data-readonly="true"]):active,
-.emotion-12:not([data-disabled="true"]):not([data-readonly="true"]):focus {
+.emotion-12:not(:disabled):active,
+.emotion-12:not(:disabled):focus {
   background-color: #e9eaeb;
   color: #3f4250;
 }
 
-.emotion-12[data-readonly='true'] {
+.emotion-12:-moz-read-only {
   cursor: default;
 }
 
-.emotion-12[data-disabled='true'] {
+.emotion-12:read-only {
+  cursor: default;
+}
+
+.emotion-12:disabled {
   cursor: not-allowed;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -5365,13 +5527,14 @@ exports[`TimeInput > renders correctly small 1`] = `
           >
             <input
               aria-label="hours-input"
+              aria-valuemax="23"
+              aria-valuemin="0"
+              aria-valuenow="NaN"
               class="emotion-12 emotion-13"
-              data-disabled="false"
-              data-readonly="false"
               data-size="small"
               data-testid="hours-input"
               placeholder="00"
-              readonly=""
+              role="spinbutton"
               value=""
             />
             <span
@@ -5385,13 +5548,14 @@ exports[`TimeInput > renders correctly small 1`] = `
           >
             <input
               aria-label="minutes-input"
+              aria-valuemax="59"
+              aria-valuemin="0"
+              aria-valuenow="NaN"
               class="emotion-12 emotion-13"
-              data-disabled="false"
-              data-readonly="false"
               data-size="small"
               data-testid="minutes-input"
               placeholder="00"
-              readonly=""
+              role="spinbutton"
               value=""
             />
             <span
@@ -5405,20 +5569,18 @@ exports[`TimeInput > renders correctly small 1`] = `
           >
             <input
               aria-label="seconds-input"
+              aria-valuemax="59"
+              aria-valuemin="0"
+              aria-valuenow="NaN"
               class="emotion-12 emotion-13"
-              data-disabled="false"
-              data-readonly="false"
               data-size="small"
               data-testid="seconds-input"
               placeholder="00"
-              readonly=""
+              role="spinbutton"
               value=""
             />
           </div>
         </div>
-        <div
-          class="emotion-2 emotion-1"
-        />
       </div>
     </div>
   </div>
@@ -5528,6 +5690,10 @@ exports[`TimeInput > renders correctly with 12-hour format 1`] = `
   outline: none;
 }
 
+.emotion-6:focus-within {
+  border-color: #792dd4;
+}
+
 .emotion-6[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
@@ -5603,28 +5769,33 @@ exports[`TimeInput > renders correctly with 12-hour format 1`] = `
   text-align: center;
   border-radius: 0.25rem;
   color: #3f4250;
+  caret-color: transparent;
 }
 
 .emotion-12[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-12:not([data-disabled="true"]):not([data-readonly="true"]):hover {
+.emotion-12:not(:disabled):hover {
   background-color: #e9eaeb;
   color: #727683;
 }
 
-.emotion-12:not([data-disabled="true"]):not([data-readonly="true"]):active,
-.emotion-12:not([data-disabled="true"]):not([data-readonly="true"]):focus {
+.emotion-12:not(:disabled):active,
+.emotion-12:not(:disabled):focus {
   background-color: #e9eaeb;
   color: #3f4250;
 }
 
-.emotion-12[data-readonly='true'] {
+.emotion-12:-moz-read-only {
   cursor: default;
 }
 
-.emotion-12[data-disabled='true'] {
+.emotion-12:read-only {
+  cursor: default;
+}
+
+.emotion-12:disabled {
   cursor: not-allowed;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -5687,13 +5858,14 @@ exports[`TimeInput > renders correctly with 12-hour format 1`] = `
           >
             <input
               aria-label="hours-input"
+              aria-valuemax="12"
+              aria-valuemin="1"
+              aria-valuenow="NaN"
               class="emotion-12 emotion-13"
-              data-disabled="false"
-              data-readonly="false"
               data-size="medium"
               data-testid="hours-input"
               placeholder="00"
-              readonly=""
+              role="spinbutton"
               value=""
             />
             <span
@@ -5707,13 +5879,14 @@ exports[`TimeInput > renders correctly with 12-hour format 1`] = `
           >
             <input
               aria-label="minutes-input"
+              aria-valuemax="59"
+              aria-valuemin="0"
+              aria-valuenow="NaN"
               class="emotion-12 emotion-13"
-              data-disabled="false"
-              data-readonly="false"
               data-size="medium"
               data-testid="minutes-input"
               placeholder="00"
-              readonly=""
+              role="spinbutton"
               value=""
             />
             <span
@@ -5727,32 +5900,32 @@ exports[`TimeInput > renders correctly with 12-hour format 1`] = `
           >
             <input
               aria-label="seconds-input"
+              aria-valuemax="59"
+              aria-valuemin="0"
+              aria-valuenow="NaN"
               class="emotion-12 emotion-13"
-              data-disabled="false"
-              data-readonly="false"
               data-size="medium"
               data-testid="seconds-input"
               placeholder="00"
-              readonly=""
+              role="spinbutton"
               value=""
             />
           </div>
           <input
             aria-label="am-pm-input"
+            aria-valuemax="12"
+            aria-valuemin="0"
+            aria-valuenow="12"
+            aria-valuetext=""
             class="emotion-12 emotion-13"
-            data-disabled="false"
             data-period="true"
-            data-readonly="false"
             data-size="medium"
             data-testid="am-pm-input"
-            placeholder="-M"
-            readonly=""
+            placeholder="AM"
+            role="spinbutton"
             value=""
           />
         </div>
-        <div
-          class="emotion-2 emotion-1"
-        />
       </div>
     </div>
   </div>
@@ -5862,6 +6035,10 @@ exports[`TimeInput > renders correctly with base props 1`] = `
   outline: none;
 }
 
+.emotion-6:focus-within {
+  border-color: #792dd4;
+}
+
 .emotion-6[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
@@ -5937,28 +6114,33 @@ exports[`TimeInput > renders correctly with base props 1`] = `
   text-align: center;
   border-radius: 0.25rem;
   color: #3f4250;
+  caret-color: transparent;
 }
 
 .emotion-12[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-12:not([data-disabled="true"]):not([data-readonly="true"]):hover {
+.emotion-12:not(:disabled):hover {
   background-color: #e9eaeb;
   color: #727683;
 }
 
-.emotion-12:not([data-disabled="true"]):not([data-readonly="true"]):active,
-.emotion-12:not([data-disabled="true"]):not([data-readonly="true"]):focus {
+.emotion-12:not(:disabled):active,
+.emotion-12:not(:disabled):focus {
   background-color: #e9eaeb;
   color: #3f4250;
 }
 
-.emotion-12[data-readonly='true'] {
+.emotion-12:-moz-read-only {
   cursor: default;
 }
 
-.emotion-12[data-disabled='true'] {
+.emotion-12:read-only {
+  cursor: default;
+}
+
+.emotion-12:disabled {
   cursor: not-allowed;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -6002,7 +6184,9 @@ exports[`TimeInput > renders correctly with base props 1`] = `
       >
         <label
           class="emotion-4 emotion-5"
-        />
+        >
+          label
+        </label>
       </div>
       <div
         class="emotion-6 emotion-7"
@@ -6019,13 +6203,14 @@ exports[`TimeInput > renders correctly with base props 1`] = `
           >
             <input
               aria-label="hours-input"
+              aria-valuemax="23"
+              aria-valuemin="0"
+              aria-valuenow="NaN"
               class="emotion-12 emotion-13"
-              data-disabled="false"
-              data-readonly="false"
               data-size="medium"
               data-testid="hours-input"
               placeholder="00"
-              readonly=""
+              role="spinbutton"
               value=""
             />
             <span
@@ -6039,13 +6224,14 @@ exports[`TimeInput > renders correctly with base props 1`] = `
           >
             <input
               aria-label="minutes-input"
+              aria-valuemax="59"
+              aria-valuemin="0"
+              aria-valuenow="NaN"
               class="emotion-12 emotion-13"
-              data-disabled="false"
-              data-readonly="false"
               data-size="medium"
               data-testid="minutes-input"
               placeholder="00"
-              readonly=""
+              role="spinbutton"
               value=""
             />
             <span
@@ -6059,20 +6245,18 @@ exports[`TimeInput > renders correctly with base props 1`] = `
           >
             <input
               aria-label="seconds-input"
+              aria-valuemax="59"
+              aria-valuemin="0"
+              aria-valuenow="NaN"
               class="emotion-12 emotion-13"
-              data-disabled="false"
-              data-readonly="false"
               data-size="medium"
               data-testid="seconds-input"
               placeholder="00"
-              readonly=""
+              role="spinbutton"
               value=""
             />
           </div>
         </div>
-        <div
-          class="emotion-2 emotion-1"
-        />
       </div>
     </div>
   </div>
@@ -6182,6 +6366,10 @@ exports[`TimeInput > renders correctly with error 1`] = `
   outline: none;
 }
 
+.emotion-6:focus-within {
+  border-color: #792dd4;
+}
+
 .emotion-6[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
@@ -6257,28 +6445,33 @@ exports[`TimeInput > renders correctly with error 1`] = `
   text-align: center;
   border-radius: 0.25rem;
   color: #3f4250;
+  caret-color: transparent;
 }
 
 .emotion-12[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-12:not([data-disabled="true"]):not([data-readonly="true"]):hover {
+.emotion-12:not(:disabled):hover {
   background-color: #e9eaeb;
   color: #727683;
 }
 
-.emotion-12:not([data-disabled="true"]):not([data-readonly="true"]):active,
-.emotion-12:not([data-disabled="true"]):not([data-readonly="true"]):focus {
+.emotion-12:not(:disabled):active,
+.emotion-12:not(:disabled):focus {
   background-color: #e9eaeb;
   color: #3f4250;
 }
 
-.emotion-12[data-readonly='true'] {
+.emotion-12:-moz-read-only {
   cursor: default;
 }
 
-.emotion-12[data-disabled='true'] {
+.emotion-12:read-only {
+  cursor: default;
+}
+
+.emotion-12:disabled {
   cursor: not-allowed;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -6367,13 +6560,14 @@ exports[`TimeInput > renders correctly with error 1`] = `
           >
             <input
               aria-label="hours-input"
+              aria-valuemax="23"
+              aria-valuemin="0"
+              aria-valuenow="NaN"
               class="emotion-12 emotion-13"
-              data-disabled="false"
-              data-readonly="false"
               data-size="medium"
               data-testid="hours-input"
               placeholder="00"
-              readonly=""
+              role="spinbutton"
               value=""
             />
             <span
@@ -6387,13 +6581,14 @@ exports[`TimeInput > renders correctly with error 1`] = `
           >
             <input
               aria-label="minutes-input"
+              aria-valuemax="59"
+              aria-valuemin="0"
+              aria-valuenow="NaN"
               class="emotion-12 emotion-13"
-              data-disabled="false"
-              data-readonly="false"
               data-size="medium"
               data-testid="minutes-input"
               placeholder="00"
-              readonly=""
+              role="spinbutton"
               value=""
             />
             <span
@@ -6407,13 +6602,14 @@ exports[`TimeInput > renders correctly with error 1`] = `
           >
             <input
               aria-label="seconds-input"
+              aria-valuemax="59"
+              aria-valuemin="0"
+              aria-valuenow="NaN"
               class="emotion-12 emotion-13"
-              data-disabled="false"
-              data-readonly="false"
               data-size="medium"
               data-testid="seconds-input"
               placeholder="00"
-              readonly=""
+              role="spinbutton"
               value=""
             />
           </div>
@@ -6557,6 +6753,10 @@ exports[`TimeInput > renders correctly with helper and error 1`] = `
   outline: none;
 }
 
+.emotion-8:focus-within {
+  border-color: #792dd4;
+}
+
 .emotion-8[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
@@ -6632,28 +6832,33 @@ exports[`TimeInput > renders correctly with helper and error 1`] = `
   text-align: center;
   border-radius: 0.25rem;
   color: #3f4250;
+  caret-color: transparent;
 }
 
 .emotion-14[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-14:not([data-disabled="true"]):not([data-readonly="true"]):hover {
+.emotion-14:not(:disabled):hover {
   background-color: #e9eaeb;
   color: #727683;
 }
 
-.emotion-14:not([data-disabled="true"]):not([data-readonly="true"]):active,
-.emotion-14:not([data-disabled="true"]):not([data-readonly="true"]):focus {
+.emotion-14:not(:disabled):active,
+.emotion-14:not(:disabled):focus {
   background-color: #e9eaeb;
   color: #3f4250;
 }
 
-.emotion-14[data-readonly='true'] {
+.emotion-14:-moz-read-only {
   cursor: default;
 }
 
-.emotion-14[data-disabled='true'] {
+.emotion-14:read-only {
+  cursor: default;
+}
+
+.emotion-14:disabled {
   cursor: not-allowed;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -6747,13 +6952,14 @@ exports[`TimeInput > renders correctly with helper and error 1`] = `
           >
             <input
               aria-label="hours-input"
+              aria-valuemax="23"
+              aria-valuemin="0"
+              aria-valuenow="NaN"
               class="emotion-14 emotion-15"
-              data-disabled="false"
-              data-readonly="false"
               data-size="medium"
               data-testid="hours-input"
               placeholder="00"
-              readonly=""
+              role="spinbutton"
               value=""
             />
             <span
@@ -6767,13 +6973,14 @@ exports[`TimeInput > renders correctly with helper and error 1`] = `
           >
             <input
               aria-label="minutes-input"
+              aria-valuemax="59"
+              aria-valuemin="0"
+              aria-valuenow="NaN"
               class="emotion-14 emotion-15"
-              data-disabled="false"
-              data-readonly="false"
               data-size="medium"
               data-testid="minutes-input"
               placeholder="00"
-              readonly=""
+              role="spinbutton"
               value=""
             />
             <span
@@ -6787,13 +6994,14 @@ exports[`TimeInput > renders correctly with helper and error 1`] = `
           >
             <input
               aria-label="seconds-input"
+              aria-valuemax="59"
+              aria-valuemin="0"
+              aria-valuenow="NaN"
               class="emotion-14 emotion-15"
-              data-disabled="false"
-              data-readonly="false"
               data-size="medium"
               data-testid="seconds-input"
               placeholder="00"
-              readonly=""
+              role="spinbutton"
               value=""
             />
           </div>
@@ -6935,6 +7143,10 @@ exports[`TimeInput > renders correctly with label description and helper 1`] = `
   outline: none;
 }
 
+.emotion-8:focus-within {
+  border-color: #792dd4;
+}
+
 .emotion-8[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
@@ -7010,28 +7222,33 @@ exports[`TimeInput > renders correctly with label description and helper 1`] = `
   text-align: center;
   border-radius: 0.25rem;
   color: #3f4250;
+  caret-color: transparent;
 }
 
 .emotion-14[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-14:not([data-disabled="true"]):not([data-readonly="true"]):hover {
+.emotion-14:not(:disabled):hover {
   background-color: #e9eaeb;
   color: #727683;
 }
 
-.emotion-14:not([data-disabled="true"]):not([data-readonly="true"]):active,
-.emotion-14:not([data-disabled="true"]):not([data-readonly="true"]):focus {
+.emotion-14:not(:disabled):active,
+.emotion-14:not(:disabled):focus {
   background-color: #e9eaeb;
   color: #3f4250;
 }
 
-.emotion-14[data-readonly='true'] {
+.emotion-14:-moz-read-only {
   cursor: default;
 }
 
-.emotion-14[data-disabled='true'] {
+.emotion-14:read-only {
+  cursor: default;
+}
+
+.emotion-14:disabled {
   cursor: not-allowed;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -7064,7 +7281,7 @@ exports[`TimeInput > renders correctly with label description and helper 1`] = `
   padding-inline: 0.125rem;
 }
 
-.emotion-32 {
+.emotion-30 {
   color: #727683;
   font-size: 0.75rem;
   font-family: Inter,Asap,sans-serif;
@@ -7097,9 +7314,6 @@ exports[`TimeInput > renders correctly with label description and helper 1`] = `
             label
           </h1>
         </label>
-        <h1>
-          label
-        </h1>
       </div>
       <div
         class="emotion-8 emotion-9"
@@ -7116,13 +7330,14 @@ exports[`TimeInput > renders correctly with label description and helper 1`] = `
           >
             <input
               aria-label="hours-input"
+              aria-valuemax="23"
+              aria-valuemin="0"
+              aria-valuenow="NaN"
               class="emotion-14 emotion-15"
-              data-disabled="false"
-              data-readonly="false"
               data-size="medium"
               data-testid="hours-input"
               placeholder="00"
-              readonly=""
+              role="spinbutton"
               value=""
             />
             <span
@@ -7136,13 +7351,14 @@ exports[`TimeInput > renders correctly with label description and helper 1`] = `
           >
             <input
               aria-label="minutes-input"
+              aria-valuemax="59"
+              aria-valuemin="0"
+              aria-valuenow="NaN"
               class="emotion-14 emotion-15"
-              data-disabled="false"
-              data-readonly="false"
               data-size="medium"
               data-testid="minutes-input"
               placeholder="00"
-              readonly=""
+              role="spinbutton"
               value=""
             />
             <span
@@ -7156,23 +7372,21 @@ exports[`TimeInput > renders correctly with label description and helper 1`] = `
           >
             <input
               aria-label="seconds-input"
+              aria-valuemax="59"
+              aria-valuemin="0"
+              aria-valuenow="NaN"
               class="emotion-14 emotion-15"
-              data-disabled="false"
-              data-readonly="false"
               data-size="medium"
               data-testid="seconds-input"
               placeholder="00"
-              readonly=""
+              role="spinbutton"
               value=""
             />
           </div>
         </div>
-        <div
-          class="emotion-2 emotion-1"
-        />
       </div>
       <p
-        class="emotion-32 emotion-5"
+        class="emotion-30 emotion-5"
       >
         helper
       </p>

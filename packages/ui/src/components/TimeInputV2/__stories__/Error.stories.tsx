@@ -4,6 +4,7 @@ export const Error = Template.bind({})
 
 Error.args = {
   error: 'An error',
+  label: 'Label',
 }
 
 Error.parameters = {
