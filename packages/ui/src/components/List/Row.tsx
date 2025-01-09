@@ -1,4 +1,3 @@
-import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import type { ReactNode } from 'react'
 import {
@@ -237,8 +236,6 @@ export const Row = forwardRef<HTMLTableRowElement, RowProps>(
       inRange,
       columns,
     } = useListContext()
-
-    const theme = useTheme()
 
     const expandedRowId = useId()
 
