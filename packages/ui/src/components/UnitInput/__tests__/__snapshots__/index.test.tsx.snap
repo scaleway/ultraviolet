@@ -1002,6 +1002,7 @@ exports[`UnitInput > renders click 1`] = `
   margin-right: 0.25rem;
   color: #3f4250;
   border-radius: 0.25rem;
+  border: 1px transparent solid;
 }
 
 .emotion-33:hover,
@@ -1010,6 +1011,10 @@ exports[`UnitInput > renders click 1`] = `
   color: #641cb3;
   cursor: pointer;
   outline: none;
+}
+
+.emotion-33:focus-visible {
+  border: #d8c5fc 1px solid;
 }
 
 .emotion-33[aria-selected='true'] {
