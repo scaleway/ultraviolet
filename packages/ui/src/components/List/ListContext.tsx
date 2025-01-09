@@ -47,6 +47,7 @@ export type ListContextValue = {
   unselectAll: () => void
   unselectRow: (rowId: string) => void
   refList: RefObject<HTMLInputElement[]>
+  handleOnChange: (value: string, checked: boolean) => void
 }
 
 const ListContext = createContext<ListContextValue | undefined>(undefined)
@@ -195,11 +196,10 @@ export const ListProvider = ({
 
     if (refList.current) {
       // Ensure that only existing checkboxes are in refList
-      if (refList.current) {
-        refList.current = refList.current.filter(checkbox =>
-          document.contains(checkbox),
-        )
-      }
+      refList.current = refList.current.filter(checkbox =>
+        document.contains(checkbox),
+      )
+
       const handleClickRange = (
         currentCheckbox: HTMLInputElement,
         index: number,
@@ -217,13 +217,13 @@ export const ListProvider = ({
             : undefined
 
           if (lastCheckedIndex !== undefined) {
-            const start = Math.min(lastCheckedIndex, index)
-            const end =
-              Math.max(lastCheckedIndex, index) +
-              (Math.max(lastCheckedIndex, index) === index ? 0 : 1)
+            const start =
+              Math.min(lastCheckedIndex, index) -
+              (Math.min(lastCheckedIndex, index) === index ? 1 : 0)
+            const end = Math.max(lastCheckedIndex, index)
 
             refList.current.forEach((checkbox, key) => {
-              if (start < key && key < end) {
+              if (start < key && key <= end) {
                 if (!checkbox.disabled) {
                   checkboxesInRange.push(checkbox.value)
                 }
@@ -271,7 +271,6 @@ export const ListProvider = ({
         checkbox.addEventListener('click', clickHandler)
 
         handlers.push(() => {
-          checkbox.removeEventListener('change', changeHandler)
           checkbox.removeEventListener('click', clickHandler)
         })
       })
@@ -280,9 +279,25 @@ export const ListProvider = ({
     return () => {
       handlers.forEach(cleanup => cleanup())
     }
-  }, [inRange.size, lastCheckedCheckbox, selectRows])
+  }, [lastCheckedCheckbox, selectRows])
 
   useEffect(subscribeHandler, [subscribeHandler])
+
+  const handleOnChange = useCallback(
+    (value: string, checked: boolean) => {
+      selectRows([value], !checked)
+      setLastCheckedCheckbox(value)
+    },
+    [selectRows],
+  )
+
+  useEffect(() => {
+    // Re-arrange refList everytime it is modified in order to keep the write order of the elements in it.
+    const allCheckboxes = [
+      ...document.querySelectorAll('input[type="checkbox"]:not([value="all"])'),
+    ].map(element => element as HTMLInputElement)
+    refList.current = allCheckboxes.map(checkbox => checkbox)
+  }, [refList.current.length])
 
   const value = useMemo<ListContextValue>(
     () => ({
@@ -304,6 +319,7 @@ export const ListProvider = ({
       unselectAll,
       unselectRow,
       refList,
+      handleOnChange,
     }),
     [
       allRowSelectValue,
@@ -324,6 +340,7 @@ export const ListProvider = ({
       selectRow,
       unselectAll,
       unselectRow,
+      handleOnChange,
     ],
   )
 
