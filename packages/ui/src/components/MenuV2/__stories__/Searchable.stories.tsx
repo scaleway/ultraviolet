@@ -18,39 +18,41 @@ export const Searchable: StoryFn<typeof MenuV2> = () => (
       />
     }
   >
-    <MenuV2.Item sentiment="primary" active>
-      <Stack direction="row" gap={1} alignItems="center">
-        <AvatarV2
-          variant="colors"
-          colors={['#BF95F9', '#3D1862']}
-          shape="circle"
-          size="xsmall"
-        />
-        Default Project
-      </Stack>
-    </MenuV2.Item>
-    <MenuV2.Item>
-      <Stack direction="row" gap={1} alignItems="center">
-        <AvatarV2
-          variant="colors"
-          colors={['#FFBFAB', '#822F15']}
-          shape="circle"
-          size="xsmall"
-        />
-        Project 1
-      </Stack>
-    </MenuV2.Item>
-    <MenuV2.Item>
-      <Stack direction="row" gap={1} alignItems="center">
-        <AvatarV2
-          variant="colors"
-          colors={['#FF9EC1', '#740D32']}
-          shape="circle"
-          size="xsmall"
-        />
-        Project 2
-      </Stack>
-    </MenuV2.Item>
+    <MenuV2.Group label="Projects">
+      <MenuV2.Item sentiment="primary" active>
+        <Stack direction="row" gap={1} alignItems="center">
+          <AvatarV2
+            variant="colors"
+            colors={['#BF95F9', '#3D1862']}
+            shape="circle"
+            size="xsmall"
+          />
+          Default Project
+        </Stack>
+      </MenuV2.Item>
+      <MenuV2.Item>
+        <Stack direction="row" gap={1} alignItems="center">
+          <AvatarV2
+            variant="colors"
+            colors={['#FFBFAB', '#822F15']}
+            shape="circle"
+            size="xsmall"
+          />
+          Project 1
+        </Stack>
+      </MenuV2.Item>
+      <MenuV2.Item>
+        <Stack direction="row" gap={1} alignItems="center">
+          <AvatarV2
+            variant="colors"
+            colors={['#FF9EC1', '#740D32']}
+            shape="circle"
+            size="xsmall"
+          />
+          Project 2
+        </Stack>
+      </MenuV2.Item>
+    </MenuV2.Group>
   </MenuV2>
 )
 

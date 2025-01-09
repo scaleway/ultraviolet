@@ -95,7 +95,7 @@ export const Menu = forwardRef(
   ) => {
     const { isVisible, setIsVisible } = useMenu()
     const searchInputRef = useRef<HTMLInputElement>(null)
-    const [localChild, setLocalChild] = useState<ReactNode[]>()
+    const [localChild, setLocalChild] = useState<ReactNode[] | null>(null)
     const popupRef = useRef<HTMLDivElement>(null)
     const disclosureRef = useRef<HTMLButtonElement>(null)
     const tempId = useId()
@@ -163,9 +163,12 @@ export const Menu = forwardRef(
         role="dialog"
         id={finalId}
         ref={popupRef}
-        onClose={() => setIsVisible(false)}
+        onClose={() => {
+          setIsVisible(false)
+          setLocalChild(null)
+        }}
         tabIndex={-1}
-        maxHeight={maxHeight ?? '480px'}
+        maxHeight={maxHeight ?? '30rem'}
         maxWidth={maxWidth}
         searchable={searchable}
         size={size}
