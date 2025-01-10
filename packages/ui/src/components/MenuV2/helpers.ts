@@ -1,4 +1,4 @@
-import { Children, type ReactNode, isValidElement } from 'react'
+import { Children, type ReactNode, cloneElement, isValidElement } from 'react'
 
 /**
  * Search inside a children (React Element) recursively until a result is found
@@ -7,24 +7,35 @@ export const searchChildren = (
   children: ReactNode,
   searchString: string,
 ): ReactNode[] => {
-  const matches: ReactNode[] = []
   const searchRegex = new RegExp(searchString, 'i')
 
-  Children.forEach(children, child => {
+  const matches = Children.map(children, child => {
     if (typeof child === 'string' && child.match(searchRegex)) {
-      matches.push(child)
-    } else if (isValidElement(child)) {
-      const childProps = child.props as { children: ReactNode }
+      return child
+    }
+
+    if (isValidElement(child)) {
+      const childProps = child.props as { children: ReactNode; label?: string }
+
+      // This is the case where there is a Menu.Group we want to search the Menu.Item only
+      if (childProps?.label) {
+        return cloneElement(child, {
+          children: searchChildren(childProps.children, searchString),
+        } as { children: ReactNode })
+      }
 
       // Recursively search the children of this element
       const childMatches = searchChildren(childProps.children, searchString)
 
       if (childMatches.length > 0) {
-        // If any matches are found within this child's children, push the entire child element
-        matches.push(child)
+        // If any matches are found within this child's children, return the entire child element
+        return child
       }
     }
+
+    return null
   })
 
-  return matches
+  // Filter out null values and flatten the array
+  return matches ? matches.filter(Boolean) : []
 }

@@ -1,5 +1,6 @@
 import styled from '@emotion/styled'
 import type { ReactNode } from 'react'
+import { Stack } from '../../Stack'
 import { Text } from '../../Text'
 
 const Container = styled.span`
@@ -10,19 +11,23 @@ const Container = styled.span`
 type GroupProps = {
   label: string
   children: ReactNode
+  labelDescription?: ReactNode
 }
 
-export const Group = ({ label, children }: GroupProps) => (
+export const Group = ({ label, children, labelDescription }: GroupProps) => (
   <>
     <Container>
-      <Text
-        variant="captionStrong"
-        as="span"
-        prominence="weak"
-        sentiment="neutral"
-      >
-        {label}
-      </Text>
+      <Stack gap={1} alignItems="center" direction="row">
+        <Text
+          variant="captionStrong"
+          as="span"
+          prominence="weak"
+          sentiment="neutral"
+        >
+          {label}
+        </Text>
+        {labelDescription || null}
+      </Stack>
     </Container>
     {children}
   </>

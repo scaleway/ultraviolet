@@ -45,6 +45,15 @@ describe('Menu', () => {
       </MenuV2>,
     ))
 
+  test(`renders with Menu.Group and labelDescription`, () =>
+    shouldMatchEmotionSnapshotWithPortal(
+      <MenuV2 visible disclosure={() => <button type="button">Menu</button>}>
+        <MenuV2.Group label="Group" labelDescription="This is a description">
+          <MenuV2.Item>Menu.Item</MenuV2.Item>
+        </MenuV2.Group>
+      </MenuV2>,
+    ))
+
   test(`renders with Menu.ItemLink`, () =>
     shouldMatchEmotionSnapshotWithPortal(
       <MenuV2 visible disclosure={() => <button type="button">Menu</button>}>
