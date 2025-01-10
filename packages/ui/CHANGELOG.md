@@ -1,5 +1,15 @@
 # Change Log
 
+## 1.83.0
+
+### Minor Changes
+
+- [#4604](https://github.com/scaleway/ultraviolet/pull/4604) [`76a8557`](https://github.com/scaleway/ultraviolet/commit/76a8557ca97592e3383465c6f273249cf76d9081) Thanks [@matthprost](https://github.com/matthprost)! - New prop `searchable` and `hideOnClickItem` in `<MenuV2 />` component
+
+### Patch Changes
+
+- [#4653](https://github.com/scaleway/ultraviolet/pull/4653) [`61d26ae`](https://github.com/scaleway/ultraviolet/commit/61d26aec4a97f56ce6d3ab570c3c230a52c48aaa) Thanks [@matthprost](https://github.com/matthprost)! - Improve search engine on `<MenuV2 />` component and new prop `labelDescription` on `<MenuV2.Group />` component
+
 ## 1.82.3
 
 ### Patch Changes
