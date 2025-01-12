@@ -322,7 +322,7 @@ importers:
         specifier: 4.4.2
         version: 4.4.2
 
-  examples/next-advanced:
+  examples/next:
     dependencies:
       '@emotion/react':
         specifier: 11.14.0
@@ -330,55 +330,9 @@ importers:
       '@emotion/styled':
         specifier: 11.14.0
         version: 11.14.0(@emotion/react@11.14.0(@types/react@19.0.2)(react@19.0.0))(@types/react@19.0.2)(react@19.0.0)
-      '@ultraviolet/ui':
-        specifier: workspace:*
-        version: link:../../packages/ui
-      next:
-        specifier: 15.1.4
-        version: 15.1.4(@babel/core@7.26.0)(@playwright/test@1.49.1)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      react:
-        specifier: 19.0.0
-        version: 19.0.0
-      react-dom:
-        specifier: 19.0.0
-        version: 19.0.0(react@19.0.0)
-      react-schemaorg:
-        specifier: 2.0.0
-        version: 2.0.0(react@19.0.0)(schema-dts@1.1.2(typescript@5.7.2))(typescript@5.7.2)
-      react-syntax-highlighter:
-        specifier: 15.6.1
-        version: 15.6.1(react@19.0.0)
-      react-use-clipboard:
-        specifier: 1.0.9
-        version: 1.0.9(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      schema-dts:
-        specifier: 1.1.2
-        version: 1.1.2(typescript@5.7.2)
-    devDependencies:
-      '@babel/core':
-        specifier: 7.26.0
-        version: 7.26.0
-      '@types/node':
-        specifier: 22.10.5
-        version: 22.10.5
-      '@types/react':
-        specifier: 19.0.2
-        version: 19.0.2
-      '@types/react-syntax-highlighter':
-        specifier: 15.5.13
-        version: 15.5.13
-      next-transpile-modules:
-        specifier: 10.0.1
-        version: 10.0.1
-
-  examples/next-login:
-    dependencies:
-      '@emotion/react':
-        specifier: 11.14.0
-        version: 11.14.0(@types/react@19.0.2)(react@19.0.0)
-      '@emotion/styled':
-        specifier: 11.14.0
-        version: 11.14.0(@emotion/react@11.14.0(@types/react@19.0.2)(react@19.0.0))(@types/react@19.0.2)(react@19.0.0)
+      '@scaleway/regex':
+        specifier: 5.2.1
+        version: 5.2.1
       '@ultraviolet/fonts':
         specifier: workspace:*
         version: link:../../packages/fonts
@@ -429,7 +383,7 @@ importers:
         specifier: 10.0.1
         version: 10.0.1
 
-  examples/next-simple:
+  examples/vite:
     dependencies:
       '@emotion/react':
         specifier: 11.14.0
@@ -437,46 +391,40 @@ importers:
       '@emotion/styled':
         specifier: 11.14.0
         version: 11.14.0(@emotion/react@11.14.0(@types/react@19.0.2)(react@19.0.0))(@types/react@19.0.2)(react@19.0.0)
+      '@ultraviolet/icons':
+        specifier: workspace:*
+        version: link:../../packages/icons
+      '@ultraviolet/themes':
+        specifier: workspace:*
+        version: link:../../packages/themes
       '@ultraviolet/ui':
         specifier: workspace:*
         version: link:../../packages/ui
-      next:
-        specifier: 15.1.4
-        version: 15.1.4(@babel/core@7.26.0)(@playwright/test@1.49.1)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       react:
         specifier: 19.0.0
         version: 19.0.0
       react-dom:
         specifier: 19.0.0
         version: 19.0.0(react@19.0.0)
-      react-schemaorg:
-        specifier: 2.0.0
-        version: 2.0.0(react@19.0.0)(schema-dts@1.1.2(typescript@5.7.2))(typescript@5.7.2)
-      react-syntax-highlighter:
-        specifier: 15.6.1
-        version: 15.6.1(react@19.0.0)
-      react-use-clipboard:
-        specifier: 1.0.9
-        version: 1.0.9(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      schema-dts:
-        specifier: 1.1.2
-        version: 1.1.2(typescript@5.7.2)
     devDependencies:
-      '@babel/core':
-        specifier: 7.26.0
-        version: 7.26.0
-      '@types/node':
-        specifier: 22.10.5
-        version: 22.10.5
+      '@emotion/babel-plugin':
+        specifier: 11.13.5
+        version: 11.13.5
       '@types/react':
         specifier: 19.0.2
         version: 19.0.2
-      '@types/react-syntax-highlighter':
-        specifier: 15.5.13
-        version: 15.5.13
-      next-transpile-modules:
-        specifier: 10.0.1
-        version: 10.0.1
+      '@types/react-dom':
+        specifier: 19.0.2
+        version: 19.0.2(@types/react@19.0.2)
+      '@vitejs/plugin-react':
+        specifier: 4.3.4
+        version: 4.3.4(vite@5.4.11(@types/node@22.10.5)(terser@5.31.0))
+      typescript:
+        specifier: 5.7.2
+        version: 5.7.2
+      vite:
+        specifier: 5.4.11
+        version: 5.4.11(@types/node@22.10.5)(terser@5.31.0)
 
   packages/fonts: {}
 
@@ -1732,9 +1680,6 @@ packages:
     peerDependencies:
       react: '>=16.8.0'
 
-  '@emotion/utils@1.4.1':
-    resolution: {integrity: sha512-BymCXzCG3r72VKJxaYVwOXATqXIZ85cuvg0YOUDxMGNrKc1DJRZk8MgV5wyXRyEayIMd4FuXJIUgTBXvDNW5cA==}
-
   '@emotion/utils@1.4.2':
     resolution: {integrity: sha512-3vLclRofFziIa3J2wDh9jjbkUz9qk5Vi3IZ/FSTKViB0k+ef0fPV7dYrUIugbgupYDx7v9ud/SjrtEP8Y4xLoA==}
 
@@ -2727,6 +2672,10 @@ packages:
 
   '@scaleway/random-name@5.1.1':
     resolution: {integrity: sha512-DelRK+56UBUEoRr8pQGwTE7oyC019pExis6iG6zZPcjuz4nLbMB5LIosmclnsvajfIBEQiD1Dv9JI/MgnPwygQ==}
+    engines: {node: '>=20.x'}
+
+  '@scaleway/regex@5.2.1':
+    resolution: {integrity: sha512-C/pEN5GUsvitK5ciCRcLQF1U/UYDZ+PNFfXSIG/T5T6rEHXGKLKDoAy9tPKir8y1+yBXYWp+Jf7/Dd+Zcnu95w==}
     engines: {node: '>=20.x'}
 
   '@scaleway/tsconfig@1.1.1':
@@ -4542,10 +4491,6 @@ packages:
 
   end-of-stream@1.4.4:
     resolution: {integrity: sha512-+uw1inIHVPQoaVuHzRyXd21icM+cnt4CzD5rW+NC1wjOUSTOs+Te7FOv7AhN7vS9x/oIyhLP5PR1H+phQAHu5Q==}
-
-  enhanced-resolve@5.16.0:
-    resolution: {integrity: sha512-O+QWCviPNSSLAD9Ucn8Awv+poAkqn3T1XY5/N7kR7rQO9yfSGWkYZDwpJ+iKF7B8rxaQKWngSqACpgzeapSyoA==}
-    engines: {node: '>=10.13.0'}
 
   enhanced-resolve@5.17.1:
     resolution: {integrity: sha512-LMHl3dXhTcfv8gM4kEzIUeTQ+7fpdA0l2tUf34BddXPkz2A5xJ5L/Pchd5BL6rdccM9QGvu0sWZzK1Z1t4wwyg==}
@@ -7741,9 +7686,6 @@ packages:
   tslib@1.14.1:
     resolution: {integrity: sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==}
 
-  tslib@2.6.2:
-    resolution: {integrity: sha512-AEYxH93jGFPn/a2iVAwW87VuUIkR1FVUKB77NwMF7nBTDkDrrT/Hpt/IrCJ0QXhW27jTBDcf5ZY7w6RiqTMw2Q==}
-
   tslib@2.8.1:
     resolution: {integrity: sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w==}
 
@@ -8277,7 +8219,7 @@ snapshots:
       '@babel/traverse': 7.25.9
       '@babel/types': 7.26.0
       convert-source-map: 2.0.0
-      debug: 4.3.7
+      debug: 4.4.0
       gensync: 1.0.0-beta.2
       json5: 2.2.3
       semver: 6.3.1
@@ -9018,7 +8960,7 @@ snapshots:
       '@babel/parser': 7.26.2
       '@babel/template': 7.25.9
       '@babel/types': 7.26.0
-      debug: 4.3.7
+      debug: 4.4.0
       globals: 11.12.0
     transitivePeerDependencies:
       - supports-color
@@ -9661,7 +9603,7 @@ snapshots:
     dependencies:
       '@emotion/memoize': 0.9.0
       '@emotion/sheet': 1.4.0
-      '@emotion/utils': 1.4.1
+      '@emotion/utils': 1.4.2
       '@emotion/weak-memoize': 0.4.0
       stylis: 4.2.0
 
@@ -9748,8 +9690,6 @@ snapshots:
   '@emotion/use-insertion-effect-with-fallbacks@1.2.0(react@19.0.0)':
     dependencies:
       react: 19.0.0
-
-  '@emotion/utils@1.4.1': {}
 
   '@emotion/utils@1.4.2': {}
 
@@ -10703,6 +10643,8 @@ snapshots:
       - typescript
 
   '@scaleway/random-name@5.1.1': {}
+
+  '@scaleway/regex@5.2.1': {}
 
   '@scaleway/tsconfig@1.1.1': {}
 
@@ -12900,11 +12842,6 @@ snapshots:
     dependencies:
       once: 1.4.0
 
-  enhanced-resolve@5.16.0:
-    dependencies:
-      graceful-fs: 4.2.11
-      tapable: 2.2.1
-
   enhanced-resolve@5.17.1:
     dependencies:
       graceful-fs: 4.2.11
@@ -14285,7 +14222,7 @@ snapshots:
   istanbul-lib-source-maps@5.0.6:
     dependencies:
       '@jridgewell/trace-mapping': 0.3.25
-      debug: 4.3.7
+      debug: 4.4.0
       istanbul-lib-coverage: 3.2.2
     transitivePeerDependencies:
       - supports-color
@@ -15025,7 +14962,7 @@ snapshots:
 
   next-transpile-modules@10.0.1:
     dependencies:
-      enhanced-resolve: 5.16.0
+      enhanced-resolve: 5.17.1
 
   next@15.1.4(@babel/core@7.26.0)(@playwright/test@1.49.1)(react-dom@19.0.0(react@19.0.0))(react@19.0.0):
     dependencies:
@@ -16323,7 +16260,7 @@ snapshots:
   snake-case@3.0.4:
     dependencies:
       dot-case: 3.0.4
-      tslib: 2.6.2
+      tslib: 2.8.1
 
   socks-proxy-agent@8.0.3:
     dependencies:
@@ -16730,8 +16667,6 @@ snapshots:
       strip-bom: 3.0.0
 
   tslib@1.14.1: {}
-
-  tslib@2.6.2: {}
 
   tslib@2.8.1: {}
 
