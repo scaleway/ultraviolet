@@ -196,8 +196,8 @@ importers:
         specifier: 0.0.2
         version: 0.0.2
       browserslist:
-        specifier: 4.24.3
-        version: 4.24.3
+        specifier: 4.24.4
+        version: 4.24.4
       cross-env:
         specifier: 7.0.3
         version: 7.0.3
@@ -212,7 +212,7 @@ importers:
         version: 9.0.1
       esbuild-plugin-browserslist:
         specifier: 0.15.0
-        version: 0.15.0(browserslist@4.24.3)(esbuild@0.23.1)
+        version: 0.15.0(browserslist@4.24.4)(esbuild@0.23.1)
       eslint:
         specifier: 9.17.0
         version: 9.17.0(jiti@2.4.2)
@@ -3793,8 +3793,8 @@ packages:
   browser-assert@1.2.1:
     resolution: {integrity: sha512-nfulgvOR6S4gt9UKCeGJOuSGBPGiFT6oQ/2UBnvTY/5aQ1PnksW72fhZkM30DzoRRv2WpwZf1vHHEr3mtuXIWQ==}
 
-  browserslist@4.24.3:
-    resolution: {integrity: sha512-1CPmv8iobE2fyRMV97dAcMVegvvWKxmq94hkLiAkUGwKVTyDLw33K+ZxiFrREKmmps4rIw6grcCFCnTMSZ/YiA==}
+  browserslist@4.24.4:
+    resolution: {integrity: sha512-KDi1Ny1gSePi1vm0q4oxSF8b4DR44GF4BbmS2YdhPLOEqd8pDviZOGH/GsmRwoWJ2+5Lr085X7naowMwKHDG1A==}
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
 
@@ -8257,7 +8257,7 @@ snapshots:
     dependencies:
       '@babel/compat-data': 7.26.2
       '@babel/helper-validator-option': 7.25.9
-      browserslist: 4.24.3
+      browserslist: 4.24.4
       lru-cache: 5.1.1
       semver: 6.3.1
 
@@ -12096,12 +12096,12 @@ snapshots:
 
   browser-assert@1.2.1: {}
 
-  browserslist@4.24.3:
+  browserslist@4.24.4:
     dependencies:
       caniuse-lite: 1.0.30001689
       electron-to-chromium: 1.5.73
       node-releases: 2.0.19
-      update-browserslist-db: 1.1.1(browserslist@4.24.3)
+      update-browserslist-db: 1.1.1(browserslist@4.24.4)
 
   buffer-crc32@0.2.13: {}
 
@@ -12153,7 +12153,7 @@ snapshots:
 
   caniuse-api@3.0.0:
     dependencies:
-      browserslist: 4.24.3
+      browserslist: 4.24.4
       caniuse-lite: 1.0.30001689
       lodash.memoize: 4.1.2
       lodash.uniq: 4.5.0
@@ -12383,7 +12383,7 @@ snapshots:
 
   core-js-compat@3.38.1:
     dependencies:
-      browserslist: 4.24.3
+      browserslist: 4.24.4
 
   corser@2.0.1: {}
 
@@ -13020,9 +13020,9 @@ snapshots:
       is-date-object: 1.0.5
       is-symbol: 1.0.4
 
-  esbuild-plugin-browserslist@0.15.0(browserslist@4.24.3)(esbuild@0.23.1):
+  esbuild-plugin-browserslist@0.15.0(browserslist@4.24.4)(esbuild@0.23.1):
     dependencies:
-      browserslist: 4.24.3
+      browserslist: 4.24.4
       debug: 4.3.7
       esbuild: 0.23.1
       zod: 3.23.8
@@ -15336,7 +15336,7 @@ snapshots:
 
   postcss-colormin@5.3.1(postcss@8.4.49):
     dependencies:
-      browserslist: 4.24.3
+      browserslist: 4.24.4
       caniuse-api: 3.0.0
       colord: 2.9.3
       postcss: 8.4.49
@@ -15344,7 +15344,7 @@ snapshots:
 
   postcss-convert-values@5.1.3(postcss@8.4.49):
     dependencies:
-      browserslist: 4.24.3
+      browserslist: 4.24.4
       postcss: 8.4.49
       postcss-value-parser: 4.2.0
 
@@ -15380,7 +15380,7 @@ snapshots:
 
   postcss-merge-rules@5.1.4(postcss@8.4.49):
     dependencies:
-      browserslist: 4.24.3
+      browserslist: 4.24.4
       caniuse-api: 3.0.0
       cssnano-utils: 3.1.0(postcss@8.4.49)
       postcss: 8.4.49
@@ -15400,7 +15400,7 @@ snapshots:
 
   postcss-minify-params@5.1.4(postcss@8.4.49):
     dependencies:
-      browserslist: 4.24.3
+      browserslist: 4.24.4
       cssnano-utils: 3.1.0(postcss@8.4.49)
       postcss: 8.4.49
       postcss-value-parser: 4.2.0
@@ -15474,7 +15474,7 @@ snapshots:
 
   postcss-normalize-unicode@5.1.1(postcss@8.4.49):
     dependencies:
-      browserslist: 4.24.3
+      browserslist: 4.24.4
       postcss: 8.4.49
       postcss-value-parser: 4.2.0
 
@@ -15497,7 +15497,7 @@ snapshots:
 
   postcss-reduce-initial@5.1.2(postcss@8.4.49):
     dependencies:
-      browserslist: 4.24.3
+      browserslist: 4.24.4
       caniuse-api: 3.0.0
       postcss: 8.4.49
 
@@ -16482,7 +16482,7 @@ snapshots:
 
   stylehacks@5.1.1(postcss@8.4.49):
     dependencies:
-      browserslist: 4.24.3
+      browserslist: 4.24.4
       postcss: 8.4.49
       postcss-selector-parser: 6.0.16
 
@@ -16864,9 +16864,9 @@ snapshots:
       webpack-sources: 3.2.3
       webpack-virtual-modules: 0.6.1
 
-  update-browserslist-db@1.1.1(browserslist@4.24.3):
+  update-browserslist-db@1.1.1(browserslist@4.24.4):
     dependencies:
-      browserslist: 4.24.3
+      browserslist: 4.24.4
       escalade: 3.2.0
       picocolors: 1.1.1
 
@@ -17023,7 +17023,7 @@ snapshots:
       '@webassemblyjs/wasm-parser': 1.12.1
       acorn: 8.14.0
       acorn-import-attributes: 1.9.5(acorn@8.14.0)
-      browserslist: 4.24.3
+      browserslist: 4.24.4
       chrome-trace-event: 1.0.3
       enhanced-resolve: 5.17.1
       es-module-lexer: 1.5.4
