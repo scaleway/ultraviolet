@@ -62,10 +62,10 @@ importers:
         version: 11.13.0
       '@emotion/react':
         specifier: 11.14.0
-        version: 11.14.0(@types/react@19.0.2)(react@19.0.0)
+        version: 11.14.0(@types/react@19.0.5)(react@19.0.0)
       '@emotion/styled':
         specifier: 11.14.0
-        version: 11.14.0(@emotion/react@11.14.0(@types/react@19.0.2)(react@19.0.0))(@types/react@19.0.2)(react@19.0.0)
+        version: 11.14.0(@emotion/react@11.14.0(@types/react@19.0.5)(react@19.0.0))(@types/react@19.0.5)(react@19.0.0)
       '@eslint/compat':
         specifier: 1.2.5
         version: 1.2.5(eslint@9.17.0(jiti@2.4.2))
@@ -95,10 +95,10 @@ importers:
         version: 8.4.7(storybook@8.4.7(prettier@2.8.8))
       '@storybook/addon-docs':
         specifier: 8.4.7
-        version: 8.4.7(@types/react@19.0.2)(storybook@8.4.7(prettier@2.8.8))
+        version: 8.4.7(@types/react@19.0.5)(storybook@8.4.7(prettier@2.8.8))
       '@storybook/addon-essentials':
         specifier: 8.4.7
-        version: 8.4.7(@types/react@19.0.2)(storybook@8.4.7(prettier@2.8.8))
+        version: 8.4.7(@types/react@19.0.5)(storybook@8.4.7(prettier@2.8.8))
       '@storybook/addon-interactions':
         specifier: 8.4.7
         version: 8.4.7(storybook@8.4.7(prettier@2.8.8))
@@ -149,7 +149,7 @@ importers:
         version: 6.6.3
       '@testing-library/react':
         specifier: 16.1.0
-        version: 16.1.0(@testing-library/dom@10.4.0)(@types/react-dom@19.0.2(@types/react@19.0.2))(@types/react@19.0.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+        version: 16.1.0(@testing-library/dom@10.4.0)(@types/react-dom@19.0.3(@types/react@19.0.5))(@types/react@19.0.5)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@testing-library/user-event':
         specifier: 14.5.2
         version: 14.5.2(@testing-library/dom@10.4.0)
@@ -157,14 +157,14 @@ importers:
         specifier: 22.10.5
         version: 22.10.5
       '@types/react':
-        specifier: 19.0.2
-        version: 19.0.2
+        specifier: 19.0.5
+        version: 19.0.5
       '@types/react-datepicker':
         specifier: 6.2.0
         version: 6.2.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@types/react-dom':
-        specifier: 19.0.2
-        version: 19.0.2(@types/react@19.0.2)
+        specifier: 19.0.3
+        version: 19.0.3(@types/react@19.0.5)
       '@types/zxcvbn':
         specifier: 4.4.5
         version: 4.4.5
@@ -326,10 +326,10 @@ importers:
     dependencies:
       '@emotion/react':
         specifier: 11.14.0
-        version: 11.14.0(@types/react@19.0.2)(react@19.0.0)
+        version: 11.14.0(@types/react@19.0.5)(react@19.0.0)
       '@emotion/styled':
         specifier: 11.14.0
-        version: 11.14.0(@emotion/react@11.14.0(@types/react@19.0.2)(react@19.0.0))(@types/react@19.0.2)(react@19.0.0)
+        version: 11.14.0(@emotion/react@11.14.0(@types/react@19.0.5)(react@19.0.0))(@types/react@19.0.5)(react@19.0.0)
       '@scaleway/regex':
         specifier: 5.2.1
         version: 5.2.1
@@ -374,8 +374,8 @@ importers:
         specifier: 22.10.5
         version: 22.10.5
       '@types/react':
-        specifier: 19.0.2
-        version: 19.0.2
+        specifier: 19.0.5
+        version: 19.0.5
       '@types/react-syntax-highlighter':
         specifier: 15.5.13
         version: 15.5.13
@@ -387,10 +387,10 @@ importers:
     dependencies:
       '@emotion/react':
         specifier: 11.14.0
-        version: 11.14.0(@types/react@19.0.2)(react@19.0.0)
+        version: 11.14.0(@types/react@19.0.5)(react@19.0.0)
       '@emotion/styled':
         specifier: 11.14.0
-        version: 11.14.0(@emotion/react@11.14.0(@types/react@19.0.2)(react@19.0.0))(@types/react@19.0.2)(react@19.0.0)
+        version: 11.14.0(@emotion/react@11.14.0(@types/react@19.0.5)(react@19.0.0))(@types/react@19.0.5)(react@19.0.0)
       '@ultraviolet/icons':
         specifier: workspace:*
         version: link:../../packages/icons
@@ -411,11 +411,11 @@ importers:
         specifier: 11.13.5
         version: 11.13.5
       '@types/react':
-        specifier: 19.0.2
-        version: 19.0.2
+        specifier: 19.0.5
+        version: 19.0.5
       '@types/react-dom':
-        specifier: 19.0.2
-        version: 19.0.2(@types/react@19.0.2)
+        specifier: 19.0.3
+        version: 19.0.3(@types/react@19.0.5)
       '@vitejs/plugin-react':
         specifier: 4.3.4
         version: 4.3.4(vite@5.4.11(@types/node@22.10.5)(terser@5.31.0))
@@ -444,26 +444,26 @@ importers:
         version: 7.54.2(react@19.0.0)
       react-select:
         specifier: 5.8.3
-        version: 5.8.3(@types/react@19.0.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+        version: 5.8.3(@types/react@19.0.5)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
     devDependencies:
       '@babel/core':
         specifier: 7.26.0
         version: 7.26.0
       '@emotion/react':
         specifier: 11.14.0
-        version: 11.14.0(@types/react@19.0.2)(react@19.0.0)
+        version: 11.14.0(@types/react@19.0.5)(react@19.0.0)
       '@emotion/styled':
         specifier: 11.14.0
-        version: 11.14.0(@emotion/react@11.14.0(@types/react@19.0.2)(react@19.0.0))(@types/react@19.0.2)(react@19.0.0)
+        version: 11.14.0(@emotion/react@11.14.0(@types/react@19.0.5)(react@19.0.0))(@types/react@19.0.5)(react@19.0.0)
       '@types/final-form-focus':
         specifier: 1.1.7
         version: 1.1.7
       '@types/react':
-        specifier: 19.0.2
-        version: 19.0.2
+        specifier: 19.0.5
+        version: 19.0.5
       '@types/react-dom':
-        specifier: 19.0.2
-        version: 19.0.2(@types/react@19.0.2)
+        specifier: 19.0.3
+        version: 19.0.3(@types/react@19.0.5)
       '@utils/test':
         specifier: workspace:*
         version: link:../../utils/test
@@ -485,16 +485,16 @@ importers:
         version: 7.26.0
       '@emotion/react':
         specifier: 11.14.0
-        version: 11.14.0(@types/react@19.0.2)(react@19.0.0)
+        version: 11.14.0(@types/react@19.0.5)(react@19.0.0)
       '@emotion/styled':
         specifier: 11.14.0
-        version: 11.14.0(@emotion/react@11.14.0(@types/react@19.0.2)(react@19.0.0))(@types/react@19.0.2)(react@19.0.0)
+        version: 11.14.0(@emotion/react@11.14.0(@types/react@19.0.5)(react@19.0.0))(@types/react@19.0.5)(react@19.0.0)
       '@types/react':
-        specifier: 19.0.2
-        version: 19.0.2
+        specifier: 19.0.5
+        version: 19.0.5
       '@types/react-dom':
-        specifier: 19.0.2
-        version: 19.0.2(@types/react@19.0.2)
+        specifier: 19.0.3
+        version: 19.0.3(@types/react@19.0.5)
       '@utils/test':
         specifier: workspace:*
         version: link:../../utils/test
@@ -513,10 +513,10 @@ importers:
     devDependencies:
       '@emotion/react':
         specifier: 11.14.0
-        version: 11.14.0(@types/react@19.0.2)(react@19.0.0)
+        version: 11.14.0(@types/react@19.0.5)(react@19.0.0)
       '@emotion/styled':
         specifier: 11.14.0
-        version: 11.14.0(@emotion/react@11.14.0(@types/react@19.0.2)(react@19.0.0))(@types/react@19.0.2)(react@19.0.0)
+        version: 11.14.0(@emotion/react@11.14.0(@types/react@19.0.5)(react@19.0.0))(@types/react@19.0.5)(react@19.0.0)
       '@ultraviolet/ui':
         specifier: workspace:*
         version: link:../ui
@@ -559,16 +559,16 @@ importers:
         version: 7.26.0
       '@emotion/react':
         specifier: 11.14.0
-        version: 11.14.0(@types/react@19.0.2)(react@19.0.0)
+        version: 11.14.0(@types/react@19.0.5)(react@19.0.0)
       '@emotion/styled':
         specifier: 11.14.0
-        version: 11.14.0(@emotion/react@11.14.0(@types/react@19.0.2)(react@19.0.0))(@types/react@19.0.2)(react@19.0.0)
+        version: 11.14.0(@emotion/react@11.14.0(@types/react@19.0.5)(react@19.0.0))(@types/react@19.0.5)(react@19.0.0)
       '@types/react':
-        specifier: 19.0.2
-        version: 19.0.2
+        specifier: 19.0.5
+        version: 19.0.5
       '@types/react-dom':
-        specifier: 19.0.2
-        version: 19.0.2(@types/react@19.0.2)
+        specifier: 19.0.3
+        version: 19.0.3(@types/react@19.0.5)
       '@ultraviolet/illustrations':
         specifier: workspace:*
         version: link:../illustrations
@@ -628,7 +628,7 @@ importers:
         version: 6.9.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       react-select:
         specifier: 5.8.3
-        version: 5.8.3(@types/react@19.0.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+        version: 5.8.3(@types/react@19.0.5)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       react-toastify:
         specifier: 10.0.6
         version: 10.0.6(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
@@ -644,19 +644,19 @@ importers:
         version: 7.26.0
       '@emotion/react':
         specifier: 11.14.0
-        version: 11.14.0(@types/react@19.0.2)(react@19.0.0)
+        version: 11.14.0(@types/react@19.0.5)(react@19.0.0)
       '@emotion/styled':
         specifier: 11.14.0
-        version: 11.14.0(@emotion/react@11.14.0(@types/react@19.0.2)(react@19.0.0))(@types/react@19.0.2)(react@19.0.0)
+        version: 11.14.0(@emotion/react@11.14.0(@types/react@19.0.5)(react@19.0.0))(@types/react@19.0.5)(react@19.0.0)
       '@types/react':
-        specifier: 19.0.2
-        version: 19.0.2
+        specifier: 19.0.5
+        version: 19.0.5
       '@types/react-datepicker':
         specifier: 6.2.0
         version: 6.2.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@types/react-dom':
-        specifier: 19.0.2
-        version: 19.0.2(@types/react@19.0.2)
+        specifier: 19.0.3
+        version: 19.0.3(@types/react@19.0.5)
       '@utils/test':
         specifier: workspace:*
         version: link:../../utils/test
@@ -677,19 +677,19 @@ importers:
         version: 11.13.0
       '@emotion/react':
         specifier: 11.14.0
-        version: 11.14.0(@types/react@19.0.2)(react@19.0.0)
+        version: 11.14.0(@types/react@19.0.5)(react@19.0.0)
       '@emotion/styled':
         specifier: 11.14.0
-        version: 11.14.0(@emotion/react@11.14.0(@types/react@19.0.2)(react@19.0.0))(@types/react@19.0.2)(react@19.0.0)
+        version: 11.14.0(@emotion/react@11.14.0(@types/react@19.0.5)(react@19.0.0))(@types/react@19.0.5)(react@19.0.0)
       '@testing-library/jest-dom':
         specifier: 6.6.3
         version: 6.6.3
       '@testing-library/react':
         specifier: 16.1.0
-        version: 16.1.0(@testing-library/dom@10.4.0)(@types/react-dom@19.0.2(@types/react@19.0.2))(@types/react@19.0.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+        version: 16.1.0(@testing-library/dom@10.4.0)(@types/react-dom@19.0.3(@types/react@19.0.5))(@types/react@19.0.5)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@types/react':
-        specifier: 19.0.2
-        version: 19.0.2
+        specifier: 19.0.5
+        version: 19.0.5
       '@ultraviolet/themes':
         specifier: workspace:*
         version: link:../../packages/themes
@@ -1430,6 +1430,9 @@ packages:
   '@codemirror/commands@6.5.0':
     resolution: {integrity: sha512-rK+sj4fCAN/QfcY9BEzYMgp4wwL/q5aj/VfNSoH1RWPF9XS/dUwBkvlL3hpWgEjOqlpdN1uLC9UkjJ4tmyjJYg==}
 
+  '@codemirror/commands@6.8.0':
+    resolution: {integrity: sha512-q8VPEFaEP4ikSlt6ZxjB3zW72+7osfAYW9i8Zu943uqbKuz6utc1+F170hyLUCUltXORjQXRyYQNfkckzA/bPQ==}
+
   '@codemirror/lang-angular@0.1.3':
     resolution: {integrity: sha512-xgeWGJQQl1LyStvndWtruUvb4SnBZDAu/gvFH/ZU+c0W25tQR8e5hq7WTwiIY2dNxnf+49mRiGI/9yxIwB6f5w==}
 
@@ -1439,8 +1442,11 @@ packages:
   '@codemirror/lang-css@6.2.1':
     resolution: {integrity: sha512-/UNWDNV5Viwi/1lpr/dIXJNWiwDxpw13I4pTUAsNxZdg6E0mI2kTQb0P2iHczg1Tu+H4EBgJR+hYhKiHKko7qg==}
 
-  '@codemirror/lang-go@6.0.0':
-    resolution: {integrity: sha512-mMT4YeYdKGjnffDBOhr1ur1glee4oV/rfMe28vzazNHZkSt7vSiuHiBcgr3L/79Cl2RIjFdpQ1XMD0/T8Rx64g==}
+  '@codemirror/lang-css@6.3.1':
+    resolution: {integrity: sha512-kr5fwBGiGtmz6l0LSJIbno9QrifNMUusivHbnA1H6Dmqy4HZFte3UAICix1VuKo0lMPKQr2rqB+0BkKi/S3Ejg==}
+
+  '@codemirror/lang-go@6.0.1':
+    resolution: {integrity: sha512-7fNvbyNylvqCphW9HD6WFnRpcDjr+KXX/FgqXy5H5ZS0eC5edDljukm/yNgYkwTsgp2busdod50AOTIy6Jikfg==}
 
   '@codemirror/lang-html@6.4.9':
     resolution: {integrity: sha512-aQv37pIMSlueybId/2PVSP6NPnmurFDVmZwzc7jszd2KAF8qd4VBbvNYPXWQq90WIARjsdVkPbw29pszmHws3Q==}
@@ -1463,8 +1469,14 @@ packages:
   '@codemirror/lang-liquid@6.2.1':
     resolution: {integrity: sha512-J1Mratcm6JLNEiX+U2OlCDTysGuwbHD76XwuL5o5bo9soJtSbz2g6RU3vGHFyS5DC8rgVmFSzi7i6oBftm7tnA==}
 
+  '@codemirror/lang-liquid@6.2.2':
+    resolution: {integrity: sha512-7Dm841fk37+JQW6j2rI1/uGkJyESrjzyhiIkaLjbbR0U6aFFQvMrJn35WxQreRMADMhzkyVkZM4467OR7GR8nQ==}
+
   '@codemirror/lang-markdown@6.2.5':
     resolution: {integrity: sha512-Hgke565YcO4fd9pe2uLYxnMufHO5rQwRr+AAhFq8ABuhkrjyX8R5p5s+hZUTdV60O0dMRjxKhBLxz8pu/MkUVA==}
+
+  '@codemirror/lang-markdown@6.3.2':
+    resolution: {integrity: sha512-c/5MYinGbFxYl4itE9q/rgN/sMTjOr8XL5OWnC+EaRMLfCbVUmmubTJfdgpfcSS2SCaT7b+Q+xi3l6CgoE+BsA==}
 
   '@codemirror/lang-php@6.0.1':
     resolution: {integrity: sha512-ublojMdw/PNWa7qdN5TMsjmqkNuTBD3k6ndZ4Z0S25SBAiweFGyY68AS3xNcIOlb6DDFDvKlinLQ40vSLqf8xA==}
@@ -1481,6 +1493,9 @@ packages:
   '@codemirror/lang-sql@6.6.3':
     resolution: {integrity: sha512-fo5i3OD/7TmmqMtKycC4OaqfPsRxk0sKOb35g8cOtyUyyI2hfP2qXkDc7Asb6h7BiJK+MU/DYVPnQm6iNB5ZTw==}
 
+  '@codemirror/lang-sql@6.8.0':
+    resolution: {integrity: sha512-aGLmY4OwGqN3TdSx3h6QeA1NrvaYtF7kkoWR/+W7/JzB0gQtJ+VJxewlnE3+VImhA4WVlhmkJr109PefOOhjLg==}
+
   '@codemirror/lang-vue@0.1.3':
     resolution: {integrity: sha512-QSKdtYTDRhEHCfo5zOShzxCmqKJvgGrZwDQSdbvCRJ5pRLWBS7pD/8e/tH44aVQT6FKm0t6RVNoSUWHOI5vNug==}
 
@@ -1490,8 +1505,8 @@ packages:
   '@codemirror/lang-xml@6.1.0':
     resolution: {integrity: sha512-3z0blhicHLfwi2UgkZYRPioSgVTo9PV5GP5ducFH6FaHy0IAJRg+ixj5gTR1gnT/glAIC8xv4w2VL1LoZfs+Jg==}
 
-  '@codemirror/lang-yaml@6.1.1':
-    resolution: {integrity: sha512-HV2NzbK9bbVnjWxwObuZh5FuPCowx51mEfoFT9y3y+M37fA3+pbxx4I7uePuygFzDsAmCTwQSc/kXh/flab4uw==}
+  '@codemirror/lang-yaml@6.1.2':
+    resolution: {integrity: sha512-dxrfG8w5Ce/QbT7YID7mWZFKhdhsaTNOYjOkSIMt1qmC4VQnXSDSYVHHHn8k6kJUfIhtLo8t1JJgltlxWdsITw==}
 
   '@codemirror/language-data@6.5.1':
     resolution: {integrity: sha512-0sWxeUSNlBr6OmkqybUTImADFUP0M3P0IiSde4nc24bz/6jIYzqYSgkOSLS+CBIoW1vU8Q9KUWXscBXeoMVC9w==}
@@ -1511,11 +1526,17 @@ packages:
   '@codemirror/state@6.4.1':
     resolution: {integrity: sha512-QkEyUiLhsJoZkbumGZlswmAhA7CBU02Wrz7zvH4SrcifbsqwlXShVXg65f3v/ts57W3dqyamEriMhij1Z3Zz4A==}
 
+  '@codemirror/state@6.5.1':
+    resolution: {integrity: sha512-3rA9lcwciEB47ZevqvD8qgbzhM9qMb8vCcQCNmDfVRPQG4JT9mSb0Jg8H7YjKGGQcFnLN323fj9jdnG59Kx6bg==}
+
   '@codemirror/theme-one-dark@6.1.2':
     resolution: {integrity: sha512-F+sH0X16j/qFLMAfbciKTxVOwkdAS336b7AXTKOZhy8BR3eH/RelsnLgLFINrpST63mmN2OuwUt0W2ndUgYwUA==}
 
   '@codemirror/view@6.26.3':
     resolution: {integrity: sha512-gmqxkPALZjkgSxIeeweY/wGQXBfwTUaLs8h7OKtSwfbj9Ct3L11lD+u1sS7XHppxFQoMDiMDp07P9f3I2jWOHw==}
+
+  '@codemirror/view@6.36.2':
+    resolution: {integrity: sha512-DZ6ONbs8qdJK0fdN7AB82CgI6tYXf4HWk1wSVa0+9bhVznCuuvhQtX8bFBoy3dv8rZSQqUd8GvhVAcielcidrA==}
 
   '@commitlint/cli@19.6.1':
     resolution: {integrity: sha512-8hcyA6ZoHwWXC76BoC8qVOSr8xHy00LZhZpauiD0iO0VYbVhMnED0da85lTfIULxl7Lj4c6vZgF0Wu/ed1+jlQ==}
@@ -2228,6 +2249,9 @@ packages:
   '@lezer/css@1.1.8':
     resolution: {integrity: sha512-7JhxupKuMBaWQKjQoLtzhGj83DdnZY9MckEOG5+/iLKNK2ZJqKc6hf6uc0HjwCX7Qlok44jBNqZhHKDhEhZYLA==}
 
+  '@lezer/css@1.1.9':
+    resolution: {integrity: sha512-TYwgljcDv+YrV0MZFFvYFQHCfGgbPMR6nuqLabBdmZoFH3EP1gvw8t0vae326Ne3PszQkbXfVBjCnf3ZVCr0bA==}
+
   '@lezer/go@1.0.0':
     resolution: {integrity: sha512-co9JfT3QqX1YkrMmourYw2Z8meGC50Ko4d54QEcQbEYpvdUvN4yb0NBZdn/9ertgvjsySxHsKzH3lbm3vqJ4Jw==}
 
@@ -2254,6 +2278,9 @@ packages:
 
   '@lezer/markdown@1.3.0':
     resolution: {integrity: sha512-ErbEQ15eowmJUyT095e9NJc3BI9yZ894fjSDtHftD0InkfUBGgnKSU6dvan9jqsZuNHg2+ag/1oyDRxNsENupQ==}
+
+  '@lezer/markdown@1.4.0':
+    resolution: {integrity: sha512-mk4MYeq6ZQdxgsgRAe0G7kqPRV6Desajfa14TcHoGGXIqqj1/2ARN31VFpmrXDgvXiGBWpA7RXtv0he+UdTkGw==}
 
   '@lezer/php@1.0.2':
     resolution: {integrity: sha512-GN7BnqtGRpFyeoKSEqxvGvhJQiI4zkgmYnDk/JIyc7H7Ifc1tkPnUn/R2R8meH3h/aBf5rzjvU8ZQoyiNDtDrA==}
@@ -2295,6 +2322,9 @@ packages:
   '@manypkg/tools@1.1.2':
     resolution: {integrity: sha512-3lBouSuF7CqlseLB+FKES0K4FQ02JrbEoRtJhxnsyB1s5v4AP03gsoohN8jp7DcOImhaR9scYdztq3/sLfk/qQ==}
     engines: {node: '>=14.18.0'}
+
+  '@marijn/find-cluster-break@1.0.2':
+    resolution: {integrity: sha512-l0h88YhZFyKdXIFNfSWpyjStDjGHwZ/U7iobcK1cQQD8sejsONdQtTVU+1wVN1PBw40PiiHB1vA5S7VTfQiP9g==}
 
   '@mdx-js/react@3.0.1':
     resolution: {integrity: sha512-9ZrPIU4MGf6et1m1ov3zKf+q9+deetI51zprKB1D/z3NOb+rUxxtEl3mCjW5wTGh6VhRdwPueh1oRzi6ezkA8A==}
@@ -3177,8 +3207,8 @@ packages:
   '@types/react-datepicker@6.2.0':
     resolution: {integrity: sha512-+JtO4Fm97WLkJTH8j8/v3Ldh7JCNRwjMYjRaKh4KHH0M3jJoXtwiD3JBCsdlg3tsFIw9eQSqyAPeVDN2H2oM9Q==}
 
-  '@types/react-dom@19.0.2':
-    resolution: {integrity: sha512-c1s+7TKFaDRRxr1TxccIX2u7sfCnc3RxkVyBIUA2lCpyqCF+QoAwQ/CBg7bsMdVwP120HEH143VQezKtef5nCg==}
+  '@types/react-dom@19.0.3':
+    resolution: {integrity: sha512-0Knk+HJiMP/qOZgMyNFamlIjw9OFCsyC2ZbigmEEyXXixgre6IQpm/4V+r3qH4GC1JPvRJKInw+on2rV6YZLeA==}
     peerDependencies:
       '@types/react': ^19.0.0
 
@@ -3188,8 +3218,8 @@ packages:
   '@types/react-transition-group@4.4.10':
     resolution: {integrity: sha512-hT/+s0VQs2ojCX823m60m5f0sL5idt9SO6Tj6Dg+rdphGPIeJbJ6CxvBYkgkGKrYeDjvIpKTR38UzmtHJOGW3Q==}
 
-  '@types/react@19.0.2':
-    resolution: {integrity: sha512-USU8ZI/xyKJwFTpjSVIrSeHBVAGagkHQKPNbxeWwql/vDmnTIBgx+TJnhFnj1NXgz8XfprU0egV2dROLGpsBEg==}
+  '@types/react@19.0.5':
+    resolution: {integrity: sha512-i4OQzFiqsUCfoBns/KHpz+4QcvfjoCsTUi+mugo3lrSRA3+x0gJVvhZhAJrwLGEqz4EXiFVP4hPnOugx+m2uhg==}
 
   '@types/resolve@1.20.6':
     resolution: {integrity: sha512-A4STmOXPhMUtHH+S6ymgE2GiBSMqf4oTvcQZMcHzokuTLVYzXTB8ttjcgxOVaAp2lGwEdzZ0J+cRbbeevQj1UQ==}
@@ -3511,8 +3541,8 @@ packages:
     peerDependencies:
       acorn: ^6.0.0 || ^7.0.0 || ^8.0.0
 
-  acorn-walk@8.3.2:
-    resolution: {integrity: sha512-cjkyv4OtNCIeqhHrfS81QWXoCBPExR/J62oyEqepVw8WaQeSqpW2uhuLPh1m9eWhDuOo/jUXVTlifvesOWp/4A==}
+  acorn-walk@8.3.4:
+    resolution: {integrity: sha512-ueEepnujpqee2o5aIYnvHU6C0A42MNdsIDeqy5BydrkuC5R1ZuUFnm27EeFJGoEHJQgn3uleRvmTXaJgfXbt4g==}
     engines: {node: '>=0.4.0'}
 
   acorn@8.14.0:
@@ -9178,11 +9208,32 @@ snapshots:
       '@codemirror/view': 6.26.3
       '@lezer/common': 1.2.1
 
+  '@codemirror/autocomplete@6.16.0(@codemirror/language@6.10.1)(@codemirror/state@6.5.1)(@codemirror/view@6.26.3)(@lezer/common@1.2.1)':
+    dependencies:
+      '@codemirror/language': 6.10.1
+      '@codemirror/state': 6.5.1
+      '@codemirror/view': 6.26.3
+      '@lezer/common': 1.2.1
+
+  '@codemirror/autocomplete@6.16.0(@codemirror/language@6.10.1)(@codemirror/state@6.5.1)(@codemirror/view@6.36.2)(@lezer/common@1.2.1)':
+    dependencies:
+      '@codemirror/language': 6.10.1
+      '@codemirror/state': 6.5.1
+      '@codemirror/view': 6.36.2
+      '@lezer/common': 1.2.1
+
   '@codemirror/commands@6.5.0':
     dependencies:
       '@codemirror/language': 6.10.1
       '@codemirror/state': 6.4.1
       '@codemirror/view': 6.26.3
+      '@lezer/common': 1.2.1
+
+  '@codemirror/commands@6.8.0':
+    dependencies:
+      '@codemirror/language': 6.10.1
+      '@codemirror/state': 6.5.1
+      '@codemirror/view': 6.36.2
       '@lezer/common': 1.2.1
 
   '@codemirror/lang-angular@0.1.3':
@@ -9209,11 +9260,21 @@ snapshots:
     transitivePeerDependencies:
       - '@codemirror/view'
 
-  '@codemirror/lang-go@6.0.0(@codemirror/view@6.26.3)':
+  '@codemirror/lang-css@6.3.1(@codemirror/view@6.26.3)':
     dependencies:
-      '@codemirror/autocomplete': 6.16.0(@codemirror/language@6.10.1)(@codemirror/state@6.4.1)(@codemirror/view@6.26.3)(@lezer/common@1.2.1)
+      '@codemirror/autocomplete': 6.16.0(@codemirror/language@6.10.1)(@codemirror/state@6.5.1)(@codemirror/view@6.26.3)(@lezer/common@1.2.1)
       '@codemirror/language': 6.10.1
-      '@codemirror/state': 6.4.1
+      '@codemirror/state': 6.5.1
+      '@lezer/common': 1.2.1
+      '@lezer/css': 1.1.9
+    transitivePeerDependencies:
+      - '@codemirror/view'
+
+  '@codemirror/lang-go@6.0.1(@codemirror/view@6.26.3)':
+    dependencies:
+      '@codemirror/autocomplete': 6.16.0(@codemirror/language@6.10.1)(@codemirror/state@6.5.1)(@codemirror/view@6.26.3)(@lezer/common@1.2.1)
+      '@codemirror/language': 6.10.1
+      '@codemirror/state': 6.5.1
       '@lezer/common': 1.2.1
       '@lezer/go': 1.0.0
     transitivePeerDependencies:
@@ -9279,6 +9340,17 @@ snapshots:
       '@lezer/highlight': 1.2.0
       '@lezer/lr': 1.4.0
 
+  '@codemirror/lang-liquid@6.2.2':
+    dependencies:
+      '@codemirror/autocomplete': 6.16.0(@codemirror/language@6.10.1)(@codemirror/state@6.5.1)(@codemirror/view@6.36.2)(@lezer/common@1.2.1)
+      '@codemirror/lang-html': 6.4.9
+      '@codemirror/language': 6.10.1
+      '@codemirror/state': 6.5.1
+      '@codemirror/view': 6.36.2
+      '@lezer/common': 1.2.1
+      '@lezer/highlight': 1.2.0
+      '@lezer/lr': 1.4.0
+
   '@codemirror/lang-markdown@6.2.5':
     dependencies:
       '@codemirror/autocomplete': 6.16.0(@codemirror/language@6.10.1)(@codemirror/state@6.4.1)(@codemirror/view@6.26.3)(@lezer/common@1.2.1)
@@ -9288,6 +9360,16 @@ snapshots:
       '@codemirror/view': 6.26.3
       '@lezer/common': 1.2.1
       '@lezer/markdown': 1.3.0
+
+  '@codemirror/lang-markdown@6.3.2':
+    dependencies:
+      '@codemirror/autocomplete': 6.16.0(@codemirror/language@6.10.1)(@codemirror/state@6.5.1)(@codemirror/view@6.36.2)(@lezer/common@1.2.1)
+      '@codemirror/lang-html': 6.4.9
+      '@codemirror/language': 6.10.1
+      '@codemirror/state': 6.5.1
+      '@codemirror/view': 6.36.2
+      '@lezer/common': 1.2.1
+      '@lezer/markdown': 1.4.0
 
   '@codemirror/lang-php@6.0.1':
     dependencies:
@@ -9333,6 +9415,17 @@ snapshots:
     transitivePeerDependencies:
       - '@codemirror/view'
 
+  '@codemirror/lang-sql@6.8.0(@codemirror/view@6.26.3)':
+    dependencies:
+      '@codemirror/autocomplete': 6.16.0(@codemirror/language@6.10.1)(@codemirror/state@6.5.1)(@codemirror/view@6.26.3)(@lezer/common@1.2.1)
+      '@codemirror/language': 6.10.1
+      '@codemirror/state': 6.5.1
+      '@lezer/common': 1.2.1
+      '@lezer/highlight': 1.2.0
+      '@lezer/lr': 1.4.0
+    transitivePeerDependencies:
+      - '@codemirror/view'
+
   '@codemirror/lang-vue@0.1.3':
     dependencies:
       '@codemirror/lang-html': 6.4.9
@@ -9358,13 +9451,14 @@ snapshots:
       '@lezer/common': 1.2.1
       '@lezer/xml': 1.0.5
 
-  '@codemirror/lang-yaml@6.1.1(@codemirror/view@6.26.3)':
+  '@codemirror/lang-yaml@6.1.2(@codemirror/view@6.26.3)':
     dependencies:
-      '@codemirror/autocomplete': 6.16.0(@codemirror/language@6.10.1)(@codemirror/state@6.4.1)(@codemirror/view@6.26.3)(@lezer/common@1.2.1)
+      '@codemirror/autocomplete': 6.16.0(@codemirror/language@6.10.1)(@codemirror/state@6.5.1)(@codemirror/view@6.26.3)(@lezer/common@1.2.1)
       '@codemirror/language': 6.10.1
-      '@codemirror/state': 6.4.1
+      '@codemirror/state': 6.5.1
       '@lezer/common': 1.2.1
       '@lezer/highlight': 1.2.0
+      '@lezer/lr': 1.4.0
       '@lezer/yaml': 1.0.3
     transitivePeerDependencies:
       - '@codemirror/view'
@@ -9373,24 +9467,24 @@ snapshots:
     dependencies:
       '@codemirror/lang-angular': 0.1.3
       '@codemirror/lang-cpp': 6.0.2
-      '@codemirror/lang-css': 6.2.1(@codemirror/view@6.26.3)
-      '@codemirror/lang-go': 6.0.0(@codemirror/view@6.26.3)
+      '@codemirror/lang-css': 6.3.1(@codemirror/view@6.26.3)
+      '@codemirror/lang-go': 6.0.1(@codemirror/view@6.26.3)
       '@codemirror/lang-html': 6.4.9
       '@codemirror/lang-java': 6.0.1
       '@codemirror/lang-javascript': 6.2.2
       '@codemirror/lang-json': 6.0.1
       '@codemirror/lang-less': 6.0.2(@codemirror/view@6.26.3)
-      '@codemirror/lang-liquid': 6.2.1
-      '@codemirror/lang-markdown': 6.2.5
+      '@codemirror/lang-liquid': 6.2.2
+      '@codemirror/lang-markdown': 6.3.2
       '@codemirror/lang-php': 6.0.1
       '@codemirror/lang-python': 6.1.6(@codemirror/view@6.26.3)
       '@codemirror/lang-rust': 6.0.1
       '@codemirror/lang-sass': 6.0.2(@codemirror/view@6.26.3)
-      '@codemirror/lang-sql': 6.6.3(@codemirror/view@6.26.3)
+      '@codemirror/lang-sql': 6.8.0(@codemirror/view@6.26.3)
       '@codemirror/lang-vue': 0.1.3
       '@codemirror/lang-wast': 6.0.2
       '@codemirror/lang-xml': 6.1.0
-      '@codemirror/lang-yaml': 6.1.1(@codemirror/view@6.26.3)
+      '@codemirror/lang-yaml': 6.1.2(@codemirror/view@6.26.3)
       '@codemirror/language': 6.10.1
       '@codemirror/legacy-modes': 6.4.0
     transitivePeerDependencies:
@@ -9417,22 +9511,32 @@ snapshots:
 
   '@codemirror/search@6.5.6':
     dependencies:
-      '@codemirror/state': 6.4.1
-      '@codemirror/view': 6.26.3
+      '@codemirror/state': 6.5.1
+      '@codemirror/view': 6.36.2
       crelt: 1.0.6
 
   '@codemirror/state@6.4.1': {}
 
+  '@codemirror/state@6.5.1':
+    dependencies:
+      '@marijn/find-cluster-break': 1.0.2
+
   '@codemirror/theme-one-dark@6.1.2':
     dependencies:
       '@codemirror/language': 6.10.1
-      '@codemirror/state': 6.4.1
-      '@codemirror/view': 6.26.3
+      '@codemirror/state': 6.5.1
+      '@codemirror/view': 6.36.2
       '@lezer/highlight': 1.2.0
 
   '@codemirror/view@6.26.3':
     dependencies:
       '@codemirror/state': 6.4.1
+      style-mod: 4.1.2
+      w3c-keyname: 2.2.8
+
+  '@codemirror/view@6.36.2':
+    dependencies:
+      '@codemirror/state': 6.5.1
       style-mod: 4.1.2
       w3c-keyname: 2.2.8
 
@@ -9653,7 +9757,7 @@ snapshots:
 
   '@emotion/memoize@0.9.0': {}
 
-  '@emotion/react@11.14.0(@types/react@19.0.2)(react@19.0.0)':
+  '@emotion/react@11.14.0(@types/react@19.0.5)(react@19.0.0)':
     dependencies:
       '@babel/runtime': 7.26.0
       '@emotion/babel-plugin': 11.13.5
@@ -9665,7 +9769,7 @@ snapshots:
       hoist-non-react-statics: 3.3.2
       react: 19.0.0
     optionalDependencies:
-      '@types/react': 19.0.2
+      '@types/react': 19.0.5
     transitivePeerDependencies:
       - supports-color
 
@@ -9679,18 +9783,18 @@ snapshots:
 
   '@emotion/sheet@1.4.0': {}
 
-  '@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.2)(react@19.0.0))(@types/react@19.0.2)(react@19.0.0)':
+  '@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.5)(react@19.0.0))(@types/react@19.0.5)(react@19.0.0)':
     dependencies:
       '@babel/runtime': 7.26.0
       '@emotion/babel-plugin': 11.13.5
       '@emotion/is-prop-valid': 1.3.0
-      '@emotion/react': 11.14.0(@types/react@19.0.2)(react@19.0.0)
+      '@emotion/react': 11.14.0(@types/react@19.0.5)(react@19.0.0)
       '@emotion/serialize': 1.3.3
       '@emotion/use-insertion-effect-with-fallbacks': 1.2.0(react@19.0.0)
       '@emotion/utils': 1.4.2
       react: 19.0.0
     optionalDependencies:
-      '@types/react': 19.0.2
+      '@types/react': 19.0.5
     transitivePeerDependencies:
       - supports-color
 
@@ -10085,6 +10189,12 @@ snapshots:
       '@lezer/highlight': 1.2.0
       '@lezer/lr': 1.4.0
 
+  '@lezer/css@1.1.9':
+    dependencies:
+      '@lezer/common': 1.2.1
+      '@lezer/highlight': 1.2.0
+      '@lezer/lr': 1.4.0
+
   '@lezer/go@1.0.0':
     dependencies:
       '@lezer/common': 1.2.1
@@ -10129,6 +10239,11 @@ snapshots:
       '@lezer/common': 1.2.1
 
   '@lezer/markdown@1.3.0':
+    dependencies:
+      '@lezer/common': 1.2.1
+      '@lezer/highlight': 1.2.0
+
+  '@lezer/markdown@1.4.0':
     dependencies:
       '@lezer/common': 1.2.1
       '@lezer/highlight': 1.2.0
@@ -10214,10 +10329,12 @@ snapshots:
       jju: 1.4.0
       js-yaml: 4.1.0
 
-  '@mdx-js/react@3.0.1(@types/react@19.0.2)(react@18.3.1)':
+  '@marijn/find-cluster-break@1.0.2': {}
+
+  '@mdx-js/react@3.0.1(@types/react@19.0.5)(react@18.3.1)':
     dependencies:
       '@types/mdx': 2.0.13
-      '@types/react': 19.0.2
+      '@types/react': 19.0.5
       react: 18.3.1
 
   '@next/env@15.1.4': {}
@@ -10741,9 +10858,9 @@ snapshots:
       storybook: 8.4.7(prettier@2.8.8)
       ts-dedent: 2.2.0
 
-  '@storybook/addon-docs@8.4.7(@types/react@19.0.2)(storybook@8.4.7(prettier@2.8.8))':
+  '@storybook/addon-docs@8.4.7(@types/react@19.0.5)(storybook@8.4.7(prettier@2.8.8))':
     dependencies:
-      '@mdx-js/react': 3.0.1(@types/react@19.0.2)(react@18.3.1)
+      '@mdx-js/react': 3.0.1(@types/react@19.0.5)(react@18.3.1)
       '@storybook/blocks': 8.4.7(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.4.7(prettier@2.8.8))
       '@storybook/csf-plugin': 8.4.7(storybook@8.4.7(prettier@2.8.8))
       '@storybook/react-dom-shim': 8.4.7(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.4.7(prettier@2.8.8))
@@ -10754,12 +10871,12 @@ snapshots:
     transitivePeerDependencies:
       - '@types/react'
 
-  '@storybook/addon-essentials@8.4.7(@types/react@19.0.2)(storybook@8.4.7(prettier@2.8.8))':
+  '@storybook/addon-essentials@8.4.7(@types/react@19.0.5)(storybook@8.4.7(prettier@2.8.8))':
     dependencies:
       '@storybook/addon-actions': 8.4.7(storybook@8.4.7(prettier@2.8.8))
       '@storybook/addon-backgrounds': 8.4.7(storybook@8.4.7(prettier@2.8.8))
       '@storybook/addon-controls': 8.4.7(storybook@8.4.7(prettier@2.8.8))
-      '@storybook/addon-docs': 8.4.7(@types/react@19.0.2)(storybook@8.4.7(prettier@2.8.8))
+      '@storybook/addon-docs': 8.4.7(@types/react@19.0.5)(storybook@8.4.7(prettier@2.8.8))
       '@storybook/addon-highlight': 8.4.7(storybook@8.4.7(prettier@2.8.8))
       '@storybook/addon-measure': 8.4.7(storybook@8.4.7(prettier@2.8.8))
       '@storybook/addon-outline': 8.4.7(storybook@8.4.7(prettier@2.8.8))
@@ -11128,15 +11245,15 @@ snapshots:
       lodash: 4.17.21
       redent: 3.0.0
 
-  '@testing-library/react@16.1.0(@testing-library/dom@10.4.0)(@types/react-dom@19.0.2(@types/react@19.0.2))(@types/react@19.0.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
+  '@testing-library/react@16.1.0(@testing-library/dom@10.4.0)(@types/react-dom@19.0.3(@types/react@19.0.5))(@types/react@19.0.5)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@babel/runtime': 7.26.0
       '@testing-library/dom': 10.4.0
       react: 19.0.0
       react-dom: 19.0.0(react@19.0.0)
     optionalDependencies:
-      '@types/react': 19.0.2
-      '@types/react-dom': 19.0.2(@types/react@19.0.2)
+      '@types/react': 19.0.5
+      '@types/react-dom': 19.0.3(@types/react@19.0.5)
 
   '@testing-library/user-event@14.5.2(@testing-library/dom@10.4.0)':
     dependencies:
@@ -11273,25 +11390,25 @@ snapshots:
   '@types/react-datepicker@6.2.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@floating-ui/react': 0.26.16(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      '@types/react': 19.0.2
+      '@types/react': 19.0.5
       date-fns: 3.6.0
     transitivePeerDependencies:
       - react
       - react-dom
 
-  '@types/react-dom@19.0.2(@types/react@19.0.2)':
+  '@types/react-dom@19.0.3(@types/react@19.0.5)':
     dependencies:
-      '@types/react': 19.0.2
+      '@types/react': 19.0.5
 
   '@types/react-syntax-highlighter@15.5.13':
     dependencies:
-      '@types/react': 19.0.2
+      '@types/react': 19.0.5
 
   '@types/react-transition-group@4.4.10':
     dependencies:
-      '@types/react': 19.0.2
+      '@types/react': 19.0.5
 
-  '@types/react@19.0.2':
+  '@types/react@19.0.5':
     dependencies:
       csstype: 3.1.3
 
@@ -11787,7 +11904,9 @@ snapshots:
     dependencies:
       acorn: 8.14.0
 
-  acorn-walk@8.3.2:
+  acorn-walk@8.3.4:
+    dependencies:
+      acorn: 8.14.0
     optional: true
 
   acorn@8.14.0: {}
@@ -12279,13 +12398,13 @@ snapshots:
 
   codemirror@6.0.1(@lezer/common@1.2.1):
     dependencies:
-      '@codemirror/autocomplete': 6.16.0(@codemirror/language@6.10.1)(@codemirror/state@6.4.1)(@codemirror/view@6.26.3)(@lezer/common@1.2.1)
-      '@codemirror/commands': 6.5.0
+      '@codemirror/autocomplete': 6.16.0(@codemirror/language@6.10.1)(@codemirror/state@6.5.1)(@codemirror/view@6.36.2)(@lezer/common@1.2.1)
+      '@codemirror/commands': 6.8.0
       '@codemirror/language': 6.10.1
       '@codemirror/lint': 6.7.0
       '@codemirror/search': 6.5.6
-      '@codemirror/state': 6.4.1
-      '@codemirror/view': 6.26.3
+      '@codemirror/state': 6.5.1
+      '@codemirror/view': 6.36.2
     transitivePeerDependencies:
       - '@lezer/common'
 
@@ -15715,11 +15834,11 @@ snapshots:
       schema-dts: 1.1.2(typescript@5.7.2)
       typescript: 5.7.2
 
-  react-select@5.8.3(@types/react@19.0.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0):
+  react-select@5.8.3(@types/react@19.0.5)(react-dom@19.0.0(react@19.0.0))(react@19.0.0):
     dependencies:
       '@babel/runtime': 7.26.0
       '@emotion/cache': 11.13.1
-      '@emotion/react': 11.14.0(@types/react@19.0.2)(react@19.0.0)
+      '@emotion/react': 11.14.0(@types/react@19.0.5)(react@19.0.0)
       '@floating-ui/dom': 1.6.4
       '@types/react-transition-group': 4.4.10
       memoize-one: 6.0.0
@@ -15727,7 +15846,7 @@ snapshots:
       react: 19.0.0
       react-dom: 19.0.0(react@19.0.0)
       react-transition-group: 4.4.5(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      use-isomorphic-layout-effect: 1.1.2(@types/react@19.0.2)(react@19.0.0)
+      use-isomorphic-layout-effect: 1.1.2(@types/react@19.0.5)(react@19.0.0)
     transitivePeerDependencies:
       - '@types/react'
       - supports-color
@@ -16656,7 +16775,7 @@ snapshots:
       '@tsconfig/node16': 1.0.4
       '@types/node': 22.10.5
       acorn: 8.14.0
-      acorn-walk: 8.3.2
+      acorn-walk: 8.3.4
       arg: 4.1.3
       create-require: 1.1.1
       diff: 4.0.2
@@ -16891,11 +17010,11 @@ snapshots:
 
   urlpattern-polyfill@10.0.0: {}
 
-  use-isomorphic-layout-effect@1.1.2(@types/react@19.0.2)(react@19.0.0):
+  use-isomorphic-layout-effect@1.1.2(@types/react@19.0.5)(react@19.0.0):
     dependencies:
       react: 19.0.0
     optionalDependencies:
-      '@types/react': 19.0.2
+      '@types/react': 19.0.5
 
   util-deprecate@1.0.2: {}
 
