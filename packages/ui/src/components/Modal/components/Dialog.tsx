@@ -205,9 +205,6 @@ export const Dialog = ({
         !dialogRef.current.contains(event.target as Node)
       ) {
         onCloseRef.current()
-      } else {
-        // Because overlay is not focusable we can't handle hideOnEsc properly
-        dialogRef.current?.focus()
       }
     },
     [hideOnClickOutside],
