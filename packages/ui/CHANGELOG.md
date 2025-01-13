@@ -1,5 +1,16 @@
 # Change Log
 
+## 1.83.1
+
+### Patch Changes
+
+- [#4644](https://github.com/scaleway/ultraviolet/pull/4644) [`8b7e989`](https://github.com/scaleway/ultraviolet/commit/8b7e98975598d5f24b006d29f83b59c807eeca58) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `19.0.3`.
+
+- [#4659](https://github.com/scaleway/ultraviolet/pull/4659) [`86641c4`](https://github.com/scaleway/ultraviolet/commit/86641c44e754bab39932bd4efe489a3d567abf81) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<Modal />` not allowing to focus nested inputs
+
+- Updated dependencies [[`8b7e989`](https://github.com/scaleway/ultraviolet/commit/8b7e98975598d5f24b006d29f83b59c807eeca58)]:
+  - @ultraviolet/icons@3.8.1
+
 ## 1.83.0
 
 ### Minor Changes
