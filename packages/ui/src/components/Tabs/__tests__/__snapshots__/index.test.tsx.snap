@@ -1487,6 +1487,7 @@ exports[`Tabs > renders correctly with Tabs with prop 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  white-space: nowrap;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1499,7 +1500,6 @@ exports[`Tabs > renders correctly with Tabs with prop 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  white-space: nowrap;
   border-radius: 1rem;
   padding: 0 0.75rem;
   gap: 0.5rem;
@@ -1524,6 +1524,7 @@ exports[`Tabs > renders correctly with Tabs with prop 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  white-space: nowrap;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1536,7 +1537,6 @@ exports[`Tabs > renders correctly with Tabs with prop 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  white-space: nowrap;
   border-radius: 1rem;
   padding: 0 0.75rem;
   gap: 0.5rem;
@@ -2268,7 +2268,7 @@ exports[`Tabs > renders correctly with Tabs with prop 1`] = `
   text-align: center;
   position: absolute;
   max-width: 14.5rem;
-  max-height: 480px;
+  max-height: 30rem;
   overflow: auto;
   overflow-wrap: break-word;
   font-size: 0.8rem;
@@ -2284,7 +2284,7 @@ exports[`Tabs > renders correctly with Tabs with prop 1`] = `
   background-color: #ffffff;
   box-shadow: 0px 4px 8px 0px #22263829,0px 8px 24px 0px #2226383d;
   padding: 0;
-  width: 180px;
+  width: 11.25rem;
   max-width: none;
   padding: 0.125rem 0;
 }
@@ -2435,31 +2435,33 @@ exports[`Tabs > renders correctly with Tabs with prop 1`] = `
     role="dialog"
     style="opacity: 1; animation: none;"
   >
-    <div
-      class="emotion-3 emotion-4"
-      role="menu"
-    >
+    <div>
       <div
-        class="emotion-5 emotion-6"
+        class="emotion-3 emotion-4"
+        role="menu"
       >
-        <button
-          class="emotion-7 emotion-8 emotion-9"
-          role="menuitem"
-          type="button"
+        <div
+          class="emotion-5 emotion-6"
         >
-          Test
-        </button>
-      </div>
-      <div
-        class="emotion-5 emotion-6"
-      >
-        <button
-          class="emotion-7 emotion-8 emotion-9"
-          role="menuitem"
-          type="button"
+          <button
+            class="emotion-7 emotion-8 emotion-9"
+            role="menuitem"
+            type="button"
+          >
+            Test
+          </button>
+        </div>
+        <div
+          class="emotion-5 emotion-6"
         >
-          Test 2
-        </button>
+          <button
+            class="emotion-7 emotion-8 emotion-9"
+            role="menuitem"
+            type="button"
+          >
+            Test 2
+          </button>
+        </div>
       </div>
     </div>
   </div>
@@ -2489,7 +2491,7 @@ exports[`Tabs > renders correctly with Tabs with prop 1`] = `
   text-align: center;
   position: absolute;
   max-width: 14.5rem;
-  max-height: 480px;
+  max-height: 30rem;
   overflow: auto;
   overflow-wrap: break-word;
   font-size: 0.8rem;
@@ -2505,7 +2507,7 @@ exports[`Tabs > renders correctly with Tabs with prop 1`] = `
   background-color: #ffffff;
   box-shadow: 0px 4px 8px 0px #22263829,0px 8px 24px 0px #2226383d;
   padding: 0;
-  width: 180px;
+  width: 11.25rem;
   max-width: none;
   padding: 0.125rem 0;
 }
@@ -2763,6 +2765,7 @@ exports[`Tabs > renders correctly with Tabs with prop 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  white-space: nowrap;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2775,7 +2778,6 @@ exports[`Tabs > renders correctly with Tabs with prop 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  white-space: nowrap;
   border-radius: 1rem;
   padding: 0 0.75rem;
   gap: 0.5rem;
@@ -2800,6 +2802,7 @@ exports[`Tabs > renders correctly with Tabs with prop 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  white-space: nowrap;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2812,7 +2815,6 @@ exports[`Tabs > renders correctly with Tabs with prop 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  white-space: nowrap;
   border-radius: 1rem;
   padding: 0 0.75rem;
   gap: 0.5rem;
@@ -2984,399 +2986,401 @@ exports[`Tabs > renders correctly with Tabs with prop 1`] = `
     role="dialog"
     style="opacity: 1; animation: none;"
   >
-    <div
-      class="emotion-3 emotion-4"
-      role="menu"
-    >
+    <div>
       <div
-        class="emotion-5 emotion-6"
+        class="emotion-3 emotion-4"
+        role="menu"
       >
-        <button
-          aria-disabled="false"
-          aria-selected="true"
-          class="emotion-7 emotion-8"
-          data-is-selected="true"
-          role="tab"
-          type="button"
-        >
-          <div
-            class="emotion-9 emotion-10"
-          >
-            <div
-              class="emotion-11 emotion-10"
-            >
-              First
-              <span
-                class="emotion-13 emotion-14 emotion-15 emotion-16"
-              >
-                2
-              </span>
-            </div>
-          </div>
-        </button>
-        <button
-          aria-disabled="false"
-          aria-label="1"
-          aria-selected="false"
-          class="emotion-7 emotion-8"
-          data-is-selected="false"
-          role="tab"
-          type="button"
-        >
-          <div
-            class="emotion-9 emotion-10"
-          >
-            <div
-              class="emotion-11 emotion-10"
-            >
-              Second
-            </div>
-          </div>
-        </button>
-        <button
-          aria-disabled="false"
-          aria-selected="false"
-          class="emotion-7 emotion-8"
-          data-is-selected="false"
-          role="tab"
-          type="button"
-        >
-          <div
-            class="emotion-9 emotion-10"
-          >
-            <div
-              class="emotion-11 emotion-10"
-            >
-              Undefined
-            </div>
-          </div>
-        </button>
-        <button
-          aria-disabled="false"
-          aria-selected="false"
-          class="emotion-7 emotion-8"
-          data-is-selected="false"
-          role="tab"
-          type="button"
-        >
-          <div
-            class="emotion-9 emotion-10"
-          >
-            <div
-              class="emotion-11 emotion-10"
-            >
-              Counter
-              <span
-                class="emotion-13 emotion-14 emotion-37 emotion-16"
-              >
-                12
-              </span>
-            </div>
-          </div>
-        </button>
-        <button
-          aria-disabled="false"
-          aria-label="2"
-          aria-selected="false"
-          class="emotion-7 emotion-8"
-          data-is-selected="false"
-          role="tab"
-          type="button"
-        >
-          <div
-            class="emotion-9 emotion-10"
-          >
-            <div
-              class="emotion-11 emotion-10"
-            >
-              Counter no items
-              <span
-                class="emotion-13 emotion-14 emotion-37 emotion-16"
-              >
-                0
-              </span>
-            </div>
-          </div>
-        </button>
-        <button
-          aria-disabled="false"
-          aria-selected="false"
-          class="emotion-7 emotion-8"
-          data-is-selected="false"
-          role="tab"
-          type="button"
-        >
-          <div
-            class="emotion-9 emotion-10"
-          >
-            <div
-              class="emotion-11 emotion-10"
-            >
-              Conter and badge
-              <span
-                class="emotion-13 emotion-14 emotion-37 emotion-16"
-              >
-                12
-              </span>
-              <span
-                class="emotion-59 emotion-60"
-              >
-                Badge
-              </span>
-            </div>
-          </div>
-        </button>
-        <button
-          aria-disabled="false"
-          aria-selected="false"
-          class="emotion-7 emotion-8"
-          data-is-selected="false"
-          role="tab"
-          type="button"
-        >
-          <div
-            class="emotion-9 emotion-10"
-          >
-            <div
-              class="emotion-11 emotion-10"
-            >
-              Badge
-              <span
-                class="emotion-59 emotion-60"
-              >
-                Badge
-              </span>
-            </div>
-          </div>
-        </button>
-        <button
-          aria-disabled="false"
-          aria-selected="false"
-          class="emotion-7 emotion-8"
-          data-is-selected="false"
-          role="tab"
-          type="button"
-        >
-          <div
-            class="emotion-9 emotion-10"
-          >
-            <div
-              class="emotion-11 emotion-10"
-            >
-              Very long tab name
-            </div>
-          </div>
-        </button>
-        <button
-          aria-disabled="false"
-          aria-selected="false"
-          class="emotion-7 emotion-8"
-          data-is-selected="false"
-          role="tab"
-          type="button"
-        >
-          <div
-            class="emotion-9 emotion-10"
-          >
-            <div
-              class="emotion-11 emotion-10"
-            >
-              Very long tab name
-            </div>
-          </div>
-        </button>
-        <button
-          aria-disabled="false"
-          aria-selected="false"
-          class="emotion-7 emotion-8"
-          data-is-selected="false"
-          role="tab"
-          type="button"
-        >
-          <div
-            class="emotion-9 emotion-10"
-          >
-            <div
-              class="emotion-11 emotion-10"
-            >
-              Very long tab name
-            </div>
-          </div>
-        </button>
-        <button
-          aria-disabled="false"
-          aria-selected="false"
-          class="emotion-7 emotion-8"
-          data-is-selected="false"
-          role="tab"
-          type="button"
-        >
-          <div
-            class="emotion-9 emotion-10"
-          >
-            <div
-              class="emotion-11 emotion-10"
-            >
-              Very long tab name
-            </div>
-          </div>
-        </button>
-        <button
-          aria-disabled="false"
-          aria-selected="false"
-          class="emotion-7 emotion-8"
-          data-is-selected="false"
-          role="tab"
-          type="button"
-        >
-          <div
-            class="emotion-9 emotion-10"
-          >
-            <div
-              class="emotion-11 emotion-10"
-            >
-              Very long tab name
-            </div>
-          </div>
-        </button>
-        <button
-          aria-disabled="false"
-          aria-selected="false"
-          class="emotion-7 emotion-8"
-          data-is-selected="false"
-          role="tab"
-          type="button"
-        >
-          <div
-            class="emotion-9 emotion-10"
-          >
-            <div
-              class="emotion-11 emotion-10"
-            >
-              Very long tab name
-            </div>
-          </div>
-        </button>
-        <button
-          aria-disabled="false"
-          aria-selected="false"
-          class="emotion-7 emotion-8"
-          data-is-selected="false"
-          role="tab"
-          type="button"
-        >
-          <div
-            class="emotion-9 emotion-10"
-          >
-            <div
-              class="emotion-11 emotion-10"
-            >
-              Very long tab name
-            </div>
-          </div>
-        </button>
-        <button
-          aria-disabled="false"
-          aria-selected="false"
-          class="emotion-7 emotion-8"
-          data-is-selected="false"
-          role="tab"
-          type="button"
-        >
-          <div
-            class="emotion-9 emotion-10"
-          >
-            <div
-              class="emotion-11 emotion-10"
-            >
-              Very long tab name
-            </div>
-          </div>
-        </button>
-        <button
-          aria-disabled="false"
-          aria-selected="false"
-          class="emotion-7 emotion-8"
-          data-is-selected="false"
-          role="tab"
-          type="button"
-        >
-          <div
-            class="emotion-9 emotion-10"
-          >
-            <div
-              class="emotion-11 emotion-10"
-            >
-              Very long tab name
-            </div>
-          </div>
-        </button>
-        <button
-          aria-disabled="false"
-          aria-selected="false"
-          class="emotion-7 emotion-8"
-          data-is-selected="false"
-          role="tab"
-          type="button"
-        >
-          <div
-            class="emotion-9 emotion-10"
-          >
-            <div
-              class="emotion-11 emotion-10"
-            >
-              Very long tab name
-            </div>
-          </div>
-        </button>
-        <button
-          aria-disabled="false"
-          aria-selected="false"
-          class="emotion-7 emotion-8"
-          data-is-selected="false"
-          role="tab"
-          type="button"
-        >
-          <div
-            class="emotion-9 emotion-10"
-          >
-            <div
-              class="emotion-11 emotion-10"
-            >
-              Very long tab name
-            </div>
-          </div>
-        </button>
         <div
-          class="emotion-135 emotion-136"
+          class="emotion-5 emotion-6"
         >
-          <div
-            aria-controls="menu-test"
-            aria-describedby="menu-test"
-            class="emotion-137 emotion-138"
-            tabindex="-1"
+          <button
+            aria-disabled="false"
+            aria-selected="true"
+            class="emotion-7 emotion-8"
+            data-is-selected="true"
+            role="tab"
+            type="button"
           >
-            <button
-              aria-disabled="false"
-              aria-expanded="true"
-              aria-haspopup="dialog"
-              class="emotion-139 emotion-140"
-              role="tab"
-              type="button"
+            <div
+              class="emotion-9 emotion-10"
             >
-              Blabla
-              <svg
-                class="emotion-141 emotion-142 emotion-143"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
+              <div
+                class="emotion-11 emotion-10"
               >
-                <path
-                  clip-rule="evenodd"
-                  d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
-                  fill-rule="evenodd"
-                />
-              </svg>
-            </button>
+                First
+                <span
+                  class="emotion-13 emotion-14 emotion-15 emotion-16"
+                >
+                  2
+                </span>
+              </div>
+            </div>
+          </button>
+          <button
+            aria-disabled="false"
+            aria-label="1"
+            aria-selected="false"
+            class="emotion-7 emotion-8"
+            data-is-selected="false"
+            role="tab"
+            type="button"
+          >
+            <div
+              class="emotion-9 emotion-10"
+            >
+              <div
+                class="emotion-11 emotion-10"
+              >
+                Second
+              </div>
+            </div>
+          </button>
+          <button
+            aria-disabled="false"
+            aria-selected="false"
+            class="emotion-7 emotion-8"
+            data-is-selected="false"
+            role="tab"
+            type="button"
+          >
+            <div
+              class="emotion-9 emotion-10"
+            >
+              <div
+                class="emotion-11 emotion-10"
+              >
+                Undefined
+              </div>
+            </div>
+          </button>
+          <button
+            aria-disabled="false"
+            aria-selected="false"
+            class="emotion-7 emotion-8"
+            data-is-selected="false"
+            role="tab"
+            type="button"
+          >
+            <div
+              class="emotion-9 emotion-10"
+            >
+              <div
+                class="emotion-11 emotion-10"
+              >
+                Counter
+                <span
+                  class="emotion-13 emotion-14 emotion-37 emotion-16"
+                >
+                  12
+                </span>
+              </div>
+            </div>
+          </button>
+          <button
+            aria-disabled="false"
+            aria-label="2"
+            aria-selected="false"
+            class="emotion-7 emotion-8"
+            data-is-selected="false"
+            role="tab"
+            type="button"
+          >
+            <div
+              class="emotion-9 emotion-10"
+            >
+              <div
+                class="emotion-11 emotion-10"
+              >
+                Counter no items
+                <span
+                  class="emotion-13 emotion-14 emotion-37 emotion-16"
+                >
+                  0
+                </span>
+              </div>
+            </div>
+          </button>
+          <button
+            aria-disabled="false"
+            aria-selected="false"
+            class="emotion-7 emotion-8"
+            data-is-selected="false"
+            role="tab"
+            type="button"
+          >
+            <div
+              class="emotion-9 emotion-10"
+            >
+              <div
+                class="emotion-11 emotion-10"
+              >
+                Conter and badge
+                <span
+                  class="emotion-13 emotion-14 emotion-37 emotion-16"
+                >
+                  12
+                </span>
+                <span
+                  class="emotion-59 emotion-60"
+                >
+                  Badge
+                </span>
+              </div>
+            </div>
+          </button>
+          <button
+            aria-disabled="false"
+            aria-selected="false"
+            class="emotion-7 emotion-8"
+            data-is-selected="false"
+            role="tab"
+            type="button"
+          >
+            <div
+              class="emotion-9 emotion-10"
+            >
+              <div
+                class="emotion-11 emotion-10"
+              >
+                Badge
+                <span
+                  class="emotion-59 emotion-60"
+                >
+                  Badge
+                </span>
+              </div>
+            </div>
+          </button>
+          <button
+            aria-disabled="false"
+            aria-selected="false"
+            class="emotion-7 emotion-8"
+            data-is-selected="false"
+            role="tab"
+            type="button"
+          >
+            <div
+              class="emotion-9 emotion-10"
+            >
+              <div
+                class="emotion-11 emotion-10"
+              >
+                Very long tab name
+              </div>
+            </div>
+          </button>
+          <button
+            aria-disabled="false"
+            aria-selected="false"
+            class="emotion-7 emotion-8"
+            data-is-selected="false"
+            role="tab"
+            type="button"
+          >
+            <div
+              class="emotion-9 emotion-10"
+            >
+              <div
+                class="emotion-11 emotion-10"
+              >
+                Very long tab name
+              </div>
+            </div>
+          </button>
+          <button
+            aria-disabled="false"
+            aria-selected="false"
+            class="emotion-7 emotion-8"
+            data-is-selected="false"
+            role="tab"
+            type="button"
+          >
+            <div
+              class="emotion-9 emotion-10"
+            >
+              <div
+                class="emotion-11 emotion-10"
+              >
+                Very long tab name
+              </div>
+            </div>
+          </button>
+          <button
+            aria-disabled="false"
+            aria-selected="false"
+            class="emotion-7 emotion-8"
+            data-is-selected="false"
+            role="tab"
+            type="button"
+          >
+            <div
+              class="emotion-9 emotion-10"
+            >
+              <div
+                class="emotion-11 emotion-10"
+              >
+                Very long tab name
+              </div>
+            </div>
+          </button>
+          <button
+            aria-disabled="false"
+            aria-selected="false"
+            class="emotion-7 emotion-8"
+            data-is-selected="false"
+            role="tab"
+            type="button"
+          >
+            <div
+              class="emotion-9 emotion-10"
+            >
+              <div
+                class="emotion-11 emotion-10"
+              >
+                Very long tab name
+              </div>
+            </div>
+          </button>
+          <button
+            aria-disabled="false"
+            aria-selected="false"
+            class="emotion-7 emotion-8"
+            data-is-selected="false"
+            role="tab"
+            type="button"
+          >
+            <div
+              class="emotion-9 emotion-10"
+            >
+              <div
+                class="emotion-11 emotion-10"
+              >
+                Very long tab name
+              </div>
+            </div>
+          </button>
+          <button
+            aria-disabled="false"
+            aria-selected="false"
+            class="emotion-7 emotion-8"
+            data-is-selected="false"
+            role="tab"
+            type="button"
+          >
+            <div
+              class="emotion-9 emotion-10"
+            >
+              <div
+                class="emotion-11 emotion-10"
+              >
+                Very long tab name
+              </div>
+            </div>
+          </button>
+          <button
+            aria-disabled="false"
+            aria-selected="false"
+            class="emotion-7 emotion-8"
+            data-is-selected="false"
+            role="tab"
+            type="button"
+          >
+            <div
+              class="emotion-9 emotion-10"
+            >
+              <div
+                class="emotion-11 emotion-10"
+              >
+                Very long tab name
+              </div>
+            </div>
+          </button>
+          <button
+            aria-disabled="false"
+            aria-selected="false"
+            class="emotion-7 emotion-8"
+            data-is-selected="false"
+            role="tab"
+            type="button"
+          >
+            <div
+              class="emotion-9 emotion-10"
+            >
+              <div
+                class="emotion-11 emotion-10"
+              >
+                Very long tab name
+              </div>
+            </div>
+          </button>
+          <button
+            aria-disabled="false"
+            aria-selected="false"
+            class="emotion-7 emotion-8"
+            data-is-selected="false"
+            role="tab"
+            type="button"
+          >
+            <div
+              class="emotion-9 emotion-10"
+            >
+              <div
+                class="emotion-11 emotion-10"
+              >
+                Very long tab name
+              </div>
+            </div>
+          </button>
+          <button
+            aria-disabled="false"
+            aria-selected="false"
+            class="emotion-7 emotion-8"
+            data-is-selected="false"
+            role="tab"
+            type="button"
+          >
+            <div
+              class="emotion-9 emotion-10"
+            >
+              <div
+                class="emotion-11 emotion-10"
+              >
+                Very long tab name
+              </div>
+            </div>
+          </button>
+          <div
+            class="emotion-135 emotion-136"
+          >
+            <div
+              aria-controls="menu-test"
+              aria-describedby="menu-test"
+              class="emotion-137 emotion-138"
+              tabindex="-1"
+            >
+              <button
+                aria-disabled="false"
+                aria-expanded="true"
+                aria-haspopup="dialog"
+                class="emotion-139 emotion-140"
+                role="tab"
+                type="button"
+              >
+                Blabla
+                <svg
+                  class="emotion-141 emotion-142 emotion-143"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -3408,7 +3412,7 @@ exports[`Tabs > renders correctly with Tabs with prop 1`] = `
   text-align: center;
   position: absolute;
   max-width: 14.5rem;
-  max-height: 480px;
+  max-height: 30rem;
   overflow: auto;
   overflow-wrap: break-word;
   font-size: 0.8rem;
@@ -3424,7 +3428,7 @@ exports[`Tabs > renders correctly with Tabs with prop 1`] = `
   background-color: #ffffff;
   box-shadow: 0px 4px 8px 0px #22263829,0px 8px 24px 0px #2226383d;
   padding: 0;
-  width: 180px;
+  width: 11.25rem;
   max-width: none;
   padding: 0.125rem 0;
 }
@@ -3575,31 +3579,33 @@ exports[`Tabs > renders correctly with Tabs with prop 1`] = `
     role="dialog"
     style="opacity: 1; animation: none;"
   >
-    <div
-      class="emotion-3 emotion-4"
-      role="menu"
-    >
+    <div>
       <div
-        class="emotion-5 emotion-6"
+        class="emotion-3 emotion-4"
+        role="menu"
       >
-        <button
-          class="emotion-7 emotion-8 emotion-9"
-          role="menuitem"
-          type="button"
+        <div
+          class="emotion-5 emotion-6"
         >
-          Test
-        </button>
-      </div>
-      <div
-        class="emotion-5 emotion-6"
-      >
-        <button
-          class="emotion-7 emotion-8 emotion-9"
-          role="menuitem"
-          type="button"
+          <button
+            class="emotion-7 emotion-8 emotion-9"
+            role="menuitem"
+            type="button"
+          >
+            Test
+          </button>
+        </div>
+        <div
+          class="emotion-5 emotion-6"
         >
-          Test 2
-        </button>
+          <button
+            class="emotion-7 emotion-8 emotion-9"
+            role="menuitem"
+            type="button"
+          >
+            Test 2
+          </button>
+        </div>
       </div>
     </div>
   </div>

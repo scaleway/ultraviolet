@@ -1,10 +1,5 @@
 import styled from '@emotion/styled'
-import type {
-  ForwardedRef,
-  KeyboardEventHandler,
-  MouseEventHandler,
-  ReactNode,
-} from 'react'
+import type { KeyboardEventHandler, MouseEventHandler, ReactNode } from 'react'
 import { forwardRef } from 'react'
 
 const StyledCell = styled.td`
@@ -27,16 +22,10 @@ type CellProps = {
   colSpan?: number
 }
 
-export const Cell = forwardRef(
+export const Cell = forwardRef<HTMLTableCellElement, CellProps>(
   (
-    {
-      children,
-      className,
-      preventClick,
-      'data-testid': dataTestid,
-      colSpan,
-    }: CellProps,
-    ref: ForwardedRef<HTMLTableCellElement>,
+    { children, className, preventClick, 'data-testid': dataTestid, colSpan },
+    ref,
   ) => {
     const handleClick: MouseEventHandler<HTMLDivElement> = event => {
       if (preventClick) {

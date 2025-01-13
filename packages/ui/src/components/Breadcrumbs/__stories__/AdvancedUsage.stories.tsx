@@ -3,6 +3,7 @@ import { ArrowDownIcon, DotsHorizontalIcon } from '@ultraviolet/icons'
 import type { ComponentProps } from 'react'
 import { Breadcrumbs } from '..'
 import { AvatarV2 } from '../../AvatarV2'
+import { Button } from '../../Button'
 import { MenuV2 } from '../../MenuV2'
 import { Stack } from '../../Stack'
 
@@ -38,6 +39,8 @@ export const AdvancedUsage: StoryFn<
       </MenuV2>
       <MenuV2
         align="start"
+        searchable
+        hideOnClickItem
         disclosure={
           <Breadcrumbs.Item>
             <Stack direction="row" gap={1} alignItems="center">
@@ -53,39 +56,60 @@ export const AdvancedUsage: StoryFn<
           </Breadcrumbs.Item>
         }
       >
-        <MenuV2.Item sentiment="primary" active>
-          <Stack direction="row" gap={1} alignItems="center">
-            <AvatarV2
-              variant="colors"
-              colors={['#BF95F9', '#3D1862']}
-              shape="circle"
-              size="xsmall"
-            />
-            Default Project
-          </Stack>
-        </MenuV2.Item>
-        <MenuV2.Item>
-          <Stack direction="row" gap={1} alignItems="center">
-            <AvatarV2
-              variant="colors"
-              colors={['#FFBFAB', '#822F15']}
-              shape="circle"
-              size="xsmall"
-            />
-            Project 1
-          </Stack>
-        </MenuV2.Item>
-        <MenuV2.Item>
-          <Stack direction="row" gap={1} alignItems="center">
-            <AvatarV2
-              variant="colors"
-              colors={['#FF9EC1', '#740D32']}
-              shape="circle"
-              size="xsmall"
-            />
-            Project 2
-          </Stack>
-        </MenuV2.Item>
+        <MenuV2.Group
+          label="Projects"
+          labelDescription={
+            <Stack
+              direction="row"
+              alignItems="center"
+              justifyContent="end"
+              width="100%"
+            >
+              <Button
+                sentiment="info"
+                variant="ghost"
+                size="xsmall"
+                icon="plus"
+              >
+                Create Project
+              </Button>
+            </Stack>
+          }
+        >
+          <MenuV2.Item sentiment="primary" active borderless>
+            <Stack direction="row" gap={1} alignItems="center">
+              <AvatarV2
+                variant="colors"
+                colors={['#BF95F9', '#3D1862']}
+                shape="circle"
+                size="xsmall"
+              />
+              Default Project
+            </Stack>
+          </MenuV2.Item>
+          <MenuV2.Item borderless>
+            <Stack direction="row" gap={1} alignItems="center">
+              <AvatarV2
+                variant="colors"
+                colors={['#FFBFAB', '#822F15']}
+                shape="circle"
+                size="xsmall"
+              />
+              Project 1
+            </Stack>
+          </MenuV2.Item>
+          <MenuV2.Item borderless>
+            <Stack direction="row" gap={1} alignItems="center">
+              <AvatarV2
+                variant="colors"
+                colors={['#FF9EC1', '#740D32']}
+                shape="circle"
+                size="xsmall"
+              />
+              Project 2
+            </Stack>
+          </MenuV2.Item>
+        </MenuV2.Group>
       </MenuV2>
       <Breadcrumbs.Item to="/products/1">Instance</Breadcrumbs.Item>
       <Breadcrumbs.Item to="/products/1/details">Overview</Breadcrumbs.Item>

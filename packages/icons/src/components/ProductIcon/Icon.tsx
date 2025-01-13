@@ -4,20 +4,20 @@ import type { ReactNode } from 'react'
 type Variants = 'primary' | 'danger' | 'warning' | 'original'
 
 export const SIZES = {
-  xsmall: 24,
-  small: 32,
-  medium: 40,
-  large: 48,
-  xlarge: 64,
+  xsmall: '300',
+  small: '400',
+  medium: '500',
+  large: '600',
+  xlarge: '800',
 } as const
 
 const StyledIcon = styled('svg', {
   shouldForwardProp: prop => !['variant', 'disabled'].includes(prop),
 })<{ variant: Variants; disabled?: boolean; size: keyof typeof SIZES }>`
   & {
-    width: ${({ size }) => `${SIZES[size]}px`};
-    min-width: ${({ size }) => `${SIZES[size]}px`}; // This is to avoid the icon to shrink when the text is too long
-    height: ${({ size }) => `${SIZES[size]}px`};
+    width: ${({ size, theme }) => `${theme.sizing[SIZES[size]]}`};
+    min-width: ${({ size, theme }) => `${theme.sizing[SIZES[size]]}`}; // This is to avoid the icon to shrink when the text is too long
+    height: ${({ size, theme }) => `${theme.sizing[SIZES[size]]}`};
   }
 
   path[fill].fill,

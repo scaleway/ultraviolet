@@ -22,6 +22,7 @@ Selectable.args = {
               ? "Earth isn't selectable"
               : undefined
           }
+          expandable={false}
         >
           <List.Cell>
             {planet.name}

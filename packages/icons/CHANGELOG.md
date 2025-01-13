@@ -1,5 +1,20 @@
 # Change Log
 
+## 3.8.0
+
+### Minor Changes
+
+- [#4602](https://github.com/scaleway/ultraviolet/pull/4602) [`9fd969e`](https://github.com/scaleway/ultraviolet/commit/9fd969e4ed3580d52d16d853c4b11dbb39312477) Thanks [@matthprost](https://github.com/matthprost)! - Migrate icons sizes from px to remu using new theme `sizing` prop
+
+## 3.7.1
+
+### Patch Changes
+
+- [#4603](https://github.com/scaleway/ultraviolet/pull/4603) [`e94eaad`](https://github.com/scaleway/ultraviolet/commit/e94eaad0be3138679cee9743b13335c32f71d3a2) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `19.0.1`.
+  Updated dependency `@types/react-dom` to `19.0.2`.
+
+- [#4609](https://github.com/scaleway/ultraviolet/pull/4609) [`e14c76d`](https://github.com/scaleway/ultraviolet/commit/e14c76d530ba5be85602c07e8351ecddbc07ac39) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `19.0.2`.
+
 ## 3.7.0
 
 ### Minor Changes

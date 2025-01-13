@@ -1,13 +1,8 @@
 import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import { AsteriskIcon } from '@ultraviolet/icons'
-import type {
-  ChangeEvent,
-  ForwardedRef,
-  InputHTMLAttributes,
-  ReactNode,
-} from 'react'
-import { forwardRef, useCallback, useEffect, useId, useState } from 'react'
+import type { InputHTMLAttributes, ReactNode } from 'react'
+import { forwardRef, useId } from 'react'
 import { Loader } from '../Loader'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
@@ -294,21 +289,22 @@ type CheckboxProps = {
   tooltip?: string
 } & Pick<
   InputHTMLAttributes<HTMLInputElement>,
-  | 'onFocus'
-  | 'onBlur'
-  | 'name'
-  | 'value'
   | 'autoFocus'
   | 'id'
+  | 'name'
+  | 'onBlur'
   | 'onChange'
+  | 'onClick'
+  | 'onFocus'
   | 'tabIndex'
+  | 'value'
 > &
   LabelProp
 
 /**
  * Checkbox is an input component used to select or deselect an option.
  */
-export const Checkbox = forwardRef(
+export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
   (
     {
       id,
@@ -332,35 +328,23 @@ export const Checkbox = forwardRef(
       'data-testid': dataTestId,
       tooltip,
       tabIndex,
-    }: CheckboxProps,
-    ref: ForwardedRef<HTMLInputElement>,
+    },
+    ref,
   ) => {
     const theme = useTheme()
-    const [state, setState] = useState<boolean | 'indeterminate'>(checked)
     const uniqId = useId()
     const localId = id ?? uniqId
 
-    useEffect(() => {
-      setState(checked)
-    }, [checked])
-
-    const onLocalChange = useCallback(
-      (event: ChangeEvent<HTMLInputElement>) => {
-        if (!progress) onChange?.(event)
-        setState(current =>
-          current === 'indeterminate' ? false : event.target.checked,
-        )
-      },
-      [onChange, progress, setState],
-    )
+    const isDisabled = disabled || progress
+    const isCheck = checked === true ? checked : false
 
     return (
       <Tooltip text={tooltip}>
         <CheckboxContainer
           className={className}
-          aria-disabled={disabled}
+          aria-disabled={isDisabled}
           data-visibility={dataVisibility}
-          data-checked={state}
+          data-checked={checked}
           data-error={!!error}
           data-testid={dataTestId}
         >
@@ -369,19 +353,20 @@ export const Checkbox = forwardRef(
               <Loader active size={size ?? theme.sizing['300']} />
             </StyledActivityContainer>
           ) : null}
+
           <CheckboxInput
             id={localId}
             type="checkbox"
             aria-invalid={!!error}
             aria-describedby={error ? `${localId}-hint` : undefined}
-            aria-checked={state === 'indeterminate' ? 'mixed' : state}
+            aria-checked={checked === 'indeterminate' ? 'mixed' : isCheck}
             aria-label={ariaLabel}
-            checked={state === 'indeterminate' ? false : state}
+            checked={isCheck}
             inputSize={size ?? theme.sizing['300']}
-            onChange={onLocalChange}
+            onChange={onChange}
             onFocus={onFocus}
             onBlur={onBlur}
-            disabled={disabled}
+            disabled={isDisabled}
             value={value}
             name={name}
             autoFocus={autoFocus}
@@ -397,7 +382,7 @@ export const Checkbox = forwardRef(
               fill="none"
             >
               <CheckboxIconContainer>
-                {state !== 'indeterminate' ? (
+                {checked !== 'indeterminate' ? (
                   <path
                     fillRule="evenodd"
                     clipRule="evenodd"

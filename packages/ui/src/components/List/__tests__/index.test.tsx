@@ -261,6 +261,7 @@ describe('List', () => {
     expect(firstRowCheckbox).not.toBeChecked()
     await userEvent.click(allCheckbox)
     expect(firstRowCheckbox).toBeChecked()
+
     expect(asFragment()).toMatchSnapshot()
   })
 

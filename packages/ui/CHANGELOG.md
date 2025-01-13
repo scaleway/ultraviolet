@@ -1,5 +1,59 @@
 # Change Log
 
+## 1.83.0
+
+### Minor Changes
+
+- [#4604](https://github.com/scaleway/ultraviolet/pull/4604) [`76a8557`](https://github.com/scaleway/ultraviolet/commit/76a8557ca97592e3383465c6f273249cf76d9081) Thanks [@matthprost](https://github.com/matthprost)! - New prop `searchable` and `hideOnClickItem` in `<MenuV2 />` component
+
+### Patch Changes
+
+- [#4653](https://github.com/scaleway/ultraviolet/pull/4653) [`61d26ae`](https://github.com/scaleway/ultraviolet/commit/61d26aec4a97f56ce6d3ab570c3c230a52c48aaa) Thanks [@matthprost](https://github.com/matthprost)! - Improve search engine on `<MenuV2 />` component and new prop `labelDescription` on `<MenuV2.Group />` component
+
+## 1.82.3
+
+### Patch Changes
+
+- [#4637](https://github.com/scaleway/ultraviolet/pull/4637) [`9972cc5`](https://github.com/scaleway/ultraviolet/commit/9972cc56f910fbd2ed6a81fd172337604e0585e0) Thanks [@lisalupi](https://github.com/lisalupi)! - `<Slider />`: fix thumb position (firefox)
+
+- [#4595](https://github.com/scaleway/ultraviolet/pull/4595) [`a492cbe`](https://github.com/scaleway/ultraviolet/commit/a492cbe263f5b43f36fa84e7c36ba9dfdece1f33) Thanks [@matthprost](https://github.com/matthprost)! - Add `strikethrough` prop on `<Text />` component
+
+- [#4572](https://github.com/scaleway/ultraviolet/pull/4572) [`d8c3416`](https://github.com/scaleway/ultraviolet/commit/d8c3416895fedd524d2a3eefc76dbf7074b9dd3b) Thanks [@lisalupi](https://github.com/lisalupi)! - `<Text />`: new prop `whiteSpace`
+
+- [#4614](https://github.com/scaleway/ultraviolet/pull/4614) [`bab3b75`](https://github.com/scaleway/ultraviolet/commit/bab3b756dd168954be6be86f0cef078a822df934) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<Modal />` stop propagation so you can close `<SelectInputV2 />` within it
+
+- [#4630](https://github.com/scaleway/ultraviolet/pull/4630) [`2205ef6`](https://github.com/scaleway/ultraviolet/commit/2205ef68e0841ce0ab985cc3896fe5b68ef35b89) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@scaleway/use-media` to `3.0.3`.
+
+- [#4570](https://github.com/scaleway/ultraviolet/pull/4570) [`c0f8849`](https://github.com/scaleway/ultraviolet/commit/c0f8849a0e14d337e6feca67dff8169e23ceaecf) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@nivo/bar` to `0.88.0`.
+  Updated dependency `@nivo/core` to `0.88.0`.
+  Updated dependency `@nivo/line` to `0.88.0`.
+  Updated dependency `@nivo/pie` to `0.88.0`.
+  Updated dependency `@nivo/scales` to `0.88.0`.
+- Updated dependencies [[`9fd969e`](https://github.com/scaleway/ultraviolet/commit/9fd969e4ed3580d52d16d853c4b11dbb39312477)]:
+  - @ultraviolet/icons@3.8.0
+
+## 1.82.2
+
+### Patch Changes
+
+- [#4623](https://github.com/scaleway/ultraviolet/pull/4623) [`64fdd0c`](https://github.com/scaleway/ultraviolet/commit/64fdd0c62b20bb07a4d8c1baf65b434e87c4dbef) Thanks [@philibea](https://github.com/philibea)! - Table component was not React 18 compatible during react 19 upgrade
+
+## 1.82.1
+
+### Patch Changes
+
+- [#4615](https://github.com/scaleway/ultraviolet/pull/4615) [`39e17a6`](https://github.com/scaleway/ultraviolet/commit/39e17a6842f8bdf58f2500b5867937c96e0c4b68) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<List />` when disabled state the row doens't change color on hover
+
+- [#4603](https://github.com/scaleway/ultraviolet/pull/4603) [`e94eaad`](https://github.com/scaleway/ultraviolet/commit/e94eaad0be3138679cee9743b13335c32f71d3a2) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `19.0.1`.
+  Updated dependency `@types/react-dom` to `19.0.2`.
+
+- [#4609](https://github.com/scaleway/ultraviolet/pull/4609) [`e14c76d`](https://github.com/scaleway/ultraviolet/commit/e14c76d530ba5be85602c07e8351ecddbc07ac39) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `19.0.2`.
+
+- [#4619](https://github.com/scaleway/ultraviolet/pull/4619) [`79a5b3a`](https://github.com/scaleway/ultraviolet/commit/79a5b3ad7a302a43c816081001f2f96c7556c33c) Thanks [@philibea](https://github.com/philibea)! - fix checkbox event on List & Table component
+
+- Updated dependencies [[`e94eaad`](https://github.com/scaleway/ultraviolet/commit/e94eaad0be3138679cee9743b13335c32f71d3a2), [`e14c76d`](https://github.com/scaleway/ultraviolet/commit/e14c76d530ba5be85602c07e8351ecddbc07ac39)]:
+  - @ultraviolet/icons@3.7.1
+
 ## 1.82.0
 
 ### Minor Changes

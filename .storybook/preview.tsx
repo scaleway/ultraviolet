@@ -26,17 +26,17 @@ const parameters: Preview['parameters'] = {
     values: [
       {
         name: 'light',
-        value: '#ffffff',
+        value: 'linear-gradient(90deg,#ffffff 10px,transparent 1%) 50%,linear-gradient(#ffffff 10px,transparent 1%) 50%,#eceef2',
         textColor: '#3f4250',
       },
       {
         name: 'dark',
-        value: '#151a2d',
+        value: 'linear-gradient(90deg,#151a2d 10px,transparent 1%) 50%,linear-gradient(#151a2d 10px,transparent 1%) 50%,#303445',
         textColor: '#b8bac0',
       },
       {
         name: 'darker',
-        value: '#000000',
+        value: 'linear-gradient(90deg,#000000 10px,transparent 1%) 50%,linear-gradient(#000000 10px,transparent 1%) 50%,#151a2d',
         textColor: '#d8d9dc',
       },
     ],
@@ -80,22 +80,24 @@ const parameters: Preview['parameters'] = {
 }
 
 const getThemeColor = (theme: string) => {
-  const { value: backgroundColor, textColor } =
+  const { value: background, textColor } =
     parameters['backgrounds'].values.find(
       ({ name }: { name: string }) => name === theme,
     ) ?? parameters['backgrounds'].values[0]
 
-  return { backgroundColor, textColor }
+  return { background, textColor }
 }
 
-const withThemeProvider = (Story: StoryFn, context: { globals: any }) => {
+const withThemeProvider = (Story: StoryFn, context: { globals: { theme: string } }) => {
   const { theme } = context.globals
-  const { backgroundColor, textColor } = getThemeColor(theme)
+  const { background, textColor } = getThemeColor(theme)
 
   return (
     <div
       style={{
-        backgroundColor,
+        background,
+        backgroundPosition: '-4px -4px',
+        backgroundSize: '12px 12px',
         padding: '30px',
         color: textColor,
       }}
@@ -107,7 +109,14 @@ const withThemeProvider = (Story: StoryFn, context: { globals: any }) => {
 
 const decorators = [
   (Story: StoryFn) => {
-    return <>{<Story />}</> // Storybook is broken without this please refer to this issue: https://github.com/storybookjs/storybook/issues/24625
+    return (
+      <>
+        {
+          // eslint-disable-next-line react/jsx-curly-brace-presence
+          <Story />
+        }
+      </>
+    ) // Storybook is broken without this please refer to this issue: https://github.com/storybookjs/storybook/issues/24625
   },
   withThemeFromJSXProvider({
     themes: {

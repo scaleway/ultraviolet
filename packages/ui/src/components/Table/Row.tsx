@@ -31,9 +31,25 @@ const StyledCheckbox = styled(Checkbox, {
   shouldForwardProp: prop => !['inRange'].includes(prop),
 })<{ inRange: boolean }>`
 
-    rect {
-      ${({ theme, inRange }) => (inRange ? `fill: ${theme.colors.neutral.backgroundHover};stroke: ${theme.colors.neutral.borderHover};` : '')}
-    }
+
+  ${({ theme, inRange }) =>
+    inRange
+      ? `svg {
+          padding: ${theme.space[0.25]};
+          outline: 1px inset ${theme.colors.primary.backgroundStrong};
+          box-shadow: ${theme.shadows.focusPrimary};
+          transition:
+            box-shadow 250ms ease,
+            outline 250ms ease,
+            padding 250ms ease;
+          rect {
+            fill: ${theme.colors.primary.backgroundHover};
+            stroke: ${theme.colors.primary.borderHover};
+          }
+      }
+  `
+      : ''}
+
 `
 
 // We start at 5% and finish at 80% to leave the original background color
@@ -115,14 +131,13 @@ export const Row = ({
     collapseRow,
     registerSelectableRow,
     selectedRowIds,
-    selectRow,
-    unselectRow,
     expandButton,
-    ref,
+    mapCheckbox,
     inRange,
     columns,
   } = useTableContext()
-  const rowRef = useRef<HTMLInputElement>(null)
+
+  const checkboxRowRef = useRef<HTMLInputElement>(null)
 
   const hasExpandable = !!expandable
   useEffect(() => {
@@ -156,13 +171,16 @@ export const Row = ({
   const canClickRowToExpand = hasExpandable && !expandButton
 
   useEffect(() => {
-    const refAtEffectStart = ref.current
-    const { current } = rowRef
+    const { current } = checkboxRowRef
 
-    if (refAtEffectStart && current && !refAtEffectStart.includes(current)) {
-      ref.current.push(current)
+    if (current) {
+      mapCheckbox.set(id, current)
     }
-  }, [ref])
+
+    return () => {
+      mapCheckbox.delete(id)
+    }
+  }, [mapCheckbox, id])
 
   const theme = useTheme()
 
@@ -194,16 +212,9 @@ export const Row = ({
                   aria-label="select"
                   checked={selectedRowIds[id]}
                   value={id}
-                  onChange={() => {
-                    if (selectedRowIds[id]) {
-                      unselectRow(id)
-                    } else {
-                      selectRow(id)
-                    }
-                  }}
+                  inRange={inRange?.has(id)}
                   disabled={selectDisabled !== undefined}
-                  ref={rowRef}
-                  inRange={inRange.includes(id)}
+                  ref={checkboxRowRef}
                 />
               </Tooltip>
             </StyledCheckboxContainer>

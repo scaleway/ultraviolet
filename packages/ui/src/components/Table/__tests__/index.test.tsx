@@ -128,6 +128,7 @@ describe('Table', () => {
     const checkboxes = screen.getAllByRole<HTMLInputElement>('checkbox')
 
     const firstRowCheckbox = checkboxes.find(({ value }) => value === '1')
+    const secondRowCheckbox = checkboxes.find(({ value }) => value === '2')
     const allCheckbox = checkboxes.find(({ value }) => value === 'all')
     expect(firstRowCheckbox).toBeInTheDocument()
     expect(allCheckbox).toBeInTheDocument()
@@ -142,10 +143,14 @@ describe('Table', () => {
     await userEvent.click(firstRowCheckbox)
     expect(firstRowCheckbox).not.toBeChecked()
     await userEvent.click(firstRowCheckbox)
+    //  mixed | indeterminated state
     await userEvent.click(allCheckbox)
     expect(firstRowCheckbox).not.toBeChecked()
+    expect(allCheckbox).not.toBeChecked()
     await userEvent.click(allCheckbox)
     expect(firstRowCheckbox).toBeChecked()
+    expect(secondRowCheckbox).toBeChecked()
+    expect(allCheckbox).toBeChecked()
     expect(asFragment()).toMatchSnapshot()
   })
 
@@ -415,19 +420,21 @@ describe('Table', () => {
     }
 
     await userEvent.click(firstRowCheckbox)
+
     fireEvent.keyDown(document, { key: 'Shift', code: 'ShiftLeft' })
 
     // Test hovering
-    fireEvent.mouseMove(secondRowCheckbox, { shiftKey: true })
-    fireEvent.mouseMove(thirdRowCheckbox, { shiftKey: true })
-    fireEvent.mouseLeave(thirdRowCheckbox, { shiftKey: true })
+    fireEvent.mouseOver(firstRowCheckbox, { shiftKey: true })
+    fireEvent.mouseOver(secondRowCheckbox, { shiftKey: true })
+    fireEvent.mouseOver(thirdRowCheckbox, { shiftKey: true })
+
     fireEvent.keyUp(document, { key: 'Shift', code: 'ShiftLeft' })
 
-    fireEvent.click(thirdRowCheckbox, { shiftKey: true })
+    fireEvent.click(thirdRowCheckbox)
+
+    expect(firstRowCheckbox).toBeChecked()
     expect(secondRowCheckbox).toBeChecked()
     expect(thirdRowCheckbox).toBeChecked()
-
-    fireEvent.keyUp(document, { key: 'Shift', code: 'ShiftLeft' })
 
     expect(asFragment()).toMatchSnapshot()
   })
