@@ -45,7 +45,7 @@ WithSelectInputAsDisclosure.parameters = {
 }
 
 WithSelectInputAsDisclosure.decorators = [
-  (Story: StoryFn) => (
+  Story => (
     <div style={{ height: '350px' }}>
       <Story />
     </div>
