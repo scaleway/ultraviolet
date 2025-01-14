@@ -200,4 +200,37 @@ describe('TagList', () => {
       expect(screen.queryByText('Additional')).not.toBeInTheDocument()
     })
   })
+
+  test('renders correctly a scrollable popover with non default popoverMaxHeight', async () => {
+    const tags: TagType[] = [
+      'very',
+      ...new Array<string>(50).fill('item'),
+      'tooltip',
+      'scaleway',
+      'paris',
+      'cloud',
+    ]
+
+    mockOffsetWidth(tags)
+
+    const { asFragment } = renderWithTheme(
+      <TagList
+        popoverTitle="Additional"
+        popoverMaxHeight="100px"
+        tags={tags}
+        threshold={5}
+      />,
+    )
+
+    expect(screen.queryByText('Additional')).not.toBeInTheDocument()
+
+    const plus = screen.getByTestId('taglist-open')
+    await userEvent.click(plus)
+
+    await waitFor(() => {
+      expect(screen.getByText('Additional')).toBeInTheDocument()
+    })
+
+    expect(asFragment()).toMatchSnapshot()
+  })
 })
