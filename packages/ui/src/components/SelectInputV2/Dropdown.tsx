@@ -214,23 +214,6 @@ const handleKeyDownSelect = (event: KeyboardEvent<HTMLDivElement>) => {
     moveFocusUp()
   }
 }
-const handleClickOutside = (
-  event: MouseEvent,
-  ref: RefObject<HTMLDivElement | null>,
-  setIsDropdownVisibile: Dispatch<SetStateAction<boolean>>,
-  refSelect: RefObject<HTMLDivElement | null>,
-  onSearch: Dispatch<SetStateAction<DataType>>,
-  options: DataType,
-) => {
-  if (
-    ref.current &&
-    !ref.current.contains(event.target as Node) &&
-    !refSelect.current?.contains(event.target as Node)
-  ) {
-    setIsDropdownVisibile(false)
-    onSearch(options)
-  }
-}
 
 const handleKeyDown = (
   event: globalThis.KeyboardEvent,
@@ -739,17 +722,6 @@ export const Dropdown = ({
       setSearch('')
     }
 
-    document.addEventListener('mousedown', event =>
-      handleClickOutside(
-        event,
-        ref,
-        setIsDropdownVisible,
-        refSelect,
-        onSearch,
-        options,
-      ),
-    )
-
     if (!searchable) {
       document.addEventListener('keydown', event =>
         handleKeyDown(
@@ -765,17 +737,6 @@ export const Dropdown = ({
     }
 
     return () => {
-      document.removeEventListener('mousedown', event =>
-        handleClickOutside(
-          event,
-          ref,
-          setIsDropdownVisible,
-          refSelect,
-          onSearch,
-          options,
-        ),
-      )
-
       if (!searchable) {
         document.removeEventListener('keydown', event =>
           handleKeyDown(
@@ -866,6 +827,7 @@ export const Dropdown = ({
       role="dialog"
       debounceDelay={0}
       containerFullWidth
+      hideOnClickOutside
       align="start"
     >
       {children}
