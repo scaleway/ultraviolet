@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.83.2
+
+### Patch Changes
+
+- [#4664](https://github.com/scaleway/ultraviolet/pull/4664) [`3271b0a`](https://github.com/scaleway/ultraviolet/commit/3271b0a2cfcf46de3e0ffeb9442d4fad5f2d844c) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<SelectInputV2 />` to use `hideOnClickOutside` instead of custom event listener
+
 ## 1.83.1
 
 ### Patch Changes
