@@ -371,6 +371,9 @@ export const SelectBar = ({
               document.getElementById(`option-0`)?.focus()
             }
           }
+          if (event.key === ' ') {
+            event.preventDefault()
+          }
 
           return ['Enter', ' '].includes(event.key) && openable
             ? setIsDropdownVisible(!isDropdownVisible)

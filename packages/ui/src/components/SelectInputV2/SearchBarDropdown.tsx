@@ -129,6 +129,8 @@ export const SearchBarDropdown = ({
           onChange?.(selectedData.selectedValues[0] ?? '')
         }
       }
+    } else if (key === 'Tab') {
+      searchInputRef.current?.blur()
     }
   }
 

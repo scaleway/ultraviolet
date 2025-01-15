@@ -134,13 +134,7 @@ const DropdownItem = styled.div<{
     background-color: ${({ theme }) => theme.colors.primary.background};
     color: ${({ theme }) => theme.colors.primary.text};
     cursor: pointer;
-    outline: none;
   }
-
-
-  &:focus-visible {
-      border: ${({ theme }) => theme.colors.primary.borderWeakDisabled} 1px solid;
-    }
 
   &[aria-selected='true'] {
     background-color: ${({ theme }) => theme.colors.primary.background};
@@ -562,7 +556,6 @@ const CreateDropdown = ({
   ) : (
     <DropdownContainer
       role="listbox"
-      tabIndex={-1}
       id="select-dropdown"
       onKeyDown={handleKeyDownSelect}
       gap={0.25}
