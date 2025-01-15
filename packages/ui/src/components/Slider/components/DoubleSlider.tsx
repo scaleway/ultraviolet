@@ -257,6 +257,7 @@ export const DoubleSlider = ({
         step={step}
         aria-label={`input-${side}`}
         controls={false}
+        disabled={disabled}
         data-testid={side ? `slider-input-${side}` : 'slider-input'}
         unit={typeof suffix === 'string' ? suffix : unit}
         onChange={newVal => {
