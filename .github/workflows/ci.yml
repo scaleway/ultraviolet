@@ -180,6 +180,7 @@ jobs:
 
   publint:
     runs-on: ubuntu-24.04
+    needs: [build]
     env:
       TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
       TURBO_CACHE: "remote:rw"
@@ -193,7 +194,8 @@ jobs:
           cache: "pnpm"
       - run: |
           pnpm install --frozen-lockfile
-          pnpm publint
+          pnpm build
+          pnpm publint packages/*
 
   deploy:
     runs-on: ubuntu-24.04
