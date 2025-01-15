@@ -5,7 +5,7 @@ import type { ComponentProps } from 'react'
 import { Popover } from '../Popover'
 import { Tag } from '../Tag'
 
-const DEFAULT_POPOVER_MAX_HEIGHT = '12.5rem'
+const DEFAULT_POPOVER_MAX_HEIGHT = '16rem'
 
 const TAGS_GAP = consoleLightTheme.space['1']
 
