@@ -1,12 +1,12 @@
 import type { StoryFn } from '@storybook/react'
 import { useState } from 'react'
-import { type Time, TimeInputV2 } from '..'
+import { TimeInputV2 } from '..'
 import { Button } from '../../Button'
 import { Stack } from '../../Stack'
 
 export const Controlled: StoryFn<typeof TimeInputV2> = args => {
-  const [value24, setValue24] = useState<Time>()
-  const [value12, setValue12] = useState<Time>()
+  const [value24, setValue24] = useState<Date>()
+  const [value12, setValue12] = useState<Date>()
 
   return (
     <Stack gap={5}>
@@ -19,8 +19,8 @@ export const Controlled: StoryFn<typeof TimeInputV2> = args => {
           value={value24}
           labelDescription="24 format"
         />
-        Time: {value24?.h}h {value24?.m}m {value24?.s}s
-        <Button onClick={() => setValue24({ h: '12', m: '34', s: '56' })}>
+        Time: {value24?.toString()}
+        <Button onClick={() => setValue24(new Date('01/01/2000 12:34:56'))}>
           set time to 12:34:56
         </Button>
       </Stack>
@@ -34,7 +34,7 @@ export const Controlled: StoryFn<typeof TimeInputV2> = args => {
           timeFormat={12}
           labelDescription="12 format"
         />
-        Time: {value12?.h}h {value12?.m}m {value12?.s}s {value12?.period}
+        Time: {value12?.toString()}
       </Stack>
     </Stack>
   )

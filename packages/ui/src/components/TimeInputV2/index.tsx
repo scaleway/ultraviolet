@@ -1,25 +1,26 @@
 import styled from '@emotion/styled'
 import { AlertCircleIcon, AsteriskIcon } from '@ultraviolet/icons'
 import type { FocusEvent, ReactNode } from 'react'
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import type { LabelProp } from '../../types'
 import { Button } from '../Button'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
 import {
+  DEFAULT_DATE,
   DEFAULT_PLACEHOLDER,
-  EMPTY_TIME_12,
-  EMPTY_TIME_24,
   INPUT_SIZE_HEIGHT,
   TIME_KEYS,
 } from './constants'
 import {
   canConcat,
-  formatValue,
+  format,
   getLastTypedChar,
+  getValueByType,
   isAOrP,
   isCompleteHour,
   isNumber,
+  setValueByType,
 } from './helpers'
 
 export type Time = {
@@ -153,10 +154,13 @@ export const Input = styled.input<{
 const CustomText = styled(Text)`
 padding-inline: ${({ theme }) => theme.space['0.25']};
 `
+const StyledText = styled(Text)`
+cursor: text;
+`
 
 type TimeInputProps = {
   placeholder?: Time
-  value?: Time
+  value?: Date
   clearable?: boolean
   required?: boolean
   labelDescription?: ReactNode
@@ -165,7 +169,7 @@ type TimeInputProps = {
   readOnly?: boolean
   error?: boolean | string
   'data-testid'?: string
-  onChange?: (value: Time, valuePeriod?: string) => void
+  onChange?: (value: Date | undefined, valuePeriod?: string) => void
   onBlur?: (event: FocusEvent<HTMLInputElement>) => void
   onFocus?: (event: FocusEvent<HTMLInputElement>) => void
   className?: string
@@ -202,11 +206,19 @@ export const TimeInputV2 = ({
   autoFocus,
   'data-testid': dataTestId,
   placeholder = DEFAULT_PLACEHOLDER,
+  'aria-label': ariaLabel,
 }: TimeInputProps) => {
-  const correctEmpty = timeFormat === 24 ? EMPTY_TIME_24 : EMPTY_TIME_12
-  const [time, setTime] = useState<Time>(
-    value ? formatValue(value, timeFormat) : correctEmpty,
-  )
+  const defaultPeriod = useMemo(() => {
+    if (value) return value.getHours() >= 12 ? 'pm' : 'am'
+
+    return undefined
+  }, [value])
+
+  const [time, setTime] = useState(value)
+  const [period, setPeriod] = useState<'pm' | 'am' | undefined>(defaultPeriod)
+  const [filled, setFilled] = useState(
+    value ? { h: true, m: true, s: true } : { h: false, m: false, s: false },
+  ) // to not show 00 when there should be a placeholder
 
   const refHours = useRef<HTMLInputElement>(null)
   const refSeconds = useRef<HTMLInputElement>(null)
@@ -215,97 +227,107 @@ export const TimeInputV2 = ({
 
   useEffect(() => {
     if (value) {
-      setTime(formatValue(value, timeFormat))
+      setTime(value)
+
+      // without this condition, every time an input value changes, the other ones will be set to 0 if they used to be undefined
+      // instead of leaving them empty (and showing the placeholder)
+      if (value.getTime() !== time?.getTime()) {
+        setFilled({ h: true, m: true, s: true })
+      }
     }
-  }, [timeFormat, value])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [value])
 
-  const handleChange = (type: keyof Time, key: string) => {
-    const newValue = { ...time }
-
-    if (type === 'period') {
-      if (key.toLowerCase() === 'a') newValue.period = 'am'
-      else newValue.period = 'pm'
+  const handleChangePeriod = (key: 'a' | 'p') => {
+    if (!time) {
+      setPeriod(`${key}m`)
+    } else if (key.toLowerCase() === 'a') {
+      if (time.getHours() >= 12) {
+        const newTime = new Date(time)
+        newTime.setHours(newTime.getHours() - 12)
+        setTime(newTime)
+        onChange?.(newTime)
+      }
+      setPeriod('am')
     } else {
-      // Create new time
-      if (canConcat(time[type], type, key, timeFormat)) {
-        newValue[type] = newValue[type].slice(-1) + key
-      } else newValue[type] = key.padStart(2, '0')
-
-      // Focus to next input if the current input has a valid time
-      if (
-        type === 's' &&
-        newValue.s &&
-        Number.parseInt(newValue.s, 10) >= 7 &&
-        timeFormat === 12
-      ) {
-        refPeriod.current?.focus()
-      } else if (
-        type === 'm' &&
-        newValue.m &&
-        Number.parseInt(newValue.m, 10) >= 6
-      ) {
-        refSeconds.current?.focus()
+      if (time.getHours() < 12) {
+        const newTime = new Date(time)
+        newTime.setHours(newTime.getHours() + 12)
+        setTime(newTime)
+        onChange?.(newTime)
       }
+      setPeriod('pm')
+    }
+  }
+  const handleChange = (type: 'h' | 'm' | 's', key: number) => {
+    const newTime = time ? new Date(time) : DEFAULT_DATE
+    const valueToChange = getValueByType(type, time)
 
-      if (type === 'h') {
-        if (isCompleteHour(timeFormat, newValue.h)) {
-          refMinutes.current?.focus()
-        }
-      }
+    if (canConcat(valueToChange, type, key, timeFormat)) {
+      const newValue = (valueToChange % 10) * 10 + key
+
+      setValueByType(type, newTime, newValue)
+    } else setValueByType(type, newTime, key)
+
+    const newValue = getValueByType(type, newTime)
+    // Focus to next input if the current input has a valid time
+    if (type === 's' && newTime && newValue >= 7 && timeFormat === 12) {
+      refPeriod.current?.focus()
+    } else if (type === 'm' && newTime && newValue >= 6) {
+      refSeconds.current?.focus()
     }
 
-    setTime(newValue)
-    onChange?.(newValue)
+    if (type === 'h') {
+      if (isCompleteHour(timeFormat, newValue)) {
+        refMinutes.current?.focus()
+      }
+    }
+    const newFilled = { ...filled }
+    newFilled[type] = true
+
+    setTime(newTime)
+    onChange?.(newTime)
+
+    setFilled(newFilled)
   }
 
   // Increase time with arrow up
   const handleIncrease = (type: 'h' | 'm' | 's') => {
-    const newTime = { ...time }
-    const currentValue = Number.parseInt(
-      time[type] && time[type].length > 0 ? time[type] : '0',
-      10,
-    )
-
+    const newTime = time ? new Date(time) : DEFAULT_DATE
+    const currentValue = getValueByType(type, newTime)
     if (type === 'h' && timeFormat === 24) {
-      newTime[type] = (currentValue === 23 ? 0 : currentValue + 1)
-        .toString()
-        .padStart(2, '0')
+      setValueByType(type, newTime, currentValue === 23 ? 0 : currentValue + 1)
     } else if (type === 'h' && timeFormat === 12) {
-      newTime[type] = (currentValue === 12 ? 1 : currentValue + 1)
-        .toString()
-        .padStart(2, '0')
+      setValueByType(type, newTime, currentValue === 12 ? 1 : currentValue + 1)
     } else {
-      newTime[type] = (currentValue === 59 ? 0 : currentValue + 1)
-        .toString()
-        .padStart(2, '0')
+      setValueByType(type, newTime, currentValue === 59 ? 0 : currentValue + 1)
     }
+    const newFilled = { ...filled }
+    newFilled[type] = true
+
     setTime(newTime)
     onChange?.(newTime)
+    setFilled(newFilled)
   }
 
   // Decrease time with arrow down
   const handleDecrease = (type: 'h' | 'm' | 's') => {
-    const newTime = { ...time }
-    const currentValue = Number.parseInt(
-      time[type] && time[type].length > 0 ? time[type] : '0',
-      10,
-    )
+    const newTime = time ? new Date(time) : DEFAULT_DATE
+    const currentValue = getValueByType(type, newTime)
 
     if (type === 'h' && timeFormat === 24) {
-      newTime[type] = (currentValue === 0 ? 23 : currentValue - 1)
-        .toString()
-        .padStart(2, '0')
+      setValueByType(type, newTime, currentValue === 0 ? 23 : currentValue - 1)
     } else if (type === 'h' && timeFormat === 12) {
-      newTime[type] = (currentValue === 1 ? 12 : currentValue - 1)
-        .toString()
-        .padStart(2, '0')
+      setValueByType(type, newTime, currentValue === 1 ? 12 : currentValue - 1)
     } else {
-      newTime[type] = (currentValue === 0 ? 59 : currentValue - 1)
-        .toString()
-        .padStart(2, '0')
+      setValueByType(type, newTime, currentValue === 0 ? 59 : currentValue - 1)
     }
+    const newFilled = { ...filled }
+    newFilled[type] = true
+
     setTime(newTime)
     onChange?.(newTime)
+    setFilled(newFilled)
   }
 
   // Go to next input
@@ -324,14 +346,19 @@ export const TimeInputV2 = ({
   return (
     <Stack gap={0.5} className={className}>
       <Stack direction="row" gap={1} alignItems="center">
-        <Text as="label" prominence="strong" sentiment="neutral" variant="body">
+        <StyledText
+          as="label"
+          prominence="strong"
+          sentiment="neutral"
+          variant="body"
+        >
           {label}
-        </Text>
+        </StyledText>
         {required ? <AsteriskIcon size={8} sentiment="danger" /> : null}
         {labelDescription ? (
-          <Text as="label" variant="bodySmall">
+          <StyledText as="label" variant="bodySmall">
             {labelDescription}
-          </Text>
+          </StyledText>
         ) : null}
       </Stack>
       <TimeInputWrapper
@@ -348,6 +375,7 @@ export const TimeInputV2 = ({
         onClick={() => refHours.current?.focus()}
         id={id}
         data-testid={dataTestId}
+        aria-label={ariaLabel}
       >
         <Stack direction="row">
           {TIME_KEYS.map(type => {
@@ -374,12 +402,16 @@ export const TimeInputV2 = ({
             return (
               <Stack key={type} direction="row">
                 <Input
-                  value={time[type]}
+                  value={
+                    filled[type]
+                      ? format(getValueByType(type, time), type, timeFormat)
+                      : ''
+                  }
                   placeholder={placeholder[type]}
                   data-size={size}
                   readOnly={readOnly}
                   disabled={disabled}
-                  aria-label={`${fullName()}-input`}
+                  aria-label={ariaLabel}
                   data-testid={`${fullName()}-input`}
                   onClick={event => {
                     event.stopPropagation()
@@ -388,14 +420,23 @@ export const TimeInputV2 = ({
                   role="spinbutton"
                   aria-valuemax={computeMaxValue()}
                   aria-valuemin={type === 'h' && timeFormat === 12 ? 1 : 0}
-                  aria-valuenow={Number.parseInt(time[type], 10)}
+                  aria-valuenow={
+                    filled[type]
+                      ? Number.parseInt(
+                          format(getValueByType(type, time), type, timeFormat),
+                          10,
+                        )
+                      : undefined
+                  }
                   onChange={event => {
                     if (!readOnly && !disabled) {
                       const key = getLastTypedChar(
                         event.target.value,
-                        time[type],
+                        getValueByType(type, time),
                       )
-                      if (isNumber(key)) handleChange(type, key)
+                      if (isNumber(key)) {
+                        handleChange(type, Number.parseInt(key, 10))
+                      }
                     }
                   }}
                   onKeyDown={event => {
@@ -432,31 +473,25 @@ export const TimeInputV2 = ({
           })}
           {timeFormat === 12 ? (
             <Input
-              value={time.period?.toUpperCase()}
+              value={period?.toUpperCase()}
               placeholder={placeholder.period ?? 'AM'}
               data-size={size}
               data-period
               readOnly={readOnly}
               disabled={disabled}
-              aria-label="am-pm-input"
+              aria-label={ariaLabel}
               data-testid="am-pm-input"
               onChange={event => {
                 if (!readOnly && !disabled) {
                   const key = event.target.value.slice(-1)
-                  if (isAOrP(key)) handleChange('period', key)
+                  if (isAOrP(key)) handleChangePeriod(key as 'a' | 'p')
                 }
               }}
               onKeyDown={event => {
                 if (!readOnly && !disabled) {
                   if (event.key === 'ArrowUp' || event.key === 'ArrowDown') {
                     event.preventDefault()
-                    const newTime = {
-                      ...time,
-                      period:
-                        time.period === 'am' ? 'pm' : ('am' as 'am' | 'pm'),
-                    }
-                    setTime(newTime)
-                    onChange?.(newTime)
+                    handleChangePeriod(period === 'am' ? 'p' : 'a')
                   } else if (event.key === 'ArrowLeft') {
                     event.preventDefault()
                     refSeconds.current?.focus()
@@ -468,8 +503,8 @@ export const TimeInputV2 = ({
               role="spinbutton"
               aria-valuemax={12}
               aria-valuemin={0}
-              aria-valuenow={time.period === 'am' ? 0 : 12}
-              aria-valuetext={time.period}
+              aria-valuenow={period === 'am' ? 0 : 12}
+              aria-valuetext={period}
             />
           ) : null}
         </Stack>
@@ -485,8 +520,8 @@ export const TimeInputV2 = ({
                 icon="close"
                 onClick={event => {
                   event.stopPropagation()
-                  setTime(correctEmpty)
-                  onChange?.(correctEmpty)
+                  setTime(undefined)
+                  onChange?.(undefined)
                 }}
                 sentiment="neutral"
                 data-testid="clear"

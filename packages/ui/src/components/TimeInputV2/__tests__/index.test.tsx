@@ -4,11 +4,7 @@ import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
 import { describe, expect, test, vi } from 'vitest'
 import { TimeInputV2 } from '..'
 
-const DEFAULT_VALUE = {
-  h: '11',
-  m: '23',
-  s: '14',
-}
+const DEFAULT_VALUE = new Date('01/01/2000 11:23:14')
 
 describe('TimeInput', () => {
   test('renders correctly with base props', () =>

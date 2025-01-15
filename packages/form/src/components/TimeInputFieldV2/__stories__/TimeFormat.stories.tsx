@@ -14,4 +14,4 @@ export const TimeFormat: StoryFn<
   </Stack>
 )
 
-TimeFormat.args = { ...Template.args, timeFormat: 12 }
+TimeFormat.args = { ...Template.args, timeFormat: 12, label: '12-hour format' }
