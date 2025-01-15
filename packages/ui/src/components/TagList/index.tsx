@@ -5,6 +5,8 @@ import type { ComponentProps } from 'react'
 import { Popover } from '../Popover'
 import { Tag } from '../Tag'
 
+const DEFAULT_POPOVER_MAX_HEIGHT = '16rem'
+
 const TAGS_GAP = consoleLightTheme.space['1']
 
 const StyledContainer = styled.div`
@@ -82,6 +84,10 @@ type TagListProps = {
    * this property.
    */
   popoverPlacement?: ComponentProps<typeof Popover>['placement']
+  /**
+   * The popover maxHeight, defaults to 12.5rem
+   */
+  popoverMaxHeight?: ComponentProps<typeof Popover>['maxHeight']
   className?: string
   'data-testid'?: string
 } & Pick<ComponentProps<typeof Tag>, 'copiable' | 'copyText' | 'copiedText'>
@@ -101,6 +107,7 @@ export const TagList = ({
   multiline = false,
   popoverTitle,
   popoverPlacement,
+  popoverMaxHeight = DEFAULT_POPOVER_MAX_HEIGHT,
   copiable,
   copyText,
   copiedText,
@@ -334,6 +341,7 @@ export const TagList = ({
           size="small"
           onClose={() => setIsPopoverVisible(false)}
           placement={popoverPlacement}
+          maxHeight={popoverMaxHeight}
           content={
             <StyledTagContainer multiline gap={TAGS_GAP}>
               {hiddenTags.map((tag, index) => renderTag(tag, index))}
