@@ -4467,6 +4467,7 @@ exports[`Pagination > should work correctly with perPage 1`] = `
   margin-right: 0.25rem;
   color: #3f4250;
   border-radius: 0.25rem;
+  border: 1px transparent solid;
 }
 
 .emotion-31:hover,
@@ -4474,7 +4475,6 @@ exports[`Pagination > should work correctly with perPage 1`] = `
   background-color: #f1eefc;
   color: #641cb3;
   cursor: pointer;
-  outline: none;
 }
 
 .emotion-31[aria-selected='true'] {
@@ -4888,7 +4888,6 @@ exports[`Pagination > should work correctly with perPage 1`] = `
                   data-grouped="false"
                   id="select-dropdown"
                   role="listbox"
-                  tabindex="-1"
                 >
                   <div
                     class="emotion-29 emotion-1"
