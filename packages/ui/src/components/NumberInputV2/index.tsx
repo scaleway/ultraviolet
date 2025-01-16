@@ -115,6 +115,7 @@ const Input = styled.input`
   &:read-only {
     color: ${({ theme }) => theme.colors.neutral.text};
     background: ${({ theme }) => theme.colors.neutral.backgroundWeak};
+    border-block: 1px solid ${({ theme }) => theme.colors.neutral.border};
 
     & ~ ${Unit} {
       background: ${({ theme }) => theme.colors.neutral.backgroundWeak};
@@ -125,6 +126,7 @@ const Input = styled.input`
     color: ${({ theme }) => theme.colors.neutral.textDisabled};
     background: ${({ theme }) => theme.colors.neutral.backgroundDisabled};
     cursor: not-allowed;
+    border-block: 1px solid ${({ theme }) => theme.colors.neutral.borderDisabled};
 
     & ~ ${Unit} {
       background: ${({ theme }) => theme.colors.neutral.backgroundDisabled};
