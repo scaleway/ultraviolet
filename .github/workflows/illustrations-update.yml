@@ -36,7 +36,7 @@ jobs:
         run: pnpm run illustrations:update
 
       - name: Git Auto Commit
-        uses: stefanzweifel/git-auto-commit-action@v5.0.1
+        uses: stefanzweifel/git-auto-commit-action@v5.1.0
         with:
           commit_message: "chore(illustrations): automatic export update"
           commit_user_name: Scaleway Bot
