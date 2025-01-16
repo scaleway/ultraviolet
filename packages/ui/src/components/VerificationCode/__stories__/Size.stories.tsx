@@ -3,13 +3,14 @@ import { VerificationCode, verificationCodeSizes } from '..'
 import { Stack } from '../..'
 
 export const Size: StoryFn<typeof VerificationCode> = args => (
-  <Stack alignItems="center" gap={2} direction="row">
+  <Stack gap={2} direction="column">
     {verificationCodeSizes.map(size => (
       <VerificationCode
         {...args}
         key={size}
         size={size}
-        fields={1}
+        fields={4}
+        label={size}
         initialValue="1"
       />
     ))}

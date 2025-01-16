@@ -1,7 +1,8 @@
 import { Template } from './Template.stories'
 
-export const Playground = Template.bind({})
+export const Required = Template.bind({})
 
-Playground.args = {
+Required.args = {
   label: 'Verification code',
+  required: true,
 }

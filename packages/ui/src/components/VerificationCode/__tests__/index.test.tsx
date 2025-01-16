@@ -121,6 +121,46 @@ describe('VerificationCode', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
+  test('render correctly with helper', () => {
+    const { asFragment } = renderWithTheme(<VerificationCode helper="test" />)
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  test('render correctly with label', () => {
+    const { asFragment } = renderWithTheme(<VerificationCode label="test" />)
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  test('render correctly with error as string', () => {
+    const { asFragment } = renderWithTheme(<VerificationCode error="test" />)
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  test('render correctly with error as boolean', () => {
+    const { asFragment } = renderWithTheme(<VerificationCode error />)
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  test('render correctly with success as boolean', () => {
+    const { asFragment } = renderWithTheme(<VerificationCode success />)
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  test('render correctly with success as string', () => {
+    const { asFragment } = renderWithTheme(<VerificationCode success="test" />)
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  test('render correctly with labelDescription', () => {
+    const { asFragment } = renderWithTheme(
+      <VerificationCode
+        label="test"
+        labelDescription={<span>description</span>}
+      />,
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
+
   test('should render correctly disabled true', () => {
     const { asFragment } = renderWithTheme(<VerificationCode disabled />)
     expect(asFragment()).toMatchSnapshot()

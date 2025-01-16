@@ -2,6 +2,7 @@ import { Template } from './Template.stories'
 
 export const Placeholder = Template.bind({})
 Placeholder.args = {
+  label: 'Verification code',
   placeholder: '0000',
 }
 

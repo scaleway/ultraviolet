@@ -1,11 +1,15 @@
 import styled from '@emotion/styled'
+import { AsteriskIcon } from '@ultraviolet/icons'
 import type {
   ChangeEvent,
   ClipboardEventHandler,
   FocusEventHandler,
   KeyboardEventHandler,
+  ReactNode,
 } from 'react'
-import { createRef, useId, useState } from 'react'
+import { createRef, useId, useMemo, useState } from 'react'
+import { Stack } from '../Stack'
+import { Text } from '../Text'
 
 type Size = 'small' | 'medium' | 'large' | 'xlarge'
 
@@ -31,11 +35,7 @@ const StyledInput = styled('input', {
   inputSize: Size
 }>`
   background: ${({ theme }) => theme.colors.neutral.background};
-  border: solid 1px
-    ${({ 'aria-invalid': error, theme }) =>
-      error ? theme.colors.danger.border : theme.colors.neutral.border};
-  color: ${({ 'aria-invalid': error, theme }) =>
-    error ? theme.colors.danger.text : theme.colors.neutral.text};
+  color: ${({ theme }) => theme.colors.neutral.text};
   ${({ inputSize, theme }) => {
     if (inputSize === 'small') {
       return `
@@ -59,17 +59,31 @@ const StyledInput = styled('input', {
     border-color 0.2s ease,
     box-shadow 0.2s ease;
 
+  border: solid 1px ${({ theme }) => theme.colors.neutral.border};
+
+  &[aria-invalid='true'] {
+    border-color: ${({ theme }) => theme.colors.danger.border};
+  }
+
+  &[data-success='true'] {
+    border-color: ${({ theme }) => theme.colors.success.border};
+  }
+
   &:hover,
   &:focus {
-    border-color: ${({ 'aria-invalid': error, theme }) =>
-      error
-        ? theme.colors.danger.borderHover
-        : theme.colors.primary.borderHover};
+    border-color: ${({ theme }) => theme.colors.primary.borderHover};
+
+    &[aria-invalid='true'] {
+      border-color: ${({ theme }) => theme.colors.danger.borderHover};
+    }
+
+    &[data-success='true'] {
+      border-color: ${({ theme }) => theme.colors.success.borderHover};
+    }
   }
 
   &:focus {
-    box-shadow: ${({ 'aria-invalid': error, theme: { shadows } }) =>
-      error ? shadows.focusDanger : shadows.focusPrimary};
+    box-shadow: ${({ theme: { shadows } }) => shadows.focusPrimary};
   }
 
   &:last-child {
@@ -83,22 +97,31 @@ const StyledInput = styled('input', {
         : theme.colors.neutral.textWeak};
   }
 
-  ${({ disabled, theme: { colors } }) =>
-    disabled &&
-    `cursor: default;
-    background-color: ${colors.neutral.backgroundDisabled};
-    border-color: ${colors.neutral.borderDisabled};
-    color: ${colors.neutral.textDisabled};
-
-    &:hover {
-      border: ${colors.neutral.borderDisabled}
-    }
-    `}
+  &:disabled {
+    cursor: not-allowed;
+    background: ${({ theme }) => theme.colors.neutral.backgroundDisabled};
+    color: ${({ theme }) => theme.colors.neutral.textDisabled};
+    border: solid 1px ${({ theme }) => theme.colors.neutral.borderDisabled};
+  }
 `
+
+const FieldSet = styled.fieldset`
+  border: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: ${({ theme }) => theme.space['0.5']};
+`
+
+const DEFAULT_ON_FUNCTION = () => {}
+
+const inputOnFocus: FocusEventHandler<HTMLInputElement> = event =>
+  event.target.select()
 
 type VerificationCodeProps = {
   disabled?: boolean
-  error?: boolean
+  error?: boolean | string
   className?: string
   /**
    * Amount of field you want
@@ -124,12 +147,11 @@ type VerificationCodeProps = {
   type?: 'text' | 'number'
   'data-testid'?: string
   'aria-label'?: string
+  label?: string
+  labelDescription?: ReactNode
+  helper?: ReactNode
+  success?: boolean | string
 }
-
-const DEFAULT_ON_FUNCTION = () => {}
-
-const inputOnFocus: FocusEventHandler<HTMLInputElement> = event =>
-  event.target.select()
 
 /**
  * Verification code allows you to enter a code in multiple fields (4 by default).
@@ -150,6 +172,10 @@ export const VerificationCode = ({
   type = 'number',
   'data-testid': dataTestId,
   'aria-label': ariaLabel = 'Verification code',
+  label,
+  labelDescription,
+  helper,
+  success,
 }: VerificationCodeProps) => {
   const uniqueId = useId()
   const valuesArray = Object.assign(new Array(fields).fill(''), [
@@ -291,30 +317,81 @@ export const VerificationCode = ({
       triggerChange(pastedValue)
     }
 
+  const sentiment = useMemo(() => {
+    if (error) {
+      return 'danger'
+    }
+
+    if (success) {
+      return 'success'
+    }
+
+    return 'neutral'
+  }, [error, success])
+
   return (
-    <div className={className} data-testid={dataTestId}>
-      {values.map((value: string, index: number) => (
-        <StyledInput
-          css={[inputStyle]}
-          aria-invalid={error}
-          inputSize={size}
-          type={type === 'number' ? 'tel' : type}
-          pattern={type === 'number' ? '[0-9]*' : undefined}
-          key={`field-${index}`}
-          data-testid={index}
-          value={value}
-          id={`${inputId || uniqueId}-${index}`}
-          ref={inputRefs[index]}
-          onChange={inputOnChange(index)}
-          onKeyDown={inputOnKeyDown(index)}
-          onPaste={inputOnPaste(index)}
-          onFocus={inputOnFocus}
+    <FieldSet className={className} data-testid={dataTestId}>
+      {label || labelDescription ? (
+        <Stack direction="row" gap="1" alignItems="center">
+          {label ? (
+            <Stack direction="row" gap="0.5" alignItems="start">
+              <Text
+                as="legend"
+                variant={
+                  ['xlarge', 'large'].includes(size)
+                    ? 'bodyStrong'
+                    : 'bodySmallStrong'
+                }
+                sentiment="neutral"
+                prominence="strong"
+              >
+                {label}
+              </Text>
+              {required ? <AsteriskIcon sentiment="danger" size={8} /> : null}
+            </Stack>
+          ) : null}
+          {labelDescription ?? null}
+        </Stack>
+      ) : null}
+      <div>
+        {values.map((value: string, index: number) => (
+          <StyledInput
+            css={[inputStyle]}
+            aria-invalid={!!error}
+            data-success={!!success}
+            inputSize={size}
+            type={type === 'number' ? 'tel' : type}
+            pattern={type === 'number' ? '[0-9]*' : undefined}
+            key={`field-${index}`}
+            data-testid={index}
+            value={value}
+            id={`${inputId || uniqueId}-${index}`}
+            ref={inputRefs[index]}
+            onChange={inputOnChange(index)}
+            onKeyDown={inputOnKeyDown(index)}
+            onPaste={inputOnPaste(index)}
+            onFocus={inputOnFocus}
+            disabled={disabled}
+            required={required}
+            placeholder={placeholder?.[index] ?? ''}
+            aria-label={`${ariaLabel} ${index}`}
+          />
+        ))}
+      </div>
+      {error || typeof success === 'string' || typeof helper === 'string' ? (
+        <Text
+          as="p"
+          variant="caption"
+          sentiment={sentiment}
+          prominence={!error && !success ? 'weak' : 'default'}
           disabled={disabled}
-          required={required}
-          placeholder={placeholder?.[index] ?? ''}
-          aria-label={`${ariaLabel} ${index}`}
-        />
-      ))}
-    </div>
+        >
+          {error || success || helper}
+        </Text>
+      ) : null}
+      {!error && !success && typeof helper !== 'string' && helper
+        ? helper
+        : null}
+    </FieldSet>
   )
 }
