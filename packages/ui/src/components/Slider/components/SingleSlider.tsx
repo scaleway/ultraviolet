@@ -178,6 +178,7 @@ export const SingleSlider = ({
         max={max}
         step={step}
         controls={false}
+        disabled={disabled}
         data-testid={dataTestId ? `${dataTestId}-input` : 'slider-input'}
         unit={typeof suffix === 'string' ? suffix : unit}
         onChange={newVal => {
