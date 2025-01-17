@@ -1,5 +1,32 @@
 # Change Log
 
+## 1.84.0
+
+### Minor Changes
+
+- [#4537](https://github.com/scaleway/ultraviolet/pull/4537) [`9db9273`](https://github.com/scaleway/ultraviolet/commit/9db927334bfc4eeb583d1753c775b6b91abe97d2) Thanks [@lisalupi](https://github.com/lisalupi)! - Refactor and enhancement of `<Pagination />` :
+
+  - Number of results on the bottom left
+  - Number of items to display
+  - Styling
+
+- [#4635](https://github.com/scaleway/ultraviolet/pull/4635) [`b4b5366`](https://github.com/scaleway/ultraviolet/commit/b4b536696ca576f4c3f489879192e80777acf615) Thanks [@lisalupi](https://github.com/lisalupi)! - New component `<TimeInputV2 />`
+
+- [#4661](https://github.com/scaleway/ultraviolet/pull/4661) [`3b593c7`](https://github.com/scaleway/ultraviolet/commit/3b593c76c3ef86cbf3465e1055ad0d32e63f6b95) Thanks [@radhi-nasser-scaleway](https://github.com/radhi-nasser-scaleway)! - feat: Add `popoverMaxHeight` to `<TagList />`
+
+### Patch Changes
+
+- [#4663](https://github.com/scaleway/ultraviolet/pull/4663) [`d11059c`](https://github.com/scaleway/ultraviolet/commit/d11059c4b1e51f582d525245eb873fa1fd96dcee) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `19.0.6`.
+
+- [#4679](https://github.com/scaleway/ultraviolet/pull/4679) [`acd9e4e`](https://github.com/scaleway/ultraviolet/commit/acd9e4e7cb782c13120b7e7613286f106f7b3692) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `19.0.7`.
+
+- [#4668](https://github.com/scaleway/ultraviolet/pull/4668) [`5509994`](https://github.com/scaleway/ultraviolet/commit/5509994312fd8474517b123b2eb9c8b3101b47cb) Thanks [@lisalupi](https://github.com/lisalupi)! - `<NumberInputV2 />`: border color when disabled
+
+- [#4669](https://github.com/scaleway/ultraviolet/pull/4669) [`8219a68`](https://github.com/scaleway/ultraviolet/commit/8219a68715c8017a1a71d33af97b52d0ff8f1c67) Thanks [@lisalupi](https://github.com/lisalupi)! - `<Slider />: when the component is disabled, the input is disabled too
+
+- Updated dependencies [[`d11059c`](https://github.com/scaleway/ultraviolet/commit/d11059c4b1e51f582d525245eb873fa1fd96dcee), [`acd9e4e`](https://github.com/scaleway/ultraviolet/commit/acd9e4e7cb782c13120b7e7613286f106f7b3692)]:
+  - @ultraviolet/icons@3.8.2
+
 ## 1.83.2
 
 ### Patch Changes
