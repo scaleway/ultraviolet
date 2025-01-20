@@ -266,13 +266,15 @@ export const computePositions = ({
     ? childrenRight
     : childrenLeft - parentLeft + childrenWidth
 
-  const popupOverflow = getPopupOverflowFromParent(
-    placementBasedOnWindowSize,
-    offsetParentRect,
-    childrenRect,
-    popupStructuredRef,
-    arrowWidth,
-  )
+  const popupOverflow = isPopupPortalTargetBody
+    ? 0
+    : getPopupOverflowFromParent(
+        placementBasedOnWindowSize,
+        offsetParentRect,
+        childrenRect,
+        popupStructuredRef,
+        arrowWidth,
+      )
 
   const isAligned = align === 'start'
 
