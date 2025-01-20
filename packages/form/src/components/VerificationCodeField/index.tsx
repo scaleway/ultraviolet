@@ -1,4 +1,4 @@
-import { Stack, Text, VerificationCode } from '@ultraviolet/ui'
+import { VerificationCode } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
 import type { FieldPath, FieldValues } from 'react-hook-form'
 import { useController } from 'react-hook-form'
@@ -21,6 +21,9 @@ type VerificationCodeFieldProps<
       | 'placeholder'
       | 'required'
       | 'type'
+      | 'labelDescription'
+      | 'success'
+      | 'helper'
     >
   > & {
     className?: string
@@ -45,6 +48,9 @@ export const VerificationCodeField = <
   type = 'number',
   disabled,
   validate,
+  labelDescription,
+  success,
+  helper,
 }: VerificationCodeFieldProps<TFieldValues, TName>) => {
   const { getError } = useErrors()
 
@@ -69,50 +75,26 @@ export const VerificationCodeField = <
   })
 
   return (
-    <Stack
+    <VerificationCode
       className={className}
-      gap={1}
-      justifyContent="center"
-      alignItems="center"
-      direction="column"
-      aria-label="verification-code-field"
-    >
-      {label ? (
-        <label
-          id={`${id}-label`}
-          htmlFor={`${id}-0`}
-          style={{
-            cursor: 'pointer',
-            flexShrink: 0,
-          }}
-        >
-          <Text as="p" variant="body" prominence="strong">
-            {label}
-          </Text>
-        </label>
-      ) : null}
-
-      <VerificationCode
-        inputId={id}
-        error={!!error}
-        placeholder={placeholder}
-        fields={fields}
-        onChange={event => {
-          onChange?.(event)
-          field.onChange(event)
-        }}
-        onComplete={event => {
-          onComplete?.(event)
-        }}
-        type={type}
-        disabled={disabled}
-        required={required}
-      />
-      {error ? (
-        <Text as="small" variant="caption" sentiment="danger">
-          {getError({ label: label || 'verification-code-field' }, error)}
-        </Text>
-      ) : null}
-    </Stack>
+      inputId={id}
+      placeholder={placeholder}
+      fields={fields}
+      onChange={event => {
+        onChange?.(event)
+        field.onChange(event)
+      }}
+      onComplete={event => {
+        onComplete?.(event)
+      }}
+      type={type}
+      disabled={disabled}
+      required={required}
+      error={getError({ label: label || 'verification-code-field' }, error)}
+      label={label}
+      labelDescription={labelDescription}
+      success={success}
+      helper={helper}
+    />
   )
 }

@@ -2,7 +2,9 @@ import { Template } from './Template.stories'
 
 export const Error = Template.bind({})
 Error.args = {
-  error: true,
+  label: 'Verification code',
+  error: 'Invalid code',
+  initialValue: '1337',
 }
 
 Error.parameters = {

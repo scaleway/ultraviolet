@@ -1,10 +1,952 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
+exports[`VerificationCode > render correctly with error as boolean 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  border: none;
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.emotion-2 {
+  background: #ffffff;
+  color: #3f4250;
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: center;
+  border-radius: 0.25rem;
+  margin-right: 0.5rem;
+  width: 2.5rem;
+  height: 3rem;
+  outline-style: none;
+  -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
+  transition: border-color 0.2s ease,box-shadow 0.2s ease;
+  border: solid 1px #d9dadd;
+}
+
+.emotion-2[aria-invalid='true'] {
+  border-color: #b3144d;
+}
+
+.emotion-2[data-success='true'] {
+  border-color: #22674e;
+}
+
+.emotion-2:hover,
+.emotion-2:focus {
+  border-color: #792dd4;
+}
+
+.emotion-2:hover[aria-invalid='true'],
+.emotion-2:focus[aria-invalid='true'] {
+  border-color: #92103f;
+}
+
+.emotion-2:hover[data-success='true'],
+.emotion-2:focus[data-success='true'] {
+  border-color: #1b533f;
+}
+
+.emotion-2:focus {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-2:last-child {
+  margin-right: 0;
+}
+
+.emotion-2::-webkit-input-placeholder {
+  color: #727683;
+}
+
+.emotion-2::-moz-placeholder {
+  color: #727683;
+}
+
+.emotion-2:-ms-input-placeholder {
+  color: #727683;
+}
+
+.emotion-2::placeholder {
+  color: #727683;
+}
+
+.emotion-2:disabled {
+  cursor: not-allowed;
+  background: #f3f3f4;
+  color: #b5b7bd;
+  border: solid 1px #e9eaeb;
+}
+
+.emotion-10 {
+  color: #b3144d;
+  font-size: 0.75rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<div
+    data-testid="testing"
+  >
+    <fieldset
+      class="emotion-0 emotion-1"
+    >
+      <div>
+        <input
+          aria-invalid="true"
+          aria-label="Verification code 0"
+          class="emotion-2 emotion-3"
+          data-success="false"
+          data-testid="0"
+          id=":ri:-0"
+          pattern="[0-9]*"
+          placeholder=""
+          type="tel"
+          value=""
+        />
+        <input
+          aria-invalid="true"
+          aria-label="Verification code 1"
+          class="emotion-2 emotion-3"
+          data-success="false"
+          data-testid="1"
+          id=":ri:-1"
+          pattern="[0-9]*"
+          placeholder=""
+          type="tel"
+          value=""
+        />
+        <input
+          aria-invalid="true"
+          aria-label="Verification code 2"
+          class="emotion-2 emotion-3"
+          data-success="false"
+          data-testid="2"
+          id=":ri:-2"
+          pattern="[0-9]*"
+          placeholder=""
+          type="tel"
+          value=""
+        />
+        <input
+          aria-invalid="true"
+          aria-label="Verification code 3"
+          class="emotion-2 emotion-3"
+          data-success="false"
+          data-testid="3"
+          id=":ri:-3"
+          pattern="[0-9]*"
+          placeholder=""
+          type="tel"
+          value=""
+        />
+      </div>
+      <p
+        class="emotion-10 emotion-11"
+      />
+    </fieldset>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`VerificationCode > render correctly with error as string 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  border: none;
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.emotion-2 {
+  background: #ffffff;
+  color: #3f4250;
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: center;
+  border-radius: 0.25rem;
+  margin-right: 0.5rem;
+  width: 2.5rem;
+  height: 3rem;
+  outline-style: none;
+  -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
+  transition: border-color 0.2s ease,box-shadow 0.2s ease;
+  border: solid 1px #d9dadd;
+}
+
+.emotion-2[aria-invalid='true'] {
+  border-color: #b3144d;
+}
+
+.emotion-2[data-success='true'] {
+  border-color: #22674e;
+}
+
+.emotion-2:hover,
+.emotion-2:focus {
+  border-color: #792dd4;
+}
+
+.emotion-2:hover[aria-invalid='true'],
+.emotion-2:focus[aria-invalid='true'] {
+  border-color: #92103f;
+}
+
+.emotion-2:hover[data-success='true'],
+.emotion-2:focus[data-success='true'] {
+  border-color: #1b533f;
+}
+
+.emotion-2:focus {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-2:last-child {
+  margin-right: 0;
+}
+
+.emotion-2::-webkit-input-placeholder {
+  color: #727683;
+}
+
+.emotion-2::-moz-placeholder {
+  color: #727683;
+}
+
+.emotion-2:-ms-input-placeholder {
+  color: #727683;
+}
+
+.emotion-2::placeholder {
+  color: #727683;
+}
+
+.emotion-2:disabled {
+  cursor: not-allowed;
+  background: #f3f3f4;
+  color: #b5b7bd;
+  border: solid 1px #e9eaeb;
+}
+
+.emotion-10 {
+  color: #b3144d;
+  font-size: 0.75rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<div
+    data-testid="testing"
+  >
+    <fieldset
+      class="emotion-0 emotion-1"
+    >
+      <div>
+        <input
+          aria-invalid="true"
+          aria-label="Verification code 0"
+          class="emotion-2 emotion-3"
+          data-success="false"
+          data-testid="0"
+          id=":rg:-0"
+          pattern="[0-9]*"
+          placeholder=""
+          type="tel"
+          value=""
+        />
+        <input
+          aria-invalid="true"
+          aria-label="Verification code 1"
+          class="emotion-2 emotion-3"
+          data-success="false"
+          data-testid="1"
+          id=":rg:-1"
+          pattern="[0-9]*"
+          placeholder=""
+          type="tel"
+          value=""
+        />
+        <input
+          aria-invalid="true"
+          aria-label="Verification code 2"
+          class="emotion-2 emotion-3"
+          data-success="false"
+          data-testid="2"
+          id=":rg:-2"
+          pattern="[0-9]*"
+          placeholder=""
+          type="tel"
+          value=""
+        />
+        <input
+          aria-invalid="true"
+          aria-label="Verification code 3"
+          class="emotion-2 emotion-3"
+          data-success="false"
+          data-testid="3"
+          id=":rg:-3"
+          pattern="[0-9]*"
+          placeholder=""
+          type="tel"
+          value=""
+        />
+      </div>
+      <p
+        class="emotion-10 emotion-11"
+      >
+        test
+      </p>
+    </fieldset>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`VerificationCode > render correctly with helper 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  border: none;
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.emotion-2 {
+  background: #ffffff;
+  color: #3f4250;
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: center;
+  border-radius: 0.25rem;
+  margin-right: 0.5rem;
+  width: 2.5rem;
+  height: 3rem;
+  outline-style: none;
+  -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
+  transition: border-color 0.2s ease,box-shadow 0.2s ease;
+  border: solid 1px #d9dadd;
+}
+
+.emotion-2[aria-invalid='true'] {
+  border-color: #b3144d;
+}
+
+.emotion-2[data-success='true'] {
+  border-color: #22674e;
+}
+
+.emotion-2:hover,
+.emotion-2:focus {
+  border-color: #792dd4;
+}
+
+.emotion-2:hover[aria-invalid='true'],
+.emotion-2:focus[aria-invalid='true'] {
+  border-color: #92103f;
+}
+
+.emotion-2:hover[data-success='true'],
+.emotion-2:focus[data-success='true'] {
+  border-color: #1b533f;
+}
+
+.emotion-2:focus {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-2:last-child {
+  margin-right: 0;
+}
+
+.emotion-2::-webkit-input-placeholder {
+  color: #727683;
+}
+
+.emotion-2::-moz-placeholder {
+  color: #727683;
+}
+
+.emotion-2:-ms-input-placeholder {
+  color: #727683;
+}
+
+.emotion-2::placeholder {
+  color: #727683;
+}
+
+.emotion-2:disabled {
+  cursor: not-allowed;
+  background: #f3f3f4;
+  color: #b5b7bd;
+  border: solid 1px #e9eaeb;
+}
+
+.emotion-10 {
+  color: #727683;
+  font-size: 0.75rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<div
+    data-testid="testing"
+  >
+    <fieldset
+      class="emotion-0 emotion-1"
+    >
+      <div>
+        <input
+          aria-invalid="false"
+          aria-label="Verification code 0"
+          class="emotion-2 emotion-3"
+          data-success="false"
+          data-testid="0"
+          id=":rc:-0"
+          pattern="[0-9]*"
+          placeholder=""
+          type="tel"
+          value=""
+        />
+        <input
+          aria-invalid="false"
+          aria-label="Verification code 1"
+          class="emotion-2 emotion-3"
+          data-success="false"
+          data-testid="1"
+          id=":rc:-1"
+          pattern="[0-9]*"
+          placeholder=""
+          type="tel"
+          value=""
+        />
+        <input
+          aria-invalid="false"
+          aria-label="Verification code 2"
+          class="emotion-2 emotion-3"
+          data-success="false"
+          data-testid="2"
+          id=":rc:-2"
+          pattern="[0-9]*"
+          placeholder=""
+          type="tel"
+          value=""
+        />
+        <input
+          aria-invalid="false"
+          aria-label="Verification code 3"
+          class="emotion-2 emotion-3"
+          data-success="false"
+          data-testid="3"
+          id=":rc:-3"
+          pattern="[0-9]*"
+          placeholder=""
+          type="tel"
+          value=""
+        />
+      </div>
+      <p
+        class="emotion-10 emotion-11"
+      >
+        test
+      </p>
+    </fieldset>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`VerificationCode > render correctly with label 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  border: none;
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.25rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-6 {
+  color: #222638;
+  font-size: 1rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-8 {
+  background: #ffffff;
+  color: #3f4250;
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: center;
+  border-radius: 0.25rem;
+  margin-right: 0.5rem;
+  width: 2.5rem;
+  height: 3rem;
+  outline-style: none;
+  -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
+  transition: border-color 0.2s ease,box-shadow 0.2s ease;
+  border: solid 1px #d9dadd;
+}
+
+.emotion-8[aria-invalid='true'] {
+  border-color: #b3144d;
+}
+
+.emotion-8[data-success='true'] {
+  border-color: #22674e;
+}
+
+.emotion-8:hover,
+.emotion-8:focus {
+  border-color: #792dd4;
+}
+
+.emotion-8:hover[aria-invalid='true'],
+.emotion-8:focus[aria-invalid='true'] {
+  border-color: #92103f;
+}
+
+.emotion-8:hover[data-success='true'],
+.emotion-8:focus[data-success='true'] {
+  border-color: #1b533f;
+}
+
+.emotion-8:focus {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-8:last-child {
+  margin-right: 0;
+}
+
+.emotion-8::-webkit-input-placeholder {
+  color: #727683;
+}
+
+.emotion-8::-moz-placeholder {
+  color: #727683;
+}
+
+.emotion-8:-ms-input-placeholder {
+  color: #727683;
+}
+
+.emotion-8::placeholder {
+  color: #727683;
+}
+
+.emotion-8:disabled {
+  cursor: not-allowed;
+  background: #f3f3f4;
+  color: #b5b7bd;
+  border: solid 1px #e9eaeb;
+}
+
+<div
+    data-testid="testing"
+  >
+    <fieldset
+      class="emotion-0 emotion-1"
+    >
+      <div
+        class="emotion-2 emotion-3"
+      >
+        <div
+          class="emotion-4 emotion-3"
+        >
+          <legend
+            class="emotion-6 emotion-7"
+          >
+            test
+          </legend>
+        </div>
+      </div>
+      <div>
+        <input
+          aria-invalid="false"
+          aria-label="Verification code 0"
+          class="emotion-8 emotion-9"
+          data-success="false"
+          data-testid="0"
+          id=":re:-0"
+          pattern="[0-9]*"
+          placeholder=""
+          type="tel"
+          value=""
+        />
+        <input
+          aria-invalid="false"
+          aria-label="Verification code 1"
+          class="emotion-8 emotion-9"
+          data-success="false"
+          data-testid="1"
+          id=":re:-1"
+          pattern="[0-9]*"
+          placeholder=""
+          type="tel"
+          value=""
+        />
+        <input
+          aria-invalid="false"
+          aria-label="Verification code 2"
+          class="emotion-8 emotion-9"
+          data-success="false"
+          data-testid="2"
+          id=":re:-2"
+          pattern="[0-9]*"
+          placeholder=""
+          type="tel"
+          value=""
+        />
+        <input
+          aria-invalid="false"
+          aria-label="Verification code 3"
+          class="emotion-8 emotion-9"
+          data-success="false"
+          data-testid="3"
+          id=":re:-3"
+          pattern="[0-9]*"
+          placeholder=""
+          type="tel"
+          value=""
+        />
+      </div>
+    </fieldset>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`VerificationCode > render correctly with labelDescription 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  border: none;
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.25rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-6 {
+  color: #222638;
+  font-size: 1rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-8 {
+  background: #ffffff;
+  color: #3f4250;
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: center;
+  border-radius: 0.25rem;
+  margin-right: 0.5rem;
+  width: 2.5rem;
+  height: 3rem;
+  outline-style: none;
+  -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
+  transition: border-color 0.2s ease,box-shadow 0.2s ease;
+  border: solid 1px #d9dadd;
+}
+
+.emotion-8[aria-invalid='true'] {
+  border-color: #b3144d;
+}
+
+.emotion-8[data-success='true'] {
+  border-color: #22674e;
+}
+
+.emotion-8:hover,
+.emotion-8:focus {
+  border-color: #792dd4;
+}
+
+.emotion-8:hover[aria-invalid='true'],
+.emotion-8:focus[aria-invalid='true'] {
+  border-color: #92103f;
+}
+
+.emotion-8:hover[data-success='true'],
+.emotion-8:focus[data-success='true'] {
+  border-color: #1b533f;
+}
+
+.emotion-8:focus {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-8:last-child {
+  margin-right: 0;
+}
+
+.emotion-8::-webkit-input-placeholder {
+  color: #727683;
+}
+
+.emotion-8::-moz-placeholder {
+  color: #727683;
+}
+
+.emotion-8:-ms-input-placeholder {
+  color: #727683;
+}
+
+.emotion-8::placeholder {
+  color: #727683;
+}
+
+.emotion-8:disabled {
+  cursor: not-allowed;
+  background: #f3f3f4;
+  color: #b5b7bd;
+  border: solid 1px #e9eaeb;
+}
+
+<div
+    data-testid="testing"
+  >
+    <fieldset
+      class="emotion-0 emotion-1"
+    >
+      <div
+        class="emotion-2 emotion-3"
+      >
+        <div
+          class="emotion-4 emotion-3"
+        >
+          <legend
+            class="emotion-6 emotion-7"
+          >
+            test
+          </legend>
+        </div>
+        <span>
+          description
+        </span>
+      </div>
+      <div>
+        <input
+          aria-invalid="false"
+          aria-label="Verification code 0"
+          class="emotion-8 emotion-9"
+          data-success="false"
+          data-testid="0"
+          id=":rn:-0"
+          pattern="[0-9]*"
+          placeholder=""
+          type="tel"
+          value=""
+        />
+        <input
+          aria-invalid="false"
+          aria-label="Verification code 1"
+          class="emotion-8 emotion-9"
+          data-success="false"
+          data-testid="1"
+          id=":rn:-1"
+          pattern="[0-9]*"
+          placeholder=""
+          type="tel"
+          value=""
+        />
+        <input
+          aria-invalid="false"
+          aria-label="Verification code 2"
+          class="emotion-8 emotion-9"
+          data-success="false"
+          data-testid="2"
+          id=":rn:-2"
+          pattern="[0-9]*"
+          placeholder=""
+          type="tel"
+          value=""
+        />
+        <input
+          aria-invalid="false"
+          aria-label="Verification code 3"
+          class="emotion-8 emotion-9"
+          data-success="false"
+          data-testid="3"
+          id=":rn:-3"
+          pattern="[0-9]*"
+          placeholder=""
+          type="tel"
+          value=""
+        />
+      </div>
+    </fieldset>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`VerificationCode > render correctly with small size 1`] = `
 <DocumentFragment>
   .emotion-0 {
+  border: none;
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.emotion-2 {
   background: #ffffff;
-  border: solid 1px #d9dadd;
   color: #3f4250;
   font-size: 0.75rem;
   font-weight: 400;
@@ -16,86 +958,431 @@ exports[`VerificationCode > render correctly with small size 1`] = `
   outline-style: none;
   -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
   transition: border-color 0.2s ease,box-shadow 0.2s ease;
+  border: solid 1px #d9dadd;
 }
 
-.emotion-0:hover,
-.emotion-0:focus {
+.emotion-2[aria-invalid='true'] {
+  border-color: #b3144d;
+}
+
+.emotion-2[data-success='true'] {
+  border-color: #22674e;
+}
+
+.emotion-2:hover,
+.emotion-2:focus {
   border-color: #792dd4;
 }
 
-.emotion-0:focus {
+.emotion-2:hover[aria-invalid='true'],
+.emotion-2:focus[aria-invalid='true'] {
+  border-color: #92103f;
+}
+
+.emotion-2:hover[data-success='true'],
+.emotion-2:focus[data-success='true'] {
+  border-color: #1b533f;
+}
+
+.emotion-2:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-0:last-child {
+.emotion-2:last-child {
   margin-right: 0;
 }
 
-.emotion-0::-webkit-input-placeholder {
+.emotion-2::-webkit-input-placeholder {
   color: #727683;
 }
 
-.emotion-0::-moz-placeholder {
+.emotion-2::-moz-placeholder {
   color: #727683;
 }
 
-.emotion-0:-ms-input-placeholder {
+.emotion-2:-ms-input-placeholder {
   color: #727683;
 }
 
-.emotion-0::placeholder {
+.emotion-2::placeholder {
   color: #727683;
+}
+
+.emotion-2:disabled {
+  cursor: not-allowed;
+  background: #f3f3f4;
+  color: #b5b7bd;
+  border: solid 1px #e9eaeb;
 }
 
 <div
     data-testid="testing"
   >
-    <div>
-      <input
-        aria-invalid="false"
-        aria-label="Verification code 0"
-        class="emotion-0 emotion-1"
-        data-testid="0"
-        id=":ra:-0"
-        pattern="[0-9]*"
-        placeholder=""
-        type="tel"
-        value=""
-      />
-      <input
-        aria-invalid="false"
-        aria-label="Verification code 1"
-        class="emotion-0 emotion-1"
-        data-testid="1"
-        id=":ra:-1"
-        pattern="[0-9]*"
-        placeholder=""
-        type="tel"
-        value=""
-      />
-      <input
-        aria-invalid="false"
-        aria-label="Verification code 2"
-        class="emotion-0 emotion-1"
-        data-testid="2"
-        id=":ra:-2"
-        pattern="[0-9]*"
-        placeholder=""
-        type="tel"
-        value=""
-      />
-      <input
-        aria-invalid="false"
-        aria-label="Verification code 3"
-        class="emotion-0 emotion-1"
-        data-testid="3"
-        id=":ra:-3"
-        pattern="[0-9]*"
-        placeholder=""
-        type="tel"
-        value=""
-      />
-    </div>
+    <fieldset
+      class="emotion-0 emotion-1"
+    >
+      <div>
+        <input
+          aria-invalid="false"
+          aria-label="Verification code 0"
+          class="emotion-2 emotion-3"
+          data-success="false"
+          data-testid="0"
+          id=":rb:-0"
+          pattern="[0-9]*"
+          placeholder=""
+          type="tel"
+          value=""
+        />
+        <input
+          aria-invalid="false"
+          aria-label="Verification code 1"
+          class="emotion-2 emotion-3"
+          data-success="false"
+          data-testid="1"
+          id=":rb:-1"
+          pattern="[0-9]*"
+          placeholder=""
+          type="tel"
+          value=""
+        />
+        <input
+          aria-invalid="false"
+          aria-label="Verification code 2"
+          class="emotion-2 emotion-3"
+          data-success="false"
+          data-testid="2"
+          id=":rb:-2"
+          pattern="[0-9]*"
+          placeholder=""
+          type="tel"
+          value=""
+        />
+        <input
+          aria-invalid="false"
+          aria-label="Verification code 3"
+          class="emotion-2 emotion-3"
+          data-success="false"
+          data-testid="3"
+          id=":rb:-3"
+          pattern="[0-9]*"
+          placeholder=""
+          type="tel"
+          value=""
+        />
+      </div>
+    </fieldset>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`VerificationCode > render correctly with success as boolean 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  border: none;
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.emotion-2 {
+  background: #ffffff;
+  color: #3f4250;
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: center;
+  border-radius: 0.25rem;
+  margin-right: 0.5rem;
+  width: 2.5rem;
+  height: 3rem;
+  outline-style: none;
+  -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
+  transition: border-color 0.2s ease,box-shadow 0.2s ease;
+  border: solid 1px #d9dadd;
+}
+
+.emotion-2[aria-invalid='true'] {
+  border-color: #b3144d;
+}
+
+.emotion-2[data-success='true'] {
+  border-color: #22674e;
+}
+
+.emotion-2:hover,
+.emotion-2:focus {
+  border-color: #792dd4;
+}
+
+.emotion-2:hover[aria-invalid='true'],
+.emotion-2:focus[aria-invalid='true'] {
+  border-color: #92103f;
+}
+
+.emotion-2:hover[data-success='true'],
+.emotion-2:focus[data-success='true'] {
+  border-color: #1b533f;
+}
+
+.emotion-2:focus {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-2:last-child {
+  margin-right: 0;
+}
+
+.emotion-2::-webkit-input-placeholder {
+  color: #727683;
+}
+
+.emotion-2::-moz-placeholder {
+  color: #727683;
+}
+
+.emotion-2:-ms-input-placeholder {
+  color: #727683;
+}
+
+.emotion-2::placeholder {
+  color: #727683;
+}
+
+.emotion-2:disabled {
+  cursor: not-allowed;
+  background: #f3f3f4;
+  color: #b5b7bd;
+  border: solid 1px #e9eaeb;
+}
+
+<div
+    data-testid="testing"
+  >
+    <fieldset
+      class="emotion-0 emotion-1"
+    >
+      <div>
+        <input
+          aria-invalid="false"
+          aria-label="Verification code 0"
+          class="emotion-2 emotion-3"
+          data-success="true"
+          data-testid="0"
+          id=":rk:-0"
+          pattern="[0-9]*"
+          placeholder=""
+          type="tel"
+          value=""
+        />
+        <input
+          aria-invalid="false"
+          aria-label="Verification code 1"
+          class="emotion-2 emotion-3"
+          data-success="true"
+          data-testid="1"
+          id=":rk:-1"
+          pattern="[0-9]*"
+          placeholder=""
+          type="tel"
+          value=""
+        />
+        <input
+          aria-invalid="false"
+          aria-label="Verification code 2"
+          class="emotion-2 emotion-3"
+          data-success="true"
+          data-testid="2"
+          id=":rk:-2"
+          pattern="[0-9]*"
+          placeholder=""
+          type="tel"
+          value=""
+        />
+        <input
+          aria-invalid="false"
+          aria-label="Verification code 3"
+          class="emotion-2 emotion-3"
+          data-success="true"
+          data-testid="3"
+          id=":rk:-3"
+          pattern="[0-9]*"
+          placeholder=""
+          type="tel"
+          value=""
+        />
+      </div>
+    </fieldset>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`VerificationCode > render correctly with success as string 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  border: none;
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.emotion-2 {
+  background: #ffffff;
+  color: #3f4250;
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: center;
+  border-radius: 0.25rem;
+  margin-right: 0.5rem;
+  width: 2.5rem;
+  height: 3rem;
+  outline-style: none;
+  -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
+  transition: border-color 0.2s ease,box-shadow 0.2s ease;
+  border: solid 1px #d9dadd;
+}
+
+.emotion-2[aria-invalid='true'] {
+  border-color: #b3144d;
+}
+
+.emotion-2[data-success='true'] {
+  border-color: #22674e;
+}
+
+.emotion-2:hover,
+.emotion-2:focus {
+  border-color: #792dd4;
+}
+
+.emotion-2:hover[aria-invalid='true'],
+.emotion-2:focus[aria-invalid='true'] {
+  border-color: #92103f;
+}
+
+.emotion-2:hover[data-success='true'],
+.emotion-2:focus[data-success='true'] {
+  border-color: #1b533f;
+}
+
+.emotion-2:focus {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-2:last-child {
+  margin-right: 0;
+}
+
+.emotion-2::-webkit-input-placeholder {
+  color: #727683;
+}
+
+.emotion-2::-moz-placeholder {
+  color: #727683;
+}
+
+.emotion-2:-ms-input-placeholder {
+  color: #727683;
+}
+
+.emotion-2::placeholder {
+  color: #727683;
+}
+
+.emotion-2:disabled {
+  cursor: not-allowed;
+  background: #f3f3f4;
+  color: #b5b7bd;
+  border: solid 1px #e9eaeb;
+}
+
+.emotion-10 {
+  color: #22674e;
+  font-size: 0.75rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<div
+    data-testid="testing"
+  >
+    <fieldset
+      class="emotion-0 emotion-1"
+    >
+      <div>
+        <input
+          aria-invalid="false"
+          aria-label="Verification code 0"
+          class="emotion-2 emotion-3"
+          data-success="true"
+          data-testid="0"
+          id=":rl:-0"
+          pattern="[0-9]*"
+          placeholder=""
+          type="tel"
+          value=""
+        />
+        <input
+          aria-invalid="false"
+          aria-label="Verification code 1"
+          class="emotion-2 emotion-3"
+          data-success="true"
+          data-testid="1"
+          id=":rl:-1"
+          pattern="[0-9]*"
+          placeholder=""
+          type="tel"
+          value=""
+        />
+        <input
+          aria-invalid="false"
+          aria-label="Verification code 2"
+          class="emotion-2 emotion-3"
+          data-success="true"
+          data-testid="2"
+          id=":rl:-2"
+          pattern="[0-9]*"
+          placeholder=""
+          type="tel"
+          value=""
+        />
+        <input
+          aria-invalid="false"
+          aria-label="Verification code 3"
+          class="emotion-2 emotion-3"
+          data-success="true"
+          data-testid="3"
+          id=":rl:-3"
+          pattern="[0-9]*"
+          placeholder=""
+          type="tel"
+          value=""
+        />
+      </div>
+      <p
+        class="emotion-10 emotion-11"
+      >
+        test
+      </p>
+    </fieldset>
   </div>
 </DocumentFragment>
 `;
@@ -103,8 +1390,21 @@ exports[`VerificationCode > render correctly with small size 1`] = `
 exports[`VerificationCode > renders correctly with default values 1`] = `
 <DocumentFragment>
   .emotion-0 {
+  border: none;
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.emotion-2 {
   background: #ffffff;
-  border: solid 1px #d9dadd;
   color: #3f4250;
   font-size: 1rem;
   font-weight: 400;
@@ -116,86 +1416,120 @@ exports[`VerificationCode > renders correctly with default values 1`] = `
   outline-style: none;
   -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
   transition: border-color 0.2s ease,box-shadow 0.2s ease;
+  border: solid 1px #d9dadd;
 }
 
-.emotion-0:hover,
-.emotion-0:focus {
+.emotion-2[aria-invalid='true'] {
+  border-color: #b3144d;
+}
+
+.emotion-2[data-success='true'] {
+  border-color: #22674e;
+}
+
+.emotion-2:hover,
+.emotion-2:focus {
   border-color: #792dd4;
 }
 
-.emotion-0:focus {
+.emotion-2:hover[aria-invalid='true'],
+.emotion-2:focus[aria-invalid='true'] {
+  border-color: #92103f;
+}
+
+.emotion-2:hover[data-success='true'],
+.emotion-2:focus[data-success='true'] {
+  border-color: #1b533f;
+}
+
+.emotion-2:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-0:last-child {
+.emotion-2:last-child {
   margin-right: 0;
 }
 
-.emotion-0::-webkit-input-placeholder {
+.emotion-2::-webkit-input-placeholder {
   color: #727683;
 }
 
-.emotion-0::-moz-placeholder {
+.emotion-2::-moz-placeholder {
   color: #727683;
 }
 
-.emotion-0:-ms-input-placeholder {
+.emotion-2:-ms-input-placeholder {
   color: #727683;
 }
 
-.emotion-0::placeholder {
+.emotion-2::placeholder {
   color: #727683;
+}
+
+.emotion-2:disabled {
+  cursor: not-allowed;
+  background: #f3f3f4;
+  color: #b5b7bd;
+  border: solid 1px #e9eaeb;
 }
 
 <div
     data-testid="testing"
   >
-    <div>
-      <input
-        aria-invalid="false"
-        aria-label="Verification code 0"
-        class="emotion-0 emotion-1"
-        data-testid="0"
-        id=":r0:-0"
-        pattern="[0-9]*"
-        placeholder=""
-        type="tel"
-        value=""
-      />
-      <input
-        aria-invalid="false"
-        aria-label="Verification code 1"
-        class="emotion-0 emotion-1"
-        data-testid="1"
-        id=":r0:-1"
-        pattern="[0-9]*"
-        placeholder=""
-        type="tel"
-        value=""
-      />
-      <input
-        aria-invalid="false"
-        aria-label="Verification code 2"
-        class="emotion-0 emotion-1"
-        data-testid="2"
-        id=":r0:-2"
-        pattern="[0-9]*"
-        placeholder=""
-        type="tel"
-        value=""
-      />
-      <input
-        aria-invalid="false"
-        aria-label="Verification code 3"
-        class="emotion-0 emotion-1"
-        data-testid="3"
-        id=":r0:-3"
-        pattern="[0-9]*"
-        placeholder=""
-        type="tel"
-        value=""
-      />
-    </div>
+    <fieldset
+      class="emotion-0 emotion-1"
+    >
+      <div>
+        <input
+          aria-invalid="false"
+          aria-label="Verification code 0"
+          class="emotion-2 emotion-3"
+          data-success="false"
+          data-testid="0"
+          id=":r0:-0"
+          pattern="[0-9]*"
+          placeholder=""
+          type="tel"
+          value=""
+        />
+        <input
+          aria-invalid="false"
+          aria-label="Verification code 1"
+          class="emotion-2 emotion-3"
+          data-success="false"
+          data-testid="1"
+          id=":r0:-1"
+          pattern="[0-9]*"
+          placeholder=""
+          type="tel"
+          value=""
+        />
+        <input
+          aria-invalid="false"
+          aria-label="Verification code 2"
+          class="emotion-2 emotion-3"
+          data-success="false"
+          data-testid="2"
+          id=":r0:-2"
+          pattern="[0-9]*"
+          placeholder=""
+          type="tel"
+          value=""
+        />
+        <input
+          aria-invalid="false"
+          aria-label="Verification code 3"
+          class="emotion-2 emotion-3"
+          data-success="false"
+          data-testid="3"
+          id=":r0:-3"
+          pattern="[0-9]*"
+          placeholder=""
+          type="tel"
+          value=""
+        />
+      </div>
+    </fieldset>
   </div>
 </DocumentFragment>
 `;
@@ -203,8 +1537,21 @@ exports[`VerificationCode > renders correctly with default values 1`] = `
 exports[`VerificationCode > renders correctly with initial value and placeholder and 6 fields 1`] = `
 <DocumentFragment>
   .emotion-0 {
+  border: none;
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.emotion-2 {
   background: #ffffff;
-  border: solid 1px #d9dadd;
   color: #3f4250;
   font-size: 1rem;
   font-weight: 400;
@@ -216,108 +1563,144 @@ exports[`VerificationCode > renders correctly with initial value and placeholder
   outline-style: none;
   -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
   transition: border-color 0.2s ease,box-shadow 0.2s ease;
+  border: solid 1px #d9dadd;
 }
 
-.emotion-0:hover,
-.emotion-0:focus {
+.emotion-2[aria-invalid='true'] {
+  border-color: #b3144d;
+}
+
+.emotion-2[data-success='true'] {
+  border-color: #22674e;
+}
+
+.emotion-2:hover,
+.emotion-2:focus {
   border-color: #792dd4;
 }
 
-.emotion-0:focus {
+.emotion-2:hover[aria-invalid='true'],
+.emotion-2:focus[aria-invalid='true'] {
+  border-color: #92103f;
+}
+
+.emotion-2:hover[data-success='true'],
+.emotion-2:focus[data-success='true'] {
+  border-color: #1b533f;
+}
+
+.emotion-2:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-0:last-child {
+.emotion-2:last-child {
   margin-right: 0;
 }
 
-.emotion-0::-webkit-input-placeholder {
+.emotion-2::-webkit-input-placeholder {
   color: #727683;
 }
 
-.emotion-0::-moz-placeholder {
+.emotion-2::-moz-placeholder {
   color: #727683;
 }
 
-.emotion-0:-ms-input-placeholder {
+.emotion-2:-ms-input-placeholder {
   color: #727683;
 }
 
-.emotion-0::placeholder {
+.emotion-2::placeholder {
   color: #727683;
+}
+
+.emotion-2:disabled {
+  cursor: not-allowed;
+  background: #f3f3f4;
+  color: #b5b7bd;
+  border: solid 1px #e9eaeb;
 }
 
 <div
     data-testid="testing"
   >
-    <div>
-      <input
-        aria-invalid="false"
-        aria-label="Verification code 0"
-        class="emotion-0 emotion-1"
-        data-testid="0"
-        id=":r1:-0"
-        pattern="[0-9]*"
-        placeholder="0"
-        type="tel"
-        value="1"
-      />
-      <input
-        aria-invalid="false"
-        aria-label="Verification code 1"
-        class="emotion-0 emotion-1"
-        data-testid="1"
-        id=":r1:-1"
-        pattern="[0-9]*"
-        placeholder="0"
-        type="tel"
-        value="3"
-      />
-      <input
-        aria-invalid="false"
-        aria-label="Verification code 2"
-        class="emotion-0 emotion-1"
-        data-testid="2"
-        id=":r1:-2"
-        pattern="[0-9]*"
-        placeholder="3"
-        type="tel"
-        value=""
-      />
-      <input
-        aria-invalid="false"
-        aria-label="Verification code 3"
-        class="emotion-0 emotion-1"
-        data-testid="3"
-        id=":r1:-3"
-        pattern="[0-9]*"
-        placeholder="7"
-        type="tel"
-        value=""
-      />
-      <input
-        aria-invalid="false"
-        aria-label="Verification code 4"
-        class="emotion-0 emotion-1"
-        data-testid="4"
-        id=":r1:-4"
-        pattern="[0-9]*"
-        placeholder=""
-        type="tel"
-        value=""
-      />
-      <input
-        aria-invalid="false"
-        aria-label="Verification code 5"
-        class="emotion-0 emotion-1"
-        data-testid="5"
-        id=":r1:-5"
-        pattern="[0-9]*"
-        placeholder=""
-        type="tel"
-        value=""
-      />
-    </div>
+    <fieldset
+      class="emotion-0 emotion-1"
+    >
+      <div>
+        <input
+          aria-invalid="false"
+          aria-label="Verification code 0"
+          class="emotion-2 emotion-3"
+          data-success="false"
+          data-testid="0"
+          id=":r1:-0"
+          pattern="[0-9]*"
+          placeholder="0"
+          type="tel"
+          value="1"
+        />
+        <input
+          aria-invalid="false"
+          aria-label="Verification code 1"
+          class="emotion-2 emotion-3"
+          data-success="false"
+          data-testid="1"
+          id=":r1:-1"
+          pattern="[0-9]*"
+          placeholder="0"
+          type="tel"
+          value="3"
+        />
+        <input
+          aria-invalid="false"
+          aria-label="Verification code 2"
+          class="emotion-2 emotion-3"
+          data-success="false"
+          data-testid="2"
+          id=":r1:-2"
+          pattern="[0-9]*"
+          placeholder="3"
+          type="tel"
+          value=""
+        />
+        <input
+          aria-invalid="false"
+          aria-label="Verification code 3"
+          class="emotion-2 emotion-3"
+          data-success="false"
+          data-testid="3"
+          id=":r1:-3"
+          pattern="[0-9]*"
+          placeholder="7"
+          type="tel"
+          value=""
+        />
+        <input
+          aria-invalid="false"
+          aria-label="Verification code 4"
+          class="emotion-2 emotion-3"
+          data-success="false"
+          data-testid="4"
+          id=":r1:-4"
+          pattern="[0-9]*"
+          placeholder=""
+          type="tel"
+          value=""
+        />
+        <input
+          aria-invalid="false"
+          aria-label="Verification code 5"
+          class="emotion-2 emotion-3"
+          data-success="false"
+          data-testid="5"
+          id=":r1:-5"
+          pattern="[0-9]*"
+          placeholder=""
+          type="tel"
+          value=""
+        />
+      </div>
+    </fieldset>
   </div>
 </DocumentFragment>
 `;
@@ -325,8 +1708,21 @@ exports[`VerificationCode > renders correctly with initial value and placeholder
 exports[`VerificationCode > should handle and replace non number with "" when type is number 1`] = `
 <DocumentFragment>
   .emotion-0 {
+  border: none;
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.emotion-2 {
   background: #ffffff;
-  border: solid 1px #d9dadd;
   color: #3f4250;
   font-size: 1rem;
   font-weight: 400;
@@ -338,86 +1734,120 @@ exports[`VerificationCode > should handle and replace non number with "" when ty
   outline-style: none;
   -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
   transition: border-color 0.2s ease,box-shadow 0.2s ease;
+  border: solid 1px #d9dadd;
 }
 
-.emotion-0:hover,
-.emotion-0:focus {
+.emotion-2[aria-invalid='true'] {
+  border-color: #b3144d;
+}
+
+.emotion-2[data-success='true'] {
+  border-color: #22674e;
+}
+
+.emotion-2:hover,
+.emotion-2:focus {
   border-color: #792dd4;
 }
 
-.emotion-0:focus {
+.emotion-2:hover[aria-invalid='true'],
+.emotion-2:focus[aria-invalid='true'] {
+  border-color: #92103f;
+}
+
+.emotion-2:hover[data-success='true'],
+.emotion-2:focus[data-success='true'] {
+  border-color: #1b533f;
+}
+
+.emotion-2:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-0:last-child {
+.emotion-2:last-child {
   margin-right: 0;
 }
 
-.emotion-0::-webkit-input-placeholder {
+.emotion-2::-webkit-input-placeholder {
   color: #727683;
 }
 
-.emotion-0::-moz-placeholder {
+.emotion-2::-moz-placeholder {
   color: #727683;
 }
 
-.emotion-0:-ms-input-placeholder {
+.emotion-2:-ms-input-placeholder {
   color: #727683;
 }
 
-.emotion-0::placeholder {
+.emotion-2::placeholder {
   color: #727683;
+}
+
+.emotion-2:disabled {
+  cursor: not-allowed;
+  background: #f3f3f4;
+  color: #b5b7bd;
+  border: solid 1px #e9eaeb;
 }
 
 <div
     data-testid="testing"
   >
-    <div>
-      <input
-        aria-invalid="false"
-        aria-label="Verification code 0"
-        class="emotion-0 emotion-1"
-        data-testid="0"
-        id=":r4:-0"
-        pattern="[0-9]*"
-        placeholder=""
-        type="tel"
-        value="1"
-      />
-      <input
-        aria-invalid="false"
-        aria-label="Verification code 1"
-        class="emotion-0 emotion-1"
-        data-testid="1"
-        id=":r4:-1"
-        pattern="[0-9]*"
-        placeholder=""
-        type="tel"
-        value=""
-      />
-      <input
-        aria-invalid="false"
-        aria-label="Verification code 2"
-        class="emotion-0 emotion-1"
-        data-testid="2"
-        id=":r4:-2"
-        pattern="[0-9]*"
-        placeholder=""
-        type="tel"
-        value="3"
-      />
-      <input
-        aria-invalid="false"
-        aria-label="Verification code 3"
-        class="emotion-0 emotion-1"
-        data-testid="3"
-        id=":r4:-3"
-        pattern="[0-9]*"
-        placeholder=""
-        type="tel"
-        value="4"
-      />
-    </div>
+    <fieldset
+      class="emotion-0 emotion-1"
+    >
+      <div>
+        <input
+          aria-invalid="false"
+          aria-label="Verification code 0"
+          class="emotion-2 emotion-3"
+          data-success="false"
+          data-testid="0"
+          id=":r4:-0"
+          pattern="[0-9]*"
+          placeholder=""
+          type="tel"
+          value="1"
+        />
+        <input
+          aria-invalid="false"
+          aria-label="Verification code 1"
+          class="emotion-2 emotion-3"
+          data-success="false"
+          data-testid="1"
+          id=":r4:-1"
+          pattern="[0-9]*"
+          placeholder=""
+          type="tel"
+          value=""
+        />
+        <input
+          aria-invalid="false"
+          aria-label="Verification code 2"
+          class="emotion-2 emotion-3"
+          data-success="false"
+          data-testid="2"
+          id=":r4:-2"
+          pattern="[0-9]*"
+          placeholder=""
+          type="tel"
+          value="3"
+        />
+        <input
+          aria-invalid="false"
+          aria-label="Verification code 3"
+          class="emotion-2 emotion-3"
+          data-success="false"
+          data-testid="3"
+          id=":r4:-3"
+          pattern="[0-9]*"
+          placeholder=""
+          type="tel"
+          value="4"
+        />
+      </div>
+    </fieldset>
   </div>
 </DocumentFragment>
 `;
@@ -425,9 +1855,22 @@ exports[`VerificationCode > should handle and replace non number with "" when ty
 exports[`VerificationCode > should handle error 1`] = `
 <DocumentFragment>
   .emotion-0 {
+  border: none;
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.emotion-2 {
   background: #ffffff;
-  border: solid 1px #b3144d;
-  color: #b3144d;
+  color: #3f4250;
   font-size: 1rem;
   font-weight: 400;
   text-align: center;
@@ -438,86 +1881,135 @@ exports[`VerificationCode > should handle error 1`] = `
   outline-style: none;
   -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
   transition: border-color 0.2s ease,box-shadow 0.2s ease;
+  border: solid 1px #d9dadd;
 }
 
-.emotion-0:hover,
-.emotion-0:focus {
+.emotion-2[aria-invalid='true'] {
+  border-color: #b3144d;
+}
+
+.emotion-2[data-success='true'] {
+  border-color: #22674e;
+}
+
+.emotion-2:hover,
+.emotion-2:focus {
+  border-color: #792dd4;
+}
+
+.emotion-2:hover[aria-invalid='true'],
+.emotion-2:focus[aria-invalid='true'] {
   border-color: #92103f;
 }
 
-.emotion-0:focus {
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
+.emotion-2:hover[data-success='true'],
+.emotion-2:focus[data-success='true'] {
+  border-color: #1b533f;
 }
 
-.emotion-0:last-child {
+.emotion-2:focus {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-2:last-child {
   margin-right: 0;
 }
 
-.emotion-0::-webkit-input-placeholder {
+.emotion-2::-webkit-input-placeholder {
   color: #727683;
 }
 
-.emotion-0::-moz-placeholder {
+.emotion-2::-moz-placeholder {
   color: #727683;
 }
 
-.emotion-0:-ms-input-placeholder {
+.emotion-2:-ms-input-placeholder {
   color: #727683;
 }
 
-.emotion-0::placeholder {
+.emotion-2::placeholder {
   color: #727683;
+}
+
+.emotion-2:disabled {
+  cursor: not-allowed;
+  background: #f3f3f4;
+  color: #b5b7bd;
+  border: solid 1px #e9eaeb;
+}
+
+.emotion-10 {
+  color: #b3144d;
+  font-size: 0.75rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 <div
     data-testid="testing"
   >
-    <div>
-      <input
-        aria-invalid="true"
-        aria-label="Verification code 0"
-        class="emotion-0 emotion-1"
-        data-testid="0"
-        id=":r9:-0"
-        pattern="[0-9]*"
-        placeholder=""
-        type="tel"
-        value="1"
+    <fieldset
+      class="emotion-0 emotion-1"
+    >
+      <div>
+        <input
+          aria-invalid="true"
+          aria-label="Verification code 0"
+          class="emotion-2 emotion-3"
+          data-success="false"
+          data-testid="0"
+          id=":r9:-0"
+          pattern="[0-9]*"
+          placeholder=""
+          type="tel"
+          value="1"
+        />
+        <input
+          aria-invalid="true"
+          aria-label="Verification code 1"
+          class="emotion-2 emotion-3"
+          data-success="false"
+          data-testid="1"
+          id=":r9:-1"
+          pattern="[0-9]*"
+          placeholder=""
+          type="tel"
+          value=""
+        />
+        <input
+          aria-invalid="true"
+          aria-label="Verification code 2"
+          class="emotion-2 emotion-3"
+          data-success="false"
+          data-testid="2"
+          id=":r9:-2"
+          pattern="[0-9]*"
+          placeholder=""
+          type="tel"
+          value=""
+        />
+        <input
+          aria-invalid="true"
+          aria-label="Verification code 3"
+          class="emotion-2 emotion-3"
+          data-success="false"
+          data-testid="3"
+          id=":r9:-3"
+          pattern="[0-9]*"
+          placeholder=""
+          type="tel"
+          value=""
+        />
+      </div>
+      <p
+        class="emotion-10 emotion-11"
       />
-      <input
-        aria-invalid="true"
-        aria-label="Verification code 1"
-        class="emotion-0 emotion-1"
-        data-testid="1"
-        id=":r9:-1"
-        pattern="[0-9]*"
-        placeholder=""
-        type="tel"
-        value=""
-      />
-      <input
-        aria-invalid="true"
-        aria-label="Verification code 2"
-        class="emotion-0 emotion-1"
-        data-testid="2"
-        id=":r9:-2"
-        pattern="[0-9]*"
-        placeholder=""
-        type="tel"
-        value=""
-      />
-      <input
-        aria-invalid="true"
-        aria-label="Verification code 3"
-        class="emotion-0 emotion-1"
-        data-testid="3"
-        id=":r9:-3"
-        pattern="[0-9]*"
-        placeholder=""
-        type="tel"
-        value=""
-      />
-    </div>
+    </fieldset>
   </div>
 </DocumentFragment>
 `;
@@ -525,8 +2017,21 @@ exports[`VerificationCode > should handle error 1`] = `
 exports[`VerificationCode > should handle keyDown and special key cases and focus/change events 1`] = `
 <DocumentFragment>
   .emotion-0 {
+  border: none;
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.emotion-2 {
   background: #ffffff;
-  border: solid 1px #d9dadd;
   color: #3f4250;
   font-size: 1rem;
   font-weight: 400;
@@ -538,86 +2043,120 @@ exports[`VerificationCode > should handle keyDown and special key cases and focu
   outline-style: none;
   -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
   transition: border-color 0.2s ease,box-shadow 0.2s ease;
+  border: solid 1px #d9dadd;
 }
 
-.emotion-0:hover,
-.emotion-0:focus {
+.emotion-2[aria-invalid='true'] {
+  border-color: #b3144d;
+}
+
+.emotion-2[data-success='true'] {
+  border-color: #22674e;
+}
+
+.emotion-2:hover,
+.emotion-2:focus {
   border-color: #792dd4;
 }
 
-.emotion-0:focus {
+.emotion-2:hover[aria-invalid='true'],
+.emotion-2:focus[aria-invalid='true'] {
+  border-color: #92103f;
+}
+
+.emotion-2:hover[data-success='true'],
+.emotion-2:focus[data-success='true'] {
+  border-color: #1b533f;
+}
+
+.emotion-2:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-0:last-child {
+.emotion-2:last-child {
   margin-right: 0;
 }
 
-.emotion-0::-webkit-input-placeholder {
+.emotion-2::-webkit-input-placeholder {
   color: #727683;
 }
 
-.emotion-0::-moz-placeholder {
+.emotion-2::-moz-placeholder {
   color: #727683;
 }
 
-.emotion-0:-ms-input-placeholder {
+.emotion-2:-ms-input-placeholder {
   color: #727683;
 }
 
-.emotion-0::placeholder {
+.emotion-2::placeholder {
   color: #727683;
+}
+
+.emotion-2:disabled {
+  cursor: not-allowed;
+  background: #f3f3f4;
+  color: #b5b7bd;
+  border: solid 1px #e9eaeb;
 }
 
 <div
     data-testid="testing"
   >
-    <div>
-      <input
-        aria-invalid="false"
-        aria-label="Verification code 0"
-        class="emotion-0 emotion-1"
-        data-testid="0"
-        id=":r2:-0"
-        pattern="[0-9]*"
-        placeholder=""
-        type="tel"
-        value=""
-      />
-      <input
-        aria-invalid="false"
-        aria-label="Verification code 1"
-        class="emotion-0 emotion-1"
-        data-testid="1"
-        id=":r2:-1"
-        pattern="[0-9]*"
-        placeholder=""
-        type="tel"
-        value=""
-      />
-      <input
-        aria-invalid="false"
-        aria-label="Verification code 2"
-        class="emotion-0 emotion-1"
-        data-testid="2"
-        id=":r2:-2"
-        pattern="[0-9]*"
-        placeholder=""
-        type="tel"
-        value=""
-      />
-      <input
-        aria-invalid="false"
-        aria-label="Verification code 3"
-        class="emotion-0 emotion-1"
-        data-testid="3"
-        id=":r2:-3"
-        pattern="[0-9]*"
-        placeholder=""
-        type="tel"
-        value=""
-      />
-    </div>
+    <fieldset
+      class="emotion-0 emotion-1"
+    >
+      <div>
+        <input
+          aria-invalid="false"
+          aria-label="Verification code 0"
+          class="emotion-2 emotion-3"
+          data-success="false"
+          data-testid="0"
+          id=":r2:-0"
+          pattern="[0-9]*"
+          placeholder=""
+          type="tel"
+          value=""
+        />
+        <input
+          aria-invalid="false"
+          aria-label="Verification code 1"
+          class="emotion-2 emotion-3"
+          data-success="false"
+          data-testid="1"
+          id=":r2:-1"
+          pattern="[0-9]*"
+          placeholder=""
+          type="tel"
+          value=""
+        />
+        <input
+          aria-invalid="false"
+          aria-label="Verification code 2"
+          class="emotion-2 emotion-3"
+          data-success="false"
+          data-testid="2"
+          id=":r2:-2"
+          pattern="[0-9]*"
+          placeholder=""
+          type="tel"
+          value=""
+        />
+        <input
+          aria-invalid="false"
+          aria-label="Verification code 3"
+          class="emotion-2 emotion-3"
+          data-success="false"
+          data-testid="3"
+          id=":r2:-3"
+          pattern="[0-9]*"
+          placeholder=""
+          type="tel"
+          value=""
+        />
+      </div>
+    </fieldset>
   </div>
 </DocumentFragment>
 `;
@@ -625,8 +2164,21 @@ exports[`VerificationCode > should handle keyDown and special key cases and focu
 exports[`VerificationCode > should handle paste when type is not number 1`] = `
 <DocumentFragment>
   .emotion-0 {
+  border: none;
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.emotion-2 {
   background: #ffffff;
-  border: solid 1px #d9dadd;
   color: #3f4250;
   font-size: 1rem;
   font-weight: 400;
@@ -638,102 +2190,138 @@ exports[`VerificationCode > should handle paste when type is not number 1`] = `
   outline-style: none;
   -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
   transition: border-color 0.2s ease,box-shadow 0.2s ease;
+  border: solid 1px #d9dadd;
 }
 
-.emotion-0:hover,
-.emotion-0:focus {
+.emotion-2[aria-invalid='true'] {
+  border-color: #b3144d;
+}
+
+.emotion-2[data-success='true'] {
+  border-color: #22674e;
+}
+
+.emotion-2:hover,
+.emotion-2:focus {
   border-color: #792dd4;
 }
 
-.emotion-0:focus {
+.emotion-2:hover[aria-invalid='true'],
+.emotion-2:focus[aria-invalid='true'] {
+  border-color: #92103f;
+}
+
+.emotion-2:hover[data-success='true'],
+.emotion-2:focus[data-success='true'] {
+  border-color: #1b533f;
+}
+
+.emotion-2:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-0:last-child {
+.emotion-2:last-child {
   margin-right: 0;
 }
 
-.emotion-0::-webkit-input-placeholder {
+.emotion-2::-webkit-input-placeholder {
   color: #727683;
 }
 
-.emotion-0::-moz-placeholder {
+.emotion-2::-moz-placeholder {
   color: #727683;
 }
 
-.emotion-0:-ms-input-placeholder {
+.emotion-2:-ms-input-placeholder {
   color: #727683;
 }
 
-.emotion-0::placeholder {
+.emotion-2::placeholder {
   color: #727683;
+}
+
+.emotion-2:disabled {
+  cursor: not-allowed;
+  background: #f3f3f4;
+  color: #b5b7bd;
+  border: solid 1px #e9eaeb;
 }
 
 <div
     data-testid="testing"
   >
-    <div>
-      <input
-        aria-invalid="false"
-        aria-label="Verification code 0"
-        class="emotion-0 emotion-1"
-        data-testid="0"
-        id=":r7:-0"
-        placeholder=""
-        type="text"
-        value="1"
-      />
-      <input
-        aria-invalid="false"
-        aria-label="Verification code 1"
-        class="emotion-0 emotion-1"
-        data-testid="1"
-        id=":r7:-1"
-        placeholder=""
-        type="text"
-        value="h"
-      />
-      <input
-        aria-invalid="false"
-        aria-label="Verification code 2"
-        class="emotion-0 emotion-1"
-        data-testid="2"
-        id=":r7:-2"
-        placeholder=""
-        type="text"
-        value="2"
-      />
-      <input
-        aria-invalid="false"
-        aria-label="Verification code 3"
-        class="emotion-0 emotion-1"
-        data-testid="3"
-        id=":r7:-3"
-        placeholder=""
-        type="text"
-        value="3"
-      />
-      <input
-        aria-invalid="false"
-        aria-label="Verification code 4"
-        class="emotion-0 emotion-1"
-        data-testid="4"
-        id=":r7:-4"
-        placeholder=""
-        type="text"
-        value="a"
-      />
-      <input
-        aria-invalid="false"
-        aria-label="Verification code 5"
-        class="emotion-0 emotion-1"
-        data-testid="5"
-        id=":r7:-5"
-        placeholder=""
-        type="text"
-        value="*"
-      />
-    </div>
+    <fieldset
+      class="emotion-0 emotion-1"
+    >
+      <div>
+        <input
+          aria-invalid="false"
+          aria-label="Verification code 0"
+          class="emotion-2 emotion-3"
+          data-success="false"
+          data-testid="0"
+          id=":r7:-0"
+          placeholder=""
+          type="text"
+          value="1"
+        />
+        <input
+          aria-invalid="false"
+          aria-label="Verification code 1"
+          class="emotion-2 emotion-3"
+          data-success="false"
+          data-testid="1"
+          id=":r7:-1"
+          placeholder=""
+          type="text"
+          value="h"
+        />
+        <input
+          aria-invalid="false"
+          aria-label="Verification code 2"
+          class="emotion-2 emotion-3"
+          data-success="false"
+          data-testid="2"
+          id=":r7:-2"
+          placeholder=""
+          type="text"
+          value="2"
+        />
+        <input
+          aria-invalid="false"
+          aria-label="Verification code 3"
+          class="emotion-2 emotion-3"
+          data-success="false"
+          data-testid="3"
+          id=":r7:-3"
+          placeholder=""
+          type="text"
+          value="3"
+        />
+        <input
+          aria-invalid="false"
+          aria-label="Verification code 4"
+          class="emotion-2 emotion-3"
+          data-success="false"
+          data-testid="4"
+          id=":r7:-4"
+          placeholder=""
+          type="text"
+          value="a"
+        />
+        <input
+          aria-invalid="false"
+          aria-label="Verification code 5"
+          class="emotion-2 emotion-3"
+          data-success="false"
+          data-testid="5"
+          id=":r7:-5"
+          placeholder=""
+          type="text"
+          value="*"
+        />
+      </div>
+    </fieldset>
   </div>
 </DocumentFragment>
 `;
@@ -741,8 +2329,21 @@ exports[`VerificationCode > should handle paste when type is not number 1`] = `
 exports[`VerificationCode > should handle paste with no overflowing values 1`] = `
 <DocumentFragment>
   .emotion-0 {
+  border: none;
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.emotion-2 {
   background: #ffffff;
-  border: solid 1px #d9dadd;
   color: #3f4250;
   font-size: 1rem;
   font-weight: 400;
@@ -754,86 +2355,120 @@ exports[`VerificationCode > should handle paste with no overflowing values 1`] =
   outline-style: none;
   -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
   transition: border-color 0.2s ease,box-shadow 0.2s ease;
+  border: solid 1px #d9dadd;
 }
 
-.emotion-0:hover,
-.emotion-0:focus {
+.emotion-2[aria-invalid='true'] {
+  border-color: #b3144d;
+}
+
+.emotion-2[data-success='true'] {
+  border-color: #22674e;
+}
+
+.emotion-2:hover,
+.emotion-2:focus {
   border-color: #792dd4;
 }
 
-.emotion-0:focus {
+.emotion-2:hover[aria-invalid='true'],
+.emotion-2:focus[aria-invalid='true'] {
+  border-color: #92103f;
+}
+
+.emotion-2:hover[data-success='true'],
+.emotion-2:focus[data-success='true'] {
+  border-color: #1b533f;
+}
+
+.emotion-2:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-0:last-child {
+.emotion-2:last-child {
   margin-right: 0;
 }
 
-.emotion-0::-webkit-input-placeholder {
+.emotion-2::-webkit-input-placeholder {
   color: #727683;
 }
 
-.emotion-0::-moz-placeholder {
+.emotion-2::-moz-placeholder {
   color: #727683;
 }
 
-.emotion-0:-ms-input-placeholder {
+.emotion-2:-ms-input-placeholder {
   color: #727683;
 }
 
-.emotion-0::placeholder {
+.emotion-2::placeholder {
   color: #727683;
+}
+
+.emotion-2:disabled {
+  cursor: not-allowed;
+  background: #f3f3f4;
+  color: #b5b7bd;
+  border: solid 1px #e9eaeb;
 }
 
 <div
     data-testid="testing"
   >
-    <div>
-      <input
-        aria-invalid="false"
-        aria-label="Verification code 0"
-        class="emotion-0 emotion-1"
-        data-testid="0"
-        id=":r3:-0"
-        pattern="[0-9]*"
-        placeholder=""
-        type="tel"
-        value="1"
-      />
-      <input
-        aria-invalid="false"
-        aria-label="Verification code 1"
-        class="emotion-0 emotion-1"
-        data-testid="1"
-        id=":r3:-1"
-        pattern="[0-9]*"
-        placeholder=""
-        type="tel"
-        value="2"
-      />
-      <input
-        aria-invalid="false"
-        aria-label="Verification code 2"
-        class="emotion-0 emotion-1"
-        data-testid="2"
-        id=":r3:-2"
-        pattern="[0-9]*"
-        placeholder=""
-        type="tel"
-        value="3"
-      />
-      <input
-        aria-invalid="false"
-        aria-label="Verification code 3"
-        class="emotion-0 emotion-1"
-        data-testid="3"
-        id=":r3:-3"
-        pattern="[0-9]*"
-        placeholder=""
-        type="tel"
-        value="4"
-      />
-    </div>
+    <fieldset
+      class="emotion-0 emotion-1"
+    >
+      <div>
+        <input
+          aria-invalid="false"
+          aria-label="Verification code 0"
+          class="emotion-2 emotion-3"
+          data-success="false"
+          data-testid="0"
+          id=":r3:-0"
+          pattern="[0-9]*"
+          placeholder=""
+          type="tel"
+          value="1"
+        />
+        <input
+          aria-invalid="false"
+          aria-label="Verification code 1"
+          class="emotion-2 emotion-3"
+          data-success="false"
+          data-testid="1"
+          id=":r3:-1"
+          pattern="[0-9]*"
+          placeholder=""
+          type="tel"
+          value="2"
+        />
+        <input
+          aria-invalid="false"
+          aria-label="Verification code 2"
+          class="emotion-2 emotion-3"
+          data-success="false"
+          data-testid="2"
+          id=":r3:-2"
+          pattern="[0-9]*"
+          placeholder=""
+          type="tel"
+          value="3"
+        />
+        <input
+          aria-invalid="false"
+          aria-label="Verification code 3"
+          class="emotion-2 emotion-3"
+          data-success="false"
+          data-testid="3"
+          id=":r3:-3"
+          pattern="[0-9]*"
+          placeholder=""
+          type="tel"
+          value="4"
+        />
+      </div>
+    </fieldset>
   </div>
 </DocumentFragment>
 `;
@@ -841,8 +2476,21 @@ exports[`VerificationCode > should handle paste with no overflowing values 1`] =
 exports[`VerificationCode > should handle paste with overflowing values 1`] = `
 <DocumentFragment>
   .emotion-0 {
+  border: none;
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.emotion-2 {
   background: #ffffff;
-  border: solid 1px #d9dadd;
   color: #3f4250;
   font-size: 1rem;
   font-weight: 400;
@@ -854,86 +2502,120 @@ exports[`VerificationCode > should handle paste with overflowing values 1`] = `
   outline-style: none;
   -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
   transition: border-color 0.2s ease,box-shadow 0.2s ease;
+  border: solid 1px #d9dadd;
 }
 
-.emotion-0:hover,
-.emotion-0:focus {
+.emotion-2[aria-invalid='true'] {
+  border-color: #b3144d;
+}
+
+.emotion-2[data-success='true'] {
+  border-color: #22674e;
+}
+
+.emotion-2:hover,
+.emotion-2:focus {
   border-color: #792dd4;
 }
 
-.emotion-0:focus {
+.emotion-2:hover[aria-invalid='true'],
+.emotion-2:focus[aria-invalid='true'] {
+  border-color: #92103f;
+}
+
+.emotion-2:hover[data-success='true'],
+.emotion-2:focus[data-success='true'] {
+  border-color: #1b533f;
+}
+
+.emotion-2:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-0:last-child {
+.emotion-2:last-child {
   margin-right: 0;
 }
 
-.emotion-0::-webkit-input-placeholder {
+.emotion-2::-webkit-input-placeholder {
   color: #727683;
 }
 
-.emotion-0::-moz-placeholder {
+.emotion-2::-moz-placeholder {
   color: #727683;
 }
 
-.emotion-0:-ms-input-placeholder {
+.emotion-2:-ms-input-placeholder {
   color: #727683;
 }
 
-.emotion-0::placeholder {
+.emotion-2::placeholder {
   color: #727683;
+}
+
+.emotion-2:disabled {
+  cursor: not-allowed;
+  background: #f3f3f4;
+  color: #b5b7bd;
+  border: solid 1px #e9eaeb;
 }
 
 <div
     data-testid="testing"
   >
-    <div>
-      <input
-        aria-invalid="false"
-        aria-label="Verification code 0"
-        class="emotion-0 emotion-1"
-        data-testid="0"
-        id=":r5:-0"
-        pattern="[0-9]*"
-        placeholder=""
-        type="tel"
-        value="1"
-      />
-      <input
-        aria-invalid="false"
-        aria-label="Verification code 1"
-        class="emotion-0 emotion-1"
-        data-testid="1"
-        id=":r5:-1"
-        pattern="[0-9]*"
-        placeholder=""
-        type="tel"
-        value="2"
-      />
-      <input
-        aria-invalid="false"
-        aria-label="Verification code 2"
-        class="emotion-0 emotion-1"
-        data-testid="2"
-        id=":r5:-2"
-        pattern="[0-9]*"
-        placeholder=""
-        type="tel"
-        value="3"
-      />
-      <input
-        aria-invalid="false"
-        aria-label="Verification code 3"
-        class="emotion-0 emotion-1"
-        data-testid="3"
-        id=":r5:-3"
-        pattern="[0-9]*"
-        placeholder=""
-        type="tel"
-        value="4"
-      />
-    </div>
+    <fieldset
+      class="emotion-0 emotion-1"
+    >
+      <div>
+        <input
+          aria-invalid="false"
+          aria-label="Verification code 0"
+          class="emotion-2 emotion-3"
+          data-success="false"
+          data-testid="0"
+          id=":r5:-0"
+          pattern="[0-9]*"
+          placeholder=""
+          type="tel"
+          value="1"
+        />
+        <input
+          aria-invalid="false"
+          aria-label="Verification code 1"
+          class="emotion-2 emotion-3"
+          data-success="false"
+          data-testid="1"
+          id=":r5:-1"
+          pattern="[0-9]*"
+          placeholder=""
+          type="tel"
+          value="2"
+        />
+        <input
+          aria-invalid="false"
+          aria-label="Verification code 2"
+          class="emotion-2 emotion-3"
+          data-success="false"
+          data-testid="2"
+          id=":r5:-2"
+          pattern="[0-9]*"
+          placeholder=""
+          type="tel"
+          value="3"
+        />
+        <input
+          aria-invalid="false"
+          aria-label="Verification code 3"
+          class="emotion-2 emotion-3"
+          data-success="false"
+          data-testid="3"
+          id=":r5:-3"
+          pattern="[0-9]*"
+          placeholder=""
+          type="tel"
+          value="4"
+        />
+      </div>
+    </fieldset>
   </div>
 </DocumentFragment>
 `;
@@ -941,8 +2623,21 @@ exports[`VerificationCode > should handle paste with overflowing values 1`] = `
 exports[`VerificationCode > should handle paste with overflowing values at different index than 0 1`] = `
 <DocumentFragment>
   .emotion-0 {
+  border: none;
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.emotion-2 {
   background: #ffffff;
-  border: solid 1px #d9dadd;
   color: #3f4250;
   font-size: 1rem;
   font-weight: 400;
@@ -954,86 +2649,120 @@ exports[`VerificationCode > should handle paste with overflowing values at diffe
   outline-style: none;
   -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
   transition: border-color 0.2s ease,box-shadow 0.2s ease;
+  border: solid 1px #d9dadd;
 }
 
-.emotion-0:hover,
-.emotion-0:focus {
+.emotion-2[aria-invalid='true'] {
+  border-color: #b3144d;
+}
+
+.emotion-2[data-success='true'] {
+  border-color: #22674e;
+}
+
+.emotion-2:hover,
+.emotion-2:focus {
   border-color: #792dd4;
 }
 
-.emotion-0:focus {
+.emotion-2:hover[aria-invalid='true'],
+.emotion-2:focus[aria-invalid='true'] {
+  border-color: #92103f;
+}
+
+.emotion-2:hover[data-success='true'],
+.emotion-2:focus[data-success='true'] {
+  border-color: #1b533f;
+}
+
+.emotion-2:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-0:last-child {
+.emotion-2:last-child {
   margin-right: 0;
 }
 
-.emotion-0::-webkit-input-placeholder {
+.emotion-2::-webkit-input-placeholder {
   color: #727683;
 }
 
-.emotion-0::-moz-placeholder {
+.emotion-2::-moz-placeholder {
   color: #727683;
 }
 
-.emotion-0:-ms-input-placeholder {
+.emotion-2:-ms-input-placeholder {
   color: #727683;
 }
 
-.emotion-0::placeholder {
+.emotion-2::placeholder {
   color: #727683;
+}
+
+.emotion-2:disabled {
+  cursor: not-allowed;
+  background: #f3f3f4;
+  color: #b5b7bd;
+  border: solid 1px #e9eaeb;
 }
 
 <div
     data-testid="testing"
   >
-    <div>
-      <input
-        aria-invalid="false"
-        aria-label="Verification code 0"
-        class="emotion-0 emotion-1"
-        data-testid="0"
-        id=":r6:-0"
-        pattern="[0-9]*"
-        placeholder=""
-        type="tel"
-        value="1"
-      />
-      <input
-        aria-invalid="false"
-        aria-label="Verification code 1"
-        class="emotion-0 emotion-1"
-        data-testid="1"
-        id=":r6:-1"
-        pattern="[0-9]*"
-        placeholder=""
-        type="tel"
-        value="1"
-      />
-      <input
-        aria-invalid="false"
-        aria-label="Verification code 2"
-        class="emotion-0 emotion-1"
-        data-testid="2"
-        id=":r6:-2"
-        pattern="[0-9]*"
-        placeholder=""
-        type="tel"
-        value="2"
-      />
-      <input
-        aria-invalid="false"
-        aria-label="Verification code 3"
-        class="emotion-0 emotion-1"
-        data-testid="3"
-        id=":r6:-3"
-        pattern="[0-9]*"
-        placeholder=""
-        type="tel"
-        value="3"
-      />
-    </div>
+    <fieldset
+      class="emotion-0 emotion-1"
+    >
+      <div>
+        <input
+          aria-invalid="false"
+          aria-label="Verification code 0"
+          class="emotion-2 emotion-3"
+          data-success="false"
+          data-testid="0"
+          id=":r6:-0"
+          pattern="[0-9]*"
+          placeholder=""
+          type="tel"
+          value="1"
+        />
+        <input
+          aria-invalid="false"
+          aria-label="Verification code 1"
+          class="emotion-2 emotion-3"
+          data-success="false"
+          data-testid="1"
+          id=":r6:-1"
+          pattern="[0-9]*"
+          placeholder=""
+          type="tel"
+          value="1"
+        />
+        <input
+          aria-invalid="false"
+          aria-label="Verification code 2"
+          class="emotion-2 emotion-3"
+          data-success="false"
+          data-testid="2"
+          id=":r6:-2"
+          pattern="[0-9]*"
+          placeholder=""
+          type="tel"
+          value="2"
+        />
+        <input
+          aria-invalid="false"
+          aria-label="Verification code 3"
+          class="emotion-2 emotion-3"
+          data-success="false"
+          data-testid="3"
+          id=":r6:-3"
+          pattern="[0-9]*"
+          placeholder=""
+          type="tel"
+          value="3"
+        />
+      </div>
+    </fieldset>
   </div>
 </DocumentFragment>
 `;
@@ -1041,8 +2770,21 @@ exports[`VerificationCode > should handle paste with overflowing values at diffe
 exports[`VerificationCode > should render correctly disabled true 1`] = `
 <DocumentFragment>
   .emotion-0 {
+  border: none;
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.emotion-2 {
   background: #ffffff;
-  border: solid 1px #d9dadd;
   color: #3f4250;
   font-size: 1rem;
   font-weight: 400;
@@ -1054,98 +2796,124 @@ exports[`VerificationCode > should render correctly disabled true 1`] = `
   outline-style: none;
   -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
   transition: border-color 0.2s ease,box-shadow 0.2s ease;
-  cursor: default;
-  background-color: #f3f3f4;
-  border-color: #e9eaeb;
-  color: #b5b7bd;
+  border: solid 1px #d9dadd;
 }
 
-.emotion-0:hover,
-.emotion-0:focus {
+.emotion-2[aria-invalid='true'] {
+  border-color: #b3144d;
+}
+
+.emotion-2[data-success='true'] {
+  border-color: #22674e;
+}
+
+.emotion-2:hover,
+.emotion-2:focus {
   border-color: #792dd4;
 }
 
-.emotion-0:focus {
+.emotion-2:hover[aria-invalid='true'],
+.emotion-2:focus[aria-invalid='true'] {
+  border-color: #92103f;
+}
+
+.emotion-2:hover[data-success='true'],
+.emotion-2:focus[data-success='true'] {
+  border-color: #1b533f;
+}
+
+.emotion-2:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-0:last-child {
+.emotion-2:last-child {
   margin-right: 0;
 }
 
-.emotion-0::-webkit-input-placeholder {
+.emotion-2::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-0::-moz-placeholder {
+.emotion-2::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-0:-ms-input-placeholder {
+.emotion-2:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-0::placeholder {
+.emotion-2::placeholder {
   color: #b5b7bd;
 }
 
-.emotion-0:hover {
-  border: #e9eaeb;
+.emotion-2:disabled {
+  cursor: not-allowed;
+  background: #f3f3f4;
+  color: #b5b7bd;
+  border: solid 1px #e9eaeb;
 }
 
 <div
     data-testid="testing"
   >
-    <div>
-      <input
-        aria-invalid="false"
-        aria-label="Verification code 0"
-        class="emotion-0 emotion-1"
-        data-testid="0"
-        disabled=""
-        id=":rb:-0"
-        pattern="[0-9]*"
-        placeholder=""
-        type="tel"
-        value=""
-      />
-      <input
-        aria-invalid="false"
-        aria-label="Verification code 1"
-        class="emotion-0 emotion-1"
-        data-testid="1"
-        disabled=""
-        id=":rb:-1"
-        pattern="[0-9]*"
-        placeholder=""
-        type="tel"
-        value=""
-      />
-      <input
-        aria-invalid="false"
-        aria-label="Verification code 2"
-        class="emotion-0 emotion-1"
-        data-testid="2"
-        disabled=""
-        id=":rb:-2"
-        pattern="[0-9]*"
-        placeholder=""
-        type="tel"
-        value=""
-      />
-      <input
-        aria-invalid="false"
-        aria-label="Verification code 3"
-        class="emotion-0 emotion-1"
-        data-testid="3"
-        disabled=""
-        id=":rb:-3"
-        pattern="[0-9]*"
-        placeholder=""
-        type="tel"
-        value=""
-      />
-    </div>
+    <fieldset
+      class="emotion-0 emotion-1"
+    >
+      <div>
+        <input
+          aria-invalid="false"
+          aria-label="Verification code 0"
+          class="emotion-2 emotion-3"
+          data-success="false"
+          data-testid="0"
+          disabled=""
+          id=":rp:-0"
+          pattern="[0-9]*"
+          placeholder=""
+          type="tel"
+          value=""
+        />
+        <input
+          aria-invalid="false"
+          aria-label="Verification code 1"
+          class="emotion-2 emotion-3"
+          data-success="false"
+          data-testid="1"
+          disabled=""
+          id=":rp:-1"
+          pattern="[0-9]*"
+          placeholder=""
+          type="tel"
+          value=""
+        />
+        <input
+          aria-invalid="false"
+          aria-label="Verification code 2"
+          class="emotion-2 emotion-3"
+          data-success="false"
+          data-testid="2"
+          disabled=""
+          id=":rp:-2"
+          pattern="[0-9]*"
+          placeholder=""
+          type="tel"
+          value=""
+        />
+        <input
+          aria-invalid="false"
+          aria-label="Verification code 3"
+          class="emotion-2 emotion-3"
+          data-success="false"
+          data-testid="3"
+          disabled=""
+          id=":rp:-3"
+          pattern="[0-9]*"
+          placeholder=""
+          type="tel"
+          value=""
+        />
+      </div>
+    </fieldset>
   </div>
 </DocumentFragment>
 `;
