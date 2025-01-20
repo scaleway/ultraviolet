@@ -190,8 +190,8 @@ importers:
         specifier: 9.2.1
         version: 9.2.1(@babel/core@7.26.0)(webpack@5.95.0(esbuild@0.23.1))
       babel-plugin-annotate-pure-calls:
-        specifier: 0.4.0
-        version: 0.4.0(@babel/core@7.26.0)
+        specifier: 0.5.0
+        version: 0.5.0(@babel/core@7.26.0)
       babel-plugin-named-exports-order:
         specifier: 0.0.2
         version: 0.0.2
@@ -3746,10 +3746,11 @@ packages:
       '@babel/core': ^7.12.0
       webpack: '>=5'
 
-  babel-plugin-annotate-pure-calls@0.4.0:
-    resolution: {integrity: sha512-oi4M/PWUJOU9ZyRGoPTfPMqdyMp06jbJAomd3RcyYuzUtBOddv98BqLm96Lucpi2QFoQHkdGQt0ACvw7VzVEQA==}
+  babel-plugin-annotate-pure-calls@0.5.0:
+    resolution: {integrity: sha512-bWlaZl2qsJKHv9BJgF1g6bQ04wK/7Topq9g59I795W9jpx9lNs9N5LK5NjlEBCDhHncrO0vcoAMuHJR3oWnTeQ==}
+    engines: {node: '>=18'}
     peerDependencies:
-      '@babel/core': ^6.0.0-0 || 7.x
+      '@babel/core': ^7.0.0
 
   babel-plugin-macros@3.1.0:
     resolution: {integrity: sha512-Cg7TFGpIr01vOQNODXOOaGz2NpCU5gl8x1qJFbb6hbZxR7XrcE2vtbAsTAbJ7/xwJtUuJEw8K8Zr/AE0LHlesg==}
@@ -12135,7 +12136,7 @@ snapshots:
       schema-utils: 4.2.0
       webpack: 5.95.0(esbuild@0.23.1)
 
-  babel-plugin-annotate-pure-calls@0.4.0(@babel/core@7.26.0):
+  babel-plugin-annotate-pure-calls@0.5.0(@babel/core@7.26.0):
     dependencies:
       '@babel/core': 7.26.0
 
