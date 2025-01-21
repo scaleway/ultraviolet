@@ -1,5 +1,11 @@
 # Change Log
 
+## 3.8.3
+
+### Patch Changes
+
+- [#4670](https://github.com/scaleway/ultraviolet/pull/4670) [`4fe32b4`](https://github.com/scaleway/ultraviolet/commit/4fe32b4d4b30fb4cdeb1bdf85f9a6d72e12bb7f3) Thanks [@lisalupi](https://github.com/lisalupi)! - New icons `Notification` and `Sidebar`
+
 ## 3.8.2
 
 ### Patch Changes

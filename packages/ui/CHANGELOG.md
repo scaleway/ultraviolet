@@ -1,5 +1,16 @@
 # Change Log
 
+## 1.84.1
+
+### Patch Changes
+
+- [#4673](https://github.com/scaleway/ultraviolet/pull/4673) [`aff907c`](https://github.com/scaleway/ultraviolet/commit/aff907c0e3df8318f3494bf935e9ca137628ce7b) Thanks [@matthprost](https://github.com/matthprost)! - `<VerificationCode />` new props `label`, `labelDescription`, `success` and `error`
+
+- [#4646](https://github.com/scaleway/ultraviolet/pull/4646) [`80fe6dc`](https://github.com/scaleway/ultraviolet/commit/80fe6dcce854a37c46861a43ab7f00a08cfe1bea) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<Popover />` portal target to be `document.body` if not inside a modal.
+
+- Updated dependencies [[`4fe32b4`](https://github.com/scaleway/ultraviolet/commit/4fe32b4d4b30fb4cdeb1bdf85f9a6d72e12bb7f3)]:
+  - @ultraviolet/icons@3.8.3
+
 ## 1.84.0
 
 ### Minor Changes
