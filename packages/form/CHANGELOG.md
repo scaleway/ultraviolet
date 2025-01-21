@@ -1,5 +1,14 @@
 # Change Log
 
+## 3.13.8
+
+### Patch Changes
+
+- [#4673](https://github.com/scaleway/ultraviolet/pull/4673) [`aff907c`](https://github.com/scaleway/ultraviolet/commit/aff907c0e3df8318f3494bf935e9ca137628ce7b) Thanks [@matthprost](https://github.com/matthprost)! - `<VerificationCodeField />` new props `label`, `labelDescription`, `success` and `error`
+
+- Updated dependencies [[`aff907c`](https://github.com/scaleway/ultraviolet/commit/aff907c0e3df8318f3494bf935e9ca137628ce7b), [`80fe6dc`](https://github.com/scaleway/ultraviolet/commit/80fe6dcce854a37c46861a43ab7f00a08cfe1bea)]:
+  - @ultraviolet/ui@1.84.1
+
 ## 3.13.7
 
 ### Patch Changes
