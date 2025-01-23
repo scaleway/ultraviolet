@@ -128,12 +128,12 @@ const DropdownItem = styled.div<{
 
   color:  ${({ theme }) => theme.colors.neutral.text};
   border-radius: ${({ theme }) => theme.radii.default};
+  border: 1px transparent solid;
 
   &:hover, :focus {
     background-color: ${({ theme }) => theme.colors.primary.background};
     color: ${({ theme }) => theme.colors.primary.text};
     cursor: pointer;
-    outline: none;
   }
 
   &[aria-selected='true'] {
@@ -212,6 +212,11 @@ const handleKeyDownSelect = (event: KeyboardEvent<HTMLDivElement>) => {
   if (event.key === 'ArrowUp') {
     event.preventDefault()
     moveFocusUp()
+  }
+
+  if (event.key === ' ') {
+    // No scroll
+    event.preventDefault()
   }
 }
 
@@ -404,6 +409,7 @@ const CreateDropdown = ({
                   value="select-all"
                   data-testid="select-all-checkbox"
                   tabIndex={-1}
+                  onChange={selectAllOptions}
                 >
                   <Stack direction="column">
                     <Text as="span" variant="body" placement="left">
@@ -452,8 +458,16 @@ const CreateDropdown = ({
                           value={group}
                           data-testid="select-group"
                           tabIndex={-1}
+                          onChange={() =>
+                            selectAllGroup ? handleSelectGroup(group) : null
+                          }
                         >
-                          <Text variant="caption" as="span" placement="left">
+                          <Text
+                            variant="caption"
+                            as="span"
+                            placement="left"
+                            sentiment="neutral"
+                          >
                             {group.toUpperCase()}
                           </Text>
                         </StyledCheckbox>
@@ -511,6 +525,11 @@ const CreateDropdown = ({
                         disabled={option.disabled}
                         value={option.value}
                         tabIndex={-1}
+                        onChange={() => {
+                          if (!option.disabled) {
+                            handleClick(option, group)
+                          }
+                        }}
                       >
                         <DisplayOption
                           option={option}
@@ -537,7 +556,6 @@ const CreateDropdown = ({
   ) : (
     <DropdownContainer
       role="listbox"
-      tabIndex={-1}
       id="select-dropdown"
       onKeyDown={handleKeyDownSelect}
       gap={0.25}
@@ -563,6 +581,7 @@ const CreateDropdown = ({
               value="select-all"
               data-testid="select-all-checkbox"
               tabIndex={-1}
+              onChange={selectAllOptions}
             >
               <Stack direction="column">
                 <Text as="span" variant="body" placement="left">
@@ -623,6 +642,11 @@ const CreateDropdown = ({
                   disabled={option.disabled}
                   value={option.value}
                   tabIndex={-1}
+                  onChange={() => {
+                    if (!option.disabled) {
+                      handleClick(option)
+                    }
+                  }}
                 >
                   <DisplayOption
                     option={option}

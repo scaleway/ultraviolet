@@ -1002,6 +1002,7 @@ exports[`UnitInput > renders click 1`] = `
   margin-right: 0.25rem;
   color: #3f4250;
   border-radius: 0.25rem;
+  border: 1px transparent solid;
 }
 
 .emotion-33:hover,
@@ -1009,7 +1010,6 @@ exports[`UnitInput > renders click 1`] = `
   background-color: #f1eefc;
   color: #641cb3;
   cursor: pointer;
-  outline: none;
 }
 
 .emotion-33[aria-selected='true'] {
@@ -1171,7 +1171,6 @@ exports[`UnitInput > renders click 1`] = `
                   data-grouped="false"
                   id="select-dropdown"
                   role="listbox"
-                  tabindex="-1"
                 >
                   <div
                     class="emotion-31 emotion-1"
