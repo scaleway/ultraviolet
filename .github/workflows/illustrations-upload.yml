@@ -32,8 +32,6 @@ jobs:
 
       - name: Install aws CLI
         run: |
-          sudo python3 -m pip install --upgrade pip
-          sudo python3 -m pip install awscli==1.19.27 awscli_plugin_endpoint
           pip3 install awscli_plugin_endpoint && pip3 show awscli_plugin_endpoint
 
       - name: AWS CLI configuration
