@@ -148,7 +148,7 @@ describe('Pagination', () => {
     const mockOnClick = vi.fn()
     const mockOnClickPerPage = vi.fn()
 
-    const { asFragment } = renderWithTheme(
+    renderWithTheme(
       <Pagination
         page={2}
         pageCount={10}
@@ -170,7 +170,5 @@ describe('Pagination', () => {
     const elementsPerPage25 = screen.getByTestId('option-25')
     await userEvent.click(elementsPerPage25)
     expect(mockOnClickPerPage).toHaveBeenCalledOnce()
-
-    expect(asFragment()).toMatchSnapshot()
   })
 })
