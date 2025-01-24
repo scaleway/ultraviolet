@@ -1,4 +1,4 @@
-name: Upload Fonts
+name: Upload Themes
 
 on:
   pull_request:
@@ -9,7 +9,7 @@ env:
 
 jobs:
   ## Synchronize assets on bucket
-  upload-fonts:
+  upload-themes:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -39,7 +39,7 @@ jobs:
           cp ./.aws/* ~/.aws/
           sed -i -e 's/${BUCKET_REGION}/${{env.BUCKET_REGION}}/g' ~/.aws/config
 
-      - name: Upload fonts on bucket
+      - name: Upload themes on bucket
         run: |
           aws s3 sync packages/themes/public/style s3://${{ env.BUCKET_NAME }}/themes/ --include "*" --acl public-read --cache-control max-age=2592000,public
           aws s3api put-bucket-cors --bucket ${{ env.BUCKET_NAME }} --cors-configuration file://.aws/cors.json
