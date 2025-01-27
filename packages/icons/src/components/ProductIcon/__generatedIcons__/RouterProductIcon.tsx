@@ -39,10 +39,5 @@ export const RouterProductIcon = ({
         </g>
       </g>
     </g>
-    <defs>
-      <clipPath id="a" className="a">
-        <path fill="#fff" d="M0 0h64v64H0z" />
-      </clipPath>
-    </defs>
   </Icon>
 )

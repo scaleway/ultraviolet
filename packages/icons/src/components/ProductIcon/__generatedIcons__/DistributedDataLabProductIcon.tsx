@@ -27,11 +27,11 @@ export const DistributedDataLabProductIcon = ({
           clipRule="evenodd"
         >
           <path
-            d="M44 31.901a1 1 0 0 1 1-1h12.79a1 1 0 1 1 0 2H45a1 1 0 0 1-1-1Z"
+            d="M44 31.901a1 1 0 0 1 1-1h12.79a1 1 0 1 1 0 2H45a1 1 0 0 1-1-1"
             className="fillStrong"
           />
           <path
-            d="M53.502 27.813a1 1 0 0 1 1.4-.2l4.651 3.489a1 1 0 0 1 0 1.6l-4.65 3.488a1 1 0 0 1-1.2-1.6l3.584-2.689-3.585-2.688a1 1 0 0 1-.2-1.4Z"
+            d="M53.502 27.813a1 1 0 0 1 1.4-.2l4.651 3.489a1 1 0 0 1 0 1.6l-4.65 3.488a1 1 0 0 1-1.2-1.6l3.584-2.689-3.585-2.688a1 1 0 0 1-.2-1.4"
             className="fillStrong"
           />
         </g>
@@ -83,10 +83,5 @@ export const DistributedDataLabProductIcon = ({
         </g>
       </g>
     </g>
-    <defs>
-      <clipPath id="a" className="a">
-        <path fill="#fff" d="M0 0h64v64H0z" />
-      </clipPath>
-    </defs>
   </Icon>
 )
