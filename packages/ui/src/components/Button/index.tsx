@@ -60,6 +60,7 @@ type StyledButtonProps = Required<
     'size' | 'sentiment' | 'disabled' | 'iconPosition' | 'fullWidth'
   >
 > & { iconOnly: boolean }
+
 const coreStyle = ({
   theme,
   size,
@@ -81,44 +82,45 @@ const coreStyle = ({
     width = `${theme.sizing[SIZE_HEIGHT[size]]}`
   }
 
-  return `display: inline-flex;
-  height: ${theme.sizing[SIZE_HEIGHT[size]]};
-  padding: 0 ${theme.space[SIZE_PADDING_KEY[size]]};
-  flex-direction: ${iconPosition === 'right' ? 'row-reverse' : 'row'};
-  gap: ${theme.space[SIZE_GAP_KEY[size]]};
-  border-radius: ${theme.radii.default};
-  box-sizing: border-box;
-  width: ${width};
-  align-items: center;
-  cursor: ${disabled ? 'not-allowed' : 'pointer'};
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  text-decoration: none;
-  &:hover {
+  return `
+    display: inline-flex;
+    height: ${theme.sizing[SIZE_HEIGHT[size]]};
+    padding: 0 ${theme.space[SIZE_PADDING_KEY[size]]};
+    flex-direction: ${iconPosition === 'right' ? 'row-reverse' : 'row'};
+    gap: ${theme.space[SIZE_GAP_KEY[size]]};
+    border-radius: ${theme.radii.default};
+    box-sizing: border-box;
+    width: ${width};
+    align-items: center;
+    cursor: ${disabled ? 'not-allowed' : 'pointer'};
+    justify-content: center;
+    outline-offset: 2px;
+    white-space: nowrap;
     text-decoration: none;
-  }
+    &:hover {
+      text-decoration: none;
+    }
 
 
-  ${
-    disabled
-      ? ''
-      : `
-          &:active {
-            box-shadow: ${theme.shadows[FOCUS_RING_KEY[sentiment]]};
-          }
-        `
-  }
+    ${
+      disabled
+        ? ''
+        : `
+            &:active {
+              box-shadow: ${theme.shadows[FOCUS_RING_KEY[sentiment]]};
+            }
+          `
+    }
 
-  /* We can't use Text component because of button hover effect, so we need to duplicate */
-  font-size: ${font.fontSize};
-  font-family: ${font.fontFamily};
-  font-weight: ${font.weight};
-  letter-spacing: ${font.letterSpacing};
-  line-height: ${font.lineHeight};
-  paragraph-spacing: ${font.paragraphSpacing};
-  text-case: ${font.textCase};
-`
+    /* We can't use Text component because of button hover effect, so we need to duplicate */
+    font-size: ${font.fontSize};
+    font-family: ${font.fontFamily};
+    font-weight: ${font.weight};
+    letter-spacing: ${font.letterSpacing};
+    line-height: ${font.lineHeight};
+    paragraph-spacing: ${font.paragraphSpacing};
+    text-case: ${font.textCase};
+  `
 }
 
 const StyledFilledButton = styled('button', {
@@ -380,11 +382,7 @@ export const Button = forwardRef<Element, FinalProps>(
             color="currentColor"
           />
         ) : null}
-        {children && typeof children !== 'string' ? (
-          <div>{children}</div>
-        ) : (
-          children
-        )}
+        {children}
       </>
     )
 
