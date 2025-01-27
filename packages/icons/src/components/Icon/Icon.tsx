@@ -7,6 +7,7 @@ import { forwardRef } from 'react'
 import capitalize from '../../utils/capitalize'
 
 const SIZES = {
+  xsmall: '150',
   small: '200',
   large: '250',
   xlarge: '400',
