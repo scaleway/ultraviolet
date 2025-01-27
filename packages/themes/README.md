@@ -19,11 +19,11 @@ $ pnpm add @ultraviolet/ui @ultraviolet/themes @emotion/react @emotion/styled
 Directly importing the CSS theme in your HTML file:
 
 ```html
-<link rel="stylesheet" href="assets.scaleway.com/themes/light.css"> 
+<link rel="stylesheet" href="https://assets.scaleway.com/themes/light.css"> 
 // OR
-<link rel="stylesheet" href="assets.scaleway.com/themes/dark.css"> 
+<link rel="stylesheet" href="https://assets.scaleway.com/themes/dark.css"> 
 // OR 
-<link rel="stylesheet" href="assets.scaleway.com/themes/darker.css"> 
+<link rel="stylesheet" href="https://assets.scaleway.com/themes/darker.css"> 
 ```
 
 ### Usage
