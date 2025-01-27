@@ -1,8 +1,12 @@
 name: Upload Themes
 
 on:
-  pull_request:
-    types: [opened, ready_for_review]
+  push:
+    branches:
+      - main
+    paths:
+      - packages/themes/**
+
 env:
   BUCKET_NAME: scaleway-assets
   BUCKET_REGION: fr-par
@@ -29,8 +33,6 @@ jobs:
 
       - name: Install aws CLI
         run: |
-          sudo python3 -m pip install --upgrade pip
-          sudo python3 -m pip install awscli==1.19.27 awscli_plugin_endpoint
           pip3 install awscli_plugin_endpoint && pip3 show awscli_plugin_endpoint
 
       - name: AWS CLI configuration
@@ -39,9 +41,9 @@ jobs:
           cp ./.aws/* ~/.aws/
           sed -i -e 's/${BUCKET_REGION}/${{env.BUCKET_REGION}}/g' ~/.aws/config
 
-      - name: Upload themes on bucket
+      - name: Upload illustrations on bucket
         run: |
-          aws s3 sync packages/themes/public/style s3://${{ env.BUCKET_NAME }}/themes/ --include "*" --acl public-read --cache-control max-age=2592000,public
+          aws s3 sync packages/themes/public/style s3://${{ env.BUCKET_NAME }}/themes/ --acl public-read --cache-control max-age=2592000,public
           aws s3api put-bucket-cors --bucket ${{ env.BUCKET_NAME }} --cors-configuration file://.aws/cors.json
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.S3_ACCESS_KEY_ID }}
