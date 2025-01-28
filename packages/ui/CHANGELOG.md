@@ -1,5 +1,21 @@
 # Change Log
 
+## 1.84.2
+
+### Patch Changes
+
+- [#4695](https://github.com/scaleway/ultraviolet/pull/4695) [`c4767ba`](https://github.com/scaleway/ultraviolet/commit/c4767ba4a1f2bad56ba66f6c2ace874838bc8c82) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<Button />` to remove illegal div in children when text as children
+
+- [#4690](https://github.com/scaleway/ultraviolet/pull/4690) [`3d37913`](https://github.com/scaleway/ultraviolet/commit/3d3791392c86ca6e6e7c9f8518507762865132c0) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<Tooltip />` alignement with the arrow due to `Popup` internal component
+
+- [#4652](https://github.com/scaleway/ultraviolet/pull/4652) [`fddc860`](https://github.com/scaleway/ultraviolet/commit/fddc860ffcf4c0bf7458818a0152becd91f96b54) Thanks [@lisalupi](https://github.com/lisalupi)! - `<SelectInputV2 />`:
+  - onChange handle on checkboxes fix
+  - visual indication of focused item for keyboard users
+  - no scroll when opening the dropdown with "Enter"
+- Updated dependencies [[`f8e9911`](https://github.com/scaleway/ultraviolet/commit/f8e99113b95758ce6c40aa4f3c7d4cebc3db91ca), [`d41d0ff`](https://github.com/scaleway/ultraviolet/commit/d41d0ff7756acd0d69a3a63e62cdb49e09341729)]:
+  - @ultraviolet/themes@1.16.0
+  - @ultraviolet/icons@3.8.4
+
 ## 1.84.1
 
 ### Patch Changes

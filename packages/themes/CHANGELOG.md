@@ -1,5 +1,19 @@
 # Change Log
 
+## 1.16.0
+
+### Minor Changes
+
+- [#4698](https://github.com/scaleway/ultraviolet/pull/4698) [`f8e9911`](https://github.com/scaleway/ultraviolet/commit/f8e99113b95758ce6c40aa4f3c7d4cebc3db91ca) Thanks [@matthprost](https://github.com/matthprost)! - Themes are now available with CDN links. You can directly import the CSS theme in your HTML file:
+
+  ```html
+  <link rel="stylesheet" href="https://assets.scaleway.com/themes/light.css" />
+  // OR
+  <link rel="stylesheet" href="https://assets.scaleway.com/themes/dark.css" />
+  // OR
+  <link rel="stylesheet" href="https://assets.scaleway.com/themes/darker.css" />
+  ```
+
 ## 1.15.0
 
 ### Minor Changes

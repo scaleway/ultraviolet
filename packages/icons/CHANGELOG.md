@@ -1,5 +1,14 @@
 # Change Log
 
+## 3.8.4
+
+### Patch Changes
+
+- [#4694](https://github.com/scaleway/ultraviolet/pull/4694) [`d41d0ff`](https://github.com/scaleway/ultraviolet/commit/d41d0ff7756acd0d69a3a63e62cdb49e09341729) Thanks [@lisalupi](https://github.com/lisalupi)! - icons: new size `xsmall`
+
+- Updated dependencies [[`f8e9911`](https://github.com/scaleway/ultraviolet/commit/f8e99113b95758ce6c40aa4f3c7d4cebc3db91ca)]:
+  - @ultraviolet/themes@1.16.0
+
 ## 3.8.3
 
 ### Patch Changes
