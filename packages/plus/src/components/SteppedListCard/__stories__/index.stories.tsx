@@ -8,3 +8,4 @@ export default {
 
 export { Playground } from './Playground.stories'
 export { OnClickHide } from './OnClickHide.stories'
+export { WithoutToggleButton } from './WithoutToggleButton.stories'

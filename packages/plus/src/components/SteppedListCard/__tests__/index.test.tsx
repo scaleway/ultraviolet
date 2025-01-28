@@ -33,6 +33,30 @@ describe('SteppedListCard', () => {
       </SteppedListContainer>,
     ))
 
+  it('should hide the toggle button', () =>
+    shouldMatchEmotionSnapshot(
+      <SteppedListContainer
+        header={<h1>Header</h1>}
+        showToggleOption={false}
+        steps={['step1', 'step2']}
+      >
+        <SteppedListContainer.Step
+          stepNumber={1}
+          subHeader="First step"
+          image={<img src={blockStorageWire} width={200} alt="blockStorage" />}
+        >
+          Description
+        </SteppedListContainer.Step>
+        <SteppedListContainer.Step
+          stepNumber={2}
+          subHeader={<h1>Title</h1>}
+          image={<img src={blockStorageWire} width={200} alt="blockStorage" />}
+        >
+          Description step 2
+        </SteppedListContainer.Step>
+      </SteppedListContainer>,
+    ))
+
   it('should work with custom hide action', () =>
     shouldMatchEmotionSnapshot(
       <SteppedListContainer

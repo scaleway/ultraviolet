@@ -20,22 +20,6 @@ type SteppedListContainerProps = {
    */
   header: ReactNode
   /**
-   * Text of the tooltip on the hide button
-   */
-  hideTooltipText?: string
-  /**
-   * Text of the "hide" button
-   */
-  hideText?: string
-  /**
-   * Text of the "show" button
-   */
-  showText?: string
-  /**
-   * Text of tooltip on the "show" button
-   */
-  showTooltipText?: string
-  /**
    * List of steps
    */
   steps: string[]
@@ -47,13 +31,48 @@ type SteppedListContainerProps = {
    * Function called when the component is closed. This function will overload the default behavior.
    */
   onClickHide?: () => void
-}
+} & (
+  | {
+      /**
+       * Show the toggle option
+       */
+      showToggleOption: false
+      hideTooltipText?: never
+      hideText?: never
+      showText?: never
+      showTooltipText?: never
+    }
+  | {
+      /**
+       * Show the toggle option
+       */
+      showToggleOption?: true
+      /**
+       * Text of the tooltip on the hide button
+       */
+      hideTooltipText?: string
+      /**
+       * Text of the "hide" button
+       */
+      hideText?: string
+      /**
+       * Text of the "show" button
+       */
+      showText?: string
+      /**
+       * Text of tooltip on the "show" button
+       */
+      showTooltipText?: string
+    }
+)
+
 /**
  * SteppedListContainer is a component created for guiding users through steps in a structured and linear manner.
  * It can pass prop "nextStep" to its children.
  */
 const SteppedListContainer = ({
   header,
+  showToggleOption = true,
   hideTooltipText,
   hideText = 'Hide',
   showText = 'Show',
@@ -104,15 +123,17 @@ const SteppedListContainer = ({
           ) : (
             header
           )}
-          <Button
-            onClick={onClickHideButton}
-            variant="ghost"
-            sentiment="neutral"
-            size="small"
-            tooltip={hidden ? showTooltipText : hideTooltipText}
-          >
-            {hidden ? showText : hideText}
-          </Button>
+          {showToggleOption ? (
+            <Button
+              onClick={onClickHideButton}
+              variant="ghost"
+              sentiment="neutral"
+              size="small"
+              tooltip={hidden ? showTooltipText : hideTooltipText}
+            >
+              {hidden ? showText : hideText}
+            </Button>
+          ) : null}
         </Row>
         {hidden ? null : (
           <StyledCard>

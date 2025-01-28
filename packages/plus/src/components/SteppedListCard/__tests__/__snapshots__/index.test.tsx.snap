@@ -1,5 +1,397 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
+exports[`SteppedListCard > should hide the toggle button 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.5rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-2 {
+  display: grid;
+  grid-template-columns: 9fr 1fr;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+}
+
+.emotion-5 {
+  border: 1px solid #d9dadd;
+  border-radius: 0.25rem;
+  padding: 1.5rem;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  padding: 0;
+}
+
+.emotion-5[data-is-active='true'] {
+  border: 1px solid #8c40ef;
+}
+
+.emotion-5[data-disabled='true'] {
+  border: 1px solid #e9eaeb;
+}
+
+.emotion-7 {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+}
+
+.emotion-9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding: 1.5rem;
+  border-right: solid #d9dadd 1px;
+}
+
+.emotion-11 {
+  list-style: none;
+  padding-left: 0;
+  text-align: left;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 1.5rem;
+  font-size:font-family: Inter,Asap,sans-serif;
+  font-size: 1rem;
+  font-weight: Regular;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  paragraph-spacing: none;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  weight: 400;
+}
+
+.emotion-13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  gap: 1rem;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  color: #222638;
+}
+
+.emotion-15 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  border-radius: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+  font-size: 1rem;
+  color: #ffffff;
+  background: #8c40ef;
+  border: 1px solid #8c40ef;
+}
+
+.emotion-17 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  margin: auto;
+  line-height: 32px;
+  font-size: 24px;
+}
+
+.emotion-20 {
+  font-size: 1rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-transition: text-decoration-color 250ms ease-out;
+  transition: text-decoration-color 250ms ease-out;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  text-decoration-color: transparent;
+}
+
+.emotion-20:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+
+.emotion-20:active {
+  text-decoration-thickness: 2px;
+}
+
+.emotion-24 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  border-radius: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+  font-size: 1rem;
+  color: #3f4250;
+  background: #ffffff;
+  border: 1px solid #d9dadd;
+}
+
+.emotion-29 {
+  font-size: 1rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-transition: text-decoration-color 250ms ease-out;
+  transition: text-decoration-color 250ms ease-out;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  text-decoration-color: transparent;
+}
+
+.emotion-29:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+
+.emotion-29:active {
+  text-decoration-thickness: 2px;
+}
+
+.emotion-31 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding: 1.5rem;
+  padding-top: 2rem;
+}
+
+.emotion-33 {
+  margin-bottom: 1.5rem;
+}
+
+.emotion-35 {
+  font-size: 1.3125rem;
+  font-family: Space Grotesk,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 2rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-37 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: right;
+  -ms-flex-pack: right;
+  -webkit-justify-content: right;
+  justify-content: right;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+    >
+      <div
+        class="emotion-2 emotion-3"
+      >
+        <h1>
+          Header
+        </h1>
+      </div>
+      <div
+        class="emotion-4 emotion-5 emotion-6"
+        data-disabled="false"
+        data-is-active="false"
+      >
+        <div
+          class="emotion-7 emotion-3"
+        >
+          <div
+            class="emotion-9 emotion-10"
+          >
+            <ul
+              class="emotion-11 emotion-12"
+            >
+              <li
+                class="emotion-13 emotion-14"
+              >
+                <div
+                  class="emotion-15 emotion-16"
+                >
+                  1
+                </div>
+                <div
+                  class="emotion-17 emotion-18"
+                >
+                  <h3
+                    class="emotion-19 emotion-20 emotion-21"
+                  >
+                    step1
+                  </h3>
+                </div>
+              </li>
+              <li
+                class="emotion-13 emotion-14"
+              >
+                <div
+                  class="emotion-24 emotion-16"
+                >
+                  2
+                </div>
+                <div
+                  class="emotion-17 emotion-18"
+                >
+                  <h3
+                    class="emotion-19 emotion-29 emotion-21"
+                  >
+                    step2
+                  </h3>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div
+            class="emotion-31 emotion-32"
+          >
+            <div
+              class="emotion-33 emotion-34"
+            >
+              <h3
+                class="emotion-35 emotion-21"
+              >
+                First step
+              </h3>
+            </div>
+            Description
+            <div
+              class="emotion-37 emotion-38"
+            >
+              <img
+                alt="blockStorage"
+                src="https://assets.scaleway.com/illustrations/products/blockStorage/block-storage-wire.svg"
+                width="200"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`SteppedListCard > should work with custom hide action 1`] = `
 <DocumentFragment>
   .emotion-0 {
