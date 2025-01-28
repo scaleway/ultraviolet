@@ -10,8 +10,20 @@ Ultraviolet Themes is a set of themes for the Ultraviolet UI library.
 
 ## Get Started
 
+Using npm:
+
 ```sh
 $ pnpm add @ultraviolet/ui @ultraviolet/themes @emotion/react @emotion/styled
+```
+
+Directly importing the CSS theme in your HTML file:
+
+```html
+<link rel="stylesheet" href="https://assets.scaleway.com/themes/light.css"> 
+// OR
+<link rel="stylesheet" href="https://assets.scaleway.com/themes/dark.css"> 
+// OR 
+<link rel="stylesheet" href="https://assets.scaleway.com/themes/darker.css"> 
 ```
 
 ### Usage
