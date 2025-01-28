@@ -48,7 +48,7 @@ WithoutToggleButton.parameters = {
   docs: {
     description: {
       story:
-        'It is possible to hide the toggle button using `showToggleOption: false`. The default behavior is being visible.',
+        'It is possible to hide the toggle button using `showToggleOption={false}`. The default behavior is being visible.',
     },
   },
 }
