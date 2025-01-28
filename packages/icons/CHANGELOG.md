@@ -1,5 +1,14 @@
 # Change Log
 
+## 3.9.0
+
+### Minor Changes
+
+- [#4703](https://github.com/scaleway/ultraviolet/pull/4703) [`9a58499`](https://github.com/scaleway/ultraviolet/commit/9a58499f3ef519f7f29cab1441d56638d75bf827) Thanks [@matthprost](https://github.com/matthprost)! - Update product icon `EnvironmentalFootprintCalculatorProductIcon` with new design.
+  Add new following system icons:
+  - `CrossCircleIcon`
+  - `CrossCircleOutlineIcon`
+
 ## 3.8.4
 
 ### Patch Changes
