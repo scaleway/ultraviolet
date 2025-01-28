@@ -2,4 +2,4 @@
 "@ultraviolet/plus": minor
 ---
 
-feat: dd new prop `showToggleOption` to `SteppedListContainer`
+feat: add new prop `showToggleOption` to `SteppedListContainer`
