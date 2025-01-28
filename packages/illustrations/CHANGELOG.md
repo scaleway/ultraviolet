@@ -1,5 +1,14 @@
 # @ultraviolet/illustrations
 
+## 4.1.1
+
+### Patch Changes
+
+- [#4672](https://github.com/scaleway/ultraviolet/pull/4672) [`f68a6e6`](https://github.com/scaleway/ultraviolet/commit/f68a6e66dec8aa8ceeb5b1e8f59d3a57488f9116) Thanks [@lisalupi](https://github.com/lisalupi)! - New `ProductIllustration` : `dediboxGPU`
+
+- Updated dependencies [[`f8e9911`](https://github.com/scaleway/ultraviolet/commit/f8e99113b95758ce6c40aa4f3c7d4cebc3db91ca)]:
+  - @ultraviolet/themes@1.16.0
+
 ## 4.1.0
 
 ### Minor Changes
