@@ -91,6 +91,8 @@ const readSvg = async (filePath: string) => {
     .replace(/fill-rule=/g, 'fillRule=')
     .replace(/fill-opacity=/g, 'fillOpacity=')
     .replace(/clip-rule=/g, 'clipRule=')
+    .replace(/clip-path=/g, 'clipPath=')
+    .replace(/stop-color=/g, 'stopColor=')
 
   return updatedSvgContent.replace(/`/g, '\\`') // Escape backticks
 }

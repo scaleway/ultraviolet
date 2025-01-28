@@ -76,7 +76,7 @@ export const SnsProductIcon = ({ ...props }: Omit<IconProps, 'children'>) => (
         </g>
         <path
           fill="#A060F6"
-          d="M27.882 18a2 2 0 0 1 2-2h11.8a2 2 0 0 1 2 2v9.083a2 2 0 0 1-2 2h-9.486l-3.943 2.738a1 1 0 0 1-1.495-1.202l1.124-2.733zm13.8 0h-11.8v9.886c0 .133-.013.266-.04.396l1.213-.841a2 2 0 0 1 1.14-.358h9.487z"
+          d="M27.882 18a2 2 0 0 1 2-2h11.8a2 2 0 0 1 2 2v9.083a2 2 0 0 1-2 2h-9.486l-3.943 2.738a1 1 0 0 1-1.495-1.202l1.124-2.733zm13.8 0h-11.8v9.886q0 .2-.04.396l1.213-.841a2 2 0 0 1 1.14-.358h9.487z"
           className="fillStrong"
           clipRule="evenodd"
           fillRule="evenodd"
