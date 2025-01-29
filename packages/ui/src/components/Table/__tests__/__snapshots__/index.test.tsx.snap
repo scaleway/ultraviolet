@@ -3628,10 +3628,10 @@ exports[`Table > Should render correctly with selectable and shift click 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   gap: 0.5rem;
 }
 
@@ -3845,58 +3845,6 @@ exports[`Table > Should render correctly with selectable and shift click 1`] = `
 }
 
 .emotion-21 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-
-.emotion-23 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-
-.emotion-25 {
   width: 100px;
   max-width: 200px;
   min-width: 100px;
@@ -3905,7 +3853,7 @@ exports[`Table > Should render correctly with selectable and shift click 1`] = `
   padding: 0.5rem;
 }
 
-.emotion-25[role*='button'] {
+.emotion-21[role*='button'] {
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -3913,11 +3861,11 @@ exports[`Table > Should render correctly with selectable and shift click 1`] = `
   user-select: none;
 }
 
-.emotion-25:first-of-type {
+.emotion-21:first-of-type {
   padding-left: 1rem;
 }
 
-.emotion-25 {
+.emotion-21 {
   width: 100px;
   max-width: 200px;
   min-width: 100px;
@@ -3926,7 +3874,7 @@ exports[`Table > Should render correctly with selectable and shift click 1`] = `
   padding: 0.5rem;
 }
 
-.emotion-25[role*='button'] {
+.emotion-21[role*='button'] {
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -3934,46 +3882,46 @@ exports[`Table > Should render correctly with selectable and shift click 1`] = `
   user-select: none;
 }
 
-.emotion-25:first-of-type {
+.emotion-21:first-of-type {
   padding-left: 1rem;
 }
 
-.emotion-50 {
+.emotion-46 {
   -webkit-animation: 3s linear;
   animation: 3s linear;
 }
 
-.emotion-50 td:nth-of-type(2) {
+.emotion-46 td:nth-of-type(2) {
   width: 100px;
   min-width: 100px;
   max-width: 200px;
 }
 
-.emotion-50 td:nth-of-type(3) {
+.emotion-46 td:nth-of-type(3) {
   width: 100px;
   min-width: 100px;
   max-width: 200px;
 }
 
-.emotion-50 td:nth-of-type(4) {
+.emotion-46 td:nth-of-type(4) {
   width: 100px;
   min-width: 100px;
   max-width: 200px;
 }
 
-.emotion-50 td:nth-of-type(5) {
+.emotion-46 td:nth-of-type(5) {
   width: 100px;
   min-width: 100px;
   max-width: 200px;
 }
 
-.emotion-50 td:nth-of-type(6) {
+.emotion-46 td:nth-of-type(6) {
   width: 100px;
   min-width: 100px;
   max-width: 200px;
 }
 
-.emotion-53 {
+.emotion-49 {
   display: table-cell;
   vertical-align: middle;
   padding: 0.5rem;
@@ -3983,11 +3931,11 @@ exports[`Table > Should render correctly with selectable and shift click 1`] = `
   max-width: 2.5rem;
 }
 
-.emotion-53:first-of-type {
+.emotion-49:first-of-type {
   padding-left: 1rem;
 }
 
-.emotion-55 {
+.emotion-51 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3995,78 +3943,78 @@ exports[`Table > Should render correctly with selectable and shift click 1`] = `
   width: 2.5rem;
 }
 
-.emotion-58 {
+.emotion-54 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   gap: 0.5rem;
 }
 
-.emotion-58 .eqr7bqq4 {
+.emotion-54 .eqr7bqq4 {
   cursor: pointer;
 }
 
-.emotion-58[aria-disabled='true'] {
+.emotion-54[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.emotion-58[aria-disabled='true'] .eqr7bqq4 {
+.emotion-54[aria-disabled='true'] .eqr7bqq4 {
   cursor: not-allowed;
 }
 
-.emotion-58[aria-disabled='true'] .emotion-16 {
+.emotion-54[aria-disabled='true'] .emotion-16 {
   fill: #e9eaeb;
 }
 
-.emotion-58[aria-disabled='true'] .emotion-16 .emotion-18 {
+.emotion-54[aria-disabled='true'] .emotion-16 .emotion-18 {
   stroke: #d9dadd;
   fill: #f3f3f4;
 }
 
-.emotion-58[aria-disabled='true'] .emotion-14[aria-invalid="true"]:checked+.emotion-16 {
+.emotion-54[aria-disabled='true'] .emotion-14[aria-invalid="true"]:checked+.emotion-16 {
   fill: #ffd3e3;
 }
 
-.emotion-58[aria-disabled='true'] .emotion-14[aria-invalid="true"]:checked+.emotion-16 .emotion-18 {
+.emotion-54[aria-disabled='true'] .emotion-14[aria-invalid="true"]:checked+.emotion-16 .emotion-18 {
   stroke: #ffd3e3;
   fill: #ffd3e3;
 }
 
-.emotion-58[aria-disabled='true'] .emotion-14[aria-invalid="true"]+.emotion-16 {
+.emotion-54[aria-disabled='true'] .emotion-14[aria-invalid="true"]+.emotion-16 {
   fill: #ffebf2;
 }
 
-.emotion-58[aria-disabled='true'] .emotion-14[aria-invalid="true"]+.emotion-16 .emotion-18 {
+.emotion-54[aria-disabled='true'] .emotion-14[aria-invalid="true"]+.emotion-16 .emotion-18 {
   stroke: #ffbbd3;
   fill: #ffebf2;
 }
 
-.emotion-58[aria-disabled='true'] .emotion-14:checked+.emotion-16 {
+.emotion-54[aria-disabled='true'] .emotion-14:checked+.emotion-16 {
   fill: #e5dbfd;
 }
 
-.emotion-58[aria-disabled='true'] .emotion-14:checked+.emotion-16 .emotion-18 {
+.emotion-54[aria-disabled='true'] .emotion-14:checked+.emotion-16 .emotion-18 {
   stroke: #d8c5fc;
   fill: #d8c5fc;
 }
 
-.emotion-58[aria-disabled='true'] .emotion-14[aria-checked="mixed"]+.emotion-16 {
+.emotion-54[aria-disabled='true'] .emotion-14[aria-checked="mixed"]+.emotion-16 {
   fill: #e5dbfd;
 }
 
-.emotion-58[aria-disabled='true'] .emotion-14[aria-checked="mixed"]+.emotion-16 .emotion-18 {
+.emotion-54[aria-disabled='true'] .emotion-14[aria-checked="mixed"]+.emotion-16 .emotion-18 {
   stroke: #e5dbfd;
   fill: #e5dbfd;
 }
 
-.emotion-58 .emotion-14:checked+.emotion-16 path {
+.emotion-54 .emotion-14:checked+.emotion-16 path {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -4080,60 +4028,60 @@ exports[`Table > Should render correctly with selectable and shift click 1`] = `
   transform: translate(2px, 2px);
 }
 
-.emotion-58 .emotion-14:checked+.emotion-16 .emotion-18 {
+.emotion-54 .emotion-14:checked+.emotion-16 .emotion-18 {
   fill: #8c40ef;
   stroke: #8c40ef;
 }
 
-.emotion-58 .emotion-14[aria-invalid="true"]:checked+.emotion-16 .emotion-18 {
+.emotion-54 .emotion-14[aria-invalid="true"]:checked+.emotion-16 .emotion-18 {
   fill: #e51963;
   stroke: #e51963;
 }
 
-.emotion-58 .emotion-14[aria-checked="mixed"]+.emotion-16 .emotion-20 {
+.emotion-54 .emotion-14[aria-checked="mixed"]+.emotion-16 .emotion-20 {
   fill: #ffffff;
 }
 
-.emotion-58 .emotion-14[aria-checked="mixed"]+.emotion-16 .emotion-18 {
+.emotion-54 .emotion-14[aria-checked="mixed"]+.emotion-16 .emotion-18 {
   fill: #8c40ef;
   stroke: #8c40ef;
 }
 
-.emotion-58:hover[aria-disabled='false'] .emotion-14[aria-invalid='false'][aria-checked='false']+.emotion-16 .emotion-18 {
+.emotion-54:hover[aria-disabled='false'] .emotion-14[aria-invalid='false'][aria-checked='false']+.emotion-16 .emotion-18 {
   stroke: #792dd4;
   fill: #e5dbfd;
 }
 
-.emotion-58:hover[aria-disabled='false'] .emotion-14[aria-invalid='false'][aria-checked='true']+.emotion-16 .emotion-18 {
+.emotion-54:hover[aria-disabled='false'] .emotion-14[aria-invalid='false'][aria-checked='true']+.emotion-16 .emotion-18 {
   stroke: #792dd4;
   fill: #792dd4;
 }
 
-.emotion-58:hover[aria-disabled='false'] .emotion-14[aria-invalid='false'][aria-checked='mixed']+.emotion-16 .emotion-18 {
+.emotion-54:hover[aria-disabled='false'] .emotion-14[aria-invalid='false'][aria-checked='mixed']+.emotion-16 .emotion-18 {
   stroke: #792dd4;
   fill: #792dd4;
 }
 
-.emotion-58:hover[aria-disabled='false'] .emotion-14[aria-invalid='true'][aria-checked='false']+.emotion-16 .emotion-18 {
+.emotion-54:hover[aria-disabled='false'] .emotion-14[aria-invalid='true'][aria-checked='false']+.emotion-16 .emotion-18 {
   stroke: #92103f;
   fill: #ffd3e3;
 }
 
-.emotion-58:hover[aria-disabled='false'] .emotion-14[aria-invalid='true'][aria-checked='true']+.emotion-16 .emotion-18 {
+.emotion-54:hover[aria-disabled='false'] .emotion-14[aria-invalid='true'][aria-checked='true']+.emotion-16 .emotion-18 {
   stroke: #d6175c;
   fill: #d6175c;
 }
 
-.emotion-58 .emotion-14[aria-invalid="true"]+.emotion-16 {
+.emotion-54 .emotion-14[aria-invalid="true"]+.emotion-16 {
   fill: #e51963;
 }
 
-.emotion-58 .emotion-14[aria-invalid="true"]+.emotion-16 .emotion-18 {
+.emotion-54 .emotion-14[aria-invalid="true"]+.emotion-16 .emotion-18 {
   stroke: #e51963;
   fill: #ffebf2;
 }
 
-.emotion-58 svg {
+.emotion-54 svg {
   padding: 0.125rem;
   outline: 1px inset #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
@@ -4141,12 +4089,12 @@ exports[`Table > Should render correctly with selectable and shift click 1`] = `
   transition: box-shadow 250ms ease,outline 250ms ease,padding 250ms ease;
 }
 
-.emotion-58 svg rect {
+.emotion-54 svg rect {
   fill: #e5dbfd;
   stroke: #792dd4;
 }
 
-.emotion-70 {
+.emotion-62 {
   display: table-cell;
   vertical-align: middle;
   padding: 0.5rem;
@@ -4154,7 +4102,7 @@ exports[`Table > Should render correctly with selectable and shift click 1`] = `
   text-align: left;
 }
 
-.emotion-70 {
+.emotion-62 {
   display: table-cell;
   vertical-align: middle;
   padding: 0.5rem;
@@ -4162,78 +4110,78 @@ exports[`Table > Should render correctly with selectable and shift click 1`] = `
   text-align: left;
 }
 
-.emotion-148 {
+.emotion-132 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   gap: 0.5rem;
 }
 
-.emotion-148 .eqr7bqq4 {
+.emotion-132 .eqr7bqq4 {
   cursor: pointer;
 }
 
-.emotion-148[aria-disabled='true'] {
+.emotion-132[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.emotion-148[aria-disabled='true'] .eqr7bqq4 {
+.emotion-132[aria-disabled='true'] .eqr7bqq4 {
   cursor: not-allowed;
 }
 
-.emotion-148[aria-disabled='true'] .emotion-16 {
+.emotion-132[aria-disabled='true'] .emotion-16 {
   fill: #e9eaeb;
 }
 
-.emotion-148[aria-disabled='true'] .emotion-16 .emotion-18 {
+.emotion-132[aria-disabled='true'] .emotion-16 .emotion-18 {
   stroke: #d9dadd;
   fill: #f3f3f4;
 }
 
-.emotion-148[aria-disabled='true'] .emotion-14[aria-invalid="true"]:checked+.emotion-16 {
+.emotion-132[aria-disabled='true'] .emotion-14[aria-invalid="true"]:checked+.emotion-16 {
   fill: #ffd3e3;
 }
 
-.emotion-148[aria-disabled='true'] .emotion-14[aria-invalid="true"]:checked+.emotion-16 .emotion-18 {
+.emotion-132[aria-disabled='true'] .emotion-14[aria-invalid="true"]:checked+.emotion-16 .emotion-18 {
   stroke: #ffd3e3;
   fill: #ffd3e3;
 }
 
-.emotion-148[aria-disabled='true'] .emotion-14[aria-invalid="true"]+.emotion-16 {
+.emotion-132[aria-disabled='true'] .emotion-14[aria-invalid="true"]+.emotion-16 {
   fill: #ffebf2;
 }
 
-.emotion-148[aria-disabled='true'] .emotion-14[aria-invalid="true"]+.emotion-16 .emotion-18 {
+.emotion-132[aria-disabled='true'] .emotion-14[aria-invalid="true"]+.emotion-16 .emotion-18 {
   stroke: #ffbbd3;
   fill: #ffebf2;
 }
 
-.emotion-148[aria-disabled='true'] .emotion-14:checked+.emotion-16 {
+.emotion-132[aria-disabled='true'] .emotion-14:checked+.emotion-16 {
   fill: #e5dbfd;
 }
 
-.emotion-148[aria-disabled='true'] .emotion-14:checked+.emotion-16 .emotion-18 {
+.emotion-132[aria-disabled='true'] .emotion-14:checked+.emotion-16 .emotion-18 {
   stroke: #d8c5fc;
   fill: #d8c5fc;
 }
 
-.emotion-148[aria-disabled='true'] .emotion-14[aria-checked="mixed"]+.emotion-16 {
+.emotion-132[aria-disabled='true'] .emotion-14[aria-checked="mixed"]+.emotion-16 {
   fill: #e5dbfd;
 }
 
-.emotion-148[aria-disabled='true'] .emotion-14[aria-checked="mixed"]+.emotion-16 .emotion-18 {
+.emotion-132[aria-disabled='true'] .emotion-14[aria-checked="mixed"]+.emotion-16 .emotion-18 {
   stroke: #e5dbfd;
   fill: #e5dbfd;
 }
 
-.emotion-148 .emotion-14:checked+.emotion-16 path {
+.emotion-132 .emotion-14:checked+.emotion-16 path {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -4247,55 +4195,55 @@ exports[`Table > Should render correctly with selectable and shift click 1`] = `
   transform: translate(2px, 2px);
 }
 
-.emotion-148 .emotion-14:checked+.emotion-16 .emotion-18 {
+.emotion-132 .emotion-14:checked+.emotion-16 .emotion-18 {
   fill: #8c40ef;
   stroke: #8c40ef;
 }
 
-.emotion-148 .emotion-14[aria-invalid="true"]:checked+.emotion-16 .emotion-18 {
+.emotion-132 .emotion-14[aria-invalid="true"]:checked+.emotion-16 .emotion-18 {
   fill: #e51963;
   stroke: #e51963;
 }
 
-.emotion-148 .emotion-14[aria-checked="mixed"]+.emotion-16 .emotion-20 {
+.emotion-132 .emotion-14[aria-checked="mixed"]+.emotion-16 .emotion-20 {
   fill: #ffffff;
 }
 
-.emotion-148 .emotion-14[aria-checked="mixed"]+.emotion-16 .emotion-18 {
+.emotion-132 .emotion-14[aria-checked="mixed"]+.emotion-16 .emotion-18 {
   fill: #8c40ef;
   stroke: #8c40ef;
 }
 
-.emotion-148:hover[aria-disabled='false'] .emotion-14[aria-invalid='false'][aria-checked='false']+.emotion-16 .emotion-18 {
+.emotion-132:hover[aria-disabled='false'] .emotion-14[aria-invalid='false'][aria-checked='false']+.emotion-16 .emotion-18 {
   stroke: #792dd4;
   fill: #e5dbfd;
 }
 
-.emotion-148:hover[aria-disabled='false'] .emotion-14[aria-invalid='false'][aria-checked='true']+.emotion-16 .emotion-18 {
+.emotion-132:hover[aria-disabled='false'] .emotion-14[aria-invalid='false'][aria-checked='true']+.emotion-16 .emotion-18 {
   stroke: #792dd4;
   fill: #792dd4;
 }
 
-.emotion-148:hover[aria-disabled='false'] .emotion-14[aria-invalid='false'][aria-checked='mixed']+.emotion-16 .emotion-18 {
+.emotion-132:hover[aria-disabled='false'] .emotion-14[aria-invalid='false'][aria-checked='mixed']+.emotion-16 .emotion-18 {
   stroke: #792dd4;
   fill: #792dd4;
 }
 
-.emotion-148:hover[aria-disabled='false'] .emotion-14[aria-invalid='true'][aria-checked='false']+.emotion-16 .emotion-18 {
+.emotion-132:hover[aria-disabled='false'] .emotion-14[aria-invalid='true'][aria-checked='false']+.emotion-16 .emotion-18 {
   stroke: #92103f;
   fill: #ffd3e3;
 }
 
-.emotion-148:hover[aria-disabled='false'] .emotion-14[aria-invalid='true'][aria-checked='true']+.emotion-16 .emotion-18 {
+.emotion-132:hover[aria-disabled='false'] .emotion-14[aria-invalid='true'][aria-checked='true']+.emotion-16 .emotion-18 {
   stroke: #d6175c;
   fill: #d6175c;
 }
 
-.emotion-148 .emotion-14[aria-invalid="true"]+.emotion-16 {
+.emotion-132 .emotion-14[aria-invalid="true"]+.emotion-16 {
   fill: #e51963;
 }
 
-.emotion-148 .emotion-14[aria-invalid="true"]+.emotion-16 .emotion-18 {
+.emotion-132 .emotion-14[aria-invalid="true"]+.emotion-16 .emotion-18 {
   stroke: #e51963;
   fill: #ffebf2;
 }
@@ -4363,18 +4311,11 @@ exports[`Table > Should render correctly with selectable and shift click 1`] = `
                       />
                     </g>
                   </svg>
-                  <div
-                    class="emotion-21 emotion-22"
-                  >
-                    <div
-                      class="emotion-23 emotion-22"
-                    />
-                  </div>
                 </div>
               </div>
             </th>
             <th
-              class="emotion-25 emotion-7"
+              class="emotion-21 emotion-7"
               tabindex="-1"
             >
               <div
@@ -4384,7 +4325,7 @@ exports[`Table > Should render correctly with selectable and shift click 1`] = `
               </div>
             </th>
             <th
-              class="emotion-25 emotion-7"
+              class="emotion-21 emotion-7"
               tabindex="-1"
             >
               <div
@@ -4394,7 +4335,7 @@ exports[`Table > Should render correctly with selectable and shift click 1`] = `
               </div>
             </th>
             <th
-              class="emotion-25 emotion-7"
+              class="emotion-21 emotion-7"
               tabindex="-1"
             >
               <div
@@ -4404,7 +4345,7 @@ exports[`Table > Should render correctly with selectable and shift click 1`] = `
               </div>
             </th>
             <th
-              class="emotion-25 emotion-7"
+              class="emotion-21 emotion-7"
               tabindex="-1"
             >
               <div
@@ -4414,7 +4355,7 @@ exports[`Table > Should render correctly with selectable and shift click 1`] = `
               </div>
             </th>
             <th
-              class="emotion-25 emotion-7"
+              class="emotion-21 emotion-7"
               tabindex="-1"
             >
               <div
@@ -4427,18 +4368,18 @@ exports[`Table > Should render correctly with selectable and shift click 1`] = `
         </thead>
         <tbody>
           <tr
-            class="emotion-50 emotion-51"
+            class="emotion-46 emotion-47"
             role="row"
           >
             <td
-              class="emotion-52 emotion-53 emotion-54"
+              class="emotion-48 emotion-49 emotion-50"
             >
               <div
-                class="emotion-55 emotion-56"
+                class="emotion-51 emotion-52"
               >
                 <div
                   aria-disabled="false"
-                  class="emotion-57 emotion-58 emotion-12"
+                  class="emotion-53 emotion-54 emotion-12"
                   data-checked="true"
                   data-error="false"
                 >
@@ -4479,55 +4420,48 @@ exports[`Table > Should render correctly with selectable and shift click 1`] = `
                       />
                     </g>
                   </svg>
-                  <div
-                    class="emotion-21 emotion-22"
-                  >
-                    <div
-                      class="emotion-23 emotion-22"
-                    />
-                  </div>
                 </div>
               </div>
             </td>
             <td
-              class="emotion-70 emotion-54"
+              class="emotion-62 emotion-50"
             >
               Row 1 Column 1
             </td>
             <td
-              class="emotion-70 emotion-54"
+              class="emotion-62 emotion-50"
             >
               Row 1 Column 2
             </td>
             <td
-              class="emotion-70 emotion-54"
+              class="emotion-62 emotion-50"
             >
               Row 1 Column 3
             </td>
             <td
-              class="emotion-70 emotion-54"
+              class="emotion-62 emotion-50"
             >
               Row 1 Column 4
             </td>
             <td
-              class="emotion-70 emotion-54"
+              class="emotion-62 emotion-50"
             >
               Row 1 Column 5
             </td>
           </tr>
           <tr
-            class="emotion-50 emotion-51"
+            class="emotion-46 emotion-47"
             role="row"
           >
             <td
-              class="emotion-52 emotion-53 emotion-54"
+              class="emotion-48 emotion-49 emotion-50"
             >
               <div
-                class="emotion-55 emotion-56"
+                class="emotion-51 emotion-52"
               >
                 <div
                   aria-disabled="false"
-                  class="emotion-57 emotion-58 emotion-12"
+                  class="emotion-53 emotion-54 emotion-12"
                   data-checked="true"
                   data-error="false"
                 >
@@ -4568,55 +4502,48 @@ exports[`Table > Should render correctly with selectable and shift click 1`] = `
                       />
                     </g>
                   </svg>
-                  <div
-                    class="emotion-21 emotion-22"
-                  >
-                    <div
-                      class="emotion-23 emotion-22"
-                    />
-                  </div>
                 </div>
               </div>
             </td>
             <td
-              class="emotion-70 emotion-54"
+              class="emotion-62 emotion-50"
             >
               Row 2 Column 1
             </td>
             <td
-              class="emotion-70 emotion-54"
+              class="emotion-62 emotion-50"
             >
               Row 2 Column 2
             </td>
             <td
-              class="emotion-70 emotion-54"
+              class="emotion-62 emotion-50"
             >
               Row 2 Column 3
             </td>
             <td
-              class="emotion-70 emotion-54"
+              class="emotion-62 emotion-50"
             >
               Row 2 Column 4
             </td>
             <td
-              class="emotion-70 emotion-54"
+              class="emotion-62 emotion-50"
             >
               Row 2 Column 5
             </td>
           </tr>
           <tr
-            class="emotion-50 emotion-51"
+            class="emotion-46 emotion-47"
             role="row"
           >
             <td
-              class="emotion-52 emotion-53 emotion-54"
+              class="emotion-48 emotion-49 emotion-50"
             >
               <div
-                class="emotion-55 emotion-56"
+                class="emotion-51 emotion-52"
               >
                 <div
                   aria-disabled="false"
-                  class="emotion-57 emotion-58 emotion-12"
+                  class="emotion-53 emotion-54 emotion-12"
                   data-checked="true"
                   data-error="false"
                 >
@@ -4657,55 +4584,48 @@ exports[`Table > Should render correctly with selectable and shift click 1`] = `
                       />
                     </g>
                   </svg>
-                  <div
-                    class="emotion-21 emotion-22"
-                  >
-                    <div
-                      class="emotion-23 emotion-22"
-                    />
-                  </div>
                 </div>
               </div>
             </td>
             <td
-              class="emotion-70 emotion-54"
+              class="emotion-62 emotion-50"
             >
               Row 3 Column 1
             </td>
             <td
-              class="emotion-70 emotion-54"
+              class="emotion-62 emotion-50"
             >
               Row 3 Column 2
             </td>
             <td
-              class="emotion-70 emotion-54"
+              class="emotion-62 emotion-50"
             >
               Row 3 Column 3
             </td>
             <td
-              class="emotion-70 emotion-54"
+              class="emotion-62 emotion-50"
             >
               Row 3 Column 4
             </td>
             <td
-              class="emotion-70 emotion-54"
+              class="emotion-62 emotion-50"
             >
               Row 3 Column 5
             </td>
           </tr>
           <tr
-            class="emotion-50 emotion-51"
+            class="emotion-46 emotion-47"
             role="row"
           >
             <td
-              class="emotion-52 emotion-53 emotion-54"
+              class="emotion-48 emotion-49 emotion-50"
             >
               <div
-                class="emotion-55 emotion-56"
+                class="emotion-51 emotion-52"
               >
                 <div
                   aria-disabled="false"
-                  class="emotion-57 emotion-148 emotion-12"
+                  class="emotion-53 emotion-132 emotion-12"
                   data-checked="false"
                   data-error="false"
                 >
@@ -4746,55 +4666,48 @@ exports[`Table > Should render correctly with selectable and shift click 1`] = `
                       />
                     </g>
                   </svg>
-                  <div
-                    class="emotion-21 emotion-22"
-                  >
-                    <div
-                      class="emotion-23 emotion-22"
-                    />
-                  </div>
                 </div>
               </div>
             </td>
             <td
-              class="emotion-70 emotion-54"
+              class="emotion-62 emotion-50"
             >
               Row 4 Column 1
             </td>
             <td
-              class="emotion-70 emotion-54"
+              class="emotion-62 emotion-50"
             >
               Row 4 Column 2
             </td>
             <td
-              class="emotion-70 emotion-54"
+              class="emotion-62 emotion-50"
             >
               Row 4 Column 3
             </td>
             <td
-              class="emotion-70 emotion-54"
+              class="emotion-62 emotion-50"
             >
               Row 4 Column 4
             </td>
             <td
-              class="emotion-70 emotion-54"
+              class="emotion-62 emotion-50"
             >
               Row 4 Column 5
             </td>
           </tr>
           <tr
-            class="emotion-50 emotion-51"
+            class="emotion-46 emotion-47"
             role="row"
           >
             <td
-              class="emotion-52 emotion-53 emotion-54"
+              class="emotion-48 emotion-49 emotion-50"
             >
               <div
-                class="emotion-55 emotion-56"
+                class="emotion-51 emotion-52"
               >
                 <div
                   aria-disabled="false"
-                  class="emotion-57 emotion-148 emotion-12"
+                  class="emotion-53 emotion-132 emotion-12"
                   data-checked="false"
                   data-error="false"
                 >
@@ -4835,55 +4748,48 @@ exports[`Table > Should render correctly with selectable and shift click 1`] = `
                       />
                     </g>
                   </svg>
-                  <div
-                    class="emotion-21 emotion-22"
-                  >
-                    <div
-                      class="emotion-23 emotion-22"
-                    />
-                  </div>
                 </div>
               </div>
             </td>
             <td
-              class="emotion-70 emotion-54"
+              class="emotion-62 emotion-50"
             >
               Row 5 Column 1
             </td>
             <td
-              class="emotion-70 emotion-54"
+              class="emotion-62 emotion-50"
             >
               Row 5 Column 2
             </td>
             <td
-              class="emotion-70 emotion-54"
+              class="emotion-62 emotion-50"
             >
               Row 5 Column 3
             </td>
             <td
-              class="emotion-70 emotion-54"
+              class="emotion-62 emotion-50"
             >
               Row 5 Column 4
             </td>
             <td
-              class="emotion-70 emotion-54"
+              class="emotion-62 emotion-50"
             >
               Row 5 Column 5
             </td>
           </tr>
           <tr
-            class="emotion-50 emotion-51"
+            class="emotion-46 emotion-47"
             role="row"
           >
             <td
-              class="emotion-52 emotion-53 emotion-54"
+              class="emotion-48 emotion-49 emotion-50"
             >
               <div
-                class="emotion-55 emotion-56"
+                class="emotion-51 emotion-52"
               >
                 <div
                   aria-disabled="false"
-                  class="emotion-57 emotion-148 emotion-12"
+                  class="emotion-53 emotion-132 emotion-12"
                   data-checked="false"
                   data-error="false"
                 >
@@ -4924,55 +4830,48 @@ exports[`Table > Should render correctly with selectable and shift click 1`] = `
                       />
                     </g>
                   </svg>
-                  <div
-                    class="emotion-21 emotion-22"
-                  >
-                    <div
-                      class="emotion-23 emotion-22"
-                    />
-                  </div>
                 </div>
               </div>
             </td>
             <td
-              class="emotion-70 emotion-54"
+              class="emotion-62 emotion-50"
             >
               Row 6 Column 1
             </td>
             <td
-              class="emotion-70 emotion-54"
+              class="emotion-62 emotion-50"
             >
               Row 6 Column 2
             </td>
             <td
-              class="emotion-70 emotion-54"
+              class="emotion-62 emotion-50"
             >
               Row 6 Column 3
             </td>
             <td
-              class="emotion-70 emotion-54"
+              class="emotion-62 emotion-50"
             >
               Row 6 Column 4
             </td>
             <td
-              class="emotion-70 emotion-54"
+              class="emotion-62 emotion-50"
             >
               Row 6 Column 5
             </td>
           </tr>
           <tr
-            class="emotion-50 emotion-51"
+            class="emotion-46 emotion-47"
             role="row"
           >
             <td
-              class="emotion-52 emotion-53 emotion-54"
+              class="emotion-48 emotion-49 emotion-50"
             >
               <div
-                class="emotion-55 emotion-56"
+                class="emotion-51 emotion-52"
               >
                 <div
                   aria-disabled="false"
-                  class="emotion-57 emotion-148 emotion-12"
+                  class="emotion-53 emotion-132 emotion-12"
                   data-checked="false"
                   data-error="false"
                 >
@@ -5013,55 +4912,48 @@ exports[`Table > Should render correctly with selectable and shift click 1`] = `
                       />
                     </g>
                   </svg>
-                  <div
-                    class="emotion-21 emotion-22"
-                  >
-                    <div
-                      class="emotion-23 emotion-22"
-                    />
-                  </div>
                 </div>
               </div>
             </td>
             <td
-              class="emotion-70 emotion-54"
+              class="emotion-62 emotion-50"
             >
               Row 7 Column 1
             </td>
             <td
-              class="emotion-70 emotion-54"
+              class="emotion-62 emotion-50"
             >
               Row 7 Column 2
             </td>
             <td
-              class="emotion-70 emotion-54"
+              class="emotion-62 emotion-50"
             >
               Row 7 Column 3
             </td>
             <td
-              class="emotion-70 emotion-54"
+              class="emotion-62 emotion-50"
             >
               Row 7 Column 4
             </td>
             <td
-              class="emotion-70 emotion-54"
+              class="emotion-62 emotion-50"
             >
               Row 7 Column 5
             </td>
           </tr>
           <tr
-            class="emotion-50 emotion-51"
+            class="emotion-46 emotion-47"
             role="row"
           >
             <td
-              class="emotion-52 emotion-53 emotion-54"
+              class="emotion-48 emotion-49 emotion-50"
             >
               <div
-                class="emotion-55 emotion-56"
+                class="emotion-51 emotion-52"
               >
                 <div
                   aria-disabled="false"
-                  class="emotion-57 emotion-148 emotion-12"
+                  class="emotion-53 emotion-132 emotion-12"
                   data-checked="false"
                   data-error="false"
                 >
@@ -5102,55 +4994,48 @@ exports[`Table > Should render correctly with selectable and shift click 1`] = `
                       />
                     </g>
                   </svg>
-                  <div
-                    class="emotion-21 emotion-22"
-                  >
-                    <div
-                      class="emotion-23 emotion-22"
-                    />
-                  </div>
                 </div>
               </div>
             </td>
             <td
-              class="emotion-70 emotion-54"
+              class="emotion-62 emotion-50"
             >
               Row 8 Column 1
             </td>
             <td
-              class="emotion-70 emotion-54"
+              class="emotion-62 emotion-50"
             >
               Row 8 Column 2
             </td>
             <td
-              class="emotion-70 emotion-54"
+              class="emotion-62 emotion-50"
             >
               Row 8 Column 3
             </td>
             <td
-              class="emotion-70 emotion-54"
+              class="emotion-62 emotion-50"
             >
               Row 8 Column 4
             </td>
             <td
-              class="emotion-70 emotion-54"
+              class="emotion-62 emotion-50"
             >
               Row 8 Column 5
             </td>
           </tr>
           <tr
-            class="emotion-50 emotion-51"
+            class="emotion-46 emotion-47"
             role="row"
           >
             <td
-              class="emotion-52 emotion-53 emotion-54"
+              class="emotion-48 emotion-49 emotion-50"
             >
               <div
-                class="emotion-55 emotion-56"
+                class="emotion-51 emotion-52"
               >
                 <div
                   aria-disabled="false"
-                  class="emotion-57 emotion-148 emotion-12"
+                  class="emotion-53 emotion-132 emotion-12"
                   data-checked="false"
                   data-error="false"
                 >
@@ -5191,55 +5076,48 @@ exports[`Table > Should render correctly with selectable and shift click 1`] = `
                       />
                     </g>
                   </svg>
-                  <div
-                    class="emotion-21 emotion-22"
-                  >
-                    <div
-                      class="emotion-23 emotion-22"
-                    />
-                  </div>
                 </div>
               </div>
             </td>
             <td
-              class="emotion-70 emotion-54"
+              class="emotion-62 emotion-50"
             >
               Row 9 Column 1
             </td>
             <td
-              class="emotion-70 emotion-54"
+              class="emotion-62 emotion-50"
             >
               Row 9 Column 2
             </td>
             <td
-              class="emotion-70 emotion-54"
+              class="emotion-62 emotion-50"
             >
               Row 9 Column 3
             </td>
             <td
-              class="emotion-70 emotion-54"
+              class="emotion-62 emotion-50"
             >
               Row 9 Column 4
             </td>
             <td
-              class="emotion-70 emotion-54"
+              class="emotion-62 emotion-50"
             >
               Row 9 Column 5
             </td>
           </tr>
           <tr
-            class="emotion-50 emotion-51"
+            class="emotion-46 emotion-47"
             role="row"
           >
             <td
-              class="emotion-52 emotion-53 emotion-54"
+              class="emotion-48 emotion-49 emotion-50"
             >
               <div
-                class="emotion-55 emotion-56"
+                class="emotion-51 emotion-52"
               >
                 <div
                   aria-disabled="false"
-                  class="emotion-57 emotion-148 emotion-12"
+                  class="emotion-53 emotion-132 emotion-12"
                   data-checked="false"
                   data-error="false"
                 >
@@ -5280,38 +5158,31 @@ exports[`Table > Should render correctly with selectable and shift click 1`] = `
                       />
                     </g>
                   </svg>
-                  <div
-                    class="emotion-21 emotion-22"
-                  >
-                    <div
-                      class="emotion-23 emotion-22"
-                    />
-                  </div>
                 </div>
               </div>
             </td>
             <td
-              class="emotion-70 emotion-54"
+              class="emotion-62 emotion-50"
             >
               Row 10 Column 1
             </td>
             <td
-              class="emotion-70 emotion-54"
+              class="emotion-62 emotion-50"
             >
               Row 10 Column 2
             </td>
             <td
-              class="emotion-70 emotion-54"
+              class="emotion-62 emotion-50"
             >
               Row 10 Column 3
             </td>
             <td
-              class="emotion-70 emotion-54"
+              class="emotion-62 emotion-50"
             >
               Row 10 Column 4
             </td>
             <td
-              class="emotion-70 emotion-54"
+              class="emotion-62 emotion-50"
             >
               Row 10 Column 5
             </td>
@@ -5444,10 +5315,10 @@ exports[`Table > Should render correctly with selectable then click on first row
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   gap: 0.5rem;
 }
 
@@ -5661,58 +5532,6 @@ exports[`Table > Should render correctly with selectable then click on first row
 }
 
 .emotion-19 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-
-.emotion-21 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-
-.emotion-23 {
   width: 100px;
   max-width: 200px;
   min-width: 100px;
@@ -5721,7 +5540,7 @@ exports[`Table > Should render correctly with selectable then click on first row
   padding: 0.5rem;
 }
 
-.emotion-23[role*='button'] {
+.emotion-19[role*='button'] {
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -5729,11 +5548,11 @@ exports[`Table > Should render correctly with selectable then click on first row
   user-select: none;
 }
 
-.emotion-23:first-of-type {
+.emotion-19:first-of-type {
   padding-left: 1rem;
 }
 
-.emotion-23 {
+.emotion-19 {
   width: 100px;
   max-width: 200px;
   min-width: 100px;
@@ -5742,7 +5561,7 @@ exports[`Table > Should render correctly with selectable then click on first row
   padding: 0.5rem;
 }
 
-.emotion-23[role*='button'] {
+.emotion-19[role*='button'] {
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -5750,46 +5569,46 @@ exports[`Table > Should render correctly with selectable then click on first row
   user-select: none;
 }
 
-.emotion-23:first-of-type {
+.emotion-19:first-of-type {
   padding-left: 1rem;
 }
 
-.emotion-48 {
+.emotion-44 {
   -webkit-animation: 3s linear;
   animation: 3s linear;
 }
 
-.emotion-48 td:nth-of-type(2) {
+.emotion-44 td:nth-of-type(2) {
   width: 100px;
   min-width: 100px;
   max-width: 200px;
 }
 
-.emotion-48 td:nth-of-type(3) {
+.emotion-44 td:nth-of-type(3) {
   width: 100px;
   min-width: 100px;
   max-width: 200px;
 }
 
-.emotion-48 td:nth-of-type(4) {
+.emotion-44 td:nth-of-type(4) {
   width: 100px;
   min-width: 100px;
   max-width: 200px;
 }
 
-.emotion-48 td:nth-of-type(5) {
+.emotion-44 td:nth-of-type(5) {
   width: 100px;
   min-width: 100px;
   max-width: 200px;
 }
 
-.emotion-48 td:nth-of-type(6) {
+.emotion-44 td:nth-of-type(6) {
   width: 100px;
   min-width: 100px;
   max-width: 200px;
 }
 
-.emotion-51 {
+.emotion-47 {
   display: table-cell;
   vertical-align: middle;
   padding: 0.5rem;
@@ -5799,11 +5618,11 @@ exports[`Table > Should render correctly with selectable then click on first row
   max-width: 2.5rem;
 }
 
-.emotion-51:first-of-type {
+.emotion-47:first-of-type {
   padding-left: 1rem;
 }
 
-.emotion-53 {
+.emotion-49 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5811,78 +5630,78 @@ exports[`Table > Should render correctly with selectable then click on first row
   width: 2.5rem;
 }
 
-.emotion-56 {
+.emotion-52 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   gap: 0.5rem;
 }
 
-.emotion-56 .eqr7bqq4 {
+.emotion-52 .eqr7bqq4 {
   cursor: pointer;
 }
 
-.emotion-56[aria-disabled='true'] {
+.emotion-52[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.emotion-56[aria-disabled='true'] .eqr7bqq4 {
+.emotion-52[aria-disabled='true'] .eqr7bqq4 {
   cursor: not-allowed;
 }
 
-.emotion-56[aria-disabled='true'] .emotion-16 {
+.emotion-52[aria-disabled='true'] .emotion-16 {
   fill: #e9eaeb;
 }
 
-.emotion-56[aria-disabled='true'] .emotion-16 .emotion-18 {
+.emotion-52[aria-disabled='true'] .emotion-16 .emotion-18 {
   stroke: #d9dadd;
   fill: #f3f3f4;
 }
 
-.emotion-56[aria-disabled='true'] .emotion-14[aria-invalid="true"]:checked+.emotion-16 {
+.emotion-52[aria-disabled='true'] .emotion-14[aria-invalid="true"]:checked+.emotion-16 {
   fill: #ffd3e3;
 }
 
-.emotion-56[aria-disabled='true'] .emotion-14[aria-invalid="true"]:checked+.emotion-16 .emotion-18 {
+.emotion-52[aria-disabled='true'] .emotion-14[aria-invalid="true"]:checked+.emotion-16 .emotion-18 {
   stroke: #ffd3e3;
   fill: #ffd3e3;
 }
 
-.emotion-56[aria-disabled='true'] .emotion-14[aria-invalid="true"]+.emotion-16 {
+.emotion-52[aria-disabled='true'] .emotion-14[aria-invalid="true"]+.emotion-16 {
   fill: #ffebf2;
 }
 
-.emotion-56[aria-disabled='true'] .emotion-14[aria-invalid="true"]+.emotion-16 .emotion-18 {
+.emotion-52[aria-disabled='true'] .emotion-14[aria-invalid="true"]+.emotion-16 .emotion-18 {
   stroke: #ffbbd3;
   fill: #ffebf2;
 }
 
-.emotion-56[aria-disabled='true'] .emotion-14:checked+.emotion-16 {
+.emotion-52[aria-disabled='true'] .emotion-14:checked+.emotion-16 {
   fill: #e5dbfd;
 }
 
-.emotion-56[aria-disabled='true'] .emotion-14:checked+.emotion-16 .emotion-18 {
+.emotion-52[aria-disabled='true'] .emotion-14:checked+.emotion-16 .emotion-18 {
   stroke: #d8c5fc;
   fill: #d8c5fc;
 }
 
-.emotion-56[aria-disabled='true'] .emotion-14[aria-checked="mixed"]+.emotion-16 {
+.emotion-52[aria-disabled='true'] .emotion-14[aria-checked="mixed"]+.emotion-16 {
   fill: #e5dbfd;
 }
 
-.emotion-56[aria-disabled='true'] .emotion-14[aria-checked="mixed"]+.emotion-16 .emotion-18 {
+.emotion-52[aria-disabled='true'] .emotion-14[aria-checked="mixed"]+.emotion-16 .emotion-18 {
   stroke: #e5dbfd;
   fill: #e5dbfd;
 }
 
-.emotion-56 .emotion-14:checked+.emotion-16 path {
+.emotion-52 .emotion-14:checked+.emotion-16 path {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -5896,60 +5715,60 @@ exports[`Table > Should render correctly with selectable then click on first row
   transform: translate(2px, 2px);
 }
 
-.emotion-56 .emotion-14:checked+.emotion-16 .emotion-18 {
+.emotion-52 .emotion-14:checked+.emotion-16 .emotion-18 {
   fill: #8c40ef;
   stroke: #8c40ef;
 }
 
-.emotion-56 .emotion-14[aria-invalid="true"]:checked+.emotion-16 .emotion-18 {
+.emotion-52 .emotion-14[aria-invalid="true"]:checked+.emotion-16 .emotion-18 {
   fill: #e51963;
   stroke: #e51963;
 }
 
-.emotion-56 .emotion-14[aria-checked="mixed"]+.emotion-16 .eqr7bqq6 {
+.emotion-52 .emotion-14[aria-checked="mixed"]+.emotion-16 .eqr7bqq6 {
   fill: #ffffff;
 }
 
-.emotion-56 .emotion-14[aria-checked="mixed"]+.emotion-16 .emotion-18 {
+.emotion-52 .emotion-14[aria-checked="mixed"]+.emotion-16 .emotion-18 {
   fill: #8c40ef;
   stroke: #8c40ef;
 }
 
-.emotion-56:hover[aria-disabled='false'] .emotion-14[aria-invalid='false'][aria-checked='false']+.emotion-16 .emotion-18 {
+.emotion-52:hover[aria-disabled='false'] .emotion-14[aria-invalid='false'][aria-checked='false']+.emotion-16 .emotion-18 {
   stroke: #792dd4;
   fill: #e5dbfd;
 }
 
-.emotion-56:hover[aria-disabled='false'] .emotion-14[aria-invalid='false'][aria-checked='true']+.emotion-16 .emotion-18 {
+.emotion-52:hover[aria-disabled='false'] .emotion-14[aria-invalid='false'][aria-checked='true']+.emotion-16 .emotion-18 {
   stroke: #792dd4;
   fill: #792dd4;
 }
 
-.emotion-56:hover[aria-disabled='false'] .emotion-14[aria-invalid='false'][aria-checked='mixed']+.emotion-16 .emotion-18 {
+.emotion-52:hover[aria-disabled='false'] .emotion-14[aria-invalid='false'][aria-checked='mixed']+.emotion-16 .emotion-18 {
   stroke: #792dd4;
   fill: #792dd4;
 }
 
-.emotion-56:hover[aria-disabled='false'] .emotion-14[aria-invalid='true'][aria-checked='false']+.emotion-16 .emotion-18 {
+.emotion-52:hover[aria-disabled='false'] .emotion-14[aria-invalid='true'][aria-checked='false']+.emotion-16 .emotion-18 {
   stroke: #92103f;
   fill: #ffd3e3;
 }
 
-.emotion-56:hover[aria-disabled='false'] .emotion-14[aria-invalid='true'][aria-checked='true']+.emotion-16 .emotion-18 {
+.emotion-52:hover[aria-disabled='false'] .emotion-14[aria-invalid='true'][aria-checked='true']+.emotion-16 .emotion-18 {
   stroke: #d6175c;
   fill: #d6175c;
 }
 
-.emotion-56 .emotion-14[aria-invalid="true"]+.emotion-16 {
+.emotion-52 .emotion-14[aria-invalid="true"]+.emotion-16 {
   fill: #e51963;
 }
 
-.emotion-56 .emotion-14[aria-invalid="true"]+.emotion-16 .emotion-18 {
+.emotion-52 .emotion-14[aria-invalid="true"]+.emotion-16 .emotion-18 {
   stroke: #e51963;
   fill: #ffebf2;
 }
 
-.emotion-68 {
+.emotion-60 {
   display: table-cell;
   vertical-align: middle;
   padding: 0.5rem;
@@ -5957,7 +5776,7 @@ exports[`Table > Should render correctly with selectable then click on first row
   text-align: left;
 }
 
-.emotion-68 {
+.emotion-60 {
   display: table-cell;
   vertical-align: middle;
   padding: 0.5rem;
@@ -6030,18 +5849,11 @@ exports[`Table > Should render correctly with selectable then click on first row
                       />
                     </g>
                   </svg>
-                  <div
-                    class="emotion-19 emotion-20"
-                  >
-                    <div
-                      class="emotion-21 emotion-20"
-                    />
-                  </div>
                 </div>
               </div>
             </th>
             <th
-              class="emotion-23 emotion-7"
+              class="emotion-19 emotion-7"
               tabindex="-1"
             >
               <div
@@ -6051,7 +5863,7 @@ exports[`Table > Should render correctly with selectable then click on first row
               </div>
             </th>
             <th
-              class="emotion-23 emotion-7"
+              class="emotion-19 emotion-7"
               tabindex="-1"
             >
               <div
@@ -6061,7 +5873,7 @@ exports[`Table > Should render correctly with selectable then click on first row
               </div>
             </th>
             <th
-              class="emotion-23 emotion-7"
+              class="emotion-19 emotion-7"
               tabindex="-1"
             >
               <div
@@ -6071,7 +5883,7 @@ exports[`Table > Should render correctly with selectable then click on first row
               </div>
             </th>
             <th
-              class="emotion-23 emotion-7"
+              class="emotion-19 emotion-7"
               tabindex="-1"
             >
               <div
@@ -6081,7 +5893,7 @@ exports[`Table > Should render correctly with selectable then click on first row
               </div>
             </th>
             <th
-              class="emotion-23 emotion-7"
+              class="emotion-19 emotion-7"
               tabindex="-1"
             >
               <div
@@ -6094,18 +5906,18 @@ exports[`Table > Should render correctly with selectable then click on first row
         </thead>
         <tbody>
           <tr
-            class="emotion-48 emotion-49"
+            class="emotion-44 emotion-45"
             role="row"
           >
             <td
-              class="emotion-50 emotion-51 emotion-52"
+              class="emotion-46 emotion-47 emotion-48"
             >
               <div
-                class="emotion-53 emotion-54"
+                class="emotion-49 emotion-50"
               >
                 <div
                   aria-disabled="false"
-                  class="emotion-55 emotion-56 emotion-12"
+                  class="emotion-51 emotion-52 emotion-12"
                   data-checked="true"
                   data-error="false"
                 >
@@ -6146,55 +5958,48 @@ exports[`Table > Should render correctly with selectable then click on first row
                       />
                     </g>
                   </svg>
-                  <div
-                    class="emotion-19 emotion-20"
-                  >
-                    <div
-                      class="emotion-21 emotion-20"
-                    />
-                  </div>
                 </div>
               </div>
             </td>
             <td
-              class="emotion-68 emotion-52"
+              class="emotion-60 emotion-48"
             >
               Row 1 Column 1
             </td>
             <td
-              class="emotion-68 emotion-52"
+              class="emotion-60 emotion-48"
             >
               Row 1 Column 2
             </td>
             <td
-              class="emotion-68 emotion-52"
+              class="emotion-60 emotion-48"
             >
               Row 1 Column 3
             </td>
             <td
-              class="emotion-68 emotion-52"
+              class="emotion-60 emotion-48"
             >
               Row 1 Column 4
             </td>
             <td
-              class="emotion-68 emotion-52"
+              class="emotion-60 emotion-48"
             >
               Row 1 Column 5
             </td>
           </tr>
           <tr
-            class="emotion-48 emotion-49"
+            class="emotion-44 emotion-45"
             role="row"
           >
             <td
-              class="emotion-50 emotion-51 emotion-52"
+              class="emotion-46 emotion-47 emotion-48"
             >
               <div
-                class="emotion-53 emotion-54"
+                class="emotion-49 emotion-50"
               >
                 <div
                   aria-disabled="false"
-                  class="emotion-55 emotion-56 emotion-12"
+                  class="emotion-51 emotion-52 emotion-12"
                   data-checked="true"
                   data-error="false"
                 >
@@ -6235,55 +6040,48 @@ exports[`Table > Should render correctly with selectable then click on first row
                       />
                     </g>
                   </svg>
-                  <div
-                    class="emotion-19 emotion-20"
-                  >
-                    <div
-                      class="emotion-21 emotion-20"
-                    />
-                  </div>
                 </div>
               </div>
             </td>
             <td
-              class="emotion-68 emotion-52"
+              class="emotion-60 emotion-48"
             >
               Row 2 Column 1
             </td>
             <td
-              class="emotion-68 emotion-52"
+              class="emotion-60 emotion-48"
             >
               Row 2 Column 2
             </td>
             <td
-              class="emotion-68 emotion-52"
+              class="emotion-60 emotion-48"
             >
               Row 2 Column 3
             </td>
             <td
-              class="emotion-68 emotion-52"
+              class="emotion-60 emotion-48"
             >
               Row 2 Column 4
             </td>
             <td
-              class="emotion-68 emotion-52"
+              class="emotion-60 emotion-48"
             >
               Row 2 Column 5
             </td>
           </tr>
           <tr
-            class="emotion-48 emotion-49"
+            class="emotion-44 emotion-45"
             role="row"
           >
             <td
-              class="emotion-50 emotion-51 emotion-52"
+              class="emotion-46 emotion-47 emotion-48"
             >
               <div
-                class="emotion-53 emotion-54"
+                class="emotion-49 emotion-50"
               >
                 <div
                   aria-disabled="false"
-                  class="emotion-55 emotion-56 emotion-12"
+                  class="emotion-51 emotion-52 emotion-12"
                   data-checked="true"
                   data-error="false"
                 >
@@ -6324,55 +6122,48 @@ exports[`Table > Should render correctly with selectable then click on first row
                       />
                     </g>
                   </svg>
-                  <div
-                    class="emotion-19 emotion-20"
-                  >
-                    <div
-                      class="emotion-21 emotion-20"
-                    />
-                  </div>
                 </div>
               </div>
             </td>
             <td
-              class="emotion-68 emotion-52"
+              class="emotion-60 emotion-48"
             >
               Row 3 Column 1
             </td>
             <td
-              class="emotion-68 emotion-52"
+              class="emotion-60 emotion-48"
             >
               Row 3 Column 2
             </td>
             <td
-              class="emotion-68 emotion-52"
+              class="emotion-60 emotion-48"
             >
               Row 3 Column 3
             </td>
             <td
-              class="emotion-68 emotion-52"
+              class="emotion-60 emotion-48"
             >
               Row 3 Column 4
             </td>
             <td
-              class="emotion-68 emotion-52"
+              class="emotion-60 emotion-48"
             >
               Row 3 Column 5
             </td>
           </tr>
           <tr
-            class="emotion-48 emotion-49"
+            class="emotion-44 emotion-45"
             role="row"
           >
             <td
-              class="emotion-50 emotion-51 emotion-52"
+              class="emotion-46 emotion-47 emotion-48"
             >
               <div
-                class="emotion-53 emotion-54"
+                class="emotion-49 emotion-50"
               >
                 <div
                   aria-disabled="false"
-                  class="emotion-55 emotion-56 emotion-12"
+                  class="emotion-51 emotion-52 emotion-12"
                   data-checked="true"
                   data-error="false"
                 >
@@ -6413,55 +6204,48 @@ exports[`Table > Should render correctly with selectable then click on first row
                       />
                     </g>
                   </svg>
-                  <div
-                    class="emotion-19 emotion-20"
-                  >
-                    <div
-                      class="emotion-21 emotion-20"
-                    />
-                  </div>
                 </div>
               </div>
             </td>
             <td
-              class="emotion-68 emotion-52"
+              class="emotion-60 emotion-48"
             >
               Row 4 Column 1
             </td>
             <td
-              class="emotion-68 emotion-52"
+              class="emotion-60 emotion-48"
             >
               Row 4 Column 2
             </td>
             <td
-              class="emotion-68 emotion-52"
+              class="emotion-60 emotion-48"
             >
               Row 4 Column 3
             </td>
             <td
-              class="emotion-68 emotion-52"
+              class="emotion-60 emotion-48"
             >
               Row 4 Column 4
             </td>
             <td
-              class="emotion-68 emotion-52"
+              class="emotion-60 emotion-48"
             >
               Row 4 Column 5
             </td>
           </tr>
           <tr
-            class="emotion-48 emotion-49"
+            class="emotion-44 emotion-45"
             role="row"
           >
             <td
-              class="emotion-50 emotion-51 emotion-52"
+              class="emotion-46 emotion-47 emotion-48"
             >
               <div
-                class="emotion-53 emotion-54"
+                class="emotion-49 emotion-50"
               >
                 <div
                   aria-disabled="false"
-                  class="emotion-55 emotion-56 emotion-12"
+                  class="emotion-51 emotion-52 emotion-12"
                   data-checked="true"
                   data-error="false"
                 >
@@ -6502,55 +6286,48 @@ exports[`Table > Should render correctly with selectable then click on first row
                       />
                     </g>
                   </svg>
-                  <div
-                    class="emotion-19 emotion-20"
-                  >
-                    <div
-                      class="emotion-21 emotion-20"
-                    />
-                  </div>
                 </div>
               </div>
             </td>
             <td
-              class="emotion-68 emotion-52"
+              class="emotion-60 emotion-48"
             >
               Row 5 Column 1
             </td>
             <td
-              class="emotion-68 emotion-52"
+              class="emotion-60 emotion-48"
             >
               Row 5 Column 2
             </td>
             <td
-              class="emotion-68 emotion-52"
+              class="emotion-60 emotion-48"
             >
               Row 5 Column 3
             </td>
             <td
-              class="emotion-68 emotion-52"
+              class="emotion-60 emotion-48"
             >
               Row 5 Column 4
             </td>
             <td
-              class="emotion-68 emotion-52"
+              class="emotion-60 emotion-48"
             >
               Row 5 Column 5
             </td>
           </tr>
           <tr
-            class="emotion-48 emotion-49"
+            class="emotion-44 emotion-45"
             role="row"
           >
             <td
-              class="emotion-50 emotion-51 emotion-52"
+              class="emotion-46 emotion-47 emotion-48"
             >
               <div
-                class="emotion-53 emotion-54"
+                class="emotion-49 emotion-50"
               >
                 <div
                   aria-disabled="false"
-                  class="emotion-55 emotion-56 emotion-12"
+                  class="emotion-51 emotion-52 emotion-12"
                   data-checked="true"
                   data-error="false"
                 >
@@ -6591,55 +6368,48 @@ exports[`Table > Should render correctly with selectable then click on first row
                       />
                     </g>
                   </svg>
-                  <div
-                    class="emotion-19 emotion-20"
-                  >
-                    <div
-                      class="emotion-21 emotion-20"
-                    />
-                  </div>
                 </div>
               </div>
             </td>
             <td
-              class="emotion-68 emotion-52"
+              class="emotion-60 emotion-48"
             >
               Row 6 Column 1
             </td>
             <td
-              class="emotion-68 emotion-52"
+              class="emotion-60 emotion-48"
             >
               Row 6 Column 2
             </td>
             <td
-              class="emotion-68 emotion-52"
+              class="emotion-60 emotion-48"
             >
               Row 6 Column 3
             </td>
             <td
-              class="emotion-68 emotion-52"
+              class="emotion-60 emotion-48"
             >
               Row 6 Column 4
             </td>
             <td
-              class="emotion-68 emotion-52"
+              class="emotion-60 emotion-48"
             >
               Row 6 Column 5
             </td>
           </tr>
           <tr
-            class="emotion-48 emotion-49"
+            class="emotion-44 emotion-45"
             role="row"
           >
             <td
-              class="emotion-50 emotion-51 emotion-52"
+              class="emotion-46 emotion-47 emotion-48"
             >
               <div
-                class="emotion-53 emotion-54"
+                class="emotion-49 emotion-50"
               >
                 <div
                   aria-disabled="false"
-                  class="emotion-55 emotion-56 emotion-12"
+                  class="emotion-51 emotion-52 emotion-12"
                   data-checked="true"
                   data-error="false"
                 >
@@ -6680,55 +6450,48 @@ exports[`Table > Should render correctly with selectable then click on first row
                       />
                     </g>
                   </svg>
-                  <div
-                    class="emotion-19 emotion-20"
-                  >
-                    <div
-                      class="emotion-21 emotion-20"
-                    />
-                  </div>
                 </div>
               </div>
             </td>
             <td
-              class="emotion-68 emotion-52"
+              class="emotion-60 emotion-48"
             >
               Row 7 Column 1
             </td>
             <td
-              class="emotion-68 emotion-52"
+              class="emotion-60 emotion-48"
             >
               Row 7 Column 2
             </td>
             <td
-              class="emotion-68 emotion-52"
+              class="emotion-60 emotion-48"
             >
               Row 7 Column 3
             </td>
             <td
-              class="emotion-68 emotion-52"
+              class="emotion-60 emotion-48"
             >
               Row 7 Column 4
             </td>
             <td
-              class="emotion-68 emotion-52"
+              class="emotion-60 emotion-48"
             >
               Row 7 Column 5
             </td>
           </tr>
           <tr
-            class="emotion-48 emotion-49"
+            class="emotion-44 emotion-45"
             role="row"
           >
             <td
-              class="emotion-50 emotion-51 emotion-52"
+              class="emotion-46 emotion-47 emotion-48"
             >
               <div
-                class="emotion-53 emotion-54"
+                class="emotion-49 emotion-50"
               >
                 <div
                   aria-disabled="false"
-                  class="emotion-55 emotion-56 emotion-12"
+                  class="emotion-51 emotion-52 emotion-12"
                   data-checked="true"
                   data-error="false"
                 >
@@ -6769,55 +6532,48 @@ exports[`Table > Should render correctly with selectable then click on first row
                       />
                     </g>
                   </svg>
-                  <div
-                    class="emotion-19 emotion-20"
-                  >
-                    <div
-                      class="emotion-21 emotion-20"
-                    />
-                  </div>
                 </div>
               </div>
             </td>
             <td
-              class="emotion-68 emotion-52"
+              class="emotion-60 emotion-48"
             >
               Row 8 Column 1
             </td>
             <td
-              class="emotion-68 emotion-52"
+              class="emotion-60 emotion-48"
             >
               Row 8 Column 2
             </td>
             <td
-              class="emotion-68 emotion-52"
+              class="emotion-60 emotion-48"
             >
               Row 8 Column 3
             </td>
             <td
-              class="emotion-68 emotion-52"
+              class="emotion-60 emotion-48"
             >
               Row 8 Column 4
             </td>
             <td
-              class="emotion-68 emotion-52"
+              class="emotion-60 emotion-48"
             >
               Row 8 Column 5
             </td>
           </tr>
           <tr
-            class="emotion-48 emotion-49"
+            class="emotion-44 emotion-45"
             role="row"
           >
             <td
-              class="emotion-50 emotion-51 emotion-52"
+              class="emotion-46 emotion-47 emotion-48"
             >
               <div
-                class="emotion-53 emotion-54"
+                class="emotion-49 emotion-50"
               >
                 <div
                   aria-disabled="false"
-                  class="emotion-55 emotion-56 emotion-12"
+                  class="emotion-51 emotion-52 emotion-12"
                   data-checked="true"
                   data-error="false"
                 >
@@ -6858,55 +6614,48 @@ exports[`Table > Should render correctly with selectable then click on first row
                       />
                     </g>
                   </svg>
-                  <div
-                    class="emotion-19 emotion-20"
-                  >
-                    <div
-                      class="emotion-21 emotion-20"
-                    />
-                  </div>
                 </div>
               </div>
             </td>
             <td
-              class="emotion-68 emotion-52"
+              class="emotion-60 emotion-48"
             >
               Row 9 Column 1
             </td>
             <td
-              class="emotion-68 emotion-52"
+              class="emotion-60 emotion-48"
             >
               Row 9 Column 2
             </td>
             <td
-              class="emotion-68 emotion-52"
+              class="emotion-60 emotion-48"
             >
               Row 9 Column 3
             </td>
             <td
-              class="emotion-68 emotion-52"
+              class="emotion-60 emotion-48"
             >
               Row 9 Column 4
             </td>
             <td
-              class="emotion-68 emotion-52"
+              class="emotion-60 emotion-48"
             >
               Row 9 Column 5
             </td>
           </tr>
           <tr
-            class="emotion-48 emotion-49"
+            class="emotion-44 emotion-45"
             role="row"
           >
             <td
-              class="emotion-50 emotion-51 emotion-52"
+              class="emotion-46 emotion-47 emotion-48"
             >
               <div
-                class="emotion-53 emotion-54"
+                class="emotion-49 emotion-50"
               >
                 <div
                   aria-disabled="false"
-                  class="emotion-55 emotion-56 emotion-12"
+                  class="emotion-51 emotion-52 emotion-12"
                   data-checked="true"
                   data-error="false"
                 >
@@ -6947,38 +6696,31 @@ exports[`Table > Should render correctly with selectable then click on first row
                       />
                     </g>
                   </svg>
-                  <div
-                    class="emotion-19 emotion-20"
-                  >
-                    <div
-                      class="emotion-21 emotion-20"
-                    />
-                  </div>
                 </div>
               </div>
             </td>
             <td
-              class="emotion-68 emotion-52"
+              class="emotion-60 emotion-48"
             >
               Row 10 Column 1
             </td>
             <td
-              class="emotion-68 emotion-52"
+              class="emotion-60 emotion-48"
             >
               Row 10 Column 2
             </td>
             <td
-              class="emotion-68 emotion-52"
+              class="emotion-60 emotion-48"
             >
               Row 10 Column 3
             </td>
             <td
-              class="emotion-68 emotion-52"
+              class="emotion-60 emotion-48"
             >
               Row 10 Column 4
             </td>
             <td
-              class="emotion-68 emotion-52"
+              class="emotion-60 emotion-48"
             >
               Row 10 Column 5
             </td>

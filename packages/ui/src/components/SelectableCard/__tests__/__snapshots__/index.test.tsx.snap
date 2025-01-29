@@ -447,10 +447,10 @@ exports[`SelectableCard > renders correctly with checkbox type 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   gap: 0.5rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -701,58 +701,6 @@ exports[`SelectableCard > renders correctly with checkbox type 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-
-.emotion-13 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-
-.emotion-15 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -772,11 +720,11 @@ exports[`SelectableCard > renders correctly with checkbox type 1`] = `
   width: 100%;
 }
 
-.emotion-15[data-has-label='true'] {
+.emotion-11[data-has-label='true'] {
   padding-left: 2rem;
 }
 
-.emotion-15[data-has-label='false'] {
+.emotion-11[data-has-label='false'] {
   display: contents;
 }
 
@@ -836,16 +784,9 @@ exports[`SelectableCard > renders correctly with checkbox type 1`] = `
             />
           </g>
         </svg>
-        <div
-          class="emotion-11 emotion-12"
-        >
-          <div
-            class="emotion-13 emotion-12"
-          />
-        </div>
       </div>
       <div
-        class="emotion-15 emotion-16"
+        class="emotion-11 emotion-12"
         data-has-label="false"
       >
         Checkbox card
@@ -940,10 +881,10 @@ exports[`SelectableCard > renders correctly with checkbox type and checked prop 
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   gap: 0.5rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1194,58 +1135,6 @@ exports[`SelectableCard > renders correctly with checkbox type and checked prop 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-
-.emotion-13 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-
-.emotion-15 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -1265,11 +1154,11 @@ exports[`SelectableCard > renders correctly with checkbox type and checked prop 
   width: 100%;
 }
 
-.emotion-15[data-has-label='true'] {
+.emotion-11[data-has-label='true'] {
   padding-left: 2rem;
 }
 
-.emotion-15[data-has-label='false'] {
+.emotion-11[data-has-label='false'] {
   display: contents;
 }
 
@@ -1330,16 +1219,9 @@ exports[`SelectableCard > renders correctly with checkbox type and checked prop 
             />
           </g>
         </svg>
-        <div
-          class="emotion-11 emotion-12"
-        >
-          <div
-            class="emotion-13 emotion-12"
-          />
-        </div>
       </div>
       <div
-        class="emotion-15 emotion-16"
+        class="emotion-11 emotion-12"
         data-has-label="false"
       >
         Radio card
@@ -1434,10 +1316,10 @@ exports[`SelectableCard > renders correctly with checkbox type and disabled prop
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   gap: 0.5rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1688,58 +1570,6 @@ exports[`SelectableCard > renders correctly with checkbox type and disabled prop
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-
-.emotion-13 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-
-.emotion-15 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -1759,11 +1589,11 @@ exports[`SelectableCard > renders correctly with checkbox type and disabled prop
   width: 100%;
 }
 
-.emotion-15[data-has-label='true'] {
+.emotion-11[data-has-label='true'] {
   padding-left: 2rem;
 }
 
-.emotion-15[data-has-label='false'] {
+.emotion-11[data-has-label='false'] {
   display: contents;
 }
 
@@ -1823,16 +1653,9 @@ exports[`SelectableCard > renders correctly with checkbox type and disabled prop
             />
           </g>
         </svg>
-        <div
-          class="emotion-11 emotion-12"
-        >
-          <div
-            class="emotion-13 emotion-12"
-          />
-        </div>
       </div>
       <div
-        class="emotion-15 emotion-16"
+        class="emotion-11 emotion-12"
         data-has-label="false"
       >
         Radio card
@@ -1927,10 +1750,10 @@ exports[`SelectableCard > renders correctly with checkbox type and isError prop 
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   gap: 0.5rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -2472,10 +2295,10 @@ exports[`SelectableCard > renders correctly with checkbox type and tooltip prop 
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   gap: 0.5rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -2992,10 +2815,10 @@ exports[`SelectableCard > renders correctly with complex children 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   gap: 0.5rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -6884,10 +6707,10 @@ exports[`SelectableCard > renders correctly with showTick and type checkbox 1`] 
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   gap: 0.5rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -7130,58 +6953,6 @@ exports[`SelectableCard > renders correctly with showTick and type checkbox 1`] 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-
-.emotion-13 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-
-.emotion-15 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -7201,11 +6972,11 @@ exports[`SelectableCard > renders correctly with showTick and type checkbox 1`] 
   width: 100%;
 }
 
-.emotion-15[data-has-label='true'] {
+.emotion-11[data-has-label='true'] {
   padding-left: 2rem;
 }
 
-.emotion-15[data-has-label='false'] {
+.emotion-11[data-has-label='false'] {
   display: contents;
 }
 
@@ -7265,16 +7036,9 @@ exports[`SelectableCard > renders correctly with showTick and type checkbox 1`] 
             />
           </g>
         </svg>
-        <div
-          class="emotion-11 emotion-12"
-        >
-          <div
-            class="emotion-13 emotion-12"
-          />
-        </div>
       </div>
       <div
-        class="emotion-15 emotion-16"
+        class="emotion-11 emotion-12"
         data-has-label="false"
       >
         Checkbox card
