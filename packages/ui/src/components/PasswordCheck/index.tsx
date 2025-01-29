@@ -44,13 +44,13 @@ export const PasswordCheck = ({
           <CheckCircleOutlineIcon
             sentiment="success"
             prominence="weak"
-            size={20}
+            size="large"
           />
         ) : (
           <CloseCircleOutlineIcon
             sentiment="neutral"
             prominence="weak"
-            size={20}
+            size="large"
           />
         )}
 
