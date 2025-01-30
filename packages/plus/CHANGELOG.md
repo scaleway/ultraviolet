@@ -1,5 +1,19 @@
 # @ultraviolet/plus
 
+## 0.23.0
+
+### Minor Changes
+
+- [#4708](https://github.com/scaleway/ultraviolet/pull/4708) [`d44d0dc`](https://github.com/scaleway/ultraviolet/commit/d44d0dcfd0d5ec850d0c0bf0a63cfbb67ae6bb3e) Thanks [@radhi-nasser-scaleway](https://github.com/radhi-nasser-scaleway)! - feat: add new prop `showToggleOption` to `SteppedListContainer`
+
+### Patch Changes
+
+- [#4713](https://github.com/scaleway/ultraviolet/pull/4713) [`9de3560`](https://github.com/scaleway/ultraviolet/commit/9de3560479d871bf31bc68b050ccba1e62665816) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `19.0.8`.
+
+- Updated dependencies [[`d3acc50`](https://github.com/scaleway/ultraviolet/commit/d3acc506910ecaadea92dcccaafeb600200fb274), [`ef98866`](https://github.com/scaleway/ultraviolet/commit/ef98866a1a36b3d89b032b776becd4056db98a62), [`310e32e`](https://github.com/scaleway/ultraviolet/commit/310e32e35e51bc3c53d27cf374bc5bfeaac33768), [`9de3560`](https://github.com/scaleway/ultraviolet/commit/9de3560479d871bf31bc68b050ccba1e62665816)]:
+  - @ultraviolet/ui@1.84.4
+  - @ultraviolet/icons@3.9.1
+
 ## 0.22.10
 
 ### Patch Changes
