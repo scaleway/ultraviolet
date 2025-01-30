@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { Table } from '..'
 import { Checkbox } from '../../Checkbox'
 import { Stack } from '../../Stack'
+import { Text } from '../../Text'
 
 const CHANNELS = ['email', 'app', 'sms']
 
@@ -63,19 +64,27 @@ export const SelectableColumn: StoryFn = () => {
               <Checkbox
                 onChange={() => selectAll(setIndicentNotifications)}
                 checked={getAllState(incidentNotifications)}
+                id="incident"
               >
-                Incident notifications
+                <Text as="span" variant="bodySmall" htmlFor="incident">
+                  Incident notifications
+                </Text>
               </Checkbox>
             ),
           },
           {
             label: (
-              <Checkbox
-                onChange={() => selectAll(setTechnicalNotifications)}
-                checked={getAllState(technicalNotifications)}
-              >
-                Technical notifications
-              </Checkbox>
+              <Stack direction="row" gap={1} alignItems="center">
+                <Checkbox
+                  onChange={() => selectAll(setTechnicalNotifications)}
+                  checked={getAllState(technicalNotifications)}
+                  id="technical"
+                >
+                  <Text as="span" variant="bodySmall" htmlFor="technical">
+                    Technical notifications
+                  </Text>
+                </Checkbox>
+              </Stack>
             ),
           },
           {
@@ -84,7 +93,9 @@ export const SelectableColumn: StoryFn = () => {
                 onChange={() => selectAll(setBillingNotifications)}
                 checked={getAllState(billingNotifications)}
               >
-                Billing notifications
+                <Text as="span" variant="bodySmall">
+                  Billing notifications
+                </Text>
               </Checkbox>
             ),
           },
