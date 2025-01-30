@@ -1,5 +1,13 @@
 # Change Log
 
+## 3.9.1
+
+### Patch Changes
+
+- [#4712](https://github.com/scaleway/ultraviolet/pull/4712) [`310e32e`](https://github.com/scaleway/ultraviolet/commit/310e32e35e51bc3c53d27cf374bc5bfeaac33768) Thanks [@lisalupi](https://github.com/lisalupi)! - Fix `CloseCircleOutlineIcon` sizing in viewport
+
+- [#4713](https://github.com/scaleway/ultraviolet/pull/4713) [`9de3560`](https://github.com/scaleway/ultraviolet/commit/9de3560479d871bf31bc68b050ccba1e62665816) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `19.0.8`.
+
 ## 3.9.0
 
 ### Minor Changes

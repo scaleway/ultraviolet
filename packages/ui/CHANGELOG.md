@@ -1,5 +1,18 @@
 # Change Log
 
+## 1.84.4
+
+### Patch Changes
+
+- [#4674](https://github.com/scaleway/ultraviolet/pull/4674) [`d3acc50`](https://github.com/scaleway/ultraviolet/commit/d3acc506910ecaadea92dcccaafeb600200fb274) Thanks [@lisalupi](https://github.com/lisalupi)! - `<DateInput />: fix issue with min-max date
+
+- [#4711](https://github.com/scaleway/ultraviolet/pull/4711) [`ef98866`](https://github.com/scaleway/ultraviolet/commit/ef98866a1a36b3d89b032b776becd4056db98a62) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<Checkbox />` alignement of the children used as a label
+
+- [#4713](https://github.com/scaleway/ultraviolet/pull/4713) [`9de3560`](https://github.com/scaleway/ultraviolet/commit/9de3560479d871bf31bc68b050ccba1e62665816) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `19.0.8`.
+
+- Updated dependencies [[`310e32e`](https://github.com/scaleway/ultraviolet/commit/310e32e35e51bc3c53d27cf374bc5bfeaac33768), [`9de3560`](https://github.com/scaleway/ultraviolet/commit/9de3560479d871bf31bc68b050ccba1e62665816)]:
+  - @ultraviolet/icons@3.9.1
+
 ## 1.84.3
 
 ### Patch Changes
