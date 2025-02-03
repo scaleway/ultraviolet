@@ -67,9 +67,7 @@ export const BaseDialog = ({
       <Bullet
         sentiment={sentiment}
         icon={
-          sentiment === 'warning' || sentiment === 'danger'
-            ? 'information-outline'
-            : 'check'
+          sentiment === 'warning' || sentiment === 'danger' ? 'alert' : 'check'
         }
       />
       <StyledTextTitle
