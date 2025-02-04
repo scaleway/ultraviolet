@@ -1,5 +1,13 @@
 # @ultraviolet/illustrations
 
+## 4.2.0
+
+### Minor Changes
+
+- [#4733](https://github.com/scaleway/ultraviolet/pull/4733) [`bdead34`](https://github.com/scaleway/ultraviolet/commit/bdead34b12ec1ce153018cccfcd8e2a493468b70) Thanks [@BABAK0T0](https://github.com/BABAK0T0)! - New illustration `auth-background`
+
+- [#4717](https://github.com/scaleway/ultraviolet/pull/4717) [`b81b1fd`](https://github.com/scaleway/ultraviolet/commit/b81b1fdcea1738e25b3165cef1f0fef44c46451d) Thanks [@matthprost](https://github.com/matthprost)! - New illustration `fileStorage`
+
 ## 4.1.1
 
 ### Patch Changes
