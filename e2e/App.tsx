@@ -60,7 +60,6 @@ const App = () => (
     <Router>
       <Routes>
         <Route path="/" element={<WelcomePage />} />
-        <Route path="/test" element={<WelcomePage />} />
         {pagesToRender.map(path => {
           const Element = path?.Component
 

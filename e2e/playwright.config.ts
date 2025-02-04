@@ -24,7 +24,7 @@ export default defineConfig({
   forbidOnly: !!isCI,
   retries: isCI ? 2 : 0,
   workers: isCI ? 1 : undefined,
-  reporter: 'html',
+  reporter: 'line',
   globalTimeout: isCI ? 5 * times['1min'] : undefined,
   timeout: isCI ? 1 * times['1min'] : undefined,
   use: {
