@@ -7,7 +7,7 @@ const LineTooltipContainer = styled.div`
   background: ${({ theme }) => theme.colors.neutral.backgroundStronger};
   border-radius: ${({ theme }) => theme.radii.small};
   box-shadow: ${({ theme }) => theme.shadows.tooltip};
-  padding: ${({ theme }) => theme.theme['0.5']} ${({ theme }) => theme.theme['1']};
+  padding: ${({ theme }) => theme.space['0.5']} ${({ theme }) => theme.space['1']};
   align-items: center;
 `
 const LineColorSquare = styled.span`
