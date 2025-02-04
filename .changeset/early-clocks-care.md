@@ -2,4 +2,4 @@
 "@ultraviolet/illustrations": minor
 ---
 
-New illustration `background`
+New illustration `auth-background`
