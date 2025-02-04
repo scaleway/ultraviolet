@@ -2,4 +2,4 @@
 "@ultraviolet/ui": minor
 ---
 
-add `value` prop for initial value of searchinput
+add `initialValue` prop for initial value and `value` for change value locally of searchinput
