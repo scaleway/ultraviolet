@@ -37,5 +37,4 @@ export type SearchInputProps = {
   | 'onRandomize'
   | 'onChange'
   | 'type'
-  | 'value'
 >
