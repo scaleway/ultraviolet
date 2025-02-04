@@ -14,13 +14,12 @@ const StyledPage = styled(Stack)`
 const Content = (props: { tab: string }) => {
   let tabLoaded = undefined
   switch (props.tab) {
-    case 'login': {
+    case 'login':
       tabLoaded = <LogIn />
       break
-    }
-    default: {
+
+    default:
       tabLoaded = <SignUp />
-    }
   }
   return tabLoaded
 }
