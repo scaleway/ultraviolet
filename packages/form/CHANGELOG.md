@@ -1,5 +1,15 @@
 # Change Log
 
+## 3.13.12
+
+### Patch Changes
+
+- [#4725](https://github.com/scaleway/ultraviolet/pull/4725) [`4a4ed79`](https://github.com/scaleway/ultraviolet/commit/4a4ed79d68bb1d15ce11dde755d92e9de05cc844) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@babel/core` to `7.26.7`.
+  Updated dependency `@babel/runtime` to `7.26.7`.
+  Updated dependency `@babel/preset-env` to `7.26.7`.
+- Updated dependencies [[`4a4ed79`](https://github.com/scaleway/ultraviolet/commit/4a4ed79d68bb1d15ce11dde755d92e9de05cc844)]:
+  - @ultraviolet/ui@1.84.5
+
 ## 3.13.11
 
 ### Patch Changes
