@@ -25,19 +25,31 @@ And a file `test.spec.ts` that will contain the test cases run by playwright.
 
 ## Running the tests
 
-To run the tests you can use the following command:
+> [!CAUTION]  
+> As we are in a monorepository this project needs others projects to be built. We recommend running `pnpm test:e2e` at root level which will build all the projects and run the tests without needing to run the server.
+
+**Please read the above caution**. You can still need to run locally especially to check the render of your component. To do so you can run the following commands:
 
 ```bash
-pnpm start # This will start the server with all the components
+pnpm build # at root level
 
-# In another terminal
-pnpm test:e2e # This will run the tests
+cd e2e && pnpm start # This will start the server with all the components you can check the render of your own component
+
+# In another terminal if you want to run the tests suite
+cd e2e pnpm e2e # This will start the render server and run the tests
+
+# OR
+cd e2e && pnpm e2e:debug # This will run the tests in debug mode with the interface
 ```
 
 > [!NOTE]  
-> Test are run on 3 different browsers: `chromium`, `firefox` and `webkit`.
+> Test are always run on 3 different browsers: `chromium`, `firefox` and `webkit` to ensure compatibility.
 
-## Writing the tests
+## Writing E2E Tests
 
-To write the tests you can copy and paste the `template` folder in `tests/template`. You can then rename the folder and change the content
-of the files to match the test case you want to test.
+To write the tests and ease your life we made a template. You can copy and paste the `template` folder from `tests/template` and rename the pasted folder to the name of your test case following camelCase.
+
+- `render.tsx`: this will be rendered in the browser and will contain the component / combination of components you want to test.
+- `test.spec.ts`: this will contain the playwright test cases.
+  - Do not forget to change ```await page.goto(`${baseURL}/template`)```. Where `template` is the exact same folder name this file is contained into.
+  - You should export default your Render component so routing will be correctly done.
