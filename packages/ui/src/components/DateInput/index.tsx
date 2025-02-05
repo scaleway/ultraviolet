@@ -3,14 +3,23 @@ import { CalendarRangeIcon } from '@ultraviolet/icons'
 import type { Locale } from 'date-fns'
 import type { ChangeEvent, FocusEvent } from 'react'
 import { useEffect, useMemo, useRef, useState } from 'react'
+import { Card } from '../Card'
+import { Stack } from '../Stack'
+import { Text } from '../Text'
 import { TextInputV2 } from '../TextInputV2'
 import { type ContextProps, DateInputContext } from './Context'
+import { CalendarContent } from './components/CalendarContent'
 import { CalendarPopup } from './components/Popup'
-import { formatValue } from './helpers'
+import { formatValue, styleCalendarContainer } from './helpers'
 import { getDays, getLocalizedMonths, getMonths } from './helpersLocale'
 
 const Container = styled.div`
 width: 100%;`
+
+const StyledCard = styled(Card)`
+  ${({ theme }) => styleCalendarContainer(theme)}
+  width: 264px;
+`
 
 type DateInputProps<IsRange extends undefined | boolean = false> = {
   autoFocus?: boolean
@@ -43,6 +52,10 @@ type DateInputProps<IsRange extends undefined | boolean = false> = {
   placeholder?: string
   startDate?: Date | null
   endDate?: Date | null
+  /**
+   * Display the component as an input + a calendar popup ("text") or only as a calendar ("calendar")
+   */
+  input?: 'calendar' | 'text'
   selectsRange?: IsRange
   onChange?: IsRange extends true
     ? (
@@ -84,6 +97,7 @@ export const DateInput = <IsRange extends undefined | boolean>({
   tooltip,
   selectsRange = false,
   showMonthYearPicker = false,
+  input = 'text',
   'data-testid': dataTestId,
 }: DateInputProps<IsRange>) => {
   const defaultMonthToShow = useMemo(() => {
@@ -131,6 +145,7 @@ export const DateInput = <IsRange extends undefined | boolean>({
       ({
         showMonthYearPicker,
         disabled,
+        readOnly,
         value: computedValue,
         range: computedRange,
         setRange,
@@ -154,6 +169,7 @@ export const DateInput = <IsRange extends undefined | boolean>({
     [
       showMonthYearPicker,
       disabled,
+      readOnly,
       selectsRange,
       computedValue,
       computedRange,
@@ -262,38 +278,70 @@ export const DateInput = <IsRange extends undefined | boolean>({
           if (!isPopupVisible) setVisible(true)
         }}
       >
-        <CalendarPopup
-          visible={isPopupVisible}
-          setVisible={setVisible}
-          refInput={refInput}
-        >
-          <TextInputV2
-            label={label}
-            placeholder={placeholder}
-            value={inputValue}
-            required={required}
-            error={error}
-            success={success}
-            readOnly={readOnly}
-            disabled={disabled}
-            size={size}
-            autoFocus={autoFocus}
-            helper={helper}
-            labelDescription={labelDescription}
-            name={name}
-            suffix={
-              <CalendarRangeIcon
-                size="medium"
+        {input === 'text' ? (
+          <CalendarPopup
+            visible={isPopupVisible}
+            setVisible={setVisible}
+            refInput={refInput}
+            content={<CalendarContent />}
+          >
+            <TextInputV2
+              label={label}
+              placeholder={placeholder}
+              value={inputValue}
+              required={required}
+              error={error}
+              success={success}
+              readOnly={readOnly}
+              disabled={disabled}
+              size={size}
+              autoFocus={autoFocus}
+              helper={helper}
+              labelDescription={labelDescription}
+              name={name}
+              suffix={
+                <CalendarRangeIcon
+                  size="large"
+                  sentiment="neutral"
+                  disabled={disabled}
+                />
+              }
+              ref={refInput}
+              tooltip={tooltip}
+              autoComplete="false"
+              onChange={manageOnChange}
+            />
+          </CalendarPopup>
+        ) : (
+          <Stack gap={0.5}>
+            {labelDescription ? (
+              <Stack direction="row" gap="1">
+                <Text
+                  as="label"
+                  variant="bodyStrong"
+                  prominence="strong"
+                  sentiment="neutral"
+                >
+                  {label}
+                </Text>
+                {labelDescription}
+              </Stack>
+            ) : (
+              <Text
+                as="label"
+                variant="bodyStrong"
+                prominence="strong"
                 sentiment="neutral"
-                disabled={disabled}
-              />
-            }
-            ref={refInput}
-            tooltip={tooltip}
-            autoComplete="false"
-            onChange={manageOnChange}
-          />
-        </CalendarPopup>
+              >
+                {label}
+              </Text>
+            )}
+
+            <StyledCard>
+              <CalendarContent />
+            </StyledCard>
+          </Stack>
+        )}
       </Container>
     </DateInputContext.Provider>
   )

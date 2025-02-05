@@ -46,6 +46,7 @@ export const Monthly = ({ disabled }: { disabled: boolean }) => {
     setInputValue,
     format,
     setVisible,
+    readOnly,
   } = useContext(DateInputContext)
   const [rangeState, setRangeState] = useState<'start' | 'none' | 'done'>(
     range?.start ? 'start' : 'none',
@@ -145,7 +146,7 @@ export const Monthly = ({ disabled }: { disabled: boolean }) => {
             disabled={disabled || isExcluded || isOutsideRange}
             key={month[0]}
             onClick={event => {
-              if (!isExcluded && !isOutsideRange) {
+              if (!isExcluded && !isOutsideRange && !readOnly) {
                 if (selectsRange) {
                   onClickRange(event, constructedDate)
                 } else {
