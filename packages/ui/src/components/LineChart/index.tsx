@@ -75,11 +75,32 @@ export const LineChart = ({
           stroke: theme.colors.neutral.backgroundStrong,
           strokeWidth: 1,
         },
+        text: {
+          fill: theme.colors.neutral.text,
+          fontSize: theme.typography.bodySmall.fontSize,
+          fontFamily: theme.typography.bodySmall.fontFamily,
+          fontWeight: theme.typography.bodySmall.fontWeight,
+          lineHeight: theme.typography.bodySmall.lineHeight,
+          letterSpacing: theme.typography.bodySmall.letterSpacing,
+        },
+      },
+      legends: {
+        text: {
+          fill: theme.colors.neutral.text,
+          fontFamily: theme.typography.body.fontFamily,
+          fontSize: theme.typography.bodySmall.fontSize,
+          fontWeight: theme.typography.bodySmall.fontWeight,
+          lineHeight: theme.typography.bodySmall.lineHeight,
+          letterSpacing: theme.typography.bodySmall.letterSpacing,
+        },
       },
     },
     fontFamily: theme.typography.body.fontFamily,
-    fontSize: 12,
-    textColor: theme.colors.neutral.textWeak,
+    fontSize: theme.typography.bodySmall.fontSize,
+    fontWeight: theme.typography.bodySmall.fontWeight,
+    lineHeight: theme.typography.bodySmall.lineHeight,
+    letterSpacing: theme.typography.bodySmall.letterSpacing,
+    textColor: theme.colors.neutral.text,
   }
 
   const [selected, setSelected] = useState(
