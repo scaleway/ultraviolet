@@ -1,5 +1,17 @@
 # Change Log
 
+## 1.85.0
+
+### Minor Changes
+
+- [#4734](https://github.com/scaleway/ultraviolet/pull/4734) [`1b5dd12`](https://github.com/scaleway/ultraviolet/commit/1b5dd123043ebddec4ee4013df551d8667796209) Thanks [@JulienSaguez](https://github.com/JulienSaguez)! - add `defaultValue` prop for initial value and `value` for change value locally of searchinput
+
+### Patch Changes
+
+- [#4729](https://github.com/scaleway/ultraviolet/pull/4729) [`fc68c84`](https://github.com/scaleway/ultraviolet/commit/fc68c84440eff61479ec507c513dd274a4b2e32a) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<Dialog />` component to have correct icon when having warning and danger sentiment
+
+- [#4731](https://github.com/scaleway/ultraviolet/pull/4731) [`112031d`](https://github.com/scaleway/ultraviolet/commit/112031d911fa0609e3b4945ad99f1d95624f7e9e) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<BarChart />` and `<LineChart />` colors for legends and some other bugs
+
 ## 1.84.5
 
 ### Patch Changes
