@@ -1,10 +1,6 @@
 import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
-import {
-  AlertCircleIcon,
-  AsteriskIcon,
-  CheckCircleIcon,
-} from '@ultraviolet/icons'
+import { AlertCircleIcon, CheckCircleIcon } from '@ultraviolet/icons'
 import type { DOMAttributes, ReactNode } from 'react'
 import {
   forwardRef,
@@ -14,6 +10,8 @@ import {
   useMemo,
   useRef,
 } from 'react'
+import { Button, SIZE_HEIGHT as ButtonSizeHeight } from '../Button'
+import { Label } from '../Label'
 import { Button } from '../Button'
 import { SIZE_HEIGHT as ButtonSizeHeight } from '../Button/constants'
 import { Row } from '../Row'
@@ -242,23 +240,14 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
     return (
       <Stack gap="0.5" className={className}>
         {label || labelDescription ? (
-          <Stack direction="row" gap="1" alignItems="center">
-            {label ? (
-              <Stack direction="row" gap="0.5" alignItems="start">
-                <Text
-                  as="label"
-                  variant="bodyStrong"
-                  sentiment="neutral"
-                  htmlFor={id ?? localId}
-                  prominence="strong"
-                >
-                  {label}
-                </Text>
-                {required ? <AsteriskIcon sentiment="danger" size={8} /> : null}
-              </Stack>
-            ) : null}
-            {labelDescription ?? null}
-          </Stack>
+          <Label
+            labelDescription={labelDescription}
+            required={required}
+            size="large"
+            htmlFor={id ?? localId}
+          >
+            {label}
+          </Label>
         ) : null}
         <Tooltip text={tooltip}>
           <StyledTextAreaWrapper>
