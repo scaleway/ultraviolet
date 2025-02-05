@@ -1,5 +1,14 @@
 # @ultraviolet/plus
 
+## 0.23.2
+
+### Patch Changes
+
+- [#4732](https://github.com/scaleway/ultraviolet/pull/4732) [`e5235bf`](https://github.com/scaleway/ultraviolet/commit/e5235bff9b10d06cd7f4b0527ef654543643946e) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `react-intersection-observer` to `9.15.1`.
+
+- Updated dependencies [[`1b5dd12`](https://github.com/scaleway/ultraviolet/commit/1b5dd123043ebddec4ee4013df551d8667796209), [`fc68c84`](https://github.com/scaleway/ultraviolet/commit/fc68c84440eff61479ec507c513dd274a4b2e32a), [`112031d`](https://github.com/scaleway/ultraviolet/commit/112031d911fa0609e3b4945ad99f1d95624f7e9e)]:
+  - @ultraviolet/ui@1.85.0
+
 ## 0.23.1
 
 ### Patch Changes
