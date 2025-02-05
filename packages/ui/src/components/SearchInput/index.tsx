@@ -68,6 +68,7 @@ export const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(
       'data-testid': dataTestId,
       shortcut = false,
       error,
+      defaultValue = '',
       disabled,
       className,
       minLength,
@@ -86,13 +87,14 @@ export const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(
       autoComplete,
       onKeyDown,
       role,
+      value,
     }: SearchInputProps,
     ref: Ref<HTMLInputElement>,
   ) => {
     const focusedLinkIndex = useRef(0)
     const popupRef = useRef<HTMLDivElement>(null)
     const [containerWidth, setContainerWidth] = useState(0)
-    const [searchTerms, setSearchTerms] = useState('')
+    const [searchTerms, setSearchTerms] = useState(defaultValue)
     const [isMacOS, setIsMacOS] = useState(false)
     const [keyPressed, setKeyPressed] = useState<string[]>([])
     const [isOpen, toggleIsOpen] = useReducer(state => !state, false)
@@ -154,6 +156,12 @@ export const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(
 
       return () => window.removeEventListener('resize', resizeSearchBar)
     }, [])
+
+    useEffect(() => {
+      if (value) {
+        setSearchTerms(value)
+      }
+    }, [value])
 
     const onSearchCallback = (localValue: string) => {
       setSearchTerms(localValue)
