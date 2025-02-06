@@ -1,5 +1,15 @@
 # @ultraviolet/plus
 
+## 0.23.3
+
+### Patch Changes
+
+- [#4719](https://github.com/scaleway/ultraviolet/pull/4719) [`cb9e923`](https://github.com/scaleway/ultraviolet/commit/cb9e923a2364aa82ab3f33cbd1cb068a71035b4d) Thanks [@matthprost](https://github.com/matthprost)! - Fix multiple icons that were not displayed properly
+
+- Updated dependencies [[`cb9e923`](https://github.com/scaleway/ultraviolet/commit/cb9e923a2364aa82ab3f33cbd1cb068a71035b4d), [`fa3766c`](https://github.com/scaleway/ultraviolet/commit/fa3766cf94a1cd83973be43eff92bc100390f05d)]:
+  - @ultraviolet/icons@3.10.1
+  - @ultraviolet/ui@1.85.1
+
 ## 0.23.2
 
 ### Patch Changes

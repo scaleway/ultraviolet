@@ -1,5 +1,11 @@
 # Change Log
 
+## 3.10.1
+
+### Patch Changes
+
+- [#4719](https://github.com/scaleway/ultraviolet/pull/4719) [`cb9e923`](https://github.com/scaleway/ultraviolet/commit/cb9e923a2364aa82ab3f33cbd1cb068a71035b4d) Thanks [@matthprost](https://github.com/matthprost)! - Fix multiple icons that were not displayed properly
+
 ## 3.10.0
 
 ### Minor Changes
