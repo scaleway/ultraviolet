@@ -14,7 +14,7 @@ const times = {
 export default defineConfig({
   webServer: {
     // it will start web app before running tests so you don't need to start it manually
-    command: 'pnpm install && pnpm run start',
+    command: 'pnpm run start',
     url: baseURL,
     stdout: 'ignore',
     stderr: 'pipe',
