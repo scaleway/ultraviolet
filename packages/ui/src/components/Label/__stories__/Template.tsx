@@ -4,5 +4,5 @@ import { Label } from '..'
 export const Template: StoryFn<typeof Label> = props => <Label {...props} />
 
 Template.args = {
-  label: 'Label',
+  children: 'Label',
 }

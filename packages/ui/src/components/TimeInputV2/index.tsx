@@ -179,7 +179,7 @@ type TimeInputProps = {
   autoFocus?: boolean
 } & (
   | {
-      label: string
+      label?: string
       'aria-label'?: never
     }
   | {
