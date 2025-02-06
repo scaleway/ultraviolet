@@ -365,10 +365,11 @@ describe('DateInput', () => {
     await userEvent.unhover(month)
 
     await userEvent.click(month)
-    expect(input.value).toBe('02/1995 - ')
+    expect(input.value).toBe('02/1995 - 08/1995')
 
+    await userEvent.click(input)
     await userEvent.click(screen.getByText('Sep'))
-    expect(input.value).toBe('02/1995 - 09/1995')
+    expect(input.value).toBe('09/1995 - ')
   })
 
   test('renders correctly custom format with range', () => {
