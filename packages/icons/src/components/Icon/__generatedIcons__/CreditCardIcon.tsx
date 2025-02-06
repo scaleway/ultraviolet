@@ -9,10 +9,9 @@ import type { IconProps } from '../Icon'
 export const CreditCardIcon = ({ ...props }: Omit<IconProps, 'children'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
   <Icon {...props}>
-    <path d="M2.5 4A1.5 1.5 0 0 0 1 5.5V6h18v-.5A1.5 1.5 0 0 0 17.5 4z" />
+    <path d="M3.333 4.667C2.597 4.667 2 5.264 2 6v.445h16V6c0-.736-.597-1.333-1.333-1.333z" />
     <path
-      fillRule="evenodd"
-      d="M19 8.5H1v6A1.5 1.5 0 0 0 2.5 16h15a1.5 1.5 0 0 0 1.5-1.5zM3 13.25a.75.75 0 0 1 .75-.75h1.5a.75.75 0 0 1 0 1.5h-1.5a.75.75 0 0 1-.75-.75m4.75-.75a.75.75 0 0 0 0 1.5h3.5a.75.75 0 0 0 0-1.5z"
+      d="M18 8.667H2V14c0 .736.597 1.333 1.333 1.333h13.334c.736 0 1.333-.597 1.333-1.333zM3.778 12.889c0-.368.298-.667.666-.667h1.334a.667.667 0 0 1 0 1.334H4.444a.667.667 0 0 1-.666-.667M8 12.222a.667.667 0 0 0 0 1.334h3.111a.667.667 0 1 0 0-1.334z"
       clipRule="evenodd"
     />
   </Icon>
