@@ -158,7 +158,7 @@ export const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(
     }, [])
 
     useEffect(() => {
-      if (value) {
+      if (value !== undefined) {
         setSearchTerms(value)
       }
     }, [value])
