@@ -1,5 +1,16 @@
 # Change Log
 
+## 1.85.1
+
+### Patch Changes
+
+- [#4719](https://github.com/scaleway/ultraviolet/pull/4719) [`cb9e923`](https://github.com/scaleway/ultraviolet/commit/cb9e923a2364aa82ab3f33cbd1cb068a71035b4d) Thanks [@matthprost](https://github.com/matthprost)! - Fix multiple icons that were not displayed properly
+
+- [#4740](https://github.com/scaleway/ultraviolet/pull/4740) [`fa3766c`](https://github.com/scaleway/ultraviolet/commit/fa3766cf94a1cd83973be43eff92bc100390f05d) Thanks [@JulienSaguez](https://github.com/JulienSaguez)! - fix condition with explicit undefined for value update
+
+- Updated dependencies [[`cb9e923`](https://github.com/scaleway/ultraviolet/commit/cb9e923a2364aa82ab3f33cbd1cb068a71035b4d)]:
+  - @ultraviolet/icons@3.10.1
+
 ## 1.85.0
 
 ### Minor Changes
