@@ -18,7 +18,11 @@ width: 100%;`
 
 const StyledCard = styled(Card)`
   ${({ theme }) => styleCalendarContainer(theme)}
-  width: 264px;
+  width: 16.5rem;
+
+  &[data-disabled="true"] {
+      cursor: not-allowed;
+    }
 `
 
 type DateInputProps<IsRange extends undefined | boolean = false> = {
@@ -337,7 +341,7 @@ export const DateInput = <IsRange extends undefined | boolean>({
               </Text>
             )}
 
-            <StyledCard>
+            <StyledCard disabled={disabled}>
               <CalendarContent />
             </StyledCard>
           </Stack>

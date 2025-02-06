@@ -29,7 +29,7 @@ text-transform: lowercase;
 }
 `
 
-export const Monthly = ({ disabled }: { disabled: boolean }) => {
+export const Monthly = () => {
   const {
     yearToShow,
     setValue,
@@ -47,6 +47,7 @@ export const Monthly = ({ disabled }: { disabled: boolean }) => {
     format,
     setVisible,
     readOnly,
+    disabled,
   } = useContext(DateInputContext)
   const [rangeState, setRangeState] = useState<'start' | 'none' | 'done'>(
     range?.start ? 'start' : 'none',

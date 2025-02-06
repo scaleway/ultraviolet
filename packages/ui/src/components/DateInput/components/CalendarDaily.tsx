@@ -36,7 +36,7 @@ const CapitalizedText = styled(Text)`
   }
 `
 
-export const Daily = ({ disabled }: { disabled: boolean }) => {
+export const Daily = () => {
   const {
     value,
     yearToShow,
@@ -56,6 +56,7 @@ export const Daily = ({ disabled }: { disabled: boolean }) => {
     format,
     setVisible,
     readOnly,
+    disabled,
   } = useContext(DateInputContext)
 
   const [rangeState, setRangeState] = useState<'start' | 'none' | 'done'>(

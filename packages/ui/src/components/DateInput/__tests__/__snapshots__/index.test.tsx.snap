@@ -2300,12 +2300,7 @@ exports[`DateInput > render correctly with showMonthYearPicker with default date
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  display: inline-block;
-  text-transform: lowercase;
-}
-
-.emotion-32::first-letter {
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 
 .emotion-38 {
@@ -3152,12 +3147,7 @@ exports[`DateInput > render correctly with showMonthYearPicker with excluded mon
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  display: inline-block;
-  text-transform: lowercase;
-}
-
-.emotion-32::first-letter {
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 
 .emotion-38 {
@@ -7040,12 +7030,7 @@ exports[`DateInput > renders correctly with a array of dates to exclude 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  display: inline-block;
-  text-transform: lowercase;
-}
-
-.emotion-32::first-letter {
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 
 .emotion-38 {
@@ -9575,12 +9560,7 @@ exports[`DateInput > renders correctly with date-fns locale es 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  display: inline-block;
-  text-transform: lowercase;
-}
-
-.emotion-32::first-letter {
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 
 .emotion-38 {
@@ -10720,12 +10700,7 @@ exports[`DateInput > renders correctly with date-fns locale fr 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  display: inline-block;
-  text-transform: lowercase;
-}
-
-.emotion-32::first-letter {
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 
 .emotion-38 {
@@ -11865,12 +11840,7 @@ exports[`DateInput > renders correctly with date-fns locale ru 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  display: inline-block;
-  text-transform: lowercase;
-}
-
-.emotion-32::first-letter {
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 
 .emotion-38 {
@@ -14297,7 +14267,7 @@ exports[`DateInput > renders correctly with input = "calendar 1`] = `
   padding: 1rem;
   border-radius: 0.25rem;
   background-color: #ffffff;
-  width: 264px;
+  width: 16.5rem;
 }
 
 .emotion-7[data-is-active='true'] {
@@ -14306,6 +14276,10 @@ exports[`DateInput > renders correctly with input = "calendar 1`] = `
 
 .emotion-7[data-disabled='true'] {
   border: 1px solid #e9eaeb;
+}
+
+.emotion-7[data-disabled="true"] {
+  cursor: not-allowed;
 }
 
 .emotion-9 {
@@ -14432,12 +14406,7 @@ exports[`DateInput > renders correctly with input = "calendar 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  display: inline-block;
-  text-transform: lowercase;
-}
-
-.emotion-18::first-letter {
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 
 .emotion-24 {
@@ -15149,7 +15118,7 @@ exports[`DateInput > renders correctly with input = "calendar disabled 1`] = `
   padding: 1rem;
   border-radius: 0.25rem;
   background-color: #ffffff;
-  width: 264px;
+  width: 16.5rem;
 }
 
 .emotion-7[data-is-active='true'] {
@@ -15158,6 +15127,10 @@ exports[`DateInput > renders correctly with input = "calendar disabled 1`] = `
 
 .emotion-7[data-disabled='true'] {
   border: 1px solid #e9eaeb;
+}
+
+.emotion-7[data-disabled="true"] {
+  cursor: not-allowed;
 }
 
 .emotion-9 {
@@ -15275,12 +15248,7 @@ exports[`DateInput > renders correctly with input = "calendar disabled 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  display: inline-block;
-  text-transform: lowercase;
-}
-
-.emotion-18::first-letter {
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 
 .emotion-24 {
@@ -15391,7 +15359,7 @@ exports[`DateInput > renders correctly with input = "calendar disabled 1`] = `
         </label>
         <div
           class="emotion-6 emotion-7 emotion-8"
-          data-disabled="false"
+          data-disabled="true"
           data-is-active="false"
         >
           <div

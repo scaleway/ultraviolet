@@ -70,6 +70,7 @@ export const DateField = <
   'data-testid': dataTestId,
   shouldUnregister = false,
   showMonthYearPicker,
+  input = 'text',
 }: DateFieldProps<TFieldValues, TFieldName>) => {
   const { getError } = useErrors()
   const {
@@ -152,6 +153,7 @@ export const DateField = <
           ? (field.value as [Date | null, Date | null])[1]
           : undefined
       }
+      input={input}
     />
   )
 }

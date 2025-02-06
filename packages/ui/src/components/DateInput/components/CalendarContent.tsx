@@ -9,12 +9,7 @@ import { Daily } from './CalendarDaily'
 import { Monthly } from './CalendarMonthly'
 
 const CapitalizedText = styled(Text)`
-  display: inline-block;
-  text-transform: lowercase;
-
-  &::first-letter {
-    text-transform: uppercase;
-  }
+  text-transform: capitalize;
 `
 export const CalendarContent = () => {
   const {
@@ -97,11 +92,7 @@ export const CalendarContent = () => {
           }
         />
       </Stack>
-      {showMonthYearPicker ? (
-        <Monthly disabled={disabled} />
-      ) : (
-        <Daily disabled={disabled} />
-      )}
+      {showMonthYearPicker ? <Monthly /> : <Daily />}
     </Stack>
   )
 }
