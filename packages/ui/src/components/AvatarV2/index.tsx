@@ -1,5 +1,6 @@
 import { type Theme, css } from '@emotion/react'
 import styled from '@emotion/styled'
+import { UploadIcon } from '@ultraviolet/icons'
 import { Icon } from '@ultraviolet/icons/legacy'
 import { UserProductIcon } from '@ultraviolet/icons/product'
 import { Text } from '../Text'
@@ -209,12 +210,7 @@ export const AvatarV2 = ({
   >
     {upload ? (
       <UploadContainer data-shape={shape} size={size}>
-        <Icon
-          name="upload"
-          size="large"
-          sentiment="neutral"
-          prominence="stronger"
-        />
+        <UploadIcon size="large" sentiment="neutral" prominence="stronger" />
       </UploadContainer>
     ) : null}
     {variant === 'user' ? (

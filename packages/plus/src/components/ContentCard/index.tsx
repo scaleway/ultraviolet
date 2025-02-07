@@ -1,7 +1,7 @@
 import type { Theme } from '@emotion/react'
 import { css } from '@emotion/react'
 import styled from '@emotion/styled'
-import { Icon } from '@ultraviolet/icons/legacy'
+import { OpenInNewIcon } from '@ultraviolet/icons'
 import { Stack, Text } from '@ultraviolet/ui'
 import type { MouseEventHandler, ReactNode } from 'react'
 import { forwardRef, useEffect, useMemo, useRef, useState } from 'react'
@@ -257,11 +257,7 @@ export const ContentCard = forwardRef<
                   direction={direction}
                 >
                   <IconContainer>
-                    <Icon
-                      name="open-in-new"
-                      sentiment="neutral"
-                      disabled={disabled}
-                    />
+                    <OpenInNewIcon sentiment="neutral" disabled={disabled} />
                   </IconContainer>
                 </StyledIconStack>
               ) : null}

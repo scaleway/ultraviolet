@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import { Icon } from '@ultraviolet/icons/legacy'
+import { OpenInNewIcon } from '@ultraviolet/icons'
 import { Stack, Text } from '@ultraviolet/ui'
 import type { AnchorHTMLAttributes, ElementType, ReactNode } from 'react'
 import { forwardRef } from 'react'
@@ -113,7 +113,7 @@ export const Card = forwardRef<HTMLAnchorElement, CardProps>(
           {children}
         </StyledStack>
         <IconWrapper>
-          <Icon name="open-in-new" color="neutral" />
+          <OpenInNewIcon sentiment="neutral" />
         </IconWrapper>
       </FullHeightStack>
     </StyledWrapper>

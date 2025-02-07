@@ -1,4 +1,5 @@
 import type { StoryFn } from '@storybook/react'
+import { PencilIcon } from '@ultraviolet/icons'
 import { Button, buttonVariants } from '..'
 import { Stack } from '../..'
 
@@ -9,10 +10,10 @@ export const AsLink: StoryFn<typeof Button> = () => (
         href="https://ultraviolet.scaleway.com/"
         target="_blank"
         key={variant}
-        icon="pencil"
         onClick={() => {}}
         variant={variant}
       >
+        <PencilIcon />
         Click me
       </Button>
     ))}

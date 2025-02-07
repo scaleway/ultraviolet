@@ -1,0 +1,34 @@
+import { Meta } from '@storybook/blocks'
+
+<Meta title="Migrations/Migrate Icon Usages" />
+
+# Migrate Icon Usages
+
+This migration has per main goal to optimize the bundle size and improve the performance of the application by removing the import of all icons from the `@ultraviolet/icons` package.
+<br/>
+Currently we import all the icons contained in the library but depending on your usage you may not need all of them. This issue is particularly important for the web application where the bundle size is a critical point.
+
+## How to migrate
+
+### Button
+
+`icon`, `iconPosition`, `iconVariant` props are deprecated. You can directly use the imported icon you need in the children.
+
+```tsx
+// Before
+import { Button } from '@ultraviolet/ui'
+
+<Button icon="pencil" iconPosition="right" iconVariant="outline">
+  Edit
+</Button>
+```
+
+```tsx
+// After
+import { Button } from '@ultraviolet/ui'
+import { PencilOutlineIcon } from '@ultraviolet/icons'
+
+<Button>
+  Edit <PencilOutlineIcon />
+</Button>
+```

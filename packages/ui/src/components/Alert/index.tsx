@@ -1,7 +1,12 @@
 import type { SerializedStyles, Theme } from '@emotion/react'
 import { css } from '@emotion/react'
 import styled from '@emotion/styled'
-import { Icon } from '@ultraviolet/icons/legacy'
+import {
+  AlertCircleIcon,
+  CheckCircleOutlineIcon,
+  InformationOutlineIcon,
+  LightBulbIcon,
+} from '@ultraviolet/icons'
 import type { ComponentProps, ReactNode } from 'react'
 import { useState } from 'react'
 import { Button } from '../Button'
@@ -41,15 +46,12 @@ const alertStyles = ({
   `
 }
 
-const typesDefaultIcons: Record<
-  AlertSentiment,
-  ComponentProps<typeof Icon>['name']
-> = {
-  warning: 'alert',
-  info: 'information-outline',
-  success: 'checkbox-circle-outline',
-  danger: 'alert',
-  neutral: 'light-bulb',
+const sentimentIcons = {
+  warning: AlertCircleIcon,
+  info: InformationOutlineIcon,
+  success: CheckCircleOutlineIcon,
+  danger: AlertCircleIcon,
+  neutral: LightBulbIcon,
 }
 
 const StyledStackContainer = styled(Stack, {
@@ -113,6 +115,7 @@ export const Alert = ({
   'data-testid': dataTestId,
 }: AlertProps) => {
   const [opened, setOpened] = useState(true)
+  const Icon = sentimentIcons[sentiment]
 
   if (!opened) return null
 
@@ -132,9 +135,8 @@ export const Alert = ({
       >
         <Stack alignItems="start" direction="row" gap={2} flex="1 1 auto">
           <Icon
-            name={typesDefaultIcons[sentiment]}
-            size={24}
             aria-hidden="true"
+            size="large"
             prominence={sentiment === 'neutral' ? 'strong' : undefined}
             sentiment={sentiment}
           />
