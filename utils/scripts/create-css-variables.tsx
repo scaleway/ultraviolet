@@ -12,16 +12,25 @@ const fontWeightMap = {
   SemiBold: 600,
 }
 
-const makeCSSVariablesRec = (innerKey, innerValue, prefix, formattedKey) => {
+const makeCSSVariablesRec = (
+  innerKey: string,
+  innerValue: string | object,
+  prefix: string,
+  formattedKey: string,
+): string => {
   if (typeof innerValue === 'object') {
     return Object.entries(innerValue)
-      .map(([key, value]) =>
+      .map(([key, value]: [string, string | object]) =>
         makeCSSVariablesRec(key, value, prefix, `${formattedKey}-${innerKey}`),
       )
       .join('')
   }
+  const cssValue = Object.keys(fontWeightMap).includes(
+    innerValue as keyof typeof fontWeightMap,
+  )
+    ? fontWeightMap[innerValue as keyof typeof fontWeightMap]
+    : innerValue
 
-  const cssValue = fontWeightMap[innerValue] || innerValue
   const finalCSSValue =
     typeof cssValue === 'string' ? cssValue.replace(/;$/, '') : cssValue
   const formattedInnerKey = innerKey
@@ -32,9 +41,9 @@ const makeCSSVariablesRec = (innerKey, innerValue, prefix, formattedKey) => {
   return `    --${prefix}-${formattedKey}-${formattedInnerKey}: ${finalCSSValue};\n`
 }
 
-const createCssVariables = (prefix, obj) =>
+const createCssVariables = (prefix: string, obj: object) =>
   Object.entries(obj)
-    .map(([key, value]) => {
+    .map(([key, value]: [string, string | object]) => {
       const formattedKey = key
         .replace(/([A-Z])/g, '-$1')
         .replace(/\./g, '-')
@@ -42,7 +51,7 @@ const createCssVariables = (prefix, obj) =>
 
       if (typeof value === 'object' && value !== null) {
         return Object.entries(value)
-          .map(([innerKey, innerValue]) =>
+          .map(([innerKey, innerValue]: [string, string | object]) =>
             makeCSSVariablesRec(innerKey, innerValue, prefix, formattedKey),
           )
           .join('')
@@ -52,7 +61,16 @@ const createCssVariables = (prefix, obj) =>
     })
     .join('')
 
-export const generateThemeCss = uvTheme =>
+type UvThemeType = {
+  colors: Record<string, string>
+  radii: Record<string, string>
+  shadows: Record<string, string>
+  space: Record<string, string>
+  typography: Record<string, string>
+  breakpoints: Record<string, string>
+}
+
+export const generateThemeCss = (uvTheme: UvThemeType) =>
   `:root {\n${
     createCssVariables('screen', screens) +
     createCssVariables('color', uvTheme.colors) +
