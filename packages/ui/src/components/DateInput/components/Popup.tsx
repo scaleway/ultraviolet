@@ -33,6 +33,85 @@ const handleClickOutside = (
   }
 }
 
+const PopupContent = () => {
+  const {
+    showMonthYearPicker,
+    disabled,
+    monthToShow,
+    yearToShow,
+    setMonthToShow,
+    setYearToShow,
+    maxDate,
+    minDate,
+    MONTHS_ARR,
+    setHoveredDate,
+  } = useContext(DateInputContext)
+
+  return (
+    <Stack gap={2} onMouseLeave={() => setHoveredDate(null)}>
+      <Stack direction="row" width="100%" justifyContent="space-between">
+        <Button
+          icon="arrow-left"
+          data-testid="previous-month"
+          variant="ghost"
+          sentiment="neutral"
+          size="xsmall"
+          onClick={() => {
+            if (
+              !minDate ||
+              minDate <= new Date(yearToShow, monthToShow - 1, 0)
+            ) {
+              if (!showMonthYearPicker) {
+                const [prevMonth, year] = getPreviousMonth(
+                  monthToShow,
+                  yearToShow,
+                )
+                setMonthToShow(prevMonth)
+                setYearToShow(year)
+              } else {
+                setYearToShow(yearToShow - 1)
+              }
+            }
+          }}
+          disabled={
+            !!(minDate && minDate > new Date(yearToShow, monthToShow - 1, 0))
+          }
+        />
+        <CapitalizedText as="span" variant="bodyStrong" sentiment="neutral">
+          {!showMonthYearPicker ? MONTHS_ARR[monthToShow - 1] : null}{' '}
+          {yearToShow}
+        </CapitalizedText>
+        <Button
+          icon="arrow-right"
+          data-testid="next-month"
+          variant="ghost"
+          sentiment="neutral"
+          size="xsmall"
+          onClick={() => {
+            if (!maxDate || maxDate >= new Date(yearToShow, monthToShow, 1)) {
+              if (!showMonthYearPicker) {
+                const [monthNext, year] = getNextMonth(monthToShow, yearToShow)
+                setMonthToShow(monthNext)
+                setYearToShow(year)
+              } else {
+                setYearToShow(yearToShow + 1)
+              }
+            }
+          }}
+          disabled={
+            !!(maxDate && maxDate < new Date(yearToShow, monthToShow, 1))
+          }
+        />
+      </Stack>
+      {showMonthYearPicker ? (
+        <Monthly disabled={disabled} />
+      ) : (
+        <Daily disabled={disabled} />
+      )}
+    </Stack>
+  )
+}
+
 export const CalendarPopup = ({
   children,
   visible,

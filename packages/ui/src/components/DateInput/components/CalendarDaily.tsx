@@ -70,13 +70,13 @@ export const Daily = () => {
     setVisible,
     readOnly,
     disabled,
+    hoveredDate,
+    setHoveredDate,
   } = useContext(DateInputContext)
 
   const [rangeState, setRangeState] = useState<'start' | 'end'>(
     range?.start && !range?.end ? 'end' : 'start',
   ) // Used when selectsRange is True. The current state of the range: "start" when one must select the start-date of the range, "end" when start date is selected and one must select the end-date
-
-  const [hoveredDate, setHoveredDate] = useState<Date | null>(null)
 
   const monthDays = new Date(yearToShow, monthToShow, 0).getDate() // Number of days in the month
 
@@ -295,9 +295,6 @@ export const Daily = () => {
             }}
             onMouseEnter={() => {
               if (selectsRange && range?.start) setHoveredDate(constructedDate)
-            }}
-            onMouseLeave={() => {
-              if (selectsRange && range?.start) setHoveredDate(null)
             }}
             aria-label={dayState()}
             data-testid={createTestId()}

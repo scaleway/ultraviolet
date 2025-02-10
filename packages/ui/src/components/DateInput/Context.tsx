@@ -40,6 +40,8 @@ export type ContextProps = {
   startDate?: Date | null
   endDate?: Date | null
   format?: (value?: Date) => string | undefined
+  hoveredDate?: Date | null
+  setHoveredDate: Dispatch<SetStateAction<Date | null>>
 } & (
   | {
       selectsRange: true
@@ -72,4 +74,5 @@ export const DateInputContext = createContext<ContextProps>({
   selectsRange: false,
   setVisible: () => null,
   readOnly: false,
+  setHoveredDate: () => null,
 })

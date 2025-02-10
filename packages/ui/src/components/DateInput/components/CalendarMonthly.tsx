@@ -50,11 +50,12 @@ export const Monthly = () => {
     setVisible,
     readOnly,
     disabled,
+    setHoveredDate,
+    hoveredDate,
   } = useContext(DateInputContext)
   const [rangeState, setRangeState] = useState<'start' | 'end'>(
     range?.start && !range.end ? 'end' : 'start',
   ) // Used when selectsRange is True. It is used to know the current state of the range: none when start date not selected, start when start date is selected, done when start & end date selected
-  const [hoveredDate, setHoveredDate] = useState<Date | null>(null)
 
   return (
     <Row templateColumns="1fr 1fr 1fr" gap={1}>
@@ -177,7 +178,6 @@ export const Monthly = () => {
               }
             }}
             onMouseEnter={() => setHoveredDate(constructedDate)}
-            onMouseLeave={() => setHoveredDate(null)}
             aria-label={monthState()}
           >
             {month[1]}
