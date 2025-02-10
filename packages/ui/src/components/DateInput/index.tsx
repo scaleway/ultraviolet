@@ -283,7 +283,7 @@ export const DateInput = <IsRange extends undefined | boolean>({
             name={name}
             suffix={
               <CalendarRangeIcon
-                size="large"
+                size="medium"
                 sentiment="neutral"
                 disabled={disabled}
               />
