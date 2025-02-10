@@ -1,4 +1,5 @@
-import { useTheme } from '@emotion/react'
+import type { Theme } from '@emotion/react'
+import { keyframes, useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import type { ReactNode } from 'react'
 import {
@@ -68,13 +69,25 @@ const StyledCheckbox = styled(Checkbox, {
 
 `
 
+const colorChange = (theme: Theme) => keyframes`
+  5% {
+    background-color: ${theme.colors.primary.background};
+  }
+  80% {
+    background-color: ${theme.colors.primary.background};
+  }
+`
+
 export const StyledRow = styled('tr', {
   shouldForwardProp: prop =>
-    !['sentiment', 'columns', 'columnsStartAt'].includes(prop),
+    !['highlightAnimation', 'sentiment', 'columns', 'columnsStartAt'].includes(
+      prop,
+    ),
 })<{
   sentiment: (typeof SENTIMENTS)[number]
   columns: ColumnProps[]
   columnsStartAt?: number
+  highlightAnimation?: boolean
 }>`
   /* List itself also apply style about common templating between HeaderRow and other Rows */
 
@@ -161,6 +174,10 @@ export const StyledRow = styled('tr', {
     }
   `,
     )}
+
+  animation: ${({ highlightAnimation, theme }) =>
+    highlightAnimation ? colorChange(theme) : undefined}
+    3s linear;
 `
 
 const StyledCheckboxContainer = styled.div`
@@ -203,6 +220,7 @@ type RowProps = {
    * Define a custom padding for the content in the expandable
    */
   expandablePadding?: keyof typeof space
+  highlightAnimation?: boolean
   'data-testid'?: string
 }
 
@@ -215,6 +233,7 @@ export const Row = forwardRef<HTMLTableRowElement, RowProps>(
       disabled,
       selectDisabled,
       sentiment = 'neutral',
+      highlightAnimation,
       expanded,
       className,
       expandablePadding,
@@ -319,6 +338,7 @@ export const Row = forwardRef<HTMLTableRowElement, RowProps>(
           data-testid={dataTestid}
           columns={columns}
           columnsStartAt={(selectable ? 1 : 0) + (expandButton ? 1 : 0)}
+          highlightAnimation={highlightAnimation}
         >
           {selectable ? (
             <NoPaddingCell
