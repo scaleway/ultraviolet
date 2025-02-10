@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import { Icon } from '@ultraviolet/icons/legacy'
+import { LockIcon } from '@ultraviolet/icons'
 import type { Color } from '../../theme'
 import type { XOR } from '../../types'
 
@@ -117,7 +117,7 @@ export const Avatar = ({
         textSize={textSize}
       >
         {lock ? (
-          <Icon name="lock" color="neutral" prominence="weak" />
+          <LockIcon sentiment="neutral" prominence="weak" />
         ) : (
           formatTextToAvatar(text)
         )}

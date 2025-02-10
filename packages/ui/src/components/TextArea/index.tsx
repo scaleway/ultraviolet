@@ -14,7 +14,8 @@ import {
   useMemo,
   useRef,
 } from 'react'
-import { Button, SIZE_HEIGHT as ButtonSizeHeight } from '../Button'
+import { Button } from '../Button'
+import { SIZE_HEIGHT as ButtonSizeHeight } from '../Button/constants'
 import { Row } from '../Row'
 import { Stack } from '../Stack'
 import { Text } from '../Text'

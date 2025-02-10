@@ -1,16 +1,19 @@
+import { PencilIcon } from '@ultraviolet/icons'
 import { Template } from './Template.stories'
 
 export const IconOnly = Template.bind({})
 
 IconOnly.args = {
   ...Template.args,
-  icon: 'pencil',
   'aria-label': 'edit',
-  children: undefined,
+  children: <PencilIcon />,
 }
 
 IconOnly.parameters = {
   docs: {
-    description: { story: '`children` element is not required' },
+    description: {
+      story:
+        'To define a button with an icon only you can simply pass your icon into the children.',
+    },
   },
 }
