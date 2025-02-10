@@ -1,5 +1,5 @@
 import { AsteriskIcon } from '@ultraviolet/icons'
-import type { InputHTMLAttributes, ReactNode } from 'react'
+import type { ReactNode } from 'react'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
 
@@ -10,7 +10,7 @@ type LabelProps = {
   size?: 'small' | 'medium' | 'large'
   htmlFor?: string
   id?: string
-} & Pick<InputHTMLAttributes<HTMLInputElement>, 'aria-labelledby'>
+}
 
 /**
  * Label is used inside all of our input components, but it can be used outside for design purposes
@@ -22,7 +22,6 @@ export const Label = ({
   size = 'medium',
   htmlFor,
   id,
-  'aria-labelledby': ariaLabelledBy,
 }: LabelProps) => {
   const LabelRequiredOrNot = () =>
     required ? (
@@ -34,7 +33,6 @@ export const Label = ({
           sentiment="neutral"
           htmlFor={htmlFor}
           prominence="strong"
-          aria-labelledBy={ariaLabelledBy}
         >
           {children}
         </Text>
@@ -43,7 +41,7 @@ export const Label = ({
     ) : (
       <Text
         as="label"
-        id={ariaLabelledBy}
+        id={id}
         variant={size === 'large' ? 'bodyStrong' : 'bodySmallStrong'}
         sentiment="neutral"
         htmlFor={htmlFor}

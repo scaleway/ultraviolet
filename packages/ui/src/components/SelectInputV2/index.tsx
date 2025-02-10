@@ -214,7 +214,6 @@ export const SelectInputV2 = <IsMulti extends undefined | boolean>({
           <Stack gap={0.5} aria-label={ariaLabel}>
             {label || labelDescription ? (
               <Label
-                aria-labelledby={ariaLabel}
                 htmlFor={finalId}
                 labelDescription={labelDescription}
                 required={required}
