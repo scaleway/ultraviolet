@@ -10,7 +10,7 @@ import { Badge } from '@ultraviolet/ui'
 
 <Badge icon="pencil">
   Edit
-</Button>
+</Badge>
 ```
 
 ```tsx
