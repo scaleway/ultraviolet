@@ -3,7 +3,7 @@ import styled from '@emotion/styled'
 import {
   ArrowDownIcon,
   ArrowRightIcon,
-  DragVariantIcon,
+  DragIcon,
   OpenInNewIcon,
   PinOutlineIcon,
   UnpinIcon,
@@ -92,7 +92,7 @@ const LocalExpandButton = styled(Button)`
 
 const PinnedButton = LocalExpandButton.withComponent('div')
 
-const GrabIcon = styled(DragVariantIcon)`
+const GrabIcon = styled(DragIcon)`
   opacity: 0;
   margin: 0 ${({ theme }) => theme.space['0.25']};
   cursor: grab;
@@ -673,7 +673,7 @@ export const Item = memo(
                           disabled={isItemPinned ? false : isPinDisabled}
                         >
                           <PinUnpinIcon
-                            size="large"
+                            size="medium"
                             disabled={isItemPinned ? false : isPinDisabled}
                             sentiment={active ? 'primary' : 'neutral'}
                             active={active}
@@ -867,7 +867,7 @@ export const Item = memo(
                       disabled={isItemPinned ? false : isPinDisabled}
                     >
                       <PinUnpinIcon
-                        size="large"
+                        size="medium"
                         disabled={isItemPinned ? false : isPinDisabled}
                         sentiment={active ? 'primary' : 'neutral'}
                         active={active}
