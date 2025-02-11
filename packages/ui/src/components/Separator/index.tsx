@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import { Icon } from '@ultraviolet/icons/legacy'
-import type { ComponentProps } from 'react'
+import type { ComponentProps, ReactNode } from 'react'
 import type { Color } from '../../theme'
 
 type Direction = 'horizontal' | 'vertical'
@@ -43,12 +43,16 @@ const StyledHr = styled('hr', {
 `
 
 type SeparatorProps = {
+  /**
+   * @deprecated: Use the icon directly in children
+   */
   icon?: ComponentProps<typeof Icon>['name']
   direction?: Direction
   thickness?: number
   color?: Color
   className?: string
   'data-testid'?: string
+  children?: ReactNode
 }
 
 /**
@@ -61,6 +65,7 @@ export const Separator = ({
   icon,
   className,
   'data-testid': dataTestId,
+  children,
 }: SeparatorProps) =>
   icon ? (
     <StyledIconWrapper
@@ -76,6 +81,7 @@ export const Separator = ({
         color={color}
         hasIcon
       />
+      {children}
       <StyledIcon name={icon} size={24} color={color} />
       <StyledHr
         direction={direction}

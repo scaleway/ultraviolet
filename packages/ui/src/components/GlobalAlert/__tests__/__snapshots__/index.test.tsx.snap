@@ -1544,7 +1544,9 @@ exports[`GlobalAlert > renders correctly with link 1`] = `
   text-case: none;
 }
 
-.emotion-6 .e1afnb7a2 {
+.emotion-6 .e1afnb7a2,
+.emotion-6 .e1afnb7a3,
+.emotion-6 .e1afnb7a4 {
   -webkit-transition: -webkit-transform 250ms ease-out;
   transition: transform 250ms ease-out;
 }
@@ -1564,7 +1566,11 @@ exports[`GlobalAlert > renders correctly with link 1`] = `
 }
 
 .emotion-6:hover .e1afnb7a2,
-.emotion-6:focus .e1afnb7a2 {
+.emotion-6:focus .e1afnb7a2,
+.emotion-6:hover .e1afnb7a3,
+.emotion-6:focus .e1afnb7a3,
+.emotion-6:hover .e1afnb7a4,
+.emotion-6:focus .e1afnb7a4 {
   -webkit-transform: translate(-0.25rem, 0);
   -moz-transform: translate(-0.25rem, 0);
   -ms-transform: translate(-0.25rem, 0);
