@@ -29,7 +29,7 @@ text-transform: lowercase;
 }
 `
 
-export const Monthly = ({ disabled }: { disabled: boolean }) => {
+export const Monthly = () => {
   const {
     yearToShow,
     setValue,
@@ -46,6 +46,8 @@ export const Monthly = ({ disabled }: { disabled: boolean }) => {
     setInputValue,
     format,
     setVisible,
+    readOnly,
+    disabled,
   } = useContext(DateInputContext)
   const [rangeState, setRangeState] = useState<'start' | 'none' | 'done'>(
     range?.start ? 'start' : 'none',
@@ -145,7 +147,7 @@ export const Monthly = ({ disabled }: { disabled: boolean }) => {
             disabled={disabled || isExcluded || isOutsideRange}
             key={month[0]}
             onClick={event => {
-              if (!isExcluded && !isOutsideRange) {
+              if (!isExcluded && !isOutsideRange && !readOnly) {
                 if (selectsRange) {
                   onClickRange(event, constructedDate)
                 } else {

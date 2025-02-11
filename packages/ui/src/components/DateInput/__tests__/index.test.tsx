@@ -127,20 +127,28 @@ describe('DateInput', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('render correctly with a range of date', () => {
+  test('renders correctly disabled', () => {
     const { asFragment } = renderWithTheme(
-      <DateInput
-        label="Date"
-        selectsRange
-        startDate={new Date('1995-12-11T03:24:00.000+00:00')}
-        endDate={new Date('1995-12-25T03:24:00.000+00:00')}
-        onChange={() => {}}
-      />,
+      <DateInput label="Date" disabled onChange={() => {}} />,
     )
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('render correctly with a array of dates to exclude', async () => {
+  test('renders correctly with input = "calendar', () => {
+    const { asFragment } = renderWithTheme(
+      <DateInput label="Date" input="calendar" onChange={() => {}} />,
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  test('renders correctly with input = "calendar disabled', () => {
+    const { asFragment } = renderWithTheme(
+      <DateInput label="Date" input="calendar" onChange={() => {}} disabled />,
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  test('renders correctly with a array of dates to exclude', async () => {
     const { asFragment } = renderWithTheme(
       <DateInput
         label="Date"

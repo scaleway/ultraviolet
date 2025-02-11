@@ -4,18 +4,11 @@ import { DateField, Form } from '../..'
 import { useForm } from '../../..'
 import { mockErrors } from '../../../mocks'
 
-const yesterdayDate = new Date(Date.now() - 60 * 60 * 24 * 1000)
-const todayDate = new Date()
-const INITIAL_FORM_VALUES = {
-  date: [yesterdayDate, todayDate],
-}
-
 export default {
   component: DateField,
   decorators: [
     ChildStory => {
       const methods = useForm({
-        defaultValues: INITIAL_FORM_VALUES,
         mode: 'onChange',
       })
       const {
@@ -89,3 +82,4 @@ export { Required } from './Required.stories'
 export { MinMaxDate } from './MinMaxDate.stories'
 export { MinMaxDateWithTimeField } from './MinMaxWithTimeField.stories'
 export { MinMaxDateRange } from './MinMaxDateRange.stories'
+export { Input } from './Input.stories'

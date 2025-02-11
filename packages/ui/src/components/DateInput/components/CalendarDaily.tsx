@@ -36,7 +36,7 @@ const CapitalizedText = styled(Text)`
   }
 `
 
-export const Daily = ({ disabled }: { disabled: boolean }) => {
+export const Daily = () => {
   const {
     value,
     yearToShow,
@@ -55,6 +55,8 @@ export const Daily = ({ disabled }: { disabled: boolean }) => {
     setInputValue,
     format,
     setVisible,
+    readOnly,
+    disabled,
   } = useContext(DateInputContext)
 
   const [rangeState, setRangeState] = useState<'start' | 'none' | 'done'>(
@@ -113,6 +115,7 @@ export const Daily = ({ disabled }: { disabled: boolean }) => {
           variant="bodyStrong"
           sentiment="neutral"
           key={day[0]}
+          disabled={disabled}
         >
           {day[1]}
         </CapitalizedText>
@@ -241,7 +244,7 @@ export const Daily = ({ disabled }: { disabled: boolean }) => {
             disabled={disabled || isExcluded || isOutsideRange}
             key={`${data.month}-${data.day}`}
             onClick={event => {
-              if (!isExcluded && !isOutsideRange) {
+              if (!isExcluded && !isOutsideRange && !readOnly) {
                 const newDate = getNewDate()
 
                 if (selectsRange) {
