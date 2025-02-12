@@ -81,7 +81,7 @@ const readDirectoryRecursive = async (dir: string) => {
   return results
 }
 
-const readSvg = async (filePath: string) => {
+const readSvg = async (filePath: string, suffix: string) => {
   const svgContent = await fs.readFile(filePath, 'utf8')
   const innerSvgContent = svgContent.replace(/<svg[^>]*>|<\/svg>/g, '') // Remove <svg ...> and </svg> tags
 
@@ -93,8 +93,13 @@ const readSvg = async (filePath: string) => {
     .replace(/clip-rule=/g, 'clipRule=')
     .replace(/clip-path=/g, 'clipPath=')
     .replace(/stop-color=/g, 'stopColor=')
+    .replace(/`/g, '\\`')
 
-  return updatedSvgContent.replace(/`/g, '\\`') // Escape backticks
+  if (suffix === 'Icon') {
+    return updatedSvgContent.replaceAll(/fill="[^"]*"/g, '')
+  }
+
+  return updatedSvgContent
 }
 
 const appendExportToIndex = async (output: string, iconName: string) => {
@@ -137,7 +142,7 @@ const main = async () => {
         if (file.includes('small')) {
           break
         }
-        const svgContent = await readSvg(file)
+        const svgContent = await readSvg(file, component.suffix)
         const generatedName = `${generateVariableName(file)}${component.suffix}`
         const generatedComponent = templateIcon(generatedName, svgContent)
         const filePath = `${component.output}/${generatedName}.tsx`
