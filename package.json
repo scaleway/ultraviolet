@@ -36,8 +36,8 @@
     "tokens:update": "node ./scripts/figma-synchronise-tokens.mjs && pnpm run format packages/themes/src/themes/console",
     "icons:update": "tsx ./scripts/generate-icons-file.ts && biome format --write packages/icons",
     "release": "pnpm build && pnpm changeset publish",
-    "svg": "svgo --config=./svgo.config.mjs --pretty --multipass",
-    "svg:all": "pnpm run svg -r -f 'packages/illustrations/src/assets'",
+    "svg": "svgo --pretty --multipass",
+    "svg:all": "pnpm run svg -r -f .",
     "illustrations:update": "BUCKET_NAME=scaleway-assets BUCKET_REGION=fr-par node utils/illustrations/uploadIllustrations.js && pnpm format packages/illustrations/src/",
     "lintpublish": "turbo run lintpublish"
   },
@@ -47,7 +47,7 @@
       "oxlint -c .oxlintrc.json --quiet --fix",
       "eslint --cache --cache-strategy content --fix"
     ],
-    "packages/illustrations/**/*.svg": [
+    "*.svg": [
       "pnpm run svg"
     ],
     "*.y?(a)ml": [
