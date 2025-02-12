@@ -1,7 +1,7 @@
 import { ReactComponent as addressOutline } from '../assets/default-outline/address.svg'
 import { ReactComponent as alertOutline } from '../assets/default-outline/alert-circle.svg'
 import { ReactComponent as autoFixOutline } from '../assets/default-outline/auto-fix.svg'
-import { ReactComponent as bookOpenOutlineOutline } from '../assets/default-outline/book-open-outline.svg'
+import { ReactComponent as bookOpenOutline } from '../assets/default-outline/book-open.svg'
 import { ReactComponent as bullhornOutline } from '../assets/default-outline/bullhorn.svg'
 import { ReactComponent as calculatorOutline } from '../assets/default-outline/calculator.svg'
 import { ReactComponent as calendarRangeOutline } from '../assets/default-outline/calendar-range.svg'
@@ -49,7 +49,7 @@ import { ReactComponent as weatherNightOutline } from '../assets/default-outline
 import { ReactComponent as address } from '../assets/default-solid/address.svg'
 import { ReactComponent as alert } from '../assets/default-solid/alert-circle.svg'
 import { ReactComponent as autoFix } from '../assets/default-solid/auto-fix.svg'
-import { ReactComponent as bookOpenOutline } from '../assets/default-solid/book-open-outline.svg'
+import { ReactComponent as bookOpen } from '../assets/default-solid/book-open.svg'
 import { ReactComponent as bullhorn } from '../assets/default-solid/bullhorn.svg'
 import { ReactComponent as calculator } from '../assets/default-solid/calculator.svg'
 import { ReactComponent as calendarRange } from '../assets/default-solid/calendar-range.svg'
@@ -221,7 +221,7 @@ export const ICONS = {
     address,
     alert,
     'auto-fix': autoFix,
-    'book-open-outline': bookOpenOutline,
+    'book-open': bookOpen,
     bullhorn,
     calculator,
     'calendar-range': calendarRange,
@@ -331,7 +331,7 @@ export const ICONS = {
     address: addressOutline,
     alert: alertOutline,
     'auto-fix': autoFixOutline,
-    'book-open-outline': bookOpenOutlineOutline,
+    'book-open-outline': bookOpenOutline,
     bullhorn: bullhornOutline,
     calculator: calculatorOutline,
     'calendar-range': calendarRangeOutline,
