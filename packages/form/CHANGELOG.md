@@ -1,5 +1,14 @@
 # Change Log
 
+## 3.13.16
+
+### Patch Changes
+
+- [#4737](https://github.com/scaleway/ultraviolet/pull/4737) [`3d28302`](https://github.com/scaleway/ultraviolet/commit/3d28302a867df3b16cbbe64b375d15c9742797a7) Thanks [@lisalupi](https://github.com/lisalupi)! - Add prop `input` to `<DateInputFieldV2 />`
+
+- Updated dependencies [[`3d28302`](https://github.com/scaleway/ultraviolet/commit/3d28302a867df3b16cbbe64b375d15c9742797a7)]:
+  - @ultraviolet/ui@1.85.3
+
 ## 3.13.15
 
 ### Patch Changes

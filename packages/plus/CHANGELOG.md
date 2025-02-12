@@ -1,5 +1,15 @@
 # @ultraviolet/plus
 
+## 0.23.5
+
+### Patch Changes
+
+- [#4760](https://github.com/scaleway/ultraviolet/pull/4760) [`fbec332`](https://github.com/scaleway/ultraviolet/commit/fbec332731b7d0e199a6fc142b65b0f847e053a7) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<Navigation />` icons
+
+- Updated dependencies [[`3d28302`](https://github.com/scaleway/ultraviolet/commit/3d28302a867df3b16cbbe64b375d15c9742797a7), [`c959773`](https://github.com/scaleway/ultraviolet/commit/c959773c06154ca253b2cc6ed68d01021a3de7f4), [`6108aff`](https://github.com/scaleway/ultraviolet/commit/6108affee43423302ee20c7e98410029a279c3a9)]:
+  - @ultraviolet/ui@1.85.3
+  - @ultraviolet/icons@3.11.0
+
 ## 0.23.4
 
 ### Patch Changes
