@@ -350,5 +350,8 @@ const writeFiles = async () => {
     }),
   )
 }
-
-await writeFiles()
+;(async () => {
+  if (typeof process !== 'undefined' && process.versions?.node) {
+    await writeFiles()
+  }
+})().catch(console.error)
