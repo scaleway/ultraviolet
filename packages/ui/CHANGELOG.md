@@ -1,5 +1,14 @@
 # Change Log
 
+## 1.85.3
+
+### Patch Changes
+
+- [#4737](https://github.com/scaleway/ultraviolet/pull/4737) [`3d28302`](https://github.com/scaleway/ultraviolet/commit/3d28302a867df3b16cbbe64b375d15c9742797a7) Thanks [@lisalupi](https://github.com/lisalupi)! - `<DateInput />`: new prop `input` to show calendar as a card, with no input
+
+- Updated dependencies [[`c959773`](https://github.com/scaleway/ultraviolet/commit/c959773c06154ca253b2cc6ed68d01021a3de7f4), [`6108aff`](https://github.com/scaleway/ultraviolet/commit/6108affee43423302ee20c7e98410029a279c3a9)]:
+  - @ultraviolet/icons@3.11.0
+
 ## 1.85.2
 
 ### Patch Changes

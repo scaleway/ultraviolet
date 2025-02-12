@@ -1,5 +1,15 @@
 # Change Log
 
+## 3.11.0
+
+### Minor Changes
+
+- [#4755](https://github.com/scaleway/ultraviolet/pull/4755) [`6108aff`](https://github.com/scaleway/ultraviolet/commit/6108affee43423302ee20c7e98410029a279c3a9) Thanks [@matthprost](https://github.com/matthprost)! - New category icon `<EnvironmentalFootprintCategoryIcon />`
+
+### Patch Changes
+
+- [#4761](https://github.com/scaleway/ultraviolet/pull/4761) [`c959773`](https://github.com/scaleway/ultraviolet/commit/c959773c06154ca253b2cc6ed68d01021a3de7f4) Thanks [@matthprost](https://github.com/matthprost)! - Fix icons that are broken
+
 ## 3.10.2
 
 ### Patch Changes
