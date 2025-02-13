@@ -1,25 +1,28 @@
 import styled from '@emotion/styled'
 import { Icon } from '@ultraviolet/icons/legacy'
-import type { ComponentProps } from 'react'
+import type { ComponentProps, ReactNode } from 'react'
 import type { Color } from '../../theme'
 
 type Direction = 'horizontal' | 'vertical'
 
 type StyledIconProps = {
   direction: Direction
+  color: Color
+  sentiment?: Color
 }
 
 const StyledIconWrapper = styled('div', {
-  shouldForwardProp: prop => !['direction'].includes(prop),
+  shouldForwardProp: prop =>
+    !['direction', 'color', 'sentiment'].includes(prop),
 })<StyledIconProps>`
   display: flex;
   flex-direction: ${({ direction }) =>
     direction === 'vertical' ? 'column' : 'row'};
   align-items: center;
-`
 
-const StyledIcon = styled(Icon)<{ color: Color }>`
-  fill: ${({ color, theme }) => theme.colors[color].borderWeak};
+  svg {
+    fill: ${({ sentiment, color, theme }) => (sentiment ? theme.colors[sentiment].borderWeak : theme.colors[color].borderWeak)};
+  }
 `
 
 type HorizontalSeparatorProps = SeparatorProps & {
@@ -28,7 +31,7 @@ type HorizontalSeparatorProps = SeparatorProps & {
 
 const StyledHr = styled('hr', {
   shouldForwardProp: prop =>
-    !['direction', 'thickness', 'color', 'hasIcon'].includes(prop),
+    !['direction', 'thickness', 'color', 'hasIcon', 'sentiment'].includes(prop),
 })<HorizontalSeparatorProps>`
   margin: 0;
   border: 0;
@@ -37,18 +40,28 @@ const StyledHr = styled('hr', {
   height: ${({ direction, thickness = 1 }) =>
     direction === 'horizontal' ? `${thickness}px` : 'auto'};
   flex-shrink: 0;
-  background-color: ${({ theme, color }) =>
-    theme.colors[color as Color].borderWeak};
+  background-color: ${({ theme, color, sentiment }) =>
+    sentiment
+      ? theme.colors[sentiment].borderWeak
+      : theme.colors[color as Color].borderWeak};
   ${({ hasIcon }) => hasIcon && `flex: 1;`}
 `
 
 type SeparatorProps = {
+  /**
+   * @deprecated Use the icon directly in children
+   */
   icon?: ComponentProps<typeof Icon>['name']
   direction?: Direction
   thickness?: number
+  /**
+   * @deprecated Use `sentiment` instead
+   */
   color?: Color
+  sentiment?: Color
   className?: string
   'data-testid'?: string
+  children?: ReactNode
 }
 
 /**
@@ -58,29 +71,36 @@ export const Separator = ({
   direction = 'horizontal',
   thickness = 1,
   color = 'neutral',
+  sentiment,
   icon,
   className,
   'data-testid': dataTestId,
+  children,
 }: SeparatorProps) =>
-  icon ? (
+  icon || children ? (
     <StyledIconWrapper
       role="separator"
       aria-orientation={direction}
       direction={direction}
       className={className}
       data-testid={dataTestId}
+      sentiment={sentiment}
+      color={color}
     >
       <StyledHr
         direction={direction}
         thickness={thickness}
         color={color}
+        sentiment={sentiment}
         hasIcon
       />
-      <StyledIcon name={icon} size={24} color={color} />
+      {children}
+      {icon ? <Icon name={icon} size={24} color={color} /> : null}
       <StyledHr
         direction={direction}
         thickness={thickness}
         color={color}
+        sentiment={sentiment}
         hasIcon
       />
     </StyledIconWrapper>

@@ -15,12 +15,15 @@ describe('Separator', () => {
   test(`renders correctly with custom color`, () =>
     shouldMatchEmotionSnapshot(<Separator color="primary" />))
 
+  test(`renders correctly with custom color`, () =>
+    shouldMatchEmotionSnapshot(<Separator sentiment="primary" />))
+
   test(`renders correctly with custom icon`, () =>
     shouldMatchEmotionSnapshot(<Separator icon="ray-top-arrow" />))
 
-  test(`renders correctly with custom color and icon`, () =>
+  test(`renders correctly with custom sentiment and icon`, () =>
     shouldMatchEmotionSnapshot(
-      <Separator color="primary" icon="ray-top-arrow" />,
+      <Separator sentiment="primary" icon="ray-top-arrow" />,
     ))
   test(`renders correctly with custom icon vertically`, () =>
     shouldMatchEmotionSnapshot(
