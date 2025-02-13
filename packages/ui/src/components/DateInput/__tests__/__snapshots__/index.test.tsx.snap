@@ -239,8 +239,8 @@ exports[`DateInput > render correctly with showMonthYearPicker 1`] = `
       class="emotion-0 emotion-1"
     >
       <div
-        aria-controls=":ra5:"
-        aria-describedby=":ra5:"
+        aria-controls=":r67:"
+        aria-describedby=":r67:"
         class="emotion-2 emotion-3"
         tabindex="0"
       >
@@ -255,7 +255,7 @@ exports[`DateInput > render correctly with showMonthYearPicker 1`] = `
             >
               <label
                 class="emotion-10 emotion-11"
-                for=":ra6:"
+                for=":r68:"
               >
                 Date
               </label>
@@ -274,7 +274,7 @@ exports[`DateInput > render correctly with showMonthYearPicker 1`] = `
                 autocomplete="false"
                 class="emotion-14 emotion-15"
                 data-size="large"
-                id=":ra6:"
+                id=":r68:"
                 type="text"
               />
               <div
@@ -787,6 +787,7 @@ exports[`DateInput > render correctly with showMonthYearPicker with default date
   height: 1.5625rem;
   width: 100%;
   padding: 0;
+  text-transform: capitalize;
 }
 
 .emotion-41:hover {
@@ -804,25 +805,25 @@ exports[`DateInput > render correctly with showMonthYearPicker with default date
   color: #222638;
 }
 
+.emotion-41[aria-label="in-range"] {
+  color: #521094;
+  background-color: #f1eefc;
+}
+
+.emotion-41[aria-label="in-range"]:hover {
+  color: #ffffff;
+  background-color: #792dd4;
+}
+
+.emotion-41[aria-label="not-current"] {
+  color: #b5b7bd;
+}
+
+.emotion-41[aria-label="selected"] {
+  color: #ffffff;
+}
+
 .emotion-44 {
-  color: #727683;
-  font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  display: inline-block;
-  text-transform: lowercase;
-}
-
-.emotion-44::first-letter {
-  text-transform: uppercase;
-}
-
-.emotion-47 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -862,39 +863,40 @@ exports[`DateInput > render correctly with showMonthYearPicker with default date
   height: 1.5625rem;
   width: 100%;
   padding: 0;
+  text-transform: capitalize;
 }
 
-.emotion-47:hover {
+.emotion-44:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-47:active {
+.emotion-44:active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-47:hover,
-.emotion-47:active {
+.emotion-44:hover,
+.emotion-44:active {
   background: #792dd4;
   color: #f9f9fa;
 }
 
-.emotion-50 {
-  color: #ffffff;
-  font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  display: inline-block;
-  text-transform: lowercase;
+.emotion-44[aria-label="in-range"] {
+  color: #521094;
+  background-color: #f1eefc;
 }
 
-.emotion-50::first-letter {
-  text-transform: uppercase;
+.emotion-44[aria-label="in-range"]:hover {
+  color: #ffffff;
+  background-color: #792dd4;
+}
+
+.emotion-44[aria-label="not-current"] {
+  color: #b5b7bd;
+}
+
+.emotion-44[aria-label="selected"] {
+  color: #ffffff;
 }
 
 <div
@@ -904,8 +906,8 @@ exports[`DateInput > render correctly with showMonthYearPicker with default date
       class="emotion-0 emotion-1"
     >
       <div
-        aria-controls=":ra9:"
-        aria-describedby=":ra9:"
+        aria-controls=":r6b:"
+        aria-describedby=":r6b:"
         class="emotion-2 emotion-3"
         tabindex="0"
       >
@@ -920,7 +922,7 @@ exports[`DateInput > render correctly with showMonthYearPicker with default date
             >
               <label
                 class="emotion-10 emotion-11"
-                for=":raa:"
+                for=":r6c:"
               >
                 Date
               </label>
@@ -939,7 +941,7 @@ exports[`DateInput > render correctly with showMonthYearPicker with default date
                 autocomplete="false"
                 class="emotion-14 emotion-15"
                 data-size="large"
-                id=":raa:"
+                id=":r6c:"
                 placeholder="YYYY-MM-DD"
                 type="text"
                 value="02/1995"
@@ -967,7 +969,7 @@ exports[`DateInput > render correctly with showMonthYearPicker with default date
           class="emotion-20 emotion-21 emotion-22"
           data-animated="false"
           data-has-arrow="false"
-          id=":ra9:"
+          id=":r6b:"
           role="dialog"
           style="opacity: 1;"
         >
@@ -1021,124 +1023,88 @@ exports[`DateInput > render correctly with showMonthYearPicker with default date
               class="emotion-38 emotion-39"
             >
               <button
+                aria-label="neutral"
                 class="emotion-40 emotion-41 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-43 emotion-44 emotion-11"
-                >
-                  Jan
-                </span>
+                Jan
               </button>
               <button
-                class="emotion-40 emotion-47 emotion-48"
+                aria-label="selected"
+                class="emotion-40 emotion-44 emotion-45"
                 type="button"
               >
-                <span
-                  class="emotion-43 emotion-50 emotion-11"
-                >
-                  Feb
-                </span>
+                Feb
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-40 emotion-41 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-43 emotion-44 emotion-11"
-                >
-                  Mar
-                </span>
+                Mar
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-40 emotion-41 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-43 emotion-44 emotion-11"
-                >
-                  Apr
-                </span>
+                Apr
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-40 emotion-41 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-43 emotion-44 emotion-11"
-                >
-                  May
-                </span>
+                May
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-40 emotion-41 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-43 emotion-44 emotion-11"
-                >
-                  Jun
-                </span>
+                Jun
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-40 emotion-41 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-43 emotion-44 emotion-11"
-                >
-                  Jul
-                </span>
+                Jul
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-40 emotion-41 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-43 emotion-44 emotion-11"
-                >
-                  Aug
-                </span>
+                Aug
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-40 emotion-41 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-43 emotion-44 emotion-11"
-                >
-                  Sep
-                </span>
+                Sep
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-40 emotion-41 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-43 emotion-44 emotion-11"
-                >
-                  Oct
-                </span>
+                Oct
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-40 emotion-41 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-43 emotion-44 emotion-11"
-                >
-                  Nov
-                </span>
+                Nov
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-40 emotion-41 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-43 emotion-44 emotion-11"
-                >
-                  Dec
-                </span>
+                Dec
               </button>
             </div>
           </div>
@@ -1634,6 +1600,7 @@ exports[`DateInput > render correctly with showMonthYearPicker with excluded mon
   height: 1.5625rem;
   width: 100%;
   padding: 0;
+  text-transform: capitalize;
 }
 
 .emotion-41:hover {
@@ -1651,25 +1618,25 @@ exports[`DateInput > render correctly with showMonthYearPicker with excluded mon
   color: #222638;
 }
 
+.emotion-41[aria-label="in-range"] {
+  color: #521094;
+  background-color: #f1eefc;
+}
+
+.emotion-41[aria-label="in-range"]:hover {
+  color: #ffffff;
+  background-color: #792dd4;
+}
+
+.emotion-41[aria-label="not-current"] {
+  color: #b5b7bd;
+}
+
+.emotion-41[aria-label="selected"] {
+  color: #ffffff;
+}
+
 .emotion-44 {
-  color: #727683;
-  font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  display: inline-block;
-  text-transform: lowercase;
-}
-
-.emotion-44::first-letter {
-  text-transform: uppercase;
-}
-
-.emotion-47 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1711,32 +1678,33 @@ exports[`DateInput > render correctly with showMonthYearPicker with excluded mon
   height: 1.5625rem;
   width: 100%;
   padding: 0;
+  text-transform: capitalize;
 }
 
-.emotion-47:hover {
+.emotion-44:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-50 {
+.emotion-44[aria-label="in-range"] {
+  color: #521094;
+  background-color: #f1eefc;
+}
+
+.emotion-44[aria-label="in-range"]:hover {
   color: #ffffff;
-  font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  display: inline-block;
-  text-transform: lowercase;
+  background-color: #792dd4;
 }
 
-.emotion-50::first-letter {
-  text-transform: uppercase;
+.emotion-44[aria-label="not-current"] {
+  color: #b5b7bd;
 }
 
-.emotion-95 {
+.emotion-44[aria-label="selected"] {
+  color: #ffffff;
+}
+
+.emotion-68 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1777,29 +1745,30 @@ exports[`DateInput > render correctly with showMonthYearPicker with excluded mon
   height: 1.5625rem;
   width: 100%;
   padding: 0;
+  text-transform: capitalize;
 }
 
-.emotion-95:hover {
+.emotion-68:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-98 {
+.emotion-68[aria-label="in-range"] {
+  color: #521094;
+  background-color: #f1eefc;
+}
+
+.emotion-68[aria-label="in-range"]:hover {
+  color: #ffffff;
+  background-color: #792dd4;
+}
+
+.emotion-68[aria-label="not-current"] {
   color: #b5b7bd;
-  font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  display: inline-block;
-  text-transform: lowercase;
 }
 
-.emotion-98::first-letter {
-  text-transform: uppercase;
+.emotion-68[aria-label="selected"] {
+  color: #ffffff;
 }
 
 <div
@@ -1809,8 +1778,8 @@ exports[`DateInput > render correctly with showMonthYearPicker with excluded mon
       class="emotion-0 emotion-1"
     >
       <div
-        aria-controls=":r1f1:"
-        aria-describedby=":r1f1:"
+        aria-controls=":rpa:"
+        aria-describedby=":rpa:"
         class="emotion-2 emotion-3"
         tabindex="0"
       >
@@ -1825,7 +1794,7 @@ exports[`DateInput > render correctly with showMonthYearPicker with excluded mon
             >
               <label
                 class="emotion-10 emotion-11"
-                for=":r1f2:"
+                for=":rpb:"
               >
                 Date
               </label>
@@ -1844,7 +1813,7 @@ exports[`DateInput > render correctly with showMonthYearPicker with excluded mon
                 autocomplete="false"
                 class="emotion-14 emotion-15"
                 data-size="large"
-                id=":r1f2:"
+                id=":rpb:"
                 placeholder="YYYY-MM-DD"
                 type="text"
                 value="02/1995"
@@ -1872,7 +1841,7 @@ exports[`DateInput > render correctly with showMonthYearPicker with excluded mon
           class="emotion-20 emotion-21 emotion-22"
           data-animated="false"
           data-has-arrow="false"
-          id=":r1f1:"
+          id=":rpa:"
           role="dialog"
           style="opacity: 1;"
         >
@@ -1926,126 +1895,90 @@ exports[`DateInput > render correctly with showMonthYearPicker with excluded mon
               class="emotion-38 emotion-39"
             >
               <button
+                aria-label="neutral"
                 class="emotion-40 emotion-41 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-43 emotion-44 emotion-11"
-                >
-                  Jan
-                </span>
+                Jan
               </button>
               <button
-                class="emotion-40 emotion-47 emotion-48"
+                aria-label="selected"
+                class="emotion-40 emotion-44 emotion-45"
                 disabled=""
                 type="button"
               >
-                <span
-                  class="emotion-43 emotion-50 emotion-11"
-                >
-                  Feb
-                </span>
+                Feb
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-40 emotion-41 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-43 emotion-44 emotion-11"
-                >
-                  Mar
-                </span>
+                Mar
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-40 emotion-41 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-43 emotion-44 emotion-11"
-                >
-                  Apr
-                </span>
+                Apr
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-40 emotion-41 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-43 emotion-44 emotion-11"
-                >
-                  May
-                </span>
+                May
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-40 emotion-41 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-43 emotion-44 emotion-11"
-                >
-                  Jun
-                </span>
+                Jun
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-40 emotion-41 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-43 emotion-44 emotion-11"
-                >
-                  Jul
-                </span>
+                Jul
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-40 emotion-41 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-43 emotion-44 emotion-11"
-                >
-                  Aug
-                </span>
+                Aug
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-40 emotion-41 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-43 emotion-44 emotion-11"
-                >
-                  Sep
-                </span>
+                Sep
               </button>
               <button
-                class="emotion-40 emotion-95 emotion-28"
+                aria-label="neutral"
+                class="emotion-40 emotion-68 emotion-28"
                 disabled=""
                 type="button"
               >
-                <span
-                  class="emotion-43 emotion-98 emotion-11"
-                >
-                  Oct
-                </span>
+                Oct
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-40 emotion-41 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-43 emotion-44 emotion-11"
-                >
-                  Nov
-                </span>
+                Nov
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-40 emotion-41 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-43 emotion-44 emotion-11"
-                >
-                  Dec
-                </span>
+                Dec
               </button>
             </div>
           </div>
@@ -2295,8 +2228,8 @@ exports[`DateInput > renders correctly custom format with range 1`] = `
       class="emotion-0 emotion-1"
     >
       <div
-        aria-controls=":r1ig:"
-        aria-describedby=":r1ig:"
+        aria-controls=":rri:"
+        aria-describedby=":rri:"
         class="emotion-2 emotion-3"
         tabindex="0"
       >
@@ -2311,7 +2244,7 @@ exports[`DateInput > renders correctly custom format with range 1`] = `
             >
               <label
                 class="emotion-10 emotion-11"
-                for=":r1ih:"
+                for=":rrj:"
               >
                 Date
               </label>
@@ -2330,7 +2263,7 @@ exports[`DateInput > renders correctly custom format with range 1`] = `
                 autocomplete="false"
                 class="emotion-14 emotion-15"
                 data-size="large"
-                id=":r1ih:"
+                id=":rrj:"
                 name="test"
                 type="text"
                 value="1995-12-11T03:24:00.000Z - 1995-12-11T03:24:00.000Z"
@@ -2902,8 +2835,8 @@ exports[`DateInput > renders correctly disabled 2`] = `
       class="emotion-0 emotion-1"
     >
       <div
-        aria-controls=":rb8:"
-        aria-describedby=":rb8:"
+        aria-controls=":r6u:"
+        aria-describedby=":r6u:"
         class="emotion-2 emotion-3"
         tabindex="0"
       >
@@ -2918,7 +2851,7 @@ exports[`DateInput > renders correctly disabled 2`] = `
             >
               <label
                 class="emotion-10 emotion-11"
-                for=":rb9:"
+                for=":r6v:"
               >
                 Date
               </label>
@@ -2938,7 +2871,7 @@ exports[`DateInput > renders correctly disabled 2`] = `
                 class="emotion-14 emotion-15"
                 data-size="large"
                 disabled=""
-                id=":rb9:"
+                id=":r6v:"
                 type="text"
               />
               <div
@@ -5234,6 +5167,7 @@ exports[`DateInput > renders correctly with a array of dates to exclude 1`] = `
   height: 1.5625rem;
   width: 100%;
   padding: 0;
+  color: #727683;
 }
 
 .emotion-62:hover {
@@ -5251,31 +5185,26 @@ exports[`DateInput > renders correctly with a array of dates to exclude 1`] = `
   color: #222638;
 }
 
-.emotion-64 {
+.emotion-62[aria-label="in-range"] {
+  color: #521094;
+  background-color: #f1eefc;
+}
+
+.emotion-62[aria-label="in-range"]:hover {
+  color: #ffffff;
+  background-color: #792dd4;
+}
+
+.emotion-62[aria-label="not-current"],
+.emotion-62:disabled {
   color: #b5b7bd;
-  font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
 }
 
-.emotion-84 {
-  color: #727683;
-  font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.emotion-62[aria-label="selected"] {
+  color: #ffffff;
 }
 
-.emotion-132 {
+.emotion-104 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -5315,36 +5244,44 @@ exports[`DateInput > renders correctly with a array of dates to exclude 1`] = `
   height: 1.5625rem;
   width: 100%;
   padding: 0;
+  color: #727683;
 }
 
-.emotion-132:hover {
+.emotion-104:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-132:active {
+.emotion-104:active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-132:hover,
-.emotion-132:active {
+.emotion-104:hover,
+.emotion-104:active {
   background: #792dd4;
   color: #f9f9fa;
 }
 
-.emotion-134 {
-  color: #ffffff;
-  font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.emotion-104[aria-label="in-range"] {
+  color: #521094;
+  background-color: #f1eefc;
 }
 
-.emotion-137 {
+.emotion-104[aria-label="in-range"]:hover {
+  color: #ffffff;
+  background-color: #792dd4;
+}
+
+.emotion-104[aria-label="not-current"],
+.emotion-104:disabled {
+  color: #b5b7bd;
+}
+
+.emotion-104[aria-label="selected"] {
+  color: #ffffff;
+}
+
+.emotion-107 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -5385,11 +5322,31 @@ exports[`DateInput > renders correctly with a array of dates to exclude 1`] = `
   height: 1.5625rem;
   width: 100%;
   padding: 0;
+  color: #727683;
 }
 
-.emotion-137:hover {
+.emotion-107:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
+}
+
+.emotion-107[aria-label="in-range"] {
+  color: #521094;
+  background-color: #f1eefc;
+}
+
+.emotion-107[aria-label="in-range"]:hover {
+  color: #ffffff;
+  background-color: #792dd4;
+}
+
+.emotion-107[aria-label="not-current"],
+.emotion-107:disabled {
+  color: #b5b7bd;
+}
+
+.emotion-107[aria-label="selected"] {
+  color: #ffffff;
 }
 
 <div
@@ -5399,8 +5356,8 @@ exports[`DateInput > renders correctly with a array of dates to exclude 1`] = `
       class="emotion-0 emotion-1"
     >
       <div
-        aria-controls=":rha:"
-        aria-describedby=":rha:"
+        aria-controls=":rac:"
+        aria-describedby=":rac:"
         class="emotion-2 emotion-3"
         tabindex="0"
       >
@@ -5415,7 +5372,7 @@ exports[`DateInput > renders correctly with a array of dates to exclude 1`] = `
             >
               <label
                 class="emotion-10 emotion-11"
-                for=":rhb:"
+                for=":rad:"
               >
                 Date
               </label>
@@ -5434,7 +5391,7 @@ exports[`DateInput > renders correctly with a array of dates to exclude 1`] = `
                 autocomplete="false"
                 class="emotion-14 emotion-15"
                 data-size="large"
-                id=":rhb:"
+                id=":rad:"
                 placeholder="YYYY-MM-DD"
                 type="text"
                 value="12/11/1995"
@@ -5462,7 +5419,7 @@ exports[`DateInput > renders correctly with a array of dates to exclude 1`] = `
           class="emotion-20 emotion-21 emotion-22"
           data-animated="false"
           data-has-arrow="false"
-          id=":rha:"
+          id=":rac:"
           role="dialog"
           style="opacity: 1;"
         >
@@ -5551,438 +5508,312 @@ exports[`DateInput > renders correctly with a array of dates to exclude 1`] = `
                 Su
               </p>
               <button
+                aria-label="not-current"
+                class="emotion-61 emotion-62 emotion-28"
+                data-testid="dayLastMonth"
+                type="button"
+              >
+                27
+              </button>
+              <button
+                aria-label="not-current"
+                class="emotion-61 emotion-62 emotion-28"
+                data-testid="dayLastMonth"
+                type="button"
+              >
+                28
+              </button>
+              <button
+                aria-label="not-current"
+                class="emotion-61 emotion-62 emotion-28"
+                data-testid="dayLastMonth"
+                type="button"
+              >
+                29
+              </button>
+              <button
+                aria-label="not-current"
+                class="emotion-61 emotion-62 emotion-28"
+                data-testid="dayLastMonth"
+                type="button"
+              >
+                30
+              </button>
+              <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-64 emotion-11"
-                  data-testid="dayLastMonth"
-                >
-                  27
-                </span>
+                1
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-64 emotion-11"
-                  data-testid="dayLastMonth"
-                >
-                  28
-                </span>
+                2
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-64 emotion-11"
-                  data-testid="dayLastMonth"
-                >
-                  29
-                </span>
+                3
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-64 emotion-11"
-                  data-testid="dayLastMonth"
-                >
-                  30
-                </span>
+                4
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  1
-                </span>
+                5
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  2
-                </span>
+                6
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  3
-                </span>
+                7
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  4
-                </span>
+                8
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  5
-                </span>
+                9
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  6
-                </span>
+                10
               </button>
               <button
-                class="emotion-61 emotion-62 emotion-28"
+                aria-label="selected"
+                class="emotion-61 emotion-104 emotion-105"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  7
-                </span>
+                11
               </button>
               <button
-                class="emotion-61 emotion-62 emotion-28"
-                type="button"
-              >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  8
-                </span>
-              </button>
-              <button
-                class="emotion-61 emotion-62 emotion-28"
-                type="button"
-              >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  9
-                </span>
-              </button>
-              <button
-                class="emotion-61 emotion-62 emotion-28"
-                type="button"
-              >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  10
-                </span>
-              </button>
-              <button
-                class="emotion-61 emotion-132 emotion-133"
-                type="button"
-              >
-                <span
-                  class="emotion-134 emotion-11"
-                >
-                  11
-                </span>
-              </button>
-              <button
-                class="emotion-61 emotion-137 emotion-28"
+                aria-label="neutral"
+                class="emotion-61 emotion-107 emotion-28"
                 disabled=""
                 type="button"
               >
-                <span
-                  class="emotion-64 emotion-11"
-                >
-                  12
-                </span>
+                12
               </button>
               <button
-                class="emotion-61 emotion-137 emotion-28"
+                aria-label="neutral"
+                class="emotion-61 emotion-107 emotion-28"
                 disabled=""
                 type="button"
               >
-                <span
-                  class="emotion-64 emotion-11"
-                >
-                  13
-                </span>
+                13
               </button>
               <button
-                class="emotion-61 emotion-137 emotion-28"
+                aria-label="neutral"
+                class="emotion-61 emotion-107 emotion-28"
                 disabled=""
                 type="button"
               >
-                <span
-                  class="emotion-64 emotion-11"
-                >
-                  14
-                </span>
+                14
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  15
-                </span>
+                15
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  16
-                </span>
+                16
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  17
-                </span>
+                17
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  18
-                </span>
+                18
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  19
-                </span>
+                19
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  20
-                </span>
+                20
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  21
-                </span>
+                21
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  22
-                </span>
+                22
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  23
-                </span>
+                23
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  24
-                </span>
+                24
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  25
-                </span>
+                25
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  26
-                </span>
+                26
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  27
-                </span>
+                27
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  28
-                </span>
+                28
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  29
-                </span>
+                29
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  30
-                </span>
+                30
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  31
-                </span>
+                31
               </button>
               <button
+                aria-label="not-current"
                 class="emotion-61 emotion-62 emotion-28"
+                data-testid="dayNextMonth"
                 type="button"
               >
-                <span
-                  class="emotion-64 emotion-11"
-                  data-testid="dayNextMonth"
-                >
-                  1
-                </span>
+                1
               </button>
               <button
+                aria-label="not-current"
                 class="emotion-61 emotion-62 emotion-28"
+                data-testid="dayNextMonth"
                 type="button"
               >
-                <span
-                  class="emotion-64 emotion-11"
-                  data-testid="dayNextMonth"
-                >
-                  2
-                </span>
+                2
               </button>
               <button
+                aria-label="not-current"
                 class="emotion-61 emotion-62 emotion-28"
+                data-testid="dayNextMonth"
                 type="button"
               >
-                <span
-                  class="emotion-64 emotion-11"
-                  data-testid="dayNextMonth"
-                >
-                  3
-                </span>
+                3
               </button>
               <button
+                aria-label="not-current"
                 class="emotion-61 emotion-62 emotion-28"
+                data-testid="dayNextMonth"
                 type="button"
               >
-                <span
-                  class="emotion-64 emotion-11"
-                  data-testid="dayNextMonth"
-                >
-                  4
-                </span>
+                4
               </button>
               <button
+                aria-label="not-current"
                 class="emotion-61 emotion-62 emotion-28"
+                data-testid="dayNextMonth"
                 type="button"
               >
-                <span
-                  class="emotion-64 emotion-11"
-                  data-testid="dayNextMonth"
-                >
-                  5
-                </span>
+                5
               </button>
               <button
+                aria-label="not-current"
                 class="emotion-61 emotion-62 emotion-28"
+                data-testid="dayNextMonth"
                 type="button"
               >
-                <span
-                  class="emotion-64 emotion-11"
-                  data-testid="dayNextMonth"
-                >
-                  6
-                </span>
+                6
               </button>
               <button
+                aria-label="not-current"
                 class="emotion-61 emotion-62 emotion-28"
+                data-testid="dayNextMonth"
                 type="button"
               >
-                <span
-                  class="emotion-64 emotion-11"
-                  data-testid="dayNextMonth"
-                >
-                  7
-                </span>
+                7
               </button>
             </div>
           </div>
@@ -6496,6 +6327,7 @@ exports[`DateInput > renders correctly with date-fns locale es 1`] = `
   height: 1.5625rem;
   width: 100%;
   padding: 0;
+  color: #727683;
 }
 
 .emotion-62:hover {
@@ -6513,28 +6345,23 @@ exports[`DateInput > renders correctly with date-fns locale es 1`] = `
   color: #222638;
 }
 
-.emotion-64 {
-  color: #b5b7bd;
-  font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.emotion-62[aria-label="in-range"] {
+  color: #521094;
+  background-color: #f1eefc;
 }
 
-.emotion-84 {
-  color: #727683;
-  font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.emotion-62[aria-label="in-range"]:hover {
+  color: #ffffff;
+  background-color: #792dd4;
+}
+
+.emotion-62[aria-label="not-current"],
+.emotion-62:disabled {
+  color: #b5b7bd;
+}
+
+.emotion-62[aria-label="selected"] {
+  color: #ffffff;
 }
 
 <div
@@ -6544,8 +6371,8 @@ exports[`DateInput > renders correctly with date-fns locale es 1`] = `
       class="emotion-0 emotion-1"
     >
       <div
-        aria-controls=":r41:"
-        aria-describedby=":r41:"
+        aria-controls=":r2n:"
+        aria-describedby=":r2n:"
         class="emotion-2 emotion-3"
         tabindex="0"
       >
@@ -6560,7 +6387,7 @@ exports[`DateInput > renders correctly with date-fns locale es 1`] = `
             >
               <label
                 class="emotion-10 emotion-11"
-                for=":r42:"
+                for=":r2o:"
               >
                 Date
               </label>
@@ -6579,7 +6406,7 @@ exports[`DateInput > renders correctly with date-fns locale es 1`] = `
                 autocomplete="false"
                 class="emotion-14 emotion-15"
                 data-size="large"
-                id=":r42:"
+                id=":r2o:"
                 type="text"
               />
               <div
@@ -6605,7 +6432,7 @@ exports[`DateInput > renders correctly with date-fns locale es 1`] = `
           class="emotion-20 emotion-21 emotion-22"
           data-animated="false"
           data-has-arrow="false"
-          id=":r41:"
+          id=":r2n:"
           role="dialog"
           style="opacity: 1;"
         >
@@ -6694,435 +6521,309 @@ exports[`DateInput > renders correctly with date-fns locale es 1`] = `
                 do
               </p>
               <button
+                aria-label="not-current"
                 class="emotion-61 emotion-62 emotion-28"
+                data-testid="dayLastMonth"
                 type="button"
               >
-                <span
-                  class="emotion-64 emotion-11"
-                  data-testid="dayLastMonth"
-                >
-                  28
-                </span>
+                28
               </button>
               <button
+                aria-label="not-current"
                 class="emotion-61 emotion-62 emotion-28"
+                data-testid="dayLastMonth"
                 type="button"
               >
-                <span
-                  class="emotion-64 emotion-11"
-                  data-testid="dayLastMonth"
-                >
-                  29
-                </span>
+                29
               </button>
               <button
+                aria-label="not-current"
                 class="emotion-61 emotion-62 emotion-28"
+                data-testid="dayLastMonth"
                 type="button"
               >
-                <span
-                  class="emotion-64 emotion-11"
-                  data-testid="dayLastMonth"
-                >
-                  30
-                </span>
+                30
               </button>
               <button
+                aria-label="not-current"
                 class="emotion-61 emotion-62 emotion-28"
+                data-testid="dayLastMonth"
                 type="button"
               >
-                <span
-                  class="emotion-64 emotion-11"
-                  data-testid="dayLastMonth"
-                >
-                  31
-                </span>
+                31
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  1
-                </span>
+                1
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  2
-                </span>
+                2
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  3
-                </span>
+                3
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  4
-                </span>
+                4
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  5
-                </span>
+                5
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  6
-                </span>
+                6
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  7
-                </span>
+                7
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  8
-                </span>
+                8
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  9
-                </span>
+                9
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  10
-                </span>
+                10
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  11
-                </span>
+                11
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  12
-                </span>
+                12
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  13
-                </span>
+                13
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  14
-                </span>
+                14
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  15
-                </span>
+                15
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  16
-                </span>
+                16
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  17
-                </span>
+                17
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  18
-                </span>
+                18
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  19
-                </span>
+                19
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  20
-                </span>
+                20
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  21
-                </span>
+                21
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  22
-                </span>
+                22
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  23
-                </span>
+                23
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  24
-                </span>
+                24
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  25
-                </span>
+                25
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  26
-                </span>
+                26
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  27
-                </span>
+                27
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  28
-                </span>
+                28
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  29
-                </span>
+                29
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  30
-                </span>
+                30
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  31
-                </span>
+                31
               </button>
               <button
+                aria-label="not-current"
                 class="emotion-61 emotion-62 emotion-28"
+                data-testid="dayNextMonth"
                 type="button"
               >
-                <span
-                  class="emotion-64 emotion-11"
-                  data-testid="dayNextMonth"
-                >
-                  1
-                </span>
+                1
               </button>
               <button
+                aria-label="not-current"
                 class="emotion-61 emotion-62 emotion-28"
+                data-testid="dayNextMonth"
                 type="button"
               >
-                <span
-                  class="emotion-64 emotion-11"
-                  data-testid="dayNextMonth"
-                >
-                  2
-                </span>
+                2
               </button>
               <button
+                aria-label="not-current"
                 class="emotion-61 emotion-62 emotion-28"
+                data-testid="dayNextMonth"
                 type="button"
               >
-                <span
-                  class="emotion-64 emotion-11"
-                  data-testid="dayNextMonth"
-                >
-                  3
-                </span>
+                3
               </button>
               <button
+                aria-label="not-current"
                 class="emotion-61 emotion-62 emotion-28"
+                data-testid="dayNextMonth"
                 type="button"
               >
-                <span
-                  class="emotion-64 emotion-11"
-                  data-testid="dayNextMonth"
-                >
-                  4
-                </span>
+                4
               </button>
               <button
+                aria-label="not-current"
                 class="emotion-61 emotion-62 emotion-28"
+                data-testid="dayNextMonth"
                 type="button"
               >
-                <span
-                  class="emotion-64 emotion-11"
-                  data-testid="dayNextMonth"
-                >
-                  5
-                </span>
+                5
               </button>
               <button
+                aria-label="not-current"
                 class="emotion-61 emotion-62 emotion-28"
+                data-testid="dayNextMonth"
                 type="button"
               >
-                <span
-                  class="emotion-64 emotion-11"
-                  data-testid="dayNextMonth"
-                >
-                  6
-                </span>
+                6
               </button>
               <button
+                aria-label="not-current"
                 class="emotion-61 emotion-62 emotion-28"
+                data-testid="dayNextMonth"
                 type="button"
               >
-                <span
-                  class="emotion-64 emotion-11"
-                  data-testid="dayNextMonth"
-                >
-                  7
-                </span>
+                7
               </button>
             </div>
           </div>
@@ -7636,6 +7337,7 @@ exports[`DateInput > renders correctly with date-fns locale fr 1`] = `
   height: 1.5625rem;
   width: 100%;
   padding: 0;
+  color: #727683;
 }
 
 .emotion-62:hover {
@@ -7653,28 +7355,23 @@ exports[`DateInput > renders correctly with date-fns locale fr 1`] = `
   color: #222638;
 }
 
-.emotion-64 {
-  color: #b5b7bd;
-  font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.emotion-62[aria-label="in-range"] {
+  color: #521094;
+  background-color: #f1eefc;
 }
 
-.emotion-84 {
-  color: #727683;
-  font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.emotion-62[aria-label="in-range"]:hover {
+  color: #ffffff;
+  background-color: #792dd4;
+}
+
+.emotion-62[aria-label="not-current"],
+.emotion-62:disabled {
+  color: #b5b7bd;
+}
+
+.emotion-62[aria-label="selected"] {
+  color: #ffffff;
 }
 
 <div
@@ -7834,435 +7531,309 @@ exports[`DateInput > renders correctly with date-fns locale fr 1`] = `
                 di
               </p>
               <button
+                aria-label="not-current"
                 class="emotion-61 emotion-62 emotion-28"
+                data-testid="dayLastMonth"
                 type="button"
               >
-                <span
-                  class="emotion-64 emotion-11"
-                  data-testid="dayLastMonth"
-                >
-                  28
-                </span>
+                28
               </button>
               <button
+                aria-label="not-current"
                 class="emotion-61 emotion-62 emotion-28"
+                data-testid="dayLastMonth"
                 type="button"
               >
-                <span
-                  class="emotion-64 emotion-11"
-                  data-testid="dayLastMonth"
-                >
-                  29
-                </span>
+                29
               </button>
               <button
+                aria-label="not-current"
                 class="emotion-61 emotion-62 emotion-28"
+                data-testid="dayLastMonth"
                 type="button"
               >
-                <span
-                  class="emotion-64 emotion-11"
-                  data-testid="dayLastMonth"
-                >
-                  30
-                </span>
+                30
               </button>
               <button
+                aria-label="not-current"
                 class="emotion-61 emotion-62 emotion-28"
+                data-testid="dayLastMonth"
                 type="button"
               >
-                <span
-                  class="emotion-64 emotion-11"
-                  data-testid="dayLastMonth"
-                >
-                  31
-                </span>
+                31
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  1
-                </span>
+                1
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  2
-                </span>
+                2
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  3
-                </span>
+                3
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  4
-                </span>
+                4
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  5
-                </span>
+                5
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  6
-                </span>
+                6
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  7
-                </span>
+                7
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  8
-                </span>
+                8
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  9
-                </span>
+                9
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  10
-                </span>
+                10
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  11
-                </span>
+                11
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  12
-                </span>
+                12
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  13
-                </span>
+                13
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  14
-                </span>
+                14
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  15
-                </span>
+                15
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  16
-                </span>
+                16
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  17
-                </span>
+                17
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  18
-                </span>
+                18
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  19
-                </span>
+                19
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  20
-                </span>
+                20
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  21
-                </span>
+                21
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  22
-                </span>
+                22
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  23
-                </span>
+                23
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  24
-                </span>
+                24
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  25
-                </span>
+                25
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  26
-                </span>
+                26
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  27
-                </span>
+                27
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  28
-                </span>
+                28
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  29
-                </span>
+                29
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  30
-                </span>
+                30
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  31
-                </span>
+                31
               </button>
               <button
+                aria-label="not-current"
                 class="emotion-61 emotion-62 emotion-28"
+                data-testid="dayNextMonth"
                 type="button"
               >
-                <span
-                  class="emotion-64 emotion-11"
-                  data-testid="dayNextMonth"
-                >
-                  1
-                </span>
+                1
               </button>
               <button
+                aria-label="not-current"
                 class="emotion-61 emotion-62 emotion-28"
+                data-testid="dayNextMonth"
                 type="button"
               >
-                <span
-                  class="emotion-64 emotion-11"
-                  data-testid="dayNextMonth"
-                >
-                  2
-                </span>
+                2
               </button>
               <button
+                aria-label="not-current"
                 class="emotion-61 emotion-62 emotion-28"
+                data-testid="dayNextMonth"
                 type="button"
               >
-                <span
-                  class="emotion-64 emotion-11"
-                  data-testid="dayNextMonth"
-                >
-                  3
-                </span>
+                3
               </button>
               <button
+                aria-label="not-current"
                 class="emotion-61 emotion-62 emotion-28"
+                data-testid="dayNextMonth"
                 type="button"
               >
-                <span
-                  class="emotion-64 emotion-11"
-                  data-testid="dayNextMonth"
-                >
-                  4
-                </span>
+                4
               </button>
               <button
+                aria-label="not-current"
                 class="emotion-61 emotion-62 emotion-28"
+                data-testid="dayNextMonth"
                 type="button"
               >
-                <span
-                  class="emotion-64 emotion-11"
-                  data-testid="dayNextMonth"
-                >
-                  5
-                </span>
+                5
               </button>
               <button
+                aria-label="not-current"
                 class="emotion-61 emotion-62 emotion-28"
+                data-testid="dayNextMonth"
                 type="button"
               >
-                <span
-                  class="emotion-64 emotion-11"
-                  data-testid="dayNextMonth"
-                >
-                  6
-                </span>
+                6
               </button>
               <button
+                aria-label="not-current"
                 class="emotion-61 emotion-62 emotion-28"
+                data-testid="dayNextMonth"
                 type="button"
               >
-                <span
-                  class="emotion-64 emotion-11"
-                  data-testid="dayNextMonth"
-                >
-                  7
-                </span>
+                7
               </button>
             </div>
           </div>
@@ -8776,6 +8347,7 @@ exports[`DateInput > renders correctly with date-fns locale ru 1`] = `
   height: 1.5625rem;
   width: 100%;
   padding: 0;
+  color: #727683;
 }
 
 .emotion-62:hover {
@@ -8793,28 +8365,23 @@ exports[`DateInput > renders correctly with date-fns locale ru 1`] = `
   color: #222638;
 }
 
-.emotion-64 {
-  color: #b5b7bd;
-  font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.emotion-62[aria-label="in-range"] {
+  color: #521094;
+  background-color: #f1eefc;
 }
 
-.emotion-84 {
-  color: #727683;
-  font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.emotion-62[aria-label="in-range"]:hover {
+  color: #ffffff;
+  background-color: #792dd4;
+}
+
+.emotion-62[aria-label="not-current"],
+.emotion-62:disabled {
+  color: #b5b7bd;
+}
+
+.emotion-62[aria-label="selected"] {
+  color: #ffffff;
 }
 
 <div
@@ -8824,8 +8391,8 @@ exports[`DateInput > renders correctly with date-fns locale ru 1`] = `
       class="emotion-0 emotion-1"
     >
       <div
-        aria-controls=":r73:"
-        aria-describedby=":r73:"
+        aria-controls=":r4f:"
+        aria-describedby=":r4f:"
         class="emotion-2 emotion-3"
         tabindex="0"
       >
@@ -8840,7 +8407,7 @@ exports[`DateInput > renders correctly with date-fns locale ru 1`] = `
             >
               <label
                 class="emotion-10 emotion-11"
-                for=":r74:"
+                for=":r4g:"
               >
                 Date
               </label>
@@ -8859,7 +8426,7 @@ exports[`DateInput > renders correctly with date-fns locale ru 1`] = `
                 autocomplete="false"
                 class="emotion-14 emotion-15"
                 data-size="large"
-                id=":r74:"
+                id=":r4g:"
                 type="text"
               />
               <div
@@ -8885,7 +8452,7 @@ exports[`DateInput > renders correctly with date-fns locale ru 1`] = `
           class="emotion-20 emotion-21 emotion-22"
           data-animated="false"
           data-has-arrow="false"
-          id=":r73:"
+          id=":r4f:"
           role="dialog"
           style="opacity: 1;"
         >
@@ -8974,435 +8541,309 @@ exports[`DateInput > renders correctly with date-fns locale ru 1`] = `
                 во
               </p>
               <button
+                aria-label="not-current"
                 class="emotion-61 emotion-62 emotion-28"
+                data-testid="dayLastMonth"
                 type="button"
               >
-                <span
-                  class="emotion-64 emotion-11"
-                  data-testid="dayLastMonth"
-                >
-                  28
-                </span>
+                28
               </button>
               <button
+                aria-label="not-current"
                 class="emotion-61 emotion-62 emotion-28"
+                data-testid="dayLastMonth"
                 type="button"
               >
-                <span
-                  class="emotion-64 emotion-11"
-                  data-testid="dayLastMonth"
-                >
-                  29
-                </span>
+                29
               </button>
               <button
+                aria-label="not-current"
                 class="emotion-61 emotion-62 emotion-28"
+                data-testid="dayLastMonth"
                 type="button"
               >
-                <span
-                  class="emotion-64 emotion-11"
-                  data-testid="dayLastMonth"
-                >
-                  30
-                </span>
+                30
               </button>
               <button
+                aria-label="not-current"
                 class="emotion-61 emotion-62 emotion-28"
+                data-testid="dayLastMonth"
                 type="button"
               >
-                <span
-                  class="emotion-64 emotion-11"
-                  data-testid="dayLastMonth"
-                >
-                  31
-                </span>
+                31
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  1
-                </span>
+                1
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  2
-                </span>
+                2
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  3
-                </span>
+                3
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  4
-                </span>
+                4
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  5
-                </span>
+                5
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  6
-                </span>
+                6
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  7
-                </span>
+                7
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  8
-                </span>
+                8
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  9
-                </span>
+                9
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  10
-                </span>
+                10
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  11
-                </span>
+                11
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  12
-                </span>
+                12
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  13
-                </span>
+                13
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  14
-                </span>
+                14
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  15
-                </span>
+                15
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  16
-                </span>
+                16
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  17
-                </span>
+                17
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  18
-                </span>
+                18
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  19
-                </span>
+                19
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  20
-                </span>
+                20
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  21
-                </span>
+                21
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  22
-                </span>
+                22
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  23
-                </span>
+                23
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  24
-                </span>
+                24
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  25
-                </span>
+                25
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  26
-                </span>
+                26
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  27
-                </span>
+                27
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  28
-                </span>
+                28
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  29
-                </span>
+                29
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  30
-                </span>
+                30
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-61 emotion-62 emotion-28"
                 type="button"
               >
-                <span
-                  class="emotion-84 emotion-11"
-                >
-                  31
-                </span>
+                31
               </button>
               <button
+                aria-label="not-current"
                 class="emotion-61 emotion-62 emotion-28"
+                data-testid="dayNextMonth"
                 type="button"
               >
-                <span
-                  class="emotion-64 emotion-11"
-                  data-testid="dayNextMonth"
-                >
-                  1
-                </span>
+                1
               </button>
               <button
+                aria-label="not-current"
                 class="emotion-61 emotion-62 emotion-28"
+                data-testid="dayNextMonth"
                 type="button"
               >
-                <span
-                  class="emotion-64 emotion-11"
-                  data-testid="dayNextMonth"
-                >
-                  2
-                </span>
+                2
               </button>
               <button
+                aria-label="not-current"
                 class="emotion-61 emotion-62 emotion-28"
+                data-testid="dayNextMonth"
                 type="button"
               >
-                <span
-                  class="emotion-64 emotion-11"
-                  data-testid="dayNextMonth"
-                >
-                  3
-                </span>
+                3
               </button>
               <button
+                aria-label="not-current"
                 class="emotion-61 emotion-62 emotion-28"
+                data-testid="dayNextMonth"
                 type="button"
               >
-                <span
-                  class="emotion-64 emotion-11"
-                  data-testid="dayNextMonth"
-                >
-                  4
-                </span>
+                4
               </button>
               <button
+                aria-label="not-current"
                 class="emotion-61 emotion-62 emotion-28"
+                data-testid="dayNextMonth"
                 type="button"
               >
-                <span
-                  class="emotion-64 emotion-11"
-                  data-testid="dayNextMonth"
-                >
-                  5
-                </span>
+                5
               </button>
               <button
+                aria-label="not-current"
                 class="emotion-61 emotion-62 emotion-28"
+                data-testid="dayNextMonth"
                 type="button"
               >
-                <span
-                  class="emotion-64 emotion-11"
-                  data-testid="dayNextMonth"
-                >
-                  6
-                </span>
+                6
               </button>
               <button
+                aria-label="not-current"
                 class="emotion-61 emotion-62 emotion-28"
+                data-testid="dayNextMonth"
                 type="button"
               >
-                <span
-                  class="emotion-64 emotion-11"
-                  data-testid="dayNextMonth"
-                >
-                  7
-                </span>
+                7
               </button>
             </div>
           </div>
@@ -9984,6 +9425,7 @@ exports[`DateInput > renders correctly with input = "calendar 1`] = `
   height: 1.5625rem;
   width: 100%;
   padding: 0;
+  color: #727683;
 }
 
 .emotion-48:hover {
@@ -10001,28 +9443,23 @@ exports[`DateInput > renders correctly with input = "calendar 1`] = `
   color: #222638;
 }
 
-.emotion-50 {
-  color: #b5b7bd;
-  font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.emotion-48[aria-label="in-range"] {
+  color: #521094;
+  background-color: #f1eefc;
 }
 
-.emotion-70 {
-  color: #727683;
-  font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.emotion-48[aria-label="in-range"]:hover {
+  color: #ffffff;
+  background-color: #792dd4;
+}
+
+.emotion-48[aria-label="not-current"],
+.emotion-48:disabled {
+  color: #b5b7bd;
+}
+
+.emotion-48[aria-label="selected"] {
+  color: #ffffff;
 }
 
 <div
@@ -10129,435 +9566,309 @@ exports[`DateInput > renders correctly with input = "calendar 1`] = `
                 Su
               </p>
               <button
+                aria-label="not-current"
                 class="emotion-47 emotion-48 emotion-14"
+                data-testid="dayLastMonth"
                 type="button"
               >
-                <span
-                  class="emotion-50 emotion-5"
-                  data-testid="dayLastMonth"
-                >
-                  28
-                </span>
+                28
               </button>
               <button
+                aria-label="not-current"
                 class="emotion-47 emotion-48 emotion-14"
+                data-testid="dayLastMonth"
                 type="button"
               >
-                <span
-                  class="emotion-50 emotion-5"
-                  data-testid="dayLastMonth"
-                >
-                  29
-                </span>
+                29
               </button>
               <button
+                aria-label="not-current"
                 class="emotion-47 emotion-48 emotion-14"
+                data-testid="dayLastMonth"
                 type="button"
               >
-                <span
-                  class="emotion-50 emotion-5"
-                  data-testid="dayLastMonth"
-                >
-                  30
-                </span>
+                30
               </button>
               <button
+                aria-label="not-current"
                 class="emotion-47 emotion-48 emotion-14"
+                data-testid="dayLastMonth"
                 type="button"
               >
-                <span
-                  class="emotion-50 emotion-5"
-                  data-testid="dayLastMonth"
-                >
-                  31
-                </span>
+                31
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-47 emotion-48 emotion-14"
                 type="button"
               >
-                <span
-                  class="emotion-70 emotion-5"
-                >
-                  1
-                </span>
+                1
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-47 emotion-48 emotion-14"
                 type="button"
               >
-                <span
-                  class="emotion-70 emotion-5"
-                >
-                  2
-                </span>
+                2
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-47 emotion-48 emotion-14"
                 type="button"
               >
-                <span
-                  class="emotion-70 emotion-5"
-                >
-                  3
-                </span>
+                3
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-47 emotion-48 emotion-14"
                 type="button"
               >
-                <span
-                  class="emotion-70 emotion-5"
-                >
-                  4
-                </span>
+                4
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-47 emotion-48 emotion-14"
                 type="button"
               >
-                <span
-                  class="emotion-70 emotion-5"
-                >
-                  5
-                </span>
+                5
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-47 emotion-48 emotion-14"
                 type="button"
               >
-                <span
-                  class="emotion-70 emotion-5"
-                >
-                  6
-                </span>
+                6
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-47 emotion-48 emotion-14"
                 type="button"
               >
-                <span
-                  class="emotion-70 emotion-5"
-                >
-                  7
-                </span>
+                7
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-47 emotion-48 emotion-14"
                 type="button"
               >
-                <span
-                  class="emotion-70 emotion-5"
-                >
-                  8
-                </span>
+                8
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-47 emotion-48 emotion-14"
                 type="button"
               >
-                <span
-                  class="emotion-70 emotion-5"
-                >
-                  9
-                </span>
+                9
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-47 emotion-48 emotion-14"
                 type="button"
               >
-                <span
-                  class="emotion-70 emotion-5"
-                >
-                  10
-                </span>
+                10
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-47 emotion-48 emotion-14"
                 type="button"
               >
-                <span
-                  class="emotion-70 emotion-5"
-                >
-                  11
-                </span>
+                11
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-47 emotion-48 emotion-14"
                 type="button"
               >
-                <span
-                  class="emotion-70 emotion-5"
-                >
-                  12
-                </span>
+                12
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-47 emotion-48 emotion-14"
                 type="button"
               >
-                <span
-                  class="emotion-70 emotion-5"
-                >
-                  13
-                </span>
+                13
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-47 emotion-48 emotion-14"
                 type="button"
               >
-                <span
-                  class="emotion-70 emotion-5"
-                >
-                  14
-                </span>
+                14
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-47 emotion-48 emotion-14"
                 type="button"
               >
-                <span
-                  class="emotion-70 emotion-5"
-                >
-                  15
-                </span>
+                15
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-47 emotion-48 emotion-14"
                 type="button"
               >
-                <span
-                  class="emotion-70 emotion-5"
-                >
-                  16
-                </span>
+                16
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-47 emotion-48 emotion-14"
                 type="button"
               >
-                <span
-                  class="emotion-70 emotion-5"
-                >
-                  17
-                </span>
+                17
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-47 emotion-48 emotion-14"
                 type="button"
               >
-                <span
-                  class="emotion-70 emotion-5"
-                >
-                  18
-                </span>
+                18
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-47 emotion-48 emotion-14"
                 type="button"
               >
-                <span
-                  class="emotion-70 emotion-5"
-                >
-                  19
-                </span>
+                19
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-47 emotion-48 emotion-14"
                 type="button"
               >
-                <span
-                  class="emotion-70 emotion-5"
-                >
-                  20
-                </span>
+                20
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-47 emotion-48 emotion-14"
                 type="button"
               >
-                <span
-                  class="emotion-70 emotion-5"
-                >
-                  21
-                </span>
+                21
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-47 emotion-48 emotion-14"
                 type="button"
               >
-                <span
-                  class="emotion-70 emotion-5"
-                >
-                  22
-                </span>
+                22
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-47 emotion-48 emotion-14"
                 type="button"
               >
-                <span
-                  class="emotion-70 emotion-5"
-                >
-                  23
-                </span>
+                23
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-47 emotion-48 emotion-14"
                 type="button"
               >
-                <span
-                  class="emotion-70 emotion-5"
-                >
-                  24
-                </span>
+                24
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-47 emotion-48 emotion-14"
                 type="button"
               >
-                <span
-                  class="emotion-70 emotion-5"
-                >
-                  25
-                </span>
+                25
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-47 emotion-48 emotion-14"
                 type="button"
               >
-                <span
-                  class="emotion-70 emotion-5"
-                >
-                  26
-                </span>
+                26
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-47 emotion-48 emotion-14"
                 type="button"
               >
-                <span
-                  class="emotion-70 emotion-5"
-                >
-                  27
-                </span>
+                27
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-47 emotion-48 emotion-14"
                 type="button"
               >
-                <span
-                  class="emotion-70 emotion-5"
-                >
-                  28
-                </span>
+                28
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-47 emotion-48 emotion-14"
                 type="button"
               >
-                <span
-                  class="emotion-70 emotion-5"
-                >
-                  29
-                </span>
+                29
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-47 emotion-48 emotion-14"
                 type="button"
               >
-                <span
-                  class="emotion-70 emotion-5"
-                >
-                  30
-                </span>
+                30
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-47 emotion-48 emotion-14"
                 type="button"
               >
-                <span
-                  class="emotion-70 emotion-5"
-                >
-                  31
-                </span>
+                31
               </button>
               <button
+                aria-label="not-current"
                 class="emotion-47 emotion-48 emotion-14"
+                data-testid="dayNextMonth"
                 type="button"
               >
-                <span
-                  class="emotion-50 emotion-5"
-                  data-testid="dayNextMonth"
-                >
-                  1
-                </span>
+                1
               </button>
               <button
+                aria-label="not-current"
                 class="emotion-47 emotion-48 emotion-14"
+                data-testid="dayNextMonth"
                 type="button"
               >
-                <span
-                  class="emotion-50 emotion-5"
-                  data-testid="dayNextMonth"
-                >
-                  2
-                </span>
+                2
               </button>
               <button
+                aria-label="not-current"
                 class="emotion-47 emotion-48 emotion-14"
+                data-testid="dayNextMonth"
                 type="button"
               >
-                <span
-                  class="emotion-50 emotion-5"
-                  data-testid="dayNextMonth"
-                >
-                  3
-                </span>
+                3
               </button>
               <button
+                aria-label="not-current"
                 class="emotion-47 emotion-48 emotion-14"
+                data-testid="dayNextMonth"
                 type="button"
               >
-                <span
-                  class="emotion-50 emotion-5"
-                  data-testid="dayNextMonth"
-                >
-                  4
-                </span>
+                4
               </button>
               <button
+                aria-label="not-current"
                 class="emotion-47 emotion-48 emotion-14"
+                data-testid="dayNextMonth"
                 type="button"
               >
-                <span
-                  class="emotion-50 emotion-5"
-                  data-testid="dayNextMonth"
-                >
-                  5
-                </span>
+                5
               </button>
               <button
+                aria-label="not-current"
                 class="emotion-47 emotion-48 emotion-14"
+                data-testid="dayNextMonth"
                 type="button"
               >
-                <span
-                  class="emotion-50 emotion-5"
-                  data-testid="dayNextMonth"
-                >
-                  6
-                </span>
+                6
               </button>
               <button
+                aria-label="not-current"
                 class="emotion-47 emotion-48 emotion-14"
+                data-testid="dayNextMonth"
                 type="button"
               >
-                <span
-                  class="emotion-50 emotion-5"
-                  data-testid="dayNextMonth"
-                >
-                  7
-                </span>
+                7
               </button>
             </div>
           </div>
@@ -10827,6 +10138,7 @@ exports[`DateInput > renders correctly with input = "calendar disabled 1`] = `
   height: 1.5625rem;
   width: 100%;
   padding: 0;
+  color: #727683;
 }
 
 .emotion-48:hover {
@@ -10834,16 +10146,23 @@ exports[`DateInput > renders correctly with input = "calendar disabled 1`] = `
   text-decoration: none;
 }
 
-.emotion-50 {
+.emotion-48[aria-label="in-range"] {
+  color: #521094;
+  background-color: #f1eefc;
+}
+
+.emotion-48[aria-label="in-range"]:hover {
+  color: #ffffff;
+  background-color: #792dd4;
+}
+
+.emotion-48[aria-label="not-current"],
+.emotion-48:disabled {
   color: #b5b7bd;
-  font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+}
+
+.emotion-48[aria-label="selected"] {
+  color: #ffffff;
 }
 
 <div
@@ -10952,477 +10271,351 @@ exports[`DateInput > renders correctly with input = "calendar disabled 1`] = `
                 Su
               </p>
               <button
+                aria-label="not-current"
                 class="emotion-47 emotion-48 emotion-14"
+                data-testid="dayLastMonth"
                 disabled=""
                 type="button"
               >
-                <span
-                  class="emotion-50 emotion-5"
-                  data-testid="dayLastMonth"
-                >
-                  28
-                </span>
+                28
               </button>
               <button
+                aria-label="not-current"
                 class="emotion-47 emotion-48 emotion-14"
+                data-testid="dayLastMonth"
                 disabled=""
                 type="button"
               >
-                <span
-                  class="emotion-50 emotion-5"
-                  data-testid="dayLastMonth"
-                >
-                  29
-                </span>
+                29
               </button>
               <button
+                aria-label="not-current"
                 class="emotion-47 emotion-48 emotion-14"
+                data-testid="dayLastMonth"
                 disabled=""
                 type="button"
               >
-                <span
-                  class="emotion-50 emotion-5"
-                  data-testid="dayLastMonth"
-                >
-                  30
-                </span>
+                30
               </button>
               <button
+                aria-label="not-current"
                 class="emotion-47 emotion-48 emotion-14"
+                data-testid="dayLastMonth"
                 disabled=""
                 type="button"
               >
-                <span
-                  class="emotion-50 emotion-5"
-                  data-testid="dayLastMonth"
-                >
-                  31
-                </span>
+                31
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-47 emotion-48 emotion-14"
                 disabled=""
                 type="button"
               >
-                <span
-                  class="emotion-50 emotion-5"
-                >
-                  1
-                </span>
+                1
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-47 emotion-48 emotion-14"
                 disabled=""
                 type="button"
               >
-                <span
-                  class="emotion-50 emotion-5"
-                >
-                  2
-                </span>
+                2
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-47 emotion-48 emotion-14"
                 disabled=""
                 type="button"
               >
-                <span
-                  class="emotion-50 emotion-5"
-                >
-                  3
-                </span>
+                3
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-47 emotion-48 emotion-14"
                 disabled=""
                 type="button"
               >
-                <span
-                  class="emotion-50 emotion-5"
-                >
-                  4
-                </span>
+                4
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-47 emotion-48 emotion-14"
                 disabled=""
                 type="button"
               >
-                <span
-                  class="emotion-50 emotion-5"
-                >
-                  5
-                </span>
+                5
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-47 emotion-48 emotion-14"
                 disabled=""
                 type="button"
               >
-                <span
-                  class="emotion-50 emotion-5"
-                >
-                  6
-                </span>
+                6
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-47 emotion-48 emotion-14"
                 disabled=""
                 type="button"
               >
-                <span
-                  class="emotion-50 emotion-5"
-                >
-                  7
-                </span>
+                7
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-47 emotion-48 emotion-14"
                 disabled=""
                 type="button"
               >
-                <span
-                  class="emotion-50 emotion-5"
-                >
-                  8
-                </span>
+                8
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-47 emotion-48 emotion-14"
                 disabled=""
                 type="button"
               >
-                <span
-                  class="emotion-50 emotion-5"
-                >
-                  9
-                </span>
+                9
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-47 emotion-48 emotion-14"
                 disabled=""
                 type="button"
               >
-                <span
-                  class="emotion-50 emotion-5"
-                >
-                  10
-                </span>
+                10
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-47 emotion-48 emotion-14"
                 disabled=""
                 type="button"
               >
-                <span
-                  class="emotion-50 emotion-5"
-                >
-                  11
-                </span>
+                11
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-47 emotion-48 emotion-14"
                 disabled=""
                 type="button"
               >
-                <span
-                  class="emotion-50 emotion-5"
-                >
-                  12
-                </span>
+                12
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-47 emotion-48 emotion-14"
                 disabled=""
                 type="button"
               >
-                <span
-                  class="emotion-50 emotion-5"
-                >
-                  13
-                </span>
+                13
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-47 emotion-48 emotion-14"
                 disabled=""
                 type="button"
               >
-                <span
-                  class="emotion-50 emotion-5"
-                >
-                  14
-                </span>
+                14
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-47 emotion-48 emotion-14"
                 disabled=""
                 type="button"
               >
-                <span
-                  class="emotion-50 emotion-5"
-                >
-                  15
-                </span>
+                15
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-47 emotion-48 emotion-14"
                 disabled=""
                 type="button"
               >
-                <span
-                  class="emotion-50 emotion-5"
-                >
-                  16
-                </span>
+                16
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-47 emotion-48 emotion-14"
                 disabled=""
                 type="button"
               >
-                <span
-                  class="emotion-50 emotion-5"
-                >
-                  17
-                </span>
+                17
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-47 emotion-48 emotion-14"
                 disabled=""
                 type="button"
               >
-                <span
-                  class="emotion-50 emotion-5"
-                >
-                  18
-                </span>
+                18
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-47 emotion-48 emotion-14"
                 disabled=""
                 type="button"
               >
-                <span
-                  class="emotion-50 emotion-5"
-                >
-                  19
-                </span>
+                19
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-47 emotion-48 emotion-14"
                 disabled=""
                 type="button"
               >
-                <span
-                  class="emotion-50 emotion-5"
-                >
-                  20
-                </span>
+                20
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-47 emotion-48 emotion-14"
                 disabled=""
                 type="button"
               >
-                <span
-                  class="emotion-50 emotion-5"
-                >
-                  21
-                </span>
+                21
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-47 emotion-48 emotion-14"
                 disabled=""
                 type="button"
               >
-                <span
-                  class="emotion-50 emotion-5"
-                >
-                  22
-                </span>
+                22
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-47 emotion-48 emotion-14"
                 disabled=""
                 type="button"
               >
-                <span
-                  class="emotion-50 emotion-5"
-                >
-                  23
-                </span>
+                23
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-47 emotion-48 emotion-14"
                 disabled=""
                 type="button"
               >
-                <span
-                  class="emotion-50 emotion-5"
-                >
-                  24
-                </span>
+                24
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-47 emotion-48 emotion-14"
                 disabled=""
                 type="button"
               >
-                <span
-                  class="emotion-50 emotion-5"
-                >
-                  25
-                </span>
+                25
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-47 emotion-48 emotion-14"
                 disabled=""
                 type="button"
               >
-                <span
-                  class="emotion-50 emotion-5"
-                >
-                  26
-                </span>
+                26
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-47 emotion-48 emotion-14"
                 disabled=""
                 type="button"
               >
-                <span
-                  class="emotion-50 emotion-5"
-                >
-                  27
-                </span>
+                27
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-47 emotion-48 emotion-14"
                 disabled=""
                 type="button"
               >
-                <span
-                  class="emotion-50 emotion-5"
-                >
-                  28
-                </span>
+                28
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-47 emotion-48 emotion-14"
                 disabled=""
                 type="button"
               >
-                <span
-                  class="emotion-50 emotion-5"
-                >
-                  29
-                </span>
+                29
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-47 emotion-48 emotion-14"
                 disabled=""
                 type="button"
               >
-                <span
-                  class="emotion-50 emotion-5"
-                >
-                  30
-                </span>
+                30
               </button>
               <button
+                aria-label="neutral"
                 class="emotion-47 emotion-48 emotion-14"
                 disabled=""
                 type="button"
               >
-                <span
-                  class="emotion-50 emotion-5"
-                >
-                  31
-                </span>
+                31
               </button>
               <button
+                aria-label="not-current"
                 class="emotion-47 emotion-48 emotion-14"
+                data-testid="dayNextMonth"
                 disabled=""
                 type="button"
               >
-                <span
-                  class="emotion-50 emotion-5"
-                  data-testid="dayNextMonth"
-                >
-                  1
-                </span>
+                1
               </button>
               <button
+                aria-label="not-current"
                 class="emotion-47 emotion-48 emotion-14"
+                data-testid="dayNextMonth"
                 disabled=""
                 type="button"
               >
-                <span
-                  class="emotion-50 emotion-5"
-                  data-testid="dayNextMonth"
-                >
-                  2
-                </span>
+                2
               </button>
               <button
+                aria-label="not-current"
                 class="emotion-47 emotion-48 emotion-14"
+                data-testid="dayNextMonth"
                 disabled=""
                 type="button"
               >
-                <span
-                  class="emotion-50 emotion-5"
-                  data-testid="dayNextMonth"
-                >
-                  3
-                </span>
+                3
               </button>
               <button
+                aria-label="not-current"
                 class="emotion-47 emotion-48 emotion-14"
+                data-testid="dayNextMonth"
                 disabled=""
                 type="button"
               >
-                <span
-                  class="emotion-50 emotion-5"
-                  data-testid="dayNextMonth"
-                >
-                  4
-                </span>
+                4
               </button>
               <button
+                aria-label="not-current"
                 class="emotion-47 emotion-48 emotion-14"
+                data-testid="dayNextMonth"
                 disabled=""
                 type="button"
               >
-                <span
-                  class="emotion-50 emotion-5"
-                  data-testid="dayNextMonth"
-                >
-                  5
-                </span>
+                5
               </button>
               <button
+                aria-label="not-current"
                 class="emotion-47 emotion-48 emotion-14"
+                data-testid="dayNextMonth"
                 disabled=""
                 type="button"
               >
-                <span
-                  class="emotion-50 emotion-5"
-                  data-testid="dayNextMonth"
-                >
-                  6
-                </span>
+                6
               </button>
               <button
+                aria-label="not-current"
                 class="emotion-47 emotion-48 emotion-14"
+                data-testid="dayNextMonth"
                 disabled=""
                 type="button"
               >
-                <span
-                  class="emotion-50 emotion-5"
-                  data-testid="dayNextMonth"
-                >
-                  7
-                </span>
+                7
               </button>
             </div>
           </div>

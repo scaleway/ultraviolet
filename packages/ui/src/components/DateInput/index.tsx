@@ -139,6 +139,7 @@ export const DateInput = <IsRange extends undefined | boolean>({
       format,
     ),
   )
+  const [hoveredDate, setHoveredDate] = useState<Date | null>(null)
   const refInput = useRef<HTMLInputElement>(null)
   const MONTHS = getMonths(locale)
   const DAYS = getDays(locale)
@@ -169,6 +170,8 @@ export const DateInput = <IsRange extends undefined | boolean>({
         format,
         setInputValue,
         setVisible,
+        hoveredDate,
+        setHoveredDate,
       }) as ContextProps,
     [
       showMonthYearPicker,
@@ -189,6 +192,8 @@ export const DateInput = <IsRange extends undefined | boolean>({
       format,
       setInputValue,
       setVisible,
+      hoveredDate,
+      setHoveredDate,
     ],
   )
 

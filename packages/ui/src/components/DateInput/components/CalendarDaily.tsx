@@ -14,17 +14,30 @@ import {
   isSameDay,
 } from '../helpers'
 
-const ButtonDate = styled(Button)`
+const Day = styled(Button)`
   height: ${({ theme }) => theme.sizing['312']};
   width: 100%;
   padding: 0;
-`
+  color: ${({ theme }) => theme.colors.neutral.textWeak};
 
-const RangeButton = styled(Button)`
-  background-color: ${({ theme }) => theme.colors.primary.background};
-  height: ${({ theme }) => theme.sizing['312']};
-  width: 100%;
-  padding: 0;
+  &[aria-label="in-range"] {
+    color:  ${({ theme }) => theme.colors.primary.textHover};
+    background-color: ${({ theme }) => theme.colors.primary.background};
+  }
+
+  &[aria-label="in-range"]:hover {
+    color: ${({ theme }) => theme.colors.neutral.textStronger};
+    background-color: ${({ theme }) => theme.colors.primary.backgroundStrongHover};
+  }
+
+  &[aria-label="not-current"], :disabled {
+    color: ${({ theme }) => theme.colors.neutral.textDisabled};
+  }
+
+  &[aria-label="selected"] {
+    color: ${({ theme }) => theme.colors.neutral.textStronger};
+  }
+
 `
 
 const CapitalizedText = styled(Text)`
@@ -57,13 +70,13 @@ export const Daily = () => {
     setVisible,
     readOnly,
     disabled,
+    hoveredDate,
+    setHoveredDate,
   } = useContext(DateInputContext)
 
-  const [rangeState, setRangeState] = useState<'start' | 'none' | 'done'>(
-    range?.start ? 'start' : 'none',
-  ) // Used when selectsRange is True. Kow the current state of the range: none when start date not selected, start when start date is selected, done when start & end date selected
-
-  const [hoveredDate, setHoveredDate] = useState<Date | null>(null)
+  const [rangeState, setRangeState] = useState<'start' | 'end'>(
+    range?.start && !range?.end ? 'end' : 'start',
+  ) // Used when selectsRange is True. The current state of the range: "start" when one must select the start-date of the range, "end" when start date is selected and one must select the end-date
 
   const monthDays = new Date(yearToShow, monthToShow, 0).getDate() // Number of days in the month
 
@@ -152,7 +165,14 @@ export const Daily = () => {
             range?.start &&
             constructedDate > range.start &&
             hoveredDate &&
-            constructedDate < hoveredDate) ||
+            constructedDate < hoveredDate &&
+            !range.end) ||
+          (selectsRange &&
+            range?.start &&
+            constructedDate < range.start &&
+            hoveredDate &&
+            constructedDate > hoveredDate &&
+            !range.end) ||
           (range?.start &&
             range.end &&
             constructedDate < range.end &&
@@ -180,24 +200,8 @@ export const Daily = () => {
 
         const onClickRange = (event: MouseEventReact, newDate: Date) => {
           if (selectsRange) {
-            // Selecting start date
-            if (rangeState === 'none') {
-              setRange?.({ start: newDate, end: null })
-              onChange?.([newDate, null], event)
-              setInputValue(
-                formatValue(
-                  null,
-                  { start: newDate, end: null },
-                  false,
-                  true,
-                  format,
-                ),
-              )
-              setRangeState('start')
-            }
-
-            // Selecting end date
-            else if (isAfterStartDate) {
+            // Selecting the end date
+            if (rangeState === 'end' && isAfterStartDate) {
               setRange?.({ start: range.start, end: newDate })
               onChange?.([range.start, newDate], event)
               setInputValue(
@@ -209,11 +213,34 @@ export const Daily = () => {
                   format,
                 ),
               )
+              // If we click on another date, it will reset the range
+              setRangeState('start')
               setVisible(false)
-              setRangeState('done')
-            } else {
-              // End date before start
+            }
+            // The newDate is before, we swap end & start date
+            else if (
+              rangeState === 'end' &&
+              !isAfterStartDate &&
+              range?.start
+            ) {
+              setRange?.({ start: newDate, end: range.start })
+              onChange?.([newDate, range.start], event)
+              setInputValue(
+                formatValue(
+                  null,
+                  { start: newDate, end: range.start },
+                  false,
+                  true,
+                  format,
+                ),
+              )
+              setRangeState('start')
+              setVisible(false)
+            }
+            // Selecting the start date
+            else {
               setRange?.({ start: newDate, end: null })
+              onChange?.([newDate, null], event)
               setInputValue(
                 formatValue(
                   null,
@@ -223,10 +250,11 @@ export const Daily = () => {
                   format,
                 ),
               )
-              onChange?.([newDate, null], event)
+              setRangeState('end')
             }
           }
         }
+
         const createTestId = () => {
           if (isInHoveredRange) return 'rangeButton'
           if (data.month === -1) return 'dayLastMonth'
@@ -235,7 +263,13 @@ export const Daily = () => {
           return undefined
         }
 
-        const Day = isInHoveredRange ? RangeButton : ButtonDate
+        const dayState = () => {
+          if (isSelected) return 'selected'
+          if (isInHoveredRange) return 'in-range'
+          if (data.month !== 0) return 'not-current'
+
+          return 'neutral'
+        }
 
         return (
           <Day
@@ -262,22 +296,10 @@ export const Daily = () => {
             onMouseEnter={() => {
               if (selectsRange && range?.start) setHoveredDate(constructedDate)
             }}
-            onMouseLeave={() => {
-              if (selectsRange && range?.start) setHoveredDate(null)
-            }}
+            aria-label={dayState()}
+            data-testid={createTestId()}
           >
-            <Text
-              as="span"
-              variant="bodyStrong"
-              prominence={isSelected && !isInHoveredRange ? 'strong' : 'weak'}
-              sentiment={isSelected || isInHoveredRange ? 'primary' : 'neutral'}
-              disabled={
-                disabled || data.month !== 0 || isExcluded || isOutsideRange
-              }
-              data-testid={createTestId()}
-            >
-              {data.day}
-            </Text>
+            {data.day}
           </Day>
         )
       })}
