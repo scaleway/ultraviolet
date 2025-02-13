@@ -71,7 +71,7 @@ export const Separator = ({
   direction = 'horizontal',
   thickness = 1,
   color = 'neutral',
-  sentiment = 'neutral',
+  sentiment,
   icon,
   className,
   'data-testid': dataTestId,
