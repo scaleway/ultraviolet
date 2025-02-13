@@ -127,20 +127,28 @@ describe('DateInput', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('render correctly with a range of date', () => {
+  test('renders correctly disabled', () => {
     const { asFragment } = renderWithTheme(
-      <DateInput
-        label="Date"
-        selectsRange
-        startDate={new Date('1995-12-11T03:24:00.000+00:00')}
-        endDate={new Date('1995-12-25T03:24:00.000+00:00')}
-        onChange={() => {}}
-      />,
+      <DateInput label="Date" disabled onChange={() => {}} />,
     )
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('render correctly with a array of dates to exclude', async () => {
+  test('renders correctly with input = "calendar', () => {
+    const { asFragment } = renderWithTheme(
+      <DateInput label="Date" input="calendar" onChange={() => {}} />,
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  test('renders correctly with input = "calendar disabled', () => {
+    const { asFragment } = renderWithTheme(
+      <DateInput label="Date" input="calendar" onChange={() => {}} disabled />,
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  test('renders correctly with a array of dates to exclude', async () => {
     const { asFragment } = renderWithTheme(
       <DateInput
         label="Date"
@@ -294,6 +302,9 @@ describe('DateInput', () => {
     await userEvent.click(input)
     await userEvent.click(screen.getByText('31'))
     expect(input.value).toBe('01/31/1995 - ')
+
+    await userEvent.click(screen.getByText('20'))
+    expect(input.value).toBe('01/20/1995 - 01/31/1995')
   })
 
   test('render correctly with showMonthYearPicker with excluded months', async () => {
@@ -357,10 +368,14 @@ describe('DateInput', () => {
     await userEvent.unhover(month)
 
     await userEvent.click(month)
-    expect(input.value).toBe('02/1995 - ')
+    expect(input.value).toBe('02/1995 - 08/1995')
 
+    await userEvent.click(input)
     await userEvent.click(screen.getByText('Sep'))
-    expect(input.value).toBe('02/1995 - 09/1995')
+    expect(input.value).toBe('09/1995 - ')
+
+    await userEvent.click(screen.getByText('Dec'))
+    expect(input.value).toBe('09/1995 - 12/1995')
   })
 
   test('renders correctly custom format with range', () => {

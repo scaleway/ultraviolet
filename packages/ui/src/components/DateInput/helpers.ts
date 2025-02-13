@@ -1,10 +1,7 @@
-import { CURRENT_MONTH, CURRENT_YEAR } from './constants'
+import type { Theme } from '@emotion/react'
 
 // First day of the month for a given year
-export const getMonthFirstDay = (
-  month = CURRENT_MONTH,
-  year = CURRENT_YEAR,
-) => {
+export const getMonthFirstDay = (month: number, year: number) => {
   const firstDay = new Date(year, month - 1, 1).getDay()
 
   // Change so that a week starts on monday
@@ -30,12 +27,12 @@ export const getNextMonth = (month: number, year: number) => {
 }
 
 // Checks if two date values are of the same month and year
-export const isSameMonth = (date: Date, basedate = new Date()) =>
+export const isSameMonth = (date: Date, basedate: Date) =>
   basedate.getMonth() === date.getMonth() &&
   basedate.getFullYear() === date.getFullYear()
 
 // (bool) Checks if two date values are the same day
-export const isSameDay = (date: Date, basedate = new Date()) =>
+export const isSameDay = (date: Date, basedate: Date) =>
   basedate.getDate() === date.getDate() &&
   basedate.getMonth() + 1 === date.getMonth() + 1 &&
   basedate.getFullYear() === date.getFullYear()
@@ -82,3 +79,11 @@ export const formatValue = (
 
   return undefined
 }
+
+export const styleCalendarContainer = (theme: Theme) => ` 
+  width: 100%;
+  color: ${theme.colors.neutral.text};
+  padding: ${theme.space[2]};
+  border-radius: ${theme.radii.default};
+  background-color: ${theme.colors.other.elevation.background.raised};
+`

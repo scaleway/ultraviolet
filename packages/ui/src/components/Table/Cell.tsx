@@ -1,13 +1,12 @@
 import styled from '@emotion/styled'
 import type { ReactNode } from 'react'
-
-type Sentiment = 'success' | 'info' | 'warning' | 'danger' | 'neutral'
+import type { Color } from '../../theme'
 
 type Align = 'left' | 'center' | 'right'
 
 const StyledCell = styled('td', {
   shouldForwardProp: prop => !['sentiment', 'align'].includes(prop),
-})<{ sentiment?: Sentiment; align: Align }>`
+})<{ sentiment?: Color; align: Align }>`
   display: table-cell;
   vertical-align: middle;
   padding: ${({ theme }) => theme.space['1']};
@@ -21,7 +20,7 @@ type CellProps = {
   className?: string
   colSpan?: number
   rowSpan?: number
-  sentiment?: Sentiment
+  sentiment?: Color
   align?: Align
 }
 

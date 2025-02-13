@@ -13,27 +13,10 @@ import { forwardRef } from 'react'
 import type { ExtendedColor } from '../../theme'
 import { Loader } from '../Loader'
 import { Tooltip } from '../Tooltip'
+import { SIZE_GAP_KEY, SIZE_HEIGHT, SIZE_PADDING_KEY } from './constants'
 
-// SIZE
-export const SIZE_HEIGHT = {
-  large: '600', // sizing key value from tokens
-  medium: '500',
-  small: '400',
-  xsmall: '300',
-} as const
 type ButtonSize = keyof typeof SIZE_HEIGHT
-const SIZE_PADDING_KEY = {
-  large: 2,
-  medium: 1.5,
-  small: 1,
-  xsmall: 0.5,
-} as const
-const SIZE_GAP_KEY = {
-  large: 1,
-  medium: 1,
-  small: 1,
-  xsmall: 0.5,
-} as const
+
 export const buttonSizes = Object.keys(SIZE_HEIGHT) as ButtonSize[]
 
 // FOCUS RING
@@ -251,6 +234,7 @@ const VARIANTS_COMPONENTS = {
     link: StyledGhostButton.withComponent('a'),
   },
 }
+
 type ButtonVariant = keyof typeof VARIANTS_COMPONENTS
 export const buttonVariants = Object.keys(
   VARIANTS_COMPONENTS,
@@ -266,7 +250,15 @@ type CommonProps = {
   'data-testid'?: string
   sentiment?: ExtendedColor
   disabled?: boolean
+  /**
+   * @deprecated `iconPosition` prop is deprecated and will be removed in the next major version.
+   * You can directly set the icon into the children of the Button component.
+   */
   iconPosition?: 'left' | 'right'
+  /**
+   * @deprecated `iconVariant` prop is deprecated and will be removed in the next major version.
+   * You can directly set the icon into the children of the Button component.
+   */
   iconVariant?: ComponentProps<typeof Icon>['variant']
   fullWidth?: boolean
   isLoading?: boolean
@@ -291,6 +283,10 @@ type FinalProps = CommonProps &
     | {
         // Button : Children + optional Icon
         children: ReactNode
+        /**
+         * @deprecated `iconVariant` prop is deprecated and will be removed in the next major version.
+         * You can directly set the icon into the children of the Button component.
+         */
         icon?: ComponentProps<typeof Icon>['name']
         name?: string
         href?: never
@@ -300,6 +296,10 @@ type FinalProps = CommonProps &
     | {
         // Button : Icon only
         children?: never
+        /**
+         * @deprecated `iconVariant` prop is deprecated and will be removed in the next major version.
+         * You can directly set the icon into the children of the Button component.
+         */
         icon: ComponentProps<typeof Icon>['name']
         name?: string
         href?: never
@@ -309,6 +309,10 @@ type FinalProps = CommonProps &
     | {
         // Anchor : Children + optional Icon
         children: ReactNode
+        /**
+         * @deprecated `iconVariant` prop is deprecated and will be removed in the next major version.
+         * You can directly set the icon into the children of the Button component.
+         */
         icon?: ComponentProps<typeof Icon>['name']
         name?: never
         href: string
@@ -318,6 +322,10 @@ type FinalProps = CommonProps &
     | {
         // Anchor : Children + Icon Only
         children?: never
+        /**
+         * @deprecated `iconVariant` prop is deprecated and will be removed in the next major version.
+         * You can directly set the icon into the children of the Button component.
+         */
         icon: ComponentProps<typeof Icon>['name']
         name?: never
         href: string
@@ -369,6 +377,7 @@ export const Button = forwardRef<Element, FinalProps>(
     ref,
   ) => {
     const computeIsDisabled = disabled || isLoading
+
     const content = (
       <>
         {!isLoading && icon ? (

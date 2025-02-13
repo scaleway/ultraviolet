@@ -1,8 +1,15 @@
 import { css } from '@emotion/react'
 import styled from '@emotion/styled'
+import {
+  ArrowDownIcon,
+  ArrowRightIcon,
+  DragIcon,
+  OpenInNewIcon,
+  PinOutlineIcon,
+  UnpinIcon,
+} from '@ultraviolet/icons'
 import * as CategoryIcon from '@ultraviolet/icons/category'
 import { ConsoleCategoryIcon } from '@ultraviolet/icons/category'
-import { Icon } from '@ultraviolet/icons/legacy'
 import {
   Badge,
   Button,
@@ -39,7 +46,7 @@ const RelativeDiv = styled.div`
   position: relative;
 `
 
-const StyledIcon = styled(Icon, {
+const StyledPinIconOutline = styled(PinOutlineIcon, {
   shouldForwardProp: prop => !['active'].includes(prop),
 })<{ active?: boolean }>`
   position: absolute;
@@ -55,6 +62,8 @@ const StyledIcon = styled(Icon, {
       active ? `background: ${theme.colors.primary.backgroundHover};` : null}
   }
 `
+
+const StyledUnpinIcon = StyledPinIconOutline.withComponent(UnpinIcon)
 
 const NeutralButtonLink = css`
   color: inherit;
@@ -83,7 +92,7 @@ const LocalExpandButton = styled(Button)`
 
 const PinnedButton = LocalExpandButton.withComponent('div')
 
-const GrabIcon = styled(Icon)`
+const GrabIcon = styled(DragIcon)`
   opacity: 0;
   margin: 0 ${({ theme }) => theme.space['0.25']};
   cursor: grab;
@@ -118,7 +127,7 @@ const PaddingStack = styled(Stack)`
   padding-left: 28px; // This value needs to be hardcoded because of the category icon size
 `
 
-const AnimatedIcon = styled(Icon)``
+const AnimatedIcon = styled(OpenInNewIcon)``
 
 const WrapText = styled(Text, {
   shouldForwardProp: prop =>
@@ -468,6 +477,9 @@ export const Item = memo(
         ]
       : null
 
+    const ArrowIcon = internalExpanded ? ArrowDownIcon : ArrowRightIcon
+    const PinUnpinIcon = isItemPinned ? StyledUnpinIcon : StyledPinIconOutline
+
     const ariaExpanded = useMemo(() => {
       if (hasHrefAndNoChildren && internalExpanded) {
         return true
@@ -569,7 +581,6 @@ export const Item = memo(
               ) : null}
               {type === 'pinned' && expanded ? (
                 <GrabIcon
-                  name="drag-vertical"
                   sentiment="neutral"
                   prominence="weak"
                   size="small"
@@ -661,10 +672,8 @@ export const Item = memo(
                           }}
                           disabled={isItemPinned ? false : isPinDisabled}
                         >
-                          <StyledIcon
-                            size="large"
-                            name={isItemPinned ? 'unpin' : 'pin'}
-                            variant={isItemPinned ? 'filled' : 'outlined'}
+                          <PinUnpinIcon
+                            size="medium"
                             disabled={isItemPinned ? false : isPinDisabled}
                             sentiment={active ? 'primary' : 'neutral'}
                             active={active}
@@ -677,7 +686,6 @@ export const Item = memo(
               ) : null}
               {hasHrefAndNoChildren ? (
                 <AnimatedIcon
-                  name="open-in-new"
                   sentiment="neutral"
                   prominence="default"
                   disabled={disabled}
@@ -686,11 +694,7 @@ export const Item = memo(
               {children ? (
                 <Stack gap={1} direction="row" alignItems="center">
                   {!animation && !noExpand ? (
-                    <AnimatedIcon
-                      name={internalExpanded ? 'arrow-down' : 'arrow-right'}
-                      sentiment="neutral"
-                      prominence="weak"
-                    />
+                    <ArrowIcon sentiment="neutral" prominence="weak" />
                   ) : null}
                 </Stack>
               ) : null}
@@ -821,7 +825,6 @@ export const Item = memo(
               ) : null}
               {hasHrefAndNoChildren ? (
                 <AnimatedIcon
-                  name="open-in-new"
                   sentiment="neutral"
                   prominence="weak"
                   disabled={disabled}
@@ -863,10 +866,8 @@ export const Item = memo(
                       }}
                       disabled={isItemPinned ? false : isPinDisabled}
                     >
-                      <StyledIcon
-                        size="large"
-                        name={isItemPinned ? 'unpin' : 'pin'}
-                        variant={isItemPinned ? 'filled' : 'outlined'}
+                      <PinUnpinIcon
+                        size="medium"
                         disabled={isItemPinned ? false : isPinDisabled}
                         sentiment={active ? 'primary' : 'neutral'}
                         active={active}
@@ -893,11 +894,7 @@ export const Item = memo(
               href={href}
               target="_blank"
             >
-              <AnimatedIcon
-                name="open-in-new"
-                sentiment="neutral"
-                prominence="weak"
-              />
+              <AnimatedIcon sentiment="neutral" prominence="weak" />
             </Container>
           </MenuStack>
         </Tooltip>

@@ -39,6 +39,9 @@
       "dependsOn": ["build"],
       "inputs": ["**/*.{ts,tsx}"]
     },
+    "e2e": {
+      "dependsOn": ["build"]
+    },
     "test:unit": {
       "dependsOn": ["build"],
       "passThroughEnv": ["VITEST_*"]
@@ -46,6 +49,11 @@
     "test:unit:coverage": {
       "dependsOn": ["build"],
       "passThroughEnv": ["VITEST_*"]
+    },
+    "start": {
+      "dependsOn": ["build"],
+      "persistent": true,
+      "cache": false
     }
   }
 }

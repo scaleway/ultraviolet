@@ -1,5 +1,44 @@
 # Change Log
 
+## 3.11.0
+
+### Minor Changes
+
+- [#4755](https://github.com/scaleway/ultraviolet/pull/4755) [`6108aff`](https://github.com/scaleway/ultraviolet/commit/6108affee43423302ee20c7e98410029a279c3a9) Thanks [@matthprost](https://github.com/matthprost)! - New category icon `<EnvironmentalFootprintCategoryIcon />`
+
+### Patch Changes
+
+- [#4761](https://github.com/scaleway/ultraviolet/pull/4761) [`c959773`](https://github.com/scaleway/ultraviolet/commit/c959773c06154ca253b2cc6ed68d01021a3de7f4) Thanks [@matthprost](https://github.com/matthprost)! - Fix icons that are broken
+
+## 3.10.2
+
+### Patch Changes
+
+- [#4742](https://github.com/scaleway/ultraviolet/pull/4742) [`2a8b327`](https://github.com/scaleway/ultraviolet/commit/2a8b327cb41a72475d4dd91f55b55491ce2d78f6) Thanks [@matthprost](https://github.com/matthprost)! - - System Icons from `@ultraviolet/icons` have a change in their sizing. `large` became `medium` and a new `large` sizing has been created (around 24px)
+
+  - `<Button />` the prop `icon`, `iconPosition` and `iconSentiment` has been marked as deprecated and will be removed in future major release. You should use the icon component directly in the children of the button:
+
+  ```tsx
+  // Before
+  import { Button } from "@ultraviolet/ui";
+
+  <Button icon="pencil" iconPosition="right" iconVariant="outline">
+    Edit
+  </Button>;
+  ```
+
+  ```tsx
+  // After
+  import { Button } from "@ultraviolet/ui";
+  import { PencilOutlineIcon } from "@ultraviolet/icons";
+
+  <Button>
+    Edit <PencilOutlineIcon />
+  </Button>;
+  ```
+
+  - Fix of other legacy usages of icons into the library
+
 ## 3.10.1
 
 ### Patch Changes

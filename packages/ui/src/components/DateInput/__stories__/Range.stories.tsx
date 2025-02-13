@@ -51,13 +51,13 @@ export const Range: StoryFn<ComponentProps<typeof DateInput>> = args => {
       />
       Selected dates : {startDate?.toDateString()} - {endDate?.toDateString()}
       <DateInput
+        {...args}
         label="Month"
         onChange={onChangeMonth}
         startDate={startMonth}
         endDate={endMonth}
         selectsRange
         showMonthYearPicker
-        {...args}
       />
       Selected months : {startMonth ? MONTHS[startMonth.getMonth()] : null}
       {startMonth?.getFullYear()} -

@@ -4,6 +4,7 @@ import type { Dispatch, SetStateAction } from 'react'
 export type ContextProps = {
   showMonthYearPicker?: boolean
   disabled: boolean
+  readOnly: boolean
   /**
    * month to show on popup - NOT selectedValue
    */
@@ -39,6 +40,8 @@ export type ContextProps = {
   startDate?: Date | null
   endDate?: Date | null
   format?: (value?: Date) => string | undefined
+  hoveredDate?: Date | null
+  setHoveredDate: Dispatch<SetStateAction<Date | null>>
 } & (
   | {
       selectsRange: true
@@ -70,4 +73,6 @@ export const DateInputContext = createContext<ContextProps>({
   MONTHS_ARR: [],
   selectsRange: false,
   setVisible: () => null,
+  readOnly: false,
+  setHoveredDate: () => null,
 })

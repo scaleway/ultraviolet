@@ -1,5 +1,46 @@
 # Change Log
 
+## 1.85.3
+
+### Patch Changes
+
+- [#4737](https://github.com/scaleway/ultraviolet/pull/4737) [`3d28302`](https://github.com/scaleway/ultraviolet/commit/3d28302a867df3b16cbbe64b375d15c9742797a7) Thanks [@lisalupi](https://github.com/lisalupi)! - `<DateInput />`: new prop `input` to show calendar as a card, with no input
+
+- Updated dependencies [[`c959773`](https://github.com/scaleway/ultraviolet/commit/c959773c06154ca253b2cc6ed68d01021a3de7f4), [`6108aff`](https://github.com/scaleway/ultraviolet/commit/6108affee43423302ee20c7e98410029a279c3a9)]:
+  - @ultraviolet/icons@3.11.0
+
+## 1.85.2
+
+### Patch Changes
+
+- [#4742](https://github.com/scaleway/ultraviolet/pull/4742) [`2a8b327`](https://github.com/scaleway/ultraviolet/commit/2a8b327cb41a72475d4dd91f55b55491ce2d78f6) Thanks [@matthprost](https://github.com/matthprost)! - - System Icons from `@ultraviolet/icons` have a change in their sizing. `large` became `medium` and a new `large` sizing has been created (around 24px)
+
+  - `<Button />` the prop `icon`, `iconPosition` and `iconSentiment` has been marked as deprecated and will be removed in future major release. You should use the icon component directly in the children of the button:
+
+  ```tsx
+  // Before
+  import { Button } from "@ultraviolet/ui";
+
+  <Button icon="pencil" iconPosition="right" iconVariant="outline">
+    Edit
+  </Button>;
+  ```
+
+  ```tsx
+  // After
+  import { Button } from "@ultraviolet/ui";
+  import { PencilOutlineIcon } from "@ultraviolet/icons";
+
+  <Button>
+    Edit <PencilOutlineIcon />
+  </Button>;
+  ```
+
+  - Fix of other legacy usages of icons into the library
+
+- Updated dependencies [[`2a8b327`](https://github.com/scaleway/ultraviolet/commit/2a8b327cb41a72475d4dd91f55b55491ce2d78f6)]:
+  - @ultraviolet/icons@3.10.2
+
 ## 1.85.1
 
 ### Patch Changes

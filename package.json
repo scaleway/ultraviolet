@@ -20,9 +20,7 @@
     "build:storybook:stats": "pnpm turbo build:storybook -- --webpack-stats-json",
     "test:unit": "turbo run test:unit",
     "test:unit:coverage": "turbo run test:unit:coverage",
-    "test:e2e": "playwright test -c e2e",
-    "test:e2e:headed": "pnpm run test:e2e --headed",
-    "test:e2e:debug": "PWDEBUG=1 pnpm run test:e2e",
+    "test:e2e": "turbo e2e --filter @repo/e2e",
     "check:deps": "npx depcheck . --skip-missing=true --ignores='bin,eslint,vite,jest,husky,@commitlint/*,@babel/*,babel-*'",
     "commit": "npx git-cz -a --disable-emoji",
     "start": "STORYBOOK_ENVIRONMENT=development storybook dev -p 6006",
@@ -38,8 +36,8 @@
     "tokens:update": "node ./scripts/figma-synchronise-tokens.mjs && pnpm run format packages/themes/src/themes/console",
     "icons:update": "tsx ./scripts/generate-icons-file.ts && biome format --write packages/icons",
     "release": "pnpm build && pnpm changeset publish",
-    "svg": "svgo --pretty --multipass",
-    "svg:all": "pnpm run svg -r -f .",
+    "svg": "svgo --config=./svgo.config.mjs --pretty --multipass",
+    "svg:all": "pnpm run svg -r -f 'packages/illustrations/src/assets'",
     "illustrations:update": "BUCKET_NAME=scaleway-assets BUCKET_REGION=fr-par node utils/illustrations/uploadIllustrations.js && pnpm format packages/illustrations/src/",
     "lintpublish": "turbo run lintpublish"
   },
@@ -49,7 +47,7 @@
       "oxlint -c .oxlintrc.json --quiet --fix",
       "eslint --cache --cache-strategy content --fix"
     ],
-    "*.svg": [
+    "packages/illustrations/**/*.svg": [
       "pnpm run svg"
     ],
     "*.y?(a)ml": [

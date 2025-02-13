@@ -9,7 +9,8 @@ import capitalize from '../../utils/capitalize'
 const SIZES = {
   xsmall: '150',
   small: '200',
-  large: '250',
+  medium: '250',
+  large: '300',
   xlarge: '400',
   xxlarge: '700',
 } as const
