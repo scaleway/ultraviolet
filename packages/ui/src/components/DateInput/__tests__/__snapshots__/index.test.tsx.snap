@@ -1,1467 +1,5 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`DateInput > render correctly with a array of dates to exclude 1`] = `
-<DocumentFragment>
-  @keyframes animation-0 {
-  0% {
-    opacity: 0;
-    -webkit-transform: translate3d(0px, 4px, 0);
-    -moz-transform: translate3d(0px, 4px, 0);
-    -ms-transform: translate3d(0px, 4px, 0);
-    transform: translate3d(0px, 4px, 0);
-  }
-
-  100% {
-    opacity: 1;
-    -webkit-transform: translate3d(0px, 4px, 0);
-    -moz-transform: translate3d(0px, 4px, 0);
-    -ms-transform: translate3d(0px, 4px, 0);
-    transform: translate3d(0px, 4px, 0);
-  }
-}
-
-.emotion-0 {
-  width: 100%;
-}
-
-.emotion-2 {
-  display: inherit;
-}
-
-.emotion-2[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.emotion-6 {
-  color: #222638;
-  font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  height: 3rem;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-  border: 1px solid #8c40ef;
-}
-
-.emotion-8>.emotion-11 {
-  color: #3f4250;
-}
-
-.emotion-8>.emotion-11::-webkit-input-placeholder {
-  color: #727683;
-}
-
-.emotion-8>.emotion-11::-moz-placeholder {
-  color: #727683;
-}
-
-.emotion-8>.emotion-11:-ms-input-placeholder {
-  color: #727683;
-}
-
-.emotion-8>.emotion-11::placeholder {
-  color: #727683;
-}
-
-.emotion-8[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-8[data-error='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-8[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-}
-
-.emotion-8[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-}
-
-.emotion-8[data-disabled='true']>.emotion-11 {
-  color: #b5b7bd;
-}
-
-.emotion-8[data-disabled='true']>.emotion-11::-webkit-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-8[data-disabled='true']>.emotion-11::-moz-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-8[data-disabled='true']>.emotion-11:-ms-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-8[data-disabled='true']>.emotion-11::placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-8:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-10 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  border: none;
-  outline: none;
-  height: 100%;
-  width: 100%;
-  padding-left: 1rem;
-  background: transparent;
-  font-size: 0.875rem;
-}
-
-.emotion-10[data-size='large'] {
-  font-size: 1rem;
-}
-
-.emotion-10[data-size='small'] {
-  padding-left: 0.5rem;
-}
-
-.emotion-12 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  padding: 0 1rem;
-  border-left: 1px solid;
-  border-color: inherit;
-}
-
-.emotion-14 {
-  vertical-align: middle;
-  fill: #3f4250;
-  height: 1.25rem;
-  width: 1.25rem;
-  min-width: 1.25rem;
-  min-height: 1.25rem;
-}
-
-.emotion-14 .fillStroke {
-  stroke: #3f4250;
-  fill: none;
-}
-
-.emotion-17 {
-  background: #151a2d;
-  color: #ffffff;
-  border-radius: 0.25rem;
-  padding: 0.25rem 0.5rem;
-  text-align: center;
-  position: absolute;
-  max-width: 16.5rem;
-  overflow-wrap: break-word;
-  font-size: 0.8rem;
-  inset: 0 auto auto 0;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  z-index: 1;
-  -webkit-transform: translate3d(0px, 4px, 0);
-  -moz-transform: translate3d(0px, 4px, 0);
-  -ms-transform: translate3d(0px, 4px, 0);
-  transform: translate3d(0px, 4px, 0);
-  width: 100%;
-  background-color: #ffffff;
-  color: #3f4250;
-  box-shadow: 0px 4px 8px 0px #22263829,0px 8px 24px 0px #2226383d;
-  padding: 1rem;
-  border-radius: 0.25rem;
-}
-
-.emotion-17[data-animated="true"] {
-  -webkit-animation: 0ms animation-0 forwards;
-  animation: 0ms animation-0 forwards;
-}
-
-.emotion-17[data-has-arrow="true"]::after {
-  content: " ";
-  position: absolute;
-  top: -5px;
-  left: 0px;
-  -webkit-transform: rotate(180deg);
-  -moz-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  transform: rotate(180deg);
-  margin-left: -8px;
-  border-width: 8px;
-  border-style: solid;
-  border-color: #151a2d transparent transparent transparent;
-  pointer-events: none;
-}
-
-.emotion-17[data-visible-in-dom="false"] {
-  display: none;
-}
-
-.emotion-19 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 1rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.emotion-21 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  width: 100%;
-}
-
-.emotion-23 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 1.5rem;
-  padding: 0 0.25rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.25rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: 1.5rem;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #3f4250;
-}
-
-.emotion-23:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-23:active {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.emotion-23:hover,
-.emotion-23:active {
-  background: #e9eaeb;
-  color: #222638;
-}
-
-.emotion-25 {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
-}
-
-.emotion-25 .fillStroke {
-  stroke: currentColor;
-  fill: none;
-}
-
-.emotion-28 {
-  color: #3f4250;
-  font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  display: inline-block;
-  text-transform: lowercase;
-}
-
-.emotion-28::first-letter {
-  text-transform: uppercase;
-}
-
-.emotion-34 {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 0.5rem;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-}
-
-.emotion-37 {
-  color: #3f4250;
-  font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  display: inline-block;
-  text-transform: lowercase;
-}
-
-.emotion-37::first-letter {
-  text-transform: uppercase;
-}
-
-.emotion-58 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 3rem;
-  padding: 0 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #3f4250;
-  height: 1.5625rem;
-  width: 100%;
-  padding: 0;
-}
-
-.emotion-58:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-58:active {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.emotion-58:hover,
-.emotion-58:active {
-  background: #e9eaeb;
-  color: #222638;
-}
-
-.emotion-60 {
-  color: #b5b7bd;
-  font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-80 {
-  color: #727683;
-  font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-128 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 3rem;
-  padding: 0 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: #8c40ef;
-  border: none;
-  color: #ffffff;
-  height: 1.5625rem;
-  width: 100%;
-  padding: 0;
-}
-
-.emotion-128:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-128:active {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-128:hover,
-.emotion-128:active {
-  background: #792dd4;
-  color: #f9f9fa;
-}
-
-.emotion-130 {
-  color: #ffffff;
-  font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-133 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 3rem;
-  padding: 0 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: not-allowed;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #3f4250;
-  color: #b5b7bd;
-  height: 1.5625rem;
-  width: 100%;
-  padding: 0;
-}
-
-.emotion-133:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-<div
-    data-testid="testing"
-  >
-    <div
-      class="emotion-0 emotion-1"
-    >
-      <div
-        aria-controls=":rbn:"
-        aria-describedby=":rbn:"
-        class="emotion-2 emotion-3"
-        tabindex="0"
-      >
-        <div
-          class="emotion-4 emotion-5"
-        >
-          <label
-            class="emotion-6 emotion-7"
-            for=":rbo:"
-          >
-            Date
-          </label>
-          <div>
-            <div
-              class="emotion-8 emotion-9"
-              data-disabled="false"
-              data-error="false"
-              data-readonly="false"
-              data-success="false"
-            >
-              <input
-                aria-invalid="false"
-                autocomplete="false"
-                class="emotion-10 emotion-11"
-                data-size="large"
-                id=":rbo:"
-                placeholder="YYYY-MM-DD"
-                type="text"
-                value="12/11/1995"
-              />
-              <div
-                class="emotion-12 emotion-13"
-              >
-                <svg
-                  class="emotion-14 emotion-15"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    d="M5.25 12a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H6a.75.75 0 0 1-.75-.75zM6 13.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V14a.75.75 0 0 0-.75-.75zM7.25 12a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H8a.75.75 0 0 1-.75-.75zM8 13.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V14a.75.75 0 0 0-.75-.75zM9.25 10a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H10a.75.75 0 0 1-.75-.75zm.75 1.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V12a.75.75 0 0 0-.75-.75zM9.25 14a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H10a.75.75 0 0 1-.75-.75zM12 9.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V10a.75.75 0 0 0-.75-.75zM11.25 12a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H12a.75.75 0 0 1-.75-.75zm.75 1.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V14a.75.75 0 0 0-.75-.75zM13.25 10a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H14a.75.75 0 0 1-.75-.75zm.75 1.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V12a.75.75 0 0 0-.75-.75z"
-                  />
-                  <path
-                    clip-rule="evenodd"
-                    d="M5.75 2a.75.75 0 0 1 .75.75V4h7V2.75a.75.75 0 0 1 1.5 0V4h.25A2.75 2.75 0 0 1 18 6.75v8.5A2.75 2.75 0 0 1 15.25 18H4.75A2.75 2.75 0 0 1 2 15.25v-8.5A2.75 2.75 0 0 1 4.75 4H5V2.75A.75.75 0 0 1 5.75 2m-1 5.5c-.69 0-1.25.56-1.25 1.25v6.5c0 .69.56 1.25 1.25 1.25h10.5c.69 0 1.25-.56 1.25-1.25v-6.5c0-.69-.56-1.25-1.25-1.25z"
-                  />
-                </svg>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          class="emotion-16 emotion-17 emotion-18"
-          data-animated="false"
-          data-has-arrow="false"
-          id=":rbn:"
-          role="dialog"
-          style="opacity: 1;"
-        >
-          <div
-            class="emotion-19 emotion-5"
-          >
-            <div
-              class="emotion-21 emotion-5"
-            >
-              <button
-                class="emotion-23 emotion-24"
-                data-testid="previous-month"
-                type="button"
-              >
-                <svg
-                  class="emotion-25 emotion-26"
-                  viewBox="0 0 16 16"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    clip-rule="evenodd"
-                    d="M10.53 4.22a.75.75 0 0 1 0 1.06L7.81 8l2.72 2.72a.75.75 0 1 1-1.06 1.06L6.22 8.53a.75.75 0 0 1 0-1.06l3.25-3.25a.75.75 0 0 1 1.06 0"
-                    fill-rule="evenodd"
-                  />
-                </svg>
-              </button>
-              <span
-                class="emotion-27 emotion-28 emotion-7"
-              >
-                December 1995
-              </span>
-              <button
-                class="emotion-23 emotion-24"
-                data-testid="next-month"
-                type="button"
-              >
-                <svg
-                  class="emotion-25 emotion-26"
-                  viewBox="0 0 16 16"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    clip-rule="evenodd"
-                    d="M6.22 4.22a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06L8.94 8 6.22 5.28a.75.75 0 0 1 0-1.06"
-                    fill-rule="evenodd"
-                  />
-                </svg>
-              </button>
-            </div>
-            <div
-              class="emotion-34 emotion-35"
-            >
-              <p
-                class="emotion-36 emotion-37 emotion-7"
-              >
-                Mo
-              </p>
-              <p
-                class="emotion-36 emotion-37 emotion-7"
-              >
-                Tu
-              </p>
-              <p
-                class="emotion-36 emotion-37 emotion-7"
-              >
-                We
-              </p>
-              <p
-                class="emotion-36 emotion-37 emotion-7"
-              >
-                Th
-              </p>
-              <p
-                class="emotion-36 emotion-37 emotion-7"
-              >
-                Fr
-              </p>
-              <p
-                class="emotion-36 emotion-37 emotion-7"
-              >
-                Sa
-              </p>
-              <p
-                class="emotion-36 emotion-37 emotion-7"
-              >
-                Su
-              </p>
-              <button
-                class="emotion-57 emotion-58 emotion-24"
-                type="button"
-              >
-                <span
-                  class="emotion-60 emotion-7"
-                  data-testid="dayLastMonth"
-                >
-                  27
-                </span>
-              </button>
-              <button
-                class="emotion-57 emotion-58 emotion-24"
-                type="button"
-              >
-                <span
-                  class="emotion-60 emotion-7"
-                  data-testid="dayLastMonth"
-                >
-                  28
-                </span>
-              </button>
-              <button
-                class="emotion-57 emotion-58 emotion-24"
-                type="button"
-              >
-                <span
-                  class="emotion-60 emotion-7"
-                  data-testid="dayLastMonth"
-                >
-                  29
-                </span>
-              </button>
-              <button
-                class="emotion-57 emotion-58 emotion-24"
-                type="button"
-              >
-                <span
-                  class="emotion-60 emotion-7"
-                  data-testid="dayLastMonth"
-                >
-                  30
-                </span>
-              </button>
-              <button
-                class="emotion-57 emotion-58 emotion-24"
-                type="button"
-              >
-                <span
-                  class="emotion-80 emotion-7"
-                >
-                  1
-                </span>
-              </button>
-              <button
-                class="emotion-57 emotion-58 emotion-24"
-                type="button"
-              >
-                <span
-                  class="emotion-80 emotion-7"
-                >
-                  2
-                </span>
-              </button>
-              <button
-                class="emotion-57 emotion-58 emotion-24"
-                type="button"
-              >
-                <span
-                  class="emotion-80 emotion-7"
-                >
-                  3
-                </span>
-              </button>
-              <button
-                class="emotion-57 emotion-58 emotion-24"
-                type="button"
-              >
-                <span
-                  class="emotion-80 emotion-7"
-                >
-                  4
-                </span>
-              </button>
-              <button
-                class="emotion-57 emotion-58 emotion-24"
-                type="button"
-              >
-                <span
-                  class="emotion-80 emotion-7"
-                >
-                  5
-                </span>
-              </button>
-              <button
-                class="emotion-57 emotion-58 emotion-24"
-                type="button"
-              >
-                <span
-                  class="emotion-80 emotion-7"
-                >
-                  6
-                </span>
-              </button>
-              <button
-                class="emotion-57 emotion-58 emotion-24"
-                type="button"
-              >
-                <span
-                  class="emotion-80 emotion-7"
-                >
-                  7
-                </span>
-              </button>
-              <button
-                class="emotion-57 emotion-58 emotion-24"
-                type="button"
-              >
-                <span
-                  class="emotion-80 emotion-7"
-                >
-                  8
-                </span>
-              </button>
-              <button
-                class="emotion-57 emotion-58 emotion-24"
-                type="button"
-              >
-                <span
-                  class="emotion-80 emotion-7"
-                >
-                  9
-                </span>
-              </button>
-              <button
-                class="emotion-57 emotion-58 emotion-24"
-                type="button"
-              >
-                <span
-                  class="emotion-80 emotion-7"
-                >
-                  10
-                </span>
-              </button>
-              <button
-                class="emotion-57 emotion-128 emotion-129"
-                type="button"
-              >
-                <span
-                  class="emotion-130 emotion-7"
-                >
-                  11
-                </span>
-              </button>
-              <button
-                class="emotion-57 emotion-133 emotion-24"
-                disabled=""
-                type="button"
-              >
-                <span
-                  class="emotion-60 emotion-7"
-                >
-                  12
-                </span>
-              </button>
-              <button
-                class="emotion-57 emotion-133 emotion-24"
-                disabled=""
-                type="button"
-              >
-                <span
-                  class="emotion-60 emotion-7"
-                >
-                  13
-                </span>
-              </button>
-              <button
-                class="emotion-57 emotion-133 emotion-24"
-                disabled=""
-                type="button"
-              >
-                <span
-                  class="emotion-60 emotion-7"
-                >
-                  14
-                </span>
-              </button>
-              <button
-                class="emotion-57 emotion-58 emotion-24"
-                type="button"
-              >
-                <span
-                  class="emotion-80 emotion-7"
-                >
-                  15
-                </span>
-              </button>
-              <button
-                class="emotion-57 emotion-58 emotion-24"
-                type="button"
-              >
-                <span
-                  class="emotion-80 emotion-7"
-                >
-                  16
-                </span>
-              </button>
-              <button
-                class="emotion-57 emotion-58 emotion-24"
-                type="button"
-              >
-                <span
-                  class="emotion-80 emotion-7"
-                >
-                  17
-                </span>
-              </button>
-              <button
-                class="emotion-57 emotion-58 emotion-24"
-                type="button"
-              >
-                <span
-                  class="emotion-80 emotion-7"
-                >
-                  18
-                </span>
-              </button>
-              <button
-                class="emotion-57 emotion-58 emotion-24"
-                type="button"
-              >
-                <span
-                  class="emotion-80 emotion-7"
-                >
-                  19
-                </span>
-              </button>
-              <button
-                class="emotion-57 emotion-58 emotion-24"
-                type="button"
-              >
-                <span
-                  class="emotion-80 emotion-7"
-                >
-                  20
-                </span>
-              </button>
-              <button
-                class="emotion-57 emotion-58 emotion-24"
-                type="button"
-              >
-                <span
-                  class="emotion-80 emotion-7"
-                >
-                  21
-                </span>
-              </button>
-              <button
-                class="emotion-57 emotion-58 emotion-24"
-                type="button"
-              >
-                <span
-                  class="emotion-80 emotion-7"
-                >
-                  22
-                </span>
-              </button>
-              <button
-                class="emotion-57 emotion-58 emotion-24"
-                type="button"
-              >
-                <span
-                  class="emotion-80 emotion-7"
-                >
-                  23
-                </span>
-              </button>
-              <button
-                class="emotion-57 emotion-58 emotion-24"
-                type="button"
-              >
-                <span
-                  class="emotion-80 emotion-7"
-                >
-                  24
-                </span>
-              </button>
-              <button
-                class="emotion-57 emotion-58 emotion-24"
-                type="button"
-              >
-                <span
-                  class="emotion-80 emotion-7"
-                >
-                  25
-                </span>
-              </button>
-              <button
-                class="emotion-57 emotion-58 emotion-24"
-                type="button"
-              >
-                <span
-                  class="emotion-80 emotion-7"
-                >
-                  26
-                </span>
-              </button>
-              <button
-                class="emotion-57 emotion-58 emotion-24"
-                type="button"
-              >
-                <span
-                  class="emotion-80 emotion-7"
-                >
-                  27
-                </span>
-              </button>
-              <button
-                class="emotion-57 emotion-58 emotion-24"
-                type="button"
-              >
-                <span
-                  class="emotion-80 emotion-7"
-                >
-                  28
-                </span>
-              </button>
-              <button
-                class="emotion-57 emotion-58 emotion-24"
-                type="button"
-              >
-                <span
-                  class="emotion-80 emotion-7"
-                >
-                  29
-                </span>
-              </button>
-              <button
-                class="emotion-57 emotion-58 emotion-24"
-                type="button"
-              >
-                <span
-                  class="emotion-80 emotion-7"
-                >
-                  30
-                </span>
-              </button>
-              <button
-                class="emotion-57 emotion-58 emotion-24"
-                type="button"
-              >
-                <span
-                  class="emotion-80 emotion-7"
-                >
-                  31
-                </span>
-              </button>
-              <button
-                class="emotion-57 emotion-58 emotion-24"
-                type="button"
-              >
-                <span
-                  class="emotion-60 emotion-7"
-                  data-testid="dayNextMonth"
-                >
-                  1
-                </span>
-              </button>
-              <button
-                class="emotion-57 emotion-58 emotion-24"
-                type="button"
-              >
-                <span
-                  class="emotion-60 emotion-7"
-                  data-testid="dayNextMonth"
-                >
-                  2
-                </span>
-              </button>
-              <button
-                class="emotion-57 emotion-58 emotion-24"
-                type="button"
-              >
-                <span
-                  class="emotion-60 emotion-7"
-                  data-testid="dayNextMonth"
-                >
-                  3
-                </span>
-              </button>
-              <button
-                class="emotion-57 emotion-58 emotion-24"
-                type="button"
-              >
-                <span
-                  class="emotion-60 emotion-7"
-                  data-testid="dayNextMonth"
-                >
-                  4
-                </span>
-              </button>
-              <button
-                class="emotion-57 emotion-58 emotion-24"
-                type="button"
-              >
-                <span
-                  class="emotion-60 emotion-7"
-                  data-testid="dayNextMonth"
-                >
-                  5
-                </span>
-              </button>
-              <button
-                class="emotion-57 emotion-58 emotion-24"
-                type="button"
-              >
-                <span
-                  class="emotion-60 emotion-7"
-                  data-testid="dayNextMonth"
-                >
-                  6
-                </span>
-              </button>
-              <button
-                class="emotion-57 emotion-58 emotion-24"
-                type="button"
-              >
-                <span
-                  class="emotion-60 emotion-7"
-                  data-testid="dayNextMonth"
-                >
-                  7
-                </span>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`DateInput > render correctly with a range of date 1`] = `
-<DocumentFragment>
-  .emotion-0 {
-  width: 100%;
-}
-
-.emotion-2 {
-  display: inherit;
-}
-
-.emotion-2[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.emotion-6 {
-  color: #222638;
-  font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  height: 3rem;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-}
-
-.emotion-8>.emotion-11 {
-  color: #3f4250;
-}
-
-.emotion-8>.emotion-11::-webkit-input-placeholder {
-  color: #727683;
-}
-
-.emotion-8>.emotion-11::-moz-placeholder {
-  color: #727683;
-}
-
-.emotion-8>.emotion-11:-ms-input-placeholder {
-  color: #727683;
-}
-
-.emotion-8>.emotion-11::placeholder {
-  color: #727683;
-}
-
-.emotion-8[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-8[data-error='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-8[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-}
-
-.emotion-8[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-}
-
-.emotion-8[data-disabled='true']>.emotion-11 {
-  color: #b5b7bd;
-}
-
-.emotion-8[data-disabled='true']>.emotion-11::-webkit-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-8[data-disabled='true']>.emotion-11::-moz-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-8[data-disabled='true']>.emotion-11:-ms-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-8[data-disabled='true']>.emotion-11::placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-8:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-10 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  border: none;
-  outline: none;
-  height: 100%;
-  width: 100%;
-  padding-left: 1rem;
-  background: transparent;
-  font-size: 0.875rem;
-}
-
-.emotion-10[data-size='large'] {
-  font-size: 1rem;
-}
-
-.emotion-10[data-size='small'] {
-  padding-left: 0.5rem;
-}
-
-.emotion-12 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  padding: 0 1rem;
-  border-left: 1px solid;
-  border-color: inherit;
-}
-
-.emotion-14 {
-  vertical-align: middle;
-  fill: #3f4250;
-  height: 1.25rem;
-  width: 1.25rem;
-  min-width: 1.25rem;
-  min-height: 1.25rem;
-}
-
-.emotion-14 .fillStroke {
-  stroke: #3f4250;
-  fill: none;
-}
-
-<div
-    data-testid="testing"
-  >
-    <div
-      class="emotion-0 emotion-1"
-    >
-      <div
-        aria-controls=":rbi:"
-        aria-describedby=":rbi:"
-        class="emotion-2 emotion-3"
-        tabindex="0"
-      >
-        <div
-          class="emotion-4 emotion-5"
-        >
-          <label
-            class="emotion-6 emotion-7"
-            for=":rbj:"
-          >
-            Date
-          </label>
-          <div>
-            <div
-              class="emotion-8 emotion-9"
-              data-disabled="false"
-              data-error="false"
-              data-readonly="false"
-              data-success="false"
-            >
-              <input
-                aria-invalid="false"
-                autocomplete="false"
-                class="emotion-10 emotion-11"
-                data-size="large"
-                id=":rbj:"
-                type="text"
-                value="12/11/1995 - 12/25/1995"
-              />
-              <div
-                class="emotion-12 emotion-13"
-              >
-                <svg
-                  class="emotion-14 emotion-15"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    d="M5.25 12a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H6a.75.75 0 0 1-.75-.75zM6 13.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V14a.75.75 0 0 0-.75-.75zM7.25 12a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H8a.75.75 0 0 1-.75-.75zM8 13.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V14a.75.75 0 0 0-.75-.75zM9.25 10a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H10a.75.75 0 0 1-.75-.75zm.75 1.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V12a.75.75 0 0 0-.75-.75zM9.25 14a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H10a.75.75 0 0 1-.75-.75zM12 9.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V10a.75.75 0 0 0-.75-.75zM11.25 12a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H12a.75.75 0 0 1-.75-.75zm.75 1.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V14a.75.75 0 0 0-.75-.75zM13.25 10a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H14a.75.75 0 0 1-.75-.75zm.75 1.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V12a.75.75 0 0 0-.75-.75z"
-                  />
-                  <path
-                    clip-rule="evenodd"
-                    d="M5.75 2a.75.75 0 0 1 .75.75V4h7V2.75a.75.75 0 0 1 1.5 0V4h.25A2.75 2.75 0 0 1 18 6.75v8.5A2.75 2.75 0 0 1 15.25 18H4.75A2.75 2.75 0 0 1 2 15.25v-8.5A2.75 2.75 0 0 1 4.75 4H5V2.75A.75.75 0 0 1 5.75 2m-1 5.5c-.69 0-1.25.56-1.25 1.25v6.5c0 .69.56 1.25 1.25 1.25h10.5c.69 0 1.25-.56 1.25-1.25v-6.5c0-.69-.56-1.25-1.25-1.25z"
-                  />
-                </svg>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
 exports[`DateInput > render correctly with showMonthYearPicker 1`] = `
 <DocumentFragment>
   .emotion-0 {
@@ -2092,12 +630,7 @@ exports[`DateInput > render correctly with showMonthYearPicker with default date
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  display: inline-block;
-  text-transform: lowercase;
-}
-
-.emotion-28::first-letter {
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 
 .emotion-34 {
@@ -2887,12 +1420,7 @@ exports[`DateInput > render correctly with showMonthYearPicker with excluded mon
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  display: inline-block;
-  text-transform: lowercase;
-}
-
-.emotion-28::first-letter {
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 
 .emotion-34 {
@@ -3112,8 +1640,8 @@ exports[`DateInput > render correctly with showMonthYearPicker with excluded mon
       class="emotion-0 emotion-1"
     >
       <div
-        aria-controls=":r1ao:"
-        aria-describedby=":r1ao:"
+        aria-controls=":r1gl:"
+        aria-describedby=":r1gl:"
         class="emotion-2 emotion-3"
         tabindex="0"
       >
@@ -3122,7 +1650,7 @@ exports[`DateInput > render correctly with showMonthYearPicker with excluded mon
         >
           <label
             class="emotion-6 emotion-7"
-            for=":r1ap:"
+            for=":r1gm:"
           >
             Date
           </label>
@@ -3139,7 +1667,7 @@ exports[`DateInput > render correctly with showMonthYearPicker with excluded mon
                 autocomplete="false"
                 class="emotion-10 emotion-11"
                 data-size="large"
-                id=":r1ap:"
+                id=":r1gm:"
                 placeholder="YYYY-MM-DD"
                 type="text"
                 value="02/1995"
@@ -3167,7 +1695,7 @@ exports[`DateInput > render correctly with showMonthYearPicker with excluded mon
           class="emotion-16 emotion-17 emotion-18"
           data-animated="false"
           data-has-arrow="false"
-          id=":r1ao:"
+          id=":r1gl:"
           role="dialog"
           style="opacity: 1;"
         >
@@ -3525,7 +2053,7 @@ exports[`DateInput > renders correctly custom format with range 1`] = `
 
 .emotion-14 {
   vertical-align: middle;
-  fill: #b5b7bd;
+  fill: #3f4250;
   height: 1.25rem;
   width: 1.25rem;
   min-width: 1.25rem;
@@ -3544,8 +2072,8 @@ exports[`DateInput > renders correctly custom format with range 1`] = `
       class="emotion-0 emotion-1"
     >
       <div
-        aria-controls=":r1em:"
-        aria-describedby=":r1em:"
+        aria-controls=":r1kj:"
+        aria-describedby=":r1kj:"
         class="emotion-2 emotion-3"
         tabindex="0"
       >
@@ -3554,7 +2082,7 @@ exports[`DateInput > renders correctly custom format with range 1`] = `
         >
           <label
             class="emotion-6 emotion-7"
-            for=":r1en:"
+            for=":r1kk:"
           >
             Date
           </label>
@@ -3571,9 +2099,10 @@ exports[`DateInput > renders correctly custom format with range 1`] = `
                 autocomplete="false"
                 class="emotion-10 emotion-11"
                 data-size="large"
-                id=":r1en:"
+                id=":r1kk:"
                 name="test"
                 type="text"
+                value="1995-12-11T03:24:00.000Z - 1995-12-11T03:24:00.000Z"
               />
               <div
                 class="emotion-12 emotion-13"
@@ -3600,7 +2129,7 @@ exports[`DateInput > renders correctly custom format with range 1`] = `
 </DocumentFragment>
 `;
 
-exports[`DateInput > renders correctly disabled 2`] = `
+exports[`DateInput > renders correctly disabled 1`] = `
 <DocumentFragment>
   .emotion-0 {
   width: 100%;
@@ -3822,6 +2351,255 @@ exports[`DateInput > renders correctly disabled 2`] = `
                 data-size="large"
                 disabled=""
                 id=":r6:"
+                type="text"
+              />
+              <div
+                class="emotion-12 emotion-13"
+              >
+                <svg
+                  class="emotion-14 emotion-15"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M5.25 12a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H6a.75.75 0 0 1-.75-.75zM6 13.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V14a.75.75 0 0 0-.75-.75zM7.25 12a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H8a.75.75 0 0 1-.75-.75zM8 13.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V14a.75.75 0 0 0-.75-.75zM9.25 10a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H10a.75.75 0 0 1-.75-.75zm.75 1.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V12a.75.75 0 0 0-.75-.75zM9.25 14a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H10a.75.75 0 0 1-.75-.75zM12 9.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V10a.75.75 0 0 0-.75-.75zM11.25 12a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H12a.75.75 0 0 1-.75-.75zm.75 1.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V14a.75.75 0 0 0-.75-.75zM13.25 10a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H14a.75.75 0 0 1-.75-.75zm.75 1.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V12a.75.75 0 0 0-.75-.75z"
+                  />
+                  <path
+                    clip-rule="evenodd"
+                    d="M5.75 2a.75.75 0 0 1 .75.75V4h7V2.75a.75.75 0 0 1 1.5 0V4h.25A2.75 2.75 0 0 1 18 6.75v8.5A2.75 2.75 0 0 1 15.25 18H4.75A2.75 2.75 0 0 1 2 15.25v-8.5A2.75 2.75 0 0 1 4.75 4H5V2.75A.75.75 0 0 1 5.75 2m-1 5.5c-.69 0-1.25.56-1.25 1.25v6.5c0 .69.56 1.25 1.25 1.25h10.5c.69 0 1.25-.56 1.25-1.25v-6.5c0-.69-.56-1.25-1.25-1.25z"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`DateInput > renders correctly disabled 2`] = `
+<DocumentFragment>
+  .emotion-0 {
+  width: 100%;
+}
+
+.emotion-2 {
+  display: inherit;
+}
+
+.emotion-2[data-container-full-width="true"] {
+  width: 100%;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.25rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-6 {
+  color: #222638;
+  font-size: 1rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  height: 3rem;
+  background: #ffffff;
+  border: 1px solid #d9dadd;
+  border-radius: 0.25rem;
+}
+
+.emotion-8>.emotion-11 {
+  color: #3f4250;
+}
+
+.emotion-8>.emotion-11::-webkit-input-placeholder {
+  color: #727683;
+}
+
+.emotion-8>.emotion-11::-moz-placeholder {
+  color: #727683;
+}
+
+.emotion-8>.emotion-11:-ms-input-placeholder {
+  color: #727683;
+}
+
+.emotion-8>.emotion-11::placeholder {
+  color: #727683;
+}
+
+.emotion-8[data-success='true'] {
+  border-color: #22674e;
+}
+
+.emotion-8[data-error='true'] {
+  border-color: #b3144d;
+}
+
+.emotion-8[data-readonly='true'] {
+  background: #f9f9fa;
+  border-color: #d9dadd;
+}
+
+.emotion-8[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
+}
+
+.emotion-8[data-disabled='true']>.emotion-11 {
+  color: #b5b7bd;
+}
+
+.emotion-8[data-disabled='true']>.emotion-11::-webkit-input-placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-8[data-disabled='true']>.emotion-11::-moz-placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-8[data-disabled='true']>.emotion-11:-ms-input-placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-8[data-disabled='true']>.emotion-11::placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-8:not([data-disabled='true']):not([data-readonly]):hover {
+  border-color: #8c40ef;
+}
+
+.emotion-10 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  border: none;
+  outline: none;
+  height: 100%;
+  width: 100%;
+  padding-left: 1rem;
+  background: transparent;
+  font-size: 0.875rem;
+}
+
+.emotion-10[data-size='large'] {
+  font-size: 1rem;
+}
+
+.emotion-10[data-size='small'] {
+  padding-left: 0.5rem;
+}
+
+.emotion-12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding: 0 1rem;
+  border-left: 1px solid;
+  border-color: inherit;
+}
+
+.emotion-14 {
+  vertical-align: middle;
+  fill: #b5b7bd;
+  height: 1.25rem;
+  width: 1.25rem;
+  min-width: 1.25rem;
+  min-height: 1.25rem;
+}
+
+.emotion-14 .fillStroke {
+  stroke: #b5b7bd;
+  fill: none;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+    >
+      <div
+        aria-controls=":rbi:"
+        aria-describedby=":rbi:"
+        class="emotion-2 emotion-3"
+        tabindex="0"
+      >
+        <div
+          class="emotion-4 emotion-5"
+        >
+          <label
+            class="emotion-6 emotion-7"
+            for=":rbj:"
+          >
+            Date
+          </label>
+          <div>
+            <div
+              class="emotion-8 emotion-9"
+              data-disabled="true"
+              data-error="false"
+              data-readonly="false"
+              data-success="false"
+            >
+              <input
+                aria-invalid="false"
+                autocomplete="false"
+                class="emotion-10 emotion-11"
+                data-size="large"
+                disabled=""
+                id=":rbj:"
                 type="text"
               />
               <div
@@ -5780,12 +4558,7 @@ exports[`DateInput > renders correctly with a array of dates to exclude 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  display: inline-block;
-  text-transform: lowercase;
-}
-
-.emotion-28::first-letter {
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 
 .emotion-34 {
@@ -5902,7 +4675,7 @@ exports[`DateInput > renders correctly with a array of dates to exclude 1`] = `
   text-decoration: none;
 }
 
-.emotion-104 {
+.emotion-128 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -5945,27 +4718,22 @@ exports[`DateInput > renders correctly with a array of dates to exclude 1`] = `
   color: #727683;
 }
 
-.emotion-104:hover {
+.emotion-128:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-104:active {
+.emotion-128:active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-104:hover,
-.emotion-104:active {
+.emotion-128:hover,
+.emotion-128:active {
   background: #792dd4;
   color: #f9f9fa;
 }
 
-.emotion-104[aria-label="in-range"] {
-  color: #521094;
-  background-color: #f1eefc;
-}
-
-.emotion-104[aria-label="in-range"]:hover {
+.emotion-130 {
   color: #ffffff;
   background-color: #792dd4;
 }
@@ -5979,7 +4747,7 @@ exports[`DateInput > renders correctly with a array of dates to exclude 1`] = `
   color: #ffffff;
 }
 
-.emotion-107 {
+.emotion-133 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -6023,7 +4791,7 @@ exports[`DateInput > renders correctly with a array of dates to exclude 1`] = `
   color: #727683;
 }
 
-.emotion-107:hover {
+.emotion-133:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
@@ -6054,8 +4822,8 @@ exports[`DateInput > renders correctly with a array of dates to exclude 1`] = `
       class="emotion-0 emotion-1"
     >
       <div
-        aria-controls=":r44:"
-        aria-describedby=":r44:"
+        aria-controls=":rhk:"
+        aria-describedby=":rhk:"
         class="emotion-2 emotion-3"
         tabindex="0"
       >
@@ -6064,7 +4832,7 @@ exports[`DateInput > renders correctly with a array of dates to exclude 1`] = `
         >
           <label
             class="emotion-6 emotion-7"
-            for=":r45:"
+            for=":rhl:"
           >
             Date
           </label>
@@ -6081,7 +4849,8 @@ exports[`DateInput > renders correctly with a array of dates to exclude 1`] = `
                 autocomplete="false"
                 class="emotion-10 emotion-11"
                 data-size="large"
-                id=":r45:"
+                id=":rhl:"
+                placeholder="YYYY-MM-DD"
                 type="text"
                 value="12/11/1995"
               />
@@ -6108,7 +4877,7 @@ exports[`DateInput > renders correctly with a array of dates to exclude 1`] = `
           class="emotion-16 emotion-17 emotion-18"
           data-animated="false"
           data-has-arrow="false"
-          id=":r44:"
+          id=":rhk:"
           role="dialog"
           style="opacity: 1;"
         >
@@ -6138,7 +4907,7 @@ exports[`DateInput > renders correctly with a array of dates to exclude 1`] = `
               <span
                 class="emotion-27 emotion-28 emotion-7"
               >
-                enero 2021
+                December 1995
               </span>
               <button
                 class="emotion-23 emotion-24"
@@ -6341,41 +5110,44 @@ exports[`DateInput > renders correctly with a array of dates to exclude 1`] = `
                 </span>
               </button>
               <button
-                class="emotion-57 emotion-58 emotion-24"
+                class="emotion-57 emotion-128 emotion-129"
                 type="button"
               >
                 <span
-                  class="emotion-80 emotion-7"
+                  class="emotion-130 emotion-7"
                 >
                   11
                 </span>
               </button>
               <button
-                class="emotion-57 emotion-58 emotion-24"
+                class="emotion-57 emotion-133 emotion-24"
+                disabled=""
                 type="button"
               >
                 <span
-                  class="emotion-80 emotion-7"
+                  class="emotion-60 emotion-7"
                 >
                   12
                 </span>
               </button>
               <button
-                class="emotion-57 emotion-58 emotion-24"
+                class="emotion-57 emotion-133 emotion-24"
+                disabled=""
                 type="button"
               >
                 <span
-                  class="emotion-80 emotion-7"
+                  class="emotion-60 emotion-7"
                 >
                   13
                 </span>
               </button>
               <button
-                class="emotion-57 emotion-58 emotion-24"
+                class="emotion-57 emotion-133 emotion-24"
+                disabled=""
                 type="button"
               >
                 <span
-                  class="emotion-80 emotion-7"
+                  class="emotion-60 emotion-7"
                 >
                   14
                 </span>
@@ -7019,12 +5791,6 @@ exports[`DateInput > renders correctly with date-fns locale es 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   text-transform: capitalize;
-  display: inline-block;
-  text-transform: lowercase;
-}
-
-.emotion-28::first-letter {
-  text-transform: uppercase;
 }
 
 .emotion-34 {
@@ -7099,7 +5865,6 @@ exports[`DateInput > renders correctly with date-fns locale es 1`] = `
   height: 1.5625rem;
   width: 100%;
   padding: 0;
-  color: #727683;
 }
 
 .emotion-58:hover {
@@ -7119,6 +5884,14 @@ exports[`DateInput > renders correctly with date-fns locale es 1`] = `
 
 .emotion-60 {
   color: #b5b7bd;
+  font-size: 1rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .emotion-80 {
@@ -7140,8 +5913,8 @@ exports[`DateInput > renders correctly with date-fns locale es 1`] = `
       class="emotion-0 emotion-1"
     >
       <div
-        aria-controls=":r10:"
-        aria-describedby=":r10:"
+        aria-controls=":r44:"
+        aria-describedby=":r44:"
         class="emotion-2 emotion-3"
         tabindex="0"
       >
@@ -7150,7 +5923,7 @@ exports[`DateInput > renders correctly with date-fns locale es 1`] = `
         >
           <label
             class="emotion-6 emotion-7"
-            for=":r11:"
+            for=":r45:"
           >
             Date
           </label>
@@ -7167,7 +5940,7 @@ exports[`DateInput > renders correctly with date-fns locale es 1`] = `
                 autocomplete="false"
                 class="emotion-10 emotion-11"
                 data-size="large"
-                id=":r11:"
+                id=":r45:"
                 type="text"
               />
               <div
@@ -7193,7 +5966,7 @@ exports[`DateInput > renders correctly with date-fns locale es 1`] = `
           class="emotion-16 emotion-17 emotion-18"
           data-animated="false"
           data-has-arrow="false"
-          id=":r10:"
+          id=":r44:"
           role="dialog"
           style="opacity: 1;"
         >
@@ -7223,7 +5996,7 @@ exports[`DateInput > renders correctly with date-fns locale es 1`] = `
               <span
                 class="emotion-27 emotion-28 emotion-7"
               >
-                janvier 2021
+                enero 2021
               </span>
               <button
                 class="emotion-23 emotion-24"
@@ -7426,41 +6199,44 @@ exports[`DateInput > renders correctly with date-fns locale es 1`] = `
                 </span>
               </button>
               <button
-                class="emotion-57 emotion-58 emotion-24"
+                class="emotion-57 emotion-128 emotion-129"
                 type="button"
               >
                 <span
-                  class="emotion-80 emotion-7"
+                  class="emotion-130 emotion-7"
                 >
                   11
                 </span>
               </button>
               <button
-                class="emotion-57 emotion-58 emotion-24"
+                class="emotion-57 emotion-133 emotion-24"
+                disabled=""
                 type="button"
               >
                 <span
-                  class="emotion-80 emotion-7"
+                  class="emotion-60 emotion-7"
                 >
                   12
                 </span>
               </button>
               <button
-                class="emotion-57 emotion-58 emotion-24"
+                class="emotion-57 emotion-133 emotion-24"
+                disabled=""
                 type="button"
               >
                 <span
-                  class="emotion-80 emotion-7"
+                  class="emotion-60 emotion-7"
                 >
                   13
                 </span>
               </button>
               <button
-                class="emotion-57 emotion-58 emotion-24"
+                class="emotion-57 emotion-133 emotion-24"
+                disabled=""
                 type="button"
               >
                 <span
-                  class="emotion-80 emotion-7"
+                  class="emotion-60 emotion-7"
                 >
                   14
                 </span>
@@ -8103,12 +6879,2168 @@ exports[`DateInput > renders correctly with date-fns locale fr 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  text-transform: capitalize;
+}
+
+.emotion-34 {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.5rem;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+}
+
+.emotion-37 {
+  color: #3f4250;
+  font-size: 1rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   display: inline-block;
   text-transform: lowercase;
 }
 
-.emotion-28::first-letter {
+.emotion-37::first-letter {
   text-transform: uppercase;
+}
+
+.emotion-58 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 3rem;
+  padding: 0 1rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.5rem;
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: none;
+  color: #3f4250;
+  height: 1.5625rem;
+  width: 100%;
+  padding: 0;
+}
+
+.emotion-58:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-58:active {
+  box-shadow: 0px 0px 0px 3px #151a2d5c;
+}
+
+.emotion-58:hover,
+.emotion-58:active {
+  background: #e9eaeb;
+  color: #222638;
+}
+
+.emotion-60 {
+  color: #b5b7bd;
+  font-size: 1rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-80 {
+  color: #727683;
+  font-size: 1rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+    >
+      <div
+        aria-controls=":r44:"
+        aria-describedby=":r44:"
+        class="emotion-2 emotion-3"
+        tabindex="0"
+      >
+        <div
+          class="emotion-4 emotion-5"
+        >
+          <label
+            class="emotion-6 emotion-7"
+            for=":r45:"
+          >
+            Date
+          </label>
+          <div>
+            <div
+              class="emotion-8 emotion-9"
+              data-disabled="false"
+              data-error="false"
+              data-readonly="false"
+              data-success="false"
+            >
+              <input
+                aria-invalid="false"
+                autocomplete="false"
+                class="emotion-10 emotion-11"
+                data-size="large"
+                id=":r45:"
+                type="text"
+              />
+              <div
+                class="emotion-12 emotion-13"
+              >
+                <svg
+                  class="emotion-14 emotion-15"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M5.25 12a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H6a.75.75 0 0 1-.75-.75zM6 13.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V14a.75.75 0 0 0-.75-.75zM7.25 12a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H8a.75.75 0 0 1-.75-.75zM8 13.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V14a.75.75 0 0 0-.75-.75zM9.25 10a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H10a.75.75 0 0 1-.75-.75zm.75 1.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V12a.75.75 0 0 0-.75-.75zM9.25 14a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H10a.75.75 0 0 1-.75-.75zM12 9.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V10a.75.75 0 0 0-.75-.75zM11.25 12a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H12a.75.75 0 0 1-.75-.75zm.75 1.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V14a.75.75 0 0 0-.75-.75zM13.25 10a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H14a.75.75 0 0 1-.75-.75zm.75 1.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V12a.75.75 0 0 0-.75-.75z"
+                  />
+                  <path
+                    clip-rule="evenodd"
+                    d="M5.75 2a.75.75 0 0 1 .75.75V4h7V2.75a.75.75 0 0 1 1.5 0V4h.25A2.75 2.75 0 0 1 18 6.75v8.5A2.75 2.75 0 0 1 15.25 18H4.75A2.75 2.75 0 0 1 2 15.25v-8.5A2.75 2.75 0 0 1 4.75 4H5V2.75A.75.75 0 0 1 5.75 2m-1 5.5c-.69 0-1.25.56-1.25 1.25v6.5c0 .69.56 1.25 1.25 1.25h10.5c.69 0 1.25-.56 1.25-1.25v-6.5c0-.69-.56-1.25-1.25-1.25z"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="emotion-16 emotion-17 emotion-18"
+          data-animated="false"
+          data-has-arrow="false"
+          id=":r44:"
+          role="dialog"
+          style="opacity: 1;"
+        >
+          <div
+            class="emotion-19 emotion-5"
+          >
+            <div
+              class="emotion-21 emotion-5"
+            >
+              <button
+                class="emotion-23 emotion-24"
+                data-testid="previous-month"
+                type="button"
+              >
+                <svg
+                  class="emotion-25 emotion-26"
+                  viewBox="0 0 16 16"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M10.53 4.22a.75.75 0 0 1 0 1.06L7.81 8l2.72 2.72a.75.75 0 1 1-1.06 1.06L6.22 8.53a.75.75 0 0 1 0-1.06l3.25-3.25a.75.75 0 0 1 1.06 0"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </button>
+              <span
+                class="emotion-27 emotion-28 emotion-7"
+              >
+                janvier 2021
+              </span>
+              <button
+                class="emotion-23 emotion-24"
+                data-testid="next-month"
+                type="button"
+              >
+                <svg
+                  class="emotion-25 emotion-26"
+                  viewBox="0 0 16 16"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M6.22 4.22a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06L8.94 8 6.22 5.28a.75.75 0 0 1 0-1.06"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div
+              class="emotion-34 emotion-35"
+            >
+              <p
+                class="emotion-36 emotion-37 emotion-7"
+              >
+                lu
+              </p>
+              <p
+                class="emotion-36 emotion-37 emotion-7"
+              >
+                ma
+              </p>
+              <p
+                class="emotion-36 emotion-37 emotion-7"
+              >
+                me
+              </p>
+              <p
+                class="emotion-36 emotion-37 emotion-7"
+              >
+                je
+              </p>
+              <p
+                class="emotion-36 emotion-37 emotion-7"
+              >
+                ve
+              </p>
+              <p
+                class="emotion-36 emotion-37 emotion-7"
+              >
+                sa
+              </p>
+              <p
+                class="emotion-36 emotion-37 emotion-7"
+              >
+                di
+              </p>
+              <button
+                class="emotion-57 emotion-58 emotion-24"
+                type="button"
+              >
+                <span
+                  class="emotion-60 emotion-7"
+                  data-testid="dayLastMonth"
+                >
+                  28
+                </span>
+              </button>
+              <button
+                class="emotion-57 emotion-58 emotion-24"
+                type="button"
+              >
+                <span
+                  class="emotion-60 emotion-7"
+                  data-testid="dayLastMonth"
+                >
+                  29
+                </span>
+              </button>
+              <button
+                class="emotion-57 emotion-58 emotion-24"
+                type="button"
+              >
+                <span
+                  class="emotion-60 emotion-7"
+                  data-testid="dayLastMonth"
+                >
+                  30
+                </span>
+              </button>
+              <button
+                class="emotion-57 emotion-58 emotion-24"
+                type="button"
+              >
+                <span
+                  class="emotion-60 emotion-7"
+                  data-testid="dayLastMonth"
+                >
+                  31
+                </span>
+              </button>
+              <button
+                class="emotion-57 emotion-58 emotion-24"
+                type="button"
+              >
+                <span
+                  class="emotion-80 emotion-7"
+                >
+                  1
+                </span>
+              </button>
+              <button
+                class="emotion-57 emotion-58 emotion-24"
+                type="button"
+              >
+                <span
+                  class="emotion-80 emotion-7"
+                >
+                  2
+                </span>
+              </button>
+              <button
+                class="emotion-57 emotion-58 emotion-24"
+                type="button"
+              >
+                <span
+                  class="emotion-80 emotion-7"
+                >
+                  3
+                </span>
+              </button>
+              <button
+                class="emotion-57 emotion-58 emotion-24"
+                type="button"
+              >
+                <span
+                  class="emotion-80 emotion-7"
+                >
+                  4
+                </span>
+              </button>
+              <button
+                class="emotion-57 emotion-58 emotion-24"
+                type="button"
+              >
+                <span
+                  class="emotion-80 emotion-7"
+                >
+                  5
+                </span>
+              </button>
+              <button
+                class="emotion-57 emotion-58 emotion-24"
+                type="button"
+              >
+                <span
+                  class="emotion-80 emotion-7"
+                >
+                  6
+                </span>
+              </button>
+              <button
+                class="emotion-57 emotion-58 emotion-24"
+                type="button"
+              >
+                <span
+                  class="emotion-80 emotion-7"
+                >
+                  7
+                </span>
+              </button>
+              <button
+                class="emotion-57 emotion-58 emotion-24"
+                type="button"
+              >
+                <span
+                  class="emotion-80 emotion-7"
+                >
+                  8
+                </span>
+              </button>
+              <button
+                class="emotion-57 emotion-58 emotion-24"
+                type="button"
+              >
+                <span
+                  class="emotion-80 emotion-7"
+                >
+                  9
+                </span>
+              </button>
+              <button
+                class="emotion-57 emotion-58 emotion-24"
+                type="button"
+              >
+                <span
+                  class="emotion-80 emotion-7"
+                >
+                  10
+                </span>
+              </button>
+              <button
+                class="emotion-57 emotion-58 emotion-24"
+                type="button"
+              >
+                <span
+                  class="emotion-80 emotion-7"
+                >
+                  11
+                </span>
+              </button>
+              <button
+                class="emotion-57 emotion-58 emotion-24"
+                type="button"
+              >
+                <span
+                  class="emotion-80 emotion-7"
+                >
+                  12
+                </span>
+              </button>
+              <button
+                class="emotion-57 emotion-58 emotion-24"
+                type="button"
+              >
+                <span
+                  class="emotion-80 emotion-7"
+                >
+                  13
+                </span>
+              </button>
+              <button
+                class="emotion-57 emotion-58 emotion-24"
+                type="button"
+              >
+                <span
+                  class="emotion-80 emotion-7"
+                >
+                  14
+                </span>
+              </button>
+              <button
+                class="emotion-57 emotion-58 emotion-24"
+                type="button"
+              >
+                <span
+                  class="emotion-80 emotion-7"
+                >
+                  15
+                </span>
+              </button>
+              <button
+                class="emotion-57 emotion-58 emotion-24"
+                type="button"
+              >
+                <span
+                  class="emotion-80 emotion-7"
+                >
+                  16
+                </span>
+              </button>
+              <button
+                class="emotion-57 emotion-58 emotion-24"
+                type="button"
+              >
+                <span
+                  class="emotion-80 emotion-7"
+                >
+                  17
+                </span>
+              </button>
+              <button
+                class="emotion-57 emotion-58 emotion-24"
+                type="button"
+              >
+                <span
+                  class="emotion-80 emotion-7"
+                >
+                  18
+                </span>
+              </button>
+              <button
+                class="emotion-57 emotion-58 emotion-24"
+                type="button"
+              >
+                <span
+                  class="emotion-80 emotion-7"
+                >
+                  19
+                </span>
+              </button>
+              <button
+                class="emotion-57 emotion-58 emotion-24"
+                type="button"
+              >
+                <span
+                  class="emotion-80 emotion-7"
+                >
+                  20
+                </span>
+              </button>
+              <button
+                class="emotion-57 emotion-58 emotion-24"
+                type="button"
+              >
+                <span
+                  class="emotion-80 emotion-7"
+                >
+                  21
+                </span>
+              </button>
+              <button
+                class="emotion-57 emotion-58 emotion-24"
+                type="button"
+              >
+                <span
+                  class="emotion-80 emotion-7"
+                >
+                  22
+                </span>
+              </button>
+              <button
+                class="emotion-57 emotion-58 emotion-24"
+                type="button"
+              >
+                <span
+                  class="emotion-80 emotion-7"
+                >
+                  23
+                </span>
+              </button>
+              <button
+                class="emotion-57 emotion-58 emotion-24"
+                type="button"
+              >
+                <span
+                  class="emotion-80 emotion-7"
+                >
+                  24
+                </span>
+              </button>
+              <button
+                class="emotion-57 emotion-58 emotion-24"
+                type="button"
+              >
+                <span
+                  class="emotion-80 emotion-7"
+                >
+                  25
+                </span>
+              </button>
+              <button
+                class="emotion-57 emotion-58 emotion-24"
+                type="button"
+              >
+                <span
+                  class="emotion-80 emotion-7"
+                >
+                  26
+                </span>
+              </button>
+              <button
+                class="emotion-57 emotion-58 emotion-24"
+                type="button"
+              >
+                <span
+                  class="emotion-80 emotion-7"
+                >
+                  27
+                </span>
+              </button>
+              <button
+                class="emotion-57 emotion-58 emotion-24"
+                type="button"
+              >
+                <span
+                  class="emotion-80 emotion-7"
+                >
+                  28
+                </span>
+              </button>
+              <button
+                class="emotion-57 emotion-58 emotion-24"
+                type="button"
+              >
+                <span
+                  class="emotion-80 emotion-7"
+                >
+                  29
+                </span>
+              </button>
+              <button
+                class="emotion-57 emotion-58 emotion-24"
+                type="button"
+              >
+                <span
+                  class="emotion-80 emotion-7"
+                >
+                  30
+                </span>
+              </button>
+              <button
+                class="emotion-57 emotion-58 emotion-24"
+                type="button"
+              >
+                <span
+                  class="emotion-80 emotion-7"
+                >
+                  31
+                </span>
+              </button>
+              <button
+                class="emotion-57 emotion-58 emotion-24"
+                type="button"
+              >
+                <span
+                  class="emotion-60 emotion-7"
+                  data-testid="dayNextMonth"
+                >
+                  1
+                </span>
+              </button>
+              <button
+                class="emotion-57 emotion-58 emotion-24"
+                type="button"
+              >
+                <span
+                  class="emotion-60 emotion-7"
+                  data-testid="dayNextMonth"
+                >
+                  2
+                </span>
+              </button>
+              <button
+                class="emotion-57 emotion-58 emotion-24"
+                type="button"
+              >
+                <span
+                  class="emotion-60 emotion-7"
+                  data-testid="dayNextMonth"
+                >
+                  3
+                </span>
+              </button>
+              <button
+                class="emotion-57 emotion-58 emotion-24"
+                type="button"
+              >
+                <span
+                  class="emotion-60 emotion-7"
+                  data-testid="dayNextMonth"
+                >
+                  4
+                </span>
+              </button>
+              <button
+                class="emotion-57 emotion-58 emotion-24"
+                type="button"
+              >
+                <span
+                  class="emotion-60 emotion-7"
+                  data-testid="dayNextMonth"
+                >
+                  5
+                </span>
+              </button>
+              <button
+                class="emotion-57 emotion-58 emotion-24"
+                type="button"
+              >
+                <span
+                  class="emotion-60 emotion-7"
+                  data-testid="dayNextMonth"
+                >
+                  6
+                </span>
+              </button>
+              <button
+                class="emotion-57 emotion-58 emotion-24"
+                type="button"
+              >
+                <span
+                  class="emotion-60 emotion-7"
+                  data-testid="dayNextMonth"
+                >
+                  7
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`DateInput > renders correctly with date-fns locale ru 1`] = `
+<DocumentFragment>
+  @keyframes animation-0 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0px, 4px, 0);
+    -moz-transform: translate3d(0px, 4px, 0);
+    -ms-transform: translate3d(0px, 4px, 0);
+    transform: translate3d(0px, 4px, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0px, 4px, 0);
+    -moz-transform: translate3d(0px, 4px, 0);
+    -ms-transform: translate3d(0px, 4px, 0);
+    transform: translate3d(0px, 4px, 0);
+  }
+}
+
+.emotion-0 {
+  width: 100%;
+}
+
+.emotion-2 {
+  display: inherit;
+}
+
+.emotion-2[data-container-full-width="true"] {
+  width: 100%;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.25rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-6 {
+  color: #222638;
+  font-size: 1rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  height: 3rem;
+  background: #ffffff;
+  border: 1px solid #d9dadd;
+  border-radius: 0.25rem;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+  border: 1px solid #8c40ef;
+}
+
+.emotion-8>.emotion-11 {
+  color: #3f4250;
+}
+
+.emotion-8>.emotion-11::-webkit-input-placeholder {
+  color: #727683;
+}
+
+.emotion-8>.emotion-11::-moz-placeholder {
+  color: #727683;
+}
+
+.emotion-8>.emotion-11:-ms-input-placeholder {
+  color: #727683;
+}
+
+.emotion-8>.emotion-11::placeholder {
+  color: #727683;
+}
+
+.emotion-8[data-success='true'] {
+  border-color: #22674e;
+}
+
+.emotion-8[data-error='true'] {
+  border-color: #b3144d;
+}
+
+.emotion-8[data-readonly='true'] {
+  background: #f9f9fa;
+  border-color: #d9dadd;
+}
+
+.emotion-8[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
+}
+
+.emotion-8[data-disabled='true']>.emotion-11 {
+  color: #b5b7bd;
+}
+
+.emotion-8[data-disabled='true']>.emotion-11::-webkit-input-placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-8[data-disabled='true']>.emotion-11::-moz-placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-8[data-disabled='true']>.emotion-11:-ms-input-placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-8[data-disabled='true']>.emotion-11::placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-8:not([data-disabled='true']):not([data-readonly]):hover {
+  border-color: #8c40ef;
+}
+
+.emotion-10 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  border: none;
+  outline: none;
+  height: 100%;
+  width: 100%;
+  padding-left: 1rem;
+  background: transparent;
+  font-size: 0.875rem;
+}
+
+.emotion-10[data-size='large'] {
+  font-size: 1rem;
+}
+
+.emotion-10[data-size='small'] {
+  padding-left: 0.5rem;
+}
+
+.emotion-12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding: 0 1rem;
+  border-left: 1px solid;
+  border-color: inherit;
+}
+
+.emotion-14 {
+  vertical-align: middle;
+  fill: #3f4250;
+  height: 1.25rem;
+  width: 1.25rem;
+  min-width: 1.25rem;
+  min-height: 1.25rem;
+}
+
+.emotion-14 .fillStroke {
+  stroke: #3f4250;
+  fill: none;
+}
+
+.emotion-17 {
+  background: #151a2d;
+  color: #ffffff;
+  border-radius: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  text-align: center;
+  position: absolute;
+  max-width: 16.5rem;
+  overflow-wrap: break-word;
+  font-size: 0.8rem;
+  inset: 0 auto auto 0;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+  -webkit-transform: translate3d(0px, 4px, 0);
+  -moz-transform: translate3d(0px, 4px, 0);
+  -ms-transform: translate3d(0px, 4px, 0);
+  transform: translate3d(0px, 4px, 0);
+  width: 100%;
+  color: #3f4250;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 8px 0px #22263829,0px 8px 24px 0px #2226383d;
+}
+
+.emotion-17[data-animated="true"] {
+  -webkit-animation: 0ms animation-0 forwards;
+  animation: 0ms animation-0 forwards;
+}
+
+.emotion-17[data-has-arrow="true"]::after {
+  content: " ";
+  position: absolute;
+  top: -5px;
+  left: 0px;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  margin-left: -8px;
+  border-width: 8px;
+  border-style: solid;
+  border-color: #151a2d transparent transparent transparent;
+  pointer-events: none;
+}
+
+.emotion-17[data-visible-in-dom="false"] {
+  display: none;
+}
+
+.emotion-19 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-21 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.emotion-23 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 1.5rem;
+  padding: 0 0.25rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.25rem;
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+  width: 1.5rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: none;
+  color: #3f4250;
+}
+
+.emotion-23:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-23:active {
+  box-shadow: 0px 0px 0px 3px #151a2d5c;
+}
+
+.emotion-23:hover,
+.emotion-23:active {
+  background: #e9eaeb;
+  color: #222638;
+}
+
+.emotion-25 {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+.emotion-25 .fillStroke {
+  stroke: currentColor;
+  fill: none;
+}
+
+.emotion-28 {
+  color: #3f4250;
+  font-size: 1rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+.emotion-34 {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.5rem;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+}
+
+.emotion-37 {
+  color: #3f4250;
+  font-size: 1rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: inline-block;
+  text-transform: lowercase;
+}
+
+.emotion-37::first-letter {
+  text-transform: uppercase;
+}
+
+.emotion-58 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 3rem;
+  padding: 0 1rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.5rem;
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: none;
+  color: #3f4250;
+  height: 1.5625rem;
+  width: 100%;
+  padding: 0;
+  color: #727683;
+}
+
+.emotion-58:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-58:active {
+  box-shadow: 0px 0px 0px 3px #151a2d5c;
+}
+
+.emotion-58:hover,
+.emotion-58:active {
+  background: #e9eaeb;
+  color: #222638;
+}
+
+.emotion-60 {
+  color: #b5b7bd;
+  font-size: 1rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+    >
+      <div
+        aria-controls=":r10:"
+        aria-describedby=":r10:"
+        class="emotion-2 emotion-3"
+        tabindex="0"
+      >
+        <div
+          class="emotion-4 emotion-5"
+        >
+          <label
+            class="emotion-6 emotion-7"
+            for=":r11:"
+          >
+            Date
+          </label>
+          <div>
+            <div
+              class="emotion-8 emotion-9"
+              data-disabled="false"
+              data-error="false"
+              data-readonly="false"
+              data-success="false"
+            >
+              <input
+                aria-invalid="false"
+                autocomplete="false"
+                class="emotion-10 emotion-11"
+                data-size="large"
+                id=":r11:"
+                type="text"
+              />
+              <div
+                class="emotion-12 emotion-13"
+              >
+                <svg
+                  class="emotion-14 emotion-15"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M5.25 12a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H6a.75.75 0 0 1-.75-.75zM6 13.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V14a.75.75 0 0 0-.75-.75zM7.25 12a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H8a.75.75 0 0 1-.75-.75zM8 13.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V14a.75.75 0 0 0-.75-.75zM9.25 10a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H10a.75.75 0 0 1-.75-.75zm.75 1.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V12a.75.75 0 0 0-.75-.75zM9.25 14a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H10a.75.75 0 0 1-.75-.75zM12 9.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V10a.75.75 0 0 0-.75-.75zM11.25 12a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H12a.75.75 0 0 1-.75-.75zm.75 1.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V14a.75.75 0 0 0-.75-.75zM13.25 10a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H14a.75.75 0 0 1-.75-.75zm.75 1.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V12a.75.75 0 0 0-.75-.75z"
+                  />
+                  <path
+                    clip-rule="evenodd"
+                    d="M5.75 2a.75.75 0 0 1 .75.75V4h7V2.75a.75.75 0 0 1 1.5 0V4h.25A2.75 2.75 0 0 1 18 6.75v8.5A2.75 2.75 0 0 1 15.25 18H4.75A2.75 2.75 0 0 1 2 15.25v-8.5A2.75 2.75 0 0 1 4.75 4H5V2.75A.75.75 0 0 1 5.75 2m-1 5.5c-.69 0-1.25.56-1.25 1.25v6.5c0 .69.56 1.25 1.25 1.25h10.5c.69 0 1.25-.56 1.25-1.25v-6.5c0-.69-.56-1.25-1.25-1.25z"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="emotion-16 emotion-17 emotion-18"
+          data-animated="false"
+          data-has-arrow="false"
+          id=":r10:"
+          role="dialog"
+          style="opacity: 1;"
+        >
+          <div
+            class="emotion-19 emotion-5"
+          >
+            <div
+              class="emotion-21 emotion-5"
+            >
+              <button
+                class="emotion-23 emotion-24"
+                data-testid="previous-month"
+                type="button"
+              >
+                <svg
+                  class="emotion-25 emotion-26"
+                  viewBox="0 0 16 16"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M10.53 4.22a.75.75 0 0 1 0 1.06L7.81 8l2.72 2.72a.75.75 0 1 1-1.06 1.06L6.22 8.53a.75.75 0 0 1 0-1.06l3.25-3.25a.75.75 0 0 1 1.06 0"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </button>
+              <span
+                class="emotion-27 emotion-28 emotion-7"
+              >
+                janvier 2021
+              </span>
+              <button
+                class="emotion-23 emotion-24"
+                data-testid="next-month"
+                type="button"
+              >
+                <svg
+                  class="emotion-25 emotion-26"
+                  viewBox="0 0 16 16"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M6.22 4.22a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06L8.94 8 6.22 5.28a.75.75 0 0 1 0-1.06"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div
+              class="emotion-34 emotion-35"
+            >
+              <p
+                class="emotion-36 emotion-37 emotion-7"
+              >
+                lu
+              </p>
+              <p
+                class="emotion-36 emotion-37 emotion-7"
+              >
+                ma
+              </p>
+              <p
+                class="emotion-36 emotion-37 emotion-7"
+              >
+                me
+              </p>
+              <p
+                class="emotion-36 emotion-37 emotion-7"
+              >
+                je
+              </p>
+              <p
+                class="emotion-36 emotion-37 emotion-7"
+              >
+                ve
+              </p>
+              <p
+                class="emotion-36 emotion-37 emotion-7"
+              >
+                sa
+              </p>
+              <p
+                class="emotion-36 emotion-37 emotion-7"
+              >
+                di
+              </p>
+              <button
+                class="emotion-57 emotion-58 emotion-24"
+                type="button"
+              >
+                <span
+                  class="emotion-60 emotion-7"
+                  data-testid="dayLastMonth"
+                >
+                  28
+                </span>
+              </button>
+              <button
+                class="emotion-57 emotion-58 emotion-24"
+                type="button"
+              >
+                <span
+                  class="emotion-60 emotion-7"
+                  data-testid="dayLastMonth"
+                >
+                  29
+                </span>
+              </button>
+              <button
+                class="emotion-57 emotion-58 emotion-24"
+                type="button"
+              >
+                <span
+                  class="emotion-60 emotion-7"
+                  data-testid="dayLastMonth"
+                >
+                  30
+                </span>
+              </button>
+              <button
+                class="emotion-57 emotion-58 emotion-24"
+                type="button"
+              >
+                <span
+                  class="emotion-60 emotion-7"
+                  data-testid="dayLastMonth"
+                >
+                  31
+                </span>
+              </button>
+              <button
+                class="emotion-57 emotion-58 emotion-24"
+                type="button"
+              >
+                <span
+                  class="emotion-80 emotion-7"
+                >
+                  1
+                </span>
+              </button>
+              <button
+                class="emotion-57 emotion-58 emotion-24"
+                type="button"
+              >
+                <span
+                  class="emotion-80 emotion-7"
+                >
+                  2
+                </span>
+              </button>
+              <button
+                class="emotion-57 emotion-58 emotion-24"
+                type="button"
+              >
+                <span
+                  class="emotion-80 emotion-7"
+                >
+                  3
+                </span>
+              </button>
+              <button
+                class="emotion-57 emotion-58 emotion-24"
+                type="button"
+              >
+                <span
+                  class="emotion-80 emotion-7"
+                >
+                  4
+                </span>
+              </button>
+              <button
+                class="emotion-57 emotion-58 emotion-24"
+                type="button"
+              >
+                <span
+                  class="emotion-80 emotion-7"
+                >
+                  5
+                </span>
+              </button>
+              <button
+                class="emotion-57 emotion-58 emotion-24"
+                type="button"
+              >
+                <span
+                  class="emotion-80 emotion-7"
+                >
+                  6
+                </span>
+              </button>
+              <button
+                class="emotion-57 emotion-58 emotion-24"
+                type="button"
+              >
+                <span
+                  class="emotion-80 emotion-7"
+                >
+                  7
+                </span>
+              </button>
+              <button
+                class="emotion-57 emotion-58 emotion-24"
+                type="button"
+              >
+                <span
+                  class="emotion-80 emotion-7"
+                >
+                  8
+                </span>
+              </button>
+              <button
+                class="emotion-57 emotion-58 emotion-24"
+                type="button"
+              >
+                <span
+                  class="emotion-80 emotion-7"
+                >
+                  9
+                </span>
+              </button>
+              <button
+                class="emotion-57 emotion-58 emotion-24"
+                type="button"
+              >
+                <span
+                  class="emotion-80 emotion-7"
+                >
+                  10
+                </span>
+              </button>
+              <button
+                class="emotion-57 emotion-58 emotion-24"
+                type="button"
+              >
+                <span
+                  class="emotion-80 emotion-7"
+                >
+                  11
+                </span>
+              </button>
+              <button
+                class="emotion-57 emotion-58 emotion-24"
+                type="button"
+              >
+                <span
+                  class="emotion-80 emotion-7"
+                >
+                  12
+                </span>
+              </button>
+              <button
+                class="emotion-57 emotion-58 emotion-24"
+                type="button"
+              >
+                <span
+                  class="emotion-80 emotion-7"
+                >
+                  13
+                </span>
+              </button>
+              <button
+                class="emotion-57 emotion-58 emotion-24"
+                type="button"
+              >
+                <span
+                  class="emotion-80 emotion-7"
+                >
+                  14
+                </span>
+              </button>
+              <button
+                class="emotion-57 emotion-58 emotion-24"
+                type="button"
+              >
+                <span
+                  class="emotion-80 emotion-7"
+                >
+                  15
+                </span>
+              </button>
+              <button
+                class="emotion-57 emotion-58 emotion-24"
+                type="button"
+              >
+                <span
+                  class="emotion-80 emotion-7"
+                >
+                  16
+                </span>
+              </button>
+              <button
+                class="emotion-57 emotion-58 emotion-24"
+                type="button"
+              >
+                <span
+                  class="emotion-80 emotion-7"
+                >
+                  17
+                </span>
+              </button>
+              <button
+                class="emotion-57 emotion-58 emotion-24"
+                type="button"
+              >
+                <span
+                  class="emotion-80 emotion-7"
+                >
+                  18
+                </span>
+              </button>
+              <button
+                class="emotion-57 emotion-58 emotion-24"
+                type="button"
+              >
+                <span
+                  class="emotion-80 emotion-7"
+                >
+                  19
+                </span>
+              </button>
+              <button
+                class="emotion-57 emotion-58 emotion-24"
+                type="button"
+              >
+                <span
+                  class="emotion-80 emotion-7"
+                >
+                  20
+                </span>
+              </button>
+              <button
+                class="emotion-57 emotion-58 emotion-24"
+                type="button"
+              >
+                <span
+                  class="emotion-80 emotion-7"
+                >
+                  21
+                </span>
+              </button>
+              <button
+                class="emotion-57 emotion-58 emotion-24"
+                type="button"
+              >
+                <span
+                  class="emotion-80 emotion-7"
+                >
+                  22
+                </span>
+              </button>
+              <button
+                class="emotion-57 emotion-58 emotion-24"
+                type="button"
+              >
+                <span
+                  class="emotion-80 emotion-7"
+                >
+                  23
+                </span>
+              </button>
+              <button
+                class="emotion-57 emotion-58 emotion-24"
+                type="button"
+              >
+                <span
+                  class="emotion-80 emotion-7"
+                >
+                  24
+                </span>
+              </button>
+              <button
+                class="emotion-57 emotion-58 emotion-24"
+                type="button"
+              >
+                <span
+                  class="emotion-80 emotion-7"
+                >
+                  25
+                </span>
+              </button>
+              <button
+                class="emotion-57 emotion-58 emotion-24"
+                type="button"
+              >
+                <span
+                  class="emotion-80 emotion-7"
+                >
+                  26
+                </span>
+              </button>
+              <button
+                class="emotion-57 emotion-58 emotion-24"
+                type="button"
+              >
+                <span
+                  class="emotion-80 emotion-7"
+                >
+                  27
+                </span>
+              </button>
+              <button
+                class="emotion-57 emotion-58 emotion-24"
+                type="button"
+              >
+                <span
+                  class="emotion-80 emotion-7"
+                >
+                  28
+                </span>
+              </button>
+              <button
+                class="emotion-57 emotion-58 emotion-24"
+                type="button"
+              >
+                <span
+                  class="emotion-80 emotion-7"
+                >
+                  29
+                </span>
+              </button>
+              <button
+                class="emotion-57 emotion-58 emotion-24"
+                type="button"
+              >
+                <span
+                  class="emotion-80 emotion-7"
+                >
+                  30
+                </span>
+              </button>
+              <button
+                class="emotion-57 emotion-58 emotion-24"
+                type="button"
+              >
+                <span
+                  class="emotion-80 emotion-7"
+                >
+                  31
+                </span>
+              </button>
+              <button
+                class="emotion-57 emotion-58 emotion-24"
+                type="button"
+              >
+                <span
+                  class="emotion-60 emotion-7"
+                  data-testid="dayNextMonth"
+                >
+                  1
+                </span>
+              </button>
+              <button
+                class="emotion-57 emotion-58 emotion-24"
+                type="button"
+              >
+                <span
+                  class="emotion-60 emotion-7"
+                  data-testid="dayNextMonth"
+                >
+                  2
+                </span>
+              </button>
+              <button
+                class="emotion-57 emotion-58 emotion-24"
+                type="button"
+              >
+                <span
+                  class="emotion-60 emotion-7"
+                  data-testid="dayNextMonth"
+                >
+                  3
+                </span>
+              </button>
+              <button
+                class="emotion-57 emotion-58 emotion-24"
+                type="button"
+              >
+                <span
+                  class="emotion-60 emotion-7"
+                  data-testid="dayNextMonth"
+                >
+                  4
+                </span>
+              </button>
+              <button
+                class="emotion-57 emotion-58 emotion-24"
+                type="button"
+              >
+                <span
+                  class="emotion-60 emotion-7"
+                  data-testid="dayNextMonth"
+                >
+                  5
+                </span>
+              </button>
+              <button
+                class="emotion-57 emotion-58 emotion-24"
+                type="button"
+              >
+                <span
+                  class="emotion-60 emotion-7"
+                  data-testid="dayNextMonth"
+                >
+                  6
+                </span>
+              </button>
+              <button
+                class="emotion-57 emotion-58 emotion-24"
+                type="button"
+              >
+                <span
+                  class="emotion-60 emotion-7"
+                  data-testid="dayNextMonth"
+                >
+                  7
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`DateInput > renders correctly with date-fns locale ru 1`] = `
+<DocumentFragment>
+  @keyframes animation-0 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0px, 4px, 0);
+    -moz-transform: translate3d(0px, 4px, 0);
+    -ms-transform: translate3d(0px, 4px, 0);
+    transform: translate3d(0px, 4px, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0px, 4px, 0);
+    -moz-transform: translate3d(0px, 4px, 0);
+    -ms-transform: translate3d(0px, 4px, 0);
+    transform: translate3d(0px, 4px, 0);
+  }
+}
+
+.emotion-0 {
+  width: 100%;
+}
+
+.emotion-2 {
+  display: inherit;
+}
+
+.emotion-2[data-container-full-width="true"] {
+  width: 100%;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.25rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-6 {
+  color: #222638;
+  font-size: 1rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  height: 3rem;
+  background: #ffffff;
+  border: 1px solid #d9dadd;
+  border-radius: 0.25rem;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+  border: 1px solid #8c40ef;
+}
+
+.emotion-8>.emotion-11 {
+  color: #3f4250;
+}
+
+.emotion-8>.emotion-11::-webkit-input-placeholder {
+  color: #727683;
+}
+
+.emotion-8>.emotion-11::-moz-placeholder {
+  color: #727683;
+}
+
+.emotion-8>.emotion-11:-ms-input-placeholder {
+  color: #727683;
+}
+
+.emotion-8>.emotion-11::placeholder {
+  color: #727683;
+}
+
+.emotion-8[data-success='true'] {
+  border-color: #22674e;
+}
+
+.emotion-8[data-error='true'] {
+  border-color: #b3144d;
+}
+
+.emotion-8[data-readonly='true'] {
+  background: #f9f9fa;
+  border-color: #d9dadd;
+}
+
+.emotion-8[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
+}
+
+.emotion-8[data-disabled='true']>.emotion-11 {
+  color: #b5b7bd;
+}
+
+.emotion-8[data-disabled='true']>.emotion-11::-webkit-input-placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-8[data-disabled='true']>.emotion-11::-moz-placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-8[data-disabled='true']>.emotion-11:-ms-input-placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-8[data-disabled='true']>.emotion-11::placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-8:not([data-disabled='true']):not([data-readonly]):hover {
+  border-color: #8c40ef;
+}
+
+.emotion-10 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  border: none;
+  outline: none;
+  height: 100%;
+  width: 100%;
+  padding-left: 1rem;
+  background: transparent;
+  font-size: 0.875rem;
+}
+
+.emotion-10[data-size='large'] {
+  font-size: 1rem;
+}
+
+.emotion-10[data-size='small'] {
+  padding-left: 0.5rem;
+}
+
+.emotion-12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding: 0 1rem;
+  border-left: 1px solid;
+  border-color: inherit;
+}
+
+.emotion-14 {
+  vertical-align: middle;
+  fill: #3f4250;
+  height: 1.25rem;
+  width: 1.25rem;
+  min-width: 1.25rem;
+  min-height: 1.25rem;
+}
+
+.emotion-14 .fillStroke {
+  stroke: #3f4250;
+  fill: none;
+}
+
+.emotion-17 {
+  background: #151a2d;
+  color: #ffffff;
+  border-radius: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  text-align: center;
+  position: absolute;
+  max-width: 16.5rem;
+  overflow-wrap: break-word;
+  font-size: 0.8rem;
+  inset: 0 auto auto 0;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+  -webkit-transform: translate3d(0px, 4px, 0);
+  -moz-transform: translate3d(0px, 4px, 0);
+  -ms-transform: translate3d(0px, 4px, 0);
+  transform: translate3d(0px, 4px, 0);
+  width: 100%;
+  color: #3f4250;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 8px 0px #22263829,0px 8px 24px 0px #2226383d;
+}
+
+.emotion-17[data-animated="true"] {
+  -webkit-animation: 0ms animation-0 forwards;
+  animation: 0ms animation-0 forwards;
+}
+
+.emotion-17[data-has-arrow="true"]::after {
+  content: " ";
+  position: absolute;
+  top: -5px;
+  left: 0px;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  margin-left: -8px;
+  border-width: 8px;
+  border-style: solid;
+  border-color: #151a2d transparent transparent transparent;
+  pointer-events: none;
+}
+
+.emotion-17[data-visible-in-dom="false"] {
+  display: none;
+}
+
+.emotion-19 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-21 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.emotion-23 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 1.5rem;
+  padding: 0 0.25rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.25rem;
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+  width: 1.5rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: none;
+  color: #3f4250;
+}
+
+.emotion-23:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-23:active {
+  box-shadow: 0px 0px 0px 3px #151a2d5c;
+}
+
+.emotion-23:hover,
+.emotion-23:active {
+  background: #e9eaeb;
+  color: #222638;
+}
+
+.emotion-25 {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+.emotion-25 .fillStroke {
+  stroke: currentColor;
+  fill: none;
+}
+
+.emotion-28 {
+  color: #3f4250;
+  font-size: 1rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-transform: capitalize;
 }
 
 .emotion-34 {

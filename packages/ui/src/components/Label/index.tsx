@@ -19,7 +19,7 @@ export const Label = ({
   children,
   labelDescription,
   required,
-  size = 'medium',
+  size = 'large',
   htmlFor,
   id,
 }: LabelProps) => {

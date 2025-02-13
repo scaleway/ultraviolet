@@ -10,10 +10,9 @@ import {
   useMemo,
   useRef,
 } from 'react'
-import { Button, SIZE_HEIGHT as ButtonSizeHeight } from '../Button'
-import { Label } from '../Label'
 import { Button } from '../Button'
 import { SIZE_HEIGHT as ButtonSizeHeight } from '../Button/constants'
+import { Label } from '../Label'
 import { Row } from '../Row'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
@@ -243,7 +242,6 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
           <Label
             labelDescription={labelDescription}
             required={required}
-            size="large"
             htmlFor={id ?? localId}
           >
             {label}
