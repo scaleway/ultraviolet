@@ -1,5 +1,36 @@
 # Change Log
 
+## 1.86.0
+
+### Minor Changes
+
+- [#4752](https://github.com/scaleway/ultraviolet/pull/4752) [`ec29328`](https://github.com/scaleway/ultraviolet/commit/ec29328fa0a0b85d8721b9cd920a7946b5a470fd) Thanks [@matthprost](https://github.com/matthprost)! - New prop `highlightAnimation` on `<List.Row />` component
+
+### Patch Changes
+
+- [#4741](https://github.com/scaleway/ultraviolet/pull/4741) [`a1cc1af`](https://github.com/scaleway/ultraviolet/commit/a1cc1afbc8b97b61736caf441f48555e543a9f66) Thanks [@lisalupi](https://github.com/lisalupi)! - `<DateInput />`: rework range logic and fix styling issue on hover for days in range
+
+- [#4758](https://github.com/scaleway/ultraviolet/pull/4758) [`a81daa4`](https://github.com/scaleway/ultraviolet/commit/a81daa4ea5b41b3eba10c80501d96845f2222098) Thanks [@matthprost](https://github.com/matthprost)! - In `<Badge />` component, `icon` props is deprecated. You can directly use the imported icon you need in the children.
+
+  ```tsx
+  // Before
+  import { Badge } from "@ultraviolet/ui";
+
+  <Badge icon="pencil">Edit</Badge>;
+  ```
+
+  ```tsx
+  // After
+  import { Badge } from "@ultraviolet/ui";
+  import { PencilOutlineIcon } from "@ultraviolet/icons";
+
+  <Badge>
+    Edit <PencilOutlineIcon />
+  </Badge>;
+  ```
+
+- [#4759](https://github.com/scaleway/ultraviolet/pull/4759) [`5b840a8`](https://github.com/scaleway/ultraviolet/commit/5b840a8d081da1ffff44e94fc6b3fcf7e142d6f1) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<Table.Cell />` to have correct sentiments prop
+
 ## 1.85.3
 
 ### Patch Changes
