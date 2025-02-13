@@ -14,6 +14,15 @@ const options = [
   { label: '1 Gbps', value: 1000 },
 ]
 
+const partialOptions = [
+  { label: '1 Mbps', value: 1 },
+  { label: '', value: 10 },
+  { label: '', value: 100 },
+  { label: '', value: 200 },
+  { label: '', value: 500 },
+  { label: '1 Gbps', value: 1000 },
+]
+
 export const Options: StoryFn<typeof Slider> = args => {
   const [value, setValue] = useState(3)
   const [doubleValue, setDoubleValue] = useState([1, 3])
@@ -44,6 +53,18 @@ export const Options: StoryFn<typeof Slider> = args => {
           tooltip={false}
           value={3}
           label="Custom options with unit prop"
+        />
+      </Stack>
+
+      <Stack gap={1}>
+        <Slider
+          options={partialOptions}
+          name="name"
+          input
+          unit="Gbps"
+          tooltip={false}
+          value={3}
+          label="Partial options with only the min and max value"
         />
       </Stack>
 
