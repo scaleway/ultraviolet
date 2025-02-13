@@ -8,7 +8,7 @@ type Direction = 'horizontal' | 'vertical'
 type StyledIconProps = {
   direction: Direction
   color: Color
-  sentiment: Color
+  sentiment?: Color
 }
 
 const StyledIconWrapper = styled('div', {
