@@ -33,12 +33,12 @@
     "oxc": "oxlint -c .oxlintrc.json",
     "oxc:fix": "pnpm run oxlint --fix",
     "prepare": "husky",
-    "tokens:update": "node ./scripts/figma-synchronise-tokens.mjs && pnpm run format packages/themes/src/themes/console",
-    "icons:update": "tsx ./scripts/generate-icons-file.ts && biome format --write packages/icons",
+    "tokens:update": "tsx ./utils/scripts/figma-synchronise-tokens.tsx && pnpm run format packages/themes/src/themes/console",
+    "icons:update": "tsx ./utils/scripts/generate-icons-file.tsx && biome format --write packages/icons",
     "release": "pnpm build && pnpm changeset publish",
     "svg": "svgo --config=./svgo.config.mjs --pretty --multipass",
     "svg:all": "pnpm run svg -r -f 'packages/illustrations/src/assets'",
-    "illustrations:update": "BUCKET_NAME=scaleway-assets BUCKET_REGION=fr-par node utils/illustrations/uploadIllustrations.js && pnpm format packages/illustrations/src/",
+    "illustrations:update": "BUCKET_NAME=scaleway-assets BUCKET_REGION=fr-par tsx utils/scripts/uploadIllustrations.tsx && pnpm format packages/illustrations/src/",
     "lintpublish": "turbo run lintpublish"
   },
   "lint-staged": {

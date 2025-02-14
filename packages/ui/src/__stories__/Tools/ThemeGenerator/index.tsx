@@ -2,8 +2,7 @@ import { useCallback, useEffect, useState } from 'react'
 import {
   TOKENS_URL,
   generatePalette,
-  // @ts-expect-error this is mjs file
-} from '../../../../../../scripts/figma-synchronise-tokens'
+} from '../../../../../../utils/scripts/figma-synchronise-tokens'
 import { Form, useForm } from '../../../../../form/src'
 import { Stack, Text } from '../../../components'
 import type { UltravioletUITheme } from '../../../theme'
