@@ -61,17 +61,15 @@ exports[`UnitInputField > should handles onChange and selection 1`] = `
 }
 
 .emotion-6 {
-  vertical-align: middle;
-  fill: #b3144d;
-  height: 8px;
-  width: 8px;
-  min-width: 8px;
-  min-height: 8px;
-}
-
-.emotion-6 .fillStroke {
-  stroke: #b3144d;
-  fill: none;
+  color: #b3144d;
+  font-size: 1rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .emotion-8 {
@@ -554,14 +552,12 @@ exports[`UnitInputField > should handles onChange and selection 1`] = `
           >
             Test
           </label>
-          <svg
-            class="emotion-6 emotion-7"
-            viewBox="0 0 20 20"
+          <label
+            class="emotion-6 emotion-5"
+            for=":r6:"
           >
-            <path
-              d="M10 2h4l-.79 7.91 6.45-4.64 2 3.46L14.42 12l7.24 3.27-2 3.46-6.45-4.64L14 22h-4l.79-7.91-6.45 4.64-2-3.46L9.58 12 2.34 8.73l2-3.46 6.45 4.64z"
-            />
-          </svg>
+            *
+          </label>
         </div>
         <div
           class="emotion-8 emotion-9"
@@ -596,8 +592,8 @@ exports[`UnitInputField > should handles onChange and selection 1`] = `
             class="emotion-14 emotion-15 emotion-16"
           >
             <div
-              aria-controls=":r9:"
-              aria-describedby=":r9:"
+              aria-controls=":ra:"
+              aria-describedby=":ra:"
               class="emotion-17 emotion-18"
               data-container-full-width="true"
               tabindex="0"
@@ -629,7 +625,7 @@ exports[`UnitInputField > should handles onChange and selection 1`] = `
                   >
                     <svg
                       aria-label="show dropdown"
-                      class="emotion-28 emotion-7"
+                      class="emotion-28 emotion-29"
                       viewBox="0 0 20 20"
                     >
                       <path

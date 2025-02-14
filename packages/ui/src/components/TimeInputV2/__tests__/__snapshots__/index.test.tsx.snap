@@ -537,7 +537,7 @@ exports[`TimeInput > renders can move with arrow keys - 12-hour format 1`] = `
       >
         <label
           class="emotion-4 emotion-5"
-          for=":r2h:"
+          for=":r2i:"
         >
           label
         </label>
@@ -1310,7 +1310,7 @@ exports[`TimeInput > renders can move with arrow keys - 24-hour format 1`] = `
       >
         <label
           class="emotion-4 emotion-5"
-          for=":r2r:"
+          for=":r2s:"
         >
           label
         </label>
@@ -2500,7 +2500,7 @@ exports[`TimeInput > renders correctly clearable 2`] = `
       >
         <label
           class="emotion-4 emotion-5"
-          for=":r29:"
+          for=":r2a:"
         >
           label
         </label>
@@ -3157,7 +3157,7 @@ exports[`TimeInput > renders correctly controlled - 12-hour format 1`] = `
       >
         <label
           class="emotion-4 emotion-5"
-          for=":r1g:"
+          for=":r1h:"
         >
           label
         </label>
@@ -3794,7 +3794,7 @@ exports[`TimeInput > renders correctly controlled - 24-hours format 1`] = `
       >
         <label
           class="emotion-4 emotion-5"
-          for=":r1t:"
+          for=":r1u:"
         >
           label
         </label>
@@ -4409,7 +4409,7 @@ exports[`TimeInput > renders correctly large 1`] = `
     >
       <label
         class="emotion-2 emotion-3"
-        for=":rt:"
+        for=":ru:"
       >
         test
       </label>
@@ -4845,17 +4845,15 @@ exports[`TimeInput > renders correctly required 1`] = `
 }
 
 .emotion-6 {
-  vertical-align: middle;
-  fill: #b3144d;
-  height: 8px;
-  width: 8px;
-  min-width: 8px;
-  min-height: 8px;
-}
-
-.emotion-6 .fillStroke {
-  stroke: #b3144d;
-  fill: none;
+  color: #b3144d;
+  font-size: 0.875rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .emotion-8 {
@@ -5054,14 +5052,12 @@ exports[`TimeInput > renders correctly required 1`] = `
         >
           test
         </label>
-        <svg
-          class="emotion-6 emotion-7"
-          viewBox="0 0 20 20"
+        <label
+          class="emotion-6 emotion-5"
+          for=":rl:"
         >
-          <path
-            d="M10 2h4l-.79 7.91 6.45-4.64 2 3.46L14.42 12l7.24 3.27-2 3.46-6.45-4.64L14 22h-4l.79-7.91-6.45 4.64-2-3.46L9.58 12 2.34 8.73l2-3.46 6.45 4.64z"
-          />
-        </svg>
+          *
+        </label>
       </div>
       <div
         aria-required="true"
@@ -5359,7 +5355,7 @@ exports[`TimeInput > renders correctly small 1`] = `
     >
       <label
         class="emotion-2 emotion-3"
-        for=":rp:"
+        for=":rq:"
       >
         test
       </label>
@@ -5658,7 +5654,7 @@ exports[`TimeInput > renders correctly with 12-hour format 1`] = `
     >
       <label
         class="emotion-2 emotion-3"
-        for=":r11:"
+        for=":r12:"
       >
         test
       </label>
@@ -6679,7 +6675,7 @@ exports[`TimeInput > renders correctly with helper and error 1`] = `
       >
         <label
           class="emotion-4 emotion-5"
-          for=":r1a:"
+          for=":r1b:"
         >
           label
         </label>
@@ -7039,7 +7035,7 @@ exports[`TimeInput > renders correctly with label description and helper 1`] = `
       >
         <label
           class="emotion-4 emotion-5"
-          for=":r15:"
+          for=":r16:"
         >
           label
         </label>

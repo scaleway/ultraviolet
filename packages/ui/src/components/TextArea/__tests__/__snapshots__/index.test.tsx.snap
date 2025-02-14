@@ -260,7 +260,7 @@ exports[`TextArea > should render correctly when input  has a error sentiment 1`
     >
       <label
         class="emotion-2 emotion-3"
-        for=":rr:"
+        for=":rs:"
       >
         Test
       </label>
@@ -273,7 +273,7 @@ exports[`TextArea > should render correctly when input  has a error sentiment 1`
           data-error="true"
           data-readonly="false"
           data-success="false"
-          id=":rr:"
+          id=":rs:"
           rows="3"
         >
           test
@@ -569,7 +569,7 @@ exports[`TextArea > should render correctly when input has a success sentiment 1
     >
       <label
         class="emotion-2 emotion-3"
-        for=":rn:"
+        for=":ro:"
       >
         Test
       </label>
@@ -582,7 +582,7 @@ exports[`TextArea > should render correctly when input has a success sentiment 1
           data-error="false"
           data-readonly="false"
           data-success="true"
-          id=":rn:"
+          id=":ro:"
           rows="3"
         >
           test
@@ -1353,17 +1353,15 @@ exports[`TextArea > should render correctly when it is required 1`] = `
 }
 
 .emotion-6 {
-  vertical-align: middle;
-  fill: #b3144d;
-  height: 8px;
-  width: 8px;
-  min-width: 8px;
-  min-height: 8px;
-}
-
-.emotion-6 .fillStroke {
-  stroke: #b3144d;
-  fill: none;
+  color: #b3144d;
+  font-size: 1rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .emotion-8 {
@@ -1593,14 +1591,12 @@ exports[`TextArea > should render correctly when it is required 1`] = `
         >
           Test
         </label>
-        <svg
-          class="emotion-6 emotion-7"
-          viewBox="0 0 20 20"
+        <label
+          class="emotion-6 emotion-5"
+          for=":rg:"
         >
-          <path
-            d="M10 2h4l-.79 7.91 6.45-4.64 2 3.46L14.42 12l7.24 3.27-2 3.46-6.45-4.64L14 22h-4l.79-7.91-6.45 4.64-2-3.46L9.58 12 2.34 8.73l2-3.46 6.45 4.64z"
-          />
-        </svg>
+          *
+        </label>
       </div>
       <div
         class="emotion-8 emotion-9"
@@ -2121,7 +2117,7 @@ exports[`TextArea > should render correctly with maxlength 1`] = `
     >
       <label
         class="emotion-2 emotion-3"
-        for=":rj:"
+        for=":rk:"
       >
         Test
       </label>
@@ -2134,7 +2130,7 @@ exports[`TextArea > should render correctly with maxlength 1`] = `
           data-error="false"
           data-readonly="false"
           data-success="false"
-          id=":rj:"
+          id=":rk:"
           maxlength="3"
           rows="3"
         >
@@ -2419,7 +2415,7 @@ exports[`TextArea > should render with AutoExpandMax 1`] = `
     >
       <label
         class="emotion-2 emotion-3"
-        for=":r13:"
+        for=":r14:"
       >
         Test
       </label>
@@ -2432,7 +2428,7 @@ exports[`TextArea > should render with AutoExpandMax 1`] = `
           data-error="true"
           data-readonly="false"
           data-success="false"
-          id=":r13:"
+          id=":r14:"
           rows="3"
           style="height: 2px; max-height: calc(NaNpx + 2*0.75rem); min-height: calc(NaNpx + 2*0.75rem);"
         >
@@ -2729,7 +2725,7 @@ exports[`TextArea > should render with AutoExpandMax and rows 1`] = `
     >
       <label
         class="emotion-2 emotion-3"
-        for=":r17:"
+        for=":r18:"
       >
         Test
       </label>
@@ -2742,7 +2738,7 @@ exports[`TextArea > should render with AutoExpandMax and rows 1`] = `
           data-error="true"
           data-readonly="false"
           data-success="false"
-          id=":r17:"
+          id=":r18:"
           rows="2"
           style="height: 2px; max-height: calc(NaNpx + 2*0.75rem); min-height: calc(NaNpx + 2*0.75rem);"
         >
@@ -3039,7 +3035,7 @@ exports[`TextArea > should render with auto rows 1`] = `
     >
       <label
         class="emotion-2 emotion-3"
-        for=":rv:"
+        for=":r10:"
       >
         Test
       </label>
@@ -3052,7 +3048,7 @@ exports[`TextArea > should render with auto rows 1`] = `
           data-error="true"
           data-readonly="false"
           data-success="false"
-          id=":rv:"
+          id=":r10:"
           rows="1"
           style="height: 2px; resize: none;"
         >

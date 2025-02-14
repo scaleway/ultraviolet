@@ -1,4 +1,3 @@
-import { AsteriskIcon } from '@ultraviolet/icons'
 import type { ReactNode } from 'react'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
@@ -36,7 +35,14 @@ export const Label = ({
         >
           {children}
         </Text>
-        <AsteriskIcon sentiment="danger" size={8} />
+        <Text
+          as="label"
+          variant={size === 'large' ? 'bodyStrong' : 'bodySmallStrong'}
+          sentiment="danger"
+          htmlFor={htmlFor}
+        >
+          *
+        </Text>
       </Stack>
     ) : (
       <Text
