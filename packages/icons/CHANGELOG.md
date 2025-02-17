@@ -1,5 +1,13 @@
 # Change Log
 
+## 3.11.1
+
+### Patch Changes
+
+- [#4767](https://github.com/scaleway/ultraviolet/pull/4767) [`9133763`](https://github.com/scaleway/ultraviolet/commit/9133763cd6c1dfeb24ca656ac68a5dfa7b5c20cd) Thanks [@lisalupi](https://github.com/lisalupi)! - New icon: `AddressPlay`
+
+- [#4778](https://github.com/scaleway/ultraviolet/pull/4778) [`1c7ef50`](https://github.com/scaleway/ultraviolet/commit/1c7ef50ca4ac37b8d9a171e2a7ab14be0b4d953d) Thanks [@matthprost](https://github.com/matthprost)! - Fix small system icons
+
 ## 3.11.0
 
 ### Minor Changes
