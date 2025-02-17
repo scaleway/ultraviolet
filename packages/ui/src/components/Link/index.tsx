@@ -1,5 +1,9 @@
 import styled from '@emotion/styled'
-import { Icon } from '@ultraviolet/icons/legacy'
+import {
+  ArrowLeftIcon,
+  ArrowRightIcon,
+  OpenInNewIcon,
+} from '@ultraviolet/icons'
 import type {
   AnchorHTMLAttributes,
   ForwardedRef,
@@ -14,9 +18,12 @@ import type { ExtendedColor } from '../../theme'
 import capitalize from '../../utils/capitalize'
 import { Tooltip } from '../Tooltip'
 
-const StyledIcon = styled(Icon)`
+const StyledArrowLeftIcon = styled(ArrowLeftIcon)`
   margin-left: ${({ theme }) => theme.space['1']};
 `
+
+const StyledArrowRightIcon = StyledArrowLeftIcon.withComponent(ArrowRightIcon)
+const StyledOpenInNewIcon = StyledArrowLeftIcon.withComponent(OpenInNewIcon)
 
 export const PROMINENCES = {
   default: '',
@@ -89,7 +96,7 @@ const StyledLink = styled('a', {
   text-decoration-color: transparent;
   transition: text-decoration-color ${TRANSITION_DURATION}ms ease-out;
 
-  ${StyledIcon} {
+  ${StyledArrowLeftIcon}, ${StyledArrowRightIcon}, ${StyledOpenInNewIcon} {
     transition: transform ${TRANSITION_DURATION}ms ease-out;
   }
 
@@ -121,7 +128,7 @@ const StyledLink = styled('a', {
     `}
   &:hover,
   &:focus {
-    ${StyledIcon} {
+    ${StyledArrowLeftIcon}, ${StyledArrowRightIcon}, ${StyledOpenInNewIcon} {
       transform: ${({ theme, iconPosition }) =>
         iconPosition === 'left'
           ? `translate(${theme.space['0.5']}, 0)`
@@ -247,18 +254,18 @@ export const Link = forwardRef(
           data-variant={variant}
         >
           {!isBlank && iconPosition === 'left' ? (
-            <StyledIcon name="arrow-left" size={ICON_SIZE} />
+            <StyledArrowLeftIcon size={ICON_SIZE} />
           ) : null}
           {children}
 
           {isBlank ? (
             <StyledExternalIconContainer>
-              <StyledIcon name="open-in-new" size={BLANK_TARGET_ICON_SIZE} />
+              <StyledOpenInNewIcon size={BLANK_TARGET_ICON_SIZE} />
             </StyledExternalIconContainer>
           ) : null}
 
           {!isBlank && iconPosition === 'right' ? (
-            <StyledIcon name="arrow-right" size={ICON_SIZE} />
+            <StyledArrowRightIcon size={ICON_SIZE} />
           ) : null}
         </StyledLink>
       </Tooltip>

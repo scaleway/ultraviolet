@@ -118,6 +118,7 @@ type BadgeProps = {
   size?: keyof typeof SIZES
   prominence?: keyof typeof PROMINENCES
   /**
+   * @deprecated: Use the icon directly in children
    * Defines icon to display on left side of badge. **Only available on medium and large sizes**.
    */
   icon?: IconName
