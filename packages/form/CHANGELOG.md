@@ -1,5 +1,12 @@
 # Change Log
 
+## 3.13.18
+
+### Patch Changes
+
+- Updated dependencies [[`d36d815`](https://github.com/scaleway/ultraviolet/commit/d36d815ddb0db8ff2514200d00bbe0e01e731ef4), [`3b8a89a`](https://github.com/scaleway/ultraviolet/commit/3b8a89a770748a40939f553e9456edc0cc1492a4), [`62981ad`](https://github.com/scaleway/ultraviolet/commit/62981ad6b122a3670c0687d2854aa9134cca85f3)]:
+  - @ultraviolet/ui@1.87.0
+
 ## 3.13.17
 
 ### Patch Changes

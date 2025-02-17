@@ -1,5 +1,20 @@
 # Change Log
 
+## 1.87.0
+
+### Minor Changes
+
+- [#4768](https://github.com/scaleway/ultraviolet/pull/4768) [`3b8a89a`](https://github.com/scaleway/ultraviolet/commit/3b8a89a770748a40939f553e9456edc0cc1492a4) Thanks [@matthprost](https://github.com/matthprost)! - New props `rel` and `target` on `<MenuV2.Item />`
+
+- [#4738](https://github.com/scaleway/ultraviolet/pull/4738) [`62981ad`](https://github.com/scaleway/ultraviolet/commit/62981ad6b122a3670c0687d2854aa9134cca85f3) Thanks [@lisalupi](https://github.com/lisalupi)! - New component `<Label />` and use it in input components
+
+### Patch Changes
+
+- [#4765](https://github.com/scaleway/ultraviolet/pull/4765) [`d36d815`](https://github.com/scaleway/ultraviolet/commit/d36d815ddb0db8ff2514200d00bbe0e01e731ef4) Thanks [@matthprost](https://github.com/matthprost)! - Fix `Popup` internal component to position better when it is attached to `document.body`
+
+- Updated dependencies [[`9133763`](https://github.com/scaleway/ultraviolet/commit/9133763cd6c1dfeb24ca656ac68a5dfa7b5c20cd), [`1c7ef50`](https://github.com/scaleway/ultraviolet/commit/1c7ef50ca4ac37b8d9a171e2a7ab14be0b4d953d)]:
+  - @ultraviolet/icons@3.11.1
+
 ## 1.86.0
 
 ### Minor Changes
