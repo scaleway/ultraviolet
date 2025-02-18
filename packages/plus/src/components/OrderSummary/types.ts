@@ -11,10 +11,8 @@ type PeriodProps =
        */
       hideTimeUnit: true
       periodOptions?: never
-      onChangePeriod?: never
-      onChangePeriodUnit?: never
-      value?: never
-      unit?: never
+      valueUnitInput?: never
+      unitUnitInput?: never
     }
   | {
       /**
@@ -23,24 +21,8 @@ type PeriodProps =
        */
       hideTimeUnit?: false
       periodOptions: TimeUnit[]
-      onChangePeriod: ComponentProps<typeof UnitInput>['onChange']
-      onChangePeriodUnit: ComponentProps<typeof UnitInput>['onChangeUnitValue']
-      value: ComponentProps<typeof UnitInput>['value']
-      unit: TimeUnit
-    }
-
-type CommitmentType =
-  | {
-      commitment: true
-      commitmentChoice: 'false' | number
-      onChangeCommitment: (value: string) => void
-      commitmentOptions: { label: ReactNode; discount: number }[]
-    }
-  | {
-      commitment?: false
-      onChangeCommitment?: never
-      commitmentOptions?: never
-      commitmentChoice?: never
+      valueUnitInput: ComponentProps<typeof UnitInput>['value']
+      unitUnitInput: TimeUnit
     }
 
 export type DetailsType = {
@@ -66,7 +48,11 @@ export type OrderSummaryProps = {
   locales?: Record<keyof typeof EstimateCostLocales, string>
   currency: string
   locale: string
-  overallDiscount?: { label: ReactNode; discount: number }
+  /**
+   *Total applied to the final cost (due to commitment, beta...) in %
+   */
+  discount?: number
   footer: ReactNode
-} & PeriodProps &
-  CommitmentType
+  children: ReactNode
+  totalPriceInfo?: ReactNode
+} & PeriodProps

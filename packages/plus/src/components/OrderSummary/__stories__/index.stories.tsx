@@ -8,6 +8,6 @@ export default {
 
 export { Playground } from './Playground.stories'
 export { WithTimeUnit } from './WithTimeUnit.stories'
-export { Commitment } from './Commitment.stories'
-export { OverallDiscount } from './OverallDiscount.stories'
+export { Children } from './Children.stories'
+export { TotalPriceInfo } from './OverallDiscount.stories'
 export { Footer } from './Footer.stories'
