@@ -32,12 +32,18 @@ const StyledInput = styled.input`
   outline: none;
   height: 100%;
   width: 100%;
+  width: 100%;
   padding-left: ${({ theme }) => theme.space['2']};
   background: transparent;
   color: ${({ theme }) => theme.colors.neutral.text};
   font-size: ${({ theme }) => theme.typography.bodySmall.fontSize};
+
   &[data-size="small"] {
     padding-left: ${({ theme }) => theme.space['1']};
+  }
+
+  &[data-size="large"] {
+    font-size: ${({ theme }) => theme.typography.body.fontSize};
   }
 
   &[data-size="large"] {
@@ -176,7 +182,7 @@ const UnitInputWrapper = styled(Stack)<{
 const SelectInputWrapper = styled.div<{
   width: number | string
 }>`
-${({ width }) => width && `width: ${typeof width === 'number' ? `${width}px` : width};`}
+${({ width }) => width && `width: ${typeof width === 'string' ? width : `${width}px`};`}
 display: flex;
 `
 
@@ -316,7 +322,7 @@ export const UnitInput = ({
             disabled={disabled}
             name={`${name}-value`}
             width={width}
-            id={id ?? localId}
+            id={id ? `${id}-value` : undefined}
             value={val}
             onChange={event => {
               const numericValue = Number.parseInt(event.target.value, 10)
@@ -345,7 +351,7 @@ export const UnitInput = ({
           />
           {error ? <AlertCircleIcon sentiment="danger" /> : null}
           {success && !error ? <CheckCircleIcon sentiment="success" /> : null}
-        </StyledNumberInputWrapper>{' '}
+        </StyledNumberInputWrapper>
         <SelectInputWrapper width={selectInputWidth}>
           <CustomSelectInput
             data-disabled={disabled}
