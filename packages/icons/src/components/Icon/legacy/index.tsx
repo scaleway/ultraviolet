@@ -103,6 +103,10 @@ const StyledIcon = (
     fill: none;
   }
   ${sizeStyles}
+
+  path {
+    fill: currentColor; // This is to remove fill from the SVG
+  }
 `
 
 export type IconName = keyof typeof ICONS.filled
@@ -187,12 +191,14 @@ export const Icon = forwardRef<SVGSVGElement, IconProps>(
       }
       if (size === 'small' || size === 16) return '0 0 16 16'
 
-      return '0 0 20 20'
+      return '0 0 16 16'
     }, [name, size])
 
     return (
       <SystemIcon
         ref={ref}
+        width={undefined}
+        height={undefined}
         sentiment={computedSentiment}
         prominence={prominence}
         size={size}
