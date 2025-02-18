@@ -36,10 +36,10 @@ export const Label = ({
           {children}
         </Text>
         <Text
-          as="label"
+          as="span"
           variant={size === 'large' ? 'bodyStrong' : 'bodySmallStrong'}
           sentiment="danger"
-          htmlFor={htmlFor}
+          aria-label="required"
         >
           *
         </Text>
@@ -61,7 +61,7 @@ export const Label = ({
     <Stack direction="row" gap="1" alignItems="center">
       <LabelRequiredOrNot />
       {typeof labelDescription === 'string' ? (
-        <Text as="label" variant="bodySmall">
+        <Text as="span" variant="bodySmall">
           {labelDescription}
         </Text>
       ) : (
