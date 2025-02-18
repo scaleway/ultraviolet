@@ -71,7 +71,7 @@ const SubCategory = ({ subCategory }: { subCategory: DetailsType }) => {
                 subCategory.price ?? 0,
                 subCategory.amount ?? 1,
                 subCategory.amountFree,
-                hideTimeUnit ? 'minutes' : timePeriodUnit,
+                hideTimeUnit ? 'hours' : timePeriodUnit,
                 hideTimeUnit ? 1 : timePeriodAmount,
                 subCategory.discount,
               ),
