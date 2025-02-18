@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from 'react'
 import { NonScrollableContent } from './NonScrollableContent'
 import { OrderSummaryContext } from './Provider'
 import { ScrollableContent } from './ScrollableContent'
+import { Units } from './constants'
 import { calculatePrice } from './helpers'
 import estimateCostLocales from './locales/en'
 import type { OrderSummaryProps, TimeUnit } from './types'
@@ -23,34 +24,25 @@ padding-bottom: ${({ theme }) => theme.space[2]};
 
 export const OrderSummary = ({
   hideTimeUnit = false,
-  periodOptions,
-  onChangePeriod,
-  onChangePeriodUnit,
-  value = 1,
-  unit = 'hours',
+  periodOptions = Units as TimeUnit[],
+  valueUnitInput = 1,
+  unitUnitInput = 'hours',
   items,
   validateButtonOnClick,
   locales = estimateCostLocales,
   currency = 'EUR',
   locale = 'en-US',
-  commitment = false,
-  onChangeCommitment,
-  commitmentOptions,
-  overallDiscount,
   footer,
+  children,
+  discount = 0,
+  totalPriceInfo,
 }: OrderSummaryProps) => {
   const [totalPrice, setTotalPrice] = useState(0)
   const [categoriesPrice, setCategoriesPrice] = useState<
     Record<string, number>
   >({})
-  const [timePeriodUnit, setTimePeriodUnit] = useState<TimeUnit>(unit)
-  const [timePeriodAmount, setTimePeriodAmount] = useState(value)
-  const [commitmentChoice, setCommitment] = useState<'false' | number>('false')
-
-  const onChangeCommitmentComputed = (val: number | 'false') => {
-    setCommitment(val === 'false' ? val : val)
-    onChangeCommitment?.(val.toString())
-  }
+  const [timePeriodUnit, setTimePeriodUnit] = useState<TimeUnit>(unitUnitInput)
+  const [timePeriodAmount, setTimePeriodAmount] = useState(valueUnitInput)
 
   useEffect(() => {
     const listCategories: Record<string, number> = {}
@@ -63,7 +55,7 @@ export const OrderSummary = ({
               subCategory.price ?? 0,
               subCategory.amount ?? 1,
               subCategory.amountFree,
-              hideTimeUnit ? 'minutes' : timePeriodUnit,
+              hideTimeUnit ? 'hours' : timePeriodUnit,
               hideTimeUnit ? 1 : timePeriodAmount,
               subCategory.discount,
             ) || 0),
@@ -77,10 +69,8 @@ export const OrderSummary = ({
   useEffect(() => {
     const price = Object.values(categoriesPrice).reduce((a, b) => a + b, 0)
 
-    if (commitment && typeof commitmentChoice === 'number') {
-      setTotalPrice(price * commitmentChoice)
-    } else setTotalPrice(price * (overallDiscount?.discount ?? 1))
-  }, [categoriesPrice, commitment, commitmentChoice, overallDiscount?.discount])
+    setTotalPrice(price * (1 - discount))
+  }, [categoriesPrice, discount])
 
   const valueContext = useMemo(
     () => ({
@@ -125,15 +115,9 @@ export const OrderSummary = ({
     return [{ label: 'hours', value: 'hours' }]
   }, [periodOptions, locales])
 
-  const onChangePeriodComputed = (val: number) => {
-    setTimePeriodAmount(val)
-    onChangePeriod?.(val)
-  }
-
   const onChangePeriodUnitComputed = (val: string) => {
     if (['seconds', 'minutes', 'hours', 'days', 'months'].includes(val)) {
       setTimePeriodUnit(val as TimeUnit)
-      onChangePeriodUnit?.(val)
     }
   }
 
@@ -144,30 +128,29 @@ export const OrderSummary = ({
           <Text as="p" variant="headingSmallStrong" sentiment="neutral">
             {locales['estimate.cost.header']}
           </Text>
-          {!hideTimeUnit && periodOptions ? (
+          {!hideTimeUnit ? (
             <UnitInput
               width="11rem"
               selectInputWidth="fit-content"
               options={computePeriodOptions}
-              onChange={onChangePeriodComputed}
+              onChange={setTimePeriodAmount}
               onChangeUnitValue={onChangePeriodUnitComputed}
-              value={value}
-              unitValue={unit}
+              value={valueUnitInput}
+              unitValue={unitUnitInput}
               size="small"
             />
           ) : null}
         </HeaderContainer>
         <ScrollableContent />
         <NonScrollableContent
-          commitment={commitment}
-          commitmentChoice={commitmentChoice}
           totalPrice={totalPrice}
-          onChangeCommitment={onChangeCommitmentComputed}
           validateButtonOnClick={validateButtonOnClick}
-          commitmentOptions={commitmentOptions}
-          overallDiscount={overallDiscount}
+          discount={discount}
           footer={footer}
-        />
+          totalPriceInfo={totalPriceInfo}
+        >
+          {children}
+        </NonScrollableContent>
       </Container>
     </OrderSummaryContext.Provider>
   )
