@@ -32,11 +32,18 @@ const StyledInput = styled.input`
   border: none;
   outline: none;
   height: 100%;
+  width: 100%;
   padding-left: ${({ theme }) => theme.space['2']};
   background: transparent;
   color: ${({ theme }) => theme.colors.neutral.text};
+  font-size: ${({ theme }) => theme.typography.bodySmall.fontSize};
+
   &[data-size="small"] {
     padding-left: ${({ theme }) => theme.space['1']};
+  }
+
+  &[data-size="large"] {
+    font-size: ${({ theme }) => theme.typography.body.fontSize};
   }
 
   &::placeholder {
@@ -158,17 +165,20 @@ const UnitInputWrapper = styled(Stack)<{
     }
   }
 `
+const SelectInputWrapper = styled.div<{
+  width: number | string
+}>`
+${({ width }) => width && `width: ${typeof width === 'string' ? width : `${width}px`};`}
+display: flex;
+`
 
 const CustomSelectInput = styled(SelectInputV2)<{
-  width?: number | string
   'data-disabled': boolean
 }>`
   #unit {
     border: none;
     background: transparent;
   }
-
-  ${({ width }) => width && `width: ${typeof width === 'string' ? width : `${width}px`};`}
 
   #unit:focus,
   #unit:active {
@@ -296,6 +306,7 @@ export const UnitInput = ({
             autoFocus={autoFocus}
             disabled={disabled}
             name={`${name}-value`}
+            width={width}
             id={id ? `${id}-value` : undefined}
             value={val}
             onChange={event => {
@@ -326,25 +337,26 @@ export const UnitInput = ({
           {error ? <AlertCircleIcon sentiment="danger" /> : null}
           {success && !error ? <CheckCircleIcon sentiment="success" /> : null}
         </StyledNumberInputWrapper>
-        <CustomSelectInput
-          width={selectInputWidth}
-          data-disabled={disabled}
-          id="unit"
-          name={`${name}-unit`}
-          onChange={(newValue: string) => {
-            onChangeUnitValue?.(newValue)
-          }}
-          error={unitError}
-          value={unitValue}
-          options={options}
-          searchable={false}
-          clearable={false}
-          placeholder={placeholderUnit}
-          disabled={disabled || options.length === 1}
-          size={size}
-          multiselect={false}
-          readOnly={readOnly}
-        />
+        <SelectInputWrapper width={selectInputWidth}>
+          <CustomSelectInput
+            data-disabled={disabled}
+            id="unit"
+            name={`${name}-unit`}
+            onChange={(newValue: string) => {
+              onChangeUnitValue?.(newValue)
+            }}
+            error={unitError}
+            value={unitValue}
+            options={options}
+            searchable={false}
+            clearable={false}
+            placeholder={placeholderUnit}
+            disabled={disabled || options.length === 1}
+            size={size}
+            multiselect={false}
+            readOnly={readOnly}
+          />
+        </SelectInputWrapper>
       </UnitInputWrapper>
       {error || typeof success === 'string' || typeof helper === 'string' ? (
         <Text
