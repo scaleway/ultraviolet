@@ -94,6 +94,8 @@ const readSvg = async (filePath: string, suffix: string) => {
     .replace(/clip-path=/g, 'clipPath=')
     .replace(/stop-color=/g, 'stopColor=')
     .replace(/`/g, '\\`')
+    .replace(/height="[^"]*"/g, '')
+    .replace(/width="[^"]*"/g, '')
 
   if (suffix === 'Icon') {
     return updatedSvgContent.replaceAll(/fill="[^"]*"/g, '')

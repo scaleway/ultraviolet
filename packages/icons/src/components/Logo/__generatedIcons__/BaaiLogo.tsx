@@ -9,7 +9,7 @@ import type { IconProps } from '../Icon'
 export const BaaiLogo = ({ ...props }: Omit<IconProps, 'children'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
   <Icon {...props}>
-    <mask id="a" width="16" height="8" x="2" y="6" maskUnits="userSpaceOnUse">
+    <mask id="a" x="2" y="6" maskUnits="userSpaceOnUse">
       <path fill="#fff" d="M2 6.333h16v7.53H2z" />
     </mask>
     <g mask="url(#a)">
