@@ -36,10 +36,11 @@ export const Label = ({
           {children}
         </Text>
         <Text
-          as="label"
+          as="span"
           variant={size === 'large' ? 'bodyStrong' : 'bodySmallStrong'}
           sentiment="danger"
           htmlFor={htmlFor}
+          aria-hidden="true"
         >
           *
         </Text>
