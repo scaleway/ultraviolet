@@ -1,5 +1,14 @@
 # Change Log
 
+## 3.13.19
+
+### Patch Changes
+
+- [#4779](https://github.com/scaleway/ultraviolet/pull/4779) [`de2895a`](https://github.com/scaleway/ultraviolet/commit/de2895ac39d4348c56d65497808e373bab02c5c3) Thanks [@matthprost](https://github.com/matthprost)! - Fix icons to work with legacy one
+
+- Updated dependencies [[`35a1958`](https://github.com/scaleway/ultraviolet/commit/35a1958cb64e8fbd8d90e356df70c191eceac620), [`de2895a`](https://github.com/scaleway/ultraviolet/commit/de2895ac39d4348c56d65497808e373bab02c5c3)]:
+  - @ultraviolet/ui@1.87.1
+
 ## 3.13.18
 
 ### Patch Changes
