@@ -1,10 +1,9 @@
 import styled from '@emotion/styled'
-import { InformationOutlineIcon } from '@ultraviolet/icons'
 import { Stack, Text } from '@ultraviolet/ui'
 import { useContext } from 'react'
 import { OrderSummaryContext } from './Provider'
 import { calculatePrice, formatNumber } from './helpers'
-import type { DetailsType, ItemsType } from './types'
+import type { ItemsType, SubCategoryType } from './types'
 
 const ContainerScrollable = styled(Stack)`
 max-height: 30rem;
@@ -22,7 +21,8 @@ const CategoryStack = styled(Stack)`
   }
 `
 const CategoryName = ({ category }: { category: ItemsType }) => {
-  const { currency, locale, categoriesPrice } = useContext(OrderSummaryContext)
+  const { currency, localeFormat, categoriesPrice } =
+    useContext(OrderSummaryContext)
 
   return (
     <Stack justifyContent="space-between" direction="row">
@@ -31,7 +31,6 @@ const CategoryName = ({ category }: { category: ItemsType }) => {
           <Text as="span" variant="bodyStrong" sentiment="neutral">
             {category.category}
           </Text>
-          <InformationOutlineIcon size="small" />
           <Text as="span" variant="bodySmall" italic sentiment="primary">
             {category.additionalInfo}
           </Text>
@@ -41,17 +40,27 @@ const CategoryName = ({ category }: { category: ItemsType }) => {
           {category.category}
         </Text>
       )}
-
-      <Text as="span" variant="bodyStrong" sentiment="neutral">
-        {formatNumber(categoriesPrice[category.category], locale, currency)}
-      </Text>
+      {category.customContent ?? (
+        <Text as="span" variant="bodyStrong" sentiment="neutral">
+          {formatNumber(
+            categoriesPrice[category.category],
+            localeFormat,
+            currency,
+          )}
+        </Text>
+      )}
     </Stack>
   )
 }
 
-const SubCategory = ({ subCategory }: { subCategory: DetailsType }) => {
-  const { currency, locale, hideTimeUnit, timePeriodAmount, timePeriodUnit } =
-    useContext(OrderSummaryContext)
+const SubCategory = ({ subCategory }: { subCategory: SubCategoryType }) => {
+  const {
+    currency,
+    localeFormat,
+    hideTimeUnit,
+    timePeriodAmount,
+    timePeriodUnit,
+  } = useContext(OrderSummaryContext)
 
   return (
     <Stack direction="column" gap={1}>
@@ -59,9 +68,9 @@ const SubCategory = ({ subCategory }: { subCategory: DetailsType }) => {
         <Text as="span" variant="bodySmallStrong" sentiment="neutral">
           {subCategory.title}
         </Text>
-        {subCategory.info ? (
+        {subCategory.customContent ? (
           <Text as="span" variant="bodySmallStrong" sentiment="neutral">
-            {subCategory.info}
+            {subCategory.customContent}
           </Text>
         ) : null}
         {subCategory.price !== undefined ? (
@@ -69,15 +78,19 @@ const SubCategory = ({ subCategory }: { subCategory: DetailsType }) => {
             {formatNumber(
               calculatePrice(
                 subCategory.price ?? 0,
-                subCategory.amount ?? 1,
+                subCategory.amount && !subCategory.priceUnit
+                  ? subCategory.amount
+                  : 1,
                 subCategory.amountFree,
                 hideTimeUnit ? 'hours' : timePeriodUnit,
                 hideTimeUnit ? 1 : timePeriodAmount,
                 subCategory.discount,
+                subCategory.fixedPrice,
               ),
-              locale,
+              localeFormat,
               currency,
             )}
+            {subCategory.priceUnit ? ` /${subCategory.priceUnit}` : ''}
           </Text>
         ) : null}
       </Stack>
@@ -101,8 +114,8 @@ export const ScrollableContent = () => {
       {items.map(category => (
         <CategoryStack key={category.category} gap={1.5}>
           <CategoryName category={category} />
-          <Stack gap={1.5}>
-            {category.subCategories.map(subCategory => (
+          <Stack>
+            {category.subCategories?.map(subCategory => (
               <SubCategory key={subCategory.title} subCategory={subCategory} />
             ))}
           </Stack>

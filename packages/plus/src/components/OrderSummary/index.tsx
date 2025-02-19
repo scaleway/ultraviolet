@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import { Stack, Text, UnitInput } from '@ultraviolet/ui'
-import { useEffect, useMemo, useState } from 'react'
+import { useMemo, useState } from 'react'
 import { NonScrollableContent } from './NonScrollableContent'
 import { OrderSummaryContext } from './Provider'
 import { ScrollableContent } from './ScrollableContent'
@@ -23,59 +23,57 @@ padding-bottom: ${({ theme }) => theme.space[2]};
 `
 
 export const OrderSummary = ({
+  header,
   hideTimeUnit = false,
   periodOptions = Units as TimeUnit[],
   valueUnitInput = 1,
   unitUnitInput = 'hours',
   items,
-  validateButtonOnClick,
   locales = estimateCostLocales,
   currency = 'EUR',
-  locale = 'en-US',
+  localeFormat = 'en-US',
   footer,
   children,
   discount = 0,
   totalPriceInfo,
 }: OrderSummaryProps) => {
-  const [totalPrice, setTotalPrice] = useState(0)
-  const [categoriesPrice, setCategoriesPrice] = useState<
-    Record<string, number>
-  >({})
   const [timePeriodUnit, setTimePeriodUnit] = useState<TimeUnit>(unitUnitInput)
   const [timePeriodAmount, setTimePeriodAmount] = useState(valueUnitInput)
 
-  useEffect(() => {
+  const categoriesPrice = useMemo(() => {
     const listCategories: Record<string, number> = {}
     items.forEach(
       category =>
-        (listCategories[category.category] = category.subCategories.reduce(
-          (acc, subCategory) =>
-            acc +
-            (calculatePrice(
-              subCategory.price ?? 0,
-              subCategory.amount ?? 1,
-              subCategory.amountFree,
-              hideTimeUnit ? 'hours' : timePeriodUnit,
-              hideTimeUnit ? 1 : timePeriodAmount,
-              subCategory.discount,
-            ) || 0),
-          0,
-        )),
+        (listCategories[category.category] =
+          category.subCategories?.reduce(
+            (acc, subCategory) =>
+              acc +
+              (calculatePrice(
+                subCategory.price ?? 0,
+                subCategory.amount ?? 1,
+                subCategory.amountFree,
+                hideTimeUnit ? 'hours' : timePeriodUnit,
+                hideTimeUnit ? 1 : timePeriodAmount,
+                subCategory.discount,
+                subCategory.fixedPrice,
+              ) || 0),
+            0,
+          ) || 0),
     )
 
-    setCategoriesPrice(listCategories)
+    return listCategories
   }, [hideTimeUnit, items, timePeriodAmount, timePeriodUnit])
 
-  useEffect(() => {
+  const totalPrice = useMemo(() => {
     const price = Object.values(categoriesPrice).reduce((a, b) => a + b, 0)
 
-    setTotalPrice(price * (1 - discount))
+    return { before: price, after: Math.max(price * (1 - discount), 0) }
   }, [categoriesPrice, discount])
 
   const valueContext = useMemo(
     () => ({
       currency,
-      locale,
+      localeFormat,
       items,
       categoriesPrice,
       hideTimeUnit,
@@ -85,7 +83,7 @@ export const OrderSummary = ({
     }),
     [
       currency,
-      locale,
+      localeFormat,
       items,
       categoriesPrice,
       hideTimeUnit,
@@ -126,7 +124,7 @@ export const OrderSummary = ({
       <Container>
         <HeaderContainer direction="row" justifyContent="space-between">
           <Text as="p" variant="headingSmallStrong" sentiment="neutral">
-            {locales['estimate.cost.header']}
+            {header}
           </Text>
           {!hideTimeUnit ? (
             <UnitInput
@@ -144,7 +142,6 @@ export const OrderSummary = ({
         <ScrollableContent />
         <NonScrollableContent
           totalPrice={totalPrice}
-          validateButtonOnClick={validateButtonOnClick}
           discount={discount}
           footer={footer}
           totalPriceInfo={totalPriceInfo}
