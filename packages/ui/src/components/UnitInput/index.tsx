@@ -68,6 +68,7 @@ const UnitInputWrapper = styled(Stack)<{
 }>`
   border: 1px solid ${({ theme }) => theme.colors.neutral.border};
   border-radius: ${({ theme }) => theme.radii.default};
+  background-color: ${({ theme }) => theme.colors.neutral.background};
 
   &:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
