@@ -70,7 +70,7 @@ export type OrderSummaryProps = {
    *Total applied to the final cost (due to commitment, beta...) in %
    */
   discount?: number
-  footer: ReactNode
-  children: ReactNode
+  footer?: ReactNode
+  children?: ReactNode
   totalPriceInfo?: ReactNode
 } & PeriodProps
