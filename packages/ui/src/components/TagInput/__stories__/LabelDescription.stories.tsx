@@ -1,5 +1,5 @@
 import type { StoryFn } from '@storybook/react'
-import { Icon } from '@ultraviolet/icons/legacy'
+import { AlertCircleOutlineIcon } from '@ultraviolet/icons'
 import type { ComponentProps } from 'react'
 import { Badge } from '../../Badge'
 import { Stack } from '../../Stack'
@@ -21,7 +21,7 @@ export const LabelDescription: StoryFn = (
       label="Advanced Label"
       labelDescription={
         <Tooltip text="Tooltip message">
-          <Icon name="alert" color="neutral" variant="outlined" />
+          <AlertCircleOutlineIcon sentiment="neutral" />
         </Tooltip>
       }
       required

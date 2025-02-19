@@ -1,9 +1,8 @@
 import type { Theme } from '@emotion/react'
 import styled from '@emotion/styled'
 import { Icon } from '@ultraviolet/icons/legacy'
-import type { ComponentProps } from 'react'
+import type { ComponentProps, ReactNode } from 'react'
 import { SENTIMENTS, SENTIMENTS_WITHOUT_NEUTRAL } from '../../theme'
-import type { XOR } from '../../types'
 import capitalize from '../../utils/capitalize'
 import { Tooltip } from '../Tooltip'
 
@@ -87,17 +86,6 @@ const StyledContainer = styled('div')<StyledContainerType>`
     ]};
 `
 
-type ContentProps = XOR<
-  [
-    {
-      icon: ComponentProps<typeof Icon>['name']
-      iconVariant?: ComponentProps<typeof Icon>['variant']
-    },
-    {
-      text: string
-    },
-  ]
->
 type BulletProps = {
   className?: string
   size?: BulletSize
@@ -106,7 +94,20 @@ type BulletProps = {
   sentiment?: BulletSentiment
   'data-testid'?: string
   prominence?: ProminenceType
-} & ContentProps
+  children?: ReactNode
+  /**
+   * @deprecated Add the icon directly into the children
+   */
+  icon?: ComponentProps<typeof Icon>['name']
+  /**
+   * @deprecated Add the icon directly into the children
+   */
+  iconVariant?: ComponentProps<typeof Icon>['variant']
+  /**
+   * @deprecated Add the text directly into the children
+   */
+  text?: string
+}
 
 /**
  * Bullet component is used to display a small icon or text with a colored background in a circle.
@@ -122,6 +123,7 @@ export const Bullet = ({
   tooltipBaseId,
   'data-testid': dataTestId,
   prominence = 'default',
+  children,
 }: BulletProps) => (
   <Tooltip id={tooltipBaseId} text={tooltip}>
     <StyledContainer
@@ -132,6 +134,7 @@ export const Bullet = ({
       prominence={prominence}
     >
       {icon ? <Icon name={icon} size="small" variant={iconVariant} /> : text}
+      {children}
     </StyledContainer>
   </Tooltip>
 )

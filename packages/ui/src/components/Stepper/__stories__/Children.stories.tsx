@@ -1,5 +1,5 @@
 import type { StoryFn } from '@storybook/react'
-import { Icon } from '@ultraviolet/icons/legacy'
+import { SunIcon } from '@ultraviolet/icons'
 import { Stepper } from '..'
 import { Text } from '../../Text'
 
@@ -14,7 +14,7 @@ export const Children: StoryFn<typeof Stepper> = args => (
     <Stepper.Step title="Step 3" />
     <Stepper.Step title="Step 4" />
     <Stepper.Step title="Step 5">
-      Icon: <Icon name="sun" />
+      Icon: <SunIcon />
     </Stepper.Step>
   </Stepper>
 )

@@ -126,12 +126,35 @@ exports[`Conversation > should work with Default 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 0.25rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-21 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-align-self: flex-end;
   -ms-flex-item-align: flex-end;
   align-self: flex-end;
 }
 
-.emotion-21 {
+.emotion-23 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -142,7 +165,7 @@ exports[`Conversation > should work with Default 1`] = `
   margin-bottom: 1rem;
 }
 
-.emotion-25 {
+.emotion-27 {
   margin: 0 1.5rem;
   margin-top: 1.5rem;
   border-radius: 0.25rem;
@@ -150,7 +173,7 @@ exports[`Conversation > should work with Default 1`] = `
   background-color: #f1eefc;
 }
 
-.emotion-27 {
+.emotion-29 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -194,16 +217,20 @@ exports[`Conversation > should work with Default 1`] = `
             <span
               class="emotion-13 emotion-14 emotion-15"
             >
-              <span
+              <div
                 class="emotion-16 emotion-17 emotion-4"
               >
-                Hello
-              </span>
+                <div
+                  class="emotion-19 emotion-1"
+                >
+                  Hello
+                </div>
+              </div>
             </span>
           </div>
         </div>
         <div
-          class="emotion-19 emotion-20"
+          class="emotion-21 emotion-22"
         >
           <div>
             Hello
@@ -211,32 +238,36 @@ exports[`Conversation > should work with Default 1`] = `
         </div>
       </div>
       <div
-        class="emotion-21 emotion-6"
+        class="emotion-23 emotion-6"
       >
         <div
           class="emotion-7 emotion-8"
         >
           <div
-            class="emotion-25 emotion-10"
+            class="emotion-27 emotion-10"
           >
             <div
-              class="emotion-27 emotion-12"
+              class="emotion-29 emotion-12"
             >
               Hello
             </div>
             <span
               class="emotion-13 emotion-14 emotion-15"
             >
-              <span
+              <div
                 class="emotion-16 emotion-17 emotion-4"
               >
-                Hello
-              </span>
+                <div
+                  class="emotion-19 emotion-1"
+                >
+                  Hello
+                </div>
+              </div>
             </span>
           </div>
         </div>
         <div
-          class="emotion-19 emotion-20"
+          class="emotion-21 emotion-22"
         >
           <div>
             Hello
