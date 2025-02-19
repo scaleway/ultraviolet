@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.87.2
+
+### Patch Changes
+
+- [#4788](https://github.com/scaleway/ultraviolet/pull/4788) [`d6df8b9`](https://github.com/scaleway/ultraviolet/commit/d6df8b9cff3bd0273c202074d5d4c722a0f6817b) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<Label />` component useless re-render
+
 ## 1.87.1
 
 ### Patch Changes
