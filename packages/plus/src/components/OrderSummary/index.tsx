@@ -94,30 +94,20 @@ export const OrderSummary = ({
   )
 
   const computePeriodOptions = useMemo(() => {
-    if (periodOptions) {
-      const computedPeriodOptions: { label: string; value: string }[] = []
+    const computedPeriodOptions: { label: string; value: string }[] = []
 
-      periodOptions.forEach(option =>
-        computedPeriodOptions.push({
-          value: option,
-          label:
-            locales[
-              `estimate.cost.units.${option}.label` as keyof typeof locales
-            ],
-        }),
-      )
+    periodOptions.forEach(option =>
+      computedPeriodOptions.push({
+        value: option,
+        label:
+          locales[
+            `estimate.cost.units.${option}.label` as keyof typeof locales
+          ],
+      }),
+    )
 
-      return computedPeriodOptions
-    }
-
-    return [{ label: 'hours', value: 'hours' }]
+    return computedPeriodOptions
   }, [periodOptions, locales])
-
-  const onChangePeriodUnitComputed = (val: string) => {
-    if (['seconds', 'minutes', 'hours', 'days', 'months'].includes(val)) {
-      setTimePeriodUnit(val as TimeUnit)
-    }
-  }
 
   return (
     <OrderSummaryContext.Provider value={valueContext}>
@@ -132,7 +122,9 @@ export const OrderSummary = ({
               selectInputWidth="fit-content"
               options={computePeriodOptions}
               onChange={setTimePeriodAmount}
-              onChangeUnitValue={onChangePeriodUnitComputed}
+              onChangeUnitValue={(val: string) =>
+                setTimePeriodUnit(val as TimeUnit)
+              }
               value={valueUnitInput}
               unitValue={unitUnitInput}
               size="small"
