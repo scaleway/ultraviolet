@@ -1,7 +1,7 @@
 import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import type { ReactNode } from 'react'
-import React, { forwardRef, useEffect, useState } from 'react'
+import { Children, forwardRef, useEffect, useState } from 'react'
 import { useListContext } from '../List/ListContext'
 import { Body } from './Body'
 import { Cell } from './Cell'
@@ -96,16 +96,16 @@ type TableProps = Omit<
 
 const TableContainer = ({ children }: { children: ReactNode }) => {
   const [childrenMemory, setChildrenMemory] = useState<ReactNode[]>(
-    React.Children.toArray(children),
+    Children.toArray(children),
   )
 
   const { setRefList } = useListContext()
 
   // Reset ref list when children change
   useEffect(() => {
-    if (React.Children.toArray(children) !== childrenMemory) {
+    if (Children.toArray(children) !== childrenMemory) {
       setRefList([])
-      setChildrenMemory(React.Children.toArray(children))
+      setChildrenMemory(Children.toArray(children))
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [children, setRefList])

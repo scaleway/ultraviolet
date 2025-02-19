@@ -38,7 +38,7 @@ export type ListContextValue = {
   selectAllHandler: (event: ChangeEvent<HTMLInputElement>) => void
   subscribeHandler: () => void
   columns: ColumnProps[]
-  inRange: Set<number | string>
+  inRange: string[]
   selectable: boolean
   selectAll: () => void
   selectedRowIds: RowState
@@ -88,7 +88,7 @@ export const ListProvider = ({
   const [expandedRowIds, setExpandedRowIds] = useState<RowState>({})
   const [selectedRowIds, setSelectedRowIds] = useState<RowState>({})
   const [lastCheckedCheckbox, setLastCheckedCheckbox] = useState<string>()
-  const [inRange, setInRange] = useState<Set<number | string>>(new Set([]))
+  const [inRange, setInRange] = useState<string[]>([])
   const [refList, setRefList] = useState<RefObject<HTMLInputElement>[]>([])
 
   const registerExpandableRow = useCallback(
@@ -203,6 +203,34 @@ export const ListProvider = ({
     ]
 
     setRefList(updatedRefList)
+
+    const handleHover = (
+      index: number,
+      isShiftPressed: boolean,
+      leaving: boolean,
+    ) => {
+      const newRange: string[] = []
+      if (lastCheckedCheckbox) {
+        const targetCheckbox = updatedRefList.find(
+          checkbox => checkbox.current?.value === lastCheckedCheckbox,
+        )
+
+        if (isShiftPressed && targetCheckbox && !leaving) {
+          const lastCheckedIndex = updatedRefList.indexOf(targetCheckbox)
+          const start =
+            Math.min(lastCheckedIndex, index) -
+            (Math.min(lastCheckedIndex, index) === index ? 1 : 0)
+          const end = Math.max(lastCheckedIndex, index)
+
+          updatedRefList.forEach((checkbox, i) => {
+            if (!checkbox.current?.disabled && i > start && i < end) {
+              newRange.push(checkbox.current?.value)
+            }
+          })
+        }
+      }
+      setInRange(newRange)
+    }
     const handleClickRange = (
       currentCheckbox: HTMLInputElement,
       index: number,
@@ -213,7 +241,7 @@ export const ListProvider = ({
 
         // Get the index of the lastCheckedCheckbox
         const targetCheckbox = updatedRefList.find(
-          checkbox => checkbox.current.value === lastCheckedCheckbox,
+          checkbox => checkbox.current?.value === lastCheckedCheckbox,
         )
         const lastCheckedIndex = targetCheckbox
           ? updatedRefList.indexOf(targetCheckbox)
@@ -227,8 +255,8 @@ export const ListProvider = ({
 
           updatedRefList.forEach((checkbox, key) => {
             if (start < key && key <= end) {
-              if (!checkbox.current.disabled) {
-                checkboxesInRange.push(checkbox.current.value)
+              if (!checkbox.current?.disabled) {
+                checkboxesInRange.push(checkbox.current?.value)
               }
             }
           })
@@ -243,7 +271,7 @@ export const ListProvider = ({
        */
       setTimeout(() => {
         // clean up
-        setInRange(new Set([]))
+        setInRange([])
         setLastCheckedCheckbox(currentCheckbox.value)
       }, 1)
     }
@@ -251,12 +279,28 @@ export const ListProvider = ({
       function clickHandler(this: HTMLInputElement, event: MouseEvent) {
         handleClickRange(this, index, event.shiftKey)
       }
+
+      const hoverEnteringHandler = (event: MouseEvent) =>
+        handleHover(index, event.shiftKey, false)
+      const hoverLeavingHandler = (event: MouseEvent) =>
+        handleHover(index, event.shiftKey, true)
+
       if (checkbox.current) {
         checkbox.current.addEventListener('click', clickHandler)
+        checkbox.current.addEventListener('mousemove', hoverEnteringHandler)
+        checkbox.current.addEventListener('mouseout', hoverLeavingHandler)
 
         handlers.push(() => {
           if (checkbox.current) {
             checkbox.current.removeEventListener('click', clickHandler)
+            checkbox.current.removeEventListener(
+              'mouseout',
+              hoverEnteringHandler,
+            )
+            checkbox.current.removeEventListener(
+              'mousemove',
+              hoverLeavingHandler,
+            )
           }
         })
       }
