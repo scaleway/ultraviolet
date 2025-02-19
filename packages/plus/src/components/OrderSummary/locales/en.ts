@@ -1,17 +1,4 @@
 export default {
-  'estimate.cost.description':
-    'This summary provides a cost estimation based on your configuration, the amount of time you expect to use the resource for, and the scale of your expected usage. For the purposes of this calculation, we consider that 1 month equals to 730 hours.',
-  'estimate.cost.beta.free': 'Free During Beta',
-  'estimate.cost.beta.discount': '% off during Beta',
-  'estimate.cost.beta.badge': 'Beta Version',
-  'estimate.cost.fees.oneTime.title': 'One time fees',
-  'estimate.cost.fees.monthly.title': 'Each month',
-  'estimate.cost.fees.commitment': 'Commitment Fees',
-  'estimate.cost.units.gb.label': 'GB',
-  'estimate.cost.notDefined': 'Not defined',
-  'estimate.cost.submit.label': 'Create',
-  'estimate.cost.region.label': 'Region',
-  'estimate.cost.az.label': 'Availability Zone',
   'estimate.cost.total': 'Estimated cost',
   'estimate.cost.units.seconds.label': 'Second(s)',
   'estimate.cost.units.minutes.label': 'Minute(s)',
@@ -19,5 +6,4 @@ export default {
   'estimate.cost.units.days.label': 'Day(s)',
   'estimate.cost.units.months.label': 'Month(s)',
   'estimate.cost.units.years.label': 'Year(s)',
-  'estimate.cost.header': 'Summary',
 } as const
