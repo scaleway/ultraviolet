@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
-import { Button, Stack, Text } from '@ultraviolet/ui'
+import { Stack, Text } from '@ultraviolet/ui'
 import { useContext } from 'react'
-import type { MouseEventHandler, ReactNode } from 'react'
+import type { ReactNode } from 'react'
 import { OrderSummaryContext } from './Provider'
 import { formatNumber } from './helpers'
 
@@ -12,8 +12,7 @@ border-top: 1px solid ${({ theme }) => theme.colors.neutral.border};
 
 type NonScrollableContentProps = {
   discount: number
-  totalPrice: number
-  validateButtonOnClick: MouseEventHandler<HTMLElement>
+  totalPrice: { before: number; after: number }
   footer: ReactNode
   children: ReactNode
   totalPriceInfo?: ReactNode
@@ -21,17 +20,16 @@ type NonScrollableContentProps = {
 
 export const NonScrollableContent = ({
   totalPrice,
-  validateButtonOnClick,
   footer,
   children,
   totalPriceInfo,
 }: NonScrollableContentProps) => {
-  const { locale, currency, locales } = useContext(OrderSummaryContext)
+  const { localeFormat, currency, locales } = useContext(OrderSummaryContext)
 
   return (
     <NonScrollableContainer gap={3}>
       {children}
-      <Stack direction="row" justifyContent="space-between">
+      <Stack direction="row" justifyContent="space-between" alignItems="center">
         {totalPriceInfo ? (
           <Stack>
             <Text as="p" variant="bodyStrong" sentiment="neutral">
@@ -44,15 +42,28 @@ export const NonScrollableContent = ({
             {locales['estimate.cost.total']}:
           </Text>
         )}
-
-        <Text as="p" variant="headingSmallStrong" sentiment="neutral">
-          {formatNumber(totalPrice, locale, currency)}
-        </Text>
+        {totalPrice.before === totalPrice.after ? (
+          <Text as="p" variant="headingSmallStrong" sentiment="neutral">
+            {formatNumber(totalPrice.after, localeFormat, currency, 2)}
+          </Text>
+        ) : (
+          <Stack direction="row" gap={1} alignItems="center">
+            <Text
+              as="p"
+              variant="bodySmallStrong"
+              sentiment="neutral"
+              prominence="weak"
+              strikeThrough
+            >
+              {formatNumber(totalPrice.before, localeFormat, currency, 2)}
+            </Text>
+            <Text as="p" variant="headingSmallStrong" sentiment="neutral">
+              {formatNumber(totalPrice.after, localeFormat, currency, 2)}
+            </Text>
+          </Stack>
+        )}
       </Stack>
       {footer}
-      <Button onClick={validateButtonOnClick}>
-        {locales['estimate.cost.submit.label']}
-      </Button>
     </NonScrollableContainer>
   )
 }

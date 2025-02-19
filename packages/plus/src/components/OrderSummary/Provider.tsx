@@ -4,7 +4,7 @@ import type { ItemsType, TimeUnit } from './types'
 
 export type ContextProps = {
   currency: string
-  locale: string
+  localeFormat: string
   items: ItemsType[]
   categoriesPrice: Record<string, number>
   hideTimeUnit: boolean
@@ -15,7 +15,7 @@ export type ContextProps = {
 
 export const OrderSummaryContext = createContext<ContextProps>({
   currency: 'EUR',
-  locale: 'en-US',
+  localeFormat: 'en-US',
   items: [{ category: '', subCategories: [] }],
   categoriesPrice: {},
   hideTimeUnit: false,

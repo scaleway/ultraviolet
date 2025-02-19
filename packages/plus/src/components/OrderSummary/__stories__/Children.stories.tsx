@@ -3,7 +3,7 @@ import { Badge, RadioGroup, SelectInputV2, Stack } from '@ultraviolet/ui'
 import { useState } from 'react'
 import type { ComponentProps } from 'react'
 import { OrderSummary } from '..'
-import { categoryAZ, categoryM2, categoryOptions } from './prodcutsExample'
+import { categoryAZ, categoryM2, categoryOptions } from './productsExample'
 
 const mockItems = [categoryAZ, categoryM2, categoryOptions]
 
@@ -73,4 +73,14 @@ export const Children: StoryFn<ComponentProps<typeof OrderSummary>> = props => {
 
 Children.args = {
   items: mockItems,
+  header: 'Summary',
+}
+
+Children.parameters = {
+  docs: {
+    description: {
+      story:
+        'The `children` prop can be use to add information in the non-scrollable area, before the final price.',
+    },
+  },
 }

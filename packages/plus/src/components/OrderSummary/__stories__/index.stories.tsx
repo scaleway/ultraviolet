@@ -7,7 +7,12 @@ export default {
 } satisfies Meta
 
 export { Playground } from './Playground.stories'
-export { WithTimeUnit } from './WithTimeUnit.stories'
+export { DefaultLocales } from './DefaultLocales.stories'
+export { TimeUnit } from './TimeUnit.stories'
 export { Children } from './Children.stories'
-export { TotalPriceInfo } from './OverallDiscount.stories'
+export { TotalPriceInfo } from './TotalPriceInfo.stories'
 export { Footer } from './Footer.stories'
+export { PriceUnit } from './PriceUnit.stories'
+export { FixedPrice } from './FixedPrice.stories'
+export { CustomContent } from './CustomContent.stories'
+export { Example } from './Example.stories'

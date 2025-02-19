@@ -13,3 +13,11 @@ TotalPriceInfo.args = {
   ),
   hideTimeUnit: false,
 }
+
+TotalPriceInfo.parameters = {
+  docs: {
+    description: {
+      story: 'Add information right beneath the total price.',
+    },
+  },
+}

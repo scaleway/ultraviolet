@@ -5,10 +5,12 @@ export const formatNumber = (
   number: number,
   locale: string,
   currency: string,
+  fractionDigits = 10,
 ) => {
   const numberFormat = new Intl.NumberFormat(locale, {
     style: 'currency',
     currency,
+    maximumFractionDigits: fractionDigits,
   })
 
   return numberFormat.format(number)
@@ -23,11 +25,12 @@ export const calculatePrice = (
   timeUnit: TimeUnit,
   timeAmount: number,
   discount = 0,
+  fixedPrice = false,
 ) => {
   const nonNanTimeAmount = Number.isNaN(timeAmount) ? 1 : timeAmount
   const value =
     (price - price * discount) *
-    (nonNanTimeAmount * multiplier[`${timeUnit}`]) *
+    (fixedPrice ? 1 : nonNanTimeAmount * multiplier[`${timeUnit}`]) *
     Math.max(amount - amountFree, 0)
 
   return value
