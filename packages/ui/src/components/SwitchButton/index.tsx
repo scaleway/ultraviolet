@@ -63,10 +63,10 @@ const StyledBorderedBox = styled.div<{ 'data-size': 'small' | 'medium' }>`
   }
 `
 type SwitchButtonProps = {
-  name: string
-  onBlur?: FocusEventHandler
-  onChange: ChangeEventHandler
-  onFocus?: FocusEventHandler
+  name?: string
+  onBlur?: FocusEventHandler<HTMLInputElement>
+  onChange: ChangeEventHandler<HTMLInputElement>
+  onFocus?: FocusEventHandler<HTMLInputElement>
   tooltip?: string
   value?: string | number
   leftButton: {
