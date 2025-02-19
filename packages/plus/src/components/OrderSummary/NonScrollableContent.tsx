@@ -43,7 +43,12 @@ export const NonScrollableContent = ({
           </Text>
         )}
         {totalPrice.before === totalPrice.after ? (
-          <Text as="p" variant="headingSmallStrong" sentiment="neutral">
+          <Text
+            as="p"
+            variant="headingSmallStrong"
+            sentiment="neutral"
+            data-testid="total-price"
+          >
             {formatNumber(totalPrice.after, localeFormat, currency, 2)}
           </Text>
         ) : (
@@ -57,7 +62,12 @@ export const NonScrollableContent = ({
             >
               {formatNumber(totalPrice.before, localeFormat, currency, 2)}
             </Text>
-            <Text as="p" variant="headingSmallStrong" sentiment="neutral">
+            <Text
+              as="p"
+              variant="headingSmallStrong"
+              sentiment="neutral"
+              data-testid="total-price"
+            >
               {formatNumber(totalPrice.after, localeFormat, currency, 2)}
             </Text>
           </Stack>
