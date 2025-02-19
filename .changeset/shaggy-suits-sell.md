@@ -2,4 +2,4 @@
 "@ultraviolet/ui": patch
 ---
 
-`<UnitInput />`: fix component width and font-size
+`<UnitInput />`: fix component width, font-size and background-color
