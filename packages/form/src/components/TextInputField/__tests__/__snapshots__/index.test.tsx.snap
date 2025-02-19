@@ -1092,21 +1092,15 @@ exports[`TextInputField > should render correctly required 1`] = `
 }
 
 .emotion-6 {
-  vertical-align: middle;
-  fill: #b3144d;
-  height: 10px;
-  width: 10px;
-  min-width: 10px;
-  min-height: 10px;
-}
-
-.emotion-6 .fillStroke {
-  stroke: #b3144d;
-  fill: none;
-}
-
-.emotion-6 path {
-  fill: currentColor;
+  color: #b3144d;
+  font-size: 1rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .emotion-8 {
@@ -1144,15 +1138,11 @@ exports[`TextInputField > should render correctly required 1`] = `
           <div
             class="emotion-4 emotion-5"
           >
-            <svg
+            <span
               class="emotion-6 emotion-7"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
             >
-              <path
-                d="M10 2h4l-.79 7.91 6.45-4.64 2 3.46L14.42 12l7.24 3.27-2 3.46-6.45-4.64L14 22h-4l.79-7.91-6.45 4.64-2-3.46L9.58 12 2.34 8.73l2-3.46 6.45 4.64z"
-              />
-            </svg>
+              *
+            </span>
           </div>
         </div>
         <div
