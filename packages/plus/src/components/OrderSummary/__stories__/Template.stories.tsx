@@ -6,7 +6,7 @@ import {
   categoryDefault,
   categoryM2,
   categoryOptions,
-} from './prodcutsExample'
+} from './productsExample'
 
 const mockItems = [categoryAZ, categoryM2, categoryOptions, categoryDefault]
 
@@ -15,6 +15,6 @@ export const Template: StoryFn<ComponentProps<typeof OrderSummary>> = props => (
 )
 
 Template.args = {
-  hideTimeUnit: true,
   items: mockItems,
+  header: 'Summary',
 }

@@ -14,3 +14,12 @@ Footer.args = {
   ...Template.args,
   footer: alert,
 }
+
+Footer.parameters = {
+  docs: {
+    description: {
+      story:
+        'Similarly to the `children` prop, the `footer` prop allows you to pass any ReactNode to the footer of the component, right below the total price of the order.',
+    },
+  },
+}
