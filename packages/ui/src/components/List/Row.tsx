@@ -51,19 +51,11 @@ const StyledCheckbox = styled(Checkbox, {
 })<{ inRange: boolean }>`
   ${({ theme, inRange }) =>
     inRange
-      ? `svg {
-          padding: ${theme.space[0.25]};
-          outline: 1px inset ${theme.colors.primary.backgroundStrong};
-          box-shadow: ${theme.shadows.focusPrimary};
-          transition:
-            box-shadow 250ms ease,
-            outline 250ms ease,
-            padding 250ms ease;
-          rect {
-            fill: ${theme.colors.primary.backgroundHover};
-            stroke: ${theme.colors.primary.borderHover};
-          }
-      }
+      ? `
+        rect {
+          fill: ${theme.colors.neutral.backgroundHover};
+          stroke: ${theme.colors.neutral.borderHover};
+        }
   `
       : ''}
 
@@ -359,7 +351,7 @@ export const Row = forwardRef<HTMLTableRowElement, RowProps>(
                     value={id}
                     ref={checkboxRef}
                     disabled={isSelectDisabled}
-                    inRange={inRange?.has(id)}
+                    inRange={inRange?.includes(id)}
                     onChange={() => handleOnChange(id, selectedRowIds[id])}
                   />
                 </Tooltip>
