@@ -96,6 +96,10 @@ describe('SelectInputV2', () => {
     )
     const input = screen.getByText('placeholder')
     await userEvent.click(input)
+    const dropdown = screen.getByRole('dialog')
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+    })
     expect(asFragment()).toMatchSnapshot()
   })
 
@@ -110,6 +114,10 @@ describe('SelectInputV2', () => {
     )
     const input = screen.getByText('placeholder')
     await userEvent.click(input)
+    const dropdown = screen.getByRole('dialog')
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+    })
     expect(asFragment()).toMatchSnapshot()
   })
 
@@ -125,6 +133,10 @@ describe('SelectInputV2', () => {
     )
     const input = screen.getByText('Pluto')
     await userEvent.click(input)
+    const dropdown = screen.getByRole('dialog')
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+    })
     expect(asFragment()).toMatchSnapshot()
   })
 
@@ -141,6 +153,10 @@ describe('SelectInputV2', () => {
     )
     const input = screen.getByText('Pluto')
     await userEvent.click(input)
+    const dropdown = screen.getByRole('dialog')
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+    })
     expect(asFragment()).toMatchSnapshot()
   })
 
@@ -157,6 +173,10 @@ describe('SelectInputV2', () => {
     )
     const input = screen.getByText('Pluto')
     await userEvent.click(input)
+    const dropdown = screen.getByRole('dialog')
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+    })
     expect(asFragment()).toMatchSnapshot()
   })
 
@@ -173,6 +193,10 @@ describe('SelectInputV2', () => {
     )
     const input = screen.getByText('placeholder')
     await userEvent.click(input)
+    const dropdown = screen.getByRole('dialog')
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+    })
     expect(asFragment()).toMatchSnapshot()
   })
 
@@ -189,6 +213,10 @@ describe('SelectInputV2', () => {
     )
     const input = screen.getByText('placeholder')
     await userEvent.click(input)
+    const dropdown = screen.getByRole('dialog')
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+    })
     expect(asFragment()).toMatchSnapshot()
   })
 
@@ -205,6 +233,10 @@ describe('SelectInputV2', () => {
     )
     const input = screen.getByText('placeholder')
     await userEvent.click(input)
+    const dropdown = screen.getByRole('dialog')
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+    })
     expect(asFragment()).toMatchSnapshot()
   })
 
@@ -221,6 +253,10 @@ describe('SelectInputV2', () => {
     )
     const input = screen.getByText('placeholder')
     await userEvent.click(input)
+    const dropdown = screen.getByRole('dialog')
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+    })
     expect(asFragment()).toMatchSnapshot()
   })
 
@@ -251,6 +287,10 @@ describe('SelectInputV2', () => {
     )
     const input = screen.getByText('placeholder')
     await userEvent.click(input)
+    const dropdown = screen.getByRole('dialog')
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+    })
     expect(asFragment()).toMatchSnapshot()
   })
 
@@ -266,6 +306,8 @@ describe('SelectInputV2', () => {
     )
     const input = screen.getByText('placeholder')
     await userEvent.click(input)
+    const dropdown = screen.queryByRole('dialog')
+    expect(dropdown).toBeNull()
     expect(asFragment()).toMatchSnapshot()
   })
 
@@ -282,6 +324,10 @@ describe('SelectInputV2', () => {
 
     const input = screen.getByText('placeholder')
     await userEvent.click(input)
+    const dropdown = screen.getByRole('dialog')
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+    })
     expect(asFragment()).toMatchSnapshot()
   })
 
@@ -297,6 +343,8 @@ describe('SelectInputV2', () => {
     )
     const input = screen.getByText('placeholder')
     await userEvent.click(input)
+    const dropdown = screen.queryByRole('dialog')
+    expect(dropdown).toBeNull()
     expect(asFragment()).toMatchSnapshot()
   })
 
@@ -312,6 +360,10 @@ describe('SelectInputV2', () => {
     )
     const input = screen.getByText('placeholder')
     await userEvent.click(input)
+    const dropdown = screen.getByRole('dialog')
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+    })
     expect(asFragment()).toMatchSnapshot()
   })
 
@@ -327,6 +379,10 @@ describe('SelectInputV2', () => {
     )
     const input = screen.getByText('placeholder')
     await userEvent.click(input)
+    const dropdown = screen.getByRole('dialog')
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+    })
     expect(asFragment()).toMatchSnapshot()
   })
 
@@ -342,6 +398,10 @@ describe('SelectInputV2', () => {
     )
     const input = screen.getByText('placeholder')
     await userEvent.click(input)
+    const dropdown = screen.getByRole('dialog')
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+    })
     expect(asFragment()).toMatchSnapshot()
   })
 
@@ -383,7 +443,6 @@ describe('SelectInputV2', () => {
     const input = screen.getByText('placeholder')
     await userEvent.click(input)
     const dropdown = screen.getByRole('dialog')
-    expect(dropdown).toBeVisible()
 
     await userEvent.click(input)
     await userEvent.click(input)
@@ -408,6 +467,7 @@ describe('SelectInputV2', () => {
     await userEvent.click(venusCloseButton)
     expect(venus).not.toBeVisible()
   })
+
   test('renders correctly unclosable tags when readonly', () => {
     const { asFragment } = renderWithTheme(
       <SelectInputV2
@@ -450,6 +510,7 @@ describe('SelectInputV2', () => {
     })
     expect(mercury).toHaveFocus()
   })
+
   test('handles correctly dropdown with arrow pressing enter or space', async () => {
     renderWithTheme(
       <SelectInputV2
@@ -469,6 +530,7 @@ describe('SelectInputV2', () => {
     const dropdown = screen.getByRole('dialog')
     expect(dropdown).toBeVisible()
   })
+
   test('handles correctly dropdown with arrow down/up key press with grouped data', async () => {
     renderWithTheme(
       <SelectInputV2
@@ -574,6 +636,9 @@ describe('SelectInputV2', () => {
     const input = screen.getByTestId('select-input-test')
     await userEvent.click(input)
     const dropdown = screen.getByRole('dialog')
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+    })
     const venus = screen.getByRole('option', {
       name: /venus/i,
     })
@@ -596,6 +661,9 @@ describe('SelectInputV2', () => {
     const input = screen.getByTestId('select-input-test')
     await userEvent.click(input)
     const dropdown = screen.getByRole('dialog')
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+    })
     const venus = screen.getByRole('option', {
       name: /venus/i,
     })
@@ -617,6 +685,10 @@ describe('SelectInputV2', () => {
     )
     const input = screen.getByTestId('select-input-test')
     await userEvent.click(input)
+    const dropdown = screen.getByRole('dialog')
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+    })
     const earth = screen.getByText('Earth')
     await userEvent.click(earth)
     await userEvent.click(earth)
@@ -635,6 +707,10 @@ describe('SelectInputV2', () => {
     )
     const input = screen.getByTestId('select-input-test')
     await userEvent.click(input)
+    const dropdown = screen.getByRole('dialog')
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+    })
     const earth = screen.getByTestId('option-earth')
     await userEvent.click(earth)
     await userEvent.click(earth)
@@ -652,6 +728,9 @@ describe('SelectInputV2', () => {
     const input = screen.getByTestId('select-input-test')
     await userEvent.click(input)
     const dropdown = screen.getByRole('dialog')
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+    })
     expect(dropdown).toBeVisible()
     const venus = screen.getByTestId('option-venus')
     const earth = screen.getByTestId('option-earth')
@@ -708,6 +787,9 @@ describe('SelectInputV2', () => {
     const input = screen.getByTestId('select-input-test')
     await userEvent.click(input)
     const dropdown = screen.getByRole('dialog')
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+    })
     expect(dropdown).toBeVisible()
     const venus = screen.getByText('Venus')
     const earth = screen.getByText('Earth')
@@ -765,6 +847,9 @@ describe('SelectInputV2', () => {
     const input = screen.getByTestId('select-input-test')
     await userEvent.click(input)
     const dropdown = screen.getByRole('dialog')
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+    })
     expect(dropdown).toBeVisible()
     const venus = screen.getByText('Venus')
     const earth = screen.getByText('Earth')
@@ -827,6 +912,10 @@ describe('SelectInputV2', () => {
 
     const input = screen.getByTestId('select-input-test')
     await userEvent.click(input)
+    const dropdown = screen.getByRole('dialog')
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+    })
     const options = screen.getAllByRole('option')
 
     fireEvent.click(options[1])
@@ -856,6 +945,10 @@ describe('SelectInputV2', () => {
 
     const input = screen.getByTestId('select-input-test')
     await userEvent.click(input)
+    const dropdown = screen.getByRole('dialog')
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+    })
     const selectAllCheckBox = screen.getByRole('checkbox', {
       name: 'Select all',
     })
@@ -913,6 +1006,10 @@ describe('SelectInputV2', () => {
 
     const input = screen.getByTestId('select-input-test')
     await userEvent.click(input)
+    const dropdown = screen.getByRole('dialog')
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+    })
     const selectAllCheckBox = screen.getByRole('checkbox', {
       name: 'Select all',
     })
@@ -967,6 +1064,10 @@ describe('SelectInputV2', () => {
 
     const input = screen.getByTestId('select-input-test')
     await userEvent.click(input)
+    const dropdown = screen.getByRole('dialog')
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+    })
     const selectAllGroupCheckBox = screen.getByRole('checkbox', {
       name: 'TERRESTRIAL PLANETS',
     })
@@ -1011,6 +1112,10 @@ describe('SelectInputV2', () => {
 
     const input = screen.getByTestId('select-input-test')
     await userEvent.click(input)
+    const dropdown = screen.getByRole('dialog')
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+    })
     const selectAllGroupCheckBox = screen.getByRole('checkbox', {
       name: 'TERRESTRIAL PLANETS',
     })
@@ -1049,6 +1154,10 @@ describe('SelectInputV2', () => {
 
     const input = screen.getByTestId('select-input-test')
     await userEvent.click(input)
+    const dropdown = screen.getByRole('dialog')
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+    })
     const selectAllGroupCheckBox = screen.getByRole('checkbox', {
       name: 'TERRESTRIAL PLANETS',
     })
@@ -1102,6 +1211,10 @@ describe('SelectInputV2', () => {
     )
     const input = screen.getByTestId('select-input-test')
     await userEvent.click(input)
+    const dropdown = screen.getByRole('dialog')
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+    })
     const earth = screen.getByTestId('option-earth')
     await userEvent.click(earth)
   })
@@ -1118,6 +1231,10 @@ describe('SelectInputV2', () => {
     )
     const input = screen.getByTestId('select-input-test')
     await userEvent.click(input)
+    const dropdown = screen.getByRole('dialog')
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+    })
     const earth = screen.getByTestId('option-earth')
     await userEvent.click(earth)
   })
@@ -1134,6 +1251,10 @@ describe('SelectInputV2', () => {
     )
     const input = screen.getByTestId('select-input-test')
     await userEvent.click(input)
+    const dropdown = screen.getByRole('dialog')
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+    })
     const earth = screen.getByTestId('option-earth')
     await userEvent.click(earth)
   })
@@ -1150,6 +1271,10 @@ describe('SelectInputV2', () => {
     )
     const input = screen.getByTestId('select-input-test')
     await userEvent.click(input)
+    const dropdown = screen.getByRole('dialog')
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+    })
     const earth = screen.getByTestId('option-earth')
     await userEvent.click(earth)
   })
@@ -1165,6 +1290,10 @@ describe('SelectInputV2', () => {
     )
     const input = screen.getByTestId('select-input-test')
     await userEvent.click(input)
+    const dropdown = screen.getByRole('dialog')
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+    })
     const earth = screen.getByTestId('option-earth')
     await userEvent.click(earth)
   })
@@ -1180,6 +1309,10 @@ describe('SelectInputV2', () => {
     )
     const input = screen.getByTestId('select-input-test')
     await userEvent.click(input)
+    const dropdown = screen.getByRole('dialog')
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+    })
     const earth = screen.getByTestId('option-earth')
     await userEvent.click(earth)
   })
@@ -1195,6 +1328,10 @@ describe('SelectInputV2', () => {
     )
     const input = screen.getByTestId('select-input-test')
     await userEvent.click(input)
+    const dropdown = screen.getByRole('dialog')
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+    })
     const earth = screen.getByTestId('option-earth')
     await userEvent.click(earth)
   })
@@ -1210,6 +1347,10 @@ describe('SelectInputV2', () => {
     )
     const input = screen.getByTestId('select-input-test')
     await userEvent.click(input)
+    const dropdown = screen.getByRole('dialog')
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+    })
     const earth = screen.getByTestId('option-earth')
     await userEvent.click(earth)
   })
@@ -1226,6 +1367,10 @@ describe('SelectInputV2', () => {
     )
     const input = screen.getByText('placeholder')
     await userEvent.click(input)
+    const dropdown = screen.getByRole('dialog')
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+    })
     expect(asFragment()).toMatchSnapshot()
   })
 
@@ -1242,6 +1387,10 @@ describe('SelectInputV2', () => {
     )
     const input = screen.getByText('placeholder')
     await userEvent.click(input)
+    const dropdown = screen.getByRole('dialog')
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+    })
     expect(asFragment()).toMatchSnapshot()
   })
 
@@ -1271,9 +1420,12 @@ describe('SelectInputV2', () => {
     )
     const input = screen.getByText('Pluto')
     await userEvent.click(input)
+    const dropdown = screen.getByRole('dialog')
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+    })
 
     const footer = screen.getByTestId('buttonclose')
-    const dropdown = screen.getByRole('dialog')
     expect(dropdown).toBeVisible()
 
     await userEvent.click(footer)
