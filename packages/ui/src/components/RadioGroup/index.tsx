@@ -88,7 +88,7 @@ const StyledRequiredIcon = styled(AsteriskIcon)`
 `
 
 type RadioGroupProps = {
-  legend: ReactNode
+  legend?: ReactNode
   value: string | number
   className?: string
   helper?: ReactNode
@@ -131,29 +131,33 @@ export const RadioGroup = ({
       <Stack gap={1}>
         <FieldSet className={className}>
           <Stack gap={1.5}>
-            <Stack gap={0.5}>
-              <Text
-                as="legend"
-                variant="bodyStrong"
-                sentiment="neutral"
-                prominence="strong"
-              >
-                {legend}&nbsp;
-                {required ? (
-                  <StyledRequiredIcon sentiment="danger" size={8} />
+            {legend || description ? (
+              <Stack gap={0.5}>
+                {legend ? (
+                  <Text
+                    as="legend"
+                    variant="bodyStrong"
+                    sentiment="neutral"
+                    prominence="strong"
+                  >
+                    {legend}&nbsp;
+                    {required ? (
+                      <StyledRequiredIcon sentiment="danger" size={8} />
+                    ) : null}
+                  </Text>
                 ) : null}
-              </Text>
-              {description ? (
-                <Text
-                  variant="bodySmall"
-                  as={typeof description === 'string' ? 'p' : 'div'}
-                  prominence="weak"
-                  sentiment="neutral"
-                >
-                  {description}
-                </Text>
-              ) : null}
-            </Stack>
+                {description ? (
+                  <Text
+                    variant="bodySmall"
+                    as={typeof description === 'string' ? 'p' : 'div'}
+                    prominence="weak"
+                    sentiment="neutral"
+                  >
+                    {description}
+                  </Text>
+                ) : null}
+              </Stack>
+            ) : null}
             <Stack
               gap={direction === 'column' ? 1 : 2}
               direction={direction}
