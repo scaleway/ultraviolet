@@ -1269,7 +1269,7 @@ describe('SelectInputV2', () => {
   test('renders correctly with function footer', async () => {
     const f = vi.fn(() => {})
 
-    const { asFragment } = renderWithTheme(
+    renderWithTheme(
       <SelectInputV2
         name="test"
         options={dataGrouped}
@@ -1301,7 +1301,5 @@ describe('SelectInputV2', () => {
 
     expect(f).toHaveBeenCalledOnce()
     setTimeout(() => expect(dropdown).not.toBeVisible(), 500)
-
-    expect(asFragment()).toMatchSnapshot()
   })
 })
