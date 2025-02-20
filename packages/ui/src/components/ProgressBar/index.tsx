@@ -139,9 +139,12 @@ export const ProgressBar = ({
         ) : null}
       </Stack>
     ) : null}
-    <Label labelDescription={labelDescription} size="medium">
-      {label}
-    </Label>
+
+    {direction === 'row' && label ? (
+      <Label labelDescription={labelDescription} size="medium">
+        {label}
+      </Label>
+    ) : null}
 
     <StyledProgressContainer
       role="progressbar"
