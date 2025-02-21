@@ -1,5 +1,5 @@
 import type { StoryFn } from '@storybook/react'
-import { Icon } from '@ultraviolet/icons/legacy'
+import { AlertCircleOutlineIcon } from '@ultraviolet/icons'
 import { useState } from 'react'
 import { TextArea } from '..'
 import { Badge } from '../../Badge'
@@ -40,7 +40,7 @@ export const Examples: StoryFn<typeof TextArea> = () => {
         label="Label"
         labelDescription={
           <Tooltip text="Tooltip message">
-            <Icon name="alert" color="neutral" variant="outlined" />
+            <AlertCircleOutlineIcon sentiment="neutral" />
           </Tooltip>
         }
         required

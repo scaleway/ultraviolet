@@ -5,6 +5,7 @@ import useClipboard from 'react-use-clipboard'
 import type { Color } from '../../theme'
 import { Button } from '../Button'
 import { Loader } from '../Loader'
+import { Stack } from '../Stack'
 import { Text } from '../Text'
 import { Tooltip } from '../Tooltip'
 
@@ -74,7 +75,7 @@ type TagProps = {
   sentiment?: Color
   disabled?: boolean
   /**
-   * Defines icon to display on left side of badge. **Only available on medium and large sizes**.
+   * @deprecated Add the icon directly into the children
    */
   icon?: IconName
   copiable?: boolean
@@ -105,8 +106,15 @@ const TagInner = ({
 }: TagInnerProps) => (
   <>
     {icon ? <Icon name={icon} size={16} /> : null}
-    <StyledText as="span" variant="caption" oneLine aria-disabled={disabled}>
-      {children}
+    <StyledText as="div" variant="caption" oneLine aria-disabled={disabled}>
+      <Stack
+        direction="row"
+        alignItems="center"
+        justifyContent="center"
+        gap={0.5}
+      >
+        {children}
+      </Stack>
     </StyledText>
 
     {/* @check: Size issue here, Clickable icon ? */}

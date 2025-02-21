@@ -1,5 +1,5 @@
 import type { Icon } from '@ultraviolet/icons/legacy'
-import type { ComponentProps, MouseEvent } from 'react'
+import type { ComponentProps, MouseEvent, ReactNode } from 'react'
 import type { SENTIMENTS, sizes } from './constants'
 
 // This type defines an array of string that should have a length of 0, 1, or 2
@@ -37,6 +37,7 @@ type VariantUser = {
   text?: never
   sentiment?: never
   colors?: never
+  children?: never
 }
 
 type VariantImage = {
@@ -46,15 +47,20 @@ type VariantImage = {
   text?: never
   sentiment?: never
   colors?: never
+  children?: never
 }
 
 type VariantIcon = {
   variant: 'icon'
   image?: never
-  icon: ComponentProps<typeof Icon>['name']
+  /**
+   * @deprecated Use children to add you icon directly instead of using the icon prop
+   */
+  icon?: ComponentProps<typeof Icon>['name']
   text?: never
   sentiment?: (typeof SENTIMENTS)[number]
   colors?: never
+  children?: ReactNode
 }
 
 type VariantText = {
@@ -64,6 +70,7 @@ type VariantText = {
   text: string
   sentiment?: (typeof SENTIMENTS)[number]
   colors?: never
+  children?: never
 }
 
 type VariantColors = {
@@ -79,6 +86,7 @@ type VariantColors = {
    * **Note**: only 2 colors maximum are allowed.
    */
   colors?: Colors
+  children?: never
 }
 
 export type AvatarV2Props = CommonProps &

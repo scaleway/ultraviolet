@@ -1,7 +1,7 @@
 import type { CSSObject, Theme, keyframes } from '@emotion/react'
 import { css, useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
-import { Icon } from '@ultraviolet/icons/legacy'
+import { ArrowDownIcon, ClockOutlineIcon, CloseIcon } from '@ultraviolet/icons'
 import type {
   ComponentProps,
   ForwardRefExoticComponent,
@@ -577,13 +577,28 @@ const DropdownIndicator = (
   return (
     <components.DropdownIndicator {...props}>
       <Stack gap={1} direction="row" alignItems="center">
-        {required ? <Icon name="asterisk" size={10} color="danger" /> : null}
+        {required ? (
+          <Text
+            as="span"
+            variant="bodyStrong"
+            sentiment="danger"
+            aria-label="required"
+          >
+            *
+          </Text>
+        ) : null}
         {time ? <StyledSeparator direction="vertical" /> : null}
-        <Icon
-          name={time ? 'clock-outline' : 'arrow-down'}
-          size={time ? 24 : 16}
-          disabled={isDisabled}
-        />
+        {time ? (
+          <ClockOutlineIcon
+            size={time ? 'large' : 'xlarge'}
+            disabled={isDisabled}
+          />
+        ) : (
+          <ArrowDownIcon
+            size={time ? 'large' : 'xlarge'}
+            disabled={isDisabled}
+          />
+        )}
       </Stack>
     </components.DropdownIndicator>
   )
@@ -599,11 +614,10 @@ const ClearIndicator = (
 
   return (
     <components.ClearIndicator {...props}>
-      <Icon
+      {/* @ts-expect-error component is anyways deprecated */}
+      <CloseIcon
         {...restInnerProps}
-        name="close"
-        cursor="pointer"
-        color={(checked && 'primary') || (error && 'danger') || 'neutral'}
+        sentiment={(checked && 'primary') || (error && 'danger') || 'neutral'}
       />
     </components.ClearIndicator>
   )
@@ -619,7 +633,7 @@ const MultiValueLabel = (props: MultiValueProps<SelectOption>) => (
 
 const MultiValueRemove = (props: MultiValueProps<SelectOption>) => (
   <components.MultiValueRemove {...props}>
-    <Icon name="close" size={16} />
+    <CloseIcon size="large" />
   </components.MultiValueRemove>
 )
 

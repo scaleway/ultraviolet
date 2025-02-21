@@ -1292,7 +1292,30 @@ exports[`TagInput > should renders correctly with some tags 1`] = `
   max-width: 14.5rem;
 }
 
-.emotion-12 {
+.emotion-11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.25rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-14 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1338,22 +1361,22 @@ exports[`TagInput > should renders correctly with some tags 1`] = `
   padding: 0.125rem;
 }
 
-.emotion-12:hover {
+.emotion-14:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-12:active {
+.emotion-14:active {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.emotion-12:hover,
-.emotion-12:active {
+.emotion-14:hover,
+.emotion-14:active {
   background: #e9eaeb;
   color: #222638;
 }
 
-.emotion-14 {
+.emotion-16 {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
@@ -1362,16 +1385,16 @@ exports[`TagInput > should renders correctly with some tags 1`] = `
   min-height: 16px;
 }
 
-.emotion-14 .fillStroke {
+.emotion-16 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.emotion-14 path {
+.emotion-16 path {
   fill: currentColor;
 }
 
-.emotion-26 {
+.emotion-30 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1387,23 +1410,23 @@ exports[`TagInput > should renders correctly with some tags 1`] = `
   height: 100%;
 }
 
-.emotion-26::-webkit-input-placeholder {
+.emotion-30::-webkit-input-placeholder {
   color: #727683;
 }
 
-.emotion-26::-moz-placeholder {
+.emotion-30::-moz-placeholder {
   color: #727683;
 }
 
-.emotion-26:-ms-input-placeholder {
+.emotion-30:-ms-input-placeholder {
   color: #727683;
 }
 
-.emotion-26::placeholder {
+.emotion-30::placeholder {
   color: #727683;
 }
 
-.emotion-26[data-size="large"] {
+.emotion-30[data-size="large"] {
   font-size: 1rem;
 }
 
@@ -1427,19 +1450,23 @@ exports[`TagInput > should renders correctly with some tags 1`] = `
             <span
               class="emotion-6 emotion-7"
             >
-              <span
+              <div
                 class="emotion-8 emotion-9 emotion-10"
               >
-                hello
-              </span>
+                <div
+                  class="emotion-11 emotion-1"
+                >
+                  hello
+                </div>
+              </div>
               <button
                 aria-label="Close tag"
-                class="emotion-11 emotion-12 emotion-13"
+                class="emotion-13 emotion-14 emotion-15"
                 data-testid="close-tag"
                 type="button"
               >
                 <svg
-                  class="emotion-14 emotion-15"
+                  class="emotion-16 emotion-17"
                   viewBox="0 0 16 16"
                   xmlns="http://www.w3.org/2000/svg"
                 >
@@ -1452,19 +1479,23 @@ exports[`TagInput > should renders correctly with some tags 1`] = `
             <span
               class="emotion-6 emotion-7"
             >
-              <span
+              <div
                 class="emotion-8 emotion-9 emotion-10"
               >
-                world
-              </span>
+                <div
+                  class="emotion-11 emotion-1"
+                >
+                  world
+                </div>
+              </div>
               <button
                 aria-label="Close tag"
-                class="emotion-11 emotion-12 emotion-13"
+                class="emotion-13 emotion-14 emotion-15"
                 data-testid="close-tag"
                 type="button"
               >
                 <svg
-                  class="emotion-14 emotion-15"
+                  class="emotion-16 emotion-17"
                   viewBox="0 0 16 16"
                   xmlns="http://www.w3.org/2000/svg"
                 >
@@ -1475,7 +1506,7 @@ exports[`TagInput > should renders correctly with some tags 1`] = `
               </button>
             </span>
             <input
-              class="emotion-26 emotion-27"
+              class="emotion-30 emotion-31"
               data-size="large"
               id=":rk:"
               name="radio"
@@ -1619,7 +1650,30 @@ exports[`TagInput > should renders correctly with some tags objects 1`] = `
   max-width: 14.5rem;
 }
 
-.emotion-12 {
+.emotion-11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.25rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-14 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1665,22 +1719,22 @@ exports[`TagInput > should renders correctly with some tags objects 1`] = `
   padding: 0.125rem;
 }
 
-.emotion-12:hover {
+.emotion-14:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-12:active {
+.emotion-14:active {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.emotion-12:hover,
-.emotion-12:active {
+.emotion-14:hover,
+.emotion-14:active {
   background: #e9eaeb;
   color: #222638;
 }
 
-.emotion-14 {
+.emotion-16 {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
@@ -1689,16 +1743,16 @@ exports[`TagInput > should renders correctly with some tags objects 1`] = `
   min-height: 16px;
 }
 
-.emotion-14 .fillStroke {
+.emotion-16 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.emotion-14 path {
+.emotion-16 path {
   fill: currentColor;
 }
 
-.emotion-26 {
+.emotion-30 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1714,23 +1768,23 @@ exports[`TagInput > should renders correctly with some tags objects 1`] = `
   height: 100%;
 }
 
-.emotion-26::-webkit-input-placeholder {
+.emotion-30::-webkit-input-placeholder {
   color: #727683;
 }
 
-.emotion-26::-moz-placeholder {
+.emotion-30::-moz-placeholder {
   color: #727683;
 }
 
-.emotion-26:-ms-input-placeholder {
+.emotion-30:-ms-input-placeholder {
   color: #727683;
 }
 
-.emotion-26::placeholder {
+.emotion-30::placeholder {
   color: #727683;
 }
 
-.emotion-26[data-size="large"] {
+.emotion-30[data-size="large"] {
   font-size: 1rem;
 }
 
@@ -1754,19 +1808,23 @@ exports[`TagInput > should renders correctly with some tags objects 1`] = `
             <span
               class="emotion-6 emotion-7"
             >
-              <span
+              <div
                 class="emotion-8 emotion-9 emotion-10"
               >
-                hello
-              </span>
+                <div
+                  class="emotion-11 emotion-1"
+                >
+                  hello
+                </div>
+              </div>
               <button
                 aria-label="Close tag"
-                class="emotion-11 emotion-12 emotion-13"
+                class="emotion-13 emotion-14 emotion-15"
                 data-testid="close-tag"
                 type="button"
               >
                 <svg
-                  class="emotion-14 emotion-15"
+                  class="emotion-16 emotion-17"
                   viewBox="0 0 16 16"
                   xmlns="http://www.w3.org/2000/svg"
                 >
@@ -1779,19 +1837,23 @@ exports[`TagInput > should renders correctly with some tags objects 1`] = `
             <span
               class="emotion-6 emotion-7"
             >
-              <span
+              <div
                 class="emotion-8 emotion-9 emotion-10"
               >
-                world
-              </span>
+                <div
+                  class="emotion-11 emotion-1"
+                >
+                  world
+                </div>
+              </div>
               <button
                 aria-label="Close tag"
-                class="emotion-11 emotion-12 emotion-13"
+                class="emotion-13 emotion-14 emotion-15"
                 data-testid="close-tag"
                 type="button"
               >
                 <svg
-                  class="emotion-14 emotion-15"
+                  class="emotion-16 emotion-17"
                   viewBox="0 0 16 16"
                   xmlns="http://www.w3.org/2000/svg"
                 >
@@ -1802,7 +1864,7 @@ exports[`TagInput > should renders correctly with some tags objects 1`] = `
               </button>
             </span>
             <input
-              class="emotion-26 emotion-27"
+              class="emotion-30 emotion-31"
               data-size="large"
               id=":rq:"
               name="radio"
