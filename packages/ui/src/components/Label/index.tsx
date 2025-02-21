@@ -8,11 +8,12 @@ const LabelRequiredOrNot = ({
   id,
   size,
   htmlFor,
+  as,
 }: LabelProps) =>
   required ? (
     <Stack direction="row" gap="0.5" alignItems="start">
       <Text
-        as="label"
+        as={as === 'label' ? 'label' : 'legend'}
         id={id}
         variant={size === 'large' ? 'bodyStrong' : 'bodySmallStrong'}
         sentiment="neutral"
@@ -44,6 +45,10 @@ const LabelRequiredOrNot = ({
   )
 
 type LabelProps = {
+  /**
+   * As can help you to define a label or a legend in case you are using it inside a fieldset
+   */
+  as?: 'label' | 'legend'
   children?: string
   labelDescription?: ReactNode
   required?: boolean
@@ -56,6 +61,7 @@ type LabelProps = {
  * Label is used inside all of our input components, but it can be used outside for design purposes
  */
 export const Label = ({
+  as = 'label',
   children,
   labelDescription,
   required,
@@ -70,6 +76,7 @@ export const Label = ({
         size={size}
         htmlFor={htmlFor}
         id={id}
+        as={as}
       >
         {children}
       </LabelRequiredOrNot>
@@ -87,6 +94,7 @@ export const Label = ({
       size={size}
       htmlFor={htmlFor}
       id={id}
+      as={as}
     >
       {children}
     </LabelRequiredOrNot>
