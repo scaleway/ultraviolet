@@ -75,8 +75,10 @@ const Container = styled(Stack)`
     }
   }
 
-  ${RadioStack}, ${CheckboxContainer} {
-    width: 100%;
+  &[data-has-label='true'] {
+    ${RadioStack}, ${CheckboxContainer} {
+      width: 100%;
+    }
   }
 `
 const StyledDiv = styled.div`
@@ -348,9 +350,9 @@ export const SelectableCard = forwardRef(
           data-image={image}
           ref={ref}
           alignItems="start"
-          direction="column"
+          direction={label ? 'column' : 'row'}
           gap={0.5}
-          flex={1}
+          flex={label ? 1 : undefined}
           tabIndex={disabled ? undefined : 0}
           role="button"
         >
