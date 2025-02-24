@@ -1,5 +1,17 @@
 # Change Log
 
+## 1.87.3
+
+### Patch Changes
+
+- [#4763](https://github.com/scaleway/ultraviolet/pull/4763) [`8413cad`](https://github.com/scaleway/ultraviolet/commit/8413cad6007aabe702e0c9695784b3e948292c2c) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<SelectInputV2 />` within `<Modal />` to correctly close when you click outside
+
+- [#4786](https://github.com/scaleway/ultraviolet/pull/4786) [`d764e76`](https://github.com/scaleway/ultraviolet/commit/d764e76ccfc444dddd8c4a777babd3acdae25435) Thanks [@johnrazeur](https://github.com/johnrazeur)! - fix(SwitchButton): incorrect onchange type
+
+- [#4796](https://github.com/scaleway/ultraviolet/pull/4796) [`da1c46e`](https://github.com/scaleway/ultraviolet/commit/da1c46ea061a7357a5656438d2b4aa8f28ba6196) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<ProgressBar />` bug with the label
+
+- [#4766](https://github.com/scaleway/ultraviolet/pull/4766) [`183b377`](https://github.com/scaleway/ultraviolet/commit/183b377a4e09f4fa0fc8b8dd55c853baee495397) Thanks [@lisalupi](https://github.com/lisalupi)! - `<MenuV2 />`: now have a min and max width instead of a fixed width
+
 ## 1.87.2
 
 ### Patch Changes

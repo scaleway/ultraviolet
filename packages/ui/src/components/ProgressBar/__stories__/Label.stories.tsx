@@ -14,7 +14,7 @@ export const Label: StoryFn = props => (
         </Badge>
       }
     />
-    <ProgressBar value={30} showProgress />
+    <ProgressBar label="Label" value={30} showProgress />
   </Stack>
 )
 
