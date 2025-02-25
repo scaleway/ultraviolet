@@ -259,15 +259,15 @@ export const ListProvider = ({
 
       refList.current.forEach(checkbox => {
         const clickHandler = (event: MouseEvent) => {
-          handleClickRange(event.target as HTMLInputElement)
+          handleClickRange(event.currentTarget as HTMLInputElement)
         }
 
         const hoverHandler = (event: MouseEvent) => {
-          handleHover(event.target as HTMLInputElement, event)
+          handleHover(event.currentTarget as HTMLInputElement, event)
         }
 
         const changeHandler = (event: Event) => {
-          handleOnChange(event.target as HTMLInputElement)
+          handleOnChange(event.currentTarget as HTMLInputElement)
         }
 
         checkbox.addEventListener('change', changeHandler)
