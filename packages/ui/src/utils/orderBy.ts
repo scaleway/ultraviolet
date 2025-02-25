@@ -1,9 +1,9 @@
 export type ComparableType = string | number
 
-export function orderBy<T extends Record<string, unknown>>(
+export const orderBy = <T extends Record<string, unknown>>(
   key: string | ((a: T) => ComparableType),
   order: 'asc' | 'desc',
-): (a: T, b: T) => number {
+): ((a: T, b: T) => number) => {
   const direction = order === 'asc' ? 1 : -1
   const transform =
     typeof key === 'function'

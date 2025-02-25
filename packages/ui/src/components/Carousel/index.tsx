@@ -89,8 +89,8 @@ export const Carousel = ({
   'data-testid': dataTestId = 'scrollbar',
 }: CarouselProps) => {
   const scrollRef = useRef<HTMLDivElement>(null)
-  let intervalLeft: ReturnType<typeof setInterval>
-  let intervalRight: ReturnType<typeof setInterval>
+  let intervalLeft: ReturnType<typeof setInterval> | undefined
+  let intervalRight: ReturnType<typeof setInterval> | undefined
 
   const handleScrollRight = () => {
     intervalRight = setInterval(() => {

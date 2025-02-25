@@ -33,7 +33,7 @@ import {
 const DEFAULT_ANIMATION_DURATION = 230 // in ms
 const DEFAULT_DEBOUNCE_DURATION = 200 // in ms
 
-function noop() {}
+const noop = () => {}
 
 type StyledPopupProps = {
   maxWidth: number | string

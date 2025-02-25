@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import { Icon } from '@ultraviolet/icons/legacy'
+import { ArrowDownIcon } from '@ultraviolet/icons'
 import type {
   ButtonHTMLAttributes,
   ComponentProps,
@@ -10,7 +10,7 @@ import { forwardRef } from 'react'
 import { MenuV2 } from '../MenuV2'
 import { StyledTabButton } from './Tab'
 
-const ArrowIcon = styled(Icon)``
+const ArrowIcon = styled(ArrowDownIcon)``
 const StyledMenu = styled(StyledTabButton)`
   ${ArrowIcon} {
     color: inherit;
@@ -69,7 +69,7 @@ export const TabMenu = forwardRef(
             {...props}
           >
             {disclosure}
-            <ArrowIcon name="arrow-down" />
+            <ArrowIcon />
           </StyledMenu>
         }
       >

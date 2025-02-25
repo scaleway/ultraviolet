@@ -38,8 +38,8 @@ const UploadContainer = styled('div', {
 `
 
 const Container = styled('div', {
-  shouldForwardProp: prop => !['image', 'size'].includes(prop),
-})<{ image?: string; size: keyof ReturnType<typeof sizes> }>`
+  shouldForwardProp: prop => !['image', 'size', 'sentiment'].includes(prop),
+})<{ image?: string; size: keyof ReturnType<typeof sizes>; sentiment: string }>`
     position: relative;
     &[data-shape='circle'] {
       border-radius: ${({ theme }) => theme.radii.circle}
@@ -48,6 +48,8 @@ const Container = styled('div', {
     &[data-shape='square'] {
       border-radius: ${({ theme, size }) => theme.radii[RADIUS_SIZES[size]]}
     }
+
+    color: ${({ theme, sentiment }) => (sentiment === 'neutral' ? theme.colors.neutral.text : theme.colors.neutral.textStronger)};
 
     ${({ theme }) =>
       Object.entries(sizes(theme))
@@ -193,6 +195,7 @@ export const AvatarV2 = ({
   upload,
   onClick,
   className,
+  children,
   'data-testid': dataTestId,
 }: AvatarV2Props) => (
   <Container
@@ -207,6 +210,7 @@ export const AvatarV2 = ({
     size={size}
     className={className}
     data-testid={dataTestId}
+    sentiment={sentiment}
   >
     {upload ? (
       <UploadContainer data-shape={shape} size={size}>
@@ -220,12 +224,15 @@ export const AvatarV2 = ({
     ) : null}
     {variant === 'icon' ? (
       <ElementContainer data-shape={shape}>
-        <Icon
-          name={icon}
-          sentiment="neutral"
-          size={ICON_SIZES[size]}
-          prominence={sentiment === 'primary' ? 'stronger' : 'strong'}
-        />
+        {icon ? (
+          <Icon
+            name={icon}
+            sentiment="neutral"
+            size={ICON_SIZES[size]}
+            prominence={sentiment === 'primary' ? 'stronger' : 'strong'}
+          />
+        ) : null}
+        {children}
       </ElementContainer>
     ) : null}
     {variant === 'text' ? (

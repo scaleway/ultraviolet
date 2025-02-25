@@ -1,7 +1,7 @@
 import { css } from '@emotion/react'
 import styled from '@emotion/styled'
 import randomName from '@scaleway/random-name'
-import { Icon } from '@ultraviolet/icons/legacy'
+import { CheckIcon, CloseIcon } from '@ultraviolet/icons'
 import type {
   ChangeEvent,
   FocusEventHandler,
@@ -527,12 +527,11 @@ export const TextInput = forwardRef<
       }
       if (valid === false || valid === true) {
         rightComponents.push(
-          <Icon
-            key="valid"
-            name={!valid ? 'close' : 'check'}
-            color={!valid ? 'danger' : 'success'}
-            size={20}
-          />,
+          !valid ? (
+            <CloseIcon key="valid" sentiment="danger" size="xlarge" />
+          ) : (
+            <CheckIcon key="valid" sentiment="success" size="xlarge" />
+          ),
         )
       }
       if (unit) {
@@ -625,7 +624,14 @@ export const TextInput = forwardRef<
               touchable={isPassToggleable || !!random}
             >
               {required ? (
-                <Icon name="asterisk" color="danger" size={10} />
+                <Text
+                  as="span"
+                  variant="bodyStrong"
+                  sentiment="danger"
+                  aria-label="required"
+                >
+                  *
+                </Text>
               ) : null}
               {showSeparator ? <StyledSeparator direction="vertical" /> : null}
               {rightComponentsArray.length > 0 ? (

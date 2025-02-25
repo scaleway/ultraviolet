@@ -1,11 +1,18 @@
 import type { StoryFn } from '@storybook/react'
+import { CheckIcon } from '@ultraviolet/icons'
 import { Bullet } from '..'
 
 export const Icon: StoryFn = props => (
   <>
-    <Bullet {...props} icon="check" />
-    <Bullet {...props} icon="check" sentiment="success" />
-    <Bullet {...props} icon="check" sentiment="success" size="small" />
+    <Bullet {...props}>
+      <CheckIcon />
+    </Bullet>
+    <Bullet {...props} sentiment="success">
+      <CheckIcon />
+    </Bullet>
+    <Bullet {...props} sentiment="success" size="small">
+      <CheckIcon />
+    </Bullet>
   </>
 )
 
@@ -13,7 +20,7 @@ Icon.parameters = {
   docs: {
     description: {
       story:
-        'Set `icon` using icon property. Sentiment and size props affect icon.',
+        'To add an icon simply pass it as a child of the `Bullet` component. The sentiment of the icon will automatically follow the sentiment of the bullet.',
     },
   },
 }
