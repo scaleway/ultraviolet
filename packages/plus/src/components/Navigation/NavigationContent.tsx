@@ -121,7 +121,7 @@ export const NavigationContent = ({
 
   // It will handle the resize of the navigation when the user drag the vertical bar
   useEffect(() => {
-    let prevX: number
+    let prevX: number | undefined
     let navRect: DOMRect | undefined
     let shouldCollapseOnMouseUp = false
     let shouldExpandOnMouseUp = false

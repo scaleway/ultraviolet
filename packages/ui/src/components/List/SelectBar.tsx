@@ -24,12 +24,12 @@ type SelectBarProps<T> = {
   idKey: keyof T
 }
 
-export function SelectBar<T>({
+export const SelectBar = <T,>({
   children,
   data,
   idKey,
   className,
-}: SelectBarProps<T>) {
+}: SelectBarProps<T>) => {
   const { selectedRowIds, unselectAll } = useListContext()
 
   const selectedItems = useMemo(

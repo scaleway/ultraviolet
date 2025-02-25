@@ -7,9 +7,9 @@ type MockMatchMedia = {
   matches?: boolean
 }
 
-function noop() {}
+const noop = () => {}
 
-function getMockImplementation({ media, matches = false }: MockMatchMedia) {
+const getMockImplementation = ({ media, matches = false }: MockMatchMedia) => {
   const mql: MediaQueryList = {
     addEventListener: noop,
     addListener: noop,

@@ -339,7 +339,7 @@ export const NumberInputV2 = forwardRef(
       return 'neutral'
     }, [error, success])
 
-    let inputValue
+    let inputValue: string | undefined
     if (value !== undefined) {
       inputValue =
         value !== null && typeof value === 'number' ? value.toString() : ''
