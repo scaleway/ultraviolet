@@ -8,9 +8,9 @@ import {
   useState,
 } from 'react'
 import type {
-  ChangeEvent,
   ComponentProps,
   Dispatch,
+  ChangeEvent as ReactChangeEvent,
   ReactNode,
   SetStateAction,
 } from 'react'
@@ -36,7 +36,7 @@ export type ListContextValue = {
    * */
   registerSelectableRow: (rowId: string) => () => void
   allRowSelectValue: ComponentProps<typeof Checkbox>['checked']
-  selectAllHandler: (event: ChangeEvent<HTMLInputElement>) => void
+  selectAllHandler: (event: ReactChangeEvent<HTMLInputElement>) => void
   subscribeHandler: () => void
   columns: ColumnProps[]
   inRange: Set<number | string>
@@ -258,16 +258,16 @@ export const ListProvider = ({
       }
 
       refList.current.forEach(checkbox => {
-        function clickHandler(this: HTMLInputElement) {
-          handleClickRange(this)
+        const clickHandler = (event: MouseEvent) => {
+          handleClickRange(event.target as HTMLInputElement)
         }
 
-        function hoverHandler(this: HTMLInputElement, event: MouseEvent) {
-          handleHover(this, event)
+        const hoverHandler = (event: MouseEvent) => {
+          handleHover(event.target as HTMLInputElement, event)
         }
 
-        function changeHandler(this: HTMLInputElement) {
-          handleOnChange(this)
+        const changeHandler = (event: Event) => {
+          handleOnChange(event.target as HTMLInputElement)
         }
 
         checkbox.addEventListener('change', changeHandler)

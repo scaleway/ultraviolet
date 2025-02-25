@@ -6,7 +6,7 @@ import { Button, Loader } from '../..'
 export const LoadingExample: StoryFn<typeof SelectInput> = ({ ...props }) => {
   const [isLoading, setIsLoading] = useState(true)
   useEffect(() => {
-    let timeout: number
+    let timeout: number | undefined
 
     if (isLoading) {
       timeout = setTimeout(() => {

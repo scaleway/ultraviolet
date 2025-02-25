@@ -69,7 +69,7 @@ const createCSSFile = (theme: string, content: UvThemeType) => {
   fs.writeFileSync(filePath, cssContent, 'utf8')
 }
 
-function alphaOrder(obj: JsonType) {
+const alphaOrder = (obj: JsonType) => {
   const orderedKeys = Object.keys(obj ?? {}).sort()
 
   return orderedKeys.reduce((newObj: Record<string, string | object>, key) => {
@@ -92,10 +92,9 @@ type ShadowType = {
   type: string
 }
 
-function isShadowType(
+const isShadowType = (
   data: ShadowType | Record<string, ShadowType>,
-): data is ShadowType {
-  return (
+): data is ShadowType => (
     data &&
     'x' in data &&
     'y' in data &&
@@ -103,9 +102,8 @@ function isShadowType(
     'spread' in data &&
     'color' in data
   )
-}
 
-function formatShadows(data: ShadowType | Record<string, ShadowType>) {
+const formatShadows = (data: ShadowType | Record<string, ShadowType>) => {
   if (isShadowType(data)) {
     return `${data.x}px ${data.y}px ${data.blur}px ${data.spread}px ${data.color}`
   }
@@ -117,7 +115,7 @@ function formatShadows(data: ShadowType | Record<string, ShadowType>) {
   }, {})
 }
 
-function evalValue(value: string, variables: string | object) {
+const evalValue = (value: string, variables: string | object) => {
   if (typeof value === 'object') {
     return Object.keys(value).reduce(
       (acc: Record<string, string | object>, key) => {
@@ -154,16 +152,14 @@ type ColorType = {
   type: string
 }
 
-function isColorType(
+const isColorType = (
   data: ColorType | Record<string, ColorType> | ThemeType,
-): data is ColorType {
-  return data && 'value' in data && 'type' in data
-}
+): data is ColorType => data && 'value' in data && 'type' in data
 
-function getValues(
+const getValues = (
   data: Record<string, ColorType> | ColorType | ThemeType,
   { typeFilter, variables }: { typeFilter: string; variables: JsonType },
-) {
+) => {
   if (isColorType(data)) {
     return data.type === typeFilter && 'value' in data
       ? evalValue(data.value, variables)

@@ -31,7 +31,7 @@
     "lint": "eslint --report-unused-disable-directives --cache .",
     "lint:fix": "pnpm run lint --fix",
     "oxc": "oxlint -c .oxlintrc.json",
-    "oxc:fix": "pnpm run oxlint --fix",
+    "oxc:fix": "pnpm run oxc --fix",
     "prepare": "husky",
     "tokens:update": "tsx ./utils/scripts/figma-synchronise-tokens.tsx && pnpm run format packages/themes/src/themes/console",
     "icons:update": "tsx ./utils/scripts/generate-icons-file.tsx && biome format --write packages/icons",
