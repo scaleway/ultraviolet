@@ -94,14 +94,13 @@ type ShadowType = {
 
 const isShadowType = (
   data: ShadowType | Record<string, ShadowType>,
-): data is ShadowType => (
-    data &&
-    'x' in data &&
-    'y' in data &&
-    'blur' in data &&
-    'spread' in data &&
-    'color' in data
-  )
+): data is ShadowType =>
+  data &&
+  'x' in data &&
+  'y' in data &&
+  'blur' in data &&
+  'spread' in data &&
+  'color' in data
 
 const formatShadows = (data: ShadowType | Record<string, ShadowType>) => {
   if (isShadowType(data)) {
