@@ -1,4 +1,5 @@
 import type { StoryFn } from '@storybook/react'
+import { MosaicIcon } from '@ultraviolet/icons'
 import { AvatarV2 } from '..'
 import { Stack } from '../../Stack'
 import avatar from './assets/avatar.svg'
@@ -8,7 +9,9 @@ export const Variant: StoryFn<typeof AvatarV2> = props => (
     <AvatarV2 {...props} />
     <AvatarV2 variant="user" shape="circle" />
     <AvatarV2 variant="image" size="large" shape="square" image={avatar} />
-    <AvatarV2 variant="icon" shape="circle" sentiment="primary" icon="mosaic" />
+    <AvatarV2 variant="icon" shape="circle" sentiment="primary">
+      <MosaicIcon size="xlarge" />
+    </AvatarV2>
     <AvatarV2
       variant="colors"
       shape="circle"

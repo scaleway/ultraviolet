@@ -1,4 +1,4 @@
-import { Icon } from '@ultraviolet/icons/legacy'
+import { LockIcon } from '@ultraviolet/icons'
 import { Text } from '../../Text'
 import { Template } from './Template.stories'
 
@@ -14,7 +14,7 @@ ComplexLabel.args = {
         marginLeft: '8px',
       }}
     >
-      <Icon name="lock" size={18} />
+      <LockIcon size="medium" />
       <Text as="span" variant="body">
         Lock functionality
       </Text>

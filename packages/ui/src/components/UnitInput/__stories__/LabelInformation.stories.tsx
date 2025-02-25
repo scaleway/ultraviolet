@@ -1,4 +1,4 @@
-import { Icon } from '@ultraviolet/icons/legacy'
+import { InformationOutlineIcon } from '@ultraviolet/icons'
 import { Tooltip } from '../../Tooltip'
 import { Template } from './Template.stories'
 
@@ -9,7 +9,7 @@ LabelInformation.args = {
   label: 'Label',
   labelInformation: (
     <Tooltip text="tooltip">
-      <Icon name="information-outline" variant="outlined" />
+      <InformationOutlineIcon />
     </Tooltip>
   ),
 }
