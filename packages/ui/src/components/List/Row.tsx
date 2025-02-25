@@ -1,7 +1,7 @@
 import type { Theme } from '@emotion/react'
 import { keyframes, useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
-import type { ReactNode } from 'react'
+import type { ReactNode, RefObject } from 'react'
 import {
   Children,
   forwardRef,
@@ -51,19 +51,11 @@ const StyledCheckbox = styled(Checkbox, {
 })<{ inRange: boolean }>`
   ${({ theme, inRange }) =>
     inRange
-      ? `svg {
-          padding: ${theme.space[0.25]};
-          outline: 1px inset ${theme.colors.primary.backgroundStrong};
-          box-shadow: ${theme.shadows.focusPrimary};
-          transition:
-            box-shadow 250ms ease,
-            outline 250ms ease,
-            padding 250ms ease;
-          rect {
-            fill: ${theme.colors.primary.backgroundHover};
-            stroke: ${theme.colors.primary.borderHover};
-          }
-      }
+      ? `
+        rect {
+          fill: ${theme.colors.neutral.backgroundHover};
+          stroke: ${theme.colors.neutral.borderHover};
+        }
   `
       : ''}
 
@@ -250,9 +242,11 @@ export const Row = forwardRef<HTMLTableRowElement, RowProps>(
       registerSelectableRow,
       selectedRowIds,
       expandButton,
-      mapCheckbox,
       inRange,
       columns,
+      refList,
+      setRefList,
+      handleOnChange,
     } = useListContext()
 
     const theme = useTheme()
@@ -296,16 +290,13 @@ export const Row = forwardRef<HTMLTableRowElement, RowProps>(
     const canClickRowToExpand = !disabled && !!expandable && !expandButton
 
     useEffect(() => {
-      const { current } = checkboxRef
-
-      if (current) {
-        mapCheckbox.set(id, current)
+      if (
+        checkboxRef.current !== null &&
+        !refList.includes(checkboxRef as RefObject<HTMLInputElement>)
+      ) {
+        setRefList([...refList, checkboxRef as RefObject<HTMLInputElement>])
       }
-
-      return () => {
-        mapCheckbox.delete(id)
-      }
-    }, [mapCheckbox, id])
+    }, [refList, setRefList])
 
     const childrenLength =
       Children.count(children) + (selectable ? 1 : 0) + (expandButton ? 1 : 0)
@@ -360,7 +351,8 @@ export const Row = forwardRef<HTMLTableRowElement, RowProps>(
                     value={id}
                     ref={checkboxRef}
                     disabled={isSelectDisabled}
-                    inRange={inRange?.has(id)}
+                    inRange={inRange?.includes(id)}
+                    onChange={() => handleOnChange(id, selectedRowIds[id])}
                   />
                 </Tooltip>
               </StyledCheckboxContainer>

@@ -1,7 +1,7 @@
 import type { Theme } from '@emotion/react'
 import { keyframes, useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
-import type { ReactNode } from 'react'
+import type { ReactNode, RefObject } from 'react'
 import { Children, useCallback, useEffect, useRef } from 'react'
 import { Button } from '../Button'
 import { Checkbox } from '../Checkbox'
@@ -34,19 +34,11 @@ const StyledCheckbox = styled(Checkbox, {
 
   ${({ theme, inRange }) =>
     inRange
-      ? `svg {
-          padding: ${theme.space[0.25]};
-          outline: 1px inset ${theme.colors.primary.backgroundStrong};
-          box-shadow: ${theme.shadows.focusPrimary};
-          transition:
-            box-shadow 250ms ease,
-            outline 250ms ease,
-            padding 250ms ease;
-          rect {
-            fill: ${theme.colors.primary.backgroundHover};
-            stroke: ${theme.colors.primary.borderHover};
-          }
-      }
+      ? `
+        rect {
+          fill: ${theme.colors.neutral.backgroundHover};
+          stroke: ${theme.colors.neutral.borderHover};
+        }
   `
       : ''}
 
@@ -132,9 +124,11 @@ export const Row = ({
     registerSelectableRow,
     selectedRowIds,
     expandButton,
-    mapCheckbox,
     inRange,
     columns,
+    refList,
+    setRefList,
+    handleOnChange,
   } = useTableContext()
 
   const checkboxRowRef = useRef<HTMLInputElement>(null)
@@ -170,22 +164,20 @@ export const Row = ({
 
   const canClickRowToExpand = hasExpandable && !expandButton
 
-  useEffect(() => {
-    const { current } = checkboxRowRef
-
-    if (current) {
-      mapCheckbox.set(id, current)
-    }
-
-    return () => {
-      mapCheckbox.delete(id)
-    }
-  }, [mapCheckbox, id])
-
   const theme = useTheme()
 
   const childrenLength =
     Children.count(children) + (selectable ? 1 : 0) + (expandButton ? 1 : 0)
+
+  useEffect(() => {
+    if (
+      refList &&
+      checkboxRowRef.current !== null &&
+      !refList.includes(checkboxRowRef as RefObject<HTMLInputElement>)
+    ) {
+      setRefList([...refList, checkboxRowRef as RefObject<HTMLInputElement>])
+    }
+  }, [refList, setRefList])
 
   return (
     <>
@@ -212,9 +204,10 @@ export const Row = ({
                   aria-label="select"
                   checked={selectedRowIds[id]}
                   value={id}
-                  inRange={inRange?.has(id)}
+                  inRange={inRange?.includes(id)}
                   disabled={selectDisabled !== undefined}
                   ref={checkboxRowRef}
+                  onChange={() => handleOnChange(id, selectedRowIds[id])}
                 />
               </Tooltip>
             </StyledCheckboxContainer>
