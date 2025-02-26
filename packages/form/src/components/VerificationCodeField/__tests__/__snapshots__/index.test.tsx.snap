@@ -39,8 +39,8 @@ exports[`VerificationCodeField > should render correctly 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-4 {
-  color: #222638;
+.emotion-5 {
+  color: #3f4250;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -49,9 +49,10 @@ exports[`VerificationCodeField > should render correctly 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  cursor: pointer;
 }
 
-.emotion-6 {
+.emotion-7 {
   color: #b3144d;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
@@ -63,7 +64,7 @@ exports[`VerificationCodeField > should render correctly 1`] = `
   text-decoration: none;
 }
 
-.emotion-8 {
+.emotion-9 {
   background: #ffffff;
   color: #3f4250;
   font-size: 1rem;
@@ -79,54 +80,54 @@ exports[`VerificationCodeField > should render correctly 1`] = `
   border: solid 1px #d9dadd;
 }
 
-.emotion-8[aria-invalid='true'] {
+.emotion-9[aria-invalid='true'] {
   border-color: #b3144d;
 }
 
-.emotion-8[data-success='true'] {
+.emotion-9[data-success='true'] {
   border-color: #22674e;
 }
 
-.emotion-8:hover,
-.emotion-8:focus {
+.emotion-9:hover,
+.emotion-9:focus {
   border-color: #792dd4;
 }
 
-.emotion-8:hover[aria-invalid='true'],
-.emotion-8:focus[aria-invalid='true'] {
+.emotion-9:hover[aria-invalid='true'],
+.emotion-9:focus[aria-invalid='true'] {
   border-color: #92103f;
 }
 
-.emotion-8:hover[data-success='true'],
-.emotion-8:focus[data-success='true'] {
+.emotion-9:hover[data-success='true'],
+.emotion-9:focus[data-success='true'] {
   border-color: #1b533f;
 }
 
-.emotion-8:focus {
+.emotion-9:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-8:last-child {
+.emotion-9:last-child {
   margin-right: 0;
 }
 
-.emotion-8::-webkit-input-placeholder {
+.emotion-9::-webkit-input-placeholder {
   color: #727683;
 }
 
-.emotion-8::-moz-placeholder {
+.emotion-9::-moz-placeholder {
   color: #727683;
 }
 
-.emotion-8:-ms-input-placeholder {
+.emotion-9:-ms-input-placeholder {
   color: #727683;
 }
 
-.emotion-8::placeholder {
+.emotion-9::placeholder {
   color: #727683;
 }
 
-.emotion-8:disabled {
+.emotion-9:disabled {
   cursor: not-allowed;
   background: #f3f3f4;
   color: #b5b7bd;
@@ -146,12 +147,12 @@ exports[`VerificationCodeField > should render correctly 1`] = `
           class="emotion-2 emotion-3"
         >
           <label
-            class="emotion-4 emotion-5"
+            class="emotion-4 emotion-5 emotion-6"
           >
             Code
           </label>
           <span
-            class="emotion-6 emotion-5"
+            class="emotion-7 emotion-6"
           >
             *
           </span>
@@ -160,7 +161,7 @@ exports[`VerificationCodeField > should render correctly 1`] = `
           <input
             aria-invalid="false"
             aria-label="Verification code 0"
-            class="emotion-8 emotion-9"
+            class="emotion-9 emotion-10"
             data-success="false"
             data-testid="0"
             id="verification-code-input-0"
@@ -173,7 +174,7 @@ exports[`VerificationCodeField > should render correctly 1`] = `
           <input
             aria-invalid="false"
             aria-label="Verification code 1"
-            class="emotion-8 emotion-9"
+            class="emotion-9 emotion-10"
             data-success="false"
             data-testid="1"
             id="verification-code-input-1"
@@ -186,7 +187,7 @@ exports[`VerificationCodeField > should render correctly 1`] = `
           <input
             aria-invalid="false"
             aria-label="Verification code 2"
-            class="emotion-8 emotion-9"
+            class="emotion-9 emotion-10"
             data-success="false"
             data-testid="2"
             id="verification-code-input-2"
@@ -199,7 +200,7 @@ exports[`VerificationCodeField > should render correctly 1`] = `
           <input
             aria-invalid="false"
             aria-label="Verification code 3"
-            class="emotion-8 emotion-9"
+            class="emotion-9 emotion-10"
             data-success="false"
             data-testid="3"
             id="verification-code-input-3"

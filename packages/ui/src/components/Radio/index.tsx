@@ -1,12 +1,12 @@
 import styled from '@emotion/styled'
 import type { InputHTMLAttributes, ReactNode } from 'react'
-import { forwardRef, useId } from 'react'
+import { forwardRef } from 'react'
 import type { LabelProp } from '../../types'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
 import { Tooltip } from '../Tooltip'
 
-const InnerCircleRing = styled.circle``
+export const InnerCircleRing = styled.circle``
 const RadioMark = styled.circle``
 
 export const RadioStack = styled(Stack)``
@@ -19,7 +19,7 @@ const RadioMarkedIcon = () => (
   </g>
 )
 
-const Ring = styled.svg`
+export const Ring = styled.svg`
   height: ${({ theme }) => theme.sizing['300']};
   width: ${({ theme }) => theme.sizing['300']};
   min-width: ${({ theme }) => theme.sizing['300']};
@@ -168,6 +168,7 @@ type RadioProps = {
     | 'required'
     | 'tabIndex'
     | 'checked'
+    | 'onClick'
   > &
   LabelProp
 
@@ -194,10 +195,11 @@ export const Radio = forwardRef<HTMLInputElement, RadioProps>(
       'aria-label': ariaLabel,
       'data-testid': dataTestId,
       tabIndex,
+      id,
+      onClick,
     },
     forwadedRef,
   ) => {
-    const id = useId()
     const computedName = name ?? id
 
     return (
@@ -216,7 +218,7 @@ export const Radio = forwardRef<HTMLInputElement, RadioProps>(
               aria-disabled={disabled}
               aria-label={ariaLabel}
               checked={checked}
-              id={`${computedName}-${value}`}
+              id={id}
               onChange={onChange}
               onFocus={onFocus}
               onKeyDown={onKeyDown}
@@ -227,6 +229,7 @@ export const Radio = forwardRef<HTMLInputElement, RadioProps>(
               autoFocus={autoFocus}
               ref={forwadedRef}
               tabIndex={tabIndex}
+              onClick={onClick}
             />
             <Ring viewBox="0 0 24 24">
               <RadioMarkedIcon />

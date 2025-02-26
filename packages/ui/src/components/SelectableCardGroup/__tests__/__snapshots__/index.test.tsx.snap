@@ -151,8 +151,8 @@ exports[`SelectableCardGroup > renders correctly 1`] = `
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
 
-.emotion-10 .ehkrmld6,
-.emotion-10 .emotion-14 {
+.emotion-10[data-has-label='true'] .ehkrmld6,
+.emotion-10[data-has-label='true'] .emotion-14 {
   width: 100%;
 }
 
@@ -517,6 +517,7 @@ exports[`SelectableCardGroup > renders correctly 1`] = `
                   class="emotion-15 emotion-16"
                   id=":r2:"
                   name="checkbox"
+                  tabindex="-1"
                   type="checkbox"
                   value="value-1"
                 />
@@ -586,6 +587,7 @@ exports[`SelectableCardGroup > renders correctly 1`] = `
                   class="emotion-15 emotion-16"
                   id=":r6:"
                   name="checkbox"
+                  tabindex="-1"
                   type="checkbox"
                   value="value-2"
                 />
@@ -791,8 +793,8 @@ exports[`SelectableCardGroup > renders correctly as a radio 1`] = `
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
 
-.emotion-10 .emotion-13,
-.emotion-10 .eqr7bqq1 {
+.emotion-10[data-has-label='true'] .emotion-13,
+.emotion-10[data-has-label='true'] .eqr7bqq1 {
   width: 100%;
 }
 
@@ -841,6 +843,7 @@ exports[`SelectableCardGroup > renders correctly as a radio 1`] = `
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: start;
+  pointer-events: none;
 }
 
 .emotion-15[aria-disabled='false'],
@@ -1045,7 +1048,6 @@ exports[`SelectableCardGroup > renders correctly as a radio 1`] = `
                     aria-invalid="true"
                     checked=""
                     class="emotion-17 emotion-18"
-                    id="radio-value-1"
                     name="radio"
                     tabindex="-1"
                     type="radio"
@@ -1109,7 +1111,6 @@ exports[`SelectableCardGroup > renders correctly as a radio 1`] = `
                     aria-disabled="false"
                     aria-invalid="true"
                     class="emotion-17 emotion-18"
-                    id="radio-value-2"
                     name="radio"
                     tabindex="-1"
                     type="radio"
@@ -1328,8 +1329,8 @@ exports[`SelectableCardGroup > renders correctly required and showTick 1`] = `
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
 
-.emotion-13 .ehkrmld6,
-.emotion-13 .emotion-17 {
+.emotion-13[data-has-label='true'] .ehkrmld6,
+.emotion-13[data-has-label='true'] .emotion-17 {
   width: 100%;
 }
 
@@ -1698,6 +1699,7 @@ exports[`SelectableCardGroup > renders correctly required and showTick 1`] = `
                   class="emotion-18 emotion-19"
                   id=":ru:"
                   name="checkbox"
+                  tabindex="-1"
                   type="checkbox"
                   value="value-1"
                 />
@@ -1767,6 +1769,7 @@ exports[`SelectableCardGroup > renders correctly required and showTick 1`] = `
                   class="emotion-18 emotion-19"
                   id=":r12:"
                   name="checkbox"
+                  tabindex="-1"
                   type="checkbox"
                   value="value-2"
                 />
@@ -1972,8 +1975,8 @@ exports[`SelectableCardGroup > renders correctly with direction multiple columns
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
 
-.emotion-10 .ehkrmld6,
-.emotion-10 .emotion-14 {
+.emotion-10[data-has-label='true'] .ehkrmld6,
+.emotion-10[data-has-label='true'] .emotion-14 {
   width: 100%;
 }
 
@@ -2338,6 +2341,7 @@ exports[`SelectableCardGroup > renders correctly with direction multiple columns
                   class="emotion-15 emotion-16"
                   id=":rb:"
                   name="checkbox"
+                  tabindex="-1"
                   type="checkbox"
                   value="value-1"
                 />
@@ -2407,6 +2411,7 @@ exports[`SelectableCardGroup > renders correctly with direction multiple columns
                   class="emotion-15 emotion-16"
                   id=":rf:"
                   name="checkbox"
+                  tabindex="-1"
                   type="checkbox"
                   value="value-2"
                 />
@@ -2612,8 +2617,8 @@ exports[`SelectableCardGroup > renders correctly with error content 1`] = `
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
 
-.emotion-10 .ehkrmld6,
-.emotion-10 .emotion-14 {
+.emotion-10[data-has-label='true'] .ehkrmld6,
+.emotion-10[data-has-label='true'] .emotion-14 {
   width: 100%;
 }
 
@@ -2991,6 +2996,7 @@ exports[`SelectableCardGroup > renders correctly with error content 1`] = `
                   class="emotion-15 emotion-16"
                   id=":r17:"
                   name="checkbox"
+                  tabindex="-1"
                   type="checkbox"
                   value="value-1"
                 />
@@ -3061,6 +3067,7 @@ exports[`SelectableCardGroup > renders correctly with error content 1`] = `
                   class="emotion-15 emotion-16"
                   id=":r1b:"
                   name="checkbox"
+                  tabindex="-1"
                   type="checkbox"
                   value="value-2"
                 />
@@ -3271,8 +3278,8 @@ exports[`SelectableCardGroup > renders correctly with helper content 1`] = `
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
 
-.emotion-10 .ehkrmld6,
-.emotion-10 .emotion-14 {
+.emotion-10[data-has-label='true'] .ehkrmld6,
+.emotion-10[data-has-label='true'] .emotion-14 {
   width: 100%;
 }
 
@@ -3649,6 +3656,7 @@ exports[`SelectableCardGroup > renders correctly with helper content 1`] = `
                   class="emotion-15 emotion-16"
                   id=":rk:"
                   name="checkbox"
+                  tabindex="-1"
                   type="checkbox"
                   value="value-1"
                 />
@@ -3718,6 +3726,7 @@ exports[`SelectableCardGroup > renders correctly with helper content 1`] = `
                   class="emotion-15 emotion-16"
                   id=":ro:"
                   name="checkbox"
+                  tabindex="-1"
                   type="checkbox"
                   value="value-2"
                 />

@@ -151,7 +151,10 @@ const StyledElement = styled('div', {
   }
 `
 
-const StyledRadio = StyledElement.withComponent(Radio)
+const OverloadedRadio = StyledElement.withComponent(Radio)
+const StyledRadio = styled(OverloadedRadio)`
+  pointer-events: none;
+`
 const OverloadedCheckbox = StyledElement.withComponent(Checkbox)
 const StyledCheckbox = styled(OverloadedCheckbox)`
   label {
@@ -372,7 +375,7 @@ export const SelectableCard = forwardRef(
                 id={id}
                 ref={innerRef}
                 data-error={isError}
-                tabIndex={!showTick ? -1 : undefined}
+                tabIndex={-1}
                 {...(label ? { label } : { 'aria-label': ariaLabel as string })}
               />
             ) : (
@@ -390,6 +393,7 @@ export const SelectableCard = forwardRef(
                 id={id}
                 ref={innerRef}
                 data-error={isError}
+                tabIndex={-1}
                 {...(label
                   ? { children: label, 'aria-label': undefined }
                   : { 'aria-label': ariaLabel as string })}

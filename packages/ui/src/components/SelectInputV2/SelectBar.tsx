@@ -24,7 +24,7 @@ type SelectBarProps = {
   readOnly: boolean
   placeholder: string
   success?: string
-  error?: string
+  error?: string | boolean
   autoFocus?: boolean
   innerRef: RefObject<HTMLDivElement | null>
   id?: string
@@ -51,7 +51,7 @@ const Placeholder = styled(Text)`
 user-select: none;
 `
 
-const StyledInputWrapper = styled(Stack)<{
+export const StyledInputWrapper = styled(Stack)<{
   'data-readonly': boolean
   'data-disabled': boolean
   'data-size': 'small' | 'medium' | 'large'
@@ -87,10 +87,14 @@ const StyledInputWrapper = styled(Stack)<{
       border-color: ${({ theme }) => theme.colors.primary.borderHover};
       box-shadow: ${({ theme }) => theme.shadows.focusPrimary};
     }
-    &:not([data-disabled='true']):hover,
-    :not([data-disabled='true']):focus {
+    &:not([data-disabled='true']):hover {
       border-color: ${({ theme }) => theme.colors.primary.borderHover};
       outline: none;
+    }
+
+    &:not([data-disabled='true']):focus-visible {
+      outline: 5px auto Highlight;
+      outline: 5px auto -webkit-focus-ring-color;
     }
 
     &[data-dropdownvisible='true'] {
@@ -139,13 +143,16 @@ const StyledInputWrapper = styled(Stack)<{
     cursor: not-allowed;
   }
 `
+
 const CustomTag = styled(Tag)`
   height: fit-content;
   width: fit-content;
 `
+
 const SelectedValues = styled(Text)`
-text-overflow: ellipsis;
-overflow: hidden;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 `
 
 const isValidSelectedValue = (selectedValue: string, options: DataType) =>

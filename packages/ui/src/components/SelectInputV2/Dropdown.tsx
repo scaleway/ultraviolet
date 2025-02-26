@@ -847,11 +847,12 @@ export const Dropdown = ({
       maxWidth={maxWidth ?? refSelect.current?.offsetWidth}
       hasArrow={false}
       ref={ref}
-      tabIndex={0}
+      tabIndex={-1}
       role="dialog"
       debounceDelay={0}
       containerFullWidth
       hideOnClickOutside
+      onClose={() => setIsDropdownVisible(false)}
       align="start"
     >
       {children}

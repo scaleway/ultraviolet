@@ -74,8 +74,8 @@ exports[`SelectableCardField > should render correctly 1`] = `
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
 
-.emotion-0 .emotion-3,
-.emotion-0 .eqr7bqq1 {
+.emotion-0[data-has-label='true'] .emotion-3,
+.emotion-0[data-has-label='true'] .eqr7bqq1 {
   width: 100%;
 }
 
@@ -124,6 +124,7 @@ exports[`SelectableCardField > should render correctly 1`] = `
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: start;
+  pointer-events: none;
 }
 
 .emotion-5[aria-disabled='false'],
@@ -333,7 +334,6 @@ exports[`SelectableCardField > should render correctly 1`] = `
               aria-disabled="false"
               aria-invalid="false"
               class="emotion-7 emotion-8"
-              id="test-test"
               name="test"
               tabindex="-1"
               type="radio"
@@ -458,8 +458,8 @@ exports[`SelectableCardField > should render correctly checked 1`] = `
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
 
-.emotion-0 .emotion-3,
-.emotion-0 .eqr7bqq1 {
+.emotion-0[data-has-label='true'] .emotion-3,
+.emotion-0[data-has-label='true'] .eqr7bqq1 {
   width: 100%;
 }
 
@@ -508,6 +508,7 @@ exports[`SelectableCardField > should render correctly checked 1`] = `
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: start;
+  pointer-events: none;
 }
 
 .emotion-5[aria-disabled='false'],
@@ -718,7 +719,6 @@ exports[`SelectableCardField > should render correctly checked 1`] = `
               aria-invalid="false"
               checked=""
               class="emotion-7 emotion-8"
-              id="test-checked"
               name="test"
               tabindex="-1"
               type="radio"
@@ -843,8 +843,8 @@ exports[`SelectableCardField > should render correctly disabled 1`] = `
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
 
-.emotion-0 .emotion-3,
-.emotion-0 .eqr7bqq1 {
+.emotion-0[data-has-label='true'] .emotion-3,
+.emotion-0[data-has-label='true'] .eqr7bqq1 {
   width: 100%;
 }
 
@@ -893,6 +893,7 @@ exports[`SelectableCardField > should render correctly disabled 1`] = `
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: start;
+  pointer-events: none;
 }
 
 .emotion-5[aria-disabled='false'],
@@ -1102,7 +1103,6 @@ exports[`SelectableCardField > should render correctly disabled 1`] = `
               aria-invalid="false"
               class="emotion-7 emotion-8"
               disabled=""
-              id="test-disabled"
               name="test"
               tabindex="-1"
               type="radio"
@@ -1227,8 +1227,8 @@ exports[`SelectableCardField > should render correctly with errors 1`] = `
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
 
-.emotion-0 .emotion-3,
-.emotion-0 .eqr7bqq1 {
+.emotion-0[data-has-label='true'] .emotion-3,
+.emotion-0[data-has-label='true'] .eqr7bqq1 {
   width: 100%;
 }
 
@@ -1277,6 +1277,7 @@ exports[`SelectableCardField > should render correctly with errors 1`] = `
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: start;
+  pointer-events: none;
 }
 
 .emotion-5[aria-disabled='false'],
@@ -1486,7 +1487,6 @@ exports[`SelectableCardField > should render correctly with errors 1`] = `
               aria-disabled="false"
               aria-invalid="true"
               class="emotion-7 emotion-8"
-              id="test-checked"
               name="test"
               tabindex="-1"
               type="radio"
@@ -1616,8 +1616,8 @@ exports[`SelectableCardField > should trigger events correctly 1`] = `
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
 
-.emotion-0 .emotion-3,
-.emotion-0 .eqr7bqq1 {
+.emotion-0[data-has-label='true'] .emotion-3,
+.emotion-0[data-has-label='true'] .eqr7bqq1 {
   width: 100%;
 }
 
@@ -1666,6 +1666,7 @@ exports[`SelectableCardField > should trigger events correctly 1`] = `
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: start;
+  pointer-events: none;
 }
 
 .emotion-5[aria-disabled='false'],
@@ -1875,7 +1876,6 @@ exports[`SelectableCardField > should trigger events correctly 1`] = `
               aria-disabled="false"
               aria-invalid="false"
               class="emotion-7 emotion-8"
-              id="test-events"
               name="test"
               tabindex="-1"
               type="radio"

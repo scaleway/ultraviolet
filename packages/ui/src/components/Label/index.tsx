@@ -1,6 +1,11 @@
-import type { ReactNode } from 'react'
+import styled from '@emotion/styled'
+import type { ComponentProps, ReactNode } from 'react'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
+
+const TextPointer = styled(Text)`
+  cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'pointer')};
+`
 
 const LabelRequiredOrNot = ({
   children,
@@ -9,39 +14,42 @@ const LabelRequiredOrNot = ({
   size,
   htmlFor,
   as,
+  sentiment,
+  disabled,
 }: LabelProps) =>
   required ? (
     <Stack direction="row" gap="0.5" alignItems="start">
-      <Text
+      <TextPointer
         as={as === 'label' ? 'label' : 'legend'}
         id={id}
         variant={size === 'large' ? 'bodyStrong' : 'bodySmallStrong'}
-        sentiment="neutral"
+        sentiment={sentiment}
         htmlFor={htmlFor}
-        prominence="strong"
+        disabled={disabled}
       >
         {children}
-      </Text>
+      </TextPointer>
       <Text
         as="span"
         variant={size === 'large' ? 'bodyStrong' : 'bodySmallStrong'}
         sentiment="danger"
         aria-label="required"
+        disabled={disabled}
       >
         *
       </Text>
     </Stack>
   ) : (
-    <Text
-      as="label"
+    <TextPointer
+      as={as === 'label' ? 'label' : 'legend'}
       id={id}
       variant={size === 'large' ? 'bodyStrong' : 'bodySmallStrong'}
-      sentiment="neutral"
+      sentiment={sentiment}
       htmlFor={htmlFor}
-      prominence="strong"
+      disabled={disabled}
     >
       {children}
-    </Text>
+    </TextPointer>
   )
 
 type LabelProps = {
@@ -55,6 +63,8 @@ type LabelProps = {
   size?: 'small' | 'medium' | 'large'
   htmlFor?: string
   id?: string
+  sentiment?: ComponentProps<typeof Text>['sentiment']
+  disabled?: boolean
 }
 
 /**
@@ -68,6 +78,8 @@ export const Label = ({
   size = 'large',
   htmlFor,
   id,
+  sentiment = 'neutral',
+  disabled,
 }: LabelProps) =>
   labelDescription ? (
     <Stack direction="row" gap="1" alignItems="center">
@@ -77,6 +89,8 @@ export const Label = ({
         htmlFor={htmlFor}
         id={id}
         as={as}
+        sentiment={sentiment}
+        disabled={disabled}
       >
         {children}
       </LabelRequiredOrNot>
@@ -95,6 +109,8 @@ export const Label = ({
       htmlFor={htmlFor}
       id={id}
       as={as}
+      sentiment={sentiment}
+      disabled={disabled}
     >
       {children}
     </LabelRequiredOrNot>
