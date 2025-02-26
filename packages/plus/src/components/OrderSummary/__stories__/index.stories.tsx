@@ -9,6 +9,7 @@ export default {
 export { Playground } from './Playground.stories'
 export { DefaultLocales } from './DefaultLocales.stories'
 export { TimeUnit } from './TimeUnit.stories'
+export { FractionDigits } from './FractionDigits.stories'
 export { Children } from './Children.stories'
 export { TotalPriceInfo } from './TotalPriceInfo.stories'
 export { Footer } from './Footer.stories'

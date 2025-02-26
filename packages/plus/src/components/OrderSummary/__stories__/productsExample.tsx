@@ -86,7 +86,7 @@ export const categoryStorage = {
   subCategories: [
     {
       title: '100 GB of storage',
-      price: 0.00003425,
+      price: 0.003425,
       amount: 100,
       priceUnit: 'GB/hours',
       amountFree: 75,
