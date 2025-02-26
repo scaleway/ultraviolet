@@ -7,6 +7,7 @@ PriceUnit.args = {
   ...Template.args,
   hideTimeUnit: false,
   items: [categoryAZ, categoryRequest],
+  fractionDigits: 10,
 }
 
 PriceUnit.parameters = {

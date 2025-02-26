@@ -1,6 +1,6 @@
 import type { UnitInput } from '@ultraviolet/ui'
 import type { ComponentProps, ReactNode } from 'react'
-import type EstimateCostLocales from './locales/en'
+import type orderSummaryLocales from './locales/en'
 
 export type TimeUnit = 'seconds' | 'minutes' | 'hours' | 'days' | 'months'
 
@@ -60,7 +60,7 @@ export type ItemsType = {
 export type OrderSummaryProps = {
   items: ItemsType[]
   header: string
-  locales?: Record<keyof typeof EstimateCostLocales, string>
+  locales?: Record<keyof typeof orderSummaryLocales, string>
   currency: string
   /**
    * Locale to format the numbers (prices)
@@ -73,4 +73,8 @@ export type OrderSummaryProps = {
   footer?: ReactNode
   children?: ReactNode
   totalPriceInfo?: ReactNode
+  /**
+   * Number of fraction digit to display in the price details
+   */
+  fractionDigits?: number
 } & PeriodProps
