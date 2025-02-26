@@ -59,6 +59,7 @@ export const Example: StoryFn<ComponentProps<typeof OrderSummary>> = () => {
 
   return (
     <OrderSummary
+      unitUnitInput="hours"
       footer={
         <Button disabled={!checked} onClick={() => alert('clicked')}>
           Create

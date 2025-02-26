@@ -24,7 +24,8 @@ export const NonScrollableContent = ({
   children,
   totalPriceInfo,
 }: NonScrollableContentProps) => {
-  const { localeFormat, currency, locales } = useContext(OrderSummaryContext)
+  const { localeFormat, currency, locales, fractionDigits } =
+    useContext(OrderSummaryContext)
 
   return (
     <NonScrollableContainer gap={3}>
@@ -33,13 +34,13 @@ export const NonScrollableContent = ({
         {totalPriceInfo ? (
           <Stack>
             <Text as="p" variant="bodyStrong" sentiment="neutral">
-              {locales['estimate.cost.total']}:
+              {locales['order.summary.total']}:
             </Text>
             {totalPriceInfo}
           </Stack>
         ) : (
           <Text as="p" variant="bodyStrong" sentiment="neutral">
-            {locales['estimate.cost.total']}:
+            {locales['order.summary.total']}:
           </Text>
         )}
         {totalPrice.before === totalPrice.after ? (
@@ -49,7 +50,12 @@ export const NonScrollableContent = ({
             sentiment="neutral"
             data-testid="total-price"
           >
-            {formatNumber(totalPrice.after, localeFormat, currency, 2)}
+            {formatNumber(
+              totalPrice.after,
+              localeFormat,
+              currency,
+              fractionDigits ?? 2,
+            )}
           </Text>
         ) : (
           <Stack direction="row" gap={1} alignItems="center">
@@ -60,7 +66,12 @@ export const NonScrollableContent = ({
               prominence="weak"
               strikeThrough
             >
-              {formatNumber(totalPrice.before, localeFormat, currency, 2)}
+              {formatNumber(
+                totalPrice.before,
+                localeFormat,
+                currency,
+                fractionDigits ?? 2,
+              )}
             </Text>
             <Text
               as="p"
@@ -68,7 +79,12 @@ export const NonScrollableContent = ({
               sentiment="neutral"
               data-testid="total-price"
             >
-              {formatNumber(totalPrice.after, localeFormat, currency, 2)}
+              {formatNumber(
+                totalPrice.after,
+                localeFormat,
+                currency,
+                fractionDigits ?? 2,
+              )}
             </Text>
           </Stack>
         )}
