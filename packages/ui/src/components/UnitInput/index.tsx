@@ -182,7 +182,7 @@ const UnitInputWrapper = styled(Stack)<{
 const SelectInputWrapper = styled.div<{
   width: number | string
 }>`
-${({ width }) => width && `width: ${typeof width === 'string' ? width : `${width}px`};`}
+${({ width }) => width && `width: ${typeof width === 'number' ? `${width}px` : width};`}
 display: flex;
 `
 

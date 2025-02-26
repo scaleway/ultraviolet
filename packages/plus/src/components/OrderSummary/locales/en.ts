@@ -1,9 +1,9 @@
 export default {
-  'estimate.cost.total': 'Estimated cost',
-  'estimate.cost.units.seconds.label': 'Second(s)',
-  'estimate.cost.units.minutes.label': 'Minute(s)',
-  'estimate.cost.units.hours.label': 'Hour(s)',
-  'estimate.cost.units.days.label': 'Day(s)',
-  'estimate.cost.units.months.label': 'Month(s)',
-  'estimate.cost.units.years.label': 'Year(s)',
+  'order.summary.total': 'Estimated cost',
+  'order.summary.units.seconds.label': 'Second(s)',
+  'order.summary.units.minutes.label': 'Minute(s)',
+  'order.summary.units.hours.label': 'Hour(s)',
+  'order.summary.units.days.label': 'Day(s)',
+  'order.summary.units.months.label': 'Month(s)',
+  'order.summary.units.years.label': 'Year(s)',
 } as const

@@ -125,4 +125,22 @@ describe('OrderSummary', () => {
 
     expect(asFragment()).toMatchSnapshot()
   })
+
+  it('should work with fractionDigits', () => {
+    const { asFragment } = renderWithTheme(
+      <OrderSummary
+        header="summary"
+        items={[categoryAZ]}
+        currency="EUR"
+        localeFormat="en-EN"
+        discount={0.5}
+        fractionDigits={0}
+      />,
+    )
+
+    const price = screen.getByTestId('total-price').textContent
+    expect(price).toBe('€3')
+
+    expect(asFragment()).toMatchSnapshot()
+  })
 })

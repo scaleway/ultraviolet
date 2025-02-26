@@ -6,20 +6,20 @@ import { OrderSummaryContext } from './Provider'
 import { ScrollableContent } from './ScrollableContent'
 import { Units } from './constants'
 import { calculatePrice } from './helpers'
-import estimateCostLocales from './locales/en'
+import orderSummaryLocales from './locales/en'
 import type { OrderSummaryProps, TimeUnit } from './types'
 
 const Container = styled(Stack)`
-background-color: ${({ theme }) => theme.colors.neutral.backgroundWeak};
-width: 27.5rem;
-border: 1px solid ${({ theme }) => theme.colors.neutral.border};
+  background-color: ${({ theme }) => theme.colors.neutral.backgroundWeak};
+  width: 27.5rem;
+  border: 1px solid ${({ theme }) => theme.colors.neutral.border};
 `
 
 const HeaderContainer = styled(Stack)`
-height: ${({ theme }) => theme.sizing[900]};
-border-bottom: 1px solid ${({ theme }) => theme.colors.neutral.border};
-padding: ${({ theme }) => theme.space[3]};
-padding-bottom: ${({ theme }) => theme.space[2]};
+  height: ${({ theme }) => theme.sizing[900]};
+  border-bottom: 1px solid ${({ theme }) => theme.colors.neutral.border};
+  padding: ${({ theme }) => theme.space[3]};
+  padding-bottom: ${({ theme }) => theme.space[2]};
 `
 
 export const OrderSummary = ({
@@ -29,13 +29,14 @@ export const OrderSummary = ({
   valueUnitInput = 1,
   unitUnitInput = 'hours',
   items,
-  locales = estimateCostLocales,
+  locales = orderSummaryLocales,
   currency = 'EUR',
   localeFormat = 'en-US',
   footer,
   children,
   discount = 0,
   totalPriceInfo,
+  fractionDigits,
 }: OrderSummaryProps) => {
   const [timePeriodUnit, setTimePeriodUnit] = useState<TimeUnit>(unitUnitInput)
   const [timePeriodAmount, setTimePeriodAmount] = useState(valueUnitInput)
@@ -67,7 +68,10 @@ export const OrderSummary = ({
   const totalPrice = useMemo(() => {
     const price = Object.values(categoriesPrice).reduce((a, b) => a + b, 0)
 
-    return { before: price, after: Math.max(price * (1 - discount), 0) }
+    return {
+      before: Math.max(price, 0),
+      after: Math.max(price * (1 - discount), 0),
+    }
   }, [categoriesPrice, discount])
 
   const valueContext = useMemo(
@@ -80,6 +84,7 @@ export const OrderSummary = ({
       timePeriodUnit,
       timePeriodAmount,
       locales,
+      fractionDigits,
     }),
     [
       currency,
@@ -90,6 +95,7 @@ export const OrderSummary = ({
       timePeriodUnit,
       timePeriodAmount,
       locales,
+      fractionDigits,
     ],
   )
 
@@ -101,7 +107,7 @@ export const OrderSummary = ({
         value: option,
         label:
           locales[
-            `estimate.cost.units.${option}.label` as keyof typeof locales
+            `order.summary.units.${option}.label` as keyof typeof locales
           ],
       }),
     )
@@ -113,7 +119,7 @@ export const OrderSummary = ({
     <OrderSummaryContext.Provider value={valueContext}>
       <Container>
         <HeaderContainer direction="row" justifyContent="space-between">
-          <Text as="p" variant="headingSmallStrong" sentiment="neutral">
+          <Text as="h3" variant="headingSmallStrong" sentiment="neutral">
             {header}
           </Text>
           {!hideTimeUnit ? (

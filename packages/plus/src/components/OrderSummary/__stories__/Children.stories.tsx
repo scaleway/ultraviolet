@@ -80,7 +80,7 @@ Children.parameters = {
   docs: {
     description: {
       story:
-        'The `children` prop can be use to add information in the non-scrollable area, before the final price.',
+        'The `children` prop can be used to add information in the non-scrollable area, before the final price.',
     },
   },
 }

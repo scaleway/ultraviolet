@@ -1,5 +1,5 @@
 import { createContext } from 'react'
-import EstimateCostLocales from './locales/en'
+import orderSummaryLocales from './locales/en'
 import type { ItemsType, TimeUnit } from './types'
 
 export type ContextProps = {
@@ -10,7 +10,8 @@ export type ContextProps = {
   hideTimeUnit: boolean
   timePeriodUnit: TimeUnit
   timePeriodAmount: number
-  locales: Record<keyof typeof EstimateCostLocales, string>
+  locales: Record<keyof typeof orderSummaryLocales, string>
+  fractionDigits?: number
 }
 
 export const OrderSummaryContext = createContext<ContextProps>({
@@ -21,5 +22,5 @@ export const OrderSummaryContext = createContext<ContextProps>({
   hideTimeUnit: false,
   timePeriodUnit: 'hours',
   timePeriodAmount: 1,
-  locales: EstimateCostLocales,
+  locales: orderSummaryLocales,
 })

@@ -21,7 +21,7 @@ const CategoryStack = styled(Stack)`
   }
 `
 const CategoryName = ({ category }: { category: ItemsType }) => {
-  const { currency, localeFormat, categoriesPrice } =
+  const { currency, localeFormat, categoriesPrice, fractionDigits } =
     useContext(OrderSummaryContext)
 
   return (
@@ -46,6 +46,7 @@ const CategoryName = ({ category }: { category: ItemsType }) => {
             categoriesPrice[category.category],
             localeFormat,
             currency,
+            fractionDigits,
           )}
         </Text>
       )}
@@ -60,6 +61,7 @@ const SubCategory = ({ subCategory }: { subCategory: SubCategoryType }) => {
     hideTimeUnit,
     timePeriodAmount,
     timePeriodUnit,
+    fractionDigits,
   } = useContext(OrderSummaryContext)
 
   return (
@@ -81,7 +83,7 @@ const SubCategory = ({ subCategory }: { subCategory: SubCategoryType }) => {
                 subCategory.amount && !subCategory.priceUnit
                   ? subCategory.amount
                   : 1,
-                subCategory.amountFree,
+                subCategory.priceUnit ? 0 : subCategory.amountFree,
                 hideTimeUnit ? 'hours' : timePeriodUnit,
                 hideTimeUnit ? 1 : timePeriodAmount,
                 subCategory.discount,
@@ -89,6 +91,7 @@ const SubCategory = ({ subCategory }: { subCategory: SubCategoryType }) => {
               ),
               localeFormat,
               currency,
+              fractionDigits,
             )}
             {subCategory.priceUnit ? ` /${subCategory.priceUnit}` : ''}
           </Text>
