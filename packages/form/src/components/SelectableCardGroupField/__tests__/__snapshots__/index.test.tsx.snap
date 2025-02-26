@@ -151,8 +151,8 @@ exports[`SelectableCardField > should render correctly 1`] = `
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
 
-.emotion-10 .emotion-13,
-.emotion-10 .eqr7bqq1 {
+.emotion-10[data-has-label='true'] .emotion-13,
+.emotion-10[data-has-label='true'] .eqr7bqq1 {
   width: 100%;
 }
 
@@ -201,6 +201,7 @@ exports[`SelectableCardField > should render correctly 1`] = `
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: start;
+  pointer-events: none;
 }
 
 .emotion-15[aria-disabled='false'],
@@ -395,7 +396,7 @@ exports[`SelectableCardField > should render correctly 1`] = `
                       aria-disabled="false"
                       aria-invalid="false"
                       class="emotion-17 emotion-18"
-                      id="test-radio 1"
+                      id=":r2:"
                       name="test"
                       tabindex="-1"
                       type="radio"
@@ -428,7 +429,7 @@ exports[`SelectableCardField > should render correctly 1`] = `
                     </svg>
                     <label
                       class="emotion-25 emotion-26 emotion-7"
-                      for="test-radio 1"
+                      for=":r2:"
                     >
                       Radio 1
                     </label>
@@ -459,7 +460,7 @@ exports[`SelectableCardField > should render correctly 1`] = `
                       aria-disabled="false"
                       aria-invalid="false"
                       class="emotion-17 emotion-18"
-                      id="test-radio 2"
+                      id=":r6:"
                       name="test"
                       tabindex="-1"
                       type="radio"
@@ -492,7 +493,7 @@ exports[`SelectableCardField > should render correctly 1`] = `
                     </svg>
                     <label
                       class="emotion-25 emotion-26 emotion-7"
-                      for="test-radio 2"
+                      for=":r6:"
                     >
                       Radio 2
                     </label>
@@ -659,8 +660,8 @@ exports[`SelectableCardField > should render correctly checked as a checkbox 1`]
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
 
-.emotion-10 .ehkrmld6,
-.emotion-10 .emotion-14 {
+.emotion-10[data-has-label='true'] .ehkrmld6,
+.emotion-10[data-has-label='true'] .emotion-14 {
   width: 100%;
 }
 
@@ -1029,6 +1030,7 @@ exports[`SelectableCardField > should render correctly checked as a checkbox 1`]
                     class="emotion-15 emotion-16"
                     id=":rg:"
                     name="test"
+                    tabindex="-1"
                     type="checkbox"
                     value="checked"
                   />
@@ -1235,8 +1237,8 @@ exports[`SelectableCardField > should render correctly checked as radiofield 1`]
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
 
-.emotion-10 .emotion-13,
-.emotion-10 .eqr7bqq1 {
+.emotion-10[data-has-label='true'] .emotion-13,
+.emotion-10[data-has-label='true'] .eqr7bqq1 {
   width: 100%;
 }
 
@@ -1285,6 +1287,7 @@ exports[`SelectableCardField > should render correctly checked as radiofield 1`]
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: start;
+  pointer-events: none;
 }
 
 .emotion-15[aria-disabled='false'],
@@ -1481,7 +1484,7 @@ exports[`SelectableCardField > should render correctly checked as radiofield 1`]
                       aria-invalid="false"
                       checked=""
                       class="emotion-17 emotion-18"
-                      id="test-checked"
+                      id=":rb:"
                       name="test"
                       tabindex="-1"
                       type="radio"
@@ -1514,7 +1517,7 @@ exports[`SelectableCardField > should render correctly checked as radiofield 1`]
                     </svg>
                     <label
                       class="emotion-25 emotion-26 emotion-7"
-                      for="test-checked"
+                      for=":rb:"
                     >
                       Radio 1
                     </label>
@@ -1681,8 +1684,8 @@ exports[`SelectableCardField > should trigger events correctly 1`] = `
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
 
-.emotion-10 .ehkrmld6,
-.emotion-10 .emotion-14 {
+.emotion-10[data-has-label='true'] .ehkrmld6,
+.emotion-10[data-has-label='true'] .emotion-14 {
   width: 100%;
 }
 
@@ -2049,6 +2052,7 @@ exports[`SelectableCardField > should trigger events correctly 1`] = `
                     class="emotion-15 emotion-16"
                     id=":rl:"
                     name="test"
+                    tabindex="-1"
                     type="checkbox"
                     value="radio 1"
                   />
@@ -2118,6 +2122,7 @@ exports[`SelectableCardField > should trigger events correctly 1`] = `
                     class="emotion-15 emotion-16"
                     id=":rp:"
                     name="test"
+                    tabindex="-1"
                     type="checkbox"
                     value="radio 2"
                   />

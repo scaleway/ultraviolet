@@ -48,8 +48,8 @@ exports[`TextInputV2 > should render correctly when input  has a error sentiment
   flex-wrap: nowrap;
 }
 
-.emotion-2 {
-  color: #222638;
+.emotion-3 {
+  color: #3f4250;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -58,10 +58,11 @@ exports[`TextInputV2 > should render correctly when input  has a error sentiment
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  cursor: pointer;
 }
 
-.emotion-2 {
-  color: #222638;
+.emotion-3 {
+  color: #3f4250;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -70,9 +71,10 @@ exports[`TextInputV2 > should render correctly when input  has a error sentiment
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  cursor: pointer;
 }
 
-.emotion-4 {
+.emotion-5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -86,69 +88,69 @@ exports[`TextInputV2 > should render correctly when input  has a error sentiment
   border-radius: 0.25rem;
 }
 
-.emotion-4>.emotion-7 {
+.emotion-5>.emotion-8 {
   color: #3f4250;
 }
 
-.emotion-4>.emotion-7::-webkit-input-placeholder {
+.emotion-5>.emotion-8::-webkit-input-placeholder {
   color: #727683;
 }
 
-.emotion-4>.emotion-7::-moz-placeholder {
+.emotion-5>.emotion-8::-moz-placeholder {
   color: #727683;
 }
 
-.emotion-4>.emotion-7:-ms-input-placeholder {
+.emotion-5>.emotion-8:-ms-input-placeholder {
   color: #727683;
 }
 
-.emotion-4>.emotion-7::placeholder {
+.emotion-5>.emotion-8::placeholder {
   color: #727683;
 }
 
-.emotion-4[data-success='true'] {
+.emotion-5[data-success='true'] {
   border-color: #22674e;
 }
 
-.emotion-4[data-error='true'] {
+.emotion-5[data-error='true'] {
   border-color: #b3144d;
 }
 
-.emotion-4[data-readonly='true'] {
+.emotion-5[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
 }
 
-.emotion-4[data-disabled='true'] {
+.emotion-5[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
 }
 
-.emotion-4[data-disabled='true']>.emotion-7 {
+.emotion-5[data-disabled='true']>.emotion-8 {
   color: #b5b7bd;
 }
 
-.emotion-4[data-disabled='true']>.emotion-7::-webkit-input-placeholder {
+.emotion-5[data-disabled='true']>.emotion-8::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-4[data-disabled='true']>.emotion-7::-moz-placeholder {
+.emotion-5[data-disabled='true']>.emotion-8::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-4[data-disabled='true']>.emotion-7:-ms-input-placeholder {
+.emotion-5[data-disabled='true']>.emotion-8:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-4[data-disabled='true']>.emotion-7::placeholder {
+.emotion-5[data-disabled='true']>.emotion-8::placeholder {
   color: #b5b7bd;
 }
 
-.emotion-4:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-5:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-4 {
+.emotion-5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -162,69 +164,69 @@ exports[`TextInputV2 > should render correctly when input  has a error sentiment
   border-radius: 0.25rem;
 }
 
-.emotion-4>.emotion-7 {
+.emotion-5>.emotion-8 {
   color: #3f4250;
 }
 
-.emotion-4>.emotion-7::-webkit-input-placeholder {
+.emotion-5>.emotion-8::-webkit-input-placeholder {
   color: #727683;
 }
 
-.emotion-4>.emotion-7::-moz-placeholder {
+.emotion-5>.emotion-8::-moz-placeholder {
   color: #727683;
 }
 
-.emotion-4>.emotion-7:-ms-input-placeholder {
+.emotion-5>.emotion-8:-ms-input-placeholder {
   color: #727683;
 }
 
-.emotion-4>.emotion-7::placeholder {
+.emotion-5>.emotion-8::placeholder {
   color: #727683;
 }
 
-.emotion-4[data-success='true'] {
+.emotion-5[data-success='true'] {
   border-color: #22674e;
 }
 
-.emotion-4[data-error='true'] {
+.emotion-5[data-error='true'] {
   border-color: #b3144d;
 }
 
-.emotion-4[data-readonly='true'] {
+.emotion-5[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
 }
 
-.emotion-4[data-disabled='true'] {
+.emotion-5[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
 }
 
-.emotion-4[data-disabled='true']>.emotion-7 {
+.emotion-5[data-disabled='true']>.emotion-8 {
   color: #b5b7bd;
 }
 
-.emotion-4[data-disabled='true']>.emotion-7::-webkit-input-placeholder {
+.emotion-5[data-disabled='true']>.emotion-8::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-4[data-disabled='true']>.emotion-7::-moz-placeholder {
+.emotion-5[data-disabled='true']>.emotion-8::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-4[data-disabled='true']>.emotion-7:-ms-input-placeholder {
+.emotion-5[data-disabled='true']>.emotion-8:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-4[data-disabled='true']>.emotion-7::placeholder {
+.emotion-5[data-disabled='true']>.emotion-8::placeholder {
   color: #b5b7bd;
 }
 
-.emotion-4:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-5:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-6 {
+.emotion-7 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -237,15 +239,15 @@ exports[`TextInputV2 > should render correctly when input  has a error sentiment
   font-size: 0.875rem;
 }
 
-.emotion-6[data-size='large'] {
+.emotion-7[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-6[data-size='small'] {
+.emotion-7[data-size='small'] {
   padding-left: 0.5rem;
 }
 
-.emotion-6 {
+.emotion-7 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -258,15 +260,15 @@ exports[`TextInputV2 > should render correctly when input  has a error sentiment
   font-size: 0.875rem;
 }
 
-.emotion-6[data-size='large'] {
+.emotion-7[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-6[data-size='small'] {
+.emotion-7[data-size='small'] {
   padding-left: 0.5rem;
 }
 
-.emotion-8 {
+.emotion-9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -290,7 +292,7 @@ exports[`TextInputV2 > should render correctly when input  has a error sentiment
   padding: 0 1rem;
 }
 
-.emotion-8 {
+.emotion-9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -314,7 +316,7 @@ exports[`TextInputV2 > should render correctly when input  has a error sentiment
   padding: 0 1rem;
 }
 
-.emotion-10 {
+.emotion-11 {
   vertical-align: middle;
   fill: #b3144d;
   height: 1rem;
@@ -323,12 +325,12 @@ exports[`TextInputV2 > should render correctly when input  has a error sentiment
   min-height: 1rem;
 }
 
-.emotion-10 .fillStroke {
+.emotion-11 .fillStroke {
   stroke: #b3144d;
   fill: none;
 }
 
-.emotion-12 {
+.emotion-13 {
   color: #b3144d;
   font-size: 0.75rem;
   font-family: Inter,Asap,sans-serif;
@@ -347,14 +349,14 @@ exports[`TextInputV2 > should render correctly when input  has a error sentiment
       class="emotion-0 emotion-1"
     >
       <label
-        class="emotion-2 emotion-3"
+        class="emotion-2 emotion-3 emotion-4"
         for=":rk:"
       >
         Test
       </label>
       <div>
         <div
-          class="emotion-4 emotion-5"
+          class="emotion-5 emotion-6"
           data-disabled="false"
           data-error="true"
           data-readonly="false"
@@ -362,17 +364,17 @@ exports[`TextInputV2 > should render correctly when input  has a error sentiment
         >
           <input
             aria-invalid="true"
-            class="emotion-6 emotion-7"
+            class="emotion-7 emotion-8"
             data-size="large"
             id=":rk:"
             type="text"
             value="test"
           />
           <div
-            class="emotion-8 emotion-9"
+            class="emotion-9 emotion-10"
           >
             <svg
-              class="emotion-10 emotion-11"
+              class="emotion-11 emotion-12"
               viewBox="0 0 20 20"
             >
               <path
@@ -385,7 +387,7 @@ exports[`TextInputV2 > should render correctly when input  has a error sentiment
         </div>
       </div>
       <p
-        class="emotion-12 emotion-3"
+        class="emotion-13 emotion-4"
       >
         success
       </p>
@@ -442,8 +444,8 @@ exports[`TextInputV2 > should render correctly when input has a success sentimen
   flex-wrap: nowrap;
 }
 
-.emotion-2 {
-  color: #222638;
+.emotion-3 {
+  color: #3f4250;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -452,10 +454,11 @@ exports[`TextInputV2 > should render correctly when input has a success sentimen
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  cursor: pointer;
 }
 
-.emotion-2 {
-  color: #222638;
+.emotion-3 {
+  color: #3f4250;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -464,9 +467,10 @@ exports[`TextInputV2 > should render correctly when input has a success sentimen
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  cursor: pointer;
 }
 
-.emotion-4 {
+.emotion-5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -480,69 +484,69 @@ exports[`TextInputV2 > should render correctly when input has a success sentimen
   border-radius: 0.25rem;
 }
 
-.emotion-4>.emotion-7 {
+.emotion-5>.emotion-8 {
   color: #3f4250;
 }
 
-.emotion-4>.emotion-7::-webkit-input-placeholder {
+.emotion-5>.emotion-8::-webkit-input-placeholder {
   color: #727683;
 }
 
-.emotion-4>.emotion-7::-moz-placeholder {
+.emotion-5>.emotion-8::-moz-placeholder {
   color: #727683;
 }
 
-.emotion-4>.emotion-7:-ms-input-placeholder {
+.emotion-5>.emotion-8:-ms-input-placeholder {
   color: #727683;
 }
 
-.emotion-4>.emotion-7::placeholder {
+.emotion-5>.emotion-8::placeholder {
   color: #727683;
 }
 
-.emotion-4[data-success='true'] {
+.emotion-5[data-success='true'] {
   border-color: #22674e;
 }
 
-.emotion-4[data-error='true'] {
+.emotion-5[data-error='true'] {
   border-color: #b3144d;
 }
 
-.emotion-4[data-readonly='true'] {
+.emotion-5[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
 }
 
-.emotion-4[data-disabled='true'] {
+.emotion-5[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
 }
 
-.emotion-4[data-disabled='true']>.emotion-7 {
+.emotion-5[data-disabled='true']>.emotion-8 {
   color: #b5b7bd;
 }
 
-.emotion-4[data-disabled='true']>.emotion-7::-webkit-input-placeholder {
+.emotion-5[data-disabled='true']>.emotion-8::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-4[data-disabled='true']>.emotion-7::-moz-placeholder {
+.emotion-5[data-disabled='true']>.emotion-8::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-4[data-disabled='true']>.emotion-7:-ms-input-placeholder {
+.emotion-5[data-disabled='true']>.emotion-8:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-4[data-disabled='true']>.emotion-7::placeholder {
+.emotion-5[data-disabled='true']>.emotion-8::placeholder {
   color: #b5b7bd;
 }
 
-.emotion-4:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-5:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-4 {
+.emotion-5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -556,69 +560,69 @@ exports[`TextInputV2 > should render correctly when input has a success sentimen
   border-radius: 0.25rem;
 }
 
-.emotion-4>.emotion-7 {
+.emotion-5>.emotion-8 {
   color: #3f4250;
 }
 
-.emotion-4>.emotion-7::-webkit-input-placeholder {
+.emotion-5>.emotion-8::-webkit-input-placeholder {
   color: #727683;
 }
 
-.emotion-4>.emotion-7::-moz-placeholder {
+.emotion-5>.emotion-8::-moz-placeholder {
   color: #727683;
 }
 
-.emotion-4>.emotion-7:-ms-input-placeholder {
+.emotion-5>.emotion-8:-ms-input-placeholder {
   color: #727683;
 }
 
-.emotion-4>.emotion-7::placeholder {
+.emotion-5>.emotion-8::placeholder {
   color: #727683;
 }
 
-.emotion-4[data-success='true'] {
+.emotion-5[data-success='true'] {
   border-color: #22674e;
 }
 
-.emotion-4[data-error='true'] {
+.emotion-5[data-error='true'] {
   border-color: #b3144d;
 }
 
-.emotion-4[data-readonly='true'] {
+.emotion-5[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
 }
 
-.emotion-4[data-disabled='true'] {
+.emotion-5[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
 }
 
-.emotion-4[data-disabled='true']>.emotion-7 {
+.emotion-5[data-disabled='true']>.emotion-8 {
   color: #b5b7bd;
 }
 
-.emotion-4[data-disabled='true']>.emotion-7::-webkit-input-placeholder {
+.emotion-5[data-disabled='true']>.emotion-8::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-4[data-disabled='true']>.emotion-7::-moz-placeholder {
+.emotion-5[data-disabled='true']>.emotion-8::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-4[data-disabled='true']>.emotion-7:-ms-input-placeholder {
+.emotion-5[data-disabled='true']>.emotion-8:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-4[data-disabled='true']>.emotion-7::placeholder {
+.emotion-5[data-disabled='true']>.emotion-8::placeholder {
   color: #b5b7bd;
 }
 
-.emotion-4:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-5:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-6 {
+.emotion-7 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -631,15 +635,15 @@ exports[`TextInputV2 > should render correctly when input has a success sentimen
   font-size: 0.875rem;
 }
 
-.emotion-6[data-size='large'] {
+.emotion-7[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-6[data-size='small'] {
+.emotion-7[data-size='small'] {
   padding-left: 0.5rem;
 }
 
-.emotion-6 {
+.emotion-7 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -652,15 +656,15 @@ exports[`TextInputV2 > should render correctly when input has a success sentimen
   font-size: 0.875rem;
 }
 
-.emotion-6[data-size='large'] {
+.emotion-7[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-6[data-size='small'] {
+.emotion-7[data-size='small'] {
   padding-left: 0.5rem;
 }
 
-.emotion-8 {
+.emotion-9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -684,7 +688,7 @@ exports[`TextInputV2 > should render correctly when input has a success sentimen
   padding: 0 1rem;
 }
 
-.emotion-8 {
+.emotion-9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -708,7 +712,7 @@ exports[`TextInputV2 > should render correctly when input has a success sentimen
   padding: 0 1rem;
 }
 
-.emotion-10 {
+.emotion-11 {
   vertical-align: middle;
   fill: #22674e;
   height: 1rem;
@@ -717,12 +721,12 @@ exports[`TextInputV2 > should render correctly when input has a success sentimen
   min-height: 1rem;
 }
 
-.emotion-10 .fillStroke {
+.emotion-11 .fillStroke {
   stroke: #22674e;
   fill: none;
 }
 
-.emotion-12 {
+.emotion-13 {
   color: #22674e;
   font-size: 0.75rem;
   font-family: Inter,Asap,sans-serif;
@@ -741,14 +745,14 @@ exports[`TextInputV2 > should render correctly when input has a success sentimen
       class="emotion-0 emotion-1"
     >
       <label
-        class="emotion-2 emotion-3"
+        class="emotion-2 emotion-3 emotion-4"
         for=":rg:"
       >
         Test
       </label>
       <div>
         <div
-          class="emotion-4 emotion-5"
+          class="emotion-5 emotion-6"
           data-disabled="false"
           data-error="false"
           data-readonly="false"
@@ -756,17 +760,17 @@ exports[`TextInputV2 > should render correctly when input has a success sentimen
         >
           <input
             aria-invalid="false"
-            class="emotion-6 emotion-7"
+            class="emotion-7 emotion-8"
             data-size="large"
             id=":rg:"
             type="text"
             value="test"
           />
           <div
-            class="emotion-8 emotion-9"
+            class="emotion-9 emotion-10"
           >
             <svg
-              class="emotion-10 emotion-11"
+              class="emotion-11 emotion-12"
               viewBox="0 0 20 20"
             >
               <path
@@ -779,7 +783,7 @@ exports[`TextInputV2 > should render correctly when input has a success sentimen
         </div>
       </div>
       <p
-        class="emotion-12 emotion-3"
+        class="emotion-13 emotion-4"
       >
         success
       </p>
@@ -836,8 +840,8 @@ exports[`TextInputV2 > should render correctly when input is disabled 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-2 {
-  color: #222638;
+.emotion-3 {
+  color: #3f4250;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -846,10 +850,11 @@ exports[`TextInputV2 > should render correctly when input is disabled 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  cursor: pointer;
 }
 
-.emotion-2 {
-  color: #222638;
+.emotion-3 {
+  color: #3f4250;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -858,9 +863,10 @@ exports[`TextInputV2 > should render correctly when input is disabled 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  cursor: pointer;
 }
 
-.emotion-4 {
+.emotion-5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -874,69 +880,69 @@ exports[`TextInputV2 > should render correctly when input is disabled 1`] = `
   border-radius: 0.25rem;
 }
 
-.emotion-4>.emotion-7 {
+.emotion-5>.emotion-8 {
   color: #3f4250;
 }
 
-.emotion-4>.emotion-7::-webkit-input-placeholder {
+.emotion-5>.emotion-8::-webkit-input-placeholder {
   color: #727683;
 }
 
-.emotion-4>.emotion-7::-moz-placeholder {
+.emotion-5>.emotion-8::-moz-placeholder {
   color: #727683;
 }
 
-.emotion-4>.emotion-7:-ms-input-placeholder {
+.emotion-5>.emotion-8:-ms-input-placeholder {
   color: #727683;
 }
 
-.emotion-4>.emotion-7::placeholder {
+.emotion-5>.emotion-8::placeholder {
   color: #727683;
 }
 
-.emotion-4[data-success='true'] {
+.emotion-5[data-success='true'] {
   border-color: #22674e;
 }
 
-.emotion-4[data-error='true'] {
+.emotion-5[data-error='true'] {
   border-color: #b3144d;
 }
 
-.emotion-4[data-readonly='true'] {
+.emotion-5[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
 }
 
-.emotion-4[data-disabled='true'] {
+.emotion-5[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
 }
 
-.emotion-4[data-disabled='true']>.emotion-7 {
+.emotion-5[data-disabled='true']>.emotion-8 {
   color: #b5b7bd;
 }
 
-.emotion-4[data-disabled='true']>.emotion-7::-webkit-input-placeholder {
+.emotion-5[data-disabled='true']>.emotion-8::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-4[data-disabled='true']>.emotion-7::-moz-placeholder {
+.emotion-5[data-disabled='true']>.emotion-8::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-4[data-disabled='true']>.emotion-7:-ms-input-placeholder {
+.emotion-5[data-disabled='true']>.emotion-8:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-4[data-disabled='true']>.emotion-7::placeholder {
+.emotion-5[data-disabled='true']>.emotion-8::placeholder {
   color: #b5b7bd;
 }
 
-.emotion-4:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-5:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-4 {
+.emotion-5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -950,69 +956,69 @@ exports[`TextInputV2 > should render correctly when input is disabled 1`] = `
   border-radius: 0.25rem;
 }
 
-.emotion-4>.emotion-7 {
+.emotion-5>.emotion-8 {
   color: #3f4250;
 }
 
-.emotion-4>.emotion-7::-webkit-input-placeholder {
+.emotion-5>.emotion-8::-webkit-input-placeholder {
   color: #727683;
 }
 
-.emotion-4>.emotion-7::-moz-placeholder {
+.emotion-5>.emotion-8::-moz-placeholder {
   color: #727683;
 }
 
-.emotion-4>.emotion-7:-ms-input-placeholder {
+.emotion-5>.emotion-8:-ms-input-placeholder {
   color: #727683;
 }
 
-.emotion-4>.emotion-7::placeholder {
+.emotion-5>.emotion-8::placeholder {
   color: #727683;
 }
 
-.emotion-4[data-success='true'] {
+.emotion-5[data-success='true'] {
   border-color: #22674e;
 }
 
-.emotion-4[data-error='true'] {
+.emotion-5[data-error='true'] {
   border-color: #b3144d;
 }
 
-.emotion-4[data-readonly='true'] {
+.emotion-5[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
 }
 
-.emotion-4[data-disabled='true'] {
+.emotion-5[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
 }
 
-.emotion-4[data-disabled='true']>.emotion-7 {
+.emotion-5[data-disabled='true']>.emotion-8 {
   color: #b5b7bd;
 }
 
-.emotion-4[data-disabled='true']>.emotion-7::-webkit-input-placeholder {
+.emotion-5[data-disabled='true']>.emotion-8::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-4[data-disabled='true']>.emotion-7::-moz-placeholder {
+.emotion-5[data-disabled='true']>.emotion-8::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-4[data-disabled='true']>.emotion-7:-ms-input-placeholder {
+.emotion-5[data-disabled='true']>.emotion-8:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-4[data-disabled='true']>.emotion-7::placeholder {
+.emotion-5[data-disabled='true']>.emotion-8::placeholder {
   color: #b5b7bd;
 }
 
-.emotion-4:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-5:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-6 {
+.emotion-7 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -1025,15 +1031,15 @@ exports[`TextInputV2 > should render correctly when input is disabled 1`] = `
   font-size: 0.875rem;
 }
 
-.emotion-6[data-size='large'] {
+.emotion-7[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-6[data-size='small'] {
+.emotion-7[data-size='small'] {
   padding-left: 0.5rem;
 }
 
-.emotion-6 {
+.emotion-7 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -1046,11 +1052,11 @@ exports[`TextInputV2 > should render correctly when input is disabled 1`] = `
   font-size: 0.875rem;
 }
 
-.emotion-6[data-size='large'] {
+.emotion-7[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-6[data-size='small'] {
+.emotion-7[data-size='small'] {
   padding-left: 0.5rem;
 }
 
@@ -1061,14 +1067,14 @@ exports[`TextInputV2 > should render correctly when input is disabled 1`] = `
       class="emotion-0 emotion-1"
     >
       <label
-        class="emotion-2 emotion-3"
+        class="emotion-2 emotion-3 emotion-4"
         for=":ra:"
       >
         Test
       </label>
       <div>
         <div
-          class="emotion-4 emotion-5"
+          class="emotion-5 emotion-6"
           data-disabled="true"
           data-error="false"
           data-readonly="false"
@@ -1076,7 +1082,7 @@ exports[`TextInputV2 > should render correctly when input is disabled 1`] = `
         >
           <input
             aria-invalid="false"
-            class="emotion-6 emotion-7"
+            class="emotion-7 emotion-8"
             data-size="large"
             disabled=""
             id=":ra:"
@@ -1138,8 +1144,8 @@ exports[`TextInputV2 > should render correctly when input is readOnly 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-2 {
-  color: #222638;
+.emotion-3 {
+  color: #3f4250;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -1148,10 +1154,11 @@ exports[`TextInputV2 > should render correctly when input is readOnly 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  cursor: pointer;
 }
 
-.emotion-2 {
-  color: #222638;
+.emotion-3 {
+  color: #3f4250;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -1160,9 +1167,10 @@ exports[`TextInputV2 > should render correctly when input is readOnly 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  cursor: pointer;
 }
 
-.emotion-4 {
+.emotion-5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1176,69 +1184,69 @@ exports[`TextInputV2 > should render correctly when input is readOnly 1`] = `
   border-radius: 0.25rem;
 }
 
-.emotion-4>.emotion-7 {
+.emotion-5>.emotion-8 {
   color: #3f4250;
 }
 
-.emotion-4>.emotion-7::-webkit-input-placeholder {
+.emotion-5>.emotion-8::-webkit-input-placeholder {
   color: #727683;
 }
 
-.emotion-4>.emotion-7::-moz-placeholder {
+.emotion-5>.emotion-8::-moz-placeholder {
   color: #727683;
 }
 
-.emotion-4>.emotion-7:-ms-input-placeholder {
+.emotion-5>.emotion-8:-ms-input-placeholder {
   color: #727683;
 }
 
-.emotion-4>.emotion-7::placeholder {
+.emotion-5>.emotion-8::placeholder {
   color: #727683;
 }
 
-.emotion-4[data-success='true'] {
+.emotion-5[data-success='true'] {
   border-color: #22674e;
 }
 
-.emotion-4[data-error='true'] {
+.emotion-5[data-error='true'] {
   border-color: #b3144d;
 }
 
-.emotion-4[data-readonly='true'] {
+.emotion-5[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
 }
 
-.emotion-4[data-disabled='true'] {
+.emotion-5[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
 }
 
-.emotion-4[data-disabled='true']>.emotion-7 {
+.emotion-5[data-disabled='true']>.emotion-8 {
   color: #b5b7bd;
 }
 
-.emotion-4[data-disabled='true']>.emotion-7::-webkit-input-placeholder {
+.emotion-5[data-disabled='true']>.emotion-8::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-4[data-disabled='true']>.emotion-7::-moz-placeholder {
+.emotion-5[data-disabled='true']>.emotion-8::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-4[data-disabled='true']>.emotion-7:-ms-input-placeholder {
+.emotion-5[data-disabled='true']>.emotion-8:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-4[data-disabled='true']>.emotion-7::placeholder {
+.emotion-5[data-disabled='true']>.emotion-8::placeholder {
   color: #b5b7bd;
 }
 
-.emotion-4:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-5:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-4 {
+.emotion-5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1252,69 +1260,69 @@ exports[`TextInputV2 > should render correctly when input is readOnly 1`] = `
   border-radius: 0.25rem;
 }
 
-.emotion-4>.emotion-7 {
+.emotion-5>.emotion-8 {
   color: #3f4250;
 }
 
-.emotion-4>.emotion-7::-webkit-input-placeholder {
+.emotion-5>.emotion-8::-webkit-input-placeholder {
   color: #727683;
 }
 
-.emotion-4>.emotion-7::-moz-placeholder {
+.emotion-5>.emotion-8::-moz-placeholder {
   color: #727683;
 }
 
-.emotion-4>.emotion-7:-ms-input-placeholder {
+.emotion-5>.emotion-8:-ms-input-placeholder {
   color: #727683;
 }
 
-.emotion-4>.emotion-7::placeholder {
+.emotion-5>.emotion-8::placeholder {
   color: #727683;
 }
 
-.emotion-4[data-success='true'] {
+.emotion-5[data-success='true'] {
   border-color: #22674e;
 }
 
-.emotion-4[data-error='true'] {
+.emotion-5[data-error='true'] {
   border-color: #b3144d;
 }
 
-.emotion-4[data-readonly='true'] {
+.emotion-5[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
 }
 
-.emotion-4[data-disabled='true'] {
+.emotion-5[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
 }
 
-.emotion-4[data-disabled='true']>.emotion-7 {
+.emotion-5[data-disabled='true']>.emotion-8 {
   color: #b5b7bd;
 }
 
-.emotion-4[data-disabled='true']>.emotion-7::-webkit-input-placeholder {
+.emotion-5[data-disabled='true']>.emotion-8::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-4[data-disabled='true']>.emotion-7::-moz-placeholder {
+.emotion-5[data-disabled='true']>.emotion-8::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-4[data-disabled='true']>.emotion-7:-ms-input-placeholder {
+.emotion-5[data-disabled='true']>.emotion-8:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-4[data-disabled='true']>.emotion-7::placeholder {
+.emotion-5[data-disabled='true']>.emotion-8::placeholder {
   color: #b5b7bd;
 }
 
-.emotion-4:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-5:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-6 {
+.emotion-7 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -1327,15 +1335,15 @@ exports[`TextInputV2 > should render correctly when input is readOnly 1`] = `
   font-size: 0.875rem;
 }
 
-.emotion-6[data-size='large'] {
+.emotion-7[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-6[data-size='small'] {
+.emotion-7[data-size='small'] {
   padding-left: 0.5rem;
 }
 
-.emotion-6 {
+.emotion-7 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -1348,11 +1356,11 @@ exports[`TextInputV2 > should render correctly when input is readOnly 1`] = `
   font-size: 0.875rem;
 }
 
-.emotion-6[data-size='large'] {
+.emotion-7[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-6[data-size='small'] {
+.emotion-7[data-size='small'] {
   padding-left: 0.5rem;
 }
 
@@ -1363,14 +1371,14 @@ exports[`TextInputV2 > should render correctly when input is readOnly 1`] = `
       class="emotion-0 emotion-1"
     >
       <label
-        class="emotion-2 emotion-3"
+        class="emotion-2 emotion-3 emotion-4"
         for=":rd:"
       >
         Test
       </label>
       <div>
         <div
-          class="emotion-4 emotion-5"
+          class="emotion-5 emotion-6"
           data-disabled="false"
           data-error="false"
           data-readonly="true"
@@ -1378,7 +1386,7 @@ exports[`TextInputV2 > should render correctly when input is readOnly 1`] = `
         >
           <input
             aria-invalid="false"
-            class="emotion-6 emotion-7"
+            class="emotion-7 emotion-8"
             data-size="large"
             id=":rd:"
             readonly=""
@@ -1417,8 +1425,8 @@ exports[`TextInputV2 > should render correctly with basic props 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-2 {
-  color: #222638;
+.emotion-3 {
+  color: #3f4250;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -1427,9 +1435,10 @@ exports[`TextInputV2 > should render correctly with basic props 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  cursor: pointer;
 }
 
-.emotion-4 {
+.emotion-5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1443,69 +1452,69 @@ exports[`TextInputV2 > should render correctly with basic props 1`] = `
   border-radius: 0.25rem;
 }
 
-.emotion-4>.emotion-7 {
+.emotion-5>.emotion-8 {
   color: #3f4250;
 }
 
-.emotion-4>.emotion-7::-webkit-input-placeholder {
+.emotion-5>.emotion-8::-webkit-input-placeholder {
   color: #727683;
 }
 
-.emotion-4>.emotion-7::-moz-placeholder {
+.emotion-5>.emotion-8::-moz-placeholder {
   color: #727683;
 }
 
-.emotion-4>.emotion-7:-ms-input-placeholder {
+.emotion-5>.emotion-8:-ms-input-placeholder {
   color: #727683;
 }
 
-.emotion-4>.emotion-7::placeholder {
+.emotion-5>.emotion-8::placeholder {
   color: #727683;
 }
 
-.emotion-4[data-success='true'] {
+.emotion-5[data-success='true'] {
   border-color: #22674e;
 }
 
-.emotion-4[data-error='true'] {
+.emotion-5[data-error='true'] {
   border-color: #b3144d;
 }
 
-.emotion-4[data-readonly='true'] {
+.emotion-5[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
 }
 
-.emotion-4[data-disabled='true'] {
+.emotion-5[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
 }
 
-.emotion-4[data-disabled='true']>.emotion-7 {
+.emotion-5[data-disabled='true']>.emotion-8 {
   color: #b5b7bd;
 }
 
-.emotion-4[data-disabled='true']>.emotion-7::-webkit-input-placeholder {
+.emotion-5[data-disabled='true']>.emotion-8::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-4[data-disabled='true']>.emotion-7::-moz-placeholder {
+.emotion-5[data-disabled='true']>.emotion-8::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-4[data-disabled='true']>.emotion-7:-ms-input-placeholder {
+.emotion-5[data-disabled='true']>.emotion-8:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-4[data-disabled='true']>.emotion-7::placeholder {
+.emotion-5[data-disabled='true']>.emotion-8::placeholder {
   color: #b5b7bd;
 }
 
-.emotion-4:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-5:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-6 {
+.emotion-7 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -1518,11 +1527,11 @@ exports[`TextInputV2 > should render correctly with basic props 1`] = `
   font-size: 0.875rem;
 }
 
-.emotion-6[data-size='large'] {
+.emotion-7[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-6[data-size='small'] {
+.emotion-7[data-size='small'] {
   padding-left: 0.5rem;
 }
 
@@ -1533,14 +1542,14 @@ exports[`TextInputV2 > should render correctly with basic props 1`] = `
       class="emotion-0 emotion-1"
     >
       <label
-        class="emotion-2 emotion-3"
+        class="emotion-2 emotion-3 emotion-4"
         for=":r0:"
       >
         Test
       </label>
       <div>
         <div
-          class="emotion-4 emotion-5"
+          class="emotion-5 emotion-6"
           data-disabled="false"
           data-error="false"
           data-readonly="false"
@@ -1548,7 +1557,7 @@ exports[`TextInputV2 > should render correctly with basic props 1`] = `
         >
           <input
             aria-invalid="false"
-            class="emotion-6 emotion-7"
+            class="emotion-7 emotion-8"
             data-size="large"
             id=":r0:"
             type="text"

@@ -2741,10 +2741,14 @@ exports[`Pagination > should render correctly with perPage - default values 1`] 
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-13[data-state='neutral']:not([data-disabled='true']):hover,
-.emotion-13[data-state='neutral']:not([data-disabled='true']):focus {
+.emotion-13[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
+}
+
+.emotion-13[data-state='neutral']:not([data-disabled='true']):focus-visible {
+  outline: 5px auto Highlight;
+  outline: 5px auto -webkit-focus-ring-color;
 }
 
 .emotion-13[data-state='neutral'][data-dropdownvisible='true'] {
@@ -2805,6 +2809,7 @@ exports[`Pagination > should render correctly with perPage - default values 1`] 
   text-decoration: none;
   text-overflow: ellipsis;
   overflow: hidden;
+  white-space: nowrap;
 }
 
 .emotion-18 {
@@ -3145,7 +3150,7 @@ exports[`Pagination > should render correctly with perPage - default values 1`] 
             aria-describedby=":r1f:"
             class="emotion-9 emotion-10"
             data-container-full-width="true"
-            tabindex="0"
+            tabindex="-1"
           >
             <div
               class="emotion-11 emotion-1"
@@ -3451,10 +3456,14 @@ exports[`Pagination > should render correctly with perPage 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-13[data-state='neutral']:not([data-disabled='true']):hover,
-.emotion-13[data-state='neutral']:not([data-disabled='true']):focus {
+.emotion-13[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
+}
+
+.emotion-13[data-state='neutral']:not([data-disabled='true']):focus-visible {
+  outline: 5px auto Highlight;
+  outline: 5px auto -webkit-focus-ring-color;
 }
 
 .emotion-13[data-state='neutral'][data-dropdownvisible='true'] {
@@ -3515,6 +3524,7 @@ exports[`Pagination > should render correctly with perPage 1`] = `
   text-decoration: none;
   text-overflow: ellipsis;
   overflow: hidden;
+  white-space: nowrap;
 }
 
 .emotion-18 {
@@ -3855,7 +3865,7 @@ exports[`Pagination > should render correctly with perPage 1`] = `
             aria-describedby=":r1u:"
             class="emotion-9 emotion-10"
             data-container-full-width="true"
-            tabindex="0"
+            tabindex="-1"
           >
             <div
               class="emotion-11 emotion-1"

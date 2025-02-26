@@ -75,8 +75,10 @@ const Container = styled(Stack)`
     }
   }
 
-  ${RadioStack}, ${CheckboxContainer} {
-    width: 100%;
+  &[data-has-label='true'] {
+    ${RadioStack}, ${CheckboxContainer} {
+      width: 100%;
+    }
   }
 `
 const StyledDiv = styled.div`
@@ -149,7 +151,10 @@ const StyledElement = styled('div', {
   }
 `
 
-const StyledRadio = StyledElement.withComponent(Radio)
+const OverloadedRadio = StyledElement.withComponent(Radio)
+const StyledRadio = styled(OverloadedRadio)`
+  pointer-events: none;
+`
 const OverloadedCheckbox = StyledElement.withComponent(Checkbox)
 const StyledCheckbox = styled(OverloadedCheckbox)`
   label {
@@ -348,9 +353,9 @@ export const SelectableCard = forwardRef(
           data-image={image}
           ref={ref}
           alignItems="start"
-          direction="column"
+          direction={label ? 'column' : 'row'}
           gap={0.5}
-          flex={1}
+          flex={label ? 1 : undefined}
           tabIndex={disabled ? undefined : 0}
           role="button"
         >
@@ -370,7 +375,7 @@ export const SelectableCard = forwardRef(
                 id={id}
                 ref={innerRef}
                 data-error={isError}
-                tabIndex={!showTick ? -1 : undefined}
+                tabIndex={-1}
                 {...(label ? { label } : { 'aria-label': ariaLabel as string })}
               />
             ) : (
@@ -388,6 +393,7 @@ export const SelectableCard = forwardRef(
                 id={id}
                 ref={innerRef}
                 data-error={isError}
+                tabIndex={-1}
                 {...(label
                   ? { children: label, 'aria-label': undefined }
                   : { 'aria-label': ariaLabel as string })}

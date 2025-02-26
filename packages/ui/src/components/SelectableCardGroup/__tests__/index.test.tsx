@@ -91,7 +91,7 @@ describe('SelectableCardGroup', () => {
       </SelectableCardGroup>,
     ))
 
-  test('throws if SelectableCardGroup.Card sed without SelectableCardGroup', () => {
+  test('throws if SelectableCardGroup.Card is used without SelectableCardGroup', () => {
     expect(() =>
       render(<SelectableCardGroup.Card value="value-1" label="Checkbox 1" />),
     ).toThrow(
