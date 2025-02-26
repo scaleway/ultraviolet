@@ -1,65 +1,80 @@
 import type { StoryFn } from '@storybook/react'
-import { ComponentProps, useState } from 'react'
+import { useState } from 'react'
 import { SelectableCardOptionGroup } from '..'
-import ubuntu from './assets/ubuntu.svg'
-import { Text } from '../../Text'
 import { Stack } from '../../Stack'
-import type { SelectInputV2 } from '../../SelectInputV2'
-
-const options: ComponentProps<typeof SelectInputV2>['options'] = [
-  {
-    label: 'Ubuntu 18.04 LTS',
-    value: 'ubuntu-18.04',
-  },
-  {
-    label: 'Ubuntu 20.04 LTS',
-    value: 'ubuntu-20.04',
-  },
-]
+import { Text } from '../../Text'
+import centos from './assets/centos.svg'
+import debian from './assets/debian.svg'
+import ubuntu from './assets/ubuntu.svg'
+import { centosOptions, debianOptions, ubuntuOptions } from './constants'
 
 export const Template: StoryFn<typeof SelectableCardOptionGroup> = args => {
-  const [value, onChange] = useState('value-1')
+  const [value, onChange] = useState<string>()
+  const [option, onChangeOption] = useState<string>()
 
   return (
-    <SelectableCardOptionGroup
-      {...args}
-      value={value}
-      onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
-        onChange(event.currentTarget.value)
-      }
-    >
-      <SelectableCardOptionGroup.Option
-        value="value-1"
-        aria-label="value1"
-        options={options}
-        onChange={() => {}}
+    <Stack direction="column" gap={8}>
+      <SelectableCardOptionGroup
+        {...args}
+        value={value}
+        optionValue={option}
+        onChangeOption={(newValue: string) => {
+          onChangeOption(newValue)
+        }}
+        onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
+          console.log('ok')
+          onChange(event.currentTarget.value)
+        }}
       >
-        <Stack
-          direction="column"
-          gap={1}
-          justifyContent="center"
-          alignItems="center"
-        >
-          <img width="56" src={ubuntu} alt="Ubuntu" />
+        <SelectableCardOptionGroup.Option
+          value="ubuntu"
+          label="Ubuntu"
+          options={ubuntuOptions}
+          image={ubuntu}
+        />
+        <SelectableCardOptionGroup.Option
+          value="debian"
+          label="Debian"
+          options={debianOptions}
+          image={debian}
+        />
+        <SelectableCardOptionGroup.Option
+          value="centos"
+          label="CentOS"
+          options={centosOptions}
+          image={centos}
+        />
+      </SelectableCardOptionGroup>
+      <Stack>
+        <Text as="h2" variant="bodyStrong">
+          Debug:
+        </Text>
+        <Text as="p" variant="body">
+          Selected OS:{' '}
           <Text as="span" variant="bodyStrong">
-            Ubuntu
+            {value}
           </Text>
-        </Stack>
-      </SelectableCardOptionGroup.Option>
-      <SelectableCardOptionGroup.Option
-        onChange={() => {}}
-        value="value-2"
-        aria-label="value1"
-        options={options}
-      >
-        Value 2
-      </SelectableCardOptionGroup.Option>
-    </SelectableCardOptionGroup>
+        </Text>
+        <Text as="p" variant="body">
+          Selected OS version:{' '}
+          <Text as="span" variant="bodyStrong">
+            {option}
+          </Text>
+        </Text>
+      </Stack>
+    </Stack>
   )
 }
 
 Template.args = {
-  name: 'template',
-  legend: 'Radio',
-  helper: 'Helper content for the group',
+  legend: 'Choose your OS',
+  helper: 'Choose the OS and version you need to install on your server',
 }
+
+Template.decorators = [
+  Story => (
+    <div style={{ height: '350px' }}>
+      <Story />
+    </div>
+  ),
+]

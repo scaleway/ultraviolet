@@ -307,16 +307,30 @@ export const Popup = forwardRef(
      * popup from dom.
      */
     const closePopup = useCallback(() => {
-      debounceTimer.current = setTimeout(
-        () => {
+      const closeFunction = () => {
+        if (!disableAnimation) {
           setReverseAnimation(true)
+
           timer.current = setTimeout(() => {
-            unmountPopupFromDom()
             onClose?.()
+            unmountPopupFromDom()
           }, animationDuration)
-        },
-        debounceDelay && !disableAnimation ? debounceDelay : 0,
-      )
+        } else {
+          onClose?.()
+          unmountPopupFromDom()
+        }
+      }
+
+      if (!disableAnimation) {
+        debounceTimer.current = setTimeout(
+          () => {
+            closeFunction()
+          },
+          debounceDelay && !disableAnimation ? debounceDelay : 0,
+        )
+      } else {
+        closeFunction()
+      }
     }, [
       animationDuration,
       disableAnimation,

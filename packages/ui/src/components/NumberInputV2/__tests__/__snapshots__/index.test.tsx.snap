@@ -7876,8 +7876,8 @@ exports[`NumberInputV2 > should renders correctly with label 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-2 {
-  color: #222638;
+.emotion-3 {
+  color: #3f4250;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -7886,9 +7886,10 @@ exports[`NumberInputV2 > should renders correctly with label 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  cursor: pointer;
 }
 
-.emotion-4 {
+.emotion-5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -7907,52 +7908,52 @@ exports[`NumberInputV2 > should renders correctly with label 1`] = `
   border-radius: 0.25rem;
 }
 
-.emotion-4:focus-within {
+.emotion-5:focus-within {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-4[data-success='true'] {
+.emotion-5[data-success='true'] {
   border-color: #22674e;
 }
 
-.emotion-4[data-error='true'] {
+.emotion-5[data-error='true'] {
   border-color: #b3144d;
 }
 
-.emotion-4:hover {
+.emotion-5:hover {
   border-color: #792dd4;
 }
 
-.emotion-4[data-readonly='true'] {
+.emotion-5[data-readonly='true'] {
   border-color: #d9dadd;
   background: #f9f9fa;
   cursor: not-allowed;
 }
 
-.emotion-4[data-disabled='true'] {
+.emotion-5[data-disabled='true'] {
   border-color: #e9eaeb;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.emotion-4[data-controls='false']>.emotion-12 {
+.emotion-5[data-controls='false']>.emotion-13 {
   border-width: 0;
 }
 
-.emotion-4[data-size='small'] {
+.emotion-5[data-size='small'] {
   height: 2rem;
 }
 
-.emotion-4[data-size='medium'] {
+.emotion-5[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-4[data-size='large'] {
+.emotion-5[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-6 {
+.emotion-7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -7976,20 +7977,20 @@ exports[`NumberInputV2 > should renders correctly with label 1`] = `
   padding: 0.125rem 0.5rem;
 }
 
-.emotion-6[data-size='small'] {
+.emotion-7[data-size='small'] {
   height: 2rem;
 }
 
-.emotion-6[data-size='medium'] {
+.emotion-7[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-6[data-size='large'] {
+.emotion-7[data-size='large'] {
   height: 3rem;
   padding: 0.25rem 0.5rem;
 }
 
-.emotion-8 {
+.emotion-9 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -8028,22 +8029,22 @@ exports[`NumberInputV2 > should renders correctly with label 1`] = `
   color: #3f4250;
 }
 
-.emotion-8:hover {
+.emotion-9:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-8:active {
+.emotion-9:active {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.emotion-8:hover,
-.emotion-8:active {
+.emotion-9:hover,
+.emotion-9:active {
   background: #e9eaeb;
   color: #222638;
 }
 
-.emotion-10 {
+.emotion-11 {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
@@ -8052,16 +8053,16 @@ exports[`NumberInputV2 > should renders correctly with label 1`] = `
   min-height: 16px;
 }
 
-.emotion-10 .fillStroke {
+.emotion-11 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.emotion-10 path {
+.emotion-11 path {
   fill: currentColor;
 }
 
-.emotion-13 {
+.emotion-14 {
   display: grid;
   grid-template-columns: 1fr auto;
   -webkit-align-items: center;
@@ -8078,7 +8079,7 @@ exports[`NumberInputV2 > should renders correctly with label 1`] = `
   width: 100%;
 }
 
-.emotion-15 {
+.emotion-16 {
   outline: none;
   border: none;
   padding: 0;
@@ -8093,18 +8094,18 @@ exports[`NumberInputV2 > should renders correctly with label 1`] = `
   background: none;
 }
 
-.emotion-15[data-has-unit='true'] {
+.emotion-16[data-has-unit='true'] {
   text-align: left;
   padding: 0.5rem 0 0.5rem 0.5rem;
 }
 
-.emotion-15::-webkit-outer-spin-button,
-.emotion-15::-webkit-inner-spin-button {
+.emotion-16::-webkit-outer-spin-button,
+.emotion-16::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.emotion-15 {
+.emotion-16 {
   -moz-appearance: textfield;
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
@@ -8112,15 +8113,15 @@ exports[`NumberInputV2 > should renders correctly with label 1`] = `
   appearance: textfield;
 }
 
-.emotion-15[data-size='small'] {
+.emotion-16[data-size='small'] {
   height: 2rem;
 }
 
-.emotion-15[data-size='medium'] {
+.emotion-16[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-15[data-size='large'] {
+.emotion-16[data-size='large'] {
   height: 3rem;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
@@ -8128,34 +8129,34 @@ exports[`NumberInputV2 > should renders correctly with label 1`] = `
   line-height: 1.5rem;
 }
 
-.emotion-15:-moz-read-only {
+.emotion-16:-moz-read-only {
   color: #3f4250;
   background: #f9f9fa;
   border-block: 1px solid #d9dadd;
 }
 
-.emotion-15:read-only {
+.emotion-16:read-only {
   color: #3f4250;
   background: #f9f9fa;
   border-block: 1px solid #d9dadd;
 }
 
-.emotion-15:-moz-read-only~.e1b9qdjy2 {
+.emotion-16:-moz-read-only~.e1b9qdjy2 {
   background: #f9f9fa;
 }
 
-.emotion-15:read-only~.e1b9qdjy2 {
+.emotion-16:read-only~.e1b9qdjy2 {
   background: #f9f9fa;
 }
 
-.emotion-15:disabled {
+.emotion-16:disabled {
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
   border-block: 1px solid #e9eaeb;
 }
 
-.emotion-15:disabled~.e1b9qdjy2 {
+.emotion-16:disabled~.e1b9qdjy2 {
   background: #f3f3f4;
   cursor: not-allowed;
   -webkit-user-select: none;
@@ -8164,12 +8165,12 @@ exports[`NumberInputV2 > should renders correctly with label 1`] = `
   user-select: none;
 }
 
-.emotion-15:placeholder-shown~.e1b9qdjy2 {
+.emotion-16:placeholder-shown~.e1b9qdjy2 {
   color: #727683;
   font-size: 1rem;
 }
 
-.emotion-15[data-controls='false'] {
+.emotion-16[data-controls='false'] {
   text-align: left;
 }
 
@@ -8180,14 +8181,14 @@ exports[`NumberInputV2 > should renders correctly with label 1`] = `
       class="emotion-0 emotion-1"
     >
       <label
-        class="emotion-2 emotion-3"
+        class="emotion-2 emotion-3 emotion-4"
         for=":ra:"
       >
         Label
       </label>
       <div>
         <div
-          class="emotion-4 emotion-5"
+          class="emotion-5 emotion-6"
           data-controls="true"
           data-disabled="false"
           data-error="false"
@@ -8196,16 +8197,16 @@ exports[`NumberInputV2 > should renders correctly with label 1`] = `
           data-unit="false"
         >
           <div
-            class="emotion-6 emotion-7"
+            class="emotion-7 emotion-8"
             data-size="large"
           >
             <button
               aria-label="minus"
-              class="emotion-8 emotion-9"
+              class="emotion-9 emotion-10"
               type="button"
             >
               <svg
-                class="emotion-10 emotion-11"
+                class="emotion-11 emotion-12"
                 viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"
               >
@@ -8216,10 +8217,10 @@ exports[`NumberInputV2 > should renders correctly with label 1`] = `
             </button>
           </div>
           <div
-            class="emotion-12 emotion-13 emotion-14"
+            class="emotion-13 emotion-14 emotion-15"
           >
             <input
-              class="emotion-15 emotion-16"
+              class="emotion-16 emotion-17"
               data-controls="true"
               data-has-unit="false"
               data-size="large"
@@ -8231,16 +8232,16 @@ exports[`NumberInputV2 > should renders correctly with label 1`] = `
             />
           </div>
           <div
-            class="emotion-6 emotion-7"
+            class="emotion-7 emotion-8"
             data-size="large"
           >
             <button
               aria-label="plus"
-              class="emotion-8 emotion-9"
+              class="emotion-9 emotion-10"
               type="button"
             >
               <svg
-                class="emotion-10 emotion-11"
+                class="emotion-11 emotion-12"
                 viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"
               >
@@ -8305,8 +8306,8 @@ exports[`NumberInputV2 > should renders correctly with label description 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-4 {
-  color: #222638;
+.emotion-5 {
+  color: #3f4250;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -8315,9 +8316,10 @@ exports[`NumberInputV2 > should renders correctly with label description 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  cursor: pointer;
 }
 
-.emotion-6 {
+.emotion-7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -8336,52 +8338,52 @@ exports[`NumberInputV2 > should renders correctly with label description 1`] = `
   border-radius: 0.25rem;
 }
 
-.emotion-6:focus-within {
+.emotion-7:focus-within {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-6[data-success='true'] {
+.emotion-7[data-success='true'] {
   border-color: #22674e;
 }
 
-.emotion-6[data-error='true'] {
+.emotion-7[data-error='true'] {
   border-color: #b3144d;
 }
 
-.emotion-6:hover {
+.emotion-7:hover {
   border-color: #792dd4;
 }
 
-.emotion-6[data-readonly='true'] {
+.emotion-7[data-readonly='true'] {
   border-color: #d9dadd;
   background: #f9f9fa;
   cursor: not-allowed;
 }
 
-.emotion-6[data-disabled='true'] {
+.emotion-7[data-disabled='true'] {
   border-color: #e9eaeb;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.emotion-6[data-controls='false']>.emotion-14 {
+.emotion-7[data-controls='false']>.emotion-15 {
   border-width: 0;
 }
 
-.emotion-6[data-size='small'] {
+.emotion-7[data-size='small'] {
   height: 2rem;
 }
 
-.emotion-6[data-size='medium'] {
+.emotion-7[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-6[data-size='large'] {
+.emotion-7[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-8 {
+.emotion-9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -8405,20 +8407,20 @@ exports[`NumberInputV2 > should renders correctly with label description 1`] = `
   padding: 0.125rem 0.5rem;
 }
 
-.emotion-8[data-size='small'] {
+.emotion-9[data-size='small'] {
   height: 2rem;
 }
 
-.emotion-8[data-size='medium'] {
+.emotion-9[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-8[data-size='large'] {
+.emotion-9[data-size='large'] {
   height: 3rem;
   padding: 0.25rem 0.5rem;
 }
 
-.emotion-10 {
+.emotion-11 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -8457,22 +8459,22 @@ exports[`NumberInputV2 > should renders correctly with label description 1`] = `
   color: #3f4250;
 }
 
-.emotion-10:hover {
+.emotion-11:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-10:active {
+.emotion-11:active {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.emotion-10:hover,
-.emotion-10:active {
+.emotion-11:hover,
+.emotion-11:active {
   background: #e9eaeb;
   color: #222638;
 }
 
-.emotion-12 {
+.emotion-13 {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
@@ -8481,16 +8483,16 @@ exports[`NumberInputV2 > should renders correctly with label description 1`] = `
   min-height: 16px;
 }
 
-.emotion-12 .fillStroke {
+.emotion-13 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.emotion-12 path {
+.emotion-13 path {
   fill: currentColor;
 }
 
-.emotion-15 {
+.emotion-16 {
   display: grid;
   grid-template-columns: 1fr auto;
   -webkit-align-items: center;
@@ -8507,7 +8509,7 @@ exports[`NumberInputV2 > should renders correctly with label description 1`] = `
   width: 100%;
 }
 
-.emotion-17 {
+.emotion-18 {
   outline: none;
   border: none;
   padding: 0;
@@ -8522,18 +8524,18 @@ exports[`NumberInputV2 > should renders correctly with label description 1`] = `
   background: none;
 }
 
-.emotion-17[data-has-unit='true'] {
+.emotion-18[data-has-unit='true'] {
   text-align: left;
   padding: 0.5rem 0 0.5rem 0.5rem;
 }
 
-.emotion-17::-webkit-outer-spin-button,
-.emotion-17::-webkit-inner-spin-button {
+.emotion-18::-webkit-outer-spin-button,
+.emotion-18::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.emotion-17 {
+.emotion-18 {
   -moz-appearance: textfield;
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
@@ -8541,15 +8543,15 @@ exports[`NumberInputV2 > should renders correctly with label description 1`] = `
   appearance: textfield;
 }
 
-.emotion-17[data-size='small'] {
+.emotion-18[data-size='small'] {
   height: 2rem;
 }
 
-.emotion-17[data-size='medium'] {
+.emotion-18[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-17[data-size='large'] {
+.emotion-18[data-size='large'] {
   height: 3rem;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
@@ -8557,34 +8559,34 @@ exports[`NumberInputV2 > should renders correctly with label description 1`] = `
   line-height: 1.5rem;
 }
 
-.emotion-17:-moz-read-only {
+.emotion-18:-moz-read-only {
   color: #3f4250;
   background: #f9f9fa;
   border-block: 1px solid #d9dadd;
 }
 
-.emotion-17:read-only {
+.emotion-18:read-only {
   color: #3f4250;
   background: #f9f9fa;
   border-block: 1px solid #d9dadd;
 }
 
-.emotion-17:-moz-read-only~.e1b9qdjy2 {
+.emotion-18:-moz-read-only~.e1b9qdjy2 {
   background: #f9f9fa;
 }
 
-.emotion-17:read-only~.e1b9qdjy2 {
+.emotion-18:read-only~.e1b9qdjy2 {
   background: #f9f9fa;
 }
 
-.emotion-17:disabled {
+.emotion-18:disabled {
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
   border-block: 1px solid #e9eaeb;
 }
 
-.emotion-17:disabled~.e1b9qdjy2 {
+.emotion-18:disabled~.e1b9qdjy2 {
   background: #f3f3f4;
   cursor: not-allowed;
   -webkit-user-select: none;
@@ -8593,12 +8595,12 @@ exports[`NumberInputV2 > should renders correctly with label description 1`] = `
   user-select: none;
 }
 
-.emotion-17:placeholder-shown~.e1b9qdjy2 {
+.emotion-18:placeholder-shown~.e1b9qdjy2 {
   color: #727683;
   font-size: 1rem;
 }
 
-.emotion-17[data-controls='false'] {
+.emotion-18[data-controls='false'] {
   text-align: left;
 }
 
@@ -8612,7 +8614,7 @@ exports[`NumberInputV2 > should renders correctly with label description 1`] = `
         class="emotion-2 emotion-1"
       >
         <label
-          class="emotion-4 emotion-5"
+          class="emotion-4 emotion-5 emotion-6"
           for=":rf:"
         />
         <div>
@@ -8621,7 +8623,7 @@ exports[`NumberInputV2 > should renders correctly with label description 1`] = `
       </div>
       <div>
         <div
-          class="emotion-6 emotion-7"
+          class="emotion-7 emotion-8"
           data-controls="true"
           data-disabled="false"
           data-error="false"
@@ -8630,16 +8632,16 @@ exports[`NumberInputV2 > should renders correctly with label description 1`] = `
           data-unit="false"
         >
           <div
-            class="emotion-8 emotion-9"
+            class="emotion-9 emotion-10"
             data-size="large"
           >
             <button
               aria-label="minus"
-              class="emotion-10 emotion-11"
+              class="emotion-11 emotion-12"
               type="button"
             >
               <svg
-                class="emotion-12 emotion-13"
+                class="emotion-13 emotion-14"
                 viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"
               >
@@ -8650,10 +8652,10 @@ exports[`NumberInputV2 > should renders correctly with label description 1`] = `
             </button>
           </div>
           <div
-            class="emotion-14 emotion-15 emotion-16"
+            class="emotion-15 emotion-16 emotion-17"
           >
             <input
-              class="emotion-17 emotion-18"
+              class="emotion-18 emotion-19"
               data-controls="true"
               data-has-unit="false"
               data-size="large"
@@ -8665,16 +8667,16 @@ exports[`NumberInputV2 > should renders correctly with label description 1`] = `
             />
           </div>
           <div
-            class="emotion-8 emotion-9"
+            class="emotion-9 emotion-10"
             data-size="large"
           >
             <button
               aria-label="plus"
-              class="emotion-10 emotion-11"
+              class="emotion-11 emotion-12"
               type="button"
             >
               <svg
-                class="emotion-12 emotion-13"
+                class="emotion-13 emotion-14"
                 viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"
               >

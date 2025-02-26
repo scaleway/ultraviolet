@@ -25,8 +25,8 @@ exports[`TextAreaField > should render correctly 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-2 {
-  color: #222638;
+.emotion-3 {
+  color: #3f4250;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -35,9 +35,10 @@ exports[`TextAreaField > should render correctly 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  cursor: pointer;
 }
 
-.emotion-4 {
+.emotion-5 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -45,7 +46,7 @@ exports[`TextAreaField > should render correctly 1`] = `
   display: flex;
 }
 
-.emotion-6 {
+.emotion-7 {
   width: 100%;
   resize: vertical;
   background: #ffffff;
@@ -56,68 +57,68 @@ exports[`TextAreaField > should render correctly 1`] = `
   padding-right: calc(1.5rem + 0px + 0px);
 }
 
-.emotion-6::-webkit-input-placeholder {
+.emotion-7::-webkit-input-placeholder {
   color: #727683;
 }
 
-.emotion-6::-moz-placeholder {
+.emotion-7::-moz-placeholder {
   color: #727683;
 }
 
-.emotion-6:-ms-input-placeholder {
+.emotion-7:-ms-input-placeholder {
   color: #727683;
 }
 
-.emotion-6::placeholder {
+.emotion-7::placeholder {
   color: #727683;
 }
 
-.emotion-6[data-success='true'] {
+.emotion-7[data-success='true'] {
   border-color: #22674e;
 }
 
-.emotion-6[data-error='true'] {
+.emotion-7[data-error='true'] {
   border-color: #b3144d;
 }
 
-.emotion-6[data-readonly='true'] {
+.emotion-7[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
 }
 
-.emotion-6:disabled {
+.emotion-7:disabled {
   background: #f3f3f4;
   border-color: #e9eaeb;
   color: #b5b7bd;
 }
 
-.emotion-6:disabled::-webkit-input-placeholder {
+.emotion-7:disabled::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-6:disabled::-moz-placeholder {
+.emotion-7:disabled::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-6:disabled:-ms-input-placeholder {
+.emotion-7:disabled:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-6:disabled::placeholder {
+.emotion-7:disabled::placeholder {
   color: #b5b7bd;
 }
 
-.emotion-6:not(:disabled):hover {
+.emotion-7:not(:disabled):hover {
   border-color: #8c40ef;
 }
 
-.emotion-6:not(:disabled):focus {
+.emotion-7:not(:disabled):focus {
   outline: none;
   border-color: #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-8 {
+.emotion-9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -153,17 +154,17 @@ exports[`TextAreaField > should render correctly 1`] = `
         class="emotion-0 emotion-1"
       >
         <label
-          class="emotion-2 emotion-3"
+          class="emotion-2 emotion-3 emotion-4"
           for=":r0:"
         >
           Test
         </label>
         <div
-          class="emotion-4 emotion-5"
+          class="emotion-5 emotion-6"
         >
           <textarea
             aria-invalid="false"
-            class="emotion-6 emotion-7"
+            class="emotion-7 emotion-8"
             data-error="false"
             data-readonly="false"
             data-success="false"
@@ -172,7 +173,7 @@ exports[`TextAreaField > should render correctly 1`] = `
             rows="3"
           />
           <div
-            class="emotion-8 emotion-9"
+            class="emotion-9 emotion-10"
           />
         </div>
       </div>
@@ -229,8 +230,8 @@ exports[`TextAreaField > should render correctly generated 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-4 {
-  color: #222638;
+.emotion-5 {
+  color: #3f4250;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -239,9 +240,10 @@ exports[`TextAreaField > should render correctly generated 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  cursor: pointer;
 }
 
-.emotion-6 {
+.emotion-7 {
   color: #b3144d;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
@@ -253,7 +255,7 @@ exports[`TextAreaField > should render correctly generated 1`] = `
   text-decoration: none;
 }
 
-.emotion-8 {
+.emotion-9 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -261,7 +263,7 @@ exports[`TextAreaField > should render correctly generated 1`] = `
   display: flex;
 }
 
-.emotion-10 {
+.emotion-11 {
   width: 100%;
   resize: vertical;
   background: #ffffff;
@@ -272,68 +274,68 @@ exports[`TextAreaField > should render correctly generated 1`] = `
   padding-right: calc(1.5rem + 300px + 0px);
 }
 
-.emotion-10::-webkit-input-placeholder {
+.emotion-11::-webkit-input-placeholder {
   color: #727683;
 }
 
-.emotion-10::-moz-placeholder {
+.emotion-11::-moz-placeholder {
   color: #727683;
 }
 
-.emotion-10:-ms-input-placeholder {
+.emotion-11:-ms-input-placeholder {
   color: #727683;
 }
 
-.emotion-10::placeholder {
+.emotion-11::placeholder {
   color: #727683;
 }
 
-.emotion-10[data-success='true'] {
+.emotion-11[data-success='true'] {
   border-color: #22674e;
 }
 
-.emotion-10[data-error='true'] {
+.emotion-11[data-error='true'] {
   border-color: #b3144d;
 }
 
-.emotion-10[data-readonly='true'] {
+.emotion-11[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
 }
 
-.emotion-10:disabled {
+.emotion-11:disabled {
   background: #f3f3f4;
   border-color: #e9eaeb;
   color: #b5b7bd;
 }
 
-.emotion-10:disabled::-webkit-input-placeholder {
+.emotion-11:disabled::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-10:disabled::-moz-placeholder {
+.emotion-11:disabled::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-10:disabled:-ms-input-placeholder {
+.emotion-11:disabled:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-10:disabled::placeholder {
+.emotion-11:disabled::placeholder {
   color: #b5b7bd;
 }
 
-.emotion-10:not(:disabled):hover {
+.emotion-11:not(:disabled):hover {
   border-color: #8c40ef;
 }
 
-.emotion-10:not(:disabled):focus {
+.emotion-11:not(:disabled):focus {
   outline: none;
   border-color: #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-12 {
+.emotion-13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -359,7 +361,7 @@ exports[`TextAreaField > should render correctly generated 1`] = `
   right: 0.5rem;
 }
 
-.emotion-14 {
+.emotion-15 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -398,22 +400,22 @@ exports[`TextAreaField > should render correctly generated 1`] = `
   color: #3f4250;
 }
 
-.emotion-14:hover {
+.emotion-15:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-14:active {
+.emotion-15:active {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.emotion-14:hover,
-.emotion-14:active {
+.emotion-15:hover,
+.emotion-15:active {
   background: #e9eaeb;
   color: #222638;
 }
 
-.emotion-16 {
+.emotion-17 {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
@@ -422,16 +424,16 @@ exports[`TextAreaField > should render correctly generated 1`] = `
   min-height: 16px;
 }
 
-.emotion-16 .fillStroke {
+.emotion-17 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.emotion-16 path {
+.emotion-17 path {
   fill: currentColor;
 }
 
-.emotion-18 {
+.emotion-19 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -470,17 +472,17 @@ exports[`TextAreaField > should render correctly generated 1`] = `
   color: #ffffff;
 }
 
-.emotion-18:hover {
+.emotion-19:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-18:active {
+.emotion-19:active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-18:hover,
-.emotion-18:active {
+.emotion-19:hover,
+.emotion-19:active {
   background: #792dd4;
   color: #f9f9fa;
 }
@@ -498,23 +500,23 @@ exports[`TextAreaField > should render correctly generated 1`] = `
           class="emotion-2 emotion-1"
         >
           <label
-            class="emotion-4 emotion-5"
+            class="emotion-4 emotion-5 emotion-6"
             for=":r7:"
           >
             Test
           </label>
           <span
-            class="emotion-6 emotion-5"
+            class="emotion-7 emotion-6"
           >
             *
           </span>
         </div>
         <div
-          class="emotion-8 emotion-9"
+          class="emotion-9 emotion-10"
         >
           <textarea
             aria-invalid="false"
-            class="emotion-10 emotion-11"
+            class="emotion-11 emotion-12"
             data-error="false"
             data-readonly="false"
             data-success="false"
@@ -525,15 +527,15 @@ exports[`TextAreaField > should render correctly generated 1`] = `
             This is an example
           </textarea>
           <div
-            class="emotion-12 emotion-13"
+            class="emotion-13 emotion-14"
           >
             <button
               aria-label="clear value"
-              class="emotion-14 emotion-15"
+              class="emotion-15 emotion-16"
               type="button"
             >
               <svg
-                class="emotion-16 emotion-17"
+                class="emotion-17 emotion-18"
                 viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"
               >
@@ -546,7 +548,7 @@ exports[`TextAreaField > should render correctly generated 1`] = `
         </div>
       </div>
       <button
-        class="emotion-18 emotion-19"
+        class="emotion-19 emotion-20"
         type="submit"
       >
         Submit
@@ -581,8 +583,8 @@ exports[`TextAreaField > should submit with onSubmitEnter prop 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-2 {
-  color: #222638;
+.emotion-3 {
+  color: #3f4250;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -591,9 +593,10 @@ exports[`TextAreaField > should submit with onSubmitEnter prop 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  cursor: pointer;
 }
 
-.emotion-4 {
+.emotion-5 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -601,7 +604,7 @@ exports[`TextAreaField > should submit with onSubmitEnter prop 1`] = `
   display: flex;
 }
 
-.emotion-6 {
+.emotion-7 {
   width: 100%;
   resize: vertical;
   background: #ffffff;
@@ -612,68 +615,68 @@ exports[`TextAreaField > should submit with onSubmitEnter prop 1`] = `
   padding-right: calc(1.5rem + 0px + 0px);
 }
 
-.emotion-6::-webkit-input-placeholder {
+.emotion-7::-webkit-input-placeholder {
   color: #727683;
 }
 
-.emotion-6::-moz-placeholder {
+.emotion-7::-moz-placeholder {
   color: #727683;
 }
 
-.emotion-6:-ms-input-placeholder {
+.emotion-7:-ms-input-placeholder {
   color: #727683;
 }
 
-.emotion-6::placeholder {
+.emotion-7::placeholder {
   color: #727683;
 }
 
-.emotion-6[data-success='true'] {
+.emotion-7[data-success='true'] {
   border-color: #22674e;
 }
 
-.emotion-6[data-error='true'] {
+.emotion-7[data-error='true'] {
   border-color: #b3144d;
 }
 
-.emotion-6[data-readonly='true'] {
+.emotion-7[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
 }
 
-.emotion-6:disabled {
+.emotion-7:disabled {
   background: #f3f3f4;
   border-color: #e9eaeb;
   color: #b5b7bd;
 }
 
-.emotion-6:disabled::-webkit-input-placeholder {
+.emotion-7:disabled::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-6:disabled::-moz-placeholder {
+.emotion-7:disabled::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-6:disabled:-ms-input-placeholder {
+.emotion-7:disabled:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-6:disabled::placeholder {
+.emotion-7:disabled::placeholder {
   color: #b5b7bd;
 }
 
-.emotion-6:not(:disabled):hover {
+.emotion-7:not(:disabled):hover {
   border-color: #8c40ef;
 }
 
-.emotion-6:not(:disabled):focus {
+.emotion-7:not(:disabled):focus {
   outline: none;
   border-color: #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-8 {
+.emotion-9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -699,7 +702,7 @@ exports[`TextAreaField > should submit with onSubmitEnter prop 1`] = `
   right: 0.5rem;
 }
 
-.emotion-10 {
+.emotion-11 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -738,17 +741,17 @@ exports[`TextAreaField > should submit with onSubmitEnter prop 1`] = `
   color: #ffffff;
 }
 
-.emotion-10:hover {
+.emotion-11:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-10:active {
+.emotion-11:active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-10:hover,
-.emotion-10:active {
+.emotion-11:hover,
+.emotion-11:active {
   background: #792dd4;
   color: #f9f9fa;
 }
@@ -763,17 +766,17 @@ exports[`TextAreaField > should submit with onSubmitEnter prop 1`] = `
         class="emotion-0 emotion-1"
       >
         <label
-          class="emotion-2 emotion-3"
+          class="emotion-2 emotion-3 emotion-4"
           for=":r3:"
         >
           Test
         </label>
         <div
-          class="emotion-4 emotion-5"
+          class="emotion-5 emotion-6"
         >
           <textarea
             aria-invalid="false"
-            class="emotion-6 emotion-7"
+            class="emotion-7 emotion-8"
             data-error="false"
             data-readonly="false"
             data-success="false"
@@ -784,12 +787,12 @@ exports[`TextAreaField > should submit with onSubmitEnter prop 1`] = `
             This is an example
           </textarea>
           <div
-            class="emotion-8 emotion-9"
+            class="emotion-9 emotion-10"
           />
         </div>
       </div>
       <button
-        class="emotion-10 emotion-11"
+        class="emotion-11 emotion-12"
         type="submit"
       >
         Submit

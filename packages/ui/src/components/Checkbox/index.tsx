@@ -36,7 +36,7 @@ const CheckboxIconContainer = ({ children }: { children: ReactNode }) => {
   )
 }
 
-const StyledIcon = styled('svg')<{ size: number | string }>`
+export const StyledIcon = styled('svg')<{ size: number | string }>`
   border-radius: ${({ theme }) => theme.radii.default};
   height: ${({ size }) => (typeof size === 'string' ? size : `${size}px`)};
   width: ${({ size }) => (typeof size === 'string' ? size : `${size}px`)};

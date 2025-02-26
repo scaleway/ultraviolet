@@ -108,8 +108,8 @@ exports[`SwitchButtonField > should render correctly 1`] = `
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
 
-.emotion-3 .emotion-6,
-.emotion-3 .eqr7bqq1 {
+.emotion-3[data-has-label='true'] .emotion-6,
+.emotion-3[data-has-label='true'] .eqr7bqq1 {
   width: 100%;
 }
 
@@ -181,6 +181,7 @@ exports[`SwitchButtonField > should render correctly 1`] = `
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: start;
+  pointer-events: none;
 }
 
 .emotion-8[aria-disabled='false'],
@@ -363,7 +364,6 @@ exports[`SwitchButtonField > should render correctly 1`] = `
                   aria-disabled="false"
                   aria-invalid="false"
                   class="emotion-10 emotion-11"
-                  id="test-left"
                   name="test"
                   tabindex="-1"
                   type="radio"
@@ -426,7 +426,6 @@ exports[`SwitchButtonField > should render correctly 1`] = `
                   aria-invalid="false"
                   checked=""
                   class="emotion-10 emotion-11"
-                  id="test-right"
                   name="test"
                   tabindex="-1"
                   type="radio"
@@ -581,8 +580,8 @@ exports[`SwitchButtonField > should works with defaultValues 1`] = `
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
 
-.emotion-3 .emotion-6,
-.emotion-3 .eqr7bqq1 {
+.emotion-3[data-has-label='true'] .emotion-6,
+.emotion-3[data-has-label='true'] .eqr7bqq1 {
   width: 100%;
 }
 
@@ -654,6 +653,7 @@ exports[`SwitchButtonField > should works with defaultValues 1`] = `
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: start;
+  pointer-events: none;
 }
 
 .emotion-8[aria-disabled='false'],
@@ -890,7 +890,6 @@ exports[`SwitchButtonField > should works with defaultValues 1`] = `
                   aria-disabled="false"
                   aria-invalid="false"
                   class="emotion-10 emotion-11"
-                  id="test-left"
                   name="test"
                   tabindex="-1"
                   type="radio"
@@ -953,7 +952,6 @@ exports[`SwitchButtonField > should works with defaultValues 1`] = `
                   aria-invalid="false"
                   checked=""
                   class="emotion-10 emotion-11"
-                  id="test-right"
                   name="test"
                   tabindex="-1"
                   type="radio"

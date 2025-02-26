@@ -38,8 +38,15 @@ export type LabelProp =
   | {
       label: ReactNode
       'aria-label'?: never
+      id?: string
     }
   | {
       label?: never
       'aria-label': string
+      id?: string
+    }
+  | {
+      label?: never
+      'aria-label'?: never
+      id: string
     }

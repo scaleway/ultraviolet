@@ -659,8 +659,8 @@ exports[`TagInput > should renders correctly with label 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-2 {
-  color: #222638;
+.emotion-3 {
+  color: #3f4250;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -669,9 +669,10 @@ exports[`TagInput > should renders correctly with label 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  cursor: pointer;
 }
 
-.emotion-4 {
+.emotion-5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -685,35 +686,35 @@ exports[`TagInput > should renders correctly with label 1`] = `
   border-radius: 0.25rem;
 }
 
-.emotion-4:focus-within {
+.emotion-5:focus-within {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-4[data-success="true"] {
+.emotion-5[data-success="true"] {
   border-color: #22674e;
 }
 
-.emotion-4[data-error="true"] {
+.emotion-5[data-error="true"] {
   border-color: #b3144d;
 }
 
-.emotion-4:hover {
+.emotion-5:hover {
   border-color: #792dd4;
 }
 
-.emotion-4[data-readonly="true"] {
+.emotion-5[data-readonly="true"] {
   border-color: #d9dadd;
   background: #f9f9fa;
 }
 
-.emotion-4[data-disabled="true"] {
+.emotion-5[data-disabled="true"] {
   border-color: #e9eaeb;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.emotion-6 {
+.emotion-7 {
   height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -733,7 +734,7 @@ exports[`TagInput > should renders correctly with label 1`] = `
   flex: 1;
 }
 
-.emotion-8 {
+.emotion-9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -749,23 +750,23 @@ exports[`TagInput > should renders correctly with label 1`] = `
   height: 100%;
 }
 
-.emotion-8::-webkit-input-placeholder {
+.emotion-9::-webkit-input-placeholder {
   color: #727683;
 }
 
-.emotion-8::-moz-placeholder {
+.emotion-9::-moz-placeholder {
   color: #727683;
 }
 
-.emotion-8:-ms-input-placeholder {
+.emotion-9:-ms-input-placeholder {
   color: #727683;
 }
 
-.emotion-8::placeholder {
+.emotion-9::placeholder {
   color: #727683;
 }
 
-.emotion-8[data-size="large"] {
+.emotion-9[data-size="large"] {
   font-size: 1rem;
 }
 
@@ -776,24 +777,24 @@ exports[`TagInput > should renders correctly with label 1`] = `
       class="emotion-0 emotion-1"
     >
       <label
-        class="emotion-2 emotion-3"
+        class="emotion-2 emotion-3 emotion-4"
         for=":r6:"
       >
         Label
       </label>
       <div>
         <div
-          class="emotion-4 emotion-5"
+          class="emotion-5 emotion-6"
           data-disabled="false"
           data-error="false"
           data-readonly="false"
           data-success="false"
         >
           <div
-            class="emotion-6 emotion-7"
+            class="emotion-7 emotion-8"
           >
             <input
-              class="emotion-8 emotion-9"
+              class="emotion-9 emotion-10"
               data-size="large"
               id=":r6:"
               type="text"
@@ -855,8 +856,8 @@ exports[`TagInput > should renders correctly with labelDescription 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-4 {
-  color: #222638;
+.emotion-5 {
+  color: #3f4250;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -865,9 +866,10 @@ exports[`TagInput > should renders correctly with labelDescription 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  cursor: pointer;
 }
 
-.emotion-6 {
+.emotion-7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -881,35 +883,35 @@ exports[`TagInput > should renders correctly with labelDescription 1`] = `
   border-radius: 0.25rem;
 }
 
-.emotion-6:focus-within {
+.emotion-7:focus-within {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-6[data-success="true"] {
+.emotion-7[data-success="true"] {
   border-color: #22674e;
 }
 
-.emotion-6[data-error="true"] {
+.emotion-7[data-error="true"] {
   border-color: #b3144d;
 }
 
-.emotion-6:hover {
+.emotion-7:hover {
   border-color: #792dd4;
 }
 
-.emotion-6[data-readonly="true"] {
+.emotion-7[data-readonly="true"] {
   border-color: #d9dadd;
   background: #f9f9fa;
 }
 
-.emotion-6[data-disabled="true"] {
+.emotion-7[data-disabled="true"] {
   border-color: #e9eaeb;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.emotion-8 {
+.emotion-9 {
   height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -929,7 +931,7 @@ exports[`TagInput > should renders correctly with labelDescription 1`] = `
   flex: 1;
 }
 
-.emotion-10 {
+.emotion-11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -945,23 +947,23 @@ exports[`TagInput > should renders correctly with labelDescription 1`] = `
   height: 100%;
 }
 
-.emotion-10::-webkit-input-placeholder {
+.emotion-11::-webkit-input-placeholder {
   color: #727683;
 }
 
-.emotion-10::-moz-placeholder {
+.emotion-11::-moz-placeholder {
   color: #727683;
 }
 
-.emotion-10:-ms-input-placeholder {
+.emotion-11:-ms-input-placeholder {
   color: #727683;
 }
 
-.emotion-10::placeholder {
+.emotion-11::placeholder {
   color: #727683;
 }
 
-.emotion-10[data-size="large"] {
+.emotion-11[data-size="large"] {
   font-size: 1rem;
 }
 
@@ -975,7 +977,7 @@ exports[`TagInput > should renders correctly with labelDescription 1`] = `
         class="emotion-2 emotion-1"
       >
         <label
-          class="emotion-4 emotion-5"
+          class="emotion-4 emotion-5 emotion-6"
           for=":r9:"
         />
         <div>
@@ -984,17 +986,17 @@ exports[`TagInput > should renders correctly with labelDescription 1`] = `
       </div>
       <div>
         <div
-          class="emotion-6 emotion-7"
+          class="emotion-7 emotion-8"
           data-disabled="false"
           data-error="false"
           data-readonly="false"
           data-success="false"
         >
           <div
-            class="emotion-8 emotion-9"
+            class="emotion-9 emotion-10"
           >
             <input
-              class="emotion-10 emotion-11"
+              class="emotion-11 emotion-12"
               data-size="large"
               id=":r9:"
               type="text"
