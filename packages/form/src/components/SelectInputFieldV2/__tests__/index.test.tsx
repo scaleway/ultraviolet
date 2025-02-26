@@ -46,7 +46,7 @@ describe('SelectInputField', () => {
     act(() => mercury.click())
     act(() => select.click())
     await waitFor(() => {
-      expect(mercury).toBeVisible()
+      expect(screen.getByTestId(`option-stack-mercury`)).toBeVisible()
     })
     expect(asFragment()).toMatchSnapshot()
   })

@@ -316,6 +316,7 @@ exports[`SelectableCard > renders correctly with aria label 1`] = `
             aria-invalid="false"
             aria-label="test"
             class="emotion-7 emotion-8"
+            id=":r5:"
             name="radio"
             tabindex="-1"
             type="radio"
@@ -746,7 +747,7 @@ exports[`SelectableCard > renders correctly with checkbox type 1`] = `
           aria-invalid="false"
           aria-label="test"
           class="emotion-5 emotion-6"
-          id=":r6:"
+          id=":r8:"
           name="checkbox"
           tabindex="-1"
           type="checkbox"
@@ -1179,7 +1180,7 @@ exports[`SelectableCard > renders correctly with checkbox type and checked prop 
           aria-label="test"
           checked=""
           class="emotion-5 emotion-6"
-          id=":rg:"
+          id=":rk:"
           name="radio"
           tabindex="-1"
           type="checkbox"
@@ -1611,7 +1612,7 @@ exports[`SelectableCard > renders correctly with checkbox type and disabled prop
           aria-label="test"
           class="emotion-5 emotion-6"
           disabled=""
-          id=":rl:"
+          id=":rq:"
           name="radio"
           tabindex="-1"
           type="checkbox"
@@ -2106,10 +2107,10 @@ exports[`SelectableCard > renders correctly with checkbox type and isError prop 
       >
         <input
           aria-checked="false"
-          aria-describedby=":ro:-hint"
+          aria-describedby=":rt:-hint"
           aria-invalid="true"
           class="emotion-5 emotion-6"
-          id=":ro:"
+          id=":rt:"
           name="radio"
           tabindex="-1"
           type="checkbox"
@@ -2150,7 +2151,7 @@ exports[`SelectableCard > renders correctly with checkbox type and isError prop 
           >
             <label
               class="emotion-15 emotion-16 emotion-17"
-              for=":ro:"
+              for=":rt:"
             >
               test
             </label>
@@ -2637,8 +2638,8 @@ exports[`SelectableCard > renders correctly with checkbox type and tooltip prop 
       class="emotion-0 emotion-1"
     >
       <div
-        aria-controls=":r11:"
-        aria-describedby=":r11:"
+        aria-controls=":r18:"
+        aria-describedby=":r18:"
         class="emotion-2 emotion-3"
         tabindex="0"
       >
@@ -2662,7 +2663,7 @@ exports[`SelectableCard > renders correctly with checkbox type and tooltip prop 
               aria-checked="false"
               aria-invalid="false"
               class="emotion-9 emotion-10"
-              id=":r12:"
+              id=":r19:"
               name="checkbox"
               tabindex="-1"
               type="checkbox"
@@ -2703,7 +2704,7 @@ exports[`SelectableCard > renders correctly with checkbox type and tooltip prop 
               >
                 <label
                   class="emotion-19 emotion-20 emotion-21"
-                  for=":r12:"
+                  for=":r19:"
                 >
                   test
                 </label>
@@ -3174,7 +3175,7 @@ exports[`SelectableCard > renders correctly with complex children 1`] = `
           aria-invalid="false"
           class="emotion-5 emotion-6"
           disabled=""
-          id=":r16:"
+          id=":r1d:"
           name="radio"
           tabindex="-1"
           type="checkbox"
@@ -3215,7 +3216,7 @@ exports[`SelectableCard > renders correctly with complex children 1`] = `
           >
             <label
               class="emotion-15 emotion-16 emotion-17"
-              for=":r16:"
+              for=":r1d:"
             >
               test
             </label>
@@ -3566,6 +3567,7 @@ exports[`SelectableCard > renders correctly with default props 1`] = `
             aria-disabled="false"
             aria-invalid="false"
             class="emotion-7 emotion-8"
+            id=":r1:"
             name="radio"
             tabindex="-1"
             type="radio"
@@ -3598,7 +3600,7 @@ exports[`SelectableCard > renders correctly with default props 1`] = `
           </svg>
           <label
             class="emotion-15 emotion-16 emotion-17"
-            for="radio-choice"
+            for=":r1:"
           >
             test
           </label>
@@ -4275,6 +4277,7 @@ exports[`SelectableCard > renders correctly with illustration 1`] = `
                 aria-disabled="false"
                 aria-invalid="false"
                 class="emotion-11 emotion-12"
+                id=":r1l:"
                 name="label-14"
                 tabindex="-1"
                 type="radio"
@@ -4307,7 +4310,7 @@ exports[`SelectableCard > renders correctly with illustration 1`] = `
               </svg>
               <label
                 class="emotion-19 emotion-20 emotion-21"
-                for="label-14-label-14"
+                for=":r1l:"
               >
                 label
               </label>
@@ -4992,6 +4995,7 @@ exports[`SelectableCard > renders correctly with productIcon 1`] = `
                 aria-disabled="false"
                 aria-invalid="false"
                 class="emotion-11 emotion-12"
+                id=":r1p:"
                 name="label-14"
                 tabindex="-1"
                 type="radio"
@@ -5024,7 +5028,7 @@ exports[`SelectableCard > renders correctly with productIcon 1`] = `
               </svg>
               <label
                 class="emotion-19 emotion-20 emotion-21"
-                for="label-14-label-14"
+                for=":r1p:"
               >
                 label
               </label>
@@ -5407,6 +5411,7 @@ exports[`SelectableCard > renders correctly with radio type and checked prop 1`]
             aria-label="test"
             checked=""
             class="emotion-7 emotion-8"
+            id=":rh:"
             name="radio"
             tabindex="-1"
             type="radio"
@@ -5766,6 +5771,7 @@ exports[`SelectableCard > renders correctly with radio type and disabled prop 1`
             aria-label="test"
             class="emotion-7 emotion-8"
             disabled=""
+            id=":rn:"
             name="radio"
             tabindex="-1"
             type="radio"
@@ -6140,6 +6146,7 @@ exports[`SelectableCard > renders correctly with radio type and isError prop 1`]
             aria-disabled="false"
             aria-invalid="true"
             class="emotion-7 emotion-8"
+            id=":r11:"
             name="radio"
             tabindex="-1"
             type="radio"
@@ -6172,7 +6179,7 @@ exports[`SelectableCard > renders correctly with radio type and isError prop 1`]
           </svg>
           <label
             class="emotion-15 emotion-16 emotion-17"
-            for="radio-choice"
+            for=":r11:"
           >
             test
           </label>
@@ -6534,8 +6541,8 @@ exports[`SelectableCard > renders correctly with radio type and tooltip prop 1`]
       class="emotion-0 emotion-1"
     >
       <div
-        aria-controls=":ru:"
-        aria-describedby=":ru:"
+        aria-controls=":r14:"
+        aria-describedby=":r14:"
         class="emotion-2 emotion-3"
         tabindex="0"
       >
@@ -6561,6 +6568,7 @@ exports[`SelectableCard > renders correctly with radio type and tooltip prop 1`]
                 aria-disabled="false"
                 aria-invalid="false"
                 class="emotion-11 emotion-12"
+                id=":r15:"
                 name="radio"
                 tabindex="-1"
                 type="radio"
@@ -6593,7 +6601,7 @@ exports[`SelectableCard > renders correctly with radio type and tooltip prop 1`]
               </svg>
               <label
                 class="emotion-19 emotion-20 emotion-21"
-                for="radio-choice"
+                for=":r15:"
               >
                 test
               </label>
@@ -6991,7 +6999,7 @@ exports[`SelectableCard > renders correctly with showTick and type checkbox 1`] 
           aria-invalid="false"
           aria-label="test"
           class="emotion-5 emotion-6"
-          id=":rb:"
+          id=":re:"
           name="checkbox"
           tabindex="-1"
           type="checkbox"
@@ -7344,6 +7352,7 @@ exports[`SelectableCard > renders correctly with showTick and type radio 1`] = `
             aria-invalid="false"
             aria-label="test"
             class="emotion-7 emotion-8"
+            id=":rb:"
             name="checkbox"
             tabindex="-1"
             type="radio"

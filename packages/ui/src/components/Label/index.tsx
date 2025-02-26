@@ -4,7 +4,17 @@ import { Stack } from '../Stack'
 import { Text } from '../Text'
 
 const TextPointer = styled(Text)`
-  cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'pointer')};
+  cursor: ${({ disabled, htmlFor }) => {
+    if (disabled) {
+      return 'not-allowed'
+    }
+
+    if (htmlFor) {
+      return 'pointer'
+    }
+
+    return 'text'
+  }};
 `
 
 const LabelRequiredOrNot = ({
