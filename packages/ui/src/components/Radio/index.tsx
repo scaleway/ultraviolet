@@ -1,12 +1,12 @@
 import styled from '@emotion/styled'
 import type { InputHTMLAttributes, ReactNode } from 'react'
-import { forwardRef } from 'react'
+import { forwardRef, useId } from 'react'
 import type { LabelProp } from '../../types'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
 import { Tooltip } from '../Tooltip'
 
-export const InnerCircleRing = styled.circle``
+const InnerCircleRing = styled.circle``
 const RadioMark = styled.circle``
 
 export const RadioStack = styled(Stack)``
@@ -19,7 +19,7 @@ const RadioMarkedIcon = () => (
   </g>
 )
 
-export const Ring = styled.svg`
+const Ring = styled.svg`
   height: ${({ theme }) => theme.sizing['300']};
   width: ${({ theme }) => theme.sizing['300']};
   min-width: ${({ theme }) => theme.sizing['300']};
@@ -196,11 +196,11 @@ export const Radio = forwardRef<HTMLInputElement, RadioProps>(
       'data-testid': dataTestId,
       tabIndex,
       id,
-      onClick,
     },
     forwadedRef,
   ) => {
-    const computedName = name ?? id
+    const generatedId = useId()
+    const localId = id || generatedId
 
     return (
       <Tooltip text={tooltip}>
@@ -218,18 +218,17 @@ export const Radio = forwardRef<HTMLInputElement, RadioProps>(
               aria-disabled={disabled}
               aria-label={ariaLabel}
               checked={checked}
-              id={id}
+              id={localId}
               onChange={onChange}
               onFocus={onFocus}
               onKeyDown={onKeyDown}
               onBlur={onBlur}
               value={value}
               disabled={disabled}
-              name={computedName}
+              name={name}
               autoFocus={autoFocus}
               ref={forwadedRef}
               tabIndex={tabIndex}
-              onClick={onClick}
             />
             <Ring viewBox="0 0 24 24">
               <RadioMarkedIcon />
@@ -241,14 +240,12 @@ export const Radio = forwardRef<HTMLInputElement, RadioProps>(
                     as="label"
                     variant="body"
                     prominence="default"
-                    htmlFor={`${computedName}-${value}`}
+                    htmlFor={localId}
                   >
                     {label}
                   </StyledTextLabel>
                 ) : (
-                  <StyledLabel htmlFor={`${computedName}-${value}`}>
-                    {label}
-                  </StyledLabel>
+                  <StyledLabel htmlFor={id}>{label}</StyledLabel>
                 )}
               </>
             ) : null}

@@ -188,6 +188,7 @@ exports[`RadioField > should render correctly 1`] = `
             aria-disabled="false"
             aria-invalid="false"
             class="emotion-4 emotion-5"
+            id=":r0:"
             name="test"
             type="radio"
             value="test"
@@ -219,7 +220,7 @@ exports[`RadioField > should render correctly 1`] = `
           </svg>
           <label
             class="emotion-12 emotion-13 emotion-14"
-            for="test-test"
+            for=":r0:"
           >
             Radio field
           </label>
@@ -419,6 +420,7 @@ exports[`RadioField > should render correctly checked 1`] = `
             aria-invalid="false"
             checked=""
             class="emotion-4 emotion-5"
+            id=":r8:"
             name="test"
             type="radio"
             value="checked"
@@ -450,7 +452,7 @@ exports[`RadioField > should render correctly checked 1`] = `
           </svg>
           <label
             class="emotion-12 emotion-13 emotion-14"
-            for="test-checked"
+            for=":r8:"
           >
             Radio field checked
           </label>
@@ -650,6 +652,7 @@ exports[`RadioField > should render correctly disabled 1`] = `
             aria-invalid="false"
             class="emotion-4 emotion-5"
             disabled=""
+            id=":r5:"
             name="test"
             type="radio"
             value="disabled"
@@ -681,7 +684,7 @@ exports[`RadioField > should render correctly disabled 1`] = `
           </svg>
           <label
             class="emotion-12 emotion-13 emotion-14"
-            for="test-disabled"
+            for=":r5:"
           >
             Radio field disabled
           </label>
@@ -866,6 +869,7 @@ exports[`RadioField > should render correctly with aria-label 1`] = `
             aria-invalid="false"
             aria-label="Radio field"
             class="emotion-4 emotion-5"
+            id=":r3:"
             name="test"
             type="radio"
             value="test"
@@ -1090,6 +1094,7 @@ exports[`RadioField > should trigger events correctly 1`] = `
             aria-disabled="false"
             aria-invalid="false"
             class="emotion-4 emotion-5"
+            id=":rb:"
             name="test"
             type="radio"
             value="events"
@@ -1121,7 +1126,7 @@ exports[`RadioField > should trigger events correctly 1`] = `
           </svg>
           <label
             class="emotion-12 emotion-13 emotion-14"
-            for="test-events"
+            for=":rb:"
           >
             Radio field events
           </label>

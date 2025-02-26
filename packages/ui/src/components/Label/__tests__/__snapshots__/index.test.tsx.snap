@@ -2,8 +2,8 @@
 
 exports[`DateInput > renders correctly large 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  color: #222638;
+  .emotion-1 {
+  color: #3f4250;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -12,13 +12,14 @@ exports[`DateInput > renders correctly large 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  cursor: text;
 }
 
 <div
     data-testid="testing"
   >
     <label
-      class="emotion-0 emotion-1"
+      class="emotion-0 emotion-1 emotion-2"
     >
       Label
     </label>
@@ -28,8 +29,8 @@ exports[`DateInput > renders correctly large 1`] = `
 
 exports[`DateInput > renders correctly medium 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  color: #222638;
+  .emotion-1 {
+  color: #3f4250;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -38,13 +39,14 @@ exports[`DateInput > renders correctly medium 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  cursor: text;
 }
 
 <div
     data-testid="testing"
   >
     <label
-      class="emotion-0 emotion-1"
+      class="emotion-0 emotion-1 emotion-2"
     >
       Label
     </label>
@@ -77,8 +79,8 @@ exports[`DateInput > renders correctly required 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-2 {
-  color: #222638;
+.emotion-3 {
+  color: #3f4250;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -87,9 +89,10 @@ exports[`DateInput > renders correctly required 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  cursor: text;
 }
 
-.emotion-4 {
+.emotion-5 {
   color: #b3144d;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
@@ -108,12 +111,12 @@ exports[`DateInput > renders correctly required 1`] = `
       class="emotion-0 emotion-1"
     >
       <label
-        class="emotion-2 emotion-3"
+        class="emotion-2 emotion-3 emotion-4"
       >
         Label
       </label>
       <span
-        class="emotion-4 emotion-3"
+        class="emotion-5 emotion-4"
       >
         *
       </span>
@@ -124,8 +127,8 @@ exports[`DateInput > renders correctly required 1`] = `
 
 exports[`DateInput > renders correctly small 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  color: #222638;
+  .emotion-1 {
+  color: #3f4250;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -134,13 +137,14 @@ exports[`DateInput > renders correctly small 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  cursor: text;
 }
 
 <div
     data-testid="testing"
   >
     <label
-      class="emotion-0 emotion-1"
+      class="emotion-0 emotion-1 emotion-2"
     >
       Label
     </label>
@@ -150,8 +154,8 @@ exports[`DateInput > renders correctly small 1`] = `
 
 exports[`DateInput > renders correctly with default props 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  color: #222638;
+  .emotion-1 {
+  color: #3f4250;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -160,13 +164,14 @@ exports[`DateInput > renders correctly with default props 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  cursor: text;
 }
 
 <div
     data-testid="testing"
   >
     <label
-      class="emotion-0 emotion-1"
+      class="emotion-0 emotion-1 emotion-2"
     >
       Label
     </label>
@@ -176,8 +181,8 @@ exports[`DateInput > renders correctly with default props 1`] = `
 
 exports[`DateInput > renders correctly with htmlFor 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  color: #222638;
+  .emotion-1 {
+  color: #3f4250;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -186,6 +191,7 @@ exports[`DateInput > renders correctly with htmlFor 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  cursor: pointer;
 }
 
 <div
@@ -193,7 +199,7 @@ exports[`DateInput > renders correctly with htmlFor 1`] = `
   >
     <div>
       <label
-        class="emotion-0 emotion-1"
+        class="emotion-0 emotion-1 emotion-2"
         for="id"
         id="id-label"
       >
@@ -233,8 +239,8 @@ exports[`DateInput > renders correctly with label description (ReactNode) 1`] = 
   flex-wrap: nowrap;
 }
 
-.emotion-2 {
-  color: #222638;
+.emotion-3 {
+  color: #3f4250;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -243,6 +249,7 @@ exports[`DateInput > renders correctly with label description (ReactNode) 1`] = 
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  cursor: text;
 }
 
 <div
@@ -252,7 +259,7 @@ exports[`DateInput > renders correctly with label description (ReactNode) 1`] = 
       class="emotion-0 emotion-1"
     >
       <label
-        class="emotion-2 emotion-3"
+        class="emotion-2 emotion-3 emotion-4"
       >
         Label
       </label>
@@ -289,8 +296,8 @@ exports[`DateInput > renders correctly with label description (string) 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-2 {
-  color: #222638;
+.emotion-3 {
+  color: #3f4250;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -299,9 +306,10 @@ exports[`DateInput > renders correctly with label description (string) 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  cursor: text;
 }
 
-.emotion-4 {
+.emotion-5 {
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
@@ -319,12 +327,12 @@ exports[`DateInput > renders correctly with label description (string) 1`] = `
       class="emotion-0 emotion-1"
     >
       <label
-        class="emotion-2 emotion-3"
+        class="emotion-2 emotion-3 emotion-4"
       >
         Label
       </label>
       <span
-        class="emotion-4 emotion-3"
+        class="emotion-5 emotion-4"
       >
         test
       </span>

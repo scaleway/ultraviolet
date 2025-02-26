@@ -185,7 +185,7 @@ exports[`Radio > renders correctly 1`] = `
           aria-disabled="false"
           aria-invalid="false"
           class="emotion-4 emotion-5"
-          id="radio-choice"
+          id=":r0:"
           name="radio"
           type="radio"
           value="choice"
@@ -217,7 +217,7 @@ exports[`Radio > renders correctly 1`] = `
         </svg>
         <label
           class="emotion-12 emotion-13 emotion-14"
-          for="radio-choice"
+          for=":r0:"
         >
           Choice
         </label>
@@ -413,7 +413,7 @@ exports[`Radio > renders correctly when checked 1`] = `
           aria-invalid="false"
           checked=""
           class="emotion-4 emotion-5"
-          id="radio-choice"
+          id=":rc:"
           name="radio"
           type="radio"
           value="choice"
@@ -445,7 +445,7 @@ exports[`Radio > renders correctly when checked 1`] = `
         </svg>
         <label
           class="emotion-12 emotion-13 emotion-14"
-          for="radio-choice"
+          for=":rc:"
         >
           Choice
         </label>
@@ -641,7 +641,7 @@ exports[`Radio > renders correctly when disabled 1`] = `
           aria-invalid="false"
           class="emotion-4 emotion-5"
           disabled=""
-          id="radio-choice"
+          id=":r3:"
           name="radio"
           type="radio"
           value="choice"
@@ -673,7 +673,7 @@ exports[`Radio > renders correctly when disabled 1`] = `
         </svg>
         <label
           class="emotion-12 emotion-13 emotion-14"
-          for="radio-choice"
+          for=":r3:"
         >
           Choice
         </label>
@@ -869,7 +869,7 @@ exports[`Radio > renders correctly when error 1`] = `
           aria-disabled="false"
           aria-invalid="true"
           class="emotion-4 emotion-5"
-          id="radio-choice"
+          id=":rf:"
           name="radio"
           type="radio"
           value="choice"
@@ -901,7 +901,7 @@ exports[`Radio > renders correctly when error 1`] = `
         </svg>
         <label
           class="emotion-12 emotion-13 emotion-14"
-          for="radio-choice"
+          for=":rf:"
         >
           Choice
         </label>
@@ -1109,7 +1109,7 @@ exports[`Radio > renders correctly when helper 1`] = `
           aria-disabled="false"
           aria-invalid="false"
           class="emotion-4 emotion-5"
-          id="radio-choice"
+          id=":ri:"
           name="radio"
           type="radio"
           value="choice"
@@ -1141,7 +1141,7 @@ exports[`Radio > renders correctly when helper 1`] = `
         </svg>
         <label
           class="emotion-12 emotion-13 emotion-14"
-          for="radio-choice"
+          for=":ri:"
         >
           Choice
         </label>
@@ -1355,7 +1355,7 @@ exports[`Radio > renders correctly with tooltip 1`] = `
             aria-disabled="false"
             aria-invalid="false"
             class="emotion-6 emotion-7"
-            id="radio-choice"
+            id=":r6:"
             name="radio"
             type="radio"
             value="choice"
@@ -1387,7 +1387,7 @@ exports[`Radio > renders correctly with tooltip 1`] = `
           </svg>
           <label
             class="emotion-14 emotion-15 emotion-16"
-            for="radio-choice"
+            for=":r6:"
           >
             Choice
           </label>
@@ -1584,8 +1584,7 @@ exports[`Radio > renders without name 1`] = `
           aria-invalid="false"
           class="emotion-4 emotion-5"
           disabled=""
-          id=":r9:-choice"
-          name=":r9:"
+          id=":r9:"
           type="radio"
           value="choice"
         />
@@ -1616,7 +1615,7 @@ exports[`Radio > renders without name 1`] = `
         </svg>
         <label
           class="emotion-12 emotion-13 emotion-14"
-          for=":r9:-choice"
+          for=":r9:"
         >
           Choice
         </label>

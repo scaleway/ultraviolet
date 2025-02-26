@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`SelectableCardField > should render correctly 1`] = `
+exports[`SelectableCardOptionGroupField > should render correctly 1`] = `
 <DocumentFragment>
   .emotion-0 {
   display: -webkit-box;
@@ -64,7 +64,7 @@ exports[`SelectableCardField > should render correctly 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  cursor: pointer;
+  cursor: text;
 }
 
 .emotion-9 {
@@ -451,6 +451,19 @@ exports[`SelectableCardField > should render correctly 1`] = `
   width: 100%;
 }
 
+.emotion-38 {
+  color: #3f4250;
+  font-size: 1rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 .emotion-41 {
   width: 100%;
 }
@@ -719,7 +732,6 @@ exports[`SelectableCardField > should render correctly 1`] = `
                       aria-invalid="false"
                       class="emotion-19 emotion-20"
                       id=":r1:"
-                      name=":r1:"
                       tabindex="-1"
                       type="radio"
                       value="ubuntu"
@@ -771,7 +783,7 @@ exports[`SelectableCardField > should render correctly 1`] = `
                         class="emotion-35 emotion-1"
                       >
                         <label
-                          class="emotion-6 emotion-7 emotion-8"
+                          class="emotion-6 emotion-38 emotion-8"
                           for=":r1:"
                         >
                           Ubuntu
@@ -783,8 +795,8 @@ exports[`SelectableCardField > should render correctly 1`] = `
                       class="emotion-40 emotion-41 emotion-42"
                     >
                       <div
-                        aria-controls=":r6:"
-                        aria-describedby=":r6:"
+                        aria-controls=":r7:"
+                        aria-describedby=":r7:"
                         class="emotion-43 emotion-44"
                         data-container-full-width="true"
                         tabindex="-1"
@@ -803,7 +815,7 @@ exports[`SelectableCardField > should render correctly 1`] = `
                             data-size="medium"
                             data-state="neutral"
                             data-testid="select-input-selectable-card-option"
-                            id=":r5:"
+                            id=":r6:"
                             role="combobox"
                             tabindex="0"
                           >
@@ -858,8 +870,7 @@ exports[`SelectableCardField > should render correctly 1`] = `
                       aria-disabled="false"
                       aria-invalid="false"
                       class="emotion-19 emotion-20"
-                      id=":r9:"
-                      name=":r9:"
+                      id=":ra:"
                       tabindex="-1"
                       type="radio"
                       value="debian"
@@ -911,8 +922,8 @@ exports[`SelectableCardField > should render correctly 1`] = `
                         class="emotion-35 emotion-1"
                       >
                         <label
-                          class="emotion-6 emotion-7 emotion-8"
-                          for=":r9:"
+                          class="emotion-6 emotion-38 emotion-8"
+                          for=":ra:"
                         >
                           Debian
                         </label>
@@ -923,8 +934,8 @@ exports[`SelectableCardField > should render correctly 1`] = `
                       class="emotion-40 emotion-41 emotion-42"
                     >
                       <div
-                        aria-controls=":re:"
-                        aria-describedby=":re:"
+                        aria-controls=":rg:"
+                        aria-describedby=":rg:"
                         class="emotion-43 emotion-44"
                         data-container-full-width="true"
                         tabindex="-1"
@@ -943,7 +954,7 @@ exports[`SelectableCardField > should render correctly 1`] = `
                             data-size="medium"
                             data-state="neutral"
                             data-testid="select-input-selectable-card-option"
-                            id=":rd:"
+                            id=":rf:"
                             role="combobox"
                             tabindex="0"
                           >
@@ -998,8 +1009,7 @@ exports[`SelectableCardField > should render correctly 1`] = `
                       aria-disabled="false"
                       aria-invalid="false"
                       class="emotion-19 emotion-20"
-                      id=":rh:"
-                      name=":rh:"
+                      id=":rj:"
                       tabindex="-1"
                       type="radio"
                       value="centos"
@@ -1051,8 +1061,8 @@ exports[`SelectableCardField > should render correctly 1`] = `
                         class="emotion-35 emotion-1"
                       >
                         <label
-                          class="emotion-6 emotion-7 emotion-8"
-                          for=":rh:"
+                          class="emotion-6 emotion-38 emotion-8"
+                          for=":rj:"
                         >
                           CentOS
                         </label>
@@ -1063,8 +1073,8 @@ exports[`SelectableCardField > should render correctly 1`] = `
                       class="emotion-40 emotion-41 emotion-42"
                     >
                       <div
-                        aria-controls=":rm:"
-                        aria-describedby=":rm:"
+                        aria-controls=":rp:"
+                        aria-describedby=":rp:"
                         class="emotion-43 emotion-44"
                         data-container-full-width="true"
                         tabindex="-1"
@@ -1083,7 +1093,7 @@ exports[`SelectableCardField > should render correctly 1`] = `
                             data-size="medium"
                             data-state="neutral"
                             data-testid="select-input-selectable-card-option"
-                            id=":rl:"
+                            id=":ro:"
                             role="combobox"
                             tabindex="0"
                           >

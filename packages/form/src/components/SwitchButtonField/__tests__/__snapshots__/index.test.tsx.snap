@@ -364,6 +364,7 @@ exports[`SwitchButtonField > should render correctly 1`] = `
                   aria-disabled="false"
                   aria-invalid="false"
                   class="emotion-10 emotion-11"
+                  id=":r2:"
                   name="test"
                   tabindex="-1"
                   type="radio"
@@ -396,7 +397,7 @@ exports[`SwitchButtonField > should render correctly 1`] = `
                 </svg>
                 <label
                   class="emotion-18 emotion-19 emotion-20"
-                  for="test-left"
+                  for=":r2:"
                 >
                   Left Button Label
                 </label>
@@ -426,6 +427,7 @@ exports[`SwitchButtonField > should render correctly 1`] = `
                   aria-invalid="false"
                   checked=""
                   class="emotion-10 emotion-11"
+                  id=":r6:"
                   name="test"
                   tabindex="-1"
                   type="radio"
@@ -458,7 +460,7 @@ exports[`SwitchButtonField > should render correctly 1`] = `
                 </svg>
                 <label
                   class="emotion-18 emotion-19 emotion-20"
-                  for="test-right"
+                  for=":r6:"
                 >
                   Right Button Label
                 </label>
@@ -890,6 +892,7 @@ exports[`SwitchButtonField > should works with defaultValues 1`] = `
                   aria-disabled="false"
                   aria-invalid="false"
                   class="emotion-10 emotion-11"
+                  id=":rb:"
                   name="test"
                   tabindex="-1"
                   type="radio"
@@ -922,7 +925,7 @@ exports[`SwitchButtonField > should works with defaultValues 1`] = `
                 </svg>
                 <label
                   class="emotion-18 emotion-19 emotion-20"
-                  for="test-left"
+                  for=":rb:"
                 >
                   Left Button Label
                 </label>
@@ -952,6 +955,7 @@ exports[`SwitchButtonField > should works with defaultValues 1`] = `
                   aria-invalid="false"
                   checked=""
                   class="emotion-10 emotion-11"
+                  id=":rf:"
                   name="test"
                   tabindex="-1"
                   type="radio"
@@ -984,7 +988,7 @@ exports[`SwitchButtonField > should works with defaultValues 1`] = `
                 </svg>
                 <label
                   class="emotion-18 emotion-19 emotion-20"
-                  for="test-right"
+                  for=":rf:"
                 >
                   Right Button Label
                 </label>
