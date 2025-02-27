@@ -6,6 +6,9 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
+/**
+ * @deprecated Use CloseCircleOutlineIcon instead.
+ */
 export const CrossCircleIcon = ({ ...props }: Omit<IconProps, 'children'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
   <Icon {...props}>

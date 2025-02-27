@@ -6,10 +6,7 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-/**
- * @deprecated Use MongoDbProductIcon instead.
- */
-export const DocumentDbProductIcon = ({
+export const MongoDbProductIcon = ({
   ...props
 }: Omit<IconProps, 'children'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading

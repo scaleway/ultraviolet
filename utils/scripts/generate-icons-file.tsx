@@ -2,6 +2,7 @@
 
 import { promises as fs } from 'node:fs'
 import path from 'node:path'
+import { DEPRECATED_ICONS } from '../../packages/icons/src/deprecatedIcons'
 
 const COMPONENTS = [
   {
@@ -36,17 +37,29 @@ const COMMENT_HEADER = `/**
 * PLEASE DO NOT EDIT HERE
 */`
 
-const templateIcon = (iconName: string, svg: string) => `${COMMENT_HEADER}
-import { Icon } from '../Icon'
-import type { IconProps } from '../Icon'
+const templateIcon = (iconName: string, svg: string) => {
+  const deprecated = DEPRECATED_ICONS.find(icon => icon.name === iconName)
 
-export const ${iconName} = ({
-  ...props
-}: Omit<IconProps, 'children'>) => (
-  // eslint-disable-next-line react/jsx-props-no-spreading
-  <Icon {...props}>${svg}</Icon>
-)
+  return `${COMMENT_HEADER}
+  import { Icon } from '../Icon'
+  import type { IconProps } from '../Icon'
+
+  ${
+    deprecated
+      ? `
+  /**
+    * @deprecated ${deprecated.deprecatedReason}
+    */`
+      : ''
+  }
+  export const ${iconName} = ({
+    ...props
+  }: Omit<IconProps, 'children'>) => (
+    // eslint-disable-next-line react/jsx-props-no-spreading
+    <Icon {...props}>${svg}</Icon>
+  )
 `
+}
 
 const toPascalCase = (str: string) =>
   str.replace(/(^\w|-\w)/g, match => match.replace('-', '').toUpperCase())
