@@ -1,5 +1,124 @@
 # Change Log
 
+## 1.88.0
+
+### Minor Changes
+
+- [#4793](https://github.com/scaleway/ultraviolet/pull/4793) [`c231fb2`](https://github.com/scaleway/ultraviolet/commit/c231fb29a64c2d0caaa749b8c56c846420d8fc9f) Thanks [@matthprost](https://github.com/matthprost)! - More component have `icon` prop deprecated. You can directly use the imported icon you need in the children.
+
+  Here is the list of components with `icon` prop deprecated and how to migrate them:
+
+  ### Bullet
+
+  `icon` and `iconVariant` props are deprecated. You can directly use the imported icon you need in the children.
+
+  ```tsx
+  // Before
+  import { Bullet } from '@ultraviolet/ui'
+
+  <Bullet icon="check" />
+  <Bullet icon="check" iconVariant="outlined" />
+  ```
+
+  ```tsx
+  // After
+  import { Bullet } from '@ultraviolet/ui'
+  import { CheckIcon, CheckCircleOutlineIcon } from '@ultraviolet/icons'
+
+  <Bullet>
+    <CheckIcon />
+  </Bullet>
+
+  <Bullet>
+    <CheckCircleOutlineIcon />
+  </Bullet>
+  ```
+
+  ### AvatarV2
+
+  `icon` prop is deprecated. You can directly use the imported icon you need in the children.
+
+  ```tsx
+  // Before
+  import { AvatarV2 } from "@ultraviolet/ui";
+
+  <AvatarV2 variant="icon" shape="circle" sentiment="primary" icon="mosaic" />;
+  ```
+
+  ```tsx
+  // After
+  import { AvatarV2 } from "@ultraviolet/ui";
+  import { MosaicIcon } from "@ultraviolet/icons";
+
+  <AvatarV2 variant="icon" shape="circle" sentiment="primary">
+    <MosaicIcon size="xlarge" />
+  </AvatarV2>;
+  ```
+
+  ### Separator
+
+  `icon` prop is deprecated. You can directly use the imported icon you need in the children.
+
+  ```tsx
+  // Before
+  import { Separator } from "@ultraviolet/ui";
+
+  <Separator direction="vertical" icon="ray-top-arrow" />;
+  ```
+
+  ```tsx
+  // After
+  import { Separator } from "@ultraviolet/ui";
+  import { RayTopArrowIcon } from "@ultraviolet/icons";
+
+  <Separator direction="vertical">
+    <RayTopArrowIcon size="medium" />
+  </Separator>;
+  ```
+
+  ### Tag
+
+  `icon` prop is deprecated. You can directly use the imported icon you need in the children.
+
+  ```tsx
+  // Before
+  import { Tag } from "@ultraviolet/ui";
+
+  <Tag icon="check">Valid</Tag>;
+  ```
+
+  ```tsx
+  // After
+  import { Tag } from "@ultraviolet/ui";
+  import { CheckIcon } from "@ultraviolet/icons";
+
+  <Tag>
+    <CheckIcon size="small" />
+    Valid
+  </Tag>;
+  ```
+
+  You can find this migration documented in the [Ultraviolet UI Storybook](https://storybook.ultraviolet.scaleway.com/?path=/docs/migrations-migrate-icon-usages--docs).
+
+### Patch Changes
+
+- [#4809](https://github.com/scaleway/ultraviolet/pull/4809) [`4a0a1fb`](https://github.com/scaleway/ultraviolet/commit/4a0a1fb9bb43864e85cc53ee94690ac02044737f) Thanks [@lisalupi](https://github.com/lisalupi)! - `<UnitInput />`: fix component width, font-size and background-color
+
+- [#4792](https://github.com/scaleway/ultraviolet/pull/4792) [`e650ee6`](https://github.com/scaleway/ultraviolet/commit/e650ee613de68f28a6ba37d00cfb7c1c614699a6) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `19.0.10`.
+  Updated dependency `@types/react-dom` to `19.0.4`.
+  Updated dependency `eslint-plugin-react-hooks` to `5.1.0`.
+
+- [#4775](https://github.com/scaleway/ultraviolet/pull/4775) [`f1902a6`](https://github.com/scaleway/ultraviolet/commit/f1902a694b02c22a9a6dba89fde98ca2771c5833) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@babel/core` to `7.26.9`.
+  Updated dependency `@babel/runtime` to `7.26.9`.
+  Updated dependency `@babel/eslint-parser` to `7.26.8`.
+  Updated dependency `@babel/plugin-transform-runtime` to `7.26.9`.
+  Updated dependency `@babel/preset-env` to `7.26.9`.
+
+- [#4797](https://github.com/scaleway/ultraviolet/pull/4797) [`8273a0f`](https://github.com/scaleway/ultraviolet/commit/8273a0fc3932b7bdd1b99f441a52a5c4ff53d1b4) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<RadioGroup />`, `<CheckboxGroup />` and `<ToggleGroup />` not to show empty div when legend is empty
+
+- Updated dependencies [[`e650ee6`](https://github.com/scaleway/ultraviolet/commit/e650ee613de68f28a6ba37d00cfb7c1c614699a6), [`f1902a6`](https://github.com/scaleway/ultraviolet/commit/f1902a694b02c22a9a6dba89fde98ca2771c5833)]:
+  - @ultraviolet/icons@3.11.3
+
 ## 1.87.3
 
 ### Patch Changes
