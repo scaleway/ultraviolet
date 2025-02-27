@@ -1,5 +1,21 @@
 # Change Log
 
+## 3.13.22
+
+### Patch Changes
+
+- [#4792](https://github.com/scaleway/ultraviolet/pull/4792) [`e650ee6`](https://github.com/scaleway/ultraviolet/commit/e650ee613de68f28a6ba37d00cfb7c1c614699a6) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `19.0.10`.
+  Updated dependency `@types/react-dom` to `19.0.4`.
+  Updated dependency `eslint-plugin-react-hooks` to `5.1.0`.
+
+- [#4775](https://github.com/scaleway/ultraviolet/pull/4775) [`f1902a6`](https://github.com/scaleway/ultraviolet/commit/f1902a694b02c22a9a6dba89fde98ca2771c5833) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@babel/core` to `7.26.9`.
+  Updated dependency `@babel/runtime` to `7.26.9`.
+  Updated dependency `@babel/eslint-parser` to `7.26.8`.
+  Updated dependency `@babel/plugin-transform-runtime` to `7.26.9`.
+  Updated dependency `@babel/preset-env` to `7.26.9`.
+- Updated dependencies [[`4a0a1fb`](https://github.com/scaleway/ultraviolet/commit/4a0a1fb9bb43864e85cc53ee94690ac02044737f), [`e650ee6`](https://github.com/scaleway/ultraviolet/commit/e650ee613de68f28a6ba37d00cfb7c1c614699a6), [`f1902a6`](https://github.com/scaleway/ultraviolet/commit/f1902a694b02c22a9a6dba89fde98ca2771c5833), [`8273a0f`](https://github.com/scaleway/ultraviolet/commit/8273a0fc3932b7bdd1b99f441a52a5c4ff53d1b4), [`c231fb2`](https://github.com/scaleway/ultraviolet/commit/c231fb29a64c2d0caaa749b8c56c846420d8fc9f)]:
+  - @ultraviolet/ui@1.88.0
+
 ## 3.13.21
 
 ### Patch Changes
