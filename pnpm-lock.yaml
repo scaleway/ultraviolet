@@ -7,6 +7,7 @@ settings:
 overrides:
   vite: 6.1.0
   '@joshwooding/vite-plugin-react-docgen-typescript': 0.3.0
+  nwsapi: 2.2.13
 
 importers:
 
@@ -278,11 +279,7 @@ importers:
         version: 2.0.2
       rollup-plugin-postcss:
         specifier: 4.0.2
-<<<<<<< HEAD
-        version: 4.0.2(postcss@8.5.3)(ts-node@10.9.2(@types/node@22.13.5)(typescript@5.7.3))
-=======
-        version: 4.0.2(postcss@8.5.2)
->>>>>>> dabc3ea6b (docs: fix code editor in storybook)
+        version: 4.0.2(postcss@8.5.3)
       shx:
         specifier: 0.3.4
         version: 0.3.4
@@ -315,11 +312,7 @@ importers:
         version: 6.1.0(@types/node@22.13.5)(jiti@2.4.2)(terser@5.39.0)(tsx@4.19.2)(yaml@2.7.0)
       vitest:
         specifier: 3.0.5
-<<<<<<< HEAD
-        version: 3.0.5(@types/debug@4.1.12)(@types/node@22.13.5)(@vitest/ui@3.0.5)(happy-dom@17.1.0)(jiti@2.4.2)(jsdom@25.0.1)(terser@5.31.0)(tsx@4.19.2)(yaml@2.7.0)
-=======
-        version: 3.0.5(@types/debug@4.1.12)(@types/node@22.13.5)(@vitest/ui@3.0.5)(happy-dom@16.7.3)(jiti@2.4.2)(jsdom@25.0.1)(terser@5.39.0)(tsx@4.19.2)(yaml@2.7.0)
->>>>>>> dabc3ea6b (docs: fix code editor in storybook)
+        version: 3.0.5(@types/debug@4.1.12)(@types/node@22.13.5)(@vitest/ui@3.0.5)(happy-dom@17.1.0)(jiti@2.4.2)(jsdom@25.0.1)(terser@5.39.0)(tsx@4.19.2)(yaml@2.7.0)
       vitest-canvas-mock:
         specifier: 0.3.3
         version: 0.3.3(vitest@3.0.5)
@@ -782,11 +775,7 @@ importers:
         version: 9.15.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       vitest:
         specifier: 3.0.5
-<<<<<<< HEAD
-        version: 3.0.5(@types/debug@4.1.12)(@types/node@22.13.5)(@vitest/ui@3.0.5)(happy-dom@17.1.0)(jiti@2.4.2)(jsdom@25.0.1)(terser@5.31.0)(tsx@4.19.2)(yaml@2.7.0)
-=======
-        version: 3.0.5(@types/debug@4.1.12)(@types/node@22.13.5)(@vitest/ui@3.0.5)(happy-dom@16.7.3)(jiti@2.4.2)(jsdom@25.0.1)(terser@5.39.0)(tsx@4.19.2)(yaml@2.7.0)
->>>>>>> dabc3ea6b (docs: fix code editor in storybook)
+        version: 3.0.5(@types/debug@4.1.12)(@types/node@22.13.5)(@vitest/ui@3.0.5)(happy-dom@17.1.0)(jiti@2.4.2)(jsdom@25.0.1)(terser@5.39.0)(tsx@4.19.2)(yaml@2.7.0)
 
 packages:
 
@@ -6207,8 +6196,8 @@ packages:
   nth-check@2.1.1:
     resolution: {integrity: sha512-lqjrjmaOoAnWfMmBPL+XNnynZh2+swxiX3WUE0s4yEHI6m+AwrK2UZOimIRl3X/4QctVqS8AiZjFqyOGrMXb/w==}
 
-  nwsapi@2.2.16:
-    resolution: {integrity: sha512-F1I/bimDpj3ncaNDhfyMWuFqmQDBwDB0Fogc2qpL3BWvkQteFD/8BzWuIRl83rq0DXfm8SGt/HFhLXZyljTXcQ==}
+  nwsapi@2.2.13:
+    resolution: {integrity: sha512-cTGB9ptp9dY9A5VbMSe7fQBcl/tt22Vcqdq8+eN93rblOuE0aCFu4aZ2vMwct/2t+lFnosm8RkQW1I0Omb1UtQ==}
 
   object-assign@4.1.1:
     resolution: {integrity: sha512-rJgTQnkUnH1sFw8yT6VSU3zD3sWmu6sZhIseY8VX+GRu3P6F7Fu+JNDoXfklElbLJSnc3FUQHVe4cU5hj+BcUg==}
@@ -6690,17 +6679,12 @@ packages:
     resolution: {integrity: sha512-PS08Iboia9mts/2ygV3eLpY5ghnUcfLV/EXTOW1E2qYxJKGGBUtNjN76FYHnMs36RmARn41bC0AZmn+rR0OVpQ==}
     engines: {node: ^10 || ^12 || >=14}
 
-<<<<<<< HEAD
-  postcss@8.5.1:
-    resolution: {integrity: sha512-6oz2beyjc5VMn/KV1pPw8fliQkhBXrVn1Z3TVyqZxU8kZpzEKhBdmCFqI6ZbmGtamQvQGuU1sgPTk8ZrXDD7jQ==}
+  postcss@8.5.2:
+    resolution: {integrity: sha512-MjOadfU3Ys9KYoX0AdkBlFEF1Vx37uCCeN4ZHnmwm9FfpbsGWMZeBLMmmpY+6Ocqod7mkdZ0DT31OlbsFrLlkA==}
     engines: {node: ^10 || ^12 || >=14}
 
   postcss@8.5.3:
     resolution: {integrity: sha512-dle9A3yYxlBSrt8Fu+IpjGT8SY8hN0mlaA6GY8t0P5PjIOZemULz/E2Bnm/2dcUOena75OTNkHI76uZBNUUq3A==}
-=======
-  postcss@8.5.2:
-    resolution: {integrity: sha512-MjOadfU3Ys9KYoX0AdkBlFEF1Vx37uCCeN4ZHnmwm9FfpbsGWMZeBLMmmpY+6Ocqod7mkdZ0DT31OlbsFrLlkA==}
->>>>>>> dabc3ea6b (docs: fix code editor in storybook)
     engines: {node: ^10 || ^12 || >=14}
 
   prelude-ls@1.2.1:
@@ -11546,11 +11530,7 @@ snapshots:
       magicast: 0.3.5
       test-exclude: 7.0.1
       tinyrainbow: 2.0.0
-<<<<<<< HEAD
-      vitest: 3.0.5(@types/debug@4.1.12)(@types/node@22.13.5)(@vitest/ui@3.0.5)(happy-dom@17.1.0)(jiti@2.4.2)(jsdom@25.0.1)(terser@5.31.0)(tsx@4.19.2)(yaml@2.7.0)
-=======
-      vitest: 3.0.5(@types/debug@4.1.12)(@types/node@22.13.5)(@vitest/ui@3.0.5)(happy-dom@16.7.3)(jiti@2.4.2)(jsdom@25.0.1)(terser@5.39.0)(tsx@4.19.2)(yaml@2.7.0)
->>>>>>> dabc3ea6b (docs: fix code editor in storybook)
+      vitest: 3.0.5(@types/debug@4.1.12)(@types/node@22.13.5)(@vitest/ui@3.0.5)(happy-dom@17.1.0)(jiti@2.4.2)(jsdom@25.0.1)(terser@5.39.0)(tsx@4.19.2)(yaml@2.7.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -11620,11 +11600,7 @@ snapshots:
       sirv: 3.0.1
       tinyglobby: 0.2.12
       tinyrainbow: 2.0.0
-<<<<<<< HEAD
-      vitest: 3.0.5(@types/debug@4.1.12)(@types/node@22.13.5)(@vitest/ui@3.0.5)(happy-dom@17.1.0)(jiti@2.4.2)(jsdom@25.0.1)(terser@5.31.0)(tsx@4.19.2)(yaml@2.7.0)
-=======
-      vitest: 3.0.5(@types/debug@4.1.12)(@types/node@22.13.5)(@vitest/ui@3.0.5)(happy-dom@16.7.3)(jiti@2.4.2)(jsdom@25.0.1)(terser@5.39.0)(tsx@4.19.2)(yaml@2.7.0)
->>>>>>> dabc3ea6b (docs: fix code editor in storybook)
+      vitest: 3.0.5(@types/debug@4.1.12)(@types/node@22.13.5)(@vitest/ui@3.0.5)(happy-dom@17.1.0)(jiti@2.4.2)(jsdom@25.0.1)(terser@5.39.0)(tsx@4.19.2)(yaml@2.7.0)
 
   '@vitest/utils@2.0.5':
     dependencies:
@@ -14080,7 +14056,7 @@ snapshots:
       http-proxy-agent: 7.0.2
       https-proxy-agent: 7.0.6
       is-potential-custom-element-name: 1.0.1
-      nwsapi: 2.2.16
+      nwsapi: 2.2.13
       parse5: 7.2.1
       rrweb-cssom: 0.7.1
       saxes: 6.0.0
@@ -14747,7 +14723,7 @@ snapshots:
     dependencies:
       boolbase: 1.0.0
 
-  nwsapi@2.2.16: {}
+  nwsapi@2.2.13: {}
 
   object-assign@4.1.1: {}
 
@@ -15027,13 +15003,8 @@ snapshots:
 
   postcss-calc@8.2.4(postcss@8.5.3):
     dependencies:
-<<<<<<< HEAD
       postcss: 8.5.3
-      postcss-selector-parser: 6.0.16
-=======
-      postcss: 8.5.2
       postcss-selector-parser: 6.1.2
->>>>>>> dabc3ea6b (docs: fix code editor in storybook)
       postcss-value-parser: 4.2.0
 
   postcss-colormin@5.3.1(postcss@8.5.3):
@@ -15066,21 +15037,12 @@ snapshots:
     dependencies:
       postcss: 8.5.3
 
-<<<<<<< HEAD
-  postcss-load-config@3.1.4(postcss@8.5.3)(ts-node@10.9.2(@types/node@22.13.5)(typescript@5.7.3)):
-=======
-  postcss-load-config@3.1.4(postcss@8.5.2):
->>>>>>> dabc3ea6b (docs: fix code editor in storybook)
+  postcss-load-config@3.1.4(postcss@8.5.3):
     dependencies:
       lilconfig: 2.1.0
       yaml: 1.10.2
     optionalDependencies:
-<<<<<<< HEAD
       postcss: 8.5.3
-      ts-node: 10.9.2(@types/node@22.13.5)(typescript@5.7.3)
-=======
-      postcss: 8.5.2
->>>>>>> dabc3ea6b (docs: fix code editor in storybook)
 
   postcss-merge-longhand@5.1.7(postcss@8.5.3):
     dependencies:
@@ -15092,15 +15054,9 @@ snapshots:
     dependencies:
       browserslist: 4.24.4
       caniuse-api: 3.0.0
-<<<<<<< HEAD
       cssnano-utils: 3.1.0(postcss@8.5.3)
       postcss: 8.5.3
-      postcss-selector-parser: 6.0.16
-=======
-      cssnano-utils: 3.1.0(postcss@8.5.2)
-      postcss: 8.5.2
       postcss-selector-parser: 6.1.2
->>>>>>> dabc3ea6b (docs: fix code editor in storybook)
 
   postcss-minify-font-values@5.1.0(postcss@8.5.3):
     dependencies:
@@ -15123,43 +15079,24 @@ snapshots:
 
   postcss-minify-selectors@5.2.1(postcss@8.5.3):
     dependencies:
-<<<<<<< HEAD
       postcss: 8.5.3
-      postcss-selector-parser: 6.0.16
-=======
-      postcss: 8.5.2
       postcss-selector-parser: 6.1.2
->>>>>>> dabc3ea6b (docs: fix code editor in storybook)
 
   postcss-modules-extract-imports@3.1.0(postcss@8.5.3):
     dependencies:
       postcss: 8.5.3
 
-<<<<<<< HEAD
-  postcss-modules-local-by-default@4.0.5(postcss@8.5.3):
+  postcss-modules-local-by-default@4.2.0(postcss@8.5.3):
     dependencies:
       icss-utils: 5.1.0(postcss@8.5.3)
       postcss: 8.5.3
-      postcss-selector-parser: 6.0.16
+      postcss-selector-parser: 7.1.0
       postcss-value-parser: 4.2.0
 
-  postcss-modules-scope@3.2.0(postcss@8.5.3):
+  postcss-modules-scope@3.2.1(postcss@8.5.3):
     dependencies:
       postcss: 8.5.3
-      postcss-selector-parser: 6.0.16
-=======
-  postcss-modules-local-by-default@4.2.0(postcss@8.5.2):
-    dependencies:
-      icss-utils: 5.1.0(postcss@8.5.2)
-      postcss: 8.5.2
       postcss-selector-parser: 7.1.0
-      postcss-value-parser: 4.2.0
-
-  postcss-modules-scope@3.2.1(postcss@8.5.2):
-    dependencies:
-      postcss: 8.5.2
-      postcss-selector-parser: 7.1.0
->>>>>>> dabc3ea6b (docs: fix code editor in storybook)
 
   postcss-modules-values@4.0.0(postcss@8.5.3):
     dependencies:
@@ -15171,19 +15108,11 @@ snapshots:
       generic-names: 4.0.0
       icss-replace-symbols: 1.1.0
       lodash.camelcase: 4.3.0
-<<<<<<< HEAD
       postcss: 8.5.3
       postcss-modules-extract-imports: 3.1.0(postcss@8.5.3)
-      postcss-modules-local-by-default: 4.0.5(postcss@8.5.3)
-      postcss-modules-scope: 3.2.0(postcss@8.5.3)
+      postcss-modules-local-by-default: 4.2.0(postcss@8.5.3)
+      postcss-modules-scope: 3.2.1(postcss@8.5.3)
       postcss-modules-values: 4.0.0(postcss@8.5.3)
-=======
-      postcss: 8.5.2
-      postcss-modules-extract-imports: 3.1.0(postcss@8.5.2)
-      postcss-modules-local-by-default: 4.2.0(postcss@8.5.2)
-      postcss-modules-scope: 3.2.1(postcss@8.5.2)
-      postcss-modules-values: 4.0.0(postcss@8.5.2)
->>>>>>> dabc3ea6b (docs: fix code editor in storybook)
       string-hash: 1.1.3
 
   postcss-normalize-charset@5.1.0(postcss@8.5.3):
@@ -15267,13 +15196,8 @@ snapshots:
 
   postcss-unique-selectors@5.1.1(postcss@8.5.3):
     dependencies:
-<<<<<<< HEAD
       postcss: 8.5.3
-      postcss-selector-parser: 6.0.16
-=======
-      postcss: 8.5.2
       postcss-selector-parser: 6.1.2
->>>>>>> dabc3ea6b (docs: fix code editor in storybook)
 
   postcss-value-parser@4.2.0: {}
 
@@ -15283,17 +15207,13 @@ snapshots:
       picocolors: 1.1.1
       source-map-js: 1.2.1
 
-<<<<<<< HEAD
-  postcss@8.5.1:
+  postcss@8.5.2:
     dependencies:
       nanoid: 3.3.8
       picocolors: 1.1.1
       source-map-js: 1.2.1
 
   postcss@8.5.3:
-=======
-  postcss@8.5.2:
->>>>>>> dabc3ea6b (docs: fix code editor in storybook)
     dependencies:
       nanoid: 3.3.8
       picocolors: 1.1.1
@@ -15748,11 +15668,7 @@ snapshots:
 
   robust-predicates@3.0.2: {}
 
-<<<<<<< HEAD
-  rollup-plugin-postcss@4.0.2(postcss@8.5.3)(ts-node@10.9.2(@types/node@22.13.5)(typescript@5.7.3)):
-=======
-  rollup-plugin-postcss@4.0.2(postcss@8.5.2):
->>>>>>> dabc3ea6b (docs: fix code editor in storybook)
+  rollup-plugin-postcss@4.0.2(postcss@8.5.3):
     dependencies:
       chalk: 4.1.2
       concat-with-sourcemaps: 1.1.0
@@ -15760,15 +15676,9 @@ snapshots:
       import-cwd: 3.0.0
       p-queue: 6.6.2
       pify: 5.0.0
-<<<<<<< HEAD
       postcss: 8.5.3
-      postcss-load-config: 3.1.4(postcss@8.5.3)(ts-node@10.9.2(@types/node@22.13.5)(typescript@5.7.3))
+      postcss-load-config: 3.1.4(postcss@8.5.3)
       postcss-modules: 4.3.1(postcss@8.5.3)
-=======
-      postcss: 8.5.2
-      postcss-load-config: 3.1.4(postcss@8.5.2)
-      postcss-modules: 4.3.1(postcss@8.5.2)
->>>>>>> dabc3ea6b (docs: fix code editor in storybook)
       promise.series: 0.2.0
       resolve: 1.22.10
       rollup-pluginutils: 2.8.2
@@ -16246,13 +16156,8 @@ snapshots:
   stylehacks@5.1.1(postcss@8.5.3):
     dependencies:
       browserslist: 4.24.4
-<<<<<<< HEAD
       postcss: 8.5.3
-      postcss-selector-parser: 6.0.16
-=======
-      postcss: 8.5.2
       postcss-selector-parser: 6.1.2
->>>>>>> dabc3ea6b (docs: fix code editor in storybook)
 
   stylis@4.2.0: {}
 
@@ -16683,23 +16588,13 @@ snapshots:
   vitest-canvas-mock@0.3.3(vitest@3.0.5):
     dependencies:
       jest-canvas-mock: 2.5.2
-<<<<<<< HEAD
-      vitest: 3.0.5(@types/debug@4.1.12)(@types/node@22.13.5)(@vitest/ui@3.0.5)(happy-dom@17.1.0)(jiti@2.4.2)(jsdom@25.0.1)(terser@5.31.0)(tsx@4.19.2)(yaml@2.7.0)
+      vitest: 3.0.5(@types/debug@4.1.12)(@types/node@22.13.5)(@vitest/ui@3.0.5)(happy-dom@17.1.0)(jiti@2.4.2)(jsdom@25.0.1)(terser@5.39.0)(tsx@4.19.2)(yaml@2.7.0)
 
   vitest-localstorage-mock@0.1.2(vitest@3.0.5):
     dependencies:
-      vitest: 3.0.5(@types/debug@4.1.12)(@types/node@22.13.5)(@vitest/ui@3.0.5)(happy-dom@17.1.0)(jiti@2.4.2)(jsdom@25.0.1)(terser@5.31.0)(tsx@4.19.2)(yaml@2.7.0)
+      vitest: 3.0.5(@types/debug@4.1.12)(@types/node@22.13.5)(@vitest/ui@3.0.5)(happy-dom@17.1.0)(jiti@2.4.2)(jsdom@25.0.1)(terser@5.39.0)(tsx@4.19.2)(yaml@2.7.0)
 
-  vitest@3.0.5(@types/debug@4.1.12)(@types/node@22.13.5)(@vitest/ui@3.0.5)(happy-dom@17.1.0)(jiti@2.4.2)(jsdom@25.0.1)(terser@5.31.0)(tsx@4.19.2)(yaml@2.7.0):
-=======
-      vitest: 3.0.5(@types/debug@4.1.12)(@types/node@22.13.5)(@vitest/ui@3.0.5)(happy-dom@16.7.3)(jiti@2.4.2)(jsdom@25.0.1)(terser@5.39.0)(tsx@4.19.2)(yaml@2.7.0)
-
-  vitest-localstorage-mock@0.1.2(vitest@3.0.5):
-    dependencies:
-      vitest: 3.0.5(@types/debug@4.1.12)(@types/node@22.13.5)(@vitest/ui@3.0.5)(happy-dom@16.7.3)(jiti@2.4.2)(jsdom@25.0.1)(terser@5.39.0)(tsx@4.19.2)(yaml@2.7.0)
-
-  vitest@3.0.5(@types/debug@4.1.12)(@types/node@22.13.5)(@vitest/ui@3.0.5)(happy-dom@16.7.3)(jiti@2.4.2)(jsdom@25.0.1)(terser@5.39.0)(tsx@4.19.2)(yaml@2.7.0):
->>>>>>> dabc3ea6b (docs: fix code editor in storybook)
+  vitest@3.0.5(@types/debug@4.1.12)(@types/node@22.13.5)(@vitest/ui@3.0.5)(happy-dom@17.1.0)(jiti@2.4.2)(jsdom@25.0.1)(terser@5.39.0)(tsx@4.19.2)(yaml@2.7.0):
     dependencies:
       '@vitest/expect': 3.0.5
       '@vitest/mocker': 3.0.5(vite@6.1.0(@types/node@22.13.5)(jiti@2.4.2)(terser@5.39.0)(tsx@4.19.2)(yaml@2.7.0))
