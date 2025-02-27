@@ -135,7 +135,7 @@ exports[`OrderSummary > should work with children 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -151,6 +151,7 @@ exports[`OrderSummary > should work with children 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  background-color: #ffffff;
 }
 
 .emotion-6 {
@@ -158,6 +159,30 @@ exports[`OrderSummary > should work with children 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  background-color: #ffffff;
+}
+
+.emotion-8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -181,10 +206,10 @@ exports[`OrderSummary > should work with children 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  gap: 0.25rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -197,138 +222,9 @@ exports[`OrderSummary > should work with children 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  width: 11rem;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-  background-color: #ffffff;
 }
 
-.emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
-      [data-success='true']
-    ):not([data-error='true']):focus,
-.emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
-      [data-success='true']
-    ):not([data-error='true']):active {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-  border-color: #792dd4;
-}
-
-.emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
-      [data-success='true']
-    ):not([data-error='true']):focus>.emotion-11,
-.emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
-      [data-success='true']
-    ):not([data-error='true']):active>.emotion-11 {
-  border-right-color: #8c40ef;
-}
-
-.emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
-      [data-success='true']
-    ):not([data-error='true']):focus-within {
-  border-color: #792dd4;
-}
-
-.emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
-      [data-success='true']
-    ):not([data-error='true']):focus-within>.emotion-11 {
-  border-right-color: #8c40ef;
-}
-
-.emotion-8:not([data-disabled='true']):not([data-error='true']):not(
-      [data-success='true']
-    ):not([data-readonly='true']):hover,
-.emotion-8:not([data-disabled='true']):not([data-error='true']):not(
-      [data-success='true']
-    ):focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  border-color: #8c40ef;
-}
-
-.emotion-8:not([data-disabled='true']):not([data-error='true']):not(
-      [data-success='true']
-    ):not([data-readonly='true']):hover>.emotion-11,
-.emotion-8:not([data-disabled='true']):not([data-error='true']):not(
-      [data-success='true']
-    ):focus>.emotion-11 {
-  border-right-color: #8c40ef;
-}
-
-.emotion-8[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-8[data-readonly='true']:active {
-  border-color: #d9dadd;
-}
-
-.emotion-8[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-8[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-8[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-8[data-success='true'] {
-  border: 1px solid #22674e;
-}
-
-.emotion-8[data-success='true']>.emotion-11 {
-  border-right-color: #22674e;
-}
-
-.emotion-8[data-success='true']:active {
-  border: 1px solid #22674e;
-  box-shadow: 0px 0px 0px 3px #45d19f40;
-}
-
-.emotion-8[data-success='true']:active>.emotion-11 {
-  border-right-color: #22674e;
-}
-
-.emotion-8[data-error='true'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-8[data-error='true']>.emotion-11 {
-  border-right-color: #b3144d;
-}
-
-.emotion-8[data-error='true']>.emotion-11:hover {
-  border-right-color: #b3144d;
-}
-
-.emotion-8[data-error='true']:active {
-  border: 1px solid #b3144d;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-8[data-error='true']:active>.emotion-11 {
-  border-right-color: #b3144d;
-}
-
-.emotion-8[data-error='true']:active>.emotion-11:hover {
-  border-right-color: #b3144d;
-}
-
-.emotion-8[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-8[data-disabled='true']>.emotion-11 {
-  border-right-color: #e9eaeb;
-}
-
-.emotion-8 {
+.emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -352,44 +248,43 @@ exports[`OrderSummary > should work with children 1`] = `
   width: 11rem;
   border: 1px solid #d9dadd;
   border-radius: 0.25rem;
-  background-color: #ffffff;
 }
 
-.emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
+.emotion-10:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
     ):not([data-error='true']):focus,
-.emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
+.emotion-10:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
     ):not([data-error='true']):active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   border-color: #792dd4;
 }
 
-.emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
+.emotion-10:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
-    ):not([data-error='true']):focus>.emotion-11,
-.emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
+    ):not([data-error='true']):focus>.emotion-13,
+.emotion-10:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
-    ):not([data-error='true']):active>.emotion-11 {
+    ):not([data-error='true']):active>.emotion-13 {
   border-right-color: #8c40ef;
 }
 
-.emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
+.emotion-10:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
     ):not([data-error='true']):focus-within {
   border-color: #792dd4;
 }
 
-.emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
+.emotion-10:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
-    ):not([data-error='true']):focus-within>.emotion-11 {
+    ):not([data-error='true']):focus-within>.emotion-13 {
   border-right-color: #8c40ef;
 }
 
-.emotion-8:not([data-disabled='true']):not([data-error='true']):not(
+.emotion-10:not([data-disabled='true']):not([data-error='true']):not(
       [data-success='true']
     ):not([data-readonly='true']):hover,
-.emotion-8:not([data-disabled='true']):not([data-error='true']):not(
+.emotion-10:not([data-disabled='true']):not([data-error='true']):not(
       [data-success='true']
     ):focus {
   -webkit-text-decoration: none;
@@ -397,86 +292,86 @@ exports[`OrderSummary > should work with children 1`] = `
   border-color: #8c40ef;
 }
 
-.emotion-8:not([data-disabled='true']):not([data-error='true']):not(
+.emotion-10:not([data-disabled='true']):not([data-error='true']):not(
       [data-success='true']
-    ):not([data-readonly='true']):hover>.emotion-11,
-.emotion-8:not([data-disabled='true']):not([data-error='true']):not(
+    ):not([data-readonly='true']):hover>.emotion-13,
+.emotion-10:not([data-disabled='true']):not([data-error='true']):not(
       [data-success='true']
-    ):focus>.emotion-11 {
+    ):focus>.emotion-13 {
   border-right-color: #8c40ef;
 }
 
-.emotion-8[data-readonly='true'] {
+.emotion-10[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-8[data-readonly='true']:active {
+.emotion-10[data-readonly='true']:active {
   border-color: #d9dadd;
 }
 
-.emotion-8[data-size='small'] {
+.emotion-10[data-size='small'] {
   height: 2rem;
 }
 
-.emotion-8[data-size='medium'] {
+.emotion-10[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-8[data-size='large'] {
+.emotion-10[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-8[data-success='true'] {
+.emotion-10[data-success='true'] {
   border: 1px solid #22674e;
 }
 
-.emotion-8[data-success='true']>.emotion-11 {
+.emotion-10[data-success='true']>.emotion-13 {
   border-right-color: #22674e;
 }
 
-.emotion-8[data-success='true']:active {
+.emotion-10[data-success='true']:active {
   border: 1px solid #22674e;
   box-shadow: 0px 0px 0px 3px #45d19f40;
 }
 
-.emotion-8[data-success='true']:active>.emotion-11 {
+.emotion-10[data-success='true']:active>.emotion-13 {
   border-right-color: #22674e;
 }
 
-.emotion-8[data-error='true'] {
+.emotion-10[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-8[data-error='true']>.emotion-11 {
+.emotion-10[data-error='true']>.emotion-13 {
   border-right-color: #b3144d;
 }
 
-.emotion-8[data-error='true']>.emotion-11:hover {
+.emotion-10[data-error='true']>.emotion-13:hover {
   border-right-color: #b3144d;
 }
 
-.emotion-8[data-error='true']:active {
+.emotion-10[data-error='true']:active {
   border: 1px solid #b3144d;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-8[data-error='true']:active>.emotion-11 {
+.emotion-10[data-error='true']:active>.emotion-13 {
   border-right-color: #b3144d;
 }
 
-.emotion-8[data-error='true']:active>.emotion-11:hover {
+.emotion-10[data-error='true']:active>.emotion-13:hover {
   border-right-color: #b3144d;
 }
 
-.emotion-8[data-disabled='true'] {
+.emotion-10[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-8[data-disabled='true']>.emotion-11 {
+.emotion-10[data-disabled='true']>.emotion-13 {
   border-right-color: #e9eaeb;
 }
 
@@ -485,20 +380,153 @@ exports[`OrderSummary > should work with children 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  padding-right: 1rem;
-  border-right: 1px solid #d9dadd;
-  width: 100%;
-  height: 100%;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 11rem;
+  border: 1px solid #d9dadd;
+  border-radius: 0.25rem;
 }
 
-.emotion-10 {
+.emotion-10:not([data-disabled='true']):not([data-readonly='true']):not(
+      [data-success='true']
+    ):not([data-error='true']):focus,
+.emotion-10:not([data-disabled='true']):not([data-readonly='true']):not(
+      [data-success='true']
+    ):not([data-error='true']):active {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+  border-color: #792dd4;
+}
+
+.emotion-10:not([data-disabled='true']):not([data-readonly='true']):not(
+      [data-success='true']
+    ):not([data-error='true']):focus>.emotion-13,
+.emotion-10:not([data-disabled='true']):not([data-readonly='true']):not(
+      [data-success='true']
+    ):not([data-error='true']):active>.emotion-13 {
+  border-right-color: #8c40ef;
+}
+
+.emotion-10:not([data-disabled='true']):not([data-readonly='true']):not(
+      [data-success='true']
+    ):not([data-error='true']):focus-within {
+  border-color: #792dd4;
+}
+
+.emotion-10:not([data-disabled='true']):not([data-readonly='true']):not(
+      [data-success='true']
+    ):not([data-error='true']):focus-within>.emotion-13 {
+  border-right-color: #8c40ef;
+}
+
+.emotion-10:not([data-disabled='true']):not([data-error='true']):not(
+      [data-success='true']
+    ):not([data-readonly='true']):hover,
+.emotion-10:not([data-disabled='true']):not([data-error='true']):not(
+      [data-success='true']
+    ):focus {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-color: #8c40ef;
+}
+
+.emotion-10:not([data-disabled='true']):not([data-error='true']):not(
+      [data-success='true']
+    ):not([data-readonly='true']):hover>.emotion-13,
+.emotion-10:not([data-disabled='true']):not([data-error='true']):not(
+      [data-success='true']
+    ):focus>.emotion-13 {
+  border-right-color: #8c40ef;
+}
+
+.emotion-10[data-readonly='true'] {
+  background: #f9f9fa;
+  border-color: #d9dadd;
+  cursor: default;
+}
+
+.emotion-10[data-readonly='true']:active {
+  border-color: #d9dadd;
+}
+
+.emotion-10[data-size='small'] {
+  height: 2rem;
+}
+
+.emotion-10[data-size='medium'] {
+  height: 2.5rem;
+}
+
+.emotion-10[data-size='large'] {
+  height: 3rem;
+}
+
+.emotion-10[data-success='true'] {
+  border: 1px solid #22674e;
+}
+
+.emotion-10[data-success='true']>.emotion-13 {
+  border-right-color: #22674e;
+}
+
+.emotion-10[data-success='true']:active {
+  border: 1px solid #22674e;
+  box-shadow: 0px 0px 0px 3px #45d19f40;
+}
+
+.emotion-10[data-success='true']:active>.emotion-13 {
+  border-right-color: #22674e;
+}
+
+.emotion-10[data-error='true'] {
+  border: 1px solid #b3144d;
+}
+
+.emotion-10[data-error='true']>.emotion-13 {
+  border-right-color: #b3144d;
+}
+
+.emotion-10[data-error='true']>.emotion-13:hover {
+  border-right-color: #b3144d;
+}
+
+.emotion-10[data-error='true']:active {
+  border: 1px solid #b3144d;
+  box-shadow: 0px 0px 0px 3px #f91b6c40;
+}
+
+.emotion-10[data-error='true']:active>.emotion-13 {
+  border-right-color: #b3144d;
+}
+
+.emotion-10[data-error='true']:active>.emotion-13:hover {
+  border-right-color: #b3144d;
+}
+
+.emotion-10[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
+  cursor: not-allowed;
+}
+
+.emotion-10[data-disabled='true']>.emotion-13 {
+  border-right-color: #e9eaeb;
+}
+
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -517,6 +545,24 @@ exports[`OrderSummary > should work with children 1`] = `
 }
 
 .emotion-12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  padding-right: 1rem;
+  border-right: 1px solid #d9dadd;
+  width: 100%;
+  height: 100%;
+}
+
+.emotion-14 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -527,54 +573,53 @@ exports[`OrderSummary > should work with children 1`] = `
   padding-left: 1rem;
   background: transparent;
   color: #3f4250;
-  font-size: 0.875rem;
 }
 
-.emotion-12[data-size="small"] {
+.emotion-14[data-size="small"] {
   padding-left: 0.5rem;
 }
 
-.emotion-12[data-size="large"] {
+.emotion-14[data-size="large"] {
   font-size: 1rem;
 }
 
-.emotion-12::-webkit-input-placeholder {
+.emotion-14::-webkit-input-placeholder {
   color: #727683;
 }
 
-.emotion-12::-moz-placeholder {
+.emotion-14::-moz-placeholder {
   color: #727683;
 }
 
-.emotion-12:-ms-input-placeholder {
+.emotion-14:-ms-input-placeholder {
   color: #727683;
 }
 
-.emotion-12::placeholder {
+.emotion-14::placeholder {
   color: #727683;
 }
 
-.emotion-12:disabled {
+.emotion-14:disabled {
   cursor: not-allowed;
 }
 
-.emotion-12:disabled::-webkit-input-placeholder {
+.emotion-14:disabled::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-12:disabled::-moz-placeholder {
+.emotion-14:disabled::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-12:disabled:-ms-input-placeholder {
+.emotion-14:disabled:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-12:disabled::placeholder {
+.emotion-14:disabled::placeholder {
   color: #b5b7bd;
 }
 
-.emotion-12 {
+.emotion-14 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -585,75 +630,57 @@ exports[`OrderSummary > should work with children 1`] = `
   padding-left: 1rem;
   background: transparent;
   color: #3f4250;
-  font-size: 0.875rem;
 }
 
-.emotion-12[data-size="small"] {
+.emotion-14[data-size="small"] {
   padding-left: 0.5rem;
 }
 
-.emotion-12[data-size="large"] {
+.emotion-14[data-size="large"] {
   font-size: 1rem;
 }
 
-.emotion-12::-webkit-input-placeholder {
+.emotion-14::-webkit-input-placeholder {
   color: #727683;
 }
 
-.emotion-12::-moz-placeholder {
+.emotion-14::-moz-placeholder {
   color: #727683;
 }
 
-.emotion-12:-ms-input-placeholder {
+.emotion-14:-ms-input-placeholder {
   color: #727683;
 }
 
-.emotion-12::placeholder {
+.emotion-14::placeholder {
   color: #727683;
 }
 
-.emotion-12:disabled {
+.emotion-14:disabled {
   cursor: not-allowed;
 }
 
-.emotion-12:disabled::-webkit-input-placeholder {
+.emotion-14:disabled::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-12:disabled::-moz-placeholder {
+.emotion-14:disabled::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-12:disabled:-ms-input-placeholder {
+.emotion-14:disabled:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-12:disabled::placeholder {
+.emotion-14:disabled::placeholder {
   color: #b5b7bd;
-}
-
-.emotion-14 {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-14 {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 .emotion-17 {
   width: 100%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .emotion-17 #unit {
@@ -668,6 +695,9 @@ exports[`OrderSummary > should work with children 1`] = `
 
 .emotion-17 {
   width: 100%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .emotion-17 #unit {
@@ -1439,37 +1469,34 @@ exports[`OrderSummary > should work with children 1`] = `
         >
           <div
             class="emotion-8 emotion-9"
-            data-disabled="false"
-            data-error="false"
-            data-readonly="false"
-            data-size="small"
-            data-success="false"
           >
             <div
               class="emotion-10 emotion-11"
-              id="input-field"
+              data-disabled="false"
+              data-error="false"
+              data-readonly="false"
+              data-size="small"
+              data-success="false"
             >
-              <input
-                aria-invalid="false"
+              <div
                 class="emotion-12 emotion-13"
-                data-size="small"
-                data-testid="unit-input"
-                id=":r3u:"
-                max="9007199254740991"
-                min="0"
-                name="-value"
-                placeholder="0"
-                step="1"
-                type="number"
-                value="1"
-                width="11rem"
-              />
-            </div>
-             
-            <div
-              class="emotion-14 emotion-15"
-              width="fit-content"
-            >
+                id="input-field"
+              >
+                <input
+                  aria-invalid="false"
+                  class="emotion-14 emotion-15"
+                  data-size="small"
+                  data-testid="unit-input"
+                  max="9007199254740991"
+                  min="0"
+                  name="-value"
+                  placeholder="0"
+                  step="1"
+                  type="number"
+                  value="1"
+                  width="11rem"
+                />
+              </div>
               <div
                 aria-label="-unit"
                 class="emotion-16 emotion-17 emotion-18"
@@ -1482,7 +1509,7 @@ exports[`OrderSummary > should work with children 1`] = `
                   tabindex="0"
                 >
                   <div
-                    class="emotion-6 emotion-7"
+                    class="emotion-8 emotion-9"
                   >
                     <div
                       aria-expanded="false"
@@ -1533,7 +1560,7 @@ exports[`OrderSummary > should work with children 1`] = `
           class="emotion-34 emotion-35"
         >
           <div
-            class="emotion-36 emotion-7"
+            class="emotion-36 emotion-9"
           >
             <span
               class="emotion-38 emotion-5"
@@ -1547,13 +1574,13 @@ exports[`OrderSummary > should work with children 1`] = `
             </span>
           </div>
           <div
-            class="emotion-42 emotion-7"
+            class="emotion-42 emotion-9"
           >
             <div
-              class="emotion-42 emotion-7"
+              class="emotion-42 emotion-9"
             >
               <div
-                class="emotion-36 emotion-7"
+                class="emotion-36 emotion-9"
               >
                 <span
                   class="emotion-48 emotion-5"
@@ -1576,7 +1603,7 @@ exports[`OrderSummary > should work with children 1`] = `
           class="emotion-34 emotion-35"
         >
           <div
-            class="emotion-36 emotion-7"
+            class="emotion-36 emotion-9"
           >
             <span
               class="emotion-38 emotion-5"
@@ -1586,17 +1613,17 @@ exports[`OrderSummary > should work with children 1`] = `
             FREE
           </div>
           <div
-            class="emotion-42 emotion-7"
+            class="emotion-42 emotion-9"
           />
         </div>
         <div
           class="emotion-34 emotion-35"
         >
           <div
-            class="emotion-36 emotion-7"
+            class="emotion-36 emotion-9"
           >
             <div
-              class="emotion-66 emotion-7"
+              class="emotion-66 emotion-9"
             >
               <span
                 class="emotion-38 emotion-5"
@@ -1632,13 +1659,13 @@ exports[`OrderSummary > should work with children 1`] = `
             </span>
           </div>
           <div
-            class="emotion-42 emotion-7"
+            class="emotion-42 emotion-9"
           >
             <div
-              class="emotion-42 emotion-7"
+              class="emotion-42 emotion-9"
             >
               <div
-                class="emotion-36 emotion-7"
+                class="emotion-36 emotion-9"
               >
                 <span
                   class="emotion-48 emotion-5"
@@ -1672,7 +1699,7 @@ exports[`OrderSummary > should work with children 1`] = `
           class="emotion-34 emotion-35"
         >
           <div
-            class="emotion-36 emotion-7"
+            class="emotion-36 emotion-9"
           >
             <span
               class="emotion-38 emotion-5"
@@ -1686,13 +1713,13 @@ exports[`OrderSummary > should work with children 1`] = `
             </span>
           </div>
           <div
-            class="emotion-42 emotion-7"
+            class="emotion-42 emotion-9"
           >
             <div
-              class="emotion-42 emotion-7"
+              class="emotion-42 emotion-9"
             >
               <div
-                class="emotion-36 emotion-7"
+                class="emotion-36 emotion-9"
               >
                 <span
                   class="emotion-48 emotion-5"
@@ -1736,10 +1763,10 @@ exports[`OrderSummary > should work with children 1`] = `
               </div>
             </div>
             <div
-              class="emotion-42 emotion-7"
+              class="emotion-42 emotion-9"
             >
               <div
-                class="emotion-36 emotion-7"
+                class="emotion-36 emotion-9"
               >
                 <span
                   class="emotion-48 emotion-5"
@@ -1762,7 +1789,7 @@ exports[`OrderSummary > should work with children 1`] = `
           class="emotion-34 emotion-35"
         >
           <div
-            class="emotion-36 emotion-7"
+            class="emotion-36 emotion-9"
           >
             <span
               class="emotion-38 emotion-5"
@@ -1776,13 +1803,13 @@ exports[`OrderSummary > should work with children 1`] = `
             </span>
           </div>
           <div
-            class="emotion-42 emotion-7"
+            class="emotion-42 emotion-9"
           >
             <div
-              class="emotion-42 emotion-7"
+              class="emotion-42 emotion-9"
             >
               <div
-                class="emotion-36 emotion-7"
+                class="emotion-36 emotion-9"
               >
                 <span
                   class="emotion-48 emotion-5"
@@ -1805,7 +1832,7 @@ exports[`OrderSummary > should work with children 1`] = `
           class="emotion-34 emotion-35"
         >
           <div
-            class="emotion-36 emotion-7"
+            class="emotion-36 emotion-9"
           >
             <span
               class="emotion-38 emotion-5"
@@ -1819,13 +1846,13 @@ exports[`OrderSummary > should work with children 1`] = `
             </span>
           </div>
           <div
-            class="emotion-42 emotion-7"
+            class="emotion-42 emotion-9"
           >
             <div
-              class="emotion-42 emotion-7"
+              class="emotion-42 emotion-9"
             >
               <div
-                class="emotion-36 emotion-7"
+                class="emotion-36 emotion-9"
               >
                 <span
                   class="emotion-48 emotion-5"
@@ -1848,7 +1875,7 @@ exports[`OrderSummary > should work with children 1`] = `
           class="emotion-34 emotion-35"
         >
           <div
-            class="emotion-36 emotion-7"
+            class="emotion-36 emotion-9"
           >
             <span
               class="emotion-38 emotion-5"
@@ -1862,13 +1889,13 @@ exports[`OrderSummary > should work with children 1`] = `
             </span>
           </div>
           <div
-            class="emotion-42 emotion-7"
+            class="emotion-42 emotion-9"
           >
             <div
-              class="emotion-42 emotion-7"
+              class="emotion-42 emotion-9"
             >
               <div
-                class="emotion-36 emotion-7"
+                class="emotion-36 emotion-9"
               >
                 <span
                   class="emotion-48 emotion-5"
@@ -1886,10 +1913,10 @@ exports[`OrderSummary > should work with children 1`] = `
               />
             </div>
             <div
-              class="emotion-42 emotion-7"
+              class="emotion-42 emotion-9"
             >
               <div
-                class="emotion-36 emotion-7"
+                class="emotion-36 emotion-9"
               >
                 <span
                   class="emotion-48 emotion-5"
@@ -1912,7 +1939,7 @@ exports[`OrderSummary > should work with children 1`] = `
           class="emotion-34 emotion-35"
         >
           <div
-            class="emotion-36 emotion-7"
+            class="emotion-36 emotion-9"
           >
             <span
               class="emotion-38 emotion-5"
@@ -1926,13 +1953,13 @@ exports[`OrderSummary > should work with children 1`] = `
             </span>
           </div>
           <div
-            class="emotion-42 emotion-7"
+            class="emotion-42 emotion-9"
           >
             <div
-              class="emotion-42 emotion-7"
+              class="emotion-42 emotion-9"
             >
               <div
-                class="emotion-36 emotion-7"
+                class="emotion-36 emotion-9"
               >
                 <span
                   class="emotion-48 emotion-5"
@@ -1955,10 +1982,10 @@ exports[`OrderSummary > should work with children 1`] = `
           class="emotion-34 emotion-35"
         >
           <div
-            class="emotion-36 emotion-7"
+            class="emotion-36 emotion-9"
           >
             <div
-              class="emotion-66 emotion-7"
+              class="emotion-66 emotion-9"
             >
               <span
                 class="emotion-38 emotion-5"
@@ -1987,13 +2014,13 @@ exports[`OrderSummary > should work with children 1`] = `
             </span>
           </div>
           <div
-            class="emotion-42 emotion-7"
+            class="emotion-42 emotion-9"
           >
             <div
-              class="emotion-42 emotion-7"
+              class="emotion-42 emotion-9"
             >
               <div
-                class="emotion-36 emotion-7"
+                class="emotion-36 emotion-9"
               >
                 <span
                   class="emotion-48 emotion-5"
@@ -2018,7 +2045,7 @@ exports[`OrderSummary > should work with children 1`] = `
       >
         children
         <div
-          class="emotion-36 emotion-7"
+          class="emotion-36 emotion-9"
         >
           <p
             class="emotion-38 emotion-5"
@@ -2109,6 +2136,30 @@ exports[`OrderSummary > should work with default props 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  background-color: #ffffff;
+}
+
+.emotion-8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -2127,7 +2178,7 @@ exports[`OrderSummary > should work with default props 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-8 {
+.emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2151,44 +2202,43 @@ exports[`OrderSummary > should work with default props 1`] = `
   width: 11rem;
   border: 1px solid #d9dadd;
   border-radius: 0.25rem;
-  background-color: #ffffff;
 }
 
-.emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
+.emotion-10:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
     ):not([data-error='true']):focus,
-.emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
+.emotion-10:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
     ):not([data-error='true']):active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   border-color: #792dd4;
 }
 
-.emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
+.emotion-10:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
-    ):not([data-error='true']):focus>.emotion-11,
-.emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
+    ):not([data-error='true']):focus>.emotion-13,
+.emotion-10:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
-    ):not([data-error='true']):active>.emotion-11 {
+    ):not([data-error='true']):active>.emotion-13 {
   border-right-color: #8c40ef;
 }
 
-.emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
+.emotion-10:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
     ):not([data-error='true']):focus-within {
   border-color: #792dd4;
 }
 
-.emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
+.emotion-10:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
-    ):not([data-error='true']):focus-within>.emotion-11 {
+    ):not([data-error='true']):focus-within>.emotion-13 {
   border-right-color: #8c40ef;
 }
 
-.emotion-8:not([data-disabled='true']):not([data-error='true']):not(
+.emotion-10:not([data-disabled='true']):not([data-error='true']):not(
       [data-success='true']
     ):not([data-readonly='true']):hover,
-.emotion-8:not([data-disabled='true']):not([data-error='true']):not(
+.emotion-10:not([data-disabled='true']):not([data-error='true']):not(
       [data-success='true']
     ):focus {
   -webkit-text-decoration: none;
@@ -2196,90 +2246,90 @@ exports[`OrderSummary > should work with default props 1`] = `
   border-color: #8c40ef;
 }
 
-.emotion-8:not([data-disabled='true']):not([data-error='true']):not(
+.emotion-10:not([data-disabled='true']):not([data-error='true']):not(
       [data-success='true']
-    ):not([data-readonly='true']):hover>.emotion-11,
-.emotion-8:not([data-disabled='true']):not([data-error='true']):not(
+    ):not([data-readonly='true']):hover>.emotion-13,
+.emotion-10:not([data-disabled='true']):not([data-error='true']):not(
       [data-success='true']
-    ):focus>.emotion-11 {
+    ):focus>.emotion-13 {
   border-right-color: #8c40ef;
 }
 
-.emotion-8[data-readonly='true'] {
+.emotion-10[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-8[data-readonly='true']:active {
+.emotion-10[data-readonly='true']:active {
   border-color: #d9dadd;
 }
 
-.emotion-8[data-size='small'] {
+.emotion-10[data-size='small'] {
   height: 2rem;
 }
 
-.emotion-8[data-size='medium'] {
+.emotion-10[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-8[data-size='large'] {
+.emotion-10[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-8[data-success='true'] {
+.emotion-10[data-success='true'] {
   border: 1px solid #22674e;
 }
 
-.emotion-8[data-success='true']>.emotion-11 {
+.emotion-10[data-success='true']>.emotion-13 {
   border-right-color: #22674e;
 }
 
-.emotion-8[data-success='true']:active {
+.emotion-10[data-success='true']:active {
   border: 1px solid #22674e;
   box-shadow: 0px 0px 0px 3px #45d19f40;
 }
 
-.emotion-8[data-success='true']:active>.emotion-11 {
+.emotion-10[data-success='true']:active>.emotion-13 {
   border-right-color: #22674e;
 }
 
-.emotion-8[data-error='true'] {
+.emotion-10[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-8[data-error='true']>.emotion-11 {
+.emotion-10[data-error='true']>.emotion-13 {
   border-right-color: #b3144d;
 }
 
-.emotion-8[data-error='true']>.emotion-11:hover {
+.emotion-10[data-error='true']>.emotion-13:hover {
   border-right-color: #b3144d;
 }
 
-.emotion-8[data-error='true']:active {
+.emotion-10[data-error='true']:active {
   border: 1px solid #b3144d;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-8[data-error='true']:active>.emotion-11 {
+.emotion-10[data-error='true']:active>.emotion-13 {
   border-right-color: #b3144d;
 }
 
-.emotion-8[data-error='true']:active>.emotion-11:hover {
+.emotion-10[data-error='true']:active>.emotion-13:hover {
   border-right-color: #b3144d;
 }
 
-.emotion-8[data-disabled='true'] {
+.emotion-10[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-8[data-disabled='true']>.emotion-11 {
+.emotion-10[data-disabled='true']>.emotion-13 {
   border-right-color: #e9eaeb;
 }
 
-.emotion-10 {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2297,7 +2347,7 @@ exports[`OrderSummary > should work with default props 1`] = `
   height: 100%;
 }
 
-.emotion-12 {
+.emotion-14 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -2308,65 +2358,57 @@ exports[`OrderSummary > should work with default props 1`] = `
   padding-left: 1rem;
   background: transparent;
   color: #3f4250;
-  font-size: 0.875rem;
 }
 
-.emotion-12[data-size="small"] {
+.emotion-14[data-size="small"] {
   padding-left: 0.5rem;
 }
 
-.emotion-12[data-size="large"] {
+.emotion-14[data-size="large"] {
   font-size: 1rem;
 }
 
-.emotion-12::-webkit-input-placeholder {
+.emotion-14::-webkit-input-placeholder {
   color: #727683;
 }
 
-.emotion-12::-moz-placeholder {
+.emotion-14::-moz-placeholder {
   color: #727683;
 }
 
-.emotion-12:-ms-input-placeholder {
+.emotion-14:-ms-input-placeholder {
   color: #727683;
 }
 
-.emotion-12::placeholder {
+.emotion-14::placeholder {
   color: #727683;
 }
 
-.emotion-12:disabled {
+.emotion-14:disabled {
   cursor: not-allowed;
 }
 
-.emotion-12:disabled::-webkit-input-placeholder {
+.emotion-14:disabled::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-12:disabled::-moz-placeholder {
+.emotion-14:disabled::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-12:disabled:-ms-input-placeholder {
+.emotion-14:disabled:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-12:disabled::placeholder {
+.emotion-14:disabled::placeholder {
   color: #b5b7bd;
-}
-
-.emotion-14 {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 .emotion-17 {
   width: 100%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .emotion-17 #unit {
@@ -2792,37 +2834,34 @@ exports[`OrderSummary > should work with default props 1`] = `
         >
           <div
             class="emotion-8 emotion-9"
-            data-disabled="false"
-            data-error="false"
-            data-readonly="false"
-            data-size="small"
-            data-success="false"
           >
             <div
               class="emotion-10 emotion-11"
-              id="input-field"
+              data-disabled="false"
+              data-error="false"
+              data-readonly="false"
+              data-size="small"
+              data-success="false"
             >
-              <input
-                aria-invalid="false"
+              <div
                 class="emotion-12 emotion-13"
-                data-size="small"
-                data-testid="unit-input"
-                id=":r1:"
-                max="9007199254740991"
-                min="0"
-                name="-value"
-                placeholder="0"
-                step="1"
-                type="number"
-                value="1"
-                width="11rem"
-              />
-            </div>
-             
-            <div
-              class="emotion-14 emotion-15"
-              width="fit-content"
-            >
+                id="input-field"
+              >
+                <input
+                  aria-invalid="false"
+                  class="emotion-14 emotion-15"
+                  data-size="small"
+                  data-testid="unit-input"
+                  max="9007199254740991"
+                  min="0"
+                  name="-value"
+                  placeholder="0"
+                  step="1"
+                  type="number"
+                  value="1"
+                  width="11rem"
+                />
+              </div>
               <div
                 aria-label="-unit"
                 class="emotion-16 emotion-17 emotion-18"
@@ -2835,7 +2874,7 @@ exports[`OrderSummary > should work with default props 1`] = `
                   tabindex="0"
                 >
                   <div
-                    class="emotion-6 emotion-7"
+                    class="emotion-8 emotion-9"
                   >
                     <div
                       aria-expanded="false"
@@ -2886,7 +2925,7 @@ exports[`OrderSummary > should work with default props 1`] = `
           class="emotion-34 emotion-35"
         >
           <div
-            class="emotion-36 emotion-7"
+            class="emotion-36 emotion-9"
           >
             <span
               class="emotion-38 emotion-5"
@@ -2900,13 +2939,13 @@ exports[`OrderSummary > should work with default props 1`] = `
             </span>
           </div>
           <div
-            class="emotion-42 emotion-7"
+            class="emotion-42 emotion-9"
           >
             <div
-              class="emotion-42 emotion-7"
+              class="emotion-42 emotion-9"
             >
               <div
-                class="emotion-36 emotion-7"
+                class="emotion-36 emotion-9"
               >
                 <span
                   class="emotion-48 emotion-5"
@@ -2929,7 +2968,7 @@ exports[`OrderSummary > should work with default props 1`] = `
           class="emotion-34 emotion-35"
         >
           <div
-            class="emotion-36 emotion-7"
+            class="emotion-36 emotion-9"
           >
             <span
               class="emotion-38 emotion-5"
@@ -2939,17 +2978,17 @@ exports[`OrderSummary > should work with default props 1`] = `
             FREE
           </div>
           <div
-            class="emotion-42 emotion-7"
+            class="emotion-42 emotion-9"
           />
         </div>
         <div
           class="emotion-34 emotion-35"
         >
           <div
-            class="emotion-36 emotion-7"
+            class="emotion-36 emotion-9"
           >
             <div
-              class="emotion-66 emotion-7"
+              class="emotion-66 emotion-9"
             >
               <span
                 class="emotion-38 emotion-5"
@@ -2985,13 +3024,13 @@ exports[`OrderSummary > should work with default props 1`] = `
             </span>
           </div>
           <div
-            class="emotion-42 emotion-7"
+            class="emotion-42 emotion-9"
           >
             <div
-              class="emotion-42 emotion-7"
+              class="emotion-42 emotion-9"
             >
               <div
-                class="emotion-36 emotion-7"
+                class="emotion-36 emotion-9"
               >
                 <span
                   class="emotion-48 emotion-5"
@@ -3025,7 +3064,7 @@ exports[`OrderSummary > should work with default props 1`] = `
           class="emotion-34 emotion-35"
         >
           <div
-            class="emotion-36 emotion-7"
+            class="emotion-36 emotion-9"
           >
             <span
               class="emotion-38 emotion-5"
@@ -3039,13 +3078,13 @@ exports[`OrderSummary > should work with default props 1`] = `
             </span>
           </div>
           <div
-            class="emotion-42 emotion-7"
+            class="emotion-42 emotion-9"
           >
             <div
-              class="emotion-42 emotion-7"
+              class="emotion-42 emotion-9"
             >
               <div
-                class="emotion-36 emotion-7"
+                class="emotion-36 emotion-9"
               >
                 <span
                   class="emotion-48 emotion-5"
@@ -3089,10 +3128,10 @@ exports[`OrderSummary > should work with default props 1`] = `
               </div>
             </div>
             <div
-              class="emotion-42 emotion-7"
+              class="emotion-42 emotion-9"
             >
               <div
-                class="emotion-36 emotion-7"
+                class="emotion-36 emotion-9"
               >
                 <span
                   class="emotion-48 emotion-5"
@@ -3115,7 +3154,7 @@ exports[`OrderSummary > should work with default props 1`] = `
           class="emotion-34 emotion-35"
         >
           <div
-            class="emotion-36 emotion-7"
+            class="emotion-36 emotion-9"
           >
             <span
               class="emotion-38 emotion-5"
@@ -3129,13 +3168,13 @@ exports[`OrderSummary > should work with default props 1`] = `
             </span>
           </div>
           <div
-            class="emotion-42 emotion-7"
+            class="emotion-42 emotion-9"
           >
             <div
-              class="emotion-42 emotion-7"
+              class="emotion-42 emotion-9"
             >
               <div
-                class="emotion-36 emotion-7"
+                class="emotion-36 emotion-9"
               >
                 <span
                   class="emotion-48 emotion-5"
@@ -3158,7 +3197,7 @@ exports[`OrderSummary > should work with default props 1`] = `
           class="emotion-34 emotion-35"
         >
           <div
-            class="emotion-36 emotion-7"
+            class="emotion-36 emotion-9"
           >
             <span
               class="emotion-38 emotion-5"
@@ -3172,13 +3211,13 @@ exports[`OrderSummary > should work with default props 1`] = `
             </span>
           </div>
           <div
-            class="emotion-42 emotion-7"
+            class="emotion-42 emotion-9"
           >
             <div
-              class="emotion-42 emotion-7"
+              class="emotion-42 emotion-9"
             >
               <div
-                class="emotion-36 emotion-7"
+                class="emotion-36 emotion-9"
               >
                 <span
                   class="emotion-48 emotion-5"
@@ -3201,7 +3240,7 @@ exports[`OrderSummary > should work with default props 1`] = `
           class="emotion-34 emotion-35"
         >
           <div
-            class="emotion-36 emotion-7"
+            class="emotion-36 emotion-9"
           >
             <span
               class="emotion-38 emotion-5"
@@ -3215,13 +3254,13 @@ exports[`OrderSummary > should work with default props 1`] = `
             </span>
           </div>
           <div
-            class="emotion-42 emotion-7"
+            class="emotion-42 emotion-9"
           >
             <div
-              class="emotion-42 emotion-7"
+              class="emotion-42 emotion-9"
             >
               <div
-                class="emotion-36 emotion-7"
+                class="emotion-36 emotion-9"
               >
                 <span
                   class="emotion-48 emotion-5"
@@ -3239,10 +3278,10 @@ exports[`OrderSummary > should work with default props 1`] = `
               />
             </div>
             <div
-              class="emotion-42 emotion-7"
+              class="emotion-42 emotion-9"
             >
               <div
-                class="emotion-36 emotion-7"
+                class="emotion-36 emotion-9"
               >
                 <span
                   class="emotion-48 emotion-5"
@@ -3265,7 +3304,7 @@ exports[`OrderSummary > should work with default props 1`] = `
           class="emotion-34 emotion-35"
         >
           <div
-            class="emotion-36 emotion-7"
+            class="emotion-36 emotion-9"
           >
             <span
               class="emotion-38 emotion-5"
@@ -3279,13 +3318,13 @@ exports[`OrderSummary > should work with default props 1`] = `
             </span>
           </div>
           <div
-            class="emotion-42 emotion-7"
+            class="emotion-42 emotion-9"
           >
             <div
-              class="emotion-42 emotion-7"
+              class="emotion-42 emotion-9"
             >
               <div
-                class="emotion-36 emotion-7"
+                class="emotion-36 emotion-9"
               >
                 <span
                   class="emotion-48 emotion-5"
@@ -3308,10 +3347,10 @@ exports[`OrderSummary > should work with default props 1`] = `
           class="emotion-34 emotion-35"
         >
           <div
-            class="emotion-36 emotion-7"
+            class="emotion-36 emotion-9"
           >
             <div
-              class="emotion-66 emotion-7"
+              class="emotion-66 emotion-9"
             >
               <span
                 class="emotion-38 emotion-5"
@@ -3340,13 +3379,13 @@ exports[`OrderSummary > should work with default props 1`] = `
             </span>
           </div>
           <div
-            class="emotion-42 emotion-7"
+            class="emotion-42 emotion-9"
           >
             <div
-              class="emotion-42 emotion-7"
+              class="emotion-42 emotion-9"
             >
               <div
-                class="emotion-36 emotion-7"
+                class="emotion-36 emotion-9"
               >
                 <span
                   class="emotion-48 emotion-5"
@@ -3370,7 +3409,7 @@ exports[`OrderSummary > should work with default props 1`] = `
         class="emotion-250 emotion-251"
       >
         <div
-          class="emotion-36 emotion-7"
+          class="emotion-36 emotion-9"
         >
           <p
             class="emotion-38 emotion-5"
@@ -3525,7 +3564,7 @@ exports[`OrderSummary > should work with discount 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -3541,6 +3580,7 @@ exports[`OrderSummary > should work with discount 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  background-color: #ffffff;
 }
 
 .emotion-6 {
@@ -3548,6 +3588,30 @@ exports[`OrderSummary > should work with discount 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  background-color: #ffffff;
+}
+
+.emotion-8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -3571,10 +3635,10 @@ exports[`OrderSummary > should work with discount 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  gap: 0.25rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -3587,138 +3651,9 @@ exports[`OrderSummary > should work with discount 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  width: 11rem;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-  background-color: #ffffff;
 }
 
-.emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
-      [data-success='true']
-    ):not([data-error='true']):focus,
-.emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
-      [data-success='true']
-    ):not([data-error='true']):active {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-  border-color: #792dd4;
-}
-
-.emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
-      [data-success='true']
-    ):not([data-error='true']):focus>.emotion-11,
-.emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
-      [data-success='true']
-    ):not([data-error='true']):active>.emotion-11 {
-  border-right-color: #8c40ef;
-}
-
-.emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
-      [data-success='true']
-    ):not([data-error='true']):focus-within {
-  border-color: #792dd4;
-}
-
-.emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
-      [data-success='true']
-    ):not([data-error='true']):focus-within>.emotion-11 {
-  border-right-color: #8c40ef;
-}
-
-.emotion-8:not([data-disabled='true']):not([data-error='true']):not(
-      [data-success='true']
-    ):not([data-readonly='true']):hover,
-.emotion-8:not([data-disabled='true']):not([data-error='true']):not(
-      [data-success='true']
-    ):focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  border-color: #8c40ef;
-}
-
-.emotion-8:not([data-disabled='true']):not([data-error='true']):not(
-      [data-success='true']
-    ):not([data-readonly='true']):hover>.emotion-11,
-.emotion-8:not([data-disabled='true']):not([data-error='true']):not(
-      [data-success='true']
-    ):focus>.emotion-11 {
-  border-right-color: #8c40ef;
-}
-
-.emotion-8[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-8[data-readonly='true']:active {
-  border-color: #d9dadd;
-}
-
-.emotion-8[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-8[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-8[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-8[data-success='true'] {
-  border: 1px solid #22674e;
-}
-
-.emotion-8[data-success='true']>.emotion-11 {
-  border-right-color: #22674e;
-}
-
-.emotion-8[data-success='true']:active {
-  border: 1px solid #22674e;
-  box-shadow: 0px 0px 0px 3px #45d19f40;
-}
-
-.emotion-8[data-success='true']:active>.emotion-11 {
-  border-right-color: #22674e;
-}
-
-.emotion-8[data-error='true'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-8[data-error='true']>.emotion-11 {
-  border-right-color: #b3144d;
-}
-
-.emotion-8[data-error='true']>.emotion-11:hover {
-  border-right-color: #b3144d;
-}
-
-.emotion-8[data-error='true']:active {
-  border: 1px solid #b3144d;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-8[data-error='true']:active>.emotion-11 {
-  border-right-color: #b3144d;
-}
-
-.emotion-8[data-error='true']:active>.emotion-11:hover {
-  border-right-color: #b3144d;
-}
-
-.emotion-8[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-8[data-disabled='true']>.emotion-11 {
-  border-right-color: #e9eaeb;
-}
-
-.emotion-8 {
+.emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3742,44 +3677,43 @@ exports[`OrderSummary > should work with discount 1`] = `
   width: 11rem;
   border: 1px solid #d9dadd;
   border-radius: 0.25rem;
-  background-color: #ffffff;
 }
 
-.emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
+.emotion-10:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
     ):not([data-error='true']):focus,
-.emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
+.emotion-10:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
     ):not([data-error='true']):active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   border-color: #792dd4;
 }
 
-.emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
+.emotion-10:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
-    ):not([data-error='true']):focus>.emotion-11,
-.emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
+    ):not([data-error='true']):focus>.emotion-13,
+.emotion-10:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
-    ):not([data-error='true']):active>.emotion-11 {
+    ):not([data-error='true']):active>.emotion-13 {
   border-right-color: #8c40ef;
 }
 
-.emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
+.emotion-10:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
     ):not([data-error='true']):focus-within {
   border-color: #792dd4;
 }
 
-.emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
+.emotion-10:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
-    ):not([data-error='true']):focus-within>.emotion-11 {
+    ):not([data-error='true']):focus-within>.emotion-13 {
   border-right-color: #8c40ef;
 }
 
-.emotion-8:not([data-disabled='true']):not([data-error='true']):not(
+.emotion-10:not([data-disabled='true']):not([data-error='true']):not(
       [data-success='true']
     ):not([data-readonly='true']):hover,
-.emotion-8:not([data-disabled='true']):not([data-error='true']):not(
+.emotion-10:not([data-disabled='true']):not([data-error='true']):not(
       [data-success='true']
     ):focus {
   -webkit-text-decoration: none;
@@ -3787,86 +3721,86 @@ exports[`OrderSummary > should work with discount 1`] = `
   border-color: #8c40ef;
 }
 
-.emotion-8:not([data-disabled='true']):not([data-error='true']):not(
+.emotion-10:not([data-disabled='true']):not([data-error='true']):not(
       [data-success='true']
-    ):not([data-readonly='true']):hover>.emotion-11,
-.emotion-8:not([data-disabled='true']):not([data-error='true']):not(
+    ):not([data-readonly='true']):hover>.emotion-13,
+.emotion-10:not([data-disabled='true']):not([data-error='true']):not(
       [data-success='true']
-    ):focus>.emotion-11 {
+    ):focus>.emotion-13 {
   border-right-color: #8c40ef;
 }
 
-.emotion-8[data-readonly='true'] {
+.emotion-10[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-8[data-readonly='true']:active {
+.emotion-10[data-readonly='true']:active {
   border-color: #d9dadd;
 }
 
-.emotion-8[data-size='small'] {
+.emotion-10[data-size='small'] {
   height: 2rem;
 }
 
-.emotion-8[data-size='medium'] {
+.emotion-10[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-8[data-size='large'] {
+.emotion-10[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-8[data-success='true'] {
+.emotion-10[data-success='true'] {
   border: 1px solid #22674e;
 }
 
-.emotion-8[data-success='true']>.emotion-11 {
+.emotion-10[data-success='true']>.emotion-13 {
   border-right-color: #22674e;
 }
 
-.emotion-8[data-success='true']:active {
+.emotion-10[data-success='true']:active {
   border: 1px solid #22674e;
   box-shadow: 0px 0px 0px 3px #45d19f40;
 }
 
-.emotion-8[data-success='true']:active>.emotion-11 {
+.emotion-10[data-success='true']:active>.emotion-13 {
   border-right-color: #22674e;
 }
 
-.emotion-8[data-error='true'] {
+.emotion-10[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-8[data-error='true']>.emotion-11 {
+.emotion-10[data-error='true']>.emotion-13 {
   border-right-color: #b3144d;
 }
 
-.emotion-8[data-error='true']>.emotion-11:hover {
+.emotion-10[data-error='true']>.emotion-13:hover {
   border-right-color: #b3144d;
 }
 
-.emotion-8[data-error='true']:active {
+.emotion-10[data-error='true']:active {
   border: 1px solid #b3144d;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-8[data-error='true']:active>.emotion-11 {
+.emotion-10[data-error='true']:active>.emotion-13 {
   border-right-color: #b3144d;
 }
 
-.emotion-8[data-error='true']:active>.emotion-11:hover {
+.emotion-10[data-error='true']:active>.emotion-13:hover {
   border-right-color: #b3144d;
 }
 
-.emotion-8[data-disabled='true'] {
+.emotion-10[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-8[data-disabled='true']>.emotion-11 {
+.emotion-10[data-disabled='true']>.emotion-13 {
   border-right-color: #e9eaeb;
 }
 
@@ -3875,20 +3809,153 @@ exports[`OrderSummary > should work with discount 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  padding-right: 1rem;
-  border-right: 1px solid #d9dadd;
-  width: 100%;
-  height: 100%;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 11rem;
+  border: 1px solid #d9dadd;
+  border-radius: 0.25rem;
 }
 
-.emotion-10 {
+.emotion-10:not([data-disabled='true']):not([data-readonly='true']):not(
+      [data-success='true']
+    ):not([data-error='true']):focus,
+.emotion-10:not([data-disabled='true']):not([data-readonly='true']):not(
+      [data-success='true']
+    ):not([data-error='true']):active {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+  border-color: #792dd4;
+}
+
+.emotion-10:not([data-disabled='true']):not([data-readonly='true']):not(
+      [data-success='true']
+    ):not([data-error='true']):focus>.emotion-13,
+.emotion-10:not([data-disabled='true']):not([data-readonly='true']):not(
+      [data-success='true']
+    ):not([data-error='true']):active>.emotion-13 {
+  border-right-color: #8c40ef;
+}
+
+.emotion-10:not([data-disabled='true']):not([data-readonly='true']):not(
+      [data-success='true']
+    ):not([data-error='true']):focus-within {
+  border-color: #792dd4;
+}
+
+.emotion-10:not([data-disabled='true']):not([data-readonly='true']):not(
+      [data-success='true']
+    ):not([data-error='true']):focus-within>.emotion-13 {
+  border-right-color: #8c40ef;
+}
+
+.emotion-10:not([data-disabled='true']):not([data-error='true']):not(
+      [data-success='true']
+    ):not([data-readonly='true']):hover,
+.emotion-10:not([data-disabled='true']):not([data-error='true']):not(
+      [data-success='true']
+    ):focus {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-color: #8c40ef;
+}
+
+.emotion-10:not([data-disabled='true']):not([data-error='true']):not(
+      [data-success='true']
+    ):not([data-readonly='true']):hover>.emotion-13,
+.emotion-10:not([data-disabled='true']):not([data-error='true']):not(
+      [data-success='true']
+    ):focus>.emotion-13 {
+  border-right-color: #8c40ef;
+}
+
+.emotion-10[data-readonly='true'] {
+  background: #f9f9fa;
+  border-color: #d9dadd;
+  cursor: default;
+}
+
+.emotion-10[data-readonly='true']:active {
+  border-color: #d9dadd;
+}
+
+.emotion-10[data-size='small'] {
+  height: 2rem;
+}
+
+.emotion-10[data-size='medium'] {
+  height: 2.5rem;
+}
+
+.emotion-10[data-size='large'] {
+  height: 3rem;
+}
+
+.emotion-10[data-success='true'] {
+  border: 1px solid #22674e;
+}
+
+.emotion-10[data-success='true']>.emotion-13 {
+  border-right-color: #22674e;
+}
+
+.emotion-10[data-success='true']:active {
+  border: 1px solid #22674e;
+  box-shadow: 0px 0px 0px 3px #45d19f40;
+}
+
+.emotion-10[data-success='true']:active>.emotion-13 {
+  border-right-color: #22674e;
+}
+
+.emotion-10[data-error='true'] {
+  border: 1px solid #b3144d;
+}
+
+.emotion-10[data-error='true']>.emotion-13 {
+  border-right-color: #b3144d;
+}
+
+.emotion-10[data-error='true']>.emotion-13:hover {
+  border-right-color: #b3144d;
+}
+
+.emotion-10[data-error='true']:active {
+  border: 1px solid #b3144d;
+  box-shadow: 0px 0px 0px 3px #f91b6c40;
+}
+
+.emotion-10[data-error='true']:active>.emotion-13 {
+  border-right-color: #b3144d;
+}
+
+.emotion-10[data-error='true']:active>.emotion-13:hover {
+  border-right-color: #b3144d;
+}
+
+.emotion-10[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
+  cursor: not-allowed;
+}
+
+.emotion-10[data-disabled='true']>.emotion-13 {
+  border-right-color: #e9eaeb;
+}
+
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3907,6 +3974,24 @@ exports[`OrderSummary > should work with discount 1`] = `
 }
 
 .emotion-12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  padding-right: 1rem;
+  border-right: 1px solid #d9dadd;
+  width: 100%;
+  height: 100%;
+}
+
+.emotion-14 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -3917,54 +4002,53 @@ exports[`OrderSummary > should work with discount 1`] = `
   padding-left: 1rem;
   background: transparent;
   color: #3f4250;
-  font-size: 0.875rem;
 }
 
-.emotion-12[data-size="small"] {
+.emotion-14[data-size="small"] {
   padding-left: 0.5rem;
 }
 
-.emotion-12[data-size="large"] {
+.emotion-14[data-size="large"] {
   font-size: 1rem;
 }
 
-.emotion-12::-webkit-input-placeholder {
+.emotion-14::-webkit-input-placeholder {
   color: #727683;
 }
 
-.emotion-12::-moz-placeholder {
+.emotion-14::-moz-placeholder {
   color: #727683;
 }
 
-.emotion-12:-ms-input-placeholder {
+.emotion-14:-ms-input-placeholder {
   color: #727683;
 }
 
-.emotion-12::placeholder {
+.emotion-14::placeholder {
   color: #727683;
 }
 
-.emotion-12:disabled {
+.emotion-14:disabled {
   cursor: not-allowed;
 }
 
-.emotion-12:disabled::-webkit-input-placeholder {
+.emotion-14:disabled::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-12:disabled::-moz-placeholder {
+.emotion-14:disabled::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-12:disabled:-ms-input-placeholder {
+.emotion-14:disabled:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-12:disabled::placeholder {
+.emotion-14:disabled::placeholder {
   color: #b5b7bd;
 }
 
-.emotion-12 {
+.emotion-14 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -3975,75 +4059,57 @@ exports[`OrderSummary > should work with discount 1`] = `
   padding-left: 1rem;
   background: transparent;
   color: #3f4250;
-  font-size: 0.875rem;
 }
 
-.emotion-12[data-size="small"] {
+.emotion-14[data-size="small"] {
   padding-left: 0.5rem;
 }
 
-.emotion-12[data-size="large"] {
+.emotion-14[data-size="large"] {
   font-size: 1rem;
 }
 
-.emotion-12::-webkit-input-placeholder {
+.emotion-14::-webkit-input-placeholder {
   color: #727683;
 }
 
-.emotion-12::-moz-placeholder {
+.emotion-14::-moz-placeholder {
   color: #727683;
 }
 
-.emotion-12:-ms-input-placeholder {
+.emotion-14:-ms-input-placeholder {
   color: #727683;
 }
 
-.emotion-12::placeholder {
+.emotion-14::placeholder {
   color: #727683;
 }
 
-.emotion-12:disabled {
+.emotion-14:disabled {
   cursor: not-allowed;
 }
 
-.emotion-12:disabled::-webkit-input-placeholder {
+.emotion-14:disabled::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-12:disabled::-moz-placeholder {
+.emotion-14:disabled::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-12:disabled:-ms-input-placeholder {
+.emotion-14:disabled:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-12:disabled::placeholder {
+.emotion-14:disabled::placeholder {
   color: #b5b7bd;
-}
-
-.emotion-14 {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-14 {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 .emotion-17 {
   width: 100%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .emotion-17 #unit {
@@ -4058,6 +4124,9 @@ exports[`OrderSummary > should work with discount 1`] = `
 
 .emotion-17 {
   width: 100%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .emotion-17 #unit {
@@ -4841,37 +4910,34 @@ exports[`OrderSummary > should work with discount 1`] = `
         >
           <div
             class="emotion-8 emotion-9"
-            data-disabled="false"
-            data-error="false"
-            data-readonly="false"
-            data-size="small"
-            data-success="false"
           >
             <div
               class="emotion-10 emotion-11"
-              id="input-field"
+              data-disabled="false"
+              data-error="false"
+              data-readonly="false"
+              data-size="small"
+              data-success="false"
             >
-              <input
-                aria-invalid="false"
+              <div
                 class="emotion-12 emotion-13"
-                data-size="small"
-                data-testid="unit-input"
-                id=":r93:"
-                max="9007199254740991"
-                min="0"
-                name="-value"
-                placeholder="0"
-                step="1"
-                type="number"
-                value="1"
-                width="11rem"
-              />
-            </div>
-             
-            <div
-              class="emotion-14 emotion-15"
-              width="fit-content"
-            >
+                id="input-field"
+              >
+                <input
+                  aria-invalid="false"
+                  class="emotion-14 emotion-15"
+                  data-size="small"
+                  data-testid="unit-input"
+                  max="9007199254740991"
+                  min="0"
+                  name="-value"
+                  placeholder="0"
+                  step="1"
+                  type="number"
+                  value="1"
+                  width="11rem"
+                />
+              </div>
               <div
                 aria-label="-unit"
                 class="emotion-16 emotion-17 emotion-18"
@@ -4884,7 +4950,7 @@ exports[`OrderSummary > should work with discount 1`] = `
                   tabindex="0"
                 >
                   <div
-                    class="emotion-6 emotion-7"
+                    class="emotion-8 emotion-9"
                   >
                     <div
                       aria-expanded="false"
@@ -4935,7 +5001,7 @@ exports[`OrderSummary > should work with discount 1`] = `
           class="emotion-34 emotion-35"
         >
           <div
-            class="emotion-36 emotion-7"
+            class="emotion-36 emotion-9"
           >
             <span
               class="emotion-38 emotion-5"
@@ -4949,13 +5015,13 @@ exports[`OrderSummary > should work with discount 1`] = `
             </span>
           </div>
           <div
-            class="emotion-42 emotion-7"
+            class="emotion-42 emotion-9"
           >
             <div
-              class="emotion-42 emotion-7"
+              class="emotion-42 emotion-9"
             >
               <div
-                class="emotion-36 emotion-7"
+                class="emotion-36 emotion-9"
               >
                 <span
                   class="emotion-48 emotion-5"
@@ -4979,7 +5045,7 @@ exports[`OrderSummary > should work with discount 1`] = `
         class="emotion-54 emotion-55"
       >
         <div
-          class="emotion-36 emotion-7"
+          class="emotion-36 emotion-9"
         >
           <p
             class="emotion-38 emotion-5"
@@ -4987,7 +5053,7 @@ exports[`OrderSummary > should work with discount 1`] = `
             Estimated cost:
           </p>
           <div
-            class="emotion-60 emotion-7"
+            class="emotion-60 emotion-9"
           >
             <p
               class="emotion-62 emotion-5"
@@ -5143,7 +5209,7 @@ exports[`OrderSummary > should work with footer 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -5159,6 +5225,7 @@ exports[`OrderSummary > should work with footer 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  background-color: #ffffff;
 }
 
 .emotion-6 {
@@ -5166,6 +5233,30 @@ exports[`OrderSummary > should work with footer 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  background-color: #ffffff;
+}
+
+.emotion-8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -5189,10 +5280,10 @@ exports[`OrderSummary > should work with footer 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  gap: 0.25rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -5205,138 +5296,9 @@ exports[`OrderSummary > should work with footer 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  width: 11rem;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-  background-color: #ffffff;
 }
 
-.emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
-      [data-success='true']
-    ):not([data-error='true']):focus,
-.emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
-      [data-success='true']
-    ):not([data-error='true']):active {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-  border-color: #792dd4;
-}
-
-.emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
-      [data-success='true']
-    ):not([data-error='true']):focus>.emotion-11,
-.emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
-      [data-success='true']
-    ):not([data-error='true']):active>.emotion-11 {
-  border-right-color: #8c40ef;
-}
-
-.emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
-      [data-success='true']
-    ):not([data-error='true']):focus-within {
-  border-color: #792dd4;
-}
-
-.emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
-      [data-success='true']
-    ):not([data-error='true']):focus-within>.emotion-11 {
-  border-right-color: #8c40ef;
-}
-
-.emotion-8:not([data-disabled='true']):not([data-error='true']):not(
-      [data-success='true']
-    ):not([data-readonly='true']):hover,
-.emotion-8:not([data-disabled='true']):not([data-error='true']):not(
-      [data-success='true']
-    ):focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  border-color: #8c40ef;
-}
-
-.emotion-8:not([data-disabled='true']):not([data-error='true']):not(
-      [data-success='true']
-    ):not([data-readonly='true']):hover>.emotion-11,
-.emotion-8:not([data-disabled='true']):not([data-error='true']):not(
-      [data-success='true']
-    ):focus>.emotion-11 {
-  border-right-color: #8c40ef;
-}
-
-.emotion-8[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-8[data-readonly='true']:active {
-  border-color: #d9dadd;
-}
-
-.emotion-8[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-8[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-8[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-8[data-success='true'] {
-  border: 1px solid #22674e;
-}
-
-.emotion-8[data-success='true']>.emotion-11 {
-  border-right-color: #22674e;
-}
-
-.emotion-8[data-success='true']:active {
-  border: 1px solid #22674e;
-  box-shadow: 0px 0px 0px 3px #45d19f40;
-}
-
-.emotion-8[data-success='true']:active>.emotion-11 {
-  border-right-color: #22674e;
-}
-
-.emotion-8[data-error='true'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-8[data-error='true']>.emotion-11 {
-  border-right-color: #b3144d;
-}
-
-.emotion-8[data-error='true']>.emotion-11:hover {
-  border-right-color: #b3144d;
-}
-
-.emotion-8[data-error='true']:active {
-  border: 1px solid #b3144d;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-8[data-error='true']:active>.emotion-11 {
-  border-right-color: #b3144d;
-}
-
-.emotion-8[data-error='true']:active>.emotion-11:hover {
-  border-right-color: #b3144d;
-}
-
-.emotion-8[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-8[data-disabled='true']>.emotion-11 {
-  border-right-color: #e9eaeb;
-}
-
-.emotion-8 {
+.emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5360,44 +5322,43 @@ exports[`OrderSummary > should work with footer 1`] = `
   width: 11rem;
   border: 1px solid #d9dadd;
   border-radius: 0.25rem;
-  background-color: #ffffff;
 }
 
-.emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
+.emotion-10:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
     ):not([data-error='true']):focus,
-.emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
+.emotion-10:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
     ):not([data-error='true']):active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   border-color: #792dd4;
 }
 
-.emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
+.emotion-10:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
-    ):not([data-error='true']):focus>.emotion-11,
-.emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
+    ):not([data-error='true']):focus>.emotion-13,
+.emotion-10:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
-    ):not([data-error='true']):active>.emotion-11 {
+    ):not([data-error='true']):active>.emotion-13 {
   border-right-color: #8c40ef;
 }
 
-.emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
+.emotion-10:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
     ):not([data-error='true']):focus-within {
   border-color: #792dd4;
 }
 
-.emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
+.emotion-10:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
-    ):not([data-error='true']):focus-within>.emotion-11 {
+    ):not([data-error='true']):focus-within>.emotion-13 {
   border-right-color: #8c40ef;
 }
 
-.emotion-8:not([data-disabled='true']):not([data-error='true']):not(
+.emotion-10:not([data-disabled='true']):not([data-error='true']):not(
       [data-success='true']
     ):not([data-readonly='true']):hover,
-.emotion-8:not([data-disabled='true']):not([data-error='true']):not(
+.emotion-10:not([data-disabled='true']):not([data-error='true']):not(
       [data-success='true']
     ):focus {
   -webkit-text-decoration: none;
@@ -5405,86 +5366,86 @@ exports[`OrderSummary > should work with footer 1`] = `
   border-color: #8c40ef;
 }
 
-.emotion-8:not([data-disabled='true']):not([data-error='true']):not(
+.emotion-10:not([data-disabled='true']):not([data-error='true']):not(
       [data-success='true']
-    ):not([data-readonly='true']):hover>.emotion-11,
-.emotion-8:not([data-disabled='true']):not([data-error='true']):not(
+    ):not([data-readonly='true']):hover>.emotion-13,
+.emotion-10:not([data-disabled='true']):not([data-error='true']):not(
       [data-success='true']
-    ):focus>.emotion-11 {
+    ):focus>.emotion-13 {
   border-right-color: #8c40ef;
 }
 
-.emotion-8[data-readonly='true'] {
+.emotion-10[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-8[data-readonly='true']:active {
+.emotion-10[data-readonly='true']:active {
   border-color: #d9dadd;
 }
 
-.emotion-8[data-size='small'] {
+.emotion-10[data-size='small'] {
   height: 2rem;
 }
 
-.emotion-8[data-size='medium'] {
+.emotion-10[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-8[data-size='large'] {
+.emotion-10[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-8[data-success='true'] {
+.emotion-10[data-success='true'] {
   border: 1px solid #22674e;
 }
 
-.emotion-8[data-success='true']>.emotion-11 {
+.emotion-10[data-success='true']>.emotion-13 {
   border-right-color: #22674e;
 }
 
-.emotion-8[data-success='true']:active {
+.emotion-10[data-success='true']:active {
   border: 1px solid #22674e;
   box-shadow: 0px 0px 0px 3px #45d19f40;
 }
 
-.emotion-8[data-success='true']:active>.emotion-11 {
+.emotion-10[data-success='true']:active>.emotion-13 {
   border-right-color: #22674e;
 }
 
-.emotion-8[data-error='true'] {
+.emotion-10[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-8[data-error='true']>.emotion-11 {
+.emotion-10[data-error='true']>.emotion-13 {
   border-right-color: #b3144d;
 }
 
-.emotion-8[data-error='true']>.emotion-11:hover {
+.emotion-10[data-error='true']>.emotion-13:hover {
   border-right-color: #b3144d;
 }
 
-.emotion-8[data-error='true']:active {
+.emotion-10[data-error='true']:active {
   border: 1px solid #b3144d;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-8[data-error='true']:active>.emotion-11 {
+.emotion-10[data-error='true']:active>.emotion-13 {
   border-right-color: #b3144d;
 }
 
-.emotion-8[data-error='true']:active>.emotion-11:hover {
+.emotion-10[data-error='true']:active>.emotion-13:hover {
   border-right-color: #b3144d;
 }
 
-.emotion-8[data-disabled='true'] {
+.emotion-10[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-8[data-disabled='true']>.emotion-11 {
+.emotion-10[data-disabled='true']>.emotion-13 {
   border-right-color: #e9eaeb;
 }
 
@@ -5493,20 +5454,153 @@ exports[`OrderSummary > should work with footer 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  padding-right: 1rem;
-  border-right: 1px solid #d9dadd;
-  width: 100%;
-  height: 100%;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 11rem;
+  border: 1px solid #d9dadd;
+  border-radius: 0.25rem;
 }
 
-.emotion-10 {
+.emotion-10:not([data-disabled='true']):not([data-readonly='true']):not(
+      [data-success='true']
+    ):not([data-error='true']):focus,
+.emotion-10:not([data-disabled='true']):not([data-readonly='true']):not(
+      [data-success='true']
+    ):not([data-error='true']):active {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+  border-color: #792dd4;
+}
+
+.emotion-10:not([data-disabled='true']):not([data-readonly='true']):not(
+      [data-success='true']
+    ):not([data-error='true']):focus>.emotion-13,
+.emotion-10:not([data-disabled='true']):not([data-readonly='true']):not(
+      [data-success='true']
+    ):not([data-error='true']):active>.emotion-13 {
+  border-right-color: #8c40ef;
+}
+
+.emotion-10:not([data-disabled='true']):not([data-readonly='true']):not(
+      [data-success='true']
+    ):not([data-error='true']):focus-within {
+  border-color: #792dd4;
+}
+
+.emotion-10:not([data-disabled='true']):not([data-readonly='true']):not(
+      [data-success='true']
+    ):not([data-error='true']):focus-within>.emotion-13 {
+  border-right-color: #8c40ef;
+}
+
+.emotion-10:not([data-disabled='true']):not([data-error='true']):not(
+      [data-success='true']
+    ):not([data-readonly='true']):hover,
+.emotion-10:not([data-disabled='true']):not([data-error='true']):not(
+      [data-success='true']
+    ):focus {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-color: #8c40ef;
+}
+
+.emotion-10:not([data-disabled='true']):not([data-error='true']):not(
+      [data-success='true']
+    ):not([data-readonly='true']):hover>.emotion-13,
+.emotion-10:not([data-disabled='true']):not([data-error='true']):not(
+      [data-success='true']
+    ):focus>.emotion-13 {
+  border-right-color: #8c40ef;
+}
+
+.emotion-10[data-readonly='true'] {
+  background: #f9f9fa;
+  border-color: #d9dadd;
+  cursor: default;
+}
+
+.emotion-10[data-readonly='true']:active {
+  border-color: #d9dadd;
+}
+
+.emotion-10[data-size='small'] {
+  height: 2rem;
+}
+
+.emotion-10[data-size='medium'] {
+  height: 2.5rem;
+}
+
+.emotion-10[data-size='large'] {
+  height: 3rem;
+}
+
+.emotion-10[data-success='true'] {
+  border: 1px solid #22674e;
+}
+
+.emotion-10[data-success='true']>.emotion-13 {
+  border-right-color: #22674e;
+}
+
+.emotion-10[data-success='true']:active {
+  border: 1px solid #22674e;
+  box-shadow: 0px 0px 0px 3px #45d19f40;
+}
+
+.emotion-10[data-success='true']:active>.emotion-13 {
+  border-right-color: #22674e;
+}
+
+.emotion-10[data-error='true'] {
+  border: 1px solid #b3144d;
+}
+
+.emotion-10[data-error='true']>.emotion-13 {
+  border-right-color: #b3144d;
+}
+
+.emotion-10[data-error='true']>.emotion-13:hover {
+  border-right-color: #b3144d;
+}
+
+.emotion-10[data-error='true']:active {
+  border: 1px solid #b3144d;
+  box-shadow: 0px 0px 0px 3px #f91b6c40;
+}
+
+.emotion-10[data-error='true']:active>.emotion-13 {
+  border-right-color: #b3144d;
+}
+
+.emotion-10[data-error='true']:active>.emotion-13:hover {
+  border-right-color: #b3144d;
+}
+
+.emotion-10[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
+  cursor: not-allowed;
+}
+
+.emotion-10[data-disabled='true']>.emotion-13 {
+  border-right-color: #e9eaeb;
+}
+
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5525,6 +5619,24 @@ exports[`OrderSummary > should work with footer 1`] = `
 }
 
 .emotion-12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  padding-right: 1rem;
+  border-right: 1px solid #d9dadd;
+  width: 100%;
+  height: 100%;
+}
+
+.emotion-14 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -5535,54 +5647,53 @@ exports[`OrderSummary > should work with footer 1`] = `
   padding-left: 1rem;
   background: transparent;
   color: #3f4250;
-  font-size: 0.875rem;
 }
 
-.emotion-12[data-size="small"] {
+.emotion-14[data-size="small"] {
   padding-left: 0.5rem;
 }
 
-.emotion-12[data-size="large"] {
+.emotion-14[data-size="large"] {
   font-size: 1rem;
 }
 
-.emotion-12::-webkit-input-placeholder {
+.emotion-14::-webkit-input-placeholder {
   color: #727683;
 }
 
-.emotion-12::-moz-placeholder {
+.emotion-14::-moz-placeholder {
   color: #727683;
 }
 
-.emotion-12:-ms-input-placeholder {
+.emotion-14:-ms-input-placeholder {
   color: #727683;
 }
 
-.emotion-12::placeholder {
+.emotion-14::placeholder {
   color: #727683;
 }
 
-.emotion-12:disabled {
+.emotion-14:disabled {
   cursor: not-allowed;
 }
 
-.emotion-12:disabled::-webkit-input-placeholder {
+.emotion-14:disabled::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-12:disabled::-moz-placeholder {
+.emotion-14:disabled::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-12:disabled:-ms-input-placeholder {
+.emotion-14:disabled:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-12:disabled::placeholder {
+.emotion-14:disabled::placeholder {
   color: #b5b7bd;
 }
 
-.emotion-12 {
+.emotion-14 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -5593,75 +5704,57 @@ exports[`OrderSummary > should work with footer 1`] = `
   padding-left: 1rem;
   background: transparent;
   color: #3f4250;
-  font-size: 0.875rem;
 }
 
-.emotion-12[data-size="small"] {
+.emotion-14[data-size="small"] {
   padding-left: 0.5rem;
 }
 
-.emotion-12[data-size="large"] {
+.emotion-14[data-size="large"] {
   font-size: 1rem;
 }
 
-.emotion-12::-webkit-input-placeholder {
+.emotion-14::-webkit-input-placeholder {
   color: #727683;
 }
 
-.emotion-12::-moz-placeholder {
+.emotion-14::-moz-placeholder {
   color: #727683;
 }
 
-.emotion-12:-ms-input-placeholder {
+.emotion-14:-ms-input-placeholder {
   color: #727683;
 }
 
-.emotion-12::placeholder {
+.emotion-14::placeholder {
   color: #727683;
 }
 
-.emotion-12:disabled {
+.emotion-14:disabled {
   cursor: not-allowed;
 }
 
-.emotion-12:disabled::-webkit-input-placeholder {
+.emotion-14:disabled::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-12:disabled::-moz-placeholder {
+.emotion-14:disabled::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-12:disabled:-ms-input-placeholder {
+.emotion-14:disabled:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-12:disabled::placeholder {
+.emotion-14:disabled::placeholder {
   color: #b5b7bd;
-}
-
-.emotion-14 {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-14 {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 .emotion-17 {
   width: 100%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .emotion-17 #unit {
@@ -5676,6 +5769,9 @@ exports[`OrderSummary > should work with footer 1`] = `
 
 .emotion-17 {
   width: 100%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .emotion-17 #unit {
@@ -6447,37 +6543,34 @@ exports[`OrderSummary > should work with footer 1`] = `
         >
           <div
             class="emotion-8 emotion-9"
-            data-disabled="false"
-            data-error="false"
-            data-readonly="false"
-            data-size="small"
-            data-success="false"
           >
             <div
               class="emotion-10 emotion-11"
-              id="input-field"
+              data-disabled="false"
+              data-error="false"
+              data-readonly="false"
+              data-size="small"
+              data-success="false"
             >
-              <input
-                aria-invalid="false"
+              <div
                 class="emotion-12 emotion-13"
-                data-size="small"
-                data-testid="unit-input"
-                id=":r5l:"
-                max="9007199254740991"
-                min="0"
-                name="-value"
-                placeholder="0"
-                step="1"
-                type="number"
-                value="1"
-                width="11rem"
-              />
-            </div>
-             
-            <div
-              class="emotion-14 emotion-15"
-              width="fit-content"
-            >
+                id="input-field"
+              >
+                <input
+                  aria-invalid="false"
+                  class="emotion-14 emotion-15"
+                  data-size="small"
+                  data-testid="unit-input"
+                  max="9007199254740991"
+                  min="0"
+                  name="-value"
+                  placeholder="0"
+                  step="1"
+                  type="number"
+                  value="1"
+                  width="11rem"
+                />
+              </div>
               <div
                 aria-label="-unit"
                 class="emotion-16 emotion-17 emotion-18"
@@ -6490,7 +6583,7 @@ exports[`OrderSummary > should work with footer 1`] = `
                   tabindex="0"
                 >
                   <div
-                    class="emotion-6 emotion-7"
+                    class="emotion-8 emotion-9"
                   >
                     <div
                       aria-expanded="false"
@@ -6541,7 +6634,7 @@ exports[`OrderSummary > should work with footer 1`] = `
           class="emotion-34 emotion-35"
         >
           <div
-            class="emotion-36 emotion-7"
+            class="emotion-36 emotion-9"
           >
             <span
               class="emotion-38 emotion-5"
@@ -6555,13 +6648,13 @@ exports[`OrderSummary > should work with footer 1`] = `
             </span>
           </div>
           <div
-            class="emotion-42 emotion-7"
+            class="emotion-42 emotion-9"
           >
             <div
-              class="emotion-42 emotion-7"
+              class="emotion-42 emotion-9"
             >
               <div
-                class="emotion-36 emotion-7"
+                class="emotion-36 emotion-9"
               >
                 <span
                   class="emotion-48 emotion-5"
@@ -6584,7 +6677,7 @@ exports[`OrderSummary > should work with footer 1`] = `
           class="emotion-34 emotion-35"
         >
           <div
-            class="emotion-36 emotion-7"
+            class="emotion-36 emotion-9"
           >
             <span
               class="emotion-38 emotion-5"
@@ -6594,17 +6687,17 @@ exports[`OrderSummary > should work with footer 1`] = `
             FREE
           </div>
           <div
-            class="emotion-42 emotion-7"
+            class="emotion-42 emotion-9"
           />
         </div>
         <div
           class="emotion-34 emotion-35"
         >
           <div
-            class="emotion-36 emotion-7"
+            class="emotion-36 emotion-9"
           >
             <div
-              class="emotion-66 emotion-7"
+              class="emotion-66 emotion-9"
             >
               <span
                 class="emotion-38 emotion-5"
@@ -6640,13 +6733,13 @@ exports[`OrderSummary > should work with footer 1`] = `
             </span>
           </div>
           <div
-            class="emotion-42 emotion-7"
+            class="emotion-42 emotion-9"
           >
             <div
-              class="emotion-42 emotion-7"
+              class="emotion-42 emotion-9"
             >
               <div
-                class="emotion-36 emotion-7"
+                class="emotion-36 emotion-9"
               >
                 <span
                   class="emotion-48 emotion-5"
@@ -6680,7 +6773,7 @@ exports[`OrderSummary > should work with footer 1`] = `
           class="emotion-34 emotion-35"
         >
           <div
-            class="emotion-36 emotion-7"
+            class="emotion-36 emotion-9"
           >
             <span
               class="emotion-38 emotion-5"
@@ -6694,13 +6787,13 @@ exports[`OrderSummary > should work with footer 1`] = `
             </span>
           </div>
           <div
-            class="emotion-42 emotion-7"
+            class="emotion-42 emotion-9"
           >
             <div
-              class="emotion-42 emotion-7"
+              class="emotion-42 emotion-9"
             >
               <div
-                class="emotion-36 emotion-7"
+                class="emotion-36 emotion-9"
               >
                 <span
                   class="emotion-48 emotion-5"
@@ -6744,10 +6837,10 @@ exports[`OrderSummary > should work with footer 1`] = `
               </div>
             </div>
             <div
-              class="emotion-42 emotion-7"
+              class="emotion-42 emotion-9"
             >
               <div
-                class="emotion-36 emotion-7"
+                class="emotion-36 emotion-9"
               >
                 <span
                   class="emotion-48 emotion-5"
@@ -6770,7 +6863,7 @@ exports[`OrderSummary > should work with footer 1`] = `
           class="emotion-34 emotion-35"
         >
           <div
-            class="emotion-36 emotion-7"
+            class="emotion-36 emotion-9"
           >
             <span
               class="emotion-38 emotion-5"
@@ -6784,13 +6877,13 @@ exports[`OrderSummary > should work with footer 1`] = `
             </span>
           </div>
           <div
-            class="emotion-42 emotion-7"
+            class="emotion-42 emotion-9"
           >
             <div
-              class="emotion-42 emotion-7"
+              class="emotion-42 emotion-9"
             >
               <div
-                class="emotion-36 emotion-7"
+                class="emotion-36 emotion-9"
               >
                 <span
                   class="emotion-48 emotion-5"
@@ -6813,7 +6906,7 @@ exports[`OrderSummary > should work with footer 1`] = `
           class="emotion-34 emotion-35"
         >
           <div
-            class="emotion-36 emotion-7"
+            class="emotion-36 emotion-9"
           >
             <span
               class="emotion-38 emotion-5"
@@ -6827,13 +6920,13 @@ exports[`OrderSummary > should work with footer 1`] = `
             </span>
           </div>
           <div
-            class="emotion-42 emotion-7"
+            class="emotion-42 emotion-9"
           >
             <div
-              class="emotion-42 emotion-7"
+              class="emotion-42 emotion-9"
             >
               <div
-                class="emotion-36 emotion-7"
+                class="emotion-36 emotion-9"
               >
                 <span
                   class="emotion-48 emotion-5"
@@ -6856,7 +6949,7 @@ exports[`OrderSummary > should work with footer 1`] = `
           class="emotion-34 emotion-35"
         >
           <div
-            class="emotion-36 emotion-7"
+            class="emotion-36 emotion-9"
           >
             <span
               class="emotion-38 emotion-5"
@@ -6870,13 +6963,13 @@ exports[`OrderSummary > should work with footer 1`] = `
             </span>
           </div>
           <div
-            class="emotion-42 emotion-7"
+            class="emotion-42 emotion-9"
           >
             <div
-              class="emotion-42 emotion-7"
+              class="emotion-42 emotion-9"
             >
               <div
-                class="emotion-36 emotion-7"
+                class="emotion-36 emotion-9"
               >
                 <span
                   class="emotion-48 emotion-5"
@@ -6894,10 +6987,10 @@ exports[`OrderSummary > should work with footer 1`] = `
               />
             </div>
             <div
-              class="emotion-42 emotion-7"
+              class="emotion-42 emotion-9"
             >
               <div
-                class="emotion-36 emotion-7"
+                class="emotion-36 emotion-9"
               >
                 <span
                   class="emotion-48 emotion-5"
@@ -6920,7 +7013,7 @@ exports[`OrderSummary > should work with footer 1`] = `
           class="emotion-34 emotion-35"
         >
           <div
-            class="emotion-36 emotion-7"
+            class="emotion-36 emotion-9"
           >
             <span
               class="emotion-38 emotion-5"
@@ -6934,13 +7027,13 @@ exports[`OrderSummary > should work with footer 1`] = `
             </span>
           </div>
           <div
-            class="emotion-42 emotion-7"
+            class="emotion-42 emotion-9"
           >
             <div
-              class="emotion-42 emotion-7"
+              class="emotion-42 emotion-9"
             >
               <div
-                class="emotion-36 emotion-7"
+                class="emotion-36 emotion-9"
               >
                 <span
                   class="emotion-48 emotion-5"
@@ -6963,10 +7056,10 @@ exports[`OrderSummary > should work with footer 1`] = `
           class="emotion-34 emotion-35"
         >
           <div
-            class="emotion-36 emotion-7"
+            class="emotion-36 emotion-9"
           >
             <div
-              class="emotion-66 emotion-7"
+              class="emotion-66 emotion-9"
             >
               <span
                 class="emotion-38 emotion-5"
@@ -6995,13 +7088,13 @@ exports[`OrderSummary > should work with footer 1`] = `
             </span>
           </div>
           <div
-            class="emotion-42 emotion-7"
+            class="emotion-42 emotion-9"
           >
             <div
-              class="emotion-42 emotion-7"
+              class="emotion-42 emotion-9"
             >
               <div
-                class="emotion-36 emotion-7"
+                class="emotion-36 emotion-9"
               >
                 <span
                   class="emotion-48 emotion-5"
@@ -7025,7 +7118,7 @@ exports[`OrderSummary > should work with footer 1`] = `
         class="emotion-250 emotion-251"
       >
         <div
-          class="emotion-36 emotion-7"
+          class="emotion-36 emotion-9"
         >
           <p
             class="emotion-38 emotion-5"
@@ -7181,7 +7274,7 @@ exports[`OrderSummary > should work with fractionDigits 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -7197,6 +7290,7 @@ exports[`OrderSummary > should work with fractionDigits 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  background-color: #ffffff;
 }
 
 .emotion-6 {
@@ -7204,6 +7298,30 @@ exports[`OrderSummary > should work with fractionDigits 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  background-color: #ffffff;
+}
+
+.emotion-8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -7227,10 +7345,10 @@ exports[`OrderSummary > should work with fractionDigits 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  gap: 0.25rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -7243,138 +7361,9 @@ exports[`OrderSummary > should work with fractionDigits 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  width: 11rem;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-  background-color: #ffffff;
 }
 
-.emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
-      [data-success='true']
-    ):not([data-error='true']):focus,
-.emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
-      [data-success='true']
-    ):not([data-error='true']):active {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-  border-color: #792dd4;
-}
-
-.emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
-      [data-success='true']
-    ):not([data-error='true']):focus>.emotion-11,
-.emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
-      [data-success='true']
-    ):not([data-error='true']):active>.emotion-11 {
-  border-right-color: #8c40ef;
-}
-
-.emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
-      [data-success='true']
-    ):not([data-error='true']):focus-within {
-  border-color: #792dd4;
-}
-
-.emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
-      [data-success='true']
-    ):not([data-error='true']):focus-within>.emotion-11 {
-  border-right-color: #8c40ef;
-}
-
-.emotion-8:not([data-disabled='true']):not([data-error='true']):not(
-      [data-success='true']
-    ):not([data-readonly='true']):hover,
-.emotion-8:not([data-disabled='true']):not([data-error='true']):not(
-      [data-success='true']
-    ):focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  border-color: #8c40ef;
-}
-
-.emotion-8:not([data-disabled='true']):not([data-error='true']):not(
-      [data-success='true']
-    ):not([data-readonly='true']):hover>.emotion-11,
-.emotion-8:not([data-disabled='true']):not([data-error='true']):not(
-      [data-success='true']
-    ):focus>.emotion-11 {
-  border-right-color: #8c40ef;
-}
-
-.emotion-8[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-8[data-readonly='true']:active {
-  border-color: #d9dadd;
-}
-
-.emotion-8[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-8[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-8[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-8[data-success='true'] {
-  border: 1px solid #22674e;
-}
-
-.emotion-8[data-success='true']>.emotion-11 {
-  border-right-color: #22674e;
-}
-
-.emotion-8[data-success='true']:active {
-  border: 1px solid #22674e;
-  box-shadow: 0px 0px 0px 3px #45d19f40;
-}
-
-.emotion-8[data-success='true']:active>.emotion-11 {
-  border-right-color: #22674e;
-}
-
-.emotion-8[data-error='true'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-8[data-error='true']>.emotion-11 {
-  border-right-color: #b3144d;
-}
-
-.emotion-8[data-error='true']>.emotion-11:hover {
-  border-right-color: #b3144d;
-}
-
-.emotion-8[data-error='true']:active {
-  border: 1px solid #b3144d;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-8[data-error='true']:active>.emotion-11 {
-  border-right-color: #b3144d;
-}
-
-.emotion-8[data-error='true']:active>.emotion-11:hover {
-  border-right-color: #b3144d;
-}
-
-.emotion-8[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-8[data-disabled='true']>.emotion-11 {
-  border-right-color: #e9eaeb;
-}
-
-.emotion-8 {
+.emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -7398,44 +7387,43 @@ exports[`OrderSummary > should work with fractionDigits 1`] = `
   width: 11rem;
   border: 1px solid #d9dadd;
   border-radius: 0.25rem;
-  background-color: #ffffff;
 }
 
-.emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
+.emotion-10:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
     ):not([data-error='true']):focus,
-.emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
+.emotion-10:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
     ):not([data-error='true']):active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   border-color: #792dd4;
 }
 
-.emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
+.emotion-10:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
-    ):not([data-error='true']):focus>.emotion-11,
-.emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
+    ):not([data-error='true']):focus>.emotion-13,
+.emotion-10:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
-    ):not([data-error='true']):active>.emotion-11 {
+    ):not([data-error='true']):active>.emotion-13 {
   border-right-color: #8c40ef;
 }
 
-.emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
+.emotion-10:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
     ):not([data-error='true']):focus-within {
   border-color: #792dd4;
 }
 
-.emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
+.emotion-10:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
-    ):not([data-error='true']):focus-within>.emotion-11 {
+    ):not([data-error='true']):focus-within>.emotion-13 {
   border-right-color: #8c40ef;
 }
 
-.emotion-8:not([data-disabled='true']):not([data-error='true']):not(
+.emotion-10:not([data-disabled='true']):not([data-error='true']):not(
       [data-success='true']
     ):not([data-readonly='true']):hover,
-.emotion-8:not([data-disabled='true']):not([data-error='true']):not(
+.emotion-10:not([data-disabled='true']):not([data-error='true']):not(
       [data-success='true']
     ):focus {
   -webkit-text-decoration: none;
@@ -7443,86 +7431,86 @@ exports[`OrderSummary > should work with fractionDigits 1`] = `
   border-color: #8c40ef;
 }
 
-.emotion-8:not([data-disabled='true']):not([data-error='true']):not(
+.emotion-10:not([data-disabled='true']):not([data-error='true']):not(
       [data-success='true']
-    ):not([data-readonly='true']):hover>.emotion-11,
-.emotion-8:not([data-disabled='true']):not([data-error='true']):not(
+    ):not([data-readonly='true']):hover>.emotion-13,
+.emotion-10:not([data-disabled='true']):not([data-error='true']):not(
       [data-success='true']
-    ):focus>.emotion-11 {
+    ):focus>.emotion-13 {
   border-right-color: #8c40ef;
 }
 
-.emotion-8[data-readonly='true'] {
+.emotion-10[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-8[data-readonly='true']:active {
+.emotion-10[data-readonly='true']:active {
   border-color: #d9dadd;
 }
 
-.emotion-8[data-size='small'] {
+.emotion-10[data-size='small'] {
   height: 2rem;
 }
 
-.emotion-8[data-size='medium'] {
+.emotion-10[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-8[data-size='large'] {
+.emotion-10[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-8[data-success='true'] {
+.emotion-10[data-success='true'] {
   border: 1px solid #22674e;
 }
 
-.emotion-8[data-success='true']>.emotion-11 {
+.emotion-10[data-success='true']>.emotion-13 {
   border-right-color: #22674e;
 }
 
-.emotion-8[data-success='true']:active {
+.emotion-10[data-success='true']:active {
   border: 1px solid #22674e;
   box-shadow: 0px 0px 0px 3px #45d19f40;
 }
 
-.emotion-8[data-success='true']:active>.emotion-11 {
+.emotion-10[data-success='true']:active>.emotion-13 {
   border-right-color: #22674e;
 }
 
-.emotion-8[data-error='true'] {
+.emotion-10[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-8[data-error='true']>.emotion-11 {
+.emotion-10[data-error='true']>.emotion-13 {
   border-right-color: #b3144d;
 }
 
-.emotion-8[data-error='true']>.emotion-11:hover {
+.emotion-10[data-error='true']>.emotion-13:hover {
   border-right-color: #b3144d;
 }
 
-.emotion-8[data-error='true']:active {
+.emotion-10[data-error='true']:active {
   border: 1px solid #b3144d;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-8[data-error='true']:active>.emotion-11 {
+.emotion-10[data-error='true']:active>.emotion-13 {
   border-right-color: #b3144d;
 }
 
-.emotion-8[data-error='true']:active>.emotion-11:hover {
+.emotion-10[data-error='true']:active>.emotion-13:hover {
   border-right-color: #b3144d;
 }
 
-.emotion-8[data-disabled='true'] {
+.emotion-10[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-8[data-disabled='true']>.emotion-11 {
+.emotion-10[data-disabled='true']>.emotion-13 {
   border-right-color: #e9eaeb;
 }
 
@@ -7531,20 +7519,153 @@ exports[`OrderSummary > should work with fractionDigits 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  padding-right: 1rem;
-  border-right: 1px solid #d9dadd;
-  width: 100%;
-  height: 100%;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 11rem;
+  border: 1px solid #d9dadd;
+  border-radius: 0.25rem;
 }
 
-.emotion-10 {
+.emotion-10:not([data-disabled='true']):not([data-readonly='true']):not(
+      [data-success='true']
+    ):not([data-error='true']):focus,
+.emotion-10:not([data-disabled='true']):not([data-readonly='true']):not(
+      [data-success='true']
+    ):not([data-error='true']):active {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+  border-color: #792dd4;
+}
+
+.emotion-10:not([data-disabled='true']):not([data-readonly='true']):not(
+      [data-success='true']
+    ):not([data-error='true']):focus>.emotion-13,
+.emotion-10:not([data-disabled='true']):not([data-readonly='true']):not(
+      [data-success='true']
+    ):not([data-error='true']):active>.emotion-13 {
+  border-right-color: #8c40ef;
+}
+
+.emotion-10:not([data-disabled='true']):not([data-readonly='true']):not(
+      [data-success='true']
+    ):not([data-error='true']):focus-within {
+  border-color: #792dd4;
+}
+
+.emotion-10:not([data-disabled='true']):not([data-readonly='true']):not(
+      [data-success='true']
+    ):not([data-error='true']):focus-within>.emotion-13 {
+  border-right-color: #8c40ef;
+}
+
+.emotion-10:not([data-disabled='true']):not([data-error='true']):not(
+      [data-success='true']
+    ):not([data-readonly='true']):hover,
+.emotion-10:not([data-disabled='true']):not([data-error='true']):not(
+      [data-success='true']
+    ):focus {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-color: #8c40ef;
+}
+
+.emotion-10:not([data-disabled='true']):not([data-error='true']):not(
+      [data-success='true']
+    ):not([data-readonly='true']):hover>.emotion-13,
+.emotion-10:not([data-disabled='true']):not([data-error='true']):not(
+      [data-success='true']
+    ):focus>.emotion-13 {
+  border-right-color: #8c40ef;
+}
+
+.emotion-10[data-readonly='true'] {
+  background: #f9f9fa;
+  border-color: #d9dadd;
+  cursor: default;
+}
+
+.emotion-10[data-readonly='true']:active {
+  border-color: #d9dadd;
+}
+
+.emotion-10[data-size='small'] {
+  height: 2rem;
+}
+
+.emotion-10[data-size='medium'] {
+  height: 2.5rem;
+}
+
+.emotion-10[data-size='large'] {
+  height: 3rem;
+}
+
+.emotion-10[data-success='true'] {
+  border: 1px solid #22674e;
+}
+
+.emotion-10[data-success='true']>.emotion-13 {
+  border-right-color: #22674e;
+}
+
+.emotion-10[data-success='true']:active {
+  border: 1px solid #22674e;
+  box-shadow: 0px 0px 0px 3px #45d19f40;
+}
+
+.emotion-10[data-success='true']:active>.emotion-13 {
+  border-right-color: #22674e;
+}
+
+.emotion-10[data-error='true'] {
+  border: 1px solid #b3144d;
+}
+
+.emotion-10[data-error='true']>.emotion-13 {
+  border-right-color: #b3144d;
+}
+
+.emotion-10[data-error='true']>.emotion-13:hover {
+  border-right-color: #b3144d;
+}
+
+.emotion-10[data-error='true']:active {
+  border: 1px solid #b3144d;
+  box-shadow: 0px 0px 0px 3px #f91b6c40;
+}
+
+.emotion-10[data-error='true']:active>.emotion-13 {
+  border-right-color: #b3144d;
+}
+
+.emotion-10[data-error='true']:active>.emotion-13:hover {
+  border-right-color: #b3144d;
+}
+
+.emotion-10[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
+  cursor: not-allowed;
+}
+
+.emotion-10[data-disabled='true']>.emotion-13 {
+  border-right-color: #e9eaeb;
+}
+
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -7563,6 +7684,24 @@ exports[`OrderSummary > should work with fractionDigits 1`] = `
 }
 
 .emotion-12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  padding-right: 1rem;
+  border-right: 1px solid #d9dadd;
+  width: 100%;
+  height: 100%;
+}
+
+.emotion-14 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -7573,54 +7712,53 @@ exports[`OrderSummary > should work with fractionDigits 1`] = `
   padding-left: 1rem;
   background: transparent;
   color: #3f4250;
-  font-size: 0.875rem;
 }
 
-.emotion-12[data-size="small"] {
+.emotion-14[data-size="small"] {
   padding-left: 0.5rem;
 }
 
-.emotion-12[data-size="large"] {
+.emotion-14[data-size="large"] {
   font-size: 1rem;
 }
 
-.emotion-12::-webkit-input-placeholder {
+.emotion-14::-webkit-input-placeholder {
   color: #727683;
 }
 
-.emotion-12::-moz-placeholder {
+.emotion-14::-moz-placeholder {
   color: #727683;
 }
 
-.emotion-12:-ms-input-placeholder {
+.emotion-14:-ms-input-placeholder {
   color: #727683;
 }
 
-.emotion-12::placeholder {
+.emotion-14::placeholder {
   color: #727683;
 }
 
-.emotion-12:disabled {
+.emotion-14:disabled {
   cursor: not-allowed;
 }
 
-.emotion-12:disabled::-webkit-input-placeholder {
+.emotion-14:disabled::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-12:disabled::-moz-placeholder {
+.emotion-14:disabled::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-12:disabled:-ms-input-placeholder {
+.emotion-14:disabled:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-12:disabled::placeholder {
+.emotion-14:disabled::placeholder {
   color: #b5b7bd;
 }
 
-.emotion-12 {
+.emotion-14 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -7631,75 +7769,57 @@ exports[`OrderSummary > should work with fractionDigits 1`] = `
   padding-left: 1rem;
   background: transparent;
   color: #3f4250;
-  font-size: 0.875rem;
 }
 
-.emotion-12[data-size="small"] {
+.emotion-14[data-size="small"] {
   padding-left: 0.5rem;
 }
 
-.emotion-12[data-size="large"] {
+.emotion-14[data-size="large"] {
   font-size: 1rem;
 }
 
-.emotion-12::-webkit-input-placeholder {
+.emotion-14::-webkit-input-placeholder {
   color: #727683;
 }
 
-.emotion-12::-moz-placeholder {
+.emotion-14::-moz-placeholder {
   color: #727683;
 }
 
-.emotion-12:-ms-input-placeholder {
+.emotion-14:-ms-input-placeholder {
   color: #727683;
 }
 
-.emotion-12::placeholder {
+.emotion-14::placeholder {
   color: #727683;
 }
 
-.emotion-12:disabled {
+.emotion-14:disabled {
   cursor: not-allowed;
 }
 
-.emotion-12:disabled::-webkit-input-placeholder {
+.emotion-14:disabled::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-12:disabled::-moz-placeholder {
+.emotion-14:disabled::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-12:disabled:-ms-input-placeholder {
+.emotion-14:disabled:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-12:disabled::placeholder {
+.emotion-14:disabled::placeholder {
   color: #b5b7bd;
-}
-
-.emotion-14 {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-14 {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 .emotion-17 {
   width: 100%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .emotion-17 #unit {
@@ -7714,6 +7834,9 @@ exports[`OrderSummary > should work with fractionDigits 1`] = `
 
 .emotion-17 {
   width: 100%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .emotion-17 #unit {
@@ -8497,37 +8620,34 @@ exports[`OrderSummary > should work with fractionDigits 1`] = `
         >
           <div
             class="emotion-8 emotion-9"
-            data-disabled="false"
-            data-error="false"
-            data-readonly="false"
-            data-size="small"
-            data-success="false"
           >
             <div
               class="emotion-10 emotion-11"
-              id="input-field"
+              data-disabled="false"
+              data-error="false"
+              data-readonly="false"
+              data-size="small"
+              data-success="false"
             >
-              <input
-                aria-invalid="false"
+              <div
                 class="emotion-12 emotion-13"
-                data-size="small"
-                data-testid="unit-input"
-                id=":r9g:"
-                max="9007199254740991"
-                min="0"
-                name="-value"
-                placeholder="0"
-                step="1"
-                type="number"
-                value="1"
-                width="11rem"
-              />
-            </div>
-             
-            <div
-              class="emotion-14 emotion-15"
-              width="fit-content"
-            >
+                id="input-field"
+              >
+                <input
+                  aria-invalid="false"
+                  class="emotion-14 emotion-15"
+                  data-size="small"
+                  data-testid="unit-input"
+                  max="9007199254740991"
+                  min="0"
+                  name="-value"
+                  placeholder="0"
+                  step="1"
+                  type="number"
+                  value="1"
+                  width="11rem"
+                />
+              </div>
               <div
                 aria-label="-unit"
                 class="emotion-16 emotion-17 emotion-18"
@@ -8540,7 +8660,7 @@ exports[`OrderSummary > should work with fractionDigits 1`] = `
                   tabindex="0"
                 >
                   <div
-                    class="emotion-6 emotion-7"
+                    class="emotion-8 emotion-9"
                   >
                     <div
                       aria-expanded="false"
@@ -8591,7 +8711,7 @@ exports[`OrderSummary > should work with fractionDigits 1`] = `
           class="emotion-34 emotion-35"
         >
           <div
-            class="emotion-36 emotion-7"
+            class="emotion-36 emotion-9"
           >
             <span
               class="emotion-38 emotion-5"
@@ -8605,13 +8725,13 @@ exports[`OrderSummary > should work with fractionDigits 1`] = `
             </span>
           </div>
           <div
-            class="emotion-42 emotion-7"
+            class="emotion-42 emotion-9"
           >
             <div
-              class="emotion-42 emotion-7"
+              class="emotion-42 emotion-9"
             >
               <div
-                class="emotion-36 emotion-7"
+                class="emotion-36 emotion-9"
               >
                 <span
                   class="emotion-48 emotion-5"
@@ -8635,7 +8755,7 @@ exports[`OrderSummary > should work with fractionDigits 1`] = `
         class="emotion-54 emotion-55"
       >
         <div
-          class="emotion-36 emotion-7"
+          class="emotion-36 emotion-9"
         >
           <p
             class="emotion-38 emotion-5"
@@ -8643,7 +8763,7 @@ exports[`OrderSummary > should work with fractionDigits 1`] = `
             Estimated cost:
           </p>
           <div
-            class="emotion-60 emotion-7"
+            class="emotion-60 emotion-9"
           >
             <p
               class="emotion-62 emotion-5"
@@ -8799,7 +8919,7 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -8815,6 +8935,7 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  background-color: #ffffff;
 }
 
 .emotion-6 {
@@ -8822,6 +8943,30 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  background-color: #ffffff;
+}
+
+.emotion-8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -8845,10 +8990,10 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  gap: 0.25rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -8861,138 +9006,9 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  width: 11rem;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-  background-color: #ffffff;
 }
 
-.emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
-      [data-success='true']
-    ):not([data-error='true']):focus,
-.emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
-      [data-success='true']
-    ):not([data-error='true']):active {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-  border-color: #792dd4;
-}
-
-.emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
-      [data-success='true']
-    ):not([data-error='true']):focus>.emotion-11,
-.emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
-      [data-success='true']
-    ):not([data-error='true']):active>.emotion-11 {
-  border-right-color: #8c40ef;
-}
-
-.emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
-      [data-success='true']
-    ):not([data-error='true']):focus-within {
-  border-color: #792dd4;
-}
-
-.emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
-      [data-success='true']
-    ):not([data-error='true']):focus-within>.emotion-11 {
-  border-right-color: #8c40ef;
-}
-
-.emotion-8:not([data-disabled='true']):not([data-error='true']):not(
-      [data-success='true']
-    ):not([data-readonly='true']):hover,
-.emotion-8:not([data-disabled='true']):not([data-error='true']):not(
-      [data-success='true']
-    ):focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  border-color: #8c40ef;
-}
-
-.emotion-8:not([data-disabled='true']):not([data-error='true']):not(
-      [data-success='true']
-    ):not([data-readonly='true']):hover>.emotion-11,
-.emotion-8:not([data-disabled='true']):not([data-error='true']):not(
-      [data-success='true']
-    ):focus>.emotion-11 {
-  border-right-color: #8c40ef;
-}
-
-.emotion-8[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-8[data-readonly='true']:active {
-  border-color: #d9dadd;
-}
-
-.emotion-8[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-8[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-8[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-8[data-success='true'] {
-  border: 1px solid #22674e;
-}
-
-.emotion-8[data-success='true']>.emotion-11 {
-  border-right-color: #22674e;
-}
-
-.emotion-8[data-success='true']:active {
-  border: 1px solid #22674e;
-  box-shadow: 0px 0px 0px 3px #45d19f40;
-}
-
-.emotion-8[data-success='true']:active>.emotion-11 {
-  border-right-color: #22674e;
-}
-
-.emotion-8[data-error='true'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-8[data-error='true']>.emotion-11 {
-  border-right-color: #b3144d;
-}
-
-.emotion-8[data-error='true']>.emotion-11:hover {
-  border-right-color: #b3144d;
-}
-
-.emotion-8[data-error='true']:active {
-  border: 1px solid #b3144d;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-8[data-error='true']:active>.emotion-11 {
-  border-right-color: #b3144d;
-}
-
-.emotion-8[data-error='true']:active>.emotion-11:hover {
-  border-right-color: #b3144d;
-}
-
-.emotion-8[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-8[data-disabled='true']>.emotion-11 {
-  border-right-color: #e9eaeb;
-}
-
-.emotion-8 {
+.emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -9016,44 +9032,43 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
   width: 11rem;
   border: 1px solid #d9dadd;
   border-radius: 0.25rem;
-  background-color: #ffffff;
 }
 
-.emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
+.emotion-10:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
     ):not([data-error='true']):focus,
-.emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
+.emotion-10:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
     ):not([data-error='true']):active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   border-color: #792dd4;
 }
 
-.emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
+.emotion-10:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
-    ):not([data-error='true']):focus>.emotion-11,
-.emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
+    ):not([data-error='true']):focus>.emotion-13,
+.emotion-10:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
-    ):not([data-error='true']):active>.emotion-11 {
+    ):not([data-error='true']):active>.emotion-13 {
   border-right-color: #8c40ef;
 }
 
-.emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
+.emotion-10:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
     ):not([data-error='true']):focus-within {
   border-color: #792dd4;
 }
 
-.emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
+.emotion-10:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
-    ):not([data-error='true']):focus-within>.emotion-11 {
+    ):not([data-error='true']):focus-within>.emotion-13 {
   border-right-color: #8c40ef;
 }
 
-.emotion-8:not([data-disabled='true']):not([data-error='true']):not(
+.emotion-10:not([data-disabled='true']):not([data-error='true']):not(
       [data-success='true']
     ):not([data-readonly='true']):hover,
-.emotion-8:not([data-disabled='true']):not([data-error='true']):not(
+.emotion-10:not([data-disabled='true']):not([data-error='true']):not(
       [data-success='true']
     ):focus {
   -webkit-text-decoration: none;
@@ -9061,86 +9076,86 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
   border-color: #8c40ef;
 }
 
-.emotion-8:not([data-disabled='true']):not([data-error='true']):not(
+.emotion-10:not([data-disabled='true']):not([data-error='true']):not(
       [data-success='true']
-    ):not([data-readonly='true']):hover>.emotion-11,
-.emotion-8:not([data-disabled='true']):not([data-error='true']):not(
+    ):not([data-readonly='true']):hover>.emotion-13,
+.emotion-10:not([data-disabled='true']):not([data-error='true']):not(
       [data-success='true']
-    ):focus>.emotion-11 {
+    ):focus>.emotion-13 {
   border-right-color: #8c40ef;
 }
 
-.emotion-8[data-readonly='true'] {
+.emotion-10[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-8[data-readonly='true']:active {
+.emotion-10[data-readonly='true']:active {
   border-color: #d9dadd;
 }
 
-.emotion-8[data-size='small'] {
+.emotion-10[data-size='small'] {
   height: 2rem;
 }
 
-.emotion-8[data-size='medium'] {
+.emotion-10[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-8[data-size='large'] {
+.emotion-10[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-8[data-success='true'] {
+.emotion-10[data-success='true'] {
   border: 1px solid #22674e;
 }
 
-.emotion-8[data-success='true']>.emotion-11 {
+.emotion-10[data-success='true']>.emotion-13 {
   border-right-color: #22674e;
 }
 
-.emotion-8[data-success='true']:active {
+.emotion-10[data-success='true']:active {
   border: 1px solid #22674e;
   box-shadow: 0px 0px 0px 3px #45d19f40;
 }
 
-.emotion-8[data-success='true']:active>.emotion-11 {
+.emotion-10[data-success='true']:active>.emotion-13 {
   border-right-color: #22674e;
 }
 
-.emotion-8[data-error='true'] {
+.emotion-10[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-8[data-error='true']>.emotion-11 {
+.emotion-10[data-error='true']>.emotion-13 {
   border-right-color: #b3144d;
 }
 
-.emotion-8[data-error='true']>.emotion-11:hover {
+.emotion-10[data-error='true']>.emotion-13:hover {
   border-right-color: #b3144d;
 }
 
-.emotion-8[data-error='true']:active {
+.emotion-10[data-error='true']:active {
   border: 1px solid #b3144d;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-8[data-error='true']:active>.emotion-11 {
+.emotion-10[data-error='true']:active>.emotion-13 {
   border-right-color: #b3144d;
 }
 
-.emotion-8[data-error='true']:active>.emotion-11:hover {
+.emotion-10[data-error='true']:active>.emotion-13:hover {
   border-right-color: #b3144d;
 }
 
-.emotion-8[data-disabled='true'] {
+.emotion-10[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-8[data-disabled='true']>.emotion-11 {
+.emotion-10[data-disabled='true']>.emotion-13 {
   border-right-color: #e9eaeb;
 }
 
@@ -9149,20 +9164,153 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  padding-right: 1rem;
-  border-right: 1px solid #d9dadd;
-  width: 100%;
-  height: 100%;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 11rem;
+  border: 1px solid #d9dadd;
+  border-radius: 0.25rem;
 }
 
-.emotion-10 {
+.emotion-10:not([data-disabled='true']):not([data-readonly='true']):not(
+      [data-success='true']
+    ):not([data-error='true']):focus,
+.emotion-10:not([data-disabled='true']):not([data-readonly='true']):not(
+      [data-success='true']
+    ):not([data-error='true']):active {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+  border-color: #792dd4;
+}
+
+.emotion-10:not([data-disabled='true']):not([data-readonly='true']):not(
+      [data-success='true']
+    ):not([data-error='true']):focus>.emotion-13,
+.emotion-10:not([data-disabled='true']):not([data-readonly='true']):not(
+      [data-success='true']
+    ):not([data-error='true']):active>.emotion-13 {
+  border-right-color: #8c40ef;
+}
+
+.emotion-10:not([data-disabled='true']):not([data-readonly='true']):not(
+      [data-success='true']
+    ):not([data-error='true']):focus-within {
+  border-color: #792dd4;
+}
+
+.emotion-10:not([data-disabled='true']):not([data-readonly='true']):not(
+      [data-success='true']
+    ):not([data-error='true']):focus-within>.emotion-13 {
+  border-right-color: #8c40ef;
+}
+
+.emotion-10:not([data-disabled='true']):not([data-error='true']):not(
+      [data-success='true']
+    ):not([data-readonly='true']):hover,
+.emotion-10:not([data-disabled='true']):not([data-error='true']):not(
+      [data-success='true']
+    ):focus {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-color: #8c40ef;
+}
+
+.emotion-10:not([data-disabled='true']):not([data-error='true']):not(
+      [data-success='true']
+    ):not([data-readonly='true']):hover>.emotion-13,
+.emotion-10:not([data-disabled='true']):not([data-error='true']):not(
+      [data-success='true']
+    ):focus>.emotion-13 {
+  border-right-color: #8c40ef;
+}
+
+.emotion-10[data-readonly='true'] {
+  background: #f9f9fa;
+  border-color: #d9dadd;
+  cursor: default;
+}
+
+.emotion-10[data-readonly='true']:active {
+  border-color: #d9dadd;
+}
+
+.emotion-10[data-size='small'] {
+  height: 2rem;
+}
+
+.emotion-10[data-size='medium'] {
+  height: 2.5rem;
+}
+
+.emotion-10[data-size='large'] {
+  height: 3rem;
+}
+
+.emotion-10[data-success='true'] {
+  border: 1px solid #22674e;
+}
+
+.emotion-10[data-success='true']>.emotion-13 {
+  border-right-color: #22674e;
+}
+
+.emotion-10[data-success='true']:active {
+  border: 1px solid #22674e;
+  box-shadow: 0px 0px 0px 3px #45d19f40;
+}
+
+.emotion-10[data-success='true']:active>.emotion-13 {
+  border-right-color: #22674e;
+}
+
+.emotion-10[data-error='true'] {
+  border: 1px solid #b3144d;
+}
+
+.emotion-10[data-error='true']>.emotion-13 {
+  border-right-color: #b3144d;
+}
+
+.emotion-10[data-error='true']>.emotion-13:hover {
+  border-right-color: #b3144d;
+}
+
+.emotion-10[data-error='true']:active {
+  border: 1px solid #b3144d;
+  box-shadow: 0px 0px 0px 3px #f91b6c40;
+}
+
+.emotion-10[data-error='true']:active>.emotion-13 {
+  border-right-color: #b3144d;
+}
+
+.emotion-10[data-error='true']:active>.emotion-13:hover {
+  border-right-color: #b3144d;
+}
+
+.emotion-10[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
+  cursor: not-allowed;
+}
+
+.emotion-10[data-disabled='true']>.emotion-13 {
+  border-right-color: #e9eaeb;
+}
+
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -9181,6 +9329,24 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
 }
 
 .emotion-12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  padding-right: 1rem;
+  border-right: 1px solid #d9dadd;
+  width: 100%;
+  height: 100%;
+}
+
+.emotion-14 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -9191,54 +9357,53 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
   padding-left: 1rem;
   background: transparent;
   color: #3f4250;
-  font-size: 0.875rem;
 }
 
-.emotion-12[data-size="small"] {
+.emotion-14[data-size="small"] {
   padding-left: 0.5rem;
 }
 
-.emotion-12[data-size="large"] {
+.emotion-14[data-size="large"] {
   font-size: 1rem;
 }
 
-.emotion-12::-webkit-input-placeholder {
+.emotion-14::-webkit-input-placeholder {
   color: #727683;
 }
 
-.emotion-12::-moz-placeholder {
+.emotion-14::-moz-placeholder {
   color: #727683;
 }
 
-.emotion-12:-ms-input-placeholder {
+.emotion-14:-ms-input-placeholder {
   color: #727683;
 }
 
-.emotion-12::placeholder {
+.emotion-14::placeholder {
   color: #727683;
 }
 
-.emotion-12:disabled {
+.emotion-14:disabled {
   cursor: not-allowed;
 }
 
-.emotion-12:disabled::-webkit-input-placeholder {
+.emotion-14:disabled::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-12:disabled::-moz-placeholder {
+.emotion-14:disabled::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-12:disabled:-ms-input-placeholder {
+.emotion-14:disabled:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-12:disabled::placeholder {
+.emotion-14:disabled::placeholder {
   color: #b5b7bd;
 }
 
-.emotion-12 {
+.emotion-14 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -9249,75 +9414,57 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
   padding-left: 1rem;
   background: transparent;
   color: #3f4250;
-  font-size: 0.875rem;
 }
 
-.emotion-12[data-size="small"] {
+.emotion-14[data-size="small"] {
   padding-left: 0.5rem;
 }
 
-.emotion-12[data-size="large"] {
+.emotion-14[data-size="large"] {
   font-size: 1rem;
 }
 
-.emotion-12::-webkit-input-placeholder {
+.emotion-14::-webkit-input-placeholder {
   color: #727683;
 }
 
-.emotion-12::-moz-placeholder {
+.emotion-14::-moz-placeholder {
   color: #727683;
 }
 
-.emotion-12:-ms-input-placeholder {
+.emotion-14:-ms-input-placeholder {
   color: #727683;
 }
 
-.emotion-12::placeholder {
+.emotion-14::placeholder {
   color: #727683;
 }
 
-.emotion-12:disabled {
+.emotion-14:disabled {
   cursor: not-allowed;
 }
 
-.emotion-12:disabled::-webkit-input-placeholder {
+.emotion-14:disabled::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-12:disabled::-moz-placeholder {
+.emotion-14:disabled::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-12:disabled:-ms-input-placeholder {
+.emotion-14:disabled:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-12:disabled::placeholder {
+.emotion-14:disabled::placeholder {
   color: #b5b7bd;
-}
-
-.emotion-14 {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-14 {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 .emotion-17 {
   width: 100%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .emotion-17 #unit {
@@ -9332,6 +9479,9 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
 
 .emotion-17 {
   width: 100%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .emotion-17 #unit {
@@ -10149,37 +10299,34 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
         >
           <div
             class="emotion-8 emotion-9"
-            data-disabled="false"
-            data-error="false"
-            data-readonly="false"
-            data-size="small"
-            data-success="false"
           >
             <div
               class="emotion-10 emotion-11"
-              id="input-field"
+              data-disabled="false"
+              data-error="false"
+              data-readonly="false"
+              data-size="small"
+              data-success="false"
             >
-              <input
-                aria-invalid="false"
+              <div
                 class="emotion-12 emotion-13"
-                data-size="small"
-                data-testid="unit-input"
-                id=":r7c:"
-                max="9007199254740991"
-                min="0"
-                name="-value"
-                placeholder="0"
-                step="1"
-                type="number"
-                value="1"
-                width="11rem"
-              />
-            </div>
-             
-            <div
-              class="emotion-14 emotion-15"
-              width="fit-content"
-            >
+                id="input-field"
+              >
+                <input
+                  aria-invalid="false"
+                  class="emotion-14 emotion-15"
+                  data-size="small"
+                  data-testid="unit-input"
+                  max="9007199254740991"
+                  min="0"
+                  name="-value"
+                  placeholder="0"
+                  step="1"
+                  type="number"
+                  value="1"
+                  width="11rem"
+                />
+              </div>
               <div
                 aria-label="-unit"
                 class="emotion-16 emotion-17 emotion-18"
@@ -10192,7 +10339,7 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
                   tabindex="0"
                 >
                   <div
-                    class="emotion-6 emotion-7"
+                    class="emotion-8 emotion-9"
                   >
                     <div
                       aria-expanded="false"
@@ -10243,7 +10390,7 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
           class="emotion-34 emotion-35"
         >
           <div
-            class="emotion-36 emotion-7"
+            class="emotion-36 emotion-9"
           >
             <span
               class="emotion-38 emotion-5"
@@ -10257,13 +10404,13 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
             </span>
           </div>
           <div
-            class="emotion-42 emotion-7"
+            class="emotion-42 emotion-9"
           >
             <div
-              class="emotion-42 emotion-7"
+              class="emotion-42 emotion-9"
             >
               <div
-                class="emotion-36 emotion-7"
+                class="emotion-36 emotion-9"
               >
                 <span
                   class="emotion-48 emotion-5"
@@ -10286,7 +10433,7 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
           class="emotion-34 emotion-35"
         >
           <div
-            class="emotion-36 emotion-7"
+            class="emotion-36 emotion-9"
           >
             <span
               class="emotion-38 emotion-5"
@@ -10296,17 +10443,17 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
             FREE
           </div>
           <div
-            class="emotion-42 emotion-7"
+            class="emotion-42 emotion-9"
           />
         </div>
         <div
           class="emotion-34 emotion-35"
         >
           <div
-            class="emotion-36 emotion-7"
+            class="emotion-36 emotion-9"
           >
             <div
-              class="emotion-66 emotion-7"
+              class="emotion-66 emotion-9"
             >
               <span
                 class="emotion-38 emotion-5"
@@ -10342,13 +10489,13 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
             </span>
           </div>
           <div
-            class="emotion-42 emotion-7"
+            class="emotion-42 emotion-9"
           >
             <div
-              class="emotion-42 emotion-7"
+              class="emotion-42 emotion-9"
             >
               <div
-                class="emotion-36 emotion-7"
+                class="emotion-36 emotion-9"
               >
                 <span
                   class="emotion-48 emotion-5"
@@ -10382,7 +10529,7 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
           class="emotion-34 emotion-35"
         >
           <div
-            class="emotion-36 emotion-7"
+            class="emotion-36 emotion-9"
           >
             <span
               class="emotion-38 emotion-5"
@@ -10396,13 +10543,13 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
             </span>
           </div>
           <div
-            class="emotion-42 emotion-7"
+            class="emotion-42 emotion-9"
           >
             <div
-              class="emotion-42 emotion-7"
+              class="emotion-42 emotion-9"
             >
               <div
-                class="emotion-36 emotion-7"
+                class="emotion-36 emotion-9"
               >
                 <span
                   class="emotion-48 emotion-5"
@@ -10446,10 +10593,10 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
               </div>
             </div>
             <div
-              class="emotion-42 emotion-7"
+              class="emotion-42 emotion-9"
             >
               <div
-                class="emotion-36 emotion-7"
+                class="emotion-36 emotion-9"
               >
                 <span
                   class="emotion-48 emotion-5"
@@ -10472,7 +10619,7 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
           class="emotion-34 emotion-35"
         >
           <div
-            class="emotion-36 emotion-7"
+            class="emotion-36 emotion-9"
           >
             <span
               class="emotion-38 emotion-5"
@@ -10486,13 +10633,13 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
             </span>
           </div>
           <div
-            class="emotion-42 emotion-7"
+            class="emotion-42 emotion-9"
           >
             <div
-              class="emotion-42 emotion-7"
+              class="emotion-42 emotion-9"
             >
               <div
-                class="emotion-36 emotion-7"
+                class="emotion-36 emotion-9"
               >
                 <span
                   class="emotion-48 emotion-5"
@@ -10515,7 +10662,7 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
           class="emotion-34 emotion-35"
         >
           <div
-            class="emotion-36 emotion-7"
+            class="emotion-36 emotion-9"
           >
             <span
               class="emotion-38 emotion-5"
@@ -10529,13 +10676,13 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
             </span>
           </div>
           <div
-            class="emotion-42 emotion-7"
+            class="emotion-42 emotion-9"
           >
             <div
-              class="emotion-42 emotion-7"
+              class="emotion-42 emotion-9"
             >
               <div
-                class="emotion-36 emotion-7"
+                class="emotion-36 emotion-9"
               >
                 <span
                   class="emotion-48 emotion-5"
@@ -10558,7 +10705,7 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
           class="emotion-34 emotion-35"
         >
           <div
-            class="emotion-36 emotion-7"
+            class="emotion-36 emotion-9"
           >
             <span
               class="emotion-38 emotion-5"
@@ -10572,13 +10719,13 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
             </span>
           </div>
           <div
-            class="emotion-42 emotion-7"
+            class="emotion-42 emotion-9"
           >
             <div
-              class="emotion-42 emotion-7"
+              class="emotion-42 emotion-9"
             >
               <div
-                class="emotion-36 emotion-7"
+                class="emotion-36 emotion-9"
               >
                 <span
                   class="emotion-48 emotion-5"
@@ -10596,10 +10743,10 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
               />
             </div>
             <div
-              class="emotion-42 emotion-7"
+              class="emotion-42 emotion-9"
             >
               <div
-                class="emotion-36 emotion-7"
+                class="emotion-36 emotion-9"
               >
                 <span
                   class="emotion-48 emotion-5"
@@ -10622,7 +10769,7 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
           class="emotion-34 emotion-35"
         >
           <div
-            class="emotion-36 emotion-7"
+            class="emotion-36 emotion-9"
           >
             <span
               class="emotion-38 emotion-5"
@@ -10636,13 +10783,13 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
             </span>
           </div>
           <div
-            class="emotion-42 emotion-7"
+            class="emotion-42 emotion-9"
           >
             <div
-              class="emotion-42 emotion-7"
+              class="emotion-42 emotion-9"
             >
               <div
-                class="emotion-36 emotion-7"
+                class="emotion-36 emotion-9"
               >
                 <span
                   class="emotion-48 emotion-5"
@@ -10665,10 +10812,10 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
           class="emotion-34 emotion-35"
         >
           <div
-            class="emotion-36 emotion-7"
+            class="emotion-36 emotion-9"
           >
             <div
-              class="emotion-66 emotion-7"
+              class="emotion-66 emotion-9"
             >
               <span
                 class="emotion-38 emotion-5"
@@ -10697,13 +10844,13 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
             </span>
           </div>
           <div
-            class="emotion-42 emotion-7"
+            class="emotion-42 emotion-9"
           >
             <div
-              class="emotion-42 emotion-7"
+              class="emotion-42 emotion-9"
             >
               <div
-                class="emotion-36 emotion-7"
+                class="emotion-36 emotion-9"
               >
                 <span
                   class="emotion-48 emotion-5"
@@ -10727,10 +10874,10 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
         class="emotion-250 emotion-251"
       >
         <div
-          class="emotion-36 emotion-7"
+          class="emotion-36 emotion-9"
         >
           <div
-            class="emotion-254 emotion-7"
+            class="emotion-254 emotion-9"
           >
             <p
               class="emotion-38 emotion-5"
