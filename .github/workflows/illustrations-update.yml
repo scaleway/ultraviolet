@@ -25,7 +25,7 @@ jobs:
         with:
           token: ${{ secrets.PAT }}
 
-      - uses: pnpm/action-setup@v4.0.0
+      - uses: pnpm/action-setup@v4.1.0
       - uses: actions/setup-node@v4.2.0
         with:
           node-version: 22
