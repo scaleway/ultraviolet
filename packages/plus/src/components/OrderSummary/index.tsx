@@ -22,6 +22,8 @@ const HeaderContainer = styled(Stack)`
   padding-bottom: ${({ theme }) => theme.space[2]};
 `
 
+const StyledStack = styled(Stack)`
+background-color: ${({ theme }) => theme.colors.neutral.background};`
 export const OrderSummary = ({
   header,
   hideTimeUnit = false,
@@ -124,18 +126,20 @@ export const OrderSummary = ({
               {header}
             </Text>
             {!hideTimeUnit ? (
-              <UnitInput
-                width="11rem"
-                selectInputWidth="fit-content"
-                options={computePeriodOptions}
-                onChange={setTimePeriodAmount}
-                onChangeUnitValue={(val: string) =>
-                  setTimePeriodUnit(val as TimeUnit)
-                }
-                value={valueUnitInput}
-                unitValue={unitUnitInput}
-                size="small"
-              />
+              <StyledStack>
+                <UnitInput
+                  width="11rem"
+                  selectInputWidth="fit-content"
+                  options={computePeriodOptions}
+                  onChange={setTimePeriodAmount}
+                  onChangeUnitValue={(val: string) =>
+                    setTimePeriodUnit(val as TimeUnit)
+                  }
+                  value={valueUnitInput}
+                  unitValue={unitUnitInput}
+                  size="small"
+                />
+              </StyledStack>
             ) : null}
           </HeaderContainer>
         ) : null}
