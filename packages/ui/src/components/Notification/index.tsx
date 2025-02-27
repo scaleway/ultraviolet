@@ -1,5 +1,5 @@
 import type { Theme } from '@emotion/react'
-import { ClassNames, Global, css, useTheme } from '@emotion/react'
+import { ClassNames, css, useTheme } from '@emotion/react'
 import type { ReactNode } from 'react'
 import {
   ToastContainer as BaseToastContainer,
@@ -14,7 +14,6 @@ import type {
 import { Button } from '../Button'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
-import style from './react-toastify.css?inline'
 
 const PREFIX = '.Toastify'
 
@@ -126,27 +125,24 @@ export const NotificationContainer = ({
   const theme = useTheme()
 
   return (
-    <>
-      <Global styles={style} />
-      <ClassNames>
-        {/* eslint-disable-next-line @typescript-eslint/unbound-method */}
-        {({ css: localCss }) => (
-          <BaseToastContainer
-            data-testid={dataTestId}
-            toastClassName={localCss(styles.toast({ theme }))}
-            icon={false}
-            autoClose={autoClose}
-            newestOnTop={newestOnTop}
-            limit={limit}
-            position={position}
-            hideProgressBar
-            draggable={false}
-            transition={Slide}
-            className={className}
-            containerId={containerId}
-          />
-        )}
-      </ClassNames>
-    </>
+    <ClassNames>
+      {/* eslint-disable-next-line @typescript-eslint/unbound-method */}
+      {({ css: localCss }) => (
+        <BaseToastContainer
+          data-testid={dataTestId}
+          toastClassName={localCss(styles.toast({ theme }))}
+          icon={false}
+          autoClose={autoClose}
+          newestOnTop={newestOnTop}
+          limit={limit}
+          position={position}
+          hideProgressBar
+          draggable={false}
+          transition={Slide}
+          className={className}
+          containerId={containerId}
+        />
+      )}
+    </ClassNames>
   )
 }
