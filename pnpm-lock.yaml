@@ -514,8 +514,8 @@ importers:
         specifier: 7.54.2
         version: 7.54.2(react@19.0.0)
       react-select:
-        specifier: 5.8.3
-        version: 5.8.3(@types/react@19.0.10)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+        specifier: 5.10.0
+        version: 5.10.0(@types/react@19.0.10)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
     devDependencies:
       '@babel/core':
         specifier: 7.26.9
@@ -698,8 +698,8 @@ importers:
         specifier: 6.9.0
         version: 6.9.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       react-select:
-        specifier: 5.8.3
-        version: 5.8.3(@types/react@19.0.10)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+        specifier: 5.10.0
+        version: 5.10.0(@types/react@19.0.10)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       react-toastify:
         specifier: 10.0.6
         version: 10.0.6(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
@@ -6811,11 +6811,11 @@ packages:
       schema-dts: '>=0.7.4'
       typescript: '>=3.1.6'
 
-  react-select@5.8.3:
-    resolution: {integrity: sha512-lVswnIq8/iTj1db7XCG74M/3fbGB6ZaluCzvwPGT5ZOjCdL/k0CLWhEK0vCBLuU5bHTEf6Gj8jtSvi+3v+tO1w==}
+  react-select@5.10.0:
+    resolution: {integrity: sha512-k96gw+i6N3ExgDwPIg0lUPmexl1ygPe6u5BdQFNBhkpbwroIgCNXdubtIzHfThYXYYTubwOBafoMnn7ruEP1xA==}
     peerDependencies:
-      react: ^16.8.0 || ^17.0.0 || ^18.0.0
-      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
+      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
 
   react-syntax-highlighter@15.6.1:
     resolution: {integrity: sha512-OqJ2/vL7lEeV5zTJyG7kmARppUjiB9h9udl4qHQjjgEos66z00Ia0OckwYfRxCSFrW8RJIBnsBwQsHZbVPspqg==}
@@ -15287,7 +15287,7 @@ snapshots:
       schema-dts: 1.1.2(typescript@5.7.3)
       typescript: 5.7.3
 
-  react-select@5.8.3(@types/react@19.0.10)(react-dom@19.0.0(react@19.0.0))(react@19.0.0):
+  react-select@5.10.0(@types/react@19.0.10)(react-dom@19.0.0(react@19.0.0))(react@19.0.0):
     dependencies:
       '@babel/runtime': 7.26.9
       '@emotion/cache': 11.14.0
