@@ -118,25 +118,27 @@ export const OrderSummary = ({
   return (
     <OrderSummaryContext.Provider value={valueContext}>
       <Container>
-        <HeaderContainer direction="row" justifyContent="space-between">
-          <Text as="h3" variant="headingSmallStrong" sentiment="neutral">
-            {header}
-          </Text>
-          {!hideTimeUnit ? (
-            <UnitInput
-              width="11rem"
-              selectInputWidth="fit-content"
-              options={computePeriodOptions}
-              onChange={setTimePeriodAmount}
-              onChangeUnitValue={(val: string) =>
-                setTimePeriodUnit(val as TimeUnit)
-              }
-              value={valueUnitInput}
-              unitValue={unitUnitInput}
-              size="small"
-            />
-          ) : null}
-        </HeaderContainer>
+        {header ? (
+          <HeaderContainer direction="row" justifyContent="space-between">
+            <Text as="h3" variant="headingSmallStrong" sentiment="neutral">
+              {header}
+            </Text>
+            {!hideTimeUnit ? (
+              <UnitInput
+                width="11rem"
+                selectInputWidth="fit-content"
+                options={computePeriodOptions}
+                onChange={setTimePeriodAmount}
+                onChangeUnitValue={(val: string) =>
+                  setTimePeriodUnit(val as TimeUnit)
+                }
+                value={valueUnitInput}
+                unitValue={unitUnitInput}
+                size="small"
+              />
+            ) : null}
+          </HeaderContainer>
+        ) : null}
         <ScrollableContent />
         <NonScrollableContent
           totalPrice={totalPrice}
