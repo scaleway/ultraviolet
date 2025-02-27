@@ -27,15 +27,14 @@ type ModuleType = ({
     props: Record<string, Record<string, PropertyType>>
   }
   displayName: string
-} & ComponentType) &
-  ({
-    type: {
-      __docgenInfo: {
-        props: Record<string, Record<string, PropertyType>>
-      }
-      displayName: string
+} & ComponentType) & {
+  type: {
+    __docgenInfo: {
+      props: Record<string, Record<string, PropertyType>>
     }
-  } & ComponentType)
+    displayName: string
+  }
+}
 
 const Properties = () => {
   const componentsList = Object.values(components) as ModuleType[]
