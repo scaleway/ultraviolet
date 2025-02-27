@@ -1,6 +1,5 @@
-import styled from '@emotion/styled'
 import type { StoryFn } from '@storybook/react'
-import { Button, Checkbox, NumberInputV2 } from '@ultraviolet/ui'
+import { Button, Checkbox } from '@ultraviolet/ui'
 import type { ComponentProps, Dispatch } from 'react'
 import { useState } from 'react'
 import { OrderSummary } from '..'
@@ -11,24 +10,15 @@ import {
   negativeItem,
 } from './productsExample'
 
-const StyledNumberInputV2 = styled(NumberInputV2)`
-width: 200px;
-background-color: ${({ theme }) => theme.colors.neutral.background};
-`
-
 const mockItems = (
   requestsAmount: number | null,
   setRequestsAmount: Dispatch<React.SetStateAction<number | null>>,
 ) => {
   const categoryNumberOfRequests = {
     category: 'Numers of requests',
-    customContent: (
-      <StyledNumberInputV2
-        value={requestsAmount}
-        onChange={setRequestsAmount}
-        size="small"
-      />
-    ),
+    numberInput: true,
+    numberInputValue: requestsAmount,
+    onChangeInput: setRequestsAmount,
   }
   const categoryRequests = {
     category: 'Requests cost',

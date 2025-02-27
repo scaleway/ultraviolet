@@ -21,6 +21,16 @@ type PeriodProps =
       valueUnitInput?: ComponentProps<typeof UnitInput>['value']
       unitUnitInput?: TimeUnit
     }
+type NumberInputType = {
+  /**
+   * Display a number input instead of the price
+   */
+  numberInput?: boolean
+  numberInputValue?: number | null
+  numberInputUnit?: string
+  numberInputControls?: boolean
+  onChangeInput?: (value: number | null) => void
+}
 
 export type SubCategoryType = {
   title?: string
@@ -30,10 +40,6 @@ export type SubCategoryType = {
    */
   details?: string[]
   discount?: number
-  /**
-   * Custom content to display next to the price
-   */
-  customContent?: ReactNode
   amount?: number
   amountFree?: number
   /**
@@ -44,7 +50,15 @@ export type SubCategoryType = {
    * Suffix to be displayed after the price (generally, the unit) - this will trigger to not display the overall price taking into account the amount for the subcategory.
    */
   priceUnit?: string
-}
+  /**
+   * Hide the price for the line (it will still be counted in the general price)
+   */
+  hidePrice?: boolean
+  /**
+   * Custom content to display next to the price
+   */
+  customContent?: ReactNode
+} & NumberInputType
 
 export type ItemsType = {
   category: string
@@ -55,17 +69,17 @@ export type ItemsType = {
    * Hide the price of the category and display the custom content instead
    */
   customContent?: ReactNode
-}
+} & NumberInputType
 
 export type OrderSummaryProps = {
   items: ItemsType[]
-  header: string
+  header?: string
   locales?: Record<keyof typeof orderSummaryLocales, string>
-  currency: string
+  currency?: string
   /**
    * Locale to format the numbers (prices)
    */
-  localeFormat: string
+  localeFormat?: string
   /**
    *Total applied to the final cost (due to commitment, beta...) in %
    */

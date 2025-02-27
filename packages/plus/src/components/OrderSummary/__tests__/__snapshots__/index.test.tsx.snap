@@ -208,7 +208,7 @@ exports[`OrderSummary > should work with children 1`] = `
     ):not([data-error='true']):focus,
 .emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
-    ):not([data-error='true'])active {
+    ):not([data-error='true']):active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   border-color: #792dd4;
 }
@@ -218,7 +218,19 @@ exports[`OrderSummary > should work with children 1`] = `
     ):not([data-error='true']):focus>.emotion-11,
 .emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
-    ):not([data-error='true'])active>.emotion-11 {
+    ):not([data-error='true']):active>.emotion-11 {
+  border-right-color: #8c40ef;
+}
+
+.emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
+      [data-success='true']
+    ):not([data-error='true']):focus-within {
+  border-color: #792dd4;
+}
+
+.emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
+      [data-success='true']
+    ):not([data-error='true']):focus-within>.emotion-11 {
   border-right-color: #8c40ef;
 }
 
@@ -348,7 +360,7 @@ exports[`OrderSummary > should work with children 1`] = `
     ):not([data-error='true']):focus,
 .emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
-    ):not([data-error='true'])active {
+    ):not([data-error='true']):active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   border-color: #792dd4;
 }
@@ -358,7 +370,19 @@ exports[`OrderSummary > should work with children 1`] = `
     ):not([data-error='true']):focus>.emotion-11,
 .emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
-    ):not([data-error='true'])active>.emotion-11 {
+    ):not([data-error='true']):active>.emotion-11 {
+  border-right-color: #8c40ef;
+}
+
+.emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
+      [data-success='true']
+    ):not([data-error='true']):focus-within {
+  border-color: #792dd4;
+}
+
+.emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
+      [data-success='true']
+    ):not([data-error='true']):focus-within>.emotion-11 {
   border-right-color: #8c40ef;
 }
 
@@ -1119,10 +1143,10 @@ exports[`OrderSummary > should work with children 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
@@ -1141,10 +1165,10 @@ exports[`OrderSummary > should work with children 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
@@ -1179,52 +1203,6 @@ exports[`OrderSummary > should work with children 1`] = `
 }
 
 .emotion-42 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.emotion-42 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.emotion-44 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1247,7 +1225,7 @@ exports[`OrderSummary > should work with children 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-44 {
+.emotion-42 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1413,6 +1391,7 @@ exports[`OrderSummary > should work with children 1`] = `
   flex-wrap: nowrap;
   padding: 1.5rem;
   border-top: 1px solid #d9dadd;
+  overflow: hidden;
 }
 
 .emotion-250 {
@@ -1438,50 +1417,7 @@ exports[`OrderSummary > should work with children 1`] = `
   flex-wrap: nowrap;
   padding: 1.5rem;
   border-top: 1px solid #d9dadd;
-}
-
-.emotion-252 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.emotion-252 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  overflow: hidden;
 }
 
 <div
@@ -1518,6 +1454,7 @@ exports[`OrderSummary > should work with children 1`] = `
                 class="emotion-12 emotion-13"
                 data-size="small"
                 data-testid="unit-input"
+                id=":r3u:"
                 max="9007199254740991"
                 min="0"
                 name="-value"
@@ -1528,6 +1465,7 @@ exports[`OrderSummary > should work with children 1`] = `
                 width="11rem"
               />
             </div>
+             
             <div
               class="emotion-14 emotion-15"
               width="fit-content"
@@ -1612,7 +1550,7 @@ exports[`OrderSummary > should work with children 1`] = `
             class="emotion-42 emotion-7"
           >
             <div
-              class="emotion-44 emotion-7"
+              class="emotion-42 emotion-7"
             >
               <div
                 class="emotion-36 emotion-7"
@@ -1697,7 +1635,7 @@ exports[`OrderSummary > should work with children 1`] = `
             class="emotion-42 emotion-7"
           >
             <div
-              class="emotion-44 emotion-7"
+              class="emotion-42 emotion-7"
             >
               <div
                 class="emotion-36 emotion-7"
@@ -1751,7 +1689,7 @@ exports[`OrderSummary > should work with children 1`] = `
             class="emotion-42 emotion-7"
           >
             <div
-              class="emotion-44 emotion-7"
+              class="emotion-42 emotion-7"
             >
               <div
                 class="emotion-36 emotion-7"
@@ -1798,7 +1736,7 @@ exports[`OrderSummary > should work with children 1`] = `
               </div>
             </div>
             <div
-              class="emotion-44 emotion-7"
+              class="emotion-42 emotion-7"
             >
               <div
                 class="emotion-36 emotion-7"
@@ -1841,7 +1779,7 @@ exports[`OrderSummary > should work with children 1`] = `
             class="emotion-42 emotion-7"
           >
             <div
-              class="emotion-44 emotion-7"
+              class="emotion-42 emotion-7"
             >
               <div
                 class="emotion-36 emotion-7"
@@ -1884,7 +1822,7 @@ exports[`OrderSummary > should work with children 1`] = `
             class="emotion-42 emotion-7"
           >
             <div
-              class="emotion-44 emotion-7"
+              class="emotion-42 emotion-7"
             >
               <div
                 class="emotion-36 emotion-7"
@@ -1927,7 +1865,7 @@ exports[`OrderSummary > should work with children 1`] = `
             class="emotion-42 emotion-7"
           >
             <div
-              class="emotion-44 emotion-7"
+              class="emotion-42 emotion-7"
             >
               <div
                 class="emotion-36 emotion-7"
@@ -1948,7 +1886,7 @@ exports[`OrderSummary > should work with children 1`] = `
               />
             </div>
             <div
-              class="emotion-44 emotion-7"
+              class="emotion-42 emotion-7"
             >
               <div
                 class="emotion-36 emotion-7"
@@ -1991,7 +1929,7 @@ exports[`OrderSummary > should work with children 1`] = `
             class="emotion-42 emotion-7"
           >
             <div
-              class="emotion-44 emotion-7"
+              class="emotion-42 emotion-7"
             >
               <div
                 class="emotion-36 emotion-7"
@@ -2052,7 +1990,7 @@ exports[`OrderSummary > should work with children 1`] = `
             class="emotion-42 emotion-7"
           >
             <div
-              class="emotion-44 emotion-7"
+              class="emotion-42 emotion-7"
             >
               <div
                 class="emotion-36 emotion-7"
@@ -2080,7 +2018,7 @@ exports[`OrderSummary > should work with children 1`] = `
       >
         children
         <div
-          class="emotion-252 emotion-7"
+          class="emotion-36 emotion-7"
         >
           <p
             class="emotion-38 emotion-5"
@@ -2221,7 +2159,7 @@ exports[`OrderSummary > should work with default props 1`] = `
     ):not([data-error='true']):focus,
 .emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
-    ):not([data-error='true'])active {
+    ):not([data-error='true']):active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   border-color: #792dd4;
 }
@@ -2231,7 +2169,19 @@ exports[`OrderSummary > should work with default props 1`] = `
     ):not([data-error='true']):focus>.emotion-11,
 .emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
-    ):not([data-error='true'])active>.emotion-11 {
+    ):not([data-error='true']):active>.emotion-11 {
+  border-right-color: #8c40ef;
+}
+
+.emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
+      [data-success='true']
+    ):not([data-error='true']):focus-within {
+  border-color: #792dd4;
+}
+
+.emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
+      [data-success='true']
+    ):not([data-error='true']):focus-within>.emotion-11 {
   border-right-color: #8c40ef;
 }
 
@@ -2665,10 +2615,10 @@ exports[`OrderSummary > should work with default props 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
@@ -2691,29 +2641,6 @@ exports[`OrderSummary > should work with default props 1`] = `
 }
 
 .emotion-42 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.emotion-44 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2843,28 +2770,7 @@ exports[`OrderSummary > should work with default props 1`] = `
   flex-wrap: nowrap;
   padding: 1.5rem;
   border-top: 1px solid #d9dadd;
-}
-
-.emotion-252 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  overflow: hidden;
 }
 
 <div
@@ -2901,6 +2807,7 @@ exports[`OrderSummary > should work with default props 1`] = `
                 class="emotion-12 emotion-13"
                 data-size="small"
                 data-testid="unit-input"
+                id=":r1:"
                 max="9007199254740991"
                 min="0"
                 name="-value"
@@ -2911,6 +2818,7 @@ exports[`OrderSummary > should work with default props 1`] = `
                 width="11rem"
               />
             </div>
+             
             <div
               class="emotion-14 emotion-15"
               width="fit-content"
@@ -2995,7 +2903,7 @@ exports[`OrderSummary > should work with default props 1`] = `
             class="emotion-42 emotion-7"
           >
             <div
-              class="emotion-44 emotion-7"
+              class="emotion-42 emotion-7"
             >
               <div
                 class="emotion-36 emotion-7"
@@ -3080,7 +2988,7 @@ exports[`OrderSummary > should work with default props 1`] = `
             class="emotion-42 emotion-7"
           >
             <div
-              class="emotion-44 emotion-7"
+              class="emotion-42 emotion-7"
             >
               <div
                 class="emotion-36 emotion-7"
@@ -3134,7 +3042,7 @@ exports[`OrderSummary > should work with default props 1`] = `
             class="emotion-42 emotion-7"
           >
             <div
-              class="emotion-44 emotion-7"
+              class="emotion-42 emotion-7"
             >
               <div
                 class="emotion-36 emotion-7"
@@ -3181,7 +3089,7 @@ exports[`OrderSummary > should work with default props 1`] = `
               </div>
             </div>
             <div
-              class="emotion-44 emotion-7"
+              class="emotion-42 emotion-7"
             >
               <div
                 class="emotion-36 emotion-7"
@@ -3224,7 +3132,7 @@ exports[`OrderSummary > should work with default props 1`] = `
             class="emotion-42 emotion-7"
           >
             <div
-              class="emotion-44 emotion-7"
+              class="emotion-42 emotion-7"
             >
               <div
                 class="emotion-36 emotion-7"
@@ -3267,7 +3175,7 @@ exports[`OrderSummary > should work with default props 1`] = `
             class="emotion-42 emotion-7"
           >
             <div
-              class="emotion-44 emotion-7"
+              class="emotion-42 emotion-7"
             >
               <div
                 class="emotion-36 emotion-7"
@@ -3310,7 +3218,7 @@ exports[`OrderSummary > should work with default props 1`] = `
             class="emotion-42 emotion-7"
           >
             <div
-              class="emotion-44 emotion-7"
+              class="emotion-42 emotion-7"
             >
               <div
                 class="emotion-36 emotion-7"
@@ -3331,7 +3239,7 @@ exports[`OrderSummary > should work with default props 1`] = `
               />
             </div>
             <div
-              class="emotion-44 emotion-7"
+              class="emotion-42 emotion-7"
             >
               <div
                 class="emotion-36 emotion-7"
@@ -3374,7 +3282,7 @@ exports[`OrderSummary > should work with default props 1`] = `
             class="emotion-42 emotion-7"
           >
             <div
-              class="emotion-44 emotion-7"
+              class="emotion-42 emotion-7"
             >
               <div
                 class="emotion-36 emotion-7"
@@ -3435,7 +3343,7 @@ exports[`OrderSummary > should work with default props 1`] = `
             class="emotion-42 emotion-7"
           >
             <div
-              class="emotion-44 emotion-7"
+              class="emotion-42 emotion-7"
             >
               <div
                 class="emotion-36 emotion-7"
@@ -3462,7 +3370,7 @@ exports[`OrderSummary > should work with default props 1`] = `
         class="emotion-250 emotion-251"
       >
         <div
-          class="emotion-252 emotion-7"
+          class="emotion-36 emotion-7"
         >
           <p
             class="emotion-38 emotion-5"
@@ -3690,7 +3598,7 @@ exports[`OrderSummary > should work with discount 1`] = `
     ):not([data-error='true']):focus,
 .emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
-    ):not([data-error='true'])active {
+    ):not([data-error='true']):active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   border-color: #792dd4;
 }
@@ -3700,7 +3608,19 @@ exports[`OrderSummary > should work with discount 1`] = `
     ):not([data-error='true']):focus>.emotion-11,
 .emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
-    ):not([data-error='true'])active>.emotion-11 {
+    ):not([data-error='true']):active>.emotion-11 {
+  border-right-color: #8c40ef;
+}
+
+.emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
+      [data-success='true']
+    ):not([data-error='true']):focus-within {
+  border-color: #792dd4;
+}
+
+.emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
+      [data-success='true']
+    ):not([data-error='true']):focus-within>.emotion-11 {
   border-right-color: #8c40ef;
 }
 
@@ -3830,7 +3750,7 @@ exports[`OrderSummary > should work with discount 1`] = `
     ):not([data-error='true']):focus,
 .emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
-    ):not([data-error='true'])active {
+    ):not([data-error='true']):active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   border-color: #792dd4;
 }
@@ -3840,7 +3760,19 @@ exports[`OrderSummary > should work with discount 1`] = `
     ):not([data-error='true']):focus>.emotion-11,
 .emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
-    ):not([data-error='true'])active>.emotion-11 {
+    ):not([data-error='true']):active>.emotion-11 {
+  border-right-color: #8c40ef;
+}
+
+.emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
+      [data-success='true']
+    ):not([data-error='true']):focus-within {
+  border-color: #792dd4;
+}
+
+.emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
+      [data-success='true']
+    ):not([data-error='true']):focus-within>.emotion-11 {
   border-right-color: #8c40ef;
 }
 
@@ -4601,10 +4533,10 @@ exports[`OrderSummary > should work with discount 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
@@ -4623,10 +4555,10 @@ exports[`OrderSummary > should work with discount 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
@@ -4665,52 +4597,6 @@ exports[`OrderSummary > should work with discount 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.emotion-42 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.emotion-44 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   gap: 0.5rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -4729,7 +4615,7 @@ exports[`OrderSummary > should work with discount 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-44 {
+.emotion-42 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4847,6 +4733,7 @@ exports[`OrderSummary > should work with discount 1`] = `
   flex-wrap: nowrap;
   padding: 1.5rem;
   border-top: 1px solid #d9dadd;
+  overflow: hidden;
 }
 
 .emotion-54 {
@@ -4872,50 +4759,7 @@ exports[`OrderSummary > should work with discount 1`] = `
   flex-wrap: nowrap;
   padding: 1.5rem;
   border-top: 1px solid #d9dadd;
-}
-
-.emotion-56 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.emotion-56 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  overflow: hidden;
 }
 
 .emotion-60 {
@@ -5012,6 +4856,7 @@ exports[`OrderSummary > should work with discount 1`] = `
                 class="emotion-12 emotion-13"
                 data-size="small"
                 data-testid="unit-input"
+                id=":r93:"
                 max="9007199254740991"
                 min="0"
                 name="-value"
@@ -5022,6 +4867,7 @@ exports[`OrderSummary > should work with discount 1`] = `
                 width="11rem"
               />
             </div>
+             
             <div
               class="emotion-14 emotion-15"
               width="fit-content"
@@ -5106,7 +4952,7 @@ exports[`OrderSummary > should work with discount 1`] = `
             class="emotion-42 emotion-7"
           >
             <div
-              class="emotion-44 emotion-7"
+              class="emotion-42 emotion-7"
             >
               <div
                 class="emotion-36 emotion-7"
@@ -5133,7 +4979,7 @@ exports[`OrderSummary > should work with discount 1`] = `
         class="emotion-54 emotion-55"
       >
         <div
-          class="emotion-56 emotion-7"
+          class="emotion-36 emotion-7"
         >
           <p
             class="emotion-38 emotion-5"
@@ -5370,7 +5216,7 @@ exports[`OrderSummary > should work with footer 1`] = `
     ):not([data-error='true']):focus,
 .emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
-    ):not([data-error='true'])active {
+    ):not([data-error='true']):active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   border-color: #792dd4;
 }
@@ -5380,7 +5226,19 @@ exports[`OrderSummary > should work with footer 1`] = `
     ):not([data-error='true']):focus>.emotion-11,
 .emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
-    ):not([data-error='true'])active>.emotion-11 {
+    ):not([data-error='true']):active>.emotion-11 {
+  border-right-color: #8c40ef;
+}
+
+.emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
+      [data-success='true']
+    ):not([data-error='true']):focus-within {
+  border-color: #792dd4;
+}
+
+.emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
+      [data-success='true']
+    ):not([data-error='true']):focus-within>.emotion-11 {
   border-right-color: #8c40ef;
 }
 
@@ -5510,7 +5368,7 @@ exports[`OrderSummary > should work with footer 1`] = `
     ):not([data-error='true']):focus,
 .emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
-    ):not([data-error='true'])active {
+    ):not([data-error='true']):active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   border-color: #792dd4;
 }
@@ -5520,7 +5378,19 @@ exports[`OrderSummary > should work with footer 1`] = `
     ):not([data-error='true']):focus>.emotion-11,
 .emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
-    ):not([data-error='true'])active>.emotion-11 {
+    ):not([data-error='true']):active>.emotion-11 {
+  border-right-color: #8c40ef;
+}
+
+.emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
+      [data-success='true']
+    ):not([data-error='true']):focus-within {
+  border-color: #792dd4;
+}
+
+.emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
+      [data-success='true']
+    ):not([data-error='true']):focus-within>.emotion-11 {
   border-right-color: #8c40ef;
 }
 
@@ -6281,10 +6151,10 @@ exports[`OrderSummary > should work with footer 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
@@ -6303,10 +6173,10 @@ exports[`OrderSummary > should work with footer 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
@@ -6341,52 +6211,6 @@ exports[`OrderSummary > should work with footer 1`] = `
 }
 
 .emotion-42 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.emotion-42 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.emotion-44 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6409,7 +6233,7 @@ exports[`OrderSummary > should work with footer 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-44 {
+.emotion-42 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6575,6 +6399,7 @@ exports[`OrderSummary > should work with footer 1`] = `
   flex-wrap: nowrap;
   padding: 1.5rem;
   border-top: 1px solid #d9dadd;
+  overflow: hidden;
 }
 
 .emotion-250 {
@@ -6600,50 +6425,7 @@ exports[`OrderSummary > should work with footer 1`] = `
   flex-wrap: nowrap;
   padding: 1.5rem;
   border-top: 1px solid #d9dadd;
-}
-
-.emotion-252 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.emotion-252 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  overflow: hidden;
 }
 
 <div
@@ -6680,6 +6462,7 @@ exports[`OrderSummary > should work with footer 1`] = `
                 class="emotion-12 emotion-13"
                 data-size="small"
                 data-testid="unit-input"
+                id=":r5l:"
                 max="9007199254740991"
                 min="0"
                 name="-value"
@@ -6690,6 +6473,7 @@ exports[`OrderSummary > should work with footer 1`] = `
                 width="11rem"
               />
             </div>
+             
             <div
               class="emotion-14 emotion-15"
               width="fit-content"
@@ -6774,7 +6558,7 @@ exports[`OrderSummary > should work with footer 1`] = `
             class="emotion-42 emotion-7"
           >
             <div
-              class="emotion-44 emotion-7"
+              class="emotion-42 emotion-7"
             >
               <div
                 class="emotion-36 emotion-7"
@@ -6859,7 +6643,7 @@ exports[`OrderSummary > should work with footer 1`] = `
             class="emotion-42 emotion-7"
           >
             <div
-              class="emotion-44 emotion-7"
+              class="emotion-42 emotion-7"
             >
               <div
                 class="emotion-36 emotion-7"
@@ -6913,7 +6697,7 @@ exports[`OrderSummary > should work with footer 1`] = `
             class="emotion-42 emotion-7"
           >
             <div
-              class="emotion-44 emotion-7"
+              class="emotion-42 emotion-7"
             >
               <div
                 class="emotion-36 emotion-7"
@@ -6960,7 +6744,7 @@ exports[`OrderSummary > should work with footer 1`] = `
               </div>
             </div>
             <div
-              class="emotion-44 emotion-7"
+              class="emotion-42 emotion-7"
             >
               <div
                 class="emotion-36 emotion-7"
@@ -7003,7 +6787,7 @@ exports[`OrderSummary > should work with footer 1`] = `
             class="emotion-42 emotion-7"
           >
             <div
-              class="emotion-44 emotion-7"
+              class="emotion-42 emotion-7"
             >
               <div
                 class="emotion-36 emotion-7"
@@ -7046,7 +6830,7 @@ exports[`OrderSummary > should work with footer 1`] = `
             class="emotion-42 emotion-7"
           >
             <div
-              class="emotion-44 emotion-7"
+              class="emotion-42 emotion-7"
             >
               <div
                 class="emotion-36 emotion-7"
@@ -7089,7 +6873,7 @@ exports[`OrderSummary > should work with footer 1`] = `
             class="emotion-42 emotion-7"
           >
             <div
-              class="emotion-44 emotion-7"
+              class="emotion-42 emotion-7"
             >
               <div
                 class="emotion-36 emotion-7"
@@ -7110,7 +6894,7 @@ exports[`OrderSummary > should work with footer 1`] = `
               />
             </div>
             <div
-              class="emotion-44 emotion-7"
+              class="emotion-42 emotion-7"
             >
               <div
                 class="emotion-36 emotion-7"
@@ -7153,7 +6937,7 @@ exports[`OrderSummary > should work with footer 1`] = `
             class="emotion-42 emotion-7"
           >
             <div
-              class="emotion-44 emotion-7"
+              class="emotion-42 emotion-7"
             >
               <div
                 class="emotion-36 emotion-7"
@@ -7214,7 +6998,7 @@ exports[`OrderSummary > should work with footer 1`] = `
             class="emotion-42 emotion-7"
           >
             <div
-              class="emotion-44 emotion-7"
+              class="emotion-42 emotion-7"
             >
               <div
                 class="emotion-36 emotion-7"
@@ -7241,7 +7025,7 @@ exports[`OrderSummary > should work with footer 1`] = `
         class="emotion-250 emotion-251"
       >
         <div
-          class="emotion-252 emotion-7"
+          class="emotion-36 emotion-7"
         >
           <p
             class="emotion-38 emotion-5"
@@ -7470,7 +7254,7 @@ exports[`OrderSummary > should work with fractionDigits 1`] = `
     ):not([data-error='true']):focus,
 .emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
-    ):not([data-error='true'])active {
+    ):not([data-error='true']):active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   border-color: #792dd4;
 }
@@ -7480,7 +7264,19 @@ exports[`OrderSummary > should work with fractionDigits 1`] = `
     ):not([data-error='true']):focus>.emotion-11,
 .emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
-    ):not([data-error='true'])active>.emotion-11 {
+    ):not([data-error='true']):active>.emotion-11 {
+  border-right-color: #8c40ef;
+}
+
+.emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
+      [data-success='true']
+    ):not([data-error='true']):focus-within {
+  border-color: #792dd4;
+}
+
+.emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
+      [data-success='true']
+    ):not([data-error='true']):focus-within>.emotion-11 {
   border-right-color: #8c40ef;
 }
 
@@ -7610,7 +7406,7 @@ exports[`OrderSummary > should work with fractionDigits 1`] = `
     ):not([data-error='true']):focus,
 .emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
-    ):not([data-error='true'])active {
+    ):not([data-error='true']):active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   border-color: #792dd4;
 }
@@ -7620,7 +7416,19 @@ exports[`OrderSummary > should work with fractionDigits 1`] = `
     ):not([data-error='true']):focus>.emotion-11,
 .emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
-    ):not([data-error='true'])active>.emotion-11 {
+    ):not([data-error='true']):active>.emotion-11 {
+  border-right-color: #8c40ef;
+}
+
+.emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
+      [data-success='true']
+    ):not([data-error='true']):focus-within {
+  border-color: #792dd4;
+}
+
+.emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
+      [data-success='true']
+    ):not([data-error='true']):focus-within>.emotion-11 {
   border-right-color: #8c40ef;
 }
 
@@ -8381,10 +8189,10 @@ exports[`OrderSummary > should work with fractionDigits 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
@@ -8403,10 +8211,10 @@ exports[`OrderSummary > should work with fractionDigits 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
@@ -8445,52 +8253,6 @@ exports[`OrderSummary > should work with fractionDigits 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.emotion-42 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.emotion-44 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   gap: 0.5rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -8509,7 +8271,7 @@ exports[`OrderSummary > should work with fractionDigits 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-44 {
+.emotion-42 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -8627,6 +8389,7 @@ exports[`OrderSummary > should work with fractionDigits 1`] = `
   flex-wrap: nowrap;
   padding: 1.5rem;
   border-top: 1px solid #d9dadd;
+  overflow: hidden;
 }
 
 .emotion-54 {
@@ -8652,50 +8415,7 @@ exports[`OrderSummary > should work with fractionDigits 1`] = `
   flex-wrap: nowrap;
   padding: 1.5rem;
   border-top: 1px solid #d9dadd;
-}
-
-.emotion-56 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.emotion-56 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  overflow: hidden;
 }
 
 .emotion-60 {
@@ -8792,6 +8512,7 @@ exports[`OrderSummary > should work with fractionDigits 1`] = `
                 class="emotion-12 emotion-13"
                 data-size="small"
                 data-testid="unit-input"
+                id=":r9g:"
                 max="9007199254740991"
                 min="0"
                 name="-value"
@@ -8802,6 +8523,7 @@ exports[`OrderSummary > should work with fractionDigits 1`] = `
                 width="11rem"
               />
             </div>
+             
             <div
               class="emotion-14 emotion-15"
               width="fit-content"
@@ -8886,7 +8608,7 @@ exports[`OrderSummary > should work with fractionDigits 1`] = `
             class="emotion-42 emotion-7"
           >
             <div
-              class="emotion-44 emotion-7"
+              class="emotion-42 emotion-7"
             >
               <div
                 class="emotion-36 emotion-7"
@@ -8913,7 +8635,7 @@ exports[`OrderSummary > should work with fractionDigits 1`] = `
         class="emotion-54 emotion-55"
       >
         <div
-          class="emotion-56 emotion-7"
+          class="emotion-36 emotion-7"
         >
           <p
             class="emotion-38 emotion-5"
@@ -9150,7 +8872,7 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
     ):not([data-error='true']):focus,
 .emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
-    ):not([data-error='true'])active {
+    ):not([data-error='true']):active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   border-color: #792dd4;
 }
@@ -9160,7 +8882,19 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
     ):not([data-error='true']):focus>.emotion-11,
 .emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
-    ):not([data-error='true'])active>.emotion-11 {
+    ):not([data-error='true']):active>.emotion-11 {
+  border-right-color: #8c40ef;
+}
+
+.emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
+      [data-success='true']
+    ):not([data-error='true']):focus-within {
+  border-color: #792dd4;
+}
+
+.emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
+      [data-success='true']
+    ):not([data-error='true']):focus-within>.emotion-11 {
   border-right-color: #8c40ef;
 }
 
@@ -9290,7 +9024,7 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
     ):not([data-error='true']):focus,
 .emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
-    ):not([data-error='true'])active {
+    ):not([data-error='true']):active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   border-color: #792dd4;
 }
@@ -9300,7 +9034,19 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
     ):not([data-error='true']):focus>.emotion-11,
 .emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
-    ):not([data-error='true'])active>.emotion-11 {
+    ):not([data-error='true']):active>.emotion-11 {
+  border-right-color: #8c40ef;
+}
+
+.emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
+      [data-success='true']
+    ):not([data-error='true']):focus-within {
+  border-color: #792dd4;
+}
+
+.emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
+      [data-success='true']
+    ):not([data-error='true']):focus-within>.emotion-11 {
   border-right-color: #8c40ef;
 }
 
@@ -10061,10 +9807,10 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
@@ -10083,10 +9829,10 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
@@ -10121,52 +9867,6 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
 }
 
 .emotion-42 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.emotion-42 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.emotion-44 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -10189,7 +9889,7 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-44 {
+.emotion-42 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -10355,6 +10055,7 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
   flex-wrap: nowrap;
   padding: 1.5rem;
   border-top: 1px solid #d9dadd;
+  overflow: hidden;
 }
 
 .emotion-250 {
@@ -10380,46 +10081,49 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
   flex-wrap: nowrap;
   padding: 1.5rem;
   border-top: 1px solid #d9dadd;
+  overflow: hidden;
 }
 
-.emotion-252 {
+.emotion-254 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
   -webkit-box-flex-wrap: nowrap;
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
 }
 
-.emotion-252 {
+.emotion-254 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
   -webkit-box-flex-wrap: nowrap;
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
@@ -10460,6 +10164,7 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
                 class="emotion-12 emotion-13"
                 data-size="small"
                 data-testid="unit-input"
+                id=":r7c:"
                 max="9007199254740991"
                 min="0"
                 name="-value"
@@ -10470,6 +10175,7 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
                 width="11rem"
               />
             </div>
+             
             <div
               class="emotion-14 emotion-15"
               width="fit-content"
@@ -10554,7 +10260,7 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
             class="emotion-42 emotion-7"
           >
             <div
-              class="emotion-44 emotion-7"
+              class="emotion-42 emotion-7"
             >
               <div
                 class="emotion-36 emotion-7"
@@ -10639,7 +10345,7 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
             class="emotion-42 emotion-7"
           >
             <div
-              class="emotion-44 emotion-7"
+              class="emotion-42 emotion-7"
             >
               <div
                 class="emotion-36 emotion-7"
@@ -10693,7 +10399,7 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
             class="emotion-42 emotion-7"
           >
             <div
-              class="emotion-44 emotion-7"
+              class="emotion-42 emotion-7"
             >
               <div
                 class="emotion-36 emotion-7"
@@ -10740,7 +10446,7 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
               </div>
             </div>
             <div
-              class="emotion-44 emotion-7"
+              class="emotion-42 emotion-7"
             >
               <div
                 class="emotion-36 emotion-7"
@@ -10783,7 +10489,7 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
             class="emotion-42 emotion-7"
           >
             <div
-              class="emotion-44 emotion-7"
+              class="emotion-42 emotion-7"
             >
               <div
                 class="emotion-36 emotion-7"
@@ -10826,7 +10532,7 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
             class="emotion-42 emotion-7"
           >
             <div
-              class="emotion-44 emotion-7"
+              class="emotion-42 emotion-7"
             >
               <div
                 class="emotion-36 emotion-7"
@@ -10869,7 +10575,7 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
             class="emotion-42 emotion-7"
           >
             <div
-              class="emotion-44 emotion-7"
+              class="emotion-42 emotion-7"
             >
               <div
                 class="emotion-36 emotion-7"
@@ -10890,7 +10596,7 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
               />
             </div>
             <div
-              class="emotion-44 emotion-7"
+              class="emotion-42 emotion-7"
             >
               <div
                 class="emotion-36 emotion-7"
@@ -10933,7 +10639,7 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
             class="emotion-42 emotion-7"
           >
             <div
-              class="emotion-44 emotion-7"
+              class="emotion-42 emotion-7"
             >
               <div
                 class="emotion-36 emotion-7"
@@ -10994,7 +10700,7 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
             class="emotion-42 emotion-7"
           >
             <div
-              class="emotion-44 emotion-7"
+              class="emotion-42 emotion-7"
             >
               <div
                 class="emotion-36 emotion-7"
@@ -11021,10 +10727,10 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
         class="emotion-250 emotion-251"
       >
         <div
-          class="emotion-252 emotion-7"
+          class="emotion-36 emotion-7"
         >
           <div
-            class="emotion-42 emotion-7"
+            class="emotion-254 emotion-7"
           >
             <p
               class="emotion-38 emotion-5"
@@ -11175,10 +10881,10 @@ exports[`OrderSummary > should work without unitInput 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
@@ -11201,29 +10907,6 @@ exports[`OrderSummary > should work without unitInput 1`] = `
 }
 
 .emotion-16 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.emotion-18 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -11375,28 +11058,7 @@ exports[`OrderSummary > should work without unitInput 1`] = `
   flex-wrap: nowrap;
   padding: 1.5rem;
   border-top: 1px solid #d9dadd;
-}
-
-.emotion-226 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  overflow: hidden;
 }
 
 <div
@@ -11438,7 +11100,7 @@ exports[`OrderSummary > should work without unitInput 1`] = `
             class="emotion-16 emotion-11"
           >
             <div
-              class="emotion-18 emotion-11"
+              class="emotion-16 emotion-11"
             >
               <div
                 class="emotion-10 emotion-11"
@@ -11523,7 +11185,7 @@ exports[`OrderSummary > should work without unitInput 1`] = `
             class="emotion-16 emotion-11"
           >
             <div
-              class="emotion-18 emotion-11"
+              class="emotion-16 emotion-11"
             >
               <div
                 class="emotion-10 emotion-11"
@@ -11577,7 +11239,7 @@ exports[`OrderSummary > should work without unitInput 1`] = `
             class="emotion-16 emotion-11"
           >
             <div
-              class="emotion-18 emotion-11"
+              class="emotion-16 emotion-11"
             >
               <div
                 class="emotion-10 emotion-11"
@@ -11624,7 +11286,7 @@ exports[`OrderSummary > should work without unitInput 1`] = `
               </div>
             </div>
             <div
-              class="emotion-18 emotion-11"
+              class="emotion-16 emotion-11"
             >
               <div
                 class="emotion-10 emotion-11"
@@ -11667,7 +11329,7 @@ exports[`OrderSummary > should work without unitInput 1`] = `
             class="emotion-16 emotion-11"
           >
             <div
-              class="emotion-18 emotion-11"
+              class="emotion-16 emotion-11"
             >
               <div
                 class="emotion-10 emotion-11"
@@ -11710,7 +11372,7 @@ exports[`OrderSummary > should work without unitInput 1`] = `
             class="emotion-16 emotion-11"
           >
             <div
-              class="emotion-18 emotion-11"
+              class="emotion-16 emotion-11"
             >
               <div
                 class="emotion-10 emotion-11"
@@ -11753,7 +11415,7 @@ exports[`OrderSummary > should work without unitInput 1`] = `
             class="emotion-16 emotion-11"
           >
             <div
-              class="emotion-18 emotion-11"
+              class="emotion-16 emotion-11"
             >
               <div
                 class="emotion-10 emotion-11"
@@ -11774,7 +11436,7 @@ exports[`OrderSummary > should work without unitInput 1`] = `
               />
             </div>
             <div
-              class="emotion-18 emotion-11"
+              class="emotion-16 emotion-11"
             >
               <div
                 class="emotion-10 emotion-11"
@@ -11817,7 +11479,7 @@ exports[`OrderSummary > should work without unitInput 1`] = `
             class="emotion-16 emotion-11"
           >
             <div
-              class="emotion-18 emotion-11"
+              class="emotion-16 emotion-11"
             >
               <div
                 class="emotion-10 emotion-11"
@@ -11878,7 +11540,7 @@ exports[`OrderSummary > should work without unitInput 1`] = `
             class="emotion-16 emotion-11"
           >
             <div
-              class="emotion-18 emotion-11"
+              class="emotion-16 emotion-11"
             >
               <div
                 class="emotion-10 emotion-11"
@@ -11905,7 +11567,7 @@ exports[`OrderSummary > should work without unitInput 1`] = `
         class="emotion-224 emotion-225"
       >
         <div
-          class="emotion-226 emotion-11"
+          class="emotion-10 emotion-11"
         >
           <p
             class="emotion-12 emotion-5"
