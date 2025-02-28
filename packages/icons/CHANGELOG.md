@@ -1,5 +1,11 @@
 # Change Log
 
+## 3.11.4
+
+### Patch Changes
+
+- [#4810](https://github.com/scaleway/ultraviolet/pull/4810) [`0ff30c2`](https://github.com/scaleway/ultraviolet/commit/0ff30c27283f16e02c2405869fb6c89ef0965e47) Thanks [@matthprost](https://github.com/matthprost)! - Refactor system icons to use a better default size that is not deprecated
+
 ## 3.11.3
 
 ### Patch Changes
