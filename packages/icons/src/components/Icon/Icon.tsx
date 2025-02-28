@@ -135,7 +135,7 @@ export const Icon = forwardRef<SVGSVGElement, IconProps>(
     {
       color = 'currentColor',
       sentiment,
-      size = '1em',
+      size = 'small',
       prominence = 'default',
       className,
       'data-testid': dataTestId,
