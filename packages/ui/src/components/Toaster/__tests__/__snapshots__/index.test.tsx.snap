@@ -660,12 +660,18 @@ exports[`Toaster > renders correctly with all kind of toast 5`] = `
 <div
     data-testid="testing"
   >
-    <div
+    <section
+      aria-atomic="false"
+      aria-label="Notifications Alt+T"
+      aria-live="polite"
+      aria-relevant="additions text"
       class="Toastify"
       id="toaster"
     >
       <div
         class="Toastify__toast-container Toastify__toast-container--top-right"
+        data-stacked="true"
+        tabindex="-1"
       >
         <div
           class="Toastify__toast Toastify__toast-theme--light Toastify__toast--info emotion-0 Toastify--animate Toastify__slide-enter--top-right Toastify__toast--stacked"
@@ -673,23 +679,18 @@ exports[`Toaster > renders correctly with all kind of toast 5`] = `
           data-in="true"
           data-pos="top"
           id="info"
+          role="alert"
           style="--y: 0px; --g: 12; --s: 0.925;"
+          tabindex="0"
         >
           <div
-            class="Toastify__toast-body"
-            role="alert"
+            class="emotion-1 emotion-2"
           >
-            <div>
-              <div
-                class="emotion-1 emotion-2"
-              >
-                <span
-                  class="emotion-3 emotion-4"
-                >
-                  This is an info
-                </span>
-              </div>
-            </div>
+            <span
+              class="emotion-3 emotion-4"
+            >
+              This is an info
+            </span>
           </div>
           <button
             aria-label="close"
@@ -728,23 +729,18 @@ exports[`Toaster > renders correctly with all kind of toast 5`] = `
           data-in="true"
           data-pos="top"
           id="success"
+          role="alert"
           style="--y: 0px; --g: 12; --s: 0.95;"
+          tabindex="0"
         >
           <div
-            class="Toastify__toast-body"
-            role="alert"
+            class="emotion-1 emotion-2"
           >
-            <div>
-              <div
-                class="emotion-1 emotion-2"
-              >
-                <span
-                  class="emotion-3 emotion-4"
-                >
-                  This is a success
-                </span>
-              </div>
-            </div>
+            <span
+              class="emotion-3 emotion-4"
+            >
+              This is a success
+            </span>
           </div>
           <button
             aria-label="close"
@@ -783,23 +779,18 @@ exports[`Toaster > renders correctly with all kind of toast 5`] = `
           data-in="true"
           data-pos="top"
           id="error"
+          role="alert"
           style="--y: 0px; --g: 12; --s: 0.975;"
+          tabindex="0"
         >
           <div
-            class="Toastify__toast-body"
-            role="alert"
+            class="emotion-1 emotion-2"
           >
-            <div>
-              <div
-                class="emotion-1 emotion-2"
-              >
-                <span
-                  class="emotion-3 emotion-4"
-                >
-                  This is an error
-                </span>
-              </div>
-            </div>
+            <span
+              class="emotion-3 emotion-4"
+            >
+              This is an error
+            </span>
           </div>
           <button
             aria-label="close"
@@ -837,23 +828,18 @@ exports[`Toaster > renders correctly with all kind of toast 5`] = `
           data-in="true"
           data-pos="top"
           id="warning"
+          role="alert"
           style="--y: 0px; --g: 12; --s: 1;"
+          tabindex="0"
         >
           <div
-            class="Toastify__toast-body"
-            role="alert"
+            class="emotion-1 emotion-2"
           >
-            <div>
-              <div
-                class="emotion-1 emotion-2"
-              >
-                <span
-                  class="emotion-3 emotion-4"
-                >
-                  This is a warning
-                </span>
-              </div>
-            </div>
+            <span
+              class="emotion-3 emotion-4"
+            >
+              This is a warning
+            </span>
           </div>
           <button
             aria-label="close"
@@ -887,7 +873,7 @@ exports[`Toaster > renders correctly with all kind of toast 5`] = `
           </div>
         </div>
       </div>
-    </div>
+    </section>
   </div>
 </DocumentFragment>
 `;

@@ -176,24 +176,25 @@ exports[`Toaster > renders correctly with close button 2`] = `
 <div
     data-testid="testing"
   >
-    <div
+    <section
+      aria-atomic="false"
+      aria-label="Notifications Alt+T"
+      aria-live="polite"
+      aria-relevant="additions text"
       class="Toastify"
       id="notification"
     >
       <div
         class="Toastify__toast-container Toastify__toast-container--top-right"
+        tabindex="-1"
       >
         <div
           class="Toastify__toast Toastify__toast-theme--light Toastify__toast--default emotion-0 Toastify--animate Toastify__slide-enter--top-right"
           data-in="true"
           id="1"
+          role="alert"
+          tabindex="0"
         >
-          <div
-            class="Toastify__toast-body"
-            role="alert"
-          >
-            <div />
-          </div>
           <div
             class="emotion-1 emotion-2"
           >
@@ -243,7 +244,7 @@ exports[`Toaster > renders correctly with close button 2`] = `
           </div>
         </div>
       </div>
-    </div>
+    </section>
   </div>
 </DocumentFragment>
 `;
@@ -341,24 +342,25 @@ exports[`Toaster > renders correctly with custom close button 2`] = `
 <div
     data-testid="testing"
   >
-    <div
+    <section
+      aria-atomic="false"
+      aria-label="Notifications Alt+T"
+      aria-live="polite"
+      aria-relevant="additions text"
       class="Toastify"
       id="notification"
     >
       <div
         class="Toastify__toast-container Toastify__toast-container--top-right"
+        tabindex="-1"
       >
         <div
           class="Toastify__toast Toastify__toast-theme--light Toastify__toast--default emotion-0 Toastify--animate Toastify__slide-enter--top-right"
           data-in="true"
           id="2"
+          role="alert"
+          tabindex="0"
         >
-          <div
-            class="Toastify__toast-body"
-            role="alert"
-          >
-            <div />
-          </div>
           <div
             class="emotion-1 emotion-2"
           >
@@ -397,7 +399,7 @@ exports[`Toaster > renders correctly with custom close button 2`] = `
           </div>
         </div>
       </div>
-    </div>
+    </section>
   </div>
 </DocumentFragment>
 `;

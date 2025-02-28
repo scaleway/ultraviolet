@@ -1,5 +1,5 @@
 import type { Theme } from '@emotion/react'
-import { ClassNames, Global, css, useTheme } from '@emotion/react'
+import { ClassNames, css, useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import type { ReactNode } from 'react'
 import type { ToastOptions } from 'react-toastify'
@@ -14,7 +14,6 @@ import { Stack } from '../Stack'
 import { Text } from '../Text'
 import { ToastButton } from './components/Button'
 import { ToastLink } from './components/Link'
-import style from './react-toastify.css?inline'
 
 const PREFIX = '.Toastify'
 const AUTOCLOSE_DELAY = 6000 // Delay to close the toast in ms
@@ -201,28 +200,25 @@ export const ToastContainer = ({
   const theme = useTheme()
 
   return (
-    <>
-      <Global styles={style} />
-      <ClassNames>
-        {/* eslint-disable-next-line @typescript-eslint/unbound-method */}
-        {({ css: localCss }) => (
-          <BaseToastContainer
-            data-testid={dataTestId}
-            toastClassName={localCss(styles.toast(theme))}
-            autoClose={autoClose ?? AUTOCLOSE_DELAY}
-            icon={false}
-            newestOnTop={newestOnTop}
-            limit={limit}
-            position={position}
-            stacked
-            hideProgressBar
-            className={className}
-            transition={Slide}
-            containerId={containerId}
-          />
-        )}
-      </ClassNames>
-    </>
+    <ClassNames>
+      {/* eslint-disable-next-line @typescript-eslint/unbound-method */}
+      {({ css: localCss }) => (
+        <BaseToastContainer
+          data-testid={dataTestId}
+          toastClassName={localCss(styles.toast(theme))}
+          autoClose={autoClose ?? AUTOCLOSE_DELAY}
+          icon={false}
+          newestOnTop={newestOnTop}
+          limit={limit}
+          position={position}
+          stacked
+          hideProgressBar
+          className={className}
+          transition={Slide}
+          containerId={containerId}
+        />
+      )}
+    </ClassNames>
   )
 }
 
