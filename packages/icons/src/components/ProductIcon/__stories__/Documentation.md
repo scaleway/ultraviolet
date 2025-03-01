@@ -1,7 +1,7 @@
 ProductIcon component is used to render a set of icons that are linked to a product or service.
 Those icons are made of multiple colors that changes automatically based on the current theme.
 
-## + How to add a new one?
+## ✏️ How to add a new one?
 
 1. Add the `.svg` file into `packages/icons/src/components/ProductIcon/assets`
 2. Then run the following command:
@@ -11,7 +11,24 @@ Those icons are made of multiple colors that changes automatically based on the 
 ** IMPORTANT: ** Make sure that the icon name is unique, otherwise it will override the existing one.
 The name of the svg should be snake-case.
 
-## ⚙ How does it works?
+## 🗑️ How to deprecate an icon?
+
+Sometime we need to rename icons or remove them. To deprecated an icon you can simply edit the file `packages/icons/src/deprecatedIcons.ts` and add the name of the icon you want to deprecate.
+
+```ts
+export const DEPRECATED_ICONS: DeprecatedIconsType = [
+  ...
+  {
+    name: 'DocumentDbProductIcon',
+    deprecated: true,
+    deprecatedReason: 'Use MongoDbProductIcon instead.',
+  },
+]
+```
+
+When doing so a JSDoc comment will be added to the icon file to inform the developer that this icon is deprecated. In the next major version of the library, the list of icons will be removed.
+
+## ⚙️ How does it works?
 
 Those icons have 2 sets of colors that changes depending on theme. It is all automatic but here is how it works:
 Let's take an example with our Apple Silicon product icon svg:

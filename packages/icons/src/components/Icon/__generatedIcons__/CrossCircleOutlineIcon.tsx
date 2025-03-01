@@ -6,6 +6,9 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
+/**
+ * @deprecated Use CloseCircleOutlineIcon instead.
+ */
 export const CrossCircleOutlineIcon = ({
   ...props
 }: Omit<IconProps, 'children'>) => (

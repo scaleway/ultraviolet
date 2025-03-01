@@ -1,21 +1,36 @@
 import type { StoryFn } from '@storybook/react'
-import { Row, Snippet, Stack } from '@ultraviolet/ui'
+import { Row, Snippet, Stack, Text } from '@ultraviolet/ui'
 import * as CategoryIcon from '..'
+import { DEPRECATED_ICONS } from '../../../deprecatedIcons'
 
 export const List: StoryFn<typeof CategoryIcon> = props => (
   <Stack gap={1}>
-    {Object.keys(CategoryIcon).map(IconName => {
+    {Object.keys(CategoryIcon).map(iconName => {
       const FoundCategoryIcon =
-        CategoryIcon[IconName as keyof typeof CategoryIcon]
+        CategoryIcon[iconName as keyof typeof CategoryIcon]
+
+      const deprecated = DEPRECATED_ICONS.find(icon => icon.name === iconName)
 
       return (
-        <Stack key={IconName} direction="row" alignItems="center" gap={2}>
+        <Stack key={iconName} direction="row" alignItems="center" gap={2}>
           <Row templateColumns="repeat(3, 3fr)" gap={1} alignItems="center">
             <FoundCategoryIcon />
             <FoundCategoryIcon {...props} variant="neutral" />
             <FoundCategoryIcon {...props} disabled />
           </Row>
-          <Snippet>{`import { ${IconName} } from '@ultraviolet/icons/category'`}</Snippet>
+          <div style={{ width: '880px' }}>
+            <Text as="code" variant="code" strikeThrough={!!deprecated}>
+              <Snippet>{`import { ${iconName} } from '@ultraviolet/icons/category'`}</Snippet>
+            </Text>
+          </div>
+          {deprecated ? (
+            <Text as="span" variant="bodySmall">
+              <Text as="span" variant="bodySmallStrong" sentiment="danger">
+                Deprecated:&nbsp;
+              </Text>
+              {deprecated.deprecatedReason}
+            </Text>
+          ) : null}
         </Stack>
       )
     })}

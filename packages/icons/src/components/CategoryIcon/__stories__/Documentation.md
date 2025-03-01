@@ -1,6 +1,6 @@
 CategoryIcon defines a sets of icons that are linked to Scaleway products. They are used to represent this product with a simple icon.
 
-## + How to add a new one?
+## ✏️ How to add a new one?
 
 1. Add the `.svg` file into `packages/icons/src/components/CategoryIcon/assets`
 2. Then run the following command:
@@ -10,7 +10,22 @@ CategoryIcon defines a sets of icons that are linked to Scaleway products. They 
 ** IMPORTANT: ** Make sure that the icon name is unique, otherwise it will override the existing one.
 The name of the svg should be snake-case.
 
-## ⚙ How does it works?
+## 🗑️ How to deprecate an icon?
+
+Sometime we need to rename icons or remove them. To deprecated an icon you can simply edit the file `packages/icons/src/deprecatedIcons.ts` and add the name of the icon you want to deprecate.
+
+```ts
+export const DEPRECATED_ICONS: DeprecatedIconsType = [
+  ...
+  {
+    name: 'AiCategoryIcon',
+    deprecated: true,
+    deprecatedReason: 'Do not use anymore.',
+  },
+]
+```
+
+## ⚙️ How does it works?
 
 Those icons have 3 sets of colors that changes depending on theme. It is all automatic but here is how it works:
 Let's take an example with our AI category icon SVG:
