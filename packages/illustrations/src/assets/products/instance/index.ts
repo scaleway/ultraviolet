@@ -24,6 +24,10 @@ const instancePopContent = `${BASE_URL}/products/instance/instance-pop-content.w
 const instancePopKeyvisual = `${BASE_URL}/products/instance/instance-pop-keyvisual.webp`
 const instancePopOriginal = `${BASE_URL}/products/instance/instance-pop-original.webp`
 const instancePopWire = `${BASE_URL}/products/instance/instance-pop-wire.svg`
+const instanceScalingGroupsContent = `${BASE_URL}/products/instance/instance-scaling-groups-content.webp`
+const instanceScalingGroupsKeyvisual = `${BASE_URL}/products/instance/instance-scaling-groups-keyvisual.webp`
+const instanceScalingGroupsOriginal = `${BASE_URL}/products/instance/instance-scaling-groups-original.webp`
+const instanceScalingGroupsWire = `${BASE_URL}/products/instance/instance-scaling-groups-wire.svg`
 const instanceWire = `${BASE_URL}/products/instance/instance-wire.svg`
 const instanceWopContent = `${BASE_URL}/products/instance/instance-wop-content.webp`
 const instanceWopKeyvisual = `${BASE_URL}/products/instance/instance-wop-keyvisual.webp`
@@ -50,6 +54,10 @@ export {
   instancePopKeyvisual,
   instancePopOriginal,
   instancePopWire,
+  instanceScalingGroupsContent,
+  instanceScalingGroupsKeyvisual,
+  instanceScalingGroupsOriginal,
+  instanceScalingGroupsWire,
   instanceWire,
   instanceWopContent,
   instanceWopKeyvisual,
