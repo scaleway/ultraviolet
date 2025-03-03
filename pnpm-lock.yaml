@@ -89,8 +89,8 @@ importers:
         specifier: 11.2.0
         version: 11.2.0(size-limit@11.1.6)
       '@size-limit/preset-big-lib':
-        specifier: 11.1.6
-        version: 11.1.6(esbuild@0.24.2)(size-limit@11.1.6)
+        specifier: 11.2.0
+        version: 11.2.0(esbuild@0.24.2)(size-limit@11.1.6)
       '@storybook/addon-a11y':
         specifier: 8.4.7
         version: 8.4.7(storybook@8.4.7(prettier@2.8.8))
@@ -2802,34 +2802,28 @@ packages:
     resolution: {integrity: sha512-dNZafjM93Y+F+sfwTO5gTpsGXlnc/0Q+c2+62ViqP3gkMWvHEMSKkaEHgVJLcLg3i/g19GSIPziiKpgyne07Bw==}
     engines: {node: '>=8'}
 
-  '@size-limit/file@11.1.6':
-    resolution: {integrity: sha512-ojzzJMrTfcSECRnaTjGy0wNIolTCRdyqZTSWG9sG5XEoXG6PNgHXDDS6gf6YNxnqb+rWfCfVe93u6aKi3wEocQ==}
-    engines: {node: ^18.0.0 || >=20.0.0}
-    peerDependencies:
-      size-limit: 11.1.6
-
   '@size-limit/file@11.2.0':
     resolution: {integrity: sha512-OZHE3putEkQ/fgzz3Tp/0hSmfVo3wyTpOJSRNm6AmcwX4Nm9YtTfbQQ/hZRwbBFR23S7x2Sd9EbqYzngKwbRoA==}
     engines: {node: ^18.0.0 || >=20.0.0}
     peerDependencies:
       size-limit: 11.2.0
 
-  '@size-limit/preset-big-lib@11.1.6':
-    resolution: {integrity: sha512-GE93qIW9C3+8MXOsYgV0QcLfKv6B+Q8u/Jjb5rLfetDHBKoZV7HmedM/bv0vrbdcZlT8elk5P18Jo6L6yeV/8Q==}
+  '@size-limit/preset-big-lib@11.2.0':
+    resolution: {integrity: sha512-4bcpJKm/VVMMDSCvULib340E6VRtqw6xmW0k/KJ+7GwozmeJYu5t1KIT0RW+jooEwp3DCNxMlgLlJPFJWYq7Pw==}
     peerDependencies:
-      size-limit: 11.1.6
+      size-limit: 11.2.0
 
-  '@size-limit/time@11.1.6':
-    resolution: {integrity: sha512-NIlJEPvUIxw87gHjriHpPhvd9fIC94S9wq7OW25K7Ctn14FZ2NlOTezPCfVViPmdlXjBYdi8vjsbc7kLCF1EpA==}
+  '@size-limit/time@11.2.0':
+    resolution: {integrity: sha512-bL7EnxL3jivVipnlf1xUYDgbnAOinkl6pbNc3WSFkEOFEwy7i58rqOFs5H4iS3Y0mrCueafakUpIW25HiKZZPA==}
     engines: {node: ^18.0.0 || >=20.0.0}
     peerDependencies:
-      size-limit: 11.1.6
+      size-limit: 11.2.0
 
-  '@size-limit/webpack@11.1.6':
-    resolution: {integrity: sha512-PTZCgwJsgdzdEj2wPFuLm0cCge8N2WbswMcKWNwMJibxQxPAmiF+sZ2F6GYBS7G7K3Fb4ovCliuN+wnnRACPNg==}
+  '@size-limit/webpack@11.2.0':
+    resolution: {integrity: sha512-ACsNBkMY0VcpIAlS3wG2qOK5DZNNFAoU/BTPAIOvSsE+g2wtNG6/nLQm84CbJtZt7/a0ABKaFKDaJ1gwNgQv/Q==}
     engines: {node: ^18.0.0 || >=20.0.0}
     peerDependencies:
-      size-limit: 11.1.6
+      size-limit: 11.2.0
 
   '@storybook/addon-a11y@8.4.7':
     resolution: {integrity: sha512-GpUvXp6n25U1ZSv+hmDC+05BEqxWdlWjQTb/GaboRXZQeMBlze6zckpVb66spjmmtQAIISo0eZxX1+mGcVR7lA==}
@@ -10524,19 +10518,15 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@size-limit/file@11.1.6(size-limit@11.1.6)':
-    dependencies:
-      size-limit: 11.1.6
-
   '@size-limit/file@11.2.0(size-limit@11.1.6)':
     dependencies:
       size-limit: 11.1.6
 
-  '@size-limit/preset-big-lib@11.1.6(esbuild@0.24.2)(size-limit@11.1.6)':
+  '@size-limit/preset-big-lib@11.2.0(esbuild@0.24.2)(size-limit@11.1.6)':
     dependencies:
-      '@size-limit/file': 11.1.6(size-limit@11.1.6)
-      '@size-limit/time': 11.1.6(size-limit@11.1.6)
-      '@size-limit/webpack': 11.1.6(esbuild@0.24.2)(size-limit@11.1.6)
+      '@size-limit/file': 11.2.0(size-limit@11.1.6)
+      '@size-limit/time': 11.2.0(size-limit@11.1.6)
+      '@size-limit/webpack': 11.2.0(esbuild@0.24.2)(size-limit@11.1.6)
       size-limit: 11.1.6
     transitivePeerDependencies:
       - '@swc/core'
@@ -10548,7 +10538,7 @@ snapshots:
       - utf-8-validate
       - webpack-cli
 
-  '@size-limit/time@11.1.6(size-limit@11.1.6)':
+  '@size-limit/time@11.2.0(size-limit@11.1.6)':
     dependencies:
       estimo: 3.0.3
       size-limit: 11.1.6
@@ -10558,7 +10548,7 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  '@size-limit/webpack@11.1.6(esbuild@0.24.2)(size-limit@11.1.6)':
+  '@size-limit/webpack@11.2.0(esbuild@0.24.2)(size-limit@11.1.6)':
     dependencies:
       nanoid: 5.1.2
       size-limit: 11.1.6
