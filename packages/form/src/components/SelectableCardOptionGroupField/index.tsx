@@ -59,7 +59,7 @@ export const SelectableCardOptionGroupField = <
       legend={legend}
       name={name}
       value={field.value as string}
-      optionValue={optionField.value as string}
+      optionValue={String(optionField.value)}
       onChange={event => {
         field.onChange(event)
         onChange?.(event)

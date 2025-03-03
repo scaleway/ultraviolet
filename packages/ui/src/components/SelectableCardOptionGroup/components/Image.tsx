@@ -8,6 +8,11 @@ const StyledImage = styled.img`
   }
 `
 
+const IMAGE_SIZES = {
+  large: 56,
+  medium: 40,
+} as const
+
 type ImageType = {
   src: string
   alt?: string
@@ -22,7 +27,7 @@ export const Image = ({ src, alt, size, className }: ImageType) => {
     <StyledImage
       src={src}
       alt={alt}
-      width={size === 'large' ? 56 : 40}
+      width={IMAGE_SIZES[size]}
       data-disabled={disabled}
       className={className}
     />
