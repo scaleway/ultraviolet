@@ -1,5 +1,20 @@
 # Change Log
 
+## 1.88.1
+
+### Patch Changes
+
+- [#4810](https://github.com/scaleway/ultraviolet/pull/4810) [`0ff30c2`](https://github.com/scaleway/ultraviolet/commit/0ff30c27283f16e02c2405869fb6c89ef0965e47) Thanks [@matthprost](https://github.com/matthprost)! - Refactor system icons to use a better default size that is not deprecated
+
+- [#4613](https://github.com/scaleway/ultraviolet/pull/4613) [`21ca832`](https://github.com/scaleway/ultraviolet/commit/21ca8327995f699842f0ee8dd44edbc9a7a3a188) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `react-toastify` to `11.0.1`.
+
+- [#4817](https://github.com/scaleway/ultraviolet/pull/4817) [`037ec90`](https://github.com/scaleway/ultraviolet/commit/037ec902c96717cc3072a53410dcc51705e5dca4) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `react-select` to `5.10.0`.
+
+- [#4839](https://github.com/scaleway/ultraviolet/pull/4839) [`d07fe3a`](https://github.com/scaleway/ultraviolet/commit/d07fe3a970e4b1d079a36466523b05c8b14b3569) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<SelectInput />` wrong arrow size
+
+- Updated dependencies [[`0ff30c2`](https://github.com/scaleway/ultraviolet/commit/0ff30c27283f16e02c2405869fb6c89ef0965e47)]:
+  - @ultraviolet/icons@3.11.4
+
 ## 1.88.0
 
 ### Minor Changes
