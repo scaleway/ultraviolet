@@ -590,12 +590,12 @@ const DropdownIndicator = (
         {time ? <StyledSeparator direction="vertical" /> : null}
         {time ? (
           <ClockOutlineIcon
-            size={time ? 'large' : 'xlarge'}
+            size={time ? 'large' : 'small'}
             disabled={isDisabled}
           />
         ) : (
           <ArrowDownIcon
-            size={time ? 'large' : 'xlarge'}
+            size={time ? 'large' : 'small'}
             disabled={isDisabled}
           />
         )}
