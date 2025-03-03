@@ -1,5 +1,16 @@
 # Change Log
 
+## 3.13.23
+
+### Patch Changes
+
+- [#4817](https://github.com/scaleway/ultraviolet/pull/4817) [`037ec90`](https://github.com/scaleway/ultraviolet/commit/037ec902c96717cc3072a53410dcc51705e5dca4) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `react-select` to `5.10.0`.
+
+- [#4839](https://github.com/scaleway/ultraviolet/pull/4839) [`d07fe3a`](https://github.com/scaleway/ultraviolet/commit/d07fe3a970e4b1d079a36466523b05c8b14b3569) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<SelectInput />` wrong arrow size
+
+- Updated dependencies [[`0ff30c2`](https://github.com/scaleway/ultraviolet/commit/0ff30c27283f16e02c2405869fb6c89ef0965e47), [`21ca832`](https://github.com/scaleway/ultraviolet/commit/21ca8327995f699842f0ee8dd44edbc9a7a3a188), [`037ec90`](https://github.com/scaleway/ultraviolet/commit/037ec902c96717cc3072a53410dcc51705e5dca4), [`d07fe3a`](https://github.com/scaleway/ultraviolet/commit/d07fe3a970e4b1d079a36466523b05c8b14b3569)]:
+  - @ultraviolet/ui@1.88.1
+
 ## 3.13.22
 
 ### Patch Changes
