@@ -86,8 +86,8 @@ importers:
         specifier: 1.1.1
         version: 1.1.1
       '@size-limit/file':
-        specifier: 11.1.6
-        version: 11.1.6(size-limit@11.1.6)
+        specifier: 11.2.0
+        version: 11.2.0(size-limit@11.1.6)
       '@size-limit/preset-big-lib':
         specifier: 11.1.6
         version: 11.1.6(esbuild@0.24.2)(size-limit@11.1.6)
@@ -2951,6 +2951,12 @@ packages:
     engines: {node: ^18.0.0 || >=20.0.0}
     peerDependencies:
       size-limit: 11.1.6
+
+  '@size-limit/file@11.2.0':
+    resolution: {integrity: sha512-OZHE3putEkQ/fgzz3Tp/0hSmfVo3wyTpOJSRNm6AmcwX4Nm9YtTfbQQ/hZRwbBFR23S7x2Sd9EbqYzngKwbRoA==}
+    engines: {node: ^18.0.0 || >=20.0.0}
+    peerDependencies:
+      size-limit: 11.2.0
 
   '@size-limit/preset-big-lib@11.1.6':
     resolution: {integrity: sha512-GE93qIW9C3+8MXOsYgV0QcLfKv6B+Q8u/Jjb5rLfetDHBKoZV7HmedM/bv0vrbdcZlT8elk5P18Jo6L6yeV/8Q==}
@@ -10740,6 +10746,10 @@ snapshots:
       - supports-color
 
   '@size-limit/file@11.1.6(size-limit@11.1.6)':
+    dependencies:
+      size-limit: 11.1.6
+
+  '@size-limit/file@11.2.0(size-limit@11.1.6)':
     dependencies:
       size-limit: 11.1.6
 
