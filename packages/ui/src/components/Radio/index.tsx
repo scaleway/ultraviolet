@@ -168,6 +168,7 @@ type RadioProps = {
     | 'required'
     | 'tabIndex'
     | 'checked'
+    | 'onClick'
   > &
   LabelProp
 
@@ -194,11 +195,12 @@ export const Radio = forwardRef<HTMLInputElement, RadioProps>(
       'aria-label': ariaLabel,
       'data-testid': dataTestId,
       tabIndex,
+      id,
     },
     forwadedRef,
   ) => {
-    const id = useId()
-    const computedName = name ?? id
+    const generatedId = useId()
+    const localId = id || generatedId
 
     return (
       <Tooltip text={tooltip}>
@@ -216,14 +218,14 @@ export const Radio = forwardRef<HTMLInputElement, RadioProps>(
               aria-disabled={disabled}
               aria-label={ariaLabel}
               checked={checked}
-              id={`${computedName}-${value}`}
+              id={localId}
               onChange={onChange}
               onFocus={onFocus}
               onKeyDown={onKeyDown}
               onBlur={onBlur}
               value={value}
               disabled={disabled}
-              name={computedName}
+              name={name}
               autoFocus={autoFocus}
               ref={forwadedRef}
               tabIndex={tabIndex}
@@ -238,14 +240,12 @@ export const Radio = forwardRef<HTMLInputElement, RadioProps>(
                     as="label"
                     variant="body"
                     prominence="default"
-                    htmlFor={`${computedName}-${value}`}
+                    htmlFor={localId}
                   >
                     {label}
                   </StyledTextLabel>
                 ) : (
-                  <StyledLabel htmlFor={`${computedName}-${value}`}>
-                    {label}
-                  </StyledLabel>
+                  <StyledLabel htmlFor={id}>{label}</StyledLabel>
                 )}
               </>
             ) : null}

@@ -112,10 +112,14 @@ exports[`SelectInputField > should display right value on grouped options 1`] = 
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-6[data-state='neutral']:not([data-disabled='true']):hover,
-.emotion-6[data-state='neutral']:not([data-disabled='true']):focus {
+.emotion-6[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
+}
+
+.emotion-6[data-state='neutral']:not([data-disabled='true']):focus-visible {
+  outline: 5px auto Highlight;
+  outline: 5px auto -webkit-focus-ring-color;
 }
 
 .emotion-6[data-state='neutral'][data-dropdownvisible='true'] {
@@ -176,6 +180,7 @@ exports[`SelectInputField > should display right value on grouped options 1`] = 
   text-decoration: none;
   text-overflow: ellipsis;
   overflow: hidden;
+  white-space: nowrap;
 }
 
 .emotion-11 {
@@ -519,7 +524,7 @@ exports[`SelectInputField > should display right value on grouped options 1`] = 
           aria-describedby=":rh:"
           class="emotion-2 emotion-3"
           data-container-full-width="true"
-          tabindex="0"
+          tabindex="-1"
         >
           <div
             class="emotion-4 emotion-5"
@@ -976,10 +981,14 @@ exports[`SelectInputField > should render correctly 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-6[data-state='neutral']:not([data-disabled='true']):hover,
-.emotion-6[data-state='neutral']:not([data-disabled='true']):focus {
+.emotion-6[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
+}
+
+.emotion-6[data-state='neutral']:not([data-disabled='true']):focus-visible {
+  outline: 5px auto Highlight;
+  outline: 5px auto -webkit-focus-ring-color;
 }
 
 .emotion-6[data-state='neutral'][data-dropdownvisible='true'] {
@@ -1101,7 +1110,7 @@ exports[`SelectInputField > should render correctly 1`] = `
           aria-describedby=":r1:"
           class="emotion-2 emotion-3"
           data-container-full-width="true"
-          tabindex="0"
+          tabindex="-1"
         >
           <div
             class="emotion-4 emotion-5"
@@ -1244,10 +1253,14 @@ exports[`SelectInputField > should render correctly disabled 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-6[data-state='neutral']:not([data-disabled='true']):hover,
-.emotion-6[data-state='neutral']:not([data-disabled='true']):focus {
+.emotion-6[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
+}
+
+.emotion-6[data-state='neutral']:not([data-disabled='true']):focus-visible {
+  outline: 5px auto Highlight;
+  outline: 5px auto -webkit-focus-ring-color;
 }
 
 .emotion-6[data-state='neutral'][data-dropdownvisible='true'] {
@@ -1369,7 +1382,7 @@ exports[`SelectInputField > should render correctly disabled 1`] = `
           aria-describedby=":r5:"
           class="emotion-2 emotion-3"
           data-container-full-width="true"
-          tabindex="0"
+          tabindex="-1"
         >
           <div
             class="emotion-4 emotion-5"
@@ -1512,10 +1525,14 @@ exports[`SelectInputField > should render correctly grouped 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-6[data-state='neutral']:not([data-disabled='true']):hover,
-.emotion-6[data-state='neutral']:not([data-disabled='true']):focus {
+.emotion-6[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
+}
+
+.emotion-6[data-state='neutral']:not([data-disabled='true']):focus-visible {
+  outline: 5px auto Highlight;
+  outline: 5px auto -webkit-focus-ring-color;
 }
 
 .emotion-6[data-state='neutral'][data-dropdownvisible='true'] {
@@ -1637,7 +1654,7 @@ exports[`SelectInputField > should render correctly grouped 1`] = `
           aria-describedby=":rd:"
           class="emotion-2 emotion-3"
           data-container-full-width="true"
-          tabindex="0"
+          tabindex="-1"
         >
           <div
             class="emotion-4 emotion-5"
@@ -1780,10 +1797,14 @@ exports[`SelectInputField > should render correctly multiselect 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-6[data-state='neutral']:not([data-disabled='true']):hover,
-.emotion-6[data-state='neutral']:not([data-disabled='true']):focus {
+.emotion-6[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
+}
+
+.emotion-6[data-state='neutral']:not([data-disabled='true']):focus-visible {
+  outline: 5px auto Highlight;
+  outline: 5px auto -webkit-focus-ring-color;
 }
 
 .emotion-6[data-state='neutral'][data-dropdownvisible='true'] {
@@ -1905,7 +1926,7 @@ exports[`SelectInputField > should render correctly multiselect 1`] = `
           aria-describedby=":r9:"
           class="emotion-2 emotion-3"
           data-container-full-width="true"
-          tabindex="0"
+          tabindex="-1"
         >
           <div
             class="emotion-4 emotion-5"
@@ -2048,10 +2069,14 @@ exports[`SelectInputField > should trigger events 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-6[data-state='neutral']:not([data-disabled='true']):hover,
-.emotion-6[data-state='neutral']:not([data-disabled='true']):focus {
+.emotion-6[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
+}
+
+.emotion-6[data-state='neutral']:not([data-disabled='true']):focus-visible {
+  outline: 5px auto Highlight;
+  outline: 5px auto -webkit-focus-ring-color;
 }
 
 .emotion-6[data-state='neutral'][data-dropdownvisible='true'] {
@@ -2112,6 +2137,7 @@ exports[`SelectInputField > should trigger events 1`] = `
   text-decoration: none;
   text-overflow: ellipsis;
   overflow: hidden;
+  white-space: nowrap;
 }
 
 .emotion-11 {
@@ -2167,11 +2193,11 @@ exports[`SelectInputField > should trigger events 1`] = `
         class="emotion-0 emotion-1"
       >
         <div
-          aria-controls=":r1d:"
-          aria-describedby=":r1d:"
+          aria-controls=":r24:"
+          aria-describedby=":r24:"
           class="emotion-2 emotion-3"
           data-container-full-width="true"
-          tabindex="0"
+          tabindex="-1"
         >
           <div
             class="emotion-4 emotion-5"
@@ -2187,7 +2213,7 @@ exports[`SelectInputField > should trigger events 1`] = `
               data-size="large"
               data-state="neutral"
               data-testid="select-input-test"
-              id=":r1c:"
+              id=":r23:"
               role="combobox"
               tabindex="0"
             >

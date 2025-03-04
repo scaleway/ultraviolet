@@ -94,8 +94,8 @@ exports[`TimeInput > renders can move with arrow keys - 12-hour format 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-4 {
-  color: #222638;
+.emotion-5 {
+  color: #3f4250;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -104,10 +104,11 @@ exports[`TimeInput > renders can move with arrow keys - 12-hour format 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  cursor: pointer;
 }
 
-.emotion-4 {
-  color: #222638;
+.emotion-5 {
+  color: #3f4250;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -116,9 +117,10 @@ exports[`TimeInput > renders can move with arrow keys - 12-hour format 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  cursor: pointer;
 }
 
-.emotion-6 {
+.emotion-7 {
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
@@ -129,7 +131,7 @@ exports[`TimeInput > renders can move with arrow keys - 12-hour format 1`] = `
   text-decoration: none;
 }
 
-.emotion-6 {
+.emotion-7 {
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
@@ -140,7 +142,7 @@ exports[`TimeInput > renders can move with arrow keys - 12-hour format 1`] = `
   text-decoration: none;
 }
 
-.emotion-8 {
+.emotion-9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -172,41 +174,41 @@ exports[`TimeInput > renders can move with arrow keys - 12-hour format 1`] = `
   border: 1px solid #d9dadd;
 }
 
-.emotion-8:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-9:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-8[data-disabled="false"]:hover,
-.emotion-8 [data-disabled="false"]:focus {
+.emotion-9[data-disabled="false"]:hover,
+.emotion-9 [data-disabled="false"]:focus {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-8:focus-within {
+.emotion-9:focus-within {
   border-color: #792dd4;
 }
 
-.emotion-8[data-size='small'] {
+.emotion-9[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-8[data-size='medium'] {
+.emotion-9[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-8[data-size='large'] {
+.emotion-9[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-8[data-readonly='true'] {
+.emotion-9[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-8[data-disabled='true'] {
+.emotion-9[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
@@ -216,20 +218,20 @@ exports[`TimeInput > renders can move with arrow keys - 12-hour format 1`] = `
   user-select: none;
 }
 
-.emotion-8[data-error='true'] {
+.emotion-9[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-8[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-9[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-8[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
+.emotion-9[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
   border-color: #92103f;
 }
 
-.emotion-8 {
+.emotion-9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -261,41 +263,41 @@ exports[`TimeInput > renders can move with arrow keys - 12-hour format 1`] = `
   border: 1px solid #d9dadd;
 }
 
-.emotion-8:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-9:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-8[data-disabled="false"]:hover,
-.emotion-8 [data-disabled="false"]:focus {
+.emotion-9[data-disabled="false"]:hover,
+.emotion-9 [data-disabled="false"]:focus {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-8:focus-within {
+.emotion-9:focus-within {
   border-color: #792dd4;
 }
 
-.emotion-8[data-size='small'] {
+.emotion-9[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-8[data-size='medium'] {
+.emotion-9[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-8[data-size='large'] {
+.emotion-9[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-8[data-readonly='true'] {
+.emotion-9[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-8[data-disabled='true'] {
+.emotion-9[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
@@ -305,20 +307,20 @@ exports[`TimeInput > renders can move with arrow keys - 12-hour format 1`] = `
   user-select: none;
 }
 
-.emotion-8[data-error='true'] {
+.emotion-9[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-8[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-9[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-8[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
+.emotion-9[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
   border-color: #92103f;
 }
 
-.emotion-10 {
+.emotion-11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -341,7 +343,7 @@ exports[`TimeInput > renders can move with arrow keys - 12-hour format 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-10 {
+.emotion-11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -364,7 +366,7 @@ exports[`TimeInput > renders can move with arrow keys - 12-hour format 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-14 {
+.emotion-15 {
   border: none;
   outline: none;
   background: transparent;
@@ -377,30 +379,30 @@ exports[`TimeInput > renders can move with arrow keys - 12-hour format 1`] = `
   caret-color: transparent;
 }
 
-.emotion-14[data-size='large'] {
+.emotion-15[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-14:not(:disabled):hover {
+.emotion-15:not(:disabled):hover {
   background-color: #e9eaeb;
   color: #727683;
 }
 
-.emotion-14:not(:disabled):active,
-.emotion-14:not(:disabled):focus {
+.emotion-15:not(:disabled):active,
+.emotion-15:not(:disabled):focus {
   background-color: #e9eaeb;
   color: #3f4250;
 }
 
-.emotion-14:-moz-read-only {
+.emotion-15:-moz-read-only {
   cursor: default;
 }
 
-.emotion-14:read-only {
+.emotion-15:read-only {
   cursor: default;
 }
 
-.emotion-14:disabled {
+.emotion-15:disabled {
   cursor: not-allowed;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -408,19 +410,19 @@ exports[`TimeInput > renders can move with arrow keys - 12-hour format 1`] = `
   user-select: none;
 }
 
-.emotion-14[data-period="true"] {
+.emotion-15[data-period="true"] {
   color: #727683;
 }
 
-.emotion-14::-moz-selection {
+.emotion-15::-moz-selection {
   background: none;
 }
 
-.emotion-14::selection {
+.emotion-15::selection {
   background: none;
 }
 
-.emotion-14 {
+.emotion-15 {
   border: none;
   outline: none;
   background: transparent;
@@ -433,30 +435,30 @@ exports[`TimeInput > renders can move with arrow keys - 12-hour format 1`] = `
   caret-color: transparent;
 }
 
-.emotion-14[data-size='large'] {
+.emotion-15[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-14:not(:disabled):hover {
+.emotion-15:not(:disabled):hover {
   background-color: #e9eaeb;
   color: #727683;
 }
 
-.emotion-14:not(:disabled):active,
-.emotion-14:not(:disabled):focus {
+.emotion-15:not(:disabled):active,
+.emotion-15:not(:disabled):focus {
   background-color: #e9eaeb;
   color: #3f4250;
 }
 
-.emotion-14:-moz-read-only {
+.emotion-15:-moz-read-only {
   cursor: default;
 }
 
-.emotion-14:read-only {
+.emotion-15:read-only {
   cursor: default;
 }
 
-.emotion-14:disabled {
+.emotion-15:disabled {
   cursor: not-allowed;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -464,19 +466,19 @@ exports[`TimeInput > renders can move with arrow keys - 12-hour format 1`] = `
   user-select: none;
 }
 
-.emotion-14[data-period="true"] {
+.emotion-15[data-period="true"] {
   color: #727683;
 }
 
-.emotion-14::-moz-selection {
+.emotion-15::-moz-selection {
   background: none;
 }
 
-.emotion-14::selection {
+.emotion-15::selection {
   background: none;
 }
 
-.emotion-17 {
+.emotion-18 {
   color: #3f4250;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
@@ -489,7 +491,7 @@ exports[`TimeInput > renders can move with arrow keys - 12-hour format 1`] = `
   padding-inline: 0.125rem;
 }
 
-.emotion-17 {
+.emotion-18 {
   color: #3f4250;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
@@ -502,7 +504,7 @@ exports[`TimeInput > renders can move with arrow keys - 12-hour format 1`] = `
   padding-inline: 0.125rem;
 }
 
-.emotion-32 {
+.emotion-33 {
   color: #727683;
   font-size: 0.75rem;
   font-family: Inter,Asap,sans-serif;
@@ -514,7 +516,7 @@ exports[`TimeInput > renders can move with arrow keys - 12-hour format 1`] = `
   text-decoration: none;
 }
 
-.emotion-32 {
+.emotion-33 {
   color: #727683;
   font-size: 0.75rem;
   font-family: Inter,Asap,sans-serif;
@@ -536,35 +538,35 @@ exports[`TimeInput > renders can move with arrow keys - 12-hour format 1`] = `
         class="emotion-2 emotion-1"
       >
         <label
-          class="emotion-4 emotion-5"
+          class="emotion-4 emotion-5 emotion-6"
           for=":r24:"
         >
           label
         </label>
         <span
-          class="emotion-6 emotion-5"
+          class="emotion-7 emotion-6"
         >
           labeldescription
         </span>
       </div>
       <div
-        class="emotion-8 emotion-9"
+        class="emotion-9 emotion-10"
         data-disabled="false"
         data-error="false"
         data-readonly="false"
         data-size="medium"
       >
         <div
-          class="emotion-10 emotion-1"
+          class="emotion-11 emotion-1"
         >
           <div
-            class="emotion-10 emotion-1"
+            class="emotion-11 emotion-1"
           >
             <input
               aria-valuemax="12"
               aria-valuemin="1"
               aria-valuenow="12"
-              class="emotion-14 emotion-15"
+              class="emotion-15 emotion-16"
               data-size="medium"
               data-testid="hours-input"
               placeholder="00"
@@ -572,19 +574,19 @@ exports[`TimeInput > renders can move with arrow keys - 12-hour format 1`] = `
               value="12"
             />
             <span
-              class="emotion-16 emotion-17 emotion-5"
+              class="emotion-17 emotion-18 emotion-6"
             >
               :
             </span>
           </div>
           <div
-            class="emotion-10 emotion-1"
+            class="emotion-11 emotion-1"
           >
             <input
               aria-valuemax="59"
               aria-valuemin="0"
               aria-valuenow="23"
-              class="emotion-14 emotion-15"
+              class="emotion-15 emotion-16"
               data-size="medium"
               data-testid="minutes-input"
               placeholder="00"
@@ -592,19 +594,19 @@ exports[`TimeInput > renders can move with arrow keys - 12-hour format 1`] = `
               value="23"
             />
             <span
-              class="emotion-16 emotion-17 emotion-5"
+              class="emotion-17 emotion-18 emotion-6"
             >
               :
             </span>
           </div>
           <div
-            class="emotion-10 emotion-1"
+            class="emotion-11 emotion-1"
           >
             <input
               aria-valuemax="59"
               aria-valuemin="0"
               aria-valuenow="14"
-              class="emotion-14 emotion-15"
+              class="emotion-15 emotion-16"
               data-size="medium"
               data-testid="seconds-input"
               placeholder="00"
@@ -617,7 +619,7 @@ exports[`TimeInput > renders can move with arrow keys - 12-hour format 1`] = `
             aria-valuemin="0"
             aria-valuenow="12"
             aria-valuetext="pm"
-            class="emotion-14 emotion-15"
+            class="emotion-15 emotion-16"
             data-period="true"
             data-size="medium"
             data-testid="am-pm-input"
@@ -628,7 +630,7 @@ exports[`TimeInput > renders can move with arrow keys - 12-hour format 1`] = `
         </div>
       </div>
       <p
-        class="emotion-32 emotion-5"
+        class="emotion-33 emotion-6"
       >
         helper
       </p>
@@ -731,8 +733,8 @@ exports[`TimeInput > renders can move with arrow keys - 24-hour format 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-4 {
-  color: #222638;
+.emotion-5 {
+  color: #3f4250;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -741,10 +743,11 @@ exports[`TimeInput > renders can move with arrow keys - 24-hour format 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  cursor: pointer;
 }
 
-.emotion-4 {
-  color: #222638;
+.emotion-5 {
+  color: #3f4250;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -753,9 +756,10 @@ exports[`TimeInput > renders can move with arrow keys - 24-hour format 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  cursor: pointer;
 }
 
-.emotion-6 {
+.emotion-7 {
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
@@ -766,7 +770,7 @@ exports[`TimeInput > renders can move with arrow keys - 24-hour format 1`] = `
   text-decoration: none;
 }
 
-.emotion-6 {
+.emotion-7 {
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
@@ -777,7 +781,7 @@ exports[`TimeInput > renders can move with arrow keys - 24-hour format 1`] = `
   text-decoration: none;
 }
 
-.emotion-8 {
+.emotion-9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -809,41 +813,41 @@ exports[`TimeInput > renders can move with arrow keys - 24-hour format 1`] = `
   border: 1px solid #d9dadd;
 }
 
-.emotion-8:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-9:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-8[data-disabled="false"]:hover,
-.emotion-8 [data-disabled="false"]:focus {
+.emotion-9[data-disabled="false"]:hover,
+.emotion-9 [data-disabled="false"]:focus {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-8:focus-within {
+.emotion-9:focus-within {
   border-color: #792dd4;
 }
 
-.emotion-8[data-size='small'] {
+.emotion-9[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-8[data-size='medium'] {
+.emotion-9[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-8[data-size='large'] {
+.emotion-9[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-8[data-readonly='true'] {
+.emotion-9[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-8[data-disabled='true'] {
+.emotion-9[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
@@ -853,20 +857,20 @@ exports[`TimeInput > renders can move with arrow keys - 24-hour format 1`] = `
   user-select: none;
 }
 
-.emotion-8[data-error='true'] {
+.emotion-9[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-8[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-9[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-8[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
+.emotion-9[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
   border-color: #92103f;
 }
 
-.emotion-8 {
+.emotion-9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -898,41 +902,41 @@ exports[`TimeInput > renders can move with arrow keys - 24-hour format 1`] = `
   border: 1px solid #d9dadd;
 }
 
-.emotion-8:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-9:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-8[data-disabled="false"]:hover,
-.emotion-8 [data-disabled="false"]:focus {
+.emotion-9[data-disabled="false"]:hover,
+.emotion-9 [data-disabled="false"]:focus {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-8:focus-within {
+.emotion-9:focus-within {
   border-color: #792dd4;
 }
 
-.emotion-8[data-size='small'] {
+.emotion-9[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-8[data-size='medium'] {
+.emotion-9[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-8[data-size='large'] {
+.emotion-9[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-8[data-readonly='true'] {
+.emotion-9[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-8[data-disabled='true'] {
+.emotion-9[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
@@ -942,20 +946,20 @@ exports[`TimeInput > renders can move with arrow keys - 24-hour format 1`] = `
   user-select: none;
 }
 
-.emotion-8[data-error='true'] {
+.emotion-9[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-8[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-9[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-8[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
+.emotion-9[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
   border-color: #92103f;
 }
 
-.emotion-10 {
+.emotion-11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -978,7 +982,7 @@ exports[`TimeInput > renders can move with arrow keys - 24-hour format 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-10 {
+.emotion-11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1001,7 +1005,7 @@ exports[`TimeInput > renders can move with arrow keys - 24-hour format 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-14 {
+.emotion-15 {
   border: none;
   outline: none;
   background: transparent;
@@ -1014,30 +1018,30 @@ exports[`TimeInput > renders can move with arrow keys - 24-hour format 1`] = `
   caret-color: transparent;
 }
 
-.emotion-14[data-size='large'] {
+.emotion-15[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-14:not(:disabled):hover {
+.emotion-15:not(:disabled):hover {
   background-color: #e9eaeb;
   color: #727683;
 }
 
-.emotion-14:not(:disabled):active,
-.emotion-14:not(:disabled):focus {
+.emotion-15:not(:disabled):active,
+.emotion-15:not(:disabled):focus {
   background-color: #e9eaeb;
   color: #3f4250;
 }
 
-.emotion-14:-moz-read-only {
+.emotion-15:-moz-read-only {
   cursor: default;
 }
 
-.emotion-14:read-only {
+.emotion-15:read-only {
   cursor: default;
 }
 
-.emotion-14:disabled {
+.emotion-15:disabled {
   cursor: not-allowed;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1045,19 +1049,19 @@ exports[`TimeInput > renders can move with arrow keys - 24-hour format 1`] = `
   user-select: none;
 }
 
-.emotion-14[data-period="true"] {
+.emotion-15[data-period="true"] {
   color: #727683;
 }
 
-.emotion-14::-moz-selection {
+.emotion-15::-moz-selection {
   background: none;
 }
 
-.emotion-14::selection {
+.emotion-15::selection {
   background: none;
 }
 
-.emotion-14 {
+.emotion-15 {
   border: none;
   outline: none;
   background: transparent;
@@ -1070,30 +1074,30 @@ exports[`TimeInput > renders can move with arrow keys - 24-hour format 1`] = `
   caret-color: transparent;
 }
 
-.emotion-14[data-size='large'] {
+.emotion-15[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-14:not(:disabled):hover {
+.emotion-15:not(:disabled):hover {
   background-color: #e9eaeb;
   color: #727683;
 }
 
-.emotion-14:not(:disabled):active,
-.emotion-14:not(:disabled):focus {
+.emotion-15:not(:disabled):active,
+.emotion-15:not(:disabled):focus {
   background-color: #e9eaeb;
   color: #3f4250;
 }
 
-.emotion-14:-moz-read-only {
+.emotion-15:-moz-read-only {
   cursor: default;
 }
 
-.emotion-14:read-only {
+.emotion-15:read-only {
   cursor: default;
 }
 
-.emotion-14:disabled {
+.emotion-15:disabled {
   cursor: not-allowed;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1101,19 +1105,19 @@ exports[`TimeInput > renders can move with arrow keys - 24-hour format 1`] = `
   user-select: none;
 }
 
-.emotion-14[data-period="true"] {
+.emotion-15[data-period="true"] {
   color: #727683;
 }
 
-.emotion-14::-moz-selection {
+.emotion-15::-moz-selection {
   background: none;
 }
 
-.emotion-14::selection {
+.emotion-15::selection {
   background: none;
 }
 
-.emotion-17 {
+.emotion-18 {
   color: #3f4250;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
@@ -1126,7 +1130,7 @@ exports[`TimeInput > renders can move with arrow keys - 24-hour format 1`] = `
   padding-inline: 0.125rem;
 }
 
-.emotion-17 {
+.emotion-18 {
   color: #3f4250;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
@@ -1139,7 +1143,7 @@ exports[`TimeInput > renders can move with arrow keys - 24-hour format 1`] = `
   padding-inline: 0.125rem;
 }
 
-.emotion-32 {
+.emotion-33 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1178,22 +1182,22 @@ exports[`TimeInput > renders can move with arrow keys - 24-hour format 1`] = `
   color: #3f4250;
 }
 
-.emotion-32:hover {
+.emotion-33:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-32:active {
+.emotion-33:active {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.emotion-32:hover,
-.emotion-32:active {
+.emotion-33:hover,
+.emotion-33:active {
   background: #e9eaeb;
   color: #222638;
 }
 
-.emotion-32 {
+.emotion-33 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1232,22 +1236,22 @@ exports[`TimeInput > renders can move with arrow keys - 24-hour format 1`] = `
   color: #3f4250;
 }
 
-.emotion-32:hover {
+.emotion-33:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-32:active {
+.emotion-33:active {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.emotion-32:hover,
-.emotion-32:active {
+.emotion-33:hover,
+.emotion-33:active {
   background: #e9eaeb;
   color: #222638;
 }
 
-.emotion-34 {
+.emotion-35 {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
@@ -1256,16 +1260,16 @@ exports[`TimeInput > renders can move with arrow keys - 24-hour format 1`] = `
   min-height: 16px;
 }
 
-.emotion-34 .fillStroke {
+.emotion-35 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.emotion-34 path {
+.emotion-35 path {
   fill: currentColor;
 }
 
-.emotion-34 {
+.emotion-35 {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
@@ -1274,16 +1278,16 @@ exports[`TimeInput > renders can move with arrow keys - 24-hour format 1`] = `
   min-height: 16px;
 }
 
-.emotion-34 .fillStroke {
+.emotion-35 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.emotion-34 path {
+.emotion-35 path {
   fill: currentColor;
 }
 
-.emotion-36 {
+.emotion-37 {
   color: #727683;
   font-size: 0.75rem;
   font-family: Inter,Asap,sans-serif;
@@ -1295,7 +1299,7 @@ exports[`TimeInput > renders can move with arrow keys - 24-hour format 1`] = `
   text-decoration: none;
 }
 
-.emotion-36 {
+.emotion-37 {
   color: #727683;
   font-size: 0.75rem;
   font-family: Inter,Asap,sans-serif;
@@ -1317,35 +1321,35 @@ exports[`TimeInput > renders can move with arrow keys - 24-hour format 1`] = `
         class="emotion-2 emotion-1"
       >
         <label
-          class="emotion-4 emotion-5"
+          class="emotion-4 emotion-5 emotion-6"
           for=":r2a:"
         >
           label
         </label>
         <span
-          class="emotion-6 emotion-5"
+          class="emotion-7 emotion-6"
         >
           labeldescription
         </span>
       </div>
       <div
-        class="emotion-8 emotion-9"
+        class="emotion-9 emotion-10"
         data-disabled="false"
         data-error="false"
         data-readonly="false"
         data-size="medium"
       >
         <div
-          class="emotion-10 emotion-1"
+          class="emotion-11 emotion-1"
         >
           <div
-            class="emotion-10 emotion-1"
+            class="emotion-11 emotion-1"
           >
             <input
               aria-valuemax="23"
               aria-valuemin="0"
               aria-valuenow="23"
-              class="emotion-14 emotion-15"
+              class="emotion-15 emotion-16"
               data-size="medium"
               data-testid="hours-input"
               placeholder="00"
@@ -1353,19 +1357,19 @@ exports[`TimeInput > renders can move with arrow keys - 24-hour format 1`] = `
               value="23"
             />
             <span
-              class="emotion-16 emotion-17 emotion-5"
+              class="emotion-17 emotion-18 emotion-6"
             >
               :
             </span>
           </div>
           <div
-            class="emotion-10 emotion-1"
+            class="emotion-11 emotion-1"
           >
             <input
               aria-valuemax="59"
               aria-valuemin="0"
               aria-valuenow="23"
-              class="emotion-14 emotion-15"
+              class="emotion-15 emotion-16"
               data-size="medium"
               data-testid="minutes-input"
               placeholder="00"
@@ -1373,19 +1377,19 @@ exports[`TimeInput > renders can move with arrow keys - 24-hour format 1`] = `
               value="23"
             />
             <span
-              class="emotion-16 emotion-17 emotion-5"
+              class="emotion-17 emotion-18 emotion-6"
             >
               :
             </span>
           </div>
           <div
-            class="emotion-10 emotion-1"
+            class="emotion-11 emotion-1"
           >
             <input
               aria-valuemax="59"
               aria-valuemin="0"
               aria-valuenow="14"
-              class="emotion-14 emotion-15"
+              class="emotion-15 emotion-16"
               data-size="medium"
               data-testid="seconds-input"
               placeholder="00"
@@ -1399,12 +1403,12 @@ exports[`TimeInput > renders can move with arrow keys - 24-hour format 1`] = `
         >
           <button
             aria-label="clear value"
-            class="emotion-32 emotion-33"
+            class="emotion-33 emotion-34"
             data-testid="clear"
             type="button"
           >
             <svg
-              class="emotion-34 emotion-35"
+              class="emotion-35 emotion-36"
               viewBox="0 0 16 16"
               xmlns="http://www.w3.org/2000/svg"
             >
@@ -1416,7 +1420,7 @@ exports[`TimeInput > renders can move with arrow keys - 24-hour format 1`] = `
         </div>
       </div>
       <p
-        class="emotion-36 emotion-5"
+        class="emotion-37 emotion-6"
       >
         helper
       </p>
@@ -1450,8 +1454,8 @@ exports[`TimeInput > renders correctly clearable 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-2 {
-  color: #222638;
+.emotion-3 {
+  color: #3f4250;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -1460,9 +1464,10 @@ exports[`TimeInput > renders correctly clearable 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  cursor: pointer;
 }
 
-.emotion-4 {
+.emotion-5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1494,41 +1499,41 @@ exports[`TimeInput > renders correctly clearable 1`] = `
   border: 1px solid #d9dadd;
 }
 
-.emotion-4:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-5:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-4[data-disabled="false"]:hover,
-.emotion-4 [data-disabled="false"]:focus {
+.emotion-5[data-disabled="false"]:hover,
+.emotion-5 [data-disabled="false"]:focus {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-4:focus-within {
+.emotion-5:focus-within {
   border-color: #792dd4;
 }
 
-.emotion-4[data-size='small'] {
+.emotion-5[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-4[data-size='medium'] {
+.emotion-5[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-4[data-size='large'] {
+.emotion-5[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-4[data-readonly='true'] {
+.emotion-5[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-4[data-disabled='true'] {
+.emotion-5[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
@@ -1538,20 +1543,20 @@ exports[`TimeInput > renders correctly clearable 1`] = `
   user-select: none;
 }
 
-.emotion-4[data-error='true'] {
+.emotion-5[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-4[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-5[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-4[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
+.emotion-5[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
   border-color: #92103f;
 }
 
-.emotion-6 {
+.emotion-7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1574,7 +1579,7 @@ exports[`TimeInput > renders correctly clearable 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-10 {
+.emotion-11 {
   border: none;
   outline: none;
   background: transparent;
@@ -1587,30 +1592,30 @@ exports[`TimeInput > renders correctly clearable 1`] = `
   caret-color: transparent;
 }
 
-.emotion-10[data-size='large'] {
+.emotion-11[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-10:not(:disabled):hover {
+.emotion-11:not(:disabled):hover {
   background-color: #e9eaeb;
   color: #727683;
 }
 
-.emotion-10:not(:disabled):active,
-.emotion-10:not(:disabled):focus {
+.emotion-11:not(:disabled):active,
+.emotion-11:not(:disabled):focus {
   background-color: #e9eaeb;
   color: #3f4250;
 }
 
-.emotion-10:-moz-read-only {
+.emotion-11:-moz-read-only {
   cursor: default;
 }
 
-.emotion-10:read-only {
+.emotion-11:read-only {
   cursor: default;
 }
 
-.emotion-10:disabled {
+.emotion-11:disabled {
   cursor: not-allowed;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1618,19 +1623,19 @@ exports[`TimeInput > renders correctly clearable 1`] = `
   user-select: none;
 }
 
-.emotion-10[data-period="true"] {
+.emotion-11[data-period="true"] {
   color: #727683;
 }
 
-.emotion-10::-moz-selection {
+.emotion-11::-moz-selection {
   background: none;
 }
 
-.emotion-10::selection {
+.emotion-11::selection {
   background: none;
 }
 
-.emotion-13 {
+.emotion-14 {
   color: #3f4250;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
@@ -1643,7 +1648,7 @@ exports[`TimeInput > renders correctly clearable 1`] = `
   padding-inline: 0.125rem;
 }
 
-.emotion-26 {
+.emotion-27 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1666,7 +1671,7 @@ exports[`TimeInput > renders correctly clearable 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-28 {
+.emotion-29 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1705,22 +1710,22 @@ exports[`TimeInput > renders correctly clearable 1`] = `
   color: #3f4250;
 }
 
-.emotion-28:hover {
+.emotion-29:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-28:active {
+.emotion-29:active {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.emotion-28:hover,
-.emotion-28:active {
+.emotion-29:hover,
+.emotion-29:active {
   background: #e9eaeb;
   color: #222638;
 }
 
-.emotion-30 {
+.emotion-31 {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
@@ -1729,12 +1734,12 @@ exports[`TimeInput > renders correctly clearable 1`] = `
   min-height: 16px;
 }
 
-.emotion-30 .fillStroke {
+.emotion-31 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.emotion-30 path {
+.emotion-31 path {
   fill: currentColor;
 }
 
@@ -1745,28 +1750,28 @@ exports[`TimeInput > renders correctly clearable 1`] = `
       class="emotion-0 emotion-1"
     >
       <label
-        class="emotion-2 emotion-3"
+        class="emotion-2 emotion-3 emotion-4"
         for=":rg:"
       >
         test
       </label>
       <div
-        class="emotion-4 emotion-5"
+        class="emotion-5 emotion-6"
         data-disabled="false"
         data-error="false"
         data-readonly="false"
         data-size="medium"
       >
         <div
-          class="emotion-6 emotion-1"
+          class="emotion-7 emotion-1"
         >
           <div
-            class="emotion-6 emotion-1"
+            class="emotion-7 emotion-1"
           >
             <input
               aria-valuemax="23"
               aria-valuemin="0"
-              class="emotion-10 emotion-11"
+              class="emotion-11 emotion-12"
               data-size="medium"
               data-testid="hours-input"
               placeholder="00"
@@ -1774,18 +1779,18 @@ exports[`TimeInput > renders correctly clearable 1`] = `
               value=""
             />
             <span
-              class="emotion-12 emotion-13 emotion-3"
+              class="emotion-13 emotion-14 emotion-4"
             >
               :
             </span>
           </div>
           <div
-            class="emotion-6 emotion-1"
+            class="emotion-7 emotion-1"
           >
             <input
               aria-valuemax="59"
               aria-valuemin="0"
-              class="emotion-10 emotion-11"
+              class="emotion-11 emotion-12"
               data-size="medium"
               data-testid="minutes-input"
               placeholder="00"
@@ -1793,18 +1798,18 @@ exports[`TimeInput > renders correctly clearable 1`] = `
               value=""
             />
             <span
-              class="emotion-12 emotion-13 emotion-3"
+              class="emotion-13 emotion-14 emotion-4"
             >
               :
             </span>
           </div>
           <div
-            class="emotion-6 emotion-1"
+            class="emotion-7 emotion-1"
           >
             <input
               aria-valuemax="59"
               aria-valuemin="0"
-              class="emotion-10 emotion-11"
+              class="emotion-11 emotion-12"
               data-size="medium"
               data-testid="seconds-input"
               placeholder="00"
@@ -1814,16 +1819,16 @@ exports[`TimeInput > renders correctly clearable 1`] = `
           </div>
         </div>
         <div
-          class="emotion-26 emotion-1"
+          class="emotion-27 emotion-1"
         >
           <button
             aria-label="clear value"
-            class="emotion-28 emotion-29"
+            class="emotion-29 emotion-30"
             data-testid="clear"
             type="button"
           >
             <svg
-              class="emotion-30 emotion-31"
+              class="emotion-31 emotion-32"
               viewBox="0 0 16 16"
               xmlns="http://www.w3.org/2000/svg"
             >
@@ -1933,8 +1938,8 @@ exports[`TimeInput > renders correctly clearable 2`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-4 {
-  color: #222638;
+.emotion-5 {
+  color: #3f4250;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -1943,10 +1948,11 @@ exports[`TimeInput > renders correctly clearable 2`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  cursor: pointer;
 }
 
-.emotion-4 {
-  color: #222638;
+.emotion-5 {
+  color: #3f4250;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -1955,9 +1961,10 @@ exports[`TimeInput > renders correctly clearable 2`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  cursor: pointer;
 }
 
-.emotion-6 {
+.emotion-7 {
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
@@ -1968,7 +1975,7 @@ exports[`TimeInput > renders correctly clearable 2`] = `
   text-decoration: none;
 }
 
-.emotion-6 {
+.emotion-7 {
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
@@ -1979,7 +1986,7 @@ exports[`TimeInput > renders correctly clearable 2`] = `
   text-decoration: none;
 }
 
-.emotion-8 {
+.emotion-9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2011,41 +2018,41 @@ exports[`TimeInput > renders correctly clearable 2`] = `
   border: 1px solid #d9dadd;
 }
 
-.emotion-8:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-9:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-8[data-disabled="false"]:hover,
-.emotion-8 [data-disabled="false"]:focus {
+.emotion-9[data-disabled="false"]:hover,
+.emotion-9 [data-disabled="false"]:focus {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-8:focus-within {
+.emotion-9:focus-within {
   border-color: #792dd4;
 }
 
-.emotion-8[data-size='small'] {
+.emotion-9[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-8[data-size='medium'] {
+.emotion-9[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-8[data-size='large'] {
+.emotion-9[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-8[data-readonly='true'] {
+.emotion-9[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-8[data-disabled='true'] {
+.emotion-9[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
@@ -2055,20 +2062,20 @@ exports[`TimeInput > renders correctly clearable 2`] = `
   user-select: none;
 }
 
-.emotion-8[data-error='true'] {
+.emotion-9[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-8[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-9[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-8[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
+.emotion-9[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
   border-color: #92103f;
 }
 
-.emotion-8 {
+.emotion-9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2100,41 +2107,41 @@ exports[`TimeInput > renders correctly clearable 2`] = `
   border: 1px solid #d9dadd;
 }
 
-.emotion-8:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-9:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-8[data-disabled="false"]:hover,
-.emotion-8 [data-disabled="false"]:focus {
+.emotion-9[data-disabled="false"]:hover,
+.emotion-9 [data-disabled="false"]:focus {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-8:focus-within {
+.emotion-9:focus-within {
   border-color: #792dd4;
 }
 
-.emotion-8[data-size='small'] {
+.emotion-9[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-8[data-size='medium'] {
+.emotion-9[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-8[data-size='large'] {
+.emotion-9[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-8[data-readonly='true'] {
+.emotion-9[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-8[data-disabled='true'] {
+.emotion-9[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
@@ -2144,20 +2151,20 @@ exports[`TimeInput > renders correctly clearable 2`] = `
   user-select: none;
 }
 
-.emotion-8[data-error='true'] {
+.emotion-9[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-8[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-9[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-8[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
+.emotion-9[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
   border-color: #92103f;
 }
 
-.emotion-10 {
+.emotion-11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2180,7 +2187,7 @@ exports[`TimeInput > renders correctly clearable 2`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-10 {
+.emotion-11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2203,7 +2210,7 @@ exports[`TimeInput > renders correctly clearable 2`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-14 {
+.emotion-15 {
   border: none;
   outline: none;
   background: transparent;
@@ -2216,30 +2223,30 @@ exports[`TimeInput > renders correctly clearable 2`] = `
   caret-color: transparent;
 }
 
-.emotion-14[data-size='large'] {
+.emotion-15[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-14:not(:disabled):hover {
+.emotion-15:not(:disabled):hover {
   background-color: #e9eaeb;
   color: #727683;
 }
 
-.emotion-14:not(:disabled):active,
-.emotion-14:not(:disabled):focus {
+.emotion-15:not(:disabled):active,
+.emotion-15:not(:disabled):focus {
   background-color: #e9eaeb;
   color: #3f4250;
 }
 
-.emotion-14:-moz-read-only {
+.emotion-15:-moz-read-only {
   cursor: default;
 }
 
-.emotion-14:read-only {
+.emotion-15:read-only {
   cursor: default;
 }
 
-.emotion-14:disabled {
+.emotion-15:disabled {
   cursor: not-allowed;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -2247,19 +2254,19 @@ exports[`TimeInput > renders correctly clearable 2`] = `
   user-select: none;
 }
 
-.emotion-14[data-period="true"] {
+.emotion-15[data-period="true"] {
   color: #727683;
 }
 
-.emotion-14::-moz-selection {
+.emotion-15::-moz-selection {
   background: none;
 }
 
-.emotion-14::selection {
+.emotion-15::selection {
   background: none;
 }
 
-.emotion-14 {
+.emotion-15 {
   border: none;
   outline: none;
   background: transparent;
@@ -2272,30 +2279,30 @@ exports[`TimeInput > renders correctly clearable 2`] = `
   caret-color: transparent;
 }
 
-.emotion-14[data-size='large'] {
+.emotion-15[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-14:not(:disabled):hover {
+.emotion-15:not(:disabled):hover {
   background-color: #e9eaeb;
   color: #727683;
 }
 
-.emotion-14:not(:disabled):active,
-.emotion-14:not(:disabled):focus {
+.emotion-15:not(:disabled):active,
+.emotion-15:not(:disabled):focus {
   background-color: #e9eaeb;
   color: #3f4250;
 }
 
-.emotion-14:-moz-read-only {
+.emotion-15:-moz-read-only {
   cursor: default;
 }
 
-.emotion-14:read-only {
+.emotion-15:read-only {
   cursor: default;
 }
 
-.emotion-14:disabled {
+.emotion-15:disabled {
   cursor: not-allowed;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -2303,19 +2310,19 @@ exports[`TimeInput > renders correctly clearable 2`] = `
   user-select: none;
 }
 
-.emotion-14[data-period="true"] {
+.emotion-15[data-period="true"] {
   color: #727683;
 }
 
-.emotion-14::-moz-selection {
+.emotion-15::-moz-selection {
   background: none;
 }
 
-.emotion-14::selection {
+.emotion-15::selection {
   background: none;
 }
 
-.emotion-17 {
+.emotion-18 {
   color: #3f4250;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
@@ -2328,7 +2335,7 @@ exports[`TimeInput > renders correctly clearable 2`] = `
   padding-inline: 0.125rem;
 }
 
-.emotion-17 {
+.emotion-18 {
   color: #3f4250;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
@@ -2341,7 +2348,7 @@ exports[`TimeInput > renders correctly clearable 2`] = `
   padding-inline: 0.125rem;
 }
 
-.emotion-34 {
+.emotion-35 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2380,22 +2387,22 @@ exports[`TimeInput > renders correctly clearable 2`] = `
   color: #3f4250;
 }
 
-.emotion-34:hover {
+.emotion-35:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-34:active {
+.emotion-35:active {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.emotion-34:hover,
-.emotion-34:active {
+.emotion-35:hover,
+.emotion-35:active {
   background: #e9eaeb;
   color: #222638;
 }
 
-.emotion-34 {
+.emotion-35 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2434,22 +2441,22 @@ exports[`TimeInput > renders correctly clearable 2`] = `
   color: #3f4250;
 }
 
-.emotion-34:hover {
+.emotion-35:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-34:active {
+.emotion-35:active {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.emotion-34:hover,
-.emotion-34:active {
+.emotion-35:hover,
+.emotion-35:active {
   background: #e9eaeb;
   color: #222638;
 }
 
-.emotion-36 {
+.emotion-37 {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
@@ -2458,16 +2465,16 @@ exports[`TimeInput > renders correctly clearable 2`] = `
   min-height: 16px;
 }
 
-.emotion-36 .fillStroke {
+.emotion-37 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.emotion-36 path {
+.emotion-37 path {
   fill: currentColor;
 }
 
-.emotion-36 {
+.emotion-37 {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
@@ -2476,16 +2483,16 @@ exports[`TimeInput > renders correctly clearable 2`] = `
   min-height: 16px;
 }
 
-.emotion-36 .fillStroke {
+.emotion-37 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.emotion-36 path {
+.emotion-37 path {
   fill: currentColor;
 }
 
-.emotion-38 {
+.emotion-39 {
   color: #727683;
   font-size: 0.75rem;
   font-family: Inter,Asap,sans-serif;
@@ -2497,7 +2504,7 @@ exports[`TimeInput > renders correctly clearable 2`] = `
   text-decoration: none;
 }
 
-.emotion-38 {
+.emotion-39 {
   color: #727683;
   font-size: 0.75rem;
   font-family: Inter,Asap,sans-serif;
@@ -2519,35 +2526,35 @@ exports[`TimeInput > renders correctly clearable 2`] = `
         class="emotion-2 emotion-1"
       >
         <label
-          class="emotion-4 emotion-5"
+          class="emotion-4 emotion-5 emotion-6"
           for=":r1t:"
         >
           label
         </label>
         <span
-          class="emotion-6 emotion-5"
+          class="emotion-7 emotion-6"
         >
           labeldescription
         </span>
       </div>
       <div
-        class="emotion-8 emotion-9"
+        class="emotion-9 emotion-10"
         data-disabled="false"
         data-error="false"
         data-readonly="false"
         data-size="medium"
       >
         <div
-          class="emotion-10 emotion-1"
+          class="emotion-11 emotion-1"
         >
           <div
-            class="emotion-10 emotion-1"
+            class="emotion-11 emotion-1"
           >
             <input
               aria-valuemax="12"
               aria-valuemin="1"
               aria-valuenow="12"
-              class="emotion-14 emotion-15"
+              class="emotion-15 emotion-16"
               data-size="medium"
               data-testid="hours-input"
               placeholder="00"
@@ -2555,19 +2562,19 @@ exports[`TimeInput > renders correctly clearable 2`] = `
               value="12"
             />
             <span
-              class="emotion-16 emotion-17 emotion-5"
+              class="emotion-17 emotion-18 emotion-6"
             >
               :
             </span>
           </div>
           <div
-            class="emotion-10 emotion-1"
+            class="emotion-11 emotion-1"
           >
             <input
               aria-valuemax="59"
               aria-valuemin="0"
               aria-valuenow="0"
-              class="emotion-14 emotion-15"
+              class="emotion-15 emotion-16"
               data-size="medium"
               data-testid="minutes-input"
               placeholder="00"
@@ -2575,19 +2582,19 @@ exports[`TimeInput > renders correctly clearable 2`] = `
               value="00"
             />
             <span
-              class="emotion-16 emotion-17 emotion-5"
+              class="emotion-17 emotion-18 emotion-6"
             >
               :
             </span>
           </div>
           <div
-            class="emotion-10 emotion-1"
+            class="emotion-11 emotion-1"
           >
             <input
               aria-valuemax="59"
               aria-valuemin="0"
               aria-valuenow="0"
-              class="emotion-14 emotion-15"
+              class="emotion-15 emotion-16"
               data-size="medium"
               data-testid="seconds-input"
               placeholder="00"
@@ -2600,7 +2607,7 @@ exports[`TimeInput > renders correctly clearable 2`] = `
             aria-valuemin="0"
             aria-valuenow="0"
             aria-valuetext="am"
-            class="emotion-14 emotion-15"
+            class="emotion-15 emotion-16"
             data-period="true"
             data-size="medium"
             data-testid="am-pm-input"
@@ -2614,12 +2621,12 @@ exports[`TimeInput > renders correctly clearable 2`] = `
         >
           <button
             aria-label="clear value"
-            class="emotion-34 emotion-35"
+            class="emotion-35 emotion-36"
             data-testid="clear"
             type="button"
           >
             <svg
-              class="emotion-36 emotion-37"
+              class="emotion-37 emotion-38"
               viewBox="0 0 16 16"
               xmlns="http://www.w3.org/2000/svg"
             >
@@ -2631,7 +2638,7 @@ exports[`TimeInput > renders correctly clearable 2`] = `
         </div>
       </div>
       <p
-        class="emotion-38 emotion-5"
+        class="emotion-39 emotion-6"
       >
         helper
       </p>
@@ -2734,8 +2741,8 @@ exports[`TimeInput > renders correctly controlled - 12-hour format 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-4 {
-  color: #222638;
+.emotion-5 {
+  color: #3f4250;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -2744,10 +2751,11 @@ exports[`TimeInput > renders correctly controlled - 12-hour format 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  cursor: pointer;
 }
 
-.emotion-4 {
-  color: #222638;
+.emotion-5 {
+  color: #3f4250;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -2756,9 +2764,10 @@ exports[`TimeInput > renders correctly controlled - 12-hour format 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  cursor: pointer;
 }
 
-.emotion-6 {
+.emotion-7 {
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
@@ -2769,7 +2778,7 @@ exports[`TimeInput > renders correctly controlled - 12-hour format 1`] = `
   text-decoration: none;
 }
 
-.emotion-6 {
+.emotion-7 {
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
@@ -2780,7 +2789,7 @@ exports[`TimeInput > renders correctly controlled - 12-hour format 1`] = `
   text-decoration: none;
 }
 
-.emotion-8 {
+.emotion-9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2812,41 +2821,41 @@ exports[`TimeInput > renders correctly controlled - 12-hour format 1`] = `
   border: 1px solid #d9dadd;
 }
 
-.emotion-8:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-9:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-8[data-disabled="false"]:hover,
-.emotion-8 [data-disabled="false"]:focus {
+.emotion-9[data-disabled="false"]:hover,
+.emotion-9 [data-disabled="false"]:focus {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-8:focus-within {
+.emotion-9:focus-within {
   border-color: #792dd4;
 }
 
-.emotion-8[data-size='small'] {
+.emotion-9[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-8[data-size='medium'] {
+.emotion-9[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-8[data-size='large'] {
+.emotion-9[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-8[data-readonly='true'] {
+.emotion-9[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-8[data-disabled='true'] {
+.emotion-9[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
@@ -2856,20 +2865,20 @@ exports[`TimeInput > renders correctly controlled - 12-hour format 1`] = `
   user-select: none;
 }
 
-.emotion-8[data-error='true'] {
+.emotion-9[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-8[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-9[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-8[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
+.emotion-9[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
   border-color: #92103f;
 }
 
-.emotion-8 {
+.emotion-9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2901,41 +2910,41 @@ exports[`TimeInput > renders correctly controlled - 12-hour format 1`] = `
   border: 1px solid #d9dadd;
 }
 
-.emotion-8:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-9:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-8[data-disabled="false"]:hover,
-.emotion-8 [data-disabled="false"]:focus {
+.emotion-9[data-disabled="false"]:hover,
+.emotion-9 [data-disabled="false"]:focus {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-8:focus-within {
+.emotion-9:focus-within {
   border-color: #792dd4;
 }
 
-.emotion-8[data-size='small'] {
+.emotion-9[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-8[data-size='medium'] {
+.emotion-9[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-8[data-size='large'] {
+.emotion-9[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-8[data-readonly='true'] {
+.emotion-9[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-8[data-disabled='true'] {
+.emotion-9[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
@@ -2945,20 +2954,20 @@ exports[`TimeInput > renders correctly controlled - 12-hour format 1`] = `
   user-select: none;
 }
 
-.emotion-8[data-error='true'] {
+.emotion-9[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-8[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-9[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-8[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
+.emotion-9[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
   border-color: #92103f;
 }
 
-.emotion-10 {
+.emotion-11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2981,7 +2990,7 @@ exports[`TimeInput > renders correctly controlled - 12-hour format 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-10 {
+.emotion-11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3004,7 +3013,7 @@ exports[`TimeInput > renders correctly controlled - 12-hour format 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-14 {
+.emotion-15 {
   border: none;
   outline: none;
   background: transparent;
@@ -3017,30 +3026,30 @@ exports[`TimeInput > renders correctly controlled - 12-hour format 1`] = `
   caret-color: transparent;
 }
 
-.emotion-14[data-size='large'] {
+.emotion-15[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-14:not(:disabled):hover {
+.emotion-15:not(:disabled):hover {
   background-color: #e9eaeb;
   color: #727683;
 }
 
-.emotion-14:not(:disabled):active,
-.emotion-14:not(:disabled):focus {
+.emotion-15:not(:disabled):active,
+.emotion-15:not(:disabled):focus {
   background-color: #e9eaeb;
   color: #3f4250;
 }
 
-.emotion-14:-moz-read-only {
+.emotion-15:-moz-read-only {
   cursor: default;
 }
 
-.emotion-14:read-only {
+.emotion-15:read-only {
   cursor: default;
 }
 
-.emotion-14:disabled {
+.emotion-15:disabled {
   cursor: not-allowed;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -3048,19 +3057,19 @@ exports[`TimeInput > renders correctly controlled - 12-hour format 1`] = `
   user-select: none;
 }
 
-.emotion-14[data-period="true"] {
+.emotion-15[data-period="true"] {
   color: #727683;
 }
 
-.emotion-14::-moz-selection {
+.emotion-15::-moz-selection {
   background: none;
 }
 
-.emotion-14::selection {
+.emotion-15::selection {
   background: none;
 }
 
-.emotion-14 {
+.emotion-15 {
   border: none;
   outline: none;
   background: transparent;
@@ -3073,30 +3082,30 @@ exports[`TimeInput > renders correctly controlled - 12-hour format 1`] = `
   caret-color: transparent;
 }
 
-.emotion-14[data-size='large'] {
+.emotion-15[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-14:not(:disabled):hover {
+.emotion-15:not(:disabled):hover {
   background-color: #e9eaeb;
   color: #727683;
 }
 
-.emotion-14:not(:disabled):active,
-.emotion-14:not(:disabled):focus {
+.emotion-15:not(:disabled):active,
+.emotion-15:not(:disabled):focus {
   background-color: #e9eaeb;
   color: #3f4250;
 }
 
-.emotion-14:-moz-read-only {
+.emotion-15:-moz-read-only {
   cursor: default;
 }
 
-.emotion-14:read-only {
+.emotion-15:read-only {
   cursor: default;
 }
 
-.emotion-14:disabled {
+.emotion-15:disabled {
   cursor: not-allowed;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -3104,19 +3113,19 @@ exports[`TimeInput > renders correctly controlled - 12-hour format 1`] = `
   user-select: none;
 }
 
-.emotion-14[data-period="true"] {
+.emotion-15[data-period="true"] {
   color: #727683;
 }
 
-.emotion-14::-moz-selection {
+.emotion-15::-moz-selection {
   background: none;
 }
 
-.emotion-14::selection {
+.emotion-15::selection {
   background: none;
 }
 
-.emotion-17 {
+.emotion-18 {
   color: #3f4250;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
@@ -3129,7 +3138,7 @@ exports[`TimeInput > renders correctly controlled - 12-hour format 1`] = `
   padding-inline: 0.125rem;
 }
 
-.emotion-17 {
+.emotion-18 {
   color: #3f4250;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
@@ -3142,7 +3151,7 @@ exports[`TimeInput > renders correctly controlled - 12-hour format 1`] = `
   padding-inline: 0.125rem;
 }
 
-.emotion-32 {
+.emotion-33 {
   color: #727683;
   font-size: 0.75rem;
   font-family: Inter,Asap,sans-serif;
@@ -3154,7 +3163,7 @@ exports[`TimeInput > renders correctly controlled - 12-hour format 1`] = `
   text-decoration: none;
 }
 
-.emotion-32 {
+.emotion-33 {
   color: #727683;
   font-size: 0.75rem;
   font-family: Inter,Asap,sans-serif;
@@ -3176,35 +3185,35 @@ exports[`TimeInput > renders correctly controlled - 12-hour format 1`] = `
         class="emotion-2 emotion-1"
       >
         <label
-          class="emotion-4 emotion-5"
+          class="emotion-4 emotion-5 emotion-6"
           for=":r1h:"
         >
           label
         </label>
         <span
-          class="emotion-6 emotion-5"
+          class="emotion-7 emotion-6"
         >
           labeldescription
         </span>
       </div>
       <div
-        class="emotion-8 emotion-9"
+        class="emotion-9 emotion-10"
         data-disabled="false"
         data-error="false"
         data-readonly="false"
         data-size="medium"
       >
         <div
-          class="emotion-10 emotion-1"
+          class="emotion-11 emotion-1"
         >
           <div
-            class="emotion-10 emotion-1"
+            class="emotion-11 emotion-1"
           >
             <input
               aria-valuemax="12"
               aria-valuemin="1"
               aria-valuenow="12"
-              class="emotion-14 emotion-15"
+              class="emotion-15 emotion-16"
               data-size="medium"
               data-testid="hours-input"
               placeholder="00"
@@ -3212,19 +3221,19 @@ exports[`TimeInput > renders correctly controlled - 12-hour format 1`] = `
               value="12"
             />
             <span
-              class="emotion-16 emotion-17 emotion-5"
+              class="emotion-17 emotion-18 emotion-6"
             >
               :
             </span>
           </div>
           <div
-            class="emotion-10 emotion-1"
+            class="emotion-11 emotion-1"
           >
             <input
               aria-valuemax="59"
               aria-valuemin="0"
               aria-valuenow="23"
-              class="emotion-14 emotion-15"
+              class="emotion-15 emotion-16"
               data-size="medium"
               data-testid="minutes-input"
               placeholder="00"
@@ -3232,19 +3241,19 @@ exports[`TimeInput > renders correctly controlled - 12-hour format 1`] = `
               value="23"
             />
             <span
-              class="emotion-16 emotion-17 emotion-5"
+              class="emotion-17 emotion-18 emotion-6"
             >
               :
             </span>
           </div>
           <div
-            class="emotion-10 emotion-1"
+            class="emotion-11 emotion-1"
           >
             <input
               aria-valuemax="59"
               aria-valuemin="0"
               aria-valuenow="7"
-              class="emotion-14 emotion-15"
+              class="emotion-15 emotion-16"
               data-size="medium"
               data-testid="seconds-input"
               placeholder="00"
@@ -3257,7 +3266,7 @@ exports[`TimeInput > renders correctly controlled - 12-hour format 1`] = `
             aria-valuemin="0"
             aria-valuenow="0"
             aria-valuetext="am"
-            class="emotion-14 emotion-15"
+            class="emotion-15 emotion-16"
             data-period="true"
             data-size="medium"
             data-testid="am-pm-input"
@@ -3268,7 +3277,7 @@ exports[`TimeInput > renders correctly controlled - 12-hour format 1`] = `
         </div>
       </div>
       <p
-        class="emotion-32 emotion-5"
+        class="emotion-33 emotion-6"
       >
         helper
       </p>
@@ -3371,8 +3380,8 @@ exports[`TimeInput > renders correctly controlled - 24-hours format 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-4 {
-  color: #222638;
+.emotion-5 {
+  color: #3f4250;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -3381,10 +3390,11 @@ exports[`TimeInput > renders correctly controlled - 24-hours format 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  cursor: pointer;
 }
 
-.emotion-4 {
-  color: #222638;
+.emotion-5 {
+  color: #3f4250;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -3393,9 +3403,10 @@ exports[`TimeInput > renders correctly controlled - 24-hours format 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  cursor: pointer;
 }
 
-.emotion-6 {
+.emotion-7 {
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
@@ -3406,7 +3417,7 @@ exports[`TimeInput > renders correctly controlled - 24-hours format 1`] = `
   text-decoration: none;
 }
 
-.emotion-6 {
+.emotion-7 {
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
@@ -3417,7 +3428,7 @@ exports[`TimeInput > renders correctly controlled - 24-hours format 1`] = `
   text-decoration: none;
 }
 
-.emotion-8 {
+.emotion-9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3449,41 +3460,41 @@ exports[`TimeInput > renders correctly controlled - 24-hours format 1`] = `
   border: 1px solid #d9dadd;
 }
 
-.emotion-8:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-9:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-8[data-disabled="false"]:hover,
-.emotion-8 [data-disabled="false"]:focus {
+.emotion-9[data-disabled="false"]:hover,
+.emotion-9 [data-disabled="false"]:focus {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-8:focus-within {
+.emotion-9:focus-within {
   border-color: #792dd4;
 }
 
-.emotion-8[data-size='small'] {
+.emotion-9[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-8[data-size='medium'] {
+.emotion-9[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-8[data-size='large'] {
+.emotion-9[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-8[data-readonly='true'] {
+.emotion-9[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-8[data-disabled='true'] {
+.emotion-9[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
@@ -3493,20 +3504,20 @@ exports[`TimeInput > renders correctly controlled - 24-hours format 1`] = `
   user-select: none;
 }
 
-.emotion-8[data-error='true'] {
+.emotion-9[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-8[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-9[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-8[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
+.emotion-9[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
   border-color: #92103f;
 }
 
-.emotion-8 {
+.emotion-9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3538,41 +3549,41 @@ exports[`TimeInput > renders correctly controlled - 24-hours format 1`] = `
   border: 1px solid #d9dadd;
 }
 
-.emotion-8:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-9:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-8[data-disabled="false"]:hover,
-.emotion-8 [data-disabled="false"]:focus {
+.emotion-9[data-disabled="false"]:hover,
+.emotion-9 [data-disabled="false"]:focus {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-8:focus-within {
+.emotion-9:focus-within {
   border-color: #792dd4;
 }
 
-.emotion-8[data-size='small'] {
+.emotion-9[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-8[data-size='medium'] {
+.emotion-9[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-8[data-size='large'] {
+.emotion-9[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-8[data-readonly='true'] {
+.emotion-9[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-8[data-disabled='true'] {
+.emotion-9[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
@@ -3582,20 +3593,20 @@ exports[`TimeInput > renders correctly controlled - 24-hours format 1`] = `
   user-select: none;
 }
 
-.emotion-8[data-error='true'] {
+.emotion-9[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-8[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-9[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-8[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
+.emotion-9[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
   border-color: #92103f;
 }
 
-.emotion-10 {
+.emotion-11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3618,7 +3629,7 @@ exports[`TimeInput > renders correctly controlled - 24-hours format 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-10 {
+.emotion-11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3641,7 +3652,7 @@ exports[`TimeInput > renders correctly controlled - 24-hours format 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-14 {
+.emotion-15 {
   border: none;
   outline: none;
   background: transparent;
@@ -3654,30 +3665,30 @@ exports[`TimeInput > renders correctly controlled - 24-hours format 1`] = `
   caret-color: transparent;
 }
 
-.emotion-14[data-size='large'] {
+.emotion-15[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-14:not(:disabled):hover {
+.emotion-15:not(:disabled):hover {
   background-color: #e9eaeb;
   color: #727683;
 }
 
-.emotion-14:not(:disabled):active,
-.emotion-14:not(:disabled):focus {
+.emotion-15:not(:disabled):active,
+.emotion-15:not(:disabled):focus {
   background-color: #e9eaeb;
   color: #3f4250;
 }
 
-.emotion-14:-moz-read-only {
+.emotion-15:-moz-read-only {
   cursor: default;
 }
 
-.emotion-14:read-only {
+.emotion-15:read-only {
   cursor: default;
 }
 
-.emotion-14:disabled {
+.emotion-15:disabled {
   cursor: not-allowed;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -3685,19 +3696,19 @@ exports[`TimeInput > renders correctly controlled - 24-hours format 1`] = `
   user-select: none;
 }
 
-.emotion-14[data-period="true"] {
+.emotion-15[data-period="true"] {
   color: #727683;
 }
 
-.emotion-14::-moz-selection {
+.emotion-15::-moz-selection {
   background: none;
 }
 
-.emotion-14::selection {
+.emotion-15::selection {
   background: none;
 }
 
-.emotion-14 {
+.emotion-15 {
   border: none;
   outline: none;
   background: transparent;
@@ -3710,30 +3721,30 @@ exports[`TimeInput > renders correctly controlled - 24-hours format 1`] = `
   caret-color: transparent;
 }
 
-.emotion-14[data-size='large'] {
+.emotion-15[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-14:not(:disabled):hover {
+.emotion-15:not(:disabled):hover {
   background-color: #e9eaeb;
   color: #727683;
 }
 
-.emotion-14:not(:disabled):active,
-.emotion-14:not(:disabled):focus {
+.emotion-15:not(:disabled):active,
+.emotion-15:not(:disabled):focus {
   background-color: #e9eaeb;
   color: #3f4250;
 }
 
-.emotion-14:-moz-read-only {
+.emotion-15:-moz-read-only {
   cursor: default;
 }
 
-.emotion-14:read-only {
+.emotion-15:read-only {
   cursor: default;
 }
 
-.emotion-14:disabled {
+.emotion-15:disabled {
   cursor: not-allowed;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -3741,19 +3752,19 @@ exports[`TimeInput > renders correctly controlled - 24-hours format 1`] = `
   user-select: none;
 }
 
-.emotion-14[data-period="true"] {
+.emotion-15[data-period="true"] {
   color: #727683;
 }
 
-.emotion-14::-moz-selection {
+.emotion-15::-moz-selection {
   background: none;
 }
 
-.emotion-14::selection {
+.emotion-15::selection {
   background: none;
 }
 
-.emotion-17 {
+.emotion-18 {
   color: #3f4250;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
@@ -3766,7 +3777,7 @@ exports[`TimeInput > renders correctly controlled - 24-hours format 1`] = `
   padding-inline: 0.125rem;
 }
 
-.emotion-17 {
+.emotion-18 {
   color: #3f4250;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
@@ -3779,7 +3790,7 @@ exports[`TimeInput > renders correctly controlled - 24-hours format 1`] = `
   padding-inline: 0.125rem;
 }
 
-.emotion-30 {
+.emotion-31 {
   color: #727683;
   font-size: 0.75rem;
   font-family: Inter,Asap,sans-serif;
@@ -3791,7 +3802,7 @@ exports[`TimeInput > renders correctly controlled - 24-hours format 1`] = `
   text-decoration: none;
 }
 
-.emotion-30 {
+.emotion-31 {
   color: #727683;
   font-size: 0.75rem;
   font-family: Inter,Asap,sans-serif;
@@ -3813,35 +3824,35 @@ exports[`TimeInput > renders correctly controlled - 24-hours format 1`] = `
         class="emotion-2 emotion-1"
       >
         <label
-          class="emotion-4 emotion-5"
+          class="emotion-4 emotion-5 emotion-6"
           for=":r1n:"
         >
           label
         </label>
         <span
-          class="emotion-6 emotion-5"
+          class="emotion-7 emotion-6"
         >
           labeldescription
         </span>
       </div>
       <div
-        class="emotion-8 emotion-9"
+        class="emotion-9 emotion-10"
         data-disabled="false"
         data-error="false"
         data-readonly="false"
         data-size="medium"
       >
         <div
-          class="emotion-10 emotion-1"
+          class="emotion-11 emotion-1"
         >
           <div
-            class="emotion-10 emotion-1"
+            class="emotion-11 emotion-1"
           >
             <input
               aria-valuemax="23"
               aria-valuemin="0"
               aria-valuenow="23"
-              class="emotion-14 emotion-15"
+              class="emotion-15 emotion-16"
               data-size="medium"
               data-testid="hours-input"
               placeholder="00"
@@ -3849,19 +3860,19 @@ exports[`TimeInput > renders correctly controlled - 24-hours format 1`] = `
               value="23"
             />
             <span
-              class="emotion-16 emotion-17 emotion-5"
+              class="emotion-17 emotion-18 emotion-6"
             >
               :
             </span>
           </div>
           <div
-            class="emotion-10 emotion-1"
+            class="emotion-11 emotion-1"
           >
             <input
               aria-valuemax="59"
               aria-valuemin="0"
               aria-valuenow="32"
-              class="emotion-14 emotion-15"
+              class="emotion-15 emotion-16"
               data-size="medium"
               data-testid="minutes-input"
               placeholder="00"
@@ -3869,19 +3880,19 @@ exports[`TimeInput > renders correctly controlled - 24-hours format 1`] = `
               value="32"
             />
             <span
-              class="emotion-16 emotion-17 emotion-5"
+              class="emotion-17 emotion-18 emotion-6"
             >
               :
             </span>
           </div>
           <div
-            class="emotion-10 emotion-1"
+            class="emotion-11 emotion-1"
           >
             <input
               aria-valuemax="59"
               aria-valuemin="0"
               aria-valuenow="31"
-              class="emotion-14 emotion-15"
+              class="emotion-15 emotion-16"
               data-size="medium"
               data-testid="seconds-input"
               placeholder="00"
@@ -3892,7 +3903,7 @@ exports[`TimeInput > renders correctly controlled - 24-hours format 1`] = `
         </div>
       </div>
       <p
-        class="emotion-30 emotion-5"
+        class="emotion-31 emotion-6"
       >
         helper
       </p>
@@ -3926,8 +3937,8 @@ exports[`TimeInput > renders correctly disabled 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-2 {
-  color: #222638;
+.emotion-3 {
+  color: #3f4250;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -3936,9 +3947,10 @@ exports[`TimeInput > renders correctly disabled 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  cursor: pointer;
 }
 
-.emotion-4 {
+.emotion-5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3970,41 +3982,41 @@ exports[`TimeInput > renders correctly disabled 1`] = `
   border: 1px solid #d9dadd;
 }
 
-.emotion-4:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-5:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-4[data-disabled="false"]:hover,
-.emotion-4 [data-disabled="false"]:focus {
+.emotion-5[data-disabled="false"]:hover,
+.emotion-5 [data-disabled="false"]:focus {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-4:focus-within {
+.emotion-5:focus-within {
   border-color: #792dd4;
 }
 
-.emotion-4[data-size='small'] {
+.emotion-5[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-4[data-size='medium'] {
+.emotion-5[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-4[data-size='large'] {
+.emotion-5[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-4[data-readonly='true'] {
+.emotion-5[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-4[data-disabled='true'] {
+.emotion-5[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
@@ -4014,20 +4026,20 @@ exports[`TimeInput > renders correctly disabled 1`] = `
   user-select: none;
 }
 
-.emotion-4[data-error='true'] {
+.emotion-5[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-4[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-5[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-4[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
+.emotion-5[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
   border-color: #92103f;
 }
 
-.emotion-6 {
+.emotion-7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4050,7 +4062,7 @@ exports[`TimeInput > renders correctly disabled 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-10 {
+.emotion-11 {
   border: none;
   outline: none;
   background: transparent;
@@ -4063,30 +4075,30 @@ exports[`TimeInput > renders correctly disabled 1`] = `
   caret-color: transparent;
 }
 
-.emotion-10[data-size='large'] {
+.emotion-11[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-10:not(:disabled):hover {
+.emotion-11:not(:disabled):hover {
   background-color: #e9eaeb;
   color: #727683;
 }
 
-.emotion-10:not(:disabled):active,
-.emotion-10:not(:disabled):focus {
+.emotion-11:not(:disabled):active,
+.emotion-11:not(:disabled):focus {
   background-color: #e9eaeb;
   color: #3f4250;
 }
 
-.emotion-10:-moz-read-only {
+.emotion-11:-moz-read-only {
   cursor: default;
 }
 
-.emotion-10:read-only {
+.emotion-11:read-only {
   cursor: default;
 }
 
-.emotion-10:disabled {
+.emotion-11:disabled {
   cursor: not-allowed;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -4094,19 +4106,19 @@ exports[`TimeInput > renders correctly disabled 1`] = `
   user-select: none;
 }
 
-.emotion-10[data-period="true"] {
+.emotion-11[data-period="true"] {
   color: #727683;
 }
 
-.emotion-10::-moz-selection {
+.emotion-11::-moz-selection {
   background: none;
 }
 
-.emotion-10::selection {
+.emotion-11::selection {
   background: none;
 }
 
-.emotion-13 {
+.emotion-14 {
   color: #3f4250;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
@@ -4126,28 +4138,28 @@ exports[`TimeInput > renders correctly disabled 1`] = `
       class="emotion-0 emotion-1"
     >
       <label
-        class="emotion-2 emotion-3"
+        class="emotion-2 emotion-3 emotion-4"
         for=":r3:"
       >
         test
       </label>
       <div
-        class="emotion-4 emotion-5"
+        class="emotion-5 emotion-6"
         data-disabled="true"
         data-error="false"
         data-readonly="false"
         data-size="medium"
       >
         <div
-          class="emotion-6 emotion-1"
+          class="emotion-7 emotion-1"
         >
           <div
-            class="emotion-6 emotion-1"
+            class="emotion-7 emotion-1"
           >
             <input
               aria-valuemax="23"
               aria-valuemin="0"
-              class="emotion-10 emotion-11"
+              class="emotion-11 emotion-12"
               data-size="medium"
               data-testid="hours-input"
               disabled=""
@@ -4156,18 +4168,18 @@ exports[`TimeInput > renders correctly disabled 1`] = `
               value=""
             />
             <span
-              class="emotion-12 emotion-13 emotion-3"
+              class="emotion-13 emotion-14 emotion-4"
             >
               :
             </span>
           </div>
           <div
-            class="emotion-6 emotion-1"
+            class="emotion-7 emotion-1"
           >
             <input
               aria-valuemax="59"
               aria-valuemin="0"
-              class="emotion-10 emotion-11"
+              class="emotion-11 emotion-12"
               data-size="medium"
               data-testid="minutes-input"
               disabled=""
@@ -4176,18 +4188,18 @@ exports[`TimeInput > renders correctly disabled 1`] = `
               value=""
             />
             <span
-              class="emotion-12 emotion-13 emotion-3"
+              class="emotion-13 emotion-14 emotion-4"
             >
               :
             </span>
           </div>
           <div
-            class="emotion-6 emotion-1"
+            class="emotion-7 emotion-1"
           >
             <input
               aria-valuemax="59"
               aria-valuemin="0"
-              class="emotion-10 emotion-11"
+              class="emotion-11 emotion-12"
               data-size="medium"
               data-testid="seconds-input"
               disabled=""
@@ -4228,8 +4240,8 @@ exports[`TimeInput > renders correctly large 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-2 {
-  color: #222638;
+.emotion-3 {
+  color: #3f4250;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -4238,9 +4250,10 @@ exports[`TimeInput > renders correctly large 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  cursor: pointer;
 }
 
-.emotion-4 {
+.emotion-5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4272,41 +4285,41 @@ exports[`TimeInput > renders correctly large 1`] = `
   border: 1px solid #d9dadd;
 }
 
-.emotion-4:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-5:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-4[data-disabled="false"]:hover,
-.emotion-4 [data-disabled="false"]:focus {
+.emotion-5[data-disabled="false"]:hover,
+.emotion-5 [data-disabled="false"]:focus {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-4:focus-within {
+.emotion-5:focus-within {
   border-color: #792dd4;
 }
 
-.emotion-4[data-size='small'] {
+.emotion-5[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-4[data-size='medium'] {
+.emotion-5[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-4[data-size='large'] {
+.emotion-5[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-4[data-readonly='true'] {
+.emotion-5[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-4[data-disabled='true'] {
+.emotion-5[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
@@ -4316,20 +4329,20 @@ exports[`TimeInput > renders correctly large 1`] = `
   user-select: none;
 }
 
-.emotion-4[data-error='true'] {
+.emotion-5[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-4[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-5[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-4[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
+.emotion-5[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
   border-color: #92103f;
 }
 
-.emotion-6 {
+.emotion-7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4352,7 +4365,7 @@ exports[`TimeInput > renders correctly large 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-10 {
+.emotion-11 {
   border: none;
   outline: none;
   background: transparent;
@@ -4365,30 +4378,30 @@ exports[`TimeInput > renders correctly large 1`] = `
   caret-color: transparent;
 }
 
-.emotion-10[data-size='large'] {
+.emotion-11[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-10:not(:disabled):hover {
+.emotion-11:not(:disabled):hover {
   background-color: #e9eaeb;
   color: #727683;
 }
 
-.emotion-10:not(:disabled):active,
-.emotion-10:not(:disabled):focus {
+.emotion-11:not(:disabled):active,
+.emotion-11:not(:disabled):focus {
   background-color: #e9eaeb;
   color: #3f4250;
 }
 
-.emotion-10:-moz-read-only {
+.emotion-11:-moz-read-only {
   cursor: default;
 }
 
-.emotion-10:read-only {
+.emotion-11:read-only {
   cursor: default;
 }
 
-.emotion-10:disabled {
+.emotion-11:disabled {
   cursor: not-allowed;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -4396,19 +4409,19 @@ exports[`TimeInput > renders correctly large 1`] = `
   user-select: none;
 }
 
-.emotion-10[data-period="true"] {
+.emotion-11[data-period="true"] {
   color: #727683;
 }
 
-.emotion-10::-moz-selection {
+.emotion-11::-moz-selection {
   background: none;
 }
 
-.emotion-10::selection {
+.emotion-11::selection {
   background: none;
 }
 
-.emotion-13 {
+.emotion-14 {
   color: #3f4250;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
@@ -4428,28 +4441,28 @@ exports[`TimeInput > renders correctly large 1`] = `
       class="emotion-0 emotion-1"
     >
       <label
-        class="emotion-2 emotion-3"
+        class="emotion-2 emotion-3 emotion-4"
         for=":ru:"
       >
         test
       </label>
       <div
-        class="emotion-4 emotion-5"
+        class="emotion-5 emotion-6"
         data-disabled="false"
         data-error="false"
         data-readonly="false"
         data-size="large"
       >
         <div
-          class="emotion-6 emotion-1"
+          class="emotion-7 emotion-1"
         >
           <div
-            class="emotion-6 emotion-1"
+            class="emotion-7 emotion-1"
           >
             <input
               aria-valuemax="23"
               aria-valuemin="0"
-              class="emotion-10 emotion-11"
+              class="emotion-11 emotion-12"
               data-size="large"
               data-testid="hours-input"
               placeholder="00"
@@ -4457,18 +4470,18 @@ exports[`TimeInput > renders correctly large 1`] = `
               value=""
             />
             <span
-              class="emotion-12 emotion-13 emotion-3"
+              class="emotion-13 emotion-14 emotion-4"
             >
               :
             </span>
           </div>
           <div
-            class="emotion-6 emotion-1"
+            class="emotion-7 emotion-1"
           >
             <input
               aria-valuemax="59"
               aria-valuemin="0"
-              class="emotion-10 emotion-11"
+              class="emotion-11 emotion-12"
               data-size="large"
               data-testid="minutes-input"
               placeholder="00"
@@ -4476,18 +4489,18 @@ exports[`TimeInput > renders correctly large 1`] = `
               value=""
             />
             <span
-              class="emotion-12 emotion-13 emotion-3"
+              class="emotion-13 emotion-14 emotion-4"
             >
               :
             </span>
           </div>
           <div
-            class="emotion-6 emotion-1"
+            class="emotion-7 emotion-1"
           >
             <input
               aria-valuemax="59"
               aria-valuemin="0"
-              class="emotion-10 emotion-11"
+              class="emotion-11 emotion-12"
               data-size="large"
               data-testid="seconds-input"
               placeholder="00"
@@ -4527,8 +4540,8 @@ exports[`TimeInput > renders correctly readOnly 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-2 {
-  color: #222638;
+.emotion-3 {
+  color: #3f4250;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -4537,9 +4550,10 @@ exports[`TimeInput > renders correctly readOnly 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  cursor: pointer;
 }
 
-.emotion-4 {
+.emotion-5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4571,41 +4585,41 @@ exports[`TimeInput > renders correctly readOnly 1`] = `
   border: 1px solid #d9dadd;
 }
 
-.emotion-4:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-5:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-4[data-disabled="false"]:hover,
-.emotion-4 [data-disabled="false"]:focus {
+.emotion-5[data-disabled="false"]:hover,
+.emotion-5 [data-disabled="false"]:focus {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-4:focus-within {
+.emotion-5:focus-within {
   border-color: #792dd4;
 }
 
-.emotion-4[data-size='small'] {
+.emotion-5[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-4[data-size='medium'] {
+.emotion-5[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-4[data-size='large'] {
+.emotion-5[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-4[data-readonly='true'] {
+.emotion-5[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-4[data-disabled='true'] {
+.emotion-5[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
@@ -4615,20 +4629,20 @@ exports[`TimeInput > renders correctly readOnly 1`] = `
   user-select: none;
 }
 
-.emotion-4[data-error='true'] {
+.emotion-5[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-4[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-5[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-4[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
+.emotion-5[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
   border-color: #92103f;
 }
 
-.emotion-6 {
+.emotion-7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4651,7 +4665,7 @@ exports[`TimeInput > renders correctly readOnly 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-10 {
+.emotion-11 {
   border: none;
   outline: none;
   background: transparent;
@@ -4664,30 +4678,30 @@ exports[`TimeInput > renders correctly readOnly 1`] = `
   caret-color: transparent;
 }
 
-.emotion-10[data-size='large'] {
+.emotion-11[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-10:not(:disabled):hover {
+.emotion-11:not(:disabled):hover {
   background-color: #e9eaeb;
   color: #727683;
 }
 
-.emotion-10:not(:disabled):active,
-.emotion-10:not(:disabled):focus {
+.emotion-11:not(:disabled):active,
+.emotion-11:not(:disabled):focus {
   background-color: #e9eaeb;
   color: #3f4250;
 }
 
-.emotion-10:-moz-read-only {
+.emotion-11:-moz-read-only {
   cursor: default;
 }
 
-.emotion-10:read-only {
+.emotion-11:read-only {
   cursor: default;
 }
 
-.emotion-10:disabled {
+.emotion-11:disabled {
   cursor: not-allowed;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -4695,19 +4709,19 @@ exports[`TimeInput > renders correctly readOnly 1`] = `
   user-select: none;
 }
 
-.emotion-10[data-period="true"] {
+.emotion-11[data-period="true"] {
   color: #727683;
 }
 
-.emotion-10::-moz-selection {
+.emotion-11::-moz-selection {
   background: none;
 }
 
-.emotion-10::selection {
+.emotion-11::selection {
   background: none;
 }
 
-.emotion-13 {
+.emotion-14 {
   color: #3f4250;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
@@ -4727,28 +4741,28 @@ exports[`TimeInput > renders correctly readOnly 1`] = `
       class="emotion-0 emotion-1"
     >
       <label
-        class="emotion-2 emotion-3"
+        class="emotion-2 emotion-3 emotion-4"
         for=":r7:"
       >
         test
       </label>
       <div
-        class="emotion-4 emotion-5"
+        class="emotion-5 emotion-6"
         data-disabled="false"
         data-error="false"
         data-readonly="true"
         data-size="medium"
       >
         <div
-          class="emotion-6 emotion-1"
+          class="emotion-7 emotion-1"
         >
           <div
-            class="emotion-6 emotion-1"
+            class="emotion-7 emotion-1"
           >
             <input
               aria-valuemax="23"
               aria-valuemin="0"
-              class="emotion-10 emotion-11"
+              class="emotion-11 emotion-12"
               data-size="medium"
               data-testid="hours-input"
               placeholder="00"
@@ -4757,18 +4771,18 @@ exports[`TimeInput > renders correctly readOnly 1`] = `
               value=""
             />
             <span
-              class="emotion-12 emotion-13 emotion-3"
+              class="emotion-13 emotion-14 emotion-4"
             >
               :
             </span>
           </div>
           <div
-            class="emotion-6 emotion-1"
+            class="emotion-7 emotion-1"
           >
             <input
               aria-valuemax="59"
               aria-valuemin="0"
-              class="emotion-10 emotion-11"
+              class="emotion-11 emotion-12"
               data-size="medium"
               data-testid="minutes-input"
               placeholder="00"
@@ -4777,18 +4791,18 @@ exports[`TimeInput > renders correctly readOnly 1`] = `
               value=""
             />
             <span
-              class="emotion-12 emotion-13 emotion-3"
+              class="emotion-13 emotion-14 emotion-4"
             >
               :
             </span>
           </div>
           <div
-            class="emotion-6 emotion-1"
+            class="emotion-7 emotion-1"
           >
             <input
               aria-valuemax="59"
               aria-valuemin="0"
-              class="emotion-10 emotion-11"
+              class="emotion-11 emotion-12"
               data-size="medium"
               data-testid="seconds-input"
               placeholder="00"
@@ -4852,8 +4866,8 @@ exports[`TimeInput > renders correctly required 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-4 {
-  color: #222638;
+.emotion-5 {
+  color: #3f4250;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -4862,9 +4876,10 @@ exports[`TimeInput > renders correctly required 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  cursor: pointer;
 }
 
-.emotion-6 {
+.emotion-7 {
   color: #b3144d;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
@@ -4876,7 +4891,7 @@ exports[`TimeInput > renders correctly required 1`] = `
   text-decoration: none;
 }
 
-.emotion-8 {
+.emotion-9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4908,41 +4923,41 @@ exports[`TimeInput > renders correctly required 1`] = `
   border: 1px solid #d9dadd;
 }
 
-.emotion-8:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-9:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-8[data-disabled="false"]:hover,
-.emotion-8 [data-disabled="false"]:focus {
+.emotion-9[data-disabled="false"]:hover,
+.emotion-9 [data-disabled="false"]:focus {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-8:focus-within {
+.emotion-9:focus-within {
   border-color: #792dd4;
 }
 
-.emotion-8[data-size='small'] {
+.emotion-9[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-8[data-size='medium'] {
+.emotion-9[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-8[data-size='large'] {
+.emotion-9[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-8[data-readonly='true'] {
+.emotion-9[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-8[data-disabled='true'] {
+.emotion-9[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
@@ -4952,20 +4967,20 @@ exports[`TimeInput > renders correctly required 1`] = `
   user-select: none;
 }
 
-.emotion-8[data-error='true'] {
+.emotion-9[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-8[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-9[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-8[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
+.emotion-9[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
   border-color: #92103f;
 }
 
-.emotion-10 {
+.emotion-11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4988,7 +5003,7 @@ exports[`TimeInput > renders correctly required 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-14 {
+.emotion-15 {
   border: none;
   outline: none;
   background: transparent;
@@ -5001,30 +5016,30 @@ exports[`TimeInput > renders correctly required 1`] = `
   caret-color: transparent;
 }
 
-.emotion-14[data-size='large'] {
+.emotion-15[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-14:not(:disabled):hover {
+.emotion-15:not(:disabled):hover {
   background-color: #e9eaeb;
   color: #727683;
 }
 
-.emotion-14:not(:disabled):active,
-.emotion-14:not(:disabled):focus {
+.emotion-15:not(:disabled):active,
+.emotion-15:not(:disabled):focus {
   background-color: #e9eaeb;
   color: #3f4250;
 }
 
-.emotion-14:-moz-read-only {
+.emotion-15:-moz-read-only {
   cursor: default;
 }
 
-.emotion-14:read-only {
+.emotion-15:read-only {
   cursor: default;
 }
 
-.emotion-14:disabled {
+.emotion-15:disabled {
   cursor: not-allowed;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -5032,19 +5047,19 @@ exports[`TimeInput > renders correctly required 1`] = `
   user-select: none;
 }
 
-.emotion-14[data-period="true"] {
+.emotion-15[data-period="true"] {
   color: #727683;
 }
 
-.emotion-14::-moz-selection {
+.emotion-15::-moz-selection {
   background: none;
 }
 
-.emotion-14::selection {
+.emotion-15::selection {
   background: none;
 }
 
-.emotion-17 {
+.emotion-18 {
   color: #3f4250;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
@@ -5067,35 +5082,35 @@ exports[`TimeInput > renders correctly required 1`] = `
         class="emotion-2 emotion-1"
       >
         <label
-          class="emotion-4 emotion-5"
+          class="emotion-4 emotion-5 emotion-6"
           for=":rl:"
         >
           test
         </label>
         <span
-          class="emotion-6 emotion-5"
+          class="emotion-7 emotion-6"
         >
           *
         </span>
       </div>
       <div
         aria-required="true"
-        class="emotion-8 emotion-9"
+        class="emotion-9 emotion-10"
         data-disabled="false"
         data-error="false"
         data-readonly="false"
         data-size="medium"
       >
         <div
-          class="emotion-10 emotion-1"
+          class="emotion-11 emotion-1"
         >
           <div
-            class="emotion-10 emotion-1"
+            class="emotion-11 emotion-1"
           >
             <input
               aria-valuemax="23"
               aria-valuemin="0"
-              class="emotion-14 emotion-15"
+              class="emotion-15 emotion-16"
               data-size="medium"
               data-testid="hours-input"
               placeholder="00"
@@ -5103,18 +5118,18 @@ exports[`TimeInput > renders correctly required 1`] = `
               value=""
             />
             <span
-              class="emotion-16 emotion-17 emotion-5"
+              class="emotion-17 emotion-18 emotion-6"
             >
               :
             </span>
           </div>
           <div
-            class="emotion-10 emotion-1"
+            class="emotion-11 emotion-1"
           >
             <input
               aria-valuemax="59"
               aria-valuemin="0"
-              class="emotion-14 emotion-15"
+              class="emotion-15 emotion-16"
               data-size="medium"
               data-testid="minutes-input"
               placeholder="00"
@@ -5122,18 +5137,18 @@ exports[`TimeInput > renders correctly required 1`] = `
               value=""
             />
             <span
-              class="emotion-16 emotion-17 emotion-5"
+              class="emotion-17 emotion-18 emotion-6"
             >
               :
             </span>
           </div>
           <div
-            class="emotion-10 emotion-1"
+            class="emotion-11 emotion-1"
           >
             <input
               aria-valuemax="59"
               aria-valuemin="0"
-              class="emotion-14 emotion-15"
+              class="emotion-15 emotion-16"
               data-size="medium"
               data-testid="seconds-input"
               placeholder="00"
@@ -5173,8 +5188,8 @@ exports[`TimeInput > renders correctly small 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-2 {
-  color: #222638;
+.emotion-3 {
+  color: #3f4250;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -5183,9 +5198,10 @@ exports[`TimeInput > renders correctly small 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  cursor: pointer;
 }
 
-.emotion-4 {
+.emotion-5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5217,41 +5233,41 @@ exports[`TimeInput > renders correctly small 1`] = `
   border: 1px solid #d9dadd;
 }
 
-.emotion-4:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-5:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-4[data-disabled="false"]:hover,
-.emotion-4 [data-disabled="false"]:focus {
+.emotion-5[data-disabled="false"]:hover,
+.emotion-5 [data-disabled="false"]:focus {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-4:focus-within {
+.emotion-5:focus-within {
   border-color: #792dd4;
 }
 
-.emotion-4[data-size='small'] {
+.emotion-5[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-4[data-size='medium'] {
+.emotion-5[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-4[data-size='large'] {
+.emotion-5[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-4[data-readonly='true'] {
+.emotion-5[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-4[data-disabled='true'] {
+.emotion-5[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
@@ -5261,20 +5277,20 @@ exports[`TimeInput > renders correctly small 1`] = `
   user-select: none;
 }
 
-.emotion-4[data-error='true'] {
+.emotion-5[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-4[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-5[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-4[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
+.emotion-5[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
   border-color: #92103f;
 }
 
-.emotion-6 {
+.emotion-7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5297,7 +5313,7 @@ exports[`TimeInput > renders correctly small 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-10 {
+.emotion-11 {
   border: none;
   outline: none;
   background: transparent;
@@ -5310,30 +5326,30 @@ exports[`TimeInput > renders correctly small 1`] = `
   caret-color: transparent;
 }
 
-.emotion-10[data-size='large'] {
+.emotion-11[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-10:not(:disabled):hover {
+.emotion-11:not(:disabled):hover {
   background-color: #e9eaeb;
   color: #727683;
 }
 
-.emotion-10:not(:disabled):active,
-.emotion-10:not(:disabled):focus {
+.emotion-11:not(:disabled):active,
+.emotion-11:not(:disabled):focus {
   background-color: #e9eaeb;
   color: #3f4250;
 }
 
-.emotion-10:-moz-read-only {
+.emotion-11:-moz-read-only {
   cursor: default;
 }
 
-.emotion-10:read-only {
+.emotion-11:read-only {
   cursor: default;
 }
 
-.emotion-10:disabled {
+.emotion-11:disabled {
   cursor: not-allowed;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -5341,19 +5357,19 @@ exports[`TimeInput > renders correctly small 1`] = `
   user-select: none;
 }
 
-.emotion-10[data-period="true"] {
+.emotion-11[data-period="true"] {
   color: #727683;
 }
 
-.emotion-10::-moz-selection {
+.emotion-11::-moz-selection {
   background: none;
 }
 
-.emotion-10::selection {
+.emotion-11::selection {
   background: none;
 }
 
-.emotion-13 {
+.emotion-14 {
   color: #3f4250;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
@@ -5373,28 +5389,28 @@ exports[`TimeInput > renders correctly small 1`] = `
       class="emotion-0 emotion-1"
     >
       <label
-        class="emotion-2 emotion-3"
+        class="emotion-2 emotion-3 emotion-4"
         for=":rq:"
       >
         test
       </label>
       <div
-        class="emotion-4 emotion-5"
+        class="emotion-5 emotion-6"
         data-disabled="false"
         data-error="false"
         data-readonly="false"
         data-size="small"
       >
         <div
-          class="emotion-6 emotion-1"
+          class="emotion-7 emotion-1"
         >
           <div
-            class="emotion-6 emotion-1"
+            class="emotion-7 emotion-1"
           >
             <input
               aria-valuemax="23"
               aria-valuemin="0"
-              class="emotion-10 emotion-11"
+              class="emotion-11 emotion-12"
               data-size="small"
               data-testid="hours-input"
               placeholder="00"
@@ -5402,18 +5418,18 @@ exports[`TimeInput > renders correctly small 1`] = `
               value=""
             />
             <span
-              class="emotion-12 emotion-13 emotion-3"
+              class="emotion-13 emotion-14 emotion-4"
             >
               :
             </span>
           </div>
           <div
-            class="emotion-6 emotion-1"
+            class="emotion-7 emotion-1"
           >
             <input
               aria-valuemax="59"
               aria-valuemin="0"
-              class="emotion-10 emotion-11"
+              class="emotion-11 emotion-12"
               data-size="small"
               data-testid="minutes-input"
               placeholder="00"
@@ -5421,18 +5437,18 @@ exports[`TimeInput > renders correctly small 1`] = `
               value=""
             />
             <span
-              class="emotion-12 emotion-13 emotion-3"
+              class="emotion-13 emotion-14 emotion-4"
             >
               :
             </span>
           </div>
           <div
-            class="emotion-6 emotion-1"
+            class="emotion-7 emotion-1"
           >
             <input
               aria-valuemax="59"
               aria-valuemin="0"
-              class="emotion-10 emotion-11"
+              class="emotion-11 emotion-12"
               data-size="small"
               data-testid="seconds-input"
               placeholder="00"
@@ -5472,8 +5488,8 @@ exports[`TimeInput > renders correctly with 12-hour format 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-2 {
-  color: #222638;
+.emotion-3 {
+  color: #3f4250;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -5482,9 +5498,10 @@ exports[`TimeInput > renders correctly with 12-hour format 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  cursor: pointer;
 }
 
-.emotion-4 {
+.emotion-5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5516,41 +5533,41 @@ exports[`TimeInput > renders correctly with 12-hour format 1`] = `
   border: 1px solid #d9dadd;
 }
 
-.emotion-4:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-5:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-4[data-disabled="false"]:hover,
-.emotion-4 [data-disabled="false"]:focus {
+.emotion-5[data-disabled="false"]:hover,
+.emotion-5 [data-disabled="false"]:focus {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-4:focus-within {
+.emotion-5:focus-within {
   border-color: #792dd4;
 }
 
-.emotion-4[data-size='small'] {
+.emotion-5[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-4[data-size='medium'] {
+.emotion-5[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-4[data-size='large'] {
+.emotion-5[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-4[data-readonly='true'] {
+.emotion-5[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-4[data-disabled='true'] {
+.emotion-5[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
@@ -5560,20 +5577,20 @@ exports[`TimeInput > renders correctly with 12-hour format 1`] = `
   user-select: none;
 }
 
-.emotion-4[data-error='true'] {
+.emotion-5[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-4[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-5[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-4[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
+.emotion-5[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
   border-color: #92103f;
 }
 
-.emotion-6 {
+.emotion-7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5596,7 +5613,7 @@ exports[`TimeInput > renders correctly with 12-hour format 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-10 {
+.emotion-11 {
   border: none;
   outline: none;
   background: transparent;
@@ -5609,30 +5626,30 @@ exports[`TimeInput > renders correctly with 12-hour format 1`] = `
   caret-color: transparent;
 }
 
-.emotion-10[data-size='large'] {
+.emotion-11[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-10:not(:disabled):hover {
+.emotion-11:not(:disabled):hover {
   background-color: #e9eaeb;
   color: #727683;
 }
 
-.emotion-10:not(:disabled):active,
-.emotion-10:not(:disabled):focus {
+.emotion-11:not(:disabled):active,
+.emotion-11:not(:disabled):focus {
   background-color: #e9eaeb;
   color: #3f4250;
 }
 
-.emotion-10:-moz-read-only {
+.emotion-11:-moz-read-only {
   cursor: default;
 }
 
-.emotion-10:read-only {
+.emotion-11:read-only {
   cursor: default;
 }
 
-.emotion-10:disabled {
+.emotion-11:disabled {
   cursor: not-allowed;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -5640,19 +5657,19 @@ exports[`TimeInput > renders correctly with 12-hour format 1`] = `
   user-select: none;
 }
 
-.emotion-10[data-period="true"] {
+.emotion-11[data-period="true"] {
   color: #727683;
 }
 
-.emotion-10::-moz-selection {
+.emotion-11::-moz-selection {
   background: none;
 }
 
-.emotion-10::selection {
+.emotion-11::selection {
   background: none;
 }
 
-.emotion-13 {
+.emotion-14 {
   color: #3f4250;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
@@ -5672,28 +5689,28 @@ exports[`TimeInput > renders correctly with 12-hour format 1`] = `
       class="emotion-0 emotion-1"
     >
       <label
-        class="emotion-2 emotion-3"
+        class="emotion-2 emotion-3 emotion-4"
         for=":r12:"
       >
         test
       </label>
       <div
-        class="emotion-4 emotion-5"
+        class="emotion-5 emotion-6"
         data-disabled="false"
         data-error="false"
         data-readonly="false"
         data-size="medium"
       >
         <div
-          class="emotion-6 emotion-1"
+          class="emotion-7 emotion-1"
         >
           <div
-            class="emotion-6 emotion-1"
+            class="emotion-7 emotion-1"
           >
             <input
               aria-valuemax="12"
               aria-valuemin="1"
-              class="emotion-10 emotion-11"
+              class="emotion-11 emotion-12"
               data-size="medium"
               data-testid="hours-input"
               placeholder="00"
@@ -5701,18 +5718,18 @@ exports[`TimeInput > renders correctly with 12-hour format 1`] = `
               value=""
             />
             <span
-              class="emotion-12 emotion-13 emotion-3"
+              class="emotion-13 emotion-14 emotion-4"
             >
               :
             </span>
           </div>
           <div
-            class="emotion-6 emotion-1"
+            class="emotion-7 emotion-1"
           >
             <input
               aria-valuemax="59"
               aria-valuemin="0"
-              class="emotion-10 emotion-11"
+              class="emotion-11 emotion-12"
               data-size="medium"
               data-testid="minutes-input"
               placeholder="00"
@@ -5720,18 +5737,18 @@ exports[`TimeInput > renders correctly with 12-hour format 1`] = `
               value=""
             />
             <span
-              class="emotion-12 emotion-13 emotion-3"
+              class="emotion-13 emotion-14 emotion-4"
             >
               :
             </span>
           </div>
           <div
-            class="emotion-6 emotion-1"
+            class="emotion-7 emotion-1"
           >
             <input
               aria-valuemax="59"
               aria-valuemin="0"
-              class="emotion-10 emotion-11"
+              class="emotion-11 emotion-12"
               data-size="medium"
               data-testid="seconds-input"
               placeholder="00"
@@ -5743,7 +5760,7 @@ exports[`TimeInput > renders correctly with 12-hour format 1`] = `
             aria-valuemax="12"
             aria-valuemin="0"
             aria-valuenow="12"
-            class="emotion-10 emotion-11"
+            class="emotion-11 emotion-12"
             data-period="true"
             data-size="medium"
             data-testid="am-pm-input"
@@ -6063,8 +6080,8 @@ exports[`TimeInput > renders correctly with error 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-2 {
-  color: #222638;
+.emotion-3 {
+  color: #3f4250;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -6073,9 +6090,10 @@ exports[`TimeInput > renders correctly with error 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  cursor: pointer;
 }
 
-.emotion-4 {
+.emotion-5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6107,41 +6125,41 @@ exports[`TimeInput > renders correctly with error 1`] = `
   border: 1px solid #d9dadd;
 }
 
-.emotion-4:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-5:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-4[data-disabled="false"]:hover,
-.emotion-4 [data-disabled="false"]:focus {
+.emotion-5[data-disabled="false"]:hover,
+.emotion-5 [data-disabled="false"]:focus {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-4:focus-within {
+.emotion-5:focus-within {
   border-color: #792dd4;
 }
 
-.emotion-4[data-size='small'] {
+.emotion-5[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-4[data-size='medium'] {
+.emotion-5[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-4[data-size='large'] {
+.emotion-5[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-4[data-readonly='true'] {
+.emotion-5[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-4[data-disabled='true'] {
+.emotion-5[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
@@ -6151,20 +6169,20 @@ exports[`TimeInput > renders correctly with error 1`] = `
   user-select: none;
 }
 
-.emotion-4[data-error='true'] {
+.emotion-5[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-4[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-5[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-4[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
+.emotion-5[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
   border-color: #92103f;
 }
 
-.emotion-6 {
+.emotion-7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6187,7 +6205,7 @@ exports[`TimeInput > renders correctly with error 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-10 {
+.emotion-11 {
   border: none;
   outline: none;
   background: transparent;
@@ -6200,30 +6218,30 @@ exports[`TimeInput > renders correctly with error 1`] = `
   caret-color: transparent;
 }
 
-.emotion-10[data-size='large'] {
+.emotion-11[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-10:not(:disabled):hover {
+.emotion-11:not(:disabled):hover {
   background-color: #e9eaeb;
   color: #727683;
 }
 
-.emotion-10:not(:disabled):active,
-.emotion-10:not(:disabled):focus {
+.emotion-11:not(:disabled):active,
+.emotion-11:not(:disabled):focus {
   background-color: #e9eaeb;
   color: #3f4250;
 }
 
-.emotion-10:-moz-read-only {
+.emotion-11:-moz-read-only {
   cursor: default;
 }
 
-.emotion-10:read-only {
+.emotion-11:read-only {
   cursor: default;
 }
 
-.emotion-10:disabled {
+.emotion-11:disabled {
   cursor: not-allowed;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -6231,19 +6249,19 @@ exports[`TimeInput > renders correctly with error 1`] = `
   user-select: none;
 }
 
-.emotion-10[data-period="true"] {
+.emotion-11[data-period="true"] {
   color: #727683;
 }
 
-.emotion-10::-moz-selection {
+.emotion-11::-moz-selection {
   background: none;
 }
 
-.emotion-10::selection {
+.emotion-11::selection {
   background: none;
 }
 
-.emotion-13 {
+.emotion-14 {
   color: #3f4250;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
@@ -6256,7 +6274,7 @@ exports[`TimeInput > renders correctly with error 1`] = `
   padding-inline: 0.125rem;
 }
 
-.emotion-26 {
+.emotion-27 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6279,7 +6297,7 @@ exports[`TimeInput > renders correctly with error 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-28 {
+.emotion-29 {
   vertical-align: middle;
   fill: #b3144d;
   height: 1rem;
@@ -6288,12 +6306,12 @@ exports[`TimeInput > renders correctly with error 1`] = `
   min-height: 1rem;
 }
 
-.emotion-28 .fillStroke {
+.emotion-29 .fillStroke {
   stroke: #b3144d;
   fill: none;
 }
 
-.emotion-30 {
+.emotion-31 {
   color: #b3144d;
   font-size: 0.75rem;
   font-family: Inter,Asap,sans-serif;
@@ -6312,28 +6330,28 @@ exports[`TimeInput > renders correctly with error 1`] = `
       class="emotion-0 emotion-1"
     >
       <label
-        class="emotion-2 emotion-3"
+        class="emotion-2 emotion-3 emotion-4"
         for=":rb:"
       >
         test
       </label>
       <div
-        class="emotion-4 emotion-5"
+        class="emotion-5 emotion-6"
         data-disabled="false"
         data-error="true"
         data-readonly="false"
         data-size="medium"
       >
         <div
-          class="emotion-6 emotion-1"
+          class="emotion-7 emotion-1"
         >
           <div
-            class="emotion-6 emotion-1"
+            class="emotion-7 emotion-1"
           >
             <input
               aria-valuemax="23"
               aria-valuemin="0"
-              class="emotion-10 emotion-11"
+              class="emotion-11 emotion-12"
               data-size="medium"
               data-testid="hours-input"
               placeholder="00"
@@ -6341,18 +6359,18 @@ exports[`TimeInput > renders correctly with error 1`] = `
               value=""
             />
             <span
-              class="emotion-12 emotion-13 emotion-3"
+              class="emotion-13 emotion-14 emotion-4"
             >
               :
             </span>
           </div>
           <div
-            class="emotion-6 emotion-1"
+            class="emotion-7 emotion-1"
           >
             <input
               aria-valuemax="59"
               aria-valuemin="0"
-              class="emotion-10 emotion-11"
+              class="emotion-11 emotion-12"
               data-size="medium"
               data-testid="minutes-input"
               placeholder="00"
@@ -6360,18 +6378,18 @@ exports[`TimeInput > renders correctly with error 1`] = `
               value=""
             />
             <span
-              class="emotion-12 emotion-13 emotion-3"
+              class="emotion-13 emotion-14 emotion-4"
             >
               :
             </span>
           </div>
           <div
-            class="emotion-6 emotion-1"
+            class="emotion-7 emotion-1"
           >
             <input
               aria-valuemax="59"
               aria-valuemin="0"
-              class="emotion-10 emotion-11"
+              class="emotion-11 emotion-12"
               data-size="medium"
               data-testid="seconds-input"
               placeholder="00"
@@ -6381,10 +6399,10 @@ exports[`TimeInput > renders correctly with error 1`] = `
           </div>
         </div>
         <div
-          class="emotion-26 emotion-1"
+          class="emotion-27 emotion-1"
         >
           <svg
-            class="emotion-28 emotion-29"
+            class="emotion-29 emotion-30"
             viewBox="0 0 20 20"
           >
             <path
@@ -6396,7 +6414,7 @@ exports[`TimeInput > renders correctly with error 1`] = `
         </div>
       </div>
       <p
-        class="emotion-30 emotion-3"
+        class="emotion-31 emotion-4"
       >
         error
       </p>
@@ -6453,8 +6471,8 @@ exports[`TimeInput > renders correctly with helper and error 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-4 {
-  color: #222638;
+.emotion-5 {
+  color: #3f4250;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -6463,9 +6481,10 @@ exports[`TimeInput > renders correctly with helper and error 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  cursor: pointer;
 }
 
-.emotion-6 {
+.emotion-7 {
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
@@ -6476,7 +6495,7 @@ exports[`TimeInput > renders correctly with helper and error 1`] = `
   text-decoration: none;
 }
 
-.emotion-8 {
+.emotion-9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6508,41 +6527,41 @@ exports[`TimeInput > renders correctly with helper and error 1`] = `
   border: 1px solid #d9dadd;
 }
 
-.emotion-8:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-9:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-8[data-disabled="false"]:hover,
-.emotion-8 [data-disabled="false"]:focus {
+.emotion-9[data-disabled="false"]:hover,
+.emotion-9 [data-disabled="false"]:focus {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-8:focus-within {
+.emotion-9:focus-within {
   border-color: #792dd4;
 }
 
-.emotion-8[data-size='small'] {
+.emotion-9[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-8[data-size='medium'] {
+.emotion-9[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-8[data-size='large'] {
+.emotion-9[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-8[data-readonly='true'] {
+.emotion-9[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-8[data-disabled='true'] {
+.emotion-9[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
@@ -6552,20 +6571,20 @@ exports[`TimeInput > renders correctly with helper and error 1`] = `
   user-select: none;
 }
 
-.emotion-8[data-error='true'] {
+.emotion-9[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-8[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-9[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-8[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
+.emotion-9[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
   border-color: #92103f;
 }
 
-.emotion-10 {
+.emotion-11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6588,7 +6607,7 @@ exports[`TimeInput > renders correctly with helper and error 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-14 {
+.emotion-15 {
   border: none;
   outline: none;
   background: transparent;
@@ -6601,30 +6620,30 @@ exports[`TimeInput > renders correctly with helper and error 1`] = `
   caret-color: transparent;
 }
 
-.emotion-14[data-size='large'] {
+.emotion-15[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-14:not(:disabled):hover {
+.emotion-15:not(:disabled):hover {
   background-color: #e9eaeb;
   color: #727683;
 }
 
-.emotion-14:not(:disabled):active,
-.emotion-14:not(:disabled):focus {
+.emotion-15:not(:disabled):active,
+.emotion-15:not(:disabled):focus {
   background-color: #e9eaeb;
   color: #3f4250;
 }
 
-.emotion-14:-moz-read-only {
+.emotion-15:-moz-read-only {
   cursor: default;
 }
 
-.emotion-14:read-only {
+.emotion-15:read-only {
   cursor: default;
 }
 
-.emotion-14:disabled {
+.emotion-15:disabled {
   cursor: not-allowed;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -6632,19 +6651,19 @@ exports[`TimeInput > renders correctly with helper and error 1`] = `
   user-select: none;
 }
 
-.emotion-14[data-period="true"] {
+.emotion-15[data-period="true"] {
   color: #727683;
 }
 
-.emotion-14::-moz-selection {
+.emotion-15::-moz-selection {
   background: none;
 }
 
-.emotion-14::selection {
+.emotion-15::selection {
   background: none;
 }
 
-.emotion-17 {
+.emotion-18 {
   color: #3f4250;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
@@ -6657,7 +6676,7 @@ exports[`TimeInput > renders correctly with helper and error 1`] = `
   padding-inline: 0.125rem;
 }
 
-.emotion-32 {
+.emotion-33 {
   vertical-align: middle;
   fill: #b3144d;
   height: 1rem;
@@ -6666,12 +6685,12 @@ exports[`TimeInput > renders correctly with helper and error 1`] = `
   min-height: 1rem;
 }
 
-.emotion-32 .fillStroke {
+.emotion-33 .fillStroke {
   stroke: #b3144d;
   fill: none;
 }
 
-.emotion-34 {
+.emotion-35 {
   color: #b3144d;
   font-size: 0.75rem;
   font-family: Inter,Asap,sans-serif;
@@ -6693,34 +6712,34 @@ exports[`TimeInput > renders correctly with helper and error 1`] = `
         class="emotion-2 emotion-1"
       >
         <label
-          class="emotion-4 emotion-5"
+          class="emotion-4 emotion-5 emotion-6"
           for=":r1b:"
         >
           label
         </label>
         <span
-          class="emotion-6 emotion-5"
+          class="emotion-7 emotion-6"
         >
           label description
         </span>
       </div>
       <div
-        class="emotion-8 emotion-9"
+        class="emotion-9 emotion-10"
         data-disabled="false"
         data-error="true"
         data-readonly="false"
         data-size="medium"
       >
         <div
-          class="emotion-10 emotion-1"
+          class="emotion-11 emotion-1"
         >
           <div
-            class="emotion-10 emotion-1"
+            class="emotion-11 emotion-1"
           >
             <input
               aria-valuemax="23"
               aria-valuemin="0"
-              class="emotion-14 emotion-15"
+              class="emotion-15 emotion-16"
               data-size="medium"
               data-testid="hours-input"
               placeholder="00"
@@ -6728,18 +6747,18 @@ exports[`TimeInput > renders correctly with helper and error 1`] = `
               value=""
             />
             <span
-              class="emotion-16 emotion-17 emotion-5"
+              class="emotion-17 emotion-18 emotion-6"
             >
               :
             </span>
           </div>
           <div
-            class="emotion-10 emotion-1"
+            class="emotion-11 emotion-1"
           >
             <input
               aria-valuemax="59"
               aria-valuemin="0"
-              class="emotion-14 emotion-15"
+              class="emotion-15 emotion-16"
               data-size="medium"
               data-testid="minutes-input"
               placeholder="00"
@@ -6747,18 +6766,18 @@ exports[`TimeInput > renders correctly with helper and error 1`] = `
               value=""
             />
             <span
-              class="emotion-16 emotion-17 emotion-5"
+              class="emotion-17 emotion-18 emotion-6"
             >
               :
             </span>
           </div>
           <div
-            class="emotion-10 emotion-1"
+            class="emotion-11 emotion-1"
           >
             <input
               aria-valuemax="59"
               aria-valuemin="0"
-              class="emotion-14 emotion-15"
+              class="emotion-15 emotion-16"
               data-size="medium"
               data-testid="seconds-input"
               placeholder="00"
@@ -6771,7 +6790,7 @@ exports[`TimeInput > renders correctly with helper and error 1`] = `
           class="emotion-2 emotion-1"
         >
           <svg
-            class="emotion-32 emotion-33"
+            class="emotion-33 emotion-34"
             viewBox="0 0 20 20"
           >
             <path
@@ -6783,7 +6802,7 @@ exports[`TimeInput > renders correctly with helper and error 1`] = `
         </div>
       </div>
       <p
-        class="emotion-34 emotion-5"
+        class="emotion-35 emotion-6"
       />
     </div>
   </div>
@@ -6838,8 +6857,8 @@ exports[`TimeInput > renders correctly with label description and helper 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-4 {
-  color: #222638;
+.emotion-5 {
+  color: #3f4250;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -6848,9 +6867,10 @@ exports[`TimeInput > renders correctly with label description and helper 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  cursor: pointer;
 }
 
-.emotion-6 {
+.emotion-7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6882,41 +6902,41 @@ exports[`TimeInput > renders correctly with label description and helper 1`] = `
   border: 1px solid #d9dadd;
 }
 
-.emotion-6:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-7:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-6[data-disabled="false"]:hover,
-.emotion-6 [data-disabled="false"]:focus {
+.emotion-7[data-disabled="false"]:hover,
+.emotion-7 [data-disabled="false"]:focus {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-6:focus-within {
+.emotion-7:focus-within {
   border-color: #792dd4;
 }
 
-.emotion-6[data-size='small'] {
+.emotion-7[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-6[data-size='medium'] {
+.emotion-7[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-6[data-size='large'] {
+.emotion-7[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-6[data-readonly='true'] {
+.emotion-7[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-6[data-disabled='true'] {
+.emotion-7[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
@@ -6926,20 +6946,20 @@ exports[`TimeInput > renders correctly with label description and helper 1`] = `
   user-select: none;
 }
 
-.emotion-6[data-error='true'] {
+.emotion-7[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-6[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-7[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-6[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
+.emotion-7[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
   border-color: #92103f;
 }
 
-.emotion-8 {
+.emotion-9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6962,7 +6982,7 @@ exports[`TimeInput > renders correctly with label description and helper 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-12 {
+.emotion-13 {
   border: none;
   outline: none;
   background: transparent;
@@ -6975,30 +6995,30 @@ exports[`TimeInput > renders correctly with label description and helper 1`] = `
   caret-color: transparent;
 }
 
-.emotion-12[data-size='large'] {
+.emotion-13[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-12:not(:disabled):hover {
+.emotion-13:not(:disabled):hover {
   background-color: #e9eaeb;
   color: #727683;
 }
 
-.emotion-12:not(:disabled):active,
-.emotion-12:not(:disabled):focus {
+.emotion-13:not(:disabled):active,
+.emotion-13:not(:disabled):focus {
   background-color: #e9eaeb;
   color: #3f4250;
 }
 
-.emotion-12:-moz-read-only {
+.emotion-13:-moz-read-only {
   cursor: default;
 }
 
-.emotion-12:read-only {
+.emotion-13:read-only {
   cursor: default;
 }
 
-.emotion-12:disabled {
+.emotion-13:disabled {
   cursor: not-allowed;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -7006,19 +7026,19 @@ exports[`TimeInput > renders correctly with label description and helper 1`] = `
   user-select: none;
 }
 
-.emotion-12[data-period="true"] {
+.emotion-13[data-period="true"] {
   color: #727683;
 }
 
-.emotion-12::-moz-selection {
+.emotion-13::-moz-selection {
   background: none;
 }
 
-.emotion-12::selection {
+.emotion-13::selection {
   background: none;
 }
 
-.emotion-15 {
+.emotion-16 {
   color: #3f4250;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
@@ -7031,7 +7051,7 @@ exports[`TimeInput > renders correctly with label description and helper 1`] = `
   padding-inline: 0.125rem;
 }
 
-.emotion-28 {
+.emotion-29 {
   color: #727683;
   font-size: 0.75rem;
   font-family: Inter,Asap,sans-serif;
@@ -7053,7 +7073,7 @@ exports[`TimeInput > renders correctly with label description and helper 1`] = `
         class="emotion-2 emotion-1"
       >
         <label
-          class="emotion-4 emotion-5"
+          class="emotion-4 emotion-5 emotion-6"
           for=":r16:"
         >
           label
@@ -7063,22 +7083,22 @@ exports[`TimeInput > renders correctly with label description and helper 1`] = `
         </h1>
       </div>
       <div
-        class="emotion-6 emotion-7"
+        class="emotion-7 emotion-8"
         data-disabled="false"
         data-error="false"
         data-readonly="false"
         data-size="medium"
       >
         <div
-          class="emotion-8 emotion-1"
+          class="emotion-9 emotion-1"
         >
           <div
-            class="emotion-8 emotion-1"
+            class="emotion-9 emotion-1"
           >
             <input
               aria-valuemax="23"
               aria-valuemin="0"
-              class="emotion-12 emotion-13"
+              class="emotion-13 emotion-14"
               data-size="medium"
               data-testid="hours-input"
               placeholder="00"
@@ -7086,18 +7106,18 @@ exports[`TimeInput > renders correctly with label description and helper 1`] = `
               value=""
             />
             <span
-              class="emotion-14 emotion-15 emotion-5"
+              class="emotion-15 emotion-16 emotion-6"
             >
               :
             </span>
           </div>
           <div
-            class="emotion-8 emotion-1"
+            class="emotion-9 emotion-1"
           >
             <input
               aria-valuemax="59"
               aria-valuemin="0"
-              class="emotion-12 emotion-13"
+              class="emotion-13 emotion-14"
               data-size="medium"
               data-testid="minutes-input"
               placeholder="00"
@@ -7105,18 +7125,18 @@ exports[`TimeInput > renders correctly with label description and helper 1`] = `
               value=""
             />
             <span
-              class="emotion-14 emotion-15 emotion-5"
+              class="emotion-15 emotion-16 emotion-6"
             >
               :
             </span>
           </div>
           <div
-            class="emotion-8 emotion-1"
+            class="emotion-9 emotion-1"
           >
             <input
               aria-valuemax="59"
               aria-valuemin="0"
-              class="emotion-12 emotion-13"
+              class="emotion-13 emotion-14"
               data-size="medium"
               data-testid="seconds-input"
               placeholder="00"
@@ -7127,7 +7147,7 @@ exports[`TimeInput > renders correctly with label description and helper 1`] = `
         </div>
       </div>
       <p
-        class="emotion-28 emotion-5"
+        class="emotion-29 emotion-6"
       >
         helper
       </p>

@@ -81,7 +81,7 @@ type SelectInputV2Props<IsMulti extends undefined | boolean = false> = {
   /**
    * Display an error message under the select bar
    */
-  error?: string
+  error?: string | boolean
   /**
    * Display a success message under the select bar
    */
@@ -249,7 +249,7 @@ export const SelectInputV2 = <IsMulti extends undefined | boolean>({
             {helper}
           </HelperText>
         ) : null}
-        {error || success ? (
+        {(error && typeof error === 'string') || success ? (
           <HelperText
             variant="caption"
             as="p"
