@@ -37,8 +37,8 @@ exports[`SelectInputV2 > renders correctly 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-6 {
-  color: #222638;
+.emotion-7 {
+  color: #3f4250;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -47,9 +47,10 @@ exports[`SelectInputV2 > renders correctly 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  cursor: pointer;
 }
 
-.emotion-8 {
+.emotion-9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -84,81 +85,85 @@ exports[`SelectInputV2 > renders correctly 1`] = `
   overflow: hidden;
 }
 
-.emotion-8[data-size='small'] {
+.emotion-9[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-8[data-size='medium'] {
+.emotion-9[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-8[data-size='large'] {
+.emotion-9[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-8[data-state='neutral'] {
+.emotion-9[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.emotion-8[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-9[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-8[data-state='neutral']:not([data-disabled='true']):hover,
-.emotion-8[data-state='neutral']:not([data-disabled='true']):focus {
+.emotion-9[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-8[data-state='neutral'][data-dropdownvisible='true'] {
+.emotion-9[data-state='neutral']:not([data-disabled='true']):focus-visible {
+  outline: 5px auto Highlight;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
+.emotion-9[data-state='neutral'][data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.emotion-8[data-state='success'] {
+.emotion-9[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.emotion-8[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-9[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #1b533f;
   box-shadow: 0px 0px 0px 3px #45d19f40;
 }
 
-.emotion-8[data-state='success'][data-dropdownvisible='true'] {
+.emotion-9[data-state='success'][data-dropdownvisible='true'] {
   border-color: #1b533f;
 }
 
-.emotion-8[data-state='danger'] {
+.emotion-9[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-8[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-9[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-8[data-state='danger'][data-dropdownvisible='true'] {
+.emotion-9[data-state='danger'][data-dropdownvisible='true'] {
   border-color: #92103f;
 }
 
-.emotion-8:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-9:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-8[data-readonly='true'] {
+.emotion-9[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-8[data-disabled='true'] {
+.emotion-9[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-11 {
+.emotion-12 {
   color: #727683;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
@@ -174,7 +179,7 @@ exports[`SelectInputV2 > renders correctly 1`] = `
   user-select: none;
 }
 
-.emotion-13 {
+.emotion-14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -202,7 +207,7 @@ exports[`SelectInputV2 > renders correctly 1`] = `
   display: flex;
 }
 
-.emotion-15 {
+.emotion-16 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1rem;
@@ -211,7 +216,7 @@ exports[`SelectInputV2 > renders correctly 1`] = `
   min-height: 1rem;
 }
 
-.emotion-15 .fillStroke {
+.emotion-16 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
@@ -228,13 +233,13 @@ exports[`SelectInputV2 > renders correctly 1`] = `
         aria-describedby=":r1:"
         class="emotion-2 emotion-3"
         data-container-full-width="true"
-        tabindex="0"
+        tabindex="-1"
       >
         <div
           class="emotion-4 emotion-5"
         >
           <label
-            class="emotion-6 emotion-7"
+            class="emotion-6 emotion-7 emotion-8"
             for=":r0:"
           >
             label
@@ -243,7 +248,7 @@ exports[`SelectInputV2 > renders correctly 1`] = `
             aria-expanded="false"
             aria-haspopup="listbox"
             aria-label="label"
-            class="emotion-8 emotion-9"
+            class="emotion-9 emotion-10"
             data-disabled="false"
             data-dropdownvisible="false"
             data-readonly="false"
@@ -255,16 +260,16 @@ exports[`SelectInputV2 > renders correctly 1`] = `
             tabindex="0"
           >
             <p
-              class="emotion-10 emotion-11 emotion-7"
+              class="emotion-11 emotion-12 emotion-8"
             >
               Select item
             </p>
             <div
-              class="emotion-13 emotion-14"
+              class="emotion-14 emotion-15"
             >
               <svg
                 aria-label="show dropdown"
-                class="emotion-15 emotion-16"
+                class="emotion-16 emotion-17"
                 viewBox="0 0 20 20"
               >
                 <path
@@ -376,10 +381,14 @@ exports[`SelectInputV2 > renders correctly disabled 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-6[data-state='neutral']:not([data-disabled='true']):hover,
-.emotion-6[data-state='neutral']:not([data-disabled='true']):focus {
+.emotion-6[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
+}
+
+.emotion-6[data-state='neutral']:not([data-disabled='true']):focus-visible {
+  outline: 5px auto Highlight;
+  outline: 5px auto -webkit-focus-ring-color;
 }
 
 .emotion-6[data-state='neutral'][data-dropdownvisible='true'] {
@@ -498,7 +507,7 @@ exports[`SelectInputV2 > renders correctly disabled 1`] = `
         aria-describedby=":ral:"
         class="emotion-2 emotion-3"
         data-container-full-width="true"
-        tabindex="0"
+        tabindex="-1"
       >
         <div
           class="emotion-4 emotion-5"
@@ -657,10 +666,14 @@ exports[`SelectInputV2 > renders correctly grouped 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-6[data-state='neutral']:not([data-disabled='true']):hover,
-.emotion-6[data-state='neutral']:not([data-disabled='true']):focus {
+.emotion-6[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
+}
+
+.emotion-6[data-state='neutral']:not([data-disabled='true']):focus-visible {
+  outline: 5px auto Highlight;
+  outline: 5px auto -webkit-focus-ring-color;
 }
 
 .emotion-6[data-state='neutral'][data-dropdownvisible='true'] {
@@ -1267,7 +1280,7 @@ exports[`SelectInputV2 > renders correctly grouped 1`] = `
         aria-describedby=":r1k:"
         class="emotion-2 emotion-3"
         data-container-full-width="true"
-        tabindex="0"
+        tabindex="-1"
       >
         <div
           class="emotion-4 emotion-5"
@@ -1771,10 +1784,14 @@ exports[`SelectInputV2 > renders correctly loadMore 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-6[data-state='neutral']:not([data-disabled='true']):hover,
-.emotion-6[data-state='neutral']:not([data-disabled='true']):focus {
+.emotion-6[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
+}
+
+.emotion-6[data-state='neutral']:not([data-disabled='true']):focus-visible {
+  outline: 5px auto Highlight;
+  outline: 5px auto -webkit-focus-ring-color;
 }
 
 .emotion-6[data-state='neutral'][data-dropdownvisible='true'] {
@@ -1893,7 +1910,7 @@ exports[`SelectInputV2 > renders correctly loadMore 1`] = `
         aria-describedby=":rad:"
         class="emotion-2 emotion-3"
         data-container-full-width="true"
-        tabindex="0"
+        tabindex="-1"
       >
         <div
           class="emotion-4 emotion-5"
@@ -2062,10 +2079,14 @@ exports[`SelectInputV2 > renders correctly loading - grouped data 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-6[data-state='neutral']:not([data-disabled='true']):hover,
-.emotion-6[data-state='neutral']:not([data-disabled='true']):focus {
+.emotion-6[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
+}
+
+.emotion-6[data-state='neutral']:not([data-disabled='true']):focus-visible {
+  outline: 5px auto Highlight;
+  outline: 5px auto -webkit-focus-ring-color;
 }
 
 .emotion-6[data-state='neutral'][data-dropdownvisible='true'] {
@@ -2374,11 +2395,11 @@ exports[`SelectInputV2 > renders correctly loading - grouped data 1`] = `
       class="emotion-0 emotion-1"
     >
       <div
-        aria-controls=":r1sn:"
-        aria-describedby=":r1sn:"
+        aria-controls=":r1qm:"
+        aria-describedby=":r1qm:"
         class="emotion-2 emotion-3"
         data-container-full-width="true"
-        tabindex="0"
+        tabindex="-1"
       >
         <div
           class="emotion-4 emotion-5"
@@ -2393,7 +2414,7 @@ exports[`SelectInputV2 > renders correctly loading - grouped data 1`] = `
             data-size="large"
             data-state="neutral"
             data-testid="select-input-test"
-            id=":r1sm:"
+            id=":r1ql:"
             role="combobox"
             tabindex="0"
           >
@@ -2423,7 +2444,7 @@ exports[`SelectInputV2 > renders correctly loading - grouped data 1`] = `
           class="emotion-15 emotion-16 emotion-17"
           data-animated="false"
           data-has-arrow="false"
-          id=":r1sn:"
+          id=":r1qm:"
           role="dialog"
           style="opacity: 1;"
         >
@@ -2610,10 +2631,14 @@ exports[`SelectInputV2 > renders correctly loading - ungrouped data 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-6[data-state='neutral']:not([data-disabled='true']):hover,
-.emotion-6[data-state='neutral']:not([data-disabled='true']):focus {
+.emotion-6[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
+}
+
+.emotion-6[data-state='neutral']:not([data-disabled='true']):focus-visible {
+  outline: 5px auto Highlight;
+  outline: 5px auto -webkit-focus-ring-color;
 }
 
 .emotion-6[data-state='neutral'][data-dropdownvisible='true'] {
@@ -2945,11 +2970,11 @@ exports[`SelectInputV2 > renders correctly loading - ungrouped data 1`] = `
       class="emotion-0 emotion-1"
     >
       <div
-        aria-controls=":r1sr:"
-        aria-describedby=":r1sr:"
+        aria-controls=":r1qq:"
+        aria-describedby=":r1qq:"
         class="emotion-2 emotion-3"
         data-container-full-width="true"
-        tabindex="0"
+        tabindex="-1"
       >
         <div
           class="emotion-4 emotion-5"
@@ -2964,7 +2989,7 @@ exports[`SelectInputV2 > renders correctly loading - ungrouped data 1`] = `
             data-size="large"
             data-state="neutral"
             data-testid="select-input-test"
-            id=":r1sq:"
+            id=":r1qp:"
             role="combobox"
             tabindex="0"
           >
@@ -2994,7 +3019,7 @@ exports[`SelectInputV2 > renders correctly loading - ungrouped data 1`] = `
           class="emotion-15 emotion-16 emotion-17"
           data-animated="false"
           data-has-arrow="false"
-          id=":r1sr:"
+          id=":r1qq:"
           role="dialog"
           style="opacity: 1;"
         >
@@ -3176,10 +3201,14 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-6[data-state='neutral']:not([data-disabled='true']):hover,
-.emotion-6[data-state='neutral']:not([data-disabled='true']):focus {
+.emotion-6[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
+}
+
+.emotion-6[data-state='neutral']:not([data-disabled='true']):focus-visible {
+  outline: 5px auto Highlight;
+  outline: 5px auto -webkit-focus-ring-color;
 }
 
 .emotion-6[data-state='neutral'][data-dropdownvisible='true'] {
@@ -3298,7 +3327,30 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
   max-width: 14.5rem;
 }
 
-.emotion-17 {
+.emotion-16 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.25rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-19 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -3344,22 +3396,22 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
   padding: 0.125rem;
 }
 
-.emotion-17:hover {
+.emotion-19:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-17:active {
+.emotion-19:active {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.emotion-17:hover,
-.emotion-17:active {
+.emotion-19:hover,
+.emotion-19:active {
   background: #e9eaeb;
   color: #222638;
 }
 
-.emotion-19 {
+.emotion-21 {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
@@ -3368,16 +3420,16 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
   min-height: 16px;
 }
 
-.emotion-19 .fillStroke {
+.emotion-21 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.emotion-19 path {
+.emotion-21 path {
   fill: currentColor;
 }
 
-.emotion-21 {
+.emotion-23 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3405,7 +3457,7 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
   display: flex;
 }
 
-.emotion-23 {
+.emotion-25 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1rem;
@@ -3414,12 +3466,12 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
   min-height: 1rem;
 }
 
-.emotion-23 .fillStroke {
+.emotion-25 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
 
-.emotion-26 {
+.emotion-28 {
   background: #151a2d;
   color: #ffffff;
   border-radius: 0.25rem;
@@ -3447,12 +3499,12 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
   margin-bottom: 5rem;
 }
 
-.emotion-26[data-animated="true"] {
+.emotion-28[data-animated="true"] {
   -webkit-animation: 0ms animation-0 forwards;
   animation: 0ms animation-0 forwards;
 }
 
-.emotion-26[data-has-arrow="true"]::after {
+.emotion-28[data-has-arrow="true"]::after {
   content: " ";
   position: absolute;
   top: -5px;
@@ -3468,11 +3520,11 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
   pointer-events: none;
 }
 
-.emotion-26[data-visible-in-dom="false"] {
+.emotion-28[data-visible-in-dom="false"] {
   display: none;
 }
 
-.emotion-28 {
+.emotion-30 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3495,7 +3547,7 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-31 {
+.emotion-33 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3522,7 +3574,7 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
   padding-right: 1rem;
 }
 
-.emotion-33 {
+.emotion-35 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3536,69 +3588,69 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
   border-radius: 0.25rem;
 }
 
-.emotion-33>.emotion-40 {
+.emotion-35>.emotion-42 {
   color: #3f4250;
 }
 
-.emotion-33>.emotion-40::-webkit-input-placeholder {
+.emotion-35>.emotion-42::-webkit-input-placeholder {
   color: #727683;
 }
 
-.emotion-33>.emotion-40::-moz-placeholder {
+.emotion-35>.emotion-42::-moz-placeholder {
   color: #727683;
 }
 
-.emotion-33>.emotion-40:-ms-input-placeholder {
+.emotion-35>.emotion-42:-ms-input-placeholder {
   color: #727683;
 }
 
-.emotion-33>.emotion-40::placeholder {
+.emotion-35>.emotion-42::placeholder {
   color: #727683;
 }
 
-.emotion-33[data-success='true'] {
+.emotion-35[data-success='true'] {
   border-color: #22674e;
 }
 
-.emotion-33[data-error='true'] {
+.emotion-35[data-error='true'] {
   border-color: #b3144d;
 }
 
-.emotion-33[data-readonly='true'] {
+.emotion-35[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
 }
 
-.emotion-33[data-disabled='true'] {
+.emotion-35[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
 }
 
-.emotion-33[data-disabled='true']>.emotion-40 {
+.emotion-35[data-disabled='true']>.emotion-42 {
   color: #b5b7bd;
 }
 
-.emotion-33[data-disabled='true']>.emotion-40::-webkit-input-placeholder {
+.emotion-35[data-disabled='true']>.emotion-42::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-33[data-disabled='true']>.emotion-40::-moz-placeholder {
+.emotion-35[data-disabled='true']>.emotion-42::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-33[data-disabled='true']>.emotion-40:-ms-input-placeholder {
+.emotion-35[data-disabled='true']>.emotion-42:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-33[data-disabled='true']>.emotion-40::placeholder {
+.emotion-35[data-disabled='true']>.emotion-42::placeholder {
   color: #b5b7bd;
 }
 
-.emotion-33:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-35:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-35 {
+.emotion-37 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3624,11 +3676,11 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
   border-color: inherit;
 }
 
-.emotion-35[data-size="small"] {
+.emotion-37[data-size="small"] {
   padding: 0.5rem;
 }
 
-.emotion-39 {
+.emotion-41 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -3641,15 +3693,15 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
   font-size: 0.875rem;
 }
 
-.emotion-39[data-size='large'] {
+.emotion-41[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-39[data-size='small'] {
+.emotion-41[data-size='small'] {
   padding-left: 0.5rem;
 }
 
-.emotion-41 {
+.emotion-43 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3677,11 +3729,11 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
   padding-top: 0.25rem;
 }
 
-.emotion-41[data-grouped="true"] {
+.emotion-43[data-grouped="true"] {
   padding-top: 0rem;
 }
 
-.emotion-43 {
+.emotion-45 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3704,13 +3756,13 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-45 {
+.emotion-47 {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
 }
 
-.emotion-47 {
+.emotion-49 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3736,21 +3788,21 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
   margin-bottom: 0.125rem;
 }
 
-.emotion-47:focus {
+.emotion-49:focus {
   background-color: #f9f9fa;
   outline: none;
 }
 
-.emotion-47[data-selectgroup='true'] {
+.emotion-49[data-selectgroup='true'] {
   padding-left: 1rem;
   border-left: 0.25rem solid #f9f9fa;
 }
 
-.emotion-47[data-selectgroup='true']:focus {
+.emotion-49[data-selectgroup='true']:focus {
   background-color: #e9eaeb;
 }
 
-.emotion-49 {
+.emotion-51 {
   color: #3f4250;
   font-size: 0.75rem;
   font-family: Inter,Asap,sans-serif;
@@ -3763,7 +3815,7 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
   text-align: left;
 }
 
-.emotion-53 {
+.emotion-55 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3779,31 +3831,31 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
   border: 1px transparent solid;
 }
 
-.emotion-53:hover,
-.emotion-53:focus {
+.emotion-55:hover,
+.emotion-55:focus {
   background-color: #f1eefc;
   color: #641cb3;
   cursor: pointer;
 }
 
-.emotion-53[aria-selected='true'] {
+.emotion-55[aria-selected='true'] {
   background-color: #f1eefc;
 }
 
-.emotion-53[aria-disabled="true"] {
+.emotion-55[aria-disabled="true"] {
   background-color: #f3f3f4;
   color: #b5b7bd;
 }
 
-.emotion-53[aria-disabled="true"]:hover,
-.emotion-53 [aria-disabled="true"]:focus {
+.emotion-55[aria-disabled="true"]:hover,
+.emotion-55 [aria-disabled="true"]:focus {
   background-color: #f3f3f4;
   color: #b5b7bd;
   cursor: not-allowed;
   outline: none;
 }
 
-.emotion-56 {
+.emotion-58 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -3824,65 +3876,65 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
   pointer-events: none;
 }
 
-.emotion-56 .emotion-69 {
+.emotion-58 .emotion-71 {
   cursor: pointer;
 }
 
-.emotion-56[aria-disabled='true'] {
+.emotion-58[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.emotion-56[aria-disabled='true'] .emotion-69 {
+.emotion-58[aria-disabled='true'] .emotion-71 {
   cursor: not-allowed;
 }
 
-.emotion-56[aria-disabled='true'] .emotion-61 {
+.emotion-58[aria-disabled='true'] .emotion-63 {
   fill: #e9eaeb;
 }
 
-.emotion-56[aria-disabled='true'] .emotion-61 .emotion-63 {
+.emotion-58[aria-disabled='true'] .emotion-63 .emotion-65 {
   stroke: #d9dadd;
   fill: #f3f3f4;
 }
 
-.emotion-56[aria-disabled='true'] .emotion-59[aria-invalid="true"]:checked+.emotion-61 {
+.emotion-58[aria-disabled='true'] .emotion-61[aria-invalid="true"]:checked+.emotion-63 {
   fill: #ffd3e3;
 }
 
-.emotion-56[aria-disabled='true'] .emotion-59[aria-invalid="true"]:checked+.emotion-61 .emotion-63 {
+.emotion-58[aria-disabled='true'] .emotion-61[aria-invalid="true"]:checked+.emotion-63 .emotion-65 {
   stroke: #ffd3e3;
   fill: #ffd3e3;
 }
 
-.emotion-56[aria-disabled='true'] .emotion-59[aria-invalid="true"]+.emotion-61 {
+.emotion-58[aria-disabled='true'] .emotion-61[aria-invalid="true"]+.emotion-63 {
   fill: #ffebf2;
 }
 
-.emotion-56[aria-disabled='true'] .emotion-59[aria-invalid="true"]+.emotion-61 .emotion-63 {
+.emotion-58[aria-disabled='true'] .emotion-61[aria-invalid="true"]+.emotion-63 .emotion-65 {
   stroke: #ffbbd3;
   fill: #ffebf2;
 }
 
-.emotion-56[aria-disabled='true'] .emotion-59:checked+.emotion-61 {
+.emotion-58[aria-disabled='true'] .emotion-61:checked+.emotion-63 {
   fill: #e5dbfd;
 }
 
-.emotion-56[aria-disabled='true'] .emotion-59:checked+.emotion-61 .emotion-63 {
+.emotion-58[aria-disabled='true'] .emotion-61:checked+.emotion-63 .emotion-65 {
   stroke: #d8c5fc;
   fill: #d8c5fc;
 }
 
-.emotion-56[aria-disabled='true'] .emotion-59[aria-checked="mixed"]+.emotion-61 {
+.emotion-58[aria-disabled='true'] .emotion-61[aria-checked="mixed"]+.emotion-63 {
   fill: #e5dbfd;
 }
 
-.emotion-56[aria-disabled='true'] .emotion-59[aria-checked="mixed"]+.emotion-61 .emotion-63 {
+.emotion-58[aria-disabled='true'] .emotion-61[aria-checked="mixed"]+.emotion-63 .emotion-65 {
   stroke: #e5dbfd;
   fill: #e5dbfd;
 }
 
-.emotion-56 .emotion-59:checked+.emotion-61 path {
+.emotion-58 .emotion-61:checked+.emotion-63 path {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -3896,60 +3948,60 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
   transform: translate(2px, 2px);
 }
 
-.emotion-56 .emotion-59:checked+.emotion-61 .emotion-63 {
+.emotion-58 .emotion-61:checked+.emotion-63 .emotion-65 {
   fill: #8c40ef;
   stroke: #8c40ef;
 }
 
-.emotion-56 .emotion-59[aria-invalid="true"]:checked+.emotion-61 .emotion-63 {
+.emotion-58 .emotion-61[aria-invalid="true"]:checked+.emotion-63 .emotion-65 {
   fill: #e51963;
   stroke: #e51963;
 }
 
-.emotion-56 .emotion-59[aria-checked="mixed"]+.emotion-61 .eqr7bqq6 {
+.emotion-58 .emotion-61[aria-checked="mixed"]+.emotion-63 .eqr7bqq6 {
   fill: #ffffff;
 }
 
-.emotion-56 .emotion-59[aria-checked="mixed"]+.emotion-61 .emotion-63 {
+.emotion-58 .emotion-61[aria-checked="mixed"]+.emotion-63 .emotion-65 {
   fill: #8c40ef;
   stroke: #8c40ef;
 }
 
-.emotion-56:hover[aria-disabled='false'] .emotion-59[aria-invalid='false'][aria-checked='false']+.emotion-61 .emotion-63 {
+.emotion-58:hover[aria-disabled='false'] .emotion-61[aria-invalid='false'][aria-checked='false']+.emotion-63 .emotion-65 {
   stroke: #792dd4;
   fill: #e5dbfd;
 }
 
-.emotion-56:hover[aria-disabled='false'] .emotion-59[aria-invalid='false'][aria-checked='true']+.emotion-61 .emotion-63 {
+.emotion-58:hover[aria-disabled='false'] .emotion-61[aria-invalid='false'][aria-checked='true']+.emotion-63 .emotion-65 {
   stroke: #792dd4;
   fill: #792dd4;
 }
 
-.emotion-56:hover[aria-disabled='false'] .emotion-59[aria-invalid='false'][aria-checked='mixed']+.emotion-61 .emotion-63 {
+.emotion-58:hover[aria-disabled='false'] .emotion-61[aria-invalid='false'][aria-checked='mixed']+.emotion-63 .emotion-65 {
   stroke: #792dd4;
   fill: #792dd4;
 }
 
-.emotion-56:hover[aria-disabled='false'] .emotion-59[aria-invalid='true'][aria-checked='false']+.emotion-61 .emotion-63 {
+.emotion-58:hover[aria-disabled='false'] .emotion-61[aria-invalid='true'][aria-checked='false']+.emotion-63 .emotion-65 {
   stroke: #92103f;
   fill: #ffd3e3;
 }
 
-.emotion-56:hover[aria-disabled='false'] .emotion-59[aria-invalid='true'][aria-checked='true']+.emotion-61 .emotion-63 {
+.emotion-58:hover[aria-disabled='false'] .emotion-61[aria-invalid='true'][aria-checked='true']+.emotion-63 .emotion-65 {
   stroke: #d6175c;
   fill: #d6175c;
 }
 
-.emotion-56 .emotion-59[aria-invalid="true"]+.emotion-61 {
+.emotion-58 .emotion-61[aria-invalid="true"]+.emotion-63 {
   fill: #e51963;
 }
 
-.emotion-56 .emotion-59[aria-invalid="true"]+.emotion-61 .emotion-63 {
+.emotion-58 .emotion-61[aria-invalid="true"]+.emotion-63 .emotion-65 {
   stroke: #e51963;
   fill: #ffebf2;
 }
 
-.emotion-58 {
+.emotion-60 {
   position: absolute;
   white-space: nowrap;
   height: 1.5rem;
@@ -3958,57 +4010,57 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
   border-width: 0;
 }
 
-.emotion-58:not(:disabled) {
+.emotion-60:not(:disabled) {
   cursor: pointer;
 }
 
-.emotion-58:disabled {
+.emotion-60:disabled {
   cursor: not-allowed;
 }
 
-.emotion-58:not(:disabled):checked+.emotion-61,
-.emotion-58:not(:disabled)[aria-checked='mixed']+.emotion-61 {
+.emotion-60:not(:disabled):checked+.emotion-63,
+.emotion-60:not(:disabled)[aria-checked='mixed']+.emotion-63 {
   fill: #8c40ef;
 }
 
-.emotion-58:not(:disabled):checked+.emotion-61 .emotion-63,
-.emotion-58:not(:disabled)[aria-checked='mixed']+.emotion-61 .emotion-63 {
+.emotion-60:not(:disabled):checked+.emotion-63 .emotion-65,
+.emotion-60:not(:disabled)[aria-checked='mixed']+.emotion-63 .emotion-65 {
   stroke: #8c40ef;
 }
 
-.emotion-58:not(:disabled)[aria-invalid='true']+.emotion-61,
-.emotion-58:not(:disabled)[aria-invalid='mixed']+.emotion-61 {
+.emotion-60:not(:disabled)[aria-invalid='true']+.emotion-63,
+.emotion-60:not(:disabled)[aria-invalid='mixed']+.emotion-63 {
   fill: #ffebf2;
 }
 
-.emotion-58:not(:disabled)[aria-invalid='true']+.emotion-61 .emotion-63,
-.emotion-58:not(:disabled)[aria-invalid='mixed']+.emotion-61 .emotion-63 {
+.emotion-60:not(:disabled)[aria-invalid='true']+.emotion-63 .emotion-65,
+.emotion-60:not(:disabled)[aria-invalid='mixed']+.emotion-63 .emotion-65 {
   stroke: #b3144d;
 }
 
-.emotion-58:focus+.emotion-61 {
+.emotion-60:focus+.emotion-63 {
   background-color: #f1eefc;
   fill: #ffebf2;
   outline: 1px solid 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-58:focus+.emotion-61 .emotion-63 {
+.emotion-60:focus+.emotion-63 .emotion-65 {
   stroke: #792dd4;
   fill: #e5dbfd;
 }
 
-.emotion-58[aria-invalid='true']:focus+.emotion-61 {
+.emotion-60[aria-invalid='true']:focus+.emotion-63 {
   background-color: #ffebf2;
   fill: #ffebf2;
   outline: 1px solid 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-58[aria-invalid='true']:focus+.emotion-61 .emotion-63 {
+.emotion-60[aria-invalid='true']:focus+.emotion-63 .emotion-65 {
   stroke: #92103f;
   fill: #ffd3e3;
 }
 
-.emotion-60 {
+.emotion-62 {
   border-radius: 0.25rem;
   height: 1.5rem;
   width: 1.5rem;
@@ -4016,7 +4068,7 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
   min-height: 1.5rem;
 }
 
-.emotion-60 path {
+.emotion-62 path {
   fill: #ffffff;
   -webkit-transform: translate(2px, 2px);
   -moz-transform: translate(2px, 2px);
@@ -4028,12 +4080,12 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
   transform: scale(0);
 }
 
-.emotion-62 {
+.emotion-64 {
   fill: #ffffff;
   stroke: #d9dadd;
 }
 
-.emotion-64 {
+.emotion-66 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4059,7 +4111,7 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
   flex: 1;
 }
 
-.emotion-66 {
+.emotion-68 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4085,12 +4137,12 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
   flex: 1;
 }
 
-.emotion-68 {
+.emotion-70 {
   width: 100%;
   cursor: pointer;
 }
 
-.emotion-72 {
+.emotion-74 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4113,7 +4165,7 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
   overflow: hidden;
 }
 
-.emotion-75 {
+.emotion-77 {
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
@@ -4135,7 +4187,7 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
   max-width: 100%;
 }
 
-.emotion-125 {
+.emotion-127 {
   color: #727683;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
@@ -4148,7 +4200,7 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
   text-align: left;
 }
 
-.emotion-285 {
+.emotion-287 {
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
@@ -4159,7 +4211,7 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
   text-decoration: none;
 }
 
-.emotion-288 {
+.emotion-290 {
   font-size: 0.75rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
@@ -4206,7 +4258,7 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
         aria-describedby=":r4h:"
         class="emotion-2 emotion-3"
         data-container-full-width="true"
-        tabindex="0"
+        tabindex="-1"
       >
         <div
           class="emotion-4 emotion-5"
@@ -4232,19 +4284,23 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
                 class="emotion-10 emotion-11 emotion-12"
                 data-testid="selected-options-tags"
               >
-                <span
+                <div
                   class="emotion-13 emotion-14 emotion-15"
                 >
-                  Pluto
-                </span>
+                  <div
+                    class="emotion-16 emotion-5"
+                  >
+                    Pluto
+                  </div>
+                </div>
                 <button
                   aria-label="Close tag"
-                  class="emotion-16 emotion-17 emotion-18"
+                  class="emotion-18 emotion-19 emotion-20"
                   data-testid="close-tag"
                   type="button"
                 >
                   <svg
-                    class="emotion-19 emotion-20"
+                    class="emotion-21 emotion-22"
                     viewBox="0 0 16 16"
                     xmlns="http://www.w3.org/2000/svg"
                   >
@@ -4256,11 +4312,11 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
               </span>
             </div>
             <div
-              class="emotion-21 emotion-22"
+              class="emotion-23 emotion-24"
             >
               <svg
                 aria-label="show dropdown"
-                class="emotion-23 emotion-24"
+                class="emotion-25 emotion-26"
                 viewBox="0 0 20 20"
               >
                 <path
@@ -4273,7 +4329,7 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
           </div>
         </div>
         <div
-          class="emotion-25 emotion-26 emotion-27"
+          class="emotion-27 emotion-28 emotion-29"
           data-animated="false"
           data-has-arrow="false"
           id=":r4h:"
@@ -4281,25 +4337,25 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
           style="opacity: 1;"
         >
           <div
-            class="emotion-28 emotion-5"
+            class="emotion-30 emotion-5"
           >
             <div
-              class="emotion-30 emotion-31 emotion-5"
+              class="emotion-32 emotion-33 emotion-5"
             >
               <div>
                 <div
-                  class="emotion-33 emotion-34"
+                  class="emotion-35 emotion-36"
                   data-disabled="false"
                   data-error="false"
                   data-readonly="false"
                   data-success="false"
                 >
                   <div
-                    class="emotion-35 emotion-36"
+                    class="emotion-37 emotion-38"
                     data-size="medium"
                   >
                     <svg
-                      class="emotion-23 emotion-24"
+                      class="emotion-25 emotion-26"
                       viewBox="0 0 20 20"
                     >
                       <path
@@ -4312,7 +4368,7 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
                   <input
                     aria-invalid="false"
                     aria-label="search-bar"
-                    class="emotion-39 emotion-40"
+                    class="emotion-41 emotion-42"
                     data-size="medium"
                     data-testid="search-bar"
                     id=":r4n:"
@@ -4324,19 +4380,19 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
               </div>
             </div>
             <div
-              class="emotion-41 emotion-42"
+              class="emotion-43 emotion-44"
               data-grouped="true"
               id="select-dropdown"
               role="listbox"
             >
               <div
-                class="emotion-43 emotion-5"
+                class="emotion-45 emotion-5"
               >
                 <div
-                  class="emotion-45 emotion-46"
+                  class="emotion-47 emotion-48"
                 >
                   <button
-                    class="emotion-47 emotion-48"
+                    class="emotion-49 emotion-50"
                     data-selectgroup="false"
                     data-testid="group-0"
                     role="group"
@@ -4344,21 +4400,21 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
                     type="button"
                   >
                     <span
-                      class="emotion-49 emotion-15"
+                      class="emotion-51 emotion-15"
                     >
                       TERRESTRIAL PLANETS
                     </span>
                   </button>
                 </div>
                 <div
-                  class="emotion-43 emotion-5"
+                  class="emotion-45 emotion-5"
                   id="items"
                 >
                   <div
                     aria-disabled="false"
                     aria-label="mercury"
                     aria-selected="false"
-                    class="emotion-53 emotion-54"
+                    class="emotion-55 emotion-56"
                     data-testid="option-mercury"
                     id="option-0"
                     role="option"
@@ -4366,27 +4422,27 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
                   >
                     <div
                       aria-disabled="false"
-                      class="emotion-55 emotion-56 emotion-57"
+                      class="emotion-57 emotion-58 emotion-59"
                       data-checked="false"
                       data-error="false"
                     >
                       <input
                         aria-checked="false"
                         aria-invalid="false"
-                        class="emotion-58 emotion-59"
+                        class="emotion-60 emotion-61"
                         id=":r4q:"
                         tabindex="-1"
                         type="checkbox"
                         value="mercury"
                       />
                       <svg
-                        class="emotion-60 emotion-61"
+                        class="emotion-62 emotion-63"
                         fill="none"
                         viewBox="0 0 24 24"
                       >
                         <g>
                           <rect
-                            class="emotion-62 emotion-63"
+                            class="emotion-64 emotion-65"
                             height="16"
                             rx="0.125rem"
                             stroke-width="2"
@@ -4407,13 +4463,13 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
                         </g>
                       </svg>
                       <div
-                        class="emotion-64 emotion-5"
+                        class="emotion-66 emotion-5"
                       >
                         <div
-                          class="emotion-66 emotion-5"
+                          class="emotion-68 emotion-5"
                         >
                           <label
-                            class="emotion-68 emotion-69"
+                            class="emotion-70 emotion-71"
                             for=":r4q:"
                           >
                             <div
@@ -4421,10 +4477,10 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
                               data-testid="option-stack-mercury"
                             >
                               <div
-                                class="emotion-72 emotion-73"
+                                class="emotion-74 emotion-75"
                               >
                                 <span
-                                  class="emotion-74 emotion-75 emotion-15"
+                                  class="emotion-76 emotion-77 emotion-15"
                                 >
                                   Mercury
                                 </span>
@@ -4439,7 +4495,7 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
                     aria-disabled="false"
                     aria-label="venus"
                     aria-selected="false"
-                    class="emotion-53 emotion-54"
+                    class="emotion-55 emotion-56"
                     data-testid="option-venus"
                     id="option-1"
                     role="option"
@@ -4447,27 +4503,27 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
                   >
                     <div
                       aria-disabled="false"
-                      class="emotion-55 emotion-56 emotion-57"
+                      class="emotion-57 emotion-58 emotion-59"
                       data-checked="false"
                       data-error="false"
                     >
                       <input
                         aria-checked="false"
                         aria-invalid="false"
-                        class="emotion-58 emotion-59"
+                        class="emotion-60 emotion-61"
                         id=":r4u:"
                         tabindex="-1"
                         type="checkbox"
                         value="venus"
                       />
                       <svg
-                        class="emotion-60 emotion-61"
+                        class="emotion-62 emotion-63"
                         fill="none"
                         viewBox="0 0 24 24"
                       >
                         <g>
                           <rect
-                            class="emotion-62 emotion-63"
+                            class="emotion-64 emotion-65"
                             height="16"
                             rx="0.125rem"
                             stroke-width="2"
@@ -4488,13 +4544,13 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
                         </g>
                       </svg>
                       <div
-                        class="emotion-64 emotion-5"
+                        class="emotion-66 emotion-5"
                       >
                         <div
-                          class="emotion-66 emotion-5"
+                          class="emotion-68 emotion-5"
                         >
                           <label
-                            class="emotion-68 emotion-69"
+                            class="emotion-70 emotion-71"
                             for=":r4u:"
                           >
                             <div
@@ -4502,10 +4558,10 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
                               data-testid="option-stack-venus"
                             >
                               <div
-                                class="emotion-72 emotion-73"
+                                class="emotion-74 emotion-75"
                               >
                                 <span
-                                  class="emotion-74 emotion-75 emotion-15"
+                                  class="emotion-76 emotion-77 emotion-15"
                                 >
                                   Venus
                                 </span>
@@ -4520,7 +4576,7 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
                     aria-disabled="false"
                     aria-label="earth"
                     aria-selected="false"
-                    class="emotion-53 emotion-54"
+                    class="emotion-55 emotion-56"
                     data-testid="option-earth"
                     id="option-2"
                     role="option"
@@ -4528,27 +4584,27 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
                   >
                     <div
                       aria-disabled="false"
-                      class="emotion-55 emotion-56 emotion-57"
+                      class="emotion-57 emotion-58 emotion-59"
                       data-checked="false"
                       data-error="false"
                     >
                       <input
                         aria-checked="false"
                         aria-invalid="false"
-                        class="emotion-58 emotion-59"
+                        class="emotion-60 emotion-61"
                         id=":r52:"
                         tabindex="-1"
                         type="checkbox"
                         value="earth"
                       />
                       <svg
-                        class="emotion-60 emotion-61"
+                        class="emotion-62 emotion-63"
                         fill="none"
                         viewBox="0 0 24 24"
                       >
                         <g>
                           <rect
-                            class="emotion-62 emotion-63"
+                            class="emotion-64 emotion-65"
                             height="16"
                             rx="0.125rem"
                             stroke-width="2"
@@ -4569,13 +4625,13 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
                         </g>
                       </svg>
                       <div
-                        class="emotion-64 emotion-5"
+                        class="emotion-66 emotion-5"
                       >
                         <div
-                          class="emotion-66 emotion-5"
+                          class="emotion-68 emotion-5"
                         >
                           <label
-                            class="emotion-68 emotion-69"
+                            class="emotion-70 emotion-71"
                             for=":r52:"
                           >
                             <div
@@ -4583,16 +4639,16 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
                               data-testid="option-stack-earth"
                             >
                               <div
-                                class="emotion-72 emotion-73"
+                                class="emotion-74 emotion-75"
                               >
                                 <span
-                                  class="emotion-74 emotion-75 emotion-15"
+                                  class="emotion-76 emotion-77 emotion-15"
                                 >
                                   Earth
                                 </span>
                               </div>
                               <span
-                                class="emotion-125 emotion-15"
+                                class="emotion-127 emotion-15"
                               >
                                 Our home planet
                               </span>
@@ -4606,7 +4662,7 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
                     aria-disabled="true"
                     aria-label="mars"
                     aria-selected="false"
-                    class="emotion-53 emotion-54"
+                    class="emotion-55 emotion-56"
                     data-testid="option-mars"
                     id="option-3"
                     role="option"
@@ -4614,14 +4670,14 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
                   >
                     <div
                       aria-disabled="true"
-                      class="emotion-55 emotion-56 emotion-57"
+                      class="emotion-57 emotion-58 emotion-59"
                       data-checked="false"
                       data-error="false"
                     >
                       <input
                         aria-checked="false"
                         aria-invalid="false"
-                        class="emotion-58 emotion-59"
+                        class="emotion-60 emotion-61"
                         disabled=""
                         id=":r57:"
                         tabindex="-1"
@@ -4629,13 +4685,13 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
                         value="mars"
                       />
                       <svg
-                        class="emotion-60 emotion-61"
+                        class="emotion-62 emotion-63"
                         fill="none"
                         viewBox="0 0 24 24"
                       >
                         <g>
                           <rect
-                            class="emotion-62 emotion-63"
+                            class="emotion-64 emotion-65"
                             height="16"
                             rx="0.125rem"
                             stroke-width="2"
@@ -4656,13 +4712,13 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
                         </g>
                       </svg>
                       <div
-                        class="emotion-64 emotion-5"
+                        class="emotion-66 emotion-5"
                       >
                         <div
-                          class="emotion-66 emotion-5"
+                          class="emotion-68 emotion-5"
                         >
                           <label
-                            class="emotion-68 emotion-69"
+                            class="emotion-70 emotion-71"
                             for=":r57:"
                           >
                             <div
@@ -4670,10 +4726,10 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
                               data-testid="option-stack-mars"
                             >
                               <div
-                                class="emotion-72 emotion-73"
+                                class="emotion-74 emotion-75"
                               >
                                 <span
-                                  class="emotion-74 emotion-75 emotion-15"
+                                  class="emotion-76 emotion-77 emotion-15"
                                 >
                                   Mars
                                 </span>
@@ -4688,7 +4744,7 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
                     aria-disabled="false"
                     aria-label="pluto"
                     aria-selected="true"
-                    class="emotion-53 emotion-54"
+                    class="emotion-55 emotion-56"
                     data-testid="option-pluto"
                     id="option-4"
                     role="option"
@@ -4696,7 +4752,7 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
                   >
                     <div
                       aria-disabled="false"
-                      class="emotion-55 emotion-56 emotion-57"
+                      class="emotion-57 emotion-58 emotion-59"
                       data-checked="true"
                       data-error="false"
                     >
@@ -4704,20 +4760,20 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
                         aria-checked="true"
                         aria-invalid="false"
                         checked=""
-                        class="emotion-58 emotion-59"
+                        class="emotion-60 emotion-61"
                         id=":r5b:"
                         tabindex="-1"
                         type="checkbox"
                         value="pluto"
                       />
                       <svg
-                        class="emotion-60 emotion-61"
+                        class="emotion-62 emotion-63"
                         fill="none"
                         viewBox="0 0 24 24"
                       >
                         <g>
                           <rect
-                            class="emotion-62 emotion-63"
+                            class="emotion-64 emotion-65"
                             height="16"
                             rx="0.125rem"
                             stroke-width="2"
@@ -4738,13 +4794,13 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
                         </g>
                       </svg>
                       <div
-                        class="emotion-64 emotion-5"
+                        class="emotion-66 emotion-5"
                       >
                         <div
-                          class="emotion-66 emotion-5"
+                          class="emotion-68 emotion-5"
                         >
                           <label
-                            class="emotion-68 emotion-69"
+                            class="emotion-70 emotion-71"
                             for=":r5b:"
                           >
                             <div
@@ -4752,16 +4808,16 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
                               data-testid="option-stack-pluto"
                             >
                               <div
-                                class="emotion-72 emotion-73"
+                                class="emotion-74 emotion-75"
                               >
                                 <span
-                                  class="emotion-74 emotion-75 emotion-15"
+                                  class="emotion-76 emotion-77 emotion-15"
                                 >
                                   Pluto
                                 </span>
                               </div>
                               <span
-                                class="emotion-125 emotion-15"
+                                class="emotion-127 emotion-15"
                               >
                                 Pluto does not fit the usual classification of either terrestrial or Jovian planets, but is rocky
                               </span>
@@ -4774,13 +4830,13 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
                 </div>
               </div>
               <div
-                class="emotion-43 emotion-5"
+                class="emotion-45 emotion-5"
               >
                 <div
-                  class="emotion-45 emotion-46"
+                  class="emotion-47 emotion-48"
                 >
                   <button
-                    class="emotion-47 emotion-48"
+                    class="emotion-49 emotion-50"
                     data-selectgroup="false"
                     data-testid="group-1"
                     role="group"
@@ -4788,21 +4844,21 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
                     type="button"
                   >
                     <span
-                      class="emotion-49 emotion-15"
+                      class="emotion-51 emotion-15"
                     >
                       JOVIAN PLANETS
                     </span>
                   </button>
                 </div>
                 <div
-                  class="emotion-43 emotion-5"
+                  class="emotion-45 emotion-5"
                   id="items"
                 >
                   <div
                     aria-disabled="false"
                     aria-label="jupiter"
                     aria-selected="false"
-                    class="emotion-53 emotion-54"
+                    class="emotion-55 emotion-56"
                     data-testid="option-jupiter"
                     id="option-0"
                     role="option"
@@ -4810,27 +4866,27 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
                   >
                     <div
                       aria-disabled="false"
-                      class="emotion-55 emotion-56 emotion-57"
+                      class="emotion-57 emotion-58 emotion-59"
                       data-checked="false"
                       data-error="false"
                     >
                       <input
                         aria-checked="false"
                         aria-invalid="false"
-                        class="emotion-58 emotion-59"
+                        class="emotion-60 emotion-61"
                         id=":r5h:"
                         tabindex="-1"
                         type="checkbox"
                         value="jupiter"
                       />
                       <svg
-                        class="emotion-60 emotion-61"
+                        class="emotion-62 emotion-63"
                         fill="none"
                         viewBox="0 0 24 24"
                       >
                         <g>
                           <rect
-                            class="emotion-62 emotion-63"
+                            class="emotion-64 emotion-65"
                             height="16"
                             rx="0.125rem"
                             stroke-width="2"
@@ -4851,13 +4907,13 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
                         </g>
                       </svg>
                       <div
-                        class="emotion-64 emotion-5"
+                        class="emotion-66 emotion-5"
                       >
                         <div
-                          class="emotion-66 emotion-5"
+                          class="emotion-68 emotion-5"
                         >
                           <label
-                            class="emotion-68 emotion-69"
+                            class="emotion-70 emotion-71"
                             for=":r5h:"
                           >
                             <div
@@ -4865,16 +4921,16 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
                               data-testid="option-stack-jupiter"
                             >
                               <div
-                                class="emotion-72 emotion-73"
+                                class="emotion-74 emotion-75"
                               >
                                 <span
-                                  class="emotion-74 emotion-75 emotion-15"
+                                  class="emotion-76 emotion-77 emotion-15"
                                 >
                                   Jupiter
                                 </span>
                               </div>
                               <span
-                                class="emotion-125 emotion-15"
+                                class="emotion-127 emotion-15"
                               >
                                 Jupiter is the fifth planet from the Sun and the largest in the Solar System. It is a gas giant with a mass more than two and a half times that of all the other planets in the Solar System combined, and slightly less than one one-thousandth the mass of the Sun.
                               </span>
@@ -4888,7 +4944,7 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
                     aria-disabled="false"
                     aria-label="saturn"
                     aria-selected="false"
-                    class="emotion-53 emotion-54"
+                    class="emotion-55 emotion-56"
                     data-testid="option-saturn"
                     id="option-1"
                     role="option"
@@ -4896,27 +4952,27 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
                   >
                     <div
                       aria-disabled="false"
-                      class="emotion-55 emotion-56 emotion-57"
+                      class="emotion-57 emotion-58 emotion-59"
                       data-checked="false"
                       data-error="false"
                     >
                       <input
                         aria-checked="false"
                         aria-invalid="false"
-                        class="emotion-58 emotion-59"
+                        class="emotion-60 emotion-61"
                         id=":r5m:"
                         tabindex="-1"
                         type="checkbox"
                         value="saturn"
                       />
                       <svg
-                        class="emotion-60 emotion-61"
+                        class="emotion-62 emotion-63"
                         fill="none"
                         viewBox="0 0 24 24"
                       >
                         <g>
                           <rect
-                            class="emotion-62 emotion-63"
+                            class="emotion-64 emotion-65"
                             height="16"
                             rx="0.125rem"
                             stroke-width="2"
@@ -4937,13 +4993,13 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
                         </g>
                       </svg>
                       <div
-                        class="emotion-64 emotion-5"
+                        class="emotion-66 emotion-5"
                       >
                         <div
-                          class="emotion-66 emotion-5"
+                          class="emotion-68 emotion-5"
                         >
                           <label
-                            class="emotion-68 emotion-69"
+                            class="emotion-70 emotion-71"
                             for=":r5m:"
                           >
                             <div
@@ -4951,10 +5007,10 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
                               data-testid="option-stack-saturn"
                             >
                               <div
-                                class="emotion-72 emotion-73"
+                                class="emotion-74 emotion-75"
                               >
                                 <span
-                                  class="emotion-74 emotion-75 emotion-15"
+                                  class="emotion-76 emotion-77 emotion-15"
                                 >
                                   Saturn
                                 </span>
@@ -4969,7 +5025,7 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
                     aria-disabled="false"
                     aria-label="uranus"
                     aria-selected="false"
-                    class="emotion-53 emotion-54"
+                    class="emotion-55 emotion-56"
                     data-testid="option-uranus"
                     id="option-2"
                     role="option"
@@ -4977,27 +5033,27 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
                   >
                     <div
                       aria-disabled="false"
-                      class="emotion-55 emotion-56 emotion-57"
+                      class="emotion-57 emotion-58 emotion-59"
                       data-checked="false"
                       data-error="false"
                     >
                       <input
                         aria-checked="false"
                         aria-invalid="false"
-                        class="emotion-58 emotion-59"
+                        class="emotion-60 emotion-61"
                         id=":r5q:"
                         tabindex="-1"
                         type="checkbox"
                         value="uranus"
                       />
                       <svg
-                        class="emotion-60 emotion-61"
+                        class="emotion-62 emotion-63"
                         fill="none"
                         viewBox="0 0 24 24"
                       >
                         <g>
                           <rect
-                            class="emotion-62 emotion-63"
+                            class="emotion-64 emotion-65"
                             height="16"
                             rx="0.125rem"
                             stroke-width="2"
@@ -5018,13 +5074,13 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
                         </g>
                       </svg>
                       <div
-                        class="emotion-64 emotion-5"
+                        class="emotion-66 emotion-5"
                       >
                         <div
-                          class="emotion-66 emotion-5"
+                          class="emotion-68 emotion-5"
                         >
                           <label
-                            class="emotion-68 emotion-69"
+                            class="emotion-70 emotion-71"
                             for=":r5q:"
                           >
                             <div
@@ -5032,10 +5088,10 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
                               data-testid="option-stack-uranus"
                             >
                               <div
-                                class="emotion-72 emotion-73"
+                                class="emotion-74 emotion-75"
                               >
                                 <span
-                                  class="emotion-74 emotion-75 emotion-15"
+                                  class="emotion-76 emotion-77 emotion-15"
                                 >
                                   Uranus
                                 </span>
@@ -5050,7 +5106,7 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
                     aria-disabled="false"
                     aria-label="neptune"
                     aria-selected="false"
-                    class="emotion-53 emotion-54"
+                    class="emotion-55 emotion-56"
                     data-testid="option-neptune"
                     id="option-3"
                     role="option"
@@ -5058,27 +5114,27 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
                   >
                     <div
                       aria-disabled="false"
-                      class="emotion-55 emotion-56 emotion-57"
+                      class="emotion-57 emotion-58 emotion-59"
                       data-checked="false"
                       data-error="false"
                     >
                       <input
                         aria-checked="false"
                         aria-invalid="false"
-                        class="emotion-58 emotion-59"
+                        class="emotion-60 emotion-61"
                         id=":r5u:"
                         tabindex="-1"
                         type="checkbox"
                         value="neptune"
                       />
                       <svg
-                        class="emotion-60 emotion-61"
+                        class="emotion-62 emotion-63"
                         fill="none"
                         viewBox="0 0 24 24"
                       >
                         <g>
                           <rect
-                            class="emotion-62 emotion-63"
+                            class="emotion-64 emotion-65"
                             height="16"
                             rx="0.125rem"
                             stroke-width="2"
@@ -5099,13 +5155,13 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
                         </g>
                       </svg>
                       <div
-                        class="emotion-64 emotion-5"
+                        class="emotion-66 emotion-5"
                       >
                         <div
-                          class="emotion-66 emotion-5"
+                          class="emotion-68 emotion-5"
                         >
                           <label
-                            class="emotion-68 emotion-69"
+                            class="emotion-70 emotion-71"
                             for=":r5u:"
                           >
                             <div
@@ -5113,17 +5169,17 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
                               data-testid="option-stack-neptune"
                             >
                               <div
-                                class="emotion-72 emotion-73"
+                                class="emotion-74 emotion-75"
                               >
                                 <span
-                                  class="emotion-74 emotion-75 emotion-15"
+                                  class="emotion-76 emotion-77 emotion-15"
                                 >
                                   <div
-                                    class="emotion-285 emotion-15"
+                                    class="emotion-287 emotion-15"
                                   >
                                     Neptune 
                                     <span
-                                      class="emotion-287 emotion-288 emotion-15"
+                                      class="emotion-289 emotion-290 emotion-15"
                                     >
                                       Label
                                     </span>
@@ -5241,10 +5297,14 @@ exports[`SelectInputV2 > renders correctly not clearable 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-6[data-state='neutral']:not([data-disabled='true']):hover,
-.emotion-6[data-state='neutral']:not([data-disabled='true']):focus {
+.emotion-6[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
+}
+
+.emotion-6[data-state='neutral']:not([data-disabled='true']):focus-visible {
+  outline: 5px auto Highlight;
+  outline: 5px auto -webkit-focus-ring-color;
 }
 
 .emotion-6[data-state='neutral'][data-dropdownvisible='true'] {
@@ -5305,6 +5365,7 @@ exports[`SelectInputV2 > renders correctly not clearable 1`] = `
   text-decoration: none;
   text-overflow: ellipsis;
   overflow: hidden;
+  white-space: nowrap;
 }
 
 .emotion-11 {
@@ -5361,7 +5422,7 @@ exports[`SelectInputV2 > renders correctly not clearable 1`] = `
         aria-describedby=":rm:"
         class="emotion-2 emotion-3"
         data-container-full-width="true"
-        tabindex="0"
+        tabindex="-1"
       >
         <div
           class="emotion-4 emotion-5"
@@ -5502,10 +5563,14 @@ exports[`SelectInputV2 > renders correctly readOnly 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-6[data-state='neutral']:not([data-disabled='true']):hover,
-.emotion-6[data-state='neutral']:not([data-disabled='true']):focus {
+.emotion-6[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
+}
+
+.emotion-6[data-state='neutral']:not([data-disabled='true']):focus-visible {
+  outline: 5px auto Highlight;
+  outline: 5px auto -webkit-focus-ring-color;
 }
 
 .emotion-6[data-state='neutral'][data-dropdownvisible='true'] {
@@ -5624,7 +5689,7 @@ exports[`SelectInputV2 > renders correctly readOnly 1`] = `
         aria-describedby=":rbj:"
         class="emotion-2 emotion-3"
         data-container-full-width="true"
-        tabindex="0"
+        tabindex="-1"
       >
         <div
           class="emotion-4 emotion-5"
@@ -5731,8 +5796,8 @@ exports[`SelectInputV2 > renders correctly required 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-8 {
-  color: #222638;
+.emotion-9 {
+  color: #3f4250;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -5741,9 +5806,10 @@ exports[`SelectInputV2 > renders correctly required 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  cursor: pointer;
 }
 
-.emotion-10 {
+.emotion-11 {
   color: #b3144d;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
@@ -5755,7 +5821,7 @@ exports[`SelectInputV2 > renders correctly required 1`] = `
   text-decoration: none;
 }
 
-.emotion-12 {
+.emotion-13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5790,81 +5856,85 @@ exports[`SelectInputV2 > renders correctly required 1`] = `
   overflow: hidden;
 }
 
-.emotion-12[data-size='small'] {
+.emotion-13[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-12[data-size='medium'] {
+.emotion-13[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-12[data-size='large'] {
+.emotion-13[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-12[data-state='neutral'] {
+.emotion-13[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.emotion-12[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-13[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-12[data-state='neutral']:not([data-disabled='true']):hover,
-.emotion-12[data-state='neutral']:not([data-disabled='true']):focus {
+.emotion-13[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-12[data-state='neutral'][data-dropdownvisible='true'] {
+.emotion-13[data-state='neutral']:not([data-disabled='true']):focus-visible {
+  outline: 5px auto Highlight;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
+.emotion-13[data-state='neutral'][data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.emotion-12[data-state='success'] {
+.emotion-13[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.emotion-12[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-13[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #1b533f;
   box-shadow: 0px 0px 0px 3px #45d19f40;
 }
 
-.emotion-12[data-state='success'][data-dropdownvisible='true'] {
+.emotion-13[data-state='success'][data-dropdownvisible='true'] {
   border-color: #1b533f;
 }
 
-.emotion-12[data-state='danger'] {
+.emotion-13[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-12[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-13[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-12[data-state='danger'][data-dropdownvisible='true'] {
+.emotion-13[data-state='danger'][data-dropdownvisible='true'] {
   border-color: #92103f;
 }
 
-.emotion-12:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-13:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-12[data-readonly='true'] {
+.emotion-13[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-12[data-disabled='true'] {
+.emotion-13[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-15 {
+.emotion-16 {
   color: #727683;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
@@ -5880,7 +5950,7 @@ exports[`SelectInputV2 > renders correctly required 1`] = `
   user-select: none;
 }
 
-.emotion-17 {
+.emotion-18 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5908,7 +5978,7 @@ exports[`SelectInputV2 > renders correctly required 1`] = `
   display: flex;
 }
 
-.emotion-19 {
+.emotion-20 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1rem;
@@ -5917,7 +5987,7 @@ exports[`SelectInputV2 > renders correctly required 1`] = `
   min-height: 1rem;
 }
 
-.emotion-19 .fillStroke {
+.emotion-20 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
@@ -5934,7 +6004,7 @@ exports[`SelectInputV2 > renders correctly required 1`] = `
         aria-describedby=":rg:"
         class="emotion-2 emotion-3"
         data-container-full-width="true"
-        tabindex="0"
+        tabindex="-1"
       >
         <div
           class="emotion-4 emotion-5"
@@ -5943,13 +6013,13 @@ exports[`SelectInputV2 > renders correctly required 1`] = `
             class="emotion-6 emotion-5"
           >
             <label
-              class="emotion-8 emotion-9"
+              class="emotion-8 emotion-9 emotion-10"
               for=":rf:"
             >
               label
             </label>
             <span
-              class="emotion-10 emotion-9"
+              class="emotion-11 emotion-10"
             >
               *
             </span>
@@ -5958,7 +6028,7 @@ exports[`SelectInputV2 > renders correctly required 1`] = `
             aria-expanded="false"
             aria-haspopup="listbox"
             aria-label="label"
-            class="emotion-12 emotion-13"
+            class="emotion-13 emotion-14"
             data-disabled="false"
             data-dropdownvisible="false"
             data-readonly="false"
@@ -5970,16 +6040,16 @@ exports[`SelectInputV2 > renders correctly required 1`] = `
             tabindex="0"
           >
             <p
-              class="emotion-14 emotion-15 emotion-9"
+              class="emotion-15 emotion-16 emotion-10"
             >
               Select item
             </p>
             <div
-              class="emotion-17 emotion-18"
+              class="emotion-18 emotion-19"
             >
               <svg
                 aria-label="show dropdown"
-                class="emotion-19 emotion-20"
+                class="emotion-20 emotion-21"
                 viewBox="0 0 20 20"
               >
                 <path
@@ -6109,10 +6179,14 @@ exports[`SelectInputV2 > renders correctly required 2`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-6[data-state='neutral']:not([data-disabled='true']):hover,
-.emotion-6[data-state='neutral']:not([data-disabled='true']):focus {
+.emotion-6[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
+}
+
+.emotion-6[data-state='neutral']:not([data-disabled='true']):focus-visible {
+  outline: 5px auto Highlight;
+  outline: 5px auto -webkit-focus-ring-color;
 }
 
 .emotion-6[data-state='neutral'][data-dropdownvisible='true'] {
@@ -6660,7 +6734,7 @@ exports[`SelectInputV2 > renders correctly required 2`] = `
         aria-describedby=":rap:"
         class="emotion-2 emotion-3"
         data-container-full-width="true"
-        tabindex="0"
+        tabindex="-1"
       >
         <div
           class="emotion-4 emotion-5"
@@ -7035,8 +7109,8 @@ exports[`SelectInputV2 > renders correctly small 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-6 {
-  color: #222638;
+.emotion-7 {
+  color: #3f4250;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -7045,9 +7119,10 @@ exports[`SelectInputV2 > renders correctly small 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  cursor: pointer;
 }
 
-.emotion-8 {
+.emotion-9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -7082,81 +7157,85 @@ exports[`SelectInputV2 > renders correctly small 1`] = `
   overflow: hidden;
 }
 
-.emotion-8[data-size='small'] {
+.emotion-9[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-8[data-size='medium'] {
+.emotion-9[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-8[data-size='large'] {
+.emotion-9[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-8[data-state='neutral'] {
+.emotion-9[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.emotion-8[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-9[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-8[data-state='neutral']:not([data-disabled='true']):hover,
-.emotion-8[data-state='neutral']:not([data-disabled='true']):focus {
+.emotion-9[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-8[data-state='neutral'][data-dropdownvisible='true'] {
+.emotion-9[data-state='neutral']:not([data-disabled='true']):focus-visible {
+  outline: 5px auto Highlight;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
+.emotion-9[data-state='neutral'][data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.emotion-8[data-state='success'] {
+.emotion-9[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.emotion-8[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-9[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #1b533f;
   box-shadow: 0px 0px 0px 3px #45d19f40;
 }
 
-.emotion-8[data-state='success'][data-dropdownvisible='true'] {
+.emotion-9[data-state='success'][data-dropdownvisible='true'] {
   border-color: #1b533f;
 }
 
-.emotion-8[data-state='danger'] {
+.emotion-9[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-8[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-9[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-8[data-state='danger'][data-dropdownvisible='true'] {
+.emotion-9[data-state='danger'][data-dropdownvisible='true'] {
   border-color: #92103f;
 }
 
-.emotion-8:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-9:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-8[data-readonly='true'] {
+.emotion-9[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-8[data-disabled='true'] {
+.emotion-9[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-11 {
+.emotion-12 {
   color: #727683;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
@@ -7172,7 +7251,7 @@ exports[`SelectInputV2 > renders correctly small 1`] = `
   user-select: none;
 }
 
-.emotion-13 {
+.emotion-14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -7200,7 +7279,7 @@ exports[`SelectInputV2 > renders correctly small 1`] = `
   display: flex;
 }
 
-.emotion-15 {
+.emotion-16 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1rem;
@@ -7209,7 +7288,7 @@ exports[`SelectInputV2 > renders correctly small 1`] = `
   min-height: 1rem;
 }
 
-.emotion-15 .fillStroke {
+.emotion-16 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
@@ -7226,13 +7305,13 @@ exports[`SelectInputV2 > renders correctly small 1`] = `
         aria-describedby=":r6:"
         class="emotion-2 emotion-3"
         data-container-full-width="true"
-        tabindex="0"
+        tabindex="-1"
       >
         <div
           class="emotion-4 emotion-5"
         >
           <label
-            class="emotion-6 emotion-7"
+            class="emotion-6 emotion-7 emotion-8"
             for=":r5:"
           >
             label
@@ -7241,7 +7320,7 @@ exports[`SelectInputV2 > renders correctly small 1`] = `
             aria-expanded="false"
             aria-haspopup="listbox"
             aria-label="label"
-            class="emotion-8 emotion-9"
+            class="emotion-9 emotion-10"
             data-disabled="false"
             data-dropdownvisible="false"
             data-readonly="false"
@@ -7253,16 +7332,16 @@ exports[`SelectInputV2 > renders correctly small 1`] = `
             tabindex="0"
           >
             <p
-              class="emotion-10 emotion-11 emotion-7"
+              class="emotion-11 emotion-12 emotion-8"
             >
               Select item
             </p>
             <div
-              class="emotion-13 emotion-14"
+              class="emotion-14 emotion-15"
             >
               <svg
                 aria-label="show dropdown"
-                class="emotion-15 emotion-16"
+                class="emotion-16 emotion-17"
                 viewBox="0 0 20 20"
               >
                 <path
@@ -7374,10 +7453,14 @@ exports[`SelectInputV2 > renders correctly unclosable tags when readonly 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-6[data-state='neutral']:not([data-disabled='true']):hover,
-.emotion-6[data-state='neutral']:not([data-disabled='true']):focus {
+.emotion-6[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
+}
+
+.emotion-6[data-state='neutral']:not([data-disabled='true']):focus-visible {
+  outline: 5px auto Highlight;
+  outline: 5px auto -webkit-focus-ring-color;
 }
 
 .emotion-6[data-state='neutral'][data-dropdownvisible='true'] {
@@ -7501,6 +7584,29 @@ exports[`SelectInputV2 > renders correctly unclosable tags when readonly 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 0.25rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-18 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
@@ -7524,7 +7630,7 @@ exports[`SelectInputV2 > renders correctly unclosable tags when readonly 1`] = `
   display: flex;
 }
 
-.emotion-18 {
+.emotion-20 {
   vertical-align: middle;
   fill: #b5b7bd;
   height: 1rem;
@@ -7533,7 +7639,7 @@ exports[`SelectInputV2 > renders correctly unclosable tags when readonly 1`] = `
   min-height: 1rem;
 }
 
-.emotion-18 .fillStroke {
+.emotion-20 .fillStroke {
   stroke: #b5b7bd;
   fill: none;
 }
@@ -7550,7 +7656,7 @@ exports[`SelectInputV2 > renders correctly unclosable tags when readonly 1`] = `
         aria-describedby=":rk1:"
         class="emotion-2 emotion-3"
         data-container-full-width="true"
-        tabindex="0"
+        tabindex="-1"
       >
         <div
           class="emotion-4 emotion-5"
@@ -7576,19 +7682,23 @@ exports[`SelectInputV2 > renders correctly unclosable tags when readonly 1`] = `
                 class="emotion-10 emotion-11 emotion-12"
                 data-testid="selected-options-tags"
               >
-                <span
+                <div
                   class="emotion-13 emotion-14 emotion-15"
                 >
-                  Venus
-                </span>
+                  <div
+                    class="emotion-16 emotion-5"
+                  >
+                    Venus
+                  </div>
+                </div>
               </span>
             </div>
             <div
-              class="emotion-16 emotion-17"
+              class="emotion-18 emotion-19"
             >
               <svg
                 aria-label="show dropdown"
-                class="emotion-18 emotion-19"
+                class="emotion-20 emotion-21"
                 viewBox="0 0 20 20"
               >
                 <path
@@ -7718,10 +7828,14 @@ exports[`SelectInputV2 > renders correctly ungrouped 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-6[data-state='neutral']:not([data-disabled='true']):hover,
-.emotion-6[data-state='neutral']:not([data-disabled='true']):focus {
+.emotion-6[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
+}
+
+.emotion-6[data-state='neutral']:not([data-disabled='true']):focus-visible {
+  outline: 5px auto Highlight;
+  outline: 5px auto -webkit-focus-ring-color;
 }
 
 .emotion-6[data-state='neutral'][data-dropdownvisible='true'] {
@@ -7943,6 +8057,8 @@ exports[`SelectInputV2 > renders correctly ungrouped 1`] = `
   background: #ffffff;
   border: 1px solid #d9dadd;
   border-radius: 0.25rem;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+  border: 1px solid #8c40ef;
 }
 
 .emotion-23>.emotion-30 {
@@ -8269,7 +8385,7 @@ exports[`SelectInputV2 > renders correctly ungrouped 1`] = `
         aria-describedby=":rq:"
         class="emotion-2 emotion-3"
         data-container-full-width="true"
-        tabindex="0"
+        tabindex="-1"
       >
         <div
           class="emotion-4 emotion-5"
@@ -8719,10 +8835,14 @@ exports[`SelectInputV2 > renders correctly with default value 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-6[data-state='neutral']:not([data-disabled='true']):hover,
-.emotion-6[data-state='neutral']:not([data-disabled='true']):focus {
+.emotion-6[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
+}
+
+.emotion-6[data-state='neutral']:not([data-disabled='true']):focus-visible {
+  outline: 5px auto Highlight;
+  outline: 5px auto -webkit-focus-ring-color;
 }
 
 .emotion-6[data-state='neutral'][data-dropdownvisible='true'] {
@@ -8783,6 +8903,7 @@ exports[`SelectInputV2 > renders correctly with default value 1`] = `
   text-decoration: none;
   text-overflow: ellipsis;
   overflow: hidden;
+  white-space: nowrap;
 }
 
 .emotion-11 {
@@ -9327,7 +9448,7 @@ exports[`SelectInputV2 > renders correctly with default value 1`] = `
         aria-describedby=":r2j:"
         class="emotion-2 emotion-3"
         data-container-full-width="true"
-        tabindex="0"
+        tabindex="-1"
       >
         <div
           class="emotion-4 emotion-5"
@@ -9849,10 +9970,14 @@ exports[`SelectInputV2 > renders correctly with emptyState 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-6[data-state='neutral']:not([data-disabled='true']):hover,
-.emotion-6[data-state='neutral']:not([data-disabled='true']):focus {
+.emotion-6[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
+}
+
+.emotion-6[data-state='neutral']:not([data-disabled='true']):focus-visible {
+  outline: 5px auto Highlight;
+  outline: 5px auto -webkit-focus-ring-color;
 }
 
 .emotion-6[data-state='neutral'][data-dropdownvisible='true'] {
@@ -10071,7 +10196,7 @@ exports[`SelectInputV2 > renders correctly with emptyState 1`] = `
         aria-describedby=":rah:"
         class="emotion-2 emotion-3"
         data-container-full-width="true"
-        tabindex="0"
+        tabindex="-1"
       >
         <div
           class="emotion-4 emotion-5"
@@ -10248,10 +10373,14 @@ exports[`SelectInputV2 > renders correctly with error 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-6[data-state='neutral']:not([data-disabled='true']):hover,
-.emotion-6[data-state='neutral']:not([data-disabled='true']):focus {
+.emotion-6[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
+}
+
+.emotion-6[data-state='neutral']:not([data-disabled='true']):focus-visible {
+  outline: 5px auto Highlight;
+  outline: 5px auto -webkit-focus-ring-color;
 }
 
 .emotion-6[data-state='neutral'][data-dropdownvisible='true'] {
@@ -10347,10 +10476,10 @@ exports[`SelectInputV2 > renders correctly with error 1`] = `
 .emotion-13 {
   vertical-align: middle;
   fill: #b3144d;
-  height: 1em;
-  width: 1em;
-  min-width: 1em;
-  min-height: 1em;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
 .emotion-13 .fillStroke {
@@ -10826,7 +10955,7 @@ exports[`SelectInputV2 > renders correctly with error 1`] = `
         aria-describedby=":rbn:"
         class="emotion-2 emotion-3"
         data-container-full-width="true"
-        tabindex="0"
+        tabindex="-1"
       >
         <div
           class="emotion-4 emotion-5"
@@ -11291,10 +11420,14 @@ exports[`SelectInputV2 > renders correctly with footer 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-6[data-state='neutral']:not([data-disabled='true']):hover,
-.emotion-6[data-state='neutral']:not([data-disabled='true']):focus {
+.emotion-6[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
+}
+
+.emotion-6[data-state='neutral']:not([data-disabled='true']):focus-visible {
+  outline: 5px auto Highlight;
+  outline: 5px auto -webkit-focus-ring-color;
 }
 
 .emotion-6[data-state='neutral'][data-dropdownvisible='true'] {
@@ -11355,6 +11488,7 @@ exports[`SelectInputV2 > renders correctly with footer 1`] = `
   text-decoration: none;
   text-overflow: ellipsis;
   overflow: hidden;
+  white-space: nowrap;
 }
 
 .emotion-11 {
@@ -11905,7 +12039,7 @@ exports[`SelectInputV2 > renders correctly with footer 1`] = `
         aria-describedby=":r3i:"
         class="emotion-2 emotion-3"
         data-container-full-width="true"
-        tabindex="0"
+        tabindex="-1"
       >
         <div
           class="emotion-4 emotion-5"
@@ -12432,10 +12566,14 @@ exports[`SelectInputV2 > renders correctly with label on the bottom and optional
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-6[data-state='neutral']:not([data-disabled='true']):hover,
-.emotion-6[data-state='neutral']:not([data-disabled='true']):focus {
+.emotion-6[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
+}
+
+.emotion-6[data-state='neutral']:not([data-disabled='true']):focus-visible {
+  outline: 5px auto Highlight;
+  outline: 5px auto -webkit-focus-ring-color;
 }
 
 .emotion-6[data-state='neutral'][data-dropdownvisible='true'] {
@@ -13089,7 +13227,7 @@ exports[`SelectInputV2 > renders correctly with label on the bottom and optional
         aria-describedby=":r89:"
         class="emotion-2 emotion-3"
         data-container-full-width="true"
-        tabindex="0"
+        tabindex="-1"
       >
         <div
           class="emotion-4 emotion-5"
@@ -13626,10 +13764,14 @@ exports[`SelectInputV2 > renders correctly with label on the bottom and optional
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-6[data-state='neutral']:not([data-disabled='true']):hover,
-.emotion-6[data-state='neutral']:not([data-disabled='true']):focus {
+.emotion-6[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
+}
+
+.emotion-6[data-state='neutral']:not([data-disabled='true']):focus-visible {
+  outline: 5px auto Highlight;
+  outline: 5px auto -webkit-focus-ring-color;
 }
 
 .emotion-6[data-state='neutral'][data-dropdownvisible='true'] {
@@ -14243,7 +14385,7 @@ exports[`SelectInputV2 > renders correctly with label on the bottom and optional
         aria-describedby=":r9b:"
         class="emotion-2 emotion-3"
         data-container-full-width="true"
-        tabindex="0"
+        tabindex="-1"
       >
         <div
           class="emotion-4 emotion-5"
@@ -14796,10 +14938,14 @@ exports[`SelectInputV2 > renders correctly with label on the right and optional 
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-6[data-state='neutral']:not([data-disabled='true']):hover,
-.emotion-6[data-state='neutral']:not([data-disabled='true']):focus {
+.emotion-6[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
+}
+
+.emotion-6[data-state='neutral']:not([data-disabled='true']):focus-visible {
+  outline: 5px auto Highlight;
+  outline: 5px auto -webkit-focus-ring-color;
 }
 
 .emotion-6[data-state='neutral'][data-dropdownvisible='true'] {
@@ -15436,7 +15582,7 @@ exports[`SelectInputV2 > renders correctly with label on the right and optional 
         aria-describedby=":r65:"
         class="emotion-2 emotion-3"
         data-container-full-width="true"
-        tabindex="0"
+        tabindex="-1"
       >
         <div
           class="emotion-4 emotion-5"
@@ -15989,10 +16135,14 @@ exports[`SelectInputV2 > renders correctly with label on the right and optional 
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-6[data-state='neutral']:not([data-disabled='true']):hover,
-.emotion-6[data-state='neutral']:not([data-disabled='true']):focus {
+.emotion-6[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
+}
+
+.emotion-6[data-state='neutral']:not([data-disabled='true']):focus-visible {
+  outline: 5px auto Highlight;
+  outline: 5px auto -webkit-focus-ring-color;
 }
 
 .emotion-6[data-state='neutral'][data-dropdownvisible='true'] {
@@ -16214,6 +16364,8 @@ exports[`SelectInputV2 > renders correctly with label on the right and optional 
   background: #ffffff;
   border: 1px solid #d9dadd;
   border-radius: 0.25rem;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+  border: 1px solid #8c40ef;
 }
 
 .emotion-23>.emotion-30 {
@@ -16629,7 +16781,7 @@ exports[`SelectInputV2 > renders correctly with label on the right and optional 
         aria-describedby=":r77:"
         class="emotion-2 emotion-3"
         data-container-full-width="true"
-        tabindex="0"
+        tabindex="-1"
       >
         <div
           class="emotion-4 emotion-5"
@@ -17182,10 +17334,14 @@ exports[`SelectInputV2 > renders correctly with not searchable 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-6[data-state='neutral']:not([data-disabled='true']):hover,
-.emotion-6[data-state='neutral']:not([data-disabled='true']):focus {
+.emotion-6[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
+}
+
+.emotion-6[data-state='neutral']:not([data-disabled='true']):focus-visible {
+  outline: 5px auto Highlight;
+  outline: 5px auto -webkit-focus-ring-color;
 }
 
 .emotion-6[data-state='neutral'][data-dropdownvisible='true'] {
@@ -17579,7 +17735,7 @@ exports[`SelectInputV2 > renders correctly with not searchable 1`] = `
         aria-describedby=":rdd:"
         class="emotion-2 emotion-3"
         data-container-full-width="true"
-        tabindex="0"
+        tabindex="-1"
       >
         <div
           class="emotion-4 emotion-5"
@@ -17989,10 +18145,14 @@ exports[`SelectInputV2 > renders correctly with success 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-6[data-state='neutral']:not([data-disabled='true']):hover,
-.emotion-6[data-state='neutral']:not([data-disabled='true']):focus {
+.emotion-6[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
+}
+
+.emotion-6[data-state='neutral']:not([data-disabled='true']):focus-visible {
+  outline: 5px auto Highlight;
+  outline: 5px auto -webkit-focus-ring-color;
 }
 
 .emotion-6[data-state='neutral'][data-dropdownvisible='true'] {
@@ -18088,10 +18248,10 @@ exports[`SelectInputV2 > renders correctly with success 1`] = `
 .emotion-13 {
   vertical-align: middle;
   fill: #22674e;
-  height: 1em;
-  width: 1em;
-  min-width: 1em;
-  min-height: 1em;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
 .emotion-13 .fillStroke {
@@ -18567,7 +18727,7 @@ exports[`SelectInputV2 > renders correctly with success 1`] = `
         aria-describedby=":rci:"
         class="emotion-2 emotion-3"
         data-container-full-width="true"
-        tabindex="0"
+        tabindex="-1"
       >
         <div
           class="emotion-4 emotion-5"
@@ -18957,8 +19117,8 @@ exports[`SelectInputV2 > renders correctly with tooltip 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-6 {
-  color: #222638;
+.emotion-7 {
+  color: #3f4250;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -18967,9 +19127,10 @@ exports[`SelectInputV2 > renders correctly with tooltip 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  cursor: pointer;
 }
 
-.emotion-10 {
+.emotion-11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -19004,81 +19165,85 @@ exports[`SelectInputV2 > renders correctly with tooltip 1`] = `
   overflow: hidden;
 }
 
-.emotion-10[data-size='small'] {
+.emotion-11[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-10[data-size='medium'] {
+.emotion-11[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-10[data-size='large'] {
+.emotion-11[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-10[data-state='neutral'] {
+.emotion-11[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.emotion-10[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-11[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-10[data-state='neutral']:not([data-disabled='true']):hover,
-.emotion-10[data-state='neutral']:not([data-disabled='true']):focus {
+.emotion-11[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-10[data-state='neutral'][data-dropdownvisible='true'] {
+.emotion-11[data-state='neutral']:not([data-disabled='true']):focus-visible {
+  outline: 5px auto Highlight;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
+.emotion-11[data-state='neutral'][data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.emotion-10[data-state='success'] {
+.emotion-11[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.emotion-10[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-11[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #1b533f;
   box-shadow: 0px 0px 0px 3px #45d19f40;
 }
 
-.emotion-10[data-state='success'][data-dropdownvisible='true'] {
+.emotion-11[data-state='success'][data-dropdownvisible='true'] {
   border-color: #1b533f;
 }
 
-.emotion-10[data-state='danger'] {
+.emotion-11[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-10[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-11[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-10[data-state='danger'][data-dropdownvisible='true'] {
+.emotion-11[data-state='danger'][data-dropdownvisible='true'] {
   border-color: #92103f;
 }
 
-.emotion-10:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-11:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-10[data-readonly='true'] {
+.emotion-11[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-10[data-disabled='true'] {
+.emotion-11[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-13 {
+.emotion-14 {
   color: #727683;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
@@ -19094,7 +19259,7 @@ exports[`SelectInputV2 > renders correctly with tooltip 1`] = `
   user-select: none;
 }
 
-.emotion-15 {
+.emotion-16 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -19122,7 +19287,7 @@ exports[`SelectInputV2 > renders correctly with tooltip 1`] = `
   display: flex;
 }
 
-.emotion-17 {
+.emotion-18 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1rem;
@@ -19131,7 +19296,7 @@ exports[`SelectInputV2 > renders correctly with tooltip 1`] = `
   min-height: 1rem;
 }
 
-.emotion-17 .fillStroke {
+.emotion-18 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
@@ -19148,13 +19313,13 @@ exports[`SelectInputV2 > renders correctly with tooltip 1`] = `
         aria-describedby=":rb:"
         class="emotion-2 emotion-3"
         data-container-full-width="true"
-        tabindex="0"
+        tabindex="-1"
       >
         <div
           class="emotion-4 emotion-5"
         >
           <label
-            class="emotion-6 emotion-7"
+            class="emotion-6 emotion-7 emotion-8"
             for=":ra:"
           >
             label
@@ -19169,7 +19334,7 @@ exports[`SelectInputV2 > renders correctly with tooltip 1`] = `
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-label="label"
-              class="emotion-10 emotion-11"
+              class="emotion-11 emotion-12"
               data-disabled="false"
               data-dropdownvisible="false"
               data-readonly="false"
@@ -19181,16 +19346,16 @@ exports[`SelectInputV2 > renders correctly with tooltip 1`] = `
               tabindex="0"
             >
               <p
-                class="emotion-12 emotion-13 emotion-7"
+                class="emotion-13 emotion-14 emotion-8"
               >
                 Select item
               </p>
               <div
-                class="emotion-15 emotion-16"
+                class="emotion-16 emotion-17"
               >
                 <svg
                   aria-label="show dropdown"
-                  class="emotion-17 emotion-18"
+                  class="emotion-18 emotion-19"
                   viewBox="0 0 20 20"
                 >
                   <path
