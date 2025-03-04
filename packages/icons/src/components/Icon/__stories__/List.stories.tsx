@@ -3,6 +3,7 @@ import type { Decorator } from '@storybook/react'
 import { Snippet, Stack, Text } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
 import * as Icon from '..'
+import { DEPRECATED_ICONS } from '../../../deprecatedIcons'
 import { Icon as Icons } from '../legacy'
 
 const StyledText = styled(Text)`
@@ -15,13 +16,14 @@ const pascalToKebab = (str: string) =>
     .toLowerCase()
     .slice(1)
 
-export const Name = (args: ComponentProps<(typeof Icon)['AddressIcon']>) =>
+export const List = (args: ComponentProps<(typeof Icon)['AddressIcon']>) =>
   Object.keys(Icon).map(name => {
     const FoundIcon = Icon[name as keyof typeof Icon]
 
     const isOutline = name.includes('Outline')
 
     const formattedName = name.replace('Icon', '').replace('Outline', '')
+    const deprecated = DEPRECATED_ICONS.find(icon => icon.name === name)
 
     return (
       <Stack direction="row" gap={1} alignItems="center" key={name}>
@@ -59,12 +61,24 @@ export const Name = (args: ComponentProps<(typeof Icon)['AddressIcon']>) =>
             />
           </Stack>
         </Stack>
-        <Snippet>{`import { ${name} } from '@ultraviolet/icons'`}</Snippet>
+        <div style={{ width: '880px' }}>
+          <Text as="code" variant="code" strikeThrough={!!deprecated}>
+            <Snippet>{`import { ${name} } from '@ultraviolet/icons'`}</Snippet>
+          </Text>
+        </div>
+        {deprecated ? (
+          <Text as="span" variant="bodySmall">
+            <Text as="span" variant="bodySmallStrong" sentiment="danger">
+              Deprecated:&nbsp;
+            </Text>
+            {deprecated.deprecatedReason}
+          </Text>
+        ) : null}
       </Stack>
     )
   })
 
-Name.parameters = {
+List.parameters = {
   docs: {
     description: {
       story:
@@ -73,7 +87,7 @@ Name.parameters = {
   },
 }
 
-Name.decorators = [
+List.decorators = [
   Story => (
     <Stack gap={1}>
       <Story />

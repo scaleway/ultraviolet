@@ -15,6 +15,6 @@ export default {
 } as Meta
 
 export { Playground } from './Playground.stories'
-export { Name } from './Name.stories'
+export { List } from './List.stories'
 export { Size } from './Size.stories'
 export { Sentiment } from './Sentiment.stories'
