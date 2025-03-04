@@ -143,7 +143,7 @@ export const Option = ({
               <Label
                 sentiment={groupValue === value ? 'primary' : 'neutral'}
                 htmlFor={inputId}
-                disabled={disabled}
+                disabled={disabled || groupDisabled}
                 labelDescription={labelDescription}
               >
                 {label}
