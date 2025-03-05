@@ -298,33 +298,30 @@ exports[`UnitInputField > should handles onChange and selection 1`] = `
   color: #b5b7bd;
 }
 
-.emotion-15 {
+.emotion-16 {
+  width: 100%;
   width: 12.6rem;
 }
 
-.emotion-18 {
-  width: 100%;
-}
-
-.emotion-18 #unit {
+.emotion-16 #unit {
   border: none;
   background: transparent;
 }
 
-.emotion-18 #unit:focus,
-.emotion-18 #unit:active {
+.emotion-16 #unit:focus,
+.emotion-16 #unit:active {
   box-shadow: none;
 }
 
-.emotion-20 {
+.emotion-18 {
   display: inherit;
 }
 
-.emotion-20[data-container-full-width="true"] {
+.emotion-18[data-container-full-width="true"] {
   width: 100%;
 }
 
-.emotion-24 {
+.emotion-22 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -359,85 +356,85 @@ exports[`UnitInputField > should handles onChange and selection 1`] = `
   overflow: hidden;
 }
 
-.emotion-24[data-size='small'] {
+.emotion-22[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-24[data-size='medium'] {
+.emotion-22[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-24[data-size='large'] {
+.emotion-22[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-24[data-state='neutral'] {
+.emotion-22[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.emotion-24[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-22[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-24[data-state='neutral']:not([data-disabled='true']):hover {
+.emotion-22[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-24[data-state='neutral']:not([data-disabled='true']):focus-visible {
+.emotion-22[data-state='neutral']:not([data-disabled='true']):focus-visible {
   outline: 5px auto Highlight;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-.emotion-24[data-state='neutral'][data-dropdownvisible='true'] {
+.emotion-22[data-state='neutral'][data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.emotion-24[data-state='success'] {
+.emotion-22[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.emotion-24[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-22[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #1b533f;
   box-shadow: 0px 0px 0px 3px #45d19f40;
 }
 
-.emotion-24[data-state='success'][data-dropdownvisible='true'] {
+.emotion-22[data-state='success'][data-dropdownvisible='true'] {
   border-color: #1b533f;
 }
 
-.emotion-24[data-state='danger'] {
+.emotion-22[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-24[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-22[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-24[data-state='danger'][data-dropdownvisible='true'] {
+.emotion-22[data-state='danger'][data-dropdownvisible='true'] {
   border-color: #92103f;
 }
 
-.emotion-24:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-22:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-24[data-readonly='true'] {
+.emotion-22[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-24[data-disabled='true'] {
+.emotion-22[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-27 {
+.emotion-25 {
   color: #3f4250;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
@@ -452,7 +449,7 @@ exports[`UnitInputField > should handles onChange and selection 1`] = `
   white-space: nowrap;
 }
 
-.emotion-29 {
+.emotion-27 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -480,7 +477,7 @@ exports[`UnitInputField > should handles onChange and selection 1`] = `
   display: flex;
 }
 
-.emotion-31 {
+.emotion-29 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1rem;
@@ -489,12 +486,12 @@ exports[`UnitInputField > should handles onChange and selection 1`] = `
   min-height: 1rem;
 }
 
-.emotion-31 .fillStroke {
+.emotion-29 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
 
-.emotion-33 {
+.emotion-31 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -533,17 +530,17 @@ exports[`UnitInputField > should handles onChange and selection 1`] = `
   color: #ffffff;
 }
 
-.emotion-33:hover {
+.emotion-31:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-33:active {
+.emotion-31:active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-33:hover,
-.emotion-33:active {
+.emotion-31:hover,
+.emotion-31:active {
   background: #792dd4;
   color: #f9f9fa;
 }
@@ -599,59 +596,53 @@ exports[`UnitInputField > should handles onChange and selection 1`] = `
               value="100"
             />
           </div>
-           
           <div
-            class="emotion-15 emotion-16"
-            width="12.6rem"
+            aria-label="test-unit"
+            class="emotion-15 emotion-16 emotion-17"
           >
             <div
-              aria-label="test-unit"
-              class="emotion-17 emotion-18 emotion-19"
+              aria-controls=":ra:"
+              aria-describedby=":ra:"
+              class="emotion-18 emotion-19"
+              data-container-full-width="true"
+              tabindex="-1"
             >
               <div
-                aria-controls=":ra:"
-                aria-describedby=":ra:"
-                class="emotion-20 emotion-21"
-                data-container-full-width="true"
-                tabindex="-1"
+                class="emotion-0 emotion-1"
               >
                 <div
-                  class="emotion-0 emotion-1"
+                  aria-expanded="false"
+                  aria-haspopup="listbox"
+                  class="emotion-22 emotion-23"
+                  data-disabled="false"
+                  data-dropdownvisible="false"
+                  data-readonly="false"
+                  data-size="large"
+                  data-state="neutral"
+                  data-testid="select-input-test-unit"
+                  id="unit"
+                  role="combobox"
+                  tabindex="0"
                 >
                   <div
-                    aria-expanded="false"
-                    aria-haspopup="listbox"
-                    class="emotion-24 emotion-25"
-                    data-disabled="false"
-                    data-dropdownvisible="false"
-                    data-readonly="false"
-                    data-size="large"
-                    data-state="neutral"
-                    data-testid="select-input-test-unit"
-                    id="unit"
-                    role="combobox"
-                    tabindex="0"
+                    class="emotion-24 emotion-25 emotion-6"
                   >
-                    <div
-                      class="emotion-26 emotion-27 emotion-6"
-                    >
-                      Days
-                    </div>
-                    <div
+                    Days
+                  </div>
+                  <div
+                    class="emotion-27 emotion-28"
+                  >
+                    <svg
+                      aria-label="show dropdown"
                       class="emotion-29 emotion-30"
+                      viewBox="0 0 20 20"
                     >
-                      <svg
-                        aria-label="show dropdown"
-                        class="emotion-31 emotion-32"
-                        viewBox="0 0 16 16"
-                      >
-                        <path
-                          clip-rule="evenodd"
-                          d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
-                          fill-rule="evenodd"
-                        />
-                      </svg>
-                    </div>
+                      <path
+                        clip-rule="evenodd"
+                        d="M5.47 7.47a.75.75 0 0 1 1.06 0l3.72 3.72 3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.47 8.53a.75.75 0 0 1 0-1.06"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
                   </div>
                 </div>
               </div>
@@ -660,7 +651,7 @@ exports[`UnitInputField > should handles onChange and selection 1`] = `
         </div>
       </div>
       <button
-        class="emotion-33 emotion-34"
+        class="emotion-31 emotion-32"
         type="submit"
       >
         Submit
@@ -933,33 +924,30 @@ exports[`UnitInputField > should render correctly 1`] = `
   color: #b5b7bd;
 }
 
-.emotion-11 {
+.emotion-12 {
+  width: 100%;
   width: 12.6rem;
 }
 
-.emotion-14 {
-  width: 100%;
-}
-
-.emotion-14 #unit {
+.emotion-12 #unit {
   border: none;
   background: transparent;
 }
 
-.emotion-14 #unit:focus,
-.emotion-14 #unit:active {
+.emotion-12 #unit:focus,
+.emotion-12 #unit:active {
   box-shadow: none;
 }
 
-.emotion-16 {
+.emotion-14 {
   display: inherit;
 }
 
-.emotion-16[data-container-full-width="true"] {
+.emotion-14[data-container-full-width="true"] {
   width: 100%;
 }
 
-.emotion-20 {
+.emotion-18 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -994,85 +982,85 @@ exports[`UnitInputField > should render correctly 1`] = `
   overflow: hidden;
 }
 
-.emotion-20[data-size='small'] {
+.emotion-18[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-20[data-size='medium'] {
+.emotion-18[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-20[data-size='large'] {
+.emotion-18[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-20[data-state='neutral'] {
+.emotion-18[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.emotion-20[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-18[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-20[data-state='neutral']:not([data-disabled='true']):hover {
+.emotion-18[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-20[data-state='neutral']:not([data-disabled='true']):focus-visible {
+.emotion-18[data-state='neutral']:not([data-disabled='true']):focus-visible {
   outline: 5px auto Highlight;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-.emotion-20[data-state='neutral'][data-dropdownvisible='true'] {
+.emotion-18[data-state='neutral'][data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.emotion-20[data-state='success'] {
+.emotion-18[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.emotion-20[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-18[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #1b533f;
   box-shadow: 0px 0px 0px 3px #45d19f40;
 }
 
-.emotion-20[data-state='success'][data-dropdownvisible='true'] {
+.emotion-18[data-state='success'][data-dropdownvisible='true'] {
   border-color: #1b533f;
 }
 
-.emotion-20[data-state='danger'] {
+.emotion-18[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-20[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-18[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-20[data-state='danger'][data-dropdownvisible='true'] {
+.emotion-18[data-state='danger'][data-dropdownvisible='true'] {
   border-color: #92103f;
 }
 
-.emotion-20:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-18:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-20[data-readonly='true'] {
+.emotion-18[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-20[data-disabled='true'] {
+.emotion-18[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-23 {
+.emotion-21 {
   color: #727683;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
@@ -1088,7 +1076,7 @@ exports[`UnitInputField > should render correctly 1`] = `
   user-select: none;
 }
 
-.emotion-25 {
+.emotion-23 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1116,7 +1104,7 @@ exports[`UnitInputField > should render correctly 1`] = `
   display: flex;
 }
 
-.emotion-27 {
+.emotion-25 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1rem;
@@ -1125,7 +1113,7 @@ exports[`UnitInputField > should render correctly 1`] = `
   min-height: 1rem;
 }
 
-.emotion-27 .fillStroke {
+.emotion-25 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
@@ -1170,59 +1158,53 @@ exports[`UnitInputField > should render correctly 1`] = `
               type="number"
             />
           </div>
-           
           <div
-            class="emotion-11 emotion-12"
-            width="12.6rem"
+            aria-label="test-unit"
+            class="emotion-11 emotion-12 emotion-13"
           >
             <div
-              aria-label="test-unit"
-              class="emotion-13 emotion-14 emotion-15"
+              aria-controls=":r3:"
+              aria-describedby=":r3:"
+              class="emotion-14 emotion-15"
+              data-container-full-width="true"
+              tabindex="-1"
             >
               <div
-                aria-controls=":r3:"
-                aria-describedby=":r3:"
-                class="emotion-16 emotion-17"
-                data-container-full-width="true"
-                tabindex="-1"
+                class="emotion-0 emotion-1"
               >
                 <div
-                  class="emotion-0 emotion-1"
+                  aria-expanded="false"
+                  aria-haspopup="listbox"
+                  class="emotion-18 emotion-19"
+                  data-disabled="false"
+                  data-dropdownvisible="false"
+                  data-readonly="false"
+                  data-size="large"
+                  data-state="neutral"
+                  data-testid="select-input-test-unit"
+                  id="unit"
+                  role="combobox"
+                  tabindex="0"
                 >
-                  <div
-                    aria-expanded="false"
-                    aria-haspopup="listbox"
-                    class="emotion-20 emotion-21"
-                    data-disabled="false"
-                    data-dropdownvisible="false"
-                    data-readonly="false"
-                    data-size="large"
-                    data-state="neutral"
-                    data-testid="select-input-test-unit"
-                    id="unit"
-                    role="combobox"
-                    tabindex="0"
+                  <p
+                    class="emotion-20 emotion-21 emotion-4"
                   >
-                    <p
-                      class="emotion-22 emotion-23 emotion-4"
-                    >
-                      Select item
-                    </p>
-                    <div
+                    Select item
+                  </p>
+                  <div
+                    class="emotion-23 emotion-24"
+                  >
+                    <svg
+                      aria-label="show dropdown"
                       class="emotion-25 emotion-26"
+                      viewBox="0 0 20 20"
                     >
-                      <svg
-                        aria-label="show dropdown"
-                        class="emotion-27 emotion-28"
-                        viewBox="0 0 16 16"
-                      >
-                        <path
-                          clip-rule="evenodd"
-                          d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
-                          fill-rule="evenodd"
-                        />
-                      </svg>
-                    </div>
+                      <path
+                        clip-rule="evenodd"
+                        d="M5.47 7.47a.75.75 0 0 1 1.06 0l3.72 3.72 3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.47 8.53a.75.75 0 0 1 0-1.06"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
                   </div>
                 </div>
               </div>
