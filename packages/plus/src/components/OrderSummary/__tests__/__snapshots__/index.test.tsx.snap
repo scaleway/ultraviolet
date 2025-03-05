@@ -942,10 +942,14 @@ exports[`OrderSummary > should work with children 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-23[data-state='neutral']:not([data-disabled='true']):hover,
-.emotion-23[data-state='neutral']:not([data-disabled='true']):focus {
+.emotion-23[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
+}
+
+.emotion-23[data-state='neutral']:not([data-disabled='true']):focus-visible {
+  outline: 5px auto Highlight;
+  outline: 5px auto -webkit-focus-ring-color;
 }
 
 .emotion-23[data-state='neutral'][data-dropdownvisible='true'] {
@@ -1051,10 +1055,14 @@ exports[`OrderSummary > should work with children 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-23[data-state='neutral']:not([data-disabled='true']):hover,
-.emotion-23[data-state='neutral']:not([data-disabled='true']):focus {
+.emotion-23[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
+}
+
+.emotion-23[data-state='neutral']:not([data-disabled='true']):focus-visible {
+  outline: 5px auto Highlight;
+  outline: 5px auto -webkit-focus-ring-color;
 }
 
 .emotion-23[data-state='neutral'][data-dropdownvisible='true'] {
@@ -1115,6 +1123,7 @@ exports[`OrderSummary > should work with children 1`] = `
   text-decoration: none;
   text-overflow: ellipsis;
   overflow: hidden;
+  white-space: nowrap;
 }
 
 .emotion-26 {
@@ -1129,6 +1138,7 @@ exports[`OrderSummary > should work with children 1`] = `
   text-decoration: none;
   text-overflow: ellipsis;
   overflow: hidden;
+  white-space: nowrap;
 }
 
 .emotion-28 {
@@ -1391,125 +1401,7 @@ exports[`OrderSummary > should work with children 1`] = `
   text-decoration: none;
 }
 
-.emotion-42 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.emotion-42 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.emotion-48 {
-  color: #3f4250;
-  font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-48 {
-  color: #3f4250;
-  font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-52 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  padding-left: 0.5rem;
-}
-
-.emotion-52 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  padding-left: 0.5rem;
-}
-
-.emotion-66 {
+.emotion-40 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1532,7 +1424,176 @@ exports[`OrderSummary > should work with children 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-70 {
+.emotion-40 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-42 {
+  color: #727683;
+  font-size: 0.875rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-text-decoration: line-through;
+  text-decoration: line-through;
+}
+
+.emotion-42 {
+  color: #727683;
+  font-size: 0.875rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-text-decoration: line-through;
+  text-decoration: line-through;
+}
+
+.emotion-46 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-46 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-52 {
+  color: #3f4250;
+  font-size: 0.875rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-52 {
+  color: #3f4250;
+  font-size: 0.875rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-56 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.25rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding-left: 0.5rem;
+}
+
+.emotion-56 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.25rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding-left: 0.5rem;
+}
+
+.emotion-74 {
   color: #641cb3;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
@@ -1545,7 +1606,7 @@ exports[`OrderSummary > should work with children 1`] = `
   font-style: italic;
 }
 
-.emotion-90 {
+.emotion-94 {
   color: #3f4250;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
@@ -1557,7 +1618,7 @@ exports[`OrderSummary > should work with children 1`] = `
   text-decoration: none;
 }
 
-.emotion-250 {
+.emotion-254 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1583,7 +1644,7 @@ exports[`OrderSummary > should work with children 1`] = `
   overflow: hidden;
 }
 
-.emotion-250 {
+.emotion-254 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1661,11 +1722,11 @@ exports[`OrderSummary > should work with children 1`] = `
                 class="emotion-16 emotion-17 emotion-18"
               >
                 <div
-                  aria-controls=":r3s:"
-                  aria-describedby=":r3s:"
+                  aria-controls=":r3v:"
+                  aria-describedby=":r3v:"
                   class="emotion-19 emotion-20"
                   data-container-full-width="true"
-                  tabindex="0"
+                  tabindex="-1"
                 >
                   <div
                     class="emotion-8 emotion-9"
@@ -1726,34 +1787,43 @@ exports[`OrderSummary > should work with children 1`] = `
             >
               Availability Zone
             </span>
-            <span
-              class="emotion-38 emotion-5"
+            <div
+              class="emotion-40 emotion-9"
             >
-              €5.00
-            </span>
+              <span
+                class="emotion-42 emotion-5"
+              >
+                €5.00
+              </span>
+              <span
+                class="emotion-38 emotion-5"
+              >
+                €2.50
+              </span>
+            </div>
           </div>
           <div
-            class="emotion-42 emotion-9"
+            class="emotion-46 emotion-9"
           >
             <div
-              class="emotion-42 emotion-9"
+              class="emotion-46 emotion-9"
             >
               <div
                 class="emotion-36 emotion-9"
               >
                 <span
-                  class="emotion-48 emotion-5"
+                  class="emotion-52 emotion-5"
                 >
                   PARIS 1
                 </span>
                 <span
-                  class="emotion-48 emotion-5"
+                  class="emotion-52 emotion-5"
                 >
                   €5.00
                 </span>
               </div>
               <div
-                class="emotion-52 emotion-53"
+                class="emotion-56 emotion-57"
               />
             </div>
           </div>
@@ -1772,7 +1842,7 @@ exports[`OrderSummary > should work with children 1`] = `
             FREE
           </div>
           <div
-            class="emotion-42 emotion-9"
+            class="emotion-46 emotion-9"
           />
         </div>
         <div
@@ -1782,7 +1852,7 @@ exports[`OrderSummary > should work with children 1`] = `
             class="emotion-36 emotion-9"
           >
             <div
-              class="emotion-66 emotion-9"
+              class="emotion-40 emotion-9"
             >
               <span
                 class="emotion-38 emotion-5"
@@ -1790,11 +1860,11 @@ exports[`OrderSummary > should work with children 1`] = `
                 Category
               </span>
               <span
-                class="emotion-70 emotion-5"
+                class="emotion-74 emotion-5"
               >
                 <div
-                  aria-controls=":r46:"
-                  aria-describedby=":r46:"
+                  aria-controls=":r4a:"
+                  aria-describedby=":r4a:"
                   class="emotion-19 emotion-20"
                   tabindex="0"
                 >
@@ -1818,35 +1888,35 @@ exports[`OrderSummary > should work with children 1`] = `
             </span>
           </div>
           <div
-            class="emotion-42 emotion-9"
+            class="emotion-46 emotion-9"
           >
             <div
-              class="emotion-42 emotion-9"
+              class="emotion-46 emotion-9"
             >
               <div
                 class="emotion-36 emotion-9"
               >
                 <span
-                  class="emotion-48 emotion-5"
+                  class="emotion-52 emotion-5"
                 >
                   SubCategory
                 </span>
                 <span
-                  class="emotion-48 emotion-5"
+                  class="emotion-52 emotion-5"
                 >
                   €12.20
                 </span>
               </div>
               <div
-                class="emotion-52 emotion-53"
+                class="emotion-56 emotion-57"
               >
                 <span
-                  class="emotion-90 emotion-5"
+                  class="emotion-94 emotion-5"
                 >
                   Detail 1
                 </span>
                 <span
-                  class="emotion-90 emotion-5"
+                  class="emotion-94 emotion-5"
                 >
                   Detail 2
                 </span>
@@ -1868,78 +1938,78 @@ exports[`OrderSummary > should work with children 1`] = `
             <span
               class="emotion-38 emotion-5"
             >
-              €134.10
+              €129.10
             </span>
           </div>
           <div
-            class="emotion-42 emotion-9"
+            class="emotion-46 emotion-9"
           >
             <div
-              class="emotion-42 emotion-9"
+              class="emotion-46 emotion-9"
             >
               <div
                 class="emotion-36 emotion-9"
               >
                 <span
-                  class="emotion-48 emotion-5"
+                  class="emotion-52 emotion-5"
                 >
                   M2-M
                 </span>
                 <span
-                  class="emotion-48 emotion-5"
+                  class="emotion-52 emotion-5"
                 >
-                  €124.10
+                  €119.10
                 </span>
               </div>
               <div
-                class="emotion-52 emotion-53"
+                class="emotion-56 emotion-57"
               >
                 <span
-                  class="emotion-90 emotion-5"
+                  class="emotion-94 emotion-5"
                 >
                   Apple M2 Chip
                 </span>
                 <span
-                  class="emotion-90 emotion-5"
+                  class="emotion-94 emotion-5"
                 >
                   8 Cores CPU 8 cores GPU
                 </span>
                 <span
-                  class="emotion-90 emotion-5"
+                  class="emotion-94 emotion-5"
                 >
                   256 GB SSD storage
                 </span>
                 <span
-                  class="emotion-90 emotion-5"
+                  class="emotion-94 emotion-5"
                 >
                   16 GB memory
                 </span>
                 <span
-                  class="emotion-90 emotion-5"
+                  class="emotion-94 emotion-5"
                 >
                   1 GB bandwidth
                 </span>
               </div>
             </div>
             <div
-              class="emotion-42 emotion-9"
+              class="emotion-46 emotion-9"
             >
               <div
                 class="emotion-36 emotion-9"
               >
                 <span
-                  class="emotion-48 emotion-5"
+                  class="emotion-52 emotion-5"
                 >
                   macOs Sonoma
                 </span>
                 <span
-                  class="emotion-48 emotion-5"
+                  class="emotion-52 emotion-5"
                 >
                   €10.00
                 </span>
               </div>
               <div
-                class="emotion-52 emotion-53"
+                class="emotion-56 emotion-57"
               />
             </div>
           </div>
@@ -1962,27 +2032,27 @@ exports[`OrderSummary > should work with children 1`] = `
             </span>
           </div>
           <div
-            class="emotion-42 emotion-9"
+            class="emotion-46 emotion-9"
           >
             <div
-              class="emotion-42 emotion-9"
+              class="emotion-46 emotion-9"
             >
               <div
                 class="emotion-36 emotion-9"
               >
                 <span
-                  class="emotion-48 emotion-5"
+                  class="emotion-52 emotion-5"
                 >
                   0.5 Gbps public bandwidth
                 </span>
                 <span
-                  class="emotion-48 emotion-5"
+                  class="emotion-52 emotion-5"
                 >
                   Included
                 </span>
               </div>
               <div
-                class="emotion-52 emotion-53"
+                class="emotion-56 emotion-57"
               />
             </div>
           </div>
@@ -2001,31 +2071,31 @@ exports[`OrderSummary > should work with children 1`] = `
             <span
               class="emotion-38 emotion-5"
             >
-              -€10.00
+              €0.00
             </span>
           </div>
           <div
-            class="emotion-42 emotion-9"
+            class="emotion-46 emotion-9"
           >
             <div
-              class="emotion-42 emotion-9"
+              class="emotion-46 emotion-9"
             >
               <div
                 class="emotion-36 emotion-9"
               >
                 <span
-                  class="emotion-48 emotion-5"
+                  class="emotion-52 emotion-5"
                 >
                   PROMO2025
                 </span>
                 <span
-                  class="emotion-48 emotion-5"
+                  class="emotion-52 emotion-5"
                 >
-                  -€10.00
+                  €0.00
                 </span>
               </div>
               <div
-                class="emotion-52 emotion-53"
+                class="emotion-56 emotion-57"
               />
             </div>
           </div>
@@ -2048,48 +2118,48 @@ exports[`OrderSummary > should work with children 1`] = `
             </span>
           </div>
           <div
-            class="emotion-42 emotion-9"
+            class="emotion-46 emotion-9"
           >
             <div
-              class="emotion-42 emotion-9"
+              class="emotion-46 emotion-9"
             >
               <div
                 class="emotion-36 emotion-9"
               >
                 <span
-                  class="emotion-48 emotion-5"
+                  class="emotion-52 emotion-5"
                 >
                   Setup
                 </span>
                 <span
-                  class="emotion-48 emotion-5"
+                  class="emotion-52 emotion-5"
                 >
                   €200.00
                 </span>
               </div>
               <div
-                class="emotion-52 emotion-53"
+                class="emotion-56 emotion-57"
               />
             </div>
             <div
-              class="emotion-42 emotion-9"
+              class="emotion-46 emotion-9"
             >
               <div
                 class="emotion-36 emotion-9"
               >
                 <span
-                  class="emotion-48 emotion-5"
+                  class="emotion-52 emotion-5"
                 >
                   Shipping
                 </span>
                 <span
-                  class="emotion-48 emotion-5"
+                  class="emotion-52 emotion-5"
                 >
                   €50.00
                 </span>
               </div>
               <div
-                class="emotion-52 emotion-53"
+                class="emotion-56 emotion-57"
               />
             </div>
           </div>
@@ -2112,27 +2182,27 @@ exports[`OrderSummary > should work with children 1`] = `
             </span>
           </div>
           <div
-            class="emotion-42 emotion-9"
+            class="emotion-46 emotion-9"
           >
             <div
-              class="emotion-42 emotion-9"
+              class="emotion-46 emotion-9"
             >
               <div
                 class="emotion-36 emotion-9"
               >
                 <span
-                  class="emotion-48 emotion-5"
+                  class="emotion-52 emotion-5"
                 >
                   200000 requests
                 </span>
                 <span
-                  class="emotion-48 emotion-5"
+                  class="emotion-52 emotion-5"
                 >
                   €0.00000015 /request
                 </span>
               </div>
               <div
-                class="emotion-52 emotion-53"
+                class="emotion-56 emotion-57"
               />
             </div>
           </div>
@@ -2144,7 +2214,7 @@ exports[`OrderSummary > should work with children 1`] = `
             class="emotion-36 emotion-9"
           >
             <div
-              class="emotion-66 emotion-9"
+              class="emotion-40 emotion-9"
             >
               <span
                 class="emotion-38 emotion-5"
@@ -2152,7 +2222,7 @@ exports[`OrderSummary > should work with children 1`] = `
                 Storage
               </span>
               <span
-                class="emotion-70 emotion-5"
+                class="emotion-74 emotion-5"
               >
                 <svg
                   class="emotion-30 emotion-31"
@@ -2173,34 +2243,34 @@ exports[`OrderSummary > should work with children 1`] = `
             </span>
           </div>
           <div
-            class="emotion-42 emotion-9"
+            class="emotion-46 emotion-9"
           >
             <div
-              class="emotion-42 emotion-9"
+              class="emotion-46 emotion-9"
             >
               <div
                 class="emotion-36 emotion-9"
               >
                 <span
-                  class="emotion-48 emotion-5"
+                  class="emotion-52 emotion-5"
                 >
                   100 GB of storage
                 </span>
                 <span
-                  class="emotion-48 emotion-5"
+                  class="emotion-52 emotion-5"
                 >
                   €0.00003425 /GB/hours
                 </span>
               </div>
               <div
-                class="emotion-52 emotion-53"
+                class="emotion-56 emotion-57"
               />
             </div>
           </div>
         </div>
       </div>
       <div
-        class="emotion-250 emotion-251"
+        class="emotion-254 emotion-255"
       >
         children
         <div
@@ -2215,7 +2285,7 @@ exports[`OrderSummary > should work with children 1`] = `
             class="emotion-4 emotion-5"
             data-testid="total-price"
           >
-            €391.33
+            €393.83
           </p>
         </div>
       </div>
@@ -2340,7 +2410,44 @@ exports[`OrderSummary > should work with default props 1`] = `
   text-decoration: none;
 }
 
+.emotion-10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
 .emotion-12 {
+  color: #727683;
+  font-size: 0.875rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-text-decoration: line-through;
+  text-decoration: line-through;
+}
+
+.emotion-16 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2363,7 +2470,7 @@ exports[`OrderSummary > should work with default props 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-18 {
+.emotion-22 {
   color: #3f4250;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
@@ -2375,7 +2482,7 @@ exports[`OrderSummary > should work with default props 1`] = `
   text-decoration: none;
 }
 
-.emotion-22 {
+.emotion-26 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2399,30 +2506,7 @@ exports[`OrderSummary > should work with default props 1`] = `
   padding-left: 0.5rem;
 }
 
-.emotion-36 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.emotion-40 {
+.emotion-44 {
   color: #641cb3;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
@@ -2435,15 +2519,15 @@ exports[`OrderSummary > should work with default props 1`] = `
   font-style: italic;
 }
 
-.emotion-42 {
+.emotion-46 {
   display: inherit;
 }
 
-.emotion-42[data-container-full-width="true"] {
+.emotion-46[data-container-full-width="true"] {
   width: 100%;
 }
 
-.emotion-44 {
+.emotion-48 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1rem;
@@ -2452,12 +2536,12 @@ exports[`OrderSummary > should work with default props 1`] = `
   min-height: 1rem;
 }
 
-.emotion-44 .fillStroke {
+.emotion-48 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
 
-.emotion-60 {
+.emotion-64 {
   color: #3f4250;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
@@ -2469,7 +2553,7 @@ exports[`OrderSummary > should work with default props 1`] = `
   text-decoration: none;
 }
 
-.emotion-220 {
+.emotion-224 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2495,7 +2579,7 @@ exports[`OrderSummary > should work with default props 1`] = `
   overflow: hidden;
 }
 
-.emotion-226 {
+.emotion-230 {
   color: #3f4250;
   font-size: 1.3125rem;
   font-family: Space Grotesk,sans-serif;
@@ -2527,34 +2611,43 @@ exports[`OrderSummary > should work with default props 1`] = `
             >
               Availability Zone
             </span>
-            <span
-              class="emotion-8 emotion-9"
+            <div
+              class="emotion-10 emotion-7"
             >
-              €5.00
-            </span>
+              <span
+                class="emotion-12 emotion-9"
+              >
+                €5.00
+              </span>
+              <span
+                class="emotion-8 emotion-9"
+              >
+                €2.50
+              </span>
+            </div>
           </div>
           <div
-            class="emotion-12 emotion-7"
+            class="emotion-16 emotion-7"
           >
             <div
-              class="emotion-12 emotion-7"
+              class="emotion-16 emotion-7"
             >
               <div
                 class="emotion-6 emotion-7"
               >
                 <span
-                  class="emotion-18 emotion-9"
+                  class="emotion-22 emotion-9"
                 >
                   PARIS 1
                 </span>
                 <span
-                  class="emotion-18 emotion-9"
+                  class="emotion-22 emotion-9"
                 >
                   €5.00
                 </span>
               </div>
               <div
-                class="emotion-22 emotion-23"
+                class="emotion-26 emotion-27"
               />
             </div>
           </div>
@@ -2573,7 +2666,7 @@ exports[`OrderSummary > should work with default props 1`] = `
             FREE
           </div>
           <div
-            class="emotion-12 emotion-7"
+            class="emotion-16 emotion-7"
           />
         </div>
         <div
@@ -2583,7 +2676,7 @@ exports[`OrderSummary > should work with default props 1`] = `
             class="emotion-6 emotion-7"
           >
             <div
-              class="emotion-36 emotion-7"
+              class="emotion-10 emotion-7"
             >
               <span
                 class="emotion-8 emotion-9"
@@ -2591,16 +2684,16 @@ exports[`OrderSummary > should work with default props 1`] = `
                 Category
               </span>
               <span
-                class="emotion-40 emotion-9"
+                class="emotion-44 emotion-9"
               >
                 <div
-                  aria-controls=":r7:"
-                  aria-describedby=":r7:"
-                  class="emotion-42 emotion-43"
+                  aria-controls=":r8:"
+                  aria-describedby=":r8:"
+                  class="emotion-46 emotion-47"
                   tabindex="0"
                 >
                   <svg
-                    class="emotion-44 emotion-45"
+                    class="emotion-48 emotion-49"
                     viewBox="0 0 20 20"
                   >
                     <path
@@ -2619,35 +2712,35 @@ exports[`OrderSummary > should work with default props 1`] = `
             </span>
           </div>
           <div
-            class="emotion-12 emotion-7"
+            class="emotion-16 emotion-7"
           >
             <div
-              class="emotion-12 emotion-7"
+              class="emotion-16 emotion-7"
             >
               <div
                 class="emotion-6 emotion-7"
               >
                 <span
-                  class="emotion-18 emotion-9"
+                  class="emotion-22 emotion-9"
                 >
                   SubCategory
                 </span>
                 <span
-                  class="emotion-18 emotion-9"
+                  class="emotion-22 emotion-9"
                 >
                   €12.20
                 </span>
               </div>
               <div
-                class="emotion-22 emotion-23"
+                class="emotion-26 emotion-27"
               >
                 <span
-                  class="emotion-60 emotion-9"
+                  class="emotion-64 emotion-9"
                 >
                   Detail 1
                 </span>
                 <span
-                  class="emotion-60 emotion-9"
+                  class="emotion-64 emotion-9"
                 >
                   Detail 2
                 </span>
@@ -2669,78 +2762,78 @@ exports[`OrderSummary > should work with default props 1`] = `
             <span
               class="emotion-8 emotion-9"
             >
-              €134.10
+              €129.10
             </span>
           </div>
           <div
-            class="emotion-12 emotion-7"
+            class="emotion-16 emotion-7"
           >
             <div
-              class="emotion-12 emotion-7"
+              class="emotion-16 emotion-7"
             >
               <div
                 class="emotion-6 emotion-7"
               >
                 <span
-                  class="emotion-18 emotion-9"
+                  class="emotion-22 emotion-9"
                 >
                   M2-M
                 </span>
                 <span
-                  class="emotion-18 emotion-9"
+                  class="emotion-22 emotion-9"
                 >
-                  €124.10
+                  €119.10
                 </span>
               </div>
               <div
-                class="emotion-22 emotion-23"
+                class="emotion-26 emotion-27"
               >
                 <span
-                  class="emotion-60 emotion-9"
+                  class="emotion-64 emotion-9"
                 >
                   Apple M2 Chip
                 </span>
                 <span
-                  class="emotion-60 emotion-9"
+                  class="emotion-64 emotion-9"
                 >
                   8 Cores CPU 8 cores GPU
                 </span>
                 <span
-                  class="emotion-60 emotion-9"
+                  class="emotion-64 emotion-9"
                 >
                   256 GB SSD storage
                 </span>
                 <span
-                  class="emotion-60 emotion-9"
+                  class="emotion-64 emotion-9"
                 >
                   16 GB memory
                 </span>
                 <span
-                  class="emotion-60 emotion-9"
+                  class="emotion-64 emotion-9"
                 >
                   1 GB bandwidth
                 </span>
               </div>
             </div>
             <div
-              class="emotion-12 emotion-7"
+              class="emotion-16 emotion-7"
             >
               <div
                 class="emotion-6 emotion-7"
               >
                 <span
-                  class="emotion-18 emotion-9"
+                  class="emotion-22 emotion-9"
                 >
                   macOs Sonoma
                 </span>
                 <span
-                  class="emotion-18 emotion-9"
+                  class="emotion-22 emotion-9"
                 >
                   €10.00
                 </span>
               </div>
               <div
-                class="emotion-22 emotion-23"
+                class="emotion-26 emotion-27"
               />
             </div>
           </div>
@@ -2763,27 +2856,27 @@ exports[`OrderSummary > should work with default props 1`] = `
             </span>
           </div>
           <div
-            class="emotion-12 emotion-7"
+            class="emotion-16 emotion-7"
           >
             <div
-              class="emotion-12 emotion-7"
+              class="emotion-16 emotion-7"
             >
               <div
                 class="emotion-6 emotion-7"
               >
                 <span
-                  class="emotion-18 emotion-9"
+                  class="emotion-22 emotion-9"
                 >
                   0.5 Gbps public bandwidth
                 </span>
                 <span
-                  class="emotion-18 emotion-9"
+                  class="emotion-22 emotion-9"
                 >
                   Included
                 </span>
               </div>
               <div
-                class="emotion-22 emotion-23"
+                class="emotion-26 emotion-27"
               />
             </div>
           </div>
@@ -2802,31 +2895,31 @@ exports[`OrderSummary > should work with default props 1`] = `
             <span
               class="emotion-8 emotion-9"
             >
-              -€10.00
+              €0.00
             </span>
           </div>
           <div
-            class="emotion-12 emotion-7"
+            class="emotion-16 emotion-7"
           >
             <div
-              class="emotion-12 emotion-7"
+              class="emotion-16 emotion-7"
             >
               <div
                 class="emotion-6 emotion-7"
               >
                 <span
-                  class="emotion-18 emotion-9"
+                  class="emotion-22 emotion-9"
                 >
                   PROMO2025
                 </span>
                 <span
-                  class="emotion-18 emotion-9"
+                  class="emotion-22 emotion-9"
                 >
-                  -€10.00
+                  €0.00
                 </span>
               </div>
               <div
-                class="emotion-22 emotion-23"
+                class="emotion-26 emotion-27"
               />
             </div>
           </div>
@@ -2849,48 +2942,48 @@ exports[`OrderSummary > should work with default props 1`] = `
             </span>
           </div>
           <div
-            class="emotion-12 emotion-7"
+            class="emotion-16 emotion-7"
           >
             <div
-              class="emotion-12 emotion-7"
+              class="emotion-16 emotion-7"
             >
               <div
                 class="emotion-6 emotion-7"
               >
                 <span
-                  class="emotion-18 emotion-9"
+                  class="emotion-22 emotion-9"
                 >
                   Setup
                 </span>
                 <span
-                  class="emotion-18 emotion-9"
+                  class="emotion-22 emotion-9"
                 >
                   €200.00
                 </span>
               </div>
               <div
-                class="emotion-22 emotion-23"
+                class="emotion-26 emotion-27"
               />
             </div>
             <div
-              class="emotion-12 emotion-7"
+              class="emotion-16 emotion-7"
             >
               <div
                 class="emotion-6 emotion-7"
               >
                 <span
-                  class="emotion-18 emotion-9"
+                  class="emotion-22 emotion-9"
                 >
                   Shipping
                 </span>
                 <span
-                  class="emotion-18 emotion-9"
+                  class="emotion-22 emotion-9"
                 >
                   €50.00
                 </span>
               </div>
               <div
-                class="emotion-22 emotion-23"
+                class="emotion-26 emotion-27"
               />
             </div>
           </div>
@@ -2913,27 +3006,27 @@ exports[`OrderSummary > should work with default props 1`] = `
             </span>
           </div>
           <div
-            class="emotion-12 emotion-7"
+            class="emotion-16 emotion-7"
           >
             <div
-              class="emotion-12 emotion-7"
+              class="emotion-16 emotion-7"
             >
               <div
                 class="emotion-6 emotion-7"
               >
                 <span
-                  class="emotion-18 emotion-9"
+                  class="emotion-22 emotion-9"
                 >
                   200000 requests
                 </span>
                 <span
-                  class="emotion-18 emotion-9"
+                  class="emotion-22 emotion-9"
                 >
                   €0.00000015 /request
                 </span>
               </div>
               <div
-                class="emotion-22 emotion-23"
+                class="emotion-26 emotion-27"
               />
             </div>
           </div>
@@ -2945,7 +3038,7 @@ exports[`OrderSummary > should work with default props 1`] = `
             class="emotion-6 emotion-7"
           >
             <div
-              class="emotion-36 emotion-7"
+              class="emotion-10 emotion-7"
             >
               <span
                 class="emotion-8 emotion-9"
@@ -2953,10 +3046,10 @@ exports[`OrderSummary > should work with default props 1`] = `
                 Storage
               </span>
               <span
-                class="emotion-40 emotion-9"
+                class="emotion-44 emotion-9"
               >
                 <svg
-                  class="emotion-44 emotion-45"
+                  class="emotion-48 emotion-49"
                   viewBox="0 0 20 20"
                 >
                   <path
@@ -2974,34 +3067,34 @@ exports[`OrderSummary > should work with default props 1`] = `
             </span>
           </div>
           <div
-            class="emotion-12 emotion-7"
+            class="emotion-16 emotion-7"
           >
             <div
-              class="emotion-12 emotion-7"
+              class="emotion-16 emotion-7"
             >
               <div
                 class="emotion-6 emotion-7"
               >
                 <span
-                  class="emotion-18 emotion-9"
+                  class="emotion-22 emotion-9"
                 >
                   100 GB of storage
                 </span>
                 <span
-                  class="emotion-18 emotion-9"
+                  class="emotion-22 emotion-9"
                 >
                   €0.00003425 /GB/hours
                 </span>
               </div>
               <div
-                class="emotion-22 emotion-23"
+                class="emotion-26 emotion-27"
               />
             </div>
           </div>
         </div>
       </div>
       <div
-        class="emotion-220 emotion-221"
+        class="emotion-224 emotion-225"
       >
         <div
           class="emotion-6 emotion-7"
@@ -3012,10 +3105,10 @@ exports[`OrderSummary > should work with default props 1`] = `
             Estimated cost:
           </p>
           <p
-            class="emotion-226 emotion-9"
+            class="emotion-230 emotion-9"
             data-testid="total-price"
           >
-            €391.33
+            €393.83
           </p>
         </div>
       </div>
@@ -3807,10 +3900,14 @@ exports[`OrderSummary > should work with discount 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-23[data-state='neutral']:not([data-disabled='true']):hover,
-.emotion-23[data-state='neutral']:not([data-disabled='true']):focus {
+.emotion-23[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
+}
+
+.emotion-23[data-state='neutral']:not([data-disabled='true']):focus-visible {
+  outline: 5px auto Highlight;
+  outline: 5px auto -webkit-focus-ring-color;
 }
 
 .emotion-23[data-state='neutral'][data-dropdownvisible='true'] {
@@ -3916,10 +4013,14 @@ exports[`OrderSummary > should work with discount 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-23[data-state='neutral']:not([data-disabled='true']):hover,
-.emotion-23[data-state='neutral']:not([data-disabled='true']):focus {
+.emotion-23[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
+}
+
+.emotion-23[data-state='neutral']:not([data-disabled='true']):focus-visible {
+  outline: 5px auto Highlight;
+  outline: 5px auto -webkit-focus-ring-color;
 }
 
 .emotion-23[data-state='neutral'][data-dropdownvisible='true'] {
@@ -3980,6 +4081,7 @@ exports[`OrderSummary > should work with discount 1`] = `
   text-decoration: none;
   text-overflow: ellipsis;
   overflow: hidden;
+  white-space: nowrap;
 }
 
 .emotion-26 {
@@ -3994,6 +4096,7 @@ exports[`OrderSummary > should work with discount 1`] = `
   text-decoration: none;
   text-overflow: ellipsis;
   overflow: hidden;
+  white-space: nowrap;
 }
 
 .emotion-28 {
@@ -4486,6 +4589,20 @@ exports[`OrderSummary > should work with discount 1`] = `
   text-decoration: line-through;
 }
 
+.emotion-62 {
+  color: #727683;
+  font-size: 0.875rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-text-decoration: line-through;
+  text-decoration: line-through;
+}
+
 <div
     data-testid="testing"
   >
@@ -4538,11 +4655,11 @@ exports[`OrderSummary > should work with discount 1`] = `
                 class="emotion-16 emotion-17 emotion-18"
               >
                 <div
-                  aria-controls=":r9m:"
-                  aria-describedby=":r9m:"
+                  aria-controls=":ra9:"
+                  aria-describedby=":ra9:"
                   class="emotion-19 emotion-20"
                   data-container-full-width="true"
-                  tabindex="0"
+                  tabindex="-1"
                 >
                   <div
                     class="emotion-8 emotion-9"
@@ -4601,7 +4718,7 @@ exports[`OrderSummary > should work with discount 1`] = `
             <span
               class="emotion-38 emotion-5"
             >
-              Availability Zone
+              SimpleCategory
             </span>
             <span
               class="emotion-38 emotion-5"
@@ -4621,7 +4738,1676 @@ exports[`OrderSummary > should work with discount 1`] = `
                 <span
                   class="emotion-48 emotion-5"
                 >
-                  PARIS 1
+                  subcategory
+                </span>
+                <span
+                  class="emotion-48 emotion-5"
+                >
+                  €5.00
+                </span>
+              </div>
+              <div
+                class="emotion-52 emotion-53"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="emotion-54 emotion-55"
+      >
+        <div
+          class="emotion-36 emotion-9"
+        >
+          <p
+            class="emotion-38 emotion-5"
+          >
+            Estimated cost:
+          </p>
+          <div
+            class="emotion-60 emotion-9"
+          >
+            <p
+              class="emotion-62 emotion-5"
+            >
+              €5.00
+            </p>
+            <p
+              class="emotion-4 emotion-5"
+              data-testid="total-price"
+            >
+              €0.00
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`OrderSummary > should work with discount in  % 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  background-color: #f9f9fa;
+  width: 27.5rem;
+  border: 1px solid #d9dadd;
+}
+
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  background-color: #f9f9fa;
+  width: 27.5rem;
+  border: 1px solid #d9dadd;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  height: 4.5rem;
+  border-bottom: 1px solid #d9dadd;
+  padding: 1.5rem;
+  padding-bottom: 1rem;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  height: 4.5rem;
+  border-bottom: 1px solid #d9dadd;
+  padding: 1.5rem;
+  padding-bottom: 1rem;
+}
+
+.emotion-4 {
+  color: #3f4250;
+  font-size: 1.3125rem;
+  font-family: Space Grotesk,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 2rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-4 {
+  color: #3f4250;
+  font-size: 1.3125rem;
+  font-family: Space Grotesk,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 2rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  background-color: #ffffff;
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  background-color: #ffffff;
+}
+
+.emotion-8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.25rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.25rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 11rem;
+  border: 1px solid #d9dadd;
+  border-radius: 0.25rem;
+}
+
+.emotion-10:not([data-disabled='true']):not([data-readonly='true']):not(
+      [data-success='true']
+    ):not([data-error='true']):focus,
+.emotion-10:not([data-disabled='true']):not([data-readonly='true']):not(
+      [data-success='true']
+    ):not([data-error='true']):active {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+  border-color: #792dd4;
+}
+
+.emotion-10:not([data-disabled='true']):not([data-readonly='true']):not(
+      [data-success='true']
+    ):not([data-error='true']):focus>.emotion-13,
+.emotion-10:not([data-disabled='true']):not([data-readonly='true']):not(
+      [data-success='true']
+    ):not([data-error='true']):active>.emotion-13 {
+  border-right-color: #8c40ef;
+}
+
+.emotion-10:not([data-disabled='true']):not([data-readonly='true']):not(
+      [data-success='true']
+    ):not([data-error='true']):focus-within {
+  border-color: #792dd4;
+}
+
+.emotion-10:not([data-disabled='true']):not([data-readonly='true']):not(
+      [data-success='true']
+    ):not([data-error='true']):focus-within>.emotion-13 {
+  border-right-color: #8c40ef;
+}
+
+.emotion-10:not([data-disabled='true']):not([data-error='true']):not(
+      [data-success='true']
+    ):not([data-readonly='true']):hover,
+.emotion-10:not([data-disabled='true']):not([data-error='true']):not(
+      [data-success='true']
+    ):focus {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-color: #8c40ef;
+}
+
+.emotion-10:not([data-disabled='true']):not([data-error='true']):not(
+      [data-success='true']
+    ):not([data-readonly='true']):hover>.emotion-13,
+.emotion-10:not([data-disabled='true']):not([data-error='true']):not(
+      [data-success='true']
+    ):focus>.emotion-13 {
+  border-right-color: #8c40ef;
+}
+
+.emotion-10[data-readonly='true'] {
+  background: #f9f9fa;
+  border-color: #d9dadd;
+  cursor: default;
+}
+
+.emotion-10[data-readonly='true']:active {
+  border-color: #d9dadd;
+}
+
+.emotion-10[data-size='small'] {
+  height: 2rem;
+}
+
+.emotion-10[data-size='medium'] {
+  height: 2.5rem;
+}
+
+.emotion-10[data-size='large'] {
+  height: 3rem;
+}
+
+.emotion-10[data-success='true'] {
+  border: 1px solid #22674e;
+}
+
+.emotion-10[data-success='true']>.emotion-13 {
+  border-right-color: #22674e;
+}
+
+.emotion-10[data-success='true']:active {
+  border: 1px solid #22674e;
+  box-shadow: 0px 0px 0px 3px #45d19f40;
+}
+
+.emotion-10[data-success='true']:active>.emotion-13 {
+  border-right-color: #22674e;
+}
+
+.emotion-10[data-error='true'] {
+  border: 1px solid #b3144d;
+}
+
+.emotion-10[data-error='true']>.emotion-13 {
+  border-right-color: #b3144d;
+}
+
+.emotion-10[data-error='true']>.emotion-13:hover {
+  border-right-color: #b3144d;
+}
+
+.emotion-10[data-error='true']:active {
+  border: 1px solid #b3144d;
+  box-shadow: 0px 0px 0px 3px #f91b6c40;
+}
+
+.emotion-10[data-error='true']:active>.emotion-13 {
+  border-right-color: #b3144d;
+}
+
+.emotion-10[data-error='true']:active>.emotion-13:hover {
+  border-right-color: #b3144d;
+}
+
+.emotion-10[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
+  cursor: not-allowed;
+}
+
+.emotion-10[data-disabled='true']>.emotion-13 {
+  border-right-color: #e9eaeb;
+}
+
+.emotion-10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 11rem;
+  border: 1px solid #d9dadd;
+  border-radius: 0.25rem;
+}
+
+.emotion-10:not([data-disabled='true']):not([data-readonly='true']):not(
+      [data-success='true']
+    ):not([data-error='true']):focus,
+.emotion-10:not([data-disabled='true']):not([data-readonly='true']):not(
+      [data-success='true']
+    ):not([data-error='true']):active {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+  border-color: #792dd4;
+}
+
+.emotion-10:not([data-disabled='true']):not([data-readonly='true']):not(
+      [data-success='true']
+    ):not([data-error='true']):focus>.emotion-13,
+.emotion-10:not([data-disabled='true']):not([data-readonly='true']):not(
+      [data-success='true']
+    ):not([data-error='true']):active>.emotion-13 {
+  border-right-color: #8c40ef;
+}
+
+.emotion-10:not([data-disabled='true']):not([data-readonly='true']):not(
+      [data-success='true']
+    ):not([data-error='true']):focus-within {
+  border-color: #792dd4;
+}
+
+.emotion-10:not([data-disabled='true']):not([data-readonly='true']):not(
+      [data-success='true']
+    ):not([data-error='true']):focus-within>.emotion-13 {
+  border-right-color: #8c40ef;
+}
+
+.emotion-10:not([data-disabled='true']):not([data-error='true']):not(
+      [data-success='true']
+    ):not([data-readonly='true']):hover,
+.emotion-10:not([data-disabled='true']):not([data-error='true']):not(
+      [data-success='true']
+    ):focus {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-color: #8c40ef;
+}
+
+.emotion-10:not([data-disabled='true']):not([data-error='true']):not(
+      [data-success='true']
+    ):not([data-readonly='true']):hover>.emotion-13,
+.emotion-10:not([data-disabled='true']):not([data-error='true']):not(
+      [data-success='true']
+    ):focus>.emotion-13 {
+  border-right-color: #8c40ef;
+}
+
+.emotion-10[data-readonly='true'] {
+  background: #f9f9fa;
+  border-color: #d9dadd;
+  cursor: default;
+}
+
+.emotion-10[data-readonly='true']:active {
+  border-color: #d9dadd;
+}
+
+.emotion-10[data-size='small'] {
+  height: 2rem;
+}
+
+.emotion-10[data-size='medium'] {
+  height: 2.5rem;
+}
+
+.emotion-10[data-size='large'] {
+  height: 3rem;
+}
+
+.emotion-10[data-success='true'] {
+  border: 1px solid #22674e;
+}
+
+.emotion-10[data-success='true']>.emotion-13 {
+  border-right-color: #22674e;
+}
+
+.emotion-10[data-success='true']:active {
+  border: 1px solid #22674e;
+  box-shadow: 0px 0px 0px 3px #45d19f40;
+}
+
+.emotion-10[data-success='true']:active>.emotion-13 {
+  border-right-color: #22674e;
+}
+
+.emotion-10[data-error='true'] {
+  border: 1px solid #b3144d;
+}
+
+.emotion-10[data-error='true']>.emotion-13 {
+  border-right-color: #b3144d;
+}
+
+.emotion-10[data-error='true']>.emotion-13:hover {
+  border-right-color: #b3144d;
+}
+
+.emotion-10[data-error='true']:active {
+  border: 1px solid #b3144d;
+  box-shadow: 0px 0px 0px 3px #f91b6c40;
+}
+
+.emotion-10[data-error='true']:active>.emotion-13 {
+  border-right-color: #b3144d;
+}
+
+.emotion-10[data-error='true']:active>.emotion-13:hover {
+  border-right-color: #b3144d;
+}
+
+.emotion-10[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
+  cursor: not-allowed;
+}
+
+.emotion-10[data-disabled='true']>.emotion-13 {
+  border-right-color: #e9eaeb;
+}
+
+.emotion-12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  padding-right: 1rem;
+  border-right: 1px solid #d9dadd;
+  width: 100%;
+  height: 100%;
+}
+
+.emotion-12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  padding-right: 1rem;
+  border-right: 1px solid #d9dadd;
+  width: 100%;
+  height: 100%;
+}
+
+.emotion-14 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  border: none;
+  outline: none;
+  height: 100%;
+  width: 100%;
+  padding-left: 1rem;
+  background: transparent;
+  color: #3f4250;
+}
+
+.emotion-14[data-size="small"] {
+  padding-left: 0.5rem;
+}
+
+.emotion-14[data-size="large"] {
+  font-size: 1rem;
+}
+
+.emotion-14::-webkit-input-placeholder {
+  color: #727683;
+}
+
+.emotion-14::-moz-placeholder {
+  color: #727683;
+}
+
+.emotion-14:-ms-input-placeholder {
+  color: #727683;
+}
+
+.emotion-14::placeholder {
+  color: #727683;
+}
+
+.emotion-14:disabled {
+  cursor: not-allowed;
+}
+
+.emotion-14:disabled::-webkit-input-placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-14:disabled::-moz-placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-14:disabled:-ms-input-placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-14:disabled::placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-14 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  border: none;
+  outline: none;
+  height: 100%;
+  width: 100%;
+  padding-left: 1rem;
+  background: transparent;
+  color: #3f4250;
+}
+
+.emotion-14[data-size="small"] {
+  padding-left: 0.5rem;
+}
+
+.emotion-14[data-size="large"] {
+  font-size: 1rem;
+}
+
+.emotion-14::-webkit-input-placeholder {
+  color: #727683;
+}
+
+.emotion-14::-moz-placeholder {
+  color: #727683;
+}
+
+.emotion-14:-ms-input-placeholder {
+  color: #727683;
+}
+
+.emotion-14::placeholder {
+  color: #727683;
+}
+
+.emotion-14:disabled {
+  cursor: not-allowed;
+}
+
+.emotion-14:disabled::-webkit-input-placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-14:disabled::-moz-placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-14:disabled:-ms-input-placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-14:disabled::placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-17 {
+  width: 100%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.emotion-17 #unit {
+  border: none;
+  background: transparent;
+}
+
+.emotion-17 #unit:focus,
+.emotion-17 #unit:active {
+  box-shadow: none;
+}
+
+.emotion-17 {
+  width: 100%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.emotion-17 #unit {
+  border: none;
+  background: transparent;
+}
+
+.emotion-17 #unit:focus,
+.emotion-17 #unit:active {
+  box-shadow: none;
+}
+
+.emotion-19 {
+  display: inherit;
+}
+
+.emotion-19[data-container-full-width="true"] {
+  width: 100%;
+}
+
+.emotion-19 {
+  display: inherit;
+}
+
+.emotion-19[data-container-full-width="true"] {
+  width: 100%;
+}
+
+.emotion-23 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0.5rem;
+  padding-right: 0;
+  padding-left: 1rem;
+  cursor: pointer;
+  box-shadow: none;
+  background: #ffffff;
+  border-radius: 0.25rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+.emotion-23[data-size='small'] {
+  height: 2rem;
+  padding-left: 0.5rem;
+}
+
+.emotion-23[data-size='medium'] {
+  height: 2.5rem;
+}
+
+.emotion-23[data-size='large'] {
+  height: 3rem;
+}
+
+.emotion-23[data-state='neutral'] {
+  border: 1px solid #d9dadd;
+}
+
+.emotion-23[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #792dd4;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-23[data-state='neutral']:not([data-disabled='true']):hover {
+  border-color: #792dd4;
+  outline: none;
+}
+
+.emotion-23[data-state='neutral']:not([data-disabled='true']):focus-visible {
+  outline: 5px auto Highlight;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
+.emotion-23[data-state='neutral'][data-dropdownvisible='true'] {
+  border-color: #792dd4;
+}
+
+.emotion-23[data-state='success'] {
+  border: 1px solid #22674e;
+}
+
+.emotion-23[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #1b533f;
+  box-shadow: 0px 0px 0px 3px #45d19f40;
+}
+
+.emotion-23[data-state='success'][data-dropdownvisible='true'] {
+  border-color: #1b533f;
+}
+
+.emotion-23[data-state='danger'] {
+  border: 1px solid #b3144d;
+}
+
+.emotion-23[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #92103f;
+  box-shadow: 0px 0px 0px 3px #f91b6c40;
+}
+
+.emotion-23[data-state='danger'][data-dropdownvisible='true'] {
+  border-color: #92103f;
+}
+
+.emotion-23:not([data-disabled='true']):not([data-readonly]):hover {
+  border-color: #8c40ef;
+}
+
+.emotion-23[data-readonly='true'] {
+  background: #f9f9fa;
+  border-color: #d9dadd;
+  cursor: default;
+}
+
+.emotion-23[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
+  cursor: not-allowed;
+}
+
+.emotion-23 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0.5rem;
+  padding-right: 0;
+  padding-left: 1rem;
+  cursor: pointer;
+  box-shadow: none;
+  background: #ffffff;
+  border-radius: 0.25rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+.emotion-23[data-size='small'] {
+  height: 2rem;
+  padding-left: 0.5rem;
+}
+
+.emotion-23[data-size='medium'] {
+  height: 2.5rem;
+}
+
+.emotion-23[data-size='large'] {
+  height: 3rem;
+}
+
+.emotion-23[data-state='neutral'] {
+  border: 1px solid #d9dadd;
+}
+
+.emotion-23[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #792dd4;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-23[data-state='neutral']:not([data-disabled='true']):hover {
+  border-color: #792dd4;
+  outline: none;
+}
+
+.emotion-23[data-state='neutral']:not([data-disabled='true']):focus-visible {
+  outline: 5px auto Highlight;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
+.emotion-23[data-state='neutral'][data-dropdownvisible='true'] {
+  border-color: #792dd4;
+}
+
+.emotion-23[data-state='success'] {
+  border: 1px solid #22674e;
+}
+
+.emotion-23[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #1b533f;
+  box-shadow: 0px 0px 0px 3px #45d19f40;
+}
+
+.emotion-23[data-state='success'][data-dropdownvisible='true'] {
+  border-color: #1b533f;
+}
+
+.emotion-23[data-state='danger'] {
+  border: 1px solid #b3144d;
+}
+
+.emotion-23[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #92103f;
+  box-shadow: 0px 0px 0px 3px #f91b6c40;
+}
+
+.emotion-23[data-state='danger'][data-dropdownvisible='true'] {
+  border-color: #92103f;
+}
+
+.emotion-23:not([data-disabled='true']):not([data-readonly]):hover {
+  border-color: #8c40ef;
+}
+
+.emotion-23[data-readonly='true'] {
+  background: #f9f9fa;
+  border-color: #d9dadd;
+  cursor: default;
+}
+
+.emotion-23[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
+  cursor: not-allowed;
+}
+
+.emotion-26 {
+  color: #3f4250;
+  font-size: 0.875rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.emotion-26 {
+  color: #3f4250;
+  font-size: 0.875rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.emotion-28 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding-right: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-28 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding-right: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-30 {
+  vertical-align: middle;
+  fill: #3f4250;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
+}
+
+.emotion-30 .fillStroke {
+  stroke: #3f4250;
+  fill: none;
+}
+
+.emotion-30 {
+  vertical-align: middle;
+  fill: #3f4250;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
+}
+
+.emotion-30 .fillStroke {
+  stroke: #3f4250;
+  fill: none;
+}
+
+.emotion-32 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.5rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  max-height: 30rem;
+  overflow-y: scroll;
+  padding: 1.5rem;
+}
+
+.emotion-32 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.5rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  max-height: 30rem;
+  overflow-y: scroll;
+  padding: 1.5rem;
+}
+
+.emotion-34 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.75rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-34:not(:last-child) {
+  border-bottom: 1px solid #d9dadd;
+  padding-bottom: 0.75rem;
+}
+
+.emotion-34 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.75rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-34:not(:last-child) {
+  border-bottom: 1px solid #d9dadd;
+  padding-bottom: 0.75rem;
+}
+
+.emotion-36 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-36 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-38 {
+  color: #3f4250;
+  font-size: 1rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-38 {
+  color: #3f4250;
+  font-size: 1rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-42 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-42 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-48 {
+  color: #3f4250;
+  font-size: 0.875rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-48 {
+  color: #3f4250;
+  font-size: 0.875rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-52 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.25rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding-left: 0.5rem;
+}
+
+.emotion-52 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.25rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding-left: 0.5rem;
+}
+
+.emotion-54 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.5rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding: 1.5rem;
+  border-top: 1px solid #d9dadd;
+  overflow: hidden;
+}
+
+.emotion-54 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.5rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding: 1.5rem;
+  border-top: 1px solid #d9dadd;
+  overflow: hidden;
+}
+
+.emotion-60 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-60 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-62 {
+  color: #727683;
+  font-size: 0.875rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-text-decoration: line-through;
+  text-decoration: line-through;
+}
+
+.emotion-62 {
+  color: #727683;
+  font-size: 0.875rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-text-decoration: line-through;
+  text-decoration: line-through;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+    >
+      <div
+        class="emotion-2 emotion-3"
+      >
+        <h3
+          class="emotion-4 emotion-5"
+        >
+          summary
+        </h3>
+        <div
+          class="emotion-6 emotion-7"
+        >
+          <div
+            class="emotion-8 emotion-9"
+          >
+            <div
+              class="emotion-10 emotion-11"
+              data-disabled="false"
+              data-error="false"
+              data-readonly="false"
+              data-size="small"
+              data-success="false"
+            >
+              <div
+                class="emotion-12 emotion-13"
+                id="input-field"
+              >
+                <input
+                  aria-invalid="false"
+                  class="emotion-14 emotion-15"
+                  data-size="small"
+                  data-testid="unit-input"
+                  max="9007199254740991"
+                  min="0"
+                  name="-value"
+                  placeholder="0"
+                  step="1"
+                  type="number"
+                  value="1"
+                  width="11rem"
+                />
+              </div>
+              <div
+                aria-label="-unit"
+                class="emotion-16 emotion-17 emotion-18"
+              >
+                <div
+                  aria-controls=":r9s:"
+                  aria-describedby=":r9s:"
+                  class="emotion-19 emotion-20"
+                  data-container-full-width="true"
+                  tabindex="-1"
+                >
+                  <div
+                    class="emotion-8 emotion-9"
+                  >
+                    <div
+                      aria-expanded="false"
+                      aria-haspopup="listbox"
+                      class="emotion-23 emotion-24"
+                      data-disabled="false"
+                      data-dropdownvisible="false"
+                      data-readonly="false"
+                      data-size="small"
+                      data-state="neutral"
+                      data-testid="select-input--unit"
+                      id="unit"
+                      role="combobox"
+                      tabindex="0"
+                    >
+                      <div
+                        class="emotion-25 emotion-26 emotion-5"
+                      >
+                        Hour(s)
+                      </div>
+                      <div
+                        class="emotion-28 emotion-29"
+                      >
+                        <svg
+                          aria-label="show dropdown"
+                          class="emotion-30 emotion-31"
+                          viewBox="0 0 20 20"
+                        >
+                          <path
+                            clip-rule="evenodd"
+                            d="M5.47 7.47a.75.75 0 0 1 1.06 0l3.72 3.72 3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.47 8.53a.75.75 0 0 1 0-1.06"
+                            fill-rule="evenodd"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="emotion-32 emotion-33"
+      >
+        <div
+          class="emotion-34 emotion-35"
+        >
+          <div
+            class="emotion-36 emotion-9"
+          >
+            <span
+              class="emotion-38 emotion-5"
+            >
+              SimpleCategory
+            </span>
+            <span
+              class="emotion-38 emotion-5"
+            >
+              €5.00
+            </span>
+          </div>
+          <div
+            class="emotion-42 emotion-9"
+          >
+            <div
+              class="emotion-42 emotion-9"
+            >
+              <div
+                class="emotion-36 emotion-9"
+              >
+                <span
+                  class="emotion-48 emotion-5"
+                >
+                  subcategory
                 </span>
                 <span
                   class="emotion-48 emotion-5"
@@ -5452,10 +7238,14 @@ exports[`OrderSummary > should work with footer 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-23[data-state='neutral']:not([data-disabled='true']):hover,
-.emotion-23[data-state='neutral']:not([data-disabled='true']):focus {
+.emotion-23[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
+}
+
+.emotion-23[data-state='neutral']:not([data-disabled='true']):focus-visible {
+  outline: 5px auto Highlight;
+  outline: 5px auto -webkit-focus-ring-color;
 }
 
 .emotion-23[data-state='neutral'][data-dropdownvisible='true'] {
@@ -5561,10 +7351,14 @@ exports[`OrderSummary > should work with footer 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-23[data-state='neutral']:not([data-disabled='true']):hover,
-.emotion-23[data-state='neutral']:not([data-disabled='true']):focus {
+.emotion-23[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
+}
+
+.emotion-23[data-state='neutral']:not([data-disabled='true']):focus-visible {
+  outline: 5px auto Highlight;
+  outline: 5px auto -webkit-focus-ring-color;
 }
 
 .emotion-23[data-state='neutral'][data-dropdownvisible='true'] {
@@ -5625,6 +7419,7 @@ exports[`OrderSummary > should work with footer 1`] = `
   text-decoration: none;
   text-overflow: ellipsis;
   overflow: hidden;
+  white-space: nowrap;
 }
 
 .emotion-26 {
@@ -5639,6 +7434,7 @@ exports[`OrderSummary > should work with footer 1`] = `
   text-decoration: none;
   text-overflow: ellipsis;
   overflow: hidden;
+  white-space: nowrap;
 }
 
 .emotion-28 {
@@ -5901,125 +7697,7 @@ exports[`OrderSummary > should work with footer 1`] = `
   text-decoration: none;
 }
 
-.emotion-42 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.emotion-42 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.emotion-48 {
-  color: #3f4250;
-  font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-48 {
-  color: #3f4250;
-  font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-52 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  padding-left: 0.5rem;
-}
-
-.emotion-52 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  padding-left: 0.5rem;
-}
-
-.emotion-66 {
+.emotion-40 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6042,7 +7720,176 @@ exports[`OrderSummary > should work with footer 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-70 {
+.emotion-40 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-42 {
+  color: #727683;
+  font-size: 0.875rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-text-decoration: line-through;
+  text-decoration: line-through;
+}
+
+.emotion-42 {
+  color: #727683;
+  font-size: 0.875rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-text-decoration: line-through;
+  text-decoration: line-through;
+}
+
+.emotion-46 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-46 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-52 {
+  color: #3f4250;
+  font-size: 0.875rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-52 {
+  color: #3f4250;
+  font-size: 0.875rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-56 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.25rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding-left: 0.5rem;
+}
+
+.emotion-56 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.25rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding-left: 0.5rem;
+}
+
+.emotion-74 {
   color: #641cb3;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
@@ -6055,7 +7902,7 @@ exports[`OrderSummary > should work with footer 1`] = `
   font-style: italic;
 }
 
-.emotion-90 {
+.emotion-94 {
   color: #3f4250;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
@@ -6067,7 +7914,7 @@ exports[`OrderSummary > should work with footer 1`] = `
   text-decoration: none;
 }
 
-.emotion-250 {
+.emotion-254 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6093,7 +7940,7 @@ exports[`OrderSummary > should work with footer 1`] = `
   overflow: hidden;
 }
 
-.emotion-250 {
+.emotion-254 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6171,11 +8018,11 @@ exports[`OrderSummary > should work with footer 1`] = `
                 class="emotion-16 emotion-17 emotion-18"
               >
                 <div
-                  aria-controls=":r5j:"
-                  aria-describedby=":r5j:"
+                  aria-controls=":r5n:"
+                  aria-describedby=":r5n:"
                   class="emotion-19 emotion-20"
                   data-container-full-width="true"
-                  tabindex="0"
+                  tabindex="-1"
                 >
                   <div
                     class="emotion-8 emotion-9"
@@ -6236,34 +8083,43 @@ exports[`OrderSummary > should work with footer 1`] = `
             >
               Availability Zone
             </span>
-            <span
-              class="emotion-38 emotion-5"
+            <div
+              class="emotion-40 emotion-9"
             >
-              €5.00
-            </span>
+              <span
+                class="emotion-42 emotion-5"
+              >
+                €5.00
+              </span>
+              <span
+                class="emotion-38 emotion-5"
+              >
+                €2.50
+              </span>
+            </div>
           </div>
           <div
-            class="emotion-42 emotion-9"
+            class="emotion-46 emotion-9"
           >
             <div
-              class="emotion-42 emotion-9"
+              class="emotion-46 emotion-9"
             >
               <div
                 class="emotion-36 emotion-9"
               >
                 <span
-                  class="emotion-48 emotion-5"
+                  class="emotion-52 emotion-5"
                 >
                   PARIS 1
                 </span>
                 <span
-                  class="emotion-48 emotion-5"
+                  class="emotion-52 emotion-5"
                 >
                   €5.00
                 </span>
               </div>
               <div
-                class="emotion-52 emotion-53"
+                class="emotion-56 emotion-57"
               />
             </div>
           </div>
@@ -6282,7 +8138,7 @@ exports[`OrderSummary > should work with footer 1`] = `
             FREE
           </div>
           <div
-            class="emotion-42 emotion-9"
+            class="emotion-46 emotion-9"
           />
         </div>
         <div
@@ -6292,7 +8148,7 @@ exports[`OrderSummary > should work with footer 1`] = `
             class="emotion-36 emotion-9"
           >
             <div
-              class="emotion-66 emotion-9"
+              class="emotion-40 emotion-9"
             >
               <span
                 class="emotion-38 emotion-5"
@@ -6300,11 +8156,11 @@ exports[`OrderSummary > should work with footer 1`] = `
                 Category
               </span>
               <span
-                class="emotion-70 emotion-5"
+                class="emotion-74 emotion-5"
               >
                 <div
-                  aria-controls=":r5t:"
-                  aria-describedby=":r5t:"
+                  aria-controls=":r62:"
+                  aria-describedby=":r62:"
                   class="emotion-19 emotion-20"
                   tabindex="0"
                 >
@@ -6328,35 +8184,35 @@ exports[`OrderSummary > should work with footer 1`] = `
             </span>
           </div>
           <div
-            class="emotion-42 emotion-9"
+            class="emotion-46 emotion-9"
           >
             <div
-              class="emotion-42 emotion-9"
+              class="emotion-46 emotion-9"
             >
               <div
                 class="emotion-36 emotion-9"
               >
                 <span
-                  class="emotion-48 emotion-5"
+                  class="emotion-52 emotion-5"
                 >
                   SubCategory
                 </span>
                 <span
-                  class="emotion-48 emotion-5"
+                  class="emotion-52 emotion-5"
                 >
                   €12.20
                 </span>
               </div>
               <div
-                class="emotion-52 emotion-53"
+                class="emotion-56 emotion-57"
               >
                 <span
-                  class="emotion-90 emotion-5"
+                  class="emotion-94 emotion-5"
                 >
                   Detail 1
                 </span>
                 <span
-                  class="emotion-90 emotion-5"
+                  class="emotion-94 emotion-5"
                 >
                   Detail 2
                 </span>
@@ -6378,78 +8234,78 @@ exports[`OrderSummary > should work with footer 1`] = `
             <span
               class="emotion-38 emotion-5"
             >
-              €134.10
+              €129.10
             </span>
           </div>
           <div
-            class="emotion-42 emotion-9"
+            class="emotion-46 emotion-9"
           >
             <div
-              class="emotion-42 emotion-9"
+              class="emotion-46 emotion-9"
             >
               <div
                 class="emotion-36 emotion-9"
               >
                 <span
-                  class="emotion-48 emotion-5"
+                  class="emotion-52 emotion-5"
                 >
                   M2-M
                 </span>
                 <span
-                  class="emotion-48 emotion-5"
+                  class="emotion-52 emotion-5"
                 >
-                  €124.10
+                  €119.10
                 </span>
               </div>
               <div
-                class="emotion-52 emotion-53"
+                class="emotion-56 emotion-57"
               >
                 <span
-                  class="emotion-90 emotion-5"
+                  class="emotion-94 emotion-5"
                 >
                   Apple M2 Chip
                 </span>
                 <span
-                  class="emotion-90 emotion-5"
+                  class="emotion-94 emotion-5"
                 >
                   8 Cores CPU 8 cores GPU
                 </span>
                 <span
-                  class="emotion-90 emotion-5"
+                  class="emotion-94 emotion-5"
                 >
                   256 GB SSD storage
                 </span>
                 <span
-                  class="emotion-90 emotion-5"
+                  class="emotion-94 emotion-5"
                 >
                   16 GB memory
                 </span>
                 <span
-                  class="emotion-90 emotion-5"
+                  class="emotion-94 emotion-5"
                 >
                   1 GB bandwidth
                 </span>
               </div>
             </div>
             <div
-              class="emotion-42 emotion-9"
+              class="emotion-46 emotion-9"
             >
               <div
                 class="emotion-36 emotion-9"
               >
                 <span
-                  class="emotion-48 emotion-5"
+                  class="emotion-52 emotion-5"
                 >
                   macOs Sonoma
                 </span>
                 <span
-                  class="emotion-48 emotion-5"
+                  class="emotion-52 emotion-5"
                 >
                   €10.00
                 </span>
               </div>
               <div
-                class="emotion-52 emotion-53"
+                class="emotion-56 emotion-57"
               />
             </div>
           </div>
@@ -6472,27 +8328,27 @@ exports[`OrderSummary > should work with footer 1`] = `
             </span>
           </div>
           <div
-            class="emotion-42 emotion-9"
+            class="emotion-46 emotion-9"
           >
             <div
-              class="emotion-42 emotion-9"
+              class="emotion-46 emotion-9"
             >
               <div
                 class="emotion-36 emotion-9"
               >
                 <span
-                  class="emotion-48 emotion-5"
+                  class="emotion-52 emotion-5"
                 >
                   0.5 Gbps public bandwidth
                 </span>
                 <span
-                  class="emotion-48 emotion-5"
+                  class="emotion-52 emotion-5"
                 >
                   Included
                 </span>
               </div>
               <div
-                class="emotion-52 emotion-53"
+                class="emotion-56 emotion-57"
               />
             </div>
           </div>
@@ -6511,31 +8367,31 @@ exports[`OrderSummary > should work with footer 1`] = `
             <span
               class="emotion-38 emotion-5"
             >
-              -€10.00
+              €0.00
             </span>
           </div>
           <div
-            class="emotion-42 emotion-9"
+            class="emotion-46 emotion-9"
           >
             <div
-              class="emotion-42 emotion-9"
+              class="emotion-46 emotion-9"
             >
               <div
                 class="emotion-36 emotion-9"
               >
                 <span
-                  class="emotion-48 emotion-5"
+                  class="emotion-52 emotion-5"
                 >
                   PROMO2025
                 </span>
                 <span
-                  class="emotion-48 emotion-5"
+                  class="emotion-52 emotion-5"
                 >
-                  -€10.00
+                  €0.00
                 </span>
               </div>
               <div
-                class="emotion-52 emotion-53"
+                class="emotion-56 emotion-57"
               />
             </div>
           </div>
@@ -6558,48 +8414,48 @@ exports[`OrderSummary > should work with footer 1`] = `
             </span>
           </div>
           <div
-            class="emotion-42 emotion-9"
+            class="emotion-46 emotion-9"
           >
             <div
-              class="emotion-42 emotion-9"
+              class="emotion-46 emotion-9"
             >
               <div
                 class="emotion-36 emotion-9"
               >
                 <span
-                  class="emotion-48 emotion-5"
+                  class="emotion-52 emotion-5"
                 >
                   Setup
                 </span>
                 <span
-                  class="emotion-48 emotion-5"
+                  class="emotion-52 emotion-5"
                 >
                   €200.00
                 </span>
               </div>
               <div
-                class="emotion-52 emotion-53"
+                class="emotion-56 emotion-57"
               />
             </div>
             <div
-              class="emotion-42 emotion-9"
+              class="emotion-46 emotion-9"
             >
               <div
                 class="emotion-36 emotion-9"
               >
                 <span
-                  class="emotion-48 emotion-5"
+                  class="emotion-52 emotion-5"
                 >
                   Shipping
                 </span>
                 <span
-                  class="emotion-48 emotion-5"
+                  class="emotion-52 emotion-5"
                 >
                   €50.00
                 </span>
               </div>
               <div
-                class="emotion-52 emotion-53"
+                class="emotion-56 emotion-57"
               />
             </div>
           </div>
@@ -6622,27 +8478,27 @@ exports[`OrderSummary > should work with footer 1`] = `
             </span>
           </div>
           <div
-            class="emotion-42 emotion-9"
+            class="emotion-46 emotion-9"
           >
             <div
-              class="emotion-42 emotion-9"
+              class="emotion-46 emotion-9"
             >
               <div
                 class="emotion-36 emotion-9"
               >
                 <span
-                  class="emotion-48 emotion-5"
+                  class="emotion-52 emotion-5"
                 >
                   200000 requests
                 </span>
                 <span
-                  class="emotion-48 emotion-5"
+                  class="emotion-52 emotion-5"
                 >
                   €0.00000015 /request
                 </span>
               </div>
               <div
-                class="emotion-52 emotion-53"
+                class="emotion-56 emotion-57"
               />
             </div>
           </div>
@@ -6654,7 +8510,7 @@ exports[`OrderSummary > should work with footer 1`] = `
             class="emotion-36 emotion-9"
           >
             <div
-              class="emotion-66 emotion-9"
+              class="emotion-40 emotion-9"
             >
               <span
                 class="emotion-38 emotion-5"
@@ -6662,7 +8518,7 @@ exports[`OrderSummary > should work with footer 1`] = `
                 Storage
               </span>
               <span
-                class="emotion-70 emotion-5"
+                class="emotion-74 emotion-5"
               >
                 <svg
                   class="emotion-30 emotion-31"
@@ -6683,34 +8539,34 @@ exports[`OrderSummary > should work with footer 1`] = `
             </span>
           </div>
           <div
-            class="emotion-42 emotion-9"
+            class="emotion-46 emotion-9"
           >
             <div
-              class="emotion-42 emotion-9"
+              class="emotion-46 emotion-9"
             >
               <div
                 class="emotion-36 emotion-9"
               >
                 <span
-                  class="emotion-48 emotion-5"
+                  class="emotion-52 emotion-5"
                 >
                   100 GB of storage
                 </span>
                 <span
-                  class="emotion-48 emotion-5"
+                  class="emotion-52 emotion-5"
                 >
                   €0.00003425 /GB/hours
                 </span>
               </div>
               <div
-                class="emotion-52 emotion-53"
+                class="emotion-56 emotion-57"
               />
             </div>
           </div>
         </div>
       </div>
       <div
-        class="emotion-250 emotion-251"
+        class="emotion-254 emotion-255"
       >
         <div
           class="emotion-36 emotion-9"
@@ -6724,7 +8580,7 @@ exports[`OrderSummary > should work with footer 1`] = `
             class="emotion-4 emotion-5"
             data-testid="total-price"
           >
-            €391.33
+            €393.83
           </p>
         </div>
         footer
@@ -7517,10 +9373,14 @@ exports[`OrderSummary > should work with fractionDigits 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-23[data-state='neutral']:not([data-disabled='true']):hover,
-.emotion-23[data-state='neutral']:not([data-disabled='true']):focus {
+.emotion-23[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
+}
+
+.emotion-23[data-state='neutral']:not([data-disabled='true']):focus-visible {
+  outline: 5px auto Highlight;
+  outline: 5px auto -webkit-focus-ring-color;
 }
 
 .emotion-23[data-state='neutral'][data-dropdownvisible='true'] {
@@ -7626,10 +9486,14 @@ exports[`OrderSummary > should work with fractionDigits 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-23[data-state='neutral']:not([data-disabled='true']):hover,
-.emotion-23[data-state='neutral']:not([data-disabled='true']):focus {
+.emotion-23[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
+}
+
+.emotion-23[data-state='neutral']:not([data-disabled='true']):focus-visible {
+  outline: 5px auto Highlight;
+  outline: 5px auto -webkit-focus-ring-color;
 }
 
 .emotion-23[data-state='neutral'][data-dropdownvisible='true'] {
@@ -7690,6 +9554,7 @@ exports[`OrderSummary > should work with fractionDigits 1`] = `
   text-decoration: none;
   text-overflow: ellipsis;
   overflow: hidden;
+  white-space: nowrap;
 }
 
 .emotion-26 {
@@ -7704,6 +9569,7 @@ exports[`OrderSummary > should work with fractionDigits 1`] = `
   text-decoration: none;
   text-overflow: ellipsis;
   overflow: hidden;
+  white-space: nowrap;
 }
 
 .emotion-28 {
@@ -8196,6 +10062,20 @@ exports[`OrderSummary > should work with fractionDigits 1`] = `
   text-decoration: line-through;
 }
 
+.emotion-62 {
+  color: #727683;
+  font-size: 0.875rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-text-decoration: line-through;
+  text-decoration: line-through;
+}
+
 <div
     data-testid="testing"
   >
@@ -8248,11 +10128,11 @@ exports[`OrderSummary > should work with fractionDigits 1`] = `
                 class="emotion-16 emotion-17 emotion-18"
               >
                 <div
-                  aria-controls=":ra3:"
-                  aria-describedby=":ra3:"
+                  aria-controls=":ram:"
+                  aria-describedby=":ram:"
                   class="emotion-19 emotion-20"
                   data-container-full-width="true"
-                  tabindex="0"
+                  tabindex="-1"
                 >
                   <div
                     class="emotion-8 emotion-9"
@@ -8311,7 +10191,7 @@ exports[`OrderSummary > should work with fractionDigits 1`] = `
             <span
               class="emotion-38 emotion-5"
             >
-              Availability Zone
+              SimpleCategory
             </span>
             <span
               class="emotion-38 emotion-5"
@@ -8331,7 +10211,7 @@ exports[`OrderSummary > should work with fractionDigits 1`] = `
                 <span
                   class="emotion-48 emotion-5"
                 >
-                  PARIS 1
+                  subcategory
                 </span>
                 <span
                   class="emotion-48 emotion-5"
@@ -9162,10 +11042,14 @@ exports[`OrderSummary > should work with numberInputs 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-23[data-state='neutral']:not([data-disabled='true']):hover,
-.emotion-23[data-state='neutral']:not([data-disabled='true']):focus {
+.emotion-23[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
+}
+
+.emotion-23[data-state='neutral']:not([data-disabled='true']):focus-visible {
+  outline: 5px auto Highlight;
+  outline: 5px auto -webkit-focus-ring-color;
 }
 
 .emotion-23[data-state='neutral'][data-dropdownvisible='true'] {
@@ -9271,10 +11155,14 @@ exports[`OrderSummary > should work with numberInputs 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-23[data-state='neutral']:not([data-disabled='true']):hover,
-.emotion-23[data-state='neutral']:not([data-disabled='true']):focus {
+.emotion-23[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
+}
+
+.emotion-23[data-state='neutral']:not([data-disabled='true']):focus-visible {
+  outline: 5px auto Highlight;
+  outline: 5px auto -webkit-focus-ring-color;
 }
 
 .emotion-23[data-state='neutral'][data-dropdownvisible='true'] {
@@ -9335,6 +11223,7 @@ exports[`OrderSummary > should work with numberInputs 1`] = `
   text-decoration: none;
   text-overflow: ellipsis;
   overflow: hidden;
+  white-space: nowrap;
 }
 
 .emotion-26 {
@@ -9349,6 +11238,7 @@ exports[`OrderSummary > should work with numberInputs 1`] = `
   text-decoration: none;
   text-overflow: ellipsis;
   overflow: hidden;
+  white-space: nowrap;
 }
 
 .emotion-28 {
@@ -10212,11 +12102,11 @@ exports[`OrderSummary > should work with numberInputs 1`] = `
                 class="emotion-16 emotion-17 emotion-18"
               >
                 <div
-                  aria-controls=":r91:"
-                  aria-describedby=":r91:"
+                  aria-controls=":r97:"
+                  aria-describedby=":r97:"
                   class="emotion-19 emotion-20"
                   data-container-full-width="true"
-                  tabindex="0"
+                  tabindex="-1"
                 >
                   <div
                     class="emotion-8 emotion-9"
@@ -10318,7 +12208,7 @@ exports[`OrderSummary > should work with numberInputs 1`] = `
                       data-controls="true"
                       data-has-unit="false"
                       data-size="small"
-                      id=":r95:"
+                      id=":r9b:"
                       max="9007199254740991"
                       min="0"
                       placeholder=""
@@ -10406,7 +12296,7 @@ exports[`OrderSummary > should work with numberInputs 1`] = `
                           data-controls="false"
                           data-has-unit="true"
                           data-size="small"
-                          id=":r9c:"
+                          id=":r9i:"
                           max="9007199254740991"
                           min="0"
                           placeholder=""
@@ -11274,10 +13164,14 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-23[data-state='neutral']:not([data-disabled='true']):hover,
-.emotion-23[data-state='neutral']:not([data-disabled='true']):focus {
+.emotion-23[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
+}
+
+.emotion-23[data-state='neutral']:not([data-disabled='true']):focus-visible {
+  outline: 5px auto Highlight;
+  outline: 5px auto -webkit-focus-ring-color;
 }
 
 .emotion-23[data-state='neutral'][data-dropdownvisible='true'] {
@@ -11383,10 +13277,14 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-23[data-state='neutral']:not([data-disabled='true']):hover,
-.emotion-23[data-state='neutral']:not([data-disabled='true']):focus {
+.emotion-23[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
+}
+
+.emotion-23[data-state='neutral']:not([data-disabled='true']):focus-visible {
+  outline: 5px auto Highlight;
+  outline: 5px auto -webkit-focus-ring-color;
 }
 
 .emotion-23[data-state='neutral'][data-dropdownvisible='true'] {
@@ -11447,6 +13345,7 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
   text-decoration: none;
   text-overflow: ellipsis;
   overflow: hidden;
+  white-space: nowrap;
 }
 
 .emotion-26 {
@@ -11461,6 +13360,7 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
   text-decoration: none;
   text-overflow: ellipsis;
   overflow: hidden;
+  white-space: nowrap;
 }
 
 .emotion-28 {
@@ -11723,125 +13623,7 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
   text-decoration: none;
 }
 
-.emotion-42 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.emotion-42 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.emotion-48 {
-  color: #3f4250;
-  font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-48 {
-  color: #3f4250;
-  font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-52 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  padding-left: 0.5rem;
-}
-
-.emotion-52 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  padding-left: 0.5rem;
-}
-
-.emotion-66 {
+.emotion-40 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -11864,7 +13646,176 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-70 {
+.emotion-40 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-42 {
+  color: #727683;
+  font-size: 0.875rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-text-decoration: line-through;
+  text-decoration: line-through;
+}
+
+.emotion-42 {
+  color: #727683;
+  font-size: 0.875rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-text-decoration: line-through;
+  text-decoration: line-through;
+}
+
+.emotion-46 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-46 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-52 {
+  color: #3f4250;
+  font-size: 0.875rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-52 {
+  color: #3f4250;
+  font-size: 0.875rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-56 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.25rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding-left: 0.5rem;
+}
+
+.emotion-56 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.25rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding-left: 0.5rem;
+}
+
+.emotion-74 {
   color: #641cb3;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
@@ -11877,7 +13828,7 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
   font-style: italic;
 }
 
-.emotion-90 {
+.emotion-94 {
   color: #3f4250;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
@@ -11889,33 +13840,7 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
   text-decoration: none;
 }
 
-.emotion-250 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 1.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  padding: 1.5rem;
-  border-top: 1px solid #d9dadd;
-  overflow: hidden;
-}
-
-.emotion-250 {
+.emotion-254 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -11942,6 +13867,32 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
 }
 
 .emotion-254 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.5rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding: 1.5rem;
+  border-top: 1px solid #d9dadd;
+  overflow: hidden;
+}
+
+.emotion-258 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -11964,7 +13915,7 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-254 {
+.emotion-258 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -12039,11 +13990,11 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
                 class="emotion-16 emotion-17 emotion-18"
               >
                 <div
-                  aria-controls=":r7a:"
-                  aria-describedby=":r7a:"
+                  aria-controls=":r7f:"
+                  aria-describedby=":r7f:"
                   class="emotion-19 emotion-20"
                   data-container-full-width="true"
-                  tabindex="0"
+                  tabindex="-1"
                 >
                   <div
                     class="emotion-8 emotion-9"
@@ -12104,34 +14055,43 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
             >
               Availability Zone
             </span>
-            <span
-              class="emotion-38 emotion-5"
+            <div
+              class="emotion-40 emotion-9"
             >
-              €5.00
-            </span>
+              <span
+                class="emotion-42 emotion-5"
+              >
+                €5.00
+              </span>
+              <span
+                class="emotion-38 emotion-5"
+              >
+                €2.50
+              </span>
+            </div>
           </div>
           <div
-            class="emotion-42 emotion-9"
+            class="emotion-46 emotion-9"
           >
             <div
-              class="emotion-42 emotion-9"
+              class="emotion-46 emotion-9"
             >
               <div
                 class="emotion-36 emotion-9"
               >
                 <span
-                  class="emotion-48 emotion-5"
+                  class="emotion-52 emotion-5"
                 >
                   PARIS 1
                 </span>
                 <span
-                  class="emotion-48 emotion-5"
+                  class="emotion-52 emotion-5"
                 >
                   €5.00
                 </span>
               </div>
               <div
-                class="emotion-52 emotion-53"
+                class="emotion-56 emotion-57"
               />
             </div>
           </div>
@@ -12150,7 +14110,7 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
             FREE
           </div>
           <div
-            class="emotion-42 emotion-9"
+            class="emotion-46 emotion-9"
           />
         </div>
         <div
@@ -12160,7 +14120,7 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
             class="emotion-36 emotion-9"
           >
             <div
-              class="emotion-66 emotion-9"
+              class="emotion-40 emotion-9"
             >
               <span
                 class="emotion-38 emotion-5"
@@ -12168,11 +14128,11 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
                 Category
               </span>
               <span
-                class="emotion-70 emotion-5"
+                class="emotion-74 emotion-5"
               >
                 <div
-                  aria-controls=":r7k:"
-                  aria-describedby=":r7k:"
+                  aria-controls=":r7q:"
+                  aria-describedby=":r7q:"
                   class="emotion-19 emotion-20"
                   tabindex="0"
                 >
@@ -12196,35 +14156,35 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
             </span>
           </div>
           <div
-            class="emotion-42 emotion-9"
+            class="emotion-46 emotion-9"
           >
             <div
-              class="emotion-42 emotion-9"
+              class="emotion-46 emotion-9"
             >
               <div
                 class="emotion-36 emotion-9"
               >
                 <span
-                  class="emotion-48 emotion-5"
+                  class="emotion-52 emotion-5"
                 >
                   SubCategory
                 </span>
                 <span
-                  class="emotion-48 emotion-5"
+                  class="emotion-52 emotion-5"
                 >
                   €12.20
                 </span>
               </div>
               <div
-                class="emotion-52 emotion-53"
+                class="emotion-56 emotion-57"
               >
                 <span
-                  class="emotion-90 emotion-5"
+                  class="emotion-94 emotion-5"
                 >
                   Detail 1
                 </span>
                 <span
-                  class="emotion-90 emotion-5"
+                  class="emotion-94 emotion-5"
                 >
                   Detail 2
                 </span>
@@ -12246,78 +14206,78 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
             <span
               class="emotion-38 emotion-5"
             >
-              €134.10
+              €129.10
             </span>
           </div>
           <div
-            class="emotion-42 emotion-9"
+            class="emotion-46 emotion-9"
           >
             <div
-              class="emotion-42 emotion-9"
+              class="emotion-46 emotion-9"
             >
               <div
                 class="emotion-36 emotion-9"
               >
                 <span
-                  class="emotion-48 emotion-5"
+                  class="emotion-52 emotion-5"
                 >
                   M2-M
                 </span>
                 <span
-                  class="emotion-48 emotion-5"
+                  class="emotion-52 emotion-5"
                 >
-                  €124.10
+                  €119.10
                 </span>
               </div>
               <div
-                class="emotion-52 emotion-53"
+                class="emotion-56 emotion-57"
               >
                 <span
-                  class="emotion-90 emotion-5"
+                  class="emotion-94 emotion-5"
                 >
                   Apple M2 Chip
                 </span>
                 <span
-                  class="emotion-90 emotion-5"
+                  class="emotion-94 emotion-5"
                 >
                   8 Cores CPU 8 cores GPU
                 </span>
                 <span
-                  class="emotion-90 emotion-5"
+                  class="emotion-94 emotion-5"
                 >
                   256 GB SSD storage
                 </span>
                 <span
-                  class="emotion-90 emotion-5"
+                  class="emotion-94 emotion-5"
                 >
                   16 GB memory
                 </span>
                 <span
-                  class="emotion-90 emotion-5"
+                  class="emotion-94 emotion-5"
                 >
                   1 GB bandwidth
                 </span>
               </div>
             </div>
             <div
-              class="emotion-42 emotion-9"
+              class="emotion-46 emotion-9"
             >
               <div
                 class="emotion-36 emotion-9"
               >
                 <span
-                  class="emotion-48 emotion-5"
+                  class="emotion-52 emotion-5"
                 >
                   macOs Sonoma
                 </span>
                 <span
-                  class="emotion-48 emotion-5"
+                  class="emotion-52 emotion-5"
                 >
                   €10.00
                 </span>
               </div>
               <div
-                class="emotion-52 emotion-53"
+                class="emotion-56 emotion-57"
               />
             </div>
           </div>
@@ -12340,27 +14300,27 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
             </span>
           </div>
           <div
-            class="emotion-42 emotion-9"
+            class="emotion-46 emotion-9"
           >
             <div
-              class="emotion-42 emotion-9"
+              class="emotion-46 emotion-9"
             >
               <div
                 class="emotion-36 emotion-9"
               >
                 <span
-                  class="emotion-48 emotion-5"
+                  class="emotion-52 emotion-5"
                 >
                   0.5 Gbps public bandwidth
                 </span>
                 <span
-                  class="emotion-48 emotion-5"
+                  class="emotion-52 emotion-5"
                 >
                   Included
                 </span>
               </div>
               <div
-                class="emotion-52 emotion-53"
+                class="emotion-56 emotion-57"
               />
             </div>
           </div>
@@ -12379,31 +14339,31 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
             <span
               class="emotion-38 emotion-5"
             >
-              -€10.00
+              €0.00
             </span>
           </div>
           <div
-            class="emotion-42 emotion-9"
+            class="emotion-46 emotion-9"
           >
             <div
-              class="emotion-42 emotion-9"
+              class="emotion-46 emotion-9"
             >
               <div
                 class="emotion-36 emotion-9"
               >
                 <span
-                  class="emotion-48 emotion-5"
+                  class="emotion-52 emotion-5"
                 >
                   PROMO2025
                 </span>
                 <span
-                  class="emotion-48 emotion-5"
+                  class="emotion-52 emotion-5"
                 >
-                  -€10.00
+                  €0.00
                 </span>
               </div>
               <div
-                class="emotion-52 emotion-53"
+                class="emotion-56 emotion-57"
               />
             </div>
           </div>
@@ -12426,48 +14386,48 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
             </span>
           </div>
           <div
-            class="emotion-42 emotion-9"
+            class="emotion-46 emotion-9"
           >
             <div
-              class="emotion-42 emotion-9"
+              class="emotion-46 emotion-9"
             >
               <div
                 class="emotion-36 emotion-9"
               >
                 <span
-                  class="emotion-48 emotion-5"
+                  class="emotion-52 emotion-5"
                 >
                   Setup
                 </span>
                 <span
-                  class="emotion-48 emotion-5"
+                  class="emotion-52 emotion-5"
                 >
                   €200.00
                 </span>
               </div>
               <div
-                class="emotion-52 emotion-53"
+                class="emotion-56 emotion-57"
               />
             </div>
             <div
-              class="emotion-42 emotion-9"
+              class="emotion-46 emotion-9"
             >
               <div
                 class="emotion-36 emotion-9"
               >
                 <span
-                  class="emotion-48 emotion-5"
+                  class="emotion-52 emotion-5"
                 >
                   Shipping
                 </span>
                 <span
-                  class="emotion-48 emotion-5"
+                  class="emotion-52 emotion-5"
                 >
                   €50.00
                 </span>
               </div>
               <div
-                class="emotion-52 emotion-53"
+                class="emotion-56 emotion-57"
               />
             </div>
           </div>
@@ -12490,27 +14450,27 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
             </span>
           </div>
           <div
-            class="emotion-42 emotion-9"
+            class="emotion-46 emotion-9"
           >
             <div
-              class="emotion-42 emotion-9"
+              class="emotion-46 emotion-9"
             >
               <div
                 class="emotion-36 emotion-9"
               >
                 <span
-                  class="emotion-48 emotion-5"
+                  class="emotion-52 emotion-5"
                 >
                   200000 requests
                 </span>
                 <span
-                  class="emotion-48 emotion-5"
+                  class="emotion-52 emotion-5"
                 >
                   €0.00000015 /request
                 </span>
               </div>
               <div
-                class="emotion-52 emotion-53"
+                class="emotion-56 emotion-57"
               />
             </div>
           </div>
@@ -12522,7 +14482,7 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
             class="emotion-36 emotion-9"
           >
             <div
-              class="emotion-66 emotion-9"
+              class="emotion-40 emotion-9"
             >
               <span
                 class="emotion-38 emotion-5"
@@ -12530,7 +14490,7 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
                 Storage
               </span>
               <span
-                class="emotion-70 emotion-5"
+                class="emotion-74 emotion-5"
               >
                 <svg
                   class="emotion-30 emotion-31"
@@ -12551,40 +14511,40 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
             </span>
           </div>
           <div
-            class="emotion-42 emotion-9"
+            class="emotion-46 emotion-9"
           >
             <div
-              class="emotion-42 emotion-9"
+              class="emotion-46 emotion-9"
             >
               <div
                 class="emotion-36 emotion-9"
               >
                 <span
-                  class="emotion-48 emotion-5"
+                  class="emotion-52 emotion-5"
                 >
                   100 GB of storage
                 </span>
                 <span
-                  class="emotion-48 emotion-5"
+                  class="emotion-52 emotion-5"
                 >
                   €0.00003425 /GB/hours
                 </span>
               </div>
               <div
-                class="emotion-52 emotion-53"
+                class="emotion-56 emotion-57"
               />
             </div>
           </div>
         </div>
       </div>
       <div
-        class="emotion-250 emotion-251"
+        class="emotion-254 emotion-255"
       >
         <div
           class="emotion-36 emotion-9"
         >
           <div
-            class="emotion-254 emotion-9"
+            class="emotion-258 emotion-9"
           >
             <p
               class="emotion-38 emotion-5"
@@ -12597,7 +14557,7 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
             class="emotion-4 emotion-5"
             data-testid="total-price"
           >
-            €391.33
+            €393.83
           </p>
         </div>
       </div>
@@ -12760,7 +14720,44 @@ exports[`OrderSummary > should work without unitInput 1`] = `
   text-decoration: none;
 }
 
+.emotion-14 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
 .emotion-16 {
+  color: #727683;
+  font-size: 0.875rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-text-decoration: line-through;
+  text-decoration: line-through;
+}
+
+.emotion-20 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -12783,7 +14780,7 @@ exports[`OrderSummary > should work without unitInput 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-22 {
+.emotion-26 {
   color: #3f4250;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
@@ -12795,7 +14792,7 @@ exports[`OrderSummary > should work without unitInput 1`] = `
   text-decoration: none;
 }
 
-.emotion-26 {
+.emotion-30 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -12819,30 +14816,7 @@ exports[`OrderSummary > should work without unitInput 1`] = `
   padding-left: 0.5rem;
 }
 
-.emotion-40 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.emotion-44 {
+.emotion-48 {
   color: #641cb3;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
@@ -12855,15 +14829,15 @@ exports[`OrderSummary > should work without unitInput 1`] = `
   font-style: italic;
 }
 
-.emotion-46 {
+.emotion-50 {
   display: inherit;
 }
 
-.emotion-46[data-container-full-width="true"] {
+.emotion-50[data-container-full-width="true"] {
   width: 100%;
 }
 
-.emotion-48 {
+.emotion-52 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1rem;
@@ -12872,12 +14846,12 @@ exports[`OrderSummary > should work without unitInput 1`] = `
   min-height: 1rem;
 }
 
-.emotion-48 .fillStroke {
+.emotion-52 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
 
-.emotion-64 {
+.emotion-68 {
   color: #3f4250;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
@@ -12889,7 +14863,7 @@ exports[`OrderSummary > should work without unitInput 1`] = `
   text-decoration: none;
 }
 
-.emotion-224 {
+.emotion-228 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -12944,34 +14918,43 @@ exports[`OrderSummary > should work without unitInput 1`] = `
             >
               Availability Zone
             </span>
-            <span
-              class="emotion-12 emotion-5"
+            <div
+              class="emotion-14 emotion-11"
             >
-              €5.00
-            </span>
+              <span
+                class="emotion-16 emotion-5"
+              >
+                €5.00
+              </span>
+              <span
+                class="emotion-12 emotion-5"
+              >
+                €2.50
+              </span>
+            </div>
           </div>
           <div
-            class="emotion-16 emotion-11"
+            class="emotion-20 emotion-11"
           >
             <div
-              class="emotion-16 emotion-11"
+              class="emotion-20 emotion-11"
             >
               <div
                 class="emotion-10 emotion-11"
               >
                 <span
-                  class="emotion-22 emotion-5"
+                  class="emotion-26 emotion-5"
                 >
                   PARIS 1
                 </span>
                 <span
-                  class="emotion-22 emotion-5"
+                  class="emotion-26 emotion-5"
                 >
                   €5.00
                 </span>
               </div>
               <div
-                class="emotion-26 emotion-27"
+                class="emotion-30 emotion-31"
               />
             </div>
           </div>
@@ -12990,7 +14973,7 @@ exports[`OrderSummary > should work without unitInput 1`] = `
             FREE
           </div>
           <div
-            class="emotion-16 emotion-11"
+            class="emotion-20 emotion-11"
           />
         </div>
         <div
@@ -13000,7 +14983,7 @@ exports[`OrderSummary > should work without unitInput 1`] = `
             class="emotion-10 emotion-11"
           >
             <div
-              class="emotion-40 emotion-11"
+              class="emotion-14 emotion-11"
             >
               <span
                 class="emotion-12 emotion-5"
@@ -13008,16 +14991,16 @@ exports[`OrderSummary > should work without unitInput 1`] = `
                 Category
               </span>
               <span
-                class="emotion-44 emotion-5"
+                class="emotion-48 emotion-5"
               >
                 <div
-                  aria-controls=":r1r:"
-                  aria-describedby=":r1r:"
-                  class="emotion-46 emotion-47"
+                  aria-controls=":r1t:"
+                  aria-describedby=":r1t:"
+                  class="emotion-50 emotion-51"
                   tabindex="0"
                 >
                   <svg
-                    class="emotion-48 emotion-49"
+                    class="emotion-52 emotion-53"
                     viewBox="0 0 20 20"
                   >
                     <path
@@ -13036,35 +15019,35 @@ exports[`OrderSummary > should work without unitInput 1`] = `
             </span>
           </div>
           <div
-            class="emotion-16 emotion-11"
+            class="emotion-20 emotion-11"
           >
             <div
-              class="emotion-16 emotion-11"
+              class="emotion-20 emotion-11"
             >
               <div
                 class="emotion-10 emotion-11"
               >
                 <span
-                  class="emotion-22 emotion-5"
+                  class="emotion-26 emotion-5"
                 >
                   SubCategory
                 </span>
                 <span
-                  class="emotion-22 emotion-5"
+                  class="emotion-26 emotion-5"
                 >
                   €12.20
                 </span>
               </div>
               <div
-                class="emotion-26 emotion-27"
+                class="emotion-30 emotion-31"
               >
                 <span
-                  class="emotion-64 emotion-5"
+                  class="emotion-68 emotion-5"
                 >
                   Detail 1
                 </span>
                 <span
-                  class="emotion-64 emotion-5"
+                  class="emotion-68 emotion-5"
                 >
                   Detail 2
                 </span>
@@ -13086,78 +15069,78 @@ exports[`OrderSummary > should work without unitInput 1`] = `
             <span
               class="emotion-12 emotion-5"
             >
-              €134.10
+              €129.10
             </span>
           </div>
           <div
-            class="emotion-16 emotion-11"
+            class="emotion-20 emotion-11"
           >
             <div
-              class="emotion-16 emotion-11"
+              class="emotion-20 emotion-11"
             >
               <div
                 class="emotion-10 emotion-11"
               >
                 <span
-                  class="emotion-22 emotion-5"
+                  class="emotion-26 emotion-5"
                 >
                   M2-M
                 </span>
                 <span
-                  class="emotion-22 emotion-5"
+                  class="emotion-26 emotion-5"
                 >
-                  €124.10
+                  €119.10
                 </span>
               </div>
               <div
-                class="emotion-26 emotion-27"
+                class="emotion-30 emotion-31"
               >
                 <span
-                  class="emotion-64 emotion-5"
+                  class="emotion-68 emotion-5"
                 >
                   Apple M2 Chip
                 </span>
                 <span
-                  class="emotion-64 emotion-5"
+                  class="emotion-68 emotion-5"
                 >
                   8 Cores CPU 8 cores GPU
                 </span>
                 <span
-                  class="emotion-64 emotion-5"
+                  class="emotion-68 emotion-5"
                 >
                   256 GB SSD storage
                 </span>
                 <span
-                  class="emotion-64 emotion-5"
+                  class="emotion-68 emotion-5"
                 >
                   16 GB memory
                 </span>
                 <span
-                  class="emotion-64 emotion-5"
+                  class="emotion-68 emotion-5"
                 >
                   1 GB bandwidth
                 </span>
               </div>
             </div>
             <div
-              class="emotion-16 emotion-11"
+              class="emotion-20 emotion-11"
             >
               <div
                 class="emotion-10 emotion-11"
               >
                 <span
-                  class="emotion-22 emotion-5"
+                  class="emotion-26 emotion-5"
                 >
                   macOs Sonoma
                 </span>
                 <span
-                  class="emotion-22 emotion-5"
+                  class="emotion-26 emotion-5"
                 >
                   €10.00
                 </span>
               </div>
               <div
-                class="emotion-26 emotion-27"
+                class="emotion-30 emotion-31"
               />
             </div>
           </div>
@@ -13180,27 +15163,27 @@ exports[`OrderSummary > should work without unitInput 1`] = `
             </span>
           </div>
           <div
-            class="emotion-16 emotion-11"
+            class="emotion-20 emotion-11"
           >
             <div
-              class="emotion-16 emotion-11"
+              class="emotion-20 emotion-11"
             >
               <div
                 class="emotion-10 emotion-11"
               >
                 <span
-                  class="emotion-22 emotion-5"
+                  class="emotion-26 emotion-5"
                 >
                   0.5 Gbps public bandwidth
                 </span>
                 <span
-                  class="emotion-22 emotion-5"
+                  class="emotion-26 emotion-5"
                 >
                   Included
                 </span>
               </div>
               <div
-                class="emotion-26 emotion-27"
+                class="emotion-30 emotion-31"
               />
             </div>
           </div>
@@ -13219,31 +15202,31 @@ exports[`OrderSummary > should work without unitInput 1`] = `
             <span
               class="emotion-12 emotion-5"
             >
-              -€10.00
+              €0.00
             </span>
           </div>
           <div
-            class="emotion-16 emotion-11"
+            class="emotion-20 emotion-11"
           >
             <div
-              class="emotion-16 emotion-11"
+              class="emotion-20 emotion-11"
             >
               <div
                 class="emotion-10 emotion-11"
               >
                 <span
-                  class="emotion-22 emotion-5"
+                  class="emotion-26 emotion-5"
                 >
                   PROMO2025
                 </span>
                 <span
-                  class="emotion-22 emotion-5"
+                  class="emotion-26 emotion-5"
                 >
-                  -€10.00
+                  €0.00
                 </span>
               </div>
               <div
-                class="emotion-26 emotion-27"
+                class="emotion-30 emotion-31"
               />
             </div>
           </div>
@@ -13266,48 +15249,48 @@ exports[`OrderSummary > should work without unitInput 1`] = `
             </span>
           </div>
           <div
-            class="emotion-16 emotion-11"
+            class="emotion-20 emotion-11"
           >
             <div
-              class="emotion-16 emotion-11"
+              class="emotion-20 emotion-11"
             >
               <div
                 class="emotion-10 emotion-11"
               >
                 <span
-                  class="emotion-22 emotion-5"
+                  class="emotion-26 emotion-5"
                 >
                   Setup
                 </span>
                 <span
-                  class="emotion-22 emotion-5"
+                  class="emotion-26 emotion-5"
                 >
                   €200.00
                 </span>
               </div>
               <div
-                class="emotion-26 emotion-27"
+                class="emotion-30 emotion-31"
               />
             </div>
             <div
-              class="emotion-16 emotion-11"
+              class="emotion-20 emotion-11"
             >
               <div
                 class="emotion-10 emotion-11"
               >
                 <span
-                  class="emotion-22 emotion-5"
+                  class="emotion-26 emotion-5"
                 >
                   Shipping
                 </span>
                 <span
-                  class="emotion-22 emotion-5"
+                  class="emotion-26 emotion-5"
                 >
                   €50.00
                 </span>
               </div>
               <div
-                class="emotion-26 emotion-27"
+                class="emotion-30 emotion-31"
               />
             </div>
           </div>
@@ -13330,27 +15313,27 @@ exports[`OrderSummary > should work without unitInput 1`] = `
             </span>
           </div>
           <div
-            class="emotion-16 emotion-11"
+            class="emotion-20 emotion-11"
           >
             <div
-              class="emotion-16 emotion-11"
+              class="emotion-20 emotion-11"
             >
               <div
                 class="emotion-10 emotion-11"
               >
                 <span
-                  class="emotion-22 emotion-5"
+                  class="emotion-26 emotion-5"
                 >
                   200000 requests
                 </span>
                 <span
-                  class="emotion-22 emotion-5"
+                  class="emotion-26 emotion-5"
                 >
                   €0.00000015 /request
                 </span>
               </div>
               <div
-                class="emotion-26 emotion-27"
+                class="emotion-30 emotion-31"
               />
             </div>
           </div>
@@ -13362,7 +15345,7 @@ exports[`OrderSummary > should work without unitInput 1`] = `
             class="emotion-10 emotion-11"
           >
             <div
-              class="emotion-40 emotion-11"
+              class="emotion-14 emotion-11"
             >
               <span
                 class="emotion-12 emotion-5"
@@ -13370,10 +15353,10 @@ exports[`OrderSummary > should work without unitInput 1`] = `
                 Storage
               </span>
               <span
-                class="emotion-44 emotion-5"
+                class="emotion-48 emotion-5"
               >
                 <svg
-                  class="emotion-48 emotion-49"
+                  class="emotion-52 emotion-53"
                   viewBox="0 0 20 20"
                 >
                   <path
@@ -13391,34 +15374,34 @@ exports[`OrderSummary > should work without unitInput 1`] = `
             </span>
           </div>
           <div
-            class="emotion-16 emotion-11"
+            class="emotion-20 emotion-11"
           >
             <div
-              class="emotion-16 emotion-11"
+              class="emotion-20 emotion-11"
             >
               <div
                 class="emotion-10 emotion-11"
               >
                 <span
-                  class="emotion-22 emotion-5"
+                  class="emotion-26 emotion-5"
                 >
                   100 GB of storage
                 </span>
                 <span
-                  class="emotion-22 emotion-5"
+                  class="emotion-26 emotion-5"
                 >
                   €0.00003425 /GB/hours
                 </span>
               </div>
               <div
-                class="emotion-26 emotion-27"
+                class="emotion-30 emotion-31"
               />
             </div>
           </div>
         </div>
       </div>
       <div
-        class="emotion-224 emotion-225"
+        class="emotion-228 emotion-229"
       >
         <div
           class="emotion-10 emotion-11"
@@ -13432,7 +15415,7 @@ exports[`OrderSummary > should work without unitInput 1`] = `
             class="emotion-4 emotion-5"
             data-testid="total-price"
           >
-            €391.33
+            €393.83
           </p>
         </div>
       </div>
