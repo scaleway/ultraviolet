@@ -6,13 +6,23 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const ExpandIcon = ({ ...props }: Omit<IconProps, 'children'>) => (
-  // eslint-disable-next-line react/jsx-props-no-spreading
-  <Icon {...props}>
-    <path
-      fillRule="evenodd"
-      d="M1.75 2a.75.75 0 0 1 .75.75V16.6a.75.75 0 0 1-1.5 0V2.75A.75.75 0 0 1 1.75 2m16.5 0a.75.75 0 0 1 .75.75V16.6a.75.75 0 0 1-1.5 0V2.75a.75.75 0 0 1 .75-.75M7.279 6.495a.75.75 0 0 1 0 1.06l-1.37 1.37h8.182l-1.37-1.37a.75.75 0 1 1 1.061-1.06l2.65 2.65a.75.75 0 0 1 0 1.06l-2.65 2.65a.75.75 0 0 1-1.06-1.06l1.369-1.37H5.909l1.37 1.37a.75.75 0 1 1-1.061 1.06l-2.65-2.65a.75.75 0 0 1 0-1.06l2.65-2.65a.75.75 0 0 1 1.06 0"
-      clipRule="evenodd"
-    />
-  </Icon>
-)
+export const ExpandIcon = ({ ...props }: Omit<IconProps, 'children'>) =>
+  props.size === 'large' ? (
+    // eslint-disable-next-line react/jsx-props-no-spreading
+    <Icon {...props}>
+      <path
+        fillRule="evenodd"
+        d="M1.75 2a.75.75 0 0 1 .75.75V16.6a.75.75 0 0 1-1.5 0V2.75A.75.75 0 0 1 1.75 2m16.5 0a.75.75 0 0 1 .75.75V16.6a.75.75 0 0 1-1.5 0V2.75a.75.75 0 0 1 .75-.75M7.279 6.495a.75.75 0 0 1 0 1.06l-1.37 1.37h8.182l-1.37-1.37a.75.75 0 1 1 1.061-1.06l2.65 2.65a.75.75 0 0 1 0 1.06l-2.65 2.65a.75.75 0 0 1-1.06-1.06l1.369-1.37H5.909l1.37 1.37a.75.75 0 1 1-1.061 1.06l-2.65-2.65a.75.75 0 0 1 0-1.06l2.65-2.65a.75.75 0 0 1 1.06 0"
+        clipRule="evenodd"
+      />
+    </Icon>
+  ) : (
+    // eslint-disable-next-line react/jsx-props-no-spreading
+    <Icon {...props}>
+      <path
+        fillRule="evenodd"
+        d="M1.75 2a.75.75 0 0 1 .75.75v10.493a.75.75 0 0 1-1.5 0V2.75A.75.75 0 0 1 1.75 2m12.5 0a.75.75 0 0 1 .75.75v10.493a.75.75 0 0 1-1.5 0V2.75a.75.75 0 0 1 .75-.75M6.067 5.459a.75.75 0 0 1 0 1.06l-.727.727h5.32l-.727-.727a.75.75 0 0 1 1.06-1.06l2.008 2.007a.75.75 0 0 1 0 1.06l-2.007 2.008a.75.75 0 1 1-1.06-1.06l.726-.728H5.34l.727.727a.75.75 0 0 1-1.06 1.061L2.998 8.527a.75.75 0 0 1 0-1.061l2.007-2.007a.75.75 0 0 1 1.06 0"
+        clipRule="evenodd"
+      />
+    </Icon>
+  )

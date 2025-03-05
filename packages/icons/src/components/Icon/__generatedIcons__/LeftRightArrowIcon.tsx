@@ -8,12 +8,21 @@ import type { IconProps } from '../Icon'
 
 export const LeftRightArrowIcon = ({
   ...props
-}: Omit<IconProps, 'children'>) => (
-  // eslint-disable-next-line react/jsx-props-no-spreading
-  <Icon {...props}>
-    <path
-      d="M13.2 2.24a.75.75 0 0 0 .04 1.06l2.1 1.95H6.75a.75.75 0 0 0 0 1.5h8.59l-2.1 1.95a.75.75 0 1 0 1.02 1.1l3.5-3.25a.75.75 0 0 0 0-1.1l-3.5-3.25a.75.75 0 0 0-1.06.04m-6.4 8a.75.75 0 0 0-1.06-.04l-3.5 3.25a.75.75 0 0 0 0 1.1l3.5 3.25a.75.75 0 0 0 1.02-1.1l-2.1-1.95h8.59a.75.75 0 0 0 0-1.5H4.66l2.1-1.95a.75.75 0 0 0 .04-1.06"
-      clipRule="evenodd"
-    />
-  </Icon>
-)
+}: Omit<IconProps, 'children'>) =>
+  props.size === 'large' ? (
+    // eslint-disable-next-line react/jsx-props-no-spreading
+    <Icon {...props}>
+      <path
+        d="M13.2 2.24a.75.75 0 0 0 .04 1.06l2.1 1.95H6.75a.75.75 0 0 0 0 1.5h8.59l-2.1 1.95a.75.75 0 1 0 1.02 1.1l3.5-3.25a.75.75 0 0 0 0-1.1l-3.5-3.25a.75.75 0 0 0-1.06.04m-6.4 8a.75.75 0 0 0-1.06-.04l-3.5 3.25a.75.75 0 0 0 0 1.1l3.5 3.25a.75.75 0 0 0 1.02-1.1l-2.1-1.95h8.59a.75.75 0 0 0 0-1.5H4.66l2.1-1.95a.75.75 0 0 0 .04-1.06"
+        clipRule="evenodd"
+      />
+    </Icon>
+  ) : (
+    // eslint-disable-next-line react/jsx-props-no-spreading
+    <Icon {...props}>
+      <path
+        d="M10.4 2.18a.563.563 0 0 0 .03.795l1.575 1.463H5.562a.563.563 0 0 0 0 1.125h6.443L10.43 7.025a.563.563 0 0 0 .765.825l2.625-2.438a.563.563 0 0 0 0-.824L11.195 2.15a.563.563 0 0 0-.795.03m-4.8 6a.56.56 0 0 0-.795-.03L2.18 10.588a.56.56 0 0 0 0 .824l2.625 2.438a.563.563 0 1 0 .765-.825l-1.575-1.463h6.443a.562.562 0 1 0 0-1.124H3.995L5.57 8.974a.56.56 0 0 0 .03-.795"
+        clipRule="evenodd"
+      />
+    </Icon>
+  )

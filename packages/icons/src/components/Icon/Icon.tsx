@@ -156,7 +156,7 @@ export const Icon = forwardRef<SVGSVGElement, IconProps>(
         sentiment={computedSentiment}
         prominence={prominence}
         size={size}
-        viewBox="0 0 20 20"
+        viewBox={size === 'small' ? '0 0 16 16' : '0 0 20 20'}
         className={className}
         data-testid={dataTestId}
         stroke={stroke}

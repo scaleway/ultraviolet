@@ -1,6 +1,6 @@
 // oxlint-disable eslint/no-console
 
-import { promises as fs } from 'node:fs'
+import { existsSync, promises as fs } from 'node:fs'
 import path from 'node:path'
 import { DEPRECATED_ICONS } from '../../packages/icons/src/deprecatedIcons'
 
@@ -37,7 +37,7 @@ const COMMENT_HEADER = `/**
 * PLEASE DO NOT EDIT HERE
 */`
 
-const templateIcon = (iconName: string, svg: string) => {
+const templateIcon = (iconName: string, svg: string, svgSmall?: string) => {
   const deprecated = DEPRECATED_ICONS.find(icon => icon.name === iconName)
 
   return `${COMMENT_HEADER}
@@ -52,12 +52,25 @@ const templateIcon = (iconName: string, svg: string) => {
     */`
       : ''
   }
-  export const ${iconName} = ({
+  ${
+    svgSmall
+      ? `export const ${iconName} = ({
     ...props
   }: Omit<IconProps, 'children'>) => (
-    // eslint-disable-next-line react/jsx-props-no-spreading
-    <Icon {...props}>${svg}</Icon>
-  )
+    props.size === "large" ? 
+      // eslint-disable-next-line react/jsx-props-no-spreading
+      <Icon {...props}>${svg}</Icon> : 
+      // eslint-disable-next-line react/jsx-props-no-spreading
+      <Icon {...props}>${svgSmall}</Icon>
+  )`
+      : `export const ${iconName} = ({
+    ...props
+  }: Omit<IconProps, 'children'>) => (
+      // eslint-disable-next-line react/jsx-props-no-spreading
+      <Icon {...props}>${svg}</Icon>
+  )`
+  }
+  
 `
 }
 
@@ -157,9 +170,23 @@ const main = async () => {
         if (file.includes('small')) {
           break
         }
+
+        const smallFileName = file.replace('default', 'small')
+        const smallFile = existsSync(smallFileName) ? smallFileName : file
+
         const svgContent = await readSvg(file, component.suffix)
         const generatedName = `${generateVariableName(file)}${component.suffix}`
-        const generatedComponent = templateIcon(generatedName, svgContent)
+
+        const svgContentSmall =
+          smallFile === file
+            ? undefined
+            : await readSvg(smallFile, component.suffix)
+
+        const generatedComponent = templateIcon(
+          generatedName,
+          svgContent,
+          svgContentSmall,
+        )
         const filePath = `${component.output}/${generatedName}.tsx`
 
         try {

@@ -8,13 +8,23 @@ import type { IconProps } from '../Icon'
 
 export const ArrowLeftBottomIcon = ({
   ...props
-}: Omit<IconProps, 'children'>) => (
-  // eslint-disable-next-line react/jsx-props-no-spreading
-  <Icon {...props}>
-    <path
-      fillRule="evenodd"
-      d="M8.21 17.311a.62.62 0 0 0 0-.91l-3.382-3.194h7.445c2.887 0 5.227-2.21 5.227-4.937V3.977c0-.355-.305-.644-.682-.644-.376 0-.682.289-.682.644V8.27c0 2.016-1.73 3.65-3.863 3.65H4.828l3.381-3.194a.62.62 0 0 0 0-.911.71.71 0 0 0-.964 0L2.7 12.108a.62.62 0 0 0 0 .91l4.545 4.293a.71.71 0 0 0 .964 0"
-      clipRule="evenodd"
-    />
-  </Icon>
-)
+}: Omit<IconProps, 'children'>) =>
+  props.size === 'large' ? (
+    // eslint-disable-next-line react/jsx-props-no-spreading
+    <Icon {...props}>
+      <path
+        fillRule="evenodd"
+        d="M8.21 17.311a.62.62 0 0 0 0-.91l-3.382-3.194h7.445c2.887 0 5.227-2.21 5.227-4.937V3.977c0-.355-.305-.644-.682-.644-.376 0-.682.289-.682.644V8.27c0 2.016-1.73 3.65-3.863 3.65H4.828l3.381-3.194a.62.62 0 0 0 0-.911.71.71 0 0 0-.964 0L2.7 12.108a.62.62 0 0 0 0 .91l4.545 4.293a.71.71 0 0 0 .964 0"
+        clipRule="evenodd"
+      />
+    </Icon>
+  ) : (
+    // eslint-disable-next-line react/jsx-props-no-spreading
+    <Icon {...props}>
+      <path
+        fillRule="evenodd"
+        d="M6.694 13.805a.667.667 0 0 0 0-.943l-2.418-2.418h5.502A4.22 4.22 0 0 0 14 6.222V2.667a.667.667 0 0 0-1.333 0v3.555a2.89 2.89 0 0 1-2.89 2.89h-5.5l2.417-2.418a.667.667 0 1 0-.943-.943L2.195 9.306a.667.667 0 0 0 0 .943l3.556 3.556c.26.26.682.26.943 0"
+        clipRule="evenodd"
+      />
+    </Icon>
+  )
