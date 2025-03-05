@@ -107,18 +107,18 @@ exports[`Single slider > handles correctly onChange with min and max 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
   align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: end;
+  justify-content: end;
   -webkit-box-flex-wrap: nowrap;
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
@@ -130,6 +130,29 @@ exports[`Single slider > handles correctly onChange with min and max 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: end;
+  justify-content: end;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -146,9 +169,34 @@ exports[`Single slider > handles correctly onChange with min and max 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  min-width: 2.5rem;
 }
 
-.emotion-6 {
+.emotion-7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.25rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  min-width: 2.5rem;
+}
+
+.emotion-9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -167,52 +215,52 @@ exports[`Single slider > handles correctly onChange with min and max 1`] = `
   border-radius: 0.25rem;
 }
 
-.emotion-6:focus-within {
+.emotion-9:focus-within {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-6[data-success='true'] {
+.emotion-9[data-success='true'] {
   border-color: #22674e;
 }
 
-.emotion-6[data-error='true'] {
+.emotion-9[data-error='true'] {
   border-color: #b3144d;
 }
 
-.emotion-6:hover {
+.emotion-9:hover {
   border-color: #792dd4;
 }
 
-.emotion-6[data-readonly='true'] {
+.emotion-9[data-readonly='true'] {
   border-color: #d9dadd;
   background: #f9f9fa;
   cursor: not-allowed;
 }
 
-.emotion-6[data-disabled='true'] {
+.emotion-9[data-disabled='true'] {
   border-color: #e9eaeb;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.emotion-6[data-controls='false']>.emotion-8 {
+.emotion-9[data-controls='false']>.emotion-11 {
   border-width: 0;
 }
 
-.emotion-6[data-size='small'] {
+.emotion-9[data-size='small'] {
   height: 2rem;
 }
 
-.emotion-6[data-size='medium'] {
+.emotion-9[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-6[data-size='large'] {
+.emotion-9[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-6 {
+.emotion-9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -231,52 +279,52 @@ exports[`Single slider > handles correctly onChange with min and max 1`] = `
   border-radius: 0.25rem;
 }
 
-.emotion-6:focus-within {
+.emotion-9:focus-within {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-6[data-success='true'] {
+.emotion-9[data-success='true'] {
   border-color: #22674e;
 }
 
-.emotion-6[data-error='true'] {
+.emotion-9[data-error='true'] {
   border-color: #b3144d;
 }
 
-.emotion-6:hover {
+.emotion-9:hover {
   border-color: #792dd4;
 }
 
-.emotion-6[data-readonly='true'] {
+.emotion-9[data-readonly='true'] {
   border-color: #d9dadd;
   background: #f9f9fa;
   cursor: not-allowed;
 }
 
-.emotion-6[data-disabled='true'] {
+.emotion-9[data-disabled='true'] {
   border-color: #e9eaeb;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.emotion-6[data-controls='false']>.emotion-8 {
+.emotion-9[data-controls='false']>.emotion-11 {
   border-width: 0;
 }
 
-.emotion-6[data-size='small'] {
+.emotion-9[data-size='small'] {
   height: 2rem;
 }
 
-.emotion-6[data-size='medium'] {
+.emotion-9[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-6[data-size='large'] {
+.emotion-9[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-9 {
+.emotion-12 {
   display: grid;
   grid-template-columns: 1fr auto;
   -webkit-align-items: center;
@@ -293,7 +341,7 @@ exports[`Single slider > handles correctly onChange with min and max 1`] = `
   width: 100%;
 }
 
-.emotion-9 {
+.emotion-12 {
   display: grid;
   grid-template-columns: 1fr auto;
   -webkit-align-items: center;
@@ -310,7 +358,7 @@ exports[`Single slider > handles correctly onChange with min and max 1`] = `
   width: 100%;
 }
 
-.emotion-11 {
+.emotion-14 {
   outline: none;
   border: none;
   padding: 0;
@@ -325,18 +373,18 @@ exports[`Single slider > handles correctly onChange with min and max 1`] = `
   background: none;
 }
 
-.emotion-11[data-has-unit='true'] {
+.emotion-14[data-has-unit='true'] {
   text-align: left;
   padding: 0.5rem 0 0.5rem 0.5rem;
 }
 
-.emotion-11::-webkit-outer-spin-button,
-.emotion-11::-webkit-inner-spin-button {
+.emotion-14::-webkit-outer-spin-button,
+.emotion-14::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.emotion-11 {
+.emotion-14 {
   -moz-appearance: textfield;
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
@@ -344,15 +392,15 @@ exports[`Single slider > handles correctly onChange with min and max 1`] = `
   appearance: textfield;
 }
 
-.emotion-11[data-size='small'] {
+.emotion-14[data-size='small'] {
   height: 2rem;
 }
 
-.emotion-11[data-size='medium'] {
+.emotion-14[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-11[data-size='large'] {
+.emotion-14[data-size='large'] {
   height: 3rem;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
@@ -360,34 +408,34 @@ exports[`Single slider > handles correctly onChange with min and max 1`] = `
   line-height: 1.5rem;
 }
 
-.emotion-11:-moz-read-only {
+.emotion-14:-moz-read-only {
   color: #3f4250;
   background: #f9f9fa;
   border-block: 1px solid #d9dadd;
 }
 
-.emotion-11:read-only {
+.emotion-14:read-only {
   color: #3f4250;
   background: #f9f9fa;
   border-block: 1px solid #d9dadd;
 }
 
-.emotion-11:-moz-read-only~.e1b9qdjy2 {
+.emotion-14:-moz-read-only~.e1b9qdjy2 {
   background: #f9f9fa;
 }
 
-.emotion-11:read-only~.e1b9qdjy2 {
+.emotion-14:read-only~.e1b9qdjy2 {
   background: #f9f9fa;
 }
 
-.emotion-11:disabled {
+.emotion-14:disabled {
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
   border-block: 1px solid #e9eaeb;
 }
 
-.emotion-11:disabled~.e1b9qdjy2 {
+.emotion-14:disabled~.e1b9qdjy2 {
   background: #f3f3f4;
   cursor: not-allowed;
   -webkit-user-select: none;
@@ -396,16 +444,16 @@ exports[`Single slider > handles correctly onChange with min and max 1`] = `
   user-select: none;
 }
 
-.emotion-11:placeholder-shown~.e1b9qdjy2 {
+.emotion-14:placeholder-shown~.e1b9qdjy2 {
   color: #727683;
   font-size: 1rem;
 }
 
-.emotion-11[data-controls='false'] {
+.emotion-14[data-controls='false'] {
   text-align: left;
 }
 
-.emotion-11 {
+.emotion-14 {
   outline: none;
   border: none;
   padding: 0;
@@ -420,18 +468,18 @@ exports[`Single slider > handles correctly onChange with min and max 1`] = `
   background: none;
 }
 
-.emotion-11[data-has-unit='true'] {
+.emotion-14[data-has-unit='true'] {
   text-align: left;
   padding: 0.5rem 0 0.5rem 0.5rem;
 }
 
-.emotion-11::-webkit-outer-spin-button,
-.emotion-11::-webkit-inner-spin-button {
+.emotion-14::-webkit-outer-spin-button,
+.emotion-14::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.emotion-11 {
+.emotion-14 {
   -moz-appearance: textfield;
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
@@ -439,15 +487,15 @@ exports[`Single slider > handles correctly onChange with min and max 1`] = `
   appearance: textfield;
 }
 
-.emotion-11[data-size='small'] {
+.emotion-14[data-size='small'] {
   height: 2rem;
 }
 
-.emotion-11[data-size='medium'] {
+.emotion-14[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-11[data-size='large'] {
+.emotion-14[data-size='large'] {
   height: 3rem;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
@@ -455,34 +503,34 @@ exports[`Single slider > handles correctly onChange with min and max 1`] = `
   line-height: 1.5rem;
 }
 
-.emotion-11:-moz-read-only {
+.emotion-14:-moz-read-only {
   color: #3f4250;
   background: #f9f9fa;
   border-block: 1px solid #d9dadd;
 }
 
-.emotion-11:read-only {
+.emotion-14:read-only {
   color: #3f4250;
   background: #f9f9fa;
   border-block: 1px solid #d9dadd;
 }
 
-.emotion-11:-moz-read-only~.e1b9qdjy2 {
+.emotion-14:-moz-read-only~.e1b9qdjy2 {
   background: #f9f9fa;
 }
 
-.emotion-11:read-only~.e1b9qdjy2 {
+.emotion-14:read-only~.e1b9qdjy2 {
   background: #f9f9fa;
 }
 
-.emotion-11:disabled {
+.emotion-14:disabled {
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
   border-block: 1px solid #e9eaeb;
 }
 
-.emotion-11:disabled~.e1b9qdjy2 {
+.emotion-14:disabled~.e1b9qdjy2 {
   background: #f3f3f4;
   cursor: not-allowed;
   -webkit-user-select: none;
@@ -491,16 +539,16 @@ exports[`Single slider > handles correctly onChange with min and max 1`] = `
   user-select: none;
 }
 
-.emotion-11:placeholder-shown~.e1b9qdjy2 {
+.emotion-14:placeholder-shown~.e1b9qdjy2 {
   color: #727683;
   font-size: 1rem;
 }
 
-.emotion-11[data-controls='false'] {
+.emotion-14[data-controls='false'] {
   text-align: left;
 }
 
-.emotion-13 {
+.emotion-16 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -524,7 +572,7 @@ exports[`Single slider > handles correctly onChange with min and max 1`] = `
   width: 100%;
 }
 
-.emotion-13 {
+.emotion-16 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -548,7 +596,7 @@ exports[`Single slider > handles correctly onChange with min and max 1`] = `
   width: 100%;
 }
 
-.emotion-15 {
+.emotion-18 {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -566,31 +614,31 @@ exports[`Single slider > handles correctly onChange with min and max 1`] = `
   outline: none;
 }
 
-.emotion-15:focus::-moz-range-thumb {
+.emotion-18:focus::-moz-range-thumb {
   border: 1.5px solid #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-15:focus::-webkit-slider-thumb {
+.emotion-18:focus::-webkit-slider-thumb {
   border: 1.5px solid #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-15[data-error='true'] {
+.emotion-18[data-error='true'] {
   background-image: linear-gradient(#e51963, #e51963);
 }
 
-.emotion-15[data-direction='column'] {
+.emotion-18[data-direction='column'] {
   -webkit-align-self: baseline;
   -ms-flex-item-align: baseline;
   align-self: baseline;
 }
 
-.emotion-15[aria-disabled='true'] {
+.emotion-18[aria-disabled='true'] {
   background-image: linear-gradient(#d8c5fc, #d8c5fc);
 }
 
-.emotion-15::-moz-range-track {
+.emotion-18::-moz-range-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -601,7 +649,7 @@ exports[`Single slider > handles correctly onChange with min and max 1`] = `
   background: transparent;
 }
 
-.emotion-15::-moz-range-thumb {
+.emotion-18::-moz-range-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -623,20 +671,20 @@ exports[`Single slider > handles correctly onChange with min and max 1`] = `
   top: -4px;
 }
 
-.emotion-15::-moz-range-thumb:hover,
-.emotion-15::-moz-range-thumb:active,
-.emotion-15::-moz-range-thumb:focus {
+.emotion-18::-moz-range-thumb:hover,
+.emotion-18::-moz-range-thumb:active,
+.emotion-18::-moz-range-thumb:focus {
   border: 1.5px solid #8c40ef;
 }
 
-.emotion-15::-moz-range-thumb:active,
-.emotion-15::-moz-range-thumb:focus {
+.emotion-18::-moz-range-thumb:active,
+.emotion-18::-moz-range-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
 }
 
-.emotion-15::-webkit-slider-runnable-track {
+.emotion-18::-webkit-slider-runnable-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -647,7 +695,7 @@ exports[`Single slider > handles correctly onChange with min and max 1`] = `
   background: transparent;
 }
 
-.emotion-15::-webkit-slider-thumb {
+.emotion-18::-webkit-slider-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -669,14 +717,14 @@ exports[`Single slider > handles correctly onChange with min and max 1`] = `
   top: -4px;
 }
 
-.emotion-15::-webkit-slider-thumb:hover,
-.emotion-15::-webkit-slider-thumb:active,
-.emotion-15::-webkit-slider-thumb:focus {
+.emotion-18::-webkit-slider-thumb:hover,
+.emotion-18::-webkit-slider-thumb:active,
+.emotion-18::-webkit-slider-thumb:focus {
   border: 1.5px solid #8c40ef;
 }
 
-.emotion-15::-webkit-slider-thumb:active,
-.emotion-15::-webkit-slider-thumb:focus {
+.emotion-18::-webkit-slider-thumb:active,
+.emotion-18::-webkit-slider-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
@@ -695,48 +743,52 @@ exports[`Single slider > handles correctly onChange with min and max 1`] = `
         <div
           class="emotion-4 emotion-3"
         >
-          <div>
-            <div
-              class="emotion-6 emotion-7"
-              data-controls="false"
-              data-disabled="false"
-              data-error="false"
-              data-size="small"
-              data-success="false"
-              data-unit="false"
-            >
+          <div
+            class="emotion-6 emotion-7 emotion-3"
+          >
+            <div>
               <div
-                class="emotion-8 emotion-9 emotion-10"
+                class="emotion-9 emotion-10"
+                data-controls="false"
+                data-disabled="false"
+                data-error="false"
+                data-size="small"
+                data-success="false"
+                data-unit="false"
               >
-                <input
-                  aria-label="input"
-                  class="emotion-11 emotion-12"
-                  data-controls="false"
-                  data-has-unit="false"
-                  data-size="small"
-                  data-testid="slider-input"
-                  id=":r36:"
-                  max="10"
-                  min="2"
-                  placeholder=""
-                  step="1"
-                  type="number"
-                  value="3"
-                />
+                <div
+                  class="emotion-11 emotion-12 emotion-13"
+                >
+                  <input
+                    aria-label="input"
+                    class="emotion-14 emotion-15"
+                    data-controls="false"
+                    data-has-unit="false"
+                    data-size="small"
+                    data-testid="slider-input"
+                    id=":r37:"
+                    max="10"
+                    min="2"
+                    placeholder=""
+                    step="1"
+                    type="number"
+                    value="3"
+                  />
+                </div>
               </div>
             </div>
           </div>
         </div>
         <div
-          class="emotion-13 emotion-3"
+          class="emotion-16 emotion-3"
         >
           <input
             aria-label="slider"
-            class="emotion-15 emotion-16"
+            class="emotion-18 emotion-19"
             data-direction="column"
             data-error="false"
             data-testid="slider"
-            id=":r35:"
+            id=":r36:"
             max="10"
             min="2"
             name="slider"
@@ -855,65 +907,87 @@ exports[`Single slider > handles correctly with custom scale 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-5 {
-  color: #3f4250;
-  font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  text-align: right;
-  min-width: 2.5rem;
-  -webkit-align-self: end;
-  -ms-flex-item-align: end;
-  align-self: end;
-}
-
-.emotion-5 {
-  color: #3f4250;
-  font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  text-align: right;
-  min-width: 2.5rem;
-  -webkit-align-self: end;
-  -ms-flex-item-align: end;
-  align-self: end;
-}
-
-.emotion-7 {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
   align-items: normal;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: end;
+  justify-content: end;
   -webkit-box-flex-wrap: nowrap;
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  width: 100%;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: end;
+  justify-content: end;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
 .emotion-7 {
+  color: #3f4250;
+  font-size: 0.875rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-align: right;
+  min-width: 2.5rem;
+  -webkit-align-self: end;
+  -ms-flex-item-align: end;
+  align-self: end;
+}
+
+.emotion-7 {
+  color: #3f4250;
+  font-size: 0.875rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-align: right;
+  min-width: 2.5rem;
+  -webkit-align-self: end;
+  -ms-flex-item-align: end;
+  align-self: end;
+}
+
+.emotion-9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -938,6 +1012,30 @@ exports[`Single slider > handles correctly with custom scale 1`] = `
 }
 
 .emotion-9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.emotion-11 {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -955,31 +1053,31 @@ exports[`Single slider > handles correctly with custom scale 1`] = `
   outline: none;
 }
 
-.emotion-9:focus::-moz-range-thumb {
+.emotion-11:focus::-moz-range-thumb {
   border: 1.5px solid #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-9:focus::-webkit-slider-thumb {
+.emotion-11:focus::-webkit-slider-thumb {
   border: 1.5px solid #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-9[data-error='true'] {
+.emotion-11[data-error='true'] {
   background-image: linear-gradient(#e51963, #e51963);
 }
 
-.emotion-9[data-direction='column'] {
+.emotion-11[data-direction='column'] {
   -webkit-align-self: baseline;
   -ms-flex-item-align: baseline;
   align-self: baseline;
 }
 
-.emotion-9[aria-disabled='true'] {
+.emotion-11[aria-disabled='true'] {
   background-image: linear-gradient(#d8c5fc, #d8c5fc);
 }
 
-.emotion-9::-moz-range-track {
+.emotion-11::-moz-range-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -990,7 +1088,7 @@ exports[`Single slider > handles correctly with custom scale 1`] = `
   background: transparent;
 }
 
-.emotion-9::-moz-range-thumb {
+.emotion-11::-moz-range-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -1012,20 +1110,20 @@ exports[`Single slider > handles correctly with custom scale 1`] = `
   top: -4px;
 }
 
-.emotion-9::-moz-range-thumb:hover,
-.emotion-9::-moz-range-thumb:active,
-.emotion-9::-moz-range-thumb:focus {
+.emotion-11::-moz-range-thumb:hover,
+.emotion-11::-moz-range-thumb:active,
+.emotion-11::-moz-range-thumb:focus {
   border: 1.5px solid #8c40ef;
 }
 
-.emotion-9::-moz-range-thumb:active,
-.emotion-9::-moz-range-thumb:focus {
+.emotion-11::-moz-range-thumb:active,
+.emotion-11::-moz-range-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
 }
 
-.emotion-9::-webkit-slider-runnable-track {
+.emotion-11::-webkit-slider-runnable-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -1036,7 +1134,7 @@ exports[`Single slider > handles correctly with custom scale 1`] = `
   background: transparent;
 }
 
-.emotion-9::-webkit-slider-thumb {
+.emotion-11::-webkit-slider-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -1058,20 +1156,20 @@ exports[`Single slider > handles correctly with custom scale 1`] = `
   top: -4px;
 }
 
-.emotion-9::-webkit-slider-thumb:hover,
-.emotion-9::-webkit-slider-thumb:active,
-.emotion-9::-webkit-slider-thumb:focus {
+.emotion-11::-webkit-slider-thumb:hover,
+.emotion-11::-webkit-slider-thumb:active,
+.emotion-11::-webkit-slider-thumb:focus {
   border: 1.5px solid #8c40ef;
 }
 
-.emotion-9::-webkit-slider-thumb:active,
-.emotion-9::-webkit-slider-thumb:focus {
+.emotion-11::-webkit-slider-thumb:active,
+.emotion-11::-webkit-slider-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
 }
 
-.emotion-11 {
+.emotion-13 {
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1081,25 +1179,25 @@ exports[`Single slider > handles correctly with custom scale 1`] = `
   height: 1rem;
 }
 
-.emotion-11[data-double='true'] {
-  margin-top: 2.5rem;
-}
-
-.emotion-11 {
-  width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
-  height: 1rem;
-}
-
-.emotion-11[data-double='true'] {
+.emotion-13[data-double='true'] {
   margin-top: 2.5rem;
 }
 
 .emotion-13 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  height: 1rem;
+}
+
+.emotion-13[data-double='true'] {
+  margin-top: 2.5rem;
+}
+
+.emotion-15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1113,21 +1211,21 @@ exports[`Single slider > handles correctly with custom scale 1`] = `
   transform: translateX(-50%);
 }
 
-.emotion-13[data-element-left='true'] {
+.emotion-15[data-element-left='true'] {
   -webkit-transform: none;
   -moz-transform: none;
   -ms-transform: none;
   transform: none;
 }
 
-.emotion-13[data-element-right='true'] {
+.emotion-15[data-element-right='true'] {
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
   -ms-transform: translateX(-100%);
   transform: translateX(-100%);
 }
 
-.emotion-13 {
+.emotion-15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1141,33 +1239,21 @@ exports[`Single slider > handles correctly with custom scale 1`] = `
   transform: translateX(-50%);
 }
 
-.emotion-13[data-element-left='true'] {
+.emotion-15[data-element-left='true'] {
   -webkit-transform: none;
   -moz-transform: none;
   -ms-transform: none;
   transform: none;
 }
 
-.emotion-13[data-element-right='true'] {
+.emotion-15[data-element-right='true'] {
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
   -ms-transform: translateX(-100%);
   transform: translateX(-100%);
 }
 
-.emotion-15 {
-  color: #3f4250;
-  font-size: 0.75rem;
-  font-family: Inter,Asap,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-15 {
+.emotion-17 {
   color: #3f4250;
   font-size: 0.75rem;
   font-family: Inter,Asap,sans-serif;
@@ -1180,6 +1266,18 @@ exports[`Single slider > handles correctly with custom scale 1`] = `
 }
 
 .emotion-17 {
+  color: #3f4250;
+  font-size: 0.75rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-19 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1193,21 +1291,21 @@ exports[`Single slider > handles correctly with custom scale 1`] = `
   transform: translateX(-50%);
 }
 
-.emotion-17[data-element-left='true'] {
+.emotion-19[data-element-left='true'] {
   -webkit-transform: none;
   -moz-transform: none;
   -ms-transform: none;
   transform: none;
 }
 
-.emotion-17[data-element-right='true'] {
+.emotion-19[data-element-right='true'] {
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
   -ms-transform: translateX(-100%);
   transform: translateX(-100%);
 }
 
-.emotion-21 {
+.emotion-23 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1221,33 +1319,21 @@ exports[`Single slider > handles correctly with custom scale 1`] = `
   transform: translateX(-50%);
 }
 
-.emotion-21[data-element-left='true'] {
+.emotion-23[data-element-left='true'] {
   -webkit-transform: none;
   -moz-transform: none;
   -ms-transform: none;
   transform: none;
 }
 
-.emotion-21[data-element-right='true'] {
+.emotion-23[data-element-right='true'] {
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
   -ms-transform: translateX(-100%);
   transform: translateX(-100%);
 }
 
-.emotion-23 {
-  color: #641cb3;
-  font-size: 0.75rem;
-  font-family: Inter,Asap,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-23 {
+.emotion-25 {
   color: #641cb3;
   font-size: 0.75rem;
   font-family: Inter,Asap,sans-serif;
@@ -1260,6 +1346,18 @@ exports[`Single slider > handles correctly with custom scale 1`] = `
 }
 
 .emotion-25 {
+  color: #641cb3;
+  font-size: 0.75rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-27 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1273,21 +1371,21 @@ exports[`Single slider > handles correctly with custom scale 1`] = `
   transform: translateX(-50%);
 }
 
-.emotion-25[data-element-left='true'] {
+.emotion-27[data-element-left='true'] {
   -webkit-transform: none;
   -moz-transform: none;
   -ms-transform: none;
   transform: none;
 }
 
-.emotion-25[data-element-right='true'] {
+.emotion-27[data-element-right='true'] {
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
   -ms-transform: translateX(-100%);
   transform: translateX(-100%);
 }
 
-.emotion-25 {
+.emotion-27 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1301,14 +1399,14 @@ exports[`Single slider > handles correctly with custom scale 1`] = `
   transform: translateX(-50%);
 }
 
-.emotion-25[data-element-left='true'] {
+.emotion-27[data-element-left='true'] {
   -webkit-transform: none;
   -moz-transform: none;
   -ms-transform: none;
   transform: none;
 }
 
-.emotion-25[data-element-right='true'] {
+.emotion-27[data-element-right='true'] {
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
   -ms-transform: translateX(-100%);
@@ -1325,22 +1423,26 @@ exports[`Single slider > handles correctly with custom scale 1`] = `
       <div
         class="emotion-2 emotion-3"
       >
-        <span
-          class="emotion-4 emotion-5 emotion-6"
-          data-testid="slider-value"
-        >
-          6
-        </span>
         <div
-          class="emotion-7 emotion-3"
+          class="emotion-4 emotion-3"
+        >
+          <span
+            class="emotion-6 emotion-7 emotion-8"
+            data-testid="slider-value"
+          >
+            6
+          </span>
+        </div>
+        <div
+          class="emotion-9 emotion-3"
         >
           <input
             aria-label="slider"
-            class="emotion-9 emotion-10"
+            class="emotion-11 emotion-12"
             data-direction="column"
             data-error="false"
             data-testid="slider"
-            id=":r39:"
+            id=":r3a:"
             max="3"
             min="0"
             name="slider"
@@ -1351,53 +1453,53 @@ exports[`Single slider > handles correctly with custom scale 1`] = `
             value="2"
           />
           <datalist
-            class="emotion-11 emotion-12"
+            class="emotion-13 emotion-14"
             data-double="false"
           >
             <span
-              class="emotion-13 emotion-14"
+              class="emotion-15 emotion-16"
               data-element-left="true"
               data-element-right="false"
               data-value="0"
             >
               <p
-                class="emotion-15 emotion-6"
+                class="emotion-17 emotion-8"
               >
                 3
               </p>
             </span>
             <span
-              class="emotion-17 emotion-14"
+              class="emotion-19 emotion-16"
               data-element-left="false"
               data-element-right="false"
               data-value="1"
             >
               <p
-                class="emotion-15 emotion-6"
+                class="emotion-17 emotion-8"
               >
                 5
               </p>
             </span>
             <span
-              class="emotion-21 emotion-14"
+              class="emotion-23 emotion-16"
               data-element-left="false"
               data-element-right="false"
               data-value="2"
             >
               <p
-                class="emotion-23 emotion-6"
+                class="emotion-25 emotion-8"
               >
                 6
               </p>
             </span>
             <span
-              class="emotion-25 emotion-14"
+              class="emotion-27 emotion-16"
               data-element-left="false"
               data-element-right="true"
               data-value="3"
             >
               <p
-                class="emotion-15 emotion-6"
+                class="emotion-17 emotion-8"
               >
                 10
               </p>
@@ -1471,10 +1573,10 @@ exports[`Single slider > renders correctly 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
@@ -1485,29 +1587,6 @@ exports[`Single slider > renders correctly 1`] = `
 }
 
 .emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.emotion-8 {
   color: #222638;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
@@ -1517,10 +1596,9 @@ exports[`Single slider > renders correctly 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  text-align: left;
 }
 
-.emotion-11 {
+.emotion-9 {
   color: #3f4250;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
@@ -1535,6 +1613,29 @@ exports[`Single slider > renders correctly 1`] = `
   -webkit-align-self: end;
   -ms-flex-item-align: end;
   align-self: end;
+}
+
+.emotion-11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: end;
+  justify-content: end;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
 .emotion-13 {
@@ -1720,23 +1821,22 @@ exports[`Single slider > renders correctly 1`] = `
         <div
           class="emotion-4 emotion-3"
         >
-          <div
-            class="emotion-6 emotion-3"
+          <label
+            class="emotion-6 emotion-7"
+            for=":r0:"
           >
-            <label
-              class="emotion-8 emotion-9"
-              for=":r0:"
-            >
-              Label
-            </label>
-          </div>
+            Label
+          </label>
           <span
-            class="emotion-10 emotion-11 emotion-9"
+            class="emotion-8 emotion-9 emotion-7"
             data-testid="slider-value"
           >
             1
           </span>
         </div>
+        <div
+          class="emotion-11 emotion-3"
+        />
         <div
           class="emotion-13 emotion-3"
         >
@@ -1758,7 +1858,7 @@ exports[`Single slider > renders correctly 1`] = `
         </div>
       </div>
       <p
-        class="emotion-17 emotion-9"
+        class="emotion-17 emotion-7"
       >
         helper
       </p>
@@ -1828,10 +1928,10 @@ exports[`Single slider > renders correctly custom tooltip 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
@@ -1842,29 +1942,6 @@ exports[`Single slider > renders correctly custom tooltip 1`] = `
 }
 
 .emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.emotion-8 {
   color: #222638;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
@@ -1874,10 +1951,9 @@ exports[`Single slider > renders correctly custom tooltip 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  text-align: left;
 }
 
-.emotion-11 {
+.emotion-9 {
   color: #3f4250;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
@@ -1892,6 +1968,29 @@ exports[`Single slider > renders correctly custom tooltip 1`] = `
   -webkit-align-self: end;
   -ms-flex-item-align: end;
   align-self: end;
+}
+
+.emotion-11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: end;
+  justify-content: end;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
 .emotion-13 {
@@ -2073,29 +2172,28 @@ exports[`Single slider > renders correctly custom tooltip 1`] = `
         <div
           class="emotion-4 emotion-3"
         >
-          <div
-            class="emotion-6 emotion-3"
+          <label
+            class="emotion-6 emotion-7"
+            for=":r2a:"
           >
-            <label
-              class="emotion-8 emotion-9"
-              for=":r29:"
-            >
-              Label
-            </label>
-          </div>
+            Label
+          </label>
           <span
-            class="emotion-10 emotion-11 emotion-9"
+            class="emotion-8 emotion-9 emotion-7"
             data-testid="slider-value"
           >
             1
           </span>
         </div>
         <div
+          class="emotion-11 emotion-3"
+        />
+        <div
           class="emotion-13 emotion-3"
         >
           <div
-            aria-controls=":r2c:"
-            aria-describedby=":r2c:"
+            aria-controls=":r2d:"
+            aria-describedby=":r2d:"
             class="emotion-15 emotion-16"
             tabindex="0"
           >
@@ -2104,7 +2202,7 @@ exports[`Single slider > renders correctly custom tooltip 1`] = `
               class="emotion-17 emotion-18"
               data-direction="column"
               data-error="false"
-              id=":r29:"
+              id=":r2a:"
               max="100"
               min="0"
               name="Name"
@@ -2183,10 +2281,10 @@ exports[`Single slider > renders correctly default tooltip 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
@@ -2197,29 +2295,6 @@ exports[`Single slider > renders correctly default tooltip 1`] = `
 }
 
 .emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.emotion-8 {
   color: #222638;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
@@ -2229,10 +2304,9 @@ exports[`Single slider > renders correctly default tooltip 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  text-align: left;
 }
 
-.emotion-11 {
+.emotion-9 {
   color: #3f4250;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
@@ -2247,6 +2321,29 @@ exports[`Single slider > renders correctly default tooltip 1`] = `
   -webkit-align-self: end;
   -ms-flex-item-align: end;
   align-self: end;
+}
+
+.emotion-11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: end;
+  justify-content: end;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
 .emotion-13 {
@@ -2428,29 +2525,28 @@ exports[`Single slider > renders correctly default tooltip 1`] = `
         <div
           class="emotion-4 emotion-3"
         >
-          <div
-            class="emotion-6 emotion-3"
+          <label
+            class="emotion-6 emotion-7"
+            for=":r2e:"
           >
-            <label
-              class="emotion-8 emotion-9"
-              for=":r2d:"
-            >
-              Label
-            </label>
-          </div>
+            Label
+          </label>
           <span
-            class="emotion-10 emotion-11 emotion-9"
+            class="emotion-8 emotion-9 emotion-7"
             data-testid="slider-value"
           >
             1
           </span>
         </div>
         <div
+          class="emotion-11 emotion-3"
+        />
+        <div
           class="emotion-13 emotion-3"
         >
           <div
-            aria-controls=":r2g:"
-            aria-describedby=":r2g:"
+            aria-controls=":r2h:"
+            aria-describedby=":r2h:"
             class="emotion-15 emotion-16"
             tabindex="0"
           >
@@ -2459,7 +2555,7 @@ exports[`Single slider > renders correctly default tooltip 1`] = `
               class="emotion-17 emotion-18"
               data-direction="column"
               data-error="false"
-              id=":r2d:"
+              id=":r2e:"
               max="100"
               min="0"
               name="Name"
@@ -2538,10 +2634,10 @@ exports[`Single slider > renders correctly direction row 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
@@ -2552,29 +2648,6 @@ exports[`Single slider > renders correctly direction row 1`] = `
 }
 
 .emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.emotion-8 {
   color: #222638;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
@@ -2584,7 +2657,29 @@ exports[`Single slider > renders correctly direction row 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  text-align: left;
+}
+
+.emotion-8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: end;
+  justify-content: end;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
 .emotion-10 {
@@ -2775,17 +2870,16 @@ exports[`Single slider > renders correctly direction row 1`] = `
         <div
           class="emotion-4 emotion-3"
         >
-          <div
-            class="emotion-6 emotion-3"
+          <label
+            class="emotion-6 emotion-7"
+            for=":rs:"
           >
-            <label
-              class="emotion-8 emotion-9"
-              for=":rr:"
-            >
-              Label
-            </label>
-          </div>
+            Label
+          </label>
         </div>
+        <div
+          class="emotion-8 emotion-3"
+        />
         <div
           class="emotion-10 emotion-3"
         >
@@ -2794,7 +2888,7 @@ exports[`Single slider > renders correctly direction row 1`] = `
             class="emotion-12 emotion-13"
             data-direction="row"
             data-error="false"
-            id=":rr:"
+            id=":rs:"
             max="100"
             min="0"
             name="Name"
@@ -2806,7 +2900,7 @@ exports[`Single slider > renders correctly direction row 1`] = `
           />
         </div>
         <span
-          class="emotion-14 emotion-15 emotion-9"
+          class="emotion-14 emotion-15 emotion-7"
           data-testid="slider-value"
         >
           1
@@ -2878,10 +2972,10 @@ exports[`Single slider > renders correctly direction row with input 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
@@ -2892,29 +2986,6 @@ exports[`Single slider > renders correctly direction row with input 1`] = `
 }
 
 .emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.emotion-8 {
   color: #222638;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
@@ -2924,7 +2995,29 @@ exports[`Single slider > renders correctly direction row with input 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  text-align: left;
+}
+
+.emotion-8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: end;
+  justify-content: end;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
 .emotion-10 {
@@ -3085,7 +3178,7 @@ exports[`Single slider > renders correctly direction row with input 1`] = `
   cursor: grabbing;
 }
 
-.emotion-14 {
+.emotion-15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3106,9 +3199,10 @@ exports[`Single slider > renders correctly direction row with input 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  min-width: 2.5rem;
 }
 
-.emotion-16 {
+.emotion-17 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3127,52 +3221,52 @@ exports[`Single slider > renders correctly direction row with input 1`] = `
   border-radius: 0.25rem;
 }
 
-.emotion-16:focus-within {
+.emotion-17:focus-within {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-16[data-success='true'] {
+.emotion-17[data-success='true'] {
   border-color: #22674e;
 }
 
-.emotion-16[data-error='true'] {
+.emotion-17[data-error='true'] {
   border-color: #b3144d;
 }
 
-.emotion-16:hover {
+.emotion-17:hover {
   border-color: #792dd4;
 }
 
-.emotion-16[data-readonly='true'] {
+.emotion-17[data-readonly='true'] {
   border-color: #d9dadd;
   background: #f9f9fa;
   cursor: not-allowed;
 }
 
-.emotion-16[data-disabled='true'] {
+.emotion-17[data-disabled='true'] {
   border-color: #e9eaeb;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.emotion-16[data-controls='false']>.emotion-18 {
+.emotion-17[data-controls='false']>.emotion-19 {
   border-width: 0;
 }
 
-.emotion-16[data-size='small'] {
+.emotion-17[data-size='small'] {
   height: 2rem;
 }
 
-.emotion-16[data-size='medium'] {
+.emotion-17[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-16[data-size='large'] {
+.emotion-17[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-19 {
+.emotion-20 {
   display: grid;
   grid-template-columns: 1fr auto;
   -webkit-align-items: center;
@@ -3189,7 +3283,7 @@ exports[`Single slider > renders correctly direction row with input 1`] = `
   width: 100%;
 }
 
-.emotion-21 {
+.emotion-22 {
   outline: none;
   border: none;
   padding: 0;
@@ -3204,18 +3298,18 @@ exports[`Single slider > renders correctly direction row with input 1`] = `
   background: none;
 }
 
-.emotion-21[data-has-unit='true'] {
+.emotion-22[data-has-unit='true'] {
   text-align: left;
   padding: 0.5rem 0 0.5rem 0.5rem;
 }
 
-.emotion-21::-webkit-outer-spin-button,
-.emotion-21::-webkit-inner-spin-button {
+.emotion-22::-webkit-outer-spin-button,
+.emotion-22::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.emotion-21 {
+.emotion-22 {
   -moz-appearance: textfield;
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
@@ -3223,15 +3317,15 @@ exports[`Single slider > renders correctly direction row with input 1`] = `
   appearance: textfield;
 }
 
-.emotion-21[data-size='small'] {
+.emotion-22[data-size='small'] {
   height: 2rem;
 }
 
-.emotion-21[data-size='medium'] {
+.emotion-22[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-21[data-size='large'] {
+.emotion-22[data-size='large'] {
   height: 3rem;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
@@ -3239,34 +3333,34 @@ exports[`Single slider > renders correctly direction row with input 1`] = `
   line-height: 1.5rem;
 }
 
-.emotion-21:-moz-read-only {
+.emotion-22:-moz-read-only {
   color: #3f4250;
   background: #f9f9fa;
   border-block: 1px solid #d9dadd;
 }
 
-.emotion-21:read-only {
+.emotion-22:read-only {
   color: #3f4250;
   background: #f9f9fa;
   border-block: 1px solid #d9dadd;
 }
 
-.emotion-21:-moz-read-only~.e1b9qdjy2 {
+.emotion-22:-moz-read-only~.e1b9qdjy2 {
   background: #f9f9fa;
 }
 
-.emotion-21:read-only~.e1b9qdjy2 {
+.emotion-22:read-only~.e1b9qdjy2 {
   background: #f9f9fa;
 }
 
-.emotion-21:disabled {
+.emotion-22:disabled {
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
   border-block: 1px solid #e9eaeb;
 }
 
-.emotion-21:disabled~.e1b9qdjy2 {
+.emotion-22:disabled~.e1b9qdjy2 {
   background: #f3f3f4;
   cursor: not-allowed;
   -webkit-user-select: none;
@@ -3275,12 +3369,12 @@ exports[`Single slider > renders correctly direction row with input 1`] = `
   user-select: none;
 }
 
-.emotion-21:placeholder-shown~.e1b9qdjy2 {
+.emotion-22:placeholder-shown~.e1b9qdjy2 {
   color: #727683;
   font-size: 1rem;
 }
 
-.emotion-21[data-controls='false'] {
+.emotion-22[data-controls='false'] {
   text-align: left;
 }
 
@@ -3297,17 +3391,16 @@ exports[`Single slider > renders correctly direction row with input 1`] = `
         <div
           class="emotion-4 emotion-3"
         >
-          <div
-            class="emotion-6 emotion-3"
+          <label
+            class="emotion-6 emotion-7"
+            for=":r10:"
           >
-            <label
-              class="emotion-8 emotion-9"
-              for=":rv:"
-            >
-              Label
-            </label>
-          </div>
+            Label
+          </label>
         </div>
+        <div
+          class="emotion-8 emotion-3"
+        />
         <div
           class="emotion-10 emotion-3"
         >
@@ -3316,7 +3409,7 @@ exports[`Single slider > renders correctly direction row with input 1`] = `
             class="emotion-12 emotion-13"
             data-direction="row"
             data-error="false"
-            id=":rv:"
+            id=":r10:"
             max="100"
             min="0"
             name="Name"
@@ -3328,11 +3421,11 @@ exports[`Single slider > renders correctly direction row with input 1`] = `
           />
         </div>
         <div
-          class="emotion-14 emotion-3"
+          class="emotion-14 emotion-15 emotion-3"
         >
           <div>
             <div
-              class="emotion-16 emotion-17"
+              class="emotion-17 emotion-18"
               data-controls="false"
               data-disabled="false"
               data-error="false"
@@ -3341,16 +3434,16 @@ exports[`Single slider > renders correctly direction row with input 1`] = `
               data-unit="false"
             >
               <div
-                class="emotion-18 emotion-19 emotion-20"
+                class="emotion-19 emotion-20 emotion-21"
               >
                 <input
                   aria-label="input"
-                  class="emotion-21 emotion-22"
+                  class="emotion-22 emotion-23"
                   data-controls="false"
                   data-has-unit="false"
                   data-size="small"
                   data-testid="slider-input"
-                  id=":r12:"
+                  id=":r13:"
                   max="100"
                   min="0"
                   placeholder=""
@@ -3429,10 +3522,10 @@ exports[`Single slider > renders correctly disabled 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
@@ -3443,29 +3536,6 @@ exports[`Single slider > renders correctly disabled 1`] = `
 }
 
 .emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.emotion-8 {
   color: #222638;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
@@ -3475,10 +3545,9 @@ exports[`Single slider > renders correctly disabled 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  text-align: left;
 }
 
-.emotion-11 {
+.emotion-9 {
   color: #3f4250;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
@@ -3493,6 +3562,29 @@ exports[`Single slider > renders correctly disabled 1`] = `
   -webkit-align-self: end;
   -ms-flex-item-align: end;
   align-self: end;
+}
+
+.emotion-11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: end;
+  justify-content: end;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
 .emotion-13 {
@@ -3652,23 +3744,22 @@ exports[`Single slider > renders correctly disabled 1`] = `
         <div
           class="emotion-4 emotion-3"
         >
-          <div
-            class="emotion-6 emotion-3"
+          <label
+            class="emotion-6 emotion-7"
+            for=":r1d:"
           >
-            <label
-              class="emotion-8 emotion-9"
-              for=":r1c:"
-            >
-              Label
-            </label>
-          </div>
+            Label
+          </label>
           <span
-            class="emotion-10 emotion-11 emotion-9"
+            class="emotion-8 emotion-9 emotion-7"
             data-testid="slider-value"
           >
             1
           </span>
         </div>
+        <div
+          class="emotion-11 emotion-3"
+        />
         <div
           class="emotion-13 emotion-3"
         >
@@ -3679,7 +3770,7 @@ exports[`Single slider > renders correctly disabled 1`] = `
             data-direction="column"
             data-error="false"
             disabled=""
-            id=":r1c:"
+            id=":r1d:"
             max="100"
             min="0"
             name="Name"
@@ -3757,10 +3848,10 @@ exports[`Single slider > renders correctly error boolean 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
@@ -3771,29 +3862,6 @@ exports[`Single slider > renders correctly error boolean 1`] = `
 }
 
 .emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.emotion-8 {
   color: #222638;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
@@ -3803,10 +3871,9 @@ exports[`Single slider > renders correctly error boolean 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  text-align: left;
 }
 
-.emotion-11 {
+.emotion-9 {
   color: #3f4250;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
@@ -3821,6 +3888,29 @@ exports[`Single slider > renders correctly error boolean 1`] = `
   -webkit-align-self: end;
   -ms-flex-item-align: end;
   align-self: end;
+}
+
+.emotion-11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: end;
+  justify-content: end;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
 .emotion-13 {
@@ -4006,23 +4096,22 @@ exports[`Single slider > renders correctly error boolean 1`] = `
         <div
           class="emotion-4 emotion-3"
         >
-          <div
-            class="emotion-6 emotion-3"
+          <label
+            class="emotion-6 emotion-7"
+            for=":r1h:"
           >
-            <label
-              class="emotion-8 emotion-9"
-              for=":r1g:"
-            >
-              Label
-            </label>
-          </div>
+            Label
+          </label>
           <span
-            class="emotion-10 emotion-11 emotion-9"
+            class="emotion-8 emotion-9 emotion-7"
             data-testid="slider-value"
           >
             1
           </span>
         </div>
+        <div
+          class="emotion-11 emotion-3"
+        />
         <div
           class="emotion-13 emotion-3"
         >
@@ -4031,7 +4120,7 @@ exports[`Single slider > renders correctly error boolean 1`] = `
             class="emotion-15 emotion-16"
             data-direction="column"
             data-error="true"
-            id=":r1g:"
+            id=":r1h:"
             max="100"
             min="0"
             name="Name"
@@ -4044,7 +4133,7 @@ exports[`Single slider > renders correctly error boolean 1`] = `
         </div>
       </div>
       <p
-        class="emotion-17 emotion-9"
+        class="emotion-17 emotion-7"
       >
         helper
       </p>
@@ -4114,10 +4203,10 @@ exports[`Single slider > renders correctly error boolean and helper 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
@@ -4128,29 +4217,6 @@ exports[`Single slider > renders correctly error boolean and helper 1`] = `
 }
 
 .emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.emotion-8 {
   color: #222638;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
@@ -4160,10 +4226,9 @@ exports[`Single slider > renders correctly error boolean and helper 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  text-align: left;
 }
 
-.emotion-11 {
+.emotion-9 {
   color: #3f4250;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
@@ -4178,6 +4243,29 @@ exports[`Single slider > renders correctly error boolean and helper 1`] = `
   -webkit-align-self: end;
   -ms-flex-item-align: end;
   align-self: end;
+}
+
+.emotion-11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: end;
+  justify-content: end;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
 .emotion-13 {
@@ -4363,23 +4451,22 @@ exports[`Single slider > renders correctly error boolean and helper 1`] = `
         <div
           class="emotion-4 emotion-3"
         >
-          <div
-            class="emotion-6 emotion-3"
+          <label
+            class="emotion-6 emotion-7"
+            for=":r1m:"
           >
-            <label
-              class="emotion-8 emotion-9"
-              for=":r1l:"
-            >
-              Label
-            </label>
-          </div>
+            Label
+          </label>
           <span
-            class="emotion-10 emotion-11 emotion-9"
+            class="emotion-8 emotion-9 emotion-7"
             data-testid="slider-value"
           >
             1
           </span>
         </div>
+        <div
+          class="emotion-11 emotion-3"
+        />
         <div
           class="emotion-13 emotion-3"
         >
@@ -4388,7 +4475,7 @@ exports[`Single slider > renders correctly error boolean and helper 1`] = `
             class="emotion-15 emotion-16"
             data-direction="column"
             data-error="true"
-            id=":r1l:"
+            id=":r1m:"
             max="100"
             min="0"
             name="Name"
@@ -4401,7 +4488,7 @@ exports[`Single slider > renders correctly error boolean and helper 1`] = `
         </div>
       </div>
       <p
-        class="emotion-17 emotion-9"
+        class="emotion-17 emotion-7"
       >
         helper
       </p>
@@ -4471,10 +4558,10 @@ exports[`Single slider > renders correctly error string 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
@@ -4485,29 +4572,6 @@ exports[`Single slider > renders correctly error string 1`] = `
 }
 
 .emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.emotion-8 {
   color: #222638;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
@@ -4517,10 +4581,9 @@ exports[`Single slider > renders correctly error string 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  text-align: left;
 }
 
-.emotion-11 {
+.emotion-9 {
   color: #3f4250;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
@@ -4535,6 +4598,29 @@ exports[`Single slider > renders correctly error string 1`] = `
   -webkit-align-self: end;
   -ms-flex-item-align: end;
   align-self: end;
+}
+
+.emotion-11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: end;
+  justify-content: end;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
 .emotion-13 {
@@ -4720,23 +4806,22 @@ exports[`Single slider > renders correctly error string 1`] = `
         <div
           class="emotion-4 emotion-3"
         >
-          <div
-            class="emotion-6 emotion-3"
+          <label
+            class="emotion-6 emotion-7"
+            for=":r1r:"
           >
-            <label
-              class="emotion-8 emotion-9"
-              for=":r1q:"
-            >
-              Label
-            </label>
-          </div>
+            Label
+          </label>
           <span
-            class="emotion-10 emotion-11 emotion-9"
+            class="emotion-8 emotion-9 emotion-7"
             data-testid="slider-value"
           >
             1
           </span>
         </div>
+        <div
+          class="emotion-11 emotion-3"
+        />
         <div
           class="emotion-13 emotion-3"
         >
@@ -4745,7 +4830,7 @@ exports[`Single slider > renders correctly error string 1`] = `
             class="emotion-15 emotion-16"
             data-direction="column"
             data-error="true"
-            id=":r1q:"
+            id=":r1r:"
             max="100"
             min="0"
             name="Name"
@@ -4758,7 +4843,7 @@ exports[`Single slider > renders correctly error string 1`] = `
         </div>
       </div>
       <p
-        class="emotion-17 emotion-9"
+        class="emotion-17 emotion-7"
       >
         error
       </p>
@@ -4828,10 +4913,10 @@ exports[`Single slider > renders correctly error string and helper 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
@@ -4842,29 +4927,6 @@ exports[`Single slider > renders correctly error string and helper 1`] = `
 }
 
 .emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.emotion-8 {
   color: #222638;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
@@ -4874,10 +4936,9 @@ exports[`Single slider > renders correctly error string and helper 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  text-align: left;
 }
 
-.emotion-11 {
+.emotion-9 {
   color: #3f4250;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
@@ -4892,6 +4953,29 @@ exports[`Single slider > renders correctly error string and helper 1`] = `
   -webkit-align-self: end;
   -ms-flex-item-align: end;
   align-self: end;
+}
+
+.emotion-11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: end;
+  justify-content: end;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
 .emotion-13 {
@@ -5077,23 +5161,22 @@ exports[`Single slider > renders correctly error string and helper 1`] = `
         <div
           class="emotion-4 emotion-3"
         >
-          <div
-            class="emotion-6 emotion-3"
+          <label
+            class="emotion-6 emotion-7"
+            for=":r20:"
           >
-            <label
-              class="emotion-8 emotion-9"
-              for=":r1v:"
-            >
-              Label
-            </label>
-          </div>
+            Label
+          </label>
           <span
-            class="emotion-10 emotion-11 emotion-9"
+            class="emotion-8 emotion-9 emotion-7"
             data-testid="slider-value"
           >
             1
           </span>
         </div>
+        <div
+          class="emotion-11 emotion-3"
+        />
         <div
           class="emotion-13 emotion-3"
         >
@@ -5102,7 +5185,7 @@ exports[`Single slider > renders correctly error string and helper 1`] = `
             class="emotion-15 emotion-16"
             data-direction="column"
             data-error="true"
-            id=":r1v:"
+            id=":r20:"
             max="100"
             min="0"
             name="Name"
@@ -5115,7 +5198,7 @@ exports[`Single slider > renders correctly error string and helper 1`] = `
         </div>
       </div>
       <p
-        class="emotion-17 emotion-9"
+        class="emotion-17 emotion-7"
       >
         error
       </p>
@@ -5185,10 +5268,10 @@ exports[`Single slider > renders correctly input 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
@@ -5199,29 +5282,6 @@ exports[`Single slider > renders correctly input 1`] = `
 }
 
 .emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.emotion-8 {
   color: #222638;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
@@ -5231,10 +5291,9 @@ exports[`Single slider > renders correctly input 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  text-align: left;
 }
 
-.emotion-10 {
+.emotion-9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5255,9 +5314,10 @@ exports[`Single slider > renders correctly input 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  min-width: 2.5rem;
 }
 
-.emotion-12 {
+.emotion-11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5276,52 +5336,52 @@ exports[`Single slider > renders correctly input 1`] = `
   border-radius: 0.25rem;
 }
 
-.emotion-12:focus-within {
+.emotion-11:focus-within {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-12[data-success='true'] {
+.emotion-11[data-success='true'] {
   border-color: #22674e;
 }
 
-.emotion-12[data-error='true'] {
+.emotion-11[data-error='true'] {
   border-color: #b3144d;
 }
 
-.emotion-12:hover {
+.emotion-11:hover {
   border-color: #792dd4;
 }
 
-.emotion-12[data-readonly='true'] {
+.emotion-11[data-readonly='true'] {
   border-color: #d9dadd;
   background: #f9f9fa;
   cursor: not-allowed;
 }
 
-.emotion-12[data-disabled='true'] {
+.emotion-11[data-disabled='true'] {
   border-color: #e9eaeb;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.emotion-12[data-controls='false']>.emotion-14 {
+.emotion-11[data-controls='false']>.emotion-13 {
   border-width: 0;
 }
 
-.emotion-12[data-size='small'] {
+.emotion-11[data-size='small'] {
   height: 2rem;
 }
 
-.emotion-12[data-size='medium'] {
+.emotion-11[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-12[data-size='large'] {
+.emotion-11[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-15 {
+.emotion-14 {
   display: grid;
   grid-template-columns: 1fr auto;
   -webkit-align-items: center;
@@ -5338,7 +5398,7 @@ exports[`Single slider > renders correctly input 1`] = `
   width: 100%;
 }
 
-.emotion-17 {
+.emotion-16 {
   outline: none;
   border: none;
   padding: 0;
@@ -5353,18 +5413,18 @@ exports[`Single slider > renders correctly input 1`] = `
   background: none;
 }
 
-.emotion-17[data-has-unit='true'] {
+.emotion-16[data-has-unit='true'] {
   text-align: left;
   padding: 0.5rem 0 0.5rem 0.5rem;
 }
 
-.emotion-17::-webkit-outer-spin-button,
-.emotion-17::-webkit-inner-spin-button {
+.emotion-16::-webkit-outer-spin-button,
+.emotion-16::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.emotion-17 {
+.emotion-16 {
   -moz-appearance: textfield;
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
@@ -5372,15 +5432,15 @@ exports[`Single slider > renders correctly input 1`] = `
   appearance: textfield;
 }
 
-.emotion-17[data-size='small'] {
+.emotion-16[data-size='small'] {
   height: 2rem;
 }
 
-.emotion-17[data-size='medium'] {
+.emotion-16[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-17[data-size='large'] {
+.emotion-16[data-size='large'] {
   height: 3rem;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
@@ -5388,34 +5448,34 @@ exports[`Single slider > renders correctly input 1`] = `
   line-height: 1.5rem;
 }
 
-.emotion-17:-moz-read-only {
+.emotion-16:-moz-read-only {
   color: #3f4250;
   background: #f9f9fa;
   border-block: 1px solid #d9dadd;
 }
 
-.emotion-17:read-only {
+.emotion-16:read-only {
   color: #3f4250;
   background: #f9f9fa;
   border-block: 1px solid #d9dadd;
 }
 
-.emotion-17:-moz-read-only~.e1b9qdjy2 {
+.emotion-16:-moz-read-only~.e1b9qdjy2 {
   background: #f9f9fa;
 }
 
-.emotion-17:read-only~.e1b9qdjy2 {
+.emotion-16:read-only~.e1b9qdjy2 {
   background: #f9f9fa;
 }
 
-.emotion-17:disabled {
+.emotion-16:disabled {
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
   border-block: 1px solid #e9eaeb;
 }
 
-.emotion-17:disabled~.e1b9qdjy2 {
+.emotion-16:disabled~.e1b9qdjy2 {
   background: #f3f3f4;
   cursor: not-allowed;
   -webkit-user-select: none;
@@ -5424,16 +5484,39 @@ exports[`Single slider > renders correctly input 1`] = `
   user-select: none;
 }
 
-.emotion-17:placeholder-shown~.e1b9qdjy2 {
+.emotion-16:placeholder-shown~.e1b9qdjy2 {
   color: #727683;
   font-size: 1rem;
 }
 
-.emotion-17[data-controls='false'] {
+.emotion-16[data-controls='false'] {
   text-align: left;
 }
 
-.emotion-19 {
+.emotion-18 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: end;
+  justify-content: end;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-20 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5457,7 +5540,7 @@ exports[`Single slider > renders correctly input 1`] = `
   width: 100%;
 }
 
-.emotion-21 {
+.emotion-22 {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -5475,31 +5558,31 @@ exports[`Single slider > renders correctly input 1`] = `
   outline: none;
 }
 
-.emotion-21:focus::-moz-range-thumb {
+.emotion-22:focus::-moz-range-thumb {
   border: 1.5px solid #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-21:focus::-webkit-slider-thumb {
+.emotion-22:focus::-webkit-slider-thumb {
   border: 1.5px solid #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-21[data-error='true'] {
+.emotion-22[data-error='true'] {
   background-image: linear-gradient(#e51963, #e51963);
 }
 
-.emotion-21[data-direction='column'] {
+.emotion-22[data-direction='column'] {
   -webkit-align-self: baseline;
   -ms-flex-item-align: baseline;
   align-self: baseline;
 }
 
-.emotion-21[aria-disabled='true'] {
+.emotion-22[aria-disabled='true'] {
   background-image: linear-gradient(#d8c5fc, #d8c5fc);
 }
 
-.emotion-21::-moz-range-track {
+.emotion-22::-moz-range-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -5510,7 +5593,7 @@ exports[`Single slider > renders correctly input 1`] = `
   background: transparent;
 }
 
-.emotion-21::-moz-range-thumb {
+.emotion-22::-moz-range-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -5532,20 +5615,20 @@ exports[`Single slider > renders correctly input 1`] = `
   top: -4px;
 }
 
-.emotion-21::-moz-range-thumb:hover,
-.emotion-21::-moz-range-thumb:active,
-.emotion-21::-moz-range-thumb:focus {
+.emotion-22::-moz-range-thumb:hover,
+.emotion-22::-moz-range-thumb:active,
+.emotion-22::-moz-range-thumb:focus {
   border: 1.5px solid #8c40ef;
 }
 
-.emotion-21::-moz-range-thumb:active,
-.emotion-21::-moz-range-thumb:focus {
+.emotion-22::-moz-range-thumb:active,
+.emotion-22::-moz-range-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
 }
 
-.emotion-21::-webkit-slider-runnable-track {
+.emotion-22::-webkit-slider-runnable-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -5556,7 +5639,7 @@ exports[`Single slider > renders correctly input 1`] = `
   background: transparent;
 }
 
-.emotion-21::-webkit-slider-thumb {
+.emotion-22::-webkit-slider-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -5578,14 +5661,14 @@ exports[`Single slider > renders correctly input 1`] = `
   top: -4px;
 }
 
-.emotion-21::-webkit-slider-thumb:hover,
-.emotion-21::-webkit-slider-thumb:active,
-.emotion-21::-webkit-slider-thumb:focus {
+.emotion-22::-webkit-slider-thumb:hover,
+.emotion-22::-webkit-slider-thumb:active,
+.emotion-22::-webkit-slider-thumb:focus {
   border: 1.5px solid #8c40ef;
 }
 
-.emotion-21::-webkit-slider-thumb:active,
-.emotion-21::-webkit-slider-thumb:focus {
+.emotion-22::-webkit-slider-thumb:active,
+.emotion-22::-webkit-slider-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
@@ -5604,22 +5687,18 @@ exports[`Single slider > renders correctly input 1`] = `
         <div
           class="emotion-4 emotion-3"
         >
-          <div
-            class="emotion-6 emotion-3"
+          <label
+            class="emotion-6 emotion-7"
+            for=":r25:"
           >
-            <label
-              class="emotion-8 emotion-9"
-              for=":r24:"
-            >
-              Label
-            </label>
-          </div>
+            Label
+          </label>
           <div
-            class="emotion-10 emotion-3"
+            class="emotion-8 emotion-9 emotion-3"
           >
             <div>
               <div
-                class="emotion-12 emotion-13"
+                class="emotion-11 emotion-12"
                 data-controls="false"
                 data-disabled="false"
                 data-error="false"
@@ -5628,16 +5707,16 @@ exports[`Single slider > renders correctly input 1`] = `
                 data-unit="false"
               >
                 <div
-                  class="emotion-14 emotion-15 emotion-16"
+                  class="emotion-13 emotion-14 emotion-15"
                 >
                   <input
                     aria-label="input"
-                    class="emotion-17 emotion-18"
+                    class="emotion-16 emotion-17"
                     data-controls="false"
                     data-has-unit="false"
                     data-size="small"
                     data-testid="slider-input"
-                    id=":r26:"
+                    id=":r27:"
                     max="100"
                     min="0"
                     placeholder=""
@@ -5651,14 +5730,17 @@ exports[`Single slider > renders correctly input 1`] = `
           </div>
         </div>
         <div
-          class="emotion-19 emotion-3"
+          class="emotion-18 emotion-3"
+        />
+        <div
+          class="emotion-20 emotion-3"
         >
           <input
             aria-label="Name"
-            class="emotion-21 emotion-22"
+            class="emotion-22 emotion-23"
             data-direction="column"
             data-error="false"
-            id=":r24:"
+            id=":r25:"
             max="100"
             min="0"
             name="Name"
@@ -5736,10 +5818,10 @@ exports[`Single slider > renders correctly min max 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
@@ -5750,29 +5832,6 @@ exports[`Single slider > renders correctly min max 1`] = `
 }
 
 .emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.emotion-8 {
   color: #222638;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
@@ -5782,10 +5841,9 @@ exports[`Single slider > renders correctly min max 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  text-align: left;
 }
 
-.emotion-11 {
+.emotion-9 {
   color: #3f4250;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
@@ -5800,6 +5858,29 @@ exports[`Single slider > renders correctly min max 1`] = `
   -webkit-align-self: end;
   -ms-flex-item-align: end;
   align-self: end;
+}
+
+.emotion-11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: end;
+  justify-content: end;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
 .emotion-13 {
@@ -5973,23 +6054,22 @@ exports[`Single slider > renders correctly min max 1`] = `
         <div
           class="emotion-4 emotion-3"
         >
-          <div
-            class="emotion-6 emotion-3"
+          <label
+            class="emotion-6 emotion-7"
+            for=":r2u:"
           >
-            <label
-              class="emotion-8 emotion-9"
-              for=":r2t:"
-            >
-              Label
-            </label>
-          </div>
+            Label
+          </label>
           <span
-            class="emotion-10 emotion-11 emotion-9"
+            class="emotion-8 emotion-9 emotion-7"
             data-testid="slider-value"
           >
             1
           </span>
         </div>
+        <div
+          class="emotion-11 emotion-3"
+        />
         <div
           class="emotion-13 emotion-3"
         >
@@ -5998,7 +6078,7 @@ exports[`Single slider > renders correctly min max 1`] = `
             class="emotion-15 emotion-16"
             data-direction="column"
             data-error="false"
-            id=":r2t:"
+            id=":r2u:"
             max="10"
             min="1"
             name="Name"
@@ -6076,10 +6156,10 @@ exports[`Single slider > renders correctly prefix 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
@@ -6090,29 +6170,6 @@ exports[`Single slider > renders correctly prefix 1`] = `
 }
 
 .emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.emotion-8 {
   color: #222638;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
@@ -6122,10 +6179,9 @@ exports[`Single slider > renders correctly prefix 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  text-align: left;
 }
 
-.emotion-11 {
+.emotion-9 {
   color: #3f4250;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
@@ -6140,6 +6196,29 @@ exports[`Single slider > renders correctly prefix 1`] = `
   -webkit-align-self: end;
   -ms-flex-item-align: end;
   align-self: end;
+}
+
+.emotion-11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: end;
+  justify-content: end;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
 .emotion-13 {
@@ -6313,23 +6392,22 @@ exports[`Single slider > renders correctly prefix 1`] = `
         <div
           class="emotion-4 emotion-3"
         >
-          <div
-            class="emotion-6 emotion-3"
+          <label
+            class="emotion-6 emotion-7"
+            for=":ro:"
           >
-            <label
-              class="emotion-8 emotion-9"
-              for=":rn:"
-            >
-              Label
-            </label>
-          </div>
+            Label
+          </label>
           <span
-            class="emotion-10 emotion-11 emotion-9"
+            class="emotion-8 emotion-9 emotion-7"
             data-testid="slider-value"
           >
             %1
           </span>
         </div>
+        <div
+          class="emotion-11 emotion-3"
+        />
         <div
           class="emotion-13 emotion-3"
         >
@@ -6338,7 +6416,7 @@ exports[`Single slider > renders correctly prefix 1`] = `
             class="emotion-15 emotion-16"
             data-direction="column"
             data-error="false"
-            id=":rn:"
+            id=":ro:"
             max="100"
             min="0"
             name="Name"
@@ -6416,10 +6494,10 @@ exports[`Single slider > renders correctly required 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
@@ -6438,10 +6516,10 @@ exports[`Single slider > renders correctly required 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
   -webkit-box-pack: normal;
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
@@ -6462,21 +6540,18 @@ exports[`Single slider > renders correctly required 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  text-align: left;
 }
 
 .emotion-10 {
-  vertical-align: middle;
-  fill: #b3144d;
-  height: 8px;
-  width: 8px;
-  min-width: 8px;
-  min-height: 8px;
-}
-
-.emotion-10 .fillStroke {
-  stroke: #b3144d;
-  fill: none;
+  color: #b3144d;
+  font-size: 1rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .emotion-13 {
@@ -6501,6 +6576,29 @@ exports[`Single slider > renders correctly required 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: end;
+  justify-content: end;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-17 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   gap: 0.5rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -6520,7 +6618,7 @@ exports[`Single slider > renders correctly required 1`] = `
   width: 100%;
 }
 
-.emotion-17 {
+.emotion-19 {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -6538,31 +6636,31 @@ exports[`Single slider > renders correctly required 1`] = `
   outline: none;
 }
 
-.emotion-17:focus::-moz-range-thumb {
+.emotion-19:focus::-moz-range-thumb {
   border: 1.5px solid #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-17:focus::-webkit-slider-thumb {
+.emotion-19:focus::-webkit-slider-thumb {
   border: 1.5px solid #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-17[data-error='true'] {
+.emotion-19[data-error='true'] {
   background-image: linear-gradient(#e51963, #e51963);
 }
 
-.emotion-17[data-direction='column'] {
+.emotion-19[data-direction='column'] {
   -webkit-align-self: baseline;
   -ms-flex-item-align: baseline;
   align-self: baseline;
 }
 
-.emotion-17[aria-disabled='true'] {
+.emotion-19[aria-disabled='true'] {
   background-image: linear-gradient(#d8c5fc, #d8c5fc);
 }
 
-.emotion-17::-moz-range-track {
+.emotion-19::-moz-range-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -6573,7 +6671,7 @@ exports[`Single slider > renders correctly required 1`] = `
   background: transparent;
 }
 
-.emotion-17::-moz-range-thumb {
+.emotion-19::-moz-range-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -6595,20 +6693,20 @@ exports[`Single slider > renders correctly required 1`] = `
   top: -4px;
 }
 
-.emotion-17::-moz-range-thumb:hover,
-.emotion-17::-moz-range-thumb:active,
-.emotion-17::-moz-range-thumb:focus {
+.emotion-19::-moz-range-thumb:hover,
+.emotion-19::-moz-range-thumb:active,
+.emotion-19::-moz-range-thumb:focus {
   border: 1.5px solid #8c40ef;
 }
 
-.emotion-17::-moz-range-thumb:active,
-.emotion-17::-moz-range-thumb:focus {
+.emotion-19::-moz-range-thumb:active,
+.emotion-19::-moz-range-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
 }
 
-.emotion-17::-webkit-slider-runnable-track {
+.emotion-19::-webkit-slider-runnable-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -6619,7 +6717,7 @@ exports[`Single slider > renders correctly required 1`] = `
   background: transparent;
 }
 
-.emotion-17::-webkit-slider-thumb {
+.emotion-19::-webkit-slider-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -6641,14 +6739,14 @@ exports[`Single slider > renders correctly required 1`] = `
   top: -4px;
 }
 
-.emotion-17::-webkit-slider-thumb:hover,
-.emotion-17::-webkit-slider-thumb:active,
-.emotion-17::-webkit-slider-thumb:focus {
+.emotion-19::-webkit-slider-thumb:hover,
+.emotion-19::-webkit-slider-thumb:active,
+.emotion-19::-webkit-slider-thumb:focus {
   border: 1.5px solid #8c40ef;
 }
 
-.emotion-17::-webkit-slider-thumb:active,
-.emotion-17::-webkit-slider-thumb:focus {
+.emotion-19::-webkit-slider-thumb:active,
+.emotion-19::-webkit-slider-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
@@ -6676,14 +6774,11 @@ exports[`Single slider > renders correctly required 1`] = `
             >
               Label
             </label>
-            <svg
-              class="emotion-10 emotion-11"
-              viewBox="0 0 20 20"
+            <span
+              class="emotion-10 emotion-9"
             >
-              <path
-                d="M10 2h4l-.79 7.91 6.45-4.64 2 3.46L14.42 12l7.24 3.27-2 3.46-6.45-4.64L14 22h-4l.79-7.91-6.45 4.64-2-3.46L9.58 12 2.34 8.73l2-3.46 6.45 4.64z"
-              />
-            </svg>
+              *
+            </span>
           </div>
           <span
             class="emotion-12 emotion-13 emotion-9"
@@ -6694,10 +6789,13 @@ exports[`Single slider > renders correctly required 1`] = `
         </div>
         <div
           class="emotion-15 emotion-3"
+        />
+        <div
+          class="emotion-17 emotion-3"
         >
           <input
             aria-label="Name"
-            class="emotion-17 emotion-18"
+            class="emotion-19 emotion-20"
             data-direction="column"
             data-error="false"
             id=":r5:"
@@ -6778,10 +6876,10 @@ exports[`Single slider > renders correctly step 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
@@ -6792,29 +6890,6 @@ exports[`Single slider > renders correctly step 1`] = `
 }
 
 .emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.emotion-8 {
   color: #222638;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
@@ -6824,10 +6899,9 @@ exports[`Single slider > renders correctly step 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  text-align: left;
 }
 
-.emotion-11 {
+.emotion-9 {
   color: #3f4250;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
@@ -6842,6 +6916,29 @@ exports[`Single slider > renders correctly step 1`] = `
   -webkit-align-self: end;
   -ms-flex-item-align: end;
   align-self: end;
+}
+
+.emotion-11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: end;
+  justify-content: end;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
 .emotion-13 {
@@ -7015,23 +7112,22 @@ exports[`Single slider > renders correctly step 1`] = `
         <div
           class="emotion-4 emotion-3"
         >
-          <div
-            class="emotion-6 emotion-3"
+          <label
+            class="emotion-6 emotion-7"
+            for=":r32:"
           >
-            <label
-              class="emotion-8 emotion-9"
-              for=":r31:"
-            >
-              Label
-            </label>
-          </div>
+            Label
+          </label>
           <span
-            class="emotion-10 emotion-11 emotion-9"
+            class="emotion-8 emotion-9 emotion-7"
             data-testid="slider-value"
           >
             1
           </span>
         </div>
+        <div
+          class="emotion-11 emotion-3"
+        />
         <div
           class="emotion-13 emotion-3"
         >
@@ -7040,7 +7136,7 @@ exports[`Single slider > renders correctly step 1`] = `
             class="emotion-15 emotion-16"
             data-direction="column"
             data-error="false"
-            id=":r31:"
+            id=":r32:"
             max="100"
             min="0"
             name="Name"
@@ -7118,10 +7214,10 @@ exports[`Single slider > renders correctly suffix complex 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
@@ -7132,29 +7228,6 @@ exports[`Single slider > renders correctly suffix complex 1`] = `
 }
 
 .emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.emotion-8 {
   color: #222638;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
@@ -7164,10 +7237,9 @@ exports[`Single slider > renders correctly suffix complex 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  text-align: left;
 }
 
-.emotion-11 {
+.emotion-9 {
   color: #3f4250;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
@@ -7182,6 +7254,29 @@ exports[`Single slider > renders correctly suffix complex 1`] = `
   -webkit-align-self: end;
   -ms-flex-item-align: end;
   align-self: end;
+}
+
+.emotion-11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: end;
+  justify-content: end;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
 .emotion-13 {
@@ -7355,18 +7450,14 @@ exports[`Single slider > renders correctly suffix complex 1`] = `
         <div
           class="emotion-4 emotion-3"
         >
-          <div
-            class="emotion-6 emotion-3"
+          <label
+            class="emotion-6 emotion-7"
+            for=":re:"
           >
-            <label
-              class="emotion-8 emotion-9"
-              for=":rd:"
-            >
-              Label
-            </label>
-          </div>
+            Label
+          </label>
           <span
-            class="emotion-10 emotion-11 emotion-9"
+            class="emotion-8 emotion-9 emotion-7"
             data-testid="slider-value"
           >
             1
@@ -7378,6 +7469,9 @@ exports[`Single slider > renders correctly suffix complex 1`] = `
           </span>
         </div>
         <div
+          class="emotion-11 emotion-3"
+        />
+        <div
           class="emotion-13 emotion-3"
         >
           <input
@@ -7385,7 +7479,7 @@ exports[`Single slider > renders correctly suffix complex 1`] = `
             class="emotion-15 emotion-16"
             data-direction="column"
             data-error="false"
-            id=":rd:"
+            id=":re:"
             max="100"
             min="0"
             name="Name"
@@ -7463,10 +7557,10 @@ exports[`Single slider > renders correctly suffix string 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
@@ -7477,29 +7571,6 @@ exports[`Single slider > renders correctly suffix string 1`] = `
 }
 
 .emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.emotion-8 {
   color: #222638;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
@@ -7509,10 +7580,9 @@ exports[`Single slider > renders correctly suffix string 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  text-align: left;
 }
 
-.emotion-11 {
+.emotion-9 {
   color: #3f4250;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
@@ -7527,6 +7597,29 @@ exports[`Single slider > renders correctly suffix string 1`] = `
   -webkit-align-self: end;
   -ms-flex-item-align: end;
   align-self: end;
+}
+
+.emotion-11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: end;
+  justify-content: end;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
 .emotion-13 {
@@ -7700,23 +7793,22 @@ exports[`Single slider > renders correctly suffix string 1`] = `
         <div
           class="emotion-4 emotion-3"
         >
-          <div
-            class="emotion-6 emotion-3"
+          <label
+            class="emotion-6 emotion-7"
+            for=":ra:"
           >
-            <label
-              class="emotion-8 emotion-9"
-              for=":r9:"
-            >
-              Label
-            </label>
-          </div>
+            Label
+          </label>
           <span
-            class="emotion-10 emotion-11 emotion-9"
+            class="emotion-8 emotion-9 emotion-7"
             data-testid="slider-value"
           >
             1%
           </span>
         </div>
+        <div
+          class="emotion-11 emotion-3"
+        />
         <div
           class="emotion-13 emotion-3"
         >
@@ -7725,7 +7817,7 @@ exports[`Single slider > renders correctly suffix string 1`] = `
             class="emotion-15 emotion-16"
             data-direction="column"
             data-error="false"
-            id=":r9:"
+            id=":ra:"
             max="100"
             min="0"
             name="Name"
@@ -7803,10 +7895,10 @@ exports[`Single slider > renders correctly suffix string input 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
@@ -7817,29 +7909,6 @@ exports[`Single slider > renders correctly suffix string input 1`] = `
 }
 
 .emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.emotion-8 {
   color: #222638;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
@@ -7849,10 +7918,9 @@ exports[`Single slider > renders correctly suffix string input 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  text-align: left;
 }
 
-.emotion-10 {
+.emotion-9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -7873,9 +7941,10 @@ exports[`Single slider > renders correctly suffix string input 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  min-width: 2.5rem;
 }
 
-.emotion-12 {
+.emotion-11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -7894,52 +7963,52 @@ exports[`Single slider > renders correctly suffix string input 1`] = `
   border-radius: 0.25rem;
 }
 
-.emotion-12:focus-within {
+.emotion-11:focus-within {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-12[data-success='true'] {
+.emotion-11[data-success='true'] {
   border-color: #22674e;
 }
 
-.emotion-12[data-error='true'] {
+.emotion-11[data-error='true'] {
   border-color: #b3144d;
 }
 
-.emotion-12:hover {
+.emotion-11:hover {
   border-color: #792dd4;
 }
 
-.emotion-12[data-readonly='true'] {
+.emotion-11[data-readonly='true'] {
   border-color: #d9dadd;
   background: #f9f9fa;
   cursor: not-allowed;
 }
 
-.emotion-12[data-disabled='true'] {
+.emotion-11[data-disabled='true'] {
   border-color: #e9eaeb;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.emotion-12[data-controls='false']>.emotion-14 {
+.emotion-11[data-controls='false']>.emotion-13 {
   border-width: 0;
 }
 
-.emotion-12[data-size='small'] {
+.emotion-11[data-size='small'] {
   height: 2rem;
 }
 
-.emotion-12[data-size='medium'] {
+.emotion-11[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-12[data-size='large'] {
+.emotion-11[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-15 {
+.emotion-14 {
   display: grid;
   grid-template-columns: 1fr auto;
   -webkit-align-items: center;
@@ -7956,7 +8025,7 @@ exports[`Single slider > renders correctly suffix string input 1`] = `
   width: 100%;
 }
 
-.emotion-17 {
+.emotion-16 {
   outline: none;
   border: none;
   padding: 0;
@@ -7971,18 +8040,18 @@ exports[`Single slider > renders correctly suffix string input 1`] = `
   background: none;
 }
 
-.emotion-17[data-has-unit='true'] {
+.emotion-16[data-has-unit='true'] {
   text-align: left;
   padding: 0.5rem 0 0.5rem 0.5rem;
 }
 
-.emotion-17::-webkit-outer-spin-button,
-.emotion-17::-webkit-inner-spin-button {
+.emotion-16::-webkit-outer-spin-button,
+.emotion-16::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.emotion-17 {
+.emotion-16 {
   -moz-appearance: textfield;
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
@@ -7990,15 +8059,15 @@ exports[`Single slider > renders correctly suffix string input 1`] = `
   appearance: textfield;
 }
 
-.emotion-17[data-size='small'] {
+.emotion-16[data-size='small'] {
   height: 2rem;
 }
 
-.emotion-17[data-size='medium'] {
+.emotion-16[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-17[data-size='large'] {
+.emotion-16[data-size='large'] {
   height: 3rem;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
@@ -8006,34 +8075,34 @@ exports[`Single slider > renders correctly suffix string input 1`] = `
   line-height: 1.5rem;
 }
 
-.emotion-17:-moz-read-only {
+.emotion-16:-moz-read-only {
   color: #3f4250;
   background: #f9f9fa;
   border-block: 1px solid #d9dadd;
 }
 
-.emotion-17:read-only {
+.emotion-16:read-only {
   color: #3f4250;
   background: #f9f9fa;
   border-block: 1px solid #d9dadd;
 }
 
-.emotion-17:-moz-read-only~.emotion-19 {
+.emotion-16:-moz-read-only~.emotion-18 {
   background: #f9f9fa;
 }
 
-.emotion-17:read-only~.emotion-19 {
+.emotion-16:read-only~.emotion-18 {
   background: #f9f9fa;
 }
 
-.emotion-17:disabled {
+.emotion-16:disabled {
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
   border-block: 1px solid #e9eaeb;
 }
 
-.emotion-17:disabled~.emotion-19 {
+.emotion-16:disabled~.emotion-18 {
   background: #f3f3f4;
   cursor: not-allowed;
   -webkit-user-select: none;
@@ -8042,16 +8111,16 @@ exports[`Single slider > renders correctly suffix string input 1`] = `
   user-select: none;
 }
 
-.emotion-17:placeholder-shown~.emotion-19 {
+.emotion-16:placeholder-shown~.emotion-18 {
   color: #727683;
   font-size: 1rem;
 }
 
-.emotion-17[data-controls='false'] {
+.emotion-16[data-controls='false'] {
   text-align: left;
 }
 
-.emotion-20 {
+.emotion-19 {
   color: #3f4250;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
@@ -8074,7 +8143,30 @@ exports[`Single slider > renders correctly suffix string input 1`] = `
   font-size: 0.875rem;
 }
 
-.emotion-22 {
+.emotion-21 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: end;
+  justify-content: end;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-23 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -8098,7 +8190,7 @@ exports[`Single slider > renders correctly suffix string input 1`] = `
   width: 100%;
 }
 
-.emotion-24 {
+.emotion-25 {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -8116,31 +8208,31 @@ exports[`Single slider > renders correctly suffix string input 1`] = `
   outline: none;
 }
 
-.emotion-24:focus::-moz-range-thumb {
+.emotion-25:focus::-moz-range-thumb {
   border: 1.5px solid #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-24:focus::-webkit-slider-thumb {
+.emotion-25:focus::-webkit-slider-thumb {
   border: 1.5px solid #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-24[data-error='true'] {
+.emotion-25[data-error='true'] {
   background-image: linear-gradient(#e51963, #e51963);
 }
 
-.emotion-24[data-direction='column'] {
+.emotion-25[data-direction='column'] {
   -webkit-align-self: baseline;
   -ms-flex-item-align: baseline;
   align-self: baseline;
 }
 
-.emotion-24[aria-disabled='true'] {
+.emotion-25[aria-disabled='true'] {
   background-image: linear-gradient(#d8c5fc, #d8c5fc);
 }
 
-.emotion-24::-moz-range-track {
+.emotion-25::-moz-range-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -8151,7 +8243,7 @@ exports[`Single slider > renders correctly suffix string input 1`] = `
   background: transparent;
 }
 
-.emotion-24::-moz-range-thumb {
+.emotion-25::-moz-range-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -8173,20 +8265,20 @@ exports[`Single slider > renders correctly suffix string input 1`] = `
   top: -4px;
 }
 
-.emotion-24::-moz-range-thumb:hover,
-.emotion-24::-moz-range-thumb:active,
-.emotion-24::-moz-range-thumb:focus {
+.emotion-25::-moz-range-thumb:hover,
+.emotion-25::-moz-range-thumb:active,
+.emotion-25::-moz-range-thumb:focus {
   border: 1.5px solid #8c40ef;
 }
 
-.emotion-24::-moz-range-thumb:active,
-.emotion-24::-moz-range-thumb:focus {
+.emotion-25::-moz-range-thumb:active,
+.emotion-25::-moz-range-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
 }
 
-.emotion-24::-webkit-slider-runnable-track {
+.emotion-25::-webkit-slider-runnable-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -8197,7 +8289,7 @@ exports[`Single slider > renders correctly suffix string input 1`] = `
   background: transparent;
 }
 
-.emotion-24::-webkit-slider-thumb {
+.emotion-25::-webkit-slider-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -8219,14 +8311,14 @@ exports[`Single slider > renders correctly suffix string input 1`] = `
   top: -4px;
 }
 
-.emotion-24::-webkit-slider-thumb:hover,
-.emotion-24::-webkit-slider-thumb:active,
-.emotion-24::-webkit-slider-thumb:focus {
+.emotion-25::-webkit-slider-thumb:hover,
+.emotion-25::-webkit-slider-thumb:active,
+.emotion-25::-webkit-slider-thumb:focus {
   border: 1.5px solid #8c40ef;
 }
 
-.emotion-24::-webkit-slider-thumb:active,
-.emotion-24::-webkit-slider-thumb:focus {
+.emotion-25::-webkit-slider-thumb:active,
+.emotion-25::-webkit-slider-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
@@ -8245,22 +8337,18 @@ exports[`Single slider > renders correctly suffix string input 1`] = `
         <div
           class="emotion-4 emotion-3"
         >
-          <div
-            class="emotion-6 emotion-3"
+          <label
+            class="emotion-6 emotion-7"
+            for=":ri:"
           >
-            <label
-              class="emotion-8 emotion-9"
-              for=":rh:"
-            >
-              Label
-            </label>
-          </div>
+            Label
+          </label>
           <div
-            class="emotion-10 emotion-3"
+            class="emotion-8 emotion-9 emotion-3"
           >
             <div>
               <div
-                class="emotion-12 emotion-13"
+                class="emotion-11 emotion-12"
                 data-controls="false"
                 data-disabled="false"
                 data-error="false"
@@ -8269,16 +8357,16 @@ exports[`Single slider > renders correctly suffix string input 1`] = `
                 data-unit="true"
               >
                 <div
-                  class="emotion-14 emotion-15 emotion-16"
+                  class="emotion-13 emotion-14 emotion-15"
                 >
                   <input
                     aria-label="input"
-                    class="emotion-17 emotion-18"
+                    class="emotion-16 emotion-17"
                     data-controls="false"
                     data-has-unit="true"
                     data-size="small"
                     data-testid="slider-input"
-                    id=":rj:"
+                    id=":rk:"
                     max="100"
                     min="0"
                     placeholder=""
@@ -8287,7 +8375,7 @@ exports[`Single slider > renders correctly suffix string input 1`] = `
                     value="1"
                   />
                   <span
-                    class="emotion-19 emotion-20 emotion-9"
+                    class="emotion-18 emotion-19 emotion-7"
                   >
                     %
                   </span>
@@ -8297,14 +8385,17 @@ exports[`Single slider > renders correctly suffix string input 1`] = `
           </div>
         </div>
         <div
-          class="emotion-22 emotion-3"
+          class="emotion-21 emotion-3"
+        />
+        <div
+          class="emotion-23 emotion-3"
         >
           <input
             aria-label="Name"
-            class="emotion-24 emotion-25"
+            class="emotion-25 emotion-26"
             data-direction="column"
             data-error="false"
-            id=":rh:"
+            id=":ri:"
             max="100"
             min="0"
             name="Name"
@@ -8382,10 +8473,10 @@ exports[`Single slider > renders correctly with custom ticks 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
@@ -8396,29 +8487,6 @@ exports[`Single slider > renders correctly with custom ticks 1`] = `
 }
 
 .emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.emotion-8 {
   color: #222638;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
@@ -8428,10 +8496,9 @@ exports[`Single slider > renders correctly with custom ticks 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  text-align: left;
 }
 
-.emotion-11 {
+.emotion-9 {
   color: #3f4250;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
@@ -8446,6 +8513,29 @@ exports[`Single slider > renders correctly with custom ticks 1`] = `
   -webkit-align-self: end;
   -ms-flex-item-align: end;
   align-self: end;
+}
+
+.emotion-11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: end;
+  justify-content: end;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
 .emotion-13 {
@@ -8713,23 +8803,22 @@ exports[`Single slider > renders correctly with custom ticks 1`] = `
         <div
           class="emotion-4 emotion-3"
         >
-          <div
-            class="emotion-6 emotion-3"
+          <label
+            class="emotion-6 emotion-7"
+            for=":r2i:"
           >
-            <label
-              class="emotion-8 emotion-9"
-              for=":r2h:"
-            >
-              Label
-            </label>
-          </div>
+            Label
+          </label>
           <span
-            class="emotion-10 emotion-11 emotion-9"
+            class="emotion-8 emotion-9 emotion-7"
             data-testid="slider-value"
           >
             30%
           </span>
         </div>
+        <div
+          class="emotion-11 emotion-3"
+        />
         <div
           class="emotion-13 emotion-3"
         >
@@ -8738,7 +8827,7 @@ exports[`Single slider > renders correctly with custom ticks 1`] = `
             class="emotion-15 emotion-16"
             data-direction="column"
             data-error="false"
-            id=":r2h:"
+            id=":r2i:"
             max="1"
             min="0"
             name="Name"
@@ -8759,7 +8848,7 @@ exports[`Single slider > renders correctly with custom ticks 1`] = `
               data-value="0"
             >
               <p
-                class="emotion-21 emotion-9"
+                class="emotion-21 emotion-7"
               >
                 1 Mb
               </p>
@@ -8771,7 +8860,7 @@ exports[`Single slider > renders correctly with custom ticks 1`] = `
               data-value="1"
             >
               <p
-                class="emotion-25 emotion-9"
+                class="emotion-25 emotion-7"
               >
                 30MB
               </p>
@@ -8845,10 +8934,10 @@ exports[`Single slider > renders correctly with default ticks without label 1`] 
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
@@ -8859,29 +8948,6 @@ exports[`Single slider > renders correctly with default ticks without label 1`] 
 }
 
 .emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.emotion-8 {
   color: #222638;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
@@ -8891,10 +8957,9 @@ exports[`Single slider > renders correctly with default ticks without label 1`] 
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  text-align: left;
 }
 
-.emotion-11 {
+.emotion-9 {
   color: #3f4250;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
@@ -8909,6 +8974,29 @@ exports[`Single slider > renders correctly with default ticks without label 1`] 
   -webkit-align-self: end;
   -ms-flex-item-align: end;
   align-self: end;
+}
+
+.emotion-11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: end;
+  justify-content: end;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
 .emotion-13 {
@@ -9176,23 +9264,22 @@ exports[`Single slider > renders correctly with default ticks without label 1`] 
         <div
           class="emotion-4 emotion-3"
         >
-          <div
-            class="emotion-6 emotion-3"
+          <label
+            class="emotion-6 emotion-7"
+            for=":r2o:"
           >
-            <label
-              class="emotion-8 emotion-9"
-              for=":r2n:"
-            >
-              Label
-            </label>
-          </div>
+            Label
+          </label>
           <span
-            class="emotion-10 emotion-11 emotion-9"
+            class="emotion-8 emotion-9 emotion-7"
             data-testid="slider-value"
           >
             30%
           </span>
         </div>
+        <div
+          class="emotion-11 emotion-3"
+        />
         <div
           class="emotion-13 emotion-3"
         >
@@ -9201,7 +9288,7 @@ exports[`Single slider > renders correctly with default ticks without label 1`] 
             class="emotion-15 emotion-16"
             data-direction="column"
             data-error="false"
-            id=":r2n:"
+            id=":r2o:"
             max="1"
             min="0"
             name="Name"
@@ -9222,7 +9309,7 @@ exports[`Single slider > renders correctly with default ticks without label 1`] 
               data-value="0"
             >
               <p
-                class="emotion-21 emotion-9"
+                class="emotion-21 emotion-7"
               >
                 0
               </p>
@@ -9234,7 +9321,7 @@ exports[`Single slider > renders correctly with default ticks without label 1`] 
               data-value="1"
             >
               <p
-                class="emotion-25 emotion-9"
+                class="emotion-25 emotion-7"
               >
                 1
               </p>
@@ -9308,10 +9395,10 @@ exports[`Single slider > renders correctly with value < min 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
@@ -9322,29 +9409,6 @@ exports[`Single slider > renders correctly with value < min 1`] = `
 }
 
 .emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.emotion-8 {
   color: #222638;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
@@ -9354,10 +9418,9 @@ exports[`Single slider > renders correctly with value < min 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  text-align: left;
 }
 
-.emotion-11 {
+.emotion-9 {
   color: #3f4250;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
@@ -9372,6 +9435,29 @@ exports[`Single slider > renders correctly with value < min 1`] = `
   -webkit-align-self: end;
   -ms-flex-item-align: end;
   align-self: end;
+}
+
+.emotion-11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: end;
+  justify-content: end;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
 .emotion-13 {
@@ -9545,23 +9631,22 @@ exports[`Single slider > renders correctly with value < min 1`] = `
         <div
           class="emotion-4 emotion-3"
         >
-          <div
-            class="emotion-6 emotion-3"
+          <label
+            class="emotion-6 emotion-7"
+            for=":r15:"
           >
-            <label
-              class="emotion-8 emotion-9"
-              for=":r14:"
-            >
-              Label
-            </label>
-          </div>
+            Label
+          </label>
           <span
-            class="emotion-10 emotion-11 emotion-9"
+            class="emotion-8 emotion-9 emotion-7"
             data-testid="slider-value"
           >
             10
           </span>
         </div>
+        <div
+          class="emotion-11 emotion-3"
+        />
         <div
           class="emotion-13 emotion-3"
         >
@@ -9570,7 +9655,7 @@ exports[`Single slider > renders correctly with value < min 1`] = `
             class="emotion-15 emotion-16"
             data-direction="column"
             data-error="false"
-            id=":r14:"
+            id=":r15:"
             max="100"
             min="10"
             name="Name"
@@ -9648,10 +9733,10 @@ exports[`Single slider > renders correctly with value > max 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
@@ -9662,29 +9747,6 @@ exports[`Single slider > renders correctly with value > max 1`] = `
 }
 
 .emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.emotion-8 {
   color: #222638;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
@@ -9694,10 +9756,9 @@ exports[`Single slider > renders correctly with value > max 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  text-align: left;
 }
 
-.emotion-11 {
+.emotion-9 {
   color: #3f4250;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
@@ -9712,6 +9773,29 @@ exports[`Single slider > renders correctly with value > max 1`] = `
   -webkit-align-self: end;
   -ms-flex-item-align: end;
   align-self: end;
+}
+
+.emotion-11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: end;
+  justify-content: end;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
 .emotion-13 {
@@ -9885,23 +9969,22 @@ exports[`Single slider > renders correctly with value > max 1`] = `
         <div
           class="emotion-4 emotion-3"
         >
-          <div
-            class="emotion-6 emotion-3"
+          <label
+            class="emotion-6 emotion-7"
+            for=":r19:"
           >
-            <label
-              class="emotion-8 emotion-9"
-              for=":r18:"
-            >
-              Label
-            </label>
-          </div>
+            Label
+          </label>
           <span
-            class="emotion-10 emotion-11 emotion-9"
+            class="emotion-8 emotion-9 emotion-7"
             data-testid="slider-value"
           >
             10
           </span>
         </div>
+        <div
+          class="emotion-11 emotion-3"
+        />
         <div
           class="emotion-13 emotion-3"
         >
@@ -9910,7 +9993,7 @@ exports[`Single slider > renders correctly with value > max 1`] = `
             class="emotion-15 emotion-16"
             data-direction="column"
             data-error="false"
-            id=":r18:"
+            id=":r19:"
             max="10"
             min="0"
             name="Name"

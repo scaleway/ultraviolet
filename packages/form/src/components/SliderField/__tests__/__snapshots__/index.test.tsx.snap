@@ -52,7 +52,30 @@ exports[`SliderField > should render correctly 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-5 {
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: end;
+  justify-content: end;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-7 {
   color: #3f4250;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
@@ -69,7 +92,7 @@ exports[`SliderField > should render correctly 1`] = `
   align-self: end;
 }
 
-.emotion-7 {
+.emotion-9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -93,7 +116,7 @@ exports[`SliderField > should render correctly 1`] = `
   width: 100%;
 }
 
-.emotion-9 {
+.emotion-11 {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -111,31 +134,31 @@ exports[`SliderField > should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-9:focus::-moz-range-thumb {
+.emotion-11:focus::-moz-range-thumb {
   border: 1.5px solid #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-9:focus::-webkit-slider-thumb {
+.emotion-11:focus::-webkit-slider-thumb {
   border: 1.5px solid #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-9[data-error='true'] {
+.emotion-11[data-error='true'] {
   background-image: linear-gradient(#e51963, #e51963);
 }
 
-.emotion-9[data-direction='column'] {
+.emotion-11[data-direction='column'] {
   -webkit-align-self: baseline;
   -ms-flex-item-align: baseline;
   align-self: baseline;
 }
 
-.emotion-9[aria-disabled='true'] {
+.emotion-11[aria-disabled='true'] {
   background-image: linear-gradient(#d8c5fc, #d8c5fc);
 }
 
-.emotion-9::-moz-range-track {
+.emotion-11::-moz-range-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -146,7 +169,7 @@ exports[`SliderField > should render correctly 1`] = `
   background: transparent;
 }
 
-.emotion-9::-moz-range-thumb {
+.emotion-11::-moz-range-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -168,20 +191,20 @@ exports[`SliderField > should render correctly 1`] = `
   top: -4px;
 }
 
-.emotion-9::-moz-range-thumb:hover,
-.emotion-9::-moz-range-thumb:active,
-.emotion-9::-moz-range-thumb:focus {
+.emotion-11::-moz-range-thumb:hover,
+.emotion-11::-moz-range-thumb:active,
+.emotion-11::-moz-range-thumb:focus {
   border: 1.5px solid #8c40ef;
 }
 
-.emotion-9::-moz-range-thumb:active,
-.emotion-9::-moz-range-thumb:focus {
+.emotion-11::-moz-range-thumb:active,
+.emotion-11::-moz-range-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
 }
 
-.emotion-9::-webkit-slider-runnable-track {
+.emotion-11::-webkit-slider-runnable-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -192,7 +215,7 @@ exports[`SliderField > should render correctly 1`] = `
   background: transparent;
 }
 
-.emotion-9::-webkit-slider-thumb {
+.emotion-11::-webkit-slider-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -214,14 +237,14 @@ exports[`SliderField > should render correctly 1`] = `
   top: -4px;
 }
 
-.emotion-9::-webkit-slider-thumb:hover,
-.emotion-9::-webkit-slider-thumb:active,
-.emotion-9::-webkit-slider-thumb:focus {
+.emotion-11::-webkit-slider-thumb:hover,
+.emotion-11::-webkit-slider-thumb:active,
+.emotion-11::-webkit-slider-thumb:focus {
   border: 1.5px solid #8c40ef;
 }
 
-.emotion-9::-webkit-slider-thumb:active,
-.emotion-9::-webkit-slider-thumb:focus {
+.emotion-11::-webkit-slider-thumb:active,
+.emotion-11::-webkit-slider-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
@@ -240,18 +263,22 @@ exports[`SliderField > should render correctly 1`] = `
         <div
           class="emotion-2 emotion-3"
         >
-          <span
-            class="emotion-4 emotion-5 emotion-6"
-            data-testid="slider-value"
-          >
-            0
-          </span>
           <div
-            class="emotion-7 emotion-3"
+            class="emotion-4 emotion-3"
+          >
+            <span
+              class="emotion-6 emotion-7 emotion-8"
+              data-testid="slider-value"
+            >
+              0
+            </span>
+          </div>
+          <div
+            class="emotion-9 emotion-3"
           >
             <input
               aria-label="test"
-              class="emotion-9 emotion-10"
+              class="emotion-11 emotion-12"
               data-direction="column"
               data-error="false"
               id=":r0:"
@@ -324,7 +351,30 @@ exports[`SliderField > should render correctly disabled 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-5 {
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: end;
+  justify-content: end;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-7 {
   color: #3f4250;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
@@ -341,7 +391,7 @@ exports[`SliderField > should render correctly disabled 1`] = `
   align-self: end;
 }
 
-.emotion-7 {
+.emotion-9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -365,7 +415,7 @@ exports[`SliderField > should render correctly disabled 1`] = `
   width: 100%;
 }
 
-.emotion-9 {
+.emotion-11 {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -383,21 +433,21 @@ exports[`SliderField > should render correctly disabled 1`] = `
   outline: none;
 }
 
-.emotion-9[data-error='true'] {
+.emotion-11[data-error='true'] {
   background-image: linear-gradient(#e51963, #e51963);
 }
 
-.emotion-9[data-direction='column'] {
+.emotion-11[data-direction='column'] {
   -webkit-align-self: baseline;
   -ms-flex-item-align: baseline;
   align-self: baseline;
 }
 
-.emotion-9[aria-disabled='true'] {
+.emotion-11[aria-disabled='true'] {
   background-image: linear-gradient(#d8c5fc, #d8c5fc);
 }
 
-.emotion-9::-moz-range-track {
+.emotion-11::-moz-range-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -408,7 +458,7 @@ exports[`SliderField > should render correctly disabled 1`] = `
   background: transparent;
 }
 
-.emotion-9::-moz-range-thumb {
+.emotion-11::-moz-range-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -429,19 +479,19 @@ exports[`SliderField > should render correctly disabled 1`] = `
   top: -4px;
 }
 
-.emotion-9::-moz-range-thumb:hover,
-.emotion-9::-moz-range-thumb:active,
-.emotion-9::-moz-range-thumb:focus {
+.emotion-11::-moz-range-thumb:hover,
+.emotion-11::-moz-range-thumb:active,
+.emotion-11::-moz-range-thumb:focus {
   border: null;
 }
 
-.emotion-9::-moz-range-thumb:active,
-.emotion-9::-moz-range-thumb:focus {
+.emotion-11::-moz-range-thumb:active,
+.emotion-11::-moz-range-thumb:focus {
   box-shadow: null;
   cursor: not-allowed;
 }
 
-.emotion-9::-webkit-slider-runnable-track {
+.emotion-11::-webkit-slider-runnable-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -452,7 +502,7 @@ exports[`SliderField > should render correctly disabled 1`] = `
   background: transparent;
 }
 
-.emotion-9::-webkit-slider-thumb {
+.emotion-11::-webkit-slider-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -473,14 +523,14 @@ exports[`SliderField > should render correctly disabled 1`] = `
   top: -4px;
 }
 
-.emotion-9::-webkit-slider-thumb:hover,
-.emotion-9::-webkit-slider-thumb:active,
-.emotion-9::-webkit-slider-thumb:focus {
+.emotion-11::-webkit-slider-thumb:hover,
+.emotion-11::-webkit-slider-thumb:active,
+.emotion-11::-webkit-slider-thumb:focus {
   border: null;
 }
 
-.emotion-9::-webkit-slider-thumb:active,
-.emotion-9::-webkit-slider-thumb:focus {
+.emotion-11::-webkit-slider-thumb:active,
+.emotion-11::-webkit-slider-thumb:focus {
   box-shadow: null;
   cursor: not-allowed;
 }
@@ -499,19 +549,23 @@ exports[`SliderField > should render correctly disabled 1`] = `
         <div
           class="emotion-2 emotion-3"
         >
-          <span
-            class="emotion-4 emotion-5 emotion-6"
-            data-testid="slider-value"
-          >
-            0
-          </span>
           <div
-            class="emotion-7 emotion-3"
+            class="emotion-4 emotion-3"
+          >
+            <span
+              class="emotion-6 emotion-7 emotion-8"
+              data-testid="slider-value"
+            >
+              0
+            </span>
+          </div>
+          <div
+            class="emotion-9 emotion-3"
           >
             <input
               aria-disabled="true"
               aria-label="Slider Input"
-              class="emotion-9 emotion-10"
+              class="emotion-11 emotion-12"
               data-direction="column"
               data-error="false"
               disabled=""
@@ -585,7 +639,30 @@ exports[`SliderField > should render correctly with possible values 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-5 {
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: end;
+  justify-content: end;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-7 {
   color: #3f4250;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
@@ -602,7 +679,7 @@ exports[`SliderField > should render correctly with possible values 1`] = `
   align-self: end;
 }
 
-.emotion-7 {
+.emotion-9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -626,7 +703,7 @@ exports[`SliderField > should render correctly with possible values 1`] = `
   width: 100%;
 }
 
-.emotion-9 {
+.emotion-11 {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -644,31 +721,31 @@ exports[`SliderField > should render correctly with possible values 1`] = `
   outline: none;
 }
 
-.emotion-9:focus::-moz-range-thumb {
+.emotion-11:focus::-moz-range-thumb {
   border: 1.5px solid #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-9:focus::-webkit-slider-thumb {
+.emotion-11:focus::-webkit-slider-thumb {
   border: 1.5px solid #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-9[data-error='true'] {
+.emotion-11[data-error='true'] {
   background-image: linear-gradient(#e51963, #e51963);
 }
 
-.emotion-9[data-direction='column'] {
+.emotion-11[data-direction='column'] {
   -webkit-align-self: baseline;
   -ms-flex-item-align: baseline;
   align-self: baseline;
 }
 
-.emotion-9[aria-disabled='true'] {
+.emotion-11[aria-disabled='true'] {
   background-image: linear-gradient(#d8c5fc, #d8c5fc);
 }
 
-.emotion-9::-moz-range-track {
+.emotion-11::-moz-range-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -679,7 +756,7 @@ exports[`SliderField > should render correctly with possible values 1`] = `
   background: transparent;
 }
 
-.emotion-9::-moz-range-thumb {
+.emotion-11::-moz-range-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -701,20 +778,20 @@ exports[`SliderField > should render correctly with possible values 1`] = `
   top: -4px;
 }
 
-.emotion-9::-moz-range-thumb:hover,
-.emotion-9::-moz-range-thumb:active,
-.emotion-9::-moz-range-thumb:focus {
+.emotion-11::-moz-range-thumb:hover,
+.emotion-11::-moz-range-thumb:active,
+.emotion-11::-moz-range-thumb:focus {
   border: 1.5px solid #8c40ef;
 }
 
-.emotion-9::-moz-range-thumb:active,
-.emotion-9::-moz-range-thumb:focus {
+.emotion-11::-moz-range-thumb:active,
+.emotion-11::-moz-range-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
 }
 
-.emotion-9::-webkit-slider-runnable-track {
+.emotion-11::-webkit-slider-runnable-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -725,7 +802,7 @@ exports[`SliderField > should render correctly with possible values 1`] = `
   background: transparent;
 }
 
-.emotion-9::-webkit-slider-thumb {
+.emotion-11::-webkit-slider-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -747,20 +824,20 @@ exports[`SliderField > should render correctly with possible values 1`] = `
   top: -4px;
 }
 
-.emotion-9::-webkit-slider-thumb:hover,
-.emotion-9::-webkit-slider-thumb:active,
-.emotion-9::-webkit-slider-thumb:focus {
+.emotion-11::-webkit-slider-thumb:hover,
+.emotion-11::-webkit-slider-thumb:active,
+.emotion-11::-webkit-slider-thumb:focus {
   border: 1.5px solid #8c40ef;
 }
 
-.emotion-9::-webkit-slider-thumb:active,
-.emotion-9::-webkit-slider-thumb:focus {
+.emotion-11::-webkit-slider-thumb:active,
+.emotion-11::-webkit-slider-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
 }
 
-.emotion-11 {
+.emotion-13 {
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -770,11 +847,11 @@ exports[`SliderField > should render correctly with possible values 1`] = `
   height: 1rem;
 }
 
-.emotion-11[data-double='true'] {
+.emotion-13[data-double='true'] {
   margin-top: 2.5rem;
 }
 
-.emotion-13 {
+.emotion-15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -788,21 +865,21 @@ exports[`SliderField > should render correctly with possible values 1`] = `
   transform: translateX(-50%);
 }
 
-.emotion-13[data-element-left='true'] {
+.emotion-15[data-element-left='true'] {
   -webkit-transform: none;
   -moz-transform: none;
   -ms-transform: none;
   transform: none;
 }
 
-.emotion-13[data-element-right='true'] {
+.emotion-15[data-element-right='true'] {
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
   -ms-transform: translateX(-100%);
   transform: translateX(-100%);
 }
 
-.emotion-15 {
+.emotion-17 {
   color: #3f4250;
   font-size: 0.75rem;
   font-family: Inter,Asap,sans-serif;
@@ -814,7 +891,7 @@ exports[`SliderField > should render correctly with possible values 1`] = `
   text-decoration: none;
 }
 
-.emotion-17 {
+.emotion-19 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -828,21 +905,21 @@ exports[`SliderField > should render correctly with possible values 1`] = `
   transform: translateX(-50%);
 }
 
-.emotion-17[data-element-left='true'] {
+.emotion-19[data-element-left='true'] {
   -webkit-transform: none;
   -moz-transform: none;
   -ms-transform: none;
   transform: none;
 }
 
-.emotion-17[data-element-right='true'] {
+.emotion-19[data-element-right='true'] {
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
   -ms-transform: translateX(-100%);
   transform: translateX(-100%);
 }
 
-.emotion-21 {
+.emotion-23 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -856,21 +933,21 @@ exports[`SliderField > should render correctly with possible values 1`] = `
   transform: translateX(-50%);
 }
 
-.emotion-21[data-element-left='true'] {
+.emotion-23[data-element-left='true'] {
   -webkit-transform: none;
   -moz-transform: none;
   -ms-transform: none;
   transform: none;
 }
 
-.emotion-21[data-element-right='true'] {
+.emotion-23[data-element-right='true'] {
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
   -ms-transform: translateX(-100%);
   transform: translateX(-100%);
 }
 
-.emotion-25 {
+.emotion-27 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -884,21 +961,21 @@ exports[`SliderField > should render correctly with possible values 1`] = `
   transform: translateX(-50%);
 }
 
-.emotion-25[data-element-left='true'] {
+.emotion-27[data-element-left='true'] {
   -webkit-transform: none;
   -moz-transform: none;
   -ms-transform: none;
   transform: none;
 }
 
-.emotion-25[data-element-right='true'] {
+.emotion-27[data-element-right='true'] {
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
   -ms-transform: translateX(-100%);
   transform: translateX(-100%);
 }
 
-.emotion-29 {
+.emotion-31 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -912,21 +989,21 @@ exports[`SliderField > should render correctly with possible values 1`] = `
   transform: translateX(-50%);
 }
 
-.emotion-29[data-element-left='true'] {
+.emotion-31[data-element-left='true'] {
   -webkit-transform: none;
   -moz-transform: none;
   -ms-transform: none;
   transform: none;
 }
 
-.emotion-29[data-element-right='true'] {
+.emotion-31[data-element-right='true'] {
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
   -ms-transform: translateX(-100%);
   transform: translateX(-100%);
 }
 
-.emotion-33 {
+.emotion-35 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -940,21 +1017,21 @@ exports[`SliderField > should render correctly with possible values 1`] = `
   transform: translateX(-50%);
 }
 
-.emotion-33[data-element-left='true'] {
+.emotion-35[data-element-left='true'] {
   -webkit-transform: none;
   -moz-transform: none;
   -ms-transform: none;
   transform: none;
 }
 
-.emotion-33[data-element-right='true'] {
+.emotion-35[data-element-right='true'] {
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
   -ms-transform: translateX(-100%);
   transform: translateX(-100%);
 }
 
-.emotion-37 {
+.emotion-39 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -968,14 +1045,14 @@ exports[`SliderField > should render correctly with possible values 1`] = `
   transform: translateX(-50%);
 }
 
-.emotion-37[data-element-left='true'] {
+.emotion-39[data-element-left='true'] {
   -webkit-transform: none;
   -moz-transform: none;
   -ms-transform: none;
   transform: none;
 }
 
-.emotion-37[data-element-right='true'] {
+.emotion-39[data-element-right='true'] {
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
   -ms-transform: translateX(-100%);
@@ -995,18 +1072,22 @@ exports[`SliderField > should render correctly with possible values 1`] = `
         <div
           class="emotion-2 emotion-3"
         >
-          <span
-            class="emotion-4 emotion-5 emotion-6"
-            data-testid="slider-value"
-          >
-            1
-          </span>
           <div
-            class="emotion-7 emotion-3"
+            class="emotion-4 emotion-3"
+          >
+            <span
+              class="emotion-6 emotion-7 emotion-8"
+              data-testid="slider-value"
+            >
+              1
+            </span>
+          </div>
+          <div
+            class="emotion-9 emotion-3"
           >
             <input
               aria-label="test"
-              class="emotion-9 emotion-10"
+              class="emotion-11 emotion-12"
               data-direction="column"
               data-error="false"
               id=":r3:"
@@ -1020,89 +1101,89 @@ exports[`SliderField > should render correctly with possible values 1`] = `
               value="0"
             />
             <datalist
-              class="emotion-11 emotion-12"
+              class="emotion-13 emotion-14"
               data-double="false"
             >
               <span
-                class="emotion-13 emotion-14"
+                class="emotion-15 emotion-16"
                 data-element-left="true"
                 data-element-right="false"
                 data-value="0"
               >
                 <p
-                  class="emotion-15 emotion-6"
+                  class="emotion-17 emotion-8"
                 >
                   1Mb
                 </p>
               </span>
               <span
-                class="emotion-17 emotion-14"
+                class="emotion-19 emotion-16"
                 data-element-left="false"
                 data-element-right="false"
                 data-value="1"
               >
                 <p
-                  class="emotion-15 emotion-6"
+                  class="emotion-17 emotion-8"
                 >
                   3Mb
                 </p>
               </span>
               <span
-                class="emotion-21 emotion-14"
+                class="emotion-23 emotion-16"
                 data-element-left="false"
                 data-element-right="false"
                 data-value="2"
               >
                 <p
-                  class="emotion-15 emotion-6"
+                  class="emotion-17 emotion-8"
                 >
                   5Mb
                 </p>
               </span>
               <span
-                class="emotion-25 emotion-14"
+                class="emotion-27 emotion-16"
                 data-element-left="false"
                 data-element-right="false"
                 data-value="3"
               >
                 <p
-                  class="emotion-15 emotion-6"
+                  class="emotion-17 emotion-8"
                 >
                   10Mb
                 </p>
               </span>
               <span
-                class="emotion-29 emotion-14"
+                class="emotion-31 emotion-16"
                 data-element-left="false"
                 data-element-right="false"
                 data-value="4"
               >
                 <p
-                  class="emotion-15 emotion-6"
+                  class="emotion-17 emotion-8"
                 >
                   50Mb
                 </p>
               </span>
               <span
-                class="emotion-33 emotion-14"
+                class="emotion-35 emotion-16"
                 data-element-left="false"
                 data-element-right="false"
                 data-value="5"
               >
                 <p
-                  class="emotion-15 emotion-6"
+                  class="emotion-17 emotion-8"
                 >
                   100Mb
                 </p>
               </span>
               <span
-                class="emotion-37 emotion-14"
+                class="emotion-39 emotion-16"
                 data-element-left="false"
                 data-element-right="true"
                 data-value="6"
               >
                 <p
-                  class="emotion-15 emotion-6"
+                  class="emotion-17 emotion-8"
                 >
                   500Mb
                 </p>
@@ -1994,10 +2075,10 @@ exports[`SliderField > should trigger events correctly 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
@@ -2016,10 +2097,10 @@ exports[`SliderField > should trigger events correctly 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
   -webkit-box-pack: normal;
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
@@ -2040,24 +2121,21 @@ exports[`SliderField > should trigger events correctly 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  text-align: left;
 }
 
 .emotion-10 {
-  vertical-align: middle;
-  fill: #b3144d;
-  height: 8px;
-  width: 8px;
-  min-width: 8px;
-  min-height: 8px;
+  color: #b3144d;
+  font-size: 1rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
-.emotion-10 .fillStroke {
-  stroke: #b3144d;
-  fill: none;
-}
-
-.emotion-12 {
+.emotion-13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2078,9 +2156,10 @@ exports[`SliderField > should trigger events correctly 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  min-width: 2.5rem;
 }
 
-.emotion-14 {
+.emotion-15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2099,52 +2178,52 @@ exports[`SliderField > should trigger events correctly 1`] = `
   border-radius: 0.25rem;
 }
 
-.emotion-14:focus-within {
+.emotion-15:focus-within {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-14[data-success='true'] {
+.emotion-15[data-success='true'] {
   border-color: #22674e;
 }
 
-.emotion-14[data-error='true'] {
+.emotion-15[data-error='true'] {
   border-color: #b3144d;
 }
 
-.emotion-14:hover {
+.emotion-15:hover {
   border-color: #792dd4;
 }
 
-.emotion-14[data-readonly='true'] {
+.emotion-15[data-readonly='true'] {
   border-color: #d9dadd;
   background: #f9f9fa;
   cursor: not-allowed;
 }
 
-.emotion-14[data-disabled='true'] {
+.emotion-15[data-disabled='true'] {
   border-color: #e9eaeb;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.emotion-14[data-controls='false']>.emotion-16 {
+.emotion-15[data-controls='false']>.emotion-17 {
   border-width: 0;
 }
 
-.emotion-14[data-size='small'] {
+.emotion-15[data-size='small'] {
   height: 2rem;
 }
 
-.emotion-14[data-size='medium'] {
+.emotion-15[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-14[data-size='large'] {
+.emotion-15[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-17 {
+.emotion-18 {
   display: grid;
   grid-template-columns: 1fr auto;
   -webkit-align-items: center;
@@ -2161,7 +2240,7 @@ exports[`SliderField > should trigger events correctly 1`] = `
   width: 100%;
 }
 
-.emotion-19 {
+.emotion-20 {
   outline: none;
   border: none;
   padding: 0;
@@ -2176,18 +2255,18 @@ exports[`SliderField > should trigger events correctly 1`] = `
   background: none;
 }
 
-.emotion-19[data-has-unit='true'] {
+.emotion-20[data-has-unit='true'] {
   text-align: left;
   padding: 0.5rem 0 0.5rem 0.5rem;
 }
 
-.emotion-19::-webkit-outer-spin-button,
-.emotion-19::-webkit-inner-spin-button {
+.emotion-20::-webkit-outer-spin-button,
+.emotion-20::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.emotion-19 {
+.emotion-20 {
   -moz-appearance: textfield;
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
@@ -2195,15 +2274,15 @@ exports[`SliderField > should trigger events correctly 1`] = `
   appearance: textfield;
 }
 
-.emotion-19[data-size='small'] {
+.emotion-20[data-size='small'] {
   height: 2rem;
 }
 
-.emotion-19[data-size='medium'] {
+.emotion-20[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-19[data-size='large'] {
+.emotion-20[data-size='large'] {
   height: 3rem;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
@@ -2211,34 +2290,34 @@ exports[`SliderField > should trigger events correctly 1`] = `
   line-height: 1.5rem;
 }
 
-.emotion-19:-moz-read-only {
+.emotion-20:-moz-read-only {
   color: #3f4250;
   background: #f9f9fa;
   border-block: 1px solid #d9dadd;
 }
 
-.emotion-19:read-only {
+.emotion-20:read-only {
   color: #3f4250;
   background: #f9f9fa;
   border-block: 1px solid #d9dadd;
 }
 
-.emotion-19:-moz-read-only~.e1b9qdjy2 {
+.emotion-20:-moz-read-only~.e1b9qdjy2 {
   background: #f9f9fa;
 }
 
-.emotion-19:read-only~.e1b9qdjy2 {
+.emotion-20:read-only~.e1b9qdjy2 {
   background: #f9f9fa;
 }
 
-.emotion-19:disabled {
+.emotion-20:disabled {
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
   border-block: 1px solid #e9eaeb;
 }
 
-.emotion-19:disabled~.e1b9qdjy2 {
+.emotion-20:disabled~.e1b9qdjy2 {
   background: #f3f3f4;
   cursor: not-allowed;
   -webkit-user-select: none;
@@ -2247,16 +2326,39 @@ exports[`SliderField > should trigger events correctly 1`] = `
   user-select: none;
 }
 
-.emotion-19:placeholder-shown~.e1b9qdjy2 {
+.emotion-20:placeholder-shown~.e1b9qdjy2 {
   color: #727683;
   font-size: 1rem;
 }
 
-.emotion-19[data-controls='false'] {
+.emotion-20[data-controls='false'] {
   text-align: left;
 }
 
-.emotion-21 {
+.emotion-22 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: end;
+  justify-content: end;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-24 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2280,7 +2382,7 @@ exports[`SliderField > should trigger events correctly 1`] = `
   width: 100%;
 }
 
-.emotion-23 {
+.emotion-26 {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -2298,31 +2400,31 @@ exports[`SliderField > should trigger events correctly 1`] = `
   outline: none;
 }
 
-.emotion-23:focus::-moz-range-thumb {
+.emotion-26:focus::-moz-range-thumb {
   border: 1.5px solid #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-23:focus::-webkit-slider-thumb {
+.emotion-26:focus::-webkit-slider-thumb {
   border: 1.5px solid #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-23[data-error='true'] {
+.emotion-26[data-error='true'] {
   background-image: linear-gradient(#e51963, #e51963);
 }
 
-.emotion-23[data-direction='column'] {
+.emotion-26[data-direction='column'] {
   -webkit-align-self: baseline;
   -ms-flex-item-align: baseline;
   align-self: baseline;
 }
 
-.emotion-23[aria-disabled='true'] {
+.emotion-26[aria-disabled='true'] {
   background-image: linear-gradient(#d8c5fc, #d8c5fc);
 }
 
-.emotion-23::-moz-range-track {
+.emotion-26::-moz-range-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -2333,7 +2435,7 @@ exports[`SliderField > should trigger events correctly 1`] = `
   background: transparent;
 }
 
-.emotion-23::-moz-range-thumb {
+.emotion-26::-moz-range-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -2355,20 +2457,20 @@ exports[`SliderField > should trigger events correctly 1`] = `
   top: -4px;
 }
 
-.emotion-23::-moz-range-thumb:hover,
-.emotion-23::-moz-range-thumb:active,
-.emotion-23::-moz-range-thumb:focus {
+.emotion-26::-moz-range-thumb:hover,
+.emotion-26::-moz-range-thumb:active,
+.emotion-26::-moz-range-thumb:focus {
   border: 1.5px solid #8c40ef;
 }
 
-.emotion-23::-moz-range-thumb:active,
-.emotion-23::-moz-range-thumb:focus {
+.emotion-26::-moz-range-thumb:active,
+.emotion-26::-moz-range-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
 }
 
-.emotion-23::-webkit-slider-runnable-track {
+.emotion-26::-webkit-slider-runnable-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -2379,7 +2481,7 @@ exports[`SliderField > should trigger events correctly 1`] = `
   background: transparent;
 }
 
-.emotion-23::-webkit-slider-thumb {
+.emotion-26::-webkit-slider-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -2401,14 +2503,14 @@ exports[`SliderField > should trigger events correctly 1`] = `
   top: -4px;
 }
 
-.emotion-23::-webkit-slider-thumb:hover,
-.emotion-23::-webkit-slider-thumb:active,
-.emotion-23::-webkit-slider-thumb:focus {
+.emotion-26::-webkit-slider-thumb:hover,
+.emotion-26::-webkit-slider-thumb:active,
+.emotion-26::-webkit-slider-thumb:focus {
   border: 1.5px solid #8c40ef;
 }
 
-.emotion-23::-webkit-slider-thumb:active,
-.emotion-23::-webkit-slider-thumb:focus {
+.emotion-26::-webkit-slider-thumb:active,
+.emotion-26::-webkit-slider-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
@@ -2439,21 +2541,18 @@ exports[`SliderField > should trigger events correctly 1`] = `
               >
                 Test
               </label>
-              <svg
-                class="emotion-10 emotion-11"
-                viewBox="0 0 20 20"
+              <span
+                class="emotion-10 emotion-9"
               >
-                <path
-                  d="M10 2h4l-.79 7.91 6.45-4.64 2 3.46L14.42 12l7.24 3.27-2 3.46-6.45-4.64L14 22h-4l.79-7.91-6.45 4.64-2-3.46L9.58 12 2.34 8.73l2-3.46 6.45 4.64z"
-                />
-              </svg>
+                *
+              </span>
             </div>
             <div
-              class="emotion-12 emotion-3"
+              class="emotion-12 emotion-13 emotion-3"
             >
               <div>
                 <div
-                  class="emotion-14 emotion-15"
+                  class="emotion-15 emotion-16"
                   data-controls="false"
                   data-disabled="false"
                   data-error="false"
@@ -2462,16 +2561,16 @@ exports[`SliderField > should trigger events correctly 1`] = `
                   data-unit="false"
                 >
                   <div
-                    class="emotion-16 emotion-17 emotion-18"
+                    class="emotion-17 emotion-18 emotion-19"
                   >
                     <input
                       aria-label="input"
-                      class="emotion-19 emotion-20"
+                      class="emotion-20 emotion-21"
                       data-controls="false"
                       data-has-unit="false"
                       data-size="small"
                       data-testid="slider-input"
-                      id=":rv:"
+                      id=":r10:"
                       max="10"
                       min="0"
                       placeholder=""
@@ -2485,11 +2584,14 @@ exports[`SliderField > should trigger events correctly 1`] = `
             </div>
           </div>
           <div
-            class="emotion-21 emotion-3"
+            class="emotion-22 emotion-3"
+          />
+          <div
+            class="emotion-24 emotion-3"
           >
             <input
               aria-label="test"
-              class="emotion-23 emotion-24"
+              class="emotion-26 emotion-27"
               data-direction="column"
               data-error="false"
               id=":rt:"

@@ -116,6 +116,7 @@ type TextProps = {
   dir?: 'ltr' | 'rtl' | 'auto'
   htmlFor?: string
   'data-testid'?: string
+  'aria-hidden'?: boolean
   strikeThrough?: boolean
   whiteSpace?: WhiteSpaceProps
 }
@@ -171,6 +172,7 @@ export const Text = ({
   whiteSpace,
   htmlFor,
   'data-testid': dataTestId,
+  'aria-hidden': ariaHidden,
 }: TextProps) => {
   const computedSentiment = sentiment ?? color
   const elementRef = useRef(null)
@@ -198,6 +200,7 @@ export const Text = ({
         htmlFor={htmlFor}
         data-testid={dataTestId}
         whiteSpace={whiteSpace}
+        aria-hidden={ariaHidden}
       >
         {children}
       </StyledText>

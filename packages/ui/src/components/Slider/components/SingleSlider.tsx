@@ -1,13 +1,13 @@
 import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import { useCallback, useEffect, useId, useMemo, useRef, useState } from 'react'
+import { Label } from '../../Label'
 import { NumberInputV2 } from '../../NumberInputV2'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
 import { THUMB_SIZE } from '../constant'
 import { StyledTooltip, thumbStyle, trackStyle } from '../styles'
 import type { SingleSliderProps } from '../types'
-import { Label } from './Label'
 import { Options } from './Options'
 
 const StyledTextValue = styled(Text, {
@@ -70,6 +70,10 @@ const SliderElement = styled('input', {
     ::-webkit-slider-thumb {
         ${({ theme, themeSlider, disabled, left }) => thumbStyle(theme, themeSlider, disabled, left, false)}
     }
+`
+
+const StyledNumberInputV2 = styled(NumberInputV2)`
+  min-width: ${({ theme }) => theme.space['5']};
 `
 
 export const SingleSlider = ({
@@ -166,7 +170,7 @@ export const SingleSlider = ({
 
   const styledValue = (valueNumber: string | number | null) =>
     input && !options ? (
-      <NumberInputV2
+      <StyledNumberInputV2
         value={
           typeof valueNumber === 'string'
             ? Number.parseFloat(valueNumber)
@@ -227,19 +231,21 @@ export const SingleSlider = ({
   return (
     <Stack gap={1} direction={direction} justifyContent="left">
       {label ? (
-        <Stack justifyContent="space-between" direction="row">
-          <Label
-            direction={direction}
-            input={input}
-            finalId={finalId}
-            label={label}
-            required={required}
-          />
+        <Stack
+          justifyContent="space-between"
+          direction="row"
+          alignItems="center"
+        >
+          <Label htmlFor={finalId} required={required}>
+            {label}
+          </Label>
           {direction === 'column' ? styledValue(valueToShow) : null}
         </Stack>
       ) : null}
 
-      {direction === 'column' && !label ? styledValue(valueToShow) : null}
+      <Stack direction="row" justifyContent="end">
+        {direction === 'column' && !label ? styledValue(valueToShow) : null}
+      </Stack>
       <Stack direction="column" width="100%" gap={1} justifyContent="center">
         <StyledTooltip
           text={tooltipText}

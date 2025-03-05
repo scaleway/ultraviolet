@@ -1,13 +1,13 @@
 import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import { useCallback, useEffect, useId, useMemo, useRef, useState } from 'react'
+import { Label } from '../../Label'
 import { NumberInputV2 } from '../../NumberInputV2'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
 import { THUMB_SIZE } from '../constant'
 import { StyledTooltip, thumbStyle, trackStyle } from '../styles'
 import type { DoubleSliderProps } from '../types'
-import { Label } from './Label'
 import { Options } from './Options'
 
 const StyledTextValue = styled(Text, {
@@ -57,7 +57,7 @@ const SliderElement = styled('input', {
     ${({ theme, themeSlider, disabled, left }) => thumbStyle(theme, themeSlider, disabled, left, true)}
     ${({ hasTooltip }) =>
       hasTooltip &&
-      `transform: translate(0, -10px); 
+      `transform: translate(0, -10px);
 `}
     }
 
@@ -352,13 +352,9 @@ export const DoubleSlider = ({
     <Stack gap={1} direction="column" justifyContent="left">
       {label ? (
         <Stack justifyContent="space-between" direction="row">
-          <Label
-            direction={direction}
-            input={input}
-            finalId={finalId}
-            label={label}
-            required={required}
-          />
+          <Label htmlFor={finalId} required={required}>
+            {label}
+          </Label>
         </Stack>
       ) : null}
       <Stack direction={direction} gap={1} width="100%">
