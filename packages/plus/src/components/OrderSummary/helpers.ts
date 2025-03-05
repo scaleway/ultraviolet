@@ -18,6 +18,8 @@ export const formatNumber = (
 
 // time unit = hours, days, months
 // timeAmount = number of hours / days / months
+// discount < 1: computed in % (price = price*discount)
+// discount >= 1: computed in absolute value (price = price - discount)
 export const calculatePrice = (
   price: number,
   amount: number,
@@ -28,10 +30,14 @@ export const calculatePrice = (
   fixedPrice = false,
 ) => {
   const nonNanTimeAmount = Number.isNaN(timeAmount) ? 1 : timeAmount
-  const value =
-    (price - price * discount) *
+  const valueBeforeDiscount =
+    price *
     (fixedPrice ? 1 : nonNanTimeAmount * multiplier[`${timeUnit}`]) *
     Math.max(amount - amountFree, 0)
 
-  return value
+  const finalValue =
+    valueBeforeDiscount * (1 - (discount < 1 ? discount : 0)) -
+    (discount >= 1 ? Math.abs(discount) : 0)
+
+  return Math.max(finalValue, 0)
 }

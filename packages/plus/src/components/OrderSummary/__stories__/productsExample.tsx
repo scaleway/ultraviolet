@@ -18,7 +18,7 @@ export const categoryDefault = {
 export const categoryAZ = {
   category: 'Availability Zone',
   subCategories: [{ title: 'PARIS 1', price: 5 }],
-  discount: 50,
+  discount: 0.5,
 }
 
 export const categoryM2 = {
