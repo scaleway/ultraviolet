@@ -1586,8 +1586,8 @@ exports[`Single slider > renders correctly 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-6 {
-  color: #222638;
+.emotion-7 {
+  color: #3f4250;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -1596,9 +1596,10 @@ exports[`Single slider > renders correctly 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  cursor: pointer;
 }
 
-.emotion-9 {
+.emotion-10 {
   color: #3f4250;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
@@ -1615,7 +1616,7 @@ exports[`Single slider > renders correctly 1`] = `
   align-self: end;
 }
 
-.emotion-11 {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1638,7 +1639,7 @@ exports[`Single slider > renders correctly 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-13 {
+.emotion-14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1662,7 +1663,7 @@ exports[`Single slider > renders correctly 1`] = `
   width: 100%;
 }
 
-.emotion-15 {
+.emotion-16 {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -1680,31 +1681,31 @@ exports[`Single slider > renders correctly 1`] = `
   outline: none;
 }
 
-.emotion-15:focus::-moz-range-thumb {
+.emotion-16:focus::-moz-range-thumb {
   border: 1.5px solid #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-15:focus::-webkit-slider-thumb {
+.emotion-16:focus::-webkit-slider-thumb {
   border: 1.5px solid #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-15[data-error='true'] {
+.emotion-16[data-error='true'] {
   background-image: linear-gradient(#e51963, #e51963);
 }
 
-.emotion-15[data-direction='column'] {
+.emotion-16[data-direction='column'] {
   -webkit-align-self: baseline;
   -ms-flex-item-align: baseline;
   align-self: baseline;
 }
 
-.emotion-15[aria-disabled='true'] {
+.emotion-16[aria-disabled='true'] {
   background-image: linear-gradient(#d8c5fc, #d8c5fc);
 }
 
-.emotion-15::-moz-range-track {
+.emotion-16::-moz-range-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -1715,7 +1716,7 @@ exports[`Single slider > renders correctly 1`] = `
   background: transparent;
 }
 
-.emotion-15::-moz-range-thumb {
+.emotion-16::-moz-range-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -1737,20 +1738,20 @@ exports[`Single slider > renders correctly 1`] = `
   top: -4px;
 }
 
-.emotion-15::-moz-range-thumb:hover,
-.emotion-15::-moz-range-thumb:active,
-.emotion-15::-moz-range-thumb:focus {
+.emotion-16::-moz-range-thumb:hover,
+.emotion-16::-moz-range-thumb:active,
+.emotion-16::-moz-range-thumb:focus {
   border: 1.5px solid #8c40ef;
 }
 
-.emotion-15::-moz-range-thumb:active,
-.emotion-15::-moz-range-thumb:focus {
+.emotion-16::-moz-range-thumb:active,
+.emotion-16::-moz-range-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
 }
 
-.emotion-15::-webkit-slider-runnable-track {
+.emotion-16::-webkit-slider-runnable-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -1761,7 +1762,7 @@ exports[`Single slider > renders correctly 1`] = `
   background: transparent;
 }
 
-.emotion-15::-webkit-slider-thumb {
+.emotion-16::-webkit-slider-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -1783,20 +1784,20 @@ exports[`Single slider > renders correctly 1`] = `
   top: -4px;
 }
 
-.emotion-15::-webkit-slider-thumb:hover,
-.emotion-15::-webkit-slider-thumb:active,
-.emotion-15::-webkit-slider-thumb:focus {
+.emotion-16::-webkit-slider-thumb:hover,
+.emotion-16::-webkit-slider-thumb:active,
+.emotion-16::-webkit-slider-thumb:focus {
   border: 1.5px solid #8c40ef;
 }
 
-.emotion-15::-webkit-slider-thumb:active,
-.emotion-15::-webkit-slider-thumb:focus {
+.emotion-16::-webkit-slider-thumb:active,
+.emotion-16::-webkit-slider-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
 }
 
-.emotion-17 {
+.emotion-18 {
   color: #727683;
   font-size: 0.75rem;
   font-family: Inter,Asap,sans-serif;
@@ -1822,27 +1823,27 @@ exports[`Single slider > renders correctly 1`] = `
           class="emotion-4 emotion-3"
         >
           <label
-            class="emotion-6 emotion-7"
+            class="emotion-6 emotion-7 emotion-8"
             for=":r0:"
           >
             Label
           </label>
           <span
-            class="emotion-8 emotion-9 emotion-7"
+            class="emotion-9 emotion-10 emotion-8"
             data-testid="slider-value"
           >
             1
           </span>
         </div>
         <div
-          class="emotion-11 emotion-3"
+          class="emotion-12 emotion-3"
         />
         <div
-          class="emotion-13 emotion-3"
+          class="emotion-14 emotion-3"
         >
           <input
             aria-label="Name"
-            class="emotion-15 emotion-16"
+            class="emotion-16 emotion-17"
             data-direction="column"
             data-error="false"
             id=":r0:"
@@ -1858,7 +1859,7 @@ exports[`Single slider > renders correctly 1`] = `
         </div>
       </div>
       <p
-        class="emotion-17 emotion-7"
+        class="emotion-18 emotion-8"
       >
         helper
       </p>
@@ -1941,8 +1942,8 @@ exports[`Single slider > renders correctly custom tooltip 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-6 {
-  color: #222638;
+.emotion-7 {
+  color: #3f4250;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -1951,9 +1952,10 @@ exports[`Single slider > renders correctly custom tooltip 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  cursor: pointer;
 }
 
-.emotion-9 {
+.emotion-10 {
   color: #3f4250;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
@@ -1970,7 +1972,7 @@ exports[`Single slider > renders correctly custom tooltip 1`] = `
   align-self: end;
 }
 
-.emotion-11 {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1993,7 +1995,7 @@ exports[`Single slider > renders correctly custom tooltip 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-13 {
+.emotion-14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2017,15 +2019,15 @@ exports[`Single slider > renders correctly custom tooltip 1`] = `
   width: 100%;
 }
 
-.emotion-15 {
+.emotion-16 {
   display: inherit;
 }
 
-.emotion-15[data-container-full-width="true"] {
+.emotion-16[data-container-full-width="true"] {
   width: 100%;
 }
 
-.emotion-17 {
+.emotion-18 {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -2043,31 +2045,31 @@ exports[`Single slider > renders correctly custom tooltip 1`] = `
   outline: none;
 }
 
-.emotion-17:focus::-moz-range-thumb {
+.emotion-18:focus::-moz-range-thumb {
   border: 1.5px solid #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-17:focus::-webkit-slider-thumb {
+.emotion-18:focus::-webkit-slider-thumb {
   border: 1.5px solid #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-17[data-error='true'] {
+.emotion-18[data-error='true'] {
   background-image: linear-gradient(#e51963, #e51963);
 }
 
-.emotion-17[data-direction='column'] {
+.emotion-18[data-direction='column'] {
   -webkit-align-self: baseline;
   -ms-flex-item-align: baseline;
   align-self: baseline;
 }
 
-.emotion-17[aria-disabled='true'] {
+.emotion-18[aria-disabled='true'] {
   background-image: linear-gradient(#d8c5fc, #d8c5fc);
 }
 
-.emotion-17::-moz-range-track {
+.emotion-18::-moz-range-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -2078,7 +2080,7 @@ exports[`Single slider > renders correctly custom tooltip 1`] = `
   background: transparent;
 }
 
-.emotion-17::-moz-range-thumb {
+.emotion-18::-moz-range-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -2100,20 +2102,20 @@ exports[`Single slider > renders correctly custom tooltip 1`] = `
   top: -4px;
 }
 
-.emotion-17::-moz-range-thumb:hover,
-.emotion-17::-moz-range-thumb:active,
-.emotion-17::-moz-range-thumb:focus {
+.emotion-18::-moz-range-thumb:hover,
+.emotion-18::-moz-range-thumb:active,
+.emotion-18::-moz-range-thumb:focus {
   border: 1.5px solid #8c40ef;
 }
 
-.emotion-17::-moz-range-thumb:active,
-.emotion-17::-moz-range-thumb:focus {
+.emotion-18::-moz-range-thumb:active,
+.emotion-18::-moz-range-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
 }
 
-.emotion-17::-webkit-slider-runnable-track {
+.emotion-18::-webkit-slider-runnable-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -2124,7 +2126,7 @@ exports[`Single slider > renders correctly custom tooltip 1`] = `
   background: transparent;
 }
 
-.emotion-17::-webkit-slider-thumb {
+.emotion-18::-webkit-slider-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -2146,14 +2148,14 @@ exports[`Single slider > renders correctly custom tooltip 1`] = `
   top: -4px;
 }
 
-.emotion-17::-webkit-slider-thumb:hover,
-.emotion-17::-webkit-slider-thumb:active,
-.emotion-17::-webkit-slider-thumb:focus {
+.emotion-18::-webkit-slider-thumb:hover,
+.emotion-18::-webkit-slider-thumb:active,
+.emotion-18::-webkit-slider-thumb:focus {
   border: 1.5px solid #8c40ef;
 }
 
-.emotion-17::-webkit-slider-thumb:active,
-.emotion-17::-webkit-slider-thumb:focus {
+.emotion-18::-webkit-slider-thumb:active,
+.emotion-18::-webkit-slider-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
@@ -2173,33 +2175,33 @@ exports[`Single slider > renders correctly custom tooltip 1`] = `
           class="emotion-4 emotion-3"
         >
           <label
-            class="emotion-6 emotion-7"
+            class="emotion-6 emotion-7 emotion-8"
             for=":r2a:"
           >
             Label
           </label>
           <span
-            class="emotion-8 emotion-9 emotion-7"
+            class="emotion-9 emotion-10 emotion-8"
             data-testid="slider-value"
           >
             1
           </span>
         </div>
         <div
-          class="emotion-11 emotion-3"
+          class="emotion-12 emotion-3"
         />
         <div
-          class="emotion-13 emotion-3"
+          class="emotion-14 emotion-3"
         >
           <div
             aria-controls=":r2d:"
             aria-describedby=":r2d:"
-            class="emotion-15 emotion-16"
+            class="emotion-16 emotion-17"
             tabindex="0"
           >
             <input
               aria-label="Name"
-              class="emotion-17 emotion-18"
+              class="emotion-18 emotion-19"
               data-direction="column"
               data-error="false"
               id=":r2a:"
@@ -2294,8 +2296,8 @@ exports[`Single slider > renders correctly default tooltip 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-6 {
-  color: #222638;
+.emotion-7 {
+  color: #3f4250;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -2304,9 +2306,10 @@ exports[`Single slider > renders correctly default tooltip 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  cursor: pointer;
 }
 
-.emotion-9 {
+.emotion-10 {
   color: #3f4250;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
@@ -2323,7 +2326,7 @@ exports[`Single slider > renders correctly default tooltip 1`] = `
   align-self: end;
 }
 
-.emotion-11 {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2346,7 +2349,7 @@ exports[`Single slider > renders correctly default tooltip 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-13 {
+.emotion-14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2370,15 +2373,15 @@ exports[`Single slider > renders correctly default tooltip 1`] = `
   width: 100%;
 }
 
-.emotion-15 {
+.emotion-16 {
   display: inherit;
 }
 
-.emotion-15[data-container-full-width="true"] {
+.emotion-16[data-container-full-width="true"] {
   width: 100%;
 }
 
-.emotion-17 {
+.emotion-18 {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -2396,31 +2399,31 @@ exports[`Single slider > renders correctly default tooltip 1`] = `
   outline: none;
 }
 
-.emotion-17:focus::-moz-range-thumb {
+.emotion-18:focus::-moz-range-thumb {
   border: 1.5px solid #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-17:focus::-webkit-slider-thumb {
+.emotion-18:focus::-webkit-slider-thumb {
   border: 1.5px solid #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-17[data-error='true'] {
+.emotion-18[data-error='true'] {
   background-image: linear-gradient(#e51963, #e51963);
 }
 
-.emotion-17[data-direction='column'] {
+.emotion-18[data-direction='column'] {
   -webkit-align-self: baseline;
   -ms-flex-item-align: baseline;
   align-self: baseline;
 }
 
-.emotion-17[aria-disabled='true'] {
+.emotion-18[aria-disabled='true'] {
   background-image: linear-gradient(#d8c5fc, #d8c5fc);
 }
 
-.emotion-17::-moz-range-track {
+.emotion-18::-moz-range-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -2431,7 +2434,7 @@ exports[`Single slider > renders correctly default tooltip 1`] = `
   background: transparent;
 }
 
-.emotion-17::-moz-range-thumb {
+.emotion-18::-moz-range-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -2453,20 +2456,20 @@ exports[`Single slider > renders correctly default tooltip 1`] = `
   top: -4px;
 }
 
-.emotion-17::-moz-range-thumb:hover,
-.emotion-17::-moz-range-thumb:active,
-.emotion-17::-moz-range-thumb:focus {
+.emotion-18::-moz-range-thumb:hover,
+.emotion-18::-moz-range-thumb:active,
+.emotion-18::-moz-range-thumb:focus {
   border: 1.5px solid #8c40ef;
 }
 
-.emotion-17::-moz-range-thumb:active,
-.emotion-17::-moz-range-thumb:focus {
+.emotion-18::-moz-range-thumb:active,
+.emotion-18::-moz-range-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
 }
 
-.emotion-17::-webkit-slider-runnable-track {
+.emotion-18::-webkit-slider-runnable-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -2477,7 +2480,7 @@ exports[`Single slider > renders correctly default tooltip 1`] = `
   background: transparent;
 }
 
-.emotion-17::-webkit-slider-thumb {
+.emotion-18::-webkit-slider-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -2499,14 +2502,14 @@ exports[`Single slider > renders correctly default tooltip 1`] = `
   top: -4px;
 }
 
-.emotion-17::-webkit-slider-thumb:hover,
-.emotion-17::-webkit-slider-thumb:active,
-.emotion-17::-webkit-slider-thumb:focus {
+.emotion-18::-webkit-slider-thumb:hover,
+.emotion-18::-webkit-slider-thumb:active,
+.emotion-18::-webkit-slider-thumb:focus {
   border: 1.5px solid #8c40ef;
 }
 
-.emotion-17::-webkit-slider-thumb:active,
-.emotion-17::-webkit-slider-thumb:focus {
+.emotion-18::-webkit-slider-thumb:active,
+.emotion-18::-webkit-slider-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
@@ -2526,33 +2529,33 @@ exports[`Single slider > renders correctly default tooltip 1`] = `
           class="emotion-4 emotion-3"
         >
           <label
-            class="emotion-6 emotion-7"
+            class="emotion-6 emotion-7 emotion-8"
             for=":r2e:"
           >
             Label
           </label>
           <span
-            class="emotion-8 emotion-9 emotion-7"
+            class="emotion-9 emotion-10 emotion-8"
             data-testid="slider-value"
           >
             1
           </span>
         </div>
         <div
-          class="emotion-11 emotion-3"
+          class="emotion-12 emotion-3"
         />
         <div
-          class="emotion-13 emotion-3"
+          class="emotion-14 emotion-3"
         >
           <div
             aria-controls=":r2h:"
             aria-describedby=":r2h:"
-            class="emotion-15 emotion-16"
+            class="emotion-16 emotion-17"
             tabindex="0"
           >
             <input
               aria-label="Name"
-              class="emotion-17 emotion-18"
+              class="emotion-18 emotion-19"
               data-direction="column"
               data-error="false"
               id=":r2e:"
@@ -2647,8 +2650,8 @@ exports[`Single slider > renders correctly direction row 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-6 {
-  color: #222638;
+.emotion-7 {
+  color: #3f4250;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -2657,9 +2660,10 @@ exports[`Single slider > renders correctly direction row 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  cursor: pointer;
 }
 
-.emotion-8 {
+.emotion-9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2682,7 +2686,7 @@ exports[`Single slider > renders correctly direction row 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-10 {
+.emotion-11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2706,7 +2710,7 @@ exports[`Single slider > renders correctly direction row 1`] = `
   width: 100%;
 }
 
-.emotion-12 {
+.emotion-13 {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -2724,31 +2728,31 @@ exports[`Single slider > renders correctly direction row 1`] = `
   outline: none;
 }
 
-.emotion-12:focus::-moz-range-thumb {
+.emotion-13:focus::-moz-range-thumb {
   border: 1.5px solid #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-12:focus::-webkit-slider-thumb {
+.emotion-13:focus::-webkit-slider-thumb {
   border: 1.5px solid #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-12[data-error='true'] {
+.emotion-13[data-error='true'] {
   background-image: linear-gradient(#e51963, #e51963);
 }
 
-.emotion-12[data-direction='column'] {
+.emotion-13[data-direction='column'] {
   -webkit-align-self: baseline;
   -ms-flex-item-align: baseline;
   align-self: baseline;
 }
 
-.emotion-12[aria-disabled='true'] {
+.emotion-13[aria-disabled='true'] {
   background-image: linear-gradient(#d8c5fc, #d8c5fc);
 }
 
-.emotion-12::-moz-range-track {
+.emotion-13::-moz-range-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -2759,7 +2763,7 @@ exports[`Single slider > renders correctly direction row 1`] = `
   background: transparent;
 }
 
-.emotion-12::-moz-range-thumb {
+.emotion-13::-moz-range-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -2781,20 +2785,20 @@ exports[`Single slider > renders correctly direction row 1`] = `
   top: -4px;
 }
 
-.emotion-12::-moz-range-thumb:hover,
-.emotion-12::-moz-range-thumb:active,
-.emotion-12::-moz-range-thumb:focus {
+.emotion-13::-moz-range-thumb:hover,
+.emotion-13::-moz-range-thumb:active,
+.emotion-13::-moz-range-thumb:focus {
   border: 1.5px solid #8c40ef;
 }
 
-.emotion-12::-moz-range-thumb:active,
-.emotion-12::-moz-range-thumb:focus {
+.emotion-13::-moz-range-thumb:active,
+.emotion-13::-moz-range-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
 }
 
-.emotion-12::-webkit-slider-runnable-track {
+.emotion-13::-webkit-slider-runnable-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -2805,7 +2809,7 @@ exports[`Single slider > renders correctly direction row 1`] = `
   background: transparent;
 }
 
-.emotion-12::-webkit-slider-thumb {
+.emotion-13::-webkit-slider-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -2827,20 +2831,20 @@ exports[`Single slider > renders correctly direction row 1`] = `
   top: -4px;
 }
 
-.emotion-12::-webkit-slider-thumb:hover,
-.emotion-12::-webkit-slider-thumb:active,
-.emotion-12::-webkit-slider-thumb:focus {
+.emotion-13::-webkit-slider-thumb:hover,
+.emotion-13::-webkit-slider-thumb:active,
+.emotion-13::-webkit-slider-thumb:focus {
   border: 1.5px solid #8c40ef;
 }
 
-.emotion-12::-webkit-slider-thumb:active,
-.emotion-12::-webkit-slider-thumb:focus {
+.emotion-13::-webkit-slider-thumb:active,
+.emotion-13::-webkit-slider-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
 }
 
-.emotion-15 {
+.emotion-16 {
   color: #3f4250;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
@@ -2871,21 +2875,21 @@ exports[`Single slider > renders correctly direction row 1`] = `
           class="emotion-4 emotion-3"
         >
           <label
-            class="emotion-6 emotion-7"
+            class="emotion-6 emotion-7 emotion-8"
             for=":rs:"
           >
             Label
           </label>
         </div>
         <div
-          class="emotion-8 emotion-3"
+          class="emotion-9 emotion-3"
         />
         <div
-          class="emotion-10 emotion-3"
+          class="emotion-11 emotion-3"
         >
           <input
             aria-label="Name"
-            class="emotion-12 emotion-13"
+            class="emotion-13 emotion-14"
             data-direction="row"
             data-error="false"
             id=":rs:"
@@ -2900,7 +2904,7 @@ exports[`Single slider > renders correctly direction row 1`] = `
           />
         </div>
         <span
-          class="emotion-14 emotion-15 emotion-7"
+          class="emotion-15 emotion-16 emotion-8"
           data-testid="slider-value"
         >
           1
@@ -2985,8 +2989,8 @@ exports[`Single slider > renders correctly direction row with input 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-6 {
-  color: #222638;
+.emotion-7 {
+  color: #3f4250;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -2995,9 +2999,10 @@ exports[`Single slider > renders correctly direction row with input 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  cursor: pointer;
 }
 
-.emotion-8 {
+.emotion-9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3020,7 +3025,7 @@ exports[`Single slider > renders correctly direction row with input 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-10 {
+.emotion-11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3044,7 +3049,7 @@ exports[`Single slider > renders correctly direction row with input 1`] = `
   width: 100%;
 }
 
-.emotion-12 {
+.emotion-13 {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -3062,31 +3067,31 @@ exports[`Single slider > renders correctly direction row with input 1`] = `
   outline: none;
 }
 
-.emotion-12:focus::-moz-range-thumb {
+.emotion-13:focus::-moz-range-thumb {
   border: 1.5px solid #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-12:focus::-webkit-slider-thumb {
+.emotion-13:focus::-webkit-slider-thumb {
   border: 1.5px solid #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-12[data-error='true'] {
+.emotion-13[data-error='true'] {
   background-image: linear-gradient(#e51963, #e51963);
 }
 
-.emotion-12[data-direction='column'] {
+.emotion-13[data-direction='column'] {
   -webkit-align-self: baseline;
   -ms-flex-item-align: baseline;
   align-self: baseline;
 }
 
-.emotion-12[aria-disabled='true'] {
+.emotion-13[aria-disabled='true'] {
   background-image: linear-gradient(#d8c5fc, #d8c5fc);
 }
 
-.emotion-12::-moz-range-track {
+.emotion-13::-moz-range-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -3097,7 +3102,7 @@ exports[`Single slider > renders correctly direction row with input 1`] = `
   background: transparent;
 }
 
-.emotion-12::-moz-range-thumb {
+.emotion-13::-moz-range-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -3119,20 +3124,20 @@ exports[`Single slider > renders correctly direction row with input 1`] = `
   top: -4px;
 }
 
-.emotion-12::-moz-range-thumb:hover,
-.emotion-12::-moz-range-thumb:active,
-.emotion-12::-moz-range-thumb:focus {
+.emotion-13::-moz-range-thumb:hover,
+.emotion-13::-moz-range-thumb:active,
+.emotion-13::-moz-range-thumb:focus {
   border: 1.5px solid #8c40ef;
 }
 
-.emotion-12::-moz-range-thumb:active,
-.emotion-12::-moz-range-thumb:focus {
+.emotion-13::-moz-range-thumb:active,
+.emotion-13::-moz-range-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
 }
 
-.emotion-12::-webkit-slider-runnable-track {
+.emotion-13::-webkit-slider-runnable-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -3143,7 +3148,7 @@ exports[`Single slider > renders correctly direction row with input 1`] = `
   background: transparent;
 }
 
-.emotion-12::-webkit-slider-thumb {
+.emotion-13::-webkit-slider-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -3165,20 +3170,20 @@ exports[`Single slider > renders correctly direction row with input 1`] = `
   top: -4px;
 }
 
-.emotion-12::-webkit-slider-thumb:hover,
-.emotion-12::-webkit-slider-thumb:active,
-.emotion-12::-webkit-slider-thumb:focus {
+.emotion-13::-webkit-slider-thumb:hover,
+.emotion-13::-webkit-slider-thumb:active,
+.emotion-13::-webkit-slider-thumb:focus {
   border: 1.5px solid #8c40ef;
 }
 
-.emotion-12::-webkit-slider-thumb:active,
-.emotion-12::-webkit-slider-thumb:focus {
+.emotion-13::-webkit-slider-thumb:active,
+.emotion-13::-webkit-slider-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
 }
 
-.emotion-15 {
+.emotion-16 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3202,7 +3207,7 @@ exports[`Single slider > renders correctly direction row with input 1`] = `
   min-width: 2.5rem;
 }
 
-.emotion-17 {
+.emotion-18 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3221,52 +3226,52 @@ exports[`Single slider > renders correctly direction row with input 1`] = `
   border-radius: 0.25rem;
 }
 
-.emotion-17:focus-within {
+.emotion-18:focus-within {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-17[data-success='true'] {
+.emotion-18[data-success='true'] {
   border-color: #22674e;
 }
 
-.emotion-17[data-error='true'] {
+.emotion-18[data-error='true'] {
   border-color: #b3144d;
 }
 
-.emotion-17:hover {
+.emotion-18:hover {
   border-color: #792dd4;
 }
 
-.emotion-17[data-readonly='true'] {
+.emotion-18[data-readonly='true'] {
   border-color: #d9dadd;
   background: #f9f9fa;
   cursor: not-allowed;
 }
 
-.emotion-17[data-disabled='true'] {
+.emotion-18[data-disabled='true'] {
   border-color: #e9eaeb;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.emotion-17[data-controls='false']>.emotion-19 {
+.emotion-18[data-controls='false']>.emotion-20 {
   border-width: 0;
 }
 
-.emotion-17[data-size='small'] {
+.emotion-18[data-size='small'] {
   height: 2rem;
 }
 
-.emotion-17[data-size='medium'] {
+.emotion-18[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-17[data-size='large'] {
+.emotion-18[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-20 {
+.emotion-21 {
   display: grid;
   grid-template-columns: 1fr auto;
   -webkit-align-items: center;
@@ -3283,7 +3288,7 @@ exports[`Single slider > renders correctly direction row with input 1`] = `
   width: 100%;
 }
 
-.emotion-22 {
+.emotion-23 {
   outline: none;
   border: none;
   padding: 0;
@@ -3298,18 +3303,18 @@ exports[`Single slider > renders correctly direction row with input 1`] = `
   background: none;
 }
 
-.emotion-22[data-has-unit='true'] {
+.emotion-23[data-has-unit='true'] {
   text-align: left;
   padding: 0.5rem 0 0.5rem 0.5rem;
 }
 
-.emotion-22::-webkit-outer-spin-button,
-.emotion-22::-webkit-inner-spin-button {
+.emotion-23::-webkit-outer-spin-button,
+.emotion-23::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.emotion-22 {
+.emotion-23 {
   -moz-appearance: textfield;
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
@@ -3317,15 +3322,15 @@ exports[`Single slider > renders correctly direction row with input 1`] = `
   appearance: textfield;
 }
 
-.emotion-22[data-size='small'] {
+.emotion-23[data-size='small'] {
   height: 2rem;
 }
 
-.emotion-22[data-size='medium'] {
+.emotion-23[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-22[data-size='large'] {
+.emotion-23[data-size='large'] {
   height: 3rem;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
@@ -3333,34 +3338,34 @@ exports[`Single slider > renders correctly direction row with input 1`] = `
   line-height: 1.5rem;
 }
 
-.emotion-22:-moz-read-only {
+.emotion-23:-moz-read-only {
   color: #3f4250;
   background: #f9f9fa;
   border-block: 1px solid #d9dadd;
 }
 
-.emotion-22:read-only {
+.emotion-23:read-only {
   color: #3f4250;
   background: #f9f9fa;
   border-block: 1px solid #d9dadd;
 }
 
-.emotion-22:-moz-read-only~.e1b9qdjy2 {
+.emotion-23:-moz-read-only~.e1b9qdjy2 {
   background: #f9f9fa;
 }
 
-.emotion-22:read-only~.e1b9qdjy2 {
+.emotion-23:read-only~.e1b9qdjy2 {
   background: #f9f9fa;
 }
 
-.emotion-22:disabled {
+.emotion-23:disabled {
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
   border-block: 1px solid #e9eaeb;
 }
 
-.emotion-22:disabled~.e1b9qdjy2 {
+.emotion-23:disabled~.e1b9qdjy2 {
   background: #f3f3f4;
   cursor: not-allowed;
   -webkit-user-select: none;
@@ -3369,12 +3374,12 @@ exports[`Single slider > renders correctly direction row with input 1`] = `
   user-select: none;
 }
 
-.emotion-22:placeholder-shown~.e1b9qdjy2 {
+.emotion-23:placeholder-shown~.e1b9qdjy2 {
   color: #727683;
   font-size: 1rem;
 }
 
-.emotion-22[data-controls='false'] {
+.emotion-23[data-controls='false'] {
   text-align: left;
 }
 
@@ -3392,21 +3397,21 @@ exports[`Single slider > renders correctly direction row with input 1`] = `
           class="emotion-4 emotion-3"
         >
           <label
-            class="emotion-6 emotion-7"
+            class="emotion-6 emotion-7 emotion-8"
             for=":r10:"
           >
             Label
           </label>
         </div>
         <div
-          class="emotion-8 emotion-3"
+          class="emotion-9 emotion-3"
         />
         <div
-          class="emotion-10 emotion-3"
+          class="emotion-11 emotion-3"
         >
           <input
             aria-label="Name"
-            class="emotion-12 emotion-13"
+            class="emotion-13 emotion-14"
             data-direction="row"
             data-error="false"
             id=":r10:"
@@ -3421,11 +3426,11 @@ exports[`Single slider > renders correctly direction row with input 1`] = `
           />
         </div>
         <div
-          class="emotion-14 emotion-15 emotion-3"
+          class="emotion-15 emotion-16 emotion-3"
         >
           <div>
             <div
-              class="emotion-17 emotion-18"
+              class="emotion-18 emotion-19"
               data-controls="false"
               data-disabled="false"
               data-error="false"
@@ -3434,11 +3439,11 @@ exports[`Single slider > renders correctly direction row with input 1`] = `
               data-unit="false"
             >
               <div
-                class="emotion-19 emotion-20 emotion-21"
+                class="emotion-20 emotion-21 emotion-22"
               >
                 <input
                   aria-label="input"
-                  class="emotion-22 emotion-23"
+                  class="emotion-23 emotion-24"
                   data-controls="false"
                   data-has-unit="false"
                   data-size="small"
@@ -3535,8 +3540,8 @@ exports[`Single slider > renders correctly disabled 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-6 {
-  color: #222638;
+.emotion-7 {
+  color: #3f4250;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -3545,9 +3550,10 @@ exports[`Single slider > renders correctly disabled 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  cursor: pointer;
 }
 
-.emotion-9 {
+.emotion-10 {
   color: #3f4250;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
@@ -3564,7 +3570,7 @@ exports[`Single slider > renders correctly disabled 1`] = `
   align-self: end;
 }
 
-.emotion-11 {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3587,7 +3593,7 @@ exports[`Single slider > renders correctly disabled 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-13 {
+.emotion-14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3611,7 +3617,7 @@ exports[`Single slider > renders correctly disabled 1`] = `
   width: 100%;
 }
 
-.emotion-15 {
+.emotion-16 {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -3629,21 +3635,21 @@ exports[`Single slider > renders correctly disabled 1`] = `
   outline: none;
 }
 
-.emotion-15[data-error='true'] {
+.emotion-16[data-error='true'] {
   background-image: linear-gradient(#e51963, #e51963);
 }
 
-.emotion-15[data-direction='column'] {
+.emotion-16[data-direction='column'] {
   -webkit-align-self: baseline;
   -ms-flex-item-align: baseline;
   align-self: baseline;
 }
 
-.emotion-15[aria-disabled='true'] {
+.emotion-16[aria-disabled='true'] {
   background-image: linear-gradient(#d8c5fc, #d8c5fc);
 }
 
-.emotion-15::-moz-range-track {
+.emotion-16::-moz-range-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -3654,7 +3660,7 @@ exports[`Single slider > renders correctly disabled 1`] = `
   background: transparent;
 }
 
-.emotion-15::-moz-range-thumb {
+.emotion-16::-moz-range-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -3675,19 +3681,19 @@ exports[`Single slider > renders correctly disabled 1`] = `
   top: -4px;
 }
 
-.emotion-15::-moz-range-thumb:hover,
-.emotion-15::-moz-range-thumb:active,
-.emotion-15::-moz-range-thumb:focus {
+.emotion-16::-moz-range-thumb:hover,
+.emotion-16::-moz-range-thumb:active,
+.emotion-16::-moz-range-thumb:focus {
   border: null;
 }
 
-.emotion-15::-moz-range-thumb:active,
-.emotion-15::-moz-range-thumb:focus {
+.emotion-16::-moz-range-thumb:active,
+.emotion-16::-moz-range-thumb:focus {
   box-shadow: null;
   cursor: not-allowed;
 }
 
-.emotion-15::-webkit-slider-runnable-track {
+.emotion-16::-webkit-slider-runnable-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -3698,7 +3704,7 @@ exports[`Single slider > renders correctly disabled 1`] = `
   background: transparent;
 }
 
-.emotion-15::-webkit-slider-thumb {
+.emotion-16::-webkit-slider-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -3719,14 +3725,14 @@ exports[`Single slider > renders correctly disabled 1`] = `
   top: -4px;
 }
 
-.emotion-15::-webkit-slider-thumb:hover,
-.emotion-15::-webkit-slider-thumb:active,
-.emotion-15::-webkit-slider-thumb:focus {
+.emotion-16::-webkit-slider-thumb:hover,
+.emotion-16::-webkit-slider-thumb:active,
+.emotion-16::-webkit-slider-thumb:focus {
   border: null;
 }
 
-.emotion-15::-webkit-slider-thumb:active,
-.emotion-15::-webkit-slider-thumb:focus {
+.emotion-16::-webkit-slider-thumb:active,
+.emotion-16::-webkit-slider-thumb:focus {
   box-shadow: null;
   cursor: not-allowed;
 }
@@ -3745,28 +3751,28 @@ exports[`Single slider > renders correctly disabled 1`] = `
           class="emotion-4 emotion-3"
         >
           <label
-            class="emotion-6 emotion-7"
+            class="emotion-6 emotion-7 emotion-8"
             for=":r1d:"
           >
             Label
           </label>
           <span
-            class="emotion-8 emotion-9 emotion-7"
+            class="emotion-9 emotion-10 emotion-8"
             data-testid="slider-value"
           >
             1
           </span>
         </div>
         <div
-          class="emotion-11 emotion-3"
+          class="emotion-12 emotion-3"
         />
         <div
-          class="emotion-13 emotion-3"
+          class="emotion-14 emotion-3"
         >
           <input
             aria-disabled="true"
             aria-label="Name"
-            class="emotion-15 emotion-16"
+            class="emotion-16 emotion-17"
             data-direction="column"
             data-error="false"
             disabled=""
@@ -3861,8 +3867,8 @@ exports[`Single slider > renders correctly error boolean 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-6 {
-  color: #222638;
+.emotion-7 {
+  color: #3f4250;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -3871,9 +3877,10 @@ exports[`Single slider > renders correctly error boolean 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  cursor: pointer;
 }
 
-.emotion-9 {
+.emotion-10 {
   color: #3f4250;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
@@ -3890,7 +3897,7 @@ exports[`Single slider > renders correctly error boolean 1`] = `
   align-self: end;
 }
 
-.emotion-11 {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3913,7 +3920,7 @@ exports[`Single slider > renders correctly error boolean 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-13 {
+.emotion-14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3937,7 +3944,7 @@ exports[`Single slider > renders correctly error boolean 1`] = `
   width: 100%;
 }
 
-.emotion-15 {
+.emotion-16 {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -3955,31 +3962,31 @@ exports[`Single slider > renders correctly error boolean 1`] = `
   outline: none;
 }
 
-.emotion-15:focus::-moz-range-thumb {
+.emotion-16:focus::-moz-range-thumb {
   border: 1.5px solid #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-15:focus::-webkit-slider-thumb {
+.emotion-16:focus::-webkit-slider-thumb {
   border: 1.5px solid #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-15[data-error='true'] {
+.emotion-16[data-error='true'] {
   background-image: linear-gradient(#e51963, #e51963);
 }
 
-.emotion-15[data-direction='column'] {
+.emotion-16[data-direction='column'] {
   -webkit-align-self: baseline;
   -ms-flex-item-align: baseline;
   align-self: baseline;
 }
 
-.emotion-15[aria-disabled='true'] {
+.emotion-16[aria-disabled='true'] {
   background-image: linear-gradient(#d8c5fc, #d8c5fc);
 }
 
-.emotion-15::-moz-range-track {
+.emotion-16::-moz-range-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -3990,7 +3997,7 @@ exports[`Single slider > renders correctly error boolean 1`] = `
   background: transparent;
 }
 
-.emotion-15::-moz-range-thumb {
+.emotion-16::-moz-range-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -4012,20 +4019,20 @@ exports[`Single slider > renders correctly error boolean 1`] = `
   top: -4px;
 }
 
-.emotion-15::-moz-range-thumb:hover,
-.emotion-15::-moz-range-thumb:active,
-.emotion-15::-moz-range-thumb:focus {
+.emotion-16::-moz-range-thumb:hover,
+.emotion-16::-moz-range-thumb:active,
+.emotion-16::-moz-range-thumb:focus {
   border: 1.5px solid #8c40ef;
 }
 
-.emotion-15::-moz-range-thumb:active,
-.emotion-15::-moz-range-thumb:focus {
+.emotion-16::-moz-range-thumb:active,
+.emotion-16::-moz-range-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
 }
 
-.emotion-15::-webkit-slider-runnable-track {
+.emotion-16::-webkit-slider-runnable-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -4036,7 +4043,7 @@ exports[`Single slider > renders correctly error boolean 1`] = `
   background: transparent;
 }
 
-.emotion-15::-webkit-slider-thumb {
+.emotion-16::-webkit-slider-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -4058,20 +4065,20 @@ exports[`Single slider > renders correctly error boolean 1`] = `
   top: -4px;
 }
 
-.emotion-15::-webkit-slider-thumb:hover,
-.emotion-15::-webkit-slider-thumb:active,
-.emotion-15::-webkit-slider-thumb:focus {
+.emotion-16::-webkit-slider-thumb:hover,
+.emotion-16::-webkit-slider-thumb:active,
+.emotion-16::-webkit-slider-thumb:focus {
   border: 1.5px solid #8c40ef;
 }
 
-.emotion-15::-webkit-slider-thumb:active,
-.emotion-15::-webkit-slider-thumb:focus {
+.emotion-16::-webkit-slider-thumb:active,
+.emotion-16::-webkit-slider-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
 }
 
-.emotion-17 {
+.emotion-18 {
   color: #b3144d;
   font-size: 0.75rem;
   font-family: Inter,Asap,sans-serif;
@@ -4097,27 +4104,27 @@ exports[`Single slider > renders correctly error boolean 1`] = `
           class="emotion-4 emotion-3"
         >
           <label
-            class="emotion-6 emotion-7"
+            class="emotion-6 emotion-7 emotion-8"
             for=":r1h:"
           >
             Label
           </label>
           <span
-            class="emotion-8 emotion-9 emotion-7"
+            class="emotion-9 emotion-10 emotion-8"
             data-testid="slider-value"
           >
             1
           </span>
         </div>
         <div
-          class="emotion-11 emotion-3"
+          class="emotion-12 emotion-3"
         />
         <div
-          class="emotion-13 emotion-3"
+          class="emotion-14 emotion-3"
         >
           <input
             aria-label="Name"
-            class="emotion-15 emotion-16"
+            class="emotion-16 emotion-17"
             data-direction="column"
             data-error="true"
             id=":r1h:"
@@ -4133,7 +4140,7 @@ exports[`Single slider > renders correctly error boolean 1`] = `
         </div>
       </div>
       <p
-        class="emotion-17 emotion-7"
+        class="emotion-18 emotion-8"
       >
         helper
       </p>
@@ -4216,8 +4223,8 @@ exports[`Single slider > renders correctly error boolean and helper 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-6 {
-  color: #222638;
+.emotion-7 {
+  color: #3f4250;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -4226,9 +4233,10 @@ exports[`Single slider > renders correctly error boolean and helper 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  cursor: pointer;
 }
 
-.emotion-9 {
+.emotion-10 {
   color: #3f4250;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
@@ -4245,7 +4253,7 @@ exports[`Single slider > renders correctly error boolean and helper 1`] = `
   align-self: end;
 }
 
-.emotion-11 {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4268,7 +4276,7 @@ exports[`Single slider > renders correctly error boolean and helper 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-13 {
+.emotion-14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4292,7 +4300,7 @@ exports[`Single slider > renders correctly error boolean and helper 1`] = `
   width: 100%;
 }
 
-.emotion-15 {
+.emotion-16 {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -4310,31 +4318,31 @@ exports[`Single slider > renders correctly error boolean and helper 1`] = `
   outline: none;
 }
 
-.emotion-15:focus::-moz-range-thumb {
+.emotion-16:focus::-moz-range-thumb {
   border: 1.5px solid #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-15:focus::-webkit-slider-thumb {
+.emotion-16:focus::-webkit-slider-thumb {
   border: 1.5px solid #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-15[data-error='true'] {
+.emotion-16[data-error='true'] {
   background-image: linear-gradient(#e51963, #e51963);
 }
 
-.emotion-15[data-direction='column'] {
+.emotion-16[data-direction='column'] {
   -webkit-align-self: baseline;
   -ms-flex-item-align: baseline;
   align-self: baseline;
 }
 
-.emotion-15[aria-disabled='true'] {
+.emotion-16[aria-disabled='true'] {
   background-image: linear-gradient(#d8c5fc, #d8c5fc);
 }
 
-.emotion-15::-moz-range-track {
+.emotion-16::-moz-range-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -4345,7 +4353,7 @@ exports[`Single slider > renders correctly error boolean and helper 1`] = `
   background: transparent;
 }
 
-.emotion-15::-moz-range-thumb {
+.emotion-16::-moz-range-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -4367,20 +4375,20 @@ exports[`Single slider > renders correctly error boolean and helper 1`] = `
   top: -4px;
 }
 
-.emotion-15::-moz-range-thumb:hover,
-.emotion-15::-moz-range-thumb:active,
-.emotion-15::-moz-range-thumb:focus {
+.emotion-16::-moz-range-thumb:hover,
+.emotion-16::-moz-range-thumb:active,
+.emotion-16::-moz-range-thumb:focus {
   border: 1.5px solid #8c40ef;
 }
 
-.emotion-15::-moz-range-thumb:active,
-.emotion-15::-moz-range-thumb:focus {
+.emotion-16::-moz-range-thumb:active,
+.emotion-16::-moz-range-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
 }
 
-.emotion-15::-webkit-slider-runnable-track {
+.emotion-16::-webkit-slider-runnable-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -4391,7 +4399,7 @@ exports[`Single slider > renders correctly error boolean and helper 1`] = `
   background: transparent;
 }
 
-.emotion-15::-webkit-slider-thumb {
+.emotion-16::-webkit-slider-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -4413,20 +4421,20 @@ exports[`Single slider > renders correctly error boolean and helper 1`] = `
   top: -4px;
 }
 
-.emotion-15::-webkit-slider-thumb:hover,
-.emotion-15::-webkit-slider-thumb:active,
-.emotion-15::-webkit-slider-thumb:focus {
+.emotion-16::-webkit-slider-thumb:hover,
+.emotion-16::-webkit-slider-thumb:active,
+.emotion-16::-webkit-slider-thumb:focus {
   border: 1.5px solid #8c40ef;
 }
 
-.emotion-15::-webkit-slider-thumb:active,
-.emotion-15::-webkit-slider-thumb:focus {
+.emotion-16::-webkit-slider-thumb:active,
+.emotion-16::-webkit-slider-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
 }
 
-.emotion-17 {
+.emotion-18 {
   color: #b3144d;
   font-size: 0.75rem;
   font-family: Inter,Asap,sans-serif;
@@ -4452,27 +4460,27 @@ exports[`Single slider > renders correctly error boolean and helper 1`] = `
           class="emotion-4 emotion-3"
         >
           <label
-            class="emotion-6 emotion-7"
+            class="emotion-6 emotion-7 emotion-8"
             for=":r1m:"
           >
             Label
           </label>
           <span
-            class="emotion-8 emotion-9 emotion-7"
+            class="emotion-9 emotion-10 emotion-8"
             data-testid="slider-value"
           >
             1
           </span>
         </div>
         <div
-          class="emotion-11 emotion-3"
+          class="emotion-12 emotion-3"
         />
         <div
-          class="emotion-13 emotion-3"
+          class="emotion-14 emotion-3"
         >
           <input
             aria-label="Name"
-            class="emotion-15 emotion-16"
+            class="emotion-16 emotion-17"
             data-direction="column"
             data-error="true"
             id=":r1m:"
@@ -4488,7 +4496,7 @@ exports[`Single slider > renders correctly error boolean and helper 1`] = `
         </div>
       </div>
       <p
-        class="emotion-17 emotion-7"
+        class="emotion-18 emotion-8"
       >
         helper
       </p>
@@ -4571,8 +4579,8 @@ exports[`Single slider > renders correctly error string 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-6 {
-  color: #222638;
+.emotion-7 {
+  color: #3f4250;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -4581,9 +4589,10 @@ exports[`Single slider > renders correctly error string 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  cursor: pointer;
 }
 
-.emotion-9 {
+.emotion-10 {
   color: #3f4250;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
@@ -4600,7 +4609,7 @@ exports[`Single slider > renders correctly error string 1`] = `
   align-self: end;
 }
 
-.emotion-11 {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4623,7 +4632,7 @@ exports[`Single slider > renders correctly error string 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-13 {
+.emotion-14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4647,7 +4656,7 @@ exports[`Single slider > renders correctly error string 1`] = `
   width: 100%;
 }
 
-.emotion-15 {
+.emotion-16 {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -4665,31 +4674,31 @@ exports[`Single slider > renders correctly error string 1`] = `
   outline: none;
 }
 
-.emotion-15:focus::-moz-range-thumb {
+.emotion-16:focus::-moz-range-thumb {
   border: 1.5px solid #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-15:focus::-webkit-slider-thumb {
+.emotion-16:focus::-webkit-slider-thumb {
   border: 1.5px solid #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-15[data-error='true'] {
+.emotion-16[data-error='true'] {
   background-image: linear-gradient(#e51963, #e51963);
 }
 
-.emotion-15[data-direction='column'] {
+.emotion-16[data-direction='column'] {
   -webkit-align-self: baseline;
   -ms-flex-item-align: baseline;
   align-self: baseline;
 }
 
-.emotion-15[aria-disabled='true'] {
+.emotion-16[aria-disabled='true'] {
   background-image: linear-gradient(#d8c5fc, #d8c5fc);
 }
 
-.emotion-15::-moz-range-track {
+.emotion-16::-moz-range-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -4700,7 +4709,7 @@ exports[`Single slider > renders correctly error string 1`] = `
   background: transparent;
 }
 
-.emotion-15::-moz-range-thumb {
+.emotion-16::-moz-range-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -4722,20 +4731,20 @@ exports[`Single slider > renders correctly error string 1`] = `
   top: -4px;
 }
 
-.emotion-15::-moz-range-thumb:hover,
-.emotion-15::-moz-range-thumb:active,
-.emotion-15::-moz-range-thumb:focus {
+.emotion-16::-moz-range-thumb:hover,
+.emotion-16::-moz-range-thumb:active,
+.emotion-16::-moz-range-thumb:focus {
   border: 1.5px solid #8c40ef;
 }
 
-.emotion-15::-moz-range-thumb:active,
-.emotion-15::-moz-range-thumb:focus {
+.emotion-16::-moz-range-thumb:active,
+.emotion-16::-moz-range-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
 }
 
-.emotion-15::-webkit-slider-runnable-track {
+.emotion-16::-webkit-slider-runnable-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -4746,7 +4755,7 @@ exports[`Single slider > renders correctly error string 1`] = `
   background: transparent;
 }
 
-.emotion-15::-webkit-slider-thumb {
+.emotion-16::-webkit-slider-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -4768,20 +4777,20 @@ exports[`Single slider > renders correctly error string 1`] = `
   top: -4px;
 }
 
-.emotion-15::-webkit-slider-thumb:hover,
-.emotion-15::-webkit-slider-thumb:active,
-.emotion-15::-webkit-slider-thumb:focus {
+.emotion-16::-webkit-slider-thumb:hover,
+.emotion-16::-webkit-slider-thumb:active,
+.emotion-16::-webkit-slider-thumb:focus {
   border: 1.5px solid #8c40ef;
 }
 
-.emotion-15::-webkit-slider-thumb:active,
-.emotion-15::-webkit-slider-thumb:focus {
+.emotion-16::-webkit-slider-thumb:active,
+.emotion-16::-webkit-slider-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
 }
 
-.emotion-17 {
+.emotion-18 {
   color: #b3144d;
   font-size: 0.75rem;
   font-family: Inter,Asap,sans-serif;
@@ -4807,27 +4816,27 @@ exports[`Single slider > renders correctly error string 1`] = `
           class="emotion-4 emotion-3"
         >
           <label
-            class="emotion-6 emotion-7"
+            class="emotion-6 emotion-7 emotion-8"
             for=":r1r:"
           >
             Label
           </label>
           <span
-            class="emotion-8 emotion-9 emotion-7"
+            class="emotion-9 emotion-10 emotion-8"
             data-testid="slider-value"
           >
             1
           </span>
         </div>
         <div
-          class="emotion-11 emotion-3"
+          class="emotion-12 emotion-3"
         />
         <div
-          class="emotion-13 emotion-3"
+          class="emotion-14 emotion-3"
         >
           <input
             aria-label="Name"
-            class="emotion-15 emotion-16"
+            class="emotion-16 emotion-17"
             data-direction="column"
             data-error="true"
             id=":r1r:"
@@ -4843,7 +4852,7 @@ exports[`Single slider > renders correctly error string 1`] = `
         </div>
       </div>
       <p
-        class="emotion-17 emotion-7"
+        class="emotion-18 emotion-8"
       >
         error
       </p>
@@ -4926,8 +4935,8 @@ exports[`Single slider > renders correctly error string and helper 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-6 {
-  color: #222638;
+.emotion-7 {
+  color: #3f4250;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -4936,9 +4945,10 @@ exports[`Single slider > renders correctly error string and helper 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  cursor: pointer;
 }
 
-.emotion-9 {
+.emotion-10 {
   color: #3f4250;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
@@ -4955,7 +4965,7 @@ exports[`Single slider > renders correctly error string and helper 1`] = `
   align-self: end;
 }
 
-.emotion-11 {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4978,7 +4988,7 @@ exports[`Single slider > renders correctly error string and helper 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-13 {
+.emotion-14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5002,7 +5012,7 @@ exports[`Single slider > renders correctly error string and helper 1`] = `
   width: 100%;
 }
 
-.emotion-15 {
+.emotion-16 {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -5020,31 +5030,31 @@ exports[`Single slider > renders correctly error string and helper 1`] = `
   outline: none;
 }
 
-.emotion-15:focus::-moz-range-thumb {
+.emotion-16:focus::-moz-range-thumb {
   border: 1.5px solid #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-15:focus::-webkit-slider-thumb {
+.emotion-16:focus::-webkit-slider-thumb {
   border: 1.5px solid #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-15[data-error='true'] {
+.emotion-16[data-error='true'] {
   background-image: linear-gradient(#e51963, #e51963);
 }
 
-.emotion-15[data-direction='column'] {
+.emotion-16[data-direction='column'] {
   -webkit-align-self: baseline;
   -ms-flex-item-align: baseline;
   align-self: baseline;
 }
 
-.emotion-15[aria-disabled='true'] {
+.emotion-16[aria-disabled='true'] {
   background-image: linear-gradient(#d8c5fc, #d8c5fc);
 }
 
-.emotion-15::-moz-range-track {
+.emotion-16::-moz-range-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -5055,7 +5065,7 @@ exports[`Single slider > renders correctly error string and helper 1`] = `
   background: transparent;
 }
 
-.emotion-15::-moz-range-thumb {
+.emotion-16::-moz-range-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -5077,20 +5087,20 @@ exports[`Single slider > renders correctly error string and helper 1`] = `
   top: -4px;
 }
 
-.emotion-15::-moz-range-thumb:hover,
-.emotion-15::-moz-range-thumb:active,
-.emotion-15::-moz-range-thumb:focus {
+.emotion-16::-moz-range-thumb:hover,
+.emotion-16::-moz-range-thumb:active,
+.emotion-16::-moz-range-thumb:focus {
   border: 1.5px solid #8c40ef;
 }
 
-.emotion-15::-moz-range-thumb:active,
-.emotion-15::-moz-range-thumb:focus {
+.emotion-16::-moz-range-thumb:active,
+.emotion-16::-moz-range-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
 }
 
-.emotion-15::-webkit-slider-runnable-track {
+.emotion-16::-webkit-slider-runnable-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -5101,7 +5111,7 @@ exports[`Single slider > renders correctly error string and helper 1`] = `
   background: transparent;
 }
 
-.emotion-15::-webkit-slider-thumb {
+.emotion-16::-webkit-slider-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -5123,20 +5133,20 @@ exports[`Single slider > renders correctly error string and helper 1`] = `
   top: -4px;
 }
 
-.emotion-15::-webkit-slider-thumb:hover,
-.emotion-15::-webkit-slider-thumb:active,
-.emotion-15::-webkit-slider-thumb:focus {
+.emotion-16::-webkit-slider-thumb:hover,
+.emotion-16::-webkit-slider-thumb:active,
+.emotion-16::-webkit-slider-thumb:focus {
   border: 1.5px solid #8c40ef;
 }
 
-.emotion-15::-webkit-slider-thumb:active,
-.emotion-15::-webkit-slider-thumb:focus {
+.emotion-16::-webkit-slider-thumb:active,
+.emotion-16::-webkit-slider-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
 }
 
-.emotion-17 {
+.emotion-18 {
   color: #b3144d;
   font-size: 0.75rem;
   font-family: Inter,Asap,sans-serif;
@@ -5162,27 +5172,27 @@ exports[`Single slider > renders correctly error string and helper 1`] = `
           class="emotion-4 emotion-3"
         >
           <label
-            class="emotion-6 emotion-7"
+            class="emotion-6 emotion-7 emotion-8"
             for=":r20:"
           >
             Label
           </label>
           <span
-            class="emotion-8 emotion-9 emotion-7"
+            class="emotion-9 emotion-10 emotion-8"
             data-testid="slider-value"
           >
             1
           </span>
         </div>
         <div
-          class="emotion-11 emotion-3"
+          class="emotion-12 emotion-3"
         />
         <div
-          class="emotion-13 emotion-3"
+          class="emotion-14 emotion-3"
         >
           <input
             aria-label="Name"
-            class="emotion-15 emotion-16"
+            class="emotion-16 emotion-17"
             data-direction="column"
             data-error="true"
             id=":r20:"
@@ -5198,7 +5208,7 @@ exports[`Single slider > renders correctly error string and helper 1`] = `
         </div>
       </div>
       <p
-        class="emotion-17 emotion-7"
+        class="emotion-18 emotion-8"
       >
         error
       </p>
@@ -5281,8 +5291,8 @@ exports[`Single slider > renders correctly input 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-6 {
-  color: #222638;
+.emotion-7 {
+  color: #3f4250;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -5291,9 +5301,10 @@ exports[`Single slider > renders correctly input 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  cursor: pointer;
 }
 
-.emotion-9 {
+.emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5317,7 +5328,7 @@ exports[`Single slider > renders correctly input 1`] = `
   min-width: 2.5rem;
 }
 
-.emotion-11 {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5336,52 +5347,52 @@ exports[`Single slider > renders correctly input 1`] = `
   border-radius: 0.25rem;
 }
 
-.emotion-11:focus-within {
+.emotion-12:focus-within {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-11[data-success='true'] {
+.emotion-12[data-success='true'] {
   border-color: #22674e;
 }
 
-.emotion-11[data-error='true'] {
+.emotion-12[data-error='true'] {
   border-color: #b3144d;
 }
 
-.emotion-11:hover {
+.emotion-12:hover {
   border-color: #792dd4;
 }
 
-.emotion-11[data-readonly='true'] {
+.emotion-12[data-readonly='true'] {
   border-color: #d9dadd;
   background: #f9f9fa;
   cursor: not-allowed;
 }
 
-.emotion-11[data-disabled='true'] {
+.emotion-12[data-disabled='true'] {
   border-color: #e9eaeb;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.emotion-11[data-controls='false']>.emotion-13 {
+.emotion-12[data-controls='false']>.emotion-14 {
   border-width: 0;
 }
 
-.emotion-11[data-size='small'] {
+.emotion-12[data-size='small'] {
   height: 2rem;
 }
 
-.emotion-11[data-size='medium'] {
+.emotion-12[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-11[data-size='large'] {
+.emotion-12[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-14 {
+.emotion-15 {
   display: grid;
   grid-template-columns: 1fr auto;
   -webkit-align-items: center;
@@ -5398,7 +5409,7 @@ exports[`Single slider > renders correctly input 1`] = `
   width: 100%;
 }
 
-.emotion-16 {
+.emotion-17 {
   outline: none;
   border: none;
   padding: 0;
@@ -5413,18 +5424,18 @@ exports[`Single slider > renders correctly input 1`] = `
   background: none;
 }
 
-.emotion-16[data-has-unit='true'] {
+.emotion-17[data-has-unit='true'] {
   text-align: left;
   padding: 0.5rem 0 0.5rem 0.5rem;
 }
 
-.emotion-16::-webkit-outer-spin-button,
-.emotion-16::-webkit-inner-spin-button {
+.emotion-17::-webkit-outer-spin-button,
+.emotion-17::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.emotion-16 {
+.emotion-17 {
   -moz-appearance: textfield;
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
@@ -5432,15 +5443,15 @@ exports[`Single slider > renders correctly input 1`] = `
   appearance: textfield;
 }
 
-.emotion-16[data-size='small'] {
+.emotion-17[data-size='small'] {
   height: 2rem;
 }
 
-.emotion-16[data-size='medium'] {
+.emotion-17[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-16[data-size='large'] {
+.emotion-17[data-size='large'] {
   height: 3rem;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
@@ -5448,34 +5459,34 @@ exports[`Single slider > renders correctly input 1`] = `
   line-height: 1.5rem;
 }
 
-.emotion-16:-moz-read-only {
+.emotion-17:-moz-read-only {
   color: #3f4250;
   background: #f9f9fa;
   border-block: 1px solid #d9dadd;
 }
 
-.emotion-16:read-only {
+.emotion-17:read-only {
   color: #3f4250;
   background: #f9f9fa;
   border-block: 1px solid #d9dadd;
 }
 
-.emotion-16:-moz-read-only~.e1b9qdjy2 {
+.emotion-17:-moz-read-only~.e1b9qdjy2 {
   background: #f9f9fa;
 }
 
-.emotion-16:read-only~.e1b9qdjy2 {
+.emotion-17:read-only~.e1b9qdjy2 {
   background: #f9f9fa;
 }
 
-.emotion-16:disabled {
+.emotion-17:disabled {
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
   border-block: 1px solid #e9eaeb;
 }
 
-.emotion-16:disabled~.e1b9qdjy2 {
+.emotion-17:disabled~.e1b9qdjy2 {
   background: #f3f3f4;
   cursor: not-allowed;
   -webkit-user-select: none;
@@ -5484,16 +5495,16 @@ exports[`Single slider > renders correctly input 1`] = `
   user-select: none;
 }
 
-.emotion-16:placeholder-shown~.e1b9qdjy2 {
+.emotion-17:placeholder-shown~.e1b9qdjy2 {
   color: #727683;
   font-size: 1rem;
 }
 
-.emotion-16[data-controls='false'] {
+.emotion-17[data-controls='false'] {
   text-align: left;
 }
 
-.emotion-18 {
+.emotion-19 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5516,7 +5527,7 @@ exports[`Single slider > renders correctly input 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-20 {
+.emotion-21 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5540,7 +5551,7 @@ exports[`Single slider > renders correctly input 1`] = `
   width: 100%;
 }
 
-.emotion-22 {
+.emotion-23 {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -5558,31 +5569,31 @@ exports[`Single slider > renders correctly input 1`] = `
   outline: none;
 }
 
-.emotion-22:focus::-moz-range-thumb {
+.emotion-23:focus::-moz-range-thumb {
   border: 1.5px solid #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-22:focus::-webkit-slider-thumb {
+.emotion-23:focus::-webkit-slider-thumb {
   border: 1.5px solid #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-22[data-error='true'] {
+.emotion-23[data-error='true'] {
   background-image: linear-gradient(#e51963, #e51963);
 }
 
-.emotion-22[data-direction='column'] {
+.emotion-23[data-direction='column'] {
   -webkit-align-self: baseline;
   -ms-flex-item-align: baseline;
   align-self: baseline;
 }
 
-.emotion-22[aria-disabled='true'] {
+.emotion-23[aria-disabled='true'] {
   background-image: linear-gradient(#d8c5fc, #d8c5fc);
 }
 
-.emotion-22::-moz-range-track {
+.emotion-23::-moz-range-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -5593,7 +5604,7 @@ exports[`Single slider > renders correctly input 1`] = `
   background: transparent;
 }
 
-.emotion-22::-moz-range-thumb {
+.emotion-23::-moz-range-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -5615,20 +5626,20 @@ exports[`Single slider > renders correctly input 1`] = `
   top: -4px;
 }
 
-.emotion-22::-moz-range-thumb:hover,
-.emotion-22::-moz-range-thumb:active,
-.emotion-22::-moz-range-thumb:focus {
+.emotion-23::-moz-range-thumb:hover,
+.emotion-23::-moz-range-thumb:active,
+.emotion-23::-moz-range-thumb:focus {
   border: 1.5px solid #8c40ef;
 }
 
-.emotion-22::-moz-range-thumb:active,
-.emotion-22::-moz-range-thumb:focus {
+.emotion-23::-moz-range-thumb:active,
+.emotion-23::-moz-range-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
 }
 
-.emotion-22::-webkit-slider-runnable-track {
+.emotion-23::-webkit-slider-runnable-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -5639,7 +5650,7 @@ exports[`Single slider > renders correctly input 1`] = `
   background: transparent;
 }
 
-.emotion-22::-webkit-slider-thumb {
+.emotion-23::-webkit-slider-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -5661,14 +5672,14 @@ exports[`Single slider > renders correctly input 1`] = `
   top: -4px;
 }
 
-.emotion-22::-webkit-slider-thumb:hover,
-.emotion-22::-webkit-slider-thumb:active,
-.emotion-22::-webkit-slider-thumb:focus {
+.emotion-23::-webkit-slider-thumb:hover,
+.emotion-23::-webkit-slider-thumb:active,
+.emotion-23::-webkit-slider-thumb:focus {
   border: 1.5px solid #8c40ef;
 }
 
-.emotion-22::-webkit-slider-thumb:active,
-.emotion-22::-webkit-slider-thumb:focus {
+.emotion-23::-webkit-slider-thumb:active,
+.emotion-23::-webkit-slider-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
@@ -5688,17 +5699,17 @@ exports[`Single slider > renders correctly input 1`] = `
           class="emotion-4 emotion-3"
         >
           <label
-            class="emotion-6 emotion-7"
+            class="emotion-6 emotion-7 emotion-8"
             for=":r25:"
           >
             Label
           </label>
           <div
-            class="emotion-8 emotion-9 emotion-3"
+            class="emotion-9 emotion-10 emotion-3"
           >
             <div>
               <div
-                class="emotion-11 emotion-12"
+                class="emotion-12 emotion-13"
                 data-controls="false"
                 data-disabled="false"
                 data-error="false"
@@ -5707,11 +5718,11 @@ exports[`Single slider > renders correctly input 1`] = `
                 data-unit="false"
               >
                 <div
-                  class="emotion-13 emotion-14 emotion-15"
+                  class="emotion-14 emotion-15 emotion-16"
                 >
                   <input
                     aria-label="input"
-                    class="emotion-16 emotion-17"
+                    class="emotion-17 emotion-18"
                     data-controls="false"
                     data-has-unit="false"
                     data-size="small"
@@ -5730,14 +5741,14 @@ exports[`Single slider > renders correctly input 1`] = `
           </div>
         </div>
         <div
-          class="emotion-18 emotion-3"
+          class="emotion-19 emotion-3"
         />
         <div
-          class="emotion-20 emotion-3"
+          class="emotion-21 emotion-3"
         >
           <input
             aria-label="Name"
-            class="emotion-22 emotion-23"
+            class="emotion-23 emotion-24"
             data-direction="column"
             data-error="false"
             id=":r25:"
@@ -5831,8 +5842,8 @@ exports[`Single slider > renders correctly min max 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-6 {
-  color: #222638;
+.emotion-7 {
+  color: #3f4250;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -5841,9 +5852,10 @@ exports[`Single slider > renders correctly min max 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  cursor: pointer;
 }
 
-.emotion-9 {
+.emotion-10 {
   color: #3f4250;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
@@ -5860,7 +5872,7 @@ exports[`Single slider > renders correctly min max 1`] = `
   align-self: end;
 }
 
-.emotion-11 {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5883,7 +5895,7 @@ exports[`Single slider > renders correctly min max 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-13 {
+.emotion-14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5907,7 +5919,7 @@ exports[`Single slider > renders correctly min max 1`] = `
   width: 100%;
 }
 
-.emotion-15 {
+.emotion-16 {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -5925,31 +5937,31 @@ exports[`Single slider > renders correctly min max 1`] = `
   outline: none;
 }
 
-.emotion-15:focus::-moz-range-thumb {
+.emotion-16:focus::-moz-range-thumb {
   border: 1.5px solid #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-15:focus::-webkit-slider-thumb {
+.emotion-16:focus::-webkit-slider-thumb {
   border: 1.5px solid #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-15[data-error='true'] {
+.emotion-16[data-error='true'] {
   background-image: linear-gradient(#e51963, #e51963);
 }
 
-.emotion-15[data-direction='column'] {
+.emotion-16[data-direction='column'] {
   -webkit-align-self: baseline;
   -ms-flex-item-align: baseline;
   align-self: baseline;
 }
 
-.emotion-15[aria-disabled='true'] {
+.emotion-16[aria-disabled='true'] {
   background-image: linear-gradient(#d8c5fc, #d8c5fc);
 }
 
-.emotion-15::-moz-range-track {
+.emotion-16::-moz-range-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -5960,7 +5972,7 @@ exports[`Single slider > renders correctly min max 1`] = `
   background: transparent;
 }
 
-.emotion-15::-moz-range-thumb {
+.emotion-16::-moz-range-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -5982,20 +5994,20 @@ exports[`Single slider > renders correctly min max 1`] = `
   top: -4px;
 }
 
-.emotion-15::-moz-range-thumb:hover,
-.emotion-15::-moz-range-thumb:active,
-.emotion-15::-moz-range-thumb:focus {
+.emotion-16::-moz-range-thumb:hover,
+.emotion-16::-moz-range-thumb:active,
+.emotion-16::-moz-range-thumb:focus {
   border: 1.5px solid #8c40ef;
 }
 
-.emotion-15::-moz-range-thumb:active,
-.emotion-15::-moz-range-thumb:focus {
+.emotion-16::-moz-range-thumb:active,
+.emotion-16::-moz-range-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
 }
 
-.emotion-15::-webkit-slider-runnable-track {
+.emotion-16::-webkit-slider-runnable-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -6006,7 +6018,7 @@ exports[`Single slider > renders correctly min max 1`] = `
   background: transparent;
 }
 
-.emotion-15::-webkit-slider-thumb {
+.emotion-16::-webkit-slider-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -6028,14 +6040,14 @@ exports[`Single slider > renders correctly min max 1`] = `
   top: -4px;
 }
 
-.emotion-15::-webkit-slider-thumb:hover,
-.emotion-15::-webkit-slider-thumb:active,
-.emotion-15::-webkit-slider-thumb:focus {
+.emotion-16::-webkit-slider-thumb:hover,
+.emotion-16::-webkit-slider-thumb:active,
+.emotion-16::-webkit-slider-thumb:focus {
   border: 1.5px solid #8c40ef;
 }
 
-.emotion-15::-webkit-slider-thumb:active,
-.emotion-15::-webkit-slider-thumb:focus {
+.emotion-16::-webkit-slider-thumb:active,
+.emotion-16::-webkit-slider-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
@@ -6055,27 +6067,27 @@ exports[`Single slider > renders correctly min max 1`] = `
           class="emotion-4 emotion-3"
         >
           <label
-            class="emotion-6 emotion-7"
+            class="emotion-6 emotion-7 emotion-8"
             for=":r2u:"
           >
             Label
           </label>
           <span
-            class="emotion-8 emotion-9 emotion-7"
+            class="emotion-9 emotion-10 emotion-8"
             data-testid="slider-value"
           >
             1
           </span>
         </div>
         <div
-          class="emotion-11 emotion-3"
+          class="emotion-12 emotion-3"
         />
         <div
-          class="emotion-13 emotion-3"
+          class="emotion-14 emotion-3"
         >
           <input
             aria-label="Name"
-            class="emotion-15 emotion-16"
+            class="emotion-16 emotion-17"
             data-direction="column"
             data-error="false"
             id=":r2u:"
@@ -6169,8 +6181,8 @@ exports[`Single slider > renders correctly prefix 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-6 {
-  color: #222638;
+.emotion-7 {
+  color: #3f4250;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -6179,9 +6191,10 @@ exports[`Single slider > renders correctly prefix 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  cursor: pointer;
 }
 
-.emotion-9 {
+.emotion-10 {
   color: #3f4250;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
@@ -6198,7 +6211,7 @@ exports[`Single slider > renders correctly prefix 1`] = `
   align-self: end;
 }
 
-.emotion-11 {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6221,7 +6234,7 @@ exports[`Single slider > renders correctly prefix 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-13 {
+.emotion-14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6245,7 +6258,7 @@ exports[`Single slider > renders correctly prefix 1`] = `
   width: 100%;
 }
 
-.emotion-15 {
+.emotion-16 {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -6263,31 +6276,31 @@ exports[`Single slider > renders correctly prefix 1`] = `
   outline: none;
 }
 
-.emotion-15:focus::-moz-range-thumb {
+.emotion-16:focus::-moz-range-thumb {
   border: 1.5px solid #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-15:focus::-webkit-slider-thumb {
+.emotion-16:focus::-webkit-slider-thumb {
   border: 1.5px solid #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-15[data-error='true'] {
+.emotion-16[data-error='true'] {
   background-image: linear-gradient(#e51963, #e51963);
 }
 
-.emotion-15[data-direction='column'] {
+.emotion-16[data-direction='column'] {
   -webkit-align-self: baseline;
   -ms-flex-item-align: baseline;
   align-self: baseline;
 }
 
-.emotion-15[aria-disabled='true'] {
+.emotion-16[aria-disabled='true'] {
   background-image: linear-gradient(#d8c5fc, #d8c5fc);
 }
 
-.emotion-15::-moz-range-track {
+.emotion-16::-moz-range-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -6298,7 +6311,7 @@ exports[`Single slider > renders correctly prefix 1`] = `
   background: transparent;
 }
 
-.emotion-15::-moz-range-thumb {
+.emotion-16::-moz-range-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -6320,20 +6333,20 @@ exports[`Single slider > renders correctly prefix 1`] = `
   top: -4px;
 }
 
-.emotion-15::-moz-range-thumb:hover,
-.emotion-15::-moz-range-thumb:active,
-.emotion-15::-moz-range-thumb:focus {
+.emotion-16::-moz-range-thumb:hover,
+.emotion-16::-moz-range-thumb:active,
+.emotion-16::-moz-range-thumb:focus {
   border: 1.5px solid #8c40ef;
 }
 
-.emotion-15::-moz-range-thumb:active,
-.emotion-15::-moz-range-thumb:focus {
+.emotion-16::-moz-range-thumb:active,
+.emotion-16::-moz-range-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
 }
 
-.emotion-15::-webkit-slider-runnable-track {
+.emotion-16::-webkit-slider-runnable-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -6344,7 +6357,7 @@ exports[`Single slider > renders correctly prefix 1`] = `
   background: transparent;
 }
 
-.emotion-15::-webkit-slider-thumb {
+.emotion-16::-webkit-slider-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -6366,14 +6379,14 @@ exports[`Single slider > renders correctly prefix 1`] = `
   top: -4px;
 }
 
-.emotion-15::-webkit-slider-thumb:hover,
-.emotion-15::-webkit-slider-thumb:active,
-.emotion-15::-webkit-slider-thumb:focus {
+.emotion-16::-webkit-slider-thumb:hover,
+.emotion-16::-webkit-slider-thumb:active,
+.emotion-16::-webkit-slider-thumb:focus {
   border: 1.5px solid #8c40ef;
 }
 
-.emotion-15::-webkit-slider-thumb:active,
-.emotion-15::-webkit-slider-thumb:focus {
+.emotion-16::-webkit-slider-thumb:active,
+.emotion-16::-webkit-slider-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
@@ -6393,27 +6406,27 @@ exports[`Single slider > renders correctly prefix 1`] = `
           class="emotion-4 emotion-3"
         >
           <label
-            class="emotion-6 emotion-7"
+            class="emotion-6 emotion-7 emotion-8"
             for=":ro:"
           >
             Label
           </label>
           <span
-            class="emotion-8 emotion-9 emotion-7"
+            class="emotion-9 emotion-10 emotion-8"
             data-testid="slider-value"
           >
             %1
           </span>
         </div>
         <div
-          class="emotion-11 emotion-3"
+          class="emotion-12 emotion-3"
         />
         <div
-          class="emotion-13 emotion-3"
+          class="emotion-14 emotion-3"
         >
           <input
             aria-label="Name"
-            class="emotion-15 emotion-16"
+            class="emotion-16 emotion-17"
             data-direction="column"
             data-error="false"
             id=":ro:"
@@ -6530,8 +6543,8 @@ exports[`Single slider > renders correctly required 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-8 {
-  color: #222638;
+.emotion-9 {
+  color: #3f4250;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -6540,9 +6553,10 @@ exports[`Single slider > renders correctly required 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  cursor: pointer;
 }
 
-.emotion-10 {
+.emotion-11 {
   color: #b3144d;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
@@ -6554,7 +6568,7 @@ exports[`Single slider > renders correctly required 1`] = `
   text-decoration: none;
 }
 
-.emotion-13 {
+.emotion-14 {
   color: #3f4250;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
@@ -6571,7 +6585,7 @@ exports[`Single slider > renders correctly required 1`] = `
   align-self: end;
 }
 
-.emotion-15 {
+.emotion-16 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6594,7 +6608,7 @@ exports[`Single slider > renders correctly required 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-17 {
+.emotion-18 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6618,7 +6632,7 @@ exports[`Single slider > renders correctly required 1`] = `
   width: 100%;
 }
 
-.emotion-19 {
+.emotion-20 {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -6636,31 +6650,31 @@ exports[`Single slider > renders correctly required 1`] = `
   outline: none;
 }
 
-.emotion-19:focus::-moz-range-thumb {
+.emotion-20:focus::-moz-range-thumb {
   border: 1.5px solid #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-19:focus::-webkit-slider-thumb {
+.emotion-20:focus::-webkit-slider-thumb {
   border: 1.5px solid #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-19[data-error='true'] {
+.emotion-20[data-error='true'] {
   background-image: linear-gradient(#e51963, #e51963);
 }
 
-.emotion-19[data-direction='column'] {
+.emotion-20[data-direction='column'] {
   -webkit-align-self: baseline;
   -ms-flex-item-align: baseline;
   align-self: baseline;
 }
 
-.emotion-19[aria-disabled='true'] {
+.emotion-20[aria-disabled='true'] {
   background-image: linear-gradient(#d8c5fc, #d8c5fc);
 }
 
-.emotion-19::-moz-range-track {
+.emotion-20::-moz-range-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -6671,7 +6685,7 @@ exports[`Single slider > renders correctly required 1`] = `
   background: transparent;
 }
 
-.emotion-19::-moz-range-thumb {
+.emotion-20::-moz-range-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -6693,20 +6707,20 @@ exports[`Single slider > renders correctly required 1`] = `
   top: -4px;
 }
 
-.emotion-19::-moz-range-thumb:hover,
-.emotion-19::-moz-range-thumb:active,
-.emotion-19::-moz-range-thumb:focus {
+.emotion-20::-moz-range-thumb:hover,
+.emotion-20::-moz-range-thumb:active,
+.emotion-20::-moz-range-thumb:focus {
   border: 1.5px solid #8c40ef;
 }
 
-.emotion-19::-moz-range-thumb:active,
-.emotion-19::-moz-range-thumb:focus {
+.emotion-20::-moz-range-thumb:active,
+.emotion-20::-moz-range-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
 }
 
-.emotion-19::-webkit-slider-runnable-track {
+.emotion-20::-webkit-slider-runnable-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -6717,7 +6731,7 @@ exports[`Single slider > renders correctly required 1`] = `
   background: transparent;
 }
 
-.emotion-19::-webkit-slider-thumb {
+.emotion-20::-webkit-slider-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -6739,14 +6753,14 @@ exports[`Single slider > renders correctly required 1`] = `
   top: -4px;
 }
 
-.emotion-19::-webkit-slider-thumb:hover,
-.emotion-19::-webkit-slider-thumb:active,
-.emotion-19::-webkit-slider-thumb:focus {
+.emotion-20::-webkit-slider-thumb:hover,
+.emotion-20::-webkit-slider-thumb:active,
+.emotion-20::-webkit-slider-thumb:focus {
   border: 1.5px solid #8c40ef;
 }
 
-.emotion-19::-webkit-slider-thumb:active,
-.emotion-19::-webkit-slider-thumb:focus {
+.emotion-20::-webkit-slider-thumb:active,
+.emotion-20::-webkit-slider-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
@@ -6769,33 +6783,33 @@ exports[`Single slider > renders correctly required 1`] = `
             class="emotion-6 emotion-3"
           >
             <label
-              class="emotion-8 emotion-9"
+              class="emotion-8 emotion-9 emotion-10"
               for=":r5:"
             >
               Label
             </label>
             <span
-              class="emotion-10 emotion-9"
+              class="emotion-11 emotion-10"
             >
               *
             </span>
           </div>
           <span
-            class="emotion-12 emotion-13 emotion-9"
+            class="emotion-13 emotion-14 emotion-10"
             data-testid="slider-value"
           >
             1
           </span>
         </div>
         <div
-          class="emotion-15 emotion-3"
+          class="emotion-16 emotion-3"
         />
         <div
-          class="emotion-17 emotion-3"
+          class="emotion-18 emotion-3"
         >
           <input
             aria-label="Name"
-            class="emotion-19 emotion-20"
+            class="emotion-20 emotion-21"
             data-direction="column"
             data-error="false"
             id=":r5:"
@@ -6889,8 +6903,8 @@ exports[`Single slider > renders correctly step 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-6 {
-  color: #222638;
+.emotion-7 {
+  color: #3f4250;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -6899,9 +6913,10 @@ exports[`Single slider > renders correctly step 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  cursor: pointer;
 }
 
-.emotion-9 {
+.emotion-10 {
   color: #3f4250;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
@@ -6918,7 +6933,7 @@ exports[`Single slider > renders correctly step 1`] = `
   align-self: end;
 }
 
-.emotion-11 {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6941,7 +6956,7 @@ exports[`Single slider > renders correctly step 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-13 {
+.emotion-14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6965,7 +6980,7 @@ exports[`Single slider > renders correctly step 1`] = `
   width: 100%;
 }
 
-.emotion-15 {
+.emotion-16 {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -6983,31 +6998,31 @@ exports[`Single slider > renders correctly step 1`] = `
   outline: none;
 }
 
-.emotion-15:focus::-moz-range-thumb {
+.emotion-16:focus::-moz-range-thumb {
   border: 1.5px solid #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-15:focus::-webkit-slider-thumb {
+.emotion-16:focus::-webkit-slider-thumb {
   border: 1.5px solid #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-15[data-error='true'] {
+.emotion-16[data-error='true'] {
   background-image: linear-gradient(#e51963, #e51963);
 }
 
-.emotion-15[data-direction='column'] {
+.emotion-16[data-direction='column'] {
   -webkit-align-self: baseline;
   -ms-flex-item-align: baseline;
   align-self: baseline;
 }
 
-.emotion-15[aria-disabled='true'] {
+.emotion-16[aria-disabled='true'] {
   background-image: linear-gradient(#d8c5fc, #d8c5fc);
 }
 
-.emotion-15::-moz-range-track {
+.emotion-16::-moz-range-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -7018,7 +7033,7 @@ exports[`Single slider > renders correctly step 1`] = `
   background: transparent;
 }
 
-.emotion-15::-moz-range-thumb {
+.emotion-16::-moz-range-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -7040,20 +7055,20 @@ exports[`Single slider > renders correctly step 1`] = `
   top: -4px;
 }
 
-.emotion-15::-moz-range-thumb:hover,
-.emotion-15::-moz-range-thumb:active,
-.emotion-15::-moz-range-thumb:focus {
+.emotion-16::-moz-range-thumb:hover,
+.emotion-16::-moz-range-thumb:active,
+.emotion-16::-moz-range-thumb:focus {
   border: 1.5px solid #8c40ef;
 }
 
-.emotion-15::-moz-range-thumb:active,
-.emotion-15::-moz-range-thumb:focus {
+.emotion-16::-moz-range-thumb:active,
+.emotion-16::-moz-range-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
 }
 
-.emotion-15::-webkit-slider-runnable-track {
+.emotion-16::-webkit-slider-runnable-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -7064,7 +7079,7 @@ exports[`Single slider > renders correctly step 1`] = `
   background: transparent;
 }
 
-.emotion-15::-webkit-slider-thumb {
+.emotion-16::-webkit-slider-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -7086,14 +7101,14 @@ exports[`Single slider > renders correctly step 1`] = `
   top: -4px;
 }
 
-.emotion-15::-webkit-slider-thumb:hover,
-.emotion-15::-webkit-slider-thumb:active,
-.emotion-15::-webkit-slider-thumb:focus {
+.emotion-16::-webkit-slider-thumb:hover,
+.emotion-16::-webkit-slider-thumb:active,
+.emotion-16::-webkit-slider-thumb:focus {
   border: 1.5px solid #8c40ef;
 }
 
-.emotion-15::-webkit-slider-thumb:active,
-.emotion-15::-webkit-slider-thumb:focus {
+.emotion-16::-webkit-slider-thumb:active,
+.emotion-16::-webkit-slider-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
@@ -7113,27 +7128,27 @@ exports[`Single slider > renders correctly step 1`] = `
           class="emotion-4 emotion-3"
         >
           <label
-            class="emotion-6 emotion-7"
+            class="emotion-6 emotion-7 emotion-8"
             for=":r32:"
           >
             Label
           </label>
           <span
-            class="emotion-8 emotion-9 emotion-7"
+            class="emotion-9 emotion-10 emotion-8"
             data-testid="slider-value"
           >
             1
           </span>
         </div>
         <div
-          class="emotion-11 emotion-3"
+          class="emotion-12 emotion-3"
         />
         <div
-          class="emotion-13 emotion-3"
+          class="emotion-14 emotion-3"
         >
           <input
             aria-label="Name"
-            class="emotion-15 emotion-16"
+            class="emotion-16 emotion-17"
             data-direction="column"
             data-error="false"
             id=":r32:"
@@ -7227,8 +7242,8 @@ exports[`Single slider > renders correctly suffix complex 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-6 {
-  color: #222638;
+.emotion-7 {
+  color: #3f4250;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -7237,9 +7252,10 @@ exports[`Single slider > renders correctly suffix complex 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  cursor: pointer;
 }
 
-.emotion-9 {
+.emotion-10 {
   color: #3f4250;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
@@ -7256,7 +7272,7 @@ exports[`Single slider > renders correctly suffix complex 1`] = `
   align-self: end;
 }
 
-.emotion-11 {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -7279,7 +7295,7 @@ exports[`Single slider > renders correctly suffix complex 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-13 {
+.emotion-14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -7303,7 +7319,7 @@ exports[`Single slider > renders correctly suffix complex 1`] = `
   width: 100%;
 }
 
-.emotion-15 {
+.emotion-16 {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -7321,31 +7337,31 @@ exports[`Single slider > renders correctly suffix complex 1`] = `
   outline: none;
 }
 
-.emotion-15:focus::-moz-range-thumb {
+.emotion-16:focus::-moz-range-thumb {
   border: 1.5px solid #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-15:focus::-webkit-slider-thumb {
+.emotion-16:focus::-webkit-slider-thumb {
   border: 1.5px solid #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-15[data-error='true'] {
+.emotion-16[data-error='true'] {
   background-image: linear-gradient(#e51963, #e51963);
 }
 
-.emotion-15[data-direction='column'] {
+.emotion-16[data-direction='column'] {
   -webkit-align-self: baseline;
   -ms-flex-item-align: baseline;
   align-self: baseline;
 }
 
-.emotion-15[aria-disabled='true'] {
+.emotion-16[aria-disabled='true'] {
   background-image: linear-gradient(#d8c5fc, #d8c5fc);
 }
 
-.emotion-15::-moz-range-track {
+.emotion-16::-moz-range-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -7356,7 +7372,7 @@ exports[`Single slider > renders correctly suffix complex 1`] = `
   background: transparent;
 }
 
-.emotion-15::-moz-range-thumb {
+.emotion-16::-moz-range-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -7378,20 +7394,20 @@ exports[`Single slider > renders correctly suffix complex 1`] = `
   top: -4px;
 }
 
-.emotion-15::-moz-range-thumb:hover,
-.emotion-15::-moz-range-thumb:active,
-.emotion-15::-moz-range-thumb:focus {
+.emotion-16::-moz-range-thumb:hover,
+.emotion-16::-moz-range-thumb:active,
+.emotion-16::-moz-range-thumb:focus {
   border: 1.5px solid #8c40ef;
 }
 
-.emotion-15::-moz-range-thumb:active,
-.emotion-15::-moz-range-thumb:focus {
+.emotion-16::-moz-range-thumb:active,
+.emotion-16::-moz-range-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
 }
 
-.emotion-15::-webkit-slider-runnable-track {
+.emotion-16::-webkit-slider-runnable-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -7402,7 +7418,7 @@ exports[`Single slider > renders correctly suffix complex 1`] = `
   background: transparent;
 }
 
-.emotion-15::-webkit-slider-thumb {
+.emotion-16::-webkit-slider-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -7424,14 +7440,14 @@ exports[`Single slider > renders correctly suffix complex 1`] = `
   top: -4px;
 }
 
-.emotion-15::-webkit-slider-thumb:hover,
-.emotion-15::-webkit-slider-thumb:active,
-.emotion-15::-webkit-slider-thumb:focus {
+.emotion-16::-webkit-slider-thumb:hover,
+.emotion-16::-webkit-slider-thumb:active,
+.emotion-16::-webkit-slider-thumb:focus {
   border: 1.5px solid #8c40ef;
 }
 
-.emotion-15::-webkit-slider-thumb:active,
-.emotion-15::-webkit-slider-thumb:focus {
+.emotion-16::-webkit-slider-thumb:active,
+.emotion-16::-webkit-slider-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
@@ -7451,13 +7467,13 @@ exports[`Single slider > renders correctly suffix complex 1`] = `
           class="emotion-4 emotion-3"
         >
           <label
-            class="emotion-6 emotion-7"
+            class="emotion-6 emotion-7 emotion-8"
             for=":re:"
           >
             Label
           </label>
           <span
-            class="emotion-8 emotion-9 emotion-7"
+            class="emotion-9 emotion-10 emotion-8"
             data-testid="slider-value"
           >
             1
@@ -7469,14 +7485,14 @@ exports[`Single slider > renders correctly suffix complex 1`] = `
           </span>
         </div>
         <div
-          class="emotion-11 emotion-3"
+          class="emotion-12 emotion-3"
         />
         <div
-          class="emotion-13 emotion-3"
+          class="emotion-14 emotion-3"
         >
           <input
             aria-label="Name"
-            class="emotion-15 emotion-16"
+            class="emotion-16 emotion-17"
             data-direction="column"
             data-error="false"
             id=":re:"
@@ -7570,8 +7586,8 @@ exports[`Single slider > renders correctly suffix string 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-6 {
-  color: #222638;
+.emotion-7 {
+  color: #3f4250;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -7580,9 +7596,10 @@ exports[`Single slider > renders correctly suffix string 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  cursor: pointer;
 }
 
-.emotion-9 {
+.emotion-10 {
   color: #3f4250;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
@@ -7599,7 +7616,7 @@ exports[`Single slider > renders correctly suffix string 1`] = `
   align-self: end;
 }
 
-.emotion-11 {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -7622,7 +7639,7 @@ exports[`Single slider > renders correctly suffix string 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-13 {
+.emotion-14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -7646,7 +7663,7 @@ exports[`Single slider > renders correctly suffix string 1`] = `
   width: 100%;
 }
 
-.emotion-15 {
+.emotion-16 {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -7664,31 +7681,31 @@ exports[`Single slider > renders correctly suffix string 1`] = `
   outline: none;
 }
 
-.emotion-15:focus::-moz-range-thumb {
+.emotion-16:focus::-moz-range-thumb {
   border: 1.5px solid #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-15:focus::-webkit-slider-thumb {
+.emotion-16:focus::-webkit-slider-thumb {
   border: 1.5px solid #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-15[data-error='true'] {
+.emotion-16[data-error='true'] {
   background-image: linear-gradient(#e51963, #e51963);
 }
 
-.emotion-15[data-direction='column'] {
+.emotion-16[data-direction='column'] {
   -webkit-align-self: baseline;
   -ms-flex-item-align: baseline;
   align-self: baseline;
 }
 
-.emotion-15[aria-disabled='true'] {
+.emotion-16[aria-disabled='true'] {
   background-image: linear-gradient(#d8c5fc, #d8c5fc);
 }
 
-.emotion-15::-moz-range-track {
+.emotion-16::-moz-range-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -7699,7 +7716,7 @@ exports[`Single slider > renders correctly suffix string 1`] = `
   background: transparent;
 }
 
-.emotion-15::-moz-range-thumb {
+.emotion-16::-moz-range-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -7721,20 +7738,20 @@ exports[`Single slider > renders correctly suffix string 1`] = `
   top: -4px;
 }
 
-.emotion-15::-moz-range-thumb:hover,
-.emotion-15::-moz-range-thumb:active,
-.emotion-15::-moz-range-thumb:focus {
+.emotion-16::-moz-range-thumb:hover,
+.emotion-16::-moz-range-thumb:active,
+.emotion-16::-moz-range-thumb:focus {
   border: 1.5px solid #8c40ef;
 }
 
-.emotion-15::-moz-range-thumb:active,
-.emotion-15::-moz-range-thumb:focus {
+.emotion-16::-moz-range-thumb:active,
+.emotion-16::-moz-range-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
 }
 
-.emotion-15::-webkit-slider-runnable-track {
+.emotion-16::-webkit-slider-runnable-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -7745,7 +7762,7 @@ exports[`Single slider > renders correctly suffix string 1`] = `
   background: transparent;
 }
 
-.emotion-15::-webkit-slider-thumb {
+.emotion-16::-webkit-slider-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -7767,14 +7784,14 @@ exports[`Single slider > renders correctly suffix string 1`] = `
   top: -4px;
 }
 
-.emotion-15::-webkit-slider-thumb:hover,
-.emotion-15::-webkit-slider-thumb:active,
-.emotion-15::-webkit-slider-thumb:focus {
+.emotion-16::-webkit-slider-thumb:hover,
+.emotion-16::-webkit-slider-thumb:active,
+.emotion-16::-webkit-slider-thumb:focus {
   border: 1.5px solid #8c40ef;
 }
 
-.emotion-15::-webkit-slider-thumb:active,
-.emotion-15::-webkit-slider-thumb:focus {
+.emotion-16::-webkit-slider-thumb:active,
+.emotion-16::-webkit-slider-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
@@ -7794,27 +7811,27 @@ exports[`Single slider > renders correctly suffix string 1`] = `
           class="emotion-4 emotion-3"
         >
           <label
-            class="emotion-6 emotion-7"
+            class="emotion-6 emotion-7 emotion-8"
             for=":ra:"
           >
             Label
           </label>
           <span
-            class="emotion-8 emotion-9 emotion-7"
+            class="emotion-9 emotion-10 emotion-8"
             data-testid="slider-value"
           >
             1%
           </span>
         </div>
         <div
-          class="emotion-11 emotion-3"
+          class="emotion-12 emotion-3"
         />
         <div
-          class="emotion-13 emotion-3"
+          class="emotion-14 emotion-3"
         >
           <input
             aria-label="Name"
-            class="emotion-15 emotion-16"
+            class="emotion-16 emotion-17"
             data-direction="column"
             data-error="false"
             id=":ra:"
@@ -7908,8 +7925,8 @@ exports[`Single slider > renders correctly suffix string input 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-6 {
-  color: #222638;
+.emotion-7 {
+  color: #3f4250;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -7918,9 +7935,10 @@ exports[`Single slider > renders correctly suffix string input 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  cursor: pointer;
 }
 
-.emotion-9 {
+.emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -7944,7 +7962,7 @@ exports[`Single slider > renders correctly suffix string input 1`] = `
   min-width: 2.5rem;
 }
 
-.emotion-11 {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -7963,52 +7981,52 @@ exports[`Single slider > renders correctly suffix string input 1`] = `
   border-radius: 0.25rem;
 }
 
-.emotion-11:focus-within {
+.emotion-12:focus-within {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-11[data-success='true'] {
+.emotion-12[data-success='true'] {
   border-color: #22674e;
 }
 
-.emotion-11[data-error='true'] {
+.emotion-12[data-error='true'] {
   border-color: #b3144d;
 }
 
-.emotion-11:hover {
+.emotion-12:hover {
   border-color: #792dd4;
 }
 
-.emotion-11[data-readonly='true'] {
+.emotion-12[data-readonly='true'] {
   border-color: #d9dadd;
   background: #f9f9fa;
   cursor: not-allowed;
 }
 
-.emotion-11[data-disabled='true'] {
+.emotion-12[data-disabled='true'] {
   border-color: #e9eaeb;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.emotion-11[data-controls='false']>.emotion-13 {
+.emotion-12[data-controls='false']>.emotion-14 {
   border-width: 0;
 }
 
-.emotion-11[data-size='small'] {
+.emotion-12[data-size='small'] {
   height: 2rem;
 }
 
-.emotion-11[data-size='medium'] {
+.emotion-12[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-11[data-size='large'] {
+.emotion-12[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-14 {
+.emotion-15 {
   display: grid;
   grid-template-columns: 1fr auto;
   -webkit-align-items: center;
@@ -8025,7 +8043,7 @@ exports[`Single slider > renders correctly suffix string input 1`] = `
   width: 100%;
 }
 
-.emotion-16 {
+.emotion-17 {
   outline: none;
   border: none;
   padding: 0;
@@ -8040,18 +8058,18 @@ exports[`Single slider > renders correctly suffix string input 1`] = `
   background: none;
 }
 
-.emotion-16[data-has-unit='true'] {
+.emotion-17[data-has-unit='true'] {
   text-align: left;
   padding: 0.5rem 0 0.5rem 0.5rem;
 }
 
-.emotion-16::-webkit-outer-spin-button,
-.emotion-16::-webkit-inner-spin-button {
+.emotion-17::-webkit-outer-spin-button,
+.emotion-17::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.emotion-16 {
+.emotion-17 {
   -moz-appearance: textfield;
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
@@ -8059,15 +8077,15 @@ exports[`Single slider > renders correctly suffix string input 1`] = `
   appearance: textfield;
 }
 
-.emotion-16[data-size='small'] {
+.emotion-17[data-size='small'] {
   height: 2rem;
 }
 
-.emotion-16[data-size='medium'] {
+.emotion-17[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-16[data-size='large'] {
+.emotion-17[data-size='large'] {
   height: 3rem;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
@@ -8075,34 +8093,34 @@ exports[`Single slider > renders correctly suffix string input 1`] = `
   line-height: 1.5rem;
 }
 
-.emotion-16:-moz-read-only {
+.emotion-17:-moz-read-only {
   color: #3f4250;
   background: #f9f9fa;
   border-block: 1px solid #d9dadd;
 }
 
-.emotion-16:read-only {
+.emotion-17:read-only {
   color: #3f4250;
   background: #f9f9fa;
   border-block: 1px solid #d9dadd;
 }
 
-.emotion-16:-moz-read-only~.emotion-18 {
+.emotion-17:-moz-read-only~.emotion-19 {
   background: #f9f9fa;
 }
 
-.emotion-16:read-only~.emotion-18 {
+.emotion-17:read-only~.emotion-19 {
   background: #f9f9fa;
 }
 
-.emotion-16:disabled {
+.emotion-17:disabled {
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
   border-block: 1px solid #e9eaeb;
 }
 
-.emotion-16:disabled~.emotion-18 {
+.emotion-17:disabled~.emotion-19 {
   background: #f3f3f4;
   cursor: not-allowed;
   -webkit-user-select: none;
@@ -8111,16 +8129,16 @@ exports[`Single slider > renders correctly suffix string input 1`] = `
   user-select: none;
 }
 
-.emotion-16:placeholder-shown~.emotion-18 {
+.emotion-17:placeholder-shown~.emotion-19 {
   color: #727683;
   font-size: 1rem;
 }
 
-.emotion-16[data-controls='false'] {
+.emotion-17[data-controls='false'] {
   text-align: left;
 }
 
-.emotion-19 {
+.emotion-20 {
   color: #3f4250;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
@@ -8143,7 +8161,7 @@ exports[`Single slider > renders correctly suffix string input 1`] = `
   font-size: 0.875rem;
 }
 
-.emotion-21 {
+.emotion-22 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -8166,7 +8184,7 @@ exports[`Single slider > renders correctly suffix string input 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-23 {
+.emotion-24 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -8190,7 +8208,7 @@ exports[`Single slider > renders correctly suffix string input 1`] = `
   width: 100%;
 }
 
-.emotion-25 {
+.emotion-26 {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -8208,31 +8226,31 @@ exports[`Single slider > renders correctly suffix string input 1`] = `
   outline: none;
 }
 
-.emotion-25:focus::-moz-range-thumb {
+.emotion-26:focus::-moz-range-thumb {
   border: 1.5px solid #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-25:focus::-webkit-slider-thumb {
+.emotion-26:focus::-webkit-slider-thumb {
   border: 1.5px solid #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-25[data-error='true'] {
+.emotion-26[data-error='true'] {
   background-image: linear-gradient(#e51963, #e51963);
 }
 
-.emotion-25[data-direction='column'] {
+.emotion-26[data-direction='column'] {
   -webkit-align-self: baseline;
   -ms-flex-item-align: baseline;
   align-self: baseline;
 }
 
-.emotion-25[aria-disabled='true'] {
+.emotion-26[aria-disabled='true'] {
   background-image: linear-gradient(#d8c5fc, #d8c5fc);
 }
 
-.emotion-25::-moz-range-track {
+.emotion-26::-moz-range-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -8243,7 +8261,7 @@ exports[`Single slider > renders correctly suffix string input 1`] = `
   background: transparent;
 }
 
-.emotion-25::-moz-range-thumb {
+.emotion-26::-moz-range-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -8265,20 +8283,20 @@ exports[`Single slider > renders correctly suffix string input 1`] = `
   top: -4px;
 }
 
-.emotion-25::-moz-range-thumb:hover,
-.emotion-25::-moz-range-thumb:active,
-.emotion-25::-moz-range-thumb:focus {
+.emotion-26::-moz-range-thumb:hover,
+.emotion-26::-moz-range-thumb:active,
+.emotion-26::-moz-range-thumb:focus {
   border: 1.5px solid #8c40ef;
 }
 
-.emotion-25::-moz-range-thumb:active,
-.emotion-25::-moz-range-thumb:focus {
+.emotion-26::-moz-range-thumb:active,
+.emotion-26::-moz-range-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
 }
 
-.emotion-25::-webkit-slider-runnable-track {
+.emotion-26::-webkit-slider-runnable-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -8289,7 +8307,7 @@ exports[`Single slider > renders correctly suffix string input 1`] = `
   background: transparent;
 }
 
-.emotion-25::-webkit-slider-thumb {
+.emotion-26::-webkit-slider-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -8311,14 +8329,14 @@ exports[`Single slider > renders correctly suffix string input 1`] = `
   top: -4px;
 }
 
-.emotion-25::-webkit-slider-thumb:hover,
-.emotion-25::-webkit-slider-thumb:active,
-.emotion-25::-webkit-slider-thumb:focus {
+.emotion-26::-webkit-slider-thumb:hover,
+.emotion-26::-webkit-slider-thumb:active,
+.emotion-26::-webkit-slider-thumb:focus {
   border: 1.5px solid #8c40ef;
 }
 
-.emotion-25::-webkit-slider-thumb:active,
-.emotion-25::-webkit-slider-thumb:focus {
+.emotion-26::-webkit-slider-thumb:active,
+.emotion-26::-webkit-slider-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
@@ -8338,17 +8356,17 @@ exports[`Single slider > renders correctly suffix string input 1`] = `
           class="emotion-4 emotion-3"
         >
           <label
-            class="emotion-6 emotion-7"
+            class="emotion-6 emotion-7 emotion-8"
             for=":ri:"
           >
             Label
           </label>
           <div
-            class="emotion-8 emotion-9 emotion-3"
+            class="emotion-9 emotion-10 emotion-3"
           >
             <div>
               <div
-                class="emotion-11 emotion-12"
+                class="emotion-12 emotion-13"
                 data-controls="false"
                 data-disabled="false"
                 data-error="false"
@@ -8357,11 +8375,11 @@ exports[`Single slider > renders correctly suffix string input 1`] = `
                 data-unit="true"
               >
                 <div
-                  class="emotion-13 emotion-14 emotion-15"
+                  class="emotion-14 emotion-15 emotion-16"
                 >
                   <input
                     aria-label="input"
-                    class="emotion-16 emotion-17"
+                    class="emotion-17 emotion-18"
                     data-controls="false"
                     data-has-unit="true"
                     data-size="small"
@@ -8375,7 +8393,7 @@ exports[`Single slider > renders correctly suffix string input 1`] = `
                     value="1"
                   />
                   <span
-                    class="emotion-18 emotion-19 emotion-7"
+                    class="emotion-19 emotion-20 emotion-8"
                   >
                     %
                   </span>
@@ -8385,14 +8403,14 @@ exports[`Single slider > renders correctly suffix string input 1`] = `
           </div>
         </div>
         <div
-          class="emotion-21 emotion-3"
+          class="emotion-22 emotion-3"
         />
         <div
-          class="emotion-23 emotion-3"
+          class="emotion-24 emotion-3"
         >
           <input
             aria-label="Name"
-            class="emotion-25 emotion-26"
+            class="emotion-26 emotion-27"
             data-direction="column"
             data-error="false"
             id=":ri:"
@@ -8486,8 +8504,8 @@ exports[`Single slider > renders correctly with custom ticks 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-6 {
-  color: #222638;
+.emotion-7 {
+  color: #3f4250;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -8496,9 +8514,10 @@ exports[`Single slider > renders correctly with custom ticks 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  cursor: pointer;
 }
 
-.emotion-9 {
+.emotion-10 {
   color: #3f4250;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
@@ -8515,7 +8534,7 @@ exports[`Single slider > renders correctly with custom ticks 1`] = `
   align-self: end;
 }
 
-.emotion-11 {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -8538,7 +8557,7 @@ exports[`Single slider > renders correctly with custom ticks 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-13 {
+.emotion-14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -8562,7 +8581,7 @@ exports[`Single slider > renders correctly with custom ticks 1`] = `
   width: 100%;
 }
 
-.emotion-15 {
+.emotion-16 {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -8580,31 +8599,31 @@ exports[`Single slider > renders correctly with custom ticks 1`] = `
   outline: none;
 }
 
-.emotion-15:focus::-moz-range-thumb {
+.emotion-16:focus::-moz-range-thumb {
   border: 1.5px solid #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-15:focus::-webkit-slider-thumb {
+.emotion-16:focus::-webkit-slider-thumb {
   border: 1.5px solid #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-15[data-error='true'] {
+.emotion-16[data-error='true'] {
   background-image: linear-gradient(#e51963, #e51963);
 }
 
-.emotion-15[data-direction='column'] {
+.emotion-16[data-direction='column'] {
   -webkit-align-self: baseline;
   -ms-flex-item-align: baseline;
   align-self: baseline;
 }
 
-.emotion-15[aria-disabled='true'] {
+.emotion-16[aria-disabled='true'] {
   background-image: linear-gradient(#d8c5fc, #d8c5fc);
 }
 
-.emotion-15::-moz-range-track {
+.emotion-16::-moz-range-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -8615,7 +8634,7 @@ exports[`Single slider > renders correctly with custom ticks 1`] = `
   background: transparent;
 }
 
-.emotion-15::-moz-range-thumb {
+.emotion-16::-moz-range-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -8637,20 +8656,20 @@ exports[`Single slider > renders correctly with custom ticks 1`] = `
   top: -4px;
 }
 
-.emotion-15::-moz-range-thumb:hover,
-.emotion-15::-moz-range-thumb:active,
-.emotion-15::-moz-range-thumb:focus {
+.emotion-16::-moz-range-thumb:hover,
+.emotion-16::-moz-range-thumb:active,
+.emotion-16::-moz-range-thumb:focus {
   border: 1.5px solid #8c40ef;
 }
 
-.emotion-15::-moz-range-thumb:active,
-.emotion-15::-moz-range-thumb:focus {
+.emotion-16::-moz-range-thumb:active,
+.emotion-16::-moz-range-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
 }
 
-.emotion-15::-webkit-slider-runnable-track {
+.emotion-16::-webkit-slider-runnable-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -8661,7 +8680,7 @@ exports[`Single slider > renders correctly with custom ticks 1`] = `
   background: transparent;
 }
 
-.emotion-15::-webkit-slider-thumb {
+.emotion-16::-webkit-slider-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -8683,20 +8702,20 @@ exports[`Single slider > renders correctly with custom ticks 1`] = `
   top: -4px;
 }
 
-.emotion-15::-webkit-slider-thumb:hover,
-.emotion-15::-webkit-slider-thumb:active,
-.emotion-15::-webkit-slider-thumb:focus {
+.emotion-16::-webkit-slider-thumb:hover,
+.emotion-16::-webkit-slider-thumb:active,
+.emotion-16::-webkit-slider-thumb:focus {
   border: 1.5px solid #8c40ef;
 }
 
-.emotion-15::-webkit-slider-thumb:active,
-.emotion-15::-webkit-slider-thumb:focus {
+.emotion-16::-webkit-slider-thumb:active,
+.emotion-16::-webkit-slider-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
 }
 
-.emotion-17 {
+.emotion-18 {
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -8706,11 +8725,11 @@ exports[`Single slider > renders correctly with custom ticks 1`] = `
   height: 1rem;
 }
 
-.emotion-17[data-double='true'] {
+.emotion-18[data-double='true'] {
   margin-top: 2.5rem;
 }
 
-.emotion-19 {
+.emotion-20 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -8724,21 +8743,21 @@ exports[`Single slider > renders correctly with custom ticks 1`] = `
   transform: translateX(-50%);
 }
 
-.emotion-19[data-element-left='true'] {
+.emotion-20[data-element-left='true'] {
   -webkit-transform: none;
   -moz-transform: none;
   -ms-transform: none;
   transform: none;
 }
 
-.emotion-19[data-element-right='true'] {
+.emotion-20[data-element-right='true'] {
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
   -ms-transform: translateX(-100%);
   transform: translateX(-100%);
 }
 
-.emotion-21 {
+.emotion-22 {
   color: #3f4250;
   font-size: 0.75rem;
   font-family: Inter,Asap,sans-serif;
@@ -8750,7 +8769,7 @@ exports[`Single slider > renders correctly with custom ticks 1`] = `
   text-decoration: none;
 }
 
-.emotion-23 {
+.emotion-24 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -8764,21 +8783,21 @@ exports[`Single slider > renders correctly with custom ticks 1`] = `
   transform: translateX(-50%);
 }
 
-.emotion-23[data-element-left='true'] {
+.emotion-24[data-element-left='true'] {
   -webkit-transform: none;
   -moz-transform: none;
   -ms-transform: none;
   transform: none;
 }
 
-.emotion-23[data-element-right='true'] {
+.emotion-24[data-element-right='true'] {
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
   -ms-transform: translateX(-100%);
   transform: translateX(-100%);
 }
 
-.emotion-25 {
+.emotion-26 {
   color: #641cb3;
   font-size: 0.75rem;
   font-family: Inter,Asap,sans-serif;
@@ -8804,27 +8823,27 @@ exports[`Single slider > renders correctly with custom ticks 1`] = `
           class="emotion-4 emotion-3"
         >
           <label
-            class="emotion-6 emotion-7"
+            class="emotion-6 emotion-7 emotion-8"
             for=":r2i:"
           >
             Label
           </label>
           <span
-            class="emotion-8 emotion-9 emotion-7"
+            class="emotion-9 emotion-10 emotion-8"
             data-testid="slider-value"
           >
             30%
           </span>
         </div>
         <div
-          class="emotion-11 emotion-3"
+          class="emotion-12 emotion-3"
         />
         <div
-          class="emotion-13 emotion-3"
+          class="emotion-14 emotion-3"
         >
           <input
             aria-label="Name"
-            class="emotion-15 emotion-16"
+            class="emotion-16 emotion-17"
             data-direction="column"
             data-error="false"
             id=":r2i:"
@@ -8838,29 +8857,29 @@ exports[`Single slider > renders correctly with custom ticks 1`] = `
             value="1"
           />
           <datalist
-            class="emotion-17 emotion-18"
+            class="emotion-18 emotion-19"
             data-double="false"
           >
             <span
-              class="emotion-19 emotion-20"
+              class="emotion-20 emotion-21"
               data-element-left="true"
               data-element-right="false"
               data-value="0"
             >
               <p
-                class="emotion-21 emotion-7"
+                class="emotion-22 emotion-8"
               >
                 1 Mb
               </p>
             </span>
             <span
-              class="emotion-23 emotion-20"
+              class="emotion-24 emotion-21"
               data-element-left="false"
               data-element-right="true"
               data-value="1"
             >
               <p
-                class="emotion-25 emotion-7"
+                class="emotion-26 emotion-8"
               >
                 30MB
               </p>
@@ -8947,8 +8966,8 @@ exports[`Single slider > renders correctly with default ticks without label 1`] 
   flex-wrap: nowrap;
 }
 
-.emotion-6 {
-  color: #222638;
+.emotion-7 {
+  color: #3f4250;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -8957,9 +8976,10 @@ exports[`Single slider > renders correctly with default ticks without label 1`] 
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  cursor: pointer;
 }
 
-.emotion-9 {
+.emotion-10 {
   color: #3f4250;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
@@ -8976,7 +8996,7 @@ exports[`Single slider > renders correctly with default ticks without label 1`] 
   align-self: end;
 }
 
-.emotion-11 {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -8999,7 +9019,7 @@ exports[`Single slider > renders correctly with default ticks without label 1`] 
   flex-wrap: nowrap;
 }
 
-.emotion-13 {
+.emotion-14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -9023,7 +9043,7 @@ exports[`Single slider > renders correctly with default ticks without label 1`] 
   width: 100%;
 }
 
-.emotion-15 {
+.emotion-16 {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -9041,31 +9061,31 @@ exports[`Single slider > renders correctly with default ticks without label 1`] 
   outline: none;
 }
 
-.emotion-15:focus::-moz-range-thumb {
+.emotion-16:focus::-moz-range-thumb {
   border: 1.5px solid #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-15:focus::-webkit-slider-thumb {
+.emotion-16:focus::-webkit-slider-thumb {
   border: 1.5px solid #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-15[data-error='true'] {
+.emotion-16[data-error='true'] {
   background-image: linear-gradient(#e51963, #e51963);
 }
 
-.emotion-15[data-direction='column'] {
+.emotion-16[data-direction='column'] {
   -webkit-align-self: baseline;
   -ms-flex-item-align: baseline;
   align-self: baseline;
 }
 
-.emotion-15[aria-disabled='true'] {
+.emotion-16[aria-disabled='true'] {
   background-image: linear-gradient(#d8c5fc, #d8c5fc);
 }
 
-.emotion-15::-moz-range-track {
+.emotion-16::-moz-range-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -9076,7 +9096,7 @@ exports[`Single slider > renders correctly with default ticks without label 1`] 
   background: transparent;
 }
 
-.emotion-15::-moz-range-thumb {
+.emotion-16::-moz-range-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -9098,20 +9118,20 @@ exports[`Single slider > renders correctly with default ticks without label 1`] 
   top: -4px;
 }
 
-.emotion-15::-moz-range-thumb:hover,
-.emotion-15::-moz-range-thumb:active,
-.emotion-15::-moz-range-thumb:focus {
+.emotion-16::-moz-range-thumb:hover,
+.emotion-16::-moz-range-thumb:active,
+.emotion-16::-moz-range-thumb:focus {
   border: 1.5px solid #8c40ef;
 }
 
-.emotion-15::-moz-range-thumb:active,
-.emotion-15::-moz-range-thumb:focus {
+.emotion-16::-moz-range-thumb:active,
+.emotion-16::-moz-range-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
 }
 
-.emotion-15::-webkit-slider-runnable-track {
+.emotion-16::-webkit-slider-runnable-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -9122,7 +9142,7 @@ exports[`Single slider > renders correctly with default ticks without label 1`] 
   background: transparent;
 }
 
-.emotion-15::-webkit-slider-thumb {
+.emotion-16::-webkit-slider-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -9144,20 +9164,20 @@ exports[`Single slider > renders correctly with default ticks without label 1`] 
   top: -4px;
 }
 
-.emotion-15::-webkit-slider-thumb:hover,
-.emotion-15::-webkit-slider-thumb:active,
-.emotion-15::-webkit-slider-thumb:focus {
+.emotion-16::-webkit-slider-thumb:hover,
+.emotion-16::-webkit-slider-thumb:active,
+.emotion-16::-webkit-slider-thumb:focus {
   border: 1.5px solid #8c40ef;
 }
 
-.emotion-15::-webkit-slider-thumb:active,
-.emotion-15::-webkit-slider-thumb:focus {
+.emotion-16::-webkit-slider-thumb:active,
+.emotion-16::-webkit-slider-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
 }
 
-.emotion-17 {
+.emotion-18 {
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -9167,11 +9187,11 @@ exports[`Single slider > renders correctly with default ticks without label 1`] 
   height: 1rem;
 }
 
-.emotion-17[data-double='true'] {
+.emotion-18[data-double='true'] {
   margin-top: 2.5rem;
 }
 
-.emotion-19 {
+.emotion-20 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -9185,21 +9205,21 @@ exports[`Single slider > renders correctly with default ticks without label 1`] 
   transform: translateX(-50%);
 }
 
-.emotion-19[data-element-left='true'] {
+.emotion-20[data-element-left='true'] {
   -webkit-transform: none;
   -moz-transform: none;
   -ms-transform: none;
   transform: none;
 }
 
-.emotion-19[data-element-right='true'] {
+.emotion-20[data-element-right='true'] {
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
   -ms-transform: translateX(-100%);
   transform: translateX(-100%);
 }
 
-.emotion-21 {
+.emotion-22 {
   color: #3f4250;
   font-size: 0.75rem;
   font-family: Inter,Asap,sans-serif;
@@ -9211,7 +9231,7 @@ exports[`Single slider > renders correctly with default ticks without label 1`] 
   text-decoration: none;
 }
 
-.emotion-23 {
+.emotion-24 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -9225,21 +9245,21 @@ exports[`Single slider > renders correctly with default ticks without label 1`] 
   transform: translateX(-50%);
 }
 
-.emotion-23[data-element-left='true'] {
+.emotion-24[data-element-left='true'] {
   -webkit-transform: none;
   -moz-transform: none;
   -ms-transform: none;
   transform: none;
 }
 
-.emotion-23[data-element-right='true'] {
+.emotion-24[data-element-right='true'] {
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
   -ms-transform: translateX(-100%);
   transform: translateX(-100%);
 }
 
-.emotion-25 {
+.emotion-26 {
   color: #641cb3;
   font-size: 0.75rem;
   font-family: Inter,Asap,sans-serif;
@@ -9265,27 +9285,27 @@ exports[`Single slider > renders correctly with default ticks without label 1`] 
           class="emotion-4 emotion-3"
         >
           <label
-            class="emotion-6 emotion-7"
+            class="emotion-6 emotion-7 emotion-8"
             for=":r2o:"
           >
             Label
           </label>
           <span
-            class="emotion-8 emotion-9 emotion-7"
+            class="emotion-9 emotion-10 emotion-8"
             data-testid="slider-value"
           >
             30%
           </span>
         </div>
         <div
-          class="emotion-11 emotion-3"
+          class="emotion-12 emotion-3"
         />
         <div
-          class="emotion-13 emotion-3"
+          class="emotion-14 emotion-3"
         >
           <input
             aria-label="Name"
-            class="emotion-15 emotion-16"
+            class="emotion-16 emotion-17"
             data-direction="column"
             data-error="false"
             id=":r2o:"
@@ -9299,29 +9319,29 @@ exports[`Single slider > renders correctly with default ticks without label 1`] 
             value="1"
           />
           <datalist
-            class="emotion-17 emotion-18"
+            class="emotion-18 emotion-19"
             data-double="false"
           >
             <span
-              class="emotion-19 emotion-20"
+              class="emotion-20 emotion-21"
               data-element-left="true"
               data-element-right="false"
               data-value="0"
             >
               <p
-                class="emotion-21 emotion-7"
+                class="emotion-22 emotion-8"
               >
                 0
               </p>
             </span>
             <span
-              class="emotion-23 emotion-20"
+              class="emotion-24 emotion-21"
               data-element-left="false"
               data-element-right="true"
               data-value="1"
             >
               <p
-                class="emotion-25 emotion-7"
+                class="emotion-26 emotion-8"
               >
                 1
               </p>
@@ -9408,8 +9428,8 @@ exports[`Single slider > renders correctly with value < min 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-6 {
-  color: #222638;
+.emotion-7 {
+  color: #3f4250;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -9418,9 +9438,10 @@ exports[`Single slider > renders correctly with value < min 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  cursor: pointer;
 }
 
-.emotion-9 {
+.emotion-10 {
   color: #3f4250;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
@@ -9437,7 +9458,7 @@ exports[`Single slider > renders correctly with value < min 1`] = `
   align-self: end;
 }
 
-.emotion-11 {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -9460,7 +9481,7 @@ exports[`Single slider > renders correctly with value < min 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-13 {
+.emotion-14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -9484,7 +9505,7 @@ exports[`Single slider > renders correctly with value < min 1`] = `
   width: 100%;
 }
 
-.emotion-15 {
+.emotion-16 {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -9502,31 +9523,31 @@ exports[`Single slider > renders correctly with value < min 1`] = `
   outline: none;
 }
 
-.emotion-15:focus::-moz-range-thumb {
+.emotion-16:focus::-moz-range-thumb {
   border: 1.5px solid #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-15:focus::-webkit-slider-thumb {
+.emotion-16:focus::-webkit-slider-thumb {
   border: 1.5px solid #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-15[data-error='true'] {
+.emotion-16[data-error='true'] {
   background-image: linear-gradient(#e51963, #e51963);
 }
 
-.emotion-15[data-direction='column'] {
+.emotion-16[data-direction='column'] {
   -webkit-align-self: baseline;
   -ms-flex-item-align: baseline;
   align-self: baseline;
 }
 
-.emotion-15[aria-disabled='true'] {
+.emotion-16[aria-disabled='true'] {
   background-image: linear-gradient(#d8c5fc, #d8c5fc);
 }
 
-.emotion-15::-moz-range-track {
+.emotion-16::-moz-range-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -9537,7 +9558,7 @@ exports[`Single slider > renders correctly with value < min 1`] = `
   background: transparent;
 }
 
-.emotion-15::-moz-range-thumb {
+.emotion-16::-moz-range-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -9559,20 +9580,20 @@ exports[`Single slider > renders correctly with value < min 1`] = `
   top: -4px;
 }
 
-.emotion-15::-moz-range-thumb:hover,
-.emotion-15::-moz-range-thumb:active,
-.emotion-15::-moz-range-thumb:focus {
+.emotion-16::-moz-range-thumb:hover,
+.emotion-16::-moz-range-thumb:active,
+.emotion-16::-moz-range-thumb:focus {
   border: 1.5px solid #8c40ef;
 }
 
-.emotion-15::-moz-range-thumb:active,
-.emotion-15::-moz-range-thumb:focus {
+.emotion-16::-moz-range-thumb:active,
+.emotion-16::-moz-range-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
 }
 
-.emotion-15::-webkit-slider-runnable-track {
+.emotion-16::-webkit-slider-runnable-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -9583,7 +9604,7 @@ exports[`Single slider > renders correctly with value < min 1`] = `
   background: transparent;
 }
 
-.emotion-15::-webkit-slider-thumb {
+.emotion-16::-webkit-slider-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -9605,14 +9626,14 @@ exports[`Single slider > renders correctly with value < min 1`] = `
   top: -4px;
 }
 
-.emotion-15::-webkit-slider-thumb:hover,
-.emotion-15::-webkit-slider-thumb:active,
-.emotion-15::-webkit-slider-thumb:focus {
+.emotion-16::-webkit-slider-thumb:hover,
+.emotion-16::-webkit-slider-thumb:active,
+.emotion-16::-webkit-slider-thumb:focus {
   border: 1.5px solid #8c40ef;
 }
 
-.emotion-15::-webkit-slider-thumb:active,
-.emotion-15::-webkit-slider-thumb:focus {
+.emotion-16::-webkit-slider-thumb:active,
+.emotion-16::-webkit-slider-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
@@ -9632,27 +9653,27 @@ exports[`Single slider > renders correctly with value < min 1`] = `
           class="emotion-4 emotion-3"
         >
           <label
-            class="emotion-6 emotion-7"
+            class="emotion-6 emotion-7 emotion-8"
             for=":r15:"
           >
             Label
           </label>
           <span
-            class="emotion-8 emotion-9 emotion-7"
+            class="emotion-9 emotion-10 emotion-8"
             data-testid="slider-value"
           >
             10
           </span>
         </div>
         <div
-          class="emotion-11 emotion-3"
+          class="emotion-12 emotion-3"
         />
         <div
-          class="emotion-13 emotion-3"
+          class="emotion-14 emotion-3"
         >
           <input
             aria-label="Name"
-            class="emotion-15 emotion-16"
+            class="emotion-16 emotion-17"
             data-direction="column"
             data-error="false"
             id=":r15:"
@@ -9746,8 +9767,8 @@ exports[`Single slider > renders correctly with value > max 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-6 {
-  color: #222638;
+.emotion-7 {
+  color: #3f4250;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -9756,9 +9777,10 @@ exports[`Single slider > renders correctly with value > max 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  cursor: pointer;
 }
 
-.emotion-9 {
+.emotion-10 {
   color: #3f4250;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
@@ -9775,7 +9797,7 @@ exports[`Single slider > renders correctly with value > max 1`] = `
   align-self: end;
 }
 
-.emotion-11 {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -9798,7 +9820,7 @@ exports[`Single slider > renders correctly with value > max 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-13 {
+.emotion-14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -9822,7 +9844,7 @@ exports[`Single slider > renders correctly with value > max 1`] = `
   width: 100%;
 }
 
-.emotion-15 {
+.emotion-16 {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -9840,31 +9862,31 @@ exports[`Single slider > renders correctly with value > max 1`] = `
   outline: none;
 }
 
-.emotion-15:focus::-moz-range-thumb {
+.emotion-16:focus::-moz-range-thumb {
   border: 1.5px solid #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-15:focus::-webkit-slider-thumb {
+.emotion-16:focus::-webkit-slider-thumb {
   border: 1.5px solid #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-15[data-error='true'] {
+.emotion-16[data-error='true'] {
   background-image: linear-gradient(#e51963, #e51963);
 }
 
-.emotion-15[data-direction='column'] {
+.emotion-16[data-direction='column'] {
   -webkit-align-self: baseline;
   -ms-flex-item-align: baseline;
   align-self: baseline;
 }
 
-.emotion-15[aria-disabled='true'] {
+.emotion-16[aria-disabled='true'] {
   background-image: linear-gradient(#d8c5fc, #d8c5fc);
 }
 
-.emotion-15::-moz-range-track {
+.emotion-16::-moz-range-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -9875,7 +9897,7 @@ exports[`Single slider > renders correctly with value > max 1`] = `
   background: transparent;
 }
 
-.emotion-15::-moz-range-thumb {
+.emotion-16::-moz-range-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -9897,20 +9919,20 @@ exports[`Single slider > renders correctly with value > max 1`] = `
   top: -4px;
 }
 
-.emotion-15::-moz-range-thumb:hover,
-.emotion-15::-moz-range-thumb:active,
-.emotion-15::-moz-range-thumb:focus {
+.emotion-16::-moz-range-thumb:hover,
+.emotion-16::-moz-range-thumb:active,
+.emotion-16::-moz-range-thumb:focus {
   border: 1.5px solid #8c40ef;
 }
 
-.emotion-15::-moz-range-thumb:active,
-.emotion-15::-moz-range-thumb:focus {
+.emotion-16::-moz-range-thumb:active,
+.emotion-16::-moz-range-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
 }
 
-.emotion-15::-webkit-slider-runnable-track {
+.emotion-16::-webkit-slider-runnable-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -9921,7 +9943,7 @@ exports[`Single slider > renders correctly with value > max 1`] = `
   background: transparent;
 }
 
-.emotion-15::-webkit-slider-thumb {
+.emotion-16::-webkit-slider-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -9943,14 +9965,14 @@ exports[`Single slider > renders correctly with value > max 1`] = `
   top: -4px;
 }
 
-.emotion-15::-webkit-slider-thumb:hover,
-.emotion-15::-webkit-slider-thumb:active,
-.emotion-15::-webkit-slider-thumb:focus {
+.emotion-16::-webkit-slider-thumb:hover,
+.emotion-16::-webkit-slider-thumb:active,
+.emotion-16::-webkit-slider-thumb:focus {
   border: 1.5px solid #8c40ef;
 }
 
-.emotion-15::-webkit-slider-thumb:active,
-.emotion-15::-webkit-slider-thumb:focus {
+.emotion-16::-webkit-slider-thumb:active,
+.emotion-16::-webkit-slider-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
@@ -9970,27 +9992,27 @@ exports[`Single slider > renders correctly with value > max 1`] = `
           class="emotion-4 emotion-3"
         >
           <label
-            class="emotion-6 emotion-7"
+            class="emotion-6 emotion-7 emotion-8"
             for=":r19:"
           >
             Label
           </label>
           <span
-            class="emotion-8 emotion-9 emotion-7"
+            class="emotion-9 emotion-10 emotion-8"
             data-testid="slider-value"
           >
             10
           </span>
         </div>
         <div
-          class="emotion-11 emotion-3"
+          class="emotion-12 emotion-3"
         />
         <div
-          class="emotion-13 emotion-3"
+          class="emotion-14 emotion-3"
         >
           <input
             aria-label="Name"
-            class="emotion-15 emotion-16"
+            class="emotion-16 emotion-17"
             data-direction="column"
             data-error="false"
             id=":r19:"
