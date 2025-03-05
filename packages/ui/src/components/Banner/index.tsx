@@ -157,7 +157,9 @@ export const Banner = ({
           {typeof image === 'string' ? <img src={image} alt="" /> : image}
         </ImageStack>
       ) : (
-        <img src={defaultImage} alt="" />
+        <ImageStack size={size} justifyContent="center">
+          <img src={defaultImage} alt="" />
+        </ImageStack>
       )}
       <Stack
         direction={direction}

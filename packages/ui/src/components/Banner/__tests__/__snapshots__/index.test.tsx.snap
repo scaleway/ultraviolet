@@ -45,6 +45,30 @@ exports[`Banner > renders correctly with a button 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 140px;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   gap: 1rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -62,7 +86,7 @@ exports[`Banner > renders correctly with a button 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-4 {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -85,7 +109,7 @@ exports[`Banner > renders correctly with a button 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-6 {
+.emotion-8 {
   color: #641cb3;
   font-size: 1.3125rem;
   font-family: Space Grotesk,Inter,Asap,sans-serif;
@@ -97,7 +121,7 @@ exports[`Banner > renders correctly with a button 1`] = `
   text-decoration: none;
 }
 
-.emotion-8 {
+.emotion-10 {
   color: #3f4250;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
@@ -109,7 +133,7 @@ exports[`Banner > renders correctly with a button 1`] = `
   text-decoration: none;
 }
 
-.emotion-10 {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -132,7 +156,7 @@ exports[`Banner > renders correctly with a button 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-12 {
+.emotion-14 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -171,22 +195,22 @@ exports[`Banner > renders correctly with a button 1`] = `
   color: #ffffff;
 }
 
-.emotion-12:hover {
+.emotion-14:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-12:active {
+.emotion-14:active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-12:hover,
-.emotion-12:active {
+.emotion-14:hover,
+.emotion-14:active {
   background: #792dd4;
   color: #f9f9fa;
 }
 
-.emotion-14 {
+.emotion-16 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -225,22 +249,22 @@ exports[`Banner > renders correctly with a button 1`] = `
   color: #3f4250;
 }
 
-.emotion-14:hover {
+.emotion-16:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-14:active {
+.emotion-16:active {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.emotion-14:hover,
-.emotion-14:active {
+.emotion-16:hover,
+.emotion-16:active {
   background: #e9eaeb;
   color: #222638;
 }
 
-.emotion-16 {
+.emotion-18 {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
@@ -249,12 +273,12 @@ exports[`Banner > renders correctly with a button 1`] = `
   min-height: 16px;
 }
 
-.emotion-16 .fillStroke {
+.emotion-18 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.emotion-16 path {
+.emotion-18 path {
   fill: currentColor;
 }
 
@@ -264,34 +288,38 @@ exports[`Banner > renders correctly with a button 1`] = `
     <div
       class="emotion-0 emotion-1"
     >
-      <img
-        alt=""
-        src="/src/components/Banner/assets/default-image.svg"
-      />
       <div
         class="emotion-2 emotion-3"
+      >
+        <img
+          alt=""
+          src="/src/components/Banner/assets/default-image.svg"
+        />
+      </div>
+      <div
+        class="emotion-4 emotion-5"
         style="flex: 1;"
       >
         <div
-          class="emotion-4 emotion-3"
+          class="emotion-6 emotion-5"
           style="flex: 1;"
         >
           <p
-            class="emotion-6 emotion-7"
+            class="emotion-8 emotion-9"
           >
             Title
           </p>
           <p
-            class="emotion-8 emotion-7"
+            class="emotion-10 emotion-9"
           >
             Description
           </p>
         </div>
         <div
-          class="emotion-10 emotion-3"
+          class="emotion-12 emotion-5"
         >
           <button
-            class="emotion-12 emotion-13"
+            class="emotion-14 emotion-15"
             type="button"
           >
             Button
@@ -299,12 +327,12 @@ exports[`Banner > renders correctly with a button 1`] = `
         </div>
       </div>
       <button
-        class="emotion-14 emotion-15"
+        class="emotion-16 emotion-17"
         name="close"
         type="button"
       >
         <svg
-          class="emotion-16 emotion-17"
+          class="emotion-18 emotion-19"
           viewBox="0 0 16 16"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -363,6 +391,30 @@ exports[`Banner > renders correctly with a link 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 140px;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   gap: 1rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -380,7 +432,7 @@ exports[`Banner > renders correctly with a link 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-4 {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -403,7 +455,7 @@ exports[`Banner > renders correctly with a link 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-6 {
+.emotion-8 {
   color: #641cb3;
   font-size: 1.3125rem;
   font-family: Space Grotesk,Inter,Asap,sans-serif;
@@ -415,7 +467,7 @@ exports[`Banner > renders correctly with a link 1`] = `
   text-decoration: none;
 }
 
-.emotion-8 {
+.emotion-10 {
   color: #3f4250;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
@@ -427,7 +479,7 @@ exports[`Banner > renders correctly with a link 1`] = `
   text-decoration: none;
 }
 
-.emotion-10 {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -450,7 +502,7 @@ exports[`Banner > renders correctly with a link 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-12 {
+.emotion-14 {
   background-color: transparent;
   border: none;
   padding: 0;
@@ -477,19 +529,19 @@ exports[`Banner > renders correctly with a link 1`] = `
   text-case: none;
 }
 
-.emotion-12 .e1afnb7a2,
-.emotion-12 .e1afnb7a3,
-.emotion-12 .emotion-16 {
+.emotion-14 .e1afnb7a2,
+.emotion-14 .e1afnb7a3,
+.emotion-14 .emotion-18 {
   -webkit-transition: -webkit-transform 250ms ease-out;
   transition: transform 250ms ease-out;
 }
 
-.emotion-12>* {
+.emotion-14>* {
   pointer-events: none;
 }
 
-.emotion-12:hover,
-.emotion-12:focus {
+.emotion-14:hover,
+.emotion-14:focus {
   outline: none;
   -webkit-text-decoration: underline;
   text-decoration: underline;
@@ -498,34 +550,34 @@ exports[`Banner > renders correctly with a link 1`] = `
   text-decoration-color: #521094;
 }
 
-.emotion-12:hover .e1afnb7a2,
-.emotion-12:focus .e1afnb7a2,
-.emotion-12:hover .e1afnb7a3,
-.emotion-12:focus .e1afnb7a3,
-.emotion-12:hover .emotion-16,
-.emotion-12:focus .emotion-16 {
+.emotion-14:hover .e1afnb7a2,
+.emotion-14:focus .e1afnb7a2,
+.emotion-14:hover .e1afnb7a3,
+.emotion-14:focus .e1afnb7a3,
+.emotion-14:hover .emotion-18,
+.emotion-14:focus .emotion-18 {
   -webkit-transform: translate(-0.25rem, 0);
   -moz-transform: translate(-0.25rem, 0);
   -ms-transform: translate(-0.25rem, 0);
   transform: translate(-0.25rem, 0);
 }
 
-.emotion-12[data-variant='inline'] {
+.emotion-14[data-variant='inline'] {
   -webkit-text-decoration: underline;
   text-decoration: underline;
   text-decoration-thickness: 1px;
 }
 
-.emotion-12:hover::after,
-.emotion-12:focus::after {
+.emotion-14:hover::after,
+.emotion-14:focus::after {
   background-color: #641cb3;
 }
 
-.emotion-12:active {
+.emotion-14:active {
   text-decoration-thickness: 2px;
 }
 
-.emotion-14 {
+.emotion-16 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -533,7 +585,7 @@ exports[`Banner > renders correctly with a link 1`] = `
   padding-bottom: 0.25rem;
 }
 
-.emotion-17 {
+.emotion-19 {
   vertical-align: middle;
   fill: currentColor;
   height: 14px;
@@ -543,12 +595,12 @@ exports[`Banner > renders correctly with a link 1`] = `
   margin-left: 0.5rem;
 }
 
-.emotion-17 .fillStroke {
+.emotion-19 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.emotion-19 {
+.emotion-21 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -587,22 +639,22 @@ exports[`Banner > renders correctly with a link 1`] = `
   color: #3f4250;
 }
 
-.emotion-19:hover {
+.emotion-21:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-19:active {
+.emotion-21:active {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.emotion-19:hover,
-.emotion-19:active {
+.emotion-21:hover,
+.emotion-21:active {
   background: #e9eaeb;
   color: #222638;
 }
 
-.emotion-21 {
+.emotion-23 {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
@@ -611,12 +663,12 @@ exports[`Banner > renders correctly with a link 1`] = `
   min-height: 16px;
 }
 
-.emotion-21 .fillStroke {
+.emotion-23 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.emotion-21 path {
+.emotion-23 path {
   fill: currentColor;
 }
 
@@ -626,34 +678,38 @@ exports[`Banner > renders correctly with a link 1`] = `
     <div
       class="emotion-0 emotion-1"
     >
-      <img
-        alt=""
-        src="/src/components/Banner/assets/default-image.svg"
-      />
       <div
         class="emotion-2 emotion-3"
+      >
+        <img
+          alt=""
+          src="/src/components/Banner/assets/default-image.svg"
+        />
+      </div>
+      <div
+        class="emotion-4 emotion-5"
         style="flex: 1;"
       >
         <div
-          class="emotion-4 emotion-3"
+          class="emotion-6 emotion-5"
           style="flex: 1;"
         >
           <p
-            class="emotion-6 emotion-7"
+            class="emotion-8 emotion-9"
           >
             Title
           </p>
           <p
-            class="emotion-8 emotion-7"
+            class="emotion-10 emotion-9"
           >
             Description
           </p>
         </div>
         <div
-          class="emotion-10 emotion-3"
+          class="emotion-12 emotion-5"
         >
           <a
-            class="emotion-12 emotion-13"
+            class="emotion-14 emotion-15"
             data-variant="standalone"
             href=""
             rel="noopener noreferrer"
@@ -662,10 +718,10 @@ exports[`Banner > renders correctly with a link 1`] = `
           >
             Link
             <span
-              class="emotion-14 emotion-15"
+              class="emotion-16 emotion-17"
             >
               <svg
-                class="emotion-16 emotion-17 emotion-18"
+                class="emotion-18 emotion-19 emotion-20"
                 viewBox="0 0 20 20"
               >
                 <path
@@ -684,12 +740,12 @@ exports[`Banner > renders correctly with a link 1`] = `
         </div>
       </div>
       <button
-        class="emotion-19 emotion-20"
+        class="emotion-21 emotion-22"
         name="close"
         type="button"
       >
         <svg
-          class="emotion-21 emotion-22"
+          class="emotion-23 emotion-24"
           viewBox="0 0 16 16"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -748,6 +804,30 @@ exports[`Banner > renders correctly with closable to false 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 140px;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   gap: 1rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
@@ -765,7 +845,7 @@ exports[`Banner > renders correctly with closable to false 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-4 {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -788,7 +868,7 @@ exports[`Banner > renders correctly with closable to false 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-6 {
+.emotion-8 {
   color: #641cb3;
   font-size: 1.3125rem;
   font-family: Space Grotesk,Inter,Asap,sans-serif;
@@ -800,7 +880,7 @@ exports[`Banner > renders correctly with closable to false 1`] = `
   text-decoration: none;
 }
 
-.emotion-8 {
+.emotion-10 {
   color: #3f4250;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
@@ -818,25 +898,29 @@ exports[`Banner > renders correctly with closable to false 1`] = `
     <div
       class="emotion-0 emotion-1"
     >
-      <img
-        alt=""
-        src="/src/components/Banner/assets/default-image.svg"
-      />
       <div
         class="emotion-2 emotion-3"
+      >
+        <img
+          alt=""
+          src="/src/components/Banner/assets/default-image.svg"
+        />
+      </div>
+      <div
+        class="emotion-4 emotion-5"
         style="flex: 1;"
       >
         <div
-          class="emotion-4 emotion-3"
+          class="emotion-6 emotion-5"
           style="flex: 1;"
         >
           <p
-            class="emotion-6 emotion-7"
+            class="emotion-8 emotion-9"
           >
             Title
           </p>
           <p
-            class="emotion-8 emotion-7"
+            class="emotion-10 emotion-9"
           >
             Description
           </p>
@@ -892,6 +976,30 @@ exports[`Banner > renders correctly with default values 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 140px;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   gap: 1rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -909,7 +1017,7 @@ exports[`Banner > renders correctly with default values 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-4 {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -932,7 +1040,7 @@ exports[`Banner > renders correctly with default values 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-6 {
+.emotion-8 {
   color: #641cb3;
   font-size: 1.3125rem;
   font-family: Space Grotesk,Inter,Asap,sans-serif;
@@ -944,7 +1052,7 @@ exports[`Banner > renders correctly with default values 1`] = `
   text-decoration: none;
 }
 
-.emotion-8 {
+.emotion-10 {
   color: #3f4250;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
@@ -956,7 +1064,7 @@ exports[`Banner > renders correctly with default values 1`] = `
   text-decoration: none;
 }
 
-.emotion-10 {
+.emotion-12 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -995,22 +1103,22 @@ exports[`Banner > renders correctly with default values 1`] = `
   color: #3f4250;
 }
 
-.emotion-10:hover {
+.emotion-12:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-10:active {
+.emotion-12:active {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.emotion-10:hover,
-.emotion-10:active {
+.emotion-12:hover,
+.emotion-12:active {
   background: #e9eaeb;
   color: #222638;
 }
 
-.emotion-12 {
+.emotion-14 {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
@@ -1019,12 +1127,12 @@ exports[`Banner > renders correctly with default values 1`] = `
   min-height: 16px;
 }
 
-.emotion-12 .fillStroke {
+.emotion-14 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.emotion-12 path {
+.emotion-14 path {
   fill: currentColor;
 }
 
@@ -1034,37 +1142,41 @@ exports[`Banner > renders correctly with default values 1`] = `
     <div
       class="emotion-0 emotion-1"
     >
-      <img
-        alt=""
-        src="/src/components/Banner/assets/default-image.svg"
-      />
       <div
         class="emotion-2 emotion-3"
+      >
+        <img
+          alt=""
+          src="/src/components/Banner/assets/default-image.svg"
+        />
+      </div>
+      <div
+        class="emotion-4 emotion-5"
         style="flex: 1;"
       >
         <div
-          class="emotion-4 emotion-3"
+          class="emotion-6 emotion-5"
           style="flex: 1;"
         >
           <p
-            class="emotion-6 emotion-7"
+            class="emotion-8 emotion-9"
           >
             Title
           </p>
           <p
-            class="emotion-8 emotion-7"
+            class="emotion-10 emotion-9"
           >
             Description
           </p>
         </div>
       </div>
       <button
-        class="emotion-10 emotion-11"
+        class="emotion-12 emotion-13"
         name="close"
         type="button"
       >
         <svg
-          class="emotion-12 emotion-13"
+          class="emotion-14 emotion-15"
           viewBox="0 0 16 16"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -1123,6 +1235,30 @@ exports[`Banner > renders correctly with direction row 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 140px;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   gap: 1rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
@@ -1140,7 +1276,7 @@ exports[`Banner > renders correctly with direction row 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-4 {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1163,7 +1299,7 @@ exports[`Banner > renders correctly with direction row 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-6 {
+.emotion-8 {
   color: #641cb3;
   font-size: 1.3125rem;
   font-family: Space Grotesk,Inter,Asap,sans-serif;
@@ -1175,7 +1311,7 @@ exports[`Banner > renders correctly with direction row 1`] = `
   text-decoration: none;
 }
 
-.emotion-8 {
+.emotion-10 {
   color: #3f4250;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
@@ -1187,7 +1323,7 @@ exports[`Banner > renders correctly with direction row 1`] = `
   text-decoration: none;
 }
 
-.emotion-10 {
+.emotion-12 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1226,22 +1362,22 @@ exports[`Banner > renders correctly with direction row 1`] = `
   color: #3f4250;
 }
 
-.emotion-10:hover {
+.emotion-12:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-10:active {
+.emotion-12:active {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.emotion-10:hover,
-.emotion-10:active {
+.emotion-12:hover,
+.emotion-12:active {
   background: #e9eaeb;
   color: #222638;
 }
 
-.emotion-12 {
+.emotion-14 {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
@@ -1250,12 +1386,12 @@ exports[`Banner > renders correctly with direction row 1`] = `
   min-height: 16px;
 }
 
-.emotion-12 .fillStroke {
+.emotion-14 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.emotion-12 path {
+.emotion-14 path {
   fill: currentColor;
 }
 
@@ -1265,37 +1401,41 @@ exports[`Banner > renders correctly with direction row 1`] = `
     <div
       class="emotion-0 emotion-1"
     >
-      <img
-        alt=""
-        src="/src/components/Banner/assets/default-image.svg"
-      />
       <div
         class="emotion-2 emotion-3"
+      >
+        <img
+          alt=""
+          src="/src/components/Banner/assets/default-image.svg"
+        />
+      </div>
+      <div
+        class="emotion-4 emotion-5"
         style="flex: 1;"
       >
         <div
-          class="emotion-4 emotion-3"
+          class="emotion-6 emotion-5"
           style="flex: 1;"
         >
           <p
-            class="emotion-6 emotion-7"
+            class="emotion-8 emotion-9"
           >
             Title
           </p>
           <p
-            class="emotion-8 emotion-7"
+            class="emotion-10 emotion-9"
           >
             Description
           </p>
         </div>
       </div>
       <button
-        class="emotion-10 emotion-11"
+        class="emotion-12 emotion-13"
         name="close"
         type="button"
       >
         <svg
-          class="emotion-12 emotion-13"
+          class="emotion-14 emotion-15"
           viewBox="0 0 16 16"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -1354,6 +1494,30 @@ exports[`Banner > sizes and variants > renders correctly with size medium and va
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 140px;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   gap: 1rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -1371,7 +1535,7 @@ exports[`Banner > sizes and variants > renders correctly with size medium and va
   flex-wrap: nowrap;
 }
 
-.emotion-4 {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1394,7 +1558,7 @@ exports[`Banner > sizes and variants > renders correctly with size medium and va
   flex-wrap: nowrap;
 }
 
-.emotion-6 {
+.emotion-8 {
   color: #641cb3;
   font-size: 1.3125rem;
   font-family: Space Grotesk,Inter,Asap,sans-serif;
@@ -1406,7 +1570,7 @@ exports[`Banner > sizes and variants > renders correctly with size medium and va
   text-decoration: none;
 }
 
-.emotion-8 {
+.emotion-10 {
   color: #3f4250;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
@@ -1418,7 +1582,7 @@ exports[`Banner > sizes and variants > renders correctly with size medium and va
   text-decoration: none;
 }
 
-.emotion-10 {
+.emotion-12 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1457,22 +1621,22 @@ exports[`Banner > sizes and variants > renders correctly with size medium and va
   color: #3f4250;
 }
 
-.emotion-10:hover {
+.emotion-12:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-10:active {
+.emotion-12:active {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.emotion-10:hover,
-.emotion-10:active {
+.emotion-12:hover,
+.emotion-12:active {
   background: #e9eaeb;
   color: #222638;
 }
 
-.emotion-12 {
+.emotion-14 {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
@@ -1481,12 +1645,12 @@ exports[`Banner > sizes and variants > renders correctly with size medium and va
   min-height: 16px;
 }
 
-.emotion-12 .fillStroke {
+.emotion-14 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.emotion-12 path {
+.emotion-14 path {
   fill: currentColor;
 }
 
@@ -1496,37 +1660,41 @@ exports[`Banner > sizes and variants > renders correctly with size medium and va
     <div
       class="emotion-0 emotion-1"
     >
-      <img
-        alt=""
-        src="/src/components/Banner/assets/default-image.svg"
-      />
       <div
         class="emotion-2 emotion-3"
+      >
+        <img
+          alt=""
+          src="/src/components/Banner/assets/default-image.svg"
+        />
+      </div>
+      <div
+        class="emotion-4 emotion-5"
         style="flex: 1;"
       >
         <div
-          class="emotion-4 emotion-3"
+          class="emotion-6 emotion-5"
           style="flex: 1;"
         >
           <p
-            class="emotion-6 emotion-7"
+            class="emotion-8 emotion-9"
           >
             Title
           </p>
           <p
-            class="emotion-8 emotion-7"
+            class="emotion-10 emotion-9"
           >
             Description
           </p>
         </div>
       </div>
       <button
-        class="emotion-10 emotion-11"
+        class="emotion-12 emotion-13"
         name="close"
         type="button"
       >
         <svg
-          class="emotion-12 emotion-13"
+          class="emotion-14 emotion-15"
           viewBox="0 0 16 16"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -1585,6 +1753,30 @@ exports[`Banner > sizes and variants > renders correctly with size medium and va
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 140px;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   gap: 1rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -1602,7 +1794,7 @@ exports[`Banner > sizes and variants > renders correctly with size medium and va
   flex-wrap: nowrap;
 }
 
-.emotion-4 {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1625,7 +1817,7 @@ exports[`Banner > sizes and variants > renders correctly with size medium and va
   flex-wrap: nowrap;
 }
 
-.emotion-6 {
+.emotion-8 {
   color: #ffffff;
   font-size: 1.3125rem;
   font-family: Space Grotesk,Inter,Asap,sans-serif;
@@ -1637,7 +1829,7 @@ exports[`Banner > sizes and variants > renders correctly with size medium and va
   text-decoration: none;
 }
 
-.emotion-8 {
+.emotion-10 {
   color: #ffffff;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
@@ -1649,7 +1841,7 @@ exports[`Banner > sizes and variants > renders correctly with size medium and va
   text-decoration: none;
 }
 
-.emotion-10 {
+.emotion-12 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1688,22 +1880,22 @@ exports[`Banner > sizes and variants > renders correctly with size medium and va
   color: #ffffff;
 }
 
-.emotion-10:hover {
+.emotion-12:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-10:active {
+.emotion-12:active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-10:hover,
-.emotion-10:active {
+.emotion-12:hover,
+.emotion-12:active {
   background: #792dd4;
   color: #f9f9fa;
 }
 
-.emotion-12 {
+.emotion-14 {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
@@ -1712,12 +1904,12 @@ exports[`Banner > sizes and variants > renders correctly with size medium and va
   min-height: 16px;
 }
 
-.emotion-12 .fillStroke {
+.emotion-14 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.emotion-12 path {
+.emotion-14 path {
   fill: currentColor;
 }
 
@@ -1727,37 +1919,41 @@ exports[`Banner > sizes and variants > renders correctly with size medium and va
     <div
       class="emotion-0 emotion-1"
     >
-      <img
-        alt=""
-        src="/src/components/Banner/assets/default-image.svg"
-      />
       <div
         class="emotion-2 emotion-3"
+      >
+        <img
+          alt=""
+          src="/src/components/Banner/assets/default-image.svg"
+        />
+      </div>
+      <div
+        class="emotion-4 emotion-5"
         style="flex: 1;"
       >
         <div
-          class="emotion-4 emotion-3"
+          class="emotion-6 emotion-5"
           style="flex: 1;"
         >
           <p
-            class="emotion-6 emotion-7"
+            class="emotion-8 emotion-9"
           >
             Title
           </p>
           <p
-            class="emotion-8 emotion-7"
+            class="emotion-10 emotion-9"
           >
             Description
           </p>
         </div>
       </div>
       <button
-        class="emotion-10 emotion-11"
+        class="emotion-12 emotion-13"
         name="close"
         type="button"
       >
         <svg
-          class="emotion-12 emotion-13"
+          class="emotion-14 emotion-15"
           viewBox="0 0 16 16"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -1816,6 +2012,30 @@ exports[`Banner > sizes and variants > renders correctly with size small and var
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 74px;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   gap: 1rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -1833,7 +2053,7 @@ exports[`Banner > sizes and variants > renders correctly with size small and var
   flex-wrap: nowrap;
 }
 
-.emotion-4 {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1856,7 +2076,7 @@ exports[`Banner > sizes and variants > renders correctly with size small and var
   flex-wrap: nowrap;
 }
 
-.emotion-6 {
+.emotion-8 {
   color: #641cb3;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
@@ -1868,7 +2088,7 @@ exports[`Banner > sizes and variants > renders correctly with size small and var
   text-decoration: none;
 }
 
-.emotion-8 {
+.emotion-10 {
   color: #3f4250;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
@@ -1880,7 +2100,7 @@ exports[`Banner > sizes and variants > renders correctly with size small and var
   text-decoration: none;
 }
 
-.emotion-10 {
+.emotion-12 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1919,22 +2139,22 @@ exports[`Banner > sizes and variants > renders correctly with size small and var
   color: #3f4250;
 }
 
-.emotion-10:hover {
+.emotion-12:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-10:active {
+.emotion-12:active {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.emotion-10:hover,
-.emotion-10:active {
+.emotion-12:hover,
+.emotion-12:active {
   background: #e9eaeb;
   color: #222638;
 }
 
-.emotion-12 {
+.emotion-14 {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
@@ -1943,12 +2163,12 @@ exports[`Banner > sizes and variants > renders correctly with size small and var
   min-height: 16px;
 }
 
-.emotion-12 .fillStroke {
+.emotion-14 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.emotion-12 path {
+.emotion-14 path {
   fill: currentColor;
 }
 
@@ -1958,37 +2178,41 @@ exports[`Banner > sizes and variants > renders correctly with size small and var
     <div
       class="emotion-0 emotion-1"
     >
-      <img
-        alt=""
-        src="/src/components/Banner/assets/default-image-small.svg"
-      />
       <div
         class="emotion-2 emotion-3"
+      >
+        <img
+          alt=""
+          src="/src/components/Banner/assets/default-image-small.svg"
+        />
+      </div>
+      <div
+        class="emotion-4 emotion-5"
         style="flex: 1;"
       >
         <div
-          class="emotion-4 emotion-3"
+          class="emotion-6 emotion-5"
           style="flex: 1;"
         >
           <p
-            class="emotion-6 emotion-7"
+            class="emotion-8 emotion-9"
           >
             Title
           </p>
           <p
-            class="emotion-8 emotion-7"
+            class="emotion-10 emotion-9"
           >
             Description
           </p>
         </div>
       </div>
       <button
-        class="emotion-10 emotion-11"
+        class="emotion-12 emotion-13"
         name="close"
         type="button"
       >
         <svg
-          class="emotion-12 emotion-13"
+          class="emotion-14 emotion-15"
           viewBox="0 0 16 16"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -2047,6 +2271,30 @@ exports[`Banner > sizes and variants > renders correctly with size small and var
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 74px;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   gap: 1rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -2064,7 +2312,7 @@ exports[`Banner > sizes and variants > renders correctly with size small and var
   flex-wrap: nowrap;
 }
 
-.emotion-4 {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2087,7 +2335,7 @@ exports[`Banner > sizes and variants > renders correctly with size small and var
   flex-wrap: nowrap;
 }
 
-.emotion-6 {
+.emotion-8 {
   color: #ffffff;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
@@ -2099,7 +2347,7 @@ exports[`Banner > sizes and variants > renders correctly with size small and var
   text-decoration: none;
 }
 
-.emotion-8 {
+.emotion-10 {
   color: #ffffff;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
@@ -2111,7 +2359,7 @@ exports[`Banner > sizes and variants > renders correctly with size small and var
   text-decoration: none;
 }
 
-.emotion-10 {
+.emotion-12 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2150,22 +2398,22 @@ exports[`Banner > sizes and variants > renders correctly with size small and var
   color: #ffffff;
 }
 
-.emotion-10:hover {
+.emotion-12:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-10:active {
+.emotion-12:active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-10:hover,
-.emotion-10:active {
+.emotion-12:hover,
+.emotion-12:active {
   background: #792dd4;
   color: #f9f9fa;
 }
 
-.emotion-12 {
+.emotion-14 {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
@@ -2174,12 +2422,12 @@ exports[`Banner > sizes and variants > renders correctly with size small and var
   min-height: 16px;
 }
 
-.emotion-12 .fillStroke {
+.emotion-14 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.emotion-12 path {
+.emotion-14 path {
   fill: currentColor;
 }
 
@@ -2189,37 +2437,41 @@ exports[`Banner > sizes and variants > renders correctly with size small and var
     <div
       class="emotion-0 emotion-1"
     >
-      <img
-        alt=""
-        src="/src/components/Banner/assets/default-image-small.svg"
-      />
       <div
         class="emotion-2 emotion-3"
+      >
+        <img
+          alt=""
+          src="/src/components/Banner/assets/default-image-small.svg"
+        />
+      </div>
+      <div
+        class="emotion-4 emotion-5"
         style="flex: 1;"
       >
         <div
-          class="emotion-4 emotion-3"
+          class="emotion-6 emotion-5"
           style="flex: 1;"
         >
           <p
-            class="emotion-6 emotion-7"
+            class="emotion-8 emotion-9"
           >
             Title
           </p>
           <p
-            class="emotion-8 emotion-7"
+            class="emotion-10 emotion-9"
           >
             Description
           </p>
         </div>
       </div>
       <button
-        class="emotion-10 emotion-11"
+        class="emotion-12 emotion-13"
         name="close"
         type="button"
       >
         <svg
-          class="emotion-12 emotion-13"
+          class="emotion-14 emotion-15"
           viewBox="0 0 16 16"
           xmlns="http://www.w3.org/2000/svg"
         >
