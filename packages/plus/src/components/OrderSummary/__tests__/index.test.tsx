@@ -1,7 +1,7 @@
 import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
-import { describe, expect, it } from 'vitest'
+import { describe, expect, test } from 'vitest'
 import { OrderSummary } from '..'
 import {
   categoryAZ,
@@ -13,6 +13,8 @@ import {
   categoryStorage,
   fixePrice,
   negativeItem,
+  numberInputCategory,
+  numberInputSubCategory,
 } from './resources'
 
 const mockItems = [
@@ -28,17 +30,13 @@ const mockItems = [
 ]
 
 describe('OrderSummary', () => {
-  it('should work with default props', () =>
-    shouldMatchEmotionSnapshot(
-      <OrderSummary
-        header="summary"
-        items={mockItems}
-        currency="EUR"
-        localeFormat="en-EN"
-      />,
-    ))
+  test('should work with default props', () =>
+    shouldMatchEmotionSnapshot(<OrderSummary items={mockItems} />))
 
-  it('should work without unitInput', () =>
+  test('should work with an empty list of item', () =>
+    shouldMatchEmotionSnapshot(<OrderSummary items={[]} />))
+
+  test('should work without unitInput', () =>
     shouldMatchEmotionSnapshot(
       <OrderSummary
         header="summary"
@@ -49,7 +47,7 @@ describe('OrderSummary', () => {
       />,
     ))
 
-  it('should work with custom timeUnit', async () => {
+  test('should work with custom timeUnit', async () => {
     renderWithTheme(
       <OrderSummary
         header="summary"
@@ -75,7 +73,7 @@ describe('OrderSummary', () => {
     expect(screen.getByTestId('total-price').textContent).toBe('€5.00')
   })
 
-  it('should work with children', () =>
+  test('should work with children', () =>
     shouldMatchEmotionSnapshot(
       <OrderSummary
         header="summary"
@@ -87,7 +85,7 @@ describe('OrderSummary', () => {
       </OrderSummary>,
     ))
 
-  it('should work with footer', () =>
+  test('should work with footer', () =>
     shouldMatchEmotionSnapshot(
       <OrderSummary
         header="summary"
@@ -98,7 +96,7 @@ describe('OrderSummary', () => {
       />,
     ))
 
-  it('should work with totalPriceInfo', () =>
+  test('should work with totalPriceInfo', () =>
     shouldMatchEmotionSnapshot(
       <OrderSummary
         header="summary"
@@ -109,7 +107,18 @@ describe('OrderSummary', () => {
       />,
     ))
 
-  it('should work with discount', () => {
+  test('should work with numberInputs', () =>
+    shouldMatchEmotionSnapshot(
+      <OrderSummary
+        header="summary"
+        items={[numberInputCategory, numberInputSubCategory]}
+        currency="EUR"
+        localeFormat="en-EN"
+        totalPriceInfo="total price info"
+      />,
+    ))
+
+  test('should work with discount', () => {
     const { asFragment } = renderWithTheme(
       <OrderSummary
         header="summary"
@@ -126,7 +135,7 @@ describe('OrderSummary', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  it('should work with fractionDigits', () => {
+  test('should work with fractionDigits', () => {
     const { asFragment } = renderWithTheme(
       <OrderSummary
         header="summary"

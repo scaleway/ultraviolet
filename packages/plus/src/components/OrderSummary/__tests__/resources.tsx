@@ -98,3 +98,32 @@ export const categoryCustomContent = {
   category: 'Custom content',
   customContent: 'FREE',
 }
+
+export const numberInputCategory = {
+  category: 'Numers of requests',
+  numberInput: true,
+  numberInputValue: 2,
+  onChangeInput: () => {},
+}
+
+export const numberInputSubCategory = {
+  category: 'Duration',
+  subCategories: [
+    {
+      title: 'Choose a duration',
+      numberInput: true,
+      numberInputValue: 2,
+      onChangeInput: () => {},
+      hidePrice: true,
+      numberInputControls: false,
+      numberInputUnit: 'ms',
+    },
+
+    {
+      title: 'duration',
+    },
+    {
+      price: 1,
+    },
+  ],
+}
