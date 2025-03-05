@@ -6,9 +6,16 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const ProfileIcon = ({ ...props }: Omit<IconProps, 'children'>) => (
-  // eslint-disable-next-line react/jsx-props-no-spreading
-  <Icon {...props}>
-    <path d="M10 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-6.535 6.494a1.23 1.23 0 0 0 .41 1.41A9.96 9.96 0 0 0 10 18c2.31 0 4.438-.784 6.131-2.1.43-.333.604-.903.408-1.41a7.002 7.002 0 0 0-13.074.003" />
-  </Icon>
-)
+export const ProfileIcon = ({ ...props }: Omit<IconProps, 'children'>) =>
+  props.size === 'large' ? (
+    // eslint-disable-next-line react/jsx-props-no-spreading
+    <Icon {...props}>
+      <path d="M10 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-6.535 6.494a1.23 1.23 0 0 0 .41 1.41A9.96 9.96 0 0 0 10 18c2.31 0 4.438-.784 6.131-2.1.43-.333.604-.903.408-1.41a7.002 7.002 0 0 0-13.074.003" />
+    </Icon>
+  ) : (
+    // eslint-disable-next-line react/jsx-props-no-spreading
+    <Icon {...props}>
+      <path d="M8.00684 8C9.93983 8 11.5068 6.433 11.5068 4.5C11.5068 2.567 9.93983 1 8.00684 1C6.07384 1 4.50684 2.567 4.50684 4.5C4.50684 6.433 6.07384 8 8.00684 8Z" />
+      <path d="M13.5307 15C14.2521 15 14.8056 14.3455 14.5484 13.6715C13.5432 11.0376 10.9932 9.16667 8.00616 9.16667C5.01915 9.16667 2.46911 11.0376 1.46396 13.6715C1.20673 14.3455 1.76021 15 2.48165 15H13.5307Z" />
+    </Icon>
+  )

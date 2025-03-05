@@ -6,9 +6,15 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const TwitterIcon = ({ ...props }: Omit<IconProps, 'children'>) => (
-  // eslint-disable-next-line react/jsx-props-no-spreading
-  <Icon {...props}>
-    <path d="M15.203 1.875h2.757l-6.023 6.883 7.085 9.367h-5.547l-4.345-5.68-4.972 5.68H1.4l6.442-7.363-6.797-8.887h5.688l3.928 5.193zm-.967 14.6h1.527L5.903 3.438H4.264z" />
-  </Icon>
-)
+export const TwitterIcon = ({ ...props }: Omit<IconProps, 'children'>) =>
+  props.size === 'large' ? (
+    // eslint-disable-next-line react/jsx-props-no-spreading
+    <Icon {...props}>
+      <path d="M15.203 1.875h2.757l-6.023 6.883 7.085 9.367h-5.547l-4.345-5.68-4.972 5.68H1.4l6.442-7.363-6.797-8.887h5.688l3.928 5.193zm-.967 14.6h1.527L5.903 3.438H4.264z" />
+    </Icon>
+  ) : (
+    // eslint-disable-next-line react/jsx-props-no-spreading
+    <Icon {...props}>
+      <path d="M12.163 1.5h2.205L9.55 7.007l5.668 7.493H10.78L7.304 9.955 3.327 14.5H1.12l5.153-5.89L.836 1.5h4.55L8.53 5.654zm-.774 11.68h1.222L4.723 2.75H3.41z" />
+    </Icon>
+  )

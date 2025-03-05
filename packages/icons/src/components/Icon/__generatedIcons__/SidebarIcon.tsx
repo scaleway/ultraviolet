@@ -6,12 +6,21 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const SidebarIcon = ({ ...props }: Omit<IconProps, 'children'>) => (
-  // eslint-disable-next-line react/jsx-props-no-spreading
-  <Icon {...props}>
-    <path
-      d="M2 5.089C2 4.184 2.76 3.5 3.636 3.5h12.728c.875 0 1.636.684 1.636 1.589v9.822c0 .905-.76 1.589-1.636 1.589H3.636C2.761 16.5 2 15.816 2 14.911zm6.303 9.967h8.06c.13 0 .183-.093.183-.145V5.09c0-.052-.054-.145-.182-.145H8.303z"
-      clipRule="evenodd"
-    />
-  </Icon>
-)
+export const SidebarIcon = ({ ...props }: Omit<IconProps, 'children'>) =>
+  props.size === 'large' ? (
+    // eslint-disable-next-line react/jsx-props-no-spreading
+    <Icon {...props}>
+      <path
+        d="M2 5.089C2 4.184 2.76 3.5 3.636 3.5h12.728c.875 0 1.636.684 1.636 1.589v9.822c0 .905-.76 1.589-1.636 1.589H3.636C2.761 16.5 2 15.816 2 14.911zm6.303 9.967h8.06c.13 0 .183-.093.183-.145V5.09c0-.052-.054-.145-.182-.145H8.303z"
+        clipRule="evenodd"
+      />
+    </Icon>
+  ) : (
+    // eslint-disable-next-line react/jsx-props-no-spreading
+    <Icon {...props}>
+      <path
+        d="M1 3.5C1 2.643 1.715 2 2.531 2H13.47c.815 0 1.53.643 1.53 1.5V12c0 .857-.715 1.5-1.531 1.5H2.53C1.715 13.5 1 12.857 1 12zM6.667 12h6.802a.05.05 0 0 0 .031-.01V3.51a.05.05 0 0 0-.031-.01H6.667z"
+        clipRule="evenodd"
+      />
+    </Icon>
+  )
