@@ -44,35 +44,53 @@ export const OrderSummary = ({
   const [timePeriodAmount, setTimePeriodAmount] = useState(valueUnitInput)
 
   const categoriesPrice = useMemo(() => {
-    const listCategories: Record<string, number> = {}
-    items.forEach(
-      category =>
-        (listCategories[category.category] =
-          category.subCategories?.reduce(
-            (acc, subCategory) =>
-              acc +
-              (calculatePrice(
-                subCategory.price ?? 0,
-                subCategory.amount ?? 1,
-                subCategory.amountFree,
-                hideTimeUnit ? 'hours' : timePeriodUnit,
-                hideTimeUnit ? 1 : timePeriodAmount,
-                subCategory.discount,
-                subCategory.fixedPrice,
-              ) || 0),
-            0,
-          ) || 0),
-    )
+    const listCategories: Record<string, { before: number; after: number }> = {}
+    items.forEach(category => {
+      const categoryPrice =
+        category.subCategories?.reduce(
+          (acc, subCategory) =>
+            acc +
+            (calculatePrice(
+              subCategory.price ?? 0,
+              subCategory.amount ?? 1,
+              subCategory.amountFree,
+              hideTimeUnit ? 'hours' : timePeriodUnit,
+              hideTimeUnit ? 1 : timePeriodAmount,
+              subCategory.discount,
+              subCategory.fixedPrice,
+            ) || 0),
+          0,
+        ) || 0
+
+      const discountedPrice = Math.max(
+        category.discount && category.discount < 1
+          ? categoryPrice * category.discount
+          : categoryPrice - (category.discount ?? 0),
+        0,
+      )
+
+      return (listCategories[category.category] = {
+        before: categoryPrice,
+        after: discountedPrice,
+      })
+    })
 
     return listCategories
   }, [hideTimeUnit, items, timePeriodAmount, timePeriodUnit])
 
   const totalPrice = useMemo(() => {
-    const price = Object.values(categoriesPrice).reduce((a, b) => a + b, 0)
+    const price = Object.values(categoriesPrice).reduce(
+      (acc, categoryPrice) => acc + categoryPrice.after,
+      0,
+    )
 
     return {
       before: Math.max(price, 0),
-      after: Math.max(price * (1 - discount), 0),
+      after: Math.max(
+        price * (discount < 1 ? 1 - discount : 1) -
+          (discount >= 1 ? Math.abs(discount) : 0),
+        0,
+      ),
     }
   }, [categoriesPrice, discount])
 

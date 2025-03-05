@@ -14,11 +14,15 @@ export const categoryDefault = {
     </Tooltip>
   ),
 }
+export const simpleCategory = {
+  category: 'SimpleCategory',
+  subCategories: [{ title: 'subcategory', price: 5 }],
+}
 
 export const categoryAZ = {
   category: 'Availability Zone',
   subCategories: [{ title: 'PARIS 1', price: 5 }],
-  discount: 50,
+  discount: 0.5,
 }
 
 export const categoryM2 = {
@@ -27,6 +31,7 @@ export const categoryM2 = {
     {
       title: 'M2-M',
       price: 124.1,
+      discount: 5,
       details: [
         'Apple M2 Chip',
         '8 Cores CPU 8 cores GPU',
