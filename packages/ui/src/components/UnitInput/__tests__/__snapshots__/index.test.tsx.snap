@@ -619,17 +619,17 @@ exports[`UnitInput > renders click 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-17[data-state='neutral']:not([data-disabled='true']):hover {
+.emotion-15[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-17[data-state='neutral']:not([data-disabled='true']):focus-visible {
+.emotion-15[data-state='neutral']:not([data-disabled='true']):focus-visible {
   outline: 5px auto Highlight;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-.emotion-17[data-state='neutral'][data-dropdownvisible='true'] {
+.emotion-15[data-state='neutral'][data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
@@ -732,17 +732,17 @@ exports[`UnitInput > renders click 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-17[data-state='neutral']:not([data-disabled='true']):hover {
+.emotion-15[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-17[data-state='neutral']:not([data-disabled='true']):focus-visible {
+.emotion-15[data-state='neutral']:not([data-disabled='true']):focus-visible {
   outline: 5px auto Highlight;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-.emotion-17[data-state='neutral'][data-dropdownvisible='true'] {
+.emotion-15[data-state='neutral'][data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
@@ -1148,153 +1148,148 @@ exports[`UnitInput > renders click 1`] = `
           />
         </div>
         <div
-          class="emotion-8 emotion-9"
-          width="12.6rem"
+          aria-label="test-unit"
+          class="emotion-8 emotion-9 emotion-10"
         >
           <div
-            aria-label="test-unit"
-            class="emotion-10 emotion-11 emotion-12"
+            aria-controls=":rm:"
+            aria-describedby=":rm:"
+            class="emotion-11 emotion-12"
+            data-container-full-width="true"
+            tabindex="-1"
           >
             <div
-              aria-controls=":rm:"
-              aria-describedby=":rm:"
-              class="emotion-13 emotion-14"
-              data-container-full-width="true"
-              tabindex="-1"
+              class="emotion-0 emotion-1"
             >
               <div
-                class="emotion-0 emotion-1"
+                aria-expanded="true"
+                aria-haspopup="listbox"
+                class="emotion-15 emotion-16"
+                data-disabled="false"
+                data-dropdownvisible="true"
+                data-readonly="false"
+                data-size="medium"
+                data-state="neutral"
+                data-testid="select-input-test-unit"
+                id="unit"
+                role="combobox"
+                tabindex="0"
               >
-                <div
-                  aria-expanded="true"
-                  aria-haspopup="listbox"
-                  class="emotion-17 emotion-18"
-                  data-disabled="false"
-                  data-dropdownvisible="true"
-                  data-readonly="false"
-                  data-size="medium"
-                  data-state="neutral"
-                  data-testid="select-input-test-unit"
-                  id="unit"
-                  role="combobox"
-                  tabindex="0"
+                <p
+                  class="emotion-17 emotion-18 emotion-19"
                 >
-                  <p
-                    class="emotion-19 emotion-20 emotion-21"
-                  >
-                    Select item
-                  </p>
-                  <div
+                  Select item
+                </p>
+                <div
+                  class="emotion-20 emotion-21"
+                >
+                  <svg
+                    aria-label="show dropdown"
                     class="emotion-22 emotion-23"
+                    viewBox="0 0 20 20"
                   >
-                    <svg
-                      aria-label="show dropdown"
-                      class="emotion-24 emotion-25"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        clip-rule="evenodd"
-                        d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
-                  </div>
+                    <path
+                      clip-rule="evenodd"
+                      d="M5.47 7.47a.75.75 0 0 1 1.06 0l3.72 3.72 3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.47 8.53a.75.75 0 0 1 0-1.06"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
                 </div>
               </div>
+            </div>
+            <div
+              class="emotion-24 emotion-25 emotion-26"
+              data-animated="false"
+              data-has-arrow="false"
+              id=":rm:"
+              role="dialog"
+              style="opacity: 1;"
+            >
               <div
-                class="emotion-26 emotion-27 emotion-28"
-                data-animated="false"
-                data-has-arrow="false"
-                id=":rm:"
-                role="dialog"
-                style="opacity: 1;"
+                class="emotion-27 emotion-1"
               >
                 <div
-                  class="emotion-29 emotion-1"
+                  class="emotion-29 emotion-30"
+                  data-grouped="false"
+                  id="select-dropdown"
+                  role="listbox"
                 >
                   <div
-                    class="emotion-31 emotion-32"
-                    data-grouped="false"
-                    id="select-dropdown"
-                    role="listbox"
+                    class="emotion-31 emotion-1"
+                    id="items"
                   >
                     <div
-                      class="emotion-33 emotion-1"
-                      id="items"
+                      aria-disabled="false"
+                      aria-label="kb"
+                      aria-selected="false"
+                      class="emotion-33 emotion-34"
+                      data-testid="option-kb"
+                      id="option-0"
+                      role="option"
+                      tabindex="0"
                     >
                       <div
-                        aria-disabled="false"
-                        aria-label="kb"
-                        aria-selected="false"
-                        class="emotion-35 emotion-36"
-                        data-testid="option-kb"
-                        id="option-0"
-                        role="option"
-                        tabindex="0"
+                        class="emotion-0 emotion-1"
+                        data-testid="option-stack-kb"
                       >
                         <div
-                          class="emotion-0 emotion-1"
-                          data-testid="option-stack-kb"
+                          class="emotion-37 emotion-38"
                         >
-                          <div
-                            class="emotion-39 emotion-40"
+                          <span
+                            class="emotion-39 emotion-40 emotion-19"
                           >
-                            <span
-                              class="emotion-41 emotion-42 emotion-21"
-                            >
-                              KB
-                            </span>
-                          </div>
+                            KB
+                          </span>
                         </div>
                       </div>
+                    </div>
+                    <div
+                      aria-disabled="false"
+                      aria-label="mb"
+                      aria-selected="false"
+                      class="emotion-33 emotion-34"
+                      data-testid="option-mb"
+                      id="option-1"
+                      role="option"
+                      tabindex="0"
+                    >
                       <div
-                        aria-disabled="false"
-                        aria-label="mb"
-                        aria-selected="false"
-                        class="emotion-35 emotion-36"
-                        data-testid="option-mb"
-                        id="option-1"
-                        role="option"
-                        tabindex="0"
+                        class="emotion-0 emotion-1"
+                        data-testid="option-stack-mb"
                       >
                         <div
-                          class="emotion-0 emotion-1"
-                          data-testid="option-stack-mb"
+                          class="emotion-37 emotion-38"
                         >
-                          <div
-                            class="emotion-39 emotion-40"
+                          <span
+                            class="emotion-39 emotion-40 emotion-19"
                           >
-                            <span
-                              class="emotion-41 emotion-42 emotion-21"
-                            >
-                              MB
-                            </span>
-                          </div>
+                            MB
+                          </span>
                         </div>
                       </div>
+                    </div>
+                    <div
+                      aria-disabled="false"
+                      aria-label="gb"
+                      aria-selected="false"
+                      class="emotion-33 emotion-34"
+                      data-testid="option-gb"
+                      id="option-2"
+                      role="option"
+                      tabindex="0"
+                    >
                       <div
-                        aria-disabled="false"
-                        aria-label="gb"
-                        aria-selected="false"
-                        class="emotion-35 emotion-36"
-                        data-testid="option-gb"
-                        id="option-2"
-                        role="option"
-                        tabindex="0"
+                        class="emotion-0 emotion-1"
+                        data-testid="option-stack-gb"
                       >
                         <div
-                          class="emotion-0 emotion-1"
-                          data-testid="option-stack-gb"
+                          class="emotion-37 emotion-38"
                         >
-                          <div
-                            class="emotion-39 emotion-40"
+                          <span
+                            class="emotion-39 emotion-40 emotion-19"
                           >
-                            <span
-                              class="emotion-41 emotion-42 emotion-21"
-                            >
-                              GB
-                            </span>
-                          </div>
+                            GB
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -1640,17 +1635,17 @@ exports[`UnitInput > renders with default props 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-17[data-state='neutral']:not([data-disabled='true']):hover {
+.emotion-15[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-17[data-state='neutral']:not([data-disabled='true']):focus-visible {
+.emotion-15[data-state='neutral']:not([data-disabled='true']):focus-visible {
   outline: 5px auto Highlight;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-.emotion-17[data-state='neutral'][data-dropdownvisible='true'] {
+.emotion-15[data-state='neutral'][data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
@@ -1786,57 +1781,52 @@ exports[`UnitInput > renders with default props 1`] = `
           />
         </div>
         <div
-          class="emotion-8 emotion-9"
-          width="12.6rem"
+          aria-label="test-unit"
+          class="emotion-8 emotion-9 emotion-10"
         >
           <div
-            aria-label="test-unit"
-            class="emotion-10 emotion-11 emotion-12"
+            aria-controls=":r2:"
+            aria-describedby=":r2:"
+            class="emotion-11 emotion-12"
+            data-container-full-width="true"
+            tabindex="-1"
           >
             <div
-              aria-controls=":r2:"
-              aria-describedby=":r2:"
-              class="emotion-13 emotion-14"
-              data-container-full-width="true"
-              tabindex="-1"
+              class="emotion-0 emotion-1"
             >
               <div
-                class="emotion-0 emotion-1"
+                aria-expanded="false"
+                aria-haspopup="listbox"
+                class="emotion-15 emotion-16"
+                data-disabled="false"
+                data-dropdownvisible="false"
+                data-readonly="false"
+                data-size="large"
+                data-state="neutral"
+                data-testid="select-input-test-unit"
+                id="unit"
+                role="combobox"
+                tabindex="0"
               >
-                <div
-                  aria-expanded="false"
-                  aria-haspopup="listbox"
-                  class="emotion-17 emotion-18"
-                  data-disabled="false"
-                  data-dropdownvisible="false"
-                  data-readonly="false"
-                  data-size="large"
-                  data-state="neutral"
-                  data-testid="select-input-test-unit"
-                  id="unit"
-                  role="combobox"
-                  tabindex="0"
+                <p
+                  class="emotion-17 emotion-18 emotion-19"
                 >
-                  <p
-                    class="emotion-19 emotion-20 emotion-21"
-                  >
-                    Select item
-                  </p>
-                  <div
+                  Select item
+                </p>
+                <div
+                  class="emotion-20 emotion-21"
+                >
+                  <svg
+                    aria-label="show dropdown"
                     class="emotion-22 emotion-23"
+                    viewBox="0 0 20 20"
                   >
-                    <svg
-                      aria-label="show dropdown"
-                      class="emotion-24 emotion-25"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        clip-rule="evenodd"
-                        d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
-                  </div>
+                    <path
+                      clip-rule="evenodd"
+                      d="M5.47 7.47a.75.75 0 0 1 1.06 0l3.72 3.72 3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.47 8.53a.75.75 0 0 1 0-1.06"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
                 </div>
               </div>
             </div>
@@ -2393,68 +2383,53 @@ exports[`UnitInput > renders with default value 1`] = `
   color: #b5b7bd;
 }
 
-.emotion-15 {
-  width: 12.6rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-15 {
-  width: 12.6rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-18 {
+.emotion-16 {
   width: 100%;
+  width: 12.6rem;
 }
 
-.emotion-18 #unit {
+.emotion-16 #unit {
   border: none;
   background: transparent;
 }
 
-.emotion-18 #unit:focus,
-.emotion-18 #unit:active {
+.emotion-16 #unit:focus,
+.emotion-16 #unit:active {
   box-shadow: none;
 }
 
-.emotion-18 {
+.emotion-16 {
   width: 100%;
   width: 12.6rem;
 }
 
-.emotion-18 #unit {
+.emotion-16 #unit {
   border: none;
   background: transparent;
 }
 
-.emotion-18 #unit:focus,
-.emotion-18 #unit:active {
+.emotion-16 #unit:focus,
+.emotion-16 #unit:active {
   box-shadow: none;
 }
 
-.emotion-20 {
+.emotion-18 {
   display: inherit;
 }
 
-.emotion-20[data-container-full-width="true"] {
+.emotion-18[data-container-full-width="true"] {
   width: 100%;
 }
 
-.emotion-20 {
+.emotion-18 {
   display: inherit;
 }
 
-.emotion-20[data-container-full-width="true"] {
+.emotion-18[data-container-full-width="true"] {
   width: 100%;
 }
 
-.emotion-24 {
+.emotion-22 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2489,85 +2464,85 @@ exports[`UnitInput > renders with default value 1`] = `
   overflow: hidden;
 }
 
-.emotion-24[data-size='small'] {
+.emotion-22[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-24[data-size='medium'] {
+.emotion-22[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-24[data-size='large'] {
+.emotion-22[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-24[data-state='neutral'] {
+.emotion-22[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.emotion-24[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-22[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-24[data-state='neutral']:not([data-disabled='true']):hover {
+.emotion-22[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-24[data-state='neutral']:not([data-disabled='true']):focus-visible {
+.emotion-22[data-state='neutral']:not([data-disabled='true']):focus-visible {
   outline: 5px auto Highlight;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-.emotion-24[data-state='neutral'][data-dropdownvisible='true'] {
+.emotion-22[data-state='neutral'][data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.emotion-24[data-state='success'] {
+.emotion-22[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.emotion-24[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-22[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #1b533f;
   box-shadow: 0px 0px 0px 3px #45d19f40;
 }
 
-.emotion-24[data-state='success'][data-dropdownvisible='true'] {
+.emotion-22[data-state='success'][data-dropdownvisible='true'] {
   border-color: #1b533f;
 }
 
-.emotion-24[data-state='danger'] {
+.emotion-22[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-24[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-22[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-24[data-state='danger'][data-dropdownvisible='true'] {
+.emotion-22[data-state='danger'][data-dropdownvisible='true'] {
   border-color: #92103f;
 }
 
-.emotion-24:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-22:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-24[data-readonly='true'] {
+.emotion-22[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-24[data-disabled='true'] {
+.emotion-22[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-24 {
+.emotion-22 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2602,85 +2577,85 @@ exports[`UnitInput > renders with default value 1`] = `
   overflow: hidden;
 }
 
-.emotion-24[data-size='small'] {
+.emotion-22[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-24[data-size='medium'] {
+.emotion-22[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-24[data-size='large'] {
+.emotion-22[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-24[data-state='neutral'] {
+.emotion-22[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.emotion-24[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-22[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-24[data-state='neutral']:not([data-disabled='true']):hover {
+.emotion-22[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-24[data-state='neutral']:not([data-disabled='true']):focus-visible {
+.emotion-22[data-state='neutral']:not([data-disabled='true']):focus-visible {
   outline: 5px auto Highlight;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-.emotion-24[data-state='neutral'][data-dropdownvisible='true'] {
+.emotion-22[data-state='neutral'][data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.emotion-24[data-state='success'] {
+.emotion-22[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.emotion-24[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-22[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #1b533f;
   box-shadow: 0px 0px 0px 3px #45d19f40;
 }
 
-.emotion-24[data-state='success'][data-dropdownvisible='true'] {
+.emotion-22[data-state='success'][data-dropdownvisible='true'] {
   border-color: #1b533f;
 }
 
-.emotion-24[data-state='danger'] {
+.emotion-22[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-24[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-22[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-24[data-state='danger'][data-dropdownvisible='true'] {
+.emotion-22[data-state='danger'][data-dropdownvisible='true'] {
   border-color: #92103f;
 }
 
-.emotion-24:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-22:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-24[data-readonly='true'] {
+.emotion-22[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-24[data-disabled='true'] {
+.emotion-22[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-27 {
+.emotion-25 {
   color: #b5b7bd;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
@@ -2695,7 +2670,35 @@ exports[`UnitInput > renders with default value 1`] = `
   white-space: nowrap;
 }
 
-.emotion-29 {
+.emotion-27 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding-right: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-27 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2724,34 +2727,6 @@ exports[`UnitInput > renders with default value 1`] = `
 }
 
 .emotion-29 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  padding-right: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-31 {
   vertical-align: middle;
   fill: #b5b7bd;
   height: 1rem;
@@ -2760,7 +2735,7 @@ exports[`UnitInput > renders with default value 1`] = `
   min-height: 1rem;
 }
 
-.emotion-31 .fillStroke {
+.emotion-29 .fillStroke {
   stroke: #b5b7bd;
   fill: none;
 }
@@ -2812,57 +2787,52 @@ exports[`UnitInput > renders with default value 1`] = `
           />
         </div>
         <div
-          class="emotion-15 emotion-16"
-          width="12.6rem"
+          aria-label="test-unit"
+          class="emotion-15 emotion-16 emotion-17"
         >
           <div
-            aria-label="test-unit"
-            class="emotion-17 emotion-18 emotion-19"
+            aria-controls=":r36:"
+            aria-describedby=":r36:"
+            class="emotion-18 emotion-19"
+            data-container-full-width="true"
+            tabindex="-1"
           >
             <div
-              aria-controls=":r36:"
-              aria-describedby=":r36:"
-              class="emotion-20 emotion-21"
-              data-container-full-width="true"
-              tabindex="-1"
+              class="emotion-0 emotion-1"
             >
               <div
-                class="emotion-0 emotion-1"
+                aria-expanded="false"
+                aria-haspopup="listbox"
+                class="emotion-22 emotion-23"
+                data-disabled="true"
+                data-dropdownvisible="false"
+                data-readonly="false"
+                data-size="large"
+                data-state="neutral"
+                data-testid="select-input-test-unit"
+                id="unit"
+                role="combobox"
+                tabindex="0"
               >
                 <div
-                  aria-expanded="false"
-                  aria-haspopup="listbox"
-                  class="emotion-24 emotion-25"
-                  data-disabled="true"
-                  data-dropdownvisible="false"
-                  data-readonly="false"
-                  data-size="large"
-                  data-state="neutral"
-                  data-testid="select-input-test-unit"
-                  id="unit"
-                  role="combobox"
-                  tabindex="0"
+                  class="emotion-24 emotion-25 emotion-6"
                 >
-                  <div
-                    class="emotion-26 emotion-27 emotion-6"
-                  >
-                    KB
-                  </div>
-                  <div
+                  KB
+                </div>
+                <div
+                  class="emotion-27 emotion-28"
+                >
+                  <svg
+                    aria-label="show dropdown"
                     class="emotion-29 emotion-30"
+                    viewBox="0 0 20 20"
                   >
-                    <svg
-                      aria-label="show dropdown"
-                      class="emotion-31 emotion-32"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        clip-rule="evenodd"
-                        d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
-                  </div>
+                    <path
+                      clip-rule="evenodd"
+                      d="M5.47 7.47a.75.75 0 0 1 1.06 0l3.72 3.72 3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.47 8.53a.75.75 0 0 1 0-1.06"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
                 </div>
               </div>
             </div>
@@ -3475,17 +3445,17 @@ exports[`UnitInput > renders with disabled and placeHolder 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-17[data-state='neutral']:not([data-disabled='true']):hover {
+.emotion-15[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-17[data-state='neutral']:not([data-disabled='true']):focus-visible {
+.emotion-15[data-state='neutral']:not([data-disabled='true']):focus-visible {
   outline: 5px auto Highlight;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-.emotion-17[data-state='neutral'][data-dropdownvisible='true'] {
+.emotion-15[data-state='neutral'][data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
@@ -3588,17 +3558,17 @@ exports[`UnitInput > renders with disabled and placeHolder 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-17[data-state='neutral']:not([data-disabled='true']):hover {
+.emotion-15[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-17[data-state='neutral']:not([data-disabled='true']):focus-visible {
+.emotion-15[data-state='neutral']:not([data-disabled='true']):focus-visible {
   outline: 5px auto Highlight;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-.emotion-17[data-state='neutral'][data-dropdownvisible='true'] {
+.emotion-15[data-state='neutral'][data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
@@ -3763,57 +3733,52 @@ exports[`UnitInput > renders with disabled and placeHolder 1`] = `
           />
         </div>
         <div
-          class="emotion-8 emotion-9"
-          width="12.6rem"
+          aria-label="test-unit"
+          class="emotion-8 emotion-9 emotion-10"
         >
           <div
-            aria-label="test-unit"
-            class="emotion-10 emotion-11 emotion-12"
+            aria-controls=":r16:"
+            aria-describedby=":r16:"
+            class="emotion-11 emotion-12"
+            data-container-full-width="true"
+            tabindex="-1"
           >
             <div
-              aria-controls=":r16:"
-              aria-describedby=":r16:"
-              class="emotion-13 emotion-14"
-              data-container-full-width="true"
-              tabindex="-1"
+              class="emotion-0 emotion-1"
             >
               <div
-                class="emotion-0 emotion-1"
+                aria-expanded="false"
+                aria-haspopup="listbox"
+                class="emotion-15 emotion-16"
+                data-disabled="true"
+                data-dropdownvisible="false"
+                data-readonly="false"
+                data-size="large"
+                data-state="neutral"
+                data-testid="select-input-test-unit"
+                id="unit"
+                role="combobox"
+                tabindex="0"
               >
-                <div
-                  aria-expanded="false"
-                  aria-haspopup="listbox"
-                  class="emotion-17 emotion-18"
-                  data-disabled="true"
-                  data-dropdownvisible="false"
-                  data-readonly="false"
-                  data-size="large"
-                  data-state="neutral"
-                  data-testid="select-input-test-unit"
-                  id="unit"
-                  role="combobox"
-                  tabindex="0"
+                <p
+                  class="emotion-17 emotion-18 emotion-19"
                 >
-                  <p
-                    class="emotion-19 emotion-20 emotion-21"
-                  >
-                    Select item
-                  </p>
-                  <div
+                  Select item
+                </p>
+                <div
+                  class="emotion-20 emotion-21"
+                >
+                  <svg
+                    aria-label="show dropdown"
                     class="emotion-22 emotion-23"
+                    viewBox="0 0 20 20"
                   >
-                    <svg
-                      aria-label="show dropdown"
-                      class="emotion-24 emotion-25"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        clip-rule="evenodd"
-                        d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
-                  </div>
+                    <path
+                      clip-rule="evenodd"
+                      d="M5.47 7.47a.75.75 0 0 1 1.06 0l3.72 3.72 3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.47 8.53a.75.75 0 0 1 0-1.06"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
                 </div>
               </div>
             </div>
@@ -4440,17 +4405,17 @@ exports[`UnitInput > renders with error  and success 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-19[data-state='neutral']:not([data-disabled='true']):hover {
+.emotion-17[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-19[data-state='neutral']:not([data-disabled='true']):focus-visible {
+.emotion-17[data-state='neutral']:not([data-disabled='true']):focus-visible {
   outline: 5px auto Highlight;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-.emotion-19[data-state='neutral'][data-dropdownvisible='true'] {
+.emotion-17[data-state='neutral'][data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
@@ -4553,17 +4518,17 @@ exports[`UnitInput > renders with error  and success 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-19[data-state='neutral']:not([data-disabled='true']):hover {
+.emotion-17[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-19[data-state='neutral']:not([data-disabled='true']):focus-visible {
+.emotion-17[data-state='neutral']:not([data-disabled='true']):focus-visible {
   outline: 5px auto Highlight;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-.emotion-19[data-state='neutral'][data-dropdownvisible='true'] {
+.emotion-17[data-state='neutral'][data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
@@ -4765,57 +4730,52 @@ exports[`UnitInput > renders with error  and success 1`] = `
           </svg>
         </div>
         <div
-          class="emotion-10 emotion-11"
-          width="12.6rem"
+          aria-label="test-unit"
+          class="emotion-10 emotion-11 emotion-12"
         >
           <div
-            aria-label="test-unit"
-            class="emotion-12 emotion-13 emotion-14"
+            aria-controls=":r1n:"
+            aria-describedby=":r1n:"
+            class="emotion-13 emotion-14"
+            data-container-full-width="true"
+            tabindex="-1"
           >
             <div
-              aria-controls=":r1n:"
-              aria-describedby=":r1n:"
-              class="emotion-15 emotion-16"
-              data-container-full-width="true"
-              tabindex="-1"
+              class="emotion-0 emotion-1"
             >
               <div
-                class="emotion-0 emotion-1"
+                aria-expanded="false"
+                aria-haspopup="listbox"
+                class="emotion-17 emotion-18"
+                data-disabled="false"
+                data-dropdownvisible="false"
+                data-readonly="false"
+                data-size="large"
+                data-state="neutral"
+                data-testid="select-input-test-unit"
+                id="unit"
+                role="combobox"
+                tabindex="0"
               >
-                <div
-                  aria-expanded="false"
-                  aria-haspopup="listbox"
-                  class="emotion-19 emotion-20"
-                  data-disabled="false"
-                  data-dropdownvisible="false"
-                  data-readonly="false"
-                  data-size="large"
-                  data-state="neutral"
-                  data-testid="select-input-test-unit"
-                  id="unit"
-                  role="combobox"
-                  tabindex="0"
+                <p
+                  class="emotion-19 emotion-20 emotion-21"
                 >
-                  <p
-                    class="emotion-21 emotion-22 emotion-23"
+                  Select item
+                </p>
+                <div
+                  class="emotion-22 emotion-23"
+                >
+                  <svg
+                    aria-label="show dropdown"
+                    class="emotion-24 emotion-9"
+                    viewBox="0 0 20 20"
                   >
-                    Select item
-                  </p>
-                  <div
-                    class="emotion-24 emotion-25"
-                  >
-                    <svg
-                      aria-label="show dropdown"
-                      class="emotion-26 emotion-9"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        clip-rule="evenodd"
-                        d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
-                  </div>
+                    <path
+                      clip-rule="evenodd"
+                      d="M5.47 7.47a.75.75 0 0 1 1.06 0l3.72 3.72 3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.47 8.53a.75.75 0 0 1 0-1.06"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
                 </div>
               </div>
             </div>
@@ -5445,17 +5405,17 @@ exports[`UnitInput > renders with error 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-19[data-state='neutral']:not([data-disabled='true']):hover {
+.emotion-17[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-19[data-state='neutral']:not([data-disabled='true']):focus-visible {
+.emotion-17[data-state='neutral']:not([data-disabled='true']):focus-visible {
   outline: 5px auto Highlight;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-.emotion-19[data-state='neutral'][data-dropdownvisible='true'] {
+.emotion-17[data-state='neutral'][data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
@@ -5558,17 +5518,17 @@ exports[`UnitInput > renders with error 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-19[data-state='neutral']:not([data-disabled='true']):hover {
+.emotion-17[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-19[data-state='neutral']:not([data-disabled='true']):focus-visible {
+.emotion-17[data-state='neutral']:not([data-disabled='true']):focus-visible {
   outline: 5px auto Highlight;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-.emotion-19[data-state='neutral'][data-dropdownvisible='true'] {
+.emotion-17[data-state='neutral'][data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
@@ -5769,57 +5729,52 @@ exports[`UnitInput > renders with error 1`] = `
           </svg>
         </div>
         <div
-          class="emotion-10 emotion-11"
-          width="12.6rem"
+          aria-label="test-unit"
+          class="emotion-10 emotion-11 emotion-12"
         >
           <div
-            aria-label="test-unit"
-            class="emotion-12 emotion-13 emotion-14"
+            aria-controls=":r1h:"
+            aria-describedby=":r1h:"
+            class="emotion-13 emotion-14"
+            data-container-full-width="true"
+            tabindex="-1"
           >
             <div
-              aria-controls=":r1h:"
-              aria-describedby=":r1h:"
-              class="emotion-15 emotion-16"
-              data-container-full-width="true"
-              tabindex="-1"
+              class="emotion-0 emotion-1"
             >
               <div
-                class="emotion-0 emotion-1"
+                aria-expanded="false"
+                aria-haspopup="listbox"
+                class="emotion-17 emotion-18"
+                data-disabled="false"
+                data-dropdownvisible="false"
+                data-readonly="false"
+                data-size="large"
+                data-state="neutral"
+                data-testid="select-input-test-unit"
+                id="unit"
+                role="combobox"
+                tabindex="0"
               >
-                <div
-                  aria-expanded="false"
-                  aria-haspopup="listbox"
-                  class="emotion-19 emotion-20"
-                  data-disabled="false"
-                  data-dropdownvisible="false"
-                  data-readonly="false"
-                  data-size="large"
-                  data-state="neutral"
-                  data-testid="select-input-test-unit"
-                  id="unit"
-                  role="combobox"
-                  tabindex="0"
+                <p
+                  class="emotion-19 emotion-20 emotion-21"
                 >
-                  <p
-                    class="emotion-21 emotion-22 emotion-23"
+                  Select item
+                </p>
+                <div
+                  class="emotion-22 emotion-23"
+                >
+                  <svg
+                    aria-label="show dropdown"
+                    class="emotion-24 emotion-9"
+                    viewBox="0 0 20 20"
                   >
-                    Select item
-                  </p>
-                  <div
-                    class="emotion-24 emotion-25"
-                  >
-                    <svg
-                      aria-label="show dropdown"
-                      class="emotion-26 emotion-9"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        clip-rule="evenodd"
-                        d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
-                  </div>
+                    <path
+                      clip-rule="evenodd"
+                      d="M5.47 7.47a.75.75 0 0 1 1.06 0l3.72 3.72 3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.47 8.53a.75.75 0 0 1 0-1.06"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
                 </div>
               </div>
             </div>
@@ -6381,69 +6336,53 @@ exports[`UnitInput > renders with label and label information 1`] = `
   color: #b5b7bd;
 }
 
-.emotion-15 {
-  width: 12.6rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-15 {
-  width: 12.6rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-18 {
+.emotion-16 {
   width: 100%;
   width: 12.6rem;
 }
 
-.emotion-18 #unit {
+.emotion-16 #unit {
   border: none;
   background: transparent;
 }
 
-.emotion-18 #unit:focus,
-.emotion-18 #unit:active {
+.emotion-16 #unit:focus,
+.emotion-16 #unit:active {
   box-shadow: none;
 }
 
-.emotion-18 {
+.emotion-16 {
   width: 100%;
   width: 12.6rem;
 }
 
-.emotion-18 #unit {
+.emotion-16 #unit {
   border: none;
   background: transparent;
 }
 
-.emotion-18 #unit:focus,
-.emotion-18 #unit:active {
+.emotion-16 #unit:focus,
+.emotion-16 #unit:active {
   box-shadow: none;
 }
 
-.emotion-20 {
+.emotion-18 {
   display: inherit;
 }
 
-.emotion-20[data-container-full-width="true"] {
+.emotion-18[data-container-full-width="true"] {
   width: 100%;
 }
 
-.emotion-20 {
+.emotion-18 {
   display: inherit;
 }
 
-.emotion-20[data-container-full-width="true"] {
+.emotion-18[data-container-full-width="true"] {
   width: 100%;
 }
 
-.emotion-24 {
+.emotion-22 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6478,85 +6417,85 @@ exports[`UnitInput > renders with label and label information 1`] = `
   overflow: hidden;
 }
 
-.emotion-24[data-size='small'] {
+.emotion-22[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-24[data-size='medium'] {
+.emotion-22[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-24[data-size='large'] {
+.emotion-22[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-24[data-state='neutral'] {
+.emotion-22[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.emotion-24[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-22[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-24[data-state='neutral']:not([data-disabled='true']):hover {
+.emotion-22[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-24[data-state='neutral']:not([data-disabled='true']):focus-visible {
+.emotion-22[data-state='neutral']:not([data-disabled='true']):focus-visible {
   outline: 5px auto Highlight;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-.emotion-24[data-state='neutral'][data-dropdownvisible='true'] {
+.emotion-22[data-state='neutral'][data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.emotion-24[data-state='success'] {
+.emotion-22[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.emotion-24[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-22[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #1b533f;
   box-shadow: 0px 0px 0px 3px #45d19f40;
 }
 
-.emotion-24[data-state='success'][data-dropdownvisible='true'] {
+.emotion-22[data-state='success'][data-dropdownvisible='true'] {
   border-color: #1b533f;
 }
 
-.emotion-24[data-state='danger'] {
+.emotion-22[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-24[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-22[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-24[data-state='danger'][data-dropdownvisible='true'] {
+.emotion-22[data-state='danger'][data-dropdownvisible='true'] {
   border-color: #92103f;
 }
 
-.emotion-24:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-22:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-24[data-readonly='true'] {
+.emotion-22[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-24[data-disabled='true'] {
+.emotion-22[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-24 {
+.emotion-22 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6591,85 +6530,85 @@ exports[`UnitInput > renders with label and label information 1`] = `
   overflow: hidden;
 }
 
-.emotion-24[data-size='small'] {
+.emotion-22[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-24[data-size='medium'] {
+.emotion-22[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-24[data-size='large'] {
+.emotion-22[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-24[data-state='neutral'] {
+.emotion-22[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.emotion-24[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-22[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-24[data-state='neutral']:not([data-disabled='true']):hover {
+.emotion-22[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-24[data-state='neutral']:not([data-disabled='true']):focus-visible {
+.emotion-22[data-state='neutral']:not([data-disabled='true']):focus-visible {
   outline: 5px auto Highlight;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-.emotion-24[data-state='neutral'][data-dropdownvisible='true'] {
+.emotion-22[data-state='neutral'][data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.emotion-24[data-state='success'] {
+.emotion-22[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.emotion-24[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-22[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #1b533f;
   box-shadow: 0px 0px 0px 3px #45d19f40;
 }
 
-.emotion-24[data-state='success'][data-dropdownvisible='true'] {
+.emotion-22[data-state='success'][data-dropdownvisible='true'] {
   border-color: #1b533f;
 }
 
-.emotion-24[data-state='danger'] {
+.emotion-22[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-24[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-22[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-24[data-state='danger'][data-dropdownvisible='true'] {
+.emotion-22[data-state='danger'][data-dropdownvisible='true'] {
   border-color: #92103f;
 }
 
-.emotion-24:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-22:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-24[data-readonly='true'] {
+.emotion-22[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-24[data-disabled='true'] {
+.emotion-22[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-27 {
+.emotion-25 {
   color: #b5b7bd;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
@@ -6685,7 +6624,35 @@ exports[`UnitInput > renders with label and label information 1`] = `
   user-select: none;
 }
 
-.emotion-29 {
+.emotion-27 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding-right: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-27 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6714,34 +6681,6 @@ exports[`UnitInput > renders with label and label information 1`] = `
 }
 
 .emotion-29 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  padding-right: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-31 {
   vertical-align: middle;
   fill: #b5b7bd;
   height: 1rem;
@@ -6750,7 +6689,7 @@ exports[`UnitInput > renders with label and label information 1`] = `
   min-height: 1rem;
 }
 
-.emotion-31 .fillStroke {
+.emotion-29 .fillStroke {
   stroke: #b5b7bd;
   fill: none;
 }
@@ -6803,57 +6742,52 @@ exports[`UnitInput > renders with label and label information 1`] = `
           />
         </div>
         <div
-          class="emotion-15 emotion-16"
-          width="12.6rem"
+          aria-label="test-unit"
+          class="emotion-15 emotion-16 emotion-17"
         >
           <div
-            aria-label="test-unit"
-            class="emotion-17 emotion-18 emotion-19"
+            aria-controls=":r2o:"
+            aria-describedby=":r2o:"
+            class="emotion-18 emotion-19"
+            data-container-full-width="true"
+            tabindex="-1"
           >
             <div
-              aria-controls=":r2o:"
-              aria-describedby=":r2o:"
-              class="emotion-20 emotion-21"
-              data-container-full-width="true"
-              tabindex="-1"
+              class="emotion-0 emotion-1"
             >
               <div
-                class="emotion-0 emotion-1"
+                aria-expanded="false"
+                aria-haspopup="listbox"
+                class="emotion-22 emotion-23"
+                data-disabled="true"
+                data-dropdownvisible="false"
+                data-readonly="false"
+                data-size="large"
+                data-state="neutral"
+                data-testid="select-input-test-unit"
+                id="unit"
+                role="combobox"
+                tabindex="0"
               >
-                <div
-                  aria-expanded="false"
-                  aria-haspopup="listbox"
-                  class="emotion-24 emotion-25"
-                  data-disabled="true"
-                  data-dropdownvisible="false"
-                  data-readonly="false"
-                  data-size="large"
-                  data-state="neutral"
-                  data-testid="select-input-test-unit"
-                  id="unit"
-                  role="combobox"
-                  tabindex="0"
+                <p
+                  class="emotion-24 emotion-25 emotion-6"
                 >
-                  <p
-                    class="emotion-26 emotion-27 emotion-6"
-                  >
-                    Select item
-                  </p>
-                  <div
+                  Select item
+                </p>
+                <div
+                  class="emotion-27 emotion-28"
+                >
+                  <svg
+                    aria-label="show dropdown"
                     class="emotion-29 emotion-30"
+                    viewBox="0 0 20 20"
                   >
-                    <svg
-                      aria-label="show dropdown"
-                      class="emotion-31 emotion-32"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        clip-rule="evenodd"
-                        d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
-                  </div>
+                    <path
+                      clip-rule="evenodd"
+                      d="M5.47 7.47a.75.75 0 0 1 1.06 0l3.72 3.72 3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.47 8.53a.75.75 0 0 1 0-1.06"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
                 </div>
               </div>
             </div>
@@ -7376,68 +7310,53 @@ exports[`UnitInput > renders with label and no label information 1`] = `
   color: #b5b7bd;
 }
 
-.emotion-11 {
-  width: 12.6rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-11 {
-  width: 12.6rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-14 {
+.emotion-12 {
   width: 100%;
+  width: 12.6rem;
 }
 
-.emotion-14 #unit {
+.emotion-12 #unit {
   border: none;
   background: transparent;
 }
 
-.emotion-14 #unit:focus,
-.emotion-14 #unit:active {
+.emotion-12 #unit:focus,
+.emotion-12 #unit:active {
   box-shadow: none;
 }
 
-.emotion-14 {
+.emotion-12 {
   width: 100%;
   width: 12.6rem;
 }
 
-.emotion-14 #unit {
+.emotion-12 #unit {
   border: none;
   background: transparent;
 }
 
-.emotion-14 #unit:focus,
-.emotion-14 #unit:active {
+.emotion-12 #unit:focus,
+.emotion-12 #unit:active {
   box-shadow: none;
 }
 
-.emotion-16 {
+.emotion-14 {
   display: inherit;
 }
 
-.emotion-16[data-container-full-width="true"] {
+.emotion-14[data-container-full-width="true"] {
   width: 100%;
 }
 
-.emotion-16 {
+.emotion-14 {
   display: inherit;
 }
 
-.emotion-16[data-container-full-width="true"] {
+.emotion-14[data-container-full-width="true"] {
   width: 100%;
 }
 
-.emotion-20 {
+.emotion-18 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -7472,85 +7391,85 @@ exports[`UnitInput > renders with label and no label information 1`] = `
   overflow: hidden;
 }
 
-.emotion-20[data-size='small'] {
+.emotion-18[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-20[data-size='medium'] {
+.emotion-18[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-20[data-size='large'] {
+.emotion-18[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-20[data-state='neutral'] {
+.emotion-18[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.emotion-20[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-18[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-20[data-state='neutral']:not([data-disabled='true']):hover {
+.emotion-18[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-20[data-state='neutral']:not([data-disabled='true']):focus-visible {
+.emotion-18[data-state='neutral']:not([data-disabled='true']):focus-visible {
   outline: 5px auto Highlight;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-.emotion-20[data-state='neutral'][data-dropdownvisible='true'] {
+.emotion-18[data-state='neutral'][data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.emotion-20[data-state='success'] {
+.emotion-18[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.emotion-20[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-18[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #1b533f;
   box-shadow: 0px 0px 0px 3px #45d19f40;
 }
 
-.emotion-20[data-state='success'][data-dropdownvisible='true'] {
+.emotion-18[data-state='success'][data-dropdownvisible='true'] {
   border-color: #1b533f;
 }
 
-.emotion-20[data-state='danger'] {
+.emotion-18[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-20[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-18[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-20[data-state='danger'][data-dropdownvisible='true'] {
+.emotion-18[data-state='danger'][data-dropdownvisible='true'] {
   border-color: #92103f;
 }
 
-.emotion-20:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-18:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-20[data-readonly='true'] {
+.emotion-18[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-20[data-disabled='true'] {
+.emotion-18[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-20 {
+.emotion-18 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -7585,85 +7504,85 @@ exports[`UnitInput > renders with label and no label information 1`] = `
   overflow: hidden;
 }
 
-.emotion-20[data-size='small'] {
+.emotion-18[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-20[data-size='medium'] {
+.emotion-18[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-20[data-size='large'] {
+.emotion-18[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-20[data-state='neutral'] {
+.emotion-18[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.emotion-20[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-18[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-20[data-state='neutral']:not([data-disabled='true']):hover {
+.emotion-18[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-20[data-state='neutral']:not([data-disabled='true']):focus-visible {
+.emotion-18[data-state='neutral']:not([data-disabled='true']):focus-visible {
   outline: 5px auto Highlight;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-.emotion-20[data-state='neutral'][data-dropdownvisible='true'] {
+.emotion-18[data-state='neutral'][data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.emotion-20[data-state='success'] {
+.emotion-18[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.emotion-20[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-18[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #1b533f;
   box-shadow: 0px 0px 0px 3px #45d19f40;
 }
 
-.emotion-20[data-state='success'][data-dropdownvisible='true'] {
+.emotion-18[data-state='success'][data-dropdownvisible='true'] {
   border-color: #1b533f;
 }
 
-.emotion-20[data-state='danger'] {
+.emotion-18[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-20[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-18[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-20[data-state='danger'][data-dropdownvisible='true'] {
+.emotion-18[data-state='danger'][data-dropdownvisible='true'] {
   border-color: #92103f;
 }
 
-.emotion-20:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-18:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-20[data-readonly='true'] {
+.emotion-18[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-20[data-disabled='true'] {
+.emotion-18[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-23 {
+.emotion-21 {
   color: #b5b7bd;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
@@ -7679,7 +7598,35 @@ exports[`UnitInput > renders with label and no label information 1`] = `
   user-select: none;
 }
 
-.emotion-25 {
+.emotion-23 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding-right: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-23 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -7708,34 +7655,6 @@ exports[`UnitInput > renders with label and no label information 1`] = `
 }
 
 .emotion-25 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  padding-right: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-27 {
   vertical-align: middle;
   fill: #b5b7bd;
   height: 1rem;
@@ -7744,7 +7663,7 @@ exports[`UnitInput > renders with label and no label information 1`] = `
   min-height: 1rem;
 }
 
-.emotion-27 .fillStroke {
+.emotion-25 .fillStroke {
   stroke: #b5b7bd;
   fill: none;
 }
@@ -7788,57 +7707,52 @@ exports[`UnitInput > renders with label and no label information 1`] = `
           />
         </div>
         <div
-          class="emotion-11 emotion-12"
-          width="12.6rem"
+          aria-label="test-unit"
+          class="emotion-11 emotion-12 emotion-13"
         >
           <div
-            aria-label="test-unit"
-            class="emotion-13 emotion-14 emotion-15"
+            aria-controls=":r2h:"
+            aria-describedby=":r2h:"
+            class="emotion-14 emotion-15"
+            data-container-full-width="true"
+            tabindex="-1"
           >
             <div
-              aria-controls=":r2h:"
-              aria-describedby=":r2h:"
-              class="emotion-16 emotion-17"
-              data-container-full-width="true"
-              tabindex="-1"
+              class="emotion-0 emotion-1"
             >
               <div
-                class="emotion-0 emotion-1"
+                aria-expanded="false"
+                aria-haspopup="listbox"
+                class="emotion-18 emotion-19"
+                data-disabled="true"
+                data-dropdownvisible="false"
+                data-readonly="false"
+                data-size="large"
+                data-state="neutral"
+                data-testid="select-input-test-unit"
+                id="unit"
+                role="combobox"
+                tabindex="0"
               >
-                <div
-                  aria-expanded="false"
-                  aria-haspopup="listbox"
-                  class="emotion-20 emotion-21"
-                  data-disabled="true"
-                  data-dropdownvisible="false"
-                  data-readonly="false"
-                  data-size="large"
-                  data-state="neutral"
-                  data-testid="select-input-test-unit"
-                  id="unit"
-                  role="combobox"
-                  tabindex="0"
+                <p
+                  class="emotion-20 emotion-21 emotion-4"
                 >
-                  <p
-                    class="emotion-22 emotion-23 emotion-4"
-                  >
-                    Select item
-                  </p>
-                  <div
+                  Select item
+                </p>
+                <div
+                  class="emotion-23 emotion-24"
+                >
+                  <svg
+                    aria-label="show dropdown"
                     class="emotion-25 emotion-26"
+                    viewBox="0 0 20 20"
                   >
-                    <svg
-                      aria-label="show dropdown"
-                      class="emotion-27 emotion-28"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        clip-rule="evenodd"
-                        d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
-                  </div>
+                    <path
+                      clip-rule="evenodd"
+                      d="M5.47 7.47a.75.75 0 0 1 1.06 0l3.72 3.72 3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.47 8.53a.75.75 0 0 1 0-1.06"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
                 </div>
               </div>
             </div>
@@ -8180,17 +8094,17 @@ exports[`UnitInput > renders with min max 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-17[data-state='neutral']:not([data-disabled='true']):hover {
+.emotion-15[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-17[data-state='neutral']:not([data-disabled='true']):focus-visible {
+.emotion-15[data-state='neutral']:not([data-disabled='true']):focus-visible {
   outline: 5px auto Highlight;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-.emotion-17[data-state='neutral'][data-dropdownvisible='true'] {
+.emotion-15[data-state='neutral'][data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
@@ -8326,57 +8240,52 @@ exports[`UnitInput > renders with min max 1`] = `
           />
         </div>
         <div
-          class="emotion-8 emotion-9"
-          width="12.6rem"
+          aria-label="-unit"
+          class="emotion-8 emotion-9 emotion-10"
         >
           <div
-            aria-label="-unit"
-            class="emotion-10 emotion-11 emotion-12"
+            aria-controls=":r7:"
+            aria-describedby=":r7:"
+            class="emotion-11 emotion-12"
+            data-container-full-width="true"
+            tabindex="-1"
           >
             <div
-              aria-controls=":r7:"
-              aria-describedby=":r7:"
-              class="emotion-13 emotion-14"
-              data-container-full-width="true"
-              tabindex="-1"
+              class="emotion-0 emotion-1"
             >
               <div
-                class="emotion-0 emotion-1"
+                aria-expanded="false"
+                aria-haspopup="listbox"
+                class="emotion-15 emotion-16"
+                data-disabled="false"
+                data-dropdownvisible="false"
+                data-readonly="false"
+                data-size="large"
+                data-state="neutral"
+                data-testid="select-input--unit"
+                id="unit"
+                role="combobox"
+                tabindex="0"
               >
-                <div
-                  aria-expanded="false"
-                  aria-haspopup="listbox"
-                  class="emotion-17 emotion-18"
-                  data-disabled="false"
-                  data-dropdownvisible="false"
-                  data-readonly="false"
-                  data-size="large"
-                  data-state="neutral"
-                  data-testid="select-input--unit"
-                  id="unit"
-                  role="combobox"
-                  tabindex="0"
+                <p
+                  class="emotion-17 emotion-18 emotion-19"
                 >
-                  <p
-                    class="emotion-19 emotion-20 emotion-21"
-                  >
-                    Select item
-                  </p>
-                  <div
+                  Select item
+                </p>
+                <div
+                  class="emotion-20 emotion-21"
+                >
+                  <svg
+                    aria-label="show dropdown"
                     class="emotion-22 emotion-23"
+                    viewBox="0 0 20 20"
                   >
-                    <svg
-                      aria-label="show dropdown"
-                      class="emotion-24 emotion-25"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        clip-rule="evenodd"
-                        d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
-                  </div>
+                    <path
+                      clip-rule="evenodd"
+                      d="M5.47 7.47a.75.75 0 0 1 1.06 0l3.72 3.72 3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.47 8.53a.75.75 0 0 1 0-1.06"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
                 </div>
               </div>
             </div>
@@ -8933,68 +8842,53 @@ exports[`UnitInput > renders with no label and label information 1`] = `
   color: #b5b7bd;
 }
 
-.emotion-15 {
-  width: 12.6rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-15 {
-  width: 12.6rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-18 {
+.emotion-16 {
   width: 100%;
+  width: 12.6rem;
 }
 
-.emotion-18 #unit {
+.emotion-16 #unit {
   border: none;
   background: transparent;
 }
 
-.emotion-18 #unit:focus,
-.emotion-18 #unit:active {
+.emotion-16 #unit:focus,
+.emotion-16 #unit:active {
   box-shadow: none;
 }
 
-.emotion-18 {
+.emotion-16 {
   width: 100%;
   width: 12.6rem;
 }
 
-.emotion-18 #unit {
+.emotion-16 #unit {
   border: none;
   background: transparent;
 }
 
-.emotion-18 #unit:focus,
-.emotion-18 #unit:active {
+.emotion-16 #unit:focus,
+.emotion-16 #unit:active {
   box-shadow: none;
 }
 
-.emotion-20 {
+.emotion-18 {
   display: inherit;
 }
 
-.emotion-20[data-container-full-width="true"] {
+.emotion-18[data-container-full-width="true"] {
   width: 100%;
 }
 
-.emotion-20 {
+.emotion-18 {
   display: inherit;
 }
 
-.emotion-20[data-container-full-width="true"] {
+.emotion-18[data-container-full-width="true"] {
   width: 100%;
 }
 
-.emotion-24 {
+.emotion-22 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -9029,85 +8923,85 @@ exports[`UnitInput > renders with no label and label information 1`] = `
   overflow: hidden;
 }
 
-.emotion-24[data-size='small'] {
+.emotion-22[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-24[data-size='medium'] {
+.emotion-22[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-24[data-size='large'] {
+.emotion-22[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-24[data-state='neutral'] {
+.emotion-22[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.emotion-24[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-22[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-24[data-state='neutral']:not([data-disabled='true']):hover {
+.emotion-22[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-24[data-state='neutral']:not([data-disabled='true']):focus-visible {
+.emotion-22[data-state='neutral']:not([data-disabled='true']):focus-visible {
   outline: 5px auto Highlight;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-.emotion-24[data-state='neutral'][data-dropdownvisible='true'] {
+.emotion-22[data-state='neutral'][data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.emotion-24[data-state='success'] {
+.emotion-22[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.emotion-24[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-22[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #1b533f;
   box-shadow: 0px 0px 0px 3px #45d19f40;
 }
 
-.emotion-24[data-state='success'][data-dropdownvisible='true'] {
+.emotion-22[data-state='success'][data-dropdownvisible='true'] {
   border-color: #1b533f;
 }
 
-.emotion-24[data-state='danger'] {
+.emotion-22[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-24[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-22[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-24[data-state='danger'][data-dropdownvisible='true'] {
+.emotion-22[data-state='danger'][data-dropdownvisible='true'] {
   border-color: #92103f;
 }
 
-.emotion-24:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-22:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-24[data-readonly='true'] {
+.emotion-22[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-24[data-disabled='true'] {
+.emotion-22[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-24 {
+.emotion-22 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -9142,85 +9036,85 @@ exports[`UnitInput > renders with no label and label information 1`] = `
   overflow: hidden;
 }
 
-.emotion-24[data-size='small'] {
+.emotion-22[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-24[data-size='medium'] {
+.emotion-22[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-24[data-size='large'] {
+.emotion-22[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-24[data-state='neutral'] {
+.emotion-22[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.emotion-24[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-22[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-24[data-state='neutral']:not([data-disabled='true']):hover {
+.emotion-22[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-24[data-state='neutral']:not([data-disabled='true']):focus-visible {
+.emotion-22[data-state='neutral']:not([data-disabled='true']):focus-visible {
   outline: 5px auto Highlight;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-.emotion-24[data-state='neutral'][data-dropdownvisible='true'] {
+.emotion-22[data-state='neutral'][data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.emotion-24[data-state='success'] {
+.emotion-22[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.emotion-24[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-22[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #1b533f;
   box-shadow: 0px 0px 0px 3px #45d19f40;
 }
 
-.emotion-24[data-state='success'][data-dropdownvisible='true'] {
+.emotion-22[data-state='success'][data-dropdownvisible='true'] {
   border-color: #1b533f;
 }
 
-.emotion-24[data-state='danger'] {
+.emotion-22[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-24[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-22[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-24[data-state='danger'][data-dropdownvisible='true'] {
+.emotion-22[data-state='danger'][data-dropdownvisible='true'] {
   border-color: #92103f;
 }
 
-.emotion-24:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-22:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-24[data-readonly='true'] {
+.emotion-22[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-24[data-disabled='true'] {
+.emotion-22[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-27 {
+.emotion-25 {
   color: #b5b7bd;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
@@ -9236,7 +9130,35 @@ exports[`UnitInput > renders with no label and label information 1`] = `
   user-select: none;
 }
 
-.emotion-29 {
+.emotion-27 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding-right: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-27 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -9265,34 +9187,6 @@ exports[`UnitInput > renders with no label and label information 1`] = `
 }
 
 .emotion-29 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  padding-right: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-31 {
   vertical-align: middle;
   fill: #b5b7bd;
   height: 1rem;
@@ -9301,7 +9195,7 @@ exports[`UnitInput > renders with no label and label information 1`] = `
   min-height: 1rem;
 }
 
-.emotion-31 .fillStroke {
+.emotion-29 .fillStroke {
   stroke: #b5b7bd;
   fill: none;
 }
@@ -9352,57 +9246,52 @@ exports[`UnitInput > renders with no label and label information 1`] = `
           />
         </div>
         <div
-          class="emotion-15 emotion-16"
-          width="12.6rem"
+          aria-label="test-unit"
+          class="emotion-15 emotion-16 emotion-17"
         >
           <div
-            aria-label="test-unit"
-            class="emotion-17 emotion-18 emotion-19"
+            aria-controls=":r2v:"
+            aria-describedby=":r2v:"
+            class="emotion-18 emotion-19"
+            data-container-full-width="true"
+            tabindex="-1"
           >
             <div
-              aria-controls=":r2v:"
-              aria-describedby=":r2v:"
-              class="emotion-20 emotion-21"
-              data-container-full-width="true"
-              tabindex="-1"
+              class="emotion-0 emotion-1"
             >
               <div
-                class="emotion-0 emotion-1"
+                aria-expanded="false"
+                aria-haspopup="listbox"
+                class="emotion-22 emotion-23"
+                data-disabled="true"
+                data-dropdownvisible="false"
+                data-readonly="false"
+                data-size="large"
+                data-state="neutral"
+                data-testid="select-input-test-unit"
+                id="unit"
+                role="combobox"
+                tabindex="0"
               >
-                <div
-                  aria-expanded="false"
-                  aria-haspopup="listbox"
-                  class="emotion-24 emotion-25"
-                  data-disabled="true"
-                  data-dropdownvisible="false"
-                  data-readonly="false"
-                  data-size="large"
-                  data-state="neutral"
-                  data-testid="select-input-test-unit"
-                  id="unit"
-                  role="combobox"
-                  tabindex="0"
+                <p
+                  class="emotion-24 emotion-25 emotion-6"
                 >
-                  <p
-                    class="emotion-26 emotion-27 emotion-6"
-                  >
-                    Select item
-                  </p>
-                  <div
+                  Select item
+                </p>
+                <div
+                  class="emotion-27 emotion-28"
+                >
+                  <svg
+                    aria-label="show dropdown"
                     class="emotion-29 emotion-30"
+                    viewBox="0 0 20 20"
                   >
-                    <svg
-                      aria-label="show dropdown"
-                      class="emotion-31 emotion-32"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        clip-rule="evenodd"
-                        d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
-                  </div>
+                    <path
+                      clip-rule="evenodd"
+                      d="M5.47 7.47a.75.75 0 0 1 1.06 0l3.72 3.72 3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.47 8.53a.75.75 0 0 1 0-1.06"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
                 </div>
               </div>
             </div>
@@ -10015,17 +9904,17 @@ exports[`UnitInput > renders with size large 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-17[data-state='neutral']:not([data-disabled='true']):hover {
+.emotion-15[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-17[data-state='neutral']:not([data-disabled='true']):focus-visible {
+.emotion-15[data-state='neutral']:not([data-disabled='true']):focus-visible {
   outline: 5px auto Highlight;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-.emotion-17[data-state='neutral'][data-dropdownvisible='true'] {
+.emotion-15[data-state='neutral'][data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
@@ -10128,17 +10017,17 @@ exports[`UnitInput > renders with size large 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-17[data-state='neutral']:not([data-disabled='true']):hover {
+.emotion-15[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-17[data-state='neutral']:not([data-disabled='true']):focus-visible {
+.emotion-15[data-state='neutral']:not([data-disabled='true']):focus-visible {
   outline: 5px auto Highlight;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-.emotion-17[data-state='neutral'][data-dropdownvisible='true'] {
+.emotion-15[data-state='neutral'][data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
@@ -10316,57 +10205,52 @@ exports[`UnitInput > renders with size large 1`] = `
           />
         </div>
         <div
-          class="emotion-8 emotion-9"
-          width="12.6rem"
+          aria-label="test-unit"
+          class="emotion-8 emotion-9 emotion-10"
         >
           <div
-            aria-label="test-unit"
-            class="emotion-10 emotion-11 emotion-12"
+            aria-controls=":r11:"
+            aria-describedby=":r11:"
+            class="emotion-11 emotion-12"
+            data-container-full-width="true"
+            tabindex="-1"
           >
             <div
-              aria-controls=":r11:"
-              aria-describedby=":r11:"
-              class="emotion-13 emotion-14"
-              data-container-full-width="true"
-              tabindex="-1"
+              class="emotion-0 emotion-1"
             >
               <div
-                class="emotion-0 emotion-1"
+                aria-expanded="false"
+                aria-haspopup="listbox"
+                class="emotion-15 emotion-16"
+                data-disabled="false"
+                data-dropdownvisible="false"
+                data-readonly="false"
+                data-size="large"
+                data-state="neutral"
+                data-testid="select-input-test-unit"
+                id="unit"
+                role="combobox"
+                tabindex="0"
               >
-                <div
-                  aria-expanded="false"
-                  aria-haspopup="listbox"
-                  class="emotion-17 emotion-18"
-                  data-disabled="false"
-                  data-dropdownvisible="false"
-                  data-readonly="false"
-                  data-size="large"
-                  data-state="neutral"
-                  data-testid="select-input-test-unit"
-                  id="unit"
-                  role="combobox"
-                  tabindex="0"
+                <p
+                  class="emotion-17 emotion-18 emotion-19"
                 >
-                  <p
-                    class="emotion-19 emotion-20 emotion-21"
-                  >
-                    Select item
-                  </p>
-                  <div
+                  Select item
+                </p>
+                <div
+                  class="emotion-20 emotion-21"
+                >
+                  <svg
+                    aria-label="show dropdown"
                     class="emotion-22 emotion-23"
+                    viewBox="0 0 20 20"
                   >
-                    <svg
-                      aria-label="show dropdown"
-                      class="emotion-24 emotion-25"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        clip-rule="evenodd"
-                        d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
-                  </div>
+                    <path
+                      clip-rule="evenodd"
+                      d="M5.47 7.47a.75.75 0 0 1 1.06 0l3.72 3.72 3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.47 8.53a.75.75 0 0 1 0-1.06"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
                 </div>
               </div>
             </div>
@@ -10708,17 +10592,17 @@ exports[`UnitInput > renders with size medioum 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-17[data-state='neutral']:not([data-disabled='true']):hover {
+.emotion-15[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-17[data-state='neutral']:not([data-disabled='true']):focus-visible {
+.emotion-15[data-state='neutral']:not([data-disabled='true']):focus-visible {
   outline: 5px auto Highlight;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-.emotion-17[data-state='neutral'][data-dropdownvisible='true'] {
+.emotion-15[data-state='neutral'][data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
@@ -10854,57 +10738,52 @@ exports[`UnitInput > renders with size medioum 1`] = `
           />
         </div>
         <div
-          class="emotion-8 emotion-9"
-          width="12.6rem"
+          aria-label="test-unit"
+          class="emotion-8 emotion-9 emotion-10"
         >
           <div
-            aria-label="test-unit"
-            class="emotion-10 emotion-11 emotion-12"
+            aria-controls=":rh:"
+            aria-describedby=":rh:"
+            class="emotion-11 emotion-12"
+            data-container-full-width="true"
+            tabindex="-1"
           >
             <div
-              aria-controls=":rh:"
-              aria-describedby=":rh:"
-              class="emotion-13 emotion-14"
-              data-container-full-width="true"
-              tabindex="-1"
+              class="emotion-0 emotion-1"
             >
               <div
-                class="emotion-0 emotion-1"
+                aria-expanded="false"
+                aria-haspopup="listbox"
+                class="emotion-15 emotion-16"
+                data-disabled="false"
+                data-dropdownvisible="false"
+                data-readonly="false"
+                data-size="medium"
+                data-state="neutral"
+                data-testid="select-input-test-unit"
+                id="unit"
+                role="combobox"
+                tabindex="0"
               >
-                <div
-                  aria-expanded="false"
-                  aria-haspopup="listbox"
-                  class="emotion-17 emotion-18"
-                  data-disabled="false"
-                  data-dropdownvisible="false"
-                  data-readonly="false"
-                  data-size="medium"
-                  data-state="neutral"
-                  data-testid="select-input-test-unit"
-                  id="unit"
-                  role="combobox"
-                  tabindex="0"
+                <p
+                  class="emotion-17 emotion-18 emotion-19"
                 >
-                  <p
-                    class="emotion-19 emotion-20 emotion-21"
-                  >
-                    Select item
-                  </p>
-                  <div
+                  Select item
+                </p>
+                <div
+                  class="emotion-20 emotion-21"
+                >
+                  <svg
+                    aria-label="show dropdown"
                     class="emotion-22 emotion-23"
+                    viewBox="0 0 20 20"
                   >
-                    <svg
-                      aria-label="show dropdown"
-                      class="emotion-24 emotion-25"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        clip-rule="evenodd"
-                        d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
-                  </div>
+                    <path
+                      clip-rule="evenodd"
+                      d="M5.47 7.47a.75.75 0 0 1 1.06 0l3.72 3.72 3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.47 8.53a.75.75 0 0 1 0-1.06"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
                 </div>
               </div>
             </div>
@@ -11246,17 +11125,17 @@ exports[`UnitInput > renders with size small 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-17[data-state='neutral']:not([data-disabled='true']):hover {
+.emotion-15[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-17[data-state='neutral']:not([data-disabled='true']):focus-visible {
+.emotion-15[data-state='neutral']:not([data-disabled='true']):focus-visible {
   outline: 5px auto Highlight;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-.emotion-17[data-state='neutral'][data-dropdownvisible='true'] {
+.emotion-15[data-state='neutral'][data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
@@ -11392,57 +11271,52 @@ exports[`UnitInput > renders with size small 1`] = `
           />
         </div>
         <div
-          class="emotion-8 emotion-9"
-          width="12.6rem"
+          aria-label="test-unit"
+          class="emotion-8 emotion-9 emotion-10"
         >
           <div
-            aria-label="test-unit"
-            class="emotion-10 emotion-11 emotion-12"
+            aria-controls=":rc:"
+            aria-describedby=":rc:"
+            class="emotion-11 emotion-12"
+            data-container-full-width="true"
+            tabindex="-1"
           >
             <div
-              aria-controls=":rc:"
-              aria-describedby=":rc:"
-              class="emotion-13 emotion-14"
-              data-container-full-width="true"
-              tabindex="-1"
+              class="emotion-0 emotion-1"
             >
               <div
-                class="emotion-0 emotion-1"
+                aria-expanded="false"
+                aria-haspopup="listbox"
+                class="emotion-15 emotion-16"
+                data-disabled="false"
+                data-dropdownvisible="false"
+                data-readonly="false"
+                data-size="small"
+                data-state="neutral"
+                data-testid="select-input-test-unit"
+                id="unit"
+                role="combobox"
+                tabindex="0"
               >
-                <div
-                  aria-expanded="false"
-                  aria-haspopup="listbox"
-                  class="emotion-17 emotion-18"
-                  data-disabled="false"
-                  data-dropdownvisible="false"
-                  data-readonly="false"
-                  data-size="small"
-                  data-state="neutral"
-                  data-testid="select-input-test-unit"
-                  id="unit"
-                  role="combobox"
-                  tabindex="0"
+                <p
+                  class="emotion-17 emotion-18 emotion-19"
                 >
-                  <p
-                    class="emotion-19 emotion-20 emotion-21"
-                  >
-                    Select item
-                  </p>
-                  <div
+                  Select item
+                </p>
+                <div
+                  class="emotion-20 emotion-21"
+                >
+                  <svg
+                    aria-label="show dropdown"
                     class="emotion-22 emotion-23"
+                    viewBox="0 0 20 20"
                   >
-                    <svg
-                      aria-label="show dropdown"
-                      class="emotion-24 emotion-25"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        clip-rule="evenodd"
-                        d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
-                  </div>
+                    <path
+                      clip-rule="evenodd"
+                      d="M5.47 7.47a.75.75 0 0 1 1.06 0l3.72 3.72 3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.47 8.53a.75.75 0 0 1 0-1.06"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
                 </div>
               </div>
             </div>
@@ -12069,17 +11943,17 @@ exports[`UnitInput > renders with success 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-19[data-state='neutral']:not([data-disabled='true']):hover {
+.emotion-17[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-19[data-state='neutral']:not([data-disabled='true']):focus-visible {
+.emotion-17[data-state='neutral']:not([data-disabled='true']):focus-visible {
   outline: 5px auto Highlight;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-.emotion-19[data-state='neutral'][data-dropdownvisible='true'] {
+.emotion-17[data-state='neutral'][data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
@@ -12182,17 +12056,17 @@ exports[`UnitInput > renders with success 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-19[data-state='neutral']:not([data-disabled='true']):hover {
+.emotion-17[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-19[data-state='neutral']:not([data-disabled='true']):focus-visible {
+.emotion-17[data-state='neutral']:not([data-disabled='true']):focus-visible {
   outline: 5px auto Highlight;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-.emotion-19[data-state='neutral'][data-dropdownvisible='true'] {
+.emotion-17[data-state='neutral'][data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
@@ -12393,57 +12267,52 @@ exports[`UnitInput > renders with success 1`] = `
           </svg>
         </div>
         <div
-          class="emotion-10 emotion-11"
-          width="12.6rem"
+          aria-label="test-unit"
+          class="emotion-10 emotion-11 emotion-12"
         >
           <div
-            aria-label="test-unit"
-            class="emotion-12 emotion-13 emotion-14"
+            aria-controls=":r1b:"
+            aria-describedby=":r1b:"
+            class="emotion-13 emotion-14"
+            data-container-full-width="true"
+            tabindex="-1"
           >
             <div
-              aria-controls=":r1b:"
-              aria-describedby=":r1b:"
-              class="emotion-15 emotion-16"
-              data-container-full-width="true"
-              tabindex="-1"
+              class="emotion-0 emotion-1"
             >
               <div
-                class="emotion-0 emotion-1"
+                aria-expanded="false"
+                aria-haspopup="listbox"
+                class="emotion-17 emotion-18"
+                data-disabled="false"
+                data-dropdownvisible="false"
+                data-readonly="false"
+                data-size="large"
+                data-state="neutral"
+                data-testid="select-input-test-unit"
+                id="unit"
+                role="combobox"
+                tabindex="0"
               >
-                <div
-                  aria-expanded="false"
-                  aria-haspopup="listbox"
-                  class="emotion-19 emotion-20"
-                  data-disabled="false"
-                  data-dropdownvisible="false"
-                  data-readonly="false"
-                  data-size="large"
-                  data-state="neutral"
-                  data-testid="select-input-test-unit"
-                  id="unit"
-                  role="combobox"
-                  tabindex="0"
+                <p
+                  class="emotion-19 emotion-20 emotion-21"
                 >
-                  <p
-                    class="emotion-21 emotion-22 emotion-23"
+                  Select item
+                </p>
+                <div
+                  class="emotion-22 emotion-23"
+                >
+                  <svg
+                    aria-label="show dropdown"
+                    class="emotion-24 emotion-9"
+                    viewBox="0 0 20 20"
                   >
-                    Select item
-                  </p>
-                  <div
-                    class="emotion-24 emotion-25"
-                  >
-                    <svg
-                      aria-label="show dropdown"
-                      class="emotion-26 emotion-9"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        clip-rule="evenodd"
-                        d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
-                  </div>
+                    <path
+                      clip-rule="evenodd"
+                      d="M5.47 7.47a.75.75 0 0 1 1.06 0l3.72 3.72 3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.47 8.53a.75.75 0 0 1 0-1.06"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
                 </div>
               </div>
             </div>
