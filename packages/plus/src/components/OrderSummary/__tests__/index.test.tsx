@@ -15,6 +15,7 @@ import {
   negativeItem,
   numberInputCategory,
   numberInputSubCategory,
+  simpleCategory,
 } from './resources'
 
 const mockItems = [
@@ -60,17 +61,17 @@ describe('OrderSummary', () => {
       />,
     )
     const unitInput = screen.getByTestId('unit-input')
-    expect(screen.getByTestId('total-price').textContent).toBe('€240.00')
+    expect(screen.getByTestId('total-price').textContent).toBe('€120.00')
 
     await userEvent.type(unitInput, '[Backspace]1')
-    expect(screen.getByTestId('total-price').textContent).toBe('€120.00')
+    expect(screen.getByTestId('total-price').textContent).toBe('€60.00')
 
     const unitInputUnit = screen.getByTestId('select-input--unit')
     await userEvent.click(unitInputUnit)
 
     const hours = screen.getByTestId('option-hours')
     await userEvent.click(hours)
-    expect(screen.getByTestId('total-price').textContent).toBe('€5.00')
+    expect(screen.getByTestId('total-price').textContent).toBe('€2.50')
   })
 
   test('should work with children', () =>
@@ -118,11 +119,11 @@ describe('OrderSummary', () => {
       />,
     ))
 
-  test('should work with discount', () => {
+  test('should work with discount in  %', () => {
     const { asFragment } = renderWithTheme(
       <OrderSummary
         header="summary"
-        items={[categoryAZ]}
+        items={[simpleCategory]}
         currency="EUR"
         localeFormat="en-EN"
         discount={0.5}
@@ -135,11 +136,28 @@ describe('OrderSummary', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
+  test('should work with discount', () => {
+    const { asFragment } = renderWithTheme(
+      <OrderSummary
+        header="summary"
+        items={[simpleCategory]}
+        currency="EUR"
+        localeFormat="en-EN"
+        discount={10}
+      />,
+    )
+
+    const price = screen.getByTestId('total-price').textContent
+    expect(price).toBe('€0.00')
+
+    expect(asFragment()).toMatchSnapshot()
+  })
+
   test('should work with fractionDigits', () => {
     const { asFragment } = renderWithTheme(
       <OrderSummary
         header="summary"
-        items={[categoryAZ]}
+        items={[simpleCategory]}
         currency="EUR"
         localeFormat="en-EN"
         discount={0.5}
