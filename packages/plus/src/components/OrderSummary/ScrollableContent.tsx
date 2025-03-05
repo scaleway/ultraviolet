@@ -28,6 +28,8 @@ const CategoryName = ({ category }: { category: ItemsType }) => {
   const { currency, localeFormat, categoriesPrice, fractionDigits } =
     useContext(OrderSummaryContext)
 
+  const categoryPrice = categoriesPrice[category.category]
+
   return (
     <Stack justifyContent="space-between" direction="row" alignItems="center">
       {category.additionalInfo ? (
@@ -54,15 +56,46 @@ const CategoryName = ({ category }: { category: ItemsType }) => {
           unit={category.numberInputUnit}
         />
       ) : null}
-      {!category.customContent && !category.numberInput ? (
+      {!category.customContent &&
+      !category.numberInput &&
+      categoryPrice.before === categoryPrice.after ? (
         <Text as="span" variant="bodyStrong" sentiment="neutral">
           {formatNumber(
-            categoriesPrice[category.category] ?? 0,
+            categoryPrice.after ?? 0,
             localeFormat,
             currency,
             fractionDigits,
           )}
         </Text>
+      ) : null}
+
+      {!category.customContent &&
+      !category.numberInput &&
+      categoryPrice.before !== categoryPrice.after ? (
+        <Stack direction="row" gap={1} alignItems="center">
+          <Text
+            as="span"
+            variant="bodySmallStrong"
+            sentiment="neutral"
+            prominence="weak"
+            strikeThrough
+          >
+            {formatNumber(
+              categoryPrice.before ?? 0,
+              localeFormat,
+              currency,
+              fractionDigits,
+            )}
+          </Text>
+          <Text as="span" variant="bodyStrong" sentiment="neutral">
+            {formatNumber(
+              categoryPrice.after ?? 0,
+              localeFormat,
+              currency,
+              fractionDigits,
+            )}
+          </Text>
+        </Stack>
       ) : null}
     </Stack>
   )

@@ -47,7 +47,7 @@ export type SubCategoryType = {
    */
   fixedPrice?: boolean
   /**
-   * Suffix to be displayed after the price (generally, the unit) - this will trigger to not display the overall price taking into account the amount for the subcategory.
+   * Suffix to be displayed after the price - this will trigger to not display the overall price taking into account the amount for the subcategory.
    */
   priceUnit?: string
   /**
@@ -81,7 +81,7 @@ export type OrderSummaryProps = {
    */
   localeFormat?: string
   /**
-   *Total applied to the final cost (due to commitment, beta...) in %
+   *Total applied to the final cost (due to commitment, beta...)
    */
   discount?: number
   footer?: ReactNode
