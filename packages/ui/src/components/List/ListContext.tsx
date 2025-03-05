@@ -276,7 +276,10 @@ export const ListProvider = ({
       }, 1)
     }
     refList.forEach((checkbox, index) => {
-      function clickHandler(this: HTMLInputElement, event: MouseEvent) {
+      const clickHandler = function clickHandler(
+        this: HTMLInputElement,
+        event: MouseEvent,
+      ) {
         handleClickRange(this, index, event.shiftKey)
       }
 
