@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
 import { Stack, Text } from '@ultraviolet/ui'
 import type { ReactNode } from 'react'
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
 import { Data, nextStep } from './helper'
 
 const StyledContent = styled(Stack)`
@@ -22,14 +22,26 @@ type SteppedListContentProps = {
   children: ((nextStep: (completed: boolean) => void) => ReactNode) | ReactNode
   image?: ReactNode
   stepNumber: number
+  completed?: boolean
 }
 export const SteppedListContent = ({
   subHeader,
   children,
   image,
   stepNumber,
+  completed = false,
 }: SteppedListContentProps) => {
   const containerData = useContext(Data)
+
+  useEffect(() => {
+    containerData.setDone(prevDone => {
+      const updatedDone = [...prevDone]
+      updatedDone[stepNumber - 1] = completed
+
+      return updatedDone
+    })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [completed])
 
   if (stepNumber === containerData.currentStep) {
     return (
@@ -44,9 +56,9 @@ export const SteppedListContent = ({
           )}
         </StyledSubHeader>
         {typeof children === 'function'
-          ? children((completed: boolean) =>
+          ? children((completedArg: boolean) =>
               nextStep({
-                completed,
+                completed: completedArg,
                 setCompleted: containerData.setDone,
                 done: containerData.done,
                 stepNumber,

@@ -19,6 +19,11 @@ const CustomText = styled(Text)`
     text-decoration-thickness: 2px;
   }
 `
+
+const StyledItem = styled(StepList.Item)`
+align-items: center;
+`
+
 type StepProps = {
   /**
    * The number of the step, max 5 steps.
@@ -45,7 +50,7 @@ export const SteppedList = ({
   const active = containerData.currentStep === stepNumber
 
   return completed ? (
-    <StepList.Item
+    <StyledItem
       bulletIcon="check"
       prominence={active ? 'strong' : 'default'}
       sentiment="primary"
@@ -55,9 +60,9 @@ export const SteppedList = ({
       <CustomText as="h3" variant={active ? 'bodyStrong' : 'body'}>
         {stepTitle}
       </CustomText>
-    </StepList.Item>
+    </StyledItem>
   ) : (
-    <StepList.Item
+    <StyledItem
       bulletText={String(stepNumber)}
       prominence={active ? 'strong' : undefined}
       sentiment={active ? 'primary' : undefined}
@@ -67,6 +72,6 @@ export const SteppedList = ({
       <CustomText as="h3" variant={active ? 'bodyStrong' : 'body'}>
         {stepTitle}
       </CustomText>
-    </StepList.Item>
+    </StyledItem>
   )
 }
