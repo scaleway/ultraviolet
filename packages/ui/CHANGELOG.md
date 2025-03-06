@@ -1,5 +1,28 @@
 # Change Log
 
+## 1.89.0
+
+### Minor Changes
+
+- [#4798](https://github.com/scaleway/ultraviolet/pull/4798) [`63f9b91`](https://github.com/scaleway/ultraviolet/commit/63f9b911ed8ca47e51fbfd52ab873f7b3badf95d) Thanks [@matthprost](https://github.com/matthprost)! - - `<Popup />`: fix when there is no animation to not add a `setTimeout` to close the popup. This will improve the behavior of `<SelectInputV2 />` and make the testing less random.
+  - `<SelectableCard />`: remove pointer events on the radio. We were already doing it with the checkbox version. Also improved tabulation to be more accessible.
+  - `<Label />`: improve component to accept `as` prop that can take either `label` or `legend`. It also accept `sentiment` and `disabled` props now. The mouse pointer will be a pointer as well when `htmlFor` is passed.
+  - `<SelectInputV2 />`: improve the focusable elements and fix a visual bug to double click to open the dropdown. Also when there is no space in the input the text will be ellipsis.
+  - New component `<SelectableCardOptionGroup />`
+
+### Patch Changes
+
+- [#4842](https://github.com/scaleway/ultraviolet/pull/4842) [`0450562`](https://github.com/scaleway/ultraviolet/commit/0450562f96b7e44f4abd2c7869be75aadcb9bf37) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<Banner />` image component
+
+- [#4828](https://github.com/scaleway/ultraviolet/pull/4828) [`e2b112c`](https://github.com/scaleway/ultraviolet/commit/e2b112c46745e025af3995afbb3256263cf3d199) Thanks [@matthprost](https://github.com/matthprost)! - Add `disabled` prop on `<Dialog.CancelButton />`
+
+- [#4636](https://github.com/scaleway/ultraviolet/pull/4636) [`5f72c9d`](https://github.com/scaleway/ultraviolet/commit/5f72c9d93757181173329b096bcb2fdbd0fbfc8b) Thanks [@lisalupi](https://github.com/lisalupi)! - `<List />` and `<Table />`: more intuitive behavior for shift+click
+
+- [#4841](https://github.com/scaleway/ultraviolet/pull/4841) [`5e2164c`](https://github.com/scaleway/ultraviolet/commit/5e2164c9fe2457b084a7bacff6855c1258bab07f) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<Slider />` to have better label and min width when having input mode
+
+- Updated dependencies [[`b160d8f`](https://github.com/scaleway/ultraviolet/commit/b160d8ffb3ada5411c59d696eb63e736e1b47ed9)]:
+  - @ultraviolet/icons@3.12.0
+
 ## 1.88.1
 
 ### Patch Changes
