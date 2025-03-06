@@ -8,23 +8,24 @@ export const Template: StoryFn<typeof InfiniteScroll> = args => {
   const [isLoading, setIsLoading] = useState(false)
 
   return (
-    <InfiniteScroll
-      {...args}
-      loadMore={() => {
-        setIsLoading(true)
-
-        const newData = generateRandomNamesArray(3, 5)
-        setTimeout(() => {
-          setData(prevData => [...prevData, ...newData])
-          setIsLoading(false)
-        }, 2000)
-      }}
-      isLoading={isLoading}
-    >
+    <>
       {data.map(value => (
-        <p>{value}</p>
+        <p key={value}>{value}</p>
       ))}
-    </InfiniteScroll>
+      <InfiniteScroll
+        {...args}
+        onLoadMore={() => {
+          setIsLoading(true)
+
+          const newData = generateRandomNamesArray(3, 5)
+          setTimeout(() => {
+            setData(prevData => [...prevData, ...newData])
+            setIsLoading(false)
+          }, 2000)
+        }}
+        isLoading={isLoading}
+      />
+    </>
   )
 }
 

@@ -13,6 +13,7 @@ type StackProps = {
   className?: string
   children: ReactNode
   'data-testid'?: string
+  id?: string
 }
 
 /**

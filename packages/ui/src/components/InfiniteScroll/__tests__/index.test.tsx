@@ -1,11 +1,54 @@
-import { shouldMatchEmotionSnapshot } from '@utils/test'
-import { describe, test } from 'vitest'
-import { ActionBar } from '..'
+import { fireEvent, screen, waitFor } from '@testing-library/react'
+import { renderWithTheme } from '@utils/test'
+import { describe, expect, test, vi } from 'vitest'
+import { InfiniteScroll } from '..'
 
-describe('ActionBar', () => {
-  test('renders correctly ', () =>
-    shouldMatchEmotionSnapshot(<ActionBar>Hello</ActionBar>))
+describe('InfiniteScroll', () => {
+  test('renders correctly ', () => {
+    const { asFragment } = renderWithTheme(<InfiniteScroll />)
 
-  test('renders correctly with custom rank', () =>
-    shouldMatchEmotionSnapshot(<ActionBar rank={2}>I am rank 2</ActionBar>))
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  test('renders correctly with loading', () => {
+    const { asFragment } = renderWithTheme(<InfiniteScroll isLoading />)
+
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  test('onLoadMore is correctly called when scrolling down', async () => {
+    const onLoadMore = vi.fn()
+
+    renderWithTheme(
+      <div
+        data-testid="infinite-scroll-container"
+        style={{ height: '10px', overflowY: 'scroll' }}
+      >
+        <p>Test</p>
+        <p>Test</p>
+        <p>Test</p>
+        <p>Test</p>
+        <p>Test</p>
+        <p>Test</p>
+        <p>Test</p>
+        <p>Test</p>
+        <p>Test</p>
+        <p>Test</p>
+        <p>Test</p>
+        <p>Test</p>
+        <p>Test</p>
+        <p>Test</p>
+        <InfiniteScroll onLoadMore={onLoadMore} />
+      </div>,
+    )
+
+    const scrollContainer = screen.getByTestId('infinite-scroll-container')
+
+    // Simulate scrolling to the bottom
+    fireEvent.scroll(scrollContainer, { target: { scrollTop: 300 } })
+
+    await waitFor(() => {
+      expect(onLoadMore).toHaveBeenCalledTimes(1)
+    })
+  })
 })

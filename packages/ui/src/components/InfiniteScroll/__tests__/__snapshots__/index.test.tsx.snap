@@ -1,17 +1,64 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`ActionBar > renders correctly  1`] = `
+exports[`InfiniteScroll > renders correctly  1`] = `
 <DocumentFragment>
   <div
     data-testid="testing"
-  />
+  >
+    <div
+      style="height: 2.5rem;"
+    />
+  </div>
 </DocumentFragment>
 `;
 
-exports[`ActionBar > renders correctly with custom rank 1`] = `
+exports[`InfiniteScroll > renders correctly with loading 1`] = `
 <DocumentFragment>
-  <div
+  .emotion-0 {
+  -webkit-animation: spin 0.75s linear infinite;
+  animation: spin 0.75s linear infinite;
+}
+
+.emotion-2 {
+  -webkit-transition: stroke-dashoffset 0.5s ease 0s;
+  transition: stroke-dashoffset 0.5s ease 0s;
+}
+
+<div
     data-testid="testing"
-  />
+  >
+    <svg
+      aria-label="Loading"
+      aria-valuemax="100"
+      aria-valuemin="0"
+      aria-valuenow="20"
+      aria-valuetext="20%"
+      class="emotion-0 emotion-1"
+      role="progressbar"
+      style="height: 2.5rem; width: 2.5rem;"
+      viewBox="0 0 100 100"
+    >
+      <circle
+        cx="50"
+        cy="50"
+        fill="none"
+        r="42"
+        stroke="#d9dadd"
+        stroke-width="16"
+      />
+      <circle
+        class="emotion-2"
+        cx="50"
+        cy="50"
+        fill="none"
+        r="42"
+        stroke="#8c40ef"
+        stroke-dasharray="263.89378290154264"
+        stroke-dashoffset="211.11502632123413"
+        stroke-linecap="round"
+        stroke-width="16"
+      />
+    </svg>
+  </div>
 </DocumentFragment>
 `;
