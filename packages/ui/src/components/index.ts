@@ -84,3 +84,4 @@ export {
    */
   Icon,
 } from '@ultraviolet/icons/legacy'
+export { InfiniteScroll } from './InfiniteScroll'
