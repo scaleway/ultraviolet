@@ -131,9 +131,7 @@ export const ProgressBar = ({
             placement="right"
           >
             {prefix}
-            {suffix === '%'
-              ? (100 * Math.max(0, Math.min(max, value))) / max
-              : Math.max(0, Math.min(max, value))}
+            {suffix === '%' ? (100 * value) / max : value}
             {suffix}
           </Text>
         ) : null}
@@ -169,9 +167,7 @@ export const ProgressBar = ({
       <StyledStack direction="row" gap={1}>
         <StyledText as="label" variant="bodySmall" sentiment="neutral">
           {prefix}
-          {suffix === '%'
-            ? (100 * Math.max(0, Math.min(max, value))) / max
-            : Math.max(0, Math.min(max, value))}
+          {suffix === '%' ? (100 * value) / max : value}
           {suffix}
         </StyledText>
       </StyledStack>
