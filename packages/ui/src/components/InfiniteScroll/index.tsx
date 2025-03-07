@@ -1,10 +1,10 @@
 import type { ElementType, ReactNode, RefObject } from 'react'
-import { useCallback, useEffect, useMemo, useRef } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { LOADER_SIZE, Loader } from '../Loader'
 
 // This is the distance from the bottom of the scrollable container where the `onLoadMore` function will be called.
 // Change this value if you want increase or decrease the distance from scroll bottom.
-const HEIGHT_BEFORE_BOTTOM = 100
+const HEIGHT_THRESHOLD = 100
 
 type InfiniteScrollProps = {
   className?: string
@@ -12,12 +12,11 @@ type InfiniteScrollProps = {
   /**
    * Function to be called when the user scrolls to the bottom of the stack. If not set the component will passby the children and nothing else.
    */
-  onLoadMore?: () => void
+  onLoadMore: () => void | Promise<void>
   /**
    * Set this parameter if you want a different scroll listener if the scroll parent is wrongly detected.
    */
   scrollParentRef?: RefObject<HTMLDivElement> | RefObject<null>
-  isLoading?: boolean
   /**
    * The height of the InfiniteScroll component. This can be used to leave space between items and the InfiniteScroll component.
    */
@@ -31,6 +30,11 @@ type InfiniteScrollProps = {
    * The element type to render as the container for the InfiniteScroll component.
    */
   as?: ElementType
+  hasMore?: boolean
+  /**
+   * The distance from the bottom of the scrollable container where the `onLoadMore` function will be called.
+   */
+  heightThreshold?: number
 }
 
 /**
@@ -43,12 +47,14 @@ export const InfiniteScroll = ({
   'data-testid': dataTestId,
   onLoadMore,
   scrollParentRef,
-  isLoading,
   height = LOADER_SIZE,
   loader,
   id,
   as: Component = 'div',
+  hasMore = true,
+  heightThreshold = HEIGHT_THRESHOLD,
 }: InfiniteScrollProps) => {
+  const [isLoading, setIsLoading] = useState(false)
   const containerRef = useRef<HTMLDivElement>(null)
 
   const debounce = useCallback((func: () => void, delay: number) => {
@@ -71,15 +77,26 @@ export const InfiniteScroll = ({
 
       const { scrollTop, scrollHeight, clientHeight } = scrollableContainer
 
-      if (scrollTop + clientHeight >= scrollHeight - HEIGHT_BEFORE_BOTTOM) {
-        onLoadMore()
+      if (scrollTop + clientHeight >= scrollHeight - heightThreshold) {
+        setIsLoading(true)
+        const result = onLoadMore()
+        if (result instanceof Promise) {
+          result
+            .then(() => {
+              setIsLoading(false)
+            })
+            .catch(error => {
+              setIsLoading(false)
+              throw error
+            })
+        }
       }
     },
-    [onLoadMore],
+    [onLoadMore, heightThreshold],
   )
 
   useEffect(() => {
-    if (!onLoadMore) return
+    if (!hasMore) return
     let scrollableContainer =
       scrollParentRef?.current || containerRef.current?.parentElement
     while (scrollableContainer && scrollableContainer !== document.body) {
@@ -104,7 +121,7 @@ export const InfiniteScroll = ({
     return () => {
       scrollableContainer.removeEventListener('scroll', debouncedHandleScroll)
     }
-  }, [debounce, handleScroll, onLoadMore, scrollParentRef])
+  }, [debounce, handleScroll, hasMore, onLoadMore, scrollParentRef])
 
   const localLoader = useMemo(() => loader || <Loader active />, [loader])
 

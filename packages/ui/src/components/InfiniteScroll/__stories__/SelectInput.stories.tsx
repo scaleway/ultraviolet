@@ -21,7 +21,20 @@ const InfiniteScrollLoader = (
 
 export const SelectInput: StoryFn<typeof InfiniteScroll> = args => {
   const [data, setData] = useState(SELECT_INPUT_DATA)
-  const [isLoading, setIsLoading] = useState(false)
+
+  const loadMoreData = async () => {
+    await new Promise(resolve => {
+      setTimeout(() => {
+        const generatedNames = generateRandomNamesArray(4, 10).map(name => ({
+          label: name,
+          value: name,
+        }))
+        setData(prevData => [...prevData, ...generatedNames])
+        resolve('ok')
+      }, 2000)
+    })
+    console.log('Data loaded')
+  }
 
   return (
     <SelectInputV2
@@ -31,20 +44,7 @@ export const SelectInput: StoryFn<typeof InfiniteScroll> = args => {
       loadMore={
         <InfiniteScroll
           {...args}
-          isLoading={isLoading}
-          onLoadMore={() => {
-            setIsLoading(true)
-            setTimeout(() => {
-              const generatedNames = generateRandomNamesArray(4, 10).map(
-                name => ({
-                  label: name,
-                  value: name,
-                }),
-              )
-              setData(prevData => [...prevData, ...generatedNames])
-              setIsLoading(false)
-            }, 1000)
-          }}
+          onLoadMore={loadMoreData}
           loader={InfiniteScrollLoader}
         />
       }

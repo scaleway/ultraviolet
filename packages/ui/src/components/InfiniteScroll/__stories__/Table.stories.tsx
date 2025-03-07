@@ -28,8 +28,26 @@ const ListLoader = () => (
 
 export const Table: StoryFn<typeof InfiniteScroll> = args => {
   const [data, setData] = useState(TABLE_DATA)
-  const [isLoading, setIsLoading] = useState(false)
   const containerRef = useRef(null)
+
+  const loadMoreData = async () => {
+    await new Promise(resolve => {
+      setTimeout(() => {
+        const newData = generateRandomNamesArray(5, 10).map(name => ({
+          name,
+          releaseYear: 2000,
+          trilogy: 'Unknown',
+          director: 'George Lucas',
+          storyBy: 'George Lucas',
+          id: Math.random().toString(),
+        }))
+
+        setData(prevData => [...prevData, ...newData])
+        resolve('ok')
+      }, 2000)
+    })
+    console.log('Data loaded')
+  }
 
   return (
     <div ref={containerRef} style={{ height: '250px', overflowY: 'scroll' }}>
@@ -47,25 +65,9 @@ export const Table: StoryFn<typeof InfiniteScroll> = args => {
             {...args}
             as="tr"
             scrollParentRef={containerRef}
-            isLoading={isLoading}
             loader={<ListLoader />}
             height={144}
-            onLoadMore={() => {
-              setIsLoading(true)
-              setTimeout(() => {
-                const newData = generateRandomNamesArray(5, 10).map(name => ({
-                  name,
-                  releaseYear: 2000,
-                  trilogy: 'Unknown',
-                  director: 'George Lucas',
-                  storyBy: 'George Lucas',
-                  id: Math.random().toString(),
-                }))
-
-                setData(prevData => [...prevData, ...newData])
-                setIsLoading(false)
-              }, 1000)
-            }}
+            onLoadMore={loadMoreData}
           />
         </UVTable.Body>
       </UVTable>

@@ -5,26 +5,24 @@ import { DATA, generateRandomNamesArray } from './data'
 
 export const Template: StoryFn<typeof InfiniteScroll> = args => {
   const [data, setData] = useState(DATA)
-  const [isLoading, setIsLoading] = useState(false)
+
+  const loadMoreData = async () => {
+    await new Promise(resolve => {
+      setTimeout(() => {
+        const newData = generateRandomNamesArray(5, 10)
+        setData(prevData => [...prevData, ...newData])
+        resolve('ok')
+      }, 2000)
+    })
+    console.log('Data loaded')
+  }
 
   return (
     <>
       {data.map(value => (
         <p key={value}>{value}</p>
       ))}
-      <InfiniteScroll
-        {...args}
-        onLoadMore={() => {
-          setIsLoading(true)
-
-          const newData = generateRandomNamesArray(3, 5)
-          setTimeout(() => {
-            setData(prevData => [...prevData, ...newData])
-            setIsLoading(false)
-          }, 2000)
-        }}
-        isLoading={isLoading}
-      />
+      <InfiniteScroll {...args} onLoadMore={loadMoreData} />
     </>
   )
 }
