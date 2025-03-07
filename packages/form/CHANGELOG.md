@@ -1,5 +1,16 @@
 # Change Log
 
+## 3.14.0
+
+### Minor Changes
+
+- [#4798](https://github.com/scaleway/ultraviolet/pull/4798) [`63f9b91`](https://github.com/scaleway/ultraviolet/commit/63f9b911ed8ca47e51fbfd52ab873f7b3badf95d) Thanks [@matthprost](https://github.com/matthprost)! - - New component `<SelectableCardOptionGroupField />`
+
+### Patch Changes
+
+- Updated dependencies [[`0450562`](https://github.com/scaleway/ultraviolet/commit/0450562f96b7e44f4abd2c7869be75aadcb9bf37), [`e2b112c`](https://github.com/scaleway/ultraviolet/commit/e2b112c46745e025af3995afbb3256263cf3d199), [`5f72c9d`](https://github.com/scaleway/ultraviolet/commit/5f72c9d93757181173329b096bcb2fdbd0fbfc8b), [`63f9b91`](https://github.com/scaleway/ultraviolet/commit/63f9b911ed8ca47e51fbfd52ab873f7b3badf95d), [`5e2164c`](https://github.com/scaleway/ultraviolet/commit/5e2164c9fe2457b084a7bacff6855c1258bab07f)]:
+  - @ultraviolet/ui@1.89.0
+
 ## 3.13.23
 
 ### Patch Changes

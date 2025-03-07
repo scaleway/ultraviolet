@@ -1,5 +1,15 @@
 # @ultraviolet/illustrations
 
+## 4.3.0
+
+### Minor Changes
+
+- [#4826](https://github.com/scaleway/ultraviolet/pull/4826) [`9759355`](https://github.com/scaleway/ultraviolet/commit/975935581b7aecdd423067cbb611f0cabd6b7f06) Thanks [@matthprost](https://github.com/matthprost)! - New illustration `instanceScalingGroups`:
+  - `instanceScalingGroupsContent`
+  - `instanceScalingGroupsKeyvisual`
+  - `instanceScalingGroupsOriginal`
+  - `instanceScalingGroupsWire`
+
 ## 4.2.0
 
 ### Minor Changes
