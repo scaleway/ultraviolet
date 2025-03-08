@@ -33,7 +33,6 @@ const StyledInput = styled.input`
   padding-left: ${({ theme }) => theme.space['2']};
   background: transparent;
   color: ${({ theme }) => theme.colors.neutral.text};
-  font-size: ${({ theme }) => theme.typography.bodySmall.fontSize};
   &[data-size="small"] {
     padding-left: ${({ theme }) => theme.space['1']};
   }
@@ -64,7 +63,6 @@ const UnitInputWrapper = styled(Stack)<{
 }>`
   border: 1px solid ${({ theme }) => theme.colors.neutral.border};
   border-radius: ${({ theme }) => theme.radii.default};
-  background-color: ${({ theme }) => theme.colors.neutral.background};
 
   &:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
@@ -171,20 +169,17 @@ const UnitInputWrapper = styled(Stack)<{
     }
   }
 `
-const SelectInputWrapper = styled.div<{
-  width: number | string
-}>`
-${({ width }) => width && `width: ${typeof width === 'number' ? `${width}px` : width};`}
-display: flex;
-`
 
 const CustomSelectInput = styled(SelectInputV2)<{
+  width?: number | string
   'data-disabled': boolean
 }>`
   #unit {
     border: none;
     background: transparent;
   }
+
+  ${({ width }) => width && `width: ${typeof width === 'string' ? width : `${width}px`};`}
 
   #unit:focus,
   #unit:active {
@@ -306,7 +301,7 @@ export const UnitInput = ({
             disabled={disabled}
             name={`${name}-value`}
             width={width}
-            id={id ?? localId}
+            id={id ? `${id}-value` : undefined}
             value={val}
             onChange={event => {
               const numericValue = Number.parseInt(event.target.value, 10)
@@ -335,27 +330,26 @@ export const UnitInput = ({
           />
           {error ? <AlertCircleIcon sentiment="danger" /> : null}
           {success && !error ? <CheckCircleIcon sentiment="success" /> : null}
-        </StyledNumberInputWrapper>{' '}
-        <SelectInputWrapper width={selectInputWidth}>
-          <CustomSelectInput
-            data-disabled={disabled}
-            id="unit"
-            name={`${name}-unit`}
-            onChange={(newValue: string) => {
-              onChangeUnitValue?.(newValue)
-            }}
-            error={unitError}
-            value={unitValue}
-            options={options}
-            searchable={false}
-            clearable={false}
-            placeholder={placeholderUnit}
-            disabled={disabled || options.length === 1}
-            size={size}
-            multiselect={false}
-            readOnly={readOnly}
-          />
-        </SelectInputWrapper>
+        </StyledNumberInputWrapper>
+        <CustomSelectInput
+          data-disabled={disabled}
+          id="unit"
+          name={`${name}-unit`}
+          onChange={(newValue: string) => {
+            onChangeUnitValue?.(newValue)
+          }}
+          error={unitError}
+          value={unitValue}
+          options={options}
+          width={selectInputWidth}
+          searchable={false}
+          clearable={false}
+          placeholder={placeholderUnit}
+          disabled={disabled || options.length === 1}
+          size={size}
+          multiselect={false}
+          readOnly={readOnly}
+        />
       </UnitInputWrapper>
       {error || typeof success === 'string' || typeof helper === 'string' ? (
         <Text
