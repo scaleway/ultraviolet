@@ -6,9 +6,15 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const UnlockIcon = ({ ...props }: Omit<IconProps, 'children'>) => (
-  // eslint-disable-next-line react/jsx-props-no-spreading
-  <Icon {...props}>
-    <path d="M14.5 1A4.5 4.5 0 0 0 10 5.5V9H3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6a2 2 0 0 0-2-2h-1.5V5.5a3 3 0 1 1 6 0v2.75a.75.75 0 0 0 1.5 0V5.5A4.5 4.5 0 0 0 14.5 1" />
-  </Icon>
-)
+export const UnlockIcon = ({ ...props }: Omit<IconProps, 'children'>) =>
+  props.size === 'large' ? (
+    // eslint-disable-next-line react/jsx-props-no-spreading
+    <Icon {...props}>
+      <path d="M14.5 1A4.5 4.5 0 0 0 10 5.5V9H3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6a2 2 0 0 0-2-2h-1.5V5.5a3 3 0 1 1 6 0v2.75a.75.75 0 0 0 1.5 0V5.5A4.5 4.5 0 0 0 14.5 1" />
+    </Icon>
+  ) : (
+    // eslint-disable-next-line react/jsx-props-no-spreading
+    <Icon {...props}>
+      <path d="M11.5 1C9.567 1 8 2.567 8 4.5V7H2.5C1.67157 7 1 7.67157 1 8.5V13.5C1 14.3284 1.67157 15 2.5 15H9.5C10.3284 15 11 14.3284 11 13.5V8.5C11 7.67157 10.3284 7 9.5 7V4.5C9.5 3.39543 10.3954 2.5 11.5 2.5C12.6046 2.5 13.5 3.39543 13.5 4.5V6.25C13.5 6.66421 13.8358 7 14.25 7C14.6642 7 15 6.66421 15 6.25V4.5C15 2.567 13.433 1 11.5 1Z" />
+    </Icon>
+  )

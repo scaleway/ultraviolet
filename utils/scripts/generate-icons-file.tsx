@@ -1,6 +1,6 @@
 // oxlint-disable eslint/no-console
 
-import { promises as fs } from 'node:fs'
+import { existsSync, promises } from 'node:fs'
 import path from 'node:path'
 import { DEPRECATED_ICONS } from '../../packages/icons/src/deprecatedIcons'
 
@@ -37,7 +37,7 @@ const COMMENT_HEADER = `/**
 * PLEASE DO NOT EDIT HERE
 */`
 
-const templateIcon = (iconName: string, svg: string) => {
+const templateIcon = (iconName: string, svg: string, svgSmall?: string) => {
   const deprecated = DEPRECATED_ICONS.find(icon => icon.name === iconName)
 
   return `${COMMENT_HEADER}
@@ -52,12 +52,25 @@ const templateIcon = (iconName: string, svg: string) => {
     */`
       : ''
   }
-  export const ${iconName} = ({
+  ${
+    svgSmall
+      ? `export const ${iconName} = ({
     ...props
   }: Omit<IconProps, 'children'>) => (
-    // eslint-disable-next-line react/jsx-props-no-spreading
-    <Icon {...props}>${svg}</Icon>
-  )
+    props.size === "large" ? 
+      // eslint-disable-next-line react/jsx-props-no-spreading
+      <Icon {...props}>${svg}</Icon> : 
+      // eslint-disable-next-line react/jsx-props-no-spreading
+      <Icon {...props}>${svgSmall}</Icon>
+  )`
+      : `export const ${iconName} = ({
+    ...props
+  }: Omit<IconProps, 'children'>) => (
+      // eslint-disable-next-line react/jsx-props-no-spreading
+      <Icon {...props}>${svg}</Icon>
+  )`
+  }
+  
 `
 }
 
@@ -78,7 +91,7 @@ const generateVariableName = (filePath: string) => {
 const readDirectoryRecursive = async (dir: string) => {
   let results: string[] = []
 
-  const list = await fs.readdir(dir, { withFileTypes: true })
+  const list = await promises.readdir(dir, { withFileTypes: true })
 
   for (const file of list) {
     const filePath = path.resolve(dir, file.name)
@@ -95,7 +108,7 @@ const readDirectoryRecursive = async (dir: string) => {
 }
 
 const readSvg = async (filePath: string, suffix: string) => {
-  const svgContent = await fs.readFile(filePath, 'utf8')
+  const svgContent = await promises.readFile(filePath, 'utf8')
   const innerSvgContent = svgContent.replace(/<svg[^>]*>|<\/svg>/g, '') // Remove <svg ...> and </svg> tags
 
   // Replace class with className
@@ -121,7 +134,7 @@ const appendExportToIndex = async (output: string, iconName: string) => {
   const exportStatement = `export { ${iconName} } from './${iconName}'\n`
 
   try {
-    await fs.appendFile(`${output}/index.ts`, exportStatement)
+    await promises.appendFile(`${output}/index.ts`, exportStatement)
   } catch (error) {
     console.error('Error appending to index file:', error)
   }
@@ -129,9 +142,9 @@ const appendExportToIndex = async (output: string, iconName: string) => {
 
 const resetIconsFolder = async (folderPath: string) => {
   try {
-    const files = await fs.readdir(folderPath)
+    const files = await promises.readdir(folderPath)
     const deletePromises = files.map(file =>
-      fs.unlink(path.join(folderPath, file)),
+      promises.unlink(path.join(folderPath, file)),
     )
     await Promise.all(deletePromises)
     console.log(`Deleted all files in ${folderPath}`)
@@ -146,7 +159,10 @@ const main = async () => {
     await resetIconsFolder(component.output) // we clean the folder before generating the new icons
 
     try {
-      await fs.appendFile(`${component.output}/index.ts`, `${COMMENT_HEADER}\n`)
+      await promises.appendFile(
+        `${component.output}/index.ts`,
+        `${COMMENT_HEADER}\n`,
+      )
     } catch (error) {
       console.error('Error appending to index file:', error)
     }
@@ -157,13 +173,27 @@ const main = async () => {
         if (file.includes('small')) {
           break
         }
+
+        const smallFileName = file.replace('default', 'small')
+        const smallFile = existsSync(smallFileName) ? smallFileName : file
+
         const svgContent = await readSvg(file, component.suffix)
         const generatedName = `${generateVariableName(file)}${component.suffix}`
-        const generatedComponent = templateIcon(generatedName, svgContent)
+
+        const svgContentSmall =
+          smallFile === file
+            ? undefined
+            : await readSvg(smallFile, component.suffix)
+
+        const generatedComponent = templateIcon(
+          generatedName,
+          svgContent,
+          svgContentSmall,
+        )
         const filePath = `${component.output}/${generatedName}.tsx`
 
         try {
-          await fs.writeFile(filePath, generatedComponent)
+          await promises.writeFile(filePath, generatedComponent)
           console.log(`File has been written to ${filePath}`)
           await appendExportToIndex(component.output, generatedName)
         } catch (error) {
