@@ -7,6 +7,8 @@ const VIEWBOX_HEIGHT = 100
 const HALF_VIEWBOX_WIDTH = VIEWBOX_WIDTH / 2
 const HALF_VIEWBOX_HEIGHT = VIEWBOX_HEIGHT / 2
 
+export const LOADER_SIZE = '2.5rem'
+
 const StyledSvg = styled('svg', {
   shouldForwardProp: prop => !['active'].includes(prop),
 })<{ active: boolean }>`
@@ -61,7 +63,7 @@ const Text = styled('text', {
 export const Loader = ({
   percentage = 20,
   text,
-  size = '2.5rem',
+  size = LOADER_SIZE,
   strokeWidth = 16,
   color = 'primary',
   trailColor = 'neutral',
