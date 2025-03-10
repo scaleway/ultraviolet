@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.89.1
+
+### Patch Changes
+
+- [#4870](https://github.com/scaleway/ultraviolet/pull/4870) [`c8f5887`](https://github.com/scaleway/ultraviolet/commit/c8f58872d928a6fb804e27bc42bbadafe72e325c) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<SelectableCard />` to be able to click on the label and remove all `pointer-events: none`
+
 ## 1.89.0
 
 ### Minor Changes
