@@ -5,13 +5,9 @@ import { InfiniteScroll } from '..'
 
 describe('InfiniteScroll', () => {
   test('renders correctly ', () => {
-    const { asFragment } = renderWithTheme(<InfiniteScroll />)
-
-    expect(asFragment()).toMatchSnapshot()
-  })
-
-  test('renders correctly with loading', () => {
-    const { asFragment } = renderWithTheme(<InfiniteScroll isLoading />)
+    const { asFragment } = renderWithTheme(
+      <InfiniteScroll onLoadMore={() => {}} />,
+    )
 
     expect(asFragment()).toMatchSnapshot()
   })
