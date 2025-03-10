@@ -47,4 +47,45 @@ describe('InfiniteScroll', () => {
       expect(onLoadMore).toHaveBeenCalledTimes(1)
     })
   })
+
+  test('async onLoadMore is correctly called when scrolling down', async () => {
+    const onLoadMore = vi.fn(
+      async () =>
+        new Promise<void>(resolve => {
+          setTimeout(resolve, 100)
+        }),
+    )
+
+    renderWithTheme(
+      <div
+        data-testid="infinite-scroll-container"
+        style={{ height: '10px', overflowY: 'scroll' }}
+      >
+        <p>Test</p>
+        <p>Test</p>
+        <p>Test</p>
+        <p>Test</p>
+        <p>Test</p>
+        <p>Test</p>
+        <p>Test</p>
+        <p>Test</p>
+        <p>Test</p>
+        <p>Test</p>
+        <p>Test</p>
+        <p>Test</p>
+        <p>Test</p>
+        <p>Test</p>
+        <InfiniteScroll onLoadMore={onLoadMore} />
+      </div>,
+    )
+
+    const scrollContainer = screen.getByTestId('infinite-scroll-container')
+
+    // Simulate scrolling to the bottom
+    fireEvent.scroll(scrollContainer, { target: { scrollTop: 300 } })
+
+    await waitFor(() => {
+      expect(onLoadMore).toHaveBeenCalledTimes(1)
+    })
+  })
 })
