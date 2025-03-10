@@ -183,7 +183,7 @@ describe('SelectableCard', () => {
         })
       })
 
-      test(`should trigger onChange when click on the label`, async () => {
+      test(`should trigger onChange when click on the label using getByLabelText`, async () => {
         const onChange = vi.fn()
 
         renderWithTheme(
@@ -199,6 +199,29 @@ describe('SelectableCard', () => {
         )
 
         const label = screen.getByLabelText('test')
+        await userEvent.click(label)
+
+        await waitFor(() => {
+          expect(onChange).toHaveBeenCalled()
+        })
+      })
+
+      test(`should trigger onChange when click on the label using getByRole`, async () => {
+        const onChange = vi.fn()
+
+        renderWithTheme(
+          <SelectableCard
+            onChange={onChange}
+            type={type}
+            value="choice"
+            label="test"
+            name="test"
+          >
+            {`${type.charAt(0).toUpperCase() + type.slice(1)} card`}
+          </SelectableCard>,
+        )
+
+        const label = screen.getByRole(type, { name: 'test' })
         await userEvent.click(label)
 
         await waitFor(() => {
