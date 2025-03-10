@@ -67,10 +67,10 @@ type SteppedListContainerProps = {
 )
 
 /**
- * SteppedListContainer is a component created for guiding users through steps in a structured and linear manner.
+ * SteppedListCard is a component created for guiding users through steps in a structured and linear manner.
  * It can pass prop "nextStep" to its children.
  */
-const SteppedListContainer = ({
+const SteppedListCard = ({
   header,
   showToggleOption = true,
   hideTooltipText,
@@ -159,6 +159,6 @@ const SteppedListContainer = ({
   )
 }
 
-SteppedListContainer.Step = SteppedListContent
+SteppedListCard.Step = SteppedListContent
 
-export { SteppedListContainer }
+export { SteppedListCard }

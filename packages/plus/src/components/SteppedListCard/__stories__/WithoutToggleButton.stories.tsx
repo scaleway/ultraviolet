@@ -1,13 +1,13 @@
 import type { StoryFn } from '@storybook/react'
 import { Stack, Text } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
-import { SteppedListContainer } from '../SteppedListContainer'
+import { SteppedListCard } from '../SteppedListCard'
 
 export const WithoutToggleButton: StoryFn<
-  ComponentProps<typeof SteppedListContainer>
+  ComponentProps<typeof SteppedListCard>
 > = props => (
-  <SteppedListContainer {...props}>
-    <SteppedListContainer.Step
+  <SteppedListCard {...props}>
+    <SteppedListCard.Step
       stepNumber={1}
       subHeader={
         <Text as="h3" variant="headingSmallStrong" sentiment="primary">
@@ -20,8 +20,8 @@ export const WithoutToggleButton: StoryFn<
           First step description
         </Text>
       </Stack>
-    </SteppedListContainer.Step>
-    <SteppedListContainer.Step
+    </SteppedListCard.Step>
+    <SteppedListCard.Step
       stepNumber={2}
       subHeader={
         <Text as="h3" variant="headingSmallStrong" sentiment="primary">
@@ -34,8 +34,8 @@ export const WithoutToggleButton: StoryFn<
           Second step description
         </Text>
       </Stack>
-    </SteppedListContainer.Step>
-  </SteppedListContainer>
+    </SteppedListCard.Step>
+  </SteppedListCard>
 )
 
 WithoutToggleButton.args = {

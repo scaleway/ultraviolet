@@ -1,8 +1,8 @@
 import type { Meta } from '@storybook/react'
-import { SteppedListContainer } from '..'
+import { SteppedListCard } from '..'
 
 export default {
-  component: SteppedListContainer,
+  component: SteppedListCard,
   title: 'Plus/Compositions/SteppedListCard',
 } satisfies Meta
 

@@ -4,7 +4,7 @@ import type { StoryFn } from '@storybook/react'
 import { blockStorageWire } from '@ultraviolet/illustrations/products/blockStorage'
 import { Button, Stack, Text } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
-import { SteppedListContainer } from '../SteppedListContainer'
+import { SteppedListCard } from '../SteppedListCard'
 
 const StyledImage = styled.img`
   filter: invert();
@@ -13,7 +13,7 @@ const StyledButton = styled(Button)`
   width: fit-content;
 `
 export const Template: StoryFn<
-  ComponentProps<typeof SteppedListContainer>
+  ComponentProps<typeof SteppedListCard>
 > = props => {
   const theme = useTheme()
 
@@ -25,8 +25,8 @@ export const Template: StoryFn<
     )
 
   return (
-    <SteppedListContainer {...props}>
-      <SteppedListContainer.Step
+    <SteppedListCard {...props}>
+      <SteppedListCard.Step
         stepNumber={1}
         subHeader={
           <Text as="h3" variant="headingSmallStrong" sentiment="primary">
@@ -52,8 +52,8 @@ export const Template: StoryFn<
             </StyledButton>
           </Stack>
         )}
-      </SteppedListContainer.Step>
-      <SteppedListContainer.Step
+      </SteppedListCard.Step>
+      <SteppedListCard.Step
         stepNumber={2}
         subHeader="Second step"
         image={illustrationImage}
@@ -69,8 +69,8 @@ export const Template: StoryFn<
             </Stack>
           </Stack>
         )}
-      </SteppedListContainer.Step>
-      <SteppedListContainer.Step
+      </SteppedListCard.Step>
+      <SteppedListCard.Step
         stepNumber={3}
         subHeader="Last step"
         image={illustrationImage}
@@ -83,8 +83,8 @@ export const Template: StoryFn<
             </Stack>
           </Stack>
         )}
-      </SteppedListContainer.Step>
-    </SteppedListContainer>
+      </SteppedListCard.Step>
+    </SteppedListCard>
   )
 }
 
