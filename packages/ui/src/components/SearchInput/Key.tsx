@@ -55,6 +55,7 @@ export const Key = ({ children, disabled }: KeyProps) => {
     <Container
       data-disabled={disabled}
       data-children-length={children.length > 1}
+      data-testid={`key-${children}`}
     >
       <Text as="span" variant="caption" sentiment="neutral" disabled={disabled}>
         {isSpecialKey

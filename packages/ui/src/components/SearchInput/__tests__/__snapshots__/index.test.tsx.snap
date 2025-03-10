@@ -52,6 +52,7 @@ exports[`SearchInput > Key > renders correctly with disabled 1`] = `
       class="emotion-0 emotion-1"
       data-children-length="false"
       data-disabled="true"
+      data-testid="key-K"
     >
       <span
         class="emotion-2 emotion-3"
@@ -114,6 +115,7 @@ exports[`SearchInput > Key > renders correctly with special   key 1`] = `
     <div
       class="emotion-0 emotion-1"
       data-children-length="false"
+      data-testid="key- "
     >
       <span
         class="emotion-2 emotion-3"
@@ -176,6 +178,7 @@ exports[`SearchInput > Key > renders correctly with special Alt key 1`] = `
     <div
       class="emotion-0 emotion-1"
       data-children-length="true"
+      data-testid="key-Alt"
     >
       <span
         class="emotion-2 emotion-3"
@@ -238,6 +241,7 @@ exports[`SearchInput > Key > renders correctly with special ArrowDown key 1`] = 
     <div
       class="emotion-0 emotion-1"
       data-children-length="true"
+      data-testid="key-ArrowDown"
     >
       <span
         class="emotion-2 emotion-3"
@@ -300,6 +304,7 @@ exports[`SearchInput > Key > renders correctly with special ArrowLeft key 1`] = 
     <div
       class="emotion-0 emotion-1"
       data-children-length="true"
+      data-testid="key-ArrowLeft"
     >
       <span
         class="emotion-2 emotion-3"
@@ -362,6 +367,7 @@ exports[`SearchInput > Key > renders correctly with special ArrowRight key 1`] =
     <div
       class="emotion-0 emotion-1"
       data-children-length="true"
+      data-testid="key-ArrowRight"
     >
       <span
         class="emotion-2 emotion-3"
@@ -424,6 +430,7 @@ exports[`SearchInput > Key > renders correctly with special ArrowUp key 1`] = `
     <div
       class="emotion-0 emotion-1"
       data-children-length="true"
+      data-testid="key-ArrowUp"
     >
       <span
         class="emotion-2 emotion-3"
@@ -486,6 +493,7 @@ exports[`SearchInput > Key > renders correctly with special Backspace key 1`] = 
     <div
       class="emotion-0 emotion-1"
       data-children-length="true"
+      data-testid="key-Backspace"
     >
       <span
         class="emotion-2 emotion-3"
@@ -548,6 +556,7 @@ exports[`SearchInput > Key > renders correctly with special CapsLock key 1`] = `
     <div
       class="emotion-0 emotion-1"
       data-children-length="true"
+      data-testid="key-CapsLock"
     >
       <span
         class="emotion-2 emotion-3"
@@ -610,6 +619,7 @@ exports[`SearchInput > Key > renders correctly with special Control key 1`] = `
     <div
       class="emotion-0 emotion-1"
       data-children-length="true"
+      data-testid="key-Control"
     >
       <span
         class="emotion-2 emotion-3"
@@ -672,6 +682,7 @@ exports[`SearchInput > Key > renders correctly with special Delete key 1`] = `
     <div
       class="emotion-0 emotion-1"
       data-children-length="true"
+      data-testid="key-Delete"
     >
       <span
         class="emotion-2 emotion-3"
@@ -734,6 +745,7 @@ exports[`SearchInput > Key > renders correctly with special Enter key 1`] = `
     <div
       class="emotion-0 emotion-1"
       data-children-length="true"
+      data-testid="key-Enter"
     >
       <span
         class="emotion-2 emotion-3"
@@ -796,6 +808,7 @@ exports[`SearchInput > Key > renders correctly with special Escape key 1`] = `
     <div
       class="emotion-0 emotion-1"
       data-children-length="true"
+      data-testid="key-Escape"
     >
       <span
         class="emotion-2 emotion-3"
@@ -858,6 +871,7 @@ exports[`SearchInput > Key > renders correctly with special Meta key 1`] = `
     <div
       class="emotion-0 emotion-1"
       data-children-length="true"
+      data-testid="key-Meta"
     >
       <span
         class="emotion-2 emotion-3"
@@ -1108,6 +1122,7 @@ exports[`SearchInput > renders correctly without children props 1`] = `
               >
                 <div
                   class="emotion-9 emotion-10"
+                  data-testid="search-icon"
                 >
                   <svg
                     class="emotion-11 emotion-12"
@@ -1378,6 +1393,7 @@ exports[`SearchInput > renders with disabled prop 1`] = `
               >
                 <div
                   class="emotion-9 emotion-10"
+                  data-testid="search-icon"
                 >
                   <svg
                     class="emotion-11 emotion-12"
@@ -1699,6 +1715,7 @@ exports[`SearchInput > renders with error prop 1`] = `
               >
                 <div
                   class="emotion-9 emotion-10"
+                  data-testid="search-icon"
                 >
                   <svg
                     class="emotion-11 emotion-12"
@@ -2081,6 +2098,7 @@ exports[`SearchInput > renders with shortcut prop > as array of string 1`] = `
               >
                 <div
                   class="emotion-9 emotion-10"
+                  data-testid="search-icon"
                 >
                   <svg
                     class="emotion-11 emotion-12"
@@ -2112,6 +2130,7 @@ exports[`SearchInput > renders with shortcut prop > as array of string 1`] = `
                   <div
                     class="emotion-19 emotion-20"
                     data-children-length="true"
+                    data-testid="key-Ctrl"
                   >
                     <span
                       class="emotion-21 emotion-22"
@@ -2122,6 +2141,7 @@ exports[`SearchInput > renders with shortcut prop > as array of string 1`] = `
                   <div
                     class="emotion-19 emotion-20"
                     data-children-length="true"
+                    data-testid="key-Shift"
                   >
                     <span
                       class="emotion-21 emotion-22"
@@ -2132,6 +2152,7 @@ exports[`SearchInput > renders with shortcut prop > as array of string 1`] = `
                   <div
                     class="emotion-19 emotion-20"
                     data-children-length="false"
+                    data-testid="key-A"
                   >
                     <span
                       class="emotion-21 emotion-22"
@@ -2482,6 +2503,7 @@ exports[`SearchInput > renders with shortcut prop > as boolean 1`] = `
               >
                 <div
                   class="emotion-9 emotion-10"
+                  data-testid="search-icon"
                 >
                   <svg
                     class="emotion-11 emotion-12"
@@ -2513,6 +2535,7 @@ exports[`SearchInput > renders with shortcut prop > as boolean 1`] = `
                   <div
                     class="emotion-19 emotion-20"
                     data-children-length="true"
+                    data-testid="key-Ctrl"
                   >
                     <span
                       class="emotion-21 emotion-22"
@@ -2523,6 +2546,7 @@ exports[`SearchInput > renders with shortcut prop > as boolean 1`] = `
                   <div
                     class="emotion-19 emotion-20"
                     data-children-length="false"
+                    data-testid="key-K"
                   >
                     <span
                       class="emotion-21 emotion-22"
