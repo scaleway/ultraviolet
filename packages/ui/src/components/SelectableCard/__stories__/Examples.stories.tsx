@@ -10,7 +10,7 @@ import nl from './assets/nl.svg'
 import pl from './assets/pl.svg'
 
 export const Examples: StoryFn = args => {
-  const [value, onChange] = useState('label-14')
+  const [value, onChange] = useState('label-29')
   const [value2, onChange2] = useState({ 'label-20': true, 'label-21': false })
   const [value3, onChange3] = useState({
     'label-22': true,
@@ -29,9 +29,9 @@ export const Examples: StoryFn = args => {
       <Stack gap={1} flex={1}>
         <SelectableCard
           {...args}
-          name="label-14"
-          checked={value === 'label-14'}
-          value="label-14"
+          name="label-29"
+          checked={value === 'label-29'}
+          value="label-29"
           type="radio"
           onChange={event => onChange(event.currentTarget.value)}
           showTick
@@ -51,7 +51,7 @@ export const Examples: StoryFn = args => {
         </SelectableCard>
         <SelectableCard
           {...args}
-          name="label-14"
+          name="label-15"
           checked={value === 'label-15'}
           value="label-15"
           type="radio"

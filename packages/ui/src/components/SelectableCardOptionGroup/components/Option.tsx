@@ -65,6 +65,7 @@ type OptionProps = Omit<ComponentProps<typeof SelectableCard>, 'onChange'> & {
   image?: ReactNode
   labelDescription?: ComponentProps<typeof Label>['labelDescription']
   id?: string
+  'data-testid'?: string
 }
 
 export const Option = ({
@@ -78,6 +79,7 @@ export const Option = ({
   image,
   disabled,
   id,
+  'data-testid': dataTestId,
 }: OptionProps) => {
   const {
     onChange,
@@ -107,6 +109,7 @@ export const Option = ({
       disabled={disabled || groupDisabled}
       checked={groupValue === value}
       isError={error}
+      data-testid={dataTestId}
       {...(label ? { id: inputId } : { 'aria-label': ariaLabel as string })}
     >
       <FullHeightStack

@@ -6,6 +6,7 @@ import type {
   FocusEventHandler,
   ForwardedRef,
   KeyboardEventHandler,
+  MouseEventHandler,
   ReactNode,
 } from 'react'
 import {
@@ -17,8 +18,14 @@ import {
   useState,
 } from 'react'
 import type { LabelProp, PascalToCamelCaseWithoutSuffix } from '../../types'
-import { Checkbox, CheckboxContainer } from '../Checkbox'
-import { Radio, RadioStack } from '../Radio'
+import {
+  Checkbox,
+  CheckboxContainer,
+  CheckboxInput,
+  InnerCheckbox,
+  StyledIcon,
+} from '../Checkbox'
+import { InnerCircleRing, Radio, RadioInput, RadioStack, Ring } from '../Radio'
 import { Stack } from '../Stack'
 import { Tooltip } from '../Tooltip'
 
@@ -153,15 +160,86 @@ const StyledElement = styled('div', {
 
 const OverloadedRadio = StyledElement.withComponent(Radio)
 const StyledRadio = styled(OverloadedRadio)`
-  pointer-events: none;
+  &:hover[aria-disabled='false']:not([data-checked='true']) {
+    ${RadioInput} + ${Ring} {
+      fill: ${({ theme }) => theme.colors.neutral.border};
+      ${InnerCircleRing} {
+        fill: ${({ theme }) => theme.colors.neutral.background};
+      }
+    }
+
+    ${RadioInput}[aria-invalid='true'] + ${Ring} {
+      fill: ${({ theme }) => theme.colors.danger.border};
+      ${InnerCircleRing} {
+        fill: ${({ theme }) => theme.colors.neutral.background};
+      }
+    }
+  }
+
+  &:hover[aria-disabled='false'] {
+    ${RadioInput} + ${Ring} {
+      fill: ${({ theme }) => theme.colors.primary.border};
+      ${InnerCircleRing} {
+        fill: ${({ theme }) => theme.colors.neutral.background};
+      }
+    }
+
+    ${RadioInput}[aria-invalid='true'] + ${Ring} {
+      fill: ${({ theme }) => theme.colors.danger.border};
+      ${InnerCircleRing} {
+        fill: ${({ theme }) => theme.colors.neutral.background};
+      }
+    }
+  }
+
+  ${RadioInput} {
+    &[aria-disabled='false']:active + ${Ring} {
+      background: none;
+      fill: ${({ theme }) => theme.colors.primary.backgroundStrong};
+      ${InnerCircleRing} {
+        fill: ${({ theme }) => theme.colors.neutral.background};
+      }
+    }
+  }
 `
+
 const OverloadedCheckbox = StyledElement.withComponent(Checkbox)
 const StyledCheckbox = styled(OverloadedCheckbox)`
   label {
     width: 100%;
   }
 
-  pointer-events: none; // Prevents the label from being clickable as we want the container to be clickable
+  &:hover[aria-disabled='false'] {
+    ${CheckboxInput}[aria-invalid='false'] {
+      &[aria-checked='false'] + ${StyledIcon} ${InnerCheckbox} {
+        fill: ${({ theme }) => theme.colors.neutral.background};
+        stroke: ${({ theme }) => theme.colors.neutral.border};
+      }
+
+      &[aria-checked='true'] + ${StyledIcon} ${InnerCheckbox} {
+        stroke: ${({ theme }) => theme.colors.primary.borderStrong};
+        fill: ${({ theme }) => theme.colors.primary.backgroundStrong};
+      }
+
+      &[aria-checked='mixed'] + ${StyledIcon} ${InnerCheckbox} {
+        stroke: ${({ theme }) => theme.colors.primary.borderStrong};
+        fill: ${({ theme }) => theme.colors.primary.backgroundStrong};
+      }
+    }
+  }
+
+  ${CheckboxInput} {
+    &:focus + ${StyledIcon}, &:active + ${StyledIcon} {
+      background-color: ${({ theme }) => theme.colors.neutral.background};
+      fill: ${({ theme }) => theme.colors.neutral.background};
+      outline: none;
+
+      ${InnerCheckbox} {
+        fill: ${({ theme }) => theme.colors.neutral.background};
+        stroke: ${({ theme }) => theme.colors.neutral.border};
+      }
+    }
+  }
 `
 
 export type SelectableCardProps = {
@@ -334,14 +412,32 @@ export const SelectableCard = forwardRef(
       [innerRef],
     )
 
+    const onClickContainer: MouseEventHandler<HTMLDivElement> = useCallback(
+      event => {
+        if (innerRef.current && !disabled) {
+          const inputElement = innerRef.current
+          const labelElement = document.querySelector(
+            `label[for="${inputElement.id}"]`,
+          )
+
+          const targetNode = event.target as Node
+
+          // Check if the event target is the input element or its associated label
+          if (
+            !inputElement.contains(targetNode) &&
+            !labelElement?.contains(targetNode)
+          ) {
+            inputElement.click()
+          }
+        }
+      },
+      [disabled],
+    )
+
     return (
       <ParentContainer>
         <Container
-          onClick={() => {
-            if (innerRef?.current) {
-              innerRef.current.click()
-            }
-          }}
+          onClick={onClickContainer}
           onKeyDown={onKeyDown}
           className={className}
           data-checked={checked}

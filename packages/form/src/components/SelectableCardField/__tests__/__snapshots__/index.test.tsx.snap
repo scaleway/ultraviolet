@@ -124,7 +124,6 @@ exports[`SelectableCardField > should render correctly 1`] = `
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: start;
-  pointer-events: none;
 }
 
 .emotion-5[aria-disabled='false'],
@@ -181,6 +180,47 @@ exports[`SelectableCardField > should render correctly 1`] = `
 
 .emotion-5 input+svg {
   display: none;
+}
+
+.emotion-5:hover[aria-disabled='false']:not([data-checked='true']) .emotion-8+.emotion-10 {
+  fill: #d9dadd;
+}
+
+.emotion-5:hover[aria-disabled='false']:not([data-checked='true']) .emotion-8+.emotion-10 .emotion-12 {
+  fill: #ffffff;
+}
+
+.emotion-5:hover[aria-disabled='false']:not([data-checked='true']) .emotion-8[aria-invalid='true']+.emotion-10 {
+  fill: #b3144d;
+}
+
+.emotion-5:hover[aria-disabled='false']:not([data-checked='true']) .emotion-8[aria-invalid='true']+.emotion-10 .emotion-12 {
+  fill: #ffffff;
+}
+
+.emotion-5:hover[aria-disabled='false'] .emotion-8+.emotion-10 {
+  fill: #8c40ef;
+}
+
+.emotion-5:hover[aria-disabled='false'] .emotion-8+.emotion-10 .emotion-12 {
+  fill: #ffffff;
+}
+
+.emotion-5:hover[aria-disabled='false'] .emotion-8[aria-invalid='true']+.emotion-10 {
+  fill: #b3144d;
+}
+
+.emotion-5:hover[aria-disabled='false'] .emotion-8[aria-invalid='true']+.emotion-10 .emotion-12 {
+  fill: #ffffff;
+}
+
+.emotion-5 .emotion-8[aria-disabled='false']:active+.emotion-10 {
+  background: none;
+  fill: #8c40ef;
+}
+
+.emotion-5 .emotion-8[aria-disabled='false']:active+.emotion-10 .emotion-12 {
+  fill: #ffffff;
 }
 
 .emotion-7 {
@@ -509,7 +549,6 @@ exports[`SelectableCardField > should render correctly checked 1`] = `
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: start;
-  pointer-events: none;
 }
 
 .emotion-5[aria-disabled='false'],
@@ -566,6 +605,47 @@ exports[`SelectableCardField > should render correctly checked 1`] = `
 
 .emotion-5 input+svg {
   display: none;
+}
+
+.emotion-5:hover[aria-disabled='false']:not([data-checked='true']) .emotion-8+.emotion-10 {
+  fill: #d9dadd;
+}
+
+.emotion-5:hover[aria-disabled='false']:not([data-checked='true']) .emotion-8+.emotion-10 .emotion-12 {
+  fill: #ffffff;
+}
+
+.emotion-5:hover[aria-disabled='false']:not([data-checked='true']) .emotion-8[aria-invalid='true']+.emotion-10 {
+  fill: #b3144d;
+}
+
+.emotion-5:hover[aria-disabled='false']:not([data-checked='true']) .emotion-8[aria-invalid='true']+.emotion-10 .emotion-12 {
+  fill: #ffffff;
+}
+
+.emotion-5:hover[aria-disabled='false'] .emotion-8+.emotion-10 {
+  fill: #8c40ef;
+}
+
+.emotion-5:hover[aria-disabled='false'] .emotion-8+.emotion-10 .emotion-12 {
+  fill: #ffffff;
+}
+
+.emotion-5:hover[aria-disabled='false'] .emotion-8[aria-invalid='true']+.emotion-10 {
+  fill: #b3144d;
+}
+
+.emotion-5:hover[aria-disabled='false'] .emotion-8[aria-invalid='true']+.emotion-10 .emotion-12 {
+  fill: #ffffff;
+}
+
+.emotion-5 .emotion-8[aria-disabled='false']:active+.emotion-10 {
+  background: none;
+  fill: #8c40ef;
+}
+
+.emotion-5 .emotion-8[aria-disabled='false']:active+.emotion-10 .emotion-12 {
+  fill: #ffffff;
 }
 
 .emotion-7 {
@@ -895,7 +975,6 @@ exports[`SelectableCardField > should render correctly disabled 1`] = `
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: start;
-  pointer-events: none;
 }
 
 .emotion-5[aria-disabled='false'],
@@ -952,6 +1031,47 @@ exports[`SelectableCardField > should render correctly disabled 1`] = `
 
 .emotion-5 input+svg {
   display: none;
+}
+
+.emotion-5:hover[aria-disabled='false']:not([data-checked='true']) .emotion-8+.emotion-10 {
+  fill: #d9dadd;
+}
+
+.emotion-5:hover[aria-disabled='false']:not([data-checked='true']) .emotion-8+.emotion-10 .emotion-12 {
+  fill: #ffffff;
+}
+
+.emotion-5:hover[aria-disabled='false']:not([data-checked='true']) .emotion-8[aria-invalid='true']+.emotion-10 {
+  fill: #b3144d;
+}
+
+.emotion-5:hover[aria-disabled='false']:not([data-checked='true']) .emotion-8[aria-invalid='true']+.emotion-10 .emotion-12 {
+  fill: #ffffff;
+}
+
+.emotion-5:hover[aria-disabled='false'] .emotion-8+.emotion-10 {
+  fill: #8c40ef;
+}
+
+.emotion-5:hover[aria-disabled='false'] .emotion-8+.emotion-10 .emotion-12 {
+  fill: #ffffff;
+}
+
+.emotion-5:hover[aria-disabled='false'] .emotion-8[aria-invalid='true']+.emotion-10 {
+  fill: #b3144d;
+}
+
+.emotion-5:hover[aria-disabled='false'] .emotion-8[aria-invalid='true']+.emotion-10 .emotion-12 {
+  fill: #ffffff;
+}
+
+.emotion-5 .emotion-8[aria-disabled='false']:active+.emotion-10 {
+  background: none;
+  fill: #8c40ef;
+}
+
+.emotion-5 .emotion-8[aria-disabled='false']:active+.emotion-10 .emotion-12 {
+  fill: #ffffff;
 }
 
 .emotion-7 {
@@ -1280,7 +1400,6 @@ exports[`SelectableCardField > should render correctly with errors 1`] = `
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: start;
-  pointer-events: none;
 }
 
 .emotion-5[aria-disabled='false'],
@@ -1337,6 +1456,47 @@ exports[`SelectableCardField > should render correctly with errors 1`] = `
 
 .emotion-5 input+svg {
   display: none;
+}
+
+.emotion-5:hover[aria-disabled='false']:not([data-checked='true']) .emotion-8+.emotion-10 {
+  fill: #d9dadd;
+}
+
+.emotion-5:hover[aria-disabled='false']:not([data-checked='true']) .emotion-8+.emotion-10 .emotion-12 {
+  fill: #ffffff;
+}
+
+.emotion-5:hover[aria-disabled='false']:not([data-checked='true']) .emotion-8[aria-invalid='true']+.emotion-10 {
+  fill: #b3144d;
+}
+
+.emotion-5:hover[aria-disabled='false']:not([data-checked='true']) .emotion-8[aria-invalid='true']+.emotion-10 .emotion-12 {
+  fill: #ffffff;
+}
+
+.emotion-5:hover[aria-disabled='false'] .emotion-8+.emotion-10 {
+  fill: #8c40ef;
+}
+
+.emotion-5:hover[aria-disabled='false'] .emotion-8+.emotion-10 .emotion-12 {
+  fill: #ffffff;
+}
+
+.emotion-5:hover[aria-disabled='false'] .emotion-8[aria-invalid='true']+.emotion-10 {
+  fill: #b3144d;
+}
+
+.emotion-5:hover[aria-disabled='false'] .emotion-8[aria-invalid='true']+.emotion-10 .emotion-12 {
+  fill: #ffffff;
+}
+
+.emotion-5 .emotion-8[aria-disabled='false']:active+.emotion-10 {
+  background: none;
+  fill: #8c40ef;
+}
+
+.emotion-5 .emotion-8[aria-disabled='false']:active+.emotion-10 .emotion-12 {
+  fill: #ffffff;
 }
 
 .emotion-7 {
@@ -1670,7 +1830,6 @@ exports[`SelectableCardField > should trigger events correctly 1`] = `
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: start;
-  pointer-events: none;
 }
 
 .emotion-5[aria-disabled='false'],
@@ -1727,6 +1886,47 @@ exports[`SelectableCardField > should trigger events correctly 1`] = `
 
 .emotion-5 input+svg {
   display: none;
+}
+
+.emotion-5:hover[aria-disabled='false']:not([data-checked='true']) .emotion-8+.emotion-10 {
+  fill: #d9dadd;
+}
+
+.emotion-5:hover[aria-disabled='false']:not([data-checked='true']) .emotion-8+.emotion-10 .emotion-12 {
+  fill: #ffffff;
+}
+
+.emotion-5:hover[aria-disabled='false']:not([data-checked='true']) .emotion-8[aria-invalid='true']+.emotion-10 {
+  fill: #b3144d;
+}
+
+.emotion-5:hover[aria-disabled='false']:not([data-checked='true']) .emotion-8[aria-invalid='true']+.emotion-10 .emotion-12 {
+  fill: #ffffff;
+}
+
+.emotion-5:hover[aria-disabled='false'] .emotion-8+.emotion-10 {
+  fill: #8c40ef;
+}
+
+.emotion-5:hover[aria-disabled='false'] .emotion-8+.emotion-10 .emotion-12 {
+  fill: #ffffff;
+}
+
+.emotion-5:hover[aria-disabled='false'] .emotion-8[aria-invalid='true']+.emotion-10 {
+  fill: #b3144d;
+}
+
+.emotion-5:hover[aria-disabled='false'] .emotion-8[aria-invalid='true']+.emotion-10 .emotion-12 {
+  fill: #ffffff;
+}
+
+.emotion-5 .emotion-8[aria-disabled='false']:active+.emotion-10 {
+  background: none;
+  fill: #8c40ef;
+}
+
+.emotion-5 .emotion-8[aria-disabled='false']:active+.emotion-10 .emotion-12 {
+  fill: #ffffff;
 }
 
 .emotion-7 {

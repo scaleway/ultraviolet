@@ -209,7 +209,6 @@ exports[`SelectableCardOptionGroupField > should render correctly 1`] = `
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: start;
-  pointer-events: none;
 }
 
 .emotion-17[aria-disabled='false'],
@@ -262,6 +261,47 @@ exports[`SelectableCardOptionGroupField > should render correctly 1`] = `
 
 .emotion-17[aria-disabled='true'] {
   color: #b5b7bd;
+}
+
+.emotion-17:hover[aria-disabled='false']:not([data-checked='true']) .emotion-20+.emotion-22 {
+  fill: #d9dadd;
+}
+
+.emotion-17:hover[aria-disabled='false']:not([data-checked='true']) .emotion-20+.emotion-22 .emotion-24 {
+  fill: #ffffff;
+}
+
+.emotion-17:hover[aria-disabled='false']:not([data-checked='true']) .emotion-20[aria-invalid='true']+.emotion-22 {
+  fill: #b3144d;
+}
+
+.emotion-17:hover[aria-disabled='false']:not([data-checked='true']) .emotion-20[aria-invalid='true']+.emotion-22 .emotion-24 {
+  fill: #ffffff;
+}
+
+.emotion-17:hover[aria-disabled='false'] .emotion-20+.emotion-22 {
+  fill: #8c40ef;
+}
+
+.emotion-17:hover[aria-disabled='false'] .emotion-20+.emotion-22 .emotion-24 {
+  fill: #ffffff;
+}
+
+.emotion-17:hover[aria-disabled='false'] .emotion-20[aria-invalid='true']+.emotion-22 {
+  fill: #b3144d;
+}
+
+.emotion-17:hover[aria-disabled='false'] .emotion-20[aria-invalid='true']+.emotion-22 .emotion-24 {
+  fill: #ffffff;
+}
+
+.emotion-17 .emotion-20[aria-disabled='false']:active+.emotion-22 {
+  background: none;
+  fill: #8c40ef;
+}
+
+.emotion-17 .emotion-20[aria-disabled='false']:active+.emotion-22 .emotion-24 {
+  fill: #ffffff;
 }
 
 .emotion-19 {

@@ -215,7 +215,7 @@ describe('SelectableCardOptionGroup', () => {
       </SelectableCardOptionGroup>,
     )
 
-    await userEvent.click(screen.getByText('Debian'))
+    await userEvent.click(screen.getByLabelText('Debian'))
     expect(onChange).toHaveBeenCalledTimes(0)
 
     await userEvent.click(screen.getByLabelText('Debian option'))
@@ -422,9 +422,9 @@ describe('SelectableCardOptionGroup', () => {
       </SelectableCardOptionGroup>,
     )
 
-    await userEvent.click(screen.getByText('Debian'))
+    await userEvent.click(screen.getByLabelText('Debian'))
     await waitFor(() => {
-      expect(onChange).toHaveBeenCalledTimes(2)
+      expect(onChange).toHaveBeenCalledTimes(1)
     })
 
     await userEvent.click(screen.getByLabelText('Debian option'))

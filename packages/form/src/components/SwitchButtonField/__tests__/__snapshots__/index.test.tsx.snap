@@ -181,7 +181,6 @@ exports[`SwitchButtonField > should render correctly 1`] = `
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: start;
-  pointer-events: none;
 }
 
 .emotion-8[aria-disabled='false'],
@@ -238,6 +237,47 @@ exports[`SwitchButtonField > should render correctly 1`] = `
 
 .emotion-8 input+svg {
   display: none;
+}
+
+.emotion-8:hover[aria-disabled='false']:not([data-checked='true']) .emotion-11+.emotion-13 {
+  fill: #d9dadd;
+}
+
+.emotion-8:hover[aria-disabled='false']:not([data-checked='true']) .emotion-11+.emotion-13 .emotion-15 {
+  fill: #ffffff;
+}
+
+.emotion-8:hover[aria-disabled='false']:not([data-checked='true']) .emotion-11[aria-invalid='true']+.emotion-13 {
+  fill: #b3144d;
+}
+
+.emotion-8:hover[aria-disabled='false']:not([data-checked='true']) .emotion-11[aria-invalid='true']+.emotion-13 .emotion-15 {
+  fill: #ffffff;
+}
+
+.emotion-8:hover[aria-disabled='false'] .emotion-11+.emotion-13 {
+  fill: #8c40ef;
+}
+
+.emotion-8:hover[aria-disabled='false'] .emotion-11+.emotion-13 .emotion-15 {
+  fill: #ffffff;
+}
+
+.emotion-8:hover[aria-disabled='false'] .emotion-11[aria-invalid='true']+.emotion-13 {
+  fill: #b3144d;
+}
+
+.emotion-8:hover[aria-disabled='false'] .emotion-11[aria-invalid='true']+.emotion-13 .emotion-15 {
+  fill: #ffffff;
+}
+
+.emotion-8 .emotion-11[aria-disabled='false']:active+.emotion-13 {
+  background: none;
+  fill: #8c40ef;
+}
+
+.emotion-8 .emotion-11[aria-disabled='false']:active+.emotion-13 .emotion-15 {
+  fill: #ffffff;
 }
 
 .emotion-10 {
@@ -655,7 +695,6 @@ exports[`SwitchButtonField > should works with defaultValues 1`] = `
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: start;
-  pointer-events: none;
 }
 
 .emotion-8[aria-disabled='false'],
@@ -712,6 +751,47 @@ exports[`SwitchButtonField > should works with defaultValues 1`] = `
 
 .emotion-8 input+svg {
   display: none;
+}
+
+.emotion-8:hover[aria-disabled='false']:not([data-checked='true']) .emotion-11+.emotion-13 {
+  fill: #d9dadd;
+}
+
+.emotion-8:hover[aria-disabled='false']:not([data-checked='true']) .emotion-11+.emotion-13 .emotion-15 {
+  fill: #ffffff;
+}
+
+.emotion-8:hover[aria-disabled='false']:not([data-checked='true']) .emotion-11[aria-invalid='true']+.emotion-13 {
+  fill: #b3144d;
+}
+
+.emotion-8:hover[aria-disabled='false']:not([data-checked='true']) .emotion-11[aria-invalid='true']+.emotion-13 .emotion-15 {
+  fill: #ffffff;
+}
+
+.emotion-8:hover[aria-disabled='false'] .emotion-11+.emotion-13 {
+  fill: #8c40ef;
+}
+
+.emotion-8:hover[aria-disabled='false'] .emotion-11+.emotion-13 .emotion-15 {
+  fill: #ffffff;
+}
+
+.emotion-8:hover[aria-disabled='false'] .emotion-11[aria-invalid='true']+.emotion-13 {
+  fill: #b3144d;
+}
+
+.emotion-8:hover[aria-disabled='false'] .emotion-11[aria-invalid='true']+.emotion-13 .emotion-15 {
+  fill: #ffffff;
+}
+
+.emotion-8 .emotion-11[aria-disabled='false']:active+.emotion-13 {
+  background: none;
+  fill: #8c40ef;
+}
+
+.emotion-8 .emotion-11[aria-disabled='false']:active+.emotion-13 .emotion-15 {
+  fill: #ffffff;
 }
 
 .emotion-10 {
