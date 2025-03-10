@@ -11,7 +11,7 @@ import { Tooltip } from '../Tooltip'
 const ErrorText = styled(Text)`
   padding-top: ${({ theme }) => `${theme.space['0.5']}`};
 `
-const InnerCheckbox = styled.rect`
+export const InnerCheckbox = styled.rect`
   fill: ${({ theme }) => theme.colors.neutral.background};
   stroke: ${({ theme }) => theme.colors.neutral.border};
 `
@@ -36,7 +36,7 @@ const CheckboxIconContainer = ({ children }: { children: ReactNode }) => {
   )
 }
 
-const StyledIcon = styled('svg')<{ size: number | string }>`
+export const StyledIcon = styled('svg')<{ size: number | string }>`
   border-radius: ${({ theme }) => theme.radii.default};
   height: ${({ size }) => (typeof size === 'string' ? size : `${size}px`)};
   width: ${({ size }) => (typeof size === 'string' ? size : `${size}px`)};
@@ -59,7 +59,7 @@ const StyledTextLabel = styled(Text)`
   cursor: pointer;
 `
 
-const CheckboxInput = styled('input', {
+export const CheckboxInput = styled('input', {
   shouldForwardProp: prop => !['inputSize'].includes(prop),
 })<{ inputSize: number | string }>`
   position: absolute;

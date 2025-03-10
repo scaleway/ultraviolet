@@ -6,7 +6,7 @@ import { Stack } from '../Stack'
 import { Text } from '../Text'
 import { Tooltip } from '../Tooltip'
 
-const InnerCircleRing = styled.circle``
+export const InnerCircleRing = styled.circle``
 const RadioMark = styled.circle``
 
 export const RadioStack = styled(Stack)``
@@ -19,7 +19,7 @@ const RadioMarkedIcon = () => (
   </g>
 )
 
-const Ring = styled.svg`
+export const Ring = styled.svg`
   height: ${({ theme }) => theme.sizing['300']};
   width: ${({ theme }) => theme.sizing['300']};
   min-width: ${({ theme }) => theme.sizing['300']};
@@ -31,7 +31,7 @@ const Ring = styled.svg`
   }
 `
 
-const RadioInput = styled.input`
+export const RadioInput = styled.input`
   cursor: pointer;
   position: absolute;
   height: ${({ theme }) => theme.sizing['300']};

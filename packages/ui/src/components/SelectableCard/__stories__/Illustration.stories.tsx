@@ -12,7 +12,7 @@ import { Stack } from '../../Stack'
 import { Text } from '../../Text'
 
 export const Illustration: StoryFn = args => {
-  const [value, onChange] = useState('label-14')
+  const [value, onChange] = useState('label-30')
   const [value2, onChange2] = useState('label-24')
 
   return (
@@ -21,9 +21,9 @@ export const Illustration: StoryFn = args => {
         ProductIcon:
         <SelectableCard
           {...args}
-          name="label-14"
-          checked={value === 'label-14'}
-          value="label-14"
+          name="label-30"
+          checked={value === 'label-30'}
+          value="label-30"
           type="radio"
           onChange={event => onChange(event.currentTarget.value)}
           label={
@@ -47,9 +47,9 @@ export const Illustration: StoryFn = args => {
         </SelectableCard>
         <SelectableCard
           {...args}
-          name="label-15"
-          checked={value === 'label-15'}
-          value="label-15"
+          name="label-31"
+          checked={value === 'label-31'}
+          value="label-31"
           type="radio"
           onChange={event => onChange(event.currentTarget.value)}
           label={

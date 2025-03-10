@@ -196,7 +196,6 @@ exports[`SelectableCardOptionGroup > onChange and onChangeOption are being calle
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: start;
-  pointer-events: none;
 }
 
 .emotion-14[aria-disabled='false'],
@@ -249,6 +248,47 @@ exports[`SelectableCardOptionGroup > onChange and onChangeOption are being calle
 
 .emotion-14[aria-disabled='true'] {
   color: #b5b7bd;
+}
+
+.emotion-14:hover[aria-disabled='false']:not([data-checked='true']) .emotion-17+.emotion-19 {
+  fill: #d9dadd;
+}
+
+.emotion-14:hover[aria-disabled='false']:not([data-checked='true']) .emotion-17+.emotion-19 .emotion-21 {
+  fill: #ffffff;
+}
+
+.emotion-14:hover[aria-disabled='false']:not([data-checked='true']) .emotion-17[aria-invalid='true']+.emotion-19 {
+  fill: #b3144d;
+}
+
+.emotion-14:hover[aria-disabled='false']:not([data-checked='true']) .emotion-17[aria-invalid='true']+.emotion-19 .emotion-21 {
+  fill: #ffffff;
+}
+
+.emotion-14:hover[aria-disabled='false'] .emotion-17+.emotion-19 {
+  fill: #8c40ef;
+}
+
+.emotion-14:hover[aria-disabled='false'] .emotion-17+.emotion-19 .emotion-21 {
+  fill: #ffffff;
+}
+
+.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='true']+.emotion-19 {
+  fill: #b3144d;
+}
+
+.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='true']+.emotion-19 .emotion-21 {
+  fill: #ffffff;
+}
+
+.emotion-14 .emotion-17[aria-disabled='false']:active+.emotion-19 {
+  background: none;
+  fill: #8c40ef;
+}
+
+.emotion-14 .emotion-17[aria-disabled='false']:active+.emotion-19 .emotion-21 {
+  fill: #ffffff;
 }
 
 .emotion-16 {
@@ -1349,7 +1389,6 @@ exports[`SelectableCardOptionGroup > renders correctly 1`] = `
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: start;
-  pointer-events: none;
 }
 
 .emotion-17[aria-disabled='false'],
@@ -1402,6 +1441,47 @@ exports[`SelectableCardOptionGroup > renders correctly 1`] = `
 
 .emotion-17[aria-disabled='true'] {
   color: #b5b7bd;
+}
+
+.emotion-17:hover[aria-disabled='false']:not([data-checked='true']) .emotion-20+.emotion-22 {
+  fill: #d9dadd;
+}
+
+.emotion-17:hover[aria-disabled='false']:not([data-checked='true']) .emotion-20+.emotion-22 .emotion-24 {
+  fill: #ffffff;
+}
+
+.emotion-17:hover[aria-disabled='false']:not([data-checked='true']) .emotion-20[aria-invalid='true']+.emotion-22 {
+  fill: #b3144d;
+}
+
+.emotion-17:hover[aria-disabled='false']:not([data-checked='true']) .emotion-20[aria-invalid='true']+.emotion-22 .emotion-24 {
+  fill: #ffffff;
+}
+
+.emotion-17:hover[aria-disabled='false'] .emotion-20+.emotion-22 {
+  fill: #8c40ef;
+}
+
+.emotion-17:hover[aria-disabled='false'] .emotion-20+.emotion-22 .emotion-24 {
+  fill: #ffffff;
+}
+
+.emotion-17:hover[aria-disabled='false'] .emotion-20[aria-invalid='true']+.emotion-22 {
+  fill: #b3144d;
+}
+
+.emotion-17:hover[aria-disabled='false'] .emotion-20[aria-invalid='true']+.emotion-22 .emotion-24 {
+  fill: #ffffff;
+}
+
+.emotion-17 .emotion-20[aria-disabled='false']:active+.emotion-22 {
+  background: none;
+  fill: #8c40ef;
+}
+
+.emotion-17 .emotion-20[aria-disabled='false']:active+.emotion-22 .emotion-24 {
+  fill: #ffffff;
 }
 
 .emotion-19 {
@@ -2494,7 +2574,6 @@ exports[`SelectableCardOptionGroup > renders correctly 4 columns 1`] = `
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: start;
-  pointer-events: none;
 }
 
 .emotion-14[aria-disabled='false'],
@@ -2547,6 +2626,47 @@ exports[`SelectableCardOptionGroup > renders correctly 4 columns 1`] = `
 
 .emotion-14[aria-disabled='true'] {
   color: #b5b7bd;
+}
+
+.emotion-14:hover[aria-disabled='false']:not([data-checked='true']) .emotion-17+.emotion-19 {
+  fill: #d9dadd;
+}
+
+.emotion-14:hover[aria-disabled='false']:not([data-checked='true']) .emotion-17+.emotion-19 .emotion-21 {
+  fill: #ffffff;
+}
+
+.emotion-14:hover[aria-disabled='false']:not([data-checked='true']) .emotion-17[aria-invalid='true']+.emotion-19 {
+  fill: #b3144d;
+}
+
+.emotion-14:hover[aria-disabled='false']:not([data-checked='true']) .emotion-17[aria-invalid='true']+.emotion-19 .emotion-21 {
+  fill: #ffffff;
+}
+
+.emotion-14:hover[aria-disabled='false'] .emotion-17+.emotion-19 {
+  fill: #8c40ef;
+}
+
+.emotion-14:hover[aria-disabled='false'] .emotion-17+.emotion-19 .emotion-21 {
+  fill: #ffffff;
+}
+
+.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='true']+.emotion-19 {
+  fill: #b3144d;
+}
+
+.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='true']+.emotion-19 .emotion-21 {
+  fill: #ffffff;
+}
+
+.emotion-14 .emotion-17[aria-disabled='false']:active+.emotion-19 {
+  background: none;
+  fill: #8c40ef;
+}
+
+.emotion-14 .emotion-17[aria-disabled='false']:active+.emotion-19 .emotion-21 {
+  fill: #ffffff;
 }
 
 .emotion-16 {
@@ -3634,7 +3754,6 @@ exports[`SelectableCardOptionGroup > renders correctly with all options disabled
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: start;
-  pointer-events: none;
 }
 
 .emotion-14[aria-disabled='false'],
@@ -3687,6 +3806,47 @@ exports[`SelectableCardOptionGroup > renders correctly with all options disabled
 
 .emotion-14[aria-disabled='true'] {
   color: #b5b7bd;
+}
+
+.emotion-14:hover[aria-disabled='false']:not([data-checked='true']) .emotion-17+.emotion-19 {
+  fill: #d9dadd;
+}
+
+.emotion-14:hover[aria-disabled='false']:not([data-checked='true']) .emotion-17+.emotion-19 .emotion-21 {
+  fill: #ffffff;
+}
+
+.emotion-14:hover[aria-disabled='false']:not([data-checked='true']) .emotion-17[aria-invalid='true']+.emotion-19 {
+  fill: #b3144d;
+}
+
+.emotion-14:hover[aria-disabled='false']:not([data-checked='true']) .emotion-17[aria-invalid='true']+.emotion-19 .emotion-21 {
+  fill: #ffffff;
+}
+
+.emotion-14:hover[aria-disabled='false'] .emotion-17+.emotion-19 {
+  fill: #8c40ef;
+}
+
+.emotion-14:hover[aria-disabled='false'] .emotion-17+.emotion-19 .emotion-21 {
+  fill: #ffffff;
+}
+
+.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='true']+.emotion-19 {
+  fill: #b3144d;
+}
+
+.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='true']+.emotion-19 .emotion-21 {
+  fill: #ffffff;
+}
+
+.emotion-14 .emotion-17[aria-disabled='false']:active+.emotion-19 {
+  background: none;
+  fill: #8c40ef;
+}
+
+.emotion-14 .emotion-17[aria-disabled='false']:active+.emotion-19 .emotion-21 {
+  fill: #ffffff;
 }
 
 .emotion-16 {
@@ -4777,7 +4937,6 @@ exports[`SelectableCardOptionGroup > renders correctly with aria-label 1`] = `
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: start;
-  pointer-events: none;
 }
 
 .emotion-14[aria-disabled='false'],
@@ -4830,6 +4989,47 @@ exports[`SelectableCardOptionGroup > renders correctly with aria-label 1`] = `
 
 .emotion-14[aria-disabled='true'] {
   color: #b5b7bd;
+}
+
+.emotion-14:hover[aria-disabled='false']:not([data-checked='true']) .emotion-17+.emotion-19 {
+  fill: #d9dadd;
+}
+
+.emotion-14:hover[aria-disabled='false']:not([data-checked='true']) .emotion-17+.emotion-19 .emotion-21 {
+  fill: #ffffff;
+}
+
+.emotion-14:hover[aria-disabled='false']:not([data-checked='true']) .emotion-17[aria-invalid='true']+.emotion-19 {
+  fill: #b3144d;
+}
+
+.emotion-14:hover[aria-disabled='false']:not([data-checked='true']) .emotion-17[aria-invalid='true']+.emotion-19 .emotion-21 {
+  fill: #ffffff;
+}
+
+.emotion-14:hover[aria-disabled='false'] .emotion-17+.emotion-19 {
+  fill: #8c40ef;
+}
+
+.emotion-14:hover[aria-disabled='false'] .emotion-17+.emotion-19 .emotion-21 {
+  fill: #ffffff;
+}
+
+.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='true']+.emotion-19 {
+  fill: #b3144d;
+}
+
+.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='true']+.emotion-19 .emotion-21 {
+  fill: #ffffff;
+}
+
+.emotion-14 .emotion-17[aria-disabled='false']:active+.emotion-19 {
+  background: none;
+  fill: #8c40ef;
+}
+
+.emotion-14 .emotion-17[aria-disabled='false']:active+.emotion-19 .emotion-21 {
+  fill: #ffffff;
 }
 
 .emotion-16 {
@@ -5873,7 +6073,6 @@ exports[`SelectableCardOptionGroup > renders correctly with error as boolean 1`]
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: start;
-  pointer-events: none;
 }
 
 .emotion-14[aria-disabled='false'],
@@ -5926,6 +6125,47 @@ exports[`SelectableCardOptionGroup > renders correctly with error as boolean 1`]
 
 .emotion-14[aria-disabled='true'] {
   color: #b5b7bd;
+}
+
+.emotion-14:hover[aria-disabled='false']:not([data-checked='true']) .emotion-17+.emotion-19 {
+  fill: #d9dadd;
+}
+
+.emotion-14:hover[aria-disabled='false']:not([data-checked='true']) .emotion-17+.emotion-19 .emotion-21 {
+  fill: #ffffff;
+}
+
+.emotion-14:hover[aria-disabled='false']:not([data-checked='true']) .emotion-17[aria-invalid='true']+.emotion-19 {
+  fill: #b3144d;
+}
+
+.emotion-14:hover[aria-disabled='false']:not([data-checked='true']) .emotion-17[aria-invalid='true']+.emotion-19 .emotion-21 {
+  fill: #ffffff;
+}
+
+.emotion-14:hover[aria-disabled='false'] .emotion-17+.emotion-19 {
+  fill: #8c40ef;
+}
+
+.emotion-14:hover[aria-disabled='false'] .emotion-17+.emotion-19 .emotion-21 {
+  fill: #ffffff;
+}
+
+.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='true']+.emotion-19 {
+  fill: #b3144d;
+}
+
+.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='true']+.emotion-19 .emotion-21 {
+  fill: #ffffff;
+}
+
+.emotion-14 .emotion-17[aria-disabled='false']:active+.emotion-19 {
+  background: none;
+  fill: #8c40ef;
+}
+
+.emotion-14 .emotion-17[aria-disabled='false']:active+.emotion-19 .emotion-21 {
+  fill: #ffffff;
 }
 
 .emotion-16 {
@@ -7057,7 +7297,6 @@ exports[`SelectableCardOptionGroup > renders correctly with error message 1`] = 
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: start;
-  pointer-events: none;
 }
 
 .emotion-14[aria-disabled='false'],
@@ -7110,6 +7349,47 @@ exports[`SelectableCardOptionGroup > renders correctly with error message 1`] = 
 
 .emotion-14[aria-disabled='true'] {
   color: #b5b7bd;
+}
+
+.emotion-14:hover[aria-disabled='false']:not([data-checked='true']) .emotion-17+.emotion-19 {
+  fill: #d9dadd;
+}
+
+.emotion-14:hover[aria-disabled='false']:not([data-checked='true']) .emotion-17+.emotion-19 .emotion-21 {
+  fill: #ffffff;
+}
+
+.emotion-14:hover[aria-disabled='false']:not([data-checked='true']) .emotion-17[aria-invalid='true']+.emotion-19 {
+  fill: #b3144d;
+}
+
+.emotion-14:hover[aria-disabled='false']:not([data-checked='true']) .emotion-17[aria-invalid='true']+.emotion-19 .emotion-21 {
+  fill: #ffffff;
+}
+
+.emotion-14:hover[aria-disabled='false'] .emotion-17+.emotion-19 {
+  fill: #8c40ef;
+}
+
+.emotion-14:hover[aria-disabled='false'] .emotion-17+.emotion-19 .emotion-21 {
+  fill: #ffffff;
+}
+
+.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='true']+.emotion-19 {
+  fill: #b3144d;
+}
+
+.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='true']+.emotion-19 .emotion-21 {
+  fill: #ffffff;
+}
+
+.emotion-14 .emotion-17[aria-disabled='false']:active+.emotion-19 {
+  background: none;
+  fill: #8c40ef;
+}
+
+.emotion-14 .emotion-17[aria-disabled='false']:active+.emotion-19 .emotion-21 {
+  fill: #ffffff;
 }
 
 .emotion-16 {
@@ -8258,7 +8538,6 @@ exports[`SelectableCardOptionGroup > renders correctly with helper 1`] = `
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: start;
-  pointer-events: none;
 }
 
 .emotion-14[aria-disabled='false'],
@@ -8311,6 +8590,47 @@ exports[`SelectableCardOptionGroup > renders correctly with helper 1`] = `
 
 .emotion-14[aria-disabled='true'] {
   color: #b5b7bd;
+}
+
+.emotion-14:hover[aria-disabled='false']:not([data-checked='true']) .emotion-17+.emotion-19 {
+  fill: #d9dadd;
+}
+
+.emotion-14:hover[aria-disabled='false']:not([data-checked='true']) .emotion-17+.emotion-19 .emotion-21 {
+  fill: #ffffff;
+}
+
+.emotion-14:hover[aria-disabled='false']:not([data-checked='true']) .emotion-17[aria-invalid='true']+.emotion-19 {
+  fill: #b3144d;
+}
+
+.emotion-14:hover[aria-disabled='false']:not([data-checked='true']) .emotion-17[aria-invalid='true']+.emotion-19 .emotion-21 {
+  fill: #ffffff;
+}
+
+.emotion-14:hover[aria-disabled='false'] .emotion-17+.emotion-19 {
+  fill: #8c40ef;
+}
+
+.emotion-14:hover[aria-disabled='false'] .emotion-17+.emotion-19 .emotion-21 {
+  fill: #ffffff;
+}
+
+.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='true']+.emotion-19 {
+  fill: #b3144d;
+}
+
+.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='true']+.emotion-19 .emotion-21 {
+  fill: #ffffff;
+}
+
+.emotion-14 .emotion-17[aria-disabled='false']:active+.emotion-19 {
+  background: none;
+  fill: #8c40ef;
+}
+
+.emotion-14 .emotion-17[aria-disabled='false']:active+.emotion-19 .emotion-21 {
+  fill: #ffffff;
 }
 
 .emotion-16 {
@@ -9415,7 +9735,6 @@ exports[`SelectableCardOptionGroup > renders correctly with id 1`] = `
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: start;
-  pointer-events: none;
 }
 
 .emotion-14[aria-disabled='false'],
@@ -9468,6 +9787,47 @@ exports[`SelectableCardOptionGroup > renders correctly with id 1`] = `
 
 .emotion-14[aria-disabled='true'] {
   color: #b5b7bd;
+}
+
+.emotion-14:hover[aria-disabled='false']:not([data-checked='true']) .emotion-17+.emotion-19 {
+  fill: #d9dadd;
+}
+
+.emotion-14:hover[aria-disabled='false']:not([data-checked='true']) .emotion-17+.emotion-19 .emotion-21 {
+  fill: #ffffff;
+}
+
+.emotion-14:hover[aria-disabled='false']:not([data-checked='true']) .emotion-17[aria-invalid='true']+.emotion-19 {
+  fill: #b3144d;
+}
+
+.emotion-14:hover[aria-disabled='false']:not([data-checked='true']) .emotion-17[aria-invalid='true']+.emotion-19 .emotion-21 {
+  fill: #ffffff;
+}
+
+.emotion-14:hover[aria-disabled='false'] .emotion-17+.emotion-19 {
+  fill: #8c40ef;
+}
+
+.emotion-14:hover[aria-disabled='false'] .emotion-17+.emotion-19 .emotion-21 {
+  fill: #ffffff;
+}
+
+.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='true']+.emotion-19 {
+  fill: #b3144d;
+}
+
+.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='true']+.emotion-19 .emotion-21 {
+  fill: #ffffff;
+}
+
+.emotion-14 .emotion-17[aria-disabled='false']:active+.emotion-19 {
+  background: none;
+  fill: #8c40ef;
+}
+
+.emotion-14 .emotion-17[aria-disabled='false']:active+.emotion-19 .emotion-21 {
+  fill: #ffffff;
 }
 
 .emotion-16 {
@@ -10555,7 +10915,6 @@ exports[`SelectableCardOptionGroup > renders correctly with image as ReactNode 1
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: start;
-  pointer-events: none;
 }
 
 .emotion-14[aria-disabled='false'],
@@ -10608,6 +10967,47 @@ exports[`SelectableCardOptionGroup > renders correctly with image as ReactNode 1
 
 .emotion-14[aria-disabled='true'] {
   color: #b5b7bd;
+}
+
+.emotion-14:hover[aria-disabled='false']:not([data-checked='true']) .emotion-17+.emotion-19 {
+  fill: #d9dadd;
+}
+
+.emotion-14:hover[aria-disabled='false']:not([data-checked='true']) .emotion-17+.emotion-19 .emotion-21 {
+  fill: #ffffff;
+}
+
+.emotion-14:hover[aria-disabled='false']:not([data-checked='true']) .emotion-17[aria-invalid='true']+.emotion-19 {
+  fill: #b3144d;
+}
+
+.emotion-14:hover[aria-disabled='false']:not([data-checked='true']) .emotion-17[aria-invalid='true']+.emotion-19 .emotion-21 {
+  fill: #ffffff;
+}
+
+.emotion-14:hover[aria-disabled='false'] .emotion-17+.emotion-19 {
+  fill: #8c40ef;
+}
+
+.emotion-14:hover[aria-disabled='false'] .emotion-17+.emotion-19 .emotion-21 {
+  fill: #ffffff;
+}
+
+.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='true']+.emotion-19 {
+  fill: #b3144d;
+}
+
+.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='true']+.emotion-19 .emotion-21 {
+  fill: #ffffff;
+}
+
+.emotion-14 .emotion-17[aria-disabled='false']:active+.emotion-19 {
+  background: none;
+  fill: #8c40ef;
+}
+
+.emotion-14 .emotion-17[aria-disabled='false']:active+.emotion-19 .emotion-21 {
+  fill: #ffffff;
 }
 
 .emotion-16 {
@@ -11684,7 +12084,6 @@ exports[`SelectableCardOptionGroup > renders correctly with medium size 1`] = `
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: start;
-  pointer-events: none;
 }
 
 .emotion-14[aria-disabled='false'],
@@ -11737,6 +12136,47 @@ exports[`SelectableCardOptionGroup > renders correctly with medium size 1`] = `
 
 .emotion-14[aria-disabled='true'] {
   color: #b5b7bd;
+}
+
+.emotion-14:hover[aria-disabled='false']:not([data-checked='true']) .emotion-17+.emotion-19 {
+  fill: #d9dadd;
+}
+
+.emotion-14:hover[aria-disabled='false']:not([data-checked='true']) .emotion-17+.emotion-19 .emotion-21 {
+  fill: #ffffff;
+}
+
+.emotion-14:hover[aria-disabled='false']:not([data-checked='true']) .emotion-17[aria-invalid='true']+.emotion-19 {
+  fill: #b3144d;
+}
+
+.emotion-14:hover[aria-disabled='false']:not([data-checked='true']) .emotion-17[aria-invalid='true']+.emotion-19 .emotion-21 {
+  fill: #ffffff;
+}
+
+.emotion-14:hover[aria-disabled='false'] .emotion-17+.emotion-19 {
+  fill: #8c40ef;
+}
+
+.emotion-14:hover[aria-disabled='false'] .emotion-17+.emotion-19 .emotion-21 {
+  fill: #ffffff;
+}
+
+.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='true']+.emotion-19 {
+  fill: #b3144d;
+}
+
+.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='true']+.emotion-19 .emotion-21 {
+  fill: #ffffff;
+}
+
+.emotion-14 .emotion-17[aria-disabled='false']:active+.emotion-19 {
+  background: none;
+  fill: #8c40ef;
+}
+
+.emotion-14 .emotion-17[aria-disabled='false']:active+.emotion-19 .emotion-21 {
+  fill: #ffffff;
 }
 
 .emotion-16 {
@@ -12824,7 +13264,6 @@ exports[`SelectableCardOptionGroup > renders correctly with partial disabled 1`]
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: start;
-  pointer-events: none;
 }
 
 .emotion-14[aria-disabled='false'],
@@ -12877,6 +13316,47 @@ exports[`SelectableCardOptionGroup > renders correctly with partial disabled 1`]
 
 .emotion-14[aria-disabled='true'] {
   color: #b5b7bd;
+}
+
+.emotion-14:hover[aria-disabled='false']:not([data-checked='true']) .emotion-17+.emotion-19 {
+  fill: #d9dadd;
+}
+
+.emotion-14:hover[aria-disabled='false']:not([data-checked='true']) .emotion-17+.emotion-19 .emotion-21 {
+  fill: #ffffff;
+}
+
+.emotion-14:hover[aria-disabled='false']:not([data-checked='true']) .emotion-17[aria-invalid='true']+.emotion-19 {
+  fill: #b3144d;
+}
+
+.emotion-14:hover[aria-disabled='false']:not([data-checked='true']) .emotion-17[aria-invalid='true']+.emotion-19 .emotion-21 {
+  fill: #ffffff;
+}
+
+.emotion-14:hover[aria-disabled='false'] .emotion-17+.emotion-19 {
+  fill: #8c40ef;
+}
+
+.emotion-14:hover[aria-disabled='false'] .emotion-17+.emotion-19 .emotion-21 {
+  fill: #ffffff;
+}
+
+.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='true']+.emotion-19 {
+  fill: #b3144d;
+}
+
+.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='true']+.emotion-19 .emotion-21 {
+  fill: #ffffff;
+}
+
+.emotion-14 .emotion-17[aria-disabled='false']:active+.emotion-19 {
+  background: none;
+  fill: #8c40ef;
+}
+
+.emotion-14 .emotion-17[aria-disabled='false']:active+.emotion-19 .emotion-21 {
+  fill: #ffffff;
 }
 
 .emotion-16 {
