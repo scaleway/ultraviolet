@@ -3,6 +3,7 @@ import { useMemo } from 'react'
 import { Text } from '../Text'
 
 const Container = styled.div`
+  cursor: text;
   background: ${({ theme }) => theme.colors.neutral.backgroundWeak};
   border-radius: ${({ theme }) => theme.radii.default};
   border: 0.5px solid ${({ theme }) => theme.colors.neutral.border};

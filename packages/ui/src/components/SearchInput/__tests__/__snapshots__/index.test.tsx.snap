@@ -3,6 +3,7 @@
 exports[`SearchInput > Key > renders correctly with disabled 1`] = `
 <DocumentFragment>
   .emotion-0 {
+  cursor: text;
   background: #f9f9fa;
   border-radius: 0.25rem;
   border: 0.5px solid #d9dadd;
@@ -65,6 +66,7 @@ exports[`SearchInput > Key > renders correctly with disabled 1`] = `
 exports[`SearchInput > Key > renders correctly with special   key 1`] = `
 <DocumentFragment>
   .emotion-0 {
+  cursor: text;
   background: #f9f9fa;
   border-radius: 0.25rem;
   border: 0.5px solid #d9dadd;
@@ -126,6 +128,7 @@ exports[`SearchInput > Key > renders correctly with special   key 1`] = `
 exports[`SearchInput > Key > renders correctly with special Alt key 1`] = `
 <DocumentFragment>
   .emotion-0 {
+  cursor: text;
   background: #f9f9fa;
   border-radius: 0.25rem;
   border: 0.5px solid #d9dadd;
@@ -187,6 +190,7 @@ exports[`SearchInput > Key > renders correctly with special Alt key 1`] = `
 exports[`SearchInput > Key > renders correctly with special ArrowDown key 1`] = `
 <DocumentFragment>
   .emotion-0 {
+  cursor: text;
   background: #f9f9fa;
   border-radius: 0.25rem;
   border: 0.5px solid #d9dadd;
@@ -248,6 +252,7 @@ exports[`SearchInput > Key > renders correctly with special ArrowDown key 1`] = 
 exports[`SearchInput > Key > renders correctly with special ArrowLeft key 1`] = `
 <DocumentFragment>
   .emotion-0 {
+  cursor: text;
   background: #f9f9fa;
   border-radius: 0.25rem;
   border: 0.5px solid #d9dadd;
@@ -309,6 +314,7 @@ exports[`SearchInput > Key > renders correctly with special ArrowLeft key 1`] = 
 exports[`SearchInput > Key > renders correctly with special ArrowRight key 1`] = `
 <DocumentFragment>
   .emotion-0 {
+  cursor: text;
   background: #f9f9fa;
   border-radius: 0.25rem;
   border: 0.5px solid #d9dadd;
@@ -370,6 +376,7 @@ exports[`SearchInput > Key > renders correctly with special ArrowRight key 1`] =
 exports[`SearchInput > Key > renders correctly with special ArrowUp key 1`] = `
 <DocumentFragment>
   .emotion-0 {
+  cursor: text;
   background: #f9f9fa;
   border-radius: 0.25rem;
   border: 0.5px solid #d9dadd;
@@ -431,6 +438,7 @@ exports[`SearchInput > Key > renders correctly with special ArrowUp key 1`] = `
 exports[`SearchInput > Key > renders correctly with special Backspace key 1`] = `
 <DocumentFragment>
   .emotion-0 {
+  cursor: text;
   background: #f9f9fa;
   border-radius: 0.25rem;
   border: 0.5px solid #d9dadd;
@@ -492,6 +500,7 @@ exports[`SearchInput > Key > renders correctly with special Backspace key 1`] = 
 exports[`SearchInput > Key > renders correctly with special CapsLock key 1`] = `
 <DocumentFragment>
   .emotion-0 {
+  cursor: text;
   background: #f9f9fa;
   border-radius: 0.25rem;
   border: 0.5px solid #d9dadd;
@@ -553,6 +562,7 @@ exports[`SearchInput > Key > renders correctly with special CapsLock key 1`] = `
 exports[`SearchInput > Key > renders correctly with special Control key 1`] = `
 <DocumentFragment>
   .emotion-0 {
+  cursor: text;
   background: #f9f9fa;
   border-radius: 0.25rem;
   border: 0.5px solid #d9dadd;
@@ -614,6 +624,7 @@ exports[`SearchInput > Key > renders correctly with special Control key 1`] = `
 exports[`SearchInput > Key > renders correctly with special Delete key 1`] = `
 <DocumentFragment>
   .emotion-0 {
+  cursor: text;
   background: #f9f9fa;
   border-radius: 0.25rem;
   border: 0.5px solid #d9dadd;
@@ -675,6 +686,7 @@ exports[`SearchInput > Key > renders correctly with special Delete key 1`] = `
 exports[`SearchInput > Key > renders correctly with special Enter key 1`] = `
 <DocumentFragment>
   .emotion-0 {
+  cursor: text;
   background: #f9f9fa;
   border-radius: 0.25rem;
   border: 0.5px solid #d9dadd;
@@ -736,6 +748,7 @@ exports[`SearchInput > Key > renders correctly with special Enter key 1`] = `
 exports[`SearchInput > Key > renders correctly with special Escape key 1`] = `
 <DocumentFragment>
   .emotion-0 {
+  cursor: text;
   background: #f9f9fa;
   border-radius: 0.25rem;
   border: 0.5px solid #d9dadd;
@@ -797,6 +810,7 @@ exports[`SearchInput > Key > renders correctly with special Escape key 1`] = `
 exports[`SearchInput > Key > renders correctly with special Meta key 1`] = `
 <DocumentFragment>
   .emotion-0 {
+  cursor: text;
   background: #f9f9fa;
   border-radius: 0.25rem;
   border: 0.5px solid #d9dadd;
@@ -892,7 +906,7 @@ exports[`SearchInput > renders correctly without children props 1`] = `
   border: none;
 }
 
-.emotion-3 .emotion-12 {
+.emotion-3 .emotion-14 {
   padding: 0;
 }
 
@@ -914,23 +928,23 @@ exports[`SearchInput > renders correctly without children props 1`] = `
   border-radius: 0.25rem;
 }
 
-.emotion-5>.emotion-12 {
+.emotion-5>.emotion-14 {
   color: #3f4250;
 }
 
-.emotion-5>.emotion-12::-webkit-input-placeholder {
+.emotion-5>.emotion-14::-webkit-input-placeholder {
   color: #727683;
 }
 
-.emotion-5>.emotion-12::-moz-placeholder {
+.emotion-5>.emotion-14::-moz-placeholder {
   color: #727683;
 }
 
-.emotion-5>.emotion-12:-ms-input-placeholder {
+.emotion-5>.emotion-14:-ms-input-placeholder {
   color: #727683;
 }
 
-.emotion-5>.emotion-12::placeholder {
+.emotion-5>.emotion-14::placeholder {
   color: #727683;
 }
 
@@ -952,23 +966,23 @@ exports[`SearchInput > renders correctly without children props 1`] = `
   border-color: #e9eaeb;
 }
 
-.emotion-5[data-disabled='true']>.emotion-12 {
+.emotion-5[data-disabled='true']>.emotion-14 {
   color: #b5b7bd;
 }
 
-.emotion-5[data-disabled='true']>.emotion-12::-webkit-input-placeholder {
+.emotion-5[data-disabled='true']>.emotion-14::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-5[data-disabled='true']>.emotion-12::-moz-placeholder {
+.emotion-5[data-disabled='true']>.emotion-14::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-5[data-disabled='true']>.emotion-12:-ms-input-placeholder {
+.emotion-5[data-disabled='true']>.emotion-14:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-5[data-disabled='true']>.emotion-12::placeholder {
+.emotion-5[data-disabled='true']>.emotion-14::placeholder {
   color: #b5b7bd;
 }
 
@@ -1007,6 +1021,30 @@ exports[`SearchInput > renders correctly without children props 1`] = `
 }
 
 .emotion-9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  cursor: text;
+}
+
+.emotion-11 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1rem;
@@ -1015,12 +1053,12 @@ exports[`SearchInput > renders correctly without children props 1`] = `
   min-height: 1rem;
 }
 
-.emotion-9 .fillStroke {
+.emotion-11 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
 
-.emotion-11 {
+.emotion-13 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -1033,11 +1071,11 @@ exports[`SearchInput > renders correctly without children props 1`] = `
   font-size: 0.875rem;
 }
 
-.emotion-11[data-size='large'] {
+.emotion-13[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-11[data-size='small'] {
+.emotion-13[data-size='small'] {
   padding-left: 0.5rem;
 }
 
@@ -1068,20 +1106,24 @@ exports[`SearchInput > renders correctly without children props 1`] = `
                 class="emotion-7 emotion-8"
                 data-size="large"
               >
-                <svg
+                <div
                   class="emotion-9 emotion-10"
-                  viewBox="0 0 20 20"
                 >
-                  <path
-                    clip-rule="evenodd"
-                    d="M9 3.5a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11M2 9a7 7 0 1 1 12.452 4.391l3.328 3.329a.75.75 0 1 1-1.06 1.06l-3.329-3.328A7 7 0 0 1 2 9"
-                    fill-rule="evenodd"
-                  />
-                </svg>
+                  <svg
+                    class="emotion-11 emotion-12"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="M9 3.5a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11M2 9a7 7 0 1 1 12.452 4.391l3.328 3.329a.75.75 0 1 1-1.06 1.06l-3.329-3.328A7 7 0 0 1 2 9"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
+                </div>
               </div>
               <input
                 aria-invalid="false"
-                class="emotion-11 emotion-12"
+                class="emotion-13 emotion-14"
                 data-size="large"
                 id=":rf:"
                 placeholder="Type something"
@@ -1134,7 +1176,7 @@ exports[`SearchInput > renders with disabled prop 1`] = `
   border: none;
 }
 
-.emotion-3 .emotion-12 {
+.emotion-3 .emotion-14 {
   padding: 0;
 }
 
@@ -1156,23 +1198,23 @@ exports[`SearchInput > renders with disabled prop 1`] = `
   border-radius: 0.25rem;
 }
 
-.emotion-5>.emotion-12 {
+.emotion-5>.emotion-14 {
   color: #3f4250;
 }
 
-.emotion-5>.emotion-12::-webkit-input-placeholder {
+.emotion-5>.emotion-14::-webkit-input-placeholder {
   color: #727683;
 }
 
-.emotion-5>.emotion-12::-moz-placeholder {
+.emotion-5>.emotion-14::-moz-placeholder {
   color: #727683;
 }
 
-.emotion-5>.emotion-12:-ms-input-placeholder {
+.emotion-5>.emotion-14:-ms-input-placeholder {
   color: #727683;
 }
 
-.emotion-5>.emotion-12::placeholder {
+.emotion-5>.emotion-14::placeholder {
   color: #727683;
 }
 
@@ -1194,23 +1236,23 @@ exports[`SearchInput > renders with disabled prop 1`] = `
   border-color: #e9eaeb;
 }
 
-.emotion-5[data-disabled='true']>.emotion-12 {
+.emotion-5[data-disabled='true']>.emotion-14 {
   color: #b5b7bd;
 }
 
-.emotion-5[data-disabled='true']>.emotion-12::-webkit-input-placeholder {
+.emotion-5[data-disabled='true']>.emotion-14::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-5[data-disabled='true']>.emotion-12::-moz-placeholder {
+.emotion-5[data-disabled='true']>.emotion-14::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-5[data-disabled='true']>.emotion-12:-ms-input-placeholder {
+.emotion-5[data-disabled='true']>.emotion-14:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-5[data-disabled='true']>.emotion-12::placeholder {
+.emotion-5[data-disabled='true']>.emotion-14::placeholder {
   color: #b5b7bd;
 }
 
@@ -1249,6 +1291,30 @@ exports[`SearchInput > renders with disabled prop 1`] = `
 }
 
 .emotion-9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  cursor: text;
+}
+
+.emotion-11 {
   vertical-align: middle;
   fill: #b5b7bd;
   height: 1rem;
@@ -1257,12 +1323,12 @@ exports[`SearchInput > renders with disabled prop 1`] = `
   min-height: 1rem;
 }
 
-.emotion-9 .fillStroke {
+.emotion-11 .fillStroke {
   stroke: #b5b7bd;
   fill: none;
 }
 
-.emotion-11 {
+.emotion-13 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -1275,11 +1341,11 @@ exports[`SearchInput > renders with disabled prop 1`] = `
   font-size: 0.875rem;
 }
 
-.emotion-11[data-size='large'] {
+.emotion-13[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-11[data-size='small'] {
+.emotion-13[data-size='small'] {
   padding-left: 0.5rem;
 }
 
@@ -1310,20 +1376,24 @@ exports[`SearchInput > renders with disabled prop 1`] = `
                 class="emotion-7 emotion-8"
                 data-size="large"
               >
-                <svg
+                <div
                   class="emotion-9 emotion-10"
-                  viewBox="0 0 20 20"
                 >
-                  <path
-                    clip-rule="evenodd"
-                    d="M9 3.5a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11M2 9a7 7 0 1 1 12.452 4.391l3.328 3.329a.75.75 0 1 1-1.06 1.06l-3.329-3.328A7 7 0 0 1 2 9"
-                    fill-rule="evenodd"
-                  />
-                </svg>
+                  <svg
+                    class="emotion-11 emotion-12"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="M9 3.5a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11M2 9a7 7 0 1 1 12.452 4.391l3.328 3.329a.75.75 0 1 1-1.06 1.06l-3.329-3.328A7 7 0 0 1 2 9"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
+                </div>
               </div>
               <input
                 aria-invalid="false"
-                class="emotion-11 emotion-12"
+                class="emotion-13 emotion-14"
                 data-size="large"
                 disabled=""
                 id=":ri:"
@@ -1377,7 +1447,7 @@ exports[`SearchInput > renders with error prop 1`] = `
   border: none;
 }
 
-.emotion-3 .emotion-12 {
+.emotion-3 .emotion-14 {
   padding: 0;
 }
 
@@ -1399,23 +1469,23 @@ exports[`SearchInput > renders with error prop 1`] = `
   border-radius: 0.25rem;
 }
 
-.emotion-5>.emotion-12 {
+.emotion-5>.emotion-14 {
   color: #3f4250;
 }
 
-.emotion-5>.emotion-12::-webkit-input-placeholder {
+.emotion-5>.emotion-14::-webkit-input-placeholder {
   color: #727683;
 }
 
-.emotion-5>.emotion-12::-moz-placeholder {
+.emotion-5>.emotion-14::-moz-placeholder {
   color: #727683;
 }
 
-.emotion-5>.emotion-12:-ms-input-placeholder {
+.emotion-5>.emotion-14:-ms-input-placeholder {
   color: #727683;
 }
 
-.emotion-5>.emotion-12::placeholder {
+.emotion-5>.emotion-14::placeholder {
   color: #727683;
 }
 
@@ -1437,23 +1507,23 @@ exports[`SearchInput > renders with error prop 1`] = `
   border-color: #e9eaeb;
 }
 
-.emotion-5[data-disabled='true']>.emotion-12 {
+.emotion-5[data-disabled='true']>.emotion-14 {
   color: #b5b7bd;
 }
 
-.emotion-5[data-disabled='true']>.emotion-12::-webkit-input-placeholder {
+.emotion-5[data-disabled='true']>.emotion-14::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-5[data-disabled='true']>.emotion-12::-moz-placeholder {
+.emotion-5[data-disabled='true']>.emotion-14::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-5[data-disabled='true']>.emotion-12:-ms-input-placeholder {
+.emotion-5[data-disabled='true']>.emotion-14:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-5[data-disabled='true']>.emotion-12::placeholder {
+.emotion-5[data-disabled='true']>.emotion-14::placeholder {
   color: #b5b7bd;
 }
 
@@ -1492,6 +1562,30 @@ exports[`SearchInput > renders with error prop 1`] = `
 }
 
 .emotion-9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  cursor: text;
+}
+
+.emotion-11 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1rem;
@@ -1500,12 +1594,12 @@ exports[`SearchInput > renders with error prop 1`] = `
   min-height: 1rem;
 }
 
-.emotion-9 .fillStroke {
+.emotion-11 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
 
-.emotion-11 {
+.emotion-13 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -1518,15 +1612,15 @@ exports[`SearchInput > renders with error prop 1`] = `
   font-size: 0.875rem;
 }
 
-.emotion-11[data-size='large'] {
+.emotion-13[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-11[data-size='small'] {
+.emotion-13[data-size='small'] {
   padding-left: 0.5rem;
 }
 
-.emotion-13 {
+.emotion-15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1550,7 +1644,7 @@ exports[`SearchInput > renders with error prop 1`] = `
   padding: 0 1rem;
 }
 
-.emotion-15 {
+.emotion-17 {
   vertical-align: middle;
   fill: #b3144d;
   height: 1rem;
@@ -1559,12 +1653,12 @@ exports[`SearchInput > renders with error prop 1`] = `
   min-height: 1rem;
 }
 
-.emotion-15 .fillStroke {
+.emotion-17 .fillStroke {
   stroke: #b3144d;
   fill: none;
 }
 
-.emotion-17 {
+.emotion-19 {
   color: #b3144d;
   font-size: 0.75rem;
   font-family: Inter,Asap,sans-serif;
@@ -1603,20 +1697,24 @@ exports[`SearchInput > renders with error prop 1`] = `
                 class="emotion-7 emotion-8"
                 data-size="large"
               >
-                <svg
+                <div
                   class="emotion-9 emotion-10"
-                  viewBox="0 0 20 20"
                 >
-                  <path
-                    clip-rule="evenodd"
-                    d="M9 3.5a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11M2 9a7 7 0 1 1 12.452 4.391l3.328 3.329a.75.75 0 1 1-1.06 1.06l-3.329-3.328A7 7 0 0 1 2 9"
-                    fill-rule="evenodd"
-                  />
-                </svg>
+                  <svg
+                    class="emotion-11 emotion-12"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="M9 3.5a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11M2 9a7 7 0 1 1 12.452 4.391l3.328 3.329a.75.75 0 1 1-1.06 1.06l-3.329-3.328A7 7 0 0 1 2 9"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
+                </div>
               </div>
               <input
                 aria-invalid="true"
-                class="emotion-11 emotion-12"
+                class="emotion-13 emotion-14"
                 data-size="large"
                 id=":r10:"
                 placeholder="Type something"
@@ -1624,10 +1722,10 @@ exports[`SearchInput > renders with error prop 1`] = `
                 value=""
               />
               <div
-                class="emotion-13 emotion-14"
+                class="emotion-15 emotion-16"
               >
                 <svg
-                  class="emotion-15 emotion-10"
+                  class="emotion-17 emotion-12"
                   viewBox="0 0 20 20"
                 >
                   <path
@@ -1640,7 +1738,7 @@ exports[`SearchInput > renders with error prop 1`] = `
             </div>
           </div>
           <p
-            class="emotion-17 emotion-18"
+            class="emotion-19 emotion-20"
           >
             there is an error
           </p>
@@ -1688,11 +1786,11 @@ exports[`SearchInput > renders with shortcut prop > as array of string 1`] = `
   border: none;
 }
 
-.emotion-3 .emotion-12 {
+.emotion-3 .emotion-14 {
   padding: 0;
 }
 
-.emotion-3 .emotion-14 {
+.emotion-3 .emotion-16 {
   border: none;
 }
 
@@ -1710,23 +1808,23 @@ exports[`SearchInput > renders with shortcut prop > as array of string 1`] = `
   border-radius: 0.25rem;
 }
 
-.emotion-5>.emotion-12 {
+.emotion-5>.emotion-14 {
   color: #3f4250;
 }
 
-.emotion-5>.emotion-12::-webkit-input-placeholder {
+.emotion-5>.emotion-14::-webkit-input-placeholder {
   color: #727683;
 }
 
-.emotion-5>.emotion-12::-moz-placeholder {
+.emotion-5>.emotion-14::-moz-placeholder {
   color: #727683;
 }
 
-.emotion-5>.emotion-12:-ms-input-placeholder {
+.emotion-5>.emotion-14:-ms-input-placeholder {
   color: #727683;
 }
 
-.emotion-5>.emotion-12::placeholder {
+.emotion-5>.emotion-14::placeholder {
   color: #727683;
 }
 
@@ -1748,23 +1846,23 @@ exports[`SearchInput > renders with shortcut prop > as array of string 1`] = `
   border-color: #e9eaeb;
 }
 
-.emotion-5[data-disabled='true']>.emotion-12 {
+.emotion-5[data-disabled='true']>.emotion-14 {
   color: #b5b7bd;
 }
 
-.emotion-5[data-disabled='true']>.emotion-12::-webkit-input-placeholder {
+.emotion-5[data-disabled='true']>.emotion-14::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-5[data-disabled='true']>.emotion-12::-moz-placeholder {
+.emotion-5[data-disabled='true']>.emotion-14::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-5[data-disabled='true']>.emotion-12:-ms-input-placeholder {
+.emotion-5[data-disabled='true']>.emotion-14:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-5[data-disabled='true']>.emotion-12::placeholder {
+.emotion-5[data-disabled='true']>.emotion-14::placeholder {
   color: #b5b7bd;
 }
 
@@ -1803,6 +1901,30 @@ exports[`SearchInput > renders with shortcut prop > as array of string 1`] = `
 }
 
 .emotion-9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  cursor: text;
+}
+
+.emotion-11 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1rem;
@@ -1811,12 +1933,12 @@ exports[`SearchInput > renders with shortcut prop > as array of string 1`] = `
   min-height: 1rem;
 }
 
-.emotion-9 .fillStroke {
+.emotion-11 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
 
-.emotion-11 {
+.emotion-13 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -1829,15 +1951,15 @@ exports[`SearchInput > renders with shortcut prop > as array of string 1`] = `
   font-size: 0.875rem;
 }
 
-.emotion-11[data-size='large'] {
+.emotion-13[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-11[data-size='small'] {
+.emotion-13[data-size='small'] {
   padding-left: 0.5rem;
 }
 
-.emotion-13 {
+.emotion-15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1863,7 +1985,7 @@ exports[`SearchInput > renders with shortcut prop > as array of string 1`] = `
   border-color: inherit;
 }
 
-.emotion-15 {
+.emotion-17 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1884,9 +2006,11 @@ exports[`SearchInput > renders with shortcut prop > as array of string 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  cursor: text;
 }
 
-.emotion-17 {
+.emotion-19 {
+  cursor: text;
   background: #f9f9fa;
   border-radius: 0.25rem;
   border: 0.5px solid #d9dadd;
@@ -1906,17 +2030,17 @@ exports[`SearchInput > renders with shortcut prop > as array of string 1`] = `
   align-items: center;
 }
 
-.emotion-17[data-disabled='true'] {
+.emotion-19[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
 }
 
-.emotion-17[data-children-length='true'] {
+.emotion-19[data-children-length='true'] {
   width: auto;
   padding: 0 0.5rem;
 }
 
-.emotion-19 {
+.emotion-21 {
   color: #3f4250;
   font-size: 0.75rem;
   font-family: Inter,Asap,sans-serif;
@@ -1955,20 +2079,24 @@ exports[`SearchInput > renders with shortcut prop > as array of string 1`] = `
                 class="emotion-7 emotion-8"
                 data-size="large"
               >
-                <svg
+                <div
                   class="emotion-9 emotion-10"
-                  viewBox="0 0 20 20"
                 >
-                  <path
-                    clip-rule="evenodd"
-                    d="M9 3.5a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11M2 9a7 7 0 1 1 12.452 4.391l3.328 3.329a.75.75 0 1 1-1.06 1.06l-3.329-3.328A7 7 0 0 1 2 9"
-                    fill-rule="evenodd"
-                  />
-                </svg>
+                  <svg
+                    class="emotion-11 emotion-12"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="M9 3.5a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11M2 9a7 7 0 1 1 12.452 4.391l3.328 3.329a.75.75 0 1 1-1.06 1.06l-3.329-3.328A7 7 0 0 1 2 9"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
+                </div>
               </div>
               <input
                 aria-invalid="false"
-                class="emotion-11 emotion-12"
+                class="emotion-13 emotion-14"
                 data-size="large"
                 id=":rq:"
                 placeholder="Type something"
@@ -1976,37 +2104,37 @@ exports[`SearchInput > renders with shortcut prop > as array of string 1`] = `
                 value=""
               />
               <div
-                class="emotion-13 emotion-14"
+                class="emotion-15 emotion-16"
               >
                 <div
-                  class="emotion-15 emotion-4"
+                  class="emotion-17 emotion-18"
                 >
                   <div
-                    class="emotion-17 emotion-18"
+                    class="emotion-19 emotion-20"
                     data-children-length="true"
                   >
                     <span
-                      class="emotion-19 emotion-20"
+                      class="emotion-21 emotion-22"
                     >
                       Ctrl
                     </span>
                   </div>
                   <div
-                    class="emotion-17 emotion-18"
+                    class="emotion-19 emotion-20"
                     data-children-length="true"
                   >
                     <span
-                      class="emotion-19 emotion-20"
+                      class="emotion-21 emotion-22"
                     >
                       Shift
                     </span>
                   </div>
                   <div
-                    class="emotion-17 emotion-18"
+                    class="emotion-19 emotion-20"
                     data-children-length="false"
                   >
                     <span
-                      class="emotion-19 emotion-20"
+                      class="emotion-21 emotion-22"
                     >
                       A
                     </span>
@@ -2059,11 +2187,11 @@ exports[`SearchInput > renders with shortcut prop > as boolean 1`] = `
   border: none;
 }
 
-.emotion-3 .emotion-12 {
+.emotion-3 .emotion-14 {
   padding: 0;
 }
 
-.emotion-3 .emotion-14 {
+.emotion-3 .emotion-16 {
   border: none;
 }
 
@@ -2081,23 +2209,23 @@ exports[`SearchInput > renders with shortcut prop > as boolean 1`] = `
   border-radius: 0.25rem;
 }
 
-.emotion-5>.emotion-12 {
+.emotion-5>.emotion-14 {
   color: #3f4250;
 }
 
-.emotion-5>.emotion-12::-webkit-input-placeholder {
+.emotion-5>.emotion-14::-webkit-input-placeholder {
   color: #727683;
 }
 
-.emotion-5>.emotion-12::-moz-placeholder {
+.emotion-5>.emotion-14::-moz-placeholder {
   color: #727683;
 }
 
-.emotion-5>.emotion-12:-ms-input-placeholder {
+.emotion-5>.emotion-14:-ms-input-placeholder {
   color: #727683;
 }
 
-.emotion-5>.emotion-12::placeholder {
+.emotion-5>.emotion-14::placeholder {
   color: #727683;
 }
 
@@ -2119,23 +2247,23 @@ exports[`SearchInput > renders with shortcut prop > as boolean 1`] = `
   border-color: #e9eaeb;
 }
 
-.emotion-5[data-disabled='true']>.emotion-12 {
+.emotion-5[data-disabled='true']>.emotion-14 {
   color: #b5b7bd;
 }
 
-.emotion-5[data-disabled='true']>.emotion-12::-webkit-input-placeholder {
+.emotion-5[data-disabled='true']>.emotion-14::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-5[data-disabled='true']>.emotion-12::-moz-placeholder {
+.emotion-5[data-disabled='true']>.emotion-14::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-5[data-disabled='true']>.emotion-12:-ms-input-placeholder {
+.emotion-5[data-disabled='true']>.emotion-14:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-5[data-disabled='true']>.emotion-12::placeholder {
+.emotion-5[data-disabled='true']>.emotion-14::placeholder {
   color: #b5b7bd;
 }
 
@@ -2174,6 +2302,30 @@ exports[`SearchInput > renders with shortcut prop > as boolean 1`] = `
 }
 
 .emotion-9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  cursor: text;
+}
+
+.emotion-11 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1rem;
@@ -2182,12 +2334,12 @@ exports[`SearchInput > renders with shortcut prop > as boolean 1`] = `
   min-height: 1rem;
 }
 
-.emotion-9 .fillStroke {
+.emotion-11 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
 
-.emotion-11 {
+.emotion-13 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -2200,15 +2352,15 @@ exports[`SearchInput > renders with shortcut prop > as boolean 1`] = `
   font-size: 0.875rem;
 }
 
-.emotion-11[data-size='large'] {
+.emotion-13[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-11[data-size='small'] {
+.emotion-13[data-size='small'] {
   padding-left: 0.5rem;
 }
 
-.emotion-13 {
+.emotion-15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2234,7 +2386,7 @@ exports[`SearchInput > renders with shortcut prop > as boolean 1`] = `
   border-color: inherit;
 }
 
-.emotion-15 {
+.emotion-17 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2255,9 +2407,11 @@ exports[`SearchInput > renders with shortcut prop > as boolean 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  cursor: text;
 }
 
-.emotion-17 {
+.emotion-19 {
+  cursor: text;
   background: #f9f9fa;
   border-radius: 0.25rem;
   border: 0.5px solid #d9dadd;
@@ -2277,17 +2431,17 @@ exports[`SearchInput > renders with shortcut prop > as boolean 1`] = `
   align-items: center;
 }
 
-.emotion-17[data-disabled='true'] {
+.emotion-19[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
 }
 
-.emotion-17[data-children-length='true'] {
+.emotion-19[data-children-length='true'] {
   width: auto;
   padding: 0 0.5rem;
 }
 
-.emotion-19 {
+.emotion-21 {
   color: #3f4250;
   font-size: 0.75rem;
   font-family: Inter,Asap,sans-serif;
@@ -2326,20 +2480,24 @@ exports[`SearchInput > renders with shortcut prop > as boolean 1`] = `
                 class="emotion-7 emotion-8"
                 data-size="large"
               >
-                <svg
+                <div
                   class="emotion-9 emotion-10"
-                  viewBox="0 0 20 20"
                 >
-                  <path
-                    clip-rule="evenodd"
-                    d="M9 3.5a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11M2 9a7 7 0 1 1 12.452 4.391l3.328 3.329a.75.75 0 1 1-1.06 1.06l-3.329-3.328A7 7 0 0 1 2 9"
-                    fill-rule="evenodd"
-                  />
-                </svg>
+                  <svg
+                    class="emotion-11 emotion-12"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="M9 3.5a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11M2 9a7 7 0 1 1 12.452 4.391l3.328 3.329a.75.75 0 1 1-1.06 1.06l-3.329-3.328A7 7 0 0 1 2 9"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
+                </div>
               </div>
               <input
                 aria-invalid="false"
-                class="emotion-11 emotion-12"
+                class="emotion-13 emotion-14"
                 data-size="large"
                 id=":rl:"
                 placeholder="Type something"
@@ -2347,27 +2505,27 @@ exports[`SearchInput > renders with shortcut prop > as boolean 1`] = `
                 value=""
               />
               <div
-                class="emotion-13 emotion-14"
+                class="emotion-15 emotion-16"
               >
                 <div
-                  class="emotion-15 emotion-4"
+                  class="emotion-17 emotion-18"
                 >
                   <div
-                    class="emotion-17 emotion-18"
+                    class="emotion-19 emotion-20"
                     data-children-length="true"
                   >
                     <span
-                      class="emotion-19 emotion-20"
+                      class="emotion-21 emotion-22"
                     >
                       Ctrl
                     </span>
                   </div>
                   <div
-                    class="emotion-17 emotion-18"
+                    class="emotion-19 emotion-20"
                     data-children-length="false"
                   >
                     <span
-                      class="emotion-19 emotion-20"
+                      class="emotion-21 emotion-22"
                     >
                       K
                     </span>
