@@ -1,5 +1,13 @@
 # Change Log
 
+## 1.89.2
+
+### Patch Changes
+
+- [#4872](https://github.com/scaleway/ultraviolet/pull/4872) [`22e118b`](https://github.com/scaleway/ultraviolet/commit/22e118ba34cd044ed2933548cb8af64b68048ec8) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<Radio />` component to have correct id on label
+
+- [#4855](https://github.com/scaleway/ultraviolet/pull/4855) [`a96f772`](https://github.com/scaleway/ultraviolet/commit/a96f77290ded98cbc11581ecb893d8c0e387ac3c) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<ProgressBar />` to allow values above the maximum value
+
 ## 1.89.1
 
 ### Patch Changes
