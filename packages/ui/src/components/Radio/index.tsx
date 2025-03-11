@@ -245,7 +245,7 @@ export const Radio = forwardRef<HTMLInputElement, RadioProps>(
                     {label}
                   </StyledTextLabel>
                 ) : (
-                  <StyledLabel htmlFor={id}>{label}</StyledLabel>
+                  <StyledLabel htmlFor={localId}>{label}</StyledLabel>
                 )}
               </>
             ) : null}
