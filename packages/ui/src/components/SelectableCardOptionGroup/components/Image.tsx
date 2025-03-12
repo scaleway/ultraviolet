@@ -1,5 +1,4 @@
 import styled from '@emotion/styled'
-import { useSelectableCardOptionGroup } from '../Provider'
 import type { Sizes } from '../types'
 
 const StyledImage = styled.img`
@@ -18,18 +17,15 @@ type ImageType = {
   alt?: string
   className?: string
   size: Sizes
+  disabled?: boolean
 }
 
-export const Image = ({ src, alt, size, className }: ImageType) => {
-  const { disabled } = useSelectableCardOptionGroup()
-
-  return (
-    <StyledImage
-      src={src}
-      alt={alt}
-      width={IMAGE_SIZES[size]}
-      data-disabled={disabled}
-      className={className}
-    />
-  )
-}
+export const Image = ({ src, alt, size, disabled, className }: ImageType) => (
+  <StyledImage
+    src={src}
+    alt={alt}
+    width={IMAGE_SIZES[size]}
+    data-disabled={disabled}
+    className={className}
+  />
+)

@@ -62,6 +62,7 @@ type OptionProps = Omit<ComponentProps<typeof SelectableCard>, 'onChange'> & {
   children?: ReactNode
   options: ComponentProps<typeof SelectInputV2>['options']
   optionValue?: ComponentProps<typeof SelectInputV2>['value']
+  optionPlaceholder?: ComponentProps<typeof SelectInputV2>['placeholder']
   image?: ReactNode
   labelDescription?: ComponentProps<typeof Label>['labelDescription']
   id?: string
@@ -76,6 +77,7 @@ export const Option = ({
   children,
   className,
   options,
+  optionPlaceholder,
   image,
   disabled,
   id,
@@ -131,6 +133,7 @@ export const Option = ({
               src={image}
               alt={typeof label === 'string' ? label : value}
               size={size}
+              disabled={disabled || groupDisabled}
             />
           ) : (
             image
@@ -169,6 +172,7 @@ export const Option = ({
           aria-label={
             typeof label === 'string' ? `${label} option` : `${value} option`
           }
+          placeholder={optionPlaceholder}
         />
       </FullHeightStack>
     </StyledSelectableCard>

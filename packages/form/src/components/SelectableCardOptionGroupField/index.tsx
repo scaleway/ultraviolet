@@ -8,7 +8,16 @@ import type { BaseFieldProps } from '../../types'
 type SelectableCardOptionGroupFieldProps<
   TFieldValues extends FieldValues,
   TFieldName extends FieldPath<TFieldValues>,
-> = ComponentProps<typeof SelectableCardOptionGroup> &
+> = Omit<
+  ComponentProps<typeof SelectableCardOptionGroup>,
+  'onChange' | 'onChangeOption'
+> &
+  Partial<
+    Pick<
+      ComponentProps<typeof SelectableCardOptionGroup>,
+      'onChangeOption' | 'onChange'
+    >
+  > &
   BaseFieldProps<TFieldValues, TFieldName> &
   Omit<BaseFieldProps<TFieldValues, TFieldName>, 'label'>
 
@@ -49,7 +58,7 @@ export const SelectableCardOptionGroupField = <
   })
 
   const { field: optionField } = useController({
-    name: `${name}-option`,
+    name: `${name}Option`,
     shouldUnregister,
     rules: { required },
   })
