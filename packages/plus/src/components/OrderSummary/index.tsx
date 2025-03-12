@@ -5,14 +5,18 @@ import { NonScrollableContent } from './NonScrollableContent'
 import { OrderSummaryContext } from './Provider'
 import { ScrollableContent } from './ScrollableContent'
 import { Units } from './constants'
-import { calculatePrice } from './helpers'
+import { calculateCategoryPrice } from './helpers'
 import orderSummaryLocales from './locales/en'
 import type { OrderSummaryProps, TimeUnit } from './types'
 
 const Container = styled(Stack)`
   background-color: ${({ theme }) => theme.colors.neutral.backgroundWeak};
-  width: 27.5rem;
+  width: 18rem;
   border: 1px solid ${({ theme }) => theme.colors.neutral.border};
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.large}) {
+    width: 24.5rem ;
+  }
 `
 
 const HeaderContainer = styled(Stack)`
@@ -23,7 +27,10 @@ const HeaderContainer = styled(Stack)`
 `
 
 const StyledStack = styled(Stack)`
-background-color: ${({ theme }) => theme.colors.neutral.background};`
+  background-color: ${({ theme }) => theme.colors.neutral.background};
+  width: 11rem;
+`
+
 export const OrderSummary = ({
   header,
   hideTimeUnit = false,
@@ -39,34 +46,22 @@ export const OrderSummary = ({
   discount = 0,
   totalPriceInfo,
   fractionDigits,
+  onChangeUnitInput,
 }: OrderSummaryProps) => {
   const [timePeriodUnit, setTimePeriodUnit] = useState<TimeUnit>(unitUnitInput)
   const [timePeriodAmount, setTimePeriodAmount] = useState(valueUnitInput)
 
   const categoriesPrice = useMemo(() => {
-    const listCategories: Record<string, { before: number; after: number }> = {}
+    const listCategories: Record<
+      string,
+      { before: [number, number]; after: [number, number] }
+    > = {}
     items.forEach(category => {
-      const categoryPrice =
-        category.subCategories?.reduce(
-          (acc, subCategory) =>
-            acc +
-            (calculatePrice(
-              subCategory.price ?? 0,
-              subCategory.amount ?? 1,
-              subCategory.amountFree,
-              hideTimeUnit ? 'hours' : timePeriodUnit,
-              hideTimeUnit ? 1 : timePeriodAmount,
-              subCategory.discount,
-              subCategory.fixedPrice,
-            ) || 0),
-          0,
-        ) || 0
-
-      const discountedPrice = Math.max(
-        category.discount && category.discount < 1
-          ? categoryPrice * category.discount
-          : categoryPrice - (category.discount ?? 0),
-        0,
+      const { categoryPrice, discountedPrice } = calculateCategoryPrice(
+        category,
+        hideTimeUnit,
+        timePeriodAmount,
+        timePeriodUnit,
       )
 
       return (listCategories[category.category] = {
@@ -79,19 +74,34 @@ export const OrderSummary = ({
   }, [hideTimeUnit, items, timePeriodAmount, timePeriodUnit])
 
   const totalPrice = useMemo(() => {
-    const price = Object.values(categoriesPrice).reduce(
-      (acc, categoryPrice) => acc + categoryPrice.after,
-      0,
+    const price = Object.values(categoriesPrice).reduce<[number, number]>(
+      (acc, categoryPrice) => [
+        acc[0] + categoryPrice.after[0],
+        acc[1] + categoryPrice.after[1],
+      ],
+      [0, 0],
     )
 
-    return {
-      before: Math.max(price, 0),
-      after: Math.max(
-        price * (discount < 1 ? 1 - discount : 1) -
-          (discount >= 1 ? Math.abs(discount) : 0),
-        0,
-      ),
+    const computedPrice = {
+      before: [Math.max(price[0], 0), Math.max(price[1], 0)] as [
+        number,
+        number,
+      ],
+      after: [
+        Math.max(
+          price[0] * (discount < 1 ? 1 - discount : 1) -
+            (discount >= 1 ? Math.abs(discount) : 0),
+          0,
+        ),
+        Math.max(
+          price[1] * (discount < 1 ? 1 - discount : 1) -
+            (discount >= 1 ? Math.abs(discount) : 0),
+          0,
+        ),
+      ] as [number, number],
     }
+
+    return computedPrice
   }, [categoriesPrice, discount])
 
   const valueContext = useMemo(
@@ -146,13 +156,14 @@ export const OrderSummary = ({
             {!hideTimeUnit ? (
               <StyledStack>
                 <UnitInput
-                  width="11rem"
+                  width="100%"
                   selectInputWidth="fit-content"
                   options={computePeriodOptions}
                   onChange={setTimePeriodAmount}
-                  onChangeUnitValue={(val: string) =>
+                  onChangeUnitValue={(val: string) => {
                     setTimePeriodUnit(val as TimeUnit)
-                  }
+                    onChangeUnitInput?.(val)
+                  }}
                   value={valueUnitInput}
                   unitValue={unitUnitInput}
                   size="small"
