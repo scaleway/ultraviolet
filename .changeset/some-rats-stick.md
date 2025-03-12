@@ -3,4 +3,4 @@
 "@ultraviolet/ui": patch
 ---
 
-Minor fixes on miissing props and features on `<SelectableCardOptionGroup />`
+Minor fixes on missing props and features on `<SelectableCardOptionGroup />`
