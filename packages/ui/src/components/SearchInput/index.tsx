@@ -13,6 +13,7 @@ import {
 } from 'react'
 import { isClientSide } from '../../helpers/isClientSide'
 import { Popup } from '../Popup'
+import { Stack } from '../Stack'
 import {
   BasicPrefixStack,
   BasicSuffixStack,
@@ -43,6 +44,10 @@ const StyledTextInputV2 = styled(TextInputV2)`
   ${BasicSuffixStack} {
     border: none;
   }
+`
+
+const ClickableStack = styled(Stack)`
+  cursor: text;
 `
 
 /**
@@ -284,10 +289,21 @@ export const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(
         >
           <StyledTextInputV2
             ref={innerSearchInputRef}
-            prefix={<SearchIcon disabled={disabled} sentiment="neutral" />}
+            prefix={
+              <ClickableStack
+                onClick={() => innerSearchInputRef.current?.focus()}
+                data-testid={`search-icon${dataTestId ? `-${dataTestId}` : ''}`}
+              >
+                <SearchIcon disabled={disabled} sentiment="neutral" />
+              </ClickableStack>
+            }
             suffix={
               shortcut && searchTerms.length === 0 ? (
-                <KeyGroup disabled={disabled} keys={keys} />
+                <KeyGroup
+                  disabled={disabled}
+                  keys={keys}
+                  onClick={() => innerSearchInputRef.current?.focus()}
+                />
               ) : undefined
             }
             data-testid={dataTestId}

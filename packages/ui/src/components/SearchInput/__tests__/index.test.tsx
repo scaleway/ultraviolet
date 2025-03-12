@@ -231,4 +231,66 @@ describe('SearchInput', () => {
     await userEvent.keyboard('{Control>}{Shift>}a')
     expect(SearchInputElement).toHaveFocus()
   })
+
+  test('search icon is clickable', async () => {
+    renderWithTheme(
+      <SearchInput
+        size="large"
+        placeholder="Type something"
+        label="input-label"
+        data-testid="search-bar"
+        popupPlacement="bottom"
+        onSearch={() => {}}
+        shortcut={['Control', 'Shift', 'A']}
+      >
+        <div>
+          <a href="/" data-testid="children-1">
+            Result 1
+          </a>
+          <a href="/" data-testid="children-2">
+            Result 2
+          </a>
+        </div>
+      </SearchInput>,
+    )
+
+    const SearchInputElement = screen.getByTestId('search-bar')
+    const searchIcon = screen.getByTestId('search-icon-search-bar')
+    await userEvent.click(searchIcon)
+
+    await waitFor(() => {
+      expect(SearchInputElement).toHaveFocus()
+    })
+  })
+
+  test('search shotcut are clickable', async () => {
+    renderWithTheme(
+      <SearchInput
+        size="large"
+        placeholder="Type something"
+        label="input-label"
+        data-testid="search-bar"
+        popupPlacement="bottom"
+        onSearch={() => {}}
+        shortcut={['Control']}
+      >
+        <div>
+          <a href="/" data-testid="children-1">
+            Result 1
+          </a>
+          <a href="/" data-testid="children-2">
+            Result 2
+          </a>
+        </div>
+      </SearchInput>,
+    )
+
+    const SearchInputElement = screen.getByTestId('search-bar')
+    const shortcutKey = screen.getByTestId('key-Ctrl')
+    await userEvent.click(shortcutKey)
+
+    await waitFor(() => {
+      expect(SearchInputElement).toHaveFocus()
+    })
+  })
 })
