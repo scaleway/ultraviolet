@@ -14,7 +14,7 @@ Playground.parameters = {
 - \`customContent\`: hide the price of the category and display this content instead (*ReactNode*)
 - \`subCategories\`: list of the sub-categories in the category. A sub-category consists of :
         - \`title\`: title of the sub-category (*string*)
-        - \`price\`: price of the sub-category (*number*)
+        - \`price\`: price of the sub-category. When a price is defined as a range, the final cost will be displayed as a range too (*number* for a fixed price, *[number, number]* for a range).
         - \`details\`: list of elements to be displayed in the subCategory (*string[]*)
         - \`amount\`: quantity. The price is computed taking into account the amount : \`finalPrice = amount * price\` (*number*)
         - \`amountFree\`: quantity free: \`finalPrice = (amount - amountFree) * price\` (*number*)

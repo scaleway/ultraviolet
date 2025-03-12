@@ -2,7 +2,11 @@ import styled from '@emotion/styled'
 import { NumberInputV2, Stack, Text } from '@ultraviolet/ui'
 import { useContext } from 'react'
 import { OrderSummaryContext } from './Provider'
-import { calculatePrice, formatNumber } from './helpers'
+import {
+  DisplayPrice,
+  calculateSubCategoryPrice,
+  formatNumber,
+} from './helpers'
 import type { ItemsType, SubCategoryType } from './types'
 
 const StyledNumberInputV2 = styled(NumberInputV2)`
@@ -25,12 +29,19 @@ const CategoryStack = styled(Stack)`
   }
 `
 const CategoryName = ({ category }: { category: ItemsType }) => {
-  const { currency, localeFormat, categoriesPrice, fractionDigits } =
-    useContext(OrderSummaryContext)
+  const { categoriesPrice } = useContext(OrderSummaryContext)
 
-  const categoryPrice = categoriesPrice[category.category]
+  const categoryPrice =
+    (categoriesPrice[category.category] as {
+      before: [number, number]
+      after: [number, number]
+    }) ??
+    ({
+      before: [0, 0],
+      after: [0, 0],
+    } as { before: [number, number]; after: [number, number] })
 
-  return (
+  return category.category ? (
     <Stack justifyContent="space-between" direction="row" alignItems="center">
       {category.additionalInfo ? (
         <Stack direction="row" gap={1} alignItems="center">
@@ -58,20 +69,15 @@ const CategoryName = ({ category }: { category: ItemsType }) => {
       ) : null}
       {!category.customContent &&
       !category.numberInput &&
-      categoryPrice.before === categoryPrice.after ? (
+      categoryPrice.before[0] === categoryPrice.after[0] ? (
         <Text as="span" variant="bodyStrong" sentiment="neutral">
-          {formatNumber(
-            categoryPrice.after ?? 0,
-            localeFormat,
-            currency,
-            fractionDigits,
-          )}
+          <DisplayPrice price={categoryPrice} beforeOrAfter="after" />
         </Text>
       ) : null}
 
       {!category.customContent &&
       !category.numberInput &&
-      categoryPrice.before !== categoryPrice.after ? (
+      categoryPrice.before[0] !== categoryPrice.after[0] ? (
         <Stack direction="row" gap={1} alignItems="center">
           <Text
             as="span"
@@ -80,25 +86,15 @@ const CategoryName = ({ category }: { category: ItemsType }) => {
             prominence="weak"
             strikeThrough
           >
-            {formatNumber(
-              categoryPrice.before ?? 0,
-              localeFormat,
-              currency,
-              fractionDigits,
-            )}
+            <DisplayPrice price={categoryPrice} beforeOrAfter="before" />
           </Text>
           <Text as="span" variant="bodyStrong" sentiment="neutral">
-            {formatNumber(
-              categoryPrice.after ?? 0,
-              localeFormat,
-              currency,
-              fractionDigits,
-            )}
+            <DisplayPrice price={categoryPrice} beforeOrAfter="after" />
           </Text>
         </Stack>
       ) : null}
     </Stack>
-  )
+  ) : null
 }
 
 const SubCategory = ({ subCategory }: { subCategory: SubCategoryType }) => {
@@ -110,6 +106,12 @@ const SubCategory = ({ subCategory }: { subCategory: SubCategoryType }) => {
     timePeriodUnit,
     fractionDigits,
   } = useContext(OrderSummaryContext)
+  const subCategoryPrice = calculateSubCategoryPrice(
+    subCategory,
+    hideTimeUnit,
+    timePeriodAmount,
+    timePeriodUnit,
+  )
 
   return (
     <Stack direction="column" gap={1}>
@@ -135,22 +137,24 @@ const SubCategory = ({ subCategory }: { subCategory: SubCategoryType }) => {
         ) : null}
         {subCategory.price !== undefined && !subCategory.hidePrice ? (
           <Text as="span" variant="bodySmallStrong" sentiment="neutral">
-            {formatNumber(
-              calculatePrice(
-                subCategory.price ?? 0,
-                subCategory.amount && !subCategory.priceUnit
-                  ? subCategory.amount
-                  : 1,
-                subCategory.priceUnit ? 0 : subCategory.amountFree,
-                hideTimeUnit ? 'hours' : timePeriodUnit,
-                hideTimeUnit ? 1 : timePeriodAmount,
-                subCategory.discount,
-                subCategory.fixedPrice,
-              ),
-              localeFormat,
-              currency,
-              fractionDigits,
-            )}
+            {subCategoryPrice[0] === subCategoryPrice[1]
+              ? formatNumber(
+                  subCategoryPrice[0],
+                  localeFormat,
+                  currency,
+                  fractionDigits,
+                )
+              : `${formatNumber(
+                  subCategoryPrice[0],
+                  localeFormat,
+                  currency,
+                  fractionDigits,
+                )} - ${formatNumber(
+                  subCategoryPrice[1],
+                  localeFormat,
+                  currency,
+                  fractionDigits,
+                )}`}
             {subCategory.priceUnit ? ` /${subCategory.priceUnit}` : ''}
           </Text>
         ) : null}
@@ -173,7 +177,7 @@ export const ScrollableContent = () => {
   return (
     <ContainerScrollable gap={3}>
       {items.map(category =>
-        Object.keys(category).length > 0 ? (
+        Object.keys(category).length > 0 && category.category ? (
           <CategoryStack key={category.category} gap={1.5}>
             <CategoryName category={category} />
             <Stack gap={1}>

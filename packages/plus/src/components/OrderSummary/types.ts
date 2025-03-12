@@ -10,6 +10,7 @@ type PeriodProps =
       periodOptions?: never
       valueUnitInput?: never
       unitUnitInput?: never
+      onChangeUnitInput?: never
     }
   | {
       /**
@@ -20,6 +21,7 @@ type PeriodProps =
       periodOptions?: TimeUnit[]
       valueUnitInput?: ComponentProps<typeof UnitInput>['value']
       unitUnitInput?: TimeUnit
+      onChangeUnitInput?: ComponentProps<typeof UnitInput>['onChangeUnitValue']
     }
 type NumberInputType = {
   /**
@@ -32,6 +34,14 @@ type NumberInputType = {
   onChangeInput?: (value: number | null) => void
 }
 
+export type PriceType = Record<
+  string,
+  {
+    before: [number, number]
+    after: [number, number]
+  }
+>
+
 export type SubCategoryType = {
   title?: string
   price?: number
@@ -40,7 +50,7 @@ export type SubCategoryType = {
    */
   details?: string[]
   discount?: number
-  amount?: number
+  amount?: number[] | number
   amountFree?: number
   /**
    * Set to true if the price does not depend on the time
@@ -91,4 +101,5 @@ export type OrderSummaryProps = {
    * Number of fraction digit to display in the price details
    */
   fractionDigits?: number
+  onChange?: (price: PriceType) => void
 } & PeriodProps

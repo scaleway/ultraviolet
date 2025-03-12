@@ -6,7 +6,7 @@ export type ContextProps = {
   currency: string
   localeFormat: string
   items: ItemsType[]
-  categoriesPrice: Record<string, { before: number; after: number }>
+  categoriesPrice: Record<string, { before: number[]; after: number[] }>
   hideTimeUnit: boolean
   timePeriodUnit: TimeUnit
   timePeriodAmount: number

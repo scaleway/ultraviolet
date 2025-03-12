@@ -3,7 +3,7 @@ import { Stack, Text } from '@ultraviolet/ui'
 import { useContext } from 'react'
 import type { ReactNode } from 'react'
 import { OrderSummaryContext } from './Provider'
-import { formatNumber } from './helpers'
+import { DisplayPrice } from './helpers'
 
 const NonScrollableContainer = styled(Stack)`
 padding: ${({ theme }) => theme.space[3]};
@@ -13,7 +13,7 @@ overflow: hidden;
 
 type NonScrollableContentProps = {
   discount: number
-  totalPrice: { before: number; after: number }
+  totalPrice: { before: [number, number]; after: [number, number] }
   footer: ReactNode
   children: ReactNode
   totalPriceInfo?: ReactNode
@@ -25,8 +25,7 @@ export const NonScrollableContent = ({
   children,
   totalPriceInfo,
 }: NonScrollableContentProps) => {
-  const { localeFormat, currency, locales, fractionDigits } =
-    useContext(OrderSummaryContext)
+  const { locales } = useContext(OrderSummaryContext)
 
   return (
     <NonScrollableContainer gap={3}>
@@ -44,19 +43,14 @@ export const NonScrollableContent = ({
             {locales['order.summary.total']}:
           </Text>
         )}
-        {totalPrice.before === totalPrice.after ? (
+        {totalPrice.before[0] === totalPrice.after[0] ? (
           <Text
             as="p"
             variant="headingSmallStrong"
             sentiment="neutral"
             data-testid="total-price"
           >
-            {formatNumber(
-              totalPrice.after,
-              localeFormat,
-              currency,
-              fractionDigits ?? 2,
-            )}
+            <DisplayPrice price={totalPrice} beforeOrAfter="after" />
           </Text>
         ) : (
           <Stack direction="row" gap={1} alignItems="center">
@@ -67,12 +61,7 @@ export const NonScrollableContent = ({
               prominence="weak"
               strikeThrough
             >
-              {formatNumber(
-                totalPrice.before,
-                localeFormat,
-                currency,
-                fractionDigits ?? 2,
-              )}
+              <DisplayPrice price={totalPrice} beforeOrAfter="before" />
             </Text>
             <Text
               as="p"
@@ -80,12 +69,7 @@ export const NonScrollableContent = ({
               sentiment="neutral"
               data-testid="total-price"
             >
-              {formatNumber(
-                totalPrice.after,
-                localeFormat,
-                currency,
-                fractionDigits ?? 2,
-              )}
+              <DisplayPrice price={totalPrice} beforeOrAfter="after" />
             </Text>
           </Stack>
         )}

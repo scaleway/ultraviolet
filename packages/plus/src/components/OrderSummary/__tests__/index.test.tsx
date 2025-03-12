@@ -15,6 +15,7 @@ import {
   negativeItem,
   numberInputCategory,
   numberInputSubCategory,
+  rangePriceContent,
   simpleCategory,
 } from './resources'
 
@@ -91,6 +92,17 @@ describe('OrderSummary', () => {
       <OrderSummary
         header="summary"
         items={mockItems}
+        currency="EUR"
+        localeFormat="en-EN"
+        footer="footer"
+      />,
+    ))
+
+  test('should work with price as a range', () =>
+    shouldMatchEmotionSnapshot(
+      <OrderSummary
+        header="summary"
+        items={[rangePriceContent]}
         currency="EUR"
         localeFormat="en-EN"
         footer="footer"
