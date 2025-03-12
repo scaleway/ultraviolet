@@ -132,3 +132,14 @@ export const numberInputSubCategory = {
     },
   ],
 }
+
+export const rangePriceContent = {
+  category: 'Nodes',
+  subCategories: [
+    {
+      title: '20-30 nodes',
+      price: 10,
+      amount: [20, 30],
+    },
+  ],
+}
