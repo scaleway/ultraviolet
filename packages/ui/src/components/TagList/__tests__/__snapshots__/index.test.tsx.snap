@@ -79,37 +79,14 @@ exports[`TagList > renders correctly 1`] = `
 }
 
 .emotion-9 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.emotion-11 {
   display: inherit;
 }
 
-.emotion-11[data-container-full-width="true"] {
+.emotion-9[data-container-full-width="true"] {
   width: 100%;
 }
 
-.emotion-13 {
+.emotion-11 {
   cursor: pointer;
   color: #641cb3;
   border: none;
@@ -142,22 +119,18 @@ exports[`TagList > renders correctly 1`] = `
           <div
             class="emotion-6 emotion-7 emotion-8"
           >
-            <div
-              class="emotion-9 emotion-10"
-            >
-              scaleway
-            </div>
+            scaleway
           </div>
         </span>
       </div>
       <div
         aria-controls=":r2:"
         aria-describedby=":r2:"
-        class="emotion-11 emotion-12"
+        class="emotion-9 emotion-10"
         tabindex="-1"
       >
         <span
-          class="emotion-13 emotion-14"
+          class="emotion-11 emotion-12"
           data-testid="taglist-open"
         >
           +1
@@ -246,38 +219,15 @@ exports[`TagList > renders correctly a scrollable popover with non default popov
   max-width: 14.5rem;
 }
 
-.emotion-9 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.emotion-32 {
+.emotion-24 {
   display: inherit;
 }
 
-.emotion-32[data-container-full-width="true"] {
+.emotion-24[data-container-full-width="true"] {
   width: 100%;
 }
 
-.emotion-34 {
+.emotion-26 {
   cursor: pointer;
   color: #641cb3;
   border: none;
@@ -310,11 +260,7 @@ exports[`TagList > renders correctly a scrollable popover with non default popov
           <div
             class="emotion-6 emotion-7 emotion-8"
           >
-            <div
-              class="emotion-9 emotion-10"
-            >
-              very
-            </div>
+            very
           </div>
         </span>
         <span
@@ -323,11 +269,7 @@ exports[`TagList > renders correctly a scrollable popover with non default popov
           <div
             class="emotion-6 emotion-7 emotion-8"
           >
-            <div
-              class="emotion-9 emotion-10"
-            >
-              item
-            </div>
+            item
           </div>
         </span>
         <span
@@ -336,11 +278,7 @@ exports[`TagList > renders correctly a scrollable popover with non default popov
           <div
             class="emotion-6 emotion-7 emotion-8"
           >
-            <div
-              class="emotion-9 emotion-10"
-            >
-              item
-            </div>
+            item
           </div>
         </span>
         <span
@@ -349,22 +287,18 @@ exports[`TagList > renders correctly a scrollable popover with non default popov
           <div
             class="emotion-6 emotion-7 emotion-8"
           >
-            <div
-              class="emotion-9 emotion-10"
-            >
-              item
-            </div>
+            item
           </div>
         </span>
       </div>
       <div
         aria-controls=":r23:"
         aria-describedby=":r23:"
-        class="emotion-32 emotion-33"
+        class="emotion-24 emotion-25"
         tabindex="-1"
       >
         <span
-          class="emotion-34 emotion-35"
+          class="emotion-26 emotion-27"
           data-testid="taglist-open"
         >
           +51
@@ -453,29 +387,6 @@ exports[`TagList > renders correctly and add ellipsis to the first tag as it too
   max-width: 14.5rem;
 }
 
-.emotion-9 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
 <div
     data-testid="testing"
   >
@@ -492,11 +403,7 @@ exports[`TagList > renders correctly and add ellipsis to the first tag as it too
           <div
             class="emotion-6 emotion-7 emotion-8"
           >
-            <div
-              class="emotion-9 emotion-10"
-            >
-              scaleway is the best cloud provider ever invented
-            </div>
+            scaleway is the best cloud provider ever invented
           </div>
         </span>
       </div>
@@ -584,37 +491,14 @@ exports[`TagList > renders correctly and ignore custom threshold as it does not 
 }
 
 .emotion-9 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.emotion-11 {
   display: inherit;
 }
 
-.emotion-11[data-container-full-width="true"] {
+.emotion-9[data-container-full-width="true"] {
   width: 100%;
 }
 
-.emotion-13 {
+.emotion-11 {
   cursor: pointer;
   color: #641cb3;
   border: none;
@@ -647,22 +531,18 @@ exports[`TagList > renders correctly and ignore custom threshold as it does not 
           <div
             class="emotion-6 emotion-7 emotion-8"
           >
-            <div
-              class="emotion-9 emotion-10"
-            >
-              scaleway
-            </div>
+            scaleway
           </div>
         </span>
       </div>
       <div
         aria-controls=":ri:"
         aria-describedby=":ri:"
-        class="emotion-11 emotion-12"
+        class="emotion-9 emotion-10"
         tabindex="-1"
       >
         <span
-          class="emotion-13 emotion-14"
+          class="emotion-11 emotion-12"
           data-testid="taglist-open"
         >
           +2
@@ -755,29 +635,6 @@ exports[`TagList > renders correctly with copiable 1`] = `
   max-width: 14.5rem;
 }
 
-.emotion-11 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
 <div
     data-testid="testing"
   >
@@ -800,11 +657,7 @@ exports[`TagList > renders correctly with copiable 1`] = `
             <div
               class="emotion-8 emotion-9 emotion-10"
             >
-              <div
-                class="emotion-11 emotion-12"
-              >
-                scaleway
-              </div>
+              scaleway
             </div>
           </button>
         </div>
@@ -820,11 +673,7 @@ exports[`TagList > renders correctly with copiable 1`] = `
             <div
               class="emotion-8 emotion-9 emotion-10"
             >
-              <div
-                class="emotion-11 emotion-12"
-              >
-                cloud
-              </div>
+              cloud
             </div>
           </button>
         </div>
@@ -897,29 +746,6 @@ exports[`TagList > renders correctly with custom threshold 1`] = `
   max-width: 14.5rem;
 }
 
-.emotion-9 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
 <div
     data-testid="testing"
   >
@@ -936,11 +762,7 @@ exports[`TagList > renders correctly with custom threshold 1`] = `
           <div
             class="emotion-6 emotion-7 emotion-8"
           >
-            <div
-              class="emotion-9 emotion-10"
-            >
-              scaleway
-            </div>
+            scaleway
           </div>
         </span>
         <span
@@ -949,11 +771,7 @@ exports[`TagList > renders correctly with custom threshold 1`] = `
           <div
             class="emotion-6 emotion-7 emotion-8"
           >
-            <div
-              class="emotion-9 emotion-10"
-            >
-              cloud
-            </div>
+            cloud
           </div>
         </span>
       </div>
@@ -1040,38 +858,15 @@ exports[`TagList > renders correctly with custom threshold and extra tags 1`] = 
   max-width: 14.5rem;
 }
 
-.emotion-9 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.emotion-18 {
+.emotion-14 {
   display: inherit;
 }
 
-.emotion-18[data-container-full-width="true"] {
+.emotion-14[data-container-full-width="true"] {
   width: 100%;
 }
 
-.emotion-20 {
+.emotion-16 {
   cursor: pointer;
   color: #641cb3;
   border: none;
@@ -1104,11 +899,7 @@ exports[`TagList > renders correctly with custom threshold and extra tags 1`] = 
           <div
             class="emotion-6 emotion-7 emotion-8"
           >
-            <div
-              class="emotion-9 emotion-10"
-            >
-              scaleway
-            </div>
+            scaleway
           </div>
         </span>
         <span
@@ -1117,22 +908,18 @@ exports[`TagList > renders correctly with custom threshold and extra tags 1`] = 
           <div
             class="emotion-6 emotion-7 emotion-8"
           >
-            <div
-              class="emotion-9 emotion-10"
-            >
-              cloud
-            </div>
+            cloud
           </div>
         </span>
       </div>
       <div
         aria-controls=":re:"
         aria-describedby=":re:"
-        class="emotion-18 emotion-19"
+        class="emotion-14 emotion-15"
         tabindex="-1"
       >
         <span
-          class="emotion-20 emotion-21"
+          class="emotion-16 emotion-17"
           data-testid="taglist-open"
         >
           +1
@@ -1222,37 +1009,14 @@ exports[`TagList > renders correctly with custom threshold and extra tags and ma
 }
 
 .emotion-9 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.emotion-11 {
   display: inherit;
 }
 
-.emotion-11[data-container-full-width="true"] {
+.emotion-9[data-container-full-width="true"] {
   width: 100%;
 }
 
-.emotion-13 {
+.emotion-11 {
   cursor: pointer;
   color: #641cb3;
   border: none;
@@ -1285,22 +1049,18 @@ exports[`TagList > renders correctly with custom threshold and extra tags and ma
           <div
             class="emotion-6 emotion-7 emotion-8"
           >
-            <div
-              class="emotion-9 emotion-10"
-            >
-              scaleway
-            </div>
+            scaleway
           </div>
         </span>
       </div>
       <div
         aria-controls=":rn:"
         aria-describedby=":rn:"
-        class="emotion-11 emotion-12"
+        class="emotion-9 emotion-10"
         tabindex="-1"
       >
         <span
-          class="emotion-13 emotion-14"
+          class="emotion-11 emotion-12"
           data-testid="taglist-open"
         >
           +2
@@ -1393,29 +1153,6 @@ exports[`TagList > renders correctly with icons 1`] = `
   max-width: 14.5rem;
 }
 
-.emotion-11 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
 <div
     data-testid="testing"
   >
@@ -1438,11 +1175,7 @@ exports[`TagList > renders correctly with icons 1`] = `
             <div
               class="emotion-8 emotion-9 emotion-10"
             >
-              <div
-                class="emotion-11 emotion-12"
-              >
-                scaleway
-              </div>
+              scaleway
             </div>
           </button>
         </div>
@@ -1458,11 +1191,7 @@ exports[`TagList > renders correctly with icons 1`] = `
             <div
               class="emotion-8 emotion-9 emotion-10"
             >
-              <div
-                class="emotion-11 emotion-12"
-              >
-                cloud
-              </div>
+              cloud
             </div>
           </button>
         </div>
@@ -1539,38 +1268,15 @@ exports[`TagList > renders correctly with multiline 1`] = `
   max-width: 14.5rem;
 }
 
-.emotion-9 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.emotion-18 {
+.emotion-14 {
   display: inherit;
 }
 
-.emotion-18[data-container-full-width="true"] {
+.emotion-14[data-container-full-width="true"] {
   width: 100%;
 }
 
-.emotion-20 {
+.emotion-16 {
   cursor: pointer;
   color: #641cb3;
   border: none;
@@ -1603,11 +1309,7 @@ exports[`TagList > renders correctly with multiline 1`] = `
           <div
             class="emotion-6 emotion-7 emotion-8"
           >
-            <div
-              class="emotion-9 emotion-10"
-            >
-              scaleway
-            </div>
+            scaleway
           </div>
         </span>
         <span
@@ -1616,22 +1318,18 @@ exports[`TagList > renders correctly with multiline 1`] = `
           <div
             class="emotion-6 emotion-7 emotion-8"
           >
-            <div
-              class="emotion-9 emotion-10"
-            >
-              cloud
-            </div>
+            cloud
           </div>
         </span>
       </div>
       <div
         aria-controls=":rs:"
         aria-describedby=":rs:"
-        class="emotion-18 emotion-19"
+        class="emotion-14 emotion-15"
         tabindex="-1"
       >
         <span
-          class="emotion-20 emotion-21"
+          class="emotion-16 emotion-17"
           data-testid="taglist-open"
         >
           +1
@@ -1729,37 +1427,14 @@ exports[`TagList > renders correctly with placement 1`] = `
 }
 
 .emotion-9 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.emotion-11 {
   display: inherit;
 }
 
-.emotion-11[data-container-full-width="true"] {
+.emotion-9[data-container-full-width="true"] {
   width: 100%;
 }
 
-.emotion-13 {
+.emotion-11 {
   cursor: pointer;
   color: #641cb3;
   border: none;
@@ -1792,22 +1467,18 @@ exports[`TagList > renders correctly with placement 1`] = `
           <div
             class="emotion-6 emotion-7 emotion-8"
           >
-            <div
-              class="emotion-9 emotion-10"
-            >
-              scaleway
-            </div>
+            scaleway
           </div>
         </span>
       </div>
       <div
         aria-controls=":r5:"
         aria-describedby=":r5:"
-        class="emotion-11 emotion-12"
+        class="emotion-9 emotion-10"
         tabindex="-1"
       >
         <span
-          class="emotion-13 emotion-14"
+          class="emotion-11 emotion-12"
           data-testid="taglist-open"
         >
           +1

@@ -5,7 +5,6 @@ import useClipboard from 'react-use-clipboard'
 import type { Color } from '../../theme'
 import { Button } from '../Button'
 import { Loader } from '../Loader'
-import { Stack } from '../Stack'
 import { Text } from '../Text'
 import { Tooltip } from '../Tooltip'
 
@@ -107,14 +106,7 @@ const TagInner = ({
   <>
     {icon ? <Icon name={icon} size={16} /> : null}
     <StyledText as="div" variant="caption" oneLine aria-disabled={disabled}>
-      <Stack
-        direction="row"
-        alignItems="center"
-        justifyContent="center"
-        gap={0.5}
-      >
-        {children}
-      </Stack>
+      {children}
     </StyledText>
 
     {/* @check: Size issue here, Clickable icon ? */}

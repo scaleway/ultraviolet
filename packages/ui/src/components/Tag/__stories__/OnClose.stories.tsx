@@ -12,5 +12,6 @@ OnClose.parameters = {
 }
 
 OnClose.args = {
+  ...Template.args,
   onClose: () => {},
 }

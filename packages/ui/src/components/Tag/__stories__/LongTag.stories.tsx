@@ -1,8 +1,8 @@
 import { Template } from './Template.stories'
 
-export const Loading = Template.bind({})
+export const LongTag = Template.bind({})
 
-Loading.parameters = {
+LongTag.parameters = {
   docs: {
     description: {
       story:
@@ -11,7 +11,7 @@ Loading.parameters = {
   },
 }
 
-Loading.args = {
-  ...Template.args,
-  isLoading: true,
+LongTag.args = {
+  children:
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id. dolor sit amet, consectetur adipiscing elit. Nullam id.',
 }
