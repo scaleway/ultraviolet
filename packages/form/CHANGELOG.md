@@ -1,5 +1,16 @@
 # Change Log
 
+## 3.14.3
+
+### Patch Changes
+
+- [#4883](https://github.com/scaleway/ultraviolet/pull/4883) [`37c730b`](https://github.com/scaleway/ultraviolet/commit/37c730b7d547d41eed50994583ad2a319c5b0e8a) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@babel/runtime` to `7.26.10`.
+
+- [#4885](https://github.com/scaleway/ultraviolet/pull/4885) [`284ec89`](https://github.com/scaleway/ultraviolet/commit/284ec896df9712f53cf6565db571568e5a935e05) Thanks [@matthprost](https://github.com/matthprost)! - Minor fixes on missing props and features on `<SelectableCardOptionGroup />`
+
+- Updated dependencies [[`52d584a`](https://github.com/scaleway/ultraviolet/commit/52d584aacd99a2948456b363032c06e766a3291d), [`655ee66`](https://github.com/scaleway/ultraviolet/commit/655ee6604201e5e4cac4f7214a106080cb03daf1), [`284ec89`](https://github.com/scaleway/ultraviolet/commit/284ec896df9712f53cf6565db571568e5a935e05)]:
+  - @ultraviolet/ui@1.90.0
+
 ## 3.14.2
 
 ### Patch Changes
