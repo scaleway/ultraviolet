@@ -1,5 +1,17 @@
 # Change Log
 
+## 1.90.0
+
+### Minor Changes
+
+- [#4846](https://github.com/scaleway/ultraviolet/pull/4846) [`52d584a`](https://github.com/scaleway/ultraviolet/commit/52d584aacd99a2948456b363032c06e766a3291d) Thanks [@matthprost](https://github.com/matthprost)! - New component `<InfiniteScroll />`
+
+### Patch Changes
+
+- [#4868](https://github.com/scaleway/ultraviolet/pull/4868) [`655ee66`](https://github.com/scaleway/ultraviolet/commit/655ee6604201e5e4cac4f7214a106080cb03daf1) Thanks [@matthprost](https://github.com/matthprost)! - `<SearchInput />` is now fully interactive
+
+- [#4885](https://github.com/scaleway/ultraviolet/pull/4885) [`284ec89`](https://github.com/scaleway/ultraviolet/commit/284ec896df9712f53cf6565db571568e5a935e05) Thanks [@matthprost](https://github.com/matthprost)! - Minor fixes on missing props and features on `<SelectableCardOptionGroup />`
+
 ## 1.89.2
 
 ### Patch Changes
