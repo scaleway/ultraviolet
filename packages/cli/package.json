@@ -1,0 +1,36 @@
+{
+  "name": "@ultraviolet/cli",
+  "version": "1.0.0",
+  "description": "CLI tools for Ultraviolet Design System",
+  "main": "dist/index.js",
+  "bin": {
+    "uv": "dist/index.js"
+  },
+  "scripts": {
+    "build": "vite build --config vite.config.ts",
+    "start": "tsx ./src/index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com:scaleway/ultraviolet.git"
+  },
+  "keywords": [
+    "cli"
+  ],
+  "author": "Scaleway",
+  "license": "Apache-2.0",
+  "type": "module",
+  "dependencies": {
+    "@babel/parser": "7.26.10",
+    "@babel/traverse": "7.26.10",
+    "@babel/types": "7.26.10",
+    "ast-types": "0.14.2",
+    "commander": "13.1.0",
+    "recast": "0.23.11",
+    "semver": "7.7.1"
+  },
+  "devDependencies": {
+    "@types/babel__generator": "7.6.8",
+    "@types/babel__traverse": "7.20.6"
+  }
+}
