@@ -31,19 +31,26 @@ export const SteppedListContent = ({
   stepNumber,
   completed = false,
 }: SteppedListContentProps) => {
-  const containerData = useContext(Data)
+  const {
+    setDone,
+    currentStep,
+    done,
+    setCurrentStep,
+    numberOfSteps,
+    setHidden,
+    onClickHide,
+  } = useContext(Data)
 
   useEffect(() => {
-    containerData.setDone(prevDone => {
+    setDone(prevDone => {
       const updatedDone = [...prevDone]
       updatedDone[stepNumber - 1] = completed
 
       return updatedDone
     })
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [completed])
+  }, [completed, setDone, stepNumber])
 
-  if (stepNumber === containerData.currentStep) {
+  if (stepNumber === currentStep) {
     return (
       <StyledContent>
         <StyledSubHeader>
@@ -59,13 +66,13 @@ export const SteppedListContent = ({
           ? children((completedArg: boolean) =>
               nextStep({
                 completed: completedArg,
-                setCompleted: containerData.setDone,
-                done: containerData.done,
+                setCompleted: setDone,
+                done,
                 stepNumber,
-                setCurrentStep: containerData.setCurrentStep,
-                numberOfSteps: containerData.numberOfSteps,
-                setHidden: containerData.setHidden,
-                onClickHide: containerData.onClickHide,
+                setCurrentStep,
+                numberOfSteps,
+                setHidden,
+                onClickHide,
               }),
             )
           : children}

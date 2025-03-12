@@ -98,7 +98,7 @@ describe('SteppedListCard', () => {
         >
           {nextStep => (
             <>
-              step1desc
+              step1desc{' '}
               <button onClick={() => nextStep(true)} type="button">
                 step1 button next
               </button>
@@ -271,7 +271,7 @@ describe('SteppedListCard', () => {
         </SteppedListCard.Step>
         <SteppedListCard.Step
           stepNumber={2}
-          subHeader={<h1>Title</h1>}
+          subHeader={<div>Title</div>}
           image={<img src={blockStorageWire} width={200} alt="blockStorage" />}
           completed
         >
