@@ -1,5 +1,18 @@
 # @ultraviolet/plus
 
+## 0.25.0
+
+### Minor Changes
+
+- [#4847](https://github.com/scaleway/ultraviolet/pull/4847) [`781be4f`](https://github.com/scaleway/ultraviolet/commit/781be4fe9c6dcf3ce86272eca4be5a009baf7ced) Thanks [@lisalupi](https://github.com/lisalupi)! - - **Breaking change**: `<SteppedListContainer />` is now `<SteppedListCard />`
+  - Propagate prop `completed` to `SteppedListCard.Step` to choose pre-completed steps
+
+### Patch Changes
+
+- Updated dependencies [[`64ae35b`](https://github.com/scaleway/ultraviolet/commit/64ae35b678e3b2ddc67f9bd467d6f71c53e441c2)]:
+  - @ultraviolet/icons@3.12.1
+  - @ultraviolet/ui@1.90.3
+
 ## 0.24.11
 
 ### Patch Changes

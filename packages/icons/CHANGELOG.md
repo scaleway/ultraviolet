@@ -1,5 +1,11 @@
 # Change Log
 
+## 3.12.1
+
+### Patch Changes
+
+- [#4845](https://github.com/scaleway/ultraviolet/pull/4845) [`64ae35b`](https://github.com/scaleway/ultraviolet/commit/64ae35b678e3b2ddc67f9bd467d6f71c53e441c2) Thanks [@lisalupi](https://github.com/lisalupi)! - Re-introduce `small` variant for icons
+
 ## 3.12.0
 
 ### Minor Changes
