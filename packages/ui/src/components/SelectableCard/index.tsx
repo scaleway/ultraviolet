@@ -451,7 +451,7 @@ export const SelectableCard = forwardRef(
           alignItems="start"
           direction={label ? 'column' : 'row'}
           gap={0.5}
-          flex={label ? 1 : undefined}
+          flex={1}
           tabIndex={disabled ? undefined : 0}
           role="button"
         >
