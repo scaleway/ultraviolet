@@ -17,3 +17,7 @@ Icons.parameters = {
     },
   },
 }
+
+Icons.args = {
+  children: 'Valid',
+}
