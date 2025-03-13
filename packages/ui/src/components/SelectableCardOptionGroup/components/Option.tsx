@@ -175,7 +175,7 @@ export const Option = ({
           aria-label={
             typeof label === 'string' ? `${label} option` : `${value} option`
           }
-          data-testid={`${dataTestId}-select`}
+          data-testid={dataTestId ? `${dataTestId}-select` : undefined}
           placeholder={optionPlaceholder}
         />
       </FullHeightStack>

@@ -25,7 +25,6 @@ export const SelectableCardOptionGroupField = <
   TFieldValues extends FieldValues,
   TFieldName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
 >({
-  className,
   legend,
   control,
   name,
@@ -35,10 +34,9 @@ export const SelectableCardOptionGroupField = <
   children,
   label = '',
   error: customError,
-  helper,
-  columns,
   shouldUnregister = false,
   validate,
+  ...props
 }: SelectableCardOptionGroupFieldProps<
   TFieldValues,
   TFieldName
@@ -78,10 +76,8 @@ export const SelectableCardOptionGroupField = <
         onChangeOption?.(value)
       }}
       error={getError({ label }, error) ?? customError}
-      className={className}
-      columns={columns}
-      helper={helper}
       required={required}
+      {...props}
     >
       {children}
     </SelectableCardOptionGroup>

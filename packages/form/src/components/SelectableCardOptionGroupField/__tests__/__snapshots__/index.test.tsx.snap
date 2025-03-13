@@ -495,7 +495,7 @@ exports[`SelectableCardOptionGroupField > should render correctly 1`] = `
 }
 
 .emotion-38 {
-  color: #3f4250;
+  color: #641cb3;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -670,7 +670,7 @@ exports[`SelectableCardOptionGroupField > should render correctly 1`] = `
 }
 
 .emotion-50 {
-  color: #727683;
+  color: #3f4250;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
@@ -679,10 +679,9 @@ exports[`SelectableCardOptionGroupField > should render correctly 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .emotion-52 {
@@ -727,6 +726,35 @@ exports[`SelectableCardOptionGroupField > should render correctly 1`] = `
   fill: none;
 }
 
+.emotion-83 {
+  color: #3f4250;
+  font-size: 1rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.emotion-95 {
+  color: #727683;
+  font-size: 0.875rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 <div
     data-testid="testing"
   >
@@ -752,7 +780,7 @@ exports[`SelectableCardOptionGroupField > should render correctly 1`] = `
             >
               <div
                 class="emotion-11 emotion-12 emotion-13"
-                data-checked="false"
+                data-checked="true"
                 data-disabled="false"
                 data-error="false"
                 data-has-label="false"
@@ -767,12 +795,13 @@ exports[`SelectableCardOptionGroupField > should render correctly 1`] = `
                   <div
                     aria-disabled="false"
                     class="emotion-16 emotion-17 emotion-18"
-                    data-checked="false"
+                    data-checked="true"
                     data-error="false"
                   >
                     <input
                       aria-disabled="false"
                       aria-invalid="false"
+                      checked=""
                       class="emotion-19 emotion-20"
                       id=":r1:"
                       tabindex="-1"
@@ -857,16 +886,16 @@ exports[`SelectableCardOptionGroupField > should render correctly 1`] = `
                             data-readonly="false"
                             data-size="medium"
                             data-state="neutral"
-                            data-testid="undefined-select"
+                            data-testid="select-input-selectable-card-option"
                             id=":r6:"
                             role="combobox"
                             tabindex="0"
                           >
-                            <p
+                            <div
                               class="emotion-49 emotion-50 emotion-8"
                             >
-                              Select item
-                            </p>
+                              Ubuntu 20.04 Focal Fossa
+                            </div>
                             <div
                               class="emotion-52 emotion-53"
                             >
@@ -965,7 +994,7 @@ exports[`SelectableCardOptionGroupField > should render correctly 1`] = `
                         class="emotion-35 emotion-1"
                       >
                         <label
-                          class="emotion-6 emotion-38 emotion-8"
+                          class="emotion-6 emotion-83 emotion-8"
                           for=":ra:"
                         >
                           Debian
@@ -996,13 +1025,13 @@ exports[`SelectableCardOptionGroupField > should render correctly 1`] = `
                             data-readonly="false"
                             data-size="medium"
                             data-state="neutral"
-                            data-testid="undefined-select"
+                            data-testid="select-input-selectable-card-option"
                             id=":rf:"
                             role="combobox"
                             tabindex="0"
                           >
                             <p
-                              class="emotion-49 emotion-50 emotion-8"
+                              class="emotion-94 emotion-95 emotion-8"
                             >
                               Select item
                             </p>
@@ -1104,7 +1133,7 @@ exports[`SelectableCardOptionGroupField > should render correctly 1`] = `
                         class="emotion-35 emotion-1"
                       >
                         <label
-                          class="emotion-6 emotion-38 emotion-8"
+                          class="emotion-6 emotion-83 emotion-8"
                           for=":rj:"
                         >
                           CentOS
@@ -1135,13 +1164,13 @@ exports[`SelectableCardOptionGroupField > should render correctly 1`] = `
                             data-readonly="false"
                             data-size="medium"
                             data-state="neutral"
-                            data-testid="undefined-select"
+                            data-testid="select-input-selectable-card-option"
                             id=":ro:"
                             role="combobox"
                             tabindex="0"
                           >
                             <p
-                              class="emotion-49 emotion-50 emotion-8"
+                              class="emotion-94 emotion-95 emotion-8"
                             >
                               Select item
                             </p>
