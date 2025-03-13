@@ -1,5 +1,13 @@
 # Change Log
 
+## 1.90.2
+
+### Patch Changes
+
+- [#4886](https://github.com/scaleway/ultraviolet/pull/4886) [`c4cf56d`](https://github.com/scaleway/ultraviolet/commit/c4cf56d39c2cac7de0eb2cb05df2f7cc7bee668b) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<SelectInputV2 />` vertical scroll to `auto`
+
+- [#4890](https://github.com/scaleway/ultraviolet/pull/4890) [`713518d`](https://github.com/scaleway/ultraviolet/commit/713518d8b46bc38191428fafa9e8a25dc50dfd86) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<SelectableCardOptionGroup.Option />` to have `tooltip` prop
+
 ## 1.90.1
 
 ### Patch Changes
