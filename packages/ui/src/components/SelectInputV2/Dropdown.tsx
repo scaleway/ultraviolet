@@ -69,7 +69,7 @@ const StyledPopup = styled(Popup)`
 
 const DropdownContainer = styled(Stack)<{ 'data-grouped': boolean }>`
   max-height: ${DROPDOWN_MAX_HEIGHT}px;
-  overflow-y: scroll;
+  overflow-y: auto;
   padding: ${({ theme }) => theme.space[0]};
   padding-bottom: ${({ theme }) => theme.space[0.5]};
   padding-top: ${({ theme }) => theme.space[0.5]};
