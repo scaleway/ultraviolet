@@ -9,10 +9,18 @@ import type { IconProps } from '../Icon'
 export const ArrowLeftIcon = ({ ...props }: Omit<IconProps, 'children'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
   <Icon {...props}>
-    <path
-      fillRule="evenodd"
-      d="M12.78 5.47a.75.75 0 0 1 0 1.06l-3.72 3.72 3.72 3.72a.75.75 0 1 1-1.06 1.06l-4.25-4.25a.75.75 0 0 1 0-1.06l4.25-4.25a.75.75 0 0 1 1.06 0"
-      clipRule="evenodd"
-    />
+    {props.size === 'large' ? (
+      <path
+        fillRule="evenodd"
+        d="M12.78 5.47a.75.75 0 0 1 0 1.06l-3.72 3.72 3.72 3.72a.75.75 0 1 1-1.06 1.06l-4.25-4.25a.75.75 0 0 1 0-1.06l4.25-4.25a.75.75 0 0 1 1.06 0"
+        clipRule="evenodd"
+      />
+    ) : (
+      <path
+        fillRule="evenodd"
+        d="M10.53 4.22a.75.75 0 0 1 0 1.06L7.81 8l2.72 2.72a.75.75 0 1 1-1.06 1.06L6.22 8.53a.75.75 0 0 1 0-1.06l3.25-3.25a.75.75 0 0 1 1.06 0"
+        clipRule="evenodd"
+      />
+    )}
   </Icon>
 )

@@ -9,9 +9,16 @@ import type { IconProps } from '../Icon'
 export const CancelIcon = ({ ...props }: Omit<IconProps, 'children'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
   <Icon {...props}>
-    <path
-      d="m5.965 4.904 9.131 9.131a6.5 6.5 0 0 0-9.131-9.131m8.07 10.192L4.904 5.965a6.5 6.5 0 0 0 9.131 9.131M4.343 4.343a8 8 0 1 1 11.314 11.314A8 8 0 0 1 4.343 4.343"
-      clipRule="evenodd"
-    />
+    {props.size === 'large' ? (
+      <path
+        d="m5.965 4.904 9.131 9.131a6.5 6.5 0 0 0-9.131-9.131m8.07 10.192L4.904 5.965a6.5 6.5 0 0 0 9.131 9.131M4.343 4.343a8 8 0 1 1 11.314 11.314A8 8 0 0 1 4.343 4.343"
+        clipRule="evenodd"
+      />
+    ) : (
+      <path
+        d="M3.05 3.05a7 7 0 1 1 9.9 9.9 7 7 0 0 1-9.9-9.9m1.627.566 7.707 7.707a5.501 5.501 0 0 0-7.707-7.707m6.646 8.768L3.616 4.677a5.501 5.501 0 0 0 7.707 7.707"
+        clipRule="evenodd"
+      />
+    )}
   </Icon>
 )

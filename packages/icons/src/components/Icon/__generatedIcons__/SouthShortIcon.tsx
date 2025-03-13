@@ -9,9 +9,16 @@ import type { IconProps } from '../Icon'
 export const SouthShortIcon = ({ ...props }: Omit<IconProps, 'children'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
   <Icon {...props}>
-    <path
-      d="M9.792 2a.75.75 0 0 1 .75.75v12.69l4.761-4.762a.75.75 0 0 1 1.06 1.06l-6.041 6.042a.75.75 0 0 1-1.06 0L3.22 11.74a.75.75 0 0 1 1.06-1.061l4.762 4.761V2.75a.75.75 0 0 1 .75-.75"
-      clipRule="evenodd"
-    />
+    {props.size === 'large' ? (
+      <path
+        d="M9.792 2a.75.75 0 0 1 .75.75v12.69l4.761-4.762a.75.75 0 0 1 1.06 1.06l-6.041 6.042a.75.75 0 0 1-1.06 0L3.22 11.74a.75.75 0 0 1 1.06-1.061l4.762 4.761V2.75a.75.75 0 0 1 .75-.75"
+        clipRule="evenodd"
+      />
+    ) : (
+      <path
+        d="M8.125 2a.75.75 0 0 1 .75.75v8.69l3.095-3.095a.75.75 0 1 1 1.06 1.06L8.655 13.78a.75.75 0 0 1-1.06 0L3.22 9.405a.75.75 0 0 1 1.06-1.06l3.095 3.094V2.75a.75.75 0 0 1 .75-.75"
+        clipRule="evenodd"
+      />
+    )}
   </Icon>
 )

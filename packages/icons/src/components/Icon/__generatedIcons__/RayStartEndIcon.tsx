@@ -9,7 +9,16 @@ import type { IconProps } from '../Icon'
 export const RayStartEndIcon = ({ ...props }: Omit<IconProps, 'children'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
   <Icon {...props}>
-    <path d="M8 12a2 2 0 1 1-4 0 2 2 0 0 1 4 0m8 0a2 2 0 1 0 4 0 2 2 0 0 0-4 0" />
-    <path d="M4 12a.75.75 0 0 1 .75-.75h14.5a.75.75 0 0 1 0 1.5H4.75A.75.75 0 0 1 4 12" />
+    {props.size === 'large' ? (
+      <>
+        <path d="M8 12a2 2 0 1 1-4 0 2 2 0 0 1 4 0m8 0a2 2 0 1 0 4 0 2 2 0 0 0-4 0" />
+        <path d="M4 12a.75.75 0 0 1 .75-.75h14.5a.75.75 0 0 1 0 1.5H4.75A.75.75 0 0 1 4 12" />
+      </>
+    ) : (
+      <>
+        <path d="M2 8c0 .414.336.75.75.75H13a.75.75 0 0 0 0-1.5H2.75A.75.75 0 0 0 2 8" />
+        <path d="M14 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0M6 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0" />
+      </>
+    )}
   </Icon>
 )
