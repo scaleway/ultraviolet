@@ -102,4 +102,5 @@ export type OrderSummaryProps = {
    */
   fractionDigits?: number
   onChange?: (price: PriceType) => void
+  hideDetails?: boolean
 } & PeriodProps
