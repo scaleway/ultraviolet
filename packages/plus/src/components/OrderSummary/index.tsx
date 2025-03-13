@@ -1,13 +1,13 @@
 import styled from '@emotion/styled'
 import { Stack, Text, UnitInput } from '@ultraviolet/ui'
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { NonScrollableContent } from './NonScrollableContent'
 import { OrderSummaryContext } from './Provider'
 import { ScrollableContent } from './ScrollableContent'
 import { Units } from './constants'
 import { calculateCategoryPrice } from './helpers'
 import orderSummaryLocales from './locales/en'
-import type { OrderSummaryProps, TimeUnit } from './types'
+import type { OrderSummaryProps, PriceType, TimeUnit } from './types'
 
 const Container = styled(Stack)`
   background-color: ${({ theme }) => theme.colors.neutral.backgroundWeak};
@@ -19,11 +19,14 @@ const Container = styled(Stack)`
   }
 `
 
-const HeaderContainer = styled(Stack)`
+const HeaderContainer = styled(Stack)<{ 'data-hideDetails': boolean }>`
   height: ${({ theme }) => theme.sizing[900]};
-  border-bottom: 1px solid ${({ theme }) => theme.colors.neutral.border};
   padding: ${({ theme }) => theme.space[3]};
   padding-bottom: ${({ theme }) => theme.space[2]};
+
+  &[data-hideDetails="false"] {
+    border-bottom: 1px solid ${({ theme }) => theme.colors.neutral.border};
+  }
 `
 
 const StyledStack = styled(Stack)`
@@ -46,32 +49,33 @@ export const OrderSummary = ({
   discount = 0,
   totalPriceInfo,
   fractionDigits,
+  hideDetails = false,
+  onChange,
   onChangeUnitInput,
 }: OrderSummaryProps) => {
   const [timePeriodUnit, setTimePeriodUnit] = useState<TimeUnit>(unitUnitInput)
   const [timePeriodAmount, setTimePeriodAmount] = useState(valueUnitInput)
 
-  const categoriesPrice = useMemo(() => {
-    const listCategories: Record<
-      string,
-      { before: [number, number]; after: [number, number] }
-    > = {}
-    items.forEach(category => {
-      const { categoryPrice, discountedPrice } = calculateCategoryPrice(
-        category,
-        hideTimeUnit,
-        timePeriodAmount,
-        timePeriodUnit,
-      )
+  const categoriesPrice: PriceType = useMemo(
+    () =>
+      items.reduce((acc, category) => {
+        const { categoryPrice, discountedPrice } = calculateCategoryPrice(
+          category,
+          hideTimeUnit,
+          timePeriodAmount,
+          timePeriodUnit,
+        )
 
-      return (listCategories[category.category] = {
-        before: categoryPrice,
-        after: discountedPrice,
-      })
-    })
-
-    return listCategories
-  }, [hideTimeUnit, items, timePeriodAmount, timePeriodUnit])
+        return {
+          ...acc,
+          [category.category]: {
+            before: categoryPrice,
+            after: discountedPrice,
+          },
+        }
+      }, {}),
+    [hideTimeUnit, items, timePeriodAmount, timePeriodUnit],
+  )
 
   const totalPrice = useMemo(() => {
     const price = Object.values(categoriesPrice).reduce<[number, number]>(
@@ -103,6 +107,18 @@ export const OrderSummary = ({
 
     return computedPrice
   }, [categoriesPrice, discount])
+
+  const prevCategoriesPriceRef = useRef(categoriesPrice)
+
+  useEffect(() => {
+    if (
+      JSON.stringify(prevCategoriesPriceRef.current) !==
+      JSON.stringify(categoriesPrice)
+    ) {
+      prevCategoriesPriceRef.current = categoriesPrice
+      onChange?.(categoriesPrice)
+    }
+  }, [categoriesPrice, onChange])
 
   const valueContext = useMemo(
     () => ({
@@ -149,7 +165,11 @@ export const OrderSummary = ({
     <OrderSummaryContext.Provider value={valueContext}>
       <Container>
         {header ? (
-          <HeaderContainer direction="row" justifyContent="space-between">
+          <HeaderContainer
+            direction="row"
+            justifyContent="space-between"
+            data-hideDetails={hideDetails}
+          >
             <Text as="h3" variant="headingSmallStrong" sentiment="neutral">
               {header}
             </Text>
@@ -172,7 +192,7 @@ export const OrderSummary = ({
             ) : null}
           </HeaderContainer>
         ) : null}
-        <ScrollableContent />
+        {!hideDetails ? <ScrollableContent /> : null}
         <NonScrollableContent
           totalPrice={totalPrice}
           discount={discount}
