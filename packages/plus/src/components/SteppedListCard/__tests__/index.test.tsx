@@ -3,12 +3,12 @@ import { userEvent } from '@testing-library/user-event'
 import { blockStorageWire } from '@ultraviolet/illustrations/products/blockStorage'
 import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
 import { describe, expect, it, test } from 'vitest'
-import { SteppedListContainer } from '..'
+import { SteppedListCard } from '..'
 
 describe('SteppedListCard', () => {
   it('should work with default props', () =>
     shouldMatchEmotionSnapshot(
-      <SteppedListContainer
+      <SteppedListCard
         header={<h1>Header</h1>}
         hideTooltipText="hide"
         hideText="hide button"
@@ -16,81 +16,81 @@ describe('SteppedListCard', () => {
         showTooltipText="show"
         steps={['step1', 'step2']}
       >
-        <SteppedListContainer.Step
+        <SteppedListCard.Step
           stepNumber={1}
           subHeader="First step"
           image={<img src={blockStorageWire} width={200} alt="blockStorage" />}
         >
           Description
-        </SteppedListContainer.Step>
-        <SteppedListContainer.Step
+        </SteppedListCard.Step>
+        <SteppedListCard.Step
           stepNumber={2}
           subHeader={<h1>Title</h1>}
           image={<img src={blockStorageWire} width={200} alt="blockStorage" />}
         >
           Description step 2
-        </SteppedListContainer.Step>
-      </SteppedListContainer>,
+        </SteppedListCard.Step>
+      </SteppedListCard>,
     ))
 
   it('should hide the toggle button', () =>
     shouldMatchEmotionSnapshot(
-      <SteppedListContainer
+      <SteppedListCard
         header={<h1>Header</h1>}
         showToggleOption={false}
         steps={['step1', 'step2']}
       >
-        <SteppedListContainer.Step
+        <SteppedListCard.Step
           stepNumber={1}
           subHeader="First step"
           image={<img src={blockStorageWire} width={200} alt="blockStorage" />}
         >
           Description
-        </SteppedListContainer.Step>
-        <SteppedListContainer.Step
+        </SteppedListCard.Step>
+        <SteppedListCard.Step
           stepNumber={2}
           subHeader={<h1>Title</h1>}
           image={<img src={blockStorageWire} width={200} alt="blockStorage" />}
         >
           Description step 2
-        </SteppedListContainer.Step>
-      </SteppedListContainer>,
+        </SteppedListCard.Step>
+      </SteppedListCard>,
     ))
 
   it('should work with custom hide action', () =>
     shouldMatchEmotionSnapshot(
-      <SteppedListContainer
+      <SteppedListCard
         header="Header"
         steps={['step1', 'step2']}
         // oxlint-disable-next-line no-console
         onClickHide={() => console.log('test')}
       >
-        <SteppedListContainer.Step
+        <SteppedListCard.Step
           stepNumber={1}
           subHeader={<h1>First step</h1>}
           image={<img src={blockStorageWire} width={200} alt="blockStorage" />}
         >
           Description
-        </SteppedListContainer.Step>
-        <SteppedListContainer.Step
+        </SteppedListCard.Step>
+        <SteppedListCard.Step
           stepNumber={2}
           subHeader={<h1>Title</h1>}
           image={<img src={blockStorageWire} width={200} alt="blockStorage" />}
         >
           Description step 2
-        </SteppedListContainer.Step>
-      </SteppedListContainer>,
+        </SteppedListCard.Step>
+      </SteppedListCard>,
     ))
 
   test('should handle checked steps and navigation', async () => {
     renderWithTheme(
-      <SteppedListContainer
+      <SteppedListCard
         header="Header"
         steps={['step1', 'step2']}
         // oxlint-disable-next-line no-console
         onClickHide={() => console.log('test')}
       >
-        <SteppedListContainer.Step
+        <SteppedListCard.Step
           stepNumber={1}
           subHeader="step1title"
           image={<img src={blockStorageWire} width={200} alt="blockStorage" />}
@@ -104,8 +104,8 @@ describe('SteppedListCard', () => {
               </button>
             </>
           )}
-        </SteppedListContainer.Step>
-        <SteppedListContainer.Step
+        </SteppedListCard.Step>
+        <SteppedListCard.Step
           stepNumber={2}
           subHeader="step2title"
           image={<img src={blockStorageWire} width={200} alt="blockStorage" />}
@@ -118,8 +118,8 @@ describe('SteppedListCard', () => {
               </button>
             </>
           )}
-        </SteppedListContainer.Step>
-        <SteppedListContainer.Step
+        </SteppedListCard.Step>
+        <SteppedListCard.Step
           stepNumber={3}
           subHeader="step3title"
           image={<img src={blockStorageWire} width={200} alt="blockStorage" />}
@@ -132,8 +132,8 @@ describe('SteppedListCard', () => {
               </button>
             </>
           )}
-        </SteppedListContainer.Step>
-      </SteppedListContainer>,
+        </SteppedListCard.Step>
+      </SteppedListCard>,
     )
 
     // Check "button next" with validation = true
@@ -157,13 +157,13 @@ describe('SteppedListCard', () => {
 
   test('should handle custom hide button', async () => {
     renderWithTheme(
-      <SteppedListContainer
+      <SteppedListCard
         header="Header"
         steps={['step1', 'step2']}
         // oxlint-disable-next-line no-console
         onClickHide={() => console.log('hide clicked')}
       >
-        <SteppedListContainer.Step
+        <SteppedListCard.Step
           stepNumber={1}
           subHeader="step1title"
           image={<img src={blockStorageWire} width={200} alt="blockStorage" />}
@@ -177,8 +177,8 @@ describe('SteppedListCard', () => {
               </button>
             </>
           )}
-        </SteppedListContainer.Step>
-        <SteppedListContainer.Step
+        </SteppedListCard.Step>
+        <SteppedListCard.Step
           stepNumber={2}
           subHeader="step2title"
           image={<img src={blockStorageWire} width={200} alt="blockStorage" />}
@@ -191,8 +191,8 @@ describe('SteppedListCard', () => {
               </button>
             </>
           )}
-        </SteppedListContainer.Step>
-      </SteppedListContainer>,
+        </SteppedListCard.Step>
+      </SteppedListCard>,
     )
 
     // Check click on hide button
@@ -211,8 +211,8 @@ describe('SteppedListCard', () => {
 
   test('should handle default hide button', async () => {
     renderWithTheme(
-      <SteppedListContainer header="Header" steps={['step1', 'step2']}>
-        <SteppedListContainer.Step
+      <SteppedListCard header="Header" steps={['step1', 'step2']}>
+        <SteppedListCard.Step
           stepNumber={1}
           subHeader="step1title"
           image={<img src={blockStorageWire} width={200} alt="blockStorage" />}
@@ -226,8 +226,8 @@ describe('SteppedListCard', () => {
               </button>
             </>
           )}
-        </SteppedListContainer.Step>
-        <SteppedListContainer.Step
+        </SteppedListCard.Step>
+        <SteppedListCard.Step
           stepNumber={2}
           subHeader="step2title"
           image={<img src={blockStorageWire} width={200} alt="blockStorage" />}
@@ -240,8 +240,8 @@ describe('SteppedListCard', () => {
               </button>
             </>
           )}
-        </SteppedListContainer.Step>
-      </SteppedListContainer>,
+        </SteppedListCard.Step>
+      </SteppedListCard>,
     )
 
     // Check click on hide button
@@ -258,4 +258,25 @@ describe('SteppedListCard', () => {
     fireEvent.click(buttonNext)
     expect(content).not.toBeInTheDocument()
   })
+
+  it('should work with pre-completed step', () =>
+    shouldMatchEmotionSnapshot(
+      <SteppedListCard header={<h1>Header</h1>} steps={['step1', 'step2']}>
+        <SteppedListCard.Step
+          stepNumber={1}
+          subHeader="First step"
+          image={<img src={blockStorageWire} width={200} alt="blockStorage" />}
+        >
+          Description
+        </SteppedListCard.Step>
+        <SteppedListCard.Step
+          stepNumber={2}
+          subHeader={<div>Title</div>}
+          image={<img src={blockStorageWire} width={200} alt="blockStorage" />}
+          completed
+        >
+          Description step 2
+        </SteppedListCard.Step>
+      </SteppedListCard>,
+    ))
 })

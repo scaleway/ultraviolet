@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
 import { Stack, Text } from '@ultraviolet/ui'
 import type { ReactNode } from 'react'
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
 import { Data, nextStep } from './helper'
 
 const StyledContent = styled(Stack)`
@@ -22,16 +22,35 @@ type SteppedListContentProps = {
   children: ((nextStep: (completed: boolean) => void) => ReactNode) | ReactNode
   image?: ReactNode
   stepNumber: number
+  completed?: boolean
 }
 export const SteppedListContent = ({
   subHeader,
   children,
   image,
   stepNumber,
+  completed = false,
 }: SteppedListContentProps) => {
-  const containerData = useContext(Data)
+  const {
+    setDone,
+    currentStep,
+    done,
+    setCurrentStep,
+    numberOfSteps,
+    setHidden,
+    onClickHide,
+  } = useContext(Data)
 
-  if (stepNumber === containerData.currentStep) {
+  useEffect(() => {
+    setDone(prevDone => {
+      const updatedDone = [...prevDone]
+      updatedDone[stepNumber - 1] = completed
+
+      return updatedDone
+    })
+  }, [completed, setDone, stepNumber])
+
+  if (stepNumber === currentStep) {
     return (
       <StyledContent>
         <StyledSubHeader>
@@ -44,16 +63,16 @@ export const SteppedListContent = ({
           )}
         </StyledSubHeader>
         {typeof children === 'function'
-          ? children((completed: boolean) =>
+          ? children((completedArg: boolean) =>
               nextStep({
-                completed,
-                setCompleted: containerData.setDone,
-                done: containerData.done,
+                completed: completedArg,
+                setCompleted: setDone,
+                done,
                 stepNumber,
-                setCurrentStep: containerData.setCurrentStep,
-                numberOfSteps: containerData.numberOfSteps,
-                setHidden: containerData.setHidden,
-                onClickHide: containerData.onClickHide,
+                setCurrentStep,
+                numberOfSteps,
+                setHidden,
+                onClickHide,
               }),
             )
           : children}

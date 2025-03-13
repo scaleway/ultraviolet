@@ -4,14 +4,14 @@ import type { StoryFn } from '@storybook/react'
 import { blockStorageWire } from '@ultraviolet/illustrations/products/blockStorage'
 import { Button, Expandable, Stack, Text } from '@ultraviolet/ui'
 import { type ComponentProps, useState } from 'react'
-import { SteppedListContainer } from '../SteppedListContainer'
+import { SteppedListCard } from '../SteppedListCard'
 
 const StyledImage = styled.img`
   filter: invert();
 `
 
 export const OnClickHide: StoryFn<
-  ComponentProps<typeof SteppedListContainer>
+  ComponentProps<typeof SteppedListCard>
 > = props => {
   const theme = useTheme()
 
@@ -32,11 +32,8 @@ export const OnClickHide: StoryFn<
         Click to {visible ? 'completely hide' : 'show'} the component.
       </Button>
       <Expandable opened={visible}>
-        <SteppedListContainer
-          {...props}
-          onClickHide={() => setVisible(!visible)}
-        >
-          <SteppedListContainer.Step
+        <SteppedListCard {...props} onClickHide={() => setVisible(!visible)}>
+          <SteppedListCard.Step
             stepNumber={1}
             subHeader={
               <Text as="h3" variant="headingSmallStrong" sentiment="primary">
@@ -58,8 +55,8 @@ export const OnClickHide: StoryFn<
                 </Stack>
               </Stack>
             )}
-          </SteppedListContainer.Step>
-          <SteppedListContainer.Step
+          </SteppedListCard.Step>
+          <SteppedListCard.Step
             stepNumber={2}
             subHeader="Second step"
             image={illustrationImage}
@@ -75,8 +72,8 @@ export const OnClickHide: StoryFn<
                 </Stack>
               </Stack>
             )}
-          </SteppedListContainer.Step>
-        </SteppedListContainer>
+          </SteppedListCard.Step>
+        </SteppedListCard>
       </Expandable>
     </>
   )
