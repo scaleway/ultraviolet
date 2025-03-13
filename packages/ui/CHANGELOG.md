@@ -1,5 +1,13 @@
 # Change Log
 
+## 1.90.1
+
+### Patch Changes
+
+- [#4876](https://github.com/scaleway/ultraviolet/pull/4876) [`ea9dce1`](https://github.com/scaleway/ultraviolet/commit/ea9dce18d980a958799bd95555be6a0cbd9d1dd5) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<Tag />` not being troncated
+
+- [#4888](https://github.com/scaleway/ultraviolet/pull/4888) [`1cd3b16`](https://github.com/scaleway/ultraviolet/commit/1cd3b16c80fad09a2eafe71a0373716efb71f03d) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<SelectableCard />` layout issue
+
 ## 1.90.0
 
 ### Minor Changes
