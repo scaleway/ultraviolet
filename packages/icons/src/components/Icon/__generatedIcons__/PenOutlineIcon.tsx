@@ -6,21 +6,19 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const PenOutlineIcon = ({ ...props }: Omit<IconProps, 'children'>) =>
-  props.size === 'large' ? (
-    // eslint-disable-next-line react/jsx-props-no-spreading
-    <Icon {...props}>
+export const PenOutlineIcon = ({ ...props }: Omit<IconProps, 'children'>) => (
+  // eslint-disable-next-line react/jsx-props-no-spreading
+  <Icon {...props}>
+    {props.size === 'large' ? (
       <path
         d="M17.137 2.863a.81.81 0 0 0-1.149 0l-.876.876 1.15 1.149.875-.876a.81.81 0 0 0 0-1.149M15.2 5.949l-1.149-1.15L4.014 14.838a3 3 0 0 0-.754 1.265l-.27.908.908-.27a3 3 0 0 0 1.265-.754zm-.273-4.147a2.313 2.313 0 0 1 3.27 3.27L6.225 17.048a4.5 4.5 0 0 1-1.897 1.13l-2.238.667a.75.75 0 0 1-.933-.933l.667-2.238a4.5 4.5 0 0 1 1.13-1.897z"
         clipRule="evenodd"
       />
-    </Icon>
-  ) : (
-    // eslint-disable-next-line react/jsx-props-no-spreading
-    <Icon {...props}>
+    ) : (
       <path
         d="M10.232 1.982a2.5 2.5 0 1 1 3.536 3.536l-7.262 7.261a3.5 3.5 0 0 1-1.135.759l-2.047.848a1.5 1.5 0 0 1-1.96-1.96l.693.287-.693-.287.848-2.047a3.5 3.5 0 0 1 .759-1.135zm2.475 1.06a1 1 0 0 0-1.414 0L4.03 10.306a2 2 0 0 0-.433.648l-.693-.287.693.287L2.75 13l2.047-.848c.243-.1.463-.248.649-.433l7.261-7.262a1 1 0 0 0 0-1.414"
         clipRule="evenodd"
       />
-    </Icon>
-  )
+    )}
+  </Icon>
+)

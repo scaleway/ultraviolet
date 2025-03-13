@@ -8,22 +8,20 @@ import type { IconProps } from '../Icon'
 
 export const CheckCircleOutlineIcon = ({
   ...props
-}: Omit<IconProps, 'children'>) =>
-  props.size === 'large' ? (
-    // eslint-disable-next-line react/jsx-props-no-spreading
-    <Icon {...props}>
+}: Omit<IconProps, 'children'>) => (
+  // eslint-disable-next-line react/jsx-props-no-spreading
+  <Icon {...props}>
+    {props.size === 'large' ? (
       <path
         d="M10 3.455a6.545 6.545 0 1 0 0 13.09 6.545 6.545 0 0 0 0-13.09M2 10a8 8 0 1 1 16 0 8 8 0 0 1-16 0m10.847-2.41a.727.727 0 0 1 .169 1.015l-3.03 4.242a.727.727 0 0 1-1.106.091L7.06 11.12a.727.727 0 1 1 1.029-1.028l1.211 1.21 2.531-3.543a.727.727 0 0 1 1.015-.169"
         clipRule="evenodd"
       />
-    </Icon>
-  ) : (
-    // eslint-disable-next-line react/jsx-props-no-spreading
-    <Icon {...props}>
+    ) : (
       <path
         fillRule="evenodd"
         clipRule="evenodd"
         d="M8 2.27273C4.83691 2.27273 2.27273 4.83691 2.27273 8C2.27273 11.1631 4.83691 13.7273 8 13.7273C11.1631 13.7273 13.7273 11.1631 13.7273 8C13.7273 4.83691 11.1631 2.27273 8 2.27273ZM1 8C1 4.13401 4.13401 1 8 1C11.866 1 15 4.13401 15 8C15 11.866 11.866 15 8 15C4.13401 15 1 11.866 1 8ZM10.4911 5.89126C10.7771 6.09554 10.8433 6.49298 10.639 6.77897L7.98753 10.4911C7.8788 10.6433 7.70861 10.74 7.52218 10.7554C7.33576 10.7708 7.15199 10.7035 7.01972 10.5712L5.42881 8.98028C5.1803 8.73177 5.1803 8.32884 5.42881 8.08033C5.67733 7.83181 6.08025 7.83181 6.32877 8.08033L7.38849 9.14006L9.60338 6.03921C9.80766 5.75322 10.2051 5.68698 10.4911 5.89126Z"
       />
-    </Icon>
-  )
+    )}
+  </Icon>
+)

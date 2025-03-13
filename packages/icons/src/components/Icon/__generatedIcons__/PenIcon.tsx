@@ -6,18 +6,16 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const PenIcon = ({ ...props }: Omit<IconProps, 'children'>) =>
-  props.size === 'large' ? (
-    // eslint-disable-next-line react/jsx-props-no-spreading
-    <Icon {...props}>
+export const PenIcon = ({ ...props }: Omit<IconProps, 'children'>) => (
+  // eslint-disable-next-line react/jsx-props-no-spreading
+  <Icon {...props}>
+    {props.size === 'large' ? (
       <path d="m2.695 14.762-1.262 3.155a.5.5 0 0 0 .65.65l3.154-1.262a4 4 0 0 0 1.343-.886L17.5 5.501a2.121 2.121 0 0 0-3-3L3.58 13.419a4 4 0 0 0-.885 1.343" />
-    </Icon>
-  ) : (
-    // eslint-disable-next-line react/jsx-props-no-spreading
-    <Icon {...props}>
+    ) : (
       <path
         d="M11.013 2.513a1.75 1.75 0 0 1 2.475 2.474L6.226 12.25a2.8 2.8 0 0 1-.892.596l-2.047.848a.75.75 0 0 1-.98-.98l.848-2.047a2.8 2.8 0 0 1 .596-.892z"
         clipRule="evenodd"
       />
-    </Icon>
-  )
+    )}
+  </Icon>
+)

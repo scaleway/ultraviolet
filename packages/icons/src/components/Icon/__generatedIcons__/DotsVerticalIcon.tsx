@@ -6,15 +6,13 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const DotsVerticalIcon = ({ ...props }: Omit<IconProps, 'children'>) =>
-  props.size === 'large' ? (
-    // eslint-disable-next-line react/jsx-props-no-spreading
-    <Icon {...props}>
+export const DotsVerticalIcon = ({ ...props }: Omit<IconProps, 'children'>) => (
+  // eslint-disable-next-line react/jsx-props-no-spreading
+  <Icon {...props}>
+    {props.size === 'large' ? (
       <path d="M9.5 3a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3m0 5.5a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3m1.5 7a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0" />
-    </Icon>
-  ) : (
-    // eslint-disable-next-line react/jsx-props-no-spreading
-    <Icon {...props}>
+    ) : (
       <path d="M7.5 2a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3m0 4.5a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3m1.5 6a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0" />
-    </Icon>
-  )
+    )}
+  </Icon>
+)

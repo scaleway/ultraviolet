@@ -6,21 +6,19 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const WestShortIcon = ({ ...props }: Omit<IconProps, 'children'>) =>
-  props.size === 'large' ? (
-    // eslint-disable-next-line react/jsx-props-no-spreading
-    <Icon {...props}>
+export const WestShortIcon = ({ ...props }: Omit<IconProps, 'children'>) => (
+  // eslint-disable-next-line react/jsx-props-no-spreading
+  <Icon {...props}>
+    {props.size === 'large' ? (
       <path
         d="M9.322 3.22a.75.75 0 0 1 0 1.06L4.561 9.042H17.25a.75.75 0 0 1 0 1.5H4.56l4.762 4.761a.75.75 0 0 1-1.06 1.06l-6.042-6.04a.75.75 0 0 1 0-1.06L8.26 3.22a.75.75 0 0 1 1.061 0"
         clipRule="evenodd"
       />
-    </Icon>
-  ) : (
-    // eslint-disable-next-line react/jsx-props-no-spreading
-    <Icon {...props}>
+    ) : (
       <path
         d="M7.655 3.22a.75.75 0 0 1 0 1.06L4.561 7.375h8.689a.75.75 0 0 1 0 1.5H4.56l3.095 3.095a.75.75 0 1 1-1.06 1.06L2.22 8.655a.75.75 0 0 1 0-1.06L6.595 3.22a.75.75 0 0 1 1.06 0"
         clipRule="evenodd"
       />
-    </Icon>
-  )
+    )}
+  </Icon>
+)

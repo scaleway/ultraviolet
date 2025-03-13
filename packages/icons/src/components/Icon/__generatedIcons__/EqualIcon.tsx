@@ -6,15 +6,13 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const EqualIcon = ({ ...props }: Omit<IconProps, 'children'>) =>
-  props.size === 'large' ? (
-    // eslint-disable-next-line react/jsx-props-no-spreading
-    <Icon {...props}>
+export const EqualIcon = ({ ...props }: Omit<IconProps, 'children'>) => (
+  // eslint-disable-next-line react/jsx-props-no-spreading
+  <Icon {...props}>
+    {props.size === 'large' ? (
       <path d="M19 10H5V8h14zm0 6H5v-2h14z" />
-    </Icon>
-  ) : (
-    // eslint-disable-next-line react/jsx-props-no-spreading
-    <Icon {...props}>
+    ) : (
       <path d="M19 10H5V8h14zm0 6H5v-2h14z" />
-    </Icon>
-  )
+    )}
+  </Icon>
+)

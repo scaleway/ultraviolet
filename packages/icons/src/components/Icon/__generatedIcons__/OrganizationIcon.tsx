@@ -6,15 +6,13 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const OrganizationIcon = ({ ...props }: Omit<IconProps, 'children'>) =>
-  props.size === 'large' ? (
-    // eslint-disable-next-line react/jsx-props-no-spreading
-    <Icon {...props}>
+export const OrganizationIcon = ({ ...props }: Omit<IconProps, 'children'>) => (
+  // eslint-disable-next-line react/jsx-props-no-spreading
+  <Icon {...props}>
+    {props.size === 'large' ? (
       <path d="M12.4 10a1.6 1.6 0 1 0 0 3.2 1.6 1.6 0 0 0 0-3.2M10 16.4a6.4 6.4 0 1 1 0-12.8 6.4 6.4 0 0 1 0 12.8M10 2a8 8 0 1 0 0 16 8 8 0 0 0 0-16m1.6 5.6A1.6 1.6 0 0 0 10 6a1.6 1.6 0 1 0 1.6 1.6m-4 2.4a1.6 1.6 0 1 0 0 3.2 1.6 1.6 0 0 0 0-3.2" />
-    </Icon>
-  ) : (
-    // eslint-disable-next-line react/jsx-props-no-spreading
-    <Icon {...props}>
+    ) : (
       <path d="M9.8 10a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4M8 14.8a4.8 4.8 0 1 1 0-9.6 4.8 4.8 0 0 1 0 9.6M8 4a6 6 0 1 0 0 12A6 6 0 0 0 8 4m1.2 4.2a1.2 1.2 0 1 0-2.4 0 1.2 1.2 0 0 0 2.4 0m-3 1.8a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4" />
-    </Icon>
-  )
+    )}
+  </Icon>
+)

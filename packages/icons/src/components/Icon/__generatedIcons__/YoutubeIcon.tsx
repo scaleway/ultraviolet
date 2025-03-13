@@ -6,23 +6,21 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const YoutubeIcon = ({ ...props }: Omit<IconProps, 'children'>) =>
-  props.size === 'large' ? (
-    // eslint-disable-next-line react/jsx-props-no-spreading
-    <Icon {...props}>
+export const YoutubeIcon = ({ ...props }: Omit<IconProps, 'children'>) => (
+  // eslint-disable-next-line react/jsx-props-no-spreading
+  <Icon {...props}>
+    {props.size === 'large' ? (
       <path
         fillRule="evenodd"
         d="M16.521 4.524a2.09 2.09 0 0 1 1.47 1.469c.356 1.304.342 4.022.342 4.022s0 2.705-.343 4.009a2.09 2.09 0 0 1-1.469 1.469c-1.304.343-6.521.343-6.521.343s-5.203 0-6.521-.357A2.09 2.09 0 0 1 2.01 14.01c-.343-1.29-.343-4.009-.343-4.009s0-2.704.343-4.008A2.13 2.13 0 0 1 3.479 4.51C4.783 4.167 10 4.167 10 4.167s5.217 0 6.521.357m-4.095 5.333a.167.167 0 0 1 0 .289l-3.838 2.21a.167.167 0 0 1-.25-.145v-4.42c0-.128.14-.209.25-.145z"
         clipRule="evenodd"
       />
-    </Icon>
-  ) : (
-    // eslint-disable-next-line react/jsx-props-no-spreading
-    <Icon {...props}>
+    ) : (
       <path
         fillRule="evenodd"
         d="M13.217 3.619a1.67 1.67 0 0 1 1.175 1.175c.286 1.043.274 3.218.274 3.218s0 2.164-.274 3.207a1.67 1.67 0 0 1-1.175 1.175C12.173 12.67 8 12.67 8 12.67s-4.163 0-5.217-.286a1.67 1.67 0 0 1-1.175-1.175c-.275-1.032-.275-3.207-.275-3.207s0-2.164.275-3.207a1.7 1.7 0 0 1 1.175-1.186C3.826 3.333 8 3.333 8 3.333s4.173 0 5.217.286M9.94 7.885a.133.133 0 0 1 0 .231L6.87 9.885a.133.133 0 0 1-.2-.116V6.233c0-.103.11-.167.2-.116z"
         clipRule="evenodd"
       />
-    </Icon>
-  )
+    )}
+  </Icon>
+)

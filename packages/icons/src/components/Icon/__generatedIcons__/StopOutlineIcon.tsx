@@ -6,22 +6,20 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const StopOutlineIcon = ({ ...props }: Omit<IconProps, 'children'>) =>
-  props.size === 'large' ? (
-    // eslint-disable-next-line react/jsx-props-no-spreading
-    <Icon {...props}>
+export const StopOutlineIcon = ({ ...props }: Omit<IconProps, 'children'>) => (
+  // eslint-disable-next-line react/jsx-props-no-spreading
+  <Icon {...props}>
+    {props.size === 'large' ? (
       <path
         d="M10 3.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13M2 10a8 8 0 1 1 16 0 8 8 0 0 1-16 0m4.833-1.964c0-.664.539-1.203 1.203-1.203h3.928c.664 0 1.203.539 1.203 1.203v3.928c0 .664-.539 1.203-1.203 1.203H8.035a1.203 1.203 0 0 1-1.203-1.203zm1.5.297v3.334h3.334V8.333z"
         clipRule="evenodd"
       />
-    </Icon>
-  ) : (
-    // eslint-disable-next-line react/jsx-props-no-spreading
-    <Icon {...props}>
+    ) : (
       <path
         fillRule="evenodd"
         clipRule="evenodd"
         d="M8.4 3.5C5.6938 3.5 3.5 5.6938 3.5 8.4C3.5 11.1062 5.6938 13.3 8.4 13.3C11.1062 13.3 13.3 11.1062 13.3 8.4C13.3 5.6938 11.1062 3.5 8.4 3.5ZM2 8.4C2 4.86538 4.86538 2 8.4 2C11.9346 2 14.8 4.86538 14.8 8.4C14.8 11.9346 11.9346 14.8 8.4 14.8C4.86538 14.8 2 11.9346 2 8.4ZM5.76667 6.86979C5.76667 6.26055 6.26055 5.76667 6.86979 5.76667H9.93021C10.5394 5.76667 11.0333 6.26055 11.0333 6.86979V9.93021C11.0333 10.5394 10.5394 11.0333 9.93021 11.0333H6.86979C6.26055 11.0333 5.76667 10.5394 5.76667 9.93021V6.86979ZM7.26667 7.26667V9.53333H9.53333V7.26667H7.26667Z"
       />
-    </Icon>
-  )
+    )}
+  </Icon>
+)

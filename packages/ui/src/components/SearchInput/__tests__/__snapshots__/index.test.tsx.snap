@@ -1122,14 +1122,19 @@ exports[`SearchInput > renders correctly without children props 1`] = `
               >
                 <div
                   class="emotion-9 emotion-10"
-                  viewBox="0 0 16 16"
+                  data-testid="search-icon"
                 >
-                  <path
-                    clip-rule="evenodd"
-                    d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06zM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0"
-                    fill-rule="evenodd"
-                  />
-                </svg>
+                  <svg
+                    class="emotion-11 emotion-12"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06zM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
+                </div>
               </div>
               <input
                 aria-invalid="false"
@@ -1388,14 +1393,19 @@ exports[`SearchInput > renders with disabled prop 1`] = `
               >
                 <div
                   class="emotion-9 emotion-10"
-                  viewBox="0 0 16 16"
+                  data-testid="search-icon"
                 >
-                  <path
-                    clip-rule="evenodd"
-                    d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06zM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0"
-                    fill-rule="evenodd"
-                  />
-                </svg>
+                  <svg
+                    class="emotion-11 emotion-12"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06zM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
+                </div>
               </div>
               <input
                 aria-invalid="false"
@@ -1705,14 +1715,19 @@ exports[`SearchInput > renders with error prop 1`] = `
               >
                 <div
                   class="emotion-9 emotion-10"
-                  viewBox="0 0 16 16"
+                  data-testid="search-icon"
                 >
-                  <path
-                    clip-rule="evenodd"
-                    d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06zM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0"
-                    fill-rule="evenodd"
-                  />
-                </svg>
+                  <svg
+                    class="emotion-11 emotion-12"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06zM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
+                </div>
               </div>
               <input
                 aria-invalid="true"
@@ -1727,7 +1742,7 @@ exports[`SearchInput > renders with error prop 1`] = `
                 class="emotion-15 emotion-16"
               >
                 <svg
-                  class="emotion-15 emotion-10"
+                  class="emotion-17 emotion-12"
                   viewBox="0 0 16 16"
                 >
                   <path
@@ -2083,14 +2098,19 @@ exports[`SearchInput > renders with shortcut prop > as array of string 1`] = `
               >
                 <div
                   class="emotion-9 emotion-10"
-                  viewBox="0 0 16 16"
+                  data-testid="search-icon"
                 >
-                  <path
-                    clip-rule="evenodd"
-                    d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06zM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0"
-                    fill-rule="evenodd"
-                  />
-                </svg>
+                  <svg
+                    class="emotion-11 emotion-12"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06zM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
+                </div>
               </div>
               <input
                 aria-invalid="false"
@@ -2483,14 +2503,19 @@ exports[`SearchInput > renders with shortcut prop > as boolean 1`] = `
               >
                 <div
                   class="emotion-9 emotion-10"
-                  viewBox="0 0 16 16"
+                  data-testid="search-icon"
                 >
-                  <path
-                    clip-rule="evenodd"
-                    d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06zM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0"
-                    fill-rule="evenodd"
-                  />
-                </svg>
+                  <svg
+                    class="emotion-11 emotion-12"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06zM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
+                </div>
               </div>
               <input
                 aria-invalid="false"

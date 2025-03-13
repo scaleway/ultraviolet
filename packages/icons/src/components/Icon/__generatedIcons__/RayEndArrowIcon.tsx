@@ -6,25 +6,27 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const RayEndArrowIcon = ({ ...props }: Omit<IconProps, 'children'>) =>
-  props.size === 'large' ? (
-    // eslint-disable-next-line react/jsx-props-no-spreading
-    <Icon {...props}>
-      <path
-        fillRule="evenodd"
-        d="M20 12a.75.75 0 0 1-.75.75H6.66l2.1 1.95a.75.75 0 1 1-1.02 1.1l-3.5-3.25a.75.75 0 0 1 0-1.1l3.5-3.25a.75.75 0 1 1 1.02 1.1l-2.1 1.95h12.59A.75.75 0 0 1 20 12"
-        clipRule="evenodd"
-      />
-      <path d="M20 12a2 2 0 1 1-4 0 2 2 0 0 1 4 0" />
-    </Icon>
-  ) : (
-    // eslint-disable-next-line react/jsx-props-no-spreading
-    <Icon {...props}>
-      <path
-        fillRule="evenodd"
-        d="M14 8.25a.75.75 0 0 1-.75.75H4.56l1.22 1.22a.75.75 0 1 1-1.06 1.06l-2.5-2.5a.75.75 0 0 1 0-1.06l2.5-2.5a.75.75 0 0 1 1.06 1.06L4.56 7.5h8.69a.75.75 0 0 1 .75.75"
-        clipRule="evenodd"
-      />
-      <path d="M14 8.25a2 2 0 1 1-4 0 2 2 0 0 1 4 0" />
-    </Icon>
-  )
+export const RayEndArrowIcon = ({ ...props }: Omit<IconProps, 'children'>) => (
+  // eslint-disable-next-line react/jsx-props-no-spreading
+  <Icon {...props}>
+    {props.size === 'large' ? (
+      <>
+        <path
+          fillRule="evenodd"
+          d="M20 12a.75.75 0 0 1-.75.75H6.66l2.1 1.95a.75.75 0 1 1-1.02 1.1l-3.5-3.25a.75.75 0 0 1 0-1.1l3.5-3.25a.75.75 0 1 1 1.02 1.1l-2.1 1.95h12.59A.75.75 0 0 1 20 12"
+          clipRule="evenodd"
+        />
+        <path d="M20 12a2 2 0 1 1-4 0 2 2 0 0 1 4 0" />
+      </>
+    ) : (
+      <>
+        <path
+          fillRule="evenodd"
+          d="M14 8.25a.75.75 0 0 1-.75.75H4.56l1.22 1.22a.75.75 0 1 1-1.06 1.06l-2.5-2.5a.75.75 0 0 1 0-1.06l2.5-2.5a.75.75 0 0 1 1.06 1.06L4.56 7.5h8.69a.75.75 0 0 1 .75.75"
+          clipRule="evenodd"
+        />
+        <path d="M14 8.25a2 2 0 1 1-4 0 2 2 0 0 1 4 0" />
+      </>
+    )}
+  </Icon>
+)
