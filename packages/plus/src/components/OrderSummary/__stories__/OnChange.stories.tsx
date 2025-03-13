@@ -1,4 +1,5 @@
 import type { StoryFn } from '@storybook/react'
+import { Stack } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
 import { useState } from 'react'
 import { OrderSummary } from '..'
@@ -17,7 +18,14 @@ export const OnChange: StoryFn<ComponentProps<typeof OrderSummary>> = () => {
     >()
 
   return (
-    <>
+    <Stack direction="row" gap={3}>
+      <OrderSummary
+        items={[categoryAZ, categoryDefault]}
+        currency="EUR"
+        localeFormat="en-US"
+        onChange={setPrices}
+        header="Summary"
+      />
       <ul>
         Prices:
         {prices
@@ -28,14 +36,7 @@ export const OnChange: StoryFn<ComponentProps<typeof OrderSummary>> = () => {
             ))
           : null}
       </ul>
-      <OrderSummary
-        items={[categoryAZ, categoryDefault]}
-        currency="EUR"
-        localeFormat="en-US"
-        onChange={setPrices}
-        header="Summary"
-      />
-    </>
+    </Stack>
   )
 }
 
