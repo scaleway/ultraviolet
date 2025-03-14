@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import type { ReactNode } from 'react'
+import { Children, type ReactNode } from 'react'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
 
@@ -12,23 +12,36 @@ type GroupProps = {
   label: string
   children: ReactNode
   labelDescription?: ReactNode
+  /**
+   * Empty state will be shown when there are no children
+   */
+  emptyState?: ReactNode
 }
 
-export const Group = ({ label, children, labelDescription }: GroupProps) => (
-  <>
-    <Container>
-      <Stack gap={1} alignItems="center" direction="row">
-        <Text
-          variant="captionStrong"
-          as="span"
-          prominence="weak"
-          sentiment="neutral"
-        >
-          {label}
-        </Text>
-        {labelDescription || null}
-      </Stack>
-    </Container>
-    {children}
-  </>
-)
+export const Group = ({
+  label,
+  children,
+  labelDescription,
+  emptyState,
+}: GroupProps) => {
+  const isChildrenEmpty = Children.count(children) === 0
+
+  return (
+    <>
+      <Container>
+        <Stack gap={1} alignItems="center" direction="row">
+          <Text
+            variant="captionStrong"
+            as="span"
+            prominence="weak"
+            sentiment="neutral"
+          >
+            {label}
+          </Text>
+          {labelDescription || null}
+        </Stack>
+      </Container>
+      {isChildrenEmpty && emptyState ? emptyState : children}
+    </>
+  )
+}

@@ -18,7 +18,7 @@ export const Searchable: StoryFn<typeof MenuV2> = () => (
       />
     }
   >
-    <MenuV2.Group label="Projects">
+    <MenuV2.Group label="Projects" emptyState="No project">
       <MenuV2.Item sentiment="primary" active>
         <Stack direction="row" gap={1} alignItems="center">
           <AvatarV2
