@@ -29,10 +29,10 @@ import type {
 } from 'react'
 import {
   Children,
-  cloneElement,
   isValidElement,
   memo,
   useCallback,
+  useContext,
   useEffect,
   useMemo,
   useReducer,
@@ -41,6 +41,7 @@ import type { PascalToCamelCaseWithoutSuffix } from '../../../types'
 import { useNavigation } from '../NavigationProvider'
 import { ANIMATION_DURATION, shrinkHeight } from '../constants'
 import type { PinUnPinType } from '../types'
+import { ItemContext, ItemProvider } from './ItemProvider'
 
 const RelativeDiv = styled.div`
   position: relative;
@@ -326,10 +327,6 @@ type ItemProps = {
    */
   type?: ItemType
   /**
-   * You don't need to use this prop it's used internally to control if the item has a parent
-   */
-  hasParents?: boolean
-  /**
    * You don't need to use this prop it's used internally for pinned item to be reorganized with drag and drop
    */
   index?: number
@@ -372,7 +369,6 @@ export const Item = memo(
     active,
     noPinButton,
     type = 'default',
-    hasParents,
     as,
     disabled,
     noExpand = false,
@@ -386,6 +382,9 @@ export const Item = memo(
         'Navigation.Item can only be used inside a NavigationProvider.',
       )
     }
+
+    const itemProvider = useContext(ItemContext)
+    const hasParents = !!itemProvider
 
     const {
       expanded,
@@ -528,14 +527,6 @@ export const Item = memo(
 
     // This content is when the navigation is expanded
     if (expanded || (!expanded && animation === 'expand')) {
-      const renderChildren = Children.map(children, child =>
-        isValidElement<ItemProps>(child)
-          ? cloneElement(child, {
-              hasParents: true,
-            })
-          : child,
-      )
-
       return (
         <>
           <Container
@@ -708,14 +699,18 @@ export const Item = memo(
           {children ? (
             <>
               {!noExpand ? (
-                <Expandable
-                  opened={internalExpanded}
-                  animationDuration={expandableAnimationDuration}
-                >
-                  <PaddedStack>{renderChildren}</PaddedStack>
-                </Expandable>
+                <ItemProvider>
+                  <Expandable
+                    opened={internalExpanded}
+                    animationDuration={expandableAnimationDuration}
+                  >
+                    <PaddedStack>{children}</PaddedStack>
+                  </Expandable>
+                </ItemProvider>
               ) : (
-                <PaddedStack>{renderChildren}</PaddedStack>
+                <ItemProvider>
+                  <PaddedStack>{children}</PaddedStack>
+                </ItemProvider>
               )}
             </>
           ) : null}
@@ -755,13 +750,7 @@ export const Item = memo(
               }
               placement="right"
             >
-              {Children.map(children, child =>
-                isValidElement<ItemProps>(child)
-                  ? cloneElement(child, {
-                      hasParents: true,
-                    })
-                  : child,
-              )}
+              <ItemProvider>{children}</ItemProvider>
             </StyledMenu>
           ) : (
             <Tooltip text={label} placement="right" tabIndex={-1}>
