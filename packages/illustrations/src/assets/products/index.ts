@@ -36,6 +36,7 @@ import * as k8sKapsule from './k8sKapsule'
 import * as k8sKosmos from './k8sKosmos'
 import * as kms from './kms'
 import * as loadBalancers from './loadBalancers'
+import * as localStorage from './localStorage'
 import * as managedDatabase from './managedDatabase'
 import * as managedSearchDatabase from './managedSearchDatabase'
 import * as mongoDB from './mongoDB'
@@ -92,6 +93,7 @@ export {
   k8sKosmos,
   kms,
   loadBalancers,
+  localStorage,
   managedDatabase,
   managedSearchDatabase,
   mongoDB,
