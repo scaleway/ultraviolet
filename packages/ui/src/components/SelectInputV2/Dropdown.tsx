@@ -116,7 +116,8 @@ const DropdownItem = styled.div<{
   'aria-selected': boolean
   'aria-disabled': boolean
 }>`
-  text-align:left;
+  display: flex;
+  text-align: left;
   border: none;
   background-color: ${({ theme }) => theme.colors.other.elevation.background.raised};
 
