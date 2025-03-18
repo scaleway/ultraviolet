@@ -1,8 +1,16 @@
 import type { StoryFn } from '@storybook/react'
+import { DotsHorizontalIcon } from '@ultraviolet/icons'
+import type { ReactNode } from 'react'
 import { MenuV2 } from '..'
 import { AvatarV2 } from '../../AvatarV2'
 import { Button } from '../../Button'
 import { Stack } from '../../Stack'
+
+const ComplexItem = ({
+  content,
+}: {
+  content: ReactNode
+}) => <div>{content}</div>
 
 export const Searchable: StoryFn<typeof MenuV2> = () => (
   <MenuV2
@@ -10,12 +18,9 @@ export const Searchable: StoryFn<typeof MenuV2> = () => (
     searchable
     hideOnClickItem
     disclosure={
-      <Button
-        icon="dots-horizontal"
-        sentiment="neutral"
-        variant="ghost"
-        size="small"
-      />
+      <Button sentiment="neutral" variant="ghost" size="small">
+        <DotsHorizontalIcon size="large" />
+      </Button>
     }
   >
     <MenuV2.Group label="Projects">
@@ -50,6 +55,17 @@ export const Searchable: StoryFn<typeof MenuV2> = () => (
             size="xsmall"
           />
           Project 2
+        </Stack>
+      </MenuV2.Item>
+      <MenuV2.Item>
+        <Stack direction="row" gap={1} alignItems="center">
+          <AvatarV2
+            variant="colors"
+            colors={['#FF9EC1', '#BF95F9']}
+            shape="circle"
+            size="xsmall"
+          />
+          <ComplexItem content="Wrapped text" />
         </Stack>
       </MenuV2.Item>
     </MenuV2.Group>

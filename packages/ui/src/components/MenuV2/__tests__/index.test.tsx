@@ -5,6 +5,7 @@ import {
   shouldMatchEmotionSnapshot,
   shouldMatchEmotionSnapshotWithPortal,
 } from '@utils/test'
+import type { ReactNode } from 'react'
 import { afterAll, beforeEach, describe, expect, test, vi } from 'vitest'
 import { MenuV2 } from '..'
 
@@ -23,12 +24,14 @@ describe('Menu', () => {
         <MenuV2.Item>Menu.Item should not be visible in test</MenuV2.Item>
       </MenuV2>,
     ))
+
   test('renders with visible=false', () =>
     shouldMatchEmotionSnapshotWithPortal(
       <MenuV2 disclosure={() => <button type="button">Menu is visible</button>}>
         <MenuV2.Item>Menu.Item should not be visible in test</MenuV2.Item>
       </MenuV2>,
     ))
+
   test(`renders with Menu.Item`, () =>
     shouldMatchEmotionSnapshotWithPortal(
       <MenuV2 visible disclosure={() => <button type="button">Menu</button>}>
@@ -167,7 +170,10 @@ describe('Menu', () => {
     expect(items[0]).toHaveTextContent('Disk')
   })
 
-  test('should search on simple complex childs', async () => {
+  test('should search on simple and complex childs', async () => {
+    // oxlint-disable-next-line consistent-function-scoping
+    const ComplexChild = ({ content }: { content: ReactNode }) => content
+
     const { asFragment } = renderWithTheme(
       <MenuV2
         id="menu"
@@ -185,6 +191,16 @@ describe('Menu', () => {
             <div>Memory type:</div>
             <div>Ram</div>
           </div>
+        </MenuV2.Item>
+        <MenuV2.Item>
+          <ComplexChild
+            content={
+              <div>
+                <div>Storage type:</div>
+                <div>SSD</div>
+              </div>
+            }
+          />
         </MenuV2.Item>
       </MenuV2>,
     )

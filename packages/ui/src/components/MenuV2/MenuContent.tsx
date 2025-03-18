@@ -96,7 +96,9 @@ export const Menu = forwardRef(
   ) => {
     const { isVisible, setIsVisible } = useMenu()
     const searchInputRef = useRef<HTMLInputElement>(null)
-    const [localChild, setLocalChild] = useState<ReactNode[] | null>(null)
+    const [localChild, setLocalChild] = useState<
+      ReactNode | ReactNode[] | null
+    >(null)
     const popupRef = useRef<HTMLDivElement>(null)
     const disclosureRef = useRef<HTMLButtonElement>(null)
     const tempId = useId()
@@ -125,6 +127,12 @@ export const Menu = forwardRef(
     const onSearch = useCallback(
       (value: string) => {
         if (typeof children === 'object') {
+          if (value.length === 0) {
+            setLocalChild(children)
+
+            return
+          }
+
           setLocalChild(searchChildren(children, value))
         }
       },
