@@ -1,5 +1,11 @@
 # @ultraviolet/illustrations
 
+## 4.4.0
+
+### Minor Changes
+
+- [#4910](https://github.com/scaleway/ultraviolet/pull/4910) [`306d62a`](https://github.com/scaleway/ultraviolet/commit/306d62af9fd3fa650252aa7dcb299d6baa70a6b2) Thanks [@matthprost](https://github.com/matthprost)! - New illustration `localStorage`
+
 ## 4.3.0
 
 ### Minor Changes
