@@ -230,10 +230,12 @@ const StyledCheckbox = styled(OverloadedCheckbox)`
 
   ${CheckboxInput} {
     &:focus + ${StyledIcon}, &:active + ${StyledIcon} {
+      outline: none;
       background-color: ${({ theme }) => theme.colors.neutral.background};
       fill: ${({ theme }) => theme.colors.neutral.background};
-      outline: none;
+    }
 
+    &[aria-checked='false'] {
       ${InnerCheckbox} {
         fill: ${({ theme }) => theme.colors.neutral.background};
         stroke: ${({ theme }) => theme.colors.neutral.border};

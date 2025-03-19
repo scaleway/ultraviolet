@@ -888,13 +888,12 @@ exports[`SelectableCardField > should render correctly checked as a checkbox 1`]
 
 .emotion-13 .emotion-16:focus+.emotion-18,
 .emotion-13 .emotion-16:active+.emotion-18 {
+  outline: none;
   background-color: #ffffff;
   fill: #ffffff;
-  outline: none;
 }
 
-.emotion-13 .emotion-16:focus+.emotion-18 .emotion-20,
-.emotion-13 .emotion-16:active+.emotion-18 .emotion-20 {
+.emotion-13 .emotion-16[aria-checked='false'] .emotion-20 {
   fill: #ffffff;
   stroke: #d9dadd;
 }
@@ -1979,13 +1978,12 @@ exports[`SelectableCardField > should trigger events correctly 1`] = `
 
 .emotion-13 .emotion-16:focus+.emotion-18,
 .emotion-13 .emotion-16:active+.emotion-18 {
+  outline: none;
   background-color: #ffffff;
   fill: #ffffff;
-  outline: none;
 }
 
-.emotion-13 .emotion-16:focus+.emotion-18 .emotion-20,
-.emotion-13 .emotion-16:active+.emotion-18 .emotion-20 {
+.emotion-13 .emotion-16[aria-checked='false'] .emotion-20 {
   fill: #ffffff;
   stroke: #d9dadd;
 }

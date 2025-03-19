@@ -339,13 +339,12 @@ exports[`SelectableCardGroup > renders correctly 1`] = `
 
 .emotion-13 .emotion-16:focus+.emotion-18,
 .emotion-13 .emotion-16:active+.emotion-18 {
+  outline: none;
   background-color: #ffffff;
   fill: #ffffff;
-  outline: none;
 }
 
-.emotion-13 .emotion-16:focus+.emotion-18 .emotion-20,
-.emotion-13 .emotion-16:active+.emotion-18 .emotion-20 {
+.emotion-13 .emotion-16[aria-checked='false'] .emotion-20 {
   fill: #ffffff;
   stroke: #d9dadd;
 }
@@ -1582,13 +1581,12 @@ exports[`SelectableCardGroup > renders correctly required and showTick 1`] = `
 
 .emotion-16 .emotion-19:focus+.emotion-21,
 .emotion-16 .emotion-19:active+.emotion-21 {
+  outline: none;
   background-color: #ffffff;
   fill: #ffffff;
-  outline: none;
 }
 
-.emotion-16 .emotion-19:focus+.emotion-21 .emotion-23,
-.emotion-16 .emotion-19:active+.emotion-21 .emotion-23 {
+.emotion-16 .emotion-19[aria-checked='false'] .emotion-23 {
   fill: #ffffff;
   stroke: #d9dadd;
 }
@@ -2259,13 +2257,12 @@ exports[`SelectableCardGroup > renders correctly with direction multiple columns
 
 .emotion-13 .emotion-16:focus+.emotion-18,
 .emotion-13 .emotion-16:active+.emotion-18 {
+  outline: none;
   background-color: #ffffff;
   fill: #ffffff;
-  outline: none;
 }
 
-.emotion-13 .emotion-16:focus+.emotion-18 .emotion-20,
-.emotion-13 .emotion-16:active+.emotion-18 .emotion-20 {
+.emotion-13 .emotion-16[aria-checked='false'] .emotion-20 {
   fill: #ffffff;
   stroke: #d9dadd;
 }
@@ -2928,13 +2925,12 @@ exports[`SelectableCardGroup > renders correctly with error content 1`] = `
 
 .emotion-13 .emotion-16:focus+.emotion-18,
 .emotion-13 .emotion-16:active+.emotion-18 {
+  outline: none;
   background-color: #ffffff;
   fill: #ffffff;
-  outline: none;
 }
 
-.emotion-13 .emotion-16:focus+.emotion-18 .emotion-20,
-.emotion-13 .emotion-16:active+.emotion-18 .emotion-20 {
+.emotion-13 .emotion-16[aria-checked='false'] .emotion-20 {
   fill: #ffffff;
   stroke: #d9dadd;
 }
@@ -3616,13 +3612,12 @@ exports[`SelectableCardGroup > renders correctly with helper content 1`] = `
 
 .emotion-13 .emotion-16:focus+.emotion-18,
 .emotion-13 .emotion-16:active+.emotion-18 {
+  outline: none;
   background-color: #ffffff;
   fill: #ffffff;
-  outline: none;
 }
 
-.emotion-13 .emotion-16:focus+.emotion-18 .emotion-20,
-.emotion-13 .emotion-16:active+.emotion-18 .emotion-20 {
+.emotion-13 .emotion-16[aria-checked='false'] .emotion-20 {
   fill: #ffffff;
   stroke: #d9dadd;
 }
