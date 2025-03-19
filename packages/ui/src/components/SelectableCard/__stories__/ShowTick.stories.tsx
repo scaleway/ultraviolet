@@ -42,9 +42,8 @@ export const ShowTick: StoryFn = args => {
           onChange={event =>
             onChange2({ ...value2, 'label-1': event.currentTarget.checked })
           }
-        >
-          checkbox
-        </SelectableCard>
+          label="Checkbox 1"
+        />
         <SelectableCard
           {...args}
           name="label-2"
