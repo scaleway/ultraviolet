@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.90.4
+
+### Patch Changes
+
+- [#4914](https://github.com/scaleway/ultraviolet/pull/4914) [`d841d65`](https://github.com/scaleway/ultraviolet/commit/d841d65cb3096b6afda5abf72b344094bb8d966f) Thanks [@matthprost](https://github.com/matthprost)! - fix `<SelectableCard />` type checkbox
+
 ## 1.90.3
 
 ### Patch Changes
