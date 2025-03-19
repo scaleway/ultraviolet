@@ -182,4 +182,19 @@ describe('OrderSummary', () => {
 
     expect(asFragment()).toMatchSnapshot()
   })
+
+  test('works with hideDetails', () =>
+    renderWithTheme(
+      <OrderSummary header="summary" items={[categoryAZ]} hideDetails />,
+    ))
+
+  test('works with negative category price', () => {
+    const { asFragment } = renderWithTheme(
+      <OrderSummary header="summary" items={[categoryAZ, negativeItem]} />,
+    )
+    const price = screen.getByTestId('total-price').textContent
+    expect(price).toBe('€0.00')
+
+    expect(asFragment()).toMatchSnapshot()
+  })
 })
