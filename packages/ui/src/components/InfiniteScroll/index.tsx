@@ -129,6 +129,7 @@ export const InfiniteScroll = ({
 
   return (
     <Component
+      role="feed"
       ref={containerRef}
       className={className}
       data-testid={dataTestId}
