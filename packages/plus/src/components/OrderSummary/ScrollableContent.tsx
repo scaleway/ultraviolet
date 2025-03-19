@@ -14,9 +14,9 @@ max-width: 200px;
 background-color: ${({ theme }) => theme.colors.neutral.background};
 `
 const ContainerScrollable = styled(Stack)`
-max-height: 30rem;
 overflow-y: scroll;
 padding: ${({ theme }) => theme.space[3]};
+height: 100%;
 `
 
 const DetailsStack = styled(Stack)`
@@ -31,15 +31,13 @@ const CategoryStack = styled(Stack)`
 const CategoryName = ({ category }: { category: ItemsType }) => {
   const { categoriesPrice } = useContext(OrderSummaryContext)
 
-  const categoryPrice =
-    (categoriesPrice[category.category] as {
-      before: [number, number]
-      after: [number, number]
-    }) ??
-    ({
-      before: [0, 0],
-      after: [0, 0],
-    } as { before: [number, number]; after: [number, number] })
+  const categoryPrice = categoriesPrice[category.category] ?? {
+    totalPrice: 0,
+    totalPriceWithDiscount: 0,
+    maxPrice: 0,
+    maxPriceWithDiscount: 0,
+    timeUnit: 'hours',
+  }
 
   return category.category ? (
     <Stack justifyContent="space-between" direction="row" alignItems="center">
@@ -69,7 +67,7 @@ const CategoryName = ({ category }: { category: ItemsType }) => {
       ) : null}
       {!category.customContent &&
       !category.numberInput &&
-      categoryPrice.before[0] === categoryPrice.after[0] ? (
+      categoryPrice.totalPrice === categoryPrice.totalPriceWithDiscount ? (
         <Text as="span" variant="bodyStrong" sentiment="neutral">
           <DisplayPrice price={categoryPrice} beforeOrAfter="after" />
         </Text>
@@ -77,7 +75,7 @@ const CategoryName = ({ category }: { category: ItemsType }) => {
 
       {!category.customContent &&
       !category.numberInput &&
-      categoryPrice.before[0] !== categoryPrice.after[0] ? (
+      categoryPrice.totalPrice !== categoryPrice.totalPriceWithDiscount ? (
         <Stack direction="row" gap={1} alignItems="center">
           <Text
             as="span"
