@@ -4,6 +4,7 @@ import { useContext } from 'react'
 import type { ReactNode } from 'react'
 import { OrderSummaryContext } from './Provider'
 import { DisplayPrice } from './helpers'
+import type { PriceTypeSingle, TimeUnit } from './types'
 
 const NonScrollableContainer = styled(Stack)`
 padding: ${({ theme }) => theme.space[3]};
@@ -13,10 +14,12 @@ overflow: hidden;
 
 type NonScrollableContentProps = {
   discount: number
-  totalPrice: { before: [number, number]; after: [number, number] }
+  totalPrice: PriceTypeSingle
   footer: ReactNode
   children: ReactNode
   totalPriceInfo?: ReactNode
+  hideDetails: boolean
+  unit: TimeUnit
 }
 
 export const NonScrollableContent = ({
@@ -24,6 +27,8 @@ export const NonScrollableContent = ({
   footer,
   children,
   totalPriceInfo,
+  hideDetails,
+  unit,
 }: NonScrollableContentProps) => {
   const { locales } = useContext(OrderSummaryContext)
 
@@ -43,7 +48,7 @@ export const NonScrollableContent = ({
             {locales['order.summary.total']}:
           </Text>
         )}
-        {totalPrice.before[0] === totalPrice.after[0] ? (
+        {totalPrice.totalPrice === totalPrice.totalPriceWithDiscount ? (
           <Text
             as="p"
             variant="headingSmallStrong"
@@ -51,6 +56,7 @@ export const NonScrollableContent = ({
             data-testid="total-price"
           >
             <DisplayPrice price={totalPrice} beforeOrAfter="after" />
+            {hideDetails ? `/${unit}` : null}
           </Text>
         ) : (
           <Stack direction="row" gap={1} alignItems="center">
@@ -70,6 +76,7 @@ export const NonScrollableContent = ({
               data-testid="total-price"
             >
               <DisplayPrice price={totalPrice} beforeOrAfter="after" />
+              {hideDetails ? `/${unit}` : null}
             </Text>
           </Stack>
         )}

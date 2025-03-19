@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import { Stack, Text, UnitInput } from '@ultraviolet/ui'
-import { useEffect, useMemo, useRef, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { NonScrollableContent } from './NonScrollableContent'
 import { OrderSummaryContext } from './Provider'
 import { ScrollableContent } from './ScrollableContent'
@@ -11,12 +11,14 @@ import type { OrderSummaryProps, PriceType, TimeUnit } from './types'
 
 const Container = styled(Stack)`
   background-color: ${({ theme }) => theme.colors.neutral.backgroundWeak};
-  width: 18rem;
-  border: 1px solid ${({ theme }) => theme.colors.neutral.border};
-
+  border-inline: 1px solid ${({ theme }) => theme.colors.neutral.border};
+  height: 100%;
+  width: 320px;
+  
   @media (min-width: ${({ theme }) => theme.breakpoints.large}) {
-    width: 24.5rem ;
+    width: 27.5rem;
   }
+
 `
 
 const HeaderContainer = styled(Stack)<{ 'data-hideDetails': boolean }>`
@@ -37,7 +39,7 @@ const StyledStack = styled(Stack)`
 export const OrderSummary = ({
   header,
   hideTimeUnit = false,
-  periodOptions = Units as TimeUnit[],
+  periodOptions = Units,
   valueUnitInput = 1,
   unitUnitInput = 'hours',
   items,
@@ -56,9 +58,9 @@ export const OrderSummary = ({
   const [timePeriodUnit, setTimePeriodUnit] = useState<TimeUnit>(unitUnitInput)
   const [timePeriodAmount, setTimePeriodAmount] = useState(valueUnitInput)
 
-  const categoriesPrice: PriceType = useMemo(
+  const categoriesPrice = useMemo(
     () =>
-      items.reduce((acc, category) => {
+      items.reduce<PriceType>((acc, category) => {
         const { categoryPrice, discountedPrice } = calculateCategoryPrice(
           category,
           hideTimeUnit,
@@ -69,46 +71,46 @@ export const OrderSummary = ({
         return {
           ...acc,
           [category.category]: {
-            before: categoryPrice,
-            after: discountedPrice,
+            maxPrice: categoryPrice[1],
+            maxPriceWithDiscount: discountedPrice[1],
+            totalPrice: categoryPrice[0],
+            totalPriceWithDiscount: discountedPrice[0],
+            timeUnit: unitUnitInput,
           },
         }
       }, {}),
-    [hideTimeUnit, items, timePeriodAmount, timePeriodUnit],
-  )
+    [hideTimeUnit, items, timePeriodAmount, timePeriodUnit, unitUnitInput],
+  ) satisfies PriceType
 
   const totalPrice = useMemo(() => {
     const price = Object.values(categoriesPrice).reduce<[number, number]>(
       (acc, categoryPrice) => [
-        acc[0] + categoryPrice.after[0],
-        acc[1] + categoryPrice.after[1],
+        acc[0] + categoryPrice.totalPriceWithDiscount,
+        acc[1] + categoryPrice.maxPriceWithDiscount,
       ],
       [0, 0],
     )
 
     const computedPrice = {
-      before: [Math.max(price[0], 0), Math.max(price[1], 0)] as [
-        number,
-        number,
-      ],
-      after: [
-        Math.max(
-          price[0] * (discount < 1 ? 1 - discount : 1) -
-            (discount >= 1 ? Math.abs(discount) : 0),
-          0,
-        ),
-        Math.max(
-          price[1] * (discount < 1 ? 1 - discount : 1) -
-            (discount >= 1 ? Math.abs(discount) : 0),
-          0,
-        ),
-      ] as [number, number],
+      maxPrice: Math.max(price[1], 0),
+      maxPriceWithDiscount: Math.max(
+        price[1] * (discount < 1 ? 1 - discount : 1) -
+          (discount >= 1 ? Math.abs(discount) : 0),
+        0,
+      ),
+      totalPrice: Math.max(price[0], 0),
+      totalPriceWithDiscount: Math.max(
+        price[0] * (discount < 1 ? 1 - discount : 1) -
+          (discount >= 1 ? Math.abs(discount) : 0),
+        0,
+      ),
+      timeUnit: unitUnitInput,
     }
 
     return computedPrice
-  }, [categoriesPrice, discount])
+  }, [categoriesPrice, discount, unitUnitInput])
 
-  const prevCategoriesPriceRef = useRef(categoriesPrice)
+  /* const prevCategoriesPriceRef = useRef(categoriesPrice)
 
   useEffect(() => {
     if (
@@ -116,9 +118,8 @@ export const OrderSummary = ({
       JSON.stringify(categoriesPrice)
     ) {
       prevCategoriesPriceRef.current = categoriesPrice
-      onChange?.(categoriesPrice)
     }
-  }, [categoriesPrice, onChange])
+  }, [categoriesPrice, onChange]) */
 
   const valueContext = useMemo(
     () => ({
@@ -151,19 +152,20 @@ export const OrderSummary = ({
     periodOptions.forEach(option =>
       computedPeriodOptions.push({
         value: option,
-        label:
-          locales[
-            `order.summary.units.${option}.label` as keyof typeof locales
-          ],
+        label: locales[`order.summary.units.${option}.label` as const],
       }),
     )
 
     return computedPeriodOptions
   }, [periodOptions, locales])
 
+  useEffect(() => {
+    onChange?.(categoriesPrice, totalPrice)
+  }, [categoriesPrice, totalPrice, onChange])
+
   return (
     <OrderSummaryContext.Provider value={valueContext}>
-      <Container>
+      <Container justifyContent="space-between">
         {header ? (
           <HeaderContainer
             direction="row"
@@ -173,13 +175,15 @@ export const OrderSummary = ({
             <Text as="h3" variant="headingSmallStrong" sentiment="neutral">
               {header}
             </Text>
-            {!hideTimeUnit ? (
+            {!hideTimeUnit && !hideDetails ? (
               <StyledStack>
                 <UnitInput
                   width="100%"
                   selectInputWidth="fit-content"
                   options={computePeriodOptions}
-                  onChange={setTimePeriodAmount}
+                  onChange={value => {
+                    setTimePeriodAmount(value)
+                  }}
                   onChangeUnitValue={(val: string) => {
                     setTimePeriodUnit(val as TimeUnit)
                     onChangeUnitInput?.(val)
@@ -198,6 +202,8 @@ export const OrderSummary = ({
           discount={discount}
           footer={footer}
           totalPriceInfo={totalPriceInfo}
+          hideDetails={hideDetails}
+          unit={unitUnitInput}
         >
           {children}
         </NonScrollableContent>

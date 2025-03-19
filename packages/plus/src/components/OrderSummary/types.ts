@@ -34,13 +34,15 @@ type NumberInputType = {
   onChangeInput?: (value: number | null) => void
 }
 
-export type PriceType = Record<
-  string,
-  {
-    before: [number, number]
-    after: [number, number]
-  }
->
+export type PriceTypeSingle = {
+  maxPrice: number
+  maxPriceWithDiscount: number
+  totalPrice: number
+  totalPriceWithDiscount: number
+  timeUnit: TimeUnit
+}
+
+export type PriceType = Record<string, PriceTypeSingle>
 
 export type SubCategoryType = {
   title?: string
@@ -79,6 +81,10 @@ export type ItemsType = {
    * Hide the price of the category and display the custom content instead
    */
   customContent?: ReactNode
+  /**
+   * Whether the category price can be < 0 (e.g coupons)
+   */
+  allowNegative?: boolean
 } & NumberInputType
 
 export type OrderSummaryProps = {
@@ -101,6 +107,10 @@ export type OrderSummaryProps = {
    * Number of fraction digit to display in the price details
    */
   fractionDigits?: number
-  onChange?: (price: PriceType) => void
+  /**
+   * Get the computed price for each category.
+   * `price.category = { before: [total, totalMax], after: [totalWithDiscount, totalMaxWithDiscount]}`
+   */
+  onChange?: (price: PriceType, totalPrice: PriceTypeSingle) => void
   hideDetails?: boolean
 } & PeriodProps

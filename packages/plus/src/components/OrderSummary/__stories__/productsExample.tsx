@@ -52,6 +52,7 @@ export const categoryOptions = {
 export const negativeItem = {
   category: 'Coupon',
   subCategories: [{ title: 'PROMO2025', price: -10, fixedPrice: true }],
+  allowNegative: true,
 }
 
 export const fixePrice = {
