@@ -1,26 +1,25 @@
 import type { StoryFn } from '@storybook/react'
-import { Stack } from '@ultraviolet/ui'
+import { Button, Stack } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
 import { useState } from 'react'
 import { OrderSummary } from '..'
+import type { PriceType } from '../types'
 import { categoryAZ, categoryDefault } from './productsExample'
 
 export const OnChange: StoryFn<ComponentProps<typeof OrderSummary>> = () => {
-  const [prices, setPrices] =
-    useState<
-      Record<
-        string,
-        {
-          before: [number, number]
-          after: [number, number]
-        }
-      >
-    >()
+  const [prices, setPrices] = useState<PriceType>({})
+  const [elements, setElements] = useState([categoryAZ, categoryDefault])
+
+  const onClick = () =>
+    elements.length === 2
+      ? setElements([categoryDefault])
+      : setElements([categoryAZ, categoryDefault])
 
   return (
     <Stack direction="row" gap={3}>
+      <Button onClick={onClick}>Change elements</Button>
       <OrderSummary
-        items={[categoryAZ, categoryDefault]}
+        items={elements}
         currency="EUR"
         localeFormat="en-US"
         onChange={setPrices}
@@ -31,7 +30,7 @@ export const OnChange: StoryFn<ComponentProps<typeof OrderSummary>> = () => {
         {prices
           ? Object.keys(prices).map(category => (
               <li key={category}>
-                {category}: {prices?.[category].after[0] ?? 0}€
+                {category}: {prices?.[category].totalPriceWithDiscount ?? 0}€
               </li>
             ))
           : null}

@@ -1,7 +1,12 @@
 import { useContext } from 'react'
 import { OrderSummaryContext } from './Provider'
 import { multiplier } from './constants'
-import type { ItemsType, SubCategoryType, TimeUnit } from './types'
+import type {
+  ItemsType,
+  PriceTypeSingle,
+  SubCategoryType,
+  TimeUnit,
+} from './types'
 
 export const formatNumber = (
   number: number,
@@ -41,7 +46,7 @@ export const calculatePrice = (
     valueBeforeDiscount * (1 - (discount < 1 ? discount : 0)) -
     (discount >= 1 ? Math.abs(discount) : 0)
 
-  return Math.max(finalValue, 0)
+  return finalValue
 }
 
 export const calculateSubCategoryPrice = (
@@ -74,7 +79,6 @@ export const calculateSubCategoryPrice = (
 
     return [minPrice, maxPrice]
   }
-
   const price =
     calculatePrice(
       subCategory.price ?? 0,
@@ -109,20 +113,20 @@ export const calculateCategoryPrice = (
     [0, 0],
   ) || [0, 0]
 
-  const discountedPrice: [number, number] = [
-    Math.max(
-      category.discount && category.discount < 1
-        ? categoryPrice[0] * category.discount
-        : categoryPrice[0] - (category.discount ?? 0),
-      0,
-    ),
-    Math.max(
-      category.discount && category.discount < 1
-        ? categoryPrice[1] * category.discount
-        : categoryPrice[1] - (category.discount ?? 0),
-      0,
-    ),
-  ]
+  const discountedPriceMin =
+    category.discount && category.discount < 1
+      ? categoryPrice[0] * category.discount
+      : categoryPrice[0] - (category.discount ?? 0)
+
+  const discountedPriceMax =
+    category.discount && category.discount < 1
+      ? categoryPrice[1] * category.discount
+      : categoryPrice[1] - (category.discount ?? 0)
+
+  const discountedPrice: [number, number] = category.allowNegative
+    ? [discountedPriceMin, discountedPriceMax]
+    : [Math.max(discountedPriceMin, 0), Math.max(discountedPriceMax, 0)]
+
   categoryPrice.map(price =>
     Math.max(
       category.discount && category.discount < 1
@@ -136,28 +140,29 @@ export const calculateCategoryPrice = (
 }
 
 type DisplayPriceProps = {
-  price: { before: [number, number]; after: [number, number] }
+  price: PriceTypeSingle
   beforeOrAfter: 'before' | 'after'
 }
 
 export const DisplayPrice = ({ price, beforeOrAfter }: DisplayPriceProps) => {
   const { localeFormat, currency, fractionDigits } =
     useContext(OrderSummaryContext)
+  const withDiscount = beforeOrAfter === 'after' ? 'WithDiscount' : ''
 
-  return price[beforeOrAfter][0] === price[beforeOrAfter][1]
+  return price.totalPrice === price.maxPrice
     ? formatNumber(
-        price[beforeOrAfter][0],
+        price[`totalPrice${withDiscount}`],
         localeFormat,
         currency,
         fractionDigits ?? 2,
       )
     : `${formatNumber(
-        price[beforeOrAfter][0],
+        price[`totalPrice${withDiscount}`],
         localeFormat,
         currency,
         fractionDigits ?? 2,
       )} - ${formatNumber(
-        price[beforeOrAfter][1],
+        price[`maxPrice${withDiscount}`],
         localeFormat,
         currency,
         fractionDigits ?? 2,
