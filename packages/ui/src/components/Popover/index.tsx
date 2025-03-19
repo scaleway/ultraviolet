@@ -33,30 +33,8 @@ const StyledPopup = styled(Popup, {
   width: ${({ size }) => SIZES_WIDTH[size]}rem;
   max-width: ${({ size }) => SIZES_WIDTH[size]}rem;
   text-align: initial;
-
-  ${({ theme, sentiment }) => {
-    if (sentiment === 'neutral') {
-      return `
-      background: ${theme.colors.neutral.background};
-      box-shadow: ${theme.shadows.popover};
-      &[data-has-arrow='true'] {
-        &::after {
-          border-color: ${theme.colors.neutral.background} transparent transparent transparent;
-        }
-      }
-      `
-    }
-
-    return `
-      background: ${theme.colors.primary.backgroundStrong};
-      box-shadow: ${theme.shadows.popover};
-      &[data-has-arrow='true'] {
-        &::after {
-          border-color: ${theme.colors.primary.backgroundStrong} transparent transparent transparent;
-        }
-      }
-      `
-  }}
+  box-shadow: ${({ theme }) => theme.shadows.popover};
+  background: ${({ theme, sentiment }) => (sentiment === 'neutral' ? theme.colors.neutral.background : theme.colors.primary.backgroundStrong)};
 `
 
 // This is to avoid having text inherit color from popup (which is white on white background)
@@ -206,6 +184,7 @@ export const Popover = forwardRef(
         tabIndex={-1}
         innerRef={innerRef}
         onClose={localOnClose}
+        hasArrow={false}
         maxWidth={maxWidth}
         maxHeight={maxHeight}
         portalTarget={smartPortalTarget}
