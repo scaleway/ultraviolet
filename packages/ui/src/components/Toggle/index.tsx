@@ -168,7 +168,7 @@ const RequiredIcon = () => (
 type ToggleProps = {
   id?: string
   checked?: boolean
-  name: string
+  name?: string
   tooltip?: string
   /**
    * If `onChange` is given component will work as a controlled component if not it will work as an uncontrolled component.
