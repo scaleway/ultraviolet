@@ -13,7 +13,7 @@ type SelectInputV2Props<IsMulti extends undefined | boolean = false> = {
   /**
    * Input name
    */
-  name: string
+  name?: string
   /**
    * Place holder when no value defined
    */
@@ -180,7 +180,7 @@ export const SelectInputV2 = <IsMulti extends undefined | boolean>({
           acc + current.filter(option => !option.disabled).length,
         0,
       )
-  const finalDataTestId = dataTestId ?? `select-input-${name}`
+  const finalDataTestId = dataTestId ?? `select-input-${name ?? 'name'}`
 
   return (
     <SelectInputProvider

@@ -4,7 +4,7 @@ type DefaultProps = {
   /**
    * Slider name
    */
-  name: string
+  name?: string
   label?: string
   helper?: string
   /**
