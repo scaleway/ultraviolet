@@ -14,6 +14,41 @@ describe.skip('CodeEditor', () => {
         extensions="yaml"
         height="600px"
         onChange={newValue => newValue}
+        helper="Helper text"
+        label="Code"
+      />,
+    ))
+
+  it('should render correctly disbled', () =>
+    shouldMatchEmotionSnapshot(
+      <CodeEditor
+        value="configuration: 1/ntest: 'ok'"
+        extensions="yaml"
+        height="600px"
+        onChange={newValue => newValue}
+        disabled
+      />,
+    ))
+
+  it('should render correctly with copyButton as boolean', () =>
+    shouldMatchEmotionSnapshot(
+      <CodeEditor
+        value="configuration: 1/ntest: 'ok'"
+        extensions="yaml"
+        height="600px"
+        onChange={newValue => newValue}
+        copyButton
+      />,
+    ))
+
+  it('should render correctly with copyButton as string', () =>
+    shouldMatchEmotionSnapshot(
+      <CodeEditor
+        value="configuration: 1/ntest: 'ok'"
+        extensions="yaml"
+        height="600px"
+        onChange={newValue => newValue}
+        copyButton="Copy"
       />,
     ))
 })
