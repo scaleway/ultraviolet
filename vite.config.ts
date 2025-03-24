@@ -42,6 +42,7 @@ export const defaultConfig: ViteUserConfig = {
     target: [...targets],
     minify: false,
     ssr: true,
+    emptyOutDir: true,
     lib: {
       name: pkg.name,
       entry: 'src/index.ts',
