@@ -150,7 +150,6 @@ export const PinnedItems = ({
                     onClickPinUnpin={
                       items[itemId]?.onClickPinUnpin ?? undefined
                     }
-                    hasParents
                   />
                 </RelativeDiv>
               ) : null,
