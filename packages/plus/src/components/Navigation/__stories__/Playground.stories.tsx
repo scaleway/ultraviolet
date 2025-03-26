@@ -185,7 +185,11 @@ const PlaygroundContent = ({ ...props }: ComponentProps<typeof Navigation>) => {
             onToggle={() => setActive('Object Storage')}
           />
         </Navigation.Item>
-        <Navigation.Item label="Network" id="network" categoryIcon="network">
+        <Navigation.Item
+          label="Network with a very long name"
+          id="network"
+          categoryIcon="network"
+        >
           <Navigation.Item
             label="Load Balancer"
             id="load-balancer"

@@ -561,7 +561,7 @@ export const Item = memo(
             <Stack
               direction="row"
               gap={1}
-              alignItems="center"
+              alignItems="flex-start"
               justifyContent="center"
             >
               {CategoryIconUsed ? (
