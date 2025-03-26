@@ -9,7 +9,6 @@
     "directory": "packages/illustrations"
   },
   "scripts": {
-    "prebuild": "shx rm -rf dist",
     "type:generate": "tsc --declaration -p tsconfig.build.json",
     "watch": "pnpm run '/^watch:.*/'",
     "watch:build": "vite build --config vite.config.ts --watch",
