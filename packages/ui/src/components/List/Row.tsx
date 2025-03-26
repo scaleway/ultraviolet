@@ -1,7 +1,7 @@
 import type { Theme } from '@emotion/react'
 import { keyframes, useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
-import type { ReactNode, RefObject } from 'react'
+import type { ComponentProps, ReactNode, RefObject } from 'react'
 import {
   Children,
   forwardRef,
@@ -214,6 +214,8 @@ type RowProps = {
   expandablePadding?: keyof typeof space
   highlightAnimation?: boolean
   'data-testid'?: string
+  style?: ComponentProps<'tr'>['style']
+  'data-dragging'?: boolean
 }
 
 export const Row = forwardRef<HTMLTableRowElement, RowProps>(
@@ -230,6 +232,8 @@ export const Row = forwardRef<HTMLTableRowElement, RowProps>(
       className,
       expandablePadding,
       'data-testid': dataTestid,
+      'data-dragging': dataDragging,
+      style,
     },
     forwardedRef,
   ) => {
@@ -329,6 +333,8 @@ export const Row = forwardRef<HTMLTableRowElement, RowProps>(
           data-testid={dataTestid}
           columns={columns}
           columnsStartAt={(selectable ? 1 : 0) + (expandButton ? 1 : 0)}
+          style={style}
+          data-dragging={dataDragging}
           highlightAnimation={highlightAnimation}
         >
           {selectable ? (
