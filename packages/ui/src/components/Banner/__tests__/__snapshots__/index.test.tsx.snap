@@ -540,6 +540,11 @@ exports[`Banner > renders correctly with a link 1`] = `
   pointer-events: none;
 }
 
+.emotion-14:visited {
+  color: #641cb3;
+  text-decoration-color: transparent;
+}
+
 .emotion-14:hover,
 .emotion-14:focus {
   outline: none;
@@ -560,6 +565,12 @@ exports[`Banner > renders correctly with a link 1`] = `
   -moz-transform: translate(-0.25rem, 0);
   -ms-transform: translate(-0.25rem, 0);
   transform: translate(-0.25rem, 0);
+}
+
+.emotion-14:hover:visited,
+.emotion-14:focus:visited {
+  color: #521094;
+  text-decoration-color: #521094;
 }
 
 .emotion-14[data-variant='inline'] {
@@ -712,6 +723,7 @@ exports[`Banner > renders correctly with a link 1`] = `
             class="emotion-14 emotion-15"
             data-variant="standalone"
             href=""
+            prominence="default"
             rel="noopener noreferrer"
             target="_blank"
             variant="bodySmallStrong"

@@ -696,6 +696,11 @@ exports[`EmptySpace > should work with learn more 1`] = `
   pointer-events: none;
 }
 
+.emotion-15:visited {
+  color: #641cb3;
+  text-decoration-color: transparent;
+}
+
 .emotion-15:hover,
 .emotion-15:focus {
   outline: none;
@@ -716,6 +721,12 @@ exports[`EmptySpace > should work with learn more 1`] = `
   -moz-transform: translate(-0.25rem, 0);
   -ms-transform: translate(-0.25rem, 0);
   transform: translate(-0.25rem, 0);
+}
+
+.emotion-15:hover:visited,
+.emotion-15:focus:visited {
+  color: #521094;
+  text-decoration-color: #521094;
 }
 
 .emotion-15[data-variant='inline'] {
