@@ -23,8 +23,7 @@ export const GlobalAlertLink = ({
       href={href}
       target={target}
       download={download}
-      sentiment="neutral"
-      prominence={theme === 'light' ? 'stronger' : 'strong'}
+      prominence={theme === 'light' ? 'strong' : 'stronger'}
       size="small"
       variant="inline"
       rel={rel}

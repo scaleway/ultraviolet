@@ -42,7 +42,15 @@ type LinkProps = {
   children: ReactNode
   target?: HTMLAttributeAnchorTarget
   download?: string | boolean
+  /**
+   * @deprecated Do not use this prop. It will be removed in the next major version.
+   * To use primary color, use prop `primary` instead.
+   */
   sentiment?: ExtendedColor
+  /**
+   * Set the link to use the primary color.
+   */
+  primary?: boolean
   prominence?: ProminenceProps
   size?: LinkSizes
   iconPosition?: LinkIconPosition
@@ -128,6 +136,14 @@ const StyledLink = styled('a', {
       paragraph-spacing: ${theme.typography[variant].paragraphSpacing};
       text-case: ${theme.typography[variant].textCase};
     `}
+
+
+  &:visited {
+      color: ${({ theme }) => theme.colors.primary.text};
+      text-decoration-color: transparent;
+  }
+
+
   &:hover,
   &:focus {
     ${StyledArrowLeftIcon}, ${StyledArrowRightIcon}, ${StyledOpenInNewIcon} {
@@ -166,6 +182,11 @@ const StyledLink = styled('a', {
         text-decoration-color: ${theme.colors.other.monochrome[sentiment].textHover};
       `
     }}
+
+    &:visited {
+      color: ${({ theme }) => theme.colors.primary.textHover};
+      text-decoration-color: ${({ theme }) => theme.colors.primary.textHover};
+    }
   }
 
   &[data-variant='inline'] {
@@ -202,6 +223,7 @@ export const Link = forwardRef(
       target,
       download,
       sentiment = 'info',
+      primary,
       prominence,
       size = 'large',
       iconPosition,
@@ -219,6 +241,7 @@ export const Link = forwardRef(
     const computedRel = rel || (isBlank ? 'noopener noreferrer' : undefined)
     const [isTruncated, setIsTruncated] = useState(false)
     const elementRef = useRef<HTMLAnchorElement>(null)
+    const computedSentiment = primary ? 'primary' : sentiment
 
     const usedRef = (ref as RefObject<HTMLAnchorElement>) ?? elementRef
 
@@ -243,7 +266,7 @@ export const Link = forwardRef(
           target={target}
           download={download}
           ref={usedRef}
-          sentiment={sentiment}
+          sentiment={computedSentiment}
           prominence={prominence}
           rel={computedRel}
           className={className}

@@ -4,7 +4,7 @@ import type { Theme } from '@emotion/react'
 import { css, useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import type { ComponentProps, ReactNode } from 'react'
-import { useState } from 'react'
+import { useMemo, useState } from 'react'
 import { Button } from '../Button'
 import { Link } from '../Link'
 import { Stack } from '../Stack'
@@ -143,6 +143,18 @@ export const Banner = ({
   const defaultImage =
     size === 'small' ? defaultIllustrationSmall : defaultIllustration
 
+  const prominence = useMemo(() => {
+    if (variant === 'promotional' && theme === 'light') {
+      return 'strong'
+    }
+
+    if (theme === 'dark' || variant === 'promotional') {
+      return 'stronger'
+    }
+
+    return 'default'
+  }, [variant, theme])
+
   const [opened, setOpened] = useState(true)
 
   if (!opened) return null
@@ -205,11 +217,8 @@ export const Banner = ({
             ) : null}
             {linkText ? (
               <Link
-                sentiment={
-                  theme !== 'light' || variant === 'promotional'
-                    ? 'white'
-                    : 'primary'
-                }
+                primary={theme === 'light' && variant !== 'promotional'}
+                prominence={prominence}
                 size="small"
                 target="_blank"
                 href={linkHref ?? ''}
