@@ -236,6 +236,8 @@ export const ListProvider = ({
       index: number,
       isShiftPressed: boolean,
     ) => {
+      console.debug('handleClickRange', index)
+
       if (isShiftPressed) {
         const checkboxesInRange: string[] = []
 
@@ -264,7 +266,9 @@ export const ListProvider = ({
           selectRows(checkboxesInRange, currentCheckbox.checked) //  (un)selects the rows in the range
           setLastCheckedCheckbox(currentCheckbox.value)
         }
-      } else if (index === 0) setLastCheckedCheckbox(undefined)
+      } else if (index === 0) {
+        setLastCheckedCheckbox(undefined)
+      }
 
       /**
        * Handle the case when there is multiple selected value during a time, and the user click without shift event
@@ -275,6 +279,7 @@ export const ListProvider = ({
         setLastCheckedCheckbox(currentCheckbox.value)
       }, 1)
     }
+
     refList.forEach((checkbox, index) => {
       const clickHandler = function clickHandler(
         this: HTMLInputElement,
