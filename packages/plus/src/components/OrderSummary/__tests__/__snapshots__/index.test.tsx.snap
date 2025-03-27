@@ -23,9 +23,8 @@ exports[`OrderSummary > should work with an empty list of item 1`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   background-color: #f9f9fa;
-  border-inline: 1px solid #d9dadd;
   height: 100%;
-  width: 320px;
+  width: 20rem;
 }
 
 @media (min-width: 1440px) {
@@ -83,7 +82,6 @@ exports[`OrderSummary > should work with an empty list of item 1`] = `
   flex-wrap: nowrap;
   padding: 1.5rem;
   border-top: 1px solid #d9dadd;
-  overflow: hidden;
 }
 
 .emotion-6 {
@@ -188,9 +186,8 @@ exports[`OrderSummary > should work with children 1`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   background-color: #f9f9fa;
-  border-inline: 1px solid #d9dadd;
   height: 100%;
-  width: 320px;
+  width: 20rem;
 }
 
 @media (min-width: 1440px) {
@@ -220,9 +217,8 @@ exports[`OrderSummary > should work with children 1`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   background-color: #f9f9fa;
-  border-inline: 1px solid #d9dadd;
   height: 100%;
-  width: 320px;
+  width: 20rem;
 }
 
 @media (min-width: 1440px) {
@@ -335,7 +331,13 @@ exports[`OrderSummary > should work with children 1`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   background-color: #ffffff;
-  width: 11rem;
+  width: 10rem;
+}
+
+@media (min-width: 1440px) {
+  .emotion-6 {
+    width: 11rem;
+  }
 }
 
 .emotion-6 {
@@ -360,7 +362,13 @@ exports[`OrderSummary > should work with children 1`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   background-color: #ffffff;
-  width: 11rem;
+  width: 10rem;
+}
+
+@media (min-width: 1440px) {
+  .emotion-6 {
+    width: 11rem;
+  }
 }
 
 .emotion-8 {
@@ -866,6 +874,7 @@ exports[`OrderSummary > should work with children 1`] = `
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  max-width: 65%;
 }
 
 .emotion-17 #unit {
@@ -883,6 +892,7 @@ exports[`OrderSummary > should work with children 1`] = `
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  max-width: 65%;
 }
 
 .emotion-17 #unit {
@@ -1667,7 +1677,6 @@ exports[`OrderSummary > should work with children 1`] = `
   flex-wrap: nowrap;
   padding: 1.5rem;
   border-top: 1px solid #d9dadd;
-  overflow: hidden;
 }
 
 .emotion-254 {
@@ -1693,7 +1702,6 @@ exports[`OrderSummary > should work with children 1`] = `
   flex-wrap: nowrap;
   padding: 1.5rem;
   border-top: 1px solid #d9dadd;
-  overflow: hidden;
 }
 
 <div
@@ -1783,11 +1791,11 @@ exports[`OrderSummary > should work with children 1`] = `
                         <svg
                           aria-label="show dropdown"
                           class="emotion-30 emotion-31"
-                          viewBox="0 0 20 20"
+                          viewBox="0 0 16 16"
                         >
                           <path
                             clip-rule="evenodd"
-                            d="M5.47 7.47a.75.75 0 0 1 1.06 0l3.72 3.72 3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.47 8.53a.75.75 0 0 1 0-1.06"
+                            d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
                             fill-rule="evenodd"
                           />
                         </svg>
@@ -1897,11 +1905,12 @@ exports[`OrderSummary > should work with children 1`] = `
                 >
                   <svg
                     class="emotion-30 emotion-31"
-                    viewBox="0 0 20 20"
+                    viewBox="0 0 16 16"
                   >
                     <path
                       clip-rule="evenodd"
-                      d="M10 3.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13M2 10a8 8 0 1 1 16 0 8 8 0 0 1-16 0m7.25-3.02a.75.75 0 0 1 .75-.75h.006a.75.75 0 0 1 .75.75v.005a.75.75 0 0 1-.75.75H10a.75.75 0 0 1-.75-.75zm.244 3.16a.75.75 0 0 1-.434-1.415l.034-.017c1.035-.517 2.2.418 1.92 1.54l-.508 2.03a.75.75 0 0 1 .434 1.414l-.034.016c-1.035.518-2.2-.417-1.92-1.54z"
+                      d="M8 2.3125C4.85888 2.3125 2.3125 4.85888 2.3125 8C2.3125 11.1411 4.85888 13.6875 8 13.6875C11.1411 13.6875 13.6875 11.1411 13.6875 8C13.6875 4.85888 11.1411 2.3125 8 2.3125ZM1 8C1 4.13401 4.13401 1 8 1C11.866 1 15 4.13401 15 8C15 11.866 11.866 15 8 15C4.13401 15 1 11.866 1 8ZM7.34375 5.35677C7.34375 4.99433 7.63756 4.70052 8 4.70052H8.00529C8.36772 4.70052 8.66154 4.99433 8.66154 5.35677V5.36206C8.66154 5.72449 8.36772 6.01831 8.00529 6.01831H8C7.63756 6.01831 7.34375 5.72449 7.34375 5.36206V5.35677ZM7.55734 8.12213C7.28751 8.1578 7.01294 8.02195 6.88439 7.76484C6.7223 7.44066 6.8537 7.04647 7.17787 6.88439L7.20711 6.86976C8.11256 6.41704 9.13206 7.23485 8.88653 8.21695L8.44266 9.99246C8.71249 9.95679 8.98705 10.0926 9.11561 10.3497C9.2777 10.6739 9.14631 11.0681 8.82214 11.2302L8.79289 11.2448L8.79289 11.2448C7.88744 11.6975 6.86794 10.8797 7.11347 9.89764L7.55734 8.12213Z"
+                      fill-rule="evenodd"
                     />
                   </svg>
                   7 days of free backup
@@ -2253,11 +2262,12 @@ exports[`OrderSummary > should work with children 1`] = `
               >
                 <svg
                   class="emotion-30 emotion-31"
-                  viewBox="0 0 20 20"
+                  viewBox="0 0 16 16"
                 >
                   <path
                     clip-rule="evenodd"
-                    d="M10 3.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13M2 10a8 8 0 1 1 16 0 8 8 0 0 1-16 0m7.25-3.02a.75.75 0 0 1 .75-.75h.006a.75.75 0 0 1 .75.75v.005a.75.75 0 0 1-.75.75H10a.75.75 0 0 1-.75-.75zm.244 3.16a.75.75 0 0 1-.434-1.415l.034-.017c1.035-.517 2.2.418 1.92 1.54l-.508 2.03a.75.75 0 0 1 .434 1.414l-.034.016c-1.035.518-2.2-.417-1.92-1.54z"
+                    d="M8 2.3125C4.85888 2.3125 2.3125 4.85888 2.3125 8C2.3125 11.1411 4.85888 13.6875 8 13.6875C11.1411 13.6875 13.6875 11.1411 13.6875 8C13.6875 4.85888 11.1411 2.3125 8 2.3125ZM1 8C1 4.13401 4.13401 1 8 1C11.866 1 15 4.13401 15 8C15 11.866 11.866 15 8 15C4.13401 15 1 11.866 1 8ZM7.34375 5.35677C7.34375 4.99433 7.63756 4.70052 8 4.70052H8.00529C8.36772 4.70052 8.66154 4.99433 8.66154 5.35677V5.36206C8.66154 5.72449 8.36772 6.01831 8.00529 6.01831H8C7.63756 6.01831 7.34375 5.72449 7.34375 5.36206V5.35677ZM7.55734 8.12213C7.28751 8.1578 7.01294 8.02195 6.88439 7.76484C6.7223 7.44066 6.8537 7.04647 7.17787 6.88439L7.20711 6.86976C8.11256 6.41704 9.13206 7.23485 8.88653 8.21695L8.44266 9.99246C8.71249 9.95679 8.98705 10.0926 9.11561 10.3497C9.2777 10.6739 9.14631 11.0681 8.82214 11.2302L8.79289 11.2448L8.79289 11.2448C7.88744 11.6975 6.86794 10.8797 7.11347 9.89764L7.55734 8.12213Z"
+                    fill-rule="evenodd"
                   />
                 </svg>
                 75GB free on public images
@@ -2344,9 +2354,8 @@ exports[`OrderSummary > should work with default props 1`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   background-color: #f9f9fa;
-  border-inline: 1px solid #d9dadd;
   height: 100%;
-  width: 320px;
+  width: 20rem;
 }
 
 @media (min-width: 1440px) {
@@ -2609,7 +2618,6 @@ exports[`OrderSummary > should work with default props 1`] = `
   flex-wrap: nowrap;
   padding: 1.5rem;
   border-top: 1px solid #d9dadd;
-  overflow: hidden;
 }
 
 .emotion-230 {
@@ -2727,11 +2735,12 @@ exports[`OrderSummary > should work with default props 1`] = `
                 >
                   <svg
                     class="emotion-48 emotion-49"
-                    viewBox="0 0 20 20"
+                    viewBox="0 0 16 16"
                   >
                     <path
                       clip-rule="evenodd"
-                      d="M10 3.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13M2 10a8 8 0 1 1 16 0 8 8 0 0 1-16 0m7.25-3.02a.75.75 0 0 1 .75-.75h.006a.75.75 0 0 1 .75.75v.005a.75.75 0 0 1-.75.75H10a.75.75 0 0 1-.75-.75zm.244 3.16a.75.75 0 0 1-.434-1.415l.034-.017c1.035-.517 2.2.418 1.92 1.54l-.508 2.03a.75.75 0 0 1 .434 1.414l-.034.016c-1.035.518-2.2-.417-1.92-1.54z"
+                      d="M8 2.3125C4.85888 2.3125 2.3125 4.85888 2.3125 8C2.3125 11.1411 4.85888 13.6875 8 13.6875C11.1411 13.6875 13.6875 11.1411 13.6875 8C13.6875 4.85888 11.1411 2.3125 8 2.3125ZM1 8C1 4.13401 4.13401 1 8 1C11.866 1 15 4.13401 15 8C15 11.866 11.866 15 8 15C4.13401 15 1 11.866 1 8ZM7.34375 5.35677C7.34375 4.99433 7.63756 4.70052 8 4.70052H8.00529C8.36772 4.70052 8.66154 4.99433 8.66154 5.35677V5.36206C8.66154 5.72449 8.36772 6.01831 8.00529 6.01831H8C7.63756 6.01831 7.34375 5.72449 7.34375 5.36206V5.35677ZM7.55734 8.12213C7.28751 8.1578 7.01294 8.02195 6.88439 7.76484C6.7223 7.44066 6.8537 7.04647 7.17787 6.88439L7.20711 6.86976C8.11256 6.41704 9.13206 7.23485 8.88653 8.21695L8.44266 9.99246C8.71249 9.95679 8.98705 10.0926 9.11561 10.3497C9.2777 10.6739 9.14631 11.0681 8.82214 11.2302L8.79289 11.2448L8.79289 11.2448C7.88744 11.6975 6.86794 10.8797 7.11347 9.89764L7.55734 8.12213Z"
+                      fill-rule="evenodd"
                     />
                   </svg>
                   7 days of free backup
@@ -3083,11 +3092,12 @@ exports[`OrderSummary > should work with default props 1`] = `
               >
                 <svg
                   class="emotion-48 emotion-49"
-                  viewBox="0 0 20 20"
+                  viewBox="0 0 16 16"
                 >
                   <path
                     clip-rule="evenodd"
-                    d="M10 3.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13M2 10a8 8 0 1 1 16 0 8 8 0 0 1-16 0m7.25-3.02a.75.75 0 0 1 .75-.75h.006a.75.75 0 0 1 .75.75v.005a.75.75 0 0 1-.75.75H10a.75.75 0 0 1-.75-.75zm.244 3.16a.75.75 0 0 1-.434-1.415l.034-.017c1.035-.517 2.2.418 1.92 1.54l-.508 2.03a.75.75 0 0 1 .434 1.414l-.034.016c-1.035.518-2.2-.417-1.92-1.54z"
+                    d="M8 2.3125C4.85888 2.3125 2.3125 4.85888 2.3125 8C2.3125 11.1411 4.85888 13.6875 8 13.6875C11.1411 13.6875 13.6875 11.1411 13.6875 8C13.6875 4.85888 11.1411 2.3125 8 2.3125ZM1 8C1 4.13401 4.13401 1 8 1C11.866 1 15 4.13401 15 8C15 11.866 11.866 15 8 15C4.13401 15 1 11.866 1 8ZM7.34375 5.35677C7.34375 4.99433 7.63756 4.70052 8 4.70052H8.00529C8.36772 4.70052 8.66154 4.99433 8.66154 5.35677V5.36206C8.66154 5.72449 8.36772 6.01831 8.00529 6.01831H8C7.63756 6.01831 7.34375 5.72449 7.34375 5.36206V5.35677ZM7.55734 8.12213C7.28751 8.1578 7.01294 8.02195 6.88439 7.76484C6.7223 7.44066 6.8537 7.04647 7.17787 6.88439L7.20711 6.86976C8.11256 6.41704 9.13206 7.23485 8.88653 8.21695L8.44266 9.99246C8.71249 9.95679 8.98705 10.0926 9.11561 10.3497C9.2777 10.6739 9.14631 11.0681 8.82214 11.2302L8.79289 11.2448L8.79289 11.2448C7.88744 11.6975 6.86794 10.8797 7.11347 9.89764L7.55734 8.12213Z"
+                    fill-rule="evenodd"
                   />
                 </svg>
                 75GB free on public images
@@ -3173,9 +3183,8 @@ exports[`OrderSummary > should work with discount 1`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   background-color: #f9f9fa;
-  border-inline: 1px solid #d9dadd;
   height: 100%;
-  width: 320px;
+  width: 20rem;
 }
 
 @media (min-width: 1440px) {
@@ -3205,9 +3214,8 @@ exports[`OrderSummary > should work with discount 1`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   background-color: #f9f9fa;
-  border-inline: 1px solid #d9dadd;
   height: 100%;
-  width: 320px;
+  width: 20rem;
 }
 
 @media (min-width: 1440px) {
@@ -3320,7 +3328,13 @@ exports[`OrderSummary > should work with discount 1`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   background-color: #ffffff;
-  width: 11rem;
+  width: 10rem;
+}
+
+@media (min-width: 1440px) {
+  .emotion-6 {
+    width: 11rem;
+  }
 }
 
 .emotion-6 {
@@ -3345,7 +3359,13 @@ exports[`OrderSummary > should work with discount 1`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   background-color: #ffffff;
-  width: 11rem;
+  width: 10rem;
+}
+
+@media (min-width: 1440px) {
+  .emotion-6 {
+    width: 11rem;
+  }
 }
 
 .emotion-8 {
@@ -3851,6 +3871,7 @@ exports[`OrderSummary > should work with discount 1`] = `
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  max-width: 65%;
 }
 
 .emotion-17 #unit {
@@ -3868,6 +3889,7 @@ exports[`OrderSummary > should work with discount 1`] = `
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  max-width: 65%;
 }
 
 .emotion-17 #unit {
@@ -4553,7 +4575,6 @@ exports[`OrderSummary > should work with discount 1`] = `
   flex-wrap: nowrap;
   padding: 1.5rem;
   border-top: 1px solid #d9dadd;
-  overflow: hidden;
 }
 
 .emotion-54 {
@@ -4579,7 +4600,6 @@ exports[`OrderSummary > should work with discount 1`] = `
   flex-wrap: nowrap;
   padding: 1.5rem;
   border-top: 1px solid #d9dadd;
-  overflow: hidden;
 }
 
 .emotion-60 {
@@ -4743,11 +4763,11 @@ exports[`OrderSummary > should work with discount 1`] = `
                         <svg
                           aria-label="show dropdown"
                           class="emotion-30 emotion-31"
-                          viewBox="0 0 20 20"
+                          viewBox="0 0 16 16"
                         >
                           <path
                             clip-rule="evenodd"
-                            d="M5.47 7.47a.75.75 0 0 1 1.06 0l3.72 3.72 3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.47 8.53a.75.75 0 0 1 0-1.06"
+                            d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
                             fill-rule="evenodd"
                           />
                         </svg>
@@ -4863,9 +4883,8 @@ exports[`OrderSummary > should work with discount in  % 1`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   background-color: #f9f9fa;
-  border-inline: 1px solid #d9dadd;
   height: 100%;
-  width: 320px;
+  width: 20rem;
 }
 
 @media (min-width: 1440px) {
@@ -4895,9 +4914,8 @@ exports[`OrderSummary > should work with discount in  % 1`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   background-color: #f9f9fa;
-  border-inline: 1px solid #d9dadd;
   height: 100%;
-  width: 320px;
+  width: 20rem;
 }
 
 @media (min-width: 1440px) {
@@ -5010,7 +5028,13 @@ exports[`OrderSummary > should work with discount in  % 1`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   background-color: #ffffff;
-  width: 11rem;
+  width: 10rem;
+}
+
+@media (min-width: 1440px) {
+  .emotion-6 {
+    width: 11rem;
+  }
 }
 
 .emotion-6 {
@@ -5035,7 +5059,13 @@ exports[`OrderSummary > should work with discount in  % 1`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   background-color: #ffffff;
-  width: 11rem;
+  width: 10rem;
+}
+
+@media (min-width: 1440px) {
+  .emotion-6 {
+    width: 11rem;
+  }
 }
 
 .emotion-8 {
@@ -5541,6 +5571,7 @@ exports[`OrderSummary > should work with discount in  % 1`] = `
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  max-width: 65%;
 }
 
 .emotion-17 #unit {
@@ -5558,6 +5589,7 @@ exports[`OrderSummary > should work with discount in  % 1`] = `
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  max-width: 65%;
 }
 
 .emotion-17 #unit {
@@ -6243,7 +6275,6 @@ exports[`OrderSummary > should work with discount in  % 1`] = `
   flex-wrap: nowrap;
   padding: 1.5rem;
   border-top: 1px solid #d9dadd;
-  overflow: hidden;
 }
 
 .emotion-54 {
@@ -6269,7 +6300,6 @@ exports[`OrderSummary > should work with discount in  % 1`] = `
   flex-wrap: nowrap;
   padding: 1.5rem;
   border-top: 1px solid #d9dadd;
-  overflow: hidden;
 }
 
 .emotion-60 {
@@ -6433,11 +6463,11 @@ exports[`OrderSummary > should work with discount in  % 1`] = `
                         <svg
                           aria-label="show dropdown"
                           class="emotion-30 emotion-31"
-                          viewBox="0 0 20 20"
+                          viewBox="0 0 16 16"
                         >
                           <path
                             clip-rule="evenodd"
-                            d="M5.47 7.47a.75.75 0 0 1 1.06 0l3.72 3.72 3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.47 8.53a.75.75 0 0 1 0-1.06"
+                            d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
                             fill-rule="evenodd"
                           />
                         </svg>
@@ -6553,9 +6583,8 @@ exports[`OrderSummary > should work with footer 1`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   background-color: #f9f9fa;
-  border-inline: 1px solid #d9dadd;
   height: 100%;
-  width: 320px;
+  width: 20rem;
 }
 
 @media (min-width: 1440px) {
@@ -6585,9 +6614,8 @@ exports[`OrderSummary > should work with footer 1`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   background-color: #f9f9fa;
-  border-inline: 1px solid #d9dadd;
   height: 100%;
-  width: 320px;
+  width: 20rem;
 }
 
 @media (min-width: 1440px) {
@@ -6700,7 +6728,13 @@ exports[`OrderSummary > should work with footer 1`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   background-color: #ffffff;
-  width: 11rem;
+  width: 10rem;
+}
+
+@media (min-width: 1440px) {
+  .emotion-6 {
+    width: 11rem;
+  }
 }
 
 .emotion-6 {
@@ -6725,7 +6759,13 @@ exports[`OrderSummary > should work with footer 1`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   background-color: #ffffff;
-  width: 11rem;
+  width: 10rem;
+}
+
+@media (min-width: 1440px) {
+  .emotion-6 {
+    width: 11rem;
+  }
 }
 
 .emotion-8 {
@@ -7231,6 +7271,7 @@ exports[`OrderSummary > should work with footer 1`] = `
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  max-width: 65%;
 }
 
 .emotion-17 #unit {
@@ -7248,6 +7289,7 @@ exports[`OrderSummary > should work with footer 1`] = `
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  max-width: 65%;
 }
 
 .emotion-17 #unit {
@@ -8032,7 +8074,6 @@ exports[`OrderSummary > should work with footer 1`] = `
   flex-wrap: nowrap;
   padding: 1.5rem;
   border-top: 1px solid #d9dadd;
-  overflow: hidden;
 }
 
 .emotion-254 {
@@ -8058,7 +8099,6 @@ exports[`OrderSummary > should work with footer 1`] = `
   flex-wrap: nowrap;
   padding: 1.5rem;
   border-top: 1px solid #d9dadd;
-  overflow: hidden;
 }
 
 <div
@@ -8148,11 +8188,11 @@ exports[`OrderSummary > should work with footer 1`] = `
                         <svg
                           aria-label="show dropdown"
                           class="emotion-30 emotion-31"
-                          viewBox="0 0 20 20"
+                          viewBox="0 0 16 16"
                         >
                           <path
                             clip-rule="evenodd"
-                            d="M5.47 7.47a.75.75 0 0 1 1.06 0l3.72 3.72 3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.47 8.53a.75.75 0 0 1 0-1.06"
+                            d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
                             fill-rule="evenodd"
                           />
                         </svg>
@@ -8262,11 +8302,12 @@ exports[`OrderSummary > should work with footer 1`] = `
                 >
                   <svg
                     class="emotion-30 emotion-31"
-                    viewBox="0 0 20 20"
+                    viewBox="0 0 16 16"
                   >
                     <path
                       clip-rule="evenodd"
-                      d="M10 3.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13M2 10a8 8 0 1 1 16 0 8 8 0 0 1-16 0m7.25-3.02a.75.75 0 0 1 .75-.75h.006a.75.75 0 0 1 .75.75v.005a.75.75 0 0 1-.75.75H10a.75.75 0 0 1-.75-.75zm.244 3.16a.75.75 0 0 1-.434-1.415l.034-.017c1.035-.517 2.2.418 1.92 1.54l-.508 2.03a.75.75 0 0 1 .434 1.414l-.034.016c-1.035.518-2.2-.417-1.92-1.54z"
+                      d="M8 2.3125C4.85888 2.3125 2.3125 4.85888 2.3125 8C2.3125 11.1411 4.85888 13.6875 8 13.6875C11.1411 13.6875 13.6875 11.1411 13.6875 8C13.6875 4.85888 11.1411 2.3125 8 2.3125ZM1 8C1 4.13401 4.13401 1 8 1C11.866 1 15 4.13401 15 8C15 11.866 11.866 15 8 15C4.13401 15 1 11.866 1 8ZM7.34375 5.35677C7.34375 4.99433 7.63756 4.70052 8 4.70052H8.00529C8.36772 4.70052 8.66154 4.99433 8.66154 5.35677V5.36206C8.66154 5.72449 8.36772 6.01831 8.00529 6.01831H8C7.63756 6.01831 7.34375 5.72449 7.34375 5.36206V5.35677ZM7.55734 8.12213C7.28751 8.1578 7.01294 8.02195 6.88439 7.76484C6.7223 7.44066 6.8537 7.04647 7.17787 6.88439L7.20711 6.86976C8.11256 6.41704 9.13206 7.23485 8.88653 8.21695L8.44266 9.99246C8.71249 9.95679 8.98705 10.0926 9.11561 10.3497C9.2777 10.6739 9.14631 11.0681 8.82214 11.2302L8.79289 11.2448L8.79289 11.2448C7.88744 11.6975 6.86794 10.8797 7.11347 9.89764L7.55734 8.12213Z"
+                      fill-rule="evenodd"
                     />
                   </svg>
                   7 days of free backup
@@ -8618,11 +8659,12 @@ exports[`OrderSummary > should work with footer 1`] = `
               >
                 <svg
                   class="emotion-30 emotion-31"
-                  viewBox="0 0 20 20"
+                  viewBox="0 0 16 16"
                 >
                   <path
                     clip-rule="evenodd"
-                    d="M10 3.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13M2 10a8 8 0 1 1 16 0 8 8 0 0 1-16 0m7.25-3.02a.75.75 0 0 1 .75-.75h.006a.75.75 0 0 1 .75.75v.005a.75.75 0 0 1-.75.75H10a.75.75 0 0 1-.75-.75zm.244 3.16a.75.75 0 0 1-.434-1.415l.034-.017c1.035-.517 2.2.418 1.92 1.54l-.508 2.03a.75.75 0 0 1 .434 1.414l-.034.016c-1.035.518-2.2-.417-1.92-1.54z"
+                    d="M8 2.3125C4.85888 2.3125 2.3125 4.85888 2.3125 8C2.3125 11.1411 4.85888 13.6875 8 13.6875C11.1411 13.6875 13.6875 11.1411 13.6875 8C13.6875 4.85888 11.1411 2.3125 8 2.3125ZM1 8C1 4.13401 4.13401 1 8 1C11.866 1 15 4.13401 15 8C15 11.866 11.866 15 8 15C4.13401 15 1 11.866 1 8ZM7.34375 5.35677C7.34375 4.99433 7.63756 4.70052 8 4.70052H8.00529C8.36772 4.70052 8.66154 4.99433 8.66154 5.35677V5.36206C8.66154 5.72449 8.36772 6.01831 8.00529 6.01831H8C7.63756 6.01831 7.34375 5.72449 7.34375 5.36206V5.35677ZM7.55734 8.12213C7.28751 8.1578 7.01294 8.02195 6.88439 7.76484C6.7223 7.44066 6.8537 7.04647 7.17787 6.88439L7.20711 6.86976C8.11256 6.41704 9.13206 7.23485 8.88653 8.21695L8.44266 9.99246C8.71249 9.95679 8.98705 10.0926 9.11561 10.3497C9.2777 10.6739 9.14631 11.0681 8.82214 11.2302L8.79289 11.2448L8.79289 11.2448C7.88744 11.6975 6.86794 10.8797 7.11347 9.89764L7.55734 8.12213Z"
+                    fill-rule="evenodd"
                   />
                 </svg>
                 75GB free on public images
@@ -8709,9 +8751,8 @@ exports[`OrderSummary > should work with fractionDigits 1`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   background-color: #f9f9fa;
-  border-inline: 1px solid #d9dadd;
   height: 100%;
-  width: 320px;
+  width: 20rem;
 }
 
 @media (min-width: 1440px) {
@@ -8741,9 +8782,8 @@ exports[`OrderSummary > should work with fractionDigits 1`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   background-color: #f9f9fa;
-  border-inline: 1px solid #d9dadd;
   height: 100%;
-  width: 320px;
+  width: 20rem;
 }
 
 @media (min-width: 1440px) {
@@ -8856,7 +8896,13 @@ exports[`OrderSummary > should work with fractionDigits 1`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   background-color: #ffffff;
-  width: 11rem;
+  width: 10rem;
+}
+
+@media (min-width: 1440px) {
+  .emotion-6 {
+    width: 11rem;
+  }
 }
 
 .emotion-6 {
@@ -8881,7 +8927,13 @@ exports[`OrderSummary > should work with fractionDigits 1`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   background-color: #ffffff;
-  width: 11rem;
+  width: 10rem;
+}
+
+@media (min-width: 1440px) {
+  .emotion-6 {
+    width: 11rem;
+  }
 }
 
 .emotion-8 {
@@ -9387,6 +9439,7 @@ exports[`OrderSummary > should work with fractionDigits 1`] = `
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  max-width: 65%;
 }
 
 .emotion-17 #unit {
@@ -9404,6 +9457,7 @@ exports[`OrderSummary > should work with fractionDigits 1`] = `
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  max-width: 65%;
 }
 
 .emotion-17 #unit {
@@ -10089,7 +10143,6 @@ exports[`OrderSummary > should work with fractionDigits 1`] = `
   flex-wrap: nowrap;
   padding: 1.5rem;
   border-top: 1px solid #d9dadd;
-  overflow: hidden;
 }
 
 .emotion-54 {
@@ -10115,7 +10168,6 @@ exports[`OrderSummary > should work with fractionDigits 1`] = `
   flex-wrap: nowrap;
   padding: 1.5rem;
   border-top: 1px solid #d9dadd;
-  overflow: hidden;
 }
 
 .emotion-60 {
@@ -10279,11 +10331,11 @@ exports[`OrderSummary > should work with fractionDigits 1`] = `
                         <svg
                           aria-label="show dropdown"
                           class="emotion-30 emotion-31"
-                          viewBox="0 0 20 20"
+                          viewBox="0 0 16 16"
                         >
                           <path
                             clip-rule="evenodd"
-                            d="M5.47 7.47a.75.75 0 0 1 1.06 0l3.72 3.72 3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.47 8.53a.75.75 0 0 1 0-1.06"
+                            d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
                             fill-rule="evenodd"
                           />
                         </svg>
@@ -10399,9 +10451,8 @@ exports[`OrderSummary > should work with numberInputs 1`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   background-color: #f9f9fa;
-  border-inline: 1px solid #d9dadd;
   height: 100%;
-  width: 320px;
+  width: 20rem;
 }
 
 @media (min-width: 1440px) {
@@ -10431,9 +10482,8 @@ exports[`OrderSummary > should work with numberInputs 1`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   background-color: #f9f9fa;
-  border-inline: 1px solid #d9dadd;
   height: 100%;
-  width: 320px;
+  width: 20rem;
 }
 
 @media (min-width: 1440px) {
@@ -10546,7 +10596,13 @@ exports[`OrderSummary > should work with numberInputs 1`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   background-color: #ffffff;
-  width: 11rem;
+  width: 10rem;
+}
+
+@media (min-width: 1440px) {
+  .emotion-6 {
+    width: 11rem;
+  }
 }
 
 .emotion-6 {
@@ -10571,7 +10627,13 @@ exports[`OrderSummary > should work with numberInputs 1`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   background-color: #ffffff;
-  width: 11rem;
+  width: 10rem;
+}
+
+@media (min-width: 1440px) {
+  .emotion-6 {
+    width: 11rem;
+  }
 }
 
 .emotion-8 {
@@ -11077,6 +11139,7 @@ exports[`OrderSummary > should work with numberInputs 1`] = `
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  max-width: 65%;
 }
 
 .emotion-17 #unit {
@@ -11094,6 +11157,7 @@ exports[`OrderSummary > should work with numberInputs 1`] = `
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  max-width: 65%;
 }
 
 .emotion-17 #unit {
@@ -12112,7 +12176,6 @@ exports[`OrderSummary > should work with numberInputs 1`] = `
   flex-wrap: nowrap;
   padding: 1.5rem;
   border-top: 1px solid #d9dadd;
-  overflow: hidden;
 }
 
 .emotion-111 {
@@ -12138,7 +12201,6 @@ exports[`OrderSummary > should work with numberInputs 1`] = `
   flex-wrap: nowrap;
   padding: 1.5rem;
   border-top: 1px solid #d9dadd;
-  overflow: hidden;
 }
 
 .emotion-115 {
@@ -12274,11 +12336,11 @@ exports[`OrderSummary > should work with numberInputs 1`] = `
                         <svg
                           aria-label="show dropdown"
                           class="emotion-30 emotion-31"
-                          viewBox="0 0 20 20"
+                          viewBox="0 0 16 16"
                         >
                           <path
                             clip-rule="evenodd"
-                            d="M5.47 7.47a.75.75 0 0 1 1.06 0l3.72 3.72 3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.47 8.53a.75.75 0 0 1 0-1.06"
+                            d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
                             fill-rule="evenodd"
                           />
                         </svg>
@@ -12542,9 +12604,8 @@ exports[`OrderSummary > should work with price as a range 1`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   background-color: #f9f9fa;
-  border-inline: 1px solid #d9dadd;
   height: 100%;
-  width: 320px;
+  width: 20rem;
 }
 
 @media (min-width: 1440px) {
@@ -12574,9 +12635,8 @@ exports[`OrderSummary > should work with price as a range 1`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   background-color: #f9f9fa;
-  border-inline: 1px solid #d9dadd;
   height: 100%;
-  width: 320px;
+  width: 20rem;
 }
 
 @media (min-width: 1440px) {
@@ -12689,7 +12749,13 @@ exports[`OrderSummary > should work with price as a range 1`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   background-color: #ffffff;
-  width: 11rem;
+  width: 10rem;
+}
+
+@media (min-width: 1440px) {
+  .emotion-6 {
+    width: 11rem;
+  }
 }
 
 .emotion-6 {
@@ -12714,7 +12780,13 @@ exports[`OrderSummary > should work with price as a range 1`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   background-color: #ffffff;
-  width: 11rem;
+  width: 10rem;
+}
+
+@media (min-width: 1440px) {
+  .emotion-6 {
+    width: 11rem;
+  }
 }
 
 .emotion-8 {
@@ -13220,6 +13292,7 @@ exports[`OrderSummary > should work with price as a range 1`] = `
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  max-width: 65%;
 }
 
 .emotion-17 #unit {
@@ -13237,6 +13310,7 @@ exports[`OrderSummary > should work with price as a range 1`] = `
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  max-width: 65%;
 }
 
 .emotion-17 #unit {
@@ -13922,7 +13996,6 @@ exports[`OrderSummary > should work with price as a range 1`] = `
   flex-wrap: nowrap;
   padding: 1.5rem;
   border-top: 1px solid #d9dadd;
-  overflow: hidden;
 }
 
 .emotion-54 {
@@ -13948,7 +14021,6 @@ exports[`OrderSummary > should work with price as a range 1`] = `
   flex-wrap: nowrap;
   padding: 1.5rem;
   border-top: 1px solid #d9dadd;
-  overflow: hidden;
 }
 
 <div
@@ -14038,11 +14110,11 @@ exports[`OrderSummary > should work with price as a range 1`] = `
                         <svg
                           aria-label="show dropdown"
                           class="emotion-30 emotion-31"
-                          viewBox="0 0 20 20"
+                          viewBox="0 0 16 16"
                         >
                           <path
                             clip-rule="evenodd"
-                            d="M5.47 7.47a.75.75 0 0 1 1.06 0l3.72 3.72 3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.47 8.53a.75.75 0 0 1 0-1.06"
+                            d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
                             fill-rule="evenodd"
                           />
                         </svg>
@@ -14150,9 +14222,8 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   background-color: #f9f9fa;
-  border-inline: 1px solid #d9dadd;
   height: 100%;
-  width: 320px;
+  width: 20rem;
 }
 
 @media (min-width: 1440px) {
@@ -14182,9 +14253,8 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   background-color: #f9f9fa;
-  border-inline: 1px solid #d9dadd;
   height: 100%;
-  width: 320px;
+  width: 20rem;
 }
 
 @media (min-width: 1440px) {
@@ -14297,7 +14367,13 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   background-color: #ffffff;
-  width: 11rem;
+  width: 10rem;
+}
+
+@media (min-width: 1440px) {
+  .emotion-6 {
+    width: 11rem;
+  }
 }
 
 .emotion-6 {
@@ -14322,7 +14398,13 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   background-color: #ffffff;
-  width: 11rem;
+  width: 10rem;
+}
+
+@media (min-width: 1440px) {
+  .emotion-6 {
+    width: 11rem;
+  }
 }
 
 .emotion-8 {
@@ -14828,6 +14910,7 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  max-width: 65%;
 }
 
 .emotion-17 #unit {
@@ -14845,6 +14928,7 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  max-width: 65%;
 }
 
 .emotion-17 #unit {
@@ -15629,7 +15713,6 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
   flex-wrap: nowrap;
   padding: 1.5rem;
   border-top: 1px solid #d9dadd;
-  overflow: hidden;
 }
 
 .emotion-254 {
@@ -15655,7 +15738,6 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
   flex-wrap: nowrap;
   padding: 1.5rem;
   border-top: 1px solid #d9dadd;
-  overflow: hidden;
 }
 
 .emotion-258 {
@@ -15791,11 +15873,11 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
                         <svg
                           aria-label="show dropdown"
                           class="emotion-30 emotion-31"
-                          viewBox="0 0 20 20"
+                          viewBox="0 0 16 16"
                         >
                           <path
                             clip-rule="evenodd"
-                            d="M5.47 7.47a.75.75 0 0 1 1.06 0l3.72 3.72 3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.47 8.53a.75.75 0 0 1 0-1.06"
+                            d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
                             fill-rule="evenodd"
                           />
                         </svg>
@@ -15905,11 +15987,12 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
                 >
                   <svg
                     class="emotion-30 emotion-31"
-                    viewBox="0 0 20 20"
+                    viewBox="0 0 16 16"
                   >
                     <path
                       clip-rule="evenodd"
-                      d="M10 3.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13M2 10a8 8 0 1 1 16 0 8 8 0 0 1-16 0m7.25-3.02a.75.75 0 0 1 .75-.75h.006a.75.75 0 0 1 .75.75v.005a.75.75 0 0 1-.75.75H10a.75.75 0 0 1-.75-.75zm.244 3.16a.75.75 0 0 1-.434-1.415l.034-.017c1.035-.517 2.2.418 1.92 1.54l-.508 2.03a.75.75 0 0 1 .434 1.414l-.034.016c-1.035.518-2.2-.417-1.92-1.54z"
+                      d="M8 2.3125C4.85888 2.3125 2.3125 4.85888 2.3125 8C2.3125 11.1411 4.85888 13.6875 8 13.6875C11.1411 13.6875 13.6875 11.1411 13.6875 8C13.6875 4.85888 11.1411 2.3125 8 2.3125ZM1 8C1 4.13401 4.13401 1 8 1C11.866 1 15 4.13401 15 8C15 11.866 11.866 15 8 15C4.13401 15 1 11.866 1 8ZM7.34375 5.35677C7.34375 4.99433 7.63756 4.70052 8 4.70052H8.00529C8.36772 4.70052 8.66154 4.99433 8.66154 5.35677V5.36206C8.66154 5.72449 8.36772 6.01831 8.00529 6.01831H8C7.63756 6.01831 7.34375 5.72449 7.34375 5.36206V5.35677ZM7.55734 8.12213C7.28751 8.1578 7.01294 8.02195 6.88439 7.76484C6.7223 7.44066 6.8537 7.04647 7.17787 6.88439L7.20711 6.86976C8.11256 6.41704 9.13206 7.23485 8.88653 8.21695L8.44266 9.99246C8.71249 9.95679 8.98705 10.0926 9.11561 10.3497C9.2777 10.6739 9.14631 11.0681 8.82214 11.2302L8.79289 11.2448L8.79289 11.2448C7.88744 11.6975 6.86794 10.8797 7.11347 9.89764L7.55734 8.12213Z"
+                      fill-rule="evenodd"
                     />
                   </svg>
                   7 days of free backup
@@ -16261,11 +16344,12 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
               >
                 <svg
                   class="emotion-30 emotion-31"
-                  viewBox="0 0 20 20"
+                  viewBox="0 0 16 16"
                 >
                   <path
                     clip-rule="evenodd"
-                    d="M10 3.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13M2 10a8 8 0 1 1 16 0 8 8 0 0 1-16 0m7.25-3.02a.75.75 0 0 1 .75-.75h.006a.75.75 0 0 1 .75.75v.005a.75.75 0 0 1-.75.75H10a.75.75 0 0 1-.75-.75zm.244 3.16a.75.75 0 0 1-.434-1.415l.034-.017c1.035-.517 2.2.418 1.92 1.54l-.508 2.03a.75.75 0 0 1 .434 1.414l-.034.016c-1.035.518-2.2-.417-1.92-1.54z"
+                    d="M8 2.3125C4.85888 2.3125 2.3125 4.85888 2.3125 8C2.3125 11.1411 4.85888 13.6875 8 13.6875C11.1411 13.6875 13.6875 11.1411 13.6875 8C13.6875 4.85888 11.1411 2.3125 8 2.3125ZM1 8C1 4.13401 4.13401 1 8 1C11.866 1 15 4.13401 15 8C15 11.866 11.866 15 8 15C4.13401 15 1 11.866 1 8ZM7.34375 5.35677C7.34375 4.99433 7.63756 4.70052 8 4.70052H8.00529C8.36772 4.70052 8.66154 4.99433 8.66154 5.35677V5.36206C8.66154 5.72449 8.36772 6.01831 8.00529 6.01831H8C7.63756 6.01831 7.34375 5.72449 7.34375 5.36206V5.35677ZM7.55734 8.12213C7.28751 8.1578 7.01294 8.02195 6.88439 7.76484C6.7223 7.44066 6.8537 7.04647 7.17787 6.88439L7.20711 6.86976C8.11256 6.41704 9.13206 7.23485 8.88653 8.21695L8.44266 9.99246C8.71249 9.95679 8.98705 10.0926 9.11561 10.3497C9.2777 10.6739 9.14631 11.0681 8.82214 11.2302L8.79289 11.2448L8.79289 11.2448C7.88744 11.6975 6.86794 10.8797 7.11347 9.89764L7.55734 8.12213Z"
+                    fill-rule="evenodd"
                   />
                 </svg>
                 75GB free on public images
@@ -16356,9 +16440,8 @@ exports[`OrderSummary > should work without unitInput 1`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   background-color: #f9f9fa;
-  border-inline: 1px solid #d9dadd;
   height: 100%;
-  width: 320px;
+  width: 20rem;
 }
 
 @media (min-width: 1440px) {
@@ -16662,7 +16745,6 @@ exports[`OrderSummary > should work without unitInput 1`] = `
   flex-wrap: nowrap;
   padding: 1.5rem;
   border-top: 1px solid #d9dadd;
-  overflow: hidden;
 }
 
 <div
@@ -16778,11 +16860,12 @@ exports[`OrderSummary > should work without unitInput 1`] = `
                 >
                   <svg
                     class="emotion-52 emotion-53"
-                    viewBox="0 0 20 20"
+                    viewBox="0 0 16 16"
                   >
                     <path
                       clip-rule="evenodd"
-                      d="M10 3.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13M2 10a8 8 0 1 1 16 0 8 8 0 0 1-16 0m7.25-3.02a.75.75 0 0 1 .75-.75h.006a.75.75 0 0 1 .75.75v.005a.75.75 0 0 1-.75.75H10a.75.75 0 0 1-.75-.75zm.244 3.16a.75.75 0 0 1-.434-1.415l.034-.017c1.035-.517 2.2.418 1.92 1.54l-.508 2.03a.75.75 0 0 1 .434 1.414l-.034.016c-1.035.518-2.2-.417-1.92-1.54z"
+                      d="M8 2.3125C4.85888 2.3125 2.3125 4.85888 2.3125 8C2.3125 11.1411 4.85888 13.6875 8 13.6875C11.1411 13.6875 13.6875 11.1411 13.6875 8C13.6875 4.85888 11.1411 2.3125 8 2.3125ZM1 8C1 4.13401 4.13401 1 8 1C11.866 1 15 4.13401 15 8C15 11.866 11.866 15 8 15C4.13401 15 1 11.866 1 8ZM7.34375 5.35677C7.34375 4.99433 7.63756 4.70052 8 4.70052H8.00529C8.36772 4.70052 8.66154 4.99433 8.66154 5.35677V5.36206C8.66154 5.72449 8.36772 6.01831 8.00529 6.01831H8C7.63756 6.01831 7.34375 5.72449 7.34375 5.36206V5.35677ZM7.55734 8.12213C7.28751 8.1578 7.01294 8.02195 6.88439 7.76484C6.7223 7.44066 6.8537 7.04647 7.17787 6.88439L7.20711 6.86976C8.11256 6.41704 9.13206 7.23485 8.88653 8.21695L8.44266 9.99246C8.71249 9.95679 8.98705 10.0926 9.11561 10.3497C9.2777 10.6739 9.14631 11.0681 8.82214 11.2302L8.79289 11.2448L8.79289 11.2448C7.88744 11.6975 6.86794 10.8797 7.11347 9.89764L7.55734 8.12213Z"
+                      fill-rule="evenodd"
                     />
                   </svg>
                   7 days of free backup
@@ -17134,11 +17217,12 @@ exports[`OrderSummary > should work without unitInput 1`] = `
               >
                 <svg
                   class="emotion-52 emotion-53"
-                  viewBox="0 0 20 20"
+                  viewBox="0 0 16 16"
                 >
                   <path
                     clip-rule="evenodd"
-                    d="M10 3.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13M2 10a8 8 0 1 1 16 0 8 8 0 0 1-16 0m7.25-3.02a.75.75 0 0 1 .75-.75h.006a.75.75 0 0 1 .75.75v.005a.75.75 0 0 1-.75.75H10a.75.75 0 0 1-.75-.75zm.244 3.16a.75.75 0 0 1-.434-1.415l.034-.017c1.035-.517 2.2.418 1.92 1.54l-.508 2.03a.75.75 0 0 1 .434 1.414l-.034.016c-1.035.518-2.2-.417-1.92-1.54z"
+                    d="M8 2.3125C4.85888 2.3125 2.3125 4.85888 2.3125 8C2.3125 11.1411 4.85888 13.6875 8 13.6875C11.1411 13.6875 13.6875 11.1411 13.6875 8C13.6875 4.85888 11.1411 2.3125 8 2.3125ZM1 8C1 4.13401 4.13401 1 8 1C11.866 1 15 4.13401 15 8C15 11.866 11.866 15 8 15C4.13401 15 1 11.866 1 8ZM7.34375 5.35677C7.34375 4.99433 7.63756 4.70052 8 4.70052H8.00529C8.36772 4.70052 8.66154 4.99433 8.66154 5.35677V5.36206C8.66154 5.72449 8.36772 6.01831 8.00529 6.01831H8C7.63756 6.01831 7.34375 5.72449 7.34375 5.36206V5.35677ZM7.55734 8.12213C7.28751 8.1578 7.01294 8.02195 6.88439 7.76484C6.7223 7.44066 6.8537 7.04647 7.17787 6.88439L7.20711 6.86976C8.11256 6.41704 9.13206 7.23485 8.88653 8.21695L8.44266 9.99246C8.71249 9.95679 8.98705 10.0926 9.11561 10.3497C9.2777 10.6739 9.14631 11.0681 8.82214 11.2302L8.79289 11.2448L8.79289 11.2448C7.88744 11.6975 6.86794 10.8797 7.11347 9.89764L7.55734 8.12213Z"
+                    fill-rule="evenodd"
                   />
                 </svg>
                 75GB free on public images
@@ -17224,9 +17308,8 @@ exports[`OrderSummary > works with negative category price 1`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   background-color: #f9f9fa;
-  border-inline: 1px solid #d9dadd;
   height: 100%;
-  width: 320px;
+  width: 20rem;
 }
 
 @media (min-width: 1440px) {
@@ -17256,9 +17339,8 @@ exports[`OrderSummary > works with negative category price 1`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   background-color: #f9f9fa;
-  border-inline: 1px solid #d9dadd;
   height: 100%;
-  width: 320px;
+  width: 20rem;
 }
 
 @media (min-width: 1440px) {
@@ -17371,7 +17453,13 @@ exports[`OrderSummary > works with negative category price 1`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   background-color: #ffffff;
-  width: 11rem;
+  width: 10rem;
+}
+
+@media (min-width: 1440px) {
+  .emotion-6 {
+    width: 11rem;
+  }
 }
 
 .emotion-6 {
@@ -17396,7 +17484,13 @@ exports[`OrderSummary > works with negative category price 1`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   background-color: #ffffff;
-  width: 11rem;
+  width: 10rem;
+}
+
+@media (min-width: 1440px) {
+  .emotion-6 {
+    width: 11rem;
+  }
 }
 
 .emotion-8 {
@@ -17902,6 +17996,7 @@ exports[`OrderSummary > works with negative category price 1`] = `
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  max-width: 65%;
 }
 
 .emotion-17 #unit {
@@ -17919,6 +18014,7 @@ exports[`OrderSummary > works with negative category price 1`] = `
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  max-width: 65%;
 }
 
 .emotion-17 #unit {
@@ -18678,7 +18774,6 @@ exports[`OrderSummary > works with negative category price 1`] = `
   flex-wrap: nowrap;
   padding: 1.5rem;
   border-top: 1px solid #d9dadd;
-  overflow: hidden;
 }
 
 .emotion-78 {
@@ -18704,7 +18799,6 @@ exports[`OrderSummary > works with negative category price 1`] = `
   flex-wrap: nowrap;
   padding: 1.5rem;
   border-top: 1px solid #d9dadd;
-  overflow: hidden;
 }
 
 <div
@@ -18760,8 +18854,8 @@ exports[`OrderSummary > works with negative category price 1`] = `
                 class="emotion-16 emotion-17 emotion-18"
               >
                 <div
-                  aria-controls=":rbi:"
-                  aria-describedby=":rbi:"
+                  aria-controls=":rbm:"
+                  aria-describedby=":rbm:"
                   class="emotion-19 emotion-20"
                   data-container-full-width="true"
                   tabindex="-1"
@@ -18794,11 +18888,11 @@ exports[`OrderSummary > works with negative category price 1`] = `
                         <svg
                           aria-label="show dropdown"
                           class="emotion-30 emotion-31"
-                          viewBox="0 0 20 20"
+                          viewBox="0 0 16 16"
                         >
                           <path
                             clip-rule="evenodd"
-                            d="M5.47 7.47a.75.75 0 0 1 1.06 0l3.72 3.72 3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.47 8.53a.75.75 0 0 1 0-1.06"
+                            d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
                             fill-rule="evenodd"
                           />
                         </svg>
