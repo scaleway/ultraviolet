@@ -185,7 +185,15 @@ describe('OrderSummary', () => {
 
   test('works with hideDetails', () =>
     renderWithTheme(
-      <OrderSummary header="summary" items={[categoryAZ]} hideDetails />,
+      <>
+        <OrderSummary header="summary" items={[categoryAZ]} hideDetails />{' '}
+        <OrderSummary
+          header="summary"
+          items={[categoryAZ]}
+          hideDetails
+          discount={0.5}
+        />
+      </>,
     ))
 
   test('works with negative category price', () => {
