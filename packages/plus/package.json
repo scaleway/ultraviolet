@@ -9,7 +9,6 @@
     "directory": "packages/plus"
   },
   "scripts": {
-    "prebuild": "shx rm -rf dist",
     "type:generate": "tsc --declaration -p tsconfig.build.json",
     "watch": "pnpm run '/^watch:.*/'",
     "watch:build": "vite build --config vite.config.ts --watch",
@@ -73,7 +72,7 @@
     "@babel/core": "7.26.10",
     "@emotion/react": "11.14.0",
     "@emotion/styled": "11.14.0",
-    "@types/react": "19.0.10",
+    "@types/react": "19.0.12",
     "@types/react-dom": "19.0.4",
     "@ultraviolet/illustrations": "workspace:*",
     "@utils/test": "workspace:*",

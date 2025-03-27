@@ -189,6 +189,7 @@ export const ListProvider = ({
       if (allRowSelectValue === false) {
         selectAll()
       }
+      setLastCheckedCheckbox(undefined)
     }, [allRowSelectValue, unselectAll, selectAll])
 
   const subscribeHandler = useCallback(() => {
@@ -264,8 +265,7 @@ export const ListProvider = ({
           selectRows(checkboxesInRange, currentCheckbox.checked) //  (un)selects the rows in the range
           setLastCheckedCheckbox(currentCheckbox.value)
         }
-      } else if (index === 0) setLastCheckedCheckbox(undefined)
-
+      }
       /**
        * Handle the case when there is multiple selected value during a time, and the user click without shift event
        */
