@@ -184,9 +184,9 @@ describe('OrderSummary', () => {
   })
 
   test('works with hideDetails', () =>
-    renderWithTheme(
+    shouldMatchEmotionSnapshot(
       <>
-        <OrderSummary header="summary" items={[categoryAZ]} hideDetails />{' '}
+        <OrderSummary header="summary" items={[categoryAZ]} hideDetails />
         <OrderSummary
           header="summary"
           items={[categoryAZ]}
