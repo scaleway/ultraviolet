@@ -26,7 +26,7 @@ const mockItems = (
       {
         title: `${requestsAmount} requests`,
         price: 0.00000015,
-        amount: requestsAmount,
+        amount: requestsAmount ?? 0,
         priceUnit: 'request',
         fixedPrice: true,
       },
