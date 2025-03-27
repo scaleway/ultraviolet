@@ -135,9 +135,12 @@ const SubCategory = ({ subCategory }: { subCategory: SubCategoryType }) => {
         ) : null}
         {subCategory.price !== undefined && !subCategory.hidePrice ? (
           <Text as="span" variant="bodySmallStrong" sentiment="neutral">
-            {subCategoryPrice[0] === subCategoryPrice[1]
+            {subCategoryPrice[0] === subCategoryPrice[1] ||
+            subCategory.priceUnit
               ? formatNumber(
-                  subCategoryPrice[0],
+                  subCategory.priceUnit
+                    ? subCategory.price
+                    : subCategoryPrice[0],
                   localeFormat,
                   currency,
                   fractionDigits,
