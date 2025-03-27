@@ -1,5 +1,26 @@
 # Change Log
 
+## 1.91.0
+
+### Minor Changes
+
+- [#4918](https://github.com/scaleway/ultraviolet/pull/4918) [`747a788`](https://github.com/scaleway/ultraviolet/commit/747a788f6767814b0fde4e2f51becece9a11bb86) Thanks [@lisalupi](https://github.com/lisalupi)! - Prop `name` required in form, but not in UI
+
+### Patch Changes
+
+- [#4930](https://github.com/scaleway/ultraviolet/pull/4930) [`d0a2c76`](https://github.com/scaleway/ultraviolet/commit/d0a2c767f9600328b1113730f0ab12f2e4f17c1d) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `19.0.12`.
+
+- [#4896](https://github.com/scaleway/ultraviolet/pull/4896) [`e3702b4`](https://github.com/scaleway/ultraviolet/commit/e3702b4186517a94f1900f516105fe9837b1ff34) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@babel/core` to `7.26.10`.
+  Updated dependency `@babel/eslint-parser` to `7.26.10`.
+  Updated dependency `@babel/plugin-transform-runtime` to `7.26.10`.
+
+- [#4913](https://github.com/scaleway/ultraviolet/pull/4913) [`ba74625`](https://github.com/scaleway/ultraviolet/commit/ba74625349f2bf2196784a3e9b2a71ab9663ce2c) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<TagList />` to handle better the popover
+
+- [#4943](https://github.com/scaleway/ultraviolet/pull/4943) [`4840a0d`](https://github.com/scaleway/ultraviolet/commit/4840a0dc8ec320560fddd4a1e117bb124e2365d1) Thanks [@lisalupi](https://github.com/lisalupi)! - Fix non-selectable checkbox on `<Table />` and `<List />`
+
+- Updated dependencies [[`d0a2c76`](https://github.com/scaleway/ultraviolet/commit/d0a2c767f9600328b1113730f0ab12f2e4f17c1d), [`e3702b4`](https://github.com/scaleway/ultraviolet/commit/e3702b4186517a94f1900f516105fe9837b1ff34)]:
+  - @ultraviolet/icons@3.12.2
+
 ## 1.90.4
 
 ### Patch Changes
