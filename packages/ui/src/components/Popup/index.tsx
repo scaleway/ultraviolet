@@ -117,6 +117,11 @@ const StyledPopup = styled('div', {
 const StyledChildrenContainer = styled.div`
   display: inherit;
 
+
+  &[data-container-full-height="true"] {
+    height: 100%;
+  }
+
   &[data-container-full-width="true"] {
     width: 100%;
   }
@@ -155,6 +160,10 @@ type PopupProps = {
    * It will add `width: 100%` to the popup container.
    */
   containerFullWidth?: boolean
+  /**
+   * It will add `height: 100%` to the popup container.
+   */
+  containerFullHeight?: boolean
   /**
    * It will force display popup. This can be useful if you need to always display the popup without hover needed.
    */
@@ -207,6 +216,7 @@ export const Popup = forwardRef(
       id,
       className,
       containerFullWidth,
+      containerFullHeight,
       maxWidth = '14.5rem',
       maxHeight,
       visible,
@@ -555,6 +565,7 @@ export const Popup = forwardRef(
             onKeyDown?.(event)
           }}
           data-container-full-width={containerFullWidth}
+          data-container-full-height={containerFullHeight}
           aria-haspopup={ariaHasPopup}
         >
           {children}
@@ -563,6 +574,7 @@ export const Popup = forwardRef(
     }, [
       ariaHasPopup,
       children,
+      containerFullHeight,
       containerFullWidth,
       generatedId,
       isControlled,

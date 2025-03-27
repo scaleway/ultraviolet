@@ -18,6 +18,7 @@ type TooltipProps = Pick<
   | 'role'
   | 'data-testid'
   | 'containerFullWidth'
+  | 'containerFullHeight'
   | 'portalTarget'
   | 'tabIndex'
   | 'debounceDelay'
@@ -40,6 +41,7 @@ export const Tooltip = forwardRef(
       id,
       className,
       containerFullWidth,
+      containerFullHeight,
       maxWidth = 232,
       visible,
       innerRef,
@@ -58,6 +60,7 @@ export const Tooltip = forwardRef(
       data-testid={dataTestId}
       className={className}
       containerFullWidth={containerFullWidth}
+      containerFullHeight={containerFullHeight}
       maxWidth={maxWidth}
       visible={visible}
       placement={placement}
