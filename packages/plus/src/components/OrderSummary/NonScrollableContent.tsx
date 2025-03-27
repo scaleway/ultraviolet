@@ -9,7 +9,6 @@ import type { PriceTypeSingle, TimeUnit } from './types'
 const NonScrollableContainer = styled(Stack)`
 padding: ${({ theme }) => theme.space[3]};
 border-top: 1px solid ${({ theme }) => theme.colors.neutral.border};
-overflow: hidden;
 `
 
 type NonScrollableContentProps = {
