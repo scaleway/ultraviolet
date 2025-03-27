@@ -26,6 +26,10 @@ export const UnitInputField = <
   onChangeUnitValue,
   label = '',
   required,
+  width,
+  selectInputWidth,
+  selectInputMaxWidth,
+  helper,
   shouldUnregister = false,
   validate,
   control,
@@ -72,6 +76,10 @@ export const UnitInputField = <
       }}
       value={valueField.value as number}
       unitValue={unitField.value as string}
+      selectInputWidth={selectInputWidth}
+      selectInputMaxWidth={selectInputMaxWidth}
+      disabled={disabled}
+      options={options}
       label={label}
     />
   )
