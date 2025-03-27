@@ -13,7 +13,7 @@ import { Stack } from '../Stack'
 import { Text } from '../Text'
 
 type RadioGroupContextType = {
-  groupName: string
+  groupName?: string
   groupValue: string | number
   error: boolean
 } & Required<Pick<InputHTMLAttributes<HTMLInputElement>, 'onChange'>> &
@@ -96,8 +96,8 @@ type RadioGroupProps = {
   direction?: 'row' | 'column'
   children: ReactNode
   description?: ReactNode
-} & Required<Pick<InputHTMLAttributes<HTMLInputElement>, 'onChange' | 'name'>> &
-  Pick<InputHTMLAttributes<HTMLInputElement>, 'required'>
+} & Required<Pick<InputHTMLAttributes<HTMLInputElement>, 'onChange'>> &
+  Pick<InputHTMLAttributes<HTMLInputElement>, 'required' | 'name'>
 
 /**
  * RadioGroup is a component that allows users to select one option from a list of options using radio.

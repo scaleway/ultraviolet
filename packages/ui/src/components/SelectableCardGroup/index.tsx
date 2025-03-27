@@ -14,7 +14,7 @@ import { Stack } from '../Stack'
 import { Text } from '../Text'
 
 type SelectableCardGroupContextType = {
-  groupName: string
+  groupName?: string
   groupValue: string | number | (string | number)[]
   type: 'radio' | 'checkbox'
   showTick: boolean
@@ -102,7 +102,8 @@ type SelectableCardGroupProps = {
   type: 'radio' | 'checkbox'
   required?: boolean
   showTick?: boolean
-} & Required<Pick<InputHTMLAttributes<HTMLInputElement>, 'onChange' | 'name'>>
+  name?: string
+} & Required<Pick<InputHTMLAttributes<HTMLInputElement>, 'onChange'>>
 
 /**
  * SelectableCardGroup is a component that allows users to select cards from a list of cards using SelectableCard.
