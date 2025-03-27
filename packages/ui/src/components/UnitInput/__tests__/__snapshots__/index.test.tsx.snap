@@ -519,6 +519,7 @@ exports[`UnitInput > renders click 1`] = `
 .emotion-9 {
   width: 100%;
   width: 12.6rem;
+  max-width: 12.6rem;
 }
 
 .emotion-9 #unit {
@@ -534,6 +535,7 @@ exports[`UnitInput > renders click 1`] = `
 .emotion-9 {
   width: 100%;
   width: 12.6rem;
+  max-width: 12.6rem;
 }
 
 .emotion-9 #unit {
@@ -1115,153 +1117,148 @@ exports[`UnitInput > renders click 1`] = `
           />
         </div>
         <div
-          class="emotion-8 emotion-9"
-          width="12.6rem"
+          aria-label="test-unit"
+          class="emotion-8 emotion-9 emotion-10"
         >
           <div
-            aria-label="test-unit"
-            class="emotion-10 emotion-11 emotion-12"
+            aria-controls=":rm:"
+            aria-describedby=":rm:"
+            class="emotion-11 emotion-12"
+            data-container-full-width="true"
+            tabindex="-1"
           >
             <div
-              aria-controls="«rm»"
-              aria-describedby="«rm»"
-              class="emotion-13 emotion-14"
-              data-container-full-width="true"
-              tabindex="-1"
+              class="emotion-0 emotion-1"
             >
               <div
-                class="emotion-0 emotion-1"
+                aria-expanded="true"
+                aria-haspopup="listbox"
+                class="emotion-15 emotion-16"
+                data-disabled="false"
+                data-dropdownvisible="true"
+                data-readonly="false"
+                data-size="medium"
+                data-state="neutral"
+                data-testid="select-input-test-unit"
+                id="unit"
+                role="combobox"
+                tabindex="0"
               >
-                <div
-                  aria-expanded="true"
-                  aria-haspopup="listbox"
-                  class="emotion-17 emotion-18"
-                  data-disabled="false"
-                  data-dropdownvisible="true"
-                  data-readonly="false"
-                  data-size="medium"
-                  data-state="neutral"
-                  data-testid="select-input-test-unit"
-                  id="unit"
-                  role="combobox"
-                  tabindex="0"
+                <p
+                  class="emotion-17 emotion-18 emotion-19"
                 >
-                  <p
-                    class="emotion-19 emotion-20 emotion-21"
-                  >
-                    Select item
-                  </p>
-                  <div
+                  Select item
+                </p>
+                <div
+                  class="emotion-20 emotion-21"
+                >
+                  <svg
+                    aria-label="show dropdown"
                     class="emotion-22 emotion-23"
+                    viewBox="0 0 16 16"
                   >
-                    <svg
-                      aria-label="show dropdown"
-                      class="emotion-24 emotion-25"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        clip-rule="evenodd"
-                        d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
-                  </div>
+                    <path
+                      clip-rule="evenodd"
+                      d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
                 </div>
               </div>
+            </div>
+            <div
+              class="emotion-24 emotion-25 emotion-26"
+              data-animated="false"
+              data-has-arrow="false"
+              id=":rm:"
+              role="dialog"
+              style="opacity: 1;"
+            >
               <div
-                class="emotion-26 emotion-27 emotion-28"
-                data-animated="false"
-                data-has-arrow="false"
-                id="«rm»"
-                role="dialog"
-                style="opacity: 1;"
+                class="emotion-27 emotion-1"
               >
                 <div
-                  class="emotion-29 emotion-1"
+                  class="emotion-29 emotion-30"
+                  data-grouped="false"
+                  id="select-dropdown"
+                  role="listbox"
                 >
                   <div
-                    class="emotion-31 emotion-32"
-                    data-grouped="false"
-                    id="select-dropdown"
-                    role="listbox"
+                    class="emotion-31 emotion-1"
+                    id="items"
                   >
                     <div
-                      class="emotion-33 emotion-1"
-                      id="items"
+                      aria-disabled="false"
+                      aria-label="kb"
+                      aria-selected="false"
+                      class="emotion-33 emotion-34"
+                      data-testid="option-kb"
+                      id="option-0"
+                      role="option"
+                      tabindex="0"
                     >
                       <div
-                        aria-disabled="false"
-                        aria-label="kb"
-                        aria-selected="false"
-                        class="emotion-35 emotion-36"
-                        data-testid="option-kb"
-                        id="option-0"
-                        role="option"
-                        tabindex="0"
+                        class="emotion-0 emotion-1"
+                        data-testid="option-stack-kb"
                       >
                         <div
-                          class="emotion-0 emotion-1"
-                          data-testid="option-stack-kb"
+                          class="emotion-37 emotion-38"
                         >
-                          <div
-                            class="emotion-39 emotion-40"
+                          <span
+                            class="emotion-39 emotion-40 emotion-19"
                           >
-                            <span
-                              class="emotion-41 emotion-42 emotion-21"
-                            >
-                              KB
-                            </span>
-                          </div>
+                            KB
+                          </span>
                         </div>
                       </div>
+                    </div>
+                    <div
+                      aria-disabled="false"
+                      aria-label="mb"
+                      aria-selected="false"
+                      class="emotion-33 emotion-34"
+                      data-testid="option-mb"
+                      id="option-1"
+                      role="option"
+                      tabindex="0"
+                    >
                       <div
-                        aria-disabled="false"
-                        aria-label="mb"
-                        aria-selected="false"
-                        class="emotion-35 emotion-36"
-                        data-testid="option-mb"
-                        id="option-1"
-                        role="option"
-                        tabindex="0"
+                        class="emotion-0 emotion-1"
+                        data-testid="option-stack-mb"
                       >
                         <div
-                          class="emotion-0 emotion-1"
-                          data-testid="option-stack-mb"
+                          class="emotion-37 emotion-38"
                         >
-                          <div
-                            class="emotion-39 emotion-40"
+                          <span
+                            class="emotion-39 emotion-40 emotion-19"
                           >
-                            <span
-                              class="emotion-41 emotion-42 emotion-21"
-                            >
-                              MB
-                            </span>
-                          </div>
+                            MB
+                          </span>
                         </div>
                       </div>
+                    </div>
+                    <div
+                      aria-disabled="false"
+                      aria-label="gb"
+                      aria-selected="false"
+                      class="emotion-33 emotion-34"
+                      data-testid="option-gb"
+                      id="option-2"
+                      role="option"
+                      tabindex="0"
+                    >
                       <div
-                        aria-disabled="false"
-                        aria-label="gb"
-                        aria-selected="false"
-                        class="emotion-35 emotion-36"
-                        data-testid="option-gb"
-                        id="option-2"
-                        role="option"
-                        tabindex="0"
+                        class="emotion-0 emotion-1"
+                        data-testid="option-stack-gb"
                       >
                         <div
-                          class="emotion-0 emotion-1"
-                          data-testid="option-stack-gb"
+                          class="emotion-37 emotion-38"
                         >
-                          <div
-                            class="emotion-39 emotion-40"
+                          <span
+                            class="emotion-39 emotion-40 emotion-19"
                           >
-                            <span
-                              class="emotion-41 emotion-42 emotion-21"
-                            >
-                              GB
-                            </span>
-                          </div>
+                            GB
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -1530,6 +1527,7 @@ exports[`UnitInput > renders with default props 1`] = `
 .emotion-9 {
   width: 100%;
   width: 12.6rem;
+  max-width: 12.6rem;
 }
 
 .emotion-9 #unit {
@@ -1737,57 +1735,52 @@ exports[`UnitInput > renders with default props 1`] = `
           />
         </div>
         <div
-          class="emotion-8 emotion-9"
-          width="12.6rem"
+          aria-label="test-unit"
+          class="emotion-8 emotion-9 emotion-10"
         >
           <div
-            aria-label="test-unit"
-            class="emotion-10 emotion-11 emotion-12"
+            aria-controls=":r2:"
+            aria-describedby=":r2:"
+            class="emotion-11 emotion-12"
+            data-container-full-width="true"
+            tabindex="-1"
           >
             <div
-              aria-controls="«r2»"
-              aria-describedby="«r2»"
-              class="emotion-13 emotion-14"
-              data-container-full-width="true"
-              tabindex="-1"
+              class="emotion-0 emotion-1"
             >
               <div
-                class="emotion-0 emotion-1"
+                aria-expanded="false"
+                aria-haspopup="listbox"
+                class="emotion-15 emotion-16"
+                data-disabled="false"
+                data-dropdownvisible="false"
+                data-readonly="false"
+                data-size="large"
+                data-state="neutral"
+                data-testid="select-input-test-unit"
+                id="unit"
+                role="combobox"
+                tabindex="0"
               >
-                <div
-                  aria-expanded="false"
-                  aria-haspopup="listbox"
-                  class="emotion-17 emotion-18"
-                  data-disabled="false"
-                  data-dropdownvisible="false"
-                  data-readonly="false"
-                  data-size="large"
-                  data-state="neutral"
-                  data-testid="select-input-test-unit"
-                  id="unit"
-                  role="combobox"
-                  tabindex="0"
+                <p
+                  class="emotion-17 emotion-18 emotion-19"
                 >
-                  <p
-                    class="emotion-19 emotion-20 emotion-21"
-                  >
-                    Select item
-                  </p>
-                  <div
+                  Select item
+                </p>
+                <div
+                  class="emotion-20 emotion-21"
+                >
+                  <svg
+                    aria-label="show dropdown"
                     class="emotion-22 emotion-23"
+                    viewBox="0 0 16 16"
                   >
-                    <svg
-                      aria-label="show dropdown"
-                      class="emotion-24 emotion-25"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        clip-rule="evenodd"
-                        d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
-                  </div>
+                    <path
+                      clip-rule="evenodd"
+                      d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
                 </div>
               </div>
             </div>
@@ -2347,6 +2340,7 @@ exports[`UnitInput > renders with default value 1`] = `
 .emotion-16 {
   width: 100%;
   width: 12.6rem;
+  max-width: 12.6rem;
 }
 
 .emotion-16 #unit {
@@ -2362,6 +2356,7 @@ exports[`UnitInput > renders with default value 1`] = `
 .emotion-16 {
   width: 100%;
   width: 12.6rem;
+  max-width: 12.6rem;
 }
 
 .emotion-16 #unit {
@@ -2712,57 +2707,52 @@ exports[`UnitInput > renders with default value 1`] = `
           />
         </div>
         <div
-          class="emotion-15 emotion-16"
-          width="12.6rem"
+          aria-label="test-unit"
+          class="emotion-15 emotion-16 emotion-17"
         >
           <div
-            aria-label="test-unit"
-            class="emotion-17 emotion-18 emotion-19"
+            aria-controls=":r36:"
+            aria-describedby=":r36:"
+            class="emotion-18 emotion-19"
+            data-container-full-width="true"
+            tabindex="-1"
           >
             <div
-              aria-controls="«r3b»"
-              aria-describedby="«r3b»"
-              class="emotion-20 emotion-21"
-              data-container-full-width="true"
-              tabindex="-1"
+              class="emotion-0 emotion-1"
             >
               <div
-                class="emotion-0 emotion-1"
+                aria-expanded="false"
+                aria-haspopup="listbox"
+                class="emotion-22 emotion-23"
+                data-disabled="true"
+                data-dropdownvisible="false"
+                data-readonly="false"
+                data-size="large"
+                data-state="neutral"
+                data-testid="select-input-test-unit"
+                id="unit"
+                role="combobox"
+                tabindex="0"
               >
                 <div
-                  aria-expanded="false"
-                  aria-haspopup="listbox"
-                  class="emotion-24 emotion-25"
-                  data-disabled="true"
-                  data-dropdownvisible="false"
-                  data-readonly="false"
-                  data-size="large"
-                  data-state="neutral"
-                  data-testid="select-input-test-unit"
-                  id="unit"
-                  role="combobox"
-                  tabindex="0"
+                  class="emotion-24 emotion-25 emotion-6"
                 >
-                  <div
-                    class="emotion-26 emotion-27 emotion-6"
-                  >
-                    KB
-                  </div>
-                  <div
+                  KB
+                </div>
+                <div
+                  class="emotion-27 emotion-28"
+                >
+                  <svg
+                    aria-label="show dropdown"
                     class="emotion-29 emotion-30"
+                    viewBox="0 0 16 16"
                   >
-                    <svg
-                      aria-label="show dropdown"
-                      class="emotion-31 emotion-32"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        clip-rule="evenodd"
-                        d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
-                  </div>
+                    <path
+                      clip-rule="evenodd"
+                      d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
                 </div>
               </div>
             </div>
@@ -3275,6 +3265,7 @@ exports[`UnitInput > renders with disabled and placeHolder 1`] = `
 .emotion-9 {
   width: 100%;
   width: 12.6rem;
+  max-width: 12.6rem;
 }
 
 .emotion-9 #unit {
@@ -3290,6 +3281,7 @@ exports[`UnitInput > renders with disabled and placeHolder 1`] = `
 .emotion-9 {
   width: 100%;
   width: 12.6rem;
+  max-width: 12.6rem;
 }
 
 .emotion-9 #unit {
@@ -3636,59 +3628,53 @@ exports[`UnitInput > renders with disabled and placeHolder 1`] = `
             type="number"
           />
         </div>
-         
         <div
-          class="emotion-8 emotion-9"
-          width="12.6rem"
+          aria-label="test-unit"
+          class="emotion-8 emotion-9 emotion-10"
         >
           <div
-            aria-label="test-unit"
-            class="emotion-10 emotion-11 emotion-12"
+            aria-controls=":r16:"
+            aria-describedby=":r16:"
+            class="emotion-11 emotion-12"
+            data-container-full-width="true"
+            tabindex="-1"
           >
             <div
-              aria-controls="«r16»"
-              aria-describedby="«r16»"
-              class="emotion-13 emotion-14"
-              data-container-full-width="true"
-              tabindex="-1"
+              class="emotion-0 emotion-1"
             >
               <div
-                class="emotion-0 emotion-1"
+                aria-expanded="false"
+                aria-haspopup="listbox"
+                class="emotion-15 emotion-16"
+                data-disabled="true"
+                data-dropdownvisible="false"
+                data-readonly="false"
+                data-size="large"
+                data-state="neutral"
+                data-testid="select-input-test-unit"
+                id="unit"
+                role="combobox"
+                tabindex="0"
               >
-                <div
-                  aria-expanded="false"
-                  aria-haspopup="listbox"
-                  class="emotion-17 emotion-18"
-                  data-disabled="false"
-                  data-dropdownvisible="false"
-                  data-readonly="false"
-                  data-size="large"
-                  data-state="neutral"
-                  data-testid="select-input-test-unit"
-                  id="unit"
-                  role="combobox"
-                  tabindex="0"
+                <p
+                  class="emotion-17 emotion-18 emotion-19"
                 >
-                  <p
-                    class="emotion-19 emotion-20 emotion-21"
-                  >
-                    Select item
-                  </p>
-                  <div
+                  Select item
+                </p>
+                <div
+                  class="emotion-20 emotion-21"
+                >
+                  <svg
+                    aria-label="show dropdown"
                     class="emotion-22 emotion-23"
+                    viewBox="0 0 16 16"
                   >
-                    <svg
-                      aria-label="show dropdown"
-                      class="emotion-24 emotion-25"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        clip-rule="evenodd"
-                        d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
-                  </div>
+                    <path
+                      clip-rule="evenodd"
+                      d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
                 </div>
               </div>
             </div>
@@ -4215,6 +4201,7 @@ exports[`UnitInput > renders with error  and success 1`] = `
 .emotion-11 {
   width: 100%;
   width: 12.6rem;
+  max-width: 12.6rem;
 }
 
 .emotion-11 #unit {
@@ -4230,6 +4217,7 @@ exports[`UnitInput > renders with error  and success 1`] = `
 .emotion-11 {
   width: 100%;
   width: 12.6rem;
+  max-width: 12.6rem;
 }
 
 .emotion-11 #unit {
@@ -5616,57 +5604,52 @@ exports[`UnitInput > renders with error  and success 1`] = `
           </svg>
         </div>
         <div
-          class="emotion-10 emotion-11"
-          width="12.6rem"
+          aria-label="test-unit"
+          class="emotion-10 emotion-11 emotion-12"
         >
           <div
-            aria-label="test-unit"
-            class="emotion-12 emotion-13 emotion-14"
+            aria-controls=":r1n:"
+            aria-describedby=":r1n:"
+            class="emotion-13 emotion-14"
+            data-container-full-width="true"
+            tabindex="-1"
           >
             <div
-              aria-controls="«r1s»"
-              aria-describedby="«r1s»"
-              class="emotion-15 emotion-16"
-              data-container-full-width="true"
-              tabindex="-1"
+              class="emotion-0 emotion-1"
             >
               <div
-                class="emotion-0 emotion-1"
+                aria-expanded="false"
+                aria-haspopup="listbox"
+                class="emotion-17 emotion-18"
+                data-disabled="false"
+                data-dropdownvisible="false"
+                data-readonly="false"
+                data-size="large"
+                data-state="neutral"
+                data-testid="select-input-test-unit"
+                id="unit"
+                role="combobox"
+                tabindex="0"
               >
-                <div
-                  aria-expanded="false"
-                  aria-haspopup="listbox"
-                  class="emotion-19 emotion-20"
-                  data-disabled="false"
-                  data-dropdownvisible="false"
-                  data-readonly="false"
-                  data-size="large"
-                  data-state="neutral"
-                  data-testid="select-input-test-unit"
-                  id="unit"
-                  role="combobox"
-                  tabindex="0"
+                <p
+                  class="emotion-19 emotion-20 emotion-21"
                 >
-                  <p
-                    class="emotion-21 emotion-22 emotion-23"
+                  Select item
+                </p>
+                <div
+                  class="emotion-22 emotion-23"
+                >
+                  <svg
+                    aria-label="show dropdown"
+                    class="emotion-24 emotion-9"
+                    viewBox="0 0 16 16"
                   >
-                    Select item
-                  </p>
-                  <div
-                    class="emotion-24 emotion-25"
-                  >
-                    <svg
-                      aria-label="show dropdown"
-                      class="emotion-26 emotion-9"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        clip-rule="evenodd"
-                        d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
-                  </div>
+                    <path
+                      clip-rule="evenodd"
+                      d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
                 </div>
               </div>
             </div>
@@ -6196,6 +6179,7 @@ exports[`UnitInput > renders with error 1`] = `
 .emotion-11 {
   width: 100%;
   width: 12.6rem;
+  max-width: 12.6rem;
 }
 
 .emotion-11 #unit {
@@ -6211,6 +6195,7 @@ exports[`UnitInput > renders with error 1`] = `
 .emotion-11 {
   width: 100%;
   width: 12.6rem;
+  max-width: 12.6rem;
 }
 
 .emotion-11 #unit {
@@ -6584,57 +6569,52 @@ exports[`UnitInput > renders with error 1`] = `
           </svg>
         </div>
         <div
-          class="emotion-10 emotion-11"
-          width="12.6rem"
+          aria-label="test-unit"
+          class="emotion-10 emotion-11 emotion-12"
         >
           <div
-            aria-label="test-unit"
-            class="emotion-12 emotion-13 emotion-14"
+            aria-controls=":r1h:"
+            aria-describedby=":r1h:"
+            class="emotion-13 emotion-14"
+            data-container-full-width="true"
+            tabindex="-1"
           >
             <div
-              aria-controls="«r1m»"
-              aria-describedby="«r1m»"
-              class="emotion-15 emotion-16"
-              data-container-full-width="true"
-              tabindex="-1"
+              class="emotion-0 emotion-1"
             >
               <div
-                class="emotion-0 emotion-1"
+                aria-expanded="false"
+                aria-haspopup="listbox"
+                class="emotion-17 emotion-18"
+                data-disabled="false"
+                data-dropdownvisible="false"
+                data-readonly="false"
+                data-size="large"
+                data-state="neutral"
+                data-testid="select-input-test-unit"
+                id="unit"
+                role="combobox"
+                tabindex="0"
               >
-                <div
-                  aria-expanded="false"
-                  aria-haspopup="listbox"
-                  class="emotion-19 emotion-20"
-                  data-disabled="false"
-                  data-dropdownvisible="false"
-                  data-readonly="false"
-                  data-size="large"
-                  data-state="neutral"
-                  data-testid="select-input-test-unit"
-                  id="unit"
-                  role="combobox"
-                  tabindex="0"
+                <p
+                  class="emotion-19 emotion-20 emotion-21"
                 >
-                  <p
-                    class="emotion-21 emotion-22 emotion-23"
+                  Select item
+                </p>
+                <div
+                  class="emotion-22 emotion-23"
+                >
+                  <svg
+                    aria-label="show dropdown"
+                    class="emotion-24 emotion-9"
+                    viewBox="0 0 16 16"
                   >
-                    Select item
-                  </p>
-                  <div
-                    class="emotion-24 emotion-25"
-                  >
-                    <svg
-                      aria-label="show dropdown"
-                      class="emotion-26 emotion-9"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        clip-rule="evenodd"
-                        d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
-                  </div>
+                    <path
+                      clip-rule="evenodd"
+                      d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
                 </div>
               </div>
             </div>
@@ -7199,6 +7179,7 @@ exports[`UnitInput > renders with label and label information 1`] = `
 .emotion-16 {
   width: 100%;
   width: 12.6rem;
+  max-width: 12.6rem;
 }
 
 .emotion-16 #unit {
@@ -7214,6 +7195,7 @@ exports[`UnitInput > renders with label and label information 1`] = `
 .emotion-16 {
   width: 100%;
   width: 12.6rem;
+  max-width: 12.6rem;
 }
 
 .emotion-16 #unit {
@@ -7566,57 +7548,52 @@ exports[`UnitInput > renders with label and label information 1`] = `
           />
         </div>
         <div
-          class="emotion-15 emotion-16"
-          width="12.6rem"
+          aria-label="test-unit"
+          class="emotion-15 emotion-16 emotion-17"
         >
           <div
-            aria-label="test-unit"
-            class="emotion-17 emotion-18 emotion-19"
+            aria-controls=":r2o:"
+            aria-describedby=":r2o:"
+            class="emotion-18 emotion-19"
+            data-container-full-width="true"
+            tabindex="-1"
           >
             <div
-              aria-controls="«r2t»"
-              aria-describedby="«r2t»"
-              class="emotion-20 emotion-21"
-              data-container-full-width="true"
-              tabindex="-1"
+              class="emotion-0 emotion-1"
             >
               <div
-                class="emotion-0 emotion-1"
+                aria-expanded="false"
+                aria-haspopup="listbox"
+                class="emotion-22 emotion-23"
+                data-disabled="true"
+                data-dropdownvisible="false"
+                data-readonly="false"
+                data-size="large"
+                data-state="neutral"
+                data-testid="select-input-test-unit"
+                id="unit"
+                role="combobox"
+                tabindex="0"
               >
-                <div
-                  aria-expanded="false"
-                  aria-haspopup="listbox"
-                  class="emotion-24 emotion-25"
-                  data-disabled="true"
-                  data-dropdownvisible="false"
-                  data-readonly="false"
-                  data-size="large"
-                  data-state="neutral"
-                  data-testid="select-input-test-unit"
-                  id="unit"
-                  role="combobox"
-                  tabindex="0"
+                <p
+                  class="emotion-24 emotion-25 emotion-6"
                 >
-                  <p
-                    class="emotion-26 emotion-27 emotion-6"
-                  >
-                    Select item
-                  </p>
-                  <div
+                  Select item
+                </p>
+                <div
+                  class="emotion-27 emotion-28"
+                >
+                  <svg
+                    aria-label="show dropdown"
                     class="emotion-29 emotion-30"
+                    viewBox="0 0 16 16"
                   >
-                    <svg
-                      aria-label="show dropdown"
-                      class="emotion-31 emotion-32"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        clip-rule="evenodd"
-                        d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
-                  </div>
+                    <path
+                      clip-rule="evenodd"
+                      d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
                 </div>
               </div>
             </div>
@@ -8142,6 +8119,7 @@ exports[`UnitInput > renders with label and no label information 1`] = `
 .emotion-12 {
   width: 100%;
   width: 12.6rem;
+  max-width: 12.6rem;
 }
 
 .emotion-12 #unit {
@@ -8157,6 +8135,7 @@ exports[`UnitInput > renders with label and no label information 1`] = `
 .emotion-12 {
   width: 100%;
   width: 12.6rem;
+  max-width: 12.6rem;
 }
 
 .emotion-12 #unit {
@@ -8500,57 +8479,52 @@ exports[`UnitInput > renders with label and no label information 1`] = `
           />
         </div>
         <div
-          class="emotion-11 emotion-12"
-          width="12.6rem"
+          aria-label="test-unit"
+          class="emotion-11 emotion-12 emotion-13"
         >
           <div
-            aria-label="test-unit"
-            class="emotion-13 emotion-14 emotion-15"
+            aria-controls=":r2h:"
+            aria-describedby=":r2h:"
+            class="emotion-14 emotion-15"
+            data-container-full-width="true"
+            tabindex="-1"
           >
             <div
-              aria-controls="«r2m»"
-              aria-describedby="«r2m»"
-              class="emotion-16 emotion-17"
-              data-container-full-width="true"
-              tabindex="-1"
+              class="emotion-0 emotion-1"
             >
               <div
-                class="emotion-0 emotion-1"
+                aria-expanded="false"
+                aria-haspopup="listbox"
+                class="emotion-18 emotion-19"
+                data-disabled="true"
+                data-dropdownvisible="false"
+                data-readonly="false"
+                data-size="large"
+                data-state="neutral"
+                data-testid="select-input-test-unit"
+                id="unit"
+                role="combobox"
+                tabindex="0"
               >
-                <div
-                  aria-expanded="false"
-                  aria-haspopup="listbox"
-                  class="emotion-20 emotion-21"
-                  data-disabled="true"
-                  data-dropdownvisible="false"
-                  data-readonly="false"
-                  data-size="large"
-                  data-state="neutral"
-                  data-testid="select-input-test-unit"
-                  id="unit"
-                  role="combobox"
-                  tabindex="0"
+                <p
+                  class="emotion-20 emotion-21 emotion-4"
                 >
-                  <p
-                    class="emotion-22 emotion-23 emotion-4"
-                  >
-                    Select item
-                  </p>
-                  <div
+                  Select item
+                </p>
+                <div
+                  class="emotion-23 emotion-24"
+                >
+                  <svg
+                    aria-label="show dropdown"
                     class="emotion-25 emotion-26"
+                    viewBox="0 0 16 16"
                   >
-                    <svg
-                      aria-label="show dropdown"
-                      class="emotion-27 emotion-28"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        clip-rule="evenodd"
-                        d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
-                  </div>
+                    <path
+                      clip-rule="evenodd"
+                      d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
                 </div>
               </div>
             </div>
@@ -8815,6 +8789,7 @@ exports[`UnitInput > renders with min max 1`] = `
 .emotion-9 {
   width: 100%;
   width: 12.6rem;
+  max-width: 12.6rem;
 }
 
 .emotion-9 #unit {
@@ -9022,57 +8997,52 @@ exports[`UnitInput > renders with min max 1`] = `
           />
         </div>
         <div
-          class="emotion-8 emotion-9"
-          width="12.6rem"
+          aria-label="-unit"
+          class="emotion-8 emotion-9 emotion-10"
         >
           <div
-            aria-label="-unit"
-            class="emotion-10 emotion-11 emotion-12"
+            aria-controls=":r7:"
+            aria-describedby=":r7:"
+            class="emotion-11 emotion-12"
+            data-container-full-width="true"
+            tabindex="-1"
           >
             <div
-              aria-controls="«r7»"
-              aria-describedby="«r7»"
-              class="emotion-13 emotion-14"
-              data-container-full-width="true"
-              tabindex="-1"
+              class="emotion-0 emotion-1"
             >
               <div
-                class="emotion-0 emotion-1"
+                aria-expanded="false"
+                aria-haspopup="listbox"
+                class="emotion-15 emotion-16"
+                data-disabled="false"
+                data-dropdownvisible="false"
+                data-readonly="false"
+                data-size="large"
+                data-state="neutral"
+                data-testid="select-input--unit"
+                id="unit"
+                role="combobox"
+                tabindex="0"
               >
-                <div
-                  aria-expanded="false"
-                  aria-haspopup="listbox"
-                  class="emotion-17 emotion-18"
-                  data-disabled="false"
-                  data-dropdownvisible="false"
-                  data-readonly="false"
-                  data-size="large"
-                  data-state="neutral"
-                  data-testid="select-input--unit"
-                  id="unit"
-                  role="combobox"
-                  tabindex="0"
+                <p
+                  class="emotion-17 emotion-18 emotion-19"
                 >
-                  <p
-                    class="emotion-19 emotion-20 emotion-21"
-                  >
-                    Select item
-                  </p>
-                  <div
+                  Select item
+                </p>
+                <div
+                  class="emotion-20 emotion-21"
+                >
+                  <svg
+                    aria-label="show dropdown"
                     class="emotion-22 emotion-23"
+                    viewBox="0 0 16 16"
                   >
-                    <svg
-                      aria-label="show dropdown"
-                      class="emotion-24 emotion-25"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        clip-rule="evenodd"
-                        d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
-                  </div>
+                    <path
+                      clip-rule="evenodd"
+                      d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
                 </div>
               </div>
             </div>
@@ -9632,6 +9602,7 @@ exports[`UnitInput > renders with no label and label information 1`] = `
 .emotion-16 {
   width: 100%;
   width: 12.6rem;
+  max-width: 12.6rem;
 }
 
 .emotion-16 #unit {
@@ -9647,6 +9618,7 @@ exports[`UnitInput > renders with no label and label information 1`] = `
 .emotion-16 {
   width: 100%;
   width: 12.6rem;
+  max-width: 12.6rem;
 }
 
 .emotion-16 #unit {
@@ -9997,57 +9969,52 @@ exports[`UnitInput > renders with no label and label information 1`] = `
           />
         </div>
         <div
-          class="emotion-15 emotion-16"
-          width="12.6rem"
+          aria-label="test-unit"
+          class="emotion-15 emotion-16 emotion-17"
         >
           <div
-            aria-label="test-unit"
-            class="emotion-17 emotion-18 emotion-19"
+            aria-controls=":r2v:"
+            aria-describedby=":r2v:"
+            class="emotion-18 emotion-19"
+            data-container-full-width="true"
+            tabindex="-1"
           >
             <div
-              aria-controls="«r34»"
-              aria-describedby="«r34»"
-              class="emotion-20 emotion-21"
-              data-container-full-width="true"
-              tabindex="-1"
+              class="emotion-0 emotion-1"
             >
               <div
-                class="emotion-0 emotion-1"
+                aria-expanded="false"
+                aria-haspopup="listbox"
+                class="emotion-22 emotion-23"
+                data-disabled="true"
+                data-dropdownvisible="false"
+                data-readonly="false"
+                data-size="large"
+                data-state="neutral"
+                data-testid="select-input-test-unit"
+                id="unit"
+                role="combobox"
+                tabindex="0"
               >
-                <div
-                  aria-expanded="false"
-                  aria-haspopup="listbox"
-                  class="emotion-24 emotion-25"
-                  data-disabled="true"
-                  data-dropdownvisible="false"
-                  data-readonly="false"
-                  data-size="large"
-                  data-state="neutral"
-                  data-testid="select-input-test-unit"
-                  id="unit"
-                  role="combobox"
-                  tabindex="0"
+                <p
+                  class="emotion-24 emotion-25 emotion-6"
                 >
-                  <p
-                    class="emotion-26 emotion-27 emotion-6"
-                  >
-                    Select item
-                  </p>
-                  <div
+                  Select item
+                </p>
+                <div
+                  class="emotion-27 emotion-28"
+                >
+                  <svg
+                    aria-label="show dropdown"
                     class="emotion-29 emotion-30"
+                    viewBox="0 0 16 16"
                   >
-                    <svg
-                      aria-label="show dropdown"
-                      class="emotion-31 emotion-32"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        clip-rule="evenodd"
-                        d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
-                  </div>
+                    <path
+                      clip-rule="evenodd"
+                      d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
                 </div>
               </div>
             </div>
@@ -10560,6 +10527,7 @@ exports[`UnitInput > renders with size large 1`] = `
 .emotion-9 {
   width: 100%;
   width: 12.6rem;
+  max-width: 12.6rem;
 }
 
 .emotion-9 #unit {
@@ -10575,6 +10543,7 @@ exports[`UnitInput > renders with size large 1`] = `
 .emotion-9 {
   width: 100%;
   width: 12.6rem;
+  max-width: 12.6rem;
 }
 
 .emotion-9 #unit {
@@ -10925,57 +10894,52 @@ exports[`UnitInput > renders with size large 1`] = `
           />
         </div>
         <div
-          class="emotion-8 emotion-9"
-          width="12.6rem"
+          aria-label="test-unit"
+          class="emotion-8 emotion-9 emotion-10"
         >
           <div
-            aria-label="test-unit"
-            class="emotion-10 emotion-11 emotion-12"
+            aria-controls=":r11:"
+            aria-describedby=":r11:"
+            class="emotion-11 emotion-12"
+            data-container-full-width="true"
+            tabindex="-1"
           >
             <div
-              aria-controls="«r11»"
-              aria-describedby="«r11»"
-              class="emotion-13 emotion-14"
-              data-container-full-width="true"
-              tabindex="-1"
+              class="emotion-0 emotion-1"
             >
               <div
-                class="emotion-0 emotion-1"
+                aria-expanded="false"
+                aria-haspopup="listbox"
+                class="emotion-15 emotion-16"
+                data-disabled="false"
+                data-dropdownvisible="false"
+                data-readonly="false"
+                data-size="large"
+                data-state="neutral"
+                data-testid="select-input-test-unit"
+                id="unit"
+                role="combobox"
+                tabindex="0"
               >
-                <div
-                  aria-expanded="false"
-                  aria-haspopup="listbox"
-                  class="emotion-17 emotion-18"
-                  data-disabled="false"
-                  data-dropdownvisible="false"
-                  data-readonly="false"
-                  data-size="large"
-                  data-state="neutral"
-                  data-testid="select-input-test-unit"
-                  id="unit"
-                  role="combobox"
-                  tabindex="0"
+                <p
+                  class="emotion-17 emotion-18 emotion-19"
                 >
-                  <p
-                    class="emotion-19 emotion-20 emotion-21"
-                  >
-                    Select item
-                  </p>
-                  <div
+                  Select item
+                </p>
+                <div
+                  class="emotion-20 emotion-21"
+                >
+                  <svg
+                    aria-label="show dropdown"
                     class="emotion-22 emotion-23"
+                    viewBox="0 0 16 16"
                   >
-                    <svg
-                      aria-label="show dropdown"
-                      class="emotion-24 emotion-25"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        clip-rule="evenodd"
-                        d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
-                  </div>
+                    <path
+                      clip-rule="evenodd"
+                      d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
                 </div>
               </div>
             </div>
@@ -11240,6 +11204,7 @@ exports[`UnitInput > renders with size medioum 1`] = `
 .emotion-9 {
   width: 100%;
   width: 12.6rem;
+  max-width: 12.6rem;
 }
 
 .emotion-9 #unit {
@@ -11447,57 +11412,52 @@ exports[`UnitInput > renders with size medioum 1`] = `
           />
         </div>
         <div
-          class="emotion-8 emotion-9"
-          width="12.6rem"
+          aria-label="test-unit"
+          class="emotion-8 emotion-9 emotion-10"
         >
           <div
-            aria-label="test-unit"
-            class="emotion-10 emotion-11 emotion-12"
+            aria-controls=":rh:"
+            aria-describedby=":rh:"
+            class="emotion-11 emotion-12"
+            data-container-full-width="true"
+            tabindex="-1"
           >
             <div
-              aria-controls="«rh»"
-              aria-describedby="«rh»"
-              class="emotion-13 emotion-14"
-              data-container-full-width="true"
-              tabindex="-1"
+              class="emotion-0 emotion-1"
             >
               <div
-                class="emotion-0 emotion-1"
+                aria-expanded="false"
+                aria-haspopup="listbox"
+                class="emotion-15 emotion-16"
+                data-disabled="false"
+                data-dropdownvisible="false"
+                data-readonly="false"
+                data-size="medium"
+                data-state="neutral"
+                data-testid="select-input-test-unit"
+                id="unit"
+                role="combobox"
+                tabindex="0"
               >
-                <div
-                  aria-expanded="false"
-                  aria-haspopup="listbox"
-                  class="emotion-17 emotion-18"
-                  data-disabled="false"
-                  data-dropdownvisible="false"
-                  data-readonly="false"
-                  data-size="medium"
-                  data-state="neutral"
-                  data-testid="select-input-test-unit"
-                  id="unit"
-                  role="combobox"
-                  tabindex="0"
+                <p
+                  class="emotion-17 emotion-18 emotion-19"
                 >
-                  <p
-                    class="emotion-19 emotion-20 emotion-21"
-                  >
-                    Select item
-                  </p>
-                  <div
+                  Select item
+                </p>
+                <div
+                  class="emotion-20 emotion-21"
+                >
+                  <svg
+                    aria-label="show dropdown"
                     class="emotion-22 emotion-23"
+                    viewBox="0 0 16 16"
                   >
-                    <svg
-                      aria-label="show dropdown"
-                      class="emotion-24 emotion-25"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        clip-rule="evenodd"
-                        d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
-                  </div>
+                    <path
+                      clip-rule="evenodd"
+                      d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
                 </div>
               </div>
             </div>
@@ -11762,6 +11722,7 @@ exports[`UnitInput > renders with size small 1`] = `
 .emotion-9 {
   width: 100%;
   width: 12.6rem;
+  max-width: 12.6rem;
 }
 
 .emotion-9 #unit {
@@ -11969,57 +11930,52 @@ exports[`UnitInput > renders with size small 1`] = `
           />
         </div>
         <div
-          class="emotion-8 emotion-9"
-          width="12.6rem"
+          aria-label="test-unit"
+          class="emotion-8 emotion-9 emotion-10"
         >
           <div
-            aria-label="test-unit"
-            class="emotion-10 emotion-11 emotion-12"
+            aria-controls=":rc:"
+            aria-describedby=":rc:"
+            class="emotion-11 emotion-12"
+            data-container-full-width="true"
+            tabindex="-1"
           >
             <div
-              aria-controls="«rc»"
-              aria-describedby="«rc»"
-              class="emotion-13 emotion-14"
-              data-container-full-width="true"
-              tabindex="-1"
+              class="emotion-0 emotion-1"
             >
               <div
-                class="emotion-0 emotion-1"
+                aria-expanded="false"
+                aria-haspopup="listbox"
+                class="emotion-15 emotion-16"
+                data-disabled="false"
+                data-dropdownvisible="false"
+                data-readonly="false"
+                data-size="small"
+                data-state="neutral"
+                data-testid="select-input-test-unit"
+                id="unit"
+                role="combobox"
+                tabindex="0"
               >
-                <div
-                  aria-expanded="false"
-                  aria-haspopup="listbox"
-                  class="emotion-17 emotion-18"
-                  data-disabled="false"
-                  data-dropdownvisible="false"
-                  data-readonly="false"
-                  data-size="small"
-                  data-state="neutral"
-                  data-testid="select-input-test-unit"
-                  id="unit"
-                  role="combobox"
-                  tabindex="0"
+                <p
+                  class="emotion-17 emotion-18 emotion-19"
                 >
-                  <p
-                    class="emotion-19 emotion-20 emotion-21"
-                  >
-                    Select item
-                  </p>
-                  <div
+                  Select item
+                </p>
+                <div
+                  class="emotion-20 emotion-21"
+                >
+                  <svg
+                    aria-label="show dropdown"
                     class="emotion-22 emotion-23"
+                    viewBox="0 0 16 16"
                   >
-                    <svg
-                      aria-label="show dropdown"
-                      class="emotion-24 emotion-25"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        clip-rule="evenodd"
-                        d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
-                  </div>
+                    <path
+                      clip-rule="evenodd"
+                      d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
                 </div>
               </div>
             </div>
@@ -12546,6 +12502,7 @@ exports[`UnitInput > renders with success 1`] = `
 .emotion-11 {
   width: 100%;
   width: 12.6rem;
+  max-width: 12.6rem;
 }
 
 .emotion-11 #unit {
@@ -12561,6 +12518,7 @@ exports[`UnitInput > renders with success 1`] = `
 .emotion-11 {
   width: 100%;
   width: 12.6rem;
+  max-width: 12.6rem;
 }
 
 .emotion-11 #unit {
@@ -12934,57 +12892,52 @@ exports[`UnitInput > renders with success 1`] = `
           </svg>
         </div>
         <div
-          class="emotion-10 emotion-11"
-          width="12.6rem"
+          aria-label="test-unit"
+          class="emotion-10 emotion-11 emotion-12"
         >
           <div
-            aria-label="test-unit"
-            class="emotion-12 emotion-13 emotion-14"
+            aria-controls=":r1b:"
+            aria-describedby=":r1b:"
+            class="emotion-13 emotion-14"
+            data-container-full-width="true"
+            tabindex="-1"
           >
             <div
-              aria-controls="«r1g»"
-              aria-describedby="«r1g»"
-              class="emotion-15 emotion-16"
-              data-container-full-width="true"
-              tabindex="-1"
+              class="emotion-0 emotion-1"
             >
               <div
-                class="emotion-0 emotion-1"
+                aria-expanded="false"
+                aria-haspopup="listbox"
+                class="emotion-17 emotion-18"
+                data-disabled="false"
+                data-dropdownvisible="false"
+                data-readonly="false"
+                data-size="large"
+                data-state="neutral"
+                data-testid="select-input-test-unit"
+                id="unit"
+                role="combobox"
+                tabindex="0"
               >
-                <div
-                  aria-expanded="false"
-                  aria-haspopup="listbox"
-                  class="emotion-19 emotion-20"
-                  data-disabled="false"
-                  data-dropdownvisible="false"
-                  data-readonly="false"
-                  data-size="large"
-                  data-state="neutral"
-                  data-testid="select-input-test-unit"
-                  id="unit"
-                  role="combobox"
-                  tabindex="0"
+                <p
+                  class="emotion-19 emotion-20 emotion-21"
                 >
-                  <p
-                    class="emotion-21 emotion-22 emotion-23"
+                  Select item
+                </p>
+                <div
+                  class="emotion-22 emotion-23"
+                >
+                  <svg
+                    aria-label="show dropdown"
+                    class="emotion-24 emotion-9"
+                    viewBox="0 0 16 16"
                   >
-                    Select item
-                  </p>
-                  <div
-                    class="emotion-24 emotion-25"
-                  >
-                    <svg
-                      aria-label="show dropdown"
-                      class="emotion-26 emotion-9"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        clip-rule="evenodd"
-                        d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
-                  </div>
+                    <path
+                      clip-rule="evenodd"
+                      d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
                 </div>
               </div>
             </div>

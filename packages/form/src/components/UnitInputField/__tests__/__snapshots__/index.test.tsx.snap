@@ -301,6 +301,7 @@ exports[`UnitInputField > should handles onChange and selection 1`] = `
 .emotion-16 {
   width: 100%;
   width: 12.6rem;
+  max-width: 12.6rem;
 }
 
 .emotion-16 #unit {
@@ -585,59 +586,53 @@ exports[`UnitInputField > should handles onChange and selection 1`] = `
               value="100"
             />
           </div>
-           
           <div
-            class="emotion-15 emotion-16"
-            width="12.6rem"
+            aria-label="test-unit"
+            class="emotion-15 emotion-16 emotion-17"
           >
             <div
-              aria-label="test-unit"
-              class="emotion-17 emotion-18 emotion-19"
+              aria-controls=":ra:"
+              aria-describedby=":ra:"
+              class="emotion-18 emotion-19"
+              data-container-full-width="true"
+              tabindex="-1"
             >
               <div
-                aria-controls="«ra»"
-                aria-describedby="«ra»"
-                class="emotion-20 emotion-21"
-                data-container-full-width="true"
-                tabindex="-1"
+                class="emotion-0 emotion-1"
               >
                 <div
-                  class="emotion-0 emotion-1"
+                  aria-expanded="false"
+                  aria-haspopup="listbox"
+                  class="emotion-22 emotion-23"
+                  data-disabled="false"
+                  data-dropdownvisible="false"
+                  data-readonly="false"
+                  data-size="large"
+                  data-state="neutral"
+                  data-testid="select-input-test-unit"
+                  id="unit"
+                  role="combobox"
+                  tabindex="0"
                 >
                   <div
-                    aria-expanded="false"
-                    aria-haspopup="listbox"
-                    class="emotion-24 emotion-25"
-                    data-disabled="false"
-                    data-dropdownvisible="false"
-                    data-readonly="false"
-                    data-size="large"
-                    data-state="neutral"
-                    data-testid="select-input-test-unit"
-                    id="unit"
-                    role="combobox"
-                    tabindex="0"
+                    class="emotion-24 emotion-25 emotion-6"
                   >
-                    <div
-                      class="emotion-26 emotion-27 emotion-6"
-                    >
-                      Days
-                    </div>
-                    <div
+                    Days
+                  </div>
+                  <div
+                    class="emotion-27 emotion-28"
+                  >
+                    <svg
+                      aria-label="show dropdown"
                       class="emotion-29 emotion-30"
+                      viewBox="0 0 16 16"
                     >
-                      <svg
-                        aria-label="show dropdown"
-                        class="emotion-31 emotion-32"
-                        viewBox="0 0 16 16"
-                      >
-                        <path
-                          clip-rule="evenodd"
-                          d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
-                          fill-rule="evenodd"
-                        />
-                      </svg>
-                    </div>
+                      <path
+                        clip-rule="evenodd"
+                        d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
                   </div>
                 </div>
               </div>
@@ -922,6 +917,7 @@ exports[`UnitInputField > should render correctly 1`] = `
 .emotion-12 {
   width: 100%;
   width: 12.6rem;
+  max-width: 12.6rem;
 }
 
 .emotion-12 #unit {
@@ -1137,59 +1133,53 @@ exports[`UnitInputField > should render correctly 1`] = `
               type="number"
             />
           </div>
-           
           <div
-            class="emotion-11 emotion-12"
-            width="12.6rem"
+            aria-label="test-unit"
+            class="emotion-11 emotion-12 emotion-13"
           >
             <div
-              aria-label="test-unit"
-              class="emotion-13 emotion-14 emotion-15"
+              aria-controls=":r3:"
+              aria-describedby=":r3:"
+              class="emotion-14 emotion-15"
+              data-container-full-width="true"
+              tabindex="-1"
             >
               <div
-                aria-controls="«r3»"
-                aria-describedby="«r3»"
-                class="emotion-16 emotion-17"
-                data-container-full-width="true"
-                tabindex="-1"
+                class="emotion-0 emotion-1"
               >
                 <div
-                  class="emotion-0 emotion-1"
+                  aria-expanded="false"
+                  aria-haspopup="listbox"
+                  class="emotion-18 emotion-19"
+                  data-disabled="false"
+                  data-dropdownvisible="false"
+                  data-readonly="false"
+                  data-size="large"
+                  data-state="neutral"
+                  data-testid="select-input-test-unit"
+                  id="unit"
+                  role="combobox"
+                  tabindex="0"
                 >
-                  <div
-                    aria-expanded="false"
-                    aria-haspopup="listbox"
-                    class="emotion-20 emotion-21"
-                    data-disabled="false"
-                    data-dropdownvisible="false"
-                    data-readonly="false"
-                    data-size="large"
-                    data-state="neutral"
-                    data-testid="select-input-test-unit"
-                    id="unit"
-                    role="combobox"
-                    tabindex="0"
+                  <p
+                    class="emotion-20 emotion-21 emotion-4"
                   >
-                    <p
-                      class="emotion-22 emotion-23 emotion-4"
-                    >
-                      Select item
-                    </p>
-                    <div
+                    Select item
+                  </p>
+                  <div
+                    class="emotion-23 emotion-24"
+                  >
+                    <svg
+                      aria-label="show dropdown"
                       class="emotion-25 emotion-26"
+                      viewBox="0 0 16 16"
                     >
-                      <svg
-                        aria-label="show dropdown"
-                        class="emotion-27 emotion-28"
-                        viewBox="0 0 16 16"
-                      >
-                        <path
-                          clip-rule="evenodd"
-                          d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
-                          fill-rule="evenodd"
-                        />
-                      </svg>
-                    </div>
+                      <path
+                        clip-rule="evenodd"
+                        d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
                   </div>
                 </div>
               </div>

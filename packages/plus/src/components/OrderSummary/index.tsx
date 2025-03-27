@@ -83,7 +83,7 @@ export const OrderSummary = ({
         }
       }, {}),
     [hideTimeUnit, items, timePeriodAmount, timePeriodUnit, unitUnitInput],
-  ) satisfies PriceType
+  )
 
   const totalPrice = useMemo(() => {
     const price = Object.values(categoriesPrice).reduce<[number, number]>(
@@ -157,7 +157,7 @@ export const OrderSummary = ({
 
   return (
     <OrderSummaryContext.Provider value={valueContext}>
-      <Container justifyContent="space-between">
+      <Container justifyContent={hideDetails ? 'flex-start' : 'space-between'}>
         {header ? (
           <HeaderContainer
             direction="row"

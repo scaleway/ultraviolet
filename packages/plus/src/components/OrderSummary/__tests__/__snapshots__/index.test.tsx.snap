@@ -2234,7 +2234,7 @@ exports[`OrderSummary > should work with children 1`] = `
                 <span
                   class="emotion-52 emotion-5"
                 >
-                  €0.03 /request
+                  €0.00000015 /request
                 </span>
               </div>
               <div
@@ -2296,7 +2296,7 @@ exports[`OrderSummary > should work with children 1`] = `
                 <span
                   class="emotion-52 emotion-5"
                 >
-                  €0.00085625 /GB/hours
+                  €0.00003425 /GB/hours
                 </span>
               </div>
               <div
@@ -3064,7 +3064,7 @@ exports[`OrderSummary > should work with default props 1`] = `
                 <span
                   class="emotion-22 emotion-9"
                 >
-                  €0.03 /request
+                  €0.00000015 /request
                 </span>
               </div>
               <div
@@ -3126,7 +3126,7 @@ exports[`OrderSummary > should work with default props 1`] = `
                 <span
                   class="emotion-22 emotion-9"
                 >
-                  €0.00085625 /GB/hours
+                  €0.00003425 /GB/hours
                 </span>
               </div>
               <div
@@ -8631,7 +8631,7 @@ exports[`OrderSummary > should work with footer 1`] = `
                 <span
                   class="emotion-52 emotion-5"
                 >
-                  €0.03 /request
+                  €0.00000015 /request
                 </span>
               </div>
               <div
@@ -8693,7 +8693,7 @@ exports[`OrderSummary > should work with footer 1`] = `
                 <span
                   class="emotion-52 emotion-5"
                 >
-                  €0.00085625 /GB/hours
+                  €0.00003425 /GB/hours
                 </span>
               </div>
               <div
@@ -16316,7 +16316,7 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
                 <span
                   class="emotion-52 emotion-5"
                 >
-                  €0.03 /request
+                  €0.00000015 /request
                 </span>
               </div>
               <div
@@ -16378,7 +16378,7 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
                 <span
                   class="emotion-52 emotion-5"
                 >
-                  €0.00085625 /GB/hours
+                  €0.00003425 /GB/hours
                 </span>
               </div>
               <div
@@ -17189,7 +17189,7 @@ exports[`OrderSummary > should work without unitInput 1`] = `
                 <span
                   class="emotion-26 emotion-5"
                 >
-                  €0.03 /request
+                  €0.00000015 /request
                 </span>
               </div>
               <div
@@ -17251,7 +17251,7 @@ exports[`OrderSummary > should work without unitInput 1`] = `
                 <span
                   class="emotion-26 emotion-5"
                 >
-                  €0.00085625 /GB/hours
+                  €0.00003425 /GB/hours
                 </span>
               </div>
               <div
@@ -17278,6 +17278,396 @@ exports[`OrderSummary > should work without unitInput 1`] = `
           >
             €383.83
           </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`OrderSummary > works with hideDetails 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  background-color: #f9f9fa;
+  height: 100%;
+  width: 20rem;
+}
+
+@media (min-width: 1440px) {
+  .emotion-0 {
+    width: 27.5rem;
+  }
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  height: 4.5rem;
+  padding: 1.5rem;
+  padding-bottom: 1rem;
+}
+
+.emotion-2[data-hideDetails="false"] {
+  border-bottom: 1px solid #d9dadd;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  height: 4.5rem;
+  padding: 1.5rem;
+  padding-bottom: 1rem;
+}
+
+.emotion-2[data-hideDetails="false"] {
+  border-bottom: 1px solid #d9dadd;
+}
+
+.emotion-4 {
+  color: #3f4250;
+  font-size: 1.3125rem;
+  font-family: Space Grotesk,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 2rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-4 {
+  color: #3f4250;
+  font-size: 1.3125rem;
+  font-family: Space Grotesk,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 2rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.5rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding: 1.5rem;
+  border-top: 1px solid #d9dadd;
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.5rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding: 1.5rem;
+  border-top: 1px solid #d9dadd;
+}
+
+.emotion-8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-10 {
+  color: #3f4250;
+  font-size: 1rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-10 {
+  color: #3f4250;
+  font-size: 1rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-26 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-26 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-28 {
+  color: #727683;
+  font-size: 0.875rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-text-decoration: line-through;
+  text-decoration: line-through;
+}
+
+.emotion-28 {
+  color: #727683;
+  font-size: 0.875rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-text-decoration: line-through;
+  text-decoration: line-through;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+    >
+      <div
+        class="emotion-2 emotion-3"
+        data-hidedetails="true"
+      >
+        <h3
+          class="emotion-4 emotion-5"
+        >
+          summary
+        </h3>
+      </div>
+      <div
+        class="emotion-6 emotion-7"
+      >
+        <div
+          class="emotion-8 emotion-9"
+        >
+          <p
+            class="emotion-10 emotion-5"
+          >
+            Estimated cost:
+          </p>
+          <p
+            class="emotion-4 emotion-5"
+            data-testid="total-price"
+          >
+            €2.50/hours
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      class="emotion-0 emotion-1"
+    >
+      <div
+        class="emotion-2 emotion-3"
+        data-hidedetails="true"
+      >
+        <h3
+          class="emotion-4 emotion-5"
+        >
+          summary
+        </h3>
+      </div>
+      <div
+        class="emotion-6 emotion-7"
+      >
+        <div
+          class="emotion-8 emotion-9"
+        >
+          <p
+            class="emotion-10 emotion-5"
+          >
+            Estimated cost:
+          </p>
+          <div
+            class="emotion-26 emotion-9"
+          >
+            <p
+              class="emotion-28 emotion-5"
+            >
+              €2.50
+            </p>
+            <p
+              class="emotion-4 emotion-5"
+              data-testid="total-price"
+            >
+              €1.25/hours
+            </p>
+          </div>
         </div>
       </div>
     </div>
