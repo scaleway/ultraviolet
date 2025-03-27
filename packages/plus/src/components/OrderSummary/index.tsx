@@ -11,14 +11,12 @@ import type { OrderSummaryProps, PriceType, TimeUnit } from './types'
 
 const Container = styled(Stack)`
   background-color: ${({ theme }) => theme.colors.neutral.backgroundWeak};
-  border-inline: 1px solid ${({ theme }) => theme.colors.neutral.border};
   height: 100%;
-  width: 320px;
+  width: 20rem;
   
   @media (min-width: ${({ theme }) => theme.breakpoints.large}) {
     width: 27.5rem;
   }
-
 `
 
 const HeaderContainer = styled(Stack)<{ 'data-hideDetails': boolean }>`
@@ -33,7 +31,12 @@ const HeaderContainer = styled(Stack)<{ 'data-hideDetails': boolean }>`
 
 const StyledStack = styled(Stack)`
   background-color: ${({ theme }) => theme.colors.neutral.background};
-  width: 11rem;
+  width: 10rem;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.large}) {
+    width: 11rem;
+  }
+
 `
 
 export const OrderSummary = ({
@@ -110,17 +113,6 @@ export const OrderSummary = ({
     return computedPrice
   }, [categoriesPrice, discount, unitUnitInput])
 
-  /* const prevCategoriesPriceRef = useRef(categoriesPrice)
-
-  useEffect(() => {
-    if (
-      JSON.stringify(prevCategoriesPriceRef.current) !==
-      JSON.stringify(categoriesPrice)
-    ) {
-      prevCategoriesPriceRef.current = categoriesPrice
-    }
-  }, [categoriesPrice, onChange]) */
-
   const valueContext = useMemo(
     () => ({
       currency,
@@ -180,6 +172,7 @@ export const OrderSummary = ({
                 <UnitInput
                   width="100%"
                   selectInputWidth="fit-content"
+                  selectInputMaxWidth="65%"
                   options={computePeriodOptions}
                   onChange={value => {
                     setTimePeriodAmount(value)
