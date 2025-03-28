@@ -1583,6 +1583,11 @@ exports[`GlobalAlert > renders correctly with link 1`] = `
   pointer-events: none;
 }
 
+.emotion-6:visited {
+  color: #641cb3;
+  text-decoration-color: transparent;
+}
+
 .emotion-6:hover,
 .emotion-6:focus {
   outline: none;
@@ -1605,6 +1610,12 @@ exports[`GlobalAlert > renders correctly with link 1`] = `
   transform: translate(-0.25rem, 0);
 }
 
+.emotion-6:hover:visited,
+.emotion-6:focus:visited {
+  color: #521094;
+  text-decoration-color: #521094;
+}
+
 .emotion-6[data-variant='inline'] {
   -webkit-text-decoration: underline;
   text-decoration: underline;
@@ -1613,7 +1624,7 @@ exports[`GlobalAlert > renders correctly with link 1`] = `
 
 .emotion-6:hover::after,
 .emotion-6:focus::after {
-  background-color: #3f4250;
+  background-color: #005da3;
 }
 
 .emotion-6:active {
@@ -1800,7 +1811,7 @@ exports[`GlobalAlert > renders correctly with link 1`] = `
             class="emotion-6 emotion-7"
             data-variant="inline"
             href="scaleway.com"
-            prominence="stronger"
+            prominence="strong"
             variant="bodySmallStrong"
           >
             Global Alert
