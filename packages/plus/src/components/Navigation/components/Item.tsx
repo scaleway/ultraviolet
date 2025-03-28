@@ -260,6 +260,10 @@ const MenuStack = styled(Stack)`
   margin-top: ${({ theme }) => theme.space['0.25']};
 `
 
+const StackIcon = styled(Stack)`
+  padding-top: ${({ theme }) => theme.space['0.5']};
+`
+
 const ContainerCategoryIcon = styled(Stack)`
   min-width: 20px;
 `
@@ -532,7 +536,7 @@ export const Item = memo(
           <Container
             gap={1}
             direction="row"
-            alignItems="center"
+            alignItems="flex-start"
             justifyContent="space-between"
             data-has-sub-label={!!subLabel}
             onClick={triggerToggle}
@@ -561,7 +565,7 @@ export const Item = memo(
             <Stack
               direction="row"
               gap={1}
-              alignItems="center"
+              alignItems="flex-start"
               justifyContent="center"
             >
               {CategoryIconUsed ? (
@@ -688,11 +692,11 @@ export const Item = memo(
                 />
               ) : null}
               {children ? (
-                <Stack gap={1} direction="row" alignItems="center">
+                <StackIcon gap={1} direction="row" alignItems="center">
                   {!animation && !noExpand ? (
                     <ArrowIcon sentiment="neutral" prominence="weak" />
                   ) : null}
-                </Stack>
+                </StackIcon>
               ) : null}
             </Stack>
           </Container>
