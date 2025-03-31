@@ -31,6 +31,7 @@ type UnitInputFieldProps<
   > & {
     onChangeUnitValue?: ComponentProps<typeof UnitInput>['onChangeUnitValue']
     label: string
+    optionName?: string
   }
 
 export const UnitInputField = <
@@ -57,10 +58,11 @@ export const UnitInputField = <
   shouldUnregister = false,
   validate,
   control,
+  optionName,
 }: UnitInputFieldProps<TFieldValues, TFieldName>) => {
   const { getError } = useErrors()
   const { field: unitField } = useController({
-    name: `${name}-unit`,
+    name: optionName ?? `${name}-unit`,
     shouldUnregister,
     rules: { required },
   })

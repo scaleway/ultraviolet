@@ -15,6 +15,7 @@ describe('SelectableCardOptionGroupField', () => {
     const { asFragment } = renderWithForm(
       <SelectableCardOptionGroupField
         name="os"
+        optionName="version"
         value="ubuntu"
         optionValue="ubuntu-20.04"
         onChange={() => {}}

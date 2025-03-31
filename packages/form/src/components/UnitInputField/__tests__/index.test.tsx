@@ -25,7 +25,12 @@ const optionsSelect = [
 describe('UnitInputField', () => {
   test('should render correctly', () => {
     const { asFragment } = renderWithForm(
-      <UnitInputField label="Test" name="test" options={optionsSelect} />,
+      <UnitInputField
+        label="Test"
+        name="test"
+        optionName="test2"
+        options={optionsSelect}
+      />,
     )
 
     expect(asFragment()).toMatchSnapshot()
