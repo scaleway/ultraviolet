@@ -3,7 +3,7 @@ import type { Sizes } from '../types'
 
 const StyledImage = styled.img`
   &[data-disabled='true'] {
-    filter: grayscale(100%);
+    filter: grayscale(1) opacity(25%);
   }
 `
 
