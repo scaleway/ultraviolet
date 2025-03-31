@@ -1,5 +1,11 @@
 # Change Log
 
+## 3.15.2
+
+### Patch Changes
+
+- [#4957](https://github.com/scaleway/ultraviolet/pull/4957) [`00c3f68`](https://github.com/scaleway/ultraviolet/commit/00c3f68a3b1ce55e5272007e2ade78ec0be3eab4) Thanks [@matthprost](https://github.com/matthprost)! - Add prop `optionName` on `SelectableCardOptionGroupField` and `UnitInputField` to allow customising the name in the form
+
 ## 3.15.1
 
 ### Patch Changes
