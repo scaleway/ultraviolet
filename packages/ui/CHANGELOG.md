@@ -1,5 +1,17 @@
 # Change Log
 
+## 1.92.0
+
+### Minor Changes
+
+- [#4895](https://github.com/scaleway/ultraviolet/pull/4895) [`dcdf00f`](https://github.com/scaleway/ultraviolet/commit/dcdf00f20cda1aa2bda9907dbeaf9009b48c47ab) Thanks [@matthprost](https://github.com/matthprost)! - Add prop `emptyState` on `<MenuV2.Group />` that can be usefull when searching
+
+### Patch Changes
+
+- [#4909](https://github.com/scaleway/ultraviolet/pull/4909) [`2cdbba8`](https://github.com/scaleway/ultraviolet/commit/2cdbba8a821856c3a16f9170b35d6d400b527c91) Thanks [@matthprost](https://github.com/matthprost)! - Improve `<InfiniteScroll />` accessibility
+
+- [#4905](https://github.com/scaleway/ultraviolet/pull/4905) [`5448fec`](https://github.com/scaleway/ultraviolet/commit/5448fec85cbb289cf0d8227556dbf572727652b7) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<SelectableCardOptionGroup.Option />` disabled image to have better visual
+
 ## 1.91.0
 
 ### Minor Changes
