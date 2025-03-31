@@ -72,5 +72,6 @@ export default {
 } as Meta
 
 export { Playground } from './Playground.stories'
+export { OptionName } from './OptionName.stories'
 export { Required } from './Required.stories'
 export { Error } from './Error.stories'

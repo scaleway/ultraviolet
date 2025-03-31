@@ -19,7 +19,9 @@ type SelectableCardOptionGroupFieldProps<
     >
   > &
   BaseFieldProps<TFieldValues, TFieldName> &
-  Omit<BaseFieldProps<TFieldValues, TFieldName>, 'label'>
+  Omit<BaseFieldProps<TFieldValues, TFieldName>, 'label'> & {
+    optionName?: string
+  }
 
 export const SelectableCardOptionGroupField = <
   TFieldValues extends FieldValues,
@@ -28,6 +30,7 @@ export const SelectableCardOptionGroupField = <
   legend,
   control,
   name,
+  optionName,
   onChange,
   onChangeOption,
   required = false,
@@ -56,7 +59,7 @@ export const SelectableCardOptionGroupField = <
   })
 
   const { field: optionField } = useController({
-    name: `${name}Option`,
+    name: optionName ?? `${name}Option`,
     shouldUnregister,
     rules: { required },
   })
