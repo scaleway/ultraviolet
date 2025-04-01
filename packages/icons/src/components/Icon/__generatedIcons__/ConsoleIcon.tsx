@@ -9,7 +9,8 @@ import type { IconProps } from '../Icon'
 export const ConsoleIcon = ({ ...props }: Omit<IconProps, 'children'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
   <Icon {...props}>
-    {props.size === 'large' ? (
+    {typeof props.size === 'string' &&
+    ['medium', 'large', 'xlarge', 'xxlarge'].includes(props.size) ? (
       <path
         d="M4 3.778a2 2 0 0 0-2 2v8.444a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V5.778a2 2 0 0 0-2-2zm.838 7.78a.667.667 0 0 1 .05-.942l1.67-1.506-1.671-1.503a.667.667 0 1 1 .892-.991l2.223 2a.667.667 0 0 1 0 .99l-2.223 2a.667.667 0 0 1-.941-.049m4.94-1.336a.667.667 0 0 0 0 1.334H12a.667.667 0 0 0 0-1.334z"
         clipRule="evenodd"

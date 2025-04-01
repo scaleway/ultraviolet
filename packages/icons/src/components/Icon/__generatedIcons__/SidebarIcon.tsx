@@ -9,7 +9,8 @@ import type { IconProps } from '../Icon'
 export const SidebarIcon = ({ ...props }: Omit<IconProps, 'children'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
   <Icon {...props}>
-    {props.size === 'large' ? (
+    {typeof props.size === 'string' &&
+    ['medium', 'large', 'xlarge', 'xxlarge'].includes(props.size) ? (
       <path
         d="M2 5.089C2 4.184 2.76 3.5 3.636 3.5h12.728c.875 0 1.636.684 1.636 1.589v9.822c0 .905-.76 1.589-1.636 1.589H3.636C2.761 16.5 2 15.816 2 14.911zm6.303 9.967h8.06c.13 0 .183-.093.183-.145V5.09c0-.052-.054-.145-.182-.145H8.303z"
         clipRule="evenodd"

@@ -11,6 +11,9 @@ export const Size = (args: ComponentProps<typeof EyeIcon>) => (
     <Stack direction="row" alignItems="center" gap={3}>
       <EyeIcon size="small" {...args} /> small
     </Stack>
+    <Stack direction="row" alignItems="center" gap={3}>
+      <EyeIcon size="medium" {...args} /> medium
+    </Stack>
     <Stack direction="row" gap={3} alignItems="center">
       <EyeIcon size="large" {...args} /> large
     </Stack>

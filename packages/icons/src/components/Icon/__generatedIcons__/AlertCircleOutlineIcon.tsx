@@ -11,7 +11,8 @@ export const AlertCircleOutlineIcon = ({
 }: Omit<IconProps, 'children'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
   <Icon {...props}>
-    {props.size === 'large' ? (
+    {typeof props.size === 'string' &&
+    ['medium', 'large', 'xlarge', 'xxlarge'].includes(props.size) ? (
       <path
         d="M10 3.455a6.545 6.545 0 1 0 0 13.09 6.545 6.545 0 0 0 0-13.09M2 10a8 8 0 1 1 16 0 8 8 0 0 1-16 0m8-3.152c.402 0 .727.326.727.728v3.03a.727.727 0 0 1-1.454 0v-3.03c0-.402.325-.728.727-.728m-.727 6.182c0-.401.325-.727.727-.727h.006c.402 0 .727.326.727.727v.006a.727.727 0 0 1-.727.728H10a.727.727 0 0 1-.727-.728z"
         clipRule="evenodd"

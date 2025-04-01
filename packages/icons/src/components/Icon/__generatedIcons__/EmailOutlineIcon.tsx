@@ -9,7 +9,8 @@ import type { IconProps } from '../Icon'
 export const EmailOutlineIcon = ({ ...props }: Omit<IconProps, 'children'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
   <Icon {...props}>
-    {props.size === 'large' ? (
+    {typeof props.size === 'string' &&
+    ['medium', 'large', 'xlarge', 'xxlarge'].includes(props.size) ? (
       <path
         d="M2 6.049a2.36 2.36 0 0 1 2.359-2.36h11.282A2.36 2.36 0 0 1 18 6.05v7.897a2.36 2.36 0 0 1-2.359 2.36H4.359A2.36 2.36 0 0 1 2 13.945zm1.333 0v.182c0 .357.185.687.488.874l5.641 3.471c.33.203.746.203 1.076 0l5.64-3.471c.304-.187.489-.517.489-.874V6.05c0-.567-.46-1.026-1.026-1.026H4.359c-.566 0-1.026.46-1.026 1.026m13.334 2.32-5.43 3.342a2.36 2.36 0 0 1-2.473 0L3.334 8.37v5.576c0 .567.459 1.026 1.025 1.026h11.282c.566 0 1.026-.46 1.026-1.026z"
         clipRule="evenodd"
