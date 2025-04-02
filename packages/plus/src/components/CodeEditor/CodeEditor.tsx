@@ -8,6 +8,13 @@ import { consoleDarkTheme } from '@ultraviolet/themes'
 import { CopyButton, Label, Stack, Text } from '@ultraviolet/ui'
 import type { ComponentProps, ReactNode } from 'react'
 
+const StyledText = styled(Text)`
+  background-color: ${({ theme }) => theme.colors.neutral.backgroundStrong};
+  padding: ${({ theme }) => `${theme.space['1']} ${theme.space['2']}`};
+  border-radius: ${({ theme }) => `${theme.radii.default}`};
+  width: 100%;
+`
+
 const EditorContainer = styled.div`
   position: relative;
   width: 100%;
@@ -17,7 +24,6 @@ const StyledCopyButton = styled(CopyButton)`
   position: absolute;
   top: ${({ theme }) => theme.space['1']};
   right: ${({ theme }) => theme.space['1']};
-  z-index: 1;
 
   svg > path {
     fill: ${consoleDarkTheme.colors.other.icon.product.original.fill};
@@ -34,8 +40,8 @@ const StyledStack = styled(Stack, {
   cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'auto')};
 
   .cm-editor {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 14px;
+    font-family: ${({ theme }) => theme.typography.code.fontFamily};
+    font-size:  ${({ theme }) => theme.typography.code.fontSize};
     background-color: ${({ disabled }) => (disabled ? consoleDarkTheme.colors.neutral.backgroundWeakDisabled : consoleDarkTheme.colors.neutral.backgroundWeak)};
     border-radius: ${({ theme }) => theme.space['0.5']};
 
@@ -43,7 +49,7 @@ const StyledStack = styled(Stack, {
       disabled
         ? `
       pointer-events: none;
-      color: ${consoleDarkTheme.colors.neutral.textDisabled}`
+      color: ${consoleDarkTheme.colors.neutral.textDisabled};`
         : ''}
    }
 
@@ -76,6 +82,10 @@ const StyledStack = styled(Stack, {
   }
 `
 type CodeEditorProps = {
+  /**
+   * @deprecated use prop `label` instead
+   */
+  title?: string
   value: string
   onChange: ComponentProps<typeof CodeMirror>['onChange']
   extensions: keyof typeof langs
@@ -92,9 +102,11 @@ type CodeEditorProps = {
   copyButton?: boolean | string
   label?: string
   id?: string
+  labelDescription?: ReactNode
 }
 
 export const CodeEditor = ({
+  title,
   value,
   onChange,
   extensions = 'javascript',
@@ -107,21 +119,16 @@ export const CodeEditor = ({
   copyButton,
   id,
   helper,
+  labelDescription,
 }: CodeEditorProps) => (
   <StyledStack gap={0.5} disabled={disabled}>
-    {label ? <Label>{label}</Label> : null}
-
+    {label ? <Label labelDescription={labelDescription}>{label}</Label> : null}
+    {title && !label ? (
+      <StyledText as="h3" variant="headingSmall">
+        {title}
+      </StyledText>
+    ) : null}
     <EditorContainer>
-      {copyButton && !disabled ? (
-        <StyledCopyButton
-          bordered
-          value={value}
-          sentiment="neutral"
-          size="small"
-        >
-          {typeof copyButton === 'string' ? copyButton : undefined}
-        </StyledCopyButton>
-      ) : null}
       <CodeMirror
         readOnly={readOnly}
         width="100%"
@@ -137,6 +144,16 @@ export const CodeEditor = ({
         id={id}
         theme={material}
       />
+      {copyButton && !disabled ? (
+        <StyledCopyButton
+          bordered
+          value={value}
+          sentiment="neutral"
+          size="small"
+        >
+          {typeof copyButton === 'string' ? copyButton : undefined}
+        </StyledCopyButton>
+      ) : null}
     </EditorContainer>
     {helper ? (
       <Text as="span" variant="caption" prominence="weak" sentiment="neutral">

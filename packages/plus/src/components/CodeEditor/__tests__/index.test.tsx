@@ -16,6 +16,19 @@ describe.skip('CodeEditor', () => {
         onChange={newValue => newValue}
         helper="Helper text"
         label="Code"
+        labelDescription="Code description"
+      />,
+    ))
+
+  it('should render correctly with title', () =>
+    shouldMatchEmotionSnapshot(
+      <CodeEditor
+        value="configuration: 1/ntest: 'ok'"
+        extensions="yaml"
+        height="600px"
+        onChange={newValue => newValue}
+        helper="Helper text"
+        title="title"
       />,
     ))
 
