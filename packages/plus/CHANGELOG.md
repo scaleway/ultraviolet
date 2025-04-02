@@ -1,5 +1,14 @@
 # @ultraviolet/plus
 
+## 0.25.3
+
+### Patch Changes
+
+- [#4935](https://github.com/scaleway/ultraviolet/pull/4935) [`09911bd`](https://github.com/scaleway/ultraviolet/commit/09911bd06bb77ea266e20254fbeddc39eac2ceb0) Thanks [@lisalupi](https://github.com/lisalupi)! - `<Navigation />` : change alignement of cateogry icon to be at the top instead of vertically centered
+
+- Updated dependencies [[`dcdf00f`](https://github.com/scaleway/ultraviolet/commit/dcdf00f20cda1aa2bda9907dbeaf9009b48c47ab), [`2cdbba8`](https://github.com/scaleway/ultraviolet/commit/2cdbba8a821856c3a16f9170b35d6d400b527c91), [`5448fec`](https://github.com/scaleway/ultraviolet/commit/5448fec85cbb289cf0d8227556dbf572727652b7)]:
+  - @ultraviolet/ui@1.92.0
+
 ## 0.25.2
 
 ### Patch Changes

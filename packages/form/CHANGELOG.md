@@ -1,5 +1,22 @@
 # Change Log
 
+## 3.15.2
+
+### Patch Changes
+
+- [#4957](https://github.com/scaleway/ultraviolet/pull/4957) [`00c3f68`](https://github.com/scaleway/ultraviolet/commit/00c3f68a3b1ce55e5272007e2ade78ec0be3eab4) Thanks [@matthprost](https://github.com/matthprost)! - Add prop `optionName` on `SelectableCardOptionGroupField` and `UnitInputField` to allow customising the name in the form
+
+## 3.15.1
+
+### Patch Changes
+
+- [#4894](https://github.com/scaleway/ultraviolet/pull/4894) [`f147bc1`](https://github.com/scaleway/ultraviolet/commit/f147bc1ee192b9c4d49bf242bb4dc6c0c54d3e3b) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<SelectInputFieldV2 />` to call `onChange` only after changing field state
+
+- [#4905](https://github.com/scaleway/ultraviolet/pull/4905) [`5448fec`](https://github.com/scaleway/ultraviolet/commit/5448fec85cbb289cf0d8227556dbf572727652b7) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<SelectableCardOptionGroup.Option />` disabled image to have better visual
+
+- Updated dependencies [[`dcdf00f`](https://github.com/scaleway/ultraviolet/commit/dcdf00f20cda1aa2bda9907dbeaf9009b48c47ab), [`2cdbba8`](https://github.com/scaleway/ultraviolet/commit/2cdbba8a821856c3a16f9170b35d6d400b527c91), [`5448fec`](https://github.com/scaleway/ultraviolet/commit/5448fec85cbb289cf0d8227556dbf572727652b7)]:
+  - @ultraviolet/ui@1.92.0
+
 ## 3.15.0
 
 ### Minor Changes
