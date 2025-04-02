@@ -9,7 +9,8 @@ import type { IconProps } from '../Icon'
 export const Pen2OutlineIcon = ({ ...props }: Omit<IconProps, 'children'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
   <Icon {...props}>
-    {props.size === 'large' ? (
+    {typeof props.size === 'string' &&
+    ['medium', 'large', 'xlarge', 'xxlarge'].includes(props.size) ? (
       <path
         d="M16.433 3.567a.73.73 0 0 0-1.035 0l-.79.79 1.036 1.035.79-.79a.73.73 0 0 0 0-1.035m-1.745 2.781-1.036-1.036-9.048 9.048c-.317.318-.551.71-.68 1.14l-.243.82.819-.245c.43-.128.822-.362 1.14-.68zm-.247-3.737a2.085 2.085 0 0 1 2.949 2.947L6.596 16.352a4.06 4.06 0 0 1-1.71 1.02l-2.017.6a.676.676 0 0 1-.84-.841l.6-2.017a4.06 4.06 0 0 1 1.02-1.71z"
         clipRule="evenodd"

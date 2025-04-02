@@ -9,7 +9,8 @@ import type { IconProps } from '../Icon'
 export const PencilIcon = ({ ...props }: Omit<IconProps, 'children'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
   <Icon {...props}>
-    {props.size === 'large' ? (
+    {typeof props.size === 'string' &&
+    ['medium', 'large', 'xlarge', 'xxlarge'].includes(props.size) ? (
       <>
         <path d="m5.407 13.947 1.253-3.13c.2-.5.498-.953.878-1.333l6.868-6.867a2.105 2.105 0 1 1 2.977 2.977l-6.867 6.867c-.38.38-.834.68-1.333.879l-3.13 1.252a.496.496 0 0 1-.646-.645" />
         <path d="M3.489 5.842a1.24 1.24 0 0 1 1.24-1.241H9.94a.744.744 0 0 0 0-1.489H4.73A2.73 2.73 0 0 0 2 5.842v9.428A2.73 2.73 0 0 0 4.73 18h9.428a2.73 2.73 0 0 0 2.73-2.73v-5.21a.744.744 0 0 0-1.49 0v5.21a1.24 1.24 0 0 1-1.24 1.241H4.73a1.24 1.24 0 0 1-1.24-1.24z" />

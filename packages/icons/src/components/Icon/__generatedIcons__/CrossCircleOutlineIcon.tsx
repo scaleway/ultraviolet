@@ -14,7 +14,8 @@ export const CrossCircleOutlineIcon = ({
 }: Omit<IconProps, 'children'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
   <Icon {...props}>
-    {props.size === 'large' ? (
+    {typeof props.size === 'string' &&
+    ['medium', 'large', 'xlarge', 'xxlarge'].includes(props.size) ? (
       <path
         d="M16 5.438C10.166 5.438 5.438 10.166 5.438 16S10.166 26.563 16 26.563 26.563 21.833 26.563 16 21.833 5.438 16 5.438M3 16C3 8.82 8.82 3 16 3s13 5.82 13 13-5.82 13-13 13S3 23.18 3 16m9.193-3.807a1.22 1.22 0 0 1 1.723 0L16 14.276l2.084-2.083a1.219 1.219 0 1 1 1.723 1.723L17.724 16l2.083 2.084a1.219 1.219 0 1 1-1.723 1.723L16 17.724l-2.084 2.083a1.219 1.219 0 1 1-1.723-1.723L14.276 16l-2.083-2.084a1.22 1.22 0 0 1 0-1.723"
         clipRule="evenodd"

@@ -9,7 +9,8 @@ import type { IconProps } from '../Icon'
 export const NotificationIcon = ({ ...props }: Omit<IconProps, 'children'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
   <Icon {...props}>
-    {props.size === 'large' ? (
+    {typeof props.size === 'string' &&
+    ['medium', 'large', 'xlarge', 'xxlarge'].includes(props.size) ? (
       <path
         d="M10 2a6 6 0 0 0-6 6 11.44 11.44 0 0 1-1.258 5.234.75.75 0 0 0 .515 1.076q1.603.333 3.257.508a3.5 3.5 0 0 0 6.972 0 33 33 0 0 0 3.256-.508.75.75 0 0 0 .515-1.076A11.45 11.45 0 0 1 16 8a6 6 0 0 0-6-6M8.049 14.943a34 34 0 0 0 3.902 0 2 2 0 0 1-3.902 0"
         clipRule="evenodd"

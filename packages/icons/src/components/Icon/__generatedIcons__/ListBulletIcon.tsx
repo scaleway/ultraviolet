@@ -9,7 +9,8 @@ import type { IconProps } from '../Icon'
 export const ListBulletIcon = ({ ...props }: Omit<IconProps, 'children'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
   <Icon {...props}>
-    {props.size === 'large' ? (
+    {typeof props.size === 'string' &&
+    ['medium', 'large', 'xlarge', 'xxlarge'].includes(props.size) ? (
       <>
         <path d="M5.00688 6.09231C5.00688 6.64649 4.55762 7.09574 4.00344 7.09574C3.44925 7.09574 3 6.64649 3 6.09231C3 5.53812 3.44925 5.08887 4.00344 5.08887C4.55762 5.08887 5.00688 5.53812 5.00688 6.09231Z" />
         <path d="M6.59178 6.09574C6.59178 5.68267 6.92663 5.34781 7.3397 5.34781H16.2521C16.6651 5.34781 17 5.68267 17 6.09574C17 6.5088 16.6651 6.84366 16.2521 6.84366H7.3397C6.92663 6.84366 6.59178 6.5088 6.59178 6.09574Z" />

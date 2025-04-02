@@ -11,7 +11,8 @@ export const ArrowLeftDoubleIcon = ({
 }: Omit<IconProps, 'children'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
   <Icon {...props}>
-    {props.size === 'large' ? (
+    {typeof props.size === 'string' &&
+    ['medium', 'large', 'xlarge', 'xxlarge'].includes(props.size) ? (
       <path
         fillRule="evenodd"
         d="M4.47 9.72a.75.75 0 0 0 0 1.06l4.25 4.25a.75.75 0 0 0 1.06-1.06l-3.72-3.72 3.72-3.72a.75.75 0 0 0-1.06-1.06zm9.25-4.25L9.47 9.72a.75.75 0 0 0 0 1.06l4.25 4.25a.75.75 0 1 0 1.06-1.06l-3.72-3.72 3.72-3.72a.75.75 0 0 0-1.06-1.06"

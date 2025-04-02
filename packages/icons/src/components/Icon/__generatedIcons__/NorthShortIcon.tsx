@@ -9,7 +9,8 @@ import type { IconProps } from '../Icon'
 export const NorthShortIcon = ({ ...props }: Omit<IconProps, 'children'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
   <Icon {...props}>
-    {props.size === 'large' ? (
+    {typeof props.size === 'string' &&
+    ['medium', 'large', 'xlarge', 'xxlarge'].includes(props.size) ? (
       <path
         d="M9.792 2a.75.75 0 0 1 .53.22l6.042 6.041a.75.75 0 1 1-1.061 1.061l-4.761-4.761V17.25a.75.75 0 0 1-1.5 0V4.56L4.28 9.323a.75.75 0 0 1-1.06-1.06L9.26 2.22A.75.75 0 0 1 9.79 2"
         clipRule="evenodd"

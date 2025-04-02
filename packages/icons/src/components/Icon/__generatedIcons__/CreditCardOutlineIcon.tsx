@@ -11,7 +11,8 @@ export const CreditCardOutlineIcon = ({
 }: Omit<IconProps, 'children'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
   <Icon {...props}>
-    {props.size === 'large' ? (
+    {typeof props.size === 'string' &&
+    ['medium', 'large', 'xlarge', 'xxlarge'].includes(props.size) ? (
       <path
         d="M2 6.056A2.366 2.366 0 0 1 4.366 3.69h11.268A2.366 2.366 0 0 1 18 6.056v7.888a2.366 2.366 0 0 1-2.366 2.366H4.366A2.366 2.366 0 0 1 2 13.944zm1.352 2.367v5.52c0 .56.454 1.015 1.014 1.015h11.268c.56 0 1.014-.454 1.014-1.014V8.423zm13.296-1.916H3.352v-.45c0-.56.454-1.015 1.014-1.015h11.268c.56 0 1.014.454 1.014 1.014zM4.254 11.69c0-.373.302-.676.676-.676h4.507a.676.676 0 0 1 0 1.352H4.93a.676.676 0 0 1-.676-.676m0 1.69c0-.373.302-.676.676-.676h2.253a.676.676 0 0 1 0 1.352H4.93a.676.676 0 0 1-.676-.676"
         clipRule="evenodd"

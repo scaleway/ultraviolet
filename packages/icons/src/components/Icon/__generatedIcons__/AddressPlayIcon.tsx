@@ -9,7 +9,8 @@ import type { IconProps } from '../Icon'
 export const AddressPlayIcon = ({ ...props }: Omit<IconProps, 'children'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
   <Icon {...props}>
-    {props.size === 'large' ? (
+    {typeof props.size === 'string' &&
+    ['medium', 'large', 'xlarge', 'xxlarge'].includes(props.size) ? (
       <>
         <path d="m9.66 17.914.34-.615.339.615a.711.711 0 0 1-.679 0Z" />
         <path

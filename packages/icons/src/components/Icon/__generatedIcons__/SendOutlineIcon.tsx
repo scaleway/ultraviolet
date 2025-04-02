@@ -9,7 +9,8 @@ import type { IconProps } from '../Icon'
 export const SendOutlineIcon = ({ ...props }: Omit<IconProps, 'children'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
   <Icon {...props}>
-    {props.size === 'large' ? (
+    {typeof props.size === 'string' &&
+    ['medium', 'large', 'xlarge', 'xxlarge'].includes(props.size) ? (
       <path
         d="M2.187 2.199a.64.64 0 0 1 .646-.173A48.4 48.4 0 0 1 17.729 9.46a.672.672 0 0 1 0 1.083 48.4 48.4 0 0 1-14.896 7.432.64.64 0 0 1-.646-.173.68.68 0 0 1-.158-.664L4.173 10 2.03 2.863a.68.68 0 0 1 .158-.664m3.148 8.468L3.634 16.33A47.1 47.1 0 0 0 16.219 10 47.1 47.1 0 0 0 3.634 3.67l1.701 5.663h5.571a.66.66 0 0 1 .651.667.66.66 0 0 1-.651.667z"
         clipRule="evenodd"

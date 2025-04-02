@@ -9,7 +9,8 @@ import type { IconProps } from '../Icon'
 export const DatabaseIcon = ({ ...props }: Omit<IconProps, 'children'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
   <Icon {...props}>
-    {props.size === 'large' ? (
+    {typeof props.size === 'string' &&
+    ['medium', 'large', 'xlarge', 'xxlarge'].includes(props.size) ? (
       <>
         <path d="M10 2c3.437 0 6.222 1.592 6.222 3.556S13.436 9.11 10 9.11 3.778 7.52 3.778 5.556 6.564 2 10 2" />
         <path d="M15.061 9.227c.412-.235.81-.518 1.161-.847V10c0 1.964-2.786 3.556-6.222 3.556S3.778 11.964 3.778 10V8.38a6.2 6.2 0 0 0 1.16.847c1.363.778 3.155 1.217 5.062 1.217s3.7-.439 5.061-1.217" />

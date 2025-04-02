@@ -65,7 +65,7 @@ const templateIcon = (iconName: string, svg: string, svgSmall?: string) => {
     ...props
   }: Omit<IconProps, 'children'>) => (
       // eslint-disable-next-line react/jsx-props-no-spreading
-      <Icon {...props}>{props.size === "large" ? ${wrapSvg(svg)} : ${wrapSvg(svgSmall)}}</Icon>
+      <Icon {...props}>{typeof props.size === 'string' && ['medium', 'large', 'xlarge', 'xxlarge'].includes(props.size) ? ${wrapSvg(svg)} : ${wrapSvg(svgSmall)}}</Icon>
   )`
       : `export const ${iconName} = ({
     ...props
@@ -74,7 +74,7 @@ const templateIcon = (iconName: string, svg: string, svgSmall?: string) => {
       <Icon {...props}>${svg}</Icon>
   )`
   }
-  
+
 `
 }
 

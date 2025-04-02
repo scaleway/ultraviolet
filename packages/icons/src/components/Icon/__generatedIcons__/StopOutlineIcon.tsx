@@ -9,7 +9,8 @@ import type { IconProps } from '../Icon'
 export const StopOutlineIcon = ({ ...props }: Omit<IconProps, 'children'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
   <Icon {...props}>
-    {props.size === 'large' ? (
+    {typeof props.size === 'string' &&
+    ['medium', 'large', 'xlarge', 'xxlarge'].includes(props.size) ? (
       <path
         d="M10 3.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13M2 10a8 8 0 1 1 16 0 8 8 0 0 1-16 0m4.833-1.964c0-.664.539-1.203 1.203-1.203h3.928c.664 0 1.203.539 1.203 1.203v3.928c0 .664-.539 1.203-1.203 1.203H8.035a1.203 1.203 0 0 1-1.203-1.203zm1.5.297v3.334h3.334V8.333z"
         clipRule="evenodd"

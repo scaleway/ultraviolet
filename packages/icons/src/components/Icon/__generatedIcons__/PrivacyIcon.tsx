@@ -9,7 +9,8 @@ import type { IconProps } from '../Icon'
 export const PrivacyIcon = ({ ...props }: Omit<IconProps, 'children'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
   <Icon {...props}>
-    {props.size === 'large' ? (
+    {typeof props.size === 'string' &&
+    ['medium', 'large', 'xlarge', 'xxlarge'].includes(props.size) ? (
       <path
         d="M9.59 2.163a.595.595 0 0 1 .818 0 8.9 8.9 0 0 0 6.253 2.444.595.595 0 0 1 .573.41c.327.996.504 2.06.504 3.163 0 4.716-3.226 8.678-7.59 9.801a.6.6 0 0 1-.297 0C5.486 16.858 2.26 12.896 2.26 8.18c0-1.104.177-2.167.504-3.163a.595.595 0 0 1 .573-.41l.114.001A8.9 8.9 0 0 0 9.59 2.163m.41 9.748a5.05 5.05 0 0 0-3.97 1.934c.397 1.28 2.418 2.47 3.97 2.47 1.55 0 3.174-1.19 3.968-2.47a5.05 5.05 0 0 0-3.969-1.934m0-1.548c1.403 0 2.541-1.155 2.541-2.58s-1.138-2.58-2.542-2.58-2.542 1.155-2.542 2.58 1.138 2.58 2.542 2.58"
         clipRule="evenodd"

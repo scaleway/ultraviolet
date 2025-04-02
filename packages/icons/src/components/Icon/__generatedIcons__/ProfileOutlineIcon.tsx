@@ -11,7 +11,8 @@ export const ProfileOutlineIcon = ({
 }: Omit<IconProps, 'children'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
   <Icon {...props}>
-    {props.size === 'large' ? (
+    {typeof props.size === 'string' &&
+    ['medium', 'large', 'xlarge', 'xxlarge'].includes(props.size) ? (
       <path
         d="M9.999 3.352a2.14 2.14 0 1 0 0 4.282 2.14 2.14 0 0 0 0-4.282M6.506 5.493a3.493 3.493 0 1 1 6.986 0 3.493 3.493 0 0 1-6.986 0M5.069 15.668c1.517.631 3.182.98 4.93.98s3.413-.349 4.93-.98a4.959 4.959 0 0 0-9.86 0m-1.379.419a6.31 6.31 0 0 1 12.618 0 .68.68 0 0 1-.394.626A14.15 14.15 0 0 1 9.999 18c-2.11 0-4.113-.46-5.915-1.287a.68.68 0 0 1-.394-.626"
         clipRule="evenodd"

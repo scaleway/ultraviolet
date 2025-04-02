@@ -9,7 +9,8 @@ import type { IconProps } from '../Icon'
 export const ChatIcon = ({ ...props }: Omit<IconProps, 'children'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
   <Icon {...props}>
-    {props.size === 'large' ? (
+    {typeof props.size === 'string' &&
+    ['medium', 'large', 'xlarge', 'xxlarge'].includes(props.size) ? (
       <path
         d="M4.16 3.354A37 37 0 0 1 10 2.89c1.988 0 3.938.16 5.84.465C17.117 3.56 18 4.678 18 5.934v4.576c0 1.256-.883 2.374-2.16 2.58a37 37 0 0 1-4.607.445.7.7 0 0 0-.47.2l-3.18 3.18a.667.667 0 0 1-1.139-.47v-3.06a36 36 0 0 1-2.284-.295C2.883 12.884 2 11.766 2 10.51V5.934c0-1.256.883-2.374 2.16-2.58"
         clipRule="evenodd"
