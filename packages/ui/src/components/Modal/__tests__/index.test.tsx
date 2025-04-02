@@ -9,6 +9,7 @@ import {
 import { afterAll, beforeEach, describe, expect, test, vi } from 'vitest'
 import { Modal } from '..'
 import { useModal } from '../ModalProvider'
+import illustration from './illustration.svg'
 
 const customDialogBackdropStyles = css`
   background-color: aliceblue;
@@ -111,6 +112,13 @@ describe('Modal', () => {
         backdropClassName={customDialogBackdropStyles.name}
         className={customDialogStyles.name}
       >
+        <div>test</div>
+      </Modal>,
+    ))
+
+  test(`renders with image`, () =>
+    shouldMatchEmotionSnapshotWithPortal(
+      <Modal open isClosable={false} image={illustration}>
         <div>test</div>
       </Modal>,
     ))

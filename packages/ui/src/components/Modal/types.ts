@@ -59,4 +59,5 @@ export type DialogProps = {
   children: ReactNode
   backdropCss: React.JSX.IntrinsicAttributes['css']
   dialogCss: React.JSX.IntrinsicAttributes['css']
+  image?: string
 }

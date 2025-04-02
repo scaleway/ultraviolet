@@ -8,9 +8,26 @@ import type {
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { slideFromBottom } from '../../../utils/animations'
+import { Stack } from '../../Stack'
 import { useModal } from '../ModalProvider'
 import { MODAL_PLACEMENT, MODAL_WIDTH } from '../constants'
 import type { DialogProps, ModalPlacement, ModalSize } from '../types'
+
+const StyledImage = styled.img`
+  max-height: 13rem;
+ `
+
+const StyledDiv = styled.div`
+  width: 100%;
+  height: 240px;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  background-color: ${({ theme }) => theme.colors.primary.background};
+ `
+const StyledStack = styled(Stack)`
+  padding: ${({ theme }) => theme.space['3']};
+ `
 
 const StyledBackdrop = styled.div<{ 'data-open': boolean }>`
   position: fixed;
@@ -40,6 +57,7 @@ const StyledBackdrop = styled.div<{ 'data-open': boolean }>`
   &[data-animation='true'] {
     overflow: hidden;
   }
+
 `
 
 type StyledDialogProps = {
@@ -80,6 +98,10 @@ export const StyledDialog = styled('dialog', {
         `,
   )}
 
+  &[data-has-image='true'] {
+    padding: 0;
+  }
+
   &[data-animation='true'] {
     animation: ${slideFromBottom} 0.3s ease-in-out forwards;
   }
@@ -116,6 +138,7 @@ export const Dialog = ({
   backdropClassName,
   dialogCss,
   backdropCss,
+  image,
 }: DialogProps) => {
   const [isVisible, setIsVisible] = useState(false)
 
@@ -312,8 +335,18 @@ export const Dialog = ({
         top={Math.max(top, 0)}
         data-animation={animation}
         size={size}
+        data-has-image={!!image}
       >
-        {children}
+        {image ? (
+          <>
+            <StyledDiv>
+              <StyledImage src={image} alt="promotional image" />
+            </StyledDiv>
+            <StyledStack gap={5}>{children}</StyledStack>
+          </>
+        ) : (
+          children
+        )}
       </StyledDialog>
     </StyledBackdrop>,
     containerRef.current,

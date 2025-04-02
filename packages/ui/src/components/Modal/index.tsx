@@ -16,6 +16,7 @@ export type ModalProps = {
   isClosable?: boolean
   onClose?: () => void
   onBeforeClose?: () => Promise<void> | void
+  image?: string
   open?: boolean
   /**
    * @deprecated You should use open prop instead
@@ -66,6 +67,7 @@ export const Modal = ({
   width = 'small',
   customDialogStyles,
   customDialogBackdropStyles,
+  image,
 }: ModalProps) => {
   // Used for disclosure usage only
   const [visible, setVisible] = useState(false)
@@ -132,6 +134,7 @@ export const Modal = ({
             handleOpen={handleOpen}
             handleToggle={handleToggle}
             finalId={finalId}
+            image={image}
           >
             {children}
           </ModalContent>
