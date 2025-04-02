@@ -350,7 +350,7 @@ export const UnitInput = ({
             searchable={false}
             clearable={false}
             placeholder={placeholderUnit}
-            disabled={disabled}
+            disabled={disabled || options.length === 1}
             size={size}
             multiselect={false}
             readOnly={readOnly}
