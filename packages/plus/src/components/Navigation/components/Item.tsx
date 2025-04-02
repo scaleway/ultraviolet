@@ -536,7 +536,7 @@ export const Item = memo(
           <Container
             gap={1}
             direction="row"
-            alignItems="flex-start"
+            alignItems={categoryIcon ? 'flex-start' : 'center'}
             justifyContent="space-between"
             data-has-sub-label={!!subLabel}
             onClick={triggerToggle}
@@ -565,7 +565,7 @@ export const Item = memo(
             <Stack
               direction="row"
               gap={1}
-              alignItems="flex-start"
+              alignItems={categoryIcon ? 'flex-start' : 'center'}
               justifyContent="center"
             >
               {CategoryIconUsed ? (
