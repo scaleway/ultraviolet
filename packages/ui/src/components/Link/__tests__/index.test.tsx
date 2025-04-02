@@ -45,7 +45,7 @@ describe('Link', () => {
 
   test(`render correctly prop primary`, () =>
     shouldMatchEmotionSnapshot(
-      <Link href="/" primary>
+      <Link href="/" sentiment="primary">
         Hello
       </Link>,
     ))

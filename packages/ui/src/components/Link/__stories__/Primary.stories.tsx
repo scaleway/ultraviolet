@@ -5,7 +5,7 @@ import { Stack } from '../../Stack'
 
 export const Primary = (props: ComponentProps<typeof Link>) => (
   <Stack direction="column">
-    <Link {...props} primary>
+    <Link {...props} sentiment="primary">
       Primary link
     </Link>
     <Link {...props}>Default link</Link>
@@ -19,3 +19,12 @@ Primary.decorators = [
     </Stack>
   ),
 ] as Decorator[]
+
+Primary.parameters = {
+  docs: {
+    description: {
+      story:
+        'The `sentiment` prop should only be used with the `primary` value. Other values are deprecated and will be removed in the next major version.',
+    },
+  },
+}

@@ -35,6 +35,12 @@ export const PROMINENCES = {
 }
 
 export type ProminenceProps = keyof typeof PROMINENCES
+type SupportedSentiments = 'primary'
+
+/**
+ * @deprecated Only `primary` is supported
+ */
+type DeprecatedSentiments = Exclude<ExtendedColor, SupportedSentiments>
 
 type LinkSizes = 'large' | 'small' | 'xsmall'
 type LinkIconPosition = 'left' | 'right'
@@ -43,14 +49,10 @@ type LinkProps = {
   target?: HTMLAttributeAnchorTarget
   download?: string | boolean
   /**
-   * @deprecated Do not use this prop. It will be removed in the next major version.
-   * To use primary color, use prop `primary` instead.
+   * **Only sentiment `primary` is supported.**
+   * All the other sentiments are deprecated
    */
-  sentiment?: ExtendedColor
-  /**
-   * Set the link to use the primary color.
-   */
-  primary?: boolean
+  sentiment?: SupportedSentiments | DeprecatedSentiments
   prominence?: ProminenceProps
   size?: LinkSizes
   iconPosition?: LinkIconPosition
@@ -223,7 +225,6 @@ export const Link = forwardRef(
       target,
       download,
       sentiment = 'info',
-      primary,
       prominence,
       size = 'large',
       iconPosition,
@@ -241,7 +242,6 @@ export const Link = forwardRef(
     const computedRel = rel || (isBlank ? 'noopener noreferrer' : undefined)
     const [isTruncated, setIsTruncated] = useState(false)
     const elementRef = useRef<HTMLAnchorElement>(null)
-    const computedSentiment = primary ? 'primary' : sentiment
 
     const usedRef = (ref as RefObject<HTMLAnchorElement>) ?? elementRef
 
@@ -266,7 +266,7 @@ export const Link = forwardRef(
           target={target}
           download={download}
           ref={usedRef}
-          sentiment={computedSentiment}
+          sentiment={sentiment}
           prominence={prominence}
           rel={computedRel}
           className={className}
