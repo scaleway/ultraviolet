@@ -146,7 +146,7 @@ export const Banner = ({
       return 'strong'
     }
 
-    if (theme === 'dark' || variant === 'promotional') {
+    if (theme === 'dark' || variant === 'promotional' || theme === 'darker') {
       return 'stronger'
     }
 
@@ -215,7 +215,11 @@ export const Banner = ({
             ) : null}
             {linkText ? (
               <Link
-                primary={theme === 'light' && variant !== 'promotional'}
+                sentiment={
+                  theme === 'light' && variant !== 'promotional'
+                    ? 'primary'
+                    : undefined
+                }
                 prominence={prominence}
                 size="small"
                 target="_blank"
