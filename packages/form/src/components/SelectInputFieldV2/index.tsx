@@ -102,8 +102,8 @@ export const SelectInputFieldV2 = <
     typeof SelectInputV2<typeof multiselect>
   >['onChange'] = useCallback(
     (value: string | string[]) => {
-      field.onChange(value)
       onChange?.(value as PathValue<TFieldValues, TFieldName>)
+      field.onChange(value)
     },
     [onChange, field],
   )
