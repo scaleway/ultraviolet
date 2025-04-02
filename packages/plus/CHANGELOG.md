@@ -1,5 +1,15 @@
 # @ultraviolet/plus
 
+## 0.25.4
+
+### Patch Changes
+
+- [#4960](https://github.com/scaleway/ultraviolet/pull/4960) [`b5ce46c`](https://github.com/scaleway/ultraviolet/commit/b5ce46caecff90dfd52722b129dc5fe4db76c30a) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<Navigation />` wrong alignement on pinned items
+
+- Updated dependencies [[`917948a`](https://github.com/scaleway/ultraviolet/commit/917948ab383fd3dd894be500eed3310c354252cc)]:
+  - @ultraviolet/icons@3.12.3
+  - @ultraviolet/ui@1.92.1
+
 ## 0.25.3
 
 ### Patch Changes

@@ -1,5 +1,17 @@
 # Change Log
 
+## 3.15.3
+
+### Patch Changes
+
+- [#4963](https://github.com/scaleway/ultraviolet/pull/4963) [`56e3bfb`](https://github.com/scaleway/ultraviolet/commit/56e3bfbdde90150705a6a5a64ee5410310498ad4) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<SelectInputFieldV2 />` wrong re-render
+
+- [#4955](https://github.com/scaleway/ultraviolet/pull/4955) [`e5c91e7`](https://github.com/scaleway/ultraviolet/commit/e5c91e7062bf6ea8c07ccd799a2e486c2b1424be) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@babel/eslint-parser` to `7.27.0`.
+  Updated dependency `@babel/preset-typescript` to `7.27.0`.
+  Updated dependency `@babel/runtime` to `7.27.0`.
+- Updated dependencies []:
+  - @ultraviolet/ui@1.92.1
+
 ## 3.15.2
 
 ### Patch Changes

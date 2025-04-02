@@ -1,5 +1,11 @@
 # Change Log
 
+## 3.12.3
+
+### Patch Changes
+
+- [#4961](https://github.com/scaleway/ultraviolet/pull/4961) [`917948a`](https://github.com/scaleway/ultraviolet/commit/917948ab383fd3dd894be500eed3310c354252cc) Thanks [@matthprost](https://github.com/matthprost)! - Fix icons to work properly in all sizes
+
 ## 3.12.2
 
 ### Patch Changes
