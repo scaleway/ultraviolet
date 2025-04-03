@@ -8,16 +8,65 @@ import { consoleDarkTheme } from '@ultraviolet/themes'
 import { CopyButton, Label, Stack, Text } from '@ultraviolet/ui'
 import type { ComponentProps, ReactNode } from 'react'
 
-const StyledText = styled(Text)`
-  background-color: ${({ theme }) => theme.colors.neutral.backgroundStrong};
-  padding: ${({ theme }) => `${theme.space['1']} ${theme.space['2']}`};
-  border-radius: ${({ theme }) => `${theme.radii.default}`};
-  width: 100%;
-`
-
 const EditorContainer = styled.div`
   position: relative;
   width: 100%;
+
+  .cm-editor {
+    font-family: ${({ theme }) => theme.typography.code.fontFamily};
+    font-size:  ${({ theme }) => theme.typography.code.fontSize};
+    background-color: ${consoleDarkTheme.colors.neutral.backgroundWeak};
+    border-radius: ${({ theme }) => theme.space['0.5']};
+  }
+
+  .cm-content {
+    padding-block: ${({ theme }) => theme.space['2']};
+  };
+
+  .cm-gutters {
+    background-color: ${consoleDarkTheme.colors.neutral.backgroundHover};
+  }
+
+  .cm-lineNumbers {
+    padding-left: ${({ theme }) => theme.space['1']};
+  }
+
+  .cm-gutterElement {
+    color: #545454;
+  }
+
+  .cm-scroller {
+    border-radius: ${({ theme }) => theme.space['0.5']};
+  }
+
+
+  &[data-disabled="true"] {
+    pointer-events: none;
+
+    .cm-editor {
+      background-color: ${consoleDarkTheme.colors.neutral.backgroundWeakDisabled};
+      color: ${consoleDarkTheme.colors.neutral.textDisabled};
+    }
+
+    .cm-line span {
+      color: ${consoleDarkTheme.colors.neutral.textDisabled};
+    }
+
+    .cm-gutter-Element {
+      color: ${consoleDarkTheme.colors.neutral.textWeakDisabled};
+    }
+
+    .cm-cursor {
+      border-left-color: transparent;
+      display: none;
+    }
+
+  }
+`
+const StyledStack = styled(Stack)`
+  &[data-disabled] {
+    cursor: not-allowed;
+  }
 `
 
 const StyledCopyButton = styled(CopyButton)`
@@ -34,53 +83,6 @@ const StyledCopyButton = styled(CopyButton)`
   }
 `
 
-const StyledStack = styled(Stack, {
-  shouldForwardProp: prop => !['disabled'].includes(prop),
-})<{ disabled: boolean }>`
-  cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'auto')};
-
-  .cm-editor {
-    font-family: ${({ theme }) => theme.typography.code.fontFamily};
-    font-size:  ${({ theme }) => theme.typography.code.fontSize};
-    background-color: ${({ disabled }) => (disabled ? consoleDarkTheme.colors.neutral.backgroundWeakDisabled : consoleDarkTheme.colors.neutral.backgroundWeak)};
-    border-radius: ${({ theme }) => theme.space['0.5']};
-
-    ${({ disabled }) =>
-      disabled
-        ? `
-      pointer-events: none;
-      color: ${consoleDarkTheme.colors.neutral.textDisabled};`
-        : ''}
-   }
-
-  .cm-content {
-    padding-block: ${({ theme }) => theme.space['2']};
-  };
-
-  .cm-gutters {
-    background-color: ${consoleDarkTheme.colors.neutral.backgroundHover};
-  }
-
-  .cm-line span {
-    ${({ disabled }) =>
-      disabled
-        ? `
-      color: ${consoleDarkTheme.colors.neutral.textDisabled}`
-        : ''}
-  }
-
-  .cm-lineNumbers {
-    padding-left: ${({ theme }) => theme.space['1']};
-  }
-
-  .cm-gutterElement {
-    color: ${({ disabled }) => (disabled ? consoleDarkTheme.colors.neutral.textWeakDisabled : '#545454')};
-  }
-
-  .cm-scroller {
-    border-radius: ${({ theme }) => theme.space['0.5']};
-  }
-`
 type CodeEditorProps = {
   /**
    * @deprecated use prop `label` instead
@@ -103,6 +105,9 @@ type CodeEditorProps = {
   label?: string
   id?: string
   labelDescription?: ReactNode
+  'aria-label'?: string
+  'data-testid'?: string
+  className?: string
 }
 
 export const CodeEditor = ({
@@ -120,17 +125,17 @@ export const CodeEditor = ({
   id,
   helper,
   labelDescription,
+  'aria-label': ariaLabel,
+  'data-testid': dataTestId,
+  className,
 }: CodeEditorProps) => (
-  <StyledStack gap={0.5} disabled={disabled}>
-    {label ? <Label labelDescription={labelDescription}>{label}</Label> : null}
-    {title && !label ? (
-      <StyledText as="h3" variant="headingSmall">
-        {title}
-      </StyledText>
+  <StyledStack gap={0.5} data-disabled={disabled}>
+    {label || title ? (
+      <Label labelDescription={labelDescription}>{label ?? title}</Label>
     ) : null}
-    <EditorContainer>
+    <EditorContainer data-disabled={disabled}>
       <CodeMirror
-        readOnly={readOnly}
+        readOnly={readOnly || disabled}
         width="100%"
         height={height}
         onChange={onChange}
@@ -143,6 +148,9 @@ export const CodeEditor = ({
         }}
         id={id}
         theme={material}
+        aria-label={ariaLabel}
+        data-testid={dataTestId}
+        className={className}
       />
       {copyButton && !disabled ? (
         <StyledCopyButton
