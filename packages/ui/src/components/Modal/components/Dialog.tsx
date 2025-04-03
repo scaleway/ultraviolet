@@ -13,18 +13,20 @@ import { useModal } from '../ModalProvider'
 import { MODAL_PLACEMENT, MODAL_WIDTH } from '../constants'
 import type { DialogProps, ModalPlacement, ModalSize } from '../types'
 
-const StyledImage = styled.img`
-  max-height: 13rem;
- `
-
-const StyledDiv = styled.div`
+const StyledDiv = styled(Stack)`
   width: 100%;
-  height: 240px;
-  display: flex;
-  justify-content: center;
-  align-items: end;
+  height: 15rem;
   background-color: ${({ theme }) => theme.colors.primary.background};
- `
+  overflow: hidden;
+`
+
+const StyledImg = styled.img`
+  margin-inline: auto;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+`
+
 const StyledStack = styled(Stack)`
   padding: ${({ theme }) => theme.space['3']};
  `
@@ -139,6 +141,7 @@ export const Dialog = ({
   dialogCss,
   backdropCss,
   image,
+  imageAlt,
 }: DialogProps) => {
   const [isVisible, setIsVisible] = useState(false)
 
@@ -339,8 +342,8 @@ export const Dialog = ({
       >
         {image ? (
           <>
-            <StyledDiv>
-              <StyledImage src={image} alt="promotional image" />
+            <StyledDiv alignItems="end" justifyContent="center">
+              <StyledImg src={image} alt={imageAlt} />
             </StyledDiv>
             <StyledStack gap={5}>{children}</StyledStack>
           </>
