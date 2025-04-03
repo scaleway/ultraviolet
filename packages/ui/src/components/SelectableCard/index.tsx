@@ -30,6 +30,7 @@ import { Stack } from '../Stack'
 import { Tooltip } from '../Tooltip'
 
 const Container = styled(Stack)`
+  position: relative;
   // This is to remove the gap when there is no label because if we do not there
   // will be an empty space above the children due to the invisible input
   // if you find a better way to do this feel free to do it
