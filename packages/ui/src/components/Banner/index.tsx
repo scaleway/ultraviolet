@@ -146,7 +146,7 @@ export const Banner = ({
       return 'strong'
     }
 
-    if (theme === 'dark' || variant === 'promotional' || theme === 'darker') {
+    if (theme === 'dark' || theme === 'darker') {
       return 'stronger'
     }
 

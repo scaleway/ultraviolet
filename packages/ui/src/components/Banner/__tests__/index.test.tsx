@@ -1,5 +1,6 @@
 import { screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
+import { consoleDarkTheme } from '@ultraviolet/themes'
 import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
 import { describe, expect, test } from 'vitest'
 import { Banner } from '..'
@@ -74,4 +75,12 @@ describe('Banner', () => {
       expect(banner).not.toBeVisible()
     })
   })
+
+  test(`should render correctly with dark theme`, () =>
+    shouldMatchEmotionSnapshot(
+      <Banner title="Title" linkText="Learn more">
+        Descritpion
+      </Banner>,
+      consoleDarkTheme,
+    ))
 })
