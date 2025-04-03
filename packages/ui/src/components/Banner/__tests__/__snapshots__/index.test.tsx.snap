@@ -1457,6 +1457,492 @@ exports[`Banner > renders correctly with direction row 1`] = `
 </DocumentFragment>
 `;
 
+exports[`Banner > should render correctly with dark theme 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  gap: 1rem;
+  background: #2d1c51;
+  -webkit-background-position: right;
+  background-position: right;
+  background-repeat: no-repeat;
+  -webkit-background-size: contain;
+  background-size: contain;
+}
+
+.emotion-0>svg:first-child,
+.emotion-0>img {
+  height: 140px;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.emotion-0 button[name="close"] {
+  background: none;
+}
+
+.emotion-0 button[name="close"]:hover {
+  background: none;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 140px;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 140px;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.25rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.25rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-8 {
+  color: #bf96f8;
+  font-size: 1.3125rem;
+  font-family: Space Grotesk,Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 2rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-10 {
+  color: #ffffff;
+  font-size: 1rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-14 {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  color: #b8bac0;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  text-decoration-color: transparent;
+  -webkit-transition: text-decoration-color 250ms ease-out;
+  transition: text-decoration-color 250ms ease-out;
+  gap: 0.5rem;
+  position: relative;
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 0.875rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  paragraph-spacing: 0;
+  text-case: none;
+}
+
+.emotion-14 .e1afnb7a2,
+.emotion-14 .e1afnb7a3,
+.emotion-14 .emotion-18 {
+  -webkit-transition: -webkit-transform 250ms ease-out;
+  transition: transform 250ms ease-out;
+}
+
+.emotion-14>* {
+  pointer-events: none;
+}
+
+.emotion-14:visited {
+  color: #bf96f8;
+  text-decoration-color: transparent;
+}
+
+.emotion-14:hover,
+.emotion-14:focus {
+  outline: none;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  color: #e9e9ec;
+  text-decoration-color: #e9e9ec;
+}
+
+.emotion-14:hover .e1afnb7a2,
+.emotion-14:focus .e1afnb7a2,
+.emotion-14:hover .e1afnb7a3,
+.emotion-14:focus .e1afnb7a3,
+.emotion-14:hover .emotion-18,
+.emotion-14:focus .emotion-18 {
+  -webkit-transform: translate(-0.25rem, 0);
+  -moz-transform: translate(-0.25rem, 0);
+  -ms-transform: translate(-0.25rem, 0);
+  transform: translate(-0.25rem, 0);
+}
+
+.emotion-14:hover:visited,
+.emotion-14:focus:visited {
+  color: #ccaefc;
+  text-decoration-color: #ccaefc;
+}
+
+.emotion-14[data-variant='inline'] {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+
+.emotion-14:hover::after,
+.emotion-14:focus::after {
+  background-color: #34a8ff;
+}
+
+.emotion-14:active {
+  text-decoration-thickness: 2px;
+}
+
+.emotion-16 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding-bottom: 0.25rem;
+}
+
+.emotion-19 {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 14px;
+  width: 14px;
+  min-width: 14px;
+  min-height: 14px;
+  margin-left: 0.5rem;
+}
+
+.emotion-19 .fillStroke {
+  stroke: currentColor;
+  fill: none;
+}
+
+.emotion-21 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 2rem;
+  padding: 0 0.5rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.5rem;
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+  width: 2rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: none;
+  color: #b8bac0;
+}
+
+.emotion-21:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-21:active {
+  box-shadow: 0px 0px 0px 3px #0c0f1a8c;
+}
+
+.emotion-21:hover,
+.emotion-21:active {
+  background: #303445;
+  color: #e9e9ec;
+}
+
+.emotion-23 {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+.emotion-23 .fillStroke {
+  stroke: currentColor;
+  fill: none;
+}
+
+.emotion-23 path {
+  fill: currentColor;
+}
+
+.emotion-23 {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+.emotion-23 .fillStroke {
+  stroke: currentColor;
+  fill: none;
+}
+
+.emotion-23 path {
+  fill: currentColor;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+    >
+      <div
+        class="emotion-2 emotion-3"
+      >
+        <img
+          alt=""
+          src="/src/components/Banner/assets/default-image.svg"
+        />
+      </div>
+      <div
+        class="emotion-4 emotion-5"
+        style="flex: 1;"
+      >
+        <div
+          class="emotion-6 emotion-5"
+          style="flex: 1;"
+        >
+          <p
+            class="emotion-8 emotion-9"
+          >
+            Title
+          </p>
+          <p
+            class="emotion-10 emotion-9"
+          >
+            Descritpion
+          </p>
+        </div>
+        <div
+          class="emotion-12 emotion-5"
+        >
+          <a
+            class="emotion-14 emotion-15"
+            data-variant="standalone"
+            href=""
+            prominence="stronger"
+            rel="noopener noreferrer"
+            target="_blank"
+            variant="bodySmallStrong"
+          >
+            Learn more
+            <span
+              class="emotion-16 emotion-17"
+            >
+              <svg
+                class="emotion-18 emotion-19 emotion-20"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M6.22 8.72a.75.75 0 0 0 1.06 1.06l5.22-5.22v1.69a.75.75 0 0 0 1.5 0v-3.5a.75.75 0 0 0-.75-.75h-3.5a.75.75 0 0 0 0 1.5h1.69z"
+                />
+                <path
+                  d="M3.5 6.75c0-.69.56-1.25 1.25-1.25H7A.75.75 0 0 0 7 4H4.75A2.75 2.75 0 0 0 2 6.75v4.5A2.75 2.75 0 0 0 4.75 14h4.5A2.75 2.75 0 0 0 12 11.25V9a.75.75 0 0 0-1.5 0v2.25c0 .69-.56 1.25-1.25 1.25h-4.5c-.69 0-1.25-.56-1.25-1.25z"
+                />
+              </svg>
+            </span>
+          </a>
+        </div>
+      </div>
+      <button
+        class="emotion-21 emotion-22"
+        name="close"
+        type="button"
+      >
+        <svg
+          class="emotion-23 emotion-24"
+          viewBox="0 0 16 16"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"
+          />
+        </svg>
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`Banner > sizes and variants > renders correctly with size medium and variant intro 1`] = `
 <DocumentFragment>
   .emotion-0 {
