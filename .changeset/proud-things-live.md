@@ -3,7 +3,7 @@
 ---
 
 `<CodeEditor />`: 
-- **BREAKING** Rename prop `title` to `label` and change style
+- Rename prop `title` to `label` and change style
 - New prop `helper`
 - New prop `disabled`
 - New prop `copyButton`
