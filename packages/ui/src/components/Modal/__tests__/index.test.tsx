@@ -9,7 +9,7 @@ import {
 import { afterAll, beforeEach, describe, expect, test, vi } from 'vitest'
 import { Modal } from '..'
 import { useModal } from '../ModalProvider'
-import illustration from './illustration.svg'
+import illustration from '../assets/illustration.webp'
 
 const customDialogBackdropStyles = css`
   background-color: aliceblue;
@@ -118,7 +118,7 @@ describe('Modal', () => {
 
   test(`renders with image`, () =>
     shouldMatchEmotionSnapshotWithPortal(
-      <Modal open isClosable={false} image={illustration}>
+      <Modal open isClosable={false} image={illustration} imageAlt="test alt">
         <div>test</div>
       </Modal>,
     ))

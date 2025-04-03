@@ -23,6 +23,7 @@ type ModalContentProps = ComponentProps<typeof Modal> & {
   handleClose: () => void
   dataTestId?: string
   image?: string
+  imageAlt: string
 }
 
 export const ModalContent = ({
@@ -47,6 +48,7 @@ export const ModalContent = ({
   handleToggle,
   finalId,
   image,
+  imageAlt,
 }: ModalContentProps) =>
   visible || open || opened ? (
     <Dialog
@@ -65,6 +67,7 @@ export const ModalContent = ({
       dialogCss={customDialogStyles}
       backdropCss={customDialogBackdropStyles}
       image={image}
+      imageAlt={imageAlt}
     >
       <>
         {typeof children === 'function'
