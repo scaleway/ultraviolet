@@ -157,7 +157,7 @@ padding-inline: ${({ theme }) => theme.space['0.25']};
 
 type TimeInputProps = {
   placeholder?: Time
-  value?: Date
+  value?: Date | string | null
   clearable?: boolean
   required?: boolean
   labelDescription?: ReactNode
@@ -216,12 +216,12 @@ export const TimeInputV2 = ({
 }: TimeInputProps) => {
   const localId = useId()
   const defaultPeriod = useMemo(() => {
-    if (value) return value.getHours() >= 12 ? 'pm' : 'am'
+    if (value) return new Date(value).getHours() >= 12 ? 'pm' : 'am'
 
     return undefined
   }, [value])
 
-  const [time, setTime] = useState(value)
+  const [time, setTime] = useState(() => (value ? new Date(value) : undefined))
   const [period, setPeriod] = useState<'pm' | 'am' | undefined>(defaultPeriod)
   const [filled, setFilled] = useState(
     value ? { h: true, m: true, s: true } : { h: false, m: false, s: false },
@@ -234,11 +234,12 @@ export const TimeInputV2 = ({
 
   useEffect(() => {
     if (value) {
-      setTime(value)
+      const valueDate = new Date(value)
+      setTime(valueDate)
 
       // without this condition, every time an input value changes, the other ones will be set to 0 if they used to be undefined
       // instead of leaving them empty (and showing the placeholder)
-      if (value.getTime() !== time?.getTime()) {
+      if (valueDate.getTime() !== time?.getTime()) {
         setFilled({ h: true, m: true, s: true })
       }
     }

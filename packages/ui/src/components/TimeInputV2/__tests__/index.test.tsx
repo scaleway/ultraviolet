@@ -5,6 +5,7 @@ import { describe, expect, test, vi } from 'vitest'
 import { TimeInputV2 } from '..'
 
 const DEFAULT_VALUE = new Date('01/01/2000 11:23:14')
+const DEFAULT_JSON_VALUE = '2025-04-04T07:27:09.414Z'
 
 describe('TimeInput', () => {
   test('renders correctly with base props', () =>
@@ -52,6 +53,9 @@ describe('TimeInput', () => {
         error
       />,
     ))
+
+  test('renders correctly with string value', () =>
+    shouldMatchEmotionSnapshot(<TimeInputV2 value={DEFAULT_JSON_VALUE} />))
 
   test('renders correctly controlled - 12-hour format', async () => {
     const mockOnChange = vi.fn()
