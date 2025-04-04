@@ -451,6 +451,10 @@ exports[`Drawer > renders with disclosure and onClose 1`] = `
   margin-top: 0;
 }
 
+.emotion-3[data-has-image='true'] {
+  padding: 0;
+}
+
 .emotion-3[data-animation='true'] {
   -webkit-animation: animation-0 0.3s ease-in-out forwards;
   animation: animation-0 0.3s ease-in-out forwards;
@@ -556,6 +560,10 @@ exports[`Drawer > renders with disclosure and onClose 1`] = `
   margin: auto;
   margin-right: 0;
   margin-top: 0;
+}
+
+.emotion-3[data-has-image='true'] {
+  padding: 0;
 }
 
 .emotion-3[data-animation='true'] {
@@ -913,6 +921,7 @@ exports[`Drawer > renders with disclosure and onClose 1`] = `
         aria-modal="true"
         class="emotion-2 emotion-3 emotion-4"
         data-animation="false"
+        data-has-image="false"
         data-placement="top-right"
         data-size="medium"
         data-testid="test"

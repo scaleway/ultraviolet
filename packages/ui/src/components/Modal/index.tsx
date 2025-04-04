@@ -39,8 +39,16 @@ export type ModalProps = {
    * @deprecated You should use className instead
    */
   customDialogStyles?: React.JSX.IntrinsicAttributes['css']
+  /**
+   * Add an image a the top of the modal.
+   * Do not forget to add an alternative text to the image using prop `imageAlt`
+   */
+  image?: string
+  /**
+   * Alternative text to the image defined with prop `image`. By default set to "promotional image".
+   */
+  imageAlt?: string
 }
-
 /**
  * Modal is a component that allows you to display content on top of other content.
  * It is often used to display a dialog with additional information or to ask for a confirmation.
@@ -66,6 +74,8 @@ export const Modal = ({
   width = 'small',
   customDialogStyles,
   customDialogBackdropStyles,
+  image,
+  imageAlt = 'promotional image',
 }: ModalProps) => {
   // Used for disclosure usage only
   const [visible, setVisible] = useState(false)
@@ -132,6 +142,8 @@ export const Modal = ({
             handleOpen={handleOpen}
             handleToggle={handleToggle}
             finalId={finalId}
+            image={image}
+            imageAlt={imageAlt}
           >
             {children}
           </ModalContent>
@@ -157,6 +169,8 @@ export const Modal = ({
           handleOpen={handleOpen}
           handleToggle={handleToggle}
           finalId={finalId}
+          image={image}
+          imageAlt={imageAlt}
         >
           {children}
         </ModalContent>
