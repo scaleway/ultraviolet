@@ -208,8 +208,8 @@ importers:
         specifier: 9.0.1
         version: 9.0.1
       esbuild-plugin-browserslist:
-        specifier: 0.16.0
-        version: 0.16.0(browserslist@4.24.4)(esbuild@0.25.0)
+        specifier: 1.0.0
+        version: 1.0.0(browserslist@4.24.4)(esbuild@0.25.0)
       eslint:
         specifier: 9.23.0
         version: 9.23.0(jiti@2.4.2)
@@ -395,8 +395,8 @@ importers:
         specifier: 11.14.0
         version: 11.14.0(@emotion/react@11.14.0(@types/react@19.0.12)(react@19.0.0))(@types/react@19.0.12)(react@19.0.0)
       '@scaleway/regex':
-        specifier: 5.3.0
-        version: 5.3.0
+        specifier: 5.3.1
+        version: 5.3.1
       '@ultraviolet/fonts':
         specifier: workspace:*
         version: link:../../packages/fonts
@@ -2674,8 +2674,8 @@ packages:
     resolution: {integrity: sha512-DelRK+56UBUEoRr8pQGwTE7oyC019pExis6iG6zZPcjuz4nLbMB5LIosmclnsvajfIBEQiD1Dv9JI/MgnPwygQ==}
     engines: {node: '>=20.x'}
 
-  '@scaleway/regex@5.3.0':
-    resolution: {integrity: sha512-rYimuf2ZcxIKybOGn0i3hO7Esz7u3jmGMcMRuS7cW4hXB03n3ls4RCp8yDbKnH6yi0fNxPYMs3ccJPF0nKQz0g==}
+  '@scaleway/regex@5.3.1':
+    resolution: {integrity: sha512-MjhPhCrP1YkyXoY0knLBkuC0W98omtK3YFspr0DloTom0cBDh+fDKTfIFmsDrYQP0jPcDrAkhEk3tAjjy5oEuA==}
     engines: {node: '>=20.x'}
 
   '@scaleway/tsconfig@1.1.1':
@@ -4514,12 +4514,12 @@ packages:
     resolution: {integrity: sha512-w+5mJ3GuFL+NjVtJlvydShqE1eN3h3PbI7/5LAsYJP/2qtuMXjfL2LpHSRqo4b4eSF5K/DH1JXKUAHSB2UW50g==}
     engines: {node: '>= 0.4'}
 
-  esbuild-plugin-browserslist@0.16.0:
-    resolution: {integrity: sha512-vfwl1RmCa4D+wWoAxStz2g0O3wWGyUAv6mK9mfgF7X2UY3z/b/6ySTWoPu9nnKvBea6D3uk2zS1TOLt/b5qgLQ==}
-    engines: {node: '>=18'}
+  esbuild-plugin-browserslist@1.0.0:
+    resolution: {integrity: sha512-NXT44VD5bSbO/IOm4WLdEwOzbI0DWTG+gUpu6G+BWoe99h7RmuZotQOw3r30dx//ktzoHWlABfWqkI9BdIhT2g==}
+    engines: {node: ^20.19.0 || ^22.12.0 || >23.0.0}
     peerDependencies:
       browserslist: ^4.21.8
-      esbuild: ~0.25.0
+      esbuild: ~0.25.1
 
   esbuild-register@3.6.0:
     resolution: {integrity: sha512-H2/S7Pm8a9CL1uhp9OvjwrBh5Pvx0H8qVOxNu8Wed9Y7qv56MPtq+GGM8RJpq6glYJn9Wspr8uw7l55uyinNeg==}
@@ -10402,7 +10402,7 @@ snapshots:
 
   '@scaleway/random-name@5.1.1': {}
 
-  '@scaleway/regex@5.3.0': {}
+  '@scaleway/regex@5.3.1': {}
 
   '@scaleway/tsconfig@1.1.1': {}
 
@@ -12651,7 +12651,7 @@ snapshots:
       is-date-object: 1.1.0
       is-symbol: 1.1.1
 
-  esbuild-plugin-browserslist@0.16.0(browserslist@4.24.4)(esbuild@0.25.0):
+  esbuild-plugin-browserslist@1.0.0(browserslist@4.24.4)(esbuild@0.25.0):
     dependencies:
       browserslist: 4.24.4
       debug: 4.4.0
