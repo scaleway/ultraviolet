@@ -1,5 +1,12 @@
 # Change Log
 
+## 3.15.4
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @ultraviolet/ui@1.92.2
+
 ## 3.15.3
 
 ### Patch Changes

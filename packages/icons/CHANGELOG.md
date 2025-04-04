@@ -1,5 +1,11 @@
 # Change Log
 
+## 3.12.4
+
+### Patch Changes
+
+- [#4969](https://github.com/scaleway/ultraviolet/pull/4969) [`f81674d`](https://github.com/scaleway/ultraviolet/commit/f81674ddb14403dadd208023cced359191519bdf) Thanks [@lisalupi](https://github.com/lisalupi)! - Add icon `star`
+
 ## 3.12.3
 
 ### Patch Changes
