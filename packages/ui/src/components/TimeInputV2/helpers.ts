@@ -46,7 +46,7 @@ export const getLastTypedChar = (value: string, oldValue?: number) => {
 
 export const getValueByType = (
   type: (typeof TIME_KEYS)[number],
-  value?: Date,
+  value?: Date | null,
 ) => {
   if (!value) return 0
   if (type === 'h') return value.getHours()

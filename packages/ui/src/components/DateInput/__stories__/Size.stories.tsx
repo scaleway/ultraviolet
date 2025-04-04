@@ -11,7 +11,7 @@ export const Size: StoryFn<typeof DateInput> = args => (
 )
 
 Size.args = {
-  value: 'Sat 24 Dec 2024',
+  value: new Date('Sat 24 Dec 2024'),
 }
 Size.decorators = [
   StoryComponent => (

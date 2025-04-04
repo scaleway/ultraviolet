@@ -157,7 +157,7 @@ padding-inline: ${({ theme }) => theme.space['0.25']};
 
 type TimeInputProps = {
   placeholder?: Time
-  value?: Date
+  value?: Date | null
   clearable?: boolean
   required?: boolean
   labelDescription?: ReactNode
