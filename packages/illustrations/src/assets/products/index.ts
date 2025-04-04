@@ -56,6 +56,7 @@ import * as sqs from './sqs'
 import * as terraform from './terraform'
 import * as transactionalEmail from './transactionalEmail'
 import * as vpc from './vpc'
+import * as vpn from './vpn'
 import * as webHosting from './webHosting'
 import * as webPlatform from './webPlatform'
 
@@ -113,6 +114,7 @@ export {
   terraform,
   transactionalEmail,
   vpc,
+  vpn,
   webHosting,
   webPlatform,
 }
