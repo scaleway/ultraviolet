@@ -64,7 +64,7 @@ type UvThemeType = {
 }
 
 const createCSSFile = (theme: string, content: UvThemeType) => {
-  const cssContent = generateThemeCss(content)
+  const cssContent = generateThemeCss({ uvTheme: content, filename: theme })
   const filePath = `packages/themes/public/style/${theme}.css`
   fs.writeFileSync(filePath, cssContent, 'utf8')
 }

@@ -70,8 +70,11 @@ type UvThemeType = {
   breakpoints: Record<string, string>
 }
 
-export const generateThemeCss = (uvTheme: UvThemeType) =>
-  `:root {\n${
+export const generateThemeCss = ({
+  uvTheme,
+  filename,
+}: { uvTheme: UvThemeType; filename: string }) =>
+  `:root.${filename}-theme {\n${
     createCssVariables('screen', screens) +
     createCssVariables('color', uvTheme.colors) +
     createCssVariables('radius', uvTheme.radii) +
