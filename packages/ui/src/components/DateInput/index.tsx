@@ -41,7 +41,7 @@ type DateInputProps<IsRange extends undefined | boolean = false> = {
    * Label of the field
    */
   label?: string
-  value?: Date | string | null
+  value?: Date | null
   className?: string
   'data-testid'?: string
   excludeDates?: Date[]
