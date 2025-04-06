@@ -86,7 +86,7 @@ export const Item = ({
     aria-current={ariaCurrent}
   >
     {to ? (
-      <StyledLink sentiment="neutral" href={to} size="small">
+      <StyledLink prominence="stronger" href={to} size="small">
         {contractString(children)}
       </StyledLink>
     ) : (
