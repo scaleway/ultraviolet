@@ -45,6 +45,8 @@ describe('Helper functions dateInput', () => {
     expect(getValueByType('h', date)).toBe(13)
     expect(getValueByType('m', date)).toBe(30)
     expect(getValueByType('s', date)).toBe(59)
+    expect(getValueByType('s', undefined)).toBe(0)
+    expect(getValueByType('s', null)).toBe(0)
   })
 
   test('setValueByType should work', () => {
