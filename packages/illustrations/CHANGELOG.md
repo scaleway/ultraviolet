@@ -1,5 +1,11 @@
 # @ultraviolet/illustrations
 
+## 4.4.1
+
+### Patch Changes
+
+- [#4973](https://github.com/scaleway/ultraviolet/pull/4973) [`c821b10`](https://github.com/scaleway/ultraviolet/commit/c821b105adcc13d9ca0f50e1dcf71add8b3d0844) Thanks [@lisalupi](https://github.com/lisalupi)! - New product illustrion `vpn`
+
 ## 4.4.0
 
 ### Minor Changes
