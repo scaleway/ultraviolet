@@ -216,6 +216,9 @@ export const ToastContainer = ({
           className={className}
           transition={Slide}
           containerId={containerId}
+          pauseOnFocusLoss={false}
+          draggable={false}
+          pauseOnHover={false}
         />
       )}
     </ClassNames>
