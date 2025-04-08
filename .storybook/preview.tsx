@@ -12,6 +12,13 @@ import Page from './components/Page'
 import { globalStyles } from './components/globalStyle'
 import { dark, light } from './storybookThemes'
 import '@ultraviolet/fonts/fonts.css'
+import { useEffect } from 'react'
+import { scan } from "react-scan"
+
+scan({
+  enabled: true,
+  log: true,
+})
 
 const parameters: Preview['parameters'] = {
   darkMode: {
@@ -109,6 +116,12 @@ const withThemeProvider = (Story: StoryFn, context: { globals: { theme: string }
 
 const decorators = [
   (Story: StoryFn) => {
+    useEffect(() => {
+        scan({
+          enabled: true,
+        });
+      }, []);
+
     return (
       <>
         {
