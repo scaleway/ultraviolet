@@ -78,9 +78,9 @@ export const InfiniteScroll = ({
       const { scrollTop, scrollHeight, clientHeight } = scrollableContainer
 
       if (scrollTop + clientHeight >= scrollHeight - heightThreshold) {
-        setIsLoading(true)
         const result = onLoadMore()
         if (result instanceof Promise) {
+          setIsLoading(true)
           result
             .then(() => {
               setIsLoading(false)
