@@ -240,7 +240,7 @@ exports[`CheckboxField > should render correctly 1`] = `
           aria-checked="false"
           aria-invalid="false"
           class="emotion-2 emotion-3"
-          id=":r0:"
+          id="«r0»"
           name="test"
           type="checkbox"
         />
@@ -518,7 +518,7 @@ exports[`CheckboxField > should render correctly checked without value 1`] = `
           aria-invalid="false"
           checked=""
           class="emotion-2 emotion-3"
-          id=":r6:"
+          id="«r6»"
           name="checked"
           type="checkbox"
         />
@@ -796,7 +796,7 @@ exports[`CheckboxField > should render correctly disabled 1`] = `
           aria-invalid="false"
           class="emotion-2 emotion-3"
           disabled=""
-          id=":r4:"
+          id="«r4»"
           name="test"
           type="checkbox"
         />
@@ -1073,7 +1073,7 @@ exports[`CheckboxField > should render correctly not checked without value 1`] =
           aria-checked="false"
           aria-invalid="false"
           class="emotion-2 emotion-3"
-          id=":r8:"
+          id="«r8»"
           name="checked"
           type="checkbox"
         />
@@ -1351,7 +1351,7 @@ exports[`CheckboxField > should render correctly with aria-label 1`] = `
           aria-invalid="false"
           aria-label="test"
           class="emotion-2 emotion-3"
-          id=":r2:"
+          id="«r2»"
           name="test"
           type="checkbox"
         />
@@ -1705,10 +1705,10 @@ exports[`CheckboxField > should render correctly with errors 1`] = `
       >
         <input
           aria-checked="false"
-          aria-describedby=":rd:-hint"
+          aria-describedby="«rd»-hint"
           aria-invalid="true"
           class="emotion-2 emotion-3"
-          id=":rd:"
+          id="«rd»"
           name="test"
           type="checkbox"
         />
@@ -1747,7 +1747,7 @@ exports[`CheckboxField > should render correctly with errors 1`] = `
           >
             <label
               class="emotion-12 emotion-13 emotion-14"
-              for=":rd:"
+              for="«rd»"
             >
               Checkbox field error
             </label>
@@ -2073,7 +2073,7 @@ exports[`CheckboxField > should trigger events correctly 1`] = `
           aria-checked="true"
           aria-invalid="false"
           class="emotion-2 emotion-3"
-          id=":ra:"
+          id="«ra»"
           name="test"
           type="checkbox"
         />
@@ -2112,7 +2112,7 @@ exports[`CheckboxField > should trigger events correctly 1`] = `
           >
             <label
               class="emotion-12 emotion-13 emotion-14"
-              for=":ra:"
+              for="«ra»"
             >
               Checkbox field events
             </label>
