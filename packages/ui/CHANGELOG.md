@@ -1,5 +1,18 @@
 # Change Log
 
+## 1.92.2
+
+### Patch Changes
+
+- [#4978](https://github.com/scaleway/ultraviolet/pull/4978) [`865dd71`](https://github.com/scaleway/ultraviolet/commit/865dd710d3cf1243455f6d55cc8a8f54aaa54b95) Thanks [@alexandre-combemorel](https://github.com/alexandre-combemorel)! - Change Date Input props and remove accepting string
+
+- [#4986](https://github.com/scaleway/ultraviolet/pull/4986) [`1252790`](https://github.com/scaleway/ultraviolet/commit/125279049c1bcbf5e6de9ee00f742b9a845d5e6a) Thanks [@matthprost](https://github.com/matthprost)! - Fix Toaster component to have more options disabled blocking it from auto closing
+
+- [#4975](https://github.com/scaleway/ultraviolet/pull/4975) [`ec95d1d`](https://github.com/scaleway/ultraviolet/commit/ec95d1d0c46a871fbf5d2dd066492e02bc91cc05) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<SelectableCard />` make the parent container relative so the ticks can display correctly under any conditions
+
+- Updated dependencies [[`f81674d`](https://github.com/scaleway/ultraviolet/commit/f81674ddb14403dadd208023cced359191519bdf)]:
+  - @ultraviolet/icons@3.12.4
+
 ## 1.92.1
 
 ### Patch Changes

@@ -1,5 +1,16 @@
 # Change Log
 
+## 3.15.4
+
+### Patch Changes
+
+- [#4975](https://github.com/scaleway/ultraviolet/pull/4975) [`ec95d1d`](https://github.com/scaleway/ultraviolet/commit/ec95d1d0c46a871fbf5d2dd066492e02bc91cc05) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<SelectableCard />` make the parent container relative so the ticks can display correctly under any conditions
+
+- [#4972](https://github.com/scaleway/ultraviolet/pull/4972) [`bced1a1`](https://github.com/scaleway/ultraviolet/commit/bced1a14f8a1c75e5e96c5a2c5ab897ddd2f1801) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `react-hook-form` to `7.55.0`.
+
+- Updated dependencies [[`865dd71`](https://github.com/scaleway/ultraviolet/commit/865dd710d3cf1243455f6d55cc8a8f54aaa54b95), [`1252790`](https://github.com/scaleway/ultraviolet/commit/125279049c1bcbf5e6de9ee00f742b9a845d5e6a), [`ec95d1d`](https://github.com/scaleway/ultraviolet/commit/ec95d1d0c46a871fbf5d2dd066492e02bc91cc05)]:
+  - @ultraviolet/ui@1.92.2
+
 ## 3.15.3
 
 ### Patch Changes
