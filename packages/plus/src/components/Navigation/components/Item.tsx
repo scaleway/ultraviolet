@@ -484,8 +484,15 @@ export const Item = memo(
         ]
       : null
 
-    const ArrowIcon = internalExpanded ? ArrowDownIcon : ArrowRightIcon
-    const PinUnpinIcon = isItemPinned ? StyledUnpinIcon : StyledPinIconOutline
+    const ArrowIcon = useMemo(
+      () => (internalExpanded ? ArrowDownIcon : ArrowRightIcon),
+      [internalExpanded],
+    )
+
+    const PinUnpinIcon = useMemo(
+      () => (isItemPinned ? StyledUnpinIcon : StyledPinIconOutline),
+      [isItemPinned],
+    )
 
     const ariaExpanded = useMemo(() => {
       if (hasHrefAndNoChildren && internalExpanded) {
@@ -512,12 +519,6 @@ export const Item = memo(
       return locales['navigation.pin.tooltip']
     }, [isItemPinned, isPinDisabled, locales])
 
-    const onDragStartTrigger = (event: DragEvent<HTMLDivElement>) => {
-      event.dataTransfer.setData('text/plain', JSON.stringify({ label, index }))
-      // eslint-disable-next-line no-param-reassign
-      event.currentTarget.style.opacity = '0.5'
-    }
-
     const expandableAnimationDuration = useMemo(() => {
       if (!shouldAnimate || animationType === 'simple') return 0
 
@@ -528,6 +529,28 @@ export const Item = memo(
 
       return 0
     }, [animation, shouldAnimate, animationType])
+
+    const onDragStart = useCallback(
+      (event: DragEvent<HTMLDivElement>) => {
+        if (expanded) {
+          event.dataTransfer.setData(
+            'text/plain',
+            JSON.stringify({ label, index }),
+          )
+          // eslint-disable-next-line no-param-reassign
+          event.currentTarget.style.opacity = '0.5'
+        }
+
+        return undefined
+      },
+      [expanded, index, label],
+    )
+
+    const onDragEnd = useCallback(
+      (event: DragEvent<HTMLDivElement>) =>
+        expanded ? onDragStopTrigger(event) : undefined,
+      [expanded],
+    )
 
     // This content is when the navigation is expanded
     if (expanded || (!expanded && animation === 'expand')) {
@@ -553,12 +576,8 @@ export const Item = memo(
             data-has-no-expand={noExpand}
             disabled={disabled}
             draggable={type === 'pinned' && expanded}
-            onDragStart={(event: DragEvent<HTMLDivElement>) =>
-              expanded ? onDragStartTrigger(event) : undefined
-            }
-            onDragEnd={(event: DragEvent<HTMLDivElement>) =>
-              expanded ? onDragStopTrigger(event) : undefined
-            }
+            onDragStart={onDragStart}
+            onDragEnd={onDragEnd}
             id={id}
             data-testid={dataTestId}
           >

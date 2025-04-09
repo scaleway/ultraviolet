@@ -22,7 +22,6 @@ const onClickPinUnpin: ComponentProps<
 
 const PlaygroundContent = ({ ...props }: ComponentProps<typeof Navigation>) => {
   const [active, setActive] = useState('Instance')
-  const [instanceExpanded, setInstanceExpanded] = useState(false)
   const [pinnedItemsExpanded, setPinnedItemsExpanded] = useState(false)
   const [expanded, setExpanded] = useState(true)
 
@@ -99,8 +98,6 @@ const PlaygroundContent = ({ ...props }: ComponentProps<typeof Navigation>) => {
           id="compute"
           subLabel="All compute ressources"
           categoryIcon="baremetal"
-          toggle={instanceExpanded}
-          onToggle={toggle => setInstanceExpanded(!!toggle)}
         >
           <Navigation.Item
             label="Instance"
