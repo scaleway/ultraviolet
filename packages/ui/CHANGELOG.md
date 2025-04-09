@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.92.3
+
+### Patch Changes
+
+- [#4989](https://github.com/scaleway/ultraviolet/pull/4989) [`453efd8`](https://github.com/scaleway/ultraviolet/commit/453efd8095fae0c2a91baf5cd2ce4c6bc8596360) Thanks [@matthprost](https://github.com/matthprost)! - Improve `<Breadcrumbs.Items />` to implement `minWidth` and `maxWidth`. It will truncate the text if there is no space or if `maxWidth` has been reached.
+
 ## 1.92.2
 
 ### Patch Changes
