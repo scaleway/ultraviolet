@@ -4,27 +4,30 @@ import { Button } from '../../Button'
 import { Link } from '../../Link'
 import { HEIGHT } from '../constants'
 
-const contractString = (str: ReactNode): ReactNode => {
-  if (typeof str === 'string' && str.length > 30) {
-    return `${str.slice(0, 15)}...${str.slice(-15)}`
-  }
-
-  return str
-}
-
 const StyledLink = styled(Link)`
   padding-right: ${({ theme }) => theme.space['1']};
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 `
 
-const StyledButton = styled(Button)`
-
+const StyledButton = styled(Button)<{ maxWidth?: string; minWidth?: string }>`
+  min-width: ${({ minWidth }) => minWidth || 'auto'};
+  max-width: ${({ maxWidth }) => maxWidth || 'fit-content'};
+  overflow: hidden;
+  white-space: nowrap;
+  display: block;
+  text-overflow: ellipsis;
 `
 
-const ItemContainer = styled.li`
+const ItemContainer = styled.li<{ maxWidth?: string; minWidth?: string }>`
   display: inline;
   height: ${HEIGHT};
   display: flex;
   align-items: center;
+  flex: 1;
+  min-width: ${({ minWidth }) => minWidth || 'auto'};
+  max-width: ${({ maxWidth }) => maxWidth || 'fit-content'};
 
   ${({ onClick }) =>
     onClick
@@ -71,6 +74,9 @@ type ItemProps = {
   to?: string
   disabled?: boolean
   onClick?: (event: ReactMouseEvent<HTMLLIElement>) => void
+  className?: string
+  maxWidth?: string
+  minWidth?: string
 }
 
 export const Item = ({
@@ -79,15 +85,21 @@ export const Item = ({
   disabled = false,
   'aria-current': ariaCurrent,
   onClick,
+  className,
+  maxWidth,
+  minWidth,
 }: ItemProps) => (
   <ItemContainer
     aria-disabled={disabled}
     onClick={onClick}
     aria-current={ariaCurrent}
+    className={className}
+    maxWidth={maxWidth}
+    minWidth={minWidth}
   >
     {to ? (
       <StyledLink sentiment="neutral" href={to} size="small">
-        {contractString(children)}
+        {children}
       </StyledLink>
     ) : (
       <StyledButton
@@ -95,8 +107,10 @@ export const Item = ({
         sentiment="neutral"
         disabled={disabled}
         size="small"
+        maxWidth={maxWidth}
+        minWidth={minWidth}
       >
-        {contractString(children)}
+        {children}
       </StyledButton>
     )}
   </ItemContainer>
