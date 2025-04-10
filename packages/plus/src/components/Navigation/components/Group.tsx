@@ -50,11 +50,15 @@ export const Group = ({ children, label }: GroupProps) => {
 
   const { expanded, animation, animationType } = context
 
-  const isDiplay = animation === 'expand' || expanded
+  const isDiplay = !animation && expanded
 
   if (Children.count(children) > 0) {
     return (
-      <Container data-animation={animation} data-animation-type={animationType}>
+      <Container
+        data-animation={animation}
+        data-animation-type={animationType}
+        style={{ width: animation ? '100%' : undefined }}
+      >
         <StyledStack direction="column">
           {isDiplay ? (
             <StyledText
