@@ -1,5 +1,5 @@
 import type { StoryFn } from '@storybook/react'
-import { Button, Checkbox } from '@ultraviolet/ui'
+import { Button, Checkbox, Link, Stack, Text } from '@ultraviolet/ui'
 import type { ComponentProps, Dispatch } from 'react'
 import { useState } from 'react'
 import { OrderSummary } from '..'
@@ -51,20 +51,32 @@ export const Example: StoryFn<ComponentProps<typeof OrderSummary>> = () => {
     <OrderSummary
       unitUnitInput="hours"
       footer={
-        <Button disabled={!checked} onClick={() => alert('clicked')}>
-          Create
-        </Button>
+        <Stack gap="1">
+          <Checkbox checked={checked} onChange={() => setChecked(!checked)}>
+            I have read and accept Bare Metal specific conditions and macOS
+            License Agreement
+          </Checkbox>
+          <Button disabled={!checked} onClick={() => alert('clicked')}>
+            Create
+          </Button>
+          <Text
+            as="span"
+            sentiment="neutral"
+            variant="bodySmall"
+            prominence="weak"
+          >
+            *For this estimation, 1 month is considered 730 hours.&nbsp;
+            <Link href="#" size="small" target="_blank">
+              Understand Apple Silicon billing
+            </Link>
+          </Text>
+        </Stack>
       }
       items={mockItems(requestsAmount, setRequestsAmount)}
       currency="EUR"
       localeFormat="en-US"
       header="Summary"
-    >
-      <Checkbox checked={checked} onChange={() => setChecked(!checked)}>
-        I have read and accept Bare Metal specific conditions and macOS License
-        Agreement
-      </Checkbox>
-    </OrderSummary>
+    />
   )
 }
 

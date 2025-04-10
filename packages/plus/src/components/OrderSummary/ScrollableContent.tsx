@@ -10,7 +10,7 @@ import {
 import type { ItemsType, SubCategoryType } from './types'
 
 const StyledNumberInputV2 = styled(NumberInputV2)`
-max-width: 200px;
+max-width: 12.5rem;
 background-color: ${({ theme }) => theme.colors.neutral.background};
 `
 const ContainerScrollable = styled(Stack)`
@@ -25,7 +25,7 @@ padding-left: ${({ theme }) => theme.space[1]};
 const CategoryStack = styled(Stack)`
   :not(:last-child){
     border-bottom: 1px solid ${({ theme }) => theme.colors.neutral.border};
-    padding-bottom: ${({ theme }) => theme.space[1.5]};
+    padding-bottom: ${({ theme }) => theme.space[3]};
   }
 `
 const CategoryName = ({ category }: { category: ItemsType }) => {
@@ -43,7 +43,12 @@ const CategoryName = ({ category }: { category: ItemsType }) => {
     <Stack justifyContent="space-between" direction="row" alignItems="center">
       {category.additionalInfo ? (
         <Stack direction="row" gap={1} alignItems="center">
-          <Text as="span" variant="bodyStrong" sentiment="neutral">
+          <Text
+            as="span"
+            variant="bodyStrong"
+            sentiment="neutral"
+            prominence="strong"
+          >
             {category.category}
           </Text>
           <Text as="span" variant="bodySmall" italic sentiment="primary">
@@ -51,7 +56,12 @@ const CategoryName = ({ category }: { category: ItemsType }) => {
           </Text>
         </Stack>
       ) : (
-        <Text as="span" variant="bodyStrong" sentiment="neutral">
+        <Text
+          as="span"
+          variant="bodyStrong"
+          sentiment="neutral"
+          prominence="strong"
+        >
           {category.category}
         </Text>
       )}
@@ -68,7 +78,12 @@ const CategoryName = ({ category }: { category: ItemsType }) => {
       {!category.customContent &&
       !category.numberInput &&
       categoryPrice.totalPrice === categoryPrice.totalPriceWithDiscount ? (
-        <Text as="span" variant="bodyStrong" sentiment="neutral">
+        <Text
+          as="span"
+          variant="bodyStrong"
+          sentiment="neutral"
+          prominence="strong"
+        >
           <DisplayPrice price={categoryPrice} beforeOrAfter="after" />
         </Text>
       ) : null}
@@ -86,7 +101,12 @@ const CategoryName = ({ category }: { category: ItemsType }) => {
           >
             <DisplayPrice price={categoryPrice} beforeOrAfter="before" />
           </Text>
-          <Text as="span" variant="bodyStrong" sentiment="neutral">
+          <Text
+            as="span"
+            variant="bodyStrong"
+            sentiment="neutral"
+            prominence="strong"
+          >
             <DisplayPrice price={categoryPrice} beforeOrAfter="after" />
           </Text>
         </Stack>
@@ -115,12 +135,22 @@ const SubCategory = ({ subCategory }: { subCategory: SubCategoryType }) => {
     <Stack direction="column" gap={1}>
       <Stack justifyContent="space-between" direction="row" alignItems="center">
         {subCategory.title ? (
-          <Text as="span" variant="bodySmallStrong" sentiment="neutral">
+          <Text
+            as="span"
+            variant="bodySmallStrong"
+            sentiment="neutral"
+            prominence="strong"
+          >
             {subCategory.title}
           </Text>
         ) : null}
         {subCategory.customContent ? (
-          <Text as="span" variant="bodySmallStrong" sentiment="neutral">
+          <Text
+            as="span"
+            variant="bodySmallStrong"
+            sentiment="neutral"
+            prominence="strong"
+          >
             {subCategory.customContent}
           </Text>
         ) : null}
@@ -134,7 +164,12 @@ const SubCategory = ({ subCategory }: { subCategory: SubCategoryType }) => {
           />
         ) : null}
         {subCategory.price !== undefined && !subCategory.hidePrice ? (
-          <Text as="span" variant="bodySmallStrong" sentiment="neutral">
+          <Text
+            as="span"
+            variant="bodySmallStrong"
+            sentiment="neutral"
+            prominence="strong"
+          >
             {subCategoryPrice[0] === subCategoryPrice[1] ||
             subCategory.priceUnit
               ? formatNumber(

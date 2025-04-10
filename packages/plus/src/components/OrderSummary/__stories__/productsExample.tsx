@@ -1,5 +1,14 @@
 import { InformationOutlineIcon } from '@ultraviolet/icons'
-import { Tooltip } from '@ultraviolet/ui'
+import { Stack, Tooltip } from '@ultraviolet/ui'
+
+const AdditionalInfo = () => (
+  <Stack direction="row" gap={0.5} alignItems="center">
+    <Tooltip text="Info">
+      <InformationOutlineIcon size="small" sentiment="neutral" />
+    </Tooltip>
+    7 days of free backup
+  </Stack>
+)
 
 export const categoryDefault = {
   category: 'Category',
@@ -7,12 +16,7 @@ export const categoryDefault = {
   subCategories: [
     { title: 'SubCategory', price: 12.2, details: ['Detail 1', 'Detail 2'] },
   ],
-  additionalInfo: (
-    <Tooltip text="Info">
-      <InformationOutlineIcon size="small" sentiment="neutral" />7 days of free
-      backup
-    </Tooltip>
-  ),
+  additionalInfo: <AdditionalInfo />,
 }
 
 export const categoryAZ = {
@@ -79,10 +83,10 @@ export const categoryRequest = {
 export const categoryStorage = {
   category: 'Storage',
   additionalInfo: (
-    <>
+    <Stack gap={0.5} direction="row" alignItems="center">
       <InformationOutlineIcon size="small" sentiment="neutral" />
       75GB free on public images
-    </>
+    </Stack>
   ),
   subCategories: [
     {

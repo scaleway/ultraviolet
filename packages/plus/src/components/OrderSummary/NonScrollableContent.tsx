@@ -37,22 +37,33 @@ export const NonScrollableContent = ({
       <Stack direction="row" justifyContent="space-between" alignItems="center">
         {totalPriceInfo ? (
           <Stack>
-            <Text as="p" variant="bodyStrong" sentiment="neutral">
+            <Text
+              as="span"
+              variant="bodyStrong"
+              sentiment="neutral"
+              prominence="strong"
+            >
               {locales['order.summary.total']}:
             </Text>
             {totalPriceInfo}
           </Stack>
         ) : (
-          <Text as="p" variant="bodyStrong" sentiment="neutral">
+          <Text
+            as="span"
+            variant="bodyStrong"
+            sentiment="neutral"
+            prominence="strong"
+          >
             {locales['order.summary.total']}:
           </Text>
         )}
         {totalPrice.totalPrice === totalPrice.totalPriceWithDiscount ? (
           <Text
-            as="p"
+            as="span"
             variant="headingSmallStrong"
             sentiment="neutral"
             data-testid="total-price"
+            prominence="strong"
           >
             <DisplayPrice price={totalPrice} beforeOrAfter="after" />
             {hideDetails ? `/${unit}` : null}
@@ -60,7 +71,7 @@ export const NonScrollableContent = ({
         ) : (
           <Stack direction="row" gap={1} alignItems="center">
             <Text
-              as="p"
+              as="span"
               variant="bodySmallStrong"
               sentiment="neutral"
               prominence="weak"
@@ -69,10 +80,11 @@ export const NonScrollableContent = ({
               <DisplayPrice price={totalPrice} beforeOrAfter="before" />
             </Text>
             <Text
-              as="p"
+              as="span"
               variant="headingSmallStrong"
               sentiment="neutral"
               data-testid="total-price"
+              prominence="strong"
             >
               <DisplayPrice price={totalPrice} beforeOrAfter="after" />
               {hideDetails ? `/${unit}` : null}

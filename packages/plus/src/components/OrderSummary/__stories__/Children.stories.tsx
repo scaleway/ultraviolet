@@ -66,6 +66,7 @@ export const Children: StoryFn<ComponentProps<typeof OrderSummary>> = props => {
         onChange={onChangeCommitment}
         disabled={commitment === 'false'}
         value={commitmentChoice}
+        size="medium"
       />
     </OrderSummary>
   )
