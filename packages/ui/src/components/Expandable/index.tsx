@@ -36,12 +36,23 @@ export const StyledExpandable = styled('div', {
   height: auto;
 `
 
-/**
- * The Expandable component is a dynamic React component that allows for the expansion of its children content
- * based on its height. The component comes with a sleek and smooth animation, providing a visually pleasing
- * user experience.
- */
-export const Expandable = ({
+const NoAnimationExpandable = ({
+  children,
+  opened,
+  minHeight,
+  className,
+  'data-testid': dataTestId,
+}: ExpandableProps) => (
+  <div
+    style={{ minHeight, display: !opened ? 'none' : undefined }}
+    data-testid={dataTestId}
+    className={className}
+  >
+    {children}
+  </div>
+)
+
+export const AnimatedExpandable = ({
   children,
   opened,
   minHeight = 0,
@@ -75,19 +86,13 @@ export const Expandable = ({
     if (opened && ref.current && height) {
       ref.current.style.maxHeight = `${height}px`
       ref.current.style.visibility = ''
-      if (shouldBeAnimated) {
-        transitionTimer.current = setTimeout(() => {
-          if (ref.current) {
-            ref.current.style.maxHeight = 'initial'
-            ref.current.style.overflow = 'visible'
-            ref.current.style.visibility = ''
-          }
-        }, ANIMATION_DURATION)
-      } else {
-        ref.current.style.maxHeight = 'initial'
-        ref.current.style.overflow = 'visible'
-        ref.current.style.visibility = ''
-      }
+      transitionTimer.current = setTimeout(() => {
+        if (ref.current) {
+          ref.current.style.maxHeight = 'initial'
+          ref.current.style.overflow = 'visible'
+          ref.current.style.visibility = ''
+        }
+      }, ANIMATION_DURATION)
     } else {
       if (transitionTimer?.current) {
         clearTimeout(transitionTimer.current)
@@ -95,25 +100,17 @@ export const Expandable = ({
 
       if (ref.current && height) {
         ref.current.style.maxHeight = `${height}px`
-        if (shouldBeAnimated) {
-          transitionTimer.current = setTimeout(() => {
-            if (ref.current) {
-              ref.current.style.maxHeight = `${minHeight}px`
-              ref.current.style.overflow = 'hidden'
-              setTimeout(() => {
-                if (ref.current && !minHeight) {
-                  ref.current.style.visibility = 'hidden'
-                }
-              }, ANIMATION_DURATION)
-            }
-          }, 0)
-        } else {
-          ref.current.style.maxHeight = `${minHeight}px`
-          ref.current.style.overflow = 'hidden'
-          if (!minHeight) {
-            ref.current.style.visibility = 'hidden'
+        transitionTimer.current = setTimeout(() => {
+          if (ref.current) {
+            ref.current.style.maxHeight = `${minHeight}px`
+            ref.current.style.overflow = 'hidden'
+            setTimeout(() => {
+              if (ref.current && !minHeight) {
+                ref.current.style.visibility = 'hidden'
+              }
+            }, ANIMATION_DURATION)
           }
-        }
+        }, 0)
       }
     }
 
@@ -134,5 +131,44 @@ export const Expandable = ({
     >
       {children}
     </StyledExpandable>
+  )
+}
+
+/**
+ * The Expandable component is a dynamic React component that allows for the expansion of its children content
+ * based on its height. The component comes with a sleek and smooth animation, providing a visually pleasing
+ * user experience.
+ */
+export const Expandable = ({
+  children,
+  opened,
+  minHeight,
+  className,
+  'data-testid': dataTestId,
+  animationDuration = ANIMATION_DURATION,
+}: ExpandableProps) => {
+  if (animationDuration > 0) {
+    return (
+      <AnimatedExpandable
+        opened={opened}
+        minHeight={minHeight}
+        className={className}
+        data-testid={dataTestId}
+        animationDuration={animationDuration}
+      >
+        {children}
+      </AnimatedExpandable>
+    )
+  }
+
+  return (
+    <NoAnimationExpandable
+      data-testid={dataTestId}
+      className={className}
+      minHeight={minHeight}
+      opened={opened}
+    >
+      {children}
+    </NoAnimationExpandable>
   )
 }
