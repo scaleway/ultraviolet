@@ -107,7 +107,7 @@ exports[`OrderSummary > should work with an empty list of item 1`] = `
 }
 
 .emotion-8 {
-  color: #3f4250;
+  color: #222638;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -119,7 +119,7 @@ exports[`OrderSummary > should work with an empty list of item 1`] = `
 }
 
 .emotion-10 {
-  color: #3f4250;
+  color: #222638;
   font-size: 1.3125rem;
   font-family: Space Grotesk,sans-serif;
   font-weight: 500;
@@ -145,17 +145,17 @@ exports[`OrderSummary > should work with an empty list of item 1`] = `
         <div
           class="emotion-6 emotion-7"
         >
-          <p
+          <span
             class="emotion-8 emotion-9"
           >
             Estimated cost:
-          </p>
-          <p
+          </span>
+          <span
             class="emotion-10 emotion-9"
             data-testid="total-price"
           >
             €0.00
-          </p>
+          </span>
         </div>
       </div>
     </div>
@@ -252,7 +252,7 @@ exports[`OrderSummary > should work with children 1`] = `
   padding-bottom: 1rem;
 }
 
-.emotion-2[data-hideDetails="false"] {
+.emotion-2[data-hidedetails="false"] {
   border-bottom: 1px solid #d9dadd;
 }
 
@@ -281,12 +281,12 @@ exports[`OrderSummary > should work with children 1`] = `
   padding-bottom: 1rem;
 }
 
-.emotion-2[data-hideDetails="false"] {
+.emotion-2[data-hidedetails="false"] {
   border-bottom: 1px solid #d9dadd;
 }
 
 .emotion-4 {
-  color: #3f4250;
+  color: #222638;
   font-size: 1.3125rem;
   font-family: Space Grotesk,sans-serif;
   font-weight: 500;
@@ -298,7 +298,7 @@ exports[`OrderSummary > should work with children 1`] = `
 }
 
 .emotion-4 {
-  color: #3f4250;
+  color: #222638;
   font-size: 1.3125rem;
   font-family: Space Grotesk,sans-serif;
   font-weight: 500;
@@ -1338,7 +1338,7 @@ exports[`OrderSummary > should work with children 1`] = `
 
 .emotion-34:not(:last-child) {
   border-bottom: 1px solid #d9dadd;
-  padding-bottom: 0.75rem;
+  padding-bottom: 1.5rem;
 }
 
 .emotion-34 {
@@ -1366,7 +1366,7 @@ exports[`OrderSummary > should work with children 1`] = `
 
 .emotion-34:not(:last-child) {
   border-bottom: 1px solid #d9dadd;
-  padding-bottom: 0.75rem;
+  padding-bottom: 1.5rem;
 }
 
 .emotion-36 {
@@ -1414,7 +1414,7 @@ exports[`OrderSummary > should work with children 1`] = `
 }
 
 .emotion-38 {
-  color: #3f4250;
+  color: #222638;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -1426,7 +1426,7 @@ exports[`OrderSummary > should work with children 1`] = `
 }
 
 .emotion-38 {
-  color: #3f4250;
+  color: #222638;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -1558,7 +1558,7 @@ exports[`OrderSummary > should work with children 1`] = `
 }
 
 .emotion-52 {
-  color: #3f4250;
+  color: #222638;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -1570,7 +1570,7 @@ exports[`OrderSummary > should work with children 1`] = `
 }
 
 .emotion-52 {
-  color: #3f4250;
+  color: #222638;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -2313,17 +2313,17 @@ exports[`OrderSummary > should work with children 1`] = `
         <div
           class="emotion-36 emotion-9"
         >
-          <p
+          <span
             class="emotion-38 emotion-5"
           >
             Estimated cost:
-          </p>
-          <p
+          </span>
+          <span
             class="emotion-4 emotion-5"
             data-testid="total-price"
           >
             €383.83
-          </p>
+          </span>
         </div>
       </div>
     </div>
@@ -2415,7 +2415,7 @@ exports[`OrderSummary > should work with default props 1`] = `
 
 .emotion-4:not(:last-child) {
   border-bottom: 1px solid #d9dadd;
-  padding-bottom: 0.75rem;
+  padding-bottom: 1.5rem;
 }
 
 .emotion-6 {
@@ -2441,7 +2441,7 @@ exports[`OrderSummary > should work with default props 1`] = `
 }
 
 .emotion-8 {
-  color: #3f4250;
+  color: #222638;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -2513,7 +2513,7 @@ exports[`OrderSummary > should work with default props 1`] = `
 }
 
 .emotion-22 {
-  color: #3f4250;
+  color: #222638;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -2621,7 +2621,7 @@ exports[`OrderSummary > should work with default props 1`] = `
 }
 
 .emotion-230 {
-  color: #3f4250;
+  color: #222638;
   font-size: 1.3125rem;
   font-family: Space Grotesk,sans-serif;
   font-weight: 500;
@@ -3142,17 +3142,17 @@ exports[`OrderSummary > should work with default props 1`] = `
         <div
           class="emotion-6 emotion-7"
         >
-          <p
+          <span
             class="emotion-8 emotion-9"
           >
             Estimated cost:
-          </p>
-          <p
+          </span>
+          <span
             class="emotion-230 emotion-9"
             data-testid="total-price"
           >
             €383.83
-          </p>
+          </span>
         </div>
       </div>
     </div>
@@ -3249,7 +3249,7 @@ exports[`OrderSummary > should work with discount 1`] = `
   padding-bottom: 1rem;
 }
 
-.emotion-2[data-hideDetails="false"] {
+.emotion-2[data-hidedetails="false"] {
   border-bottom: 1px solid #d9dadd;
 }
 
@@ -3278,12 +3278,12 @@ exports[`OrderSummary > should work with discount 1`] = `
   padding-bottom: 1rem;
 }
 
-.emotion-2[data-hideDetails="false"] {
+.emotion-2[data-hidedetails="false"] {
   border-bottom: 1px solid #d9dadd;
 }
 
 .emotion-4 {
-  color: #3f4250;
+  color: #222638;
   font-size: 1.3125rem;
   font-family: Space Grotesk,sans-serif;
   font-weight: 500;
@@ -3295,7 +3295,7 @@ exports[`OrderSummary > should work with discount 1`] = `
 }
 
 .emotion-4 {
-  color: #3f4250;
+  color: #222638;
   font-size: 1.3125rem;
   font-family: Space Grotesk,sans-serif;
   font-weight: 500;
@@ -4335,7 +4335,7 @@ exports[`OrderSummary > should work with discount 1`] = `
 
 .emotion-34:not(:last-child) {
   border-bottom: 1px solid #d9dadd;
-  padding-bottom: 0.75rem;
+  padding-bottom: 1.5rem;
 }
 
 .emotion-34 {
@@ -4363,7 +4363,7 @@ exports[`OrderSummary > should work with discount 1`] = `
 
 .emotion-34:not(:last-child) {
   border-bottom: 1px solid #d9dadd;
-  padding-bottom: 0.75rem;
+  padding-bottom: 1.5rem;
 }
 
 .emotion-36 {
@@ -4411,7 +4411,7 @@ exports[`OrderSummary > should work with discount 1`] = `
 }
 
 .emotion-38 {
-  color: #3f4250;
+  color: #222638;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -4423,7 +4423,7 @@ exports[`OrderSummary > should work with discount 1`] = `
 }
 
 .emotion-38 {
-  color: #3f4250;
+  color: #222638;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -4481,7 +4481,7 @@ exports[`OrderSummary > should work with discount 1`] = `
 }
 
 .emotion-48 {
-  color: #3f4250;
+  color: #222638;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -4493,7 +4493,7 @@ exports[`OrderSummary > should work with discount 1`] = `
 }
 
 .emotion-48 {
-  color: #3f4250;
+  color: #222638;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -4833,25 +4833,25 @@ exports[`OrderSummary > should work with discount 1`] = `
         <div
           class="emotion-36 emotion-9"
         >
-          <p
+          <span
             class="emotion-38 emotion-5"
           >
             Estimated cost:
-          </p>
+          </span>
           <div
             class="emotion-60 emotion-9"
           >
-            <p
+            <span
               class="emotion-62 emotion-5"
             >
               €5.00
-            </p>
-            <p
+            </span>
+            <span
               class="emotion-4 emotion-5"
               data-testid="total-price"
             >
               €0.00
-            </p>
+            </span>
           </div>
         </div>
       </div>
@@ -4949,7 +4949,7 @@ exports[`OrderSummary > should work with discount in  % 1`] = `
   padding-bottom: 1rem;
 }
 
-.emotion-2[data-hideDetails="false"] {
+.emotion-2[data-hidedetails="false"] {
   border-bottom: 1px solid #d9dadd;
 }
 
@@ -4978,12 +4978,12 @@ exports[`OrderSummary > should work with discount in  % 1`] = `
   padding-bottom: 1rem;
 }
 
-.emotion-2[data-hideDetails="false"] {
+.emotion-2[data-hidedetails="false"] {
   border-bottom: 1px solid #d9dadd;
 }
 
 .emotion-4 {
-  color: #3f4250;
+  color: #222638;
   font-size: 1.3125rem;
   font-family: Space Grotesk,sans-serif;
   font-weight: 500;
@@ -4995,7 +4995,7 @@ exports[`OrderSummary > should work with discount in  % 1`] = `
 }
 
 .emotion-4 {
-  color: #3f4250;
+  color: #222638;
   font-size: 1.3125rem;
   font-family: Space Grotesk,sans-serif;
   font-weight: 500;
@@ -6035,7 +6035,7 @@ exports[`OrderSummary > should work with discount in  % 1`] = `
 
 .emotion-34:not(:last-child) {
   border-bottom: 1px solid #d9dadd;
-  padding-bottom: 0.75rem;
+  padding-bottom: 1.5rem;
 }
 
 .emotion-34 {
@@ -6063,7 +6063,7 @@ exports[`OrderSummary > should work with discount in  % 1`] = `
 
 .emotion-34:not(:last-child) {
   border-bottom: 1px solid #d9dadd;
-  padding-bottom: 0.75rem;
+  padding-bottom: 1.5rem;
 }
 
 .emotion-36 {
@@ -6111,7 +6111,7 @@ exports[`OrderSummary > should work with discount in  % 1`] = `
 }
 
 .emotion-38 {
-  color: #3f4250;
+  color: #222638;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -6123,7 +6123,7 @@ exports[`OrderSummary > should work with discount in  % 1`] = `
 }
 
 .emotion-38 {
-  color: #3f4250;
+  color: #222638;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -6181,7 +6181,7 @@ exports[`OrderSummary > should work with discount in  % 1`] = `
 }
 
 .emotion-48 {
-  color: #3f4250;
+  color: #222638;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -6193,7 +6193,7 @@ exports[`OrderSummary > should work with discount in  % 1`] = `
 }
 
 .emotion-48 {
-  color: #3f4250;
+  color: #222638;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -6533,25 +6533,25 @@ exports[`OrderSummary > should work with discount in  % 1`] = `
         <div
           class="emotion-36 emotion-9"
         >
-          <p
+          <span
             class="emotion-38 emotion-5"
           >
             Estimated cost:
-          </p>
+          </span>
           <div
             class="emotion-60 emotion-9"
           >
-            <p
+            <span
               class="emotion-62 emotion-5"
             >
               €5.00
-            </p>
-            <p
+            </span>
+            <span
               class="emotion-4 emotion-5"
               data-testid="total-price"
             >
               €2.50
-            </p>
+            </span>
           </div>
         </div>
       </div>
@@ -6649,7 +6649,7 @@ exports[`OrderSummary > should work with footer 1`] = `
   padding-bottom: 1rem;
 }
 
-.emotion-2[data-hideDetails="false"] {
+.emotion-2[data-hidedetails="false"] {
   border-bottom: 1px solid #d9dadd;
 }
 
@@ -6678,12 +6678,12 @@ exports[`OrderSummary > should work with footer 1`] = `
   padding-bottom: 1rem;
 }
 
-.emotion-2[data-hideDetails="false"] {
+.emotion-2[data-hidedetails="false"] {
   border-bottom: 1px solid #d9dadd;
 }
 
 .emotion-4 {
-  color: #3f4250;
+  color: #222638;
   font-size: 1.3125rem;
   font-family: Space Grotesk,sans-serif;
   font-weight: 500;
@@ -6695,7 +6695,7 @@ exports[`OrderSummary > should work with footer 1`] = `
 }
 
 .emotion-4 {
-  color: #3f4250;
+  color: #222638;
   font-size: 1.3125rem;
   font-family: Space Grotesk,sans-serif;
   font-weight: 500;
@@ -7735,7 +7735,7 @@ exports[`OrderSummary > should work with footer 1`] = `
 
 .emotion-34:not(:last-child) {
   border-bottom: 1px solid #d9dadd;
-  padding-bottom: 0.75rem;
+  padding-bottom: 1.5rem;
 }
 
 .emotion-34 {
@@ -7763,7 +7763,7 @@ exports[`OrderSummary > should work with footer 1`] = `
 
 .emotion-34:not(:last-child) {
   border-bottom: 1px solid #d9dadd;
-  padding-bottom: 0.75rem;
+  padding-bottom: 1.5rem;
 }
 
 .emotion-36 {
@@ -7811,7 +7811,7 @@ exports[`OrderSummary > should work with footer 1`] = `
 }
 
 .emotion-38 {
-  color: #3f4250;
+  color: #222638;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -7823,7 +7823,7 @@ exports[`OrderSummary > should work with footer 1`] = `
 }
 
 .emotion-38 {
-  color: #3f4250;
+  color: #222638;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -7955,7 +7955,7 @@ exports[`OrderSummary > should work with footer 1`] = `
 }
 
 .emotion-52 {
-  color: #3f4250;
+  color: #222638;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -7967,7 +7967,7 @@ exports[`OrderSummary > should work with footer 1`] = `
 }
 
 .emotion-52 {
-  color: #3f4250;
+  color: #222638;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -8709,17 +8709,17 @@ exports[`OrderSummary > should work with footer 1`] = `
         <div
           class="emotion-36 emotion-9"
         >
-          <p
+          <span
             class="emotion-38 emotion-5"
           >
             Estimated cost:
-          </p>
-          <p
+          </span>
+          <span
             class="emotion-4 emotion-5"
             data-testid="total-price"
           >
             €383.83
-          </p>
+          </span>
         </div>
         footer
       </div>
@@ -8817,7 +8817,7 @@ exports[`OrderSummary > should work with fractionDigits 1`] = `
   padding-bottom: 1rem;
 }
 
-.emotion-2[data-hideDetails="false"] {
+.emotion-2[data-hidedetails="false"] {
   border-bottom: 1px solid #d9dadd;
 }
 
@@ -8846,12 +8846,12 @@ exports[`OrderSummary > should work with fractionDigits 1`] = `
   padding-bottom: 1rem;
 }
 
-.emotion-2[data-hideDetails="false"] {
+.emotion-2[data-hidedetails="false"] {
   border-bottom: 1px solid #d9dadd;
 }
 
 .emotion-4 {
-  color: #3f4250;
+  color: #222638;
   font-size: 1.3125rem;
   font-family: Space Grotesk,sans-serif;
   font-weight: 500;
@@ -8863,7 +8863,7 @@ exports[`OrderSummary > should work with fractionDigits 1`] = `
 }
 
 .emotion-4 {
-  color: #3f4250;
+  color: #222638;
   font-size: 1.3125rem;
   font-family: Space Grotesk,sans-serif;
   font-weight: 500;
@@ -9903,7 +9903,7 @@ exports[`OrderSummary > should work with fractionDigits 1`] = `
 
 .emotion-34:not(:last-child) {
   border-bottom: 1px solid #d9dadd;
-  padding-bottom: 0.75rem;
+  padding-bottom: 1.5rem;
 }
 
 .emotion-34 {
@@ -9931,7 +9931,7 @@ exports[`OrderSummary > should work with fractionDigits 1`] = `
 
 .emotion-34:not(:last-child) {
   border-bottom: 1px solid #d9dadd;
-  padding-bottom: 0.75rem;
+  padding-bottom: 1.5rem;
 }
 
 .emotion-36 {
@@ -9979,7 +9979,7 @@ exports[`OrderSummary > should work with fractionDigits 1`] = `
 }
 
 .emotion-38 {
-  color: #3f4250;
+  color: #222638;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -9991,7 +9991,7 @@ exports[`OrderSummary > should work with fractionDigits 1`] = `
 }
 
 .emotion-38 {
-  color: #3f4250;
+  color: #222638;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -10049,7 +10049,7 @@ exports[`OrderSummary > should work with fractionDigits 1`] = `
 }
 
 .emotion-48 {
-  color: #3f4250;
+  color: #222638;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -10061,7 +10061,7 @@ exports[`OrderSummary > should work with fractionDigits 1`] = `
 }
 
 .emotion-48 {
-  color: #3f4250;
+  color: #222638;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -10401,25 +10401,25 @@ exports[`OrderSummary > should work with fractionDigits 1`] = `
         <div
           class="emotion-36 emotion-9"
         >
-          <p
+          <span
             class="emotion-38 emotion-5"
           >
             Estimated cost:
-          </p>
+          </span>
           <div
             class="emotion-60 emotion-9"
           >
-            <p
+            <span
               class="emotion-62 emotion-5"
             >
               €5
-            </p>
-            <p
+            </span>
+            <span
               class="emotion-4 emotion-5"
               data-testid="total-price"
             >
               €3
-            </p>
+            </span>
           </div>
         </div>
       </div>
@@ -10517,7 +10517,7 @@ exports[`OrderSummary > should work with numberInputs 1`] = `
   padding-bottom: 1rem;
 }
 
-.emotion-2[data-hideDetails="false"] {
+.emotion-2[data-hidedetails="false"] {
   border-bottom: 1px solid #d9dadd;
 }
 
@@ -10546,12 +10546,12 @@ exports[`OrderSummary > should work with numberInputs 1`] = `
   padding-bottom: 1rem;
 }
 
-.emotion-2[data-hideDetails="false"] {
+.emotion-2[data-hidedetails="false"] {
   border-bottom: 1px solid #d9dadd;
 }
 
 .emotion-4 {
-  color: #3f4250;
+  color: #222638;
   font-size: 1.3125rem;
   font-family: Space Grotesk,sans-serif;
   font-weight: 500;
@@ -10563,7 +10563,7 @@ exports[`OrderSummary > should work with numberInputs 1`] = `
 }
 
 .emotion-4 {
-  color: #3f4250;
+  color: #222638;
   font-size: 1.3125rem;
   font-family: Space Grotesk,sans-serif;
   font-weight: 500;
@@ -11603,7 +11603,7 @@ exports[`OrderSummary > should work with numberInputs 1`] = `
 
 .emotion-34:not(:last-child) {
   border-bottom: 1px solid #d9dadd;
-  padding-bottom: 0.75rem;
+  padding-bottom: 1.5rem;
 }
 
 .emotion-34 {
@@ -11631,7 +11631,7 @@ exports[`OrderSummary > should work with numberInputs 1`] = `
 
 .emotion-34:not(:last-child) {
   border-bottom: 1px solid #d9dadd;
-  padding-bottom: 0.75rem;
+  padding-bottom: 1.5rem;
 }
 
 .emotion-36 {
@@ -11679,7 +11679,7 @@ exports[`OrderSummary > should work with numberInputs 1`] = `
 }
 
 .emotion-38 {
-  color: #3f4250;
+  color: #222638;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -11691,7 +11691,7 @@ exports[`OrderSummary > should work with numberInputs 1`] = `
 }
 
 .emotion-38 {
-  color: #3f4250;
+  color: #222638;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -11723,7 +11723,7 @@ exports[`OrderSummary > should work with numberInputs 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  max-width: 200px;
+  max-width: 12.5rem;
   background-color: #ffffff;
 }
 
@@ -12059,7 +12059,7 @@ exports[`OrderSummary > should work with numberInputs 1`] = `
 }
 
 .emotion-78 {
-  color: #3f4250;
+  color: #222638;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -12071,7 +12071,7 @@ exports[`OrderSummary > should work with numberInputs 1`] = `
 }
 
 .emotion-78 {
-  color: #3f4250;
+  color: #222638;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -12561,19 +12561,19 @@ exports[`OrderSummary > should work with numberInputs 1`] = `
           <div
             class="emotion-115 emotion-9"
           >
-            <p
+            <span
               class="emotion-38 emotion-5"
             >
               Estimated cost:
-            </p>
+            </span>
             total price info
           </div>
-          <p
+          <span
             class="emotion-4 emotion-5"
             data-testid="total-price"
           >
             €1.00
-          </p>
+          </span>
         </div>
       </div>
     </div>
@@ -12670,7 +12670,7 @@ exports[`OrderSummary > should work with price as a range 1`] = `
   padding-bottom: 1rem;
 }
 
-.emotion-2[data-hideDetails="false"] {
+.emotion-2[data-hidedetails="false"] {
   border-bottom: 1px solid #d9dadd;
 }
 
@@ -12699,12 +12699,12 @@ exports[`OrderSummary > should work with price as a range 1`] = `
   padding-bottom: 1rem;
 }
 
-.emotion-2[data-hideDetails="false"] {
+.emotion-2[data-hidedetails="false"] {
   border-bottom: 1px solid #d9dadd;
 }
 
 .emotion-4 {
-  color: #3f4250;
+  color: #222638;
   font-size: 1.3125rem;
   font-family: Space Grotesk,sans-serif;
   font-weight: 500;
@@ -12716,7 +12716,7 @@ exports[`OrderSummary > should work with price as a range 1`] = `
 }
 
 .emotion-4 {
-  color: #3f4250;
+  color: #222638;
   font-size: 1.3125rem;
   font-family: Space Grotesk,sans-serif;
   font-weight: 500;
@@ -13756,7 +13756,7 @@ exports[`OrderSummary > should work with price as a range 1`] = `
 
 .emotion-34:not(:last-child) {
   border-bottom: 1px solid #d9dadd;
-  padding-bottom: 0.75rem;
+  padding-bottom: 1.5rem;
 }
 
 .emotion-34 {
@@ -13784,7 +13784,7 @@ exports[`OrderSummary > should work with price as a range 1`] = `
 
 .emotion-34:not(:last-child) {
   border-bottom: 1px solid #d9dadd;
-  padding-bottom: 0.75rem;
+  padding-bottom: 1.5rem;
 }
 
 .emotion-36 {
@@ -13832,7 +13832,7 @@ exports[`OrderSummary > should work with price as a range 1`] = `
 }
 
 .emotion-38 {
-  color: #3f4250;
+  color: #222638;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -13844,7 +13844,7 @@ exports[`OrderSummary > should work with price as a range 1`] = `
 }
 
 .emotion-38 {
-  color: #3f4250;
+  color: #222638;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -13902,7 +13902,7 @@ exports[`OrderSummary > should work with price as a range 1`] = `
 }
 
 .emotion-48 {
-  color: #3f4250;
+  color: #222638;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -13914,7 +13914,7 @@ exports[`OrderSummary > should work with price as a range 1`] = `
 }
 
 .emotion-48 {
-  color: #3f4250;
+  color: #222638;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -14180,17 +14180,17 @@ exports[`OrderSummary > should work with price as a range 1`] = `
         <div
           class="emotion-36 emotion-9"
         >
-          <p
+          <span
             class="emotion-38 emotion-5"
           >
             Estimated cost:
-          </p>
-          <p
+          </span>
+          <span
             class="emotion-4 emotion-5"
             data-testid="total-price"
           >
             €200.00 - €300.00
-          </p>
+          </span>
         </div>
         footer
       </div>
@@ -14288,7 +14288,7 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
   padding-bottom: 1rem;
 }
 
-.emotion-2[data-hideDetails="false"] {
+.emotion-2[data-hidedetails="false"] {
   border-bottom: 1px solid #d9dadd;
 }
 
@@ -14317,12 +14317,12 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
   padding-bottom: 1rem;
 }
 
-.emotion-2[data-hideDetails="false"] {
+.emotion-2[data-hidedetails="false"] {
   border-bottom: 1px solid #d9dadd;
 }
 
 .emotion-4 {
-  color: #3f4250;
+  color: #222638;
   font-size: 1.3125rem;
   font-family: Space Grotesk,sans-serif;
   font-weight: 500;
@@ -14334,7 +14334,7 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
 }
 
 .emotion-4 {
-  color: #3f4250;
+  color: #222638;
   font-size: 1.3125rem;
   font-family: Space Grotesk,sans-serif;
   font-weight: 500;
@@ -15374,7 +15374,7 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
 
 .emotion-34:not(:last-child) {
   border-bottom: 1px solid #d9dadd;
-  padding-bottom: 0.75rem;
+  padding-bottom: 1.5rem;
 }
 
 .emotion-34 {
@@ -15402,7 +15402,7 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
 
 .emotion-34:not(:last-child) {
   border-bottom: 1px solid #d9dadd;
-  padding-bottom: 0.75rem;
+  padding-bottom: 1.5rem;
 }
 
 .emotion-36 {
@@ -15450,7 +15450,7 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
 }
 
 .emotion-38 {
-  color: #3f4250;
+  color: #222638;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -15462,7 +15462,7 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
 }
 
 .emotion-38 {
-  color: #3f4250;
+  color: #222638;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -15594,7 +15594,7 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
 }
 
 .emotion-52 {
-  color: #3f4250;
+  color: #222638;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -15606,7 +15606,7 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
 }
 
 .emotion-52 {
-  color: #3f4250;
+  color: #222638;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -16397,19 +16397,19 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
           <div
             class="emotion-258 emotion-9"
           >
-            <p
+            <span
               class="emotion-38 emotion-5"
             >
               Estimated cost:
-            </p>
+            </span>
             total price info
           </div>
-          <p
+          <span
             class="emotion-4 emotion-5"
             data-testid="total-price"
           >
             €383.83
-          </p>
+          </span>
         </div>
       </div>
     </div>
@@ -16475,12 +16475,12 @@ exports[`OrderSummary > should work without unitInput 1`] = `
   padding-bottom: 1rem;
 }
 
-.emotion-2[data-hideDetails="false"] {
+.emotion-2[data-hidedetails="false"] {
   border-bottom: 1px solid #d9dadd;
 }
 
 .emotion-4 {
-  color: #3f4250;
+  color: #222638;
   font-size: 1.3125rem;
   font-family: Space Grotesk,sans-serif;
   font-weight: 500;
@@ -16542,7 +16542,7 @@ exports[`OrderSummary > should work without unitInput 1`] = `
 
 .emotion-8:not(:last-child) {
   border-bottom: 1px solid #d9dadd;
-  padding-bottom: 0.75rem;
+  padding-bottom: 1.5rem;
 }
 
 .emotion-10 {
@@ -16568,7 +16568,7 @@ exports[`OrderSummary > should work without unitInput 1`] = `
 }
 
 .emotion-12 {
-  color: #3f4250;
+  color: #222638;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -16640,7 +16640,7 @@ exports[`OrderSummary > should work without unitInput 1`] = `
 }
 
 .emotion-26 {
-  color: #3f4250;
+  color: #222638;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -17267,17 +17267,17 @@ exports[`OrderSummary > should work without unitInput 1`] = `
         <div
           class="emotion-10 emotion-11"
         >
-          <p
+          <span
             class="emotion-12 emotion-5"
           >
             Estimated cost:
-          </p>
-          <p
+          </span>
+          <span
             class="emotion-4 emotion-5"
             data-testid="total-price"
           >
             €383.83
-          </p>
+          </span>
         </div>
       </div>
     </div>
@@ -17344,7 +17344,7 @@ exports[`OrderSummary > works with hideDetails 1`] = `
   padding-bottom: 1rem;
 }
 
-.emotion-2[data-hideDetails="false"] {
+.emotion-2[data-hidedetails="false"] {
   border-bottom: 1px solid #d9dadd;
 }
 
@@ -17373,12 +17373,12 @@ exports[`OrderSummary > works with hideDetails 1`] = `
   padding-bottom: 1rem;
 }
 
-.emotion-2[data-hideDetails="false"] {
+.emotion-2[data-hidedetails="false"] {
   border-bottom: 1px solid #d9dadd;
 }
 
 .emotion-4 {
-  color: #3f4250;
+  color: #222638;
   font-size: 1.3125rem;
   font-family: Space Grotesk,sans-serif;
   font-weight: 500;
@@ -17390,7 +17390,7 @@ exports[`OrderSummary > works with hideDetails 1`] = `
 }
 
 .emotion-4 {
-  color: #3f4250;
+  color: #222638;
   font-size: 1.3125rem;
   font-family: Space Grotesk,sans-serif;
   font-weight: 500;
@@ -17496,7 +17496,7 @@ exports[`OrderSummary > works with hideDetails 1`] = `
 }
 
 .emotion-10 {
-  color: #3f4250;
+  color: #222638;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -17508,7 +17508,7 @@ exports[`OrderSummary > works with hideDetails 1`] = `
 }
 
 .emotion-10 {
-  color: #3f4250;
+  color: #222638;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -17615,17 +17615,17 @@ exports[`OrderSummary > works with hideDetails 1`] = `
         <div
           class="emotion-8 emotion-9"
         >
-          <p
+          <span
             class="emotion-10 emotion-5"
           >
             Estimated cost:
-          </p>
-          <p
+          </span>
+          <span
             class="emotion-4 emotion-5"
             data-testid="total-price"
           >
             €2.50/hours
-          </p>
+          </span>
         </div>
       </div>
     </div>
@@ -17648,25 +17648,25 @@ exports[`OrderSummary > works with hideDetails 1`] = `
         <div
           class="emotion-8 emotion-9"
         >
-          <p
+          <span
             class="emotion-10 emotion-5"
           >
             Estimated cost:
-          </p>
+          </span>
           <div
             class="emotion-26 emotion-9"
           >
-            <p
+            <span
               class="emotion-28 emotion-5"
             >
               €2.50
-            </p>
-            <p
+            </span>
+            <span
               class="emotion-4 emotion-5"
               data-testid="total-price"
             >
               €1.25/hours
-            </p>
+            </span>
           </div>
         </div>
       </div>
@@ -17764,7 +17764,7 @@ exports[`OrderSummary > works with negative category price 1`] = `
   padding-bottom: 1rem;
 }
 
-.emotion-2[data-hideDetails="false"] {
+.emotion-2[data-hidedetails="false"] {
   border-bottom: 1px solid #d9dadd;
 }
 
@@ -17793,12 +17793,12 @@ exports[`OrderSummary > works with negative category price 1`] = `
   padding-bottom: 1rem;
 }
 
-.emotion-2[data-hideDetails="false"] {
+.emotion-2[data-hidedetails="false"] {
   border-bottom: 1px solid #d9dadd;
 }
 
 .emotion-4 {
-  color: #3f4250;
+  color: #222638;
   font-size: 1.3125rem;
   font-family: Space Grotesk,sans-serif;
   font-weight: 500;
@@ -17810,7 +17810,7 @@ exports[`OrderSummary > works with negative category price 1`] = `
 }
 
 .emotion-4 {
-  color: #3f4250;
+  color: #222638;
   font-size: 1.3125rem;
   font-family: Space Grotesk,sans-serif;
   font-weight: 500;
@@ -18850,7 +18850,7 @@ exports[`OrderSummary > works with negative category price 1`] = `
 
 .emotion-34:not(:last-child) {
   border-bottom: 1px solid #d9dadd;
-  padding-bottom: 0.75rem;
+  padding-bottom: 1.5rem;
 }
 
 .emotion-34 {
@@ -18878,7 +18878,7 @@ exports[`OrderSummary > works with negative category price 1`] = `
 
 .emotion-34:not(:last-child) {
   border-bottom: 1px solid #d9dadd;
-  padding-bottom: 0.75rem;
+  padding-bottom: 1.5rem;
 }
 
 .emotion-36 {
@@ -18926,7 +18926,7 @@ exports[`OrderSummary > works with negative category price 1`] = `
 }
 
 .emotion-38 {
-  color: #3f4250;
+  color: #222638;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -18938,7 +18938,7 @@ exports[`OrderSummary > works with negative category price 1`] = `
 }
 
 .emotion-38 {
-  color: #3f4250;
+  color: #222638;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -19070,7 +19070,7 @@ exports[`OrderSummary > works with negative category price 1`] = `
 }
 
 .emotion-52 {
-  color: #3f4250;
+  color: #222638;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -19082,7 +19082,7 @@ exports[`OrderSummary > works with negative category price 1`] = `
 }
 
 .emotion-52 {
-  color: #3f4250;
+  color: #222638;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -19400,17 +19400,17 @@ exports[`OrderSummary > works with negative category price 1`] = `
         <div
           class="emotion-36 emotion-9"
         >
-          <p
+          <span
             class="emotion-38 emotion-5"
           >
             Estimated cost:
-          </p>
-          <p
+          </span>
+          <span
             class="emotion-4 emotion-5"
             data-testid="total-price"
           >
             €0.00
-          </p>
+          </span>
         </div>
       </div>
     </div>
