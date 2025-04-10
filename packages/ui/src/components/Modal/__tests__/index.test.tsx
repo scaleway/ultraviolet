@@ -118,7 +118,7 @@ describe('Modal', () => {
 
   test(`renders with image`, () =>
     shouldMatchEmotionSnapshotWithPortal(
-      <Modal open isClosable={false} image={illustration} imageAlt="test alt">
+      <Modal open isClosable={false} image={illustration}>
         <div>test</div>
       </Modal>,
     ))

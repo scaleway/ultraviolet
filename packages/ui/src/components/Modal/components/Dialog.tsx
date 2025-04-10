@@ -141,7 +141,6 @@ export const Dialog = ({
   dialogCss,
   backdropCss,
   image,
-  imageAlt,
 }: DialogProps) => {
   const [isVisible, setIsVisible] = useState(false)
 
@@ -343,7 +342,7 @@ export const Dialog = ({
         {image ? (
           <>
             <StyledDiv alignItems="end" justifyContent="center">
-              <StyledImg src={image} alt={imageAlt} />
+              <StyledImg src={image} alt="illustration" />
             </StyledDiv>
             <StyledStack gap={5}>{children}</StyledStack>
           </>

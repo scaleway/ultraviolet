@@ -11,7 +11,6 @@ export const Image: StoryFn = props => (
   <Stack gap={2} direction="row">
     <Modal
       image={image}
-      imageAlt="illustration"
       size="medium"
       disclosure={<Button>Open Modal with image (incorrect ratio)</Button>}
       {...props}
@@ -32,7 +31,6 @@ export const Image: StoryFn = props => (
     </Modal>
     <Modal
       image={imageCorrectFormat}
-      imageAlt="illustration"
       size="xsmall"
       disclosure={<Button>Open Modal with image (correct ratio)</Button>}
       {...props}
@@ -57,8 +55,7 @@ export const Image: StoryFn = props => (
 Image.parameters = {
   docs: {
     description: {
-      story:
-        'Add an image at the top of the modal. Do not forget to add an alternative text to the image using prop `imageAlt` for accessibility.',
+      story: 'Add an image at the top of the modal.',
     },
   },
 }

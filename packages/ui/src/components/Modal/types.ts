@@ -60,5 +60,4 @@ export type DialogProps = {
   backdropCss: React.JSX.IntrinsicAttributes['css']
   dialogCss: React.JSX.IntrinsicAttributes['css']
   image?: string
-  imageAlt: string
 }
