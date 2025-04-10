@@ -40,7 +40,7 @@ export const SkeletonRows = ({
           columns={columns}
           key={index}
         >
-          {selectable ? <div /> : null}
+          {selectable ? <td /> : null}
           {colArray.map(columnIndex => (
             <Cell key={columnIndex}>
               <StyledSkeleton variant="line" />

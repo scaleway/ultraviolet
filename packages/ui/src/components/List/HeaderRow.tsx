@@ -34,7 +34,7 @@ const NoPaddingHeaderCell = styled(HeaderCell)`
     padding-left: ${({ theme }) => theme.space['2']};
   }
 
-  max-width: ${({ theme }) => theme.sizing[SELECTABLE_CHECKBOX_SIZE]}
+  max-width: ${({ theme }) => theme.sizing[SELECTABLE_CHECKBOX_SIZE]};
 `
 
 type RowProps = {
