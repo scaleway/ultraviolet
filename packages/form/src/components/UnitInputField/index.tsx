@@ -28,6 +28,7 @@ type UnitInputFieldProps<
     | 'width'
     | 'helper'
     | 'selectInputWidth'
+    | 'dropdownAlign'
   > & {
     onChangeUnitValue?: ComponentProps<typeof UnitInput>['onChangeUnitValue']
     label: string
@@ -59,6 +60,7 @@ export const UnitInputField = <
   validate,
   control,
   optionName,
+  dropdownAlign,
 }: UnitInputFieldProps<TFieldValues, TFieldName>) => {
   const { getError } = useErrors()
   const { field: unitField } = useController({
@@ -110,6 +112,7 @@ export const UnitInputField = <
       className={className}
       width={width}
       placeholderUnit={placeholderUnit}
+      dropdownAlign={dropdownAlign}
     />
   )
 }

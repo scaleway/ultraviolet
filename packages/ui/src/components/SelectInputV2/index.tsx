@@ -1,7 +1,8 @@
 import styled from '@emotion/styled'
 import { useId, useRef } from 'react'
-import type { HTMLAttributes, ReactNode } from 'react'
+import type { ComponentProps, HTMLAttributes, ReactNode } from 'react'
 import { Label } from '../Label'
+import type { Popup } from '../Popup'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
 import { Dropdown } from './Dropdown'
@@ -106,6 +107,7 @@ type SelectInputV2Props<IsMulti extends undefined | boolean = false> = {
    * When options are group, define a option to select every selectable options of a group
    */
   selectAllGroup?: boolean
+  dropdownAlign?: ComponentProps<typeof Popup>['align']
   autofocus?: boolean
   /**
    * Whether it is possible to select multiple options
@@ -169,6 +171,7 @@ export const SelectInputV2 = <IsMulti extends undefined | boolean>({
   isLoading,
   selectAll,
   selectAllGroup = false,
+  dropdownAlign,
 }: SelectInputV2Props<IsMulti>) => {
   const localId = useId()
   const finalId = id ?? localId
@@ -210,6 +213,7 @@ export const SelectInputV2 = <IsMulti extends undefined | boolean>({
           optionalInfoPlacement={optionalInfoPlacement}
           isLoading={isLoading}
           size={size}
+          dropdownAlign={dropdownAlign}
         >
           <Stack gap={0.5} aria-label={ariaLabel}>
             {label || labelDescription ? (

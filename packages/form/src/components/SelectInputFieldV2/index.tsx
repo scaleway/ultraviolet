@@ -41,6 +41,7 @@ type SelectInputFieldV2Props<
     | 'optionalInfoPlacement'
     | 'disabled'
     | 'tooltip'
+    | 'dropdownAlign'
   >
 
 export const SelectInputFieldV2 = <
@@ -82,6 +83,7 @@ export const SelectInputFieldV2 = <
   control,
   validate,
   tooltip,
+  dropdownAlign,
 }: SelectInputFieldV2Props<TFieldValues, TFieldName>) => {
   const {
     field,
@@ -147,6 +149,7 @@ export const SelectInputFieldV2 = <
       aria-label={ariaLabel}
       onChange={handleChange}
       tooltip={tooltip}
+      dropdownAlign={dropdownAlign}
     />
   )
 }
