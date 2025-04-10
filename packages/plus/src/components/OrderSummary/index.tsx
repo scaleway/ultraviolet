@@ -19,12 +19,12 @@ const Container = styled(Stack)`
   }
 `
 
-const HeaderContainer = styled(Stack)<{ 'data-hideDetails': boolean }>`
+const HeaderContainer = styled(Stack)<{ 'data-hidedetails': boolean }>`
   height: ${({ theme }) => theme.sizing[900]};
   padding: ${({ theme }) => theme.space[3]};
   padding-bottom: ${({ theme }) => theme.space[2]};
 
-  &[data-hideDetails="false"] {
+  &[data-hidedetails="false"] {
     border-bottom: 1px solid ${({ theme }) => theme.colors.neutral.border};
   }
 `
@@ -162,9 +162,14 @@ export const OrderSummary = ({
           <HeaderContainer
             direction="row"
             justifyContent="space-between"
-            data-hideDetails={hideDetails}
+            data-hidedetails={hideDetails}
           >
-            <Text as="h3" variant="headingSmallStrong" sentiment="neutral">
+            <Text
+              as="h3"
+              variant="headingSmallStrong"
+              sentiment="neutral"
+              prominence="strong"
+            >
               {header}
             </Text>
             {!hideTimeUnit && !hideDetails ? (
