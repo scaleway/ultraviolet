@@ -132,10 +132,6 @@ const AnimatedIcon = styled(OpenInNewIcon)``
 
 const WrapText = styled(Text)`
   overflow-wrap: anywhere;
-  &[data-animation="collapse"],
-  &[data-animation="expand"] {
-    overflow-wrap: normal;
-  }
   overflow: hidden;
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -594,22 +590,24 @@ export const Item = memo(
                 />
               ) : null}
               <Stack>
-                <WrapText
-                  as="span"
-                  variant="bodySmallStrong"
-                  sentiment={active ? 'primary' : 'neutral'}
-                  prominence={
-                    (categoryIcon || !hasParents) && !active
-                      ? 'strong'
-                      : 'default'
-                  }
-                  data-animation={animation}
-                  disabled={disabled}
-                  whiteSpace="pre-wrap"
-                >
-                  {label}
-                </WrapText>
-                {subLabel ? (
+                {!animation ? (
+                  <WrapText
+                    as="span"
+                    variant="bodySmallStrong"
+                    sentiment={active ? 'primary' : 'neutral'}
+                    prominence={
+                      (categoryIcon || !hasParents) && !active
+                        ? 'strong'
+                        : 'default'
+                    }
+                    data-animation={animation}
+                    disabled={disabled}
+                    whiteSpace="pre-wrap"
+                  >
+                    {label}
+                  </WrapText>
+                ) : null}
+                {subLabel && !animation ? (
                   <WrapText
                     as="span"
                     variant="caption"
@@ -631,7 +629,7 @@ export const Item = memo(
             >
               {badgeText || hasPinnedFeatureAndNoChildren ? (
                 <>
-                  {badgeText ? (
+                  {badgeText && !animation ? (
                     <StyledBadge
                       sentiment={badgeSentiment}
                       size="small"
@@ -689,7 +687,7 @@ export const Item = memo(
                   ) : null}
                 </>
               ) : null}
-              {hasHrefAndNoChildren && target === '_blank' ? (
+              {hasHrefAndNoChildren && target === '_blank' && !animation ? (
                 <AnimatedIcon
                   sentiment="neutral"
                   prominence="default"
@@ -710,12 +708,16 @@ export const Item = memo(
               {!noExpand ? (
                 <ItemProvider>
                   <Expandable opened={internalExpanded} animationDuration={0}>
-                    <PaddedStack>{children}</PaddedStack>
+                    <PaddedStack width={animation ? '100%' : undefined}>
+                      {children}
+                    </PaddedStack>
                   </Expandable>
                 </ItemProvider>
               ) : (
                 <ItemProvider>
-                  <PaddedStack>{children}</PaddedStack>
+                  <PaddedStack width={animation ? '100%' : undefined}>
+                    {children}
+                  </PaddedStack>
                 </ItemProvider>
               )}
             </>
@@ -811,11 +813,13 @@ export const Item = memo(
             flex={1}
             width="100%"
           >
-            <WrapText as="span" variant="bodySmall" whiteSpace="pre-wrap">
-              {label}
-            </WrapText>
+            {!animation ? (
+              <WrapText as="span" variant="bodySmall" whiteSpace="pre-wrap">
+                {label}
+              </WrapText>
+            ) : null}
             <Stack direction="row">
-              {badgeText ? (
+              {badgeText && !animation ? (
                 <StyledBadge
                   sentiment={badgeSentiment}
                   size="small"
