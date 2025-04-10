@@ -12,6 +12,12 @@ import Page from './components/Page'
 import { globalStyles } from './components/globalStyle'
 import { dark, light } from './storybookThemes'
 import '@ultraviolet/fonts/fonts.css'
+import { scan } from "react-scan"
+
+scan({
+  enabled: true,
+  log: true,
+})
 
 const parameters: Preview['parameters'] = {
   darkMode: {
