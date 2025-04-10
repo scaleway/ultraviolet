@@ -130,14 +130,12 @@ const PaddingStack = styled(Stack)`
 
 const AnimatedIcon = styled(OpenInNewIcon)``
 
-const WrapText = styled(Text, {
-  shouldForwardProp: prop =>
-    !['animation', 'subLabel', 'textProminence'].includes(prop),
-})<{
-  animation?: 'collapse' | 'expand' | boolean
-  subLabel?: boolean
-}>`
-  overflow-wrap: ${({ animation }) => (animation ? 'normal' : 'anywhere')};
+const WrapText = styled(Text)`
+  overflow-wrap: anywhere;
+  &[data-animation="collapse"],
+  &[data-animation="expand"] {
+    overflow-wrap: normal;
+  }
   overflow: hidden;
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -519,17 +517,6 @@ export const Item = memo(
       return locales['navigation.pin.tooltip']
     }, [isItemPinned, isPinDisabled, locales])
 
-    const expandableAnimationDuration = useMemo(() => {
-      if (!shouldAnimate || animationType === 'simple') return 0
-
-      // Avoid animation of all expendable Item during collapse, expend of the Navigation
-      if (shouldAnimate && typeof animation !== 'string') {
-        return ANIMATION_DURATION
-      }
-
-      return 0
-    }, [animation, shouldAnimate, animationType])
-
     const onDragStart = useCallback(
       (event: DragEvent<HTMLDivElement>) => {
         if (expanded) {
@@ -616,7 +603,7 @@ export const Item = memo(
                       ? 'strong'
                       : 'default'
                   }
-                  animation={animation}
+                  data-animation={animation}
                   disabled={disabled}
                   whiteSpace="pre-wrap"
                 >
@@ -628,9 +615,8 @@ export const Item = memo(
                     variant="caption"
                     sentiment="neutral"
                     prominence="weak"
-                    animation={animation}
+                    data-animation={animation}
                     disabled={disabled}
-                    subLabel
                     whiteSpace="pre-wrap"
                   >
                     {subLabel}
@@ -723,10 +709,7 @@ export const Item = memo(
             <>
               {!noExpand ? (
                 <ItemProvider>
-                  <Expandable
-                    opened={internalExpanded}
-                    animationDuration={expandableAnimationDuration}
-                  >
+                  <Expandable opened={internalExpanded} animationDuration={0}>
                     <PaddedStack>{children}</PaddedStack>
                   </Expandable>
                 </ItemProvider>

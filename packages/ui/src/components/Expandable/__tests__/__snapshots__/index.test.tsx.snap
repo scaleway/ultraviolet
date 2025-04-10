@@ -50,21 +50,11 @@ exports[`Expandable > renders correctly with animationDuration 1`] = `
 
 exports[`Expandable > renders correctly with animationDuration set to 0 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  height: auto;
-}
-
-.emotion-0[data-is-animated="true"] {
-  -webkit-transition: max-height 0ms ease-out,opacity 0ms ease-out;
-  transition: max-height 0ms ease-out,opacity 0ms ease-out;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
-      data-is-animated="false"
+      style="display: none;"
     >
       Sample Expandable
     </div>
