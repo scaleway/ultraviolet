@@ -214,6 +214,7 @@ type UnitInputProps = {
   label?: string
   labelInformation?: ReactNode
   step?: number | string
+  dropdownAlign?: ComponentProps<typeof SelectInputV2>['dropdownAlign']
 } & Pick<
   InputHTMLAttributes<HTMLInputElement>,
   | 'onFocus'
@@ -259,6 +260,7 @@ export const UnitInput = ({
   onFocus,
   onBlur,
   onKeyDown,
+  dropdownAlign,
 }: UnitInputProps) => {
   const [val, setVal] = useState(value)
   const localId = useId()
@@ -354,6 +356,7 @@ export const UnitInput = ({
             size={size}
             multiselect={false}
             readOnly={readOnly}
+            dropdownAlign={dropdownAlign}
           />
         </SelectInputWrapper>
       </UnitInputWrapper>

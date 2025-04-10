@@ -285,6 +285,23 @@ describe('SelectInputV2', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
+  test.skip('renders correctly with dropdownAlign', async () => {
+    const { asFragment } = renderWithTheme(
+      <SelectInputV2
+        name="test"
+        options={dataUnGrouped}
+        placeholder="placeholder"
+        placeholderSearch="placeholdersearch"
+        required
+        dropdownAlign="center"
+      />,
+    )
+
+    const input = screen.getByText('placeholder')
+    await userEvent.click(input)
+    expect(asFragment()).toMatchSnapshot()
+  })
+
   test.skip('renders correctly readOnly', async () => {
     const { asFragment } = renderWithTheme(
       <SelectInputV2

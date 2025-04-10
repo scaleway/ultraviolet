@@ -100,6 +100,18 @@ describe('UnitInput', () => {
       />,
     ))
 
+  test(`renders with dropdownAlign center`, () =>
+    shouldMatchEmotionSnapshot(
+      <UnitInput
+        onChange={() => {}}
+        onChangeUnitValue={() => {}}
+        name="test"
+        options={options}
+        placeholder="100"
+        dropdownAlign="center"
+      />,
+    ))
+
   test(`renders with success`, () =>
     shouldMatchEmotionSnapshot(
       <UnitInput
