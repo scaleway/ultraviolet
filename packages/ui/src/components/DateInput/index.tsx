@@ -54,6 +54,7 @@ type DateInputProps<IsRange extends undefined | boolean = false> = {
   size?: 'small' | 'medium' | 'large'
   readOnly?: boolean
   tooltip?: string
+  clearable?: boolean
   showMonthYearPicker?: boolean
   placeholder?: string
   startDate?: Date | null
@@ -101,6 +102,7 @@ export const DateInput = <IsRange extends undefined | boolean>({
   size = 'large',
   readOnly = false,
   tooltip,
+  clearable,
   selectsRange = false,
   showMonthYearPicker = false,
   input = 'text',
@@ -321,6 +323,7 @@ export const DateInput = <IsRange extends undefined | boolean>({
               tooltip={tooltip}
               autoComplete="false"
               onChange={manageOnChange}
+              clearable={clearable}
             />
           </CalendarPopup>
         ) : (
