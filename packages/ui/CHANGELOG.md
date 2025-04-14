@@ -1,5 +1,17 @@
 # Change Log
 
+## 1.92.4
+
+### Patch Changes
+
+- [#5005](https://github.com/scaleway/ultraviolet/pull/5005) [`b9ebc2a`](https://github.com/scaleway/ultraviolet/commit/b9ebc2ac2595618d9524001efb4d8e0493f86a69) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<SwitchButton />` relative selectable card is breaking the display
+
+- [#4992](https://github.com/scaleway/ultraviolet/pull/4992) [`3b9a151`](https://github.com/scaleway/ultraviolet/commit/3b9a151d514928c2b52ed91ee4dcfc6d2c2ade01) Thanks [@lisalupi](https://github.com/lisalupi)! - List : Fix error `In HTML, <tr> cannot be a child of <tr>` when loading
+
+- Updated dependencies [[`58657d8`](https://github.com/scaleway/ultraviolet/commit/58657d800433f7ae36dbd9cd44f19f63cd93cb75)]:
+  - @ultraviolet/themes@1.17.0
+  - @ultraviolet/icons@3.12.5
+
 ## 1.92.3
 
 ### Patch Changes

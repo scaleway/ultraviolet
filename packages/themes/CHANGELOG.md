@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.17.0
+
+### Minor Changes
+
+- [#4976](https://github.com/scaleway/ultraviolet/pull/4976) [`58657d8`](https://github.com/scaleway/ultraviolet/commit/58657d800433f7ae36dbd9cd44f19f63cd93cb75) Thanks [@iManu](https://github.com/iManu)! - use the filename to set a class on :root declaration
+
 ## 1.16.0
 
 ### Minor Changes
