@@ -18,6 +18,7 @@ const StyledSelectableCard = styled(SelectableCard)`
   align-items: center;
   transition: all 200ms ease-in-out;
   white-space: nowrap;
+  background: transparent;
 
   &:hover,
   &:active {
