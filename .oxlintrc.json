@@ -73,6 +73,7 @@
     "eslint/max-nested-callbacks": "off",
     "eslint/max-depth": "off",
     "eslint/init-declarations": "off",
+    "eslint/curly": "off",
 
     "import/no-namespace": "off",
     "import/max-dependencies": "off",
@@ -80,6 +81,8 @@
     "import/no-default-export": "off",
     "import/no-duplicates": "off",
     "import/unambiguous": "off",
+    "import/exports-last": "off",
+    "import/no-anonymous-default-export": "off",
     "react-perf/jsx-no-jsx-as-prop": "off",
     "react-perf/jsx-no-new-array-as-prop": "off",
     "react-perf/jsx-no-new-function-as-prop": "off",
@@ -88,6 +91,10 @@
     "react/iframe-missing-sandbox": "error",
     "react/jsx-no-target-blank": "off",
     "react/react-in-jsx-scope": "off",
+    "react/jsx-filename-extension": [
+      "error",
+      { "extensions": [".jsx", ".tsx"] }
+    ],
     "unicorn/error-message": "off",
     "unicorn/filename-case": "off",
     "unicorn/no-array-for-each": "off",
