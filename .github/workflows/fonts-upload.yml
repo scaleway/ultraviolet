@@ -22,7 +22,7 @@ jobs:
       - name: Set up Python environment
         uses: actions/setup-python@v5
         with:
-          python-version: "3.13.2"
+          python-version: "3.13.3"
       - uses: pnpm/action-setup@v4.1.0
       - uses: actions/setup-node@v4.3.0
         with:
