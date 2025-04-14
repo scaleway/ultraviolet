@@ -1,3 +1,5 @@
+'use client'
+
 import styled from '@emotion/styled'
 import type { MouseEvent as MouseEventReact } from 'react'
 import { useContext, useState } from 'react'

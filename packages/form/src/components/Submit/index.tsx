@@ -1,3 +1,5 @@
+'use client'
+
 import { Button } from '@ultraviolet/ui'
 import type { ComponentProps, ReactNode } from 'react'
 import { useFormState } from 'react-hook-form'

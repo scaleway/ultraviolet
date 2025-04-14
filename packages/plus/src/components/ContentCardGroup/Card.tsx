@@ -1,3 +1,5 @@
+'use client'
+
 import styled from '@emotion/styled'
 import { OpenInNewIcon } from '@ultraviolet/icons'
 import { Stack, Text } from '@ultraviolet/ui'

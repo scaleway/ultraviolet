@@ -1,3 +1,5 @@
+'use client'
+
 import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import { useCallback, useEffect, useId, useMemo, useRef, useState } from 'react'

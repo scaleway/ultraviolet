@@ -1,3 +1,5 @@
+'use client'
+
 import styled from '@emotion/styled'
 import type { ChangeEvent, ChangeEventHandler, FocusEventHandler } from 'react'
 import { useCallback, useEffect, useRef, useState } from 'react'

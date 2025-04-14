@@ -1,3 +1,5 @@
+'use client'
+
 import { useTheme } from '@emotion/react'
 import { ILLUSTRATIONS } from './Illustrations'
 import type { IllustrationsKeys } from './Illustrations'

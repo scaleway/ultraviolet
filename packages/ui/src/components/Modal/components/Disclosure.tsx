@@ -1,3 +1,5 @@
+'use client'
+
 import type { PropsWithRef } from 'react'
 import {
   cloneElement,

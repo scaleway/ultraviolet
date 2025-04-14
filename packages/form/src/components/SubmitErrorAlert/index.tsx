@@ -1,3 +1,5 @@
+'use client'
+
 import { Alert } from '@ultraviolet/ui'
 import { useFormState } from 'react-hook-form'
 

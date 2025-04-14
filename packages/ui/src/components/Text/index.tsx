@@ -1,3 +1,5 @@
+'use client'
+
 import type { Theme } from '@emotion/react'
 import styled from '@emotion/styled'
 import type { CSSProperties, ElementType, ReactNode } from 'react'

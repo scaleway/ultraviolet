@@ -1,3 +1,5 @@
+'use client'
+
 import { type ReactNode, useMemo } from 'react'
 import { Text } from '../Text'
 import { DoubleSlider } from './components/DoubleSlider'

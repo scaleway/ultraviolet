@@ -1,3 +1,5 @@
+'use client'
+
 import styled from '@emotion/styled'
 import { InformationOutlineIcon } from '@ultraviolet/icons'
 import type { ReactNode } from 'react'

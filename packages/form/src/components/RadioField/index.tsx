@@ -1,3 +1,5 @@
+'use client'
+
 import { Radio } from '@ultraviolet/ui'
 import { type ComponentProps, useMemo } from 'react'
 import type { FieldPath, FieldValues } from 'react-hook-form'

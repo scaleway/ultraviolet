@@ -1,3 +1,5 @@
+'use client'
+
 import type { Theme } from '@emotion/react'
 import { ClassNames, css, useTheme } from '@emotion/react'
 import type { ReactNode } from 'react'

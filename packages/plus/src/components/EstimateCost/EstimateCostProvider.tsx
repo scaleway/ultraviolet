@@ -1,3 +1,5 @@
+'use client'
+
 import type { ReactNode } from 'react'
 import { createContext, useCallback, useContext, useMemo } from 'react'
 import EstimateCostLocales from './locales/en'

@@ -1,3 +1,5 @@
+'use client'
+
 import styled from '@emotion/styled'
 import type { MouseEventHandler, ReactNode } from 'react'
 import { useMemo } from 'react'

@@ -1,3 +1,5 @@
+'use client'
+
 import styled from '@emotion/styled'
 import { TextInput } from '@ultraviolet/ui'
 import { useEffect, useState } from 'react'

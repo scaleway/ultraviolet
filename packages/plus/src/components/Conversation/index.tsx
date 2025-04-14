@@ -1,3 +1,5 @@
+'use client'
+
 import styled from '@emotion/styled'
 import { Stack, Tag, Text } from '@ultraviolet/ui'
 import type { ReactNode } from 'react'

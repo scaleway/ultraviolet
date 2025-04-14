@@ -1,3 +1,5 @@
+'use client'
+
 import { memo, useMemo } from 'react'
 import { useEstimateCost } from '../EstimateCostProvider'
 import type { Iteration, Units } from '../types'

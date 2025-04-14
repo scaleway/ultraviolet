@@ -1,3 +1,5 @@
+'use client'
+
 import { NumberInputV2 } from '@ultraviolet/ui'
 import type { ComponentProps, FocusEvent } from 'react'
 import { useController } from 'react-hook-form'

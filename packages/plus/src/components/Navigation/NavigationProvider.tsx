@@ -1,3 +1,5 @@
+'use client'
+
 import type { Dispatch, ReactNode, RefObject } from 'react'
 import {
   createContext,

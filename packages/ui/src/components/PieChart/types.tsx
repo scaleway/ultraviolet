@@ -1,3 +1,5 @@
+'use client'
+
 export type Data = {
   name?: string | null
   needPattern?: boolean | null

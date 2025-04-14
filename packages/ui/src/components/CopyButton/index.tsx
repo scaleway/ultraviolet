@@ -1,3 +1,5 @@
+'use client'
+
 import useClipboard from 'react-use-clipboard'
 import { Button } from '../Button'
 

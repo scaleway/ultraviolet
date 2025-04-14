@@ -1,3 +1,5 @@
+'use client'
+
 import styled from '@emotion/styled'
 import { Fragment } from 'react'
 import { IconSkeleton } from './IconSkeleton'

@@ -1,3 +1,5 @@
+'use client'
+
 import styled from '@emotion/styled'
 import { langs } from '@uiw/codemirror-extensions-langs'
 import { material } from '@uiw/codemirror-theme-material'

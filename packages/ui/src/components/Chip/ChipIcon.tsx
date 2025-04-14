@@ -1,3 +1,5 @@
+'use client'
+
 import styled from '@emotion/styled'
 import * as Icon from '@ultraviolet/icons'
 import { useContext } from 'react'

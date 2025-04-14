@@ -2,6 +2,7 @@ import react from '@vitejs/plugin-react'
 import browserslist from 'browserslist'
 import { resolveToEsbuildTarget } from 'esbuild-plugin-browserslist'
 import { readPackage } from 'read-pkg'
+import preserveDirectives from 'rollup-preserve-directives'
 import { defineConfig } from 'vite'
 import type { ViteUserConfig } from 'vitest/config'
 
@@ -73,6 +74,7 @@ export const defaultConfig: ViteUserConfig = {
         plugins: ['@emotion/babel-plugin'],
       },
     }),
+    preserveDirectives(),
   ],
   test: {
     name: 'browser-jsdom',

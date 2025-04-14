@@ -1,3 +1,5 @@
+'use client'
+
 import type { CSSObject, Theme, keyframes } from '@emotion/react'
 import { css, useTheme } from '@emotion/react'
 import styled from '@emotion/styled'

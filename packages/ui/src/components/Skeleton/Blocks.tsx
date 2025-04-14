@@ -1,3 +1,5 @@
+'use client'
+
 import styled from '@emotion/styled'
 import { IconSkeleton } from './IconSkeleton'
 import { Line } from './Line'

@@ -1,3 +1,5 @@
+'use client'
+
 import { SwitchButton } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
 import type { FieldPath, FieldValues, PathValue } from 'react-hook-form'

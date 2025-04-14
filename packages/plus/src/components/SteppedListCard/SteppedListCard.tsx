@@ -1,3 +1,5 @@
+'use client'
+
 import styled from '@emotion/styled'
 import { Button, Card, Row, Stack, StepList, Text } from '@ultraviolet/ui'
 import { Children, useMemo, useState } from 'react'

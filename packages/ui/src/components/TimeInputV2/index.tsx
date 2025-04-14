@@ -1,3 +1,5 @@
+'use client'
+
 import styled from '@emotion/styled'
 import { AlertCircleIcon } from '@ultraviolet/icons'
 import type { FocusEvent, ReactNode } from 'react'

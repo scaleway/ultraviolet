@@ -1,3 +1,5 @@
+'use client'
+
 import styled from '@emotion/styled'
 import type { JSX, ReactNode } from 'react'
 import { Item } from './components/Item'

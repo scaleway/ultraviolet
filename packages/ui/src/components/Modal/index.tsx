@@ -1,3 +1,5 @@
+'use client'
+
 import type { ReactElement, ReactNode } from 'react'
 import type React from 'react'
 import { useCallback, useContext, useId, useState } from 'react'

@@ -1,3 +1,5 @@
+'use client'
+
 import styled from '@emotion/styled'
 import { LockIcon } from '@ultraviolet/icons'
 import type { Color } from '../../theme'

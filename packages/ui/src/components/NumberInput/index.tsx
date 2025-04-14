@@ -1,3 +1,5 @@
+'use client'
+
 import styled from '@emotion/styled'
 import { MinusIcon, PlusIcon } from '@ultraviolet/icons'
 import type {

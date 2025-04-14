@@ -1,3 +1,5 @@
+'use client'
+
 import styled from '@emotion/styled'
 import type { Dispatch, SetStateAction } from 'react'
 import { SelectInputV2 } from '../SelectInputV2'

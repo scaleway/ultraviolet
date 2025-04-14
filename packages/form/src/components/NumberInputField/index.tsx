@@ -1,3 +1,5 @@
+'use client'
+
 import { NumberInput } from '@ultraviolet/ui'
 import type { ComponentProps, FocusEvent, FocusEventHandler } from 'react'
 import type { FieldPath, FieldValues, Path, PathValue } from 'react-hook-form'

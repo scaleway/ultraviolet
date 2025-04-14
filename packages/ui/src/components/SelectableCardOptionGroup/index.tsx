@@ -1,3 +1,5 @@
+'use client'
+
 import styled from '@emotion/styled'
 import type { ComponentProps, InputHTMLAttributes, ReactNode } from 'react'
 import { useMemo } from 'react'

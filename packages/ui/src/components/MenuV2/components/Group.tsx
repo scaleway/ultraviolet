@@ -1,3 +1,5 @@
+'use client'
+
 import styled from '@emotion/styled'
 import { Children, type ReactNode } from 'react'
 import { Stack } from '../../Stack'

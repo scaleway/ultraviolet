@@ -1,3 +1,5 @@
+'use client'
+
 import { SelectableCardOptionGroup } from '@ultraviolet/ui'
 import type { ComponentProps, JSX } from 'react'
 import type { FieldPath, FieldValues } from 'react-hook-form'

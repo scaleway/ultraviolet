@@ -1,3 +1,5 @@
+'use client'
+
 import type { ElementType, ReactNode, RefObject } from 'react'
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { LOADER_SIZE, Loader } from '../Loader'

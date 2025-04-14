@@ -1,3 +1,5 @@
+'use client'
+
 import { TextArea } from '@ultraviolet/ui'
 import type { ComponentProps, KeyboardEvent } from 'react'
 import type { FieldPath, FieldValues, Path, PathValue } from 'react-hook-form'

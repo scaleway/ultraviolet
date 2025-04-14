@@ -1,3 +1,5 @@
+'use client'
+
 import styled from '@emotion/styled'
 import type { MouseEvent as ReactMouseEvent, ReactNode } from 'react'
 import { Button } from '../../Button'

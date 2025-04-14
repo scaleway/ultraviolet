@@ -1,3 +1,5 @@
+'use client'
+
 import { VerificationCode } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
 import type { FieldPath, FieldValues } from 'react-hook-form'

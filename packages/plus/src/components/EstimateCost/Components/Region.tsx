@@ -1,3 +1,5 @@
+'use client'
+
 import styled from '@emotion/styled'
 import { type ComponentProps, type ReactNode, memo } from 'react'
 import { useEstimateCost } from '../EstimateCostProvider'

@@ -1,3 +1,5 @@
+'use client'
+
 import { css, useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import type { Color } from '../../theme'
