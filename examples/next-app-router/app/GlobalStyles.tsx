@@ -2,6 +2,7 @@
 
 import { Global, css } from '@emotion/react'
 import { normalize } from '@ultraviolet/ui'
+import '@ultraviolet/fonts/fonts.css'
 
 const styles = css`
   display: grid;

@@ -13,7 +13,7 @@ type ThemeRegistryProps = {
 
 /**
  * ThemeRegistry is a component that provides a theme to its children.
- * This solution is provided to work with Server Components.
+ * This solution is provided to work with Server Components and be
  */
 export default function ThemeRegistry({ children, theme }: ThemeRegistryProps) {
   const [{ cache, flush }] = useState(() => {
