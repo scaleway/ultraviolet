@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "dev": "next dev",
+    "lint": "next lint",
+    "start": "next start"
   },
   "dependencies": {
     "@emotion/react": "11.14.0",
@@ -21,12 +21,12 @@
     "react-dom": "19.0.0"
   },
   "devDependencies": {
-    "typescript": "5.8.3",
+    "@eslint/eslintrc": "3.3.1",
     "@types/node": "22.14.0",
     "@types/react": "19.0.12",
     "@types/react-dom": "19.0.4",
     "eslint": "9.23.0",
     "eslint-config-next": "15.3.0",
-    "@eslint/eslintrc": "3.3.1"
+    "typescript": "5.8.3"
   }
 }

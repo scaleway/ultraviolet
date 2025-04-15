@@ -53,7 +53,6 @@ export default function ThemeRegistry({ children, theme }: ThemeRegistryProps) {
       <style
         key={cache.key}
         data-emotion={`${cache.key} ${names.join(' ')}`}
-         
         dangerouslySetInnerHTML={{
           __html: styles,
         }}

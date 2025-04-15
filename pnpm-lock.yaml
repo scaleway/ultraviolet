@@ -10,10 +10,6 @@ overrides:
 importers:
 
   .:
-    dependencies:
-      rollup-preserve-directives:
-        specifier: 1.1.3
-        version: 1.1.3(rollup@4.34.8)
     devDependencies:
       '@babel/core':
         specifier: 7.26.10
@@ -286,6 +282,9 @@ importers:
       rollup-plugin-postcss:
         specifier: 4.0.2
         version: 4.0.2(postcss@8.5.3)
+      rollup-preserve-directives:
+        specifier: 1.1.3
+        version: 1.1.3(rollup@4.34.8)
       size-limit:
         specifier: 11.2.0
         version: 11.2.0
@@ -13875,10 +13874,14 @@ snapshots:
       tinyglobby: 0.2.12
     optionalDependencies:
 <<<<<<< HEAD
+<<<<<<< HEAD
       eslint-plugin-import: 2.31.0(@typescript-eslint/parser@8.26.1(eslint@9.24.0(jiti@2.4.2))(typescript@5.8.3))(eslint-import-resolver-typescript@3.8.7)(eslint@9.24.0(jiti@2.4.2))
 =======
       eslint-plugin-import: 2.31.0(@typescript-eslint/parser@8.29.1(eslint@9.23.0(jiti@2.4.2))(typescript@5.8.3))(eslint-import-resolver-typescript@3.8.7)(eslint@9.23.0(jiti@2.4.2))
 >>>>>>> 8083eaa13 (docs: add doc to help intergration)
+=======
+      eslint-plugin-import: 2.31.0(@typescript-eslint/parser@8.26.1(eslint@9.23.0(jiti@2.4.2))(typescript@5.8.3))(eslint-import-resolver-typescript@3.8.7)(eslint@9.23.0(jiti@2.4.2))
+>>>>>>> eb619999a (fix: add changeset)
     transitivePeerDependencies:
       - supports-color
 
