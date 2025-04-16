@@ -1,5 +1,15 @@
 # Change Log
 
+## 1.92.5
+
+### Patch Changes
+
+- [#5012](https://github.com/scaleway/ultraviolet/pull/5012) [`16c02b9`](https://github.com/scaleway/ultraviolet/commit/16c02b9c52660b3ad6841af5f9ef7b41c7374bcd) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<SelectableCardOptionGroup />` image `height` to take same size as `width`
+
+- [#4991](https://github.com/scaleway/ultraviolet/pull/4991) [`8a7e507`](https://github.com/scaleway/ultraviolet/commit/8a7e507a2ee57c648318149b4273caf2c60cdd3e) Thanks [@lisalupi](https://github.com/lisalupi)! - Add prop `dropdownAlign` to `<SelectInputV2 />` and `<UnitInput />`
+
+- [#4965](https://github.com/scaleway/ultraviolet/pull/4965) [`b388aff`](https://github.com/scaleway/ultraviolet/commit/b388affcc6519920be33776f0e6d98fa304c7e8a) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<UnitInput />` to remove disabled state when only one option is available
+
 ## 1.92.4
 
 ### Patch Changes
