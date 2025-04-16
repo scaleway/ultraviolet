@@ -25,6 +25,7 @@ export const Image = ({ src, alt, size, disabled, className }: ImageType) => (
     src={src}
     alt={alt}
     width={IMAGE_SIZES[size]}
+    height={IMAGE_SIZES[size]}
     data-disabled={disabled}
     className={className}
   />
