@@ -34,6 +34,7 @@ export type DropdownProps = {
   isLoading?: boolean
   size: 'small' | 'medium' | 'large'
   dropdownAlign?: ComponentProps<typeof Popup>['align']
+  portalTarget?: ComponentProps<typeof Popup>['portalTarget']
 }
 
 export type CreateDropdownProps = {
@@ -684,6 +685,7 @@ export const Dropdown = ({
   isLoading,
   size,
   dropdownAlign,
+  portalTarget,
 }: DropdownProps) => {
   const {
     setIsDropdownVisible,
@@ -857,6 +859,7 @@ export const Dropdown = ({
       hideOnClickOutside
       onClose={() => setIsDropdownVisible(false)}
       align={dropdownAlign ?? 'start'}
+      portalTarget={portalTarget}
     >
       {children}
     </StyledPopup>
