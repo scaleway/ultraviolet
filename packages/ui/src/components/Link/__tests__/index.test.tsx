@@ -38,31 +38,34 @@ describe('Link', () => {
 
   test(`render correctly with target blank`, () =>
     shouldMatchEmotionSnapshot(
-      <Link href="/" sentiment="primary" target="_blank">
+      <Link href="/" target="_blank">
+        Hello
+      </Link>,
+    ))
+
+  test(`render correctly prop primary`, () =>
+    shouldMatchEmotionSnapshot(
+      <Link href="/" sentiment="primary">
         Hello
       </Link>,
     ))
 
   test(`render correctly with href props`, () =>
-    shouldMatchEmotionSnapshot(
-      <Link sentiment="primary" href="/">
-        Hello
-      </Link>,
-    ))
+    shouldMatchEmotionSnapshot(<Link href="/">Hello</Link>))
 
   test(`render correctly with href props`, () =>
     shouldMatchEmotionSnapshot(
       <>
-        <Link sentiment="primary" href="/" iconPosition="left">
+        <Link href="/" iconPosition="left">
           Hello
         </Link>
-        <Link sentiment="primary" href="/" iconPosition="right">
+        <Link href="/" iconPosition="right">
           Hello
         </Link>
-        <Link sentiment="primary" href="/" iconPosition="right" target="_blank">
+        <Link href="/" iconPosition="right" target="_blank">
           Hello
         </Link>
-        <Link sentiment="primary" href="/" iconPosition="left" target="_blank">
+        <Link href="/" iconPosition="left" target="_blank">
           Hello
         </Link>
       </>,
@@ -71,10 +74,10 @@ describe('Link', () => {
   test(`render correctly with variants props`, () =>
     shouldMatchEmotionSnapshot(
       <>
-        <Link sentiment="primary" href="/" variant="inline">
+        <Link href="/" variant="inline">
           Hello
         </Link>
-        <Link sentiment="primary" href="/" variant="standalone">
+        <Link href="/" variant="standalone">
           Hello
         </Link>
       </>,
