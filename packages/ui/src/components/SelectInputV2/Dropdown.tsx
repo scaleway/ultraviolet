@@ -2,6 +2,7 @@ import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import type {
+  ComponentProps,
   Dispatch,
   KeyboardEvent,
   ReactNode,
@@ -32,6 +33,7 @@ export type DropdownProps = {
   optionalInfoPlacement: 'left' | 'right'
   isLoading?: boolean
   size: 'small' | 'medium' | 'large'
+  dropdownAlign?: ComponentProps<typeof Popup>['align']
 }
 
 export type CreateDropdownProps = {
@@ -681,6 +683,7 @@ export const Dropdown = ({
   optionalInfoPlacement,
   isLoading,
   size,
+  dropdownAlign,
 }: DropdownProps) => {
   const {
     setIsDropdownVisible,
@@ -853,7 +856,7 @@ export const Dropdown = ({
       containerFullWidth
       hideOnClickOutside
       onClose={() => setIsDropdownVisible(false)}
-      align="start"
+      align={dropdownAlign ?? 'start'}
     >
       {children}
     </StyledPopup>
