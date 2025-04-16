@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
 import { AlertCircleIcon, CheckCircleIcon } from '@ultraviolet/icons'
 import type { ComponentProps, InputHTMLAttributes, ReactNode } from 'react'
-import { useId, useMemo, useState } from 'react'
+import { useEffect, useId, useMemo, useState } from 'react'
 import { Label } from '../Label'
 import { SelectInputV2 } from '../SelectInputV2'
 import type { OptionType } from '../SelectInputV2/types'
@@ -274,6 +274,12 @@ export const UnitInput = ({
 
     return 'neutral'
   }, [error, success])
+
+  useEffect(() => {
+    if (value !== undefined) {
+      setVal(value)
+    }
+  }, [value])
 
   return (
     <Stack gap={0.5}>
