@@ -1,5 +1,13 @@
 # Change Log
 
+## 1.92.6
+
+### Patch Changes
+
+- [#5023](https://github.com/scaleway/ultraviolet/pull/5023) [`96685a2`](https://github.com/scaleway/ultraviolet/commit/96685a24c9406f331c83d3611ea1ec240537b337) Thanks [@matthprost](https://github.com/matthprost)! - Add new prop `portalTarget` on `<SelectInputV2 />` to add more ganularity for dropdown display
+
+- [#5022](https://github.com/scaleway/ultraviolet/pull/5022) [`d78387c`](https://github.com/scaleway/ultraviolet/commit/d78387cc7470a2099ca4783cc365cde6f9a65906) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<UnitInput />` value not updating when changing in controlled
+
 ## 1.92.5
 
 ### Patch Changes
