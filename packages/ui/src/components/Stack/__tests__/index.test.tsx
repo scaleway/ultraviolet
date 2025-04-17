@@ -53,6 +53,22 @@ describe('Stack', () => {
       </Stack>,
     ))
 
+  test(`should render correctly max width 100%`, () =>
+    shouldMatchEmotionSnapshot(
+      <Stack maxWidth="100%">
+        <div>first child</div>
+        <div>second child</div>
+      </Stack>,
+    ))
+
+  test(`should render correctly min width 100%`, () =>
+    shouldMatchEmotionSnapshot(
+      <Stack minWidth="100%">
+        <div>first child</div>
+        <div>second child</div>
+      </Stack>,
+    ))
+
   test(`should render correctly with flex 1`, () =>
     shouldMatchEmotionSnapshot(
       <Stack flex="1">
