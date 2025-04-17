@@ -121,6 +121,11 @@ type SelectInputV2Props<IsMulti extends undefined | boolean = false> = {
     ? (value: string[]) => void
     : (value: string) => void
   'data-testid'?: string
+  /**
+   * In some cases, when the space is limited, you will need to change the `portalTarget` of the dropdown for a higher parent element.
+   * If you don't know which element to target, you can use `document.body`.
+   */
+  portalTarget?: ComponentProps<typeof Popup>['portalTarget']
 } & Pick<
   HTMLAttributes<HTMLDivElement>,
   'id' | 'onBlur' | 'onFocus' | 'aria-label' | 'className'
@@ -172,6 +177,7 @@ export const SelectInputV2 = <IsMulti extends undefined | boolean>({
   selectAll,
   selectAllGroup = false,
   dropdownAlign,
+  portalTarget,
 }: SelectInputV2Props<IsMulti>) => {
   const localId = useId()
   const finalId = id ?? localId
@@ -214,6 +220,7 @@ export const SelectInputV2 = <IsMulti extends undefined | boolean>({
           isLoading={isLoading}
           size={size}
           dropdownAlign={dropdownAlign}
+          portalTarget={portalTarget}
         >
           <Stack gap={0.5} aria-label={ariaLabel}>
             {label || labelDescription ? (
