@@ -494,8 +494,8 @@ exports[`DateField > should clear field 1`] = `
         class="emotion-0 emotion-1"
       >
         <div
-          aria-controls=":r1t:"
-          aria-describedby=":r1t:"
+          aria-controls=":r3k:"
+          aria-describedby=":r3k:"
           class="emotion-2 emotion-3"
           tabindex="0"
         >
@@ -515,7 +515,7 @@ exports[`DateField > should clear field 1`] = `
                   autocomplete="false"
                   class="emotion-8 emotion-9"
                   data-size="large"
-                  id=":r1u:"
+                  id=":r3l:"
                   name="test"
                   placeholder="YYYY-MM-DD"
                   type="text"
@@ -544,7 +544,7 @@ exports[`DateField > should clear field 1`] = `
             class="emotion-14 emotion-15 emotion-16"
             data-animated="false"
             data-has-arrow="false"
-            id=":r1t:"
+            id=":r3k:"
             role="dialog"
             style="opacity: 1;"
           >
@@ -1392,6 +1392,243 @@ exports[`DateField > should render correctly disabled 1`] = `
                   id=":r4:"
                   name="test"
                   type="text"
+                />
+                <div
+                  class="emotion-10 emotion-11"
+                >
+                  <svg
+                    class="emotion-12 emotion-13"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      d="M5.25 12a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H6a.75.75 0 0 1-.75-.75zM6 13.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V14a.75.75 0 0 0-.75-.75zM7.25 12a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H8a.75.75 0 0 1-.75-.75zM8 13.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V14a.75.75 0 0 0-.75-.75zM9.25 10a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H10a.75.75 0 0 1-.75-.75zm.75 1.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V12a.75.75 0 0 0-.75-.75zM9.25 14a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H10a.75.75 0 0 1-.75-.75zM12 9.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V10a.75.75 0 0 0-.75-.75zM11.25 12a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H12a.75.75 0 0 1-.75-.75zm.75 1.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V14a.75.75 0 0 0-.75-.75zM13.25 10a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H14a.75.75 0 0 1-.75-.75zm.75 1.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V12a.75.75 0 0 0-.75-.75z"
+                    />
+                    <path
+                      clip-rule="evenodd"
+                      d="M5.75 2a.75.75 0 0 1 .75.75V4h7V2.75a.75.75 0 0 1 1.5 0V4h.25A2.75 2.75 0 0 1 18 6.75v8.5A2.75 2.75 0 0 1 15.25 18H4.75A2.75 2.75 0 0 1 2 15.25v-8.5A2.75 2.75 0 0 1 4.75 4H5V2.75A.75.75 0 0 1 5.75 2m-1 5.5c-.69 0-1.25.56-1.25 1.25v6.5c0 .69.56 1.25 1.25 1.25h10.5c.69 0 1.25-.56 1.25-1.25v-6.5c0-.69-.56-1.25-1.25-1.25z"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`DateField > should test range 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  width: 100%;
+}
+
+.emotion-2 {
+  display: inherit;
+}
+
+.emotion-2[data-container-full-width="true"] {
+  width: 100%;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.25rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  height: 3rem;
+  background: #ffffff;
+  border: 1px solid #d9dadd;
+  border-radius: 0.25rem;
+}
+
+.emotion-6>.emotion-9 {
+  color: #3f4250;
+}
+
+.emotion-6>.emotion-9::-webkit-input-placeholder {
+  color: #727683;
+}
+
+.emotion-6>.emotion-9::-moz-placeholder {
+  color: #727683;
+}
+
+.emotion-6>.emotion-9:-ms-input-placeholder {
+  color: #727683;
+}
+
+.emotion-6>.emotion-9::placeholder {
+  color: #727683;
+}
+
+.emotion-6[data-success='true'] {
+  border-color: #22674e;
+}
+
+.emotion-6[data-error='true'] {
+  border-color: #b3144d;
+}
+
+.emotion-6[data-readonly='true'] {
+  background: #f9f9fa;
+  border-color: #d9dadd;
+}
+
+.emotion-6[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
+}
+
+.emotion-6[data-disabled='true']>.emotion-9 {
+  color: #b5b7bd;
+}
+
+.emotion-6[data-disabled='true']>.emotion-9::-webkit-input-placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-6[data-disabled='true']>.emotion-9::-moz-placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-6[data-disabled='true']>.emotion-9:-ms-input-placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-6[data-disabled='true']>.emotion-9::placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-6:not([data-disabled='true']):not([data-readonly]):hover {
+  border-color: #8c40ef;
+}
+
+.emotion-8 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  border: none;
+  outline: none;
+  height: 100%;
+  width: 100%;
+  padding-left: 1rem;
+  background: transparent;
+  font-size: 0.875rem;
+}
+
+.emotion-8[data-size='large'] {
+  font-size: 1rem;
+}
+
+.emotion-8[data-size='small'] {
+  padding-left: 0.5rem;
+}
+
+.emotion-10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding: 0 1rem;
+  border-left: 1px solid;
+  border-color: inherit;
+}
+
+.emotion-12 {
+  vertical-align: middle;
+  fill: #3f4250;
+  height: 1.25rem;
+  width: 1.25rem;
+  min-width: 1.25rem;
+  min-height: 1.25rem;
+}
+
+.emotion-12 .fillStroke {
+  stroke: #3f4250;
+  fill: none;
+}
+
+<div
+    data-testid="testing"
+  >
+    <form
+      novalidate=""
+    >
+      <div
+        class="emotion-0 emotion-1"
+      >
+        <div
+          aria-controls=":r1t:"
+          aria-describedby=":r1t:"
+          class="emotion-2 emotion-3"
+          tabindex="0"
+        >
+          <div
+            class="emotion-4 emotion-5"
+          >
+            <div>
+              <div
+                class="emotion-6 emotion-7"
+                data-disabled="false"
+                data-error="false"
+                data-readonly="false"
+                data-success="false"
+              >
+                <input
+                  aria-invalid="false"
+                  autocomplete="false"
+                  class="emotion-8 emotion-9"
+                  data-size="large"
+                  id=":r1u:"
+                  name="test"
+                  placeholder="YYYY-MM-DD"
+                  type="text"
+                  value="9/15/2022 - 9/18/2022"
                 />
                 <div
                   class="emotion-10 emotion-11"

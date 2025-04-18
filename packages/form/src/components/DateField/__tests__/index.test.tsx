@@ -46,6 +46,40 @@ describe('DateField', () => {
     expect(asFragment()).toMatchSnapshot()
   }, 10000)
 
+  test('should test range', async () => {
+    const onBlur = vi.fn()
+    const onChange = vi.fn()
+    const { asFragment, resultForm } = renderWithForm(
+      <DateField
+        name="test"
+        onBlur={onBlur}
+        onChange={onChange}
+        placeholder="YYYY-MM-DD"
+        selectsRange
+      />,
+      {
+        defaultValues: {
+          test: [new Date('2022-09-01'), new Date('2022-09-06')],
+        },
+      },
+    )
+
+    const input = screen.getByPlaceholderText<HTMLInputElement>('YYYY-MM-DD')
+    await userEvent.click(input)
+    await userEvent.click(screen.getByText('15'))
+    await userEvent.click(screen.getByText('18'))
+    await waitFor(() => {
+      expect(onChange).toBeCalledTimes(2)
+    })
+
+    expect(resultForm.current.getValues('test')).toEqual([
+      new Date('2022-09-14T22:00:00.000Z'),
+      new Date('2022-09-17T22:00:00.000Z'),
+    ])
+
+    expect(asFragment()).toMatchSnapshot()
+  }, 10000)
+
   test('should clear field', async () => {
     const onBlur = vi.fn()
     const onChange = vi.fn()
