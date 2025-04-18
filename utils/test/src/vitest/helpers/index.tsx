@@ -127,17 +127,20 @@ export const renderWithForm = (
     useForm({ mode: 'onChange', ...useFormProps }),
   )
 
-  return renderWithTheme(
-    <Form
-      onSubmit={() => {}}
-      errors={mockFormErrors}
-      methods={result.current}
-      {...formProps}
-    >
-      {compoment}
-    </Form>,
-    theme,
-  )
+  return {
+    ...renderWithTheme(
+      <Form
+        onSubmit={() => {}}
+        errors={mockFormErrors}
+        methods={result.current}
+        {...formProps}
+      >
+        {compoment}
+      </Form>,
+      theme,
+    ),
+    resultForm: result,
+  }
 }
 
 export const defaultError = new Error('Default error message')

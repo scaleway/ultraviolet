@@ -263,19 +263,18 @@ export const DateInput = <IsRange extends undefined | boolean>({
         ) => void
       )?.(computedNewRange, event)
     } else {
-      const computedDate = new Date(newValue)
+      const computedDate = Date.parse(newValue) ? new Date(newValue) : null
       setInputValue(newValue)
+      setValue(computedDate)
 
-      if (Date.parse(newValue)) {
-        setValue(computedDate)
+      if (computedDate) {
         setMonthToShow(computedDate.getMonth() + 1)
         setYearToShow(computedDate.getFullYear())
-
-        // TypeScript fails to automatically get the correct type of onChange here
-        ;(
-          onChange as (date: Date | null, event?: React.SyntheticEvent) => void
-        )?.(computedDate, event)
       }
+      // TypeScript fails to automatically get the correct type of onChange here
+      ;(
+        onChange as (date: Date | null, event?: React.SyntheticEvent) => void
+      )?.(computedDate, event)
     }
   }
 

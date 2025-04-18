@@ -130,7 +130,7 @@ export const DateField = <
         } else if (Array.isArray(val)) {
           onChange?.(val as PathValue<TFieldValues, Path<TFieldValues>>)
           field.onChange(val)
-        } else if (val === undefined || val === null) {
+        } else if (val === null) {
           onChange?.(val as PathValue<TFieldValues, Path<TFieldValues>>)
           field.onChange(val)
         }

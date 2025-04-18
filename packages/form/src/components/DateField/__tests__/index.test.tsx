@@ -18,7 +18,7 @@ describe('DateField', () => {
   test('should trigger events', async () => {
     const onBlur = vi.fn()
     const onChange = vi.fn()
-    const { asFragment } = renderWithForm(
+    const { asFragment, resultForm } = renderWithForm(
       <DateField
         name="test"
         onBlur={onBlur}
@@ -38,6 +38,40 @@ describe('DateField', () => {
     await waitFor(() => {
       expect(onChange).toBeCalledTimes(1)
     })
+
+    expect(resultForm.current.getValues('test')).toEqual(
+      new Date('2022-09-15T00:00:00.000Z'),
+    )
+
+    expect(asFragment()).toMatchSnapshot()
+  }, 10000)
+
+  test('should clear field', async () => {
+    const onBlur = vi.fn()
+    const onChange = vi.fn()
+    const { asFragment, resultForm } = renderWithForm(
+      <DateField
+        name="test"
+        onBlur={onBlur}
+        onChange={onChange}
+        placeholder="YYYY-MM-DD"
+        clearable
+      />,
+      {
+        defaultValues: {
+          test: new Date('2022-09-01'),
+        },
+      },
+    )
+
+    const clearButton = screen.getByRole('button', { name: 'clear value' })
+    await userEvent.click(clearButton)
+
+    await waitFor(() => {
+      expect(onChange).toBeCalledTimes(1)
+    })
+
+    expect(resultForm.current.getValues('test')).toEqual(null)
 
     expect(asFragment()).toMatchSnapshot()
   }, 10000)
