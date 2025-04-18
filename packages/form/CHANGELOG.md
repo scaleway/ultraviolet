@@ -1,5 +1,16 @@
 # Change Log
 
+## 3.17.0
+
+### Minor Changes
+
+- [#5000](https://github.com/scaleway/ultraviolet/pull/5000) [`9cf64a6`](https://github.com/scaleway/ultraviolet/commit/9cf64a6af130ff1a9e93d058e230542191ee9303) Thanks [@alexandre-combemorel](https://github.com/alexandre-combemorel)! - Add clearable to DateInput and DateInputField (and tooltip)
+
+### Patch Changes
+
+- Updated dependencies [[`9cf64a6`](https://github.com/scaleway/ultraviolet/commit/9cf64a6af130ff1a9e93d058e230542191ee9303)]:
+  - @ultraviolet/ui@1.94.0
+
 ## 3.16.0
 
 ### Minor Changes
