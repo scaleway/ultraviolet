@@ -18,7 +18,20 @@ const BULLET_SENTIMENTS = [...SENTIMENTS, 'disabled']
 
 type BulletSentiment = (typeof BULLET_SENTIMENTS)[number]
 
-type BulletSize = 'medium' | 'small'
+// Values are then used as theme.sizing[X]
+const SIZES = {
+  xxsmall: '200',
+  xsmall: '250',
+  small: '300',
+  medium: '400',
+} as const
+
+const TEXT_VARIANT = {
+  xxsmall: 'captionSmallStrong',
+  xsmall: 'caption',
+  small: 'bodySmall',
+  medium: 'body',
+} as const
 
 const sentimentStyles = ({
   theme,
@@ -70,18 +83,18 @@ const sentimentStyles = ({
 
 type StyledContainerType = {
   sentiment: BulletSentiment
-  size: BulletSize
+  size: keyof typeof SIZES
   prominence: ProminenceType
 }
 
 const StyledContainer = styled('div')<StyledContainerType>`
-  display: inline-flex;
+  display: flex;
   border-radius: ${({ theme }) => theme.radii.circle};
   justify-content: center;
   align-items: center;
-  width: ${({ size, theme }) => (size === 'medium' ? theme.sizing['400'] : theme.sizing['300'])};
-  height: ${({ size, theme }) => (size === 'medium' ? theme.sizing['400'] : theme.sizing['300'])};
-  font-size: ${({ size, theme }) => (size === 'medium' ? theme.typography.body.fontSize : theme.typography.bodySmall.fontSize)};
+  width: ${({ size, theme }) => theme.sizing[SIZES[size]]};
+  height: ${({ size, theme }) => theme.sizing[SIZES[size]]};
+  font-size: ${({ size, theme }) => theme.typography[TEXT_VARIANT[size]].fontSize};
   ${({ theme, prominence, sentiment }) =>
     (sentimentStyles({ theme, prominence }) as Record<BulletSentiment, string>)[
       sentiment
@@ -90,7 +103,7 @@ const StyledContainer = styled('div')<StyledContainerType>`
 
 type BulletProps = {
   className?: string
-  size?: BulletSize
+  size?: keyof typeof SIZES
   tooltip?: string
   tooltipBaseId?: string
   sentiment?: BulletSentiment
