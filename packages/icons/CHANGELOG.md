@@ -1,5 +1,11 @@
 # Change Log
 
+## 3.13.0
+
+### Minor Changes
+
+- [#5011](https://github.com/scaleway/ultraviolet/pull/5011) [`93c306f`](https://github.com/scaleway/ultraviolet/commit/93c306f0c29b24fcd8ce27556af1d606bd14dbcd) Thanks [@matthprost](https://github.com/matthprost)! - Integration of `"use client"` on all components
+
 ## 3.12.5
 
 ### Patch Changes

@@ -1,5 +1,18 @@
 # Change Log
 
+## 1.93.0
+
+### Minor Changes
+
+- [#5011](https://github.com/scaleway/ultraviolet/pull/5011) [`93c306f`](https://github.com/scaleway/ultraviolet/commit/93c306f0c29b24fcd8ce27556af1d606bd14dbcd) Thanks [@matthprost](https://github.com/matthprost)! - Integration of `"use client"` on all components
+
+### Patch Changes
+
+- [#4968](https://github.com/scaleway/ultraviolet/pull/4968) [`cf94d68`](https://github.com/scaleway/ultraviolet/commit/cf94d68e806a352c5cba80e5c5ca53f6b9525c11) Thanks [@lisalupi](https://github.com/lisalupi)! - Add prop `image` to modals
+
+- Updated dependencies [[`93c306f`](https://github.com/scaleway/ultraviolet/commit/93c306f0c29b24fcd8ce27556af1d606bd14dbcd)]:
+  - @ultraviolet/icons@3.13.0
+
 ## 1.92.6
 
 ### Patch Changes
