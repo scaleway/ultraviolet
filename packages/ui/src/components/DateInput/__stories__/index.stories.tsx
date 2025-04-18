@@ -7,6 +7,7 @@ export default {
 } as Meta
 export { Playground } from './Playground.stories'
 export { Size } from './Size.stories'
+export { Clearable } from './Clearable.stories'
 export { Error } from './Error.stories'
 export { Disabled } from './Disabled.stories'
 export { Required } from './Required.stories'

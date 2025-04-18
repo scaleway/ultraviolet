@@ -44,8 +44,7 @@ type DateFieldProps<
 const parseDate = (value: string | Date): Date =>
   typeof value === 'string' ? new Date(value) : value
 
-const isEmpty = (value?: Date | string): boolean =>
-  typeof value === 'string' ? value === '' : value === undefined
+const isEmpty = (value?: Date | string | null): boolean => !value
 
 export const DateField = <
   TFieldValues extends FieldValues,
@@ -69,6 +68,8 @@ export const DateField = <
   selectsRange,
   size,
   placeholder,
+  tooltip,
+  clearable,
   'data-testid': dataTestId,
   shouldUnregister = false,
   showMonthYearPicker,
@@ -118,15 +119,19 @@ export const DateField = <
         if (val && val instanceof Date) {
           onChange?.(val as PathValue<TFieldValues, Path<TFieldValues>>)
           const newDate = parseDate(val)
-          if (isEmpty(field.value as Date)) {
+          if (isEmpty(field.value)) {
             field.onChange(newDate)
 
             return
           }
-          const currentDate = parseDate(field.value as Date)
+          const currentDate = parseDate(field.value)
           newDate.setHours(currentDate.getHours(), currentDate.getMinutes())
           field.onChange(newDate)
         } else if (Array.isArray(val)) {
+          onChange?.(val as PathValue<TFieldValues, Path<TFieldValues>>)
+          field.onChange(val)
+        } else if (val === null) {
+          onChange?.(val as PathValue<TFieldValues, Path<TFieldValues>>)
           field.onChange(val)
         }
       }}
@@ -145,6 +150,8 @@ export const DateField = <
       selectsRange={selectsRange}
       showMonthYearPicker={showMonthYearPicker}
       data-testid={dataTestId}
+      clearable={clearable}
+      tooltip={tooltip}
       startDate={
         selectsRange && Array.isArray(field.value)
           ? (field.value as [Date | null, Date | null])[0]

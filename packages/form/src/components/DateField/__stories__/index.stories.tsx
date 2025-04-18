@@ -79,6 +79,7 @@ export default {
 
 export { Playground } from './Playground.stories'
 export { Required } from './Required.stories'
+export { Clearable } from './Clearable.stories'
 export { MinMaxDate } from './MinMaxDate.stories'
 export { MinMaxDateWithTimeField } from './MinMaxWithTimeField.stories'
 export { MinMaxDateRange } from './MinMaxDateRange.stories'
