@@ -44,9 +44,7 @@ type DateFieldProps<
 const parseDate = (value: string | Date): Date =>
   typeof value === 'string' ? new Date(value) : value
 
-const isEmpty = (value?: Date | string | null): boolean => {
-  return !value
-}
+const isEmpty = (value?: Date | string | null): boolean => !value
 
 export const DateField = <
   TFieldValues extends FieldValues,
