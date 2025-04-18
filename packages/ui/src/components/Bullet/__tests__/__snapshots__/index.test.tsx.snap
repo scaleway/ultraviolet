@@ -525,3 +525,75 @@ exports[`Bullet > size > render small 1`] = `
   </div>
 </DocumentFragment>
 `;
+
+exports[`Bullet > size > render xsmall 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 1.25rem;
+  height: 1.25rem;
+  font-size: 0.75rem;
+  color: #3f4250;
+  background: #ffffff;
+  border: 1px solid #d9dadd;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+    >
+      1
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Bullet > size > render xxsmall 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 1rem;
+  height: 1rem;
+  font-size: 0.625rem;
+  color: #3f4250;
+  background: #ffffff;
+  border: 1px solid #d9dadd;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+    >
+      1
+    </div>
+  </div>
+</DocumentFragment>
+`;
