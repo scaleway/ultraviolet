@@ -73,7 +73,7 @@ describe('DateField', () => {
     })
 
     expect(resultForm.current.getValues('test')).toEqual([
-      new Date('2022-09-14T22:00:00.000Z'),
+      new Date('2022-09-15T00:00:00.000Z'),
       new Date('2022-09-17T22:00:00.000Z'),
     ])
 
