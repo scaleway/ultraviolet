@@ -12,7 +12,7 @@ export { KyutaiLogo } from './KyutaiLogo'
 export { MetaLogo } from './MetaLogo'
 export { MicrosoftLogo } from './MicrosoftLogo'
 export { OutlookLogo } from './OutlookLogo'
-export type LogoIconsNames =
+export type LogoIconNames =
   | 'BaaiLogo'
   | 'GithubLogo'
   | 'GmailLogo'

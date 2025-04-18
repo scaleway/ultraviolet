@@ -161,7 +161,7 @@ export { WafProductIcon } from './WafProductIcon'
 export { WebPlatformProductIcon } from './WebPlatformProductIcon'
 export { WebhostingProductIcon } from './WebhostingProductIcon'
 export { ZoneProductIcon } from './ZoneProductIcon'
-export type ProductIconsNames =
+export type ProductIconNames =
   | 'AbuseProductIcon'
   | 'AccountExperienceProductIcon'
   | 'AdditionalDiskProductIcon'

@@ -10,28 +10,28 @@ const COMPONENTS = [
     suffix: 'Icon',
     input: 'packages/icons/src/components/Icon/assets',
     output: 'packages/icons/src/components/Icon/__generatedIcons__',
-    typeName: 'SystemIconsNames',
+    typeName: 'SystemIconNames',
   },
   {
     name: 'Product Icons',
     suffix: 'ProductIcon',
     input: 'packages/icons/src/components/ProductIcon/assets',
     output: 'packages/icons/src/components/ProductIcon/__generatedIcons__',
-    typeName: 'ProductIconsNames',
+    typeName: 'ProductIconNames',
   },
   {
     name: 'Category Icons',
     suffix: 'CategoryIcon',
     input: 'packages/icons/src/components/CategoryIcon/assets',
     output: 'packages/icons/src/components/CategoryIcon/__generatedIcons__',
-    typeName: 'CategoryIconsNames',
+    typeName: 'CategoryIconNames',
   },
   {
     name: 'Logo',
     suffix: 'Logo',
     input: 'packages/icons/src/components/Logo/assets',
     output: 'packages/icons/src/components/Logo/__generatedIcons__',
-    typeName: 'LogoIconsNames',
+    typeName: 'LogoIconNames',
   },
 ]
 

@@ -184,7 +184,7 @@ export { ThumbsUpIcon } from './ThumbsUpIcon'
 export { UnlockIcon } from './UnlockIcon'
 export { UnpinIcon } from './UnpinIcon'
 export { WeatherNightIcon } from './WeatherNightIcon'
-export type SystemIconsNames =
+export type SystemIconNames =
   | 'AddressPlayIcon'
   | 'AnchorIcon'
   | 'ArrowDownIcon'

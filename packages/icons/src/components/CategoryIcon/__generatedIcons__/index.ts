@@ -30,7 +30,7 @@ export { ToolsServicesCategoryIcon } from './ToolsServicesCategoryIcon'
 export { UseCaseCategoryIcon } from './UseCaseCategoryIcon'
 export { VpcCategoryIcon } from './VpcCategoryIcon'
 export { WebHostingCategoryIcon } from './WebHostingCategoryIcon'
-export type CategoryIconsNames =
+export type CategoryIconNames =
   | 'AiCategoryIcon'
   | 'ApplicationIntegrationCategoryIcon'
   | 'BaremetalCategoryIcon'
