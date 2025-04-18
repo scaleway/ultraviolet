@@ -45,11 +45,7 @@ const parseDate = (value: string | Date): Date =>
   typeof value === 'string' ? new Date(value) : value
 
 const isEmpty = (value?: Date | string | null): boolean => {
-  if (typeof value === 'string') {
-    return value === ''
-  }
-
-  return value === undefined || value === null
+  return !value
 }
 
 export const DateField = <
