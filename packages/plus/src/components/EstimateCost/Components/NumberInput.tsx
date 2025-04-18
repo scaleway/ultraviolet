@@ -1,3 +1,5 @@
+'use client'
+
 import { NumberInputV2 } from '@ultraviolet/ui'
 import { useEffect, useState } from 'react'
 import { useOverlay } from '../OverlayContext'

@@ -1,3 +1,5 @@
+'use client'
+
 import { ReactComponent as addressOutline } from '../assets/small-outline/address.svg'
 import { ReactComponent as alertOutline } from '../assets/small-outline/alert-circle.svg'
 import { ReactComponent as autoFixOutline } from '../assets/small-outline/auto-fix.svg'

@@ -1,3 +1,5 @@
+'use client'
+
 import styled from '@emotion/styled'
 import { CalendarRangeIcon } from '@ultraviolet/icons'
 import type { Locale } from 'date-fns'

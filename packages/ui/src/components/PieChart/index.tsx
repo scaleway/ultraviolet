@@ -1,3 +1,5 @@
+'use client'
+
 import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import type { Box } from '@nivo/core'

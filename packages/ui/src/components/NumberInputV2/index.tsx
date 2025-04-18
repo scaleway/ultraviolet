@@ -1,3 +1,5 @@
+'use client'
+
 import styled from '@emotion/styled'
 import type { ForwardedRef, InputHTMLAttributes, ReactNode } from 'react'
 import {

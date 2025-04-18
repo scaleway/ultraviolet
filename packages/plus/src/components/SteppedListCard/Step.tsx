@@ -1,3 +1,5 @@
+'use client'
+
 import styled from '@emotion/styled'
 import { StepList, Text } from '@ultraviolet/ui'
 import { useContext } from 'react'

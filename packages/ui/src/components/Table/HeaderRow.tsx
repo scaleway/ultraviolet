@@ -1,3 +1,5 @@
+'use client'
+
 import { useTheme } from '@emotion/react'
 import type { ReactNode } from 'react'
 import { Checkbox } from '../Checkbox'

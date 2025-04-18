@@ -1,3 +1,5 @@
+'use client'
+
 import { TimeInput } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
 import type { FieldPath, FieldValues, Path, PathValue } from 'react-hook-form'

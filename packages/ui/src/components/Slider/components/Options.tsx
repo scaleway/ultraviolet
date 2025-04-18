@@ -1,3 +1,5 @@
+'use client'
+
 import styled from '@emotion/styled'
 import { Text } from '../../Text'
 import { THUMB_SIZE } from '../constant'

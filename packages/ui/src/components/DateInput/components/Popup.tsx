@@ -1,3 +1,5 @@
+'use client'
+
 import styled from '@emotion/styled'
 import type { Dispatch, ReactNode, RefObject, SetStateAction } from 'react'
 import { useEffect, useRef } from 'react'

@@ -1,3 +1,5 @@
+'use client'
+
 import { CheckboxGroup } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
 import { Children, isValidElement, useCallback } from 'react'

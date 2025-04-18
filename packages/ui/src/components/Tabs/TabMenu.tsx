@@ -1,3 +1,5 @@
+'use client'
+
 import styled from '@emotion/styled'
 import { ArrowDownIcon } from '@ultraviolet/icons'
 import type {

@@ -1,3 +1,5 @@
+'use client'
+
 import styled from '@emotion/styled'
 
 const sizes = ['5rem', '7.5rem', '10rem', '12.5rem']

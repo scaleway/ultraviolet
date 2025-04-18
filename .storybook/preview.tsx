@@ -67,6 +67,7 @@ const parameters: Preview['parameters'] = {
         ['Dark mode', 'Colors', 'Typography', 'Shadows', 'Spaces and Radii'],
         'Tools',
         'State',
+        'Guides',
         ['Components state', 'Properties'],
         'Migrations',
         'Components',

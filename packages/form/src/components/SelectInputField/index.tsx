@@ -1,3 +1,5 @@
+'use client'
+
 import type { CSSObject, Theme, css } from '@emotion/react'
 import { SelectInput } from '@ultraviolet/ui'
 import type {

@@ -1,3 +1,5 @@
+'use client'
+
 import styled from '@emotion/styled'
 import { Stack } from '@ultraviolet/ui'
 import { useEffect, useRef } from 'react'

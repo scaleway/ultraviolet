@@ -1,3 +1,5 @@
+'use client'
+
 import styled from '@emotion/styled'
 import { Row, SelectInput, TextInput } from '@ultraviolet/ui'
 import type { ComponentProps, FocusEvent } from 'react'

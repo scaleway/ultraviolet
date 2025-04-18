@@ -1,3 +1,5 @@
+'use client'
+
 import { DateInput } from '@ultraviolet/ui'
 import type { ComponentProps, FocusEvent } from 'react'
 import type { FieldPath, FieldValues, Path, PathValue } from 'react-hook-form'

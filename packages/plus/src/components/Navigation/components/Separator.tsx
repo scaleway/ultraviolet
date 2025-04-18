@@ -1,3 +1,5 @@
+'use client'
+
 import styled from '@emotion/styled'
 import { Separator as UVSeparator } from '@ultraviolet/ui'
 

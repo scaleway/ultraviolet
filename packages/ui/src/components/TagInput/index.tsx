@@ -1,3 +1,5 @@
+'use client'
+
 import styled from '@emotion/styled'
 import { AlertCircleIcon, CheckCircleOutlineIcon } from '@ultraviolet/icons'
 import type {

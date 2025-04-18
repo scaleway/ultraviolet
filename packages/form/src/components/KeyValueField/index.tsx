@@ -1,3 +1,5 @@
+'use client'
+
 import { Button, Row, Stack } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
 import { useFieldArray } from 'react-hook-form'

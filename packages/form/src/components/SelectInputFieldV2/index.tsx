@@ -1,3 +1,5 @@
+'use client'
+
 import { SelectInputV2 } from '@ultraviolet/ui'
 import { type ComponentProps, useCallback } from 'react'
 import type { FieldPath, FieldValues, PathValue } from 'react-hook-form'

@@ -1,3 +1,5 @@
+'use client'
+
 import { RadioGroup } from '@ultraviolet/ui'
 import type { ComponentProps, JSX } from 'react'
 import type { FieldPath, FieldValues, Path, PathValue } from 'react-hook-form'

@@ -1,3 +1,5 @@
+'use client'
+
 import styled from '@emotion/styled'
 import type { CSSProperties, ReactNode } from 'react'
 import type { UltravioletUITheme } from '../../theme'

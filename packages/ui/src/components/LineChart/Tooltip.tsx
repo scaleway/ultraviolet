@@ -1,3 +1,5 @@
+'use client'
+
 import styled from '@emotion/styled'
 import type { Point } from '@nivo/line'
 import { Text } from '../Text'

@@ -1,3 +1,5 @@
+'use client'
+
 import { useTheme } from '@emotion/react'
 import type { ComponentProps } from 'react'
 import { Link } from '../Link'

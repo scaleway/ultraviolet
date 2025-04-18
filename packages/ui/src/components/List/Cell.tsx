@@ -1,3 +1,5 @@
+'use client'
+
 import styled from '@emotion/styled'
 import type { KeyboardEventHandler, MouseEventHandler, ReactNode } from 'react'
 import { forwardRef } from 'react'

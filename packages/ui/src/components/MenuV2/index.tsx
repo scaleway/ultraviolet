@@ -1,3 +1,5 @@
+'use client'
+
 import type { Ref } from 'react'
 import { forwardRef } from 'react'
 import { Menu } from './MenuContent'

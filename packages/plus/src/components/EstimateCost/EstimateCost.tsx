@@ -1,3 +1,5 @@
+'use client'
+
 import styled from '@emotion/styled'
 import { Text } from '@ultraviolet/ui'
 import type { ReactNode } from 'react'

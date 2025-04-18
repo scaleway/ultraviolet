@@ -1,3 +1,5 @@
+'use client'
+
 import styled from '@emotion/styled'
 import { Icon } from '@ultraviolet/icons/legacy'
 import type { ComponentProps, ReactNode } from 'react'

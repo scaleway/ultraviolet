@@ -1,3 +1,5 @@
+'use client'
+
 import { Checkbox } from '@ultraviolet/ui'
 import type { ComponentProps, ReactNode } from 'react'
 import type { FieldPath, FieldValues, Path, PathValue } from 'react-hook-form'

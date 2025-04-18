@@ -1,3 +1,5 @@
+'use client'
+
 import { useTheme } from '@emotion/react'
 import type { DatumValue, Box as NivoBox, ValueFormat } from '@nivo/core'
 import type { LineSvgProps, Serie } from '@nivo/line'

@@ -1,3 +1,5 @@
+'use client'
+
 import styled from '@emotion/styled'
 import { useId, useRef } from 'react'
 import type { ComponentProps, HTMLAttributes, ReactNode } from 'react'

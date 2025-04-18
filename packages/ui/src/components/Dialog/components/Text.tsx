@@ -1,3 +1,5 @@
+'use client'
+
 import { Text } from '../../Text'
 
 type DialogTextProps = {

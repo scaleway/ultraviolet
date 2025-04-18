@@ -1,3 +1,5 @@
+'use client'
+
 import { NavigationContent } from './NavigationContent'
 import { Group } from './components/Group'
 import { Item } from './components/Item'

@@ -1,3 +1,5 @@
+'use client'
+
 import { UnitInput } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
 import { useController } from 'react-hook-form'

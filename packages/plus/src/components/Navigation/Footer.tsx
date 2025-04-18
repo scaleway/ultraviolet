@@ -1,3 +1,5 @@
+'use client'
+
 import styled from '@emotion/styled'
 import { Button, Tooltip } from '@ultraviolet/ui'
 import type { RefObject } from 'react'

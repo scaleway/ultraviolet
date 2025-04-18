@@ -1,3 +1,5 @@
+'use client'
+
 import { Slider } from '@ultraviolet/ui'
 import {
   type ComponentProps,

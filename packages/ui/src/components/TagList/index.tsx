@@ -1,3 +1,5 @@
+'use client'
+
 import styled from '@emotion/styled'
 import { consoleLightTheme } from '@ultraviolet/themes'
 import { useEffect, useMemo, useRef, useState } from 'react'

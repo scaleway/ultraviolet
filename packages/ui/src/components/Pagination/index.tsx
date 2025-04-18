@@ -1,3 +1,5 @@
+'use client'
+
 import { useEffect, useState } from 'react'
 import { Stack } from '../Stack'
 import { PaginationButtons } from './PaginationButtons'

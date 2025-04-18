@@ -1,3 +1,5 @@
+'use client'
+
 import styled from '@emotion/styled'
 import { SearchIcon } from '@ultraviolet/icons'
 import type { Ref } from 'react'

@@ -1,3 +1,5 @@
+'use client'
+
 import { useTheme } from '@emotion/react'
 import type { BarDatum, BarSvgProps, BarTooltipProps } from '@nivo/bar'
 import { ResponsiveBar } from '@nivo/bar'

@@ -1,3 +1,5 @@
+'use client'
+
 import styled from '@emotion/styled'
 import { useCallback, useMemo } from 'react'
 import { Button } from '../Button'

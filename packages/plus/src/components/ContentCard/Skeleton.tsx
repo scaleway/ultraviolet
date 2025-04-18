@@ -1,3 +1,5 @@
+'use client'
+
 import styled from '@emotion/styled'
 import { Stack, Skeleton as UltravioletSkeleton } from '@ultraviolet/ui'
 

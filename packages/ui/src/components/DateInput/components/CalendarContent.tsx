@@ -1,3 +1,5 @@
+'use client'
+
 import styled from '@emotion/styled'
 import { useContext } from 'react'
 import { Button } from '../../Button'

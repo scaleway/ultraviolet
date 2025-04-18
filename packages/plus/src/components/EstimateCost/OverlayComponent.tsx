@@ -1,3 +1,5 @@
+'use client'
+
 import styled from '@emotion/styled'
 import { Icon, Stack } from '@ultraviolet/ui'
 import type { JSX, ReactNode } from 'react'
