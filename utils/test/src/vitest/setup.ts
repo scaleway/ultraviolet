@@ -15,6 +15,7 @@ const MockResize = vi.fn(() => ({
 }))
 
 export const setup = () => {
+  process.env.TZ = 'UTC'
   expect.extend(matchers)
   // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
   expect.addSnapshotSerializer(createSerializer())
