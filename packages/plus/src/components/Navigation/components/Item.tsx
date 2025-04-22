@@ -132,14 +132,8 @@ const PaddingStack = styled(Stack)`
 
 const AnimatedIcon = styled(OpenInNewIcon)``
 
-const WrapText = styled(Text, {
-  shouldForwardProp: prop =>
-    !['animation', 'subLabel', 'textProminence'].includes(prop),
-})<{
-  animation?: 'collapse' | 'expand' | boolean
-  subLabel?: boolean
-}>`
-  overflow-wrap: ${({ animation }) => (animation ? 'normal' : 'anywhere')};
+const WrapText = styled(Text)`
+  overflow-wrap: anywhere;
   overflow: hidden;
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -486,8 +480,15 @@ export const Item = memo(
         ]
       : null
 
-    const ArrowIcon = internalExpanded ? ArrowDownIcon : ArrowRightIcon
-    const PinUnpinIcon = isItemPinned ? StyledUnpinIcon : StyledPinIconOutline
+    const ArrowIcon = useMemo(
+      () => (internalExpanded ? ArrowDownIcon : ArrowRightIcon),
+      [internalExpanded],
+    )
+
+    const PinUnpinIcon = useMemo(
+      () => (isItemPinned ? StyledUnpinIcon : StyledPinIconOutline),
+      [isItemPinned],
+    )
 
     const ariaExpanded = useMemo(() => {
       if (hasHrefAndNoChildren && internalExpanded) {
@@ -514,22 +515,27 @@ export const Item = memo(
       return locales['navigation.pin.tooltip']
     }, [isItemPinned, isPinDisabled, locales])
 
-    const onDragStartTrigger = (event: DragEvent<HTMLDivElement>) => {
-      event.dataTransfer.setData('text/plain', JSON.stringify({ label, index }))
-      // eslint-disable-next-line no-param-reassign
-      event.currentTarget.style.opacity = '0.5'
-    }
+    const onDragStart = useCallback(
+      (event: DragEvent<HTMLDivElement>) => {
+        if (expanded) {
+          event.dataTransfer.setData(
+            'text/plain',
+            JSON.stringify({ label, index }),
+          )
+          // eslint-disable-next-line no-param-reassign
+          event.currentTarget.style.opacity = '0.5'
+        }
 
-    const expandableAnimationDuration = useMemo(() => {
-      if (!shouldAnimate || animationType === 'simple') return 0
+        return undefined
+      },
+      [expanded, index, label],
+    )
 
-      // Avoid animation of all expendable Item during collapse, expend of the Navigation
-      if (shouldAnimate && typeof animation !== 'string') {
-        return ANIMATION_DURATION
-      }
-
-      return 0
-    }, [animation, shouldAnimate, animationType])
+    const onDragEnd = useCallback(
+      (event: DragEvent<HTMLDivElement>) =>
+        expanded ? onDragStopTrigger(event) : undefined,
+      [expanded],
+    )
 
     // This content is when the navigation is expanded
     if (expanded || (!expanded && animation === 'expand')) {
@@ -555,12 +561,8 @@ export const Item = memo(
             data-has-no-expand={noExpand}
             disabled={disabled}
             draggable={type === 'pinned' && expanded}
-            onDragStart={(event: DragEvent<HTMLDivElement>) =>
-              expanded ? onDragStartTrigger(event) : undefined
-            }
-            onDragEnd={(event: DragEvent<HTMLDivElement>) =>
-              expanded ? onDragStopTrigger(event) : undefined
-            }
+            onDragStart={onDragStart}
+            onDragEnd={onDragEnd}
             id={id}
             data-testid={dataTestId}
           >
@@ -590,30 +592,31 @@ export const Item = memo(
                 />
               ) : null}
               <Stack>
-                <WrapText
-                  as="span"
-                  variant="bodySmallStrong"
-                  sentiment={active ? 'primary' : 'neutral'}
-                  prominence={
-                    (categoryIcon || !hasParents) && !active
-                      ? 'strong'
-                      : 'default'
-                  }
-                  animation={animation}
-                  disabled={disabled}
-                  whiteSpace="pre-wrap"
-                >
-                  {label}
-                </WrapText>
-                {subLabel ? (
+                {!animation ? (
+                  <WrapText
+                    as="span"
+                    variant="bodySmallStrong"
+                    sentiment={active ? 'primary' : 'neutral'}
+                    prominence={
+                      (categoryIcon || !hasParents) && !active
+                        ? 'strong'
+                        : 'default'
+                    }
+                    data-animation={animation}
+                    disabled={disabled}
+                    whiteSpace="pre-wrap"
+                  >
+                    {label}
+                  </WrapText>
+                ) : null}
+                {subLabel && !animation ? (
                   <WrapText
                     as="span"
                     variant="caption"
                     sentiment="neutral"
                     prominence="weak"
-                    animation={animation}
+                    data-animation={animation}
                     disabled={disabled}
-                    subLabel
                     whiteSpace="pre-wrap"
                   >
                     {subLabel}
@@ -628,7 +631,7 @@ export const Item = memo(
             >
               {badgeText || hasPinnedFeatureAndNoChildren ? (
                 <>
-                  {badgeText ? (
+                  {badgeText && !animation ? (
                     <StyledBadge
                       sentiment={badgeSentiment}
                       size="small"
@@ -686,7 +689,7 @@ export const Item = memo(
                   ) : null}
                 </>
               ) : null}
-              {hasHrefAndNoChildren && target === '_blank' ? (
+              {hasHrefAndNoChildren && target === '_blank' && !animation ? (
                 <AnimatedIcon
                   sentiment="neutral"
                   prominence="default"
@@ -706,16 +709,17 @@ export const Item = memo(
             <>
               {!noExpand ? (
                 <ItemProvider>
-                  <Expandable
-                    opened={internalExpanded}
-                    animationDuration={expandableAnimationDuration}
-                  >
-                    <PaddedStack>{children}</PaddedStack>
+                  <Expandable opened={internalExpanded} animationDuration={0}>
+                    <PaddedStack width={animation ? '100%' : undefined}>
+                      {children}
+                    </PaddedStack>
                   </Expandable>
                 </ItemProvider>
               ) : (
                 <ItemProvider>
-                  <PaddedStack>{children}</PaddedStack>
+                  <PaddedStack width={animation ? '100%' : undefined}>
+                    {children}
+                  </PaddedStack>
                 </ItemProvider>
               )}
             </>
@@ -811,11 +815,13 @@ export const Item = memo(
             flex={1}
             width="100%"
           >
-            <WrapText as="span" variant="bodySmall" whiteSpace="pre-wrap">
-              {label}
-            </WrapText>
+            {!animation ? (
+              <WrapText as="span" variant="bodySmall" whiteSpace="pre-wrap">
+                {label}
+              </WrapText>
+            ) : null}
             <Stack direction="row">
-              {badgeText ? (
+              {badgeText && !animation ? (
                 <StyledBadge
                   sentiment={badgeSentiment}
                   size="small"

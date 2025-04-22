@@ -1,9 +1,10 @@
 'use client'
 
 import styled from '@emotion/styled'
+import { ArrowLeftDoubleIcon, ArrowRightDoubleIcon } from '@ultraviolet/icons'
 import { Button, Tooltip } from '@ultraviolet/ui'
 import type { RefObject } from 'react'
-import { useCallback, useEffect, useState } from 'react'
+import { useCallback, useEffect, useMemo, useState } from 'react'
 import { useNavigation } from './NavigationProvider'
 import { ANIMATION_DURATION } from './constants'
 import type { NavigationProps } from './types'
@@ -78,31 +79,34 @@ export const Footer = ({ onToggleExpand, contentRef }: FooterProps) => {
     setFooterHasOverflowStyle(isScrollAtBottom())
   }, [isScrollAtBottom])
 
+  const Icon = useMemo(
+    () => (expanded ? ArrowLeftDoubleIcon : ArrowRightDoubleIcon),
+    [expanded],
+  )
+
+  const label = useMemo(
+    () =>
+      expanded
+        ? locales['navigation.collapse.button']
+        : locales['navigation.expand.button'],
+    [expanded, locales],
+  )
+
   return (
     <StickyFooter data-has-overflow-style={footerHasOverflowStyle}>
-      <Tooltip
-        text={
-          expanded
-            ? locales['navigation.collapse.button']
-            : locales['navigation.expand.button']
-        }
-        placement="right"
-      >
+      <Tooltip text={label} placement="right">
         <Button
           variant="ghost"
           sentiment="neutral"
           size="small"
-          icon={expanded ? 'arrow-left-double' : 'arrow-right-double'}
-          aria-label={
-            expanded
-              ? locales['navigation.collapse.button']
-              : locales['navigation.expand.button']
-          }
+          aria-label={label}
           onClick={() => {
             toggleExpand()
             onToggleExpand?.(!expanded)
           }}
-        />
+        >
+          <Icon />
+        </Button>
       </Tooltip>
     </StickyFooter>
   )

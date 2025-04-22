@@ -1008,43 +1008,37 @@ exports[`Navigation > click on expand / collapse button 1`] = `
   fill: none;
 }
 
-.emotion-31 {
-  height: auto;
-}
-
-.emotion-31[data-is-animated="true"] {
-  -webkit-transition: max-height 250ms ease-out,opacity 250ms ease-out;
-  transition: max-height 250ms ease-out,opacity 250ms ease-out;
-}
-
-.emotion-31 {
-  height: auto;
-}
-
-.emotion-31[data-is-animated="true"] {
-  -webkit-transition: max-height 250ms ease-out,opacity 250ms ease-out;
-  transition: max-height 250ms ease-out,opacity 250ms ease-out;
-}
-
-.emotion-35 {
+.emotion-33 {
   padding: 0.5rem 0;
 }
 
-.emotion-35[data-expanded='true'] {
+.emotion-33[data-expanded='true'] {
+  padding-left: 2rem;
+  margin-left: 0.25rem;
+}
+
+.emotion-33 {
+  padding: 0.5rem 0;
+}
+
+.emotion-33[data-expanded='true'] {
   padding-left: 2rem;
   margin-left: 0.25rem;
 }
 
 .emotion-35 {
-  padding: 0.5rem 0;
+  color: #727683;
+  font-size: 0.75rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
-.emotion-35[data-expanded='true'] {
-  padding-left: 2rem;
-  margin-left: 0.25rem;
-}
-
-.emotion-37 {
+.emotion-35 {
   color: #727683;
   font-size: 0.75rem;
   font-family: Inter,Asap,sans-serif;
@@ -1057,26 +1051,14 @@ exports[`Navigation > click on expand / collapse button 1`] = `
 }
 
 .emotion-37 {
-  color: #727683;
-  font-size: 0.75rem;
-  font-family: Inter,Asap,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+  position: relative;
 }
 
-.emotion-39 {
+.emotion-37 {
   position: relative;
 }
 
 .emotion-39 {
-  position: relative;
-}
-
-.emotion-41 {
   position: absolute;
   right: 0;
   left: 0;
@@ -1087,7 +1069,7 @@ exports[`Navigation > click on expand / collapse button 1`] = `
   padding: 0.25rem 0;
 }
 
-.emotion-41::before {
+.emotion-39::before {
   content: '';
   position: absolute;
   left: 0;
@@ -1099,7 +1081,7 @@ exports[`Navigation > click on expand / collapse button 1`] = `
   border-radius: 100%;
 }
 
-.emotion-41 {
+.emotion-39 {
   position: absolute;
   right: 0;
   left: 0;
@@ -1110,7 +1092,7 @@ exports[`Navigation > click on expand / collapse button 1`] = `
   padding: 0.25rem 0;
 }
 
-.emotion-41::before {
+.emotion-39::before {
   content: '';
   position: absolute;
   left: 0;
@@ -1122,7 +1104,7 @@ exports[`Navigation > click on expand / collapse button 1`] = `
   border-radius: 100%;
 }
 
-.emotion-44 {
+.emotion-42 {
   margin: 0;
   border: 0;
   width: auto;
@@ -1134,7 +1116,7 @@ exports[`Navigation > click on expand / collapse button 1`] = `
   margin: 1rem -1rem;
 }
 
-.emotion-44 {
+.emotion-42 {
   margin: 0;
   border: 0;
   width: auto;
@@ -1146,27 +1128,27 @@ exports[`Navigation > click on expand / collapse button 1`] = `
   margin: 1rem -1rem;
 }
 
-.emotion-46[data-animation='expand'][data-animation-type="complex"] .emotion-50 {
+.emotion-44[data-animation='expand'][data-animation-type="complex"] .emotion-48 {
   -webkit-animation: animation-2 250ms ease-in-out;
   animation: animation-2 250ms ease-in-out;
 }
 
-.emotion-46[data-animation='collapse'][data-animation-type="complex"] .emotion-50 {
+.emotion-44[data-animation='collapse'][data-animation-type="complex"] .emotion-48 {
   -webkit-animation: animation-2 250ms ease-in-out reverse;
   animation: animation-2 250ms ease-in-out reverse;
 }
 
-.emotion-46[data-animation='expand'][data-animation-type="complex"] .emotion-50 {
+.emotion-44[data-animation='expand'][data-animation-type="complex"] .emotion-48 {
   -webkit-animation: animation-2 250ms ease-in-out;
   animation: animation-2 250ms ease-in-out;
 }
 
-.emotion-46[data-animation='collapse'][data-animation-type="complex"] .emotion-50 {
+.emotion-44[data-animation='collapse'][data-animation-type="complex"] .emotion-48 {
   -webkit-animation: animation-2 250ms ease-in-out reverse;
   animation: animation-2 250ms ease-in-out reverse;
 }
 
-.emotion-48 {
+.emotion-46 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1190,7 +1172,7 @@ exports[`Navigation > click on expand / collapse button 1`] = `
   padding-top: 0.5rem;
 }
 
-.emotion-48 {
+.emotion-46 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1214,7 +1196,7 @@ exports[`Navigation > click on expand / collapse button 1`] = `
   padding-top: 0.5rem;
 }
 
-.emotion-51 {
+.emotion-49 {
   color: #727683;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
@@ -1231,7 +1213,7 @@ exports[`Navigation > click on expand / collapse button 1`] = `
   height: calc(1.25rem + 0.5rem);
 }
 
-.emotion-51 {
+.emotion-49 {
   color: #727683;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
@@ -1248,23 +1230,23 @@ exports[`Navigation > click on expand / collapse button 1`] = `
   height: calc(1.25rem + 0.5rem);
 }
 
-.emotion-59 .fill {
+.emotion-57 .fill {
   fill: #521094;
 }
 
-.emotion-59 .fillStrong {
+.emotion-57 .fillStrong {
   fill: #a060f6;
 }
 
-.emotion-59 .fill {
+.emotion-57 .fill {
   fill: #521094;
 }
 
-.emotion-59 .fillStrong {
+.emotion-57 .fillStrong {
   fill: #a060f6;
 }
 
-.emotion-64 {
+.emotion-62 {
   color: #641cb3;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
@@ -1282,7 +1264,7 @@ exports[`Navigation > click on expand / collapse button 1`] = `
   -webkit-line-clamp: 2;
 }
 
-.emotion-64 {
+.emotion-62 {
   color: #641cb3;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
@@ -1300,31 +1282,31 @@ exports[`Navigation > click on expand / collapse button 1`] = `
   -webkit-line-clamp: 2;
 }
 
-.emotion-83 {
+.emotion-81 {
   display: inherit;
 }
 
-.emotion-83[data-container-full-width="true"] {
+.emotion-81[data-container-full-width="true"] {
+  width: 100%;
+}
+
+.emotion-81 {
+  display: inherit;
+}
+
+.emotion-81[data-container-full-width="true"] {
   width: 100%;
 }
 
 .emotion-83 {
-  display: inherit;
+  position: relative;
 }
 
-.emotion-83[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-85 {
+.emotion-83 {
   position: relative;
 }
 
 .emotion-85 {
-  position: relative;
-}
-
-.emotion-87 {
   opacity: 0;
   right: 0;
   position: absolute;
@@ -1334,13 +1316,13 @@ exports[`Navigation > click on expand / collapse button 1`] = `
   margin: auto;
 }
 
-.emotion-87:hover,
-.emotion-87:focus,
-.emotion-87:active {
+.emotion-85:hover,
+.emotion-85:focus,
+.emotion-85:active {
   opacity: 1;
 }
 
-.emotion-87 {
+.emotion-85 {
   opacity: 0;
   right: 0;
   position: absolute;
@@ -1350,13 +1332,13 @@ exports[`Navigation > click on expand / collapse button 1`] = `
   margin: auto;
 }
 
-.emotion-87:hover,
-.emotion-87:focus,
-.emotion-87:active {
+.emotion-85:hover,
+.emotion-85:focus,
+.emotion-85:active {
   opacity: 1;
 }
 
-.emotion-90 {
+.emotion-88 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1.25rem;
@@ -1371,16 +1353,16 @@ exports[`Navigation > click on expand / collapse button 1`] = `
   border-radius: 0.25rem;
 }
 
-.emotion-90 .fillStroke {
+.emotion-88 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
 
-.emotion-90:hover {
+.emotion-88:hover {
   background: #e9eaeb;
 }
 
-.emotion-90 {
+.emotion-88 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1.25rem;
@@ -1395,16 +1377,16 @@ exports[`Navigation > click on expand / collapse button 1`] = `
   border-radius: 0.25rem;
 }
 
-.emotion-90 .fillStroke {
+.emotion-88 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
 
-.emotion-90:hover {
+.emotion-88:hover {
   background: #e9eaeb;
 }
 
-.emotion-92 {
+.emotion-90 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1424,12 +1406,12 @@ exports[`Navigation > click on expand / collapse button 1`] = `
   justify-content: flex-end;
 }
 
-.emotion-92[data-has-overflow-style="false"] {
+.emotion-90[data-has-overflow-style="false"] {
   box-shadow: none;
   border: none;
 }
 
-.emotion-92 {
+.emotion-90 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1449,12 +1431,12 @@ exports[`Navigation > click on expand / collapse button 1`] = `
   justify-content: flex-end;
 }
 
-.emotion-92[data-has-overflow-style="false"] {
+.emotion-90[data-has-overflow-style="false"] {
   box-shadow: none;
   border: none;
 }
 
-.emotion-96 {
+.emotion-94 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1467,7 +1449,7 @@ exports[`Navigation > click on expand / collapse button 1`] = `
   gap: 0.5rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 2rem;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1493,22 +1475,22 @@ exports[`Navigation > click on expand / collapse button 1`] = `
   color: #3f4250;
 }
 
-.emotion-96:hover {
+.emotion-94:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-96:active {
+.emotion-94:active {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.emotion-96:hover,
-.emotion-96:active {
+.emotion-94:hover,
+.emotion-94:active {
   background: #e9eaeb;
   color: #222638;
 }
 
-.emotion-96 {
+.emotion-94 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1521,7 +1503,7 @@ exports[`Navigation > click on expand / collapse button 1`] = `
   gap: 0.5rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 2rem;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1547,58 +1529,50 @@ exports[`Navigation > click on expand / collapse button 1`] = `
   color: #3f4250;
 }
 
-.emotion-96:hover {
+.emotion-94:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-96:active {
+.emotion-94:active {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.emotion-96:hover,
-.emotion-96:active {
+.emotion-94:hover,
+.emotion-94:active {
   background: #e9eaeb;
   color: #222638;
 }
 
-.emotion-98 {
+.emotion-96 {
   vertical-align: middle;
   fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
-.emotion-98 .fillStroke {
+.emotion-96 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.emotion-98 path {
-  fill: currentColor;
-}
-
-.emotion-98 {
+.emotion-96 {
   vertical-align: middle;
   fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
-.emotion-98 .fillStroke {
+.emotion-96 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.emotion-98 path {
-  fill: currentColor;
-}
-
-.emotion-100 {
+.emotion-98 {
   background: transparent;
   position: absolute;
   top: 0;
@@ -1613,11 +1587,11 @@ exports[`Navigation > click on expand / collapse button 1`] = `
   display: flex;
 }
 
-.emotion-100:hover {
+.emotion-98:hover {
   border-color: #8c40ef;
 }
 
-.emotion-100 {
+.emotion-98 {
   background: transparent;
   position: absolute;
   top: 0;
@@ -1632,7 +1606,7 @@ exports[`Navigation > click on expand / collapse button 1`] = `
   display: flex;
 }
 
-.emotion-100:hover {
+.emotion-98:hover {
   border-color: #8c40ef;
 }
 
@@ -1738,28 +1712,25 @@ exports[`Navigation > click on expand / collapse button 1`] = `
                   </div>
                 </div>
               </button>
-              <div
-                class="emotion-31 emotion-32"
-                data-is-animated="true"
-              >
+              <div>
                 <div
                   class="emotion-20 emotion-15"
                 >
                   <div
-                    class="emotion-35 emotion-36"
+                    class="emotion-33 emotion-34"
                     data-expanded="true"
                   >
                     <p
-                      class="emotion-37 emotion-24"
+                      class="emotion-35 emotion-24"
                     >
                       You have no pinned items.
                     </p>
                   </div>
                   <div
-                    class="emotion-39 emotion-40"
+                    class="emotion-37 emotion-38"
                   >
                     <div
-                      class="emotion-41 emotion-42"
+                      class="emotion-39 emotion-40"
                     />
                   </div>
                 </div>
@@ -1767,18 +1738,18 @@ exports[`Navigation > click on expand / collapse button 1`] = `
             </div>
             <hr
               aria-orientation="horizontal"
-              class="emotion-43 emotion-44 emotion-45"
+              class="emotion-41 emotion-42 emotion-43"
               role="separator"
             />
             <div
-              class="emotion-46 emotion-47"
+              class="emotion-44 emotion-45"
               data-animation="false"
             >
               <div
-                class="emotion-48 emotion-49"
+                class="emotion-46 emotion-47"
               >
                 <span
-                  class="emotion-50 emotion-51 emotion-24"
+                  class="emotion-48 emotion-49 emotion-24"
                 >
                   Products
                 </span>
@@ -1801,7 +1772,7 @@ exports[`Navigation > click on expand / collapse button 1`] = `
                       class="emotion-16 emotion-17"
                     >
                       <svg
-                        class="emotion-59 emotion-19"
+                        class="emotion-57 emotion-19"
                         height="20"
                         viewBox="0 0 20 20"
                         width="20"
@@ -1834,7 +1805,7 @@ exports[`Navigation > click on expand / collapse button 1`] = `
                       class="emotion-20 emotion-15"
                     >
                       <span
-                        class="emotion-22 emotion-64 emotion-24"
+                        class="emotion-22 emotion-62 emotion-24"
                       >
                         item1
                       </span>
@@ -1907,19 +1878,19 @@ exports[`Navigation > click on expand / collapse button 1`] = `
                     <div
                       aria-controls=":rg:"
                       aria-describedby=":rg:"
-                      class="emotion-83 emotion-84"
+                      class="emotion-81 emotion-82"
                       tabindex="0"
                     >
                       <div
-                        class="emotion-85 emotion-284"
+                        class="emotion-83 emotion-284"
                       >
                         <div
                           aria-label="pin"
-                          class="emotion-87 emotion-286"
+                          class="emotion-85 emotion-286"
                           role="button"
                         >
                           <svg
-                            class="emotion-283 emotion-90 emotion-30"
+                            class="emotion-283 emotion-88 emotion-30"
                             viewBox="0 0 20 20"
                           >
                             <path
@@ -1936,24 +1907,23 @@ exports[`Navigation > click on expand / collapse button 1`] = `
             </div>
           </div>
           <div
-            class="emotion-92 emotion-93"
+            class="emotion-90 emotion-91"
             data-has-overflow-style="false"
           >
             <div
               aria-controls=":rh:"
               aria-describedby=":rh:"
-              class="emotion-83 emotion-84"
+              class="emotion-81 emotion-82"
               tabindex="0"
             >
               <button
                 aria-label="Collapse sidebar"
-                class="emotion-96 emotion-97"
+                class="emotion-94 emotion-95"
                 type="button"
               >
                 <svg
-                  class="emotion-98 emotion-99"
+                  class="emotion-96 emotion-30"
                   viewBox="0 0 16 16"
-                  xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
                     clip-rule="evenodd"
@@ -1967,7 +1937,7 @@ exports[`Navigation > click on expand / collapse button 1`] = `
         </div>
       </div>
       <div
-        class="emotion-100 emotion-101"
+        class="emotion-98 emotion-99"
         data-testid="slider"
       />
     </nav>
@@ -2367,6 +2337,60 @@ exports[`Navigation > click on expand / collapse button 2`] = `
   color: #222638;
 }
 
+.emotion-16 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 2rem;
+  padding: 0 0.5rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.5rem;
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: none;
+  color: #3f4250;
+}
+
+.emotion-16:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-16:active {
+  box-shadow: 0px 0px 0px 3px #151a2d5c;
+}
+
+.emotion-16:hover,
+.emotion-16:active {
+  background: #e9eaeb;
+  color: #222638;
+}
+
 .emotion-18 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2618,121 +2642,13 @@ exports[`Navigation > click on expand / collapse button 2`] = `
   border: none;
 }
 
-.emotion-53 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 2rem;
-  padding: 0 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: 2rem;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #3f4250;
-}
-
-.emotion-53:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-53:active {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.emotion-53:hover,
-.emotion-53:active {
-  background: #e9eaeb;
-  color: #222638;
-}
-
-.emotion-53 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 2rem;
-  padding: 0 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: 2rem;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #3f4250;
-}
-
-.emotion-53:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-53:active {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.emotion-53:hover,
-.emotion-53:active {
-  background: #e9eaeb;
-  color: #222638;
-}
-
 .emotion-55 {
   vertical-align: middle;
   fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
 .emotion-55 .fillStroke {
@@ -2740,26 +2656,18 @@ exports[`Navigation > click on expand / collapse button 2`] = `
   fill: none;
 }
 
-.emotion-55 path {
-  fill: currentColor;
-}
-
 .emotion-55 {
   vertical-align: middle;
   fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
 .emotion-55 .fillStroke {
   stroke: currentColor;
   fill: none;
-}
-
-.emotion-55 path {
-  fill: currentColor;
 }
 
 .emotion-57 {
@@ -2830,7 +2738,9 @@ exports[`Navigation > click on expand / collapse button 2`] = `
             data-animation="false"
             data-is-expanded="false"
           >
-            <div>
+            <div
+              style=""
+            >
               <div
                 class="emotion-12 emotion-13"
               >
@@ -2886,6 +2796,7 @@ exports[`Navigation > click on expand / collapse button 2`] = `
             <div
               class="emotion-25 emotion-26"
               data-animation="false"
+              style=""
             >
               <div
                 class="emotion-27 emotion-28"
@@ -3005,13 +2916,12 @@ exports[`Navigation > click on expand / collapse button 2`] = `
             >
               <button
                 aria-label="Expand sidebar"
-                class="emotion-53 emotion-17"
+                class="emotion-16 emotion-17"
                 type="button"
               >
                 <svg
                   class="emotion-55 emotion-56"
                   viewBox="0 0 16 16"
-                  xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
                     clip-rule="evenodd"
@@ -4041,43 +3951,37 @@ exports[`Navigation > pin and unpin an item 1`] = `
   fill: none;
 }
 
-.emotion-31 {
-  height: auto;
-}
-
-.emotion-31[data-is-animated="true"] {
-  -webkit-transition: max-height 250ms ease-out,opacity 250ms ease-out;
-  transition: max-height 250ms ease-out,opacity 250ms ease-out;
-}
-
-.emotion-31 {
-  height: auto;
-}
-
-.emotion-31[data-is-animated="true"] {
-  -webkit-transition: max-height 250ms ease-out,opacity 250ms ease-out;
-  transition: max-height 250ms ease-out,opacity 250ms ease-out;
-}
-
-.emotion-35 {
+.emotion-33 {
   padding: 0.5rem 0;
 }
 
-.emotion-35[data-expanded='true'] {
+.emotion-33[data-expanded='true'] {
+  padding-left: 2rem;
+  margin-left: 0.25rem;
+}
+
+.emotion-33 {
+  padding: 0.5rem 0;
+}
+
+.emotion-33[data-expanded='true'] {
   padding-left: 2rem;
   margin-left: 0.25rem;
 }
 
 .emotion-35 {
-  padding: 0.5rem 0;
+  color: #727683;
+  font-size: 0.75rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
-.emotion-35[data-expanded='true'] {
-  padding-left: 2rem;
-  margin-left: 0.25rem;
-}
-
-.emotion-37 {
+.emotion-35 {
   color: #727683;
   font-size: 0.75rem;
   font-family: Inter,Asap,sans-serif;
@@ -4090,26 +3994,14 @@ exports[`Navigation > pin and unpin an item 1`] = `
 }
 
 .emotion-37 {
-  color: #727683;
-  font-size: 0.75rem;
-  font-family: Inter,Asap,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+  position: relative;
 }
 
-.emotion-39 {
+.emotion-37 {
   position: relative;
 }
 
 .emotion-39 {
-  position: relative;
-}
-
-.emotion-41 {
   position: absolute;
   right: 0;
   left: 0;
@@ -4120,7 +4012,7 @@ exports[`Navigation > pin and unpin an item 1`] = `
   padding: 0.25rem 0;
 }
 
-.emotion-41::before {
+.emotion-39::before {
   content: '';
   position: absolute;
   left: 0;
@@ -4132,7 +4024,7 @@ exports[`Navigation > pin and unpin an item 1`] = `
   border-radius: 100%;
 }
 
-.emotion-41 {
+.emotion-39 {
   position: absolute;
   right: 0;
   left: 0;
@@ -4143,7 +4035,7 @@ exports[`Navigation > pin and unpin an item 1`] = `
   padding: 0.25rem 0;
 }
 
-.emotion-41::before {
+.emotion-39::before {
   content: '';
   position: absolute;
   left: 0;
@@ -4155,7 +4047,7 @@ exports[`Navigation > pin and unpin an item 1`] = `
   border-radius: 100%;
 }
 
-.emotion-44 {
+.emotion-42 {
   margin: 0;
   border: 0;
   width: auto;
@@ -4167,7 +4059,7 @@ exports[`Navigation > pin and unpin an item 1`] = `
   margin: 1rem -1rem;
 }
 
-.emotion-44 {
+.emotion-42 {
   margin: 0;
   border: 0;
   width: auto;
@@ -4179,27 +4071,27 @@ exports[`Navigation > pin and unpin an item 1`] = `
   margin: 1rem -1rem;
 }
 
-.emotion-46[data-animation='expand'][data-animation-type="complex"] .emotion-50 {
+.emotion-44[data-animation='expand'][data-animation-type="complex"] .emotion-48 {
   -webkit-animation: animation-2 250ms ease-in-out;
   animation: animation-2 250ms ease-in-out;
 }
 
-.emotion-46[data-animation='collapse'][data-animation-type="complex"] .emotion-50 {
+.emotion-44[data-animation='collapse'][data-animation-type="complex"] .emotion-48 {
   -webkit-animation: animation-2 250ms ease-in-out reverse;
   animation: animation-2 250ms ease-in-out reverse;
 }
 
-.emotion-46[data-animation='expand'][data-animation-type="complex"] .emotion-50 {
+.emotion-44[data-animation='expand'][data-animation-type="complex"] .emotion-48 {
   -webkit-animation: animation-2 250ms ease-in-out;
   animation: animation-2 250ms ease-in-out;
 }
 
-.emotion-46[data-animation='collapse'][data-animation-type="complex"] .emotion-50 {
+.emotion-44[data-animation='collapse'][data-animation-type="complex"] .emotion-48 {
   -webkit-animation: animation-2 250ms ease-in-out reverse;
   animation: animation-2 250ms ease-in-out reverse;
 }
 
-.emotion-48 {
+.emotion-46 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4223,7 +4115,7 @@ exports[`Navigation > pin and unpin an item 1`] = `
   padding-top: 0.5rem;
 }
 
-.emotion-48 {
+.emotion-46 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4247,7 +4139,7 @@ exports[`Navigation > pin and unpin an item 1`] = `
   padding-top: 0.5rem;
 }
 
-.emotion-51 {
+.emotion-49 {
   color: #727683;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
@@ -4264,7 +4156,7 @@ exports[`Navigation > pin and unpin an item 1`] = `
   height: calc(1.25rem + 0.5rem);
 }
 
-.emotion-51 {
+.emotion-49 {
   color: #727683;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
@@ -4281,23 +4173,23 @@ exports[`Navigation > pin and unpin an item 1`] = `
   height: calc(1.25rem + 0.5rem);
 }
 
-.emotion-59 .fill {
+.emotion-57 .fill {
   fill: #521094;
 }
 
-.emotion-59 .fillStrong {
+.emotion-57 .fillStrong {
   fill: #a060f6;
 }
 
-.emotion-59 .fill {
+.emotion-57 .fill {
   fill: #521094;
 }
 
-.emotion-59 .fillStrong {
+.emotion-57 .fillStrong {
   fill: #a060f6;
 }
 
-.emotion-64 {
+.emotion-62 {
   color: #641cb3;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
@@ -4315,7 +4207,7 @@ exports[`Navigation > pin and unpin an item 1`] = `
   -webkit-line-clamp: 2;
 }
 
-.emotion-64 {
+.emotion-62 {
   color: #641cb3;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
@@ -4333,31 +4225,31 @@ exports[`Navigation > pin and unpin an item 1`] = `
   -webkit-line-clamp: 2;
 }
 
-.emotion-83 {
+.emotion-81 {
   display: inherit;
 }
 
-.emotion-83[data-container-full-width="true"] {
+.emotion-81[data-container-full-width="true"] {
+  width: 100%;
+}
+
+.emotion-81 {
+  display: inherit;
+}
+
+.emotion-81[data-container-full-width="true"] {
   width: 100%;
 }
 
 .emotion-83 {
-  display: inherit;
+  position: relative;
 }
 
-.emotion-83[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-85 {
+.emotion-83 {
   position: relative;
 }
 
 .emotion-85 {
-  position: relative;
-}
-
-.emotion-87 {
   opacity: 0;
   right: 0;
   position: absolute;
@@ -4367,13 +4259,13 @@ exports[`Navigation > pin and unpin an item 1`] = `
   margin: auto;
 }
 
-.emotion-87:hover,
-.emotion-87:focus,
-.emotion-87:active {
+.emotion-85:hover,
+.emotion-85:focus,
+.emotion-85:active {
   opacity: 1;
 }
 
-.emotion-87 {
+.emotion-85 {
   opacity: 0;
   right: 0;
   position: absolute;
@@ -4383,13 +4275,13 @@ exports[`Navigation > pin and unpin an item 1`] = `
   margin: auto;
 }
 
-.emotion-87:hover,
-.emotion-87:focus,
-.emotion-87:active {
+.emotion-85:hover,
+.emotion-85:focus,
+.emotion-85:active {
   opacity: 1;
 }
 
-.emotion-90 {
+.emotion-88 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1.25rem;
@@ -4404,16 +4296,16 @@ exports[`Navigation > pin and unpin an item 1`] = `
   border-radius: 0.25rem;
 }
 
-.emotion-90 .fillStroke {
+.emotion-88 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
 
-.emotion-90:hover {
+.emotion-88:hover {
   background: #e9eaeb;
 }
 
-.emotion-90 {
+.emotion-88 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1.25rem;
@@ -4428,16 +4320,16 @@ exports[`Navigation > pin and unpin an item 1`] = `
   border-radius: 0.25rem;
 }
 
-.emotion-90 .fillStroke {
+.emotion-88 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
 
-.emotion-90:hover {
+.emotion-88:hover {
   background: #e9eaeb;
 }
 
-.emotion-92 {
+.emotion-90 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4457,12 +4349,12 @@ exports[`Navigation > pin and unpin an item 1`] = `
   justify-content: flex-end;
 }
 
-.emotion-92[data-has-overflow-style="false"] {
+.emotion-90[data-has-overflow-style="false"] {
   box-shadow: none;
   border: none;
 }
 
-.emotion-92 {
+.emotion-90 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4482,12 +4374,12 @@ exports[`Navigation > pin and unpin an item 1`] = `
   justify-content: flex-end;
 }
 
-.emotion-92[data-has-overflow-style="false"] {
+.emotion-90[data-has-overflow-style="false"] {
   box-shadow: none;
   border: none;
 }
 
-.emotion-96 {
+.emotion-94 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -4500,7 +4392,7 @@ exports[`Navigation > pin and unpin an item 1`] = `
   gap: 0.5rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 2rem;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -4526,22 +4418,22 @@ exports[`Navigation > pin and unpin an item 1`] = `
   color: #3f4250;
 }
 
-.emotion-96:hover {
+.emotion-94:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-96:active {
+.emotion-94:active {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.emotion-96:hover,
-.emotion-96:active {
+.emotion-94:hover,
+.emotion-94:active {
   background: #e9eaeb;
   color: #222638;
 }
 
-.emotion-96 {
+.emotion-94 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -4554,7 +4446,7 @@ exports[`Navigation > pin and unpin an item 1`] = `
   gap: 0.5rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 2rem;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -4580,58 +4472,50 @@ exports[`Navigation > pin and unpin an item 1`] = `
   color: #3f4250;
 }
 
-.emotion-96:hover {
+.emotion-94:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-96:active {
+.emotion-94:active {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.emotion-96:hover,
-.emotion-96:active {
+.emotion-94:hover,
+.emotion-94:active {
   background: #e9eaeb;
   color: #222638;
 }
 
-.emotion-98 {
+.emotion-96 {
   vertical-align: middle;
   fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
-.emotion-98 .fillStroke {
+.emotion-96 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.emotion-98 path {
-  fill: currentColor;
-}
-
-.emotion-98 {
+.emotion-96 {
   vertical-align: middle;
   fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
-.emotion-98 .fillStroke {
+.emotion-96 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.emotion-98 path {
-  fill: currentColor;
-}
-
-.emotion-100 {
+.emotion-98 {
   background: transparent;
   position: absolute;
   top: 0;
@@ -4646,11 +4530,11 @@ exports[`Navigation > pin and unpin an item 1`] = `
   display: flex;
 }
 
-.emotion-100:hover {
+.emotion-98:hover {
   border-color: #8c40ef;
 }
 
-.emotion-100 {
+.emotion-98 {
   background: transparent;
   position: absolute;
   top: 0;
@@ -4665,7 +4549,7 @@ exports[`Navigation > pin and unpin an item 1`] = `
   display: flex;
 }
 
-.emotion-100:hover {
+.emotion-98:hover {
   border-color: #8c40ef;
 }
 
@@ -4771,28 +4655,25 @@ exports[`Navigation > pin and unpin an item 1`] = `
                   </div>
                 </div>
               </button>
-              <div
-                class="emotion-31 emotion-32"
-                data-is-animated="true"
-              >
+              <div>
                 <div
                   class="emotion-20 emotion-15"
                 >
                   <div
-                    class="emotion-35 emotion-36"
+                    class="emotion-33 emotion-34"
                     data-expanded="true"
                   >
                     <p
-                      class="emotion-37 emotion-24"
+                      class="emotion-35 emotion-24"
                     >
                       You have no pinned items.
                     </p>
                   </div>
                   <div
-                    class="emotion-39 emotion-40"
+                    class="emotion-37 emotion-38"
                   >
                     <div
-                      class="emotion-41 emotion-42"
+                      class="emotion-39 emotion-40"
                     />
                   </div>
                 </div>
@@ -4800,18 +4681,18 @@ exports[`Navigation > pin and unpin an item 1`] = `
             </div>
             <hr
               aria-orientation="horizontal"
-              class="emotion-43 emotion-44 emotion-45"
+              class="emotion-41 emotion-42 emotion-43"
               role="separator"
             />
             <div
-              class="emotion-46 emotion-47"
+              class="emotion-44 emotion-45"
               data-animation="false"
             >
               <div
-                class="emotion-48 emotion-49"
+                class="emotion-46 emotion-47"
               >
                 <span
-                  class="emotion-50 emotion-51 emotion-24"
+                  class="emotion-48 emotion-49 emotion-24"
                 >
                   Products
                 </span>
@@ -4834,7 +4715,7 @@ exports[`Navigation > pin and unpin an item 1`] = `
                       class="emotion-16 emotion-17"
                     >
                       <svg
-                        class="emotion-59 emotion-19"
+                        class="emotion-57 emotion-19"
                         height="20"
                         viewBox="0 0 20 20"
                         width="20"
@@ -4867,7 +4748,7 @@ exports[`Navigation > pin and unpin an item 1`] = `
                       class="emotion-20 emotion-15"
                     >
                       <span
-                        class="emotion-22 emotion-64 emotion-24"
+                        class="emotion-22 emotion-62 emotion-24"
                       >
                         item1
                       </span>
@@ -4940,19 +4821,19 @@ exports[`Navigation > pin and unpin an item 1`] = `
                     <div
                       aria-controls=":r1e:"
                       aria-describedby=":r1e:"
-                      class="emotion-83 emotion-84"
+                      class="emotion-81 emotion-82"
                       tabindex="0"
                     >
                       <div
-                        class="emotion-85 emotion-284"
+                        class="emotion-83 emotion-284"
                       >
                         <div
                           aria-label="pin"
-                          class="emotion-87 emotion-286"
+                          class="emotion-85 emotion-286"
                           role="button"
                         >
                           <svg
-                            class="emotion-283 emotion-90 emotion-30"
+                            class="emotion-283 emotion-88 emotion-30"
                             viewBox="0 0 20 20"
                           >
                             <path
@@ -4969,24 +4850,23 @@ exports[`Navigation > pin and unpin an item 1`] = `
             </div>
           </div>
           <div
-            class="emotion-92 emotion-93"
+            class="emotion-90 emotion-91"
             data-has-overflow-style="false"
           >
             <div
               aria-controls=":r1f:"
               aria-describedby=":r1f:"
-              class="emotion-83 emotion-84"
+              class="emotion-81 emotion-82"
               tabindex="0"
             >
               <button
                 aria-label="Collapse sidebar"
-                class="emotion-96 emotion-97"
+                class="emotion-94 emotion-95"
                 type="button"
               >
                 <svg
-                  class="emotion-98 emotion-99"
+                  class="emotion-96 emotion-30"
                   viewBox="0 0 16 16"
-                  xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
                     clip-rule="evenodd"
@@ -5000,7 +4880,7 @@ exports[`Navigation > pin and unpin an item 1`] = `
         </div>
       </div>
       <div
-        class="emotion-100 emotion-101"
+        class="emotion-98 emotion-99"
         data-testid="slider"
       />
     </nav>
@@ -6016,43 +5896,37 @@ exports[`Navigation > pin and unpin an item 2`] = `
   fill: none;
 }
 
-.emotion-31 {
-  height: auto;
-}
-
-.emotion-31[data-is-animated="true"] {
-  -webkit-transition: max-height 250ms ease-out,opacity 250ms ease-out;
-  transition: max-height 250ms ease-out,opacity 250ms ease-out;
-}
-
-.emotion-31 {
-  height: auto;
-}
-
-.emotion-31[data-is-animated="true"] {
-  -webkit-transition: max-height 250ms ease-out,opacity 250ms ease-out;
-  transition: max-height 250ms ease-out,opacity 250ms ease-out;
-}
-
-.emotion-35 {
+.emotion-33 {
   padding: 0.5rem 0;
 }
 
-.emotion-35[data-expanded='true'] {
+.emotion-33[data-expanded='true'] {
+  padding-left: 2rem;
+  margin-left: 0.25rem;
+}
+
+.emotion-33 {
+  padding: 0.5rem 0;
+}
+
+.emotion-33[data-expanded='true'] {
   padding-left: 2rem;
   margin-left: 0.25rem;
 }
 
 .emotion-35 {
-  padding: 0.5rem 0;
+  color: #727683;
+  font-size: 0.75rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
-.emotion-35[data-expanded='true'] {
-  padding-left: 2rem;
-  margin-left: 0.25rem;
-}
-
-.emotion-37 {
+.emotion-35 {
   color: #727683;
   font-size: 0.75rem;
   font-family: Inter,Asap,sans-serif;
@@ -6065,26 +5939,14 @@ exports[`Navigation > pin and unpin an item 2`] = `
 }
 
 .emotion-37 {
-  color: #727683;
-  font-size: 0.75rem;
-  font-family: Inter,Asap,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+  position: relative;
 }
 
-.emotion-39 {
+.emotion-37 {
   position: relative;
 }
 
 .emotion-39 {
-  position: relative;
-}
-
-.emotion-41 {
   position: absolute;
   right: 0;
   left: 0;
@@ -6095,7 +5957,7 @@ exports[`Navigation > pin and unpin an item 2`] = `
   padding: 0.25rem 0;
 }
 
-.emotion-41::before {
+.emotion-39::before {
   content: '';
   position: absolute;
   left: 0;
@@ -6107,7 +5969,7 @@ exports[`Navigation > pin and unpin an item 2`] = `
   border-radius: 100%;
 }
 
-.emotion-41 {
+.emotion-39 {
   position: absolute;
   right: 0;
   left: 0;
@@ -6118,7 +5980,7 @@ exports[`Navigation > pin and unpin an item 2`] = `
   padding: 0.25rem 0;
 }
 
-.emotion-41::before {
+.emotion-39::before {
   content: '';
   position: absolute;
   left: 0;
@@ -6130,7 +5992,7 @@ exports[`Navigation > pin and unpin an item 2`] = `
   border-radius: 100%;
 }
 
-.emotion-44 {
+.emotion-42 {
   margin: 0;
   border: 0;
   width: auto;
@@ -6142,7 +6004,7 @@ exports[`Navigation > pin and unpin an item 2`] = `
   margin: 1rem -1rem;
 }
 
-.emotion-44 {
+.emotion-42 {
   margin: 0;
   border: 0;
   width: auto;
@@ -6154,27 +6016,27 @@ exports[`Navigation > pin and unpin an item 2`] = `
   margin: 1rem -1rem;
 }
 
-.emotion-46[data-animation='expand'][data-animation-type="complex"] .emotion-50 {
+.emotion-44[data-animation='expand'][data-animation-type="complex"] .emotion-48 {
   -webkit-animation: animation-2 250ms ease-in-out;
   animation: animation-2 250ms ease-in-out;
 }
 
-.emotion-46[data-animation='collapse'][data-animation-type="complex"] .emotion-50 {
+.emotion-44[data-animation='collapse'][data-animation-type="complex"] .emotion-48 {
   -webkit-animation: animation-2 250ms ease-in-out reverse;
   animation: animation-2 250ms ease-in-out reverse;
 }
 
-.emotion-46[data-animation='expand'][data-animation-type="complex"] .emotion-50 {
+.emotion-44[data-animation='expand'][data-animation-type="complex"] .emotion-48 {
   -webkit-animation: animation-2 250ms ease-in-out;
   animation: animation-2 250ms ease-in-out;
 }
 
-.emotion-46[data-animation='collapse'][data-animation-type="complex"] .emotion-50 {
+.emotion-44[data-animation='collapse'][data-animation-type="complex"] .emotion-48 {
   -webkit-animation: animation-2 250ms ease-in-out reverse;
   animation: animation-2 250ms ease-in-out reverse;
 }
 
-.emotion-48 {
+.emotion-46 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6198,7 +6060,7 @@ exports[`Navigation > pin and unpin an item 2`] = `
   padding-top: 0.5rem;
 }
 
-.emotion-48 {
+.emotion-46 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6222,7 +6084,7 @@ exports[`Navigation > pin and unpin an item 2`] = `
   padding-top: 0.5rem;
 }
 
-.emotion-51 {
+.emotion-49 {
   color: #727683;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
@@ -6239,7 +6101,7 @@ exports[`Navigation > pin and unpin an item 2`] = `
   height: calc(1.25rem + 0.5rem);
 }
 
-.emotion-51 {
+.emotion-49 {
   color: #727683;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
@@ -6256,23 +6118,23 @@ exports[`Navigation > pin and unpin an item 2`] = `
   height: calc(1.25rem + 0.5rem);
 }
 
-.emotion-59 .fill {
+.emotion-57 .fill {
   fill: #521094;
 }
 
-.emotion-59 .fillStrong {
+.emotion-57 .fillStrong {
   fill: #a060f6;
 }
 
-.emotion-59 .fill {
+.emotion-57 .fill {
   fill: #521094;
 }
 
-.emotion-59 .fillStrong {
+.emotion-57 .fillStrong {
   fill: #a060f6;
 }
 
-.emotion-64 {
+.emotion-62 {
   color: #641cb3;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
@@ -6290,7 +6152,7 @@ exports[`Navigation > pin and unpin an item 2`] = `
   -webkit-line-clamp: 2;
 }
 
-.emotion-64 {
+.emotion-62 {
   color: #641cb3;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
@@ -6308,31 +6170,31 @@ exports[`Navigation > pin and unpin an item 2`] = `
   -webkit-line-clamp: 2;
 }
 
-.emotion-83 {
+.emotion-81 {
   display: inherit;
 }
 
-.emotion-83[data-container-full-width="true"] {
+.emotion-81[data-container-full-width="true"] {
+  width: 100%;
+}
+
+.emotion-81 {
+  display: inherit;
+}
+
+.emotion-81[data-container-full-width="true"] {
   width: 100%;
 }
 
 .emotion-83 {
-  display: inherit;
+  position: relative;
 }
 
-.emotion-83[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-85 {
+.emotion-83 {
   position: relative;
 }
 
 .emotion-85 {
-  position: relative;
-}
-
-.emotion-87 {
   opacity: 0;
   right: 0;
   position: absolute;
@@ -6342,13 +6204,13 @@ exports[`Navigation > pin and unpin an item 2`] = `
   margin: auto;
 }
 
-.emotion-87:hover,
-.emotion-87:focus,
-.emotion-87:active {
+.emotion-85:hover,
+.emotion-85:focus,
+.emotion-85:active {
   opacity: 1;
 }
 
-.emotion-87 {
+.emotion-85 {
   opacity: 0;
   right: 0;
   position: absolute;
@@ -6358,13 +6220,13 @@ exports[`Navigation > pin and unpin an item 2`] = `
   margin: auto;
 }
 
-.emotion-87:hover,
-.emotion-87:focus,
-.emotion-87:active {
+.emotion-85:hover,
+.emotion-85:focus,
+.emotion-85:active {
   opacity: 1;
 }
 
-.emotion-90 {
+.emotion-88 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1.25rem;
@@ -6379,16 +6241,16 @@ exports[`Navigation > pin and unpin an item 2`] = `
   border-radius: 0.25rem;
 }
 
-.emotion-90 .fillStroke {
+.emotion-88 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
 
-.emotion-90:hover {
+.emotion-88:hover {
   background: #e9eaeb;
 }
 
-.emotion-90 {
+.emotion-88 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1.25rem;
@@ -6403,16 +6265,16 @@ exports[`Navigation > pin and unpin an item 2`] = `
   border-radius: 0.25rem;
 }
 
-.emotion-90 .fillStroke {
+.emotion-88 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
 
-.emotion-90:hover {
+.emotion-88:hover {
   background: #e9eaeb;
 }
 
-.emotion-92 {
+.emotion-90 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6432,12 +6294,12 @@ exports[`Navigation > pin and unpin an item 2`] = `
   justify-content: flex-end;
 }
 
-.emotion-92[data-has-overflow-style="false"] {
+.emotion-90[data-has-overflow-style="false"] {
   box-shadow: none;
   border: none;
 }
 
-.emotion-92 {
+.emotion-90 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6457,12 +6319,12 @@ exports[`Navigation > pin and unpin an item 2`] = `
   justify-content: flex-end;
 }
 
-.emotion-92[data-has-overflow-style="false"] {
+.emotion-90[data-has-overflow-style="false"] {
   box-shadow: none;
   border: none;
 }
 
-.emotion-96 {
+.emotion-94 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -6475,7 +6337,7 @@ exports[`Navigation > pin and unpin an item 2`] = `
   gap: 0.5rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 2rem;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -6501,22 +6363,22 @@ exports[`Navigation > pin and unpin an item 2`] = `
   color: #3f4250;
 }
 
-.emotion-96:hover {
+.emotion-94:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-96:active {
+.emotion-94:active {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.emotion-96:hover,
-.emotion-96:active {
+.emotion-94:hover,
+.emotion-94:active {
   background: #e9eaeb;
   color: #222638;
 }
 
-.emotion-96 {
+.emotion-94 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -6529,7 +6391,7 @@ exports[`Navigation > pin and unpin an item 2`] = `
   gap: 0.5rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 2rem;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -6555,58 +6417,50 @@ exports[`Navigation > pin and unpin an item 2`] = `
   color: #3f4250;
 }
 
-.emotion-96:hover {
+.emotion-94:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-96:active {
+.emotion-94:active {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.emotion-96:hover,
-.emotion-96:active {
+.emotion-94:hover,
+.emotion-94:active {
   background: #e9eaeb;
   color: #222638;
 }
 
-.emotion-98 {
+.emotion-96 {
   vertical-align: middle;
   fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
-.emotion-98 .fillStroke {
+.emotion-96 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.emotion-98 path {
-  fill: currentColor;
-}
-
-.emotion-98 {
+.emotion-96 {
   vertical-align: middle;
   fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
-.emotion-98 .fillStroke {
+.emotion-96 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.emotion-98 path {
-  fill: currentColor;
-}
-
-.emotion-100 {
+.emotion-98 {
   background: transparent;
   position: absolute;
   top: 0;
@@ -6621,11 +6475,11 @@ exports[`Navigation > pin and unpin an item 2`] = `
   display: flex;
 }
 
-.emotion-100:hover {
+.emotion-98:hover {
   border-color: #8c40ef;
 }
 
-.emotion-100 {
+.emotion-98 {
   background: transparent;
   position: absolute;
   top: 0;
@@ -6640,7 +6494,7 @@ exports[`Navigation > pin and unpin an item 2`] = `
   display: flex;
 }
 
-.emotion-100:hover {
+.emotion-98:hover {
   border-color: #8c40ef;
 }
 
@@ -6746,28 +6600,25 @@ exports[`Navigation > pin and unpin an item 2`] = `
                   </div>
                 </div>
               </button>
-              <div
-                class="emotion-31 emotion-32"
-                data-is-animated="true"
-              >
+              <div>
                 <div
                   class="emotion-20 emotion-15"
                 >
                   <div
-                    class="emotion-35 emotion-36"
+                    class="emotion-33 emotion-34"
                     data-expanded="true"
                   >
                     <p
-                      class="emotion-37 emotion-24"
+                      class="emotion-35 emotion-24"
                     >
                       You have no pinned items.
                     </p>
                   </div>
                   <div
-                    class="emotion-39 emotion-40"
+                    class="emotion-37 emotion-38"
                   >
                     <div
-                      class="emotion-41 emotion-42"
+                      class="emotion-39 emotion-40"
                     />
                   </div>
                 </div>
@@ -6775,18 +6626,18 @@ exports[`Navigation > pin and unpin an item 2`] = `
             </div>
             <hr
               aria-orientation="horizontal"
-              class="emotion-43 emotion-44 emotion-45"
+              class="emotion-41 emotion-42 emotion-43"
               role="separator"
             />
             <div
-              class="emotion-46 emotion-47"
+              class="emotion-44 emotion-45"
               data-animation="false"
             >
               <div
-                class="emotion-48 emotion-49"
+                class="emotion-46 emotion-47"
               >
                 <span
-                  class="emotion-50 emotion-51 emotion-24"
+                  class="emotion-48 emotion-49 emotion-24"
                 >
                   Products
                 </span>
@@ -6809,7 +6660,7 @@ exports[`Navigation > pin and unpin an item 2`] = `
                       class="emotion-16 emotion-17"
                     >
                       <svg
-                        class="emotion-59 emotion-19"
+                        class="emotion-57 emotion-19"
                         height="20"
                         viewBox="0 0 20 20"
                         width="20"
@@ -6842,7 +6693,7 @@ exports[`Navigation > pin and unpin an item 2`] = `
                       class="emotion-20 emotion-15"
                     >
                       <span
-                        class="emotion-22 emotion-64 emotion-24"
+                        class="emotion-22 emotion-62 emotion-24"
                       >
                         item1
                       </span>
@@ -6915,19 +6766,19 @@ exports[`Navigation > pin and unpin an item 2`] = `
                     <div
                       aria-controls=":r1e:"
                       aria-describedby=":r1e:"
-                      class="emotion-83 emotion-84"
+                      class="emotion-81 emotion-82"
                       tabindex="0"
                     >
                       <div
-                        class="emotion-85 emotion-284"
+                        class="emotion-83 emotion-284"
                       >
                         <div
                           aria-label="pin"
-                          class="emotion-87 emotion-286"
+                          class="emotion-85 emotion-286"
                           role="button"
                         >
                           <svg
-                            class="emotion-283 emotion-90 emotion-30"
+                            class="emotion-283 emotion-88 emotion-30"
                             viewBox="0 0 20 20"
                           >
                             <path
@@ -6944,24 +6795,23 @@ exports[`Navigation > pin and unpin an item 2`] = `
             </div>
           </div>
           <div
-            class="emotion-92 emotion-93"
+            class="emotion-90 emotion-91"
             data-has-overflow-style="false"
           >
             <div
               aria-controls=":r1f:"
               aria-describedby=":r1f:"
-              class="emotion-83 emotion-84"
+              class="emotion-81 emotion-82"
               tabindex="0"
             >
               <button
                 aria-label="Collapse sidebar"
-                class="emotion-96 emotion-97"
+                class="emotion-94 emotion-95"
                 type="button"
               >
                 <svg
-                  class="emotion-98 emotion-99"
+                  class="emotion-96 emotion-30"
                   viewBox="0 0 16 16"
-                  xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
                     clip-rule="evenodd"
@@ -6975,7 +6825,7 @@ exports[`Navigation > pin and unpin an item 2`] = `
         </div>
       </div>
       <div
-        class="emotion-100 emotion-101"
+        class="emotion-98 emotion-99"
         data-testid="slider"
       />
     </nav>
@@ -8031,33 +7881,15 @@ exports[`Navigation > pin and unpin an item 3`] = `
   fill: none;
 }
 
-.emotion-31 {
-  height: auto;
+.emotion-33 {
+  position: relative;
 }
 
-.emotion-31[data-is-animated="true"] {
-  -webkit-transition: max-height 250ms ease-out,opacity 250ms ease-out;
-  transition: max-height 250ms ease-out,opacity 250ms ease-out;
-}
-
-.emotion-31 {
-  height: auto;
-}
-
-.emotion-31[data-is-animated="true"] {
-  -webkit-transition: max-height 250ms ease-out,opacity 250ms ease-out;
-  transition: max-height 250ms ease-out,opacity 250ms ease-out;
-}
-
-.emotion-35 {
+.emotion-33 {
   position: relative;
 }
 
 .emotion-35 {
-  position: relative;
-}
-
-.emotion-37 {
   position: absolute;
   right: 0;
   left: 0;
@@ -8068,7 +7900,30 @@ exports[`Navigation > pin and unpin an item 3`] = `
   padding: 0.25rem 0;
 }
 
-.emotion-37::before {
+.emotion-35::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: -4px;
+  height: 0px;
+  width: 0px;
+  border: 3px solid;
+  border-color: inherit;
+  border-radius: 100%;
+}
+
+.emotion-35 {
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  height: 2px;
+  border-top: 2px solid;
+  border-color: transparent;
+  padding: 0.25rem 0;
+}
+
+.emotion-35::before {
   content: '';
   position: absolute;
   left: 0;
@@ -8081,29 +7936,6 @@ exports[`Navigation > pin and unpin an item 3`] = `
 }
 
 .emotion-37 {
-  position: absolute;
-  right: 0;
-  left: 0;
-  top: 0;
-  height: 2px;
-  border-top: 2px solid;
-  border-color: transparent;
-  padding: 0.25rem 0;
-}
-
-.emotion-37::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: -4px;
-  height: 0px;
-  width: 0px;
-  border: 3px solid;
-  border-color: inherit;
-  border-radius: 100%;
-}
-
-.emotion-39 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -8135,120 +7967,120 @@ exports[`Navigation > pin and unpin an item 3`] = `
   width: 100%;
 }
 
-.emotion-39[data-has-no-expand="false"] {
+.emotion-37[data-has-no-expand="false"] {
   cursor: pointer;
 }
 
-.emotion-39[data-has-sub-label="true"] {
+.emotion-37[data-has-sub-label="true"] {
   padding: 0.25rem 0.5rem;
 }
 
-.emotion-39:hover[data-has-no-expand="false"]:not([disabled]):not(
+.emotion-37:hover[data-has-no-expand="false"]:not([disabled]):not(
       [data-is-active="true"]
     ),
-.emotion-39:focus[data-has-no-expand="false"]:not([disabled]):not(
+.emotion-37:focus[data-has-no-expand="false"]:not([disabled]):not(
       [data-is-active="true"]
     ) {
   background-color: #f9f9fa;
 }
 
-.emotion-39[data-has-active-children="true"][data-has-no-expand="false"]:not(
+.emotion-37[data-has-active-children="true"][data-has-no-expand="false"]:not(
       [disabled][data-is-active="true"]
     ) {
   background-color: #e9eaeb;
 }
 
-.emotion-39[data-has-active-children="true"][data-has-no-expand="false"]:not(
+.emotion-37[data-has-active-children="true"][data-has-no-expand="false"]:not(
       [disabled][data-is-active="true"]
     ) .emotion-22 {
   color: #3f4250;
 }
 
-.emotion-39[data-has-active-children="true"][data-has-no-expand="false"]:not(
+.emotion-37[data-has-active-children="true"][data-has-no-expand="false"]:not(
       [disabled][data-is-active="true"]
     ) .emotion-286 {
   opacity: 1;
 }
 
-.emotion-39[data-has-active-children="true"][data-has-no-expand="false"]:not(
+.emotion-37[data-has-active-children="true"][data-has-no-expand="false"]:not(
       [disabled][data-is-active="true"]
     )[data-is-pinnable="true"] .emotion-280 {
   opacity: 0;
 }
 
-.emotion-39[data-has-no-expand="false"]:not([disabled]):hover .emotion-286,
-.emotion-39[data-has-no-expand="false"]:not([disabled]):focus .emotion-286,
-.emotion-39[data-has-no-expand="false"]:not([disabled]):active .emotion-286,
-.emotion-39[data-has-no-expand="false"]:not([disabled]):hover .emotion-281,
-.emotion-39[data-has-no-expand="false"]:not([disabled]):focus .emotion-281,
-.emotion-39[data-has-no-expand="false"]:not([disabled]):active .emotion-281 {
+.emotion-37[data-has-no-expand="false"]:not([disabled]):hover .emotion-286,
+.emotion-37[data-has-no-expand="false"]:not([disabled]):focus .emotion-286,
+.emotion-37[data-has-no-expand="false"]:not([disabled]):active .emotion-286,
+.emotion-37[data-has-no-expand="false"]:not([disabled]):hover .emotion-281,
+.emotion-37[data-has-no-expand="false"]:not([disabled]):focus .emotion-281,
+.emotion-37[data-has-no-expand="false"]:not([disabled]):active .emotion-281 {
   opacity: 1;
 }
 
-.emotion-39[data-has-no-expand="false"]:not([disabled]):hover .emotion-280,
-.emotion-39[data-has-no-expand="false"]:not([disabled]):focus .emotion-280,
-.emotion-39[data-has-no-expand="false"]:not([disabled]):active .emotion-280 {
+.emotion-37[data-has-no-expand="false"]:not([disabled]):hover .emotion-280,
+.emotion-37[data-has-no-expand="false"]:not([disabled]):focus .emotion-280,
+.emotion-37[data-has-no-expand="false"]:not([disabled]):active .emotion-280 {
   opacity: 0;
 }
 
-.emotion-39:hover[data-has-children="false"][data-is-active="false"]:not([disabled]) .emotion-22 {
+.emotion-37:hover[data-has-children="false"][data-is-active="false"]:not([disabled]) .emotion-22 {
   color: #3f4250;
 }
 
-.emotion-39:active[data-has-no-expand="false"]:not([disabled]):not(
+.emotion-37:active[data-has-no-expand="false"]:not([disabled]):not(
       [data-is-active="true"]
     ) {
   background-color: #e9eaeb;
 }
 
-.emotion-39[data-is-active="true"],
-.emotion-39:hover[data-has-active="true"] {
+.emotion-37[data-is-active="true"],
+.emotion-37:hover[data-has-active="true"] {
   background-color: #f1eefc;
 }
 
-.emotion-39[data-is-active="true"]:hover,
-.emotion-39:hover[data-has-active="true"]:hover {
+.emotion-37[data-is-active="true"]:hover,
+.emotion-37:hover[data-has-active="true"]:hover {
   background-color: #e5dbfd;
 }
 
-.emotion-39[disabled] {
+.emotion-37[disabled] {
   cursor: not-allowed;
   background-color: unset;
 }
 
-.emotion-39[disabled] .emotion-22 {
+.emotion-37[disabled] .emotion-22 {
   color: #b5b7bd;
 }
 
-.emotion-39[data-animation="collapse"][data-animation-type="complex"] {
+.emotion-37[data-animation="collapse"][data-animation-type="complex"] {
   -webkit-animation: animation-0 250ms ease-in-out;
   animation: animation-0 250ms ease-in-out;
 }
 
-.emotion-39[data-animation="collapse"][data-animation-type="complex"] .emotion-22,
-.emotion-39[data-animation="collapse"][data-animation-type="complex"] .e134hokc6,
-.emotion-39[data-animation="collapse"][data-animation-type="complex"] .emotion-280 {
+.emotion-37[data-animation="collapse"][data-animation-type="complex"] .emotion-22,
+.emotion-37[data-animation="collapse"][data-animation-type="complex"] .e134hokc6,
+.emotion-37[data-animation="collapse"][data-animation-type="complex"] .emotion-280 {
   -webkit-animation: animation-1 250ms ease-in-out reverse;
   animation: animation-1 250ms ease-in-out reverse;
 }
 
-.emotion-39[data-animation="expand"][data-animation-type="complex"] {
+.emotion-37[data-animation="expand"][data-animation-type="complex"] {
   -webkit-animation: animation-0 250ms ease-in-out reverse;
   animation: animation-0 250ms ease-in-out reverse;
 }
 
-.emotion-39[data-animation="expand"][data-animation-type="complex"] .emotion-22,
-.emotion-39[data-animation="expand"][data-animation-type="complex"] .e134hokc6,
-.emotion-39[data-animation="expand"][data-animation-type="complex"] .emotion-280 {
+.emotion-37[data-animation="expand"][data-animation-type="complex"] .emotion-22,
+.emotion-37[data-animation="expand"][data-animation-type="complex"] .e134hokc6,
+.emotion-37[data-animation="expand"][data-animation-type="complex"] .emotion-280 {
   -webkit-animation: animation-1 250ms ease-in-out;
   animation: animation-1 250ms ease-in-out;
 }
 
-.emotion-39[data-animation="expand"][data-animation-type="complex"] .e134hokc4 {
+.emotion-37[data-animation="expand"][data-animation-type="complex"] .e134hokc4 {
   display: none;
 }
 
-.emotion-41 {
+.emotion-39 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -8271,7 +8103,7 @@ exports[`Navigation > pin and unpin an item 3`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-44 {
+.emotion-42 {
   vertical-align: middle;
   fill: #727683;
   height: 1rem;
@@ -8284,12 +8116,12 @@ exports[`Navigation > pin and unpin an item 3`] = `
   cursor: grab;
 }
 
-.emotion-44 .fillStroke {
+.emotion-42 .fillStroke {
   stroke: #727683;
   fill: none;
 }
 
-.emotion-49 {
+.emotion-47 {
   color: #3f4250;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
@@ -8307,31 +8139,31 @@ exports[`Navigation > pin and unpin an item 3`] = `
   -webkit-line-clamp: 2;
 }
 
-.emotion-53 {
+.emotion-51 {
   display: inherit;
 }
 
-.emotion-53[data-container-full-width="true"] {
+.emotion-51[data-container-full-width="true"] {
+  width: 100%;
+}
+
+.emotion-51 {
+  display: inherit;
+}
+
+.emotion-51[data-container-full-width="true"] {
   width: 100%;
 }
 
 .emotion-53 {
-  display: inherit;
+  position: relative;
 }
 
-.emotion-53[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-55 {
+.emotion-53 {
   position: relative;
 }
 
 .emotion-55 {
-  position: relative;
-}
-
-.emotion-57 {
   opacity: 0;
   right: 0;
   position: absolute;
@@ -8341,13 +8173,13 @@ exports[`Navigation > pin and unpin an item 3`] = `
   margin: auto;
 }
 
-.emotion-57:hover,
-.emotion-57:focus,
-.emotion-57:active {
+.emotion-55:hover,
+.emotion-55:focus,
+.emotion-55:active {
   opacity: 1;
 }
 
-.emotion-57 {
+.emotion-55 {
   opacity: 0;
   right: 0;
   position: absolute;
@@ -8357,13 +8189,13 @@ exports[`Navigation > pin and unpin an item 3`] = `
   margin: auto;
 }
 
-.emotion-57:hover,
-.emotion-57:focus,
-.emotion-57:active {
+.emotion-55:hover,
+.emotion-55:focus,
+.emotion-55:active {
   opacity: 1;
 }
 
-.emotion-60 {
+.emotion-58 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1.25rem;
@@ -8378,16 +8210,16 @@ exports[`Navigation > pin and unpin an item 3`] = `
   border-radius: 0.25rem;
 }
 
-.emotion-60 .fillStroke {
+.emotion-58 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
 
-.emotion-60:hover {
+.emotion-58:hover {
   background: #e9eaeb;
 }
 
-.emotion-67 {
+.emotion-65 {
   margin: 0;
   border: 0;
   width: auto;
@@ -8399,7 +8231,7 @@ exports[`Navigation > pin and unpin an item 3`] = `
   margin: 1rem -1rem;
 }
 
-.emotion-67 {
+.emotion-65 {
   margin: 0;
   border: 0;
   width: auto;
@@ -8411,27 +8243,27 @@ exports[`Navigation > pin and unpin an item 3`] = `
   margin: 1rem -1rem;
 }
 
-.emotion-69[data-animation='expand'][data-animation-type="complex"] .emotion-73 {
+.emotion-67[data-animation='expand'][data-animation-type="complex"] .emotion-71 {
   -webkit-animation: animation-2 250ms ease-in-out;
   animation: animation-2 250ms ease-in-out;
 }
 
-.emotion-69[data-animation='collapse'][data-animation-type="complex"] .emotion-73 {
+.emotion-67[data-animation='collapse'][data-animation-type="complex"] .emotion-71 {
   -webkit-animation: animation-2 250ms ease-in-out reverse;
   animation: animation-2 250ms ease-in-out reverse;
 }
 
-.emotion-69[data-animation='expand'][data-animation-type="complex"] .emotion-73 {
+.emotion-67[data-animation='expand'][data-animation-type="complex"] .emotion-71 {
   -webkit-animation: animation-2 250ms ease-in-out;
   animation: animation-2 250ms ease-in-out;
 }
 
-.emotion-69[data-animation='collapse'][data-animation-type="complex"] .emotion-73 {
+.emotion-67[data-animation='collapse'][data-animation-type="complex"] .emotion-71 {
   -webkit-animation: animation-2 250ms ease-in-out reverse;
   animation: animation-2 250ms ease-in-out reverse;
 }
 
-.emotion-71 {
+.emotion-69 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -8455,7 +8287,7 @@ exports[`Navigation > pin and unpin an item 3`] = `
   padding-top: 0.5rem;
 }
 
-.emotion-71 {
+.emotion-69 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -8479,7 +8311,7 @@ exports[`Navigation > pin and unpin an item 3`] = `
   padding-top: 0.5rem;
 }
 
-.emotion-74 {
+.emotion-72 {
   color: #727683;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
@@ -8496,7 +8328,7 @@ exports[`Navigation > pin and unpin an item 3`] = `
   height: calc(1.25rem + 0.5rem);
 }
 
-.emotion-74 {
+.emotion-72 {
   color: #727683;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
@@ -8513,23 +8345,23 @@ exports[`Navigation > pin and unpin an item 3`] = `
   height: calc(1.25rem + 0.5rem);
 }
 
-.emotion-82 .fill {
+.emotion-80 .fill {
   fill: #521094;
 }
 
-.emotion-82 .fillStrong {
+.emotion-80 .fillStrong {
   fill: #a060f6;
 }
 
-.emotion-82 .fill {
+.emotion-80 .fill {
   fill: #521094;
 }
 
-.emotion-82 .fillStrong {
+.emotion-80 .fillStrong {
   fill: #a060f6;
 }
 
-.emotion-87 {
+.emotion-85 {
   color: #641cb3;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
@@ -8547,7 +8379,7 @@ exports[`Navigation > pin and unpin an item 3`] = `
   -webkit-line-clamp: 2;
 }
 
-.emotion-87 {
+.emotion-85 {
   color: #641cb3;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
@@ -8565,7 +8397,7 @@ exports[`Navigation > pin and unpin an item 3`] = `
   -webkit-line-clamp: 2;
 }
 
-.emotion-115 {
+.emotion-113 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -8585,12 +8417,12 @@ exports[`Navigation > pin and unpin an item 3`] = `
   justify-content: flex-end;
 }
 
-.emotion-115[data-has-overflow-style="false"] {
+.emotion-113[data-has-overflow-style="false"] {
   box-shadow: none;
   border: none;
 }
 
-.emotion-115 {
+.emotion-113 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -8610,12 +8442,12 @@ exports[`Navigation > pin and unpin an item 3`] = `
   justify-content: flex-end;
 }
 
-.emotion-115[data-has-overflow-style="false"] {
+.emotion-113[data-has-overflow-style="false"] {
   box-shadow: none;
   border: none;
 }
 
-.emotion-119 {
+.emotion-117 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -8628,7 +8460,7 @@ exports[`Navigation > pin and unpin an item 3`] = `
   gap: 0.5rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 2rem;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -8654,22 +8486,22 @@ exports[`Navigation > pin and unpin an item 3`] = `
   color: #3f4250;
 }
 
-.emotion-119:hover {
+.emotion-117:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-119:active {
+.emotion-117:active {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.emotion-119:hover,
-.emotion-119:active {
+.emotion-117:hover,
+.emotion-117:active {
   background: #e9eaeb;
   color: #222638;
 }
 
-.emotion-119 {
+.emotion-117 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -8682,7 +8514,7 @@ exports[`Navigation > pin and unpin an item 3`] = `
   gap: 0.5rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 2rem;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -8708,58 +8540,50 @@ exports[`Navigation > pin and unpin an item 3`] = `
   color: #3f4250;
 }
 
-.emotion-119:hover {
+.emotion-117:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-119:active {
+.emotion-117:active {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.emotion-119:hover,
-.emotion-119:active {
+.emotion-117:hover,
+.emotion-117:active {
   background: #e9eaeb;
   color: #222638;
 }
 
-.emotion-121 {
+.emotion-119 {
   vertical-align: middle;
   fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
-.emotion-121 .fillStroke {
+.emotion-119 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.emotion-121 path {
-  fill: currentColor;
-}
-
-.emotion-121 {
+.emotion-119 {
   vertical-align: middle;
   fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
-.emotion-121 .fillStroke {
+.emotion-119 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.emotion-121 path {
-  fill: currentColor;
-}
-
-.emotion-123 {
+.emotion-121 {
   background: transparent;
   position: absolute;
   top: 0;
@@ -8774,11 +8598,11 @@ exports[`Navigation > pin and unpin an item 3`] = `
   display: flex;
 }
 
-.emotion-123:hover {
+.emotion-121:hover {
   border-color: #8c40ef;
 }
 
-.emotion-123 {
+.emotion-121 {
   background: transparent;
   position: absolute;
   top: 0;
@@ -8793,7 +8617,7 @@ exports[`Navigation > pin and unpin an item 3`] = `
   display: flex;
 }
 
-.emotion-123:hover {
+.emotion-121:hover {
   border-color: #8c40ef;
 }
 
@@ -8900,20 +8724,19 @@ exports[`Navigation > pin and unpin an item 3`] = `
                 </div>
               </button>
               <div
-                class="emotion-31 emotion-32"
-                data-is-animated="true"
+                style="display: none;"
               >
                 <div
                   class="emotion-20 emotion-15"
                 >
                   <div
-                    class="emotion-35 emotion-36"
+                    class="emotion-33 emotion-34"
                   >
                     <div
-                      class="emotion-37 emotion-38"
+                      class="emotion-35 emotion-36"
                     />
                     <button
-                      class="emotion-39 emotion-13"
+                      class="emotion-37 emotion-13"
                       data-animation="false"
                       data-has-active-children="false"
                       data-has-children="false"
@@ -8925,10 +8748,10 @@ exports[`Navigation > pin and unpin an item 3`] = `
                       id="item1"
                     >
                       <div
-                        class="emotion-41 emotion-15"
+                        class="emotion-39 emotion-15"
                       >
                         <svg
-                          class="emotion-281 emotion-44 emotion-30"
+                          class="emotion-281 emotion-42 emotion-30"
                           viewBox="0 0 16 16"
                         >
                           <path
@@ -8939,7 +8762,7 @@ exports[`Navigation > pin and unpin an item 3`] = `
                           class="emotion-20 emotion-15"
                         >
                           <span
-                            class="emotion-22 emotion-49 emotion-24"
+                            class="emotion-22 emotion-47 emotion-24"
                           >
                             item1
                           </span>
@@ -8951,19 +8774,19 @@ exports[`Navigation > pin and unpin an item 3`] = `
                         <div
                           aria-controls=":r1k:"
                           aria-describedby=":r1k:"
-                          class="emotion-53 emotion-54"
+                          class="emotion-51 emotion-52"
                           tabindex="0"
                         >
                           <div
-                            class="emotion-55 emotion-284"
+                            class="emotion-53 emotion-284"
                           >
                             <div
                               aria-label="unpin"
-                              class="emotion-57 emotion-286"
+                              class="emotion-55 emotion-286"
                               role="button"
                             >
                               <svg
-                                class="emotion-285 emotion-60 emotion-30"
+                                class="emotion-285 emotion-58 emotion-30"
                                 viewBox="0 0 20 20"
                               >
                                 <path
@@ -8977,10 +8800,10 @@ exports[`Navigation > pin and unpin an item 3`] = `
                     </button>
                   </div>
                   <div
-                    class="emotion-35 emotion-36"
+                    class="emotion-33 emotion-34"
                   >
                     <div
-                      class="emotion-37 emotion-38"
+                      class="emotion-35 emotion-36"
                     />
                   </div>
                 </div>
@@ -8988,18 +8811,18 @@ exports[`Navigation > pin and unpin an item 3`] = `
             </div>
             <hr
               aria-orientation="horizontal"
-              class="emotion-66 emotion-67 emotion-68"
+              class="emotion-64 emotion-65 emotion-66"
               role="separator"
             />
             <div
-              class="emotion-69 emotion-70"
+              class="emotion-67 emotion-68"
               data-animation="false"
             >
               <div
-                class="emotion-71 emotion-72"
+                class="emotion-69 emotion-70"
               >
                 <span
-                  class="emotion-73 emotion-74 emotion-24"
+                  class="emotion-71 emotion-72 emotion-24"
                 >
                   Products
                 </span>
@@ -9022,7 +8845,7 @@ exports[`Navigation > pin and unpin an item 3`] = `
                       class="emotion-16 emotion-17"
                     >
                       <svg
-                        class="emotion-82 emotion-19"
+                        class="emotion-80 emotion-19"
                         height="20"
                         viewBox="0 0 20 20"
                         width="20"
@@ -9055,7 +8878,7 @@ exports[`Navigation > pin and unpin an item 3`] = `
                       class="emotion-20 emotion-15"
                     >
                       <span
-                        class="emotion-22 emotion-87 emotion-24"
+                        class="emotion-22 emotion-85 emotion-24"
                       >
                         item1
                       </span>
@@ -9128,19 +8951,19 @@ exports[`Navigation > pin and unpin an item 3`] = `
                     <div
                       aria-controls=":r1e:"
                       aria-describedby=":r1e:"
-                      class="emotion-53 emotion-54"
+                      class="emotion-51 emotion-52"
                       tabindex="0"
                     >
                       <div
-                        class="emotion-55 emotion-284"
+                        class="emotion-53 emotion-284"
                       >
                         <div
                           aria-label="unpin"
-                          class="emotion-57 emotion-286"
+                          class="emotion-55 emotion-286"
                           role="button"
                         >
                           <svg
-                            class="emotion-285 emotion-60 emotion-30"
+                            class="emotion-285 emotion-58 emotion-30"
                             viewBox="0 0 20 20"
                           >
                             <path
@@ -9156,24 +8979,23 @@ exports[`Navigation > pin and unpin an item 3`] = `
             </div>
           </div>
           <div
-            class="emotion-115 emotion-116"
+            class="emotion-113 emotion-114"
             data-has-overflow-style="false"
           >
             <div
               aria-controls=":r1f:"
               aria-describedby=":r1f:"
-              class="emotion-53 emotion-54"
+              class="emotion-51 emotion-52"
               tabindex="0"
             >
               <button
                 aria-label="Collapse sidebar"
-                class="emotion-119 emotion-120"
+                class="emotion-117 emotion-118"
                 type="button"
               >
                 <svg
-                  class="emotion-121 emotion-122"
+                  class="emotion-119 emotion-30"
                   viewBox="0 0 16 16"
-                  xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
                     clip-rule="evenodd"
@@ -9187,7 +9009,7 @@ exports[`Navigation > pin and unpin an item 3`] = `
         </div>
       </div>
       <div
-        class="emotion-123 emotion-124"
+        class="emotion-121 emotion-122"
         data-testid="slider"
       />
     </nav>
@@ -9700,25 +9522,16 @@ exports[`Navigation > render with basic content 1`] = `
   fill: none;
 }
 
-.emotion-31 {
-  height: auto;
-}
-
-.emotion-31[data-is-animated="true"] {
-  -webkit-transition: max-height 250ms ease-out,opacity 250ms ease-out;
-  transition: max-height 250ms ease-out,opacity 250ms ease-out;
-}
-
-.emotion-35 {
+.emotion-33 {
   padding: 0.5rem 0;
 }
 
-.emotion-35[data-expanded='true'] {
+.emotion-33[data-expanded='true'] {
   padding-left: 2rem;
   margin-left: 0.25rem;
 }
 
-.emotion-37 {
+.emotion-35 {
   color: #727683;
   font-size: 0.75rem;
   font-family: Inter,Asap,sans-serif;
@@ -9730,11 +9543,11 @@ exports[`Navigation > render with basic content 1`] = `
   text-decoration: none;
 }
 
-.emotion-39 {
+.emotion-37 {
   position: relative;
 }
 
-.emotion-41 {
+.emotion-39 {
   position: absolute;
   right: 0;
   left: 0;
@@ -9745,7 +9558,7 @@ exports[`Navigation > render with basic content 1`] = `
   padding: 0.25rem 0;
 }
 
-.emotion-41::before {
+.emotion-39::before {
   content: '';
   position: absolute;
   left: 0;
@@ -9757,7 +9570,7 @@ exports[`Navigation > render with basic content 1`] = `
   border-radius: 100%;
 }
 
-.emotion-44 {
+.emotion-42 {
   margin: 0;
   border: 0;
   width: auto;
@@ -9769,17 +9582,17 @@ exports[`Navigation > render with basic content 1`] = `
   margin: 1rem -1rem;
 }
 
-.emotion-46[data-animation='expand'][data-animation-type="complex"] .emotion-50 {
+.emotion-44[data-animation='expand'][data-animation-type="complex"] .emotion-48 {
   -webkit-animation: animation-2 250ms ease-in-out;
   animation: animation-2 250ms ease-in-out;
 }
 
-.emotion-46[data-animation='collapse'][data-animation-type="complex"] .emotion-50 {
+.emotion-44[data-animation='collapse'][data-animation-type="complex"] .emotion-48 {
   -webkit-animation: animation-2 250ms ease-in-out reverse;
   animation: animation-2 250ms ease-in-out reverse;
 }
 
-.emotion-48 {
+.emotion-46 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -9803,7 +9616,7 @@ exports[`Navigation > render with basic content 1`] = `
   padding-top: 0.5rem;
 }
 
-.emotion-51 {
+.emotion-49 {
   color: #727683;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
@@ -9820,15 +9633,15 @@ exports[`Navigation > render with basic content 1`] = `
   height: calc(1.25rem + 0.5rem);
 }
 
-.emotion-59 .fill {
+.emotion-57 .fill {
   fill: #521094;
 }
 
-.emotion-59 .fillStrong {
+.emotion-57 .fillStrong {
   fill: #a060f6;
 }
 
-.emotion-64 {
+.emotion-62 {
   color: #641cb3;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
@@ -9846,19 +9659,19 @@ exports[`Navigation > render with basic content 1`] = `
   -webkit-line-clamp: 2;
 }
 
-.emotion-83 {
+.emotion-81 {
   display: inherit;
 }
 
-.emotion-83[data-container-full-width="true"] {
+.emotion-81[data-container-full-width="true"] {
   width: 100%;
 }
 
-.emotion-85 {
+.emotion-83 {
   position: relative;
 }
 
-.emotion-87 {
+.emotion-85 {
   opacity: 0;
   right: 0;
   position: absolute;
@@ -9868,13 +9681,13 @@ exports[`Navigation > render with basic content 1`] = `
   margin: auto;
 }
 
-.emotion-87:hover,
-.emotion-87:focus,
-.emotion-87:active {
+.emotion-85:hover,
+.emotion-85:focus,
+.emotion-85:active {
   opacity: 1;
 }
 
-.emotion-90 {
+.emotion-88 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1.25rem;
@@ -9889,16 +9702,16 @@ exports[`Navigation > render with basic content 1`] = `
   border-radius: 0.25rem;
 }
 
-.emotion-90 .fillStroke {
+.emotion-88 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
 
-.emotion-90:hover {
+.emotion-88:hover {
   background: #e9eaeb;
 }
 
-.emotion-92 {
+.emotion-90 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -9918,12 +9731,12 @@ exports[`Navigation > render with basic content 1`] = `
   justify-content: flex-end;
 }
 
-.emotion-92[data-has-overflow-style="false"] {
+.emotion-90[data-has-overflow-style="false"] {
   box-shadow: none;
   border: none;
 }
 
-.emotion-96 {
+.emotion-94 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -9936,7 +9749,7 @@ exports[`Navigation > render with basic content 1`] = `
   gap: 0.5rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 2rem;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -9962,40 +9775,36 @@ exports[`Navigation > render with basic content 1`] = `
   color: #3f4250;
 }
 
-.emotion-96:hover {
+.emotion-94:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-96:active {
+.emotion-94:active {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.emotion-96:hover,
-.emotion-96:active {
+.emotion-94:hover,
+.emotion-94:active {
   background: #e9eaeb;
   color: #222638;
 }
 
-.emotion-98 {
+.emotion-96 {
   vertical-align: middle;
   fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
-.emotion-98 .fillStroke {
+.emotion-96 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.emotion-98 path {
-  fill: currentColor;
-}
-
-.emotion-100 {
+.emotion-98 {
   background: transparent;
   position: absolute;
   top: 0;
@@ -10010,7 +9819,7 @@ exports[`Navigation > render with basic content 1`] = `
   display: flex;
 }
 
-.emotion-100:hover {
+.emotion-98:hover {
   border-color: #8c40ef;
 }
 
@@ -10116,28 +9925,25 @@ exports[`Navigation > render with basic content 1`] = `
                   </div>
                 </div>
               </button>
-              <div
-                class="emotion-31 emotion-32"
-                data-is-animated="true"
-              >
+              <div>
                 <div
                   class="emotion-20 emotion-15"
                 >
                   <div
-                    class="emotion-35 emotion-36"
+                    class="emotion-33 emotion-34"
                     data-expanded="true"
                   >
                     <p
-                      class="emotion-37 emotion-24"
+                      class="emotion-35 emotion-24"
                     >
                       You have no pinned items.
                     </p>
                   </div>
                   <div
-                    class="emotion-39 emotion-40"
+                    class="emotion-37 emotion-38"
                   >
                     <div
-                      class="emotion-41 emotion-42"
+                      class="emotion-39 emotion-40"
                     />
                   </div>
                 </div>
@@ -10145,18 +9951,18 @@ exports[`Navigation > render with basic content 1`] = `
             </div>
             <hr
               aria-orientation="horizontal"
-              class="emotion-43 emotion-44 emotion-45"
+              class="emotion-41 emotion-42 emotion-43"
               role="separator"
             />
             <div
-              class="emotion-46 emotion-47"
+              class="emotion-44 emotion-45"
               data-animation="false"
             >
               <div
-                class="emotion-48 emotion-49"
+                class="emotion-46 emotion-47"
               >
                 <span
-                  class="emotion-50 emotion-51 emotion-24"
+                  class="emotion-48 emotion-49 emotion-24"
                 >
                   Products
                 </span>
@@ -10179,7 +9985,7 @@ exports[`Navigation > render with basic content 1`] = `
                       class="emotion-16 emotion-17"
                     >
                       <svg
-                        class="emotion-59 emotion-19"
+                        class="emotion-57 emotion-19"
                         height="20"
                         viewBox="0 0 20 20"
                         width="20"
@@ -10212,7 +10018,7 @@ exports[`Navigation > render with basic content 1`] = `
                       class="emotion-20 emotion-15"
                     >
                       <span
-                        class="emotion-22 emotion-64 emotion-24"
+                        class="emotion-22 emotion-62 emotion-24"
                       >
                         item1
                       </span>
@@ -10285,19 +10091,19 @@ exports[`Navigation > render with basic content 1`] = `
                     <div
                       aria-controls=":r3:"
                       aria-describedby=":r3:"
-                      class="emotion-83 emotion-84"
+                      class="emotion-81 emotion-82"
                       tabindex="0"
                     >
                       <div
-                        class="emotion-85 emotion-284"
+                        class="emotion-83 emotion-284"
                       >
                         <div
                           aria-label="pin"
-                          class="emotion-87 emotion-286"
+                          class="emotion-85 emotion-286"
                           role="button"
                         >
                           <svg
-                            class="emotion-283 emotion-90 emotion-30"
+                            class="emotion-283 emotion-88 emotion-30"
                             viewBox="0 0 20 20"
                           >
                             <path
@@ -10314,24 +10120,23 @@ exports[`Navigation > render with basic content 1`] = `
             </div>
           </div>
           <div
-            class="emotion-92 emotion-93"
+            class="emotion-90 emotion-91"
             data-has-overflow-style="false"
           >
             <div
               aria-controls=":r4:"
               aria-describedby=":r4:"
-              class="emotion-83 emotion-84"
+              class="emotion-81 emotion-82"
               tabindex="0"
             >
               <button
                 aria-label="Collapse sidebar"
-                class="emotion-96 emotion-97"
+                class="emotion-94 emotion-95"
                 type="button"
               >
                 <svg
-                  class="emotion-98 emotion-99"
+                  class="emotion-96 emotion-30"
                   viewBox="0 0 16 16"
-                  xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
                     clip-rule="evenodd"
@@ -10345,7 +10150,7 @@ exports[`Navigation > render with basic content 1`] = `
         </div>
       </div>
       <div
-        class="emotion-100 emotion-101"
+        class="emotion-98 emotion-99"
         data-testid="slider"
       />
     </nav>
@@ -10955,7 +10760,7 @@ exports[`Navigation > render without pinnedFeature 1`] = `
   gap: 0.5rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 2rem;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -10999,19 +10804,15 @@ exports[`Navigation > render without pinnedFeature 1`] = `
 .emotion-58 {
   vertical-align: middle;
   fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
 .emotion-58 .fillStroke {
   stroke: currentColor;
   fill: none;
-}
-
-.emotion-58 path {
-  fill: currentColor;
 }
 
 .emotion-60 {
@@ -11224,7 +11025,6 @@ exports[`Navigation > render without pinnedFeature 1`] = `
                 <svg
                   class="emotion-58 emotion-59"
                   viewBox="0 0 16 16"
-                  xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
                     clip-rule="evenodd"
@@ -12254,43 +12054,37 @@ exports[`Navigation > resize manually the navigation using slider 1`] = `
   fill: none;
 }
 
-.emotion-31 {
-  height: auto;
-}
-
-.emotion-31[data-is-animated="true"] {
-  -webkit-transition: max-height 250ms ease-out,opacity 250ms ease-out;
-  transition: max-height 250ms ease-out,opacity 250ms ease-out;
-}
-
-.emotion-31 {
-  height: auto;
-}
-
-.emotion-31[data-is-animated="true"] {
-  -webkit-transition: max-height 250ms ease-out,opacity 250ms ease-out;
-  transition: max-height 250ms ease-out,opacity 250ms ease-out;
-}
-
-.emotion-35 {
+.emotion-33 {
   padding: 0.5rem 0;
 }
 
-.emotion-35[data-expanded='true'] {
+.emotion-33[data-expanded='true'] {
+  padding-left: 2rem;
+  margin-left: 0.25rem;
+}
+
+.emotion-33 {
+  padding: 0.5rem 0;
+}
+
+.emotion-33[data-expanded='true'] {
   padding-left: 2rem;
   margin-left: 0.25rem;
 }
 
 .emotion-35 {
-  padding: 0.5rem 0;
+  color: #727683;
+  font-size: 0.75rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
-.emotion-35[data-expanded='true'] {
-  padding-left: 2rem;
-  margin-left: 0.25rem;
-}
-
-.emotion-37 {
+.emotion-35 {
   color: #727683;
   font-size: 0.75rem;
   font-family: Inter,Asap,sans-serif;
@@ -12303,26 +12097,14 @@ exports[`Navigation > resize manually the navigation using slider 1`] = `
 }
 
 .emotion-37 {
-  color: #727683;
-  font-size: 0.75rem;
-  font-family: Inter,Asap,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+  position: relative;
 }
 
-.emotion-39 {
+.emotion-37 {
   position: relative;
 }
 
 .emotion-39 {
-  position: relative;
-}
-
-.emotion-41 {
   position: absolute;
   right: 0;
   left: 0;
@@ -12333,7 +12115,7 @@ exports[`Navigation > resize manually the navigation using slider 1`] = `
   padding: 0.25rem 0;
 }
 
-.emotion-41::before {
+.emotion-39::before {
   content: '';
   position: absolute;
   left: 0;
@@ -12345,7 +12127,7 @@ exports[`Navigation > resize manually the navigation using slider 1`] = `
   border-radius: 100%;
 }
 
-.emotion-41 {
+.emotion-39 {
   position: absolute;
   right: 0;
   left: 0;
@@ -12356,7 +12138,7 @@ exports[`Navigation > resize manually the navigation using slider 1`] = `
   padding: 0.25rem 0;
 }
 
-.emotion-41::before {
+.emotion-39::before {
   content: '';
   position: absolute;
   left: 0;
@@ -12368,7 +12150,7 @@ exports[`Navigation > resize manually the navigation using slider 1`] = `
   border-radius: 100%;
 }
 
-.emotion-44 {
+.emotion-42 {
   margin: 0;
   border: 0;
   width: auto;
@@ -12380,7 +12162,7 @@ exports[`Navigation > resize manually the navigation using slider 1`] = `
   margin: 1rem -1rem;
 }
 
-.emotion-44 {
+.emotion-42 {
   margin: 0;
   border: 0;
   width: auto;
@@ -12392,27 +12174,27 @@ exports[`Navigation > resize manually the navigation using slider 1`] = `
   margin: 1rem -1rem;
 }
 
-.emotion-46[data-animation='expand'][data-animation-type="complex"] .emotion-50 {
+.emotion-44[data-animation='expand'][data-animation-type="complex"] .emotion-48 {
   -webkit-animation: animation-2 250ms ease-in-out;
   animation: animation-2 250ms ease-in-out;
 }
 
-.emotion-46[data-animation='collapse'][data-animation-type="complex"] .emotion-50 {
+.emotion-44[data-animation='collapse'][data-animation-type="complex"] .emotion-48 {
   -webkit-animation: animation-2 250ms ease-in-out reverse;
   animation: animation-2 250ms ease-in-out reverse;
 }
 
-.emotion-46[data-animation='expand'][data-animation-type="complex"] .emotion-50 {
+.emotion-44[data-animation='expand'][data-animation-type="complex"] .emotion-48 {
   -webkit-animation: animation-2 250ms ease-in-out;
   animation: animation-2 250ms ease-in-out;
 }
 
-.emotion-46[data-animation='collapse'][data-animation-type="complex"] .emotion-50 {
+.emotion-44[data-animation='collapse'][data-animation-type="complex"] .emotion-48 {
   -webkit-animation: animation-2 250ms ease-in-out reverse;
   animation: animation-2 250ms ease-in-out reverse;
 }
 
-.emotion-48 {
+.emotion-46 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -12436,7 +12218,7 @@ exports[`Navigation > resize manually the navigation using slider 1`] = `
   padding-top: 0.5rem;
 }
 
-.emotion-48 {
+.emotion-46 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -12460,7 +12242,7 @@ exports[`Navigation > resize manually the navigation using slider 1`] = `
   padding-top: 0.5rem;
 }
 
-.emotion-51 {
+.emotion-49 {
   color: #727683;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
@@ -12477,7 +12259,7 @@ exports[`Navigation > resize manually the navigation using slider 1`] = `
   height: calc(1.25rem + 0.5rem);
 }
 
-.emotion-51 {
+.emotion-49 {
   color: #727683;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
@@ -12494,23 +12276,23 @@ exports[`Navigation > resize manually the navigation using slider 1`] = `
   height: calc(1.25rem + 0.5rem);
 }
 
-.emotion-59 .fill {
+.emotion-57 .fill {
   fill: #521094;
 }
 
-.emotion-59 .fillStrong {
+.emotion-57 .fillStrong {
   fill: #a060f6;
 }
 
-.emotion-59 .fill {
+.emotion-57 .fill {
   fill: #521094;
 }
 
-.emotion-59 .fillStrong {
+.emotion-57 .fillStrong {
   fill: #a060f6;
 }
 
-.emotion-64 {
+.emotion-62 {
   color: #641cb3;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
@@ -12528,7 +12310,7 @@ exports[`Navigation > resize manually the navigation using slider 1`] = `
   -webkit-line-clamp: 2;
 }
 
-.emotion-64 {
+.emotion-62 {
   color: #641cb3;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
@@ -12546,31 +12328,31 @@ exports[`Navigation > resize manually the navigation using slider 1`] = `
   -webkit-line-clamp: 2;
 }
 
-.emotion-83 {
+.emotion-81 {
   display: inherit;
 }
 
-.emotion-83[data-container-full-width="true"] {
+.emotion-81[data-container-full-width="true"] {
+  width: 100%;
+}
+
+.emotion-81 {
+  display: inherit;
+}
+
+.emotion-81[data-container-full-width="true"] {
   width: 100%;
 }
 
 .emotion-83 {
-  display: inherit;
+  position: relative;
 }
 
-.emotion-83[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-85 {
+.emotion-83 {
   position: relative;
 }
 
 .emotion-85 {
-  position: relative;
-}
-
-.emotion-87 {
   opacity: 0;
   right: 0;
   position: absolute;
@@ -12580,13 +12362,13 @@ exports[`Navigation > resize manually the navigation using slider 1`] = `
   margin: auto;
 }
 
-.emotion-87:hover,
-.emotion-87:focus,
-.emotion-87:active {
+.emotion-85:hover,
+.emotion-85:focus,
+.emotion-85:active {
   opacity: 1;
 }
 
-.emotion-87 {
+.emotion-85 {
   opacity: 0;
   right: 0;
   position: absolute;
@@ -12596,13 +12378,13 @@ exports[`Navigation > resize manually the navigation using slider 1`] = `
   margin: auto;
 }
 
-.emotion-87:hover,
-.emotion-87:focus,
-.emotion-87:active {
+.emotion-85:hover,
+.emotion-85:focus,
+.emotion-85:active {
   opacity: 1;
 }
 
-.emotion-90 {
+.emotion-88 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1.25rem;
@@ -12617,16 +12399,16 @@ exports[`Navigation > resize manually the navigation using slider 1`] = `
   border-radius: 0.25rem;
 }
 
-.emotion-90 .fillStroke {
+.emotion-88 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
 
-.emotion-90:hover {
+.emotion-88:hover {
   background: #e9eaeb;
 }
 
-.emotion-90 {
+.emotion-88 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1.25rem;
@@ -12641,16 +12423,16 @@ exports[`Navigation > resize manually the navigation using slider 1`] = `
   border-radius: 0.25rem;
 }
 
-.emotion-90 .fillStroke {
+.emotion-88 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
 
-.emotion-90:hover {
+.emotion-88:hover {
   background: #e9eaeb;
 }
 
-.emotion-92 {
+.emotion-90 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -12670,12 +12452,12 @@ exports[`Navigation > resize manually the navigation using slider 1`] = `
   justify-content: flex-end;
 }
 
-.emotion-92[data-has-overflow-style="false"] {
+.emotion-90[data-has-overflow-style="false"] {
   box-shadow: none;
   border: none;
 }
 
-.emotion-92 {
+.emotion-90 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -12695,12 +12477,12 @@ exports[`Navigation > resize manually the navigation using slider 1`] = `
   justify-content: flex-end;
 }
 
-.emotion-92[data-has-overflow-style="false"] {
+.emotion-90[data-has-overflow-style="false"] {
   box-shadow: none;
   border: none;
 }
 
-.emotion-96 {
+.emotion-94 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -12713,7 +12495,7 @@ exports[`Navigation > resize manually the navigation using slider 1`] = `
   gap: 0.5rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 2rem;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -12739,22 +12521,22 @@ exports[`Navigation > resize manually the navigation using slider 1`] = `
   color: #3f4250;
 }
 
-.emotion-96:hover {
+.emotion-94:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-96:active {
+.emotion-94:active {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.emotion-96:hover,
-.emotion-96:active {
+.emotion-94:hover,
+.emotion-94:active {
   background: #e9eaeb;
   color: #222638;
 }
 
-.emotion-96 {
+.emotion-94 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -12767,7 +12549,7 @@ exports[`Navigation > resize manually the navigation using slider 1`] = `
   gap: 0.5rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 2rem;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -12793,58 +12575,50 @@ exports[`Navigation > resize manually the navigation using slider 1`] = `
   color: #3f4250;
 }
 
-.emotion-96:hover {
+.emotion-94:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-96:active {
+.emotion-94:active {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.emotion-96:hover,
-.emotion-96:active {
+.emotion-94:hover,
+.emotion-94:active {
   background: #e9eaeb;
   color: #222638;
 }
 
-.emotion-98 {
+.emotion-96 {
   vertical-align: middle;
   fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
-.emotion-98 .fillStroke {
+.emotion-96 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.emotion-98 path {
-  fill: currentColor;
-}
-
-.emotion-98 {
+.emotion-96 {
   vertical-align: middle;
   fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
-.emotion-98 .fillStroke {
+.emotion-96 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.emotion-98 path {
-  fill: currentColor;
-}
-
-.emotion-100 {
+.emotion-98 {
   background: transparent;
   position: absolute;
   top: 0;
@@ -12859,11 +12633,11 @@ exports[`Navigation > resize manually the navigation using slider 1`] = `
   display: flex;
 }
 
-.emotion-100:hover {
+.emotion-98:hover {
   border-color: #8c40ef;
 }
 
-.emotion-100 {
+.emotion-98 {
   background: transparent;
   position: absolute;
   top: 0;
@@ -12878,7 +12652,7 @@ exports[`Navigation > resize manually the navigation using slider 1`] = `
   display: flex;
 }
 
-.emotion-100:hover {
+.emotion-98:hover {
   border-color: #8c40ef;
 }
 
@@ -12984,28 +12758,25 @@ exports[`Navigation > resize manually the navigation using slider 1`] = `
                   </div>
                 </div>
               </button>
-              <div
-                class="emotion-31 emotion-32"
-                data-is-animated="true"
-              >
+              <div>
                 <div
                   class="emotion-20 emotion-15"
                 >
                   <div
-                    class="emotion-35 emotion-36"
+                    class="emotion-33 emotion-34"
                     data-expanded="true"
                   >
                     <p
-                      class="emotion-37 emotion-24"
+                      class="emotion-35 emotion-24"
                     >
                       You have no pinned items.
                     </p>
                   </div>
                   <div
-                    class="emotion-39 emotion-40"
+                    class="emotion-37 emotion-38"
                   >
                     <div
-                      class="emotion-41 emotion-42"
+                      class="emotion-39 emotion-40"
                     />
                   </div>
                 </div>
@@ -13013,18 +12784,18 @@ exports[`Navigation > resize manually the navigation using slider 1`] = `
             </div>
             <hr
               aria-orientation="horizontal"
-              class="emotion-43 emotion-44 emotion-45"
+              class="emotion-41 emotion-42 emotion-43"
               role="separator"
             />
             <div
-              class="emotion-46 emotion-47"
+              class="emotion-44 emotion-45"
               data-animation="false"
             >
               <div
-                class="emotion-48 emotion-49"
+                class="emotion-46 emotion-47"
               >
                 <span
-                  class="emotion-50 emotion-51 emotion-24"
+                  class="emotion-48 emotion-49 emotion-24"
                 >
                   Products
                 </span>
@@ -13047,7 +12818,7 @@ exports[`Navigation > resize manually the navigation using slider 1`] = `
                       class="emotion-16 emotion-17"
                     >
                       <svg
-                        class="emotion-59 emotion-19"
+                        class="emotion-57 emotion-19"
                         height="20"
                         viewBox="0 0 20 20"
                         width="20"
@@ -13080,7 +12851,7 @@ exports[`Navigation > resize manually the navigation using slider 1`] = `
                       class="emotion-20 emotion-15"
                     >
                       <span
-                        class="emotion-22 emotion-64 emotion-24"
+                        class="emotion-22 emotion-62 emotion-24"
                       >
                         item1
                       </span>
@@ -13153,19 +12924,19 @@ exports[`Navigation > resize manually the navigation using slider 1`] = `
                     <div
                       aria-controls=":r16:"
                       aria-describedby=":r16:"
-                      class="emotion-83 emotion-84"
+                      class="emotion-81 emotion-82"
                       tabindex="0"
                     >
                       <div
-                        class="emotion-85 emotion-284"
+                        class="emotion-83 emotion-284"
                       >
                         <div
                           aria-label="pin"
-                          class="emotion-87 emotion-286"
+                          class="emotion-85 emotion-286"
                           role="button"
                         >
                           <svg
-                            class="emotion-283 emotion-90 emotion-30"
+                            class="emotion-283 emotion-88 emotion-30"
                             viewBox="0 0 20 20"
                           >
                             <path
@@ -13182,24 +12953,23 @@ exports[`Navigation > resize manually the navigation using slider 1`] = `
             </div>
           </div>
           <div
-            class="emotion-92 emotion-93"
+            class="emotion-90 emotion-91"
             data-has-overflow-style="false"
           >
             <div
               aria-controls=":r17:"
               aria-describedby=":r17:"
-              class="emotion-83 emotion-84"
+              class="emotion-81 emotion-82"
               tabindex="0"
             >
               <button
                 aria-label="Collapse sidebar"
-                class="emotion-96 emotion-97"
+                class="emotion-94 emotion-95"
                 type="button"
               >
                 <svg
-                  class="emotion-98 emotion-99"
+                  class="emotion-96 emotion-30"
                   viewBox="0 0 16 16"
-                  xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
                     clip-rule="evenodd"
@@ -13213,7 +12983,7 @@ exports[`Navigation > resize manually the navigation using slider 1`] = `
         </div>
       </div>
       <div
-        class="emotion-100 emotion-101"
+        class="emotion-98 emotion-99"
         data-testid="slider"
       />
     </nav>

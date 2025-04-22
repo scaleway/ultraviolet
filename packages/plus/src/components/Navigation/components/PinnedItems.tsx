@@ -74,8 +74,15 @@ export const PinnedItems = ({
     )
   }
 
-  const { locales, pinnedItems, pinnedFeature, reorderItems, expanded, items } =
-    context
+  const {
+    locales,
+    pinnedItems,
+    pinnedFeature,
+    reorderItems,
+    expanded,
+    items,
+    animation,
+  } = context
   const theme = useTheme()
 
   const onDrop = useCallback(
@@ -121,7 +128,7 @@ export const PinnedItems = ({
 
   if (pinnedFeature) {
     return (
-      <div>
+      <div style={{ width: animation ? '100%' : undefined }}>
         <Item
           label={locales['navigation.pinned.item.group.label']}
           categoryIcon="pin"
