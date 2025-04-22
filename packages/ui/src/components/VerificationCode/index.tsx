@@ -360,6 +360,7 @@ export const VerificationCode = ({
             required={required}
             placeholder={placeholder?.[index] ?? ''}
             aria-label={`${ariaLabel} ${index}`}
+            autoComplete="off"
           />
         ))}
       </div>
