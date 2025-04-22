@@ -21,7 +21,7 @@ describe('Bullet', () => {
   })
 
   describe('size', () => {
-    ;(['medium', 'small'] as const).forEach(size => {
+    ;(['medium', 'small', 'xsmall', 'xxsmall'] as const).forEach(size => {
       test(`render ${size}`, () =>
         shouldMatchEmotionSnapshot(<Bullet size={size} text="1" />))
     })
