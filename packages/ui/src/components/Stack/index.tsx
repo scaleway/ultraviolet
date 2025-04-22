@@ -11,6 +11,8 @@ type StackProps = {
   justifyContent?: CSSProperties['justifyContent']
   wrap?: boolean | CSSProperties['flexWrap']
   width?: CSSProperties['width']
+  maxWidth?: CSSProperties['maxWidth']
+  minWidth?: CSSProperties['minWidth']
   flex?: CSSProperties['flex']
   className?: string
   children: ReactNode
@@ -31,6 +33,8 @@ export const Stack = styled('div', {
       'justifyContent',
       'wrap',
       'width',
+      'maxWidth',
+      'minWidth',
       'flex',
     ].includes(prop),
 })<StackProps>`
@@ -44,6 +48,8 @@ export const Stack = styled('div', {
     justifyContent = 'normal',
     wrap = 'nowrap',
     width,
+    maxWidth,
+    minWidth,
     flex,
   }) => `
     gap: ${theme.space[gap as keyof UltravioletUITheme['space']]};
@@ -53,5 +59,7 @@ export const Stack = styled('div', {
     flex-wrap: ${typeof wrap === 'boolean' ? 'wrap' : wrap};
     ${flex ? `flex: ${flex};` : ''}
     ${width ? `width: ${width};` : ''}
+    ${maxWidth ? `max-width: ${maxWidth};` : ''}
+    ${minWidth ? `min-width: ${minWidth};` : ''}
   `}
 `
