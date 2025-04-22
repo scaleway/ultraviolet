@@ -345,6 +345,10 @@ exports[`SelectableCardField > should render correctly 1`] = `
   display: contents;
 }
 
+.emotion-18[data-type='checkbox'] {
+  cursor: default;
+}
+
 <div
     data-testid="testing"
   >
@@ -417,6 +421,7 @@ exports[`SelectableCardField > should render correctly 1`] = `
         <div
           class="emotion-18 emotion-19"
           data-has-label="false"
+          data-type="radio"
         >
           Radio field
         </div>
@@ -771,6 +776,10 @@ exports[`SelectableCardField > should render correctly checked 1`] = `
   display: contents;
 }
 
+.emotion-18[data-type='checkbox'] {
+  cursor: default;
+}
+
 <div
     data-testid="testing"
   >
@@ -844,6 +853,7 @@ exports[`SelectableCardField > should render correctly checked 1`] = `
         <div
           class="emotion-18 emotion-19"
           data-has-label="false"
+          data-type="radio"
         >
           Radio field checked
         </div>
@@ -1198,6 +1208,10 @@ exports[`SelectableCardField > should render correctly disabled 1`] = `
   display: contents;
 }
 
+.emotion-18[data-type='checkbox'] {
+  cursor: default;
+}
+
 <div
     data-testid="testing"
   >
@@ -1270,6 +1284,7 @@ exports[`SelectableCardField > should render correctly disabled 1`] = `
         <div
           class="emotion-18 emotion-19"
           data-has-label="false"
+          data-type="radio"
         >
           Radio field disabled
         </div>
@@ -1624,6 +1639,10 @@ exports[`SelectableCardField > should render correctly with errors 1`] = `
   display: contents;
 }
 
+.emotion-18[data-type='checkbox'] {
+  cursor: default;
+}
+
 <div
     data-testid="testing"
   >
@@ -1696,6 +1715,7 @@ exports[`SelectableCardField > should render correctly with errors 1`] = `
         <div
           class="emotion-18 emotion-19"
           data-has-label="false"
+          data-type="radio"
         >
           Radio field error
         </div>
@@ -2055,6 +2075,10 @@ exports[`SelectableCardField > should trigger events correctly 1`] = `
   display: contents;
 }
 
+.emotion-18[data-type='checkbox'] {
+  cursor: default;
+}
+
 <div
     data-testid="testing"
   >
@@ -2127,6 +2151,7 @@ exports[`SelectableCardField > should trigger events correctly 1`] = `
         <div
           class="emotion-18 emotion-19"
           data-has-label="false"
+          data-type="radio"
         >
           Radio field events
         </div>

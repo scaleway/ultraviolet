@@ -131,6 +131,9 @@ const StyledStack = styled(Stack)`
   &[data-has-label='false'] {
     display: contents;
   }
+  &[data-type='checkbox'] {
+  cursor: default;
+  }
 `
 
 const StyledElement = styled('div', {
@@ -314,6 +317,7 @@ export const SelectableCard = forwardRef(
   ) => {
     const theme = useTheme()
     const innerRef = useRef<HTMLInputElement>(null)
+    const childrenRef = useRef<HTMLDivElement>(null)
     const [svgContent, setSvgContent] = useState<string | null>(null)
     const image = useMemo(() => {
       if (illustration) return 'illustration'
@@ -427,16 +431,17 @@ export const SelectableCard = forwardRef(
 
           const targetNode = event.target as Node
 
-          // Check if the event target is the input element or its associated label
+          // Check if the event target is the input element, its associated label, or the children content
           if (
             !inputElement.contains(targetNode) &&
-            !labelElement?.contains(targetNode)
+            !labelElement?.contains(targetNode) &&
+            (type !== 'checkbox' || !childrenRef.current?.contains(targetNode))
           ) {
             inputElement.click()
           }
         }
       },
-      [disabled],
+      [disabled, type],
     )
 
     return (
@@ -501,7 +506,12 @@ export const SelectableCard = forwardRef(
               />
             )}
             {children ? (
-              <StyledStack data-has-label={!!label && showTick} width="100%">
+              <StyledStack
+                ref={childrenRef}
+                data-has-label={!!label && showTick}
+                data-type={type}
+                width="100%"
+              >
                 {typeof children === 'function'
                   ? children({ checked, disabled })
                   : children}

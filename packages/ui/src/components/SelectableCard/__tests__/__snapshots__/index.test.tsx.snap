@@ -431,6 +431,10 @@ exports[`SelectableCard > checkbox > renders correctly with aria label 1`] = `
   display: contents;
 }
 
+.emotion-15[data-type='checkbox'] {
+  cursor: default;
+}
+
 .emotion-15 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -461,6 +465,10 @@ exports[`SelectableCard > checkbox > renders correctly with aria label 1`] = `
 
 .emotion-15[data-has-label='false'] {
   display: contents;
+}
+
+.emotion-15[data-type='checkbox'] {
+  cursor: default;
 }
 
 <div
@@ -525,6 +533,7 @@ exports[`SelectableCard > checkbox > renders correctly with aria label 1`] = `
       <div
         class="emotion-15 emotion-16"
         data-has-label="false"
+        data-type="radio"
       >
         Radio card
       </div>
@@ -926,6 +935,10 @@ exports[`SelectableCard > checkbox > renders correctly with checked prop 1`] = `
   display: contents;
 }
 
+.emotion-11[data-type='checkbox'] {
+  cursor: default;
+}
+
 .emotion-11 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -956,6 +969,10 @@ exports[`SelectableCard > checkbox > renders correctly with checked prop 1`] = `
 
 .emotion-11[data-has-label='false'] {
   display: contents;
+}
+
+.emotion-11[data-type='checkbox'] {
+  cursor: default;
 }
 
 <div
@@ -1020,6 +1037,7 @@ exports[`SelectableCard > checkbox > renders correctly with checked prop 1`] = `
       <div
         class="emotion-11 emotion-12"
         data-has-label="false"
+        data-type="checkbox"
       >
         Radio card
       </div>
@@ -1561,6 +1579,10 @@ exports[`SelectableCard > checkbox > renders correctly with complex children 1`]
   display: contents;
 }
 
+.emotion-18[data-type='checkbox'] {
+  cursor: default;
+}
+
 .emotion-18 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1591,6 +1613,10 @@ exports[`SelectableCard > checkbox > renders correctly with complex children 1`]
 
 .emotion-18[data-has-label='false'] {
   display: contents;
+}
+
+.emotion-18[data-type='checkbox'] {
+  cursor: default;
 }
 
 <div
@@ -1667,6 +1693,7 @@ exports[`SelectableCard > checkbox > renders correctly with complex children 1`]
       <div
         class="emotion-18 emotion-19"
         data-has-label="false"
+        data-type="checkbox"
       >
         <div
           style="background: gray; color: gray;"
@@ -2335,6 +2362,10 @@ exports[`SelectableCard > checkbox > renders correctly with default props 1`] = 
   display: contents;
 }
 
+.emotion-18[data-type='checkbox'] {
+  cursor: default;
+}
+
 .emotion-18 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2365,6 +2396,10 @@ exports[`SelectableCard > checkbox > renders correctly with default props 1`] = 
 
 .emotion-18[data-has-label='false'] {
   display: contents;
+}
+
+.emotion-18[data-type='checkbox'] {
+  cursor: default;
 }
 
 <div
@@ -2434,6 +2469,7 @@ exports[`SelectableCard > checkbox > renders correctly with default props 1`] = 
       <div
         class="emotion-18 emotion-19"
         data-has-label="false"
+        data-type="radio"
       >
         Radio card
       </div>
@@ -2835,6 +2871,10 @@ exports[`SelectableCard > checkbox > renders correctly with disabled prop 1`] = 
   display: contents;
 }
 
+.emotion-11[data-type='checkbox'] {
+  cursor: default;
+}
+
 .emotion-11 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2865,6 +2905,10 @@ exports[`SelectableCard > checkbox > renders correctly with disabled prop 1`] = 
 
 .emotion-11[data-has-label='false'] {
   display: contents;
+}
+
+.emotion-11[data-type='checkbox'] {
+  cursor: default;
 }
 
 <div
@@ -2928,6 +2972,7 @@ exports[`SelectableCard > checkbox > renders correctly with disabled prop 1`] = 
       <div
         class="emotion-11 emotion-12"
         data-has-label="false"
+        data-type="checkbox"
       >
         Radio card
       </div>
@@ -3519,6 +3564,10 @@ exports[`SelectableCard > checkbox > renders correctly with illustration 1`] = `
   display: contents;
 }
 
+.emotion-22[data-type='checkbox'] {
+  cursor: default;
+}
+
 .emotion-22 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -3549,6 +3598,10 @@ exports[`SelectableCard > checkbox > renders correctly with illustration 1`] = `
 
 .emotion-22[data-has-label='false'] {
   display: contents;
+}
+
+.emotion-22[data-type='checkbox'] {
+  cursor: default;
 }
 
 .emotion-24 {
@@ -3685,6 +3738,7 @@ exports[`SelectableCard > checkbox > renders correctly with illustration 1`] = `
           <div
             class="emotion-22 emotion-23"
             data-has-label="true"
+            data-type="checkbox"
           >
             Offer the best experience to your Mac, iPhone and iPad users with VNC, the remote desktop-sharing protocol. Learn more
           </div>
@@ -4241,6 +4295,10 @@ exports[`SelectableCard > checkbox > renders correctly with isError prop 1`] = `
   display: contents;
 }
 
+.emotion-18[data-type='checkbox'] {
+  cursor: default;
+}
+
 .emotion-18 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -4271,6 +4329,10 @@ exports[`SelectableCard > checkbox > renders correctly with isError prop 1`] = `
 
 .emotion-18[data-has-label='false'] {
   display: contents;
+}
+
+.emotion-18[data-type='checkbox'] {
+  cursor: default;
 }
 
 <div
@@ -4349,6 +4411,7 @@ exports[`SelectableCard > checkbox > renders correctly with isError prop 1`] = `
       <div
         class="emotion-18 emotion-19"
         data-has-label="false"
+        data-type="checkbox"
       >
         Radio card
       </div>
@@ -4940,6 +5003,10 @@ exports[`SelectableCard > checkbox > renders correctly with productIcon 1`] = `
   display: contents;
 }
 
+.emotion-22[data-type='checkbox'] {
+  cursor: default;
+}
+
 .emotion-22 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -4970,6 +5037,10 @@ exports[`SelectableCard > checkbox > renders correctly with productIcon 1`] = `
 
 .emotion-22[data-has-label='false'] {
   display: contents;
+}
+
+.emotion-22[data-type='checkbox'] {
+  cursor: default;
 }
 
 .emotion-24 {
@@ -5099,6 +5170,7 @@ exports[`SelectableCard > checkbox > renders correctly with productIcon 1`] = `
           <div
             class="emotion-22 emotion-23"
             data-has-label="true"
+            data-type="checkbox"
           >
             Offer the best experience to your Mac, iPhone and iPad users with VNC, the remote desktop-sharing protocol. Learn more
           </div>
@@ -5541,6 +5613,10 @@ exports[`SelectableCard > checkbox > renders correctly with showTick 1`] = `
   display: contents;
 }
 
+.emotion-11[data-type='checkbox'] {
+  cursor: default;
+}
+
 .emotion-11 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -5571,6 +5647,10 @@ exports[`SelectableCard > checkbox > renders correctly with showTick 1`] = `
 
 .emotion-11[data-has-label='false'] {
   display: contents;
+}
+
+.emotion-11[data-type='checkbox'] {
+  cursor: default;
 }
 
 <div
@@ -5634,6 +5714,7 @@ exports[`SelectableCard > checkbox > renders correctly with showTick 1`] = `
       <div
         class="emotion-11 emotion-12"
         data-has-label="false"
+        data-type="checkbox"
       >
         Checkbox card
       </div>
@@ -6209,6 +6290,10 @@ exports[`SelectableCard > checkbox > renders correctly with tooltip prop 1`] = `
   display: contents;
 }
 
+.emotion-22[data-type='checkbox'] {
+  cursor: default;
+}
+
 .emotion-22 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -6239,6 +6324,10 @@ exports[`SelectableCard > checkbox > renders correctly with tooltip prop 1`] = `
 
 .emotion-22[data-has-label='false'] {
   display: contents;
+}
+
+.emotion-22[data-type='checkbox'] {
+  cursor: default;
 }
 
 <div
@@ -6324,6 +6413,7 @@ exports[`SelectableCard > checkbox > renders correctly with tooltip prop 1`] = `
           <div
             class="emotion-22 emotion-23"
             data-has-label="false"
+            data-type="checkbox"
           >
             Checkbox card
           </div>
@@ -6668,6 +6758,10 @@ exports[`SelectableCard > radio > renders correctly with aria label 1`] = `
   display: contents;
 }
 
+.emotion-15[data-type='checkbox'] {
+  cursor: default;
+}
+
 <div
     data-testid="testing"
   >
@@ -6730,6 +6824,7 @@ exports[`SelectableCard > radio > renders correctly with aria label 1`] = `
       <div
         class="emotion-15 emotion-16"
         data-has-label="false"
+        data-type="radio"
       >
         Radio card
       </div>
@@ -7072,6 +7167,10 @@ exports[`SelectableCard > radio > renders correctly with checked prop 1`] = `
   display: contents;
 }
 
+.emotion-15[data-type='checkbox'] {
+  cursor: default;
+}
+
 <div
     data-testid="testing"
   >
@@ -7135,6 +7234,7 @@ exports[`SelectableCard > radio > renders correctly with checked prop 1`] = `
       <div
         class="emotion-15 emotion-16"
         data-has-label="false"
+        data-type="radio"
       >
         Radio card
       </div>
@@ -7488,6 +7588,10 @@ exports[`SelectableCard > radio > renders correctly with complex children 1`] = 
   display: contents;
 }
 
+.emotion-18[data-type='checkbox'] {
+  cursor: default;
+}
+
 <div
     data-testid="testing"
   >
@@ -7555,6 +7659,7 @@ exports[`SelectableCard > radio > renders correctly with complex children 1`] = 
       <div
         class="emotion-18 emotion-19"
         data-has-label="false"
+        data-type="radio"
       >
         <div
           style="background: gray; color: gray;"
@@ -7912,6 +8017,10 @@ exports[`SelectableCard > radio > renders correctly with default props 1`] = `
   display: contents;
 }
 
+.emotion-18[data-type='checkbox'] {
+  cursor: default;
+}
+
 <div
     data-testid="testing"
   >
@@ -7979,6 +8088,7 @@ exports[`SelectableCard > radio > renders correctly with default props 1`] = `
       <div
         class="emotion-18 emotion-19"
         data-has-label="false"
+        data-type="radio"
       >
         Radio card
       </div>
@@ -8321,6 +8431,10 @@ exports[`SelectableCard > radio > renders correctly with disabled prop 1`] = `
   display: contents;
 }
 
+.emotion-15[data-type='checkbox'] {
+  cursor: default;
+}
+
 <div
     data-testid="testing"
   >
@@ -8383,6 +8497,7 @@ exports[`SelectableCard > radio > renders correctly with disabled prop 1`] = `
       <div
         class="emotion-15 emotion-16"
         data-has-label="false"
+        data-type="radio"
       >
         Radio card
       </div>
@@ -8786,6 +8901,10 @@ exports[`SelectableCard > radio > renders correctly with illustration 1`] = `
   display: contents;
 }
 
+.emotion-22[data-type='checkbox'] {
+  cursor: default;
+}
+
 .emotion-24 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -8913,6 +9032,7 @@ exports[`SelectableCard > radio > renders correctly with illustration 1`] = `
           <div
             class="emotion-22 emotion-23"
             data-has-label="true"
+            data-type="radio"
           >
             Offer the best experience to your Mac, iPhone and iPad users with VNC, the remote desktop-sharing protocol. Learn more
           </div>
@@ -9281,6 +9401,10 @@ exports[`SelectableCard > radio > renders correctly with isError prop 1`] = `
   display: contents;
 }
 
+.emotion-18[data-type='checkbox'] {
+  cursor: default;
+}
+
 <div
     data-testid="testing"
   >
@@ -9350,6 +9474,7 @@ exports[`SelectableCard > radio > renders correctly with isError prop 1`] = `
       <div
         class="emotion-18 emotion-19"
         data-has-label="false"
+        data-type="radio"
       >
         Radio card
       </div>
@@ -9753,6 +9878,10 @@ exports[`SelectableCard > radio > renders correctly with productIcon 1`] = `
   display: contents;
 }
 
+.emotion-22[data-type='checkbox'] {
+  cursor: default;
+}
+
 .emotion-24 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -9873,6 +10002,7 @@ exports[`SelectableCard > radio > renders correctly with productIcon 1`] = `
           <div
             class="emotion-22 emotion-23"
             data-has-label="true"
+            data-type="radio"
           >
             Offer the best experience to your Mac, iPhone and iPad users with VNC, the remote desktop-sharing protocol. Learn more
           </div>
@@ -10256,6 +10386,10 @@ exports[`SelectableCard > radio > renders correctly with showTick 1`] = `
   display: contents;
 }
 
+.emotion-15[data-type='checkbox'] {
+  cursor: default;
+}
+
 <div
     data-testid="testing"
   >
@@ -10318,6 +10452,7 @@ exports[`SelectableCard > radio > renders correctly with showTick 1`] = `
       <div
         class="emotion-15 emotion-16"
         data-has-label="false"
+        data-type="radio"
       >
         Checkbox card
       </div>
@@ -10705,6 +10840,10 @@ exports[`SelectableCard > radio > renders correctly with tooltip prop 1`] = `
   display: contents;
 }
 
+.emotion-22[data-type='checkbox'] {
+  cursor: default;
+}
+
 <div
     data-testid="testing"
   >
@@ -10781,6 +10920,7 @@ exports[`SelectableCard > radio > renders correctly with tooltip prop 1`] = `
           <div
             class="emotion-22 emotion-23"
             data-has-label="false"
+            data-type="radio"
           >
             Checkbox card
           </div>
