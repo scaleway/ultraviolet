@@ -10,24 +10,28 @@ const COMPONENTS = [
     suffix: 'Icon',
     input: 'packages/icons/src/components/Icon/assets',
     output: 'packages/icons/src/components/Icon/__generatedIcons__',
+    typeName: 'SystemIconNames',
   },
   {
     name: 'Product Icons',
     suffix: 'ProductIcon',
     input: 'packages/icons/src/components/ProductIcon/assets',
     output: 'packages/icons/src/components/ProductIcon/__generatedIcons__',
+    typeName: 'ProductIconNames',
   },
   {
     name: 'Category Icons',
     suffix: 'CategoryIcon',
     input: 'packages/icons/src/components/CategoryIcon/assets',
     output: 'packages/icons/src/components/CategoryIcon/__generatedIcons__',
+    typeName: 'CategoryIconNames',
   },
   {
     name: 'Logo',
     suffix: 'Logo',
     input: 'packages/icons/src/components/Logo/assets',
     output: 'packages/icons/src/components/Logo/__generatedIcons__',
+    typeName: 'LogoIconNames',
   },
 ]
 
@@ -144,6 +148,20 @@ const appendExportToIndex = async (output: string, iconName: string) => {
   }
 }
 
+const appendTypeToIndex = async (
+  output: string,
+  typeName: string,
+  iconNames: string[],
+) => {
+  const typeDefinition = `export type ${typeName} = ${iconNames.map(name => `"${name}"`).join(' | ')}\n`
+
+  try {
+    await promises.appendFile(`${output}/index.ts`, typeDefinition)
+  } catch (error) {
+    console.error('Error appending type to index file:', error)
+  }
+}
+
 const resetIconsFolder = async (folderPath: string) => {
   try {
     const files = await promises.readdir(folderPath)
@@ -171,6 +189,8 @@ const main = async () => {
       console.error('Error appending to index file:', error)
     }
 
+    const iconNames: string[] = []
+
     try {
       const files = await readDirectoryRecursive(component.input)
       for (const file of files) {
@@ -183,6 +203,8 @@ const main = async () => {
 
         const svgContent = await readSvg(file, component.suffix)
         const generatedName = `${generateVariableName(file)}${component.suffix}`
+
+        iconNames.push(generatedName)
 
         const svgContentSmall =
           smallFile === file
@@ -204,6 +226,9 @@ const main = async () => {
           console.error('Error writing to file:', error)
         }
       }
+
+      // Append the type definition to the index file
+      await appendTypeToIndex(component.output, component.typeName, iconNames)
     } catch (error) {
       console.error('Error reading directory:', error)
     }
