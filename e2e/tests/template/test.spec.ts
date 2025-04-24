@@ -1,7 +1,7 @@
 import { test } from '@playwright/test'
 
-test('[TEMPLATE EXAMPLE] click on button', async ({ page, baseURL }) => {
-  await page.goto(`${baseURL}/template`)
+test('[Change me]', async ({ page, baseURL }) => {
+  await page.goto(`${baseURL}/[folderName])`)
 
   await page.getByRole('button', { name: 'Click me' }).click()
 })
