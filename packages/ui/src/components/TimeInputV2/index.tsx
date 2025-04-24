@@ -50,7 +50,7 @@ const TimeInputWrapper = styled(Stack)<{
     border-color: ${({ theme }) => theme.colors.primary.borderHover};
     box-shadow: ${({ theme }) => theme.shadows.focusPrimary};
   }
-  
+
   &[data-disabled="false"]:hover,
   [data-disabled="false"]:focus {
     border-color: ${({ theme }) => theme.colors.primary.borderHover};
@@ -125,7 +125,7 @@ export const Input = styled.input<{
     color: ${({ theme }) => theme.colors.neutral.textWeak};
   }
 
-  &:not(:disabled):active, 
+  &:not(:disabled):active,
   :not(:disabled):focus{
     background-color: ${({ theme }) => theme.colors.neutral.backgroundStrong};
     color:  ${({ theme }) => theme.colors.neutral.text};
@@ -421,6 +421,7 @@ export const TimeInputV2 = ({
                   }}
                   ref={computedRef()}
                   role="spinbutton"
+                  autoComplete="false"
                   aria-valuemax={computeMaxValue()}
                   aria-valuemin={type === 'h' && timeFormat === 12 ? 1 : 0}
                   aria-valuenow={
@@ -504,6 +505,7 @@ export const TimeInputV2 = ({
               ref={refPeriod}
               onClick={event => event.stopPropagation()}
               role="spinbutton"
+              autoComplete="false"
               aria-valuemax={12}
               aria-valuemin={0}
               aria-valuenow={period === 'am' ? 0 : 12}
