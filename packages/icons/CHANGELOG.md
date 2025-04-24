@@ -1,5 +1,11 @@
 # Change Log
 
+## 3.14.0
+
+### Minor Changes
+
+- [#5039](https://github.com/scaleway/ultraviolet/pull/5039) [`f989f99`](https://github.com/scaleway/ultraviolet/commit/f989f995442f9746892bb356ec7aa12166a2c6bf) Thanks [@matthprost](https://github.com/matthprost)! - Export `ProductIconsNames`, `LogoIconsNames`, `SystemIconsNames` and `CategoryIconsNames` types
+
 ## 3.13.0
 
 ### Minor Changes
