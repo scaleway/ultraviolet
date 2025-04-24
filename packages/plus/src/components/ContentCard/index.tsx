@@ -209,6 +209,9 @@ export const ContentCard = forwardRef<
               <SubContainer
                 gap={2}
                 flex="1 1 auto"
+                alignItems={
+                  !subtitle && !description && !children ? 'center' : undefined
+                }
                 direction={direction}
                 href={href}
                 ref={subContainerRef}
