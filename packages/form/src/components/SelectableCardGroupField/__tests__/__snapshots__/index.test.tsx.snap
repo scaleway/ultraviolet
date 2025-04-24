@@ -118,6 +118,10 @@ exports[`SelectableCardField > should render correctly 1`] = `
   margin-bottom: -0.25rem;
 }
 
+.emotion-10[data-has-default-cursor='true'] {
+  cursor: default;
+}
+
 .emotion-10[data-checked='true'] {
   border: 1px solid #8c40ef;
 }
@@ -418,6 +422,7 @@ exports[`SelectableCardField > should render correctly 1`] = `
                 data-checked="false"
                 data-disabled="false"
                 data-error="false"
+                data-has-default-cursor="false"
                 data-has-label="true"
                 data-image="none"
                 data-type="radio"
@@ -482,6 +487,7 @@ exports[`SelectableCardField > should render correctly 1`] = `
                 data-checked="false"
                 data-disabled="false"
                 data-error="false"
+                data-has-default-cursor="false"
                 data-has-label="true"
                 data-image="none"
                 data-type="radio"
@@ -666,6 +672,10 @@ exports[`SelectableCardField > should render correctly checked as a checkbox 1`]
 
 .emotion-10[data-has-label='false']>:first-child {
   margin-bottom: -0.25rem;
+}
+
+.emotion-10[data-has-default-cursor='true'] {
+  cursor: default;
 }
 
 .emotion-10[data-checked='true'] {
@@ -1078,6 +1088,7 @@ exports[`SelectableCardField > should render correctly checked as a checkbox 1`]
                 data-checked="true"
                 data-disabled="false"
                 data-error="false"
+                data-has-default-cursor="false"
                 data-has-label="true"
                 data-image="none"
                 data-testid="checked"
@@ -1272,6 +1283,10 @@ exports[`SelectableCardField > should render correctly checked as radiofield 1`]
   margin-bottom: -0.25rem;
 }
 
+.emotion-10[data-has-default-cursor='true'] {
+  cursor: default;
+}
+
 .emotion-10[data-checked='true'] {
   border: 1px solid #8c40ef;
 }
@@ -1572,6 +1587,7 @@ exports[`SelectableCardField > should render correctly checked as radiofield 1`]
                 data-checked="true"
                 data-disabled="false"
                 data-error="false"
+                data-has-default-cursor="false"
                 data-has-label="true"
                 data-image="none"
                 data-testid="checked"
@@ -1758,6 +1774,10 @@ exports[`SelectableCardField > should trigger events correctly 1`] = `
 
 .emotion-10[data-has-label='false']>:first-child {
   margin-bottom: -0.25rem;
+}
+
+.emotion-10[data-has-default-cursor='true'] {
+  cursor: default;
 }
 
 .emotion-10[data-checked='true'] {
@@ -2170,6 +2190,7 @@ exports[`SelectableCardField > should trigger events correctly 1`] = `
                 data-checked="false"
                 data-disabled="false"
                 data-error="false"
+                data-has-default-cursor="false"
                 data-has-label="true"
                 data-image="none"
                 data-type="checkbox"
@@ -2240,6 +2261,7 @@ exports[`SelectableCardField > should trigger events correctly 1`] = `
                 data-checked="false"
                 data-disabled="false"
                 data-error="false"
+                data-has-default-cursor="false"
                 data-has-label="true"
                 data-image="none"
                 data-type="checkbox"

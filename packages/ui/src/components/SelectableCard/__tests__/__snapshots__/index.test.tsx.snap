@@ -41,6 +41,10 @@ exports[`SelectableCard > checkbox > renders correctly with aria label 1`] = `
   margin-bottom: -0.25rem;
 }
 
+.emotion-0[data-has-default-cursor='true'] {
+  cursor: default;
+}
+
 .emotion-0[data-checked='true'] {
   border: 1px solid #8c40ef;
 }
@@ -431,7 +435,7 @@ exports[`SelectableCard > checkbox > renders correctly with aria label 1`] = `
   display: contents;
 }
 
-.emotion-15[data-type='checkbox'] {
+.emotion-15[data-has-default-cursor='true'] {
   cursor: default;
 }
 
@@ -467,7 +471,7 @@ exports[`SelectableCard > checkbox > renders correctly with aria label 1`] = `
   display: contents;
 }
 
-.emotion-15[data-type='checkbox'] {
+.emotion-15[data-has-default-cursor='true'] {
   cursor: default;
 }
 
@@ -478,6 +482,7 @@ exports[`SelectableCard > checkbox > renders correctly with aria label 1`] = `
       class="emotion-0 emotion-1"
       data-checked="false"
       data-disabled="false"
+      data-has-default-cursor="false"
       data-has-label="false"
       data-image="none"
       data-type="radio"
@@ -532,8 +537,8 @@ exports[`SelectableCard > checkbox > renders correctly with aria label 1`] = `
       </div>
       <div
         class="emotion-15 emotion-16"
+        data-has-default-cursor="false"
         data-has-label="false"
-        data-type="radio"
       >
         Radio card
       </div>
@@ -581,6 +586,10 @@ exports[`SelectableCard > checkbox > renders correctly with checked prop 1`] = `
 
 .emotion-0[data-has-label='false']>:first-child {
   margin-bottom: -0.25rem;
+}
+
+.emotion-0[data-has-default-cursor='true'] {
+  cursor: default;
 }
 
 .emotion-0[data-checked='true'] {
@@ -935,7 +944,7 @@ exports[`SelectableCard > checkbox > renders correctly with checked prop 1`] = `
   display: contents;
 }
 
-.emotion-11[data-type='checkbox'] {
+.emotion-11[data-has-default-cursor='true'] {
   cursor: default;
 }
 
@@ -971,7 +980,7 @@ exports[`SelectableCard > checkbox > renders correctly with checked prop 1`] = `
   display: contents;
 }
 
-.emotion-11[data-type='checkbox'] {
+.emotion-11[data-has-default-cursor='true'] {
   cursor: default;
 }
 
@@ -982,6 +991,7 @@ exports[`SelectableCard > checkbox > renders correctly with checked prop 1`] = `
       class="emotion-0 emotion-1"
       data-checked="true"
       data-disabled="false"
+      data-has-default-cursor="false"
       data-has-label="false"
       data-image="none"
       data-type="checkbox"
@@ -1036,8 +1046,8 @@ exports[`SelectableCard > checkbox > renders correctly with checked prop 1`] = `
       </div>
       <div
         class="emotion-11 emotion-12"
+        data-has-default-cursor="false"
         data-has-label="false"
-        data-type="checkbox"
       >
         Radio card
       </div>
@@ -1085,6 +1095,10 @@ exports[`SelectableCard > checkbox > renders correctly with complex children 1`]
 
 .emotion-0[data-has-label='false']>:first-child {
   margin-bottom: -0.25rem;
+}
+
+.emotion-0[data-has-default-cursor='true'] {
+  cursor: default;
 }
 
 .emotion-0[data-checked='true'] {
@@ -1163,6 +1177,10 @@ exports[`SelectableCard > checkbox > renders correctly with complex children 1`]
 
 .emotion-0[data-has-label='false']>:first-child {
   margin-bottom: -0.25rem;
+}
+
+.emotion-0[data-has-default-cursor='true'] {
+  cursor: default;
 }
 
 .emotion-0[data-checked='true'] {
@@ -1579,7 +1597,7 @@ exports[`SelectableCard > checkbox > renders correctly with complex children 1`]
   display: contents;
 }
 
-.emotion-18[data-type='checkbox'] {
+.emotion-18[data-has-default-cursor='true'] {
   cursor: default;
 }
 
@@ -1615,7 +1633,7 @@ exports[`SelectableCard > checkbox > renders correctly with complex children 1`]
   display: contents;
 }
 
-.emotion-18[data-type='checkbox'] {
+.emotion-18[data-has-default-cursor='true'] {
   cursor: default;
 }
 
@@ -1626,6 +1644,7 @@ exports[`SelectableCard > checkbox > renders correctly with complex children 1`]
       class="emotion-0 emotion-1"
       data-checked="false"
       data-disabled="true"
+      data-has-default-cursor="true"
       data-has-label="true"
       data-image="none"
       data-type="checkbox"
@@ -1692,8 +1711,8 @@ exports[`SelectableCard > checkbox > renders correctly with complex children 1`]
       </div>
       <div
         class="emotion-18 emotion-19"
+        data-has-default-cursor="true"
         data-has-label="false"
-        data-type="checkbox"
       >
         <div
           style="background: gray; color: gray;"
@@ -1745,6 +1764,10 @@ exports[`SelectableCard > checkbox > renders correctly with default props 1`] = 
 
 .emotion-0[data-has-label='false']>:first-child {
   margin-bottom: -0.25rem;
+}
+
+.emotion-0[data-has-default-cursor='true'] {
+  cursor: default;
 }
 
 .emotion-0[data-checked='true'] {
@@ -1825,6 +1848,10 @@ exports[`SelectableCard > checkbox > renders correctly with default props 1`] = 
   margin-bottom: -0.25rem;
 }
 
+.emotion-0[data-has-default-cursor='true'] {
+  cursor: default;
+}
+
 .emotion-0[data-checked='true'] {
   border: 1px solid #8c40ef;
 }
@@ -2362,7 +2389,7 @@ exports[`SelectableCard > checkbox > renders correctly with default props 1`] = 
   display: contents;
 }
 
-.emotion-18[data-type='checkbox'] {
+.emotion-18[data-has-default-cursor='true'] {
   cursor: default;
 }
 
@@ -2398,7 +2425,7 @@ exports[`SelectableCard > checkbox > renders correctly with default props 1`] = 
   display: contents;
 }
 
-.emotion-18[data-type='checkbox'] {
+.emotion-18[data-has-default-cursor='true'] {
   cursor: default;
 }
 
@@ -2409,6 +2436,7 @@ exports[`SelectableCard > checkbox > renders correctly with default props 1`] = 
       class="emotion-0 emotion-1"
       data-checked="false"
       data-disabled="false"
+      data-has-default-cursor="false"
       data-has-label="true"
       data-image="none"
       data-type="radio"
@@ -2468,8 +2496,8 @@ exports[`SelectableCard > checkbox > renders correctly with default props 1`] = 
       </div>
       <div
         class="emotion-18 emotion-19"
+        data-has-default-cursor="false"
         data-has-label="false"
-        data-type="radio"
       >
         Radio card
       </div>
@@ -2517,6 +2545,10 @@ exports[`SelectableCard > checkbox > renders correctly with disabled prop 1`] = 
 
 .emotion-0[data-has-label='false']>:first-child {
   margin-bottom: -0.25rem;
+}
+
+.emotion-0[data-has-default-cursor='true'] {
+  cursor: default;
 }
 
 .emotion-0[data-checked='true'] {
@@ -2871,7 +2903,7 @@ exports[`SelectableCard > checkbox > renders correctly with disabled prop 1`] = 
   display: contents;
 }
 
-.emotion-11[data-type='checkbox'] {
+.emotion-11[data-has-default-cursor='true'] {
   cursor: default;
 }
 
@@ -2907,7 +2939,7 @@ exports[`SelectableCard > checkbox > renders correctly with disabled prop 1`] = 
   display: contents;
 }
 
-.emotion-11[data-type='checkbox'] {
+.emotion-11[data-has-default-cursor='true'] {
   cursor: default;
 }
 
@@ -2918,6 +2950,7 @@ exports[`SelectableCard > checkbox > renders correctly with disabled prop 1`] = 
       class="emotion-0 emotion-1"
       data-checked="false"
       data-disabled="true"
+      data-has-default-cursor="false"
       data-has-label="false"
       data-image="none"
       data-type="checkbox"
@@ -2971,8 +3004,8 @@ exports[`SelectableCard > checkbox > renders correctly with disabled prop 1`] = 
       </div>
       <div
         class="emotion-11 emotion-12"
+        data-has-default-cursor="false"
         data-has-label="false"
-        data-type="checkbox"
       >
         Radio card
       </div>
@@ -3020,6 +3053,10 @@ exports[`SelectableCard > checkbox > renders correctly with illustration 1`] = `
 
 .emotion-0[data-has-label='false']>:first-child {
   margin-bottom: -0.25rem;
+}
+
+.emotion-0[data-has-default-cursor='true'] {
+  cursor: default;
 }
 
 .emotion-0[data-checked='true'] {
@@ -3098,6 +3135,10 @@ exports[`SelectableCard > checkbox > renders correctly with illustration 1`] = `
 
 .emotion-0[data-has-label='false']>:first-child {
   margin-bottom: -0.25rem;
+}
+
+.emotion-0[data-has-default-cursor='true'] {
+  cursor: default;
 }
 
 .emotion-0[data-checked='true'] {
@@ -3564,7 +3605,7 @@ exports[`SelectableCard > checkbox > renders correctly with illustration 1`] = `
   display: contents;
 }
 
-.emotion-22[data-type='checkbox'] {
+.emotion-22[data-has-default-cursor='true'] {
   cursor: default;
 }
 
@@ -3600,7 +3641,7 @@ exports[`SelectableCard > checkbox > renders correctly with illustration 1`] = `
   display: contents;
 }
 
-.emotion-22[data-type='checkbox'] {
+.emotion-22[data-has-default-cursor='true'] {
   cursor: default;
 }
 
@@ -3665,6 +3706,7 @@ exports[`SelectableCard > checkbox > renders correctly with illustration 1`] = `
       class="emotion-0 emotion-1"
       data-checked="false"
       data-disabled="false"
+      data-has-default-cursor="false"
       data-has-label="true"
       data-image="illustration"
       data-type="checkbox"
@@ -3737,8 +3779,8 @@ exports[`SelectableCard > checkbox > renders correctly with illustration 1`] = `
           </div>
           <div
             class="emotion-22 emotion-23"
+            data-has-default-cursor="false"
             data-has-label="true"
-            data-type="checkbox"
           >
             Offer the best experience to your Mac, iPhone and iPad users with VNC, the remote desktop-sharing protocol. Learn more
           </div>
@@ -3801,6 +3843,10 @@ exports[`SelectableCard > checkbox > renders correctly with isError prop 1`] = `
 
 .emotion-0[data-has-label='false']>:first-child {
   margin-bottom: -0.25rem;
+}
+
+.emotion-0[data-has-default-cursor='true'] {
+  cursor: default;
 }
 
 .emotion-0[data-checked='true'] {
@@ -3879,6 +3925,10 @@ exports[`SelectableCard > checkbox > renders correctly with isError prop 1`] = `
 
 .emotion-0[data-has-label='false']>:first-child {
   margin-bottom: -0.25rem;
+}
+
+.emotion-0[data-has-default-cursor='true'] {
+  cursor: default;
 }
 
 .emotion-0[data-checked='true'] {
@@ -4295,7 +4345,7 @@ exports[`SelectableCard > checkbox > renders correctly with isError prop 1`] = `
   display: contents;
 }
 
-.emotion-18[data-type='checkbox'] {
+.emotion-18[data-has-default-cursor='true'] {
   cursor: default;
 }
 
@@ -4331,7 +4381,7 @@ exports[`SelectableCard > checkbox > renders correctly with isError prop 1`] = `
   display: contents;
 }
 
-.emotion-18[data-type='checkbox'] {
+.emotion-18[data-has-default-cursor='true'] {
   cursor: default;
 }
 
@@ -4343,6 +4393,7 @@ exports[`SelectableCard > checkbox > renders correctly with isError prop 1`] = `
       data-checked="false"
       data-disabled="false"
       data-error="true"
+      data-has-default-cursor="false"
       data-has-label="true"
       data-image="none"
       data-type="checkbox"
@@ -4410,8 +4461,8 @@ exports[`SelectableCard > checkbox > renders correctly with isError prop 1`] = `
       </div>
       <div
         class="emotion-18 emotion-19"
+        data-has-default-cursor="false"
         data-has-label="false"
-        data-type="checkbox"
       >
         Radio card
       </div>
@@ -4459,6 +4510,10 @@ exports[`SelectableCard > checkbox > renders correctly with productIcon 1`] = `
 
 .emotion-0[data-has-label='false']>:first-child {
   margin-bottom: -0.25rem;
+}
+
+.emotion-0[data-has-default-cursor='true'] {
+  cursor: default;
 }
 
 .emotion-0[data-checked='true'] {
@@ -4537,6 +4592,10 @@ exports[`SelectableCard > checkbox > renders correctly with productIcon 1`] = `
 
 .emotion-0[data-has-label='false']>:first-child {
   margin-bottom: -0.25rem;
+}
+
+.emotion-0[data-has-default-cursor='true'] {
+  cursor: default;
 }
 
 .emotion-0[data-checked='true'] {
@@ -5003,7 +5062,7 @@ exports[`SelectableCard > checkbox > renders correctly with productIcon 1`] = `
   display: contents;
 }
 
-.emotion-22[data-type='checkbox'] {
+.emotion-22[data-has-default-cursor='true'] {
   cursor: default;
 }
 
@@ -5039,7 +5098,7 @@ exports[`SelectableCard > checkbox > renders correctly with productIcon 1`] = `
   display: contents;
 }
 
-.emotion-22[data-type='checkbox'] {
+.emotion-22[data-has-default-cursor='true'] {
   cursor: default;
 }
 
@@ -5097,6 +5156,7 @@ exports[`SelectableCard > checkbox > renders correctly with productIcon 1`] = `
       class="emotion-0 emotion-1"
       data-checked="false"
       data-disabled="false"
+      data-has-default-cursor="false"
       data-has-label="true"
       data-image="icon"
       data-type="checkbox"
@@ -5169,8 +5229,8 @@ exports[`SelectableCard > checkbox > renders correctly with productIcon 1`] = `
           </div>
           <div
             class="emotion-22 emotion-23"
+            data-has-default-cursor="false"
             data-has-label="true"
-            data-type="checkbox"
           >
             Offer the best experience to your Mac, iPhone and iPad users with VNC, the remote desktop-sharing protocol. Learn more
           </div>
@@ -5269,6 +5329,10 @@ exports[`SelectableCard > checkbox > renders correctly with showTick 1`] = `
   margin-bottom: -0.25rem;
 }
 
+.emotion-0[data-has-default-cursor='true'] {
+  cursor: default;
+}
+
 .emotion-0[data-checked='true'] {
   border: 1px solid #8c40ef;
 }
@@ -5613,7 +5677,7 @@ exports[`SelectableCard > checkbox > renders correctly with showTick 1`] = `
   display: contents;
 }
 
-.emotion-11[data-type='checkbox'] {
+.emotion-11[data-has-default-cursor='true'] {
   cursor: default;
 }
 
@@ -5649,7 +5713,7 @@ exports[`SelectableCard > checkbox > renders correctly with showTick 1`] = `
   display: contents;
 }
 
-.emotion-11[data-type='checkbox'] {
+.emotion-11[data-has-default-cursor='true'] {
   cursor: default;
 }
 
@@ -5660,6 +5724,7 @@ exports[`SelectableCard > checkbox > renders correctly with showTick 1`] = `
       class="emotion-0 emotion-1"
       data-checked="false"
       data-disabled="false"
+      data-has-default-cursor="false"
       data-has-label="false"
       data-image="none"
       data-type="checkbox"
@@ -5713,8 +5778,8 @@ exports[`SelectableCard > checkbox > renders correctly with showTick 1`] = `
       </div>
       <div
         class="emotion-11 emotion-12"
+        data-has-default-cursor="false"
         data-has-label="false"
-        data-type="checkbox"
       >
         Checkbox card
       </div>
@@ -5798,6 +5863,10 @@ exports[`SelectableCard > checkbox > renders correctly with tooltip prop 1`] = `
   margin-bottom: -0.25rem;
 }
 
+.emotion-4[data-has-default-cursor='true'] {
+  cursor: default;
+}
+
 .emotion-4[data-checked='true'] {
   border: 1px solid #8c40ef;
 }
@@ -5874,6 +5943,10 @@ exports[`SelectableCard > checkbox > renders correctly with tooltip prop 1`] = `
 
 .emotion-4[data-has-label='false']>:first-child {
   margin-bottom: -0.25rem;
+}
+
+.emotion-4[data-has-default-cursor='true'] {
+  cursor: default;
 }
 
 .emotion-4[data-checked='true'] {
@@ -6290,7 +6363,7 @@ exports[`SelectableCard > checkbox > renders correctly with tooltip prop 1`] = `
   display: contents;
 }
 
-.emotion-22[data-type='checkbox'] {
+.emotion-22[data-has-default-cursor='true'] {
   cursor: default;
 }
 
@@ -6326,7 +6399,7 @@ exports[`SelectableCard > checkbox > renders correctly with tooltip prop 1`] = `
   display: contents;
 }
 
-.emotion-22[data-type='checkbox'] {
+.emotion-22[data-has-default-cursor='true'] {
   cursor: default;
 }
 
@@ -6346,6 +6419,7 @@ exports[`SelectableCard > checkbox > renders correctly with tooltip prop 1`] = `
           class="emotion-4 emotion-5"
           data-checked="false"
           data-disabled="false"
+          data-has-default-cursor="false"
           data-has-label="true"
           data-image="none"
           data-type="checkbox"
@@ -6412,8 +6486,8 @@ exports[`SelectableCard > checkbox > renders correctly with tooltip prop 1`] = `
           </div>
           <div
             class="emotion-22 emotion-23"
+            data-has-default-cursor="false"
             data-has-label="false"
-            data-type="checkbox"
           >
             Checkbox card
           </div>
@@ -6463,6 +6537,10 @@ exports[`SelectableCard > radio > renders correctly with aria label 1`] = `
 
 .emotion-0[data-has-label='false']>:first-child {
   margin-bottom: -0.25rem;
+}
+
+.emotion-0[data-has-default-cursor='true'] {
+  cursor: default;
 }
 
 .emotion-0[data-checked='true'] {
@@ -6758,7 +6836,7 @@ exports[`SelectableCard > radio > renders correctly with aria label 1`] = `
   display: contents;
 }
 
-.emotion-15[data-type='checkbox'] {
+.emotion-15[data-has-default-cursor='true'] {
   cursor: default;
 }
 
@@ -6769,6 +6847,7 @@ exports[`SelectableCard > radio > renders correctly with aria label 1`] = `
       class="emotion-0 emotion-1"
       data-checked="false"
       data-disabled="false"
+      data-has-default-cursor="false"
       data-has-label="false"
       data-image="none"
       data-type="radio"
@@ -6823,8 +6902,8 @@ exports[`SelectableCard > radio > renders correctly with aria label 1`] = `
       </div>
       <div
         class="emotion-15 emotion-16"
+        data-has-default-cursor="false"
         data-has-label="false"
-        data-type="radio"
       >
         Radio card
       </div>
@@ -6872,6 +6951,10 @@ exports[`SelectableCard > radio > renders correctly with checked prop 1`] = `
 
 .emotion-0[data-has-label='false']>:first-child {
   margin-bottom: -0.25rem;
+}
+
+.emotion-0[data-has-default-cursor='true'] {
+  cursor: default;
 }
 
 .emotion-0[data-checked='true'] {
@@ -7167,7 +7250,7 @@ exports[`SelectableCard > radio > renders correctly with checked prop 1`] = `
   display: contents;
 }
 
-.emotion-15[data-type='checkbox'] {
+.emotion-15[data-has-default-cursor='true'] {
   cursor: default;
 }
 
@@ -7178,6 +7261,7 @@ exports[`SelectableCard > radio > renders correctly with checked prop 1`] = `
       class="emotion-0 emotion-1"
       data-checked="true"
       data-disabled="false"
+      data-has-default-cursor="false"
       data-has-label="false"
       data-image="none"
       data-type="radio"
@@ -7233,8 +7317,8 @@ exports[`SelectableCard > radio > renders correctly with checked prop 1`] = `
       </div>
       <div
         class="emotion-15 emotion-16"
+        data-has-default-cursor="false"
         data-has-label="false"
-        data-type="radio"
       >
         Radio card
       </div>
@@ -7282,6 +7366,10 @@ exports[`SelectableCard > radio > renders correctly with complex children 1`] = 
 
 .emotion-0[data-has-label='false']>:first-child {
   margin-bottom: -0.25rem;
+}
+
+.emotion-0[data-has-default-cursor='true'] {
+  cursor: default;
 }
 
 .emotion-0[data-checked='true'] {
@@ -7588,7 +7676,7 @@ exports[`SelectableCard > radio > renders correctly with complex children 1`] = 
   display: contents;
 }
 
-.emotion-18[data-type='checkbox'] {
+.emotion-18[data-has-default-cursor='true'] {
   cursor: default;
 }
 
@@ -7599,6 +7687,7 @@ exports[`SelectableCard > radio > renders correctly with complex children 1`] = 
       class="emotion-0 emotion-1"
       data-checked="false"
       data-disabled="true"
+      data-has-default-cursor="false"
       data-has-label="true"
       data-image="none"
       data-type="radio"
@@ -7658,8 +7747,8 @@ exports[`SelectableCard > radio > renders correctly with complex children 1`] = 
       </div>
       <div
         class="emotion-18 emotion-19"
+        data-has-default-cursor="false"
         data-has-label="false"
-        data-type="radio"
       >
         <div
           style="background: gray; color: gray;"
@@ -7711,6 +7800,10 @@ exports[`SelectableCard > radio > renders correctly with default props 1`] = `
 
 .emotion-0[data-has-label='false']>:first-child {
   margin-bottom: -0.25rem;
+}
+
+.emotion-0[data-has-default-cursor='true'] {
+  cursor: default;
 }
 
 .emotion-0[data-checked='true'] {
@@ -8017,7 +8110,7 @@ exports[`SelectableCard > radio > renders correctly with default props 1`] = `
   display: contents;
 }
 
-.emotion-18[data-type='checkbox'] {
+.emotion-18[data-has-default-cursor='true'] {
   cursor: default;
 }
 
@@ -8028,6 +8121,7 @@ exports[`SelectableCard > radio > renders correctly with default props 1`] = `
       class="emotion-0 emotion-1"
       data-checked="false"
       data-disabled="false"
+      data-has-default-cursor="false"
       data-has-label="true"
       data-image="none"
       data-type="radio"
@@ -8087,8 +8181,8 @@ exports[`SelectableCard > radio > renders correctly with default props 1`] = `
       </div>
       <div
         class="emotion-18 emotion-19"
+        data-has-default-cursor="false"
         data-has-label="false"
-        data-type="radio"
       >
         Radio card
       </div>
@@ -8136,6 +8230,10 @@ exports[`SelectableCard > radio > renders correctly with disabled prop 1`] = `
 
 .emotion-0[data-has-label='false']>:first-child {
   margin-bottom: -0.25rem;
+}
+
+.emotion-0[data-has-default-cursor='true'] {
+  cursor: default;
 }
 
 .emotion-0[data-checked='true'] {
@@ -8431,7 +8529,7 @@ exports[`SelectableCard > radio > renders correctly with disabled prop 1`] = `
   display: contents;
 }
 
-.emotion-15[data-type='checkbox'] {
+.emotion-15[data-has-default-cursor='true'] {
   cursor: default;
 }
 
@@ -8442,6 +8540,7 @@ exports[`SelectableCard > radio > renders correctly with disabled prop 1`] = `
       class="emotion-0 emotion-1"
       data-checked="false"
       data-disabled="true"
+      data-has-default-cursor="false"
       data-has-label="false"
       data-image="none"
       data-type="radio"
@@ -8496,8 +8595,8 @@ exports[`SelectableCard > radio > renders correctly with disabled prop 1`] = `
       </div>
       <div
         class="emotion-15 emotion-16"
+        data-has-default-cursor="false"
         data-has-label="false"
-        data-type="radio"
       >
         Radio card
       </div>
@@ -8545,6 +8644,10 @@ exports[`SelectableCard > radio > renders correctly with illustration 1`] = `
 
 .emotion-0[data-has-label='false']>:first-child {
   margin-bottom: -0.25rem;
+}
+
+.emotion-0[data-has-default-cursor='true'] {
+  cursor: default;
 }
 
 .emotion-0[data-checked='true'] {
@@ -8901,7 +9004,7 @@ exports[`SelectableCard > radio > renders correctly with illustration 1`] = `
   display: contents;
 }
 
-.emotion-22[data-type='checkbox'] {
+.emotion-22[data-has-default-cursor='true'] {
   cursor: default;
 }
 
@@ -8966,6 +9069,7 @@ exports[`SelectableCard > radio > renders correctly with illustration 1`] = `
       class="emotion-0 emotion-1"
       data-checked="false"
       data-disabled="false"
+      data-has-default-cursor="false"
       data-has-label="true"
       data-image="illustration"
       data-type="radio"
@@ -9031,8 +9135,8 @@ exports[`SelectableCard > radio > renders correctly with illustration 1`] = `
           </div>
           <div
             class="emotion-22 emotion-23"
+            data-has-default-cursor="false"
             data-has-label="true"
-            data-type="radio"
           >
             Offer the best experience to your Mac, iPhone and iPad users with VNC, the remote desktop-sharing protocol. Learn more
           </div>
@@ -9095,6 +9199,10 @@ exports[`SelectableCard > radio > renders correctly with isError prop 1`] = `
 
 .emotion-0[data-has-label='false']>:first-child {
   margin-bottom: -0.25rem;
+}
+
+.emotion-0[data-has-default-cursor='true'] {
+  cursor: default;
 }
 
 .emotion-0[data-checked='true'] {
@@ -9401,7 +9509,7 @@ exports[`SelectableCard > radio > renders correctly with isError prop 1`] = `
   display: contents;
 }
 
-.emotion-18[data-type='checkbox'] {
+.emotion-18[data-has-default-cursor='true'] {
   cursor: default;
 }
 
@@ -9413,6 +9521,7 @@ exports[`SelectableCard > radio > renders correctly with isError prop 1`] = `
       data-checked="false"
       data-disabled="false"
       data-error="true"
+      data-has-default-cursor="false"
       data-has-label="true"
       data-image="none"
       data-type="radio"
@@ -9473,8 +9582,8 @@ exports[`SelectableCard > radio > renders correctly with isError prop 1`] = `
       </div>
       <div
         class="emotion-18 emotion-19"
+        data-has-default-cursor="false"
         data-has-label="false"
-        data-type="radio"
       >
         Radio card
       </div>
@@ -9522,6 +9631,10 @@ exports[`SelectableCard > radio > renders correctly with productIcon 1`] = `
 
 .emotion-0[data-has-label='false']>:first-child {
   margin-bottom: -0.25rem;
+}
+
+.emotion-0[data-has-default-cursor='true'] {
+  cursor: default;
 }
 
 .emotion-0[data-checked='true'] {
@@ -9878,7 +9991,7 @@ exports[`SelectableCard > radio > renders correctly with productIcon 1`] = `
   display: contents;
 }
 
-.emotion-22[data-type='checkbox'] {
+.emotion-22[data-has-default-cursor='true'] {
   cursor: default;
 }
 
@@ -9936,6 +10049,7 @@ exports[`SelectableCard > radio > renders correctly with productIcon 1`] = `
       class="emotion-0 emotion-1"
       data-checked="false"
       data-disabled="false"
+      data-has-default-cursor="false"
       data-has-label="true"
       data-image="icon"
       data-type="radio"
@@ -10001,8 +10115,8 @@ exports[`SelectableCard > radio > renders correctly with productIcon 1`] = `
           </div>
           <div
             class="emotion-22 emotion-23"
+            data-has-default-cursor="false"
             data-has-label="true"
-            data-type="radio"
           >
             Offer the best experience to your Mac, iPhone and iPad users with VNC, the remote desktop-sharing protocol. Learn more
           </div>
@@ -10101,6 +10215,10 @@ exports[`SelectableCard > radio > renders correctly with showTick 1`] = `
   margin-bottom: -0.25rem;
 }
 
+.emotion-0[data-has-default-cursor='true'] {
+  cursor: default;
+}
+
 .emotion-0[data-checked='true'] {
   border: 1px solid #8c40ef;
 }
@@ -10386,7 +10504,7 @@ exports[`SelectableCard > radio > renders correctly with showTick 1`] = `
   display: contents;
 }
 
-.emotion-15[data-type='checkbox'] {
+.emotion-15[data-has-default-cursor='true'] {
   cursor: default;
 }
 
@@ -10397,6 +10515,7 @@ exports[`SelectableCard > radio > renders correctly with showTick 1`] = `
       class="emotion-0 emotion-1"
       data-checked="false"
       data-disabled="false"
+      data-has-default-cursor="false"
       data-has-label="false"
       data-image="none"
       data-type="radio"
@@ -10451,8 +10570,8 @@ exports[`SelectableCard > radio > renders correctly with showTick 1`] = `
       </div>
       <div
         class="emotion-15 emotion-16"
+        data-has-default-cursor="false"
         data-has-label="false"
-        data-type="radio"
       >
         Checkbox card
       </div>
@@ -10534,6 +10653,10 @@ exports[`SelectableCard > radio > renders correctly with tooltip prop 1`] = `
 
 .emotion-4[data-has-label='false']>:first-child {
   margin-bottom: -0.25rem;
+}
+
+.emotion-4[data-has-default-cursor='true'] {
+  cursor: default;
 }
 
 .emotion-4[data-checked='true'] {
@@ -10840,7 +10963,7 @@ exports[`SelectableCard > radio > renders correctly with tooltip prop 1`] = `
   display: contents;
 }
 
-.emotion-22[data-type='checkbox'] {
+.emotion-22[data-has-default-cursor='true'] {
   cursor: default;
 }
 
@@ -10860,6 +10983,7 @@ exports[`SelectableCard > radio > renders correctly with tooltip prop 1`] = `
           class="emotion-4 emotion-5"
           data-checked="false"
           data-disabled="false"
+          data-has-default-cursor="false"
           data-has-label="true"
           data-image="none"
           data-type="radio"
@@ -10919,8 +11043,8 @@ exports[`SelectableCard > radio > renders correctly with tooltip prop 1`] = `
           </div>
           <div
             class="emotion-22 emotion-23"
+            data-has-default-cursor="false"
             data-has-label="false"
-            data-type="radio"
           >
             Checkbox card
           </div>
