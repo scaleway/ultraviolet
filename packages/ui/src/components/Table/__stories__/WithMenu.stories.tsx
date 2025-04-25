@@ -1,5 +1,5 @@
 import type { StoryFn } from '@storybook/react'
-import { DotsHorizontalIcon } from 'node_modules/@ultraviolet/icons/src'
+import { DotsHorizontalIcon } from '@ultraviolet/icons'
 import { Table } from '..'
 import { Button } from '../../Button'
 import { MenuV2 } from '../../MenuV2'

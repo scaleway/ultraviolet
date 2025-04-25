@@ -1,4 +1,4 @@
-import { PlusIcon } from 'node_modules/@ultraviolet/icons/src'
+import { PlusIcon } from '@ultraviolet/icons'
 import { Button } from '../../Button'
 import { Template } from './Template.stories'
 import kapsuleLogo from './illustrations/kapsule.webp'

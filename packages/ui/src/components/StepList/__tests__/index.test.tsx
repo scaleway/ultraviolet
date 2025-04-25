@@ -1,6 +1,5 @@
-import { CheckIcon } from '@ultraviolet/icons'
+import { AlertCircleOutlineIcon, CheckIcon } from '@ultraviolet/icons'
 import { shouldMatchEmotionSnapshot } from '@utils/test'
-import { AlertCircleOutlineIcon } from 'node_modules/@ultraviolet/icons/src'
 import { describe, test } from 'vitest'
 import { StepList } from '..'
 
