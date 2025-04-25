@@ -1,5 +1,6 @@
 import styled from '@emotion/styled'
 import type { StoryFn } from '@storybook/react'
+import { DeleteIcon } from '@ultraviolet/icons'
 import { useState } from 'react'
 import { ActionBar } from '..'
 import { Button } from '../../Button'
@@ -38,12 +39,9 @@ export const Template: StoryFn<typeof ActionBar> = args => {
           >
             <div>I am the Playground Action Bar</div>
             <StyledFlexDiv>
-              <Button
-                variant="outlined"
-                sentiment="danger"
-                icon="delete"
-                size="small"
-              />
+              <Button variant="outlined" sentiment="danger" size="small">
+                <DeleteIcon />
+              </Button>
             </StyledFlexDiv>
           </FullHeightStack>
         </ActionBar>

@@ -1,4 +1,6 @@
+import { CheckIcon } from '@ultraviolet/icons'
 import { shouldMatchEmotionSnapshot } from '@utils/test'
+import { AlertCircleOutlineIcon } from 'node_modules/@ultraviolet/icons/src'
 import { describe, test } from 'vitest'
 import { StepList } from '..'
 
@@ -6,21 +8,26 @@ describe('StepList', () => {
   test('renders correctly ', () =>
     shouldMatchEmotionSnapshot(
       <StepList>
-        <StepList.Item bulletText="1">Item 1</StepList.Item>
+        <StepList.Item bulletContent="1">Item 1</StepList.Item>
       </StepList>,
     ))
 
-  test('renders correctly with bulletIcon', () =>
+  test('renders correctly with bulletContent', () =>
     shouldMatchEmotionSnapshot(
       <StepList>
-        <StepList.Item bulletIcon="alert">Item 1</StepList.Item>
+        <StepList.Item bulletContent={<AlertCircleOutlineIcon />}>
+          Item 1
+        </StepList.Item>
       </StepList>,
     ))
 
-  test('renders correctly with bulletIcon & sentiment', () =>
+  test('renders correctly with bulletContent & sentiment', () =>
     shouldMatchEmotionSnapshot(
       <StepList>
-        <StepList.Item bulletIcon="alert" sentiment="success">
+        <StepList.Item
+          bulletContent={<AlertCircleOutlineIcon />}
+          sentiment="success"
+        >
           Item 1
         </StepList.Item>
       </StepList>,
@@ -29,7 +36,7 @@ describe('StepList', () => {
   test('renders correctly with small size', () =>
     shouldMatchEmotionSnapshot(
       <StepList>
-        <StepList.Item bulletText="1" size="small">
+        <StepList.Item bulletContent="1" size="small">
           Item 1 small
         </StepList.Item>
       </StepList>,
@@ -38,7 +45,7 @@ describe('StepList', () => {
   test('renders correctly with disabled state', () =>
     shouldMatchEmotionSnapshot(
       <StepList>
-        <StepList.Item bulletText="1" disabled>
+        <StepList.Item bulletContent="1" disabled>
           <div>Item 1 with disabled state</div>
         </StepList.Item>
       </StepList>,
@@ -47,7 +54,7 @@ describe('StepList', () => {
   test('renders correctly with disabled state & bullet icon', () =>
     shouldMatchEmotionSnapshot(
       <StepList>
-        <StepList.Item bulletIcon="check" disabled>
+        <StepList.Item bulletContent={<CheckIcon />} disabled>
           <div>Item 1 with disabled state</div>
         </StepList.Item>
       </StepList>,

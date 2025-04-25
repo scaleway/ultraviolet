@@ -1,13 +1,13 @@
 import styled from '@emotion/styled'
-import { Button, Expandable, Snippet, Stack, Text } from '@ultraviolet/ui'
-import { useReducer } from 'react'
-import * as assets from '../index'
 import {
   ArrowDownIcon,
   ArrowUpIcon,
   MinusIcon,
   PlusIcon,
 } from '@ultraviolet/icons'
+import { Button, Expandable, Snippet, Stack, Text } from '@ultraviolet/ui'
+import { useReducer } from 'react'
+import * as assets from '../index'
 
 const defaultAssets = {
   products: assets.default.products,
