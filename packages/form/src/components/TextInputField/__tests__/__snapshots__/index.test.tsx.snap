@@ -636,10 +636,10 @@ exports[`TextInputField > should render correctly notice 1`] = `
 .emotion-12 {
   vertical-align: middle;
   fill: #727683;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
 .emotion-12 .fillStroke {
@@ -677,7 +677,7 @@ exports[`TextInputField > should render correctly notice 1`] = `
         >
           <svg
             class="emotion-12 emotion-13"
-            viewBox="0 0 20 20"
+            viewBox="0 0 16 16"
           >
             <path
               clip-rule="evenodd"
@@ -843,7 +843,7 @@ exports[`TextInputField > should render correctly random 1`] = `
   gap: 0.5rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 2rem;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -887,19 +887,15 @@ exports[`TextInputField > should render correctly random 1`] = `
 .emotion-10 {
   vertical-align: middle;
   fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
 .emotion-10 .fillStroke {
   stroke: currentColor;
   fill: none;
-}
-
-.emotion-10 path {
-  fill: currentColor;
 }
 
 .emotion-12 {
@@ -946,25 +942,19 @@ exports[`TextInputField > should render correctly random 1`] = `
               >
                 <svg
                   class="emotion-10 emotion-11"
-                  fill="none"
                   viewBox="0 0 16 16"
-                  xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
                     d="M13.7292 3.96253L14.0672 3.23096L14.7984 2.89278C15.0674 2.76855 15.0674 2.38896 14.7984 2.26473L14.0672 1.92655L13.7292 1.20187C13.605 0.932709 13.2256 0.932709 13.1014 1.20187L12.7634 1.93345L12.0391 2.27163C11.7701 2.39586 11.7701 2.77545 12.0391 2.89968L12.7703 3.23786L13.1083 3.96253C13.2256 4.2317 13.6119 4.2317 13.7292 3.96253Z"
-                    fill="black"
                   />
                   <path
                     d="M5.79617 3.96253L6.13418 3.23096L6.8654 2.89278C7.13443 2.76855 7.13443 2.38896 6.8654 2.26473L6.13418 1.93345L5.79617 1.20187C5.6789 0.932709 5.2926 0.932709 5.17533 1.20187L4.83731 1.93345L4.1061 2.27163C3.83707 2.39586 3.83707 2.77545 4.1061 2.89968L4.83731 3.23786L5.17533 3.96253C5.2926 4.2317 5.6789 4.2317 5.79617 3.96253Z"
-                    fill="black"
                   />
                   <path
                     d="M13.1083 9.13813L12.7703 9.8697L12.0391 10.2079C11.7701 10.3321 11.7701 10.7117 12.0391 10.8359L12.7703 11.1741L13.1083 11.9057C13.2325 12.1749 13.6119 12.1749 13.7361 11.9057L14.0741 11.1741L14.7984 10.829C15.0674 10.7048 15.0674 10.3252 14.7984 10.201L14.0672 9.8628L13.7292 9.13122C13.6119 8.86896 13.2256 8.86896 13.1083 9.13813Z"
-                    fill="black"
                   />
                   <path
                     d="M11.8389 6.115L9.88667 4.16183C9.61763 3.89267 9.18305 3.89267 8.91401 4.16183L1.20177 11.871C0.932742 12.1401 0.932742 12.5749 1.20177 12.8441L3.15398 14.7973C3.42301 15.0664 3.8576 15.0664 4.12663 14.7973L11.832 7.08813C12.1079 6.82587 12.1079 6.38417 11.8389 6.115ZM9.42448 7.55745L8.45183 6.58431L9.40379 5.63189L10.3764 6.60502L9.42448 7.55745Z"
-                    fill="black"
                   />
                 </svg>
               </button>
