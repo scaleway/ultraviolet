@@ -2,6 +2,12 @@ import styled from '@emotion/styled'
 import { Button, Expandable, Snippet, Stack, Text } from '@ultraviolet/ui'
 import { useReducer } from 'react'
 import * as assets from '../index'
+import {
+  ArrowDownIcon,
+  ArrowUpIcon,
+  MinusIcon,
+  PlusIcon,
+} from '@ultraviolet/icons'
 
 const defaultAssets = {
   products: assets.default.products,
@@ -66,11 +72,8 @@ const SubListElement = ({
   category,
 }: SubListElementProps) => (
   <MargedStack gap={1}>
-    <StyledButton
-      sentiment="neutral"
-      onClick={setIsExpanded}
-      icon={isExpanded ? 'arrow-up' : 'arrow-down'}
-    >
+    <StyledButton sentiment="neutral" onClick={setIsExpanded}>
+      {isExpanded ? <ArrowUpIcon /> : <ArrowDownIcon />}
       {productName}
     </StyledButton>
     <Expandable opened={isExpanded}>
@@ -158,11 +161,8 @@ export const List = () => {
 
   return (
     <Stack gap={3}>
-      <Button
-        sentiment="primary"
-        onClick={toggleAllExpanded}
-        icon={isAllExpanded ? 'minus' : 'plus'}
-      >
+      <Button sentiment="primary" onClick={toggleAllExpanded}>
+        {isAllExpanded ? <MinusIcon /> : <PlusIcon />}
         {isAllExpanded ? 'Collapse' : 'Expand'} all
       </Button>
       <Stack gap={1}>
@@ -178,8 +178,8 @@ export const List = () => {
                   newExpandedStates[category] = !expandedStates[category]
                   setExpandedStates(newExpandedStates)
                 }}
-                icon={expandedStates[category] ? 'arrow-up' : 'arrow-down'}
               >
+                {expandedStates[category] ? <ArrowUpIcon /> : <ArrowDownIcon />}
                 {category}
               </StyledButton>
               <Expandable opened={expandedStates[category]}>
