@@ -44,6 +44,28 @@ exports[`StepList > renders correctly  1`] = `
 }
 
 .emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+  font-size: 1rem;
+  color: #3f4250;
+  background: #ffffff;
+  border: 1px solid #d9dadd;
+}
+
+.emotion-6 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -64,6 +86,11 @@ exports[`StepList > renders correctly  1`] = `
         <div
           class="emotion-4 emotion-5"
         >
+          1
+        </div>
+        <div
+          class="emotion-6 emotion-7"
+        >
           Item 1
         </div>
       </li>
@@ -72,7 +99,7 @@ exports[`StepList > renders correctly  1`] = `
 </DocumentFragment>
 `;
 
-exports[`StepList > renders correctly with bulletIcon & sentiment 1`] = `
+exports[`StepList > renders correctly with bulletContent & sentiment 1`] = `
 <DocumentFragment>
   .emotion-0 {
   list-style: none;
@@ -116,6 +143,42 @@ exports[`StepList > renders correctly with bulletIcon & sentiment 1`] = `
 }
 
 .emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+  font-size: 1rem;
+  color: #22674e;
+  background: #daf6ec;
+  border: 1px solid #daf6ec;
+}
+
+.emotion-6 {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
+}
+
+.emotion-6 .fillStroke {
+  stroke: currentColor;
+  fill: none;
+}
+
+.emotion-8 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -136,6 +199,20 @@ exports[`StepList > renders correctly with bulletIcon & sentiment 1`] = `
         <div
           class="emotion-4 emotion-5"
         >
+          <svg
+            class="emotion-6 emotion-7"
+            viewBox="0 0 16 16"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M8.0001 2.76373C5.10813 2.76373 2.76373 5.10813 2.76373 8.0001C2.76373 10.8921 5.10813 13.2365 8.0001 13.2365C10.8921 13.2365 13.2365 10.8921 13.2365 8.0001C13.2365 5.10813 10.8921 2.76373 8.0001 2.76373ZM1.6001 8.0001C1.6001 4.46548 4.46548 1.6001 8.0001 1.6001C11.5347 1.6001 14.4001 4.46548 14.4001 8.0001C14.4001 11.5347 11.5347 14.4001 8.0001 14.4001C4.46548 14.4001 1.6001 11.5347 1.6001 8.0001ZM8.0001 5.47889C8.32143 5.47889 8.58192 5.73937 8.58192 6.0607V8.48495C8.58192 8.80628 8.32143 9.06676 8.0001 9.06676C7.67877 9.06676 7.41828 8.80628 7.41828 8.48495V6.0607C7.41828 5.73937 7.67877 5.47889 8.0001 5.47889ZM7.41828 10.4243C7.41828 10.103 7.67877 9.84252 8.0001 9.84252H8.00495C8.32628 9.84252 8.58676 10.103 8.58676 10.4243V10.4292C8.58676 10.7505 8.32628 11.011 8.00495 11.011H8.0001C7.67877 11.011 7.41828 10.7505 7.41828 10.4292V10.4243Z"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </div>
+        <div
+          class="emotion-8 emotion-9"
+        >
           Item 1
         </div>
       </li>
@@ -144,7 +221,7 @@ exports[`StepList > renders correctly with bulletIcon & sentiment 1`] = `
 </DocumentFragment>
 `;
 
-exports[`StepList > renders correctly with bulletIcon 1`] = `
+exports[`StepList > renders correctly with bulletContent 1`] = `
 <DocumentFragment>
   .emotion-0 {
   list-style: none;
@@ -188,6 +265,42 @@ exports[`StepList > renders correctly with bulletIcon 1`] = `
 }
 
 .emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+  font-size: 1rem;
+  color: #3f4250;
+  background: #ffffff;
+  border: 1px solid #d9dadd;
+}
+
+.emotion-6 {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
+}
+
+.emotion-6 .fillStroke {
+  stroke: currentColor;
+  fill: none;
+}
+
+.emotion-8 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -207,6 +320,20 @@ exports[`StepList > renders correctly with bulletIcon 1`] = `
       >
         <div
           class="emotion-4 emotion-5"
+        >
+          <svg
+            class="emotion-6 emotion-7"
+            viewBox="0 0 16 16"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M8.0001 2.76373C5.10813 2.76373 2.76373 5.10813 2.76373 8.0001C2.76373 10.8921 5.10813 13.2365 8.0001 13.2365C10.8921 13.2365 13.2365 10.8921 13.2365 8.0001C13.2365 5.10813 10.8921 2.76373 8.0001 2.76373ZM1.6001 8.0001C1.6001 4.46548 4.46548 1.6001 8.0001 1.6001C11.5347 1.6001 14.4001 4.46548 14.4001 8.0001C14.4001 11.5347 11.5347 14.4001 8.0001 14.4001C4.46548 14.4001 1.6001 11.5347 1.6001 8.0001ZM8.0001 5.47889C8.32143 5.47889 8.58192 5.73937 8.58192 6.0607V8.48495C8.58192 8.80628 8.32143 9.06676 8.0001 9.06676C7.67877 9.06676 7.41828 8.80628 7.41828 8.48495V6.0607C7.41828 5.73937 7.67877 5.47889 8.0001 5.47889ZM7.41828 10.4243C7.41828 10.103 7.67877 9.84252 8.0001 9.84252H8.00495C8.32628 9.84252 8.58676 10.103 8.58676 10.4243V10.4292C8.58676 10.7505 8.32628 11.011 8.00495 11.011H8.0001C7.67877 11.011 7.41828 10.7505 7.41828 10.4292V10.4243Z"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </div>
+        <div
+          class="emotion-8 emotion-9"
         >
           Item 1
         </div>
@@ -260,6 +387,42 @@ exports[`StepList > renders correctly with disabled state & bullet icon 1`] = `
 }
 
 .emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+  font-size: 1rem;
+  color: #727683;
+  background: #e9eaeb;
+  border: none;
+}
+
+.emotion-6 {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
+}
+
+.emotion-6 .fillStroke {
+  stroke: currentColor;
+  fill: none;
+}
+
+.emotion-8 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -279,6 +442,19 @@ exports[`StepList > renders correctly with disabled state & bullet icon 1`] = `
       >
         <div
           class="emotion-4 emotion-5"
+        >
+          <svg
+            class="emotion-6 emotion-7"
+            viewBox="0 0 16 16"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M12.166 3.126a.75.75 0 0 1 .208 1.04l-5 7.5a.75.75 0 0 1-1.154.114l-3-3a.75.75 0 0 1 1.06-1.06l2.353 2.353 4.493-6.739a.75.75 0 0 1 1.04-.208"
+            />
+          </svg>
+        </div>
+        <div
+          class="emotion-8 emotion-9"
         >
           <div>
             Item 1 with disabled state
@@ -334,6 +510,28 @@ exports[`StepList > renders correctly with disabled state 1`] = `
 }
 
 .emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+  font-size: 1rem;
+  color: #727683;
+  background: #e9eaeb;
+  border: none;
+}
+
+.emotion-6 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -353,6 +551,11 @@ exports[`StepList > renders correctly with disabled state 1`] = `
       >
         <div
           class="emotion-4 emotion-5"
+        >
+          1
+        </div>
+        <div
+          class="emotion-6 emotion-7"
         >
           <div>
             Item 1 with disabled state
@@ -408,6 +611,28 @@ exports[`StepList > renders correctly with small size 1`] = `
 }
 
 .emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  font-size: 0.875rem;
+  color: #3f4250;
+  background: #ffffff;
+  border: 1px solid #d9dadd;
+}
+
+.emotion-6 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -427,6 +652,11 @@ exports[`StepList > renders correctly with small size 1`] = `
       >
         <div
           class="emotion-4 emotion-5"
+        >
+          1
+        </div>
+        <div
+          class="emotion-6 emotion-7"
         >
           Item 1 small
         </div>

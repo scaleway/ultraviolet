@@ -1742,10 +1742,10 @@ exports[`Banner > should render correctly with dark theme 1`] = `
 .emotion-19 {
   vertical-align: middle;
   fill: currentColor;
-  height: 14px;
-  width: 14px;
-  min-width: 14px;
-  min-height: 14px;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
   margin-left: 0.5rem;
 }
 
@@ -1768,7 +1768,7 @@ exports[`Banner > should render correctly with dark theme 1`] = `
   gap: 0.5rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 2rem;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1812,37 +1812,29 @@ exports[`Banner > should render correctly with dark theme 1`] = `
 .emotion-23 {
   vertical-align: middle;
   fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
 .emotion-23 .fillStroke {
   stroke: currentColor;
   fill: none;
-}
-
-.emotion-23 path {
-  fill: currentColor;
 }
 
 .emotion-23 {
   vertical-align: middle;
   fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
 .emotion-23 .fillStroke {
   stroke: currentColor;
   fill: none;
-}
-
-.emotion-23 path {
-  fill: currentColor;
 }
 
 <div
@@ -1896,7 +1888,7 @@ exports[`Banner > should render correctly with dark theme 1`] = `
             >
               <svg
                 class="emotion-18 emotion-19 emotion-20"
-                viewBox="0 0 20 20"
+                viewBox="0 0 16 16"
               >
                 <path
                   d="M6.22 8.72a.75.75 0 0 0 1.06 1.06l5.22-5.22v1.69a.75.75 0 0 0 1.5 0v-3.5a.75.75 0 0 0-.75-.75h-3.5a.75.75 0 0 0 0 1.5h1.69z"
@@ -1915,9 +1907,8 @@ exports[`Banner > should render correctly with dark theme 1`] = `
         type="button"
       >
         <svg
-          class="emotion-23 emotion-24"
+          class="emotion-23 emotion-20"
           viewBox="0 0 16 16"
-          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"
