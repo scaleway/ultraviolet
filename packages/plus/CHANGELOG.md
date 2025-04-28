@@ -1,5 +1,21 @@
 # @ultraviolet/plus
 
+## 0.27.0
+
+### Minor Changes
+
+- [#5030](https://github.com/scaleway/ultraviolet/pull/5030) [`aa6f519`](https://github.com/scaleway/ultraviolet/commit/aa6f5190170c7b5bc233811d35fc09c21f93d0cc) Thanks [@matthprost](https://github.com/matthprost)! - New prop `autoCompletion` on `<CodeEditor />` component
+
+### Patch Changes
+
+- [#5053](https://github.com/scaleway/ultraviolet/pull/5053) [`2a9c1b4`](https://github.com/scaleway/ultraviolet/commit/2a9c1b4c76d54da411f69126e86fa7ee2fe8c8a2) Thanks [@matthprost](https://github.com/matthprost)! - Fix `PascalToCamelCaseWithoutSuffix` type utility to simplify the usage
+
+- [#5049](https://github.com/scaleway/ultraviolet/pull/5049) [`1407666`](https://github.com/scaleway/ultraviolet/commit/14076667dd174a1cb3125d65cb849d735accbd5e) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<ContentCard />` to align center the title when there is no description, children of subtitle
+
+- Updated dependencies [[`2a9c1b4`](https://github.com/scaleway/ultraviolet/commit/2a9c1b4c76d54da411f69126e86fa7ee2fe8c8a2), [`2eee369`](https://github.com/scaleway/ultraviolet/commit/2eee369ed7191ab5f82dac27b28e0e339b816464), [`2a9c1b4`](https://github.com/scaleway/ultraviolet/commit/2a9c1b4c76d54da411f69126e86fa7ee2fe8c8a2), [`2a9c1b4`](https://github.com/scaleway/ultraviolet/commit/2a9c1b4c76d54da411f69126e86fa7ee2fe8c8a2)]:
+  - @ultraviolet/ui@1.94.1
+  - @ultraviolet/icons@3.15.0
+
 ## 0.26.1
 
 ### Patch Changes

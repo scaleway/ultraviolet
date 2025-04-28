@@ -1,5 +1,13 @@
 # Change Log
 
+## 3.15.0
+
+### Minor Changes
+
+- [#5009](https://github.com/scaleway/ultraviolet/pull/5009) [`2eee369`](https://github.com/scaleway/ultraviolet/commit/2eee369ed7191ab5f82dac27b28e0e339b816464) Thanks [@matthprost](https://github.com/matthprost)! - New icon `PartnerSpace` among system icons
+
+- [#5053](https://github.com/scaleway/ultraviolet/pull/5053) [`2a9c1b4`](https://github.com/scaleway/ultraviolet/commit/2a9c1b4c76d54da411f69126e86fa7ee2fe8c8a2) Thanks [@matthprost](https://github.com/matthprost)! - Export `ProductIconsNames`, `LogoIconsNames`, `SystemIconsNames` and `CategoryIconsNames` types
+
 ## 3.14.0
 
 ### Minor Changes

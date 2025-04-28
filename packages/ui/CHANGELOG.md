@@ -1,5 +1,16 @@
 # Change Log
 
+## 1.94.1
+
+### Patch Changes
+
+- [#5053](https://github.com/scaleway/ultraviolet/pull/5053) [`2a9c1b4`](https://github.com/scaleway/ultraviolet/commit/2a9c1b4c76d54da411f69126e86fa7ee2fe8c8a2) Thanks [@matthprost](https://github.com/matthprost)! - Sanitize input of `SearchBarDropdown`
+
+- [#5053](https://github.com/scaleway/ultraviolet/pull/5053) [`2a9c1b4`](https://github.com/scaleway/ultraviolet/commit/2a9c1b4c76d54da411f69126e86fa7ee2fe8c8a2) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<VerificationCode />` to have `autocomplete="off"`
+
+- Updated dependencies [[`2eee369`](https://github.com/scaleway/ultraviolet/commit/2eee369ed7191ab5f82dac27b28e0e339b816464), [`2a9c1b4`](https://github.com/scaleway/ultraviolet/commit/2a9c1b4c76d54da411f69126e86fa7ee2fe8c8a2)]:
+  - @ultraviolet/icons@3.15.0
+
 ## 1.94.0
 
 ### Minor Changes

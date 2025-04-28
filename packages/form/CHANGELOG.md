@@ -1,5 +1,14 @@
 # Change Log
 
+## 3.17.1
+
+### Patch Changes
+
+- [#5057](https://github.com/scaleway/ultraviolet/pull/5057) [`d70dce8`](https://github.com/scaleway/ultraviolet/commit/d70dce897af49b7ef7e9014fac4b5983d9b85bc4) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<SelectInputFieldV2 />` spread props to avoid missing some of them
+
+- Updated dependencies [[`2a9c1b4`](https://github.com/scaleway/ultraviolet/commit/2a9c1b4c76d54da411f69126e86fa7ee2fe8c8a2), [`2a9c1b4`](https://github.com/scaleway/ultraviolet/commit/2a9c1b4c76d54da411f69126e86fa7ee2fe8c8a2)]:
+  - @ultraviolet/ui@1.94.1
+
 ## 3.17.0
 
 ### Minor Changes
