@@ -262,7 +262,7 @@ importers:
         version: 19.0.0(react@19.0.0)
       react-scan:
         specifier: 0.3.3
-        version: 0.3.3(@types/react@19.0.12)(next@15.3.1(@babel/core@7.26.10)(@playwright/test@1.52.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react-dom@19.0.0(react@19.0.0))(react-router-dom@7.5.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react-router@7.5.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react@19.0.0)(rollup@4.40.0)
+        version: 0.3.3(@types/react@19.0.12)(next@15.3.1(@babel/core@7.26.10)(@playwright/test@1.52.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react-dom@19.0.0(react@19.0.0))(react-router-dom@7.5.2(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react-router@7.5.2(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react@19.0.0)(rollup@4.40.0)
       read-pkg:
         specifier: 9.0.1
         version: 9.0.1
@@ -348,8 +348,8 @@ importers:
         specifier: 19.0.0
         version: 19.0.0(react@19.0.0)
       react-router-dom:
-        specifier: 7.5.1
-        version: 7.5.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+        specifier: 7.5.2
+        version: 7.5.2(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
     devDependencies:
       '@emotion/babel-plugin':
         specifier: 11.13.5
@@ -7037,15 +7037,15 @@ packages:
     resolution: {integrity: sha512-z6F7K9bV85EfseRCp2bzrpyQ0Gkw1uLoCel9XBVWPg/TjRj94SkJzUTGfOa4bs7iJvBWtQG0Wq7wnI0syw3EBQ==}
     engines: {node: '>=0.10.0'}
 
-  react-router-dom@7.5.1:
-    resolution: {integrity: sha512-5DPSPc7ENrt2tlKPq0FtpG80ZbqA9aIKEyqX6hSNJDlol/tr6iqCK4crqdsusmOSSotq6zDsn0y3urX9TuTNmA==}
+  react-router-dom@7.5.2:
+    resolution: {integrity: sha512-yk1XW8Fj7gK7flpYBXF3yzd2NbX6P7Kxjvs2b5nu1M04rb5pg/Zc4fGdBNTeT4eDYL2bvzWNyKaIMJX/RKHTTg==}
     engines: {node: '>=20.0.0'}
     peerDependencies:
       react: '>=18'
       react-dom: '>=18'
 
-  react-router@7.5.1:
-    resolution: {integrity: sha512-/jjU3fcYNd2bwz9Q0xt5TwyiyoO8XjSEFXJY4O/lMAlkGTHWuHRAbR9Etik+lSDqMC7A7mz3UlXzgYT6Vl58sA==}
+  react-router@7.5.2:
+    resolution: {integrity: sha512-9Rw8r199klMnlGZ8VAsV/I8WrIF6IyJ90JQUdboupx1cdkgYqwnrYjH+I/nY/7cA1X5zia4mDJqH36npP7sxGQ==}
     engines: {node: '>=20.0.0'}
     peerDependencies:
       react: '>=18'
@@ -15871,13 +15871,13 @@ snapshots:
 
   react-refresh@0.17.0: {}
 
-  react-router-dom@7.5.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0):
+  react-router-dom@7.5.2(react-dom@19.0.0(react@19.0.0))(react@19.0.0):
     dependencies:
       react: 19.0.0
       react-dom: 19.0.0(react@19.0.0)
-      react-router: 7.5.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      react-router: 7.5.2(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
 
-  react-router@7.5.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0):
+  react-router@7.5.2(react-dom@19.0.0(react@19.0.0))(react@19.0.0):
     dependencies:
       cookie: 1.0.2
       react: 19.0.0
@@ -15886,7 +15886,7 @@ snapshots:
     optionalDependencies:
       react-dom: 19.0.0(react@19.0.0)
 
-  react-scan@0.3.3(@types/react@19.0.12)(next@15.3.1(@babel/core@7.26.10)(@playwright/test@1.52.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react-dom@19.0.0(react@19.0.0))(react-router-dom@7.5.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react-router@7.5.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react@19.0.0)(rollup@4.40.0):
+  react-scan@0.3.3(@types/react@19.0.12)(next@15.3.1(@babel/core@7.26.10)(@playwright/test@1.52.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react-dom@19.0.0(react@19.0.0))(react-router-dom@7.5.2(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react-router@7.5.2(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react@19.0.0)(rollup@4.40.0):
     dependencies:
       '@babel/core': 7.26.10
       '@babel/generator': 7.27.0
@@ -15909,8 +15909,8 @@ snapshots:
       tsx: 4.19.3
     optionalDependencies:
       next: 15.3.1(@babel/core@7.26.10)(@playwright/test@1.52.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      react-router: 7.5.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      react-router-dom: 7.5.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      react-router: 7.5.2(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      react-router-dom: 7.5.2(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       unplugin: 2.1.0
     transitivePeerDependencies:
       - '@types/react'
