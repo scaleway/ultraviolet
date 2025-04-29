@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { SelectableCard } from '..'
 import { Badge } from '../../Badge'
 import { Row } from '../../Row'
+import { SelectInputV2 } from '../../SelectInputV2'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
 import fr from './assets/fr.svg'
@@ -94,8 +95,19 @@ export const Examples: StoryFn = args => {
             </Stack>
           }
         >
-          This option will cost you 1.99€ and provide you with a lot of
-          happiness
+          <Stack gap={1}>
+            This option will cost you 1.99€ and provide you with a lot of
+            happiness
+            <SelectInputV2
+              label="Select a sub option"
+              options={[
+                {
+                  label: 'Sub option 1',
+                  value: 'option1',
+                },
+              ]}
+            />
+          </Stack>
         </SelectableCard>
         <SelectableCard
           {...args}

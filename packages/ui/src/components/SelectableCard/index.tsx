@@ -46,6 +46,9 @@ const Container = styled(Stack)`
     border-color 200ms ease,
     box-shadow 200ms ease;
   cursor: pointer;
+  &[data-has-default-cursor='true'] {
+    cursor: default;
+  }
   background: ${({ theme }) => theme.colors.neutral.background};
 
   border: 1px solid ${({ theme }) => theme.colors.neutral.border};
@@ -130,6 +133,9 @@ const StyledStack = styled(Stack)`
   }
   &[data-has-label='false'] {
     display: contents;
+  }
+  &[data-has-default-cursor='true'] {
+    cursor: default;
   }
 `
 
@@ -314,6 +320,7 @@ export const SelectableCard = forwardRef(
   ) => {
     const theme = useTheme()
     const innerRef = useRef<HTMLInputElement>(null)
+    const childrenRef = useRef<HTMLDivElement>(null)
     const [svgContent, setSvgContent] = useState<string | null>(null)
     const image = useMemo(() => {
       if (illustration) return 'illustration'
@@ -417,6 +424,10 @@ export const SelectableCard = forwardRef(
       [innerRef],
     )
 
+    const isComplexChildren = ['function', 'array', 'object'].includes(
+      typeof children,
+    )
+
     const onClickContainer: MouseEventHandler<HTMLDivElement> = useCallback(
       event => {
         if (innerRef.current && !disabled) {
@@ -427,7 +438,7 @@ export const SelectableCard = forwardRef(
 
           const targetNode = event.target as Node
 
-          // Check if the event target is the input element or its associated label
+          // Check if the event target is the input element, its associated label, or the children content
           if (
             !inputElement.contains(targetNode) &&
             !labelElement?.contains(targetNode)
@@ -442,7 +453,11 @@ export const SelectableCard = forwardRef(
     return (
       <ParentContainer>
         <Container
-          onClick={onClickContainer}
+          onClick={
+            type === 'checkbox' && isComplexChildren
+              ? undefined
+              : onClickContainer
+          }
           onKeyDown={onKeyDown}
           className={className}
           data-checked={checked}
@@ -459,6 +474,7 @@ export const SelectableCard = forwardRef(
           flex={1}
           tabIndex={disabled ? undefined : 0}
           role="button"
+          data-has-default-cursor={type === 'checkbox' && isComplexChildren}
         >
           <IllustrationContainer>
             {type === 'radio' ? (
@@ -501,7 +517,14 @@ export const SelectableCard = forwardRef(
               />
             )}
             {children ? (
-              <StyledStack data-has-label={!!label && showTick} width="100%">
+              <StyledStack
+                ref={childrenRef}
+                data-has-label={!!label && showTick}
+                data-has-default-cursor={
+                  type === 'checkbox' && isComplexChildren
+                }
+                width="100%"
+              >
                 {typeof children === 'function'
                   ? children({ checked, disabled })
                   : children}

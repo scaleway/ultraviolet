@@ -123,6 +123,10 @@ exports[`SelectableCardOptionGroupField > should render correctly 1`] = `
   margin-bottom: -0.25rem;
 }
 
+.emotion-12[data-has-default-cursor='true'] {
+  cursor: default;
+}
+
 .emotion-12[data-checked='true'] {
   border: 1px solid #8c40ef;
 }
@@ -412,6 +416,10 @@ exports[`SelectableCardOptionGroupField > should render correctly 1`] = `
 
 .emotion-27[data-has-label='false'] {
   display: contents;
+}
+
+.emotion-27[data-has-default-cursor='true'] {
+  cursor: default;
 }
 
 .emotion-29 {
@@ -784,6 +792,7 @@ exports[`SelectableCardOptionGroupField > should render correctly 1`] = `
                 data-checked="true"
                 data-disabled="false"
                 data-error="false"
+                data-has-default-cursor="false"
                 data-has-label="false"
                 data-image="none"
                 data-type="radio"
@@ -838,6 +847,7 @@ exports[`SelectableCardOptionGroupField > should render correctly 1`] = `
                 </div>
                 <div
                   class="emotion-27 emotion-28"
+                  data-has-default-cursor="false"
                   data-has-label="false"
                 >
                   <div
@@ -925,6 +935,7 @@ exports[`SelectableCardOptionGroupField > should render correctly 1`] = `
                 data-checked="false"
                 data-disabled="false"
                 data-error="false"
+                data-has-default-cursor="false"
                 data-has-label="false"
                 data-image="none"
                 data-type="radio"
@@ -978,6 +989,7 @@ exports[`SelectableCardOptionGroupField > should render correctly 1`] = `
                 </div>
                 <div
                   class="emotion-27 emotion-28"
+                  data-has-default-cursor="false"
                   data-has-label="false"
                 >
                   <div
@@ -1065,6 +1077,7 @@ exports[`SelectableCardOptionGroupField > should render correctly 1`] = `
                 data-checked="false"
                 data-disabled="false"
                 data-error="false"
+                data-has-default-cursor="false"
                 data-has-label="false"
                 data-image="none"
                 data-type="radio"
@@ -1118,6 +1131,7 @@ exports[`SelectableCardOptionGroupField > should render correctly 1`] = `
                 </div>
                 <div
                   class="emotion-27 emotion-28"
+                  data-has-default-cursor="false"
                   data-has-label="false"
                 >
                   <div
