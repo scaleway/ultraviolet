@@ -1,6 +1,8 @@
-import { ThemeProvider } from '@emotion/react'
+import { Global, ThemeProvider } from '@emotion/react'
 import '@ultraviolet/fonts/fonts.css'
-import { Text, theme } from '@ultraviolet/ui'
+import { consoleLightTheme } from '@ultraviolet/themes'
+import { Text, normalize } from '@ultraviolet/ui'
+import type { ReactNode } from 'react'
 import { lazy } from 'react'
 import {
   Link as ReactRouterLink,
@@ -8,6 +10,10 @@ import {
   BrowserRouter as Router,
   Routes,
 } from 'react-router-dom'
+
+const GlobalWrapper = ({ children }: { children: ReactNode }) => (
+  <div style={{ padding: '48px' }}>{children}</div>
+)
 
 /**
  * We get all the render.tsx in tests folder and generate individual pages / routes to render the content.
@@ -56,27 +62,30 @@ const WelcomePage = () => (
 )
 
 const App = () => (
-  <ThemeProvider theme={theme}>
-    <Router>
-      <Routes>
-        <Route path="/" element={<WelcomePage />} />
-        {pagesToRender.map(path => {
-          const Element = path?.Component
+  <ThemeProvider theme={consoleLightTheme}>
+    <Global styles={[normalize()]} />
+    <GlobalWrapper>
+      <Router>
+        <Routes>
+          <Route path="/" element={<WelcomePage />} />
+          {pagesToRender.map(path => {
+            const Element = path?.Component
 
-          if (Element) {
-            return (
-              <Route
-                key={path?.name}
-                path={path?.name?.split('/')[2]?.toLowerCase()}
-                element={<Element />}
-              />
-            )
-          }
+            if (Element) {
+              return (
+                <Route
+                  key={path?.name}
+                  path={path?.name?.split('/')[2]?.toLowerCase()}
+                  element={<Element />}
+                />
+              )
+            }
 
-          return null
-        })}
-      </Routes>
-    </Router>
+            return null
+          })}
+        </Routes>
+      </Router>
+    </GlobalWrapper>
   </ThemeProvider>
 )
 
