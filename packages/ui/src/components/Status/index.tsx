@@ -51,6 +51,11 @@ const Container = styled.span`
   display: flex;
   width: ${WIDTH};
   height: ${HEIGHT};
+  &[data-notification='true'] {
+    position: absolute;
+    top: ${({ theme }) => theme.space[0.5]};
+    right: ${({ theme }) => theme.space[0.5]};
+  }
 `
 
 type StatusProps = {
@@ -59,6 +64,10 @@ type StatusProps = {
   sentiment: StatusSentiment
   tooltip?: string
   'data-testid'?: string
+  /**
+   * This prop will set status as a notification and make it absolute to its parent displayed on top right.
+   */
+  notification?: boolean
 }
 
 /**
@@ -70,9 +79,14 @@ export const Status = ({
   tooltip,
   sentiment,
   'data-testid': dataTestId,
+  notification,
 }: StatusProps) => (
   <Tooltip text={tooltip}>
-    <Container className={className} data-testid={dataTestId}>
+    <Container
+      className={className}
+      data-testid={dataTestId}
+      data-notification={notification}
+    >
       {animated ? <StyledAnimatedCircle sentiment={sentiment} /> : null}
       <StyledCircle sentiment={sentiment} />
     </Container>
