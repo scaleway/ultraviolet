@@ -139,7 +139,6 @@ export const EmptyState = ({
           <Link
             href={learnMore.link}
             target={learnMore.target}
-            sentiment="info"
             iconPosition="right"
             size={size === 'small' ? 'small' : undefined}
           >

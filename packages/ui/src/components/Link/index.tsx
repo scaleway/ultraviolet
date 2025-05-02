@@ -35,6 +35,12 @@ export const PROMINENCES = {
 }
 
 export type ProminenceProps = keyof typeof PROMINENCES
+type SupportedSentiments = 'primary'
+
+/**
+ * @deprecated Only `primary` is supported
+ */
+type DeprecatedSentiments = Exclude<ExtendedColor, SupportedSentiments>
 
 type LinkSizes = 'large' | 'small' | 'xsmall'
 type LinkIconPosition = 'left' | 'right'
@@ -42,7 +48,11 @@ type LinkProps = {
   children: ReactNode
   target?: HTMLAttributeAnchorTarget
   download?: string | boolean
-  sentiment?: ExtendedColor
+  /**
+   * **Only sentiment `primary` is supported.**
+   * All the other sentiments are deprecated
+   */
+  sentiment?: SupportedSentiments | DeprecatedSentiments
   prominence?: ProminenceProps
   size?: LinkSizes
   iconPosition?: LinkIconPosition
@@ -128,6 +138,14 @@ const StyledLink = styled('a', {
       paragraph-spacing: ${theme.typography[variant].paragraphSpacing};
       text-case: ${theme.typography[variant].textCase};
     `}
+
+
+  &:visited {
+      color: ${({ theme }) => theme.colors.primary.text};
+      text-decoration-color: transparent;
+  }
+
+
   &:hover,
   &:focus {
     ${StyledArrowLeftIcon}, ${StyledArrowRightIcon}, ${StyledOpenInNewIcon} {
@@ -166,6 +184,11 @@ const StyledLink = styled('a', {
         text-decoration-color: ${theme.colors.other.monochrome[sentiment].textHover};
       `
     }}
+
+    &:visited {
+      color: ${({ theme }) => theme.colors.primary.textHover};
+      text-decoration-color: ${({ theme }) => theme.colors.primary.textHover};
+    }
   }
 
   &[data-variant='inline'] {

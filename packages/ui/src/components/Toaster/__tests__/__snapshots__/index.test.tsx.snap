@@ -179,6 +179,11 @@ exports[`Toaster > components > renders correctly Toast.Link 1`] = `
   pointer-events: none;
 }
 
+.emotion-0:visited {
+  color: #641cb3;
+  text-decoration-color: transparent;
+}
+
 .emotion-0:hover,
 .emotion-0:focus {
   outline: none;
@@ -199,6 +204,12 @@ exports[`Toaster > components > renders correctly Toast.Link 1`] = `
   -moz-transform: translate(-0.25rem, 0);
   -ms-transform: translate(-0.25rem, 0);
   transform: translate(-0.25rem, 0);
+}
+
+.emotion-0:hover:visited,
+.emotion-0:focus:visited {
+  color: #521094;
+  text-decoration-color: #521094;
 }
 
 .emotion-0[data-variant='inline'] {

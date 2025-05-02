@@ -100,7 +100,7 @@ export const Item = ({
     minWidth={minWidth}
   >
     {to ? (
-      <StyledLink sentiment="neutral" href={to} size="small">
+      <StyledLink prominence="stronger" href={to} size="small">
         {children}
       </StyledLink>
     ) : (
