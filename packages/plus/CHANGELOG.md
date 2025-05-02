@@ -1,5 +1,46 @@
 # @ultraviolet/plus
 
+## 0.27.2
+
+### Patch Changes
+
+- [#5074](https://github.com/scaleway/ultraviolet/pull/5074) [`57a38d2`](https://github.com/scaleway/ultraviolet/commit/57a38d2ad2babf6117e9ca5ff62ec04e604e3cf5) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<EstimateCost.Unit />` to have correct amount updated according to the item
+
+## 0.27.1
+
+### Patch Changes
+
+- Updated dependencies [[`c7d0d85`](https://github.com/scaleway/ultraviolet/commit/c7d0d8578bfa92ac563c7dd39e2c9cedae095aab)]:
+  - @ultraviolet/ui@1.94.2
+
+## 0.27.0
+
+### Minor Changes
+
+- [#5030](https://github.com/scaleway/ultraviolet/pull/5030) [`aa6f519`](https://github.com/scaleway/ultraviolet/commit/aa6f5190170c7b5bc233811d35fc09c21f93d0cc) Thanks [@matthprost](https://github.com/matthprost)! - New prop `autoCompletion` on `<CodeEditor />` component
+
+### Patch Changes
+
+- [#5053](https://github.com/scaleway/ultraviolet/pull/5053) [`2a9c1b4`](https://github.com/scaleway/ultraviolet/commit/2a9c1b4c76d54da411f69126e86fa7ee2fe8c8a2) Thanks [@matthprost](https://github.com/matthprost)! - Fix `PascalToCamelCaseWithoutSuffix` type utility to simplify the usage
+
+- [#5049](https://github.com/scaleway/ultraviolet/pull/5049) [`1407666`](https://github.com/scaleway/ultraviolet/commit/14076667dd174a1cb3125d65cb849d735accbd5e) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<ContentCard />` to align center the title when there is no description, children of subtitle
+
+- Updated dependencies [[`2a9c1b4`](https://github.com/scaleway/ultraviolet/commit/2a9c1b4c76d54da411f69126e86fa7ee2fe8c8a2), [`2eee369`](https://github.com/scaleway/ultraviolet/commit/2eee369ed7191ab5f82dac27b28e0e339b816464), [`2a9c1b4`](https://github.com/scaleway/ultraviolet/commit/2a9c1b4c76d54da411f69126e86fa7ee2fe8c8a2), [`2a9c1b4`](https://github.com/scaleway/ultraviolet/commit/2a9c1b4c76d54da411f69126e86fa7ee2fe8c8a2)]:
+  - @ultraviolet/ui@1.94.1
+  - @ultraviolet/icons@3.15.0
+
+## 0.26.1
+
+### Patch Changes
+
+- [#5055](https://github.com/scaleway/ultraviolet/pull/5055) [`b6c456d`](https://github.com/scaleway/ultraviolet/commit/b6c456d756141e4befdd87667eaddaf0cc1e248e) Thanks [@matthprost](https://github.com/matthprost)! - Fix `PascalToCamelCaseWithoutSuffix` type utility to simplify the usage
+
+- [#4988](https://github.com/scaleway/ultraviolet/pull/4988) [`ef6e926`](https://github.com/scaleway/ultraviolet/commit/ef6e9267be8eb6ef8a16e52b7b224b83a248595f) Thanks [@matthprost](https://github.com/matthprost)! - Improve `<Navigation />` performance not to render all sub items that are expandable
+
+- Updated dependencies [[`f1bb63d`](https://github.com/scaleway/ultraviolet/commit/f1bb63d9c4966f5cbeabbe1b0457beaabded62e1), [`1f21803`](https://github.com/scaleway/ultraviolet/commit/1f2180317917e6cab7603361da9956ffc42b000d), [`0ca192f`](https://github.com/scaleway/ultraviolet/commit/0ca192f994641abf9c19f6b3b81cdb60e15b952e), [`c1a0104`](https://github.com/scaleway/ultraviolet/commit/c1a0104c37fcf0b8be8cd9020e611dd71a18a449), [`9cf64a6`](https://github.com/scaleway/ultraviolet/commit/9cf64a6af130ff1a9e93d058e230542191ee9303), [`ef6e926`](https://github.com/scaleway/ultraviolet/commit/ef6e9267be8eb6ef8a16e52b7b224b83a248595f), [`f989f99`](https://github.com/scaleway/ultraviolet/commit/f989f995442f9746892bb356ec7aa12166a2c6bf)]:
+  - @ultraviolet/ui@1.94.0
+  - @ultraviolet/icons@3.14.0
+
 ## 0.26.0
 
 ### Minor Changes

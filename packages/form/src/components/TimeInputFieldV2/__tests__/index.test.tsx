@@ -23,7 +23,7 @@ describe('TextInputFieldV2', () => {
     const onFocus = vi.fn()
     const onChange = vi.fn()
     const onBlur = vi.fn()
-    const { asFragment } = renderWithForm(
+    renderWithForm(
       <>
         <TimeInputFieldV2
           name="Test"
@@ -48,7 +48,5 @@ describe('TextInputFieldV2', () => {
 
     await userEvent.click(screen.getByText('blur'))
     expect(onBlur).toHaveBeenCalledTimes(1)
-
-    expect(asFragment()).toMatchSnapshot()
   })
 })

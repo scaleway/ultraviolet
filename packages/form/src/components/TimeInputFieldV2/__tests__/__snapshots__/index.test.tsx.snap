@@ -251,6 +251,7 @@ exports[`TextInputFieldV2 > should render correctly 1`] = `
               <input
                 aria-valuemax="23"
                 aria-valuemin="0"
+                autocomplete="false"
                 class="emotion-11 emotion-12"
                 data-size="medium"
                 data-testid="hours-input"
@@ -270,6 +271,7 @@ exports[`TextInputFieldV2 > should render correctly 1`] = `
               <input
                 aria-valuemax="59"
                 aria-valuemin="0"
+                autocomplete="false"
                 class="emotion-11 emotion-12"
                 data-size="medium"
                 data-testid="minutes-input"
@@ -289,6 +291,7 @@ exports[`TextInputFieldV2 > should render correctly 1`] = `
               <input
                 aria-valuemax="59"
                 aria-valuemin="0"
+                autocomplete="false"
                 class="emotion-11 emotion-12"
                 data-size="medium"
                 data-testid="seconds-input"
@@ -556,6 +559,7 @@ exports[`TextInputFieldV2 > should render correctly disabled 1`] = `
               <input
                 aria-valuemax="23"
                 aria-valuemin="0"
+                autocomplete="false"
                 class="emotion-11 emotion-12"
                 data-size="medium"
                 data-testid="hours-input"
@@ -575,6 +579,7 @@ exports[`TextInputFieldV2 > should render correctly disabled 1`] = `
               <input
                 aria-valuemax="59"
                 aria-valuemin="0"
+                autocomplete="false"
                 class="emotion-11 emotion-12"
                 data-size="medium"
                 data-testid="minutes-input"
@@ -594,6 +599,7 @@ exports[`TextInputFieldV2 > should render correctly disabled 1`] = `
               <input
                 aria-valuemax="59"
                 aria-valuemin="0"
+                autocomplete="false"
                 class="emotion-11 emotion-12"
                 data-size="medium"
                 data-testid="seconds-input"
@@ -605,294 +611,6 @@ exports[`TextInputFieldV2 > should render correctly disabled 1`] = `
           </div>
         </div>
       </div>
-    </form>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`TextInputFieldV2 > should trigger events 1`] = `
-<DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  cursor: text;
-  padding: 0.5rem;
-  box-shadow: none;
-  background: #ffffff;
-  border-radius: 0.25rem;
-  border: 1px solid #d9dadd;
-}
-
-.emotion-2:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2[data-disabled="false"]:hover,
-.emotion-2 [data-disabled="false"]:focus {
-  border-color: #792dd4;
-  outline: none;
-}
-
-.emotion-2:focus-within {
-  border-color: #792dd4;
-}
-
-.emotion-2[data-size='small'] {
-  height: 2rem;
-  padding-left: 0.5rem;
-}
-
-.emotion-2[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-2[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-2[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-2[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.emotion-2[data-error='true'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-2[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #92103f;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-2[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
-  border-color: #92103f;
-}
-
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.emotion-8 {
-  border: none;
-  outline: none;
-  background: transparent;
-  font-size: 0.875rem;
-  width: 1.5625rem;
-  height: 1.5rem;
-  text-align: center;
-  border-radius: 0.25rem;
-  color: #3f4250;
-  caret-color: transparent;
-}
-
-.emotion-8[data-size='large'] {
-  font-size: 1rem;
-}
-
-.emotion-8:not(:disabled):hover {
-  background-color: #e9eaeb;
-  color: #727683;
-}
-
-.emotion-8:not(:disabled):active,
-.emotion-8:not(:disabled):focus {
-  background-color: #e9eaeb;
-  color: #3f4250;
-}
-
-.emotion-8:-moz-read-only {
-  cursor: default;
-}
-
-.emotion-8:read-only {
-  cursor: default;
-}
-
-.emotion-8:disabled {
-  cursor: not-allowed;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.emotion-8[data-period="true"] {
-  color: #727683;
-}
-
-.emotion-8::-moz-selection {
-  background: none;
-}
-
-.emotion-8::selection {
-  background: none;
-}
-
-.emotion-11 {
-  color: #3f4250;
-  font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  padding-inline: 0.125rem;
-}
-
-<div
-    data-testid="testing"
-  >
-    <form
-      novalidate=""
-    >
-      <div
-        class="emotion-0 emotion-1"
-      >
-        <div
-          aria-required="false"
-          class="emotion-2 emotion-3"
-          data-disabled="false"
-          data-error="false"
-          data-readonly="false"
-          data-size="medium"
-        >
-          <div
-            class="emotion-4 emotion-1"
-          >
-            <div
-              class="emotion-4 emotion-1"
-            >
-              <input
-                aria-valuemax="23"
-                aria-valuemin="0"
-                aria-valuenow="1"
-                class="emotion-8 emotion-9"
-                data-size="medium"
-                data-testid="hours-input"
-                placeholder="00"
-                role="spinbutton"
-                value="01"
-              />
-              <span
-                class="emotion-10 emotion-11 emotion-12"
-              >
-                :
-              </span>
-            </div>
-            <div
-              class="emotion-4 emotion-1"
-            >
-              <input
-                aria-valuemax="59"
-                aria-valuemin="0"
-                class="emotion-8 emotion-9"
-                data-size="medium"
-                data-testid="minutes-input"
-                placeholder="00"
-                role="spinbutton"
-                value=""
-              />
-              <span
-                class="emotion-10 emotion-11 emotion-12"
-              >
-                :
-              </span>
-            </div>
-            <div
-              class="emotion-4 emotion-1"
-            >
-              <input
-                aria-valuemax="59"
-                aria-valuemin="0"
-                class="emotion-8 emotion-9"
-                data-size="medium"
-                data-testid="seconds-input"
-                placeholder="00"
-                role="spinbutton"
-                value=""
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-      blur
     </form>
   </div>
 </DocumentFragment>

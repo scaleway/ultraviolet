@@ -13,6 +13,4 @@ export type RemoveSuffix<
 export type PascalToCamelCaseWithoutSuffix<
   T extends string,
   Suffix extends string,
-> = T extends `${infer Prefix}${Suffix}`
-  ? `${PascalToCamelCase<Prefix extends `${infer First}${infer Rest}` ? `${First}${Rest}` : never>}`
-  : never
+> = `${PascalToCamelCase<T extends `${infer Prefix}${Suffix}` ? Prefix : T>}`

@@ -1,5 +1,8 @@
 import type { StoryFn } from '@storybook/react'
-import { AdvancedSettingsProductIcon } from '@ultraviolet/icons/product'
+import {
+  AdvancedSettingsProductIcon,
+  ConsoleProductIcon,
+} from '@ultraviolet/icons/product'
 import { Button, Link, Row, Stack } from '@ultraviolet/ui'
 import illustration2 from '../assets/illustration2.svg'
 import { ContentCard } from '../index'
@@ -138,6 +141,19 @@ export const Examples: StoryFn<typeof ContentCard> = args => (
         icon={<AdvancedSettingsProductIcon size="large" />}
         title="Manage Scaleway data"
         description="Grafana users can visualise all their resources logs and metrics in their Grafana dashboards."
+        href="https://scaleway.com"
+      />
+    </Row>
+
+    <Row templateColumns="repeat(2, 1fr)" gap={1}>
+      <ContentCard
+        {...args}
+        description={undefined}
+        direction="row"
+        subtitle={undefined}
+        image={undefined}
+        icon={<ConsoleProductIcon size="medium" />}
+        title="Get help"
         href="https://scaleway.com"
       />
     </Row>

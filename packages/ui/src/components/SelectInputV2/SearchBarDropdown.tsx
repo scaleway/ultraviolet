@@ -82,10 +82,13 @@ export const SearchBarDropdown = ({
     setSelectedData,
     selectedData,
   } = useSelectInput()
+  const escapeRegExp = (string: string) =>
+    string.replace(/[.*+?^{}()|[\]\\]/g, String.raw`\$&`)
+
   const handleChange = (search: string) => {
     if (search.length > 0) {
       // case insensitive search
-      const regex = new RegExp(search.toString(), 'i')
+      const regex = new RegExp(escapeRegExp(search.toString()), 'i')
       if (!Array.isArray(options)) {
         const filteredOptions = { ...options }
         Object.keys(filteredOptions).map((group: string) => {

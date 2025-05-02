@@ -1,5 +1,34 @@
 # Change Log
 
+## 3.17.2
+
+### Patch Changes
+
+- [#5085](https://github.com/scaleway/ultraviolet/pull/5085) [`31c6b28`](https://github.com/scaleway/ultraviolet/commit/31c6b28bff643d5f5eea31abfd3bb4c1248115e8) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<SelectInputFieldV2 />` to have label and aria-label passed to component
+
+- Updated dependencies [[`c7d0d85`](https://github.com/scaleway/ultraviolet/commit/c7d0d8578bfa92ac563c7dd39e2c9cedae095aab)]:
+  - @ultraviolet/ui@1.94.2
+
+## 3.17.1
+
+### Patch Changes
+
+- [#5057](https://github.com/scaleway/ultraviolet/pull/5057) [`d70dce8`](https://github.com/scaleway/ultraviolet/commit/d70dce897af49b7ef7e9014fac4b5983d9b85bc4) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<SelectInputFieldV2 />` spread props to avoid missing some of them
+
+- Updated dependencies [[`2a9c1b4`](https://github.com/scaleway/ultraviolet/commit/2a9c1b4c76d54da411f69126e86fa7ee2fe8c8a2), [`2a9c1b4`](https://github.com/scaleway/ultraviolet/commit/2a9c1b4c76d54da411f69126e86fa7ee2fe8c8a2)]:
+  - @ultraviolet/ui@1.94.1
+
+## 3.17.0
+
+### Minor Changes
+
+- [#5000](https://github.com/scaleway/ultraviolet/pull/5000) [`9cf64a6`](https://github.com/scaleway/ultraviolet/commit/9cf64a6af130ff1a9e93d058e230542191ee9303) Thanks [@alexandre-combemorel](https://github.com/alexandre-combemorel)! - Add clearable to DateInput and DateInputField (and tooltip)
+
+### Patch Changes
+
+- Updated dependencies [[`f1bb63d`](https://github.com/scaleway/ultraviolet/commit/f1bb63d9c4966f5cbeabbe1b0457beaabded62e1), [`1f21803`](https://github.com/scaleway/ultraviolet/commit/1f2180317917e6cab7603361da9956ffc42b000d), [`0ca192f`](https://github.com/scaleway/ultraviolet/commit/0ca192f994641abf9c19f6b3b81cdb60e15b952e), [`c1a0104`](https://github.com/scaleway/ultraviolet/commit/c1a0104c37fcf0b8be8cd9020e611dd71a18a449), [`9cf64a6`](https://github.com/scaleway/ultraviolet/commit/9cf64a6af130ff1a9e93d058e230542191ee9303), [`ef6e926`](https://github.com/scaleway/ultraviolet/commit/ef6e9267be8eb6ef8a16e52b7b224b83a248595f)]:
+  - @ultraviolet/ui@1.94.0
+
 ## 3.16.0
 
 ### Minor Changes

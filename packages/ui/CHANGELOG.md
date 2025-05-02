@@ -1,5 +1,44 @@
 # Change Log
 
+## 1.94.2
+
+### Patch Changes
+
+- [#5051](https://github.com/scaleway/ultraviolet/pull/5051) [`c7d0d85`](https://github.com/scaleway/ultraviolet/commit/c7d0d8578bfa92ac563c7dd39e2c9cedae095aab) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<SelectableCard />` children no more activate the selectable card to avoid propagration when having checkbox tick
+
+## 1.94.1
+
+### Patch Changes
+
+- [#5053](https://github.com/scaleway/ultraviolet/pull/5053) [`2a9c1b4`](https://github.com/scaleway/ultraviolet/commit/2a9c1b4c76d54da411f69126e86fa7ee2fe8c8a2) Thanks [@matthprost](https://github.com/matthprost)! - Sanitize input of `SearchBarDropdown`
+
+- [#5053](https://github.com/scaleway/ultraviolet/pull/5053) [`2a9c1b4`](https://github.com/scaleway/ultraviolet/commit/2a9c1b4c76d54da411f69126e86fa7ee2fe8c8a2) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<VerificationCode />` to have `autocomplete="off"`
+
+- Updated dependencies [[`2eee369`](https://github.com/scaleway/ultraviolet/commit/2eee369ed7191ab5f82dac27b28e0e339b816464), [`2a9c1b4`](https://github.com/scaleway/ultraviolet/commit/2a9c1b4c76d54da411f69126e86fa7ee2fe8c8a2)]:
+  - @ultraviolet/icons@3.15.0
+
+## 1.94.0
+
+### Minor Changes
+
+- [#5032](https://github.com/scaleway/ultraviolet/pull/5032) [`1f21803`](https://github.com/scaleway/ultraviolet/commit/1f2180317917e6cab7603361da9956ffc42b000d) Thanks [@matthprost](https://github.com/matthprost)! - Add new prop `maxWidth` and `minWidth` on `<Stack />`
+
+- [#5000](https://github.com/scaleway/ultraviolet/pull/5000) [`9cf64a6`](https://github.com/scaleway/ultraviolet/commit/9cf64a6af130ff1a9e93d058e230542191ee9303) Thanks [@alexandre-combemorel](https://github.com/alexandre-combemorel)! - Add clearable to DateInput and DateInputField (and tooltip)
+
+### Patch Changes
+
+- [#5050](https://github.com/scaleway/ultraviolet/pull/5050) [`f1bb63d`](https://github.com/scaleway/ultraviolet/commit/f1bb63d9c4966f5cbeabbe1b0457beaabded62e1) Thanks [@BABAK0T0](https://github.com/BABAK0T0)! - Sanitize input of `SearchBarDropdown`
+
+- [#5036](https://github.com/scaleway/ultraviolet/pull/5036) [`0ca192f`](https://github.com/scaleway/ultraviolet/commit/0ca192f994641abf9c19f6b3b81cdb60e15b952e) Thanks [@matthprost](https://github.com/matthprost)! - Add new sizes `xmsall` and `xxsmall` on `<Bullet />`
+
+- [#5043](https://github.com/scaleway/ultraviolet/pull/5043) [`c1a0104`](https://github.com/scaleway/ultraviolet/commit/c1a0104c37fcf0b8be8cd9020e611dd71a18a449) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `next` to `15.3.1`.
+  Updated dependency `eslint-config-next` to `15.3.1`.
+
+- [#4988](https://github.com/scaleway/ultraviolet/pull/4988) [`ef6e926`](https://github.com/scaleway/ultraviolet/commit/ef6e9267be8eb6ef8a16e52b7b224b83a248595f) Thanks [@matthprost](https://github.com/matthprost)! - Improve `<Expandable />` component to not render content when animation is disabled
+
+- Updated dependencies [[`f989f99`](https://github.com/scaleway/ultraviolet/commit/f989f995442f9746892bb356ec7aa12166a2c6bf)]:
+  - @ultraviolet/icons@3.14.0
+
 ## 1.93.0
 
 ### Minor Changes

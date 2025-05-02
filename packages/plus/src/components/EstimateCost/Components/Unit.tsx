@@ -41,9 +41,10 @@ export const Unit = ({
   const [capacity, setCapacity] = useState(amount === 0 ? undefined : amount)
 
   useEffect(() => {
-    itemCallback?.(capacity, true)
-    getAmountValue?.(capacity)
-  }, [getAmountValue, itemCallback, capacity])
+    setCapacity(amount)
+    itemCallback?.(amount, true)
+    getAmountValue?.(amount)
+  }, [getAmountValue, itemCallback, capacity, amount])
 
   return isOverlay ? (
     <ItemResourceName animated={false}>
@@ -59,7 +60,10 @@ export const Unit = ({
         name="capacity"
         value={capacity?.toString()}
         onChange={capacityText => {
-          setCapacity(Number(capacityText) < 0 ? 0 : Number(capacityText))
+          const newCapacity =
+            Number(capacityText) < 0 ? 0 : Number(capacityText)
+          setCapacity(newCapacity)
+          itemCallback?.(newCapacity, true)
           getAmountValue?.(capacity)
         }}
       />

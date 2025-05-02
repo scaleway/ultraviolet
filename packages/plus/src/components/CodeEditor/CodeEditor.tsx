@@ -22,6 +22,7 @@ type CodeEditorProps = {
   onBlur?: () => void
   height?: string
   readOnly?: boolean
+  autoCompletion?: boolean
 }
 
 export const CodeEditor = ({
@@ -32,6 +33,7 @@ export const CodeEditor = ({
   onBlur,
   height,
   readOnly,
+  autoCompletion,
 }: CodeEditorProps) => (
   <div>
     {title ? (
@@ -51,6 +53,7 @@ export const CodeEditor = ({
       basicSetup={{
         highlightActiveLine: false,
         highlightActiveLineGutter: false,
+        autocompletion: autoCompletion,
       }}
     />
   </div>

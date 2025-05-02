@@ -3,7 +3,7 @@ import { Bullet } from '..'
 
 export const Sizes: StoryFn = props => (
   <>
-    {(['medium', 'small'] as const).map(size => (
+    {(['medium', 'small', 'xsmall', 'xxsmall'] as const).map(size => (
       <div key={size}>
         <Bullet {...props} size={size} text="1" />
       </div>
@@ -21,7 +21,9 @@ Sizes.parameters = {
 
 Sizes.decorators = [
   StoryComponent => (
-    <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
+    <div
+      style={{ display: 'flex', alignItems: 'start', flexWrap: 'wrap', gap: 8 }}
+    >
       <StoryComponent />
     </div>
   ),
