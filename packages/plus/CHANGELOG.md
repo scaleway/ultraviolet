@@ -1,5 +1,11 @@
 # @ultraviolet/plus
 
+## 0.27.2
+
+### Patch Changes
+
+- [#5074](https://github.com/scaleway/ultraviolet/pull/5074) [`57a38d2`](https://github.com/scaleway/ultraviolet/commit/57a38d2ad2babf6117e9ca5ff62ec04e604e3cf5) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<EstimateCost.Unit />` to have correct amount updated according to the item
+
 ## 0.27.1
 
 ### Patch Changes
