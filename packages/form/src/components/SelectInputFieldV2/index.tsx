@@ -65,6 +65,8 @@ export const SelectInputFieldV2 = <
       }}
       value={field.value as string | string[]}
       error={getError({ label: label ?? ariaLabel ?? name }, error)}
+      label={label}
+      aria-label={ariaLabel}
       onChange={handleChange}
       {...props}
     />
