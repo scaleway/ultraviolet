@@ -1,5 +1,14 @@
 # Change Log
 
+## 3.17.2
+
+### Patch Changes
+
+- [#5085](https://github.com/scaleway/ultraviolet/pull/5085) [`31c6b28`](https://github.com/scaleway/ultraviolet/commit/31c6b28bff643d5f5eea31abfd3bb4c1248115e8) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<SelectInputFieldV2 />` to have label and aria-label passed to component
+
+- Updated dependencies [[`c7d0d85`](https://github.com/scaleway/ultraviolet/commit/c7d0d8578bfa92ac563c7dd39e2c9cedae095aab)]:
+  - @ultraviolet/ui@1.94.2
+
 ## 3.17.1
 
 ### Patch Changes
