@@ -362,7 +362,9 @@ export const SelectableCard = forwardRef(
         if (tooltip) {
           return (
             <Stack flex={1}>
-              <Tooltip text={tooltip}>{subChildren}</Tooltip>
+              <Tooltip text={tooltip} containerFullHeight>
+                {subChildren}
+              </Tooltip>
             </Stack>
           )
         }
