@@ -402,7 +402,7 @@ export const Item = memo(
 
     useEffect(
       () => {
-        if (type !== 'pinnedGroup') {
+        if (type !== 'pinnedGroup' && pinnedFeature) {
           registerItem({ [id]: { label, active, onToggle, onClickPinUnpin } })
         }
       },
