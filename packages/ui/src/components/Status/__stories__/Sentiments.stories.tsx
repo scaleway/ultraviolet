@@ -1,11 +1,10 @@
 import type { StoryFn } from '@storybook/react'
 import { Status, statusSentiments } from '..'
-import type { Menu } from '../../Menu'
 
-export const Sentiments: StoryFn<typeof Menu> = props => (
+export const Sentiments: StoryFn<typeof Status> = props => (
   <>
     {statusSentiments.map(sentiment => (
-      <Status key={sentiment} sentiment={sentiment} {...props} />
+      <Status key={sentiment} {...props} sentiment={sentiment} />
     ))}
   </>
 )

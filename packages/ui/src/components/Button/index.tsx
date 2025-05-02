@@ -69,6 +69,7 @@ const coreStyle = ({
 
   return `
     display: inline-flex;
+    position: relative;
     height: ${theme.sizing[SIZE_HEIGHT[size]]};
     padding: 0 ${theme.space[SIZE_PADDING_KEY[size]]};
     flex-direction: ${iconPosition === 'right' ? 'row-reverse' : 'row'};
