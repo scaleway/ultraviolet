@@ -13,6 +13,7 @@ import * as cockpit from './cockpit'
 import * as containerRegistry from './containerRegistry'
 import * as containers from './containers'
 import * as costManager from './costManager'
+import * as dataWarehouse from './dataWarehouse'
 import * as dedibox from './dedibox'
 import * as dediboxVps from './dediboxVps'
 import * as distributedDataLab from './distributedDataLab'
@@ -40,6 +41,7 @@ import * as localStorage from './localStorage'
 import * as managedDatabase from './managedDatabase'
 import * as managedSearchDatabase from './managedSearchDatabase'
 import * as mongoDB from './mongoDB'
+import * as moshiInference from './moshiInference'
 import * as nabu from './nabu'
 import * as nats from './nats'
 import * as objectStorage from './objectStorage'
@@ -53,10 +55,12 @@ import * as serverlessDB from './serverlessDB'
 import * as serverlessJob from './serverlessJob'
 import * as sns from './sns'
 import * as sqs from './sqs'
+import * as supportPlans from './supportPlans'
 import * as terraform from './terraform'
 import * as transactionalEmail from './transactionalEmail'
 import * as vpc from './vpc'
 import * as vpn from './vpn'
+import * as waf from './waf'
 import * as webHosting from './webHosting'
 import * as webPlatform from './webPlatform'
 
@@ -71,6 +75,7 @@ export {
   containerRegistry,
   containers,
   costManager,
+  dataWarehouse,
   dedibox,
   dediboxVps,
   distributedDataLab,
@@ -98,6 +103,7 @@ export {
   managedDatabase,
   managedSearchDatabase,
   mongoDB,
+  moshiInference,
   nabu,
   nats,
   objectStorage,
@@ -111,10 +117,12 @@ export {
   serverlessJob,
   sns,
   sqs,
+  supportPlans,
   terraform,
   transactionalEmail,
   vpc,
   vpn,
+  waf,
   webHosting,
   webPlatform,
 }
