@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.94.2
+
+### Patch Changes
+
+- [#5051](https://github.com/scaleway/ultraviolet/pull/5051) [`c7d0d85`](https://github.com/scaleway/ultraviolet/commit/c7d0d8578bfa92ac563c7dd39e2c9cedae095aab) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<SelectableCard />` children no more activate the selectable card to avoid propagration when having checkbox tick
+
 ## 1.94.1
 
 ### Patch Changes
