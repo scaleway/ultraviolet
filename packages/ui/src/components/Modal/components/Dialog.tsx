@@ -58,10 +58,6 @@ const StyledBackdrop = styled.div<{ 'data-open': boolean }>`
     opacity: 1;
   }
 
-  &[data-animation='true'] {
-    overflow: hidden;
-  }
-
 `
 
 type StyledDialogProps = {
@@ -84,6 +80,7 @@ export const StyledDialog = styled('dialog', {
   padding: ${({ theme }) => theme.space['3']};
   width: ${MODAL_WIDTH.medium}rem;
   box-shadow: ${({ theme }) => `${theme.shadows.overlay[0]}, ${theme.shadows.overlay[1]}`};
+  
 
 
   ${Object.entries(MODAL_WIDTH).map(
