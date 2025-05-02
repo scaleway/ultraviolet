@@ -1,27 +1,28 @@
+import type { StoryFn } from '@storybook/react'
+import { Button, Stack } from '@ultraviolet/ui'
+import type { ComponentProps } from 'react'
+import { useState } from 'react'
 import { EstimateCost } from '..'
-import { Template } from './Template'
 
-export const Unit = Template.bind({})
+export const Unit: StoryFn<ComponentProps<typeof EstimateCost>> = props => {
+  const [value, setValue] = useState<number | undefined>(0)
 
-Unit.args = {
-  children: [
-    <EstimateCost.Item
-      label="Storage"
-      subLabel="50 GB Free"
-      price={0.001}
-      unit="samples"
-      amountFree={50}
-      amount={100}
-    >
-      <EstimateCost.Unit unit="GB" />
-    </EstimateCost.Item>,
-    <EstimateCost.Item label="Screen pixels" price={1} unit="Px" amount={100}>
-      <EstimateCost.Unit />
-    </EstimateCost.Item>,
-    <EstimateCost.Item label="Screen pixels" price={1} unit="Px" amount={100}>
-      <EstimateCost.Regular>Test</EstimateCost.Regular>
-    </EstimateCost.Item>,
-  ],
+  return (
+    <Stack gap={1}>
+      <Button onClick={() => setValue(10)}>Set value to 10</Button>
+      <Button onClick={() => setValue(20)}>Set value to 20</Button>
+      <EstimateCost {...props} hideOverlay>
+        <EstimateCost.Item
+          label="Screen pixels"
+          price={1}
+          unit="Px"
+          amount={value}
+        >
+          <EstimateCost.Unit />
+        </EstimateCost.Item>
+      </EstimateCost>
+    </Stack>
+  )
 }
 
 Unit.parameters = {

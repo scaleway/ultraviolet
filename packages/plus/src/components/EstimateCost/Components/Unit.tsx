@@ -60,7 +60,10 @@ export const Unit = ({
         name="capacity"
         value={capacity?.toString()}
         onChange={capacityText => {
-          setCapacity(Number(capacityText) < 0 ? 0 : Number(capacityText))
+          const newCapacity =
+            Number(capacityText) < 0 ? 0 : Number(capacityText)
+          setCapacity(newCapacity)
+          itemCallback?.(newCapacity, true)
           getAmountValue?.(capacity)
         }}
       />
