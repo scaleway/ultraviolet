@@ -64,7 +64,7 @@ const EditorContainer = styled.div`
   }
 `
 const StyledStack = styled(Stack)`
-  &[data-disabled] {
+  &[data-disabled="true"] {
     cursor: not-allowed;
   }
 `
@@ -131,13 +131,16 @@ export const CodeEditor = ({
 }: CodeEditorProps) => (
   <StyledStack gap={0.5} data-disabled={disabled}>
     {label || title ? (
-      <Label labelDescription={labelDescription}>{label ?? title}</Label>
+      <Label labelDescription={labelDescription} disabled={disabled}>
+        {label ?? title}
+      </Label>
     ) : null}
     <EditorContainer data-disabled={disabled}>
       <CodeMirror
         readOnly={readOnly || disabled}
         width="100%"
         height={height}
+        theme={material}
         onChange={onChange}
         value={value}
         extensions={[langs[extensions]()]}
@@ -145,9 +148,9 @@ export const CodeEditor = ({
         basicSetup={{
           highlightActiveLine: false,
           highlightActiveLineGutter: false,
+          autocompletion: autoCompletion,
         }}
         id={id}
-        theme={material}
         aria-label={ariaLabel}
         data-testid={dataTestId}
         className={className}
@@ -168,20 +171,5 @@ export const CodeEditor = ({
         {helper}
       </Text>
     ) : null}
-    <CodeMirror
-      readOnly={readOnly}
-      width="100%"
-      height={height}
-      theme={material}
-      onChange={onChange}
-      value={value}
-      extensions={[langs[extensions]()]}
-      onBlur={onBlur}
-      basicSetup={{
-        highlightActiveLine: false,
-        highlightActiveLineGutter: false,
-        autocompletion: autoCompletion,
-      }}
-    />
   </StyledStack>
 )
