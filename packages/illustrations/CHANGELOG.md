@@ -1,5 +1,11 @@
 # @ultraviolet/illustrations
 
+## 4.5.1
+
+### Patch Changes
+
+- [#5090](https://github.com/scaleway/ultraviolet/pull/5090) [`602ccdf`](https://github.com/scaleway/ultraviolet/commit/602ccdfe77eb482b7ebda5f09585308be952aa98) Thanks [@lisalupi](https://github.com/lisalupi)! - New product illustrations: `dataWarehouse`, `moshiInference`, `supportPlans` and `waf`
+
 ## 4.5.0
 
 ### Minor Changes

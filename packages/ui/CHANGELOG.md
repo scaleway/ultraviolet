@@ -1,5 +1,20 @@
 # Change Log
 
+## 1.95.0
+
+### Minor Changes
+
+- [#5073](https://github.com/scaleway/ultraviolet/pull/5073) [`31829f4`](https://github.com/scaleway/ultraviolet/commit/31829f4b7e83f52a1df700059799d150c6739c3e) Thanks [@matthprost](https://github.com/matthprost)! - New prop `notification` on `<Status />` component
+
+### Patch Changes
+
+- [#4945](https://github.com/scaleway/ultraviolet/pull/4945) [`5705e3c`](https://github.com/scaleway/ultraviolet/commit/5705e3c02e7915b1c4c812426e2676ce34e38696) Thanks [@lisalupi](https://github.com/lisalupi)! - `<Link />`:
+
+  - add a "visited" state
+  - deprecate all sentiments but primary (usable in a new prop)
+
+- [#4946](https://github.com/scaleway/ultraviolet/pull/4946) [`fa7dee1`](https://github.com/scaleway/ultraviolet/commit/fa7dee12f32431c277559741d13275d51c79e151) Thanks [@lisalupi](https://github.com/lisalupi)! - Add prop `containerFullHeight` to Popup and Tooltip, and use it to fix height issue for SelectableCard
+
 ## 1.94.2
 
 ### Patch Changes
