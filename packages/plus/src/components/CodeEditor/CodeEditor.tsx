@@ -17,6 +17,13 @@ const EditorContainer = styled.div`
     font-size:  ${({ theme }) => theme.typography.code.fontSize};
     background-color: ${consoleDarkTheme.colors.neutral.backgroundWeak};
     border-radius: ${({ theme }) => theme.space['0.5']};
+    border: 1px solid transparent;
+  }
+
+  .cm-editor.cm-focused {
+    outline: none;
+    box-shadow: ${({ theme }) => theme.shadows.focusPrimary};
+    border: 1px solid ${({ theme }) => theme.colors.primary.border};
   }
 
   .cm-content {
@@ -38,7 +45,6 @@ const EditorContainer = styled.div`
   .cm-scroller {
     border-radius: ${({ theme }) => theme.space['0.5']};
   }
-
 
   &[data-disabled="true"] {
     pointer-events: none;
@@ -68,6 +74,11 @@ const EditorContainer = styled.div`
 
     .cm-selectionLayer {
       display: none;
+    }
+
+    .cm-editor.cm-focused {
+      box-shadow: none;
+      border: 1px solid transparent; 
     }
   }
 `
