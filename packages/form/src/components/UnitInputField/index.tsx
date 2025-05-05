@@ -30,6 +30,7 @@ type UnitInputFieldProps<
     | 'width'
     | 'helper'
     | 'selectInputWidth'
+    | 'selectInputMaxWidth'
     | 'dropdownAlign'
   > & {
     onChangeUnitValue?: ComponentProps<typeof UnitInput>['onChangeUnitValue']
