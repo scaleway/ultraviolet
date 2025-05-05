@@ -189,6 +189,7 @@ export const OrderSummary = ({
                   value={valueUnitInput}
                   unitValue={unitUnitInput}
                   size="small"
+                  dropdownAlign="center"
                 />
               </StyledStack>
             ) : null}
