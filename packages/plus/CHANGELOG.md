@@ -1,5 +1,14 @@
 # @ultraviolet/plus
 
+## 0.27.3
+
+### Patch Changes
+
+- [#5084](https://github.com/scaleway/ultraviolet/pull/5084) [`6af6249`](https://github.com/scaleway/ultraviolet/commit/6af6249593e0ca8d62fe8cf03c9cf8cc8a9e7f25) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<Navigation />` not to register an item if there is no pinned feature
+
+- Updated dependencies [[`31829f4`](https://github.com/scaleway/ultraviolet/commit/31829f4b7e83f52a1df700059799d150c6739c3e), [`5705e3c`](https://github.com/scaleway/ultraviolet/commit/5705e3c02e7915b1c4c812426e2676ce34e38696), [`fa7dee1`](https://github.com/scaleway/ultraviolet/commit/fa7dee12f32431c277559741d13275d51c79e151)]:
+  - @ultraviolet/ui@1.95.0
+
 ## 0.27.2
 
 ### Patch Changes
