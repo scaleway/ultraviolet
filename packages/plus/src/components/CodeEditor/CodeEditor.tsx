@@ -42,6 +42,7 @@ const EditorContainer = styled.div`
 
   &[data-disabled="true"] {
     pointer-events: none;
+    user-select: none;
 
     .cm-editor {
       background-color: ${consoleDarkTheme.colors.neutral.backgroundWeakDisabled};
@@ -61,6 +62,13 @@ const EditorContainer = styled.div`
       display: none;
     }
 
+    .cm-selectionMatch {
+      background-color: transparent;
+    }
+
+    .cm-selectionLayer {
+      display: none;
+    }
   }
 `
 const StyledStack = styled(Stack)`
@@ -131,9 +139,7 @@ export const CodeEditor = ({
 }: CodeEditorProps) => (
   <StyledStack gap={0.5} data-disabled={disabled}>
     {label || title ? (
-      <Label labelDescription={labelDescription} disabled={disabled}>
-        {label ?? title}
-      </Label>
+      <Label labelDescription={labelDescription}>{label ?? title}</Label>
     ) : null}
     <EditorContainer data-disabled={disabled}>
       <CodeMirror
@@ -154,6 +160,11 @@ export const CodeEditor = ({
         aria-label={ariaLabel}
         data-testid={dataTestId}
         className={className}
+        editable={!disabled || !readOnly}
+        aria-disabled={disabled}
+        onUpdate={() => {
+          if (disabled) document.getSelection()?.empty()
+        }}
       />
       {copyButton && !disabled ? (
         <StyledCopyButton
