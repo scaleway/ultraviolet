@@ -2,6 +2,7 @@
 
 import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
+import { PinCategoryIcon } from '@ultraviolet/icons/category'
 import { Text } from '@ultraviolet/ui'
 import type { DragEvent } from 'react'
 import { useCallback } from 'react'
@@ -131,8 +132,7 @@ export const PinnedItems = ({
       <div style={{ width: animation ? '100%' : undefined }}>
         <Item
           label={locales['navigation.pinned.item.group.label']}
-          categoryIcon="pin"
-          categoryIconVariant="neutral"
+          categoryIcon=<PinCategoryIcon variant="neutral" />
           type="pinnedGroup"
           id="pinned-group"
           data-testid="pinned-group"

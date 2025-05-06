@@ -1,5 +1,15 @@
 import styled from '@emotion/styled'
 import type { StoryFn } from '@storybook/react'
+import {
+  BaremetalCategoryIcon,
+  ConsoleCategoryIcon,
+  DatabaseCategoryIcon,
+  ManagedServicesCategoryIcon,
+  NetworkCategoryIcon,
+  ObservabilityCategoryIcon,
+  SecurityCategoryIcon,
+  UseCaseCategoryIcon,
+} from '@ultraviolet/icons/category'
 import { Stack, fadeIn, fadeOut } from '@ultraviolet/ui'
 import { type ComponentProps, useCallback, useEffect, useState } from 'react'
 import { Navigation, NavigationProvider, useNavigation } from '..'
@@ -70,8 +80,7 @@ const PlaygroundContent = ({ ...props }: ComponentProps<typeof Navigation>) => {
       <Navigation.Item
         label="Organization Dashboard"
         id="organization-dashboard"
-        categoryIcon="console"
-        categoryIconVariant="neutral"
+        categoryIcon={<ConsoleCategoryIcon variant="neutral" />}
         noPinButton
         active={active === 'Organization Dashboard'}
         onClickPinUnpin={onClickPinUnpin}
@@ -80,8 +89,7 @@ const PlaygroundContent = ({ ...props }: ComponentProps<typeof Navigation>) => {
       <Navigation.Item
         label="Project Dashboard"
         id="project-dashboard"
-        categoryIcon="useCase"
-        categoryIconVariant="neutral"
+        categoryIcon={<UseCaseCategoryIcon variant="neutral" />}
         noPinButton
         active={active === 'Project Dashboard'}
         onClickPinUnpin={onClickPinUnpin}
@@ -97,7 +105,7 @@ const PlaygroundContent = ({ ...props }: ComponentProps<typeof Navigation>) => {
           label="Compute"
           id="compute"
           subLabel="All compute ressources"
-          categoryIcon="baremetal"
+          categoryIcon={<BaremetalCategoryIcon variant="primary" />}
         >
           <Navigation.Item
             label="Instance"
@@ -163,7 +171,7 @@ const PlaygroundContent = ({ ...props }: ComponentProps<typeof Navigation>) => {
         <Navigation.Item
           label="Storage"
           id="storage"
-          categoryIcon="managedServices"
+          categoryIcon={<ManagedServicesCategoryIcon variant="primary" />}
         >
           <Navigation.Item
             label="Block Storage"
@@ -185,7 +193,7 @@ const PlaygroundContent = ({ ...props }: ComponentProps<typeof Navigation>) => {
         <Navigation.Item
           label="Network with a very long name"
           id="network"
-          categoryIcon="network"
+          categoryIcon={<NetworkCategoryIcon variant="primary" />}
         >
           <Navigation.Item
             label="Load Balancer"
@@ -209,7 +217,11 @@ const PlaygroundContent = ({ ...props }: ComponentProps<typeof Navigation>) => {
             onToggle={() => setActive('VPC')}
           />
         </Navigation.Item>
-        <Navigation.Item id="database" label="Database" categoryIcon="database">
+        <Navigation.Item
+          id="database"
+          label="Database"
+          categoryIcon={<DatabaseCategoryIcon variant="primary" />}
+        >
           <Navigation.Item
             label="Managed Database"
             id="managed-database"
@@ -235,7 +247,7 @@ const PlaygroundContent = ({ ...props }: ComponentProps<typeof Navigation>) => {
         <Navigation.Item
           label="Monitoring"
           id="monitoring"
-          categoryIcon="observability"
+          categoryIcon={<ObservabilityCategoryIcon variant="primary" />}
         >
           <Navigation.Item
             label="Logs"
@@ -259,7 +271,11 @@ const PlaygroundContent = ({ ...props }: ComponentProps<typeof Navigation>) => {
             onToggle={() => setActive('Alerts')}
           />
         </Navigation.Item>
-        <Navigation.Item label="Security" id="security" categoryIcon="security">
+        <Navigation.Item
+          label="Security"
+          id="security"
+          categoryIcon={<SecurityCategoryIcon variant="primary" />}
+        >
           <Navigation.Item
             label="Firewall"
             id="firewall"
