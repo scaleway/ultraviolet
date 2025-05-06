@@ -48,3 +48,6 @@ jobs:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
           FROM_BRANCH: "main"
           TO_BRANCH: "beta"
+          PULL_REQUEST_TITLE: "chore: sync main to beta"
+          PULL_REQUEST_BODY: "Beta needs to be updated to follow main. This PR is automatically opened as beta branch exists. Once the branch will be deleted the github action will not run anymore."
+          CONTENT_COMPARISON: true
