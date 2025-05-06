@@ -622,22 +622,19 @@ exports[`CheckboxField > should trigger events correctly with required prop 1`] 
   text-decoration: none;
 }
 
-.emotion-11 {
-  vertical-align: middle;
-  fill: #b3144d;
-  height: 8px;
-  width: 8px;
-  min-width: 8px;
-  min-height: 8px;
-  vertical-align: super;
+.emotion-10 {
+  color: #b3144d;
+  font-size: 1rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
-.emotion-11 .fillStroke {
-  stroke: #b3144d;
-  fill: none;
-}
-
-.emotion-16 {
+.emotion-15 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -650,65 +647,65 @@ exports[`CheckboxField > should trigger events correctly with required prop 1`] 
   gap: 0.5rem;
 }
 
-.emotion-16 .eqr7bqq4 {
+.emotion-15 .eqr7bqq4 {
   cursor: pointer;
 }
 
-.emotion-16[aria-disabled='true'] {
+.emotion-15[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.emotion-16[aria-disabled='true'] .eqr7bqq4 {
+.emotion-15[aria-disabled='true'] .eqr7bqq4 {
   cursor: not-allowed;
 }
 
-.emotion-16[aria-disabled='true'] .emotion-21 {
+.emotion-15[aria-disabled='true'] .emotion-20 {
   fill: #e9eaeb;
 }
 
-.emotion-16[aria-disabled='true'] .emotion-21 .emotion-23 {
+.emotion-15[aria-disabled='true'] .emotion-20 .emotion-22 {
   stroke: #d9dadd;
   fill: #f3f3f4;
 }
 
-.emotion-16[aria-disabled='true'] .emotion-19[aria-invalid="true"]:checked+.emotion-21 {
+.emotion-15[aria-disabled='true'] .emotion-18[aria-invalid="true"]:checked+.emotion-20 {
   fill: #ffd3e3;
 }
 
-.emotion-16[aria-disabled='true'] .emotion-19[aria-invalid="true"]:checked+.emotion-21 .emotion-23 {
+.emotion-15[aria-disabled='true'] .emotion-18[aria-invalid="true"]:checked+.emotion-20 .emotion-22 {
   stroke: #ffd3e3;
   fill: #ffd3e3;
 }
 
-.emotion-16[aria-disabled='true'] .emotion-19[aria-invalid="true"]+.emotion-21 {
+.emotion-15[aria-disabled='true'] .emotion-18[aria-invalid="true"]+.emotion-20 {
   fill: #ffebf2;
 }
 
-.emotion-16[aria-disabled='true'] .emotion-19[aria-invalid="true"]+.emotion-21 .emotion-23 {
+.emotion-15[aria-disabled='true'] .emotion-18[aria-invalid="true"]+.emotion-20 .emotion-22 {
   stroke: #ffbbd3;
   fill: #ffebf2;
 }
 
-.emotion-16[aria-disabled='true'] .emotion-19:checked+.emotion-21 {
+.emotion-15[aria-disabled='true'] .emotion-18:checked+.emotion-20 {
   fill: #e5dbfd;
 }
 
-.emotion-16[aria-disabled='true'] .emotion-19:checked+.emotion-21 .emotion-23 {
+.emotion-15[aria-disabled='true'] .emotion-18:checked+.emotion-20 .emotion-22 {
   stroke: #d8c5fc;
   fill: #d8c5fc;
 }
 
-.emotion-16[aria-disabled='true'] .emotion-19[aria-checked="mixed"]+.emotion-21 {
+.emotion-15[aria-disabled='true'] .emotion-18[aria-checked="mixed"]+.emotion-20 {
   fill: #e5dbfd;
 }
 
-.emotion-16[aria-disabled='true'] .emotion-19[aria-checked="mixed"]+.emotion-21 .emotion-23 {
+.emotion-15[aria-disabled='true'] .emotion-18[aria-checked="mixed"]+.emotion-20 .emotion-22 {
   stroke: #e5dbfd;
   fill: #e5dbfd;
 }
 
-.emotion-16 .emotion-19:checked+.emotion-21 path {
+.emotion-15 .emotion-18:checked+.emotion-20 path {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -722,66 +719,66 @@ exports[`CheckboxField > should trigger events correctly with required prop 1`] 
   transform: translate(2px, 2px);
 }
 
-.emotion-16 .emotion-19:checked+.emotion-21 .emotion-23 {
+.emotion-15 .emotion-18:checked+.emotion-20 .emotion-22 {
   fill: #8c40ef;
   stroke: #8c40ef;
 }
 
-.emotion-16 .emotion-19[aria-invalid="true"]:checked+.emotion-21 .emotion-23 {
+.emotion-15 .emotion-18[aria-invalid="true"]:checked+.emotion-20 .emotion-22 {
   fill: #e51963;
   stroke: #e51963;
 }
 
-.emotion-16 .emotion-19[aria-checked="mixed"]+.emotion-21 .eqr7bqq6 {
+.emotion-15 .emotion-18[aria-checked="mixed"]+.emotion-20 .eqr7bqq6 {
   fill: #ffffff;
 }
 
-.emotion-16 .emotion-19[aria-checked="mixed"]+.emotion-21 .emotion-23 {
+.emotion-15 .emotion-18[aria-checked="mixed"]+.emotion-20 .emotion-22 {
   fill: #8c40ef;
   stroke: #8c40ef;
 }
 
-.emotion-16:hover[aria-disabled='false'] .emotion-19[aria-invalid='false'][aria-checked='false']+.emotion-21 .emotion-23 {
+.emotion-15:hover[aria-disabled='false'] .emotion-18[aria-invalid='false'][aria-checked='false']+.emotion-20 .emotion-22 {
   stroke: #792dd4;
   fill: #e5dbfd;
 }
 
-.emotion-16:hover[aria-disabled='false'] .emotion-19[aria-invalid='false'][aria-checked='true']+.emotion-21 .emotion-23 {
+.emotion-15:hover[aria-disabled='false'] .emotion-18[aria-invalid='false'][aria-checked='true']+.emotion-20 .emotion-22 {
   stroke: #792dd4;
   fill: #792dd4;
 }
 
-.emotion-16:hover[aria-disabled='false'] .emotion-19[aria-invalid='false'][aria-checked='mixed']+.emotion-21 .emotion-23 {
+.emotion-15:hover[aria-disabled='false'] .emotion-18[aria-invalid='false'][aria-checked='mixed']+.emotion-20 .emotion-22 {
   stroke: #792dd4;
   fill: #792dd4;
 }
 
-.emotion-16:hover[aria-disabled='false'] .emotion-19[aria-invalid='true'][aria-checked='false']+.emotion-21 .emotion-23 {
+.emotion-15:hover[aria-disabled='false'] .emotion-18[aria-invalid='true'][aria-checked='false']+.emotion-20 .emotion-22 {
   stroke: #92103f;
   fill: #ffd3e3;
 }
 
-.emotion-16:hover[aria-disabled='false'] .emotion-19[aria-invalid='true'][aria-checked='true']+.emotion-21 .emotion-23 {
+.emotion-15:hover[aria-disabled='false'] .emotion-18[aria-invalid='true'][aria-checked='true']+.emotion-20 .emotion-22 {
   stroke: #d6175c;
   fill: #d6175c;
 }
 
-.emotion-16 .emotion-19[aria-invalid="true"]+.emotion-21 {
+.emotion-15 .emotion-18[aria-invalid="true"]+.emotion-20 {
   fill: #e51963;
 }
 
-.emotion-16 .emotion-19[aria-invalid="true"]+.emotion-21 .emotion-23 {
+.emotion-15 .emotion-18[aria-invalid="true"]+.emotion-20 .emotion-22 {
   stroke: #e51963;
   fill: #ffebf2;
 }
 
-.emotion-16 label {
+.emotion-15 label {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
 
-.emotion-18 {
+.emotion-17 {
   position: absolute;
   white-space: nowrap;
   height: 1.5rem;
@@ -790,57 +787,57 @@ exports[`CheckboxField > should trigger events correctly with required prop 1`] 
   border-width: 0;
 }
 
-.emotion-18:not(:disabled) {
+.emotion-17:not(:disabled) {
   cursor: pointer;
 }
 
-.emotion-18:disabled {
+.emotion-17:disabled {
   cursor: not-allowed;
 }
 
-.emotion-18:not(:disabled):checked+.emotion-21,
-.emotion-18:not(:disabled)[aria-checked='mixed']+.emotion-21 {
+.emotion-17:not(:disabled):checked+.emotion-20,
+.emotion-17:not(:disabled)[aria-checked='mixed']+.emotion-20 {
   fill: #8c40ef;
 }
 
-.emotion-18:not(:disabled):checked+.emotion-21 .emotion-23,
-.emotion-18:not(:disabled)[aria-checked='mixed']+.emotion-21 .emotion-23 {
+.emotion-17:not(:disabled):checked+.emotion-20 .emotion-22,
+.emotion-17:not(:disabled)[aria-checked='mixed']+.emotion-20 .emotion-22 {
   stroke: #8c40ef;
 }
 
-.emotion-18:not(:disabled)[aria-invalid='true']+.emotion-21,
-.emotion-18:not(:disabled)[aria-invalid='mixed']+.emotion-21 {
+.emotion-17:not(:disabled)[aria-invalid='true']+.emotion-20,
+.emotion-17:not(:disabled)[aria-invalid='mixed']+.emotion-20 {
   fill: #ffebf2;
 }
 
-.emotion-18:not(:disabled)[aria-invalid='true']+.emotion-21 .emotion-23,
-.emotion-18:not(:disabled)[aria-invalid='mixed']+.emotion-21 .emotion-23 {
+.emotion-17:not(:disabled)[aria-invalid='true']+.emotion-20 .emotion-22,
+.emotion-17:not(:disabled)[aria-invalid='mixed']+.emotion-20 .emotion-22 {
   stroke: #b3144d;
 }
 
-.emotion-18:focus+.emotion-21 {
+.emotion-17:focus+.emotion-20 {
   background-color: #f1eefc;
   fill: #ffebf2;
   outline: 1px solid 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-18:focus+.emotion-21 .emotion-23 {
+.emotion-17:focus+.emotion-20 .emotion-22 {
   stroke: #792dd4;
   fill: #e5dbfd;
 }
 
-.emotion-18[aria-invalid='true']:focus+.emotion-21 {
+.emotion-17[aria-invalid='true']:focus+.emotion-20 {
   background-color: #ffebf2;
   fill: #ffebf2;
   outline: 1px solid 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-18[aria-invalid='true']:focus+.emotion-21 .emotion-23 {
+.emotion-17[aria-invalid='true']:focus+.emotion-20 .emotion-22 {
   stroke: #92103f;
   fill: #ffd3e3;
 }
 
-.emotion-20 {
+.emotion-19 {
   border-radius: 0.25rem;
   height: 1.5rem;
   width: 1.5rem;
@@ -848,7 +845,7 @@ exports[`CheckboxField > should trigger events correctly with required prop 1`] 
   min-height: 1.5rem;
 }
 
-.emotion-20 path {
+.emotion-19 path {
   fill: #ffffff;
   -webkit-transform: translate(2px, 2px);
   -moz-transform: translate(2px, 2px);
@@ -860,12 +857,12 @@ exports[`CheckboxField > should trigger events correctly with required prop 1`] 
   transform: scale(0);
 }
 
-.emotion-22 {
+.emotion-21 {
   fill: #ffffff;
   stroke: #d9dadd;
 }
 
-.emotion-24 {
+.emotion-23 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -891,7 +888,7 @@ exports[`CheckboxField > should trigger events correctly with required prop 1`] 
   flex: 1;
 }
 
-.emotion-26 {
+.emotion-25 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -917,7 +914,7 @@ exports[`CheckboxField > should trigger events correctly with required prop 1`] 
   flex: 1;
 }
 
-.emotion-29 {
+.emotion-28 {
   color: #3f4250;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
@@ -953,14 +950,11 @@ exports[`CheckboxField > should trigger events correctly with required prop 1`] 
                 class="emotion-8 emotion-9"
               >
                 CheckboxGroupField events 
-                <svg
-                  class="emotion-10 emotion-11 emotion-12"
-                  viewBox="0 0 20 20"
+                <sup
+                  class="emotion-10 emotion-9"
                 >
-                  <path
-                    d="M10 2h4l-.79 7.91 6.45-4.64 2 3.46L14.42 12l7.24 3.27-2 3.46-6.45-4.64L14 22h-4l.79-7.91-6.45 4.64-2-3.46L9.58 12 2.34 8.73l2-3.46 6.45 4.64z"
-                  />
-                </svg>
+                  *
+                </sup>
               </legend>
             </div>
             <div
@@ -968,27 +962,27 @@ exports[`CheckboxField > should trigger events correctly with required prop 1`] 
             >
               <div
                 aria-disabled="false"
-                class="emotion-15 emotion-16 emotion-17"
+                class="emotion-14 emotion-15 emotion-16"
                 data-checked="false"
                 data-error="false"
               >
                 <input
                   aria-checked="false"
                   aria-invalid="false"
-                  class="emotion-18 emotion-19"
-                  id=":r8:"
+                  class="emotion-17 emotion-18"
+                  id=":r9:"
                   name="test.value-1"
                   type="checkbox"
                   value="value-1"
                 />
                 <svg
-                  class="emotion-20 emotion-21"
+                  class="emotion-19 emotion-20"
                   fill="none"
                   viewBox="0 0 24 24"
                 >
                   <g>
                     <rect
-                      class="emotion-22 emotion-23"
+                      class="emotion-21 emotion-22"
                       height="16"
                       rx="0.125rem"
                       stroke-width="2"
@@ -1009,14 +1003,14 @@ exports[`CheckboxField > should trigger events correctly with required prop 1`] 
                   </g>
                 </svg>
                 <div
-                  class="emotion-24 emotion-1"
+                  class="emotion-23 emotion-1"
                 >
                   <div
-                    class="emotion-26 emotion-1"
+                    class="emotion-25 emotion-1"
                   >
                     <label
-                      class="emotion-28 emotion-29 emotion-9"
-                      for=":r8:"
+                      class="emotion-27 emotion-28 emotion-9"
+                      for=":r9:"
                     >
                       Checkbox 1
                     </label>
@@ -1025,27 +1019,27 @@ exports[`CheckboxField > should trigger events correctly with required prop 1`] 
               </div>
               <div
                 aria-disabled="false"
-                class="emotion-15 emotion-16 emotion-17"
+                class="emotion-14 emotion-15 emotion-16"
                 data-checked="false"
                 data-error="false"
               >
                 <input
                   aria-checked="false"
                   aria-invalid="false"
-                  class="emotion-18 emotion-19"
-                  id=":rb:"
+                  class="emotion-17 emotion-18"
+                  id=":rc:"
                   name="test.value-2"
                   type="checkbox"
                   value="value-2"
                 />
                 <svg
-                  class="emotion-20 emotion-21"
+                  class="emotion-19 emotion-20"
                   fill="none"
                   viewBox="0 0 24 24"
                 >
                   <g>
                     <rect
-                      class="emotion-22 emotion-23"
+                      class="emotion-21 emotion-22"
                       height="16"
                       rx="0.125rem"
                       stroke-width="2"
@@ -1066,14 +1060,14 @@ exports[`CheckboxField > should trigger events correctly with required prop 1`] 
                   </g>
                 </svg>
                 <div
-                  class="emotion-24 emotion-1"
+                  class="emotion-23 emotion-1"
                 >
                   <div
-                    class="emotion-26 emotion-1"
+                    class="emotion-25 emotion-1"
                   >
                     <label
-                      class="emotion-28 emotion-29 emotion-9"
-                      for=":rb:"
+                      class="emotion-27 emotion-28 emotion-9"
+                      for=":rc:"
                     >
                       Checkbox 2
                     </label>

@@ -3,6 +3,7 @@
 import type { Theme } from '@emotion/react'
 import { ClassNames, css, useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
+import { CloseIcon } from '@ultraviolet/icons'
 import type { ReactNode } from 'react'
 import type { ToastOptions } from 'react-toastify'
 import {
@@ -84,11 +85,12 @@ const CloseButton = ({
 }: CloseButtonProps) => (
   <StyledButton
     aria-label="close"
-    icon="close"
     onClick={closeToast}
     sentiment={sentiment}
     size="xsmall"
-  />
+  >
+    <CloseIcon />
+  </StyledButton>
 )
 
 type ContentProps = {

@@ -1,5 +1,6 @@
 import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
+import { MosaicIcon } from '@ultraviolet/icons'
 import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
 import { describe, expect, it, vi } from 'vitest'
 import { AvatarV2 } from '..'
@@ -45,12 +46,9 @@ describe('AvatarV2', () => {
 
           it('renders correctly with variant icon', () =>
             shouldMatchEmotionSnapshot(
-              <AvatarV2
-                shape={shape}
-                variant="icon"
-                icon="mosaic"
-                size={size}
-              />,
+              <AvatarV2 shape={shape} variant="icon" size={size}>
+                <MosaicIcon />
+              </AvatarV2>,
             ))
 
           it('renders correctly with variant icon and sentiment neutral', () =>
@@ -58,10 +56,11 @@ describe('AvatarV2', () => {
               <AvatarV2
                 shape={shape}
                 variant="icon"
-                icon="mosaic"
                 sentiment="neutral"
                 size={size}
-              />,
+              >
+                <MosaicIcon />
+              </AvatarV2>,
             ))
 
           it('renders correctly with variant colors', () =>
