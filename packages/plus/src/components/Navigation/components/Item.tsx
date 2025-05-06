@@ -187,7 +187,7 @@ const StyledContainer = styled(Stack)`
     }
   }
 
-  &[data-has-no-expand="false"][data-pinned-feature="true"]:not([disabled]) {
+  &[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]) {
     &:hover,
     &:focus,
     &:active {
@@ -201,7 +201,7 @@ const StyledContainer = styled(Stack)`
     }
   }
 
-  &:hover[data-has-children="false"][data-is-active="false"]:not([disabled]) {
+  &:hover[data-has-children="false"][data-is-active="false"][data-is-pinnable="true"]:not([disabled]) {
     ${WrapText} {
       color: ${({ theme }) => theme.colors.neutral.textWeakHover};
     }
@@ -213,7 +213,7 @@ const StyledContainer = styled(Stack)`
     background-color: ${({ theme }) => theme.colors.neutral.backgroundHover};
   }
 
-  &[data-is-active="true"],
+  &[data-is-active="true"][data-is-pinnable="true"],
   &:hover[data-has-active="true"] {
     background-color: ${({ theme }) => theme.colors.primary.background};
 

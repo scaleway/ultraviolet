@@ -90,6 +90,8 @@ const PlaygroundContent = ({ ...props }: ComponentProps<typeof Navigation>) => {
         label="Project Dashboard"
         id="project-dashboard"
         categoryIcon={<UseCaseCategoryIcon variant="neutral" />}
+        badgeText="setup"
+        badgeSentiment="primary"
         noPinButton
         active={active === 'Project Dashboard'}
         onClickPinUnpin={onClickPinUnpin}
@@ -362,7 +364,7 @@ export const Playground: StoryFn<ComponentProps<typeof Navigation>> = props => {
         initialWidth={navigationWidth}
         initialPinned={pinnedItems}
         pinLimit={2}
-        pinnedFeature={false}
+        pinnedFeature
       >
         <PlaygroundContent {...props} />
       </NavigationProvider>
