@@ -1,4 +1,5 @@
 import type { StoryFn } from '@storybook/react'
+import { PlusIcon, RestoreIcon } from '@ultraviolet/icons'
 import { useState } from 'react'
 import { Table } from '..'
 import { Button } from '../../Button'
@@ -32,14 +33,12 @@ export const HighlightAnimation: StoryFn<typeof Table> = ({ ...props }) => {
   return (
     <Stack gap={1}>
       <Row templateColumns="repeat(4, 1fr)" gap={2}>
-        <Button icon="plus" onClick={() => setData([...data, newData])}>
+        <Button onClick={() => setData([...data, newData])}>
+          <PlusIcon />
           Add data
         </Button>
-        <Button
-          icon="restore"
-          sentiment="neutral"
-          onClick={() => setData(DATA)}
-        >
+        <Button sentiment="neutral" onClick={() => setData(DATA)}>
+          <RestoreIcon />
           Reset data
         </Button>
       </Row>

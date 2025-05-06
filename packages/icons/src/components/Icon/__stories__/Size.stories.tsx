@@ -1,7 +1,7 @@
 import type { Decorator } from '@storybook/react'
 import { Stack } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
-import { EyeIcon } from '..'
+import { EyeIcon } from '../__generated__'
 
 export const Size = (args: ComponentProps<typeof EyeIcon>) => (
   <Stack>

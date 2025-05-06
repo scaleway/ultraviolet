@@ -1,7 +1,6 @@
 'use client'
 
 import styled from '@emotion/styled'
-import { AsteriskIcon } from '@ultraviolet/icons'
 import {
   type ComponentProps,
   type InputHTMLAttributes,
@@ -89,10 +88,6 @@ const FieldSet = styled.fieldset`
   margin: 0;
 `
 
-const StyledRequiredIcon = styled(AsteriskIcon)`
-  vertical-align: super;
-`
-
 type SelectableCardGroupProps = {
   legend?: ReactNode
   value: string | number | (string | number)[]
@@ -146,7 +141,9 @@ export const SelectableCardGroup = ({
               <Text as="legend" variant="bodyStrong" prominence="strong">
                 {legend && <>{legend} &nbsp;</>}
                 {required ? (
-                  <StyledRequiredIcon sentiment="danger" size={8} />
+                  <Text as="sup" variant="body" sentiment="danger">
+                    *
+                  </Text>
                 ) : null}
               </Text>
             ) : null}

@@ -3,6 +3,7 @@
 import type { Theme } from '@emotion/react'
 import { keyframes, useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
+import { ArrowDownIcon, ArrowUpIcon } from '@ultraviolet/icons'
 import type { ReactNode, RefObject } from 'react'
 import {
   Children,
@@ -364,14 +365,15 @@ export const Row = forwardRef<HTMLTableRowElement, RowProps>(
             <NoPaddingCell maxWidth={theme.sizing[SELECTABLE_CHECKBOX_SIZE]}>
               <Button
                 disabled={disabled || !expandable}
-                icon={expandedRowIds[id] ? 'arrow-up' : 'arrow-down'}
                 onClick={toggleRowExpand}
                 size="small"
                 sentiment={sentiment}
                 variant="ghost"
                 aria-label="expand"
                 data-testid="list-expand-button"
-              />
+              >
+                {expandedRowIds[id] ? <ArrowUpIcon /> : <ArrowDownIcon />}
+              </Button>
             </NoPaddingCell>
           ) : null}
           {children}

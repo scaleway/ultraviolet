@@ -1,6 +1,7 @@
 'use client'
 
 import styled from '@emotion/styled'
+import { MinusIcon, PlusIcon } from '@ultraviolet/icons'
 import type { ForwardedRef, InputHTMLAttributes, ReactNode } from 'react'
 import {
   forwardRef,
@@ -379,12 +380,13 @@ export const NumberInputV2 = forwardRef(
                   <Button
                     sentiment="neutral"
                     variant="ghost"
-                    icon="minus"
                     size={size === 'small' ? 'xsmall' : 'small'}
                     disabled={disabled || readOnly || isMinusDisabled}
                     onClick={onClickSideButton('down')}
                     aria-label="minus"
-                  />
+                  >
+                    <MinusIcon size={size === 'large' ? 'small' : 'small'} />
+                  </Button>
                 </SideContainer>
               ) : null}
               <InputContainer
@@ -452,12 +454,13 @@ export const NumberInputV2 = forwardRef(
                   <Button
                     sentiment="neutral"
                     variant="ghost"
-                    icon="plus"
                     size={size === 'small' ? 'xsmall' : 'small'}
                     disabled={disabled || readOnly || isPlusDisabled}
                     onClick={onClickSideButton('up')}
                     aria-label="plus"
-                  />
+                  >
+                    <PlusIcon size={size === 'large' ? 'small' : 'small'} />
+                  </Button>
                 </SideContainer>
               ) : null}
             </Container>
