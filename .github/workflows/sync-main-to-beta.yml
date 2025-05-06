@@ -1,0 +1,53 @@
+name: Sync Main to Beta
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  sync-main-to-beta:
+    name: Sync Main to Beta
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Check if Beta Branch Exists
+        id: check-beta
+        run: |
+          if git ls-remote --heads origin beta | grep -q beta; then
+            echo "Beta branch exists."
+            echo "exists=true" >> $GITHUB_ENV
+          else
+            echo "Beta branch does not exist. Exiting."
+            echo "exists=false" >> $GITHUB_ENV
+          fi
+
+      - name: Exit if Beta Branch Does Not Exist
+        if: env.exists == 'false'
+        run: exit 0
+
+      - name: Set Git Identity
+        run: |
+          git config --global user.name 'Scaleway Bot'
+          git config --global user.email 'github@scaleway.com'
+
+      - name: Fetch All Branches
+        run: git fetch --all
+
+      - name: Opening pull request
+        id: pull
+        uses: tretuna/sync-branches@1.4.0
+        with:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          FROM_BRANCH: "main"
+          TO_BRANCH: "beta"
+          PULL_REQUEST_TITLE: "chore: sync main to beta"
+          PULL_REQUEST_BODY: "Beta needs to be updated to follow main. This PR is automatically opened as beta branch exists. Once the branch will be deleted the github action will not run anymore."
+          CONTENT_COMPARISON: true
