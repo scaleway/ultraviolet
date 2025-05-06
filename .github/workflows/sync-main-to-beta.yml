@@ -35,8 +35,8 @@ jobs:
 
       - name: Set Git Identity
         run: |
-          git config --global user.name $FRONT_USER_NAME
-          git config --global user.email $FRONT_USER_EMAIL
+          git config --global user.name 'Scaleway Bot'
+          git config --global user.email 'github@scaleway.com'
 
       - name: Fetch All Branches
         run: git fetch --all
