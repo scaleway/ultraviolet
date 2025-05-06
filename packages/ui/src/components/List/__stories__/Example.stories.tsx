@@ -1,4 +1,5 @@
 import type { StoryFn } from '@storybook/react'
+import { PencilIcon } from '@ultraviolet/icons'
 import { useMemo, useState } from 'react'
 import { List } from '..'
 import { Button } from '../../Button/index'
@@ -70,7 +71,8 @@ export const Example: StoryFn = args => {
               <div>A planet description</div>
               <Modal
                 disclosure={
-                  <Button size="small" icon="pencil">
+                  <Button size="small">
+                    <PencilIcon />
                     Edit
                   </Button>
                 }

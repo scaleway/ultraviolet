@@ -2,7 +2,6 @@
 
 import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
-import { AsteriskIcon } from '@ultraviolet/icons'
 import type { InputHTMLAttributes, ReactNode } from 'react'
 import { forwardRef, useId } from 'react'
 import { Loader } from '../Loader'
@@ -424,9 +423,9 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
                     </>
                   ) : null}
                   {required ? (
-                    <sup>
-                      <AsteriskIcon size={8} sentiment="danger" />
-                    </sup>
+                    <Text as="sup" variant="body" sentiment="danger">
+                      *
+                    </Text>
                   ) : null}
                 </Stack>
               )}

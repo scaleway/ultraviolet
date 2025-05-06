@@ -308,7 +308,7 @@ exports[`DateField > should clear field 1`] = `
   gap: 0.25rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 1.5rem;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -352,19 +352,15 @@ exports[`DateField > should clear field 1`] = `
 .emotion-23 {
   vertical-align: middle;
   fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
 .emotion-23 .fillStroke {
   stroke: currentColor;
   fill: none;
-}
-
-.emotion-23 path {
-  fill: currentColor;
 }
 
 .emotion-26 {
@@ -566,9 +562,8 @@ exports[`DateField > should clear field 1`] = `
                   type="button"
                 >
                   <svg
-                    class="emotion-23 emotion-24"
+                    class="emotion-23 emotion-13"
                     viewBox="0 0 16 16"
-                    xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
                       clip-rule="evenodd"
@@ -588,9 +583,8 @@ exports[`DateField > should clear field 1`] = `
                   type="button"
                 >
                   <svg
-                    class="emotion-23 emotion-24"
+                    class="emotion-23 emotion-13"
                     viewBox="0 0 16 16"
-                    xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
                       clip-rule="evenodd"

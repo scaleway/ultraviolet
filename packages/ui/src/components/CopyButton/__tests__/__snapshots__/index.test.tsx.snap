@@ -28,7 +28,7 @@ exports[`CopyButton > renders correctly 1`] = `
   gap: 0.5rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 2rem;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -72,19 +72,15 @@ exports[`CopyButton > renders correctly 1`] = `
 .emotion-4 {
   vertical-align: middle;
   fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
 .emotion-4 .fillStroke {
   stroke: currentColor;
   fill: none;
-}
-
-.emotion-4 path {
-  fill: currentColor;
 }
 
 <div
@@ -105,7 +101,6 @@ exports[`CopyButton > renders correctly 1`] = `
         <svg
           class="emotion-4 emotion-5"
           viewBox="0 0 16 16"
-          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             clip-rule="evenodd"
@@ -152,7 +147,7 @@ exports[`CopyButton > renders correctly sentiment large 1`] = `
   gap: 0.5rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 3rem;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -196,19 +191,15 @@ exports[`CopyButton > renders correctly sentiment large 1`] = `
 .emotion-4 {
   vertical-align: middle;
   fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
 .emotion-4 .fillStroke {
   stroke: currentColor;
   fill: none;
-}
-
-.emotion-4 path {
-  fill: currentColor;
 }
 
 <div
@@ -229,7 +220,6 @@ exports[`CopyButton > renders correctly sentiment large 1`] = `
         <svg
           class="emotion-4 emotion-5"
           viewBox="0 0 16 16"
-          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             clip-rule="evenodd"
@@ -276,7 +266,7 @@ exports[`CopyButton > renders correctly sentiment medium 1`] = `
   gap: 0.5rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 2.5rem;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -320,19 +310,15 @@ exports[`CopyButton > renders correctly sentiment medium 1`] = `
 .emotion-4 {
   vertical-align: middle;
   fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
 .emotion-4 .fillStroke {
   stroke: currentColor;
   fill: none;
-}
-
-.emotion-4 path {
-  fill: currentColor;
 }
 
 <div
@@ -353,7 +339,6 @@ exports[`CopyButton > renders correctly sentiment medium 1`] = `
         <svg
           class="emotion-4 emotion-5"
           viewBox="0 0 16 16"
-          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             clip-rule="evenodd"
@@ -400,7 +385,7 @@ exports[`CopyButton > renders correctly sentiment neutral 1`] = `
   gap: 0.5rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 2rem;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -444,19 +429,15 @@ exports[`CopyButton > renders correctly sentiment neutral 1`] = `
 .emotion-4 {
   vertical-align: middle;
   fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
 .emotion-4 .fillStroke {
   stroke: currentColor;
   fill: none;
-}
-
-.emotion-4 path {
-  fill: currentColor;
 }
 
 <div
@@ -477,7 +458,6 @@ exports[`CopyButton > renders correctly sentiment neutral 1`] = `
         <svg
           class="emotion-4 emotion-5"
           viewBox="0 0 16 16"
-          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             clip-rule="evenodd"
@@ -524,7 +504,7 @@ exports[`CopyButton > renders correctly sentiment primary 1`] = `
   gap: 0.5rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 2rem;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -568,19 +548,15 @@ exports[`CopyButton > renders correctly sentiment primary 1`] = `
 .emotion-4 {
   vertical-align: middle;
   fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
 .emotion-4 .fillStroke {
   stroke: currentColor;
   fill: none;
-}
-
-.emotion-4 path {
-  fill: currentColor;
 }
 
 <div
@@ -601,7 +577,6 @@ exports[`CopyButton > renders correctly sentiment primary 1`] = `
         <svg
           class="emotion-4 emotion-5"
           viewBox="0 0 16 16"
-          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             clip-rule="evenodd"
@@ -648,7 +623,7 @@ exports[`CopyButton > renders correctly sentiment small 1`] = `
   gap: 0.5rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 2rem;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -692,19 +667,15 @@ exports[`CopyButton > renders correctly sentiment small 1`] = `
 .emotion-4 {
   vertical-align: middle;
   fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
 .emotion-4 .fillStroke {
   stroke: currentColor;
   fill: none;
-}
-
-.emotion-4 path {
-  fill: currentColor;
 }
 
 <div
@@ -725,7 +696,6 @@ exports[`CopyButton > renders correctly sentiment small 1`] = `
         <svg
           class="emotion-4 emotion-5"
           viewBox="0 0 16 16"
-          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             clip-rule="evenodd"
@@ -772,7 +742,7 @@ exports[`CopyButton > renders correctly sentiment xsmall 1`] = `
   gap: 0.25rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 1.5rem;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -816,19 +786,15 @@ exports[`CopyButton > renders correctly sentiment xsmall 1`] = `
 .emotion-4 {
   vertical-align: middle;
   fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
 .emotion-4 .fillStroke {
   stroke: currentColor;
   fill: none;
-}
-
-.emotion-4 path {
-  fill: currentColor;
 }
 
 <div
@@ -849,7 +815,6 @@ exports[`CopyButton > renders correctly sentiment xsmall 1`] = `
         <svg
           class="emotion-4 emotion-5"
           viewBox="0 0 16 16"
-          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             clip-rule="evenodd"
@@ -896,7 +861,7 @@ exports[`CopyButton > renders correctly with bordered 1`] = `
   gap: 0.5rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 2rem;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -941,19 +906,15 @@ exports[`CopyButton > renders correctly with bordered 1`] = `
 .emotion-4 {
   vertical-align: middle;
   fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
 .emotion-4 .fillStroke {
   stroke: currentColor;
   fill: none;
-}
-
-.emotion-4 path {
-  fill: currentColor;
 }
 
 <div
@@ -974,7 +935,6 @@ exports[`CopyButton > renders correctly with bordered 1`] = `
         <svg
           class="emotion-4 emotion-5"
           viewBox="0 0 16 16"
-          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             clip-rule="evenodd"
@@ -1065,19 +1025,15 @@ exports[`CopyButton > renders correctly with children 1`] = `
 .emotion-4 {
   vertical-align: middle;
   fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
 .emotion-4 .fillStroke {
   stroke: currentColor;
   fill: none;
-}
-
-.emotion-4 path {
-  fill: currentColor;
 }
 
 <div
@@ -1098,7 +1054,6 @@ exports[`CopyButton > renders correctly with children 1`] = `
         <svg
           class="emotion-4 emotion-5"
           viewBox="0 0 16 16"
-          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             clip-rule="evenodd"
@@ -1146,7 +1101,7 @@ exports[`CopyButton > renders correctly with custom class name 1`] = `
   gap: 0.5rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 2rem;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1190,19 +1145,15 @@ exports[`CopyButton > renders correctly with custom class name 1`] = `
 .emotion-4 {
   vertical-align: middle;
   fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
 .emotion-4 .fillStroke {
   stroke: currentColor;
   fill: none;
-}
-
-.emotion-4 path {
-  fill: currentColor;
 }
 
 <div
@@ -1223,7 +1174,6 @@ exports[`CopyButton > renders correctly with custom class name 1`] = `
         <svg
           class="emotion-4 emotion-5"
           viewBox="0 0 16 16"
-          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             clip-rule="evenodd"
@@ -1270,7 +1220,7 @@ exports[`CopyButton > renders correctly with custom copied text 1`] = `
   gap: 0.5rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 2rem;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1314,19 +1264,15 @@ exports[`CopyButton > renders correctly with custom copied text 1`] = `
 .emotion-4 {
   vertical-align: middle;
   fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
 .emotion-4 .fillStroke {
   stroke: currentColor;
   fill: none;
-}
-
-.emotion-4 path {
-  fill: currentColor;
 }
 
 <div
@@ -1347,7 +1293,6 @@ exports[`CopyButton > renders correctly with custom copied text 1`] = `
         <svg
           class="emotion-4 emotion-5"
           viewBox="0 0 16 16"
-          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             clip-rule="evenodd"
@@ -1394,7 +1339,7 @@ exports[`CopyButton > renders correctly with custom copy text 1`] = `
   gap: 0.5rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 2rem;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1438,19 +1383,15 @@ exports[`CopyButton > renders correctly with custom copy text 1`] = `
 .emotion-4 {
   vertical-align: middle;
   fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
 .emotion-4 .fillStroke {
   stroke: currentColor;
   fill: none;
-}
-
-.emotion-4 path {
-  fill: currentColor;
 }
 
 <div
@@ -1471,7 +1412,6 @@ exports[`CopyButton > renders correctly with custom copy text 1`] = `
         <svg
           class="emotion-4 emotion-5"
           viewBox="0 0 16 16"
-          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             clip-rule="evenodd"
@@ -1518,7 +1458,7 @@ exports[`CopyButton > renders correctly with no border 1`] = `
   gap: 0.5rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 2rem;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1562,19 +1502,15 @@ exports[`CopyButton > renders correctly with no border 1`] = `
 .emotion-4 {
   vertical-align: middle;
   fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
 .emotion-4 .fillStroke {
   stroke: currentColor;
   fill: none;
-}
-
-.emotion-4 path {
-  fill: currentColor;
 }
 
 <div
@@ -1595,7 +1531,6 @@ exports[`CopyButton > renders correctly with no border 1`] = `
         <svg
           class="emotion-4 emotion-5"
           viewBox="0 0 16 16"
-          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             clip-rule="evenodd"
