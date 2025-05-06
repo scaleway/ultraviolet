@@ -12,15 +12,6 @@ describe('Submit', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly with icon and iconPosition ', () => {
-    const { asFragment } = renderWithForm(
-      <Submit icon="east" iconPosition="right">
-        Test
-      </Submit>,
-    )
-    expect(asFragment()).toMatchSnapshot()
-  })
-
   test('form is invalid', () => {
     const { asFragment } = renderWithForm(
       <>

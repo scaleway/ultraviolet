@@ -1127,7 +1127,7 @@ exports[`SelectableCardGroup > renders correctly as a radio 1`] = `
                     aria-invalid="true"
                     checked=""
                     class="emotion-17 emotion-18"
-                    id=":r1h:"
+                    id=":r1i:"
                     name="radio"
                     tabindex="-1"
                     type="radio"
@@ -1160,7 +1160,7 @@ exports[`SelectableCardGroup > renders correctly as a radio 1`] = `
                   </svg>
                   <label
                     class="emotion-25 emotion-26 emotion-7"
-                    for=":r1h:"
+                    for=":r1i:"
                   >
                     Radio 1
                   </label>
@@ -1192,7 +1192,7 @@ exports[`SelectableCardGroup > renders correctly as a radio 1`] = `
                     aria-disabled="false"
                     aria-invalid="true"
                     class="emotion-17 emotion-18"
-                    id=":r1l:"
+                    id=":r1m:"
                     name="radio"
                     tabindex="-1"
                     type="radio"
@@ -1225,7 +1225,7 @@ exports[`SelectableCardGroup > renders correctly as a radio 1`] = `
                   </svg>
                   <label
                     class="emotion-25 emotion-26 emotion-7"
-                    for=":r1l:"
+                    for=":r1m:"
                   >
                     Radio 2
                   </label>
@@ -1310,22 +1310,19 @@ exports[`SelectableCardGroup > renders correctly required and showTick 1`] = `
   text-decoration: none;
 }
 
-.emotion-9 {
-  vertical-align: middle;
-  fill: #b3144d;
-  height: 8px;
-  width: 8px;
-  min-width: 8px;
-  min-height: 8px;
-  vertical-align: super;
+.emotion-8 {
+  color: #b3144d;
+  font-size: 1rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
-.emotion-9 .fillStroke {
-  stroke: #b3144d;
-  fill: none;
-}
-
-.emotion-11 {
+.emotion-10 {
   display: grid;
   grid-template-columns: repeat(1, minmax(0, 1fr));
   gap: 1rem;
@@ -1339,7 +1336,7 @@ exports[`SelectableCardGroup > renders correctly required and showTick 1`] = `
   justify-content: normal;
 }
 
-.emotion-13 {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1374,54 +1371,54 @@ exports[`SelectableCardGroup > renders correctly required and showTick 1`] = `
   color: #3f4250;
 }
 
-.emotion-13[data-has-label='false']>:first-child {
+.emotion-12[data-has-label='false']>:first-child {
   margin-bottom: -0.25rem;
 }
 
-.emotion-13[data-has-default-cursor='true'] {
+.emotion-12[data-has-default-cursor='true'] {
   cursor: default;
 }
 
-.emotion-13[data-checked='true'] {
+.emotion-12[data-checked='true'] {
   border: 1px solid #8c40ef;
 }
 
-.emotion-13[data-error='true'] {
+.emotion-12[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-13[data-disabled='true'] {
+.emotion-12[data-disabled='true'] {
   border: 1px solid #e9eaeb;
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.emotion-13[data-image="illustration"] {
+.emotion-12[data-image="illustration"] {
   padding: 0rem;
 }
 
-.emotion-13[data-image="icon"] {
+.emotion-12[data-image="icon"] {
   padding: 0rem;
   padding-right: 1rem;
 }
 
-.emotion-13:hover:not([data-error='true']):not([data-disabled='true']),
-.emotion-13:active:not([data-error='true']):not([data-disabled='true']) {
+.emotion-12:hover:not([data-error='true']):not([data-disabled='true']),
+.emotion-12:active:not([data-error='true']):not([data-disabled='true']) {
   border: 1px solid #8c40ef;
 }
 
-.emotion-13:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.emotion-13:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
+.emotion-12:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
+.emotion-12:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
 
-.emotion-13[data-has-label='true'] .ehkrmld6,
-.emotion-13[data-has-label='true'] .emotion-17 {
+.emotion-12[data-has-label='true'] .ehkrmld6,
+.emotion-12[data-has-label='true'] .emotion-16 {
   width: 100%;
 }
 
-.emotion-16 {
+.emotion-15 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1442,65 +1439,65 @@ exports[`SelectableCardGroup > renders correctly required and showTick 1`] = `
   align-items: start;
 }
 
-.emotion-16 .eqr7bqq4 {
+.emotion-15 .eqr7bqq4 {
   cursor: pointer;
 }
 
-.emotion-16[aria-disabled='true'] {
+.emotion-15[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.emotion-16[aria-disabled='true'] .eqr7bqq4 {
+.emotion-15[aria-disabled='true'] .eqr7bqq4 {
   cursor: not-allowed;
 }
 
-.emotion-16[aria-disabled='true'] .emotion-21 {
+.emotion-15[aria-disabled='true'] .emotion-20 {
   fill: #e9eaeb;
 }
 
-.emotion-16[aria-disabled='true'] .emotion-21 .emotion-23 {
+.emotion-15[aria-disabled='true'] .emotion-20 .emotion-22 {
   stroke: #d9dadd;
   fill: #f3f3f4;
 }
 
-.emotion-16[aria-disabled='true'] .emotion-19[aria-invalid="true"]:checked+.emotion-21 {
+.emotion-15[aria-disabled='true'] .emotion-18[aria-invalid="true"]:checked+.emotion-20 {
   fill: #ffd3e3;
 }
 
-.emotion-16[aria-disabled='true'] .emotion-19[aria-invalid="true"]:checked+.emotion-21 .emotion-23 {
+.emotion-15[aria-disabled='true'] .emotion-18[aria-invalid="true"]:checked+.emotion-20 .emotion-22 {
   stroke: #ffd3e3;
   fill: #ffd3e3;
 }
 
-.emotion-16[aria-disabled='true'] .emotion-19[aria-invalid="true"]+.emotion-21 {
+.emotion-15[aria-disabled='true'] .emotion-18[aria-invalid="true"]+.emotion-20 {
   fill: #ffebf2;
 }
 
-.emotion-16[aria-disabled='true'] .emotion-19[aria-invalid="true"]+.emotion-21 .emotion-23 {
+.emotion-15[aria-disabled='true'] .emotion-18[aria-invalid="true"]+.emotion-20 .emotion-22 {
   stroke: #ffbbd3;
   fill: #ffebf2;
 }
 
-.emotion-16[aria-disabled='true'] .emotion-19:checked+.emotion-21 {
+.emotion-15[aria-disabled='true'] .emotion-18:checked+.emotion-20 {
   fill: #e5dbfd;
 }
 
-.emotion-16[aria-disabled='true'] .emotion-19:checked+.emotion-21 .emotion-23 {
+.emotion-15[aria-disabled='true'] .emotion-18:checked+.emotion-20 .emotion-22 {
   stroke: #d8c5fc;
   fill: #d8c5fc;
 }
 
-.emotion-16[aria-disabled='true'] .emotion-19[aria-checked="mixed"]+.emotion-21 {
+.emotion-15[aria-disabled='true'] .emotion-18[aria-checked="mixed"]+.emotion-20 {
   fill: #e5dbfd;
 }
 
-.emotion-16[aria-disabled='true'] .emotion-19[aria-checked="mixed"]+.emotion-21 .emotion-23 {
+.emotion-15[aria-disabled='true'] .emotion-18[aria-checked="mixed"]+.emotion-20 .emotion-22 {
   stroke: #e5dbfd;
   fill: #e5dbfd;
 }
 
-.emotion-16 .emotion-19:checked+.emotion-21 path {
+.emotion-15 .emotion-18:checked+.emotion-20 path {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -1514,103 +1511,103 @@ exports[`SelectableCardGroup > renders correctly required and showTick 1`] = `
   transform: translate(2px, 2px);
 }
 
-.emotion-16 .emotion-19:checked+.emotion-21 .emotion-23 {
+.emotion-15 .emotion-18:checked+.emotion-20 .emotion-22 {
   fill: #8c40ef;
   stroke: #8c40ef;
 }
 
-.emotion-16 .emotion-19[aria-invalid="true"]:checked+.emotion-21 .emotion-23 {
+.emotion-15 .emotion-18[aria-invalid="true"]:checked+.emotion-20 .emotion-22 {
   fill: #e51963;
   stroke: #e51963;
 }
 
-.emotion-16 .emotion-19[aria-checked="mixed"]+.emotion-21 .eqr7bqq6 {
+.emotion-15 .emotion-18[aria-checked="mixed"]+.emotion-20 .eqr7bqq6 {
   fill: #ffffff;
 }
 
-.emotion-16 .emotion-19[aria-checked="mixed"]+.emotion-21 .emotion-23 {
+.emotion-15 .emotion-18[aria-checked="mixed"]+.emotion-20 .emotion-22 {
   fill: #8c40ef;
   stroke: #8c40ef;
 }
 
-.emotion-16:hover[aria-disabled='false'] .emotion-19[aria-invalid='false'][aria-checked='false']+.emotion-21 .emotion-23 {
+.emotion-15:hover[aria-disabled='false'] .emotion-18[aria-invalid='false'][aria-checked='false']+.emotion-20 .emotion-22 {
   stroke: #792dd4;
   fill: #e5dbfd;
 }
 
-.emotion-16:hover[aria-disabled='false'] .emotion-19[aria-invalid='false'][aria-checked='true']+.emotion-21 .emotion-23 {
+.emotion-15:hover[aria-disabled='false'] .emotion-18[aria-invalid='false'][aria-checked='true']+.emotion-20 .emotion-22 {
   stroke: #792dd4;
   fill: #792dd4;
 }
 
-.emotion-16:hover[aria-disabled='false'] .emotion-19[aria-invalid='false'][aria-checked='mixed']+.emotion-21 .emotion-23 {
+.emotion-15:hover[aria-disabled='false'] .emotion-18[aria-invalid='false'][aria-checked='mixed']+.emotion-20 .emotion-22 {
   stroke: #792dd4;
   fill: #792dd4;
 }
 
-.emotion-16:hover[aria-disabled='false'] .emotion-19[aria-invalid='true'][aria-checked='false']+.emotion-21 .emotion-23 {
+.emotion-15:hover[aria-disabled='false'] .emotion-18[aria-invalid='true'][aria-checked='false']+.emotion-20 .emotion-22 {
   stroke: #92103f;
   fill: #ffd3e3;
 }
 
-.emotion-16:hover[aria-disabled='false'] .emotion-19[aria-invalid='true'][aria-checked='true']+.emotion-21 .emotion-23 {
+.emotion-15:hover[aria-disabled='false'] .emotion-18[aria-invalid='true'][aria-checked='true']+.emotion-20 .emotion-22 {
   stroke: #d6175c;
   fill: #d6175c;
 }
 
-.emotion-16 .emotion-19[aria-invalid="true"]+.emotion-21 {
+.emotion-15 .emotion-18[aria-invalid="true"]+.emotion-20 {
   fill: #e51963;
 }
 
-.emotion-16 .emotion-19[aria-invalid="true"]+.emotion-21 .emotion-23 {
+.emotion-15 .emotion-18[aria-invalid="true"]+.emotion-20 .emotion-22 {
   stroke: #e51963;
   fill: #ffebf2;
 }
 
-.emotion-16[data-checked='true'] {
+.emotion-15[data-checked='true'] {
   color: #641cb3;
 }
 
-.emotion-16[data-error='true'] {
+.emotion-15[data-error='true'] {
   color: #b3144d;
 }
 
-.emotion-16[aria-disabled='true'] {
+.emotion-15[aria-disabled='true'] {
   color: #b5b7bd;
 }
 
-.emotion-16 label {
+.emotion-15 label {
   width: 100%;
 }
 
-.emotion-16:hover[aria-disabled='false'] .emotion-19[aria-invalid='false'][aria-checked='false']+.emotion-21 .emotion-23 {
+.emotion-15:hover[aria-disabled='false'] .emotion-18[aria-invalid='false'][aria-checked='false']+.emotion-20 .emotion-22 {
   fill: #ffffff;
   stroke: #d9dadd;
 }
 
-.emotion-16:hover[aria-disabled='false'] .emotion-19[aria-invalid='false'][aria-checked='true']+.emotion-21 .emotion-23 {
+.emotion-15:hover[aria-disabled='false'] .emotion-18[aria-invalid='false'][aria-checked='true']+.emotion-20 .emotion-22 {
   stroke: #8c40ef;
   fill: #8c40ef;
 }
 
-.emotion-16:hover[aria-disabled='false'] .emotion-19[aria-invalid='false'][aria-checked='mixed']+.emotion-21 .emotion-23 {
+.emotion-15:hover[aria-disabled='false'] .emotion-18[aria-invalid='false'][aria-checked='mixed']+.emotion-20 .emotion-22 {
   stroke: #8c40ef;
   fill: #8c40ef;
 }
 
-.emotion-16 .emotion-19:focus+.emotion-21,
-.emotion-16 .emotion-19:active+.emotion-21 {
+.emotion-15 .emotion-18:focus+.emotion-20,
+.emotion-15 .emotion-18:active+.emotion-20 {
   outline: none;
   background-color: #ffffff;
   fill: #ffffff;
 }
 
-.emotion-16 .emotion-19[aria-checked='false'] .emotion-23 {
+.emotion-15 .emotion-18[aria-checked='false'] .emotion-22 {
   fill: #ffffff;
   stroke: #d9dadd;
 }
 
-.emotion-18 {
+.emotion-17 {
   position: absolute;
   white-space: nowrap;
   height: 1.5rem;
@@ -1619,57 +1616,57 @@ exports[`SelectableCardGroup > renders correctly required and showTick 1`] = `
   border-width: 0;
 }
 
-.emotion-18:not(:disabled) {
+.emotion-17:not(:disabled) {
   cursor: pointer;
 }
 
-.emotion-18:disabled {
+.emotion-17:disabled {
   cursor: not-allowed;
 }
 
-.emotion-18:not(:disabled):checked+.emotion-21,
-.emotion-18:not(:disabled)[aria-checked='mixed']+.emotion-21 {
+.emotion-17:not(:disabled):checked+.emotion-20,
+.emotion-17:not(:disabled)[aria-checked='mixed']+.emotion-20 {
   fill: #8c40ef;
 }
 
-.emotion-18:not(:disabled):checked+.emotion-21 .emotion-23,
-.emotion-18:not(:disabled)[aria-checked='mixed']+.emotion-21 .emotion-23 {
+.emotion-17:not(:disabled):checked+.emotion-20 .emotion-22,
+.emotion-17:not(:disabled)[aria-checked='mixed']+.emotion-20 .emotion-22 {
   stroke: #8c40ef;
 }
 
-.emotion-18:not(:disabled)[aria-invalid='true']+.emotion-21,
-.emotion-18:not(:disabled)[aria-invalid='mixed']+.emotion-21 {
+.emotion-17:not(:disabled)[aria-invalid='true']+.emotion-20,
+.emotion-17:not(:disabled)[aria-invalid='mixed']+.emotion-20 {
   fill: #ffebf2;
 }
 
-.emotion-18:not(:disabled)[aria-invalid='true']+.emotion-21 .emotion-23,
-.emotion-18:not(:disabled)[aria-invalid='mixed']+.emotion-21 .emotion-23 {
+.emotion-17:not(:disabled)[aria-invalid='true']+.emotion-20 .emotion-22,
+.emotion-17:not(:disabled)[aria-invalid='mixed']+.emotion-20 .emotion-22 {
   stroke: #b3144d;
 }
 
-.emotion-18:focus+.emotion-21 {
+.emotion-17:focus+.emotion-20 {
   background-color: #f1eefc;
   fill: #ffebf2;
   outline: 1px solid 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-18:focus+.emotion-21 .emotion-23 {
+.emotion-17:focus+.emotion-20 .emotion-22 {
   stroke: #792dd4;
   fill: #e5dbfd;
 }
 
-.emotion-18[aria-invalid='true']:focus+.emotion-21 {
+.emotion-17[aria-invalid='true']:focus+.emotion-20 {
   background-color: #ffebf2;
   fill: #ffebf2;
   outline: 1px solid 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-18[aria-invalid='true']:focus+.emotion-21 .emotion-23 {
+.emotion-17[aria-invalid='true']:focus+.emotion-20 .emotion-22 {
   stroke: #92103f;
   fill: #ffd3e3;
 }
 
-.emotion-20 {
+.emotion-19 {
   border-radius: 0.25rem;
   height: 1.5rem;
   width: 1.5rem;
@@ -1677,7 +1674,7 @@ exports[`SelectableCardGroup > renders correctly required and showTick 1`] = `
   min-height: 1.5rem;
 }
 
-.emotion-20 path {
+.emotion-19 path {
   fill: #ffffff;
   -webkit-transform: translate(2px, 2px);
   -moz-transform: translate(2px, 2px);
@@ -1689,12 +1686,12 @@ exports[`SelectableCardGroup > renders correctly required and showTick 1`] = `
   transform: scale(0);
 }
 
-.emotion-22 {
+.emotion-21 {
   fill: #ffffff;
   stroke: #d9dadd;
 }
 
-.emotion-24 {
+.emotion-23 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1720,7 +1717,7 @@ exports[`SelectableCardGroup > renders correctly required and showTick 1`] = `
   flex: 1;
 }
 
-.emotion-26 {
+.emotion-25 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1746,7 +1743,7 @@ exports[`SelectableCardGroup > renders correctly required and showTick 1`] = `
   flex: 1;
 }
 
-.emotion-29 {
+.emotion-28 {
   color: #3f4250;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
@@ -1776,20 +1773,17 @@ exports[`SelectableCardGroup > renders correctly required and showTick 1`] = `
             class="emotion-6 emotion-7"
           >
             Label  
-            <svg
-              class="emotion-8 emotion-9 emotion-10"
-              viewBox="0 0 20 20"
+            <sup
+              class="emotion-8 emotion-7"
             >
-              <path
-                d="M10 2h4l-.79 7.91 6.45-4.64 2 3.46L14.42 12l7.24 3.27-2 3.46-6.45-4.64L14 22h-4l.79-7.91-6.45 4.64-2-3.46L9.58 12 2.34 8.73l2-3.46 6.45 4.64z"
-              />
-            </svg>
+              *
+            </sup>
           </legend>
           <div
-            class="emotion-11 emotion-12"
+            class="emotion-10 emotion-11"
           >
             <div
-              class="emotion-13 emotion-14"
+              class="emotion-12 emotion-13"
               data-checked="true"
               data-disabled="false"
               data-error="false"
@@ -1802,7 +1796,7 @@ exports[`SelectableCardGroup > renders correctly required and showTick 1`] = `
             >
               <div
                 aria-disabled="false"
-                class="emotion-15 emotion-16 emotion-17"
+                class="emotion-14 emotion-15 emotion-16"
                 data-checked="true"
                 data-error="false"
               >
@@ -1810,21 +1804,21 @@ exports[`SelectableCardGroup > renders correctly required and showTick 1`] = `
                   aria-checked="true"
                   aria-invalid="false"
                   checked=""
-                  class="emotion-18 emotion-19"
-                  id=":ru:"
+                  class="emotion-17 emotion-18"
+                  id=":rv:"
                   name="checkbox"
                   tabindex="-1"
                   type="checkbox"
                   value="value-1"
                 />
                 <svg
-                  class="emotion-20 emotion-21"
+                  class="emotion-19 emotion-20"
                   fill="none"
                   viewBox="0 0 24 24"
                 >
                   <g>
                     <rect
-                      class="emotion-22 emotion-23"
+                      class="emotion-21 emotion-22"
                       height="16"
                       rx="0.125rem"
                       stroke-width="2"
@@ -1845,14 +1839,14 @@ exports[`SelectableCardGroup > renders correctly required and showTick 1`] = `
                   </g>
                 </svg>
                 <div
-                  class="emotion-24 emotion-1"
+                  class="emotion-23 emotion-1"
                 >
                   <div
-                    class="emotion-26 emotion-1"
+                    class="emotion-25 emotion-1"
                   >
                     <label
-                      class="emotion-28 emotion-29 emotion-7"
-                      for=":ru:"
+                      class="emotion-27 emotion-28 emotion-7"
+                      for=":rv:"
                     >
                       Checkbox 1
                     </label>
@@ -1861,7 +1855,7 @@ exports[`SelectableCardGroup > renders correctly required and showTick 1`] = `
               </div>
             </div>
             <div
-              class="emotion-13 emotion-14"
+              class="emotion-12 emotion-13"
               data-checked="false"
               data-disabled="false"
               data-error="false"
@@ -1874,28 +1868,28 @@ exports[`SelectableCardGroup > renders correctly required and showTick 1`] = `
             >
               <div
                 aria-disabled="false"
-                class="emotion-15 emotion-16 emotion-17"
+                class="emotion-14 emotion-15 emotion-16"
                 data-checked="false"
                 data-error="false"
               >
                 <input
                   aria-checked="false"
                   aria-invalid="false"
-                  class="emotion-18 emotion-19"
-                  id=":r12:"
+                  class="emotion-17 emotion-18"
+                  id=":r13:"
                   name="checkbox"
                   tabindex="-1"
                   type="checkbox"
                   value="value-2"
                 />
                 <svg
-                  class="emotion-20 emotion-21"
+                  class="emotion-19 emotion-20"
                   fill="none"
                   viewBox="0 0 24 24"
                 >
                   <g>
                     <rect
-                      class="emotion-22 emotion-23"
+                      class="emotion-21 emotion-22"
                       height="16"
                       rx="0.125rem"
                       stroke-width="2"
@@ -1916,14 +1910,14 @@ exports[`SelectableCardGroup > renders correctly required and showTick 1`] = `
                   </g>
                 </svg>
                 <div
-                  class="emotion-24 emotion-1"
+                  class="emotion-23 emotion-1"
                 >
                   <div
-                    class="emotion-26 emotion-1"
+                    class="emotion-25 emotion-1"
                   >
                     <label
-                      class="emotion-28 emotion-29 emotion-7"
-                      for=":r12:"
+                      class="emotion-27 emotion-28 emotion-7"
+                      for=":r13:"
                     >
                       Checkbox 2
                     </label>
@@ -3170,11 +3164,11 @@ exports[`SelectableCardGroup > renders correctly with error content 1`] = `
               >
                 <input
                   aria-checked="true"
-                  aria-describedby=":r17:-hint"
+                  aria-describedby=":r18:-hint"
                   aria-invalid="true"
                   checked=""
                   class="emotion-15 emotion-16"
-                  id=":r17:"
+                  id=":r18:"
                   name="checkbox"
                   tabindex="-1"
                   type="checkbox"
@@ -3215,7 +3209,7 @@ exports[`SelectableCardGroup > renders correctly with error content 1`] = `
                   >
                     <label
                       class="emotion-25 emotion-26 emotion-7"
-                      for=":r17:"
+                      for=":r18:"
                     >
                       Checkbox 1
                     </label>
@@ -3243,10 +3237,10 @@ exports[`SelectableCardGroup > renders correctly with error content 1`] = `
               >
                 <input
                   aria-checked="false"
-                  aria-describedby=":r1b:-hint"
+                  aria-describedby=":r1c:-hint"
                   aria-invalid="true"
                   class="emotion-15 emotion-16"
-                  id=":r1b:"
+                  id=":r1c:"
                   name="checkbox"
                   tabindex="-1"
                   type="checkbox"
@@ -3287,7 +3281,7 @@ exports[`SelectableCardGroup > renders correctly with error content 1`] = `
                   >
                     <label
                       class="emotion-25 emotion-26 emotion-7"
-                      for=":r1b:"
+                      for=":r1c:"
                     >
                       Checkbox 2
                     </label>

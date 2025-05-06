@@ -1,4 +1,5 @@
 import type { StoryFn } from '@storybook/react'
+import { DotsHorizontalIcon } from '@ultraviolet/icons'
 import { MenuV2 } from '..'
 import { AvatarV2 } from '../../AvatarV2'
 import { Button } from '../../Button'
@@ -10,12 +11,9 @@ export const Searchable: StoryFn<typeof MenuV2> = () => (
     searchable
     hideOnClickItem
     disclosure={
-      <Button
-        icon="dots-horizontal"
-        sentiment="neutral"
-        variant="ghost"
-        size="small"
-      />
+      <Button sentiment="neutral" variant="ghost" size="small">
+        <DotsHorizontalIcon />
+      </Button>
     }
   >
     <MenuV2.Group label="Projects" emptyState="No project">

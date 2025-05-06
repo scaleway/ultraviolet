@@ -1,7 +1,6 @@
 'use client'
 
 import styled from '@emotion/styled'
-import { AsteriskIcon } from '@ultraviolet/icons'
 import {
   type ComponentProps,
   type InputHTMLAttributes,
@@ -85,10 +84,6 @@ const FieldSet = styled.fieldset`
   margin: 0;
 `
 
-const StyledRequiredIcon = styled(AsteriskIcon)`
-  vertical-align: super;
-`
-
 type RadioGroupProps = {
   legend?: ReactNode
   value: string | number
@@ -144,7 +139,9 @@ export const RadioGroup = ({
                   >
                     {legend}&nbsp;
                     {required ? (
-                      <StyledRequiredIcon sentiment="danger" size={8} />
+                      <Text as="sup" variant="body" sentiment="danger">
+                        *
+                      </Text>
                     ) : null}
                   </Text>
                 ) : null}

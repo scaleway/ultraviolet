@@ -3,7 +3,13 @@
 import { css } from '@emotion/react'
 import styled from '@emotion/styled'
 import randomName from '@scaleway/random-name'
-import { CheckIcon, CloseIcon } from '@ultraviolet/icons'
+import {
+  AutoFixIcon,
+  CheckIcon,
+  CloseIcon,
+  EyeIcon,
+  EyeOffIcon,
+} from '@ultraviolet/icons'
 import type {
   ChangeEvent,
   FocusEventHandler,
@@ -505,9 +511,10 @@ export const TextInput = forwardRef<
             onClick={handlePassVisibilityClick}
             variant="ghost"
             sentiment="neutral"
-            icon={passwordVisible ? 'eye-off' : 'eye'}
             size="small"
-          />,
+          >
+            {passwordVisible ? <EyeOffIcon /> : <EyeIcon />}
+          </Button>,
         )
       }
       if (random) {
@@ -520,11 +527,12 @@ export const TextInput = forwardRef<
             aria-label="randomize"
             onClick={handleClickRandomize}
             disabled={disabled}
-            icon="auto-fix"
             variant="ghost"
             sentiment="neutral"
             size="small"
-          />,
+          >
+            <AutoFixIcon />
+          </Button>,
         )
       }
       if (valid === false || valid === true) {

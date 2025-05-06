@@ -1,3 +1,4 @@
+import { MoonIcon, MoonOutlineIcon } from '@ultraviolet/icons'
 import { shouldMatchEmotionSnapshot } from '@utils/test'
 import { describe, test } from 'vitest'
 import { Bullet } from '..'
@@ -8,10 +9,18 @@ describe('Bullet', () => {
     shouldMatchEmotionSnapshot(<Bullet text="1" />))
 
   test('renders correctly with an icon', () =>
-    shouldMatchEmotionSnapshot(<Bullet icon="moon" />))
+    shouldMatchEmotionSnapshot(
+      <Bullet>
+        <MoonIcon />
+      </Bullet>,
+    ))
 
   test('renders correctly with an icon and icon variant', () =>
-    shouldMatchEmotionSnapshot(<Bullet icon="moon" iconVariant="outlined" />))
+    shouldMatchEmotionSnapshot(
+      <Bullet>
+        <MoonOutlineIcon />
+      </Bullet>,
+    ))
 
   describe('sentiment', () => {
     ;['disabled', ...SENTIMENTS].forEach(sentiment => {

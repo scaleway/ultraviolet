@@ -5,6 +5,7 @@ import styled from '@emotion/styled'
 import {
   ArrowDownIcon,
   ArrowRightIcon,
+  DotsHorizontalIcon,
   DragIcon,
   OpenInNewIcon,
   PinOutlineIcon,
@@ -741,9 +742,9 @@ export const Item = memo(
                   sentiment="neutral"
                   variant={hasActiveChildren ? 'filled' : 'ghost'}
                   size="small"
-                  icon={!categoryIcon ? 'dots-horizontal' : undefined}
                   aria-label={label}
                 >
+                  {!categoryIcon ? <DotsHorizontalIcon /> : null}
                   {CategoryIconUsed ? (
                     <Stack
                       direction="row"
