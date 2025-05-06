@@ -1,5 +1,21 @@
 # Change Log
 
+## 4.0.0-beta.0
+
+### Major Changes
+
+- [#5112](https://github.com/scaleway/ultraviolet/pull/5112) [`37a7d63`](https://github.com/scaleway/ultraviolet/commit/37a7d632cd1e61d7615e5356fc179ec08f3bec09) Thanks [@matthprost](https://github.com/matthprost)! - Beta release
+
+### Patch Changes
+
+- [#5094](https://github.com/scaleway/ultraviolet/pull/5094) [`5730187`](https://github.com/scaleway/ultraviolet/commit/5730187ae1675f1661a49767fcae97c1ee7d819c) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@babel/eslint-parser` to `7.27.1`.
+  Updated dependency `@babel/preset-typescript` to `7.27.1`.
+  Updated dependency `@babel/runtime` to `7.27.1`.
+- Updated dependencies [[`302eadc`](https://github.com/scaleway/ultraviolet/commit/302eadca152c594170a843070d48a6482afcb9e0), [`37a7d63`](https://github.com/scaleway/ultraviolet/commit/37a7d632cd1e61d7615e5356fc179ec08f3bec09), [`865c160`](https://github.com/scaleway/ultraviolet/commit/865c160aee2db5bd5e7b357e9693a45a17ef4284)]:
+  - @ultraviolet/ui@2.0.0-beta.0
+  - @ultraviolet/themes@2.0.0-beta.0
+  - @ultraviolet/icons@4.0.0-beta.0
+
 ## 3.17.3
 
 ### Patch Changes
