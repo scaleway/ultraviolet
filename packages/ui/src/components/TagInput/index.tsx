@@ -1,7 +1,11 @@
 'use client'
 
 import styled from '@emotion/styled'
-import { AlertCircleIcon, CheckCircleOutlineIcon } from '@ultraviolet/icons'
+import {
+  AlertCircleIcon,
+  CheckCircleOutlineIcon,
+  CloseIcon,
+} from '@ultraviolet/icons'
 import type {
   ChangeEvent,
   ClipboardEventHandler,
@@ -381,22 +385,23 @@ export const TagInput = ({
                     disabled={disabled}
                     variant="ghost"
                     size="xsmall"
-                    icon="close"
                     onClick={clearAll}
                     sentiment="neutral"
-                  />
+                  >
+                    <CloseIcon />
+                  </Button>
                 ) : null}
                 {success ? (
                   <CheckCircleOutlineIcon
                     sentiment="success"
-                    size={16}
+                    size="small"
                     disabled={disabled}
                   />
                 ) : null}
                 {error ? (
                   <AlertCircleIcon
                     sentiment="danger"
-                    size={16}
+                    size="small"
                     disabled={disabled}
                   />
                 ) : null}

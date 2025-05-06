@@ -1,6 +1,7 @@
 'use client'
 
 import styled from '@emotion/styled'
+import { ArrowLeftIcon, ArrowRightIcon } from '@ultraviolet/icons'
 import { useContext } from 'react'
 import { Button } from '../../Button'
 import { Stack } from '../../Stack'
@@ -31,7 +32,6 @@ export const CalendarContent = () => {
     <Stack gap={2}>
       <Stack direction="row" width="100%" justifyContent="space-between">
         <Button
-          icon="arrow-left"
           data-testid="previous-month"
           variant="ghost"
           sentiment="neutral"
@@ -58,7 +58,9 @@ export const CalendarContent = () => {
             !!(minDate && minDate > new Date(yearToShow, monthToShow - 1, 0)) ||
             disabled
           }
-        />
+        >
+          <ArrowLeftIcon />
+        </Button>
         <CapitalizedText
           as="span"
           variant="bodyStrong"
@@ -69,7 +71,6 @@ export const CalendarContent = () => {
           {yearToShow}
         </CapitalizedText>
         <Button
-          icon="arrow-right"
           data-testid="next-month"
           variant="ghost"
           sentiment="neutral"
@@ -92,7 +93,9 @@ export const CalendarContent = () => {
             !!(maxDate && maxDate < new Date(yearToShow, monthToShow, 1)) ||
             disabled
           }
-        />
+        >
+          <ArrowRightIcon />
+        </Button>
       </Stack>
       {showMonthYearPicker ? <Monthly /> : <Daily />}
     </Stack>

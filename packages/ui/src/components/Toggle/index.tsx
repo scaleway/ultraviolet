@@ -1,7 +1,6 @@
 'use client'
 
 import styled from '@emotion/styled'
-import { AsteriskIcon } from '@ultraviolet/icons'
 import type {
   ChangeEvent,
   ChangeEventHandler,
@@ -161,12 +160,6 @@ const StyledLabel = styled.label<{
   }
 `
 
-const RequiredIcon = () => (
-  <sup>
-    <AsteriskIcon size={8} sentiment="danger" />
-  </sup>
-)
-
 type ToggleProps = {
   id?: string
   checked?: boolean
@@ -253,7 +246,11 @@ export const Toggle = forwardRef(
                 ) : (
                   label
                 )}
-                {required ? <RequiredIcon /> : null}
+                {required ? (
+                  <Text as="sup" variant="body" sentiment="danger">
+                    *
+                  </Text>
+                ) : null}
               </Row>
             ) : null}
             {typeof error === 'string' ? (

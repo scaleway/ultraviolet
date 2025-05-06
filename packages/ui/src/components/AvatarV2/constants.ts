@@ -17,14 +17,6 @@ export const sizes = (theme: Theme) =>
     large: '7rem', // TODO: add this value to tokens
   }) as const
 
-// Match the avatar sizes with the icon sizes
-export const ICON_SIZES = {
-  xsmall: 'small',
-  small: 'large',
-  medium: 'xlarge',
-  large: 'xxlarge',
-} as const
-
 export const RADIUS_SIZES = {
   xsmall: 'default',
   small: 'large',
