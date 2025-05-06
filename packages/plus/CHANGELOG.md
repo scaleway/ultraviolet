@@ -1,5 +1,24 @@
 # @ultraviolet/plus
 
+## 1.0.0-beta.0
+
+### Major Changes
+
+- [#5112](https://github.com/scaleway/ultraviolet/pull/5112) [`37a7d63`](https://github.com/scaleway/ultraviolet/commit/37a7d632cd1e61d7615e5356fc179ec08f3bec09) Thanks [@matthprost](https://github.com/matthprost)! - Beta release
+
+### Patch Changes
+
+- [#4919](https://github.com/scaleway/ultraviolet/pull/4919) [`b062798`](https://github.com/scaleway/ultraviolet/commit/b06279807f3751351e3aa4a6dbe52be613954d5c) Thanks [@lisalupi](https://github.com/lisalupi)! - `<CodeEditor />`:
+  - Rename prop `title` to `label` and change style
+  - New prop `helper`
+  - New prop `disabled`
+  - New prop `copyButton`
+  - Update component style to match ultraviolet theme (the component always uses Dark Theme colors)
+- Updated dependencies [[`302eadc`](https://github.com/scaleway/ultraviolet/commit/302eadca152c594170a843070d48a6482afcb9e0), [`37a7d63`](https://github.com/scaleway/ultraviolet/commit/37a7d632cd1e61d7615e5356fc179ec08f3bec09), [`865c160`](https://github.com/scaleway/ultraviolet/commit/865c160aee2db5bd5e7b357e9693a45a17ef4284)]:
+  - @ultraviolet/ui@2.0.0-beta.0
+  - @ultraviolet/themes@2.0.0-beta.0
+  - @ultraviolet/icons@4.0.0-beta.0
+
 ## 0.27.3
 
 ### Patch Changes

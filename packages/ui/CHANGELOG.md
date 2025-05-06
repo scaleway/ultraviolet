@@ -1,5 +1,19 @@
 # Change Log
 
+## 2.0.0-beta.0
+
+### Major Changes
+
+- [#5112](https://github.com/scaleway/ultraviolet/pull/5112) [`37a7d63`](https://github.com/scaleway/ultraviolet/commit/37a7d632cd1e61d7615e5356fc179ec08f3bec09) Thanks [@matthprost](https://github.com/matthprost)! - Beta release
+
+### Patch Changes
+
+- [#5099](https://github.com/scaleway/ultraviolet/pull/5099) [`302eadc`](https://github.com/scaleway/ultraviolet/commit/302eadca152c594170a843070d48a6482afcb9e0) Thanks [@lisalupi](https://github.com/lisalupi)! - Add arrow icon to `<Popover />`
+
+- Updated dependencies [[`37a7d63`](https://github.com/scaleway/ultraviolet/commit/37a7d632cd1e61d7615e5356fc179ec08f3bec09), [`865c160`](https://github.com/scaleway/ultraviolet/commit/865c160aee2db5bd5e7b357e9693a45a17ef4284)]:
+  - @ultraviolet/themes@2.0.0-beta.0
+  - @ultraviolet/icons@4.0.0-beta.0
+
 ## 1.95.0
 
 ### Minor Changes
