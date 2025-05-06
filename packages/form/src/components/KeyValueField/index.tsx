@@ -1,9 +1,10 @@
 'use client'
 
+import { DeleteIcon, PlusIcon } from '@ultraviolet/icons'
 import { Button, Row, Stack } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
-import { useFieldArray } from 'react-hook-form'
 import type { Control, FieldArrayPath, FieldValues } from 'react-hook-form'
+import { useFieldArray } from 'react-hook-form'
 import { TextInputField as TextInputFieldV2 } from '../TextInputFieldV2'
 
 type InputKeyProps = {
@@ -95,12 +96,13 @@ export const KeyValueField = <
               <Button
                 disabled={readOnly}
                 data-testid={`remove-button-${index}`}
-                icon="delete"
                 variant="outlined"
                 sentiment="danger"
                 size="large"
                 onClick={() => remove(index)}
-              />
+              >
+                <DeleteIcon />
+              </Button>
             </Row>
           ))}
         </Stack>
@@ -108,7 +110,6 @@ export const KeyValueField = <
       <Stack direction="row" justifyContent="flex-start">
         <Button
           data-testid="add-button"
-          icon="plus"
           variant="outlined"
           sentiment="primary"
           fullWidth={addButton.fullWidth}
@@ -117,6 +118,7 @@ export const KeyValueField = <
           // @ts-expect-error can't infer properly
           onClick={() => append({ key: '', value: '' })}
         >
+          <PlusIcon />
           {addButton.name}
         </Button>
       </Stack>

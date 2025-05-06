@@ -1,4 +1,5 @@
 import type { StoryFn } from '@storybook/react'
+import { MosaicIcon } from '@ultraviolet/icons'
 import { AvatarV2 } from '..'
 import { Stack } from '../../Stack'
 
@@ -12,10 +13,18 @@ export const Size: StoryFn<typeof AvatarV2> = props => (
         <AvatarV2 variant="text" text="UV" shape="circle" size="xsmall" />
       </>
       <>
-        <AvatarV2 variant="icon" icon="mosaic" shape="circle" size="large" />
-        <AvatarV2 variant="icon" icon="mosaic" shape="circle" size="medium" />
-        <AvatarV2 variant="icon" icon="mosaic" shape="circle" size="small" />
-        <AvatarV2 variant="icon" icon="mosaic" shape="circle" size="xsmall" />
+        <AvatarV2 variant="icon" shape="circle" size="large">
+          <MosaicIcon />
+        </AvatarV2>
+        <AvatarV2 variant="icon" shape="circle" size="medium">
+          <MosaicIcon />
+        </AvatarV2>
+        <AvatarV2 variant="icon" shape="circle" size="small">
+          <MosaicIcon />
+        </AvatarV2>
+        <AvatarV2 variant="icon" shape="circle" size="xsmall">
+          <MosaicIcon />
+        </AvatarV2>
       </>
     </Stack>
     <Stack gap={2} direction="row">
@@ -26,10 +35,18 @@ export const Size: StoryFn<typeof AvatarV2> = props => (
         <AvatarV2 variant="text" text="UV" shape="square" size="xsmall" />
       </>
       <>
-        <AvatarV2 variant="icon" icon="mosaic" shape="square" size="large" />
-        <AvatarV2 variant="icon" icon="mosaic" shape="square" size="medium" />
-        <AvatarV2 variant="icon" icon="mosaic" shape="square" size="small" />
-        <AvatarV2 variant="icon" icon="mosaic" shape="square" size="xsmall" />
+        <AvatarV2 variant="icon" shape="square" size="large">
+          <MosaicIcon />
+        </AvatarV2>
+        <AvatarV2 variant="icon" shape="square" size="medium">
+          <MosaicIcon />
+        </AvatarV2>
+        <AvatarV2 variant="icon" shape="square" size="small">
+          <MosaicIcon />
+        </AvatarV2>
+        <AvatarV2 variant="icon" shape="square" size="xsmall">
+          <MosaicIcon />
+        </AvatarV2>
       </>
     </Stack>
   </Stack>

@@ -67,8 +67,8 @@ type LinkProps = {
   variant?: 'inline' | 'standalone'
 }
 
-const ICON_SIZE = 16
-const BLANK_TARGET_ICON_SIZE = 14
+const ICON_SIZE = 'small'
+const BLANK_TARGET_ICON_SIZE = 'small'
 const TRANSITION_DURATION = 250
 
 const StyledExternalIconContainer = styled.span`
