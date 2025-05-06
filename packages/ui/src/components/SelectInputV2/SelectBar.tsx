@@ -5,6 +5,7 @@ import {
   AlertCircleIcon,
   ArrowDownIcon,
   CheckCircleIcon,
+  CloseIcon,
   PlusIcon,
 } from '@ultraviolet/icons'
 import type { RefObject } from 'react'
@@ -424,7 +425,6 @@ export const SelectBar = ({
               disabled={disabled || !selectedData.selectedValues[0] || readOnly}
               variant="ghost"
               size="small"
-              icon="close"
               onClick={event => {
                 event.stopPropagation()
                 setSelectedData({ type: 'clearAll' })
@@ -436,7 +436,9 @@ export const SelectBar = ({
               }}
               sentiment="neutral"
               data-testid="clear-all"
-            />
+            >
+              <CloseIcon />
+            </Button>
           ) : null}
           <ArrowDownIcon
             aria-label="show dropdown"

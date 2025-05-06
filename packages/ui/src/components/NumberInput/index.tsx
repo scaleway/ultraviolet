@@ -28,12 +28,6 @@ const containerSizes = {
 
 type ContainerSizesType = keyof typeof containerSizes
 
-const iconSizes = {
-  large: 26,
-  medium: 24,
-  small: 22,
-}
-
 const BASE_INPUT_WIDTH = 34
 
 const StyledSelectButton = styled(Button)`
@@ -363,7 +357,7 @@ export const NumberInput = ({
               size="small"
             >
               <MinusIcon
-                size={iconSizes[size]}
+                size={size}
                 sentiment="primary"
                 disabled={isMinusDisabled}
               />
@@ -414,7 +408,7 @@ export const NumberInput = ({
               size="small"
             >
               <PlusIcon
-                size={iconSizes[size]}
+                size={size}
                 sentiment="primary"
                 disabled={isPlusDisabled}
               />

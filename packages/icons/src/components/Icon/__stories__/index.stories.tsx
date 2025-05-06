@@ -1,5 +1,5 @@
 import type { Meta } from '@storybook/react'
-import { AddressIcon } from '..'
+import { AddressIcon } from '../__generated__'
 import Documentation from './Documentation.md?raw'
 
 export default {

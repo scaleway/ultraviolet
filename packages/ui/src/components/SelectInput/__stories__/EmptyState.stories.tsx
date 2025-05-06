@@ -1,4 +1,5 @@
-import { Icon, Stack, Text } from '../..'
+import { InformationOutlineIcon } from '@ultraviolet/icons'
+import { Stack, Text } from '../..'
 import { Template } from './Template.stories'
 
 export const EmptyState = Template.bind({})
@@ -6,11 +7,10 @@ EmptyState.args = {
   name: 'emptyState',
   emptyState: () => (
     <Stack justifyContent="center" alignItems="center" gap={1}>
-      <Icon
-        color="neutral"
-        name="information-outline"
-        size={32}
+      <InformationOutlineIcon
+        size="large"
         prominence="strong"
+        sentiment="neutral"
       />
       <Text as="p" variant="bodyStrong">
         There is currently no option available

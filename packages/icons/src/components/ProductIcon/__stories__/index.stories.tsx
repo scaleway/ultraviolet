@@ -1,5 +1,5 @@
 import type { Meta } from '@storybook/react'
-import { ConsoleProductIcon } from '..'
+import { ConsoleProductIcon } from '../__generated__'
 import Documentation from './Documentation.md?raw'
 
 export default {

@@ -110,10 +110,7 @@ const StyledIcon = styled('svg', {
 `
 
 export type IconProps = {
-  /**
-   * **! IMPORTANT:** `string` and `number` are deprecated. Use `small`, `large`, `xlarge`, `xxlarge` only.
-   */
-  size?: number | string | 'small' | 'large'
+  size?: keyof typeof SIZES
   prominence?: ProminenceProps
   /**
    * @deprecated use `sentiment` property instead
