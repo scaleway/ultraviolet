@@ -1,3 +1,4 @@
+import { EmailOutlineIcon } from '@ultraviolet/icons'
 import { NetworkCategoryIcon } from '@ultraviolet/icons/category'
 import { Badge } from '../../Badge'
 import { Bullet } from '../../Bullet'
@@ -328,9 +329,9 @@ export const OptionalInfo5 = [
       <Button
         size="xsmall"
         sentiment="neutral"
-        icon="email-outline"
         onClick={() => alert('We will enable Warsaw soon!')}
       >
+        <EmailOutlineIcon />
         Contact us
       </Button>
     ),

@@ -1,4 +1,5 @@
 import type { StoryFn } from '@storybook/react'
+import { MinusIcon, PlusIcon } from '@ultraviolet/icons'
 import { useState } from 'react'
 import { Expandable } from '..'
 import { Button } from '../../Button'
@@ -13,11 +14,13 @@ export const NestedExpandable: StoryFn<typeof Expandable> = args => {
 
   return (
     <>
-      <Button icon={toggled ? 'minus' : 'plus'} onClick={toggle}>
+      <Button onClick={toggle}>
+        {toggled ? <MinusIcon /> : <PlusIcon />}
         Click me to {toggled ? 'hide' : 'show'} content
       </Button>
       <Expandable opened={toggled}>
-        <Button icon={toggledNested ? 'minus' : 'plus'} onClick={toggleNested}>
+        <Button onClick={toggleNested}>
+          {toggled ? <MinusIcon /> : <PlusIcon />}
           Click me to {toggledNested ? 'hide' : 'show'} content
         </Button>
         <Expandable {...args} opened={toggledNested}>

@@ -1,5 +1,5 @@
 import type { StoryFn } from '@storybook/react'
-import { ArrowDownIcon, DotsHorizontalIcon } from '@ultraviolet/icons'
+import { ArrowDownIcon, DotsHorizontalIcon, PlusIcon } from '@ultraviolet/icons'
 import type { ComponentProps } from 'react'
 import { Breadcrumbs } from '..'
 import { AvatarV2 } from '../../AvatarV2'
@@ -65,12 +65,8 @@ export const AdvancedUsage: StoryFn<
               justifyContent="end"
               width="100%"
             >
-              <Button
-                sentiment="info"
-                variant="ghost"
-                size="xsmall"
-                icon="plus"
-              >
+              <Button sentiment="info" variant="ghost" size="xsmall">
+                <PlusIcon />
                 Create Project
               </Button>
             </Stack>
