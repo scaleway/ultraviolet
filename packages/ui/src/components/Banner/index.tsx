@@ -3,6 +3,7 @@
 import type { Theme } from '@emotion/react'
 import { css, useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
+import { CloseIcon } from '@ultraviolet/icons'
 import type { ComponentProps, ReactNode } from 'react'
 import { useMemo, useState } from 'react'
 import { Button } from '../Button'
@@ -235,7 +236,6 @@ export const Banner = ({
       </Stack>
       {closable ? (
         <Button
-          icon="close"
           size="small"
           name="close"
           variant={variant === 'intro' ? 'ghost' : 'filled'}
@@ -249,7 +249,9 @@ export const Banner = ({
             setOpened(false)
             onClose?.()
           }}
-        />
+        >
+          <CloseIcon />
+        </Button>
       ) : null}
     </Container>
   )

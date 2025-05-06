@@ -1,7 +1,6 @@
 'use client'
 
 import styled from '@emotion/styled'
-import { AsteriskIcon } from '@ultraviolet/icons'
 import {
   type ComponentProps,
   type InputHTMLAttributes,
@@ -92,10 +91,6 @@ const FieldSet = styled.fieldset`
   margin: 0;
 `
 
-const StyledRequiredIcon = styled(AsteriskIcon)`
-  vertical-align: super;
-`
-
 type CheckboxGroupProps = {
   legend?: ReactNode
   value?: string[]
@@ -152,7 +147,9 @@ export const CheckboxGroup = ({
                   >
                     {legend}&nbsp;
                     {required ? (
-                      <StyledRequiredIcon sentiment="danger" size={8} />
+                      <Text as="sup" variant="body" sentiment="danger">
+                        *
+                      </Text>
                     ) : null}
                   </Text>
                 ) : null}
