@@ -1,7 +1,7 @@
 'use client'
 
 import styled from '@emotion/styled'
-import { AlertCircleIcon } from '@ultraviolet/icons'
+import { AlertCircleIcon, CloseIcon } from '@ultraviolet/icons'
 import type { FocusEvent, ReactNode } from 'react'
 import { useEffect, useId, useMemo, useRef, useState } from 'react'
 import { Button } from '../Button'
@@ -521,7 +521,6 @@ export const TimeInputV2 = ({
                 disabled={disabled || readOnly}
                 variant="ghost"
                 size="small"
-                icon="close"
                 onClick={event => {
                   event.stopPropagation()
                   setTime(undefined)
@@ -529,7 +528,9 @@ export const TimeInputV2 = ({
                 }}
                 sentiment="neutral"
                 data-testid="clear"
-              />
+              >
+                <CloseIcon />
+              </Button>
             ) : null}
           </Stack>
         ) : null}
