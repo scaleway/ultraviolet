@@ -1,7 +1,7 @@
 import type { StoryFn } from '@storybook/react'
 import { Bullet } from '..'
 
-export const Text: StoryFn = props => <Bullet {...props} text="A" />
+export const Text: StoryFn = props => <Bullet {...props}>A</Bullet>
 
 Text.parameters = {
   docs: {

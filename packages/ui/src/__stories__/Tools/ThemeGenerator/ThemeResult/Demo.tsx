@@ -2,6 +2,12 @@ import styled from '@emotion/styled'
 import type { ChangeEvent } from 'react'
 import { useState } from 'react'
 import {
+  AlertCircleIcon,
+  ArrowRightIcon,
+  CheckIcon,
+  ClockOutlineIcon,
+} from '../../../../../../icons/src'
+import {
   Alert,
   AvatarV2,
   Badge,
@@ -114,7 +120,8 @@ export const Demo = () => {
             <Badge sentiment="neutral">UV-UI</Badge>
             <Badge sentiment="primary">UV-CORE</Badge>
             <Badge sentiment="secondary">UV-FORM</Badge>
-            <Badge sentiment="danger" icon="alert">
+            <Badge sentiment="danger">
+              <AlertCircleIcon />
               Badge
             </Badge>
             <Badge sentiment="warning">Badge</Badge>
@@ -130,14 +137,14 @@ export const Demo = () => {
           <Card>
             <StyledStepList>
               <StepList.Item
-                bulletIcon="check"
+                bulletContent={<CheckIcon />}
                 sentiment="success"
                 size="small"
               >
                 Registration completed
               </StepList.Item>
               <StepList.Item
-                bulletIcon="clock-outline"
+                bulletContent={<ClockOutlineIcon />}
                 size="small"
                 sentiment="info"
               >
@@ -180,12 +187,9 @@ export const Demo = () => {
                     </Text>
                   </StyledStack>
                 </Stack>
-                <Button
-                  sentiment="neutral"
-                  icon="arrow-right"
-                  variant="ghost"
-                  size="small"
-                />
+                <Button sentiment="neutral" variant="ghost" size="small">
+                  <ArrowRightIcon />
+                </Button>
               </Stack>
             </Card>
             <Card>

@@ -1,6 +1,7 @@
 'use client'
 
 import styled from '@emotion/styled'
+import { AlertCircleIcon, CheckIcon } from '@ultraviolet/icons'
 import { type ComponentProps, useMemo } from 'react'
 import { Bullet } from '../Bullet'
 import { Modal } from '../Modal'
@@ -66,12 +67,13 @@ export const BaseDialog = ({
 }: DialogProps) => {
   const headerContent = (
     <>
-      <Bullet
-        sentiment={sentiment}
-        icon={
-          sentiment === 'warning' || sentiment === 'danger' ? 'alert' : 'check'
-        }
-      />
+      <Bullet sentiment={sentiment}>
+        {sentiment === 'warning' || sentiment === 'danger' ? (
+          <AlertCircleIcon />
+        ) : (
+          <CheckIcon />
+        )}
+      </Bullet>
       <StyledTextTitle
         as="h2"
         variant="headingSmallStronger"

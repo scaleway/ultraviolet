@@ -1,2 +1,2 @@
 // eslint-disable-next-line no-restricted-syntax
-export * from './__generatedIcons__'
+export * from './__generated__'

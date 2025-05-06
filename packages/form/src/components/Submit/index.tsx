@@ -8,8 +8,6 @@ type SubmitProps = {
   children?: ReactNode
   className?: string
   disabled?: boolean
-  icon?: ComponentProps<typeof Button>['icon']
-  iconPosition?: ComponentProps<typeof Button>['iconPosition']
   size?: ComponentProps<typeof Button>['size']
   variant?: ComponentProps<typeof Button>['variant']
   sentiment?: ComponentProps<typeof Button>['sentiment']
@@ -22,8 +20,6 @@ export const Submit = ({
   children,
   className,
   disabled = false,
-  icon,
-  iconPosition,
   size,
   variant = 'filled',
   sentiment = 'primary',
@@ -39,8 +35,6 @@ export const Submit = ({
     <Button
       className={className}
       disabled={isDisabled}
-      icon={icon}
-      iconPosition={iconPosition}
       isLoading={isSubmitting}
       size={size}
       type="submit"

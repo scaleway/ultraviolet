@@ -77,11 +77,4 @@ export { Tooltip } from './Tooltip'
 export { UnitInput } from './UnitInput'
 export { VerificationCode } from './VerificationCode'
 export { Drawer } from './Drawer'
-export {
-  /**
-   * @deprecated This component is deprecated. Please use `Icon` from `@ultraviolet/icons` instead.
-   * The component is the same but has been moved to another package.
-   */
-  Icon,
-} from '@ultraviolet/icons/legacy'
 export { InfiniteScroll } from './InfiniteScroll'

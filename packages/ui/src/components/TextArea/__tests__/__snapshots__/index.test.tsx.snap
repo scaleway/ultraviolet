@@ -98,7 +98,7 @@ exports[`TextArea > should render correctly when input  has a error sentiment 1`
   color: #3f4250;
   border-radius: 0.25rem;
   padding: 0.75rem 0.5rem 0.75rem 1rem;
-  padding-right: calc(1.5rem + 0px + 16px);
+  padding-right: calc(1.5rem + 0px + smallpx);
 }
 
 .emotion-7::-webkit-input-placeholder {
@@ -409,7 +409,7 @@ exports[`TextArea > should render correctly when input has a success sentiment 1
   color: #3f4250;
   border-radius: 0.25rem;
   padding: 0.75rem 0.5rem 0.75rem 1rem;
-  padding-right: calc(1.5rem + 0px + 16px);
+  padding-right: calc(1.5rem + 0px + smallpx);
 }
 
 .emotion-7::-webkit-input-placeholder {
@@ -528,10 +528,10 @@ exports[`TextArea > should render correctly when input has a success sentiment 1
 .emotion-11 {
   vertical-align: middle;
   fill: #22674e;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
 .emotion-11 .fillStroke {
@@ -596,7 +596,7 @@ exports[`TextArea > should render correctly when input has a success sentiment 1
         >
           <svg
             class="emotion-11 emotion-12"
-            viewBox="0 0 20 20"
+            viewBox="0 0 16 16"
           >
             <path
               clip-rule="evenodd"
@@ -2265,7 +2265,7 @@ exports[`TextArea > should render with AutoExpandMax 1`] = `
   color: #3f4250;
   border-radius: 0.25rem;
   padding: 0.75rem 0.5rem 0.75rem 1rem;
-  padding-right: calc(1.5rem + 0px + 16px);
+  padding-right: calc(1.5rem + 0px + smallpx);
 }
 
 .emotion-7::-webkit-input-placeholder {
@@ -2577,7 +2577,7 @@ exports[`TextArea > should render with AutoExpandMax and rows 1`] = `
   color: #3f4250;
   border-radius: 0.25rem;
   padding: 0.75rem 0.5rem 0.75rem 1rem;
-  padding-right: calc(1.5rem + 0px + 16px);
+  padding-right: calc(1.5rem + 0px + smallpx);
 }
 
 .emotion-7::-webkit-input-placeholder {
@@ -2889,7 +2889,7 @@ exports[`TextArea > should render with auto rows 1`] = `
   color: #3f4250;
   border-radius: 0.25rem;
   padding: 0.75rem 0.5rem 0.75rem 1rem;
-  padding-right: calc(1.5rem + 0px + 16px);
+  padding-right: calc(1.5rem + 0px + smallpx);
 }
 
 .emotion-7::-webkit-input-placeholder {

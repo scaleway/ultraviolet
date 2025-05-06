@@ -1,4 +1,5 @@
 import type { StoryFn } from '@storybook/react'
+import { DotsHorizontalIcon } from '@ultraviolet/icons'
 import { Table } from '..'
 import { Button } from '../../Button'
 import { MenuV2 } from '../../MenuV2'
@@ -25,12 +26,9 @@ WithMenu.args = {
           <Table.Cell>
             <MenuV2
               disclosure={
-                <Button
-                  icon="dots-horizontal"
-                  sentiment="neutral"
-                  variant="ghost"
-                  size="small"
-                />
+                <Button sentiment="neutral" variant="ghost" size="small">
+                  <DotsHorizontalIcon />
+                </Button>
               }
             >
               <MenuV2.Item borderless>default (neutral)</MenuV2.Item>
