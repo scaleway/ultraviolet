@@ -1,4 +1,5 @@
 import type { StoryFn } from '@storybook/react'
+import { BookOpenOutlineIcon } from '@ultraviolet/icons'
 import {
   AdvancedSettingsProductIcon,
   ConsoleProductIcon,
@@ -19,7 +20,10 @@ export const Examples: StoryFn<typeof ContentCard> = args => (
         title="Create your first function"
         description="The Scaleway Serverless Functions platform makes your functions available, executes them on demand and manages resource allocation for you."
       >
-        <Button icon="book-open-outline">Function Tutorial</Button>
+        <Button>
+          <BookOpenOutlineIcon />
+          Function Tutorial
+        </Button>
       </ContentCard>
     </Row>
     <Row templateColumns="repeat(3, 1fr)" gap={1}>
@@ -31,7 +35,10 @@ export const Examples: StoryFn<typeof ContentCard> = args => (
         title="Create your first function"
         description="The Scaleway Serverless Functions platform makes your functions available, executes them on demand and manages resource allocation for you."
       >
-        <Button icon="book-open-outline">Function Tutorial</Button>
+        <Button>
+          <BookOpenOutlineIcon />
+          Function Tutorial
+        </Button>
       </ContentCard>
       <ContentCard
         {...args}
@@ -41,7 +48,10 @@ export const Examples: StoryFn<typeof ContentCard> = args => (
         title="Create your first function"
         description="The Scaleway Serverless Functions platform makes your functions available, executes them on demand and manages resource allocation for you. This one is a bit longer than the others."
       >
-        <Button icon="book-open-outline">Function Tutorial</Button>
+        <Button>
+          <BookOpenOutlineIcon />
+          Function Tutorial
+        </Button>
       </ContentCard>
       <ContentCard
         {...args}
@@ -51,7 +61,10 @@ export const Examples: StoryFn<typeof ContentCard> = args => (
         title="Create your first function"
         description="The Scaleway Serverless Functions platform makes your functions available, executes them on demand and manages resource allocation for you."
       >
-        <Button icon="book-open-outline">Function Tutorial</Button>
+        <Button>
+          <BookOpenOutlineIcon />
+          Function Tutorial
+        </Button>
       </ContentCard>
     </Row>
 

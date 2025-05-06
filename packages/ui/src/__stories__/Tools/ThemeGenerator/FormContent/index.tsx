@@ -1,4 +1,5 @@
 import styled from '@emotion/styled'
+import { CheckIcon, CloseIcon, RestoreIcon } from '@ultraviolet/icons'
 import { useState } from 'react'
 import {
   Submit,
@@ -149,12 +150,13 @@ export const FormContent = () => {
                 </StyledRow>
                 {!isRequiredSentiment ? (
                   <Button
-                    icon="close"
                     variant="filled"
                     sentiment="neutral"
                     size="large"
                     onClick={() => remove(index)}
-                  />
+                  >
+                    <CloseIcon />
+                  </Button>
                 ) : null}
               </Stack>
             </Stack>
@@ -168,22 +170,23 @@ export const FormContent = () => {
               <Button
                 sentiment="danger"
                 variant="outlined"
-                icon="close"
                 onClick={() => {
                   setConfirmResetForm(false)
                 }}
               >
+                {' '}
+                <CloseIcon />
                 Cancel
               </Button>
               <Button
                 sentiment="success"
                 variant="outlined"
-                icon="check"
                 onClick={() => {
                   setConfirmResetForm(false)
                   reset(INITIAL_VALUES)
                 }}
               >
+                <CheckIcon />
                 Confirm
               </Button>
             </Row>
@@ -191,11 +194,11 @@ export const FormContent = () => {
             <Button
               sentiment="danger"
               variant="outlined"
-              icon="restore"
               onClick={() => {
                 setConfirmResetForm(true)
               }}
             >
+              <RestoreIcon />
               Reset
             </Button>
           )}

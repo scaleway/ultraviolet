@@ -1,5 +1,5 @@
 import type { Meta } from '@storybook/react'
-import { GoogleLogo } from '..'
+import { GoogleLogo } from '../__generated__'
 import Documentation from './Documentation.md?raw'
 
 export default {

@@ -1,6 +1,7 @@
 'use client'
 
 import styled from '@emotion/styled'
+import { ArrowLeftIcon, ArrowRightIcon } from '@ultraviolet/icons'
 import { useCallback, useMemo } from 'react'
 import { Button } from '../Button'
 import { Stack } from '../Stack'
@@ -122,9 +123,10 @@ export const PaginationButtons = ({
           variant="outlined"
           sentiment="primary"
           onClick={goToPreviousPage}
-          icon="arrow-left"
           size={perPage ? 'small' : 'medium'}
-        />
+        >
+          <ArrowLeftIcon />
+        </Button>
       </Stack>
       <PageNumbersContainer direction="row" gap={1}>
         {pageNumbersToDisplay.map((pageNumber, index) => (
@@ -151,9 +153,10 @@ export const PaginationButtons = ({
           variant="outlined"
           sentiment="primary"
           onClick={goToNextPage}
-          icon="arrow-right"
           size={perPage ? 'small' : 'medium'}
-        />
+        >
+          <ArrowRightIcon />
+        </Button>
       </Stack>
     </Stack>
   )
