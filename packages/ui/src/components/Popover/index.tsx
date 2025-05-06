@@ -37,6 +37,13 @@ const StyledPopup = styled(Popup, {
   text-align: initial;
   box-shadow: ${({ theme }) => theme.shadows.popover};
   background: ${({ theme, sentiment }) => (sentiment === 'neutral' ? theme.colors.neutral.background : theme.colors.primary.backgroundStrong)};
+
+  // Overrides the default popup arrow color to match the background color
+  &[data-has-arrow="true"] {
+    &::after {
+      border-color: ${({ theme, sentiment }) => (sentiment === 'neutral' ? theme.colors.neutral.background : theme.colors.primary.backgroundStrong)} transparent transparent transparent; 
+    }
+  }
 `
 
 // This is to avoid having text inherit color from popup (which is white on white background)
@@ -186,7 +193,6 @@ export const Popover = forwardRef(
         tabIndex={-1}
         innerRef={innerRef}
         onClose={localOnClose}
-        hasArrow={false}
         maxWidth={maxWidth}
         maxHeight={maxHeight}
         portalTarget={smartPortalTarget}
