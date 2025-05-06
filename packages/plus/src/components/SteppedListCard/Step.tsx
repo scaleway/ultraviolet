@@ -1,6 +1,7 @@
 'use client'
 
 import styled from '@emotion/styled'
+import { CheckIcon } from '@ultraviolet/icons'
 import { StepList, Text } from '@ultraviolet/ui'
 import { useContext } from 'react'
 import { Data } from './helper'
@@ -53,7 +54,7 @@ export const SteppedList = ({
 
   return completed ? (
     <StyledItem
-      bulletIcon="check"
+      bulletContent={<CheckIcon />}
       prominence={active ? 'strong' : 'default'}
       sentiment="primary"
       onClick={() => containerData.setCurrentStep(stepNumber)}
@@ -65,7 +66,7 @@ export const SteppedList = ({
     </StyledItem>
   ) : (
     <StyledItem
-      bulletText={String(stepNumber)}
+      bulletContent={String(stepNumber)}
       prominence={active ? 'strong' : undefined}
       sentiment={active ? 'primary' : undefined}
       onClick={() => containerData.setCurrentStep(stepNumber)}

@@ -2,6 +2,7 @@
 
 import type { Theme } from '@emotion/react'
 import { ClassNames, css, useTheme } from '@emotion/react'
+import { CloseIcon } from '@ultraviolet/icons'
 import type { ReactNode } from 'react'
 import {
   ToastContainer as BaseToastContainer,
@@ -56,12 +57,13 @@ const styles = {
 const closeButton = (props: CloseButtonProps) => (
   <Button
     aria-label="close"
-    icon="close"
     sentiment="neutral"
     variant="ghost"
     onClick={props.closeToast}
     size="xsmall"
-  />
+  >
+    <CloseIcon />
+  </Button>
 )
 
 export const notification = (

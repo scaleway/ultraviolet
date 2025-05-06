@@ -1,7 +1,8 @@
 'use client'
 
 import styled from '@emotion/styled'
-import { Icon, Stack } from '@ultraviolet/ui'
+import { CalculatorIcon } from '@ultraviolet/icons'
+import { Stack } from '@ultraviolet/ui'
 import type { JSX, ReactNode } from 'react'
 import { Children, cloneElement, isValidElement, useMemo } from 'react'
 import { LineThrough } from './Components/LineThrough'
@@ -132,7 +133,7 @@ export const OverlayComponent = ({
           )}
           <OverlayRow>
             <Stack direction="row" alignItems="center" gap={1}>
-              <Icon name="calculator" color="primary" size={20} />
+              <CalculatorIcon sentiment="primary" size="medium" />
               {locales['estimate.cost.label']}
             </Stack>
             <ItemResourceName animated={false}>
