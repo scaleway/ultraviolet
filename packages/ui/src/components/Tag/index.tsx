@@ -1,16 +1,14 @@
 'use client'
 
 import styled from '@emotion/styled'
-import { Icon } from '@ultraviolet/icons/legacy'
-import type { ComponentProps, MouseEventHandler, ReactNode } from 'react'
+import { CloseIcon } from '@ultraviolet/icons'
+import type { MouseEventHandler, ReactNode } from 'react'
 import useClipboard from 'react-use-clipboard'
 import type { Color } from '../../theme'
 import { Button } from '../Button'
 import { Loader } from '../Loader'
 import { Text } from '../Text'
 import { Tooltip } from '../Tooltip'
-
-type IconName = ComponentProps<typeof Icon>['name']
 
 const COPY_DURATION = 2500
 
@@ -75,10 +73,6 @@ type TagProps = {
   onClose?: MouseEventHandler<HTMLButtonElement>
   sentiment?: Color
   disabled?: boolean
-  /**
-   * @deprecated Add the icon directly into the children
-   */
-  icon?: IconName
   copiable?: boolean
   copyText?: string
   copiedText?: string
@@ -102,16 +96,13 @@ const TagInner = ({
   children,
   isLoading = false,
   onClose,
-  icon,
   disabled = false,
 }: TagInnerProps) => (
   <>
-    {icon ? <Icon name={icon} size={16} /> : null}
     <StyledText as="div" variant="caption" oneLine aria-disabled={disabled}>
       {children}
     </StyledText>
 
-    {/* @check: Size issue here, Clickable icon ? */}
     {onClose && !isLoading ? (
       <StyledCloseButton
         onClick={onClose}
@@ -120,9 +111,10 @@ const TagInner = ({
         data-testid="close-tag"
         variant="ghost"
         sentiment="neutral"
-        icon="close"
         size="small"
-      />
+      >
+        <CloseIcon size="small" />
+      </StyledCloseButton>
     ) : null}
     {isLoading ? <Loader active size={16} /> : null}
   </>
@@ -136,7 +128,6 @@ export const Tag = ({
   children,
   isLoading,
   onClose,
-  icon,
   copiable = false,
   copyText = 'Copy',
   copiedText = 'Copied!',
@@ -165,12 +156,7 @@ export const Tag = ({
           className={className}
           data-testid={dataTestId}
         >
-          <TagInner
-            isLoading={isLoading}
-            onClose={onClose}
-            icon={icon}
-            disabled={disabled}
-          >
+          <TagInner isLoading={isLoading} onClose={onClose} disabled={disabled}>
             {children}
           </TagInner>
         </Container>
@@ -184,12 +170,7 @@ export const Tag = ({
       className={className}
       data-testid={dataTestId}
     >
-      <TagInner
-        isLoading={isLoading}
-        onClose={onClose}
-        icon={icon}
-        disabled={disabled}
-      >
+      <TagInner isLoading={isLoading} onClose={onClose} disabled={disabled}>
         {children}
       </TagInner>
     </StyledContainer>

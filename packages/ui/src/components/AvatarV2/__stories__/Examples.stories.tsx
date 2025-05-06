@@ -1,4 +1,5 @@
 import type { StoryFn } from '@storybook/react'
+import { LockIcon } from '@ultraviolet/icons'
 import { useRef, useState } from 'react'
 import { AvatarV2 } from '..'
 import { Stack } from '../../Stack'
@@ -13,10 +14,11 @@ export const Examples: StoryFn<typeof AvatarV2> = props => {
         <AvatarV2
           variant="icon"
           shape="circle"
-          icon="lock"
           sentiment="neutral"
           size="small"
-        />{' '}
+        >
+          <LockIcon />
+        </AvatarV2>
         Locked Profile
       </Stack>
       <Stack gap={1} direction="row" alignItems="start">

@@ -3,5 +3,5 @@ import { Template } from './Template'
 export const Playground = Template.bind({})
 
 Playground.args = {
-  text: '1',
+  children: '1',
 }
