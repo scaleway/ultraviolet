@@ -1,7 +1,6 @@
 'use client'
 
 import styled from '@emotion/styled'
-import { AsteriskIcon } from '@ultraviolet/icons'
 import type { ComponentProps, InputHTMLAttributes, ReactNode } from 'react'
 import { createContext, useContext, useMemo } from 'react'
 import { Stack } from '../Stack'
@@ -72,10 +71,6 @@ const FieldSet = styled.fieldset`
   margin: 0;
 `
 
-const StyledRequiredIcon = styled(AsteriskIcon)`
-  vertical-align: super;
-`
-
 type ToggleGroupProps = {
   legend?: ReactNode
   value?: string[]
@@ -128,7 +123,9 @@ export const ToggleGroup = ({
                   >
                     {legend}&nbsp;
                     {required ? (
-                      <StyledRequiredIcon color="danger" size={8} />
+                      <Text as="sup" variant="body" sentiment="danger">
+                        *
+                      </Text>
                     ) : null}
                   </Text>
                 ) : null}

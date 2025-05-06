@@ -1,3 +1,4 @@
+import { InformationOutlineIcon } from '@ultraviolet/icons'
 import { shouldMatchEmotionSnapshot } from '@utils/test'
 import { describe, test } from 'vitest'
 import { Badge, PROMINENCES, SIZES } from '..'
@@ -9,7 +10,10 @@ describe('Badge', () => {
 
   test('renders correctly with icon', () =>
     shouldMatchEmotionSnapshot(
-      <Badge icon="information-outline">Sample badge</Badge>,
+      <Badge>
+        <InformationOutlineIcon />
+        Sample badge
+      </Badge>,
     ))
 
   test('renders correctly when disabled', () =>

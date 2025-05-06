@@ -3,15 +3,12 @@
 import type { Theme } from '@emotion/react'
 import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
-import { Icon } from '@ultraviolet/icons/legacy'
-import type { ComponentProps, ReactNode } from 'react'
+import type { ReactNode } from 'react'
 import { useMemo } from 'react'
 import type { Color } from '../../theme'
 import { SENTIMENTS_WITHOUT_NEUTRAL } from '../../theme'
 import capitalize from '../../utils/capitalize'
 import { Text } from '../Text'
-
-type IconName = ComponentProps<typeof Icon>['name']
 
 export const SIZES = {
   large: '400', // sizing token from theme
@@ -119,11 +116,6 @@ type BadgeProps = {
   sentiment?: Color
   size?: keyof typeof SIZES
   prominence?: keyof typeof PROMINENCES
-  /**
-   * @deprecated: Use the icon directly in children
-   * Defines icon to display on left side of badge. **Only available on medium and large sizes**.
-   */
-  icon?: IconName
   disabled?: boolean
   className?: string
   children: ReactNode
@@ -137,7 +129,6 @@ export const Badge = ({
   sentiment = 'neutral',
   size = 'medium',
   prominence = 'default',
-  icon,
   disabled = false,
   className,
   children,
@@ -175,7 +166,6 @@ export const Badge = ({
       data-testid={dataTestId}
       whiteSpace="nowrap"
     >
-      {icon && size !== 'small' ? <Icon name={icon} size={16} /> : null}
       {children}
     </StyledSpan>
   )

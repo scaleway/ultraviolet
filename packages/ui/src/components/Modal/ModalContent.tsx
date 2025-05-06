@@ -1,6 +1,7 @@
 'use client'
 
 import styled from '@emotion/styled'
+import { CloseIcon } from '@ultraviolet/icons'
 import type { ComponentProps } from 'react'
 import type { Modal } from '.'
 import { Button } from '../Button'
@@ -90,10 +91,11 @@ export const ModalContent = ({
               onClick={handleClose}
               variant="ghost"
               size="small"
-              icon="close"
               sentiment="neutral"
               aria-label="close"
-            />
+            >
+              <CloseIcon />
+            </Button>
           ) : null}
         </StyledContainer>
       </>
