@@ -1,3 +1,4 @@
+import { PencilIcon, PencilOutlineIcon } from '@ultraviolet/icons'
 import { shouldMatchEmotionSnapshot } from '@utils/test'
 import { describe, test } from 'vitest'
 import { Button, buttonSizes, buttonVariants } from '..'
@@ -46,26 +47,25 @@ describe('Button', () => {
 
   test(`render with icon`, () =>
     shouldMatchEmotionSnapshot(
-      <Button onClick={MockOnClick} disabled icon="pencil">
+      <Button onClick={MockOnClick} disabled>
+        <PencilIcon />
         Hello
       </Button>,
     ))
 
   test(`render with icon on the right`, () =>
     shouldMatchEmotionSnapshot(
-      <Button onClick={MockOnClick} disabled icon="pencil" iconPosition="right">
+      <Button onClick={MockOnClick} disabled>
         Hello
+        <PencilIcon />
       </Button>,
     ))
 
   test(`render with icon only`, () =>
     shouldMatchEmotionSnapshot(
-      <Button
-        onClick={MockOnClick}
-        disabled
-        icon="pencil"
-        iconPosition="right"
-      />,
+      <Button onClick={MockOnClick} disabled>
+        <PencilOutlineIcon />
+      </Button>,
     ))
 
   test(`render with fullWidth`, () =>
@@ -84,14 +84,16 @@ describe('Button', () => {
 
   test(`render with isLoading with icon`, () =>
     shouldMatchEmotionSnapshot(
-      <Button onClick={MockOnClick} isLoading icon="pencil">
+      <Button onClick={MockOnClick} isLoading>
+        <PencilIcon />
         Hello
       </Button>,
     ))
 
   test(`render with isLoading with icon variant`, () =>
     shouldMatchEmotionSnapshot(
-      <Button onClick={MockOnClick} icon="pencil" variant="outlined">
+      <Button onClick={MockOnClick}>
+        <PencilOutlineIcon />
         Hello
       </Button>,
     ))

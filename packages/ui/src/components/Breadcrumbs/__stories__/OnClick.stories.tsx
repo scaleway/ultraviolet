@@ -1,4 +1,5 @@
 import type { StoryFn } from '@storybook/react'
+import { RestoreIcon } from '@ultraviolet/icons'
 import type { ComponentProps } from 'react'
 import { useCallback, useState } from 'react'
 import { Breadcrumbs } from '..'
@@ -38,13 +39,13 @@ export const OnClick: StoryFn<ComponentProps<typeof Breadcrumbs>> = props => {
         <Stack gap={1}>
           <div style={{ width: 'fit-content' }}>
             <Button
-              icon="restore"
               onClick={() => {
                 setValue(ITEMS)
               }}
               size="small"
               sentiment="neutral"
             >
+              <RestoreIcon />
               Reset
             </Button>
           </div>

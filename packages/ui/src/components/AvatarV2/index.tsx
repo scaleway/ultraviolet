@@ -4,12 +4,10 @@ import type { Theme } from '@emotion/react'
 import { css } from '@emotion/react'
 import styled from '@emotion/styled'
 import { UploadIcon } from '@ultraviolet/icons'
-import { Icon } from '@ultraviolet/icons/legacy'
 import { UserProductIcon } from '@ultraviolet/icons/product'
 import { Text } from '../Text'
 import {
   DEFAULT_COLORS,
-  ICON_SIZES,
   RADIUS_SIZES,
   SENTIMENTS,
   TEXT_VARIANT_BY_SIZE,
@@ -190,7 +188,6 @@ export const AvatarV2 = ({
   shape,
   variant,
   image,
-  icon,
   text,
   size = 'medium',
   sentiment = 'primary',
@@ -226,17 +223,7 @@ export const AvatarV2 = ({
       </ProductIconContainer>
     ) : null}
     {variant === 'icon' ? (
-      <ElementContainer data-shape={shape}>
-        {icon ? (
-          <Icon
-            name={icon}
-            sentiment="neutral"
-            size={ICON_SIZES[size]}
-            prominence={sentiment === 'primary' ? 'stronger' : 'strong'}
-          />
-        ) : null}
-        {children}
-      </ElementContainer>
+      <ElementContainer data-shape={shape}>{children}</ElementContainer>
     ) : null}
     {variant === 'text' ? (
       <ElementContainer data-shape={shape}>

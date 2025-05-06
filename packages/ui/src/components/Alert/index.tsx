@@ -6,6 +6,7 @@ import styled from '@emotion/styled'
 import {
   AlertCircleIcon,
   CheckCircleOutlineIcon,
+  CloseIcon,
   InformationOutlineIcon,
   LightBulbIcon,
 } from '@ultraviolet/icons'
@@ -176,10 +177,11 @@ export const Alert = ({
             setOpened(false)
             onClose?.()
           }}
-          icon="close"
           sentiment="neutral"
           aria-label="close"
-        />
+        >
+          <CloseIcon />
+        </CloseButton>
       ) : null}
     </StyledStackContainer>
   )
