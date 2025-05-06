@@ -4,8 +4,8 @@ import { Badge } from '../../Badge'
 import { Button } from '../../Button'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
-import image from '../assets/illustration.webp'
-import imageCorrectFormat from '../assets/illustrationCorrectFormat.webp'
+import image from './assets/illustration.webp'
+import imageCorrectFormat from './assets/illustrationCorrectFormat.webp'
 
 export const Image: StoryFn = props => (
   <Stack gap={2} direction="row">
