@@ -1,4 +1,5 @@
 import type { StoryFn } from '@storybook/react'
+import { CancelIcon, CheckIcon, PencilIcon } from '@ultraviolet/icons'
 import { useState } from 'react'
 import { Button } from '../../Button'
 import { Stack } from '../../Stack'
@@ -21,22 +22,22 @@ export const Active: StoryFn = args => {
             <Button
               variant="outlined"
               sentiment="success"
-              icon="check"
               onClick={() => setActive(false)}
-            />
+            >
+              <CheckIcon />
+            </Button>
             <Button
               variant="outlined"
               sentiment="danger"
-              icon="cancel"
               onClick={() => setActive(false)}
-            />
+            >
+              <CancelIcon />
+            </Button>
           </Stack>
         ) : (
-          <Button
-            sentiment="neutral"
-            icon="pencil"
-            onClick={() => setActive(true)}
-          />
+          <Button sentiment="neutral" onClick={() => setActive(true)}>
+            <PencilIcon />
+          </Button>
         )}
       </Stack>
     </Card>

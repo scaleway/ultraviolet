@@ -3,7 +3,7 @@
 import styled from '@emotion/styled'
 import { consoleLightTheme } from '@ultraviolet/themes'
 import { useEffect, useMemo, useRef, useState } from 'react'
-import type { ComponentProps } from 'react'
+import type { ComponentProps, ReactNode } from 'react'
 import { Popover } from '../Popover'
 import { Tag } from '../Tag'
 
@@ -58,9 +58,7 @@ const StyledTagContainer = styled.div<{
   `};
 `
 
-export type TagType =
-  | string
-  | { label: string; icon: NonNullable<ComponentProps<typeof Tag>['icon']> }
+export type TagType = string | { label: string; icon: ReactNode }
 
 type TagListProps = {
   /**
@@ -290,9 +288,9 @@ export const TagList = ({
       copiable={copiable}
       copyText={copyText}
       copiedText={copiedText}
-      icon={typeof tag === 'object' ? tag.icon : undefined}
       className={isEllipsis ? 'ellipsed' : ''}
     >
+      {typeof tag !== 'string' && tag.icon ? tag.icon : null}
       {getTagLabel(tag)}
     </Tag>
   )

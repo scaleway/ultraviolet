@@ -1,4 +1,5 @@
 import type { StoryFn } from '@storybook/react'
+import { MinusIcon, PlusIcon } from '@ultraviolet/icons'
 import { useState } from 'react'
 import { Expandable } from '..'
 import { Button } from '../../Button'
@@ -10,7 +11,8 @@ export const Controlled: StoryFn<typeof Expandable> = args => {
 
   return (
     <>
-      <Button icon={toggled ? 'minus' : 'plus'} onClick={toggle}>
+      <Button onClick={toggle}>
+        {toggled ? <MinusIcon /> : <PlusIcon />}
         Click me to {toggled ? 'hide' : 'show'} content
       </Button>
       <Expandable {...args} opened={toggled}>
