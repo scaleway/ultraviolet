@@ -62,6 +62,7 @@ export type MenuProps = {
    * When set to true the menu will automatically close when a `MenuV2.Item` is clicked.
    */
   hideOnClickItem?: boolean
+  footer?: ReactNode
 } & Pick<
   ComponentProps<typeof Popup>,
   'placement' | 'dynamicDomRendering' | 'align'
