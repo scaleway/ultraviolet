@@ -41,14 +41,10 @@ jobs:
       - name: Fetch All Branches
         run: git fetch --all
 
-      - name: Create or Update Pull Request
-        uses: peter-evans/create-pull-request@v5
+      - name: Opening pull request
+        id: pull
+        uses: tretuna/sync-branches@1.4.0
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          base: beta
-          head: main
-          title: "Sync Main to Beta"
-          body: |
-            This pull request keeps the `beta` branch in sync with the latest changes from the `main` branch.
-          branch: sync-main-to-beta # Temporary branch for the PR
-          update-existing-pr: true # Update the existing PR if one already exists
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          FROM_BRANCH: "main"
+          TO_BRANCH: "beta"
