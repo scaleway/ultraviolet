@@ -43,9 +43,20 @@ const StyledPopup = styled(Popup, {
   padding: ${({ theme }) => `${theme.space['0.25']} 0`};
 `
 
-const MenuList = styled(Stack)`
+const Content = styled(Stack)`
+overflow: auto;
+`
+
+const Footer = styled(Stack)`
+  padding: ${({ theme }) => theme.space['1']};
+`
+
+const MenuList = styled(Stack, {
+  shouldForwardProp: prop => !['height'].includes(prop),
+})<{ height: string }>`
   overflow-y: auto;
   overflow-x: hidden;
+  max-height: calc(${({ height }) => height} - ${({ theme }) => theme.space['0.5']});
   &:after,
   &:before {
     border: solid transparent;
@@ -93,6 +104,7 @@ export const Menu = forwardRef(
       dynamicDomRendering,
       align,
       searchable = false,
+      footer,
     }: MenuProps,
     ref: Ref<HTMLButtonElement | null>,
   ) => {
@@ -176,22 +188,24 @@ export const Menu = forwardRef(
         searchable={searchable}
         size={size}
         text={
-          <div>
-            {searchable && typeof children !== 'function' ? (
-              <StyledSearchInput
-                size="small"
-                onSearch={onSearch}
-                ref={searchInputRef}
-              />
-            ) : null}
-            <MenuList
-              data-testid={dataTestId}
-              className={className}
-              role="menu"
-            >
+          <MenuList
+            data-testid={dataTestId}
+            className={className}
+            role="menu"
+            height={maxHeight ?? '30rem'}
+          >
+            <Content>
+              {searchable && typeof children !== 'function' ? (
+                <StyledSearchInput
+                  size="small"
+                  onSearch={onSearch}
+                  ref={searchInputRef}
+                />
+              ) : null}
               {finalChild}
-            </MenuList>
-          </div>
+            </Content>
+            {footer ? <Footer>{footer}</Footer> : null}
+          </MenuList>
         }
         portalTarget={portalTarget}
         dynamicDomRendering={dynamicDomRendering}
