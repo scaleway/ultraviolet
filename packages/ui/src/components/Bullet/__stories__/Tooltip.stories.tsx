@@ -3,7 +3,7 @@ import { Template } from './Template'
 export const Tooltip = Template.bind({})
 
 Tooltip.args = {
-  text: '1',
+  children: '1',
   tooltip: 'tooltip text',
 }
 

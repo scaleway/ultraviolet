@@ -1,4 +1,5 @@
 import type { Decorator, StoryFn } from '@storybook/react'
+import { DeleteIcon, DotsHorizontalIcon } from '@ultraviolet/icons'
 import { KubernetesProductIcon } from '@ultraviolet/icons/product'
 import { ExpandableCard } from '..'
 import { Button, MenuV2, Stack, Text } from '../..'
@@ -25,15 +26,14 @@ export const Header: StoryFn<typeof ExpandableCard> = () => (
             </div>
           </Stack>
           <Stack direction="row" gap={1} alignItems="center">
-            <Button sentiment="danger" icon="delete" size="small" />
+            <Button sentiment="danger" size="small">
+              <DeleteIcon />
+            </Button>
             <MenuV2
               disclosure={
-                <Button
-                  icon="dots-horizontal"
-                  sentiment="neutral"
-                  variant="ghost"
-                  size="small"
-                />
+                <Button sentiment="neutral" variant="ghost" size="small">
+                  <DotsHorizontalIcon />
+                </Button>
               }
             >
               <MenuV2.Item>Action 1</MenuV2.Item>

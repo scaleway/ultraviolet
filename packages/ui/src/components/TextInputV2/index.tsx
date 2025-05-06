@@ -1,7 +1,14 @@
 'use client'
 
 import styled from '@emotion/styled'
-import { AlertCircleIcon, CheckCircleIcon } from '@ultraviolet/icons'
+import {
+  AlertCircleIcon,
+  AutoFixIcon,
+  CheckCircleIcon,
+  CloseIcon,
+  EyeIcon,
+  EyeOffIcon,
+} from '@ultraviolet/icons'
 import type {
   ChangeEvent,
   ChangeEventHandler,
@@ -360,7 +367,6 @@ export const TextInputV2 = forwardRef<HTMLInputElement, TextInputProps>(
                       disabled={disabled || !computedValue}
                       variant="ghost"
                       size={size === 'small' ? 'xsmall' : 'small'}
-                      icon="close"
                       onClick={() => {
                         if (inputRef?.current) {
                           inputRef.current.value = ''
@@ -372,7 +378,9 @@ export const TextInputV2 = forwardRef<HTMLInputElement, TextInputProps>(
                         }
                       }}
                       sentiment="neutral"
-                    />
+                    >
+                      <CloseIcon size="small" />
+                    </Button>
                   ) : null}
                   {success ? (
                     <CheckCircleIcon
@@ -420,21 +428,23 @@ export const TextInputV2 = forwardRef<HTMLInputElement, TextInputProps>(
                     }}
                     variant="ghost"
                     sentiment="neutral"
-                    icon={isPasswordVisible ? 'eye-off' : 'eye'}
                     size={size === 'small' ? 'xsmall' : 'small'}
-                  />
+                  >
+                    {isPasswordVisible ? <EyeOffIcon /> : <EyeIcon />}
+                  </Button>
                 </CTASuffixStack>
               ) : null}
               {onRandomize ? (
                 <CTASuffixStack direction="row" alignItems="center">
                   <Button
                     disabled={disabled}
-                    icon="auto-fix"
                     size={size === 'small' ? 'xsmall' : 'small'}
                     variant="ghost"
                     sentiment="neutral"
                     onClick={onRandomize}
-                  />
+                  >
+                    <AutoFixIcon />
+                  </Button>
                 </CTASuffixStack>
               ) : null}
             </StyledInputWrapper>

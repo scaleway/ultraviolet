@@ -1,6 +1,7 @@
 'use client'
 
 import styled from '@emotion/styled'
+import { CloseIcon } from '@ultraviolet/icons'
 import type { ComponentProps, ReactNode, Ref } from 'react'
 import {
   forwardRef,
@@ -77,9 +78,10 @@ const ContentWrapper = ({
         sentiment={sentiment === 'neutral' ? 'neutral' : 'primary'}
         onClick={onClose}
         size="small"
-        icon="close"
         aria-label="close"
-      />
+      >
+        <CloseIcon />
+      </Button>
     </Stack>
     {typeof children === 'string' ? (
       <Text
