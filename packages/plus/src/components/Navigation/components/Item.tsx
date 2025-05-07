@@ -10,7 +10,6 @@ import {
   PinOutlineIcon,
   UnpinIcon,
 } from '@ultraviolet/icons'
-import * as CategoryIcon from '@ultraviolet/icons/category'
 import { ConsoleCategoryIcon } from '@ultraviolet/icons/category'
 import {
   Badge,
@@ -39,7 +38,6 @@ import {
   useMemo,
   useReducer,
 } from 'react'
-import type { PascalToCamelCaseWithoutSuffix } from '../../../types'
 import { useNavigation } from '../NavigationProvider'
 import { ANIMATION_DURATION, shrinkHeight } from '../constants'
 import type { PinUnPinType } from '../types'
@@ -104,9 +102,10 @@ const GrabIcon = styled(DragIcon)`
 const StyledBadge = styled(Badge)``
 
 const StyledMenuItem = styled(MenuV2.Item, {
-  shouldForwardProp: prop => !['isPinnable'].includes(prop),
+  shouldForwardProp: prop => !['isPinnable', 'pinnedFeature'].includes(prop),
 })<{
   isPinnable?: boolean
+  pinnedFeature?: boolean
 }>`
   text-align: left;
   &:hover,
@@ -117,7 +116,7 @@ const StyledMenuItem = styled(MenuV2.Item, {
     }
 
     ${StyledBadge} {
-      opacity: ${({ isPinnable }) => (isPinnable ? 0 : 1)};
+      opacity: ${({ isPinnable, pinnedFeature }) => (isPinnable && pinnedFeature ? 0 : 1)};
     }
   }
 `
@@ -181,14 +180,14 @@ const StyledContainer = styled(Stack)`
       opacity: 1;
     }
 
-    &[data-is-pinnable="true"] {
+    &[data-is-pinnable="true"][data-pinned-feature="true"] {
       ${StyledBadge} {
         opacity: 0;
       }
     }
   }
 
-  &[data-has-no-expand="false"]:not([disabled]) {
+  &[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]) {
     &:hover,
     &:focus,
     &:active {
@@ -202,7 +201,7 @@ const StyledContainer = styled(Stack)`
     }
   }
 
-  &:hover[data-has-children="false"][data-is-active="false"]:not([disabled]) {
+  &:hover[data-has-children="false"][data-is-active="false"][data-is-pinnable="true"]:not([disabled]) {
     ${WrapText} {
       color: ${({ theme }) => theme.colors.neutral.textWeakHover};
     }
@@ -214,7 +213,7 @@ const StyledContainer = styled(Stack)`
     background-color: ${({ theme }) => theme.colors.neutral.backgroundHover};
   }
 
-  &[data-is-active="true"],
+  &[data-is-active="true"][data-is-pinnable="true"],
   &:hover[data-has-active="true"] {
     background-color: ${({ theme }) => theme.colors.primary.background};
 
@@ -271,13 +270,7 @@ type ItemProps = {
   /**
    * Sets a category icon on the left of the item
    */
-  categoryIcon?: PascalToCamelCaseWithoutSuffix<
-    keyof typeof CategoryIcon,
-    'CategoryIcon'
-  >
-  categoryIconVariant?: ComponentProps<
-    (typeof CategoryIcon)['BaremetalCategoryIcon']
-  >['variant']
+  categoryIcon?: ReactNode
   /**
    * The label of the item that will be shown.
    * It is also used as the key for pinning.
@@ -355,7 +348,6 @@ export const Item = memo(
   ({
     children,
     categoryIcon,
-    categoryIconVariant,
     label,
     subLabel,
     badgeText,
@@ -472,14 +464,6 @@ export const Item = memo(
       [containerTag],
     )
 
-    const CategoryIconUsed = categoryIcon
-      ? CategoryIcon[
-          `${
-            categoryIcon.charAt(0).toUpperCase() + categoryIcon.slice(1)
-          }CategoryIcon` as keyof typeof CategoryIcon
-        ]
-      : null
-
     const ArrowIcon = useMemo(
       () => (internalExpanded ? ArrowDownIcon : ArrowRightIcon),
       [internalExpanded],
@@ -559,6 +543,7 @@ export const Item = memo(
             data-has-children={!!children}
             data-has-active-children={hasActiveChildren}
             data-has-no-expand={noExpand}
+            data-pinned-feature={pinnedFeature}
             disabled={disabled}
             draggable={type === 'pinned' && expanded}
             onDragStart={onDragStart}
@@ -572,15 +557,12 @@ export const Item = memo(
               alignItems={categoryIcon ? 'flex-start' : 'center'}
               justifyContent="center"
             >
-              {CategoryIconUsed ? (
+              {categoryIcon ? (
                 <ContainerCategoryIcon
                   alignItems="center"
                   justifyContent="center"
                 >
-                  <CategoryIconUsed
-                    variant={active ? 'primary' : categoryIconVariant}
-                    disabled={disabled}
-                  />
+                  {categoryIcon}
                 </ContainerCategoryIcon>
               ) : null}
               {type === 'pinned' && expanded ? (
@@ -744,16 +726,14 @@ export const Item = memo(
                   icon={!categoryIcon ? 'dots-horizontal' : undefined}
                   aria-label={label}
                 >
-                  {CategoryIconUsed ? (
+                  {categoryIcon ? (
                     <Stack
                       direction="row"
                       gap={1}
                       alignItems="center"
                       justifyContent="center"
                     >
-                      <CategoryIconUsed
-                        variant={active ? 'primary' : categoryIconVariant}
-                      />
+                      {categoryIcon}
                     </Stack>
                   ) : null}
                 </Button>
@@ -776,13 +756,9 @@ export const Item = memo(
                   alignItems="center"
                   justifyContent="center"
                 >
-                  {CategoryIconUsed ? (
-                    <CategoryIconUsed
-                      variant={active ? 'primary' : categoryIconVariant}
-                    />
-                  ) : (
+                  {categoryIcon || (
                     <ConsoleCategoryIcon
-                      variant={active ? 'primary' : categoryIconVariant}
+                      variant={active ? 'primary' : 'neutral'}
                     />
                   )}
                 </Stack>
@@ -797,6 +773,7 @@ export const Item = memo(
     if (hasParents) {
       return (
         <StyledMenuItem
+          pinnedFeature={pinnedFeature}
           href={href}
           target={target}
           rel={rel}

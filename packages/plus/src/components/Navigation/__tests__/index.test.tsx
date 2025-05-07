@@ -1,4 +1,5 @@
 import { screen, waitFor } from '@testing-library/react'
+import { UseCaseCategoryIcon } from '@ultraviolet/icons/category'
 import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
 import type { ComponentProps } from 'react'
 import { describe, expect, test } from 'vitest'
@@ -18,16 +19,14 @@ const BasicNavigation = ({ pinnedFeature = true }: BasicNavigationProps) => (
         <Navigation.Item
           label="item1"
           id="item1"
-          categoryIcon="useCase"
-          categoryIconVariant="neutral"
+          categoryIcon={<UseCaseCategoryIcon variant="neutral" />}
           noPinButton
           active
         />
         <Navigation.Item
           label="item1"
           id="item1"
-          categoryIcon="useCase"
-          categoryIconVariant="neutral"
+          categoryIcon={<UseCaseCategoryIcon />}
         />
       </Navigation.Group>
       {/* @ts-expect-error we try to test whe no children is provided */}

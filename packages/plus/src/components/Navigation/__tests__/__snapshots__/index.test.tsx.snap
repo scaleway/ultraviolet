@@ -473,26 +473,26 @@ exports[`Navigation > click on expand / collapse button 1`] = `
 
 .emotion-12[data-has-active-children="true"][data-has-no-expand="false"]:not(
       [disabled][data-is-active="true"]
-    )[data-is-pinnable="true"] .emotion-280 {
+    )[data-is-pinnable="true"][data-pinned-feature="true"] .emotion-280 {
   opacity: 0;
 }
 
-.emotion-12[data-has-no-expand="false"]:not([disabled]):hover .emotion-286,
-.emotion-12[data-has-no-expand="false"]:not([disabled]):focus .emotion-286,
-.emotion-12[data-has-no-expand="false"]:not([disabled]):active .emotion-286,
-.emotion-12[data-has-no-expand="false"]:not([disabled]):hover .emotion-281,
-.emotion-12[data-has-no-expand="false"]:not([disabled]):focus .emotion-281,
-.emotion-12[data-has-no-expand="false"]:not([disabled]):active .emotion-281 {
+.emotion-12[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):hover .emotion-286,
+.emotion-12[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):focus .emotion-286,
+.emotion-12[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):active .emotion-286,
+.emotion-12[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):hover .emotion-281,
+.emotion-12[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):focus .emotion-281,
+.emotion-12[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):active .emotion-281 {
   opacity: 1;
 }
 
-.emotion-12[data-has-no-expand="false"]:not([disabled]):hover .emotion-280,
-.emotion-12[data-has-no-expand="false"]:not([disabled]):focus .emotion-280,
-.emotion-12[data-has-no-expand="false"]:not([disabled]):active .emotion-280 {
+.emotion-12[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):hover .emotion-280,
+.emotion-12[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):focus .emotion-280,
+.emotion-12[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):active .emotion-280 {
   opacity: 0;
 }
 
-.emotion-12:hover[data-has-children="false"][data-is-active="false"]:not([disabled]) .emotion-22 {
+.emotion-12:hover[data-has-children="false"][data-is-active="false"][data-is-pinnable="true"]:not([disabled]) .emotion-22 {
   color: #3f4250;
 }
 
@@ -502,12 +502,12 @@ exports[`Navigation > click on expand / collapse button 1`] = `
   background-color: #e9eaeb;
 }
 
-.emotion-12[data-is-active="true"],
+.emotion-12[data-is-active="true"][data-is-pinnable="true"],
 .emotion-12:hover[data-has-active="true"] {
   background-color: #f1eefc;
 }
 
-.emotion-12[data-is-active="true"]:hover,
+.emotion-12[data-is-active="true"][data-is-pinnable="true"]:hover,
 .emotion-12:hover[data-has-active="true"]:hover {
   background-color: #e5dbfd;
 }
@@ -618,26 +618,26 @@ exports[`Navigation > click on expand / collapse button 1`] = `
 
 .emotion-12[data-has-active-children="true"][data-has-no-expand="false"]:not(
       [disabled][data-is-active="true"]
-    )[data-is-pinnable="true"] .emotion-280 {
+    )[data-is-pinnable="true"][data-pinned-feature="true"] .emotion-280 {
   opacity: 0;
 }
 
-.emotion-12[data-has-no-expand="false"]:not([disabled]):hover .emotion-286,
-.emotion-12[data-has-no-expand="false"]:not([disabled]):focus .emotion-286,
-.emotion-12[data-has-no-expand="false"]:not([disabled]):active .emotion-286,
-.emotion-12[data-has-no-expand="false"]:not([disabled]):hover .emotion-281,
-.emotion-12[data-has-no-expand="false"]:not([disabled]):focus .emotion-281,
-.emotion-12[data-has-no-expand="false"]:not([disabled]):active .emotion-281 {
+.emotion-12[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):hover .emotion-286,
+.emotion-12[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):focus .emotion-286,
+.emotion-12[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):active .emotion-286,
+.emotion-12[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):hover .emotion-281,
+.emotion-12[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):focus .emotion-281,
+.emotion-12[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):active .emotion-281 {
   opacity: 1;
 }
 
-.emotion-12[data-has-no-expand="false"]:not([disabled]):hover .emotion-280,
-.emotion-12[data-has-no-expand="false"]:not([disabled]):focus .emotion-280,
-.emotion-12[data-has-no-expand="false"]:not([disabled]):active .emotion-280 {
+.emotion-12[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):hover .emotion-280,
+.emotion-12[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):focus .emotion-280,
+.emotion-12[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):active .emotion-280 {
   opacity: 0;
 }
 
-.emotion-12:hover[data-has-children="false"][data-is-active="false"]:not([disabled]) .emotion-22 {
+.emotion-12:hover[data-has-children="false"][data-is-active="false"][data-is-pinnable="true"]:not([disabled]) .emotion-22 {
   color: #3f4250;
 }
 
@@ -647,12 +647,12 @@ exports[`Navigation > click on expand / collapse button 1`] = `
   background-color: #e9eaeb;
 }
 
-.emotion-12[data-is-active="true"],
+.emotion-12[data-is-active="true"][data-is-pinnable="true"],
 .emotion-12:hover[data-has-active="true"] {
   background-color: #f1eefc;
 }
 
-.emotion-12[data-is-active="true"]:hover,
+.emotion-12[data-is-active="true"][data-is-pinnable="true"]:hover,
 .emotion-12:hover[data-has-active="true"]:hover {
   background-color: #e5dbfd;
 }
@@ -1230,22 +1230,6 @@ exports[`Navigation > click on expand / collapse button 1`] = `
   height: calc(1.25rem + 0.5rem);
 }
 
-.emotion-57 .fill {
-  fill: #521094;
-}
-
-.emotion-57 .fillStrong {
-  fill: #a060f6;
-}
-
-.emotion-57 .fill {
-  fill: #521094;
-}
-
-.emotion-57 .fillStrong {
-  fill: #a060f6;
-}
-
 .emotion-62 {
   color: #641cb3;
   font-size: 0.875rem;
@@ -1280,6 +1264,22 @@ exports[`Navigation > click on expand / collapse button 1`] = `
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
+}
+
+.emotion-72 .fill {
+  fill: #521094;
+}
+
+.emotion-72 .fillStrong {
+  fill: #a060f6;
+}
+
+.emotion-72 .fill {
+  fill: #521094;
+}
+
+.emotion-72 .fillStrong {
+  fill: #a060f6;
 }
 
 .emotion-81 {
@@ -1659,6 +1659,7 @@ exports[`Navigation > click on expand / collapse button 1`] = `
                 data-has-no-expand="false"
                 data-has-sub-label="false"
                 data-is-pinnable="false"
+                data-pinned-feature="true"
                 data-testid="pinned-group"
                 draggable="false"
                 id="pinned-group"
@@ -1772,6 +1773,7 @@ exports[`Navigation > click on expand / collapse button 1`] = `
                   data-has-sub-label="false"
                   data-is-active="true"
                   data-is-pinnable="false"
+                  data-pinned-feature="true"
                   draggable="false"
                   id="item1"
                 >
@@ -1782,7 +1784,7 @@ exports[`Navigation > click on expand / collapse button 1`] = `
                       class="emotion-16 emotion-17"
                     >
                       <svg
-                        class="emotion-57 emotion-19"
+                        class="emotion-18 emotion-19"
                         height="20"
                         viewBox="0 0 20 20"
                         width="20"
@@ -1833,6 +1835,7 @@ exports[`Navigation > click on expand / collapse button 1`] = `
                   data-has-no-expand="false"
                   data-has-sub-label="false"
                   data-is-pinnable="true"
+                  data-pinned-feature="true"
                   draggable="false"
                   id="item1"
                 >
@@ -1843,7 +1846,7 @@ exports[`Navigation > click on expand / collapse button 1`] = `
                       class="emotion-16 emotion-17"
                     >
                       <svg
-                        class="emotion-18 emotion-19"
+                        class="emotion-72 emotion-19"
                         height="20"
                         viewBox="0 0 20 20"
                         width="20"
@@ -2597,19 +2600,19 @@ exports[`Navigation > click on expand / collapse button 2`] = `
   color: #151a2d;
 }
 
-.emotion-37 .fill {
+.emotion-47 .fill {
   fill: #521094;
 }
 
-.emotion-37 .fillStrong {
+.emotion-47 .fillStrong {
   fill: #a060f6;
 }
 
-.emotion-37 .fill {
+.emotion-47 .fill {
   fill: #521094;
 }
 
-.emotion-37 .fillStrong {
+.emotion-47 .fillStrong {
   fill: #a060f6;
 }
 
@@ -2840,7 +2843,7 @@ exports[`Navigation > click on expand / collapse button 2`] = `
                         class="emotion-18 emotion-19"
                       >
                         <svg
-                          class="emotion-37 emotion-21"
+                          class="emotion-20 emotion-21"
                           height="20"
                           viewBox="0 0 20 20"
                           width="20"
@@ -2890,7 +2893,7 @@ exports[`Navigation > click on expand / collapse button 2`] = `
                         class="emotion-18 emotion-19"
                       >
                         <svg
-                          class="emotion-20 emotion-21"
+                          class="emotion-47 emotion-21"
                           height="20"
                           viewBox="0 0 20 20"
                           width="20"
@@ -3437,26 +3440,26 @@ exports[`Navigation > pin and unpin an item 1`] = `
 
 .emotion-12[data-has-active-children="true"][data-has-no-expand="false"]:not(
       [disabled][data-is-active="true"]
-    )[data-is-pinnable="true"] .emotion-280 {
+    )[data-is-pinnable="true"][data-pinned-feature="true"] .emotion-280 {
   opacity: 0;
 }
 
-.emotion-12[data-has-no-expand="false"]:not([disabled]):hover .emotion-286,
-.emotion-12[data-has-no-expand="false"]:not([disabled]):focus .emotion-286,
-.emotion-12[data-has-no-expand="false"]:not([disabled]):active .emotion-286,
-.emotion-12[data-has-no-expand="false"]:not([disabled]):hover .emotion-281,
-.emotion-12[data-has-no-expand="false"]:not([disabled]):focus .emotion-281,
-.emotion-12[data-has-no-expand="false"]:not([disabled]):active .emotion-281 {
+.emotion-12[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):hover .emotion-286,
+.emotion-12[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):focus .emotion-286,
+.emotion-12[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):active .emotion-286,
+.emotion-12[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):hover .emotion-281,
+.emotion-12[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):focus .emotion-281,
+.emotion-12[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):active .emotion-281 {
   opacity: 1;
 }
 
-.emotion-12[data-has-no-expand="false"]:not([disabled]):hover .emotion-280,
-.emotion-12[data-has-no-expand="false"]:not([disabled]):focus .emotion-280,
-.emotion-12[data-has-no-expand="false"]:not([disabled]):active .emotion-280 {
+.emotion-12[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):hover .emotion-280,
+.emotion-12[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):focus .emotion-280,
+.emotion-12[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):active .emotion-280 {
   opacity: 0;
 }
 
-.emotion-12:hover[data-has-children="false"][data-is-active="false"]:not([disabled]) .emotion-22 {
+.emotion-12:hover[data-has-children="false"][data-is-active="false"][data-is-pinnable="true"]:not([disabled]) .emotion-22 {
   color: #3f4250;
 }
 
@@ -3466,12 +3469,12 @@ exports[`Navigation > pin and unpin an item 1`] = `
   background-color: #e9eaeb;
 }
 
-.emotion-12[data-is-active="true"],
+.emotion-12[data-is-active="true"][data-is-pinnable="true"],
 .emotion-12:hover[data-has-active="true"] {
   background-color: #f1eefc;
 }
 
-.emotion-12[data-is-active="true"]:hover,
+.emotion-12[data-is-active="true"][data-is-pinnable="true"]:hover,
 .emotion-12:hover[data-has-active="true"]:hover {
   background-color: #e5dbfd;
 }
@@ -3582,26 +3585,26 @@ exports[`Navigation > pin and unpin an item 1`] = `
 
 .emotion-12[data-has-active-children="true"][data-has-no-expand="false"]:not(
       [disabled][data-is-active="true"]
-    )[data-is-pinnable="true"] .emotion-280 {
+    )[data-is-pinnable="true"][data-pinned-feature="true"] .emotion-280 {
   opacity: 0;
 }
 
-.emotion-12[data-has-no-expand="false"]:not([disabled]):hover .emotion-286,
-.emotion-12[data-has-no-expand="false"]:not([disabled]):focus .emotion-286,
-.emotion-12[data-has-no-expand="false"]:not([disabled]):active .emotion-286,
-.emotion-12[data-has-no-expand="false"]:not([disabled]):hover .emotion-281,
-.emotion-12[data-has-no-expand="false"]:not([disabled]):focus .emotion-281,
-.emotion-12[data-has-no-expand="false"]:not([disabled]):active .emotion-281 {
+.emotion-12[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):hover .emotion-286,
+.emotion-12[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):focus .emotion-286,
+.emotion-12[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):active .emotion-286,
+.emotion-12[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):hover .emotion-281,
+.emotion-12[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):focus .emotion-281,
+.emotion-12[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):active .emotion-281 {
   opacity: 1;
 }
 
-.emotion-12[data-has-no-expand="false"]:not([disabled]):hover .emotion-280,
-.emotion-12[data-has-no-expand="false"]:not([disabled]):focus .emotion-280,
-.emotion-12[data-has-no-expand="false"]:not([disabled]):active .emotion-280 {
+.emotion-12[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):hover .emotion-280,
+.emotion-12[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):focus .emotion-280,
+.emotion-12[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):active .emotion-280 {
   opacity: 0;
 }
 
-.emotion-12:hover[data-has-children="false"][data-is-active="false"]:not([disabled]) .emotion-22 {
+.emotion-12:hover[data-has-children="false"][data-is-active="false"][data-is-pinnable="true"]:not([disabled]) .emotion-22 {
   color: #3f4250;
 }
 
@@ -3611,12 +3614,12 @@ exports[`Navigation > pin and unpin an item 1`] = `
   background-color: #e9eaeb;
 }
 
-.emotion-12[data-is-active="true"],
+.emotion-12[data-is-active="true"][data-is-pinnable="true"],
 .emotion-12:hover[data-has-active="true"] {
   background-color: #f1eefc;
 }
 
-.emotion-12[data-is-active="true"]:hover,
+.emotion-12[data-is-active="true"][data-is-pinnable="true"]:hover,
 .emotion-12:hover[data-has-active="true"]:hover {
   background-color: #e5dbfd;
 }
@@ -4194,22 +4197,6 @@ exports[`Navigation > pin and unpin an item 1`] = `
   height: calc(1.25rem + 0.5rem);
 }
 
-.emotion-57 .fill {
-  fill: #521094;
-}
-
-.emotion-57 .fillStrong {
-  fill: #a060f6;
-}
-
-.emotion-57 .fill {
-  fill: #521094;
-}
-
-.emotion-57 .fillStrong {
-  fill: #a060f6;
-}
-
 .emotion-62 {
   color: #641cb3;
   font-size: 0.875rem;
@@ -4244,6 +4231,22 @@ exports[`Navigation > pin and unpin an item 1`] = `
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
+}
+
+.emotion-72 .fill {
+  fill: #521094;
+}
+
+.emotion-72 .fillStrong {
+  fill: #a060f6;
+}
+
+.emotion-72 .fill {
+  fill: #521094;
+}
+
+.emotion-72 .fillStrong {
+  fill: #a060f6;
 }
 
 .emotion-81 {
@@ -4623,6 +4626,7 @@ exports[`Navigation > pin and unpin an item 1`] = `
                 data-has-no-expand="false"
                 data-has-sub-label="false"
                 data-is-pinnable="false"
+                data-pinned-feature="true"
                 data-testid="pinned-group"
                 draggable="false"
                 id="pinned-group"
@@ -4736,6 +4740,7 @@ exports[`Navigation > pin and unpin an item 1`] = `
                   data-has-sub-label="false"
                   data-is-active="true"
                   data-is-pinnable="false"
+                  data-pinned-feature="true"
                   draggable="false"
                   id="item1"
                 >
@@ -4746,7 +4751,7 @@ exports[`Navigation > pin and unpin an item 1`] = `
                       class="emotion-16 emotion-17"
                     >
                       <svg
-                        class="emotion-57 emotion-19"
+                        class="emotion-18 emotion-19"
                         height="20"
                         viewBox="0 0 20 20"
                         width="20"
@@ -4797,6 +4802,7 @@ exports[`Navigation > pin and unpin an item 1`] = `
                   data-has-no-expand="false"
                   data-has-sub-label="false"
                   data-is-pinnable="true"
+                  data-pinned-feature="true"
                   draggable="false"
                   id="item1"
                 >
@@ -4807,7 +4813,7 @@ exports[`Navigation > pin and unpin an item 1`] = `
                       class="emotion-16 emotion-17"
                     >
                       <svg
-                        class="emotion-18 emotion-19"
+                        class="emotion-72 emotion-19"
                         height="20"
                         viewBox="0 0 20 20"
                         width="20"
@@ -5392,26 +5398,26 @@ exports[`Navigation > pin and unpin an item 2`] = `
 
 .emotion-12[data-has-active-children="true"][data-has-no-expand="false"]:not(
       [disabled][data-is-active="true"]
-    )[data-is-pinnable="true"] .emotion-280 {
+    )[data-is-pinnable="true"][data-pinned-feature="true"] .emotion-280 {
   opacity: 0;
 }
 
-.emotion-12[data-has-no-expand="false"]:not([disabled]):hover .emotion-286,
-.emotion-12[data-has-no-expand="false"]:not([disabled]):focus .emotion-286,
-.emotion-12[data-has-no-expand="false"]:not([disabled]):active .emotion-286,
-.emotion-12[data-has-no-expand="false"]:not([disabled]):hover .emotion-281,
-.emotion-12[data-has-no-expand="false"]:not([disabled]):focus .emotion-281,
-.emotion-12[data-has-no-expand="false"]:not([disabled]):active .emotion-281 {
+.emotion-12[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):hover .emotion-286,
+.emotion-12[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):focus .emotion-286,
+.emotion-12[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):active .emotion-286,
+.emotion-12[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):hover .emotion-281,
+.emotion-12[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):focus .emotion-281,
+.emotion-12[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):active .emotion-281 {
   opacity: 1;
 }
 
-.emotion-12[data-has-no-expand="false"]:not([disabled]):hover .emotion-280,
-.emotion-12[data-has-no-expand="false"]:not([disabled]):focus .emotion-280,
-.emotion-12[data-has-no-expand="false"]:not([disabled]):active .emotion-280 {
+.emotion-12[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):hover .emotion-280,
+.emotion-12[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):focus .emotion-280,
+.emotion-12[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):active .emotion-280 {
   opacity: 0;
 }
 
-.emotion-12:hover[data-has-children="false"][data-is-active="false"]:not([disabled]) .emotion-22 {
+.emotion-12:hover[data-has-children="false"][data-is-active="false"][data-is-pinnable="true"]:not([disabled]) .emotion-22 {
   color: #3f4250;
 }
 
@@ -5421,12 +5427,12 @@ exports[`Navigation > pin and unpin an item 2`] = `
   background-color: #e9eaeb;
 }
 
-.emotion-12[data-is-active="true"],
+.emotion-12[data-is-active="true"][data-is-pinnable="true"],
 .emotion-12:hover[data-has-active="true"] {
   background-color: #f1eefc;
 }
 
-.emotion-12[data-is-active="true"]:hover,
+.emotion-12[data-is-active="true"][data-is-pinnable="true"]:hover,
 .emotion-12:hover[data-has-active="true"]:hover {
   background-color: #e5dbfd;
 }
@@ -5537,26 +5543,26 @@ exports[`Navigation > pin and unpin an item 2`] = `
 
 .emotion-12[data-has-active-children="true"][data-has-no-expand="false"]:not(
       [disabled][data-is-active="true"]
-    )[data-is-pinnable="true"] .emotion-280 {
+    )[data-is-pinnable="true"][data-pinned-feature="true"] .emotion-280 {
   opacity: 0;
 }
 
-.emotion-12[data-has-no-expand="false"]:not([disabled]):hover .emotion-286,
-.emotion-12[data-has-no-expand="false"]:not([disabled]):focus .emotion-286,
-.emotion-12[data-has-no-expand="false"]:not([disabled]):active .emotion-286,
-.emotion-12[data-has-no-expand="false"]:not([disabled]):hover .emotion-281,
-.emotion-12[data-has-no-expand="false"]:not([disabled]):focus .emotion-281,
-.emotion-12[data-has-no-expand="false"]:not([disabled]):active .emotion-281 {
+.emotion-12[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):hover .emotion-286,
+.emotion-12[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):focus .emotion-286,
+.emotion-12[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):active .emotion-286,
+.emotion-12[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):hover .emotion-281,
+.emotion-12[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):focus .emotion-281,
+.emotion-12[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):active .emotion-281 {
   opacity: 1;
 }
 
-.emotion-12[data-has-no-expand="false"]:not([disabled]):hover .emotion-280,
-.emotion-12[data-has-no-expand="false"]:not([disabled]):focus .emotion-280,
-.emotion-12[data-has-no-expand="false"]:not([disabled]):active .emotion-280 {
+.emotion-12[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):hover .emotion-280,
+.emotion-12[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):focus .emotion-280,
+.emotion-12[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):active .emotion-280 {
   opacity: 0;
 }
 
-.emotion-12:hover[data-has-children="false"][data-is-active="false"]:not([disabled]) .emotion-22 {
+.emotion-12:hover[data-has-children="false"][data-is-active="false"][data-is-pinnable="true"]:not([disabled]) .emotion-22 {
   color: #3f4250;
 }
 
@@ -5566,12 +5572,12 @@ exports[`Navigation > pin and unpin an item 2`] = `
   background-color: #e9eaeb;
 }
 
-.emotion-12[data-is-active="true"],
+.emotion-12[data-is-active="true"][data-is-pinnable="true"],
 .emotion-12:hover[data-has-active="true"] {
   background-color: #f1eefc;
 }
 
-.emotion-12[data-is-active="true"]:hover,
+.emotion-12[data-is-active="true"][data-is-pinnable="true"]:hover,
 .emotion-12:hover[data-has-active="true"]:hover {
   background-color: #e5dbfd;
 }
@@ -6149,22 +6155,6 @@ exports[`Navigation > pin and unpin an item 2`] = `
   height: calc(1.25rem + 0.5rem);
 }
 
-.emotion-57 .fill {
-  fill: #521094;
-}
-
-.emotion-57 .fillStrong {
-  fill: #a060f6;
-}
-
-.emotion-57 .fill {
-  fill: #521094;
-}
-
-.emotion-57 .fillStrong {
-  fill: #a060f6;
-}
-
 .emotion-62 {
   color: #641cb3;
   font-size: 0.875rem;
@@ -6199,6 +6189,22 @@ exports[`Navigation > pin and unpin an item 2`] = `
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
+}
+
+.emotion-72 .fill {
+  fill: #521094;
+}
+
+.emotion-72 .fillStrong {
+  fill: #a060f6;
+}
+
+.emotion-72 .fill {
+  fill: #521094;
+}
+
+.emotion-72 .fillStrong {
+  fill: #a060f6;
 }
 
 .emotion-81 {
@@ -6578,6 +6584,7 @@ exports[`Navigation > pin and unpin an item 2`] = `
                 data-has-no-expand="false"
                 data-has-sub-label="false"
                 data-is-pinnable="false"
+                data-pinned-feature="true"
                 data-testid="pinned-group"
                 draggable="false"
                 id="pinned-group"
@@ -6691,6 +6698,7 @@ exports[`Navigation > pin and unpin an item 2`] = `
                   data-has-sub-label="false"
                   data-is-active="true"
                   data-is-pinnable="false"
+                  data-pinned-feature="true"
                   draggable="false"
                   id="item1"
                 >
@@ -6701,7 +6709,7 @@ exports[`Navigation > pin and unpin an item 2`] = `
                       class="emotion-16 emotion-17"
                     >
                       <svg
-                        class="emotion-57 emotion-19"
+                        class="emotion-18 emotion-19"
                         height="20"
                         viewBox="0 0 20 20"
                         width="20"
@@ -6752,6 +6760,7 @@ exports[`Navigation > pin and unpin an item 2`] = `
                   data-has-no-expand="false"
                   data-has-sub-label="false"
                   data-is-pinnable="true"
+                  data-pinned-feature="true"
                   draggable="false"
                   id="item1"
                 >
@@ -6762,7 +6771,7 @@ exports[`Navigation > pin and unpin an item 2`] = `
                       class="emotion-16 emotion-17"
                     >
                       <svg
-                        class="emotion-18 emotion-19"
+                        class="emotion-72 emotion-19"
                         height="20"
                         viewBox="0 0 20 20"
                         width="20"
@@ -7387,26 +7396,26 @@ exports[`Navigation > pin and unpin an item 3`] = `
 
 .emotion-12[data-has-active-children="true"][data-has-no-expand="false"]:not(
       [disabled][data-is-active="true"]
-    )[data-is-pinnable="true"] .emotion-280 {
+    )[data-is-pinnable="true"][data-pinned-feature="true"] .emotion-280 {
   opacity: 0;
 }
 
-.emotion-12[data-has-no-expand="false"]:not([disabled]):hover .emotion-286,
-.emotion-12[data-has-no-expand="false"]:not([disabled]):focus .emotion-286,
-.emotion-12[data-has-no-expand="false"]:not([disabled]):active .emotion-286,
-.emotion-12[data-has-no-expand="false"]:not([disabled]):hover .emotion-281,
-.emotion-12[data-has-no-expand="false"]:not([disabled]):focus .emotion-281,
-.emotion-12[data-has-no-expand="false"]:not([disabled]):active .emotion-281 {
+.emotion-12[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):hover .emotion-286,
+.emotion-12[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):focus .emotion-286,
+.emotion-12[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):active .emotion-286,
+.emotion-12[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):hover .emotion-281,
+.emotion-12[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):focus .emotion-281,
+.emotion-12[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):active .emotion-281 {
   opacity: 1;
 }
 
-.emotion-12[data-has-no-expand="false"]:not([disabled]):hover .emotion-280,
-.emotion-12[data-has-no-expand="false"]:not([disabled]):focus .emotion-280,
-.emotion-12[data-has-no-expand="false"]:not([disabled]):active .emotion-280 {
+.emotion-12[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):hover .emotion-280,
+.emotion-12[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):focus .emotion-280,
+.emotion-12[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):active .emotion-280 {
   opacity: 0;
 }
 
-.emotion-12:hover[data-has-children="false"][data-is-active="false"]:not([disabled]) .emotion-22 {
+.emotion-12:hover[data-has-children="false"][data-is-active="false"][data-is-pinnable="true"]:not([disabled]) .emotion-22 {
   color: #3f4250;
 }
 
@@ -7416,12 +7425,12 @@ exports[`Navigation > pin and unpin an item 3`] = `
   background-color: #e9eaeb;
 }
 
-.emotion-12[data-is-active="true"],
+.emotion-12[data-is-active="true"][data-is-pinnable="true"],
 .emotion-12:hover[data-has-active="true"] {
   background-color: #f1eefc;
 }
 
-.emotion-12[data-is-active="true"]:hover,
+.emotion-12[data-is-active="true"][data-is-pinnable="true"]:hover,
 .emotion-12:hover[data-has-active="true"]:hover {
   background-color: #e5dbfd;
 }
@@ -7532,26 +7541,26 @@ exports[`Navigation > pin and unpin an item 3`] = `
 
 .emotion-12[data-has-active-children="true"][data-has-no-expand="false"]:not(
       [disabled][data-is-active="true"]
-    )[data-is-pinnable="true"] .emotion-280 {
+    )[data-is-pinnable="true"][data-pinned-feature="true"] .emotion-280 {
   opacity: 0;
 }
 
-.emotion-12[data-has-no-expand="false"]:not([disabled]):hover .emotion-286,
-.emotion-12[data-has-no-expand="false"]:not([disabled]):focus .emotion-286,
-.emotion-12[data-has-no-expand="false"]:not([disabled]):active .emotion-286,
-.emotion-12[data-has-no-expand="false"]:not([disabled]):hover .emotion-281,
-.emotion-12[data-has-no-expand="false"]:not([disabled]):focus .emotion-281,
-.emotion-12[data-has-no-expand="false"]:not([disabled]):active .emotion-281 {
+.emotion-12[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):hover .emotion-286,
+.emotion-12[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):focus .emotion-286,
+.emotion-12[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):active .emotion-286,
+.emotion-12[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):hover .emotion-281,
+.emotion-12[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):focus .emotion-281,
+.emotion-12[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):active .emotion-281 {
   opacity: 1;
 }
 
-.emotion-12[data-has-no-expand="false"]:not([disabled]):hover .emotion-280,
-.emotion-12[data-has-no-expand="false"]:not([disabled]):focus .emotion-280,
-.emotion-12[data-has-no-expand="false"]:not([disabled]):active .emotion-280 {
+.emotion-12[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):hover .emotion-280,
+.emotion-12[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):focus .emotion-280,
+.emotion-12[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):active .emotion-280 {
   opacity: 0;
 }
 
-.emotion-12:hover[data-has-children="false"][data-is-active="false"]:not([disabled]) .emotion-22 {
+.emotion-12:hover[data-has-children="false"][data-is-active="false"][data-is-pinnable="true"]:not([disabled]) .emotion-22 {
   color: #3f4250;
 }
 
@@ -7561,12 +7570,12 @@ exports[`Navigation > pin and unpin an item 3`] = `
   background-color: #e9eaeb;
 }
 
-.emotion-12[data-is-active="true"],
+.emotion-12[data-is-active="true"][data-is-pinnable="true"],
 .emotion-12:hover[data-has-active="true"] {
   background-color: #f1eefc;
 }
 
-.emotion-12[data-is-active="true"]:hover,
+.emotion-12[data-is-active="true"][data-is-pinnable="true"]:hover,
 .emotion-12:hover[data-has-active="true"]:hover {
   background-color: #e5dbfd;
 }
@@ -8045,26 +8054,26 @@ exports[`Navigation > pin and unpin an item 3`] = `
 
 .emotion-37[data-has-active-children="true"][data-has-no-expand="false"]:not(
       [disabled][data-is-active="true"]
-    )[data-is-pinnable="true"] .emotion-280 {
+    )[data-is-pinnable="true"][data-pinned-feature="true"] .emotion-280 {
   opacity: 0;
 }
 
-.emotion-37[data-has-no-expand="false"]:not([disabled]):hover .emotion-286,
-.emotion-37[data-has-no-expand="false"]:not([disabled]):focus .emotion-286,
-.emotion-37[data-has-no-expand="false"]:not([disabled]):active .emotion-286,
-.emotion-37[data-has-no-expand="false"]:not([disabled]):hover .emotion-281,
-.emotion-37[data-has-no-expand="false"]:not([disabled]):focus .emotion-281,
-.emotion-37[data-has-no-expand="false"]:not([disabled]):active .emotion-281 {
+.emotion-37[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):hover .emotion-286,
+.emotion-37[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):focus .emotion-286,
+.emotion-37[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):active .emotion-286,
+.emotion-37[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):hover .emotion-281,
+.emotion-37[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):focus .emotion-281,
+.emotion-37[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):active .emotion-281 {
   opacity: 1;
 }
 
-.emotion-37[data-has-no-expand="false"]:not([disabled]):hover .emotion-280,
-.emotion-37[data-has-no-expand="false"]:not([disabled]):focus .emotion-280,
-.emotion-37[data-has-no-expand="false"]:not([disabled]):active .emotion-280 {
+.emotion-37[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):hover .emotion-280,
+.emotion-37[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):focus .emotion-280,
+.emotion-37[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):active .emotion-280 {
   opacity: 0;
 }
 
-.emotion-37:hover[data-has-children="false"][data-is-active="false"]:not([disabled]) .emotion-22 {
+.emotion-37:hover[data-has-children="false"][data-is-active="false"][data-is-pinnable="true"]:not([disabled]) .emotion-22 {
   color: #3f4250;
 }
 
@@ -8074,12 +8083,12 @@ exports[`Navigation > pin and unpin an item 3`] = `
   background-color: #e9eaeb;
 }
 
-.emotion-37[data-is-active="true"],
+.emotion-37[data-is-active="true"][data-is-pinnable="true"],
 .emotion-37:hover[data-has-active="true"] {
   background-color: #f1eefc;
 }
 
-.emotion-37[data-is-active="true"]:hover,
+.emotion-37[data-is-active="true"][data-is-pinnable="true"]:hover,
 .emotion-37:hover[data-has-active="true"]:hover {
   background-color: #e5dbfd;
 }
@@ -8394,22 +8403,6 @@ exports[`Navigation > pin and unpin an item 3`] = `
   height: calc(1.25rem + 0.5rem);
 }
 
-.emotion-80 .fill {
-  fill: #521094;
-}
-
-.emotion-80 .fillStrong {
-  fill: #a060f6;
-}
-
-.emotion-80 .fill {
-  fill: #521094;
-}
-
-.emotion-80 .fillStrong {
-  fill: #a060f6;
-}
-
 .emotion-85 {
   color: #641cb3;
   font-size: 0.875rem;
@@ -8444,6 +8437,22 @@ exports[`Navigation > pin and unpin an item 3`] = `
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
+}
+
+.emotion-95 .fill {
+  fill: #521094;
+}
+
+.emotion-95 .fillStrong {
+  fill: #a060f6;
+}
+
+.emotion-95 .fill {
+  fill: #521094;
+}
+
+.emotion-95 .fillStrong {
+  fill: #a060f6;
 }
 
 .emotion-113 {
@@ -8711,6 +8720,7 @@ exports[`Navigation > pin and unpin an item 3`] = `
                 data-has-no-expand="false"
                 data-has-sub-label="false"
                 data-is-pinnable="false"
+                data-pinned-feature="true"
                 data-testid="pinned-group"
                 draggable="false"
                 id="pinned-group"
@@ -8795,6 +8805,7 @@ exports[`Navigation > pin and unpin an item 3`] = `
                       data-has-sub-label="false"
                       data-is-active="false"
                       data-is-pinnable="true"
+                      data-pinned-feature="true"
                       draggable="true"
                       id="item1"
                     >
@@ -8886,6 +8897,7 @@ exports[`Navigation > pin and unpin an item 3`] = `
                   data-has-sub-label="false"
                   data-is-active="true"
                   data-is-pinnable="false"
+                  data-pinned-feature="true"
                   draggable="false"
                   id="item1"
                 >
@@ -8896,7 +8908,7 @@ exports[`Navigation > pin and unpin an item 3`] = `
                       class="emotion-16 emotion-17"
                     >
                       <svg
-                        class="emotion-80 emotion-19"
+                        class="emotion-18 emotion-19"
                         height="20"
                         viewBox="0 0 20 20"
                         width="20"
@@ -8947,6 +8959,7 @@ exports[`Navigation > pin and unpin an item 3`] = `
                   data-has-no-expand="false"
                   data-has-sub-label="false"
                   data-is-pinnable="true"
+                  data-pinned-feature="true"
                   draggable="false"
                   id="item1"
                 >
@@ -8957,7 +8970,7 @@ exports[`Navigation > pin and unpin an item 3`] = `
                       class="emotion-16 emotion-17"
                     >
                       <svg
-                        class="emotion-18 emotion-19"
+                        class="emotion-95 emotion-19"
                         height="20"
                         viewBox="0 0 20 20"
                         width="20"
@@ -9340,26 +9353,26 @@ exports[`Navigation > render with basic content 1`] = `
 
 .emotion-12[data-has-active-children="true"][data-has-no-expand="false"]:not(
       [disabled][data-is-active="true"]
-    )[data-is-pinnable="true"] .emotion-280 {
+    )[data-is-pinnable="true"][data-pinned-feature="true"] .emotion-280 {
   opacity: 0;
 }
 
-.emotion-12[data-has-no-expand="false"]:not([disabled]):hover .emotion-286,
-.emotion-12[data-has-no-expand="false"]:not([disabled]):focus .emotion-286,
-.emotion-12[data-has-no-expand="false"]:not([disabled]):active .emotion-286,
-.emotion-12[data-has-no-expand="false"]:not([disabled]):hover .emotion-281,
-.emotion-12[data-has-no-expand="false"]:not([disabled]):focus .emotion-281,
-.emotion-12[data-has-no-expand="false"]:not([disabled]):active .emotion-281 {
+.emotion-12[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):hover .emotion-286,
+.emotion-12[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):focus .emotion-286,
+.emotion-12[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):active .emotion-286,
+.emotion-12[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):hover .emotion-281,
+.emotion-12[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):focus .emotion-281,
+.emotion-12[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):active .emotion-281 {
   opacity: 1;
 }
 
-.emotion-12[data-has-no-expand="false"]:not([disabled]):hover .emotion-280,
-.emotion-12[data-has-no-expand="false"]:not([disabled]):focus .emotion-280,
-.emotion-12[data-has-no-expand="false"]:not([disabled]):active .emotion-280 {
+.emotion-12[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):hover .emotion-280,
+.emotion-12[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):focus .emotion-280,
+.emotion-12[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):active .emotion-280 {
   opacity: 0;
 }
 
-.emotion-12:hover[data-has-children="false"][data-is-active="false"]:not([disabled]) .emotion-22 {
+.emotion-12:hover[data-has-children="false"][data-is-active="false"][data-is-pinnable="true"]:not([disabled]) .emotion-22 {
   color: #3f4250;
 }
 
@@ -9369,12 +9382,12 @@ exports[`Navigation > render with basic content 1`] = `
   background-color: #e9eaeb;
 }
 
-.emotion-12[data-is-active="true"],
+.emotion-12[data-is-active="true"][data-is-pinnable="true"],
 .emotion-12:hover[data-has-active="true"] {
   background-color: #f1eefc;
 }
 
-.emotion-12[data-is-active="true"]:hover,
+.emotion-12[data-is-active="true"][data-is-pinnable="true"]:hover,
 .emotion-12:hover[data-has-active="true"]:hover {
   background-color: #e5dbfd;
 }
@@ -9684,14 +9697,6 @@ exports[`Navigation > render with basic content 1`] = `
   height: calc(1.25rem + 0.5rem);
 }
 
-.emotion-57 .fill {
-  fill: #521094;
-}
-
-.emotion-57 .fillStrong {
-  fill: #a060f6;
-}
-
 .emotion-62 {
   color: #641cb3;
   font-size: 0.875rem;
@@ -9708,6 +9713,14 @@ exports[`Navigation > render with basic content 1`] = `
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
+}
+
+.emotion-72 .fill {
+  fill: #521094;
+}
+
+.emotion-72 .fillStrong {
+  fill: #a060f6;
 }
 
 .emotion-81 {
@@ -9918,6 +9931,7 @@ exports[`Navigation > render with basic content 1`] = `
                 data-has-no-expand="false"
                 data-has-sub-label="false"
                 data-is-pinnable="false"
+                data-pinned-feature="true"
                 data-testid="pinned-group"
                 draggable="false"
                 id="pinned-group"
@@ -10031,6 +10045,7 @@ exports[`Navigation > render with basic content 1`] = `
                   data-has-sub-label="false"
                   data-is-active="true"
                   data-is-pinnable="false"
+                  data-pinned-feature="true"
                   draggable="false"
                   id="item1"
                 >
@@ -10041,7 +10056,7 @@ exports[`Navigation > render with basic content 1`] = `
                       class="emotion-16 emotion-17"
                     >
                       <svg
-                        class="emotion-57 emotion-19"
+                        class="emotion-18 emotion-19"
                         height="20"
                         viewBox="0 0 20 20"
                         width="20"
@@ -10092,6 +10107,7 @@ exports[`Navigation > render with basic content 1`] = `
                   data-has-no-expand="false"
                   data-has-sub-label="false"
                   data-is-pinnable="true"
+                  data-pinned-feature="true"
                   draggable="false"
                   id="item1"
                 >
@@ -10102,7 +10118,7 @@ exports[`Navigation > render with basic content 1`] = `
                       class="emotion-16 emotion-17"
                     >
                       <svg
-                        class="emotion-18 emotion-19"
+                        class="emotion-72 emotion-19"
                         height="20"
                         viewBox="0 0 20 20"
                         width="20"
@@ -10549,26 +10565,26 @@ exports[`Navigation > render without pinnedFeature 1`] = `
 
 .emotion-22[data-has-active-children="true"][data-has-no-expand="false"]:not(
       [disabled][data-is-active="true"]
-    )[data-is-pinnable="true"] .e134hokc10 {
+    )[data-is-pinnable="true"][data-pinned-feature="true"] .e134hokc10 {
   opacity: 0;
 }
 
-.emotion-22[data-has-no-expand="false"]:not([disabled]):hover .e134hokc16,
-.emotion-22[data-has-no-expand="false"]:not([disabled]):focus .e134hokc16,
-.emotion-22[data-has-no-expand="false"]:not([disabled]):active .e134hokc16,
-.emotion-22[data-has-no-expand="false"]:not([disabled]):hover .e134hokc11,
-.emotion-22[data-has-no-expand="false"]:not([disabled]):focus .e134hokc11,
-.emotion-22[data-has-no-expand="false"]:not([disabled]):active .e134hokc11 {
+.emotion-22[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):hover .e134hokc16,
+.emotion-22[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):focus .e134hokc16,
+.emotion-22[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):active .e134hokc16,
+.emotion-22[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):hover .e134hokc11,
+.emotion-22[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):focus .e134hokc11,
+.emotion-22[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):active .e134hokc11 {
   opacity: 1;
 }
 
-.emotion-22[data-has-no-expand="false"]:not([disabled]):hover .e134hokc10,
-.emotion-22[data-has-no-expand="false"]:not([disabled]):focus .e134hokc10,
-.emotion-22[data-has-no-expand="false"]:not([disabled]):active .e134hokc10 {
+.emotion-22[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):hover .e134hokc10,
+.emotion-22[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):focus .e134hokc10,
+.emotion-22[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):active .e134hokc10 {
   opacity: 0;
 }
 
-.emotion-22:hover[data-has-children="false"][data-is-active="false"]:not([disabled]) .emotion-32 {
+.emotion-22:hover[data-has-children="false"][data-is-active="false"][data-is-pinnable="true"]:not([disabled]) .emotion-32 {
   color: #3f4250;
 }
 
@@ -10578,12 +10594,12 @@ exports[`Navigation > render without pinnedFeature 1`] = `
   background-color: #e9eaeb;
 }
 
-.emotion-22[data-is-active="true"],
+.emotion-22[data-is-active="true"][data-is-pinnable="true"],
 .emotion-22:hover[data-has-active="true"] {
   background-color: #f1eefc;
 }
 
-.emotion-22[data-is-active="true"]:hover,
+.emotion-22[data-is-active="true"][data-is-pinnable="true"]:hover,
 .emotion-22:hover[data-has-active="true"]:hover {
   background-color: #e5dbfd;
 }
@@ -10673,11 +10689,11 @@ exports[`Navigation > render without pinnedFeature 1`] = `
 }
 
 .emotion-28 .fill {
-  fill: #521094;
+  fill: #151a2d;
 }
 
 .emotion-28 .fillStrong {
-  fill: #a060f6;
+  fill: #b5b7bd;
 }
 
 .emotion-30 {
@@ -10745,11 +10761,11 @@ exports[`Navigation > render without pinnedFeature 1`] = `
 }
 
 .emotion-43 .fill {
-  fill: #151a2d;
+  fill: #521094;
 }
 
 .emotion-43 .fillStrong {
-  fill: #b5b7bd;
+  fill: #a060f6;
 }
 
 .emotion-48 {
@@ -10951,6 +10967,7 @@ exports[`Navigation > render without pinnedFeature 1`] = `
                   data-has-sub-label="false"
                   data-is-active="true"
                   data-is-pinnable="false"
+                  data-pinned-feature="false"
                   draggable="false"
                   id="item1"
                 >
@@ -11012,6 +11029,7 @@ exports[`Navigation > render without pinnedFeature 1`] = `
                   data-has-no-expand="false"
                   data-has-sub-label="false"
                   data-is-pinnable="false"
+                  data-pinned-feature="false"
                   draggable="false"
                   id="item1"
                 >
@@ -11580,26 +11598,26 @@ exports[`Navigation > resize manually the navigation using slider 1`] = `
 
 .emotion-12[data-has-active-children="true"][data-has-no-expand="false"]:not(
       [disabled][data-is-active="true"]
-    )[data-is-pinnable="true"] .emotion-280 {
+    )[data-is-pinnable="true"][data-pinned-feature="true"] .emotion-280 {
   opacity: 0;
 }
 
-.emotion-12[data-has-no-expand="false"]:not([disabled]):hover .emotion-286,
-.emotion-12[data-has-no-expand="false"]:not([disabled]):focus .emotion-286,
-.emotion-12[data-has-no-expand="false"]:not([disabled]):active .emotion-286,
-.emotion-12[data-has-no-expand="false"]:not([disabled]):hover .emotion-281,
-.emotion-12[data-has-no-expand="false"]:not([disabled]):focus .emotion-281,
-.emotion-12[data-has-no-expand="false"]:not([disabled]):active .emotion-281 {
+.emotion-12[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):hover .emotion-286,
+.emotion-12[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):focus .emotion-286,
+.emotion-12[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):active .emotion-286,
+.emotion-12[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):hover .emotion-281,
+.emotion-12[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):focus .emotion-281,
+.emotion-12[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):active .emotion-281 {
   opacity: 1;
 }
 
-.emotion-12[data-has-no-expand="false"]:not([disabled]):hover .emotion-280,
-.emotion-12[data-has-no-expand="false"]:not([disabled]):focus .emotion-280,
-.emotion-12[data-has-no-expand="false"]:not([disabled]):active .emotion-280 {
+.emotion-12[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):hover .emotion-280,
+.emotion-12[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):focus .emotion-280,
+.emotion-12[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):active .emotion-280 {
   opacity: 0;
 }
 
-.emotion-12:hover[data-has-children="false"][data-is-active="false"]:not([disabled]) .emotion-22 {
+.emotion-12:hover[data-has-children="false"][data-is-active="false"][data-is-pinnable="true"]:not([disabled]) .emotion-22 {
   color: #3f4250;
 }
 
@@ -11609,12 +11627,12 @@ exports[`Navigation > resize manually the navigation using slider 1`] = `
   background-color: #e9eaeb;
 }
 
-.emotion-12[data-is-active="true"],
+.emotion-12[data-is-active="true"][data-is-pinnable="true"],
 .emotion-12:hover[data-has-active="true"] {
   background-color: #f1eefc;
 }
 
-.emotion-12[data-is-active="true"]:hover,
+.emotion-12[data-is-active="true"][data-is-pinnable="true"]:hover,
 .emotion-12:hover[data-has-active="true"]:hover {
   background-color: #e5dbfd;
 }
@@ -11725,26 +11743,26 @@ exports[`Navigation > resize manually the navigation using slider 1`] = `
 
 .emotion-12[data-has-active-children="true"][data-has-no-expand="false"]:not(
       [disabled][data-is-active="true"]
-    )[data-is-pinnable="true"] .emotion-280 {
+    )[data-is-pinnable="true"][data-pinned-feature="true"] .emotion-280 {
   opacity: 0;
 }
 
-.emotion-12[data-has-no-expand="false"]:not([disabled]):hover .emotion-286,
-.emotion-12[data-has-no-expand="false"]:not([disabled]):focus .emotion-286,
-.emotion-12[data-has-no-expand="false"]:not([disabled]):active .emotion-286,
-.emotion-12[data-has-no-expand="false"]:not([disabled]):hover .emotion-281,
-.emotion-12[data-has-no-expand="false"]:not([disabled]):focus .emotion-281,
-.emotion-12[data-has-no-expand="false"]:not([disabled]):active .emotion-281 {
+.emotion-12[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):hover .emotion-286,
+.emotion-12[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):focus .emotion-286,
+.emotion-12[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):active .emotion-286,
+.emotion-12[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):hover .emotion-281,
+.emotion-12[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):focus .emotion-281,
+.emotion-12[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):active .emotion-281 {
   opacity: 1;
 }
 
-.emotion-12[data-has-no-expand="false"]:not([disabled]):hover .emotion-280,
-.emotion-12[data-has-no-expand="false"]:not([disabled]):focus .emotion-280,
-.emotion-12[data-has-no-expand="false"]:not([disabled]):active .emotion-280 {
+.emotion-12[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):hover .emotion-280,
+.emotion-12[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):focus .emotion-280,
+.emotion-12[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):active .emotion-280 {
   opacity: 0;
 }
 
-.emotion-12:hover[data-has-children="false"][data-is-active="false"]:not([disabled]) .emotion-22 {
+.emotion-12:hover[data-has-children="false"][data-is-active="false"][data-is-pinnable="true"]:not([disabled]) .emotion-22 {
   color: #3f4250;
 }
 
@@ -11754,12 +11772,12 @@ exports[`Navigation > resize manually the navigation using slider 1`] = `
   background-color: #e9eaeb;
 }
 
-.emotion-12[data-is-active="true"],
+.emotion-12[data-is-active="true"][data-is-pinnable="true"],
 .emotion-12:hover[data-has-active="true"] {
   background-color: #f1eefc;
 }
 
-.emotion-12[data-is-active="true"]:hover,
+.emotion-12[data-is-active="true"][data-is-pinnable="true"]:hover,
 .emotion-12:hover[data-has-active="true"]:hover {
   background-color: #e5dbfd;
 }
@@ -12337,22 +12355,6 @@ exports[`Navigation > resize manually the navigation using slider 1`] = `
   height: calc(1.25rem + 0.5rem);
 }
 
-.emotion-57 .fill {
-  fill: #521094;
-}
-
-.emotion-57 .fillStrong {
-  fill: #a060f6;
-}
-
-.emotion-57 .fill {
-  fill: #521094;
-}
-
-.emotion-57 .fillStrong {
-  fill: #a060f6;
-}
-
 .emotion-62 {
   color: #641cb3;
   font-size: 0.875rem;
@@ -12387,6 +12389,22 @@ exports[`Navigation > resize manually the navigation using slider 1`] = `
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
+}
+
+.emotion-72 .fill {
+  fill: #521094;
+}
+
+.emotion-72 .fillStrong {
+  fill: #a060f6;
+}
+
+.emotion-72 .fill {
+  fill: #521094;
+}
+
+.emotion-72 .fillStrong {
+  fill: #a060f6;
 }
 
 .emotion-81 {
@@ -12766,6 +12784,7 @@ exports[`Navigation > resize manually the navigation using slider 1`] = `
                 data-has-no-expand="false"
                 data-has-sub-label="false"
                 data-is-pinnable="false"
+                data-pinned-feature="true"
                 data-testid="pinned-group"
                 draggable="false"
                 id="pinned-group"
@@ -12879,6 +12898,7 @@ exports[`Navigation > resize manually the navigation using slider 1`] = `
                   data-has-sub-label="false"
                   data-is-active="true"
                   data-is-pinnable="false"
+                  data-pinned-feature="true"
                   draggable="false"
                   id="item1"
                 >
@@ -12889,7 +12909,7 @@ exports[`Navigation > resize manually the navigation using slider 1`] = `
                       class="emotion-16 emotion-17"
                     >
                       <svg
-                        class="emotion-57 emotion-19"
+                        class="emotion-18 emotion-19"
                         height="20"
                         viewBox="0 0 20 20"
                         width="20"
@@ -12940,6 +12960,7 @@ exports[`Navigation > resize manually the navigation using slider 1`] = `
                   data-has-no-expand="false"
                   data-has-sub-label="false"
                   data-is-pinnable="true"
+                  data-pinned-feature="true"
                   draggable="false"
                   id="item1"
                 >
@@ -12950,7 +12971,7 @@ exports[`Navigation > resize manually the navigation using slider 1`] = `
                       class="emotion-16 emotion-17"
                     >
                       <svg
-                        class="emotion-18 emotion-19"
+                        class="emotion-72 emotion-19"
                         height="20"
                         viewBox="0 0 20 20"
                         width="20"
