@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.95.1
+
+### Patch Changes
+
+- [#5099](https://github.com/scaleway/ultraviolet/pull/5099) [`302eadc`](https://github.com/scaleway/ultraviolet/commit/302eadca152c594170a843070d48a6482afcb9e0) Thanks [@lisalupi](https://github.com/lisalupi)! - Add arrow icon to `<Popover />`
+
 ## 1.95.0
 
 ### Minor Changes

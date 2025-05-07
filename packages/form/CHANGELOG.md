@@ -1,5 +1,15 @@
 # Change Log
 
+## 3.17.4
+
+### Patch Changes
+
+- [#5094](https://github.com/scaleway/ultraviolet/pull/5094) [`5730187`](https://github.com/scaleway/ultraviolet/commit/5730187ae1675f1661a49767fcae97c1ee7d819c) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@babel/eslint-parser` to `7.27.1`.
+  Updated dependency `@babel/preset-typescript` to `7.27.1`.
+  Updated dependency `@babel/runtime` to `7.27.1`.
+- Updated dependencies [[`302eadc`](https://github.com/scaleway/ultraviolet/commit/302eadca152c594170a843070d48a6482afcb9e0)]:
+  - @ultraviolet/ui@1.95.1
+
 ## 3.17.3
 
 ### Patch Changes
