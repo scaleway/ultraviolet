@@ -18,7 +18,6 @@ export { OutlookLogo } from './OutlookLogo'
 export { PowerBiLogo } from './PowerBiLogo'
 export { QwenLogo } from './QwenLogo'
 export { TableauLogo } from './TableauLogo'
-export { WizardCoderLogo } from './WizardCoderLogo'
 export type LogoIconNames =
   | 'BaaiLogo'
   | 'DeepseekLogo'
@@ -35,4 +34,3 @@ export type LogoIconNames =
   | 'PowerBiLogo'
   | 'QwenLogo'
   | 'TableauLogo'
-  | 'WizardCoderLogo'
