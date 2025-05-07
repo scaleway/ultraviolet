@@ -12,7 +12,7 @@ import {
   UnpinIcon,
 } from '@ultraviolet/icons'
 import * as CategoryIcon from '@ultraviolet/icons/category'
-import { ConsoleCategoryIcon } from '@ultraviolet/icons/category'
+import { OrganizationDashboardCategoryIcon } from '@ultraviolet/icons/category'
 import {
   Badge,
   Button,
@@ -782,7 +782,7 @@ export const Item = memo(
                       variant={active ? 'primary' : categoryIconVariant}
                     />
                   ) : (
-                    <ConsoleCategoryIcon
+                    <OrganizationDashboardCategoryIcon
                       variant={active ? 'primary' : categoryIconVariant}
                     />
                   )}
