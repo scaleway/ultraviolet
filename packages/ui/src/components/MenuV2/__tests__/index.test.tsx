@@ -206,6 +206,16 @@ describe('Menu', () => {
     expect(items.length).toBe(1)
     expect(items[0]).toHaveTextContent('Disk')
   })
+  test('renders with footer', () =>
+    shouldMatchEmotionSnapshot(
+      <MenuV2
+        visible
+        footer="Footer"
+        disclosure={() => <button type="button">Menu</button>}
+      >
+        <MenuV2.Item>Not footer</MenuV2.Item>
+      </MenuV2>,
+    ))
 
   describe('placement', () => {
     test('renders top', () =>
@@ -306,7 +316,7 @@ describe('Menu', () => {
       ))
     test(`render with active props`, () =>
       shouldMatchEmotionSnapshot(
-        <MenuV2.Item active>Borderless Props</MenuV2.Item>,
+        <MenuV2.Item active>Active Props</MenuV2.Item>,
       ))
   })
 })
