@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.95.2
+
+### Patch Changes
+
+- [#5119](https://github.com/scaleway/ultraviolet/pull/5119) [`e12eb18`](https://github.com/scaleway/ultraviolet/commit/e12eb18c1c130fc1a3da39bd7acbbba8d3fe0872) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<Notice />` icon size
+
 ## 1.95.1
 
 ### Patch Changes

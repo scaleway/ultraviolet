@@ -1,5 +1,14 @@
 # Change Log
 
+## 3.17.5
+
+### Patch Changes
+
+- [#5120](https://github.com/scaleway/ultraviolet/pull/5120) [`05554ce`](https://github.com/scaleway/ultraviolet/commit/05554ce1feb378752953877c98a6a14e0d87042b) Thanks [@matthprost](https://github.com/matthprost)! - Revert update react-hook-form
+
+- Updated dependencies [[`e12eb18`](https://github.com/scaleway/ultraviolet/commit/e12eb18c1c130fc1a3da39bd7acbbba8d3fe0872)]:
+  - @ultraviolet/ui@1.95.2
+
 ## 3.17.4
 
 ### Patch Changes
