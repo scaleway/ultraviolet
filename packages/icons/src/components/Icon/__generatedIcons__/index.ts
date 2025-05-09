@@ -230,6 +230,7 @@ export type SystemIconNames =
   | 'NorthIcon'
   | 'OpenInNewIcon'
   | 'OrganizationIcon'
+  | 'PartnerSpaceIcon'
   | 'PlusIcon'
   | 'ProgressCheckIcon'
   | 'RayEndArrowIcon'

@@ -127,9 +127,10 @@ const readSvg = async (filePath: string, suffix: string) => {
     .replace(/clip-rule=/g, 'clipRule=')
     .replace(/clip-path=/g, 'clipPath=')
     .replace(/stop-color=/g, 'stopColor=')
+    .replace(/flood-opacity=/g, 'floodOpacity=')
+    .replace(/color-interpolation-filters=/g, 'colorInterpolationFilters=')
+    .replace(/xlink:href=/g, 'xlinkHref=')
     .replace(/`/g, '\\`')
-    .replace(/height="[^"]*"/g, '')
-    .replace(/width="[^"]*"/g, '')
 
   if (suffix === 'Icon') {
     return updatedSvgContent.replaceAll(/fill="[^"]*"/g, '')
