@@ -33,7 +33,11 @@ export const Notice = ({
     data-testid={dataTestId}
     className={className}
   >
-    <InformationOutlineIcon size={16} sentiment="neutral" prominence="weak" />
+    <InformationOutlineIcon
+      size="small"
+      sentiment="neutral"
+      prominence="weak"
+    />
     {children}
   </StyledSpan>
 )
