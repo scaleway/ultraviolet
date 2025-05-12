@@ -10,7 +10,7 @@ import {
   PinOutlineIcon,
   UnpinIcon,
 } from '@ultraviolet/icons'
-import { ConsoleCategoryIcon } from '@ultraviolet/icons/category'
+import { OrganizationDashboardCategoryIcon } from '@ultraviolet/icons/category'
 import {
   Badge,
   Button,
@@ -756,7 +756,7 @@ export const Item = memo(
                   justifyContent="center"
                 >
                   {categoryIcon || (
-                    <ConsoleCategoryIcon
+                    <OrganizationDashboardCategoryIcon
                       variant={active ? 'primary' : 'neutral'}
                     />
                   )}
