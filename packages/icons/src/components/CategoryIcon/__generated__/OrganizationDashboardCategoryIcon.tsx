@@ -8,22 +8,26 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const ObservabilityCategoryIcon = ({
+export const OrganizationDashboardCategoryIcon = ({
   ...props
 }: Omit<IconProps, 'children'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
   <Icon {...props}>
-    <g className="Observability">
-      <g className="icon">
+    <g className="Console">
+      <g className="Console-icon">
         <path
           fill="#4F0599"
-          d="M3 7.25a1.25 1.25 0 1 1 2.5 0v7.5a1.25 1.25 0 1 1-2.5 0zm11.5-2a1.25 1.25 0 1 1 2.5 0v9.5a1.25 1.25 0 1 1-2.5 0z"
+          d="M5 4a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1zm7 4a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1z"
           className="fill"
+          clipRule="evenodd"
+          fillRule="evenodd"
         />
         <path
           fill="#A365F6"
-          d="M8.75 9.25a1.25 1.25 0 1 1 2.5 0v5.5a1.25 1.25 0 1 1-2.5 0z"
+          d="M12 4a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1zm-7 9a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-1a1 1 0 0 0-1-1z"
           className="fillStrong"
+          clipRule="evenodd"
+          fillRule="evenodd"
         />
       </g>
     </g>
