@@ -5,7 +5,6 @@ import styled from '@emotion/styled'
 import {
   ArrowDownIcon,
   ArrowRightIcon,
-  DotsHorizontalIcon,
   DragIcon,
   OpenInNewIcon,
   PinOutlineIcon,
