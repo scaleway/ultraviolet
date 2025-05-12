@@ -2,11 +2,11 @@ import styled from '@emotion/styled'
 import type { StoryFn } from '@storybook/react'
 import {
   BaremetalCategoryIcon,
-  ConsoleCategoryIcon,
+  DataAndAnalyticsCategoryIcon,
   DatabaseCategoryIcon,
-  ManagedServicesCategoryIcon,
+  MonitoringCategoryIcon,
   NetworkCategoryIcon,
-  ObservabilityCategoryIcon,
+  OrganizationDashboardCategoryIcon,
   SecurityCategoryIcon,
   UseCaseCategoryIcon,
 } from '@ultraviolet/icons/category'
@@ -81,7 +81,7 @@ const PlaygroundContent = ({ ...props }: ComponentProps<typeof Navigation>) => {
       <Navigation.Item
         label="Organization Dashboard"
         id="organization-dashboard"
-        categoryIcon={<ConsoleCategoryIcon variant="neutral" />}
+        categoryIcon={<OrganizationDashboardCategoryIcon variant="neutral" />}
         noPinButton
         active={active === 'Organization Dashboard'}
         onClickPinUnpin={onClickPinUnpin}
@@ -174,7 +174,7 @@ const PlaygroundContent = ({ ...props }: ComponentProps<typeof Navigation>) => {
         <Navigation.Item
           label="Storage"
           id="storage"
-          categoryIcon={<ManagedServicesCategoryIcon variant="primary" />}
+          categoryIcon={<DataAndAnalyticsCategoryIcon variant="primary" />}
         >
           <Navigation.Item
             label="Block Storage"
@@ -250,7 +250,7 @@ const PlaygroundContent = ({ ...props }: ComponentProps<typeof Navigation>) => {
         <Navigation.Item
           label="Monitoring"
           id="monitoring"
-          categoryIcon={<ObservabilityCategoryIcon variant="primary" />}
+          categoryIcon={<MonitoringCategoryIcon variant="primary" />}
         >
           <Navigation.Item
             label="Logs"
