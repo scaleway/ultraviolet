@@ -2,6 +2,7 @@
 
 import { css, keyframes } from '@emotion/react'
 import styled from '@emotion/styled'
+import { CheckIcon } from '@ultraviolet/icons'
 import type { ReactNode } from 'react'
 import { useMemo } from 'react'
 import { Bullet } from '../Bullet'
@@ -240,19 +241,21 @@ export const Step = ({
       {isDone && !disabled ? (
         <StyledBullet
           sentiment="primary"
-          icon="check"
           prominence="strong"
           size={currentState.size}
           isActive={isActive}
-        />
+        >
+          <CheckIcon />
+        </StyledBullet>
       ) : (
         <StyledBullet
           sentiment={isDone || isActive ? 'primary' : 'neutral'}
-          text={(index + 1).toString()}
           prominence="strong"
           size={currentState.size}
           isActive={isActive}
-        />
+        >
+          {(index + 1).toString()}
+        </StyledBullet>
       )}
       {title ? (
         <StyledText

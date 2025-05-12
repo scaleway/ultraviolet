@@ -1,5 +1,6 @@
 'use client'
 
+import { CheckIcon, CopyContentIcon } from '@ultraviolet/icons'
 import useClipboard from 'react-use-clipboard'
 import { Button } from '../Button'
 
@@ -55,9 +56,9 @@ export const CopyButton = ({
       className={className}
       data-testid={dataTestId}
       aria-label="Copy"
-      icon={isCopied ? 'check' : 'copy-content'}
       tooltip={isCopied ? copiedText : copyText}
     >
+      {isCopied ? <CheckIcon /> : <CopyContentIcon />}
       {children}
     </Button>
   )

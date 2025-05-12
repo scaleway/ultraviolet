@@ -723,7 +723,6 @@ export const Item = memo(
                   sentiment="neutral"
                   variant={hasActiveChildren ? 'filled' : 'ghost'}
                   size="small"
-                  icon={!categoryIcon ? 'dots-horizontal' : undefined}
                   aria-label={label}
                 >
                   {categoryIcon ? (

@@ -115,7 +115,7 @@ exports[`Toaster > renders correctly with close button 2`] = `
   gap: 0.25rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 1.5rem;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -159,19 +159,15 @@ exports[`Toaster > renders correctly with close button 2`] = `
 .emotion-9 {
   vertical-align: middle;
   fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
 .emotion-9 .fillStroke {
   stroke: currentColor;
   fill: none;
-}
-
-.emotion-9 path {
-  fill: currentColor;
 }
 
 <div
@@ -220,7 +216,6 @@ exports[`Toaster > renders correctly with close button 2`] = `
               <svg
                 class="emotion-9 emotion-10"
                 viewBox="0 0 16 16"
-                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"
