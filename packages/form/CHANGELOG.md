@@ -1,5 +1,24 @@
 # Change Log
 
+## 3.17.5
+
+### Patch Changes
+
+- [#5120](https://github.com/scaleway/ultraviolet/pull/5120) [`05554ce`](https://github.com/scaleway/ultraviolet/commit/05554ce1feb378752953877c98a6a14e0d87042b) Thanks [@matthprost](https://github.com/matthprost)! - Revert update react-hook-form
+
+- Updated dependencies [[`e12eb18`](https://github.com/scaleway/ultraviolet/commit/e12eb18c1c130fc1a3da39bd7acbbba8d3fe0872)]:
+  - @ultraviolet/ui@1.95.2
+
+## 3.17.4
+
+### Patch Changes
+
+- [#5094](https://github.com/scaleway/ultraviolet/pull/5094) [`5730187`](https://github.com/scaleway/ultraviolet/commit/5730187ae1675f1661a49767fcae97c1ee7d819c) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@babel/eslint-parser` to `7.27.1`.
+  Updated dependency `@babel/preset-typescript` to `7.27.1`.
+  Updated dependency `@babel/runtime` to `7.27.1`.
+- Updated dependencies [[`302eadc`](https://github.com/scaleway/ultraviolet/commit/302eadca152c594170a843070d48a6482afcb9e0)]:
+  - @ultraviolet/ui@1.95.1
+
 ## 3.17.3
 
 ### Patch Changes

@@ -1,5 +1,17 @@
 # Change Log
 
+## 1.95.2
+
+### Patch Changes
+
+- [#5119](https://github.com/scaleway/ultraviolet/pull/5119) [`e12eb18`](https://github.com/scaleway/ultraviolet/commit/e12eb18c1c130fc1a3da39bd7acbbba8d3fe0872) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<Notice />` icon size
+
+## 1.95.1
+
+### Patch Changes
+
+- [#5099](https://github.com/scaleway/ultraviolet/pull/5099) [`302eadc`](https://github.com/scaleway/ultraviolet/commit/302eadca152c594170a843070d48a6482afcb9e0) Thanks [@lisalupi](https://github.com/lisalupi)! - Add arrow icon to `<Popover />`
+
 ## 1.95.0
 
 ### Minor Changes

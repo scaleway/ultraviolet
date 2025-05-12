@@ -1,5 +1,55 @@
 # @ultraviolet/plus
 
+## 0.28.1
+
+### Patch Changes
+
+- Updated dependencies [[`e12eb18`](https://github.com/scaleway/ultraviolet/commit/e12eb18c1c130fc1a3da39bd7acbbba8d3fe0872)]:
+  - @ultraviolet/ui@1.95.2
+
+## 0.28.0
+
+### Minor Changes
+
+- [#5100](https://github.com/scaleway/ultraviolet/pull/5100) [`314b5c6`](https://github.com/scaleway/ultraviolet/commit/314b5c61bc76cb660432c79c83e01171a0441f69) Thanks [@matthprost](https://github.com/matthprost)! - ⚠️ BREAKING CHANGES:
+
+  `Navigation.Item`: change in the types and deprecated category icon props:
+
+  - `categoryIcon`: type switch from union type to react node to allow you adding your own category icon.
+
+  ```tsx
+  // Before
+  <Navigation.Item categoryIcon="useCase" />;
+
+  // After
+  import { UseCaseCategoryIcon } from "@ultraviolet/icons/category";
+
+  <Navigation.Item categoryIcon={<UseCaseCategoryIcon />} />;
+  ```
+
+  - `categoryIconVariant`: has been removed. Use the variant of the icon component itself.
+
+  ```tsx
+  // Before
+  <Navigation.Item categoryIcon="useCase" categoryIconVariant="neutral" />;
+
+  // After
+  import { UseCaseCategoryIcon } from "@ultraviolet/icons/category";
+
+  <Navigation.Item categoryIcon={<UseCaseCategoryIcon variant="neutral" />} />;
+  ```
+
+### Patch Changes
+
+- [#4919](https://github.com/scaleway/ultraviolet/pull/4919) [`b062798`](https://github.com/scaleway/ultraviolet/commit/b06279807f3751351e3aa4a6dbe52be613954d5c) Thanks [@lisalupi](https://github.com/lisalupi)! - `<CodeEditor />`:
+  - Rename prop `title` to `label` and change style
+  - New prop `helper`
+  - New prop `disabled`
+  - New prop `copyButton`
+  - Update component style to match ultraviolet theme (the component always uses Dark Theme colors)
+- Updated dependencies [[`302eadc`](https://github.com/scaleway/ultraviolet/commit/302eadca152c594170a843070d48a6482afcb9e0)]:
+  - @ultraviolet/ui@1.95.1
+
 ## 0.27.3
 
 ### Patch Changes
