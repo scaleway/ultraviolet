@@ -8,7 +8,7 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const EnvironmentalFootprintCategoryIcon = ({
+export const CostAndImpactManagementCategoryIcon = ({
   ...props
 }: Omit<IconProps, 'children'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
