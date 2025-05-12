@@ -6,23 +6,19 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const ObservabilityCategoryIcon = ({
+export const DataAndAnalyticsCategoryIcon = ({
   ...props
 }: Omit<IconProps, 'children'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
   <Icon {...props}>
-    <g className="Observability">
-      <g className="icon">
+    <g className="Managed-Services">
+      <g className="Group 42">
         <path
           fill="#4F0599"
-          d="M3 7.25a1.25 1.25 0 1 1 2.5 0v7.5a1.25 1.25 0 1 1-2.5 0zm11.5-2a1.25 1.25 0 1 1 2.5 0v9.5a1.25 1.25 0 1 1-2.5 0z"
+          d="M12 5.5 14.5 3 17 5.5 14.5 8zm0 9 2.5-2.5 2.5 2.5-2.5 2.5zm-9 0L5.5 12 8 14.5 5.5 17zm0-9L5.5 3 8 5.5 5.5 8z"
           className="fill"
         />
-        <path
-          fill="#A365F6"
-          d="M8.75 9.25a1.25 1.25 0 1 1 2.5 0v5.5a1.25 1.25 0 1 1-2.5 0z"
-          className="fillStrong"
-        />
+        <path fill="#A365F6" d="m7 10 3-3 3 3-3 3z" className="fillStrong" />
       </g>
     </g>
   </Icon>
