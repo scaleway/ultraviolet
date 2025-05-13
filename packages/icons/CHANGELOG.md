@@ -1,5 +1,17 @@
 # Change Log
 
+## 3.15.2
+
+### Patch Changes
+
+- [#5105](https://github.com/scaleway/ultraviolet/pull/5105) [`d8b7d1d`](https://github.com/scaleway/ultraviolet/commit/d8b7d1dcb14cf6601d9ab5dbbe9604c03e676358) Thanks [@lisalupi](https://github.com/lisalupi)! - New logo icons
+
+## 3.15.1
+
+### Patch Changes
+
+- [#5127](https://github.com/scaleway/ultraviolet/pull/5127) [`06a1acd`](https://github.com/scaleway/ultraviolet/commit/06a1acd30dcacd10d84dd07d48c8f41b9098f098) Thanks [@matthprost](https://github.com/matthprost)! - Fix all icons to implement `"use client"` directive needed to work with NextJs
+
 ## 3.15.0
 
 ### Minor Changes
