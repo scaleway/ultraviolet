@@ -1,5 +1,11 @@
 # Change Log
 
+## 3.15.2
+
+### Patch Changes
+
+- [#5105](https://github.com/scaleway/ultraviolet/pull/5105) [`d8b7d1d`](https://github.com/scaleway/ultraviolet/commit/d8b7d1dcb14cf6601d9ab5dbbe9604c03e676358) Thanks [@lisalupi](https://github.com/lisalupi)! - New logo icons
+
 ## 3.15.1
 
 ### Patch Changes
