@@ -8,7 +8,7 @@ It is using [React Hook Form](https://react-hook-form.com/) under the hood.
 ## Get Started
 
 ```sh
-$ pnpm add @ultraviolet/form @emotion/react @emotion/styled
+$ pnpm add @ultraviolet/ui @ultraviolet/form @emotion/react @emotion/styled
 ```
 
 ### Usage
