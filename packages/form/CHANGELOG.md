@@ -1,5 +1,20 @@
 # Change Log
 
+## 4.0.0-beta.0
+
+### Major Changes
+
+- [#5126](https://github.com/scaleway/ultraviolet/pull/5126) [`17da30c`](https://github.com/scaleway/ultraviolet/commit/17da30c133f624964daff6398e481568bd6da446) Thanks [@matthprost](https://github.com/matthprost)! - ⚠️ `@ultraviolet/ui` is now a peer-dependency of `@ultraviolet/form` and `@ultraviolet/plus`. This means you need to have an installed version of `@ultraviolet/ui` in your project that matches the version defined by the peer-dependency.
+
+- [#5112](https://github.com/scaleway/ultraviolet/pull/5112) [`37a7d63`](https://github.com/scaleway/ultraviolet/commit/37a7d632cd1e61d7615e5356fc179ec08f3bec09) Thanks [@matthprost](https://github.com/matthprost)! - Beta release
+
+### Patch Changes
+
+- Updated dependencies [[`37a7d63`](https://github.com/scaleway/ultraviolet/commit/37a7d632cd1e61d7615e5356fc179ec08f3bec09), [`a928589`](https://github.com/scaleway/ultraviolet/commit/a9285896d638e34eba9bb25c55c38de2aef4e210), [`865c160`](https://github.com/scaleway/ultraviolet/commit/865c160aee2db5bd5e7b357e9693a45a17ef4284)]:
+    - @ultraviolet/themes@2.0.0-beta.0
+    - @ultraviolet/ui@2.0.0-beta.0
+    - @ultraviolet/icons@4.0.0-beta.0
+
 ## 3.17.11
 
 ### Patch Changes
