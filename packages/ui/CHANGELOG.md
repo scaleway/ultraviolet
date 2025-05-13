@@ -1,5 +1,6 @@
 # Change Log
 
+<<<<<<< HEAD
 ## 1.95.12
 
 ### Patch Changes
@@ -8,6 +9,19 @@
   Updated dependency `eslint-config-next` to `15.3.4`.
 
 - [#5287](https://github.com/scaleway/ultraviolet/pull/5287) [`80d5c50`](https://github.com/scaleway/ultraviolet/commit/80d5c50e294efdc5fe714a55ef985ff142c07b6e) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@scaleway/random-name` to `5.1.2`.
+=======
+## 2.0.0-beta.0
+
+### Major Changes
+
+- [#5112](https://github.com/scaleway/ultraviolet/pull/5112) [`37a7d63`](https://github.com/scaleway/ultraviolet/commit/37a7d632cd1e61d7615e5356fc179ec08f3bec09) Thanks [@matthprost](https://github.com/matthprost)! - Beta release
+
+### Patch Changes
+
+- Updated dependencies [[`37a7d63`](https://github.com/scaleway/ultraviolet/commit/37a7d632cd1e61d7615e5356fc179ec08f3bec09), [`a928589`](https://github.com/scaleway/ultraviolet/commit/a9285896d638e34eba9bb25c55c38de2aef4e210), [`865c160`](https://github.com/scaleway/ultraviolet/commit/865c160aee2db5bd5e7b357e9693a45a17ef4284)]:
+  - @ultraviolet/themes@2.0.0-beta.0
+  - @ultraviolet/icons@4.0.0-beta.0
+>>>>>>> 96a6d7431 (chore: release (beta) (#5111))
 
 ## 1.95.11
 
