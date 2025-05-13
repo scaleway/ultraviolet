@@ -131,6 +131,8 @@ const readSvg = async (filePath: string, suffix: string) => {
     .replace(/color-interpolation-filters=/g, 'colorInterpolationFilters=')
     .replace(/xlink:href=/g, 'xlinkHref=')
     .replace(/`/g, '\\`')
+    .replace(/height="[^"]*"/g, '')
+    .replace(/width="[^"]*"/g, '')
 
   if (suffix === 'Icon') {
     return updatedSvgContent.replaceAll(/fill="[^"]*"/g, '')

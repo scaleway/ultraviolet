@@ -36,8 +36,6 @@ export const PowerBiLogo = ({ ...props }: Omit<IconProps, 'children'>) => (
         id="filter0_d_116_656025"
         x="7.56244"
         y="5.73334"
-        width="6.57776"
-        height="13.0286"
         filterUnits="userSpaceOnUse"
         colorInterpolationFilters="sRGB"
       >
