@@ -18,7 +18,7 @@ Welcome to the Ultraviolet Core repository! This is the main repository for the 
 - [Ultraviolet Themes](https://github.com/scaleway/ultraviolet/tree/main/packages/themes): A set of themes for the Ultraviolet UI library (default theme is included in `@ultraviolet/ui`).
 - [Ultraviolet Icons](https://github.com/scaleway/ultraviolet/tree/main/packages/icons): A library that provides a set of icons to use with Ultraviolet UI.
 - [Ultraviolet Illustrations](https://github.com/scaleway/ultraviolet/tree/main/packages/illustrations): A library that provides of illustrations.
-- [Ultraviolet Fonts](https://github.com/scaleway/ultraviolet/tree/main/packages/illustrations): A library that provides a set of fonts to use with Ultraviolet UI.
+- [Ultraviolet Fonts](https://github.com/scaleway/ultraviolet/tree/main/packages/fonts): A library that provides a set of fonts to use with Ultraviolet UI.
 
 ## Installation
 
