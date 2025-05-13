@@ -11,7 +11,7 @@ Ultraviolet Plus is a set of complex components that are built on top of Ultravi
 ## Get Started
 
 ```sh
-$ pnpm add @ultraviolet/plus
+$ pnpm add @ultraviolet/ui @ultraviolet/plus @emotion/react @emotion/styled
 ```
 
 ## Documentation
