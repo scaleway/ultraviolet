@@ -1,5 +1,5 @@
 ---
-"@ultraviolet/icons": minor
+"@ultraviolet/icons": major
 ---
 
 Name changing in Category icons:
