@@ -4,6 +4,7 @@ import styled from '@emotion/styled'
 import type { ReactNode } from 'react'
 import { createPortal } from 'react-dom'
 import { fadeIn } from '../../utils'
+import { Stack } from '../Stack'
 
 const StyledDiv = styled.div<{ rank: number }>`
   background: ${({ theme }) => theme.colors.other.elevation.background.fixed};
@@ -16,6 +17,11 @@ const StyledDiv = styled.div<{ rank: number }>`
   transform: translate(-50%, 0);
   width: 37.5rem;
   animation: ${fadeIn} 0.2s ease-in-out;
+`
+
+const Container = styled(Stack)`
+  height: 100%;
+  padding: 0 ${({ theme }) => theme.space['2']};
 `
 
 type ActionBarProps = {
@@ -50,7 +56,7 @@ export const ActionBar = ({
       className={className}
       data-testid={dataTestId}
     >
-      {children}
+      <Container alignItems="center">{children}</Container>
     </StyledDiv>,
     document.body,
   )
