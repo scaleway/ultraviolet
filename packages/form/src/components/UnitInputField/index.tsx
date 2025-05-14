@@ -30,6 +30,7 @@ type UnitInputFieldProps<
     | 'width'
     | 'helper'
     | 'selectInputWidth'
+    | 'selectInputMaxWidth'
     | 'dropdownAlign'
   > & {
     onChangeUnitValue?: ComponentProps<typeof UnitInput>['onChangeUnitValue']
@@ -57,6 +58,7 @@ export const UnitInputField = <
   required,
   width,
   selectInputWidth,
+  selectInputMaxWidth,
   helper,
   shouldUnregister = false,
   validate,
@@ -108,6 +110,7 @@ export const UnitInputField = <
       value={valueField.value as number}
       unitValue={unitField.value as string}
       selectInputWidth={selectInputWidth}
+      selectInputMaxWidth={selectInputMaxWidth}
       disabled={disabled}
       options={options}
       label={label}
