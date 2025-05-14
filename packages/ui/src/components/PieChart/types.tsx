@@ -6,4 +6,8 @@ export type Data = {
   percent: number
   id: string
   value?: string | null
+  details?: {
+    name?: string | null
+    value?: string | null
+  }[]
 }
