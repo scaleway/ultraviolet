@@ -502,7 +502,7 @@ exports[`SelectableCard > checkbox > renders correctly with aria label 1`] = `
             aria-invalid="false"
             aria-label="test"
             class="emotion-7 emotion-8"
-            id=":r1p:"
+            id="«r1p»"
             name="test"
             tabindex="-1"
             type="radio"
@@ -1010,7 +1010,7 @@ exports[`SelectableCard > checkbox > renders correctly with checked prop 1`] = `
           aria-label="test"
           checked=""
           class="emotion-5 emotion-6"
-          id=":r1v:"
+          id="«r1v»"
           name="test"
           tabindex="-1"
           type="checkbox"
@@ -1661,7 +1661,7 @@ exports[`SelectableCard > checkbox > renders correctly with complex children 1`]
           aria-invalid="false"
           class="emotion-5 emotion-6"
           disabled=""
-          id=":r2d:"
+          id="«r2d»"
           name="test"
           tabindex="-1"
           type="checkbox"
@@ -1702,7 +1702,7 @@ exports[`SelectableCard > checkbox > renders correctly with complex children 1`]
           >
             <label
               class="emotion-15 emotion-16 emotion-17"
-              for=":r2d:"
+              for="«r2d»"
             >
               test
             </label>
@@ -2455,7 +2455,7 @@ exports[`SelectableCard > checkbox > renders correctly with default props 1`] = 
             aria-disabled="false"
             aria-invalid="false"
             class="emotion-7 emotion-8"
-            id=":r1l:"
+            id="«r1l»"
             name="test"
             tabindex="-1"
             type="radio"
@@ -2488,7 +2488,7 @@ exports[`SelectableCard > checkbox > renders correctly with default props 1`] = 
           </svg>
           <label
             class="emotion-15 emotion-16 emotion-17"
-            for=":r1l:"
+            for="«r1l»"
           >
             test
           </label>
@@ -2968,7 +2968,7 @@ exports[`SelectableCard > checkbox > renders correctly with disabled prop 1`] = 
           aria-label="test"
           class="emotion-5 emotion-6"
           disabled=""
-          id=":r22:"
+          id="«r22»"
           name="test"
           tabindex="-1"
           type="checkbox"
@@ -3729,7 +3729,7 @@ exports[`SelectableCard > checkbox > renders correctly with illustration 1`] = `
               aria-checked="false"
               aria-invalid="false"
               class="emotion-9 emotion-10"
-              id=":r2h:"
+              id="«r2h»"
               name="label-14"
               tabindex="-1"
               type="checkbox"
@@ -3770,7 +3770,7 @@ exports[`SelectableCard > checkbox > renders correctly with illustration 1`] = `
               >
                 <label
                   class="emotion-19 emotion-20 emotion-21"
-                  for=":r2h:"
+                  for="«r2h»"
                 >
                   label
                 </label>
@@ -4408,10 +4408,10 @@ exports[`SelectableCard > checkbox > renders correctly with isError prop 1`] = `
       >
         <input
           aria-checked="false"
-          aria-describedby=":r25:-hint"
+          aria-describedby="«r25»-hint"
           aria-invalid="true"
           class="emotion-5 emotion-6"
-          id=":r25:"
+          id="«r25»"
           name="test"
           tabindex="-1"
           type="checkbox"
@@ -4452,7 +4452,7 @@ exports[`SelectableCard > checkbox > renders correctly with isError prop 1`] = `
           >
             <label
               class="emotion-15 emotion-16 emotion-17"
-              for=":r25:"
+              for="«r25»"
             >
               test
             </label>
@@ -5179,7 +5179,7 @@ exports[`SelectableCard > checkbox > renders correctly with productIcon 1`] = `
               aria-checked="false"
               aria-invalid="false"
               class="emotion-9 emotion-10"
-              id=":r2l:"
+              id="«r2l»"
               name="label-14"
               tabindex="-1"
               type="checkbox"
@@ -5220,7 +5220,7 @@ exports[`SelectableCard > checkbox > renders correctly with productIcon 1`] = `
               >
                 <label
                   class="emotion-19 emotion-20 emotion-21"
-                  for=":r2l:"
+                  for="«r2l»"
                 >
                   label
                 </label>
@@ -5742,7 +5742,7 @@ exports[`SelectableCard > checkbox > renders correctly with showTick 1`] = `
           aria-invalid="false"
           aria-label="test"
           class="emotion-5 emotion-6"
-          id=":r1s:"
+          id="«r1s»"
           name="test"
           tabindex="-1"
           type="checkbox"
@@ -6414,8 +6414,8 @@ exports[`SelectableCard > checkbox > renders correctly with tooltip prop 1`] = `
       class="emotion-0 emotion-1"
     >
       <div
-        aria-controls=":r28:"
-        aria-describedby=":r28:"
+        aria-controls="«r28»"
+        aria-describedby="«r28»"
         class="emotion-2 emotion-3"
         data-container-full-height="true"
         tabindex="0"
@@ -6441,7 +6441,7 @@ exports[`SelectableCard > checkbox > renders correctly with tooltip prop 1`] = `
               aria-checked="false"
               aria-invalid="false"
               class="emotion-9 emotion-10"
-              id=":r29:"
+              id="«r29»"
               name="test"
               tabindex="-1"
               type="checkbox"
@@ -6482,7 +6482,7 @@ exports[`SelectableCard > checkbox > renders correctly with tooltip prop 1`] = `
               >
                 <label
                   class="emotion-19 emotion-20 emotion-21"
-                  for=":r29:"
+                  for="«r29»"
                 >
                   test
                 </label>
@@ -6872,7 +6872,7 @@ exports[`SelectableCard > radio > renders correctly with aria label 1`] = `
             aria-invalid="false"
             aria-label="test"
             class="emotion-7 emotion-8"
-            id=":r5:"
+            id="«r5»"
             name="test"
             tabindex="-1"
             type="radio"
@@ -7287,7 +7287,7 @@ exports[`SelectableCard > radio > renders correctly with checked prop 1`] = `
             aria-label="test"
             checked=""
             class="emotion-7 emotion-8"
-            id=":rb:"
+            id="«rb»"
             name="test"
             tabindex="-1"
             type="radio"
@@ -7711,7 +7711,7 @@ exports[`SelectableCard > radio > renders correctly with complex children 1`] = 
             aria-invalid="false"
             class="emotion-7 emotion-8"
             disabled=""
-            id=":rp:"
+            id="«rp»"
             name="test"
             tabindex="-1"
             type="radio"
@@ -7744,7 +7744,7 @@ exports[`SelectableCard > radio > renders correctly with complex children 1`] = 
           </svg>
           <label
             class="emotion-15 emotion-16 emotion-17"
-            for=":rp:"
+            for="«rp»"
           >
             test
           </label>
@@ -8145,7 +8145,7 @@ exports[`SelectableCard > radio > renders correctly with default props 1`] = `
             aria-disabled="false"
             aria-invalid="false"
             class="emotion-7 emotion-8"
-            id=":r1:"
+            id="«r1»"
             name="test"
             tabindex="-1"
             type="radio"
@@ -8178,7 +8178,7 @@ exports[`SelectableCard > radio > renders correctly with default props 1`] = `
           </svg>
           <label
             class="emotion-15 emotion-16 emotion-17"
-            for=":r1:"
+            for="«r1»"
           >
             test
           </label>
@@ -8565,7 +8565,7 @@ exports[`SelectableCard > radio > renders correctly with disabled prop 1`] = `
             aria-label="test"
             class="emotion-7 emotion-8"
             disabled=""
-            id=":re:"
+            id="«re»"
             name="test"
             tabindex="-1"
             type="radio"
@@ -9099,7 +9099,7 @@ exports[`SelectableCard > radio > renders correctly with illustration 1`] = `
                 aria-disabled="false"
                 aria-invalid="false"
                 class="emotion-11 emotion-12"
-                id=":rt:"
+                id="«rt»"
                 name="label-14"
                 tabindex="-1"
                 type="radio"
@@ -9132,7 +9132,7 @@ exports[`SelectableCard > radio > renders correctly with illustration 1`] = `
               </svg>
               <label
                 class="emotion-19 emotion-20 emotion-21"
-                for=":rt:"
+                for="«rt»"
               >
                 label
               </label>
@@ -9546,7 +9546,7 @@ exports[`SelectableCard > radio > renders correctly with isError prop 1`] = `
             aria-disabled="false"
             aria-invalid="true"
             class="emotion-7 emotion-8"
-            id=":rh:"
+            id="«rh»"
             name="test"
             tabindex="-1"
             type="radio"
@@ -9579,7 +9579,7 @@ exports[`SelectableCard > radio > renders correctly with isError prop 1`] = `
           </svg>
           <label
             class="emotion-15 emotion-16 emotion-17"
-            for=":rh:"
+            for="«rh»"
           >
             test
           </label>
@@ -10079,7 +10079,7 @@ exports[`SelectableCard > radio > renders correctly with productIcon 1`] = `
                 aria-disabled="false"
                 aria-invalid="false"
                 class="emotion-11 emotion-12"
-                id=":r11:"
+                id="«r11»"
                 name="label-14"
                 tabindex="-1"
                 type="radio"
@@ -10112,7 +10112,7 @@ exports[`SelectableCard > radio > renders correctly with productIcon 1`] = `
               </svg>
               <label
                 class="emotion-19 emotion-20 emotion-21"
-                for=":r11:"
+                for="«r11»"
               >
                 label
               </label>
@@ -10540,7 +10540,7 @@ exports[`SelectableCard > radio > renders correctly with showTick 1`] = `
             aria-invalid="false"
             aria-label="test"
             class="emotion-7 emotion-8"
-            id=":r8:"
+            id="«r8»"
             name="test"
             tabindex="-1"
             type="radio"
@@ -10983,8 +10983,8 @@ exports[`SelectableCard > radio > renders correctly with tooltip prop 1`] = `
       class="emotion-0 emotion-1"
     >
       <div
-        aria-controls=":rk:"
-        aria-describedby=":rk:"
+        aria-controls="«rk»"
+        aria-describedby="«rk»"
         class="emotion-2 emotion-3"
         data-container-full-height="true"
         tabindex="0"
@@ -11012,7 +11012,7 @@ exports[`SelectableCard > radio > renders correctly with tooltip prop 1`] = `
                 aria-disabled="false"
                 aria-invalid="false"
                 class="emotion-11 emotion-12"
-                id=":rl:"
+                id="«rl»"
                 name="test"
                 tabindex="-1"
                 type="radio"
@@ -11045,7 +11045,7 @@ exports[`SelectableCard > radio > renders correctly with tooltip prop 1`] = `
               </svg>
               <label
                 class="emotion-19 emotion-20 emotion-21"
-                for=":rl:"
+                for="«rl»"
               >
                 test
               </label>
