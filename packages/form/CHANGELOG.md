@@ -1,5 +1,13 @@
 # Change Log
 
+## 4.0.0-beta.1
+
+### Patch Changes
+
+- Updated dependencies [[`1464f54`](https://github.com/scaleway/ultraviolet/commit/1464f54cb9099b6daa51b254cc935f36147004d0), [`4308966`](https://github.com/scaleway/ultraviolet/commit/4308966450c594969417d3740d984099463e7da8)]:
+  - @ultraviolet/icons@4.0.0-beta.1
+  - @ultraviolet/ui@2.0.0-beta.1
+
 ## 4.0.0-beta.0
 
 ### Major Changes
@@ -11,9 +19,9 @@
 ### Patch Changes
 
 - Updated dependencies [[`37a7d63`](https://github.com/scaleway/ultraviolet/commit/37a7d632cd1e61d7615e5356fc179ec08f3bec09), [`a928589`](https://github.com/scaleway/ultraviolet/commit/a9285896d638e34eba9bb25c55c38de2aef4e210), [`865c160`](https://github.com/scaleway/ultraviolet/commit/865c160aee2db5bd5e7b357e9693a45a17ef4284)]:
-    - @ultraviolet/themes@2.0.0-beta.0
-    - @ultraviolet/ui@2.0.0-beta.0
-    - @ultraviolet/icons@4.0.0-beta.0
+  - @ultraviolet/themes@2.0.0-beta.0
+  - @ultraviolet/ui@2.0.0-beta.0
+  - @ultraviolet/icons@4.0.0-beta.0
 
 ## 3.17.7
 
