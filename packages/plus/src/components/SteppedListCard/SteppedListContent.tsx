@@ -7,6 +7,7 @@ import { useContext, useEffect } from 'react'
 import { Data, nextStep } from './helper'
 
 const StyledContent = styled(Stack)`
+  min-width: 0;
   padding: ${({ theme }) => theme.space['3']};
   padding-top: ${({ theme }) => theme.space['4']};
 `
