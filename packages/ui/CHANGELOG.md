@@ -1,15 +1,154 @@
 # Change Log
 
-<<<<<<< HEAD
-## 1.95.12
+## 2.0.0-beta.1
+
+### Major Changes
+
+- [#5139](https://github.com/scaleway/ultraviolet/pull/5139) [`4308966`](https://github.com/scaleway/ultraviolet/commit/4308966450c594969417d3740d984099463e7da8) Thanks [@matthprost](https://github.com/matthprost)! - Following the icon major update some components have recieved a small update to improve the usage of icons.
+
+  ## Detailed migration per components
+
+  ### Button
+
+  `icon`, `iconPosition`, `iconVariant` props are deprecated. You can directly use the imported icon you need in the children.
+
+  ```tsx
+  // Before
+  import { Button } from "@ultraviolet/ui";
+
+  <Button icon="pencil" iconPosition="right" iconVariant="outline">
+    Edit
+  </Button>;
+  ```
+
+  ```tsx
+  // After
+  import { Button } from "@ultraviolet/ui";
+  import { PencilOutlineIcon } from "@ultraviolet/icons";
+
+  <Button>
+    Edit <PencilOutlineIcon />
+  </Button>;
+  ```
+
+  ### Badge
+
+  `icon` props is deprecated. You can directly use the imported icon you need in the children.
+
+  ```tsx
+  // Before
+  import { Badge } from '@ultraviolet/ui'
+
+  <Badge icon="pencil">
+    Edit
+  </Button>
+  ```
+
+  ```tsx
+  // After
+  import { Badge } from "@ultraviolet/ui";
+  import { PencilOutlineIcon } from "@ultraviolet/icons";
+
+  <Badge>
+    Edit <PencilOutlineIcon />
+  </Badge>;
+  ```
+
+  ### Bullet
+
+  `icon` and `iconVariant` props are deprecated. You can directly use the imported icon you need in the children.
+
+  ```tsx
+  // Before
+  import { Bullet } from '@ultraviolet/ui'
+
+  <Bullet icon="check" />
+  <Bullet icon="check" iconVariant="outlined" />
+  ```
+
+  ```tsx
+  // After
+  import { Bullet } from '@ultraviolet/ui'
+  import { CheckIcon, CheckCircleOutlineIcon } from '@ultraviolet/icons'
+
+  <Bullet>
+    <CheckIcon />
+  </Bullet>
+
+  <Bullet>
+    <CheckCircleOutlineIcon />
+  </Bullet>
+  ```
+
+  ### AvatarV2
+
+  `icon` prop is deprecated. You can directly use the imported icon you need in the children.
+
+  ```tsx
+  // Before
+  import { AvatarV2 } from "@ultraviolet/ui";
+
+  <AvatarV2 variant="icon" shape="circle" sentiment="primary" icon="mosaic" />;
+  ```
+
+  ```tsx
+  // After
+  import { AvatarV2 } from "@ultraviolet/ui";
+  import { MosaicIcon } from "@ultraviolet/icons";
+
+  <AvatarV2 variant="icon" shape="circle" sentiment="primary">
+    <MosaicIcon size="xlarge" />
+  </AvatarV2>;
+  ```
+
+  ### Separator
+
+  `icon` prop is deprecated. You can directly use the imported icon you need in the children.
+
+  ```tsx
+  // Before
+  import { Separator } from "@ultraviolet/ui";
+
+  <Separator direction="vertical" icon="ray-top-arrow" />;
+  ```
+
+  ```tsx
+  // After
+  import { Separator } from "@ultraviolet/ui";
+  import { RayTopArrowIcon } from "@ultraviolet/icons";
+
+  <Separator direction="vertical">
+    <RayTopArrowIcon size="medium" />
+  </Separator>;
+  ```
+
+  ### Tag
+
+  `icon` prop is deprecated. You can directly use the imported icon you need in the children.
+
+  ```tsx
+  // Before
+  import { Tag } from "@ultraviolet/ui";
+
+  <Tag icon="check">Valid</Tag>;
+  ```
+
+  ```tsx
+  // After
+  import { Tag } from "@ultraviolet/ui";
+  import { CheckIcon } from "@ultraviolet/icons";
+
+  <Tag>
+    <CheckIcon size="small" />
+    Valid
+  </Tag>;
+  ```
 
 ### Patch Changes
 
-- [#5277](https://github.com/scaleway/ultraviolet/pull/5277) [`40d4066`](https://github.com/scaleway/ultraviolet/commit/40d40662d7305712b0ca23d08759b37590a677a0) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `next` to `15.3.4`.
-  Updated dependency `eslint-config-next` to `15.3.4`.
+- Updated dependencies [[`1464f54`](https://github.com/scaleway/ultraviolet/commit/1464f54cb9099b6daa51b254cc935f36147004d0)]:
+  - @ultraviolet/icons@4.0.0-beta.1
 
-- [#5287](https://github.com/scaleway/ultraviolet/pull/5287) [`80d5c50`](https://github.com/scaleway/ultraviolet/commit/80d5c50e294efdc5fe714a55ef985ff142c07b6e) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@scaleway/random-name` to `5.1.2`.
-=======
 ## 2.0.0-beta.0
 
 ### Major Changes
