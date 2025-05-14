@@ -1,5 +1,11 @@
 # Change Log
 
+## 4.0.0-beta.1
+
+### Patch Changes
+
+- [#5142](https://github.com/scaleway/ultraviolet/pull/5142) [`1464f54`](https://github.com/scaleway/ultraviolet/commit/1464f54cb9099b6daa51b254cc935f36147004d0) Thanks [@matthprost](https://github.com/matthprost)! - New logo icons
+
 ## 4.0.0-beta.0
 
 ### Major Changes
