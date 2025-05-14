@@ -1,16 +1,14 @@
 # @ultraviolet/plus
 
 <<<<<<< HEAD
-## 0.28.11
+## 1.0.0-beta.1
 
 ### Patch Changes
 
-- [#5242](https://github.com/scaleway/ultraviolet/pull/5242) [`1ff37f7`](https://github.com/scaleway/ultraviolet/commit/1ff37f7e70e92db710bd2194b87b01218ae7abb1) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@uiw/codemirror-extensions-langs` to `4.23.13`.
-  Updated dependency `@uiw/codemirror-theme-material` to `4.23.13`.
-  Updated dependency `@uiw/react-codemirror` to `4.23.13`.
-- Updated dependencies [[`40d4066`](https://github.com/scaleway/ultraviolet/commit/40d40662d7305712b0ca23d08759b37590a677a0), [`80d5c50`](https://github.com/scaleway/ultraviolet/commit/80d5c50e294efdc5fe714a55ef985ff142c07b6e)]:
-  - @ultraviolet/ui@1.95.12
-=======
+- Updated dependencies [[`1464f54`](https://github.com/scaleway/ultraviolet/commit/1464f54cb9099b6daa51b254cc935f36147004d0), [`4308966`](https://github.com/scaleway/ultraviolet/commit/4308966450c594969417d3740d984099463e7da8)]:
+  - @ultraviolet/icons@4.0.0-beta.1
+  - @ultraviolet/ui@2.0.0-beta.1
+
 ## 1.0.0-beta.0
 
 ### Major Changes
