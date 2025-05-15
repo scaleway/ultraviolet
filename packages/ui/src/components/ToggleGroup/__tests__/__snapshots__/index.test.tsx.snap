@@ -1723,22 +1723,19 @@ exports[`ToggleGroup > renders correctly with required prop 1`] = `
   text-decoration: none;
 }
 
-.emotion-11 {
-  vertical-align: middle;
-  fill: #b3144d;
-  height: 8px;
-  width: 8px;
-  min-width: 8px;
-  min-height: 8px;
-  vertical-align: super;
+.emotion-10 {
+  color: #b3144d;
+  font-size: 1rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
-.emotion-11 .fillStroke {
-  stroke: #b3144d;
-  fill: none;
-}
-
-.emotion-13 {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1761,7 +1758,7 @@ exports[`ToggleGroup > renders correctly with required prop 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-15 {
+.emotion-14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1780,16 +1777,16 @@ exports[`ToggleGroup > renders correctly with required prop 1`] = `
   flex-direction: row-reverse;
 }
 
-.emotion-15:active .emotion-24[data-disabled='false']:after {
+.emotion-14:active .emotion-23[data-disabled='false']:after {
   width: calc(1rem * 1.3775);
 }
 
-.emotion-15[aria-disabled="true"] {
+.emotion-14[aria-disabled="true"] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.emotion-17 {
+.emotion-16 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1812,7 +1809,7 @@ exports[`ToggleGroup > renders correctly with required prop 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-19 {
+.emotion-18 {
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 0.5rem;
@@ -1826,7 +1823,7 @@ exports[`ToggleGroup > renders correctly with required prop 1`] = `
   justify-content: normal;
 }
 
-.emotion-21 {
+.emotion-20 {
   color: #3f4250;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
@@ -1838,7 +1835,7 @@ exports[`ToggleGroup > renders correctly with required prop 1`] = `
   text-decoration: none;
 }
 
-.emotion-23 {
+.emotion-22 {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -1860,11 +1857,11 @@ exports[`ToggleGroup > renders correctly with required prop 1`] = `
   height: 1.5rem;
 }
 
-.emotion-23:hover {
+.emotion-22:hover {
   background-color: #d9dadd;
 }
 
-.emotion-23:after {
+.emotion-22:after {
   content: "";
   position: absolute;
   top: calc(1.5rem / 2 - 1rem / 2);
@@ -1877,25 +1874,25 @@ exports[`ToggleGroup > renders correctly with required prop 1`] = `
   transition: all 300ms;
 }
 
-.emotion-23:focus-within,
-.emotion-23:focus {
+.emotion-22:focus-within,
+.emotion-22:focus {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.emotion-23[data-disabled="false"]:active:after {
+.emotion-22[data-disabled="false"]:active:after {
   width: calc(1rem * 1.3775);
 }
 
-.emotion-23[data-checked="true"] {
+.emotion-22[data-checked="true"] {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.emotion-23[data-checked="true"]:hover {
+.emotion-22[data-checked="true"]:hover {
   background-color: #792dd4;
 }
 
-.emotion-23[data-checked="true"]:after {
+.emotion-22[data-checked="true"]:after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -1903,41 +1900,41 @@ exports[`ToggleGroup > renders correctly with required prop 1`] = `
   transform: translateX(-100%);
 }
 
-.emotion-23[data-checked="true"]:focus-within,
-.emotion-23[data-checked="true"]:focus {
+.emotion-22[data-checked="true"]:focus-within,
+.emotion-22[data-checked="true"]:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-23[data-disabled="true"] {
+.emotion-22[data-disabled="true"] {
   background: #f3f3f4;
 }
 
-.emotion-23[data-disabled="true"][data-checked="true"] {
+.emotion-22[data-disabled="true"][data-checked="true"] {
   background: #e5dbfd;
 }
 
-.emotion-23[data-error="true"] {
+.emotion-22[data-error="true"] {
   background-color: #ffebf2;
 }
 
-.emotion-23[data-error="true"]:focus-within,
-.emotion-23[data-error="true"]:focus {
+.emotion-22[data-error="true"]:focus-within,
+.emotion-22[data-error="true"]:focus {
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-23[data-error="true"][data-checked="true"] {
+.emotion-22[data-error="true"][data-checked="true"] {
   background-color: #e51963;
 }
 
-.emotion-23[data-error="true"][data-disabled="true"] {
+.emotion-22[data-error="true"][data-disabled="true"] {
   background-color: #fff3f7;
 }
 
-.emotion-23[data-error="true"][data-disabled="true"][data-checked="true"] {
+.emotion-22[data-error="true"][data-disabled="true"][data-checked="true"] {
   background-color: #ffd3e3;
 }
 
-.emotion-25 {
+.emotion-24 {
   position: absolute;
   opacity: 0;
   top: 0;
@@ -1947,7 +1944,7 @@ exports[`ToggleGroup > renders correctly with required prop 1`] = `
   cursor: pointer;
 }
 
-.emotion-25[disabled] {
+.emotion-24[disabled] {
   cursor: not-allowed;
 }
 
@@ -1970,46 +1967,43 @@ exports[`ToggleGroup > renders correctly with required prop 1`] = `
               class="emotion-8 emotion-9"
             >
               Label 
-              <svg
-                class="emotion-10 emotion-11 emotion-12"
-                viewBox="0 0 20 20"
+              <sup
+                class="emotion-10 emotion-9"
               >
-                <path
-                  d="M10 2h4l-.79 7.91 6.45-4.64 2 3.46L14.42 12l7.24 3.27-2 3.46-6.45-4.64L14 22h-4l.79-7.91-6.45 4.64-2-3.46L9.58 12 2.34 8.73l2-3.46 6.45 4.64z"
-                />
-              </svg>
+                *
+              </sup>
             </legend>
           </div>
           <div
-            class="emotion-13 emotion-1"
+            class="emotion-12 emotion-1"
           >
             <label
               aria-disabled="false"
-              class="emotion-15 emotion-16"
+              class="emotion-14 emotion-15"
             >
               <div
-                class="emotion-17 emotion-1"
+                class="emotion-16 emotion-1"
               >
                 <div
-                  class="emotion-19 emotion-20"
+                  class="emotion-18 emotion-19"
                 >
                   <span
-                    class="emotion-21 emotion-9"
+                    class="emotion-20 emotion-9"
                   >
                     Toggle 1
                   </span>
                 </div>
               </div>
               <div
-                class="emotion-23 emotion-24"
+                class="emotion-22 emotion-23"
                 data-checked="false"
                 data-disabled="false"
                 data-error="false"
               >
                 <input
                   aria-checked="false"
-                  class="emotion-25 emotion-26"
-                  id="«rv»"
+                  class="emotion-24 emotion-25"
+                  id="«r10»"
                   name="Toggle.value-1"
                   type="checkbox"
                   value="value-1"
@@ -2018,31 +2012,31 @@ exports[`ToggleGroup > renders correctly with required prop 1`] = `
             </label>
             <label
               aria-disabled="false"
-              class="emotion-15 emotion-16"
+              class="emotion-14 emotion-15"
             >
               <div
-                class="emotion-17 emotion-1"
+                class="emotion-16 emotion-1"
               >
                 <div
-                  class="emotion-19 emotion-20"
+                  class="emotion-18 emotion-19"
                 >
                   <span
-                    class="emotion-21 emotion-9"
+                    class="emotion-20 emotion-9"
                   >
                     Toggle 2
                   </span>
                 </div>
               </div>
               <div
-                class="emotion-23 emotion-24"
+                class="emotion-22 emotion-23"
                 data-checked="false"
                 data-disabled="false"
                 data-error="false"
               >
                 <input
                   aria-checked="false"
-                  class="emotion-25 emotion-26"
-                  id="«r12»"
+                  class="emotion-24 emotion-25"
+                  id="«r13»"
                   name="Toggle.value-2"
                   type="checkbox"
                   value="value-2"
