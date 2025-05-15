@@ -416,7 +416,7 @@ exports[`Toggle > renders correctly label 1`] = `
         <input
           aria-checked="false"
           class="emotion-10 emotion-11"
-          id="«re»"
+          id="«rg»"
           name="test"
           type="checkbox"
         />
@@ -898,17 +898,15 @@ exports[`Toggle > renders correctly when required with label 1`] = `
 }
 
 .emotion-8 {
-  vertical-align: middle;
-  fill: #b3144d;
-  height: 8px;
-  width: 8px;
-  min-width: 8px;
-  min-height: 8px;
-}
-
-.emotion-8 .fillStroke {
-  stroke: #b3144d;
-  fill: none;
+  color: #b3144d;
+  font-size: 1rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .emotion-10 {
@@ -1042,15 +1040,10 @@ exports[`Toggle > renders correctly when required with label 1`] = `
           >
             test
           </span>
-          <sup>
-            <svg
-              class="emotion-8 emotion-9"
-              viewBox="0 0 20 20"
-            >
-              <path
-                d="M10 2h4l-.79 7.91 6.45-4.64 2 3.46L14.42 12l7.24 3.27-2 3.46-6.45-4.64L14 22h-4l.79-7.91-6.45 4.64-2-3.46L9.58 12 2.34 8.73l2-3.46 6.45 4.64z"
-              />
-            </svg>
+          <sup
+            class="emotion-8 emotion-7"
+          >
+            *
           </sup>
         </div>
       </div>
@@ -1153,17 +1146,15 @@ exports[`Toggle > renders correctly when required with label left 1`] = `
 }
 
 .emotion-8 {
-  vertical-align: middle;
-  fill: #b3144d;
-  height: 8px;
-  width: 8px;
-  min-width: 8px;
-  min-height: 8px;
-}
-
-.emotion-8 .fillStroke {
-  stroke: #b3144d;
-  fill: none;
+  color: #b3144d;
+  font-size: 1rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .emotion-10 {
@@ -1297,15 +1288,10 @@ exports[`Toggle > renders correctly when required with label left 1`] = `
           >
             test
           </span>
-          <sup>
-            <svg
-              class="emotion-8 emotion-9"
-              viewBox="0 0 20 20"
-            >
-              <path
-                d="M10 2h4l-.79 7.91 6.45-4.64 2 3.46L14.42 12l7.24 3.27-2 3.46-6.45-4.64L14 22h-4l.79-7.91-6.45 4.64-2-3.46L9.58 12 2.34 8.73l2-3.46 6.45 4.64z"
-              />
-            </svg>
+          <sup
+            class="emotion-8 emotion-7"
+          >
+            *
           </sup>
         </div>
       </div>
@@ -1318,7 +1304,7 @@ exports[`Toggle > renders correctly when required with label left 1`] = `
         <input
           aria-checked="false"
           class="emotion-12 emotion-13"
-          id="«r9»"
+          id="«ra»"
           name="test"
           type="checkbox"
         />
@@ -1535,7 +1521,7 @@ exports[`Toggle > renders correctly with complex label 1`] = `
         <input
           aria-checked="false"
           class="emotion-8 emotion-9"
-          id="«rq»"
+          id="«rs»"
           name="test"
           type="checkbox"
         />
@@ -1766,7 +1752,7 @@ exports[`Toggle > renders correctly with custom labels on right 1`] = `
         <input
           aria-checked="false"
           class="emotion-10 emotion-11"
-          id="«rn»"
+          id="«rp»"
           name="test"
           type="checkbox"
         />
@@ -2204,7 +2190,7 @@ exports[`Toggle > renders correctly with error 1`] = `
         <input
           aria-checked="false"
           class="emotion-12 emotion-13"
-          id="«r13»"
+          id="«r15»"
           name="test"
           type="checkbox"
         />
@@ -2642,7 +2628,7 @@ exports[`Toggle > renders correctly with helper 1`] = `
         <input
           aria-checked="false"
           class="emotion-12 emotion-13"
-          id="«rv»"
+          id="«r11»"
           name="test"
           type="checkbox"
         />
@@ -2873,7 +2859,7 @@ exports[`Toggle > renders correctly with labels on left 1`] = `
         <input
           aria-checked="false"
           class="emotion-10 emotion-11"
-          id="«rk»"
+          id="«rm»"
           name="test"
           type="checkbox"
         />
@@ -3068,7 +3054,7 @@ exports[`Toggle > renders correctly with non default size 1`] = `
         <input
           aria-checked="false"
           class="emotion-6 emotion-7"
-          id="«rc»"
+          id="«re»"
           name="test"
           type="checkbox"
         />
@@ -3286,8 +3272,8 @@ exports[`Toggle > renders correctly with tooltip 1`] = `
     data-testid="testing"
   >
     <div
-      aria-controls="«ri»"
-      aria-describedby="«ri»"
+      aria-controls="«rk»"
+      aria-describedby="«rk»"
       class="emotion-0 emotion-1"
       tabindex="0"
     >
@@ -3317,7 +3303,7 @@ exports[`Toggle > renders correctly with tooltip 1`] = `
           <input
             aria-checked="false"
             class="emotion-12 emotion-13"
-            id="«rh»"
+            id="«rj»"
             name="test"
             type="checkbox"
           />
