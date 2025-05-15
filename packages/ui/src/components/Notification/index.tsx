@@ -1,7 +1,7 @@
 'use client'
 
 import type { Theme } from '@emotion/react'
-import { ClassNames, css, useTheme } from '@emotion/react'
+import { ClassNames, Global, css, useTheme } from '@emotion/react'
 import { CloseIcon } from '@ultraviolet/icons'
 import type { ReactNode } from 'react'
 import {
@@ -30,6 +30,13 @@ type CloseButtonProps = {
   ariaLabel?: string
   theme: ThemeToastify
 }
+
+const toaster = css`
+  ${PREFIX} {
+    z-index: 1;
+    position: fixed;
+  }
+`
 
 const styles = {
   toast: ({ theme }: StylesProps) => css`
@@ -132,20 +139,23 @@ export const NotificationContainer = ({
     <ClassNames>
       {/* eslint-disable-next-line @typescript-eslint/unbound-method */}
       {({ css: localCss }) => (
-        <BaseToastContainer
-          data-testid={dataTestId}
-          toastClassName={localCss(styles.toast({ theme }))}
-          icon={false}
-          autoClose={autoClose}
-          newestOnTop={newestOnTop}
-          limit={limit}
-          position={position}
-          hideProgressBar
-          draggable={false}
-          transition={Slide}
-          className={className}
-          containerId={containerId}
-        />
+        <>
+          <Global styles={[toaster]} />
+          <BaseToastContainer
+            data-testid={dataTestId}
+            toastClassName={localCss(styles.toast({ theme }))}
+            icon={false}
+            autoClose={autoClose}
+            newestOnTop={newestOnTop}
+            limit={limit}
+            position={position}
+            hideProgressBar
+            draggable={false}
+            transition={Slide}
+            className={className}
+            containerId={containerId}
+          />
+        </>
       )}
     </ClassNames>
   )
