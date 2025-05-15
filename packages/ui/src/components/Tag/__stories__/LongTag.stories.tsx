@@ -6,7 +6,7 @@ LongTag.parameters = {
   docs: {
     description: {
       story:
-        'Loading for async operation or other use cases, You can define it by passing `isLoading` property to true.',
+        'Whenever a tag is too long it will automatically shrink and add a tooltip on top of it so the user can see the full text.',
     },
   },
 }
