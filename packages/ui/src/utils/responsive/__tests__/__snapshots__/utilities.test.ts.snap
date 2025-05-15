@@ -2,24 +2,28 @@
 
 exports[`Responsive utilities > down > should return null when unknown size 1`] = `""`;
 
-exports[`Responsive utilities > down > works with large 1`] = `"@media (max-width: 991px) { border: 1px solid red; }"`;
+exports[`Responsive utilities > down > works with large 1`] = `"@media (max-width: calc(1440px - 1px)) { border: 1px solid red; }"`;
 
-exports[`Responsive utilities > down > works with medium 1`] = `"@media (max-width: 767px) { border: 1px solid red; }"`;
+exports[`Responsive utilities > down > works with medium 1`] = `"@media (max-width: calc(1280px - 1px)) { border: 1px solid red; }"`;
 
-exports[`Responsive utilities > down > works with small 1`] = `"@media (max-width: 575px) { border: 1px solid red; }"`;
+exports[`Responsive utilities > down > works with small 1`] = `"@media (max-width: calc(1080px - 1px)) { border: 1px solid red; }"`;
 
-exports[`Responsive utilities > down > works with xlarge 1`] = `"@media (max-width: 1199px) { border: 1px solid red; }"`;
+exports[`Responsive utilities > down > works with xlarge 1`] = `"@media (max-width: calc(1800px - 1px)) { border: 1px solid red; }"`;
 
-exports[`Responsive utilities > down > works with xsmall 1`] = `"@media (max-width: -1px) { border: 1px solid red; }"`;
+exports[`Responsive utilities > down > works with xsmall 1`] = `"@media (max-width: calc(720px - 1px)) { border: 1px solid red; }"`;
+
+exports[`Responsive utilities > down > works with xxsmall 1`] = `"@media (max-width: calc(0px - 1px)) { border: 1px solid red; }"`;
 
 exports[`Responsive utilities > up > should return null when unknown size 1`] = `""`;
 
-exports[`Responsive utilities > up > works with large 1`] = `"@media (min-width: 992px) { border: 1px solid red; }"`;
+exports[`Responsive utilities > up > works with large 1`] = `"@media (min-width: 1440pxpx) { border: 1px solid red; }"`;
 
-exports[`Responsive utilities > up > works with medium 1`] = `"@media (min-width: 768px) { border: 1px solid red; }"`;
+exports[`Responsive utilities > up > works with medium 1`] = `"@media (min-width: 1280pxpx) { border: 1px solid red; }"`;
 
-exports[`Responsive utilities > up > works with small 1`] = `"@media (min-width: 576px) { border: 1px solid red; }"`;
+exports[`Responsive utilities > up > works with small 1`] = `"@media (min-width: 1080pxpx) { border: 1px solid red; }"`;
 
-exports[`Responsive utilities > up > works with xlarge 1`] = `"@media (min-width: 1200px) { border: 1px solid red; }"`;
+exports[`Responsive utilities > up > works with xlarge 1`] = `"@media (min-width: 1800pxpx) { border: 1px solid red; }"`;
 
-exports[`Responsive utilities > up > works with xsmall 1`] = `"@media (min-width: 0px) { border: 1px solid red; }"`;
+exports[`Responsive utilities > up > works with xsmall 1`] = `"@media (min-width: 720pxpx) { border: 1px solid red; }"`;
+
+exports[`Responsive utilities > up > works with xxsmall 1`] = `"@media (min-width: 0pxpx) { border: 1px solid red; }"`;

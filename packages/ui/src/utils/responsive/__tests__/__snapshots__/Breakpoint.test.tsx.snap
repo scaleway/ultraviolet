@@ -6,7 +6,7 @@ exports[`Breakpoint > renders correctly down prop 1`] = `
   display: none;
 }
 
-@media (max-width: 767px) {
+@media (max-width: calc(1280px - 1px)) {
   .emotion-0 {
     display: block;
   }
@@ -30,7 +30,7 @@ exports[`Breakpoint > renders correctly up prop 1`] = `
   display: none;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1280pxpx) {
   .emotion-0 {
     display: block;
   }

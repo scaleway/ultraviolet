@@ -8,8 +8,7 @@ type Direction = 'horizontal' | 'vertical'
 
 type StyledIconProps = {
   direction: Direction
-  color: Color
-  sentiment?: Color
+  sentiment: Color
 }
 
 const StyledIconWrapper = styled('div', {
@@ -22,17 +21,18 @@ const StyledIconWrapper = styled('div', {
   align-items: center;
 
   svg {
-    fill: ${({ sentiment, color, theme }) => (sentiment ? theme.colors[sentiment].borderWeak : theme.colors[color].borderWeak)};
+    fill: ${({ sentiment, theme }) => (sentiment === 'neutral' ? theme.colors.neutral.borderWeak : theme.colors[sentiment].border)};
   }
 `
 
-type HorizontalSeparatorProps = SeparatorProps & {
+type HorizontalSeparatorProps = Omit<SeparatorProps, 'color' | 'sentiment'> & {
   hasIcon?: boolean
+  sentiment: Color
 }
 
 const StyledHr = styled('hr', {
   shouldForwardProp: prop =>
-    !['direction', 'thickness', 'color', 'hasIcon', 'sentiment'].includes(prop),
+    !['direction', 'thickness', 'hasIcon', 'sentiment'].includes(prop),
 })<HorizontalSeparatorProps>`
   margin: 0;
   border: 0;
@@ -41,10 +41,10 @@ const StyledHr = styled('hr', {
   height: ${({ direction, thickness = 1 }) =>
     direction === 'horizontal' ? `${thickness}px` : 'auto'};
   flex-shrink: 0;
-  background-color: ${({ theme, color, sentiment }) =>
-    sentiment
-      ? theme.colors[sentiment].borderWeak
-      : theme.colors[color as Color].borderWeak};
+  background-color: ${({ theme, sentiment }) =>
+    sentiment === 'neutral'
+      ? theme.colors.neutral.borderWeak
+      : theme.colors[sentiment].border};
   ${({ hasIcon }) => hasIcon && `flex: 1;`}
 `
 
@@ -68,7 +68,7 @@ export const Separator = ({
   direction = 'horizontal',
   thickness = 1,
   color = 'neutral',
-  sentiment,
+  sentiment = 'neutral',
   className,
   'data-testid': dataTestId,
   children,
@@ -106,6 +106,7 @@ export const Separator = ({
       direction={direction}
       thickness={thickness}
       color={color}
+      sentiment={sentiment}
       className={className}
       data-testid={dataTestId}
     />
