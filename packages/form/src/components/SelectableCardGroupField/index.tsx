@@ -10,8 +10,7 @@ import type { BaseFieldProps } from '../../types'
 type SelectableCardGroupFieldProps<
   TFieldValues extends FieldValues,
   TFieldName extends FieldPath<TFieldValues>,
-> = BaseFieldProps<TFieldValues, TFieldName> &
-  Omit<BaseFieldProps<TFieldValues, TFieldName>, 'label'> &
+> = Omit<BaseFieldProps<TFieldValues, TFieldName>, 'label'> &
   Partial<
     Pick<
       ComponentProps<typeof SelectableCardGroup>,
@@ -24,20 +23,23 @@ type SelectableCardGroupFieldProps<
       | 'className'
     >
   > &
-  Pick<ComponentProps<typeof SelectableCardGroup>, 'legend'>
+  Pick<
+    ComponentProps<typeof SelectableCardGroup>,
+    'legend' | 'legendDescription'
+  >
 
 export const SelectableCardGroupField = <
   TFieldValues extends FieldValues,
   TFieldName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
 >({
   className,
-  legend,
+  legend = '',
+  legendDescription,
   control,
   name,
   onChange,
   required = false,
   children,
-  label = '',
   error: customError,
   helper,
   columns = 1,
@@ -63,6 +65,7 @@ export const SelectableCardGroupField = <
   return (
     <SelectableCardGroup
       legend={legend}
+      legendDescription={legendDescription}
       name={name}
       type={type}
       showTick={showTick}
@@ -89,7 +92,7 @@ export const SelectableCardGroupField = <
           >,
         )
       }}
-      error={getError({ label }, error) ?? customError}
+      error={getError({ label: legend }, error) ?? customError}
       className={className}
       columns={columns}
       helper={helper}

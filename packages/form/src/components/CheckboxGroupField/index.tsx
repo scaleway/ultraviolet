@@ -19,7 +19,7 @@ const arraysContainSameValues = (array1: string[], array2: string[]) => {
 type CheckboxGroupFieldProps<
   TFieldValues extends FieldValues,
   TFieldName extends FieldPath<TFieldValues>,
-> = BaseFieldProps<TFieldValues, TFieldName> &
+> = Omit<BaseFieldProps<TFieldValues, TFieldName>, 'label'> &
   Omit<ComponentProps<typeof CheckboxGroup>, 'value' | 'onChange'>
 
 type ElementProps = {
@@ -35,12 +35,12 @@ export const CheckboxGroupField = <
   control,
   children,
   onChange,
-  label = '',
   error: customError,
   name,
   required = false,
   shouldUnregister = false,
   validate,
+  legend = '',
   ...props
 }: CheckboxGroupFieldProps<TFieldValues, TFieldName>) => {
   const { getError } = useErrors()
@@ -114,7 +114,7 @@ export const CheckboxGroupField = <
           >,
         )
       }}
-      error={getError({ label }, error) ?? customError}
+      error={getError({ label: legend }, error) ?? customError}
       name={name}
       required={required}
     >

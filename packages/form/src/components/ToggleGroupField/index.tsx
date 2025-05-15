@@ -10,7 +10,7 @@ import type { BaseFieldProps } from '../../types'
 type ToggleGroupFieldProps<
   TFieldValues extends FieldValues,
   TFieldName extends FieldPath<TFieldValues>,
-> = BaseFieldProps<TFieldValues, TFieldName> &
+> = Omit<BaseFieldProps<TFieldValues, TFieldName>, 'label'> &
   Partial<
     Pick<
       ComponentProps<typeof ToggleGroup>,
@@ -20,6 +20,7 @@ type ToggleGroupFieldProps<
       | 'children'
       | 'error'
       | 'legend'
+      | 'legendDescription'
       | 'description'
     >
   > &
@@ -29,7 +30,8 @@ export const ToggleGroupField = <
   TFieldValues extends FieldValues,
   TFieldName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
 >({
-  legend,
+  legend = '',
+  legendDescription,
   control,
   className,
   helper,
@@ -37,7 +39,6 @@ export const ToggleGroupField = <
   direction,
   children,
   onChange,
-  label,
   error: customError,
   name,
   required = false,
@@ -65,6 +66,7 @@ export const ToggleGroupField = <
   return (
     <ToggleGroup
       legend={legend}
+      legendDescription={legendDescription}
       name={field.name}
       value={value}
       onChange={event => {
@@ -80,7 +82,7 @@ export const ToggleGroupField = <
           onChange?.(newValue as PathValue<TFieldValues, Path<TFieldValues>>)
         }
       }}
-      error={customError ?? getError({ label: label ?? '' }, error)}
+      error={customError ?? getError({ label: legend }, error)}
       className={className}
       direction={direction}
       description={description}
