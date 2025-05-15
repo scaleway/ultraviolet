@@ -20,7 +20,6 @@ type SelectableCardOptionGroupFieldProps<
       'onChangeOption' | 'onChange'
     >
   > &
-  BaseFieldProps<TFieldValues, TFieldName> &
   Omit<BaseFieldProps<TFieldValues, TFieldName>, 'label'> & {
     optionName?: string
   }
@@ -29,7 +28,7 @@ export const SelectableCardOptionGroupField = <
   TFieldValues extends FieldValues,
   TFieldName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
 >({
-  legend,
+  legend = '',
   control,
   name,
   optionName,
@@ -37,7 +36,6 @@ export const SelectableCardOptionGroupField = <
   onChangeOption,
   required = false,
   children,
-  label = '',
   error: customError,
   shouldUnregister = false,
   validate,
@@ -80,7 +78,7 @@ export const SelectableCardOptionGroupField = <
         optionField.onChange(value)
         onChangeOption?.(value)
       }}
-      error={getError({ label }, error) ?? customError}
+      error={getError({ label: legend }, error) ?? customError}
       required={required}
       {...props}
     >
