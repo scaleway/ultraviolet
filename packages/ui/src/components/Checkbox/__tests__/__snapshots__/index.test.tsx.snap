@@ -657,7 +657,7 @@ exports[`Checkbox > renders correctly checked 1`] = `
         aria-invalid="false"
         checked=""
         class="emotion-2 emotion-3"
-        id="«re»"
+        id="«rf»"
         type="checkbox"
       />
       <svg
@@ -695,7 +695,7 @@ exports[`Checkbox > renders correctly checked 1`] = `
         >
           <label
             class="emotion-12 emotion-13 emotion-14"
-            for="«re»"
+            for="«rf»"
           >
             Checkbox Label
           </label>
@@ -1011,7 +1011,7 @@ exports[`Checkbox > renders correctly checked and disabled 1`] = `
         checked=""
         class="emotion-2 emotion-3"
         disabled=""
-        id="«ro»"
+        id="«rp»"
         type="checkbox"
       />
       <svg
@@ -1049,7 +1049,7 @@ exports[`Checkbox > renders correctly checked and disabled 1`] = `
         >
           <label
             class="emotion-12 emotion-13 emotion-14"
-            for="«ro»"
+            for="«rp»"
           >
             Checkbox Label
           </label>
@@ -1376,7 +1376,7 @@ exports[`Checkbox > renders correctly checked with helper 1`] = `
         aria-invalid="false"
         checked=""
         class="emotion-2 emotion-3"
-        id="«rh»"
+        id="«ri»"
         type="checkbox"
       />
       <svg
@@ -1414,7 +1414,7 @@ exports[`Checkbox > renders correctly checked with helper 1`] = `
         >
           <label
             class="emotion-12 emotion-13 emotion-14"
-            for="«rh»"
+            for="«ri»"
           >
             Checkbox Label
           </label>
@@ -2086,7 +2086,7 @@ exports[`Checkbox > renders correctly indeterminate 1`] = `
         aria-checked="mixed"
         aria-invalid="false"
         class="emotion-2 emotion-3"
-        id="«rl»"
+        id="«rm»"
         type="checkbox"
       />
       <svg
@@ -2122,7 +2122,7 @@ exports[`Checkbox > renders correctly indeterminate 1`] = `
         >
           <label
             class="emotion-14 emotion-15 emotion-16"
-            for="«rl»"
+            for="«rm»"
           >
             Checkbox Label
           </label>
@@ -2437,7 +2437,7 @@ exports[`Checkbox > renders correctly indeterminate and disabled 1`] = `
         aria-invalid="false"
         class="emotion-2 emotion-3"
         disabled=""
-        id="«rr»"
+        id="«rs»"
         type="checkbox"
       />
       <svg
@@ -2473,7 +2473,7 @@ exports[`Checkbox > renders correctly indeterminate and disabled 1`] = `
         >
           <label
             class="emotion-14 emotion-15 emotion-16"
-            for="«rr»"
+            for="«rs»"
           >
             Checkbox Label
           </label>
@@ -2788,7 +2788,7 @@ exports[`Checkbox > renders correctly invisible 1`] = `
         aria-checked="false"
         aria-invalid="false"
         class="emotion-2 emotion-3"
-        id="«ru»"
+        id="«rv»"
         type="checkbox"
       />
       <svg
@@ -2826,7 +2826,7 @@ exports[`Checkbox > renders correctly invisible 1`] = `
         >
           <label
             class="emotion-12 emotion-13 emotion-14"
-            for="«ru»"
+            for="«rv»"
           >
             Checkbox Label
           </label>
@@ -3401,17 +3401,15 @@ exports[`Checkbox > renders correctly required 1`] = `
 }
 
 .emotion-15 {
-  vertical-align: middle;
-  fill: #b3144d;
-  height: 8px;
-  width: 8px;
-  min-width: 8px;
-  min-height: 8px;
-}
-
-.emotion-15 .fillStroke {
-  stroke: #b3144d;
-  fill: none;
+  color: #b3144d;
+  font-size: 1rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 <div
@@ -3470,15 +3468,10 @@ exports[`Checkbox > renders correctly required 1`] = `
           >
             Checkbox Label
           </label>
-          <sup>
-            <svg
-              class="emotion-15 emotion-16"
-              viewBox="0 0 20 20"
-            >
-              <path
-                d="M10 2h4l-.79 7.91 6.45-4.64 2 3.46L14.42 12l7.24 3.27-2 3.46-6.45-4.64L14 22h-4l.79-7.91-6.45 4.64-2-3.46L9.58 12 2.34 8.73l2-3.46 6.45 4.64z"
-              />
-            </svg>
+          <sup
+            class="emotion-15 emotion-14"
+          >
+            *
           </sup>
         </div>
       </div>
@@ -3790,7 +3783,7 @@ exports[`Checkbox > renders correctly with a value 1`] = `
         aria-checked="false"
         aria-invalid="false"
         class="emotion-2 emotion-3"
-        id="«r1a»"
+        id="«r1b»"
         type="checkbox"
         value="test"
       />
@@ -3829,7 +3822,7 @@ exports[`Checkbox > renders correctly with a value 1`] = `
         >
           <label
             class="emotion-12 emotion-13 emotion-14"
-            for="«r1a»"
+            for="«r1b»"
           >
             Checkbox Label
           </label>
@@ -4154,10 +4147,10 @@ exports[`Checkbox > renders correctly with an error 1`] = `
     >
       <input
         aria-checked="false"
-        aria-describedby="«r11»-hint"
+        aria-describedby="«r12»-hint"
         aria-invalid="true"
         class="emotion-2 emotion-3"
-        id="«r11»"
+        id="«r12»"
         type="checkbox"
       />
       <svg
@@ -4195,7 +4188,7 @@ exports[`Checkbox > renders correctly with an error 1`] = `
         >
           <label
             class="emotion-12 emotion-13 emotion-14"
-            for="«r11»"
+            for="«r12»"
           >
             Checkbox Label
           </label>
@@ -4514,7 +4507,7 @@ exports[`Checkbox > renders correctly with indeterminate state 1`] = `
         aria-checked="mixed"
         aria-invalid="false"
         class="emotion-2 emotion-3"
-        id="«r1j»"
+        id="«r1k»"
         type="checkbox"
       />
       <svg
@@ -4550,7 +4543,7 @@ exports[`Checkbox > renders correctly with indeterminate state 1`] = `
         >
           <label
             class="emotion-14 emotion-15 emotion-16"
-            for="«r1j»"
+            for="«r1k»"
           >
             Checkbox Label
           </label>
@@ -4893,7 +4886,7 @@ exports[`Checkbox > renders correctly with progress 1`] = `
         aria-invalid="false"
         class="emotion-7 emotion-8"
         disabled=""
-        id="«r15»"
+        id="«r16»"
         type="checkbox"
       />
       <div
@@ -4904,7 +4897,7 @@ exports[`Checkbox > renders correctly with progress 1`] = `
         >
           <label
             class="emotion-13 emotion-14 emotion-15"
-            for="«r15»"
+            for="«r16»"
           >
             Checkbox Label
           </label>
@@ -5182,7 +5175,7 @@ exports[`Checkbox > renders correctly with progress and no child 1`] = `
         aria-label="check"
         class="emotion-7 emotion-8"
         disabled=""
-        id="«r18»"
+        id="«r19»"
         type="checkbox"
       />
     </div>
@@ -5510,7 +5503,7 @@ exports[`Checkbox > renders correctly with sizes 1`] = `
         aria-checked="false"
         aria-invalid="false"
         class="emotion-2 emotion-3"
-        id="«r1d»"
+        id="«r1e»"
         type="checkbox"
         value="test"
       />
@@ -5550,7 +5543,7 @@ exports[`Checkbox > renders correctly with sizes 1`] = `
         >
           <label
             class="emotion-12 emotion-13 emotion-14"
-            for="«r1d»"
+            for="«r1e»"
           >
             Checkbox Label
           </label>
@@ -5604,7 +5597,7 @@ exports[`Checkbox > renders correctly with sizes 1`] = `
         aria-invalid="false"
         class="emotion-2 emotion-3"
         disabled=""
-        id="«r1g»"
+        id="«r1h»"
         type="checkbox"
         value="test"
       />
@@ -5616,7 +5609,7 @@ exports[`Checkbox > renders correctly with sizes 1`] = `
         >
           <label
             class="emotion-12 emotion-13 emotion-14"
-            for="«r1g»"
+            for="«r1h»"
           >
             Checkbox Label
           </label>
@@ -5933,8 +5926,8 @@ exports[`Checkbox > renders correctly with tooltip 1`] = `
     data-testid="testing"
   >
     <div
-      aria-controls="«rc»"
-      aria-describedby="«rc»"
+      aria-controls="«rd»"
+      aria-describedby="«rd»"
       class="emotion-0 emotion-1"
       tabindex="0"
     >
@@ -5948,7 +5941,7 @@ exports[`Checkbox > renders correctly with tooltip 1`] = `
           aria-checked="false"
           aria-invalid="false"
           class="emotion-4 emotion-5"
-          id="«rb»"
+          id="«rc»"
           type="checkbox"
         />
         <svg
@@ -5986,7 +5979,7 @@ exports[`Checkbox > renders correctly with tooltip 1`] = `
           >
             <label
               class="emotion-14 emotion-15 emotion-16"
-              for="«rb»"
+              for="«rc»"
             >
               Checkbox Label
             </label>
