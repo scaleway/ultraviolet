@@ -9,7 +9,7 @@ import {
 import { afterAll, beforeEach, describe, expect, test, vi } from 'vitest'
 import { Modal } from '..'
 import { useModal } from '../ModalProvider'
-import illustration from '../assets/illustration.webp'
+import illustration from '../__stories__/assets/illustration.webp'
 
 const customDialogBackdropStyles = css`
   background-color: aliceblue;
