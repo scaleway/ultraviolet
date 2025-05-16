@@ -1,5 +1,19 @@
 # Change Log
 
+## 3.15.3
+
+### Patch Changes
+
+- [#5118](https://github.com/scaleway/ultraviolet/pull/5118) [`ae591aa`](https://github.com/scaleway/ultraviolet/commit/ae591aae37100cc944443a7eb0949f8762a1e82a) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@babel/core` to `7.27.1`.
+  Updated dependency `@babel/plugin-transform-runtime` to `7.27.1`.
+  Updated dependency `@babel/preset-env` to `7.27.1`.
+  Updated dependency `@babel/preset-react` to `7.27.1`.
+
+- [#4971](https://github.com/scaleway/ultraviolet/pull/4971) [`89cbdcc`](https://github.com/scaleway/ultraviolet/commit/89cbdccf524e4248b74993389bc99f0b24df058c) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `19.1.2`.
+  Updated dependency `@types/react-dom` to `19.1.3`.
+  Updated dependency `react` to `19.1.0`.
+  Updated dependency `react-dom` to `19.1.0`.
+
 ## 3.15.2
 
 ### Patch Changes
