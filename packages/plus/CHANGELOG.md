@@ -1,6 +1,14 @@
 # @ultraviolet/plus
 
-<<<<<<< HEAD
+## 1.0.0-beta.2
+
+### Patch Changes
+
+- [`82626eb`](https://github.com/scaleway/ultraviolet/commit/82626ebab42dbaeaf26dbefe145d7ef11483c2fe) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<SteppedListCard />` content to fit better
+
+- Updated dependencies [[`f9dc10c`](https://github.com/scaleway/ultraviolet/commit/f9dc10cbe3ea826e4d6f682fbd5567ff0463f75b)]:
+  - @ultraviolet/ui@2.0.0-beta.2
+
 ## 1.0.0-beta.1
 
 ### Patch Changes
