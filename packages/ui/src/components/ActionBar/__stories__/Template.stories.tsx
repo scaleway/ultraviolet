@@ -1,20 +1,8 @@
-import styled from '@emotion/styled'
 import type { StoryFn } from '@storybook/react'
 import { useState } from 'react'
 import { ActionBar } from '..'
 import { Button } from '../../Button'
 import { Stack } from '../../Stack'
-
-const StyledFlexDiv = styled.div`
-  display: flex;
-  align-items: flex-end;
-  text-align: right;
-`
-
-const FullHeightStack = styled(Stack)`
-  height: 100%;
-  padding: 0 ${({ theme }) => theme.space['2']};
-`
 
 export const Template: StoryFn<typeof ActionBar> = args => {
   const [state, setState] = useState(false)
@@ -31,21 +19,21 @@ export const Template: StoryFn<typeof ActionBar> = args => {
       <Button onClick={toggle}>Click on me to display</Button>
       {state ? (
         <ActionBar {...args}>
-          <FullHeightStack
+          <Stack
             alignItems="center"
             direction="row"
             justifyContent="space-between"
+            flex="1 1 auto"
+            width="100%"
           >
             <div>I am the Playground Action Bar</div>
-            <StyledFlexDiv>
-              <Button
-                variant="outlined"
-                sentiment="danger"
-                icon="delete"
-                size="small"
-              />
-            </StyledFlexDiv>
-          </FullHeightStack>
+            <Button
+              variant="outlined"
+              sentiment="danger"
+              icon="delete"
+              size="small"
+            />
+          </Stack>
         </ActionBar>
       ) : null}
     </>
