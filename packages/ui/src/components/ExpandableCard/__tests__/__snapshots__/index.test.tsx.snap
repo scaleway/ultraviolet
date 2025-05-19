@@ -3,26 +3,62 @@
 exports[`ExpandableCard > renders correctly with complex header 1`] = `
 <DocumentFragment>
   .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 100%;
+  position: relative;
+}
+
+.emotion-0:hover>.emotion-3 {
+  border-color: #8c40ef;
+}
+
+.emotion-2 {
   border: 1px solid #d9dadd;
   border-radius: 0.25rem;
+  width: 100%;
+  -webkit-transition: border-color 0.2s ease-in-out;
+  transition: border-color 0.2s ease-in-out;
 }
 
-.emotion-0[open] {
+.emotion-2[open] {
   border-color: #8c40ef;
 }
 
-.emotion-0[open]>.emotion-12 {
+.emotion-2[open]>.emotion-14 {
   border-color: #8c40ef;
 }
 
-.emotion-0[open] .emotion-4 {
+.emotion-2[open] .emotion-6 {
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
 }
 
-.emotion-2 {
+.emotion-2[data-clicking="true"] {
+  box-shadow: 0px 4px 8px 0px #22263829,0px 8px 24px 0px #2226383d;
+}
+
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -40,13 +76,13 @@ exports[`ExpandableCard > renders correctly with complex header 1`] = `
   cursor: pointer;
 }
 
-.emotion-2[data-disabled="true"] {
+.emotion-4[data-disabled="true"] {
   background: #f9f9fa;
   border-radius: 0.25rem;
   cursor: not-allowed;
 }
 
-.emotion-5 {
+.emotion-7 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1rem;
@@ -55,12 +91,12 @@ exports[`ExpandableCard > renders correctly with complex header 1`] = `
   min-height: 1rem;
 }
 
-.emotion-5 .fillStroke {
+.emotion-7 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
 
-.emotion-7 {
+.emotion-9 {
   color: #3f4250;
   font-size: 1rem;
   font-family: Inter,sans-serif;
@@ -72,12 +108,173 @@ exports[`ExpandableCard > renders correctly with complex header 1`] = `
   text-decoration: none;
 }
 
-.emotion-9 {
+.emotion-11 {
   font-size: 0.75rem;
   font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-13 {
+  border-top: 1px solid #d9dadd;
+  padding: 1.5rem;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+    >
+      <details
+        class="emotion-2 emotion-3"
+        data-clicking="false"
+      >
+        <summary
+          class="emotion-4 emotion-5"
+          data-disabled="false"
+        >
+          <svg
+            class="emotion-6 emotion-7 emotion-8"
+            viewBox="0 0 16 16"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
+              fill-rule="evenodd"
+            />
+          </svg>
+          <div>
+            <h2
+              class="emotion-9 emotion-10"
+            >
+              Title
+            </h2>
+            <p
+              class="emotion-11 emotion-10"
+            >
+              Description
+            </p>
+          </div>
+        </summary>
+        <div
+          class="emotion-13 emotion-14"
+        >
+          Content
+        </div>
+      </details>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ExpandableCard > renders correctly with default values 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 100%;
+  position: relative;
+}
+
+.emotion-0:hover>.emotion-3 {
+  border-color: #8c40ef;
+}
+
+.emotion-2 {
+  border: 1px solid #d9dadd;
+  border-radius: 0.25rem;
+  width: 100%;
+  -webkit-transition: border-color 0.2s ease-in-out;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.emotion-2[open] {
+  border-color: #8c40ef;
+}
+
+.emotion-2[open]>.emotion-12 {
+  border-color: #8c40ef;
+}
+
+.emotion-2[open] .emotion-6 {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.emotion-2[data-clicking="true"] {
+  box-shadow: 0px 4px 8px 0px #22263829,0px 8px 24px 0px #2226383d;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  list-style-type: none;
+  cursor: pointer;
+}
+
+.emotion-4[data-disabled="true"] {
+  background: #f9f9fa;
+  border-radius: 0.25rem;
+  cursor: not-allowed;
+}
+
+.emotion-7 {
+  vertical-align: middle;
+  fill: #3f4250;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
+}
+
+.emotion-7 .fillStroke {
+  stroke: #3f4250;
+  fill: none;
+}
+
+.emotion-9 {
+  color: #3f4250;
+  font-size: 1rem;
+  font-family: Inter,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -91,155 +288,40 @@ exports[`ExpandableCard > renders correctly with complex header 1`] = `
 <div
     data-testid="testing"
   >
-    <details
+    <div
       class="emotion-0 emotion-1"
     >
-      <summary
+      <details
         class="emotion-2 emotion-3"
-        data-disabled="false"
+        data-clicking="false"
       >
-        <svg
-          class="emotion-4 emotion-5 emotion-6"
-          viewBox="0 0 16 16"
+        <summary
+          class="emotion-4 emotion-5"
+          data-disabled="false"
         >
-          <path
-            clip-rule="evenodd"
-            d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
-            fill-rule="evenodd"
-          />
-        </svg>
-        <div>
+          <svg
+            class="emotion-6 emotion-7 emotion-8"
+            viewBox="0 0 16 16"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
+              fill-rule="evenodd"
+            />
+          </svg>
           <h2
-            class="emotion-7 emotion-8"
+            class="emotion-9 emotion-10"
           >
             Title
           </h2>
-          <p
-            class="emotion-9 emotion-8"
-          >
-            Description
-          </p>
+        </summary>
+        <div
+          class="emotion-11 emotion-12"
+        >
+          Content
         </div>
-      </summary>
-      <div
-        class="emotion-11 emotion-12"
-      >
-        Content
-      </div>
-    </details>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`ExpandableCard > renders correctly with default values 1`] = `
-<DocumentFragment>
-  .emotion-0 {
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-}
-
-.emotion-0[open] {
-  border-color: #8c40ef;
-}
-
-.emotion-0[open]>.emotion-10 {
-  border-color: #8c40ef;
-}
-
-.emotion-0[open] .emotion-4 {
-  -webkit-transform: rotate(180deg);
-  -moz-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  transform: rotate(180deg);
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  gap: 1rem;
-  padding: 1.5rem;
-  list-style-type: none;
-  cursor: pointer;
-}
-
-.emotion-2[data-disabled="true"] {
-  background: #f9f9fa;
-  border-radius: 0.25rem;
-  cursor: not-allowed;
-}
-
-.emotion-5 {
-  vertical-align: middle;
-  fill: #3f4250;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-5 .fillStroke {
-  stroke: #3f4250;
-  fill: none;
-}
-
-.emotion-7 {
-  color: #3f4250;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-9 {
-  border-top: 1px solid #d9dadd;
-  padding: 1.5rem;
-}
-
-<div
-    data-testid="testing"
-  >
-    <details
-      class="emotion-0 emotion-1"
-    >
-      <summary
-        class="emotion-2 emotion-3"
-        data-disabled="false"
-      >
-        <svg
-          class="emotion-4 emotion-5 emotion-6"
-          viewBox="0 0 16 16"
-        >
-          <path
-            clip-rule="evenodd"
-            d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
-            fill-rule="evenodd"
-          />
-        </svg>
-        <h2
-          class="emotion-7 emotion-8"
-        >
-          Title
-        </h2>
-      </summary>
-      <div
-        class="emotion-9 emotion-10"
-      >
-        Content
-      </div>
-    </details>
+      </details>
+    </div>
   </div>
 </DocumentFragment>
 `;

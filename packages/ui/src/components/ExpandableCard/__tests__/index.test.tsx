@@ -56,6 +56,28 @@ describe('ExpandableCard', () => {
     expect(screen.getByText('Content')).toBeVisible()
   })
 
+  test('works properly draggable', async () => {
+    const onDrop = vi.fn()
+    renderWithTheme(
+      ['card-1', 'card-2', 'card-3'].map(name => (
+        <ExpandableCard
+          key={name}
+          header="Title"
+          draggable
+          value={name}
+          onDrop={onDrop}
+        >
+          Content
+        </ExpandableCard>
+      )),
+    )
+    const draggableCard1 = screen.getByTestId('draggable-icon-card-1')
+    const draggableCard2 = screen.getByTestId('draggable-icon-card-2')
+    await userEvent.hover(draggableCard1)
+    expect(draggableCard1).toBeVisible()
+    expect(draggableCard2).not.toBeVisible()
+  })
+
   test('works properly when controlled and open with key interaction', async () => {
     const onToggleExpand = vi.fn()
     renderWithTheme(
