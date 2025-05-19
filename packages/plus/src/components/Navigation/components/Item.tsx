@@ -213,7 +213,7 @@ const StyledContainer = styled(Stack)`
     background-color: ${({ theme }) => theme.colors.neutral.backgroundHover};
   }
 
-  &[data-is-active="true"][data-is-pinnable="true"],
+  &[data-is-active="true"],
   &:hover[data-has-active="true"] {
     background-color: ${({ theme }) => theme.colors.primary.background};
 
