@@ -502,12 +502,12 @@ exports[`Navigation > click on expand / collapse button 1`] = `
   background-color: #e9eaeb;
 }
 
-.emotion-12[data-is-active="true"][data-is-pinnable="true"],
+.emotion-12[data-is-active="true"],
 .emotion-12:hover[data-has-active="true"] {
   background-color: #f1eefc;
 }
 
-.emotion-12[data-is-active="true"][data-is-pinnable="true"]:hover,
+.emotion-12[data-is-active="true"]:hover,
 .emotion-12:hover[data-has-active="true"]:hover {
   background-color: #e5dbfd;
 }
@@ -647,12 +647,12 @@ exports[`Navigation > click on expand / collapse button 1`] = `
   background-color: #e9eaeb;
 }
 
-.emotion-12[data-is-active="true"][data-is-pinnable="true"],
+.emotion-12[data-is-active="true"],
 .emotion-12:hover[data-has-active="true"] {
   background-color: #f1eefc;
 }
 
-.emotion-12[data-is-active="true"][data-is-pinnable="true"]:hover,
+.emotion-12[data-is-active="true"]:hover,
 .emotion-12:hover[data-has-active="true"]:hover {
   background-color: #e5dbfd;
 }
@@ -3009,46 +3009,6 @@ exports[`Navigation > pin and unpin an item 1`] = `
   }
 }
 
-@keyframes animation-0 {
-  0% {
-    max-height: 50px;
-  }
-
-  100% {
-    max-height: 32px;
-  }
-}
-
-@keyframes animation-0 {
-  0% {
-    max-height: 50px;
-  }
-
-  100% {
-    max-height: 32px;
-  }
-}
-
-@keyframes animation-1 {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes animation-1 {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
 @keyframes animation-1 {
   0% {
     opacity: 0;
@@ -3509,12 +3469,12 @@ exports[`Navigation > pin and unpin an item 1`] = `
   background-color: #e9eaeb;
 }
 
-.emotion-12[data-is-active="true"][data-is-pinnable="true"],
+.emotion-12[data-is-active="true"],
 .emotion-12:hover[data-has-active="true"] {
   background-color: #f1eefc;
 }
 
-.emotion-12[data-is-active="true"][data-is-pinnable="true"]:hover,
+.emotion-12[data-is-active="true"]:hover,
 .emotion-12:hover[data-has-active="true"]:hover {
   background-color: #e5dbfd;
 }
@@ -3654,12 +3614,12 @@ exports[`Navigation > pin and unpin an item 1`] = `
   background-color: #e9eaeb;
 }
 
-.emotion-12[data-is-active="true"][data-is-pinnable="true"],
+.emotion-12[data-is-active="true"],
 .emotion-12:hover[data-has-active="true"] {
   background-color: #f1eefc;
 }
 
-.emotion-12[data-is-active="true"][data-is-pinnable="true"]:hover,
+.emotion-12[data-is-active="true"]:hover,
 .emotion-12:hover[data-has-active="true"]:hover {
   background-color: #e5dbfd;
 }
@@ -4016,247 +3976,229 @@ exports[`Navigation > pin and unpin an item 1`] = `
 }
 
 .emotion-33 {
-  position: relative;
+  padding: 0.5rem 0;
+}
+
+.emotion-33[data-expanded='true'] {
+  padding-left: 2rem;
+  margin-left: 0.25rem;
 }
 
 .emotion-33 {
-  position: relative;
+  padding: 0.5rem 0;
+}
+
+.emotion-33[data-expanded='true'] {
+  padding-left: 2rem;
+  margin-left: 0.25rem;
 }
 
 .emotion-35 {
-  position: absolute;
-  right: 0;
-  left: 0;
-  top: 0;
-  height: 2px;
-  border-top: 2px solid;
-  border-color: transparent;
-  padding: 0.25rem 0;
-}
-
-.emotion-35::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: -4px;
-  height: 0px;
-  width: 0px;
-  border: 3px solid;
-  border-color: inherit;
-  border-radius: 100%;
+  color: #727683;
+  font-size: 0.75rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .emotion-35 {
-  position: absolute;
-  right: 0;
-  left: 0;
-  top: 0;
-  height: 2px;
-  border-top: 2px solid;
-  border-color: transparent;
-  padding: 0.25rem 0;
-}
-
-.emotion-35::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: -4px;
-  height: 0px;
-  width: 0px;
-  border: 3px solid;
-  border-color: inherit;
-  border-radius: 100%;
+  color: #727683;
+  font-size: 0.75rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .emotion-37 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  color: inherit;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  background-color: inherit;
-  border: none;
-  text-align: left;
-  border-radius: 0.25rem;
-  margin-top: 0.125rem;
-  padding: calc(0.125rem + 0.25rem) 0.5rem;
-  width: 100%;
+  position: relative;
 }
 
-.emotion-37[data-has-no-expand="false"] {
-  cursor: pointer;
-}
-
-.emotion-37[data-has-sub-label="true"] {
-  padding: 0.25rem 0.5rem;
-}
-
-.emotion-37:hover[data-has-no-expand="false"]:not([disabled]):not(
-      [data-is-active="true"]
-    ),
-.emotion-37:focus[data-has-no-expand="false"]:not([disabled]):not(
-      [data-is-active="true"]
-    ) {
-  background-color: #f9f9fa;
-}
-
-.emotion-37[data-has-active-children="true"][data-has-no-expand="false"]:not(
-      [disabled][data-is-active="true"]
-    ) {
-  background-color: #e9eaeb;
-}
-
-.emotion-37[data-has-active-children="true"][data-has-no-expand="false"]:not(
-      [disabled][data-is-active="true"]
-    ) .emotion-22 {
-  color: #3f4250;
-}
-
-.emotion-37[data-has-active-children="true"][data-has-no-expand="false"]:not(
-      [disabled][data-is-active="true"]
-    ) .emotion-286 {
-  opacity: 1;
-}
-
-.emotion-37[data-has-active-children="true"][data-has-no-expand="false"]:not(
-      [disabled][data-is-active="true"]
-    )[data-is-pinnable="true"][data-pinned-feature="true"] .emotion-280 {
-  opacity: 0;
-}
-
-.emotion-37[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):hover .emotion-286,
-.emotion-37[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):focus .emotion-286,
-.emotion-37[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):active .emotion-286,
-.emotion-37[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):hover .emotion-281,
-.emotion-37[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):focus .emotion-281,
-.emotion-37[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):active .emotion-281 {
-  opacity: 1;
-}
-
-.emotion-37[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):hover .emotion-280,
-.emotion-37[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):focus .emotion-280,
-.emotion-37[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):active .emotion-280 {
-  opacity: 0;
-}
-
-.emotion-37:hover[data-has-children="false"][data-is-active="false"][data-is-pinnable="true"]:not([disabled]) .emotion-22 {
-  color: #3f4250;
-}
-
-.emotion-37:active[data-has-no-expand="false"]:not([disabled]):not(
-      [data-is-active="true"]
-    ) {
-  background-color: #e9eaeb;
-}
-
-.emotion-37[data-is-active="true"][data-is-pinnable="true"],
-.emotion-37:hover[data-has-active="true"] {
-  background-color: #f1eefc;
-}
-
-.emotion-37[data-is-active="true"][data-is-pinnable="true"]:hover,
-.emotion-37:hover[data-has-active="true"]:hover {
-  background-color: #e5dbfd;
-}
-
-.emotion-37[disabled] {
-  cursor: not-allowed;
-  background-color: unset;
-}
-
-.emotion-37[disabled] .emotion-22 {
-  color: #b5b7bd;
-}
-
-.emotion-37[data-animation="collapse"][data-animation-type="complex"] {
-  -webkit-animation: animation-0 250ms ease-in-out;
-  animation: animation-0 250ms ease-in-out;
-}
-
-.emotion-37[data-animation="collapse"][data-animation-type="complex"] .emotion-22,
-.emotion-37[data-animation="collapse"][data-animation-type="complex"] .e134hokc6,
-.emotion-37[data-animation="collapse"][data-animation-type="complex"] .emotion-280 {
-  -webkit-animation: animation-1 250ms ease-in-out reverse;
-  animation: animation-1 250ms ease-in-out reverse;
-}
-
-.emotion-37[data-animation="expand"][data-animation-type="complex"] {
-  -webkit-animation: animation-0 250ms ease-in-out reverse;
-  animation: animation-0 250ms ease-in-out reverse;
-}
-
-.emotion-37[data-animation="expand"][data-animation-type="complex"] .emotion-22,
-.emotion-37[data-animation="expand"][data-animation-type="complex"] .e134hokc6,
-.emotion-37[data-animation="expand"][data-animation-type="complex"] .emotion-280 {
-  -webkit-animation: animation-1 250ms ease-in-out;
-  animation: animation-1 250ms ease-in-out;
-}
-
-.emotion-37[data-animation="expand"][data-animation-type="complex"] .e134hokc4 {
-  display: none;
+.emotion-37 {
+  position: relative;
 }
 
 .emotion-39 {
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  height: 2px;
+  border-top: 2px solid;
+  border-color: transparent;
+  padding: 0.25rem 0;
+}
+
+.emotion-39::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: -4px;
+  height: 0px;
+  width: 0px;
+  border: 3px solid;
+  border-color: inherit;
+  border-radius: 100%;
+}
+
+.emotion-39 {
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  height: 2px;
+  border-top: 2px solid;
+  border-color: transparent;
+  padding: 0.25rem 0;
+}
+
+.emotion-39::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: -4px;
+  height: 0px;
+  width: 0px;
+  border: 3px solid;
+  border-color: inherit;
+  border-radius: 100%;
+}
+
+.emotion-42 {
+  margin: 0;
+  border: 0;
+  width: auto;
+  height: 1px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  background-color: #e9eaeb;
+  margin: 1rem -1rem;
+}
+
+.emotion-42 {
+  margin: 0;
+  border: 0;
+  width: auto;
+  height: 1px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  background-color: #e9eaeb;
+  margin: 1rem -1rem;
+}
+
+.emotion-44[data-animation='expand'][data-animation-type="complex"] .emotion-48 {
+  -webkit-animation: animation-2 250ms ease-in-out;
+  animation: animation-2 250ms ease-in-out;
+}
+
+.emotion-44[data-animation='collapse'][data-animation-type="complex"] .emotion-48 {
+  -webkit-animation: animation-2 250ms ease-in-out reverse;
+  animation: animation-2 250ms ease-in-out reverse;
+}
+
+.emotion-44[data-animation='expand'][data-animation-type="complex"] .emotion-48 {
+  -webkit-animation: animation-2 250ms ease-in-out;
+  animation: animation-2 250ms ease-in-out;
+}
+
+.emotion-44[data-animation='collapse'][data-animation-type="complex"] .emotion-48 {
+  -webkit-animation: animation-2 250ms ease-in-out reverse;
+  animation: animation-2 250ms ease-in-out reverse;
+}
+
+.emotion-46 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
+  gap: 0rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
   -webkit-box-flex-wrap: nowrap;
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  padding-top: 0.5rem;
 }
 
-.emotion-42 {
-  vertical-align: middle;
-  fill: #727683;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-  opacity: 0;
-  margin: 0 0.125rem;
-  cursor: -webkit-grab;
-  cursor: grab;
+.emotion-46 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding-top: 0.5rem;
 }
 
-.emotion-42 .fillStroke {
-  stroke: #727683;
-  fill: none;
+.emotion-49 {
+  color: #727683;
+  font-size: 0.875rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding-bottom: 0.5rem;
+  padding-left: 0.5rem;
+  -webkit-transition: opacity 250ms ease-in-out,height 250ms ease-in-out;
+  transition: opacity 250ms ease-in-out,height 250ms ease-in-out;
+  height: calc(1.25rem + 0.5rem);
 }
 
-.emotion-47 {
-  color: #3f4250;
+.emotion-49 {
+  color: #727683;
+  font-size: 0.875rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding-bottom: 0.5rem;
+  padding-left: 0.5rem;
+  -webkit-transition: opacity 250ms ease-in-out,height 250ms ease-in-out;
+  transition: opacity 250ms ease-in-out,height 250ms ease-in-out;
+  height: calc(1.25rem + 0.5rem);
+}
+
+.emotion-62 {
+  color: #641cb3;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -4273,39 +4215,73 @@ exports[`Navigation > pin and unpin an item 1`] = `
   -webkit-line-clamp: 2;
 }
 
-.emotion-51 {
+.emotion-62 {
+  color: #641cb3;
+  font-size: 0.875rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.emotion-72 .fill {
+  fill: #521094;
+}
+
+.emotion-72 .fillStrong {
+  fill: #a060f6;
+}
+
+.emotion-72 .fill {
+  fill: #521094;
+}
+
+.emotion-72 .fillStrong {
+  fill: #a060f6;
+}
+
+.emotion-81 {
   display: inherit;
 }
 
-.emotion-51[data-container-full-height="true"] {
+.emotion-81[data-container-full-height="true"] {
   height: 100%;
 }
 
-.emotion-51[data-container-full-width="true"] {
+.emotion-81[data-container-full-width="true"] {
   width: 100%;
 }
 
-.emotion-51 {
+.emotion-81 {
   display: inherit;
 }
 
-.emotion-51[data-container-full-height="true"] {
+.emotion-81[data-container-full-height="true"] {
   height: 100%;
 }
 
-.emotion-51[data-container-full-width="true"] {
+.emotion-81[data-container-full-width="true"] {
   width: 100%;
 }
 
-.emotion-53 {
+.emotion-83 {
   position: relative;
 }
 
-.emotion-53 {
+.emotion-83 {
   position: relative;
 }
 
-.emotion-55 {
+.emotion-85 {
   opacity: 0;
   right: 0;
   position: absolute;
@@ -4315,13 +4291,13 @@ exports[`Navigation > pin and unpin an item 1`] = `
   margin: auto;
 }
 
-.emotion-55:hover,
-.emotion-55:focus,
-.emotion-55:active {
+.emotion-85:hover,
+.emotion-85:focus,
+.emotion-85:active {
   opacity: 1;
 }
 
-.emotion-55 {
+.emotion-85 {
   opacity: 0;
   right: 0;
   position: absolute;
@@ -4331,13 +4307,13 @@ exports[`Navigation > pin and unpin an item 1`] = `
   margin: auto;
 }
 
-.emotion-55:hover,
-.emotion-55:focus,
-.emotion-55:active {
+.emotion-85:hover,
+.emotion-85:focus,
+.emotion-85:active {
   opacity: 1;
 }
 
-.emotion-58 {
+.emotion-88 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1.25rem;
@@ -4352,194 +4328,40 @@ exports[`Navigation > pin and unpin an item 1`] = `
   border-radius: 0.25rem;
 }
 
-.emotion-58 .fillStroke {
+.emotion-88 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
 
-.emotion-58:hover {
+.emotion-88:hover {
   background: #e9eaeb;
 }
 
-.emotion-65 {
-  margin: 0;
-  border: 0;
-  width: auto;
-  height: 1px;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  background-color: #e9eaeb;
-  margin: 1rem -1rem;
+.emotion-88 {
+  vertical-align: middle;
+  fill: #3f4250;
+  height: 1.25rem;
+  width: 1.25rem;
+  min-width: 1.25rem;
+  min-height: 1.25rem;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  padding: 0.125rem;
+  border-radius: 0.25rem;
 }
 
-.emotion-65 {
-  margin: 0;
-  border: 0;
-  width: auto;
-  height: 1px;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  background-color: #e9eaeb;
-  margin: 1rem -1rem;
+.emotion-88 .fillStroke {
+  stroke: #3f4250;
+  fill: none;
 }
 
-.emotion-67[data-animation='expand'][data-animation-type="complex"] .emotion-71 {
-  -webkit-animation: animation-2 250ms ease-in-out;
-  animation: animation-2 250ms ease-in-out;
+.emotion-88:hover {
+  background: #e9eaeb;
 }
 
-.emotion-67[data-animation='collapse'][data-animation-type="complex"] .emotion-71 {
-  -webkit-animation: animation-2 250ms ease-in-out reverse;
-  animation: animation-2 250ms ease-in-out reverse;
-}
-
-.emotion-67[data-animation='expand'][data-animation-type="complex"] .emotion-71 {
-  -webkit-animation: animation-2 250ms ease-in-out;
-  animation: animation-2 250ms ease-in-out;
-}
-
-.emotion-67[data-animation='collapse'][data-animation-type="complex"] .emotion-71 {
-  -webkit-animation: animation-2 250ms ease-in-out reverse;
-  animation: animation-2 250ms ease-in-out reverse;
-}
-
-.emotion-69 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  padding-top: 0.5rem;
-}
-
-.emotion-69 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  padding-top: 0.5rem;
-}
-
-.emotion-72 {
-  color: #727683;
-  font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  padding-bottom: 0.5rem;
-  padding-left: 0.5rem;
-  -webkit-transition: opacity 250ms ease-in-out,height 250ms ease-in-out;
-  transition: opacity 250ms ease-in-out,height 250ms ease-in-out;
-  height: calc(1.25rem + 0.5rem);
-}
-
-.emotion-72 {
-  color: #727683;
-  font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  padding-bottom: 0.5rem;
-  padding-left: 0.5rem;
-  -webkit-transition: opacity 250ms ease-in-out,height 250ms ease-in-out;
-  transition: opacity 250ms ease-in-out,height 250ms ease-in-out;
-  height: calc(1.25rem + 0.5rem);
-}
-
-.emotion-85 {
-  color: #641cb3;
-  font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  white-space: pre-wrap;
-  overflow-wrap: anywhere;
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-}
-
-.emotion-85 {
-  color: #641cb3;
-  font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  white-space: pre-wrap;
-  overflow-wrap: anywhere;
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-}
-
-.emotion-95 .fill {
-  fill: #521094;
-}
-
-.emotion-95 .fillStrong {
-  fill: #a060f6;
-}
-
-.emotion-95 .fill {
-  fill: #521094;
-}
-
-.emotion-95 .fillStrong {
-  fill: #a060f6;
-}
-
-.emotion-113 {
+.emotion-90 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4559,12 +4381,12 @@ exports[`Navigation > pin and unpin an item 1`] = `
   justify-content: flex-end;
 }
 
-.emotion-113[data-has-overflow-style="false"] {
+.emotion-90[data-has-overflow-style="false"] {
   box-shadow: none;
   border: none;
 }
 
-.emotion-113 {
+.emotion-90 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4584,12 +4406,12 @@ exports[`Navigation > pin and unpin an item 1`] = `
   justify-content: flex-end;
 }
 
-.emotion-113[data-has-overflow-style="false"] {
+.emotion-90[data-has-overflow-style="false"] {
   box-shadow: none;
   border: none;
 }
 
-.emotion-117 {
+.emotion-94 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -4629,22 +4451,22 @@ exports[`Navigation > pin and unpin an item 1`] = `
   color: #3f4250;
 }
 
-.emotion-117:hover {
+.emotion-94:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-117:active {
+.emotion-94:active {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.emotion-117:hover,
-.emotion-117:active {
+.emotion-94:hover,
+.emotion-94:active {
   background: #e9eaeb;
   color: #222638;
 }
 
-.emotion-117 {
+.emotion-94 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -4684,22 +4506,22 @@ exports[`Navigation > pin and unpin an item 1`] = `
   color: #3f4250;
 }
 
-.emotion-117:hover {
+.emotion-94:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-117:active {
+.emotion-94:active {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.emotion-117:hover,
-.emotion-117:active {
+.emotion-94:hover,
+.emotion-94:active {
   background: #e9eaeb;
   color: #222638;
 }
 
-.emotion-119 {
+.emotion-96 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -4708,12 +4530,12 @@ exports[`Navigation > pin and unpin an item 1`] = `
   min-height: 1rem;
 }
 
-.emotion-119 .fillStroke {
+.emotion-96 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.emotion-119 {
+.emotion-96 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -4722,12 +4544,12 @@ exports[`Navigation > pin and unpin an item 1`] = `
   min-height: 1rem;
 }
 
-.emotion-119 .fillStroke {
+.emotion-96 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.emotion-121 {
+.emotion-98 {
   background: transparent;
   position: absolute;
   top: 0;
@@ -4742,11 +4564,11 @@ exports[`Navigation > pin and unpin an item 1`] = `
   display: flex;
 }
 
-.emotion-121:hover {
+.emotion-98:hover {
   border-color: #8c40ef;
 }
 
-.emotion-121 {
+.emotion-98 {
   background: transparent;
   position: absolute;
   top: 0;
@@ -4761,7 +4583,7 @@ exports[`Navigation > pin and unpin an item 1`] = `
   display: flex;
 }
 
-.emotion-121:hover {
+.emotion-98:hover {
   border-color: #8c40ef;
 }
 
@@ -4874,80 +4696,19 @@ exports[`Navigation > pin and unpin an item 1`] = `
                 >
                   <div
                     class="emotion-33 emotion-34"
+                    data-expanded="true"
                   >
-                    <div
-                      class="emotion-35 emotion-36"
-                    />
-                    <button
-                      class="emotion-37 emotion-13"
-                      data-animation="false"
-                      data-has-active-children="false"
-                      data-has-children="false"
-                      data-has-no-expand="false"
-                      data-has-sub-label="false"
-                      data-is-active="false"
-                      data-is-pinnable="true"
-                      data-pinned-feature="true"
-                      draggable="true"
-                      id="item1"
+                    <p
+                      class="emotion-35 emotion-24"
                     >
-                      <div
-                        class="emotion-39 emotion-15"
-                      >
-                        <svg
-                          class="emotion-281 emotion-42 emotion-30"
-                          viewBox="0 0 16 16"
-                        >
-                          <path
-                            d="M5.5 14q-.618 0-1.06-.44A1.45 1.45 0 0 1 4 12.5q0-.619.44-1.06Q4.883 11 5.5 11t1.06.44q.44.442.44 1.06t-.44 1.06Q6.12 14 5.5 14m4.5 0q-.619 0-1.06-.44a1.45 1.45 0 0 1-.44-1.06q0-.619.44-1.06Q9.382 11 10 11t1.06.44q.44.442.44 1.06t-.44 1.06Q10.617 14 10 14M5.5 9.5q-.618 0-1.06-.44A1.44 1.44 0 0 1 4 8q0-.619.44-1.06.442-.44 1.06-.44t1.06.44Q7 7.383 7 8t-.44 1.06q-.44.44-1.06.44m4.5 0q-.619 0-1.06-.44A1.44 1.44 0 0 1 8.5 8q0-.619.44-1.06.441-.44 1.06-.44t1.06.44q.44.442.44 1.06t-.44 1.06q-.442.44-1.06.44M5.5 5q-.618 0-1.06-.44A1.44 1.44 0 0 1 4 3.5q0-.62.44-1.06Q4.883 2 5.5 2t1.06.44Q7 2.883 7 3.5q0 .62-.44 1.06T5.5 5M10 5q-.619 0-1.06-.44A1.44 1.44 0 0 1 8.5 3.5q0-.62.44-1.06Q9.382 2 10 2t1.06.44q.44.442.44 1.06 0 .62-.44 1.06Q10.617 5 10 5"
-                          />
-                        </svg>
-                        <div
-                          class="emotion-20 emotion-15"
-                        >
-                          <span
-                            class="emotion-22 emotion-47 emotion-24"
-                          >
-                            item1
-                          </span>
-                        </div>
-                      </div>
-                      <div
-                        class="emotion-25 emotion-15"
-                      >
-                        <div
-                          aria-controls="«r1k»"
-                          aria-describedby="«r1k»"
-                          class="emotion-51 emotion-52"
-                          tabindex="0"
-                        >
-                          <div
-                            class="emotion-53 emotion-284"
-                          >
-                            <div
-                              aria-label="unpin"
-                              class="emotion-55 emotion-286"
-                              role="button"
-                            >
-                              <svg
-                                class="emotion-285 emotion-58 emotion-30"
-                                viewBox="0 0 20 20"
-                              >
-                                <path
-                                  d="M3.17 2.2a.686.686 0 0 0-.976.963L16.4 17.37l.007.007.422.422a.686.686 0 0 0 .97-.97l-4.292-4.292 2.853-2.854a1.6 1.6 0 0 0 0-2.266L12.583 3.64a1.6 1.6 0 0 0-2.266 0L7.463 6.493zm9.297 13.176L4.624 7.533a7 7 0 0 0-1.767.63c-.822.425-.853 1.515-.199 2.17l2.75 2.749-2.268 2.267a1.068 1.068 0 1 0 1.511 1.51l2.267-2.267 2.75 2.75c.654.654 1.744.623 2.17-.199.292-.565.502-1.16.629-1.767"
-                                />
-                              </svg>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </button>
+                      You have no pinned items.
+                    </p>
                   </div>
                   <div
-                    class="emotion-33 emotion-34"
+                    class="emotion-37 emotion-38"
                   >
                     <div
-                      class="emotion-35 emotion-36"
+                      class="emotion-39 emotion-40"
                     />
                   </div>
                 </div>
@@ -4955,18 +4716,18 @@ exports[`Navigation > pin and unpin an item 1`] = `
             </div>
             <hr
               aria-orientation="horizontal"
-              class="emotion-64 emotion-65 emotion-66"
+              class="emotion-41 emotion-42 emotion-43"
               role="separator"
             />
             <div
-              class="emotion-67 emotion-68"
+              class="emotion-44 emotion-45"
               data-animation="false"
             >
               <div
-                class="emotion-69 emotion-70"
+                class="emotion-46 emotion-47"
               >
                 <span
-                  class="emotion-71 emotion-72 emotion-24"
+                  class="emotion-48 emotion-49 emotion-24"
                 >
                   Products
                 </span>
@@ -5023,7 +4784,7 @@ exports[`Navigation > pin and unpin an item 1`] = `
                       class="emotion-20 emotion-15"
                     >
                       <span
-                        class="emotion-22 emotion-85 emotion-24"
+                        class="emotion-22 emotion-62 emotion-24"
                       >
                         item1
                       </span>
@@ -5052,7 +4813,7 @@ exports[`Navigation > pin and unpin an item 1`] = `
                       class="emotion-16 emotion-17"
                     >
                       <svg
-                        class="emotion-95 emotion-19"
+                        class="emotion-72 emotion-19"
                         height="20"
                         viewBox="0 0 20 20"
                         width="20"
@@ -5097,23 +4858,24 @@ exports[`Navigation > pin and unpin an item 1`] = `
                     <div
                       aria-controls="«r1e»"
                       aria-describedby="«r1e»"
-                      class="emotion-51 emotion-52"
+                      class="emotion-81 emotion-82"
                       tabindex="0"
                     >
                       <div
-                        class="emotion-53 emotion-284"
+                        class="emotion-83 emotion-284"
                       >
                         <div
-                          aria-label="unpin"
-                          class="emotion-55 emotion-286"
+                          aria-label="pin"
+                          class="emotion-85 emotion-286"
                           role="button"
                         >
                           <svg
-                            class="emotion-285 emotion-58 emotion-30"
+                            class="emotion-283 emotion-88 emotion-30"
                             viewBox="0 0 20 20"
                           >
                             <path
-                              d="M3.17 2.2a.686.686 0 0 0-.976.963L16.4 17.37l.007.007.422.422a.686.686 0 0 0 .97-.97l-4.292-4.292 2.853-2.854a1.6 1.6 0 0 0 0-2.266L12.583 3.64a1.6 1.6 0 0 0-2.266 0L7.463 6.493zm9.297 13.176L4.624 7.533a7 7 0 0 0-1.767.63c-.822.425-.853 1.515-.199 2.17l2.75 2.749-2.268 2.267a1.068 1.068 0 1 0 1.511 1.51l2.267-2.267 2.75 2.75c.654.654 1.744.623 2.17-.199.292-.565.502-1.16.629-1.767"
+                              clip-rule="evenodd"
+                              d="M10.602 2.581a1.985 1.985 0 0 1 2.807 0l4.01 4.01a1.985 1.985 0 0 1 0 2.807l-3.581 3.581c-.056.056-.112.173-.095.35.142 1.538-.31 2.832-1.112 3.933-.733 1.006-2.09.898-2.831.157l-2.206-2.206-2.206 2.206a1.985 1.985 0 1 1-2.807-2.807l2.206-2.206L2.58 10.2c-.74-.74-.85-2.098.157-2.83 1.1-.803 2.395-1.255 3.933-1.113.177.017.294-.039.35-.095zm.4 13.635c.06.058.13.08.18.079a.1.1 0 0 0 .047-.01.1.1 0 0 0 .027-.025c.59-.81.892-1.7.793-2.774-.054-.578.105-1.23.586-1.71l3.58-3.58a.284.284 0 0 0 0-.402l-4.01-4.01a.284.284 0 0 0-.4 0L8.224 7.365c-.48.48-1.132.64-1.71.587-1.074-.1-1.964.202-2.774.792a.1.1 0 0 0-.025.027.1.1 0 0 0-.01.047c0 .05.02.12.08.18zM5.99 13.609l-2.206 2.206a.284.284 0 0 0 .401.4l2.206-2.205z"
                             />
                           </svg>
                         </div>
@@ -5125,22 +4887,22 @@ exports[`Navigation > pin and unpin an item 1`] = `
             </div>
           </div>
           <div
-            class="emotion-113 emotion-114"
+            class="emotion-90 emotion-91"
             data-has-overflow-style="false"
           >
             <div
               aria-controls="«r1f»"
               aria-describedby="«r1f»"
-              class="emotion-51 emotion-52"
+              class="emotion-81 emotion-82"
               tabindex="0"
             >
               <button
                 aria-label="Collapse sidebar"
-                class="emotion-117 emotion-118"
+                class="emotion-94 emotion-95"
                 type="button"
               >
                 <svg
-                  class="emotion-119 emotion-30"
+                  class="emotion-96 emotion-30"
                   viewBox="0 0 16 16"
                 >
                   <path
@@ -5155,7 +4917,7 @@ exports[`Navigation > pin and unpin an item 1`] = `
         </div>
       </div>
       <div
-        class="emotion-121 emotion-122"
+        class="emotion-98 emotion-99"
         data-testid="slider"
       />
     </nav>
@@ -5205,46 +4967,6 @@ exports[`Navigation > pin and unpin an item 2`] = `
   }
 }
 
-@keyframes animation-0 {
-  0% {
-    max-height: 50px;
-  }
-
-  100% {
-    max-height: 32px;
-  }
-}
-
-@keyframes animation-0 {
-  0% {
-    max-height: 50px;
-  }
-
-  100% {
-    max-height: 32px;
-  }
-}
-
-@keyframes animation-1 {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes animation-1 {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
 @keyframes animation-1 {
   0% {
     opacity: 0;
@@ -5705,12 +5427,12 @@ exports[`Navigation > pin and unpin an item 2`] = `
   background-color: #e9eaeb;
 }
 
-.emotion-12[data-is-active="true"][data-is-pinnable="true"],
+.emotion-12[data-is-active="true"],
 .emotion-12:hover[data-has-active="true"] {
   background-color: #f1eefc;
 }
 
-.emotion-12[data-is-active="true"][data-is-pinnable="true"]:hover,
+.emotion-12[data-is-active="true"]:hover,
 .emotion-12:hover[data-has-active="true"]:hover {
   background-color: #e5dbfd;
 }
@@ -5850,12 +5572,12 @@ exports[`Navigation > pin and unpin an item 2`] = `
   background-color: #e9eaeb;
 }
 
-.emotion-12[data-is-active="true"][data-is-pinnable="true"],
+.emotion-12[data-is-active="true"],
 .emotion-12:hover[data-has-active="true"] {
   background-color: #f1eefc;
 }
 
-.emotion-12[data-is-active="true"][data-is-pinnable="true"]:hover,
+.emotion-12[data-is-active="true"]:hover,
 .emotion-12:hover[data-has-active="true"]:hover {
   background-color: #e5dbfd;
 }
@@ -6212,247 +5934,229 @@ exports[`Navigation > pin and unpin an item 2`] = `
 }
 
 .emotion-33 {
-  position: relative;
+  padding: 0.5rem 0;
+}
+
+.emotion-33[data-expanded='true'] {
+  padding-left: 2rem;
+  margin-left: 0.25rem;
 }
 
 .emotion-33 {
-  position: relative;
+  padding: 0.5rem 0;
+}
+
+.emotion-33[data-expanded='true'] {
+  padding-left: 2rem;
+  margin-left: 0.25rem;
 }
 
 .emotion-35 {
-  position: absolute;
-  right: 0;
-  left: 0;
-  top: 0;
-  height: 2px;
-  border-top: 2px solid;
-  border-color: transparent;
-  padding: 0.25rem 0;
-}
-
-.emotion-35::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: -4px;
-  height: 0px;
-  width: 0px;
-  border: 3px solid;
-  border-color: inherit;
-  border-radius: 100%;
+  color: #727683;
+  font-size: 0.75rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .emotion-35 {
-  position: absolute;
-  right: 0;
-  left: 0;
-  top: 0;
-  height: 2px;
-  border-top: 2px solid;
-  border-color: transparent;
-  padding: 0.25rem 0;
-}
-
-.emotion-35::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: -4px;
-  height: 0px;
-  width: 0px;
-  border: 3px solid;
-  border-color: inherit;
-  border-radius: 100%;
+  color: #727683;
+  font-size: 0.75rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .emotion-37 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  color: inherit;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  background-color: inherit;
-  border: none;
-  text-align: left;
-  border-radius: 0.25rem;
-  margin-top: 0.125rem;
-  padding: calc(0.125rem + 0.25rem) 0.5rem;
-  width: 100%;
+  position: relative;
 }
 
-.emotion-37[data-has-no-expand="false"] {
-  cursor: pointer;
-}
-
-.emotion-37[data-has-sub-label="true"] {
-  padding: 0.25rem 0.5rem;
-}
-
-.emotion-37:hover[data-has-no-expand="false"]:not([disabled]):not(
-      [data-is-active="true"]
-    ),
-.emotion-37:focus[data-has-no-expand="false"]:not([disabled]):not(
-      [data-is-active="true"]
-    ) {
-  background-color: #f9f9fa;
-}
-
-.emotion-37[data-has-active-children="true"][data-has-no-expand="false"]:not(
-      [disabled][data-is-active="true"]
-    ) {
-  background-color: #e9eaeb;
-}
-
-.emotion-37[data-has-active-children="true"][data-has-no-expand="false"]:not(
-      [disabled][data-is-active="true"]
-    ) .emotion-22 {
-  color: #3f4250;
-}
-
-.emotion-37[data-has-active-children="true"][data-has-no-expand="false"]:not(
-      [disabled][data-is-active="true"]
-    ) .emotion-286 {
-  opacity: 1;
-}
-
-.emotion-37[data-has-active-children="true"][data-has-no-expand="false"]:not(
-      [disabled][data-is-active="true"]
-    )[data-is-pinnable="true"][data-pinned-feature="true"] .emotion-280 {
-  opacity: 0;
-}
-
-.emotion-37[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):hover .emotion-286,
-.emotion-37[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):focus .emotion-286,
-.emotion-37[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):active .emotion-286,
-.emotion-37[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):hover .emotion-281,
-.emotion-37[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):focus .emotion-281,
-.emotion-37[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):active .emotion-281 {
-  opacity: 1;
-}
-
-.emotion-37[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):hover .emotion-280,
-.emotion-37[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):focus .emotion-280,
-.emotion-37[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):active .emotion-280 {
-  opacity: 0;
-}
-
-.emotion-37:hover[data-has-children="false"][data-is-active="false"][data-is-pinnable="true"]:not([disabled]) .emotion-22 {
-  color: #3f4250;
-}
-
-.emotion-37:active[data-has-no-expand="false"]:not([disabled]):not(
-      [data-is-active="true"]
-    ) {
-  background-color: #e9eaeb;
-}
-
-.emotion-37[data-is-active="true"][data-is-pinnable="true"],
-.emotion-37:hover[data-has-active="true"] {
-  background-color: #f1eefc;
-}
-
-.emotion-37[data-is-active="true"][data-is-pinnable="true"]:hover,
-.emotion-37:hover[data-has-active="true"]:hover {
-  background-color: #e5dbfd;
-}
-
-.emotion-37[disabled] {
-  cursor: not-allowed;
-  background-color: unset;
-}
-
-.emotion-37[disabled] .emotion-22 {
-  color: #b5b7bd;
-}
-
-.emotion-37[data-animation="collapse"][data-animation-type="complex"] {
-  -webkit-animation: animation-0 250ms ease-in-out;
-  animation: animation-0 250ms ease-in-out;
-}
-
-.emotion-37[data-animation="collapse"][data-animation-type="complex"] .emotion-22,
-.emotion-37[data-animation="collapse"][data-animation-type="complex"] .e134hokc6,
-.emotion-37[data-animation="collapse"][data-animation-type="complex"] .emotion-280 {
-  -webkit-animation: animation-1 250ms ease-in-out reverse;
-  animation: animation-1 250ms ease-in-out reverse;
-}
-
-.emotion-37[data-animation="expand"][data-animation-type="complex"] {
-  -webkit-animation: animation-0 250ms ease-in-out reverse;
-  animation: animation-0 250ms ease-in-out reverse;
-}
-
-.emotion-37[data-animation="expand"][data-animation-type="complex"] .emotion-22,
-.emotion-37[data-animation="expand"][data-animation-type="complex"] .e134hokc6,
-.emotion-37[data-animation="expand"][data-animation-type="complex"] .emotion-280 {
-  -webkit-animation: animation-1 250ms ease-in-out;
-  animation: animation-1 250ms ease-in-out;
-}
-
-.emotion-37[data-animation="expand"][data-animation-type="complex"] .e134hokc4 {
-  display: none;
+.emotion-37 {
+  position: relative;
 }
 
 .emotion-39 {
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  height: 2px;
+  border-top: 2px solid;
+  border-color: transparent;
+  padding: 0.25rem 0;
+}
+
+.emotion-39::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: -4px;
+  height: 0px;
+  width: 0px;
+  border: 3px solid;
+  border-color: inherit;
+  border-radius: 100%;
+}
+
+.emotion-39 {
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  height: 2px;
+  border-top: 2px solid;
+  border-color: transparent;
+  padding: 0.25rem 0;
+}
+
+.emotion-39::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: -4px;
+  height: 0px;
+  width: 0px;
+  border: 3px solid;
+  border-color: inherit;
+  border-radius: 100%;
+}
+
+.emotion-42 {
+  margin: 0;
+  border: 0;
+  width: auto;
+  height: 1px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  background-color: #e9eaeb;
+  margin: 1rem -1rem;
+}
+
+.emotion-42 {
+  margin: 0;
+  border: 0;
+  width: auto;
+  height: 1px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  background-color: #e9eaeb;
+  margin: 1rem -1rem;
+}
+
+.emotion-44[data-animation='expand'][data-animation-type="complex"] .emotion-48 {
+  -webkit-animation: animation-2 250ms ease-in-out;
+  animation: animation-2 250ms ease-in-out;
+}
+
+.emotion-44[data-animation='collapse'][data-animation-type="complex"] .emotion-48 {
+  -webkit-animation: animation-2 250ms ease-in-out reverse;
+  animation: animation-2 250ms ease-in-out reverse;
+}
+
+.emotion-44[data-animation='expand'][data-animation-type="complex"] .emotion-48 {
+  -webkit-animation: animation-2 250ms ease-in-out;
+  animation: animation-2 250ms ease-in-out;
+}
+
+.emotion-44[data-animation='collapse'][data-animation-type="complex"] .emotion-48 {
+  -webkit-animation: animation-2 250ms ease-in-out reverse;
+  animation: animation-2 250ms ease-in-out reverse;
+}
+
+.emotion-46 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
+  gap: 0rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
   -webkit-box-flex-wrap: nowrap;
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  padding-top: 0.5rem;
 }
 
-.emotion-42 {
-  vertical-align: middle;
-  fill: #727683;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-  opacity: 0;
-  margin: 0 0.125rem;
-  cursor: -webkit-grab;
-  cursor: grab;
+.emotion-46 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding-top: 0.5rem;
 }
 
-.emotion-42 .fillStroke {
-  stroke: #727683;
-  fill: none;
+.emotion-49 {
+  color: #727683;
+  font-size: 0.875rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding-bottom: 0.5rem;
+  padding-left: 0.5rem;
+  -webkit-transition: opacity 250ms ease-in-out,height 250ms ease-in-out;
+  transition: opacity 250ms ease-in-out,height 250ms ease-in-out;
+  height: calc(1.25rem + 0.5rem);
 }
 
-.emotion-47 {
-  color: #3f4250;
+.emotion-49 {
+  color: #727683;
+  font-size: 0.875rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding-bottom: 0.5rem;
+  padding-left: 0.5rem;
+  -webkit-transition: opacity 250ms ease-in-out,height 250ms ease-in-out;
+  transition: opacity 250ms ease-in-out,height 250ms ease-in-out;
+  height: calc(1.25rem + 0.5rem);
+}
+
+.emotion-62 {
+  color: #641cb3;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -6469,39 +6173,73 @@ exports[`Navigation > pin and unpin an item 2`] = `
   -webkit-line-clamp: 2;
 }
 
-.emotion-51 {
+.emotion-62 {
+  color: #641cb3;
+  font-size: 0.875rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.emotion-72 .fill {
+  fill: #521094;
+}
+
+.emotion-72 .fillStrong {
+  fill: #a060f6;
+}
+
+.emotion-72 .fill {
+  fill: #521094;
+}
+
+.emotion-72 .fillStrong {
+  fill: #a060f6;
+}
+
+.emotion-81 {
   display: inherit;
 }
 
-.emotion-51[data-container-full-height="true"] {
+.emotion-81[data-container-full-height="true"] {
   height: 100%;
 }
 
-.emotion-51[data-container-full-width="true"] {
+.emotion-81[data-container-full-width="true"] {
   width: 100%;
 }
 
-.emotion-51 {
+.emotion-81 {
   display: inherit;
 }
 
-.emotion-51[data-container-full-height="true"] {
+.emotion-81[data-container-full-height="true"] {
   height: 100%;
 }
 
-.emotion-51[data-container-full-width="true"] {
+.emotion-81[data-container-full-width="true"] {
   width: 100%;
 }
 
-.emotion-53 {
+.emotion-83 {
   position: relative;
 }
 
-.emotion-53 {
+.emotion-83 {
   position: relative;
 }
 
-.emotion-55 {
+.emotion-85 {
   opacity: 0;
   right: 0;
   position: absolute;
@@ -6511,13 +6249,13 @@ exports[`Navigation > pin and unpin an item 2`] = `
   margin: auto;
 }
 
-.emotion-55:hover,
-.emotion-55:focus,
-.emotion-55:active {
+.emotion-85:hover,
+.emotion-85:focus,
+.emotion-85:active {
   opacity: 1;
 }
 
-.emotion-55 {
+.emotion-85 {
   opacity: 0;
   right: 0;
   position: absolute;
@@ -6527,13 +6265,13 @@ exports[`Navigation > pin and unpin an item 2`] = `
   margin: auto;
 }
 
-.emotion-55:hover,
-.emotion-55:focus,
-.emotion-55:active {
+.emotion-85:hover,
+.emotion-85:focus,
+.emotion-85:active {
   opacity: 1;
 }
 
-.emotion-58 {
+.emotion-88 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1.25rem;
@@ -6548,194 +6286,40 @@ exports[`Navigation > pin and unpin an item 2`] = `
   border-radius: 0.25rem;
 }
 
-.emotion-58 .fillStroke {
+.emotion-88 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
 
-.emotion-58:hover {
+.emotion-88:hover {
   background: #e9eaeb;
 }
 
-.emotion-65 {
-  margin: 0;
-  border: 0;
-  width: auto;
-  height: 1px;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  background-color: #e9eaeb;
-  margin: 1rem -1rem;
+.emotion-88 {
+  vertical-align: middle;
+  fill: #3f4250;
+  height: 1.25rem;
+  width: 1.25rem;
+  min-width: 1.25rem;
+  min-height: 1.25rem;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  padding: 0.125rem;
+  border-radius: 0.25rem;
 }
 
-.emotion-65 {
-  margin: 0;
-  border: 0;
-  width: auto;
-  height: 1px;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  background-color: #e9eaeb;
-  margin: 1rem -1rem;
+.emotion-88 .fillStroke {
+  stroke: #3f4250;
+  fill: none;
 }
 
-.emotion-67[data-animation='expand'][data-animation-type="complex"] .emotion-71 {
-  -webkit-animation: animation-2 250ms ease-in-out;
-  animation: animation-2 250ms ease-in-out;
+.emotion-88:hover {
+  background: #e9eaeb;
 }
 
-.emotion-67[data-animation='collapse'][data-animation-type="complex"] .emotion-71 {
-  -webkit-animation: animation-2 250ms ease-in-out reverse;
-  animation: animation-2 250ms ease-in-out reverse;
-}
-
-.emotion-67[data-animation='expand'][data-animation-type="complex"] .emotion-71 {
-  -webkit-animation: animation-2 250ms ease-in-out;
-  animation: animation-2 250ms ease-in-out;
-}
-
-.emotion-67[data-animation='collapse'][data-animation-type="complex"] .emotion-71 {
-  -webkit-animation: animation-2 250ms ease-in-out reverse;
-  animation: animation-2 250ms ease-in-out reverse;
-}
-
-.emotion-69 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  padding-top: 0.5rem;
-}
-
-.emotion-69 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  padding-top: 0.5rem;
-}
-
-.emotion-72 {
-  color: #727683;
-  font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  padding-bottom: 0.5rem;
-  padding-left: 0.5rem;
-  -webkit-transition: opacity 250ms ease-in-out,height 250ms ease-in-out;
-  transition: opacity 250ms ease-in-out,height 250ms ease-in-out;
-  height: calc(1.25rem + 0.5rem);
-}
-
-.emotion-72 {
-  color: #727683;
-  font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  padding-bottom: 0.5rem;
-  padding-left: 0.5rem;
-  -webkit-transition: opacity 250ms ease-in-out,height 250ms ease-in-out;
-  transition: opacity 250ms ease-in-out,height 250ms ease-in-out;
-  height: calc(1.25rem + 0.5rem);
-}
-
-.emotion-85 {
-  color: #641cb3;
-  font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  white-space: pre-wrap;
-  overflow-wrap: anywhere;
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-}
-
-.emotion-85 {
-  color: #641cb3;
-  font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  white-space: pre-wrap;
-  overflow-wrap: anywhere;
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-}
-
-.emotion-95 .fill {
-  fill: #521094;
-}
-
-.emotion-95 .fillStrong {
-  fill: #a060f6;
-}
-
-.emotion-95 .fill {
-  fill: #521094;
-}
-
-.emotion-95 .fillStrong {
-  fill: #a060f6;
-}
-
-.emotion-113 {
+.emotion-90 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6755,12 +6339,12 @@ exports[`Navigation > pin and unpin an item 2`] = `
   justify-content: flex-end;
 }
 
-.emotion-113[data-has-overflow-style="false"] {
+.emotion-90[data-has-overflow-style="false"] {
   box-shadow: none;
   border: none;
 }
 
-.emotion-113 {
+.emotion-90 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6780,12 +6364,12 @@ exports[`Navigation > pin and unpin an item 2`] = `
   justify-content: flex-end;
 }
 
-.emotion-113[data-has-overflow-style="false"] {
+.emotion-90[data-has-overflow-style="false"] {
   box-shadow: none;
   border: none;
 }
 
-.emotion-117 {
+.emotion-94 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -6825,22 +6409,22 @@ exports[`Navigation > pin and unpin an item 2`] = `
   color: #3f4250;
 }
 
-.emotion-117:hover {
+.emotion-94:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-117:active {
+.emotion-94:active {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.emotion-117:hover,
-.emotion-117:active {
+.emotion-94:hover,
+.emotion-94:active {
   background: #e9eaeb;
   color: #222638;
 }
 
-.emotion-117 {
+.emotion-94 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -6880,22 +6464,22 @@ exports[`Navigation > pin and unpin an item 2`] = `
   color: #3f4250;
 }
 
-.emotion-117:hover {
+.emotion-94:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-117:active {
+.emotion-94:active {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.emotion-117:hover,
-.emotion-117:active {
+.emotion-94:hover,
+.emotion-94:active {
   background: #e9eaeb;
   color: #222638;
 }
 
-.emotion-119 {
+.emotion-96 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -6904,12 +6488,12 @@ exports[`Navigation > pin and unpin an item 2`] = `
   min-height: 1rem;
 }
 
-.emotion-119 .fillStroke {
+.emotion-96 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.emotion-119 {
+.emotion-96 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -6918,12 +6502,12 @@ exports[`Navigation > pin and unpin an item 2`] = `
   min-height: 1rem;
 }
 
-.emotion-119 .fillStroke {
+.emotion-96 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.emotion-121 {
+.emotion-98 {
   background: transparent;
   position: absolute;
   top: 0;
@@ -6938,11 +6522,11 @@ exports[`Navigation > pin and unpin an item 2`] = `
   display: flex;
 }
 
-.emotion-121:hover {
+.emotion-98:hover {
   border-color: #8c40ef;
 }
 
-.emotion-121 {
+.emotion-98 {
   background: transparent;
   position: absolute;
   top: 0;
@@ -6957,7 +6541,7 @@ exports[`Navigation > pin and unpin an item 2`] = `
   display: flex;
 }
 
-.emotion-121:hover {
+.emotion-98:hover {
   border-color: #8c40ef;
 }
 
@@ -7057,95 +6641,32 @@ exports[`Navigation > pin and unpin an item 2`] = `
                     >
                       <path
                         clip-rule="evenodd"
-                        d="M6.22 4.22a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06L8.94 8 6.22 5.28a.75.75 0 0 1 0-1.06"
+                        d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
                         fill-rule="evenodd"
                       />
                     </svg>
                   </div>
                 </div>
               </button>
-              <div
-                style="display: none;"
-              >
+              <div>
                 <div
                   class="emotion-20 emotion-15"
                 >
                   <div
                     class="emotion-33 emotion-34"
+                    data-expanded="true"
                   >
-                    <div
-                      class="emotion-35 emotion-36"
-                    />
-                    <button
-                      class="emotion-37 emotion-13"
-                      data-animation="false"
-                      data-has-active-children="false"
-                      data-has-children="false"
-                      data-has-no-expand="false"
-                      data-has-sub-label="false"
-                      data-is-active="false"
-                      data-is-pinnable="true"
-                      data-pinned-feature="true"
-                      draggable="true"
-                      id="item1"
+                    <p
+                      class="emotion-35 emotion-24"
                     >
-                      <div
-                        class="emotion-39 emotion-15"
-                      >
-                        <svg
-                          class="emotion-281 emotion-42 emotion-30"
-                          viewBox="0 0 16 16"
-                        >
-                          <path
-                            d="M5.5 14q-.618 0-1.06-.44A1.45 1.45 0 0 1 4 12.5q0-.619.44-1.06Q4.883 11 5.5 11t1.06.44q.44.442.44 1.06t-.44 1.06Q6.12 14 5.5 14m4.5 0q-.619 0-1.06-.44a1.45 1.45 0 0 1-.44-1.06q0-.619.44-1.06Q9.382 11 10 11t1.06.44q.44.442.44 1.06t-.44 1.06Q10.617 14 10 14M5.5 9.5q-.618 0-1.06-.44A1.44 1.44 0 0 1 4 8q0-.619.44-1.06.442-.44 1.06-.44t1.06.44Q7 7.383 7 8t-.44 1.06q-.44.44-1.06.44m4.5 0q-.619 0-1.06-.44A1.44 1.44 0 0 1 8.5 8q0-.619.44-1.06.441-.44 1.06-.44t1.06.44q.44.442.44 1.06t-.44 1.06q-.442.44-1.06.44M5.5 5q-.618 0-1.06-.44A1.44 1.44 0 0 1 4 3.5q0-.62.44-1.06Q4.883 2 5.5 2t1.06.44Q7 2.883 7 3.5q0 .62-.44 1.06T5.5 5M10 5q-.619 0-1.06-.44A1.44 1.44 0 0 1 8.5 3.5q0-.62.44-1.06Q9.382 2 10 2t1.06.44q.44.442.44 1.06 0 .62-.44 1.06Q10.617 5 10 5"
-                          />
-                        </svg>
-                        <div
-                          class="emotion-20 emotion-15"
-                        >
-                          <span
-                            class="emotion-22 emotion-47 emotion-24"
-                          >
-                            item1
-                          </span>
-                        </div>
-                      </div>
-                      <div
-                        class="emotion-25 emotion-15"
-                      >
-                        <div
-                          aria-controls="«r1k»"
-                          aria-describedby="«r1k»"
-                          class="emotion-51 emotion-52"
-                          tabindex="0"
-                        >
-                          <div
-                            class="emotion-53 emotion-284"
-                          >
-                            <div
-                              aria-label="unpin"
-                              class="emotion-55 emotion-286"
-                              role="button"
-                            >
-                              <svg
-                                class="emotion-285 emotion-58 emotion-30"
-                                viewBox="0 0 20 20"
-                              >
-                                <path
-                                  d="M3.17 2.2a.686.686 0 0 0-.976.963L16.4 17.37l.007.007.422.422a.686.686 0 0 0 .97-.97l-4.292-4.292 2.853-2.854a1.6 1.6 0 0 0 0-2.266L12.583 3.64a1.6 1.6 0 0 0-2.266 0L7.463 6.493zm9.297 13.176L4.624 7.533a7 7 0 0 0-1.767.63c-.822.425-.853 1.515-.199 2.17l2.75 2.749-2.268 2.267a1.068 1.068 0 1 0 1.511 1.51l2.267-2.267 2.75 2.75c.654.654 1.744.623 2.17-.199.292-.565.502-1.16.629-1.767"
-                                />
-                              </svg>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </button>
+                      You have no pinned items.
+                    </p>
                   </div>
                   <div
-                    class="emotion-33 emotion-34"
+                    class="emotion-37 emotion-38"
                   >
                     <div
-                      class="emotion-35 emotion-36"
+                      class="emotion-39 emotion-40"
                     />
                   </div>
                 </div>
@@ -7153,18 +6674,18 @@ exports[`Navigation > pin and unpin an item 2`] = `
             </div>
             <hr
               aria-orientation="horizontal"
-              class="emotion-64 emotion-65 emotion-66"
+              class="emotion-41 emotion-42 emotion-43"
               role="separator"
             />
             <div
-              class="emotion-67 emotion-68"
+              class="emotion-44 emotion-45"
               data-animation="false"
             >
               <div
-                class="emotion-69 emotion-70"
+                class="emotion-46 emotion-47"
               >
                 <span
-                  class="emotion-71 emotion-72 emotion-24"
+                  class="emotion-48 emotion-49 emotion-24"
                 >
                   Products
                 </span>
@@ -7221,7 +6742,7 @@ exports[`Navigation > pin and unpin an item 2`] = `
                       class="emotion-20 emotion-15"
                     >
                       <span
-                        class="emotion-22 emotion-85 emotion-24"
+                        class="emotion-22 emotion-62 emotion-24"
                       >
                         item1
                       </span>
@@ -7250,7 +6771,7 @@ exports[`Navigation > pin and unpin an item 2`] = `
                       class="emotion-16 emotion-17"
                     >
                       <svg
-                        class="emotion-95 emotion-19"
+                        class="emotion-72 emotion-19"
                         height="20"
                         viewBox="0 0 20 20"
                         width="20"
@@ -7295,23 +6816,24 @@ exports[`Navigation > pin and unpin an item 2`] = `
                     <div
                       aria-controls="«r1e»"
                       aria-describedby="«r1e»"
-                      class="emotion-51 emotion-52"
+                      class="emotion-81 emotion-82"
                       tabindex="0"
                     >
                       <div
-                        class="emotion-53 emotion-284"
+                        class="emotion-83 emotion-284"
                       >
                         <div
-                          aria-label="unpin"
-                          class="emotion-55 emotion-286"
+                          aria-label="pin"
+                          class="emotion-85 emotion-286"
                           role="button"
                         >
                           <svg
-                            class="emotion-285 emotion-58 emotion-30"
+                            class="emotion-283 emotion-88 emotion-30"
                             viewBox="0 0 20 20"
                           >
                             <path
-                              d="M3.17 2.2a.686.686 0 0 0-.976.963L16.4 17.37l.007.007.422.422a.686.686 0 0 0 .97-.97l-4.292-4.292 2.853-2.854a1.6 1.6 0 0 0 0-2.266L12.583 3.64a1.6 1.6 0 0 0-2.266 0L7.463 6.493zm9.297 13.176L4.624 7.533a7 7 0 0 0-1.767.63c-.822.425-.853 1.515-.199 2.17l2.75 2.749-2.268 2.267a1.068 1.068 0 1 0 1.511 1.51l2.267-2.267 2.75 2.75c.654.654 1.744.623 2.17-.199.292-.565.502-1.16.629-1.767"
+                              clip-rule="evenodd"
+                              d="M10.602 2.581a1.985 1.985 0 0 1 2.807 0l4.01 4.01a1.985 1.985 0 0 1 0 2.807l-3.581 3.581c-.056.056-.112.173-.095.35.142 1.538-.31 2.832-1.112 3.933-.733 1.006-2.09.898-2.831.157l-2.206-2.206-2.206 2.206a1.985 1.985 0 1 1-2.807-2.807l2.206-2.206L2.58 10.2c-.74-.74-.85-2.098.157-2.83 1.1-.803 2.395-1.255 3.933-1.113.177.017.294-.039.35-.095zm.4 13.635c.06.058.13.08.18.079a.1.1 0 0 0 .047-.01.1.1 0 0 0 .027-.025c.59-.81.892-1.7.793-2.774-.054-.578.105-1.23.586-1.71l3.58-3.58a.284.284 0 0 0 0-.402l-4.01-4.01a.284.284 0 0 0-.4 0L8.224 7.365c-.48.48-1.132.64-1.71.587-1.074-.1-1.964.202-2.774.792a.1.1 0 0 0-.025.027.1.1 0 0 0-.01.047c0 .05.02.12.08.18zM5.99 13.609l-2.206 2.206a.284.284 0 0 0 .401.4l2.206-2.205z"
                             />
                           </svg>
                         </div>
@@ -7323,22 +6845,22 @@ exports[`Navigation > pin and unpin an item 2`] = `
             </div>
           </div>
           <div
-            class="emotion-113 emotion-114"
+            class="emotion-90 emotion-91"
             data-has-overflow-style="false"
           >
             <div
               aria-controls="«r1f»"
               aria-describedby="«r1f»"
-              class="emotion-51 emotion-52"
+              class="emotion-81 emotion-82"
               tabindex="0"
             >
               <button
                 aria-label="Collapse sidebar"
-                class="emotion-117 emotion-118"
+                class="emotion-94 emotion-95"
                 type="button"
               >
                 <svg
-                  class="emotion-119 emotion-30"
+                  class="emotion-96 emotion-30"
                   viewBox="0 0 16 16"
                 >
                   <path
@@ -7353,7 +6875,7 @@ exports[`Navigation > pin and unpin an item 2`] = `
         </div>
       </div>
       <div
-        class="emotion-121 emotion-122"
+        class="emotion-98 emotion-99"
         data-testid="slider"
       />
     </nav>
@@ -7903,12 +7425,12 @@ exports[`Navigation > pin and unpin an item 3`] = `
   background-color: #e9eaeb;
 }
 
-.emotion-12[data-is-active="true"][data-is-pinnable="true"],
+.emotion-12[data-is-active="true"],
 .emotion-12:hover[data-has-active="true"] {
   background-color: #f1eefc;
 }
 
-.emotion-12[data-is-active="true"][data-is-pinnable="true"]:hover,
+.emotion-12[data-is-active="true"]:hover,
 .emotion-12:hover[data-has-active="true"]:hover {
   background-color: #e5dbfd;
 }
@@ -8048,12 +7570,12 @@ exports[`Navigation > pin and unpin an item 3`] = `
   background-color: #e9eaeb;
 }
 
-.emotion-12[data-is-active="true"][data-is-pinnable="true"],
+.emotion-12[data-is-active="true"],
 .emotion-12:hover[data-has-active="true"] {
   background-color: #f1eefc;
 }
 
-.emotion-12[data-is-active="true"][data-is-pinnable="true"]:hover,
+.emotion-12[data-is-active="true"]:hover,
 .emotion-12:hover[data-has-active="true"]:hover {
   background-color: #e5dbfd;
 }
@@ -8410,56 +7932,14 @@ exports[`Navigation > pin and unpin an item 3`] = `
 }
 
 .emotion-33 {
-  padding: 0.5rem 0;
-}
-
-.emotion-33[data-expanded='true'] {
-  padding-left: 2rem;
-  margin-left: 0.25rem;
+  position: relative;
 }
 
 .emotion-33 {
-  padding: 0.5rem 0;
-}
-
-.emotion-33[data-expanded='true'] {
-  padding-left: 2rem;
-  margin-left: 0.25rem;
-}
-
-.emotion-35 {
-  color: #727683;
-  font-size: 0.75rem;
-  font-family: Inter,Asap,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-35 {
-  color: #727683;
-  font-size: 0.75rem;
-  font-family: Inter,Asap,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-37 {
   position: relative;
 }
 
-.emotion-37 {
-  position: relative;
-}
-
-.emotion-39 {
+.emotion-35 {
   position: absolute;
   right: 0;
   left: 0;
@@ -8470,7 +7950,7 @@ exports[`Navigation > pin and unpin an item 3`] = `
   padding: 0.25rem 0;
 }
 
-.emotion-39::before {
+.emotion-35::before {
   content: '';
   position: absolute;
   left: 0;
@@ -8482,7 +7962,7 @@ exports[`Navigation > pin and unpin an item 3`] = `
   border-radius: 100%;
 }
 
-.emotion-39 {
+.emotion-35 {
   position: absolute;
   right: 0;
   left: 0;
@@ -8493,7 +7973,7 @@ exports[`Navigation > pin and unpin an item 3`] = `
   padding: 0.25rem 0;
 }
 
-.emotion-39::before {
+.emotion-35::before {
   content: '';
   position: absolute;
   left: 0;
@@ -8505,7 +7985,299 @@ exports[`Navigation > pin and unpin an item 3`] = `
   border-radius: 100%;
 }
 
+.emotion-37 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  color: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background-color: inherit;
+  border: none;
+  text-align: left;
+  border-radius: 0.25rem;
+  margin-top: 0.125rem;
+  padding: calc(0.125rem + 0.25rem) 0.5rem;
+  width: 100%;
+}
+
+.emotion-37[data-has-no-expand="false"] {
+  cursor: pointer;
+}
+
+.emotion-37[data-has-sub-label="true"] {
+  padding: 0.25rem 0.5rem;
+}
+
+.emotion-37:hover[data-has-no-expand="false"]:not([disabled]):not(
+      [data-is-active="true"]
+    ),
+.emotion-37:focus[data-has-no-expand="false"]:not([disabled]):not(
+      [data-is-active="true"]
+    ) {
+  background-color: #f9f9fa;
+}
+
+.emotion-37[data-has-active-children="true"][data-has-no-expand="false"]:not(
+      [disabled][data-is-active="true"]
+    ) {
+  background-color: #e9eaeb;
+}
+
+.emotion-37[data-has-active-children="true"][data-has-no-expand="false"]:not(
+      [disabled][data-is-active="true"]
+    ) .emotion-22 {
+  color: #3f4250;
+}
+
+.emotion-37[data-has-active-children="true"][data-has-no-expand="false"]:not(
+      [disabled][data-is-active="true"]
+    ) .emotion-286 {
+  opacity: 1;
+}
+
+.emotion-37[data-has-active-children="true"][data-has-no-expand="false"]:not(
+      [disabled][data-is-active="true"]
+    )[data-is-pinnable="true"][data-pinned-feature="true"] .emotion-280 {
+  opacity: 0;
+}
+
+.emotion-37[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):hover .emotion-286,
+.emotion-37[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):focus .emotion-286,
+.emotion-37[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):active .emotion-286,
+.emotion-37[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):hover .emotion-281,
+.emotion-37[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):focus .emotion-281,
+.emotion-37[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):active .emotion-281 {
+  opacity: 1;
+}
+
+.emotion-37[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):hover .emotion-280,
+.emotion-37[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):focus .emotion-280,
+.emotion-37[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]):active .emotion-280 {
+  opacity: 0;
+}
+
+.emotion-37:hover[data-has-children="false"][data-is-active="false"][data-is-pinnable="true"]:not([disabled]) .emotion-22 {
+  color: #3f4250;
+}
+
+.emotion-37:active[data-has-no-expand="false"]:not([disabled]):not(
+      [data-is-active="true"]
+    ) {
+  background-color: #e9eaeb;
+}
+
+.emotion-37[data-is-active="true"],
+.emotion-37:hover[data-has-active="true"] {
+  background-color: #f1eefc;
+}
+
+.emotion-37[data-is-active="true"]:hover,
+.emotion-37:hover[data-has-active="true"]:hover {
+  background-color: #e5dbfd;
+}
+
+.emotion-37[disabled] {
+  cursor: not-allowed;
+  background-color: unset;
+}
+
+.emotion-37[disabled] .emotion-22 {
+  color: #b5b7bd;
+}
+
+.emotion-37[data-animation="collapse"][data-animation-type="complex"] {
+  -webkit-animation: animation-0 250ms ease-in-out;
+  animation: animation-0 250ms ease-in-out;
+}
+
+.emotion-37[data-animation="collapse"][data-animation-type="complex"] .emotion-22,
+.emotion-37[data-animation="collapse"][data-animation-type="complex"] .e134hokc6,
+.emotion-37[data-animation="collapse"][data-animation-type="complex"] .emotion-280 {
+  -webkit-animation: animation-1 250ms ease-in-out reverse;
+  animation: animation-1 250ms ease-in-out reverse;
+}
+
+.emotion-37[data-animation="expand"][data-animation-type="complex"] {
+  -webkit-animation: animation-0 250ms ease-in-out reverse;
+  animation: animation-0 250ms ease-in-out reverse;
+}
+
+.emotion-37[data-animation="expand"][data-animation-type="complex"] .emotion-22,
+.emotion-37[data-animation="expand"][data-animation-type="complex"] .e134hokc6,
+.emotion-37[data-animation="expand"][data-animation-type="complex"] .emotion-280 {
+  -webkit-animation: animation-1 250ms ease-in-out;
+  animation: animation-1 250ms ease-in-out;
+}
+
+.emotion-37[data-animation="expand"][data-animation-type="complex"] .e134hokc4 {
+  display: none;
+}
+
+.emotion-39 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
 .emotion-42 {
+  vertical-align: middle;
+  fill: #727683;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
+  opacity: 0;
+  margin: 0 0.125rem;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.emotion-42 .fillStroke {
+  stroke: #727683;
+  fill: none;
+}
+
+.emotion-47 {
+  color: #3f4250;
+  font-size: 0.875rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.emotion-51 {
+  display: inherit;
+}
+
+.emotion-51[data-container-full-height="true"] {
+  height: 100%;
+}
+
+.emotion-51[data-container-full-width="true"] {
+  width: 100%;
+}
+
+.emotion-51 {
+  display: inherit;
+}
+
+.emotion-51[data-container-full-height="true"] {
+  height: 100%;
+}
+
+.emotion-51[data-container-full-width="true"] {
+  width: 100%;
+}
+
+.emotion-53 {
+  position: relative;
+}
+
+.emotion-53 {
+  position: relative;
+}
+
+.emotion-55 {
+  opacity: 0;
+  right: 0;
+  position: absolute;
+  left: -24px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.emotion-55:hover,
+.emotion-55:focus,
+.emotion-55:active {
+  opacity: 1;
+}
+
+.emotion-55 {
+  opacity: 0;
+  right: 0;
+  position: absolute;
+  left: -24px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.emotion-55:hover,
+.emotion-55:focus,
+.emotion-55:active {
+  opacity: 1;
+}
+
+.emotion-58 {
+  vertical-align: middle;
+  fill: #3f4250;
+  height: 1.25rem;
+  width: 1.25rem;
+  min-width: 1.25rem;
+  min-height: 1.25rem;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  padding: 0.125rem;
+  border-radius: 0.25rem;
+}
+
+.emotion-58 .fillStroke {
+  stroke: #3f4250;
+  fill: none;
+}
+
+.emotion-58:hover {
+  background: #e9eaeb;
+}
+
+.emotion-65 {
   margin: 0;
   border: 0;
   width: auto;
@@ -8517,7 +8289,7 @@ exports[`Navigation > pin and unpin an item 3`] = `
   margin: 1rem -1rem;
 }
 
-.emotion-42 {
+.emotion-65 {
   margin: 0;
   border: 0;
   width: auto;
@@ -8529,27 +8301,27 @@ exports[`Navigation > pin and unpin an item 3`] = `
   margin: 1rem -1rem;
 }
 
-.emotion-44[data-animation='expand'][data-animation-type="complex"] .emotion-48 {
+.emotion-67[data-animation='expand'][data-animation-type="complex"] .emotion-71 {
   -webkit-animation: animation-2 250ms ease-in-out;
   animation: animation-2 250ms ease-in-out;
 }
 
-.emotion-44[data-animation='collapse'][data-animation-type="complex"] .emotion-48 {
+.emotion-67[data-animation='collapse'][data-animation-type="complex"] .emotion-71 {
   -webkit-animation: animation-2 250ms ease-in-out reverse;
   animation: animation-2 250ms ease-in-out reverse;
 }
 
-.emotion-44[data-animation='expand'][data-animation-type="complex"] .emotion-48 {
+.emotion-67[data-animation='expand'][data-animation-type="complex"] .emotion-71 {
   -webkit-animation: animation-2 250ms ease-in-out;
   animation: animation-2 250ms ease-in-out;
 }
 
-.emotion-44[data-animation='collapse'][data-animation-type="complex"] .emotion-48 {
+.emotion-67[data-animation='collapse'][data-animation-type="complex"] .emotion-71 {
   -webkit-animation: animation-2 250ms ease-in-out reverse;
   animation: animation-2 250ms ease-in-out reverse;
 }
 
-.emotion-46 {
+.emotion-69 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -8573,7 +8345,7 @@ exports[`Navigation > pin and unpin an item 3`] = `
   padding-top: 0.5rem;
 }
 
-.emotion-46 {
+.emotion-69 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -8597,7 +8369,7 @@ exports[`Navigation > pin and unpin an item 3`] = `
   padding-top: 0.5rem;
 }
 
-.emotion-49 {
+.emotion-72 {
   color: #727683;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
@@ -8614,7 +8386,7 @@ exports[`Navigation > pin and unpin an item 3`] = `
   height: calc(1.25rem + 0.5rem);
 }
 
-.emotion-49 {
+.emotion-72 {
   color: #727683;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
@@ -8631,7 +8403,7 @@ exports[`Navigation > pin and unpin an item 3`] = `
   height: calc(1.25rem + 0.5rem);
 }
 
-.emotion-62 {
+.emotion-85 {
   color: #641cb3;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
@@ -8649,7 +8421,7 @@ exports[`Navigation > pin and unpin an item 3`] = `
   -webkit-line-clamp: 2;
 }
 
-.emotion-62 {
+.emotion-85 {
   color: #641cb3;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
@@ -8667,135 +8439,23 @@ exports[`Navigation > pin and unpin an item 3`] = `
   -webkit-line-clamp: 2;
 }
 
-.emotion-72 .fill {
+.emotion-95 .fill {
   fill: #521094;
 }
 
-.emotion-72 .fillStrong {
+.emotion-95 .fillStrong {
   fill: #a060f6;
 }
 
-.emotion-72 .fill {
+.emotion-95 .fill {
   fill: #521094;
 }
 
-.emotion-72 .fillStrong {
+.emotion-95 .fillStrong {
   fill: #a060f6;
 }
 
-.emotion-81 {
-  display: inherit;
-}
-
-.emotion-81[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-81[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-81 {
-  display: inherit;
-}
-
-.emotion-81[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-81[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-83 {
-  position: relative;
-}
-
-.emotion-83 {
-  position: relative;
-}
-
-.emotion-85 {
-  opacity: 0;
-  right: 0;
-  position: absolute;
-  left: -24px;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-}
-
-.emotion-85:hover,
-.emotion-85:focus,
-.emotion-85:active {
-  opacity: 1;
-}
-
-.emotion-85 {
-  opacity: 0;
-  right: 0;
-  position: absolute;
-  left: -24px;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-}
-
-.emotion-85:hover,
-.emotion-85:focus,
-.emotion-85:active {
-  opacity: 1;
-}
-
-.emotion-88 {
-  vertical-align: middle;
-  fill: #3f4250;
-  height: 1.25rem;
-  width: 1.25rem;
-  min-width: 1.25rem;
-  min-height: 1.25rem;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  margin: auto 0;
-  padding: 0.125rem;
-  border-radius: 0.25rem;
-}
-
-.emotion-88 .fillStroke {
-  stroke: #3f4250;
-  fill: none;
-}
-
-.emotion-88:hover {
-  background: #e9eaeb;
-}
-
-.emotion-88 {
-  vertical-align: middle;
-  fill: #3f4250;
-  height: 1.25rem;
-  width: 1.25rem;
-  min-width: 1.25rem;
-  min-height: 1.25rem;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  margin: auto 0;
-  padding: 0.125rem;
-  border-radius: 0.25rem;
-}
-
-.emotion-88 .fillStroke {
-  stroke: #3f4250;
-  fill: none;
-}
-
-.emotion-88:hover {
-  background: #e9eaeb;
-}
-
-.emotion-90 {
+.emotion-113 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -8815,12 +8475,12 @@ exports[`Navigation > pin and unpin an item 3`] = `
   justify-content: flex-end;
 }
 
-.emotion-90[data-has-overflow-style="false"] {
+.emotion-113[data-has-overflow-style="false"] {
   box-shadow: none;
   border: none;
 }
 
-.emotion-90 {
+.emotion-113 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -8840,12 +8500,12 @@ exports[`Navigation > pin and unpin an item 3`] = `
   justify-content: flex-end;
 }
 
-.emotion-90[data-has-overflow-style="false"] {
+.emotion-113[data-has-overflow-style="false"] {
   box-shadow: none;
   border: none;
 }
 
-.emotion-94 {
+.emotion-117 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -8885,22 +8545,22 @@ exports[`Navigation > pin and unpin an item 3`] = `
   color: #3f4250;
 }
 
-.emotion-94:hover {
+.emotion-117:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-94:active {
+.emotion-117:active {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.emotion-94:hover,
-.emotion-94:active {
+.emotion-117:hover,
+.emotion-117:active {
   background: #e9eaeb;
   color: #222638;
 }
 
-.emotion-94 {
+.emotion-117 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -8940,22 +8600,22 @@ exports[`Navigation > pin and unpin an item 3`] = `
   color: #3f4250;
 }
 
-.emotion-94:hover {
+.emotion-117:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-94:active {
+.emotion-117:active {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.emotion-94:hover,
-.emotion-94:active {
+.emotion-117:hover,
+.emotion-117:active {
   background: #e9eaeb;
   color: #222638;
 }
 
-.emotion-96 {
+.emotion-119 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -8964,12 +8624,12 @@ exports[`Navigation > pin and unpin an item 3`] = `
   min-height: 1rem;
 }
 
-.emotion-96 .fillStroke {
+.emotion-119 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.emotion-96 {
+.emotion-119 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -8978,12 +8638,12 @@ exports[`Navigation > pin and unpin an item 3`] = `
   min-height: 1rem;
 }
 
-.emotion-96 .fillStroke {
+.emotion-119 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.emotion-98 {
+.emotion-121 {
   background: transparent;
   position: absolute;
   top: 0;
@@ -8998,11 +8658,11 @@ exports[`Navigation > pin and unpin an item 3`] = `
   display: flex;
 }
 
-.emotion-98:hover {
+.emotion-121:hover {
   border-color: #8c40ef;
 }
 
-.emotion-98 {
+.emotion-121 {
   background: transparent;
   position: absolute;
   top: 0;
@@ -9017,7 +8677,7 @@ exports[`Navigation > pin and unpin an item 3`] = `
   display: flex;
 }
 
-.emotion-98:hover {
+.emotion-121:hover {
   border-color: #8c40ef;
 }
 
@@ -9132,19 +8792,80 @@ exports[`Navigation > pin and unpin an item 3`] = `
                 >
                   <div
                     class="emotion-33 emotion-34"
-                    data-expanded="true"
-                  >
-                    <p
-                      class="emotion-35 emotion-24"
-                    >
-                      You have no pinned items.
-                    </p>
-                  </div>
-                  <div
-                    class="emotion-37 emotion-38"
                   >
                     <div
-                      class="emotion-39 emotion-40"
+                      class="emotion-35 emotion-36"
+                    />
+                    <button
+                      class="emotion-37 emotion-13"
+                      data-animation="false"
+                      data-has-active-children="false"
+                      data-has-children="false"
+                      data-has-no-expand="false"
+                      data-has-sub-label="false"
+                      data-is-active="false"
+                      data-is-pinnable="true"
+                      data-pinned-feature="true"
+                      draggable="true"
+                      id="item1"
+                    >
+                      <div
+                        class="emotion-39 emotion-15"
+                      >
+                        <svg
+                          class="emotion-281 emotion-42 emotion-30"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="M5.5 14q-.618 0-1.06-.44A1.45 1.45 0 0 1 4 12.5q0-.619.44-1.06Q4.883 11 5.5 11t1.06.44q.44.442.44 1.06t-.44 1.06Q6.12 14 5.5 14m4.5 0q-.619 0-1.06-.44a1.45 1.45 0 0 1-.44-1.06q0-.619.44-1.06Q9.382 11 10 11t1.06.44q.44.442.44 1.06t-.44 1.06Q10.617 14 10 14M5.5 9.5q-.618 0-1.06-.44A1.44 1.44 0 0 1 4 8q0-.619.44-1.06.442-.44 1.06-.44t1.06.44Q7 7.383 7 8t-.44 1.06q-.44.44-1.06.44m4.5 0q-.619 0-1.06-.44A1.44 1.44 0 0 1 8.5 8q0-.619.44-1.06.441-.44 1.06-.44t1.06.44q.44.442.44 1.06t-.44 1.06q-.442.44-1.06.44M5.5 5q-.618 0-1.06-.44A1.44 1.44 0 0 1 4 3.5q0-.62.44-1.06Q4.883 2 5.5 2t1.06.44Q7 2.883 7 3.5q0 .62-.44 1.06T5.5 5M10 5q-.619 0-1.06-.44A1.44 1.44 0 0 1 8.5 3.5q0-.62.44-1.06Q9.382 2 10 2t1.06.44q.44.442.44 1.06 0 .62-.44 1.06Q10.617 5 10 5"
+                          />
+                        </svg>
+                        <div
+                          class="emotion-20 emotion-15"
+                        >
+                          <span
+                            class="emotion-22 emotion-47 emotion-24"
+                          >
+                            item1
+                          </span>
+                        </div>
+                      </div>
+                      <div
+                        class="emotion-25 emotion-15"
+                      >
+                        <div
+                          aria-controls="«r1k»"
+                          aria-describedby="«r1k»"
+                          class="emotion-51 emotion-52"
+                          tabindex="0"
+                        >
+                          <div
+                            class="emotion-53 emotion-284"
+                          >
+                            <div
+                              aria-label="unpin"
+                              class="emotion-55 emotion-286"
+                              role="button"
+                            >
+                              <svg
+                                class="emotion-285 emotion-58 emotion-30"
+                                viewBox="0 0 20 20"
+                              >
+                                <path
+                                  d="M3.17 2.2a.686.686 0 0 0-.976.963L16.4 17.37l.007.007.422.422a.686.686 0 0 0 .97-.97l-4.292-4.292 2.853-2.854a1.6 1.6 0 0 0 0-2.266L12.583 3.64a1.6 1.6 0 0 0-2.266 0L7.463 6.493zm9.297 13.176L4.624 7.533a7 7 0 0 0-1.767.63c-.822.425-.853 1.515-.199 2.17l2.75 2.749-2.268 2.267a1.068 1.068 0 1 0 1.511 1.51l2.267-2.267 2.75 2.75c.654.654 1.744.623 2.17-.199.292-.565.502-1.16.629-1.767"
+                                />
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </button>
+                  </div>
+                  <div
+                    class="emotion-33 emotion-34"
+                  >
+                    <div
+                      class="emotion-35 emotion-36"
                     />
                   </div>
                 </div>
@@ -9152,18 +8873,18 @@ exports[`Navigation > pin and unpin an item 3`] = `
             </div>
             <hr
               aria-orientation="horizontal"
-              class="emotion-41 emotion-42 emotion-43"
+              class="emotion-64 emotion-65 emotion-66"
               role="separator"
             />
             <div
-              class="emotion-44 emotion-45"
+              class="emotion-67 emotion-68"
               data-animation="false"
             >
               <div
-                class="emotion-46 emotion-47"
+                class="emotion-69 emotion-70"
               >
                 <span
-                  class="emotion-48 emotion-49 emotion-24"
+                  class="emotion-71 emotion-72 emotion-24"
                 >
                   Products
                 </span>
@@ -9220,7 +8941,7 @@ exports[`Navigation > pin and unpin an item 3`] = `
                       class="emotion-20 emotion-15"
                     >
                       <span
-                        class="emotion-22 emotion-62 emotion-24"
+                        class="emotion-22 emotion-85 emotion-24"
                       >
                         item1
                       </span>
@@ -9249,7 +8970,7 @@ exports[`Navigation > pin and unpin an item 3`] = `
                       class="emotion-16 emotion-17"
                     >
                       <svg
-                        class="emotion-72 emotion-19"
+                        class="emotion-95 emotion-19"
                         height="20"
                         viewBox="0 0 20 20"
                         width="20"
@@ -9294,24 +9015,23 @@ exports[`Navigation > pin and unpin an item 3`] = `
                     <div
                       aria-controls="«r1e»"
                       aria-describedby="«r1e»"
-                      class="emotion-81 emotion-82"
+                      class="emotion-51 emotion-52"
                       tabindex="0"
                     >
                       <div
-                        class="emotion-83 emotion-284"
+                        class="emotion-53 emotion-284"
                       >
                         <div
-                          aria-label="pin"
-                          class="emotion-85 emotion-286"
+                          aria-label="unpin"
+                          class="emotion-55 emotion-286"
                           role="button"
                         >
                           <svg
-                            class="emotion-283 emotion-88 emotion-30"
+                            class="emotion-285 emotion-58 emotion-30"
                             viewBox="0 0 20 20"
                           >
                             <path
-                              clip-rule="evenodd"
-                              d="M10.602 2.581a1.985 1.985 0 0 1 2.807 0l4.01 4.01a1.985 1.985 0 0 1 0 2.807l-3.581 3.581c-.056.056-.112.173-.095.35.142 1.538-.31 2.832-1.112 3.933-.733 1.006-2.09.898-2.831.157l-2.206-2.206-2.206 2.206a1.985 1.985 0 1 1-2.807-2.807l2.206-2.206L2.58 10.2c-.74-.74-.85-2.098.157-2.83 1.1-.803 2.395-1.255 3.933-1.113.177.017.294-.039.35-.095zm.4 13.635c.06.058.13.08.18.079a.1.1 0 0 0 .047-.01.1.1 0 0 0 .027-.025c.59-.81.892-1.7.793-2.774-.054-.578.105-1.23.586-1.71l3.58-3.58a.284.284 0 0 0 0-.402l-4.01-4.01a.284.284 0 0 0-.4 0L8.224 7.365c-.48.48-1.132.64-1.71.587-1.074-.1-1.964.202-2.774.792a.1.1 0 0 0-.025.027.1.1 0 0 0-.01.047c0 .05.02.12.08.18zM5.99 13.609l-2.206 2.206a.284.284 0 0 0 .401.4l2.206-2.205z"
+                              d="M3.17 2.2a.686.686 0 0 0-.976.963L16.4 17.37l.007.007.422.422a.686.686 0 0 0 .97-.97l-4.292-4.292 2.853-2.854a1.6 1.6 0 0 0 0-2.266L12.583 3.64a1.6 1.6 0 0 0-2.266 0L7.463 6.493zm9.297 13.176L4.624 7.533a7 7 0 0 0-1.767.63c-.822.425-.853 1.515-.199 2.17l2.75 2.749-2.268 2.267a1.068 1.068 0 1 0 1.511 1.51l2.267-2.267 2.75 2.75c.654.654 1.744.623 2.17-.199.292-.565.502-1.16.629-1.767"
                             />
                           </svg>
                         </div>
@@ -9323,22 +9043,22 @@ exports[`Navigation > pin and unpin an item 3`] = `
             </div>
           </div>
           <div
-            class="emotion-90 emotion-91"
+            class="emotion-113 emotion-114"
             data-has-overflow-style="false"
           >
             <div
               aria-controls="«r1f»"
               aria-describedby="«r1f»"
-              class="emotion-81 emotion-82"
+              class="emotion-51 emotion-52"
               tabindex="0"
             >
               <button
                 aria-label="Collapse sidebar"
-                class="emotion-94 emotion-95"
+                class="emotion-117 emotion-118"
                 type="button"
               >
                 <svg
-                  class="emotion-96 emotion-30"
+                  class="emotion-119 emotion-30"
                   viewBox="0 0 16 16"
                 >
                   <path
@@ -9353,7 +9073,7 @@ exports[`Navigation > pin and unpin an item 3`] = `
         </div>
       </div>
       <div
-        class="emotion-98 emotion-99"
+        class="emotion-121 emotion-122"
         data-testid="slider"
       />
     </nav>
@@ -9662,12 +9382,12 @@ exports[`Navigation > render with basic content 1`] = `
   background-color: #e9eaeb;
 }
 
-.emotion-12[data-is-active="true"][data-is-pinnable="true"],
+.emotion-12[data-is-active="true"],
 .emotion-12:hover[data-has-active="true"] {
   background-color: #f1eefc;
 }
 
-.emotion-12[data-is-active="true"][data-is-pinnable="true"]:hover,
+.emotion-12[data-is-active="true"]:hover,
 .emotion-12:hover[data-has-active="true"]:hover {
   background-color: #e5dbfd;
 }
@@ -10874,12 +10594,12 @@ exports[`Navigation > render without pinnedFeature 1`] = `
   background-color: #e9eaeb;
 }
 
-.emotion-22[data-is-active="true"][data-is-pinnable="true"],
+.emotion-22[data-is-active="true"],
 .emotion-22:hover[data-has-active="true"] {
   background-color: #f1eefc;
 }
 
-.emotion-22[data-is-active="true"][data-is-pinnable="true"]:hover,
+.emotion-22[data-is-active="true"]:hover,
 .emotion-22:hover[data-has-active="true"]:hover {
   background-color: #e5dbfd;
 }
@@ -11907,12 +11627,12 @@ exports[`Navigation > resize manually the navigation using slider 1`] = `
   background-color: #e9eaeb;
 }
 
-.emotion-12[data-is-active="true"][data-is-pinnable="true"],
+.emotion-12[data-is-active="true"],
 .emotion-12:hover[data-has-active="true"] {
   background-color: #f1eefc;
 }
 
-.emotion-12[data-is-active="true"][data-is-pinnable="true"]:hover,
+.emotion-12[data-is-active="true"]:hover,
 .emotion-12:hover[data-has-active="true"]:hover {
   background-color: #e5dbfd;
 }
@@ -12052,12 +11772,12 @@ exports[`Navigation > resize manually the navigation using slider 1`] = `
   background-color: #e9eaeb;
 }
 
-.emotion-12[data-is-active="true"][data-is-pinnable="true"],
+.emotion-12[data-is-active="true"],
 .emotion-12:hover[data-has-active="true"] {
   background-color: #f1eefc;
 }
 
-.emotion-12[data-is-active="true"][data-is-pinnable="true"]:hover,
+.emotion-12[data-is-active="true"]:hover,
 .emotion-12:hover[data-has-active="true"]:hover {
   background-color: #e5dbfd;
 }
