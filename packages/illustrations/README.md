@@ -26,12 +26,14 @@ const App = () => <DynamicIllustration name="success">
 ```
 
 ## Making changes
-The entire process of adding, deleting or editing an asset is automated. The imports and exports are handled automatically by `@utils/illustrations/uploadIllustrations.js`.
+The entire process of adding, deleting or editing an asset is automated. The imports and exports are handled automatically by `@utils/scripts/upload-illustrations.tsx` and `@utils/scripts/upload-illustration-components.tsx`.
 
-When a file from the package is edited in a pull request, the aforementioned script runs and updates every `index.ts` to ensure the imports and exports match the names of the folders and files located in `assets/`. It is only possible edit  (add, delete or replace some assets) the assets to the `assets/` folder. Any changes made directly to one of the `index.ts` file will be overriden by an automatic commit.
+When a file from the package is edited in a pull request, the aforementioned scripts run and update every `index.ts(x)` to ensure the imports and exports match the names of the folders and files located in `assets/`. It is only possible edit  (add, delete or replace some assets) the assets to the `assets/` folder. Any changes made directly to one of the `index.ts` file will be overriden by an automatic commit.
+
+**The same goes for `DynamicIllustration` and `WireIllustration` : simply add the illustrations to the correct folder (in `assets/`).**
 
 ### Adding an asset
-Simply add the assets you want to include in the package to the correct folder in `assets/` and create a pull request. Once the pull request is approved and the branch is merged, the illustrations will be added to an S3 bucket and exported in the package automatically.
+Simply add the assets you want to include in the package to the correct folder in `assets/` and create a pull request. Once the pull request is approved and the branch is merged, the illustrations will be added to an S3 bucket and exported in the package automatically. If the assets can be used as `WireIllustration` or a `DynamicIllustration`, the component(s) will also be updated to include them.
 
 ### Deleting an asset
 It is possible to delete an asset. To do so, simply delete its folder. However, the asset will still be present in the S3 bucket and can be used by directly importing the link from the S3 bucket.
