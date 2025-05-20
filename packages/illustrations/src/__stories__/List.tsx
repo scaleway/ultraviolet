@@ -22,7 +22,7 @@ const StyledSnippet = styled(Snippet)`
 
 const StyledStack = styled(Stack)`
   min-width: 0;
-  padding-righti: ${({ theme }) => theme.space['2']};
+  padding-right: ${({ theme }) => theme.space['2']};
 `
 
 const StyledButton = styled(Button)`
@@ -30,8 +30,7 @@ const StyledButton = styled(Button)`
   height: fit-content;
   background: none;
   border: none;
-  padding: ${({ theme }) => theme.space['0.5']}
-    ${({ theme }) => theme.space['1']};
+  padding: ${({ theme }) => theme.space['0.5']} ${({ theme }) => theme.space['1']};
   text-align: left;
 `
 
