@@ -111,6 +111,11 @@ export const SingleSlider = ({
   const [selectedIndex, setSelectedIndex] = useState(safeValue)
   const refSlider = useRef<HTMLInputElement>(null)
   const [sliderWidth, setWidth] = useState(0)
+  const [inputValue, setInputValue] = useState<number | null>(safeValue)
+
+  useEffect(() => {
+    setInputValue(selectedIndex)
+  }, [selectedIndex])
 
   useEffect(() => {
     setWidth(Number(refSlider.current?.offsetWidth))
@@ -129,10 +134,21 @@ export const SingleSlider = ({
 
   const internalOnChange = useCallback(
     (newValue: number) => {
-      setSelectedIndex(newValue ?? min)
-      onChange?.(newValue ?? min)
+      if (!newValue) {
+        setSelectedIndex(min)
+        onChange?.(min)
+      } else if (newValue < min) {
+        setSelectedIndex(min)
+        onChange?.(min)
+      } else if (newValue > max) {
+        setSelectedIndex(max)
+        onChange?.(max)
+      } else {
+        setSelectedIndex(newValue)
+        onChange?.(newValue)
+      }
     },
-    [min, onChange],
+    [max, min, onChange],
   )
 
   // Make sure that min <= value <= max
@@ -173,11 +189,7 @@ export const SingleSlider = ({
   const styledValue = (valueNumber: string | number | null) =>
     input && !options ? (
       <StyledNumberInputV2
-        value={
-          typeof valueNumber === 'string'
-            ? Number.parseFloat(valueNumber)
-            : valueNumber
-        }
+        value={inputValue}
         size="small"
         min={min}
         aria-label="input"
@@ -187,13 +199,9 @@ export const SingleSlider = ({
         disabled={disabled}
         data-testid={dataTestId ? `${dataTestId}-input` : 'slider-input'}
         unit={typeof suffix === 'string' ? suffix : unit}
-        onChange={newVal => {
-          if (newVal) {
-            internalOnChange(newVal)
-          } else internalOnChange(0)
-        }}
+        onChange={setInputValue}
         onBlur={event => {
-          if (!event.target.value) internalOnChange(min)
+          internalOnChange(Number.parseFloat(event.target.value))
         }}
       />
     ) : (
