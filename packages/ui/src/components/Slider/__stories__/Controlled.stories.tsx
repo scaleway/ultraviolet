@@ -15,6 +15,7 @@ export const Controlled: StoryFn<typeof Slider> = () => {
         onChange={setValue}
         label="Controlled"
         name="name"
+        input
       />
       <Button onClick={() => setValue(0)}>Reset values</Button>
       <Text as="p" variant="body">
