@@ -9,6 +9,7 @@ import {
   useContext,
   useMemo,
 } from 'react'
+import { Label } from '../Label'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
 import { Toggle } from '../Toggle'
@@ -78,7 +79,8 @@ const FieldSet = styled.fieldset`
 `
 
 type ToggleGroupProps = {
-  legend?: ReactNode
+  legend?: string
+  legendDescription?: ReactNode
   value?: string[]
   className?: string
   helper?: ReactNode
@@ -92,6 +94,7 @@ type ToggleGroupProps = {
 
 export const ToggleGroup = ({
   legend,
+  legendDescription,
   value,
   className,
   helper,
@@ -121,19 +124,13 @@ export const ToggleGroup = ({
             {legend || description ? (
               <Stack gap={0.5}>
                 {legend ? (
-                  <Text
+                  <Label
                     as="legend"
-                    variant="bodyStrong"
-                    sentiment="neutral"
-                    prominence="strong"
+                    required={required}
+                    labelDescription={legendDescription}
                   >
-                    {legend}&nbsp;
-                    {required ? (
-                      <Text as="sup" variant="body" sentiment="danger">
-                        *
-                      </Text>
-                    ) : null}
-                  </Text>
+                    {legend}
+                  </Label>
                 ) : null}
                 {description ? (
                   <Text
