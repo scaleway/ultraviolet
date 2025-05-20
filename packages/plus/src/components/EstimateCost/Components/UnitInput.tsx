@@ -27,7 +27,7 @@ const CustomTextInput = styled(TextInput)`
       text-decoration: none;
       border-right-width: 1px;
       border-right-style: solid;
-      border-color: ${({ theme }) => theme.colors.primary.borderWeak};
+      border-color: ${({ theme }) => theme.colors.primary.border};
     }
   }
 
@@ -53,7 +53,7 @@ const CustomSelectInput = styled(SelectInput)<{
   &:hover,
   &:focus {
     text-decoration: none;
-    border-color: ${({ theme }) => theme.colors.primary.borderWeak};
+    border-color: ${({ theme }) => theme.colors.primary.border};
     box-shadow: none;
   }
 `
