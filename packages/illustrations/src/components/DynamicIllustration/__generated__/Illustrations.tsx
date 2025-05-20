@@ -10,6 +10,9 @@ const BASE_URL = 'https://assets.scaleway.com/illustrations'
 const emptyLight = `${BASE_URL}/various/empty/empty-light.webp`
 const emptyDark = `${BASE_URL}/various/empty/empty-dark.webp`
 
+const failedLight = `${BASE_URL}/various/empty/failed-light.webp`
+const failedDark = `${BASE_URL}/various/empty/failed-dark.webp`
+
 const genericLight = `${BASE_URL}/various/empty/generic-light.webp`
 const genericDark = `${BASE_URL}/various/empty/generic-dark.webp`
 
@@ -39,6 +42,7 @@ const warningDark = `${BASE_URL}/various/feedback/warning-dark.webp`
 
 export type IllustrationsKeys = {
   empty: string
+  failed: string
   generic: string
   loading: string
   lock: string
@@ -53,6 +57,7 @@ export type IllustrationsKeys = {
 export const ILLUSTRATIONS = {
   light: {
     empty: emptyLight,
+    failed: failedLight,
     generic: genericLight,
     loading: loadingLight,
     lock: lockLight,
@@ -66,6 +71,7 @@ export const ILLUSTRATIONS = {
 
   dark: {
     empty: emptyDark,
+    failed: failedDark,
     generic: genericDark,
     loading: loadingDark,
     lock: lockDark,
