@@ -1,5 +1,21 @@
 # Change Log
 
+## 1.95.6
+
+### Patch Changes
+
+- [#5091](https://github.com/scaleway/ultraviolet/pull/5091) [`6c8f8af`](https://github.com/scaleway/ultraviolet/commit/6c8f8af8d22cca8162121c95bd350bbb98d4d2c6) Thanks [@lisalupi](https://github.com/lisalupi)! - `<Modal />` fix scroll in nested modals when the content is too long
+
+- [#5104](https://github.com/scaleway/ultraviolet/pull/5104) [`7562afb`](https://github.com/scaleway/ultraviolet/commit/7562afbc31dda6282cb1735892fec2205218cc3a) Thanks [@lisalupi](https://github.com/lisalupi)! - `<MenuV2 />`: new prop footer
+
+- [#5159](https://github.com/scaleway/ultraviolet/pull/5159) [`530f7b4`](https://github.com/scaleway/ultraviolet/commit/530f7b47b46ffb2d3d472dda535972b8507a142e) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `19.1.4`.
+  Updated dependency `@types/react-dom` to `19.1.5`.
+
+- [#5072](https://github.com/scaleway/ultraviolet/pull/5072) [`69d26f1`](https://github.com/scaleway/ultraviolet/commit/69d26f10f3614c594690ef2f78aa2e2ef3925227) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<ActionBar />` simplify usage without using styled
+
+- Updated dependencies [[`530f7b4`](https://github.com/scaleway/ultraviolet/commit/530f7b47b46ffb2d3d472dda535972b8507a142e)]:
+  - @ultraviolet/icons@3.15.4
+
 ## 1.95.5
 
 ### Patch Changes
