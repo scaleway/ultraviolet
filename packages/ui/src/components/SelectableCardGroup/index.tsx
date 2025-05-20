@@ -3,6 +3,7 @@
 import styled from '@emotion/styled'
 import type { ComponentProps, InputHTMLAttributes, ReactNode } from 'react'
 import { createContext, useContext, useMemo } from 'react'
+import { Label } from '../Label'
 import { Row } from '../Row'
 import { SelectableCard } from '../SelectableCard'
 import { Stack } from '../Stack'
@@ -83,7 +84,8 @@ const FieldSet = styled.fieldset`
 `
 
 type SelectableCardGroupProps = {
-  legend?: ReactNode
+  legend?: string
+  legendDescription?: ReactNode
   value: string | number | (string | number)[]
   className?: string
   helper?: ReactNode
@@ -101,6 +103,7 @@ type SelectableCardGroupProps = {
  */
 export const SelectableCardGroup = ({
   legend,
+  legendDescription,
   value,
   className,
   helper,
@@ -132,14 +135,13 @@ export const SelectableCardGroup = ({
         <FieldSet className={className}>
           <Stack gap={1.5}>
             {legend ? (
-              <Text as="legend" variant="bodyStrong" prominence="strong">
-                {legend && <>{legend} &nbsp;</>}
-                {required ? (
-                  <Text as="sup" variant="body" sentiment="danger">
-                    *
-                  </Text>
-                ) : null}
-              </Text>
+              <Label
+                as="legend"
+                required={required}
+                labelDescription={legendDescription}
+              >
+                {legend}
+              </Label>
             ) : null}
             <Row gap={2} templateColumns={`repeat(${columns}, minmax(0, 1fr))`}>
               {children}

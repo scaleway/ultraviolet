@@ -4,6 +4,7 @@ import styled from '@emotion/styled'
 import type { ComponentProps, InputHTMLAttributes, ReactNode } from 'react'
 import { createContext, useContext, useMemo } from 'react'
 import { Checkbox } from '../Checkbox'
+import { Label } from '../Label'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
 
@@ -86,7 +87,8 @@ const FieldSet = styled.fieldset`
 `
 
 type CheckboxGroupProps = {
-  legend?: ReactNode
+  legend?: string
+  legendDescription?: ReactNode
   value?: string[]
   className?: string
   helper?: ReactNode
@@ -103,6 +105,7 @@ type CheckboxGroupProps = {
  */
 export const CheckboxGroup = ({
   legend,
+  legendDescription,
   value,
   className,
   helper,
@@ -133,19 +136,13 @@ export const CheckboxGroup = ({
             {legend || description ? (
               <Stack gap={0.5}>
                 {legend ? (
-                  <Text
+                  <Label
                     as="legend"
-                    variant="bodyStrong"
-                    sentiment="neutral"
-                    prominence="strong"
+                    required={required}
+                    labelDescription={legendDescription}
                   >
-                    {legend}&nbsp;
-                    {required ? (
-                      <Text as="sup" variant="body" sentiment="danger">
-                        *
-                      </Text>
-                    ) : null}
-                  </Text>
+                    {legend}
+                  </Label>
                 ) : null}
                 {description ? (
                   <Text
