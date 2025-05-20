@@ -187,17 +187,18 @@ describe('Single slider', () => {
     )
     const slider = screen.getByRole<HTMLInputElement>('slider')
     const input = screen.getByTestId<HTMLInputElement>('slider-input')
+    expect(slider.value).toBe('3')
     await userEvent.type(input, '5')
-    await userEvent.tab()
+    await userEvent.click(slider)
     expect(slider.value).toBe('10')
 
     await userEvent.clear(input)
-    await userEvent.tab()
+    await userEvent.click(slider)
     expect(slider.value).toBe('2')
 
     await userEvent.clear(input)
     await userEvent.type(input, '1')
-    await userEvent.tab()
+    await userEvent.click(slider)
     expect(slider.value).toBe('2')
 
     fireEvent.change(slider, { target: { value: '3' } })

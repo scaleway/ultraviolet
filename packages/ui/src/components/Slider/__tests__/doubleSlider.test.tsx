@@ -205,11 +205,16 @@ describe('Double slider', () => {
     expect(sliderLeft.value).toBe('3')
 
     const inputRight = screen.getByTestId('slider-input-right')
+    const inputLeft = screen.getByTestId('slider-input-left')
+
     await userEvent.type(inputRight, '5')
+    await userEvent.click(inputLeft) // simulate onBlur
+
     expect(sliderRight.value).toBe('75')
 
-    const inputLeft = screen.getByTestId('slider-input-left')
     await userEvent.type(inputLeft, '5')
+    await userEvent.click(inputRight) // simulate onBlur
+
     expect(sliderLeft.value).toBe('35')
     expect(asFragment()).toMatchSnapshot()
   })
