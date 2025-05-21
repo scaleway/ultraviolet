@@ -560,12 +560,12 @@ importers:
       '@babel/runtime':
         specifier: 7.27.1
         version: 7.27.1
+      '@ultraviolet/icons':
+        specifier: workspace:*
+        version: link:../icons
       '@ultraviolet/themes':
         specifier: workspace:*
         version: link:../themes
-      '@ultraviolet/ui':
-        specifier: workspace:*
-        version: link:../ui
       react-hook-form:
         specifier: 7.55.0
         version: 7.55.0(react@19.1.0)
@@ -591,6 +591,9 @@ importers:
       '@types/react-dom':
         specifier: 19.1.5
         version: 19.1.5(@types/react@19.1.4)
+      '@ultraviolet/ui':
+        specifier: workspace:*
+        version: link:../ui
       '@utils/test':
         specifier: workspace:*
         version: link:../../utils/test
@@ -644,6 +647,9 @@ importers:
       '@emotion/styled':
         specifier: 11.14.0
         version: 11.14.0(@emotion/react@11.14.0(@types/react@19.1.4)(react@19.1.0))(@types/react@19.1.4)(react@19.1.0)
+      '@ultraviolet/icons':
+        specifier: workspace:*
+        version: link:../icons
       '@ultraviolet/ui':
         specifier: workspace:*
         version: link:../ui
@@ -674,9 +680,6 @@ importers:
       '@ultraviolet/themes':
         specifier: workspace:*
         version: link:../themes
-      '@ultraviolet/ui':
-        specifier: workspace:*
-        version: link:../ui
       react-intersection-observer:
         specifier: 9.16.0
         version: 9.16.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
@@ -699,6 +702,9 @@ importers:
       '@ultraviolet/illustrations':
         specifier: workspace:*
         version: link:../illustrations
+      '@ultraviolet/ui':
+        specifier: workspace:*
+        version: link:../ui
       '@utils/test':
         specifier: workspace:*
         version: link:../../utils/test
