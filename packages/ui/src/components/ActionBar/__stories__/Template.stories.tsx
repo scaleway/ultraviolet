@@ -29,8 +29,8 @@ export const Template: StoryFn<typeof ActionBar> = args => {
           >
             <div>I am the Playground Action Bar</div>
             <Button variant="outlined" sentiment="danger" size="small">
-                <DeleteIcon />
-              </Button>
+              <DeleteIcon />
+            </Button>
           </Stack>
         </ActionBar>
       ) : null}
