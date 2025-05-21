@@ -1,5 +1,27 @@
 # Change Log
 
+## 2.0.0-beta.3
+
+### Major Changes
+
+- [`855a68c`](https://github.com/scaleway/ultraviolet/commit/855a68cc2740225d56f7f326338d6b6b482f804b) Thanks [@matthprost](https://github.com/matthprost)! - All group input have a breaking changes in their props:
+
+  - `label` is now longer needed, use `legend` instead.
+  - `legend` type moved from `ReactNode` to `string`. Use `legendDescription` to add more information.
+  - new prop `legendDescription` to add more information to the legend.
+
+### Patch Changes
+
+- [`fd88786`](https://github.com/scaleway/ultraviolet/commit/fd887868e66208f5d3ab6de2e25df9ed7518eec7) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<Slider />` with `input` prop to only apply the value `onBlur` instead of `onChange`. Works also with double slider.
+
+- [`855a68c`](https://github.com/scaleway/ultraviolet/commit/855a68cc2740225d56f7f326338d6b6b482f804b) Thanks [@matthprost](https://github.com/matthprost)! - Fix all group field to have correct `legend` and `legendDescription`
+
+- [`ae4ca59`](https://github.com/scaleway/ultraviolet/commit/ae4ca592099b440cdedfafdb1c5a2ea0540d97f8) Thanks [@alexandre-combemorel](https://github.com/alexandre-combemorel)! - Add theme get function for nivo chart components (harmonization of theme)
+
+- Updated dependencies [[`da3e7f7`](https://github.com/scaleway/ultraviolet/commit/da3e7f7c41ce6bad2c0dcd9a05693cee587f2ef3), [`421d104`](https://github.com/scaleway/ultraviolet/commit/421d104ae17d8c805d981ed214417916f73d561c)]:
+  - @ultraviolet/icons@4.0.0-beta.2
+  - @ultraviolet/themes@2.0.0-beta.1
+
 ## 2.0.0-beta.2
 
 ### Patch Changes
