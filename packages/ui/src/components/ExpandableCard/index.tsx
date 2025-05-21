@@ -3,7 +3,7 @@
 import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import { ArrowDownIcon, DragIcon } from '@ultraviolet/icons'
-import type { DragEvent, ForwardedRef, ReactNode } from 'react'
+import type { DragEvent, ForwardedRef, KeyboardEvent, ReactNode } from 'react'
 import { forwardRef, useCallback, useRef, useState } from 'react'
 import type { XOR } from '../../types'
 import { Stack } from '../Stack'
@@ -13,7 +13,7 @@ import { ExpandableCardTitle } from './components/Title'
 const StyledArrowIcon = styled(ArrowDownIcon)``
 
 const DropableArea = styled.div`
-  height: 2px;
+  height: ${({ theme }) => theme.space['1']};
   border-top: 2px solid;
   border-color: transparent;
   padding: ${({ theme }) => theme.space['0.5']} 0;
@@ -36,12 +36,11 @@ const DropableArea = styled.div`
     border-color: inherit;
     border-radius: ${({ theme }) => theme.radii.circle};
     display: flex;
-    margin-top: -8px;
-    margin-left: -2px;
+    margin-top:  -${({ theme }) => theme.space['1']};
+    margin-left: -${({ theme }) => theme.space['0.25']};
   }
 `
 
-type DraggableListType = { value?: string }
 const StyledSummary = styled.summary`
   display: flex;
   flex-direction: row;
@@ -84,6 +83,8 @@ const StyledDetails = styled.details`
 
   &[data-clicking="true"] {
     box-shadow: ${({ theme }) => `${theme.shadows.raised[0]}, ${theme.shadows.raised[1]}`};
+    border-color: ${({ theme }) => theme.colors.primary.border};
+
   }
 `
 const StyledStack = styled(Stack)`
@@ -103,13 +104,19 @@ const DragIconContainer = styled(Stack)`
   &[data-visible="true"] {
     opacity: 1;
   }
+  &:focus-within {
+    opacity: 1;
+  }
 
   &:active {
     cursor: grabbing;
+    opacity: 1;
   }
 `
+
 export const EXPANDABLE_CARD_SIZE = ['medium', 'large'] as const
 
+type DraggableListType = { value?: string }
 type ExpandableCardSize = (typeof EXPANDABLE_CARD_SIZE)[number]
 
 type DraggableProps =
@@ -118,7 +125,14 @@ type DraggableProps =
       value: string
       draggableTooltip?: string
       onDrop?: (newValue: string, oldValue: string) => void
-      index?: number
+      /**
+       * Index of the card in the  of draggable cards
+       */
+      index: number
+      /**
+       * You this prop to handle drag and drop with the keyboard (accessibility)
+       */
+      onKeyDown?: (event: KeyboardEvent<HTMLDivElement>) => void
     }
   | {
       draggable?: never
@@ -126,6 +140,7 @@ type DraggableProps =
       draggableTooltip?: never
       onDrop?: never
       index?: never
+      onKeyDown?: never
     }
 type CommonProps = {
   header: ReactNode
@@ -156,6 +171,7 @@ const BaseExpandableCard = forwardRef(
       draggableTooltip = 'Click and drag to move',
       onDrop,
       index,
+      onKeyDown,
       'data-testid': dataTestId,
     }: ExpandableCardProps,
     ref: ForwardedRef<HTMLDetailsElement>,
@@ -208,8 +224,6 @@ const BaseExpandableCard = forwardRef(
         }
 
         if (event?.dataTransfer) {
-          // eslint-disable-next-line no-param-reassign
-          event.currentTarget.style.borderColor = 'transparent'
           const data = JSON.parse(
             event.dataTransfer.getData('text'),
           ) as DraggableListType
@@ -242,6 +256,21 @@ const BaseExpandableCard = forwardRef(
             onMouseDown={() => setClicking(true)}
             onMouseUp={() => setClicking(false)}
             data-testid={`draggable-icon-${value}`}
+            onKeyDown={event => {
+              if (event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault()
+                if (clicking && containerRef.current) {
+                  setClicking(false)
+                  setIsHovered(false)
+                } else if (containerRef.current) {
+                  setClicking(true)
+                  setIsHovered(true)
+                }
+              }
+              if (clicking) {
+                onKeyDown?.(event)
+              }
+            }}
           >
             <Tooltip
               text={draggableTooltip}
@@ -307,6 +336,7 @@ const BaseExpandableCard = forwardRef(
             onDragOver={event => onDrag(event, theme.colors.primary.border)}
             onDragLeave={event => onDrag(event, 'transparent')}
             onDrop={handleDrop}
+            data-testid={`${value}-dropable-area`}
           />
         ) : null}
         {draggable && index === 0 ? (
