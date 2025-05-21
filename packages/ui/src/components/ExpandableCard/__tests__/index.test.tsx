@@ -1,4 +1,4 @@
-import { screen, waitFor } from '@testing-library/react'
+import { fireEvent, screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme } from '@utils/test'
 import { describe, expect, test, vi } from 'vitest'
@@ -58,14 +58,17 @@ describe('ExpandableCard', () => {
 
   test('works properly draggable', async () => {
     const onDrop = vi.fn()
-    renderWithTheme(
-      ['card-1', 'card-2', 'card-3'].map(name => (
+    const onKeyDown = vi.fn()
+    const { asFragment } = renderWithTheme(
+      ['card-1', 'card-2', 'card-3'].map((name, index) => (
         <ExpandableCard
           key={name}
           header="Title"
           draggable
           value={name}
           onDrop={onDrop}
+          onKeyDown={onKeyDown}
+          index={index}
         >
           Content
         </ExpandableCard>
@@ -73,9 +76,30 @@ describe('ExpandableCard', () => {
     )
     const draggableCard1 = screen.getByTestId('draggable-icon-card-1')
     const draggableCard2 = screen.getByTestId('draggable-icon-card-2')
+    const dropZone = screen.getByTestId('card-1-dropable-area')
     await userEvent.hover(draggableCard1)
     expect(draggableCard1).toBeVisible()
-    expect(draggableCard2).not.toBeVisible()
+
+    const data = JSON.stringify({ value: 'card-2' })
+    fireEvent.dragStart(draggableCard2, { dataTransfer: { setData: vi.fn() } })
+    fireEvent.dragEnter(draggableCard1)
+    fireEvent.dragLeave(draggableCard1)
+    fireEvent.dragOver(dropZone)
+    fireEvent.drop(dropZone, {
+      dataTransfer: {
+        getData: (type: string) => (type === 'text' ? data : ''),
+      },
+    })
+
+    expect(onDrop).toHaveBeenCalledWith('card-1', 'card-2')
+
+    fireEvent.focus(draggableCard1)
+    await userEvent.tab()
+    await userEvent.keyboard('[Enter]')
+    await userEvent.keyboard('[ArrowUp]')
+    expect(onKeyDown).toHaveBeenCalledOnce()
+
+    expect(asFragment()).toMatchSnapshot()
   })
 
   test('works properly when controlled and open with key interaction', async () => {
