@@ -7,6 +7,7 @@ import { Pie } from '@nivo/pie'
 import type { ReactNode } from 'react'
 import { useCallback, useState } from 'react'
 import { getLegendColor } from '../../helpers/legend'
+import { getNivoTheme } from '../../helpers/nivoTheme'
 import { Text } from '../Text'
 import Legends from './Legends'
 import type { Data } from './types'
@@ -148,6 +149,7 @@ export const PieChart = ({
             }
           }}
           onMouseLeave={() => setCurrentFocusIndex(undefined)}
+          theme={getNivoTheme(theme)}
           {...chartProps}
         />
         {content ? <StyledContent>{content}</StyledContent> : null}
