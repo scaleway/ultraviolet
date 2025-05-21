@@ -27,10 +27,10 @@ export const Draggable: StoryFn<typeof ExpandableCard> = args => {
     <Stack gap={1}>
       {cards.map((name, index) => {
         const onKeyDown = (event: KeyboardEvent<HTMLDivElement>) => {
-          if (event.key === 'ArrowUp') {
+          if (event.key === 'ArrowUp' && index > 0) {
             event.preventDefault()
             onDrop(cards[index], cards[index - 1])
-          } else if (event.key === 'ArrowDown') {
+          } else if (event.key === 'ArrowDown' && index < cards.length - 1) {
             event.preventDefault()
             onDrop(cards[index + 1], cards[index])
           }
