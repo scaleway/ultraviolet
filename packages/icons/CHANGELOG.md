@@ -1,5 +1,29 @@
 # Change Log
 
+## 4.0.0-beta.2
+
+### Major Changes
+
+- [`da3e7f7`](https://github.com/scaleway/ultraviolet/commit/da3e7f7c41ce6bad2c0dcd9a05693cee587f2ef3) Thanks [@matthprost](https://github.com/matthprost)! - ⚠️ BREAKING CHANGES
+
+  - `GoldSupportProductIcon` => Replaced by `BusinessSupportProductIcon`
+  - `PlatinumSupportProductIcon` => Replace by `EnterpriseSupportProductIcon`
+  - `SilverSupportProductIcon` => Replaced by `AdvancedSupportProductIcon`
+
+  New product icons:
+
+  - `VpnConnectionProductIcon`
+  - `VpnCustomerGatewayProductIcon`
+
+  New system icon:
+
+  - `ClichouseIcon`
+
+### Patch Changes
+
+- Updated dependencies [[`421d104`](https://github.com/scaleway/ultraviolet/commit/421d104ae17d8c805d981ed214417916f73d561c)]:
+  - @ultraviolet/themes@2.0.0-beta.1
+
 ## 4.0.0-beta.1
 
 ### Patch Changes
