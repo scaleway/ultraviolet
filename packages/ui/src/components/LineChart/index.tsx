@@ -8,6 +8,7 @@ import type { ScaleSpec } from '@nivo/scales'
 import type { ComponentProps } from 'react'
 import { useEffect, useState } from 'react'
 import { getLegendColor } from '../../helpers/legend'
+import { getNivoTheme } from '../../helpers/nivoTheme'
 import { CustomLegend } from './CustomLegend'
 import { LineChartTooltip } from './Tooltip'
 import { getMaxChartValue, getMinChartValue } from './helpers'
@@ -70,41 +71,6 @@ export const LineChart = ({
     })),
   }
 
-  const chartTheme = {
-    axis: {
-      ticks: {
-        line: {
-          stroke: theme.colors.neutral.backgroundStrong,
-          strokeWidth: 1,
-        },
-        text: {
-          fill: theme.colors.neutral.text,
-          fontSize: theme.typography.bodySmall.fontSize,
-          fontFamily: theme.typography.bodySmall.fontFamily,
-          fontWeight: theme.typography.bodySmall.fontWeight,
-          lineHeight: theme.typography.bodySmall.lineHeight,
-          letterSpacing: theme.typography.bodySmall.letterSpacing,
-        },
-      },
-      legends: {
-        text: {
-          fill: theme.colors.neutral.text,
-          fontFamily: theme.typography.body.fontFamily,
-          fontSize: theme.typography.bodySmall.fontSize,
-          fontWeight: theme.typography.bodySmall.fontWeight,
-          lineHeight: theme.typography.bodySmall.lineHeight,
-          letterSpacing: theme.typography.bodySmall.letterSpacing,
-        },
-      },
-    },
-    fontFamily: theme.typography.body.fontFamily,
-    fontSize: theme.typography.bodySmall.fontSize,
-    fontWeight: theme.typography.bodySmall.fontWeight,
-    lineHeight: theme.typography.bodySmall.lineHeight,
-    letterSpacing: theme.typography.bodySmall.letterSpacing,
-    textColor: theme.colors.neutral.text,
-  }
-
   const [selected, setSelected] = useState(
     dataset.datasets?.map(({ id }, index) => `${id}${index}`),
   )
@@ -155,7 +121,7 @@ export const LineChart = ({
           }}
           pointSize={10}
           useMesh
-          theme={chartTheme}
+          theme={getNivoTheme(theme)}
           curve="monotoneX"
           tooltip={LineChartTooltip}
           data-testid={dataTestId}
