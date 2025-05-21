@@ -24,15 +24,6 @@ export const List = (args: ComponentProps<typeof SupportPlansWire>) =>
     )
   })
 
-List.parameters = {
-  docs: {
-    description: {
-      story:
-        'Two type of icons are cohexisting awaiting for a major release. The legacy ones that should be avoided as much as possible as it will be removed later. And the new ones that are shown below with the correct way to import them. Both are shown here to check the render of both.',
-    },
-  },
-}
-
 List.args = {
   width: 200,
   height: 200,
