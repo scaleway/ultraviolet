@@ -96,11 +96,11 @@ exports[`TimeInput > renders can move with arrow keys - 12-hour format 1`] = `
 
 .emotion-5 {
   color: #3f4250;
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 1.25rem;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -109,11 +109,11 @@ exports[`TimeInput > renders can move with arrow keys - 12-hour format 1`] = `
 
 .emotion-5 {
   color: #3f4250;
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 1.25rem;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -412,6 +412,10 @@ exports[`TimeInput > renders can move with arrow keys - 12-hour format 1`] = `
 
 .emotion-15[data-period="true"] {
   color: #727683;
+}
+
+.emotion-15[data-period="true"][data-size="large"] {
+  width: calc(1.5625rem + 0.125rem);
 }
 
 .emotion-15::-moz-selection {
@@ -468,6 +472,10 @@ exports[`TimeInput > renders can move with arrow keys - 12-hour format 1`] = `
 
 .emotion-15[data-period="true"] {
   color: #727683;
+}
+
+.emotion-15[data-period="true"][data-size="large"] {
+  width: calc(1.5625rem + 0.125rem);
 }
 
 .emotion-15::-moz-selection {
@@ -554,7 +562,7 @@ exports[`TimeInput > renders can move with arrow keys - 12-hour format 1`] = `
         data-disabled="false"
         data-error="false"
         data-readonly="false"
-        data-size="medium"
+        data-size="large"
       >
         <div
           class="emotion-11 emotion-1"
@@ -568,7 +576,7 @@ exports[`TimeInput > renders can move with arrow keys - 12-hour format 1`] = `
               aria-valuenow="12"
               autocomplete="false"
               class="emotion-15 emotion-16"
-              data-size="medium"
+              data-size="large"
               data-testid="hours-input"
               placeholder="00"
               role="spinbutton"
@@ -589,7 +597,7 @@ exports[`TimeInput > renders can move with arrow keys - 12-hour format 1`] = `
               aria-valuenow="23"
               autocomplete="false"
               class="emotion-15 emotion-16"
-              data-size="medium"
+              data-size="large"
               data-testid="minutes-input"
               placeholder="00"
               role="spinbutton"
@@ -610,7 +618,7 @@ exports[`TimeInput > renders can move with arrow keys - 12-hour format 1`] = `
               aria-valuenow="14"
               autocomplete="false"
               class="emotion-15 emotion-16"
-              data-size="medium"
+              data-size="large"
               data-testid="seconds-input"
               placeholder="00"
               role="spinbutton"
@@ -625,7 +633,7 @@ exports[`TimeInput > renders can move with arrow keys - 12-hour format 1`] = `
             autocomplete="false"
             class="emotion-15 emotion-16"
             data-period="true"
-            data-size="medium"
+            data-size="large"
             data-testid="am-pm-input"
             placeholder="AM"
             role="spinbutton"
@@ -739,11 +747,11 @@ exports[`TimeInput > renders can move with arrow keys - 24-hour format 1`] = `
 
 .emotion-5 {
   color: #3f4250;
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 1.25rem;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -752,11 +760,11 @@ exports[`TimeInput > renders can move with arrow keys - 24-hour format 1`] = `
 
 .emotion-5 {
   color: #3f4250;
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 1.25rem;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1055,6 +1063,10 @@ exports[`TimeInput > renders can move with arrow keys - 24-hour format 1`] = `
 
 .emotion-15[data-period="true"] {
   color: #727683;
+}
+
+.emotion-15[data-period="true"][data-size="large"] {
+  width: calc(1.5625rem + 0.125rem);
 }
 
 .emotion-15::-moz-selection {
@@ -1111,6 +1123,10 @@ exports[`TimeInput > renders can move with arrow keys - 24-hour format 1`] = `
 
 .emotion-15[data-period="true"] {
   color: #727683;
+}
+
+.emotion-15[data-period="true"][data-size="large"] {
+  width: calc(1.5625rem + 0.125rem);
 }
 
 .emotion-15::-moz-selection {
@@ -1335,7 +1351,7 @@ exports[`TimeInput > renders can move with arrow keys - 24-hour format 1`] = `
         data-disabled="false"
         data-error="false"
         data-readonly="false"
-        data-size="medium"
+        data-size="large"
       >
         <div
           class="emotion-11 emotion-1"
@@ -1349,7 +1365,7 @@ exports[`TimeInput > renders can move with arrow keys - 24-hour format 1`] = `
               aria-valuenow="23"
               autocomplete="false"
               class="emotion-15 emotion-16"
-              data-size="medium"
+              data-size="large"
               data-testid="hours-input"
               placeholder="00"
               role="spinbutton"
@@ -1370,7 +1386,7 @@ exports[`TimeInput > renders can move with arrow keys - 24-hour format 1`] = `
               aria-valuenow="23"
               autocomplete="false"
               class="emotion-15 emotion-16"
-              data-size="medium"
+              data-size="large"
               data-testid="minutes-input"
               placeholder="00"
               role="spinbutton"
@@ -1391,7 +1407,7 @@ exports[`TimeInput > renders can move with arrow keys - 24-hour format 1`] = `
               aria-valuenow="14"
               autocomplete="false"
               class="emotion-15 emotion-16"
-              data-size="medium"
+              data-size="large"
               data-testid="seconds-input"
               placeholder="00"
               role="spinbutton"
@@ -1456,11 +1472,11 @@ exports[`TimeInput > renders correctly clearable 1`] = `
 
 .emotion-3 {
   color: #3f4250;
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 1.25rem;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1627,6 +1643,10 @@ exports[`TimeInput > renders correctly clearable 1`] = `
   color: #727683;
 }
 
+.emotion-11[data-period="true"][data-size="large"] {
+  width: calc(1.5625rem + 0.125rem);
+}
+
 .emotion-11::-moz-selection {
   background: none;
 }
@@ -1757,7 +1777,7 @@ exports[`TimeInput > renders correctly clearable 1`] = `
         data-disabled="false"
         data-error="false"
         data-readonly="false"
-        data-size="medium"
+        data-size="large"
       >
         <div
           class="emotion-7 emotion-1"
@@ -1770,7 +1790,7 @@ exports[`TimeInput > renders correctly clearable 1`] = `
               aria-valuemin="0"
               autocomplete="false"
               class="emotion-11 emotion-12"
-              data-size="medium"
+              data-size="large"
               data-testid="hours-input"
               placeholder="00"
               role="spinbutton"
@@ -1790,7 +1810,7 @@ exports[`TimeInput > renders correctly clearable 1`] = `
               aria-valuemin="0"
               autocomplete="false"
               class="emotion-11 emotion-12"
-              data-size="medium"
+              data-size="large"
               data-testid="minutes-input"
               placeholder="00"
               role="spinbutton"
@@ -1810,7 +1830,7 @@ exports[`TimeInput > renders correctly clearable 1`] = `
               aria-valuemin="0"
               autocomplete="false"
               class="emotion-11 emotion-12"
-              data-size="medium"
+              data-size="large"
               data-testid="seconds-input"
               placeholder="00"
               role="spinbutton"
@@ -1939,11 +1959,11 @@ exports[`TimeInput > renders correctly clearable 2`] = `
 
 .emotion-5 {
   color: #3f4250;
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 1.25rem;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1952,11 +1972,11 @@ exports[`TimeInput > renders correctly clearable 2`] = `
 
 .emotion-5 {
   color: #3f4250;
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 1.25rem;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -2255,6 +2275,10 @@ exports[`TimeInput > renders correctly clearable 2`] = `
 
 .emotion-15[data-period="true"] {
   color: #727683;
+}
+
+.emotion-15[data-period="true"][data-size="large"] {
+  width: calc(1.5625rem + 0.125rem);
 }
 
 .emotion-15::-moz-selection {
@@ -2311,6 +2335,10 @@ exports[`TimeInput > renders correctly clearable 2`] = `
 
 .emotion-15[data-period="true"] {
   color: #727683;
+}
+
+.emotion-15[data-period="true"][data-size="large"] {
+  width: calc(1.5625rem + 0.125rem);
 }
 
 .emotion-15::-moz-selection {
@@ -2535,7 +2563,7 @@ exports[`TimeInput > renders correctly clearable 2`] = `
         data-disabled="false"
         data-error="false"
         data-readonly="false"
-        data-size="medium"
+        data-size="large"
       >
         <div
           class="emotion-11 emotion-1"
@@ -2549,7 +2577,7 @@ exports[`TimeInput > renders correctly clearable 2`] = `
               aria-valuenow="12"
               autocomplete="false"
               class="emotion-15 emotion-16"
-              data-size="medium"
+              data-size="large"
               data-testid="hours-input"
               placeholder="00"
               role="spinbutton"
@@ -2570,7 +2598,7 @@ exports[`TimeInput > renders correctly clearable 2`] = `
               aria-valuenow="0"
               autocomplete="false"
               class="emotion-15 emotion-16"
-              data-size="medium"
+              data-size="large"
               data-testid="minutes-input"
               placeholder="00"
               role="spinbutton"
@@ -2591,7 +2619,7 @@ exports[`TimeInput > renders correctly clearable 2`] = `
               aria-valuenow="0"
               autocomplete="false"
               class="emotion-15 emotion-16"
-              data-size="medium"
+              data-size="large"
               data-testid="seconds-input"
               placeholder="00"
               role="spinbutton"
@@ -2606,7 +2634,7 @@ exports[`TimeInput > renders correctly clearable 2`] = `
             autocomplete="false"
             class="emotion-15 emotion-16"
             data-period="true"
-            data-size="medium"
+            data-size="large"
             data-testid="am-pm-input"
             placeholder="AM"
             role="spinbutton"
@@ -2739,11 +2767,11 @@ exports[`TimeInput > renders correctly controlled - 12-hour format 1`] = `
 
 .emotion-5 {
   color: #3f4250;
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 1.25rem;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -2752,11 +2780,11 @@ exports[`TimeInput > renders correctly controlled - 12-hour format 1`] = `
 
 .emotion-5 {
   color: #3f4250;
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 1.25rem;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -3055,6 +3083,10 @@ exports[`TimeInput > renders correctly controlled - 12-hour format 1`] = `
 
 .emotion-15[data-period="true"] {
   color: #727683;
+}
+
+.emotion-15[data-period="true"][data-size="large"] {
+  width: calc(1.5625rem + 0.125rem);
 }
 
 .emotion-15::-moz-selection {
@@ -3111,6 +3143,10 @@ exports[`TimeInput > renders correctly controlled - 12-hour format 1`] = `
 
 .emotion-15[data-period="true"] {
   color: #727683;
+}
+
+.emotion-15[data-period="true"][data-size="large"] {
+  width: calc(1.5625rem + 0.125rem);
 }
 
 .emotion-15::-moz-selection {
@@ -3197,7 +3233,7 @@ exports[`TimeInput > renders correctly controlled - 12-hour format 1`] = `
         data-disabled="false"
         data-error="false"
         data-readonly="false"
-        data-size="medium"
+        data-size="large"
       >
         <div
           class="emotion-11 emotion-1"
@@ -3211,7 +3247,7 @@ exports[`TimeInput > renders correctly controlled - 12-hour format 1`] = `
               aria-valuenow="12"
               autocomplete="false"
               class="emotion-15 emotion-16"
-              data-size="medium"
+              data-size="large"
               data-testid="hours-input"
               placeholder="00"
               role="spinbutton"
@@ -3232,7 +3268,7 @@ exports[`TimeInput > renders correctly controlled - 12-hour format 1`] = `
               aria-valuenow="23"
               autocomplete="false"
               class="emotion-15 emotion-16"
-              data-size="medium"
+              data-size="large"
               data-testid="minutes-input"
               placeholder="00"
               role="spinbutton"
@@ -3253,7 +3289,7 @@ exports[`TimeInput > renders correctly controlled - 12-hour format 1`] = `
               aria-valuenow="7"
               autocomplete="false"
               class="emotion-15 emotion-16"
-              data-size="medium"
+              data-size="large"
               data-testid="seconds-input"
               placeholder="00"
               role="spinbutton"
@@ -3268,7 +3304,7 @@ exports[`TimeInput > renders correctly controlled - 12-hour format 1`] = `
             autocomplete="false"
             class="emotion-15 emotion-16"
             data-period="true"
-            data-size="medium"
+            data-size="large"
             data-testid="am-pm-input"
             placeholder="AM"
             role="spinbutton"
@@ -3382,11 +3418,11 @@ exports[`TimeInput > renders correctly controlled - 24-hours format 1`] = `
 
 .emotion-5 {
   color: #3f4250;
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 1.25rem;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -3395,11 +3431,11 @@ exports[`TimeInput > renders correctly controlled - 24-hours format 1`] = `
 
 .emotion-5 {
   color: #3f4250;
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 1.25rem;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -3698,6 +3734,10 @@ exports[`TimeInput > renders correctly controlled - 24-hours format 1`] = `
 
 .emotion-15[data-period="true"] {
   color: #727683;
+}
+
+.emotion-15[data-period="true"][data-size="large"] {
+  width: calc(1.5625rem + 0.125rem);
 }
 
 .emotion-15::-moz-selection {
@@ -3754,6 +3794,10 @@ exports[`TimeInput > renders correctly controlled - 24-hours format 1`] = `
 
 .emotion-15[data-period="true"] {
   color: #727683;
+}
+
+.emotion-15[data-period="true"][data-size="large"] {
+  width: calc(1.5625rem + 0.125rem);
 }
 
 .emotion-15::-moz-selection {
@@ -3840,7 +3884,7 @@ exports[`TimeInput > renders correctly controlled - 24-hours format 1`] = `
         data-disabled="false"
         data-error="false"
         data-readonly="false"
-        data-size="medium"
+        data-size="large"
       >
         <div
           class="emotion-11 emotion-1"
@@ -3854,7 +3898,7 @@ exports[`TimeInput > renders correctly controlled - 24-hours format 1`] = `
               aria-valuenow="23"
               autocomplete="false"
               class="emotion-15 emotion-16"
-              data-size="medium"
+              data-size="large"
               data-testid="hours-input"
               placeholder="00"
               role="spinbutton"
@@ -3875,7 +3919,7 @@ exports[`TimeInput > renders correctly controlled - 24-hours format 1`] = `
               aria-valuenow="32"
               autocomplete="false"
               class="emotion-15 emotion-16"
-              data-size="medium"
+              data-size="large"
               data-testid="minutes-input"
               placeholder="00"
               role="spinbutton"
@@ -3896,7 +3940,7 @@ exports[`TimeInput > renders correctly controlled - 24-hours format 1`] = `
               aria-valuenow="31"
               autocomplete="false"
               class="emotion-15 emotion-16"
-              data-size="medium"
+              data-size="large"
               data-testid="seconds-input"
               placeholder="00"
               role="spinbutton"
@@ -3942,11 +3986,11 @@ exports[`TimeInput > renders correctly disabled 1`] = `
 
 .emotion-3 {
   color: #3f4250;
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 1.25rem;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -4113,6 +4157,10 @@ exports[`TimeInput > renders correctly disabled 1`] = `
   color: #727683;
 }
 
+.emotion-11[data-period="true"][data-size="large"] {
+  width: calc(1.5625rem + 0.125rem);
+}
+
 .emotion-11::-moz-selection {
   background: none;
 }
@@ -4151,7 +4199,7 @@ exports[`TimeInput > renders correctly disabled 1`] = `
         data-disabled="true"
         data-error="false"
         data-readonly="false"
-        data-size="medium"
+        data-size="large"
       >
         <div
           class="emotion-7 emotion-1"
@@ -4164,7 +4212,7 @@ exports[`TimeInput > renders correctly disabled 1`] = `
               aria-valuemin="0"
               autocomplete="false"
               class="emotion-11 emotion-12"
-              data-size="medium"
+              data-size="large"
               data-testid="hours-input"
               disabled=""
               placeholder="00"
@@ -4185,7 +4233,7 @@ exports[`TimeInput > renders correctly disabled 1`] = `
               aria-valuemin="0"
               autocomplete="false"
               class="emotion-11 emotion-12"
-              data-size="medium"
+              data-size="large"
               data-testid="minutes-input"
               disabled=""
               placeholder="00"
@@ -4206,7 +4254,7 @@ exports[`TimeInput > renders correctly disabled 1`] = `
               aria-valuemin="0"
               autocomplete="false"
               class="emotion-11 emotion-12"
-              data-size="medium"
+              data-size="large"
               data-testid="seconds-input"
               disabled=""
               placeholder="00"
@@ -4419,6 +4467,10 @@ exports[`TimeInput > renders correctly large 1`] = `
   color: #727683;
 }
 
+.emotion-11[data-period="true"][data-size="large"] {
+  width: calc(1.5625rem + 0.125rem);
+}
+
 .emotion-11::-moz-selection {
   background: none;
 }
@@ -4551,11 +4603,11 @@ exports[`TimeInput > renders correctly readOnly 1`] = `
 
 .emotion-3 {
   color: #3f4250;
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 1.25rem;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -4722,6 +4774,10 @@ exports[`TimeInput > renders correctly readOnly 1`] = `
   color: #727683;
 }
 
+.emotion-11[data-period="true"][data-size="large"] {
+  width: calc(1.5625rem + 0.125rem);
+}
+
 .emotion-11::-moz-selection {
   background: none;
 }
@@ -4760,7 +4816,7 @@ exports[`TimeInput > renders correctly readOnly 1`] = `
         data-disabled="false"
         data-error="false"
         data-readonly="true"
-        data-size="medium"
+        data-size="large"
       >
         <div
           class="emotion-7 emotion-1"
@@ -4773,7 +4829,7 @@ exports[`TimeInput > renders correctly readOnly 1`] = `
               aria-valuemin="0"
               autocomplete="false"
               class="emotion-11 emotion-12"
-              data-size="medium"
+              data-size="large"
               data-testid="hours-input"
               placeholder="00"
               readonly=""
@@ -4794,7 +4850,7 @@ exports[`TimeInput > renders correctly readOnly 1`] = `
               aria-valuemin="0"
               autocomplete="false"
               class="emotion-11 emotion-12"
-              data-size="medium"
+              data-size="large"
               data-testid="minutes-input"
               placeholder="00"
               readonly=""
@@ -4815,7 +4871,7 @@ exports[`TimeInput > renders correctly readOnly 1`] = `
               aria-valuemin="0"
               autocomplete="false"
               class="emotion-11 emotion-12"
-              data-size="medium"
+              data-size="large"
               data-testid="seconds-input"
               placeholder="00"
               readonly=""
@@ -4880,11 +4936,11 @@ exports[`TimeInput > renders correctly required 1`] = `
 
 .emotion-5 {
   color: #3f4250;
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 1.25rem;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -4893,11 +4949,11 @@ exports[`TimeInput > renders correctly required 1`] = `
 
 .emotion-7 {
   color: #b3144d;
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 1.25rem;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -5063,6 +5119,10 @@ exports[`TimeInput > renders correctly required 1`] = `
   color: #727683;
 }
 
+.emotion-15[data-period="true"][data-size="large"] {
+  width: calc(1.5625rem + 0.125rem);
+}
+
 .emotion-15::-moz-selection {
   background: none;
 }
@@ -5111,7 +5171,7 @@ exports[`TimeInput > renders correctly required 1`] = `
         data-disabled="false"
         data-error="false"
         data-readonly="false"
-        data-size="medium"
+        data-size="large"
       >
         <div
           class="emotion-11 emotion-1"
@@ -5124,7 +5184,7 @@ exports[`TimeInput > renders correctly required 1`] = `
               aria-valuemin="0"
               autocomplete="false"
               class="emotion-15 emotion-16"
-              data-size="medium"
+              data-size="large"
               data-testid="hours-input"
               placeholder="00"
               role="spinbutton"
@@ -5144,7 +5204,7 @@ exports[`TimeInput > renders correctly required 1`] = `
               aria-valuemin="0"
               autocomplete="false"
               class="emotion-15 emotion-16"
-              data-size="medium"
+              data-size="large"
               data-testid="minutes-input"
               placeholder="00"
               role="spinbutton"
@@ -5164,7 +5224,7 @@ exports[`TimeInput > renders correctly required 1`] = `
               aria-valuemin="0"
               autocomplete="false"
               class="emotion-15 emotion-16"
-              data-size="medium"
+              data-size="large"
               data-testid="seconds-input"
               placeholder="00"
               role="spinbutton"
@@ -5376,6 +5436,10 @@ exports[`TimeInput > renders correctly small 1`] = `
   color: #727683;
 }
 
+.emotion-11[data-period="true"][data-size="large"] {
+  width: calc(1.5625rem + 0.125rem);
+}
+
 .emotion-11::-moz-selection {
   background: none;
 }
@@ -5508,11 +5572,11 @@ exports[`TimeInput > renders correctly with 12-hour format 1`] = `
 
 .emotion-3 {
   color: #3f4250;
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 1.25rem;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -5679,6 +5743,10 @@ exports[`TimeInput > renders correctly with 12-hour format 1`] = `
   color: #727683;
 }
 
+.emotion-11[data-period="true"][data-size="large"] {
+  width: calc(1.5625rem + 0.125rem);
+}
+
 .emotion-11::-moz-selection {
   background: none;
 }
@@ -5717,7 +5785,7 @@ exports[`TimeInput > renders correctly with 12-hour format 1`] = `
         data-disabled="false"
         data-error="false"
         data-readonly="false"
-        data-size="medium"
+        data-size="large"
       >
         <div
           class="emotion-7 emotion-1"
@@ -5730,7 +5798,7 @@ exports[`TimeInput > renders correctly with 12-hour format 1`] = `
               aria-valuemin="1"
               autocomplete="false"
               class="emotion-11 emotion-12"
-              data-size="medium"
+              data-size="large"
               data-testid="hours-input"
               placeholder="00"
               role="spinbutton"
@@ -5750,7 +5818,7 @@ exports[`TimeInput > renders correctly with 12-hour format 1`] = `
               aria-valuemin="0"
               autocomplete="false"
               class="emotion-11 emotion-12"
-              data-size="medium"
+              data-size="large"
               data-testid="minutes-input"
               placeholder="00"
               role="spinbutton"
@@ -5770,7 +5838,7 @@ exports[`TimeInput > renders correctly with 12-hour format 1`] = `
               aria-valuemin="0"
               autocomplete="false"
               class="emotion-11 emotion-12"
-              data-size="medium"
+              data-size="large"
               data-testid="seconds-input"
               placeholder="00"
               role="spinbutton"
@@ -5784,7 +5852,7 @@ exports[`TimeInput > renders correctly with 12-hour format 1`] = `
             autocomplete="false"
             class="emotion-11 emotion-12"
             data-period="true"
-            data-size="medium"
+            data-size="large"
             data-testid="am-pm-input"
             placeholder="AM"
             role="spinbutton"
@@ -5981,6 +6049,10 @@ exports[`TimeInput > renders correctly with base props 1`] = `
   color: #727683;
 }
 
+.emotion-8[data-period="true"][data-size="large"] {
+  width: calc(1.5625rem + 0.125rem);
+}
+
 .emotion-8::-moz-selection {
   background: none;
 }
@@ -6013,7 +6085,7 @@ exports[`TimeInput > renders correctly with base props 1`] = `
         data-disabled="false"
         data-error="false"
         data-readonly="false"
-        data-size="medium"
+        data-size="large"
       >
         <div
           class="emotion-4 emotion-1"
@@ -6026,7 +6098,7 @@ exports[`TimeInput > renders correctly with base props 1`] = `
               aria-valuemin="0"
               autocomplete="false"
               class="emotion-8 emotion-9"
-              data-size="medium"
+              data-size="large"
               data-testid="hours-input"
               placeholder="00"
               role="spinbutton"
@@ -6046,7 +6118,7 @@ exports[`TimeInput > renders correctly with base props 1`] = `
               aria-valuemin="0"
               autocomplete="false"
               class="emotion-8 emotion-9"
-              data-size="medium"
+              data-size="large"
               data-testid="minutes-input"
               placeholder="00"
               role="spinbutton"
@@ -6066,7 +6138,7 @@ exports[`TimeInput > renders correctly with base props 1`] = `
               aria-valuemin="0"
               autocomplete="false"
               class="emotion-8 emotion-9"
-              data-size="medium"
+              data-size="large"
               data-testid="seconds-input"
               placeholder="00"
               role="spinbutton"
@@ -6107,11 +6179,11 @@ exports[`TimeInput > renders correctly with error 1`] = `
 
 .emotion-3 {
   color: #3f4250;
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 1.25rem;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -6278,6 +6350,10 @@ exports[`TimeInput > renders correctly with error 1`] = `
   color: #727683;
 }
 
+.emotion-11[data-period="true"][data-size="large"] {
+  width: calc(1.5625rem + 0.125rem);
+}
+
 .emotion-11::-moz-selection {
   background: none;
 }
@@ -6365,7 +6441,7 @@ exports[`TimeInput > renders correctly with error 1`] = `
         data-disabled="false"
         data-error="true"
         data-readonly="false"
-        data-size="medium"
+        data-size="large"
       >
         <div
           class="emotion-7 emotion-1"
@@ -6378,7 +6454,7 @@ exports[`TimeInput > renders correctly with error 1`] = `
               aria-valuemin="0"
               autocomplete="false"
               class="emotion-11 emotion-12"
-              data-size="medium"
+              data-size="large"
               data-testid="hours-input"
               placeholder="00"
               role="spinbutton"
@@ -6398,7 +6474,7 @@ exports[`TimeInput > renders correctly with error 1`] = `
               aria-valuemin="0"
               autocomplete="false"
               class="emotion-11 emotion-12"
-              data-size="medium"
+              data-size="large"
               data-testid="minutes-input"
               placeholder="00"
               role="spinbutton"
@@ -6418,7 +6494,7 @@ exports[`TimeInput > renders correctly with error 1`] = `
               aria-valuemin="0"
               autocomplete="false"
               class="emotion-11 emotion-12"
-              data-size="medium"
+              data-size="large"
               data-testid="seconds-input"
               placeholder="00"
               role="spinbutton"
@@ -6501,11 +6577,11 @@ exports[`TimeInput > renders correctly with helper and error 1`] = `
 
 .emotion-5 {
   color: #3f4250;
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 1.25rem;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -6683,6 +6759,10 @@ exports[`TimeInput > renders correctly with helper and error 1`] = `
   color: #727683;
 }
 
+.emotion-15[data-period="true"][data-size="large"] {
+  width: calc(1.5625rem + 0.125rem);
+}
+
 .emotion-15::-moz-selection {
   background: none;
 }
@@ -6756,7 +6836,7 @@ exports[`TimeInput > renders correctly with helper and error 1`] = `
         data-disabled="false"
         data-error="true"
         data-readonly="false"
-        data-size="medium"
+        data-size="large"
       >
         <div
           class="emotion-11 emotion-1"
@@ -6769,7 +6849,7 @@ exports[`TimeInput > renders correctly with helper and error 1`] = `
               aria-valuemin="0"
               autocomplete="false"
               class="emotion-15 emotion-16"
-              data-size="medium"
+              data-size="large"
               data-testid="hours-input"
               placeholder="00"
               role="spinbutton"
@@ -6789,7 +6869,7 @@ exports[`TimeInput > renders correctly with helper and error 1`] = `
               aria-valuemin="0"
               autocomplete="false"
               class="emotion-15 emotion-16"
-              data-size="medium"
+              data-size="large"
               data-testid="minutes-input"
               placeholder="00"
               role="spinbutton"
@@ -6809,7 +6889,7 @@ exports[`TimeInput > renders correctly with helper and error 1`] = `
               aria-valuemin="0"
               autocomplete="false"
               class="emotion-15 emotion-16"
-              data-size="medium"
+              data-size="large"
               data-testid="seconds-input"
               placeholder="00"
               role="spinbutton"
@@ -6890,11 +6970,11 @@ exports[`TimeInput > renders correctly with label description and helper 1`] = `
 
 .emotion-5 {
   color: #3f4250;
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 1.25rem;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -7061,6 +7141,10 @@ exports[`TimeInput > renders correctly with label description and helper 1`] = `
   color: #727683;
 }
 
+.emotion-13[data-period="true"][data-size="large"] {
+  width: calc(1.5625rem + 0.125rem);
+}
+
 .emotion-13::-moz-selection {
   background: none;
 }
@@ -7118,7 +7202,7 @@ exports[`TimeInput > renders correctly with label description and helper 1`] = `
         data-disabled="false"
         data-error="false"
         data-readonly="false"
-        data-size="medium"
+        data-size="large"
       >
         <div
           class="emotion-9 emotion-1"
@@ -7131,7 +7215,7 @@ exports[`TimeInput > renders correctly with label description and helper 1`] = `
               aria-valuemin="0"
               autocomplete="false"
               class="emotion-13 emotion-14"
-              data-size="medium"
+              data-size="large"
               data-testid="hours-input"
               placeholder="00"
               role="spinbutton"
@@ -7151,7 +7235,7 @@ exports[`TimeInput > renders correctly with label description and helper 1`] = `
               aria-valuemin="0"
               autocomplete="false"
               class="emotion-13 emotion-14"
-              data-size="medium"
+              data-size="large"
               data-testid="minutes-input"
               placeholder="00"
               role="spinbutton"
@@ -7171,7 +7255,7 @@ exports[`TimeInput > renders correctly with label description and helper 1`] = `
               aria-valuemin="0"
               autocomplete="false"
               class="emotion-13 emotion-14"
-              data-size="medium"
+              data-size="large"
               data-testid="seconds-input"
               placeholder="00"
               role="spinbutton"

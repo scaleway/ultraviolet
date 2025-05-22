@@ -27,34 +27,20 @@ export const TextAreaField = <
   TFieldValues extends FieldValues,
   TFieldName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
 >({
-  autoFocus,
-  clearable,
-  className,
-  tabIndex,
   control,
-  'data-testid': dataTestId,
-  disabled,
-  helper,
   label,
-  labelDescription,
   onChange,
   minLength,
   maxLength,
   name,
-  onFocus,
   onBlur,
   onKeyDown,
-  maxRows,
-  placeholder,
-  readOnly,
   required,
-  rows,
-  success,
-  tooltip,
   regex: regexes,
   submitOnEnter,
   validate,
   'aria-label': ariaLabel,
+  ...props
 }: TextAreaFieldProps<TFieldValues, TFieldName>) => {
   const { getError } = useErrors()
 
@@ -98,11 +84,7 @@ export const TextAreaField = <
 
   return (
     <TextArea
-      autoFocus={autoFocus}
-      className={className}
-      clearable={clearable}
-      data-testid={dataTestId}
-      disabled={disabled}
+      {...props}
       error={getError(
         {
           regex: regexes,
@@ -113,8 +95,6 @@ export const TextAreaField = <
         },
         error,
       )}
-      helper={helper}
-      labelDescription={labelDescription}
       minLength={minLength}
       maxLength={maxLength}
       name={name}
@@ -126,16 +106,8 @@ export const TextAreaField = <
         field.onChange(event)
         onChange?.(event as PathValue<TFieldValues, Path<TFieldValues>>)
       }}
-      onFocus={onFocus}
       onKeyDown={onKeyDownHandler}
-      placeholder={placeholder}
-      readOnly={readOnly}
       required={required}
-      rows={rows}
-      maxRows={maxRows}
-      success={success}
-      tabIndex={tabIndex}
-      tooltip={tooltip}
       value={field.value}
       {...(label ? { label } : { 'aria-label': ariaLabel as string })}
     />

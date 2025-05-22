@@ -10,18 +10,8 @@ import type { BaseFieldProps } from '../../types'
 type ToggleFieldProps<
   TFieldValues extends FieldValues,
   TFieldName extends FieldPath<TFieldValues>,
-> = Omit<BaseFieldProps<TFieldValues, TFieldName>, 'label'> &
-  Pick<
-    ComponentProps<typeof Toggle>,
-    | 'disabled'
-    | 'label'
-    | 'size'
-    | 'tooltip'
-    | 'labelPosition'
-    | 'className'
-    | 'data-testid'
-    | 'aria-label'
-  > & {
+> = BaseFieldProps<TFieldValues, TFieldName> &
+  Omit<ComponentProps<typeof Toggle>, 'value' | 'onChange'> & {
     // oxlint-disable-next-line no-explicit-any
     parse?: (value: boolean) => any
     // oxlint-disable-next-line no-explicit-any
@@ -32,22 +22,17 @@ export const ToggleField = <
   TFieldValues extends FieldValues,
   TFieldName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
 >({
-  className,
-  disabled,
   label,
   name,
   control,
   onChange,
   required,
-  size,
-  tooltip,
-  labelPosition,
   parse,
   format,
-  'data-testid': dataTestId,
   shouldUnregister = false,
   validate,
   'aria-label': ariaLabel,
+  ...props
 }: ToggleFieldProps<TFieldValues, TFieldName>) => {
   const {
     field,
@@ -73,10 +58,10 @@ export const ToggleField = <
 
   return (
     <Toggle
+      {...props}
       name={field.name}
       ref={field.ref}
       checked={transformedValue()}
-      tooltip={tooltip}
       onChange={event => {
         if (parse) {
           field.onChange(parse(event.target.checked))
@@ -88,12 +73,7 @@ export const ToggleField = <
         )
       }}
       label={label}
-      size={size}
-      disabled={disabled}
-      labelPosition={labelPosition}
-      className={className}
       required={required}
-      data-testid={dataTestId}
       error={getError(
         { label: typeof label === 'string' ? label : (ariaLabel ?? name) },
         error,

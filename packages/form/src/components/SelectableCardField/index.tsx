@@ -4,38 +4,13 @@ import { SelectableCard } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
 import type { FieldPath, FieldValues, Path, PathValue } from 'react-hook-form'
 import { useController } from 'react-hook-form'
-import type { BaseFieldProps, LabelProp } from '../../types'
+import type { BaseFieldProps } from '../../types'
 
 type SelectableCardFieldProps<
   TFieldValues extends FieldValues,
   TFieldName extends FieldPath<TFieldValues>,
-> = Omit<BaseFieldProps<TFieldValues, TFieldName>, 'label'> &
-  Partial<
-    Pick<
-      ComponentProps<typeof SelectableCard>,
-      | 'disabled'
-      | 'onBlur'
-      | 'onFocus'
-      | 'showTick'
-      | 'type'
-      | 'id'
-      | 'children'
-      | 'tooltip'
-      | 'data-testid'
-    >
-  > & {
-    className?: string
-  } & (
-    | {
-        illustration?: ComponentProps<typeof SelectableCard>['illustration']
-        productIcon?: never
-      }
-    | {
-        productIcon?: ComponentProps<typeof SelectableCard>['productIcon']
-        illustration?: never
-      }
-  ) &
-  LabelProp
+> = BaseFieldProps<TFieldValues, TFieldName> &
+  Omit<ComponentProps<typeof SelectableCard>, 'name' | 'checked' | 'onChange'>
 
 export const SelectableCardField = <
   TFieldValues extends FieldValues,
@@ -45,23 +20,17 @@ export const SelectableCardField = <
   control,
   value,
   onChange,
-  showTick,
   type,
-  disabled,
-  children,
-  className,
   onFocus,
   onBlur,
   required,
-  tooltip,
-  id,
   label,
   shouldUnregister = false,
   validate,
   productIcon,
   illustration,
-  'data-testid': dataTestId,
   'aria-label': ariaLabel,
+  ...props
 }: SelectableCardFieldProps<TFieldValues, TFieldName>) => {
   const {
     field,
@@ -83,13 +52,11 @@ export const SelectableCardField = <
 
   return (
     <SelectableCard
+      {...props}
       {...(productIcon ? { productIcon } : { illustration })}
       {...(label ? { label } : { 'aria-label': ariaLabel as string })}
       isError={!!error}
-      showTick={showTick}
       checked={isChecked}
-      className={className}
-      disabled={disabled}
       onChange={event => {
         if (type === 'checkbox') {
           const fieldValue = (field.value ?? []) as string[]
@@ -120,13 +87,8 @@ export const SelectableCardField = <
         onFocus?.(event)
       }}
       type={type}
-      id={id}
-      tooltip={tooltip}
       value={value ?? ''}
       name={field.name}
-      data-testid={dataTestId}
-    >
-      {children}
-    </SelectableCard>
+    />
   )
 }

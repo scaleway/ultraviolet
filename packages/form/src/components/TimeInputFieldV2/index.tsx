@@ -24,27 +24,15 @@ export const TimeInputFieldV2 = <
   TFieldValues extends FieldValues,
   TFieldName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
 >({
-  id,
-  className,
   onChange,
-  placeholder,
-  disabled = false,
-  readOnly = false,
-  helper,
   label,
-  autoFocus,
   required = false,
-  'data-testid': dataTestId,
   name,
-  onFocus,
   onBlur,
-  clearable = false,
-  labelDescription,
-  size = 'medium',
   'aria-label': ariaLabel,
   shouldUnregister,
   control,
-  timeFormat,
+  ...props
 }: TimeInputFieldProps<TFieldValues, TFieldName>) => {
   const { getError } = useErrors()
 
@@ -62,12 +50,7 @@ export const TimeInputFieldV2 = <
 
   return (
     <TimeInputV2
-      autoFocus={autoFocus}
-      className={className}
-      clearable={clearable}
-      data-testid={dataTestId}
-      timeFormat={timeFormat}
-      disabled={disabled}
+      {...props}
       error={getError(
         {
           label: label ?? ariaLabel ?? name,
@@ -75,9 +58,7 @@ export const TimeInputFieldV2 = <
         },
         error,
       )}
-      helper={helper}
       label={label}
-      labelDescription={labelDescription}
       onBlur={event => {
         onBlur?.(event)
         field.onBlur()
@@ -86,15 +67,8 @@ export const TimeInputFieldV2 = <
         field.onChange(value)
         onChange?.(value as PathValue<TFieldValues, Path<TFieldValues>>)
       }}
-      onFocus={event => {
-        onFocus?.(event)
-      }}
-      placeholder={placeholder}
-      readOnly={readOnly}
       required={required}
       value={field.value}
-      id={id}
-      size={size}
     />
   )
 }
