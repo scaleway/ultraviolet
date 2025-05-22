@@ -1,5 +1,11 @@
 # Change Log
 
+## 4.0.0-beta.4
+
+### Patch Changes
+
+- [#5174](https://github.com/scaleway/ultraviolet/pull/5174) [`e920e03`](https://github.com/scaleway/ultraviolet/commit/e920e03c3637b2db5fb0a7d921695fd522538a0a) Thanks [@matthprost](https://github.com/matthprost)! - Missing spread of prop `legend` in `<CheckboxGroupField />`
+
 ## 4.0.0-beta.3
 
 ### Major Changes
