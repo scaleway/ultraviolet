@@ -142,6 +142,11 @@ export const Input = styled.input<{
 
   &[data-period="true"] {
     color: ${({ theme }) => theme.colors.neutral.textWeak};
+
+    &[data-size="large"] {
+      width: calc(${({ theme }) => `${theme.sizing['312']} + ${theme.sizing['025']}`})
+    }
+
   }
 
   ::-moz-selection {
@@ -202,7 +207,7 @@ export const TimeInputV2 = ({
   required,
   labelDescription,
   helper,
-  size = 'medium',
+  size = 'large',
   disabled = false,
   readOnly = false,
   error = false,
