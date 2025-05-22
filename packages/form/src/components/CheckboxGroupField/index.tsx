@@ -117,6 +117,7 @@ export const CheckboxGroupField = <
       error={getError({ label: legend }, error) ?? customError}
       name={name}
       required={required}
+      legend={legend}
     >
       {children}
     </CheckboxGroup>
