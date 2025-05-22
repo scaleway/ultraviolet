@@ -56,7 +56,7 @@ export const RadioGroupField = <
       required={required}
       value={field.value}
       error={getError({ label: legend }, error) ?? customError}
-      legend={legend ?? ''}
+      legend={legend}
     >
       {children}
     </RadioGroup>
