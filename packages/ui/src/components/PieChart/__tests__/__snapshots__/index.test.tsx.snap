@@ -238,6 +238,7 @@ exports[`PieChart > renders correctly when legend is focused 1`] = `
               >
                 <path
                   d="M1.039,-92.994A93,93,0,0,1,1.039,92.994L1.039,74.393A74.4,74.4,0,0,0,1.039,-74.393Z"
+                  data-testid="arc.compute"
                   fill="#5e47be"
                   opacity="1"
                   stroke="rgb(66, 50, 133)"
@@ -245,6 +246,7 @@ exports[`PieChart > renders correctly when legend is focused 1`] = `
                 />
                 <path
                   d="M-1.039,92.994A93,93,0,0,1,-1.039,-92.994L-1.039,-74.393A74.4,74.4,0,0,0,-1.039,74.393Z"
+                  data-testid="arc.gpu"
                   fill="#0083e6"
                   opacity="1"
                   stroke="rgb(0, 92, 161)"
@@ -584,6 +586,7 @@ exports[`PieChart > renders correctly when legend is hovered 1`] = `
               >
                 <path
                   d="M1.039,-92.994A93,93,0,0,1,1.039,92.994L1.039,74.393A74.4,74.4,0,0,0,1.039,-74.393Z"
+                  data-testid="arc.compute"
                   fill="#5e47be"
                   opacity="1"
                   stroke="rgb(66, 50, 133)"
@@ -591,6 +594,7 @@ exports[`PieChart > renders correctly when legend is hovered 1`] = `
                 />
                 <path
                   d="M-1.039,92.994A93,93,0,0,1,-1.039,-92.994L-1.039,-74.393A74.4,74.4,0,0,0,-1.039,74.393Z"
+                  data-testid="arc.gpu"
                   fill="#0083e6"
                   opacity="1"
                   stroke="rgb(0, 92, 161)"
@@ -765,6 +769,7 @@ exports[`PieChart > renders correctly with data 1`] = `
               >
                 <path
                   d="M1.039,-92.994A93,93,0,0,1,1.039,92.994L1.039,74.393A74.4,74.4,0,0,0,1.039,-74.393Z"
+                  data-testid="arc.compute"
                   fill="#5e47be"
                   opacity="1"
                   stroke="rgb(66, 50, 133)"
@@ -772,6 +777,7 @@ exports[`PieChart > renders correctly with data 1`] = `
                 />
                 <path
                   d="M-1.039,92.994A93,93,0,0,1,-1.039,-92.994L-1.039,-74.393A74.4,74.4,0,0,0,-1.039,74.393Z"
+                  data-testid="arc.gpu"
                   fill="#0083e6"
                   opacity="1"
                   stroke="rgb(0, 92, 161)"
@@ -885,6 +891,7 @@ exports[`PieChart > renders correctly with data and content 1`] = `
               >
                 <path
                   d="M1.039,-92.994A93,93,0,0,1,1.039,92.994L1.039,74.393A74.4,74.4,0,0,0,1.039,-74.393Z"
+                  data-testid="arc.compute"
                   fill="#5e47be"
                   opacity="1"
                   stroke="rgb(66, 50, 133)"
@@ -892,6 +899,7 @@ exports[`PieChart > renders correctly with data and content 1`] = `
                 />
                 <path
                   d="M-1.039,92.994A93,93,0,0,1,-1.039,-92.994L-1.039,-74.393A74.4,74.4,0,0,0,-1.039,74.393Z"
+                  data-testid="arc.gpu"
                   fill="#0083e6"
                   opacity="1"
                   stroke="rgb(0, 92, 161)"
@@ -1096,6 +1104,7 @@ exports[`PieChart > renders correctly with detailed legend 1`] = `
               >
                 <path
                   d="M1.039,-92.994A93,93,0,0,1,1.039,92.994L1.039,74.393A74.4,74.4,0,0,0,1.039,-74.393Z"
+                  data-testid="arc.compute"
                   fill="#5e47be"
                   opacity="1"
                   stroke="rgb(66, 50, 133)"
@@ -1103,6 +1112,7 @@ exports[`PieChart > renders correctly with detailed legend 1`] = `
                 />
                 <path
                   d="M-1.039,92.994A93,93,0,0,1,-1.039,-92.994L-1.039,-74.393A74.4,74.4,0,0,0,-1.039,74.393Z"
+                  data-testid="arc.gpu"
                   fill="#0083e6"
                   opacity="1"
                   stroke="rgb(0, 92, 161)"
@@ -1379,6 +1389,7 @@ exports[`PieChart > renders correctly with detailed legend and discount 1`] = `
               >
                 <path
                   d="M0,-93A93,93,0,1,1,0,93A93,93,0,1,1,0,-93M0,-74.4A74.4,74.4,0,1,0,0,74.4A74.4,74.4,0,1,0,0,-74.4Z"
+                  data-testid="arc.discount"
                   fill="#5e47be"
                   opacity="1"
                   stroke="rgb(66, 50, 133)"
@@ -1535,6 +1546,7 @@ exports[`PieChart > renders correctly with empty legend placeholder 1`] = `
               >
                 <path
                   d="M0,-93A93,93,0,1,1,0,93A93,93,0,1,1,0,-93M0,-74.4A74.4,74.4,0,1,0,0,74.4A74.4,74.4,0,1,0,0,-74.4Z"
+                  data-testid="arc.empty"
                   fill="#5e47be"
                   opacity="1"
                   stroke="rgb(66, 50, 133)"
@@ -1815,6 +1827,7 @@ exports[`PieChart > renders correctly with legend 1`] = `
               >
                 <path
                   d="M1.039,-92.994A93,93,0,0,1,53.82,-75.845L42.886,-60.796A74.4,74.4,0,0,0,1.039,-74.393Z"
+                  data-testid="arc.compute"
                   fill="#5e47be"
                   opacity="1"
                   stroke="rgb(66, 50, 133)"
@@ -1822,6 +1835,7 @@ exports[`PieChart > renders correctly with legend 1`] = `
                 />
                 <path
                   d="M55.501,-74.623A93,93,0,0,1,88.122,-29.725L70.431,-23.977A74.4,74.4,0,0,0,44.568,-59.574Z"
+                  data-testid="arc.gpu"
                   fill="#0083e6"
                   opacity="1"
                   stroke="rgb(0, 92, 161)"
@@ -1829,6 +1843,7 @@ exports[`PieChart > renders correctly with legend 1`] = `
                 />
                 <path
                   d="M88.764,-27.748A93,93,0,0,1,88.764,27.748L71.073,22A74.4,74.4,0,0,0,71.073,-22Z"
+                  data-testid="arc.functions"
                   fill="#3ebd8f"
                   opacity="1"
                   stroke="rgb(43, 132, 100)"
@@ -1836,6 +1851,7 @@ exports[`PieChart > renders correctly with legend 1`] = `
                 />
                 <path
                   d="M88.122,29.725A93,93,0,0,1,55.501,74.623L44.568,59.574A74.4,74.4,0,0,0,70.431,23.977Z"
+                  data-testid="arc.containers"
                   fill="#ac2740"
                   opacity="1"
                   stroke="rgb(120, 27, 45)"
@@ -1843,6 +1859,7 @@ exports[`PieChart > renders correctly with legend 1`] = `
                 />
                 <path
                   d="M53.82,75.845A93,93,0,0,1,1.039,92.994L1.039,74.393A74.4,74.4,0,0,0,42.886,60.796Z"
+                  data-testid="arc.s3"
                   fill="#9a85ec"
                   opacity="1"
                   stroke="rgb(108, 93, 165)"
@@ -1850,6 +1867,7 @@ exports[`PieChart > renders correctly with legend 1`] = `
                 />
                 <path
                   d="M-1.039,92.994A93,93,0,0,1,-53.82,75.845L-42.886,60.796A74.4,74.4,0,0,0,-1.039,74.393Z"
+                  data-testid="arc.dns"
                   fill="#ff602e"
                   opacity="1"
                   stroke="rgb(179, 67, 32)"
@@ -1857,6 +1875,7 @@ exports[`PieChart > renders correctly with legend 1`] = `
                 />
                 <path
                   d="M-55.501,74.623A93,93,0,0,1,-88.122,29.725L-70.431,23.977A74.4,74.4,0,0,0,-44.568,59.574Z"
+                  data-testid="arc.appleSilicon"
                   fill="#483800"
                   opacity="1"
                   stroke="rgb(50, 39, 0)"
@@ -1864,6 +1883,7 @@ exports[`PieChart > renders correctly with legend 1`] = `
                 />
                 <path
                   d="M-88.764,27.748A93,93,0,0,1,-88.764,-27.748L-71.073,-22A74.4,74.4,0,0,0,-71.073,22Z"
+                  data-testid="arc.baremetal"
                   fill="#02a5ad"
                   opacity="1"
                   stroke="rgb(1, 115, 121)"
@@ -1871,6 +1891,7 @@ exports[`PieChart > renders correctly with legend 1`] = `
                 />
                 <path
                   d="M-88.122,-29.725A93,93,0,0,1,-55.501,-74.623L-44.568,-59.574A74.4,74.4,0,0,0,-70.431,-23.977Z"
+                  data-testid="arc.database"
                   fill="#ffa488"
                   opacity="1"
                   stroke="rgb(179, 115, 95)"
@@ -1878,6 +1899,7 @@ exports[`PieChart > renders correctly with legend 1`] = `
                 />
                 <path
                   d="M-53.82,-75.845A93,93,0,0,1,-1.039,-92.994L-1.039,-74.393A74.4,74.4,0,0,0,-42.886,-60.796Z"
+                  data-testid="arc.lb"
                   fill="#96edf2"
                   opacity="1"
                   stroke="rgb(105, 166, 169)"
@@ -2380,6 +2402,7 @@ exports[`PieChart > renders correctly with no props 1`] = `
               >
                 <path
                   d="M0,-93A93,93,0,1,1,0,93A93,93,0,1,1,0,-93M0,-74.4A74.4,74.4,0,1,0,0,74.4A74.4,74.4,0,1,0,0,-74.4Z"
+                  data-testid="arc.empty"
                   fill="#5e47be"
                   opacity="1"
                   stroke="rgb(66, 50, 133)"

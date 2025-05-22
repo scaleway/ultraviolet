@@ -724,31 +724,17 @@ importers:
         specifier: 1.3.3
         version: 1.3.3
       '@nivo/bar':
-<<<<<<< HEAD
-        specifier: 0.88.0
-        version: 0.88.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
-      '@nivo/core':
-        specifier: 0.88.0
-        version: 0.88.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
-      '@nivo/line':
-        specifier: 0.88.0
-        version: 0.88.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
-      '@nivo/pie':
-        specifier: 0.88.0
-        version: 0.88.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
-=======
         specifier: 0.89.1
-        version: 0.89.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+        version: 0.89.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       '@nivo/core':
         specifier: 0.89.1
-        version: 0.89.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+        version: 0.89.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       '@nivo/line':
         specifier: 0.89.1
-        version: 0.89.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+        version: 0.89.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       '@nivo/pie':
         specifier: 0.89.1
-        version: 0.89.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
->>>>>>> 5e84884e3 (fix(deps): update nivo monorepo)
+        version: 0.89.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       '@nivo/scales':
         specifier: 0.89.0
         version: 0.89.0
@@ -3321,16 +3307,8 @@ packages:
   '@types/parse-json@4.0.2':
     resolution: {integrity: sha512-dISoDXWWQwUquiKsyZ4Ng+HX2KsPL7LyHKHQwgGFEA3IaKac4Obd+h2a/a6waisAoepJlBcx9paWqjA8/HVjCw==}
 
-<<<<<<< HEAD
-  '@types/prop-types@15.7.14':
-    resolution: {integrity: sha512-gNMvNH49DJ7OJYv+KAKn0Xp45p8PLl6zo2YnvDIbTd4J6MER2BmWN49TG7n9LvkyihINxeKW8+3bfS2yDC9dzQ==}
-
   '@types/react-dom@19.1.5':
     resolution: {integrity: sha512-CMCjrWucUBZvohgZxkjd6S9h0nZxXjzus6yDfUb+xLxYM7VvjKNH1tQrE9GWLql1XoOP4/Ds3bwFqShHUYraGg==}
-=======
-  '@types/react-dom@19.0.4':
-    resolution: {integrity: sha512-4fSQ8vWFkg+TGhePfUzVmat3eC14TXYSsiiDSLI0dVLsrm9gZFABjPy/Qu6TKgl1tq1Bu1yDsuQgY3A3DOjCcg==}
->>>>>>> 5e84884e3 (fix(deps): update nivo monorepo)
     peerDependencies:
       '@types/react': ^19.0.0
 
@@ -10287,56 +10265,32 @@ snapshots:
     dependencies:
       eslint-scope: 5.1.1
 
-<<<<<<< HEAD
-  '@nivo/annotations@0.88.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)':
+  '@nivo/annotations@0.89.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0)':
     dependencies:
-      '@nivo/colors': 0.88.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
-      '@nivo/core': 0.88.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      '@nivo/colors': 0.89.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      '@nivo/core': 0.89.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       '@react-spring/web': 9.7.5(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
-=======
-  '@nivo/annotations@0.89.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
-    dependencies:
-      '@nivo/colors': 0.89.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      '@nivo/core': 0.89.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      '@react-spring/web': 9.7.5(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
->>>>>>> 5e84884e3 (fix(deps): update nivo monorepo)
       lodash: 4.17.21
       react: 19.1.0
     transitivePeerDependencies:
       - react-dom
 
-<<<<<<< HEAD
-  '@nivo/arcs@0.88.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)':
+  '@nivo/arcs@0.89.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0)':
     dependencies:
-      '@nivo/colors': 0.88.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
-      '@nivo/core': 0.88.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      '@nivo/colors': 0.89.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      '@nivo/core': 0.89.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       '@react-spring/web': 9.7.5(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
-=======
-  '@nivo/arcs@0.89.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
-    dependencies:
-      '@nivo/colors': 0.89.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      '@nivo/core': 0.89.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      '@react-spring/web': 9.7.5(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
->>>>>>> 5e84884e3 (fix(deps): update nivo monorepo)
       '@types/d3-shape': 3.1.7
       d3-shape: 3.2.0
       react: 19.1.0
     transitivePeerDependencies:
       - react-dom
 
-<<<<<<< HEAD
-  '@nivo/axes@0.88.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)':
+  '@nivo/axes@0.89.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0)':
     dependencies:
-      '@nivo/core': 0.88.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
-      '@nivo/scales': 0.88.0
-      '@react-spring/web': 9.7.5(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
-=======
-  '@nivo/axes@0.89.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
-    dependencies:
-      '@nivo/core': 0.89.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      '@nivo/core': 0.89.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       '@nivo/scales': 0.89.0
-      '@react-spring/web': 9.7.5(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
->>>>>>> 5e84884e3 (fix(deps): update nivo monorepo)
+      '@react-spring/web': 9.7.5(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       '@types/d3-format': 1.4.5
       '@types/d3-time-format': 2.3.4
       d3-format: 1.4.5
@@ -10345,29 +10299,16 @@ snapshots:
     transitivePeerDependencies:
       - react-dom
 
-<<<<<<< HEAD
-  '@nivo/bar@0.88.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)':
+  '@nivo/bar@0.89.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0)':
     dependencies:
-      '@nivo/annotations': 0.88.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
-      '@nivo/axes': 0.88.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
-      '@nivo/colors': 0.88.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
-      '@nivo/core': 0.88.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
-      '@nivo/legends': 0.88.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
-      '@nivo/scales': 0.88.0
-      '@nivo/tooltip': 0.88.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
-      '@react-spring/web': 9.7.5(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
-=======
-  '@nivo/bar@0.89.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
-    dependencies:
-      '@nivo/annotations': 0.89.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      '@nivo/axes': 0.89.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      '@nivo/colors': 0.89.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      '@nivo/core': 0.89.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      '@nivo/legends': 0.89.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      '@nivo/annotations': 0.89.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      '@nivo/axes': 0.89.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      '@nivo/colors': 0.89.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      '@nivo/core': 0.89.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      '@nivo/legends': 0.89.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       '@nivo/scales': 0.89.0
-      '@nivo/tooltip': 0.89.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      '@react-spring/web': 9.7.5(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
->>>>>>> 5e84884e3 (fix(deps): update nivo monorepo)
+      '@nivo/tooltip': 0.89.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      '@react-spring/web': 9.7.5(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       '@types/d3-scale': 4.0.9
       '@types/d3-shape': 3.1.7
       d3-scale: 4.0.2
@@ -10377,15 +10318,9 @@ snapshots:
     transitivePeerDependencies:
       - react-dom
 
-<<<<<<< HEAD
-  '@nivo/colors@0.88.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)':
+  '@nivo/colors@0.89.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0)':
     dependencies:
-      '@nivo/core': 0.88.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
-=======
-  '@nivo/colors@0.89.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
-    dependencies:
-      '@nivo/core': 0.89.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
->>>>>>> 5e84884e3 (fix(deps): update nivo monorepo)
+      '@nivo/core': 0.89.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       '@types/d3-color': 3.1.3
       '@types/d3-scale': 4.0.9
       '@types/d3-scale-chromatic': 3.1.0
@@ -10393,26 +10328,14 @@ snapshots:
       d3-scale: 4.0.2
       d3-scale-chromatic: 3.1.0
       lodash: 4.17.21
-<<<<<<< HEAD
-      prop-types: 15.8.1
       react: 19.1.0
     transitivePeerDependencies:
       - react-dom
 
-  '@nivo/core@0.88.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)':
+  '@nivo/core@0.89.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0)':
     dependencies:
-      '@nivo/tooltip': 0.88.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      '@nivo/tooltip': 0.89.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       '@react-spring/web': 9.7.5(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
-=======
-      react: 19.0.0
-    transitivePeerDependencies:
-      - react-dom
-
-  '@nivo/core@0.89.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
-    dependencies:
-      '@nivo/tooltip': 0.89.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      '@react-spring/web': 9.7.5(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
->>>>>>> 5e84884e3 (fix(deps): update nivo monorepo)
       '@types/d3-shape': 3.1.7
       d3-color: 3.1.0
       d3-format: 1.4.5
@@ -10422,79 +10345,43 @@ snapshots:
       d3-shape: 3.2.0
       d3-time-format: 3.0.0
       lodash: 4.17.21
-<<<<<<< HEAD
-      prop-types: 15.8.1
       react: 19.1.0
     transitivePeerDependencies:
       - react-dom
 
-  '@nivo/legends@0.88.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)':
+  '@nivo/legends@0.89.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0)':
     dependencies:
-      '@nivo/colors': 0.88.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
-      '@nivo/core': 0.88.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
-=======
-      react: 19.0.0
-    transitivePeerDependencies:
-      - react-dom
-
-  '@nivo/legends@0.89.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
-    dependencies:
-      '@nivo/colors': 0.89.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      '@nivo/core': 0.89.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
->>>>>>> 5e84884e3 (fix(deps): update nivo monorepo)
+      '@nivo/colors': 0.89.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      '@nivo/core': 0.89.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       '@types/d3-scale': 4.0.9
       d3-scale: 4.0.2
       react: 19.1.0
     transitivePeerDependencies:
       - react-dom
 
-<<<<<<< HEAD
-  '@nivo/line@0.88.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)':
+  '@nivo/line@0.89.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0)':
     dependencies:
-      '@nivo/annotations': 0.88.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
-      '@nivo/axes': 0.88.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
-      '@nivo/colors': 0.88.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
-      '@nivo/core': 0.88.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
-      '@nivo/legends': 0.88.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
-      '@nivo/scales': 0.88.0
-      '@nivo/tooltip': 0.88.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
-      '@nivo/voronoi': 0.88.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
-      '@react-spring/web': 9.7.5(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
-=======
-  '@nivo/line@0.89.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
-    dependencies:
-      '@nivo/annotations': 0.89.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      '@nivo/axes': 0.89.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      '@nivo/colors': 0.89.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      '@nivo/core': 0.89.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      '@nivo/legends': 0.89.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      '@nivo/annotations': 0.89.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      '@nivo/axes': 0.89.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      '@nivo/colors': 0.89.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      '@nivo/core': 0.89.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      '@nivo/legends': 0.89.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       '@nivo/scales': 0.89.0
-      '@nivo/tooltip': 0.89.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      '@nivo/voronoi': 0.89.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      '@react-spring/web': 9.7.5(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
->>>>>>> 5e84884e3 (fix(deps): update nivo monorepo)
+      '@nivo/tooltip': 0.89.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      '@nivo/voronoi': 0.89.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      '@react-spring/web': 9.7.5(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       d3-shape: 3.2.0
       react: 19.1.0
     transitivePeerDependencies:
       - react-dom
 
-<<<<<<< HEAD
-  '@nivo/pie@0.88.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)':
+  '@nivo/pie@0.89.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0)':
     dependencies:
-      '@nivo/arcs': 0.88.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
-      '@nivo/colors': 0.88.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
-      '@nivo/core': 0.88.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
-      '@nivo/legends': 0.88.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
-      '@nivo/tooltip': 0.88.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
-=======
-  '@nivo/pie@0.89.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
-    dependencies:
-      '@nivo/arcs': 0.89.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      '@nivo/colors': 0.89.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      '@nivo/core': 0.89.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      '@nivo/legends': 0.89.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      '@nivo/tooltip': 0.89.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
->>>>>>> 5e84884e3 (fix(deps): update nivo monorepo)
+      '@nivo/arcs': 0.89.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      '@nivo/colors': 0.89.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      '@nivo/core': 0.89.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      '@nivo/legends': 0.89.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      '@nivo/tooltip': 0.89.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       '@types/d3-shape': 3.1.7
       d3-shape: 3.2.0
       react: 19.1.0
@@ -10511,33 +10398,18 @@ snapshots:
       d3-time-format: 3.0.0
       lodash: 4.17.21
 
-<<<<<<< HEAD
-  '@nivo/tooltip@0.88.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)':
+  '@nivo/tooltip@0.89.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0)':
     dependencies:
-      '@nivo/core': 0.88.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      '@nivo/core': 0.89.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       '@react-spring/web': 9.7.5(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       react: 19.1.0
     transitivePeerDependencies:
       - react-dom
 
-  '@nivo/voronoi@0.88.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)':
+  '@nivo/voronoi@0.89.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0)':
     dependencies:
-      '@nivo/core': 0.88.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
-      '@nivo/tooltip': 0.88.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
-=======
-  '@nivo/tooltip@0.89.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
-    dependencies:
-      '@nivo/core': 0.89.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      '@react-spring/web': 9.7.5(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      react: 19.0.0
-    transitivePeerDependencies:
-      - react-dom
-
-  '@nivo/voronoi@0.89.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
-    dependencies:
-      '@nivo/core': 0.89.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      '@nivo/tooltip': 0.89.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
->>>>>>> 5e84884e3 (fix(deps): update nivo monorepo)
+      '@nivo/core': 0.89.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      '@nivo/tooltip': 0.89.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       '@types/d3-delaunay': 6.0.4
       '@types/d3-scale': 4.0.9
       d3-delaunay: 6.0.4
@@ -11402,13 +11274,7 @@ snapshots:
 
   '@types/parse-json@4.0.2': {}
 
-<<<<<<< HEAD
-  '@types/prop-types@15.7.14': {}
-
   '@types/react-dom@19.1.5(@types/react@19.1.4)':
-=======
-  '@types/react-dom@19.0.4(@types/react@19.0.12)':
->>>>>>> 5e84884e3 (fix(deps): update nivo monorepo)
     dependencies:
       '@types/react': 19.1.4
 
@@ -13201,8 +13067,8 @@ snapshots:
       '@typescript-eslint/parser': 8.31.1(eslint@9.25.1(jiti@2.4.2))(typescript@5.8.3)
       eslint: 9.25.1(jiti@2.4.2)
       eslint-import-resolver-node: 0.3.9
-      eslint-import-resolver-typescript: 3.8.7(eslint-plugin-import@2.31.0)(eslint@9.25.1(jiti@2.4.2))
-      eslint-plugin-import: 2.31.0(@typescript-eslint/parser@8.31.1(eslint@9.25.1(jiti@2.4.2))(typescript@5.8.3))(eslint-import-resolver-typescript@3.8.7)(eslint@9.25.1(jiti@2.4.2))
+      eslint-import-resolver-typescript: 3.8.7(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.31.1(eslint@9.25.1(jiti@2.4.2))(typescript@5.8.3))(eslint@9.25.1(jiti@2.4.2)))(eslint@9.25.1(jiti@2.4.2))
+      eslint-plugin-import: 2.31.0(@typescript-eslint/parser@8.31.1(eslint@9.25.1(jiti@2.4.2))(typescript@5.8.3))(eslint-import-resolver-typescript@3.8.7(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.31.1(eslint@9.25.1(jiti@2.4.2))(typescript@5.8.3))(eslint@9.25.1(jiti@2.4.2)))(eslint@9.25.1(jiti@2.4.2)))(eslint@9.25.1(jiti@2.4.2))
       eslint-plugin-jsx-a11y: 6.10.2(eslint@9.25.1(jiti@2.4.2))
       eslint-plugin-react: 7.37.4(eslint@9.25.1(jiti@2.4.2))
       eslint-plugin-react-hooks: 5.2.0(eslint@9.25.1(jiti@2.4.2))
@@ -13222,6 +13088,21 @@ snapshots:
       debug: 3.2.7
       is-core-module: 2.16.1
       resolve: 1.22.10
+    transitivePeerDependencies:
+      - supports-color
+
+  eslint-import-resolver-typescript@3.8.7(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.31.1(eslint@9.25.1(jiti@2.4.2))(typescript@5.8.3))(eslint@9.25.1(jiti@2.4.2)))(eslint@9.25.1(jiti@2.4.2)):
+    dependencies:
+      '@nolyfill/is-core-module': 1.0.39
+      debug: 4.4.0
+      enhanced-resolve: 5.18.1
+      eslint: 9.25.1(jiti@2.4.2)
+      get-tsconfig: 4.10.0
+      is-bun-module: 1.3.0
+      stable-hash: 0.0.4
+      tinyglobby: 0.2.13
+    optionalDependencies:
+      eslint-plugin-import: 2.31.0(@typescript-eslint/parser@8.31.1(eslint@9.25.1(jiti@2.4.2))(typescript@5.8.3))(eslint-import-resolver-typescript@3.8.7(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.31.1(eslint@9.25.1(jiti@2.4.2))(typescript@5.8.3))(eslint@9.25.1(jiti@2.4.2)))(eslint@9.25.1(jiti@2.4.2)))(eslint@9.25.1(jiti@2.4.2))
     transitivePeerDependencies:
       - supports-color
 
@@ -13251,14 +13132,14 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-module-utils@2.12.0(@typescript-eslint/parser@8.31.1(eslint@9.25.1(jiti@2.4.2))(typescript@5.8.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.8.7)(eslint@9.25.1(jiti@2.4.2)):
+  eslint-module-utils@2.12.0(@typescript-eslint/parser@8.31.1(eslint@9.25.1(jiti@2.4.2))(typescript@5.8.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.8.7(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.31.1(eslint@9.25.1(jiti@2.4.2))(typescript@5.8.3))(eslint@9.25.1(jiti@2.4.2)))(eslint@9.25.1(jiti@2.4.2)))(eslint@9.25.1(jiti@2.4.2)):
     dependencies:
       debug: 3.2.7
     optionalDependencies:
       '@typescript-eslint/parser': 8.31.1(eslint@9.25.1(jiti@2.4.2))(typescript@5.8.3)
       eslint: 9.25.1(jiti@2.4.2)
       eslint-import-resolver-node: 0.3.9
-      eslint-import-resolver-typescript: 3.8.7(eslint-plugin-import@2.31.0)(eslint@9.25.1(jiti@2.4.2))
+      eslint-import-resolver-typescript: 3.8.7(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.31.1(eslint@9.25.1(jiti@2.4.2))(typescript@5.8.3))(eslint@9.25.1(jiti@2.4.2)))(eslint@9.25.1(jiti@2.4.2))
     transitivePeerDependencies:
       - supports-color
 
@@ -13297,7 +13178,7 @@ snapshots:
       - eslint-import-resolver-webpack
       - supports-color
 
-  eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.31.1(eslint@9.25.1(jiti@2.4.2))(typescript@5.8.3))(eslint-import-resolver-typescript@3.8.7)(eslint@9.25.1(jiti@2.4.2)):
+  eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.31.1(eslint@9.25.1(jiti@2.4.2))(typescript@5.8.3))(eslint-import-resolver-typescript@3.8.7(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.31.1(eslint@9.25.1(jiti@2.4.2))(typescript@5.8.3))(eslint@9.25.1(jiti@2.4.2)))(eslint@9.25.1(jiti@2.4.2)))(eslint@9.25.1(jiti@2.4.2)):
     dependencies:
       '@rtsao/scc': 1.1.0
       array-includes: 3.1.8
@@ -13308,7 +13189,7 @@ snapshots:
       doctrine: 2.1.0
       eslint: 9.25.1(jiti@2.4.2)
       eslint-import-resolver-node: 0.3.9
-      eslint-module-utils: 2.12.0(@typescript-eslint/parser@8.31.1(eslint@9.25.1(jiti@2.4.2))(typescript@5.8.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.8.7)(eslint@9.25.1(jiti@2.4.2))
+      eslint-module-utils: 2.12.0(@typescript-eslint/parser@8.31.1(eslint@9.25.1(jiti@2.4.2))(typescript@5.8.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.8.7(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.31.1(eslint@9.25.1(jiti@2.4.2))(typescript@5.8.3))(eslint@9.25.1(jiti@2.4.2)))(eslint@9.25.1(jiti@2.4.2)))(eslint@9.25.1(jiti@2.4.2))
       hasown: 2.0.2
       is-core-module: 2.16.1
       is-glob: 4.0.3
