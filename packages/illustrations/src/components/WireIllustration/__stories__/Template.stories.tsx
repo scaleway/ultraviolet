@@ -1,7 +1,7 @@
 import type { StoryFn } from '@storybook/react'
 import type { ComponentProps } from 'react'
-import { SupportPlansWire } from '../__generated__'
+import { WireIllustration } from '..'
 
-export const Template: StoryFn<ComponentProps<typeof SupportPlansWire>> = ({
+export const Template: StoryFn<ComponentProps<typeof WireIllustration>> = ({
   ...props
-}) => <SupportPlansWire {...props} />
+}) => <WireIllustration {...props} />

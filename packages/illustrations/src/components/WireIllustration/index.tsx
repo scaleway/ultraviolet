@@ -3,6 +3,7 @@
 import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import type { consoleLightTheme as theme } from '@ultraviolet/themes'
+import { ILLUSTRATIONS } from './__generated__/Illustrations'
 
 const StyledIllustration = styled('svg', {
   shouldForwardProp: prop =>
@@ -44,7 +45,7 @@ export type IllustrationWireProp = {
   'data-testid'?: string
   className?: string
   sentiment?: Color
-  url: string
+  name: keyof typeof ILLUSTRATIONS
 }
 
 /**
@@ -56,7 +57,7 @@ export const WireIllustration = ({
   'data-testid': dataTestId,
   className,
   sentiment = 'neutral',
-  url,
+  name,
 }: IllustrationWireProp) => {
   const theme = useTheme()
 
@@ -68,7 +69,7 @@ export const WireIllustration = ({
       height={height}
       theme={theme}
       sentiment={sentiment}
-      url={url}
+      url={ILLUSTRATIONS[name]}
     />
   )
 }

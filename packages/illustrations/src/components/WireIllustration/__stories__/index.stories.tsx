@@ -1,5 +1,5 @@
 import type { Meta } from '@storybook/react'
-import { WireIllustration } from '../WireIllustration'
+import { WireIllustration } from '..'
 
 export default {
   component: WireIllustration,
