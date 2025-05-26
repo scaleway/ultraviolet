@@ -513,24 +513,23 @@ exports[`ExpandableCard > works properly draggable 1`] = `
 }
 
 .emotion-19 {
-  height: 0.5rem;
-  border-top: 2px solid;
+  height: 1.5rem;
+  border-bottom: 2px solid;
   border-color: transparent;
   padding: 0.25rem 0;
   width: 100%;
-  bottom: -13px;
+  bottom: -5px;
   position: absolute;
 }
 
 .emotion-19[data-first="true"] {
-  bottom: auto;
-  top: -5px;
+  top: -1.5rem;
 }
 
 .emotion-19::after {
   content: '';
   left: 0;
-  top: -4px;
+  bottom: -4px;
   height: 0px;
   width: 0px;
   border: 3px solid;
@@ -542,6 +541,7 @@ exports[`ExpandableCard > works properly draggable 1`] = `
   display: flex;
   margin-top: -0.5rem;
   margin-left: -0.125rem;
+  position: absolute;
 }
 
 .emotion-29 {
@@ -620,12 +620,12 @@ exports[`ExpandableCard > works properly draggable 1`] = `
       </details>
       <div
         class="emotion-19 emotion-20"
-        data-testid="card-1-dropable-area"
-        style="border-color: transparent;"
+        data-first="true"
       />
       <div
         class="emotion-19 emotion-20"
-        data-first="true"
+        data-testid="card-1-dropable-area"
+        style="border-color: transparent;"
       />
     </div>
     <div
