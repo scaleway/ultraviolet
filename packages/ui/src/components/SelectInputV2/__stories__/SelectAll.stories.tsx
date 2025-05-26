@@ -4,7 +4,7 @@ import { Stack } from '../../Stack'
 import { dataGrouped } from './resources'
 
 export const SelectAll: StoryFn<typeof SelectInputV2> = args => (
-  <Stack gap={5} width="50%">
+  <Stack gap={5} width="30%">
     <SelectInputV2
       {...args}
       selectAll={{

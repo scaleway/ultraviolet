@@ -45,6 +45,8 @@ export const INPUT_SIZE_HEIGHT = {
 } as const
 
 export const SIZES_TAG = {
-  letterWidth: 5,
-  tagWidth: 72,
+  paddings: 16,
+  plusTag: 48,
+  gap: 8,
+  arrow: 32,
 } as const
