@@ -13,23 +13,22 @@ import { ExpandableCardTitle } from './components/Title'
 const StyledArrowIcon = styled(ArrowDownIcon)``
 
 const DropableArea = styled.div`
-  height: ${({ theme }) => theme.space['1']};
-  border-top: 2px solid;
+  height: ${({ theme }) => theme.space['3']};
+  border-bottom: 2px solid;
   border-color: transparent;
   padding: ${({ theme }) => theme.space['0.5']} 0;
   width: 100%;
-  bottom: -13px;
+  bottom: -5px;
   position: absolute;
 
   &[data-first="true"] {
-    bottom: auto;
-    top: -5px;
+    top: -${({ theme }) => theme.space['3']};
   }
   
   &::after {
     content: '';
     left: 0;
-    top: -4px;
+    bottom: -4px;
     height: 0px;
     width: 0px;
     border: 3px solid;
@@ -38,6 +37,7 @@ const DropableArea = styled.div`
     display: flex;
     margin-top:  -${({ theme }) => theme.space['1']};
     margin-left: -${({ theme }) => theme.space['0.25']};
+    position: absolute;
   }
 `
 
@@ -330,15 +330,6 @@ const BaseExpandableCard = forwardRef(
           </StyledSummary>
           <StyledContent>{children}</StyledContent>
         </StyledDetails>
-        {draggable ? (
-          <DropableArea
-            ref={draggableRef}
-            onDragOver={event => onDrag(event, theme.colors.primary.border)}
-            onDragLeave={event => onDrag(event, 'transparent')}
-            onDrop={handleDrop}
-            data-testid={`${value}-dropable-area`}
-          />
-        ) : null}
         {draggable && index === 0 ? (
           <DropableArea
             ref={draggableFirstRef}
@@ -348,6 +339,15 @@ const BaseExpandableCard = forwardRef(
             }
             onDragLeave={event => onDrag(event, 'transparent', true)}
             onDrop={event => handleDrop(event, true)}
+          />
+        ) : null}
+        {draggable ? (
+          <DropableArea
+            ref={draggableRef}
+            onDragOver={event => onDrag(event, theme.colors.primary.border)}
+            onDragLeave={event => onDrag(event, 'transparent')}
+            onDrop={handleDrop}
+            data-testid={`${value}-dropable-area`}
           />
         ) : null}
       </StyledStack>
