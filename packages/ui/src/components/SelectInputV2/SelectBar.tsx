@@ -17,7 +17,7 @@ import { Text } from '../Text'
 import { Tooltip } from '../Tooltip'
 import { useSelectInput } from './SelectInputProvider'
 import { findOptionInOptions } from './findOptionInOptions'
-import type { DataType, OptionType } from './types'
+import type { OptionType } from './types'
 import { INPUT_SIZE_HEIGHT, SIZES_TAG } from './types'
 
 type SelectBarProps = {
@@ -39,11 +39,15 @@ type SelectBarProps = {
 type DisplayValuesProps = {
   refTag: RefObject<HTMLDivElement | null>
   nonOverflowedValues: OptionType[]
+  potentiallyNonOverflowedValues: OptionType[]
   disabled: boolean
   readOnly: boolean
   overflowed: boolean
   overflowAmount: number
+  measureRef: RefObject<HTMLDivElement | null>
   size: 'small' | 'medium' | 'large'
+  lastElementMaxWidth: number
+  overflow?: boolean
 }
 
 const StateStack = styled(Stack)`
@@ -54,7 +58,7 @@ const Placeholder = styled(Text)`
 user-select: none;
 `
 
-export const StyledInputWrapper = styled(Stack)<{
+const StyledInputWrapper = styled(Stack)<{
   'data-readonly': boolean
   'data-disabled': boolean
   'data-size': 'small' | 'medium' | 'large'
@@ -71,7 +75,6 @@ export const StyledInputWrapper = styled(Stack)<{
   background: ${({ theme }) => theme.colors.neutral.background};
   border-radius: ${({ theme }) => theme.radii.default};
   width: 100%;
-  overflow: hidden;
 
   &[data-size='small'] {
     height: ${({ theme }) => theme.sizing[INPUT_SIZE_HEIGHT.small]};
@@ -147,9 +150,17 @@ export const StyledInputWrapper = styled(Stack)<{
   }
 `
 
-const CustomTag = styled(Tag)`
+const CustomTag = styled(Tag, {
+  shouldForwardProp: prop => !['lastElementMaxWidth'].includes(prop),
+})<{
+  lastElementMaxWidth?: number
+}>`
   height: fit-content;
   width: fit-content;
+
+  max-width: ${({ lastElementMaxWidth }) =>
+    lastElementMaxWidth ? `${lastElementMaxWidth}px` : '100%'};
+  text-overflow: ellipsis;
 `
 
 const SelectedValues = styled(Text)`
@@ -157,24 +168,22 @@ const SelectedValues = styled(Text)`
   overflow: hidden;
   white-space: nowrap;
 `
-
-const isValidSelectedValue = (selectedValue: string, options: DataType) =>
-  !Array.isArray(options)
-    ? Object.keys(options).some(group =>
-        options[group].some(
-          option => option.value === selectedValue && !option.disabled,
-        ),
-      )
-    : options.some(option => option.value === selectedValue && !option.disabled)
+const PlusTag = styled(Tag)`
+width: ${({ theme }) => theme.sizing[500]};
+`
 
 const DisplayValues = ({
   refTag,
   nonOverflowedValues,
+  potentiallyNonOverflowedValues,
   disabled,
   readOnly,
   overflowed,
   overflowAmount,
   size,
+  measureRef,
+  lastElementMaxWidth,
+  overflow,
 }: DisplayValuesProps) => {
   const { multiselect, selectedData, setSelectedData, options, onChange } =
     useSelectInput()
@@ -187,12 +196,17 @@ const DisplayValues = ({
       ref={refTag}
       alignItems="center"
     >
-      {nonOverflowedValues.map(option => (
+      {nonOverflowedValues.map((option, index) => (
         <CustomTag
           data-testid="selected-options-tags"
-          key={option?.value}
           sentiment="neutral"
+          key={option?.value}
           disabled={disabled}
+          lastElementMaxWidth={
+            index === nonOverflowedValues.length - 1 && overflow
+              ? lastElementMaxWidth
+              : 0
+          }
           onClose={
             !readOnly
               ? event => {
@@ -212,17 +226,35 @@ const DisplayValues = ({
           {option?.label}
         </CustomTag>
       ))}
+      {/* Hidden div to measure the width of the tags */}
+      <div
+        ref={measureRef}
+        style={{
+          visibility: 'hidden',
+          position: 'absolute',
+        }}
+      >
+        {potentiallyNonOverflowedValues.map(option => (
+          <CustomTag
+            onClose={() => {}}
+            className={option.value}
+            key={option.value}
+          >
+            {option?.label}
+          </CustomTag>
+        ))}
+      </div>
       {overflowed ? (
-        <Tag
+        <PlusTag
           sentiment="neutral"
           disabled={disabled}
           key="+"
           data-testid="plus-tag"
           aria-label="Plus tag"
         >
-          <PlusIcon />
+          <PlusIcon size="xsmall" />
           {overflowAmount}
-        </Tag>
+        </PlusTag>
       ) : null}
     </Stack>
   ) : (
@@ -240,7 +272,7 @@ const DisplayValues = ({
   )
 }
 
-export const SelectBar = ({
+const SelectBar = ({
   size,
   clearable,
   disabled,
@@ -266,8 +298,14 @@ export const SelectBar = ({
   } = useSelectInput()
   const openable = !(readOnly || disabled)
   const refTag = useRef<HTMLDivElement>(null)
+  const measureRef = useRef<HTMLDivElement>(null)
   const width = innerRef.current?.offsetWidth
+  // width - width of the arrow (in px) - padding between tags (in px)
+  const innerWidth = (width ?? 0) - SIZES_TAG.arrow - SIZES_TAG.paddings
+
   const [overflowAmount, setOverflowAmount] = useState(0)
+  const [overflow, setOverflow] = useState(false)
+  const [lastElementMaxWidth, setLastElementMaxWidth] = useState(0)
   const [nonOverflowedValues, setNonOverFlowedValues] = useState<OptionType[]>(
     () => {
       if (selectedData.selectedValues[0]) {
@@ -283,6 +321,10 @@ export const SelectBar = ({
     },
   )
 
+  const potentiallyNonOverflowedValues = selectedData.selectedValues
+    .map(selectedValue => findOptionInOptions(options, selectedValue))
+    .filter((option): option is OptionType => !!option)
+
   const state = useMemo(() => {
     if (error) {
       return 'danger'
@@ -295,37 +337,105 @@ export const SelectBar = ({
   }, [error, success])
 
   useEffect(() => {
-    // When too many items are selected, too avoid overflow, compute the number of tags to display and add a + tag
-    let tagsWidth = 0
-    let computedOverflowAmount = 0
-    let computedNonOverflowedValues: OptionType[] = []
-    const newSelectedValues = selectedData.selectedValues.filter(
-      selectedValue => isValidSelectedValue(selectedValue, options),
-    )
-    for (const selectedValue of newSelectedValues) {
-      const selectedOption = findOptionInOptions(options, selectedValue)
-      if (
-        selectedOption?.label &&
-        width &&
-        isValidSelectedValue(selectedValue, options)
-      ) {
-        const lengthValue = selectedOption.value.length // Find a better way to find the number of displayed characters?
-        const totalTagWidth =
-          SIZES_TAG.tagWidth + SIZES_TAG.letterWidth * lengthValue
-        if (totalTagWidth + tagsWidth > width - 100) {
-          computedOverflowAmount += 1
-        } else {
-          computedNonOverflowedValues = [
-            ...computedNonOverflowedValues,
-            selectedOption,
-          ]
-          tagsWidth += totalTagWidth
-        }
+    if (selectedData.selectedValues.length === 0) {
+      setOverflowAmount(0)
+      setNonOverFlowedValues([])
+    }
+    if (
+      measureRef.current &&
+      innerWidth > 0 &&
+      selectedData.selectedValues.length > 0
+    ) {
+      const toMeasureElements: HTMLCollection = measureRef.current.children
+      const toMeasureElementsArray = [...toMeasureElements]
+
+      const {
+        measuredVisibleTags,
+        measuredHiddenTags,
+        accumulatedWidth,
+        lastElementWidth,
+      } = toMeasureElementsArray.reduce(
+        (
+          accumulator: {
+            measuredVisibleTags: OptionType[]
+            measuredHiddenTags: number
+            accumulatedWidth: number
+            lastElementWidth: number
+          },
+          currentValue,
+          index,
+        ) => {
+          const elementWidth = (currentValue as HTMLDivElement).offsetWidth
+          const newAccumulatedWidth =
+            accumulator.accumulatedWidth + elementWidth + SIZES_TAG.gap
+
+          return {
+            measuredVisibleTags: [
+              ...accumulator.measuredVisibleTags,
+              newAccumulatedWidth <= innerWidth &&
+                potentiallyNonOverflowedValues[index],
+            ].filter(Boolean) as OptionType[],
+            measuredHiddenTags:
+              accumulator.measuredHiddenTags +
+              (newAccumulatedWidth > innerWidth ? 1 : 0),
+            accumulatedWidth:
+              newAccumulatedWidth > innerWidth
+                ? accumulator.accumulatedWidth
+                : newAccumulatedWidth,
+            lastElementWidth:
+              index === toMeasureElementsArray.length - 1 ? elementWidth : 0,
+          }
+        },
+        {
+          measuredVisibleTags: [],
+          measuredHiddenTags: 0,
+          accumulatedWidth: 0,
+          lastElementWidth: 0,
+        },
+      )
+
+      const finalWidth =
+        accumulatedWidth +
+        (measuredHiddenTags ? SIZES_TAG.paddings + SIZES_TAG.plusTag : 0)
+      const overflowPx = finalWidth - innerWidth
+
+      // If only one element is selected and it is hidden, we need to show it
+      if (measuredHiddenTags === 1 && measuredVisibleTags.length === 0) {
+        setOverflowAmount(0)
+        setNonOverFlowedValues([potentiallyNonOverflowedValues[0]])
+
+        const newOverflowPx =
+          lastElementWidth +
+          (measuredHiddenTags - 1 > 0
+            ? SIZES_TAG.paddings + SIZES_TAG.plusTag
+            : 0) -
+          innerWidth
+        setLastElementMaxWidth(lastElementWidth - newOverflowPx)
+        setOverflow(true)
+      }
+
+      // If it overflows with the last tag, we need to add an ellipsis to the last element if there is enough space (>60px)
+      // else we hide it completely and add it to the overflow amount
+      else if (lastElementWidth - overflowPx > 60 && measuredHiddenTags > 0) {
+        setLastElementMaxWidth(lastElementWidth - overflowPx)
+        setOverflow(true)
+        setOverflowAmount(measuredHiddenTags)
+        setNonOverFlowedValues(measuredVisibleTags)
+      } else if (overflowPx > 0 && measuredHiddenTags > 0) {
+        setLastElementMaxWidth(0)
+        setOverflow(false)
+        setOverflowAmount(measuredHiddenTags + 1)
+        setNonOverFlowedValues(measuredVisibleTags.slice(0, -1))
+      }
+      // Otherwise, we have enough space to show all tags
+      else {
+        setOverflow(false)
+        setOverflowAmount(measuredHiddenTags)
+        setNonOverFlowedValues(measuredVisibleTags)
       }
     }
-    setNonOverFlowedValues(computedNonOverflowedValues)
-    setOverflowAmount(computedOverflowAmount)
-  }, [options, selectedData.selectedValues, width])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [selectedData.selectedValues.length, innerWidth])
 
   useEffect(() => {
     setSelectedData({ type: 'update' })
@@ -399,11 +509,15 @@ export const SelectBar = ({
           <DisplayValues
             refTag={refTag}
             nonOverflowedValues={nonOverflowedValues}
+            potentiallyNonOverflowedValues={potentiallyNonOverflowedValues}
             disabled={disabled}
             readOnly={readOnly}
             overflowed={!!overflowAmount}
             overflowAmount={overflowAmount}
             size={size}
+            measureRef={measureRef}
+            lastElementMaxWidth={lastElementMaxWidth}
+            overflow={overflow}
           />
         ) : (
           <Placeholder
@@ -451,3 +565,5 @@ export const SelectBar = ({
     </Tooltip>
   )
 }
+
+export { SelectBar, StyledInputWrapper }
