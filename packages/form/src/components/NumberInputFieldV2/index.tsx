@@ -12,9 +12,7 @@ type NumberInputV2Props<
   TFieldValues extends FieldValues,
   TFieldName extends FieldPath<TFieldValues>,
 > = BaseFieldProps<TFieldValues, TFieldName> &
-  Omit<ComponentProps<typeof NumberInputV2>, 'className' | 'onChange'> & {
-    className?: string
-  }
+  Omit<ComponentProps<typeof NumberInputV2>, 'onChange'>
 
 export const NumberInputFieldV2 = <
   TFieldValues extends FieldValues,
@@ -28,7 +26,6 @@ export const NumberInputFieldV2 = <
   onBlur,
   step,
   label,
-  controls = true,
   'aria-label': ariaLabel,
   required,
   shouldUnregister = false,
@@ -78,7 +75,6 @@ export const NumberInputFieldV2 = <
       )}
       aria-label={ariaLabel}
       required={required}
-      controls={controls}
     />
   )
 }

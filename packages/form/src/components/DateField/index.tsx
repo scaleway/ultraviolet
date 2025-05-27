@@ -15,14 +15,7 @@ type DateFieldProps<
   TFieldValues extends FieldValues,
   TFieldName extends FieldPath<TFieldValues>,
 > = BaseFieldProps<TFieldValues, TFieldName> &
-  Omit<
-    ComponentProps<typeof DateInput>,
-    'required' | 'name' | 'onChange' | 'minDate' | 'maxDate' | 'onBlur'
-  > & {
-    minDate?: Date
-    maxDate?: Date
-    onBlur?: (e: FocusEvent<HTMLElement>) => void
-  }
+  Omit<ComponentProps<typeof DateInput>, 'required' | 'name' | 'onChange'>
 
 const parseDate = (value: string | Date): Date =>
   typeof value === 'string' ? new Date(value) : value
@@ -107,7 +100,7 @@ export const DateField = <
           field.onChange(val)
         }
       }}
-      onBlur={(e: FocusEvent<HTMLElement>) => {
+      onBlur={(e: FocusEvent<HTMLInputElement>) => {
         field.onBlur()
         onBlur?.(e)
       }}

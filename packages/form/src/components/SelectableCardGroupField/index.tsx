@@ -28,7 +28,6 @@ export const SelectableCardGroupField = <
   onChange,
   required = false,
   error: customError,
-  helper,
   columns = 1,
   type = 'radio',
   shouldUnregister = false,
@@ -80,7 +79,6 @@ export const SelectableCardGroupField = <
       }}
       error={getError({ label: legend }, error) ?? customError}
       columns={columns}
-      helper={helper}
       required={required}
     />
   )
