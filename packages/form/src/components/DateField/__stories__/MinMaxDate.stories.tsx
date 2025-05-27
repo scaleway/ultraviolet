@@ -12,8 +12,8 @@ export const MinMaxDate: StoryFn<ComponentProps<typeof DateField>> = args => (
 )
 
 MinMaxDate.args = {
-  maxDate: new Date('2021-12-31'),
-  minDate: new Date('2021-01-01'),
+  maxDate: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000),
+  minDate: new Date(),
   name: 'date',
   required: true,
 }
