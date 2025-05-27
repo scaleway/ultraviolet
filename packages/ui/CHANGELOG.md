@@ -1,5 +1,11 @@
 # Change Log
 
+## 2.0.0-beta.4
+
+### Patch Changes
+
+- [#5190](https://github.com/scaleway/ultraviolet/pull/5190) [`b1c9952`](https://github.com/scaleway/ultraviolet/commit/b1c99521313cf8c2a2b3f58090a577084060ed56) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<ActionBar />` within `<Table />` and `<List />`
+
 ## 2.0.0-beta.3
 
 ### Major Changes
