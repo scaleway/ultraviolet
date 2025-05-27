@@ -1,20 +1,10 @@
 'use client'
 
-import styled from '@emotion/styled'
 import type { ReactNode } from 'react'
 import { useMemo } from 'react'
 import { ActionBar } from '../ActionBar'
+import { Stack } from '../Stack'
 import { useListContext } from './ListContext'
-
-const StyledActionBar = styled(ActionBar)`
-  display: flex;
-  align-items: center;
-  padding: 0 ${({ theme }) => theme.space['1']};
-`
-
-const FlexDiv = styled.div`
-  flex: 1;
-`
 
 type SelectBarProps<T> = {
   className?: string
@@ -44,13 +34,19 @@ export const SelectBar = <T,>({
   }
 
   return (
-    <StyledActionBar className={className}>
-      <FlexDiv>
+    <ActionBar className={className}>
+      <Stack
+        alignItems="center"
+        direction="row"
+        justifyContent="space-between"
+        flex="1 1 auto"
+        width="100%"
+      >
         {children({
           selectedItems,
           unselectAll,
         })}
-      </FlexDiv>
-    </StyledActionBar>
+      </Stack>
+    </ActionBar>
   )
 }
