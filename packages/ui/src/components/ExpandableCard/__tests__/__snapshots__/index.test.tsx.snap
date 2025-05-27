@@ -3,26 +3,63 @@
 exports[`ExpandableCard > renders correctly with complex header 1`] = `
 <DocumentFragment>
   .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 100%;
+  position: relative;
+}
+
+.emotion-0:hover>.emotion-3 {
+  border-color: #8c40ef;
+}
+
+.emotion-2 {
   border: 1px solid #d9dadd;
   border-radius: 0.25rem;
+  width: 100%;
+  -webkit-transition: border-color 0.2s ease-in-out;
+  transition: border-color 0.2s ease-in-out;
 }
 
-.emotion-0[open] {
+.emotion-2[open] {
   border-color: #8c40ef;
 }
 
-.emotion-0[open]>.emotion-12 {
+.emotion-2[open]>.emotion-14 {
   border-color: #8c40ef;
 }
 
-.emotion-0[open] .emotion-4 {
+.emotion-2[open] .emotion-6 {
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
 }
 
-.emotion-2 {
+.emotion-2[data-clicking="true"] {
+  box-shadow: 0px 4px 8px 0px #22263829,0px 8px 24px 0px #2226383d;
+  border-color: #8c40ef;
+}
+
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -40,13 +77,13 @@ exports[`ExpandableCard > renders correctly with complex header 1`] = `
   cursor: pointer;
 }
 
-.emotion-2[data-disabled="true"] {
+.emotion-4[data-disabled="true"] {
   background: #f9f9fa;
   border-radius: 0.25rem;
   cursor: not-allowed;
 }
 
-.emotion-5 {
+.emotion-7 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1rem;
@@ -55,12 +92,12 @@ exports[`ExpandableCard > renders correctly with complex header 1`] = `
   min-height: 1rem;
 }
 
-.emotion-5 .fillStroke {
+.emotion-7 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
 
-.emotion-7 {
+.emotion-9 {
   color: #3f4250;
   font-size: 1rem;
   font-family: Inter,sans-serif;
@@ -72,12 +109,174 @@ exports[`ExpandableCard > renders correctly with complex header 1`] = `
   text-decoration: none;
 }
 
-.emotion-9 {
+.emotion-11 {
   font-size: 0.75rem;
   font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-13 {
+  border-top: 1px solid #d9dadd;
+  padding: 1.5rem;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+    >
+      <details
+        class="emotion-2 emotion-3"
+        data-clicking="false"
+      >
+        <summary
+          class="emotion-4 emotion-5"
+          data-disabled="false"
+        >
+          <svg
+            class="emotion-6 emotion-7 emotion-8"
+            viewBox="0 0 16 16"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
+              fill-rule="evenodd"
+            />
+          </svg>
+          <div>
+            <h2
+              class="emotion-9 emotion-10"
+            >
+              Title
+            </h2>
+            <p
+              class="emotion-11 emotion-10"
+            >
+              Description
+            </p>
+          </div>
+        </summary>
+        <div
+          class="emotion-13 emotion-14"
+        >
+          Content
+        </div>
+      </details>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ExpandableCard > renders correctly with default values 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 100%;
+  position: relative;
+}
+
+.emotion-0:hover>.emotion-3 {
+  border-color: #8c40ef;
+}
+
+.emotion-2 {
+  border: 1px solid #d9dadd;
+  border-radius: 0.25rem;
+  width: 100%;
+  -webkit-transition: border-color 0.2s ease-in-out;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.emotion-2[open] {
+  border-color: #8c40ef;
+}
+
+.emotion-2[open]>.emotion-12 {
+  border-color: #8c40ef;
+}
+
+.emotion-2[open] .emotion-6 {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.emotion-2[data-clicking="true"] {
+  box-shadow: 0px 4px 8px 0px #22263829,0px 8px 24px 0px #2226383d;
+  border-color: #8c40ef;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  list-style-type: none;
+  cursor: pointer;
+}
+
+.emotion-4[data-disabled="true"] {
+  background: #f9f9fa;
+  border-radius: 0.25rem;
+  cursor: not-allowed;
+}
+
+.emotion-7 {
+  vertical-align: middle;
+  fill: #3f4250;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
+}
+
+.emotion-7 .fillStroke {
+  stroke: #3f4250;
+  fill: none;
+}
+
+.emotion-9 {
+  color: #3f4250;
+  font-size: 1rem;
+  font-family: Inter,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -91,69 +290,174 @@ exports[`ExpandableCard > renders correctly with complex header 1`] = `
 <div
     data-testid="testing"
   >
-    <details
+    <div
       class="emotion-0 emotion-1"
     >
-      <summary
+      <details
         class="emotion-2 emotion-3"
-        data-disabled="false"
+        data-clicking="false"
       >
-        <svg
-          class="emotion-4 emotion-5 emotion-6"
-          viewBox="0 0 16 16"
+        <summary
+          class="emotion-4 emotion-5"
+          data-disabled="false"
         >
-          <path
-            clip-rule="evenodd"
-            d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
-            fill-rule="evenodd"
-          />
-        </svg>
-        <div>
+          <svg
+            class="emotion-6 emotion-7 emotion-8"
+            viewBox="0 0 16 16"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
+              fill-rule="evenodd"
+            />
+          </svg>
           <h2
-            class="emotion-7 emotion-8"
+            class="emotion-9 emotion-10"
           >
             Title
           </h2>
-          <p
-            class="emotion-9 emotion-8"
-          >
-            Description
-          </p>
+        </summary>
+        <div
+          class="emotion-11 emotion-12"
+        >
+          Content
         </div>
-      </summary>
-      <div
-        class="emotion-11 emotion-12"
-      >
-        Content
-      </div>
-    </details>
+      </details>
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`ExpandableCard > renders correctly with default values 1`] = `
+exports[`ExpandableCard > works properly draggable 1`] = `
 <DocumentFragment>
   .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 100%;
+  position: relative;
+}
+
+.emotion-0:hover>.emotion-9 {
+  border-color: #8c40ef;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  height: 100%;
+  opacity: 0;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+  cursor: -webkit-grab;
+  cursor: grab;
+  padding-top: calc(1.5rem + 2px);
+}
+
+.emotion-2[data-visible="true"] {
+  opacity: 1;
+}
+
+.emotion-2:focus-within {
+  opacity: 1;
+}
+
+.emotion-2:active {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+  opacity: 1;
+}
+
+.emotion-4 {
+  display: inherit;
+}
+
+.emotion-4[data-container-full-height="true"] {
+  height: 100%;
+}
+
+.emotion-4[data-container-full-width="true"] {
+  width: 100%;
+}
+
+.emotion-6 {
+  vertical-align: middle;
+  fill: #222638;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
+}
+
+.emotion-6 .fillStroke {
+  stroke: #222638;
+  fill: none;
+}
+
+.emotion-8 {
   border: 1px solid #d9dadd;
   border-radius: 0.25rem;
+  width: 100%;
+  -webkit-transition: border-color 0.2s ease-in-out;
+  transition: border-color 0.2s ease-in-out;
 }
 
-.emotion-0[open] {
+.emotion-8[open] {
   border-color: #8c40ef;
 }
 
-.emotion-0[open]>.emotion-10 {
+.emotion-8[open]>.emotion-18 {
   border-color: #8c40ef;
 }
 
-.emotion-0[open] .emotion-4 {
+.emotion-8[open] .emotion-12 {
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
 }
 
-.emotion-2 {
+.emotion-8[data-clicking="true"] {
+  box-shadow: 0px 4px 8px 0px #22263829,0px 8px 24px 0px #2226383d;
+  border-color: #8c40ef;
+}
+
+.emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -171,13 +475,13 @@ exports[`ExpandableCard > renders correctly with default values 1`] = `
   cursor: pointer;
 }
 
-.emotion-2[data-disabled="true"] {
+.emotion-10[data-disabled="true"] {
   background: #f9f9fa;
   border-radius: 0.25rem;
   cursor: not-allowed;
 }
 
-.emotion-5 {
+.emotion-13 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1rem;
@@ -186,12 +490,12 @@ exports[`ExpandableCard > renders correctly with default values 1`] = `
   min-height: 1rem;
 }
 
-.emotion-5 .fillStroke {
+.emotion-13 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
 
-.emotion-7 {
+.emotion-15 {
   color: #3f4250;
   font-size: 1rem;
   font-family: Inter,sans-serif;
@@ -203,43 +507,251 @@ exports[`ExpandableCard > renders correctly with default values 1`] = `
   text-decoration: none;
 }
 
-.emotion-9 {
+.emotion-17 {
   border-top: 1px solid #d9dadd;
   padding: 1.5rem;
+}
+
+.emotion-19 {
+  height: 1.5rem;
+  border-bottom: 2px solid;
+  border-color: transparent;
+  padding: 0.25rem 0;
+  width: 100%;
+  bottom: -5px;
+  position: absolute;
+}
+
+.emotion-19[data-first="true"] {
+  top: -1.5rem;
+}
+
+.emotion-19::after {
+  content: '';
+  left: 0;
+  bottom: -4px;
+  height: 0px;
+  width: 0px;
+  border: 3px solid;
+  border-color: inherit;
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: -0.5rem;
+  margin-left: -0.125rem;
+  position: absolute;
+}
+
+.emotion-29 {
+  vertical-align: middle;
+  fill: #727683;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
+}
+
+.emotion-29 .fillStroke {
+  stroke: #727683;
+  fill: none;
 }
 
 <div
     data-testid="testing"
   >
-    <details
+    <div
       class="emotion-0 emotion-1"
+      data-draggable="true"
+      data-value="card-1"
+      draggable="true"
     >
-      <summary
-        class="emotion-2 emotion-3"
-        data-disabled="false"
-      >
-        <svg
-          class="emotion-4 emotion-5 emotion-6"
-          viewBox="0 0 16 16"
-        >
-          <path
-            clip-rule="evenodd"
-            d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
-            fill-rule="evenodd"
-          />
-        </svg>
-        <h2
-          class="emotion-7 emotion-8"
-        >
-          Title
-        </h2>
-      </summary>
       <div
-        class="emotion-9 emotion-10"
+        class="emotion-2 emotion-3"
+        data-testid="draggable-icon-card-1"
+        data-visible="true"
       >
-        Content
+        <div
+          aria-controls="«r6»"
+          aria-describedby="«r6»"
+          class="emotion-4 emotion-5"
+          tabindex="0"
+        >
+          <svg
+            class="emotion-6 emotion-7"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M5.5 14q-.618 0-1.06-.44A1.45 1.45 0 0 1 4 12.5q0-.619.44-1.06Q4.883 11 5.5 11t1.06.44q.44.442.44 1.06t-.44 1.06Q6.12 14 5.5 14m4.5 0q-.619 0-1.06-.44a1.45 1.45 0 0 1-.44-1.06q0-.619.44-1.06Q9.382 11 10 11t1.06.44q.44.442.44 1.06t-.44 1.06Q10.617 14 10 14M5.5 9.5q-.618 0-1.06-.44A1.44 1.44 0 0 1 4 8q0-.619.44-1.06.442-.44 1.06-.44t1.06.44Q7 7.383 7 8t-.44 1.06q-.44.44-1.06.44m4.5 0q-.619 0-1.06-.44A1.44 1.44 0 0 1 8.5 8q0-.619.44-1.06.441-.44 1.06-.44t1.06.44q.44.442.44 1.06t-.44 1.06q-.442.44-1.06.44M5.5 5q-.618 0-1.06-.44A1.44 1.44 0 0 1 4 3.5q0-.62.44-1.06Q4.883 2 5.5 2t1.06.44Q7 2.883 7 3.5q0 .62-.44 1.06T5.5 5M10 5q-.619 0-1.06-.44A1.44 1.44 0 0 1 8.5 3.5q0-.62.44-1.06Q9.382 2 10 2t1.06.44q.44.442.44 1.06 0 .62-.44 1.06Q10.617 5 10 5"
+            />
+          </svg>
+        </div>
       </div>
-    </details>
+      <details
+        class="emotion-8 emotion-9"
+        data-clicking="true"
+      >
+        <summary
+          class="emotion-10 emotion-11"
+          data-disabled="false"
+        >
+          <svg
+            class="emotion-12 emotion-13 emotion-7"
+            viewBox="0 0 16 16"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
+              fill-rule="evenodd"
+            />
+          </svg>
+          <h2
+            class="emotion-15 emotion-16"
+          >
+            Title
+          </h2>
+        </summary>
+        <div
+          class="emotion-17 emotion-18"
+        >
+          Content
+        </div>
+      </details>
+      <div
+        class="emotion-19 emotion-20"
+        data-first="true"
+      />
+      <div
+        class="emotion-19 emotion-20"
+        data-testid="card-1-dropable-area"
+        style="border-color: transparent;"
+      />
+    </div>
+    <div
+      class="emotion-0 emotion-1"
+      data-draggable="true"
+      data-value="card-2"
+      draggable="true"
+    >
+      <div
+        class="emotion-2 emotion-3"
+        data-testid="draggable-icon-card-2"
+        data-visible="false"
+      >
+        <div
+          aria-controls="«r8»"
+          aria-describedby="«r8»"
+          class="emotion-4 emotion-5"
+          tabindex="0"
+        >
+          <svg
+            class="emotion-29 emotion-7"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M5.5 14q-.618 0-1.06-.44A1.45 1.45 0 0 1 4 12.5q0-.619.44-1.06Q4.883 11 5.5 11t1.06.44q.44.442.44 1.06t-.44 1.06Q6.12 14 5.5 14m4.5 0q-.619 0-1.06-.44a1.45 1.45 0 0 1-.44-1.06q0-.619.44-1.06Q9.382 11 10 11t1.06.44q.44.442.44 1.06t-.44 1.06Q10.617 14 10 14M5.5 9.5q-.618 0-1.06-.44A1.44 1.44 0 0 1 4 8q0-.619.44-1.06.442-.44 1.06-.44t1.06.44Q7 7.383 7 8t-.44 1.06q-.44.44-1.06.44m4.5 0q-.619 0-1.06-.44A1.44 1.44 0 0 1 8.5 8q0-.619.44-1.06.441-.44 1.06-.44t1.06.44q.44.442.44 1.06t-.44 1.06q-.442.44-1.06.44M5.5 5q-.618 0-1.06-.44A1.44 1.44 0 0 1 4 3.5q0-.62.44-1.06Q4.883 2 5.5 2t1.06.44Q7 2.883 7 3.5q0 .62-.44 1.06T5.5 5M10 5q-.619 0-1.06-.44A1.44 1.44 0 0 1 8.5 3.5q0-.62.44-1.06Q9.382 2 10 2t1.06.44q.44.442.44 1.06 0 .62-.44 1.06Q10.617 5 10 5"
+            />
+          </svg>
+        </div>
+      </div>
+      <details
+        class="emotion-8 emotion-9"
+        data-clicking="false"
+      >
+        <summary
+          class="emotion-10 emotion-11"
+          data-disabled="false"
+        >
+          <svg
+            class="emotion-12 emotion-13 emotion-7"
+            viewBox="0 0 16 16"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
+              fill-rule="evenodd"
+            />
+          </svg>
+          <h2
+            class="emotion-15 emotion-16"
+          >
+            Title
+          </h2>
+        </summary>
+        <div
+          class="emotion-17 emotion-18"
+        >
+          Content
+        </div>
+      </details>
+      <div
+        class="emotion-19 emotion-20"
+        data-testid="card-2-dropable-area"
+      />
+    </div>
+    <div
+      class="emotion-0 emotion-1"
+      data-draggable="true"
+      data-value="card-3"
+      draggable="true"
+    >
+      <div
+        class="emotion-2 emotion-3"
+        data-testid="draggable-icon-card-3"
+        data-visible="false"
+      >
+        <div
+          aria-controls="«ra»"
+          aria-describedby="«ra»"
+          class="emotion-4 emotion-5"
+          tabindex="0"
+        >
+          <svg
+            class="emotion-29 emotion-7"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M5.5 14q-.618 0-1.06-.44A1.45 1.45 0 0 1 4 12.5q0-.619.44-1.06Q4.883 11 5.5 11t1.06.44q.44.442.44 1.06t-.44 1.06Q6.12 14 5.5 14m4.5 0q-.619 0-1.06-.44a1.45 1.45 0 0 1-.44-1.06q0-.619.44-1.06Q9.382 11 10 11t1.06.44q.44.442.44 1.06t-.44 1.06Q10.617 14 10 14M5.5 9.5q-.618 0-1.06-.44A1.44 1.44 0 0 1 4 8q0-.619.44-1.06.442-.44 1.06-.44t1.06.44Q7 7.383 7 8t-.44 1.06q-.44.44-1.06.44m4.5 0q-.619 0-1.06-.44A1.44 1.44 0 0 1 8.5 8q0-.619.44-1.06.441-.44 1.06-.44t1.06.44q.44.442.44 1.06t-.44 1.06q-.442.44-1.06.44M5.5 5q-.618 0-1.06-.44A1.44 1.44 0 0 1 4 3.5q0-.62.44-1.06Q4.883 2 5.5 2t1.06.44Q7 2.883 7 3.5q0 .62-.44 1.06T5.5 5M10 5q-.619 0-1.06-.44A1.44 1.44 0 0 1 8.5 3.5q0-.62.44-1.06Q9.382 2 10 2t1.06.44q.44.442.44 1.06 0 .62-.44 1.06Q10.617 5 10 5"
+            />
+          </svg>
+        </div>
+      </div>
+      <details
+        class="emotion-8 emotion-9"
+        data-clicking="false"
+      >
+        <summary
+          class="emotion-10 emotion-11"
+          data-disabled="false"
+        >
+          <svg
+            class="emotion-12 emotion-13 emotion-7"
+            viewBox="0 0 16 16"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
+              fill-rule="evenodd"
+            />
+          </svg>
+          <h2
+            class="emotion-15 emotion-16"
+          >
+            Title
+          </h2>
+        </summary>
+        <div
+          class="emotion-17 emotion-18"
+        >
+          Content
+        </div>
+      </details>
+      <div
+        class="emotion-19 emotion-20"
+        data-testid="card-3-dropable-area"
+      />
+    </div>
   </div>
 </DocumentFragment>
 `;
