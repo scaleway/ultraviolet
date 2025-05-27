@@ -1,5 +1,22 @@
 # Change Log
 
+## 1.95.7
+
+### Patch Changes
+
+- [#5172](https://github.com/scaleway/ultraviolet/pull/5172) [`11d7478`](https://github.com/scaleway/ultraviolet/commit/11d7478f0ebff3944e0b69ccca4878c6aadb1235) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `next` to `15.3.2`.
+  Updated dependency `eslint-config-next` to `15.3.2`.
+
+- [#5173](https://github.com/scaleway/ultraviolet/pull/5173) [`bfaed8d`](https://github.com/scaleway/ultraviolet/commit/bfaed8dfeb9358780a96520f1ecbb82b4397e2c0) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `19.1.5`.
+
+- [#5070](https://github.com/scaleway/ultraviolet/pull/5070) [`b411a4a`](https://github.com/scaleway/ultraviolet/commit/b411a4a337848d964f10eab8a597fa73a05f4526) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@nivo/bar` to `0.89.1`.
+  Updated dependency `@nivo/core` to `0.89.1`.
+  Updated dependency `@nivo/line` to `0.89.1`.
+  Updated dependency `@nivo/pie` to `0.89.1`.
+  Updated dependency `@nivo/scales` to `0.89.0`.
+- Updated dependencies [[`bfaed8d`](https://github.com/scaleway/ultraviolet/commit/bfaed8dfeb9358780a96520f1ecbb82b4397e2c0)]:
+  - @ultraviolet/icons@3.15.5
+
 ## 1.95.6
 
 ### Patch Changes
