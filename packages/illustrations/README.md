@@ -26,17 +26,17 @@ const App = () => <DynamicIllustration name="success">
 ```
 
 ## Making changes
-The entire process of adding, deleting or editing an asset is automated. The imports and exports are handled automatically by `@utils/scripts/upload-illustrations.tsx` and `@utils/scripts/upload-illustration-components.tsx`.
+The entire process of adding, deleting or editing an asset is automated. The imports and exports are handled automatically by `@utils/scripts/illustrations/upload-illustrations.tsx` and `@utils/scripts/illustrations/upload-components.tsx` using the command **`pnpm run illustrations:update`**.
 
-When a file from the package is edited in a pull request, the aforementioned scripts run and update every `index.ts(x)` to ensure the imports and exports match the names of the folders and files located in `assets/`. It is only possible edit  (add, delete or replace some assets) the assets to the `assets/` folder. Any changes made directly to one of the `index.ts` file will be overriden by an automatic commit.
+It is only possible edit  (add, delete or replace) the assets to the `assets/` folder. Any changes made directly to one of the `index.ts` file will be overriden by the command.
 
-**The same goes for `DynamicIllustration` and `WireIllustration` : simply add the illustrations to the correct folder (in `assets/`).**
+**The same goes for `DynamicIllustration` and `WireIllustration**
 
 ### Adding an asset
-Simply add the assets you want to include in the package to the correct folder in `assets/` and create a pull request. Once the pull request is approved and the branch is merged, the illustrations will be added to an S3 bucket and exported in the package automatically. If the assets can be used as `WireIllustration` or a `DynamicIllustration`, the component(s) will also be updated to include them.
+Simply add the assets you want to include in the package to the correct folder in `assets/`, run `pnpm run illustrations:update`, and create a pull request. Once the pull request is approved and the branch is merged, the illustrations will be added to an S3 bucket. If the assets can be used as `WireIllustration` or a `DynamicIllustration`, the component(s) will also be updated to include them.
 
 ### Deleting an asset
-It is possible to delete an asset. To do so, simply delete its folder. However, the asset will still be present in the S3 bucket and can be used by directly importing the link from the S3 bucket.
+It is possible to delete an asset. To do so, simply delete its folder and run `pnpm run illustrations:update`. However, the asset will still be present in the S3 bucket and can be used by directly importing the link from the S3 bucket.
 
 ### Editing an asset
 - If an asset is renamed, the old version will remain on the bucket but will not be exported in ultraviolet. Make sure to correctly rename the assets' name as well as their directory.
