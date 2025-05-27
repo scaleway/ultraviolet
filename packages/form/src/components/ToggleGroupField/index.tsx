@@ -11,12 +11,7 @@ type ToggleGroupFieldProps<
   TFieldValues extends FieldValues,
   TFieldName extends FieldPath<TFieldValues>,
 > = BaseFieldProps<TFieldValues, TFieldName> &
-  Omit<ComponentProps<typeof ToggleGroup>, 'value' | 'onChange'> & {
-    // oxlint-disable-next-line no-explicit-any
-    parse?: (value: boolean) => any
-    // oxlint-disable-next-line no-explicit-any
-    format?: (value: any) => boolean
-  }
+  Omit<ComponentProps<typeof ToggleGroup>, 'value' | 'onChange'>
 
 export const ToggleGroupField = <
   TFieldValues extends FieldValues,

@@ -12,10 +12,8 @@ type ToggleFieldProps<
   TFieldName extends FieldPath<TFieldValues>,
 > = BaseFieldProps<TFieldValues, TFieldName> &
   Omit<ComponentProps<typeof Toggle>, 'value' | 'onChange'> & {
-    // oxlint-disable-next-line no-explicit-any
-    parse?: (value: boolean) => any
-    // oxlint-disable-next-line no-explicit-any
-    format?: (value: any) => boolean
+    parse?: (value: boolean) => PathValue<TFieldValues, TFieldName>
+    format?: (value: PathValue<TFieldValues, TFieldName>) => boolean
   }
 
 export const ToggleField = <
