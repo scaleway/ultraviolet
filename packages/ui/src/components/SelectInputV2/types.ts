@@ -43,10 +43,3 @@ export const INPUT_SIZE_HEIGHT = {
   medium: '500',
   large: '600',
 } as const
-
-export const SIZES_TAG = {
-  paddings: 16,
-  plusTag: 48,
-  gap: 8,
-  arrow: 32,
-} as const
