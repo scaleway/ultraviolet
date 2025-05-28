@@ -19,6 +19,7 @@ export const Variants: StoryFn = args => (
       title="Apply to Scaleway Startup programs"
       buttonText="Apply now"
       linkText="Learn more"
+      linkHref="/?path=/story/components-other-banner--variants&globals=theme:light"
       variant="promotional"
     >
       The Scaleway Startup programs offer the perfect combination of cloud
