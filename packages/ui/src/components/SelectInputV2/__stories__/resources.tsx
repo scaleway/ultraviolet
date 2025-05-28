@@ -6,13 +6,13 @@ import { Button } from '../../Button'
 import { Text } from '../../Text'
 
 const reactNeptune = (
-  <Text as="div" variant="body">
-    Neptune <Badge>Label</Badge>
+  <Text as="span" variant="bodySmall" sentiment="primary">
+    Neptune <Badge size="small">Label</Badge>
   </Text>
 )
 
 const optionalInfo1 = <Badge>Optional info</Badge>
-const optionalInfo2 = <Bullet text="1" />
+const optionalInfo2 = <Bullet>1</Bullet>
 const optionalInfo3 = <NetworkCategoryIcon />
 const optionalInfo41 = (
   <Text as="span" variant="caption">
