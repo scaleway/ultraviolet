@@ -40,8 +40,10 @@ export const Examples: StoryFn = args => {
             </Stack>
           }
         >
-          This option will cost you 1.99€ and provide you with a lot of
-          happiness
+          <Text as="p" variant="body" prominence="weak" sentiment="neutral">
+            This option will cost you 1.99€ and provide you with a lot of
+            happiness
+          </Text>
         </SelectableCardGroup.Card>
         <SelectableCardGroup.Card
           name="label-14"
@@ -57,8 +59,10 @@ export const Examples: StoryFn = args => {
             </Stack>
           }
         >
-          This option will cost you 2.99€ and provide you with a lot more of
-          happiness
+          <Text as="p" variant="body" prominence="weak" sentiment="neutral">
+            This option will cost you 2.99€ and provide you with a lot more of
+            happiness
+          </Text>
         </SelectableCardGroup.Card>
       </SelectableCardGroup>
 
@@ -95,8 +99,10 @@ export const Examples: StoryFn = args => {
             </Stack>
           }
         >
-          This option will cost you 2.99€ and provide you with a lot more of
-          happiness
+          <Text as="p" variant="body" prominence="weak" sentiment="neutral">
+            This option will cost you 2.99€ and provide you with a lot more of
+            happiness
+          </Text>
         </SelectableCardGroup.Card>
         <SelectableCardGroup.Card
           {...args}
@@ -113,8 +119,10 @@ export const Examples: StoryFn = args => {
             </Stack>
           }
         >
-          This option will cost you 2.99€ and provide you with a lot more of
-          happiness
+          <Text as="p" variant="body" prominence="weak" sentiment="neutral">
+            This option will cost you 2.99€ and provide you with a lot more of
+            happiness
+          </Text>
         </SelectableCardGroup.Card>
 
         <SelectableCardGroup.Card
@@ -131,8 +139,10 @@ export const Examples: StoryFn = args => {
             </Stack>
           }
         >
-          This option will cost you 2.99€ and provide you with a lot more of
-          happiness
+          <Text as="p" variant="body" prominence="weak" sentiment="neutral">
+            This option will cost you 2.99€ and provide you with a lot more of
+            happiness
+          </Text>
         </SelectableCardGroup.Card>
 
         <SelectableCardGroup.Card
@@ -149,8 +159,10 @@ export const Examples: StoryFn = args => {
             </Stack>
           }
         >
-          This option will cost you 2.99€ and provide you with a lot more of
-          happiness
+          <Text as="p" variant="body" prominence="weak" sentiment="neutral">
+            This option will cost you 2.99€ and provide you with a lot more of
+            happiness
+          </Text>
         </SelectableCardGroup.Card>
       </SelectableCardGroup>
 
