@@ -1,8 +1,8 @@
 'use client'
 
 import { useTheme } from '@emotion/react'
-import { ILLUSTRATIONS } from './Illustrations'
-import type { IllustrationsKeys } from './Illustrations'
+import { ILLUSTRATIONS } from './__generated__/Illustrations'
+import type { IllustrationsKeys } from './__generated__/Illustrations'
 
 type DynamicIllustrationProps = {
   /**
