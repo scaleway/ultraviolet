@@ -1,5 +1,16 @@
 # @ultraviolet/illustrations
 
+## 5.0.0-beta.2
+
+### Minor Changes
+
+- [#5166](https://github.com/scaleway/ultraviolet/pull/5166) [`d30de91`](https://github.com/scaleway/ultraviolet/commit/d30de9169503e7a15df3926cb1f1b6a8f7fbc667) Thanks [@lisalupi](https://github.com/lisalupi)! - - Rename script "uploadIllustrations.tsx" to "update-illustrations.tsx", to match other scripts
+  - New component `WireIllustration`
+  - New script "update-illustration-components.tsx" to automatically update `WireIllustration` and `DynamicIllustration` when new assets are added
+  - Now `DynamicIllustration` (as well as the new component) works the same way as every other illustration : everyting is automated, simply add an asset to the correct folder and make a merge request
+  - Update Github action to upload illustration when merging on beta
+  - Update Ultraviolet/illustrations readme
+
 ## 5.0.0-beta.1
 
 ### Patch Changes
