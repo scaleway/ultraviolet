@@ -290,8 +290,14 @@ export const TagList = ({
       copiedText={copiedText}
       className={isEllipsis ? 'ellipsed' : ''}
     >
-      {typeof tag !== 'string' && tag.icon ? tag.icon : null}
-      {getTagLabel(tag)}
+      {typeof tag !== 'string' && tag.icon ? (
+        <>
+          {tag.icon}
+          {getTagLabel(tag)}
+        </>
+      ) : (
+        getTagLabel(tag)
+      )}
     </Tag>
   )
 
