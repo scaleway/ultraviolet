@@ -281,19 +281,30 @@ export const TagList = ({
     return null
   }
 
-  const renderTag = (tag: TagType, index: number, isEllipsis = false) => (
-    <Tag
-      // useful when two tags are identical `${tag}-${index}`
-      key={`${getTagLabel(tag)}-${index}`}
-      copiable={copiable}
-      copyText={copyText}
-      copiedText={copiedText}
-      className={isEllipsis ? 'ellipsed' : ''}
-    >
-      {typeof tag !== 'string' && tag.icon ? tag.icon : null}
-      {getTagLabel(tag)}
-    </Tag>
-  )
+  const renderTag = (tag: TagType, index: number, isEllipsis = false) =>
+    typeof tag !== 'string' && tag.icon ? (
+      <Tag
+        // useful when two tags are identical `${tag}-${index}`
+        key={`${getTagLabel(tag)}-${index}`}
+        copiable={copiable}
+        copyText={copyText}
+        copiedText={copiedText}
+        className={isEllipsis ? 'ellipsed' : ''}
+      >
+        {tag.icon}
+        {getTagLabel(tag)}
+      </Tag>
+    ) : (
+      <Tag
+        key={`${getTagLabel(tag)}-${index}`}
+        copiable={copiable}
+        copyText={copyText}
+        copiedText={copiedText}
+        className={isEllipsis ? 'ellipsed' : ''}
+      >
+        {getTagLabel(tag)}
+      </Tag>
+    )
 
   return (
     <StyledContainer

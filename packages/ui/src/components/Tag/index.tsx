@@ -2,6 +2,7 @@
 
 import styled from '@emotion/styled'
 import { CloseIcon } from '@ultraviolet/icons'
+import { useMemo } from 'react'
 import type { MouseEventHandler, ReactNode } from 'react'
 import useClipboard from 'react-use-clipboard'
 import type { Color } from '../../theme'
@@ -136,12 +137,21 @@ export const Tag = ({
   className,
   'data-testid': dataTestId,
 }: TagProps) => {
-  const [isCopied, setCopied] = useClipboard(
-    typeof children === 'string' ? children : '',
-    {
-      successDuration: COPY_DURATION,
-    },
-  )
+  const stringChildren = useMemo(() => {
+    if (typeof children === 'string') {
+      return children
+    }
+
+    if (Array.isArray(children)) {
+      return children.filter(child => typeof child === 'string').join('')
+    }
+
+    return ''
+  }, [children])
+
+  const [isCopied, setCopied] = useClipboard(stringChildren, {
+    successDuration: COPY_DURATION,
+  })
 
   if (copiable && !disabled) {
     const Container = StyledContainer.withComponent('button')
