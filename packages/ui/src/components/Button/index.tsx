@@ -1,6 +1,7 @@
 'use client'
 
 import type { Theme } from '@emotion/react'
+import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import type {
   AriaRole,
@@ -9,7 +10,7 @@ import type {
   ReactNode,
   Ref,
 } from 'react'
-import { forwardRef } from 'react'
+import { forwardRef, useMemo } from 'react'
 import type { ExtendedColor } from '../../theme'
 import { Loader, StyledCircle } from '../Loader'
 import { Tooltip } from '../Tooltip'
@@ -108,6 +109,7 @@ const StyledFilledButton = styled('button', {
   ${StyledCircle} {
     stroke: transparent;
   }
+    
   background: ${({ theme, sentiment }) =>
     !isMonochrome(sentiment)
       ? theme.colors[sentiment].backgroundStrong
@@ -311,19 +313,21 @@ export const Button = forwardRef<Element, FinalProps>(
     ref,
   ) => {
     const computeIsDisabled = disabled || isLoading
+    const { theme } = useTheme()
+    const computedSentimentLoader = useMemo(() => {
+      if (variant === 'filled' && !['black', 'white'].includes(sentiment)) {
+        if (theme === 'light') return 'white'
+
+        return 'black'
+      }
+
+      return sentiment
+    }, [sentiment, theme, variant])
 
     const content = (
       <>
         {isLoading ? (
-          <Loader
-            active
-            size="small"
-            sentiment={
-              variant === 'filled' && !['black', 'white'].includes(sentiment)
-                ? 'neutral'
-                : sentiment
-            }
-          />
+          <Loader active size="small" sentiment={computedSentimentLoader} />
         ) : null}
         {children}
       </>
