@@ -11,16 +11,14 @@ type VerificationCodeFieldProps<
   TFieldValues extends FieldValues,
   TFieldName extends FieldPath<TFieldValues>,
 > = BaseFieldProps<TFieldValues, TFieldName> &
-  Omit<ComponentProps<typeof VerificationCode>, 'value'> & {
-    id?: string
-  }
+  Omit<ComponentProps<typeof VerificationCode>, 'value'>
 
 export const VerificationCodeField = <
   TFieldValues extends FieldValues,
   TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
 >({
   fields,
-  id = 'verification-code-input',
+  inputId = 'verification-code-input',
   label,
   name,
   onChange,
@@ -53,7 +51,7 @@ export const VerificationCodeField = <
   return (
     <VerificationCode
       {...props}
-      inputId={id}
+      inputId={inputId}
       fields={fields}
       onChange={event => {
         onChange?.(event)

@@ -11,12 +11,7 @@ type SelectableCardGroupFieldProps<
   TFieldValues extends FieldValues,
   TFieldName extends FieldPath<TFieldValues>,
 > = BaseFieldProps<TFieldValues, TFieldName> &
-  Omit<
-    ComponentProps<typeof SelectableCardGroup>,
-    'name' | 'onChange' | 'type'
-  > & {
-    type?: ComponentProps<typeof SelectableCardGroup>['type']
-  }
+  Omit<ComponentProps<typeof SelectableCardGroup>, 'name' | 'onChange'>
 
 export const SelectableCardGroupField = <
   TFieldValues extends FieldValues,
