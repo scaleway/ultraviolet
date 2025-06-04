@@ -94,7 +94,7 @@ const SignUp = () => {
         onSubmit={handleSubmit}
       >
         <Stack gap={1} alignItems="center">
-          <ProfileIcon size="1.7em" />
+          <ProfileIcon size="small" />
           <Text as="div" placement="center" variant="heading">
             Sign up form
           </Text>
