@@ -22,7 +22,8 @@ export const Sentiments: StoryFn = props => (
 Sentiments.parameters = {
   docs: {
     description: {
-      story: 'You can set the color of the component with the `color` prop.',
+      story:
+        'You can set the color of the component with the `sentiment` prop.',
     },
   },
 }
