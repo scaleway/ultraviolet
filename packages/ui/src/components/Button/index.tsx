@@ -11,7 +11,7 @@ import type {
 } from 'react'
 import { forwardRef } from 'react'
 import type { ExtendedColor } from '../../theme'
-import { Loader } from '../Loader'
+import { Loader, StyledCircle } from '../Loader'
 import { Tooltip } from '../Tooltip'
 import { SIZE_GAP_KEY, SIZE_HEIGHT, SIZE_PADDING_KEY } from './constants'
 
@@ -105,6 +105,9 @@ const StyledFilledButton = styled('button', {
 })<StyledButtonProps>`
   ${args => coreStyle(args)}
 
+  ${StyledCircle} {
+    stroke: transparent;
+  }
   background: ${({ theme, sentiment }) =>
     !isMonochrome(sentiment)
       ? theme.colors[sentiment].backgroundStrong
@@ -133,6 +136,10 @@ const StyledOutlinedButton = styled('button', {
   shouldForwardProp: prop => !['size', 'sentiment', 'fullWidth'].includes(prop),
 })<StyledButtonProps>`
   ${args => coreStyle(args)}
+  
+  ${StyledCircle} {
+    stroke: transparent;
+  }
 
   background: none;
   border: 1px solid
@@ -184,6 +191,10 @@ const StyledGhostButton = styled('button', {
   shouldForwardProp: prop => !['size', 'sentiment', 'fullWidth'].includes(prop),
 })<StyledButtonProps>`
   ${args => coreStyle(args)}
+
+  ${StyledCircle} {
+    stroke: transparent;
+  }
 
   background: none;
   border: none;
@@ -306,9 +317,12 @@ export const Button = forwardRef<Element, FinalProps>(
         {isLoading ? (
           <Loader
             active
-            trailColor="transparent"
-            size="1em"
-            color="currentColor"
+            size="small"
+            sentiment={
+              variant === 'filled' && !['black', 'white'].includes(sentiment)
+                ? 'neutral'
+                : sentiment
+            }
           />
         ) : null}
         {children}

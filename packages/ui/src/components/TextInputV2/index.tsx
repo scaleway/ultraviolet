@@ -391,7 +391,7 @@ export const TextInputV2 = forwardRef<HTMLInputElement, TextInputProps>(
                       disabled={disabled}
                     />
                   ) : null}
-                  {loading && !disabled ? <Loader active size={16} /> : null}
+                  {loading && !disabled ? <Loader active size="small" /> : null}
                 </StateStack>
               ) : null}
               {suffix ? (

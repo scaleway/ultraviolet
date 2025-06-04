@@ -1,6 +1,7 @@
 import { shouldMatchEmotionSnapshot } from '@utils/test'
+import type { ComponentProps } from 'react'
 import { describe, test } from 'vitest'
-import { Loader } from '..'
+import { Loader, SIZES } from '..'
 import { SENTIMENTS } from '../../../theme'
 
 describe('Loader', () => {
@@ -21,39 +22,25 @@ describe('Loader', () => {
   test(`renders with color neutral and primary`, () =>
     shouldMatchEmotionSnapshot(
       <>
-        <Loader label="Loading test" text="Colored text" color="neutral" />
-        <Loader label="Loading test" text="Colored text" color="primary" />
+        <Loader label="Loading test" sentiment="neutral" />
+        <Loader label="Loading test" sentiment="primary" />
       </>,
     ))
 
-  test(`renders with inlined color`, () =>
-    shouldMatchEmotionSnapshot(
-      <Loader label="Loading test" text="Colored text" color="#ff0000" />,
-    ))
-
-  test(`renders with unknown inlined color`, () =>
-    shouldMatchEmotionSnapshot(<Loader label="Loading test" color="unknown" />))
-
   SENTIMENTS.slice(0, 5).forEach(color => {
-    test(`renders with trailColor ${color}`, () =>
+    test(`renders with sentiment ${color}`, () =>
       shouldMatchEmotionSnapshot(
-        <Loader label="Loading test" trailColor={color} />,
+        <Loader label="Loading test" sentiment={color} />,
       ))
   })
 
-  test(`renders with inlined trailColor`, () =>
-    shouldMatchEmotionSnapshot(
-      <Loader label="Loading test" trailColor="#ff0000" />,
-    ))
-
-  test(`renders with strokeWidth 25`, () =>
-    shouldMatchEmotionSnapshot(
-      <Loader label="Loading test" strokeWidth={25} />,
-    ))
-
-  test(`renders with text 100%`, () =>
-    shouldMatchEmotionSnapshot(<Loader label="Loading test" text="100%" />))
-
-  test(`renders with custom size`, () =>
-    shouldMatchEmotionSnapshot(<Loader label="Loading test" size="100px" />))
+  Object.keys(SIZES).forEach(size => {
+    test(`renders with size ${size}`, () =>
+      shouldMatchEmotionSnapshot(
+        <Loader
+          label="Loading test"
+          size={size as ComponentProps<typeof Loader>['size']}
+        />,
+      ))
+  })
 })
