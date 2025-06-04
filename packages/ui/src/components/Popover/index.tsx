@@ -67,7 +67,7 @@ const ContentWrapper = ({
       <Text
         variant="bodyStrong"
         as="h3"
-        sentiment="neutral"
+        sentiment={sentiment === 'neutral' ? 'neutral' : 'white'}
         prominence={sentiment === 'neutral' ? 'strong' : 'stronger'}
       >
         {title}
@@ -85,7 +85,7 @@ const ContentWrapper = ({
       <Text
         variant="bodySmall"
         as="p"
-        sentiment="neutral"
+        sentiment={sentiment === 'neutral' ? 'neutral' : 'white'}
         prominence={sentiment === 'neutral' ? 'strong' : 'stronger'}
       >
         {children}
