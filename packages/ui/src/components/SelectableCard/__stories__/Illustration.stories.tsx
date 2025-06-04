@@ -39,8 +39,10 @@ export const Illustration: StoryFn = args => {
           productIcon="macMini"
           showTick
         >
-          Offer the best experience to your Mac, iPhone and iPad users with VNC,
-          the remote desktop-sharing protocol.
+          <Text as="p" variant="body" prominence="weak" sentiment="neutral">
+            Offer the best experience to your Mac, iPhone and iPad users with
+            VNC, the remote desktop-sharing protocol.
+          </Text>
           <Link target="_blank" href="scaleway.com" size="small">
             Learn more
           </Link>
@@ -65,7 +67,9 @@ export const Illustration: StoryFn = args => {
           productIcon="macMiniM2"
           showTick
         >
-          Offer the best experience to your Mac
+          <Text as="p" variant="body" prominence="weak" sentiment="neutral">
+            Offer the best experience to your Mac
+          </Text>
           <Link target="_blank" href="scaleway.com" size="small">
             Learn more
           </Link>
@@ -93,8 +97,10 @@ export const Illustration: StoryFn = args => {
           illustration={appleSiliconWire as string}
           showTick
         >
-          Offer the best experience to your Mac, iPhone and iPad users with VNC,
-          the remote desktop-sharing protocol.
+          <Text as="p" variant="body" prominence="weak" sentiment="neutral">
+            Offer the best experience to your Mac, iPhone and iPad users with
+            VNC, the remote desktop-sharing protocol.
+          </Text>
           <Link target="_blank" href="scaleway.com" size="small">
             Learn more
           </Link>
@@ -119,7 +125,9 @@ export const Illustration: StoryFn = args => {
           illustration={appleSiliconM2Wire as string}
           showTick
         >
-          Offer the best experience to your Mac
+          <Text as="p" variant="body" prominence="weak" sentiment="neutral">
+            Offer the best experience to your Mac
+          </Text>
           <Link target="_blank" href="scaleway.com" size="small">
             Learn more
           </Link>
