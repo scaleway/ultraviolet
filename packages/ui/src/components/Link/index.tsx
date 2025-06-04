@@ -141,8 +141,17 @@ const StyledLink = styled('a', {
 
 
   &:visited {
-      color: ${({ theme }) => theme.colors.primary.text};
       text-decoration-color: transparent;
+
+      color: ${({ theme, prominence }) => {
+        const definedProminence = capitalize(
+          PROMINENCES[prominence ?? 'default'],
+        )
+        const themeColor = theme.colors.primary
+        const text = `text${definedProminence}` as keyof typeof themeColor
+
+        return theme.colors.primary[text] ?? theme.colors.primary.text
+      }};
   }
 
 
@@ -186,9 +195,19 @@ const StyledLink = styled('a', {
     }}
 
     &:visited {
-      color: ${({ theme }) => theme.colors.primary.textHover};
-      text-decoration-color: ${({ theme }) => theme.colors.primary.textHover};
-    }
+      text-decoration-color: transparent;
+
+      color: ${({ theme, prominence }) => {
+        const definedProminence = capitalize(
+          PROMINENCES[prominence ?? 'default'],
+        )
+        const themeColor = theme.colors.primary
+        const text = `text${definedProminence}` as keyof typeof themeColor
+
+        return theme.colors.primary[text] ?? theme.colors.primary.text
+      }};
+  }
+
   }
 
   &[data-variant='inline'] {

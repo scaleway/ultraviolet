@@ -145,7 +145,7 @@ export const Banner = ({
     size === 'small' ? defaultIllustrationSmall : defaultIllustration
 
   const prominence = useMemo(() => {
-    if (variant === 'promotional' && theme === 'light') {
+    if (variant === 'promotional') {
       return 'strong'
     }
 
