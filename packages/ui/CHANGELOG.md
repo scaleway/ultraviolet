@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.95.8
+
+### Patch Changes
+
+- [#5206](https://github.com/scaleway/ultraviolet/pull/5206) [`be22eef`](https://github.com/scaleway/ultraviolet/commit/be22eef5335a4a6b96378547b70053a086476107) Thanks [@JulienSaguez](https://github.com/JulienSaguez)! - <Popover />: sentiment white for text in background primary
+
 ## 1.95.7
 
 ### Patch Changes
