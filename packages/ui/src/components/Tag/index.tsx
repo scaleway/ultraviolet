@@ -117,7 +117,7 @@ const TagInner = ({
         <CloseIcon size="small" />
       </StyledCloseButton>
     ) : null}
-    {isLoading ? <Loader active size={16} /> : null}
+    {isLoading ? <Loader active size="small" /> : null}
   </>
 )
 

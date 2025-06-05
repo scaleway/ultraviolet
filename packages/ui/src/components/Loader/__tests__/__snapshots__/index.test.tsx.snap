@@ -8,6 +8,10 @@ exports[`Loader > renders active with custom percentage 1`] = `
 }
 
 .emotion-2 {
+  stroke: #d9dadd;
+}
+
+.emotion-4 {
   -webkit-transition: stroke-dashoffset 0.5s ease 0s;
   transition: stroke-dashoffset 0.5s ease 0s;
 }
@@ -23,19 +27,19 @@ exports[`Loader > renders active with custom percentage 1`] = `
       aria-valuetext="20%"
       class="emotion-0 emotion-1"
       role="progressbar"
-      style="height: 2.5rem; width: 2.5rem;"
+      style="height: 2rem; width: 2rem;"
       viewBox="0 0 100 100"
     >
       <circle
+        class="emotion-2 emotion-3"
         cx="50"
         cy="50"
         fill="none"
         r="42"
-        stroke="#d9dadd"
         stroke-width="16"
       />
       <circle
-        class="emotion-2"
+        class="emotion-4"
         cx="50"
         cy="50"
         fill="none"
@@ -59,6 +63,10 @@ exports[`Loader > renders active with default percentage 1`] = `
 }
 
 .emotion-2 {
+  stroke: #d9dadd;
+}
+
+.emotion-4 {
   -webkit-transition: stroke-dashoffset 0.5s ease 0s;
   transition: stroke-dashoffset 0.5s ease 0s;
 }
@@ -74,19 +82,19 @@ exports[`Loader > renders active with default percentage 1`] = `
       aria-valuetext="20%"
       class="emotion-0 emotion-1"
       role="progressbar"
-      style="height: 2.5rem; width: 2.5rem;"
+      style="height: 2rem; width: 2rem;"
       viewBox="0 0 100 100"
     >
       <circle
+        class="emotion-2 emotion-3"
         cx="50"
         cy="50"
         fill="none"
         r="42"
-        stroke="#d9dadd"
         stroke-width="16"
       />
       <circle
-        class="emotion-2"
+        class="emotion-4"
         cx="50"
         cy="50"
         fill="none"
@@ -105,6 +113,10 @@ exports[`Loader > renders active with default percentage 1`] = `
 exports[`Loader > renders default props 1`] = `
 <DocumentFragment>
   .emotion-2 {
+  stroke: #d9dadd;
+}
+
+.emotion-4 {
   -webkit-transition: stroke-dashoffset 0.5s ease 0s;
   transition: stroke-dashoffset 0.5s ease 0s;
 }
@@ -120,19 +132,19 @@ exports[`Loader > renders default props 1`] = `
       aria-valuetext="20%"
       class="emotion-0 emotion-1"
       role="progressbar"
-      style="height: 2.5rem; width: 2.5rem;"
+      style="height: 2rem; width: 2rem;"
       viewBox="0 0 100 100"
     >
       <circle
+        class="emotion-2 emotion-3"
         cx="50"
         cy="50"
         fill="none"
         r="42"
-        stroke="#d9dadd"
         stroke-width="16"
       />
       <circle
-        class="emotion-2"
+        class="emotion-4"
         cx="50"
         cy="50"
         fill="none"
@@ -151,22 +163,12 @@ exports[`Loader > renders default props 1`] = `
 exports[`Loader > renders with color neutral and primary 1`] = `
 <DocumentFragment>
   .emotion-2 {
+  stroke: #d9dadd;
+}
+
+.emotion-4 {
   -webkit-transition: stroke-dashoffset 0.5s ease 0s;
   transition: stroke-dashoffset 0.5s ease 0s;
-}
-
-.emotion-3 {
-  fill: #e9eaeb;
-  font-size: 2.1875rem;
-  dominant-baseline: middle;
-  text-anchor: middle;
-}
-
-.emotion-8 {
-  fill: #8c40ef;
-  font-size: 2.1875rem;
-  dominant-baseline: middle;
-  text-anchor: middle;
 }
 
 <div
@@ -180,19 +182,19 @@ exports[`Loader > renders with color neutral and primary 1`] = `
       aria-valuetext="20%"
       class="emotion-0 emotion-1"
       role="progressbar"
-      style="height: 2.5rem; width: 2.5rem;"
+      style="height: 2rem; width: 2rem;"
       viewBox="0 0 100 100"
     >
       <circle
+        class="emotion-2 emotion-3"
         cx="50"
         cy="50"
         fill="none"
         r="42"
-        stroke="#d9dadd"
         stroke-width="16"
       />
       <circle
-        class="emotion-2"
+        class="emotion-4"
         cx="50"
         cy="50"
         fill="none"
@@ -203,13 +205,6 @@ exports[`Loader > renders with color neutral and primary 1`] = `
         stroke-linecap="round"
         stroke-width="16"
       />
-      <text
-        class="emotion-3 emotion-4"
-        x="50"
-        y="50"
-      >
-        Colored text
-      </text>
     </svg>
     <svg
       aria-label="Loading test"
@@ -219,178 +214,19 @@ exports[`Loader > renders with color neutral and primary 1`] = `
       aria-valuetext="20%"
       class="emotion-0 emotion-1"
       role="progressbar"
-      style="height: 2.5rem; width: 2.5rem;"
+      style="height: 2rem; width: 2rem;"
       viewBox="0 0 100 100"
     >
       <circle
+        class="emotion-2 emotion-3"
         cx="50"
         cy="50"
         fill="none"
         r="42"
-        stroke="#d9dadd"
         stroke-width="16"
       />
       <circle
-        class="emotion-2"
-        cx="50"
-        cy="50"
-        fill="none"
-        r="42"
-        stroke="#8c40ef"
-        stroke-dasharray="263.89378290154264"
-        stroke-dashoffset="211.11502632123413"
-        stroke-linecap="round"
-        stroke-width="16"
-      />
-      <text
-        class="emotion-8 emotion-4"
-        x="50"
-        y="50"
-      >
-        Colored text
-      </text>
-    </svg>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`Loader > renders with custom size 1`] = `
-<DocumentFragment>
-  .emotion-2 {
-  -webkit-transition: stroke-dashoffset 0.5s ease 0s;
-  transition: stroke-dashoffset 0.5s ease 0s;
-}
-
-<div
-    data-testid="testing"
-  >
-    <svg
-      aria-label="Loading test"
-      aria-valuemax="100"
-      aria-valuemin="0"
-      aria-valuenow="20"
-      aria-valuetext="20%"
-      class="emotion-0 emotion-1"
-      role="progressbar"
-      style="height: 100px; width: 100px;"
-      viewBox="0 0 100 100"
-    >
-      <circle
-        cx="50"
-        cy="50"
-        fill="none"
-        r="42"
-        stroke="#d9dadd"
-        stroke-width="16"
-      />
-      <circle
-        class="emotion-2"
-        cx="50"
-        cy="50"
-        fill="none"
-        r="42"
-        stroke="#8c40ef"
-        stroke-dasharray="263.89378290154264"
-        stroke-dashoffset="211.11502632123413"
-        stroke-linecap="round"
-        stroke-width="16"
-      />
-    </svg>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`Loader > renders with inlined color 1`] = `
-<DocumentFragment>
-  .emotion-2 {
-  -webkit-transition: stroke-dashoffset 0.5s ease 0s;
-  transition: stroke-dashoffset 0.5s ease 0s;
-}
-
-.emotion-3 {
-  fill: #ff0000;
-  font-size: 2.1875rem;
-  dominant-baseline: middle;
-  text-anchor: middle;
-}
-
-<div
-    data-testid="testing"
-  >
-    <svg
-      aria-label="Loading test"
-      aria-valuemax="100"
-      aria-valuemin="0"
-      aria-valuenow="20"
-      aria-valuetext="20%"
-      class="emotion-0 emotion-1"
-      role="progressbar"
-      style="height: 2.5rem; width: 2.5rem;"
-      viewBox="0 0 100 100"
-    >
-      <circle
-        cx="50"
-        cy="50"
-        fill="none"
-        r="42"
-        stroke="#d9dadd"
-        stroke-width="16"
-      />
-      <circle
-        class="emotion-2"
-        cx="50"
-        cy="50"
-        fill="none"
-        r="42"
-        stroke="#ff0000"
-        stroke-dasharray="263.89378290154264"
-        stroke-dashoffset="211.11502632123413"
-        stroke-linecap="round"
-        stroke-width="16"
-      />
-      <text
-        class="emotion-3 emotion-4"
-        x="50"
-        y="50"
-      >
-        Colored text
-      </text>
-    </svg>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`Loader > renders with inlined trailColor 1`] = `
-<DocumentFragment>
-  .emotion-2 {
-  -webkit-transition: stroke-dashoffset 0.5s ease 0s;
-  transition: stroke-dashoffset 0.5s ease 0s;
-}
-
-<div
-    data-testid="testing"
-  >
-    <svg
-      aria-label="Loading test"
-      aria-valuemax="100"
-      aria-valuemin="0"
-      aria-valuenow="20"
-      aria-valuetext="20%"
-      class="emotion-0 emotion-1"
-      role="progressbar"
-      style="height: 2.5rem; width: 2.5rem;"
-      viewBox="0 0 100 100"
-    >
-      <circle
-        cx="50"
-        cy="50"
-        fill="none"
-        r="42"
-        stroke="#ff0000"
-        stroke-width="16"
-      />
-      <circle
-        class="emotion-2"
+        class="emotion-4"
         cx="50"
         cy="50"
         fill="none"
@@ -414,6 +250,10 @@ exports[`Loader > renders with percentage 75 1`] = `
 }
 
 .emotion-2 {
+  stroke: #d9dadd;
+}
+
+.emotion-4 {
   -webkit-transition: stroke-dashoffset 0.5s ease 0s;
   transition: stroke-dashoffset 0.5s ease 0s;
 }
@@ -429,19 +269,19 @@ exports[`Loader > renders with percentage 75 1`] = `
       aria-valuetext="75%"
       class="emotion-0 emotion-1"
       role="progressbar"
-      style="height: 2.5rem; width: 2.5rem;"
+      style="height: 2rem; width: 2rem;"
       viewBox="0 0 100 100"
     >
       <circle
+        class="emotion-2 emotion-3"
         cx="50"
         cy="50"
         fill="none"
         r="42"
-        stroke="#d9dadd"
         stroke-width="16"
       />
       <circle
-        class="emotion-2"
+        class="emotion-4"
         cx="50"
         cy="50"
         fill="none"
@@ -457,9 +297,13 @@ exports[`Loader > renders with percentage 75 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Loader > renders with strokeWidth 25 1`] = `
+exports[`Loader > renders with sentiment danger 1`] = `
 <DocumentFragment>
   .emotion-2 {
+  stroke: #d9dadd;
+}
+
+.emotion-4 {
   -webkit-transition: stroke-dashoffset 0.5s ease 0s;
   transition: stroke-dashoffset 0.5s ease 0s;
 }
@@ -475,130 +319,24 @@ exports[`Loader > renders with strokeWidth 25 1`] = `
       aria-valuetext="20%"
       class="emotion-0 emotion-1"
       role="progressbar"
-      style="height: 2.5rem; width: 2.5rem;"
+      style="height: 2rem; width: 2rem;"
       viewBox="0 0 100 100"
     >
       <circle
-        cx="50"
-        cy="50"
-        fill="none"
-        r="37.5"
-        stroke="#d9dadd"
-        stroke-width="25"
-      />
-      <circle
-        class="emotion-2"
-        cx="50"
-        cy="50"
-        fill="none"
-        r="37.5"
-        stroke="#8c40ef"
-        stroke-dasharray="235.61944901923448"
-        stroke-dashoffset="188.4955592153876"
-        stroke-linecap="round"
-        stroke-width="25"
-      />
-    </svg>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`Loader > renders with text 100% 1`] = `
-<DocumentFragment>
-  .emotion-2 {
-  -webkit-transition: stroke-dashoffset 0.5s ease 0s;
-  transition: stroke-dashoffset 0.5s ease 0s;
-}
-
-.emotion-3 {
-  fill: #8c40ef;
-  font-size: 2.1875rem;
-  dominant-baseline: middle;
-  text-anchor: middle;
-}
-
-<div
-    data-testid="testing"
-  >
-    <svg
-      aria-label="Loading test"
-      aria-valuemax="100"
-      aria-valuemin="0"
-      aria-valuenow="20"
-      aria-valuetext="20%"
-      class="emotion-0 emotion-1"
-      role="progressbar"
-      style="height: 2.5rem; width: 2.5rem;"
-      viewBox="0 0 100 100"
-    >
-      <circle
+        class="emotion-2 emotion-3"
         cx="50"
         cy="50"
         fill="none"
         r="42"
-        stroke="#d9dadd"
         stroke-width="16"
       />
       <circle
-        class="emotion-2"
+        class="emotion-4"
         cx="50"
         cy="50"
         fill="none"
         r="42"
-        stroke="#8c40ef"
-        stroke-dasharray="263.89378290154264"
-        stroke-dashoffset="211.11502632123413"
-        stroke-linecap="round"
-        stroke-width="16"
-      />
-      <text
-        class="emotion-3 emotion-4"
-        x="50"
-        y="50"
-      >
-        100%
-      </text>
-    </svg>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`Loader > renders with trailColor danger 1`] = `
-<DocumentFragment>
-  .emotion-2 {
-  -webkit-transition: stroke-dashoffset 0.5s ease 0s;
-  transition: stroke-dashoffset 0.5s ease 0s;
-}
-
-<div
-    data-testid="testing"
-  >
-    <svg
-      aria-label="Loading test"
-      aria-valuemax="100"
-      aria-valuemin="0"
-      aria-valuenow="20"
-      aria-valuetext="20%"
-      class="emotion-0 emotion-1"
-      role="progressbar"
-      style="height: 2.5rem; width: 2.5rem;"
-      viewBox="0 0 100 100"
-    >
-      <circle
-        cx="50"
-        cy="50"
-        fill="none"
-        r="42"
-        stroke="#b3144d"
-        stroke-width="16"
-      />
-      <circle
-        class="emotion-2"
-        cx="50"
-        cy="50"
-        fill="none"
-        r="42"
-        stroke="#8c40ef"
+        stroke="#e51963"
         stroke-dasharray="263.89378290154264"
         stroke-dashoffset="211.11502632123413"
         stroke-linecap="round"
@@ -609,9 +347,13 @@ exports[`Loader > renders with trailColor danger 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Loader > renders with trailColor neutral 1`] = `
+exports[`Loader > renders with sentiment neutral 1`] = `
 <DocumentFragment>
   .emotion-2 {
+  stroke: #d9dadd;
+}
+
+.emotion-4 {
   -webkit-transition: stroke-dashoffset 0.5s ease 0s;
   transition: stroke-dashoffset 0.5s ease 0s;
 }
@@ -627,19 +369,69 @@ exports[`Loader > renders with trailColor neutral 1`] = `
       aria-valuetext="20%"
       class="emotion-0 emotion-1"
       role="progressbar"
-      style="height: 2.5rem; width: 2.5rem;"
+      style="height: 2rem; width: 2rem;"
       viewBox="0 0 100 100"
     >
       <circle
+        class="emotion-2 emotion-3"
         cx="50"
         cy="50"
         fill="none"
         r="42"
-        stroke="#d9dadd"
         stroke-width="16"
       />
       <circle
-        class="emotion-2"
+        class="emotion-4"
+        cx="50"
+        cy="50"
+        fill="none"
+        r="42"
+        stroke="#e9eaeb"
+        stroke-dasharray="263.89378290154264"
+        stroke-dashoffset="211.11502632123413"
+        stroke-linecap="round"
+        stroke-width="16"
+      />
+    </svg>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Loader > renders with sentiment primary 1`] = `
+<DocumentFragment>
+  .emotion-2 {
+  stroke: #d9dadd;
+}
+
+.emotion-4 {
+  -webkit-transition: stroke-dashoffset 0.5s ease 0s;
+  transition: stroke-dashoffset 0.5s ease 0s;
+}
+
+<div
+    data-testid="testing"
+  >
+    <svg
+      aria-label="Loading test"
+      aria-valuemax="100"
+      aria-valuemin="0"
+      aria-valuenow="20"
+      aria-valuetext="20%"
+      class="emotion-0 emotion-1"
+      role="progressbar"
+      style="height: 2rem; width: 2rem;"
+      viewBox="0 0 100 100"
+    >
+      <circle
+        class="emotion-2 emotion-3"
+        cx="50"
+        cy="50"
+        fill="none"
+        r="42"
+        stroke-width="16"
+      />
+      <circle
+        class="emotion-4"
         cx="50"
         cy="50"
         fill="none"
@@ -655,9 +447,13 @@ exports[`Loader > renders with trailColor neutral 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Loader > renders with trailColor primary 1`] = `
+exports[`Loader > renders with sentiment secondary 1`] = `
 <DocumentFragment>
   .emotion-2 {
+  stroke: #d9dadd;
+}
+
+.emotion-4 {
   -webkit-transition: stroke-dashoffset 0.5s ease 0s;
   transition: stroke-dashoffset 0.5s ease 0s;
 }
@@ -673,19 +469,119 @@ exports[`Loader > renders with trailColor primary 1`] = `
       aria-valuetext="20%"
       class="emotion-0 emotion-1"
       role="progressbar"
-      style="height: 2.5rem; width: 2.5rem;"
+      style="height: 2rem; width: 2rem;"
       viewBox="0 0 100 100"
     >
       <circle
+        class="emotion-2 emotion-3"
         cx="50"
         cy="50"
         fill="none"
         r="42"
-        stroke="#8c40ef"
         stroke-width="16"
       />
       <circle
-        class="emotion-2"
+        class="emotion-4"
+        cx="50"
+        cy="50"
+        fill="none"
+        r="42"
+        stroke="#b824f9"
+        stroke-dasharray="263.89378290154264"
+        stroke-dashoffset="211.11502632123413"
+        stroke-linecap="round"
+        stroke-width="16"
+      />
+    </svg>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Loader > renders with sentiment success 1`] = `
+<DocumentFragment>
+  .emotion-2 {
+  stroke: #d9dadd;
+}
+
+.emotion-4 {
+  -webkit-transition: stroke-dashoffset 0.5s ease 0s;
+  transition: stroke-dashoffset 0.5s ease 0s;
+}
+
+<div
+    data-testid="testing"
+  >
+    <svg
+      aria-label="Loading test"
+      aria-valuemax="100"
+      aria-valuemin="0"
+      aria-valuenow="20"
+      aria-valuetext="20%"
+      class="emotion-0 emotion-1"
+      role="progressbar"
+      style="height: 2rem; width: 2rem;"
+      viewBox="0 0 100 100"
+    >
+      <circle
+        class="emotion-2 emotion-3"
+        cx="50"
+        cy="50"
+        fill="none"
+        r="42"
+        stroke-width="16"
+      />
+      <circle
+        class="emotion-4"
+        cx="50"
+        cy="50"
+        fill="none"
+        r="42"
+        stroke="#2c8564"
+        stroke-dasharray="263.89378290154264"
+        stroke-dashoffset="211.11502632123413"
+        stroke-linecap="round"
+        stroke-width="16"
+      />
+    </svg>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Loader > renders with size large 1`] = `
+<DocumentFragment>
+  .emotion-2 {
+  stroke: #d9dadd;
+}
+
+.emotion-4 {
+  -webkit-transition: stroke-dashoffset 0.5s ease 0s;
+  transition: stroke-dashoffset 0.5s ease 0s;
+}
+
+<div
+    data-testid="testing"
+  >
+    <svg
+      aria-label="Loading test"
+      aria-valuemax="100"
+      aria-valuemin="0"
+      aria-valuenow="20"
+      aria-valuetext="20%"
+      class="emotion-0 emotion-1"
+      role="progressbar"
+      style="height: 1.5rem; width: 1.5rem;"
+      viewBox="0 0 100 100"
+    >
+      <circle
+        class="emotion-2 emotion-3"
+        cx="50"
+        cy="50"
+        fill="none"
+        r="42"
+        stroke-width="16"
+      />
+      <circle
+        class="emotion-4"
         cx="50"
         cy="50"
         fill="none"
@@ -701,9 +597,13 @@ exports[`Loader > renders with trailColor primary 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Loader > renders with trailColor secondary 1`] = `
+exports[`Loader > renders with size medium 1`] = `
 <DocumentFragment>
   .emotion-2 {
+  stroke: #d9dadd;
+}
+
+.emotion-4 {
   -webkit-transition: stroke-dashoffset 0.5s ease 0s;
   transition: stroke-dashoffset 0.5s ease 0s;
 }
@@ -719,19 +619,19 @@ exports[`Loader > renders with trailColor secondary 1`] = `
       aria-valuetext="20%"
       class="emotion-0 emotion-1"
       role="progressbar"
-      style="height: 2.5rem; width: 2.5rem;"
+      style="height: 1.25rem; width: 1.25rem;"
       viewBox="0 0 100 100"
     >
       <circle
+        class="emotion-2 emotion-3"
         cx="50"
         cy="50"
         fill="none"
         r="42"
-        stroke="#ac22e7"
         stroke-width="16"
       />
       <circle
-        class="emotion-2"
+        class="emotion-4"
         cx="50"
         cy="50"
         fill="none"
@@ -747,9 +647,13 @@ exports[`Loader > renders with trailColor secondary 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Loader > renders with trailColor success 1`] = `
+exports[`Loader > renders with size small 1`] = `
 <DocumentFragment>
   .emotion-2 {
+  stroke: #d9dadd;
+}
+
+.emotion-4 {
   -webkit-transition: stroke-dashoffset 0.5s ease 0s;
   transition: stroke-dashoffset 0.5s ease 0s;
 }
@@ -765,19 +669,19 @@ exports[`Loader > renders with trailColor success 1`] = `
       aria-valuetext="20%"
       class="emotion-0 emotion-1"
       role="progressbar"
-      style="height: 2.5rem; width: 2.5rem;"
+      style="height: 1rem; width: 1rem;"
       viewBox="0 0 100 100"
     >
       <circle
+        class="emotion-2 emotion-3"
         cx="50"
         cy="50"
         fill="none"
         r="42"
-        stroke="#22674e"
         stroke-width="16"
       />
       <circle
-        class="emotion-2"
+        class="emotion-4"
         cx="50"
         cy="50"
         fill="none"
@@ -793,9 +697,13 @@ exports[`Loader > renders with trailColor success 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Loader > renders with unknown inlined color 1`] = `
+exports[`Loader > renders with size xlarge 1`] = `
 <DocumentFragment>
   .emotion-2 {
+  stroke: #d9dadd;
+}
+
+.emotion-4 {
   -webkit-transition: stroke-dashoffset 0.5s ease 0s;
   transition: stroke-dashoffset 0.5s ease 0s;
 }
@@ -811,24 +719,124 @@ exports[`Loader > renders with unknown inlined color 1`] = `
       aria-valuetext="20%"
       class="emotion-0 emotion-1"
       role="progressbar"
-      style="height: 2.5rem; width: 2.5rem;"
+      style="height: 2rem; width: 2rem;"
       viewBox="0 0 100 100"
     >
       <circle
+        class="emotion-2 emotion-3"
         cx="50"
         cy="50"
         fill="none"
         r="42"
-        stroke="#d9dadd"
         stroke-width="16"
       />
       <circle
-        class="emotion-2"
+        class="emotion-4"
         cx="50"
         cy="50"
         fill="none"
         r="42"
-        stroke="unknown"
+        stroke="#8c40ef"
+        stroke-dasharray="263.89378290154264"
+        stroke-dashoffset="211.11502632123413"
+        stroke-linecap="round"
+        stroke-width="16"
+      />
+    </svg>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Loader > renders with size xsmall 1`] = `
+<DocumentFragment>
+  .emotion-2 {
+  stroke: #d9dadd;
+}
+
+.emotion-4 {
+  -webkit-transition: stroke-dashoffset 0.5s ease 0s;
+  transition: stroke-dashoffset 0.5s ease 0s;
+}
+
+<div
+    data-testid="testing"
+  >
+    <svg
+      aria-label="Loading test"
+      aria-valuemax="100"
+      aria-valuemin="0"
+      aria-valuenow="20"
+      aria-valuetext="20%"
+      class="emotion-0 emotion-1"
+      role="progressbar"
+      style="height: 0.75rem; width: 0.75rem;"
+      viewBox="0 0 100 100"
+    >
+      <circle
+        class="emotion-2 emotion-3"
+        cx="50"
+        cy="50"
+        fill="none"
+        r="42"
+        stroke-width="16"
+      />
+      <circle
+        class="emotion-4"
+        cx="50"
+        cy="50"
+        fill="none"
+        r="42"
+        stroke="#8c40ef"
+        stroke-dasharray="263.89378290154264"
+        stroke-dashoffset="211.11502632123413"
+        stroke-linecap="round"
+        stroke-width="16"
+      />
+    </svg>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Loader > renders with size xxlarge 1`] = `
+<DocumentFragment>
+  .emotion-2 {
+  stroke: #d9dadd;
+}
+
+.emotion-4 {
+  -webkit-transition: stroke-dashoffset 0.5s ease 0s;
+  transition: stroke-dashoffset 0.5s ease 0s;
+}
+
+<div
+    data-testid="testing"
+  >
+    <svg
+      aria-label="Loading test"
+      aria-valuemax="100"
+      aria-valuemin="0"
+      aria-valuenow="20"
+      aria-valuetext="20%"
+      class="emotion-0 emotion-1"
+      role="progressbar"
+      style="height: 3.5rem; width: 3.5rem;"
+      viewBox="0 0 100 100"
+    >
+      <circle
+        class="emotion-2 emotion-3"
+        cx="50"
+        cy="50"
+        fill="none"
+        r="42"
+        stroke-width="16"
+      />
+      <circle
+        class="emotion-4"
+        cx="50"
+        cy="50"
+        fill="none"
+        r="42"
+        stroke="#8c40ef"
         stroke-dasharray="263.89378290154264"
         stroke-dashoffset="211.11502632123413"
         stroke-linecap="round"
