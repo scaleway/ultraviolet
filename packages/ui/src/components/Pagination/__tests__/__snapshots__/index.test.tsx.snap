@@ -2752,29 +2752,10 @@ exports[`Pagination > should render correctly with perPage - default values 1`] 
 }
 
 .emotion-13 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: grid;
+  width: 100%;
   gap: 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  grid-template-columns: 1fr auto;
   padding: 0.5rem;
   padding-right: 0;
   padding-left: 1rem;
@@ -2783,7 +2764,6 @@ exports[`Pagination > should render correctly with perPage - default values 1`] 
   background: #ffffff;
   border-radius: 0.25rem;
   width: 100%;
-  overflow: hidden;
 }
 
 .emotion-13[data-size='small'] {
@@ -2877,6 +2857,9 @@ exports[`Pagination > should render correctly with perPage - default values 1`] 
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
 }
 
 .emotion-18 {
@@ -3480,29 +3463,10 @@ exports[`Pagination > should render correctly with perPage 1`] = `
 }
 
 .emotion-13 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: grid;
+  width: 100%;
   gap: 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  grid-template-columns: 1fr auto;
   padding: 0.5rem;
   padding-right: 0;
   padding-left: 1rem;
@@ -3511,7 +3475,6 @@ exports[`Pagination > should render correctly with perPage 1`] = `
   background: #ffffff;
   border-radius: 0.25rem;
   width: 100%;
-  overflow: hidden;
 }
 
 .emotion-13[data-size='small'] {
@@ -3605,6 +3568,9 @@ exports[`Pagination > should render correctly with perPage 1`] = `
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
 }
 
 .emotion-18 {
