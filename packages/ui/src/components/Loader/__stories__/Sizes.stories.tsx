@@ -1,10 +1,10 @@
 import type { StoryFn } from '@storybook/react'
-import { Loader } from '../index'
+import { Loader, SIZES } from '../index'
 
 export const Sizes: StoryFn = props => (
   <>
-    {[8, 32, 50, 75, 90, 100].map(size => (
-      <Loader {...props} size={size} key={size} />
+    {Object.keys(SIZES).map(size => (
+      <Loader {...props} size={size as keyof typeof SIZES} key={size} />
     ))}
   </>
 )
