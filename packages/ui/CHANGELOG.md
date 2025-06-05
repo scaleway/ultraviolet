@@ -1,5 +1,29 @@
 # Change Log
 
+## 2.0.0-beta.5
+
+### Patch Changes
+
+- [`bb47261`](https://github.com/scaleway/ultraviolet/commit/bb472611b711cb3988c186d6d384c29f3c9037e2) Thanks [@lisalupi](https://github.com/lisalupi)! - `<TagList />`: copiable now works
+
+- [#5206](https://github.com/scaleway/ultraviolet/pull/5206) [`be22eef`](https://github.com/scaleway/ultraviolet/commit/be22eef5335a4a6b96378547b70053a086476107) Thanks [@JulienSaguez](https://github.com/JulienSaguez)! - <Popover />: sentiment white for text in background primary
+
+- [`cc10503`](https://github.com/scaleway/ultraviolet/commit/cc1050379db613d13c921a3af172128aa4cf225b) Thanks [@lisalupi](https://github.com/lisalupi)! - Fix visited state of link to match promience
+
+- [`53fcf41`](https://github.com/scaleway/ultraviolet/commit/53fcf415f169f61b4593f72fdacd7de3ebbd9387) Thanks [@lisalupi](https://github.com/lisalupi)! - `<Loader />`: **breaking changes**
+
+  - align size on system icons : now size can only be "xsmall" (0.75rem/12px), "small" (1rem/16px), "medium" (1.25rem/20px), "large" (1.5rem/24px), "xlarge" (2rem/32px), or "_xxlarge_" (3.5rem/56px). By default, `size = "xlarge"` to match the old size.
+  - remove prop `color`, use `sentiment` instead. By default, `sentiment = primary`.
+  - remove props `trailColor`, `text`and `strokeWidth`.
+
+- [`6752ec1`](https://github.com/scaleway/ultraviolet/commit/6752ec1b60483e1f882bb6448a82dce62a03a0a7) Thanks [@lisalupi](https://github.com/lisalupi)! - `<Link />`: reduce space between link and icon
+
+- [`c5b82c2`](https://github.com/scaleway/ultraviolet/commit/c5b82c2674ba8189ee4432178b358f1a4ee05b02) Thanks [@lisalupi](https://github.com/lisalupi)! - `<ExpandableCard />`: drag & drop
+
+- Updated dependencies [[`6b0565d`](https://github.com/scaleway/ultraviolet/commit/6b0565d2991db0510067d91b2140274dcde2ea21)]:
+  - @ultraviolet/themes@2.0.0-beta.2
+  - @ultraviolet/icons@4.0.0-beta.3
+
 ## 2.0.0-beta.4
 
 ### Patch Changes
