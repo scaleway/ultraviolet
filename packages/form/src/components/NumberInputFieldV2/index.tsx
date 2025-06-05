@@ -12,68 +12,25 @@ type NumberInputV2Props<
   TFieldValues extends FieldValues,
   TFieldName extends FieldPath<TFieldValues>,
 > = BaseFieldProps<TFieldValues, TFieldName> &
-  Partial<
-    Pick<
-      ComponentProps<typeof NumberInputV2>,
-      | 'disabled'
-      | 'id'
-      | 'onBlur'
-      | 'onChange'
-      | 'onFocus'
-      | 'value'
-      | 'data-testid'
-      | 'label'
-      | 'aria-label'
-      | 'tooltip'
-      | 'unit'
-      | 'size'
-      | 'step'
-      | 'className'
-      | 'placeholder'
-      | 'error'
-      | 'success'
-      | 'helper'
-      | 'labelDescription'
-      | 'autoFocus'
-      | 'readOnly'
-      | 'min'
-      | 'max'
-      | 'controls'
-    >
-  > & {
-    className?: string
-  }
+  Omit<ComponentProps<typeof NumberInputV2>, 'onChange'>
 
 export const NumberInputFieldV2 = <
   TFieldValues extends FieldValues,
   TFieldName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
 >({
-  disabled,
   control,
   max = Number.MAX_SAFE_INTEGER,
   min = 0,
   name,
   onChange,
   onBlur,
-  size,
   step,
-  unit,
-  tooltip,
-  className,
   label,
-  labelDescription,
-  id,
-  placeholder,
-  success,
-  helper,
-  controls = true,
   'aria-label': ariaLabel,
-  'data-testid': dataTestId,
   required,
-  autoFocus,
-  readOnly,
   shouldUnregister = false,
   validate,
+  ...props
 }: NumberInputV2Props<TFieldValues, TFieldName>) => {
   const { getError } = useErrors()
   const {
@@ -96,9 +53,9 @@ export const NumberInputFieldV2 = <
 
   return (
     <NumberInputV2
+      {...props}
       name={field.name}
       value={field.value}
-      disabled={disabled}
       onBlur={(event: FocusEvent<HTMLInputElement>) => {
         field.onBlur()
         onBlur?.(event)
@@ -110,27 +67,14 @@ export const NumberInputFieldV2 = <
       }}
       max={max}
       min={min}
-      size={size}
       step={step}
-      className={className}
-      data-testid={dataTestId}
-      id={id}
       label={label}
-      labelDescription={labelDescription}
-      placeholder={placeholder}
       error={getError(
         { label: label ?? ariaLabel ?? name, max, min, isInteger: step },
         error,
       )}
-      success={success}
-      helper={helper}
-      tooltip={tooltip}
-      unit={unit}
       aria-label={ariaLabel}
-      autoFocus={autoFocus}
-      readOnly={readOnly}
       required={required}
-      controls={controls}
     />
   )
 }
