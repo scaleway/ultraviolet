@@ -458,6 +458,10 @@ exports[`Tag > renders correctly with isLoading 1`] = `
 }
 
 .emotion-7 {
+  stroke: #d9dadd;
+}
+
+.emotion-9 {
   -webkit-transition: stroke-dashoffset 0.5s ease 0s;
   transition: stroke-dashoffset 0.5s ease 0s;
 }
@@ -481,19 +485,19 @@ exports[`Tag > renders correctly with isLoading 1`] = `
         aria-valuetext="20%"
         class="emotion-5 emotion-6"
         role="progressbar"
-        style="height: 16px; width: 16px;"
+        style="height: 1rem; width: 1rem;"
         viewBox="0 0 100 100"
       >
         <circle
+          class="emotion-7 emotion-8"
           cx="50"
           cy="50"
           fill="none"
           r="42"
-          stroke="#d9dadd"
           stroke-width="16"
         />
         <circle
-          class="emotion-7"
+          class="emotion-9"
           cx="50"
           cy="50"
           fill="none"
@@ -607,6 +611,10 @@ exports[`Tag > renders correctly with onClose 1`] = `
 
 .emotion-6:active {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
+}
+
+.emotion-6 .e1y1n78x0 {
+  stroke: transparent;
 }
 
 .emotion-6:hover,

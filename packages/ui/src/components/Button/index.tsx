@@ -1,6 +1,7 @@
 'use client'
 
 import type { Theme } from '@emotion/react'
+import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import type {
   AriaRole,
@@ -9,9 +10,9 @@ import type {
   ReactNode,
   Ref,
 } from 'react'
-import { forwardRef } from 'react'
+import { forwardRef, useMemo } from 'react'
 import type { ExtendedColor } from '../../theme'
-import { Loader } from '../Loader'
+import { Loader, StyledCircle } from '../Loader'
 import { Tooltip } from '../Tooltip'
 import { SIZE_GAP_KEY, SIZE_HEIGHT, SIZE_PADDING_KEY } from './constants'
 
@@ -105,6 +106,10 @@ const StyledFilledButton = styled('button', {
 })<StyledButtonProps>`
   ${args => coreStyle(args)}
 
+  ${StyledCircle} {
+    stroke: transparent;
+  }
+    
   background: ${({ theme, sentiment }) =>
     !isMonochrome(sentiment)
       ? theme.colors[sentiment].backgroundStrong
@@ -133,6 +138,10 @@ const StyledOutlinedButton = styled('button', {
   shouldForwardProp: prop => !['size', 'sentiment', 'fullWidth'].includes(prop),
 })<StyledButtonProps>`
   ${args => coreStyle(args)}
+  
+  ${StyledCircle} {
+    stroke: transparent;
+  }
 
   background: none;
   border: 1px solid
@@ -184,6 +193,10 @@ const StyledGhostButton = styled('button', {
   shouldForwardProp: prop => !['size', 'sentiment', 'fullWidth'].includes(prop),
 })<StyledButtonProps>`
   ${args => coreStyle(args)}
+
+  ${StyledCircle} {
+    stroke: transparent;
+  }
 
   background: none;
   border: none;
@@ -300,16 +313,21 @@ export const Button = forwardRef<Element, FinalProps>(
     ref,
   ) => {
     const computeIsDisabled = disabled || isLoading
+    const { theme } = useTheme()
+    const computedSentimentLoader = useMemo(() => {
+      if (variant === 'filled' && !['black', 'white'].includes(sentiment)) {
+        if (theme === 'light') return 'white'
+
+        return 'black'
+      }
+
+      return sentiment
+    }, [sentiment, theme, variant])
 
     const content = (
       <>
         {isLoading ? (
-          <Loader
-            active
-            trailColor="transparent"
-            size="1em"
-            color="currentColor"
-          />
+          <Loader active size="small" sentiment={computedSentimentLoader} />
         ) : null}
         {children}
       </>
