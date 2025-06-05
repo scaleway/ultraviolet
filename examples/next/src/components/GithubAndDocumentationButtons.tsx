@@ -1,4 +1,5 @@
-import { Button, Icon, Stack } from '@ultraviolet/ui'
+import { GithubIcon } from '@ultraviolet/icons'
+import { Button, Stack } from '@ultraviolet/ui'
 
 const GithubAndDocumentationButtons = () => (
   <Stack gap={2} direction="row">
@@ -8,7 +9,7 @@ const GithubAndDocumentationButtons = () => (
       href="https://github.com/scaleway/ultraviolet"
       aria-label="github"
     >
-      <Icon name="github" size={32} />
+      <GithubIcon size="large" />
     </Button>
     <Button
       href="https://storybook.ultraviolet.scaleway.com/"
