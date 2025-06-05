@@ -206,6 +206,45 @@ describe('Menu', () => {
     expect(items.length).toBe(1)
     expect(items[0]).toHaveTextContent('Disk')
   })
+
+  test('should search and find item using searchText', async () => {
+    const { asFragment } = renderWithTheme(
+      <MenuV2
+        id="menu"
+        searchable
+        disclosure={() => <button type="button">Menu</button>}
+      >
+        <MenuV2.Item searchText="Disk">
+          <div>
+            <div>Volume type</div>
+          </div>
+        </MenuV2.Item>
+        <MenuV2.Item>
+          <div>
+            <div>Memory type</div>
+          </div>
+        </MenuV2.Item>
+      </MenuV2>,
+    )
+    const menuButton = screen.getByRole<HTMLButtonElement>('button')
+    // Open Menu
+    await userEvent.click(menuButton)
+    const dialog = screen.getByRole('dialog')
+
+    await waitFor(() => {
+      expect(dialog).toBeVisible()
+    })
+
+    expect(asFragment()).toMatchSnapshot()
+
+    const searchInput = screen.getByRole<HTMLInputElement>('textbox')
+    await userEvent.type(searchInput, 'Disk')
+
+    const items = screen.getAllByRole<HTMLButtonElement>('menuitem')
+    expect(items.length).toBe(1)
+    expect(items[0]).toHaveTextContent('Volume type')
+  })
+
   test('renders with footer', () =>
     shouldMatchEmotionSnapshot(
       <MenuV2
