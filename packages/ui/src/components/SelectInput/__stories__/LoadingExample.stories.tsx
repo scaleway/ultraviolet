@@ -26,7 +26,7 @@ export const LoadingExample: StoryFn<typeof SelectInput> = ({ ...props }) => {
         name="example"
         isLoading={isLoading}
         customComponents={{
-          LoadingIndicator: () => <Loader active size={24} />,
+          LoadingIndicator: () => <Loader active size="large" />,
         }}
         {...props}
       >

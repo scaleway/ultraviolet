@@ -2,14 +2,21 @@
 
 import { css, useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
-import type { Color } from '../../theme'
+import type { ExtendedColor } from '../../theme'
 
 const VIEWBOX_WIDTH = 100
 const VIEWBOX_HEIGHT = 100
 const HALF_VIEWBOX_WIDTH = VIEWBOX_WIDTH / 2
 const HALF_VIEWBOX_HEIGHT = VIEWBOX_HEIGHT / 2
 
-export const LOADER_SIZE = '2.5rem'
+export const SIZES = {
+  xsmall: '150',
+  small: '200',
+  medium: '250',
+  large: '300',
+  xlarge: '400',
+  xxlarge: '700',
+} as const
 
 const StyledSvg = styled('svg', {
   shouldForwardProp: prop => !['active'].includes(prop),
@@ -33,30 +40,17 @@ const StyledSvg = styled('svg', {
 
 type LoaderProps = {
   active?: boolean
-  color?: Color | (string & NonNullable<unknown>)
+  sentiment?: ExtendedColor
   percentage?: number
-  size?: number | string
-  strokeWidth?: number
-  /**
-   * Text is placed in center of ProgressCircle.
-   */
-  text?: string
-  trailColor?: Color | (string & NonNullable<unknown>)
+  size?: keyof typeof SIZES
   /**
    * Label should be defined for accessibility, to indicate what is loading
    */
   label?: string
 }
 
-const Text = styled('text', {
-  shouldForwardProp: prop => !['color'].includes(prop),
-})<{ color: Color | (string & NonNullable<unknown>) }>`
-  fill: ${({ theme, color }) =>
-    theme.colors[color as Color]?.backgroundStrong || color};
-
-  font-size: ${({ theme }) => theme.typography.headingLarge.fontSize};
-  dominant-baseline: middle;
-  text-anchor: middle;
+export const StyledCircle = styled.circle`
+stroke: ${({ theme }) => theme.colors.neutral.border};
 `
 
 /**
@@ -64,17 +58,14 @@ const Text = styled('text', {
  */
 export const Loader = ({
   percentage = 20,
-  text,
-  size = LOADER_SIZE,
-  strokeWidth = 16,
-  color = 'primary',
-  trailColor = 'neutral',
+  size = 'xlarge',
+  sentiment = 'primary',
   active = false,
   label = 'Loading',
 }: LoaderProps) => {
   const theme = useTheme()
 
-  const circleRadius = HALF_VIEWBOX_HEIGHT - strokeWidth / 2
+  const circleRadius = HALF_VIEWBOX_HEIGHT - 8
   const boundedPercentage = Math.min(Math.max(percentage, 0), 100) / 100
   const circleDiameter = Math.PI * 2 * circleRadius
 
@@ -89,17 +80,16 @@ export const Loader = ({
       aria-valuetext={`${percentage}%`}
       viewBox={`0 0 ${VIEWBOX_WIDTH} ${VIEWBOX_HEIGHT}`}
       style={{
-        height: typeof size === 'string' ? size : `${size}px`,
-        width: typeof size === 'string' ? size : `${size}px`,
+        height: theme.sizing[SIZES[size]],
+        width: theme.sizing[SIZES[size]],
       }}
     >
-      <circle
+      <StyledCircle
         cx={HALF_VIEWBOX_WIDTH}
         cy={HALF_VIEWBOX_HEIGHT}
         r={circleRadius}
         fill="none"
-        strokeWidth={strokeWidth}
-        stroke={theme.colors[trailColor as Color]?.border || trailColor}
+        strokeWidth={16}
       />
       <circle
         // oxlint-disable-next-line no-unknown-property
@@ -110,17 +100,16 @@ export const Loader = ({
         cy={HALF_VIEWBOX_HEIGHT}
         r={circleRadius}
         fill="none"
-        strokeWidth={strokeWidth}
+        strokeWidth={16}
         strokeDasharray={circleDiameter}
         strokeDashoffset={(1 - boundedPercentage) * circleDiameter}
-        stroke={theme.colors[color as Color]?.backgroundStrong || color}
+        stroke={
+          sentiment === 'black' || sentiment === 'white'
+            ? theme.colors.other.monochrome[sentiment].background
+            : theme.colors[sentiment]?.backgroundStrong
+        }
         strokeLinecap="round"
       />
-      {text ? (
-        <Text color={color} x={HALF_VIEWBOX_WIDTH} y={HALF_VIEWBOX_HEIGHT}>
-          {text}
-        </Text>
-      ) : null}
     </StyledSvg>
   )
 }
