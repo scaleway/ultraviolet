@@ -1,5 +1,12 @@
 # Change Log
 
+## 4.0.0-beta.3
+
+### Patch Changes
+
+- Updated dependencies [[`6b0565d`](https://github.com/scaleway/ultraviolet/commit/6b0565d2991db0510067d91b2140274dcde2ea21)]:
+  - @ultraviolet/themes@2.0.0-beta.2
+
 ## 4.0.0-beta.2
 
 ### Major Changes
