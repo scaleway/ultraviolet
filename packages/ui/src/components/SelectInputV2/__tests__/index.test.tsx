@@ -331,28 +331,7 @@ describe('SelectInputV2', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-<<<<<<< HEAD
-  test.skip('renders correctly with dropdownAlign', async () => {
-    const { asFragment } = renderWithTheme(
-      <SelectInputV2
-        name="test"
-        options={dataUnGrouped}
-        placeholder="placeholder"
-        placeholderSearch="placeholdersearch"
-        required
-        dropdownAlign="center"
-      />,
-    )
-
-    const input = screen.getByText('placeholder')
-    await userEvent.click(input)
-    expect(asFragment()).toMatchSnapshot()
-  })
-
-  test.skip('renders correctly readOnly', async () => {
-=======
   test('renders correctly readOnly', async () => {
->>>>>>> ed81c108d (fix(SelectInputV2): better alignement in options and unit tests)
     const { asFragment } = renderWithTheme(
       <SelectInputV2
         name="test"
@@ -519,7 +498,6 @@ describe('SelectInputV2', () => {
 
     const input = screen.getByTestId('select-input-test')
     await userEvent.tab()
-    await userEvent.tab()
     expect(input).toHaveFocus()
     await userEvent.keyboard('[arrowDown]')
     const dropdown = screen.getByRole('dialog')
@@ -545,7 +523,6 @@ describe('SelectInputV2', () => {
 
     const input = screen.getByTestId('select-input-test')
     await userEvent.tab()
-    await userEvent.tab()
     expect(input).toHaveFocus()
     await userEvent.keyboard(' ')
     const dropdown = screen.getByRole('dialog')
@@ -564,7 +541,6 @@ describe('SelectInputV2', () => {
     )
 
     const input = screen.getByTestId('select-input-test')
-    await userEvent.tab()
     await userEvent.tab()
     expect(input).toHaveFocus()
     await userEvent.keyboard('[arrowDown]')
