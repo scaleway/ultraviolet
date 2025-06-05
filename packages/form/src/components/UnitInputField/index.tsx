@@ -11,29 +11,7 @@ type UnitInputFieldProps<
   TFieldValues extends FieldValues,
   TFieldName extends FieldPath<TFieldValues>,
 > = BaseFieldProps<TFieldValues, TFieldName> &
-  Pick<
-    ComponentProps<typeof UnitInput>,
-    | 'id'
-    | 'name'
-    | 'className'
-    | 'data-testid'
-    | 'disabled'
-    | 'value'
-    | 'max'
-    | 'min'
-    | 'options'
-    | 'placeholder'
-    | 'placeholderUnit'
-    | 'size'
-    | 'unitValue'
-    | 'required'
-    | 'width'
-    | 'helper'
-    | 'selectInputWidth'
-    | 'dropdownAlign'
-  > & {
-    onChangeUnitValue?: ComponentProps<typeof UnitInput>['onChangeUnitValue']
-    label: string
+  Omit<ComponentProps<typeof UnitInput>, 'value' | 'onChange' | 'label'> & {
     optionName?: string
   }
 
@@ -41,28 +19,18 @@ export const UnitInputField = <
   TFieldValues extends FieldValues,
   TFieldName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
 >({
-  id,
   name,
   max = Number.MAX_SAFE_INTEGER,
   min = 0,
-  size,
-  placeholder,
-  placeholderUnit,
   onChange,
   onChangeUnitValue,
-  disabled,
-  options,
-  className,
-  label,
+  label = '',
   required,
-  width,
-  selectInputWidth,
-  helper,
   shouldUnregister = false,
   validate,
   control,
   optionName,
-  dropdownAlign,
+  ...props
 }: UnitInputFieldProps<TFieldValues, TFieldName>) => {
   const { getError } = useErrors()
   const { field: unitField } = useController({
@@ -88,15 +56,12 @@ export const UnitInputField = <
 
   return (
     <UnitInput
-      id={id}
+      {...props}
       name={name}
       required={required}
       max={max}
       min={min}
       error={getError({ label }, valueFieldState.error)}
-      size={size}
-      placeholder={placeholder}
-      helper={helper}
       onChange={event => {
         valueField.onChange(event)
         onChange?.(event as PathValue<TFieldValues, Path<TFieldValues>>)
@@ -107,14 +72,7 @@ export const UnitInputField = <
       }}
       value={valueField.value as number}
       unitValue={unitField.value as string}
-      selectInputWidth={selectInputWidth}
-      disabled={disabled}
-      options={options}
       label={label}
-      className={className}
-      width={width}
-      placeholderUnit={placeholderUnit}
-      dropdownAlign={dropdownAlign}
     />
   )
 }

@@ -32,8 +32,8 @@ type DateInputProps<IsRange extends undefined | boolean = false> = {
   autoFocus?: boolean
   locale?: string | Locale
   disabled?: boolean
-  maxDate?: Date | null
-  minDate?: Date | null
+  maxDate?: Date
+  minDate?: Date
   name?: string
   onBlur?: (event: FocusEvent<HTMLInputElement>) => void
   onFocus?: (event: FocusEvent<HTMLInputElement>) => void
