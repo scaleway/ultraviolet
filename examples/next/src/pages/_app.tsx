@@ -38,7 +38,6 @@ const App = ({ Component, pageProps }: AppProps) => {
       ...COMMON_THEME_PROPS,
       colors: {
         primary: {
-          textWeak: '#A395FF',
           text: '#4F0599',
         },
       },
