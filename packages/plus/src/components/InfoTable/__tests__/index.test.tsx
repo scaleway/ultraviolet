@@ -2,7 +2,7 @@ import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
 import { describe, expect, it } from 'vitest'
 import { InfoTable } from '..'
 
-describe('SteppedListCard', () => {
+describe('InfoTable', () => {
   it('should work with default props', () =>
     shouldMatchEmotionSnapshot(
       <InfoTable>
