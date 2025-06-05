@@ -27,44 +27,18 @@ export const TextInputField = <
   TFieldName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
 >({
   regex: regexes,
-  id,
-  className,
-  tabIndex,
   onChange,
-  placeholder,
-  disabled = false,
-  readOnly = false,
-  success,
-  helper,
-  tooltip,
   label,
-  autoFocus,
   required = false,
-  'data-testid': dataTestId,
   name,
-  onFocus,
   onBlur,
-  clearable = false,
-  labelDescription,
-  type = 'text',
-  prefix,
-  suffix,
-  size = 'large',
-  loading,
-  onRandomize,
   minLength,
   maxLength,
-  'aria-labelledby': ariaLabelledBy,
   'aria-label': ariaLabel,
-  autoComplete,
   shouldUnregister,
   validate,
   control,
-  role,
-  'aria-live': ariaLive,
-  'aria-atomic': ariaAtomic,
-  onKeyDown,
-  onKeyUp,
+  ...props
 }: TextInputFieldProps<TFieldValues, TFieldName>) => {
   const { getError } = useErrors()
 
@@ -92,11 +66,7 @@ export const TextInputField = <
 
   return (
     <TextInputV2
-      autoFocus={autoFocus}
-      className={className}
-      clearable={clearable}
-      data-testid={dataTestId}
-      disabled={disabled}
+      {...props}
       error={getError(
         {
           regex: regexes,
@@ -107,10 +77,7 @@ export const TextInputField = <
         },
         error,
       )}
-      helper={helper}
       label={label}
-      loading={loading}
-      labelDescription={labelDescription}
       minLength={minLength}
       maxLength={maxLength}
       name={name}
@@ -124,30 +91,9 @@ export const TextInputField = <
           event.target.value as PathValue<TFieldValues, Path<TFieldValues>>,
         )
       }}
-      onFocus={event => {
-        onFocus?.(event)
-      }}
-      placeholder={placeholder}
-      readOnly={readOnly}
       required={required}
-      success={success}
-      tabIndex={tabIndex}
-      tooltip={tooltip}
-      type={type}
       value={field.value === undefined ? '' : field.value}
-      id={id}
-      prefix={prefix}
-      suffix={suffix}
-      size={size}
-      onRandomize={onRandomize}
       aria-label={ariaLabel}
-      aria-labelledby={ariaLabelledBy}
-      autoComplete={autoComplete}
-      role={role}
-      aria-live={ariaLive}
-      aria-atomic={ariaAtomic}
-      onKeyDown={onKeyDown}
-      onKeyUp={onKeyUp}
     />
   )
 }
