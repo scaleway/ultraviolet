@@ -59,7 +59,7 @@ const LogIn = () => {
     <StyledLoginContainer>
       <Form methods={methods} errors={mockErrors} onSubmit={handleSubmit}>
         <Stack gap={1} alignItems="center">
-          <IdIcon size="1.7em" />
+          <IdIcon size="small" />
           <Text as="h1" variant="heading">
             Login form
           </Text>
