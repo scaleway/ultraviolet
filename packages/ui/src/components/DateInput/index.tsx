@@ -9,7 +9,8 @@ import { Card } from '../Card'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
 import { TextInputV2 } from '../TextInputV2'
-import { type ContextProps, DateInputContext } from './Context'
+import { DateInputContext } from './Context'
+import type { ContextProps } from './Context'
 import { CalendarContent } from './components/CalendarContent'
 import { CalendarPopup } from './components/Popup'
 import { formatValue, styleCalendarContainer } from './helpers'
@@ -31,8 +32,8 @@ type DateInputProps<IsRange extends undefined | boolean = false> = {
   autoFocus?: boolean
   locale?: string | Locale
   disabled?: boolean
-  maxDate?: Date | null
-  minDate?: Date | null
+  maxDate?: Date
+  minDate?: Date
   name?: string
   onBlur?: (event: FocusEvent<HTMLInputElement>) => void
   onFocus?: (event: FocusEvent<HTMLInputElement>) => void
