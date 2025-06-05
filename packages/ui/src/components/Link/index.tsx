@@ -21,11 +21,14 @@ import capitalize from '../../utils/capitalize'
 import { Tooltip } from '../Tooltip'
 
 const StyledArrowLeftIcon = styled(ArrowLeftIcon)`
-  margin-left: ${({ theme }) => theme.space['1']};
+  margin-right: ${({ theme }) => theme.space['0.5']};
 `
 
-const StyledArrowRightIcon = StyledArrowLeftIcon.withComponent(ArrowRightIcon)
-const StyledOpenInNewIcon = StyledArrowLeftIcon.withComponent(OpenInNewIcon)
+const StyledArrowRightIcon = styled(ArrowRightIcon)`
+  margin-left: ${({ theme }) => theme.space['0.5']};
+`
+
+const StyledOpenInNewIcon = StyledArrowRightIcon.withComponent(OpenInNewIcon)
 
 export const PROMINENCES = {
   default: '',
@@ -160,8 +163,8 @@ const StyledLink = styled('a', {
     ${StyledArrowLeftIcon}, ${StyledArrowRightIcon}, ${StyledOpenInNewIcon} {
       transform: ${({ theme, iconPosition }) =>
         iconPosition === 'left'
-          ? `translate(${theme.space['0.5']}, 0)`
-          : `translate(-${theme.space['0.5']}, 0)`};
+          ? `translate(${theme.space['0.25']}, 0)`
+          : `translate(-${theme.space['0.25']}, 0)`};
     }
 
     outline: none;
