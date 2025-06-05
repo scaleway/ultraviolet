@@ -1,5 +1,11 @@
 # Change Log
 
+## 2.0.0-beta.2
+
+### Patch Changes
+
+- [`6b0565d`](https://github.com/scaleway/ultraviolet/commit/6b0565d2991db0510067d91b2140274dcde2ea21) Thanks [@matthprost](https://github.com/matthprost)! - Remove deepmerge dependency as it is no longer used
+
 ## 2.0.0-beta.1
 
 ### Major Changes
