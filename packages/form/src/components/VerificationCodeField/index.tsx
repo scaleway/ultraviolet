@@ -9,50 +9,22 @@ import type { BaseFieldProps } from '../../types'
 
 type VerificationCodeFieldProps<
   TFieldValues extends FieldValues,
-  TName extends FieldPath<TFieldValues>,
-> = BaseFieldProps<TFieldValues, TName> &
-  Partial<
-    Pick<
-      ComponentProps<typeof VerificationCode>,
-      | 'disabled'
-      | 'error'
-      | 'fields'
-      | 'initialValue'
-      | 'onChange'
-      | 'onComplete'
-      | 'placeholder'
-      | 'required'
-      | 'type'
-      | 'labelDescription'
-      | 'success'
-      | 'helper'
-    >
-  > & {
-    className?: string
-    id?: string
-    name: string
-    label?: string
-  }
+  TFieldName extends FieldPath<TFieldValues>,
+> = BaseFieldProps<TFieldValues, TFieldName> &
+  Omit<ComponentProps<typeof VerificationCode>, 'value'>
 
 export const VerificationCodeField = <
   TFieldValues extends FieldValues,
   TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
 >({
-  className,
   fields,
-  id = 'verification-code-input',
+  inputId = 'verification-code-input',
   label,
   name,
   onChange,
-  onComplete,
-  placeholder,
   required,
-  type = 'number',
-  disabled,
   validate,
-  labelDescription,
-  success,
-  helper,
+  ...props
 }: VerificationCodeFieldProps<TFieldValues, TName>) => {
   const { getError } = useErrors()
 
@@ -78,25 +50,16 @@ export const VerificationCodeField = <
 
   return (
     <VerificationCode
-      className={className}
-      inputId={id}
-      placeholder={placeholder}
+      {...props}
+      inputId={inputId}
       fields={fields}
       onChange={event => {
         onChange?.(event)
         field.onChange(event)
       }}
-      onComplete={event => {
-        onComplete?.(event)
-      }}
-      type={type}
-      disabled={disabled}
       required={required}
       error={getError({ label: label || 'verification-code-field' }, error)}
       label={label}
-      labelDescription={labelDescription}
-      success={success}
-      helper={helper}
     />
   )
 }

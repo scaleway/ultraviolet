@@ -15,31 +15,7 @@ type DateFieldProps<
   TFieldValues extends FieldValues,
   TFieldName extends FieldPath<TFieldValues>,
 > = BaseFieldProps<TFieldValues, TFieldName> &
-  Omit<
-    ComponentProps<typeof DateInput>,
-    | 'maxDate'
-    | 'minDate'
-    | 'disabled'
-    | 'required'
-    | 'locale'
-    | 'name'
-    | 'onChange'
-    | 'onFocus'
-    | 'onBlur'
-    | 'autoFocus'
-    | 'stardDate'
-    | 'endDate'
-  > & {
-    maxDate?: Date
-    minDate?: Date
-    disabled?: boolean
-    required?: boolean
-    locale?: string
-    onBlur?: (event: FocusEvent<HTMLElement>) => void
-    onFocus?: (value: FocusEvent<HTMLElement>) => void
-    autoFocus?: boolean
-    placeholder?: string
-  }
+  Omit<ComponentProps<typeof DateInput>, 'required' | 'name' | 'onChange'>
 
 const parseDate = (value: string | Date): Date =>
   typeof value === 'string' ? new Date(value) : value
@@ -55,25 +31,15 @@ export const DateField = <
   control,
   label = '',
   format,
-  locale,
-  maxDate,
   minDate,
-  disabled,
+  maxDate,
   onChange,
   onBlur,
-  onFocus,
   validate,
-  autoFocus = false,
-  excludeDates,
   selectsRange,
-  size,
-  placeholder,
-  tooltip,
-  clearable,
-  'data-testid': dataTestId,
-  shouldUnregister = false,
   showMonthYearPicker,
-  input = 'text',
+  shouldUnregister = false,
+  ...props
 }: DateFieldProps<TFieldValues, TFieldName>) => {
   const { getError } = useErrors()
   const {
@@ -95,9 +61,9 @@ export const DateField = <
 
   return (
     <DateInput
+      {...props}
       name={field.name}
       label={label}
-      placeholder={placeholder}
       value={Array.isArray(field.value) ? undefined : field.value}
       format={
         format ||
@@ -113,7 +79,6 @@ export const DateField = <
             : date.toLocaleDateString()
         })
       }
-      locale={locale}
       required={required}
       onChange={(val: DateExtends | null) => {
         if (val && val instanceof Date) {
@@ -135,23 +100,15 @@ export const DateField = <
           field.onChange(val)
         }
       }}
-      onBlur={(e: FocusEvent<HTMLElement>) => {
+      onBlur={(e: FocusEvent<HTMLInputElement>) => {
         field.onBlur()
         onBlur?.(e)
       }}
-      onFocus={onFocus}
       maxDate={maxDate}
-      size={size}
       minDate={minDate}
       error={getError({ minDate, maxDate, label }, error)}
-      disabled={disabled}
-      autoFocus={autoFocus}
-      excludeDates={excludeDates}
       selectsRange={selectsRange}
       showMonthYearPicker={showMonthYearPicker}
-      data-testid={dataTestId}
-      clearable={clearable}
-      tooltip={tooltip}
       startDate={
         selectsRange && Array.isArray(field.value)
           ? (field.value as [Date | null, Date | null])[0]
@@ -162,7 +119,6 @@ export const DateField = <
           ? (field.value as [Date | null, Date | null])[1]
           : undefined
       }
-      input={input}
     />
   )
 }
