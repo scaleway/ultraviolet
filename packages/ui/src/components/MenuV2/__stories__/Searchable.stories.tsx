@@ -6,6 +6,7 @@ import { AvatarV2 } from '../../AvatarV2'
 import { Badge } from '../../Badge'
 import { Button } from '../../Button'
 import { Stack } from '../../Stack'
+import limitation from './SerarchableLimitations.md?raw'
 
 type ItemProps = {
   sentiment?: ComponentProps<typeof MenuV2.Item>['sentiment']
@@ -73,8 +74,7 @@ Searchable.decorators = [
 Searchable.parameters = {
   docs: {
     description: {
-      story:
-        'You can add `searchable` prop to the MenuV2 component to enable searching through the items.\n\n If `MenuV2.Item` has a complex children (not a string) you can specify `searchText` on `MenuV2.Item` prop to search through the item.',
+      story: limitation,
     },
   },
 }
