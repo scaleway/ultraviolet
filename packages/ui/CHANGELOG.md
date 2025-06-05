@@ -1,5 +1,11 @@
 # Change Log
 
+## 2.0.0-beta.6
+
+### Patch Changes
+
+- [#5177](https://github.com/scaleway/ultraviolet/pull/5177) [`2a6a3c3`](https://github.com/scaleway/ultraviolet/commit/2a6a3c37a18146f22482e5039627330a2b31dbd6) Thanks [@lisalupi](https://github.com/lisalupi)! - `<TimeInputV2 />`: size "large" by default instead of "medium" and fix width of AM/PM input when large.
+
 ## 2.0.0-beta.5
 
 ### Patch Changes
