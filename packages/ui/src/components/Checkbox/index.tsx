@@ -351,7 +351,7 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
         >
           {progress ? (
             <StyledActivityContainer>
-              <Loader active size={size ?? theme.sizing['300']} />
+              <Loader active size="small" />
             </StyledActivityContainer>
           ) : null}
 
