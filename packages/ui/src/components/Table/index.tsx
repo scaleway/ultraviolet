@@ -126,6 +126,7 @@ export const BaseTable = forwardRef<HTMLTableElement, TableProps>(
       bordered = false,
       stripped = false,
       autoCollapse = false,
+      onSelectedChange,
     },
     ref,
   ) => {
@@ -145,6 +146,7 @@ export const BaseTable = forwardRef<HTMLTableElement, TableProps>(
         bordered={bordered}
         autoCollapse={autoCollapse}
         columns={columns}
+        onSelectedChange={onSelectedChange}
       >
         <TableContainer>
           <StyledTable
