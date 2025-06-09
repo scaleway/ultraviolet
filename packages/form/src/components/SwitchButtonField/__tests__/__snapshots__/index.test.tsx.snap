@@ -139,6 +139,12 @@ exports[`SwitchButtonField > should render correctly 1`] = `
   border: none;
 }
 
+.emotion-5 label {
+  -webkit-transition: color 300ms;
+  transition: color 300ms;
+  color: #222638;
+}
+
 .emotion-5[data-checked='true'] label {
   color: #ffffff;
 }
@@ -665,6 +671,12 @@ exports[`SwitchButtonField > should works with defaultValues 1`] = `
 
 .emotion-5[data-checked='true'] {
   border: none;
+}
+
+.emotion-5 label {
+  -webkit-transition: color 300ms;
+  transition: color 300ms;
+  color: #222638;
 }
 
 .emotion-5[data-checked='true'] label {

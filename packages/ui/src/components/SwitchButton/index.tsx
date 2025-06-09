@@ -157,18 +157,26 @@ export const SwitchButton = ({
             onMouseDown={event => {
               const rect = event.currentTarget.getBoundingClientRect()
               const clickX = event.clientX - rect.left
-              setMouseDownSide(
-                clickX < getPosition(getElement(localValue)) ? 'left' : 'right',
-              )
-              setWidth(width + FOCUS_OVERLAY_SCALE_RATIO)
+              const clickInCurrentElement =
+                clickX > position && clickX < position + width
+              if (!clickInCurrentElement) {
+                setMouseDownSide(
+                  clickX < getPosition(getElement(localValue))
+                    ? 'left'
+                    : 'right',
+                )
+                setWidth(width + FOCUS_OVERLAY_SCALE_RATIO)
+              } else {
+                setMouseDownSide(null)
+              }
             }}
             onMouseUp={() => {
               setMouseDownSide(null)
-              setWidth(width - FOCUS_OVERLAY_SCALE_RATIO)
+              if (mouseDownSide) setWidth(width - FOCUS_OVERLAY_SCALE_RATIO)
             }}
             onMouseLeave={() => {
               setMouseDownSide(null)
-              setWidth(width - FOCUS_OVERLAY_SCALE_RATIO)
+              if (mouseDownSide) setWidth(width - FOCUS_OVERLAY_SCALE_RATIO)
             }}
             data-size={size}
             ref={containerRef}

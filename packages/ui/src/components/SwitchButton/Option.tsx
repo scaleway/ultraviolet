@@ -29,9 +29,15 @@ const StyledSelectableCard = styled(SelectableCard)`
     border: none;
   }
 
+  & label {
+    transition: color 300ms;
+    color: ${({ theme }) => theme.colors.neutral.textStrong};
+  }
+
   &[data-checked='true'] label {
     color: ${({ theme }) => theme.colors.primary.textStrong};
   }
+
 
 
   &:not([data-checked='true']) label {
