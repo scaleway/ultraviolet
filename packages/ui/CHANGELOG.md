@@ -1,5 +1,14 @@
 # Change Log
 
+## 1.95.9
+
+### Patch Changes
+
+- [#5216](https://github.com/scaleway/ultraviolet/pull/5216) [`90d89a2`](https://github.com/scaleway/ultraviolet/commit/90d89a29e8f2115d875e2f1497aaca6a33bde792) Thanks [@johnrazeur](https://github.com/johnrazeur)! - fix(Table): add missing onSelectChange to provider
+
+- [#5221](https://github.com/scaleway/ultraviolet/pull/5221) [`67fd741`](https://github.com/scaleway/ultraviolet/commit/67fd741ae39739275ffa3ff314c38a205857175b) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `next` to `15.3.3`.
+  Updated dependency `eslint-config-next` to `15.3.3`.
+
 ## 1.95.8
 
 ### Patch Changes
