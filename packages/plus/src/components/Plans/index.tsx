@@ -142,7 +142,8 @@ const PlanCell = styled.td`
     background-color: transparent;
 
   &[data-disabled="true"] {
-      background-color: ${({ theme }) => theme.colors.neutral.backgroundDisabled};
+      background-color: ${({ theme }) =>
+        theme.colors.neutral.backgroundDisabled};
     }
 
   &[data-hide="true"] {

@@ -1,7 +1,7 @@
 import { StoryFn } from '@storybook/react'
 import { Button, type Text } from '@ultraviolet/ui'
 import { type ComponentProps, useState } from 'react'
-import { Plans } from '../Plans'
+import { Plans } from '..'
 import { domain, fees, gb, pipeline, ssl } from './features'
 
 const planStarter = {
