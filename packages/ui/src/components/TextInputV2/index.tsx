@@ -237,6 +237,7 @@ export const TextInputV2 = forwardRef<HTMLInputElement, TextInputProps>(
   ) => {
     const localId = useId()
     const [hasFocus, setHasFocus] = useState(false)
+    const [localValue, setLocalValue] = useState(defaultValue)
     const inputRef = useRef<HTMLInputElement>(null)
     useImperativeHandle(ref, () => inputRef.current as HTMLInputElement)
 
@@ -260,11 +261,14 @@ export const TextInputV2 = forwardRef<HTMLInputElement, TextInputProps>(
       event => {
         onChange?.(event)
         onChangeValue?.(event.target.value)
+        setLocalValue(event.target.value)
       },
       [onChange, onChangeValue],
     )
 
-    const computedClearable = clearable && !!value
+    const computedValue = value !== undefined ? value : localValue
+
+    const computedClearable = clearable && !!computedValue
 
     return (
       <Stack
@@ -353,13 +357,14 @@ export const TextInputV2 = forwardRef<HTMLInputElement, TextInputProps>(
                   {computedClearable ? (
                     <Button
                       aria-label="clear value"
-                      disabled={disabled || !value}
+                      disabled={disabled || !computedValue}
                       variant="ghost"
                       size={size === 'small' ? 'xsmall' : 'small'}
                       icon="close"
                       onClick={() => {
                         if (inputRef?.current) {
                           inputRef.current.value = ''
+                          setLocalValue('')
                           onChangeCallback({
                             target: { value: '' },
                             currentTarget: { value: '' },
