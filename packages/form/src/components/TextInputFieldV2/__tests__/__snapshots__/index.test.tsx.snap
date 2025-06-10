@@ -3,6 +3,10 @@
 exports[`TextInputFieldV2 > should render correctly 1`] = `
 <DocumentFragment>
   .emotion-0 {
+  display: contents;
+}
+
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -25,7 +29,7 @@ exports[`TextInputFieldV2 > should render correctly 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-3 {
+.emotion-5 {
   color: #3f4250;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
@@ -38,7 +42,7 @@ exports[`TextInputFieldV2 > should render correctly 1`] = `
   cursor: pointer;
 }
 
-.emotion-5 {
+.emotion-7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -52,69 +56,69 @@ exports[`TextInputFieldV2 > should render correctly 1`] = `
   border-radius: 0.25rem;
 }
 
-.emotion-5>.emotion-8 {
+.emotion-7>.emotion-10 {
   color: #3f4250;
 }
 
-.emotion-5>.emotion-8::-webkit-input-placeholder {
+.emotion-7>.emotion-10::-webkit-input-placeholder {
   color: #727683;
 }
 
-.emotion-5>.emotion-8::-moz-placeholder {
+.emotion-7>.emotion-10::-moz-placeholder {
   color: #727683;
 }
 
-.emotion-5>.emotion-8:-ms-input-placeholder {
+.emotion-7>.emotion-10:-ms-input-placeholder {
   color: #727683;
 }
 
-.emotion-5>.emotion-8::placeholder {
+.emotion-7>.emotion-10::placeholder {
   color: #727683;
 }
 
-.emotion-5[data-success='true'] {
+.emotion-7[data-success='true'] {
   border-color: #22674e;
 }
 
-.emotion-5[data-error='true'] {
+.emotion-7[data-error='true'] {
   border-color: #b3144d;
 }
 
-.emotion-5[data-readonly='true'] {
+.emotion-7[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
 }
 
-.emotion-5[data-disabled='true'] {
+.emotion-7[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
 }
 
-.emotion-5[data-disabled='true']>.emotion-8 {
+.emotion-7[data-disabled='true']>.emotion-10 {
   color: #b5b7bd;
 }
 
-.emotion-5[data-disabled='true']>.emotion-8::-webkit-input-placeholder {
+.emotion-7[data-disabled='true']>.emotion-10::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-5[data-disabled='true']>.emotion-8::-moz-placeholder {
+.emotion-7[data-disabled='true']>.emotion-10::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-5[data-disabled='true']>.emotion-8:-ms-input-placeholder {
+.emotion-7[data-disabled='true']>.emotion-10:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-5[data-disabled='true']>.emotion-8::placeholder {
+.emotion-7[data-disabled='true']>.emotion-10::placeholder {
   color: #b5b7bd;
 }
 
-.emotion-5:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-7:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-7 {
+.emotion-9 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -127,11 +131,11 @@ exports[`TextInputFieldV2 > should render correctly 1`] = `
   font-size: 0.875rem;
 }
 
-.emotion-7[data-size='large'] {
+.emotion-9[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-7[data-size='small'] {
+.emotion-9[data-size='small'] {
   padding-left: 0.5rem;
 }
 
@@ -139,20 +143,21 @@ exports[`TextInputFieldV2 > should render correctly 1`] = `
     data-testid="testing"
   >
     <form
+      class="emotion-0 emotion-1"
       novalidate=""
     >
       <div
-        class="emotion-0 emotion-1"
+        class="emotion-2 emotion-3"
       >
         <label
-          class="emotion-2 emotion-3 emotion-4"
+          class="emotion-4 emotion-5 emotion-6"
           for="«r0»"
         >
           Test
         </label>
         <div>
           <div
-            class="emotion-5 emotion-6"
+            class="emotion-7 emotion-8"
             data-disabled="false"
             data-error="false"
             data-readonly="false"
@@ -160,7 +165,7 @@ exports[`TextInputFieldV2 > should render correctly 1`] = `
           >
             <input
               aria-invalid="false"
-              class="emotion-7 emotion-8"
+              class="emotion-9 emotion-10"
               data-size="large"
               id="«r0»"
               name="test"
@@ -178,6 +183,10 @@ exports[`TextInputFieldV2 > should render correctly 1`] = `
 exports[`TextInputFieldV2 > should render correctly generated 1`] = `
 <DocumentFragment>
   .emotion-0 {
+  display: contents;
+}
+
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -200,7 +209,7 @@ exports[`TextInputFieldV2 > should render correctly generated 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-2 {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -223,7 +232,7 @@ exports[`TextInputFieldV2 > should render correctly generated 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-5 {
+.emotion-7 {
   color: #3f4250;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
@@ -236,7 +245,7 @@ exports[`TextInputFieldV2 > should render correctly generated 1`] = `
   cursor: pointer;
 }
 
-.emotion-7 {
+.emotion-9 {
   color: #b3144d;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
@@ -248,7 +257,7 @@ exports[`TextInputFieldV2 > should render correctly generated 1`] = `
   text-decoration: none;
 }
 
-.emotion-9 {
+.emotion-11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -262,69 +271,69 @@ exports[`TextInputFieldV2 > should render correctly generated 1`] = `
   border-radius: 0.25rem;
 }
 
-.emotion-9>.emotion-12 {
+.emotion-11>.emotion-14 {
   color: #3f4250;
 }
 
-.emotion-9>.emotion-12::-webkit-input-placeholder {
+.emotion-11>.emotion-14::-webkit-input-placeholder {
   color: #727683;
 }
 
-.emotion-9>.emotion-12::-moz-placeholder {
+.emotion-11>.emotion-14::-moz-placeholder {
   color: #727683;
 }
 
-.emotion-9>.emotion-12:-ms-input-placeholder {
+.emotion-11>.emotion-14:-ms-input-placeholder {
   color: #727683;
 }
 
-.emotion-9>.emotion-12::placeholder {
+.emotion-11>.emotion-14::placeholder {
   color: #727683;
 }
 
-.emotion-9[data-success='true'] {
+.emotion-11[data-success='true'] {
   border-color: #22674e;
 }
 
-.emotion-9[data-error='true'] {
+.emotion-11[data-error='true'] {
   border-color: #b3144d;
 }
 
-.emotion-9[data-readonly='true'] {
+.emotion-11[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
 }
 
-.emotion-9[data-disabled='true'] {
+.emotion-11[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
 }
 
-.emotion-9[data-disabled='true']>.emotion-12 {
+.emotion-11[data-disabled='true']>.emotion-14 {
   color: #b5b7bd;
 }
 
-.emotion-9[data-disabled='true']>.emotion-12::-webkit-input-placeholder {
+.emotion-11[data-disabled='true']>.emotion-14::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-9[data-disabled='true']>.emotion-12::-moz-placeholder {
+.emotion-11[data-disabled='true']>.emotion-14::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-9[data-disabled='true']>.emotion-12:-ms-input-placeholder {
+.emotion-11[data-disabled='true']>.emotion-14:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-9[data-disabled='true']>.emotion-12::placeholder {
+.emotion-11[data-disabled='true']>.emotion-14::placeholder {
   color: #b5b7bd;
 }
 
-.emotion-9:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-11:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-11 {
+.emotion-13 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -337,15 +346,15 @@ exports[`TextInputFieldV2 > should render correctly generated 1`] = `
   font-size: 0.875rem;
 }
 
-.emotion-11[data-size='large'] {
+.emotion-13[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-11[data-size='small'] {
+.emotion-13[data-size='small'] {
   padding-left: 0.5rem;
 }
 
-.emotion-13 {
+.emotion-15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -369,7 +378,7 @@ exports[`TextInputFieldV2 > should render correctly generated 1`] = `
   padding: 0 1rem;
 }
 
-.emotion-15 {
+.emotion-17 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -409,22 +418,22 @@ exports[`TextInputFieldV2 > should render correctly generated 1`] = `
   color: #3f4250;
 }
 
-.emotion-15:hover {
+.emotion-17:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-15:active {
+.emotion-17:active {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.emotion-15:hover,
-.emotion-15:active {
+.emotion-17:hover,
+.emotion-17:active {
   background: #e9eaeb;
   color: #222638;
 }
 
-.emotion-17 {
+.emotion-19 {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
@@ -433,16 +442,16 @@ exports[`TextInputFieldV2 > should render correctly generated 1`] = `
   min-height: 16px;
 }
 
-.emotion-17 .fillStroke {
+.emotion-19 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.emotion-17 path {
+.emotion-19 path {
   fill: currentColor;
 }
 
-.emotion-19 {
+.emotion-21 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -482,17 +491,17 @@ exports[`TextInputFieldV2 > should render correctly generated 1`] = `
   color: #ffffff;
 }
 
-.emotion-19:hover {
+.emotion-21:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-19:active {
+.emotion-21:active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-19:hover,
-.emotion-19:active {
+.emotion-21:hover,
+.emotion-21:active {
   background: #792dd4;
   color: #f9f9fa;
 }
@@ -501,29 +510,30 @@ exports[`TextInputFieldV2 > should render correctly generated 1`] = `
     data-testid="testing"
   >
     <form
+      class="emotion-0 emotion-1"
       novalidate=""
     >
       <div
-        class="emotion-0 emotion-1"
+        class="emotion-2 emotion-3"
       >
         <div
-          class="emotion-2 emotion-1"
+          class="emotion-4 emotion-3"
         >
           <label
-            class="emotion-4 emotion-5 emotion-6"
+            class="emotion-6 emotion-7 emotion-8"
             for="«r3»"
           >
             Test
           </label>
           <span
-            class="emotion-7 emotion-6"
+            class="emotion-9 emotion-8"
           >
             *
           </span>
         </div>
         <div>
           <div
-            class="emotion-9 emotion-10"
+            class="emotion-11 emotion-12"
             data-disabled="false"
             data-error="false"
             data-readonly="false"
@@ -531,7 +541,7 @@ exports[`TextInputFieldV2 > should render correctly generated 1`] = `
           >
             <input
               aria-invalid="false"
-              class="emotion-11 emotion-12"
+              class="emotion-13 emotion-14"
               data-size="large"
               id="«r3»"
               name="test"
@@ -540,15 +550,15 @@ exports[`TextInputFieldV2 > should render correctly generated 1`] = `
               value="This is an example"
             />
             <div
-              class="emotion-13 emotion-14"
+              class="emotion-15 emotion-16"
             >
               <button
                 aria-label="clear value"
-                class="emotion-15 emotion-16"
+                class="emotion-17 emotion-18"
                 type="button"
               >
                 <svg
-                  class="emotion-17 emotion-18"
+                  class="emotion-19 emotion-20"
                   viewBox="0 0 16 16"
                   xmlns="http://www.w3.org/2000/svg"
                 >
@@ -562,7 +572,7 @@ exports[`TextInputFieldV2 > should render correctly generated 1`] = `
         </div>
       </div>
       <button
-        class="emotion-19 emotion-20"
+        class="emotion-21 emotion-22"
         type="submit"
       >
         Submit

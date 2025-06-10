@@ -3,10 +3,14 @@
 exports[`TextInputField > should render correctly 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  position: relative;
+  display: contents;
 }
 
 .emotion-2 {
+  position: relative;
+}
+
+.emotion-4 {
   -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
   transition: border-color 0.2s ease,box-shadow 0.2s ease;
   -webkit-appearance: none;
@@ -35,62 +39,62 @@ exports[`TextInputField > should render correctly 1`] = `
   padding: 8px;
 }
 
-.emotion-2::-webkit-input-placeholder {
+.emotion-4::-webkit-input-placeholder {
   color: #727683;
   opacity: 0;
 }
 
-.emotion-2::-moz-placeholder {
+.emotion-4::-moz-placeholder {
   color: #727683;
   opacity: 0;
 }
 
-.emotion-2:-ms-input-placeholder {
+.emotion-4:-ms-input-placeholder {
   color: #727683;
   opacity: 0;
 }
 
-.emotion-2::placeholder {
+.emotion-4::placeholder {
   color: #727683;
   opacity: 0;
 }
 
-.emotion-2:hover,
-.emotion-2:focus {
+.emotion-4:hover,
+.emotion-4:focus {
   border-color: #792dd4;
 }
 
-.emotion-2:focus {
+.emotion-4:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   border-color: #792dd4;
 }
 
-.emotion-2::-webkit-input-placeholder {
+.emotion-4::-webkit-input-placeholder {
   opacity: 1;
 }
 
-.emotion-2::-moz-placeholder {
+.emotion-4::-moz-placeholder {
   opacity: 1;
 }
 
-.emotion-2:-ms-input-placeholder {
+.emotion-4:-ms-input-placeholder {
   opacity: 1;
 }
 
-.emotion-2::placeholder {
+.emotion-4::placeholder {
   opacity: 1;
 }
 
-.emotion-4 {
+.emotion-6 {
   height: auto;
 }
 
-.emotion-4[data-is-animated="true"] {
+.emotion-6[data-is-animated="true"] {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
 }
 
-.emotion-6 {
+.emotion-8 {
   font-size: 12px;
   color: #b3144d;
   padding-top: 0.125rem;
@@ -100,25 +104,26 @@ exports[`TextInputField > should render correctly 1`] = `
     data-testid="testing"
   >
     <form
+      class="emotion-0 emotion-1"
       novalidate=""
     >
       <div>
         <div
-          class="emotion-0 emotion-1"
+          class="emotion-2 emotion-3"
         >
           <input
             autocomplete="on"
-            class="emotion-2 emotion-3"
+            class="emotion-4 emotion-5"
             name="test"
             type="text"
           />
         </div>
         <div
-          class="emotion-4 emotion-5"
+          class="emotion-6 emotion-7"
           data-is-animated="true"
         >
           <div
-            class="emotion-6 emotion-7"
+            class="emotion-8 emotion-9"
           />
         </div>
       </div>
@@ -130,10 +135,14 @@ exports[`TextInputField > should render correctly 1`] = `
 exports[`TextInputField > should render correctly disabled 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  position: relative;
+  display: contents;
 }
 
 .emotion-2 {
+  position: relative;
+}
+
+.emotion-4 {
   -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
   transition: border-color 0.2s ease,box-shadow 0.2s ease;
   -webkit-appearance: none;
@@ -167,62 +176,62 @@ exports[`TextInputField > should render correctly disabled 1`] = `
   padding: 8px;
 }
 
-.emotion-2::-webkit-input-placeholder {
+.emotion-4::-webkit-input-placeholder {
   color: #727683;
   opacity: 0;
 }
 
-.emotion-2::-moz-placeholder {
+.emotion-4::-moz-placeholder {
   color: #727683;
   opacity: 0;
 }
 
-.emotion-2:-ms-input-placeholder {
+.emotion-4:-ms-input-placeholder {
   color: #727683;
   opacity: 0;
 }
 
-.emotion-2::placeholder {
+.emotion-4::placeholder {
   color: #727683;
   opacity: 0;
 }
 
-.emotion-2:hover,
-.emotion-2:focus {
+.emotion-4:hover,
+.emotion-4:focus {
   border-color: #792dd4;
 }
 
-.emotion-2:focus {
+.emotion-4:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   border-color: #792dd4;
 }
 
-.emotion-2::-webkit-input-placeholder {
+.emotion-4::-webkit-input-placeholder {
   opacity: 1;
 }
 
-.emotion-2::-moz-placeholder {
+.emotion-4::-moz-placeholder {
   opacity: 1;
 }
 
-.emotion-2:-ms-input-placeholder {
+.emotion-4:-ms-input-placeholder {
   opacity: 1;
 }
 
-.emotion-2::placeholder {
+.emotion-4::placeholder {
   opacity: 1;
 }
 
-.emotion-4 {
+.emotion-6 {
   height: auto;
 }
 
-.emotion-4[data-is-animated="true"] {
+.emotion-6[data-is-animated="true"] {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
 }
 
-.emotion-6 {
+.emotion-8 {
   font-size: 12px;
   color: #b3144d;
   padding-top: 0.125rem;
@@ -232,26 +241,27 @@ exports[`TextInputField > should render correctly disabled 1`] = `
     data-testid="testing"
   >
     <form
+      class="emotion-0 emotion-1"
       novalidate=""
     >
       <div>
         <div
-          class="emotion-0 emotion-1"
+          class="emotion-2 emotion-3"
         >
           <input
             autocomplete="on"
-            class="emotion-2 emotion-3"
+            class="emotion-4 emotion-5"
             disabled=""
             name="test"
             type="text"
           />
         </div>
         <div
-          class="emotion-4 emotion-5"
+          class="emotion-6 emotion-7"
           data-is-animated="true"
         >
           <div
-            class="emotion-6 emotion-7"
+            class="emotion-8 emotion-9"
           />
         </div>
       </div>
@@ -263,10 +273,14 @@ exports[`TextInputField > should render correctly disabled 1`] = `
 exports[`TextInputField > should render correctly generated 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  position: relative;
+  display: contents;
 }
 
 .emotion-2 {
+  position: relative;
+}
+
+.emotion-4 {
   -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
   transition: border-color 0.2s ease,box-shadow 0.2s ease;
   -webkit-appearance: none;
@@ -295,62 +309,62 @@ exports[`TextInputField > should render correctly generated 1`] = `
   padding: 8px;
 }
 
-.emotion-2::-webkit-input-placeholder {
+.emotion-4::-webkit-input-placeholder {
   color: #727683;
   opacity: 0;
 }
 
-.emotion-2::-moz-placeholder {
+.emotion-4::-moz-placeholder {
   color: #727683;
   opacity: 0;
 }
 
-.emotion-2:-ms-input-placeholder {
+.emotion-4:-ms-input-placeholder {
   color: #727683;
   opacity: 0;
 }
 
-.emotion-2::placeholder {
+.emotion-4::placeholder {
   color: #727683;
   opacity: 0;
 }
 
-.emotion-2:hover,
-.emotion-2:focus {
+.emotion-4:hover,
+.emotion-4:focus {
   border-color: #792dd4;
 }
 
-.emotion-2:focus {
+.emotion-4:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   border-color: #792dd4;
 }
 
-.emotion-2::-webkit-input-placeholder {
+.emotion-4::-webkit-input-placeholder {
   opacity: 1;
 }
 
-.emotion-2::-moz-placeholder {
+.emotion-4::-moz-placeholder {
   opacity: 1;
 }
 
-.emotion-2:-ms-input-placeholder {
+.emotion-4:-ms-input-placeholder {
   opacity: 1;
 }
 
-.emotion-2::placeholder {
+.emotion-4::placeholder {
   opacity: 1;
 }
 
-.emotion-4 {
+.emotion-6 {
   height: auto;
 }
 
-.emotion-4[data-is-animated="true"] {
+.emotion-6[data-is-animated="true"] {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
 }
 
-.emotion-6 {
+.emotion-8 {
   font-size: 12px;
   color: #b3144d;
   padding-top: 0.125rem;
@@ -360,25 +374,26 @@ exports[`TextInputField > should render correctly generated 1`] = `
     data-testid="testing"
   >
     <form
+      class="emotion-0 emotion-1"
       novalidate=""
     >
       <div>
         <div
-          class="emotion-0 emotion-1"
+          class="emotion-2 emotion-3"
         >
           <input
             autocomplete="on"
-            class="emotion-2 emotion-3"
+            class="emotion-4 emotion-5"
             name="test"
             type="text"
           />
         </div>
         <div
-          class="emotion-4 emotion-5"
+          class="emotion-6 emotion-7"
           data-is-animated="true"
         >
           <div
-            class="emotion-6 emotion-7"
+            class="emotion-8 emotion-9"
           />
         </div>
       </div>
@@ -390,10 +405,14 @@ exports[`TextInputField > should render correctly generated 1`] = `
 exports[`TextInputField > should render correctly id 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  position: relative;
+  display: contents;
 }
 
 .emotion-2 {
+  position: relative;
+}
+
+.emotion-4 {
   -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
   transition: border-color 0.2s ease,box-shadow 0.2s ease;
   -webkit-appearance: none;
@@ -422,62 +441,62 @@ exports[`TextInputField > should render correctly id 1`] = `
   padding: 8px;
 }
 
-.emotion-2::-webkit-input-placeholder {
+.emotion-4::-webkit-input-placeholder {
   color: #727683;
   opacity: 0;
 }
 
-.emotion-2::-moz-placeholder {
+.emotion-4::-moz-placeholder {
   color: #727683;
   opacity: 0;
 }
 
-.emotion-2:-ms-input-placeholder {
+.emotion-4:-ms-input-placeholder {
   color: #727683;
   opacity: 0;
 }
 
-.emotion-2::placeholder {
+.emotion-4::placeholder {
   color: #727683;
   opacity: 0;
 }
 
-.emotion-2:hover,
-.emotion-2:focus {
+.emotion-4:hover,
+.emotion-4:focus {
   border-color: #792dd4;
 }
 
-.emotion-2:focus {
+.emotion-4:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   border-color: #792dd4;
 }
 
-.emotion-2::-webkit-input-placeholder {
+.emotion-4::-webkit-input-placeholder {
   opacity: 1;
 }
 
-.emotion-2::-moz-placeholder {
+.emotion-4::-moz-placeholder {
   opacity: 1;
 }
 
-.emotion-2:-ms-input-placeholder {
+.emotion-4:-ms-input-placeholder {
   opacity: 1;
 }
 
-.emotion-2::placeholder {
+.emotion-4::placeholder {
   opacity: 1;
 }
 
-.emotion-4 {
+.emotion-6 {
   height: auto;
 }
 
-.emotion-4[data-is-animated="true"] {
+.emotion-6[data-is-animated="true"] {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
 }
 
-.emotion-6 {
+.emotion-8 {
   font-size: 12px;
   color: #b3144d;
   padding-top: 0.125rem;
@@ -487,26 +506,27 @@ exports[`TextInputField > should render correctly id 1`] = `
     data-testid="testing"
   >
     <form
+      class="emotion-0 emotion-1"
       novalidate=""
     >
       <div>
         <div
-          class="emotion-0 emotion-1"
+          class="emotion-2 emotion-3"
         >
           <input
             autocomplete="on"
-            class="emotion-2 emotion-3"
+            class="emotion-4 emotion-5"
             id="id"
             name="test"
             type="text"
           />
         </div>
         <div
-          class="emotion-4 emotion-5"
+          class="emotion-6 emotion-7"
           data-is-animated="true"
         >
           <div
-            class="emotion-6 emotion-7"
+            class="emotion-8 emotion-9"
           />
         </div>
       </div>
@@ -518,10 +538,14 @@ exports[`TextInputField > should render correctly id 1`] = `
 exports[`TextInputField > should render correctly notice 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  position: relative;
+  display: contents;
 }
 
 .emotion-2 {
+  position: relative;
+}
+
+.emotion-4 {
   -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
   transition: border-color 0.2s ease,box-shadow 0.2s ease;
   -webkit-appearance: none;
@@ -550,68 +574,68 @@ exports[`TextInputField > should render correctly notice 1`] = `
   padding: 8px;
 }
 
-.emotion-2::-webkit-input-placeholder {
+.emotion-4::-webkit-input-placeholder {
   color: #727683;
   opacity: 0;
 }
 
-.emotion-2::-moz-placeholder {
+.emotion-4::-moz-placeholder {
   color: #727683;
   opacity: 0;
 }
 
-.emotion-2:-ms-input-placeholder {
+.emotion-4:-ms-input-placeholder {
   color: #727683;
   opacity: 0;
 }
 
-.emotion-2::placeholder {
+.emotion-4::placeholder {
   color: #727683;
   opacity: 0;
 }
 
-.emotion-2:hover,
-.emotion-2:focus {
+.emotion-4:hover,
+.emotion-4:focus {
   border-color: #792dd4;
 }
 
-.emotion-2:focus {
+.emotion-4:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   border-color: #792dd4;
 }
 
-.emotion-2::-webkit-input-placeholder {
+.emotion-4::-webkit-input-placeholder {
   opacity: 1;
 }
 
-.emotion-2::-moz-placeholder {
+.emotion-4::-moz-placeholder {
   opacity: 1;
 }
 
-.emotion-2:-ms-input-placeholder {
+.emotion-4:-ms-input-placeholder {
   opacity: 1;
 }
 
-.emotion-2::placeholder {
+.emotion-4::placeholder {
   opacity: 1;
 }
 
-.emotion-4 {
+.emotion-6 {
   height: auto;
 }
 
-.emotion-4[data-is-animated="true"] {
+.emotion-6[data-is-animated="true"] {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
 }
 
-.emotion-6 {
+.emotion-8 {
   font-size: 12px;
   color: #b3144d;
   padding-top: 0.125rem;
 }
 
-.emotion-10 {
+.emotion-12 {
   color: #727683;
   font-size: 0.75rem;
   font-family: Inter,Asap,sans-serif;
@@ -633,7 +657,7 @@ exports[`TextInputField > should render correctly notice 1`] = `
   margin-top: 0.25rem;
 }
 
-.emotion-12 {
+.emotion-14 {
   vertical-align: middle;
   fill: #727683;
   height: 1rem;
@@ -642,7 +666,7 @@ exports[`TextInputField > should render correctly notice 1`] = `
   min-height: 1rem;
 }
 
-.emotion-12 .fillStroke {
+.emotion-14 .fillStroke {
   stroke: #727683;
   fill: none;
 }
@@ -651,32 +675,33 @@ exports[`TextInputField > should render correctly notice 1`] = `
     data-testid="testing"
   >
     <form
+      class="emotion-0 emotion-1"
       novalidate=""
     >
       <div>
         <div
-          class="emotion-0 emotion-1"
+          class="emotion-2 emotion-3"
         >
           <input
             autocomplete="on"
-            class="emotion-2 emotion-3"
+            class="emotion-4 emotion-5"
             name="test"
             type="text"
           />
         </div>
         <div
-          class="emotion-4 emotion-5"
+          class="emotion-6 emotion-7"
           data-is-animated="true"
         >
           <div
-            class="emotion-6 emotion-7"
+            class="emotion-8 emotion-9"
           />
         </div>
         <span
-          class="emotion-8 emotion-9 emotion-10 emotion-11"
+          class="emotion-10 emotion-11 emotion-12 emotion-13"
         >
           <svg
-            class="emotion-12 emotion-13"
+            class="emotion-14 emotion-15"
             viewBox="0 0 16 16"
           >
             <path
@@ -696,10 +721,14 @@ exports[`TextInputField > should render correctly notice 1`] = `
 exports[`TextInputField > should render correctly random 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  position: relative;
+  display: contents;
 }
 
 .emotion-2 {
+  position: relative;
+}
+
+.emotion-4 {
   -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
   transition: border-color 0.2s ease,box-shadow 0.2s ease;
   -webkit-appearance: none;
@@ -728,53 +757,53 @@ exports[`TextInputField > should render correctly random 1`] = `
   padding: 8px;
 }
 
-.emotion-2::-webkit-input-placeholder {
+.emotion-4::-webkit-input-placeholder {
   color: #727683;
   opacity: 0;
 }
 
-.emotion-2::-moz-placeholder {
+.emotion-4::-moz-placeholder {
   color: #727683;
   opacity: 0;
 }
 
-.emotion-2:-ms-input-placeholder {
+.emotion-4:-ms-input-placeholder {
   color: #727683;
   opacity: 0;
 }
 
-.emotion-2::placeholder {
+.emotion-4::placeholder {
   color: #727683;
   opacity: 0;
 }
 
-.emotion-2:hover,
-.emotion-2:focus {
+.emotion-4:hover,
+.emotion-4:focus {
   border-color: #792dd4;
 }
 
-.emotion-2:focus {
+.emotion-4:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   border-color: #792dd4;
 }
 
-.emotion-2::-webkit-input-placeholder {
+.emotion-4::-webkit-input-placeholder {
   opacity: 1;
 }
 
-.emotion-2::-moz-placeholder {
+.emotion-4::-moz-placeholder {
   opacity: 1;
 }
 
-.emotion-2:-ms-input-placeholder {
+.emotion-4:-ms-input-placeholder {
   opacity: 1;
 }
 
-.emotion-2::placeholder {
+.emotion-4::placeholder {
   opacity: 1;
 }
 
-.emotion-4 {
+.emotion-6 {
   pointer-events: none;
   position: absolute;
   right: 0;
@@ -796,16 +825,16 @@ exports[`TextInputField > should render correctly random 1`] = `
   pointer-events: auto;
 }
 
-.emotion-4:hover,
-.emotion-4:focus-within {
+.emotion-6:hover,
+.emotion-6:focus-within {
   color: #3f4250;
 }
 
-.emotion-4>button {
+.emotion-6>button {
   box-shadow: none!important;
 }
 
-.emotion-6 {
+.emotion-8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -829,7 +858,7 @@ exports[`TextInputField > should render correctly random 1`] = `
   min-width: 24px;
 }
 
-.emotion-8 {
+.emotion-10 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -869,22 +898,22 @@ exports[`TextInputField > should render correctly random 1`] = `
   color: #3f4250;
 }
 
-.emotion-8:hover {
+.emotion-10:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-8:active {
+.emotion-10:active {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.emotion-8:hover,
-.emotion-8:active {
+.emotion-10:hover,
+.emotion-10:active {
   background: #e9eaeb;
   color: #222638;
 }
 
-.emotion-10 {
+.emotion-12 {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
@@ -893,25 +922,25 @@ exports[`TextInputField > should render correctly random 1`] = `
   min-height: 16px;
 }
 
-.emotion-10 .fillStroke {
+.emotion-12 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.emotion-10 path {
+.emotion-12 path {
   fill: currentColor;
 }
 
-.emotion-12 {
+.emotion-14 {
   height: auto;
 }
 
-.emotion-12[data-is-animated="true"] {
+.emotion-14[data-is-animated="true"] {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
 }
 
-.emotion-14 {
+.emotion-16 {
   font-size: 12px;
   color: #b3144d;
   padding-top: 0.125rem;
@@ -921,31 +950,32 @@ exports[`TextInputField > should render correctly random 1`] = `
     data-testid="testing"
   >
     <form
+      class="emotion-0 emotion-1"
       novalidate=""
     >
       <div>
         <div
-          class="emotion-0 emotion-1"
+          class="emotion-2 emotion-3"
         >
           <input
             autocomplete="on"
-            class="emotion-2 emotion-3"
+            class="emotion-4 emotion-5"
             name="test"
             type="text"
           />
           <div
-            class="emotion-4 emotion-5"
+            class="emotion-6 emotion-7"
           >
             <div
-              class="emotion-6 emotion-7"
+              class="emotion-8 emotion-9"
             >
               <button
                 aria-label="randomize"
-                class="emotion-8 emotion-9"
+                class="emotion-10 emotion-11"
                 type="button"
               >
                 <svg
-                  class="emotion-10 emotion-11"
+                  class="emotion-12 emotion-13"
                   fill="none"
                   viewBox="0 0 16 16"
                   xmlns="http://www.w3.org/2000/svg"
@@ -972,11 +1002,11 @@ exports[`TextInputField > should render correctly random 1`] = `
           </div>
         </div>
         <div
-          class="emotion-12 emotion-13"
+          class="emotion-14 emotion-15"
           data-is-animated="true"
         >
           <div
-            class="emotion-14 emotion-15"
+            class="emotion-16 emotion-17"
           />
         </div>
       </div>
@@ -988,10 +1018,14 @@ exports[`TextInputField > should render correctly random 1`] = `
 exports[`TextInputField > should render correctly required 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  position: relative;
+  display: contents;
 }
 
 .emotion-2 {
+  position: relative;
+}
+
+.emotion-4 {
   -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
   transition: border-color 0.2s ease,box-shadow 0.2s ease;
   -webkit-appearance: none;
@@ -1021,53 +1055,53 @@ exports[`TextInputField > should render correctly required 1`] = `
   padding-right: calc(1 * 2rem);
 }
 
-.emotion-2::-webkit-input-placeholder {
+.emotion-4::-webkit-input-placeholder {
   color: #727683;
   opacity: 0;
 }
 
-.emotion-2::-moz-placeholder {
+.emotion-4::-moz-placeholder {
   color: #727683;
   opacity: 0;
 }
 
-.emotion-2:-ms-input-placeholder {
+.emotion-4:-ms-input-placeholder {
   color: #727683;
   opacity: 0;
 }
 
-.emotion-2::placeholder {
+.emotion-4::placeholder {
   color: #727683;
   opacity: 0;
 }
 
-.emotion-2:hover,
-.emotion-2:focus {
+.emotion-4:hover,
+.emotion-4:focus {
   border-color: #792dd4;
 }
 
-.emotion-2:focus {
+.emotion-4:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   border-color: #792dd4;
 }
 
-.emotion-2::-webkit-input-placeholder {
+.emotion-4::-webkit-input-placeholder {
   opacity: 1;
 }
 
-.emotion-2::-moz-placeholder {
+.emotion-4::-moz-placeholder {
   opacity: 1;
 }
 
-.emotion-2:-ms-input-placeholder {
+.emotion-4:-ms-input-placeholder {
   opacity: 1;
 }
 
-.emotion-2::placeholder {
+.emotion-4::placeholder {
   opacity: 1;
 }
 
-.emotion-4 {
+.emotion-6 {
   pointer-events: none;
   position: absolute;
   right: 0;
@@ -1088,12 +1122,12 @@ exports[`TextInputField > should render correctly required 1`] = `
   color: #727683;
 }
 
-.emotion-4:hover,
-.emotion-4:focus-within {
+.emotion-6:hover,
+.emotion-6:focus-within {
   color: #3f4250;
 }
 
-.emotion-6 {
+.emotion-8 {
   color: #b3144d;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
@@ -1105,16 +1139,16 @@ exports[`TextInputField > should render correctly required 1`] = `
   text-decoration: none;
 }
 
-.emotion-8 {
+.emotion-10 {
   height: auto;
 }
 
-.emotion-8[data-is-animated="true"] {
+.emotion-10[data-is-animated="true"] {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
 }
 
-.emotion-10 {
+.emotion-12 {
   font-size: 12px;
   color: #b3144d;
   padding-top: 0.125rem;
@@ -1124,35 +1158,36 @@ exports[`TextInputField > should render correctly required 1`] = `
     data-testid="testing"
   >
     <form
+      class="emotion-0 emotion-1"
       novalidate=""
     >
       <div>
         <div
-          class="emotion-0 emotion-1"
+          class="emotion-2 emotion-3"
         >
           <input
             autocomplete="on"
-            class="emotion-2 emotion-3"
+            class="emotion-4 emotion-5"
             name="test"
             required=""
             type="text"
           />
           <div
-            class="emotion-4 emotion-5"
+            class="emotion-6 emotion-7"
           >
             <span
-              class="emotion-6 emotion-7"
+              class="emotion-8 emotion-9"
             >
               *
             </span>
           </div>
         </div>
         <div
-          class="emotion-8 emotion-9"
+          class="emotion-10 emotion-11"
           data-is-animated="true"
         >
           <div
-            class="emotion-10 emotion-11"
+            class="emotion-12 emotion-13"
           />
         </div>
       </div>
@@ -1164,10 +1199,14 @@ exports[`TextInputField > should render correctly required 1`] = `
 exports[`TextInputField > should render correctly with minLength 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  position: relative;
+  display: contents;
 }
 
 .emotion-2 {
+  position: relative;
+}
+
+.emotion-4 {
   -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
   transition: border-color 0.2s ease,box-shadow 0.2s ease;
   -webkit-appearance: none;
@@ -1197,72 +1236,72 @@ exports[`TextInputField > should render correctly with minLength 1`] = `
   border-color: #b3144d;
 }
 
-.emotion-2::-webkit-input-placeholder {
+.emotion-4::-webkit-input-placeholder {
   color: #727683;
   opacity: 0;
 }
 
-.emotion-2::-moz-placeholder {
+.emotion-4::-moz-placeholder {
   color: #727683;
   opacity: 0;
 }
 
-.emotion-2:-ms-input-placeholder {
+.emotion-4:-ms-input-placeholder {
   color: #727683;
   opacity: 0;
 }
 
-.emotion-2::placeholder {
+.emotion-4::placeholder {
   color: #727683;
   opacity: 0;
 }
 
-.emotion-2:hover,
-.emotion-2:focus {
+.emotion-4:hover,
+.emotion-4:focus {
   border-color: #792dd4;
 }
 
-.emotion-2:focus {
+.emotion-4:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   border-color: #792dd4;
 }
 
-.emotion-2::-webkit-input-placeholder {
+.emotion-4::-webkit-input-placeholder {
   opacity: 1;
 }
 
-.emotion-2::-moz-placeholder {
+.emotion-4::-moz-placeholder {
   opacity: 1;
 }
 
-.emotion-2:-ms-input-placeholder {
+.emotion-4:-ms-input-placeholder {
   opacity: 1;
 }
 
-.emotion-2::placeholder {
+.emotion-4::placeholder {
   opacity: 1;
 }
 
-.emotion-2:hover,
-.emotion-2:focus {
+.emotion-4:hover,
+.emotion-4:focus {
   border-color: #92103f;
 }
 
-.emotion-2:focus {
+.emotion-4:focus {
   box-shadow: 0px 0px 0px 3px #f91b6c40;
   border-color: #92103f;
 }
 
-.emotion-4 {
+.emotion-6 {
   height: auto;
 }
 
-.emotion-4[data-is-animated="true"] {
+.emotion-6[data-is-animated="true"] {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
 }
 
-.emotion-6 {
+.emotion-8 {
   font-size: 12px;
   color: #b3144d;
   padding-top: 0.125rem;
@@ -1272,26 +1311,27 @@ exports[`TextInputField > should render correctly with minLength 1`] = `
     data-testid="testing"
   >
     <form
+      class="emotion-0 emotion-1"
       novalidate=""
     >
       <div>
         <div
-          class="emotion-0 emotion-1"
+          class="emotion-2 emotion-3"
         >
           <input
             autocomplete="on"
-            class="emotion-2 emotion-3"
+            class="emotion-4 emotion-5"
             name="test"
             type="text"
             value="test"
           />
         </div>
         <div
-          class="emotion-4 emotion-5"
+          class="emotion-6 emotion-7"
           data-is-animated="true"
         >
           <div
-            class="emotion-6 emotion-7"
+            class="emotion-8 emotion-9"
           >
             This field should have a length greater than 13
           </div>

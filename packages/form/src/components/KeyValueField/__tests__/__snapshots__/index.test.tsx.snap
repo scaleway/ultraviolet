@@ -3,6 +3,10 @@
 exports[`KeyValueField > should render with default props & max size 1`] = `
 <DocumentFragment>
   .emotion-0 {
+  display: contents;
+}
+
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -25,7 +29,7 @@ exports[`KeyValueField > should render with default props & max size 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-2 {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -48,19 +52,19 @@ exports[`KeyValueField > should render with default props & max size 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-4 {
+.emotion-6 {
   display: inherit;
 }
 
-.emotion-4[data-container-full-height="true"] {
+.emotion-6[data-container-full-height="true"] {
   height: 100%;
 }
 
-.emotion-4[data-container-full-width="true"] {
+.emotion-6[data-container-full-width="true"] {
   width: 100%;
 }
 
-.emotion-6 {
+.emotion-8 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -100,23 +104,23 @@ exports[`KeyValueField > should render with default props & max size 1`] = `
   color: #641cb3;
 }
 
-.emotion-6:hover {
+.emotion-8:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-6:active {
+.emotion-8:active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-6:hover,
-.emotion-6:active {
+.emotion-8:hover,
+.emotion-8:active {
   background: #e5dbfd;
   color: #521094;
   border: 1px solid #792dd4;
 }
 
-.emotion-8 {
+.emotion-10 {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
@@ -125,12 +129,12 @@ exports[`KeyValueField > should render with default props & max size 1`] = `
   min-height: 16px;
 }
 
-.emotion-8 .fillStroke {
+.emotion-10 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.emotion-8 path {
+.emotion-10 path {
   fill: currentColor;
 }
 
@@ -138,28 +142,29 @@ exports[`KeyValueField > should render with default props & max size 1`] = `
     data-testid="testing"
   >
     <form
+      class="emotion-0 emotion-1"
       novalidate=""
     >
       <div
-        class="emotion-0 emotion-1"
+        class="emotion-2 emotion-3"
       >
         <div
-          class="emotion-2 emotion-1"
+          class="emotion-4 emotion-3"
         >
           <div
             aria-controls="«r8»"
             aria-describedby="«r8»"
-            class="emotion-4 emotion-5"
+            class="emotion-6 emotion-7"
             data-container-full-width="false"
             tabindex="0"
           >
             <button
-              class="emotion-6 emotion-7"
+              class="emotion-8 emotion-9"
               data-testid="add-button"
               type="button"
             >
               <svg
-                class="emotion-8 emotion-9"
+                class="emotion-10 emotion-11"
                 viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"
               >
@@ -180,6 +185,10 @@ exports[`KeyValueField > should render with default props & max size 1`] = `
 exports[`KeyValueField > should render with default props 1`] = `
 <DocumentFragment>
   .emotion-0 {
+  display: contents;
+}
+
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -202,7 +211,7 @@ exports[`KeyValueField > should render with default props 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-2 {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -225,19 +234,19 @@ exports[`KeyValueField > should render with default props 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-4 {
+.emotion-6 {
   display: inherit;
 }
 
-.emotion-4[data-container-full-height="true"] {
+.emotion-6[data-container-full-height="true"] {
   height: 100%;
 }
 
-.emotion-4[data-container-full-width="true"] {
+.emotion-6[data-container-full-width="true"] {
   width: 100%;
 }
 
-.emotion-6 {
+.emotion-8 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -277,23 +286,23 @@ exports[`KeyValueField > should render with default props 1`] = `
   color: #641cb3;
 }
 
-.emotion-6:hover {
+.emotion-8:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-6:active {
+.emotion-8:active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-6:hover,
-.emotion-6:active {
+.emotion-8:hover,
+.emotion-8:active {
   background: #e5dbfd;
   color: #521094;
   border: 1px solid #792dd4;
 }
 
-.emotion-8 {
+.emotion-10 {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
@@ -302,12 +311,12 @@ exports[`KeyValueField > should render with default props 1`] = `
   min-height: 16px;
 }
 
-.emotion-8 .fillStroke {
+.emotion-10 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.emotion-8 path {
+.emotion-10 path {
   fill: currentColor;
 }
 
@@ -315,28 +324,29 @@ exports[`KeyValueField > should render with default props 1`] = `
     data-testid="testing"
   >
     <form
+      class="emotion-0 emotion-1"
       novalidate=""
     >
       <div
-        class="emotion-0 emotion-1"
+        class="emotion-2 emotion-3"
       >
         <div
-          class="emotion-2 emotion-1"
+          class="emotion-4 emotion-3"
         >
           <div
             aria-controls="«r0»"
             aria-describedby="«r0»"
-            class="emotion-4 emotion-5"
+            class="emotion-6 emotion-7"
             data-container-full-width="false"
             tabindex="0"
           >
             <button
-              class="emotion-6 emotion-7"
+              class="emotion-8 emotion-9"
               data-testid="add-button"
               type="button"
             >
               <svg
-                class="emotion-8 emotion-9"
+                class="emotion-10 emotion-11"
                 viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"
               >
@@ -357,6 +367,10 @@ exports[`KeyValueField > should render with default props 1`] = `
 exports[`KeyValueField > should render with default props in readonly mode 1`] = `
 <DocumentFragment>
   .emotion-0 {
+  display: contents;
+}
+
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -379,7 +393,7 @@ exports[`KeyValueField > should render with default props in readonly mode 1`] =
   flex-wrap: nowrap;
 }
 
-.emotion-2 {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -402,19 +416,19 @@ exports[`KeyValueField > should render with default props in readonly mode 1`] =
   flex-wrap: nowrap;
 }
 
-.emotion-4 {
+.emotion-6 {
   display: inherit;
 }
 
-.emotion-4[data-container-full-height="true"] {
+.emotion-6[data-container-full-height="true"] {
   height: 100%;
 }
 
-.emotion-4[data-container-full-width="true"] {
+.emotion-6[data-container-full-width="true"] {
   width: 100%;
 }
 
-.emotion-6 {
+.emotion-8 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -456,12 +470,12 @@ exports[`KeyValueField > should render with default props in readonly mode 1`] =
   border: 1px solid #d8c5fc;
 }
 
-.emotion-6:hover {
+.emotion-8:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-8 {
+.emotion-10 {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
@@ -470,12 +484,12 @@ exports[`KeyValueField > should render with default props in readonly mode 1`] =
   min-height: 16px;
 }
 
-.emotion-8 .fillStroke {
+.emotion-10 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.emotion-8 path {
+.emotion-10 path {
   fill: currentColor;
 }
 
@@ -483,29 +497,30 @@ exports[`KeyValueField > should render with default props in readonly mode 1`] =
     data-testid="testing"
   >
     <form
+      class="emotion-0 emotion-1"
       novalidate=""
     >
       <div
-        class="emotion-0 emotion-1"
+        class="emotion-2 emotion-3"
       >
         <div
-          class="emotion-2 emotion-1"
+          class="emotion-4 emotion-3"
         >
           <div
             aria-controls="«r9»"
             aria-describedby="«r9»"
-            class="emotion-4 emotion-5"
+            class="emotion-6 emotion-7"
             data-container-full-width="false"
             tabindex="0"
           >
             <button
-              class="emotion-6 emotion-7"
+              class="emotion-8 emotion-9"
               data-testid="add-button"
               disabled=""
               type="button"
             >
               <svg
-                class="emotion-8 emotion-9"
+                class="emotion-10 emotion-11"
                 viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"
               >
