@@ -8,7 +8,7 @@ import {
   CloseIcon,
   PlusIcon,
 } from '@ultraviolet/icons'
-import type { RefObject } from 'react'
+import type { ReactNode, RefObject } from 'react'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { Button } from '../Button'
 import { StyledChildrenContainer } from '../Popup'
@@ -170,7 +170,8 @@ const CustomTag = styled(Tag, {
 }>`
   height: max-content;
   width: fit-content;
-  min-width: ${({ lastElementMaxWidth }) => (lastElementMaxWidth ? 'auto' : 'fit-content')};
+  min-width: ${({ lastElementMaxWidth }) =>
+    lastElementMaxWidth ? 'auto' : 'fit-content'};
   
   max-width: ${({ lastElementMaxWidth, hidden }) =>
     lastElementMaxWidth && !hidden ? `${lastElementMaxWidth}px` : '100%'};
@@ -229,6 +230,24 @@ const DisplayValues = ({
       ref={refTag}
       alignItems="center"
     >
+      {/* Hidden div to measure the width of the tags */}
+      <div
+        ref={measureRef}
+        style={{
+          position: 'absolute',
+        }}
+      >
+        {potentiallyNonOverflowedValues.map(option => (
+          <CustomTag
+            onClose={() => {}}
+            className={option.value}
+            key={option.value}
+            hidden
+          >
+            {option?.label}
+          </CustomTag>
+        ))}
+      </div>
       {nonOverflowedValues.map((option, index) => (
         <CustomTag
           data-testid="selected-options-tags"
@@ -259,24 +278,7 @@ const DisplayValues = ({
           {option?.label}
         </CustomTag>
       ))}
-      {/* Hidden div to measure the width of the tags */}
-      <div
-        ref={measureRef}
-        style={{
-          position: 'absolute',
-        }}
-      >
-        {potentiallyNonOverflowedValues.map(option => (
-          <CustomTag
-            onClose={() => {}}
-            className={option.value}
-            key={option.value}
-            hidden
-          >
-            {option?.label}
-          </CustomTag>
-        ))}
-      </div>
+
       {overflowed ? (
         <Stack ref={refPlusTag} justifyContent="center">
           <PlusTag
@@ -392,6 +394,7 @@ const SelectBar = ({
         measuredHiddenTags,
         accumulatedWidth,
         lastVisibleElementWidth,
+        lastVisibleLabel,
       } = toMeasureElementsArray.reduce(
         (
           accumulator: {
@@ -399,6 +402,7 @@ const SelectBar = ({
             measuredHiddenTags: number
             accumulatedWidth: number
             lastVisibleElementWidth: number
+            lastVisibleLabel: ReactNode
           },
           currentValue,
           index,
@@ -423,6 +427,9 @@ const SelectBar = ({
             lastVisibleElementWidth: canBeVisible
               ? elementWidth
               : accumulator.lastVisibleElementWidth,
+            lastVisibleLabel: canBeVisible
+              ? potentiallyNonOverflowedValues[index].label
+              : accumulator.lastVisibleLabel,
           }
         },
         {
@@ -430,6 +437,7 @@ const SelectBar = ({
           measuredHiddenTags: 0,
           accumulatedWidth: 0,
           lastVisibleElementWidth: 0,
+          lastVisibleLabel: '',
         },
       )
 
@@ -442,6 +450,7 @@ const SelectBar = ({
       const hasOverflow = overflowPx > 0
       const hasHiddenTags = measuredHiddenTags > 0
       const lastVisibleElementMaxSize = lastVisibleElementWidth - overflowPx
+
       // If only one element is selected and it is hidden, we need to show it
       if (measuredHiddenTags === 1 && measuredVisibleTags.length === 0) {
         setOverflowAmount(0)
@@ -456,12 +465,15 @@ const SelectBar = ({
       }
 
       // If it overflows with the last tag, we need to add an ellipsis to the last element if there is enough space (>60px)
+      // and if it is a string (do not cut ReactNode label)
       // else we hide it completely and add it to the overflow amount
       else if (
         hasOverflow &&
         hasHiddenTags &&
         (lastVisibleElementMaxSize > 65 ||
-          (measuredVisibleTags.length === 1 && lastVisibleElementMaxSize > 65))
+          (measuredVisibleTags.length === 1 &&
+            lastVisibleElementMaxSize > 65)) &&
+        typeof lastVisibleLabel === 'string'
       ) {
         setLastElementMaxWidth(lastVisibleElementMaxSize)
         setOverflow(true)
