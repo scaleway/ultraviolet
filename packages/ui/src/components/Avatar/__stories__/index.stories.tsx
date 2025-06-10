@@ -4,19 +4,12 @@ import { Avatar } from '..'
 export default {
   component: Avatar,
   title: 'Components/Other/Avatar',
-  tags: ['deprecated'],
-  parameters: {
-    deprecated: true,
-    deprecatedReason: 'This component is deprecated, use AvatarV2 instead.',
-    migrationLink: 'Migrations/Avatar to AvatarV2',
-  },
 } as Meta
 
 export { Playground } from './Playground.stories'
-export { Image } from './Image.stories'
+export { Shape } from './Shape.stories'
+export { Variant } from './Variant.stories'
+export { Sentiment } from './Sentiment.stories'
 export { Size } from './Size.stories'
-export { Text } from './Text.stories'
-export { TextSize } from './TextSize.stories'
-export { TextColor } from './TextColor.stories'
-export { BackgroundColor } from './BackgroundColor.stories'
-export { Lock } from './Lock.stories'
+export { Upload } from './Upload.stories'
+export { Examples } from './Examples.stories'

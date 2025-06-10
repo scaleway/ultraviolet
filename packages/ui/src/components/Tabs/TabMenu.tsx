@@ -9,7 +9,7 @@ import type {
   Ref,
 } from 'react'
 import { forwardRef } from 'react'
-import { MenuV2 } from '../MenuV2'
+import { Menu } from '../Menu'
 import { StyledTabButton } from './Tab'
 
 const ArrowIcon = styled(ArrowDownIcon)``
@@ -37,8 +37,8 @@ const StyledPositioningWrapper = styled.div`
 type TabMenuProps = {
   children: ReactNode
   disclosure: ReactNode
-  visible?: ComponentProps<typeof MenuV2>['visible']
-  id?: ComponentProps<typeof MenuV2>['id']
+  visible?: ComponentProps<typeof Menu>['visible']
+  id?: ComponentProps<typeof Menu>['id']
 } & Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'aria-disabled'>
 
 export const TabMenu = forwardRef(
@@ -55,7 +55,7 @@ export const TabMenu = forwardRef(
     ref: Ref<HTMLButtonElement>,
   ) => (
     <StyledPositioningWrapper>
-      <MenuV2
+      <Menu
         visible={visible}
         id={id}
         ref={ref}
@@ -76,7 +76,7 @@ export const TabMenu = forwardRef(
         }
       >
         {children}
-      </MenuV2>
+      </Menu>
     </StyledPositioningWrapper>
   ),
 )

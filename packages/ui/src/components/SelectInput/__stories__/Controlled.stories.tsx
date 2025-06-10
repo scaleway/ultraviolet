@@ -1,35 +1,60 @@
 import type { StoryFn } from '@storybook/react'
 import { useState } from 'react'
-import type { SingleValue } from 'react-select'
 import { SelectInput } from '..'
+import { Button } from '../../Button'
+import { Stack } from '../../Stack'
+import { Template } from './Template.stories'
+import { dataUnGrouped } from './resources'
 
-type OptionType = { label: string; value: string }
-
-export const Controlled: StoryFn<typeof SelectInput> = ({ ...props }) => {
-  const [value, setValue] = useState<OptionType>()
-
-  const handleChange = (newValue: SingleValue<OptionType>) => {
-    if (newValue) {
-      setValue(newValue)
-    }
-  }
+export const Controlled: StoryFn<typeof SelectInput> = () => {
+  const [valueSingle, setValueSingle] =
+    useState<(typeof dataUnGrouped)[number]['value']>('uranus')
+  const [valueMulti, setValueMulti] = useState<
+    (typeof dataUnGrouped)[number]['value'][]
+  >(['neptune', 'uranus'])
 
   return (
-    <SelectInput
-      name="controlled"
-      value={value}
-      // @ts-expect-error onChange signature error because SelectInput did not properly implement IsMulti
-      onChange={handleChange}
-      {...props}
-    >
-      <SelectInput.Option value="a">Option A</SelectInput.Option>
-      <SelectInput.Option value="b">Option B</SelectInput.Option>
-    </SelectInput>
+    <Stack width="50%" direction="column" gap={2}>
+      <Button
+        onClick={() => {
+          setValueSingle('mercury')
+          setValueMulti(['mercury', 'jupiter'])
+        }}
+      >
+        Change Value
+      </Button>
+      <SelectInput
+        name="single"
+        options={dataUnGrouped}
+        value={valueSingle}
+        multiselect={false}
+        onChange={value => setValueSingle(value)}
+      />
+      <SelectInput
+        name="multi"
+        options={dataUnGrouped}
+        value={valueMulti}
+        multiselect
+        onChange={value => setValueMulti(value)}
+      />
+    </Stack>
   )
 }
+Controlled.args = {
+  ...Template.args,
+}
+Controlled.decorators = [
+  StoryComponent => (
+    <div style={{ height: '80px' }}>
+      <StoryComponent />
+    </div>
+  ),
+]
 
 Controlled.parameters = {
   docs: {
-    description: { story: 'This shows how to use Controlled SelectInput.' },
+    description: {
+      story: 'Controlled SelectInput.',
+    },
   },
 }
