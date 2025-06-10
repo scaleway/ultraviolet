@@ -1,40 +1,96 @@
-import { shouldMatchEmotionSnapshot } from '@utils/test'
-import { describe, it } from 'vitest'
+import { screen } from '@testing-library/react'
+import { userEvent } from '@testing-library/user-event'
+import { MosaicIcon } from '@ultraviolet/icons'
+import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
+import { describe, expect, it, vi } from 'vitest'
 import { Avatar } from '..'
-import support from '../__stories__/support.svg'
+import support from '../__stories__/assets/avatar.svg'
 
 describe('Avatar', () => {
-  it('renders correctly with default props', () =>
-    shouldMatchEmotionSnapshot(<Avatar image={support} />))
+  describe.each(['circle', 'square'] as const)(
+    `renders correctly with shape %s`,
+    shape => {
+      describe.each(['xsmall', 'small', 'medium', 'large'] as const)(
+        `renders correctly with shape ${shape} and size %s`,
+        size => {
+          it('renders correctly with variant user', () =>
+            shouldMatchEmotionSnapshot(
+              <Avatar shape={shape} variant="user" size={size} />,
+            ))
 
-  it('renders correctly with size', () =>
-    shouldMatchEmotionSnapshot(<Avatar image={support} size={48} />))
+          it('renders correctly with variant image', () =>
+            shouldMatchEmotionSnapshot(
+              <Avatar
+                shape={shape}
+                variant="image"
+                image={support}
+                size={size}
+              />,
+            ))
 
-  it('renders correctly with sentence', () =>
-    shouldMatchEmotionSnapshot(<Avatar text="Hello World" />))
+          it('renders correctly with variant text', () =>
+            shouldMatchEmotionSnapshot(
+              <Avatar shape={shape} variant="text" text="UV" size={size} />,
+            ))
 
-  it('renders correctly with lock', () =>
-    shouldMatchEmotionSnapshot(<Avatar text="HelloWorld" lock />))
+          it('renders correctly with variant text and sentiment neutral', () =>
+            shouldMatchEmotionSnapshot(
+              <Avatar
+                shape={shape}
+                variant="text"
+                text="UV"
+                sentiment="neutral"
+                size={size}
+              />,
+            ))
 
-  it('renders correctly with text', () =>
-    shouldMatchEmotionSnapshot(<Avatar text="HelloWorld" />))
+          it('renders correctly with variant icon', () =>
+            shouldMatchEmotionSnapshot(
+              <Avatar shape={shape} variant="icon" size={size}>
+                <MosaicIcon />
+              </Avatar>,
+            ))
 
-  it('renders correctly with text size', () =>
-    shouldMatchEmotionSnapshot(
-      <Avatar text="HelloWorld" size={50} textSize={30} />,
-    ))
+          it('renders correctly with variant icon and sentiment neutral', () =>
+            shouldMatchEmotionSnapshot(
+              <Avatar
+                shape={shape}
+                variant="icon"
+                sentiment="neutral"
+                size={size}
+              >
+                <MosaicIcon />
+              </Avatar>,
+            ))
 
-  it('renders correctly with small text', () =>
-    shouldMatchEmotionSnapshot(<Avatar text="HW" />))
+          it('renders correctly with variant colors', () =>
+            shouldMatchEmotionSnapshot(
+              <Avatar shape={shape} variant="colors" size={size} />,
+            ))
 
-  it('renders correctly with text and custom style', () =>
-    shouldMatchEmotionSnapshot(
-      <Avatar text="HW" textBgColor="red" textColor="white" textSize={14} />,
-    ))
+          it('renders correctly with variant text and upload', async () => {
+            const onClick = vi.fn()
+            const { asFragment } = renderWithTheme(
+              <Avatar
+                shape={shape}
+                variant="text"
+                text="UV"
+                size={size}
+                upload
+                data-testid="avatar"
+                onClick={onClick}
+              />,
+            )
+            const avatar = screen.getByTestId('avatar')
 
-  it('renders correctly with custom text color', () =>
-    shouldMatchEmotionSnapshot(<Avatar text="HW" textColor="#FFFFFF" />))
+            await userEvent.hover(avatar)
+            expect(asFragment()).toMatchSnapshot()
 
-  it('renders correctly with custom background color', () =>
-    shouldMatchEmotionSnapshot(<Avatar text="HW" textBgColor="#FFFFFF" />))
+            await userEvent.click(avatar)
+            expect(onClick).toHaveBeenCalledOnce()
+          })
+        },
+      )
+    },
+  )
 })

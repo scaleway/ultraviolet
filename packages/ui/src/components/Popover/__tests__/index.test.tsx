@@ -8,14 +8,14 @@ import { describe, expect, test, vi } from 'vitest'
 import { Popover } from '..'
 import { Button } from '../../Button'
 import { Modal } from '../../Modal'
-import { SelectInputV2 } from '../../SelectInputV2'
-import { TextInputV2 } from '../../TextInputV2'
+import { SelectInput } from '../../SelectInput'
+import { TextInput } from '../../TextInput'
 
 const StyledPopover = styled(Popover)`
   height: 600px;
 `
 
-const options: ComponentProps<typeof SelectInputV2>['options'] = [
+const options: ComponentProps<typeof SelectInput>['options'] = [
   {
     value: 'option 1',
     label: 'Option 1',
@@ -50,23 +50,23 @@ const AdvancedPopover = () => {
           >
             <div>
               <div>Modal</div>
-              <SelectInputV2
+              <SelectInput
                 name="options"
                 label="Choose an option"
                 options={options}
               />
-              <TextInputV2
+              <TextInput
                 label="Type something here"
                 data-testid="modal-text-input"
               />
             </div>
           </Modal>
-          <SelectInputV2
+          <SelectInput
             name="options"
             label="Choose an option"
             options={options}
           />
-          <TextInputV2
+          <TextInput
             label="Type something here"
             data-testid="popover-text-input"
           />

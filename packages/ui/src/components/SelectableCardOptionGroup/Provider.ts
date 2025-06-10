@@ -1,6 +1,6 @@
 import type { ComponentProps, InputHTMLAttributes } from 'react'
 import { createContext, useContext } from 'react'
-import type { SelectInputV2 } from '../SelectInputV2'
+import type { SelectInput } from '../SelectInput'
 import type { Sizes } from './types'
 
 type SelectableCardOptionGroupContextType = {
@@ -10,7 +10,7 @@ type SelectableCardOptionGroupContextType = {
   onChangeOption: (value: string) => void
   disabled?: boolean
   size: Sizes
-  optionValue?: ComponentProps<typeof SelectInputV2>['value']
+  optionValue?: ComponentProps<typeof SelectInput>['value']
 } & Required<Pick<InputHTMLAttributes<HTMLInputElement>, 'onChange'>> &
   Pick<InputHTMLAttributes<HTMLInputElement>, 'required'>
 

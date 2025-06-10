@@ -1,10 +1,10 @@
 import type { StoryFn } from '@storybook/react'
-import type { DisclosureProps } from '..'
 import { Menu } from '..'
 import { Button } from '../../Button'
+import type { DisclosureProps } from '../types'
 
 const CustomDisclosure = ({ visible }: DisclosureProps) => (
-  <Button>{visible === true ? 'Menu (is opened)' : 'Menu (is closed)'}</Button>
+  <Button>{visible ? 'Menu (is opened)' : 'Menu (is closed)'}</Button>
 )
 
 export const FunctionDisclosure: StoryFn<typeof Menu> = () => (
@@ -24,7 +24,7 @@ FunctionDisclosure.parameters = {
 
 FunctionDisclosure.decorators = [
   StoryComponent => (
-    <div style={{ height: '300px' }}>
+    <div style={{ height: '300px', width: 'min-content' }}>
       <StoryComponent />
     </div>
   ),

@@ -1,6 +1,6 @@
 import type { StoryFn } from '@storybook/react'
 import { Button } from '../../Button'
-import { SelectInputV2 } from '../../SelectInputV2'
+import { SelectInput } from '../../SelectInput'
 import { Stack } from '../../Stack'
 import { Modal } from '../index'
 
@@ -76,7 +76,7 @@ export const NestedModal: StoryFn = props => (
             esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
             cupidatat non proident, sunt in culpa qui officia deserunt mollit
             anim id est laborum.
-            <SelectInputV2
+            <SelectInput
               label="Choose an option"
               name="example"
               options={OPTIONS}

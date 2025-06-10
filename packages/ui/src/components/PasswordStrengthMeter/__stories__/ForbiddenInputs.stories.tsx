@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import zxcvbn from 'zxcvbn'
 import { colors } from '../../../theme'
-import { TextInputV2 } from '../../TextInputV2'
+import { TextInput } from '../../TextInput'
 import { PasswordStrengthMeter } from '../index'
 
 export const ForbiddenInputs = () => {
@@ -9,7 +9,7 @@ export const ForbiddenInputs = () => {
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
-      <TextInputV2
+      <TextInput
         name="basic"
         label="Password"
         value={value}

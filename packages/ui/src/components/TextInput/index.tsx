@@ -1,666 +1,470 @@
 'use client'
 
-import { css } from '@emotion/react'
 import styled from '@emotion/styled'
-import randomName from '@scaleway/random-name'
 import {
+  AlertCircleIcon,
   AutoFixIcon,
-  CheckIcon,
+  CheckCircleIcon,
   CloseIcon,
   EyeIcon,
   EyeOffIcon,
 } from '@ultraviolet/icons'
 import type {
   ChangeEvent,
-  FocusEventHandler,
+  ChangeEventHandler,
   InputHTMLAttributes,
-  KeyboardEventHandler,
-  LabelHTMLAttributes,
-  TextareaHTMLAttributes,
+  ReactNode,
 } from 'react'
 import {
   forwardRef,
   useCallback,
-  useEffect,
+  useId,
   useImperativeHandle,
   useMemo,
   useRef,
   useState,
 } from 'react'
 import { Button } from '../Button'
-import { Expandable } from '../Expandable'
-import { Notice } from '../Notice'
-import { Separator } from '../Separator'
+import { Label } from '../Label'
+import { Loader } from '../Loader'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
+import { Tooltip } from '../Tooltip'
 
-const inputSizes = {
-  medium: {
-    default: `
-      height: 48px;
-      padding-left: 8px;
-      padding-right: 20px;
-      padding-top: 14px;
-    `,
-    full: `
-      padding: 8px;
-    `,
-  },
-  small: {
-    default: `
-      height: 30px;
-      padding-left: 8px;
-      padding-right: 8px;
-      padding-top: 14px;
-      font-size: 14px;
-    `,
-    full: `
-      padding: 4px 8px;
-    `,
-  },
-}
+// SIZE
+export const TEXTINPUT_SIZE_HEIGHT = {
+  small: '400', // sizing theme tokens key
+  medium: '500',
+  large: '600',
+} as const
+type TextInputSize = keyof typeof TEXTINPUT_SIZE_HEIGHT
 
-type TextInputSizes = keyof typeof inputSizes
+export const BasicPrefixStack = styled(Stack)`
+  padding: ${({ theme }) => theme.space['2']};
 
-export const textInputSizes = Object.keys(inputSizes) as TextInputSizes[]
-
-const StyledSeparator = styled(Separator)`
-  margin: 1px 0px;
-  height: calc(100% - 2px);
-  background-color: ${({ theme: { colors } }) =>
-    colors.neutral.backgroundStrong};
-`
-type StyledRightElementProps = {
-  edit?: boolean
-  touchable?: boolean
-}
-
-const StyledRightElement = styled('div', {
-  shouldForwardProp: prop => !['edit', 'touchable'].includes(prop),
-})<StyledRightElementProps>`
-  ${({ theme: { colors, space } }) => css`
-    pointer-events: none;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    padding: 0 ${space['1']};
-    display: flex;
-    gap: ${space['1']};
-    align-items: center;
-    transition: transform 150ms, color 150ms;
-    color: ${colors.neutral.textWeak};
-
-    &:hover,
-    &:focus-within {
-      color: ${colors.neutral.textWeakHover};
-    }
-  `}
-
-  ${({ touchable }) =>
-    touchable &&
-    css`
-      pointer-events: auto;
-      > button {
-        box-shadow: none !important;
-      }
-    `}
-`
-type StyledLabelProps = {
-  'aria-label'?: string
-  'aria-live': string
-  disabled?: boolean
-  edit?: boolean
-  error?: boolean
-  readOnly?: boolean
-  resizable?: boolean
-  fillAvailable?: boolean
-} & LabelHTMLAttributes<HTMLLabelElement>
-
-const StyledLabel = styled('label', {
-  shouldForwardProp: prop =>
-    !['edit', 'error', 'resizable', 'fillAvailable'].includes(prop),
-})<StyledLabelProps>`
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 0;
-  padding-left: 8px;
-  padding-right: 8px;
-  pointer-events: none;
-  color: ${({ theme: { colors } }) => colors.neutral.textWeak};
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  width: 100%;
-  height: 48px;
-  font-size: ${({ theme }) => theme.typography.bodySmall};
-  transition: transform 150ms;
-  transform: translate(0, 12px) scale(1);
-
-  ${({ edit }) =>
-    edit &&
-    css`
-      transform: translate(-9.6%, -3px) scale(0.8);
-    `}
-
-  ${({ disabled, theme: { colors } }) =>
-    disabled &&
-    css`
-      color: ${colors.neutral.textDisabled};
-    `}
-
-  ${({ readOnly, theme: { colors } }) =>
-    readOnly &&
-    css`
-      color: ${colors.neutral.textDisabled};
-    `}
-
-  ${({ error, theme: { colors } }) =>
-    error &&
-    css`
-      color: ${colors.danger.text};
-    `}
+  &[data-size="small"] {
+    padding: ${({ theme }) => theme.space['1']};
+  }
+  border-right: 1px solid;
+  border-color: inherit;
 `
 
-const StyledRelativeDiv = styled.div`
-  position: relative;
+const StateStack = styled(Stack)`
+  padding: ${({ theme }) => `0 ${theme.space['2']}`};
 `
 
-const StyledError = styled.div`
-  font-size: 12px;
-  color: ${({ theme }) => theme.colors.danger.text};
-  padding-top: ${({ theme }) => theme.space['0.25']};
+export const BasicSuffixStack = styled(Stack)`
+  padding: ${({ theme }) => `0 ${theme.space['2']}`};
+  border-left: 1px solid;
+  border-color: inherit;
 `
 
-const StyledNotice = styled(Notice)`
-  margin-top: ${({ theme }) => theme.space['0.5']};
+const CTASuffixStack = styled(Stack)`
+  padding: ${({ theme }) => `0 ${theme.space['1']}`};
+  border-left: 1px solid;
+  border-color: inherit;
 `
 
-type StyledInputProps = {
-  disabled?: boolean
-  error?: boolean
-  fillAvailable?: boolean
-  hasLabel?: boolean
-  paddingRightFactor: number
-  isPlaceholderVisible?: boolean
-  multiline?: boolean
-  resizable?: boolean
-  inputSize: TextInputSizes
-  unit?: string
-  rightComponentLength: number
-} & (
-  | InputHTMLAttributes<HTMLInputElement>
-  | TextareaHTMLAttributes<HTMLTextAreaElement>
-)
-
-type InputProps = Omit<
-  Exclude<StyledInputProps, TextareaHTMLAttributes<HTMLTextAreaElement>>,
-  'inputSize'
->
-
-const StyledInput = styled('input', {
-  shouldForwardProp: prop =>
-    ![
-      'as',
-      'error',
-      'fillAvailable',
-      'hasLabel',
-      'isPlaceholderVisible',
-      'multiline',
-      'resizable',
-      'inputSize',
-      'paddingRightFactor',
-      'rightComponentLength',
-      'unit',
-    ].includes(prop),
-})<StyledInputProps>`
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
-  appearance: none;
-  background-color: ${({ theme: { colors } }) => colors.neutral.background};
-  background-image: none;
-  border: 1px solid ${({ theme: { colors } }) => colors.neutral.border};
-  border-radius: ${({ theme: { radii } }) => radii.default};
-  color: ${({ theme: { colors } }) => colors.neutral.text};
-  display: block;
-  max-width: 100%;
+export const StyledInput = styled.input<{
+  'data-size': TextInputSize
+}>`
+  flex: 1;
+  border: none;
   outline: none;
-  position: relative;
+  height: 100%;
   width: 100%;
-  padding-left: ${({ theme }) => theme.space['1']};
-  padding-right: ${({ theme }) => theme.space['1']};
-  padding-top: 14px;
-  font-size: 16px;
-  line-height: 24px;
+  padding-left: ${({ theme }) => theme.space['2']};
+  background: transparent;
+  font-size: ${({ theme }) => theme.typography.bodySmall.fontSize};
 
-  &::placeholder {
-    color: ${({ theme: { colors } }) => colors.neutral.textWeak};
-    opacity: 0;
+  &[data-size='large'] {
+    font-size: ${({ theme }) => theme.typography.body.fontSize};
   }
 
-  &:hover,
-  &:focus {
-    border-color: ${({ theme: { colors } }) => colors.primary.borderHover};
+  &[data-size='small'] {
+    padding-left: ${({ theme }) => theme.space['1']};
   }
-
-  &:focus {
-    box-shadow: ${({ theme: { shadows } }) => shadows.focusPrimary};
-    border-color: ${({ theme: { colors } }) => colors.primary.borderHover};
-  }
-
-  ${({ isPlaceholderVisible }) =>
-    isPlaceholderVisible &&
-    `&::placeholder {
-      opacity: 1;
-    }`}
-
-  ${({ disabled, theme: { colors } }) =>
-    disabled &&
-    `cursor: default;
-    pointer-events: none;
-    background-color: ${colors.neutral.backgroundDisabled};
-    border-color: ${colors.neutral.borderDisabled};
-    color: ${colors.neutral.textDisabled};`}
-
-  ${({ readOnly, theme: { colors } }) =>
-    readOnly &&
-    `background-color: ${colors.neutral.backgroundDisabled};
-    border-color: ${colors.neutral.borderDisabled};
-    color: ${colors.neutral.text};`}
-
-  ${({ inputSize }) => inputSizes[inputSize]?.default}
-
-  ${({ inputSize, hasLabel }) =>
-    !!inputSize && !hasLabel && inputSizes[inputSize]?.full}
-
-  ${({ error, theme: { colors, shadows } }) =>
-    error &&
-    `border-color: ${colors.danger.border};
-
-    &:hover,
-    &:focus {
-      border-color: ${colors.danger.borderHover};
-    }
-
-    &:focus {
-      box-shadow: ${shadows.focusDanger};
-      border-color: ${colors.danger.borderHover};
-    }`}
-
-    ${({ multiline, resizable, fillAvailable }) =>
-      multiline &&
-      `
-    padding-top: 20px;
-    height: ${fillAvailable ? '100%' : 'initial'};
-    resize: ${resizable === false ? 'none' : 'vertical'};
-  `}
-
-  ${({ multiline, hasLabel, theme }) =>
-    multiline &&
-    !hasLabel &&
-    `
-    padding-top: ${theme.space['1']};
-  `}
-
-  ${({ paddingRightFactor, rightComponentLength, unit, theme }) =>
-    paddingRightFactor > 0 &&
-    `
-    padding-right: calc(${
-      unit ? `${unit.length} * ${theme.space['1']} + ` : ''
-    }${
-      paddingRightFactor +
-      (unit ? rightComponentLength - 1 : rightComponentLength)
-    } * ${theme.space['4']});
-  `}
 `
 
-const RightComponent = styled(Stack)`
-  min-width: 24px;
+type StyledInputWrapperProps = {
+  hasFocus: boolean
+  size: TextInputSize
+}
+const StyledInputWrapper = styled('div', {
+  shouldForwardProp: prop => !['hasFocus', 'size'].includes(prop),
+})<StyledInputWrapperProps>`
+  display: flex;
+  flex-direction: row;
+  height: ${({ size, theme }) => theme.sizing[TEXTINPUT_SIZE_HEIGHT[size]]};
+
+  background: ${({ theme }) => theme.colors.neutral.background};
+  border: 1px solid ${({ theme }) => theme.colors.neutral.border};
+  border-radius: ${({ theme }) => theme.radii.default};
+
+  & > ${StyledInput} {
+    color: ${({ theme }) => theme.colors.neutral.text};
+
+    &::placeholder {
+      color: ${({ theme }) => theme.colors.neutral.textWeak};
+    }
+  }
+
+  &[data-success='true'] {
+    border-color: ${({ theme }) => theme.colors.success.border};
+  }
+
+  &[data-error='true'] {
+    border-color: ${({ theme }) => theme.colors.danger.border};
+  }
+
+  &[data-readonly='true'] {
+    background: ${({ theme }) => theme.colors.neutral.backgroundWeak};
+    border-color: ${({ theme }) => theme.colors.neutral.border};
+  }
+
+  &[data-disabled='true'] {
+    background: ${({ theme }) => theme.colors.neutral.backgroundDisabled};
+    border-color: ${({ theme }) => theme.colors.neutral.borderDisabled};
+
+    & > ${StyledInput} {
+      color: ${({ theme }) => theme.colors.neutral.textDisabled};
+
+      &::placeholder {
+        color: ${({ theme }) => theme.colors.neutral.textWeakDisabled};
+      }
+    }
+  }
+
+  &:not([data-disabled='true']):not([data-readonly]):hover {
+    border-color: ${({ theme }) => theme.colors.primary.border};
+  }
+
+  ${({ theme, hasFocus }) =>
+    hasFocus
+      ? `
+  box-shadow: ${theme.shadows.focusPrimary};
+  border: 1px solid ${theme.colors.primary.border};
+`
+      : null};
 `
 
 type TextInputProps = {
-  'data-testid'?: string
-  ariaControls?: string
-  autoComplete?: string
-  autoFocus?: boolean
   className?: string
-  cols?: number
-  defaultValue?: string
-  disabled?: boolean
-  edit?: boolean
+  clearable?: boolean
+  'data-testid'?: string
   error?: string
-  fillAvailable?: boolean
-  generated?: boolean
-  height?: string | number
-  id?: string
+  helper?: ReactNode
   label?: string
-  multiline?: boolean
-  name?: string
-  notice?: string
-  noTopLabel?: boolean
-  onBlur?: FocusEventHandler<HTMLInputElement | HTMLTextAreaElement>
-  onChange?: (value: string) => void
-  onFocus?: FocusEventHandler<HTMLInputElement | HTMLTextAreaElement>
-  onKeyUp?: KeyboardEventHandler<HTMLInputElement | HTMLTextAreaElement>
-  onKeyDown?: KeyboardEventHandler<HTMLInputElement | HTMLTextAreaElement>
-  placeholder?: string
-  random?: string
-  readOnly?: boolean
-  required?: boolean
-  resizable?: boolean
-  rows?: number
-  size?: TextInputSizes
-  tabIndex?: number
-  type?: string
-  unit?: string
-  valid?: boolean
-  value?: string | number
-  wrap?: string
-  inputProps?: InputProps
-  max?: InputHTMLAttributes<HTMLInputElement>['max']
-  min?: InputHTMLAttributes<HTMLInputElement>['min']
-} & (
-  | Omit<InputHTMLAttributes<HTMLInputElement>, 'onChange'>
-  | Omit<TextareaHTMLAttributes<HTMLTextAreaElement>, 'onChange'>
-)
-
-const UnitLabel = styled(Text)`
-  padding: ${({ theme }) => theme.space['1']} 0;
-  line-height: 18px;
-`
+  labelDescription?: ReactNode
+  loading?: boolean
+  minLength?: number
+  maxLength?: number
+  onRandomize?: () => void
+  prefix?: ReactNode
+  size?: TextInputSize
+  success?: string | boolean
+  suffix?: ReactNode
+  tooltip?: string
+  type?: 'text' | 'password' | 'url' | 'email'
+  value?: string
+  defaultValue?: string
+  onChangeValue?: (value: string) => void
+} & Pick<
+  InputHTMLAttributes<HTMLInputElement>,
+  | 'onFocus'
+  | 'onBlur'
+  | 'name'
+  | 'id'
+  | 'placeholder'
+  | 'aria-label'
+  | 'aria-labelledby'
+  | 'disabled'
+  | 'readOnly'
+  | 'required'
+  | 'autoFocus'
+  | 'tabIndex'
+  | 'autoComplete'
+  | 'onKeyDown'
+  | 'onKeyUp'
+  | 'role'
+  | 'aria-live'
+  | 'aria-atomic'
+  | 'onChange'
+>
 
 /**
- * TextInput component allows users to input text, with options for customization and validation.
- * It supports various input types and should be appropriately sized with clear labeling.
+ * This component offers an extended input HTML. The component can be controlled or uncontrolled.
+ * To control the component, you need to pass the value and the `onChange` function.
+ * If you don't pass the `onChange` function, the component will be uncontrolled and you can set the default value using `defaultValue`
  */
-export const TextInput = forwardRef<
-  HTMLInputElement | HTMLTextAreaElement | null,
-  TextInputProps
->(
+export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
   (
     {
-      'data-testid': dataTestId,
-      ariaControls,
-      autoComplete = 'on',
-      autoFocus,
-      className,
-      cols,
-      defaultValue,
-      disabled,
-      edit: forceEdit,
-      error,
-      fillAvailable,
-      generated,
-      height,
       id,
-      label,
-      multiline,
-      name,
-      notice,
-      noTopLabel = false,
-      onBlur,
-      onChange,
-      onFocus,
-      onKeyUp,
-      onKeyDown,
-      placeholder,
-      random,
-      readOnly,
-      required,
-      resizable,
-      rows,
-      size = 'medium',
+      className,
       tabIndex,
-      type = 'text',
-      unit,
-      valid,
       value,
-      wrap,
-      inputProps,
-      min,
-      max,
+      onChange,
+      onChangeValue,
+      placeholder,
+      disabled = false,
+      readOnly = false,
+      success,
+      error,
+      helper,
+      tooltip,
+      label,
+      autoFocus,
+      required = false,
+      'data-testid': dataTestId,
+      name,
+      onFocus,
+      onBlur,
+      clearable = false,
+      labelDescription,
+      type = 'text',
+      prefix,
+      suffix,
+      size = 'large',
+      loading,
+      onRandomize,
+      minLength,
+      maxLength,
+      'aria-labelledby': ariaLabelledBy,
+      'aria-label': ariaLabel,
+      autoComplete,
+      onKeyDown,
+      onKeyUp,
+      role,
+      'aria-live': ariaLive,
+      'aria-atomic': ariaAtomic,
+      defaultValue,
     },
     ref,
   ) => {
-    const controlRef = useRef<HTMLInputElement>(null)
+    const localId = useId()
+    const [hasFocus, setHasFocus] = useState(false)
+    const [localValue, setLocalValue] = useState(defaultValue)
+    const inputRef = useRef<HTMLInputElement>(null)
+    useImperativeHandle(ref, () => inputRef.current as HTMLInputElement)
 
-    const [visited, setVisited] = useState(false)
-    const [passwordVisible, setPasswordVisible] = useState(false)
-    const togglePasswordVisibility = useCallback(
-      () => setPasswordVisible(x => !x),
-      [],
-    )
+    const [isPasswordVisible, setIsPasswordVisible] = useState(false)
+    const computedType =
+      type === 'password' && isPasswordVisible ? 'text' : type
 
-    // Forward ref to parent ref
-    useImperativeHandle<unknown, unknown>(ref, () => controlRef, [])
-
-    // Focus when password is visible
-    useEffect(() => {
-      if (passwordVisible) {
-        controlRef?.current?.focus()
+    const sentiment = useMemo(() => {
+      if (error) {
+        return 'danger'
       }
-    }, [passwordVisible])
 
-    const handlePassVisibilityClick = useCallback(
-      () => togglePasswordVisibility(),
-      [togglePasswordVisibility],
-    )
+      if (success) {
+        return 'success'
+      }
 
-    const randomize = useCallback(
-      () => onChange?.(randomName(random)),
-      [onChange, random],
-    )
+      return 'neutral'
+    }, [error, success])
 
-    const handleClickRandomize = useCallback(() => randomize(), [randomize])
-
-    const handleFocus: FocusEventHandler<
-      HTMLInputElement | HTMLTextAreaElement
-    > = useCallback(
+    const onChangeCallback: ChangeEventHandler<HTMLInputElement> = useCallback(
       event => {
-        if (!visited && !readOnly) {
-          setVisited(true)
-        }
-
-        if (onFocus) {
-          onFocus(event)
-        }
+        onChange?.(event)
+        onChangeValue?.(event.target.value)
+        setLocalValue(event.target.value)
       },
-      [visited, readOnly, onFocus],
+      [onChange, onChangeValue],
     )
 
-    const handleChange = useCallback(
-      (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>
-        onChange?.(event.target.value),
-      [onChange],
-    )
+    const computedValue = value !== undefined ? value : localValue
 
-    const isPassToggleable = type === 'toggleable-password'
-    const hasLabel = !!label && !noTopLabel && size === 'medium'
-    const edit =
-      hasLabel && (forceEdit || visited || value || error || generated)
-
-    const isPlaceholderVisible = !hasLabel || !!edit
-    const hasRightElement = !!(
-      valid !== undefined ||
-      isPassToggleable ||
-      random ||
-      unit
-    )
-
-    const getType = () => {
-      if (isPassToggleable) {
-        return passwordVisible || generated ? 'text' : 'password'
-      }
-
-      return multiline ? undefined : type
-    }
-
-    const inputSize = size
-
-    const rightComponentsArray = useMemo(() => {
-      const rightComponents = []
-
-      if (isPassToggleable && !generated) {
-        rightComponents.push(
-          <Button
-            data-testid={
-              dataTestId ? `${dataTestId}-visibility-button` : undefined
-            }
-            aria-label={passwordVisible ? 'hide' : 'show'}
-            key="password-visible"
-            onClick={handlePassVisibilityClick}
-            variant="ghost"
-            sentiment="neutral"
-            size="small"
-          >
-            {passwordVisible ? <EyeOffIcon /> : <EyeIcon />}
-          </Button>,
-        )
-      }
-      if (random) {
-        rightComponents.push(
-          <Button
-            key="random"
-            data-testid={
-              dataTestId ? `${dataTestId}-randomize-button` : undefined
-            }
-            aria-label="randomize"
-            onClick={handleClickRandomize}
-            disabled={disabled}
-            variant="ghost"
-            sentiment="neutral"
-            size="small"
-          >
-            <AutoFixIcon />
-          </Button>,
-        )
-      }
-      if (valid === false || valid === true) {
-        rightComponents.push(
-          !valid ? (
-            <CloseIcon key="valid" sentiment="danger" size="xlarge" />
-          ) : (
-            <CheckIcon key="valid" sentiment="success" size="xlarge" />
-          ),
-        )
-      }
-      if (unit) {
-        rightComponents.push(
-          <UnitLabel key="unit" variant="bodySmall" as="p" prominence="weak">
-            {unit}
-          </UnitLabel>,
-        )
-      }
-
-      return rightComponents
-    }, [
-      disabled,
-      generated,
-      handleClickRandomize,
-      handlePassVisibilityClick,
-      isPassToggleable,
-      passwordVisible,
-      random,
-      unit,
-      valid,
-      dataTestId,
-    ])
-
-    const showSeparator = (required && hasRightElement) || unit
-    const paddingRightFactor = (required ? 1 : 0) + (showSeparator ? 0.5 : 0)
+    const computedClearable = clearable && !!computedValue
 
     return (
-      <div className={className}>
-        <StyledRelativeDiv>
-          <StyledInput
-            aria-controls={ariaControls}
-            aria-label={label || undefined}
-            aria-labelledby={hasLabel ? ariaControls : undefined}
-            as={multiline ? 'textarea' : 'input'}
-            autoComplete={autoComplete}
-            autoFocus={autoFocus}
-            cols={cols}
-            data-testid={dataTestId}
-            defaultValue={defaultValue}
-            disabled={disabled}
-            error={!!error}
-            fillAvailable={fillAvailable}
-            hasLabel={hasLabel}
-            paddingRightFactor={paddingRightFactor}
-            rightComponentLength={rightComponentsArray.length}
-            unit={unit}
-            id={id}
-            inputSize={inputSize}
-            isPlaceholderVisible={isPlaceholderVisible}
-            multiline={multiline}
-            name={name}
-            onBlur={onBlur}
-            onChange={handleChange}
-            onFocus={handleFocus}
-            onKeyUp={onKeyUp}
-            onKeyDown={onKeyDown}
-            placeholder={placeholder}
-            readOnly={readOnly}
-            ref={controlRef}
-            resizable={resizable}
-            rows={rows}
-            style={{ height }}
-            tabIndex={tabIndex}
-            type={getType()}
-            value={value === null ? '' : value}
-            wrap={wrap}
-            min={min}
-            max={max}
+      <Stack
+        gap={0.5}
+        className={className}
+        role={role}
+        aria-live={ariaLive}
+        aria-atomic={ariaAtomic}
+      >
+        {label || labelDescription ? (
+          <Label
+            labelDescription={labelDescription}
             required={required}
-            {...inputProps}
-          />
-          {hasLabel && (
-            <StyledLabel
-              edit={!!edit}
-              disabled={disabled}
-              readOnly={readOnly}
-              error={!!error}
-              id={ariaControls}
-              htmlFor={id}
-              aria-live="assertive"
+            size={size}
+            htmlFor={id ?? localId}
+            id={ariaLabelledBy}
+          >
+            {label}
+          </Label>
+        ) : null}
+        <div>
+          <Tooltip text={tooltip}>
+            <StyledInputWrapper
+              hasFocus={hasFocus}
+              data-disabled={disabled}
+              data-readonly={readOnly}
+              data-success={!!success}
+              data-error={!!error}
+              size={size}
             >
-              {label}
-            </StyledLabel>
-          )}
-
-          {hasRightElement || required ? (
-            <StyledRightElement
-              edit={!!edit}
-              touchable={isPassToggleable || !!random}
-            >
-              {required ? (
-                <Text
-                  as="span"
-                  variant="bodyStrong"
-                  sentiment="danger"
-                  aria-label="required"
-                >
-                  *
-                </Text>
-              ) : null}
-              {showSeparator ? <StyledSeparator direction="vertical" /> : null}
-              {rightComponentsArray.length > 0 ? (
-                <RightComponent
-                  justifyContent="center"
+              {prefix ? (
+                <BasicPrefixStack
                   direction="row"
                   alignItems="center"
+                  data-size={size}
                 >
-                  {rightComponentsArray}
-                </RightComponent>
+                  {typeof prefix === 'string' ? (
+                    <Text
+                      as="span"
+                      sentiment="neutral"
+                      variant="bodySmall"
+                      disabled={disabled}
+                    >
+                      {prefix}
+                    </Text>
+                  ) : (
+                    prefix
+                  )}
+                </BasicPrefixStack>
               ) : null}
-            </StyledRightElement>
-          ) : null}
-        </StyledRelativeDiv>
-        <Expandable opened={!!error}>
-          <StyledError>{error}</StyledError>
-        </Expandable>
-        {notice ? <StyledNotice>{notice}</StyledNotice> : null}
-      </div>
+              <StyledInput
+                type={computedType}
+                aria-invalid={!!error}
+                id={id ?? localId}
+                tabIndex={tabIndex}
+                autoFocus={autoFocus}
+                disabled={disabled}
+                ref={inputRef}
+                value={value}
+                defaultValue={defaultValue}
+                onChange={onChangeCallback}
+                data-size={size}
+                placeholder={placeholder}
+                data-testid={dataTestId}
+                name={name}
+                onFocus={event => {
+                  setHasFocus(true)
+                  onFocus?.(event)
+                }}
+                onBlur={event => {
+                  setHasFocus(false)
+                  onBlur?.(event)
+                }}
+                readOnly={readOnly}
+                minLength={minLength}
+                maxLength={maxLength}
+                aria-labelledby={ariaLabelledBy}
+                aria-label={ariaLabel}
+                autoComplete={autoComplete}
+                required={required}
+                onKeyDown={onKeyDown}
+                onKeyUp={onKeyUp}
+              />
+              {success || error || loading || computedClearable ? (
+                <StateStack direction="row" gap={1} alignItems="center">
+                  {computedClearable ? (
+                    <Button
+                      aria-label="clear value"
+                      disabled={disabled || !computedValue}
+                      variant="ghost"
+                      size={size === 'small' ? 'xsmall' : 'small'}
+                      onClick={() => {
+                        if (inputRef?.current) {
+                          inputRef.current.value = ''
+                          setLocalValue('')
+                          onChangeCallback({
+                            target: { value: '' },
+                            currentTarget: { value: '' },
+                          } as ChangeEvent<HTMLInputElement>)
+                        }
+                      }}
+                      sentiment="neutral"
+                    >
+                      <CloseIcon size="small" />
+                    </Button>
+                  ) : null}
+                  {success ? (
+                    <CheckCircleIcon
+                      sentiment="success"
+                      size="small"
+                      disabled={disabled}
+                    />
+                  ) : null}
+                  {error ? (
+                    <AlertCircleIcon
+                      sentiment="danger"
+                      size="small"
+                      disabled={disabled}
+                    />
+                  ) : null}
+                  {loading && !disabled ? <Loader active size="small" /> : null}
+                </StateStack>
+              ) : null}
+              {suffix ? (
+                <BasicSuffixStack direction="row" alignItems="center">
+                  {typeof suffix === 'string' ? (
+                    <Text
+                      as="span"
+                      sentiment="neutral"
+                      variant="bodySmall"
+                      disabled={disabled}
+                    >
+                      {suffix}
+                    </Text>
+                  ) : (
+                    suffix
+                  )}
+                </BasicSuffixStack>
+              ) : null}
+              {type === 'password' ? (
+                <CTASuffixStack direction="row" alignItems="center">
+                  <Button
+                    disabled={disabled}
+                    data-testid={
+                      dataTestId ? `${dataTestId}-visibility-button` : undefined
+                    }
+                    aria-label={isPasswordVisible ? 'hide' : 'show'}
+                    onClick={() => {
+                      setIsPasswordVisible(!isPasswordVisible)
+                    }}
+                    variant="ghost"
+                    sentiment="neutral"
+                    size={size === 'small' ? 'xsmall' : 'small'}
+                  >
+                    {isPasswordVisible ? <EyeOffIcon /> : <EyeIcon />}
+                  </Button>
+                </CTASuffixStack>
+              ) : null}
+              {onRandomize ? (
+                <CTASuffixStack direction="row" alignItems="center">
+                  <Button
+                    disabled={disabled}
+                    size={size === 'small' ? 'xsmall' : 'small'}
+                    variant="ghost"
+                    sentiment="neutral"
+                    onClick={onRandomize}
+                  >
+                    <AutoFixIcon />
+                  </Button>
+                </CTASuffixStack>
+              ) : null}
+            </StyledInputWrapper>
+          </Tooltip>
+        </div>
+        {error || typeof success === 'string' || typeof helper === 'string' ? (
+          <Text
+            as="p"
+            variant="caption"
+            sentiment={sentiment}
+            prominence={!error && !success ? 'weak' : 'default'}
+            disabled={disabled}
+          >
+            {error || success || helper}
+          </Text>
+        ) : null}
+        {!error && !success && typeof helper !== 'string' && helper
+          ? helper
+          : null}
+      </Stack>
     )
   },
 )

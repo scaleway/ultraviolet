@@ -2,7 +2,7 @@ import type { StoryFn } from '@storybook/react'
 import { Label } from '..'
 import { Checkbox } from '../../Checkbox'
 import { Row } from '../../Row'
-import { SelectInputV2 } from '../../SelectInputV2'
+import { SelectInput } from '../../SelectInput'
 import { Stack } from '../../Stack'
 
 const values = [
@@ -23,13 +23,13 @@ export const Usage: StoryFn<typeof Label> = () => (
   <Stack gap={3}>
     Using prop label inside the component :
     <Stack gap={2} direction="row" justifyContent="center">
-      <SelectInputV2
+      <SelectInput
         options={values}
         label="Input1"
         name="input11"
         size="medium"
       />
-      <SelectInputV2
+      <SelectInput
         options={values}
         label="Input2"
         name="input12"
@@ -44,8 +44,8 @@ export const Usage: StoryFn<typeof Label> = () => (
         <Label size="medium">Input2</Label>
       </Row>
       <Row gap={2} templateColumns="1fr 1fr 1fr">
-        <SelectInputV2 options={values} name="input21" size="medium" />
-        <SelectInputV2 options={values} name="input22" size="medium" />
+        <SelectInput options={values} name="input21" size="medium" />
+        <SelectInput options={values} name="input22" size="medium" />
         <Checkbox>Checkbox</Checkbox>
       </Row>
     </Stack>

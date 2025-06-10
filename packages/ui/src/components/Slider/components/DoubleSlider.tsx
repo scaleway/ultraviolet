@@ -4,7 +4,7 @@ import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import { useCallback, useEffect, useId, useMemo, useRef, useState } from 'react'
 import { Label } from '../../Label'
-import { NumberInputV2 } from '../../NumberInputV2'
+import { NumberInput } from '../../NumberInput'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
 import { THUMB_SIZE } from '../constant'
@@ -244,7 +244,7 @@ export const DoubleSlider = ({
     side?: 'left' | 'right',
   ) =>
     input && !options ? (
-      <NumberInputV2
+      <NumberInput
         value={side === 'left' ? inputValue?.[0] : inputValue?.[1]}
         size="small"
         min={min}

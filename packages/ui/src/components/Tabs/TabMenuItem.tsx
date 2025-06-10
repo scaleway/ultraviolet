@@ -3,10 +3,10 @@
 import styled from '@emotion/styled'
 import type { ComponentProps } from 'react'
 import { useMemo } from 'react'
-import { MenuV2 } from '../MenuV2'
+import { Menu } from '../Menu'
 import { useTabsContext } from './TabsContext'
 
-const StyledMenuItem = styled(MenuV2.Item)`
+const StyledMenuItem = styled(Menu.Item)`
   &[aria-selected='true'] {
     color: ${({ theme }) => theme.colors.primary.text};
   }
