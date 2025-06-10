@@ -1,21 +1,12 @@
-import { OptionType } from './types'
-
 // Remove accent & uppercase
-const normalizeString = (string: string) =>
+export const normalizeString = (string: string) =>
   string
     .normalize('NFD')
     .replace(/[\u0300-\u036F]/g, '')
-    .replace('-', ' ')
+    .replace(/-/g, ' ')
     .toLowerCase()
 
-const getReferenceText = (option: OptionType) => {
-  if (option.searchText) return normalizeString(option.searchText)
-  if (typeof option.label === 'string') return normalizeString(option.label)
-
-  return ''
-}
-
-const levenshteinDistance = (query: string, slice: string): number => {
+export const levenshteinDistance = (query: string, slice: string): number => {
   if (query.length === 0) return slice.length
   if (slice.length === 0) return query.length
   const distancesArray = []
@@ -39,13 +30,14 @@ const levenshteinDistance = (query: string, slice: string): number => {
 
 /**
  * Return `true` if there is a fuzz match in a substring
- * By default, allow distance of one (which mean, 1 character difference for a match)
+ * By default, allow distance of 1 (which mean, 1 character difference for a match)
  * @example isFuzzyMatch("merr", "mercury") = true
  * isFuzzyMatch("cry", "mercury") = true
  * isFuzzyMatch("mrcury", "mercury") = true
  * isFuzzyMatch("mrecury", "mercury") = false
+ * isFuzzyMatch("mrecury", "mercury", 2) = true
  */
-const isFuzzyMatch = (
+export const isFuzzyMatch = (
   query: string,
   target: string,
   maxDistance = 1,
@@ -64,19 +56,3 @@ const isFuzzyMatch = (
 
   return false
 }
-
-// It uses Levenshtein distance so that the search is typo-tolerant for a simple fuzzy-search
-export const matchRegex = (data: OptionType[], query: string) =>
-  data.filter(option => {
-    const referenceText = getReferenceText(option)
-    const regex = new RegExp(query, 'i')
-
-    return (
-      (query.length > 2
-        ? isFuzzyMatch(query, referenceText)
-        : referenceText.match(regex)) ||
-      (typeof option.description === 'string' &&
-        option.description.match(regex)) ||
-      option.value.match(regex)
-    )
-  })

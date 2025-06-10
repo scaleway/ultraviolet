@@ -4,10 +4,10 @@ import styled from '@emotion/styled'
 import { SearchIcon } from '@ultraviolet/icons'
 import type { Dispatch, SetStateAction } from 'react'
 import { useEffect, useRef } from 'react'
+import { isFuzzyMatch, normalizeString } from '../../utils/searchAlgorithm'
 import { TextInputV2 } from '../TextInputV2'
 import { useSelectInput } from './SelectInputProvider'
-import { matchRegex } from './searchAlgorithm'
-import type { DataType } from './types'
+import type { DataType, OptionType } from './types'
 
 type SearchBarProps = {
   placeholder: string
@@ -21,6 +21,28 @@ const StyledInput = styled(TextInputV2)`
   padding-left: ${({ theme }) => theme.space[2]};
   padding-right: ${({ theme }) => theme.space[2]};
 `
+export const getReferenceText = (option: OptionType) => {
+  if (option.searchText) return normalizeString(option.searchText)
+  if (typeof option.label === 'string') return normalizeString(option.label)
+
+  return ''
+}
+
+// It uses Levenshtein distance so that the search is typo-tolerant for a simple fuzzy-search
+export const searchRegex = (data: OptionType[], query: string) =>
+  data.filter(option => {
+    const referenceText = getReferenceText(option)
+    const regex = new RegExp(query, 'i')
+
+    return (
+      (query.length > 2
+        ? isFuzzyMatch(query, referenceText)
+        : referenceText.match(regex)) ||
+      (typeof option.description === 'string' &&
+        option.description.match(regex)) ||
+      option.value.match(regex)
+    )
+  })
 
 const findClosestOption = (
   options: DataType,
@@ -82,7 +104,7 @@ export const SearchBarDropdown = ({
       if (!Array.isArray(options)) {
         const filteredOptions = { ...options }
         Object.keys(filteredOptions).map((group: string) => {
-          filteredOptions[group] = matchRegex(
+          filteredOptions[group] = searchRegex(
             filteredOptions[group],
             escapeRegExp(search.toString()),
           )
@@ -91,7 +113,7 @@ export const SearchBarDropdown = ({
         })
         onSearch(filteredOptions)
       } else {
-        const filteredOptions = matchRegex(
+        const filteredOptions = searchRegex(
           [...options],
           escapeRegExp(search.toString()),
         )
