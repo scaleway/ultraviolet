@@ -1,5 +1,21 @@
 # Change Log
 
+## 4.0.0-beta.7
+
+### Minor Changes
+
+- [`5d0a970`](https://github.com/scaleway/ultraviolet/commit/5d0a9702142eb4de78f4511e38004b60e2264634) Thanks [@lisalupi](https://github.com/lisalupi)! - Spread props instead of manually adding them to avoid forgetting some
+
+  Breaking changes :
+
+  - `SelectableCardGroupField`: prop `type` is now mandatory
+  - `VerificationCodeField` : rename `id` as `inputId`
+
+### Patch Changes
+
+- Updated dependencies [[`5d0a970`](https://github.com/scaleway/ultraviolet/commit/5d0a9702142eb4de78f4511e38004b60e2264634)]:
+  - @ultraviolet/ui@2.0.0-beta.6
+
 ## 4.0.0-beta.6
 
 ### Patch Changes
