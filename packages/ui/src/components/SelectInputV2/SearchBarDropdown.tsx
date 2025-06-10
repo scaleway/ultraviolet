@@ -6,7 +6,8 @@ import type { Dispatch, SetStateAction } from 'react'
 import { useEffect, useRef } from 'react'
 import { TextInputV2 } from '../TextInputV2'
 import { useSelectInput } from './SelectInputProvider'
-import type { DataType, OptionType } from './types'
+import { matchRegex } from './searchAlgorithm'
+import type { DataType } from './types'
 
 type SearchBarProps = {
   placeholder: string
@@ -20,16 +21,7 @@ const StyledInput = styled(TextInputV2)`
   padding-left: ${({ theme }) => theme.space[2]};
   padding-right: ${({ theme }) => theme.space[2]};
 `
-const matchRegex = (data: OptionType[], regex: RegExp) =>
-  data.filter(
-    option =>
-      // oxlint-disable-next-line eslint-plugin-unicorn(prefer-regexp-test)
-      (option.searchText && !!option.searchText.match(regex)) ||
-      (typeof option.label === 'string' && option.label.match(regex)) ||
-      (typeof option.description === 'string' &&
-        option.description.match(regex)) ||
-      option.value.match(regex),
-  )
+
 const findClosestOption = (
   options: DataType,
   searchInput: string | undefined,
@@ -87,18 +79,22 @@ export const SearchBarDropdown = ({
 
   const handleChange = (search: string) => {
     if (search.length > 0) {
-      // case insensitive search
-      const regex = new RegExp(escapeRegExp(search.toString()), 'i')
       if (!Array.isArray(options)) {
         const filteredOptions = { ...options }
         Object.keys(filteredOptions).map((group: string) => {
-          filteredOptions[group] = matchRegex(filteredOptions[group], regex)
+          filteredOptions[group] = matchRegex(
+            filteredOptions[group],
+            escapeRegExp(search.toString()),
+          )
 
           return null
         })
         onSearch(filteredOptions)
       } else {
-        const filteredOptions = matchRegex([...options], regex)
+        const filteredOptions = matchRegex(
+          [...options],
+          escapeRegExp(search.toString()),
+        )
         onSearch(filteredOptions)
       }
     } else {
