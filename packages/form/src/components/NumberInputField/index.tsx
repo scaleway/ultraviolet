@@ -1,104 +1,80 @@
 'use client'
 
 import { NumberInput } from '@ultraviolet/ui'
-import type { ComponentProps, FocusEvent, FocusEventHandler } from 'react'
-import type { FieldPath, FieldValues, Path, PathValue } from 'react-hook-form'
+import type { ComponentProps, FocusEvent } from 'react'
 import { useController } from 'react-hook-form'
+import type { FieldPath, FieldValues, Path, PathValue } from 'react-hook-form'
 import { useErrors } from '../../providers'
 import type { BaseFieldProps } from '../../types'
+import { isInteger } from '../../validators/isInteger'
 
-type NumberInputValueFieldProps<
+type NumberInputProps<
   TFieldValues extends FieldValues,
   TFieldName extends FieldPath<TFieldValues>,
 > = BaseFieldProps<TFieldValues, TFieldName> &
-  Partial<
-    Pick<
-      ComponentProps<typeof NumberInput>,
-      | 'disabled'
-      | 'maxValue'
-      | 'minValue'
-      | 'onMaxCrossed'
-      | 'onMinCrossed'
-      | 'size'
-      | 'step'
-      | 'text'
-      | 'className'
-    >
-  > & {
-    onBlur?: FocusEventHandler<HTMLInputElement>
-    onFocus?: FocusEventHandler<HTMLInputElement>
-  }
+  Omit<ComponentProps<typeof NumberInput>, 'onChange'>
 
-/**
- * @deprecated This component is deprecated, use `NumberInputFieldV2` instead.
- */
 export const NumberInputField = <
   TFieldValues extends FieldValues,
   TFieldName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
 >({
-  disabled,
-  maxValue,
-  minValue,
+  control,
+  max = Number.MAX_SAFE_INTEGER,
+  min = 0,
   name,
   onChange,
   onBlur,
-  onFocus,
-  onMaxCrossed,
-  onMinCrossed,
-  required,
-  size,
   step,
-  text,
-  className,
   label,
+  'aria-label': ariaLabel,
+  required,
   shouldUnregister = false,
   validate,
-  control,
-}: NumberInputValueFieldProps<TFieldValues, TFieldName>) => {
+  ...props
+}: NumberInputProps<TFieldValues, TFieldName>) => {
   const { getError } = useErrors()
   const {
     field,
     fieldState: { error },
   } = useController<TFieldValues, TFieldName>({
     name,
-    shouldUnregister,
     control,
+    shouldUnregister,
     rules: {
-      max: maxValue,
-      min: minValue,
+      max,
+      min,
       required,
-      validate,
+      validate: {
+        ...validate,
+        isInteger: isInteger(step),
+      },
     },
   })
 
   return (
     <NumberInput
+      {...props}
       name={field.name}
       value={field.value}
-      disabled={disabled}
       onBlur={(event: FocusEvent<HTMLInputElement>) => {
         field.onBlur()
         onBlur?.(event)
       }}
-      onChange={event => {
+      onChange={newValue => {
         // React hook form doesnt allow undefined values after definition https://react-hook-form.com/docs/usecontroller/controller (that make sense)
-        field.onChange(event ?? null)
-        onChange?.(event as PathValue<TFieldValues, Path<TFieldValues>>)
+        field.onChange(newValue)
+        onChange?.(newValue as PathValue<TFieldValues, Path<TFieldValues>>)
       }}
-      onFocus={onFocus}
-      maxValue={maxValue}
-      minValue={minValue}
-      onMinCrossed={onMinCrossed}
-      onMaxCrossed={onMaxCrossed}
-      size={size}
+      max={max}
+      min={min}
       step={step}
-      text={text}
-      className={className}
       label={label}
       error={getError(
-        { label: label ?? '', max: maxValue, min: minValue },
+        { label: label ?? ariaLabel ?? name, max, min, isInteger: step },
         error,
       )}
+      aria-label={ariaLabel}
+      required={required}
     />
   )
 }

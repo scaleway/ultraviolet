@@ -1,45 +1,39 @@
 'use client'
 
-import { TextInputV2 } from '@ultraviolet/ui'
+import { TimeInput } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
 import type { FieldPath, FieldValues, Path, PathValue } from 'react-hook-form'
 import { useController } from 'react-hook-form'
 import { useErrors } from '../../providers'
 import type { BaseFieldProps } from '../../types'
-import { validateRegex } from '../../utils/validateRegex'
 
-type TextInputFieldProps<
+type TimeInputFieldProps<
   TFieldValues extends FieldValues,
   TFieldName extends FieldPath<TFieldValues>,
 > = BaseFieldProps<TFieldValues, TFieldName> &
   Omit<
-    ComponentProps<typeof TextInputV2>,
+    ComponentProps<typeof TimeInput>,
     'value' | 'error' | 'name' | 'onChange'
-  > & {
-    regex?: (RegExp | RegExp[])[]
-  }
+  >
 
 /**
- * This component offers a form field based on Ultraviolet UI TextInputV2 component
+ * This component offers a form field based on Ultraviolet UI TimeInput component
+ *  @experimental This component is experimental and may be subject to breaking changes in the future.
  */
-export const TextInputField = <
+export const TimeInputField = <
   TFieldValues extends FieldValues,
   TFieldName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
 >({
-  regex: regexes,
   onChange,
   label,
   required = false,
   name,
   onBlur,
-  minLength,
-  maxLength,
   'aria-label': ariaLabel,
   shouldUnregister,
-  validate,
   control,
   ...props
-}: TextInputFieldProps<TFieldValues, TFieldName>) => {
+}: TimeInputFieldProps<TFieldValues, TFieldName>) => {
   const { getError } = useErrors()
 
   const {
@@ -51,49 +45,30 @@ export const TextInputField = <
     control,
     rules: {
       required,
-      validate: {
-        ...(regexes
-          ? {
-              pattern: value => validateRegex(value, regexes),
-            }
-          : {}),
-        ...validate,
-      },
-      minLength,
-      maxLength,
     },
   })
 
   return (
-    <TextInputV2
+    <TimeInput
       {...props}
       error={getError(
         {
-          regex: regexes,
-          minLength,
-          maxLength,
           label: label ?? ariaLabel ?? name,
           value: field.value,
         },
         error,
       )}
       label={label}
-      minLength={minLength}
-      maxLength={maxLength}
-      name={name}
       onBlur={event => {
         onBlur?.(event)
         field.onBlur()
       }}
-      onChange={event => {
-        field.onChange(event)
-        onChange?.(
-          event.target.value as PathValue<TFieldValues, Path<TFieldValues>>,
-        )
+      onChange={value => {
+        field.onChange(value)
+        onChange?.(value as PathValue<TFieldValues, Path<TFieldValues>>)
       }}
       required={required}
-      value={field.value === undefined ? '' : field.value}
-      aria-label={ariaLabel}
+      value={field.value}
     />
   )
 }

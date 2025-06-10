@@ -1,11 +1,11 @@
 import type { Meta } from '@storybook/react'
 import { Snippet, Stack, Text } from '@ultraviolet/ui'
-import { Form, NumberInputFieldV2 } from '../..'
+import { Form, TimeInputField } from '../..'
 import { useForm } from '../../..'
 import { mockErrors } from '../../../mocks'
 
 export default {
-  component: NumberInputFieldV2,
+  component: TimeInputField,
   decorators: [
     ChildStory => {
       const methods = useForm()
@@ -26,13 +26,7 @@ export default {
       return (
         <Form onSubmit={() => {}} errors={mockErrors} methods={methods}>
           <Stack gap={2}>
-            <div
-              style={{
-                width: '250px',
-              }}
-            >
-              <ChildStory />
-            </div>
+            <ChildStory />
             <Stack gap={1}>
               <Text variant="bodyStrong" as="p">
                 Form input values:
@@ -70,15 +64,9 @@ export default {
       )
     },
   ],
-  parameters: {
-    docs: {
-      description: {
-        component: 'A NumberInput field',
-      },
-    },
-  },
-  title: 'Form/Components/Fields/NumberInputFieldV2',
+  title: 'Form/Components/Fields/TimeInputField',
 } as Meta
 
 export { Playground } from './Playground.stories'
 export { Required } from './Required.stories'
+export { TimeFormat } from './TimeFormat.stories'

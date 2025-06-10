@@ -1,17 +1,17 @@
 import type { StoryFn } from '@storybook/react'
 import { Stack } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
-import { TextInputField } from '..'
+import { TimeInputField } from '..'
 import { Submit } from '../../Submit'
 import { Template } from './Template.stories'
 
-export const Required: StoryFn<
-  ComponentProps<typeof TextInputField>
+export const TimeFormat: StoryFn<
+  ComponentProps<typeof TimeInputField>
 > = args => (
   <Stack gap={1}>
-    <TextInputField {...args} />
+    <TimeInputField {...args} />
     <Submit>Submit</Submit>
   </Stack>
 )
 
-Required.args = { ...Template.args, required: true }
+TimeFormat.args = { ...Template.args, timeFormat: 12, label: '12-hour format' }
