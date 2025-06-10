@@ -1,5 +1,16 @@
 # Change Log
 
+## 1.95.10
+
+### Patch Changes
+
+- [#5224](https://github.com/scaleway/ultraviolet/pull/5224) [`7015837`](https://github.com/scaleway/ultraviolet/commit/7015837cedb57acd891485521cf4406261d3fd14) Thanks [@johnrazeur](https://github.com/johnrazeur)! - fix(TextInputv2): allow clearable for uncontrolled
+
+- [#5195](https://github.com/scaleway/ultraviolet/pull/5195) [`e9822bf`](https://github.com/scaleway/ultraviolet/commit/e9822bfad330bb6dc368e756bbc03265fc00f330) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `19.1.6`.
+  Updated dependency `@types/react-dom` to `19.1.6`.
+- Updated dependencies [[`e9822bf`](https://github.com/scaleway/ultraviolet/commit/e9822bfad330bb6dc368e756bbc03265fc00f330)]:
+  - @ultraviolet/icons@3.15.6
+
 ## 1.95.9
 
 ### Patch Changes
