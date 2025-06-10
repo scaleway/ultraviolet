@@ -2,19 +2,19 @@ import { screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithForm } from '@utils/test'
 import { describe, expect, test, vi } from 'vitest'
-import { TimeInputFieldV2 } from '..'
+import { TimeInputField } from '..'
 
-describe('TextInputFieldV2', () => {
+describe('TextInputField', () => {
   test('should render correctly', () => {
     const { asFragment } = renderWithForm(
-      <TimeInputFieldV2 label="Test" name="test" />,
+      <TimeInputField label="Test" name="test" />,
     )
     expect(asFragment()).toMatchSnapshot()
   })
 
   test('should render correctly disabled', () => {
     const { asFragment } = renderWithForm(
-      <TimeInputFieldV2 label="Test" name="test" />,
+      <TimeInputField label="Test" name="test" />,
     )
     expect(asFragment()).toMatchSnapshot()
   })
@@ -25,7 +25,7 @@ describe('TextInputFieldV2', () => {
     const onBlur = vi.fn()
     renderWithForm(
       <>
-        <TimeInputFieldV2
+        <TimeInputField
           name="Test"
           onFocus={onFocus}
           onChange={onChange}

@@ -3,6 +3,7 @@ import { Stack } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
 import { TextInputField } from '..'
 import { Submit } from '../../Submit'
+import { Template } from './Template.stories'
 
 export const Required: StoryFn<
   ComponentProps<typeof TextInputField>
@@ -13,7 +14,4 @@ export const Required: StoryFn<
   </Stack>
 )
 
-Required.args = {
-  name: 'required',
-  required: true,
-}
+Required.args = { ...Template.args, required: true }

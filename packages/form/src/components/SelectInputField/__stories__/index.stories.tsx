@@ -24,7 +24,12 @@ export default {
       } = methods.formState
 
       return (
-        <Form onSubmit={() => {}} errors={mockErrors} methods={methods}>
+        <Form
+          onSubmit={() => {}}
+          errors={mockErrors}
+          methods={methods}
+          name="SelectInput"
+        >
           <Stack gap={2}>
             <ChildStory />
             <Stack gap={1}>
@@ -72,7 +77,6 @@ export default {
     },
   },
   title: 'Form/Components/Fields/SelectInputField',
-  tags: ['deprecated'],
 } as Meta
 
 export { Playground } from './Playground.stories'
