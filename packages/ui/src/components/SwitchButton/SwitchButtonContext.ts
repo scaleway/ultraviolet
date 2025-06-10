@@ -3,9 +3,10 @@ import type {
   ChangeEvent,
   Dispatch,
   FocusEventHandler,
-  RefObject,
   SetStateAction,
 } from 'react'
+
+export type RefOptionType = { value: string; current: HTMLInputElement }
 
 type SwitchButtonContextValue = {
   localValue?: string
@@ -14,13 +15,21 @@ type SwitchButtonContextValue = {
   onFocus?: FocusEventHandler<HTMLInputElement>
   size: 'small' | 'medium'
   handleOnChange: (event: ChangeEvent<HTMLInputElement>) => void
-  refOptions: RefObject<HTMLInputElement>[]
-  setRefOptions: Dispatch<SetStateAction<RefObject<HTMLInputElement>[]>>
+  refOptions: RefOptionType[]
+  setRefOptions: Dispatch<SetStateAction<RefOptionType[]>>
   sentiment: 'neutral' | 'primary'
 }
 
-export const SwitchButtonContext = createContext<SwitchButtonContextValue>(
-  {} as SwitchButtonContextValue,
-)
+export const SwitchButtonContext = createContext<
+  SwitchButtonContextValue | undefined
+>(undefined)
 
-export const useSwitchButtonContext = () => useContext(SwitchButtonContext)
+export const useSwitchButton = () => {
+  const context = useContext(SwitchButtonContext)
+
+  if (context === undefined) {
+    throw new Error('SwitchButton.Option should be use inside a SwitchButton')
+  }
+
+  return context
+}

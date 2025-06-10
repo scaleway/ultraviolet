@@ -1,8 +1,7 @@
 'use client'
 
 import styled from '@emotion/styled'
-
-const FOCUS_OVERLAY_SCALE_RATIO = 6
+import { FOCUS_OVERLAY_SCALE_RATIO } from './constant'
 
 const StyledDiv = styled.div`
   position: absolute;

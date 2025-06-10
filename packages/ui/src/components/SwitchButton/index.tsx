@@ -6,19 +6,19 @@ import type {
   ChangeEventHandler,
   FocusEventHandler,
   ReactNode,
-  RefObject,
 } from 'react'
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import { Stack } from '../Stack'
 import { Tooltip } from '../Tooltip'
 import { FocusOverlay } from './FocusOverlay'
 import { Option } from './Option'
-import { SwitchButtonContext } from './SwitchButtonContext'
+import { RefOptionType, SwitchButtonContext } from './SwitchButtonContext'
+import { FOCUS_OVERLAY_SCALE_RATIO } from './constant'
 
 const SIZES = {
   small: '500', // sizing token from theme
   medium: '600',
 } as const
-const FOCUS_OVERLAY_SCALE_RATIO = 6
 
 const StyledBorderedBox = styled.div<{ 'data-size': 'small' | 'medium' }>`
   border: 1px solid ${({ theme }) => theme.colors.neutral.border};
@@ -30,17 +30,11 @@ const StyledBorderedBox = styled.div<{ 'data-size': 'small' | 'medium' }>`
 
   &[data-size='small'] {
       height: ${({ theme }) => theme.sizing[SIZES.small]};
-  
   }
 
   &[data-size='medium'] {
       height: ${({ theme }) => theme.sizing[SIZES.medium]};
   }
-
-  
-  input[type="radio"] {
-  width: 100%;
-}
 `
 type SwitchButtonProps = {
   name?: string
@@ -72,20 +66,20 @@ export const SwitchButton = ({
   children,
   'data-testid': dataTestId,
 }: SwitchButtonProps) => {
-  const [localValue, setLocalValue] = useState<string>(value)
-  const [refOptions, setRefOptions] = useState<RefObject<HTMLInputElement>[]>(
-    [],
-  )
   const containerRef = useRef<HTMLDivElement>(null)
+
+  const [localValue, setLocalValue] = useState<string>(value)
+  const [refOptions, setRefOptions] = useState<RefOptionType[]>([])
   const [position, setPosition] = useState(0)
   const [width, setWidth] = useState(0)
   const [mouseDownSide, setMouseDownSide] = useState<'left' | 'right' | null>(
     null,
   )
+
   const getElement = useCallback(
     (referenceValue: string) =>
       refOptions.find(
-        element => element.current && element.current.id === referenceValue,
+        element => element.current && element.value === referenceValue,
       )?.current,
     [refOptions],
   )
@@ -148,11 +142,7 @@ export const SwitchButton = ({
   return (
     <SwitchButtonContext.Provider value={valueContext}>
       <Tooltip text={tooltip}>
-        <div
-          style={{ display: 'inline-flex' }}
-          className={className}
-          data-testid={dataTestId}
-        >
+        <Stack direction="row" className={className} data-testid={dataTestId}>
           <StyledBorderedBox
             onMouseDown={event => {
               const rect = event.currentTarget.getBoundingClientRect()
@@ -181,16 +171,17 @@ export const SwitchButton = ({
             data-size={size}
             ref={containerRef}
           >
-            <FocusOverlay
-              cardWidth={width}
-              position={position}
-              mouseDownSide={mouseDownSide}
-              sentiment={sentiment}
-            />
-
+            {width ? (
+              <FocusOverlay
+                cardWidth={width}
+                position={position}
+                mouseDownSide={mouseDownSide}
+                sentiment={sentiment}
+              />
+            ) : null}
             {children}
           </StyledBorderedBox>
-        </div>
+        </Stack>
       </Tooltip>
     </SwitchButtonContext.Provider>
   )

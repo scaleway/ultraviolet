@@ -1,9 +1,9 @@
 'use client'
 
 import styled from '@emotion/styled'
-import { ReactNode, RefObject, useEffect, useRef } from 'react'
+import { ReactNode, useEffect, useRef } from 'react'
 import { SelectableCard } from '../SelectableCard'
-import { useSwitchButtonContext } from './SwitchButtonContext'
+import { useSwitchButton } from './SwitchButtonContext'
 
 const StyledSelectableCard = styled(SelectableCard)`
   border: none;
@@ -58,12 +58,9 @@ export const Option = ({
   children,
   'data-testid': dataTestId,
 }: OptionProps) => {
-  const context = useSwitchButtonContext()
+  const context = useSwitchButton()
   const ref = useRef<HTMLInputElement>(null)
 
-  if (!context || Object.keys(context).length === 0) {
-    throw new Error('SwitchButton.Option should be use inside a SwitchButton')
-  }
   const {
     localValue,
     name,
@@ -76,27 +73,29 @@ export const Option = ({
   } = context
   useEffect(() => {
     if (
-      ref.current &&
-      !refOptions.includes(ref as RefObject<HTMLInputElement>)
+      ref?.current &&
+      refOptions.filter(option => option.value === value).length === 0
     ) {
-      setRefOptions([...refOptions, ref as RefObject<HTMLInputElement>])
+      const option = {
+        value,
+        current: ref.current,
+      }
+      setRefOptions([...refOptions, option])
     }
-  }, [refOptions, setRefOptions])
+  }, [refOptions, setRefOptions, value])
 
   return (
-    <div id={value} ref={ref} onChange={handleOnChange}>
-      <StyledSelectableCard
-        name={name}
-        value={value}
-        checked={localValue === value && sentiment === 'primary'}
-        onChange={handleOnChange}
-        onBlur={onBlur}
-        onFocus={onFocus}
-        data-checked={localValue === value}
-        label={children}
-        data-testid={dataTestId ?? `switch-button-${value}`}
-        id={value}
-      />
-    </div>
+    <StyledSelectableCard
+      name={name}
+      value={value}
+      checked={localValue === value && sentiment === 'primary'}
+      onChange={handleOnChange}
+      onBlur={onBlur}
+      onFocus={onFocus}
+      data-checked={localValue === value}
+      label={children}
+      data-testid={dataTestId ?? `switch-button-${value}`}
+      ref={ref}
+    />
   )
 }
