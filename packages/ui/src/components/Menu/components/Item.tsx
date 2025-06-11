@@ -58,7 +58,7 @@ const itemCoreStyle = ({
             }
           }`
   }
-  `
+`
 
 const Container = styled('div', {
   shouldForwardProp: prop => !['borderless'].includes(prop),
@@ -74,6 +74,7 @@ const Container = styled('div', {
   &:last-child {
     border: none;
   }
+  width: 100%;
 `
 
 const StyledItem = styled('button', {

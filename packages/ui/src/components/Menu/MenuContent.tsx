@@ -25,13 +25,16 @@ import type { MenuProps } from './types'
 const StyledPopup = styled(Popup, {
   shouldForwardProp: prop => !['size', 'searchable'].includes(prop),
 })<{ size?: keyof typeof SIZES; searchable: boolean }>`
-  background-color: ${({ theme }) => theme.colors.other.elevation.background.raised};
-  box-shadow: ${({ theme }) => `${theme.shadows.raised[0]}, ${theme.shadows.raised[1]}`};
+  background-color: ${({ theme }) =>
+    theme.colors.other.elevation.background.raised};
+  box-shadow: ${({ theme }) =>
+    `${theme.shadows.raised[0]}, ${theme.shadows.raised[1]}`};
   padding: 0;
 
   &[data-has-arrow='true'] {
     &::after {
-      border-color: ${({ theme }) => theme.colors.other.elevation.background.raised}
+      border-color: ${({ theme }) =>
+        theme.colors.other.elevation.background.raised}
         transparent transparent transparent;
     }
   }
@@ -56,7 +59,8 @@ const MenuList = styled(Stack, {
 })<{ height: string }>`
   overflow-y: auto;
   overflow-x: hidden;
-  max-height: calc(${({ height }) => height} - ${({ theme }) => theme.space['0.5']});
+  max-height: calc(${({ height }) => height} - ${({ theme }) =>
+    theme.space['0.5']});
   &:after,
   &:before {
     border: solid transparent;
