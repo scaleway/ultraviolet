@@ -4,6 +4,7 @@ import styled from '@emotion/styled'
 import { SearchIcon } from '@ultraviolet/icons'
 import type { Dispatch, SetStateAction } from 'react'
 import { useEffect, useRef } from 'react'
+import { isFuzzyMatch, normalizeString } from '../../utils/searchAlgorithm'
 import { TextInputV2 } from '../TextInputV2'
 import { useSelectInput } from './SelectInputProvider'
 import type { DataType, OptionType } from './types'
@@ -20,16 +21,29 @@ const StyledInput = styled(TextInputV2)`
   padding-left: ${({ theme }) => theme.space[2]};
   padding-right: ${({ theme }) => theme.space[2]};
 `
-const matchRegex = (data: OptionType[], regex: RegExp) =>
-  data.filter(
-    option =>
-      // oxlint-disable-next-line eslint-plugin-unicorn(prefer-regexp-test)
-      (option.searchText && !!option.searchText.match(regex)) ||
-      (typeof option.label === 'string' && option.label.match(regex)) ||
+export const getReferenceText = (option: OptionType) => {
+  if (option.searchText) return normalizeString(option.searchText)
+  if (typeof option.label === 'string') return normalizeString(option.label)
+
+  return ''
+}
+
+// It uses Levenshtein distance so that the search is typo-tolerant for a simple fuzzy-search
+export const searchRegex = (data: OptionType[], query: string) =>
+  data.filter(option => {
+    const referenceText = getReferenceText(option)
+    const regex = new RegExp(query, 'i')
+
+    return (
+      (query.length > 2
+        ? isFuzzyMatch(query, referenceText)
+        : referenceText.match(regex)) ||
       (typeof option.description === 'string' &&
         option.description.match(regex)) ||
-      option.value.match(regex),
-  )
+      option.value.match(regex)
+    )
+  })
+
 const findClosestOption = (
   options: DataType,
   searchInput: string | undefined,
@@ -87,18 +101,22 @@ export const SearchBarDropdown = ({
 
   const handleChange = (search: string) => {
     if (search.length > 0) {
-      // case insensitive search
-      const regex = new RegExp(escapeRegExp(search.toString()), 'i')
       if (!Array.isArray(options)) {
         const filteredOptions = { ...options }
         Object.keys(filteredOptions).map((group: string) => {
-          filteredOptions[group] = matchRegex(filteredOptions[group], regex)
+          filteredOptions[group] = searchRegex(
+            filteredOptions[group],
+            escapeRegExp(search.toString()),
+          )
 
           return null
         })
         onSearch(filteredOptions)
       } else {
-        const filteredOptions = matchRegex([...options], regex)
+        const filteredOptions = searchRegex(
+          [...options],
+          escapeRegExp(search.toString()),
+        )
         onSearch(filteredOptions)
       }
     } else {
