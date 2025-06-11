@@ -1,13 +1,13 @@
 'use client'
 
 import styled from '@emotion/styled'
-import { TextInput } from '@ultraviolet/ui'
+import { NumberInput } from '@ultraviolet/ui'
 import { useEffect, useState } from 'react'
 import { useOverlay } from '../OverlayContext'
 import { ItemResourceName } from '../componentStyle'
 import { Regular } from './Regular'
 
-const StyledTextInput = styled(TextInput)`
+const StyledNumberInput = styled(NumberInput)`
   /* Removes arrows for an input type number */
   /* Chrome, Safari, Edge, Opera */
 
@@ -52,13 +52,13 @@ export const Unit = ({
     </ItemResourceName>
   ) : (
     <div style={{ width: '150px' }}>
-      <StyledTextInput
-        type="number"
+      <StyledNumberInput
         size="small"
         unit={unit}
         placeholder="00"
         name="capacity"
-        value={capacity?.toString()}
+        value={capacity}
+        controls={false}
         onChange={capacityText => {
           const newCapacity =
             Number(capacityText) < 0 ? 0 : Number(capacityText)
