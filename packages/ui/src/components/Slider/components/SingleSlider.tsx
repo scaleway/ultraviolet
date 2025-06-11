@@ -4,7 +4,7 @@ import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import { useCallback, useEffect, useId, useMemo, useRef, useState } from 'react'
 import { Label } from '../../Label'
-import { NumberInputV2 } from '../../NumberInputV2'
+import { NumberInput } from '../../NumberInput'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
 import { THUMB_SIZE } from '../constant'
@@ -74,7 +74,7 @@ const SliderElement = styled('input', {
     }
 `
 
-const StyledNumberInputV2 = styled(NumberInputV2)`
+const StyledNumberInput = styled(NumberInput)`
   min-width: ${({ theme }) => theme.space['5']};
 `
 
@@ -188,7 +188,7 @@ export const SingleSlider = ({
 
   const styledValue = (valueNumber: string | number | null) =>
     input && !options ? (
-      <StyledNumberInputV2
+      <StyledNumberInput
         value={inputValue}
         size="small"
         min={min}

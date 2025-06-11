@@ -1,225 +1,54 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`TimeInput > renders correctly with base props 1`] = `
+exports[`TimeInput > renders can move with arrow keys - 12-hour format 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  width: 100%;
-  position: relative;
-  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.25rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.25rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
 .emotion-2 {
-  z-index: 9999;
-  border: 0;
-  clip: rect(1px, 1px, 1px, 1px);
-  height: 1px;
-  width: 1px;
-  position: absolute;
-  overflow: hidden;
-  padding: 0;
-  white-space: nowrap;
-}
-
-.emotion-4 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  min-height: 48px;
-  outline: 0!important;
-  position: relative;
-  -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
-  transition: border-color 200ms ease,box-shadow 200ms ease;
-  background-color: #ffffff;
-  border-color: #d9dadd;
-  border-radius: 4px;
-  border-style: solid;
-  border-width: 1px;
-  box-shadow: none;
-  box-sizing: border-box;
-  color: #3f4250;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 24px;
-  -webkit-animation: none;
-  animation: none;
-}
-
-.emotion-4:hover {
-  border-color: hsl(0, 0%, 70%);
-}
-
-.emotion-4:focus-within {
-  border-color: #8c40ef;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-4:hover {
-  border-color: #792dd4;
-}
-
-.emotion-5 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: grid;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-overflow-scrolling: touch;
-  position: relative;
-  overflow: hidden;
-  padding: 2px 8px;
-  box-sizing: border-box;
-  height: 100%;
-  padding-top: 0;
-}
-
-.emotion-5 label {
-  display: initial;
-}
-
-.emotion-6 {
-  position: absolute;
-  left: 0;
-  font-weight: 400;
-  pointer-events: none;
-  color: #3f4250;
-  white-space: nowrap;
-  width: 100%;
-  height: 100%;
-  font-size: 16px;
-  -webkit-transition: -webkit-transform 250ms ease;
-  transition: transform 250ms ease;
-  opacity: 0;
-  -webkit-transform: translate(0, -8px) scale(0.8);
-  -moz-transform: translate(0, -8px) scale(0.8);
-  -ms-transform: translate(0, -8px) scale(0.8);
-  transform: translate(0, -8px) scale(0.8);
-  transform-origin: left;
-  padding-left: 8px;
-  left: 0;
-  top: 2px;
-  opacity: 1;
-}
-
-.emotion-8 {
-  grid-area: 1/1/2/3;
-  max-width: 100%;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  color: #3f4250;
-  margin-left: 0;
-  margin-right: 0;
-  box-sizing: border-box;
-  margin-top: 5px;
-  padding-left: 0;
-}
-
-.emotion-9 {
-  margin-left: 0px;
-  caret-color: transparent;
-}
-
-.emotion-10 {
-  visibility: visible;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  display: inline-grid;
-  grid-area: 1/1/2/3;
-  grid-template-columns: 0 min-content;
-  margin: 2px;
-  padding-bottom: 2px;
-  padding-top: 11px;
-  color: hsl(0, 0%, 20%);
-  box-sizing: border-box;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  margin-left: 0;
-}
-
-.emotion-10:after {
-  content: attr(data-value) " ";
-  visibility: hidden;
-  white-space: pre;
-  grid-area: 1/2;
-  font: inherit;
-  min-width: 2px;
-  border: 0;
-  margin: 0;
-  outline: 0;
-  padding: 0;
-}
-
-.emotion-11 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-align-self: stretch;
-  -ms-flex-item-align: stretch;
-  align-self: stretch;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  box-sizing: border-box;
-  max-height: 48px;
-}
-
-.emotion-12 {
-  -webkit-align-self: stretch;
-  -ms-flex-item-align: stretch;
-  align-self: stretch;
-  width: 1px;
-  background-color: #d9dadd;
-  margin-bottom: 8px;
-  margin-top: 8px;
-  box-sizing: border-box;
-  display: none;
-}
-
-.emotion-13 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-transition: color 150ms;
-  transition: color 150ms;
-  color: hsl(0, 0%, 80%);
-  padding: 8px;
-  box-sizing: border-box;
-}
-
-.emotion-13:hover {
-  color: hsl(0, 0%, 60%);
-}
-
-.emotion-14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -242,46 +71,469 @@ exports[`TimeInput > renders correctly with base props 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-17 {
-  margin: 0;
-  border: 0;
-  width: 1px;
-  height: auto;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  background-color: #e9eaeb;
-  background-color: #d9dadd;
-  height: 100%;
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
-.emotion-19 {
-  vertical-align: middle;
-  fill: currentColor;
+.emotion-5 {
+  color: #3f4250;
+  font-size: 1rem;
+  font-family: Inter,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.emotion-5 {
+  color: #3f4250;
+  font-size: 1rem;
+  font-family: Inter,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.emotion-7 {
+  font-size: 0.875rem;
+  font-family: Inter,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-7 {
+  font-size: 0.875rem;
+  font-family: Inter,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: text;
+  padding: 0.5rem;
+  box-shadow: none;
+  background: #ffffff;
+  border-radius: 0.25rem;
+  border: 1px solid #d9dadd;
+}
+
+.emotion-9:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #792dd4;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-9[data-disabled="false"]:hover,
+.emotion-9 [data-disabled="false"]:focus {
+  border-color: #792dd4;
+  outline: none;
+}
+
+.emotion-9:focus-within {
+  border-color: #792dd4;
+}
+
+.emotion-9[data-size='small'] {
+  height: 2rem;
+  padding-left: 0.5rem;
+}
+
+.emotion-9[data-size='medium'] {
+  height: 2.5rem;
+}
+
+.emotion-9[data-size='large'] {
+  height: 3rem;
+}
+
+.emotion-9[data-readonly='true'] {
+  background: #f9f9fa;
+  border-color: #d9dadd;
+  cursor: default;
+}
+
+.emotion-9[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
+  cursor: not-allowed;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-9[data-error='true'] {
+  border: 1px solid #b3144d;
+}
+
+.emotion-9[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #92103f;
+  box-shadow: 0px 0px 0px 3px #f91b6c40;
+}
+
+.emotion-9[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
+  border-color: #92103f;
+}
+
+.emotion-9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: text;
+  padding: 0.5rem;
+  box-shadow: none;
+  background: #ffffff;
+  border-radius: 0.25rem;
+  border: 1px solid #d9dadd;
+}
+
+.emotion-9:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #792dd4;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-9[data-disabled="false"]:hover,
+.emotion-9 [data-disabled="false"]:focus {
+  border-color: #792dd4;
+  outline: none;
+}
+
+.emotion-9:focus-within {
+  border-color: #792dd4;
+}
+
+.emotion-9[data-size='small'] {
+  height: 2rem;
+  padding-left: 0.5rem;
+}
+
+.emotion-9[data-size='medium'] {
+  height: 2.5rem;
+}
+
+.emotion-9[data-size='large'] {
+  height: 3rem;
+}
+
+.emotion-9[data-readonly='true'] {
+  background: #f9f9fa;
+  border-color: #d9dadd;
+  cursor: default;
+}
+
+.emotion-9[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
+  cursor: not-allowed;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-9[data-error='true'] {
+  border: 1px solid #b3144d;
+}
+
+.emotion-9[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #92103f;
+  box-shadow: 0px 0px 0px 3px #f91b6c40;
+}
+
+.emotion-9[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
+  border-color: #92103f;
+}
+
+.emotion-11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-15 {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 0.875rem;
+  width: 1.5625rem;
   height: 1.5rem;
-  width: 1.5rem;
-  min-width: 1.5rem;
-  min-height: 1.5rem;
+  text-align: center;
+  border-radius: 0.25rem;
+  color: #3f4250;
+  caret-color: transparent;
 }
 
-.emotion-19 .fillStroke {
-  stroke: currentColor;
-  fill: none;
+.emotion-15[data-size='large'] {
+  font-size: 1rem;
 }
 
-.emotion-21 {
-  height: auto;
+.emotion-15:not(:disabled):hover {
+  background-color: #e9eaeb;
+  color: #727683;
 }
 
-.emotion-21[data-is-animated="true"] {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
+.emotion-15:not(:disabled):active,
+.emotion-15:not(:disabled):focus {
+  background-color: #e9eaeb;
+  color: #3f4250;
 }
 
-.emotion-23 {
-  font-size: 12px;
-  color: #b3144d;
-  padding-top: 0.125rem;
+.emotion-15:-moz-read-only {
+  cursor: default;
+}
+
+.emotion-15:read-only {
+  cursor: default;
+}
+
+.emotion-15:disabled {
+  cursor: not-allowed;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-15[data-period="true"] {
+  color: #727683;
+}
+
+.emotion-15[data-period="true"][data-size="large"] {
+  width: calc(1.5625rem + 0.125rem);
+}
+
+.emotion-15::-moz-selection {
+  background: none;
+}
+
+.emotion-15::selection {
+  background: none;
+}
+
+.emotion-15 {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 0.875rem;
+  width: 1.5625rem;
+  height: 1.5rem;
+  text-align: center;
+  border-radius: 0.25rem;
+  color: #3f4250;
+  caret-color: transparent;
+}
+
+.emotion-15[data-size='large'] {
+  font-size: 1rem;
+}
+
+.emotion-15:not(:disabled):hover {
+  background-color: #e9eaeb;
+  color: #727683;
+}
+
+.emotion-15:not(:disabled):active,
+.emotion-15:not(:disabled):focus {
+  background-color: #e9eaeb;
+  color: #3f4250;
+}
+
+.emotion-15:-moz-read-only {
+  cursor: default;
+}
+
+.emotion-15:read-only {
+  cursor: default;
+}
+
+.emotion-15:disabled {
+  cursor: not-allowed;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-15[data-period="true"] {
+  color: #727683;
+}
+
+.emotion-15[data-period="true"][data-size="large"] {
+  width: calc(1.5625rem + 0.125rem);
+}
+
+.emotion-15::-moz-selection {
+  background: none;
+}
+
+.emotion-15::selection {
+  background: none;
+}
+
+.emotion-18 {
+  color: #3f4250;
+  font-size: 1rem;
+  font-family: Inter,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding-inline: 0.125rem;
+}
+
+.emotion-18 {
+  color: #3f4250;
+  font-size: 1rem;
+  font-family: Inter,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding-inline: 0.125rem;
+}
+
+.emotion-33 {
+  color: #727683;
+  font-size: 0.75rem;
+  font-family: Inter,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-33 {
+  color: #727683;
+  font-size: 0.75rem;
+  font-family: Inter,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 <div
@@ -289,107 +541,6754 @@ exports[`TimeInput > renders correctly with base props 1`] = `
   >
     <div
       class="emotion-0 emotion-1"
-      data-testid="select-input-timeinput-test-0"
     >
-      <span
-        class="emotion-2"
-        id="react-select-2-live-region"
-      />
-      <span
-        aria-atomic="false"
-        aria-live="polite"
-        aria-relevant="additions text"
-        class="emotion-2"
-        role="log"
-      />
       <div
-        class="emotion-4"
+        class="emotion-2 emotion-1"
+      >
+        <label
+          class="emotion-4 emotion-5 emotion-6"
+          for="«r24»"
+        >
+          label
+        </label>
+        <span
+          class="emotion-7 emotion-6"
+        >
+          labeldescription
+        </span>
+      </div>
+      <div
+        class="emotion-9 emotion-10"
+        data-disabled="false"
+        data-error="false"
+        data-readonly="false"
+        data-size="large"
       >
         <div
-          class="emotion-5"
+          class="emotion-11 emotion-1"
         >
-          <label
-            aria-live="assertive"
-            as="label"
-            class="emotion-6 emotion-7"
-            for="test"
-          >
-            Select...
-          </label>
           <div
-            class="emotion-8"
-          >
-            00:00
-          </div>
-          <div
-            class="emotion-9 emotion-10"
-            data-value=""
+            class="emotion-11 emotion-1"
           >
             <input
-              aria-activedescendant=""
-              aria-autocomplete="list"
-              aria-expanded="false"
-              aria-haspopup="true"
-              autocapitalize="none"
-              autocomplete="off"
-              autocorrect="off"
-              class=""
-              id="test"
-              role="combobox"
-              spellcheck="false"
-              style="opacity: 1; width: 100%; grid-area: 1 / 2; min-width: 2px; border: 0px; margin: 0px; outline: 0; padding: 0px;"
-              tabindex="0"
-              type="text"
+              aria-valuemax="12"
+              aria-valuemin="1"
+              aria-valuenow="12"
+              autocomplete="false"
+              class="emotion-15 emotion-16"
+              data-size="large"
+              data-testid="hours-input"
+              placeholder="00"
+              role="spinbutton"
+              value="12"
+            />
+            <span
+              class="emotion-17 emotion-18 emotion-6"
+            >
+              :
+            </span>
+          </div>
+          <div
+            class="emotion-11 emotion-1"
+          >
+            <input
+              aria-valuemax="59"
+              aria-valuemin="0"
+              aria-valuenow="23"
+              autocomplete="false"
+              class="emotion-15 emotion-16"
+              data-size="large"
+              data-testid="minutes-input"
+              placeholder="00"
+              role="spinbutton"
+              value="23"
+            />
+            <span
+              class="emotion-17 emotion-18 emotion-6"
+            >
+              :
+            </span>
+          </div>
+          <div
+            class="emotion-11 emotion-1"
+          >
+            <input
+              aria-valuemax="59"
+              aria-valuemin="0"
+              aria-valuenow="14"
+              autocomplete="false"
+              class="emotion-15 emotion-16"
+              data-size="large"
+              data-testid="seconds-input"
+              placeholder="00"
+              role="spinbutton"
+              value="14"
+            />
+          </div>
+          <input
+            aria-valuemax="12"
+            aria-valuemin="0"
+            aria-valuenow="12"
+            aria-valuetext="pm"
+            autocomplete="false"
+            class="emotion-15 emotion-16"
+            data-period="true"
+            data-size="large"
+            data-testid="am-pm-input"
+            placeholder="AM"
+            role="spinbutton"
+            value="PM"
+          />
+        </div>
+      </div>
+      <p
+        class="emotion-33 emotion-6"
+      >
+        helper
+      </p>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`TimeInput > renders can move with arrow keys - 24-hour format 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.25rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.25rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-5 {
+  color: #3f4250;
+  font-size: 1rem;
+  font-family: Inter,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.emotion-5 {
+  color: #3f4250;
+  font-size: 1rem;
+  font-family: Inter,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.emotion-7 {
+  font-size: 0.875rem;
+  font-family: Inter,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-7 {
+  font-size: 0.875rem;
+  font-family: Inter,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: text;
+  padding: 0.5rem;
+  box-shadow: none;
+  background: #ffffff;
+  border-radius: 0.25rem;
+  border: 1px solid #d9dadd;
+}
+
+.emotion-9:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #792dd4;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-9[data-disabled="false"]:hover,
+.emotion-9 [data-disabled="false"]:focus {
+  border-color: #792dd4;
+  outline: none;
+}
+
+.emotion-9:focus-within {
+  border-color: #792dd4;
+}
+
+.emotion-9[data-size='small'] {
+  height: 2rem;
+  padding-left: 0.5rem;
+}
+
+.emotion-9[data-size='medium'] {
+  height: 2.5rem;
+}
+
+.emotion-9[data-size='large'] {
+  height: 3rem;
+}
+
+.emotion-9[data-readonly='true'] {
+  background: #f9f9fa;
+  border-color: #d9dadd;
+  cursor: default;
+}
+
+.emotion-9[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
+  cursor: not-allowed;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-9[data-error='true'] {
+  border: 1px solid #b3144d;
+}
+
+.emotion-9[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #92103f;
+  box-shadow: 0px 0px 0px 3px #f91b6c40;
+}
+
+.emotion-9[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
+  border-color: #92103f;
+}
+
+.emotion-9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: text;
+  padding: 0.5rem;
+  box-shadow: none;
+  background: #ffffff;
+  border-radius: 0.25rem;
+  border: 1px solid #d9dadd;
+}
+
+.emotion-9:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #792dd4;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-9[data-disabled="false"]:hover,
+.emotion-9 [data-disabled="false"]:focus {
+  border-color: #792dd4;
+  outline: none;
+}
+
+.emotion-9:focus-within {
+  border-color: #792dd4;
+}
+
+.emotion-9[data-size='small'] {
+  height: 2rem;
+  padding-left: 0.5rem;
+}
+
+.emotion-9[data-size='medium'] {
+  height: 2.5rem;
+}
+
+.emotion-9[data-size='large'] {
+  height: 3rem;
+}
+
+.emotion-9[data-readonly='true'] {
+  background: #f9f9fa;
+  border-color: #d9dadd;
+  cursor: default;
+}
+
+.emotion-9[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
+  cursor: not-allowed;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-9[data-error='true'] {
+  border: 1px solid #b3144d;
+}
+
+.emotion-9[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #92103f;
+  box-shadow: 0px 0px 0px 3px #f91b6c40;
+}
+
+.emotion-9[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
+  border-color: #92103f;
+}
+
+.emotion-11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-15 {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 0.875rem;
+  width: 1.5625rem;
+  height: 1.5rem;
+  text-align: center;
+  border-radius: 0.25rem;
+  color: #3f4250;
+  caret-color: transparent;
+}
+
+.emotion-15[data-size='large'] {
+  font-size: 1rem;
+}
+
+.emotion-15:not(:disabled):hover {
+  background-color: #e9eaeb;
+  color: #727683;
+}
+
+.emotion-15:not(:disabled):active,
+.emotion-15:not(:disabled):focus {
+  background-color: #e9eaeb;
+  color: #3f4250;
+}
+
+.emotion-15:-moz-read-only {
+  cursor: default;
+}
+
+.emotion-15:read-only {
+  cursor: default;
+}
+
+.emotion-15:disabled {
+  cursor: not-allowed;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-15[data-period="true"] {
+  color: #727683;
+}
+
+.emotion-15[data-period="true"][data-size="large"] {
+  width: calc(1.5625rem + 0.125rem);
+}
+
+.emotion-15::-moz-selection {
+  background: none;
+}
+
+.emotion-15::selection {
+  background: none;
+}
+
+.emotion-15 {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 0.875rem;
+  width: 1.5625rem;
+  height: 1.5rem;
+  text-align: center;
+  border-radius: 0.25rem;
+  color: #3f4250;
+  caret-color: transparent;
+}
+
+.emotion-15[data-size='large'] {
+  font-size: 1rem;
+}
+
+.emotion-15:not(:disabled):hover {
+  background-color: #e9eaeb;
+  color: #727683;
+}
+
+.emotion-15:not(:disabled):active,
+.emotion-15:not(:disabled):focus {
+  background-color: #e9eaeb;
+  color: #3f4250;
+}
+
+.emotion-15:-moz-read-only {
+  cursor: default;
+}
+
+.emotion-15:read-only {
+  cursor: default;
+}
+
+.emotion-15:disabled {
+  cursor: not-allowed;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-15[data-period="true"] {
+  color: #727683;
+}
+
+.emotion-15[data-period="true"][data-size="large"] {
+  width: calc(1.5625rem + 0.125rem);
+}
+
+.emotion-15::-moz-selection {
+  background: none;
+}
+
+.emotion-15::selection {
+  background: none;
+}
+
+.emotion-18 {
+  color: #3f4250;
+  font-size: 1rem;
+  font-family: Inter,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding-inline: 0.125rem;
+}
+
+.emotion-18 {
+  color: #3f4250;
+  font-size: 1rem;
+  font-family: Inter,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding-inline: 0.125rem;
+}
+
+.emotion-33 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+  height: 2rem;
+  padding: 0 0.5rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.5rem;
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-family: Inter,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: none;
+  color: #3f4250;
+}
+
+.emotion-33:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-33:active {
+  box-shadow: 0px 0px 0px 3px #151a2d5c;
+}
+
+.emotion-33 .e1y1n78x0 {
+  stroke: transparent;
+}
+
+.emotion-33:hover,
+.emotion-33:active {
+  background: #e9eaeb;
+  color: #222638;
+}
+
+.emotion-33 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+  height: 2rem;
+  padding: 0 0.5rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.5rem;
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-family: Inter,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: none;
+  color: #3f4250;
+}
+
+.emotion-33:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-33:active {
+  box-shadow: 0px 0px 0px 3px #151a2d5c;
+}
+
+.emotion-33 .e1y1n78x0 {
+  stroke: transparent;
+}
+
+.emotion-33:hover,
+.emotion-33:active {
+  background: #e9eaeb;
+  color: #222638;
+}
+
+.emotion-35 {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
+}
+
+.emotion-35 .fillStroke {
+  stroke: currentColor;
+  fill: none;
+}
+
+.emotion-35 {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
+}
+
+.emotion-35 .fillStroke {
+  stroke: currentColor;
+  fill: none;
+}
+
+.emotion-37 {
+  color: #727683;
+  font-size: 0.75rem;
+  font-family: Inter,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-37 {
+  color: #727683;
+  font-size: 0.75rem;
+  font-family: Inter,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+    >
+      <div
+        class="emotion-2 emotion-1"
+      >
+        <label
+          class="emotion-4 emotion-5 emotion-6"
+          for="«r2a»"
+        >
+          label
+        </label>
+        <span
+          class="emotion-7 emotion-6"
+        >
+          labeldescription
+        </span>
+      </div>
+      <div
+        class="emotion-9 emotion-10"
+        data-disabled="false"
+        data-error="false"
+        data-readonly="false"
+        data-size="large"
+      >
+        <div
+          class="emotion-11 emotion-1"
+        >
+          <div
+            class="emotion-11 emotion-1"
+          >
+            <input
+              aria-valuemax="23"
+              aria-valuemin="0"
+              aria-valuenow="23"
+              autocomplete="false"
+              class="emotion-15 emotion-16"
+              data-size="large"
+              data-testid="hours-input"
+              placeholder="00"
+              role="spinbutton"
+              value="23"
+            />
+            <span
+              class="emotion-17 emotion-18 emotion-6"
+            >
+              :
+            </span>
+          </div>
+          <div
+            class="emotion-11 emotion-1"
+          >
+            <input
+              aria-valuemax="59"
+              aria-valuemin="0"
+              aria-valuenow="23"
+              autocomplete="false"
+              class="emotion-15 emotion-16"
+              data-size="large"
+              data-testid="minutes-input"
+              placeholder="00"
+              role="spinbutton"
+              value="23"
+            />
+            <span
+              class="emotion-17 emotion-18 emotion-6"
+            >
+              :
+            </span>
+          </div>
+          <div
+            class="emotion-11 emotion-1"
+          >
+            <input
+              aria-valuemax="59"
+              aria-valuemin="0"
+              aria-valuenow="14"
+              autocomplete="false"
+              class="emotion-15 emotion-16"
+              data-size="large"
+              data-testid="seconds-input"
+              placeholder="00"
+              role="spinbutton"
+              value="14"
+            />
+          </div>
+        </div>
+        <div
+          class="emotion-2 emotion-1"
+        >
+          <button
+            aria-label="clear value"
+            class="emotion-33 emotion-34"
+            data-testid="clear"
+            type="button"
+          >
+            <svg
+              class="emotion-35 emotion-36"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <p
+        class="emotion-37 emotion-6"
+      >
+        helper
+      </p>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`TimeInput > renders correctly clearable 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.25rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-3 {
+  color: #3f4250;
+  font-size: 1rem;
+  font-family: Inter,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: text;
+  padding: 0.5rem;
+  box-shadow: none;
+  background: #ffffff;
+  border-radius: 0.25rem;
+  border: 1px solid #d9dadd;
+}
+
+.emotion-5:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #792dd4;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-5[data-disabled="false"]:hover,
+.emotion-5 [data-disabled="false"]:focus {
+  border-color: #792dd4;
+  outline: none;
+}
+
+.emotion-5:focus-within {
+  border-color: #792dd4;
+}
+
+.emotion-5[data-size='small'] {
+  height: 2rem;
+  padding-left: 0.5rem;
+}
+
+.emotion-5[data-size='medium'] {
+  height: 2.5rem;
+}
+
+.emotion-5[data-size='large'] {
+  height: 3rem;
+}
+
+.emotion-5[data-readonly='true'] {
+  background: #f9f9fa;
+  border-color: #d9dadd;
+  cursor: default;
+}
+
+.emotion-5[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
+  cursor: not-allowed;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-5[data-error='true'] {
+  border: 1px solid #b3144d;
+}
+
+.emotion-5[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #92103f;
+  box-shadow: 0px 0px 0px 3px #f91b6c40;
+}
+
+.emotion-5[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
+  border-color: #92103f;
+}
+
+.emotion-7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-11 {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 0.875rem;
+  width: 1.5625rem;
+  height: 1.5rem;
+  text-align: center;
+  border-radius: 0.25rem;
+  color: #3f4250;
+  caret-color: transparent;
+}
+
+.emotion-11[data-size='large'] {
+  font-size: 1rem;
+}
+
+.emotion-11:not(:disabled):hover {
+  background-color: #e9eaeb;
+  color: #727683;
+}
+
+.emotion-11:not(:disabled):active,
+.emotion-11:not(:disabled):focus {
+  background-color: #e9eaeb;
+  color: #3f4250;
+}
+
+.emotion-11:-moz-read-only {
+  cursor: default;
+}
+
+.emotion-11:read-only {
+  cursor: default;
+}
+
+.emotion-11:disabled {
+  cursor: not-allowed;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-11[data-period="true"] {
+  color: #727683;
+}
+
+.emotion-11[data-period="true"][data-size="large"] {
+  width: calc(1.5625rem + 0.125rem);
+}
+
+.emotion-11::-moz-selection {
+  background: none;
+}
+
+.emotion-11::selection {
+  background: none;
+}
+
+.emotion-14 {
+  color: #3f4250;
+  font-size: 1rem;
+  font-family: Inter,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding-inline: 0.125rem;
+}
+
+.emotion-27 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-29 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+  height: 2rem;
+  padding: 0 0.5rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.5rem;
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-family: Inter,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: none;
+  color: #3f4250;
+}
+
+.emotion-29:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-29:active {
+  box-shadow: 0px 0px 0px 3px #151a2d5c;
+}
+
+.emotion-29 .e1y1n78x0 {
+  stroke: transparent;
+}
+
+.emotion-29:hover,
+.emotion-29:active {
+  background: #e9eaeb;
+  color: #222638;
+}
+
+.emotion-31 {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
+}
+
+.emotion-31 .fillStroke {
+  stroke: currentColor;
+  fill: none;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+    >
+      <label
+        class="emotion-2 emotion-3 emotion-4"
+        for="«rg»"
+      >
+        test
+      </label>
+      <div
+        class="emotion-5 emotion-6"
+        data-disabled="false"
+        data-error="false"
+        data-readonly="false"
+        data-size="large"
+      >
+        <div
+          class="emotion-7 emotion-1"
+        >
+          <div
+            class="emotion-7 emotion-1"
+          >
+            <input
+              aria-valuemax="23"
+              aria-valuemin="0"
+              autocomplete="false"
+              class="emotion-11 emotion-12"
+              data-size="large"
+              data-testid="hours-input"
+              placeholder="00"
+              role="spinbutton"
+              value=""
+            />
+            <span
+              class="emotion-13 emotion-14 emotion-4"
+            >
+              :
+            </span>
+          </div>
+          <div
+            class="emotion-7 emotion-1"
+          >
+            <input
+              aria-valuemax="59"
+              aria-valuemin="0"
+              autocomplete="false"
+              class="emotion-11 emotion-12"
+              data-size="large"
+              data-testid="minutes-input"
+              placeholder="00"
+              role="spinbutton"
+              value=""
+            />
+            <span
+              class="emotion-13 emotion-14 emotion-4"
+            >
+              :
+            </span>
+          </div>
+          <div
+            class="emotion-7 emotion-1"
+          >
+            <input
+              aria-valuemax="59"
+              aria-valuemin="0"
+              autocomplete="false"
+              class="emotion-11 emotion-12"
+              data-size="large"
+              data-testid="seconds-input"
+              placeholder="00"
+              role="spinbutton"
               value=""
             />
           </div>
         </div>
         <div
-          class="emotion-11"
+          class="emotion-27 emotion-1"
         >
-          <span
-            class="emotion-12"
-          />
-          <div
-            aria-hidden="true"
-            class="emotion-13"
+          <button
+            aria-label="clear value"
+            class="emotion-29 emotion-30"
+            data-testid="clear"
+            type="button"
           >
-            <div
-              class="emotion-14 emotion-15"
+            <svg
+              class="emotion-31 emotion-32"
+              viewBox="0 0 16 16"
             >
-              <hr
-                aria-orientation="vertical"
-                class="emotion-16 emotion-17 emotion-18"
-                color="neutral"
-                role="separator"
+              <path
+                d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"
               />
-              <svg
-                class="emotion-19 emotion-20"
-                viewBox="0 0 20 20"
-              >
-                <path
-                  clip-rule="evenodd"
-                  d="M10 18C14.4183 18 18 14.4183 18 10C18 5.58172 14.4183 2 10 2C5.58172 2 2 5.58172 2 10C2 14.4183 5.58172 18 10 18ZM10.75 5C10.75 4.58579 10.4142 4.25 10 4.25C9.58579 4.25 9.25 4.58579 9.25 5V10C9.25 10.4142 9.58579 10.75 10 10.75H14C14.4142 10.75 14.75 10.4142 14.75 10C14.75 9.58579 14.4142 9.25 14 9.25H10.75V5Z"
-                  fill-rule="evenodd"
-                />
-              </svg>
-            </div>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`TimeInput > renders correctly clearable 2`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.25rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.25rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-5 {
+  color: #3f4250;
+  font-size: 1rem;
+  font-family: Inter,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.emotion-5 {
+  color: #3f4250;
+  font-size: 1rem;
+  font-family: Inter,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.emotion-7 {
+  font-size: 0.875rem;
+  font-family: Inter,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-7 {
+  font-size: 0.875rem;
+  font-family: Inter,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: text;
+  padding: 0.5rem;
+  box-shadow: none;
+  background: #ffffff;
+  border-radius: 0.25rem;
+  border: 1px solid #d9dadd;
+}
+
+.emotion-9:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #792dd4;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-9[data-disabled="false"]:hover,
+.emotion-9 [data-disabled="false"]:focus {
+  border-color: #792dd4;
+  outline: none;
+}
+
+.emotion-9:focus-within {
+  border-color: #792dd4;
+}
+
+.emotion-9[data-size='small'] {
+  height: 2rem;
+  padding-left: 0.5rem;
+}
+
+.emotion-9[data-size='medium'] {
+  height: 2.5rem;
+}
+
+.emotion-9[data-size='large'] {
+  height: 3rem;
+}
+
+.emotion-9[data-readonly='true'] {
+  background: #f9f9fa;
+  border-color: #d9dadd;
+  cursor: default;
+}
+
+.emotion-9[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
+  cursor: not-allowed;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-9[data-error='true'] {
+  border: 1px solid #b3144d;
+}
+
+.emotion-9[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #92103f;
+  box-shadow: 0px 0px 0px 3px #f91b6c40;
+}
+
+.emotion-9[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
+  border-color: #92103f;
+}
+
+.emotion-9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: text;
+  padding: 0.5rem;
+  box-shadow: none;
+  background: #ffffff;
+  border-radius: 0.25rem;
+  border: 1px solid #d9dadd;
+}
+
+.emotion-9:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #792dd4;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-9[data-disabled="false"]:hover,
+.emotion-9 [data-disabled="false"]:focus {
+  border-color: #792dd4;
+  outline: none;
+}
+
+.emotion-9:focus-within {
+  border-color: #792dd4;
+}
+
+.emotion-9[data-size='small'] {
+  height: 2rem;
+  padding-left: 0.5rem;
+}
+
+.emotion-9[data-size='medium'] {
+  height: 2.5rem;
+}
+
+.emotion-9[data-size='large'] {
+  height: 3rem;
+}
+
+.emotion-9[data-readonly='true'] {
+  background: #f9f9fa;
+  border-color: #d9dadd;
+  cursor: default;
+}
+
+.emotion-9[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
+  cursor: not-allowed;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-9[data-error='true'] {
+  border: 1px solid #b3144d;
+}
+
+.emotion-9[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #92103f;
+  box-shadow: 0px 0px 0px 3px #f91b6c40;
+}
+
+.emotion-9[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
+  border-color: #92103f;
+}
+
+.emotion-11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-15 {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 0.875rem;
+  width: 1.5625rem;
+  height: 1.5rem;
+  text-align: center;
+  border-radius: 0.25rem;
+  color: #3f4250;
+  caret-color: transparent;
+}
+
+.emotion-15[data-size='large'] {
+  font-size: 1rem;
+}
+
+.emotion-15:not(:disabled):hover {
+  background-color: #e9eaeb;
+  color: #727683;
+}
+
+.emotion-15:not(:disabled):active,
+.emotion-15:not(:disabled):focus {
+  background-color: #e9eaeb;
+  color: #3f4250;
+}
+
+.emotion-15:-moz-read-only {
+  cursor: default;
+}
+
+.emotion-15:read-only {
+  cursor: default;
+}
+
+.emotion-15:disabled {
+  cursor: not-allowed;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-15[data-period="true"] {
+  color: #727683;
+}
+
+.emotion-15[data-period="true"][data-size="large"] {
+  width: calc(1.5625rem + 0.125rem);
+}
+
+.emotion-15::-moz-selection {
+  background: none;
+}
+
+.emotion-15::selection {
+  background: none;
+}
+
+.emotion-15 {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 0.875rem;
+  width: 1.5625rem;
+  height: 1.5rem;
+  text-align: center;
+  border-radius: 0.25rem;
+  color: #3f4250;
+  caret-color: transparent;
+}
+
+.emotion-15[data-size='large'] {
+  font-size: 1rem;
+}
+
+.emotion-15:not(:disabled):hover {
+  background-color: #e9eaeb;
+  color: #727683;
+}
+
+.emotion-15:not(:disabled):active,
+.emotion-15:not(:disabled):focus {
+  background-color: #e9eaeb;
+  color: #3f4250;
+}
+
+.emotion-15:-moz-read-only {
+  cursor: default;
+}
+
+.emotion-15:read-only {
+  cursor: default;
+}
+
+.emotion-15:disabled {
+  cursor: not-allowed;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-15[data-period="true"] {
+  color: #727683;
+}
+
+.emotion-15[data-period="true"][data-size="large"] {
+  width: calc(1.5625rem + 0.125rem);
+}
+
+.emotion-15::-moz-selection {
+  background: none;
+}
+
+.emotion-15::selection {
+  background: none;
+}
+
+.emotion-18 {
+  color: #3f4250;
+  font-size: 1rem;
+  font-family: Inter,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding-inline: 0.125rem;
+}
+
+.emotion-18 {
+  color: #3f4250;
+  font-size: 1rem;
+  font-family: Inter,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding-inline: 0.125rem;
+}
+
+.emotion-35 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+  height: 2rem;
+  padding: 0 0.5rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.5rem;
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-family: Inter,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: none;
+  color: #3f4250;
+}
+
+.emotion-35:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-35:active {
+  box-shadow: 0px 0px 0px 3px #151a2d5c;
+}
+
+.emotion-35 .e1y1n78x0 {
+  stroke: transparent;
+}
+
+.emotion-35:hover,
+.emotion-35:active {
+  background: #e9eaeb;
+  color: #222638;
+}
+
+.emotion-35 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+  height: 2rem;
+  padding: 0 0.5rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.5rem;
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-family: Inter,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: none;
+  color: #3f4250;
+}
+
+.emotion-35:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-35:active {
+  box-shadow: 0px 0px 0px 3px #151a2d5c;
+}
+
+.emotion-35 .e1y1n78x0 {
+  stroke: transparent;
+}
+
+.emotion-35:hover,
+.emotion-35:active {
+  background: #e9eaeb;
+  color: #222638;
+}
+
+.emotion-37 {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
+}
+
+.emotion-37 .fillStroke {
+  stroke: currentColor;
+  fill: none;
+}
+
+.emotion-37 {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
+}
+
+.emotion-37 .fillStroke {
+  stroke: currentColor;
+  fill: none;
+}
+
+.emotion-39 {
+  color: #727683;
+  font-size: 0.75rem;
+  font-family: Inter,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-39 {
+  color: #727683;
+  font-size: 0.75rem;
+  font-family: Inter,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+    >
+      <div
+        class="emotion-2 emotion-1"
+      >
+        <label
+          class="emotion-4 emotion-5 emotion-6"
+          for="«r1t»"
+        >
+          label
+        </label>
+        <span
+          class="emotion-7 emotion-6"
+        >
+          labeldescription
+        </span>
+      </div>
+      <div
+        class="emotion-9 emotion-10"
+        data-disabled="false"
+        data-error="false"
+        data-readonly="false"
+        data-size="large"
+      >
+        <div
+          class="emotion-11 emotion-1"
+        >
+          <div
+            class="emotion-11 emotion-1"
+          >
+            <input
+              aria-valuemax="12"
+              aria-valuemin="1"
+              aria-valuenow="12"
+              autocomplete="false"
+              class="emotion-15 emotion-16"
+              data-size="large"
+              data-testid="hours-input"
+              placeholder="00"
+              role="spinbutton"
+              value="12"
+            />
+            <span
+              class="emotion-17 emotion-18 emotion-6"
+            >
+              :
+            </span>
+          </div>
+          <div
+            class="emotion-11 emotion-1"
+          >
+            <input
+              aria-valuemax="59"
+              aria-valuemin="0"
+              aria-valuenow="0"
+              autocomplete="false"
+              class="emotion-15 emotion-16"
+              data-size="large"
+              data-testid="minutes-input"
+              placeholder="00"
+              role="spinbutton"
+              value="00"
+            />
+            <span
+              class="emotion-17 emotion-18 emotion-6"
+            >
+              :
+            </span>
+          </div>
+          <div
+            class="emotion-11 emotion-1"
+          >
+            <input
+              aria-valuemax="59"
+              aria-valuemin="0"
+              aria-valuenow="0"
+              autocomplete="false"
+              class="emotion-15 emotion-16"
+              data-size="large"
+              data-testid="seconds-input"
+              placeholder="00"
+              role="spinbutton"
+              value="00"
+            />
+          </div>
+          <input
+            aria-valuemax="12"
+            aria-valuemin="0"
+            aria-valuenow="0"
+            aria-valuetext="am"
+            autocomplete="false"
+            class="emotion-15 emotion-16"
+            data-period="true"
+            data-size="large"
+            data-testid="am-pm-input"
+            placeholder="AM"
+            role="spinbutton"
+            value="AM"
+          />
+        </div>
+        <div
+          class="emotion-2 emotion-1"
+        >
+          <button
+            aria-label="clear value"
+            class="emotion-35 emotion-36"
+            data-testid="clear"
+            type="button"
+          >
+            <svg
+              class="emotion-37 emotion-38"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <p
+        class="emotion-39 emotion-6"
+      >
+        helper
+      </p>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`TimeInput > renders correctly controlled - 12-hour format 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.25rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.25rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-5 {
+  color: #3f4250;
+  font-size: 1rem;
+  font-family: Inter,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.emotion-5 {
+  color: #3f4250;
+  font-size: 1rem;
+  font-family: Inter,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.emotion-7 {
+  font-size: 0.875rem;
+  font-family: Inter,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-7 {
+  font-size: 0.875rem;
+  font-family: Inter,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: text;
+  padding: 0.5rem;
+  box-shadow: none;
+  background: #ffffff;
+  border-radius: 0.25rem;
+  border: 1px solid #d9dadd;
+}
+
+.emotion-9:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #792dd4;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-9[data-disabled="false"]:hover,
+.emotion-9 [data-disabled="false"]:focus {
+  border-color: #792dd4;
+  outline: none;
+}
+
+.emotion-9:focus-within {
+  border-color: #792dd4;
+}
+
+.emotion-9[data-size='small'] {
+  height: 2rem;
+  padding-left: 0.5rem;
+}
+
+.emotion-9[data-size='medium'] {
+  height: 2.5rem;
+}
+
+.emotion-9[data-size='large'] {
+  height: 3rem;
+}
+
+.emotion-9[data-readonly='true'] {
+  background: #f9f9fa;
+  border-color: #d9dadd;
+  cursor: default;
+}
+
+.emotion-9[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
+  cursor: not-allowed;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-9[data-error='true'] {
+  border: 1px solid #b3144d;
+}
+
+.emotion-9[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #92103f;
+  box-shadow: 0px 0px 0px 3px #f91b6c40;
+}
+
+.emotion-9[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
+  border-color: #92103f;
+}
+
+.emotion-9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: text;
+  padding: 0.5rem;
+  box-shadow: none;
+  background: #ffffff;
+  border-radius: 0.25rem;
+  border: 1px solid #d9dadd;
+}
+
+.emotion-9:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #792dd4;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-9[data-disabled="false"]:hover,
+.emotion-9 [data-disabled="false"]:focus {
+  border-color: #792dd4;
+  outline: none;
+}
+
+.emotion-9:focus-within {
+  border-color: #792dd4;
+}
+
+.emotion-9[data-size='small'] {
+  height: 2rem;
+  padding-left: 0.5rem;
+}
+
+.emotion-9[data-size='medium'] {
+  height: 2.5rem;
+}
+
+.emotion-9[data-size='large'] {
+  height: 3rem;
+}
+
+.emotion-9[data-readonly='true'] {
+  background: #f9f9fa;
+  border-color: #d9dadd;
+  cursor: default;
+}
+
+.emotion-9[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
+  cursor: not-allowed;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-9[data-error='true'] {
+  border: 1px solid #b3144d;
+}
+
+.emotion-9[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #92103f;
+  box-shadow: 0px 0px 0px 3px #f91b6c40;
+}
+
+.emotion-9[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
+  border-color: #92103f;
+}
+
+.emotion-11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-15 {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 0.875rem;
+  width: 1.5625rem;
+  height: 1.5rem;
+  text-align: center;
+  border-radius: 0.25rem;
+  color: #3f4250;
+  caret-color: transparent;
+}
+
+.emotion-15[data-size='large'] {
+  font-size: 1rem;
+}
+
+.emotion-15:not(:disabled):hover {
+  background-color: #e9eaeb;
+  color: #727683;
+}
+
+.emotion-15:not(:disabled):active,
+.emotion-15:not(:disabled):focus {
+  background-color: #e9eaeb;
+  color: #3f4250;
+}
+
+.emotion-15:-moz-read-only {
+  cursor: default;
+}
+
+.emotion-15:read-only {
+  cursor: default;
+}
+
+.emotion-15:disabled {
+  cursor: not-allowed;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-15[data-period="true"] {
+  color: #727683;
+}
+
+.emotion-15[data-period="true"][data-size="large"] {
+  width: calc(1.5625rem + 0.125rem);
+}
+
+.emotion-15::-moz-selection {
+  background: none;
+}
+
+.emotion-15::selection {
+  background: none;
+}
+
+.emotion-15 {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 0.875rem;
+  width: 1.5625rem;
+  height: 1.5rem;
+  text-align: center;
+  border-radius: 0.25rem;
+  color: #3f4250;
+  caret-color: transparent;
+}
+
+.emotion-15[data-size='large'] {
+  font-size: 1rem;
+}
+
+.emotion-15:not(:disabled):hover {
+  background-color: #e9eaeb;
+  color: #727683;
+}
+
+.emotion-15:not(:disabled):active,
+.emotion-15:not(:disabled):focus {
+  background-color: #e9eaeb;
+  color: #3f4250;
+}
+
+.emotion-15:-moz-read-only {
+  cursor: default;
+}
+
+.emotion-15:read-only {
+  cursor: default;
+}
+
+.emotion-15:disabled {
+  cursor: not-allowed;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-15[data-period="true"] {
+  color: #727683;
+}
+
+.emotion-15[data-period="true"][data-size="large"] {
+  width: calc(1.5625rem + 0.125rem);
+}
+
+.emotion-15::-moz-selection {
+  background: none;
+}
+
+.emotion-15::selection {
+  background: none;
+}
+
+.emotion-18 {
+  color: #3f4250;
+  font-size: 1rem;
+  font-family: Inter,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding-inline: 0.125rem;
+}
+
+.emotion-18 {
+  color: #3f4250;
+  font-size: 1rem;
+  font-family: Inter,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding-inline: 0.125rem;
+}
+
+.emotion-33 {
+  color: #727683;
+  font-size: 0.75rem;
+  font-family: Inter,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-33 {
+  color: #727683;
+  font-size: 0.75rem;
+  font-family: Inter,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+    >
+      <div
+        class="emotion-2 emotion-1"
+      >
+        <label
+          class="emotion-4 emotion-5 emotion-6"
+          for="«r1h»"
+        >
+          label
+        </label>
+        <span
+          class="emotion-7 emotion-6"
+        >
+          labeldescription
+        </span>
+      </div>
+      <div
+        class="emotion-9 emotion-10"
+        data-disabled="false"
+        data-error="false"
+        data-readonly="false"
+        data-size="large"
+      >
+        <div
+          class="emotion-11 emotion-1"
+        >
+          <div
+            class="emotion-11 emotion-1"
+          >
+            <input
+              aria-valuemax="12"
+              aria-valuemin="1"
+              aria-valuenow="12"
+              autocomplete="false"
+              class="emotion-15 emotion-16"
+              data-size="large"
+              data-testid="hours-input"
+              placeholder="00"
+              role="spinbutton"
+              value="12"
+            />
+            <span
+              class="emotion-17 emotion-18 emotion-6"
+            >
+              :
+            </span>
+          </div>
+          <div
+            class="emotion-11 emotion-1"
+          >
+            <input
+              aria-valuemax="59"
+              aria-valuemin="0"
+              aria-valuenow="23"
+              autocomplete="false"
+              class="emotion-15 emotion-16"
+              data-size="large"
+              data-testid="minutes-input"
+              placeholder="00"
+              role="spinbutton"
+              value="23"
+            />
+            <span
+              class="emotion-17 emotion-18 emotion-6"
+            >
+              :
+            </span>
+          </div>
+          <div
+            class="emotion-11 emotion-1"
+          >
+            <input
+              aria-valuemax="59"
+              aria-valuemin="0"
+              aria-valuenow="7"
+              autocomplete="false"
+              class="emotion-15 emotion-16"
+              data-size="large"
+              data-testid="seconds-input"
+              placeholder="00"
+              role="spinbutton"
+              value="07"
+            />
+          </div>
+          <input
+            aria-valuemax="12"
+            aria-valuemin="0"
+            aria-valuenow="0"
+            aria-valuetext="am"
+            autocomplete="false"
+            class="emotion-15 emotion-16"
+            data-period="true"
+            data-size="large"
+            data-testid="am-pm-input"
+            placeholder="AM"
+            role="spinbutton"
+            value="AM"
+          />
+        </div>
+      </div>
+      <p
+        class="emotion-33 emotion-6"
+      >
+        helper
+      </p>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`TimeInput > renders correctly controlled - 24-hours format 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.25rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.25rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-5 {
+  color: #3f4250;
+  font-size: 1rem;
+  font-family: Inter,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.emotion-5 {
+  color: #3f4250;
+  font-size: 1rem;
+  font-family: Inter,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.emotion-7 {
+  font-size: 0.875rem;
+  font-family: Inter,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-7 {
+  font-size: 0.875rem;
+  font-family: Inter,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: text;
+  padding: 0.5rem;
+  box-shadow: none;
+  background: #ffffff;
+  border-radius: 0.25rem;
+  border: 1px solid #d9dadd;
+}
+
+.emotion-9:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #792dd4;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-9[data-disabled="false"]:hover,
+.emotion-9 [data-disabled="false"]:focus {
+  border-color: #792dd4;
+  outline: none;
+}
+
+.emotion-9:focus-within {
+  border-color: #792dd4;
+}
+
+.emotion-9[data-size='small'] {
+  height: 2rem;
+  padding-left: 0.5rem;
+}
+
+.emotion-9[data-size='medium'] {
+  height: 2.5rem;
+}
+
+.emotion-9[data-size='large'] {
+  height: 3rem;
+}
+
+.emotion-9[data-readonly='true'] {
+  background: #f9f9fa;
+  border-color: #d9dadd;
+  cursor: default;
+}
+
+.emotion-9[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
+  cursor: not-allowed;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-9[data-error='true'] {
+  border: 1px solid #b3144d;
+}
+
+.emotion-9[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #92103f;
+  box-shadow: 0px 0px 0px 3px #f91b6c40;
+}
+
+.emotion-9[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
+  border-color: #92103f;
+}
+
+.emotion-9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: text;
+  padding: 0.5rem;
+  box-shadow: none;
+  background: #ffffff;
+  border-radius: 0.25rem;
+  border: 1px solid #d9dadd;
+}
+
+.emotion-9:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #792dd4;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-9[data-disabled="false"]:hover,
+.emotion-9 [data-disabled="false"]:focus {
+  border-color: #792dd4;
+  outline: none;
+}
+
+.emotion-9:focus-within {
+  border-color: #792dd4;
+}
+
+.emotion-9[data-size='small'] {
+  height: 2rem;
+  padding-left: 0.5rem;
+}
+
+.emotion-9[data-size='medium'] {
+  height: 2.5rem;
+}
+
+.emotion-9[data-size='large'] {
+  height: 3rem;
+}
+
+.emotion-9[data-readonly='true'] {
+  background: #f9f9fa;
+  border-color: #d9dadd;
+  cursor: default;
+}
+
+.emotion-9[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
+  cursor: not-allowed;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-9[data-error='true'] {
+  border: 1px solid #b3144d;
+}
+
+.emotion-9[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #92103f;
+  box-shadow: 0px 0px 0px 3px #f91b6c40;
+}
+
+.emotion-9[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
+  border-color: #92103f;
+}
+
+.emotion-11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-15 {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 0.875rem;
+  width: 1.5625rem;
+  height: 1.5rem;
+  text-align: center;
+  border-radius: 0.25rem;
+  color: #3f4250;
+  caret-color: transparent;
+}
+
+.emotion-15[data-size='large'] {
+  font-size: 1rem;
+}
+
+.emotion-15:not(:disabled):hover {
+  background-color: #e9eaeb;
+  color: #727683;
+}
+
+.emotion-15:not(:disabled):active,
+.emotion-15:not(:disabled):focus {
+  background-color: #e9eaeb;
+  color: #3f4250;
+}
+
+.emotion-15:-moz-read-only {
+  cursor: default;
+}
+
+.emotion-15:read-only {
+  cursor: default;
+}
+
+.emotion-15:disabled {
+  cursor: not-allowed;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-15[data-period="true"] {
+  color: #727683;
+}
+
+.emotion-15[data-period="true"][data-size="large"] {
+  width: calc(1.5625rem + 0.125rem);
+}
+
+.emotion-15::-moz-selection {
+  background: none;
+}
+
+.emotion-15::selection {
+  background: none;
+}
+
+.emotion-15 {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 0.875rem;
+  width: 1.5625rem;
+  height: 1.5rem;
+  text-align: center;
+  border-radius: 0.25rem;
+  color: #3f4250;
+  caret-color: transparent;
+}
+
+.emotion-15[data-size='large'] {
+  font-size: 1rem;
+}
+
+.emotion-15:not(:disabled):hover {
+  background-color: #e9eaeb;
+  color: #727683;
+}
+
+.emotion-15:not(:disabled):active,
+.emotion-15:not(:disabled):focus {
+  background-color: #e9eaeb;
+  color: #3f4250;
+}
+
+.emotion-15:-moz-read-only {
+  cursor: default;
+}
+
+.emotion-15:read-only {
+  cursor: default;
+}
+
+.emotion-15:disabled {
+  cursor: not-allowed;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-15[data-period="true"] {
+  color: #727683;
+}
+
+.emotion-15[data-period="true"][data-size="large"] {
+  width: calc(1.5625rem + 0.125rem);
+}
+
+.emotion-15::-moz-selection {
+  background: none;
+}
+
+.emotion-15::selection {
+  background: none;
+}
+
+.emotion-18 {
+  color: #3f4250;
+  font-size: 1rem;
+  font-family: Inter,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding-inline: 0.125rem;
+}
+
+.emotion-18 {
+  color: #3f4250;
+  font-size: 1rem;
+  font-family: Inter,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding-inline: 0.125rem;
+}
+
+.emotion-31 {
+  color: #727683;
+  font-size: 0.75rem;
+  font-family: Inter,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-31 {
+  color: #727683;
+  font-size: 0.75rem;
+  font-family: Inter,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+    >
+      <div
+        class="emotion-2 emotion-1"
+      >
+        <label
+          class="emotion-4 emotion-5 emotion-6"
+          for="«r1n»"
+        >
+          label
+        </label>
+        <span
+          class="emotion-7 emotion-6"
+        >
+          labeldescription
+        </span>
+      </div>
+      <div
+        class="emotion-9 emotion-10"
+        data-disabled="false"
+        data-error="false"
+        data-readonly="false"
+        data-size="large"
+      >
+        <div
+          class="emotion-11 emotion-1"
+        >
+          <div
+            class="emotion-11 emotion-1"
+          >
+            <input
+              aria-valuemax="23"
+              aria-valuemin="0"
+              aria-valuenow="23"
+              autocomplete="false"
+              class="emotion-15 emotion-16"
+              data-size="large"
+              data-testid="hours-input"
+              placeholder="00"
+              role="spinbutton"
+              value="23"
+            />
+            <span
+              class="emotion-17 emotion-18 emotion-6"
+            >
+              :
+            </span>
+          </div>
+          <div
+            class="emotion-11 emotion-1"
+          >
+            <input
+              aria-valuemax="59"
+              aria-valuemin="0"
+              aria-valuenow="32"
+              autocomplete="false"
+              class="emotion-15 emotion-16"
+              data-size="large"
+              data-testid="minutes-input"
+              placeholder="00"
+              role="spinbutton"
+              value="32"
+            />
+            <span
+              class="emotion-17 emotion-18 emotion-6"
+            >
+              :
+            </span>
+          </div>
+          <div
+            class="emotion-11 emotion-1"
+          >
+            <input
+              aria-valuemax="59"
+              aria-valuemin="0"
+              aria-valuenow="31"
+              autocomplete="false"
+              class="emotion-15 emotion-16"
+              data-size="large"
+              data-testid="seconds-input"
+              placeholder="00"
+              role="spinbutton"
+              value="31"
+            />
           </div>
         </div>
       </div>
-      <input
-        name="timeinput-test-0"
-        type="hidden"
-        value="00:00"
-      />
+      <p
+        class="emotion-31 emotion-6"
+      >
+        helper
+      </p>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`TimeInput > renders correctly disabled 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.25rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-3 {
+  color: #3f4250;
+  font-size: 1rem;
+  font-family: Inter,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: text;
+  padding: 0.5rem;
+  box-shadow: none;
+  background: #ffffff;
+  border-radius: 0.25rem;
+  border: 1px solid #d9dadd;
+}
+
+.emotion-5:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #792dd4;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-5[data-disabled="false"]:hover,
+.emotion-5 [data-disabled="false"]:focus {
+  border-color: #792dd4;
+  outline: none;
+}
+
+.emotion-5:focus-within {
+  border-color: #792dd4;
+}
+
+.emotion-5[data-size='small'] {
+  height: 2rem;
+  padding-left: 0.5rem;
+}
+
+.emotion-5[data-size='medium'] {
+  height: 2.5rem;
+}
+
+.emotion-5[data-size='large'] {
+  height: 3rem;
+}
+
+.emotion-5[data-readonly='true'] {
+  background: #f9f9fa;
+  border-color: #d9dadd;
+  cursor: default;
+}
+
+.emotion-5[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
+  cursor: not-allowed;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-5[data-error='true'] {
+  border: 1px solid #b3144d;
+}
+
+.emotion-5[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #92103f;
+  box-shadow: 0px 0px 0px 3px #f91b6c40;
+}
+
+.emotion-5[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
+  border-color: #92103f;
+}
+
+.emotion-7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-11 {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 0.875rem;
+  width: 1.5625rem;
+  height: 1.5rem;
+  text-align: center;
+  border-radius: 0.25rem;
+  color: #3f4250;
+  caret-color: transparent;
+}
+
+.emotion-11[data-size='large'] {
+  font-size: 1rem;
+}
+
+.emotion-11:not(:disabled):hover {
+  background-color: #e9eaeb;
+  color: #727683;
+}
+
+.emotion-11:not(:disabled):active,
+.emotion-11:not(:disabled):focus {
+  background-color: #e9eaeb;
+  color: #3f4250;
+}
+
+.emotion-11:-moz-read-only {
+  cursor: default;
+}
+
+.emotion-11:read-only {
+  cursor: default;
+}
+
+.emotion-11:disabled {
+  cursor: not-allowed;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-11[data-period="true"] {
+  color: #727683;
+}
+
+.emotion-11[data-period="true"][data-size="large"] {
+  width: calc(1.5625rem + 0.125rem);
+}
+
+.emotion-11::-moz-selection {
+  background: none;
+}
+
+.emotion-11::selection {
+  background: none;
+}
+
+.emotion-14 {
+  color: #3f4250;
+  font-size: 1rem;
+  font-family: Inter,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding-inline: 0.125rem;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+    >
+      <label
+        class="emotion-2 emotion-3 emotion-4"
+        for="«r3»"
+      >
+        test
+      </label>
       <div
-        class="emotion-21 emotion-22"
-        data-is-animated="true"
+        class="emotion-5 emotion-6"
+        data-disabled="true"
+        data-error="false"
+        data-readonly="false"
+        data-size="large"
       >
         <div
-          class="emotion-23 emotion-24"
-        />
+          class="emotion-7 emotion-1"
+        >
+          <div
+            class="emotion-7 emotion-1"
+          >
+            <input
+              aria-valuemax="23"
+              aria-valuemin="0"
+              autocomplete="false"
+              class="emotion-11 emotion-12"
+              data-size="large"
+              data-testid="hours-input"
+              disabled=""
+              placeholder="00"
+              role="spinbutton"
+              value=""
+            />
+            <span
+              class="emotion-13 emotion-14 emotion-4"
+            >
+              :
+            </span>
+          </div>
+          <div
+            class="emotion-7 emotion-1"
+          >
+            <input
+              aria-valuemax="59"
+              aria-valuemin="0"
+              autocomplete="false"
+              class="emotion-11 emotion-12"
+              data-size="large"
+              data-testid="minutes-input"
+              disabled=""
+              placeholder="00"
+              role="spinbutton"
+              value=""
+            />
+            <span
+              class="emotion-13 emotion-14 emotion-4"
+            >
+              :
+            </span>
+          </div>
+          <div
+            class="emotion-7 emotion-1"
+          >
+            <input
+              aria-valuemax="59"
+              aria-valuemin="0"
+              autocomplete="false"
+              class="emotion-11 emotion-12"
+              data-size="large"
+              data-testid="seconds-input"
+              disabled=""
+              placeholder="00"
+              role="spinbutton"
+              value=""
+            />
+          </div>
+        </div>
       </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`TimeInput > renders correctly large 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.25rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-3 {
+  color: #3f4250;
+  font-size: 1rem;
+  font-family: Inter,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: text;
+  padding: 0.5rem;
+  box-shadow: none;
+  background: #ffffff;
+  border-radius: 0.25rem;
+  border: 1px solid #d9dadd;
+}
+
+.emotion-5:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #792dd4;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-5[data-disabled="false"]:hover,
+.emotion-5 [data-disabled="false"]:focus {
+  border-color: #792dd4;
+  outline: none;
+}
+
+.emotion-5:focus-within {
+  border-color: #792dd4;
+}
+
+.emotion-5[data-size='small'] {
+  height: 2rem;
+  padding-left: 0.5rem;
+}
+
+.emotion-5[data-size='medium'] {
+  height: 2.5rem;
+}
+
+.emotion-5[data-size='large'] {
+  height: 3rem;
+}
+
+.emotion-5[data-readonly='true'] {
+  background: #f9f9fa;
+  border-color: #d9dadd;
+  cursor: default;
+}
+
+.emotion-5[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
+  cursor: not-allowed;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-5[data-error='true'] {
+  border: 1px solid #b3144d;
+}
+
+.emotion-5[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #92103f;
+  box-shadow: 0px 0px 0px 3px #f91b6c40;
+}
+
+.emotion-5[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
+  border-color: #92103f;
+}
+
+.emotion-7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-11 {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 0.875rem;
+  width: 1.5625rem;
+  height: 1.5rem;
+  text-align: center;
+  border-radius: 0.25rem;
+  color: #3f4250;
+  caret-color: transparent;
+}
+
+.emotion-11[data-size='large'] {
+  font-size: 1rem;
+}
+
+.emotion-11:not(:disabled):hover {
+  background-color: #e9eaeb;
+  color: #727683;
+}
+
+.emotion-11:not(:disabled):active,
+.emotion-11:not(:disabled):focus {
+  background-color: #e9eaeb;
+  color: #3f4250;
+}
+
+.emotion-11:-moz-read-only {
+  cursor: default;
+}
+
+.emotion-11:read-only {
+  cursor: default;
+}
+
+.emotion-11:disabled {
+  cursor: not-allowed;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-11[data-period="true"] {
+  color: #727683;
+}
+
+.emotion-11[data-period="true"][data-size="large"] {
+  width: calc(1.5625rem + 0.125rem);
+}
+
+.emotion-11::-moz-selection {
+  background: none;
+}
+
+.emotion-11::selection {
+  background: none;
+}
+
+.emotion-14 {
+  color: #3f4250;
+  font-size: 1rem;
+  font-family: Inter,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding-inline: 0.125rem;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+    >
+      <label
+        class="emotion-2 emotion-3 emotion-4"
+        for="«ru»"
+      >
+        test
+      </label>
+      <div
+        class="emotion-5 emotion-6"
+        data-disabled="false"
+        data-error="false"
+        data-readonly="false"
+        data-size="large"
+      >
+        <div
+          class="emotion-7 emotion-1"
+        >
+          <div
+            class="emotion-7 emotion-1"
+          >
+            <input
+              aria-valuemax="23"
+              aria-valuemin="0"
+              autocomplete="false"
+              class="emotion-11 emotion-12"
+              data-size="large"
+              data-testid="hours-input"
+              placeholder="00"
+              role="spinbutton"
+              value=""
+            />
+            <span
+              class="emotion-13 emotion-14 emotion-4"
+            >
+              :
+            </span>
+          </div>
+          <div
+            class="emotion-7 emotion-1"
+          >
+            <input
+              aria-valuemax="59"
+              aria-valuemin="0"
+              autocomplete="false"
+              class="emotion-11 emotion-12"
+              data-size="large"
+              data-testid="minutes-input"
+              placeholder="00"
+              role="spinbutton"
+              value=""
+            />
+            <span
+              class="emotion-13 emotion-14 emotion-4"
+            >
+              :
+            </span>
+          </div>
+          <div
+            class="emotion-7 emotion-1"
+          >
+            <input
+              aria-valuemax="59"
+              aria-valuemin="0"
+              autocomplete="false"
+              class="emotion-11 emotion-12"
+              data-size="large"
+              data-testid="seconds-input"
+              placeholder="00"
+              role="spinbutton"
+              value=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`TimeInput > renders correctly readOnly 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.25rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-3 {
+  color: #3f4250;
+  font-size: 1rem;
+  font-family: Inter,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: text;
+  padding: 0.5rem;
+  box-shadow: none;
+  background: #ffffff;
+  border-radius: 0.25rem;
+  border: 1px solid #d9dadd;
+}
+
+.emotion-5:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #792dd4;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-5[data-disabled="false"]:hover,
+.emotion-5 [data-disabled="false"]:focus {
+  border-color: #792dd4;
+  outline: none;
+}
+
+.emotion-5:focus-within {
+  border-color: #792dd4;
+}
+
+.emotion-5[data-size='small'] {
+  height: 2rem;
+  padding-left: 0.5rem;
+}
+
+.emotion-5[data-size='medium'] {
+  height: 2.5rem;
+}
+
+.emotion-5[data-size='large'] {
+  height: 3rem;
+}
+
+.emotion-5[data-readonly='true'] {
+  background: #f9f9fa;
+  border-color: #d9dadd;
+  cursor: default;
+}
+
+.emotion-5[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
+  cursor: not-allowed;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-5[data-error='true'] {
+  border: 1px solid #b3144d;
+}
+
+.emotion-5[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #92103f;
+  box-shadow: 0px 0px 0px 3px #f91b6c40;
+}
+
+.emotion-5[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
+  border-color: #92103f;
+}
+
+.emotion-7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-11 {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 0.875rem;
+  width: 1.5625rem;
+  height: 1.5rem;
+  text-align: center;
+  border-radius: 0.25rem;
+  color: #3f4250;
+  caret-color: transparent;
+}
+
+.emotion-11[data-size='large'] {
+  font-size: 1rem;
+}
+
+.emotion-11:not(:disabled):hover {
+  background-color: #e9eaeb;
+  color: #727683;
+}
+
+.emotion-11:not(:disabled):active,
+.emotion-11:not(:disabled):focus {
+  background-color: #e9eaeb;
+  color: #3f4250;
+}
+
+.emotion-11:-moz-read-only {
+  cursor: default;
+}
+
+.emotion-11:read-only {
+  cursor: default;
+}
+
+.emotion-11:disabled {
+  cursor: not-allowed;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-11[data-period="true"] {
+  color: #727683;
+}
+
+.emotion-11[data-period="true"][data-size="large"] {
+  width: calc(1.5625rem + 0.125rem);
+}
+
+.emotion-11::-moz-selection {
+  background: none;
+}
+
+.emotion-11::selection {
+  background: none;
+}
+
+.emotion-14 {
+  color: #3f4250;
+  font-size: 1rem;
+  font-family: Inter,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding-inline: 0.125rem;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+    >
+      <label
+        class="emotion-2 emotion-3 emotion-4"
+        for="«r7»"
+      >
+        test
+      </label>
+      <div
+        class="emotion-5 emotion-6"
+        data-disabled="false"
+        data-error="false"
+        data-readonly="true"
+        data-size="large"
+      >
+        <div
+          class="emotion-7 emotion-1"
+        >
+          <div
+            class="emotion-7 emotion-1"
+          >
+            <input
+              aria-valuemax="23"
+              aria-valuemin="0"
+              autocomplete="false"
+              class="emotion-11 emotion-12"
+              data-size="large"
+              data-testid="hours-input"
+              placeholder="00"
+              readonly=""
+              role="spinbutton"
+              value=""
+            />
+            <span
+              class="emotion-13 emotion-14 emotion-4"
+            >
+              :
+            </span>
+          </div>
+          <div
+            class="emotion-7 emotion-1"
+          >
+            <input
+              aria-valuemax="59"
+              aria-valuemin="0"
+              autocomplete="false"
+              class="emotion-11 emotion-12"
+              data-size="large"
+              data-testid="minutes-input"
+              placeholder="00"
+              readonly=""
+              role="spinbutton"
+              value=""
+            />
+            <span
+              class="emotion-13 emotion-14 emotion-4"
+            >
+              :
+            </span>
+          </div>
+          <div
+            class="emotion-7 emotion-1"
+          >
+            <input
+              aria-valuemax="59"
+              aria-valuemin="0"
+              autocomplete="false"
+              class="emotion-11 emotion-12"
+              data-size="large"
+              data-testid="seconds-input"
+              placeholder="00"
+              readonly=""
+              role="spinbutton"
+              value=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`TimeInput > renders correctly required 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.25rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.25rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-5 {
+  color: #3f4250;
+  font-size: 1rem;
+  font-family: Inter,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.emotion-7 {
+  color: #b3144d;
+  font-size: 1rem;
+  font-family: Inter,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: text;
+  padding: 0.5rem;
+  box-shadow: none;
+  background: #ffffff;
+  border-radius: 0.25rem;
+  border: 1px solid #d9dadd;
+}
+
+.emotion-9:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #792dd4;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-9[data-disabled="false"]:hover,
+.emotion-9 [data-disabled="false"]:focus {
+  border-color: #792dd4;
+  outline: none;
+}
+
+.emotion-9:focus-within {
+  border-color: #792dd4;
+}
+
+.emotion-9[data-size='small'] {
+  height: 2rem;
+  padding-left: 0.5rem;
+}
+
+.emotion-9[data-size='medium'] {
+  height: 2.5rem;
+}
+
+.emotion-9[data-size='large'] {
+  height: 3rem;
+}
+
+.emotion-9[data-readonly='true'] {
+  background: #f9f9fa;
+  border-color: #d9dadd;
+  cursor: default;
+}
+
+.emotion-9[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
+  cursor: not-allowed;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-9[data-error='true'] {
+  border: 1px solid #b3144d;
+}
+
+.emotion-9[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #92103f;
+  box-shadow: 0px 0px 0px 3px #f91b6c40;
+}
+
+.emotion-9[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
+  border-color: #92103f;
+}
+
+.emotion-11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-15 {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 0.875rem;
+  width: 1.5625rem;
+  height: 1.5rem;
+  text-align: center;
+  border-radius: 0.25rem;
+  color: #3f4250;
+  caret-color: transparent;
+}
+
+.emotion-15[data-size='large'] {
+  font-size: 1rem;
+}
+
+.emotion-15:not(:disabled):hover {
+  background-color: #e9eaeb;
+  color: #727683;
+}
+
+.emotion-15:not(:disabled):active,
+.emotion-15:not(:disabled):focus {
+  background-color: #e9eaeb;
+  color: #3f4250;
+}
+
+.emotion-15:-moz-read-only {
+  cursor: default;
+}
+
+.emotion-15:read-only {
+  cursor: default;
+}
+
+.emotion-15:disabled {
+  cursor: not-allowed;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-15[data-period="true"] {
+  color: #727683;
+}
+
+.emotion-15[data-period="true"][data-size="large"] {
+  width: calc(1.5625rem + 0.125rem);
+}
+
+.emotion-15::-moz-selection {
+  background: none;
+}
+
+.emotion-15::selection {
+  background: none;
+}
+
+.emotion-18 {
+  color: #3f4250;
+  font-size: 1rem;
+  font-family: Inter,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding-inline: 0.125rem;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+    >
+      <div
+        class="emotion-2 emotion-1"
+      >
+        <label
+          class="emotion-4 emotion-5 emotion-6"
+          for="«rl»"
+        >
+          test
+        </label>
+        <span
+          class="emotion-7 emotion-6"
+        >
+          *
+        </span>
+      </div>
+      <div
+        aria-required="true"
+        class="emotion-9 emotion-10"
+        data-disabled="false"
+        data-error="false"
+        data-readonly="false"
+        data-size="large"
+      >
+        <div
+          class="emotion-11 emotion-1"
+        >
+          <div
+            class="emotion-11 emotion-1"
+          >
+            <input
+              aria-valuemax="23"
+              aria-valuemin="0"
+              autocomplete="false"
+              class="emotion-15 emotion-16"
+              data-size="large"
+              data-testid="hours-input"
+              placeholder="00"
+              role="spinbutton"
+              value=""
+            />
+            <span
+              class="emotion-17 emotion-18 emotion-6"
+            >
+              :
+            </span>
+          </div>
+          <div
+            class="emotion-11 emotion-1"
+          >
+            <input
+              aria-valuemax="59"
+              aria-valuemin="0"
+              autocomplete="false"
+              class="emotion-15 emotion-16"
+              data-size="large"
+              data-testid="minutes-input"
+              placeholder="00"
+              role="spinbutton"
+              value=""
+            />
+            <span
+              class="emotion-17 emotion-18 emotion-6"
+            >
+              :
+            </span>
+          </div>
+          <div
+            class="emotion-11 emotion-1"
+          >
+            <input
+              aria-valuemax="59"
+              aria-valuemin="0"
+              autocomplete="false"
+              class="emotion-15 emotion-16"
+              data-size="large"
+              data-testid="seconds-input"
+              placeholder="00"
+              role="spinbutton"
+              value=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`TimeInput > renders correctly small 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.25rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-3 {
+  color: #3f4250;
+  font-size: 0.875rem;
+  font-family: Inter,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: text;
+  padding: 0.5rem;
+  box-shadow: none;
+  background: #ffffff;
+  border-radius: 0.25rem;
+  border: 1px solid #d9dadd;
+}
+
+.emotion-5:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #792dd4;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-5[data-disabled="false"]:hover,
+.emotion-5 [data-disabled="false"]:focus {
+  border-color: #792dd4;
+  outline: none;
+}
+
+.emotion-5:focus-within {
+  border-color: #792dd4;
+}
+
+.emotion-5[data-size='small'] {
+  height: 2rem;
+  padding-left: 0.5rem;
+}
+
+.emotion-5[data-size='medium'] {
+  height: 2.5rem;
+}
+
+.emotion-5[data-size='large'] {
+  height: 3rem;
+}
+
+.emotion-5[data-readonly='true'] {
+  background: #f9f9fa;
+  border-color: #d9dadd;
+  cursor: default;
+}
+
+.emotion-5[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
+  cursor: not-allowed;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-5[data-error='true'] {
+  border: 1px solid #b3144d;
+}
+
+.emotion-5[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #92103f;
+  box-shadow: 0px 0px 0px 3px #f91b6c40;
+}
+
+.emotion-5[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
+  border-color: #92103f;
+}
+
+.emotion-7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-11 {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 0.875rem;
+  width: 1.5625rem;
+  height: 1.5rem;
+  text-align: center;
+  border-radius: 0.25rem;
+  color: #3f4250;
+  caret-color: transparent;
+}
+
+.emotion-11[data-size='large'] {
+  font-size: 1rem;
+}
+
+.emotion-11:not(:disabled):hover {
+  background-color: #e9eaeb;
+  color: #727683;
+}
+
+.emotion-11:not(:disabled):active,
+.emotion-11:not(:disabled):focus {
+  background-color: #e9eaeb;
+  color: #3f4250;
+}
+
+.emotion-11:-moz-read-only {
+  cursor: default;
+}
+
+.emotion-11:read-only {
+  cursor: default;
+}
+
+.emotion-11:disabled {
+  cursor: not-allowed;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-11[data-period="true"] {
+  color: #727683;
+}
+
+.emotion-11[data-period="true"][data-size="large"] {
+  width: calc(1.5625rem + 0.125rem);
+}
+
+.emotion-11::-moz-selection {
+  background: none;
+}
+
+.emotion-11::selection {
+  background: none;
+}
+
+.emotion-14 {
+  color: #3f4250;
+  font-size: 1rem;
+  font-family: Inter,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding-inline: 0.125rem;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+    >
+      <label
+        class="emotion-2 emotion-3 emotion-4"
+        for="«rq»"
+      >
+        test
+      </label>
+      <div
+        class="emotion-5 emotion-6"
+        data-disabled="false"
+        data-error="false"
+        data-readonly="false"
+        data-size="small"
+      >
+        <div
+          class="emotion-7 emotion-1"
+        >
+          <div
+            class="emotion-7 emotion-1"
+          >
+            <input
+              aria-valuemax="23"
+              aria-valuemin="0"
+              autocomplete="false"
+              class="emotion-11 emotion-12"
+              data-size="small"
+              data-testid="hours-input"
+              placeholder="00"
+              role="spinbutton"
+              value=""
+            />
+            <span
+              class="emotion-13 emotion-14 emotion-4"
+            >
+              :
+            </span>
+          </div>
+          <div
+            class="emotion-7 emotion-1"
+          >
+            <input
+              aria-valuemax="59"
+              aria-valuemin="0"
+              autocomplete="false"
+              class="emotion-11 emotion-12"
+              data-size="small"
+              data-testid="minutes-input"
+              placeholder="00"
+              role="spinbutton"
+              value=""
+            />
+            <span
+              class="emotion-13 emotion-14 emotion-4"
+            >
+              :
+            </span>
+          </div>
+          <div
+            class="emotion-7 emotion-1"
+          >
+            <input
+              aria-valuemax="59"
+              aria-valuemin="0"
+              autocomplete="false"
+              class="emotion-11 emotion-12"
+              data-size="small"
+              data-testid="seconds-input"
+              placeholder="00"
+              role="spinbutton"
+              value=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`TimeInput > renders correctly with 12-hour format 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.25rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-3 {
+  color: #3f4250;
+  font-size: 1rem;
+  font-family: Inter,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: text;
+  padding: 0.5rem;
+  box-shadow: none;
+  background: #ffffff;
+  border-radius: 0.25rem;
+  border: 1px solid #d9dadd;
+}
+
+.emotion-5:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #792dd4;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-5[data-disabled="false"]:hover,
+.emotion-5 [data-disabled="false"]:focus {
+  border-color: #792dd4;
+  outline: none;
+}
+
+.emotion-5:focus-within {
+  border-color: #792dd4;
+}
+
+.emotion-5[data-size='small'] {
+  height: 2rem;
+  padding-left: 0.5rem;
+}
+
+.emotion-5[data-size='medium'] {
+  height: 2.5rem;
+}
+
+.emotion-5[data-size='large'] {
+  height: 3rem;
+}
+
+.emotion-5[data-readonly='true'] {
+  background: #f9f9fa;
+  border-color: #d9dadd;
+  cursor: default;
+}
+
+.emotion-5[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
+  cursor: not-allowed;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-5[data-error='true'] {
+  border: 1px solid #b3144d;
+}
+
+.emotion-5[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #92103f;
+  box-shadow: 0px 0px 0px 3px #f91b6c40;
+}
+
+.emotion-5[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
+  border-color: #92103f;
+}
+
+.emotion-7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-11 {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 0.875rem;
+  width: 1.5625rem;
+  height: 1.5rem;
+  text-align: center;
+  border-radius: 0.25rem;
+  color: #3f4250;
+  caret-color: transparent;
+}
+
+.emotion-11[data-size='large'] {
+  font-size: 1rem;
+}
+
+.emotion-11:not(:disabled):hover {
+  background-color: #e9eaeb;
+  color: #727683;
+}
+
+.emotion-11:not(:disabled):active,
+.emotion-11:not(:disabled):focus {
+  background-color: #e9eaeb;
+  color: #3f4250;
+}
+
+.emotion-11:-moz-read-only {
+  cursor: default;
+}
+
+.emotion-11:read-only {
+  cursor: default;
+}
+
+.emotion-11:disabled {
+  cursor: not-allowed;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-11[data-period="true"] {
+  color: #727683;
+}
+
+.emotion-11[data-period="true"][data-size="large"] {
+  width: calc(1.5625rem + 0.125rem);
+}
+
+.emotion-11::-moz-selection {
+  background: none;
+}
+
+.emotion-11::selection {
+  background: none;
+}
+
+.emotion-14 {
+  color: #3f4250;
+  font-size: 1rem;
+  font-family: Inter,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding-inline: 0.125rem;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+    >
+      <label
+        class="emotion-2 emotion-3 emotion-4"
+        for="«r12»"
+      >
+        test
+      </label>
+      <div
+        class="emotion-5 emotion-6"
+        data-disabled="false"
+        data-error="false"
+        data-readonly="false"
+        data-size="large"
+      >
+        <div
+          class="emotion-7 emotion-1"
+        >
+          <div
+            class="emotion-7 emotion-1"
+          >
+            <input
+              aria-valuemax="12"
+              aria-valuemin="1"
+              autocomplete="false"
+              class="emotion-11 emotion-12"
+              data-size="large"
+              data-testid="hours-input"
+              placeholder="00"
+              role="spinbutton"
+              value=""
+            />
+            <span
+              class="emotion-13 emotion-14 emotion-4"
+            >
+              :
+            </span>
+          </div>
+          <div
+            class="emotion-7 emotion-1"
+          >
+            <input
+              aria-valuemax="59"
+              aria-valuemin="0"
+              autocomplete="false"
+              class="emotion-11 emotion-12"
+              data-size="large"
+              data-testid="minutes-input"
+              placeholder="00"
+              role="spinbutton"
+              value=""
+            />
+            <span
+              class="emotion-13 emotion-14 emotion-4"
+            >
+              :
+            </span>
+          </div>
+          <div
+            class="emotion-7 emotion-1"
+          >
+            <input
+              aria-valuemax="59"
+              aria-valuemin="0"
+              autocomplete="false"
+              class="emotion-11 emotion-12"
+              data-size="large"
+              data-testid="seconds-input"
+              placeholder="00"
+              role="spinbutton"
+              value=""
+            />
+          </div>
+          <input
+            aria-valuemax="12"
+            aria-valuemin="0"
+            aria-valuenow="12"
+            autocomplete="false"
+            class="emotion-11 emotion-12"
+            data-period="true"
+            data-size="large"
+            data-testid="am-pm-input"
+            placeholder="AM"
+            role="spinbutton"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`TimeInput > renders correctly with base props 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.25rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: text;
+  padding: 0.5rem;
+  box-shadow: none;
+  background: #ffffff;
+  border-radius: 0.25rem;
+  border: 1px solid #d9dadd;
+}
+
+.emotion-2:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #792dd4;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-2[data-disabled="false"]:hover,
+.emotion-2 [data-disabled="false"]:focus {
+  border-color: #792dd4;
+  outline: none;
+}
+
+.emotion-2:focus-within {
+  border-color: #792dd4;
+}
+
+.emotion-2[data-size='small'] {
+  height: 2rem;
+  padding-left: 0.5rem;
+}
+
+.emotion-2[data-size='medium'] {
+  height: 2.5rem;
+}
+
+.emotion-2[data-size='large'] {
+  height: 3rem;
+}
+
+.emotion-2[data-readonly='true'] {
+  background: #f9f9fa;
+  border-color: #d9dadd;
+  cursor: default;
+}
+
+.emotion-2[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
+  cursor: not-allowed;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-2[data-error='true'] {
+  border: 1px solid #b3144d;
+}
+
+.emotion-2[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #92103f;
+  box-shadow: 0px 0px 0px 3px #f91b6c40;
+}
+
+.emotion-2[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
+  border-color: #92103f;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-8 {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 0.875rem;
+  width: 1.5625rem;
+  height: 1.5rem;
+  text-align: center;
+  border-radius: 0.25rem;
+  color: #3f4250;
+  caret-color: transparent;
+}
+
+.emotion-8[data-size='large'] {
+  font-size: 1rem;
+}
+
+.emotion-8:not(:disabled):hover {
+  background-color: #e9eaeb;
+  color: #727683;
+}
+
+.emotion-8:not(:disabled):active,
+.emotion-8:not(:disabled):focus {
+  background-color: #e9eaeb;
+  color: #3f4250;
+}
+
+.emotion-8:-moz-read-only {
+  cursor: default;
+}
+
+.emotion-8:read-only {
+  cursor: default;
+}
+
+.emotion-8:disabled {
+  cursor: not-allowed;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-8[data-period="true"] {
+  color: #727683;
+}
+
+.emotion-8[data-period="true"][data-size="large"] {
+  width: calc(1.5625rem + 0.125rem);
+}
+
+.emotion-8::-moz-selection {
+  background: none;
+}
+
+.emotion-8::selection {
+  background: none;
+}
+
+.emotion-11 {
+  color: #3f4250;
+  font-size: 1rem;
+  font-family: Inter,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding-inline: 0.125rem;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+    >
+      <div
+        class="emotion-2 emotion-3"
+        data-disabled="false"
+        data-error="false"
+        data-readonly="false"
+        data-size="large"
+      >
+        <div
+          class="emotion-4 emotion-1"
+        >
+          <div
+            class="emotion-4 emotion-1"
+          >
+            <input
+              aria-valuemax="23"
+              aria-valuemin="0"
+              autocomplete="false"
+              class="emotion-8 emotion-9"
+              data-size="large"
+              data-testid="hours-input"
+              placeholder="00"
+              role="spinbutton"
+              value=""
+            />
+            <span
+              class="emotion-10 emotion-11 emotion-12"
+            >
+              :
+            </span>
+          </div>
+          <div
+            class="emotion-4 emotion-1"
+          >
+            <input
+              aria-valuemax="59"
+              aria-valuemin="0"
+              autocomplete="false"
+              class="emotion-8 emotion-9"
+              data-size="large"
+              data-testid="minutes-input"
+              placeholder="00"
+              role="spinbutton"
+              value=""
+            />
+            <span
+              class="emotion-10 emotion-11 emotion-12"
+            >
+              :
+            </span>
+          </div>
+          <div
+            class="emotion-4 emotion-1"
+          >
+            <input
+              aria-valuemax="59"
+              aria-valuemin="0"
+              autocomplete="false"
+              class="emotion-8 emotion-9"
+              data-size="large"
+              data-testid="seconds-input"
+              placeholder="00"
+              role="spinbutton"
+              value=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`TimeInput > renders correctly with error 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.25rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-3 {
+  color: #3f4250;
+  font-size: 1rem;
+  font-family: Inter,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: text;
+  padding: 0.5rem;
+  box-shadow: none;
+  background: #ffffff;
+  border-radius: 0.25rem;
+  border: 1px solid #d9dadd;
+}
+
+.emotion-5:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #792dd4;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-5[data-disabled="false"]:hover,
+.emotion-5 [data-disabled="false"]:focus {
+  border-color: #792dd4;
+  outline: none;
+}
+
+.emotion-5:focus-within {
+  border-color: #792dd4;
+}
+
+.emotion-5[data-size='small'] {
+  height: 2rem;
+  padding-left: 0.5rem;
+}
+
+.emotion-5[data-size='medium'] {
+  height: 2.5rem;
+}
+
+.emotion-5[data-size='large'] {
+  height: 3rem;
+}
+
+.emotion-5[data-readonly='true'] {
+  background: #f9f9fa;
+  border-color: #d9dadd;
+  cursor: default;
+}
+
+.emotion-5[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
+  cursor: not-allowed;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-5[data-error='true'] {
+  border: 1px solid #b3144d;
+}
+
+.emotion-5[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #92103f;
+  box-shadow: 0px 0px 0px 3px #f91b6c40;
+}
+
+.emotion-5[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
+  border-color: #92103f;
+}
+
+.emotion-7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-11 {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 0.875rem;
+  width: 1.5625rem;
+  height: 1.5rem;
+  text-align: center;
+  border-radius: 0.25rem;
+  color: #3f4250;
+  caret-color: transparent;
+}
+
+.emotion-11[data-size='large'] {
+  font-size: 1rem;
+}
+
+.emotion-11:not(:disabled):hover {
+  background-color: #e9eaeb;
+  color: #727683;
+}
+
+.emotion-11:not(:disabled):active,
+.emotion-11:not(:disabled):focus {
+  background-color: #e9eaeb;
+  color: #3f4250;
+}
+
+.emotion-11:-moz-read-only {
+  cursor: default;
+}
+
+.emotion-11:read-only {
+  cursor: default;
+}
+
+.emotion-11:disabled {
+  cursor: not-allowed;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-11[data-period="true"] {
+  color: #727683;
+}
+
+.emotion-11[data-period="true"][data-size="large"] {
+  width: calc(1.5625rem + 0.125rem);
+}
+
+.emotion-11::-moz-selection {
+  background: none;
+}
+
+.emotion-11::selection {
+  background: none;
+}
+
+.emotion-14 {
+  color: #3f4250;
+  font-size: 1rem;
+  font-family: Inter,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding-inline: 0.125rem;
+}
+
+.emotion-27 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-29 {
+  vertical-align: middle;
+  fill: #b3144d;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
+}
+
+.emotion-29 .fillStroke {
+  stroke: #b3144d;
+  fill: none;
+}
+
+.emotion-31 {
+  color: #b3144d;
+  font-size: 0.75rem;
+  font-family: Inter,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+    >
+      <label
+        class="emotion-2 emotion-3 emotion-4"
+        for="«rb»"
+      >
+        test
+      </label>
+      <div
+        class="emotion-5 emotion-6"
+        data-disabled="false"
+        data-error="true"
+        data-readonly="false"
+        data-size="large"
+      >
+        <div
+          class="emotion-7 emotion-1"
+        >
+          <div
+            class="emotion-7 emotion-1"
+          >
+            <input
+              aria-valuemax="23"
+              aria-valuemin="0"
+              autocomplete="false"
+              class="emotion-11 emotion-12"
+              data-size="large"
+              data-testid="hours-input"
+              placeholder="00"
+              role="spinbutton"
+              value=""
+            />
+            <span
+              class="emotion-13 emotion-14 emotion-4"
+            >
+              :
+            </span>
+          </div>
+          <div
+            class="emotion-7 emotion-1"
+          >
+            <input
+              aria-valuemax="59"
+              aria-valuemin="0"
+              autocomplete="false"
+              class="emotion-11 emotion-12"
+              data-size="large"
+              data-testid="minutes-input"
+              placeholder="00"
+              role="spinbutton"
+              value=""
+            />
+            <span
+              class="emotion-13 emotion-14 emotion-4"
+            >
+              :
+            </span>
+          </div>
+          <div
+            class="emotion-7 emotion-1"
+          >
+            <input
+              aria-valuemax="59"
+              aria-valuemin="0"
+              autocomplete="false"
+              class="emotion-11 emotion-12"
+              data-size="large"
+              data-testid="seconds-input"
+              placeholder="00"
+              role="spinbutton"
+              value=""
+            />
+          </div>
+        </div>
+        <div
+          class="emotion-27 emotion-1"
+        >
+          <svg
+            class="emotion-29 emotion-30"
+            viewBox="0 0 16 16"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M8 15C11.866 15 15 11.866 15 8C15 4.13401 11.866 1 8 1C4.13401 1 1 4.13401 1 8C1 11.866 4.13401 15 8 15ZM8 4C8.41421 4 8.75 4.33579 8.75 4.75V7.75C8.75 8.16421 8.41421 8.5 8 8.5C7.58579 8.5 7.25 8.16421 7.25 7.75V4.75C7.25 4.33579 7.58579 4 8 4ZM8 12C8.55228 12 9 11.5523 9 11C9 10.4477 8.55228 10 8 10C7.44772 10 7 10.4477 7 11C7 11.5523 7.44772 12 8 12Z"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </div>
+      </div>
+      <p
+        class="emotion-31 emotion-4"
+      >
+        error
+      </p>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`TimeInput > renders correctly with helper and error 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.25rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-5 {
+  color: #3f4250;
+  font-size: 1rem;
+  font-family: Inter,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.emotion-7 {
+  font-size: 0.875rem;
+  font-family: Inter,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: text;
+  padding: 0.5rem;
+  box-shadow: none;
+  background: #ffffff;
+  border-radius: 0.25rem;
+  border: 1px solid #d9dadd;
+}
+
+.emotion-9:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #792dd4;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-9[data-disabled="false"]:hover,
+.emotion-9 [data-disabled="false"]:focus {
+  border-color: #792dd4;
+  outline: none;
+}
+
+.emotion-9:focus-within {
+  border-color: #792dd4;
+}
+
+.emotion-9[data-size='small'] {
+  height: 2rem;
+  padding-left: 0.5rem;
+}
+
+.emotion-9[data-size='medium'] {
+  height: 2.5rem;
+}
+
+.emotion-9[data-size='large'] {
+  height: 3rem;
+}
+
+.emotion-9[data-readonly='true'] {
+  background: #f9f9fa;
+  border-color: #d9dadd;
+  cursor: default;
+}
+
+.emotion-9[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
+  cursor: not-allowed;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-9[data-error='true'] {
+  border: 1px solid #b3144d;
+}
+
+.emotion-9[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #92103f;
+  box-shadow: 0px 0px 0px 3px #f91b6c40;
+}
+
+.emotion-9[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
+  border-color: #92103f;
+}
+
+.emotion-11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-15 {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 0.875rem;
+  width: 1.5625rem;
+  height: 1.5rem;
+  text-align: center;
+  border-radius: 0.25rem;
+  color: #3f4250;
+  caret-color: transparent;
+}
+
+.emotion-15[data-size='large'] {
+  font-size: 1rem;
+}
+
+.emotion-15:not(:disabled):hover {
+  background-color: #e9eaeb;
+  color: #727683;
+}
+
+.emotion-15:not(:disabled):active,
+.emotion-15:not(:disabled):focus {
+  background-color: #e9eaeb;
+  color: #3f4250;
+}
+
+.emotion-15:-moz-read-only {
+  cursor: default;
+}
+
+.emotion-15:read-only {
+  cursor: default;
+}
+
+.emotion-15:disabled {
+  cursor: not-allowed;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-15[data-period="true"] {
+  color: #727683;
+}
+
+.emotion-15[data-period="true"][data-size="large"] {
+  width: calc(1.5625rem + 0.125rem);
+}
+
+.emotion-15::-moz-selection {
+  background: none;
+}
+
+.emotion-15::selection {
+  background: none;
+}
+
+.emotion-18 {
+  color: #3f4250;
+  font-size: 1rem;
+  font-family: Inter,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding-inline: 0.125rem;
+}
+
+.emotion-33 {
+  vertical-align: middle;
+  fill: #b3144d;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
+}
+
+.emotion-33 .fillStroke {
+  stroke: #b3144d;
+  fill: none;
+}
+
+.emotion-35 {
+  color: #b3144d;
+  font-size: 0.75rem;
+  font-family: Inter,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+    >
+      <div
+        class="emotion-2 emotion-1"
+      >
+        <label
+          class="emotion-4 emotion-5 emotion-6"
+          for="«r1b»"
+        >
+          label
+        </label>
+        <span
+          class="emotion-7 emotion-6"
+        >
+          label description
+        </span>
+      </div>
+      <div
+        class="emotion-9 emotion-10"
+        data-disabled="false"
+        data-error="true"
+        data-readonly="false"
+        data-size="large"
+      >
+        <div
+          class="emotion-11 emotion-1"
+        >
+          <div
+            class="emotion-11 emotion-1"
+          >
+            <input
+              aria-valuemax="23"
+              aria-valuemin="0"
+              autocomplete="false"
+              class="emotion-15 emotion-16"
+              data-size="large"
+              data-testid="hours-input"
+              placeholder="00"
+              role="spinbutton"
+              value=""
+            />
+            <span
+              class="emotion-17 emotion-18 emotion-6"
+            >
+              :
+            </span>
+          </div>
+          <div
+            class="emotion-11 emotion-1"
+          >
+            <input
+              aria-valuemax="59"
+              aria-valuemin="0"
+              autocomplete="false"
+              class="emotion-15 emotion-16"
+              data-size="large"
+              data-testid="minutes-input"
+              placeholder="00"
+              role="spinbutton"
+              value=""
+            />
+            <span
+              class="emotion-17 emotion-18 emotion-6"
+            >
+              :
+            </span>
+          </div>
+          <div
+            class="emotion-11 emotion-1"
+          >
+            <input
+              aria-valuemax="59"
+              aria-valuemin="0"
+              autocomplete="false"
+              class="emotion-15 emotion-16"
+              data-size="large"
+              data-testid="seconds-input"
+              placeholder="00"
+              role="spinbutton"
+              value=""
+            />
+          </div>
+        </div>
+        <div
+          class="emotion-2 emotion-1"
+        >
+          <svg
+            class="emotion-33 emotion-34"
+            viewBox="0 0 16 16"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M8 15C11.866 15 15 11.866 15 8C15 4.13401 11.866 1 8 1C4.13401 1 1 4.13401 1 8C1 11.866 4.13401 15 8 15ZM8 4C8.41421 4 8.75 4.33579 8.75 4.75V7.75C8.75 8.16421 8.41421 8.5 8 8.5C7.58579 8.5 7.25 8.16421 7.25 7.75V4.75C7.25 4.33579 7.58579 4 8 4ZM8 12C8.55228 12 9 11.5523 9 11C9 10.4477 8.55228 10 8 10C7.44772 10 7 10.4477 7 11C7 11.5523 7.44772 12 8 12Z"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </div>
+      </div>
+      <p
+        class="emotion-35 emotion-6"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`TimeInput > renders correctly with label description and helper 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.25rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-5 {
+  color: #3f4250;
+  font-size: 1rem;
+  font-family: Inter,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.emotion-7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: text;
+  padding: 0.5rem;
+  box-shadow: none;
+  background: #ffffff;
+  border-radius: 0.25rem;
+  border: 1px solid #d9dadd;
+}
+
+.emotion-7:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #792dd4;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-7[data-disabled="false"]:hover,
+.emotion-7 [data-disabled="false"]:focus {
+  border-color: #792dd4;
+  outline: none;
+}
+
+.emotion-7:focus-within {
+  border-color: #792dd4;
+}
+
+.emotion-7[data-size='small'] {
+  height: 2rem;
+  padding-left: 0.5rem;
+}
+
+.emotion-7[data-size='medium'] {
+  height: 2.5rem;
+}
+
+.emotion-7[data-size='large'] {
+  height: 3rem;
+}
+
+.emotion-7[data-readonly='true'] {
+  background: #f9f9fa;
+  border-color: #d9dadd;
+  cursor: default;
+}
+
+.emotion-7[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
+  cursor: not-allowed;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-7[data-error='true'] {
+  border: 1px solid #b3144d;
+}
+
+.emotion-7[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #92103f;
+  box-shadow: 0px 0px 0px 3px #f91b6c40;
+}
+
+.emotion-7[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
+  border-color: #92103f;
+}
+
+.emotion-9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-13 {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 0.875rem;
+  width: 1.5625rem;
+  height: 1.5rem;
+  text-align: center;
+  border-radius: 0.25rem;
+  color: #3f4250;
+  caret-color: transparent;
+}
+
+.emotion-13[data-size='large'] {
+  font-size: 1rem;
+}
+
+.emotion-13:not(:disabled):hover {
+  background-color: #e9eaeb;
+  color: #727683;
+}
+
+.emotion-13:not(:disabled):active,
+.emotion-13:not(:disabled):focus {
+  background-color: #e9eaeb;
+  color: #3f4250;
+}
+
+.emotion-13:-moz-read-only {
+  cursor: default;
+}
+
+.emotion-13:read-only {
+  cursor: default;
+}
+
+.emotion-13:disabled {
+  cursor: not-allowed;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-13[data-period="true"] {
+  color: #727683;
+}
+
+.emotion-13[data-period="true"][data-size="large"] {
+  width: calc(1.5625rem + 0.125rem);
+}
+
+.emotion-13::-moz-selection {
+  background: none;
+}
+
+.emotion-13::selection {
+  background: none;
+}
+
+.emotion-16 {
+  color: #3f4250;
+  font-size: 1rem;
+  font-family: Inter,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding-inline: 0.125rem;
+}
+
+.emotion-29 {
+  color: #727683;
+  font-size: 0.75rem;
+  font-family: Inter,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+    >
+      <div
+        class="emotion-2 emotion-1"
+      >
+        <label
+          class="emotion-4 emotion-5 emotion-6"
+          for="«r16»"
+        >
+          label
+        </label>
+        <h1>
+          label
+        </h1>
+      </div>
+      <div
+        class="emotion-7 emotion-8"
+        data-disabled="false"
+        data-error="false"
+        data-readonly="false"
+        data-size="large"
+      >
+        <div
+          class="emotion-9 emotion-1"
+        >
+          <div
+            class="emotion-9 emotion-1"
+          >
+            <input
+              aria-valuemax="23"
+              aria-valuemin="0"
+              autocomplete="false"
+              class="emotion-13 emotion-14"
+              data-size="large"
+              data-testid="hours-input"
+              placeholder="00"
+              role="spinbutton"
+              value=""
+            />
+            <span
+              class="emotion-15 emotion-16 emotion-6"
+            >
+              :
+            </span>
+          </div>
+          <div
+            class="emotion-9 emotion-1"
+          >
+            <input
+              aria-valuemax="59"
+              aria-valuemin="0"
+              autocomplete="false"
+              class="emotion-13 emotion-14"
+              data-size="large"
+              data-testid="minutes-input"
+              placeholder="00"
+              role="spinbutton"
+              value=""
+            />
+            <span
+              class="emotion-15 emotion-16 emotion-6"
+            >
+              :
+            </span>
+          </div>
+          <div
+            class="emotion-9 emotion-1"
+          >
+            <input
+              aria-valuemax="59"
+              aria-valuemin="0"
+              autocomplete="false"
+              class="emotion-13 emotion-14"
+              data-size="large"
+              data-testid="seconds-input"
+              placeholder="00"
+              role="spinbutton"
+              value=""
+            />
+          </div>
+        </div>
+      </div>
+      <p
+        class="emotion-29 emotion-6"
+      >
+        helper
+      </p>
     </div>
   </div>
 </DocumentFragment>

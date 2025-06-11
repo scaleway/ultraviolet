@@ -2,9 +2,9 @@ import type { StoryFn } from '@storybook/react'
 import { ArrowDownIcon, DotsHorizontalIcon, PlusIcon } from '@ultraviolet/icons'
 import type { ComponentProps } from 'react'
 import { Breadcrumbs } from '..'
-import { AvatarV2 } from '../../AvatarV2'
+import { Avatar } from '../../Avatar'
 import { Button } from '../../Button'
-import { MenuV2 } from '../../MenuV2'
+import { Menu } from '../../Menu'
 import { Stack } from '../../Stack'
 
 export const AdvancedUsage: StoryFn<
@@ -12,39 +12,39 @@ export const AdvancedUsage: StoryFn<
 > = props => (
   <Stack gap={4}>
     <Breadcrumbs {...props}>
-      <MenuV2
+      <Menu
         align="start"
         disclosure={
           <Breadcrumbs.Item>
             <Stack direction="row" gap={1} alignItems="center">
-              <AvatarV2 variant="text" text="AS" shape="square" size="xsmall" />
+              <Avatar variant="text" text="AS" shape="square" size="xsmall" />
               Organization
               <ArrowDownIcon />
             </Stack>
           </Breadcrumbs.Item>
         }
       >
-        <MenuV2.Item sentiment="primary" active>
+        <Menu.Item sentiment="primary" active>
           <Stack direction="row" gap={1} alignItems="center">
-            <AvatarV2 variant="text" text="AS" shape="square" size="xsmall" />
+            <Avatar variant="text" text="AS" shape="square" size="xsmall" />
             Aria Sinclair
           </Stack>
-        </MenuV2.Item>
-        <MenuV2.Item>
+        </Menu.Item>
+        <Menu.Item>
           <Stack direction="row" gap={1} alignItems="center">
-            <AvatarV2 variant="text" text="JQ" shape="square" size="xsmall" />
+            <Avatar variant="text" text="JQ" shape="square" size="xsmall" />
             Jasper Quinn
           </Stack>
-        </MenuV2.Item>
-      </MenuV2>
-      <MenuV2
+        </Menu.Item>
+      </Menu>
+      <Menu
         align="start"
         searchable
         hideOnClickItem
         disclosure={
           <Breadcrumbs.Item>
             <Stack direction="row" gap={1} alignItems="center">
-              <AvatarV2
+              <Avatar
                 variant="colors"
                 colors={['#BF95F9', '#3D1862']}
                 shape="circle"
@@ -56,7 +56,7 @@ export const AdvancedUsage: StoryFn<
           </Breadcrumbs.Item>
         }
       >
-        <MenuV2.Group
+        <Menu.Group
           label="Projects"
           labelDescription={
             <Stack
@@ -72,9 +72,9 @@ export const AdvancedUsage: StoryFn<
             </Stack>
           }
         >
-          <MenuV2.Item sentiment="primary" active borderless>
+          <Menu.Item sentiment="primary" active borderless>
             <Stack direction="row" gap={1} alignItems="center">
-              <AvatarV2
+              <Avatar
                 variant="colors"
                 colors={['#BF95F9', '#3D1862']}
                 shape="circle"
@@ -82,10 +82,10 @@ export const AdvancedUsage: StoryFn<
               />
               Default Project
             </Stack>
-          </MenuV2.Item>
-          <MenuV2.Item borderless>
+          </Menu.Item>
+          <Menu.Item borderless>
             <Stack direction="row" gap={1} alignItems="center">
-              <AvatarV2
+              <Avatar
                 variant="colors"
                 colors={['#FFBFAB', '#822F15']}
                 shape="circle"
@@ -93,10 +93,10 @@ export const AdvancedUsage: StoryFn<
               />
               Project 1
             </Stack>
-          </MenuV2.Item>
-          <MenuV2.Item borderless>
+          </Menu.Item>
+          <Menu.Item borderless>
             <Stack direction="row" gap={1} alignItems="center">
-              <AvatarV2
+              <Avatar
                 variant="colors"
                 colors={['#FF9EC1', '#740D32']}
                 shape="circle"
@@ -104,15 +104,15 @@ export const AdvancedUsage: StoryFn<
               />
               Project 2
             </Stack>
-          </MenuV2.Item>
-        </MenuV2.Group>
-      </MenuV2>
+          </Menu.Item>
+        </Menu.Group>
+      </Menu>
       <Breadcrumbs.Item to="/products/1">Instance</Breadcrumbs.Item>
       <Breadcrumbs.Item to="/products/1/details">Overview</Breadcrumbs.Item>
     </Breadcrumbs>
     <Breadcrumbs {...props}>
       <Breadcrumbs.Item>Home</Breadcrumbs.Item>
-      <MenuV2
+      <Menu
         align="start"
         disclosure={
           <Breadcrumbs.Item>
@@ -120,10 +120,10 @@ export const AdvancedUsage: StoryFn<
           </Breadcrumbs.Item>
         }
       >
-        <MenuV2.Item>Instance</MenuV2.Item>
-        <MenuV2.Item>Private Network</MenuV2.Item>
-        <MenuV2.Item>Create</MenuV2.Item>
-      </MenuV2>
+        <Menu.Item>Instance</Menu.Item>
+        <Menu.Item>Private Network</Menu.Item>
+        <Menu.Item>Create</Menu.Item>
+      </Menu>
       <Breadcrumbs.Item>Add IP</Breadcrumbs.Item>
     </Breadcrumbs>
   </Stack>

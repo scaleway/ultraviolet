@@ -3,135 +3,139 @@
 exports[`Submit > form is invalid 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.25rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
-.emotion-2 {
-  -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
-  transition: border-color 0.2s ease,box-shadow 0.2s ease;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  background-color: #ffffff;
-  background-image: none;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
+.emotion-3 {
   color: #3f4250;
-  display: block;
-  max-width: 100%;
-  outline: none;
-  position: relative;
-  width: 100%;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  padding-top: 14px;
-  font-size: 16px;
-  line-height: 24px;
-  height: 48px;
-  padding-left: 8px;
-  padding-right: 20px;
-  padding-top: 14px;
-}
-
-.emotion-2::-webkit-input-placeholder {
-  color: #727683;
-  opacity: 0;
-}
-
-.emotion-2::-moz-placeholder {
-  color: #727683;
-  opacity: 0;
-}
-
-.emotion-2:-ms-input-placeholder {
-  color: #727683;
-  opacity: 0;
-}
-
-.emotion-2::placeholder {
-  color: #727683;
-  opacity: 0;
-}
-
-.emotion-2:hover,
-.emotion-2:focus {
-  border-color: #792dd4;
-}
-
-.emotion-2:focus {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-  border-color: #792dd4;
-}
-
-.emotion-2::-webkit-input-placeholder {
-  opacity: 1;
-}
-
-.emotion-2::-moz-placeholder {
-  opacity: 1;
-}
-
-.emotion-2:-ms-input-placeholder {
-  opacity: 1;
-}
-
-.emotion-2::placeholder {
-  opacity: 1;
-}
-
-.emotion-4 {
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 0;
-  padding-left: 8px;
-  padding-right: 8px;
-  pointer-events: none;
-  color: #727683;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  width: 100%;
-  height: 48px;
-  font-size:font-family: Inter,sans-serif;
-  font-size: 0.875rem;
-  font-weight: Regular;
+  font-size: 1rem;
+  font-family: Inter,sans-serif;
+  font-weight: 500;
   letter-spacing: 0;
-  line-height: 1.25rem;
-  paragraph-spacing: 0;
-  text-case: none;
+  line-height: 1.5rem;
+  text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  weight: 400;
-  -webkit-transition: -webkit-transform 150ms;
-  transition: transform 150ms;
-  -webkit-transform: translate(0, 12px) scale(1);
-  -moz-transform: translate(0, 12px) scale(1);
-  -ms-transform: translate(0, 12px) scale(1);
-  transform: translate(0, 12px) scale(1);
-  -webkit-transform: translate(-9.6%, -3px) scale(0.8);
-  -moz-transform: translate(-9.6%, -3px) scale(0.8);
-  -ms-transform: translate(-9.6%, -3px) scale(0.8);
-  transform: translate(-9.6%, -3px) scale(0.8);
+  cursor: pointer;
 }
 
-.emotion-6 {
-  height: auto;
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  height: 3rem;
+  background: #ffffff;
+  border: 1px solid #d9dadd;
+  border-radius: 0.25rem;
 }
 
-.emotion-6[data-is-animated="true"] {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
+.emotion-5>.emotion-8 {
+  color: #3f4250;
 }
 
-.emotion-8 {
-  font-size: 12px;
-  color: #b3144d;
-  padding-top: 0.125rem;
+.emotion-5>.emotion-8::-webkit-input-placeholder {
+  color: #727683;
 }
 
-.emotion-10 {
+.emotion-5>.emotion-8::-moz-placeholder {
+  color: #727683;
+}
+
+.emotion-5>.emotion-8:-ms-input-placeholder {
+  color: #727683;
+}
+
+.emotion-5>.emotion-8::placeholder {
+  color: #727683;
+}
+
+.emotion-5[data-success='true'] {
+  border-color: #22674e;
+}
+
+.emotion-5[data-error='true'] {
+  border-color: #b3144d;
+}
+
+.emotion-5[data-readonly='true'] {
+  background: #f9f9fa;
+  border-color: #d9dadd;
+}
+
+.emotion-5[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
+}
+
+.emotion-5[data-disabled='true']>.emotion-8 {
+  color: #b5b7bd;
+}
+
+.emotion-5[data-disabled='true']>.emotion-8::-webkit-input-placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-5[data-disabled='true']>.emotion-8::-moz-placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-5[data-disabled='true']>.emotion-8:-ms-input-placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-5[data-disabled='true']>.emotion-8::placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-5:not([data-disabled='true']):not([data-readonly]):hover {
+  border-color: #8c40ef;
+}
+
+.emotion-7 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  border: none;
+  outline: none;
+  height: 100%;
+  width: 100%;
+  padding-left: 1rem;
+  background: transparent;
+  font-size: 0.875rem;
+}
+
+.emotion-7[data-size='large'] {
+  font-size: 1rem;
+}
+
+.emotion-7[data-size='small'] {
+  padding-left: 0.5rem;
+}
+
+.emotion-9 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -173,12 +177,12 @@ exports[`Submit > form is invalid 1`] = `
   color: #ffffff;
 }
 
-.emotion-10:hover {
+.emotion-9:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-10 .e1y1n78x0 {
+.emotion-9 .e1y1n78x0 {
   stroke: transparent;
 }
 
@@ -188,36 +192,37 @@ exports[`Submit > form is invalid 1`] = `
     <form
       novalidate=""
     >
-      <div>
-        <div
-          class="emotion-0 emotion-1"
+      <div
+        class="emotion-0 emotion-1"
+      >
+        <label
+          class="emotion-2 emotion-3 emotion-4"
+          for="«r1»"
         >
-          <input
-            aria-label="test"
-            autocomplete="on"
-            class="emotion-2 emotion-3"
-            name="toto"
-            type="text"
-            value="4"
-          />
-          <label
-            aria-live="assertive"
-            class="emotion-4 emotion-5"
-          >
-            test
-          </label>
-        </div>
-        <div
-          class="emotion-6 emotion-7"
-          data-is-animated="true"
-        >
+          test
+        </label>
+        <div>
           <div
-            class="emotion-8 emotion-9"
-          />
+            class="emotion-5 emotion-6"
+            data-disabled="false"
+            data-error="false"
+            data-readonly="false"
+            data-success="false"
+          >
+            <input
+              aria-invalid="false"
+              class="emotion-7 emotion-8"
+              data-size="large"
+              id="«r1»"
+              name="toto"
+              type="text"
+              value="4"
+            />
+          </div>
         </div>
       </div>
       <button
-        class="emotion-10 emotion-11"
+        class="emotion-9 emotion-10"
         disabled=""
         type="submit"
       >

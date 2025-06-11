@@ -1,227 +1,165 @@
-import { act, screen } from '@testing-library/react'
+import { fireEvent, screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
-import { describe, expect, test } from 'vitest'
+import { describe, expect, test, vi } from 'vitest'
 import { TextInput } from '..'
 
 describe('TextInput', () => {
-  test('should render correctly', () =>
-    shouldMatchEmotionSnapshot(<TextInput />))
-
   test('should render correctly with basic props', () =>
     shouldMatchEmotionSnapshot(
+      <TextInput label="Test" value="test" onChange={() => {}} />,
+    ))
+
+  test('should control the value', () => {
+    const onChange = vi.fn()
+    const onChangeValue = vi.fn()
+
+    renderWithTheme(
       <TextInput
-        id="test"
         label="Test"
         value="test"
-        placeholder="type..."
-        type="text"
+        onChange={onChange}
+        onChangeValue={onChangeValue}
       />,
-    ))
-
-  test('should render correctly label and noTopLabel', () => {
-    shouldMatchEmotionSnapshot(
-      <TextInput label="Test" value="test" noTopLabel />,
     )
-    shouldMatchEmotionSnapshot(<TextInput value="test" noTopLabel />)
-    shouldMatchEmotionSnapshot(<TextInput label="Test" value="test" />)
+
+    const textarea = screen.getByLabelText<HTMLInputElement>('Test')
+    expect(textarea.value).toBe('test')
+    fireEvent.change(textarea, { target: { value: 'another value' } })
+    expect(onChange).toHaveBeenCalled()
+    expect(onChangeValue).toHaveBeenCalledWith('another value')
   })
 
-  test('should render correctly with notice', () =>
-    shouldMatchEmotionSnapshot(
-      <TextInput label="Test" value="test" notice="Test notice" />,
-    ))
+  test('should be clearable', async () => {
+    const onChange = vi.fn()
 
-  test('should render correctly disabled true', () =>
-    shouldMatchEmotionSnapshot(
-      <TextInput label="Test" value="test" disabled />,
-    ))
-  test('should render correctly required true', () =>
-    shouldMatchEmotionSnapshot(
-      <TextInput label="Test" value="test" required />,
-    ))
-
-  test('should render correctly error string', () =>
-    shouldMatchEmotionSnapshot(
-      <TextInput label="Test" value="test" error="test error" />,
-    ))
-
-  test('should render correctly multiline true', () =>
-    shouldMatchEmotionSnapshot(<TextInput multiline resizable={false} />))
-
-  test('should render correctly with height prop', () =>
-    shouldMatchEmotionSnapshot(
-      <TextInput height={90} label="Test" value="test" />,
-    ))
-
-  test('should render correctly with unit is px', () =>
-    shouldMatchEmotionSnapshot(
-      <TextInput label="test" name="test" unit="px" />,
-    ))
-
-  test('should render correctly with unit is px and required', () =>
-    shouldMatchEmotionSnapshot(
-      <TextInput label="test" name="test" unit="px" required />,
-    ))
-
-  test('should render correctly with null right component', () =>
-    shouldMatchEmotionSnapshot(
-      <TextInput
-        label="test"
-        name="test"
-        type="toggleable-password"
-        generated
-      />,
-    ))
-
-  test('should render correctly with edit true', () =>
-    shouldMatchEmotionSnapshot(<TextInput label="test" name="test" edit />))
-
-  test('should render correctly with generated true', () =>
-    shouldMatchEmotionSnapshot(
-      <TextInput label="test" name="test" generated />,
-    ))
-
-  test('should render correctly with valid true', () =>
-    shouldMatchEmotionSnapshot(<TextInput label="test" name="test" valid />))
-
-  test('should render correctly with valid false', () =>
-    shouldMatchEmotionSnapshot(
-      <TextInput label="test" name="test" valid={false} />,
-    ))
-
-  test('should render correctly with readOnly true', () =>
-    shouldMatchEmotionSnapshot(<TextInput label="test" name="test" readOnly />))
-
-  test('should render correctly with fillAvailable true', () =>
-    shouldMatchEmotionSnapshot(
-      <TextInput label="test" name="test" fillAvailable />,
-    ))
-
-  test('should render correctly with defaultValue true', () =>
-    shouldMatchEmotionSnapshot(
-      <TextInput label="test" name="test" defaultValue="Test default value" />,
-    ))
-
-  test('should render correctly with ariaControls', () =>
-    shouldMatchEmotionSnapshot(
-      <TextInput label="test" name="test" ariaControls="test-control" />,
-    ))
-
-  test('should render multiline with props', () =>
-    shouldMatchEmotionSnapshot(
-      <TextInput multiline rows={10} cols={50} fillAvailable resizable />,
-    ))
-
-  test('should render on focus', () => {
-    const { asFragment } = renderWithTheme(
-      <TextInput
-        id="test"
-        label="Test"
-        multiline
-        rows={10}
-        cols={50}
-        onFocus={() => {}}
-      />,
+    renderWithTheme(
+      <TextInput label="Test" value="test" onChange={onChange} clearable />,
     )
-    const input = screen.getByLabelText('Test')
-    act(() => {
-      input.focus()
+
+    const textarea = screen.getByLabelText<HTMLTextAreaElement>('Test')
+    expect(textarea.value).toBe('test')
+    const clearableButton = screen.getByLabelText('clear value')
+    await userEvent.click(clearableButton)
+    expect(onChange).toHaveBeenCalledWith({
+      target: { value: '' },
+      currentTarget: { value: '' },
     })
-    expect(asFragment()).toMatchSnapshot()
   })
 
-  test('should render toggleable password', () => {
+  test('should render correctly when input is disabled', () =>
     shouldMatchEmotionSnapshot(
-      <TextInput type="toggleable-password" name="password" />,
-    )
-  })
+      <TextInput label="Test" value="test" onChange={() => {}} disabled />,
+    ))
 
-  test('should handle events on toggleable password', async () => {
-    const { asFragment } = renderWithTheme(
-      <TextInput
-        type="toggleable-password"
-        name="password"
-        data-testid="test"
-      />,
-    )
-    const button = screen.getByTestId('test-visibility-button')
-    await userEvent.click(button)
-    await userEvent.type(button, '{enter}')
-    await userEvent.type(button, '{space}')
-
-    expect(asFragment()).toMatchSnapshot()
-  })
-
-  test('should render random', () => {
-    shouldMatchEmotionSnapshot(<TextInput random="test" name="test" />)
+  test('should render correctly when input is readOnly', () =>
     shouldMatchEmotionSnapshot(
-      <TextInput label="test" name="test" random="test" disabled />,
-    )
-  })
+      <TextInput label="Test" value="test" onChange={() => {}} readOnly />,
+    ))
 
-  test('should handle events on random button', async () => {
-    const { asFragment } = renderWithTheme(
+  test('should render correctly when input has a success sentiment', () =>
+    shouldMatchEmotionSnapshot(
       <TextInput
-        random="test"
-        name="test"
-        data-testid="test"
+        label="Test"
+        value="test"
         onChange={() => {}}
+        success="success"
       />,
-    )
-    const button = screen.getByTestId('test-randomize-button')
-    await userEvent.click(button)
-    await userEvent.type(button, '{enter}')
-    await userEvent.type(button, '{space}')
-    expect(asFragment()).toMatchSnapshot()
-  })
+    ))
 
-  test('should render toggleable password with required', () => {
-    const { asFragment } = renderWithTheme(
-      <TextInput type="toggleable-password" name="password" required />,
-    )
-    expect(asFragment()).toMatchSnapshot()
-  })
-
-  test('should render random with required', () => {
-    const { asFragment } = renderWithTheme(
-      <TextInput random="test" name="test" required />,
-    )
-    expect(asFragment()).toMatchSnapshot()
-  })
-
-  test('should render unit with required', () => {
-    const { asFragment } = renderWithTheme(
-      <TextInput label="test" name="test" unit="px" required />,
-    )
-    expect(asFragment()).toMatchSnapshot()
-  })
-
-  test('should render correctly with valid true', () => {
-    const { asFragment } = renderWithTheme(
-      <TextInput label="test" name="test" valid />,
-    )
-    expect(asFragment()).toMatchSnapshot()
-  })
-
-  test('should render correctly with valid false', () => {
-    const { asFragment } = renderWithTheme(
-      <TextInput label="test" name="test" valid={false} />,
-    )
-    expect(asFragment()).toMatchSnapshot()
-  })
-
-  test('should render correctly with multiple right components', () => {
-    const { asFragment } = renderWithTheme(
+  test('should render correctly when input  has a error sentiment', () =>
+    shouldMatchEmotionSnapshot(
       <TextInput
-        label="Multiple"
-        random="prefix"
-        unit="px"
-        required
-        type="toggleable-password"
-        valid
+        label="Test"
+        value="test"
+        onChange={() => {}}
+        error="success"
+      />,
+    ))
+
+  test('should display success message', () => {
+    const onChange = vi.fn()
+    const successMessage = 'success message'
+
+    renderWithTheme(
+      <TextInput
+        label="Test"
+        value="test"
+        onChange={onChange}
+        success={successMessage}
       />,
     )
-    expect(asFragment()).toMatchSnapshot()
+
+    expect(screen.getByText(successMessage)).toBeDefined()
+  })
+
+  test('should display error message', () => {
+    const onChange = vi.fn()
+    const errorMessage = 'error!'
+
+    renderWithTheme(
+      <TextInput
+        label="Test"
+        value="test"
+        onChange={onChange}
+        success={errorMessage}
+      />,
+    )
+
+    expect(screen.getByText(errorMessage)).toBeDefined()
+  })
+
+  test('should display helper message', () => {
+    const onChange = vi.fn()
+    const helperMessage = 'helper'
+
+    renderWithTheme(
+      <TextInput
+        label="Test"
+        value="test"
+        onChange={onChange}
+        helper={helperMessage}
+      />,
+    )
+
+    expect(screen.getByText(helperMessage)).toBeDefined()
+  })
+
+  test('should not display helper message when success is displayed', () => {
+    const onChange = vi.fn()
+    const successMessage = 'success message'
+    const helperMessage = 'helper'
+
+    renderWithTheme(
+      <TextInput
+        label="Test"
+        value="test"
+        onChange={onChange}
+        success={successMessage}
+        helper={helperMessage}
+      />,
+    )
+
+    expect(screen.getByText(successMessage)).toBeDefined()
+    expect(screen.queryByText(helperMessage)).toBeNull()
+  })
+
+  test('should not display helper message when error is displayed', () => {
+    const onChange = vi.fn()
+    const error = 'error!'
+    const helperMessage = 'helper'
+
+    renderWithTheme(
+      <TextInput
+        label="Test"
+        value="test"
+        onChange={onChange}
+        error={error}
+        helper={helperMessage}
+      />,
+    )
+
+    expect(screen.getByText(error)).toBeDefined()
+    expect(screen.queryByText(helperMessage)).toBeNull()
   })
 })

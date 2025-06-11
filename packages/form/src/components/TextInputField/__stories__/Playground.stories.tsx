@@ -2,7 +2,4 @@ import { Template } from './Template.stories'
 
 export const Playground = Template.bind({})
 
-Playground.args = {
-  name: 'value',
-  label: 'Type anything',
-}
+Playground.args = Template.args

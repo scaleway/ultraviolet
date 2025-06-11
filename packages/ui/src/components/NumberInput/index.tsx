@@ -2,430 +2,485 @@
 
 import styled from '@emotion/styled'
 import { MinusIcon, PlusIcon } from '@ultraviolet/icons'
-import type {
-  ChangeEventHandler,
-  FocusEventHandler,
-  InputHTMLAttributes,
-  KeyboardEventHandler,
+import type { ForwardedRef, InputHTMLAttributes, ReactNode } from 'react'
+import {
+  forwardRef,
+  useCallback,
+  useId,
+  useImperativeHandle,
+  useMemo,
+  useRef,
 } from 'react'
-import { useId, useMemo, useRef, useState } from 'react'
 import { Button } from '../Button'
+import { Label } from '../Label'
+import { Row } from '../Row'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
 import { Tooltip } from '../Tooltip'
-import {
-  bounded,
-  getMinusRoundedValue,
-  getPlusRoundedValue,
-  roundStep,
-} from './helpers'
 
-const containerSizes = {
-  large: 48,
-  medium: 40,
-  small: 32,
-}
+const SIZES = {
+  small: '400', // sizing theme tokens key
+  medium: '500',
+  large: '600',
+} as const
 
-type ContainerSizesType = keyof typeof containerSizes
+type Sizes = keyof typeof SIZES
 
-const BASE_INPUT_WIDTH = 34
+const SideContainer = styled(Stack)`
+  padding: ${({ theme }) => `${theme.space['0.25']} ${theme.space['1']}`};
 
-const StyledSelectButton = styled(Button)`
-  margin: 0 ${({ theme }) => theme.space['1']};
-  width: 32px;
-  height: 32px;
+  &[data-size='small'] {
+    height: ${({ theme }) => theme.sizing[SIZES.small]};
+  }
+
+  &[data-size='medium'] {
+    height: ${({ theme }) => theme.sizing[SIZES.medium]};
+  }
+
+  &[data-size='large'] {
+    height: ${({ theme }) => theme.sizing[SIZES.large]};
+    padding: ${({ theme }) => `${theme.space['0.5']} ${theme.space['1']}`};
+  }
 `
 
-const StyledCenterBox = styled('div', {
+const InputContainer = styled(Row)`
+  border-width: 0 1px 0 1px;
+  border-style: solid;
+  border-color: inherit;
+  background: inherit;
+  width: 100%;
+`
+
+const Unit = styled(Text, {
   shouldForwardProp: prop => !['size'].includes(prop),
-})<{ size: ContainerSizesType }>`
+})<{ size: Sizes }>`
   display: flex;
-  flex: 1;
-  flex-direction: row;
-  height: ${({ size }) => (size === 'small' ? '24px' : '32px')};
   align-items: center;
-  outline: none;
-  justify-content: center;
-  border-radius: ${({ theme }) => theme.radii.default};
-  border: 1px solid transparent;
-  max-width: 100%;
+  padding: ${({ theme }) => theme.space['1']};
+  height: ${({ size }) =>
+    ({ theme }) =>
+      theme.sizing[SIZES[size]]};
+  font-size: ${({ theme, size }) =>
+    size === 'large'
+      ? theme.typography.body.fontSize
+      : theme.typography.bodySmall.fontSize};
 `
 
-const StyledInput = styled.input`
-  color: ${({ theme }) => theme.colors.neutral.text};
-  background-color: transparent;
-  font-size: ${({ theme }) => theme.typography.bodyStrong.fontSize};
-  border: none;
+const Input = styled.input`
   outline: none;
-  position: relative;
-  margin-right: ${({ theme }) => theme.space['0.5']};
-  max-width: 100%;
-  font-weight: ${({ theme }) => theme.typography.bodyStrong.weight};
+  border: none;
+  padding: 0;
+  width: 100%;
+  color: ${({ theme }) => theme.colors.neutral.text};
+  font-size: ${({ theme }) => theme.typography.bodySmall.fontSize};
+  font-family: ${({ theme }) => theme.typography.bodySmall.fontFamily};
+  font-weight: ${({ theme }) => theme.typography.bodySmall.fontWeight};
+  line-height: ${({ theme }) => theme.typography.bodySmall.lineHeight};
   text-align: center;
+  padding: ${({ theme }) => theme.space['1']};
+  background: none;
 
+  &[data-has-unit='true'] {
+    text-align: left;
+    padding: ${({ theme }) =>
+      `${theme.space['1']} 0 ${theme.space['1']} ${theme.space['1']}`};
+  }
+
+  // Remove native arrows from input[type=number]
   &::-webkit-outer-spin-button,
   &::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
   }
 
-  ::placeholder {
-    color: ${({ theme }) => theme.colors.neutral.textWeak};
+  & {
+    -moz-appearance: textfield;
+    appearance: textfield;
   }
 
-  -moz-appearance: textfield;
+  &[data-size='small'] {
+    height: ${({ theme }) => theme.sizing[SIZES.small]};
+  }
 
-  &[disabled] {
+  &[data-size='medium'] {
+    height: ${({ theme }) => theme.sizing[SIZES.medium]};
+  }
+
+  &[data-size='large'] {
+    height: ${({ theme }) => theme.sizing[SIZES.large]};
+    font-size: ${({ theme }) => theme.typography.body.fontSize};
+  font-family: ${({ theme }) => theme.typography.body.fontFamily};
+  font-weight: ${({ theme }) => theme.typography.body.fontWeight};
+  line-height: ${({ theme }) => theme.typography.body.lineHeight};
+
+  }
+
+  &:read-only {
+    color: ${({ theme }) => theme.colors.neutral.text};
+    background: ${({ theme }) => theme.colors.neutral.backgroundWeak};
+    border-block: 1px solid ${({ theme }) => theme.colors.neutral.border};
+
+    & ~ ${Unit} {
+      background: ${({ theme }) => theme.colors.neutral.backgroundWeak};
+    }
+  }
+
+  &:disabled {
     color: ${({ theme }) => theme.colors.neutral.textDisabled};
+    background: ${({ theme }) => theme.colors.neutral.backgroundDisabled};
     cursor: not-allowed;
+    border-block: 1px solid ${({ theme }) => theme.colors.neutral.borderDisabled};
+
+    & ~ ${Unit} {
+      background: ${({ theme }) => theme.colors.neutral.backgroundDisabled};
+      cursor: not-allowed;
+      user-select: none;
+    }
   }
+
+  &:placeholder-shown ~ ${Unit} {
+    color: ${({ theme }) => theme.colors.neutral.textWeak};
+    font-size: ${({ theme }) => theme.typography.body.fontSize}
+  }
+
+  &[data-controls='false'] {
+  text-align: left;
+}
 `
 
-const StyledText = styled('span', {
-  shouldForwardProp: prop => !['disabled'].includes(prop),
-})<{ disabled: boolean }>`
-  color: ${({ theme, disabled }) =>
-    disabled ? theme.colors.neutral.textDisabled : theme.colors.neutral.text};
-  user-select: none;
-  margin-right: ${({ theme }) => theme.space['1']};
-`
-
-const StyledContainer = styled('div', {
-  shouldForwardProp: prop => !['size'].includes(prop),
-})<{ size: ContainerSizesType }>`
-  background-color: ${({ theme }) => theme.colors.neutral.background};
+const Container = styled.div`
   display: flex;
-  flex-direction: row;
   align-items: center;
-  align-self: stretch;
-  font-weight: 500;
-  height: ${({ size }) => containerSizes[size]}px;
+  justify-content: space-between;
+  flex-direction: row;
   border: 1px solid ${({ theme }) => theme.colors.neutral.border};
   border-radius: ${({ theme }) => theme.radii.default};
 
-  &[data-error='true'] {
-    border: 1px solid ${({ theme }) => theme.colors.danger.border};
+  &:focus-within {
+    border-color: ${({ theme }) => theme.colors.primary.borderHover};
+    box-shadow: ${({ theme }) => theme.shadows.focusPrimary};
   }
 
-  &[aria-disabled='true'] {
+  &[data-success='true'] {
+    border-color: ${({ theme }) => theme.colors.success.border};
+  }
+
+  &[data-error='true'] {
+    border-color: ${({ theme }) => theme.colors.danger.border};
+  }
+
+  &:hover {
+    border-color: ${({ theme }) => theme.colors.primary.borderHover};
+  }
+
+  &[data-readonly='true'] {
+    border-color: ${({ theme }) => theme.colors.neutral.border};
+    background: ${({ theme }) => theme.colors.neutral.backgroundWeak};
+    cursor: not-allowed;
+  }
+
+  &[data-disabled='true'] {
+    border-color: ${({ theme }) => theme.colors.neutral.borderDisabled};
     background: ${({ theme }) => theme.colors.neutral.backgroundDisabled};
     cursor: not-allowed;
   }
 
-  &:not([aria-disabled='true']) {
-    ${StyledCenterBox}:hover,
-    ${StyledCenterBox}:focus {
-      border: 1px solid ${({ theme }) => theme.colors.primary.borderHover};
-    }
+  &[data-controls='false'] {
+    & > ${InputContainer} {
+          border-width: 0;
+    };
+  }
 
-    ${StyledCenterBox}:focus-within {
-      box-shadow: ${({ theme }) => theme.shadows.focusPrimary};
-      border: 1px solid ${({ theme }) => theme.colors.primary.borderHover};
-    }
+  &[data-size='small'] {
+    height: ${({ theme }) => theme.sizing[SIZES.small]};
+  }
+
+  &[data-size='medium'] {
+    height: ${({ theme }) => theme.sizing[SIZES.medium]};
+  }
+
+  &[data-size='large'] {
+    height: ${({ theme }) => theme.sizing[SIZES.large]};
   }
 `
 
 type NumberInputProps = {
-  disabled?: boolean
-  maxValue?: number
-  minValue?: number
-  name?: string
-  onChange?: (input: number | undefined) => void
-  onMaxCrossed?: () => void
-  onMinCrossed?: () => void
-  size?: ContainerSizesType
-  /**
-   * Define how much will stepper increase / decrease each time you click on + / - button.
-   */
-  step?: number
+  size?: Sizes
   /**
    * Text displayed into component at the right of number value.
    */
-  text?: string
-  defaultValue?: number
-  value?: number | null
-  disabledTooltip?: string
+  unit?: string
+  tooltip?: string
   className?: string
   'data-testid'?: string
   label?: string
-  'aria-label'?: string
-  'aria-describedby'?: string
-  id?: string
-  placeholder?: string
-  error?: string | boolean
-} & Omit<
+  /**
+   * Label description displayed right next to the label. It allows you to customize the label content.
+   */
+  labelDescription?: ReactNode
+  /**
+   * Whether to show controls
+   */
+  controls?: boolean
+  error?: string
+  success?: string | boolean
+  helper?: ReactNode
+  value?: number | null
+  onChange?: (newValue: number | null) => void
+  min?: number
+  max?: number
+} & Pick<
   InputHTMLAttributes<HTMLInputElement>,
-  'size' | 'onChange' | 'value' | 'defaultValue'
+  | 'onFocus'
+  | 'onBlur'
+  | 'name'
+  | 'id'
+  | 'placeholder'
+  | 'aria-label'
+  | 'disabled'
+  | 'step'
+  | 'readOnly'
+  | 'required'
+  | 'autoFocus'
 >
 
 /**
- * @deprecated This component is deprecated. Please use `NumberInputV2` instead.
+ * NumberInput component is used to increment / decrement a number value by clicking on + / - buttons or
+ * by typing into input. If the value is out of the min / max range, the input will automatically be the min / max value on blur.
  */
-export const NumberInput = ({
-  disabled = false,
-  maxValue,
-  minValue = 0,
-  name = 'numberinput',
-  onChange,
-  onFocus,
-  onBlur,
-  onMaxCrossed,
-  onMinCrossed,
-  size = 'large',
-  step = 1,
-  text,
-  defaultValue,
-  value,
-  disabledTooltip,
-  className,
-  label,
-  id,
-  placeholder,
-  error,
-  'aria-label': ariaLabel,
-  'aria-describedby': ariaDescribedBy,
-  'data-testid': dataTestId,
-}: NumberInputProps) => {
-  const inputRef = useRef<HTMLInputElement>(null)
-
-  const uniqueId = useId()
-
-  // local state used if component is not controlled (no value prop provided)
-  const [inputValue, setInputValue] = useState<number | undefined>(() => {
-    if (defaultValue && minValue && defaultValue < minValue) {
-      return minValue
-    }
-    if (defaultValue && maxValue && defaultValue > maxValue) {
-      return maxValue
-    }
-
-    return defaultValue
-  })
-
-  const currentValue =
-    value !== undefined && value !== null ? value : inputValue
-
-  const setValue = (
-    newValue: number | undefined,
-    /**
-     * If true, will check if newValue is between minValue and maxValue and set it to minValue or maxValue if it's not.
-     */
-    hasMinMaxVerification = true,
+export const NumberInput = forwardRef(
+  (
+    {
+      disabled = false,
+      max = Number.MAX_SAFE_INTEGER,
+      min = 0,
+      name,
+      onChange,
+      onFocus,
+      onBlur,
+      size = 'large',
+      step,
+      unit,
+      value,
+      tooltip,
+      className,
+      label,
+      labelDescription,
+      id,
+      controls = true,
+      placeholder = '',
+      error,
+      success,
+      helper,
+      'aria-label': ariaLabel,
+      'data-testid': dataTestId,
+      required,
+      autoFocus,
+      readOnly,
+    }: NumberInputProps,
+    ref: ForwardedRef<HTMLInputElement>,
   ) => {
-    let nextValue = newValue
-    if (value === undefined && hasMinMaxVerification) {
-      if (newValue !== undefined && newValue < minValue) {
-        nextValue = minValue
-      }
+    const localRef = useRef<HTMLInputElement>(null)
+    useImperativeHandle(ref, () => localRef.current as HTMLInputElement)
 
-      if (
-        newValue !== undefined &&
-        maxValue !== undefined &&
-        newValue > maxValue
-      ) {
-        nextValue = maxValue
-      }
-    }
-    setInputValue(nextValue)
-    onChange?.(nextValue)
-  }
+    const uniqueId = useId()
+    const localId = id ?? uniqueId
 
-  const offsetFn = (direction: number) => () => {
-    const localValue = currentValue ?? 0
-    const newValue =
-      localValue % step === 0 ? localValue + step * direction : localValue
-    const roundedValue = roundStep(newValue, step, direction)
-
-    setValue(roundedValue)
-  }
-
-  const handleChange: ChangeEventHandler<HTMLInputElement> = event => {
-    setValue(
-      event.currentTarget.value ? Number(event.currentTarget.value) : undefined,
-      false,
+    const onClickSideButton = useCallback(
+      (direction: 'up' | 'down') => () => {
+        if (direction === 'up') {
+          localRef.current?.stepUp()
+        } else if (direction === 'down') {
+          localRef.current?.stepDown()
+        }
+        onChange?.(Number.parseFloat(localRef.current?.value ?? '') ?? min)
+      },
+      [localRef, min, onChange],
     )
-  }
 
-  const handleOnBlur: FocusEventHandler<HTMLInputElement> = event => {
-    if (currentValue) {
-      const boundedValue = bounded(
-        currentValue,
-        minValue ?? currentValue,
-        maxValue ?? currentValue,
-      )
+    const isMinusDisabled = useMemo(
+      () => {
+        if (!localRef?.current?.value || localRef?.current?.value === '') {
+          return false
+        }
 
-      if (maxValue && currentValue > maxValue) onMaxCrossed?.()
-      if (minValue && currentValue < minValue) onMinCrossed?.()
+        const numericValue = Number(localRef?.current?.value)
+        if (Number.isNaN(numericValue)) return false
 
-      setValue(boundedValue)
+        const minValue = typeof min === 'number' ? min : Number(min)
 
-      onBlur?.(event)
-    }
-  }
+        return Number.isNaN(numericValue) || numericValue <= minValue
+      }, // eslint-disable-next-line react-hooks/exhaustive-deps
+      [localRef?.current?.value, min],
+    )
 
-  const onKeyDown: KeyboardEventHandler = event => {
-    if (event.key === 'ArrowUp') {
-      event.stopPropagation()
-      event.preventDefault()
+    const isPlusDisabled = useMemo(
+      () => {
+        if (!localRef?.current?.value || localRef?.current?.value === '') {
+          return false
+        }
 
-      const direction = 1
-      const localValue = currentValue ?? 0
+        const numericValue = Number(localRef?.current?.value)
+        if (Number.isNaN(numericValue)) return false
 
-      const newValue =
-        localValue % step === 0 ? localValue + step * direction : localValue
-      const roundedValue = roundStep(newValue, step, direction)
+        const maxValue = typeof max === 'number' ? max : Number(max)
 
-      if (maxValue === undefined) {
-        setValue(roundedValue)
+        return numericValue >= maxValue
+      }, // eslint-disable-next-line react-hooks/exhaustive-deps
+      [localRef?.current?.value, max],
+    )
 
-        return
+    const helperSentiment = useMemo(() => {
+      if (error) {
+        return 'danger'
       }
 
-      setValue(Math.min(roundedValue, maxValue))
+      if (success) {
+        return 'success'
+      }
+
+      return 'neutral'
+    }, [error, success])
+
+    let inputValue: string | undefined
+    if (value !== undefined) {
+      inputValue =
+        value !== null && typeof value === 'number' ? value.toString() : ''
     }
 
-    if (event.key === 'ArrowDown') {
-      event.stopPropagation()
-      event.preventDefault()
-
-      const direction = -1
-      const localValue = currentValue ?? 0
-
-      const newValue =
-        localValue % step === 0 ? localValue + step * direction : localValue
-      const roundedValue = roundStep(newValue, step, direction)
-
-      setValue(Math.max(roundedValue, minValue))
-    }
-  }
-
-  const isMinusDisabled = useMemo(() => {
-    if (disabled) return true
-    if (currentValue === undefined) return false
-    if (getMinusRoundedValue(currentValue, step) < minValue) {
-      return true
-    }
-
-    return disabled
-  }, [currentValue, disabled, minValue, step])
-
-  const isPlusDisabled = useMemo(() => {
-    if (disabled) return true
-    if (currentValue === undefined) return false
-    if (maxValue && getPlusRoundedValue(currentValue, step) > maxValue) {
-      return true
-    }
-
-    return disabled
-  }, [currentValue, disabled, maxValue, step])
-
-  const inputWidth = useMemo(() => {
-    if (placeholder && currentValue === undefined) {
-      return placeholder.length * 12
-    }
-
-    if (currentValue !== undefined) {
-      return currentValue.toString().length * 16
-    }
-
-    return BASE_INPUT_WIDTH
-  }, [currentValue, placeholder])
-
-  return (
-    <Stack gap={1}>
-      {label ? (
-        <Text variant="bodyStrong" as="label" htmlFor={id || uniqueId}>
-          {label}
-        </Text>
-      ) : null}
-      <Stack gap={0.5}>
-        <StyledContainer
-          aria-disabled={disabled}
-          data-error={!!error}
-          size={size}
-          className={className}
-          data-testid={dataTestId}
-        >
-          <Tooltip text={isMinusDisabled && disabledTooltip}>
-            <StyledSelectButton
-              onClick={offsetFn(-1)}
-              disabled={isMinusDisabled}
-              aria-label="Minus"
-              type="button"
-              variant="ghost"
-              sentiment="primary"
-              size="small"
-            >
-              <MinusIcon
-                size={size}
-                sentiment="primary"
-                disabled={isMinusDisabled}
-              />
-            </StyledSelectButton>
-          </Tooltip>
-
-          <StyledCenterBox
+    return (
+      <Stack gap="0.5" className={className}>
+        {label || labelDescription ? (
+          <Label
+            labelDescription={labelDescription}
+            htmlFor={id ?? localId}
+            required={required}
             size={size}
-            onClick={() => {
-              if (inputRef?.current) {
-                inputRef.current.focus()
-              }
-            }}
-            aria-live="assertive"
-            role="status"
           >
-            <StyledInput
-              disabled={disabled}
-              name={name}
-              onBlur={handleOnBlur}
-              onChange={handleChange}
-              onFocus={onFocus}
-              onKeyDown={onKeyDown}
-              ref={inputRef}
-              style={{
-                width: inputWidth,
-              }}
-              value={currentValue !== undefined ? currentValue.toString() : ''} // A dom element can only have string attributes.
-              type="number"
-              id={id || uniqueId}
-              aria-label={!label && !ariaLabel ? 'Number Input' : ariaLabel}
-              aria-describedby={ariaDescribedBy}
-              placeholder={placeholder}
-            />
-            {currentValue !== undefined ? (
-              <StyledText disabled={disabled}>{text}</StyledText>
-            ) : null}
-          </StyledCenterBox>
-
-          <Tooltip text={isPlusDisabled && disabledTooltip}>
-            <StyledSelectButton
-              onClick={offsetFn(1)}
-              disabled={isPlusDisabled}
-              aria-label="Plus"
-              type="button"
-              variant="ghost"
-              sentiment="primary"
-              size="small"
+            {label}
+          </Label>
+        ) : null}
+        <div>
+          <Tooltip text={tooltip}>
+            <Container
+              data-disabled={disabled}
+              data-readonly={readOnly}
+              data-error={!!error}
+              data-success={!!success}
+              data-unit={!!unit}
+              data-controls={controls}
+              data-size={size}
             >
-              <PlusIcon
-                size={size}
-                sentiment="primary"
-                disabled={isPlusDisabled}
-              />
-            </StyledSelectButton>
+              {controls ? (
+                <SideContainer
+                  justifyContent="center"
+                  alignItems="center"
+                  data-size={size}
+                >
+                  <Button
+                    sentiment="neutral"
+                    variant="ghost"
+                    size={size === 'small' ? 'xsmall' : 'small'}
+                    disabled={disabled || readOnly || isMinusDisabled}
+                    onClick={onClickSideButton('down')}
+                    aria-label="minus"
+                  >
+                    <MinusIcon size={size === 'large' ? 'small' : 'small'} />
+                  </Button>
+                </SideContainer>
+              ) : null}
+              <InputContainer
+                justifyContent="space-between"
+                alignItems="center"
+                templateColumns="1fr auto"
+              >
+                <Input
+                  ref={localRef}
+                  type="number"
+                  name={name}
+                  id={localId}
+                  placeholder={placeholder}
+                  data-size={size}
+                  onChange={
+                    onChange
+                      ? event => {
+                          const newNumber = Number.parseFloat(
+                            event.target.value,
+                          )
+                          onChange(Number.isNaN(newNumber) ? null : newNumber)
+                        }
+                      : undefined
+                  }
+                  value={inputValue}
+                  onFocus={onFocus}
+                  onBlur={event => {
+                    if (value && value > max) {
+                      onChange?.(max)
+                    } else if (value && value < min) {
+                      onChange?.(min)
+                    }
+                    onBlur?.(event)
+                  }}
+                  step={step}
+                  disabled={disabled}
+                  aria-label={ariaLabel}
+                  data-testid={dataTestId}
+                  min={min}
+                  max={max}
+                  required={required}
+                  autoFocus={autoFocus}
+                  readOnly={readOnly}
+                  data-has-unit={!!unit}
+                  data-controls={controls}
+                />
+                {unit ? (
+                  <Unit
+                    variant="body"
+                    sentiment="neutral"
+                    as="span"
+                    disabled={disabled}
+                    size={size}
+                  >
+                    {unit}
+                  </Unit>
+                ) : null}
+              </InputContainer>
+              {controls ? (
+                <SideContainer
+                  justifyContent="center"
+                  alignItems="center"
+                  data-size={size}
+                >
+                  <Button
+                    sentiment="neutral"
+                    variant="ghost"
+                    size={size === 'small' ? 'xsmall' : 'small'}
+                    disabled={disabled || readOnly || isPlusDisabled}
+                    onClick={onClickSideButton('up')}
+                    aria-label="plus"
+                  >
+                    <PlusIcon size={size === 'large' ? 'small' : 'small'} />
+                  </Button>
+                </SideContainer>
+              ) : null}
+            </Container>
           </Tooltip>
-        </StyledContainer>
-        {typeof error === 'string' ? (
+        </div>
+        {error || typeof success === 'string' || typeof helper === 'string' ? (
           <Text
+            variant="caption"
             as="span"
-            variant="bodySmall"
-            sentiment="danger"
-            prominence="weak"
+            prominence={!error && !success ? 'weak' : 'default'}
+            sentiment={helperSentiment}
+            disabled={disabled || readOnly}
           >
-            {error}
+            {error || success || helper}
           </Text>
         ) : null}
+        {!error && !success && typeof helper !== 'string' && helper
+          ? helper
+          : null}
       </Stack>
-    </Stack>
-  )
-}
+    )
+  },
+)

@@ -38,7 +38,7 @@ const MenuContainer = styled.div`
   }
 `
 
-// Migration to MenuV2 will not work as expected here.
+// Migration to Menu will not work as expected here.
 const StyledTabMenu = styled(TabMenu)`
   position: sticky;
   right: 0;

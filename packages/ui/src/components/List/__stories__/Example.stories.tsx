@@ -3,11 +3,11 @@ import { PencilIcon } from '@ultraviolet/icons'
 import { useMemo, useState } from 'react'
 import { List } from '..'
 import { Button } from '../../Button/index'
-import { MenuV2 } from '../../MenuV2'
+import { Menu } from '../../Menu'
 import { Modal } from '../../Modal'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
-import { TextInputV2 } from '../../TextInputV2'
+import { TextInput } from '../../TextInput'
 import { data as sourceData } from './resources'
 
 export const Example: StoryFn = args => {
@@ -81,7 +81,7 @@ export const Example: StoryFn = args => {
                   <Text as="h6" variant="headingSmall">
                     Edit description
                   </Text>
-                  <TextInputV2
+                  <TextInput
                     name="description"
                     label="Type planet description"
                   />
@@ -95,9 +95,9 @@ export const Example: StoryFn = args => {
           <List.Cell>{planet.perihelion}AU</List.Cell>
           <List.Cell>{planet.aphelion}AU</List.Cell>
           <List.Cell>
-            <MenuV2 disclosure={<button type="button">Menu</button>}>
-              <MenuV2.Item>MenuItem</MenuV2.Item>
-            </MenuV2>
+            <Menu disclosure={<button type="button">Menu</button>}>
+              <Menu.Item>MenuItem</Menu.Item>
+            </Menu>
           </List.Cell>
         </List.Row>
       ))}

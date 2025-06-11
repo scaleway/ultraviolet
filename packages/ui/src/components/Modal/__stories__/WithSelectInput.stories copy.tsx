@@ -1,7 +1,7 @@
 import type { StoryFn } from '@storybook/react'
 import { Modal } from '..'
 import { Button } from '../../Button'
-import { SelectInputV2 } from '../../SelectInputV2'
+import { SelectInput } from '../../SelectInput'
 
 const OPTIONS = [
   {
@@ -21,11 +21,7 @@ const OPTIONS = [
 export const WithSelectInput: StoryFn = props => (
   <Modal disclosure={<Button>Open Modal with SelectInput</Button>} {...props}>
     <div style={{ display: 'flex', flexDirection: 'column', gap: 32 }}>
-      <SelectInputV2
-        label="Choose an option"
-        name="example"
-        options={OPTIONS}
-      />
+      <SelectInput label="Choose an option" name="example" options={OPTIONS} />
     </div>
   </Modal>
 )

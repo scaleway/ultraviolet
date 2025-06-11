@@ -1,6 +1,6 @@
 import type { ComponentProps, DispatchWithoutAction, ReactNode } from 'react'
 import type { Popup } from '../Popup'
-import type { TextInputV2 } from '../TextInputV2'
+import type { TextInput } from '../TextInput'
 import type { KeyGroup } from './KeyGroup'
 
 type ChildrenProps = {
@@ -29,7 +29,7 @@ export type SearchInputProps = {
   shortcut?: boolean | ComponentProps<typeof KeyGroup>['keys']
   className?: string
 } & Exclude<
-  ComponentProps<typeof TextInputV2>,
+  ComponentProps<typeof TextInput>,
   | 'prefix'
   | 'suffix'
   | 'clearable'

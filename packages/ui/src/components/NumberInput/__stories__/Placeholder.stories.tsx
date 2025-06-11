@@ -3,14 +3,17 @@ import { Template } from './Template.stories'
 export const Placeholder = Template.bind({})
 
 Placeholder.args = {
-  placeholder: 'Type a number here',
+  id: 'number-input',
+  label: 'Number Input',
+  name: 'number-input',
+  onChange: () => {},
+  placeholder: '50',
 }
 
 Placeholder.parameters = {
   docs: {
     description: {
-      story:
-        'You can change the placeholder inside the input by passing a string to the `placeholder` prop.',
+      story: `The \`placeholder\` prop can be used to display a placeholder text when the input is empty. It can be used to provide additional information about the expected input.`,
     },
   },
 }

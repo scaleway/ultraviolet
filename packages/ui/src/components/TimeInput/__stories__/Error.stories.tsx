@@ -3,8 +3,8 @@ import { Template } from './Template.stories'
 export const Error = Template.bind({})
 
 Error.args = {
-  placeholder: 'Time',
   error: 'An error',
+  label: 'Label',
 }
 
 Error.parameters = {

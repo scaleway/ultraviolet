@@ -1,82 +1,48 @@
-import { screen, waitFor } from '@testing-library/react'
+import { renderHook, screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { mockFormErrors, renderWithForm } from '@utils/test'
-import { describe, expect, test } from 'vitest'
+import { mockFormErrors, renderWithForm, renderWithTheme } from '@utils/test'
+import { useForm } from 'react-hook-form'
+import { describe, expect, test, vi } from 'vitest'
 import { TextInputField } from '..'
+import { Submit } from '../..'
+import { Form } from '../../Form'
 
 describe('TextInputField', () => {
   test('should render correctly', () => {
-    const { asFragment } = renderWithForm(<TextInputField name="test" />)
-    expect(asFragment()).toMatchSnapshot()
-  })
-
-  test('should render correctly generated', () => {
     const { asFragment } = renderWithForm(
-      <TextInputField name="test" generated />,
+      <TextInputField label="Test" name="test" />,
     )
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('should render correctly random', () => {
-    const { asFragment } = renderWithForm(
-      <TextInputField name="test" random="random" />,
-    )
-    expect(asFragment()).toMatchSnapshot()
-  })
-
-  test('should render correctly notice', () => {
-    const { asFragment } = renderWithForm(
-      <TextInputField name="test" notice="notice" />,
-    )
-    expect(asFragment()).toMatchSnapshot()
-  })
-
-  test('should render correctly required', () => {
-    const { asFragment } = renderWithForm(
-      <TextInputField name="test" required />,
-    )
-    expect(asFragment()).toMatchSnapshot()
-  })
-
-  test('should render correctly id', () => {
-    const { asFragment } = renderWithForm(
-      <TextInputField name="test" id="id" />,
-    )
-    expect(asFragment()).toMatchSnapshot()
-  })
-
-  test('should render correctly disabled', () => {
-    const { asFragment } = renderWithForm(
-      <TextInputField name="test" disabled />,
+  test('should render correctly generated', async () => {
+    const onSubmit = vi.fn()
+    const { result } = renderHook(() =>
+      useForm<{ test: string | null }>({ defaultValues: { test: null } }),
     )
 
-    const input = screen.getByRole('textbox')
-    expect(input).toBeDisabled()
-    expect(asFragment()).toMatchSnapshot()
-  })
-
-  test('should render correctly with minLength', async () => {
-    const { asFragment } = renderWithForm(
-      <TextInputField name="test" minLength={13} />,
-      {
-        defaultValues: {
-          test: null,
-        },
-      },
+    const { asFragment } = renderWithTheme(
+      <Form
+        onSubmit={onSubmit}
+        errors={mockFormErrors}
+        methods={result.current}
+      >
+        <TextInputField label="Test" name="test" required clearable />
+        <Submit>Submit</Submit>
+      </Form>,
     )
-    const input = screen.getByRole('textbox')
-    await userEvent.type(input, 'test')
-    input.blur()
+
+    await userEvent.click(screen.getByText('Submit'))
     await waitFor(() => {
-      expect(
-        screen.getByText(
-          mockFormErrors.minLength({
-            label: 'test',
-            minLength: 13,
-            value: 'test',
-          }),
-        ),
-      ).toBeVisible()
+      expect(onSubmit).toHaveBeenCalledTimes(0)
+    })
+    const textInput = screen.getByLabelText('Test')
+    await userEvent.type(textInput, 'This is an example')
+    await userEvent.click(screen.getByText('Submit'))
+    await waitFor(() => {
+      expect(onSubmit.mock.calls[0][0]).toEqual({
+        test: 'This is an example',
+      })
     })
     expect(asFragment()).toMatchSnapshot()
   })
