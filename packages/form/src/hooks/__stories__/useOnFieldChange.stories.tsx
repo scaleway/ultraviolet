@@ -71,13 +71,13 @@ const FormContent = () => {
         <Text as="label" variant="bodyStrong">
           Email
         </Text>
-        <TextInputField name="email" noTopLabel valid={valid} />
+        <TextInputField name="email" helper={valid} />
       </Stack>
       <Stack gap={1}>
         <Text as="label" variant="bodyStrong">
           Password
         </Text>
-        <TextInputField name="password" noTopLabel />
+        <TextInputField name="password" />
       </Stack>
     </Stack>
   )
