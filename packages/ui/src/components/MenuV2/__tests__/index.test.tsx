@@ -256,6 +256,36 @@ describe('Menu', () => {
       </MenuV2>,
     ))
 
+  test('renders nested', async () => {
+    const { asFragment } = renderWithTheme(
+      <MenuV2 disclosure={() => <button type="button">Menu</button>} searchable>
+        <MenuV2.Item borderless>Power on</MenuV2.Item>
+        <MenuV2
+          disclosure={<MenuV2.Item>SubMenu click</MenuV2.Item>}
+          placement="right"
+          triggerMethod="click"
+        >
+          <MenuV2.Item>hi!</MenuV2.Item>
+        </MenuV2>
+      </MenuV2>,
+    )
+
+    const menuButton = screen.getByRole<HTMLButtonElement>('button')
+    // Open Menu
+    await userEvent.click(menuButton)
+    const dialog = screen.getByRole('dialog')
+
+    await waitFor(() => {
+      expect(dialog).toBeVisible()
+    })
+
+    const nestedElement = screen.getByText('SubMenu click')
+    await userEvent.click(nestedElement)
+    expect(screen.getByText('hi!')).toBeVisible()
+
+    expect(asFragment()).toMatchSnapshot()
+  })
+
   describe('placement', () => {
     test('renders top', () =>
       shouldMatchEmotionSnapshot(
