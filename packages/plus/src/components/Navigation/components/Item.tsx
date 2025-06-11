@@ -15,7 +15,7 @@ import {
   Badge,
   Button,
   Expandable,
-  MenuV2,
+  Menu,
   Stack,
   Text,
   Tooltip,
@@ -101,7 +101,7 @@ const GrabIcon = styled(DragIcon)`
 
 const StyledBadge = styled(Badge)``
 
-const StyledMenuItem = styled(MenuV2.Item, {
+const StyledMenuItem = styled(Menu.Item, {
   shouldForwardProp: prop => !['isPinnable', 'pinnedFeature'].includes(prop),
 })<{
   isPinnable?: boolean
@@ -121,7 +121,7 @@ const StyledMenuItem = styled(MenuV2.Item, {
   }
 `
 
-const StyledMenu = styled(MenuV2)`
+const StyledMenu = styled(Menu)`
   width: 180px;
 `
 
