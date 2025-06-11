@@ -5,6 +5,7 @@ exports[`Menu > Menu.Item > render with active props 1`] = `
   .emotion-0 {
   border-bottom: 1px solid #d9dadd;
   padding: 0.25rem 0.25rem;
+  width: 100%;
 }
 
 .emotion-0:last-child {
@@ -14,6 +15,7 @@ exports[`Menu > Menu.Item > render with active props 1`] = `
 .emotion-0 {
   border-bottom: 1px solid #d9dadd;
   padding: 0.25rem 0.25rem;
+  width: 100%;
 }
 
 .emotion-0:last-child {
@@ -23,6 +25,7 @@ exports[`Menu > Menu.Item > render with active props 1`] = `
 .emotion-0 {
   border-bottom: 1px solid #d9dadd;
   padding: 0.25rem 0.25rem;
+  width: 100%;
 }
 
 .emotion-0:last-child {
@@ -196,6 +199,16 @@ exports[`Menu > Menu.Item > render with borderless props 1`] = `
 <DocumentFragment>
   .emotion-0 {
   padding: 0.125rem 0.25rem;
+  width: 100%;
+}
+
+.emotion-0:last-child {
+  border: none;
+}
+
+.emotion-0 {
+  padding: 0.125rem 0.25rem;
+  width: 100%;
 }
 
 .emotion-0:last-child {
@@ -369,6 +382,7 @@ exports[`Menu > Menu.Item > render with default props 1`] = `
   .emotion-0 {
   border-bottom: 1px solid #d9dadd;
   padding: 0.25rem 0.25rem;
+  width: 100%;
 }
 
 .emotion-0:last-child {
@@ -378,6 +392,7 @@ exports[`Menu > Menu.Item > render with default props 1`] = `
 .emotion-0 {
   border-bottom: 1px solid #d9dadd;
   padding: 0.25rem 0.25rem;
+  width: 100%;
 }
 
 .emotion-0:last-child {
@@ -387,6 +402,7 @@ exports[`Menu > Menu.Item > render with default props 1`] = `
 .emotion-0 {
   border-bottom: 1px solid #d9dadd;
   padding: 0.25rem 0.25rem;
+  width: 100%;
 }
 
 .emotion-0:last-child {
@@ -560,6 +576,7 @@ exports[`Menu > Menu.Item > render with disabled props 1`] = `
   .emotion-0 {
   border-bottom: 1px solid #d9dadd;
   padding: 0.25rem 0.25rem;
+  width: 100%;
 }
 
 .emotion-0:last-child {
@@ -569,6 +586,7 @@ exports[`Menu > Menu.Item > render with disabled props 1`] = `
 .emotion-0 {
   border-bottom: 1px solid #d9dadd;
   padding: 0.25rem 0.25rem;
+  width: 100%;
 }
 
 .emotion-0:last-child {
@@ -578,6 +596,7 @@ exports[`Menu > Menu.Item > render with disabled props 1`] = `
 .emotion-0 {
   border-bottom: 1px solid #d9dadd;
   padding: 0.25rem 0.25rem;
+  width: 100%;
 }
 
 .emotion-0:last-child {
@@ -680,6 +699,7 @@ exports[`Menu > Menu.Item > render with sentiment danger 1`] = `
   .emotion-0 {
   border-bottom: 1px solid #d9dadd;
   padding: 0.25rem 0.25rem;
+  width: 100%;
 }
 
 .emotion-0:last-child {
@@ -689,6 +709,7 @@ exports[`Menu > Menu.Item > render with sentiment danger 1`] = `
 .emotion-0 {
   border-bottom: 1px solid #d9dadd;
   padding: 0.25rem 0.25rem;
+  width: 100%;
 }
 
 .emotion-0:last-child {
@@ -698,6 +719,7 @@ exports[`Menu > Menu.Item > render with sentiment danger 1`] = `
 .emotion-0 {
   border-bottom: 1px solid #d9dadd;
   padding: 0.25rem 0.25rem;
+  width: 100%;
 }
 
 .emotion-0:last-child {
@@ -812,8 +834,8 @@ exports[`Menu > placement > renders bottom 1`] = `
     data-testid="testing"
   >
     <div
-      aria-controls="menu-«r1n»"
-      aria-describedby="menu-«r1n»"
+      aria-controls="menu-«r21»"
+      aria-describedby="menu-«r21»"
       class="emotion-0 emotion-1"
       tabindex="-1"
     >
@@ -871,8 +893,8 @@ exports[`Menu > placement > renders left 1`] = `
     data-testid="testing"
   >
     <div
-      aria-controls="menu-«r1q»"
-      aria-describedby="menu-«r1q»"
+      aria-controls="menu-«r24»"
+      aria-describedby="menu-«r24»"
       class="emotion-0 emotion-1"
       tabindex="-1"
     >
@@ -930,8 +952,8 @@ exports[`Menu > placement > renders right 1`] = `
     data-testid="testing"
   >
     <div
-      aria-controls="menu-«r1t»"
-      aria-describedby="menu-«r1t»"
+      aria-controls="menu-«r27»"
+      aria-describedby="menu-«r27»"
       class="emotion-0 emotion-1"
       tabindex="-1"
     >
@@ -948,6 +970,65 @@ exports[`Menu > placement > renders right 1`] = `
 `;
 
 exports[`Menu > placement > renders top 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: inherit;
+}
+
+.emotion-0[data-container-full-height="true"] {
+  height: 100%;
+}
+
+.emotion-0[data-container-full-width="true"] {
+  width: 100%;
+}
+
+.emotion-0 {
+  display: inherit;
+}
+
+.emotion-0[data-container-full-height="true"] {
+  height: 100%;
+}
+
+.emotion-0[data-container-full-width="true"] {
+  width: 100%;
+}
+
+.emotion-0 {
+  display: inherit;
+}
+
+.emotion-0[data-container-full-height="true"] {
+  height: 100%;
+}
+
+.emotion-0[data-container-full-width="true"] {
+  width: 100%;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      aria-controls="menu-«r1u»"
+      aria-describedby="menu-«r1u»"
+      class="emotion-0 emotion-1"
+      tabindex="-1"
+    >
+      <button
+        aria-expanded="true"
+        aria-haspopup="dialog"
+        type="button"
+      >
+        Menu
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Menu > renders nested 1`] = `
 <DocumentFragment>
   .emotion-0 {
   display: inherit;
@@ -1446,8 +1527,8 @@ exports[`Menu > sizes > renders large 1`] = `
     data-testid="testing"
   >
     <div
-      aria-controls="menu-«r26»"
-      aria-describedby="menu-«r26»"
+      aria-controls="menu-«r2g»"
+      aria-describedby="menu-«r2g»"
       class="emotion-0 emotion-1"
       tabindex="-1"
     >
@@ -1505,8 +1586,8 @@ exports[`Menu > sizes > renders medium 1`] = `
     data-testid="testing"
   >
     <div
-      aria-controls="menu-«r23»"
-      aria-describedby="menu-«r23»"
+      aria-controls="menu-«r2d»"
+      aria-describedby="menu-«r2d»"
       class="emotion-0 emotion-1"
       tabindex="-1"
     >
@@ -1564,8 +1645,8 @@ exports[`Menu > sizes > renders small 1`] = `
     data-testid="testing"
   >
     <div
-      aria-controls="menu-«r20»"
-      aria-describedby="menu-«r20»"
+      aria-controls="menu-«r2a»"
+      aria-describedby="menu-«r2a»"
       class="emotion-0 emotion-1"
       tabindex="-1"
     >
