@@ -4,6 +4,7 @@ import { renderWithTheme } from '@utils/test'
 import type { ReactNode } from 'react'
 import { afterAll, beforeAll, describe, expect, test, vi } from 'vitest'
 import { SelectInputV2 } from '..'
+import { getReferenceText, searchRegex } from '../SearchBarDropdown'
 import { OptionalInfo, cities, dataGrouped, dataUnGrouped } from './resources'
 
 export type OptionType = {
@@ -1289,5 +1290,18 @@ describe('SelectInputV2', () => {
     setTimeout(() => expect(dropdown).not.toBeVisible(), 500)
 
     expect(asFragment()).toMatchSnapshot()
+  })
+
+  test('getReferenceText works correctly', () => {
+    expect(getReferenceText(dataUnGrouped[0])).toBe('mercury')
+    expect(getReferenceText(dataUnGrouped[7])).toBe('neptune')
+  })
+
+  test('searchRegex works correctly', () => {
+    expect(searchRegex(dataUnGrouped, 'merc')[0]).toBe(dataUnGrouped[0])
+    expect(searchRegex(dataUnGrouped, 'mrcury')[0]).toBe(dataUnGrouped[0])
+    expect(searchRegex(dataUnGrouped, 'jupiter is the fifth')[0]).toBe(
+      dataUnGrouped[4],
+    )
   })
 })
