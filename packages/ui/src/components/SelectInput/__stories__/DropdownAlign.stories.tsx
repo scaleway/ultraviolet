@@ -1,13 +1,13 @@
 import type { StoryFn } from '@storybook/react'
-import { SelectInputV2 } from '..'
+import { SelectInput } from '..'
 import { Stack } from '../../Stack'
 import { dataGrouped } from './resources'
 
-export const DropdownAlign: StoryFn<typeof SelectInputV2> = args => (
+export const DropdownAlign: StoryFn<typeof SelectInput> = args => (
   <Stack alignItems="center">
     <Stack gap={5} width="10%">
-      <SelectInputV2 {...args} label="Align start (default)" />
-      <SelectInputV2 {...args} label="Align center" dropdownAlign="center" />
+      <SelectInput {...args} label="Align start (default)" />
+      <SelectInput {...args} label="Align center" dropdownAlign="center" />
     </Stack>
   </Stack>
 )

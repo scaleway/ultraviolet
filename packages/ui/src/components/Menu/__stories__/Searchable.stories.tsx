@@ -1,14 +1,14 @@
 import type { StoryFn } from '@storybook/react'
 import { DotsHorizontalIcon } from '@ultraviolet/icons'
 import type { ComponentProps, ReactNode } from 'react'
-import { MenuV2 } from '..'
-import { AvatarV2 } from '../../AvatarV2'
+import { Menu } from '..'
+import { Avatar } from '../../Avatar'
 import { Badge } from '../../Badge'
 import { Button } from '../../Button'
 import { Stack } from '../../Stack'
 
 type ItemProps = {
-  sentiment?: ComponentProps<typeof MenuV2.Item>['sentiment']
+  sentiment?: ComponentProps<typeof Menu.Item>['sentiment']
   active?: boolean
   colors: [string, string]
   children: ReactNode
@@ -22,16 +22,16 @@ const Item = ({
   children,
   searchText,
 }: ItemProps) => (
-  <MenuV2.Item sentiment={sentiment} active={active} searchText={searchText}>
+  <Menu.Item sentiment={sentiment} active={active} searchText={searchText}>
     <Stack direction="row" gap={1} alignItems="center">
-      <AvatarV2 variant="colors" colors={colors} shape="circle" size="xsmall" />
+      <Avatar variant="colors" colors={colors} shape="circle" size="xsmall" />
       {children}
     </Stack>
-  </MenuV2.Item>
+  </Menu.Item>
 )
 
-export const Searchable: StoryFn<typeof MenuV2> = props => (
-  <MenuV2
+export const Searchable: StoryFn<typeof Menu> = props => (
+  <Menu
     {...props}
     align="start"
     searchable
@@ -55,11 +55,11 @@ export const Searchable: StoryFn<typeof MenuV2> = props => (
         </Badge>
       </Stack>
     </Item>
-    <MenuV2.Group label="Projects" emptyState="No project">
+    <Menu.Group label="Projects" emptyState="No project">
       <Item colors={['#FFBFAB', '#822F15']}>Project 1</Item>
       <Item colors={['#FF9EC1', '#740D32']}>Project 2</Item>
-    </MenuV2.Group>
-  </MenuV2>
+    </Menu.Group>
+  </Menu>
 )
 
 Searchable.decorators = [
@@ -74,7 +74,7 @@ Searchable.parameters = {
   docs: {
     description: {
       story:
-        'You can add `searchable` prop to the MenuV2 component to enable searching through the items.\n\n If `MenuV2.Item` has a complex children (not a string) you can specify `searchText` on `MenuV2.Item` prop to search through the item.',
+        'You can add `searchable` prop to the Menu component to enable searching through the items.\n\n If `Menu.Item` has a complex children (not a string) you can specify `searchText` on `Menu.Item` prop to search through the item.',
     },
   },
 }

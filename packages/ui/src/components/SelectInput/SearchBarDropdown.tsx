@@ -5,7 +5,7 @@ import { SearchIcon } from '@ultraviolet/icons'
 import type { Dispatch, SetStateAction } from 'react'
 import { useEffect, useRef } from 'react'
 import { isFuzzyMatch, normalizeString } from '../../utils/searchAlgorithm'
-import { TextInputV2 } from '../TextInputV2'
+import { TextInput } from '../TextInput'
 import { useSelectInput } from './SelectInputProvider'
 import type { DataType, OptionType } from './types'
 
@@ -15,7 +15,7 @@ type SearchBarProps = {
   setSearchBarActive: Dispatch<SetStateAction<boolean>>
 }
 
-const StyledInput = styled(TextInputV2)`
+const StyledInput = styled(TextInput)`
   padding-top: ${({ theme }) => theme.space[1.5]};
   padding-bottom: ${({ theme }) => theme.space[1.5]};
   padding-left: ${({ theme }) => theme.space[2]};
