@@ -3,12 +3,16 @@
 exports[`SelectInputField > should display right value on grouped options 1`] = `
 <DocumentFragment>
   .emotion-0 {
+  display: contents;
+}
+
+.emotion-2 {
   width: 100%;
   position: relative;
   box-sizing: border-box;
 }
 
-.emotion-2 {
+.emotion-4 {
   z-index: 9999;
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
@@ -20,7 +24,7 @@ exports[`SelectInputField > should display right value on grouped options 1`] = 
   white-space: nowrap;
 }
 
-.emotion-4 {
+.emotion-6 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -57,20 +61,20 @@ exports[`SelectInputField > should display right value on grouped options 1`] = 
   animation: none;
 }
 
-.emotion-4:hover {
+.emotion-6:hover {
   border-color: hsl(0, 0%, 70%);
 }
 
-.emotion-4:focus-within {
+.emotion-6:focus-within {
   border-color: #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-4:hover {
+.emotion-6:hover {
   border-color: #792dd4;
 }
 
-.emotion-5 {
+.emotion-7 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -92,11 +96,11 @@ exports[`SelectInputField > should display right value on grouped options 1`] = 
   padding-top: 0;
 }
 
-.emotion-5 label {
+.emotion-7 label {
   display: initial;
 }
 
-.emotion-6 {
+.emotion-8 {
   position: absolute;
   left: 0;
   font-weight: 400;
@@ -120,7 +124,7 @@ exports[`SelectInputField > should display right value on grouped options 1`] = 
   opacity: 1;
 }
 
-.emotion-8 {
+.emotion-10 {
   grid-area: 1/1/2/3;
   max-width: 100%;
   overflow: hidden;
@@ -134,12 +138,12 @@ exports[`SelectInputField > should display right value on grouped options 1`] = 
   padding-left: 0;
 }
 
-.emotion-9 {
+.emotion-11 {
   margin-left: 0px;
   caret-color: transparent;
 }
 
-.emotion-10 {
+.emotion-12 {
   visibility: visible;
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
@@ -159,7 +163,7 @@ exports[`SelectInputField > should display right value on grouped options 1`] = 
   margin-left: 0;
 }
 
-.emotion-10:after {
+.emotion-12:after {
   content: attr(data-value) " ";
   visibility: hidden;
   white-space: pre;
@@ -172,7 +176,7 @@ exports[`SelectInputField > should display right value on grouped options 1`] = 
   padding: 0;
 }
 
-.emotion-11 {
+.emotion-13 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -191,7 +195,7 @@ exports[`SelectInputField > should display right value on grouped options 1`] = 
   max-height: 48px;
 }
 
-.emotion-12 {
+.emotion-14 {
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
@@ -203,7 +207,7 @@ exports[`SelectInputField > should display right value on grouped options 1`] = 
   display: none;
 }
 
-.emotion-13 {
+.emotion-15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -215,11 +219,11 @@ exports[`SelectInputField > should display right value on grouped options 1`] = 
   box-sizing: border-box;
 }
 
-.emotion-13:hover {
+.emotion-15:hover {
   color: hsl(0, 0%, 60%);
 }
 
-.emotion-14 {
+.emotion-16 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -242,7 +246,7 @@ exports[`SelectInputField > should display right value on grouped options 1`] = 
   flex-wrap: nowrap;
 }
 
-.emotion-16 {
+.emotion-18 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -251,21 +255,21 @@ exports[`SelectInputField > should display right value on grouped options 1`] = 
   min-height: 1rem;
 }
 
-.emotion-16 .fillStroke {
+.emotion-18 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.emotion-18 {
+.emotion-20 {
   height: auto;
 }
 
-.emotion-18[data-is-animated="true"] {
+.emotion-20[data-is-animated="true"] {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
 }
 
-.emotion-20 {
+.emotion-22 {
   font-size: 12px;
   color: #b3144d;
   padding-top: 0.125rem;
@@ -275,44 +279,45 @@ exports[`SelectInputField > should display right value on grouped options 1`] = 
     data-testid="testing"
   >
     <form
+      class="emotion-0 emotion-1"
       novalidate=""
     >
       <div
-        class="emotion-0 emotion-1"
+        class="emotion-2 emotion-3"
         data-testid="select-input-test"
       >
         <span
-          class="emotion-2"
+          class="emotion-4"
           id="react-select-6-live-region"
         />
         <span
           aria-atomic="false"
           aria-live="polite"
           aria-relevant="additions text"
-          class="emotion-2"
+          class="emotion-4"
           role="log"
         />
         <div
-          class="emotion-4"
+          class="emotion-6"
         >
           <div
-            class="emotion-5"
+            class="emotion-7"
           >
             <label
               aria-live="assertive"
               as="label"
-              class="emotion-6 emotion-7"
+              class="emotion-8 emotion-9"
               for="«r4»"
             >
               Select...
             </label>
             <div
-              class="emotion-8"
+              class="emotion-10"
             >
               Group Label
             </div>
             <div
-              class="emotion-9 emotion-10"
+              class="emotion-11 emotion-12"
               data-value=""
             >
               <input
@@ -335,20 +340,20 @@ exports[`SelectInputField > should display right value on grouped options 1`] = 
             </div>
           </div>
           <div
-            class="emotion-11"
+            class="emotion-13"
           >
             <span
-              class="emotion-12"
+              class="emotion-14"
             />
             <div
               aria-hidden="true"
-              class="emotion-13"
+              class="emotion-15"
             >
               <div
-                class="emotion-14 emotion-15"
+                class="emotion-16 emotion-17"
               >
                 <svg
-                  class="emotion-16 emotion-17"
+                  class="emotion-18 emotion-19"
                   viewBox="0 0 16 16"
                 >
                   <path
@@ -367,11 +372,11 @@ exports[`SelectInputField > should display right value on grouped options 1`] = 
           value="Group Value"
         />
         <div
-          class="emotion-18 emotion-19"
+          class="emotion-20 emotion-21"
           data-is-animated="true"
         >
           <div
-            class="emotion-20 emotion-21"
+            class="emotion-22 emotion-23"
           />
         </div>
       </div>
@@ -383,12 +388,16 @@ exports[`SelectInputField > should display right value on grouped options 1`] = 
 exports[`SelectInputField > should render correctly 1`] = `
 <DocumentFragment>
   .emotion-0 {
+  display: contents;
+}
+
+.emotion-2 {
   width: 100%;
   position: relative;
   box-sizing: border-box;
 }
 
-.emotion-2 {
+.emotion-4 {
   z-index: 9999;
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
@@ -400,7 +409,7 @@ exports[`SelectInputField > should render correctly 1`] = `
   white-space: nowrap;
 }
 
-.emotion-4 {
+.emotion-6 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -437,20 +446,20 @@ exports[`SelectInputField > should render correctly 1`] = `
   animation: none;
 }
 
-.emotion-4:hover {
+.emotion-6:hover {
   border-color: hsl(0, 0%, 70%);
 }
 
-.emotion-4:focus-within {
+.emotion-6:focus-within {
   border-color: #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-4:hover {
+.emotion-6:hover {
   border-color: #792dd4;
 }
 
-.emotion-5 {
+.emotion-7 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -472,11 +481,11 @@ exports[`SelectInputField > should render correctly 1`] = `
   padding-top: 0;
 }
 
-.emotion-5 label {
+.emotion-7 label {
   display: initial;
 }
 
-.emotion-6 {
+.emotion-8 {
   position: absolute;
   left: 0;
   font-weight: 400;
@@ -491,7 +500,7 @@ exports[`SelectInputField > should render correctly 1`] = `
   opacity: 0;
 }
 
-.emotion-8 {
+.emotion-10 {
   grid-area: 1/1/2/3;
   color: #727683;
   margin-left: 2px;
@@ -499,12 +508,12 @@ exports[`SelectInputField > should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-9 {
+.emotion-11 {
   margin-left: 0px;
   caret-color: transparent;
 }
 
-.emotion-10 {
+.emotion-12 {
   visibility: visible;
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
@@ -524,7 +533,7 @@ exports[`SelectInputField > should render correctly 1`] = `
   margin-left: 0;
 }
 
-.emotion-10:after {
+.emotion-12:after {
   content: attr(data-value) " ";
   visibility: hidden;
   white-space: pre;
@@ -537,7 +546,7 @@ exports[`SelectInputField > should render correctly 1`] = `
   padding: 0;
 }
 
-.emotion-11 {
+.emotion-13 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -556,7 +565,7 @@ exports[`SelectInputField > should render correctly 1`] = `
   max-height: 48px;
 }
 
-.emotion-12 {
+.emotion-14 {
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
@@ -568,7 +577,7 @@ exports[`SelectInputField > should render correctly 1`] = `
   display: none;
 }
 
-.emotion-13 {
+.emotion-15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -580,11 +589,11 @@ exports[`SelectInputField > should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-13:hover {
+.emotion-15:hover {
   color: hsl(0, 0%, 60%);
 }
 
-.emotion-14 {
+.emotion-16 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -607,7 +616,7 @@ exports[`SelectInputField > should render correctly 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-16 {
+.emotion-18 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -616,21 +625,21 @@ exports[`SelectInputField > should render correctly 1`] = `
   min-height: 1rem;
 }
 
-.emotion-16 .fillStroke {
+.emotion-18 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.emotion-18 {
+.emotion-20 {
   height: auto;
 }
 
-.emotion-18[data-is-animated="true"] {
+.emotion-20[data-is-animated="true"] {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
 }
 
-.emotion-20 {
+.emotion-22 {
   font-size: 12px;
   color: #b3144d;
   padding-top: 0.125rem;
@@ -640,45 +649,46 @@ exports[`SelectInputField > should render correctly 1`] = `
     data-testid="testing"
   >
     <form
+      class="emotion-0 emotion-1"
       novalidate=""
     >
       <div
-        class="emotion-0 emotion-1"
+        class="emotion-2 emotion-3"
         data-testid="select-input-test"
       >
         <span
-          class="emotion-2"
+          class="emotion-4"
           id="react-select-2-live-region"
         />
         <span
           aria-atomic="false"
           aria-live="polite"
           aria-relevant="additions text"
-          class="emotion-2"
+          class="emotion-4"
           role="log"
         />
         <div
-          class="emotion-4"
+          class="emotion-6"
         >
           <div
-            class="emotion-5"
+            class="emotion-7"
           >
             <label
               aria-live="assertive"
               as="label"
-              class="emotion-6 emotion-7"
+              class="emotion-8 emotion-9"
               for="«r0»"
             >
               Select...
             </label>
             <div
-              class="emotion-8"
+              class="emotion-10"
               id="react-select-2-placeholder"
             >
               Select...
             </div>
             <div
-              class="emotion-9 emotion-10"
+              class="emotion-11 emotion-12"
               data-value=""
             >
               <input
@@ -702,20 +712,20 @@ exports[`SelectInputField > should render correctly 1`] = `
             </div>
           </div>
           <div
-            class="emotion-11"
+            class="emotion-13"
           >
             <span
-              class="emotion-12"
+              class="emotion-14"
             />
             <div
               aria-hidden="true"
-              class="emotion-13"
+              class="emotion-15"
             >
               <div
-                class="emotion-14 emotion-15"
+                class="emotion-16 emotion-17"
               >
                 <svg
-                  class="emotion-16 emotion-17"
+                  class="emotion-18 emotion-19"
                   viewBox="0 0 16 16"
                 >
                   <path
@@ -734,11 +744,11 @@ exports[`SelectInputField > should render correctly 1`] = `
           value=""
         />
         <div
-          class="emotion-18 emotion-19"
+          class="emotion-20 emotion-21"
           data-is-animated="true"
         >
           <div
-            class="emotion-20 emotion-21"
+            class="emotion-22 emotion-23"
           />
         </div>
       </div>
@@ -750,6 +760,10 @@ exports[`SelectInputField > should render correctly 1`] = `
 exports[`SelectInputField > should render correctly disabled 1`] = `
 <DocumentFragment>
   .emotion-0 {
+  display: contents;
+}
+
+.emotion-2 {
   width: 100%;
   pointer-events: initial;
   pointer-events: none;
@@ -757,7 +771,7 @@ exports[`SelectInputField > should render correctly disabled 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-2 {
+.emotion-4 {
   z-index: 9999;
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
@@ -769,7 +783,7 @@ exports[`SelectInputField > should render correctly disabled 1`] = `
   white-space: nowrap;
 }
 
-.emotion-4 {
+.emotion-6 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -806,11 +820,11 @@ exports[`SelectInputField > should render correctly disabled 1`] = `
   animation: none;
 }
 
-.emotion-4:hover {
+.emotion-6:hover {
   border-color: hsl(0, 0%, 70%);
 }
 
-.emotion-5 {
+.emotion-7 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -833,11 +847,11 @@ exports[`SelectInputField > should render correctly disabled 1`] = `
   padding-top: 0;
 }
 
-.emotion-5 label {
+.emotion-7 label {
   display: initial;
 }
 
-.emotion-6 {
+.emotion-8 {
   position: absolute;
   left: 0;
   font-weight: 400;
@@ -852,7 +866,7 @@ exports[`SelectInputField > should render correctly disabled 1`] = `
   opacity: 0;
 }
 
-.emotion-8 {
+.emotion-10 {
   grid-area: 1/1/2/3;
   color: #b5b7bd;
   margin-left: 2px;
@@ -860,12 +874,12 @@ exports[`SelectInputField > should render correctly disabled 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-9 {
+.emotion-11 {
   margin-left: 0px;
   caret-color: transparent;
 }
 
-.emotion-10 {
+.emotion-12 {
   visibility: hidden;
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
@@ -885,7 +899,7 @@ exports[`SelectInputField > should render correctly disabled 1`] = `
   margin-left: 0;
 }
 
-.emotion-10:after {
+.emotion-12:after {
   content: attr(data-value) " ";
   visibility: hidden;
   white-space: pre;
@@ -898,7 +912,7 @@ exports[`SelectInputField > should render correctly disabled 1`] = `
   padding: 0;
 }
 
-.emotion-11 {
+.emotion-13 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -917,7 +931,7 @@ exports[`SelectInputField > should render correctly disabled 1`] = `
   max-height: 48px;
 }
 
-.emotion-12 {
+.emotion-14 {
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
@@ -929,7 +943,7 @@ exports[`SelectInputField > should render correctly disabled 1`] = `
   display: none;
 }
 
-.emotion-13 {
+.emotion-15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -941,11 +955,11 @@ exports[`SelectInputField > should render correctly disabled 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-13:hover {
+.emotion-15:hover {
   color: hsl(0, 0%, 60%);
 }
 
-.emotion-14 {
+.emotion-16 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -968,7 +982,7 @@ exports[`SelectInputField > should render correctly disabled 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-16 {
+.emotion-18 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -977,21 +991,21 @@ exports[`SelectInputField > should render correctly disabled 1`] = `
   min-height: 1rem;
 }
 
-.emotion-16 .fillStroke {
+.emotion-18 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.emotion-18 {
+.emotion-20 {
   height: auto;
 }
 
-.emotion-18[data-is-animated="true"] {
+.emotion-20[data-is-animated="true"] {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
 }
 
-.emotion-20 {
+.emotion-22 {
   font-size: 12px;
   color: #b3144d;
   padding-top: 0.125rem;
@@ -1001,46 +1015,47 @@ exports[`SelectInputField > should render correctly disabled 1`] = `
     data-testid="testing"
   >
     <form
+      class="emotion-0 emotion-1"
       novalidate=""
     >
       <div
-        class="emotion-0 emotion-1"
+        class="emotion-2 emotion-3"
         data-testid="select-input-test"
       >
         <span
-          class="emotion-2"
+          class="emotion-4"
           id="react-select-3-live-region"
         />
         <span
           aria-atomic="false"
           aria-live="polite"
           aria-relevant="additions text"
-          class="emotion-2"
+          class="emotion-4"
           role="log"
         />
         <div
           aria-disabled="true"
-          class="emotion-4"
+          class="emotion-6"
         >
           <div
-            class="emotion-5"
+            class="emotion-7"
           >
             <label
               aria-live="assertive"
               as="label"
-              class="emotion-6 emotion-7"
+              class="emotion-8 emotion-9"
               for="«r1»"
             >
               Select...
             </label>
             <div
-              class="emotion-8"
+              class="emotion-10"
               id="react-select-3-placeholder"
             >
               Select...
             </div>
             <div
-              class="emotion-9 emotion-10"
+              class="emotion-11 emotion-12"
               data-value=""
             >
               <input
@@ -1065,20 +1080,20 @@ exports[`SelectInputField > should render correctly disabled 1`] = `
             </div>
           </div>
           <div
-            class="emotion-11"
+            class="emotion-13"
           >
             <span
-              class="emotion-12"
+              class="emotion-14"
             />
             <div
               aria-hidden="true"
-              class="emotion-13"
+              class="emotion-15"
             >
               <div
-                class="emotion-14 emotion-15"
+                class="emotion-16 emotion-17"
               >
                 <svg
-                  class="emotion-16 emotion-17"
+                  class="emotion-18 emotion-19"
                   viewBox="0 0 16 16"
                 >
                   <path
@@ -1092,11 +1107,11 @@ exports[`SelectInputField > should render correctly disabled 1`] = `
           </div>
         </div>
         <div
-          class="emotion-18 emotion-19"
+          class="emotion-20 emotion-21"
           data-is-animated="true"
         >
           <div
-            class="emotion-20 emotion-21"
+            class="emotion-22 emotion-23"
           />
         </div>
       </div>
@@ -1108,12 +1123,16 @@ exports[`SelectInputField > should render correctly disabled 1`] = `
 exports[`SelectInputField > should render correctly multiple 1`] = `
 <DocumentFragment>
   .emotion-0 {
+  display: contents;
+}
+
+.emotion-2 {
   width: 100%;
   position: relative;
   box-sizing: border-box;
 }
 
-.emotion-2 {
+.emotion-4 {
   z-index: 9999;
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
@@ -1125,7 +1144,7 @@ exports[`SelectInputField > should render correctly multiple 1`] = `
   white-space: nowrap;
 }
 
-.emotion-4 {
+.emotion-6 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1162,20 +1181,20 @@ exports[`SelectInputField > should render correctly multiple 1`] = `
   animation: none;
 }
 
-.emotion-4:hover {
+.emotion-6:hover {
   border-color: hsl(0, 0%, 70%);
 }
 
-.emotion-4:focus-within {
+.emotion-6:focus-within {
   border-color: #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-4:hover {
+.emotion-6:hover {
   border-color: #792dd4;
 }
 
-.emotion-5 {
+.emotion-7 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1197,11 +1216,11 @@ exports[`SelectInputField > should render correctly multiple 1`] = `
   padding-top: 0;
 }
 
-.emotion-5 label {
+.emotion-7 label {
   display: initial;
 }
 
-.emotion-6 {
+.emotion-8 {
   position: absolute;
   left: 0;
   font-weight: 400;
@@ -1216,7 +1235,7 @@ exports[`SelectInputField > should render correctly multiple 1`] = `
   opacity: 0;
 }
 
-.emotion-8 {
+.emotion-10 {
   grid-area: 1/1/2/3;
   color: #727683;
   margin-left: 2px;
@@ -1224,11 +1243,11 @@ exports[`SelectInputField > should render correctly multiple 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-9 {
+.emotion-11 {
   margin-left: 0px;
 }
 
-.emotion-10 {
+.emotion-12 {
   visibility: visible;
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
@@ -1248,7 +1267,7 @@ exports[`SelectInputField > should render correctly multiple 1`] = `
   margin-left: 0;
 }
 
-.emotion-10:after {
+.emotion-12:after {
   content: attr(data-value) " ";
   visibility: hidden;
   white-space: pre;
@@ -1261,7 +1280,7 @@ exports[`SelectInputField > should render correctly multiple 1`] = `
   padding: 0;
 }
 
-.emotion-11 {
+.emotion-13 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1280,7 +1299,7 @@ exports[`SelectInputField > should render correctly multiple 1`] = `
   max-height: 48px;
 }
 
-.emotion-12 {
+.emotion-14 {
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
@@ -1292,7 +1311,7 @@ exports[`SelectInputField > should render correctly multiple 1`] = `
   display: none;
 }
 
-.emotion-13 {
+.emotion-15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1304,11 +1323,11 @@ exports[`SelectInputField > should render correctly multiple 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-13:hover {
+.emotion-15:hover {
   color: hsl(0, 0%, 60%);
 }
 
-.emotion-14 {
+.emotion-16 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1331,7 +1350,7 @@ exports[`SelectInputField > should render correctly multiple 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-16 {
+.emotion-18 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -1340,21 +1359,21 @@ exports[`SelectInputField > should render correctly multiple 1`] = `
   min-height: 1rem;
 }
 
-.emotion-16 .fillStroke {
+.emotion-18 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.emotion-18 {
+.emotion-20 {
   height: auto;
 }
 
-.emotion-18[data-is-animated="true"] {
+.emotion-20[data-is-animated="true"] {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
 }
 
-.emotion-20 {
+.emotion-22 {
   font-size: 12px;
   color: #b3144d;
   padding-top: 0.125rem;
@@ -1364,45 +1383,46 @@ exports[`SelectInputField > should render correctly multiple 1`] = `
     data-testid="testing"
   >
     <form
+      class="emotion-0 emotion-1"
       novalidate=""
     >
       <div
-        class="emotion-0 emotion-1"
+        class="emotion-2 emotion-3"
         data-testid="select-input-test"
       >
         <span
-          class="emotion-2"
+          class="emotion-4"
           id="react-select-4-live-region"
         />
         <span
           aria-atomic="false"
           aria-live="polite"
           aria-relevant="additions text"
-          class="emotion-2"
+          class="emotion-4"
           role="log"
         />
         <div
-          class="emotion-4"
+          class="emotion-6"
         >
           <div
-            class="emotion-5"
+            class="emotion-7"
           >
             <label
               aria-live="assertive"
               as="label"
-              class="emotion-6 emotion-7"
+              class="emotion-8 emotion-9"
               for="«r2»"
             >
               Select...
             </label>
             <div
-              class="emotion-8"
+              class="emotion-10"
               id="react-select-4-placeholder"
             >
               Select...
             </div>
             <div
-              class="emotion-9 emotion-10"
+              class="emotion-11 emotion-12"
               data-value=""
             >
               <input
@@ -1426,20 +1446,20 @@ exports[`SelectInputField > should render correctly multiple 1`] = `
             </div>
           </div>
           <div
-            class="emotion-11"
+            class="emotion-13"
           >
             <span
-              class="emotion-12"
+              class="emotion-14"
             />
             <div
               aria-hidden="true"
-              class="emotion-13"
+              class="emotion-15"
             >
               <div
-                class="emotion-14 emotion-15"
+                class="emotion-16 emotion-17"
               >
                 <svg
-                  class="emotion-16 emotion-17"
+                  class="emotion-18 emotion-19"
                   viewBox="0 0 16 16"
                 >
                   <path
@@ -1460,11 +1480,11 @@ exports[`SelectInputField > should render correctly multiple 1`] = `
           />
         </div>
         <div
-          class="emotion-18 emotion-19"
+          class="emotion-20 emotion-21"
           data-is-animated="true"
         >
           <div
-            class="emotion-20 emotion-21"
+            class="emotion-22 emotion-23"
           />
         </div>
       </div>
@@ -1476,12 +1496,16 @@ exports[`SelectInputField > should render correctly multiple 1`] = `
 exports[`SelectInputField > should render correctly with a disabled option 1`] = `
 <DocumentFragment>
   .emotion-0 {
+  display: contents;
+}
+
+.emotion-2 {
   width: 100%;
   position: relative;
   box-sizing: border-box;
 }
 
-.emotion-2 {
+.emotion-4 {
   z-index: 9999;
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
@@ -1493,7 +1517,7 @@ exports[`SelectInputField > should render correctly with a disabled option 1`] =
   white-space: nowrap;
 }
 
-.emotion-4 {
+.emotion-6 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1530,20 +1554,20 @@ exports[`SelectInputField > should render correctly with a disabled option 1`] =
   animation: none;
 }
 
-.emotion-4:hover {
+.emotion-6:hover {
   border-color: hsl(0, 0%, 70%);
 }
 
-.emotion-4:focus-within {
+.emotion-6:focus-within {
   border-color: #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-4:hover {
+.emotion-6:hover {
   border-color: #792dd4;
 }
 
-.emotion-5 {
+.emotion-7 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1565,11 +1589,11 @@ exports[`SelectInputField > should render correctly with a disabled option 1`] =
   padding-top: 0;
 }
 
-.emotion-5 label {
+.emotion-7 label {
   display: initial;
 }
 
-.emotion-6 {
+.emotion-8 {
   position: absolute;
   left: 0;
   font-weight: 400;
@@ -1584,7 +1608,7 @@ exports[`SelectInputField > should render correctly with a disabled option 1`] =
   opacity: 0;
 }
 
-.emotion-8 {
+.emotion-10 {
   grid-area: 1/1/2/3;
   color: #727683;
   margin-left: 2px;
@@ -1592,12 +1616,12 @@ exports[`SelectInputField > should render correctly with a disabled option 1`] =
   box-sizing: border-box;
 }
 
-.emotion-9 {
+.emotion-11 {
   margin-left: 0px;
   caret-color: transparent;
 }
 
-.emotion-10 {
+.emotion-12 {
   visibility: visible;
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
@@ -1617,7 +1641,7 @@ exports[`SelectInputField > should render correctly with a disabled option 1`] =
   margin-left: 0;
 }
 
-.emotion-10:after {
+.emotion-12:after {
   content: attr(data-value) " ";
   visibility: hidden;
   white-space: pre;
@@ -1630,7 +1654,7 @@ exports[`SelectInputField > should render correctly with a disabled option 1`] =
   padding: 0;
 }
 
-.emotion-11 {
+.emotion-13 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1649,7 +1673,7 @@ exports[`SelectInputField > should render correctly with a disabled option 1`] =
   max-height: 48px;
 }
 
-.emotion-12 {
+.emotion-14 {
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
@@ -1661,7 +1685,7 @@ exports[`SelectInputField > should render correctly with a disabled option 1`] =
   display: none;
 }
 
-.emotion-13 {
+.emotion-15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1673,11 +1697,11 @@ exports[`SelectInputField > should render correctly with a disabled option 1`] =
   box-sizing: border-box;
 }
 
-.emotion-13:hover {
+.emotion-15:hover {
   color: hsl(0, 0%, 60%);
 }
 
-.emotion-14 {
+.emotion-16 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1700,7 +1724,7 @@ exports[`SelectInputField > should render correctly with a disabled option 1`] =
   flex-wrap: nowrap;
 }
 
-.emotion-16 {
+.emotion-18 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -1709,21 +1733,21 @@ exports[`SelectInputField > should render correctly with a disabled option 1`] =
   min-height: 1rem;
 }
 
-.emotion-16 .fillStroke {
+.emotion-18 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.emotion-18 {
+.emotion-20 {
   height: auto;
 }
 
-.emotion-18[data-is-animated="true"] {
+.emotion-20[data-is-animated="true"] {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
 }
 
-.emotion-20 {
+.emotion-22 {
   font-size: 12px;
   color: #b3144d;
   padding-top: 0.125rem;
@@ -1733,45 +1757,46 @@ exports[`SelectInputField > should render correctly with a disabled option 1`] =
     data-testid="testing"
   >
     <form
+      class="emotion-0 emotion-1"
       novalidate=""
     >
       <div
-        class="emotion-0 emotion-1"
+        class="emotion-2 emotion-3"
         data-testid="select-input-test"
       >
         <span
-          class="emotion-2"
+          class="emotion-4"
           id="react-select-5-live-region"
         />
         <span
           aria-atomic="false"
           aria-live="polite"
           aria-relevant="additions text"
-          class="emotion-2"
+          class="emotion-4"
           role="log"
         />
         <div
-          class="emotion-4"
+          class="emotion-6"
         >
           <div
-            class="emotion-5"
+            class="emotion-7"
           >
             <label
               aria-live="assertive"
               as="label"
-              class="emotion-6 emotion-7"
+              class="emotion-8 emotion-9"
               for="«r3»"
             >
               Select...
             </label>
             <div
-              class="emotion-8"
+              class="emotion-10"
               id="react-select-5-placeholder"
             >
               Select...
             </div>
             <div
-              class="emotion-9 emotion-10"
+              class="emotion-11 emotion-12"
               data-value=""
             >
               <input
@@ -1795,20 +1820,20 @@ exports[`SelectInputField > should render correctly with a disabled option 1`] =
             </div>
           </div>
           <div
-            class="emotion-11"
+            class="emotion-13"
           >
             <span
-              class="emotion-12"
+              class="emotion-14"
             />
             <div
               aria-hidden="true"
-              class="emotion-13"
+              class="emotion-15"
             >
               <div
-                class="emotion-14 emotion-15"
+                class="emotion-16 emotion-17"
               >
                 <svg
-                  class="emotion-16 emotion-17"
+                  class="emotion-18 emotion-19"
                   viewBox="0 0 16 16"
                 >
                   <path
@@ -1827,11 +1852,11 @@ exports[`SelectInputField > should render correctly with a disabled option 1`] =
           value=""
         />
         <div
-          class="emotion-18 emotion-19"
+          class="emotion-20 emotion-21"
           data-is-animated="true"
         >
           <div
-            class="emotion-20 emotion-21"
+            class="emotion-22 emotion-23"
           />
         </div>
       </div>
@@ -1843,12 +1868,16 @@ exports[`SelectInputField > should render correctly with a disabled option 1`] =
 exports[`SelectInputField > should trigger events 1`] = `
 <DocumentFragment>
   .emotion-0 {
+  display: contents;
+}
+
+.emotion-2 {
   width: 100%;
   position: relative;
   box-sizing: border-box;
 }
 
-.emotion-2 {
+.emotion-4 {
   z-index: 9999;
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
@@ -1860,7 +1889,7 @@ exports[`SelectInputField > should trigger events 1`] = `
   white-space: nowrap;
 }
 
-.emotion-4 {
+.emotion-6 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1897,20 +1926,20 @@ exports[`SelectInputField > should trigger events 1`] = `
   animation: none;
 }
 
-.emotion-4:hover {
+.emotion-6:hover {
   border-color: hsl(0, 0%, 70%);
 }
 
-.emotion-4:focus-within {
+.emotion-6:focus-within {
   border-color: #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-4:hover {
+.emotion-6:hover {
   border-color: #792dd4;
 }
 
-.emotion-5 {
+.emotion-7 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1932,11 +1961,11 @@ exports[`SelectInputField > should trigger events 1`] = `
   padding-top: 0;
 }
 
-.emotion-5 label {
+.emotion-7 label {
   display: initial;
 }
 
-.emotion-6 {
+.emotion-8 {
   position: absolute;
   left: 0;
   font-weight: 400;
@@ -1960,7 +1989,7 @@ exports[`SelectInputField > should trigger events 1`] = `
   opacity: 1;
 }
 
-.emotion-8 {
+.emotion-10 {
   grid-area: 1/1/2/3;
   max-width: 100%;
   overflow: hidden;
@@ -1974,12 +2003,12 @@ exports[`SelectInputField > should trigger events 1`] = `
   padding-left: 0;
 }
 
-.emotion-9 {
+.emotion-11 {
   margin-left: 0px;
   caret-color: transparent;
 }
 
-.emotion-10 {
+.emotion-12 {
   visibility: visible;
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
@@ -1999,7 +2028,7 @@ exports[`SelectInputField > should trigger events 1`] = `
   margin-left: 0;
 }
 
-.emotion-10:after {
+.emotion-12:after {
   content: attr(data-value) " ";
   visibility: hidden;
   white-space: pre;
@@ -2012,7 +2041,7 @@ exports[`SelectInputField > should trigger events 1`] = `
   padding: 0;
 }
 
-.emotion-11 {
+.emotion-13 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2031,7 +2060,7 @@ exports[`SelectInputField > should trigger events 1`] = `
   max-height: 48px;
 }
 
-.emotion-12 {
+.emotion-14 {
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
@@ -2043,7 +2072,7 @@ exports[`SelectInputField > should trigger events 1`] = `
   display: none;
 }
 
-.emotion-13 {
+.emotion-15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2055,11 +2084,11 @@ exports[`SelectInputField > should trigger events 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-13:hover {
+.emotion-15:hover {
   color: hsl(0, 0%, 60%);
 }
 
-.emotion-14 {
+.emotion-16 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2082,7 +2111,7 @@ exports[`SelectInputField > should trigger events 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-16 {
+.emotion-18 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -2091,21 +2120,21 @@ exports[`SelectInputField > should trigger events 1`] = `
   min-height: 1rem;
 }
 
-.emotion-16 .fillStroke {
+.emotion-18 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.emotion-18 {
+.emotion-20 {
   height: auto;
 }
 
-.emotion-18[data-is-animated="true"] {
+.emotion-20[data-is-animated="true"] {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
 }
 
-.emotion-20 {
+.emotion-22 {
   font-size: 12px;
   color: #b3144d;
   padding-top: 0.125rem;
@@ -2115,44 +2144,45 @@ exports[`SelectInputField > should trigger events 1`] = `
     data-testid="testing"
   >
     <form
+      class="emotion-0 emotion-1"
       novalidate=""
     >
       <div
-        class="emotion-0 emotion-1"
+        class="emotion-2 emotion-3"
         data-testid="select-input-test"
       >
         <span
-          class="emotion-2"
+          class="emotion-4"
           id="react-select-7-live-region"
         />
         <span
           aria-atomic="false"
           aria-live="polite"
           aria-relevant="additions text"
-          class="emotion-2"
+          class="emotion-4"
           role="log"
         />
         <div
-          class="emotion-4"
+          class="emotion-6"
         >
           <div
-            class="emotion-5"
+            class="emotion-7"
           >
             <label
               aria-live="assertive"
               as="label"
-              class="emotion-6 emotion-7"
+              class="emotion-8 emotion-9"
               for="«r5»"
             >
               Select...
             </label>
             <div
-              class="emotion-8"
+              class="emotion-10"
             >
               Label
             </div>
             <div
-              class="emotion-9 emotion-10"
+              class="emotion-11 emotion-12"
               data-value=""
             >
               <input
@@ -2175,20 +2205,20 @@ exports[`SelectInputField > should trigger events 1`] = `
             </div>
           </div>
           <div
-            class="emotion-11"
+            class="emotion-13"
           >
             <span
-              class="emotion-12"
+              class="emotion-14"
             />
             <div
               aria-hidden="true"
-              class="emotion-13"
+              class="emotion-15"
             >
               <div
-                class="emotion-14 emotion-15"
+                class="emotion-16 emotion-17"
               >
                 <svg
-                  class="emotion-16 emotion-17"
+                  class="emotion-18 emotion-19"
                   viewBox="0 0 16 16"
                 >
                   <path
@@ -2207,11 +2237,11 @@ exports[`SelectInputField > should trigger events 1`] = `
           value="value"
         />
         <div
-          class="emotion-18 emotion-19"
+          class="emotion-20 emotion-21"
           data-is-animated="true"
         >
           <div
-            class="emotion-20 emotion-21"
+            class="emotion-22 emotion-23"
           />
         </div>
       </div>

@@ -3,10 +3,14 @@
 exports[`Submit > form is invalid 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  position: relative;
+  display: contents;
 }
 
 .emotion-2 {
+  position: relative;
+}
+
+.emotion-4 {
   -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
   transition: border-color 0.2s ease,box-shadow 0.2s ease;
   -webkit-appearance: none;
@@ -34,53 +38,53 @@ exports[`Submit > form is invalid 1`] = `
   padding-top: 14px;
 }
 
-.emotion-2::-webkit-input-placeholder {
+.emotion-4::-webkit-input-placeholder {
   color: #727683;
   opacity: 0;
 }
 
-.emotion-2::-moz-placeholder {
+.emotion-4::-moz-placeholder {
   color: #727683;
   opacity: 0;
 }
 
-.emotion-2:-ms-input-placeholder {
+.emotion-4:-ms-input-placeholder {
   color: #727683;
   opacity: 0;
 }
 
-.emotion-2::placeholder {
+.emotion-4::placeholder {
   color: #727683;
   opacity: 0;
 }
 
-.emotion-2:hover,
-.emotion-2:focus {
+.emotion-4:hover,
+.emotion-4:focus {
   border-color: #792dd4;
 }
 
-.emotion-2:focus {
+.emotion-4:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   border-color: #792dd4;
 }
 
-.emotion-2::-webkit-input-placeholder {
+.emotion-4::-webkit-input-placeholder {
   opacity: 1;
 }
 
-.emotion-2::-moz-placeholder {
+.emotion-4::-moz-placeholder {
   opacity: 1;
 }
 
-.emotion-2:-ms-input-placeholder {
+.emotion-4:-ms-input-placeholder {
   opacity: 1;
 }
 
-.emotion-2::placeholder {
+.emotion-4::placeholder {
   opacity: 1;
 }
 
-.emotion-4 {
+.emotion-6 {
   display: block;
   position: absolute;
   left: 0;
@@ -116,22 +120,22 @@ exports[`Submit > form is invalid 1`] = `
   transform: translate(-9.6%, -3px) scale(0.8);
 }
 
-.emotion-6 {
+.emotion-8 {
   height: auto;
 }
 
-.emotion-6[data-is-animated="true"] {
+.emotion-8[data-is-animated="true"] {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
 }
 
-.emotion-8 {
+.emotion-10 {
   font-size: 12px;
   color: #b3144d;
   padding-top: 0.125rem;
 }
 
-.emotion-10 {
+.emotion-12 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -173,7 +177,7 @@ exports[`Submit > form is invalid 1`] = `
   color: #ffffff;
 }
 
-.emotion-10:hover {
+.emotion-12:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
@@ -182,38 +186,39 @@ exports[`Submit > form is invalid 1`] = `
     data-testid="testing"
   >
     <form
+      class="emotion-0 emotion-1"
       novalidate=""
     >
       <div>
         <div
-          class="emotion-0 emotion-1"
+          class="emotion-2 emotion-3"
         >
           <input
             aria-label="test"
             autocomplete="on"
-            class="emotion-2 emotion-3"
+            class="emotion-4 emotion-5"
             name="toto"
             type="text"
             value="4"
           />
           <label
             aria-live="assertive"
-            class="emotion-4 emotion-5"
+            class="emotion-6 emotion-7"
           >
             test
           </label>
         </div>
         <div
-          class="emotion-6 emotion-7"
+          class="emotion-8 emotion-9"
           data-is-animated="true"
         >
           <div
-            class="emotion-8 emotion-9"
+            class="emotion-10 emotion-11"
           />
         </div>
       </div>
       <button
-        class="emotion-10 emotion-11"
+        class="emotion-12 emotion-13"
         disabled=""
         type="submit"
       >
@@ -227,6 +232,10 @@ exports[`Submit > form is invalid 1`] = `
 exports[`Submit > form is submitting 1`] = `
 <DocumentFragment>
   .emotion-0 {
+  display: contents;
+}
+
+.emotion-2 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -268,17 +277,17 @@ exports[`Submit > form is submitting 1`] = `
   color: #ffffff;
 }
 
-.emotion-0:hover {
+.emotion-2:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-2 {
+.emotion-4 {
   -webkit-animation: spin 0.75s linear infinite;
   animation: spin 0.75s linear infinite;
 }
 
-.emotion-4 {
+.emotion-6 {
   -webkit-transition: stroke-dashoffset 0.5s ease 0s;
   transition: stroke-dashoffset 0.5s ease 0s;
 }
@@ -287,10 +296,11 @@ exports[`Submit > form is submitting 1`] = `
     data-testid="testing"
   >
     <form
+      class="emotion-0 emotion-1"
       novalidate=""
     >
       <button
-        class="emotion-0 emotion-1"
+        class="emotion-2 emotion-3"
         disabled=""
         type="submit"
       >
@@ -300,7 +310,7 @@ exports[`Submit > form is submitting 1`] = `
           aria-valuemin="0"
           aria-valuenow="20"
           aria-valuetext="20%"
-          class="emotion-2 emotion-3"
+          class="emotion-4 emotion-5"
           role="progressbar"
           style="height: 1em; width: 1em;"
           viewBox="0 0 100 100"
@@ -314,7 +324,7 @@ exports[`Submit > form is submitting 1`] = `
             stroke-width="16"
           />
           <circle
-            class="emotion-4"
+            class="emotion-6"
             cx="50"
             cy="50"
             fill="none"
@@ -336,6 +346,10 @@ exports[`Submit > form is submitting 1`] = `
 exports[`Submit > renders correctly  1`] = `
 <DocumentFragment>
   .emotion-0 {
+  display: contents;
+}
+
+.emotion-2 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -377,7 +391,7 @@ exports[`Submit > renders correctly  1`] = `
   color: #ffffff;
 }
 
-.emotion-0:hover {
+.emotion-2:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
@@ -386,10 +400,11 @@ exports[`Submit > renders correctly  1`] = `
     data-testid="testing"
   >
     <form
+      class="emotion-0 emotion-1"
       novalidate=""
     >
       <button
-        class="emotion-0 emotion-1"
+        class="emotion-2 emotion-3"
         disabled=""
         type="submit"
       >
@@ -403,6 +418,10 @@ exports[`Submit > renders correctly  1`] = `
 exports[`Submit > renders correctly with icon and iconPosition  1`] = `
 <DocumentFragment>
   .emotion-0 {
+  display: contents;
+}
+
+.emotion-2 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -444,12 +463,12 @@ exports[`Submit > renders correctly with icon and iconPosition  1`] = `
   color: #ffffff;
 }
 
-.emotion-0:hover {
+.emotion-2:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-2 {
+.emotion-4 {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
@@ -458,12 +477,12 @@ exports[`Submit > renders correctly with icon and iconPosition  1`] = `
   min-height: 16px;
 }
 
-.emotion-2 .fillStroke {
+.emotion-4 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.emotion-2 path {
+.emotion-4 path {
   fill: currentColor;
 }
 
@@ -471,15 +490,16 @@ exports[`Submit > renders correctly with icon and iconPosition  1`] = `
     data-testid="testing"
   >
     <form
+      class="emotion-0 emotion-1"
       novalidate=""
     >
       <button
-        class="emotion-0 emotion-1"
+        class="emotion-2 emotion-3"
         disabled=""
         type="submit"
       >
         <svg
-          class="emotion-2 emotion-3"
+          class="emotion-4 emotion-5"
           viewBox="0 0 16 16"
           xmlns="http://www.w3.org/2000/svg"
         >
