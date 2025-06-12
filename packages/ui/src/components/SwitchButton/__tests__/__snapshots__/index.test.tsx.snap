@@ -1815,11 +1815,11 @@ exports[`SwitchButton > renders neutral 1`] = `
 }
 
 .emotion-5[data-checked='true'] label {
-  color: #ffffff;
+  color: #222638;
 }
 
 .emotion-5:not([data-checked='true']) label:hover {
-  color: #641cb3;
+  color: #222638;
 }
 
 .emotion-7 {
@@ -2067,7 +2067,7 @@ exports[`SwitchButton > renders neutral 1`] = `
       >
         <div
           class="emotion-4 emotion-5 emotion-6"
-          data-checked="false"
+          data-checked="true"
           data-disabled="false"
           data-has-default-cursor="false"
           data-has-label="true"
@@ -2083,11 +2083,12 @@ exports[`SwitchButton > renders neutral 1`] = `
             <div
               aria-disabled="false"
               class="emotion-9 emotion-10 emotion-11"
-              data-checked="false"
+              data-checked="true"
             >
               <input
                 aria-disabled="false"
                 aria-invalid="false"
+                checked=""
                 class="emotion-12 emotion-13"
                 id="«r16»"
                 name="test"

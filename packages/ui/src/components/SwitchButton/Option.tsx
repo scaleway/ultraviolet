@@ -5,7 +5,9 @@ import { ReactNode, useEffect, useRef } from 'react'
 import { SelectableCard } from '../SelectableCard'
 import { useSwitchButton } from './SwitchButtonContext'
 
-const StyledSelectableCard = styled(SelectableCard)`
+const StyledSelectableCard = styled(SelectableCard, {
+  shouldForwardProp: prop => !['sentiment'].includes(prop),
+})<{ sentiment: 'neutral' | 'primary' }>`
   border: none;
   padding: ${({ theme }) => theme.space['1']} ${({ theme }) => theme.space['2']};
   font-weight: ${({ theme }) => theme.typography.bodyStrong.weight};
@@ -35,14 +37,18 @@ const StyledSelectableCard = styled(SelectableCard)`
   }
 
   &[data-checked='true'] label {
-    color: ${({ theme }) => theme.colors.primary.textStrong};
+    color: ${({ theme, sentiment }) =>
+      sentiment === 'neutral'
+        ? theme.colors.neutral.textStrong
+        : theme.colors.primary.textStrong};
   }
-
-
 
   &:not([data-checked='true']) label {
     &:hover {
-      color: ${({ theme }) => theme.colors.primary.text};
+      color: ${({ theme, sentiment }) =>
+        sentiment === 'neutral'
+          ? theme.colors.neutral.textHover
+          : theme.colors.primary.text};
     }
   }
 
@@ -88,7 +94,7 @@ export const Option = ({
     <StyledSelectableCard
       name={name}
       value={value}
-      checked={localValue === value && sentiment === 'primary'}
+      checked={localValue === value}
       onChange={handleOnChange}
       onBlur={onBlur}
       onFocus={onFocus}
@@ -96,6 +102,7 @@ export const Option = ({
       label={children}
       data-testid={dataTestId ?? `switch-button-${value}`}
       ref={ref}
+      sentiment={sentiment}
     />
   )
 }
