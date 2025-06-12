@@ -1,5 +1,17 @@
 # Change Log
 
+## 4.0.0-beta.8
+
+### Patch Changes
+
+- [`9d11919`](https://github.com/scaleway/ultraviolet/commit/9d11919349dbfd0d3463050e98c73909eea1ddf4) Thanks [@lisalupi](https://github.com/lisalupi)! - `ToggleField` and `SelectableCardField`: Fix type of prop `label`
+
+- [#5227](https://github.com/scaleway/ultraviolet/pull/5227) [`03df29d`](https://github.com/scaleway/ultraviolet/commit/03df29d7069ed7d670ebe0013628c6969903110f) Thanks [@Lawndlwd](https://github.com/Lawndlwd)! - Fix: Make Form without style
+
+- Updated dependencies [[`15fd34a`](https://github.com/scaleway/ultraviolet/commit/15fd34ad677dfaf551a4e6884ca9ecee18280654), [`cfe5bbe`](https://github.com/scaleway/ultraviolet/commit/cfe5bbed94318b75a6643cd8fb11b761f7aa3e48), [`08e0353`](https://github.com/scaleway/ultraviolet/commit/08e03530fcd28a1c478fda9ddca41a63d5124581)]:
+  - @ultraviolet/icons@4.0.0-beta.4
+  - @ultraviolet/ui@2.0.0-beta.7
+
 ## 4.0.0-beta.7
 
 ### Minor Changes

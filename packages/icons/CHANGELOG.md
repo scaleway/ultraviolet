@@ -1,5 +1,11 @@
 # Change Log
 
+## 4.0.0-beta.4
+
+### Patch Changes
+
+- [`15fd34a`](https://github.com/scaleway/ultraviolet/commit/15fd34ad677dfaf551a4e6884ca9ecee18280654) Thanks [@lisalupi](https://github.com/lisalupi)! - New `ProductIcon`: "interlinkDedicated"
+
 ## 4.0.0-beta.3
 
 ### Patch Changes
