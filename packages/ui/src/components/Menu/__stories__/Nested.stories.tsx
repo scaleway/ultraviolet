@@ -6,18 +6,73 @@ export const Nested: StoryFn<typeof MenuV2> = ({ ...props }) => (
   <MenuV2 {...props} disclosure={DefaultDisclosure} searchable>
     <MenuV2.Item borderless>Power on</MenuV2.Item>
     <MenuV2
-      disclosure={<MenuV2.Item>SubMenu click</MenuV2.Item>}
-      placement="right"
+      disclosure={visible => (
+        <MenuV2.Item arrowRight active={visible.visible}>
+          SubMenu click
+        </MenuV2.Item>
+      )}
       triggerMethod="click"
+      nested
     >
       <MenuV2.Item>hi!</MenuV2.Item>
     </MenuV2>
     <MenuV2
-      disclosure={<MenuV2.Item>SubMenu hover</MenuV2.Item>}
-      placement="right"
+      disclosure={visible => (
+        <MenuV2.Item arrowRight active={visible.visible}>
+          SubMenu hover
+        </MenuV2.Item>
+      )}
       triggerMethod="hover"
+      nested
     >
       <MenuV2.Item>hello</MenuV2.Item>
+    </MenuV2>
+    {/**
+     * VERY NESTED MENUS
+     */}
+    <MenuV2
+      nested
+      disclosure={visible => (
+        <MenuV2.Item arrowRight active={visible.visible}>
+          click for a very nested menu
+        </MenuV2.Item>
+      )}
+    >
+      <MenuV2
+        disclosure={visible => (
+          <MenuV2.Item arrowRight active={visible.visible}>
+            nested 1
+          </MenuV2.Item>
+        )}
+        nested
+      >
+        <MenuV2.Item borderless>Item</MenuV2.Item>
+        <MenuV2.Item borderless>Item</MenuV2.Item>
+        <MenuV2
+          disclosure={visible => (
+            <MenuV2.Item arrowRight active={visible.visible}>
+              nested 2
+            </MenuV2.Item>
+          )}
+          nested
+        >
+          <MenuV2.Item borderless>Item</MenuV2.Item>
+          <MenuV2
+            disclosure={visible => (
+              <MenuV2.Item arrowRight active={visible.visible}>
+                nested 3
+              </MenuV2.Item>
+            )}
+            nested
+          >
+            <MenuV2.Item>very nested</MenuV2.Item>
+          </MenuV2>
+          <MenuV2.Item borderless>Item</MenuV2.Item>
+          <MenuV2.Item borderless>Item</MenuV2.Item>
+          <MenuV2.Item borderless>Item</MenuV2.Item>
+        </MenuV2>
+      </MenuV2>
+      <MenuV2.Item>Item</MenuV2.Item>
     </MenuV2>
   </MenuV2>
 )

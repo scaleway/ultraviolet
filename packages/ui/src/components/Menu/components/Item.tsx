@@ -2,8 +2,10 @@
 
 import type { Theme } from '@emotion/react'
 import styled from '@emotion/styled'
+import { ArrowRightIcon } from '@ultraviolet/icons'
 import type { MouseEvent, MouseEventHandler, ReactNode, Ref } from 'react'
 import { forwardRef, useCallback } from 'react'
+import { Stack } from '../../Stack'
 import { Tooltip } from '../../Tooltip'
 import { useMenu } from '../MenuProvider'
 
@@ -176,7 +178,18 @@ const Item = forwardRef<HTMLElement, ItemProps>(
               className={className}
               data-testid={dataTestId}
             >
-              {children}
+              {arrowRight ? (
+                <Stack
+                  justifyContent="space-between"
+                  direction="row"
+                  width="100%"
+                  alignItems="center"
+                >
+                  {children} <ArrowRightIcon />
+                </Stack>
+              ) : (
+                children
+              )}
             </StyledLinkItem>
           </Tooltip>
         </Container>
@@ -203,7 +216,18 @@ const Item = forwardRef<HTMLElement, ItemProps>(
             data-testid={dataTestId}
             data-active={active}
           >
-            {children}
+            {arrowRight ? (
+              <Stack
+                justifyContent="space-between"
+                direction="row"
+                width="100%"
+                alignItems="center"
+              >
+                {children} <ArrowRightIcon />
+              </Stack>
+            ) : (
+              children
+            )}
           </StyledItem>
         </Tooltip>
       </Container>
