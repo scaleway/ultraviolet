@@ -77,7 +77,8 @@ const StyledIcon = styled('svg', {
   fill: ${({ theme, sentiment, prominence, disabled }) => {
     // stronger is available only for neutral sentiment
     const definedProminence =
-      sentiment !== 'neutral' && prominence === 'stronger'
+      (sentiment !== 'neutral' && prominence === 'stronger') ||
+      prominence === 'weak'
         ? capitalize(PROMINENCES.default)
         : capitalize(PROMINENCES[prominence])
 

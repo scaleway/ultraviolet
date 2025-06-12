@@ -31,11 +31,11 @@ exports[`TextInputFieldV2 > should render correctly 1`] = `
 
 .emotion-5 {
   color: #3f4250;
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 1.25rem;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -200,6 +200,10 @@ exports[`TextInputFieldV2 > should render correctly 1`] = `
 
 .emotion-13[data-period="true"] {
   color: #727683;
+}
+
+.emotion-13[data-period="true"][data-size="large"] {
+  width: calc(1.5625rem + 0.125rem);
 }
 
 .emotion-13::-moz-selection {
@@ -245,7 +249,7 @@ exports[`TextInputFieldV2 > should render correctly 1`] = `
           data-disabled="false"
           data-error="false"
           data-readonly="false"
-          data-size="medium"
+          data-size="large"
         >
           <div
             class="emotion-9 emotion-3"
@@ -258,7 +262,7 @@ exports[`TextInputFieldV2 > should render correctly 1`] = `
                 aria-valuemin="0"
                 autocomplete="false"
                 class="emotion-13 emotion-14"
-                data-size="medium"
+                data-size="large"
                 data-testid="hours-input"
                 placeholder="00"
                 role="spinbutton"
@@ -278,7 +282,7 @@ exports[`TextInputFieldV2 > should render correctly 1`] = `
                 aria-valuemin="0"
                 autocomplete="false"
                 class="emotion-13 emotion-14"
-                data-size="medium"
+                data-size="large"
                 data-testid="minutes-input"
                 placeholder="00"
                 role="spinbutton"
@@ -298,7 +302,7 @@ exports[`TextInputFieldV2 > should render correctly 1`] = `
                 aria-valuemin="0"
                 autocomplete="false"
                 class="emotion-13 emotion-14"
-                data-size="medium"
+                data-size="large"
                 data-testid="seconds-input"
                 placeholder="00"
                 role="spinbutton"
@@ -344,11 +348,11 @@ exports[`TextInputFieldV2 > should render correctly disabled 1`] = `
 
 .emotion-5 {
   color: #3f4250;
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 1.25rem;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -515,6 +519,10 @@ exports[`TextInputFieldV2 > should render correctly disabled 1`] = `
   color: #727683;
 }
 
+.emotion-13[data-period="true"][data-size="large"] {
+  width: calc(1.5625rem + 0.125rem);
+}
+
 .emotion-13::-moz-selection {
   background: none;
 }
@@ -558,7 +566,7 @@ exports[`TextInputFieldV2 > should render correctly disabled 1`] = `
           data-disabled="false"
           data-error="false"
           data-readonly="false"
-          data-size="medium"
+          data-size="large"
         >
           <div
             class="emotion-9 emotion-3"
@@ -571,7 +579,7 @@ exports[`TextInputFieldV2 > should render correctly disabled 1`] = `
                 aria-valuemin="0"
                 autocomplete="false"
                 class="emotion-13 emotion-14"
-                data-size="medium"
+                data-size="large"
                 data-testid="hours-input"
                 placeholder="00"
                 role="spinbutton"
@@ -591,7 +599,7 @@ exports[`TextInputFieldV2 > should render correctly disabled 1`] = `
                 aria-valuemin="0"
                 autocomplete="false"
                 class="emotion-13 emotion-14"
-                data-size="medium"
+                data-size="large"
                 data-testid="minutes-input"
                 placeholder="00"
                 role="spinbutton"
@@ -611,7 +619,7 @@ exports[`TextInputFieldV2 > should render correctly disabled 1`] = `
                 aria-valuemin="0"
                 autocomplete="false"
                 class="emotion-13 emotion-14"
-                data-size="medium"
+                data-size="large"
                 data-testid="seconds-input"
                 placeholder="00"
                 role="spinbutton"
