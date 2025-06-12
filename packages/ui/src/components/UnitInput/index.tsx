@@ -182,8 +182,11 @@ const CustomSelectInput = styled(SelectInputV2)<{
     background: transparent;
   }
 
-  ${({ width }) => width && `width: ${typeof width === 'string' ? width : `${width}px`};`}
-  ${({ maxWidth }) => maxWidth && `max-width: ${typeof maxWidth === 'string' ? maxWidth : `${maxWidth}px`};`}
+  ${({ width }) =>
+    width && `width: ${typeof width === 'string' ? width : `${width}px`};`}
+  ${({ maxWidth }) =>
+    maxWidth &&
+    `max-width: ${typeof maxWidth === 'string' ? maxWidth : `${maxWidth}px`};`}
 
   #unit:focus,
   #unit:active {
@@ -202,7 +205,6 @@ type UnitInputProps = {
   onChangeUnitValue?: (values: string) => void
   options: OptionType[]
   selectInputWidth?: number | string
-  selectInputMaxWidth?: number | string
   size?: 'small' | 'medium' | 'large'
   'data-testid'?: string
   helper?: string
@@ -243,7 +245,6 @@ export const UnitInput = ({
   value,
   unitValue,
   selectInputWidth = '12.6rem',
-  selectInputMaxWidth = '12.6rem',
   disabled = false,
   options,
   className,
@@ -356,7 +357,6 @@ export const UnitInput = ({
           value={unitValue}
           options={options}
           width={selectInputWidth}
-          maxWidth={selectInputMaxWidth}
           searchable={false}
           clearable={false}
           placeholder={placeholderUnit}

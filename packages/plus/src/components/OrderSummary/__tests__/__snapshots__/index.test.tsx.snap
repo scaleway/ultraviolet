@@ -107,9 +107,32 @@ exports[`OrderSummary > should work with an empty list of item 1`] = `
 }
 
 .emotion-8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-10 {
   color: #222638;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -118,7 +141,7 @@ exports[`OrderSummary > should work with an empty list of item 1`] = `
   text-decoration: none;
 }
 
-.emotion-10 {
+.emotion-12 {
   color: #222638;
   font-size: 1.3125rem;
   font-family: Space Grotesk,sans-serif;
@@ -145,13 +168,17 @@ exports[`OrderSummary > should work with an empty list of item 1`] = `
         <div
           class="emotion-6 emotion-7"
         >
-          <span
-            class="emotion-8 emotion-9"
+          <div
+            class="emotion-8 emotion-7"
           >
-            Estimated cost:
-          </span>
+            <span
+              class="emotion-10 emotion-11"
+            >
+              Estimated cost:
+            </span>
+          </div>
           <span
-            class="emotion-10 emotion-9"
+            class="emotion-12 emotion-11"
             data-testid="total-price"
           >
             €0.00
@@ -874,7 +901,6 @@ exports[`OrderSummary > should work with children 1`] = `
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  max-width: 65%;
 }
 
 .emotion-17 #unit {
@@ -892,7 +918,6 @@ exports[`OrderSummary > should work with children 1`] = `
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  max-width: 65%;
 }
 
 .emotion-17 #unit {
@@ -930,29 +955,10 @@ exports[`OrderSummary > should work with children 1`] = `
 }
 
 .emotion-23 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: grid;
+  width: 100%;
   gap: 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  grid-template-columns: 1fr auto;
   padding: 0.5rem;
   padding-right: 0;
   padding-left: 1rem;
@@ -961,7 +967,6 @@ exports[`OrderSummary > should work with children 1`] = `
   background: #ffffff;
   border-radius: 0.25rem;
   width: 100%;
-  overflow: hidden;
 }
 
 .emotion-23[data-size='small'] {
@@ -1043,29 +1048,10 @@ exports[`OrderSummary > should work with children 1`] = `
 }
 
 .emotion-23 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: grid;
+  width: 100%;
   gap: 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  grid-template-columns: 1fr auto;
   padding: 0.5rem;
   padding-right: 0;
   padding-left: 1rem;
@@ -1074,7 +1060,6 @@ exports[`OrderSummary > should work with children 1`] = `
   background: #ffffff;
   border-radius: 0.25rem;
   width: 100%;
-  overflow: hidden;
 }
 
 .emotion-23[data-size='small'] {
@@ -1158,7 +1143,7 @@ exports[`OrderSummary > should work with children 1`] = `
 .emotion-26 {
   color: #3f4250;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -1168,12 +1153,15 @@ exports[`OrderSummary > should work with children 1`] = `
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
 }
 
 .emotion-26 {
   color: #3f4250;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -1183,6 +1171,9 @@ exports[`OrderSummary > should work with children 1`] = `
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
 }
 
 .emotion-28 {
@@ -1424,7 +1415,7 @@ exports[`OrderSummary > should work with children 1`] = `
 .emotion-38 {
   color: #222638;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -1436,7 +1427,7 @@ exports[`OrderSummary > should work with children 1`] = `
 .emotion-38 {
   color: #222638;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -1494,7 +1485,7 @@ exports[`OrderSummary > should work with children 1`] = `
 .emotion-42 {
   color: #727683;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -1508,7 +1499,7 @@ exports[`OrderSummary > should work with children 1`] = `
 .emotion-42 {
   color: #727683;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -1568,7 +1559,7 @@ exports[`OrderSummary > should work with children 1`] = `
 .emotion-52 {
   color: #222638;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -1580,7 +1571,7 @@ exports[`OrderSummary > should work with children 1`] = `
 .emotion-52 {
   color: #222638;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -1640,7 +1631,7 @@ exports[`OrderSummary > should work with children 1`] = `
 .emotion-74 {
   color: #641cb3;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -1653,7 +1644,7 @@ exports[`OrderSummary > should work with children 1`] = `
 .emotion-94 {
   color: #3f4250;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -1765,8 +1756,8 @@ exports[`OrderSummary > should work with children 1`] = `
                 class="emotion-16 emotion-17 emotion-18"
               >
                 <div
-                  aria-controls=":r3v:"
-                  aria-describedby=":r3v:"
+                  aria-controls="«r3v»"
+                  aria-describedby="«r3v»"
                   class="emotion-19 emotion-20"
                   data-container-full-width="true"
                   tabindex="-1"
@@ -1906,8 +1897,8 @@ exports[`OrderSummary > should work with children 1`] = `
                 class="emotion-74 emotion-5"
               >
                 <div
-                  aria-controls=":r4a:"
-                  aria-describedby=":r4a:"
+                  aria-controls="«r4a»"
+                  aria-describedby="«r4a»"
                   class="emotion-19 emotion-20"
                   tabindex="0"
                 >
@@ -2321,11 +2312,15 @@ exports[`OrderSummary > should work with children 1`] = `
         <div
           class="emotion-36 emotion-9"
         >
-          <span
-            class="emotion-38 emotion-5"
+          <div
+            class="emotion-40 emotion-9"
           >
-            Estimated cost:
-          </span>
+            <span
+              class="emotion-38 emotion-5"
+            >
+              Estimated cost:
+            </span>
+          </div>
           <span
             class="emotion-4 emotion-5"
             data-testid="total-price"
@@ -2451,7 +2446,7 @@ exports[`OrderSummary > should work with default props 1`] = `
 .emotion-8 {
   color: #222638;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -2486,7 +2481,7 @@ exports[`OrderSummary > should work with default props 1`] = `
 .emotion-12 {
   color: #727683;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -2523,7 +2518,7 @@ exports[`OrderSummary > should work with default props 1`] = `
 .emotion-22 {
   color: #222638;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -2559,7 +2554,7 @@ exports[`OrderSummary > should work with default props 1`] = `
 .emotion-44 {
   color: #641cb3;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -2598,7 +2593,7 @@ exports[`OrderSummary > should work with default props 1`] = `
 .emotion-64 {
   color: #3f4250;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -2632,7 +2627,7 @@ exports[`OrderSummary > should work with default props 1`] = `
   border-top: 1px solid #d9dadd;
 }
 
-.emotion-230 {
+.emotion-232 {
   color: #222638;
   font-size: 1.3125rem;
   font-family: Space Grotesk,sans-serif;
@@ -2740,8 +2735,8 @@ exports[`OrderSummary > should work with default props 1`] = `
                 class="emotion-44 emotion-9"
               >
                 <div
-                  aria-controls=":r8:"
-                  aria-describedby=":r8:"
+                  aria-controls="«r8»"
+                  aria-describedby="«r8»"
                   class="emotion-46 emotion-47"
                   tabindex="0"
                 >
@@ -3154,13 +3149,17 @@ exports[`OrderSummary > should work with default props 1`] = `
         <div
           class="emotion-6 emotion-7"
         >
-          <span
-            class="emotion-8 emotion-9"
+          <div
+            class="emotion-10 emotion-7"
           >
-            Estimated cost:
-          </span>
+            <span
+              class="emotion-8 emotion-9"
+            >
+              Estimated cost:
+            </span>
+          </div>
           <span
-            class="emotion-230 emotion-9"
+            class="emotion-232 emotion-9"
             data-testid="total-price"
           >
             €383.83
@@ -3883,7 +3882,6 @@ exports[`OrderSummary > should work with discount 1`] = `
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  max-width: 65%;
 }
 
 .emotion-17 #unit {
@@ -3901,7 +3899,6 @@ exports[`OrderSummary > should work with discount 1`] = `
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  max-width: 65%;
 }
 
 .emotion-17 #unit {
@@ -3939,29 +3936,10 @@ exports[`OrderSummary > should work with discount 1`] = `
 }
 
 .emotion-23 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: grid;
+  width: 100%;
   gap: 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  grid-template-columns: 1fr auto;
   padding: 0.5rem;
   padding-right: 0;
   padding-left: 1rem;
@@ -3970,7 +3948,6 @@ exports[`OrderSummary > should work with discount 1`] = `
   background: #ffffff;
   border-radius: 0.25rem;
   width: 100%;
-  overflow: hidden;
 }
 
 .emotion-23[data-size='small'] {
@@ -4052,29 +4029,10 @@ exports[`OrderSummary > should work with discount 1`] = `
 }
 
 .emotion-23 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: grid;
+  width: 100%;
   gap: 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  grid-template-columns: 1fr auto;
   padding: 0.5rem;
   padding-right: 0;
   padding-left: 1rem;
@@ -4083,7 +4041,6 @@ exports[`OrderSummary > should work with discount 1`] = `
   background: #ffffff;
   border-radius: 0.25rem;
   width: 100%;
-  overflow: hidden;
 }
 
 .emotion-23[data-size='small'] {
@@ -4167,7 +4124,7 @@ exports[`OrderSummary > should work with discount 1`] = `
 .emotion-26 {
   color: #3f4250;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -4177,12 +4134,15 @@ exports[`OrderSummary > should work with discount 1`] = `
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
 }
 
 .emotion-26 {
   color: #3f4250;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -4192,6 +4152,9 @@ exports[`OrderSummary > should work with discount 1`] = `
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
 }
 
 .emotion-28 {
@@ -4433,7 +4396,7 @@ exports[`OrderSummary > should work with discount 1`] = `
 .emotion-38 {
   color: #222638;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -4445,7 +4408,7 @@ exports[`OrderSummary > should work with discount 1`] = `
 .emotion-38 {
   color: #222638;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -4503,7 +4466,7 @@ exports[`OrderSummary > should work with discount 1`] = `
 .emotion-48 {
   color: #222638;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -4515,7 +4478,7 @@ exports[`OrderSummary > should work with discount 1`] = `
 .emotion-48 {
   color: #222638;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -4622,7 +4585,7 @@ exports[`OrderSummary > should work with discount 1`] = `
   border-top: 1px solid #d9dadd;
 }
 
-.emotion-60 {
+.emotion-58 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4645,7 +4608,7 @@ exports[`OrderSummary > should work with discount 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-60 {
+.emotion-58 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4668,10 +4631,10 @@ exports[`OrderSummary > should work with discount 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-62 {
+.emotion-64 {
   color: #727683;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -4682,10 +4645,10 @@ exports[`OrderSummary > should work with discount 1`] = `
   text-decoration: line-through;
 }
 
-.emotion-62 {
+.emotion-64 {
   color: #727683;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -4749,8 +4712,8 @@ exports[`OrderSummary > should work with discount 1`] = `
                 class="emotion-16 emotion-17 emotion-18"
               >
                 <div
-                  aria-controls=":ral:"
-                  aria-describedby=":ral:"
+                  aria-controls="«ral»"
+                  aria-describedby="«ral»"
                   class="emotion-19 emotion-20"
                   data-container-full-width="true"
                   tabindex="-1"
@@ -4853,16 +4816,20 @@ exports[`OrderSummary > should work with discount 1`] = `
         <div
           class="emotion-36 emotion-9"
         >
-          <span
-            class="emotion-38 emotion-5"
-          >
-            Estimated cost:
-          </span>
           <div
-            class="emotion-60 emotion-9"
+            class="emotion-58 emotion-9"
           >
             <span
-              class="emotion-62 emotion-5"
+              class="emotion-38 emotion-5"
+            >
+              Estimated cost:
+            </span>
+          </div>
+          <div
+            class="emotion-58 emotion-9"
+          >
+            <span
+              class="emotion-64 emotion-5"
             >
               €5.00
             </span>
@@ -5591,7 +5558,6 @@ exports[`OrderSummary > should work with discount in  % 1`] = `
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  max-width: 65%;
 }
 
 .emotion-17 #unit {
@@ -5609,7 +5575,6 @@ exports[`OrderSummary > should work with discount in  % 1`] = `
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  max-width: 65%;
 }
 
 .emotion-17 #unit {
@@ -5647,29 +5612,10 @@ exports[`OrderSummary > should work with discount in  % 1`] = `
 }
 
 .emotion-23 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: grid;
+  width: 100%;
   gap: 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  grid-template-columns: 1fr auto;
   padding: 0.5rem;
   padding-right: 0;
   padding-left: 1rem;
@@ -5678,7 +5624,6 @@ exports[`OrderSummary > should work with discount in  % 1`] = `
   background: #ffffff;
   border-radius: 0.25rem;
   width: 100%;
-  overflow: hidden;
 }
 
 .emotion-23[data-size='small'] {
@@ -5760,29 +5705,10 @@ exports[`OrderSummary > should work with discount in  % 1`] = `
 }
 
 .emotion-23 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: grid;
+  width: 100%;
   gap: 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  grid-template-columns: 1fr auto;
   padding: 0.5rem;
   padding-right: 0;
   padding-left: 1rem;
@@ -5791,7 +5717,6 @@ exports[`OrderSummary > should work with discount in  % 1`] = `
   background: #ffffff;
   border-radius: 0.25rem;
   width: 100%;
-  overflow: hidden;
 }
 
 .emotion-23[data-size='small'] {
@@ -5875,7 +5800,7 @@ exports[`OrderSummary > should work with discount in  % 1`] = `
 .emotion-26 {
   color: #3f4250;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -5885,12 +5810,15 @@ exports[`OrderSummary > should work with discount in  % 1`] = `
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
 }
 
 .emotion-26 {
   color: #3f4250;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -5900,6 +5828,9 @@ exports[`OrderSummary > should work with discount in  % 1`] = `
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
 }
 
 .emotion-28 {
@@ -6141,7 +6072,7 @@ exports[`OrderSummary > should work with discount in  % 1`] = `
 .emotion-38 {
   color: #222638;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -6153,7 +6084,7 @@ exports[`OrderSummary > should work with discount in  % 1`] = `
 .emotion-38 {
   color: #222638;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -6211,7 +6142,7 @@ exports[`OrderSummary > should work with discount in  % 1`] = `
 .emotion-48 {
   color: #222638;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -6223,7 +6154,7 @@ exports[`OrderSummary > should work with discount in  % 1`] = `
 .emotion-48 {
   color: #222638;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -6330,7 +6261,7 @@ exports[`OrderSummary > should work with discount in  % 1`] = `
   border-top: 1px solid #d9dadd;
 }
 
-.emotion-60 {
+.emotion-58 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6353,7 +6284,7 @@ exports[`OrderSummary > should work with discount in  % 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-60 {
+.emotion-58 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6376,10 +6307,10 @@ exports[`OrderSummary > should work with discount in  % 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-62 {
+.emotion-64 {
   color: #727683;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -6390,10 +6321,10 @@ exports[`OrderSummary > should work with discount in  % 1`] = `
   text-decoration: line-through;
 }
 
-.emotion-62 {
+.emotion-64 {
   color: #727683;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -6457,8 +6388,8 @@ exports[`OrderSummary > should work with discount in  % 1`] = `
                 class="emotion-16 emotion-17 emotion-18"
               >
                 <div
-                  aria-controls=":ra8:"
-                  aria-describedby=":ra8:"
+                  aria-controls="«ra8»"
+                  aria-describedby="«ra8»"
                   class="emotion-19 emotion-20"
                   data-container-full-width="true"
                   tabindex="-1"
@@ -6561,16 +6492,20 @@ exports[`OrderSummary > should work with discount in  % 1`] = `
         <div
           class="emotion-36 emotion-9"
         >
-          <span
-            class="emotion-38 emotion-5"
-          >
-            Estimated cost:
-          </span>
           <div
-            class="emotion-60 emotion-9"
+            class="emotion-58 emotion-9"
           >
             <span
-              class="emotion-62 emotion-5"
+              class="emotion-38 emotion-5"
+            >
+              Estimated cost:
+            </span>
+          </div>
+          <div
+            class="emotion-58 emotion-9"
+          >
+            <span
+              class="emotion-64 emotion-5"
             >
               €5.00
             </span>
@@ -7299,7 +7234,6 @@ exports[`OrderSummary > should work with footer 1`] = `
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  max-width: 65%;
 }
 
 .emotion-17 #unit {
@@ -7317,7 +7251,6 @@ exports[`OrderSummary > should work with footer 1`] = `
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  max-width: 65%;
 }
 
 .emotion-17 #unit {
@@ -7355,29 +7288,10 @@ exports[`OrderSummary > should work with footer 1`] = `
 }
 
 .emotion-23 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: grid;
+  width: 100%;
   gap: 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  grid-template-columns: 1fr auto;
   padding: 0.5rem;
   padding-right: 0;
   padding-left: 1rem;
@@ -7386,7 +7300,6 @@ exports[`OrderSummary > should work with footer 1`] = `
   background: #ffffff;
   border-radius: 0.25rem;
   width: 100%;
-  overflow: hidden;
 }
 
 .emotion-23[data-size='small'] {
@@ -7468,29 +7381,10 @@ exports[`OrderSummary > should work with footer 1`] = `
 }
 
 .emotion-23 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: grid;
+  width: 100%;
   gap: 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  grid-template-columns: 1fr auto;
   padding: 0.5rem;
   padding-right: 0;
   padding-left: 1rem;
@@ -7499,7 +7393,6 @@ exports[`OrderSummary > should work with footer 1`] = `
   background: #ffffff;
   border-radius: 0.25rem;
   width: 100%;
-  overflow: hidden;
 }
 
 .emotion-23[data-size='small'] {
@@ -7583,7 +7476,7 @@ exports[`OrderSummary > should work with footer 1`] = `
 .emotion-26 {
   color: #3f4250;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -7593,12 +7486,15 @@ exports[`OrderSummary > should work with footer 1`] = `
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
 }
 
 .emotion-26 {
   color: #3f4250;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -7608,6 +7504,9 @@ exports[`OrderSummary > should work with footer 1`] = `
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
 }
 
 .emotion-28 {
@@ -7849,7 +7748,7 @@ exports[`OrderSummary > should work with footer 1`] = `
 .emotion-38 {
   color: #222638;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -7861,7 +7760,7 @@ exports[`OrderSummary > should work with footer 1`] = `
 .emotion-38 {
   color: #222638;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -7919,7 +7818,7 @@ exports[`OrderSummary > should work with footer 1`] = `
 .emotion-42 {
   color: #727683;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -7933,7 +7832,7 @@ exports[`OrderSummary > should work with footer 1`] = `
 .emotion-42 {
   color: #727683;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -7993,7 +7892,7 @@ exports[`OrderSummary > should work with footer 1`] = `
 .emotion-52 {
   color: #222638;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -8005,7 +7904,7 @@ exports[`OrderSummary > should work with footer 1`] = `
 .emotion-52 {
   color: #222638;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -8065,7 +7964,7 @@ exports[`OrderSummary > should work with footer 1`] = `
 .emotion-74 {
   color: #641cb3;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -8078,7 +7977,7 @@ exports[`OrderSummary > should work with footer 1`] = `
 .emotion-94 {
   color: #3f4250;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -8190,8 +8089,8 @@ exports[`OrderSummary > should work with footer 1`] = `
                 class="emotion-16 emotion-17 emotion-18"
               >
                 <div
-                  aria-controls=":r5n:"
-                  aria-describedby=":r5n:"
+                  aria-controls="«r5n»"
+                  aria-describedby="«r5n»"
                   class="emotion-19 emotion-20"
                   data-container-full-width="true"
                   tabindex="-1"
@@ -8331,8 +8230,8 @@ exports[`OrderSummary > should work with footer 1`] = `
                 class="emotion-74 emotion-5"
               >
                 <div
-                  aria-controls=":r62:"
-                  aria-describedby=":r62:"
+                  aria-controls="«r62»"
+                  aria-describedby="«r62»"
                   class="emotion-19 emotion-20"
                   tabindex="0"
                 >
@@ -8745,11 +8644,15 @@ exports[`OrderSummary > should work with footer 1`] = `
         <div
           class="emotion-36 emotion-9"
         >
-          <span
-            class="emotion-38 emotion-5"
+          <div
+            class="emotion-40 emotion-9"
           >
-            Estimated cost:
-          </span>
+            <span
+              class="emotion-38 emotion-5"
+            >
+              Estimated cost:
+            </span>
+          </div>
           <span
             class="emotion-4 emotion-5"
             data-testid="total-price"
@@ -9475,7 +9378,6 @@ exports[`OrderSummary > should work with fractionDigits 1`] = `
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  max-width: 65%;
 }
 
 .emotion-17 #unit {
@@ -9493,7 +9395,6 @@ exports[`OrderSummary > should work with fractionDigits 1`] = `
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  max-width: 65%;
 }
 
 .emotion-17 #unit {
@@ -9531,29 +9432,10 @@ exports[`OrderSummary > should work with fractionDigits 1`] = `
 }
 
 .emotion-23 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: grid;
+  width: 100%;
   gap: 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  grid-template-columns: 1fr auto;
   padding: 0.5rem;
   padding-right: 0;
   padding-left: 1rem;
@@ -9562,7 +9444,6 @@ exports[`OrderSummary > should work with fractionDigits 1`] = `
   background: #ffffff;
   border-radius: 0.25rem;
   width: 100%;
-  overflow: hidden;
 }
 
 .emotion-23[data-size='small'] {
@@ -9644,29 +9525,10 @@ exports[`OrderSummary > should work with fractionDigits 1`] = `
 }
 
 .emotion-23 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: grid;
+  width: 100%;
   gap: 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  grid-template-columns: 1fr auto;
   padding: 0.5rem;
   padding-right: 0;
   padding-left: 1rem;
@@ -9675,7 +9537,6 @@ exports[`OrderSummary > should work with fractionDigits 1`] = `
   background: #ffffff;
   border-radius: 0.25rem;
   width: 100%;
-  overflow: hidden;
 }
 
 .emotion-23[data-size='small'] {
@@ -9759,7 +9620,7 @@ exports[`OrderSummary > should work with fractionDigits 1`] = `
 .emotion-26 {
   color: #3f4250;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -9769,12 +9630,15 @@ exports[`OrderSummary > should work with fractionDigits 1`] = `
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
 }
 
 .emotion-26 {
   color: #3f4250;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -9784,6 +9648,9 @@ exports[`OrderSummary > should work with fractionDigits 1`] = `
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
 }
 
 .emotion-28 {
@@ -10025,7 +9892,7 @@ exports[`OrderSummary > should work with fractionDigits 1`] = `
 .emotion-38 {
   color: #222638;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -10037,7 +9904,7 @@ exports[`OrderSummary > should work with fractionDigits 1`] = `
 .emotion-38 {
   color: #222638;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -10095,7 +9962,7 @@ exports[`OrderSummary > should work with fractionDigits 1`] = `
 .emotion-48 {
   color: #222638;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -10107,7 +9974,7 @@ exports[`OrderSummary > should work with fractionDigits 1`] = `
 .emotion-48 {
   color: #222638;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -10214,7 +10081,7 @@ exports[`OrderSummary > should work with fractionDigits 1`] = `
   border-top: 1px solid #d9dadd;
 }
 
-.emotion-60 {
+.emotion-58 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -10237,7 +10104,7 @@ exports[`OrderSummary > should work with fractionDigits 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-60 {
+.emotion-58 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -10260,10 +10127,10 @@ exports[`OrderSummary > should work with fractionDigits 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-62 {
+.emotion-64 {
   color: #727683;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -10274,10 +10141,10 @@ exports[`OrderSummary > should work with fractionDigits 1`] = `
   text-decoration: line-through;
 }
 
-.emotion-62 {
+.emotion-64 {
   color: #727683;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -10341,8 +10208,8 @@ exports[`OrderSummary > should work with fractionDigits 1`] = `
                 class="emotion-16 emotion-17 emotion-18"
               >
                 <div
-                  aria-controls=":rb2:"
-                  aria-describedby=":rb2:"
+                  aria-controls="«rb2»"
+                  aria-describedby="«rb2»"
                   class="emotion-19 emotion-20"
                   data-container-full-width="true"
                   tabindex="-1"
@@ -10445,16 +10312,20 @@ exports[`OrderSummary > should work with fractionDigits 1`] = `
         <div
           class="emotion-36 emotion-9"
         >
-          <span
-            class="emotion-38 emotion-5"
-          >
-            Estimated cost:
-          </span>
           <div
-            class="emotion-60 emotion-9"
+            class="emotion-58 emotion-9"
           >
             <span
-              class="emotion-62 emotion-5"
+              class="emotion-38 emotion-5"
+            >
+              Estimated cost:
+            </span>
+          </div>
+          <div
+            class="emotion-58 emotion-9"
+          >
+            <span
+              class="emotion-64 emotion-5"
             >
               €5
             </span>
@@ -11183,7 +11054,6 @@ exports[`OrderSummary > should work with numberInputs 1`] = `
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  max-width: 65%;
 }
 
 .emotion-17 #unit {
@@ -11201,7 +11071,6 @@ exports[`OrderSummary > should work with numberInputs 1`] = `
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  max-width: 65%;
 }
 
 .emotion-17 #unit {
@@ -11239,29 +11108,10 @@ exports[`OrderSummary > should work with numberInputs 1`] = `
 }
 
 .emotion-23 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: grid;
+  width: 100%;
   gap: 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  grid-template-columns: 1fr auto;
   padding: 0.5rem;
   padding-right: 0;
   padding-left: 1rem;
@@ -11270,7 +11120,6 @@ exports[`OrderSummary > should work with numberInputs 1`] = `
   background: #ffffff;
   border-radius: 0.25rem;
   width: 100%;
-  overflow: hidden;
 }
 
 .emotion-23[data-size='small'] {
@@ -11352,29 +11201,10 @@ exports[`OrderSummary > should work with numberInputs 1`] = `
 }
 
 .emotion-23 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: grid;
+  width: 100%;
   gap: 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  grid-template-columns: 1fr auto;
   padding: 0.5rem;
   padding-right: 0;
   padding-left: 1rem;
@@ -11383,7 +11213,6 @@ exports[`OrderSummary > should work with numberInputs 1`] = `
   background: #ffffff;
   border-radius: 0.25rem;
   width: 100%;
-  overflow: hidden;
 }
 
 .emotion-23[data-size='small'] {
@@ -11467,7 +11296,7 @@ exports[`OrderSummary > should work with numberInputs 1`] = `
 .emotion-26 {
   color: #3f4250;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -11477,12 +11306,15 @@ exports[`OrderSummary > should work with numberInputs 1`] = `
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
 }
 
 .emotion-26 {
   color: #3f4250;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -11492,6 +11324,9 @@ exports[`OrderSummary > should work with numberInputs 1`] = `
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
 }
 
 .emotion-28 {
@@ -11733,7 +11568,7 @@ exports[`OrderSummary > should work with numberInputs 1`] = `
 .emotion-38 {
   color: #222638;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -11745,7 +11580,7 @@ exports[`OrderSummary > should work with numberInputs 1`] = `
 .emotion-38 {
   color: #222638;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -11894,7 +11729,7 @@ exports[`OrderSummary > should work with numberInputs 1`] = `
   gap: 0.25rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 1.5rem;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -11909,7 +11744,7 @@ exports[`OrderSummary > should work with numberInputs 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -11929,6 +11764,10 @@ exports[`OrderSummary > should work with numberInputs 1`] = `
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
+.emotion-47 .e1y1n78x0 {
+  stroke: transparent;
+}
+
 .emotion-47:hover,
 .emotion-47:active {
   background: #e9eaeb;
@@ -11938,19 +11777,15 @@ exports[`OrderSummary > should work with numberInputs 1`] = `
 .emotion-49 {
   vertical-align: middle;
   fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
 .emotion-49 .fillStroke {
   stroke: currentColor;
   fill: none;
-}
-
-.emotion-49 path {
-  fill: currentColor;
 }
 
 .emotion-52 {
@@ -11977,7 +11812,7 @@ exports[`OrderSummary > should work with numberInputs 1`] = `
   width: 100%;
   color: #3f4250;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: Regular;
   line-height: 1.25rem;
   text-align: center;
@@ -12015,7 +11850,7 @@ exports[`OrderSummary > should work with numberInputs 1`] = `
 .emotion-54[data-size='large'] {
   height: 3rem;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: Regular;
   line-height: 1.5rem;
 }
@@ -12114,7 +11949,7 @@ exports[`OrderSummary > should work with numberInputs 1`] = `
 .emotion-78 {
   color: #222638;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -12126,7 +11961,7 @@ exports[`OrderSummary > should work with numberInputs 1`] = `
 .emotion-78 {
   color: #222638;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -12138,7 +11973,7 @@ exports[`OrderSummary > should work with numberInputs 1`] = `
 .emotion-91 {
   color: #3f4250;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -12302,6 +12137,52 @@ exports[`OrderSummary > should work with numberInputs 1`] = `
   flex-wrap: nowrap;
 }
 
+.emotion-117 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-117 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
 <div
     data-testid="testing"
   >
@@ -12355,8 +12236,8 @@ exports[`OrderSummary > should work with numberInputs 1`] = `
                 class="emotion-16 emotion-17 emotion-18"
               >
                 <div
-                  aria-controls=":r9j:"
-                  aria-describedby=":r9j:"
+                  aria-controls="«r9j»"
+                  aria-describedby="«r9j»"
                   class="emotion-19 emotion-20"
                   data-container-full-width="true"
                   tabindex="-1"
@@ -12443,9 +12324,8 @@ exports[`OrderSummary > should work with numberInputs 1`] = `
                       type="button"
                     >
                       <svg
-                        class="emotion-49 emotion-50"
+                        class="emotion-49 emotion-31"
                         viewBox="0 0 16 16"
-                        xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
                           d="M3.75 7a.75.75 0 0 0 0 1.5h8.5a.75.75 0 0 0 0-1.5z"
@@ -12461,7 +12341,7 @@ exports[`OrderSummary > should work with numberInputs 1`] = `
                       data-controls="true"
                       data-has-unit="false"
                       data-size="small"
-                      id=":r9n:"
+                      id="«r9n»"
                       max="9007199254740991"
                       min="0"
                       placeholder=""
@@ -12479,9 +12359,8 @@ exports[`OrderSummary > should work with numberInputs 1`] = `
                       type="button"
                     >
                       <svg
-                        class="emotion-49 emotion-50"
+                        class="emotion-49 emotion-31"
                         viewBox="0 0 16 16"
-                        xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
                           d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5z"
@@ -12549,7 +12428,7 @@ exports[`OrderSummary > should work with numberInputs 1`] = `
                           data-controls="false"
                           data-has-unit="true"
                           data-size="small"
-                          id=":r9u:"
+                          id="«r9u»"
                           max="9007199254740991"
                           min="0"
                           placeholder=""
@@ -12614,11 +12493,15 @@ exports[`OrderSummary > should work with numberInputs 1`] = `
           <div
             class="emotion-115 emotion-9"
           >
-            <span
-              class="emotion-38 emotion-5"
+            <div
+              class="emotion-117 emotion-9"
             >
-              Estimated cost:
-            </span>
+              <span
+                class="emotion-38 emotion-5"
+              >
+                Estimated cost:
+              </span>
+            </div>
             total price info
           </div>
           <span
@@ -13345,7 +13228,6 @@ exports[`OrderSummary > should work with price as a range 1`] = `
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  max-width: 65%;
 }
 
 .emotion-17 #unit {
@@ -13363,7 +13245,6 @@ exports[`OrderSummary > should work with price as a range 1`] = `
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  max-width: 65%;
 }
 
 .emotion-17 #unit {
@@ -13401,29 +13282,10 @@ exports[`OrderSummary > should work with price as a range 1`] = `
 }
 
 .emotion-23 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: grid;
+  width: 100%;
   gap: 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  grid-template-columns: 1fr auto;
   padding: 0.5rem;
   padding-right: 0;
   padding-left: 1rem;
@@ -13432,7 +13294,6 @@ exports[`OrderSummary > should work with price as a range 1`] = `
   background: #ffffff;
   border-radius: 0.25rem;
   width: 100%;
-  overflow: hidden;
 }
 
 .emotion-23[data-size='small'] {
@@ -13514,29 +13375,10 @@ exports[`OrderSummary > should work with price as a range 1`] = `
 }
 
 .emotion-23 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: grid;
+  width: 100%;
   gap: 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  grid-template-columns: 1fr auto;
   padding: 0.5rem;
   padding-right: 0;
   padding-left: 1rem;
@@ -13545,7 +13387,6 @@ exports[`OrderSummary > should work with price as a range 1`] = `
   background: #ffffff;
   border-radius: 0.25rem;
   width: 100%;
-  overflow: hidden;
 }
 
 .emotion-23[data-size='small'] {
@@ -13629,7 +13470,7 @@ exports[`OrderSummary > should work with price as a range 1`] = `
 .emotion-26 {
   color: #3f4250;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -13639,12 +13480,15 @@ exports[`OrderSummary > should work with price as a range 1`] = `
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
 }
 
 .emotion-26 {
   color: #3f4250;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -13654,6 +13498,9 @@ exports[`OrderSummary > should work with price as a range 1`] = `
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
 }
 
 .emotion-28 {
@@ -13895,7 +13742,7 @@ exports[`OrderSummary > should work with price as a range 1`] = `
 .emotion-38 {
   color: #222638;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -13907,7 +13754,7 @@ exports[`OrderSummary > should work with price as a range 1`] = `
 .emotion-38 {
   color: #222638;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -13965,7 +13812,7 @@ exports[`OrderSummary > should work with price as a range 1`] = `
 .emotion-48 {
   color: #222638;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -13977,7 +13824,7 @@ exports[`OrderSummary > should work with price as a range 1`] = `
 .emotion-48 {
   color: #222638;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -14082,6 +13929,52 @@ exports[`OrderSummary > should work with price as a range 1`] = `
   flex-wrap: nowrap;
   padding: 1.5rem;
   border-top: 1px solid #d9dadd;
+}
+
+.emotion-58 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-58 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
 <div
@@ -14137,8 +14030,8 @@ exports[`OrderSummary > should work with price as a range 1`] = `
                 class="emotion-16 emotion-17 emotion-18"
               >
                 <div
-                  aria-controls=":r7f:"
-                  aria-describedby=":r7f:"
+                  aria-controls="«r7f»"
+                  aria-describedby="«r7f»"
                   class="emotion-19 emotion-20"
                   data-container-full-width="true"
                   tabindex="-1"
@@ -14241,11 +14134,15 @@ exports[`OrderSummary > should work with price as a range 1`] = `
         <div
           class="emotion-36 emotion-9"
         >
-          <span
-            class="emotion-38 emotion-5"
+          <div
+            class="emotion-58 emotion-9"
           >
-            Estimated cost:
-          </span>
+            <span
+              class="emotion-38 emotion-5"
+            >
+              Estimated cost:
+            </span>
+          </div>
           <span
             class="emotion-4 emotion-5"
             data-testid="total-price"
@@ -14971,7 +14868,6 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  max-width: 65%;
 }
 
 .emotion-17 #unit {
@@ -14989,7 +14885,6 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  max-width: 65%;
 }
 
 .emotion-17 #unit {
@@ -15027,29 +14922,10 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
 }
 
 .emotion-23 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: grid;
+  width: 100%;
   gap: 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  grid-template-columns: 1fr auto;
   padding: 0.5rem;
   padding-right: 0;
   padding-left: 1rem;
@@ -15058,7 +14934,6 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
   background: #ffffff;
   border-radius: 0.25rem;
   width: 100%;
-  overflow: hidden;
 }
 
 .emotion-23[data-size='small'] {
@@ -15140,29 +15015,10 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
 }
 
 .emotion-23 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: grid;
+  width: 100%;
   gap: 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  grid-template-columns: 1fr auto;
   padding: 0.5rem;
   padding-right: 0;
   padding-left: 1rem;
@@ -15171,7 +15027,6 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
   background: #ffffff;
   border-radius: 0.25rem;
   width: 100%;
-  overflow: hidden;
 }
 
 .emotion-23[data-size='small'] {
@@ -15255,7 +15110,7 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
 .emotion-26 {
   color: #3f4250;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -15265,12 +15120,15 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
 }
 
 .emotion-26 {
   color: #3f4250;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -15280,6 +15138,9 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
 }
 
 .emotion-28 {
@@ -15521,7 +15382,7 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
 .emotion-38 {
   color: #222638;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -15533,7 +15394,7 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
 .emotion-38 {
   color: #222638;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -15591,7 +15452,7 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
 .emotion-42 {
   color: #727683;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -15605,7 +15466,7 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
 .emotion-42 {
   color: #727683;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -15665,7 +15526,7 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
 .emotion-52 {
   color: #222638;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -15677,7 +15538,7 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
 .emotion-52 {
   color: #222638;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -15737,7 +15598,7 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
 .emotion-74 {
   color: #641cb3;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -15750,7 +15611,7 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
 .emotion-94 {
   color: #3f4250;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -15908,8 +15769,8 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
                 class="emotion-16 emotion-17 emotion-18"
               >
                 <div
-                  aria-controls=":r7r:"
-                  aria-describedby=":r7r:"
+                  aria-controls="«r7r»"
+                  aria-describedby="«r7r»"
                   class="emotion-19 emotion-20"
                   data-container-full-width="true"
                   tabindex="-1"
@@ -16049,8 +15910,8 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
                 class="emotion-74 emotion-5"
               >
                 <div
-                  aria-controls=":r86:"
-                  aria-describedby=":r86:"
+                  aria-controls="«r86»"
+                  aria-describedby="«r86»"
                   class="emotion-19 emotion-20"
                   tabindex="0"
                 >
@@ -16466,11 +16327,15 @@ exports[`OrderSummary > should work with totalPriceInfo 1`] = `
           <div
             class="emotion-258 emotion-9"
           >
-            <span
-              class="emotion-38 emotion-5"
+            <div
+              class="emotion-40 emotion-9"
             >
-              Estimated cost:
-            </span>
+              <span
+                class="emotion-38 emotion-5"
+              >
+                Estimated cost:
+              </span>
+            </div>
             total price info
           </div>
           <span
@@ -16639,7 +16504,7 @@ exports[`OrderSummary > should work without unitInput 1`] = `
 .emotion-12 {
   color: #222638;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -16674,7 +16539,7 @@ exports[`OrderSummary > should work without unitInput 1`] = `
 .emotion-16 {
   color: #727683;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -16711,7 +16576,7 @@ exports[`OrderSummary > should work without unitInput 1`] = `
 .emotion-26 {
   color: #222638;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -16747,7 +16612,7 @@ exports[`OrderSummary > should work without unitInput 1`] = `
 .emotion-48 {
   color: #641cb3;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -16786,7 +16651,7 @@ exports[`OrderSummary > should work without unitInput 1`] = `
 .emotion-68 {
   color: #3f4250;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -16926,8 +16791,8 @@ exports[`OrderSummary > should work without unitInput 1`] = `
                 class="emotion-48 emotion-5"
               >
                 <div
-                  aria-controls=":r1t:"
-                  aria-describedby=":r1t:"
+                  aria-controls="«r1t»"
+                  aria-describedby="«r1t»"
                   class="emotion-50 emotion-51"
                   tabindex="0"
                 >
@@ -17340,11 +17205,15 @@ exports[`OrderSummary > should work without unitInput 1`] = `
         <div
           class="emotion-10 emotion-11"
         >
-          <span
-            class="emotion-12 emotion-5"
+          <div
+            class="emotion-14 emotion-11"
           >
-            Estimated cost:
-          </span>
+            <span
+              class="emotion-12 emotion-5"
+            >
+              Estimated cost:
+            </span>
+          </div>
           <span
             class="emotion-4 emotion-5"
             data-testid="total-price"
@@ -17569,21 +17438,55 @@ exports[`OrderSummary > works with hideDetails 1`] = `
 }
 
 .emotion-10 {
-  color: #222638;
-  font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
 .emotion-10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-12 {
   color: #222638;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -17592,56 +17495,22 @@ exports[`OrderSummary > works with hideDetails 1`] = `
   text-decoration: none;
 }
 
-.emotion-26 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+.emotion-12 {
+  color: #222638;
+  font-size: 1rem;
+  font-family: Inter,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
-.emotion-26 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.emotion-28 {
+.emotion-32 {
   color: #727683;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -17652,10 +17521,10 @@ exports[`OrderSummary > works with hideDetails 1`] = `
   text-decoration: line-through;
 }
 
-.emotion-28 {
+.emotion-32 {
   color: #727683;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -17688,11 +17557,15 @@ exports[`OrderSummary > works with hideDetails 1`] = `
         <div
           class="emotion-8 emotion-9"
         >
-          <span
-            class="emotion-10 emotion-5"
+          <div
+            class="emotion-10 emotion-9"
           >
-            Estimated cost:
-          </span>
+            <span
+              class="emotion-12 emotion-5"
+            >
+              Estimated cost:
+            </span>
+          </div>
           <span
             class="emotion-4 emotion-5"
             data-testid="total-price"
@@ -17721,16 +17594,20 @@ exports[`OrderSummary > works with hideDetails 1`] = `
         <div
           class="emotion-8 emotion-9"
         >
-          <span
-            class="emotion-10 emotion-5"
-          >
-            Estimated cost:
-          </span>
           <div
-            class="emotion-26 emotion-9"
+            class="emotion-10 emotion-9"
           >
             <span
-              class="emotion-28 emotion-5"
+              class="emotion-12 emotion-5"
+            >
+              Estimated cost:
+            </span>
+          </div>
+          <div
+            class="emotion-10 emotion-9"
+          >
+            <span
+              class="emotion-32 emotion-5"
             >
               €2.50
             </span>
@@ -18459,7 +18336,6 @@ exports[`OrderSummary > works with negative category price 1`] = `
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  max-width: 65%;
 }
 
 .emotion-17 #unit {
@@ -18477,7 +18353,6 @@ exports[`OrderSummary > works with negative category price 1`] = `
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  max-width: 65%;
 }
 
 .emotion-17 #unit {
@@ -18515,29 +18390,10 @@ exports[`OrderSummary > works with negative category price 1`] = `
 }
 
 .emotion-23 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: grid;
+  width: 100%;
   gap: 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  grid-template-columns: 1fr auto;
   padding: 0.5rem;
   padding-right: 0;
   padding-left: 1rem;
@@ -18546,7 +18402,6 @@ exports[`OrderSummary > works with negative category price 1`] = `
   background: #ffffff;
   border-radius: 0.25rem;
   width: 100%;
-  overflow: hidden;
 }
 
 .emotion-23[data-size='small'] {
@@ -18628,29 +18483,10 @@ exports[`OrderSummary > works with negative category price 1`] = `
 }
 
 .emotion-23 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: grid;
+  width: 100%;
   gap: 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  grid-template-columns: 1fr auto;
   padding: 0.5rem;
   padding-right: 0;
   padding-left: 1rem;
@@ -18659,7 +18495,6 @@ exports[`OrderSummary > works with negative category price 1`] = `
   background: #ffffff;
   border-radius: 0.25rem;
   width: 100%;
-  overflow: hidden;
 }
 
 .emotion-23[data-size='small'] {
@@ -18743,7 +18578,7 @@ exports[`OrderSummary > works with negative category price 1`] = `
 .emotion-26 {
   color: #3f4250;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -18753,12 +18588,15 @@ exports[`OrderSummary > works with negative category price 1`] = `
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
 }
 
 .emotion-26 {
   color: #3f4250;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -18768,6 +18606,9 @@ exports[`OrderSummary > works with negative category price 1`] = `
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
 }
 
 .emotion-28 {
@@ -19009,7 +18850,7 @@ exports[`OrderSummary > works with negative category price 1`] = `
 .emotion-38 {
   color: #222638;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -19021,7 +18862,7 @@ exports[`OrderSummary > works with negative category price 1`] = `
 .emotion-38 {
   color: #222638;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -19079,7 +18920,7 @@ exports[`OrderSummary > works with negative category price 1`] = `
 .emotion-42 {
   color: #727683;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -19093,7 +18934,7 @@ exports[`OrderSummary > works with negative category price 1`] = `
 .emotion-42 {
   color: #727683;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -19153,7 +18994,7 @@ exports[`OrderSummary > works with negative category price 1`] = `
 .emotion-52 {
   color: #222638;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -19165,7 +19006,7 @@ exports[`OrderSummary > works with negative category price 1`] = `
 .emotion-52 {
   color: #222638;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -19325,8 +19166,8 @@ exports[`OrderSummary > works with negative category price 1`] = `
                 class="emotion-16 emotion-17 emotion-18"
               >
                 <div
-                  aria-controls=":rbm:"
-                  aria-describedby=":rbm:"
+                  aria-controls="«rbm»"
+                  aria-describedby="«rbm»"
                   class="emotion-19 emotion-20"
                   data-container-full-width="true"
                   tabindex="-1"
@@ -19481,11 +19322,15 @@ exports[`OrderSummary > works with negative category price 1`] = `
         <div
           class="emotion-36 emotion-9"
         >
-          <span
-            class="emotion-38 emotion-5"
+          <div
+            class="emotion-40 emotion-9"
           >
-            Estimated cost:
-          </span>
+            <span
+              class="emotion-38 emotion-5"
+            >
+              Estimated cost:
+            </span>
+          </div>
           <span
             class="emotion-4 emotion-5"
             data-testid="total-price"

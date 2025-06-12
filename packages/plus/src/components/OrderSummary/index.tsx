@@ -13,7 +13,7 @@ const Container = styled(Stack)`
   background-color: ${({ theme }) => theme.colors.neutral.backgroundWeak};
   height: 100%;
   width: 20rem;
-  
+
   @media (min-width: ${({ theme }) => theme.breakpoints.large}) {
     width: 27.5rem;
   }
@@ -57,6 +57,7 @@ export const OrderSummary = ({
   hideDetails = false,
   onChange,
   onChangeUnitInput,
+  totalPriceDescription,
 }: OrderSummaryProps) => {
   const [timePeriodUnit, setTimePeriodUnit] = useState<TimeUnit>(unitUnitInput)
   const [timePeriodAmount, setTimePeriodAmount] = useState(valueUnitInput)
@@ -177,7 +178,6 @@ export const OrderSummary = ({
                 <UnitInput
                   width="100%"
                   selectInputWidth="fit-content"
-                  selectInputMaxWidth="65%"
                   options={computePeriodOptions}
                   onChange={value => {
                     setTimePeriodAmount(value)
@@ -203,6 +203,7 @@ export const OrderSummary = ({
           totalPriceInfo={totalPriceInfo}
           hideDetails={hideDetails}
           unit={unitUnitInput}
+          totalPriceDescription={totalPriceDescription}
         >
           {children}
         </NonScrollableContent>
