@@ -15,7 +15,10 @@ type DateFieldProps<
   TFieldValues extends FieldValues,
   TFieldName extends FieldPath<TFieldValues>,
 > = BaseFieldProps<TFieldValues, TFieldName> &
-  Omit<ComponentProps<typeof DateInput>, 'required' | 'name' | 'onChange'>
+  Omit<
+    ComponentProps<typeof DateInput>,
+    'required' | 'name' | 'onChange' | 'value'
+  >
 
 const parseDate = (value: string | Date): Date =>
   typeof value === 'string' ? new Date(value) : value
