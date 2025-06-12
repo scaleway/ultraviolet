@@ -64,29 +64,10 @@ exports[`SelectInputField > should display right value on grouped options 1`] = 
 }
 
 .emotion-8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: grid;
+  width: 100%;
   gap: 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  grid-template-columns: 1fr auto;
   padding: 0.5rem;
   padding-right: 0;
   padding-left: 1rem;
@@ -95,7 +76,6 @@ exports[`SelectInputField > should display right value on grouped options 1`] = 
   background: #ffffff;
   border-radius: 0.25rem;
   width: 100%;
-  overflow: hidden;
 }
 
 .emotion-8[data-size='small'] {
@@ -189,6 +169,9 @@ exports[`SelectInputField > should display right value on grouped options 1`] = 
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
 }
 
 .emotion-13 {
@@ -942,29 +925,10 @@ exports[`SelectInputField > should render correctly 1`] = `
 }
 
 .emotion-8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: grid;
+  width: 100%;
   gap: 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  grid-template-columns: 1fr auto;
   padding: 0.5rem;
   padding-right: 0;
   padding-left: 1rem;
@@ -973,7 +937,6 @@ exports[`SelectInputField > should render correctly 1`] = `
   background: #ffffff;
   border-radius: 0.25rem;
   width: 100%;
-  overflow: hidden;
 }
 
 .emotion-8[data-size='small'] {
@@ -1068,6 +1031,9 @@ exports[`SelectInputField > should render correctly 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
 }
 
 .emotion-13 {
@@ -1223,29 +1189,10 @@ exports[`SelectInputField > should render correctly disabled 1`] = `
 }
 
 .emotion-8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: grid;
+  width: 100%;
   gap: 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  grid-template-columns: 1fr auto;
   padding: 0.5rem;
   padding-right: 0;
   padding-left: 1rem;
@@ -1254,7 +1201,6 @@ exports[`SelectInputField > should render correctly disabled 1`] = `
   background: #ffffff;
   border-radius: 0.25rem;
   width: 100%;
-  overflow: hidden;
 }
 
 .emotion-8[data-size='small'] {
@@ -1349,6 +1295,9 @@ exports[`SelectInputField > should render correctly disabled 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
 }
 
 .emotion-13 {
@@ -1504,29 +1453,10 @@ exports[`SelectInputField > should render correctly grouped 1`] = `
 }
 
 .emotion-8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: grid;
+  width: 100%;
   gap: 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  grid-template-columns: 1fr auto;
   padding: 0.5rem;
   padding-right: 0;
   padding-left: 1rem;
@@ -1535,7 +1465,6 @@ exports[`SelectInputField > should render correctly grouped 1`] = `
   background: #ffffff;
   border-radius: 0.25rem;
   width: 100%;
-  overflow: hidden;
 }
 
 .emotion-8[data-size='small'] {
@@ -1630,6 +1559,9 @@ exports[`SelectInputField > should render correctly grouped 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
 }
 
 .emotion-13 {
@@ -1785,29 +1717,10 @@ exports[`SelectInputField > should render correctly multiselect 1`] = `
 }
 
 .emotion-8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: grid;
+  width: 100%;
   gap: 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  grid-template-columns: 1fr auto;
   padding: 0.5rem;
   padding-right: 0;
   padding-left: 1rem;
@@ -1816,7 +1729,6 @@ exports[`SelectInputField > should render correctly multiselect 1`] = `
   background: #ffffff;
   border-radius: 0.25rem;
   width: 100%;
-  overflow: hidden;
 }
 
 .emotion-8[data-size='small'] {
@@ -1911,6 +1823,9 @@ exports[`SelectInputField > should render correctly multiselect 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
 }
 
 .emotion-13 {
@@ -2066,29 +1981,10 @@ exports[`SelectInputField > should trigger events 1`] = `
 }
 
 .emotion-8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: grid;
+  width: 100%;
   gap: 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  grid-template-columns: 1fr auto;
   padding: 0.5rem;
   padding-right: 0;
   padding-left: 1rem;
@@ -2097,7 +1993,6 @@ exports[`SelectInputField > should trigger events 1`] = `
   background: #ffffff;
   border-radius: 0.25rem;
   width: 100%;
-  overflow: hidden;
 }
 
 .emotion-8[data-size='small'] {
@@ -2191,6 +2086,9 @@ exports[`SelectInputField > should trigger events 1`] = `
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
 }
 
 .emotion-13 {
