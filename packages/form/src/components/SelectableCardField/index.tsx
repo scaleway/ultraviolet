@@ -10,7 +10,7 @@ type SelectableCardFieldProps<
   TFieldValues extends FieldValues,
   TFieldName extends FieldPath<TFieldValues>,
 > = Omit<BaseFieldProps<TFieldValues, TFieldName>, 'label'> &
-  Omit<ComponentProps<typeof SelectableCard>, 'name' | 'onChange'>
+  Omit<ComponentProps<typeof SelectableCard>, 'name' | 'onChange' | 'value'>
 
 export const SelectableCardField = <
   TFieldValues extends FieldValues,
