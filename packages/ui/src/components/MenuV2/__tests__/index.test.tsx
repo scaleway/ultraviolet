@@ -223,8 +223,8 @@ describe('Menu', () => {
         <MenuV2.Item borderless>Power on</MenuV2.Item>
         <MenuV2
           disclosure={<MenuV2.Item>SubMenu click</MenuV2.Item>}
-          placement="right"
           triggerMethod="click"
+          nested
         >
           <MenuV2.Item>hi!</MenuV2.Item>
         </MenuV2>

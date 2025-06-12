@@ -44,6 +44,7 @@ const StyledPopup = styled(Popup, {
   ${({ size }) => (size ? `width: ${SIZES[size]};` : null)}
   ${({ searchable }) => (searchable ? `min-width: 20rem` : null)};
   padding: ${({ theme }) => `${theme.space['0.25']} 0`};
+  
 `
 
 const Content = styled(Stack)`
@@ -109,6 +110,7 @@ export const Menu = forwardRef(
       align,
       searchable = false,
       footer,
+      nested,
     }: MenuProps,
     ref: Ref<HTMLButtonElement | null>,
   ) => {
@@ -176,7 +178,7 @@ export const Menu = forwardRef(
         aria-label={ariaLabel}
         className={className}
         visible={triggerMethod === 'click' ? isVisible : undefined}
-        placement={placement}
+        placement={nested ? 'top-right' : placement}
         hasArrow={hasArrow}
         data-has-arrow={hasArrow}
         role="dialog"
