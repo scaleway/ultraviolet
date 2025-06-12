@@ -12,7 +12,7 @@ export type TagInputFieldProps<
   TFieldValues extends FieldValues,
   TFieldName extends FieldPath<TFieldValues>,
 > = BaseFieldProps<TFieldValues, TFieldName> &
-  Omit<ComponentProps<typeof TagInput>, 'name' | 'onChange'> & {
+  Omit<ComponentProps<typeof TagInput>, 'name' | 'onChange' | 'value'> & {
     regex?: (RegExp | RegExp[])[]
   }
 
