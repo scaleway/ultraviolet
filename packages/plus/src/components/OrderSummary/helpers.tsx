@@ -2,7 +2,9 @@ import { useContext } from 'react'
 import { OrderSummaryContext } from './Provider'
 import { multiplier } from './constants'
 import type {
+  CurrencyType,
   ItemsType,
+  LocalesFormatType,
   PriceTypeSingle,
   SubCategoryType,
   TimeUnit,
@@ -10,8 +12,8 @@ import type {
 
 export const formatNumber = (
   number: number,
-  locale: string,
-  currency: string,
+  locale: LocalesFormatType,
+  currency: CurrencyType,
   fractionDigits = 10,
 ) => {
   const numberFormat = new Intl.NumberFormat(locale, {
@@ -23,19 +25,29 @@ export const formatNumber = (
   return numberFormat.format(number)
 }
 
+type CalculatePriceProps = {
+  price: number
+  amount: number
+  amountFree?: number
+  timeUnit: TimeUnit
+  timeAmount: number
+  discount?: number
+  fixedPrice?: boolean
+}
+
 // time unit = hours, days, months
 // timeAmount = number of hours / days / months
 // discount < 1: computed in % (price = price*discount)
 // discount >= 1: computed in absolute value (price = price - discount)
-export const calculatePrice = (
-  price: number,
-  amount: number,
+export const calculatePrice = ({
+  price,
+  amount,
   amountFree = 0,
-  timeUnit: TimeUnit,
-  timeAmount: number,
+  timeUnit,
+  timeAmount,
   discount = 0,
   fixedPrice = false,
-) => {
+}: CalculatePriceProps) => {
   const nonNanTimeAmount = Number.isNaN(timeAmount) ? 1 : timeAmount
   const valueBeforeDiscount =
     price *
@@ -57,38 +69,38 @@ export const calculateSubCategoryPrice = (
 ): [number, number] => {
   if (Array.isArray(subCategory.amount)) {
     const minPrice =
-      calculatePrice(
-        subCategory.price ?? 0,
-        subCategory.amount?.[0] ?? 1,
-        subCategory.amountFree,
-        hideTimeUnit ? 'hours' : timePeriodUnit,
-        hideTimeUnit ? 1 : timePeriodAmount,
-        subCategory.discount,
-        subCategory.fixedPrice,
-      ) || 0
+      calculatePrice({
+        price: subCategory.price ?? 0,
+        amount: subCategory.amount?.[0] ?? 1,
+        amountFree: subCategory.amountFree,
+        timeUnit: hideTimeUnit ? 'hours' : timePeriodUnit,
+        timeAmount: hideTimeUnit ? 1 : timePeriodAmount,
+        discount: subCategory.discount,
+        fixedPrice: subCategory.fixedPrice,
+      }) || 0
     const maxPrice =
-      calculatePrice(
-        subCategory.price ?? 0,
-        subCategory.amount?.[1] ?? 1,
-        subCategory.amountFree,
-        hideTimeUnit ? 'hours' : timePeriodUnit,
-        hideTimeUnit ? 1 : timePeriodAmount,
-        subCategory.discount,
-        subCategory.fixedPrice,
-      ) || 0
+      calculatePrice({
+        price: subCategory.price ?? 0,
+        amount: subCategory.amount?.[1] ?? 1,
+        amountFree: subCategory.amountFree,
+        timeUnit: hideTimeUnit ? 'hours' : timePeriodUnit,
+        timeAmount: hideTimeUnit ? 1 : timePeriodAmount,
+        discount: subCategory.discount,
+        fixedPrice: subCategory.fixedPrice,
+      }) || 0
 
     return [minPrice, maxPrice]
   }
   const price =
-    calculatePrice(
-      subCategory.price ?? 0,
-      subCategory.amount ?? 1,
-      subCategory.amountFree,
-      hideTimeUnit ? 'hours' : timePeriodUnit,
-      hideTimeUnit ? 1 : timePeriodAmount,
-      subCategory.discount,
-      subCategory.fixedPrice,
-    ) || 0
+    calculatePrice({
+      price: subCategory.price ?? 0,
+      amount: subCategory.amount ?? 1,
+      amountFree: subCategory.amountFree,
+      timeUnit: hideTimeUnit ? 'hours' : timePeriodUnit,
+      timeAmount: hideTimeUnit ? 1 : timePeriodAmount,
+      discount: subCategory.discount,
+      fixedPrice: subCategory.fixedPrice,
+    }) || 0
 
   return [price, price]
 }

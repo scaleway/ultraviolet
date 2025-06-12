@@ -1,10 +1,16 @@
 import { createContext } from 'react'
 import orderSummaryLocales from './locales/en'
-import type { ItemsType, PriceType, TimeUnit } from './types'
+import type {
+  CurrencyType,
+  ItemsType,
+  LocalesFormatType,
+  PriceType,
+  TimeUnit,
+} from './types'
 
 export type ContextProps = {
-  currency: string
-  localeFormat: string
+  currency: CurrencyType
+  localeFormat: LocalesFormatType
   items: ItemsType[]
   categoriesPrice: PriceType
   hideTimeUnit: boolean

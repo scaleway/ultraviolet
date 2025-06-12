@@ -9,7 +9,7 @@ type PeriodProps =
       hideTimeUnit: true
       periodOptions?: never
       valueUnitInput?: never
-      unitUnitInput?: never
+      unitUnitInput?: TimeUnit
       onChangeUnitInput?: never
     }
   | {
@@ -87,15 +87,19 @@ export type ItemsType = {
   allowNegative?: boolean
 } & NumberInputType
 
+export type CurrencyType = 'EUR'
+
+export type LocalesFormatType = Intl.LocalesArgument
+
 export type OrderSummaryProps = {
   items: ItemsType[]
   header?: string
   locales?: Record<keyof typeof orderSummaryLocales, string>
-  currency?: string
+  currency?: CurrencyType
   /**
    * Locale to format the numbers (prices)
    */
-  localeFormat?: string
+  localeFormat?: LocalesFormatType
   /**
    *Total applied to the final cost (due to commitment, beta...)
    */
@@ -103,6 +107,7 @@ export type OrderSummaryProps = {
   footer?: ReactNode
   children?: ReactNode
   totalPriceInfo?: ReactNode
+  totalPriceDescription?: ReactNode
   /**
    * Number of fraction digit to display in the price details
    */
