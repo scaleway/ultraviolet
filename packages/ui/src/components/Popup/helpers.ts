@@ -1,6 +1,12 @@
 import type { RefObject } from 'react'
 
-export type PopupPlacement = 'top' | 'right' | 'bottom' | 'left' | 'auto'
+export type PopupPlacement =
+  | 'top'
+  | 'right'
+  | 'bottom'
+  | 'left'
+  | 'auto'
+  | 'top-right'
 export type PopupAlign = 'start' | 'center'
 export const DEFAULT_ARROW_WIDTH = 8 // in px
 const SPACE = 4 // in px
@@ -116,7 +122,7 @@ const findOffsetParent = (element: RefObject<HTMLDivElement>) => {
  * @param popupStructuredRef the rect of the popup, the popup itself
  */
 const getPopupOverflowFromParent = (
-  position: 'top' | 'right' | 'bottom' | 'left',
+  position: 'top' | 'right' | 'bottom' | 'left' | 'top-right',
   offsetParentRect: { top: number; left: number; right: number },
   childrenRect: DOMRect,
   popupStructuredRef: DOMRect,
@@ -298,9 +304,9 @@ export const computePositions = ({
         arrowTransform: '',
         placement: 'bottom',
         rotate: 180,
-        popupInitialPosition: `translate3d(${!isAligned ? positionX + popupOverflow : positionX}px, ${
-          positionY - TOTAL_USED_SPACE
-        }px, 0)`,
+        popupInitialPosition: `translate3d(${
+          !isAligned ? positionX + popupOverflow : positionX
+        }px, ${positionY - TOTAL_USED_SPACE}px, 0)`,
         popupPosition: `translate3d(${
           !isAligned ? positionX + popupOverflow : positionX
         }px, ${positionY}px, 0)`,
@@ -357,6 +363,28 @@ export const computePositions = ({
         }px, 0)`,
       }
     }
+    case 'top-right': {
+      const positionX = overloadedChildrenRight + arrowWidth + SPACE * 2
+      const positionY = isAligned
+        ? overloadedChildrenTop + scrollTopValue
+        : overloadedChildrenTop + scrollTopValue - popupHeight / 8
+
+      return {
+        arrowLeft: -arrowWidth - 5,
+        arrowTop: isAligned
+          ? childrenHeight / 2 - arrowWidth
+          : popupHeight / 2 + popupOverflow * -1,
+        arrowTransform: 'translate(50%, -50%)',
+        placement: 'right',
+        rotate: 90,
+        popupInitialPosition: `translate3d(${positionX - TOTAL_USED_SPACE}px, ${
+          positionY + popupOverflow
+        }px, 0)`,
+        popupPosition: `translate3d(${positionX}px, ${
+          positionY + popupOverflow
+        }px, 0)`,
+      }
+    }
     default: {
       // top placement is default value
       const positionX = isAligned
@@ -377,9 +405,9 @@ export const computePositions = ({
         arrowTransform: '',
         placement: 'top',
         rotate: 0,
-        popupInitialPosition: `translate3d(${!isAligned ? positionX + popupOverflow : positionX}px, ${
-          positionY + TOTAL_USED_SPACE
-        }px, 0)`,
+        popupInitialPosition: `translate3d(${
+          !isAligned ? positionX + popupOverflow : positionX
+        }px, ${positionY + TOTAL_USED_SPACE}px, 0)`,
         popupPosition: `translate3d(${
           !isAligned ? positionX + popupOverflow : positionX
         }px, ${positionY}px, 0)`,
