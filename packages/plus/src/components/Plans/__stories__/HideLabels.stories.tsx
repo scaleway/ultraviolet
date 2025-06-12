@@ -7,13 +7,14 @@ import { domain, fees, gb, pipeline, ssl } from './features'
 const ContentPlan = ({
   description,
   title,
-}: { description?: string; title: string }) => (
+  iconAlign,
+}: { description?: string; title: string; iconAlign?: 'center' | 'top' }) => (
   <div
     style={{
       display: 'grid',
       gridTemplateColumns: 'auto 1fr',
       gap: '8px',
-      alignItems: 'baseline',
+      alignItems: iconAlign === 'center' ? 'center' : 'baseline',
     }}
   >
     <CheckCircleIcon sentiment="success" />
@@ -97,13 +98,23 @@ const planAdvanced = {
     separator: true,
   },
   data: {
-    gb: <ContentPlan title="10 TB" description="€0.0135 per GB additionnal" />,
-    pipeline: (
-      <ContentPlan title="100 pipelines" description="€4.00 per additional" />
+    gb: (
+      <ContentPlan
+        title="10 TB"
+        description="Here the icon is centered"
+        iconAlign="center"
+      />
     ),
-    domain: <ContentPlan title="Custom domain" />,
-    ssl: <ContentPlan title="SSL Certificate" />,
-    fees: <ContentPlan title="Egress fees" />,
+    pipeline: (
+      <ContentPlan
+        title="100 pipelines"
+        description="€4.00 per additional"
+        iconAlign="center"
+      />
+    ),
+    domain: <ContentPlan title="Custom domain" iconAlign="center" />,
+    ssl: <ContentPlan title="SSL Certificate" iconAlign="center" />,
+    fees: <ContentPlan title="Egress fees" iconAlign="center" />,
   },
 }
 
