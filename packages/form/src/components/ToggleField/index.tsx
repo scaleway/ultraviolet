@@ -10,7 +10,7 @@ import type { BaseFieldProps } from '../../types'
 type ToggleFieldProps<
   TFieldValues extends FieldValues,
   TFieldName extends FieldPath<TFieldValues>,
-> = BaseFieldProps<TFieldValues, TFieldName> &
+> = Omit<BaseFieldProps<TFieldValues, TFieldName>, 'label'> &
   Omit<ComponentProps<typeof Toggle>, 'value' | 'onChange'> & {
     parse?: (value: boolean) => PathValue<TFieldValues, TFieldName>
     format?: (value: PathValue<TFieldValues, TFieldName>) => boolean
