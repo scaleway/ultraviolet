@@ -7,12 +7,7 @@ export const DropdownAlign: StoryFn<typeof SelectInputV2> = args => (
   <Stack alignItems="center">
     <Stack gap={5} width="10%">
       <SelectInputV2 {...args} label="Align start (default)" />
-      <SelectInputV2
-        {...args}
-        selectAllGroup
-        label="Align center"
-        dropdownAlign="center"
-      />
+      <SelectInputV2 {...args} label="Align center" dropdownAlign="center" />
     </Stack>
   </Stack>
 )

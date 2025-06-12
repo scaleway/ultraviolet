@@ -70,7 +70,8 @@ EmptyState.decorators = [
 EmptyState.parameters = {
   docs: {
     description: {
-      story: 'Set a custom `EmptyState` when no option is available.',
+      story:
+        'Set a custom `EmptyState` when no option is available. The footer is hidden when there is an empty state.',
     },
   },
 }
