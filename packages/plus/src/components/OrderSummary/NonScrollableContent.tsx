@@ -17,6 +17,7 @@ type NonScrollableContentProps = {
   footer: ReactNode
   children: ReactNode
   totalPriceInfo?: ReactNode
+  totalPriceDescription?: ReactNode
   hideDetails: boolean
   unit: TimeUnit
 }
@@ -28,6 +29,7 @@ export const NonScrollableContent = ({
   totalPriceInfo,
   hideDetails,
   unit,
+  totalPriceDescription,
 }: NonScrollableContentProps) => {
   const { locales } = useContext(OrderSummaryContext)
 
@@ -37,6 +39,21 @@ export const NonScrollableContent = ({
       <Stack direction="row" justifyContent="space-between" alignItems="center">
         {totalPriceInfo ? (
           <Stack>
+            <Stack direction="row" gap={1} alignItems="center">
+              <Text
+                as="span"
+                variant="bodyStrong"
+                sentiment="neutral"
+                prominence="strong"
+              >
+                {locales['order.summary.total']}:
+              </Text>
+              {totalPriceDescription}
+            </Stack>
+            {totalPriceInfo}
+          </Stack>
+        ) : (
+          <Stack direction="row" gap={1} alignItems="center">
             <Text
               as="span"
               variant="bodyStrong"
@@ -45,17 +62,8 @@ export const NonScrollableContent = ({
             >
               {locales['order.summary.total']}:
             </Text>
-            {totalPriceInfo}
+            {totalPriceDescription}
           </Stack>
-        ) : (
-          <Text
-            as="span"
-            variant="bodyStrong"
-            sentiment="neutral"
-            prominence="strong"
-          >
-            {locales['order.summary.total']}:
-          </Text>
         )}
         {totalPrice.totalPrice === totalPrice.totalPriceWithDiscount ? (
           <Text
