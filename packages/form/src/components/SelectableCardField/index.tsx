@@ -9,7 +9,7 @@ import type { BaseFieldProps } from '../../types'
 type SelectableCardFieldProps<
   TFieldValues extends FieldValues,
   TFieldName extends FieldPath<TFieldValues>,
-> = BaseFieldProps<TFieldValues, TFieldName> &
+> = Omit<BaseFieldProps<TFieldValues, TFieldName>, 'label'> &
   Omit<ComponentProps<typeof SelectableCard>, 'name' | 'onChange'>
 
 export const SelectableCardField = <
