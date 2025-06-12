@@ -144,7 +144,7 @@ exports[`NumberInputFieldV2 > should render correctly 1`] = `
   gap: 0.5rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 2rem;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -179,6 +179,10 @@ exports[`NumberInputFieldV2 > should render correctly 1`] = `
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
+.emotion-8 .e1y1n78x0 {
+  stroke: transparent;
+}
+
 .emotion-8:hover,
 .emotion-8:active {
   background: #e9eaeb;
@@ -188,19 +192,15 @@ exports[`NumberInputFieldV2 > should render correctly 1`] = `
 .emotion-10 {
   vertical-align: middle;
   fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
 .emotion-10 .fillStroke {
   stroke: currentColor;
   fill: none;
-}
-
-.emotion-10 path {
-  fill: currentColor;
 }
 
 .emotion-13 {
@@ -347,7 +347,6 @@ exports[`NumberInputFieldV2 > should render correctly 1`] = `
                 <svg
                   class="emotion-10 emotion-11"
                   viewBox="0 0 16 16"
-                  xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
                     d="M3.75 7a.75.75 0 0 0 0 1.5h8.5a.75.75 0 0 0 0-1.5z"
@@ -383,7 +382,6 @@ exports[`NumberInputFieldV2 > should render correctly 1`] = `
                 <svg
                   class="emotion-10 emotion-11"
                   viewBox="0 0 16 16"
-                  xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
                     d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5z"
@@ -543,7 +541,7 @@ exports[`NumberInputFieldV2 > should render correctly disabled 1`] = `
   gap: 0.5rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 2rem;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -575,22 +573,22 @@ exports[`NumberInputFieldV2 > should render correctly disabled 1`] = `
   text-decoration: none;
 }
 
+.emotion-8 .e1y1n78x0 {
+  stroke: transparent;
+}
+
 .emotion-10 {
   vertical-align: middle;
   fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
 .emotion-10 .fillStroke {
   stroke: currentColor;
   fill: none;
-}
-
-.emotion-10 path {
-  fill: currentColor;
 }
 
 .emotion-13 {
@@ -738,7 +736,6 @@ exports[`NumberInputFieldV2 > should render correctly disabled 1`] = `
                 <svg
                   class="emotion-10 emotion-11"
                   viewBox="0 0 16 16"
-                  xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
                     d="M3.75 7a.75.75 0 0 0 0 1.5h8.5a.75.75 0 0 0 0-1.5z"
@@ -777,7 +774,6 @@ exports[`NumberInputFieldV2 > should render correctly disabled 1`] = `
                 <svg
                   class="emotion-10 emotion-11"
                   viewBox="0 0 16 16"
-                  xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
                     d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5z"

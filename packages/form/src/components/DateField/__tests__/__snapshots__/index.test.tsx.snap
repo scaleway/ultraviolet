@@ -312,7 +312,7 @@ exports[`DateField > should clear field 1`] = `
   gap: 0.25rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 1.5rem;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -347,6 +347,10 @@ exports[`DateField > should clear field 1`] = `
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
+.emotion-23 .e1y1n78x0 {
+  stroke: transparent;
+}
+
 .emotion-23:hover,
 .emotion-23:active {
   background: #e9eaeb;
@@ -356,19 +360,15 @@ exports[`DateField > should clear field 1`] = `
 .emotion-25 {
   vertical-align: middle;
   fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
 .emotion-25 .fillStroke {
   stroke: currentColor;
   fill: none;
-}
-
-.emotion-25 path {
-  fill: currentColor;
 }
 
 .emotion-28 {
@@ -467,6 +467,10 @@ exports[`DateField > should clear field 1`] = `
 
 .emotion-58:active {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
+}
+
+.emotion-58 .e1y1n78x0 {
+  stroke: transparent;
 }
 
 .emotion-58:hover,
@@ -571,9 +575,8 @@ exports[`DateField > should clear field 1`] = `
                   type="button"
                 >
                   <svg
-                    class="emotion-25 emotion-26"
+                    class="emotion-25 emotion-15"
                     viewBox="0 0 16 16"
-                    xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
                       clip-rule="evenodd"
@@ -593,9 +596,8 @@ exports[`DateField > should clear field 1`] = `
                   type="button"
                 >
                   <svg
-                    class="emotion-25 emotion-26"
+                    class="emotion-25 emotion-15"
                     viewBox="0 0 16 16"
-                    xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
                       clip-rule="evenodd"
