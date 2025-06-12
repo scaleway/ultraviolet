@@ -12,7 +12,7 @@ type NumberInputV2Props<
   TFieldValues extends FieldValues,
   TFieldName extends FieldPath<TFieldValues>,
 > = BaseFieldProps<TFieldValues, TFieldName> &
-  Omit<ComponentProps<typeof NumberInputV2>, 'onChange'>
+  Omit<ComponentProps<typeof NumberInputV2>, 'onChange' | 'value'>
 
 export const NumberInputFieldV2 = <
   TFieldValues extends FieldValues,
