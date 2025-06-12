@@ -202,9 +202,14 @@ export const Demo = () => {
                       event.target.value as 'downgrade' | 'upgrade',
                     )
                   }
-                  leftButton={{ label: 'Downgrade', value: 'downgrade' }}
-                  rightButton={{ label: 'Upgrade', value: 'upgrade' }}
-                />
+                >
+                  <SwitchButton.Option value="downgrade">
+                    Downgrade
+                  </SwitchButton.Option>
+                  <SwitchButton.Option value="upgrade">
+                    Upgrade
+                  </SwitchButton.Option>
+                </SwitchButton>
                 <RadioGroup
                   legend={`${switchState
                     .charAt(0)
