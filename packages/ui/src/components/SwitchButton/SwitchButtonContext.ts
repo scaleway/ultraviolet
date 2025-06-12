@@ -28,7 +28,7 @@ export const useSwitchButton = () => {
   const context = useContext(SwitchButtonContext)
 
   if (context === undefined) {
-    throw new Error('SwitchButton.Option should be use inside a SwitchButton')
+    throw new Error('SwitchButton.Option should be used inside a SwitchButton')
   }
 
   return context

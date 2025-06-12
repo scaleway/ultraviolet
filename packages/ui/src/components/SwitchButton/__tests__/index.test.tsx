@@ -92,6 +92,6 @@ describe('SwitchButton', () => {
       renderWithTheme(
         <SwitchButton.Option value="left">Left</SwitchButton.Option>,
       ),
-    ).toThrowError('SwitchButton.Option should be use inside a SwitchButton')
+    ).toThrowError('SwitchButton.Option should be used inside a SwitchButton')
   })
 })
