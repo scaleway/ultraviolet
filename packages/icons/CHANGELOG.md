@@ -1,5 +1,11 @@
 # Change Log
 
+## 4.0.0-beta.5
+
+### Patch Changes
+
+- [#5243](https://github.com/scaleway/ultraviolet/pull/5243) [`f8df4dd`](https://github.com/scaleway/ultraviolet/commit/f8df4ddce45073537a4ae9a334030d472b9f0d96) Thanks [@matthprost](https://github.com/matthprost)! - Fix system icons to work with weak prominence
+
 ## 4.0.0-beta.4
 
 ### Patch Changes
