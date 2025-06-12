@@ -1,5 +1,15 @@
 # Change Log
 
+## 4.0.0-beta.9
+
+### Patch Changes
+
+- [`f133fc1`](https://github.com/scaleway/ultraviolet/commit/f133fc156b0815ca36baa0bb1383cb78068fcaba) Thanks [@matthprost](https://github.com/matthprost)! - Fix `value` prop on all fields
+
+- Updated dependencies [[`f8df4dd`](https://github.com/scaleway/ultraviolet/commit/f8df4ddce45073537a4ae9a334030d472b9f0d96)]:
+  - @ultraviolet/icons@4.0.0-beta.5
+  - @ultraviolet/ui@2.0.0-beta.8
+
 ## 4.0.0-beta.8
 
 ### Patch Changes
