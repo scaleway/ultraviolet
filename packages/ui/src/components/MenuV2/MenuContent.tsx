@@ -17,7 +17,7 @@ import {
 import { Popup } from '../Popup'
 import { SearchInput } from '../SearchInput'
 import { Stack } from '../Stack'
-import { useMenu } from './MenuProvider'
+import { DisclosureContext, useMenu } from './MenuProvider'
 import { SIZES } from './constants'
 import { searchChildren } from './helpers'
 import type { MenuProps } from './types'
@@ -110,11 +110,10 @@ export const Menu = forwardRef(
       align,
       searchable = false,
       footer,
-      nested,
     }: MenuProps,
     ref: Ref<HTMLButtonElement | null>,
   ) => {
-    const { isVisible, setIsVisible } = useMenu()
+    const { isVisible, setIsVisible, isNested } = useMenu()
     const searchInputRef = useRef<HTMLInputElement>(null)
     const [localChild, setLocalChild] = useState<ReactNode[] | null>(null)
     const popupRef = useRef<HTMLDivElement>(null)
@@ -178,7 +177,7 @@ export const Menu = forwardRef(
         aria-label={ariaLabel}
         className={className}
         visible={triggerMethod === 'click' ? isVisible : undefined}
-        placement={nested ? 'top-right' : placement}
+        placement={isNested ? 'nested-menu' : placement}
         hasArrow={hasArrow}
         data-has-arrow={hasArrow}
         role="dialog"
@@ -217,7 +216,9 @@ export const Menu = forwardRef(
         dynamicDomRendering={dynamicDomRendering}
         align={align}
       >
-        {finalDisclosure}
+        <DisclosureContext.Provider value>
+          {finalDisclosure}
+        </DisclosureContext.Provider>
       </StyledPopup>
     )
   },

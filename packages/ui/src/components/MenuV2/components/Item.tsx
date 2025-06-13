@@ -7,7 +7,7 @@ import type { MouseEvent, MouseEventHandler, ReactNode, Ref } from 'react'
 import { forwardRef, useCallback } from 'react'
 import { Stack } from '../../Stack'
 import { Tooltip } from '../../Tooltip'
-import { useMenu } from '../MenuProvider'
+import { useDisclosureContext, useMenu } from '../MenuProvider'
 
 type MenuItemSentiment = 'neutral' | 'primary' | 'danger'
 
@@ -120,7 +120,6 @@ type ItemProps = {
   sentiment?: MenuItemSentiment
   active?: boolean
   'data-testid'?: string
-  arrowRight?: boolean
 }
 
 const Item = forwardRef<HTMLElement, ItemProps>(
@@ -137,12 +136,12 @@ const Item = forwardRef<HTMLElement, ItemProps>(
       tooltip,
       active,
       className,
-      arrowRight,
       'data-testid': dataTestId,
     },
     ref,
   ) => {
-    const { hideOnClickItem, setIsVisible } = useMenu()
+    const { hideOnClickItem, setIsVisible, isVisible } = useMenu()
+    const isDisclosure = useDisclosureContext()
 
     const onClickHandle = useCallback(
       (event: MouseEvent<HTMLAnchorElement>) => {
@@ -175,7 +174,7 @@ const Item = forwardRef<HTMLElement, ItemProps>(
               className={className}
               data-testid={dataTestId}
             >
-              {arrowRight ? (
+              {isDisclosure ? (
                 <Stack
                   justifyContent="space-between"
                   direction="row"
@@ -211,9 +210,9 @@ const Item = forwardRef<HTMLElement, ItemProps>(
             sentiment={sentiment}
             className={className}
             data-testid={dataTestId}
-            data-active={active}
+            data-active={active || (isVisible && isDisclosure)}
           >
-            {arrowRight ? (
+            {isDisclosure ? (
               <Stack
                 justifyContent="space-between"
                 direction="row"
