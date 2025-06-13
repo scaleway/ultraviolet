@@ -7,13 +7,10 @@ type MenuContextProps = {
   hideOnClickItem: boolean
   isVisible: boolean
   setIsVisible: Dispatch<SetStateAction<boolean>>
+  isNested: boolean
 }
 
-const MenuContext = createContext<MenuContextProps>({
-  hideOnClickItem: false,
-  isVisible: false,
-  setIsVisible: () => {},
-})
+const MenuContext = createContext<MenuContextProps | undefined>(undefined)
 
 export const useMenu = () => {
   const context = useContext(MenuContext)
@@ -33,16 +30,20 @@ export const MenuProvider = ({
   children,
   visible = false,
 }: MenuProviderProps) => {
+  const isNested = !!useContext(MenuContext) // If there is no parent Menu, then parentMenu is undefined (we do not use useMenu which will return an error)
   const [isVisible, setIsVisible] = useState(visible)
-
   const values = useMemo(
     () => ({
       hideOnClickItem,
       isVisible,
       setIsVisible,
+      isNested,
     }),
-    [hideOnClickItem, isVisible],
+    [hideOnClickItem, isVisible, isNested],
   )
 
   return <MenuContext.Provider value={values}>{children}</MenuContext.Provider>
 }
+
+export const DisclosureContext = createContext(false)
+export const useDisclosureContext = () => useContext(DisclosureContext)

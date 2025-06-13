@@ -3,192 +3,56 @@
 exports[`Menu > Menu.Item > render with active props 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  border-bottom: 1px solid #d9dadd;
-  padding: 0.25rem 0.25rem;
-  width: 100%;
+  display: inherit;
 }
 
-.emotion-0:last-child {
-  border: none;
+.emotion-0[data-container-full-height="true"] {
+  height: 100%;
+}
+
+.emotion-0[data-container-full-width="true"] {
+  width: 100%;
 }
 
 .emotion-0 {
-  border-bottom: 1px solid #d9dadd;
-  padding: 0.25rem 0.25rem;
-  width: 100%;
+  display: inherit;
 }
 
-.emotion-0:last-child {
-  border: none;
+.emotion-0[data-container-full-height="true"] {
+  height: 100%;
+}
+
+.emotion-0[data-container-full-width="true"] {
+  width: 100%;
 }
 
 .emotion-0 {
-  border-bottom: 1px solid #d9dadd;
-  padding: 0.25rem 0.25rem;
+  display: inherit;
+}
+
+.emotion-0[data-container-full-height="true"] {
+  height: 100%;
+}
+
+.emotion-0[data-container-full-width="true"] {
   width: 100%;
-}
-
-.emotion-0:last-child {
-  border: none;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: start;
-  justify-content: start;
-  text-align: left;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 2rem;
-  max-height: 2.5rem;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  font-weight: inherit;
-  padding: 0.25rem 0.5rem;
-  border: none;
-  cursor: pointer;
-  min-width: 6.875rem;
-  width: 100%;
-  border-radius: 0.25rem;
-  -webkit-transition: background-color 200ms,color 200ms;
-  transition: background-color 200ms,color 200ms;
-  color: #3f4250;
-  background: none;
-}
-
-.emotion-2 svg {
-  fill: #3f4250;
-}
-
-.emotion-2:hover,
-.emotion-2:focus,
-.emotion-2[data-active='true'] {
-  background-color: #e9eaeb;
-  color: #222638;
-}
-
-.emotion-2:hover svg,
-.emotion-2:focus svg,
-.emotion-2[data-active='true'] svg {
-  fill: #222638;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: start;
-  justify-content: start;
-  text-align: left;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 2rem;
-  max-height: 2.5rem;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  font-weight: inherit;
-  padding: 0.25rem 0.5rem;
-  border: none;
-  cursor: pointer;
-  min-width: 6.875rem;
-  width: 100%;
-  border-radius: 0.25rem;
-  -webkit-transition: background-color 200ms,color 200ms;
-  transition: background-color 200ms,color 200ms;
-  color: #3f4250;
-  background: none;
-}
-
-.emotion-2 svg {
-  fill: #3f4250;
-}
-
-.emotion-2:hover,
-.emotion-2:focus,
-.emotion-2[data-active='true'] {
-  background-color: #e9eaeb;
-  color: #222638;
-}
-
-.emotion-2:hover svg,
-.emotion-2:focus svg,
-.emotion-2[data-active='true'] svg {
-  fill: #222638;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: start;
-  justify-content: start;
-  text-align: left;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 2rem;
-  max-height: 2.5rem;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  font-weight: inherit;
-  padding: 0.25rem 0.5rem;
-  border: none;
-  cursor: pointer;
-  min-width: 6.875rem;
-  width: 100%;
-  border-radius: 0.25rem;
-  -webkit-transition: background-color 200ms,color 200ms;
-  transition: background-color 200ms,color 200ms;
-  color: #3f4250;
-  background: none;
-}
-
-.emotion-2 svg {
-  fill: #3f4250;
-}
-
-.emotion-2:hover,
-.emotion-2:focus,
-.emotion-2[data-active='true'] {
-  background-color: #e9eaeb;
-  color: #222638;
-}
-
-.emotion-2:hover svg,
-.emotion-2:focus svg,
-.emotion-2[data-active='true'] svg {
-  fill: #222638;
 }
 
 <div
     data-testid="testing"
   >
     <div
+      aria-controls="menu-«r42»"
+      aria-describedby="menu-«r42»"
       class="emotion-0 emotion-1"
+      tabindex="-1"
     >
       <button
-        class="emotion-2 emotion-3"
-        data-active="true"
-        role="menuitem"
+        aria-expanded="true"
+        aria-haspopup="dialog"
         type="button"
       >
-        Active Props
+        Menu
       </button>
     </div>
   </div>
@@ -198,179 +62,56 @@ exports[`Menu > Menu.Item > render with active props 1`] = `
 exports[`Menu > Menu.Item > render with borderless props 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  padding: 0.125rem 0.25rem;
-  width: 100%;
+  display: inherit;
 }
 
-.emotion-0:last-child {
-  border: none;
+.emotion-0[data-container-full-height="true"] {
+  height: 100%;
+}
+
+.emotion-0[data-container-full-width="true"] {
+  width: 100%;
 }
 
 .emotion-0 {
-  padding: 0.125rem 0.25rem;
+  display: inherit;
+}
+
+.emotion-0[data-container-full-height="true"] {
+  height: 100%;
+}
+
+.emotion-0[data-container-full-width="true"] {
   width: 100%;
 }
 
-.emotion-0:last-child {
-  border: none;
+.emotion-0 {
+  display: inherit;
 }
 
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: start;
-  justify-content: start;
-  text-align: left;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 2rem;
-  max-height: 2.5rem;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  font-weight: inherit;
-  padding: 0.25rem 0.5rem;
-  border: none;
-  cursor: pointer;
-  min-width: 6.875rem;
+.emotion-0[data-container-full-height="true"] {
+  height: 100%;
+}
+
+.emotion-0[data-container-full-width="true"] {
   width: 100%;
-  border-radius: 0.25rem;
-  -webkit-transition: background-color 200ms,color 200ms;
-  transition: background-color 200ms,color 200ms;
-  color: #3f4250;
-  background: none;
-}
-
-.emotion-2 svg {
-  fill: #3f4250;
-}
-
-.emotion-2:hover,
-.emotion-2:focus,
-.emotion-2[data-active='true'] {
-  background-color: #e9eaeb;
-  color: #222638;
-}
-
-.emotion-2:hover svg,
-.emotion-2:focus svg,
-.emotion-2[data-active='true'] svg {
-  fill: #222638;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: start;
-  justify-content: start;
-  text-align: left;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 2rem;
-  max-height: 2.5rem;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  font-weight: inherit;
-  padding: 0.25rem 0.5rem;
-  border: none;
-  cursor: pointer;
-  min-width: 6.875rem;
-  width: 100%;
-  border-radius: 0.25rem;
-  -webkit-transition: background-color 200ms,color 200ms;
-  transition: background-color 200ms,color 200ms;
-  color: #3f4250;
-  background: none;
-}
-
-.emotion-2 svg {
-  fill: #3f4250;
-}
-
-.emotion-2:hover,
-.emotion-2:focus,
-.emotion-2[data-active='true'] {
-  background-color: #e9eaeb;
-  color: #222638;
-}
-
-.emotion-2:hover svg,
-.emotion-2:focus svg,
-.emotion-2[data-active='true'] svg {
-  fill: #222638;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: start;
-  justify-content: start;
-  text-align: left;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 2rem;
-  max-height: 2.5rem;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  font-weight: inherit;
-  padding: 0.25rem 0.5rem;
-  border: none;
-  cursor: pointer;
-  min-width: 6.875rem;
-  width: 100%;
-  border-radius: 0.25rem;
-  -webkit-transition: background-color 200ms,color 200ms;
-  transition: background-color 200ms,color 200ms;
-  color: #3f4250;
-  background: none;
-}
-
-.emotion-2 svg {
-  fill: #3f4250;
-}
-
-.emotion-2:hover,
-.emotion-2:focus,
-.emotion-2[data-active='true'] {
-  background-color: #e9eaeb;
-  color: #222638;
-}
-
-.emotion-2:hover svg,
-.emotion-2:focus svg,
-.emotion-2[data-active='true'] svg {
-  fill: #222638;
 }
 
 <div
     data-testid="testing"
   >
     <div
+      aria-controls="menu-«r3v»"
+      aria-describedby="menu-«r3v»"
       class="emotion-0 emotion-1"
+      tabindex="-1"
     >
       <button
-        class="emotion-2 emotion-3"
-        role="menuitem"
+        aria-expanded="true"
+        aria-haspopup="dialog"
         type="button"
       >
-        Borderless Props
+        Menu
       </button>
     </div>
   </div>
@@ -380,64 +121,31 @@ exports[`Menu > Menu.Item > render with borderless props 1`] = `
 exports[`Menu > Menu.Item > render with default props 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  border-bottom: 1px solid #d9dadd;
-  padding: 0.25rem 0.25rem;
-  width: 100%;
+  display: inherit;
 }
 
-.emotion-0:last-child {
-  border: none;
+.emotion-0[data-container-full-height="true"] {
+  height: 100%;
+}
+
+.emotion-0[data-container-full-width="true"] {
+  width: 100%;
 }
 
 .emotion-0 {
-  border-bottom: 1px solid #d9dadd;
-  padding: 0.25rem 0.25rem;
-  width: 100%;
+  display: inherit;
 }
 
-.emotion-0:last-child {
-  border: none;
+.emotion-0[data-container-full-height="true"] {
+  height: 100%;
+}
+
+.emotion-0[data-container-full-width="true"] {
+  width: 100%;
 }
 
 .emotion-0 {
-  border-bottom: 1px solid #d9dadd;
-  padding: 0.25rem 0.25rem;
-  width: 100%;
-}
-
-.emotion-0:last-child {
-  border: none;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: start;
-  justify-content: start;
-  text-align: left;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 2rem;
-  max-height: 2.5rem;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  font-weight: inherit;
-  padding: 0.25rem 0.5rem;
-  border: none;
-  cursor: pointer;
-  min-width: 6.875rem;
-  width: 100%;
-  border-radius: 0.25rem;
-  -webkit-transition: background-color 200ms,color 200ms;
-  transition: background-color 200ms,color 200ms;
-  color: #3f4250;
-  background: none;
+  display: inherit;
 }
 
 .emotion-2 svg {
@@ -558,13 +266,14 @@ exports[`Menu > Menu.Item > render with default props 1`] = `
   >
     <div
       class="emotion-0 emotion-1"
+      tabindex="-1"
     >
       <button
-        class="emotion-2 emotion-3"
-        role="menuitem"
+        aria-expanded="true"
+        aria-haspopup="dialog"
         type="button"
       >
-        Default Props
+        Menu
       </button>
     </div>
   </div>
@@ -574,105 +283,39 @@ exports[`Menu > Menu.Item > render with default props 1`] = `
 exports[`Menu > Menu.Item > render with disabled props 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  border-bottom: 1px solid #d9dadd;
-  padding: 0.25rem 0.25rem;
-  width: 100%;
+  display: inherit;
 }
 
-.emotion-0:last-child {
-  border: none;
+.emotion-0[data-container-full-height="true"] {
+  height: 100%;
+}
+
+.emotion-0[data-container-full-width="true"] {
+  width: 100%;
 }
 
 .emotion-0 {
-  border-bottom: 1px solid #d9dadd;
-  padding: 0.25rem 0.25rem;
-  width: 100%;
+  display: inherit;
 }
 
-.emotion-0:last-child {
-  border: none;
+.emotion-0[data-container-full-height="true"] {
+  height: 100%;
+}
+
+.emotion-0[data-container-full-width="true"] {
+  width: 100%;
 }
 
 .emotion-0 {
-  border-bottom: 1px solid #d9dadd;
-  padding: 0.25rem 0.25rem;
+  display: inherit;
+}
+
+.emotion-0[data-container-full-height="true"] {
+  height: 100%;
+}
+
+.emotion-0[data-container-full-width="true"] {
   width: 100%;
-}
-
-.emotion-0:last-child {
-  border: none;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: start;
-  justify-content: start;
-  text-align: left;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 2rem;
-  max-height: 2.5rem;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  font-weight: inherit;
-  padding: 0.25rem 0.5rem;
-  border: none;
-  cursor: pointer;
-  min-width: 6.875rem;
-  width: 100%;
-  border-radius: 0.25rem;
-  -webkit-transition: background-color 200ms,color 200ms;
-  transition: background-color 200ms,color 200ms;
-  color: #b5b7bd;
-  cursor: not-allowed;
-  background: none;
-}
-
-.emotion-2 svg {
-  fill: #b5b7bd;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: start;
-  justify-content: start;
-  text-align: left;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 2rem;
-  max-height: 2.5rem;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  font-weight: inherit;
-  padding: 0.25rem 0.5rem;
-  border: none;
-  cursor: pointer;
-  min-width: 6.875rem;
-  width: 100%;
-  border-radius: 0.25rem;
-  -webkit-transition: background-color 200ms,color 200ms;
-  transition: background-color 200ms,color 200ms;
-  color: #b5b7bd;
-  cursor: not-allowed;
-  background: none;
-}
-
-.emotion-2 svg {
-  fill: #b5b7bd;
 }
 
 <div
@@ -680,14 +323,14 @@ exports[`Menu > Menu.Item > render with disabled props 1`] = `
   >
     <div
       class="emotion-0 emotion-1"
+      tabindex="-1"
     >
       <button
-        class="emotion-2 emotion-3"
-        disabled=""
-        role="menuitem"
+        aria-expanded="true"
+        aria-haspopup="dialog"
         type="button"
       >
-        Disabled Props
+        Menu
       </button>
     </div>
   </div>
@@ -697,81 +340,39 @@ exports[`Menu > Menu.Item > render with disabled props 1`] = `
 exports[`Menu > Menu.Item > render with sentiment danger 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  border-bottom: 1px solid #d9dadd;
-  padding: 0.25rem 0.25rem;
-  width: 100%;
+  display: inherit;
 }
 
-.emotion-0:last-child {
-  border: none;
+.emotion-0[data-container-full-height="true"] {
+  height: 100%;
+}
+
+.emotion-0[data-container-full-width="true"] {
+  width: 100%;
 }
 
 .emotion-0 {
-  border-bottom: 1px solid #d9dadd;
-  padding: 0.25rem 0.25rem;
-  width: 100%;
+  display: inherit;
 }
 
-.emotion-0:last-child {
-  border: none;
+.emotion-0[data-container-full-height="true"] {
+  height: 100%;
+}
+
+.emotion-0[data-container-full-width="true"] {
+  width: 100%;
 }
 
 .emotion-0 {
-  border-bottom: 1px solid #d9dadd;
-  padding: 0.25rem 0.25rem;
+  display: inherit;
+}
+
+.emotion-0[data-container-full-height="true"] {
+  height: 100%;
+}
+
+.emotion-0[data-container-full-width="true"] {
   width: 100%;
-}
-
-.emotion-0:last-child {
-  border: none;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: start;
-  justify-content: start;
-  text-align: left;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 2rem;
-  max-height: 2.5rem;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  font-weight: inherit;
-  padding: 0.25rem 0.5rem;
-  border: none;
-  cursor: pointer;
-  min-width: 6.875rem;
-  width: 100%;
-  border-radius: 0.25rem;
-  -webkit-transition: background-color 200ms,color 200ms;
-  transition: background-color 200ms,color 200ms;
-  color: #b3144d;
-  background: none;
-}
-
-.emotion-2 svg {
-  fill: #b3144d;
-}
-
-.emotion-2:hover,
-.emotion-2:focus,
-.emotion-2[data-active='true'] {
-  background-color: #ffd3e3;
-  color: #92103f;
-}
-
-.emotion-2:hover svg,
-.emotion-2:focus svg,
-.emotion-2[data-active='true'] svg {
-  fill: #92103f;
 }
 
 <div
@@ -779,13 +380,14 @@ exports[`Menu > Menu.Item > render with sentiment danger 1`] = `
   >
     <div
       class="emotion-0 emotion-1"
+      tabindex="-1"
     >
       <button
-        class="emotion-2 emotion-3"
-        role="menuitem"
+        aria-expanded="true"
+        aria-haspopup="dialog"
         type="button"
       >
-        Danger
+        Menu
       </button>
     </div>
   </div>
@@ -1231,7 +833,7 @@ exports[`Menu > renders with disclosure not a function 1`] = `
         aria-haspopup="dialog"
         type="button"
       >
-        Menu is visible
+        Menu
       </button>
     </div>
   </div>
