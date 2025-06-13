@@ -1,5 +1,14 @@
 # @ultraviolet/plus
 
+## 1.0.0-beta.9
+
+### Patch Changes
+
+- [#5215](https://github.com/scaleway/ultraviolet/pull/5215) [`5f82357`](https://github.com/scaleway/ultraviolet/commit/5f823576ea08d3b6a997bcb520b8ae7d98190274) Thanks [@lisalupi](https://github.com/lisalupi)! - New component `<Plans />`
+
+- Updated dependencies [[`f8c27bf`](https://github.com/scaleway/ultraviolet/commit/f8c27bf584b237099b96557776d1d6632f415c0d)]:
+  - @ultraviolet/ui@2.0.0-beta.9
+
 ## 1.0.0-beta.8
 
 ### Patch Changes
