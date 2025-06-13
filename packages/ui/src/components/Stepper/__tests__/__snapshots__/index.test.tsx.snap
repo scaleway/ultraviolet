@@ -44,10 +44,10 @@ exports[`Stepper > handles clicks when interactive 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
   gap: 0.25rem;
 }
 
@@ -63,10 +63,10 @@ exports[`Stepper > handles clicks when interactive 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
   gap: 0.25rem;
 }
 
@@ -354,7 +354,6 @@ exports[`Stepper > handles clicks when interactive 1`] = `
   color: #ffffff;
   background: #8c40ef;
   border: 1px solid #8c40ef;
-  margin-top: 0;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
   min-width: 2rem;
@@ -380,7 +379,6 @@ exports[`Stepper > handles clicks when interactive 1`] = `
   color: #ffffff;
   background: #8c40ef;
   border: 1px solid #8c40ef;
-  margin-top: 0;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
   min-width: 2rem;
@@ -470,7 +468,6 @@ exports[`Stepper > handles clicks when interactive 1`] = `
   color: #ffffff;
   background: #8c40ef;
   border: 1px solid #8c40ef;
-  margin-top: 0;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
   min-width: 2rem;
@@ -498,7 +495,6 @@ exports[`Stepper > handles clicks when interactive 1`] = `
   color: #ffffff;
   background: #8c40ef;
   border: 1px solid #8c40ef;
-  margin-top: 0;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
   min-width: 2rem;
@@ -562,7 +558,6 @@ exports[`Stepper > handles clicks when interactive 1`] = `
   color: #222638;
   background: #ffffff;
   border: 1px solid #d9dadd;
-  margin-top: 0;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
   min-width: 2rem;
@@ -588,7 +583,6 @@ exports[`Stepper > handles clicks when interactive 1`] = `
   color: #222638;
   background: #ffffff;
   border: 1px solid #d9dadd;
-  margin-top: 0;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
   min-width: 2rem;
@@ -749,10 +743,10 @@ exports[`Stepper > handles clicks when interactive and small 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
   gap: 0.25rem;
 }
 
@@ -768,10 +762,10 @@ exports[`Stepper > handles clicks when interactive and small 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
   gap: 0.25rem;
 }
 
@@ -904,7 +898,7 @@ exports[`Stepper > handles clicks when interactive and small 1`] = `
 }
 
 .emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"]):last-child {
-  margin-top: 0px;
+  margin-top: 0.5rem;
 }
 
 .emotion-2 {
@@ -1036,7 +1030,7 @@ exports[`Stepper > handles clicks when interactive and small 1`] = `
 }
 
 .emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"]):last-child {
-  margin-top: 0px;
+  margin-top: 0.5rem;
 }
 
 .emotion-5 {
@@ -1059,7 +1053,6 @@ exports[`Stepper > handles clicks when interactive and small 1`] = `
   color: #ffffff;
   background: #8c40ef;
   border: 1px solid #8c40ef;
-  margin-top: 0.25rem;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
   min-width: 1.5rem;
@@ -1085,7 +1078,6 @@ exports[`Stepper > handles clicks when interactive and small 1`] = `
   color: #ffffff;
   background: #8c40ef;
   border: 1px solid #8c40ef;
-  margin-top: 0.25rem;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
   min-width: 1.5rem;
@@ -1175,7 +1167,6 @@ exports[`Stepper > handles clicks when interactive and small 1`] = `
   color: #ffffff;
   background: #8c40ef;
   border: 1px solid #8c40ef;
-  margin-top: 0.25rem;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
   min-width: 1.5rem;
@@ -1203,7 +1194,6 @@ exports[`Stepper > handles clicks when interactive and small 1`] = `
   color: #ffffff;
   background: #8c40ef;
   border: 1px solid #8c40ef;
-  margin-top: 0.25rem;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
   min-width: 1.5rem;
@@ -1267,7 +1257,6 @@ exports[`Stepper > handles clicks when interactive and small 1`] = `
   color: #222638;
   background: #ffffff;
   border: 1px solid #d9dadd;
-  margin-top: 0.25rem;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
   min-width: 1.5rem;
@@ -1293,7 +1282,6 @@ exports[`Stepper > handles clicks when interactive and small 1`] = `
   color: #222638;
   background: #ffffff;
   border: 1px solid #d9dadd;
-  margin-top: 0.25rem;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
   min-width: 1.5rem;
@@ -1454,10 +1442,10 @@ exports[`Stepper > handles clicks when not interactive 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
   gap: 0.25rem;
 }
 
@@ -1473,10 +1461,10 @@ exports[`Stepper > handles clicks when not interactive 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
   gap: 0.25rem;
 }
 
@@ -1609,7 +1597,7 @@ exports[`Stepper > handles clicks when not interactive 1`] = `
 }
 
 .emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"]):last-child {
-  margin-top: 0px;
+  margin-top: 0.5rem;
 }
 
 .emotion-2 {
@@ -1741,7 +1729,7 @@ exports[`Stepper > handles clicks when not interactive 1`] = `
 }
 
 .emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"]):last-child {
-  margin-top: 0px;
+  margin-top: 0.5rem;
 }
 
 .emotion-5 {
@@ -1764,7 +1752,6 @@ exports[`Stepper > handles clicks when not interactive 1`] = `
   color: #ffffff;
   background: #8c40ef;
   border: 1px solid #8c40ef;
-  margin-top: 0.25rem;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
   min-width: 1.5rem;
@@ -1790,7 +1777,6 @@ exports[`Stepper > handles clicks when not interactive 1`] = `
   color: #ffffff;
   background: #8c40ef;
   border: 1px solid #8c40ef;
-  margin-top: 0.25rem;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
   min-width: 1.5rem;
@@ -1880,7 +1866,6 @@ exports[`Stepper > handles clicks when not interactive 1`] = `
   color: #ffffff;
   background: #8c40ef;
   border: 1px solid #8c40ef;
-  margin-top: 0.25rem;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
   min-width: 1.5rem;
@@ -1908,7 +1893,6 @@ exports[`Stepper > handles clicks when not interactive 1`] = `
   color: #ffffff;
   background: #8c40ef;
   border: 1px solid #8c40ef;
-  margin-top: 0.25rem;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
   min-width: 1.5rem;
@@ -1972,7 +1956,6 @@ exports[`Stepper > handles clicks when not interactive 1`] = `
   color: #222638;
   background: #ffffff;
   border: 1px solid #d9dadd;
-  margin-top: 0.25rem;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
   min-width: 1.5rem;
@@ -1998,7 +1981,6 @@ exports[`Stepper > handles clicks when not interactive 1`] = `
   color: #222638;
   background: #ffffff;
   border: 1px solid #d9dadd;
-  margin-top: 0.25rem;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
   min-width: 1.5rem;
@@ -2149,10 +2131,10 @@ exports[`Stepper > renders correctly with all selected 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
   gap: 0.25rem;
 }
 
@@ -2308,7 +2290,6 @@ exports[`Stepper > renders correctly with all selected 1`] = `
   color: #ffffff;
   background: #8c40ef;
   border: 1px solid #8c40ef;
-  margin-top: 0;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
   min-width: 2rem;
@@ -2366,7 +2347,6 @@ exports[`Stepper > renders correctly with all selected 1`] = `
   color: #ffffff;
   background: #8c40ef;
   border: 1px solid #8c40ef;
-  margin-top: 0;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
   min-width: 2rem;
@@ -2412,7 +2392,6 @@ exports[`Stepper > renders correctly with all selected 1`] = `
   color: #222638;
   background: #ffffff;
   border: 1px solid #d9dadd;
-  margin-top: 0;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
   min-width: 2rem;
@@ -2545,10 +2524,10 @@ exports[`Stepper > renders correctly with animation 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
   gap: 0.25rem;
 }
 
@@ -2704,7 +2683,6 @@ exports[`Stepper > renders correctly with animation 1`] = `
   color: #ffffff;
   background: #8c40ef;
   border: 1px solid #8c40ef;
-  margin-top: 0;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
   min-width: 2rem;
@@ -2762,7 +2740,6 @@ exports[`Stepper > renders correctly with animation 1`] = `
   color: #ffffff;
   background: #8c40ef;
   border: 1px solid #8c40ef;
-  margin-top: 0;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
   min-width: 2rem;
@@ -2808,7 +2785,6 @@ exports[`Stepper > renders correctly with animation 1`] = `
   color: #222638;
   background: #ffffff;
   border: 1px solid #d9dadd;
-  margin-top: 0;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
   min-width: 2rem;
@@ -2941,10 +2917,10 @@ exports[`Stepper > renders correctly with children 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
   gap: 0.25rem;
 }
 
@@ -3100,7 +3076,6 @@ exports[`Stepper > renders correctly with children 1`] = `
   color: #ffffff;
   background: #8c40ef;
   border: 1px solid #8c40ef;
-  margin-top: 0;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
   min-width: 2rem;
@@ -3158,7 +3133,6 @@ exports[`Stepper > renders correctly with children 1`] = `
   color: #ffffff;
   background: #8c40ef;
   border: 1px solid #8c40ef;
-  margin-top: 0;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
   min-width: 2rem;
@@ -3204,7 +3178,6 @@ exports[`Stepper > renders correctly with children 1`] = `
   color: #222638;
   background: #ffffff;
   border: 1px solid #d9dadd;
-  margin-top: 0;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
   min-width: 2rem;
@@ -3338,10 +3311,10 @@ exports[`Stepper > renders correctly with default props 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
   gap: 0.25rem;
 }
 
@@ -3497,7 +3470,6 @@ exports[`Stepper > renders correctly with default props 1`] = `
   color: #ffffff;
   background: #8c40ef;
   border: 1px solid #8c40ef;
-  margin-top: 0;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
   min-width: 2rem;
@@ -3555,7 +3527,6 @@ exports[`Stepper > renders correctly with default props 1`] = `
   color: #ffffff;
   background: #8c40ef;
   border: 1px solid #8c40ef;
-  margin-top: 0;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
   min-width: 2rem;
@@ -3601,7 +3572,6 @@ exports[`Stepper > renders correctly with default props 1`] = `
   color: #222638;
   background: #ffffff;
   border: 1px solid #d9dadd;
-  margin-top: 0;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
   min-width: 2rem;
@@ -3744,10 +3714,10 @@ exports[`Stepper > renders correctly with disabled steps 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
   gap: 0.25rem;
 }
 
@@ -3903,7 +3873,6 @@ exports[`Stepper > renders correctly with disabled steps 1`] = `
   color: #ffffff;
   background: #8c40ef;
   border: 1px solid #8c40ef;
-  margin-top: 0;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
   min-width: 2rem;
@@ -3949,7 +3918,6 @@ exports[`Stepper > renders correctly with disabled steps 1`] = `
   color: #222638;
   background: #ffffff;
   border: 1px solid #d9dadd;
-  margin-top: 0;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
   min-width: 2rem;
@@ -4074,10 +4042,10 @@ exports[`Stepper > renders correctly with selected prop 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
   gap: 0.25rem;
 }
 
@@ -4233,7 +4201,6 @@ exports[`Stepper > renders correctly with selected prop 1`] = `
   color: #ffffff;
   background: #8c40ef;
   border: 1px solid #8c40ef;
-  margin-top: 0;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
   min-width: 2rem;
@@ -4291,7 +4258,6 @@ exports[`Stepper > renders correctly with selected prop 1`] = `
   color: #ffffff;
   background: #8c40ef;
   border: 1px solid #8c40ef;
-  margin-top: 0;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
   min-width: 2rem;
@@ -4434,10 +4400,10 @@ exports[`Stepper > renders correctly with small size 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
   gap: 0.25rem;
 }
 
@@ -4570,7 +4536,7 @@ exports[`Stepper > renders correctly with small size 1`] = `
 }
 
 .emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"]):last-child {
-  margin-top: 0px;
+  margin-top: 0.5rem;
 }
 
 .emotion-5 {
@@ -4593,7 +4559,6 @@ exports[`Stepper > renders correctly with small size 1`] = `
   color: #ffffff;
   background: #8c40ef;
   border: 1px solid #8c40ef;
-  margin-top: 0.25rem;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
   min-width: 1.5rem;
@@ -4651,7 +4616,6 @@ exports[`Stepper > renders correctly with small size 1`] = `
   color: #ffffff;
   background: #8c40ef;
   border: 1px solid #8c40ef;
-  margin-top: 0.25rem;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
   min-width: 1.5rem;
@@ -4697,7 +4661,6 @@ exports[`Stepper > renders correctly with small size 1`] = `
   color: #222638;
   background: #ffffff;
   border: 1px solid #d9dadd;
-  margin-top: 0.25rem;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
   min-width: 1.5rem;
@@ -4840,10 +4803,10 @@ exports[`Stepper > renders correctly with step number in row 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
   gap: 0.5rem;
 }
 
@@ -4999,7 +4962,6 @@ exports[`Stepper > renders correctly with step number in row 1`] = `
   color: #ffffff;
   background: #8c40ef;
   border: 1px solid #8c40ef;
-  margin-top: 0;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
   min-width: 2rem;
@@ -5086,7 +5048,6 @@ exports[`Stepper > renders correctly with step number in row 1`] = `
   color: #ffffff;
   background: #8c40ef;
   border: 1px solid #8c40ef;
-  margin-top: 0;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
   min-width: 2rem;
@@ -5160,7 +5121,6 @@ exports[`Stepper > renders correctly with step number in row 1`] = `
   color: #222638;
   background: #ffffff;
   border: 1px solid #d9dadd;
-  margin-top: 0;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
   min-width: 2rem;
@@ -5311,10 +5271,10 @@ exports[`Stepper > renders correctly without Stepper.Step 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
   gap: 0.25rem;
 }
 
@@ -5330,10 +5290,10 @@ exports[`Stepper > renders correctly without Stepper.Step 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
   gap: 0.25rem;
 }
 
@@ -5466,7 +5426,7 @@ exports[`Stepper > renders correctly without Stepper.Step 1`] = `
 }
 
 .emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"]):last-child {
-  margin-top: 0px;
+  margin-top: 0.5rem;
 }
 
 .emotion-2 {
@@ -5598,7 +5558,7 @@ exports[`Stepper > renders correctly without Stepper.Step 1`] = `
 }
 
 .emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"]):last-child {
-  margin-top: 0px;
+  margin-top: 0.5rem;
 }
 
 .emotion-5 {
@@ -5621,7 +5581,6 @@ exports[`Stepper > renders correctly without Stepper.Step 1`] = `
   color: #ffffff;
   background: #8c40ef;
   border: 1px solid #8c40ef;
-  margin-top: 0.25rem;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
   min-width: 1.5rem;
@@ -5647,7 +5606,6 @@ exports[`Stepper > renders correctly without Stepper.Step 1`] = `
   color: #ffffff;
   background: #8c40ef;
   border: 1px solid #8c40ef;
-  margin-top: 0.25rem;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
   min-width: 1.5rem;
@@ -5701,7 +5659,6 @@ exports[`Stepper > renders correctly without Stepper.Step 1`] = `
   color: #ffffff;
   background: #8c40ef;
   border: 1px solid #8c40ef;
-  margin-top: 0.25rem;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
   min-width: 1.5rem;
@@ -5729,7 +5686,6 @@ exports[`Stepper > renders correctly without Stepper.Step 1`] = `
   color: #ffffff;
   background: #8c40ef;
   border: 1px solid #8c40ef;
-  margin-top: 0.25rem;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
   min-width: 1.5rem;
@@ -5757,7 +5713,6 @@ exports[`Stepper > renders correctly without Stepper.Step 1`] = `
   color: #222638;
   background: #ffffff;
   border: 1px solid #d9dadd;
-  margin-top: 0.25rem;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
   min-width: 1.5rem;
@@ -5783,7 +5738,6 @@ exports[`Stepper > renders correctly without Stepper.Step 1`] = `
   color: #222638;
   background: #ffffff;
   border: 1px solid #d9dadd;
-  margin-top: 0.25rem;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
   min-width: 1.5rem;
@@ -5896,10 +5850,10 @@ exports[`Stepper > renders correctly without separator 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
   gap: 2rem;
 }
 
@@ -6055,7 +6009,6 @@ exports[`Stepper > renders correctly without separator 1`] = `
   color: #ffffff;
   background: #8c40ef;
   border: 1px solid #8c40ef;
-  margin-top: 0;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
   min-width: 2rem;
@@ -6113,7 +6066,6 @@ exports[`Stepper > renders correctly without separator 1`] = `
   color: #ffffff;
   background: #8c40ef;
   border: 1px solid #8c40ef;
-  margin-top: 0;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
   min-width: 2rem;
@@ -6159,7 +6111,6 @@ exports[`Stepper > renders correctly without separator 1`] = `
   color: #222638;
   background: #ffffff;
   border: 1px solid #d9dadd;
-  margin-top: 0;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
   min-width: 2rem;
@@ -6302,10 +6253,10 @@ exports[`Stepper > renders correctly without separator with label on the right 1
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  -webkit-align-items: flex-end;
-  -webkit-box-align: flex-end;
-  -ms-flex-align: flex-end;
-  align-items: flex-end;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
   gap: 2rem;
 }
 
@@ -6461,7 +6412,6 @@ exports[`Stepper > renders correctly without separator with label on the right 1
   color: #ffffff;
   background: #8c40ef;
   border: 1px solid #8c40ef;
-  margin-top: 0;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
   min-width: 2rem;
@@ -6519,7 +6469,6 @@ exports[`Stepper > renders correctly without separator with label on the right 1
   color: #ffffff;
   background: #8c40ef;
   border: 1px solid #8c40ef;
-  margin-top: 0;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
   min-width: 2rem;
@@ -6565,7 +6514,6 @@ exports[`Stepper > renders correctly without separator with label on the right 1
   color: #222638;
   background: #ffffff;
   border: 1px solid #d9dadd;
-  margin-top: 0;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
   min-width: 2rem;
