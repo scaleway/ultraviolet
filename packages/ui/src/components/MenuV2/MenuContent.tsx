@@ -25,13 +25,16 @@ import type { MenuProps } from './types'
 const StyledPopup = styled(Popup, {
   shouldForwardProp: prop => !['size', 'searchable'].includes(prop),
 })<{ size?: keyof typeof SIZES; searchable: boolean }>`
-  background-color: ${({ theme }) => theme.colors.other.elevation.background.raised};
-  box-shadow: ${({ theme }) => `${theme.shadows.raised[0]}, ${theme.shadows.raised[1]}`};
+  background-color: ${({ theme }) =>
+    theme.colors.other.elevation.background.raised};
+  box-shadow: ${({ theme }) =>
+    `${theme.shadows.raised[0]}, ${theme.shadows.raised[1]}`};
   padding: 0;
 
   &[data-has-arrow='true'] {
     &::after {
-      border-color: ${({ theme }) => theme.colors.other.elevation.background.raised}
+      border-color: ${({ theme }) =>
+        theme.colors.other.elevation.background.raised}
         transparent transparent transparent;
     }
   }
@@ -56,7 +59,8 @@ const MenuList = styled(Stack, {
 })<{ height: string }>`
   overflow-y: auto;
   overflow-x: hidden;
-  max-height: calc(${({ height }) => height} - ${({ theme }) => theme.space['0.5']});
+  max-height: calc(${({ height }) => height} - ${({ theme }) =>
+    theme.space['0.5']});
   &:after,
   &:before {
     border: solid transparent;
@@ -108,7 +112,7 @@ export const Menu = forwardRef(
     }: MenuProps,
     ref: Ref<HTMLButtonElement | null>,
   ) => {
-    const { isVisible, setIsVisible } = useMenu()
+    const { isVisible, setIsVisible, itemsList } = useMenu()
     const searchInputRef = useRef<HTMLInputElement>(null)
     const [localChild, setLocalChild] = useState<ReactNode[] | null>(null)
     const popupRef = useRef<HTMLDivElement>(null)
@@ -146,12 +150,13 @@ export const Menu = forwardRef(
     )
 
     useEffect(() => {
-      if (isVisible && searchable) {
+      if (isVisible) {
         setTimeout(() => {
-          searchInputRef.current?.focus()
+          if (searchable) searchInputRef.current?.focus()
+          else if (itemsList.length > 0) itemsList[0]?.current?.focus()
         }, 50)
       }
-    }, [isVisible, searchable])
+    }, [isVisible, itemsList, searchable])
 
     const finalChild = useMemo(() => {
       if (typeof children === 'function') {
@@ -181,6 +186,8 @@ export const Menu = forwardRef(
         onClose={() => {
           setIsVisible(false)
           setLocalChild(null)
+          // Skip focus return when using hover trigger to prevent focus getting stuck in a loop
+          if (triggerMethod !== 'hover') disclosureRef.current?.focus()
         }}
         tabIndex={-1}
         maxHeight={maxHeight ?? '30rem'}
