@@ -53,8 +53,6 @@ const StyledBullet = styled(Bullet)<{
   size: 'small' | 'medium'
   isActive: boolean
 }>`
-  margin-top: ${({ theme, size }) =>
-    size === 'small' ? theme.space['0.5'] : 0};
   transition: box-shadow 300ms;
   min-width: ${({ theme, size }) =>
     size === 'small' ? theme.space[3] : theme.space[4]};
@@ -186,8 +184,7 @@ const StyledStepContainer = styled(Stack)<{
     }
 
     &:last-child {
-      margin-top: ${({ theme, size }) =>
-        size === 'small' ? '0px' : theme.space[1]};
+      margin-top: ${({ theme }) => theme.space[1]};
     }
   }
 `
