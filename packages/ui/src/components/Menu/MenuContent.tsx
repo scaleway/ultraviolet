@@ -61,7 +61,7 @@ const MenuList = styled(Stack, {
   overflow-y: auto;
   overflow-x: hidden;
   max-height: calc(${({ height }) => height} - ${({ theme }) =>
-    theme.space['0.5']});
+  theme.space['0.5']});
   &:after,
   &:before {
     border: solid transparent;
@@ -111,7 +111,7 @@ export const Menu = forwardRef(
     }: MenuProps,
     ref: Ref<HTMLButtonElement | null>,
   ) => {
-    const { isVisible, setIsVisible, isNested } = useMenu()
+    const { isVisible, setIsVisible, isNested, itemsList } = useMenu()
     const searchInputRef = useRef<HTMLInputElement>(null)
     const [localChild, setLocalChild] = useState<ReactNode[] | null>(null)
     const popupRef = useRef<HTMLDivElement>(null)
@@ -149,12 +149,13 @@ export const Menu = forwardRef(
     )
 
     useEffect(() => {
-      if (isVisible && searchable) {
+      if (isVisible) {
         setTimeout(() => {
-          searchInputRef.current?.focus()
+          if (searchable) searchInputRef.current?.focus()
+          else if (itemsList.length > 0) itemsList[0]?.current?.focus()
         }, 50)
       }
-    }, [isVisible, searchable])
+    }, [isVisible, itemsList, searchable])
 
     const finalChild = useMemo(() => {
       if (typeof children === 'function') {
@@ -184,6 +185,8 @@ export const Menu = forwardRef(
         onClose={() => {
           setIsVisible(false)
           setLocalChild(null)
+          // Skip focus return when using hover trigger to prevent focus getting stuck in a loop
+          if (triggerMethod !== 'hover') disclosureRef.current?.focus()
         }}
         tabIndex={-1}
         maxHeight={maxHeight ?? '30rem'}
