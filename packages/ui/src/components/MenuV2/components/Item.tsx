@@ -2,8 +2,14 @@
 
 import type { Theme } from '@emotion/react'
 import styled from '@emotion/styled'
-import type { MouseEvent, MouseEventHandler, ReactNode, Ref } from 'react'
-import { forwardRef, useCallback } from 'react'
+import type {
+  MouseEvent,
+  MouseEventHandler,
+  ReactNode,
+  Ref,
+  RefObject,
+} from 'react'
+import { forwardRef, useCallback, useEffect, useRef } from 'react'
 import { Tooltip } from '../../Tooltip'
 import { useMenu } from '../MenuProvider'
 
@@ -50,7 +56,7 @@ const itemCoreStyle = ({
       `
       : `
           &:hover,
-          &:focus, &[data-active='true'] {
+          &:focus-visible, &[data-active='true'] {
             background-color: ${theme.colors[sentiment].backgroundHover};
             color: ${theme.colors[sentiment].textHover};
             svg {
@@ -137,7 +143,10 @@ const Item = forwardRef<HTMLElement, ItemProps>(
     },
     ref,
   ) => {
-    const { hideOnClickItem, setIsVisible } = useMenu()
+    const { hideOnClickItem, setIsVisible, itemsList } = useMenu()
+
+    const innerRef = useRef<HTMLButtonElement>(null)
+    const computedRef = ref ?? innerRef
 
     const onClickHandle = useCallback(
       (event: MouseEvent<HTMLAnchorElement>) => {
@@ -152,6 +161,16 @@ const Item = forwardRef<HTMLElement, ItemProps>(
       [disabled, hideOnClickItem, onClick, setIsVisible],
     )
 
+    useEffect(() => {
+      if (
+        typeof computedRef !== 'function' &&
+        computedRef.current &&
+        !itemsList.includes(computedRef as RefObject<HTMLButtonElement>)
+      ) {
+        itemsList.push(computedRef as RefObject<HTMLButtonElement>)
+      }
+    }, [computedRef, itemsList])
+
     if (href && !disabled) {
       return (
         <Container borderless={borderless}>
@@ -162,7 +181,7 @@ const Item = forwardRef<HTMLElement, ItemProps>(
               href={href}
               target={target}
               rel={rel}
-              ref={ref as Ref<HTMLAnchorElement>}
+              ref={computedRef as Ref<HTMLAnchorElement>}
               onClick={onClickHandle}
               role="menuitem"
               disabled={disabled}
@@ -182,7 +201,7 @@ const Item = forwardRef<HTMLElement, ItemProps>(
         <Tooltip text={tooltip}>
           <StyledItem
             type="button"
-            ref={ref as Ref<HTMLButtonElement>}
+            ref={computedRef as Ref<HTMLButtonElement>}
             role="menuitem"
             disabled={disabled}
             onClick={event => {
