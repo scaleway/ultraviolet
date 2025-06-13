@@ -1,18 +1,20 @@
 'use client'
 
-import type { Dispatch, ReactNode, SetStateAction } from 'react'
+import type { Dispatch, ReactNode, RefObject, SetStateAction } from 'react'
 import { createContext, useContext, useMemo, useState } from 'react'
 
 type MenuContextProps = {
   hideOnClickItem: boolean
   isVisible: boolean
   setIsVisible: Dispatch<SetStateAction<boolean>>
+  itemsList: RefObject<HTMLButtonElement>[]
 }
 
 const MenuContext = createContext<MenuContextProps>({
   hideOnClickItem: false,
   isVisible: false,
   setIsVisible: () => {},
+  itemsList: [],
 })
 
 export const useMenu = () => {
@@ -40,6 +42,7 @@ export const MenuProvider = ({
       hideOnClickItem,
       isVisible,
       setIsVisible,
+      itemsList: [],
     }),
     [hideOnClickItem, isVisible],
   )
