@@ -1,5 +1,11 @@
 # Change Log
 
+## 2.0.0-beta.9
+
+### Patch Changes
+
+- [#5249](https://github.com/scaleway/ultraviolet/pull/5249) [`f8c27bf`](https://github.com/scaleway/ultraviolet/commit/f8c27bf584b237099b96557776d1d6632f415c0d) Thanks [@matthprost](https://github.com/matthprost)! - Fix stepper small size with label on right
+
 ## 2.0.0-beta.8
 
 ### Patch Changes
