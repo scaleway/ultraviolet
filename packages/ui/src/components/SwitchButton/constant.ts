@@ -1,0 +1,1 @@
+export const FOCUS_OVERLAY_SCALE_RATIO = 6

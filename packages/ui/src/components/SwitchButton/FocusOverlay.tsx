@@ -1,10 +1,7 @@
 'use client'
 
 import styled from '@emotion/styled'
-import { useMemo } from 'react'
-
-const FOCUS_OVERLAY_SCALE_RATIO = 6
-const FOCUS_OVERLAY_PIXEL_RIGHT_OFFSET = 8
+import { FOCUS_OVERLAY_SCALE_RATIO } from './constant'
 
 const StyledDiv = styled.div`
   position: absolute;
@@ -14,47 +11,31 @@ const StyledDiv = styled.div`
   transform-origin: left center;
   transition: all 200ms ease-in-out;
 
-  &[data-focusposition='right'] {
-    transform-origin: right center;
+  &[data-sentiment='neutral'] {
+    background: ${({ theme }) => theme.colors.neutral.backgroundStrong};
   }
 `
 
 type FocusOverlayProps = {
-  focusPosition: 'left' | 'right'
-  rightCardWidth: number
-  leftCardWidth: number
-  hasMouseDown: boolean
+  cardWidth: number
+  position: number
+  mouseDownSide: 'left' | 'right' | null
+  sentiment: 'neutral' | 'primary'
 }
 
 export const FocusOverlay = ({
-  focusPosition,
-  rightCardWidth,
-  leftCardWidth,
-  hasMouseDown,
-}: FocusOverlayProps) => {
-  const translateXValue = useMemo(
-    () =>
-      focusPosition === 'left'
-        ? 0
-        : leftCardWidth + FOCUS_OVERLAY_PIXEL_RIGHT_OFFSET,
-    [focusPosition, leftCardWidth],
-  )
-
-  const getScaleXValue = () => {
-    if (!hasMouseDown || !leftCardWidth || !rightCardWidth) return 1
-    const currentWidth =
-      focusPosition === 'left' ? leftCardWidth : rightCardWidth
-
-    return 1 + FOCUS_OVERLAY_SCALE_RATIO / currentWidth
-  }
-
-  return (
-    <StyledDiv
-      data-focusposition={focusPosition}
-      style={{
-        transform: `translate3d(${translateXValue}px, 0, 0) scale3d(${getScaleXValue()}, 1, 1)`,
-        width: `${focusPosition === 'left' ? leftCardWidth : rightCardWidth}px`,
-      }}
-    />
-  )
-}
+  cardWidth,
+  position,
+  mouseDownSide,
+  sentiment,
+}: FocusOverlayProps) => (
+  <StyledDiv
+    data-sentiment={sentiment}
+    style={{
+      width: `${cardWidth}px`,
+      left: `${
+        position - (mouseDownSide === 'left' ? FOCUS_OVERLAY_SCALE_RATIO : 0)
+      }px`,
+    }}
+  />
+)
