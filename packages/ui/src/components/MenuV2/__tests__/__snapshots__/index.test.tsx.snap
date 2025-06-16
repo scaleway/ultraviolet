@@ -812,8 +812,8 @@ exports[`Menu > placement > renders bottom 1`] = `
     data-testid="testing"
   >
     <div
-      aria-controls="menu-«r1n»"
-      aria-describedby="menu-«r1n»"
+      aria-controls="menu-«r20»"
+      aria-describedby="menu-«r20»"
       class="emotion-0 emotion-1"
       tabindex="-1"
     >
@@ -871,8 +871,8 @@ exports[`Menu > placement > renders left 1`] = `
     data-testid="testing"
   >
     <div
-      aria-controls="menu-«r1q»"
-      aria-describedby="menu-«r1q»"
+      aria-controls="menu-«r23»"
+      aria-describedby="menu-«r23»"
       class="emotion-0 emotion-1"
       tabindex="-1"
     >
@@ -930,8 +930,8 @@ exports[`Menu > placement > renders right 1`] = `
     data-testid="testing"
   >
     <div
-      aria-controls="menu-«r1t»"
-      aria-describedby="menu-«r1t»"
+      aria-controls="menu-«r26»"
+      aria-describedby="menu-«r26»"
       class="emotion-0 emotion-1"
       tabindex="-1"
     >
@@ -989,8 +989,8 @@ exports[`Menu > placement > renders top 1`] = `
     data-testid="testing"
   >
     <div
-      aria-controls="menu-«r1k»"
-      aria-describedby="menu-«r1k»"
+      aria-controls="menu-«r1t»"
+      aria-describedby="menu-«r1t»"
       class="emotion-0 emotion-1"
       tabindex="-1"
     >
@@ -1258,8 +1258,8 @@ exports[`Menu > renders with footer 1`] = `
     data-testid="testing"
   >
     <div
-      aria-controls="menu-«r1h»"
-      aria-describedby="menu-«r1h»"
+      aria-controls="menu-«r1q»"
+      aria-describedby="menu-«r1q»"
       class="emotion-0 emotion-1"
       tabindex="-1"
     >
@@ -1304,6 +1304,53 @@ exports[`Menu > renders with visible=false 1`] = `
         type="button"
       >
         Menu is visible
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Menu > should search and find item using searchText 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: inherit;
+}
+
+.emotion-0[data-container-full-height="true"] {
+  height: 100%;
+}
+
+.emotion-0[data-container-full-width="true"] {
+  width: 100%;
+}
+
+.emotion-0 {
+  display: inherit;
+}
+
+.emotion-0[data-container-full-height="true"] {
+  height: 100%;
+}
+
+.emotion-0[data-container-full-width="true"] {
+  width: 100%;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      aria-controls="menu-menu"
+      aria-describedby="menu-menu"
+      class="emotion-0 emotion-1"
+      tabindex="-1"
+    >
+      <button
+        aria-expanded="true"
+        aria-haspopup="dialog"
+        type="button"
+      >
+        Menu
       </button>
     </div>
   </div>
@@ -1446,8 +1493,8 @@ exports[`Menu > sizes > renders large 1`] = `
     data-testid="testing"
   >
     <div
-      aria-controls="menu-«r26»"
-      aria-describedby="menu-«r26»"
+      aria-controls="menu-«r2f»"
+      aria-describedby="menu-«r2f»"
       class="emotion-0 emotion-1"
       tabindex="-1"
     >
@@ -1505,8 +1552,8 @@ exports[`Menu > sizes > renders medium 1`] = `
     data-testid="testing"
   >
     <div
-      aria-controls="menu-«r23»"
-      aria-describedby="menu-«r23»"
+      aria-controls="menu-«r2c»"
+      aria-describedby="menu-«r2c»"
       class="emotion-0 emotion-1"
       tabindex="-1"
     >
@@ -1564,8 +1611,8 @@ exports[`Menu > sizes > renders small 1`] = `
     data-testid="testing"
   >
     <div
-      aria-controls="menu-«r20»"
-      aria-describedby="menu-«r20»"
+      aria-controls="menu-«r29»"
+      aria-describedby="menu-«r29»"
       class="emotion-0 emotion-1"
       tabindex="-1"
     >
