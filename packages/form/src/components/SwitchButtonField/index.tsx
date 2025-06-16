@@ -15,13 +15,11 @@ type SwitchButtonFieldProps<
     name: FieldPath<TFieldValues>
   }
 
-export const SwitchButtonField = <
+const SwitchButtonField = <
   TFieldValues extends FieldValues,
   TFieldName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
 >({
   name,
-  leftButton,
-  rightButton,
   size,
   control,
   shouldUnregister,
@@ -42,8 +40,6 @@ export const SwitchButtonField = <
     <SwitchButton
       {...props}
       name={name}
-      leftButton={leftButton}
-      rightButton={rightButton}
       onChange={event => {
         field.onChange(event)
         onChange?.(
@@ -62,3 +58,7 @@ export const SwitchButtonField = <
     />
   )
 }
+
+SwitchButtonField.Option = SwitchButton.Option
+
+export { SwitchButtonField }
