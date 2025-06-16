@@ -3,21 +3,29 @@ import type { ComponentProps } from 'react'
 import { Stack } from '../../Stack'
 import { SwitchButton } from '../index'
 
-export const Size: StoryFn<ComponentProps<typeof SwitchButton>> = args => (
+export const Sentiment: StoryFn<ComponentProps<typeof SwitchButton>> = args => (
   <Stack gap={1}>
-    Small (default size):
-    <SwitchButton {...args}>
+    Primary:
+    <SwitchButton {...args} sentiment="primary">
       <SwitchButton.Option value="option1">Option 1</SwitchButton.Option>
       <SwitchButton.Option value="option2">Option 2</SwitchButton.Option>
     </SwitchButton>
-    Medium:
-    <SwitchButton {...args} size="medium">
+    Neutral:
+    <SwitchButton {...args} sentiment="neutral">
       <SwitchButton.Option value="option1">Option 1</SwitchButton.Option>
       <SwitchButton.Option value="option2">Option 2</SwitchButton.Option>
     </SwitchButton>
   </Stack>
 )
 
-Size.args = {
+Sentiment.args = {
   value: 'option1',
+}
+
+Sentiment.parameters = {
+  docs: {
+    description: {
+      story: 'Sentiment can be `primary` or `neutral`.',
+    },
+  },
 }
