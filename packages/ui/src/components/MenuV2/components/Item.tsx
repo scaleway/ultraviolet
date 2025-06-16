@@ -117,6 +117,10 @@ type ItemProps = {
   sentiment?: MenuItemSentiment
   active?: boolean
   'data-testid'?: string
+  /**
+   * If you children is complex and you want to specify the search text use this prop.
+   */
+  searchText?: string
 }
 
 const Item = forwardRef<HTMLElement, ItemProps>(
@@ -133,6 +137,7 @@ const Item = forwardRef<HTMLElement, ItemProps>(
       tooltip,
       active,
       className,
+      searchText,
       'data-testid': dataTestId,
     },
     ref,
@@ -154,7 +159,7 @@ const Item = forwardRef<HTMLElement, ItemProps>(
 
     if (href && !disabled) {
       return (
-        <Container borderless={borderless}>
+        <Container borderless={borderless} data-search-text={searchText}>
           <Tooltip text={tooltip}>
             <StyledLinkItem
               data-active={active}
@@ -178,7 +183,7 @@ const Item = forwardRef<HTMLElement, ItemProps>(
     }
 
     return (
-      <Container borderless={borderless}>
+      <Container borderless={borderless} data-search-text={searchText}>
         <Tooltip text={tooltip}>
           <StyledItem
             type="button"
