@@ -65,9 +65,11 @@ const NON_SEARCHABLE_KEYS = [
 const StyledPopup = styled(Popup)`
   width: 100%;
   min-width: 320px;
-  background-color: ${({ theme }) => theme.colors.other.elevation.background.raised};
+  background-color: ${({ theme }) =>
+    theme.colors.other.elevation.background.raised};
   color: ${({ theme }) => theme.colors.neutral.text};
-  box-shadow: ${({ theme }) => `${theme.shadows.raised[0]}, ${theme.shadows.raised[1]}`};
+  box-shadow: ${({ theme }) =>
+    `${theme.shadows.raised[0]}, ${theme.shadows.raised[1]}`};
   padding: ${({ theme }) => theme.space[0]};
   margin-bottom: ${({ theme }) => theme.space[10]};
 `
@@ -123,7 +125,8 @@ const DropdownItem = styled.div<{
 }>`
   text-align:left;
   border: none;
-  background-color: ${({ theme }) => theme.colors.other.elevation.background.raised};
+  background-color: ${({ theme }) =>
+    theme.colors.other.elevation.background.raised};
 
   padding: ${({ theme }) => theme.space['1.5']} ${({ theme }) =>
     theme.space['2']} ${({ theme }) => theme.space['1.5']} ${({ theme }) =>
@@ -811,7 +814,7 @@ export const Dropdown = ({
   }, [displayedOptions, numberOfOptions])
 
   const computedFooter = useMemo(() => {
-    if (footer) {
+    if (footer && !emptyState) {
       if (typeof footer === 'function') {
         return (
           <PopupFooter>{footer(() => setIsDropdownVisible(false))}</PopupFooter>
@@ -822,7 +825,7 @@ export const Dropdown = ({
     }
 
     return null
-  }, [footer, setIsDropdownVisible])
+  }, [emptyState, footer, setIsDropdownVisible])
 
   return (
     <StyledPopup
