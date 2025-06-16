@@ -20,10 +20,6 @@ const Desc = styled.dd`
   width: 100%;
 `
 
-const StyledStack = styled(Stack)`
-width: 100%;
-min-width: 0;
-`
 type CellProps = {
   children: ReactNode
   title: string
@@ -50,7 +46,7 @@ export const InfoTableCell = ({ children, title }: CellProps) => {
   }
 
   return (
-    <StyledStack gap="0.5">
+    <Stack gap="0.5" width="100%" minWidth="0">
       <Term>
         <Text
           as="p"
@@ -72,6 +68,6 @@ export const InfoTableCell = ({ children, title }: CellProps) => {
           {children}
         </StyledText>
       </Desc>
-    </StyledStack>
+    </Stack>
   )
 }

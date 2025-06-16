@@ -89,4 +89,10 @@ describe('InfoTable', () => {
       renderWithTheme(<InfoTable.Cell title="title">cell</InfoTable.Cell>)
     }).toThrow('InfoTable.Cell should be inside InfoTable to use it properly.')
   })
+
+  it('should throw an error if InfoTable.Row is not used inside InfoTable', () => {
+    expect(() => {
+      renderWithTheme(<InfoTable.Row templateColumn="1fr">test</InfoTable.Row>)
+    }).toThrow('InfoTable.Row should be inside InfoTable to use it properly.')
+  })
 })
