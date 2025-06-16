@@ -1,13 +1,7 @@
 'use client'
 
 import type { PropsWithRef } from 'react'
-import {
-  cloneElement,
-  createRef,
-  isValidElement,
-  useEffect,
-  useMemo,
-} from 'react'
+import { cloneElement, isValidElement, useEffect, useMemo } from 'react'
 import type { DisclosureProps } from '../types'
 
 export const Disclosure = ({
@@ -17,17 +11,16 @@ export const Disclosure = ({
   handleClose,
   toggle,
   id,
+  ref,
 }: DisclosureProps) => {
-  const disclosureRef = createRef<HTMLElement>()
-
   useEffect(() => {
-    const element = disclosureRef.current
+    const element = ref.current
     element?.addEventListener('click', handleOpen)
 
     return () => {
       element?.removeEventListener('click', handleOpen)
     }
-  }, [handleOpen, disclosureRef])
+  }, [handleOpen, ref])
 
   const finalDisclosure = useMemo(() => {
     if (typeof disclosure === 'function') {
@@ -51,7 +44,7 @@ export const Disclosure = ({
   }
 
   return cloneElement(finalDisclosure, {
-    ref: disclosureRef,
+    ref,
     'aria-controls': id,
     'aria-haspopup': 'dialog',
   } as unknown as PropsWithRef<typeof disclosure>)
