@@ -6,25 +6,13 @@ import { describe, expect, test, vi } from 'vitest'
 import { Form, Submit, SwitchButtonField } from '../..'
 import { mockErrors } from '../../../mocks'
 
-const leftButton = {
-  label: 'Left Button Label',
-  value: 'left',
-}
-
-const rightButton = {
-  label: 'Right Button Label',
-  value: 'right',
-}
-
 describe('SwitchButtonField', () => {
   test('should render correctly', () => {
     const { asFragment } = renderWithForm(
-      <SwitchButtonField
-        name="test"
-        leftButton={leftButton}
-        rightButton={rightButton}
-        onChange={() => vi.fn()}
-      />,
+      <SwitchButtonField name="test" onChange={() => vi.fn()}>
+        <SwitchButtonField.Option value="left">Left</SwitchButtonField.Option>
+        <SwitchButtonField.Option value="right">Right</SwitchButtonField.Option>
+      </SwitchButtonField>,
     )
     expect(asFragment()).toMatchSnapshot()
   })
@@ -37,14 +25,13 @@ describe('SwitchButtonField', () => {
 
     const { asFragment } = renderWithTheme(
       <Form onSubmit={onSubmit} errors={mockErrors} methods={result.current}>
-        <SwitchButtonField
-          label="Test"
-          name="test"
-          required
-          leftButton={leftButton}
-          rightButton={rightButton}
-        />
-        <Submit>Submit</Submit>
+        <SwitchButtonField name="test" onChange={() => vi.fn()}>
+          <SwitchButtonField.Option value="left">Left</SwitchButtonField.Option>
+          <SwitchButtonField.Option value="right">
+            Right
+          </SwitchButtonField.Option>
+        </SwitchButtonField>
+        ,<Submit>Submit</Submit>
       </Form>,
     )
 
