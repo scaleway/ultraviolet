@@ -63,7 +63,5 @@ export type MenuProps = {
    */
   hideOnClickItem?: boolean
   footer?: ReactNode
-} & Pick<
-  ComponentProps<typeof Popup>,
-  'placement' | 'dynamicDomRendering' | 'align'
->
+  placement?: Exclude<ComponentProps<typeof Popup>['placement'], 'nested-menu'>
+} & Pick<ComponentProps<typeof Popup>, 'dynamicDomRendering' | 'align'>

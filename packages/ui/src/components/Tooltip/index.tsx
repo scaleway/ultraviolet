@@ -10,7 +10,6 @@ type TooltipProps = Pick<
   | 'id'
   | 'children'
   | 'maxWidth'
-  | 'placement'
   | 'text'
   | 'className'
   | 'visible'
@@ -22,7 +21,9 @@ type TooltipProps = Pick<
   | 'portalTarget'
   | 'tabIndex'
   | 'debounceDelay'
->
+> & {
+  placement?: Exclude<ComponentProps<typeof Popup>['placement'], 'nested-menu'>
+}
 
 const StyledPopup = styled(Popup)`
   pointer-events: none;
