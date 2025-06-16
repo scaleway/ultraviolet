@@ -1,5 +1,25 @@
 # Change Log
 
+## 2.0.0-beta.9
+
+### Minor Changes
+
+- [#5222](https://github.com/scaleway/ultraviolet/pull/5222) [`e1da98e`](https://github.com/scaleway/ultraviolet/commit/e1da98ef65b46c6dd889624f8d7485645e7e58bf) Thanks [@lisalupi](https://github.com/lisalupi)! - **Breaking changes**
+  `SwitchButton`: New version of the component:
+  - props `leftButton` and `rightButton` removed
+  - Use `SwitchButton.Option` to add buttons/options
+  - More than 2 options possible now !
+  - New sizes
+  - New prop `sentiment`
+
+### Patch Changes
+
+- [#5213](https://github.com/scaleway/ultraviolet/pull/5213) [`76d6624`](https://github.com/scaleway/ultraviolet/commit/76d66247b93595b5ba4f005c422337e209890013) Thanks [@matthprost](https://github.com/matthprost)! - Improve search system on `<MenuV2 />`
+
+- [#5232](https://github.com/scaleway/ultraviolet/pull/5232) [`a72a09a`](https://github.com/scaleway/ultraviolet/commit/a72a09a0465c1cd2179b1f96d270ae62ada4756b) Thanks [@lisalupi](https://github.com/lisalupi)! - `<SelectInputV2 />: hide footer when empty state
+
+- [#5249](https://github.com/scaleway/ultraviolet/pull/5249) [`f8c27bf`](https://github.com/scaleway/ultraviolet/commit/f8c27bf584b237099b96557776d1d6632f415c0d) Thanks [@matthprost](https://github.com/matthprost)! - Fix stepper small size with label on right
+
 ## 2.0.0-beta.8
 
 ### Patch Changes

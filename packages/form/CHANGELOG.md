@@ -1,5 +1,22 @@
 # Change Log
 
+## 4.0.0-beta.10
+
+### Minor Changes
+
+- [#5222](https://github.com/scaleway/ultraviolet/pull/5222) [`e1da98e`](https://github.com/scaleway/ultraviolet/commit/e1da98ef65b46c6dd889624f8d7485645e7e58bf) Thanks [@lisalupi](https://github.com/lisalupi)! - **Breaking changes**
+  `SwitchButton`: New version of the component:
+  - props `leftButton` and `rightButton` removed
+  - Use `SwitchButton.Option` to add buttons/options
+  - More than 2 options possible now !
+  - New sizes
+  - New prop `sentiment`
+
+### Patch Changes
+
+- Updated dependencies [[`76d6624`](https://github.com/scaleway/ultraviolet/commit/76d66247b93595b5ba4f005c422337e209890013), [`a72a09a`](https://github.com/scaleway/ultraviolet/commit/a72a09a0465c1cd2179b1f96d270ae62ada4756b), [`f8c27bf`](https://github.com/scaleway/ultraviolet/commit/f8c27bf584b237099b96557776d1d6632f415c0d), [`e1da98e`](https://github.com/scaleway/ultraviolet/commit/e1da98ef65b46c6dd889624f8d7485645e7e58bf)]:
+  - @ultraviolet/ui@2.0.0-beta.9
+
 ## 4.0.0-beta.9
 
 ### Patch Changes
