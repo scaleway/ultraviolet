@@ -2,10 +2,12 @@
 
 import type { Theme } from '@emotion/react'
 import styled from '@emotion/styled'
+import { ArrowRightIcon } from '@ultraviolet/icons'
 import type { MouseEvent, MouseEventHandler, ReactNode, Ref } from 'react'
 import { forwardRef, useCallback } from 'react'
+import { Stack } from '../../Stack'
 import { Tooltip } from '../../Tooltip'
-import { useMenu } from '../MenuProvider'
+import { useDisclosureContext, useMenu } from '../MenuProvider'
 
 type MenuItemSentiment = 'neutral' | 'primary' | 'danger'
 
@@ -58,7 +60,7 @@ const itemCoreStyle = ({
             }
           }`
   }
-  `
+`
 
 const Container = styled('div', {
   shouldForwardProp: prop => !['borderless'].includes(prop),
@@ -74,6 +76,7 @@ const Container = styled('div', {
   &:last-child {
     border: none;
   }
+  width: 100%;
 `
 
 const StyledItem = styled('button', {
@@ -142,7 +145,8 @@ const Item = forwardRef<HTMLElement, ItemProps>(
     },
     ref,
   ) => {
-    const { hideOnClickItem, setIsVisible } = useMenu()
+    const { hideOnClickItem, setIsVisible, isVisible } = useMenu()
+    const isDisclosure = useDisclosureContext()
 
     const onClickHandle = useCallback(
       (event: MouseEvent<HTMLAnchorElement>) => {
@@ -175,7 +179,18 @@ const Item = forwardRef<HTMLElement, ItemProps>(
               className={className}
               data-testid={dataTestId}
             >
-              {children}
+              {isDisclosure ? (
+                <Stack
+                  justifyContent="space-between"
+                  direction="row"
+                  width="100%"
+                  alignItems="center"
+                >
+                  {children} <ArrowRightIcon />
+                </Stack>
+              ) : (
+                children
+              )}
             </StyledLinkItem>
           </Tooltip>
         </Container>
@@ -200,9 +215,20 @@ const Item = forwardRef<HTMLElement, ItemProps>(
             sentiment={sentiment}
             className={className}
             data-testid={dataTestId}
-            data-active={active}
+            data-active={active || (isVisible && isDisclosure)}
           >
-            {children}
+            {isDisclosure ? (
+              <Stack
+                justifyContent="space-between"
+                direction="row"
+                width="100%"
+                alignItems="center"
+              >
+                {children} <ArrowRightIcon />
+              </Stack>
+            ) : (
+              children
+            )}
           </StyledItem>
         </Tooltip>
       </Container>

@@ -37,12 +37,19 @@ const StyledPopup = styled(Popup, {
   max-width: ${({ size }) => SIZES_WIDTH[size]}rem;
   text-align: initial;
   box-shadow: ${({ theme }) => theme.shadows.popover};
-  background: ${({ theme, sentiment }) => (sentiment === 'neutral' ? theme.colors.neutral.background : theme.colors.primary.backgroundStrong)};
+  background: ${({ theme, sentiment }) =>
+    sentiment === 'neutral'
+      ? theme.colors.neutral.background
+      : theme.colors.primary.backgroundStrong};
 
   // Overrides the default popup arrow color to match the background color
   &[data-has-arrow="true"] {
     &::after {
-      border-color: ${({ theme, sentiment }) => (sentiment === 'neutral' ? theme.colors.neutral.background : theme.colors.primary.backgroundStrong)} transparent transparent transparent; 
+      border-color: ${({ theme, sentiment }) =>
+        sentiment === 'neutral'
+          ? theme.colors.neutral.background
+          : theme.colors.primary
+              .backgroundStrong} transparent transparent transparent; 
     }
   }
 `
@@ -115,10 +122,8 @@ type PopoverProps = {
    * behavior by setting a portalTarget prop.
    */
   portalTarget?: HTMLElement
-} & Pick<
-  ComponentProps<typeof Popup>,
-  'placement' | 'dynamicDomRendering' | 'align'
->
+  placement?: Exclude<ComponentProps<typeof Popup>['placement'], 'nested-menu'>
+} & Pick<ComponentProps<typeof Popup>, 'dynamicDomRendering' | 'align'>
 
 /**
  * Popover component is used to display additional information or actions on top of the main content of the page.
