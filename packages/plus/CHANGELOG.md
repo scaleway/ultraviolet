@@ -1,5 +1,20 @@
 # @ultraviolet/plus
 
+## 0.28.10
+
+### Patch Changes
+
+- [#5202](https://github.com/scaleway/ultraviolet/pull/5202) [`b3ca3ca`](https://github.com/scaleway/ultraviolet/commit/b3ca3ca957c2cec8c51f5717e597326fd17f9cb0) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@babel/core` to `7.27.4`.
+  Updated dependency `@babel/runtime` to `7.27.6`.
+  Updated dependency `@babel/eslint-parser` to `7.27.5`.
+  Updated dependency `@babel/plugin-transform-runtime` to `7.27.4`.
+
+- [#5258](https://github.com/scaleway/ultraviolet/pull/5258) [`eec2dfa`](https://github.com/scaleway/ultraviolet/commit/eec2dfa2ea6b98c83ab154ae6b06ff3acc6bbc76) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `19.1.8`.
+
+- Updated dependencies [[`b3ca3ca`](https://github.com/scaleway/ultraviolet/commit/b3ca3ca957c2cec8c51f5717e597326fd17f9cb0), [`eec2dfa`](https://github.com/scaleway/ultraviolet/commit/eec2dfa2ea6b98c83ab154ae6b06ff3acc6bbc76)]:
+  - @ultraviolet/icons@3.15.7
+  - @ultraviolet/ui@1.95.11
+
 ## 0.28.9
 
 ### Patch Changes
