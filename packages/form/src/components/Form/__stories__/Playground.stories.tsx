@@ -4,16 +4,15 @@ import {
   CheckboxField,
   DateField,
   Form,
-  NumberInputFieldV2,
+  NumberInputField,
   RadioField,
-  SelectInputFieldV2,
+  SelectInputField,
   SelectableCardField,
   Submit,
   SubmitErrorAlert,
   TagInputField,
   TextInputField,
-  TextInputFieldV2,
-  TimeField,
+  TimeInputField,
   ToggleField,
 } from '../..'
 import { useForm } from '../../..'
@@ -111,7 +110,7 @@ export const Playground: StoryFn<typeof Form> = () => {
             required
             control={methods.control}
           />
-          <TimeField name="time" required control={methods.control} />
+          <TimeInputField name="time" required control={methods.control} />
         </Stack>
 
         <Stack gap={2} direction="row">
@@ -144,7 +143,7 @@ export const Playground: StoryFn<typeof Form> = () => {
           </SelectableCardField>
         </Stack>
 
-        <TextInputFieldV2
+        <TextInputField
           name="name"
           label="Name"
           placeholder="John"
@@ -153,7 +152,7 @@ export const Playground: StoryFn<typeof Form> = () => {
           disabled={disableName}
           control={methods.control}
         />
-        <NumberInputFieldV2
+        <NumberInputField
           name="age"
           control={methods.control}
           min={1}
@@ -169,7 +168,7 @@ export const Playground: StoryFn<typeof Form> = () => {
           control={methods.control}
         />
 
-        <SelectInputFieldV2
+        <SelectInputField
           name="select"
           required
           options={data}

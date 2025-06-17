@@ -4,7 +4,6 @@ import { useState } from 'react'
 import {
   Submit,
   TextInputField,
-  TextInputFieldV2,
   useFieldArray,
   useFormContext,
   useFormState,
@@ -47,7 +46,6 @@ export const FormContent = () => {
                 name="sentiment_neutral"
                 id="sentiment_neutral"
                 placeholder="neutral"
-                noTopLabel
                 disabled
                 required
               />
@@ -68,7 +66,6 @@ export const FormContent = () => {
                 name="sentiment_neutral_value"
                 id="sentiment_neutral_value"
                 placeholder="#FFFFFF"
-                noTopLabel
                 disabled
                 required
               />
@@ -112,7 +109,6 @@ export const FormContent = () => {
                     name={`sentiments.${index}.key`}
                     id={`sentiments.${index}.key`}
                     placeholder="neutral"
-                    noTopLabel
                     disabled={isRequiredSentiment}
                     required
                   />
@@ -133,7 +129,7 @@ export const FormContent = () => {
               </CapitalizeText>
               <Stack gap={1} alignItems="center" direction="row">
                 <StyledRow templateColumns="9fr 1fr" gap={1}>
-                  <TextInputFieldV2
+                  <TextInputField
                     name={`sentiments.${index}.value`}
                     id={`sentiments.${index}.value`}
                     placeholder="#FFFFFF"
@@ -143,8 +139,6 @@ export const FormContent = () => {
                     name={`sentiments.${index}.value`}
                     id={`sentiments.${index}.value`}
                     placeholder="#FFFFFF"
-                    noTopLabel
-                    type="color"
                     regex={[hexadecimalColorRegex]}
                   />
                 </StyledRow>

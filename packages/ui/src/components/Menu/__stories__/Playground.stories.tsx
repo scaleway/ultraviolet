@@ -5,14 +5,17 @@ export const Playground = Template.bind({})
 
 Playground.args = {
   children: [
-    <Menu.Item>Menu Item 1</Menu.Item>,
-    <Menu.Item>Menu Item 2</Menu.Item>,
+    <Menu.Item borderless>
+      Information with a very long name. Lorem ipsum dolor sit amet, consectetur
+      adipiscing elit.
+    </Menu.Item>,
+    <Menu.Item borderless>Power on</Menu.Item>,
   ],
 }
 
 Playground.decorators = [
   StoryComponent => (
-    <div style={{ height: '80px' }}>
+    <div style={{ height: '80px', width: 'min-content' }}>
       <StoryComponent />
     </div>
   ),
