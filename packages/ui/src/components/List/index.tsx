@@ -22,7 +22,6 @@ const StyledTable = styled.table`
   width: 100%;
   box-sizing: content-box;
   gap: ${({ theme }) => theme.space['1']};
-  border-collapse: collapsed;
   border-spacing: 0 ${({ theme }) => theme.space['2']};
   position: relative;
 `
