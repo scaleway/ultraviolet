@@ -5,8 +5,8 @@ import { AlertCircleIcon, CheckCircleIcon } from '@ultraviolet/icons'
 import type { ComponentProps, InputHTMLAttributes, ReactNode } from 'react'
 import { useEffect, useId, useMemo, useState } from 'react'
 import { Label } from '../Label'
-import { SelectInputV2 } from '../SelectInputV2'
-import type { OptionType } from '../SelectInputV2/types'
+import { SelectInput } from '../SelectInput'
+import type { OptionType } from '../SelectInput/types'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
 
@@ -180,7 +180,7 @@ ${({ width }) => width && `width: ${typeof width === 'number' ? `${width}px` : w
 display: flex;
 `
 
-const CustomSelectInput = styled(SelectInputV2)<{
+const CustomSelectInput = styled(SelectInput)<{
   'data-disabled': boolean
 }>`
   #unit {
@@ -216,7 +216,7 @@ type UnitInputProps = {
   label?: string
   labelInformation?: ReactNode
   step?: number | string
-  dropdownAlign?: ComponentProps<typeof SelectInputV2>['dropdownAlign']
+  dropdownAlign?: ComponentProps<typeof SelectInput>['dropdownAlign']
 } & Pick<
   InputHTMLAttributes<HTMLInputElement>,
   | 'onFocus'

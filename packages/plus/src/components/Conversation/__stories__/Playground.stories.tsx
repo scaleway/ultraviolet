@@ -1,4 +1,4 @@
-import { AvatarV2 } from '@ultraviolet/ui'
+import { Avatar } from '@ultraviolet/ui'
 import { Conversation } from '..'
 import { Template } from './Template.stories'
 
@@ -9,7 +9,7 @@ Playground.args = {
     <>
       <Conversation.Date>2022-03-02</Conversation.Date>
       <Conversation.Message
-        avatar={<AvatarV2 shape="circle" variant="text" text="MC" />}
+        avatar={<Avatar shape="circle" variant="text" text="MC" />}
         align="right"
       >
         I finally tried that new café downtown. Their coffee is amazing!
@@ -19,7 +19,7 @@ Playground.args = {
         sent
       </Conversation.MessageInfos>
       <Conversation.Message
-        avatar={<AvatarV2 shape="circle" variant="text" text="TM" />}
+        avatar={<Avatar shape="circle" variant="text" text="TM" />}
         align="left"
       >
         Oh really? I&#39;ve heard good things. Did you get one of those fancy
@@ -30,7 +30,7 @@ Playground.args = {
         read
       </Conversation.MessageInfos>
       <Conversation.Message
-        avatar={<AvatarV2 shape="circle" variant="text" text="TM" />}
+        avatar={<Avatar shape="circle" variant="text" text="TM" />}
       >
         Yeah, they made a leaf pattern. I almost didn’t want to drink it, but I
         couldn’t resist!

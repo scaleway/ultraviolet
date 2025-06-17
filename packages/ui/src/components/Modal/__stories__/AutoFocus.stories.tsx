@@ -1,7 +1,7 @@
 import type { StoryFn } from '@storybook/react'
 import { Modal } from '..'
 import { Button } from '../../Button'
-import { TextInputV2 } from '../../TextInputV2'
+import { TextInput } from '../../TextInput'
 
 export const DefaultDisclosure = <Button>Open Modal</Button>
 
@@ -9,8 +9,8 @@ export const AutoFocus: StoryFn = props => (
   <Modal disclosure={DefaultDisclosure} {...props}>
     <div>
       The second input will autofocus
-      <TextInputV2 placeholder="placeholder" />
-      <TextInputV2
+      <TextInput placeholder="placeholder" />
+      <TextInput
         placeholder="placeholder"
         ref={ref => {
           if (ref) {
