@@ -42,9 +42,9 @@ describe('Helper functions dateInput', () => {
     expect(afterDec2000[0]).toBe(1)
     expect(afterDec2000[1]).toBe(2001)
 
-    const afterNov2000 = getNextMonth(11, 2000)
-    expect(afterNov2000[0]).toBe(12)
-    expect(afterNov2000[1]).toBe(2000)
+    const afterNo000 = getNextMonth(11, 2000)
+    expect(afterNo000[0]).toBe(12)
+    expect(afterNo000[1]).toBe(2000)
   })
 
   test('isSameMonth should work', () => {

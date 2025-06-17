@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { SelectableCard } from '..'
 import { Badge } from '../../Badge'
 import { Checkbox } from '../../Checkbox'
-import { SelectInputV2 } from '../../SelectInputV2'
+import { SelectInput } from '../../SelectInput'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
 
@@ -60,7 +60,7 @@ export const Children: StoryFn = args => {
                 Second element
               </Checkbox>
             </Stack>
-            <SelectInputV2
+            <SelectInput
               name="options"
               label="Select an option"
               options={[
