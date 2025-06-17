@@ -32,20 +32,16 @@ const ExpandableWrapper = styled.tr`
   transform: translate3d(0, -${({ theme }) => theme.space['2']}, 0);
   position: relative;
 
-  &:before {
-    content: "";
-    position: absolute;
-    top: 0; /* Adjust based on border width and spacing */
-    left: 0;
-    right: 0;
-    bottom: 0; /* Adjust based on border width and spacing */
-    border: 1px solid ${({ theme }) => theme.colors.neutral.border};
-    border-top: none;
-    border-radius: 0 0 ${({ theme }) => theme.radii.default} ${({ theme }) => theme.radii.default};
-    pointer-events: none;
+  td, td:first-child, td:last-child {
     transition:
       box-shadow 200ms ease,
       border-color 200ms ease;
+  }
+
+  td {
+    border: 1px solid ${({ theme }) => theme.colors.neutral.border};
+    border-top: none;
+    border-radius: 0 0 ${({ theme }) => theme.radii.default} ${({ theme }) => theme.radii.default};
   }
 `
 
@@ -100,31 +96,42 @@ export const StyledRow = styled('tr', {
 
   position: relative;
 
-  &:before {
-    content: "";
-    position: absolute;
-    top: 0; /* Adjust based on border width and spacing */
-    left: 0;
-    right: 0;
-    bottom: 0; /* Adjust based on border width and spacing */
-    border: 1px solid ${({ theme }) => theme.colors.neutral.border};
-    border-radius: ${({ theme }) => theme.radii.default};
-    pointer-events: none;
+  td, td:first-child, td:last-child {
     transition:
       box-shadow 200ms ease,
       border-color 200ms ease;
   }
 
-  &:not([aria-disabled='true']):hover::before {
+  td {
+    border-top: 1px solid ${({ theme }) => theme.colors.neutral.border};
+    border-bottom: 1px solid ${({ theme }) => theme.colors.neutral.border};
+  }
+  td:first-child {
+    border-left: 1px solid ${({ theme }) => theme.colors.neutral.border};
+    border-radius: ${({ theme }) => theme.radii.default} 0 0 ${({ theme }) => theme.radii.default};
+  }
+  td:last-child {
+    border-right: 1px solid ${({ theme }) => theme.colors.neutral.border};
+    border-radius: 0 ${({ theme }) => theme.radii.default} ${({ theme }) => theme.radii.default} 0;
+  }
+
+  &:not([aria-disabled='true']):hover td, &:not([aria-disabled='true']):hover td:first-child, &:not([aria-disabled='true']):hover td:last-child {
     border-color: ${({ theme }) => theme.colors.primary.border};
   }
 
-  &:not([aria-disabled='true']):hover + ${ExpandableWrapper}:before {
+  &:not([aria-disabled='true']):hover + ${ExpandableWrapper} td {
     border-color: ${({ theme }) => theme.colors.primary.border};
   }
 
-  &[aria-expanded='true']:before {
-    border-radius: ${({ theme }) => theme.radii.default} ${({ theme }) => theme.radii.default} 0 0;
+  &[aria-expanded='true'] td {
+    &:first-child {
+      border-left: 1px solid ${({ theme }) => theme.colors.neutral.border};
+      border-radius: ${({ theme }) => theme.radii.default} 0 0 0;
+    }
+    &:last-child {
+      border-right: 1px solid ${({ theme }) => theme.colors.neutral.border};
+      border-radius: 0 ${({ theme }) => theme.radii.default} 0 0;
+    }
     border-bottom-color: ${({ theme }) => theme.colors.neutral.border};
   }
 
@@ -149,7 +156,10 @@ export const StyledRow = styled('tr', {
   `}
 
   &[data-highlight='true'] {
-    border-color: ${({ theme }) => theme.colors.primary.border};
+    td, td:first-child, td:last-child {
+      border-color: ${({ theme }) => theme.colors.primary.border};
+    }
+
     box-shadow: ${({ theme }) => theme.shadows.hoverPrimary};
   }
 

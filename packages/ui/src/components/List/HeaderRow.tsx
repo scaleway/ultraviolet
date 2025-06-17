@@ -12,21 +12,6 @@ const StyledHeaderRow = styled.tr`
   display: table-row;
   vertical-align: middle;
   padding: 0 ${({ theme }) => theme.space['2']};
-
-  &:before {
-    content: "";
-    position: absolute;
-    top: 0; /* Adjust based on border width and spacing */
-    left: 0;
-    right: 0;
-    bottom: 0; /* Adjust based on border width and spacing */
-    border: 1px solid transparent;
-    border-radius: ${({ theme }) => theme.radii.default};
-    pointer-events: none;
-    transition:
-      box-shadow 200ms ease,
-      border-color 200ms ease;
-  }
 `
 
 const NoPaddingHeaderCell = styled(HeaderCell)`
