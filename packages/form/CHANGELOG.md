@@ -1,5 +1,26 @@
 # Change Log
 
+## 4.0.0-beta.11
+
+### Major Changes
+
+- [#5228](https://github.com/scaleway/ultraviolet/pull/5228) [`0040779`](https://github.com/scaleway/ultraviolet/commit/00407792bf0cd64eee0c02db107f3c43d42fa1a4) Thanks [@matthprost](https://github.com/matthprost)! - ⚠️ BREAKING CHANGES
+
+  We removed all old components and renamed the V2 components to remove that suffix. Thus, the followng components have changed:
+
+  TextInputFieldV2 -> TextInputField
+  SelectInputFieldV2 -> SelectInputField
+  AvatarFieldV2 -> AvatarField
+  MenuFieldV2 -> MenuField
+  DateInputFieldV2 -> DateInputField
+  TimeInputFieldV2 -> TimeInputField
+  NumberInputFieldV2 -> NumberInputField
+
+### Patch Changes
+
+- Updated dependencies [[`0040779`](https://github.com/scaleway/ultraviolet/commit/00407792bf0cd64eee0c02db107f3c43d42fa1a4)]:
+  - @ultraviolet/ui@2.0.0-beta.10
+
 ## 4.0.0-beta.10
 
 ### Minor Changes
