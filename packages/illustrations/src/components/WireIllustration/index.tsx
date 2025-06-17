@@ -7,7 +7,7 @@ import { ILLUSTRATIONS } from './__generated__/Illustrations'
 
 const StyledIllustration = styled('svg', {
   shouldForwardProp: prop =>
-    !['height', 'width', 'sentiment', 'url'].includes(prop),
+    !['height', 'width', 'sentiment', 'url', 'theme'].includes(prop),
 })<{
   height?: string | number
   width?: string | number
