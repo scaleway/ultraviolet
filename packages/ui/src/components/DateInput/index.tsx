@@ -8,7 +8,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import { Card } from '../Card'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
-import { TextInputV2 } from '../TextInputV2'
+import { TextInput } from '../TextInput'
 import type { ContextProps } from './Context'
 import { DateInputContext } from './Context'
 import { CalendarContent } from './components/CalendarContent'
@@ -298,7 +298,7 @@ export const DateInput = <IsRange extends undefined | boolean>({
             refInput={refInput}
             content={<CalendarContent />}
           >
-            <TextInputV2
+            <TextInput
               label={label}
               placeholder={placeholder}
               value={inputValue}

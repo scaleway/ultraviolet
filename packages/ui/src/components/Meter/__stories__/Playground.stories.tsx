@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 import zxcvbn from 'zxcvbn'
 import { Meter } from '..'
 import { colors } from '../../../theme'
-import { TextInputV2 } from '../../TextInputV2'
+import { TextInput } from '../../TextInput'
 
 const strength = [
   { color: colors.danger.text, text: 'veryWeak' },
@@ -25,7 +25,7 @@ export const Playground: StoryFn<typeof Meter> = args => {
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
-      <TextInputV2
+      <TextInput
         name="basic"
         label="Password"
         value={password}

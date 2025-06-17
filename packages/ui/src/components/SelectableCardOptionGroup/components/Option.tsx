@@ -5,8 +5,8 @@ import type { ComponentProps, ReactNode } from 'react'
 import { useId } from 'react'
 import { Label } from '../../Label'
 import { RadioStack } from '../../Radio'
-import { SelectInputV2 } from '../../SelectInputV2'
-import { StyledInputWrapper } from '../../SelectInputV2/SelectBar'
+import { SelectInput } from '../../SelectInput'
+import { StyledInputWrapper } from '../../SelectInput/SelectBar'
 import { SelectableCard } from '../../SelectableCard'
 import { Stack } from '../../Stack'
 import { useSelectableCardOptionGroup } from '../Provider'
@@ -29,7 +29,7 @@ const FullHeightStack = styled(Stack)`
   height: 100%;
 `
 
-const StyledSelectInputV2 = styled(SelectInputV2, {
+const StyledSelectInput = styled(SelectInput, {
   shouldForwardProp: prop => !['checked'].includes(prop),
 })<{ checked: boolean }>`
   ${StyledInputWrapper} {
@@ -63,9 +63,9 @@ type OptionProps = Omit<ComponentProps<typeof SelectableCard>, 'onChange'> & {
   value: string
   className?: string
   children?: ReactNode
-  options: ComponentProps<typeof SelectInputV2>['options']
-  optionValue?: ComponentProps<typeof SelectInputV2>['value']
-  optionPlaceholder?: ComponentProps<typeof SelectInputV2>['placeholder']
+  options: ComponentProps<typeof SelectInput>['options']
+  optionValue?: ComponentProps<typeof SelectInput>['value']
+  optionPlaceholder?: ComponentProps<typeof SelectInput>['placeholder']
   image?: ReactNode
   labelDescription?: ComponentProps<typeof Label>['labelDescription']
   id?: string
@@ -166,7 +166,7 @@ export const Option = ({
             {children}
           </Stack>
         </StyledPaddedStack>
-        <StyledSelectInputV2
+        <StyledSelectInput
           value={optionValue}
           onChange={onChangeOption}
           options={options}

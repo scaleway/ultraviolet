@@ -2,7 +2,7 @@
 
 import styled from '@emotion/styled'
 import type { Dispatch, SetStateAction } from 'react'
-import { SelectInputV2 } from '../SelectInputV2'
+import { SelectInput } from '../SelectInput'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
 
@@ -25,7 +25,7 @@ const optionsItemsPerPage = [
   },
 ]
 
-const StyledSelectInput = styled(SelectInputV2)`
+const StyledSelectInput = styled(SelectInput)`
   width: fit-content;
   min-width: none;
 `

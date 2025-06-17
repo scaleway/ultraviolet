@@ -34,7 +34,7 @@ Borderless.parameters = {
 
 Borderless.decorators = [
   StoryComponent => (
-    <div style={{ height: '250px' }}>
+    <div style={{ height: '250px', width: 'min-content' }}>
       <StoryComponent />
     </div>
   ),
