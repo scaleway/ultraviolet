@@ -1,7 +1,13 @@
 'use client'
 
 import styled from '@emotion/styled'
-import type { ButtonHTMLAttributes, MouseEvent, ReactNode, Ref } from 'react'
+import type {
+  ButtonHTMLAttributes,
+  KeyboardEvent,
+  MouseEvent,
+  ReactNode,
+  Ref,
+} from 'react'
 import {
   cloneElement,
   forwardRef,
@@ -25,13 +31,16 @@ import type { MenuProps } from './types'
 const StyledPopup = styled(Popup, {
   shouldForwardProp: prop => !['size', 'searchable'].includes(prop),
 })<{ size?: keyof typeof SIZES; searchable: boolean }>`
-  background-color: ${({ theme }) => theme.colors.other.elevation.background.raised};
-  box-shadow: ${({ theme }) => `${theme.shadows.raised[0]}, ${theme.shadows.raised[1]}`};
+  background-color: ${({ theme }) =>
+    theme.colors.other.elevation.background.raised};
+  box-shadow: ${({ theme }) =>
+    `${theme.shadows.raised[0]}, ${theme.shadows.raised[1]}`};
   padding: 0;
 
   &[data-has-arrow='true'] {
     &::after {
-      border-color: ${({ theme }) => theme.colors.other.elevation.background.raised}
+      border-color: ${({ theme }) =>
+        theme.colors.other.elevation.background.raised}
         transparent transparent transparent;
     }
   }
@@ -56,7 +65,8 @@ const MenuList = styled(Stack, {
 })<{ height: string }>`
   overflow-y: auto;
   overflow-x: hidden;
-  max-height: calc(${({ height }) => height} - ${({ theme }) => theme.space['0.5']});
+  max-height: calc(${({ height }) => height} - ${({ theme }) =>
+    theme.space['0.5']});
   &:after,
   &:before {
     border: solid transparent;
@@ -108,7 +118,7 @@ export const Menu = forwardRef(
     }: MenuProps,
     ref: Ref<HTMLButtonElement | null>,
   ) => {
-    const { isVisible, setIsVisible } = useMenu()
+    const { isVisible, setIsVisible, itemsList } = useMenu()
     const searchInputRef = useRef<HTMLInputElement>(null)
     const [localChild, setLocalChild] = useState<ReactNode[] | null>(null)
     const popupRef = useRef<HTMLDivElement>(null)
@@ -165,6 +175,13 @@ export const Menu = forwardRef(
       return children
     }, [children, isVisible, localChild, searchable, setIsVisible])
 
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Tab' && isVisible) {
+        event?.preventDefault()
+        itemsList[0]?.current.focus()
+      }
+    }
+
     return (
       <StyledPopup
         debounceDelay={triggerMethod === 'hover' ? 250 : 0}
@@ -181,6 +198,8 @@ export const Menu = forwardRef(
         onClose={() => {
           setIsVisible(false)
           setLocalChild(null)
+          // Skip focus return when using hover trigger to prevent focus getting stuck in a loop
+          if (triggerMethod !== 'hover') disclosureRef.current?.focus()
         }}
         tabIndex={-1}
         maxHeight={maxHeight ?? '30rem'}
@@ -210,6 +229,7 @@ export const Menu = forwardRef(
         portalTarget={portalTarget}
         dynamicDomRendering={dynamicDomRendering}
         align={align}
+        onKeyDown={handleKeyDown}
       >
         {finalDisclosure}
       </StyledPopup>
