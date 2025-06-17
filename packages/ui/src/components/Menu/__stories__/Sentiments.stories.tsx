@@ -7,6 +7,7 @@ export const Sentiments: StoryFn<typeof Menu> = () => (
     <Menu.Item>Default</Menu.Item>
     <Menu.Item disabled>Default Disabled</Menu.Item>
     <Menu.Item sentiment="danger">Danger</Menu.Item>
+    <Menu.Item sentiment="primary">Danger</Menu.Item>
     <Menu.Item disabled sentiment="danger">
       Danger Disabled
     </Menu.Item>
@@ -14,6 +15,7 @@ export const Sentiments: StoryFn<typeof Menu> = () => (
     <Menu.Item
       sentiment="danger"
       href="/?/?path=/docs/components-navigation-menu"
+      tooltip="test"
     >
       Link Danger
     </Menu.Item>
@@ -33,7 +35,7 @@ Sentiments.parameters = {
 
 Sentiments.decorators = [
   StoryComponent => (
-    <div style={{ height: '300px' }}>
+    <div style={{ height: '300px', width: 'min-content' }}>
       <StoryComponent />
     </div>
   ),

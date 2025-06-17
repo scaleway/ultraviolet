@@ -9,11 +9,11 @@ Playground.decorators = Template.decorators
 Playground.parameters = {
   docs: {
     description: {
-      story: `SelectableCardOptionGroup is a complex component made out of 2 components (SelectableCard and SelectInputV2). Therefore there is 2 value and 2 onChange to handle:
+      story: `SelectableCardOptionGroup is a complex component made out of 2 components (SelectableCard and SelectInput). Therefore there is 2 value and 2 onChange to handle:
 - \`value\`: The current value of the SelectableCard component.
-- \`valueOption\`: The current value of the SelectInputV2 component.
+- \`valueOption\`: The current value of the SelectInput component.
 - \`onChange\`: The handler function to update the value of the SelectableCard component.
-- \`onChangeOption\`: The handler function to update the value of the SelectInputV2 component.
+- \`onChangeOption\`: The handler function to update the value of the SelectInput component.
 
 **Be aware that once you click on the component, the first value of options will be selected by default.**
       `,

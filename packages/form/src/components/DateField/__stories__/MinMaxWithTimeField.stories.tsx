@@ -3,7 +3,7 @@ import { Stack } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
 import { DateField } from '..'
 import { Submit } from '../../Submit'
-import { TimeField } from '../../TimeField'
+import { TimeInputField } from '../../TimeInputField'
 
 export const MinMaxDateWithTimeField: StoryFn<
   ComponentProps<typeof DateField>
@@ -15,7 +15,7 @@ export const MinMaxDateWithTimeField: StoryFn<
       maxDate={maxDate}
       required={required}
     />
-    <TimeField name={name} />
+    <TimeInputField name={name} />
     <Submit>Submit</Submit>
   </Stack>
 )

@@ -9,7 +9,7 @@ import {
 } from '../../../../../../icons/src'
 import {
   Alert,
-  AvatarV2,
+  Avatar,
   Badge,
   Button,
   Card,
@@ -177,7 +177,7 @@ export const Demo = () => {
                 gap={1}
               >
                 <Stack direction="row" alignItems="center" gap={2}>
-                  <AvatarV2 variant="text" text="MA" shape="circle" />
+                  <Avatar variant="text" text="MA" shape="circle" />
                   <StyledStack>
                     <Text variant="bodySmall" as="span" sentiment="primary">
                       Review from Marc - 2 days ago
