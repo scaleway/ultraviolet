@@ -1,7 +1,13 @@
 'use client'
 
 import styled from '@emotion/styled'
-import type { ButtonHTMLAttributes, MouseEvent, ReactNode, Ref } from 'react'
+import type {
+  ButtonHTMLAttributes,
+  KeyboardEvent,
+  MouseEvent,
+  ReactNode,
+  Ref,
+} from 'react'
 import {
   cloneElement,
   forwardRef,
@@ -151,13 +157,12 @@ export const Menu = forwardRef(
     )
 
     useEffect(() => {
-      if (isVisible) {
+      if (isVisible && searchable) {
         setTimeout(() => {
-          if (searchable) searchInputRef.current?.focus()
-          else if (itemsList.length > 0) itemsList[0]?.current?.focus()
+          searchInputRef.current?.focus()
         }, 50)
       }
-    }, [isVisible, itemsList, searchable])
+    }, [isVisible, searchable])
 
     const finalChild = useMemo(() => {
       if (typeof children === 'function') {
@@ -170,6 +175,13 @@ export const Menu = forwardRef(
 
       return children
     }, [children, isVisible, localChild, searchable, setIsVisible])
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Tab' && isVisible) {
+        event?.preventDefault()
+        itemsList[0]?.current.focus()
+      }
+    }
 
     return (
       <StyledPopup
@@ -218,6 +230,7 @@ export const Menu = forwardRef(
         portalTarget={portalTarget}
         dynamicDomRendering={dynamicDomRendering}
         align={align}
+        onKeyDown={handleKeyDown}
       >
         <DisclosureContext.Provider value>
           {finalDisclosure}
