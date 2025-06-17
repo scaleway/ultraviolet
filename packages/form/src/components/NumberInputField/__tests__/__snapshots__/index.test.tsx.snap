@@ -11,7 +11,7 @@ exports[`NumberInputField > should render correctly 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -34,209 +34,103 @@ exports[`NumberInputField > should render correctly 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.emotion-6 {
-  background-color: #ffffff;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-align-self: stretch;
-  -ms-flex-item-align: stretch;
-  align-self: stretch;
-  font-weight: 500;
-  height: 48px;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   border: 1px solid #d9dadd;
   border-radius: 0.25rem;
 }
 
-.emotion-6[data-error='true'] {
-  border: 1px solid #b3144d;
+.emotion-4:focus-within {
+  border-color: #792dd4;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-6[aria-disabled='true'] {
+.emotion-4[data-success='true'] {
+  border-color: #22674e;
+}
+
+.emotion-4[data-error='true'] {
+  border-color: #b3144d;
+}
+
+.emotion-4:hover {
+  border-color: #792dd4;
+}
+
+.emotion-4[data-readonly='true'] {
+  border-color: #d9dadd;
+  background: #f9f9fa;
+  cursor: not-allowed;
+}
+
+.emotion-4[data-disabled='true'] {
+  border-color: #e9eaeb;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.emotion-6:not([aria-disabled='true']) .emotion-14:hover,
-.emotion-6:not([aria-disabled='true']) .emotion-14:focus {
-  border: 1px solid #792dd4;
+.emotion-4[data-controls='false']>.emotion-12 {
+  border-width: 0;
 }
 
-.emotion-6:not([aria-disabled='true']) .emotion-14:focus-within {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-  border: 1px solid #792dd4;
-}
-
-.emotion-9 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
+.emotion-4[data-size='small'] {
   height: 2rem;
-  padding: 0 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: not-allowed;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #641cb3;
-  color: #d8c5fc;
-  margin: 0 0.5rem;
-  width: 32px;
-  height: 32px;
 }
 
-.emotion-9:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.emotion-4[data-size='medium'] {
+  height: 2.5rem;
 }
 
-.emotion-9 .e1y1n78x0 {
-  stroke: transparent;
+.emotion-4[data-size='large'] {
+  height: 3rem;
 }
 
-.emotion-11 {
-  vertical-align: middle;
-  fill: #d8c5fc;
-  height: 1.5rem;
-  width: 1.5rem;
-  min-width: 1.5rem;
-  min-height: 1.5rem;
-}
-
-.emotion-11 .fillStroke {
-  stroke: #d8c5fc;
-  fill: none;
-}
-
-.emotion-13 {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  height: 32px;
+  gap: 0rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  outline: none;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  border-radius: 0.25rem;
-  border: 1px solid transparent;
-  max-width: 100%;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding: 0.125rem 0.5rem;
 }
 
-.emotion-15 {
-  color: #3f4250;
-  background-color: transparent;
-  font-size: 1rem;
-  border: none;
-  outline: none;
-  position: relative;
-  margin-right: 0.25rem;
-  max-width: 100%;
-  font-weight: 500;
-  text-align: center;
-  -moz-appearance: textfield;
+.emotion-6[data-size='small'] {
+  height: 2rem;
 }
 
-.emotion-15::-webkit-outer-spin-button,
-.emotion-15::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+.emotion-6[data-size='medium'] {
+  height: 2.5rem;
 }
 
-.emotion-15::-webkit-input-placeholder {
-  color: #727683;
+.emotion-6[data-size='large'] {
+  height: 3rem;
+  padding: 0.25rem 0.5rem;
 }
 
-.emotion-15::-moz-placeholder {
-  color: #727683;
-}
-
-.emotion-15:-ms-input-placeholder {
-  color: #727683;
-}
-
-.emotion-15::placeholder {
-  color: #727683;
-}
-
-.emotion-15[disabled] {
-  color: #b5b7bd;
-  cursor: not-allowed;
-}
-
-.emotion-17 {
-  color: #3f4250;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  margin-right: 0.5rem;
-}
-
-.emotion-20 {
+.emotion-8 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -273,43 +167,152 @@ exports[`NumberInputField > should render correctly 1`] = `
   text-case: none;
   background: none;
   border: none;
-  color: #641cb3;
-  margin: 0 0.5rem;
-  width: 32px;
-  height: 32px;
+  color: #3f4250;
 }
 
-.emotion-20:hover {
+.emotion-8:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-20:active {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
+.emotion-8:active {
+  box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.emotion-20 .e1y1n78x0 {
+.emotion-8 .e1y1n78x0 {
   stroke: transparent;
 }
 
-.emotion-20:hover,
-.emotion-20:active {
-  background: #e5dbfd;
-  color: #521094;
+.emotion-8:hover,
+.emotion-8:active {
+  background: #e9eaeb;
+  color: #222638;
 }
 
-.emotion-22 {
+.emotion-10 {
   vertical-align: middle;
-  fill: #641cb3;
-  height: 1.5rem;
-  width: 1.5rem;
-  min-width: 1.5rem;
-  min-height: 1.5rem;
+  fill: currentColor;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
-.emotion-22 .fillStroke {
-  stroke: #641cb3;
+.emotion-10 .fillStroke {
+  stroke: currentColor;
   fill: none;
+}
+
+.emotion-13 {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  border-width: 0 1px 0 1px;
+  border-style: solid;
+  border-color: inherit;
+  background: inherit;
+  width: 100%;
+}
+
+.emotion-15 {
+  outline: none;
+  border: none;
+  padding: 0;
+  width: 100%;
+  color: #3f4250;
+  font-size: 0.875rem;
+  font-family: Inter,sans-serif;
+  font-weight: Regular;
+  line-height: 1.25rem;
+  text-align: center;
+  padding: 0.5rem;
+  background: none;
+}
+
+.emotion-15[data-has-unit='true'] {
+  text-align: left;
+  padding: 0.5rem 0 0.5rem 0.5rem;
+}
+
+.emotion-15::-webkit-outer-spin-button,
+.emotion-15::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.emotion-15 {
+  -moz-appearance: textfield;
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  -ms-appearance: textfield;
+  appearance: textfield;
+}
+
+.emotion-15[data-size='small'] {
+  height: 2rem;
+}
+
+.emotion-15[data-size='medium'] {
+  height: 2.5rem;
+}
+
+.emotion-15[data-size='large'] {
+  height: 3rem;
+  font-size: 1rem;
+  font-family: Inter,sans-serif;
+  font-weight: Regular;
+  line-height: 1.5rem;
+}
+
+.emotion-15:-moz-read-only {
+  color: #3f4250;
+  background: #f9f9fa;
+  border-block: 1px solid #d9dadd;
+}
+
+.emotion-15:read-only {
+  color: #3f4250;
+  background: #f9f9fa;
+  border-block: 1px solid #d9dadd;
+}
+
+.emotion-15:-moz-read-only~.exvap482 {
+  background: #f9f9fa;
+}
+
+.emotion-15:read-only~.exvap482 {
+  background: #f9f9fa;
+}
+
+.emotion-15:disabled {
+  color: #b5b7bd;
+  background: #f3f3f4;
+  cursor: not-allowed;
+  border-block: 1px solid #e9eaeb;
+}
+
+.emotion-15:disabled~.exvap482 {
+  background: #f3f3f4;
+  cursor: not-allowed;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-15:placeholder-shown~.exvap482 {
+  color: #727683;
+  font-size: 1rem;
+}
+
+.emotion-15[data-controls='false'] {
+  text-align: left;
 }
 
 <div
@@ -322,63 +325,70 @@ exports[`NumberInputField > should render correctly 1`] = `
       <div
         class="emotion-2 emotion-3"
       >
-        <div
-          class="emotion-4 emotion-3"
-        >
+        <div>
           <div
-            aria-disabled="false"
-            class="emotion-6 emotion-7"
+            class="emotion-4 emotion-5"
+            data-controls="true"
+            data-disabled="false"
             data-error="false"
+            data-size="large"
+            data-success="false"
+            data-unit="false"
           >
-            <button
-              aria-label="Minus"
-              class="emotion-8 emotion-9 emotion-10"
-              disabled=""
-              type="button"
-            >
-              <svg
-                class="emotion-11 emotion-12"
-                viewBox="0 0 20 20"
-              >
-                <path
-                  clip-rule="evenodd"
-                  d="M4 9.75A.75.75 0 0 1 4.75 9h10.5a.75.75 0 0 1 0 1.5H4.75A.75.75 0 0 1 4 9.75"
-                  fill-rule="evenodd"
-                />
-              </svg>
-            </button>
             <div
-              aria-live="assertive"
-              class="emotion-13 emotion-14"
-              role="status"
+              class="emotion-6 emotion-7"
+              data-size="large"
+            >
+              <button
+                aria-label="minus"
+                class="emotion-8 emotion-9"
+                type="button"
+              >
+                <svg
+                  class="emotion-10 emotion-11"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M3.75 7a.75.75 0 0 0 0 1.5h8.5a.75.75 0 0 0 0-1.5z"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div
+              class="emotion-12 emotion-13 emotion-14"
             >
               <input
-                aria-label="Number Input"
                 class="emotion-15 emotion-16"
+                data-controls="true"
+                data-has-unit="false"
+                data-size="large"
                 id="«r0»"
+                max="9007199254740991"
+                min="0"
                 name="test"
-                style="width: 16px;"
+                placeholder=""
                 type="number"
-                value="0"
-              />
-              <span
-                class="emotion-17 emotion-18"
               />
             </div>
-            <button
-              aria-label="Plus"
-              class="emotion-8 emotion-20 emotion-10"
-              type="button"
+            <div
+              class="emotion-6 emotion-7"
+              data-size="large"
             >
-              <svg
-                class="emotion-22 emotion-12"
-                viewBox="0 0 20 20"
+              <button
+                aria-label="plus"
+                class="emotion-8 emotion-9"
+                type="button"
               >
-                <path
-                  d="M10.75 4.75a.75.75 0 0 0-1.5 0v4.5h-4.5a.75.75 0 0 0 0 1.5h4.5v4.5a.75.75 0 0 0 1.5 0v-4.5h4.5a.75.75 0 0 0 0-1.5h-4.5z"
-                />
-              </svg>
-            </button>
+                <svg
+                  class="emotion-10 emotion-11"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5z"
+                  />
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -398,7 +408,7 @@ exports[`NumberInputField > should render correctly disabled 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -421,66 +431,103 @@ exports[`NumberInputField > should render correctly disabled 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.emotion-6 {
-  background-color: #ffffff;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-align-self: stretch;
-  -ms-flex-item-align: stretch;
-  align-self: stretch;
-  font-weight: 500;
-  height: 48px;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   border: 1px solid #d9dadd;
   border-radius: 0.25rem;
 }
 
-.emotion-6[data-error='true'] {
-  border: 1px solid #b3144d;
+.emotion-4:focus-within {
+  border-color: #792dd4;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-6[aria-disabled='true'] {
+.emotion-4[data-success='true'] {
+  border-color: #22674e;
+}
+
+.emotion-4[data-error='true'] {
+  border-color: #b3144d;
+}
+
+.emotion-4:hover {
+  border-color: #792dd4;
+}
+
+.emotion-4[data-readonly='true'] {
+  border-color: #d9dadd;
+  background: #f9f9fa;
+  cursor: not-allowed;
+}
+
+.emotion-4[data-disabled='true'] {
+  border-color: #e9eaeb;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.emotion-6:not([aria-disabled='true']) .emotion-14:hover,
-.emotion-6:not([aria-disabled='true']) .emotion-14:focus {
-  border: 1px solid #792dd4;
+.emotion-4[data-controls='false']>.emotion-12 {
+  border-width: 0;
 }
 
-.emotion-6:not([aria-disabled='true']) .emotion-14:focus-within {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-  border: 1px solid #792dd4;
+.emotion-4[data-size='small'] {
+  height: 2rem;
 }
 
-.emotion-9 {
+.emotion-4[data-size='medium'] {
+  height: 2.5rem;
+}
+
+.emotion-4[data-size='large'] {
+  height: 3rem;
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding: 0.125rem 0.5rem;
+}
+
+.emotion-6[data-size='small'] {
+  height: 2rem;
+}
+
+.emotion-6[data-size='medium'] {
+  height: 2.5rem;
+}
+
+.emotion-6[data-size='large'] {
+  height: 3rem;
+  padding: 0.25rem 0.5rem;
+}
+
+.emotion-8 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -517,74 +564,68 @@ exports[`NumberInputField > should render correctly disabled 1`] = `
   text-case: none;
   background: none;
   border: none;
-  color: #641cb3;
-  color: #d8c5fc;
-  margin: 0 0.5rem;
-  width: 32px;
-  height: 32px;
+  color: #3f4250;
+  color: #b5b7bd;
 }
 
-.emotion-9:hover {
+.emotion-8:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-9 .e1y1n78x0 {
+.emotion-8 .e1y1n78x0 {
   stroke: transparent;
 }
 
-.emotion-11 {
+.emotion-10 {
   vertical-align: middle;
-  fill: #d8c5fc;
-  height: 1.5rem;
-  width: 1.5rem;
-  min-width: 1.5rem;
-  min-height: 1.5rem;
+  fill: currentColor;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
-.emotion-11 .fillStroke {
-  stroke: #d8c5fc;
+.emotion-10 .fillStroke {
+  stroke: currentColor;
   fill: none;
 }
 
 .emotion-13 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  height: 32px;
+  display: grid;
+  grid-template-columns: 1fr auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  outline: none;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  border-radius: 0.25rem;
-  border: 1px solid transparent;
-  max-width: 100%;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  border-width: 0 1px 0 1px;
+  border-style: solid;
+  border-color: inherit;
+  background: inherit;
+  width: 100%;
 }
 
 .emotion-15 {
-  color: #3f4250;
-  background-color: transparent;
-  font-size: 1rem;
-  border: none;
   outline: none;
-  position: relative;
-  margin-right: 0.25rem;
-  max-width: 100%;
-  font-weight: 500;
+  border: none;
+  padding: 0;
+  width: 100%;
+  color: #3f4250;
+  font-size: 0.875rem;
+  font-family: Inter,sans-serif;
+  font-weight: Regular;
+  line-height: 1.25rem;
   text-align: center;
-  -moz-appearance: textfield;
+  padding: 0.5rem;
+  background: none;
+}
+
+.emotion-15[data-has-unit='true'] {
+  text-align: left;
+  padding: 0.5rem 0 0.5rem 0.5rem;
 }
 
 .emotion-15::-webkit-outer-spin-button,
@@ -593,34 +634,73 @@ exports[`NumberInputField > should render correctly disabled 1`] = `
   margin: 0;
 }
 
-.emotion-15::-webkit-input-placeholder {
-  color: #727683;
+.emotion-15 {
+  -moz-appearance: textfield;
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  -ms-appearance: textfield;
+  appearance: textfield;
 }
 
-.emotion-15::-moz-placeholder {
-  color: #727683;
+.emotion-15[data-size='small'] {
+  height: 2rem;
 }
 
-.emotion-15:-ms-input-placeholder {
-  color: #727683;
+.emotion-15[data-size='medium'] {
+  height: 2.5rem;
 }
 
-.emotion-15::placeholder {
-  color: #727683;
+.emotion-15[data-size='large'] {
+  height: 3rem;
+  font-size: 1rem;
+  font-family: Inter,sans-serif;
+  font-weight: Regular;
+  line-height: 1.5rem;
 }
 
-.emotion-15[disabled] {
+.emotion-15:-moz-read-only {
+  color: #3f4250;
+  background: #f9f9fa;
+  border-block: 1px solid #d9dadd;
+}
+
+.emotion-15:read-only {
+  color: #3f4250;
+  background: #f9f9fa;
+  border-block: 1px solid #d9dadd;
+}
+
+.emotion-15:-moz-read-only~.exvap482 {
+  background: #f9f9fa;
+}
+
+.emotion-15:read-only~.exvap482 {
+  background: #f9f9fa;
+}
+
+.emotion-15:disabled {
   color: #b5b7bd;
+  background: #f3f3f4;
   cursor: not-allowed;
+  border-block: 1px solid #e9eaeb;
 }
 
-.emotion-17 {
-  color: #b5b7bd;
+.emotion-15:disabled~.exvap482 {
+  background: #f3f3f4;
+  cursor: not-allowed;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  margin-right: 0.5rem;
+}
+
+.emotion-15:placeholder-shown~.exvap482 {
+  color: #727683;
+  font-size: 1rem;
+}
+
+.emotion-15[data-controls='false'] {
+  text-align: left;
 }
 
 <div
@@ -633,771 +713,74 @@ exports[`NumberInputField > should render correctly disabled 1`] = `
       <div
         class="emotion-2 emotion-3"
       >
-        <div
-          class="emotion-4 emotion-3"
-        >
+        <div>
           <div
-            aria-disabled="true"
-            class="emotion-6 emotion-7"
+            class="emotion-4 emotion-5"
+            data-controls="true"
+            data-disabled="true"
             data-error="false"
+            data-size="large"
+            data-success="false"
+            data-unit="false"
           >
-            <button
-              aria-label="Minus"
-              class="emotion-8 emotion-9 emotion-10"
-              disabled=""
-              type="button"
-            >
-              <svg
-                class="emotion-11 emotion-12"
-                viewBox="0 0 20 20"
-              >
-                <path
-                  clip-rule="evenodd"
-                  d="M4 9.75A.75.75 0 0 1 4.75 9h10.5a.75.75 0 0 1 0 1.5H4.75A.75.75 0 0 1 4 9.75"
-                  fill-rule="evenodd"
-                />
-              </svg>
-            </button>
             <div
-              aria-live="assertive"
-              class="emotion-13 emotion-14"
-              role="status"
+              class="emotion-6 emotion-7"
+              data-size="large"
             >
-              <input
-                aria-label="Number Input"
-                class="emotion-15 emotion-16"
+              <button
+                aria-label="minus"
+                class="emotion-8 emotion-9"
                 disabled=""
-                id="«r5»"
-                name="test"
-                style="width: 32px;"
-                type="number"
-                value="10"
-              />
-              <span
-                class="emotion-17 emotion-18"
-              />
+                type="button"
+              >
+                <svg
+                  class="emotion-10 emotion-11"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M3.75 7a.75.75 0 0 0 0 1.5h8.5a.75.75 0 0 0 0-1.5z"
+                  />
+                </svg>
+              </button>
             </div>
-            <button
-              aria-label="Plus"
-              class="emotion-8 emotion-9 emotion-10"
-              disabled=""
-              type="button"
-            >
-              <svg
-                class="emotion-11 emotion-12"
-                viewBox="0 0 20 20"
-              >
-                <path
-                  d="M10.75 4.75a.75.75 0 0 0-1.5 0v4.5h-4.5a.75.75 0 0 0 0 1.5h4.5v4.5a.75.75 0 0 0 1.5 0v-4.5h4.5a.75.75 0 0 0 0-1.5h-4.5z"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
-      </div>
-    </form>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`NumberInputField > should trigger event onMinCrossed & onMaxCrossed 1`] = `
-<DocumentFragment>
-  .emotion-0 {
-  display: contents;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.emotion-6 {
-  background-color: #ffffff;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-align-self: stretch;
-  -ms-flex-item-align: stretch;
-  align-self: stretch;
-  font-weight: 500;
-  height: 48px;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-}
-
-.emotion-6[data-error='true'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-6[aria-disabled='true'] {
-  background: #f3f3f4;
-  cursor: not-allowed;
-}
-
-.emotion-6:not([aria-disabled='true']) .emotion-14:hover,
-.emotion-6:not([aria-disabled='true']) .emotion-14:focus {
-  border: 1px solid #792dd4;
-}
-
-.emotion-6:not([aria-disabled='true']) .emotion-14:focus-within {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-  border: 1px solid #792dd4;
-}
-
-.emotion-9 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 2rem;
-  padding: 0 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #641cb3;
-  margin: 0 0.5rem;
-  width: 32px;
-  height: 32px;
-}
-
-.emotion-9:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-9:active {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-9 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-9:hover,
-.emotion-9:active {
-  background: #e5dbfd;
-  color: #521094;
-}
-
-.emotion-11 {
-  vertical-align: middle;
-  fill: #641cb3;
-  height: 1.5rem;
-  width: 1.5rem;
-  min-width: 1.5rem;
-  min-height: 1.5rem;
-}
-
-.emotion-11 .fillStroke {
-  stroke: #641cb3;
-  fill: none;
-}
-
-.emotion-13 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  height: 32px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  outline: none;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  border-radius: 0.25rem;
-  border: 1px solid transparent;
-  max-width: 100%;
-}
-
-.emotion-15 {
-  color: #3f4250;
-  background-color: transparent;
-  font-size: 1rem;
-  border: none;
-  outline: none;
-  position: relative;
-  margin-right: 0.25rem;
-  max-width: 100%;
-  font-weight: 500;
-  text-align: center;
-  -moz-appearance: textfield;
-}
-
-.emotion-15::-webkit-outer-spin-button,
-.emotion-15::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-.emotion-15::-webkit-input-placeholder {
-  color: #727683;
-}
-
-.emotion-15::-moz-placeholder {
-  color: #727683;
-}
-
-.emotion-15:-ms-input-placeholder {
-  color: #727683;
-}
-
-.emotion-15::placeholder {
-  color: #727683;
-}
-
-.emotion-15[disabled] {
-  color: #b5b7bd;
-  cursor: not-allowed;
-}
-
-.emotion-17 {
-  color: #3f4250;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  margin-right: 0.5rem;
-}
-
-.emotion-20 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 2rem;
-  padding: 0 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: not-allowed;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #641cb3;
-  color: #d8c5fc;
-  margin: 0 0.5rem;
-  width: 32px;
-  height: 32px;
-}
-
-.emotion-20:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-20 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-22 {
-  vertical-align: middle;
-  fill: #d8c5fc;
-  height: 1.5rem;
-  width: 1.5rem;
-  min-width: 1.5rem;
-  min-height: 1.5rem;
-}
-
-.emotion-22 .fillStroke {
-  stroke: #d8c5fc;
-  fill: none;
-}
-
-<div
-    data-testid="testing"
-  >
-    <form
-      class="emotion-0 emotion-1"
-      novalidate=""
-    >
-      <div
-        class="emotion-2 emotion-3"
-      >
-        <div
-          class="emotion-4 emotion-3"
-        >
-          <div
-            aria-disabled="false"
-            class="emotion-6 emotion-7"
-            data-error="false"
-          >
-            <button
-              aria-label="Minus"
-              class="emotion-8 emotion-9 emotion-10"
-              type="button"
-            >
-              <svg
-                class="emotion-11 emotion-12"
-                viewBox="0 0 20 20"
-              >
-                <path
-                  clip-rule="evenodd"
-                  d="M4 9.75A.75.75 0 0 1 4.75 9h10.5a.75.75 0 0 1 0 1.5H4.75A.75.75 0 0 1 4 9.75"
-                  fill-rule="evenodd"
-                />
-              </svg>
-            </button>
             <div
-              aria-live="assertive"
-              class="emotion-13 emotion-14"
-              role="status"
+              class="emotion-12 emotion-13 emotion-14"
             >
               <input
                 aria-label="Number Input"
                 class="emotion-15 emotion-16"
-                id="«rf»"
+                data-controls="true"
+                data-has-unit="false"
+                data-size="large"
+                disabled=""
+                id="«r4»"
+                max="9007199254740991"
+                min="0"
                 name="test"
-                style="width: 32px;"
+                placeholder=""
                 type="number"
-                value="20"
-              />
-              <span
-                class="emotion-17 emotion-18"
               />
             </div>
-            <button
-              aria-label="Plus"
-              class="emotion-8 emotion-20 emotion-10"
-              disabled=""
-              type="button"
-            >
-              <svg
-                class="emotion-22 emotion-12"
-                viewBox="0 0 20 20"
-              >
-                <path
-                  d="M10.75 4.75a.75.75 0 0 0-1.5 0v4.5h-4.5a.75.75 0 0 0 0 1.5h4.5v4.5a.75.75 0 0 0 1.5 0v-4.5h4.5a.75.75 0 0 0 0-1.5h-4.5z"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
-      </div>
-    </form>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`NumberInputField > should trigger events correctly 1`] = `
-<DocumentFragment>
-  .emotion-0 {
-  display: contents;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.emotion-6 {
-  background-color: #ffffff;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-align-self: stretch;
-  -ms-flex-item-align: stretch;
-  align-self: stretch;
-  font-weight: 500;
-  height: 48px;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-}
-
-.emotion-6[data-error='true'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-6[aria-disabled='true'] {
-  background: #f3f3f4;
-  cursor: not-allowed;
-}
-
-.emotion-6:not([aria-disabled='true']) .emotion-14:hover,
-.emotion-6:not([aria-disabled='true']) .emotion-14:focus {
-  border: 1px solid #792dd4;
-}
-
-.emotion-6:not([aria-disabled='true']) .emotion-14:focus-within {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-  border: 1px solid #792dd4;
-}
-
-.emotion-9 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 2rem;
-  padding: 0 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #641cb3;
-  margin: 0 0.5rem;
-  width: 32px;
-  height: 32px;
-}
-
-.emotion-9:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-9:active {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-9 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-9:hover,
-.emotion-9:active {
-  background: #e5dbfd;
-  color: #521094;
-}
-
-.emotion-11 {
-  vertical-align: middle;
-  fill: #641cb3;
-  height: 1.5rem;
-  width: 1.5rem;
-  min-width: 1.5rem;
-  min-height: 1.5rem;
-}
-
-.emotion-11 .fillStroke {
-  stroke: #641cb3;
-  fill: none;
-}
-
-.emotion-13 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  height: 32px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  outline: none;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  border-radius: 0.25rem;
-  border: 1px solid transparent;
-  max-width: 100%;
-}
-
-.emotion-15 {
-  color: #3f4250;
-  background-color: transparent;
-  font-size: 1rem;
-  border: none;
-  outline: none;
-  position: relative;
-  margin-right: 0.25rem;
-  max-width: 100%;
-  font-weight: 500;
-  text-align: center;
-  -moz-appearance: textfield;
-}
-
-.emotion-15::-webkit-outer-spin-button,
-.emotion-15::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-.emotion-15::-webkit-input-placeholder {
-  color: #727683;
-}
-
-.emotion-15::-moz-placeholder {
-  color: #727683;
-}
-
-.emotion-15:-ms-input-placeholder {
-  color: #727683;
-}
-
-.emotion-15::placeholder {
-  color: #727683;
-}
-
-.emotion-15[disabled] {
-  color: #b5b7bd;
-  cursor: not-allowed;
-}
-
-.emotion-17 {
-  color: #3f4250;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  margin-right: 0.5rem;
-}
-
-<div
-    data-testid="testing"
-  >
-    <form
-      class="emotion-0 emotion-1"
-      novalidate=""
-    >
-      <div
-        class="emotion-2 emotion-3"
-      >
-        <div
-          class="emotion-4 emotion-3"
-        >
-          <div
-            aria-disabled="false"
-            class="emotion-6 emotion-7"
-            data-error="false"
-          >
-            <button
-              aria-label="Minus"
-              class="emotion-8 emotion-9 emotion-10"
-              type="button"
-            >
-              <svg
-                class="emotion-11 emotion-12"
-                viewBox="0 0 20 20"
-              >
-                <path
-                  clip-rule="evenodd"
-                  d="M4 9.75A.75.75 0 0 1 4.75 9h10.5a.75.75 0 0 1 0 1.5H4.75A.75.75 0 0 1 4 9.75"
-                  fill-rule="evenodd"
-                />
-              </svg>
-            </button>
             <div
-              aria-live="assertive"
-              class="emotion-13 emotion-14"
-              role="status"
+              class="emotion-6 emotion-7"
+              data-size="large"
             >
-              <input
-                aria-label="Number Input"
-                class="emotion-15 emotion-16"
-                id="«ra»"
-                name="test"
-                style="width: 32px;"
-                type="number"
-                value="10"
-              />
-              <span
-                class="emotion-17 emotion-18"
-              />
-            </div>
-            <button
-              aria-label="Plus"
-              class="emotion-8 emotion-9 emotion-10"
-              type="button"
-            >
-              <svg
-                class="emotion-11 emotion-12"
-                viewBox="0 0 20 20"
+              <button
+                aria-label="plus"
+                class="emotion-8 emotion-9"
+                disabled=""
+                type="button"
               >
-                <path
-                  d="M10.75 4.75a.75.75 0 0 0-1.5 0v4.5h-4.5a.75.75 0 0 0 0 1.5h4.5v4.5a.75.75 0 0 0 1.5 0v-4.5h4.5a.75.75 0 0 0 0-1.5h-4.5z"
-                />
-              </svg>
-            </button>
+                <svg
+                  class="emotion-10 emotion-11"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5z"
+                  />
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
       </div>

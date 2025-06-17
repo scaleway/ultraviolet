@@ -20,8 +20,8 @@ import {
   BasicPrefixStack,
   BasicSuffixStack,
   StyledInput,
-  TextInputV2,
-} from '../TextInputV2'
+  TextInput,
+} from '../TextInput'
 import { KeyGroup } from './KeyGroup'
 import type { SearchInputProps } from './types'
 
@@ -34,7 +34,7 @@ const StyledPopup = styled(Popup)`
   box-shadow: ${({ theme }) => `${theme.shadows.raised[0]}, ${theme.shadows.raised[1]}`};
 `
 
-const StyledTextInputV2 = styled(TextInputV2)`
+const StyledTextInput = styled(TextInput)`
   ${BasicPrefixStack} {
     border: none;
   }
@@ -53,7 +53,7 @@ const ClickableStack = styled(Stack)`
 `
 
 /**
- * SearchInput is a component that allows users to search for items. It is a combination of a TextInputV2 and a Popup. The Popup is used to display search results.
+ * SearchInput is a component that allows users to search for items. It is a combination of a TextInput and a Popup. The Popup is used to display search results.
  * Children of the SearchInput component can be a function that receives an object with the following properties:
  * - `searchTerms`: the current search terms
  * - `isOpen`: a boolean indicating if the popup is open
@@ -289,7 +289,7 @@ export const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(
           maxHeight={410}
           debounceDelay={0}
         >
-          <StyledTextInputV2
+          <StyledTextInput
             ref={innerSearchInputRef}
             prefix={
               <ClickableStack

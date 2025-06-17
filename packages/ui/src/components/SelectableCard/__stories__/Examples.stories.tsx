@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { SelectableCard } from '..'
 import { Badge } from '../../Badge'
 import { Row } from '../../Row'
-import { SelectInputV2 } from '../../SelectInputV2'
+import { SelectInput } from '../../SelectInput'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
 import fr from './assets/fr.svg'
@@ -103,7 +103,7 @@ export const Examples: StoryFn = args => {
             <Text as="p" variant="body" prominence="weak" sentiment="neutral">
               This option will cost you 1.99€ and provide you with a lot of
               happiness
-              <SelectInputV2
+              <SelectInput
                 label="Select a sub option"
                 options={[
                   {
