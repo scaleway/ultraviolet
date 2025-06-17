@@ -1,4 +1,4 @@
-import type { ReactElement, ReactNode } from 'react'
+import type { ReactElement, ReactNode, RefObject } from 'react'
 import type React from 'react'
 
 export type ModalSize = 'large' | 'medium' | 'small' | 'xsmall' | 'xxsmall'
@@ -41,6 +41,7 @@ export type DisclosureProps = {
   visible: ModalState['visible']
   toggle: ModalState['toggle']
   id: string
+  ref: RefObject<HTMLDivElement | null>
 }
 
 export type DialogProps = {

@@ -2,7 +2,7 @@
 
 import type { ReactElement, ReactNode } from 'react'
 import type React from 'react'
-import { useCallback, useContext, useId, useState } from 'react'
+import { useCallback, useContext, useId, useRef, useState } from 'react'
 import { ModalContent } from './ModalContent'
 import { ModalContext, ModalProvider } from './ModalProvider'
 import { Disclosure } from './components/Disclosure'
@@ -76,12 +76,14 @@ export const Modal = ({
   // Used for disclosure usage only
   const [visible, setVisible] = useState(false)
   const controlId = useId()
-
+  const disclosureRef = useRef<HTMLDivElement>(null)
   const handleOpen = useCallback(() => {
     setVisible(true)
   }, [])
 
   const handleClose = useCallback(() => {
+    disclosureRef.current?.focus()
+
     if (onClose) {
       onClose()
     } else {
@@ -94,6 +96,7 @@ export const Modal = ({
   }, [onBeforeClose, onClose])
 
   const handleToggle = useCallback(() => {
+    disclosureRef.current?.focus()
     setVisible(current => !current)
   }, [])
 
@@ -114,6 +117,7 @@ export const Modal = ({
           handleClose={handleClose}
           visible={visible}
           toggle={handleToggle}
+          ref={disclosureRef}
         />
       ) : null}
       {!context ? (
