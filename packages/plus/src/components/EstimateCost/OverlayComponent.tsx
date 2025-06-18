@@ -30,6 +30,7 @@ const OverlayContainer = styled('div', {
   transition:
     bottom 0.3s,
     box-shadow 0.3s;
+  z-index: 1;
 `
 
 const List = styled.ul`
