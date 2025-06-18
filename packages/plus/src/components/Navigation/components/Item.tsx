@@ -116,7 +116,8 @@ const StyledMenuItem = styled(Menu.Item, {
     }
 
     ${StyledBadge} {
-      opacity: ${({ isPinnable, pinnedFeature }) => (isPinnable && pinnedFeature ? 0 : 1)};
+      opacity: ${({ isPinnable, pinnedFeature }) =>
+        isPinnable && pinnedFeature ? 0 : 1};
     }
   }
 `
@@ -265,6 +266,10 @@ const ContainerCategoryIcon = styled(Stack)`
 
 type ItemType = 'default' | 'pinned' | 'pinnedGroup'
 
+type LinkProps = {
+  to: string
+  children?: { props: ItemProps }
+}
 type ItemProps = {
   children?: ReactNode
   /**
@@ -437,9 +442,18 @@ export const Item = memo(
       if (!children) return false
 
       return (
-        Children.map(children, child =>
-          isValidElement<ItemProps>(child) ? child.props?.active : false,
-        ) as boolean[]
+        Children.map(children, child => {
+          if (isValidElement<ItemProps | LinkProps>(child)) {
+            // In case the Item is wrapped in a link
+            if ('to' in child.props) {
+              return child.props.children?.props.active
+            }
+
+            return child.props.active
+          }
+
+          return null
+        }) as boolean[]
       ).includes(true)
     }, [children])
 
