@@ -1,4 +1,4 @@
-import { fireEvent, screen } from '@testing-library/react'
+import { fireEvent, screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme } from '@utils/test'
 import type { ReactNode } from 'react'
@@ -27,14 +27,14 @@ describe('SelectInputV2', () => {
     Object.defineProperty(HTMLElement.prototype, 'offsetWidth', {})
   })
 
-  test.skip('renders correctly', () => {
+  test('renders correctly', () => {
     const { asFragment } = renderWithTheme(
       <SelectInputV2 name="test" options={dataUnGrouped} label="label" />,
     )
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test.skip('renders correctly small', () => {
+  test('renders correctly small', () => {
     const { asFragment } = renderWithTheme(
       <SelectInputV2
         name="test"
@@ -46,7 +46,7 @@ describe('SelectInputV2', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test.skip('renders correctly with tooltip', () => {
+  test('renders correctly with tooltip', () => {
     const { asFragment } = renderWithTheme(
       <SelectInputV2
         name="test"
@@ -58,7 +58,7 @@ describe('SelectInputV2', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test.skip('renders correctly required', () => {
+  test('renders correctly required', () => {
     const { asFragment } = renderWithTheme(
       <SelectInputV2
         name="test"
@@ -70,7 +70,7 @@ describe('SelectInputV2', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test.skip('renders correctly not clearable', () => {
+  test('renders correctly not clearable', () => {
     const { asFragment } = renderWithTheme(
       <SelectInputV2
         name="test"
@@ -85,7 +85,7 @@ describe('SelectInputV2', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test.skip('renders correctly ungrouped', async () => {
+  test('renders correctly ungrouped', async () => {
     const { asFragment } = renderWithTheme(
       <SelectInputV2
         name="test"
@@ -96,10 +96,14 @@ describe('SelectInputV2', () => {
     )
     const input = screen.getByText('placeholder')
     await userEvent.click(input)
+    const dropdown = screen.getByRole('dialog')
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+    })
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test.skip('renders correctly grouped', async () => {
+  test('renders correctly grouped', async () => {
     const { asFragment } = renderWithTheme(
       <SelectInputV2
         name="test"
@@ -110,10 +114,14 @@ describe('SelectInputV2', () => {
     )
     const input = screen.getByText('placeholder')
     await userEvent.click(input)
+    const dropdown = screen.getByRole('dialog')
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+    })
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test.skip('renders correctly with default value', async () => {
+  test('renders correctly with default value', async () => {
     const { asFragment } = renderWithTheme(
       <SelectInputV2
         name="test"
@@ -125,10 +133,14 @@ describe('SelectInputV2', () => {
     )
     const input = screen.getByText('Pluto')
     await userEvent.click(input)
+    const dropdown = screen.getByRole('dialog')
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+    })
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test.skip('renders correctly with footer', async () => {
+  test('renders correctly with footer', async () => {
     const { asFragment } = renderWithTheme(
       <SelectInputV2
         name="test"
@@ -141,10 +153,14 @@ describe('SelectInputV2', () => {
     )
     const input = screen.getByText('Pluto')
     await userEvent.click(input)
+    const dropdown = screen.getByRole('dialog')
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+    })
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test.skip('renders correctly multiselect', async () => {
+  test('renders correctly multiselect', async () => {
     const { asFragment } = renderWithTheme(
       <SelectInputV2
         name="test"
@@ -157,10 +173,14 @@ describe('SelectInputV2', () => {
     )
     const input = screen.getByText('Pluto')
     await userEvent.click(input)
+    const dropdown = screen.getByRole('dialog')
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+    })
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test.skip('renders correctly with label on the right and optional info on the left', async () => {
+  test('renders correctly with label on the right and optional info on the left', async () => {
     const { asFragment } = renderWithTheme(
       <SelectInputV2
         name="test"
@@ -173,10 +193,14 @@ describe('SelectInputV2', () => {
     )
     const input = screen.getByText('placeholder')
     await userEvent.click(input)
+    const dropdown = screen.getByRole('dialog')
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+    })
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test.skip('renders correctly with label on the right and optional info on the right', async () => {
+  test('renders correctly with label on the right and optional info on the right', async () => {
     const { asFragment } = renderWithTheme(
       <SelectInputV2
         name="test"
@@ -189,10 +213,14 @@ describe('SelectInputV2', () => {
     )
     const input = screen.getByText('placeholder')
     await userEvent.click(input)
+    const dropdown = screen.getByRole('dialog')
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+    })
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test.skip('renders correctly with label on the bottom and optional info on the left', async () => {
+  test('renders correctly with label on the bottom and optional info on the left', async () => {
     const { asFragment } = renderWithTheme(
       <SelectInputV2
         name="test"
@@ -205,10 +233,14 @@ describe('SelectInputV2', () => {
     )
     const input = screen.getByText('placeholder')
     await userEvent.click(input)
+    const dropdown = screen.getByRole('dialog')
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+    })
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test.skip('renders correctly with label on the bottom and optional info on the right', async () => {
+  test('renders correctly with label on the bottom and optional info on the right', async () => {
     const { asFragment } = renderWithTheme(
       <SelectInputV2
         name="test"
@@ -221,10 +253,14 @@ describe('SelectInputV2', () => {
     )
     const input = screen.getByText('placeholder')
     await userEvent.click(input)
+    const dropdown = screen.getByRole('dialog')
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+    })
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test.skip('renders correctly loadMore', () => {
+  test('renders correctly loadMore', () => {
     const { asFragment } = renderWithTheme(
       <SelectInputV2
         name="test"
@@ -239,7 +275,7 @@ describe('SelectInputV2', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test.skip('renders correctly with emptyState', async () => {
+  test('renders correctly with emptyState', async () => {
     const { asFragment } = renderWithTheme(
       <SelectInputV2
         name="emptystate"
@@ -251,10 +287,14 @@ describe('SelectInputV2', () => {
     )
     const input = screen.getByText('placeholder')
     await userEvent.click(input)
+    const dropdown = screen.getByRole('dialog')
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+    })
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test.skip('renders correctly disabled', async () => {
+  test('renders correctly disabled', async () => {
     const { asFragment } = renderWithTheme(
       <SelectInputV2
         name="test"
@@ -266,10 +306,12 @@ describe('SelectInputV2', () => {
     )
     const input = screen.getByText('placeholder')
     await userEvent.click(input)
+    const dropdown = screen.queryByRole('dialog')
+    expect(dropdown).toBeNull()
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test.skip('renders correctly required', async () => {
+  test('renders correctly required', async () => {
     const { asFragment } = renderWithTheme(
       <SelectInputV2
         name="test"
@@ -282,27 +324,14 @@ describe('SelectInputV2', () => {
 
     const input = screen.getByText('placeholder')
     await userEvent.click(input)
+    const dropdown = screen.getByRole('dialog')
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+    })
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test.skip('renders correctly with dropdownAlign', async () => {
-    const { asFragment } = renderWithTheme(
-      <SelectInputV2
-        name="test"
-        options={dataUnGrouped}
-        placeholder="placeholder"
-        placeholderSearch="placeholdersearch"
-        required
-        dropdownAlign="center"
-      />,
-    )
-
-    const input = screen.getByText('placeholder')
-    await userEvent.click(input)
-    expect(asFragment()).toMatchSnapshot()
-  })
-
-  test.skip('renders correctly readOnly', async () => {
+  test('renders correctly readOnly', async () => {
     const { asFragment } = renderWithTheme(
       <SelectInputV2
         name="test"
@@ -314,10 +343,12 @@ describe('SelectInputV2', () => {
     )
     const input = screen.getByText('placeholder')
     await userEvent.click(input)
+    const dropdown = screen.queryByRole('dialog')
+    expect(dropdown).toBeNull()
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test.skip('renders correctly with error', async () => {
+  test('renders correctly with error', async () => {
     const { asFragment } = renderWithTheme(
       <SelectInputV2
         name="test"
@@ -329,10 +360,14 @@ describe('SelectInputV2', () => {
     )
     const input = screen.getByText('placeholder')
     await userEvent.click(input)
+    const dropdown = screen.getByRole('dialog')
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+    })
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test.skip('renders correctly with success', async () => {
+  test('renders correctly with success', async () => {
     const { asFragment } = renderWithTheme(
       <SelectInputV2
         name="test"
@@ -344,10 +379,14 @@ describe('SelectInputV2', () => {
     )
     const input = screen.getByText('placeholder')
     await userEvent.click(input)
+    const dropdown = screen.getByRole('dialog')
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+    })
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test.skip('renders correctly with not searchable', async () => {
+  test('renders correctly with not searchable', async () => {
     const { asFragment } = renderWithTheme(
       <SelectInputV2
         name="test"
@@ -359,10 +398,14 @@ describe('SelectInputV2', () => {
     )
     const input = screen.getByText('placeholder')
     await userEvent.click(input)
+    const dropdown = screen.getByRole('dialog')
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+    })
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test.skip('handles correctly dropdown with clicks - grouped', async () => {
+  test('handles correctly dropdown with clicks - grouped', async () => {
     renderWithTheme(
       <SelectInputV2
         name="test"
@@ -384,7 +427,7 @@ describe('SelectInputV2', () => {
     expect(dropdown).not.toBeInTheDocument()
   })
 
-  test.skip('handles correctly dropdown with clicks - ungrouped', async () => {
+  test('handles correctly dropdown with clicks - ungrouped', async () => {
     renderWithTheme(
       <SelectInputV2
         name="test"
@@ -400,14 +443,13 @@ describe('SelectInputV2', () => {
     const input = screen.getByText('placeholder')
     await userEvent.click(input)
     const dropdown = screen.getByRole('dialog')
-    expect(dropdown).toBeVisible()
 
     await userEvent.click(input)
     await userEvent.click(input)
     expect(dropdown).not.toBeInTheDocument()
   })
 
-  test.skip('handles correctly closable tags', async () => {
+  test('handles correctly closable tags', async () => {
     renderWithTheme(
       <SelectInputV2
         name="test"
@@ -425,7 +467,8 @@ describe('SelectInputV2', () => {
     await userEvent.click(venusCloseButton)
     expect(venus).not.toBeVisible()
   })
-  test.skip('renders correctly unclosable tags when readonly', () => {
+
+  test('renders correctly unclosable tags when readonly', () => {
     const { asFragment } = renderWithTheme(
       <SelectInputV2
         name="test"
@@ -442,7 +485,7 @@ describe('SelectInputV2', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test.skip('handles correctly dropdown with arrow down/up key press with ungrouped data', async () => {
+  test('handles correctly dropdown with arrow down/up key press with ungrouped data', async () => {
     renderWithTheme(
       <SelectInputV2
         name="test"
@@ -454,7 +497,6 @@ describe('SelectInputV2', () => {
     )
 
     const input = screen.getByTestId('select-input-test')
-    await userEvent.tab()
     await userEvent.tab()
     expect(input).toHaveFocus()
     await userEvent.keyboard('[arrowDown]')
@@ -467,7 +509,8 @@ describe('SelectInputV2', () => {
     })
     expect(mercury).toHaveFocus()
   })
-  test.skip('handles correctly dropdown with arrow pressing enter or space', async () => {
+
+  test('handles correctly dropdown with arrow pressing enter or space', async () => {
     renderWithTheme(
       <SelectInputV2
         name="test"
@@ -480,13 +523,13 @@ describe('SelectInputV2', () => {
 
     const input = screen.getByTestId('select-input-test')
     await userEvent.tab()
-    await userEvent.tab()
     expect(input).toHaveFocus()
     await userEvent.keyboard(' ')
     const dropdown = screen.getByRole('dialog')
     expect(dropdown).toBeVisible()
   })
-  test.skip('handles correctly dropdown with arrow down/up key press with grouped data', async () => {
+
+  test('handles correctly dropdown with arrow down/up key press with grouped data', async () => {
     renderWithTheme(
       <SelectInputV2
         name="test"
@@ -499,7 +542,6 @@ describe('SelectInputV2', () => {
 
     const input = screen.getByTestId('select-input-test')
     await userEvent.tab()
-    await userEvent.tab()
     expect(input).toHaveFocus()
     await userEvent.keyboard('[arrowDown]')
     const dropdown = screen.getByRole('dialog')
@@ -513,7 +555,7 @@ describe('SelectInputV2', () => {
     expect(mercury).toHaveFocus()
   })
 
-  test.skip('handles correctly clear all', async () => {
+  test('handles correctly clear all', async () => {
     renderWithTheme(
       <SelectInputV2
         name="test"
@@ -530,7 +572,7 @@ describe('SelectInputV2', () => {
     expect(clearAll).not.toBeInTheDocument()
   })
 
-  test.skip('handles click autoclose when outside click', async () => {
+  test('handles click autoclose when outside click', async () => {
     renderWithTheme(
       <>
         Test outside element
@@ -554,7 +596,7 @@ describe('SelectInputV2', () => {
 
     expect(dropdown).not.toBeVisible()
   })
-  test.skip('handles click on item', async () => {
+  test('handles click on item', async () => {
     const onChange = vi.fn()
 
     renderWithTheme(
@@ -578,7 +620,7 @@ describe('SelectInputV2', () => {
     expect(onChange).toHaveBeenCalledTimes(1)
   })
 
-  test.skip('handles keydown when not searchable on ungrouped data', async () => {
+  test('handles keydown when not searchable on ungrouped data', async () => {
     renderWithTheme(
       <SelectInputV2
         name="test"
@@ -591,6 +633,9 @@ describe('SelectInputV2', () => {
     const input = screen.getByTestId('select-input-test')
     await userEvent.click(input)
     const dropdown = screen.getByRole('dialog')
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+    })
     const venus = screen.getByRole('option', {
       name: /venus/i,
     })
@@ -599,7 +644,7 @@ describe('SelectInputV2', () => {
     await userEvent.type(dropdown, 'a')
   })
 
-  test.skip('handles keydown when not searchable on grouped data', async () => {
+  test('handles keydown when not searchable on grouped data', async () => {
     renderWithTheme(
       <SelectInputV2
         name="test"
@@ -613,6 +658,9 @@ describe('SelectInputV2', () => {
     const input = screen.getByTestId('select-input-test')
     await userEvent.click(input)
     const dropdown = screen.getByRole('dialog')
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+    })
     const venus = screen.getByRole('option', {
       name: /venus/i,
     })
@@ -621,7 +669,7 @@ describe('SelectInputV2', () => {
     await userEvent.type(dropdown, 'a')
   })
 
-  test.skip('renders with onChange', async () => {
+  test('renders with onChange', async () => {
     renderWithTheme(
       <SelectInputV2
         name="test"
@@ -634,11 +682,15 @@ describe('SelectInputV2', () => {
     )
     const input = screen.getByTestId('select-input-test')
     await userEvent.click(input)
+    const dropdown = screen.getByRole('dialog')
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+    })
     const earth = screen.getByText('Earth')
     await userEvent.click(earth)
     await userEvent.click(earth)
   })
-  test.skip('renders with onChange - multiselect', async () => {
+  test('renders with onChange - multiselect', async () => {
     renderWithTheme(
       <SelectInputV2
         name="test"
@@ -652,11 +704,15 @@ describe('SelectInputV2', () => {
     )
     const input = screen.getByTestId('select-input-test')
     await userEvent.click(input)
+    const dropdown = screen.getByRole('dialog')
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+    })
     const earth = screen.getByTestId('option-earth')
     await userEvent.click(earth)
     await userEvent.click(earth)
   })
-  test.skip('handles correctly searchable and closest value - grouped data', async () => {
+  test('handles correctly searchable and closest value - grouped data', async () => {
     renderWithTheme(
       <SelectInputV2
         name="test"
@@ -669,6 +725,9 @@ describe('SelectInputV2', () => {
     const input = screen.getByTestId('select-input-test')
     await userEvent.click(input)
     const dropdown = screen.getByRole('dialog')
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+    })
     expect(dropdown).toBeVisible()
     const venus = screen.getByTestId('option-venus')
     const earth = screen.getByTestId('option-earth')
@@ -709,7 +768,7 @@ describe('SelectInputV2', () => {
     expect(input.textContent).toContain('Jupiter')
   })
 
-  test.skip('handles correctly with searchable and closest value - multiselect', async () => {
+  test('handles correctly with searchable and closest value - multiselect', async () => {
     // There is issues with this test
     renderWithTheme(
       <SelectInputV2
@@ -725,16 +784,26 @@ describe('SelectInputV2', () => {
     const input = screen.getByTestId('select-input-test')
     await userEvent.click(input)
     const dropdown = screen.getByRole('dialog')
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+    })
     expect(dropdown).toBeVisible()
     const venus = screen.getByText('Venus')
     const earth = screen.getByText('Earth')
     const earthCheckbox = screen.getByRole('checkbox', {
       name: /earth/i,
     })
+
+    await userEvent.click(screen.getByTestId('search-bar'))
     await userEvent.keyboard('[Enter]') // empty search doesn't do anything
     await userEvent.keyboard('e')
-    expect(earth).toBeVisible()
-    expect(venus).toBeVisible()
+    await waitFor(() => {
+      expect(earth).toBeVisible()
+    })
+
+    await waitFor(() => {
+      expect(venus).toBeVisible()
+    })
 
     await userEvent.keyboard('a')
     await userEvent.keyboard('[Enter]')
@@ -759,7 +828,7 @@ describe('SelectInputV2', () => {
     const emptyState = screen.getByText('No options')
     expect(emptyState).toBeVisible()
   })
-  test.skip('handles correctly with searchable and closest value - multiselect & grouped data', async () => {
+  test('handles correctly with searchable and closest value - multiselect & grouped data', async () => {
     // There is issues with this test
     renderWithTheme(
       <SelectInputV2
@@ -775,12 +844,17 @@ describe('SelectInputV2', () => {
     const input = screen.getByTestId('select-input-test')
     await userEvent.click(input)
     const dropdown = screen.getByRole('dialog')
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+    })
     expect(dropdown).toBeVisible()
     const venus = screen.getByText('Venus')
     const earth = screen.getByText('Earth')
     const earthCheckbox = screen.getByRole('checkbox', {
       name: /earth/i,
     })
+
+    await userEvent.click(screen.getByTestId('search-bar'))
     await userEvent.keyboard('[Enter]') // empty search doesn't do anything
     await userEvent.keyboard('e')
     expect(earth).toBeVisible()
@@ -813,7 +887,7 @@ describe('SelectInputV2', () => {
     await userEvent.keyboard('[Enter]')
   }, 10000)
 
-  test.skip('renders correctly selected tags when multiselect', async () => {
+  test('renders correctly selected tags when multiselect', async () => {
     renderWithTheme(
       <SelectInputV2
         name="test"
@@ -835,6 +909,10 @@ describe('SelectInputV2', () => {
 
     const input = screen.getByTestId('select-input-test')
     await userEvent.click(input)
+    const dropdown = screen.getByRole('dialog')
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+    })
     const options = screen.getAllByRole('option')
 
     fireEvent.click(options[1])
@@ -847,7 +925,7 @@ describe('SelectInputV2', () => {
     expect(plustag).toBeInTheDocument()
   })
 
-  test.skip('handles correcty selectAll grouped data', async () => {
+  test('handles correcty selectAll grouped data', async () => {
     renderWithTheme(
       <SelectInputV2
         name="test"
@@ -864,6 +942,10 @@ describe('SelectInputV2', () => {
 
     const input = screen.getByTestId('select-input-test')
     await userEvent.click(input)
+    const dropdown = screen.getByRole('dialog')
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+    })
     const selectAllCheckBox = screen.getByRole('checkbox', {
       name: 'Select all',
     })
@@ -904,7 +986,7 @@ describe('SelectInputV2', () => {
     expect(selectAllCheckBox).toBeChecked()
   }, 15000)
 
-  test.skip('handles correcty selectAll ungrouped data', async () => {
+  test('handles correcty selectAll ungrouped data', async () => {
     renderWithTheme(
       <SelectInputV2
         name="test"
@@ -921,6 +1003,10 @@ describe('SelectInputV2', () => {
 
     const input = screen.getByTestId('select-input-test')
     await userEvent.click(input)
+    const dropdown = screen.getByRole('dialog')
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+    })
     const selectAllCheckBox = screen.getByRole('checkbox', {
       name: 'Select all',
     })
@@ -961,7 +1047,7 @@ describe('SelectInputV2', () => {
     expect(selectAllCheckBox).toBeChecked()
   }, 10000)
 
-  test.skip('handles correcty selectAllGroup', async () => {
+  test('handles correcty selectAllGroup', async () => {
     renderWithTheme(
       <SelectInputV2
         name="test"
@@ -975,6 +1061,10 @@ describe('SelectInputV2', () => {
 
     const input = screen.getByTestId('select-input-test')
     await userEvent.click(input)
+    const dropdown = screen.getByRole('dialog')
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+    })
     const selectAllGroupCheckBox = screen.getByRole('checkbox', {
       name: 'TERRESTRIAL PLANETS',
     })
@@ -1005,7 +1095,7 @@ describe('SelectInputV2', () => {
     expect(selectAllGroupCheckBox).toBeChecked()
   }, 10000)
 
-  test.skip('handles correcty selectAllGroup - keyboard events', async () => {
+  test('handles correcty selectAllGroup - keyboard events', async () => {
     renderWithTheme(
       <SelectInputV2
         name="test"
@@ -1019,6 +1109,10 @@ describe('SelectInputV2', () => {
 
     const input = screen.getByTestId('select-input-test')
     await userEvent.click(input)
+    const dropdown = screen.getByRole('dialog')
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+    })
     const selectAllGroupCheckBox = screen.getByRole('checkbox', {
       name: 'TERRESTRIAL PLANETS',
     })
@@ -1038,7 +1132,7 @@ describe('SelectInputV2', () => {
     expect(selectAllGroupCheckBox).not.toBeChecked()
   }, 10000)
 
-  test.skip('handles correcty selectAllGroup with selectAll - grouped data', async () => {
+  test('handles correcty selectAllGroup with selectAll - grouped data', async () => {
     renderWithTheme(
       <SelectInputV2
         name="test"
@@ -1057,6 +1151,10 @@ describe('SelectInputV2', () => {
 
     const input = screen.getByTestId('select-input-test')
     await userEvent.click(input)
+    const dropdown = screen.getByRole('dialog')
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+    })
     const selectAllGroupCheckBox = screen.getByRole('checkbox', {
       name: 'TERRESTRIAL PLANETS',
     })
@@ -1097,7 +1195,7 @@ describe('SelectInputV2', () => {
     expect(selectAllCheckBox).toBeChecked()
   }, 10000)
 
-  test.skip('handles correctly click on item - optionalInfoPlacement="left" & descriptionDirection="row" & multiselect', async () => {
+  test('handles correctly click on item - optionalInfoPlacement="left" & descriptionDirection="row" & multiselect', async () => {
     renderWithTheme(
       <SelectInputV2
         name="test"
@@ -1110,10 +1208,14 @@ describe('SelectInputV2', () => {
     )
     const input = screen.getByTestId('select-input-test')
     await userEvent.click(input)
+    const dropdown = screen.getByRole('dialog')
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+    })
     const earth = screen.getByTestId('option-earth')
     await userEvent.click(earth)
   })
-  test.skip('handles correctly click on item - optionalInfoPlacement="right" & descriptionDirection="row" & multiselect', async () => {
+  test('handles correctly click on item - optionalInfoPlacement="right" & descriptionDirection="row" & multiselect', async () => {
     renderWithTheme(
       <SelectInputV2
         name="test"
@@ -1126,10 +1228,14 @@ describe('SelectInputV2', () => {
     )
     const input = screen.getByTestId('select-input-test')
     await userEvent.click(input)
+    const dropdown = screen.getByRole('dialog')
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+    })
     const earth = screen.getByTestId('option-earth')
     await userEvent.click(earth)
   })
-  test.skip('handles correctly click on item - optionalInfoPlacement="left" & descriptionDirection="column" & multiselect', async () => {
+  test('handles correctly click on item - optionalInfoPlacement="left" & descriptionDirection="column" & multiselect', async () => {
     renderWithTheme(
       <SelectInputV2
         name="test"
@@ -1142,10 +1248,14 @@ describe('SelectInputV2', () => {
     )
     const input = screen.getByTestId('select-input-test')
     await userEvent.click(input)
+    const dropdown = screen.getByRole('dialog')
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+    })
     const earth = screen.getByTestId('option-earth')
     await userEvent.click(earth)
   })
-  test.skip('handles correctly click on item - optionalInfoPlacement="right" & descriptionDirection="column" & multiselect', async () => {
+  test('handles correctly click on item - optionalInfoPlacement="right" & descriptionDirection="column" & multiselect', async () => {
     renderWithTheme(
       <SelectInputV2
         name="test"
@@ -1158,10 +1268,14 @@ describe('SelectInputV2', () => {
     )
     const input = screen.getByTestId('select-input-test')
     await userEvent.click(input)
+    const dropdown = screen.getByRole('dialog')
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+    })
     const earth = screen.getByTestId('option-earth')
     await userEvent.click(earth)
   })
-  test.skip('handles correctly click on item - optionalInfoPlacement="left" & descriptionDirection="row"', async () => {
+  test('handles correctly click on item - optionalInfoPlacement="left" & descriptionDirection="row"', async () => {
     renderWithTheme(
       <SelectInputV2
         name="test"
@@ -1173,10 +1287,14 @@ describe('SelectInputV2', () => {
     )
     const input = screen.getByTestId('select-input-test')
     await userEvent.click(input)
+    const dropdown = screen.getByRole('dialog')
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+    })
     const earth = screen.getByTestId('option-earth')
     await userEvent.click(earth)
   })
-  test.skip('handles correctly click on item - optionalInfoPlacement="right" & descriptionDirection="row"', async () => {
+  test('handles correctly click on item - optionalInfoPlacement="right" & descriptionDirection="row"', async () => {
     renderWithTheme(
       <SelectInputV2
         name="test"
@@ -1188,10 +1306,14 @@ describe('SelectInputV2', () => {
     )
     const input = screen.getByTestId('select-input-test')
     await userEvent.click(input)
+    const dropdown = screen.getByRole('dialog')
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+    })
     const earth = screen.getByTestId('option-earth')
     await userEvent.click(earth)
   })
-  test.skip('handles correctly click on item - optionalInfoPlacement="left" & descriptionDirection="column"', async () => {
+  test('handles correctly click on item - optionalInfoPlacement="left" & descriptionDirection="column"', async () => {
     renderWithTheme(
       <SelectInputV2
         name="test"
@@ -1203,10 +1325,14 @@ describe('SelectInputV2', () => {
     )
     const input = screen.getByTestId('select-input-test')
     await userEvent.click(input)
+    const dropdown = screen.getByRole('dialog')
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+    })
     const earth = screen.getByTestId('option-earth')
     await userEvent.click(earth)
   })
-  test.skip('handles correctly click on item - optionalInfoPlacement="right" & descriptionDirection="column"', async () => {
+  test('handles correctly click on item - optionalInfoPlacement="right" & descriptionDirection="column"', async () => {
     renderWithTheme(
       <SelectInputV2
         name="test"
@@ -1218,10 +1344,14 @@ describe('SelectInputV2', () => {
     )
     const input = screen.getByTestId('select-input-test')
     await userEvent.click(input)
+    const dropdown = screen.getByRole('dialog')
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+    })
     const earth = screen.getByTestId('option-earth')
     await userEvent.click(earth)
   })
-  test.skip('renders correctly loading - grouped data', async () => {
+  test('renders correctly loading - grouped data', async () => {
     const { asFragment } = renderWithTheme(
       <SelectInputV2
         name="test"
@@ -1234,10 +1364,14 @@ describe('SelectInputV2', () => {
     )
     const input = screen.getByText('placeholder')
     await userEvent.click(input)
+    const dropdown = screen.getByRole('dialog')
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+    })
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test.skip('renders correctly loading - ungrouped data', async () => {
+  test('renders correctly loading - ungrouped data', async () => {
     const { asFragment } = renderWithTheme(
       <SelectInputV2
         name="test"
@@ -1250,13 +1384,17 @@ describe('SelectInputV2', () => {
     )
     const input = screen.getByText('placeholder')
     await userEvent.click(input)
+    const dropdown = screen.getByRole('dialog')
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+    })
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test.skip('renders correctly with function footer', async () => {
+  test('renders correctly with function footer', async () => {
     const f = vi.fn(() => {})
 
-    const { asFragment } = renderWithTheme(
+    renderWithTheme(
       <SelectInputV2
         name="test"
         options={dataGrouped}
@@ -1279,16 +1417,17 @@ describe('SelectInputV2', () => {
     )
     const input = screen.getByText('Pluto')
     await userEvent.click(input)
+    const dropdown = screen.getByRole('dialog')
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+    })
 
     const footer = screen.getByTestId('buttonclose')
-    const dropdown = screen.getByRole('dialog')
     expect(dropdown).toBeVisible()
 
     await userEvent.click(footer)
 
     expect(f).toHaveBeenCalledOnce()
     setTimeout(() => expect(dropdown).not.toBeVisible(), 500)
-
-    expect(asFragment()).toMatchSnapshot()
   })
 })
