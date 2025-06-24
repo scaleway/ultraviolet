@@ -34,6 +34,7 @@ const StyledDiv = styled('div', {
   margin: auto;
   line-height: ${({ size }) => (size === 'medium' ? '32px' : '24px')};
   font-size: ${({ size }) => (size === 'medium' ? '24px' : '16px')};
+  min-width: 0;
 `
 
 export type Sizes = 'small' | 'medium'
