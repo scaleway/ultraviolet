@@ -1,6 +1,6 @@
 export { CheckboxField } from './CheckboxField'
 export { CheckboxGroupField } from './CheckboxGroupField'
-export { DateField } from './DateField'
+export { DateInputField } from './DateInputField'
 export { Form } from './Form'
 export { RadioField } from './RadioField'
 export { SelectableCardField } from './SelectableCardField'
