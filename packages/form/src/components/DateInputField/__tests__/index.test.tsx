@@ -2,16 +2,18 @@ import { screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithForm } from '@utils/test'
 import { describe, expect, test, vi } from 'vitest'
-import { DateField } from '..'
+import { DateInputField } from '..'
 
-describe('DateField', () => {
+describe('DateInputField', () => {
   test('should render correctly', () => {
-    const { asFragment } = renderWithForm(<DateField name="test" />)
+    const { asFragment } = renderWithForm(<DateInputField name="test" />)
     expect(asFragment()).toMatchSnapshot()
   })
 
   test('should render correctly disabled', () => {
-    const { asFragment } = renderWithForm(<DateField name="test" disabled />)
+    const { asFragment } = renderWithForm(
+      <DateInputField name="test" disabled />,
+    )
     expect(asFragment()).toMatchSnapshot()
   })
 
@@ -19,7 +21,7 @@ describe('DateField', () => {
     const onBlur = vi.fn()
     const onChange = vi.fn()
     const { asFragment, resultForm } = renderWithForm(
-      <DateField
+      <DateInputField
         name="test"
         onBlur={onBlur}
         onChange={onChange}
@@ -50,7 +52,7 @@ describe('DateField', () => {
     const onBlur = vi.fn()
     const onChange = vi.fn()
     const { asFragment, resultForm } = renderWithForm(
-      <DateField
+      <DateInputField
         name="test"
         onBlur={onBlur}
         onChange={onChange}
@@ -84,7 +86,7 @@ describe('DateField', () => {
     const onBlur = vi.fn()
     const onChange = vi.fn()
     const { asFragment, resultForm } = renderWithForm(
-      <DateField
+      <DateInputField
         name="test"
         onBlur={onBlur}
         onChange={onChange}

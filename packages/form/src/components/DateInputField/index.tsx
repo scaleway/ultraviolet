@@ -11,7 +11,7 @@ import { minDateValidator } from '../../validators/minDate'
 
 type DateExtends = Date | [Date | null, Date | null]
 
-type DateFieldProps<
+type DateInputFieldProps<
   TFieldValues extends FieldValues,
   TFieldName extends FieldPath<TFieldValues>,
 > = BaseFieldProps<TFieldValues, TFieldName> &
@@ -25,7 +25,7 @@ const parseDate = (value: string | Date): Date =>
 
 const isEmpty = (value?: Date | string | null): boolean => !value
 
-export const DateField = <
+export const DateInputField = <
   TFieldValues extends FieldValues,
   TFieldName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
 >({
@@ -43,7 +43,7 @@ export const DateField = <
   showMonthYearPicker,
   shouldUnregister = false,
   ...props
-}: DateFieldProps<TFieldValues, TFieldName>) => {
+}: DateInputFieldProps<TFieldValues, TFieldName>) => {
   const { getError } = useErrors()
   const {
     field,

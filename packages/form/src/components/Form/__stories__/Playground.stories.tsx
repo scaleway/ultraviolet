@@ -2,7 +2,7 @@ import type { StoryFn } from '@storybook/react'
 import { Snippet, Stack, Text } from '@ultraviolet/ui'
 import {
   CheckboxField,
-  DateField,
+  DateInputField,
   Form,
   NumberInputField,
   RadioField,
@@ -104,7 +104,7 @@ export const Playground: StoryFn<typeof Form> = () => {
           />
         </Stack>
         <Stack gap={2} direction="row">
-          <DateField
+          <DateInputField
             name="date"
             label="Date"
             required

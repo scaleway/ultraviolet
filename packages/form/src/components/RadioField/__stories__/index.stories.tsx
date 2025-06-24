@@ -74,9 +74,6 @@ export default {
         component: 'A radio field',
       },
     },
-    deprecated: true,
-    deprecatedReason:
-      'This component is deprecated, use RadioGroupField instead.',
   },
   title: 'Form/Components/Fields/RadioField',
 } as Meta
