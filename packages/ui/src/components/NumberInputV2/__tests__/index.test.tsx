@@ -145,7 +145,7 @@ describe('NumberInputV2', () => {
     await userEvent.clear(input)
     await userEvent.type(input, '5')
 
-    plusButton.click()
+    await userEvent.click(plusButton)
     await waitFor(() => expect(input.value).toBe('10'))
   })
 
@@ -157,7 +157,7 @@ describe('NumberInputV2', () => {
     await userEvent.clear(input)
     await userEvent.type(input, '15')
 
-    minusButton.click()
+    await userEvent.click(minusButton)
     await waitFor(() => expect(input.value).toBe('10'))
   })
 })
