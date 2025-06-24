@@ -201,7 +201,6 @@ exports[`InfoTable > should work with default props 1`] = `
   >
     <dl
       class="emotion-0 emotion-1"
-      data-ellipsis="true"
     >
       <div
         class="emotion-2 emotion-3 emotion-4"
@@ -542,6 +541,9 @@ exports[`InfoTable > should work with multiLine 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
   display: block;
   min-width: 0;
   width: 100%;
@@ -615,12 +617,38 @@ exports[`InfoTable > should work with multiLine 1`] = `
   padding-right: 1rem;
 }
 
+.emotion-89 {
+  color: #3f4250;
+  font-size: 1rem;
+  font-family: Inter,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: block;
+  min-width: 0;
+  width: 100%;
+}
+
+.emotion-89>* {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-right: 0.5rem;
+}
+
 <div
     data-testid="testing"
   >
     <dl
       class="emotion-0 emotion-1"
-      data-ellipsis="false"
     >
       <div
         class="emotion-2 emotion-3 emotion-4"
@@ -785,7 +813,7 @@ exports[`InfoTable > should work with multiLine 1`] = `
             class="emotion-11 emotion-12"
           >
             <div
-              class="emotion-13 emotion-14 emotion-10"
+              class="emotion-13 emotion-89 emotion-10"
             >
               cell cell cell cell cell cell cell cell cell cell cell cell cell cell cell cell cell cell cell cell cell cell cell cell cell cell cell cell cell cell
             </div>
@@ -1042,7 +1070,6 @@ exports[`InfoTable > should work with width 1`] = `
   >
     <dl
       class="emotion-0 emotion-1"
-      data-ellipsis="true"
     >
       <div
         class="emotion-2 emotion-3 emotion-4"

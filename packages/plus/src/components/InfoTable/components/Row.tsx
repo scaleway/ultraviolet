@@ -2,8 +2,7 @@
 
 import styled from '@emotion/styled'
 import { Row } from '@ultraviolet/ui'
-import { ReactNode, useContext } from 'react'
-import { Context } from '../Context'
+import { ReactNode } from 'react'
 
 export const StyledRow = styled(Row)`
   border-bottom: 1px ${({ theme }) => theme.colors.neutral.border} solid;
@@ -29,13 +28,6 @@ type RowProps = {
   templateColumn: string
 }
 
-export const InfoTableRow = ({ children, templateColumn }: RowProps) => {
-  const { ellipsis } = useContext(Context)
-  if (ellipsis === undefined) {
-    throw new Error(
-      'InfoTable.Row should be inside InfoTable to use it properly.',
-    )
-  }
-
-  return <StyledRow templateColumns={templateColumn}>{children}</StyledRow>
-}
+export const InfoTableRow = ({ children, templateColumn }: RowProps) => (
+  <StyledRow templateColumns={templateColumn}>{children}</StyledRow>
+)

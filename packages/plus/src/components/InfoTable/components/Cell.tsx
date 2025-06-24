@@ -2,8 +2,7 @@
 
 import styled from '@emotion/styled'
 import { Stack, Text } from '@ultraviolet/ui'
-import { ReactNode, useContext } from 'react'
-import { Context } from '../Context'
+import { ReactNode } from 'react'
 
 export const Term = styled.dt`
   font-weight: ${({ theme }) => theme.typography.bodyStrong.weight};
@@ -23,6 +22,7 @@ const Desc = styled.dd`
 type CellProps = {
   children: ReactNode
   title: string
+  multiline?: boolean
 }
 
 const StyledText = styled(Text)`
@@ -37,37 +37,32 @@ const StyledText = styled(Text)`
   }
 `
 
-export const InfoTableCell = ({ children, title }: CellProps) => {
-  const { ellipsis } = useContext(Context)
-  if (ellipsis === undefined) {
-    throw new Error(
-      'InfoTable.Cell should be inside InfoTable to use it properly.',
-    )
-  }
-
-  return (
-    <Stack gap="0.5" width="100%" minWidth="0">
-      <Term>
-        <Text
-          as="p"
-          variant="bodySmallStrong"
-          sentiment="neutral"
-          prominence="weak"
-        >
-          {title}
-        </Text>
-      </Term>
-      <Desc>
-        <StyledText
-          as="div"
-          variant="body"
-          sentiment="neutral"
-          prominence="default"
-          oneLine={ellipsis}
-        >
-          {children}
-        </StyledText>
-      </Desc>
-    </Stack>
-  )
-}
+export const InfoTableCell = ({
+  children,
+  title,
+  multiline = false,
+}: CellProps) => (
+  <Stack gap="0.5" width="100%" minWidth="0">
+    <Term>
+      <Text
+        as="p"
+        variant="bodySmallStrong"
+        sentiment="neutral"
+        prominence="weak"
+      >
+        {title}
+      </Text>
+    </Term>
+    <Desc>
+      <StyledText
+        as="div"
+        variant="body"
+        sentiment="neutral"
+        prominence="default"
+        oneLine={!multiline}
+      >
+        {children}
+      </StyledText>
+    </Desc>
+  </Stack>
+)

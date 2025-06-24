@@ -1,8 +1,25 @@
-import { Template } from './Template.stories'
+import type { StoryFn } from '@storybook/react'
+import type { ComponentProps } from 'react'
+import { InfoTable } from '../InfoTable'
 
-export const MultiLine = Template.bind({})
-
-MultiLine.args = { ...Template.args, multiLine: true }
+export const MultiLine: StoryFn<ComponentProps<typeof InfoTable>> = props => (
+  <InfoTable {...props}>
+    <InfoTable.Row templateColumn="repeat(2, 1fr)">
+      <InfoTable.Cell title="without multiLine">
+        cell cell cell cell cell cell cell cell cell cell cell cell cell cell
+        cell cell cell cell cell cell cell cell cell cell cell cell cell cell
+        cell cell cell cell cell cell cell cell cell cell cell cell cell cell
+        cell cell
+      </InfoTable.Cell>
+      <InfoTable.Cell title="with multiLine" multiline>
+        cell cell cell cell cell cell cell cell cell cell cell cell cell cell
+        cell cell cell cell cell cell cell cell cell cell cell cell cell cell
+        cell cell cell cell cell cell cell cell cell cell cell cell cell cell
+        cell cell
+      </InfoTable.Cell>
+    </InfoTable.Row>
+  </InfoTable>
+)
 
 MultiLine.parameters = {
   docs: {

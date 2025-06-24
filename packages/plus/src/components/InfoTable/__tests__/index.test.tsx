@@ -1,5 +1,5 @@
-import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
-import { describe, expect, it } from 'vitest'
+import { shouldMatchEmotionSnapshot } from '@utils/test'
+import { describe, it } from 'vitest'
 import { InfoTable } from '..'
 
 describe('InfoTable', () => {
@@ -32,7 +32,7 @@ describe('InfoTable', () => {
 
   it('should work with multiLine', () =>
     shouldMatchEmotionSnapshot(
-      <InfoTable multiLine>
+      <InfoTable>
         <InfoTable.Row templateColumn="repeat(3, 1fr)">
           <InfoTable.Cell title="title">cell</InfoTable.Cell>
           <InfoTable.Cell title="title">cell</InfoTable.Cell>
@@ -46,7 +46,7 @@ describe('InfoTable', () => {
           <InfoTable.Cell title="title">cell</InfoTable.Cell>
         </InfoTable.Row>
         <InfoTable.Row templateColumn="repeat(3, 1fr)">
-          <InfoTable.Cell title="title">
+          <InfoTable.Cell title="title" multiline>
             cell cell cell cell cell cell cell cell cell cell cell cell cell
             cell cell cell cell cell cell cell cell cell cell cell cell cell
             cell cell cell cell
@@ -83,16 +83,4 @@ describe('InfoTable', () => {
         </InfoTable.Row>
       </InfoTable>,
     ))
-
-  it('should throw an error if InfoTable.Cell is not used inside InfoTable', () => {
-    expect(() => {
-      renderWithTheme(<InfoTable.Cell title="title">cell</InfoTable.Cell>)
-    }).toThrow('InfoTable.Cell should be inside InfoTable to use it properly.')
-  })
-
-  it('should throw an error if InfoTable.Row is not used inside InfoTable', () => {
-    expect(() => {
-      renderWithTheme(<InfoTable.Row templateColumn="1fr">test</InfoTable.Row>)
-    }).toThrow('InfoTable.Row should be inside InfoTable to use it properly.')
-  })
 })
