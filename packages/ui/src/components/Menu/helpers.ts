@@ -1,6 +1,12 @@
 import type { ReactNode } from 'react'
 import { Children, cloneElement, isValidElement } from 'react'
 
+type ChildType = {
+  children: ReactNode
+  label?: string
+  disclosure?: { props: ChildType }
+  searchText?: string
+}
 /**
  * Search inside a children (React Element) recursively until a result is found
  */
@@ -16,11 +22,7 @@ export const searchChildren = (
     }
 
     if (isValidElement(child)) {
-      const childProps = child.props as {
-        children: ReactNode
-        label?: string
-        searchText?: string
-      }
+      const childProps = child.props as ChildType
 
       if (childProps?.searchText?.match(searchRegex)) {
         return cloneElement(child, {
@@ -33,6 +35,16 @@ export const searchChildren = (
         return cloneElement(child, {
           children: searchChildren(childProps.children, searchString),
         } as { children: ReactNode })
+      }
+
+      // In the case of a nested menu, we want to search both in the disclosure and in the nested elements
+      // Recursively search on the nested menu
+      if (
+        childProps.disclosure &&
+        typeof childProps.disclosure.props.children === 'string' &&
+        childProps.disclosure.props.children.match(searchRegex)
+      ) {
+        return child
       }
 
       // Recursively search the children of this element
