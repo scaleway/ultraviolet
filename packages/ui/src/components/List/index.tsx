@@ -60,7 +60,6 @@ const TableContainer = ({ children }: { children: ReactNode }) => {
       setRefList([])
       setChildrenMemory(Children.toArray(children))
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [children, setRefList])
 
   return <TableContainerStyle>{children}</TableContainerStyle>

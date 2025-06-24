@@ -189,7 +189,6 @@ export const NavigationContent = ({
     sliderRef.current?.addEventListener('mousedown', mousedown)
 
     return () => {
-      // eslint-disable-next-line react-hooks/exhaustive-deps
       sliderRef.current?.removeEventListener('mousedown', mousedown)
     }
   }, [

@@ -314,7 +314,6 @@ export const ListProvider = ({
     return () => {
       handlers.forEach(cleanup => cleanup())
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [lastCheckedCheckbox, selectRows])
 
   useEffect(() => {

@@ -392,15 +392,11 @@ export const Item = memo(
       animationType,
     } = context
 
-    useEffect(
-      () => {
-        if (type !== 'pinnedGroup' && pinnedFeature) {
-          registerItem({ [id]: { label, active, onToggle, onClickPinUnpin } })
-        }
-      },
-      // eslint-disable-next-line react-hooks/exhaustive-deps
-      [active, id, label, registerItem],
-    )
+    useEffect(() => {
+      if (type !== 'pinnedGroup' && pinnedFeature) {
+        registerItem({ [id]: { label, active, onToggle, onClickPinUnpin } })
+      }
+    }, [active, id, label, registerItem])
 
     const [internalExpanded, onToggleExpand] = useReducer(
       prevState => !prevState,
