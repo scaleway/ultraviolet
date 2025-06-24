@@ -16,7 +16,10 @@ export type SearchBarChildrenFunctionProps = ({
 }: ChildrenProps) => ReactNode
 
 export type SearchInputProps = {
-  popupPlacement?: ComponentProps<typeof Popup>['placement']
+  popupPlacement?: Exclude<
+    ComponentProps<typeof Popup>['placement'],
+    'nested-menu'
+  >
   threshold?: number
   children?: SearchBarChildrenFunctionProps | ReactNode
   onSearch: (value: string) => void

@@ -17,7 +17,7 @@ import {
 import { Popup } from '../Popup'
 import { SearchInput } from '../SearchInput'
 import { Stack } from '../Stack'
-import { useMenu } from './MenuProvider'
+import { DisclosureContext, useMenu } from './MenuProvider'
 import { SIZES } from './constants'
 import { searchChildren } from './helpers'
 import type { MenuProps } from './types'
@@ -25,13 +25,16 @@ import type { MenuProps } from './types'
 const StyledPopup = styled(Popup, {
   shouldForwardProp: prop => !['size', 'searchable'].includes(prop),
 })<{ size?: keyof typeof SIZES; searchable: boolean }>`
-  background-color: ${({ theme }) => theme.colors.other.elevation.background.raised};
-  box-shadow: ${({ theme }) => `${theme.shadows.raised[0]}, ${theme.shadows.raised[1]}`};
+  background-color: ${({ theme }) =>
+    theme.colors.other.elevation.background.raised};
+  box-shadow: ${({ theme }) =>
+    `${theme.shadows.raised[0]}, ${theme.shadows.raised[1]}`};
   padding: 0;
 
   &[data-has-arrow='true'] {
     &::after {
-      border-color: ${({ theme }) => theme.colors.other.elevation.background.raised}
+      border-color: ${({ theme }) =>
+        theme.colors.other.elevation.background.raised}
         transparent transparent transparent;
     }
   }
@@ -41,6 +44,7 @@ const StyledPopup = styled(Popup, {
   ${({ size }) => (size ? `width: ${SIZES[size]};` : null)}
   ${({ searchable }) => (searchable ? `min-width: 20rem` : null)};
   padding: ${({ theme }) => `${theme.space['0.25']} 0`};
+  
 `
 
 const Content = styled(Stack)`
@@ -56,7 +60,8 @@ const MenuList = styled(Stack, {
 })<{ height: string }>`
   overflow-y: auto;
   overflow-x: hidden;
-  max-height: calc(${({ height }) => height} - ${({ theme }) => theme.space['0.5']});
+  max-height: calc(${({ height }) => height} - ${({ theme }) =>
+    theme.space['0.5']});
   &:after,
   &:before {
     border: solid transparent;
@@ -108,7 +113,7 @@ export const Menu = forwardRef(
     }: MenuProps,
     ref: Ref<HTMLButtonElement | null>,
   ) => {
-    const { isVisible, setIsVisible } = useMenu()
+    const { isVisible, setIsVisible, isNested } = useMenu()
     const searchInputRef = useRef<HTMLInputElement>(null)
     const [localChild, setLocalChild] = useState<ReactNode[] | null>(null)
     const popupRef = useRef<HTMLDivElement>(null)
@@ -172,7 +177,7 @@ export const Menu = forwardRef(
         aria-label={ariaLabel}
         className={className}
         visible={triggerMethod === 'click' ? isVisible : undefined}
-        placement={placement}
+        placement={isNested ? 'nested-menu' : placement}
         hasArrow={hasArrow}
         data-has-arrow={hasArrow}
         role="dialog"
@@ -211,7 +216,9 @@ export const Menu = forwardRef(
         dynamicDomRendering={dynamicDomRendering}
         align={align}
       >
-        {finalDisclosure}
+        <DisclosureContext.Provider value>
+          {finalDisclosure}
+        </DisclosureContext.Provider>
       </StyledPopup>
     )
   },
