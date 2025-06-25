@@ -197,11 +197,18 @@ const SubCategory = ({ subCategory }: { subCategory: SubCategoryType }) => {
       </Stack>
 
       <DetailsStack direction="column" gap={0.5}>
-        {subCategory.details?.map(detail => (
-          <Text key={detail} as="span" variant="bodySmall" sentiment="neutral">
-            {detail}
-          </Text>
-        ))}
+        {subCategory.details?.map(detail =>
+          detail ? (
+            <Text
+              key={detail}
+              as="span"
+              variant="bodySmall"
+              sentiment="neutral"
+            >
+              {detail}
+            </Text>
+          ) : null,
+        )}
       </DetailsStack>
     </Stack>
   )
