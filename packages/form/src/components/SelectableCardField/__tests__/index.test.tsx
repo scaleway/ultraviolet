@@ -37,7 +37,7 @@ describe('SelectableCardField', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('should trigger events correctly', () => {
+  test('should trigger events correctly', async () => {
     const onFocus = vi.fn(() => {})
     const onChange = vi.fn(() => {})
     const onBlur = vi.fn(() => {})
@@ -57,7 +57,7 @@ describe('SelectableCardField', () => {
     const input = screen.getByRole('radio', { hidden: true })
     act(() => input.focus())
     expect(onFocus).toBeCalledTimes(1)
-    act(() => input.click())
+    await userEvent.click(input)
     expect(onChange).toBeCalledTimes(1)
     act(() => input.blur())
     expect(onBlur).toBeCalledTimes(1)
