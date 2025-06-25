@@ -1,5 +1,5 @@
 import type { StoryFn } from '@storybook/react'
-import { Badge, RadioGroup, SelectInputV2, Stack } from '@ultraviolet/ui'
+import { Badge, RadioGroup, SelectInput, Stack } from '@ultraviolet/ui'
 import { useState } from 'react'
 import type { ComponentProps } from 'react'
 import { OrderSummary } from '..'
@@ -60,7 +60,7 @@ export const Children: StoryFn<ComponentProps<typeof OrderSummary>> = props => {
         <RadioGroup.Radio value="false" label="No commitment" />
         <RadioGroup.Radio value="true" label="Commitment" />
       </RadioGroup>
-      <SelectInputV2
+      <SelectInput
         options={selectInputOptions}
         name="commitment"
         onChange={onChangeCommitment}

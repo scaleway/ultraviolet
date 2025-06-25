@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import { NumberInputV2, Stack, Text } from '@ultraviolet/ui'
+import { NumberInput, Stack, Text } from '@ultraviolet/ui'
 import { useContext } from 'react'
 import { OrderSummaryContext } from './Provider'
 import {
@@ -9,7 +9,7 @@ import {
 } from './helpers'
 import type { ItemsType, SubCategoryType } from './types'
 
-const StyledNumberInputV2 = styled(NumberInputV2)`
+const StyledNumberInputV2 = styled(NumberInput)`
 max-width: 12.5rem;
 background-color: ${({ theme }) => theme.colors.neutral.background};
 `

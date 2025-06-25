@@ -172,7 +172,7 @@ const UnitInputWrapper = styled(Stack)<{
   }
 `
 
-const CustomSelectInput = styled(SelectInputV2)<{
+const CustomSelectInput = styled(SelectInput)<{
   width?: number | string
   maxWidth?: number | string
   'data-disabled': boolean
