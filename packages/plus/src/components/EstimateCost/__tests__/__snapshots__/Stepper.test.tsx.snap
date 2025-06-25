@@ -384,7 +384,6 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
   flex-wrap: nowrap;
   border: 1px solid #d9dadd;
   border-radius: 0.25rem;
-  background-color: #ffffff;
 }
 
 .emotion-52:not([data-disabled='true']):not([data-readonly='true']):not(
@@ -541,7 +540,6 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
   padding-left: 1rem;
   background: transparent;
   color: #3f4250;
-  font-size: 0.875rem;
 }
 
 .emotion-56[data-size="small"] {
@@ -588,41 +586,34 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
   color: #b5b7bd;
 }
 
-.emotion-58 {
-  width: 12.6rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-61 {
+.emotion-59 {
   width: 100%;
+  width: 12.6rem;
 }
 
-.emotion-61 #unit {
+.emotion-59 #unit {
   border: none;
   background: transparent;
 }
 
-.emotion-61 #unit:focus,
-.emotion-61 #unit:active {
+.emotion-59 #unit:focus,
+.emotion-59 #unit:active {
   box-shadow: none;
 }
 
-.emotion-63 {
+.emotion-61 {
   display: inherit;
 }
 
-.emotion-63[data-container-full-height="true"] {
+.emotion-61[data-container-full-height="true"] {
   height: 100%;
 }
 
-.emotion-63[data-container-full-width="true"] {
+.emotion-61[data-container-full-width="true"] {
   width: 100%;
 }
 
-.emotion-67 {
+.emotion-65 {
   display: grid;
   width: 100%;
   gap: 0.5rem;
@@ -637,85 +628,85 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
   width: 100%;
 }
 
-.emotion-67[data-size='small'] {
+.emotion-65[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-67[data-size='medium'] {
+.emotion-65[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-67[data-size='large'] {
+.emotion-65[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-67[data-state='neutral'] {
+.emotion-65[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.emotion-67[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-65[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-67[data-state='neutral']:not([data-disabled='true']):hover {
+.emotion-65[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-67[data-state='neutral']:not([data-disabled='true']):focus-visible {
+.emotion-65[data-state='neutral']:not([data-disabled='true']):focus-visible {
   outline: 5px auto Highlight;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-.emotion-67[data-state='neutral'][data-dropdownvisible='true'] {
+.emotion-65[data-state='neutral'][data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.emotion-67[data-state='success'] {
+.emotion-65[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.emotion-67[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-65[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #1b533f;
   box-shadow: 0px 0px 0px 3px #45d19f40;
 }
 
-.emotion-67[data-state='success'][data-dropdownvisible='true'] {
+.emotion-65[data-state='success'][data-dropdownvisible='true'] {
   border-color: #1b533f;
 }
 
-.emotion-67[data-state='danger'] {
+.emotion-65[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-67[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-65[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-67[data-state='danger'][data-dropdownvisible='true'] {
+.emotion-65[data-state='danger'][data-dropdownvisible='true'] {
   border-color: #92103f;
 }
 
-.emotion-67:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-65:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-67[data-readonly='true'] {
+.emotion-65[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-67[data-disabled='true'] {
+.emotion-65[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-70 {
+.emotion-68 {
   color: #3f4250;
   font-size: 0.875rem;
   font-family: Inter,sans-serif;
@@ -733,7 +724,7 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
   align-self: center;
 }
 
-.emotion-72 {
+.emotion-70 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -761,7 +752,7 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
   display: flex;
 }
 
-.emotion-74 {
+.emotion-72 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1rem;
@@ -770,12 +761,12 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
   min-height: 1rem;
 }
 
-.emotion-74 .fillStroke {
+.emotion-72 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
 
-.emotion-78 {
+.emotion-76 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -783,7 +774,7 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
   min-width: 230px;
 }
 
-.emotion-80 {
+.emotion-78 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -804,11 +795,11 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
   padding-bottom: 8px;
 }
 
-.emotion-88 {
+.emotion-86 {
   text-align: right;
 }
 
-.emotion-92 {
+.emotion-90 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -827,52 +818,52 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
   border-radius: 0.25rem;
 }
 
-.emotion-92:focus-within {
+.emotion-90:focus-within {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-92[data-success='true'] {
+.emotion-90[data-success='true'] {
   border-color: #22674e;
 }
 
-.emotion-92[data-error='true'] {
+.emotion-90[data-error='true'] {
   border-color: #b3144d;
 }
 
-.emotion-92:hover {
+.emotion-90:hover {
   border-color: #792dd4;
 }
 
-.emotion-92[data-readonly='true'] {
+.emotion-90[data-readonly='true'] {
   border-color: #d9dadd;
   background: #f9f9fa;
   cursor: not-allowed;
 }
 
-.emotion-92[data-disabled='true'] {
+.emotion-90[data-disabled='true'] {
   border-color: #e9eaeb;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.emotion-92[data-controls='false']>.emotion-100 {
+.emotion-90[data-controls='false']>.emotion-98 {
   border-width: 0;
 }
 
-.emotion-92[data-size='small'] {
+.emotion-90[data-size='small'] {
   height: 2rem;
 }
 
-.emotion-92[data-size='medium'] {
+.emotion-90[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-92[data-size='large'] {
+.emotion-90[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-94 {
+.emotion-92 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -896,20 +887,20 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
   padding: 0.125rem 0.5rem;
 }
 
-.emotion-94[data-size='small'] {
+.emotion-92[data-size='small'] {
   height: 2rem;
 }
 
-.emotion-94[data-size='medium'] {
+.emotion-92[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-94[data-size='large'] {
+.emotion-92[data-size='large'] {
   height: 3rem;
   padding: 0.25rem 0.5rem;
 }
 
-.emotion-96 {
+.emotion-94 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -949,26 +940,26 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
   color: #3f4250;
 }
 
-.emotion-96:hover {
+.emotion-94:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-96:active {
+.emotion-94:active {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.emotion-96 .e1y1n78x0 {
+.emotion-94 .e1y1n78x0 {
   stroke: transparent;
 }
 
-.emotion-96:hover,
-.emotion-96:active {
+.emotion-94:hover,
+.emotion-94:active {
   background: #e9eaeb;
   color: #222638;
 }
 
-.emotion-98 {
+.emotion-96 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -977,12 +968,12 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
   min-height: 1rem;
 }
 
-.emotion-98 .fillStroke {
+.emotion-96 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.emotion-101 {
+.emotion-99 {
   display: grid;
   grid-template-columns: 1fr auto;
   -webkit-align-items: center;
@@ -999,7 +990,7 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
   width: 100%;
 }
 
-.emotion-103 {
+.emotion-101 {
   outline: none;
   border: none;
   padding: 0;
@@ -1014,18 +1005,18 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
   background: none;
 }
 
-.emotion-103[data-has-unit='true'] {
+.emotion-101[data-has-unit='true'] {
   text-align: left;
   padding: 0.5rem 0 0.5rem 0.5rem;
 }
 
-.emotion-103::-webkit-outer-spin-button,
-.emotion-103::-webkit-inner-spin-button {
+.emotion-101::-webkit-outer-spin-button,
+.emotion-101::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.emotion-103 {
+.emotion-101 {
   -moz-appearance: textfield;
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
@@ -1033,15 +1024,15 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
   appearance: textfield;
 }
 
-.emotion-103[data-size='small'] {
+.emotion-101[data-size='small'] {
   height: 2rem;
 }
 
-.emotion-103[data-size='medium'] {
+.emotion-101[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-103[data-size='large'] {
+.emotion-101[data-size='large'] {
   height: 3rem;
   font-size: 1rem;
   font-family: Inter,sans-serif;
@@ -1049,34 +1040,34 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
   line-height: 1.5rem;
 }
 
-.emotion-103:-moz-read-only {
+.emotion-101:-moz-read-only {
   color: #3f4250;
   background: #f9f9fa;
   border-block: 1px solid #d9dadd;
 }
 
-.emotion-103:read-only {
+.emotion-101:read-only {
   color: #3f4250;
   background: #f9f9fa;
   border-block: 1px solid #d9dadd;
 }
 
-.emotion-103:-moz-read-only~.exvap482 {
+.emotion-101:-moz-read-only~.exvap482 {
   background: #f9f9fa;
 }
 
-.emotion-103:read-only~.exvap482 {
+.emotion-101:read-only~.exvap482 {
   background: #f9f9fa;
 }
 
-.emotion-103:disabled {
+.emotion-101:disabled {
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
   border-block: 1px solid #e9eaeb;
 }
 
-.emotion-103:disabled~.exvap482 {
+.emotion-101:disabled~.exvap482 {
   background: #f3f3f4;
   cursor: not-allowed;
   -webkit-user-select: none;
@@ -1085,16 +1076,16 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
   user-select: none;
 }
 
-.emotion-103:placeholder-shown~.exvap482 {
+.emotion-101:placeholder-shown~.exvap482 {
   color: #727683;
   font-size: 1rem;
 }
 
-.emotion-103[data-controls='false'] {
+.emotion-101[data-controls='false'] {
   text-align: left;
 }
 
-.emotion-111 {
+.emotion-109 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -1106,7 +1097,7 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
   min-width: 126px;
 }
 
-.emotion-114 {
+.emotion-112 {
   color: #727683;
   font-size: 1rem;
   font-family: Inter,sans-serif;
@@ -1119,18 +1110,18 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
   text-align: right;
 }
 
-.emotion-116 {
+.emotion-114 {
   margin: 0;
   width: 100%;
   border-right: 1px solid #d9dadd;
   border-radius: 0 0 0.25rem 0.25rem;
 }
 
-.emotion-120 {
+.emotion-118 {
   width: 70%;
 }
 
-.emotion-122 {
+.emotion-120 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -1147,7 +1138,7 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
   min-width: 126px;
 }
 
-.emotion-125 {
+.emotion-123 {
   color: #641cb3;
   font-size: 1.5625rem;
   font-family: Space Grotesk,sans-serif;
@@ -1307,7 +1298,6 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
                           class="emotion-56 emotion-57"
                           data-size="medium"
                           data-testid="unit-input"
-                          id="«r3»"
                           max="9007199254740991"
                           min="1"
                           name="iteration-value"
@@ -1317,59 +1307,53 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
                           value="1"
                         />
                       </div>
-                       
                       <div
-                        class="emotion-58 emotion-59"
-                        width="12.6rem"
+                        aria-label="iteration-unit"
+                        class="emotion-58 emotion-59 emotion-60"
                       >
                         <div
-                          aria-label="iteration-unit"
-                          class="emotion-60 emotion-61 emotion-62"
+                          aria-controls="«r5»"
+                          aria-describedby="«r5»"
+                          class="emotion-61 emotion-62"
+                          data-container-full-width="true"
+                          tabindex="-1"
                         >
                           <div
-                            aria-controls="«r5»"
-                            aria-describedby="«r5»"
-                            class="emotion-63 emotion-64"
-                            data-container-full-width="true"
-                            tabindex="-1"
+                            class="emotion-50 emotion-1"
                           >
                             <div
-                              class="emotion-50 emotion-1"
+                              aria-expanded="false"
+                              aria-haspopup="listbox"
+                              class="emotion-65 emotion-66"
+                              data-disabled="false"
+                              data-dropdownvisible="false"
+                              data-readonly="false"
+                              data-size="medium"
+                              data-state="neutral"
+                              data-testid="select-input-iteration-unit"
+                              id="unit"
+                              role="combobox"
+                              tabindex="0"
                             >
                               <div
-                                aria-expanded="false"
-                                aria-haspopup="listbox"
-                                class="emotion-67 emotion-68"
-                                data-disabled="false"
-                                data-dropdownvisible="false"
-                                data-readonly="false"
-                                data-size="medium"
-                                data-state="neutral"
-                                data-testid="select-input-iteration-unit"
-                                id="unit"
-                                role="combobox"
-                                tabindex="0"
+                                class="emotion-67 emotion-68 emotion-15"
                               >
-                                <div
-                                  class="emotion-69 emotion-70 emotion-15"
+                                Hour(s)
+                              </div>
+                              <div
+                                class="emotion-70 emotion-71"
+                              >
+                                <svg
+                                  aria-label="show dropdown"
+                                  class="emotion-72 emotion-27"
+                                  viewBox="0 0 16 16"
                                 >
-                                  Hour(s)
-                                </div>
-                                <div
-                                  class="emotion-72 emotion-73"
-                                >
-                                  <svg
-                                    aria-label="show dropdown"
-                                    class="emotion-74 emotion-27"
-                                    viewBox="0 0 16 16"
-                                  >
-                                    <path
-                                      clip-rule="evenodd"
-                                      d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
-                                      fill-rule="evenodd"
-                                    />
-                                  </svg>
-                                </div>
+                                  <path
+                                    clip-rule="evenodd"
+                                    d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
+                                    fill-rule="evenodd"
+                                  />
+                                </svg>
                               </div>
                             </div>
                           </div>
@@ -1383,14 +1367,14 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
           </thead>
           <tbody>
             <tr
-              class="emotion-76 emotion-77"
+              class="emotion-74 emotion-75"
             >
               <td
-                class="emotion-78 emotion-191"
+                class="emotion-76 emotion-191"
                 width="70%"
               >
                 <div
-                  class="emotion-80 emotion-81"
+                  class="emotion-78 emotion-79"
                 >
                   <div
                     class="emotion-10 emotion-1"
@@ -1406,14 +1390,14 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
                     </div>
                   </div>
                   <div
-                    class="emotion-88 emotion-17"
+                    class="emotion-86 emotion-17"
                   >
                     <div
                       class="emotion-50 emotion-1"
                     >
                       <div>
                         <div
-                          class="emotion-92 emotion-93"
+                          class="emotion-90 emotion-91"
                           data-controls="true"
                           data-disabled="false"
                           data-error="false"
@@ -1422,16 +1406,16 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
                           data-unit="false"
                         >
                           <div
-                            class="emotion-94 emotion-95"
+                            class="emotion-92 emotion-93"
                             data-size="small"
                           >
                             <button
                               aria-label="minus"
-                              class="emotion-96 emotion-97"
+                              class="emotion-94 emotion-95"
                               type="button"
                             >
                               <svg
-                                class="emotion-98 emotion-27"
+                                class="emotion-96 emotion-27"
                                 viewBox="0 0 16 16"
                               >
                                 <path
@@ -1441,10 +1425,10 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
                             </button>
                           </div>
                           <div
-                            class="emotion-100 emotion-101 emotion-102"
+                            class="emotion-98 emotion-99 emotion-100"
                           >
                             <input
-                              class="emotion-103 emotion-104"
+                              class="emotion-101 emotion-102"
                               data-controls="true"
                               data-has-unit="false"
                               data-size="small"
@@ -1457,16 +1441,16 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
                             />
                           </div>
                           <div
-                            class="emotion-94 emotion-95"
+                            class="emotion-92 emotion-93"
                             data-size="small"
                           >
                             <button
                               aria-label="plus"
-                              class="emotion-96 emotion-97"
+                              class="emotion-94 emotion-95"
                               type="button"
                             >
                               <svg
-                                class="emotion-98 emotion-27"
+                                class="emotion-96 emotion-27"
                                 viewBox="0 0 16 16"
                               >
                                 <path
@@ -1482,10 +1466,10 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
                 </div>
               </td>
               <td
-                class="emotion-111 emotion-112"
+                class="emotion-109 emotion-110"
               >
                 <p
-                  class="emotion-113 emotion-114 emotion-15"
+                  class="emotion-111 emotion-112 emotion-15"
                 >
                   €0.00
                 </p>
@@ -1496,7 +1480,7 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
         <table
           cellpadding="0"
           cellspacing="0"
-          class="emotion-116 emotion-117"
+          class="emotion-114 emotion-115"
         >
           <colgroup>
             <col />
@@ -1508,13 +1492,13 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
             <tr>
               <td
                 aria-label="control"
-                class="emotion-120 emotion-121"
+                class="emotion-118 emotion-119"
               />
               <td
-                class="emotion-122 emotion-190"
+                class="emotion-120 emotion-190"
               >
                 <h3
-                  class="emotion-124 emotion-125 emotion-15"
+                  class="emotion-122 emotion-123 emotion-15"
                 >
                   <span
                     class="emotion-33 emotion-34"
@@ -1916,7 +1900,6 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
   flex-wrap: nowrap;
   border: 1px solid #d9dadd;
   border-radius: 0.25rem;
-  background-color: #ffffff;
 }
 
 .emotion-52:not([data-disabled='true']):not([data-readonly='true']):not(
@@ -2073,7 +2056,6 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
   padding-left: 1rem;
   background: transparent;
   color: #3f4250;
-  font-size: 0.875rem;
 }
 
 .emotion-56[data-size="small"] {
@@ -2120,41 +2102,34 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
   color: #b5b7bd;
 }
 
-.emotion-58 {
-  width: 12.6rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-61 {
+.emotion-59 {
   width: 100%;
+  width: 12.6rem;
 }
 
-.emotion-61 #unit {
+.emotion-59 #unit {
   border: none;
   background: transparent;
 }
 
-.emotion-61 #unit:focus,
-.emotion-61 #unit:active {
+.emotion-59 #unit:focus,
+.emotion-59 #unit:active {
   box-shadow: none;
 }
 
-.emotion-63 {
+.emotion-61 {
   display: inherit;
 }
 
-.emotion-63[data-container-full-height="true"] {
+.emotion-61[data-container-full-height="true"] {
   height: 100%;
 }
 
-.emotion-63[data-container-full-width="true"] {
+.emotion-61[data-container-full-width="true"] {
   width: 100%;
 }
 
-.emotion-67 {
+.emotion-65 {
   display: grid;
   width: 100%;
   gap: 0.5rem;
@@ -2169,85 +2144,85 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
   width: 100%;
 }
 
-.emotion-67[data-size='small'] {
+.emotion-65[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-67[data-size='medium'] {
+.emotion-65[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-67[data-size='large'] {
+.emotion-65[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-67[data-state='neutral'] {
+.emotion-65[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.emotion-67[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-65[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-67[data-state='neutral']:not([data-disabled='true']):hover {
+.emotion-65[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-67[data-state='neutral']:not([data-disabled='true']):focus-visible {
+.emotion-65[data-state='neutral']:not([data-disabled='true']):focus-visible {
   outline: 5px auto Highlight;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-.emotion-67[data-state='neutral'][data-dropdownvisible='true'] {
+.emotion-65[data-state='neutral'][data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.emotion-67[data-state='success'] {
+.emotion-65[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.emotion-67[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-65[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #1b533f;
   box-shadow: 0px 0px 0px 3px #45d19f40;
 }
 
-.emotion-67[data-state='success'][data-dropdownvisible='true'] {
+.emotion-65[data-state='success'][data-dropdownvisible='true'] {
   border-color: #1b533f;
 }
 
-.emotion-67[data-state='danger'] {
+.emotion-65[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-67[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-65[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-67[data-state='danger'][data-dropdownvisible='true'] {
+.emotion-65[data-state='danger'][data-dropdownvisible='true'] {
   border-color: #92103f;
 }
 
-.emotion-67:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-65:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-67[data-readonly='true'] {
+.emotion-65[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-67[data-disabled='true'] {
+.emotion-65[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-70 {
+.emotion-68 {
   color: #3f4250;
   font-size: 0.875rem;
   font-family: Inter,sans-serif;
@@ -2265,7 +2240,7 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
   align-self: center;
 }
 
-.emotion-72 {
+.emotion-70 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2293,7 +2268,7 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
   display: flex;
 }
 
-.emotion-74 {
+.emotion-72 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1rem;
@@ -2302,12 +2277,12 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
   min-height: 1rem;
 }
 
-.emotion-74 .fillStroke {
+.emotion-72 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
 
-.emotion-78 {
+.emotion-76 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -2315,7 +2290,7 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
   min-width: 230px;
 }
 
-.emotion-80 {
+.emotion-78 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2336,11 +2311,11 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
   padding-bottom: 8px;
 }
 
-.emotion-88 {
+.emotion-86 {
   text-align: right;
 }
 
-.emotion-92 {
+.emotion-90 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2359,52 +2334,52 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
   border-radius: 0.25rem;
 }
 
-.emotion-92:focus-within {
+.emotion-90:focus-within {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-92[data-success='true'] {
+.emotion-90[data-success='true'] {
   border-color: #22674e;
 }
 
-.emotion-92[data-error='true'] {
+.emotion-90[data-error='true'] {
   border-color: #b3144d;
 }
 
-.emotion-92:hover {
+.emotion-90:hover {
   border-color: #792dd4;
 }
 
-.emotion-92[data-readonly='true'] {
+.emotion-90[data-readonly='true'] {
   border-color: #d9dadd;
   background: #f9f9fa;
   cursor: not-allowed;
 }
 
-.emotion-92[data-disabled='true'] {
+.emotion-90[data-disabled='true'] {
   border-color: #e9eaeb;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.emotion-92[data-controls='false']>.emotion-100 {
+.emotion-90[data-controls='false']>.emotion-98 {
   border-width: 0;
 }
 
-.emotion-92[data-size='small'] {
+.emotion-90[data-size='small'] {
   height: 2rem;
 }
 
-.emotion-92[data-size='medium'] {
+.emotion-90[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-92[data-size='large'] {
+.emotion-90[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-94 {
+.emotion-92 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2428,20 +2403,20 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
   padding: 0.125rem 0.5rem;
 }
 
-.emotion-94[data-size='small'] {
+.emotion-92[data-size='small'] {
   height: 2rem;
 }
 
-.emotion-94[data-size='medium'] {
+.emotion-92[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-94[data-size='large'] {
+.emotion-92[data-size='large'] {
   height: 3rem;
   padding: 0.25rem 0.5rem;
 }
 
-.emotion-96 {
+.emotion-94 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2481,26 +2456,26 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
   color: #3f4250;
 }
 
-.emotion-96:hover {
+.emotion-94:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-96:active {
+.emotion-94:active {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.emotion-96 .e1y1n78x0 {
+.emotion-94 .e1y1n78x0 {
   stroke: transparent;
 }
 
-.emotion-96:hover,
-.emotion-96:active {
+.emotion-94:hover,
+.emotion-94:active {
   background: #e9eaeb;
   color: #222638;
 }
 
-.emotion-98 {
+.emotion-96 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -2509,12 +2484,12 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
   min-height: 1rem;
 }
 
-.emotion-98 .fillStroke {
+.emotion-96 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.emotion-101 {
+.emotion-99 {
   display: grid;
   grid-template-columns: 1fr auto;
   -webkit-align-items: center;
@@ -2531,7 +2506,7 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
   width: 100%;
 }
 
-.emotion-103 {
+.emotion-101 {
   outline: none;
   border: none;
   padding: 0;
@@ -2546,18 +2521,18 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
   background: none;
 }
 
-.emotion-103[data-has-unit='true'] {
+.emotion-101[data-has-unit='true'] {
   text-align: left;
   padding: 0.5rem 0 0.5rem 0.5rem;
 }
 
-.emotion-103::-webkit-outer-spin-button,
-.emotion-103::-webkit-inner-spin-button {
+.emotion-101::-webkit-outer-spin-button,
+.emotion-101::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.emotion-103 {
+.emotion-101 {
   -moz-appearance: textfield;
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
@@ -2565,15 +2540,15 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
   appearance: textfield;
 }
 
-.emotion-103[data-size='small'] {
+.emotion-101[data-size='small'] {
   height: 2rem;
 }
 
-.emotion-103[data-size='medium'] {
+.emotion-101[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-103[data-size='large'] {
+.emotion-101[data-size='large'] {
   height: 3rem;
   font-size: 1rem;
   font-family: Inter,sans-serif;
@@ -2581,34 +2556,34 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
   line-height: 1.5rem;
 }
 
-.emotion-103:-moz-read-only {
+.emotion-101:-moz-read-only {
   color: #3f4250;
   background: #f9f9fa;
   border-block: 1px solid #d9dadd;
 }
 
-.emotion-103:read-only {
+.emotion-101:read-only {
   color: #3f4250;
   background: #f9f9fa;
   border-block: 1px solid #d9dadd;
 }
 
-.emotion-103:-moz-read-only~.exvap482 {
+.emotion-101:-moz-read-only~.exvap482 {
   background: #f9f9fa;
 }
 
-.emotion-103:read-only~.exvap482 {
+.emotion-101:read-only~.exvap482 {
   background: #f9f9fa;
 }
 
-.emotion-103:disabled {
+.emotion-101:disabled {
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
   border-block: 1px solid #e9eaeb;
 }
 
-.emotion-103:disabled~.exvap482 {
+.emotion-101:disabled~.exvap482 {
   background: #f3f3f4;
   cursor: not-allowed;
   -webkit-user-select: none;
@@ -2617,16 +2592,16 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
   user-select: none;
 }
 
-.emotion-103:placeholder-shown~.exvap482 {
+.emotion-101:placeholder-shown~.exvap482 {
   color: #727683;
   font-size: 1rem;
 }
 
-.emotion-103[data-controls='false'] {
+.emotion-101[data-controls='false'] {
   text-align: left;
 }
 
-.emotion-111 {
+.emotion-109 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -2638,7 +2613,7 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
   min-width: 126px;
 }
 
-.emotion-114 {
+.emotion-112 {
   color: #727683;
   font-size: 1rem;
   font-family: Inter,sans-serif;
@@ -2651,18 +2626,18 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
   text-align: right;
 }
 
-.emotion-116 {
+.emotion-114 {
   margin: 0;
   width: 100%;
   border-right: 1px solid #d9dadd;
   border-radius: 0 0 0.25rem 0.25rem;
 }
 
-.emotion-120 {
+.emotion-118 {
   width: 70%;
 }
 
-.emotion-122 {
+.emotion-120 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -2679,7 +2654,7 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
   min-width: 126px;
 }
 
-.emotion-125 {
+.emotion-123 {
   color: #641cb3;
   font-size: 1.5625rem;
   font-family: Space Grotesk,sans-serif;
@@ -2839,7 +2814,6 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
                           class="emotion-56 emotion-57"
                           data-size="medium"
                           data-testid="unit-input"
-                          id="«rj»"
                           max="9007199254740991"
                           min="1"
                           name="iteration-value"
@@ -2849,59 +2823,53 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
                           value="1"
                         />
                       </div>
-                       
                       <div
-                        class="emotion-58 emotion-59"
-                        width="12.6rem"
+                        aria-label="iteration-unit"
+                        class="emotion-58 emotion-59 emotion-60"
                       >
                         <div
-                          aria-label="iteration-unit"
-                          class="emotion-60 emotion-61 emotion-62"
+                          aria-controls="«rl»"
+                          aria-describedby="«rl»"
+                          class="emotion-61 emotion-62"
+                          data-container-full-width="true"
+                          tabindex="-1"
                         >
                           <div
-                            aria-controls="«rl»"
-                            aria-describedby="«rl»"
-                            class="emotion-63 emotion-64"
-                            data-container-full-width="true"
-                            tabindex="-1"
+                            class="emotion-50 emotion-1"
                           >
                             <div
-                              class="emotion-50 emotion-1"
+                              aria-expanded="false"
+                              aria-haspopup="listbox"
+                              class="emotion-65 emotion-66"
+                              data-disabled="false"
+                              data-dropdownvisible="false"
+                              data-readonly="false"
+                              data-size="medium"
+                              data-state="neutral"
+                              data-testid="select-input-iteration-unit"
+                              id="unit"
+                              role="combobox"
+                              tabindex="0"
                             >
                               <div
-                                aria-expanded="false"
-                                aria-haspopup="listbox"
-                                class="emotion-67 emotion-68"
-                                data-disabled="false"
-                                data-dropdownvisible="false"
-                                data-readonly="false"
-                                data-size="medium"
-                                data-state="neutral"
-                                data-testid="select-input-iteration-unit"
-                                id="unit"
-                                role="combobox"
-                                tabindex="0"
+                                class="emotion-67 emotion-68 emotion-15"
                               >
-                                <div
-                                  class="emotion-69 emotion-70 emotion-15"
+                                Hour(s)
+                              </div>
+                              <div
+                                class="emotion-70 emotion-71"
+                              >
+                                <svg
+                                  aria-label="show dropdown"
+                                  class="emotion-72 emotion-27"
+                                  viewBox="0 0 16 16"
                                 >
-                                  Hour(s)
-                                </div>
-                                <div
-                                  class="emotion-72 emotion-73"
-                                >
-                                  <svg
-                                    aria-label="show dropdown"
-                                    class="emotion-74 emotion-27"
-                                    viewBox="0 0 16 16"
-                                  >
-                                    <path
-                                      clip-rule="evenodd"
-                                      d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
-                                      fill-rule="evenodd"
-                                    />
-                                  </svg>
-                                </div>
+                                  <path
+                                    clip-rule="evenodd"
+                                    d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
+                                    fill-rule="evenodd"
+                                  />
+                                </svg>
                               </div>
                             </div>
                           </div>
@@ -2915,14 +2883,14 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
           </thead>
           <tbody>
             <tr
-              class="emotion-76 emotion-77"
+              class="emotion-74 emotion-75"
             >
               <td
-                class="emotion-78 emotion-191"
+                class="emotion-76 emotion-191"
                 width="70%"
               >
                 <div
-                  class="emotion-80 emotion-81"
+                  class="emotion-78 emotion-79"
                 >
                   <div
                     class="emotion-10 emotion-1"
@@ -2938,14 +2906,14 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
                     </div>
                   </div>
                   <div
-                    class="emotion-88 emotion-17"
+                    class="emotion-86 emotion-17"
                   >
                     <div
                       class="emotion-50 emotion-1"
                     >
                       <div>
                         <div
-                          class="emotion-92 emotion-93"
+                          class="emotion-90 emotion-91"
                           data-controls="true"
                           data-disabled="false"
                           data-error="false"
@@ -2954,16 +2922,16 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
                           data-unit="false"
                         >
                           <div
-                            class="emotion-94 emotion-95"
+                            class="emotion-92 emotion-93"
                             data-size="small"
                           >
                             <button
                               aria-label="minus"
-                              class="emotion-96 emotion-97"
+                              class="emotion-94 emotion-95"
                               type="button"
                             >
                               <svg
-                                class="emotion-98 emotion-27"
+                                class="emotion-96 emotion-27"
                                 viewBox="0 0 16 16"
                               >
                                 <path
@@ -2973,10 +2941,10 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
                             </button>
                           </div>
                           <div
-                            class="emotion-100 emotion-101 emotion-102"
+                            class="emotion-98 emotion-99 emotion-100"
                           >
                             <input
-                              class="emotion-103 emotion-104"
+                              class="emotion-101 emotion-102"
                               data-controls="true"
                               data-has-unit="false"
                               data-size="small"
@@ -2989,16 +2957,16 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
                             />
                           </div>
                           <div
-                            class="emotion-94 emotion-95"
+                            class="emotion-92 emotion-93"
                             data-size="small"
                           >
                             <button
                               aria-label="plus"
-                              class="emotion-96 emotion-97"
+                              class="emotion-94 emotion-95"
                               type="button"
                             >
                               <svg
-                                class="emotion-98 emotion-27"
+                                class="emotion-96 emotion-27"
                                 viewBox="0 0 16 16"
                               >
                                 <path
@@ -3014,10 +2982,10 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
                 </div>
               </td>
               <td
-                class="emotion-111 emotion-112"
+                class="emotion-109 emotion-110"
               >
                 <p
-                  class="emotion-113 emotion-114 emotion-15"
+                  class="emotion-111 emotion-112 emotion-15"
                 >
                   €0.00
                 </p>
@@ -3028,7 +2996,7 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
         <table
           cellpadding="0"
           cellspacing="0"
-          class="emotion-116 emotion-117"
+          class="emotion-114 emotion-115"
         >
           <colgroup>
             <col />
@@ -3040,13 +3008,13 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
             <tr>
               <td
                 aria-label="control"
-                class="emotion-120 emotion-121"
+                class="emotion-118 emotion-119"
               />
               <td
-                class="emotion-122 emotion-190"
+                class="emotion-120 emotion-190"
               >
                 <h3
-                  class="emotion-124 emotion-125 emotion-15"
+                  class="emotion-122 emotion-123 emotion-15"
                 >
                   <span
                     class="emotion-33 emotion-34"
@@ -3448,7 +3416,6 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
   flex-wrap: nowrap;
   border: 1px solid #d9dadd;
   border-radius: 0.25rem;
-  background-color: #ffffff;
 }
 
 .emotion-52:not([data-disabled='true']):not([data-readonly='true']):not(
@@ -3605,7 +3572,6 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
   padding-left: 1rem;
   background: transparent;
   color: #3f4250;
-  font-size: 0.875rem;
 }
 
 .emotion-56[data-size="small"] {
@@ -3652,41 +3618,34 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
   color: #b5b7bd;
 }
 
-.emotion-58 {
-  width: 12.6rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-61 {
+.emotion-59 {
   width: 100%;
+  width: 12.6rem;
 }
 
-.emotion-61 #unit {
+.emotion-59 #unit {
   border: none;
   background: transparent;
 }
 
-.emotion-61 #unit:focus,
-.emotion-61 #unit:active {
+.emotion-59 #unit:focus,
+.emotion-59 #unit:active {
   box-shadow: none;
 }
 
-.emotion-63 {
+.emotion-61 {
   display: inherit;
 }
 
-.emotion-63[data-container-full-height="true"] {
+.emotion-61[data-container-full-height="true"] {
   height: 100%;
 }
 
-.emotion-63[data-container-full-width="true"] {
+.emotion-61[data-container-full-width="true"] {
   width: 100%;
 }
 
-.emotion-67 {
+.emotion-65 {
   display: grid;
   width: 100%;
   gap: 0.5rem;
@@ -3701,85 +3660,85 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
   width: 100%;
 }
 
-.emotion-67[data-size='small'] {
+.emotion-65[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-67[data-size='medium'] {
+.emotion-65[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-67[data-size='large'] {
+.emotion-65[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-67[data-state='neutral'] {
+.emotion-65[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.emotion-67[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-65[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-67[data-state='neutral']:not([data-disabled='true']):hover {
+.emotion-65[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-67[data-state='neutral']:not([data-disabled='true']):focus-visible {
+.emotion-65[data-state='neutral']:not([data-disabled='true']):focus-visible {
   outline: 5px auto Highlight;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-.emotion-67[data-state='neutral'][data-dropdownvisible='true'] {
+.emotion-65[data-state='neutral'][data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.emotion-67[data-state='success'] {
+.emotion-65[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.emotion-67[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-65[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #1b533f;
   box-shadow: 0px 0px 0px 3px #45d19f40;
 }
 
-.emotion-67[data-state='success'][data-dropdownvisible='true'] {
+.emotion-65[data-state='success'][data-dropdownvisible='true'] {
   border-color: #1b533f;
 }
 
-.emotion-67[data-state='danger'] {
+.emotion-65[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-67[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-65[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-67[data-state='danger'][data-dropdownvisible='true'] {
+.emotion-65[data-state='danger'][data-dropdownvisible='true'] {
   border-color: #92103f;
 }
 
-.emotion-67:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-65:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-67[data-readonly='true'] {
+.emotion-65[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-67[data-disabled='true'] {
+.emotion-65[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-70 {
+.emotion-68 {
   color: #3f4250;
   font-size: 0.875rem;
   font-family: Inter,sans-serif;
@@ -3797,7 +3756,7 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
   align-self: center;
 }
 
-.emotion-72 {
+.emotion-70 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3825,7 +3784,7 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
   display: flex;
 }
 
-.emotion-74 {
+.emotion-72 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1rem;
@@ -3834,12 +3793,12 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
   min-height: 1rem;
 }
 
-.emotion-74 .fillStroke {
+.emotion-72 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
 
-.emotion-78 {
+.emotion-76 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -3847,7 +3806,7 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
   min-width: 230px;
 }
 
-.emotion-80 {
+.emotion-78 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3868,11 +3827,11 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
   padding-bottom: 8px;
 }
 
-.emotion-88 {
+.emotion-86 {
   text-align: right;
 }
 
-.emotion-92 {
+.emotion-90 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3891,52 +3850,52 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
   border-radius: 0.25rem;
 }
 
-.emotion-92:focus-within {
+.emotion-90:focus-within {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-92[data-success='true'] {
+.emotion-90[data-success='true'] {
   border-color: #22674e;
 }
 
-.emotion-92[data-error='true'] {
+.emotion-90[data-error='true'] {
   border-color: #b3144d;
 }
 
-.emotion-92:hover {
+.emotion-90:hover {
   border-color: #792dd4;
 }
 
-.emotion-92[data-readonly='true'] {
+.emotion-90[data-readonly='true'] {
   border-color: #d9dadd;
   background: #f9f9fa;
   cursor: not-allowed;
 }
 
-.emotion-92[data-disabled='true'] {
+.emotion-90[data-disabled='true'] {
   border-color: #e9eaeb;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.emotion-92[data-controls='false']>.emotion-100 {
+.emotion-90[data-controls='false']>.emotion-98 {
   border-width: 0;
 }
 
-.emotion-92[data-size='small'] {
+.emotion-90[data-size='small'] {
   height: 2rem;
 }
 
-.emotion-92[data-size='medium'] {
+.emotion-90[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-92[data-size='large'] {
+.emotion-90[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-94 {
+.emotion-92 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3960,20 +3919,20 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
   padding: 0.125rem 0.5rem;
 }
 
-.emotion-94[data-size='small'] {
+.emotion-92[data-size='small'] {
   height: 2rem;
 }
 
-.emotion-94[data-size='medium'] {
+.emotion-92[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-94[data-size='large'] {
+.emotion-92[data-size='large'] {
   height: 3rem;
   padding: 0.25rem 0.5rem;
 }
 
-.emotion-96 {
+.emotion-94 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -4013,26 +3972,26 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
   color: #3f4250;
 }
 
-.emotion-96:hover {
+.emotion-94:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-96:active {
+.emotion-94:active {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.emotion-96 .e1y1n78x0 {
+.emotion-94 .e1y1n78x0 {
   stroke: transparent;
 }
 
-.emotion-96:hover,
-.emotion-96:active {
+.emotion-94:hover,
+.emotion-94:active {
   background: #e9eaeb;
   color: #222638;
 }
 
-.emotion-98 {
+.emotion-96 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -4041,12 +4000,12 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
   min-height: 1rem;
 }
 
-.emotion-98 .fillStroke {
+.emotion-96 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.emotion-101 {
+.emotion-99 {
   display: grid;
   grid-template-columns: 1fr auto;
   -webkit-align-items: center;
@@ -4063,7 +4022,7 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
   width: 100%;
 }
 
-.emotion-103 {
+.emotion-101 {
   outline: none;
   border: none;
   padding: 0;
@@ -4078,18 +4037,18 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
   background: none;
 }
 
-.emotion-103[data-has-unit='true'] {
+.emotion-101[data-has-unit='true'] {
   text-align: left;
   padding: 0.5rem 0 0.5rem 0.5rem;
 }
 
-.emotion-103::-webkit-outer-spin-button,
-.emotion-103::-webkit-inner-spin-button {
+.emotion-101::-webkit-outer-spin-button,
+.emotion-101::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.emotion-103 {
+.emotion-101 {
   -moz-appearance: textfield;
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
@@ -4097,15 +4056,15 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
   appearance: textfield;
 }
 
-.emotion-103[data-size='small'] {
+.emotion-101[data-size='small'] {
   height: 2rem;
 }
 
-.emotion-103[data-size='medium'] {
+.emotion-101[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-103[data-size='large'] {
+.emotion-101[data-size='large'] {
   height: 3rem;
   font-size: 1rem;
   font-family: Inter,sans-serif;
@@ -4113,34 +4072,34 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
   line-height: 1.5rem;
 }
 
-.emotion-103:-moz-read-only {
+.emotion-101:-moz-read-only {
   color: #3f4250;
   background: #f9f9fa;
   border-block: 1px solid #d9dadd;
 }
 
-.emotion-103:read-only {
+.emotion-101:read-only {
   color: #3f4250;
   background: #f9f9fa;
   border-block: 1px solid #d9dadd;
 }
 
-.emotion-103:-moz-read-only~.exvap482 {
+.emotion-101:-moz-read-only~.exvap482 {
   background: #f9f9fa;
 }
 
-.emotion-103:read-only~.exvap482 {
+.emotion-101:read-only~.exvap482 {
   background: #f9f9fa;
 }
 
-.emotion-103:disabled {
+.emotion-101:disabled {
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
   border-block: 1px solid #e9eaeb;
 }
 
-.emotion-103:disabled~.exvap482 {
+.emotion-101:disabled~.exvap482 {
   background: #f3f3f4;
   cursor: not-allowed;
   -webkit-user-select: none;
@@ -4149,16 +4108,16 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
   user-select: none;
 }
 
-.emotion-103:placeholder-shown~.exvap482 {
+.emotion-101:placeholder-shown~.exvap482 {
   color: #727683;
   font-size: 1rem;
 }
 
-.emotion-103[data-controls='false'] {
+.emotion-101[data-controls='false'] {
   text-align: left;
 }
 
-.emotion-111 {
+.emotion-109 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -4170,7 +4129,7 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
   min-width: 126px;
 }
 
-.emotion-114 {
+.emotion-112 {
   color: #727683;
   font-size: 1rem;
   font-family: Inter,sans-serif;
@@ -4183,18 +4142,18 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
   text-align: right;
 }
 
-.emotion-116 {
+.emotion-114 {
   margin: 0;
   width: 100%;
   border-right: 1px solid #d9dadd;
   border-radius: 0 0 0.25rem 0.25rem;
 }
 
-.emotion-120 {
+.emotion-118 {
   width: 70%;
 }
 
-.emotion-122 {
+.emotion-120 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -4211,7 +4170,7 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
   min-width: 126px;
 }
 
-.emotion-125 {
+.emotion-123 {
   color: #641cb3;
   font-size: 1.5625rem;
   font-family: Space Grotesk,sans-serif;
@@ -4371,7 +4330,6 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
                           class="emotion-56 emotion-57"
                           data-size="medium"
                           data-testid="unit-input"
-                          id="«r1l»"
                           max="9007199254740991"
                           min="1"
                           name="iteration-value"
@@ -4381,59 +4339,53 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
                           value="1"
                         />
                       </div>
-                       
                       <div
-                        class="emotion-58 emotion-59"
-                        width="12.6rem"
+                        aria-label="iteration-unit"
+                        class="emotion-58 emotion-59 emotion-60"
                       >
                         <div
-                          aria-label="iteration-unit"
-                          class="emotion-60 emotion-61 emotion-62"
+                          aria-controls="«r1n»"
+                          aria-describedby="«r1n»"
+                          class="emotion-61 emotion-62"
+                          data-container-full-width="true"
+                          tabindex="-1"
                         >
                           <div
-                            aria-controls="«r1n»"
-                            aria-describedby="«r1n»"
-                            class="emotion-63 emotion-64"
-                            data-container-full-width="true"
-                            tabindex="-1"
+                            class="emotion-50 emotion-1"
                           >
                             <div
-                              class="emotion-50 emotion-1"
+                              aria-expanded="false"
+                              aria-haspopup="listbox"
+                              class="emotion-65 emotion-66"
+                              data-disabled="false"
+                              data-dropdownvisible="false"
+                              data-readonly="false"
+                              data-size="medium"
+                              data-state="neutral"
+                              data-testid="select-input-iteration-unit"
+                              id="unit"
+                              role="combobox"
+                              tabindex="0"
                             >
                               <div
-                                aria-expanded="false"
-                                aria-haspopup="listbox"
-                                class="emotion-67 emotion-68"
-                                data-disabled="false"
-                                data-dropdownvisible="false"
-                                data-readonly="false"
-                                data-size="medium"
-                                data-state="neutral"
-                                data-testid="select-input-iteration-unit"
-                                id="unit"
-                                role="combobox"
-                                tabindex="0"
+                                class="emotion-67 emotion-68 emotion-15"
                               >
-                                <div
-                                  class="emotion-69 emotion-70 emotion-15"
+                                Hour(s)
+                              </div>
+                              <div
+                                class="emotion-70 emotion-71"
+                              >
+                                <svg
+                                  aria-label="show dropdown"
+                                  class="emotion-72 emotion-27"
+                                  viewBox="0 0 16 16"
                                 >
-                                  Hour(s)
-                                </div>
-                                <div
-                                  class="emotion-72 emotion-73"
-                                >
-                                  <svg
-                                    aria-label="show dropdown"
-                                    class="emotion-74 emotion-27"
-                                    viewBox="0 0 16 16"
-                                  >
-                                    <path
-                                      clip-rule="evenodd"
-                                      d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
-                                      fill-rule="evenodd"
-                                    />
-                                  </svg>
-                                </div>
+                                  <path
+                                    clip-rule="evenodd"
+                                    d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
+                                    fill-rule="evenodd"
+                                  />
+                                </svg>
                               </div>
                             </div>
                           </div>
@@ -4447,14 +4399,14 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
           </thead>
           <tbody>
             <tr
-              class="emotion-76 emotion-77"
+              class="emotion-74 emotion-75"
             >
               <td
-                class="emotion-78 emotion-191"
+                class="emotion-76 emotion-191"
                 width="70%"
               >
                 <div
-                  class="emotion-80 emotion-81"
+                  class="emotion-78 emotion-79"
                 >
                   <div
                     class="emotion-10 emotion-1"
@@ -4470,14 +4422,14 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
                     </div>
                   </div>
                   <div
-                    class="emotion-88 emotion-17"
+                    class="emotion-86 emotion-17"
                   >
                     <div
                       class="emotion-50 emotion-1"
                     >
                       <div>
                         <div
-                          class="emotion-92 emotion-93"
+                          class="emotion-90 emotion-91"
                           data-controls="true"
                           data-disabled="false"
                           data-error="false"
@@ -4486,16 +4438,16 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
                           data-unit="false"
                         >
                           <div
-                            class="emotion-94 emotion-95"
+                            class="emotion-92 emotion-93"
                             data-size="small"
                           >
                             <button
                               aria-label="minus"
-                              class="emotion-96 emotion-97"
+                              class="emotion-94 emotion-95"
                               type="button"
                             >
                               <svg
-                                class="emotion-98 emotion-27"
+                                class="emotion-96 emotion-27"
                                 viewBox="0 0 16 16"
                               >
                                 <path
@@ -4505,10 +4457,10 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
                             </button>
                           </div>
                           <div
-                            class="emotion-100 emotion-101 emotion-102"
+                            class="emotion-98 emotion-99 emotion-100"
                           >
                             <input
-                              class="emotion-103 emotion-104"
+                              class="emotion-101 emotion-102"
                               data-controls="true"
                               data-has-unit="false"
                               data-size="small"
@@ -4521,16 +4473,16 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
                             />
                           </div>
                           <div
-                            class="emotion-94 emotion-95"
+                            class="emotion-92 emotion-93"
                             data-size="small"
                           >
                             <button
                               aria-label="plus"
-                              class="emotion-96 emotion-97"
+                              class="emotion-94 emotion-95"
                               type="button"
                             >
                               <svg
-                                class="emotion-98 emotion-27"
+                                class="emotion-96 emotion-27"
                                 viewBox="0 0 16 16"
                               >
                                 <path
@@ -4546,10 +4498,10 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
                 </div>
               </td>
               <td
-                class="emotion-111 emotion-112"
+                class="emotion-109 emotion-110"
               >
                 <p
-                  class="emotion-113 emotion-114 emotion-15"
+                  class="emotion-111 emotion-112 emotion-15"
                 >
                   €0.00
                 </p>
@@ -4560,7 +4512,7 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
         <table
           cellpadding="0"
           cellspacing="0"
-          class="emotion-116 emotion-117"
+          class="emotion-114 emotion-115"
         >
           <colgroup>
             <col />
@@ -4572,13 +4524,13 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
             <tr>
               <td
                 aria-label="control"
-                class="emotion-120 emotion-121"
+                class="emotion-118 emotion-119"
               />
               <td
-                class="emotion-122 emotion-190"
+                class="emotion-120 emotion-190"
               >
                 <h3
-                  class="emotion-124 emotion-125 emotion-15"
+                  class="emotion-122 emotion-123 emotion-15"
                 >
                   <span
                     class="emotion-33 emotion-34"
@@ -4980,7 +4932,6 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
   flex-wrap: nowrap;
   border: 1px solid #d9dadd;
   border-radius: 0.25rem;
-  background-color: #ffffff;
 }
 
 .emotion-52:not([data-disabled='true']):not([data-readonly='true']):not(
@@ -5137,7 +5088,6 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
   padding-left: 1rem;
   background: transparent;
   color: #3f4250;
-  font-size: 0.875rem;
 }
 
 .emotion-56[data-size="small"] {
@@ -5184,41 +5134,34 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
   color: #b5b7bd;
 }
 
-.emotion-58 {
-  width: 12.6rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-61 {
+.emotion-59 {
   width: 100%;
+  width: 12.6rem;
 }
 
-.emotion-61 #unit {
+.emotion-59 #unit {
   border: none;
   background: transparent;
 }
 
-.emotion-61 #unit:focus,
-.emotion-61 #unit:active {
+.emotion-59 #unit:focus,
+.emotion-59 #unit:active {
   box-shadow: none;
 }
 
-.emotion-63 {
+.emotion-61 {
   display: inherit;
 }
 
-.emotion-63[data-container-full-height="true"] {
+.emotion-61[data-container-full-height="true"] {
   height: 100%;
 }
 
-.emotion-63[data-container-full-width="true"] {
+.emotion-61[data-container-full-width="true"] {
   width: 100%;
 }
 
-.emotion-67 {
+.emotion-65 {
   display: grid;
   width: 100%;
   gap: 0.5rem;
@@ -5233,85 +5176,85 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
   width: 100%;
 }
 
-.emotion-67[data-size='small'] {
+.emotion-65[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-67[data-size='medium'] {
+.emotion-65[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-67[data-size='large'] {
+.emotion-65[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-67[data-state='neutral'] {
+.emotion-65[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.emotion-67[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-65[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-67[data-state='neutral']:not([data-disabled='true']):hover {
+.emotion-65[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-67[data-state='neutral']:not([data-disabled='true']):focus-visible {
+.emotion-65[data-state='neutral']:not([data-disabled='true']):focus-visible {
   outline: 5px auto Highlight;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-.emotion-67[data-state='neutral'][data-dropdownvisible='true'] {
+.emotion-65[data-state='neutral'][data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.emotion-67[data-state='success'] {
+.emotion-65[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.emotion-67[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-65[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #1b533f;
   box-shadow: 0px 0px 0px 3px #45d19f40;
 }
 
-.emotion-67[data-state='success'][data-dropdownvisible='true'] {
+.emotion-65[data-state='success'][data-dropdownvisible='true'] {
   border-color: #1b533f;
 }
 
-.emotion-67[data-state='danger'] {
+.emotion-65[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-67[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-65[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-67[data-state='danger'][data-dropdownvisible='true'] {
+.emotion-65[data-state='danger'][data-dropdownvisible='true'] {
   border-color: #92103f;
 }
 
-.emotion-67:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-65:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-67[data-readonly='true'] {
+.emotion-65[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-67[data-disabled='true'] {
+.emotion-65[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-70 {
+.emotion-68 {
   color: #3f4250;
   font-size: 0.875rem;
   font-family: Inter,sans-serif;
@@ -5329,7 +5272,7 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
   align-self: center;
 }
 
-.emotion-72 {
+.emotion-70 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5357,7 +5300,7 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
   display: flex;
 }
 
-.emotion-74 {
+.emotion-72 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1rem;
@@ -5366,12 +5309,12 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
   min-height: 1rem;
 }
 
-.emotion-74 .fillStroke {
+.emotion-72 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
 
-.emotion-78 {
+.emotion-76 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -5379,7 +5322,7 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
   min-width: 230px;
 }
 
-.emotion-80 {
+.emotion-78 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5400,7 +5343,7 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
   padding-bottom: 8px;
 }
 
-.emotion-89 {
+.emotion-87 {
   color: #641cb3;
   font-size: 1rem;
   font-family: Inter,sans-serif;
@@ -5414,11 +5357,11 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
   margin-left: 0.5rem;
 }
 
-.emotion-91 {
+.emotion-89 {
   text-align: right;
 }
 
-.emotion-95 {
+.emotion-93 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5437,52 +5380,52 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
   border-radius: 0.25rem;
 }
 
-.emotion-95:focus-within {
+.emotion-93:focus-within {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-95[data-success='true'] {
+.emotion-93[data-success='true'] {
   border-color: #22674e;
 }
 
-.emotion-95[data-error='true'] {
+.emotion-93[data-error='true'] {
   border-color: #b3144d;
 }
 
-.emotion-95:hover {
+.emotion-93:hover {
   border-color: #792dd4;
 }
 
-.emotion-95[data-readonly='true'] {
+.emotion-93[data-readonly='true'] {
   border-color: #d9dadd;
   background: #f9f9fa;
   cursor: not-allowed;
 }
 
-.emotion-95[data-disabled='true'] {
+.emotion-93[data-disabled='true'] {
   border-color: #e9eaeb;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.emotion-95[data-controls='false']>.emotion-103 {
+.emotion-93[data-controls='false']>.emotion-101 {
   border-width: 0;
 }
 
-.emotion-95[data-size='small'] {
+.emotion-93[data-size='small'] {
   height: 2rem;
 }
 
-.emotion-95[data-size='medium'] {
+.emotion-93[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-95[data-size='large'] {
+.emotion-93[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-97 {
+.emotion-95 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5506,20 +5449,20 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
   padding: 0.125rem 0.5rem;
 }
 
-.emotion-97[data-size='small'] {
+.emotion-95[data-size='small'] {
   height: 2rem;
 }
 
-.emotion-97[data-size='medium'] {
+.emotion-95[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-97[data-size='large'] {
+.emotion-95[data-size='large'] {
   height: 3rem;
   padding: 0.25rem 0.5rem;
 }
 
-.emotion-99 {
+.emotion-97 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -5559,26 +5502,26 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
   color: #3f4250;
 }
 
-.emotion-99:hover {
+.emotion-97:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-99:active {
+.emotion-97:active {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.emotion-99 .e1y1n78x0 {
+.emotion-97 .e1y1n78x0 {
   stroke: transparent;
 }
 
-.emotion-99:hover,
-.emotion-99:active {
+.emotion-97:hover,
+.emotion-97:active {
   background: #e9eaeb;
   color: #222638;
 }
 
-.emotion-101 {
+.emotion-99 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -5587,12 +5530,12 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
   min-height: 1rem;
 }
 
-.emotion-101 .fillStroke {
+.emotion-99 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.emotion-104 {
+.emotion-102 {
   display: grid;
   grid-template-columns: 1fr auto;
   -webkit-align-items: center;
@@ -5609,7 +5552,7 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
   width: 100%;
 }
 
-.emotion-106 {
+.emotion-104 {
   outline: none;
   border: none;
   padding: 0;
@@ -5624,18 +5567,18 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
   background: none;
 }
 
-.emotion-106[data-has-unit='true'] {
+.emotion-104[data-has-unit='true'] {
   text-align: left;
   padding: 0.5rem 0 0.5rem 0.5rem;
 }
 
-.emotion-106::-webkit-outer-spin-button,
-.emotion-106::-webkit-inner-spin-button {
+.emotion-104::-webkit-outer-spin-button,
+.emotion-104::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.emotion-106 {
+.emotion-104 {
   -moz-appearance: textfield;
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
@@ -5643,15 +5586,15 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
   appearance: textfield;
 }
 
-.emotion-106[data-size='small'] {
+.emotion-104[data-size='small'] {
   height: 2rem;
 }
 
-.emotion-106[data-size='medium'] {
+.emotion-104[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-106[data-size='large'] {
+.emotion-104[data-size='large'] {
   height: 3rem;
   font-size: 1rem;
   font-family: Inter,sans-serif;
@@ -5659,34 +5602,34 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
   line-height: 1.5rem;
 }
 
-.emotion-106:-moz-read-only {
+.emotion-104:-moz-read-only {
   color: #3f4250;
   background: #f9f9fa;
   border-block: 1px solid #d9dadd;
 }
 
-.emotion-106:read-only {
+.emotion-104:read-only {
   color: #3f4250;
   background: #f9f9fa;
   border-block: 1px solid #d9dadd;
 }
 
-.emotion-106:-moz-read-only~.exvap482 {
+.emotion-104:-moz-read-only~.exvap482 {
   background: #f9f9fa;
 }
 
-.emotion-106:read-only~.exvap482 {
+.emotion-104:read-only~.exvap482 {
   background: #f9f9fa;
 }
 
-.emotion-106:disabled {
+.emotion-104:disabled {
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
   border-block: 1px solid #e9eaeb;
 }
 
-.emotion-106:disabled~.exvap482 {
+.emotion-104:disabled~.exvap482 {
   background: #f3f3f4;
   cursor: not-allowed;
   -webkit-user-select: none;
@@ -5695,16 +5638,16 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
   user-select: none;
 }
 
-.emotion-106:placeholder-shown~.exvap482 {
+.emotion-104:placeholder-shown~.exvap482 {
   color: #727683;
   font-size: 1rem;
 }
 
-.emotion-106[data-controls='false'] {
+.emotion-104[data-controls='false'] {
   text-align: left;
 }
 
-.emotion-114 {
+.emotion-112 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -5716,7 +5659,7 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
   min-width: 126px;
 }
 
-.emotion-117 {
+.emotion-115 {
   color: #641cb3;
   font-size: 1rem;
   font-family: Inter,sans-serif;
@@ -5729,7 +5672,7 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
   text-align: right;
 }
 
-.emotion-120 {
+.emotion-118 {
   font-size: 1rem;
   font-family: Inter,sans-serif;
   font-weight: 400;
@@ -5741,18 +5684,18 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
   text-align: right;
 }
 
-.emotion-122 {
+.emotion-120 {
   margin: 0;
   width: 100%;
   border-right: 1px solid #d9dadd;
   border-radius: 0 0 0.25rem 0.25rem;
 }
 
-.emotion-126 {
+.emotion-124 {
   width: 70%;
 }
 
-.emotion-128 {
+.emotion-126 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -5769,7 +5712,7 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
   min-width: 126px;
 }
 
-.emotion-131 {
+.emotion-129 {
   color: #641cb3;
   font-size: 1.5625rem;
   font-family: Space Grotesk,sans-serif;
@@ -5929,7 +5872,6 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
                           class="emotion-56 emotion-57"
                           data-size="medium"
                           data-testid="unit-input"
-                          id="«r13»"
                           max="9007199254740991"
                           min="1"
                           name="iteration-value"
@@ -5939,59 +5881,53 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
                           value="1"
                         />
                       </div>
-                       
                       <div
-                        class="emotion-58 emotion-59"
-                        width="12.6rem"
+                        aria-label="iteration-unit"
+                        class="emotion-58 emotion-59 emotion-60"
                       >
                         <div
-                          aria-label="iteration-unit"
-                          class="emotion-60 emotion-61 emotion-62"
+                          aria-controls="«r15»"
+                          aria-describedby="«r15»"
+                          class="emotion-61 emotion-62"
+                          data-container-full-width="true"
+                          tabindex="-1"
                         >
                           <div
-                            aria-controls="«r15»"
-                            aria-describedby="«r15»"
-                            class="emotion-63 emotion-64"
-                            data-container-full-width="true"
-                            tabindex="-1"
+                            class="emotion-50 emotion-1"
                           >
                             <div
-                              class="emotion-50 emotion-1"
+                              aria-expanded="false"
+                              aria-haspopup="listbox"
+                              class="emotion-65 emotion-66"
+                              data-disabled="false"
+                              data-dropdownvisible="false"
+                              data-readonly="false"
+                              data-size="medium"
+                              data-state="neutral"
+                              data-testid="select-input-iteration-unit"
+                              id="unit"
+                              role="combobox"
+                              tabindex="0"
                             >
                               <div
-                                aria-expanded="false"
-                                aria-haspopup="listbox"
-                                class="emotion-67 emotion-68"
-                                data-disabled="false"
-                                data-dropdownvisible="false"
-                                data-readonly="false"
-                                data-size="medium"
-                                data-state="neutral"
-                                data-testid="select-input-iteration-unit"
-                                id="unit"
-                                role="combobox"
-                                tabindex="0"
+                                class="emotion-67 emotion-68 emotion-15"
                               >
-                                <div
-                                  class="emotion-69 emotion-70 emotion-15"
+                                Hour(s)
+                              </div>
+                              <div
+                                class="emotion-70 emotion-71"
+                              >
+                                <svg
+                                  aria-label="show dropdown"
+                                  class="emotion-72 emotion-27"
+                                  viewBox="0 0 16 16"
                                 >
-                                  Hour(s)
-                                </div>
-                                <div
-                                  class="emotion-72 emotion-73"
-                                >
-                                  <svg
-                                    aria-label="show dropdown"
-                                    class="emotion-74 emotion-27"
-                                    viewBox="0 0 16 16"
-                                  >
-                                    <path
-                                      clip-rule="evenodd"
-                                      d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
-                                      fill-rule="evenodd"
-                                    />
-                                  </svg>
-                                </div>
+                                  <path
+                                    clip-rule="evenodd"
+                                    d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
+                                    fill-rule="evenodd"
+                                  />
+                                </svg>
                               </div>
                             </div>
                           </div>
@@ -6005,14 +5941,14 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
           </thead>
           <tbody>
             <tr
-              class="emotion-76 emotion-77"
+              class="emotion-74 emotion-75"
             >
               <td
-                class="emotion-78 emotion-191"
+                class="emotion-76 emotion-191"
                 width="70%"
               >
                 <div
-                  class="emotion-80 emotion-81"
+                  class="emotion-78 emotion-79"
                 >
                   <div
                     class="emotion-10 emotion-1"
@@ -6026,21 +5962,21 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
                         Chocolates
                       </p>
                       <p
-                        class="emotion-88 emotion-89 emotion-15"
+                        class="emotion-86 emotion-87 emotion-15"
                       >
                         Chocolate is never free :(
                       </p>
                     </div>
                   </div>
                   <div
-                    class="emotion-91 emotion-17"
+                    class="emotion-89 emotion-17"
                   >
                     <div
                       class="emotion-50 emotion-1"
                     >
                       <div>
                         <div
-                          class="emotion-95 emotion-96"
+                          class="emotion-93 emotion-94"
                           data-controls="true"
                           data-disabled="false"
                           data-error="false"
@@ -6049,16 +5985,16 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
                           data-unit="false"
                         >
                           <div
-                            class="emotion-97 emotion-98"
+                            class="emotion-95 emotion-96"
                             data-size="small"
                           >
                             <button
                               aria-label="minus"
-                              class="emotion-99 emotion-100"
+                              class="emotion-97 emotion-98"
                               type="button"
                             >
                               <svg
-                                class="emotion-101 emotion-27"
+                                class="emotion-99 emotion-27"
                                 viewBox="0 0 16 16"
                               >
                                 <path
@@ -6068,10 +6004,10 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
                             </button>
                           </div>
                           <div
-                            class="emotion-103 emotion-104 emotion-105"
+                            class="emotion-101 emotion-102 emotion-103"
                           >
                             <input
-                              class="emotion-106 emotion-107"
+                              class="emotion-104 emotion-105"
                               data-controls="true"
                               data-has-unit="false"
                               data-size="small"
@@ -6084,16 +6020,16 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
                             />
                           </div>
                           <div
-                            class="emotion-97 emotion-98"
+                            class="emotion-95 emotion-96"
                             data-size="small"
                           >
                             <button
                               aria-label="plus"
-                              class="emotion-99 emotion-100"
+                              class="emotion-97 emotion-98"
                               type="button"
                             >
                               <svg
-                                class="emotion-101 emotion-27"
+                                class="emotion-99 emotion-27"
                                 viewBox="0 0 16 16"
                               >
                                 <path
@@ -6109,15 +6045,15 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
                 </div>
               </td>
               <td
-                class="emotion-114 emotion-115"
+                class="emotion-112 emotion-113"
               >
                 <p
-                  class="emotion-116 emotion-117 emotion-15"
+                  class="emotion-114 emotion-115 emotion-15"
                 >
                   €50.00
                 </p>
                 <p
-                  class="emotion-119 emotion-120 emotion-15"
+                  class="emotion-117 emotion-118 emotion-15"
                 >
                   €1.00/chocolate/hour(s)
                 </p>
@@ -6128,7 +6064,7 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
         <table
           cellpadding="0"
           cellspacing="0"
-          class="emotion-122 emotion-123"
+          class="emotion-120 emotion-121"
         >
           <colgroup>
             <col />
@@ -6140,13 +6076,13 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
             <tr>
               <td
                 aria-label="control"
-                class="emotion-126 emotion-127"
+                class="emotion-124 emotion-125"
               />
               <td
-                class="emotion-128 emotion-190"
+                class="emotion-126 emotion-190"
               >
                 <h3
-                  class="emotion-130 emotion-131 emotion-15"
+                  class="emotion-128 emotion-129 emotion-15"
                 >
                   <span
                     class="emotion-33 emotion-34"
