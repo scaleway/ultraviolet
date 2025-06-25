@@ -814,7 +814,7 @@ export const Dropdown = ({
   }, [displayedOptions, numberOfOptions])
 
   const computedFooter = useMemo(() => {
-    if (footer && !emptyState) {
+    if (footer && !isEmpty) {
       if (typeof footer === 'function') {
         return (
           <PopupFooter>{footer(() => setIsDropdownVisible(false))}</PopupFooter>
@@ -825,7 +825,7 @@ export const Dropdown = ({
     }
 
     return null
-  }, [emptyState, footer, setIsDropdownVisible])
+  }, [isEmpty, footer, setIsDropdownVisible])
 
   return (
     <StyledPopup
