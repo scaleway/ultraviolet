@@ -48,7 +48,6 @@ exports[`EstimateCost - CustomUnitInput > render default values 1`] = `
   flex-wrap: nowrap;
   border: 1px solid #d9dadd;
   border-radius: 0.25rem;
-  background-color: #ffffff;
 }
 
 .emotion-2:not([data-disabled='true']):not([data-readonly='true']):not(
@@ -205,7 +204,6 @@ exports[`EstimateCost - CustomUnitInput > render default values 1`] = `
   padding-left: 1rem;
   background: transparent;
   color: #3f4250;
-  font-size: 0.875rem;
 }
 
 .emotion-6[data-size="small"] {
@@ -252,41 +250,34 @@ exports[`EstimateCost - CustomUnitInput > render default values 1`] = `
   color: #b5b7bd;
 }
 
-.emotion-8 {
-  width: 12.6rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-11 {
+.emotion-9 {
   width: 100%;
+  width: 12.6rem;
 }
 
-.emotion-11 #unit {
+.emotion-9 #unit {
   border: none;
   background: transparent;
 }
 
-.emotion-11 #unit:focus,
-.emotion-11 #unit:active {
+.emotion-9 #unit:focus,
+.emotion-9 #unit:active {
   box-shadow: none;
 }
 
-.emotion-13 {
+.emotion-11 {
   display: inherit;
 }
 
-.emotion-13[data-container-full-height="true"] {
+.emotion-11[data-container-full-height="true"] {
   height: 100%;
 }
 
-.emotion-13[data-container-full-width="true"] {
+.emotion-11[data-container-full-width="true"] {
   width: 100%;
 }
 
-.emotion-17 {
+.emotion-15 {
   display: grid;
   width: 100%;
   gap: 0.5rem;
@@ -301,85 +292,85 @@ exports[`EstimateCost - CustomUnitInput > render default values 1`] = `
   width: 100%;
 }
 
-.emotion-17[data-size='small'] {
+.emotion-15[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-17[data-size='medium'] {
+.emotion-15[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-17[data-size='large'] {
+.emotion-15[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-17[data-state='neutral'] {
+.emotion-15[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.emotion-17[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-15[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-17[data-state='neutral']:not([data-disabled='true']):hover {
+.emotion-15[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-17[data-state='neutral']:not([data-disabled='true']):focus-visible {
+.emotion-15[data-state='neutral']:not([data-disabled='true']):focus-visible {
   outline: 5px auto Highlight;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-.emotion-17[data-state='neutral'][data-dropdownvisible='true'] {
+.emotion-15[data-state='neutral'][data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.emotion-17[data-state='success'] {
+.emotion-15[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.emotion-17[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-15[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #1b533f;
   box-shadow: 0px 0px 0px 3px #45d19f40;
 }
 
-.emotion-17[data-state='success'][data-dropdownvisible='true'] {
+.emotion-15[data-state='success'][data-dropdownvisible='true'] {
   border-color: #1b533f;
 }
 
-.emotion-17[data-state='danger'] {
+.emotion-15[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-17[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-15[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-17[data-state='danger'][data-dropdownvisible='true'] {
+.emotion-15[data-state='danger'][data-dropdownvisible='true'] {
   border-color: #92103f;
 }
 
-.emotion-17:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-15:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-17[data-readonly='true'] {
+.emotion-15[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-17[data-disabled='true'] {
+.emotion-15[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-20 {
+.emotion-18 {
   color: #3f4250;
   font-size: 0.875rem;
   font-family: Inter,sans-serif;
@@ -397,7 +388,7 @@ exports[`EstimateCost - CustomUnitInput > render default values 1`] = `
   align-self: center;
 }
 
-.emotion-22 {
+.emotion-20 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -425,7 +416,7 @@ exports[`EstimateCost - CustomUnitInput > render default values 1`] = `
   display: flex;
 }
 
-.emotion-24 {
+.emotion-22 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1rem;
@@ -434,7 +425,7 @@ exports[`EstimateCost - CustomUnitInput > render default values 1`] = `
   min-height: 1rem;
 }
 
-.emotion-24 .fillStroke {
+.emotion-22 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
@@ -462,7 +453,6 @@ exports[`EstimateCost - CustomUnitInput > render default values 1`] = `
             class="emotion-6 emotion-7"
             data-size="medium"
             data-testid="unit-input"
-            id="«r0»"
             max="9007199254740991"
             min="1"
             name="iteration-value"
@@ -472,59 +462,53 @@ exports[`EstimateCost - CustomUnitInput > render default values 1`] = `
             value="1"
           />
         </div>
-         
         <div
-          class="emotion-8 emotion-9"
-          width="12.6rem"
+          aria-label="iteration-unit"
+          class="emotion-8 emotion-9 emotion-10"
         >
           <div
-            aria-label="iteration-unit"
-            class="emotion-10 emotion-11 emotion-12"
+            aria-controls="«r2»"
+            aria-describedby="«r2»"
+            class="emotion-11 emotion-12"
+            data-container-full-width="true"
+            tabindex="-1"
           >
             <div
-              aria-controls="«r2»"
-              aria-describedby="«r2»"
-              class="emotion-13 emotion-14"
-              data-container-full-width="true"
-              tabindex="-1"
+              class="emotion-0 emotion-1"
             >
               <div
-                class="emotion-0 emotion-1"
+                aria-expanded="false"
+                aria-haspopup="listbox"
+                class="emotion-15 emotion-16"
+                data-disabled="false"
+                data-dropdownvisible="false"
+                data-readonly="false"
+                data-size="medium"
+                data-state="neutral"
+                data-testid="select-input-iteration-unit"
+                id="unit"
+                role="combobox"
+                tabindex="0"
               >
                 <div
-                  aria-expanded="false"
-                  aria-haspopup="listbox"
-                  class="emotion-17 emotion-18"
-                  data-disabled="false"
-                  data-dropdownvisible="false"
-                  data-readonly="false"
-                  data-size="medium"
-                  data-state="neutral"
-                  data-testid="select-input-iteration-unit"
-                  id="unit"
-                  role="combobox"
-                  tabindex="0"
+                  class="emotion-17 emotion-18 emotion-19"
                 >
-                  <div
-                    class="emotion-19 emotion-20 emotion-21"
-                  >
-                    Hour(s)
-                  </div>
-                  <div
+                  Hour(s)
+                </div>
+                <div
+                  class="emotion-20 emotion-21"
+                >
+                  <svg
+                    aria-label="show dropdown"
                     class="emotion-22 emotion-23"
+                    viewBox="0 0 16 16"
                   >
-                    <svg
-                      aria-label="show dropdown"
-                      class="emotion-24 emotion-25"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        clip-rule="evenodd"
-                        d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
-                  </div>
+                    <path
+                      clip-rule="evenodd"
+                      d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
                 </div>
               </div>
             </div>

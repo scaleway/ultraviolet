@@ -778,7 +778,6 @@ exports[`EstimateCost - Item > render with labelTextVariant 1`] = `
   flex-wrap: nowrap;
   border: 1px solid #d9dadd;
   border-radius: 0.25rem;
-  background-color: #ffffff;
 }
 
 .emotion-51:not([data-disabled='true']):not([data-readonly='true']):not(
@@ -929,7 +928,6 @@ exports[`EstimateCost - Item > render with labelTextVariant 1`] = `
   flex-wrap: nowrap;
   border: 1px solid #d9dadd;
   border-radius: 0.25rem;
-  background-color: #ffffff;
 }
 
 .emotion-51:not([data-disabled='true']):not([data-readonly='true']):not(
@@ -1104,7 +1102,6 @@ exports[`EstimateCost - Item > render with labelTextVariant 1`] = `
   padding-left: 1rem;
   background: transparent;
   color: #3f4250;
-  font-size: 0.875rem;
 }
 
 .emotion-55[data-size="small"] {
@@ -1162,7 +1159,6 @@ exports[`EstimateCost - Item > render with labelTextVariant 1`] = `
   padding-left: 1rem;
   background: transparent;
   color: #3f4250;
-  font-size: 0.875rem;
 }
 
 .emotion-55[data-size="small"] {
@@ -1209,75 +1205,61 @@ exports[`EstimateCost - Item > render with labelTextVariant 1`] = `
   color: #b5b7bd;
 }
 
-.emotion-57 {
-  width: 12.6rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-57 {
-  width: 12.6rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-60 {
+.emotion-58 {
   width: 100%;
+  width: 12.6rem;
 }
 
-.emotion-60 #unit {
+.emotion-58 #unit {
   border: none;
   background: transparent;
 }
 
-.emotion-60 #unit:focus,
-.emotion-60 #unit:active {
+.emotion-58 #unit:focus,
+.emotion-58 #unit:active {
   box-shadow: none;
 }
 
-.emotion-60 {
+.emotion-58 {
   width: 100%;
+  width: 12.6rem;
 }
 
-.emotion-60 #unit {
+.emotion-58 #unit {
   border: none;
   background: transparent;
 }
 
-.emotion-60 #unit:focus,
-.emotion-60 #unit:active {
+.emotion-58 #unit:focus,
+.emotion-58 #unit:active {
   box-shadow: none;
 }
 
-.emotion-62 {
+.emotion-60 {
   display: inherit;
 }
 
-.emotion-62[data-container-full-height="true"] {
+.emotion-60[data-container-full-height="true"] {
   height: 100%;
 }
 
-.emotion-62[data-container-full-width="true"] {
+.emotion-60[data-container-full-width="true"] {
   width: 100%;
 }
 
-.emotion-62 {
+.emotion-60 {
   display: inherit;
 }
 
-.emotion-62[data-container-full-height="true"] {
+.emotion-60[data-container-full-height="true"] {
   height: 100%;
 }
 
-.emotion-62[data-container-full-width="true"] {
+.emotion-60[data-container-full-width="true"] {
   width: 100%;
 }
 
-.emotion-66 {
+.emotion-64 {
   display: grid;
   width: 100%;
   gap: 0.5rem;
@@ -1292,85 +1274,85 @@ exports[`EstimateCost - Item > render with labelTextVariant 1`] = `
   width: 100%;
 }
 
-.emotion-66[data-size='small'] {
+.emotion-64[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-66[data-size='medium'] {
+.emotion-64[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-66[data-size='large'] {
+.emotion-64[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-66[data-state='neutral'] {
+.emotion-64[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.emotion-66[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-64[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-66[data-state='neutral']:not([data-disabled='true']):hover {
+.emotion-64[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-66[data-state='neutral']:not([data-disabled='true']):focus-visible {
+.emotion-64[data-state='neutral']:not([data-disabled='true']):focus-visible {
   outline: 5px auto Highlight;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-.emotion-66[data-state='neutral'][data-dropdownvisible='true'] {
+.emotion-64[data-state='neutral'][data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.emotion-66[data-state='success'] {
+.emotion-64[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.emotion-66[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-64[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #1b533f;
   box-shadow: 0px 0px 0px 3px #45d19f40;
 }
 
-.emotion-66[data-state='success'][data-dropdownvisible='true'] {
+.emotion-64[data-state='success'][data-dropdownvisible='true'] {
   border-color: #1b533f;
 }
 
-.emotion-66[data-state='danger'] {
+.emotion-64[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-66[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-64[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-66[data-state='danger'][data-dropdownvisible='true'] {
+.emotion-64[data-state='danger'][data-dropdownvisible='true'] {
   border-color: #92103f;
 }
 
-.emotion-66:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-64:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-66[data-readonly='true'] {
+.emotion-64[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-66[data-disabled='true'] {
+.emotion-64[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-66 {
+.emotion-64 {
   display: grid;
   width: 100%;
   gap: 0.5rem;
@@ -1385,85 +1367,103 @@ exports[`EstimateCost - Item > render with labelTextVariant 1`] = `
   width: 100%;
 }
 
-.emotion-66[data-size='small'] {
+.emotion-64[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-66[data-size='medium'] {
+.emotion-64[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-66[data-size='large'] {
+.emotion-64[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-66[data-state='neutral'] {
+.emotion-64[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.emotion-66[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-64[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-66[data-state='neutral']:not([data-disabled='true']):hover {
+.emotion-64[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-66[data-state='neutral']:not([data-disabled='true']):focus-visible {
+.emotion-64[data-state='neutral']:not([data-disabled='true']):focus-visible {
   outline: 5px auto Highlight;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-.emotion-66[data-state='neutral'][data-dropdownvisible='true'] {
+.emotion-64[data-state='neutral'][data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.emotion-66[data-state='success'] {
+.emotion-64[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.emotion-66[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-64[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #1b533f;
   box-shadow: 0px 0px 0px 3px #45d19f40;
 }
 
-.emotion-66[data-state='success'][data-dropdownvisible='true'] {
+.emotion-64[data-state='success'][data-dropdownvisible='true'] {
   border-color: #1b533f;
 }
 
-.emotion-66[data-state='danger'] {
+.emotion-64[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-66[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-64[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-66[data-state='danger'][data-dropdownvisible='true'] {
+.emotion-64[data-state='danger'][data-dropdownvisible='true'] {
   border-color: #92103f;
 }
 
-.emotion-66:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-64:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-66[data-readonly='true'] {
+.emotion-64[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-66[data-disabled='true'] {
+.emotion-64[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-69 {
+.emotion-67 {
+  color: #3f4250;
+  font-size: 0.875rem;
+  font-family: Inter,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.emotion-67 {
   color: #3f4250;
   font-size: 0.875rem;
   font-family: Inter,sans-serif;
@@ -1482,24 +1482,34 @@ exports[`EstimateCost - Item > render with labelTextVariant 1`] = `
 }
 
 .emotion-69 {
-  color: #3f4250;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding-right: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-.emotion-71 {
+.emotion-69 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1528,34 +1538,6 @@ exports[`EstimateCost - Item > render with labelTextVariant 1`] = `
 }
 
 .emotion-71 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  padding-right: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-73 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1rem;
@@ -1564,12 +1546,12 @@ exports[`EstimateCost - Item > render with labelTextVariant 1`] = `
   min-height: 1rem;
 }
 
-.emotion-73 .fillStroke {
+.emotion-71 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
 
-.emotion-73 {
+.emotion-71 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1rem;
@@ -1578,12 +1560,20 @@ exports[`EstimateCost - Item > render with labelTextVariant 1`] = `
   min-height: 1rem;
 }
 
-.emotion-73 .fillStroke {
+.emotion-71 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
 
-.emotion-77 {
+.emotion-75 {
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  width: 70%;
+  min-width: 230px;
+}
+
+.emotion-75 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -1592,14 +1582,6 @@ exports[`EstimateCost - Item > render with labelTextVariant 1`] = `
 }
 
 .emotion-77 {
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  width: 70%;
-  min-width: 230px;
-}
-
-.emotion-79 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1620,7 +1602,7 @@ exports[`EstimateCost - Item > render with labelTextVariant 1`] = `
   padding-bottom: 8px;
 }
 
-.emotion-79 {
+.emotion-77 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1641,15 +1623,42 @@ exports[`EstimateCost - Item > render with labelTextVariant 1`] = `
   padding-bottom: 8px;
 }
 
-.emotion-87 {
+.emotion-85 {
   text-align: right;
 }
 
-.emotion-87 {
+.emotion-85 {
   text-align: right;
 }
 
-.emotion-90 {
+.emotion-88 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  max-width: 500px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 16px;
+  color: #222638;
+  margin-right: 4px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 16px;
+  color: #222638;
+  font-weight: 500;
+  margin-right: 4px;
+}
+
+.emotion-88 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1677,33 +1686,6 @@ exports[`EstimateCost - Item > render with labelTextVariant 1`] = `
 }
 
 .emotion-90 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  max-width: 500px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-size: 16px;
-  color: #222638;
-  margin-right: 4px;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-size: 16px;
-  color: #222638;
-  font-weight: 500;
-  margin-right: 4px;
-}
-
-.emotion-92 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -1715,7 +1697,7 @@ exports[`EstimateCost - Item > render with labelTextVariant 1`] = `
   min-width: 126px;
 }
 
-.emotion-92 {
+.emotion-90 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -1727,7 +1709,7 @@ exports[`EstimateCost - Item > render with labelTextVariant 1`] = `
   min-width: 126px;
 }
 
-.emotion-95 {
+.emotion-93 {
   color: #727683;
   font-size: 1rem;
   font-family: Inter,sans-serif;
@@ -1740,29 +1722,29 @@ exports[`EstimateCost - Item > render with labelTextVariant 1`] = `
   text-align: right;
 }
 
-.emotion-97 {
+.emotion-95 {
   margin: 0;
   width: 100%;
   border-right: 1px solid #d9dadd;
   border-radius: 0 0 0.25rem 0.25rem;
 }
 
-.emotion-97 {
+.emotion-95 {
   margin: 0;
   width: 100%;
   border-right: 1px solid #d9dadd;
   border-radius: 0 0 0.25rem 0.25rem;
 }
 
-.emotion-101 {
+.emotion-99 {
+  width: 70%;
+}
+
+.emotion-99 {
   width: 70%;
 }
 
 .emotion-101 {
-  width: 70%;
-}
-
-.emotion-103 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -1779,7 +1761,7 @@ exports[`EstimateCost - Item > render with labelTextVariant 1`] = `
   min-width: 126px;
 }
 
-.emotion-103 {
+.emotion-101 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -1796,7 +1778,7 @@ exports[`EstimateCost - Item > render with labelTextVariant 1`] = `
   min-width: 126px;
 }
 
-.emotion-106 {
+.emotion-104 {
   color: #641cb3;
   font-size: 1.5625rem;
   font-family: Space Grotesk,sans-serif;
@@ -1809,7 +1791,7 @@ exports[`EstimateCost - Item > render with labelTextVariant 1`] = `
   text-align: right;
 }
 
-.emotion-106 {
+.emotion-104 {
   color: #641cb3;
   font-size: 1.5625rem;
   font-family: Space Grotesk,sans-serif;
@@ -1965,7 +1947,6 @@ exports[`EstimateCost - Item > render with labelTextVariant 1`] = `
                           class="emotion-55 emotion-56"
                           data-size="medium"
                           data-testid="unit-input"
-                          id="«rq»"
                           max="9007199254740991"
                           min="1"
                           name="iteration-value"
@@ -1975,59 +1956,53 @@ exports[`EstimateCost - Item > render with labelTextVariant 1`] = `
                           value="1"
                         />
                       </div>
-                       
                       <div
-                        class="emotion-57 emotion-58"
-                        width="12.6rem"
+                        aria-label="iteration-unit"
+                        class="emotion-57 emotion-58 emotion-59"
                       >
                         <div
-                          aria-label="iteration-unit"
-                          class="emotion-59 emotion-60 emotion-61"
+                          aria-controls="«rs»"
+                          aria-describedby="«rs»"
+                          class="emotion-60 emotion-61"
+                          data-container-full-width="true"
+                          tabindex="-1"
                         >
                           <div
-                            aria-controls="«rs»"
-                            aria-describedby="«rs»"
-                            class="emotion-62 emotion-63"
-                            data-container-full-width="true"
-                            tabindex="-1"
+                            class="emotion-49 emotion-1"
                           >
                             <div
-                              class="emotion-49 emotion-1"
+                              aria-expanded="false"
+                              aria-haspopup="listbox"
+                              class="emotion-64 emotion-65"
+                              data-disabled="false"
+                              data-dropdownvisible="false"
+                              data-readonly="false"
+                              data-size="medium"
+                              data-state="neutral"
+                              data-testid="select-input-iteration-unit"
+                              id="unit"
+                              role="combobox"
+                              tabindex="0"
                             >
                               <div
-                                aria-expanded="false"
-                                aria-haspopup="listbox"
-                                class="emotion-66 emotion-67"
-                                data-disabled="false"
-                                data-dropdownvisible="false"
-                                data-readonly="false"
-                                data-size="medium"
-                                data-state="neutral"
-                                data-testid="select-input-iteration-unit"
-                                id="unit"
-                                role="combobox"
-                                tabindex="0"
+                                class="emotion-66 emotion-67 emotion-15"
                               >
-                                <div
-                                  class="emotion-68 emotion-69 emotion-15"
+                                Hour(s)
+                              </div>
+                              <div
+                                class="emotion-69 emotion-70"
+                              >
+                                <svg
+                                  aria-label="show dropdown"
+                                  class="emotion-71 emotion-26"
+                                  viewBox="0 0 16 16"
                                 >
-                                  Hour(s)
-                                </div>
-                                <div
-                                  class="emotion-71 emotion-72"
-                                >
-                                  <svg
-                                    aria-label="show dropdown"
-                                    class="emotion-73 emotion-26"
-                                    viewBox="0 0 16 16"
-                                  >
-                                    <path
-                                      clip-rule="evenodd"
-                                      d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
-                                      fill-rule="evenodd"
-                                    />
-                                  </svg>
-                                </div>
+                                  <path
+                                    clip-rule="evenodd"
+                                    d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
+                                    fill-rule="evenodd"
+                                  />
+                                </svg>
                               </div>
                             </div>
                           </div>
@@ -2041,14 +2016,14 @@ exports[`EstimateCost - Item > render with labelTextVariant 1`] = `
           </thead>
           <tbody>
             <tr
-              class="emotion-75 emotion-76"
+              class="emotion-73 emotion-74"
             >
               <td
-                class="emotion-77 emotion-281"
+                class="emotion-75 emotion-281"
                 width="70%"
               >
                 <div
-                  class="emotion-79 emotion-80"
+                  class="emotion-77 emotion-78"
                 >
                   <div
                     class="emotion-10 emotion-1"
@@ -2064,10 +2039,10 @@ exports[`EstimateCost - Item > render with labelTextVariant 1`] = `
                     </div>
                   </div>
                   <div
-                    class="emotion-87 emotion-17"
+                    class="emotion-85 emotion-17"
                   >
                     <div
-                      class="emotion-18 emotion-90 emotion-20"
+                      class="emotion-18 emotion-88 emotion-20"
                     >
                       Test
                     </div>
@@ -2075,10 +2050,10 @@ exports[`EstimateCost - Item > render with labelTextVariant 1`] = `
                 </div>
               </td>
               <td
-                class="emotion-92 emotion-93"
+                class="emotion-90 emotion-91"
               >
                 <p
-                  class="emotion-94 emotion-95 emotion-15"
+                  class="emotion-92 emotion-93 emotion-15"
                 >
                   €0.00
                 </p>
@@ -2089,7 +2064,7 @@ exports[`EstimateCost - Item > render with labelTextVariant 1`] = `
         <table
           cellpadding="0"
           cellspacing="0"
-          class="emotion-97 emotion-98"
+          class="emotion-95 emotion-96"
         >
           <colgroup>
             <col />
@@ -2101,13 +2076,13 @@ exports[`EstimateCost - Item > render with labelTextVariant 1`] = `
             <tr>
               <td
                 aria-label="control"
-                class="emotion-101 emotion-102"
+                class="emotion-99 emotion-100"
               />
               <td
-                class="emotion-103 emotion-280"
+                class="emotion-101 emotion-280"
               >
                 <h3
-                  class="emotion-105 emotion-106 emotion-15"
+                  class="emotion-103 emotion-104 emotion-15"
                 >
                   <span
                     class="emotion-32 emotion-33"
@@ -2521,7 +2496,6 @@ exports[`EstimateCost - Item > render with noPrice and noBorder 1`] = `
   flex-wrap: nowrap;
   border: 1px solid #d9dadd;
   border-radius: 0.25rem;
-  background-color: #ffffff;
 }
 
 .emotion-51:not([data-disabled='true']):not([data-readonly='true']):not(
@@ -2678,7 +2652,6 @@ exports[`EstimateCost - Item > render with noPrice and noBorder 1`] = `
   padding-left: 1rem;
   background: transparent;
   color: #3f4250;
-  font-size: 0.875rem;
 }
 
 .emotion-55[data-size="small"] {
@@ -2725,41 +2698,34 @@ exports[`EstimateCost - Item > render with noPrice and noBorder 1`] = `
   color: #b5b7bd;
 }
 
-.emotion-57 {
-  width: 12.6rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-60 {
+.emotion-58 {
   width: 100%;
+  width: 12.6rem;
 }
 
-.emotion-60 #unit {
+.emotion-58 #unit {
   border: none;
   background: transparent;
 }
 
-.emotion-60 #unit:focus,
-.emotion-60 #unit:active {
+.emotion-58 #unit:focus,
+.emotion-58 #unit:active {
   box-shadow: none;
 }
 
-.emotion-62 {
+.emotion-60 {
   display: inherit;
 }
 
-.emotion-62[data-container-full-height="true"] {
+.emotion-60[data-container-full-height="true"] {
   height: 100%;
 }
 
-.emotion-62[data-container-full-width="true"] {
+.emotion-60[data-container-full-width="true"] {
   width: 100%;
 }
 
-.emotion-66 {
+.emotion-64 {
   display: grid;
   width: 100%;
   gap: 0.5rem;
@@ -2774,85 +2740,85 @@ exports[`EstimateCost - Item > render with noPrice and noBorder 1`] = `
   width: 100%;
 }
 
-.emotion-66[data-size='small'] {
+.emotion-64[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-66[data-size='medium'] {
+.emotion-64[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-66[data-size='large'] {
+.emotion-64[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-66[data-state='neutral'] {
+.emotion-64[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.emotion-66[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-64[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-66[data-state='neutral']:not([data-disabled='true']):hover {
+.emotion-64[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-66[data-state='neutral']:not([data-disabled='true']):focus-visible {
+.emotion-64[data-state='neutral']:not([data-disabled='true']):focus-visible {
   outline: 5px auto Highlight;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-.emotion-66[data-state='neutral'][data-dropdownvisible='true'] {
+.emotion-64[data-state='neutral'][data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.emotion-66[data-state='success'] {
+.emotion-64[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.emotion-66[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-64[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #1b533f;
   box-shadow: 0px 0px 0px 3px #45d19f40;
 }
 
-.emotion-66[data-state='success'][data-dropdownvisible='true'] {
+.emotion-64[data-state='success'][data-dropdownvisible='true'] {
   border-color: #1b533f;
 }
 
-.emotion-66[data-state='danger'] {
+.emotion-64[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-66[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-64[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-66[data-state='danger'][data-dropdownvisible='true'] {
+.emotion-64[data-state='danger'][data-dropdownvisible='true'] {
   border-color: #92103f;
 }
 
-.emotion-66:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-64:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-66[data-readonly='true'] {
+.emotion-64[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-66[data-disabled='true'] {
+.emotion-64[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-69 {
+.emotion-67 {
   color: #3f4250;
   font-size: 0.875rem;
   font-family: Inter,sans-serif;
@@ -2870,7 +2836,7 @@ exports[`EstimateCost - Item > render with noPrice and noBorder 1`] = `
   align-self: center;
 }
 
-.emotion-71 {
+.emotion-69 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2898,7 +2864,7 @@ exports[`EstimateCost - Item > render with noPrice and noBorder 1`] = `
   display: flex;
 }
 
-.emotion-73 {
+.emotion-71 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1rem;
@@ -2907,12 +2873,12 @@ exports[`EstimateCost - Item > render with noPrice and noBorder 1`] = `
   min-height: 1rem;
 }
 
-.emotion-73 .fillStroke {
+.emotion-71 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
 
-.emotion-77 {
+.emotion-75 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -2920,7 +2886,7 @@ exports[`EstimateCost - Item > render with noPrice and noBorder 1`] = `
   min-width: 230px;
 }
 
-.emotion-79 {
+.emotion-77 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2941,11 +2907,11 @@ exports[`EstimateCost - Item > render with noPrice and noBorder 1`] = `
   padding-bottom: 8px;
 }
 
-.emotion-87 {
+.emotion-85 {
   text-align: right;
 }
 
-.emotion-90 {
+.emotion-88 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2972,7 +2938,7 @@ exports[`EstimateCost - Item > render with noPrice and noBorder 1`] = `
   margin-right: 4px;
 }
 
-.emotion-92 {
+.emotion-90 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -2984,18 +2950,18 @@ exports[`EstimateCost - Item > render with noPrice and noBorder 1`] = `
   min-width: 126px;
 }
 
-.emotion-94 {
+.emotion-92 {
   margin: 0;
   width: 100%;
   border-right: 1px solid #d9dadd;
   border-radius: 0 0 0.25rem 0.25rem;
 }
 
-.emotion-98 {
+.emotion-96 {
   width: 70%;
 }
 
-.emotion-100 {
+.emotion-98 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -3012,7 +2978,7 @@ exports[`EstimateCost - Item > render with noPrice and noBorder 1`] = `
   min-width: 126px;
 }
 
-.emotion-103 {
+.emotion-101 {
   color: #641cb3;
   font-size: 1.5625rem;
   font-family: Space Grotesk,sans-serif;
@@ -3168,7 +3134,6 @@ exports[`EstimateCost - Item > render with noPrice and noBorder 1`] = `
                           class="emotion-55 emotion-56"
                           data-size="medium"
                           data-testid="unit-input"
-                          id="«r3»"
                           max="9007199254740991"
                           min="1"
                           name="iteration-value"
@@ -3178,59 +3143,53 @@ exports[`EstimateCost - Item > render with noPrice and noBorder 1`] = `
                           value="1"
                         />
                       </div>
-                       
                       <div
-                        class="emotion-57 emotion-58"
-                        width="12.6rem"
+                        aria-label="iteration-unit"
+                        class="emotion-57 emotion-58 emotion-59"
                       >
                         <div
-                          aria-label="iteration-unit"
-                          class="emotion-59 emotion-60 emotion-61"
+                          aria-controls="«r5»"
+                          aria-describedby="«r5»"
+                          class="emotion-60 emotion-61"
+                          data-container-full-width="true"
+                          tabindex="-1"
                         >
                           <div
-                            aria-controls="«r5»"
-                            aria-describedby="«r5»"
-                            class="emotion-62 emotion-63"
-                            data-container-full-width="true"
-                            tabindex="-1"
+                            class="emotion-49 emotion-1"
                           >
                             <div
-                              class="emotion-49 emotion-1"
+                              aria-expanded="false"
+                              aria-haspopup="listbox"
+                              class="emotion-64 emotion-65"
+                              data-disabled="false"
+                              data-dropdownvisible="false"
+                              data-readonly="false"
+                              data-size="medium"
+                              data-state="neutral"
+                              data-testid="select-input-iteration-unit"
+                              id="unit"
+                              role="combobox"
+                              tabindex="0"
                             >
                               <div
-                                aria-expanded="false"
-                                aria-haspopup="listbox"
-                                class="emotion-66 emotion-67"
-                                data-disabled="false"
-                                data-dropdownvisible="false"
-                                data-readonly="false"
-                                data-size="medium"
-                                data-state="neutral"
-                                data-testid="select-input-iteration-unit"
-                                id="unit"
-                                role="combobox"
-                                tabindex="0"
+                                class="emotion-66 emotion-67 emotion-15"
                               >
-                                <div
-                                  class="emotion-68 emotion-69 emotion-15"
+                                Hour(s)
+                              </div>
+                              <div
+                                class="emotion-69 emotion-70"
+                              >
+                                <svg
+                                  aria-label="show dropdown"
+                                  class="emotion-71 emotion-26"
+                                  viewBox="0 0 16 16"
                                 >
-                                  Hour(s)
-                                </div>
-                                <div
-                                  class="emotion-71 emotion-72"
-                                >
-                                  <svg
-                                    aria-label="show dropdown"
-                                    class="emotion-73 emotion-26"
-                                    viewBox="0 0 16 16"
-                                  >
-                                    <path
-                                      clip-rule="evenodd"
-                                      d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
-                                      fill-rule="evenodd"
-                                    />
-                                  </svg>
-                                </div>
+                                  <path
+                                    clip-rule="evenodd"
+                                    d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
+                                    fill-rule="evenodd"
+                                  />
+                                </svg>
                               </div>
                             </div>
                           </div>
@@ -3244,14 +3203,14 @@ exports[`EstimateCost - Item > render with noPrice and noBorder 1`] = `
           </thead>
           <tbody>
             <tr
-              class="emotion-75 emotion-76"
+              class="emotion-73 emotion-74"
             >
               <td
-                class="emotion-77 emotion-281"
+                class="emotion-75 emotion-281"
                 width="70%"
               >
                 <div
-                  class="emotion-79 emotion-80"
+                  class="emotion-77 emotion-78"
                 >
                   <div
                     class="emotion-10 emotion-1"
@@ -3267,10 +3226,10 @@ exports[`EstimateCost - Item > render with noPrice and noBorder 1`] = `
                     </div>
                   </div>
                   <div
-                    class="emotion-87 emotion-17"
+                    class="emotion-85 emotion-17"
                   >
                     <div
-                      class="emotion-18 emotion-90 emotion-20"
+                      class="emotion-18 emotion-88 emotion-20"
                     >
                       Test
                     </div>
@@ -3278,7 +3237,7 @@ exports[`EstimateCost - Item > render with noPrice and noBorder 1`] = `
                 </div>
               </td>
               <td
-                class="emotion-92 emotion-93"
+                class="emotion-90 emotion-91"
               />
             </tr>
           </tbody>
@@ -3286,7 +3245,7 @@ exports[`EstimateCost - Item > render with noPrice and noBorder 1`] = `
         <table
           cellpadding="0"
           cellspacing="0"
-          class="emotion-94 emotion-95"
+          class="emotion-92 emotion-93"
         >
           <colgroup>
             <col />
@@ -3298,13 +3257,13 @@ exports[`EstimateCost - Item > render with noPrice and noBorder 1`] = `
             <tr>
               <td
                 aria-label="control"
-                class="emotion-98 emotion-99"
+                class="emotion-96 emotion-97"
               />
               <td
-                class="emotion-100 emotion-280"
+                class="emotion-98 emotion-280"
               >
                 <h3
-                  class="emotion-102 emotion-103 emotion-15"
+                  class="emotion-100 emotion-101 emotion-15"
                 >
                   <span
                     class="emotion-32 emotion-33"
@@ -4101,7 +4060,6 @@ exports[`EstimateCost - Item > render with notice 1`] = `
   flex-wrap: nowrap;
   border: 1px solid #d9dadd;
   border-radius: 0.25rem;
-  background-color: #ffffff;
 }
 
 .emotion-54:not([data-disabled='true']):not([data-readonly='true']):not(
@@ -4252,7 +4210,6 @@ exports[`EstimateCost - Item > render with notice 1`] = `
   flex-wrap: nowrap;
   border: 1px solid #d9dadd;
   border-radius: 0.25rem;
-  background-color: #ffffff;
 }
 
 .emotion-54:not([data-disabled='true']):not([data-readonly='true']):not(
@@ -4427,7 +4384,6 @@ exports[`EstimateCost - Item > render with notice 1`] = `
   padding-left: 1rem;
   background: transparent;
   color: #3f4250;
-  font-size: 0.875rem;
 }
 
 .emotion-58[data-size="small"] {
@@ -4485,7 +4441,6 @@ exports[`EstimateCost - Item > render with notice 1`] = `
   padding-left: 1rem;
   background: transparent;
   color: #3f4250;
-  font-size: 0.875rem;
 }
 
 .emotion-58[data-size="small"] {
@@ -4532,75 +4487,61 @@ exports[`EstimateCost - Item > render with notice 1`] = `
   color: #b5b7bd;
 }
 
-.emotion-60 {
-  width: 12.6rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-60 {
-  width: 12.6rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-63 {
+.emotion-61 {
   width: 100%;
+  width: 12.6rem;
 }
 
-.emotion-63 #unit {
+.emotion-61 #unit {
   border: none;
   background: transparent;
 }
 
-.emotion-63 #unit:focus,
-.emotion-63 #unit:active {
+.emotion-61 #unit:focus,
+.emotion-61 #unit:active {
   box-shadow: none;
 }
 
-.emotion-63 {
+.emotion-61 {
   width: 100%;
+  width: 12.6rem;
 }
 
-.emotion-63 #unit {
+.emotion-61 #unit {
   border: none;
   background: transparent;
 }
 
-.emotion-63 #unit:focus,
-.emotion-63 #unit:active {
+.emotion-61 #unit:focus,
+.emotion-61 #unit:active {
   box-shadow: none;
 }
 
-.emotion-65 {
+.emotion-63 {
   display: inherit;
 }
 
-.emotion-65[data-container-full-height="true"] {
+.emotion-63[data-container-full-height="true"] {
   height: 100%;
 }
 
-.emotion-65[data-container-full-width="true"] {
+.emotion-63[data-container-full-width="true"] {
   width: 100%;
 }
 
-.emotion-65 {
+.emotion-63 {
   display: inherit;
 }
 
-.emotion-65[data-container-full-height="true"] {
+.emotion-63[data-container-full-height="true"] {
   height: 100%;
 }
 
-.emotion-65[data-container-full-width="true"] {
+.emotion-63[data-container-full-width="true"] {
   width: 100%;
 }
 
-.emotion-69 {
+.emotion-67 {
   display: grid;
   width: 100%;
   gap: 0.5rem;
@@ -4615,85 +4556,85 @@ exports[`EstimateCost - Item > render with notice 1`] = `
   width: 100%;
 }
 
-.emotion-69[data-size='small'] {
+.emotion-67[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-69[data-size='medium'] {
+.emotion-67[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-69[data-size='large'] {
+.emotion-67[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-69[data-state='neutral'] {
+.emotion-67[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.emotion-69[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-67[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-69[data-state='neutral']:not([data-disabled='true']):hover {
+.emotion-67[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-69[data-state='neutral']:not([data-disabled='true']):focus-visible {
+.emotion-67[data-state='neutral']:not([data-disabled='true']):focus-visible {
   outline: 5px auto Highlight;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-.emotion-69[data-state='neutral'][data-dropdownvisible='true'] {
+.emotion-67[data-state='neutral'][data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.emotion-69[data-state='success'] {
+.emotion-67[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.emotion-69[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-67[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #1b533f;
   box-shadow: 0px 0px 0px 3px #45d19f40;
 }
 
-.emotion-69[data-state='success'][data-dropdownvisible='true'] {
+.emotion-67[data-state='success'][data-dropdownvisible='true'] {
   border-color: #1b533f;
 }
 
-.emotion-69[data-state='danger'] {
+.emotion-67[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-69[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-67[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-69[data-state='danger'][data-dropdownvisible='true'] {
+.emotion-67[data-state='danger'][data-dropdownvisible='true'] {
   border-color: #92103f;
 }
 
-.emotion-69:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-67:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-69[data-readonly='true'] {
+.emotion-67[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-69[data-disabled='true'] {
+.emotion-67[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-69 {
+.emotion-67 {
   display: grid;
   width: 100%;
   gap: 0.5rem;
@@ -4708,85 +4649,103 @@ exports[`EstimateCost - Item > render with notice 1`] = `
   width: 100%;
 }
 
-.emotion-69[data-size='small'] {
+.emotion-67[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-69[data-size='medium'] {
+.emotion-67[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-69[data-size='large'] {
+.emotion-67[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-69[data-state='neutral'] {
+.emotion-67[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.emotion-69[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-67[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-69[data-state='neutral']:not([data-disabled='true']):hover {
+.emotion-67[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-69[data-state='neutral']:not([data-disabled='true']):focus-visible {
+.emotion-67[data-state='neutral']:not([data-disabled='true']):focus-visible {
   outline: 5px auto Highlight;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-.emotion-69[data-state='neutral'][data-dropdownvisible='true'] {
+.emotion-67[data-state='neutral'][data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.emotion-69[data-state='success'] {
+.emotion-67[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.emotion-69[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-67[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #1b533f;
   box-shadow: 0px 0px 0px 3px #45d19f40;
 }
 
-.emotion-69[data-state='success'][data-dropdownvisible='true'] {
+.emotion-67[data-state='success'][data-dropdownvisible='true'] {
   border-color: #1b533f;
 }
 
-.emotion-69[data-state='danger'] {
+.emotion-67[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-69[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-67[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-69[data-state='danger'][data-dropdownvisible='true'] {
+.emotion-67[data-state='danger'][data-dropdownvisible='true'] {
   border-color: #92103f;
 }
 
-.emotion-69:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-67:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-69[data-readonly='true'] {
+.emotion-67[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-69[data-disabled='true'] {
+.emotion-67[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-72 {
+.emotion-70 {
+  color: #3f4250;
+  font-size: 0.875rem;
+  font-family: Inter,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.emotion-70 {
   color: #3f4250;
   font-size: 0.875rem;
   font-family: Inter,sans-serif;
@@ -4805,24 +4764,34 @@ exports[`EstimateCost - Item > render with notice 1`] = `
 }
 
 .emotion-72 {
-  color: #3f4250;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding-right: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-.emotion-74 {
+.emotion-72 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4851,34 +4820,6 @@ exports[`EstimateCost - Item > render with notice 1`] = `
 }
 
 .emotion-74 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  padding-right: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-76 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1rem;
@@ -4887,12 +4828,12 @@ exports[`EstimateCost - Item > render with notice 1`] = `
   min-height: 1rem;
 }
 
-.emotion-76 .fillStroke {
+.emotion-74 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
 
-.emotion-76 {
+.emotion-74 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1rem;
@@ -4901,12 +4842,20 @@ exports[`EstimateCost - Item > render with notice 1`] = `
   min-height: 1rem;
 }
 
-.emotion-76 .fillStroke {
+.emotion-74 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
 
-.emotion-80 {
+.emotion-78 {
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  width: 70%;
+  min-width: 230px;
+}
+
+.emotion-78 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -4915,14 +4864,6 @@ exports[`EstimateCost - Item > render with notice 1`] = `
 }
 
 .emotion-80 {
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  width: 70%;
-  min-width: 230px;
-}
-
-.emotion-82 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4943,7 +4884,7 @@ exports[`EstimateCost - Item > render with notice 1`] = `
   padding-bottom: 8px;
 }
 
-.emotion-82 {
+.emotion-80 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4964,15 +4905,42 @@ exports[`EstimateCost - Item > render with notice 1`] = `
   padding-bottom: 8px;
 }
 
-.emotion-93 {
+.emotion-91 {
   text-align: right;
 }
 
-.emotion-93 {
+.emotion-91 {
   text-align: right;
 }
 
-.emotion-96 {
+.emotion-94 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  max-width: 500px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 16px;
+  color: #222638;
+  margin-right: 4px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 16px;
+  color: #222638;
+  font-weight: 500;
+  margin-right: 4px;
+}
+
+.emotion-94 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -5000,33 +4968,6 @@ exports[`EstimateCost - Item > render with notice 1`] = `
 }
 
 .emotion-96 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  max-width: 500px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-size: 16px;
-  color: #222638;
-  margin-right: 4px;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-size: 16px;
-  color: #222638;
-  font-weight: 500;
-  margin-right: 4px;
-}
-
-.emotion-98 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -5038,7 +4979,7 @@ exports[`EstimateCost - Item > render with notice 1`] = `
   min-width: 126px;
 }
 
-.emotion-98 {
+.emotion-96 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -5050,7 +4991,7 @@ exports[`EstimateCost - Item > render with notice 1`] = `
   min-width: 126px;
 }
 
-.emotion-101 {
+.emotion-99 {
   color: #727683;
   font-size: 1rem;
   font-family: Inter,sans-serif;
@@ -5063,29 +5004,29 @@ exports[`EstimateCost - Item > render with notice 1`] = `
   text-align: right;
 }
 
-.emotion-103 {
+.emotion-101 {
   margin: 0;
   width: 100%;
   border-right: 1px solid #d9dadd;
   border-radius: 0 0 0.25rem 0.25rem;
 }
 
-.emotion-103 {
+.emotion-101 {
   margin: 0;
   width: 100%;
   border-right: 1px solid #d9dadd;
   border-radius: 0 0 0.25rem 0.25rem;
 }
 
-.emotion-107 {
+.emotion-105 {
+  width: 70%;
+}
+
+.emotion-105 {
   width: 70%;
 }
 
 .emotion-107 {
-  width: 70%;
-}
-
-.emotion-109 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -5102,7 +5043,7 @@ exports[`EstimateCost - Item > render with notice 1`] = `
   min-width: 126px;
 }
 
-.emotion-109 {
+.emotion-107 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -5119,7 +5060,7 @@ exports[`EstimateCost - Item > render with notice 1`] = `
   min-width: 126px;
 }
 
-.emotion-112 {
+.emotion-110 {
   color: #641cb3;
   font-size: 1.5625rem;
   font-family: Space Grotesk,sans-serif;
@@ -5132,7 +5073,7 @@ exports[`EstimateCost - Item > render with notice 1`] = `
   text-align: right;
 }
 
-.emotion-112 {
+.emotion-110 {
   color: #641cb3;
   font-size: 1.5625rem;
   font-family: Space Grotesk,sans-serif;
@@ -5293,7 +5234,6 @@ exports[`EstimateCost - Item > render with notice 1`] = `
                           class="emotion-58 emotion-59"
                           data-size="medium"
                           data-testid="unit-input"
-                          id="«r21»"
                           max="9007199254740991"
                           min="1"
                           name="iteration-value"
@@ -5303,59 +5243,53 @@ exports[`EstimateCost - Item > render with notice 1`] = `
                           value="1"
                         />
                       </div>
-                       
                       <div
-                        class="emotion-60 emotion-61"
-                        width="12.6rem"
+                        aria-label="iteration-unit"
+                        class="emotion-60 emotion-61 emotion-62"
                       >
                         <div
-                          aria-label="iteration-unit"
-                          class="emotion-62 emotion-63 emotion-64"
+                          aria-controls="«r23»"
+                          aria-describedby="«r23»"
+                          class="emotion-63 emotion-64"
+                          data-container-full-width="true"
+                          tabindex="-1"
                         >
                           <div
-                            aria-controls="«r23»"
-                            aria-describedby="«r23»"
-                            class="emotion-65 emotion-66"
-                            data-container-full-width="true"
-                            tabindex="-1"
+                            class="emotion-52 emotion-1"
                           >
                             <div
-                              class="emotion-52 emotion-1"
+                              aria-expanded="false"
+                              aria-haspopup="listbox"
+                              class="emotion-67 emotion-68"
+                              data-disabled="false"
+                              data-dropdownvisible="false"
+                              data-readonly="false"
+                              data-size="medium"
+                              data-state="neutral"
+                              data-testid="select-input-iteration-unit"
+                              id="unit"
+                              role="combobox"
+                              tabindex="0"
                             >
                               <div
-                                aria-expanded="false"
-                                aria-haspopup="listbox"
-                                class="emotion-69 emotion-70"
-                                data-disabled="false"
-                                data-dropdownvisible="false"
-                                data-readonly="false"
-                                data-size="medium"
-                                data-state="neutral"
-                                data-testid="select-input-iteration-unit"
-                                id="unit"
-                                role="combobox"
-                                tabindex="0"
+                                class="emotion-69 emotion-70 emotion-15"
                               >
-                                <div
-                                  class="emotion-71 emotion-72 emotion-15"
+                                Hour(s)
+                              </div>
+                              <div
+                                class="emotion-72 emotion-73"
+                              >
+                                <svg
+                                  aria-label="show dropdown"
+                                  class="emotion-74 emotion-29"
+                                  viewBox="0 0 16 16"
                                 >
-                                  Hour(s)
-                                </div>
-                                <div
-                                  class="emotion-74 emotion-75"
-                                >
-                                  <svg
-                                    aria-label="show dropdown"
-                                    class="emotion-76 emotion-29"
-                                    viewBox="0 0 16 16"
-                                  >
-                                    <path
-                                      clip-rule="evenodd"
-                                      d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
-                                      fill-rule="evenodd"
-                                    />
-                                  </svg>
-                                </div>
+                                  <path
+                                    clip-rule="evenodd"
+                                    d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
+                                    fill-rule="evenodd"
+                                  />
+                                </svg>
                               </div>
                             </div>
                           </div>
@@ -5369,14 +5303,14 @@ exports[`EstimateCost - Item > render with notice 1`] = `
           </thead>
           <tbody>
             <tr
-              class="emotion-78 emotion-79"
+              class="emotion-76 emotion-77"
             >
               <td
-                class="emotion-80 emotion-311"
+                class="emotion-78 emotion-311"
                 width="70%"
               >
                 <div
-                  class="emotion-82 emotion-83"
+                  class="emotion-80 emotion-81"
                 >
                   <div
                     class="emotion-10 emotion-1"
@@ -5397,10 +5331,10 @@ exports[`EstimateCost - Item > render with notice 1`] = `
                     </p>
                   </div>
                   <div
-                    class="emotion-93 emotion-20"
+                    class="emotion-91 emotion-20"
                   >
                     <div
-                      class="emotion-21 emotion-96 emotion-23"
+                      class="emotion-21 emotion-94 emotion-23"
                     >
                       Test
                     </div>
@@ -5408,10 +5342,10 @@ exports[`EstimateCost - Item > render with notice 1`] = `
                 </div>
               </td>
               <td
-                class="emotion-98 emotion-99"
+                class="emotion-96 emotion-97"
               >
                 <p
-                  class="emotion-100 emotion-101 emotion-15"
+                  class="emotion-98 emotion-99 emotion-15"
                 >
                   €0.00
                 </p>
@@ -5422,7 +5356,7 @@ exports[`EstimateCost - Item > render with notice 1`] = `
         <table
           cellpadding="0"
           cellspacing="0"
-          class="emotion-103 emotion-104"
+          class="emotion-101 emotion-102"
         >
           <colgroup>
             <col />
@@ -5434,13 +5368,13 @@ exports[`EstimateCost - Item > render with notice 1`] = `
             <tr>
               <td
                 aria-label="control"
-                class="emotion-107 emotion-108"
+                class="emotion-105 emotion-106"
               />
               <td
-                class="emotion-109 emotion-310"
+                class="emotion-107 emotion-310"
               >
                 <h3
-                  class="emotion-111 emotion-112 emotion-15"
+                  class="emotion-109 emotion-110 emotion-15"
                 >
                   <span
                     class="emotion-35 emotion-36"
@@ -6225,7 +6159,6 @@ exports[`EstimateCost - Item > render with priceText 1`] = `
   flex-wrap: nowrap;
   border: 1px solid #d9dadd;
   border-radius: 0.25rem;
-  background-color: #ffffff;
 }
 
 .emotion-51:not([data-disabled='true']):not([data-readonly='true']):not(
@@ -6376,7 +6309,6 @@ exports[`EstimateCost - Item > render with priceText 1`] = `
   flex-wrap: nowrap;
   border: 1px solid #d9dadd;
   border-radius: 0.25rem;
-  background-color: #ffffff;
 }
 
 .emotion-51:not([data-disabled='true']):not([data-readonly='true']):not(
@@ -6551,7 +6483,6 @@ exports[`EstimateCost - Item > render with priceText 1`] = `
   padding-left: 1rem;
   background: transparent;
   color: #3f4250;
-  font-size: 0.875rem;
 }
 
 .emotion-55[data-size="small"] {
@@ -6609,7 +6540,6 @@ exports[`EstimateCost - Item > render with priceText 1`] = `
   padding-left: 1rem;
   background: transparent;
   color: #3f4250;
-  font-size: 0.875rem;
 }
 
 .emotion-55[data-size="small"] {
@@ -6656,75 +6586,61 @@ exports[`EstimateCost - Item > render with priceText 1`] = `
   color: #b5b7bd;
 }
 
-.emotion-57 {
-  width: 12.6rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-57 {
-  width: 12.6rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-60 {
+.emotion-58 {
   width: 100%;
+  width: 12.6rem;
 }
 
-.emotion-60 #unit {
+.emotion-58 #unit {
   border: none;
   background: transparent;
 }
 
-.emotion-60 #unit:focus,
-.emotion-60 #unit:active {
+.emotion-58 #unit:focus,
+.emotion-58 #unit:active {
   box-shadow: none;
 }
 
-.emotion-60 {
+.emotion-58 {
   width: 100%;
+  width: 12.6rem;
 }
 
-.emotion-60 #unit {
+.emotion-58 #unit {
   border: none;
   background: transparent;
 }
 
-.emotion-60 #unit:focus,
-.emotion-60 #unit:active {
+.emotion-58 #unit:focus,
+.emotion-58 #unit:active {
   box-shadow: none;
 }
 
-.emotion-62 {
+.emotion-60 {
   display: inherit;
 }
 
-.emotion-62[data-container-full-height="true"] {
+.emotion-60[data-container-full-height="true"] {
   height: 100%;
 }
 
-.emotion-62[data-container-full-width="true"] {
+.emotion-60[data-container-full-width="true"] {
   width: 100%;
 }
 
-.emotion-62 {
+.emotion-60 {
   display: inherit;
 }
 
-.emotion-62[data-container-full-height="true"] {
+.emotion-60[data-container-full-height="true"] {
   height: 100%;
 }
 
-.emotion-62[data-container-full-width="true"] {
+.emotion-60[data-container-full-width="true"] {
   width: 100%;
 }
 
-.emotion-66 {
+.emotion-64 {
   display: grid;
   width: 100%;
   gap: 0.5rem;
@@ -6739,85 +6655,85 @@ exports[`EstimateCost - Item > render with priceText 1`] = `
   width: 100%;
 }
 
-.emotion-66[data-size='small'] {
+.emotion-64[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-66[data-size='medium'] {
+.emotion-64[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-66[data-size='large'] {
+.emotion-64[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-66[data-state='neutral'] {
+.emotion-64[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.emotion-66[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-64[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-66[data-state='neutral']:not([data-disabled='true']):hover {
+.emotion-64[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-66[data-state='neutral']:not([data-disabled='true']):focus-visible {
+.emotion-64[data-state='neutral']:not([data-disabled='true']):focus-visible {
   outline: 5px auto Highlight;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-.emotion-66[data-state='neutral'][data-dropdownvisible='true'] {
+.emotion-64[data-state='neutral'][data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.emotion-66[data-state='success'] {
+.emotion-64[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.emotion-66[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-64[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #1b533f;
   box-shadow: 0px 0px 0px 3px #45d19f40;
 }
 
-.emotion-66[data-state='success'][data-dropdownvisible='true'] {
+.emotion-64[data-state='success'][data-dropdownvisible='true'] {
   border-color: #1b533f;
 }
 
-.emotion-66[data-state='danger'] {
+.emotion-64[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-66[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-64[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-66[data-state='danger'][data-dropdownvisible='true'] {
+.emotion-64[data-state='danger'][data-dropdownvisible='true'] {
   border-color: #92103f;
 }
 
-.emotion-66:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-64:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-66[data-readonly='true'] {
+.emotion-64[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-66[data-disabled='true'] {
+.emotion-64[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-66 {
+.emotion-64 {
   display: grid;
   width: 100%;
   gap: 0.5rem;
@@ -6832,85 +6748,103 @@ exports[`EstimateCost - Item > render with priceText 1`] = `
   width: 100%;
 }
 
-.emotion-66[data-size='small'] {
+.emotion-64[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-66[data-size='medium'] {
+.emotion-64[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-66[data-size='large'] {
+.emotion-64[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-66[data-state='neutral'] {
+.emotion-64[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.emotion-66[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-64[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-66[data-state='neutral']:not([data-disabled='true']):hover {
+.emotion-64[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-66[data-state='neutral']:not([data-disabled='true']):focus-visible {
+.emotion-64[data-state='neutral']:not([data-disabled='true']):focus-visible {
   outline: 5px auto Highlight;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-.emotion-66[data-state='neutral'][data-dropdownvisible='true'] {
+.emotion-64[data-state='neutral'][data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.emotion-66[data-state='success'] {
+.emotion-64[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.emotion-66[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-64[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #1b533f;
   box-shadow: 0px 0px 0px 3px #45d19f40;
 }
 
-.emotion-66[data-state='success'][data-dropdownvisible='true'] {
+.emotion-64[data-state='success'][data-dropdownvisible='true'] {
   border-color: #1b533f;
 }
 
-.emotion-66[data-state='danger'] {
+.emotion-64[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-66[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-64[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-66[data-state='danger'][data-dropdownvisible='true'] {
+.emotion-64[data-state='danger'][data-dropdownvisible='true'] {
   border-color: #92103f;
 }
 
-.emotion-66:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-64:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-66[data-readonly='true'] {
+.emotion-64[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-66[data-disabled='true'] {
+.emotion-64[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-69 {
+.emotion-67 {
+  color: #3f4250;
+  font-size: 0.875rem;
+  font-family: Inter,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.emotion-67 {
   color: #3f4250;
   font-size: 0.875rem;
   font-family: Inter,sans-serif;
@@ -6929,24 +6863,34 @@ exports[`EstimateCost - Item > render with priceText 1`] = `
 }
 
 .emotion-69 {
-  color: #3f4250;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding-right: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-.emotion-71 {
+.emotion-69 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6975,34 +6919,6 @@ exports[`EstimateCost - Item > render with priceText 1`] = `
 }
 
 .emotion-71 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  padding-right: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-73 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1rem;
@@ -7011,12 +6927,12 @@ exports[`EstimateCost - Item > render with priceText 1`] = `
   min-height: 1rem;
 }
 
-.emotion-73 .fillStroke {
+.emotion-71 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
 
-.emotion-73 {
+.emotion-71 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1rem;
@@ -7025,12 +6941,20 @@ exports[`EstimateCost - Item > render with priceText 1`] = `
   min-height: 1rem;
 }
 
-.emotion-73 .fillStroke {
+.emotion-71 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
 
-.emotion-77 {
+.emotion-75 {
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  width: 70%;
+  min-width: 230px;
+}
+
+.emotion-75 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -7039,14 +6963,6 @@ exports[`EstimateCost - Item > render with priceText 1`] = `
 }
 
 .emotion-77 {
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  width: 70%;
-  min-width: 230px;
-}
-
-.emotion-79 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -7067,7 +6983,7 @@ exports[`EstimateCost - Item > render with priceText 1`] = `
   padding-bottom: 8px;
 }
 
-.emotion-79 {
+.emotion-77 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -7088,15 +7004,42 @@ exports[`EstimateCost - Item > render with priceText 1`] = `
   padding-bottom: 8px;
 }
 
-.emotion-87 {
+.emotion-85 {
   text-align: right;
 }
 
-.emotion-87 {
+.emotion-85 {
   text-align: right;
 }
 
-.emotion-90 {
+.emotion-88 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  max-width: 500px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 16px;
+  color: #222638;
+  margin-right: 4px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 16px;
+  color: #222638;
+  font-weight: 500;
+  margin-right: 4px;
+}
+
+.emotion-88 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -7124,33 +7067,6 @@ exports[`EstimateCost - Item > render with priceText 1`] = `
 }
 
 .emotion-90 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  max-width: 500px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-size: 16px;
-  color: #222638;
-  margin-right: 4px;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-size: 16px;
-  color: #222638;
-  font-weight: 500;
-  margin-right: 4px;
-}
-
-.emotion-92 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -7162,7 +7078,7 @@ exports[`EstimateCost - Item > render with priceText 1`] = `
   min-width: 126px;
 }
 
-.emotion-92 {
+.emotion-90 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -7174,7 +7090,7 @@ exports[`EstimateCost - Item > render with priceText 1`] = `
   min-width: 126px;
 }
 
-.emotion-95 {
+.emotion-93 {
   color: #727683;
   font-size: 1rem;
   font-family: Inter,sans-serif;
@@ -7187,29 +7103,29 @@ exports[`EstimateCost - Item > render with priceText 1`] = `
   text-align: right;
 }
 
-.emotion-97 {
+.emotion-95 {
   margin: 0;
   width: 100%;
   border-right: 1px solid #d9dadd;
   border-radius: 0 0 0.25rem 0.25rem;
 }
 
-.emotion-97 {
+.emotion-95 {
   margin: 0;
   width: 100%;
   border-right: 1px solid #d9dadd;
   border-radius: 0 0 0.25rem 0.25rem;
 }
 
-.emotion-101 {
+.emotion-99 {
+  width: 70%;
+}
+
+.emotion-99 {
   width: 70%;
 }
 
 .emotion-101 {
-  width: 70%;
-}
-
-.emotion-103 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -7226,7 +7142,7 @@ exports[`EstimateCost - Item > render with priceText 1`] = `
   min-width: 126px;
 }
 
-.emotion-103 {
+.emotion-101 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -7243,7 +7159,7 @@ exports[`EstimateCost - Item > render with priceText 1`] = `
   min-width: 126px;
 }
 
-.emotion-106 {
+.emotion-104 {
   color: #641cb3;
   font-size: 1.5625rem;
   font-family: Space Grotesk,sans-serif;
@@ -7256,7 +7172,7 @@ exports[`EstimateCost - Item > render with priceText 1`] = `
   text-align: right;
 }
 
-.emotion-106 {
+.emotion-104 {
   color: #641cb3;
   font-size: 1.5625rem;
   font-family: Space Grotesk,sans-serif;
@@ -7412,7 +7328,6 @@ exports[`EstimateCost - Item > render with priceText 1`] = `
                           class="emotion-55 emotion-56"
                           data-size="medium"
                           data-testid="unit-input"
-                          id="«r16»"
                           max="9007199254740991"
                           min="1"
                           name="iteration-value"
@@ -7422,59 +7337,53 @@ exports[`EstimateCost - Item > render with priceText 1`] = `
                           value="1"
                         />
                       </div>
-                       
                       <div
-                        class="emotion-57 emotion-58"
-                        width="12.6rem"
+                        aria-label="iteration-unit"
+                        class="emotion-57 emotion-58 emotion-59"
                       >
                         <div
-                          aria-label="iteration-unit"
-                          class="emotion-59 emotion-60 emotion-61"
+                          aria-controls="«r18»"
+                          aria-describedby="«r18»"
+                          class="emotion-60 emotion-61"
+                          data-container-full-width="true"
+                          tabindex="-1"
                         >
                           <div
-                            aria-controls="«r18»"
-                            aria-describedby="«r18»"
-                            class="emotion-62 emotion-63"
-                            data-container-full-width="true"
-                            tabindex="-1"
+                            class="emotion-49 emotion-1"
                           >
                             <div
-                              class="emotion-49 emotion-1"
+                              aria-expanded="false"
+                              aria-haspopup="listbox"
+                              class="emotion-64 emotion-65"
+                              data-disabled="false"
+                              data-dropdownvisible="false"
+                              data-readonly="false"
+                              data-size="medium"
+                              data-state="neutral"
+                              data-testid="select-input-iteration-unit"
+                              id="unit"
+                              role="combobox"
+                              tabindex="0"
                             >
                               <div
-                                aria-expanded="false"
-                                aria-haspopup="listbox"
-                                class="emotion-66 emotion-67"
-                                data-disabled="false"
-                                data-dropdownvisible="false"
-                                data-readonly="false"
-                                data-size="medium"
-                                data-state="neutral"
-                                data-testid="select-input-iteration-unit"
-                                id="unit"
-                                role="combobox"
-                                tabindex="0"
+                                class="emotion-66 emotion-67 emotion-15"
                               >
-                                <div
-                                  class="emotion-68 emotion-69 emotion-15"
+                                Hour(s)
+                              </div>
+                              <div
+                                class="emotion-69 emotion-70"
+                              >
+                                <svg
+                                  aria-label="show dropdown"
+                                  class="emotion-71 emotion-26"
+                                  viewBox="0 0 16 16"
                                 >
-                                  Hour(s)
-                                </div>
-                                <div
-                                  class="emotion-71 emotion-72"
-                                >
-                                  <svg
-                                    aria-label="show dropdown"
-                                    class="emotion-73 emotion-26"
-                                    viewBox="0 0 16 16"
-                                  >
-                                    <path
-                                      clip-rule="evenodd"
-                                      d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
-                                      fill-rule="evenodd"
-                                    />
-                                  </svg>
-                                </div>
+                                  <path
+                                    clip-rule="evenodd"
+                                    d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
+                                    fill-rule="evenodd"
+                                  />
+                                </svg>
                               </div>
                             </div>
                           </div>
@@ -7488,14 +7397,14 @@ exports[`EstimateCost - Item > render with priceText 1`] = `
           </thead>
           <tbody>
             <tr
-              class="emotion-75 emotion-76"
+              class="emotion-73 emotion-74"
             >
               <td
-                class="emotion-77 emotion-281"
+                class="emotion-75 emotion-281"
                 width="70%"
               >
                 <div
-                  class="emotion-79 emotion-80"
+                  class="emotion-77 emotion-78"
                 >
                   <div
                     class="emotion-10 emotion-1"
@@ -7511,10 +7420,10 @@ exports[`EstimateCost - Item > render with priceText 1`] = `
                     </div>
                   </div>
                   <div
-                    class="emotion-87 emotion-17"
+                    class="emotion-85 emotion-17"
                   >
                     <div
-                      class="emotion-18 emotion-90 emotion-20"
+                      class="emotion-18 emotion-88 emotion-20"
                     >
                       Test
                     </div>
@@ -7522,10 +7431,10 @@ exports[`EstimateCost - Item > render with priceText 1`] = `
                 </div>
               </td>
               <td
-                class="emotion-92 emotion-93"
+                class="emotion-90 emotion-91"
               >
                 <p
-                  class="emotion-94 emotion-95 emotion-15"
+                  class="emotion-92 emotion-93 emotion-15"
                 >
                   included
                 </p>
@@ -7536,7 +7445,7 @@ exports[`EstimateCost - Item > render with priceText 1`] = `
         <table
           cellpadding="0"
           cellspacing="0"
-          class="emotion-97 emotion-98"
+          class="emotion-95 emotion-96"
         >
           <colgroup>
             <col />
@@ -7548,13 +7457,13 @@ exports[`EstimateCost - Item > render with priceText 1`] = `
             <tr>
               <td
                 aria-label="control"
-                class="emotion-101 emotion-102"
+                class="emotion-99 emotion-100"
               />
               <td
-                class="emotion-103 emotion-280"
+                class="emotion-101 emotion-280"
               >
                 <h3
-                  class="emotion-105 emotion-106 emotion-15"
+                  class="emotion-103 emotion-104 emotion-15"
                 >
                   <span
                     class="emotion-32 emotion-33"
@@ -8331,7 +8240,6 @@ exports[`EstimateCost - Item > render with tabulation 1`] = `
   flex-wrap: nowrap;
   border: 1px solid #d9dadd;
   border-radius: 0.25rem;
-  background-color: #ffffff;
 }
 
 .emotion-51:not([data-disabled='true']):not([data-readonly='true']):not(
@@ -8482,7 +8390,6 @@ exports[`EstimateCost - Item > render with tabulation 1`] = `
   flex-wrap: nowrap;
   border: 1px solid #d9dadd;
   border-radius: 0.25rem;
-  background-color: #ffffff;
 }
 
 .emotion-51:not([data-disabled='true']):not([data-readonly='true']):not(
@@ -8657,7 +8564,6 @@ exports[`EstimateCost - Item > render with tabulation 1`] = `
   padding-left: 1rem;
   background: transparent;
   color: #3f4250;
-  font-size: 0.875rem;
 }
 
 .emotion-55[data-size="small"] {
@@ -8715,7 +8621,6 @@ exports[`EstimateCost - Item > render with tabulation 1`] = `
   padding-left: 1rem;
   background: transparent;
   color: #3f4250;
-  font-size: 0.875rem;
 }
 
 .emotion-55[data-size="small"] {
@@ -8762,75 +8667,61 @@ exports[`EstimateCost - Item > render with tabulation 1`] = `
   color: #b5b7bd;
 }
 
-.emotion-57 {
-  width: 12.6rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-57 {
-  width: 12.6rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-60 {
+.emotion-58 {
   width: 100%;
+  width: 12.6rem;
 }
 
-.emotion-60 #unit {
+.emotion-58 #unit {
   border: none;
   background: transparent;
 }
 
-.emotion-60 #unit:focus,
-.emotion-60 #unit:active {
+.emotion-58 #unit:focus,
+.emotion-58 #unit:active {
   box-shadow: none;
 }
 
-.emotion-60 {
+.emotion-58 {
   width: 100%;
+  width: 12.6rem;
 }
 
-.emotion-60 #unit {
+.emotion-58 #unit {
   border: none;
   background: transparent;
 }
 
-.emotion-60 #unit:focus,
-.emotion-60 #unit:active {
+.emotion-58 #unit:focus,
+.emotion-58 #unit:active {
   box-shadow: none;
 }
 
-.emotion-62 {
+.emotion-60 {
   display: inherit;
 }
 
-.emotion-62[data-container-full-height="true"] {
+.emotion-60[data-container-full-height="true"] {
   height: 100%;
 }
 
-.emotion-62[data-container-full-width="true"] {
+.emotion-60[data-container-full-width="true"] {
   width: 100%;
 }
 
-.emotion-62 {
+.emotion-60 {
   display: inherit;
 }
 
-.emotion-62[data-container-full-height="true"] {
+.emotion-60[data-container-full-height="true"] {
   height: 100%;
 }
 
-.emotion-62[data-container-full-width="true"] {
+.emotion-60[data-container-full-width="true"] {
   width: 100%;
 }
 
-.emotion-66 {
+.emotion-64 {
   display: grid;
   width: 100%;
   gap: 0.5rem;
@@ -8845,85 +8736,85 @@ exports[`EstimateCost - Item > render with tabulation 1`] = `
   width: 100%;
 }
 
-.emotion-66[data-size='small'] {
+.emotion-64[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-66[data-size='medium'] {
+.emotion-64[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-66[data-size='large'] {
+.emotion-64[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-66[data-state='neutral'] {
+.emotion-64[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.emotion-66[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-64[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-66[data-state='neutral']:not([data-disabled='true']):hover {
+.emotion-64[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-66[data-state='neutral']:not([data-disabled='true']):focus-visible {
+.emotion-64[data-state='neutral']:not([data-disabled='true']):focus-visible {
   outline: 5px auto Highlight;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-.emotion-66[data-state='neutral'][data-dropdownvisible='true'] {
+.emotion-64[data-state='neutral'][data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.emotion-66[data-state='success'] {
+.emotion-64[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.emotion-66[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-64[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #1b533f;
   box-shadow: 0px 0px 0px 3px #45d19f40;
 }
 
-.emotion-66[data-state='success'][data-dropdownvisible='true'] {
+.emotion-64[data-state='success'][data-dropdownvisible='true'] {
   border-color: #1b533f;
 }
 
-.emotion-66[data-state='danger'] {
+.emotion-64[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-66[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-64[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-66[data-state='danger'][data-dropdownvisible='true'] {
+.emotion-64[data-state='danger'][data-dropdownvisible='true'] {
   border-color: #92103f;
 }
 
-.emotion-66:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-64:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-66[data-readonly='true'] {
+.emotion-64[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-66[data-disabled='true'] {
+.emotion-64[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-66 {
+.emotion-64 {
   display: grid;
   width: 100%;
   gap: 0.5rem;
@@ -8938,85 +8829,103 @@ exports[`EstimateCost - Item > render with tabulation 1`] = `
   width: 100%;
 }
 
-.emotion-66[data-size='small'] {
+.emotion-64[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-66[data-size='medium'] {
+.emotion-64[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-66[data-size='large'] {
+.emotion-64[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-66[data-state='neutral'] {
+.emotion-64[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.emotion-66[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-64[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-66[data-state='neutral']:not([data-disabled='true']):hover {
+.emotion-64[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-66[data-state='neutral']:not([data-disabled='true']):focus-visible {
+.emotion-64[data-state='neutral']:not([data-disabled='true']):focus-visible {
   outline: 5px auto Highlight;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-.emotion-66[data-state='neutral'][data-dropdownvisible='true'] {
+.emotion-64[data-state='neutral'][data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.emotion-66[data-state='success'] {
+.emotion-64[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.emotion-66[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-64[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #1b533f;
   box-shadow: 0px 0px 0px 3px #45d19f40;
 }
 
-.emotion-66[data-state='success'][data-dropdownvisible='true'] {
+.emotion-64[data-state='success'][data-dropdownvisible='true'] {
   border-color: #1b533f;
 }
 
-.emotion-66[data-state='danger'] {
+.emotion-64[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-66[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-64[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-66[data-state='danger'][data-dropdownvisible='true'] {
+.emotion-64[data-state='danger'][data-dropdownvisible='true'] {
   border-color: #92103f;
 }
 
-.emotion-66:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-64:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-66[data-readonly='true'] {
+.emotion-64[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-66[data-disabled='true'] {
+.emotion-64[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-69 {
+.emotion-67 {
+  color: #3f4250;
+  font-size: 0.875rem;
+  font-family: Inter,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.emotion-67 {
   color: #3f4250;
   font-size: 0.875rem;
   font-family: Inter,sans-serif;
@@ -9035,24 +8944,34 @@ exports[`EstimateCost - Item > render with tabulation 1`] = `
 }
 
 .emotion-69 {
-  color: #3f4250;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding-right: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-.emotion-71 {
+.emotion-69 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -9081,34 +9000,6 @@ exports[`EstimateCost - Item > render with tabulation 1`] = `
 }
 
 .emotion-71 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  padding-right: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-73 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1rem;
@@ -9117,12 +9008,12 @@ exports[`EstimateCost - Item > render with tabulation 1`] = `
   min-height: 1rem;
 }
 
-.emotion-73 .fillStroke {
+.emotion-71 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
 
-.emotion-73 {
+.emotion-71 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1rem;
@@ -9131,12 +9022,12 @@ exports[`EstimateCost - Item > render with tabulation 1`] = `
   min-height: 1rem;
 }
 
-.emotion-73 .fillStroke {
+.emotion-71 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
 
-.emotion-77 {
+.emotion-75 {
   padding-left: 32px;
   padding-right: 16px;
   position: relative;
@@ -9144,7 +9035,7 @@ exports[`EstimateCost - Item > render with tabulation 1`] = `
   min-width: 230px;
 }
 
-.emotion-79 {
+.emotion-77 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -9165,7 +9056,7 @@ exports[`EstimateCost - Item > render with tabulation 1`] = `
   padding-bottom: 8px;
 }
 
-.emotion-79 {
+.emotion-77 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -9186,15 +9077,42 @@ exports[`EstimateCost - Item > render with tabulation 1`] = `
   padding-bottom: 8px;
 }
 
-.emotion-87 {
+.emotion-85 {
   text-align: right;
 }
 
-.emotion-87 {
+.emotion-85 {
   text-align: right;
 }
 
-.emotion-90 {
+.emotion-88 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  max-width: 500px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 16px;
+  color: #222638;
+  margin-right: 4px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 16px;
+  color: #222638;
+  font-weight: 500;
+  margin-right: 4px;
+}
+
+.emotion-88 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -9222,33 +9140,6 @@ exports[`EstimateCost - Item > render with tabulation 1`] = `
 }
 
 .emotion-90 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  max-width: 500px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-size: 16px;
-  color: #222638;
-  margin-right: 4px;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-size: 16px;
-  color: #222638;
-  font-weight: 500;
-  margin-right: 4px;
-}
-
-.emotion-92 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -9260,7 +9151,7 @@ exports[`EstimateCost - Item > render with tabulation 1`] = `
   min-width: 126px;
 }
 
-.emotion-92 {
+.emotion-90 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -9272,7 +9163,7 @@ exports[`EstimateCost - Item > render with tabulation 1`] = `
   min-width: 126px;
 }
 
-.emotion-95 {
+.emotion-93 {
   color: #727683;
   font-size: 1rem;
   font-family: Inter,sans-serif;
@@ -9285,29 +9176,29 @@ exports[`EstimateCost - Item > render with tabulation 1`] = `
   text-align: right;
 }
 
-.emotion-97 {
+.emotion-95 {
   margin: 0;
   width: 100%;
   border-right: 1px solid #d9dadd;
   border-radius: 0 0 0.25rem 0.25rem;
 }
 
-.emotion-97 {
+.emotion-95 {
   margin: 0;
   width: 100%;
   border-right: 1px solid #d9dadd;
   border-radius: 0 0 0.25rem 0.25rem;
 }
 
-.emotion-101 {
+.emotion-99 {
+  width: 70%;
+}
+
+.emotion-99 {
   width: 70%;
 }
 
 .emotion-101 {
-  width: 70%;
-}
-
-.emotion-103 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -9324,7 +9215,7 @@ exports[`EstimateCost - Item > render with tabulation 1`] = `
   min-width: 126px;
 }
 
-.emotion-103 {
+.emotion-101 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -9341,7 +9232,7 @@ exports[`EstimateCost - Item > render with tabulation 1`] = `
   min-width: 126px;
 }
 
-.emotion-106 {
+.emotion-104 {
   color: #641cb3;
   font-size: 1.5625rem;
   font-family: Space Grotesk,sans-serif;
@@ -9354,7 +9245,7 @@ exports[`EstimateCost - Item > render with tabulation 1`] = `
   text-align: right;
 }
 
-.emotion-106 {
+.emotion-104 {
   color: #641cb3;
   font-size: 1.5625rem;
   font-family: Space Grotesk,sans-serif;
@@ -9510,7 +9401,6 @@ exports[`EstimateCost - Item > render with tabulation 1`] = `
                           class="emotion-55 emotion-56"
                           data-size="medium"
                           data-testid="unit-input"
-                          id="«re»"
                           max="9007199254740991"
                           min="1"
                           name="iteration-value"
@@ -9520,59 +9410,53 @@ exports[`EstimateCost - Item > render with tabulation 1`] = `
                           value="1"
                         />
                       </div>
-                       
                       <div
-                        class="emotion-57 emotion-58"
-                        width="12.6rem"
+                        aria-label="iteration-unit"
+                        class="emotion-57 emotion-58 emotion-59"
                       >
                         <div
-                          aria-label="iteration-unit"
-                          class="emotion-59 emotion-60 emotion-61"
+                          aria-controls="«rg»"
+                          aria-describedby="«rg»"
+                          class="emotion-60 emotion-61"
+                          data-container-full-width="true"
+                          tabindex="-1"
                         >
                           <div
-                            aria-controls="«rg»"
-                            aria-describedby="«rg»"
-                            class="emotion-62 emotion-63"
-                            data-container-full-width="true"
-                            tabindex="-1"
+                            class="emotion-49 emotion-1"
                           >
                             <div
-                              class="emotion-49 emotion-1"
+                              aria-expanded="false"
+                              aria-haspopup="listbox"
+                              class="emotion-64 emotion-65"
+                              data-disabled="false"
+                              data-dropdownvisible="false"
+                              data-readonly="false"
+                              data-size="medium"
+                              data-state="neutral"
+                              data-testid="select-input-iteration-unit"
+                              id="unit"
+                              role="combobox"
+                              tabindex="0"
                             >
                               <div
-                                aria-expanded="false"
-                                aria-haspopup="listbox"
-                                class="emotion-66 emotion-67"
-                                data-disabled="false"
-                                data-dropdownvisible="false"
-                                data-readonly="false"
-                                data-size="medium"
-                                data-state="neutral"
-                                data-testid="select-input-iteration-unit"
-                                id="unit"
-                                role="combobox"
-                                tabindex="0"
+                                class="emotion-66 emotion-67 emotion-15"
                               >
-                                <div
-                                  class="emotion-68 emotion-69 emotion-15"
+                                Hour(s)
+                              </div>
+                              <div
+                                class="emotion-69 emotion-70"
+                              >
+                                <svg
+                                  aria-label="show dropdown"
+                                  class="emotion-71 emotion-26"
+                                  viewBox="0 0 16 16"
                                 >
-                                  Hour(s)
-                                </div>
-                                <div
-                                  class="emotion-71 emotion-72"
-                                >
-                                  <svg
-                                    aria-label="show dropdown"
-                                    class="emotion-73 emotion-26"
-                                    viewBox="0 0 16 16"
-                                  >
-                                    <path
-                                      clip-rule="evenodd"
-                                      d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
-                                      fill-rule="evenodd"
-                                    />
-                                  </svg>
-                                </div>
+                                  <path
+                                    clip-rule="evenodd"
+                                    d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
+                                    fill-rule="evenodd"
+                                  />
+                                </svg>
                               </div>
                             </div>
                           </div>
@@ -9586,14 +9470,14 @@ exports[`EstimateCost - Item > render with tabulation 1`] = `
           </thead>
           <tbody>
             <tr
-              class="emotion-75 emotion-76"
+              class="emotion-73 emotion-74"
             >
               <td
-                class="emotion-77 emotion-281"
+                class="emotion-75 emotion-281"
                 width="70%"
               >
                 <div
-                  class="emotion-79 emotion-80"
+                  class="emotion-77 emotion-78"
                 >
                   <div
                     class="emotion-10 emotion-1"
@@ -9609,10 +9493,10 @@ exports[`EstimateCost - Item > render with tabulation 1`] = `
                     </div>
                   </div>
                   <div
-                    class="emotion-87 emotion-17"
+                    class="emotion-85 emotion-17"
                   >
                     <div
-                      class="emotion-18 emotion-90 emotion-20"
+                      class="emotion-18 emotion-88 emotion-20"
                     >
                       Test
                     </div>
@@ -9620,10 +9504,10 @@ exports[`EstimateCost - Item > render with tabulation 1`] = `
                 </div>
               </td>
               <td
-                class="emotion-92 emotion-93"
+                class="emotion-90 emotion-91"
               >
                 <p
-                  class="emotion-94 emotion-95 emotion-15"
+                  class="emotion-92 emotion-93 emotion-15"
                 >
                   €0.00
                 </p>
@@ -9634,7 +9518,7 @@ exports[`EstimateCost - Item > render with tabulation 1`] = `
         <table
           cellpadding="0"
           cellspacing="0"
-          class="emotion-97 emotion-98"
+          class="emotion-95 emotion-96"
         >
           <colgroup>
             <col />
@@ -9646,13 +9530,13 @@ exports[`EstimateCost - Item > render with tabulation 1`] = `
             <tr>
               <td
                 aria-label="control"
-                class="emotion-101 emotion-102"
+                class="emotion-99 emotion-100"
               />
               <td
-                class="emotion-103 emotion-280"
+                class="emotion-101 emotion-280"
               >
                 <h3
-                  class="emotion-105 emotion-106 emotion-15"
+                  class="emotion-103 emotion-104 emotion-15"
                 >
                   <span
                     class="emotion-32 emotion-33"
@@ -10479,7 +10363,6 @@ exports[`EstimateCost - Item > render with tooltipInfo 1`] = `
   flex-wrap: nowrap;
   border: 1px solid #d9dadd;
   border-radius: 0.25rem;
-  background-color: #ffffff;
 }
 
 .emotion-57:not([data-disabled='true']):not([data-readonly='true']):not(
@@ -10630,7 +10513,6 @@ exports[`EstimateCost - Item > render with tooltipInfo 1`] = `
   flex-wrap: nowrap;
   border: 1px solid #d9dadd;
   border-radius: 0.25rem;
-  background-color: #ffffff;
 }
 
 .emotion-57:not([data-disabled='true']):not([data-readonly='true']):not(
@@ -10805,7 +10687,6 @@ exports[`EstimateCost - Item > render with tooltipInfo 1`] = `
   padding-left: 1rem;
   background: transparent;
   color: #3f4250;
-  font-size: 0.875rem;
 }
 
 .emotion-61[data-size="small"] {
@@ -10863,7 +10744,6 @@ exports[`EstimateCost - Item > render with tooltipInfo 1`] = `
   padding-left: 1rem;
   background: transparent;
   color: #3f4250;
-  font-size: 0.875rem;
 }
 
 .emotion-61[data-size="small"] {
@@ -10910,51 +10790,37 @@ exports[`EstimateCost - Item > render with tooltipInfo 1`] = `
   color: #b5b7bd;
 }
 
-.emotion-63 {
-  width: 12.6rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-63 {
-  width: 12.6rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-66 {
+.emotion-64 {
   width: 100%;
+  width: 12.6rem;
 }
 
-.emotion-66 #unit {
+.emotion-64 #unit {
   border: none;
   background: transparent;
 }
 
-.emotion-66 #unit:focus,
-.emotion-66 #unit:active {
+.emotion-64 #unit:focus,
+.emotion-64 #unit:active {
   box-shadow: none;
 }
 
-.emotion-66 {
+.emotion-64 {
   width: 100%;
+  width: 12.6rem;
 }
 
-.emotion-66 #unit {
+.emotion-64 #unit {
   border: none;
   background: transparent;
 }
 
-.emotion-66 #unit:focus,
-.emotion-66 #unit:active {
+.emotion-64 #unit:focus,
+.emotion-64 #unit:active {
   box-shadow: none;
 }
 
-.emotion-72 {
+.emotion-70 {
   display: grid;
   width: 100%;
   gap: 0.5rem;
@@ -10969,85 +10835,85 @@ exports[`EstimateCost - Item > render with tooltipInfo 1`] = `
   width: 100%;
 }
 
-.emotion-72[data-size='small'] {
+.emotion-70[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-72[data-size='medium'] {
+.emotion-70[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-72[data-size='large'] {
+.emotion-70[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-72[data-state='neutral'] {
+.emotion-70[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.emotion-72[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-70[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-72[data-state='neutral']:not([data-disabled='true']):hover {
+.emotion-70[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-72[data-state='neutral']:not([data-disabled='true']):focus-visible {
+.emotion-70[data-state='neutral']:not([data-disabled='true']):focus-visible {
   outline: 5px auto Highlight;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-.emotion-72[data-state='neutral'][data-dropdownvisible='true'] {
+.emotion-70[data-state='neutral'][data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.emotion-72[data-state='success'] {
+.emotion-70[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.emotion-72[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-70[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #1b533f;
   box-shadow: 0px 0px 0px 3px #45d19f40;
 }
 
-.emotion-72[data-state='success'][data-dropdownvisible='true'] {
+.emotion-70[data-state='success'][data-dropdownvisible='true'] {
   border-color: #1b533f;
 }
 
-.emotion-72[data-state='danger'] {
+.emotion-70[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-72[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-70[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-72[data-state='danger'][data-dropdownvisible='true'] {
+.emotion-70[data-state='danger'][data-dropdownvisible='true'] {
   border-color: #92103f;
 }
 
-.emotion-72:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-70:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-72[data-readonly='true'] {
+.emotion-70[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-72[data-disabled='true'] {
+.emotion-70[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-72 {
+.emotion-70 {
   display: grid;
   width: 100%;
   gap: 0.5rem;
@@ -11062,85 +10928,103 @@ exports[`EstimateCost - Item > render with tooltipInfo 1`] = `
   width: 100%;
 }
 
-.emotion-72[data-size='small'] {
+.emotion-70[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-72[data-size='medium'] {
+.emotion-70[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-72[data-size='large'] {
+.emotion-70[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-72[data-state='neutral'] {
+.emotion-70[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.emotion-72[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-70[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-72[data-state='neutral']:not([data-disabled='true']):hover {
+.emotion-70[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-72[data-state='neutral']:not([data-disabled='true']):focus-visible {
+.emotion-70[data-state='neutral']:not([data-disabled='true']):focus-visible {
   outline: 5px auto Highlight;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-.emotion-72[data-state='neutral'][data-dropdownvisible='true'] {
+.emotion-70[data-state='neutral'][data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.emotion-72[data-state='success'] {
+.emotion-70[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.emotion-72[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-70[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #1b533f;
   box-shadow: 0px 0px 0px 3px #45d19f40;
 }
 
-.emotion-72[data-state='success'][data-dropdownvisible='true'] {
+.emotion-70[data-state='success'][data-dropdownvisible='true'] {
   border-color: #1b533f;
 }
 
-.emotion-72[data-state='danger'] {
+.emotion-70[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-72[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-70[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-72[data-state='danger'][data-dropdownvisible='true'] {
+.emotion-70[data-state='danger'][data-dropdownvisible='true'] {
   border-color: #92103f;
 }
 
-.emotion-72:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-70:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-72[data-readonly='true'] {
+.emotion-70[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-72[data-disabled='true'] {
+.emotion-70[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-75 {
+.emotion-73 {
+  color: #3f4250;
+  font-size: 0.875rem;
+  font-family: Inter,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.emotion-73 {
   color: #3f4250;
   font-size: 0.875rem;
   font-family: Inter,sans-serif;
@@ -11159,24 +11043,34 @@ exports[`EstimateCost - Item > render with tooltipInfo 1`] = `
 }
 
 .emotion-75 {
-  color: #3f4250;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding-right: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-.emotion-77 {
+.emotion-75 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -11205,34 +11099,6 @@ exports[`EstimateCost - Item > render with tooltipInfo 1`] = `
 }
 
 .emotion-77 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  padding-right: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-79 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1rem;
@@ -11241,12 +11107,12 @@ exports[`EstimateCost - Item > render with tooltipInfo 1`] = `
   min-height: 1rem;
 }
 
-.emotion-79 .fillStroke {
+.emotion-77 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
 
-.emotion-79 {
+.emotion-77 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1rem;
@@ -11255,12 +11121,20 @@ exports[`EstimateCost - Item > render with tooltipInfo 1`] = `
   min-height: 1rem;
 }
 
-.emotion-79 .fillStroke {
+.emotion-77 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
 
-.emotion-83 {
+.emotion-81 {
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  width: 70%;
+  min-width: 230px;
+}
+
+.emotion-81 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -11269,14 +11143,6 @@ exports[`EstimateCost - Item > render with tooltipInfo 1`] = `
 }
 
 .emotion-83 {
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  width: 70%;
-  min-width: 230px;
-}
-
-.emotion-85 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -11297,7 +11163,7 @@ exports[`EstimateCost - Item > render with tooltipInfo 1`] = `
   padding-bottom: 8px;
 }
 
-.emotion-85 {
+.emotion-83 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -11318,15 +11184,42 @@ exports[`EstimateCost - Item > render with tooltipInfo 1`] = `
   padding-bottom: 8px;
 }
 
-.emotion-99 {
+.emotion-97 {
   text-align: right;
 }
 
-.emotion-99 {
+.emotion-97 {
   text-align: right;
 }
 
-.emotion-102 {
+.emotion-100 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  max-width: 500px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 16px;
+  color: #222638;
+  margin-right: 4px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 16px;
+  color: #222638;
+  font-weight: 500;
+  margin-right: 4px;
+}
+
+.emotion-100 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -11354,33 +11247,6 @@ exports[`EstimateCost - Item > render with tooltipInfo 1`] = `
 }
 
 .emotion-102 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  max-width: 500px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-size: 16px;
-  color: #222638;
-  margin-right: 4px;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-size: 16px;
-  color: #222638;
-  font-weight: 500;
-  margin-right: 4px;
-}
-
-.emotion-104 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -11392,7 +11258,7 @@ exports[`EstimateCost - Item > render with tooltipInfo 1`] = `
   min-width: 126px;
 }
 
-.emotion-104 {
+.emotion-102 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -11404,7 +11270,7 @@ exports[`EstimateCost - Item > render with tooltipInfo 1`] = `
   min-width: 126px;
 }
 
-.emotion-107 {
+.emotion-105 {
   color: #727683;
   font-size: 1rem;
   font-family: Inter,sans-serif;
@@ -11417,29 +11283,29 @@ exports[`EstimateCost - Item > render with tooltipInfo 1`] = `
   text-align: right;
 }
 
-.emotion-109 {
+.emotion-107 {
   margin: 0;
   width: 100%;
   border-right: 1px solid #d9dadd;
   border-radius: 0 0 0.25rem 0.25rem;
 }
 
-.emotion-109 {
+.emotion-107 {
   margin: 0;
   width: 100%;
   border-right: 1px solid #d9dadd;
   border-radius: 0 0 0.25rem 0.25rem;
 }
 
-.emotion-113 {
+.emotion-111 {
+  width: 70%;
+}
+
+.emotion-111 {
   width: 70%;
 }
 
 .emotion-113 {
-  width: 70%;
-}
-
-.emotion-115 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -11456,7 +11322,7 @@ exports[`EstimateCost - Item > render with tooltipInfo 1`] = `
   min-width: 126px;
 }
 
-.emotion-115 {
+.emotion-113 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -11473,7 +11339,7 @@ exports[`EstimateCost - Item > render with tooltipInfo 1`] = `
   min-width: 126px;
 }
 
-.emotion-118 {
+.emotion-116 {
   color: #641cb3;
   font-size: 1.5625rem;
   font-family: Space Grotesk,sans-serif;
@@ -11486,7 +11352,7 @@ exports[`EstimateCost - Item > render with tooltipInfo 1`] = `
   text-align: right;
 }
 
-.emotion-118 {
+.emotion-116 {
   color: #641cb3;
   font-size: 1.5625rem;
   font-family: Space Grotesk,sans-serif;
@@ -11662,7 +11528,6 @@ exports[`EstimateCost - Item > render with tooltipInfo 1`] = `
                           class="emotion-61 emotion-62"
                           data-size="medium"
                           data-testid="unit-input"
-                          id="«r1j»"
                           max="9007199254740991"
                           min="1"
                           name="iteration-value"
@@ -11672,59 +11537,53 @@ exports[`EstimateCost - Item > render with tooltipInfo 1`] = `
                           value="1"
                         />
                       </div>
-                       
                       <div
-                        class="emotion-63 emotion-64"
-                        width="12.6rem"
+                        aria-label="iteration-unit"
+                        class="emotion-63 emotion-64 emotion-65"
                       >
                         <div
-                          aria-label="iteration-unit"
-                          class="emotion-65 emotion-66 emotion-67"
+                          aria-controls="«r1l»"
+                          aria-describedby="«r1l»"
+                          class="emotion-18 emotion-19"
+                          data-container-full-width="true"
+                          tabindex="-1"
                         >
                           <div
-                            aria-controls="«r1l»"
-                            aria-describedby="«r1l»"
-                            class="emotion-18 emotion-19"
-                            data-container-full-width="true"
-                            tabindex="-1"
+                            class="emotion-55 emotion-1"
                           >
                             <div
-                              class="emotion-55 emotion-1"
+                              aria-expanded="false"
+                              aria-haspopup="listbox"
+                              class="emotion-70 emotion-71"
+                              data-disabled="false"
+                              data-dropdownvisible="false"
+                              data-readonly="false"
+                              data-size="medium"
+                              data-state="neutral"
+                              data-testid="select-input-iteration-unit"
+                              id="unit"
+                              role="combobox"
+                              tabindex="0"
                             >
                               <div
-                                aria-expanded="false"
-                                aria-haspopup="listbox"
-                                class="emotion-72 emotion-73"
-                                data-disabled="false"
-                                data-dropdownvisible="false"
-                                data-readonly="false"
-                                data-size="medium"
-                                data-state="neutral"
-                                data-testid="select-input-iteration-unit"
-                                id="unit"
-                                role="combobox"
-                                tabindex="0"
+                                class="emotion-72 emotion-73 emotion-15"
                               >
-                                <div
-                                  class="emotion-74 emotion-75 emotion-15"
+                                Hour(s)
+                              </div>
+                              <div
+                                class="emotion-75 emotion-76"
+                              >
+                                <svg
+                                  aria-label="show dropdown"
+                                  class="emotion-77 emotion-21"
+                                  viewBox="0 0 16 16"
                                 >
-                                  Hour(s)
-                                </div>
-                                <div
-                                  class="emotion-77 emotion-78"
-                                >
-                                  <svg
-                                    aria-label="show dropdown"
-                                    class="emotion-79 emotion-21"
-                                    viewBox="0 0 16 16"
-                                  >
-                                    <path
-                                      clip-rule="evenodd"
-                                      d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
-                                      fill-rule="evenodd"
-                                    />
-                                  </svg>
-                                </div>
+                                  <path
+                                    clip-rule="evenodd"
+                                    d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
+                                    fill-rule="evenodd"
+                                  />
+                                </svg>
                               </div>
                             </div>
                           </div>
@@ -11738,14 +11597,14 @@ exports[`EstimateCost - Item > render with tooltipInfo 1`] = `
           </thead>
           <tbody>
             <tr
-              class="emotion-81 emotion-82"
+              class="emotion-79 emotion-80"
             >
               <td
-                class="emotion-83 emotion-341"
+                class="emotion-81 emotion-341"
                 width="70%"
               >
                 <div
-                  class="emotion-85 emotion-86"
+                  class="emotion-83 emotion-84"
                 >
                   <div
                     class="emotion-10 emotion-1"
@@ -11781,10 +11640,10 @@ exports[`EstimateCost - Item > render with tooltipInfo 1`] = `
                     </div>
                   </div>
                   <div
-                    class="emotion-99 emotion-23"
+                    class="emotion-97 emotion-23"
                   >
                     <div
-                      class="emotion-24 emotion-102 emotion-26"
+                      class="emotion-24 emotion-100 emotion-26"
                     >
                       Test
                     </div>
@@ -11792,10 +11651,10 @@ exports[`EstimateCost - Item > render with tooltipInfo 1`] = `
                 </div>
               </td>
               <td
-                class="emotion-104 emotion-105"
+                class="emotion-102 emotion-103"
               >
                 <p
-                  class="emotion-106 emotion-107 emotion-15"
+                  class="emotion-104 emotion-105 emotion-15"
                 >
                   €0.00
                 </p>
@@ -11806,7 +11665,7 @@ exports[`EstimateCost - Item > render with tooltipInfo 1`] = `
         <table
           cellpadding="0"
           cellspacing="0"
-          class="emotion-109 emotion-110"
+          class="emotion-107 emotion-108"
         >
           <colgroup>
             <col />
@@ -11818,13 +11677,13 @@ exports[`EstimateCost - Item > render with tooltipInfo 1`] = `
             <tr>
               <td
                 aria-label="control"
-                class="emotion-113 emotion-114"
+                class="emotion-111 emotion-112"
               />
               <td
-                class="emotion-115 emotion-340"
+                class="emotion-113 emotion-340"
               >
                 <h3
-                  class="emotion-117 emotion-118 emotion-15"
+                  class="emotion-115 emotion-116 emotion-15"
                 >
                   <span
                     class="emotion-38 emotion-39"

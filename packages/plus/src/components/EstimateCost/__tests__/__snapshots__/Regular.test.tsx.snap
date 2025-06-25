@@ -384,7 +384,6 @@ exports[`EstimateCost - Regular Item > render basic props 1`] = `
   flex-wrap: nowrap;
   border: 1px solid #d9dadd;
   border-radius: 0.25rem;
-  background-color: #ffffff;
 }
 
 .emotion-50:not([data-disabled='true']):not([data-readonly='true']):not(
@@ -541,7 +540,6 @@ exports[`EstimateCost - Regular Item > render basic props 1`] = `
   padding-left: 1rem;
   background: transparent;
   color: #3f4250;
-  font-size: 0.875rem;
 }
 
 .emotion-54[data-size="small"] {
@@ -588,41 +586,34 @@ exports[`EstimateCost - Regular Item > render basic props 1`] = `
   color: #b5b7bd;
 }
 
-.emotion-56 {
-  width: 12.6rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-59 {
+.emotion-57 {
   width: 100%;
+  width: 12.6rem;
 }
 
-.emotion-59 #unit {
+.emotion-57 #unit {
   border: none;
   background: transparent;
 }
 
-.emotion-59 #unit:focus,
-.emotion-59 #unit:active {
+.emotion-57 #unit:focus,
+.emotion-57 #unit:active {
   box-shadow: none;
 }
 
-.emotion-61 {
+.emotion-59 {
   display: inherit;
 }
 
-.emotion-61[data-container-full-height="true"] {
+.emotion-59[data-container-full-height="true"] {
   height: 100%;
 }
 
-.emotion-61[data-container-full-width="true"] {
+.emotion-59[data-container-full-width="true"] {
   width: 100%;
 }
 
-.emotion-65 {
+.emotion-63 {
   display: grid;
   width: 100%;
   gap: 0.5rem;
@@ -637,85 +628,85 @@ exports[`EstimateCost - Regular Item > render basic props 1`] = `
   width: 100%;
 }
 
-.emotion-65[data-size='small'] {
+.emotion-63[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-65[data-size='medium'] {
+.emotion-63[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-65[data-size='large'] {
+.emotion-63[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-65[data-state='neutral'] {
+.emotion-63[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.emotion-65[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-63[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-65[data-state='neutral']:not([data-disabled='true']):hover {
+.emotion-63[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-65[data-state='neutral']:not([data-disabled='true']):focus-visible {
+.emotion-63[data-state='neutral']:not([data-disabled='true']):focus-visible {
   outline: 5px auto Highlight;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-.emotion-65[data-state='neutral'][data-dropdownvisible='true'] {
+.emotion-63[data-state='neutral'][data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.emotion-65[data-state='success'] {
+.emotion-63[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.emotion-65[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-63[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #1b533f;
   box-shadow: 0px 0px 0px 3px #45d19f40;
 }
 
-.emotion-65[data-state='success'][data-dropdownvisible='true'] {
+.emotion-63[data-state='success'][data-dropdownvisible='true'] {
   border-color: #1b533f;
 }
 
-.emotion-65[data-state='danger'] {
+.emotion-63[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-65[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-63[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-65[data-state='danger'][data-dropdownvisible='true'] {
+.emotion-63[data-state='danger'][data-dropdownvisible='true'] {
   border-color: #92103f;
 }
 
-.emotion-65:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-63:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-65[data-readonly='true'] {
+.emotion-63[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-65[data-disabled='true'] {
+.emotion-63[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-68 {
+.emotion-66 {
   color: #3f4250;
   font-size: 0.875rem;
   font-family: Inter,sans-serif;
@@ -733,7 +724,7 @@ exports[`EstimateCost - Regular Item > render basic props 1`] = `
   align-self: center;
 }
 
-.emotion-70 {
+.emotion-68 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -761,7 +752,7 @@ exports[`EstimateCost - Regular Item > render basic props 1`] = `
   display: flex;
 }
 
-.emotion-72 {
+.emotion-70 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1rem;
@@ -770,12 +761,12 @@ exports[`EstimateCost - Regular Item > render basic props 1`] = `
   min-height: 1rem;
 }
 
-.emotion-72 .fillStroke {
+.emotion-70 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
 
-.emotion-76 {
+.emotion-74 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -783,7 +774,7 @@ exports[`EstimateCost - Regular Item > render basic props 1`] = `
   min-width: 230px;
 }
 
-.emotion-78 {
+.emotion-76 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -804,11 +795,11 @@ exports[`EstimateCost - Regular Item > render basic props 1`] = `
   padding-bottom: 8px;
 }
 
-.emotion-86 {
+.emotion-84 {
   text-align: right;
 }
 
-.emotion-88 {
+.emotion-86 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -823,7 +814,7 @@ exports[`EstimateCost - Regular Item > render basic props 1`] = `
   margin-right: 4px;
 }
 
-.emotion-90 {
+.emotion-88 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -835,7 +826,7 @@ exports[`EstimateCost - Regular Item > render basic props 1`] = `
   min-width: 126px;
 }
 
-.emotion-93 {
+.emotion-91 {
   color: #727683;
   font-size: 1rem;
   font-family: Inter,sans-serif;
@@ -848,18 +839,18 @@ exports[`EstimateCost - Regular Item > render basic props 1`] = `
   text-align: right;
 }
 
-.emotion-95 {
+.emotion-93 {
   margin: 0;
   width: 100%;
   border-right: 1px solid #d9dadd;
   border-radius: 0 0 0.25rem 0.25rem;
 }
 
-.emotion-99 {
+.emotion-97 {
   width: 70%;
 }
 
-.emotion-101 {
+.emotion-99 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -876,7 +867,7 @@ exports[`EstimateCost - Regular Item > render basic props 1`] = `
   min-width: 126px;
 }
 
-.emotion-104 {
+.emotion-102 {
   color: #641cb3;
   font-size: 1.5625rem;
   font-family: Space Grotesk,sans-serif;
@@ -1032,7 +1023,6 @@ exports[`EstimateCost - Regular Item > render basic props 1`] = `
                           class="emotion-54 emotion-55"
                           data-size="medium"
                           data-testid="unit-input"
-                          id="«r3»"
                           max="9007199254740991"
                           min="1"
                           name="iteration-value"
@@ -1042,59 +1032,53 @@ exports[`EstimateCost - Regular Item > render basic props 1`] = `
                           value="1"
                         />
                       </div>
-                       
                       <div
-                        class="emotion-56 emotion-57"
-                        width="12.6rem"
+                        aria-label="iteration-unit"
+                        class="emotion-56 emotion-57 emotion-58"
                       >
                         <div
-                          aria-label="iteration-unit"
-                          class="emotion-58 emotion-59 emotion-60"
+                          aria-controls="«r5»"
+                          aria-describedby="«r5»"
+                          class="emotion-59 emotion-60"
+                          data-container-full-width="true"
+                          tabindex="-1"
                         >
                           <div
-                            aria-controls="«r5»"
-                            aria-describedby="«r5»"
-                            class="emotion-61 emotion-62"
-                            data-container-full-width="true"
-                            tabindex="-1"
+                            class="emotion-48 emotion-1"
                           >
                             <div
-                              class="emotion-48 emotion-1"
+                              aria-expanded="false"
+                              aria-haspopup="listbox"
+                              class="emotion-63 emotion-64"
+                              data-disabled="false"
+                              data-dropdownvisible="false"
+                              data-readonly="false"
+                              data-size="medium"
+                              data-state="neutral"
+                              data-testid="select-input-iteration-unit"
+                              id="unit"
+                              role="combobox"
+                              tabindex="0"
                             >
                               <div
-                                aria-expanded="false"
-                                aria-haspopup="listbox"
-                                class="emotion-65 emotion-66"
-                                data-disabled="false"
-                                data-dropdownvisible="false"
-                                data-readonly="false"
-                                data-size="medium"
-                                data-state="neutral"
-                                data-testid="select-input-iteration-unit"
-                                id="unit"
-                                role="combobox"
-                                tabindex="0"
+                                class="emotion-65 emotion-66 emotion-15"
                               >
-                                <div
-                                  class="emotion-67 emotion-68 emotion-15"
+                                Hour(s)
+                              </div>
+                              <div
+                                class="emotion-68 emotion-69"
+                              >
+                                <svg
+                                  aria-label="show dropdown"
+                                  class="emotion-70 emotion-25"
+                                  viewBox="0 0 16 16"
                                 >
-                                  Hour(s)
-                                </div>
-                                <div
-                                  class="emotion-70 emotion-71"
-                                >
-                                  <svg
-                                    aria-label="show dropdown"
-                                    class="emotion-72 emotion-25"
-                                    viewBox="0 0 16 16"
-                                  >
-                                    <path
-                                      clip-rule="evenodd"
-                                      d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
-                                      fill-rule="evenodd"
-                                    />
-                                  </svg>
-                                </div>
+                                  <path
+                                    clip-rule="evenodd"
+                                    d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
+                                    fill-rule="evenodd"
+                                  />
+                                </svg>
                               </div>
                             </div>
                           </div>
@@ -1108,14 +1092,14 @@ exports[`EstimateCost - Regular Item > render basic props 1`] = `
           </thead>
           <tbody>
             <tr
-              class="emotion-74 emotion-75"
+              class="emotion-72 emotion-73"
             >
               <td
-                class="emotion-76 emotion-271"
+                class="emotion-74 emotion-271"
                 width="70%"
               >
                 <div
-                  class="emotion-78 emotion-79"
+                  class="emotion-76 emotion-77"
                 >
                   <div
                     class="emotion-10 emotion-1"
@@ -1131,10 +1115,10 @@ exports[`EstimateCost - Regular Item > render basic props 1`] = `
                     </div>
                   </div>
                   <div
-                    class="emotion-86 emotion-17"
+                    class="emotion-84 emotion-17"
                   >
                     <div
-                      class="emotion-88 emotion-19"
+                      class="emotion-86 emotion-19"
                     >
                       This is a regular Item
                     </div>
@@ -1142,10 +1126,10 @@ exports[`EstimateCost - Regular Item > render basic props 1`] = `
                 </div>
               </td>
               <td
-                class="emotion-90 emotion-91"
+                class="emotion-88 emotion-89"
               >
                 <p
-                  class="emotion-92 emotion-93 emotion-15"
+                  class="emotion-90 emotion-91 emotion-15"
                 >
                   €0.00
                 </p>
@@ -1156,7 +1140,7 @@ exports[`EstimateCost - Regular Item > render basic props 1`] = `
         <table
           cellpadding="0"
           cellspacing="0"
-          class="emotion-95 emotion-96"
+          class="emotion-93 emotion-94"
         >
           <colgroup>
             <col />
@@ -1168,13 +1152,13 @@ exports[`EstimateCost - Regular Item > render basic props 1`] = `
             <tr>
               <td
                 aria-label="control"
-                class="emotion-99 emotion-100"
+                class="emotion-97 emotion-98"
               />
               <td
-                class="emotion-101 emotion-270"
+                class="emotion-99 emotion-270"
               >
                 <h3
-                  class="emotion-103 emotion-104 emotion-15"
+                  class="emotion-101 emotion-102 emotion-15"
                 >
                   <span
                     class="emotion-31 emotion-32"
@@ -1561,7 +1545,6 @@ exports[`EstimateCost - Regular Item > render basic props with is not defined 1`
   flex-wrap: nowrap;
   border: 1px solid #d9dadd;
   border-radius: 0.25rem;
-  background-color: #ffffff;
 }
 
 .emotion-48:not([data-disabled='true']):not([data-readonly='true']):not(
@@ -1718,7 +1701,6 @@ exports[`EstimateCost - Regular Item > render basic props with is not defined 1`
   padding-left: 1rem;
   background: transparent;
   color: #3f4250;
-  font-size: 0.875rem;
 }
 
 .emotion-52[data-size="small"] {
@@ -1765,41 +1747,34 @@ exports[`EstimateCost - Regular Item > render basic props with is not defined 1`
   color: #b5b7bd;
 }
 
-.emotion-54 {
-  width: 12.6rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-57 {
+.emotion-55 {
   width: 100%;
+  width: 12.6rem;
 }
 
-.emotion-57 #unit {
+.emotion-55 #unit {
   border: none;
   background: transparent;
 }
 
-.emotion-57 #unit:focus,
-.emotion-57 #unit:active {
+.emotion-55 #unit:focus,
+.emotion-55 #unit:active {
   box-shadow: none;
 }
 
-.emotion-59 {
+.emotion-57 {
   display: inherit;
 }
 
-.emotion-59[data-container-full-height="true"] {
+.emotion-57[data-container-full-height="true"] {
   height: 100%;
 }
 
-.emotion-59[data-container-full-width="true"] {
+.emotion-57[data-container-full-width="true"] {
   width: 100%;
 }
 
-.emotion-63 {
+.emotion-61 {
   display: grid;
   width: 100%;
   gap: 0.5rem;
@@ -1814,85 +1789,85 @@ exports[`EstimateCost - Regular Item > render basic props with is not defined 1`
   width: 100%;
 }
 
-.emotion-63[data-size='small'] {
+.emotion-61[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-63[data-size='medium'] {
+.emotion-61[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-63[data-size='large'] {
+.emotion-61[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-63[data-state='neutral'] {
+.emotion-61[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.emotion-63[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-61[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-63[data-state='neutral']:not([data-disabled='true']):hover {
+.emotion-61[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-63[data-state='neutral']:not([data-disabled='true']):focus-visible {
+.emotion-61[data-state='neutral']:not([data-disabled='true']):focus-visible {
   outline: 5px auto Highlight;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-.emotion-63[data-state='neutral'][data-dropdownvisible='true'] {
+.emotion-61[data-state='neutral'][data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.emotion-63[data-state='success'] {
+.emotion-61[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.emotion-63[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-61[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #1b533f;
   box-shadow: 0px 0px 0px 3px #45d19f40;
 }
 
-.emotion-63[data-state='success'][data-dropdownvisible='true'] {
+.emotion-61[data-state='success'][data-dropdownvisible='true'] {
   border-color: #1b533f;
 }
 
-.emotion-63[data-state='danger'] {
+.emotion-61[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-63[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-61[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-63[data-state='danger'][data-dropdownvisible='true'] {
+.emotion-61[data-state='danger'][data-dropdownvisible='true'] {
   border-color: #92103f;
 }
 
-.emotion-63:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-61:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-63[data-readonly='true'] {
+.emotion-61[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-63[data-disabled='true'] {
+.emotion-61[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-66 {
+.emotion-64 {
   color: #3f4250;
   font-size: 0.875rem;
   font-family: Inter,sans-serif;
@@ -1910,7 +1885,7 @@ exports[`EstimateCost - Regular Item > render basic props with is not defined 1`
   align-self: center;
 }
 
-.emotion-68 {
+.emotion-66 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1938,7 +1913,7 @@ exports[`EstimateCost - Regular Item > render basic props with is not defined 1`
   display: flex;
 }
 
-.emotion-70 {
+.emotion-68 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1rem;
@@ -1947,12 +1922,12 @@ exports[`EstimateCost - Regular Item > render basic props with is not defined 1`
   min-height: 1rem;
 }
 
-.emotion-70 .fillStroke {
+.emotion-68 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
 
-.emotion-74 {
+.emotion-72 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -1960,7 +1935,7 @@ exports[`EstimateCost - Regular Item > render basic props with is not defined 1`
   min-width: 230px;
 }
 
-.emotion-76 {
+.emotion-74 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1981,11 +1956,11 @@ exports[`EstimateCost - Regular Item > render basic props with is not defined 1`
   padding-bottom: 8px;
 }
 
-.emotion-84 {
+.emotion-82 {
   text-align: right;
 }
 
-.emotion-86 {
+.emotion-84 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -1997,7 +1972,7 @@ exports[`EstimateCost - Regular Item > render basic props with is not defined 1`
   min-width: 126px;
 }
 
-.emotion-89 {
+.emotion-87 {
   color: #727683;
   font-size: 1rem;
   font-family: Inter,sans-serif;
@@ -2010,18 +1985,18 @@ exports[`EstimateCost - Regular Item > render basic props with is not defined 1`
   text-align: right;
 }
 
-.emotion-91 {
+.emotion-89 {
   margin: 0;
   width: 100%;
   border-right: 1px solid #d9dadd;
   border-radius: 0 0 0.25rem 0.25rem;
 }
 
-.emotion-95 {
+.emotion-93 {
   width: 70%;
 }
 
-.emotion-97 {
+.emotion-95 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -2038,7 +2013,7 @@ exports[`EstimateCost - Regular Item > render basic props with is not defined 1`
   min-width: 126px;
 }
 
-.emotion-100 {
+.emotion-98 {
   color: #641cb3;
   font-size: 1.5625rem;
   font-family: Space Grotesk,sans-serif;
@@ -2190,7 +2165,6 @@ exports[`EstimateCost - Regular Item > render basic props with is not defined 1`
                           class="emotion-52 emotion-53"
                           data-size="medium"
                           data-testid="unit-input"
-                          id="«r2p»"
                           max="9007199254740991"
                           min="1"
                           name="iteration-value"
@@ -2200,59 +2174,53 @@ exports[`EstimateCost - Regular Item > render basic props with is not defined 1`
                           value="1"
                         />
                       </div>
-                       
                       <div
-                        class="emotion-54 emotion-55"
-                        width="12.6rem"
+                        aria-label="iteration-unit"
+                        class="emotion-54 emotion-55 emotion-56"
                       >
                         <div
-                          aria-label="iteration-unit"
-                          class="emotion-56 emotion-57 emotion-58"
+                          aria-controls="«r2r»"
+                          aria-describedby="«r2r»"
+                          class="emotion-57 emotion-58"
+                          data-container-full-width="true"
+                          tabindex="-1"
                         >
                           <div
-                            aria-controls="«r2r»"
-                            aria-describedby="«r2r»"
-                            class="emotion-59 emotion-60"
-                            data-container-full-width="true"
-                            tabindex="-1"
+                            class="emotion-46 emotion-1"
                           >
                             <div
-                              class="emotion-46 emotion-1"
+                              aria-expanded="false"
+                              aria-haspopup="listbox"
+                              class="emotion-61 emotion-62"
+                              data-disabled="false"
+                              data-dropdownvisible="false"
+                              data-readonly="false"
+                              data-size="medium"
+                              data-state="neutral"
+                              data-testid="select-input-iteration-unit"
+                              id="unit"
+                              role="combobox"
+                              tabindex="0"
                             >
                               <div
-                                aria-expanded="false"
-                                aria-haspopup="listbox"
-                                class="emotion-63 emotion-64"
-                                data-disabled="false"
-                                data-dropdownvisible="false"
-                                data-readonly="false"
-                                data-size="medium"
-                                data-state="neutral"
-                                data-testid="select-input-iteration-unit"
-                                id="unit"
-                                role="combobox"
-                                tabindex="0"
+                                class="emotion-63 emotion-64 emotion-15"
                               >
-                                <div
-                                  class="emotion-65 emotion-66 emotion-15"
+                                Hour(s)
+                              </div>
+                              <div
+                                class="emotion-66 emotion-67"
+                              >
+                                <svg
+                                  aria-label="show dropdown"
+                                  class="emotion-68 emotion-23"
+                                  viewBox="0 0 16 16"
                                 >
-                                  Hour(s)
-                                </div>
-                                <div
-                                  class="emotion-68 emotion-69"
-                                >
-                                  <svg
-                                    aria-label="show dropdown"
-                                    class="emotion-70 emotion-23"
-                                    viewBox="0 0 16 16"
-                                  >
-                                    <path
-                                      clip-rule="evenodd"
-                                      d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
-                                      fill-rule="evenodd"
-                                    />
-                                  </svg>
-                                </div>
+                                  <path
+                                    clip-rule="evenodd"
+                                    d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
+                                    fill-rule="evenodd"
+                                  />
+                                </svg>
                               </div>
                             </div>
                           </div>
@@ -2266,14 +2234,14 @@ exports[`EstimateCost - Regular Item > render basic props with is not defined 1`
           </thead>
           <tbody>
             <tr
-              class="emotion-72 emotion-73"
+              class="emotion-70 emotion-71"
             >
               <td
-                class="emotion-74 emotion-251"
+                class="emotion-72 emotion-251"
                 width="70%"
               >
                 <div
-                  class="emotion-76 emotion-77"
+                  class="emotion-74 emotion-75"
                 >
                   <div
                     class="emotion-10 emotion-1"
@@ -2289,17 +2257,17 @@ exports[`EstimateCost - Regular Item > render basic props with is not defined 1`
                     </div>
                   </div>
                   <div
-                    class="emotion-84 emotion-17"
+                    class="emotion-82 emotion-17"
                   >
                     Not defined
                   </div>
                 </div>
               </td>
               <td
-                class="emotion-86 emotion-87"
+                class="emotion-84 emotion-85"
               >
                 <p
-                  class="emotion-88 emotion-89 emotion-15"
+                  class="emotion-86 emotion-87 emotion-15"
                 >
                   €0.00
                 </p>
@@ -2310,7 +2278,7 @@ exports[`EstimateCost - Regular Item > render basic props with is not defined 1`
         <table
           cellpadding="0"
           cellspacing="0"
-          class="emotion-91 emotion-92"
+          class="emotion-89 emotion-90"
         >
           <colgroup>
             <col />
@@ -2322,13 +2290,13 @@ exports[`EstimateCost - Regular Item > render basic props with is not defined 1`
             <tr>
               <td
                 aria-label="control"
-                class="emotion-95 emotion-96"
+                class="emotion-93 emotion-94"
               />
               <td
-                class="emotion-97 emotion-250"
+                class="emotion-95 emotion-250"
               >
                 <h3
-                  class="emotion-99 emotion-100 emotion-15"
+                  class="emotion-97 emotion-98 emotion-15"
                 >
                   <span
                     class="emotion-29 emotion-30"
@@ -2730,7 +2698,6 @@ exports[`EstimateCost - Regular Item > render basic props with long fractions di
   flex-wrap: nowrap;
   border: 1px solid #d9dadd;
   border-radius: 0.25rem;
-  background-color: #ffffff;
 }
 
 .emotion-50:not([data-disabled='true']):not([data-readonly='true']):not(
@@ -2887,7 +2854,6 @@ exports[`EstimateCost - Regular Item > render basic props with long fractions di
   padding-left: 1rem;
   background: transparent;
   color: #3f4250;
-  font-size: 0.875rem;
 }
 
 .emotion-54[data-size="small"] {
@@ -2934,41 +2900,34 @@ exports[`EstimateCost - Regular Item > render basic props with long fractions di
   color: #b5b7bd;
 }
 
-.emotion-56 {
-  width: 12.6rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-59 {
+.emotion-57 {
   width: 100%;
+  width: 12.6rem;
 }
 
-.emotion-59 #unit {
+.emotion-57 #unit {
   border: none;
   background: transparent;
 }
 
-.emotion-59 #unit:focus,
-.emotion-59 #unit:active {
+.emotion-57 #unit:focus,
+.emotion-57 #unit:active {
   box-shadow: none;
 }
 
-.emotion-61 {
+.emotion-59 {
   display: inherit;
 }
 
-.emotion-61[data-container-full-height="true"] {
+.emotion-59[data-container-full-height="true"] {
   height: 100%;
 }
 
-.emotion-61[data-container-full-width="true"] {
+.emotion-59[data-container-full-width="true"] {
   width: 100%;
 }
 
-.emotion-65 {
+.emotion-63 {
   display: grid;
   width: 100%;
   gap: 0.5rem;
@@ -2983,85 +2942,85 @@ exports[`EstimateCost - Regular Item > render basic props with long fractions di
   width: 100%;
 }
 
-.emotion-65[data-size='small'] {
+.emotion-63[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-65[data-size='medium'] {
+.emotion-63[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-65[data-size='large'] {
+.emotion-63[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-65[data-state='neutral'] {
+.emotion-63[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.emotion-65[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-63[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-65[data-state='neutral']:not([data-disabled='true']):hover {
+.emotion-63[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-65[data-state='neutral']:not([data-disabled='true']):focus-visible {
+.emotion-63[data-state='neutral']:not([data-disabled='true']):focus-visible {
   outline: 5px auto Highlight;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-.emotion-65[data-state='neutral'][data-dropdownvisible='true'] {
+.emotion-63[data-state='neutral'][data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.emotion-65[data-state='success'] {
+.emotion-63[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.emotion-65[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-63[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #1b533f;
   box-shadow: 0px 0px 0px 3px #45d19f40;
 }
 
-.emotion-65[data-state='success'][data-dropdownvisible='true'] {
+.emotion-63[data-state='success'][data-dropdownvisible='true'] {
   border-color: #1b533f;
 }
 
-.emotion-65[data-state='danger'] {
+.emotion-63[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-65[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-63[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-65[data-state='danger'][data-dropdownvisible='true'] {
+.emotion-63[data-state='danger'][data-dropdownvisible='true'] {
   border-color: #92103f;
 }
 
-.emotion-65:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-63:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-65[data-readonly='true'] {
+.emotion-63[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-65[data-disabled='true'] {
+.emotion-63[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-68 {
+.emotion-66 {
   color: #3f4250;
   font-size: 0.875rem;
   font-family: Inter,sans-serif;
@@ -3079,7 +3038,7 @@ exports[`EstimateCost - Regular Item > render basic props with long fractions di
   align-self: center;
 }
 
-.emotion-70 {
+.emotion-68 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3107,7 +3066,7 @@ exports[`EstimateCost - Regular Item > render basic props with long fractions di
   display: flex;
 }
 
-.emotion-72 {
+.emotion-70 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1rem;
@@ -3116,12 +3075,12 @@ exports[`EstimateCost - Regular Item > render basic props with long fractions di
   min-height: 1rem;
 }
 
-.emotion-72 .fillStroke {
+.emotion-70 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
 
-.emotion-76 {
+.emotion-74 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -3129,7 +3088,7 @@ exports[`EstimateCost - Regular Item > render basic props with long fractions di
   min-width: 230px;
 }
 
-.emotion-78 {
+.emotion-76 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3150,11 +3109,11 @@ exports[`EstimateCost - Regular Item > render basic props with long fractions di
   padding-bottom: 8px;
 }
 
-.emotion-86 {
+.emotion-84 {
   text-align: right;
 }
 
-.emotion-88 {
+.emotion-86 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -3169,7 +3128,7 @@ exports[`EstimateCost - Regular Item > render basic props with long fractions di
   margin-right: 4px;
 }
 
-.emotion-90 {
+.emotion-88 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -3181,7 +3140,7 @@ exports[`EstimateCost - Regular Item > render basic props with long fractions di
   min-width: 126px;
 }
 
-.emotion-93 {
+.emotion-91 {
   color: #641cb3;
   font-size: 1rem;
   font-family: Inter,sans-serif;
@@ -3194,18 +3153,18 @@ exports[`EstimateCost - Regular Item > render basic props with long fractions di
   text-align: right;
 }
 
-.emotion-95 {
+.emotion-93 {
   margin: 0;
   width: 100%;
   border-right: 1px solid #d9dadd;
   border-radius: 0 0 0.25rem 0.25rem;
 }
 
-.emotion-99 {
+.emotion-97 {
   width: 70%;
 }
 
-.emotion-101 {
+.emotion-99 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -3222,7 +3181,7 @@ exports[`EstimateCost - Regular Item > render basic props with long fractions di
   min-width: 126px;
 }
 
-.emotion-104 {
+.emotion-102 {
   color: #641cb3;
   font-size: 1.5625rem;
   font-family: Space Grotesk,sans-serif;
@@ -3378,7 +3337,6 @@ exports[`EstimateCost - Regular Item > render basic props with long fractions di
                           class="emotion-54 emotion-55"
                           data-size="medium"
                           data-testid="unit-input"
-                          id="«r1j»"
                           max="9007199254740991"
                           min="1"
                           name="iteration-value"
@@ -3388,59 +3346,53 @@ exports[`EstimateCost - Regular Item > render basic props with long fractions di
                           value="1"
                         />
                       </div>
-                       
                       <div
-                        class="emotion-56 emotion-57"
-                        width="12.6rem"
+                        aria-label="iteration-unit"
+                        class="emotion-56 emotion-57 emotion-58"
                       >
                         <div
-                          aria-label="iteration-unit"
-                          class="emotion-58 emotion-59 emotion-60"
+                          aria-controls="«r1l»"
+                          aria-describedby="«r1l»"
+                          class="emotion-59 emotion-60"
+                          data-container-full-width="true"
+                          tabindex="-1"
                         >
                           <div
-                            aria-controls="«r1l»"
-                            aria-describedby="«r1l»"
-                            class="emotion-61 emotion-62"
-                            data-container-full-width="true"
-                            tabindex="-1"
+                            class="emotion-48 emotion-1"
                           >
                             <div
-                              class="emotion-48 emotion-1"
+                              aria-expanded="false"
+                              aria-haspopup="listbox"
+                              class="emotion-63 emotion-64"
+                              data-disabled="false"
+                              data-dropdownvisible="false"
+                              data-readonly="false"
+                              data-size="medium"
+                              data-state="neutral"
+                              data-testid="select-input-iteration-unit"
+                              id="unit"
+                              role="combobox"
+                              tabindex="0"
                             >
                               <div
-                                aria-expanded="false"
-                                aria-haspopup="listbox"
-                                class="emotion-65 emotion-66"
-                                data-disabled="false"
-                                data-dropdownvisible="false"
-                                data-readonly="false"
-                                data-size="medium"
-                                data-state="neutral"
-                                data-testid="select-input-iteration-unit"
-                                id="unit"
-                                role="combobox"
-                                tabindex="0"
+                                class="emotion-65 emotion-66 emotion-15"
                               >
-                                <div
-                                  class="emotion-67 emotion-68 emotion-15"
+                                Hour(s)
+                              </div>
+                              <div
+                                class="emotion-68 emotion-69"
+                              >
+                                <svg
+                                  aria-label="show dropdown"
+                                  class="emotion-70 emotion-25"
+                                  viewBox="0 0 16 16"
                                 >
-                                  Hour(s)
-                                </div>
-                                <div
-                                  class="emotion-70 emotion-71"
-                                >
-                                  <svg
-                                    aria-label="show dropdown"
-                                    class="emotion-72 emotion-25"
-                                    viewBox="0 0 16 16"
-                                  >
-                                    <path
-                                      clip-rule="evenodd"
-                                      d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
-                                      fill-rule="evenodd"
-                                    />
-                                  </svg>
-                                </div>
+                                  <path
+                                    clip-rule="evenodd"
+                                    d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
+                                    fill-rule="evenodd"
+                                  />
+                                </svg>
                               </div>
                             </div>
                           </div>
@@ -3454,14 +3406,14 @@ exports[`EstimateCost - Regular Item > render basic props with long fractions di
           </thead>
           <tbody>
             <tr
-              class="emotion-74 emotion-75"
+              class="emotion-72 emotion-73"
             >
               <td
-                class="emotion-76 emotion-271"
+                class="emotion-74 emotion-271"
                 width="70%"
               >
                 <div
-                  class="emotion-78 emotion-79"
+                  class="emotion-76 emotion-77"
                 >
                   <div
                     class="emotion-10 emotion-1"
@@ -3477,10 +3429,10 @@ exports[`EstimateCost - Regular Item > render basic props with long fractions di
                     </div>
                   </div>
                   <div
-                    class="emotion-86 emotion-17"
+                    class="emotion-84 emotion-17"
                   >
                     <div
-                      class="emotion-88 emotion-19"
+                      class="emotion-86 emotion-19"
                     >
                       This is a regular Item
                     </div>
@@ -3488,10 +3440,10 @@ exports[`EstimateCost - Regular Item > render basic props with long fractions di
                 </div>
               </td>
               <td
-                class="emotion-90 emotion-91"
+                class="emotion-88 emotion-89"
               >
                 <p
-                  class="emotion-92 emotion-93 emotion-15"
+                  class="emotion-90 emotion-91 emotion-15"
                 >
                   €0.000001
                 </p>
@@ -3502,7 +3454,7 @@ exports[`EstimateCost - Regular Item > render basic props with long fractions di
         <table
           cellpadding="0"
           cellspacing="0"
-          class="emotion-95 emotion-96"
+          class="emotion-93 emotion-94"
         >
           <colgroup>
             <col />
@@ -3514,13 +3466,13 @@ exports[`EstimateCost - Regular Item > render basic props with long fractions di
             <tr>
               <td
                 aria-label="control"
-                class="emotion-99 emotion-100"
+                class="emotion-97 emotion-98"
               />
               <td
-                class="emotion-101 emotion-270"
+                class="emotion-99 emotion-270"
               >
                 <h3
-                  class="emotion-103 emotion-104 emotion-15"
+                  class="emotion-101 emotion-102 emotion-15"
                 >
                   <span
                     class="emotion-31 emotion-32"
@@ -3922,7 +3874,6 @@ exports[`EstimateCost - Regular Item > render basic props with maxPrice 1`] = `
   flex-wrap: nowrap;
   border: 1px solid #d9dadd;
   border-radius: 0.25rem;
-  background-color: #ffffff;
 }
 
 .emotion-50:not([data-disabled='true']):not([data-readonly='true']):not(
@@ -4079,7 +4030,6 @@ exports[`EstimateCost - Regular Item > render basic props with maxPrice 1`] = `
   padding-left: 1rem;
   background: transparent;
   color: #3f4250;
-  font-size: 0.875rem;
 }
 
 .emotion-54[data-size="small"] {
@@ -4126,41 +4076,34 @@ exports[`EstimateCost - Regular Item > render basic props with maxPrice 1`] = `
   color: #b5b7bd;
 }
 
-.emotion-56 {
-  width: 12.6rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-59 {
+.emotion-57 {
   width: 100%;
+  width: 12.6rem;
 }
 
-.emotion-59 #unit {
+.emotion-57 #unit {
   border: none;
   background: transparent;
 }
 
-.emotion-59 #unit:focus,
-.emotion-59 #unit:active {
+.emotion-57 #unit:focus,
+.emotion-57 #unit:active {
   box-shadow: none;
 }
 
-.emotion-61 {
+.emotion-59 {
   display: inherit;
 }
 
-.emotion-61[data-container-full-height="true"] {
+.emotion-59[data-container-full-height="true"] {
   height: 100%;
 }
 
-.emotion-61[data-container-full-width="true"] {
+.emotion-59[data-container-full-width="true"] {
   width: 100%;
 }
 
-.emotion-65 {
+.emotion-63 {
   display: grid;
   width: 100%;
   gap: 0.5rem;
@@ -4175,85 +4118,85 @@ exports[`EstimateCost - Regular Item > render basic props with maxPrice 1`] = `
   width: 100%;
 }
 
-.emotion-65[data-size='small'] {
+.emotion-63[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-65[data-size='medium'] {
+.emotion-63[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-65[data-size='large'] {
+.emotion-63[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-65[data-state='neutral'] {
+.emotion-63[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.emotion-65[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-63[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-65[data-state='neutral']:not([data-disabled='true']):hover {
+.emotion-63[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-65[data-state='neutral']:not([data-disabled='true']):focus-visible {
+.emotion-63[data-state='neutral']:not([data-disabled='true']):focus-visible {
   outline: 5px auto Highlight;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-.emotion-65[data-state='neutral'][data-dropdownvisible='true'] {
+.emotion-63[data-state='neutral'][data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.emotion-65[data-state='success'] {
+.emotion-63[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.emotion-65[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-63[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #1b533f;
   box-shadow: 0px 0px 0px 3px #45d19f40;
 }
 
-.emotion-65[data-state='success'][data-dropdownvisible='true'] {
+.emotion-63[data-state='success'][data-dropdownvisible='true'] {
   border-color: #1b533f;
 }
 
-.emotion-65[data-state='danger'] {
+.emotion-63[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-65[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-63[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-65[data-state='danger'][data-dropdownvisible='true'] {
+.emotion-63[data-state='danger'][data-dropdownvisible='true'] {
   border-color: #92103f;
 }
 
-.emotion-65:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-63:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-65[data-readonly='true'] {
+.emotion-63[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-65[data-disabled='true'] {
+.emotion-63[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-68 {
+.emotion-66 {
   color: #3f4250;
   font-size: 0.875rem;
   font-family: Inter,sans-serif;
@@ -4271,7 +4214,7 @@ exports[`EstimateCost - Regular Item > render basic props with maxPrice 1`] = `
   align-self: center;
 }
 
-.emotion-70 {
+.emotion-68 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4299,7 +4242,7 @@ exports[`EstimateCost - Regular Item > render basic props with maxPrice 1`] = `
   display: flex;
 }
 
-.emotion-72 {
+.emotion-70 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1rem;
@@ -4308,12 +4251,12 @@ exports[`EstimateCost - Regular Item > render basic props with maxPrice 1`] = `
   min-height: 1rem;
 }
 
-.emotion-72 .fillStroke {
+.emotion-70 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
 
-.emotion-76 {
+.emotion-74 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -4321,7 +4264,7 @@ exports[`EstimateCost - Regular Item > render basic props with maxPrice 1`] = `
   min-width: 230px;
 }
 
-.emotion-78 {
+.emotion-76 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4342,11 +4285,11 @@ exports[`EstimateCost - Regular Item > render basic props with maxPrice 1`] = `
   padding-bottom: 8px;
 }
 
-.emotion-86 {
+.emotion-84 {
   text-align: right;
 }
 
-.emotion-88 {
+.emotion-86 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -4361,7 +4304,7 @@ exports[`EstimateCost - Regular Item > render basic props with maxPrice 1`] = `
   margin-right: 4px;
 }
 
-.emotion-90 {
+.emotion-88 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -4373,7 +4316,7 @@ exports[`EstimateCost - Regular Item > render basic props with maxPrice 1`] = `
   min-width: 126px;
 }
 
-.emotion-93 {
+.emotion-91 {
   color: #641cb3;
   font-size: 1rem;
   font-family: Inter,sans-serif;
@@ -4386,7 +4329,7 @@ exports[`EstimateCost - Regular Item > render basic props with maxPrice 1`] = `
   text-align: right;
 }
 
-.emotion-96 {
+.emotion-94 {
   font-size: 1rem;
   font-family: Inter,sans-serif;
   font-weight: 400;
@@ -4398,18 +4341,18 @@ exports[`EstimateCost - Regular Item > render basic props with maxPrice 1`] = `
   text-align: right;
 }
 
-.emotion-98 {
+.emotion-96 {
   margin: 0;
   width: 100%;
   border-right: 1px solid #d9dadd;
   border-radius: 0 0 0.25rem 0.25rem;
 }
 
-.emotion-102 {
+.emotion-100 {
   width: 70%;
 }
 
-.emotion-104 {
+.emotion-102 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -4426,7 +4369,7 @@ exports[`EstimateCost - Regular Item > render basic props with maxPrice 1`] = `
   min-width: 126px;
 }
 
-.emotion-107 {
+.emotion-105 {
   color: #641cb3;
   font-size: 1.5625rem;
   font-family: Space Grotesk,sans-serif;
@@ -4582,7 +4525,6 @@ exports[`EstimateCost - Regular Item > render basic props with maxPrice 1`] = `
                           class="emotion-54 emotion-55"
                           data-size="medium"
                           data-testid="unit-input"
-                          id="«r2c»"
                           max="9007199254740991"
                           min="1"
                           name="iteration-value"
@@ -4592,59 +4534,53 @@ exports[`EstimateCost - Regular Item > render basic props with maxPrice 1`] = `
                           value="1"
                         />
                       </div>
-                       
                       <div
-                        class="emotion-56 emotion-57"
-                        width="12.6rem"
+                        aria-label="iteration-unit"
+                        class="emotion-56 emotion-57 emotion-58"
                       >
                         <div
-                          aria-label="iteration-unit"
-                          class="emotion-58 emotion-59 emotion-60"
+                          aria-controls="«r2e»"
+                          aria-describedby="«r2e»"
+                          class="emotion-59 emotion-60"
+                          data-container-full-width="true"
+                          tabindex="-1"
                         >
                           <div
-                            aria-controls="«r2e»"
-                            aria-describedby="«r2e»"
-                            class="emotion-61 emotion-62"
-                            data-container-full-width="true"
-                            tabindex="-1"
+                            class="emotion-48 emotion-1"
                           >
                             <div
-                              class="emotion-48 emotion-1"
+                              aria-expanded="false"
+                              aria-haspopup="listbox"
+                              class="emotion-63 emotion-64"
+                              data-disabled="false"
+                              data-dropdownvisible="false"
+                              data-readonly="false"
+                              data-size="medium"
+                              data-state="neutral"
+                              data-testid="select-input-iteration-unit"
+                              id="unit"
+                              role="combobox"
+                              tabindex="0"
                             >
                               <div
-                                aria-expanded="false"
-                                aria-haspopup="listbox"
-                                class="emotion-65 emotion-66"
-                                data-disabled="false"
-                                data-dropdownvisible="false"
-                                data-readonly="false"
-                                data-size="medium"
-                                data-state="neutral"
-                                data-testid="select-input-iteration-unit"
-                                id="unit"
-                                role="combobox"
-                                tabindex="0"
+                                class="emotion-65 emotion-66 emotion-15"
                               >
-                                <div
-                                  class="emotion-67 emotion-68 emotion-15"
+                                Hour(s)
+                              </div>
+                              <div
+                                class="emotion-68 emotion-69"
+                              >
+                                <svg
+                                  aria-label="show dropdown"
+                                  class="emotion-70 emotion-25"
+                                  viewBox="0 0 16 16"
                                 >
-                                  Hour(s)
-                                </div>
-                                <div
-                                  class="emotion-70 emotion-71"
-                                >
-                                  <svg
-                                    aria-label="show dropdown"
-                                    class="emotion-72 emotion-25"
-                                    viewBox="0 0 16 16"
-                                  >
-                                    <path
-                                      clip-rule="evenodd"
-                                      d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
-                                      fill-rule="evenodd"
-                                    />
-                                  </svg>
-                                </div>
+                                  <path
+                                    clip-rule="evenodd"
+                                    d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
+                                    fill-rule="evenodd"
+                                  />
+                                </svg>
                               </div>
                             </div>
                           </div>
@@ -4658,14 +4594,14 @@ exports[`EstimateCost - Regular Item > render basic props with maxPrice 1`] = `
           </thead>
           <tbody>
             <tr
-              class="emotion-74 emotion-75"
+              class="emotion-72 emotion-73"
             >
               <td
-                class="emotion-76 emotion-271"
+                class="emotion-74 emotion-271"
                 width="70%"
               >
                 <div
-                  class="emotion-78 emotion-79"
+                  class="emotion-76 emotion-77"
                 >
                   <div
                     class="emotion-10 emotion-1"
@@ -4681,10 +4617,10 @@ exports[`EstimateCost - Regular Item > render basic props with maxPrice 1`] = `
                     </div>
                   </div>
                   <div
-                    class="emotion-86 emotion-17"
+                    class="emotion-84 emotion-17"
                   >
                     <div
-                      class="emotion-88 emotion-19"
+                      class="emotion-86 emotion-19"
                     >
                       This is a regular Item
                     </div>
@@ -4692,15 +4628,15 @@ exports[`EstimateCost - Regular Item > render basic props with maxPrice 1`] = `
                 </div>
               </td>
               <td
-                class="emotion-90 emotion-91"
+                class="emotion-88 emotion-89"
               >
                 <p
-                  class="emotion-92 emotion-93 emotion-15"
+                  class="emotion-90 emotion-91 emotion-15"
                 >
                   €0.00 - €0.0001
                 </p>
                 <p
-                  class="emotion-95 emotion-96 emotion-15"
+                  class="emotion-93 emotion-94 emotion-15"
                 >
                   €0.00/Node/hour(s)
                 </p>
@@ -4711,7 +4647,7 @@ exports[`EstimateCost - Regular Item > render basic props with maxPrice 1`] = `
         <table
           cellpadding="0"
           cellspacing="0"
-          class="emotion-98 emotion-99"
+          class="emotion-96 emotion-97"
         >
           <colgroup>
             <col />
@@ -4723,13 +4659,13 @@ exports[`EstimateCost - Regular Item > render basic props with maxPrice 1`] = `
             <tr>
               <td
                 aria-label="control"
-                class="emotion-102 emotion-103"
+                class="emotion-100 emotion-101"
               />
               <td
-                class="emotion-104 emotion-270"
+                class="emotion-102 emotion-270"
               >
                 <h3
-                  class="emotion-106 emotion-107 emotion-15"
+                  class="emotion-104 emotion-105 emotion-15"
                 >
                   <span
                     class="emotion-31 emotion-32"
@@ -5131,7 +5067,6 @@ exports[`EstimateCost - Regular Item > render basic props with maxPrice and long
   flex-wrap: nowrap;
   border: 1px solid #d9dadd;
   border-radius: 0.25rem;
-  background-color: #ffffff;
 }
 
 .emotion-50:not([data-disabled='true']):not([data-readonly='true']):not(
@@ -5288,7 +5223,6 @@ exports[`EstimateCost - Regular Item > render basic props with maxPrice and long
   padding-left: 1rem;
   background: transparent;
   color: #3f4250;
-  font-size: 0.875rem;
 }
 
 .emotion-54[data-size="small"] {
@@ -5335,41 +5269,34 @@ exports[`EstimateCost - Regular Item > render basic props with maxPrice and long
   color: #b5b7bd;
 }
 
-.emotion-56 {
-  width: 12.6rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-59 {
+.emotion-57 {
   width: 100%;
+  width: 12.6rem;
 }
 
-.emotion-59 #unit {
+.emotion-57 #unit {
   border: none;
   background: transparent;
 }
 
-.emotion-59 #unit:focus,
-.emotion-59 #unit:active {
+.emotion-57 #unit:focus,
+.emotion-57 #unit:active {
   box-shadow: none;
 }
 
-.emotion-61 {
+.emotion-59 {
   display: inherit;
 }
 
-.emotion-61[data-container-full-height="true"] {
+.emotion-59[data-container-full-height="true"] {
   height: 100%;
 }
 
-.emotion-61[data-container-full-width="true"] {
+.emotion-59[data-container-full-width="true"] {
   width: 100%;
 }
 
-.emotion-65 {
+.emotion-63 {
   display: grid;
   width: 100%;
   gap: 0.5rem;
@@ -5384,85 +5311,85 @@ exports[`EstimateCost - Regular Item > render basic props with maxPrice and long
   width: 100%;
 }
 
-.emotion-65[data-size='small'] {
+.emotion-63[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-65[data-size='medium'] {
+.emotion-63[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-65[data-size='large'] {
+.emotion-63[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-65[data-state='neutral'] {
+.emotion-63[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.emotion-65[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-63[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-65[data-state='neutral']:not([data-disabled='true']):hover {
+.emotion-63[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-65[data-state='neutral']:not([data-disabled='true']):focus-visible {
+.emotion-63[data-state='neutral']:not([data-disabled='true']):focus-visible {
   outline: 5px auto Highlight;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-.emotion-65[data-state='neutral'][data-dropdownvisible='true'] {
+.emotion-63[data-state='neutral'][data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.emotion-65[data-state='success'] {
+.emotion-63[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.emotion-65[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-63[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #1b533f;
   box-shadow: 0px 0px 0px 3px #45d19f40;
 }
 
-.emotion-65[data-state='success'][data-dropdownvisible='true'] {
+.emotion-63[data-state='success'][data-dropdownvisible='true'] {
   border-color: #1b533f;
 }
 
-.emotion-65[data-state='danger'] {
+.emotion-63[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-65[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-63[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-65[data-state='danger'][data-dropdownvisible='true'] {
+.emotion-63[data-state='danger'][data-dropdownvisible='true'] {
   border-color: #92103f;
 }
 
-.emotion-65:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-63:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-65[data-readonly='true'] {
+.emotion-63[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-65[data-disabled='true'] {
+.emotion-63[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-68 {
+.emotion-66 {
   color: #3f4250;
   font-size: 0.875rem;
   font-family: Inter,sans-serif;
@@ -5480,7 +5407,7 @@ exports[`EstimateCost - Regular Item > render basic props with maxPrice and long
   align-self: center;
 }
 
-.emotion-70 {
+.emotion-68 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5508,7 +5435,7 @@ exports[`EstimateCost - Regular Item > render basic props with maxPrice and long
   display: flex;
 }
 
-.emotion-72 {
+.emotion-70 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1rem;
@@ -5517,12 +5444,12 @@ exports[`EstimateCost - Regular Item > render basic props with maxPrice and long
   min-height: 1rem;
 }
 
-.emotion-72 .fillStroke {
+.emotion-70 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
 
-.emotion-76 {
+.emotion-74 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -5530,7 +5457,7 @@ exports[`EstimateCost - Regular Item > render basic props with maxPrice and long
   min-width: 230px;
 }
 
-.emotion-78 {
+.emotion-76 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5551,11 +5478,11 @@ exports[`EstimateCost - Regular Item > render basic props with maxPrice and long
   padding-bottom: 8px;
 }
 
-.emotion-86 {
+.emotion-84 {
   text-align: right;
 }
 
-.emotion-88 {
+.emotion-86 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -5570,7 +5497,7 @@ exports[`EstimateCost - Regular Item > render basic props with maxPrice and long
   margin-right: 4px;
 }
 
-.emotion-90 {
+.emotion-88 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -5582,7 +5509,7 @@ exports[`EstimateCost - Regular Item > render basic props with maxPrice and long
   min-width: 126px;
 }
 
-.emotion-93 {
+.emotion-91 {
   color: #641cb3;
   font-size: 1rem;
   font-family: Inter,sans-serif;
@@ -5595,7 +5522,7 @@ exports[`EstimateCost - Regular Item > render basic props with maxPrice and long
   text-align: right;
 }
 
-.emotion-96 {
+.emotion-94 {
   font-size: 1rem;
   font-family: Inter,sans-serif;
   font-weight: 400;
@@ -5607,18 +5534,18 @@ exports[`EstimateCost - Regular Item > render basic props with maxPrice and long
   text-align: right;
 }
 
-.emotion-98 {
+.emotion-96 {
   margin: 0;
   width: 100%;
   border-right: 1px solid #d9dadd;
   border-radius: 0 0 0.25rem 0.25rem;
 }
 
-.emotion-102 {
+.emotion-100 {
   width: 70%;
 }
 
-.emotion-104 {
+.emotion-102 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -5635,7 +5562,7 @@ exports[`EstimateCost - Regular Item > render basic props with maxPrice and long
   min-width: 126px;
 }
 
-.emotion-107 {
+.emotion-105 {
   color: #641cb3;
   font-size: 1.5625rem;
   font-family: Space Grotesk,sans-serif;
@@ -5791,7 +5718,6 @@ exports[`EstimateCost - Regular Item > render basic props with maxPrice and long
                           class="emotion-54 emotion-55"
                           data-size="medium"
                           data-testid="unit-input"
-                          id="«r1v»"
                           max="9007199254740991"
                           min="1"
                           name="iteration-value"
@@ -5801,59 +5727,53 @@ exports[`EstimateCost - Regular Item > render basic props with maxPrice and long
                           value="1"
                         />
                       </div>
-                       
                       <div
-                        class="emotion-56 emotion-57"
-                        width="12.6rem"
+                        aria-label="iteration-unit"
+                        class="emotion-56 emotion-57 emotion-58"
                       >
                         <div
-                          aria-label="iteration-unit"
-                          class="emotion-58 emotion-59 emotion-60"
+                          aria-controls="«r21»"
+                          aria-describedby="«r21»"
+                          class="emotion-59 emotion-60"
+                          data-container-full-width="true"
+                          tabindex="-1"
                         >
                           <div
-                            aria-controls="«r21»"
-                            aria-describedby="«r21»"
-                            class="emotion-61 emotion-62"
-                            data-container-full-width="true"
-                            tabindex="-1"
+                            class="emotion-48 emotion-1"
                           >
                             <div
-                              class="emotion-48 emotion-1"
+                              aria-expanded="false"
+                              aria-haspopup="listbox"
+                              class="emotion-63 emotion-64"
+                              data-disabled="false"
+                              data-dropdownvisible="false"
+                              data-readonly="false"
+                              data-size="medium"
+                              data-state="neutral"
+                              data-testid="select-input-iteration-unit"
+                              id="unit"
+                              role="combobox"
+                              tabindex="0"
                             >
                               <div
-                                aria-expanded="false"
-                                aria-haspopup="listbox"
-                                class="emotion-65 emotion-66"
-                                data-disabled="false"
-                                data-dropdownvisible="false"
-                                data-readonly="false"
-                                data-size="medium"
-                                data-state="neutral"
-                                data-testid="select-input-iteration-unit"
-                                id="unit"
-                                role="combobox"
-                                tabindex="0"
+                                class="emotion-65 emotion-66 emotion-15"
                               >
-                                <div
-                                  class="emotion-67 emotion-68 emotion-15"
+                                Hour(s)
+                              </div>
+                              <div
+                                class="emotion-68 emotion-69"
+                              >
+                                <svg
+                                  aria-label="show dropdown"
+                                  class="emotion-70 emotion-25"
+                                  viewBox="0 0 16 16"
                                 >
-                                  Hour(s)
-                                </div>
-                                <div
-                                  class="emotion-70 emotion-71"
-                                >
-                                  <svg
-                                    aria-label="show dropdown"
-                                    class="emotion-72 emotion-25"
-                                    viewBox="0 0 16 16"
-                                  >
-                                    <path
-                                      clip-rule="evenodd"
-                                      d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
-                                      fill-rule="evenodd"
-                                    />
-                                  </svg>
-                                </div>
+                                  <path
+                                    clip-rule="evenodd"
+                                    d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
+                                    fill-rule="evenodd"
+                                  />
+                                </svg>
                               </div>
                             </div>
                           </div>
@@ -5867,14 +5787,14 @@ exports[`EstimateCost - Regular Item > render basic props with maxPrice and long
           </thead>
           <tbody>
             <tr
-              class="emotion-74 emotion-75"
+              class="emotion-72 emotion-73"
             >
               <td
-                class="emotion-76 emotion-271"
+                class="emotion-74 emotion-271"
                 width="70%"
               >
                 <div
-                  class="emotion-78 emotion-79"
+                  class="emotion-76 emotion-77"
                 >
                   <div
                     class="emotion-10 emotion-1"
@@ -5890,10 +5810,10 @@ exports[`EstimateCost - Regular Item > render basic props with maxPrice and long
                     </div>
                   </div>
                   <div
-                    class="emotion-86 emotion-17"
+                    class="emotion-84 emotion-17"
                   >
                     <div
-                      class="emotion-88 emotion-19"
+                      class="emotion-86 emotion-19"
                     >
                       This is a regular Item
                     </div>
@@ -5901,15 +5821,15 @@ exports[`EstimateCost - Regular Item > render basic props with maxPrice and long
                 </div>
               </td>
               <td
-                class="emotion-90 emotion-91"
+                class="emotion-88 emotion-89"
               >
                 <p
-                  class="emotion-92 emotion-93 emotion-15"
+                  class="emotion-90 emotion-91 emotion-15"
                 >
                   €0.00001 - €0.0001
                 </p>
                 <p
-                  class="emotion-95 emotion-96 emotion-15"
+                  class="emotion-93 emotion-94 emotion-15"
                 >
                   €0.000001/GB/hour(s)
                 </p>
@@ -5920,7 +5840,7 @@ exports[`EstimateCost - Regular Item > render basic props with maxPrice and long
         <table
           cellpadding="0"
           cellspacing="0"
-          class="emotion-98 emotion-99"
+          class="emotion-96 emotion-97"
         >
           <colgroup>
             <col />
@@ -5932,13 +5852,13 @@ exports[`EstimateCost - Regular Item > render basic props with maxPrice and long
             <tr>
               <td
                 aria-label="control"
-                class="emotion-102 emotion-103"
+                class="emotion-100 emotion-101"
               />
               <td
-                class="emotion-104 emotion-270"
+                class="emotion-102 emotion-270"
               >
                 <h3
-                  class="emotion-106 emotion-107 emotion-15"
+                  class="emotion-104 emotion-105 emotion-15"
                 >
                   <span
                     class="emotion-31 emotion-32"
@@ -6382,7 +6302,6 @@ exports[`EstimateCost - Regular Item > render basic props with overlay 1`] = `
   flex-wrap: nowrap;
   border: 1px solid #d9dadd;
   border-radius: 0.25rem;
-  background-color: #ffffff;
 }
 
 .emotion-71:not([data-disabled='true']):not([data-readonly='true']):not(
@@ -6539,7 +6458,6 @@ exports[`EstimateCost - Regular Item > render basic props with overlay 1`] = `
   padding-left: 1rem;
   background: transparent;
   color: #3f4250;
-  font-size: 0.875rem;
 }
 
 .emotion-75[data-size="small"] {
@@ -6586,41 +6504,34 @@ exports[`EstimateCost - Regular Item > render basic props with overlay 1`] = `
   color: #b5b7bd;
 }
 
-.emotion-77 {
-  width: 12.6rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-80 {
+.emotion-78 {
   width: 100%;
+  width: 12.6rem;
 }
 
-.emotion-80 #unit {
+.emotion-78 #unit {
   border: none;
   background: transparent;
 }
 
-.emotion-80 #unit:focus,
-.emotion-80 #unit:active {
+.emotion-78 #unit:focus,
+.emotion-78 #unit:active {
   box-shadow: none;
 }
 
-.emotion-82 {
+.emotion-80 {
   display: inherit;
 }
 
-.emotion-82[data-container-full-height="true"] {
+.emotion-80[data-container-full-height="true"] {
   height: 100%;
 }
 
-.emotion-82[data-container-full-width="true"] {
+.emotion-80[data-container-full-width="true"] {
   width: 100%;
 }
 
-.emotion-86 {
+.emotion-84 {
   display: grid;
   width: 100%;
   gap: 0.5rem;
@@ -6635,85 +6546,85 @@ exports[`EstimateCost - Regular Item > render basic props with overlay 1`] = `
   width: 100%;
 }
 
-.emotion-86[data-size='small'] {
+.emotion-84[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-86[data-size='medium'] {
+.emotion-84[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-86[data-size='large'] {
+.emotion-84[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-86[data-state='neutral'] {
+.emotion-84[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.emotion-86[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-84[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-86[data-state='neutral']:not([data-disabled='true']):hover {
+.emotion-84[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-86[data-state='neutral']:not([data-disabled='true']):focus-visible {
+.emotion-84[data-state='neutral']:not([data-disabled='true']):focus-visible {
   outline: 5px auto Highlight;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-.emotion-86[data-state='neutral'][data-dropdownvisible='true'] {
+.emotion-84[data-state='neutral'][data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.emotion-86[data-state='success'] {
+.emotion-84[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.emotion-86[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-84[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #1b533f;
   box-shadow: 0px 0px 0px 3px #45d19f40;
 }
 
-.emotion-86[data-state='success'][data-dropdownvisible='true'] {
+.emotion-84[data-state='success'][data-dropdownvisible='true'] {
   border-color: #1b533f;
 }
 
-.emotion-86[data-state='danger'] {
+.emotion-84[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-86[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-84[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-86[data-state='danger'][data-dropdownvisible='true'] {
+.emotion-84[data-state='danger'][data-dropdownvisible='true'] {
   border-color: #92103f;
 }
 
-.emotion-86:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-84:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-86[data-readonly='true'] {
+.emotion-84[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-86[data-disabled='true'] {
+.emotion-84[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-89 {
+.emotion-87 {
   color: #3f4250;
   font-size: 0.875rem;
   font-family: Inter,sans-serif;
@@ -6731,7 +6642,7 @@ exports[`EstimateCost - Regular Item > render basic props with overlay 1`] = `
   align-self: center;
 }
 
-.emotion-91 {
+.emotion-89 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6759,7 +6670,7 @@ exports[`EstimateCost - Regular Item > render basic props with overlay 1`] = `
   display: flex;
 }
 
-.emotion-93 {
+.emotion-91 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1rem;
@@ -6768,12 +6679,12 @@ exports[`EstimateCost - Regular Item > render basic props with overlay 1`] = `
   min-height: 1rem;
 }
 
-.emotion-93 .fillStroke {
+.emotion-91 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
 
-.emotion-97 {
+.emotion-95 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -6781,7 +6692,7 @@ exports[`EstimateCost - Regular Item > render basic props with overlay 1`] = `
   min-width: 230px;
 }
 
-.emotion-97:before {
+.emotion-95:before {
   content: '';
   position: absolute;
   left: 0;
@@ -6792,7 +6703,7 @@ exports[`EstimateCost - Regular Item > render basic props with overlay 1`] = `
   border-bottom: 1px solid #d9dadd;
 }
 
-.emotion-99 {
+.emotion-97 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6813,11 +6724,11 @@ exports[`EstimateCost - Regular Item > render basic props with overlay 1`] = `
   padding-bottom: 8px;
 }
 
-.emotion-107 {
+.emotion-105 {
   text-align: right;
 }
 
-.emotion-109 {
+.emotion-107 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -6832,7 +6743,7 @@ exports[`EstimateCost - Regular Item > render basic props with overlay 1`] = `
   margin-right: 4px;
 }
 
-.emotion-112 {
+.emotion-110 {
   font-size: 1rem;
   font-family: Inter,sans-serif;
   font-weight: 500;
@@ -6847,7 +6758,7 @@ exports[`EstimateCost - Regular Item > render basic props with overlay 1`] = `
   max-width: 350px;
 }
 
-.emotion-114 {
+.emotion-112 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -6859,7 +6770,7 @@ exports[`EstimateCost - Regular Item > render basic props with overlay 1`] = `
   min-width: 126px;
 }
 
-.emotion-114:before {
+.emotion-112:before {
   content: '';
   position: absolute;
   left: 0;
@@ -6870,7 +6781,7 @@ exports[`EstimateCost - Regular Item > render basic props with overlay 1`] = `
   border-bottom: 1px solid #d9dadd;
 }
 
-.emotion-117 {
+.emotion-115 {
   color: #727683;
   font-size: 1rem;
   font-family: Inter,sans-serif;
@@ -6883,7 +6794,7 @@ exports[`EstimateCost - Regular Item > render basic props with overlay 1`] = `
   text-align: right;
 }
 
-.emotion-121 {
+.emotion-119 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -6891,7 +6802,7 @@ exports[`EstimateCost - Regular Item > render basic props with overlay 1`] = `
   min-width: 230px;
 }
 
-.emotion-135 {
+.emotion-133 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -6903,18 +6814,18 @@ exports[`EstimateCost - Regular Item > render basic props with overlay 1`] = `
   min-width: 126px;
 }
 
-.emotion-140 {
+.emotion-138 {
   margin: 0;
   width: 100%;
   border-right: 1px solid #d9dadd;
   border-radius: 0 0 0.25rem 0.25rem;
 }
 
-.emotion-144 {
+.emotion-142 {
   width: 70%;
 }
 
-.emotion-146 {
+.emotion-144 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -6931,7 +6842,7 @@ exports[`EstimateCost - Regular Item > render basic props with overlay 1`] = `
   min-width: 126px;
 }
 
-.emotion-149 {
+.emotion-147 {
   color: #641cb3;
   font-size: 1.5625rem;
   font-family: Space Grotesk,sans-serif;
@@ -7140,7 +7051,6 @@ exports[`EstimateCost - Regular Item > render basic props with overlay 1`] = `
                           class="emotion-75 emotion-76"
                           data-size="medium"
                           data-testid="unit-input"
-                          id="«ri»"
                           max="9007199254740991"
                           min="1"
                           name="iteration-value"
@@ -7150,59 +7060,53 @@ exports[`EstimateCost - Regular Item > render basic props with overlay 1`] = `
                           value="1"
                         />
                       </div>
-                       
                       <div
-                        class="emotion-77 emotion-78"
-                        width="12.6rem"
+                        aria-label="iteration-unit"
+                        class="emotion-77 emotion-78 emotion-79"
                       >
                         <div
-                          aria-label="iteration-unit"
-                          class="emotion-79 emotion-80 emotion-81"
+                          aria-controls="«rk»"
+                          aria-describedby="«rk»"
+                          class="emotion-80 emotion-81"
+                          data-container-full-width="true"
+                          tabindex="-1"
                         >
                           <div
-                            aria-controls="«rk»"
-                            aria-describedby="«rk»"
-                            class="emotion-82 emotion-83"
-                            data-container-full-width="true"
-                            tabindex="-1"
+                            class="emotion-69 emotion-1"
                           >
                             <div
-                              class="emotion-69 emotion-1"
+                              aria-expanded="false"
+                              aria-haspopup="listbox"
+                              class="emotion-84 emotion-85"
+                              data-disabled="false"
+                              data-dropdownvisible="false"
+                              data-readonly="false"
+                              data-size="medium"
+                              data-state="neutral"
+                              data-testid="select-input-iteration-unit"
+                              id="unit"
+                              role="combobox"
+                              tabindex="0"
                             >
                               <div
-                                aria-expanded="false"
-                                aria-haspopup="listbox"
-                                class="emotion-86 emotion-87"
-                                data-disabled="false"
-                                data-dropdownvisible="false"
-                                data-readonly="false"
-                                data-size="medium"
-                                data-state="neutral"
-                                data-testid="select-input-iteration-unit"
-                                id="unit"
-                                role="combobox"
-                                tabindex="0"
+                                class="emotion-86 emotion-87 emotion-17"
                               >
-                                <div
-                                  class="emotion-88 emotion-89 emotion-17"
+                                Hour(s)
+                              </div>
+                              <div
+                                class="emotion-89 emotion-90"
+                              >
+                                <svg
+                                  aria-label="show dropdown"
+                                  class="emotion-91 emotion-44"
+                                  viewBox="0 0 16 16"
                                 >
-                                  Hour(s)
-                                </div>
-                                <div
-                                  class="emotion-91 emotion-92"
-                                >
-                                  <svg
-                                    aria-label="show dropdown"
-                                    class="emotion-93 emotion-44"
-                                    viewBox="0 0 16 16"
-                                  >
-                                    <path
-                                      clip-rule="evenodd"
-                                      d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
-                                      fill-rule="evenodd"
-                                    />
-                                  </svg>
-                                </div>
+                                  <path
+                                    clip-rule="evenodd"
+                                    d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
+                                    fill-rule="evenodd"
+                                  />
+                                </svg>
                               </div>
                             </div>
                           </div>
@@ -7216,14 +7120,14 @@ exports[`EstimateCost - Regular Item > render basic props with overlay 1`] = `
           </thead>
           <tbody>
             <tr
-              class="emotion-95 emotion-96"
+              class="emotion-93 emotion-94"
             >
               <td
-                class="emotion-97 emotion-461"
+                class="emotion-95 emotion-461"
                 width="70%"
               >
                 <div
-                  class="emotion-99 emotion-100"
+                  class="emotion-97 emotion-98"
                 >
                   <div
                     class="emotion-12 emotion-1"
@@ -7239,16 +7143,16 @@ exports[`EstimateCost - Regular Item > render basic props with overlay 1`] = `
                     </div>
                   </div>
                   <div
-                    class="emotion-107 emotion-19"
+                    class="emotion-105 emotion-19"
                   >
                     <div
-                      class="emotion-109 emotion-21"
+                      class="emotion-107 emotion-21"
                     >
                       <div
                         style="display: inline-flex;"
                       >
                         <p
-                          class="emotion-22 emotion-112 emotion-17"
+                          class="emotion-22 emotion-110 emotion-17"
                         >
                           This is a regular Item
                         </p>
@@ -7258,24 +7162,24 @@ exports[`EstimateCost - Regular Item > render basic props with overlay 1`] = `
                 </div>
               </td>
               <td
-                class="emotion-114 emotion-115"
+                class="emotion-112 emotion-113"
               >
                 <p
-                  class="emotion-116 emotion-117 emotion-17"
+                  class="emotion-114 emotion-115 emotion-17"
                 >
                   €0.00
                 </p>
               </td>
             </tr>
             <tr
-              class="emotion-95 emotion-96"
+              class="emotion-93 emotion-94"
             >
               <td
-                class="emotion-121 emotion-461"
+                class="emotion-119 emotion-461"
                 width="70%"
               >
                 <div
-                  class="emotion-99 emotion-100"
+                  class="emotion-97 emotion-98"
                 >
                   <div
                     class="emotion-12 emotion-1"
@@ -7291,10 +7195,10 @@ exports[`EstimateCost - Regular Item > render basic props with overlay 1`] = `
                     </div>
                   </div>
                   <div
-                    class="emotion-107 emotion-19"
+                    class="emotion-105 emotion-19"
                   >
                     <div
-                      class="emotion-109 emotion-21"
+                      class="emotion-107 emotion-21"
                     >
                       Hidden element in overlay
                     </div>
@@ -7302,10 +7206,10 @@ exports[`EstimateCost - Regular Item > render basic props with overlay 1`] = `
                 </div>
               </td>
               <td
-                class="emotion-135 emotion-115"
+                class="emotion-133 emotion-113"
               >
                 <p
-                  class="emotion-116 emotion-117 emotion-17"
+                  class="emotion-114 emotion-115 emotion-17"
                 >
                   €0.00
                 </p>
@@ -7316,7 +7220,7 @@ exports[`EstimateCost - Regular Item > render basic props with overlay 1`] = `
         <table
           cellpadding="0"
           cellspacing="0"
-          class="emotion-140 emotion-141"
+          class="emotion-138 emotion-139"
         >
           <colgroup>
             <col />
@@ -7328,13 +7232,13 @@ exports[`EstimateCost - Regular Item > render basic props with overlay 1`] = `
             <tr>
               <td
                 aria-label="control"
-                class="emotion-144 emotion-145"
+                class="emotion-142 emotion-143"
               />
               <td
-                class="emotion-146 emotion-460"
+                class="emotion-144 emotion-460"
               >
                 <h3
-                  class="emotion-148 emotion-149 emotion-17"
+                  class="emotion-146 emotion-147 emotion-17"
                 >
                   <span
                     class="emotion-50 emotion-51"
@@ -7805,7 +7709,6 @@ exports[`EstimateCost - Regular Item > render basic props with overlay beta 1`] 
   flex-wrap: nowrap;
   border: 1px solid #d9dadd;
   border-radius: 0.25rem;
-  background-color: #ffffff;
 }
 
 .emotion-61:not([data-disabled='true']):not([data-readonly='true']):not(
@@ -7962,7 +7865,6 @@ exports[`EstimateCost - Regular Item > render basic props with overlay beta 1`] 
   padding-left: 1rem;
   background: transparent;
   color: #3f4250;
-  font-size: 0.875rem;
 }
 
 .emotion-65[data-size="small"] {
@@ -8009,41 +7911,34 @@ exports[`EstimateCost - Regular Item > render basic props with overlay beta 1`] 
   color: #b5b7bd;
 }
 
-.emotion-67 {
-  width: 12.6rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-70 {
+.emotion-68 {
   width: 100%;
+  width: 12.6rem;
 }
 
-.emotion-70 #unit {
+.emotion-68 #unit {
   border: none;
   background: transparent;
 }
 
-.emotion-70 #unit:focus,
-.emotion-70 #unit:active {
+.emotion-68 #unit:focus,
+.emotion-68 #unit:active {
   box-shadow: none;
 }
 
-.emotion-72 {
+.emotion-70 {
   display: inherit;
 }
 
-.emotion-72[data-container-full-height="true"] {
+.emotion-70[data-container-full-height="true"] {
   height: 100%;
 }
 
-.emotion-72[data-container-full-width="true"] {
+.emotion-70[data-container-full-width="true"] {
   width: 100%;
 }
 
-.emotion-76 {
+.emotion-74 {
   display: grid;
   width: 100%;
   gap: 0.5rem;
@@ -8058,85 +7953,85 @@ exports[`EstimateCost - Regular Item > render basic props with overlay beta 1`] 
   width: 100%;
 }
 
-.emotion-76[data-size='small'] {
+.emotion-74[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-76[data-size='medium'] {
+.emotion-74[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-76[data-size='large'] {
+.emotion-74[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-76[data-state='neutral'] {
+.emotion-74[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.emotion-76[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-74[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-76[data-state='neutral']:not([data-disabled='true']):hover {
+.emotion-74[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-76[data-state='neutral']:not([data-disabled='true']):focus-visible {
+.emotion-74[data-state='neutral']:not([data-disabled='true']):focus-visible {
   outline: 5px auto Highlight;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-.emotion-76[data-state='neutral'][data-dropdownvisible='true'] {
+.emotion-74[data-state='neutral'][data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.emotion-76[data-state='success'] {
+.emotion-74[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.emotion-76[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-74[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #1b533f;
   box-shadow: 0px 0px 0px 3px #45d19f40;
 }
 
-.emotion-76[data-state='success'][data-dropdownvisible='true'] {
+.emotion-74[data-state='success'][data-dropdownvisible='true'] {
   border-color: #1b533f;
 }
 
-.emotion-76[data-state='danger'] {
+.emotion-74[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-76[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-74[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-76[data-state='danger'][data-dropdownvisible='true'] {
+.emotion-74[data-state='danger'][data-dropdownvisible='true'] {
   border-color: #92103f;
 }
 
-.emotion-76:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-74:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-76[data-readonly='true'] {
+.emotion-74[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-76[data-disabled='true'] {
+.emotion-74[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-79 {
+.emotion-77 {
   color: #3f4250;
   font-size: 0.875rem;
   font-family: Inter,sans-serif;
@@ -8154,7 +8049,7 @@ exports[`EstimateCost - Regular Item > render basic props with overlay beta 1`] 
   align-self: center;
 }
 
-.emotion-81 {
+.emotion-79 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -8182,7 +8077,7 @@ exports[`EstimateCost - Regular Item > render basic props with overlay beta 1`] 
   display: flex;
 }
 
-.emotion-83 {
+.emotion-81 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1rem;
@@ -8191,12 +8086,12 @@ exports[`EstimateCost - Regular Item > render basic props with overlay beta 1`] 
   min-height: 1rem;
 }
 
-.emotion-83 .fillStroke {
+.emotion-81 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
 
-.emotion-87 {
+.emotion-85 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -8204,7 +8099,7 @@ exports[`EstimateCost - Regular Item > render basic props with overlay beta 1`] 
   min-width: 230px;
 }
 
-.emotion-89 {
+.emotion-87 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -8225,11 +8120,11 @@ exports[`EstimateCost - Regular Item > render basic props with overlay beta 1`] 
   padding-bottom: 8px;
 }
 
-.emotion-97 {
+.emotion-95 {
   text-align: right;
 }
 
-.emotion-99 {
+.emotion-97 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -8244,7 +8139,7 @@ exports[`EstimateCost - Regular Item > render basic props with overlay beta 1`] 
   margin-right: 4px;
 }
 
-.emotion-102 {
+.emotion-100 {
   font-size: 1rem;
   font-family: Inter,sans-serif;
   font-weight: 500;
@@ -8259,7 +8154,7 @@ exports[`EstimateCost - Regular Item > render basic props with overlay beta 1`] 
   max-width: 350px;
 }
 
-.emotion-106 {
+.emotion-104 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -8271,7 +8166,7 @@ exports[`EstimateCost - Regular Item > render basic props with overlay beta 1`] 
   min-width: 126px;
 }
 
-.emotion-109 {
+.emotion-107 {
   color: #641cb3;
   font-size: 1rem;
   font-family: Inter,sans-serif;
@@ -8284,7 +8179,7 @@ exports[`EstimateCost - Regular Item > render basic props with overlay beta 1`] 
   text-align: right;
 }
 
-.emotion-112 {
+.emotion-110 {
   font-size: 1rem;
   font-family: Inter,sans-serif;
   font-weight: 400;
@@ -8296,18 +8191,18 @@ exports[`EstimateCost - Regular Item > render basic props with overlay beta 1`] 
   text-align: right;
 }
 
-.emotion-114 {
+.emotion-112 {
   margin: 0;
   width: 100%;
   border-right: 1px solid #d9dadd;
   border-radius: 0 0 0.25rem 0.25rem;
 }
 
-.emotion-118 {
+.emotion-116 {
   width: 70%;
 }
 
-.emotion-120 {
+.emotion-118 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -8324,7 +8219,7 @@ exports[`EstimateCost - Regular Item > render basic props with overlay beta 1`] 
   min-width: 126px;
 }
 
-.emotion-124 {
+.emotion-122 {
   font-size: 0.75rem;
   font-family: Inter,sans-serif;
   font-weight: 400;
@@ -8362,7 +8257,7 @@ exports[`EstimateCost - Regular Item > render basic props with overlay beta 1`] 
   top: calc(50% - 16px);
 }
 
-.emotion-127 {
+.emotion-125 {
   color: #641cb3;
   font-size: 1.5625rem;
   font-family: Space Grotesk,sans-serif;
@@ -8542,7 +8437,6 @@ exports[`EstimateCost - Regular Item > render basic props with overlay beta 1`] 
                           class="emotion-65 emotion-66"
                           data-size="medium"
                           data-testid="unit-input"
-                          id="«r14»"
                           max="9007199254740991"
                           min="1"
                           name="iteration-value"
@@ -8552,59 +8446,53 @@ exports[`EstimateCost - Regular Item > render basic props with overlay beta 1`] 
                           value="1"
                         />
                       </div>
-                       
                       <div
-                        class="emotion-67 emotion-68"
-                        width="12.6rem"
+                        aria-label="iteration-unit"
+                        class="emotion-67 emotion-68 emotion-69"
                       >
                         <div
-                          aria-label="iteration-unit"
-                          class="emotion-69 emotion-70 emotion-71"
+                          aria-controls="«r16»"
+                          aria-describedby="«r16»"
+                          class="emotion-70 emotion-71"
+                          data-container-full-width="true"
+                          tabindex="-1"
                         >
                           <div
-                            aria-controls="«r16»"
-                            aria-describedby="«r16»"
-                            class="emotion-72 emotion-73"
-                            data-container-full-width="true"
-                            tabindex="-1"
+                            class="emotion-59 emotion-1"
                           >
                             <div
-                              class="emotion-59 emotion-1"
+                              aria-expanded="false"
+                              aria-haspopup="listbox"
+                              class="emotion-74 emotion-75"
+                              data-disabled="false"
+                              data-dropdownvisible="false"
+                              data-readonly="false"
+                              data-size="medium"
+                              data-state="neutral"
+                              data-testid="select-input-iteration-unit"
+                              id="unit"
+                              role="combobox"
+                              tabindex="0"
                             >
                               <div
-                                aria-expanded="false"
-                                aria-haspopup="listbox"
-                                class="emotion-76 emotion-77"
-                                data-disabled="false"
-                                data-dropdownvisible="false"
-                                data-readonly="false"
-                                data-size="medium"
-                                data-state="neutral"
-                                data-testid="select-input-iteration-unit"
-                                id="unit"
-                                role="combobox"
-                                tabindex="0"
+                                class="emotion-76 emotion-77 emotion-15"
                               >
-                                <div
-                                  class="emotion-78 emotion-79 emotion-15"
+                                Hour(s)
+                              </div>
+                              <div
+                                class="emotion-79 emotion-80"
+                              >
+                                <svg
+                                  aria-label="show dropdown"
+                                  class="emotion-81 emotion-30"
+                                  viewBox="0 0 16 16"
                                 >
-                                  Hour(s)
-                                </div>
-                                <div
-                                  class="emotion-81 emotion-82"
-                                >
-                                  <svg
-                                    aria-label="show dropdown"
-                                    class="emotion-83 emotion-30"
-                                    viewBox="0 0 16 16"
-                                  >
-                                    <path
-                                      clip-rule="evenodd"
-                                      d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
-                                      fill-rule="evenodd"
-                                    />
-                                  </svg>
-                                </div>
+                                  <path
+                                    clip-rule="evenodd"
+                                    d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
+                                    fill-rule="evenodd"
+                                  />
+                                </svg>
                               </div>
                             </div>
                           </div>
@@ -8618,14 +8506,14 @@ exports[`EstimateCost - Regular Item > render basic props with overlay beta 1`] 
           </thead>
           <tbody>
             <tr
-              class="emotion-85 emotion-86"
+              class="emotion-83 emotion-84"
             >
               <td
-                class="emotion-87 emotion-321"
+                class="emotion-85 emotion-321"
                 width="70%"
               >
                 <div
-                  class="emotion-89 emotion-90"
+                  class="emotion-87 emotion-88"
                 >
                   <div
                     class="emotion-10 emotion-1"
@@ -8641,23 +8529,23 @@ exports[`EstimateCost - Regular Item > render basic props with overlay beta 1`] 
                     </div>
                   </div>
                   <div
-                    class="emotion-97 emotion-17"
+                    class="emotion-95 emotion-17"
                   >
                     <div
-                      class="emotion-99 emotion-19"
+                      class="emotion-97 emotion-19"
                     >
                       <div
                         style="display: inline-flex;"
                       >
                         <p
-                          class="emotion-20 emotion-102 emotion-15"
+                          class="emotion-20 emotion-100 emotion-15"
                         >
                           This is a regular Item 1
                         </p>
                       </div>
                     </div>
                     <div
-                      class="emotion-99 emotion-19"
+                      class="emotion-97 emotion-19"
                     >
                       This is a regular Item 2
                     </div>
@@ -8665,15 +8553,15 @@ exports[`EstimateCost - Regular Item > render basic props with overlay beta 1`] 
                 </div>
               </td>
               <td
-                class="emotion-106 emotion-107"
+                class="emotion-104 emotion-105"
               >
                 <p
-                  class="emotion-108 emotion-109 emotion-15"
+                  class="emotion-106 emotion-107 emotion-15"
                 >
                   €0.00 - €0.10
                 </p>
                 <p
-                  class="emotion-111 emotion-112 emotion-15"
+                  class="emotion-109 emotion-110 emotion-15"
                 >
                   €0.001/GB/hour(s)
                 </p>
@@ -8684,7 +8572,7 @@ exports[`EstimateCost - Regular Item > render basic props with overlay beta 1`] 
         <table
           cellpadding="0"
           cellspacing="0"
-          class="emotion-114 emotion-115"
+          class="emotion-112 emotion-113"
         >
           <colgroup>
             <col />
@@ -8696,19 +8584,19 @@ exports[`EstimateCost - Regular Item > render basic props with overlay beta 1`] 
             <tr>
               <td
                 aria-label="control"
-                class="emotion-118 emotion-119"
+                class="emotion-116 emotion-117"
               />
               <td
-                class="emotion-120 emotion-320"
+                class="emotion-118 emotion-320"
               >
                 <span
-                  class="emotion-122 emotion-39 emotion-124 emotion-15"
+                  class="emotion-120 emotion-39 emotion-122 emotion-15"
                 >
                   
                           Free During Beta
                 </span>
                 <h3
-                  class="emotion-126 emotion-127 emotion-15"
+                  class="emotion-124 emotion-125 emotion-15"
                 >
                   <span
                     class="emotion-36 emotion-37"
@@ -9110,7 +8998,6 @@ exports[`EstimateCost - Regular Item > render basic props with sublabel 1`] = `
   flex-wrap: nowrap;
   border: 1px solid #d9dadd;
   border-radius: 0.25rem;
-  background-color: #ffffff;
 }
 
 .emotion-50:not([data-disabled='true']):not([data-readonly='true']):not(
@@ -9267,7 +9154,6 @@ exports[`EstimateCost - Regular Item > render basic props with sublabel 1`] = `
   padding-left: 1rem;
   background: transparent;
   color: #3f4250;
-  font-size: 0.875rem;
 }
 
 .emotion-54[data-size="small"] {
@@ -9314,41 +9200,34 @@ exports[`EstimateCost - Regular Item > render basic props with sublabel 1`] = `
   color: #b5b7bd;
 }
 
-.emotion-56 {
-  width: 12.6rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-59 {
+.emotion-57 {
   width: 100%;
+  width: 12.6rem;
 }
 
-.emotion-59 #unit {
+.emotion-57 #unit {
   border: none;
   background: transparent;
 }
 
-.emotion-59 #unit:focus,
-.emotion-59 #unit:active {
+.emotion-57 #unit:focus,
+.emotion-57 #unit:active {
   box-shadow: none;
 }
 
-.emotion-61 {
+.emotion-59 {
   display: inherit;
 }
 
-.emotion-61[data-container-full-height="true"] {
+.emotion-59[data-container-full-height="true"] {
   height: 100%;
 }
 
-.emotion-61[data-container-full-width="true"] {
+.emotion-59[data-container-full-width="true"] {
   width: 100%;
 }
 
-.emotion-65 {
+.emotion-63 {
   display: grid;
   width: 100%;
   gap: 0.5rem;
@@ -9363,85 +9242,85 @@ exports[`EstimateCost - Regular Item > render basic props with sublabel 1`] = `
   width: 100%;
 }
 
-.emotion-65[data-size='small'] {
+.emotion-63[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-65[data-size='medium'] {
+.emotion-63[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-65[data-size='large'] {
+.emotion-63[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-65[data-state='neutral'] {
+.emotion-63[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.emotion-65[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-63[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-65[data-state='neutral']:not([data-disabled='true']):hover {
+.emotion-63[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-65[data-state='neutral']:not([data-disabled='true']):focus-visible {
+.emotion-63[data-state='neutral']:not([data-disabled='true']):focus-visible {
   outline: 5px auto Highlight;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-.emotion-65[data-state='neutral'][data-dropdownvisible='true'] {
+.emotion-63[data-state='neutral'][data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.emotion-65[data-state='success'] {
+.emotion-63[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.emotion-65[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-63[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #1b533f;
   box-shadow: 0px 0px 0px 3px #45d19f40;
 }
 
-.emotion-65[data-state='success'][data-dropdownvisible='true'] {
+.emotion-63[data-state='success'][data-dropdownvisible='true'] {
   border-color: #1b533f;
 }
 
-.emotion-65[data-state='danger'] {
+.emotion-63[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-65[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-63[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-65[data-state='danger'][data-dropdownvisible='true'] {
+.emotion-63[data-state='danger'][data-dropdownvisible='true'] {
   border-color: #92103f;
 }
 
-.emotion-65:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-63:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-65[data-readonly='true'] {
+.emotion-63[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-65[data-disabled='true'] {
+.emotion-63[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-68 {
+.emotion-66 {
   color: #3f4250;
   font-size: 0.875rem;
   font-family: Inter,sans-serif;
@@ -9459,7 +9338,7 @@ exports[`EstimateCost - Regular Item > render basic props with sublabel 1`] = `
   align-self: center;
 }
 
-.emotion-70 {
+.emotion-68 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -9487,7 +9366,7 @@ exports[`EstimateCost - Regular Item > render basic props with sublabel 1`] = `
   display: flex;
 }
 
-.emotion-72 {
+.emotion-70 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1rem;
@@ -9496,12 +9375,12 @@ exports[`EstimateCost - Regular Item > render basic props with sublabel 1`] = `
   min-height: 1rem;
 }
 
-.emotion-72 .fillStroke {
+.emotion-70 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
 
-.emotion-76 {
+.emotion-74 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -9509,7 +9388,7 @@ exports[`EstimateCost - Regular Item > render basic props with sublabel 1`] = `
   min-width: 230px;
 }
 
-.emotion-78 {
+.emotion-76 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -9530,7 +9409,7 @@ exports[`EstimateCost - Regular Item > render basic props with sublabel 1`] = `
   padding-bottom: 8px;
 }
 
-.emotion-87 {
+.emotion-85 {
   color: #641cb3;
   font-size: 1rem;
   font-family: Inter,sans-serif;
@@ -9544,11 +9423,11 @@ exports[`EstimateCost - Regular Item > render basic props with sublabel 1`] = `
   margin-left: 0.5rem;
 }
 
-.emotion-89 {
+.emotion-87 {
   text-align: right;
 }
 
-.emotion-91 {
+.emotion-89 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -9563,7 +9442,7 @@ exports[`EstimateCost - Regular Item > render basic props with sublabel 1`] = `
   margin-right: 4px;
 }
 
-.emotion-93 {
+.emotion-91 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -9575,7 +9454,7 @@ exports[`EstimateCost - Regular Item > render basic props with sublabel 1`] = `
   min-width: 126px;
 }
 
-.emotion-96 {
+.emotion-94 {
   color: #727683;
   font-size: 1rem;
   font-family: Inter,sans-serif;
@@ -9588,18 +9467,18 @@ exports[`EstimateCost - Regular Item > render basic props with sublabel 1`] = `
   text-align: right;
 }
 
-.emotion-98 {
+.emotion-96 {
   margin: 0;
   width: 100%;
   border-right: 1px solid #d9dadd;
   border-radius: 0 0 0.25rem 0.25rem;
 }
 
-.emotion-102 {
+.emotion-100 {
   width: 70%;
 }
 
-.emotion-104 {
+.emotion-102 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -9616,7 +9495,7 @@ exports[`EstimateCost - Regular Item > render basic props with sublabel 1`] = `
   min-width: 126px;
 }
 
-.emotion-107 {
+.emotion-105 {
   color: #641cb3;
   font-size: 1.5625rem;
   font-family: Space Grotesk,sans-serif;
@@ -9772,7 +9651,6 @@ exports[`EstimateCost - Regular Item > render basic props with sublabel 1`] = `
                           class="emotion-54 emotion-55"
                           data-size="medium"
                           data-testid="unit-input"
-                          id="«r35»"
                           max="9007199254740991"
                           min="1"
                           name="iteration-value"
@@ -9782,59 +9660,53 @@ exports[`EstimateCost - Regular Item > render basic props with sublabel 1`] = `
                           value="1"
                         />
                       </div>
-                       
                       <div
-                        class="emotion-56 emotion-57"
-                        width="12.6rem"
+                        aria-label="iteration-unit"
+                        class="emotion-56 emotion-57 emotion-58"
                       >
                         <div
-                          aria-label="iteration-unit"
-                          class="emotion-58 emotion-59 emotion-60"
+                          aria-controls="«r37»"
+                          aria-describedby="«r37»"
+                          class="emotion-59 emotion-60"
+                          data-container-full-width="true"
+                          tabindex="-1"
                         >
                           <div
-                            aria-controls="«r37»"
-                            aria-describedby="«r37»"
-                            class="emotion-61 emotion-62"
-                            data-container-full-width="true"
-                            tabindex="-1"
+                            class="emotion-48 emotion-1"
                           >
                             <div
-                              class="emotion-48 emotion-1"
+                              aria-expanded="false"
+                              aria-haspopup="listbox"
+                              class="emotion-63 emotion-64"
+                              data-disabled="false"
+                              data-dropdownvisible="false"
+                              data-readonly="false"
+                              data-size="medium"
+                              data-state="neutral"
+                              data-testid="select-input-iteration-unit"
+                              id="unit"
+                              role="combobox"
+                              tabindex="0"
                             >
                               <div
-                                aria-expanded="false"
-                                aria-haspopup="listbox"
-                                class="emotion-65 emotion-66"
-                                data-disabled="false"
-                                data-dropdownvisible="false"
-                                data-readonly="false"
-                                data-size="medium"
-                                data-state="neutral"
-                                data-testid="select-input-iteration-unit"
-                                id="unit"
-                                role="combobox"
-                                tabindex="0"
+                                class="emotion-65 emotion-66 emotion-15"
                               >
-                                <div
-                                  class="emotion-67 emotion-68 emotion-15"
+                                Hour(s)
+                              </div>
+                              <div
+                                class="emotion-68 emotion-69"
+                              >
+                                <svg
+                                  aria-label="show dropdown"
+                                  class="emotion-70 emotion-25"
+                                  viewBox="0 0 16 16"
                                 >
-                                  Hour(s)
-                                </div>
-                                <div
-                                  class="emotion-70 emotion-71"
-                                >
-                                  <svg
-                                    aria-label="show dropdown"
-                                    class="emotion-72 emotion-25"
-                                    viewBox="0 0 16 16"
-                                  >
-                                    <path
-                                      clip-rule="evenodd"
-                                      d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
-                                      fill-rule="evenodd"
-                                    />
-                                  </svg>
-                                </div>
+                                  <path
+                                    clip-rule="evenodd"
+                                    d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
+                                    fill-rule="evenodd"
+                                  />
+                                </svg>
                               </div>
                             </div>
                           </div>
@@ -9848,14 +9720,14 @@ exports[`EstimateCost - Regular Item > render basic props with sublabel 1`] = `
           </thead>
           <tbody>
             <tr
-              class="emotion-74 emotion-75"
+              class="emotion-72 emotion-73"
             >
               <td
-                class="emotion-76 emotion-271"
+                class="emotion-74 emotion-271"
                 width="70%"
               >
                 <div
-                  class="emotion-78 emotion-79"
+                  class="emotion-76 emotion-77"
                 >
                   <div
                     class="emotion-10 emotion-1"
@@ -9869,17 +9741,17 @@ exports[`EstimateCost - Regular Item > render basic props with sublabel 1`] = `
                         Regular
                       </p>
                       <p
-                        class="emotion-86 emotion-87 emotion-15"
+                        class="emotion-84 emotion-85 emotion-15"
                       >
                         Excellent
                       </p>
                     </div>
                   </div>
                   <div
-                    class="emotion-89 emotion-17"
+                    class="emotion-87 emotion-17"
                   >
                     <div
-                      class="emotion-91 emotion-19"
+                      class="emotion-89 emotion-19"
                     >
                       This is a regular Item
                     </div>
@@ -9887,10 +9759,10 @@ exports[`EstimateCost - Regular Item > render basic props with sublabel 1`] = `
                 </div>
               </td>
               <td
-                class="emotion-93 emotion-94"
+                class="emotion-91 emotion-92"
               >
                 <p
-                  class="emotion-95 emotion-96 emotion-15"
+                  class="emotion-93 emotion-94 emotion-15"
                 >
                   €0.00
                 </p>
@@ -9901,7 +9773,7 @@ exports[`EstimateCost - Regular Item > render basic props with sublabel 1`] = `
         <table
           cellpadding="0"
           cellspacing="0"
-          class="emotion-98 emotion-99"
+          class="emotion-96 emotion-97"
         >
           <colgroup>
             <col />
@@ -9913,13 +9785,13 @@ exports[`EstimateCost - Regular Item > render basic props with sublabel 1`] = `
             <tr>
               <td
                 aria-label="control"
-                class="emotion-102 emotion-103"
+                class="emotion-100 emotion-101"
               />
               <td
-                class="emotion-104 emotion-270"
+                class="emotion-102 emotion-270"
               >
                 <h3
-                  class="emotion-106 emotion-107 emotion-15"
+                  class="emotion-104 emotion-105 emotion-15"
                 >
                   <span
                     class="emotion-31 emotion-32"
@@ -10321,7 +10193,6 @@ exports[`EstimateCost - Regular Item > render basic props with textNotDefined 1`
   flex-wrap: nowrap;
   border: 1px solid #d9dadd;
   border-radius: 0.25rem;
-  background-color: #ffffff;
 }
 
 .emotion-50:not([data-disabled='true']):not([data-readonly='true']):not(
@@ -10478,7 +10349,6 @@ exports[`EstimateCost - Regular Item > render basic props with textNotDefined 1`
   padding-left: 1rem;
   background: transparent;
   color: #3f4250;
-  font-size: 0.875rem;
 }
 
 .emotion-54[data-size="small"] {
@@ -10525,41 +10395,34 @@ exports[`EstimateCost - Regular Item > render basic props with textNotDefined 1`
   color: #b5b7bd;
 }
 
-.emotion-56 {
-  width: 12.6rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-59 {
+.emotion-57 {
   width: 100%;
+  width: 12.6rem;
 }
 
-.emotion-59 #unit {
+.emotion-57 #unit {
   border: none;
   background: transparent;
 }
 
-.emotion-59 #unit:focus,
-.emotion-59 #unit:active {
+.emotion-57 #unit:focus,
+.emotion-57 #unit:active {
   box-shadow: none;
 }
 
-.emotion-61 {
+.emotion-59 {
   display: inherit;
 }
 
-.emotion-61[data-container-full-height="true"] {
+.emotion-59[data-container-full-height="true"] {
   height: 100%;
 }
 
-.emotion-61[data-container-full-width="true"] {
+.emotion-59[data-container-full-width="true"] {
   width: 100%;
 }
 
-.emotion-65 {
+.emotion-63 {
   display: grid;
   width: 100%;
   gap: 0.5rem;
@@ -10574,85 +10437,85 @@ exports[`EstimateCost - Regular Item > render basic props with textNotDefined 1`
   width: 100%;
 }
 
-.emotion-65[data-size='small'] {
+.emotion-63[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-65[data-size='medium'] {
+.emotion-63[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-65[data-size='large'] {
+.emotion-63[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-65[data-state='neutral'] {
+.emotion-63[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.emotion-65[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-63[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-65[data-state='neutral']:not([data-disabled='true']):hover {
+.emotion-63[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-65[data-state='neutral']:not([data-disabled='true']):focus-visible {
+.emotion-63[data-state='neutral']:not([data-disabled='true']):focus-visible {
   outline: 5px auto Highlight;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-.emotion-65[data-state='neutral'][data-dropdownvisible='true'] {
+.emotion-63[data-state='neutral'][data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.emotion-65[data-state='success'] {
+.emotion-63[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.emotion-65[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-63[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #1b533f;
   box-shadow: 0px 0px 0px 3px #45d19f40;
 }
 
-.emotion-65[data-state='success'][data-dropdownvisible='true'] {
+.emotion-63[data-state='success'][data-dropdownvisible='true'] {
   border-color: #1b533f;
 }
 
-.emotion-65[data-state='danger'] {
+.emotion-63[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-65[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-63[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-65[data-state='danger'][data-dropdownvisible='true'] {
+.emotion-63[data-state='danger'][data-dropdownvisible='true'] {
   border-color: #92103f;
 }
 
-.emotion-65:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-63:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-65[data-readonly='true'] {
+.emotion-63[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-65[data-disabled='true'] {
+.emotion-63[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-68 {
+.emotion-66 {
   color: #3f4250;
   font-size: 0.875rem;
   font-family: Inter,sans-serif;
@@ -10670,7 +10533,7 @@ exports[`EstimateCost - Regular Item > render basic props with textNotDefined 1`
   align-self: center;
 }
 
-.emotion-70 {
+.emotion-68 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -10698,7 +10561,7 @@ exports[`EstimateCost - Regular Item > render basic props with textNotDefined 1`
   display: flex;
 }
 
-.emotion-72 {
+.emotion-70 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1rem;
@@ -10707,12 +10570,12 @@ exports[`EstimateCost - Regular Item > render basic props with textNotDefined 1`
   min-height: 1rem;
 }
 
-.emotion-72 .fillStroke {
+.emotion-70 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
 
-.emotion-76 {
+.emotion-74 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -10720,7 +10583,7 @@ exports[`EstimateCost - Regular Item > render basic props with textNotDefined 1`
   min-width: 230px;
 }
 
-.emotion-78 {
+.emotion-76 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -10741,11 +10604,11 @@ exports[`EstimateCost - Regular Item > render basic props with textNotDefined 1`
   padding-bottom: 8px;
 }
 
-.emotion-86 {
+.emotion-84 {
   text-align: right;
 }
 
-.emotion-88 {
+.emotion-86 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -10760,7 +10623,7 @@ exports[`EstimateCost - Regular Item > render basic props with textNotDefined 1`
   margin-right: 4px;
 }
 
-.emotion-90 {
+.emotion-88 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -10772,7 +10635,7 @@ exports[`EstimateCost - Regular Item > render basic props with textNotDefined 1`
   min-width: 126px;
 }
 
-.emotion-93 {
+.emotion-91 {
   color: #727683;
   font-size: 1rem;
   font-family: Inter,sans-serif;
@@ -10785,18 +10648,18 @@ exports[`EstimateCost - Regular Item > render basic props with textNotDefined 1`
   text-align: right;
 }
 
-.emotion-95 {
+.emotion-93 {
   margin: 0;
   width: 100%;
   border-right: 1px solid #d9dadd;
   border-radius: 0 0 0.25rem 0.25rem;
 }
 
-.emotion-99 {
+.emotion-97 {
   width: 70%;
 }
 
-.emotion-101 {
+.emotion-99 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -10813,7 +10676,7 @@ exports[`EstimateCost - Regular Item > render basic props with textNotDefined 1`
   min-width: 126px;
 }
 
-.emotion-104 {
+.emotion-102 {
   color: #641cb3;
   font-size: 1.5625rem;
   font-family: Space Grotesk,sans-serif;
@@ -10969,7 +10832,6 @@ exports[`EstimateCost - Regular Item > render basic props with textNotDefined 1`
                           class="emotion-54 emotion-55"
                           data-size="medium"
                           data-testid="unit-input"
-                          id="«r3i»"
                           max="9007199254740991"
                           min="1"
                           name="iteration-value"
@@ -10979,59 +10841,53 @@ exports[`EstimateCost - Regular Item > render basic props with textNotDefined 1`
                           value="1"
                         />
                       </div>
-                       
                       <div
-                        class="emotion-56 emotion-57"
-                        width="12.6rem"
+                        aria-label="iteration-unit"
+                        class="emotion-56 emotion-57 emotion-58"
                       >
                         <div
-                          aria-label="iteration-unit"
-                          class="emotion-58 emotion-59 emotion-60"
+                          aria-controls="«r3k»"
+                          aria-describedby="«r3k»"
+                          class="emotion-59 emotion-60"
+                          data-container-full-width="true"
+                          tabindex="-1"
                         >
                           <div
-                            aria-controls="«r3k»"
-                            aria-describedby="«r3k»"
-                            class="emotion-61 emotion-62"
-                            data-container-full-width="true"
-                            tabindex="-1"
+                            class="emotion-48 emotion-1"
                           >
                             <div
-                              class="emotion-48 emotion-1"
+                              aria-expanded="false"
+                              aria-haspopup="listbox"
+                              class="emotion-63 emotion-64"
+                              data-disabled="false"
+                              data-dropdownvisible="false"
+                              data-readonly="false"
+                              data-size="medium"
+                              data-state="neutral"
+                              data-testid="select-input-iteration-unit"
+                              id="unit"
+                              role="combobox"
+                              tabindex="0"
                             >
                               <div
-                                aria-expanded="false"
-                                aria-haspopup="listbox"
-                                class="emotion-65 emotion-66"
-                                data-disabled="false"
-                                data-dropdownvisible="false"
-                                data-readonly="false"
-                                data-size="medium"
-                                data-state="neutral"
-                                data-testid="select-input-iteration-unit"
-                                id="unit"
-                                role="combobox"
-                                tabindex="0"
+                                class="emotion-65 emotion-66 emotion-15"
                               >
-                                <div
-                                  class="emotion-67 emotion-68 emotion-15"
+                                Hour(s)
+                              </div>
+                              <div
+                                class="emotion-68 emotion-69"
+                              >
+                                <svg
+                                  aria-label="show dropdown"
+                                  class="emotion-70 emotion-25"
+                                  viewBox="0 0 16 16"
                                 >
-                                  Hour(s)
-                                </div>
-                                <div
-                                  class="emotion-70 emotion-71"
-                                >
-                                  <svg
-                                    aria-label="show dropdown"
-                                    class="emotion-72 emotion-25"
-                                    viewBox="0 0 16 16"
-                                  >
-                                    <path
-                                      clip-rule="evenodd"
-                                      d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
-                                      fill-rule="evenodd"
-                                    />
-                                  </svg>
-                                </div>
+                                  <path
+                                    clip-rule="evenodd"
+                                    d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
+                                    fill-rule="evenodd"
+                                  />
+                                </svg>
                               </div>
                             </div>
                           </div>
@@ -11045,14 +10901,14 @@ exports[`EstimateCost - Regular Item > render basic props with textNotDefined 1`
           </thead>
           <tbody>
             <tr
-              class="emotion-74 emotion-75"
+              class="emotion-72 emotion-73"
             >
               <td
-                class="emotion-76 emotion-271"
+                class="emotion-74 emotion-271"
                 width="70%"
               >
                 <div
-                  class="emotion-78 emotion-79"
+                  class="emotion-76 emotion-77"
                 >
                   <div
                     class="emotion-10 emotion-1"
@@ -11068,10 +10924,10 @@ exports[`EstimateCost - Regular Item > render basic props with textNotDefined 1`
                     </div>
                   </div>
                   <div
-                    class="emotion-86 emotion-17"
+                    class="emotion-84 emotion-17"
                   >
                     <div
-                      class="emotion-88 emotion-19"
+                      class="emotion-86 emotion-19"
                     >
                       This is a regular Item
                     </div>
@@ -11079,10 +10935,10 @@ exports[`EstimateCost - Regular Item > render basic props with textNotDefined 1`
                 </div>
               </td>
               <td
-                class="emotion-90 emotion-91"
+                class="emotion-88 emotion-89"
               >
                 <p
-                  class="emotion-92 emotion-93 emotion-15"
+                  class="emotion-90 emotion-91 emotion-15"
                 >
                   €0.00
                 </p>
@@ -11093,7 +10949,7 @@ exports[`EstimateCost - Regular Item > render basic props with textNotDefined 1`
         <table
           cellpadding="0"
           cellspacing="0"
-          class="emotion-95 emotion-96"
+          class="emotion-93 emotion-94"
         >
           <colgroup>
             <col />
@@ -11105,13 +10961,13 @@ exports[`EstimateCost - Regular Item > render basic props with textNotDefined 1`
             <tr>
               <td
                 aria-label="control"
-                class="emotion-99 emotion-100"
+                class="emotion-97 emotion-98"
               />
               <td
-                class="emotion-101 emotion-270"
+                class="emotion-99 emotion-270"
               >
                 <h3
-                  class="emotion-103 emotion-104 emotion-15"
+                  class="emotion-101 emotion-102 emotion-15"
                 >
                   <span
                     class="emotion-31 emotion-32"
@@ -11528,7 +11384,6 @@ exports[`EstimateCost - Regular Item > render basic with ellipsis 1`] = `
   flex-wrap: nowrap;
   border: 1px solid #d9dadd;
   border-radius: 0.25rem;
-  background-color: #ffffff;
 }
 
 .emotion-53:not([data-disabled='true']):not([data-readonly='true']):not(
@@ -11685,7 +11540,6 @@ exports[`EstimateCost - Regular Item > render basic with ellipsis 1`] = `
   padding-left: 1rem;
   background: transparent;
   color: #3f4250;
-  font-size: 0.875rem;
 }
 
 .emotion-57[data-size="small"] {
@@ -11732,41 +11586,34 @@ exports[`EstimateCost - Regular Item > render basic with ellipsis 1`] = `
   color: #b5b7bd;
 }
 
-.emotion-59 {
-  width: 12.6rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-62 {
+.emotion-60 {
   width: 100%;
+  width: 12.6rem;
 }
 
-.emotion-62 #unit {
+.emotion-60 #unit {
   border: none;
   background: transparent;
 }
 
-.emotion-62 #unit:focus,
-.emotion-62 #unit:active {
+.emotion-60 #unit:focus,
+.emotion-60 #unit:active {
   box-shadow: none;
 }
 
-.emotion-64 {
+.emotion-62 {
   display: inherit;
 }
 
-.emotion-64[data-container-full-height="true"] {
+.emotion-62[data-container-full-height="true"] {
   height: 100%;
 }
 
-.emotion-64[data-container-full-width="true"] {
+.emotion-62[data-container-full-width="true"] {
   width: 100%;
 }
 
-.emotion-68 {
+.emotion-66 {
   display: grid;
   width: 100%;
   gap: 0.5rem;
@@ -11781,85 +11628,85 @@ exports[`EstimateCost - Regular Item > render basic with ellipsis 1`] = `
   width: 100%;
 }
 
-.emotion-68[data-size='small'] {
+.emotion-66[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-68[data-size='medium'] {
+.emotion-66[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-68[data-size='large'] {
+.emotion-66[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-68[data-state='neutral'] {
+.emotion-66[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.emotion-68[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-66[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-68[data-state='neutral']:not([data-disabled='true']):hover {
+.emotion-66[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-68[data-state='neutral']:not([data-disabled='true']):focus-visible {
+.emotion-66[data-state='neutral']:not([data-disabled='true']):focus-visible {
   outline: 5px auto Highlight;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-.emotion-68[data-state='neutral'][data-dropdownvisible='true'] {
+.emotion-66[data-state='neutral'][data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.emotion-68[data-state='success'] {
+.emotion-66[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.emotion-68[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-66[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #1b533f;
   box-shadow: 0px 0px 0px 3px #45d19f40;
 }
 
-.emotion-68[data-state='success'][data-dropdownvisible='true'] {
+.emotion-66[data-state='success'][data-dropdownvisible='true'] {
   border-color: #1b533f;
 }
 
-.emotion-68[data-state='danger'] {
+.emotion-66[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-68[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-66[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-68[data-state='danger'][data-dropdownvisible='true'] {
+.emotion-66[data-state='danger'][data-dropdownvisible='true'] {
   border-color: #92103f;
 }
 
-.emotion-68:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-66:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-68[data-readonly='true'] {
+.emotion-66[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-68[data-disabled='true'] {
+.emotion-66[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-71 {
+.emotion-69 {
   color: #3f4250;
   font-size: 0.875rem;
   font-family: Inter,sans-serif;
@@ -11877,7 +11724,7 @@ exports[`EstimateCost - Regular Item > render basic with ellipsis 1`] = `
   align-self: center;
 }
 
-.emotion-73 {
+.emotion-71 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -11905,7 +11752,7 @@ exports[`EstimateCost - Regular Item > render basic with ellipsis 1`] = `
   display: flex;
 }
 
-.emotion-75 {
+.emotion-73 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1rem;
@@ -11914,12 +11761,12 @@ exports[`EstimateCost - Regular Item > render basic with ellipsis 1`] = `
   min-height: 1rem;
 }
 
-.emotion-75 .fillStroke {
+.emotion-73 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
 
-.emotion-79 {
+.emotion-77 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -11927,7 +11774,7 @@ exports[`EstimateCost - Regular Item > render basic with ellipsis 1`] = `
   min-width: 230px;
 }
 
-.emotion-81 {
+.emotion-79 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -11948,11 +11795,11 @@ exports[`EstimateCost - Regular Item > render basic with ellipsis 1`] = `
   padding-bottom: 8px;
 }
 
-.emotion-89 {
+.emotion-87 {
   text-align: right;
 }
 
-.emotion-91 {
+.emotion-89 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -11967,7 +11814,7 @@ exports[`EstimateCost - Regular Item > render basic with ellipsis 1`] = `
   margin-right: 4px;
 }
 
-.emotion-94 {
+.emotion-92 {
   font-size: 1rem;
   font-family: Inter,sans-serif;
   font-weight: 500;
@@ -11982,7 +11829,7 @@ exports[`EstimateCost - Regular Item > render basic with ellipsis 1`] = `
   max-width: 350px;
 }
 
-.emotion-96 {
+.emotion-94 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -11994,7 +11841,7 @@ exports[`EstimateCost - Regular Item > render basic with ellipsis 1`] = `
   min-width: 126px;
 }
 
-.emotion-99 {
+.emotion-97 {
   color: #727683;
   font-size: 1rem;
   font-family: Inter,sans-serif;
@@ -12007,18 +11854,18 @@ exports[`EstimateCost - Regular Item > render basic with ellipsis 1`] = `
   text-align: right;
 }
 
-.emotion-101 {
+.emotion-99 {
   margin: 0;
   width: 100%;
   border-right: 1px solid #d9dadd;
   border-radius: 0 0 0.25rem 0.25rem;
 }
 
-.emotion-105 {
+.emotion-103 {
   width: 70%;
 }
 
-.emotion-107 {
+.emotion-105 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -12035,7 +11882,7 @@ exports[`EstimateCost - Regular Item > render basic with ellipsis 1`] = `
   min-width: 126px;
 }
 
-.emotion-110 {
+.emotion-108 {
   color: #641cb3;
   font-size: 1.5625rem;
   font-family: Space Grotesk,sans-serif;
@@ -12197,7 +12044,6 @@ exports[`EstimateCost - Regular Item > render basic with ellipsis 1`] = `
                           class="emotion-57 emotion-58"
                           data-size="medium"
                           data-testid="unit-input"
-                          id="«r3v»"
                           max="9007199254740991"
                           min="1"
                           name="iteration-value"
@@ -12207,59 +12053,53 @@ exports[`EstimateCost - Regular Item > render basic with ellipsis 1`] = `
                           value="1"
                         />
                       </div>
-                       
                       <div
-                        class="emotion-59 emotion-60"
-                        width="12.6rem"
+                        aria-label="iteration-unit"
+                        class="emotion-59 emotion-60 emotion-61"
                       >
                         <div
-                          aria-label="iteration-unit"
-                          class="emotion-61 emotion-62 emotion-63"
+                          aria-controls="«r41»"
+                          aria-describedby="«r41»"
+                          class="emotion-62 emotion-63"
+                          data-container-full-width="true"
+                          tabindex="-1"
                         >
                           <div
-                            aria-controls="«r41»"
-                            aria-describedby="«r41»"
-                            class="emotion-64 emotion-65"
-                            data-container-full-width="true"
-                            tabindex="-1"
+                            class="emotion-51 emotion-1"
                           >
                             <div
-                              class="emotion-51 emotion-1"
+                              aria-expanded="false"
+                              aria-haspopup="listbox"
+                              class="emotion-66 emotion-67"
+                              data-disabled="false"
+                              data-dropdownvisible="false"
+                              data-readonly="false"
+                              data-size="medium"
+                              data-state="neutral"
+                              data-testid="select-input-iteration-unit"
+                              id="unit"
+                              role="combobox"
+                              tabindex="0"
                             >
                               <div
-                                aria-expanded="false"
-                                aria-haspopup="listbox"
-                                class="emotion-68 emotion-69"
-                                data-disabled="false"
-                                data-dropdownvisible="false"
-                                data-readonly="false"
-                                data-size="medium"
-                                data-state="neutral"
-                                data-testid="select-input-iteration-unit"
-                                id="unit"
-                                role="combobox"
-                                tabindex="0"
+                                class="emotion-68 emotion-69 emotion-15"
                               >
-                                <div
-                                  class="emotion-70 emotion-71 emotion-15"
+                                Hour(s)
+                              </div>
+                              <div
+                                class="emotion-71 emotion-72"
+                              >
+                                <svg
+                                  aria-label="show dropdown"
+                                  class="emotion-73 emotion-28"
+                                  viewBox="0 0 16 16"
                                 >
-                                  Hour(s)
-                                </div>
-                                <div
-                                  class="emotion-73 emotion-74"
-                                >
-                                  <svg
-                                    aria-label="show dropdown"
-                                    class="emotion-75 emotion-28"
-                                    viewBox="0 0 16 16"
-                                  >
-                                    <path
-                                      clip-rule="evenodd"
-                                      d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
-                                      fill-rule="evenodd"
-                                    />
-                                  </svg>
-                                </div>
+                                  <path
+                                    clip-rule="evenodd"
+                                    d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
+                                    fill-rule="evenodd"
+                                  />
+                                </svg>
                               </div>
                             </div>
                           </div>
@@ -12273,14 +12113,14 @@ exports[`EstimateCost - Regular Item > render basic with ellipsis 1`] = `
           </thead>
           <tbody>
             <tr
-              class="emotion-77 emotion-78"
+              class="emotion-75 emotion-76"
             >
               <td
-                class="emotion-79 emotion-301"
+                class="emotion-77 emotion-301"
                 width="70%"
               >
                 <div
-                  class="emotion-81 emotion-82"
+                  class="emotion-79 emotion-80"
                 >
                   <div
                     class="emotion-10 emotion-1"
@@ -12296,16 +12136,16 @@ exports[`EstimateCost - Regular Item > render basic with ellipsis 1`] = `
                     </div>
                   </div>
                   <div
-                    class="emotion-89 emotion-17"
+                    class="emotion-87 emotion-17"
                   >
                     <div
-                      class="emotion-91 emotion-19"
+                      class="emotion-89 emotion-19"
                     >
                       <div
                         style="display: inline-flex;"
                       >
                         <p
-                          class="emotion-20 emotion-94 emotion-15"
+                          class="emotion-20 emotion-92 emotion-15"
                         >
                           This is a regular Item
                         </p>
@@ -12315,10 +12155,10 @@ exports[`EstimateCost - Regular Item > render basic with ellipsis 1`] = `
                 </div>
               </td>
               <td
-                class="emotion-96 emotion-97"
+                class="emotion-94 emotion-95"
               >
                 <p
-                  class="emotion-98 emotion-99 emotion-15"
+                  class="emotion-96 emotion-97 emotion-15"
                 >
                   €0.00
                 </p>
@@ -12329,7 +12169,7 @@ exports[`EstimateCost - Regular Item > render basic with ellipsis 1`] = `
         <table
           cellpadding="0"
           cellspacing="0"
-          class="emotion-101 emotion-102"
+          class="emotion-99 emotion-100"
         >
           <colgroup>
             <col />
@@ -12341,13 +12181,13 @@ exports[`EstimateCost - Regular Item > render basic with ellipsis 1`] = `
             <tr>
               <td
                 aria-label="control"
-                class="emotion-105 emotion-106"
+                class="emotion-103 emotion-104"
               />
               <td
-                class="emotion-107 emotion-300"
+                class="emotion-105 emotion-300"
               >
                 <h3
-                  class="emotion-109 emotion-110 emotion-15"
+                  class="emotion-107 emotion-108 emotion-15"
                 >
                   <span
                     class="emotion-34 emotion-35"
@@ -12887,7 +12727,6 @@ exports[`EstimateCost - Regular Item > render with alert 1`] = `
   flex-wrap: nowrap;
   border: 1px solid #d9dadd;
   border-radius: 0.25rem;
-  background-color: #ffffff;
 }
 
 .emotion-64:not([data-disabled='true']):not([data-readonly='true']):not(
@@ -13044,7 +12883,6 @@ exports[`EstimateCost - Regular Item > render with alert 1`] = `
   padding-left: 1rem;
   background: transparent;
   color: #3f4250;
-  font-size: 0.875rem;
 }
 
 .emotion-68[data-size="small"] {
@@ -13091,41 +12929,34 @@ exports[`EstimateCost - Regular Item > render with alert 1`] = `
   color: #b5b7bd;
 }
 
-.emotion-70 {
-  width: 12.6rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-73 {
+.emotion-71 {
   width: 100%;
+  width: 12.6rem;
 }
 
-.emotion-73 #unit {
+.emotion-71 #unit {
   border: none;
   background: transparent;
 }
 
-.emotion-73 #unit:focus,
-.emotion-73 #unit:active {
+.emotion-71 #unit:focus,
+.emotion-71 #unit:active {
   box-shadow: none;
 }
 
-.emotion-75 {
+.emotion-73 {
   display: inherit;
 }
 
-.emotion-75[data-container-full-height="true"] {
+.emotion-73[data-container-full-height="true"] {
   height: 100%;
 }
 
-.emotion-75[data-container-full-width="true"] {
+.emotion-73[data-container-full-width="true"] {
   width: 100%;
 }
 
-.emotion-79 {
+.emotion-77 {
   display: grid;
   width: 100%;
   gap: 0.5rem;
@@ -13140,85 +12971,85 @@ exports[`EstimateCost - Regular Item > render with alert 1`] = `
   width: 100%;
 }
 
-.emotion-79[data-size='small'] {
+.emotion-77[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-79[data-size='medium'] {
+.emotion-77[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-79[data-size='large'] {
+.emotion-77[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-79[data-state='neutral'] {
+.emotion-77[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.emotion-79[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-77[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-79[data-state='neutral']:not([data-disabled='true']):hover {
+.emotion-77[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-79[data-state='neutral']:not([data-disabled='true']):focus-visible {
+.emotion-77[data-state='neutral']:not([data-disabled='true']):focus-visible {
   outline: 5px auto Highlight;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-.emotion-79[data-state='neutral'][data-dropdownvisible='true'] {
+.emotion-77[data-state='neutral'][data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.emotion-79[data-state='success'] {
+.emotion-77[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.emotion-79[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-77[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #1b533f;
   box-shadow: 0px 0px 0px 3px #45d19f40;
 }
 
-.emotion-79[data-state='success'][data-dropdownvisible='true'] {
+.emotion-77[data-state='success'][data-dropdownvisible='true'] {
   border-color: #1b533f;
 }
 
-.emotion-79[data-state='danger'] {
+.emotion-77[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-79[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-77[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-79[data-state='danger'][data-dropdownvisible='true'] {
+.emotion-77[data-state='danger'][data-dropdownvisible='true'] {
   border-color: #92103f;
 }
 
-.emotion-79:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-77:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-79[data-readonly='true'] {
+.emotion-77[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-79[data-disabled='true'] {
+.emotion-77[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-82 {
+.emotion-80 {
   color: #3f4250;
   font-size: 0.875rem;
   font-family: Inter,sans-serif;
@@ -13236,7 +13067,7 @@ exports[`EstimateCost - Regular Item > render with alert 1`] = `
   align-self: center;
 }
 
-.emotion-84 {
+.emotion-82 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -13264,7 +13095,7 @@ exports[`EstimateCost - Regular Item > render with alert 1`] = `
   display: flex;
 }
 
-.emotion-86 {
+.emotion-84 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1rem;
@@ -13273,12 +13104,12 @@ exports[`EstimateCost - Regular Item > render with alert 1`] = `
   min-height: 1rem;
 }
 
-.emotion-86 .fillStroke {
+.emotion-84 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
 
-.emotion-90 {
+.emotion-88 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -13286,7 +13117,7 @@ exports[`EstimateCost - Regular Item > render with alert 1`] = `
   min-width: 230px;
 }
 
-.emotion-92 {
+.emotion-90 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -13307,11 +13138,11 @@ exports[`EstimateCost - Regular Item > render with alert 1`] = `
   padding-bottom: 8px;
 }
 
-.emotion-100 {
+.emotion-98 {
   text-align: right;
 }
 
-.emotion-102 {
+.emotion-100 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -13326,7 +13157,7 @@ exports[`EstimateCost - Regular Item > render with alert 1`] = `
   margin-right: 4px;
 }
 
-.emotion-104 {
+.emotion-102 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -13338,7 +13169,7 @@ exports[`EstimateCost - Regular Item > render with alert 1`] = `
   min-width: 126px;
 }
 
-.emotion-107 {
+.emotion-105 {
   color: #727683;
   font-size: 1rem;
   font-family: Inter,sans-serif;
@@ -13351,18 +13182,18 @@ exports[`EstimateCost - Regular Item > render with alert 1`] = `
   text-align: right;
 }
 
-.emotion-109 {
+.emotion-107 {
   margin: 0;
   width: 100%;
   border-right: 1px solid #d9dadd;
   border-radius: 0 0 0.25rem 0.25rem;
 }
 
-.emotion-113 {
+.emotion-111 {
   width: 70%;
 }
 
-.emotion-115 {
+.emotion-113 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -13379,7 +13210,7 @@ exports[`EstimateCost - Regular Item > render with alert 1`] = `
   min-width: 126px;
 }
 
-.emotion-118 {
+.emotion-116 {
   color: #641cb3;
   font-size: 1.5625rem;
   font-family: Space Grotesk,sans-serif;
@@ -13571,7 +13402,6 @@ exports[`EstimateCost - Regular Item > render with alert 1`] = `
                           class="emotion-68 emotion-69"
                           data-size="medium"
                           data-testid="unit-input"
-                          id="«r4q»"
                           max="9007199254740991"
                           min="1"
                           name="iteration-value"
@@ -13581,59 +13411,53 @@ exports[`EstimateCost - Regular Item > render with alert 1`] = `
                           value="1"
                         />
                       </div>
-                       
                       <div
-                        class="emotion-70 emotion-71"
-                        width="12.6rem"
+                        aria-label="iteration-unit"
+                        class="emotion-70 emotion-71 emotion-72"
                       >
                         <div
-                          aria-label="iteration-unit"
-                          class="emotion-72 emotion-73 emotion-74"
+                          aria-controls="«r4s»"
+                          aria-describedby="«r4s»"
+                          class="emotion-73 emotion-74"
+                          data-container-full-width="true"
+                          tabindex="-1"
                         >
                           <div
-                            aria-controls="«r4s»"
-                            aria-describedby="«r4s»"
-                            class="emotion-75 emotion-76"
-                            data-container-full-width="true"
-                            tabindex="-1"
+                            class="emotion-62 emotion-1"
                           >
                             <div
-                              class="emotion-62 emotion-1"
+                              aria-expanded="false"
+                              aria-haspopup="listbox"
+                              class="emotion-77 emotion-78"
+                              data-disabled="false"
+                              data-dropdownvisible="false"
+                              data-readonly="false"
+                              data-size="medium"
+                              data-state="neutral"
+                              data-testid="select-input-iteration-unit"
+                              id="unit"
+                              role="combobox"
+                              tabindex="0"
                             >
                               <div
-                                aria-expanded="false"
-                                aria-haspopup="listbox"
-                                class="emotion-79 emotion-80"
-                                data-disabled="false"
-                                data-dropdownvisible="false"
-                                data-readonly="false"
-                                data-size="medium"
-                                data-state="neutral"
-                                data-testid="select-input-iteration-unit"
-                                id="unit"
-                                role="combobox"
-                                tabindex="0"
+                                class="emotion-79 emotion-80 emotion-15"
                               >
-                                <div
-                                  class="emotion-81 emotion-82 emotion-15"
+                                Hour(s)
+                              </div>
+                              <div
+                                class="emotion-82 emotion-83"
+                              >
+                                <svg
+                                  aria-label="show dropdown"
+                                  class="emotion-84 emotion-25"
+                                  viewBox="0 0 16 16"
                                 >
-                                  Hour(s)
-                                </div>
-                                <div
-                                  class="emotion-84 emotion-85"
-                                >
-                                  <svg
-                                    aria-label="show dropdown"
-                                    class="emotion-86 emotion-25"
-                                    viewBox="0 0 16 16"
-                                  >
-                                    <path
-                                      clip-rule="evenodd"
-                                      d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
-                                      fill-rule="evenodd"
-                                    />
-                                  </svg>
-                                </div>
+                                  <path
+                                    clip-rule="evenodd"
+                                    d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
+                                    fill-rule="evenodd"
+                                  />
+                                </svg>
                               </div>
                             </div>
                           </div>
@@ -13647,14 +13471,14 @@ exports[`EstimateCost - Regular Item > render with alert 1`] = `
           </thead>
           <tbody>
             <tr
-              class="emotion-88 emotion-89"
+              class="emotion-86 emotion-87"
             >
               <td
-                class="emotion-90 emotion-271"
+                class="emotion-88 emotion-271"
                 width="70%"
               >
                 <div
-                  class="emotion-92 emotion-93"
+                  class="emotion-90 emotion-91"
                 >
                   <div
                     class="emotion-10 emotion-1"
@@ -13670,10 +13494,10 @@ exports[`EstimateCost - Regular Item > render with alert 1`] = `
                     </div>
                   </div>
                   <div
-                    class="emotion-100 emotion-17"
+                    class="emotion-98 emotion-17"
                   >
                     <div
-                      class="emotion-102 emotion-19"
+                      class="emotion-100 emotion-19"
                     >
                       This is a regular Item
                     </div>
@@ -13681,10 +13505,10 @@ exports[`EstimateCost - Regular Item > render with alert 1`] = `
                 </div>
               </td>
               <td
-                class="emotion-104 emotion-105"
+                class="emotion-102 emotion-103"
               >
                 <p
-                  class="emotion-106 emotion-107 emotion-15"
+                  class="emotion-104 emotion-105 emotion-15"
                 >
                   €0.00
                 </p>
@@ -13695,7 +13519,7 @@ exports[`EstimateCost - Regular Item > render with alert 1`] = `
         <table
           cellpadding="0"
           cellspacing="0"
-          class="emotion-109 emotion-110"
+          class="emotion-107 emotion-108"
         >
           <colgroup>
             <col />
@@ -13707,13 +13531,13 @@ exports[`EstimateCost - Regular Item > render with alert 1`] = `
             <tr>
               <td
                 aria-label="control"
-                class="emotion-113 emotion-114"
+                class="emotion-111 emotion-112"
               />
               <td
-                class="emotion-115 emotion-270"
+                class="emotion-113 emotion-270"
               >
                 <h3
-                  class="emotion-117 emotion-118 emotion-15"
+                  class="emotion-115 emotion-116 emotion-15"
                 >
                   <span
                     class="emotion-31 emotion-32"
@@ -14100,7 +13924,6 @@ exports[`EstimateCost - Regular Item > render with isDisabledOnOverlay 1`] = `
   flex-wrap: nowrap;
   border: 1px solid #d9dadd;
   border-radius: 0.25rem;
-  background-color: #ffffff;
 }
 
 .emotion-48:not([data-disabled='true']):not([data-readonly='true']):not(
@@ -14257,7 +14080,6 @@ exports[`EstimateCost - Regular Item > render with isDisabledOnOverlay 1`] = `
   padding-left: 1rem;
   background: transparent;
   color: #3f4250;
-  font-size: 0.875rem;
 }
 
 .emotion-52[data-size="small"] {
@@ -14304,41 +14126,34 @@ exports[`EstimateCost - Regular Item > render with isDisabledOnOverlay 1`] = `
   color: #b5b7bd;
 }
 
-.emotion-54 {
-  width: 12.6rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-57 {
+.emotion-55 {
   width: 100%;
+  width: 12.6rem;
 }
 
-.emotion-57 #unit {
+.emotion-55 #unit {
   border: none;
   background: transparent;
 }
 
-.emotion-57 #unit:focus,
-.emotion-57 #unit:active {
+.emotion-55 #unit:focus,
+.emotion-55 #unit:active {
   box-shadow: none;
 }
 
-.emotion-59 {
+.emotion-57 {
   display: inherit;
 }
 
-.emotion-59[data-container-full-height="true"] {
+.emotion-57[data-container-full-height="true"] {
   height: 100%;
 }
 
-.emotion-59[data-container-full-width="true"] {
+.emotion-57[data-container-full-width="true"] {
   width: 100%;
 }
 
-.emotion-63 {
+.emotion-61 {
   display: grid;
   width: 100%;
   gap: 0.5rem;
@@ -14353,85 +14168,85 @@ exports[`EstimateCost - Regular Item > render with isDisabledOnOverlay 1`] = `
   width: 100%;
 }
 
-.emotion-63[data-size='small'] {
+.emotion-61[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-63[data-size='medium'] {
+.emotion-61[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-63[data-size='large'] {
+.emotion-61[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-63[data-state='neutral'] {
+.emotion-61[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.emotion-63[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-61[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-63[data-state='neutral']:not([data-disabled='true']):hover {
+.emotion-61[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-63[data-state='neutral']:not([data-disabled='true']):focus-visible {
+.emotion-61[data-state='neutral']:not([data-disabled='true']):focus-visible {
   outline: 5px auto Highlight;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-.emotion-63[data-state='neutral'][data-dropdownvisible='true'] {
+.emotion-61[data-state='neutral'][data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.emotion-63[data-state='success'] {
+.emotion-61[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.emotion-63[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-61[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #1b533f;
   box-shadow: 0px 0px 0px 3px #45d19f40;
 }
 
-.emotion-63[data-state='success'][data-dropdownvisible='true'] {
+.emotion-61[data-state='success'][data-dropdownvisible='true'] {
   border-color: #1b533f;
 }
 
-.emotion-63[data-state='danger'] {
+.emotion-61[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-63[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-61[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-63[data-state='danger'][data-dropdownvisible='true'] {
+.emotion-61[data-state='danger'][data-dropdownvisible='true'] {
   border-color: #92103f;
 }
 
-.emotion-63:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-61:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-63[data-readonly='true'] {
+.emotion-61[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-63[data-disabled='true'] {
+.emotion-61[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-66 {
+.emotion-64 {
   color: #3f4250;
   font-size: 0.875rem;
   font-family: Inter,sans-serif;
@@ -14449,7 +14264,7 @@ exports[`EstimateCost - Regular Item > render with isDisabledOnOverlay 1`] = `
   align-self: center;
 }
 
-.emotion-68 {
+.emotion-66 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -14477,7 +14292,7 @@ exports[`EstimateCost - Regular Item > render with isDisabledOnOverlay 1`] = `
   display: flex;
 }
 
-.emotion-70 {
+.emotion-68 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1rem;
@@ -14486,12 +14301,12 @@ exports[`EstimateCost - Regular Item > render with isDisabledOnOverlay 1`] = `
   min-height: 1rem;
 }
 
-.emotion-70 .fillStroke {
+.emotion-68 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
 
-.emotion-74 {
+.emotion-72 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -14499,7 +14314,7 @@ exports[`EstimateCost - Regular Item > render with isDisabledOnOverlay 1`] = `
   min-width: 230px;
 }
 
-.emotion-76 {
+.emotion-74 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -14520,11 +14335,11 @@ exports[`EstimateCost - Regular Item > render with isDisabledOnOverlay 1`] = `
   padding-bottom: 8px;
 }
 
-.emotion-84 {
+.emotion-82 {
   text-align: right;
 }
 
-.emotion-86 {
+.emotion-84 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -14539,7 +14354,7 @@ exports[`EstimateCost - Regular Item > render with isDisabledOnOverlay 1`] = `
   margin-right: 4px;
 }
 
-.emotion-88 {
+.emotion-86 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -14551,7 +14366,7 @@ exports[`EstimateCost - Regular Item > render with isDisabledOnOverlay 1`] = `
   min-width: 126px;
 }
 
-.emotion-91 {
+.emotion-89 {
   color: #727683;
   font-size: 1rem;
   font-family: Inter,sans-serif;
@@ -14564,18 +14379,18 @@ exports[`EstimateCost - Regular Item > render with isDisabledOnOverlay 1`] = `
   text-align: right;
 }
 
-.emotion-93 {
+.emotion-91 {
   margin: 0;
   width: 100%;
   border-right: 1px solid #d9dadd;
   border-radius: 0 0 0.25rem 0.25rem;
 }
 
-.emotion-97 {
+.emotion-95 {
   width: 70%;
 }
 
-.emotion-99 {
+.emotion-97 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -14592,7 +14407,7 @@ exports[`EstimateCost - Regular Item > render with isDisabledOnOverlay 1`] = `
   min-width: 126px;
 }
 
-.emotion-102 {
+.emotion-100 {
   color: #641cb3;
   font-size: 1.5625rem;
   font-family: Space Grotesk,sans-serif;
@@ -14742,7 +14557,6 @@ exports[`EstimateCost - Regular Item > render with isDisabledOnOverlay 1`] = `
                           class="emotion-52 emotion-53"
                           data-size="medium"
                           data-testid="unit-input"
-                          id="«r4c»"
                           max="9007199254740991"
                           min="1"
                           name="iteration-value"
@@ -14752,59 +14566,53 @@ exports[`EstimateCost - Regular Item > render with isDisabledOnOverlay 1`] = `
                           value="1"
                         />
                       </div>
-                       
                       <div
-                        class="emotion-54 emotion-55"
-                        width="12.6rem"
+                        aria-label="iteration-unit"
+                        class="emotion-54 emotion-55 emotion-56"
                       >
                         <div
-                          aria-label="iteration-unit"
-                          class="emotion-56 emotion-57 emotion-58"
+                          aria-controls="«r4e»"
+                          aria-describedby="«r4e»"
+                          class="emotion-57 emotion-58"
+                          data-container-full-width="true"
+                          tabindex="-1"
                         >
                           <div
-                            aria-controls="«r4e»"
-                            aria-describedby="«r4e»"
-                            class="emotion-59 emotion-60"
-                            data-container-full-width="true"
-                            tabindex="-1"
+                            class="emotion-46 emotion-1"
                           >
                             <div
-                              class="emotion-46 emotion-1"
+                              aria-expanded="false"
+                              aria-haspopup="listbox"
+                              class="emotion-61 emotion-62"
+                              data-disabled="false"
+                              data-dropdownvisible="false"
+                              data-readonly="false"
+                              data-size="medium"
+                              data-state="neutral"
+                              data-testid="select-input-iteration-unit"
+                              id="unit"
+                              role="combobox"
+                              tabindex="0"
                             >
                               <div
-                                aria-expanded="false"
-                                aria-haspopup="listbox"
-                                class="emotion-63 emotion-64"
-                                data-disabled="false"
-                                data-dropdownvisible="false"
-                                data-readonly="false"
-                                data-size="medium"
-                                data-state="neutral"
-                                data-testid="select-input-iteration-unit"
-                                id="unit"
-                                role="combobox"
-                                tabindex="0"
+                                class="emotion-63 emotion-64 emotion-15"
                               >
-                                <div
-                                  class="emotion-65 emotion-66 emotion-15"
+                                Hour(s)
+                              </div>
+                              <div
+                                class="emotion-66 emotion-67"
+                              >
+                                <svg
+                                  aria-label="show dropdown"
+                                  class="emotion-68 emotion-23"
+                                  viewBox="0 0 16 16"
                                 >
-                                  Hour(s)
-                                </div>
-                                <div
-                                  class="emotion-68 emotion-69"
-                                >
-                                  <svg
-                                    aria-label="show dropdown"
-                                    class="emotion-70 emotion-23"
-                                    viewBox="0 0 16 16"
-                                  >
-                                    <path
-                                      clip-rule="evenodd"
-                                      d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
-                                      fill-rule="evenodd"
-                                    />
-                                  </svg>
-                                </div>
+                                  <path
+                                    clip-rule="evenodd"
+                                    d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
+                                    fill-rule="evenodd"
+                                  />
+                                </svg>
                               </div>
                             </div>
                           </div>
@@ -14818,14 +14626,14 @@ exports[`EstimateCost - Regular Item > render with isDisabledOnOverlay 1`] = `
           </thead>
           <tbody>
             <tr
-              class="emotion-72 emotion-73"
+              class="emotion-70 emotion-71"
             >
               <td
-                class="emotion-74 emotion-251"
+                class="emotion-72 emotion-251"
                 width="70%"
               >
                 <div
-                  class="emotion-76 emotion-77"
+                  class="emotion-74 emotion-75"
                 >
                   <div
                     class="emotion-10 emotion-1"
@@ -14841,10 +14649,10 @@ exports[`EstimateCost - Regular Item > render with isDisabledOnOverlay 1`] = `
                     </div>
                   </div>
                   <div
-                    class="emotion-84 emotion-17"
+                    class="emotion-82 emotion-17"
                   >
                     <div
-                      class="emotion-86 emotion-28"
+                      class="emotion-84 emotion-28"
                     >
                       This is a regular Item
                     </div>
@@ -14852,10 +14660,10 @@ exports[`EstimateCost - Regular Item > render with isDisabledOnOverlay 1`] = `
                 </div>
               </td>
               <td
-                class="emotion-88 emotion-89"
+                class="emotion-86 emotion-87"
               >
                 <p
-                  class="emotion-90 emotion-91 emotion-15"
+                  class="emotion-88 emotion-89 emotion-15"
                 >
                   €0.00
                 </p>
@@ -14866,7 +14674,7 @@ exports[`EstimateCost - Regular Item > render with isDisabledOnOverlay 1`] = `
         <table
           cellpadding="0"
           cellspacing="0"
-          class="emotion-93 emotion-94"
+          class="emotion-91 emotion-92"
         >
           <colgroup>
             <col />
@@ -14878,13 +14686,13 @@ exports[`EstimateCost - Regular Item > render with isDisabledOnOverlay 1`] = `
             <tr>
               <td
                 aria-label="control"
-                class="emotion-97 emotion-98"
+                class="emotion-95 emotion-96"
               />
               <td
-                class="emotion-99 emotion-250"
+                class="emotion-97 emotion-250"
               >
                 <h3
-                  class="emotion-101 emotion-102 emotion-15"
+                  class="emotion-99 emotion-100 emotion-15"
                 >
                   <span
                     class="emotion-29 emotion-30"
