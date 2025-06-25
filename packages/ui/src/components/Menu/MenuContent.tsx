@@ -25,7 +25,7 @@ import { SearchInput } from '../SearchInput'
 import { Stack } from '../Stack'
 import { DisclosureContext, useMenu } from './MenuProvider'
 import { SIZES } from './constants'
-import { searchChildren } from './helpers'
+import { getListItem, searchChildren } from './helpers'
 import type { MenuProps } from './types'
 
 const StyledPopup = styled(Popup, {
@@ -67,7 +67,7 @@ const MenuList = styled(Stack, {
   overflow-y: auto;
   overflow-x: hidden;
   max-height: calc(${({ height }) => height} - ${({ theme }) =>
-  theme.space['0.5']});
+    theme.space['0.5']});
   &:after,
   &:before {
     border: solid transparent;
@@ -117,14 +117,13 @@ export const Menu = forwardRef(
     }: MenuProps,
     ref: Ref<HTMLButtonElement | null>,
   ) => {
-    const { isVisible, setIsVisible, isNested, itemsList } = useMenu()
+    const { isVisible, setIsVisible, isNested, disclosureRef, menuRef } =
+      useMenu()
     const searchInputRef = useRef<HTMLInputElement>(null)
     const [localChild, setLocalChild] = useState<ReactNode[] | null>(null)
-    const popupRef = useRef<HTMLDivElement>(null)
-    const disclosureRef = useRef<HTMLButtonElement>(null)
+    const contentRef = useRef<HTMLDivElement>(null)
     const tempId = useId()
     const finalId = `menu-${id ?? tempId}`
-
     // if you need dialog inside your component, use function, otherwise component is fine
     const target = isValidElement<ButtonHTMLAttributes<HTMLButtonElement>>(
       disclosure,
@@ -174,10 +173,41 @@ export const Menu = forwardRef(
       return children
     }, [children, isVisible, localChild, searchable, setIsVisible])
 
+    const handleTabOpen = (event: KeyboardEvent) => {
+      if (contentRef.current) {
+        const listItem = getListItem([...contentRef.current.children])
+        if (listItem && isVisible && ['Tab', 'ArrowDown'].includes(event.key)) {
+          event?.preventDefault()
+          listItem[0]?.focus()
+        }
+      }
+    }
+
     const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === 'Tab' && isVisible) {
-        event?.preventDefault()
-        itemsList[0]?.current.focus()
+      if (contentRef.current) {
+        const listItem = getListItem([...contentRef.current.children])
+        if (listItem) {
+          const currentElement = listItem.find(
+            item => item === document.activeElement,
+          )
+          if (currentElement) {
+            if (event.key === 'ArrowDown') {
+              event.preventDefault()
+              const indexOfCurrent = listItem.indexOf(currentElement)
+
+              if (indexOfCurrent < listItem.length - 1) {
+                listItem[indexOfCurrent + 1].focus()
+              } else listItem[0].focus()
+            } else if (event.key === 'ArrowUp') {
+              event.preventDefault()
+
+              const indexOfCurrent = listItem.indexOf(currentElement)
+              if (indexOfCurrent > 0) {
+                listItem[indexOfCurrent - 1].focus()
+              } else listItem[listItem.length - 1].focus()
+            }
+          }
+        }
       }
     }
 
@@ -193,7 +223,7 @@ export const Menu = forwardRef(
         data-has-arrow={hasArrow}
         role="dialog"
         id={finalId}
-        ref={popupRef}
+        ref={menuRef}
         onClose={() => {
           setIsVisible(false)
           setLocalChild(null)
@@ -209,8 +239,9 @@ export const Menu = forwardRef(
             className={className}
             role="menu"
             height={maxHeight ?? '30rem'}
+            onKeyDown={handleKeyDown}
           >
-            <Content>
+            <Content ref={contentRef}>
               {searchable && typeof children !== 'function' ? (
                 <StyledSearchInput
                   size="small"
@@ -226,7 +257,7 @@ export const Menu = forwardRef(
         portalTarget={portalTarget}
         dynamicDomRendering={dynamicDomRendering}
         align={align}
-        onKeyDown={handleKeyDown}
+        onKeyDown={handleTabOpen}
       >
         <DisclosureContext.Provider value>
           {finalDisclosure}
