@@ -4,16 +4,17 @@ import type { Theme } from '@emotion/react'
 import styled from '@emotion/styled'
 import { ArrowRightIcon } from '@ultraviolet/icons'
 import type {
+  KeyboardEvent,
   MouseEvent,
   MouseEventHandler,
   ReactNode,
   Ref,
-  RefObject,
 } from 'react'
-import { forwardRef, useCallback, useEffect, useRef } from 'react'
+import { forwardRef, useCallback } from 'react'
 import { Stack } from '../../Stack'
 import { Tooltip } from '../../Tooltip'
 import { useDisclosureContext, useMenu } from '../MenuProvider'
+import { getListItem } from '../helpers'
 
 type MenuItemSentiment = 'neutral' | 'primary' | 'danger'
 
@@ -151,11 +152,16 @@ const Item = forwardRef<HTMLElement, ItemProps>(
     },
     ref,
   ) => {
-    const { hideOnClickItem, setIsVisible, isVisible, itemsList } = useMenu()
+    const {
+      hideOnClickItem,
+      setIsVisible,
+      isVisible,
+      menuRef,
+      isNested,
+      parentDisclosureRef,
+      disclosureRef,
+    } = useMenu()
     const isDisclosure = useDisclosureContext()
-
-    const innerRef = useRef<HTMLButtonElement>(null)
-    const computedRef = ref ?? innerRef
 
     const onClickHandle = useCallback(
       (event: MouseEvent<HTMLAnchorElement>) => {
@@ -170,15 +176,46 @@ const Item = forwardRef<HTMLElement, ItemProps>(
       [disabled, hideOnClickItem, onClick, setIsVisible],
     )
 
-    useEffect(() => {
-      if (
-        typeof computedRef !== 'function' &&
-        computedRef.current &&
-        !itemsList.includes(computedRef as RefObject<HTMLButtonElement>)
+    const handleKeyDown = (
+      event: KeyboardEvent<HTMLButtonElement | HTMLAnchorElement>,
+    ) => {
+      if (isDisclosure && ['Enter', ' ', 'ArrowRight'].includes(event.key)) {
+        disclosureRef?.current?.click()
+        setTimeout(() => {
+          if (menuRef.current?.children) {
+            const listItem = getListItem([
+              ...menuRef.current.children[0].children[0].children,
+            ])
+            if (listItem) {
+              const firstElementInNestedMenu = listItem[0]
+              if (
+                firstElementInNestedMenu &&
+                ['BUTTON', 'A'].includes(firstElementInNestedMenu.tagName)
+              ) {
+                ;(firstElementInNestedMenu as HTMLElement).focus()
+              } else if (
+                firstElementInNestedMenu &&
+                firstElementInNestedMenu.firstChild instanceof HTMLElement
+              ) {
+                // Another nested menu
+                firstElementInNestedMenu.firstChild.focus()
+              }
+            }
+          }
+        }, 50)
+      } else if (
+        event.key === 'ArrowLeft' &&
+        isNested &&
+        ((isDisclosure &&
+          parentDisclosureRef?.current?.dataset['isMenuItem']) ||
+          !isDisclosure) &&
+        parentDisclosureRef?.current
       ) {
-        itemsList.push(computedRef as RefObject<HTMLButtonElement>)
+        // Focus the disclosure in the parent menu & close the nested menu
+        // When the item is a disclosure, we must click the parent disclosure (since disclosureRef is the Item itself)
+        ;(isDisclosure ? parentDisclosureRef : disclosureRef).current?.click()
       }
-    }, [computedRef, itemsList])
+    }
 
     if (href && !disabled) {
       return (
@@ -190,13 +227,16 @@ const Item = forwardRef<HTMLElement, ItemProps>(
               href={href}
               target={target}
               rel={rel}
-              ref={computedRef as Ref<HTMLAnchorElement>}
+              ref={ref as Ref<HTMLAnchorElement>}
               onClick={onClickHandle}
               role="menuitem"
               disabled={disabled}
               sentiment={sentiment}
               className={className}
               data-testid={dataTestId}
+              data-is-disclosure={isDisclosure}
+              data-is-menu-item
+              onKeyDown={handleKeyDown}
             >
               {isDisclosure ? (
                 <Stack
@@ -221,7 +261,7 @@ const Item = forwardRef<HTMLElement, ItemProps>(
         <Tooltip text={tooltip}>
           <StyledItem
             type="button"
-            ref={computedRef as Ref<HTMLButtonElement>}
+            ref={ref as Ref<HTMLButtonElement>}
             role="menuitem"
             disabled={disabled}
             onClick={event => {
@@ -235,6 +275,9 @@ const Item = forwardRef<HTMLElement, ItemProps>(
             className={className}
             data-testid={dataTestId}
             data-active={active || (isVisible && isDisclosure)}
+            data-is-disclosure={isDisclosure}
+            data-is-menu-item
+            onKeyDown={handleKeyDown}
           >
             {isDisclosure ? (
               <Stack
