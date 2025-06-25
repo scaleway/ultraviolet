@@ -1,10 +1,11 @@
-import { act, screen } from '@testing-library/react'
+import { screen } from '@testing-library/react'
+import { userEvent } from '@testing-library/user-event'
 import { renderWithForm } from '@utils/test'
 import { describe, expect, it } from 'vitest'
 import { KeyValueField } from '..'
 
 describe('KeyValueField', () => {
-  it('should render with default props', () => {
+  it('should render with default props', async () => {
     const { asFragment } = renderWithForm(
       <KeyValueField
         name="test"
@@ -23,14 +24,10 @@ describe('KeyValueField', () => {
       />,
     )
     const addButton = screen.getByTestId('add-button')
-    act(() => {
-      addButton.click()
-    })
+    await userEvent.click(addButton)
 
     const removeButton = screen.getByTestId('remove-button-0')
-    act(() => {
-      removeButton.click()
-    })
+    await userEvent.click(removeButton)
     expect(asFragment()).toMatchSnapshot()
   })
 

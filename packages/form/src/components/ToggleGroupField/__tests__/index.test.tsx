@@ -1,10 +1,11 @@
-import { act, screen } from '@testing-library/react'
+import { screen } from '@testing-library/react'
+import { userEvent } from '@testing-library/user-event'
 import { renderWithForm } from '@utils/test'
 import { describe, expect, test, vi } from 'vitest'
 import { ToggleGroupField } from '..'
 
 describe('GroupField', () => {
-  test('should render correctly checked', () => {
+  test('should render correctly checked', async () => {
     const { asFragment } = renderWithForm(
       <ToggleGroupField onChange={() => {}} name="Group" legend="Label">
         <ToggleGroupField.Toggle
@@ -27,14 +28,14 @@ describe('GroupField', () => {
     const [firstInput, secondInput] = screen.getAllByRole('checkbox', {
       hidden: true,
     })
-    act(() => secondInput.click())
+    await userEvent.click(secondInput)
 
     expect(firstInput).not.toBeChecked()
     expect(secondInput).toBeChecked()
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('should trigger events correctly with required prop', () => {
+  test('should trigger events correctly with required prop', async () => {
     const onChange = vi.fn(() => {})
 
     const { asFragment } = renderWithForm(
@@ -62,11 +63,11 @@ describe('GroupField', () => {
       },
     )
     const input = screen.getAllByRole('checkbox', { hidden: true })[0]
-    act(() => input.click())
+    await userEvent.click(input)
     expect(onChange).toBeCalledTimes(1)
     expect(input).toBeChecked()
 
-    act(() => input.click())
+    await userEvent.click(input)
     expect(onChange).toBeCalledTimes(2)
     expect(input).not.toBeChecked()
     expect(asFragment()).toMatchSnapshot()

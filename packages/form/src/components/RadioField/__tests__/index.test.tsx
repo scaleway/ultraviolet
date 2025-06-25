@@ -1,4 +1,5 @@
 import { act, screen } from '@testing-library/react'
+import { userEvent } from '@testing-library/user-event'
 import { renderWithForm } from '@utils/test'
 import { describe, expect, test, vi } from 'vitest'
 import { RadioField } from '..'
@@ -42,7 +43,7 @@ describe('RadioField', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('should trigger events correctly', () => {
+  test('should trigger events correctly', async () => {
     const onFocus = vi.fn(() => {})
     const onChange = vi.fn(() => {})
     const onBlur = vi.fn(() => {})
@@ -60,7 +61,7 @@ describe('RadioField', () => {
     const input = screen.getByRole('radio', { hidden: true })
     act(() => input.focus())
     expect(onFocus).toBeCalledTimes(1)
-    act(() => input.click())
+    await userEvent.click(input)
     expect(onChange).toBeCalledTimes(1)
     act(() => input.blur())
     expect(onBlur).toBeCalledTimes(1)
