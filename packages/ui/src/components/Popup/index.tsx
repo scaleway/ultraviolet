@@ -259,7 +259,6 @@ export const Popup = forwardRef(
       }
 
       return null
-      // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [portalTarget, role, childrenRef.current])
 
     // There are some issue when mixing animation and maxHeight on some browsers, so we disable animation if maxHeight is set.
@@ -430,15 +429,11 @@ export const Popup = forwardRef(
     ])
 
     // This will be triggered when positions are computed and popup is visible in the dom.
-    useEffect(
-      () => {
-        if (visibleInDom && innerPopupRef.current) {
-          innerPopupRef.current.style.opacity = '1'
-        }
-      },
-      // eslint-disable-next-line react-hooks/exhaustive-deps
-      [positions],
-    )
+    useEffect(() => {
+      if (visibleInDom && innerPopupRef.current) {
+        innerPopupRef.current.style.opacity = '1'
+      }
+    }, [positions])
 
     /**
      * If popup has `visible` prop it means the popup is manually controlled through this prop.

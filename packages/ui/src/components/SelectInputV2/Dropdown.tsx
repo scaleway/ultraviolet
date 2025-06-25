@@ -721,7 +721,6 @@ export const Dropdown = ({
         } else window.scrollBy({ top: overflow, behavior: 'smooth' })
       }
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isDropdownVisible, refSelect, size, ref.current])
 
   const resizeDropdown = useCallback(() => {

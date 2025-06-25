@@ -220,7 +220,6 @@ export const DateInput = <IsRange extends undefined | boolean>({
         end: endDate ?? computedRange.end,
       })
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [endDate, startDate, value])
 
   const manageOnChange = (event: ChangeEvent<HTMLInputElement>) => {

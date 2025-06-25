@@ -244,7 +244,6 @@ export const TimeInputV2 = ({
         setFilled({ h: true, m: true, s: true })
       }
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [value])
 
   const handleChangePeriod = (key: 'a' | 'p') => {
