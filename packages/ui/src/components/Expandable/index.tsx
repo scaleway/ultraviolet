@@ -69,6 +69,14 @@ export const AnimatedExpandable = ({
   const ref = useRef<HTMLDivElement>(null)
   const shouldBeAnimated = animationDuration > 0
 
+  // To avoid expanded animation on first render
+  const isFirstRender = useRef(true)
+
+  useEffect(() => {
+    setTimeout(() => {
+      if (isFirstRender.current) isFirstRender.current = false
+    }, 0)
+  }, [])
   /**
    * At mount, we set the height variable to the height of the content only if the component is closed.
    * This is to ensure we don't have animation when the component is opened at mount.
@@ -85,7 +93,10 @@ export const AnimatedExpandable = ({
    * Setting it to initial is required to be able to have nested expandable or the height won't follow.
    */
   useEffect(() => {
-    if (opened && ref.current && height) {
+    if (isFirstRender.current && !opened && ref.current) {
+      ref.current.style.maxHeight = `${minHeight ?? 0}px`
+      ref.current.style.overflow = 'hidden'
+    } else if (opened && ref.current && height) {
       ref.current.style.maxHeight = `${height}px`
       ref.current.style.visibility = ''
       transitionTimer.current = setTimeout(() => {
@@ -129,7 +140,7 @@ export const AnimatedExpandable = ({
       ref={ref}
       className={className}
       animationDuration={animationDuration}
-      data-is-animated={shouldBeAnimated}
+      data-is-animated={shouldBeAnimated && !isFirstRender.current}
     >
       {children}
     </StyledExpandable>
