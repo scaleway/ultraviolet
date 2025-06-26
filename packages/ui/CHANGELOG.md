@@ -1,5 +1,23 @@
 # Change Log
 
+## 2.0.0-beta.11
+
+### Patch Changes
+
+- [#5281](https://github.com/scaleway/ultraviolet/pull/5281) [`5870ea6`](https://github.com/scaleway/ultraviolet/commit/5870ea62864ba881ffc888a924bcf731387636ba) Thanks [@scaleway-bot](https://github.com/scaleway-bot)! - `StepList`: fix width
+
+- [#5281](https://github.com/scaleway/ultraviolet/pull/5281) [`b03ed1b`](https://github.com/scaleway/ultraviolet/commit/b03ed1b50e7807eb72f8ae392bcd34f42772ca02) Thanks [@scaleway-bot](https://github.com/scaleway-bot)! - Fix border on `<List />` component in Safari
+
+- [#5281](https://github.com/scaleway/ultraviolet/pull/5281) [`1275792`](https://github.com/scaleway/ultraviolet/commit/12757925af5c4fd08b857f165027b1cd6dee8b08) Thanks [@scaleway-bot](https://github.com/scaleway-bot)! - `<MenuV2 />: nested menus
+`<Popup />`: new position "nested-menu", that is right by default and left when there is no available space on the right of the element
+
+- [#5281](https://github.com/scaleway/ultraviolet/pull/5281) [`f41150e`](https://github.com/scaleway/ultraviolet/commit/f41150ebb2d97a95c074080f3db8fcd91c2b5d93) Thanks [@scaleway-bot](https://github.com/scaleway-bot)! - `Modal`: returns focus to disclosure element when closing the modal
+
+- [#5277](https://github.com/scaleway/ultraviolet/pull/5277) [`40d4066`](https://github.com/scaleway/ultraviolet/commit/40d40662d7305712b0ca23d08759b37590a677a0) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `next` to `15.3.4`.
+  Updated dependency `eslint-config-next` to `15.3.4`.
+
+- [#5287](https://github.com/scaleway/ultraviolet/pull/5287) [`80d5c50`](https://github.com/scaleway/ultraviolet/commit/80d5c50e294efdc5fe714a55ef985ff142c07b6e) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@scaleway/random-name` to `5.1.2`.
+
 ## 2.0.0-beta.10
 
 ### Major Changes
