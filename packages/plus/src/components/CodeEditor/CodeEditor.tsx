@@ -127,6 +127,7 @@ type CodeEditorProps = {
   'aria-label'?: string
   'data-testid'?: string
   className?: string
+  error?: string | ReactNode
 }
 
 export const CodeEditor = ({
@@ -143,6 +144,7 @@ export const CodeEditor = ({
   copyButton,
   id,
   helper,
+  error,
   labelDescription,
   'aria-label': ariaLabel,
   'data-testid': dataTestId,
@@ -188,6 +190,11 @@ export const CodeEditor = ({
         </StyledCopyButton>
       ) : null}
     </EditorContainer>
+    {error && typeof error !== 'boolean' ? (
+      <Text variant="caption" as="span" sentiment="danger">
+        {error}
+      </Text>
+    ) : null}
     {helper ? (
       <Text as="span" variant="caption" prominence="weak" sentiment="neutral">
         {helper}
