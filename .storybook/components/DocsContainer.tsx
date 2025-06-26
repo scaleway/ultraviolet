@@ -49,7 +49,7 @@ const DocsContainer = ({ children, context }: DocsContainerProps) => {
 
   if (
     import.meta.env['STORYBOOK_ENVIRONMENT'] === 'production' &&
-    !window.location.hostname.includes('beta.storybook.ultraviolet.scaleway.com')
+    window.location.hostname === 'storybook.ultraviolet.scaleway.com'
   ) {
     fetch('https://api.github.com/repos/scaleway/ultraviolet/branches/beta')
       .then((data) => {
