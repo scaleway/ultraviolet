@@ -298,37 +298,31 @@ export const NumberInput = forwardRef(
       [localRef, min, onChange],
     )
 
-    const isMinusDisabled = useMemo(
-      () => {
-        if (!localRef?.current?.value || localRef?.current?.value === '') {
-          return false
-        }
+    const isMinusDisabled = useMemo(() => {
+      if (!localRef?.current?.value || localRef?.current?.value === '') {
+        return false
+      }
 
-        const numericValue = Number(localRef?.current?.value)
-        if (Number.isNaN(numericValue)) return false
+      const numericValue = Number(localRef?.current?.value)
+      if (Number.isNaN(numericValue)) return false
 
-        const minValue = typeof min === 'number' ? min : Number(min)
+      const minValue = typeof min === 'number' ? min : Number(min)
 
-        return Number.isNaN(numericValue) || numericValue <= minValue
-      }, // eslint-disable-next-line react-hooks/exhaustive-deps
-      [localRef?.current?.value, min],
-    )
+      return Number.isNaN(numericValue) || numericValue <= minValue
+    }, [localRef?.current?.value, min])
 
-    const isPlusDisabled = useMemo(
-      () => {
-        if (!localRef?.current?.value || localRef?.current?.value === '') {
-          return false
-        }
+    const isPlusDisabled = useMemo(() => {
+      if (!localRef?.current?.value || localRef?.current?.value === '') {
+        return false
+      }
 
-        const numericValue = Number(localRef?.current?.value)
-        if (Number.isNaN(numericValue)) return false
+      const numericValue = Number(localRef?.current?.value)
+      if (Number.isNaN(numericValue)) return false
 
-        const maxValue = typeof max === 'number' ? max : Number(max)
+      const maxValue = typeof max === 'number' ? max : Number(max)
 
-        return numericValue >= maxValue
-      }, // eslint-disable-next-line react-hooks/exhaustive-deps
-      [localRef?.current?.value, max],
-    )
+      return numericValue >= maxValue
+    }, [localRef?.current?.value, max])
 
     const helperSentiment = useMemo(() => {
       if (error) {
