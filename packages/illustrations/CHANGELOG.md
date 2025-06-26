@@ -1,5 +1,11 @@
 # @ultraviolet/illustrations
 
+## 5.0.0-beta.3
+
+### Patch Changes
+
+- [#5281](https://github.com/scaleway/ultraviolet/pull/5281) [`9dcb50a`](https://github.com/scaleway/ultraviolet/commit/9dcb50a472c3e770075b62ddc52329fae9e76c65) Thanks [@scaleway-bot](https://github.com/scaleway-bot)! - Fix `<WireIllustration />` component to remove the theme from dom
+
 ## 5.0.0-beta.2
 
 ### Minor Changes
