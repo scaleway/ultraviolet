@@ -1,5 +1,26 @@
 # @ultraviolet/plus
 
+## 1.0.0-beta.11
+
+### Minor Changes
+
+- [#5281](https://github.com/scaleway/ultraviolet/pull/5281) [`631550b`](https://github.com/scaleway/ultraviolet/commit/631550bc8c76d37ec28d31d1207389748030470e) Thanks [@scaleway-bot](https://github.com/scaleway-bot)! - New component `OrderSummary`
+
+### Patch Changes
+
+- [#5281](https://github.com/scaleway/ultraviolet/pull/5281) [`c84f04c`](https://github.com/scaleway/ultraviolet/commit/c84f04c3c7d3685a3e956cc14a3357efaa909088) Thanks [@scaleway-bot](https://github.com/scaleway-bot)! - New component `InfoTable`
+
+- [#5281](https://github.com/scaleway/ultraviolet/pull/5281) [`9097041`](https://github.com/scaleway/ultraviolet/commit/909704133bb67e42bf118b8845ed900b35be0a3e) Thanks [@scaleway-bot](https://github.com/scaleway-bot)! - `EstimateCost`: add `z-index` to overlay
+
+- [#5242](https://github.com/scaleway/ultraviolet/pull/5242) [`1ff37f7`](https://github.com/scaleway/ultraviolet/commit/1ff37f7e70e92db710bd2194b87b01218ae7abb1) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@uiw/codemirror-extensions-langs` to `4.23.13`.
+  Updated dependency `@uiw/codemirror-theme-material` to `4.23.13`.
+  Updated dependency `@uiw/react-codemirror` to `4.23.13`.
+
+- [`f762e28`](https://github.com/scaleway/ultraviolet/commit/f762e28d09a0e2297903d8eef760cd9f53d8ae89) Thanks [@lisalupi](https://github.com/lisalupi)! - `Navigation`: isActive should work when the Item is wrapped in a Link/NavLink (React rooter)
+
+- Updated dependencies [[`5870ea6`](https://github.com/scaleway/ultraviolet/commit/5870ea62864ba881ffc888a924bcf731387636ba), [`b03ed1b`](https://github.com/scaleway/ultraviolet/commit/b03ed1b50e7807eb72f8ae392bcd34f42772ca02), [`1275792`](https://github.com/scaleway/ultraviolet/commit/12757925af5c4fd08b857f165027b1cd6dee8b08), [`f41150e`](https://github.com/scaleway/ultraviolet/commit/f41150ebb2d97a95c074080f3db8fcd91c2b5d93), [`40d4066`](https://github.com/scaleway/ultraviolet/commit/40d40662d7305712b0ca23d08759b37590a677a0), [`80d5c50`](https://github.com/scaleway/ultraviolet/commit/80d5c50e294efdc5fe714a55ef985ff142c07b6e)]:
+  - @ultraviolet/ui@2.0.0-beta.11
+
 ## 1.0.0-beta.10
 
 ### Patch Changes
