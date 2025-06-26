@@ -5,9 +5,10 @@ import {
   Unstyled,
 } from '@storybook/blocks'
 import { consoleLightTheme as lightTheme } from '@ultraviolet/themes'
-import { ReactNode, cloneElement, isValidElement } from 'react'
+import { ReactNode, cloneElement, isValidElement, useState } from 'react'
 import { globalStyles } from './globalStyle'
 import '@ultraviolet/fonts/fonts.css'
+import { GlobalAlert } from '@ultraviolet/ui'
 
 type ExtraProps = {
   /**
@@ -34,20 +35,44 @@ type ExtraProps = {
 
 type DocsContainerProps = BaseContainerProps & {
   context?: {
-    // biome-ignore lint/suspicious/noExplicitAny: <explanation>
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     attachedCSFFiles: Set<any>
   }
 } & { children: ReactNode }
 
 const DocsContainer = ({ children, context }: DocsContainerProps) => {
+  const [isBeta, setIsBeta] = useState(false)
   const scope = context?.attachedCSFFiles?.values()?.next()?.value?.meta
   const parameters = scope?.parameters
 
   const isPlusLibrary = scope?.title?.includes('Plus/') ?? false
 
+  if (
+    import.meta.env['STORYBOOK_ENVIRONMENT'] === 'production' &&
+    !window.location.hostname.includes('beta.storybook.ultraviolet.scaleway.com')
+  ) {
+    fetch('https://api.github.com/repos/scaleway/ultraviolet/branches/beta')
+      .then((data) => {
+        if (data.ok) {
+          setIsBeta(true)
+        }
+      })
+      .catch(() => {
+        setIsBeta(false)
+      })
+  }
+
   return (
     <Unstyled>
       <ThemeProvider theme={lightTheme}>
+        {isBeta ?
+        <GlobalAlert
+          buttonText="Access to Beta"
+          onClickButton={() => window.top?.location.assign('https://beta.storybook.ultraviolet.scaleway.com')}
+          closable={false}
+        >
+          A Beta version is available. Please use this version if your dependencies include the Beta release.
+        </GlobalAlert> : null}
         <Global styles={[globalStyles]} />
         <BaseContainer context={context}>
           {isValidElement<ExtraProps>(children)
