@@ -93,7 +93,8 @@ const StyledContainer = styled('div')<StyledContainerType>`
   align-items: center;
   width: ${({ size, theme }) => theme.sizing[SIZES[size]]};
   height: ${({ size, theme }) => theme.sizing[SIZES[size]]};
-  font-size: ${({ size, theme }) => theme.typography[TEXT_VARIANT[size]].fontSize};
+  font-size: ${({ size, theme }) =>
+    theme.typography[TEXT_VARIANT[size]].fontSize};
   ${({ theme, prominence, sentiment }) =>
     (sentimentStyles({ theme, prominence }) as Record<BulletSentiment, string>)[
       sentiment
@@ -109,8 +110,6 @@ type BulletProps = {
   'data-testid'?: string
   prominence?: ProminenceType
   children?: ReactNode
-  /** @deprecated Use children instead */
-  text?: string
 }
 
 /**
@@ -120,7 +119,6 @@ export const Bullet = ({
   className,
   sentiment = 'neutral',
   size = 'medium',
-  text,
   tooltip,
   tooltipBaseId,
   'data-testid': dataTestId,
@@ -135,7 +133,6 @@ export const Bullet = ({
       data-testid={dataTestId}
       prominence={prominence}
     >
-      {text}
       {children}
     </StyledContainer>
   </Tooltip>

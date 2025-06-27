@@ -20,7 +20,7 @@ describe.skip('CodeEditor', () => {
       />,
     ))
 
-  it('should render correctly with title', () =>
+  it('should render correctly with label', () =>
     shouldMatchEmotionSnapshot(
       <CodeEditor
         value="configuration: 1/ntest: 'ok'"
@@ -28,7 +28,7 @@ describe.skip('CodeEditor', () => {
         height="600px"
         onChange={newValue => newValue}
         helper="Helper text"
-        title="title"
+        label="title"
       />,
     ))
 
