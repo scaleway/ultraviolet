@@ -233,6 +233,46 @@ describe('Menu', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
+  test('can navigate with arrow keys', async () => {
+    const { asFragment } = renderWithTheme(
+      <Menu disclosure={() => disclosure} searchable>
+        <Menu.Item data-testid="item" borderless>
+          Power on
+        </Menu.Item>
+        <Menu
+          disclosure={
+            <Menu.Item data-testid="nested-menu">SubMenu click</Menu.Item>
+          }
+          placement="right"
+          triggerMethod="click"
+        >
+          <Menu.Item data-testid="nested-item">hi!</Menu.Item>
+        </Menu>
+      </Menu>,
+    )
+
+    const menuButton = screen.getByRole<HTMLButtonElement>('button')
+    // Open Menu
+    await userEvent.click(menuButton)
+    const dialog = screen.getByRole('dialog')
+
+    await waitFor(() => {
+      expect(dialog).toBeVisible()
+    })
+
+    const nestedElement = screen.getByTestId('nested-menu')
+    await userEvent.keyboard('[ArrowDown][ArrowDown]')
+    expect(nestedElement).toHaveFocus()
+    await userEvent.keyboard('[ArrowUp][ArrowUp]')
+    expect(nestedElement).toHaveFocus()
+    await userEvent.keyboard('[ArrowRight]')
+
+    const nestedMenu = screen.getByTestId('nested-item')
+    expect(nestedMenu).toBeVisible()
+    await userEvent.keyboard('[ArrowLeft]')
+    expect(asFragment()).toMatchSnapshot()
+  })
+
   describe('placement', () => {
     test('renders top', () =>
       shouldMatchEmotionSnapshot(
