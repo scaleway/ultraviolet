@@ -21,7 +21,7 @@ export const LabelDescription: StoryFn = (
       label="Advanced Label"
       labelDescription={
         <Tooltip text="Tooltip message">
-          <AlertCircleOutlineIcon color="neutral" />
+          <AlertCircleOutlineIcon sentiment="neutral" />
         </Tooltip>
       }
       required
