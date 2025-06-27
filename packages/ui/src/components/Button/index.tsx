@@ -115,43 +115,21 @@ const StyledFilledButton = styled('button', {
       ? theme.colors[sentiment].backgroundStrong
       : theme.colors.other.monochrome[sentiment].background};
   border: none;
-  color: ${({ theme, sentiment }) =>
-    !isMonochrome(sentiment)
-      ? theme.colors[sentiment].textStrong
-      : theme.colors.other.monochrome[sentiment === 'white' ? 'black' : 'white']
-          .text};
+  color: ${({ theme, sentiment }) => (!isMonochrome(sentiment) ? theme.colors[sentiment].textStrong : theme.colors.other.monochrome[sentiment === 'white' ? 'black' : 'white'].text)};
 
   ${({ theme, sentiment, disabled }) =>
     disabled
       ? `
-            background: ${
-              !isMonochrome(sentiment)
-                ? theme.colors[sentiment].backgroundStrongDisabled
-                : theme.colors.other.monochrome[sentiment].backgroundDisabled
-            };
+            background: ${!isMonochrome(sentiment) ? theme.colors[sentiment].backgroundStrongDisabled : theme.colors.other.monochrome[sentiment].backgroundDisabled};
             color:
-              ${
-                !isMonochrome(sentiment)
-                  ? theme.colors[sentiment].textStrongDisabled
-                  : theme.colors.other.monochrome[sentiment].textDisabled
-              };
+              ${!isMonochrome(sentiment) ? theme.colors[sentiment].textStrongDisabled : theme.colors.other.monochrome[sentiment].textDisabled};
         `
       : `
             &:hover, &:active
             {
-                background: ${
-                  !isMonochrome(sentiment)
-                    ? theme.colors[sentiment].backgroundStrongHover
-                    : theme.colors.other.monochrome[sentiment].backgroundHover
-                };
+                background: ${!isMonochrome(sentiment) ? theme.colors[sentiment].backgroundStrongHover : theme.colors.other.monochrome[sentiment].backgroundHover};
                 color:
-                ${
-                  !isMonochrome(sentiment)
-                    ? theme.colors[sentiment].textStrongHover
-                    : theme.colors.other.monochrome[
-                        sentiment === 'white' ? 'black' : 'white'
-                      ].textHover
-                };
+                ${!isMonochrome(sentiment) ? theme.colors[sentiment].textStrongHover : theme.colors.other.monochrome[sentiment === 'white' ? 'black' : 'white'].textHover};
             }
   `}
 `
@@ -173,20 +151,13 @@ const StyledOutlinedButton = styled('button', {
             sentiment === 'neutral' ? 'borderStrong' : 'border'
           ]
         : theme.colors.other.monochrome[sentiment].border};
-  color: ${({ theme, sentiment }) =>
-    !isMonochrome(sentiment)
-      ? theme.colors[sentiment].text
-      : theme.colors.other.monochrome[sentiment].text};
+  color: ${({ theme, sentiment }) => (!isMonochrome(sentiment) ? theme.colors[sentiment].text : theme.colors.other.monochrome[sentiment].text)};
 
   ${({ theme, sentiment, disabled }) =>
     disabled
       ? `
         color:
-          ${
-            !isMonochrome(sentiment)
-              ? theme.colors[sentiment].textDisabled
-              : theme.colors.other.monochrome[sentiment].textDisabled
-          };
+          ${!isMonochrome(sentiment) ? theme.colors[sentiment].textDisabled : theme.colors.other.monochrome[sentiment].textDisabled};
         border: 1px solid ${
           !isMonochrome(sentiment)
             ? theme.colors[sentiment][
@@ -201,19 +172,9 @@ const StyledOutlinedButton = styled('button', {
       : `
         &:hover, &:active
        {
-            background: ${
-              !isMonochrome(sentiment)
-                ? theme.colors[sentiment].backgroundHover
-                : theme.colors.other.monochrome[sentiment].backgroundHover
-            };
+            background: ${!isMonochrome(sentiment) ? theme.colors[sentiment].backgroundHover : theme.colors.other.monochrome[sentiment].backgroundHover};
             color:
-            ${
-              !isMonochrome(sentiment)
-                ? theme.colors[sentiment].textHover
-                : theme.colors.other.monochrome[
-                    sentiment === 'white' ? 'black' : 'white'
-                  ].textHover
-            };
+            ${!isMonochrome(sentiment) ? theme.colors[sentiment].textHover : theme.colors.other.monochrome[sentiment === 'white' ? 'black' : 'white'].textHover};
             border: 1px solid ${
               !isMonochrome(sentiment)
                 ? theme.colors[sentiment][
@@ -239,37 +200,20 @@ const StyledGhostButton = styled('button', {
 
   background: none;
   border: none;
-  color: ${({ theme, sentiment }) =>
-    !isMonochrome(sentiment)
-      ? theme.colors[sentiment].text
-      : theme.colors.other.monochrome[sentiment].text};
+  color: ${({ theme, sentiment }) => (!isMonochrome(sentiment) ? theme.colors[sentiment].text : theme.colors.other.monochrome[sentiment].text)};
 
   ${({ theme, sentiment, disabled }) =>
     disabled
       ? `
         color:
-          ${
-            !isMonochrome(sentiment)
-              ? theme.colors[sentiment].textDisabled
-              : theme.colors.other.monochrome[sentiment].textDisabled
-          };
+          ${!isMonochrome(sentiment) ? theme.colors[sentiment].textDisabled : theme.colors.other.monochrome[sentiment].textDisabled};
       `
       : `
         &:hover, &:active
         {
-            background: ${
-              !isMonochrome(sentiment)
-                ? theme.colors[sentiment].backgroundHover
-                : theme.colors.other.monochrome[sentiment].backgroundHover
-            };
+            background: ${!isMonochrome(sentiment) ? theme.colors[sentiment].backgroundHover : theme.colors.other.monochrome[sentiment].backgroundHover};
             color:
-              ${
-                !isMonochrome(sentiment)
-                  ? theme.colors[sentiment].textHover
-                  : theme.colors.other.monochrome[
-                      sentiment === 'white' ? 'black' : 'white'
-                    ].textHover
-              };
+              ${!isMonochrome(sentiment) ? theme.colors[sentiment].textHover : theme.colors.other.monochrome[sentiment === 'white' ? 'black' : 'white'].textHover};
         }
 `}
 `
