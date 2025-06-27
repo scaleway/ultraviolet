@@ -1,4 +1,5 @@
-import { act, screen } from '@testing-library/react'
+import { screen } from '@testing-library/react'
+import { userEvent } from '@testing-library/user-event'
 import { renderWithForm } from '@utils/test'
 import { describe, expect, test, vi } from 'vitest'
 import { SelectableCardGroupField } from '../..'
@@ -61,7 +62,7 @@ describe('SelectableCardField', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('should trigger events correctly', () => {
+  test('should trigger events correctly', async () => {
     const onChange = vi.fn(() => {})
 
     const { asFragment } = renderWithForm(
@@ -77,9 +78,9 @@ describe('SelectableCardField', () => {
       </SelectableCardGroupField>,
     )
     const input = screen.getByLabelText('Radio 1')
-    act(() => input.click())
+    await userEvent.click(input)
     expect(onChange).toBeCalledTimes(1)
-    act(() => input.click())
+    await userEvent.click(input)
     expect(onChange).toBeCalledTimes(2)
     expect(asFragment()).toMatchSnapshot()
   })

@@ -1,4 +1,5 @@
 import { act, fireEvent, screen, waitFor } from '@testing-library/react'
+import { userEvent } from '@testing-library/user-event'
 import { renderWithForm } from '@utils/test'
 import { describe, expect, test, vi } from 'vitest'
 import { TimeField } from '..'
@@ -21,7 +22,7 @@ describe('TimeField', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('should trigger events', () => {
+  test('should trigger events', async () => {
     const onChange = vi.fn()
 
     const { asFragment } = renderWithForm(
@@ -40,7 +41,7 @@ describe('TimeField', () => {
     const option =
       // eslint-disable-next-line testing-library/no-node-access
       screen.getByTestId('option-test-01:00').firstChild as HTMLElement
-    act(() => option.click())
+    await userEvent.click(option)
     expect(onChange).toBeCalledTimes(1)
     act(() => select.blur())
     expect(asFragment()).toMatchSnapshot()

@@ -1,10 +1,11 @@
-import { act, screen } from '@testing-library/react'
+import { screen } from '@testing-library/react'
+import { userEvent } from '@testing-library/user-event'
 import { renderWithForm } from '@utils/test'
 import { describe, expect, test, vi } from 'vitest'
 import { RadioGroupField } from '..'
 
 describe('RadioField', () => {
-  test('should render correctly checked', () => {
+  test('should render correctly checked', async () => {
     const { asFragment } = renderWithForm(
       <RadioGroupField
         value="value-1"
@@ -19,7 +20,7 @@ describe('RadioField', () => {
     const [firstInput, secondInput] = screen.getAllByRole('radio', {
       hidden: true,
     })
-    act(() => secondInput.click())
+    await userEvent.click(secondInput)
 
     expect(firstInput).not.toBeChecked()
     expect(secondInput).toBeChecked()
@@ -27,7 +28,7 @@ describe('RadioField', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('should trigger events correctly', () => {
+  test('should trigger events correctly', async () => {
     const onChange = vi.fn(() => {})
 
     const { asFragment } = renderWithForm(
@@ -42,7 +43,7 @@ describe('RadioField', () => {
       </RadioGroupField>,
     )
     const input = screen.getAllByRole('radio', { hidden: true })[0]
-    act(() => input.click())
+    await userEvent.click(input)
     expect(onChange).toBeCalledTimes(1)
     expect(asFragment()).toMatchSnapshot()
   })

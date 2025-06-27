@@ -1,10 +1,11 @@
-import { act, screen } from '@testing-library/react'
+import { screen } from '@testing-library/react'
+import { userEvent } from '@testing-library/user-event'
 import { renderWithForm } from '@utils/test'
 import { describe, expect, test, vi } from 'vitest'
 import { CheckboxGroupField } from '..'
 
 describe('CheckboxField', () => {
-  test('should render correctly checked', () => {
+  test('should render correctly checked', async () => {
     const { asFragment } = renderWithForm(
       <CheckboxGroupField onChange={() => {}} name="Checkbox" legend="Label">
         <CheckboxGroupField.Checkbox name="value-1" value="value-1">
@@ -26,14 +27,14 @@ describe('CheckboxField', () => {
         hidden: true,
       },
     )
-    act(() => secondInput.click())
+    await userEvent.click(secondInput)
 
     expect(firstInput).not.toBeChecked()
     expect(secondInput).toBeChecked()
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('should trigger events correctly with required prop', () => {
+  test('should trigger events correctly with required prop', async () => {
     const onChange = vi.fn(() => {})
 
     const { asFragment } = renderWithForm(
@@ -57,11 +58,11 @@ describe('CheckboxField', () => {
       },
     )
     const input = screen.getAllByRole('checkbox', { hidden: true })[0]
-    act(() => input.click())
+    await userEvent.click(input)
     expect(onChange).toBeCalledTimes(1)
     expect(input).toBeChecked()
 
-    act(() => input.click())
+    await userEvent.click(input)
     expect(onChange).toBeCalledTimes(2)
     expect(input).not.toBeChecked()
 
