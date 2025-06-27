@@ -255,6 +255,10 @@ type CommonProps = {
   'aria-controls'?: string
   'aria-expanded'?: boolean
   'aria-haspopup'?: boolean
+  'aria-describedby'?: string
+  'aria-disabled'?: boolean
+  'aria-pressed'?: boolean
+  'aria-roledescription'?: string
   onClick?: MouseEventHandler<HTMLElement>
   tooltip?: string
   tabIndex?: ButtonHTMLAttributes<HTMLButtonElement>['tabIndex']
@@ -263,6 +267,8 @@ type CommonProps = {
   onMouseOut?: MouseEventHandler<HTMLElement>
   onMouseEnter?: MouseEventHandler<HTMLElement>
   onMouseLeave?: MouseEventHandler<HTMLElement>
+  onPointerDown?: ButtonHTMLAttributes<HTMLButtonElement>['onPointerDown']
+  onKeyDown?: ButtonHTMLAttributes<HTMLButtonElement>['onKeyDown']
 }
 
 type FinalProps = CommonProps & {
@@ -296,12 +302,18 @@ export const Button = forwardRef<Element, FinalProps>(
       onMouseOut,
       onMouseEnter,
       onMouseLeave,
+      onPointerDown,
+      onKeyDown,
       name,
       'aria-label': ariaLabel,
       'aria-current': ariaCurrent,
       'aria-controls': ariaControls,
       'aria-expanded': ariaExpanded,
       'aria-haspopup': ariaHaspopup,
+      'aria-describedby': ariaDescribedby,
+      'aria-disabled': ariaDisabled,
+      'aria-pressed': ariaPressed,
+      'aria-roledescription': ariaRoledescription,
       href,
       download,
       target,
@@ -354,6 +366,10 @@ export const Button = forwardRef<Element, FinalProps>(
             aria-controls={ariaControls}
             aria-expanded={ariaExpanded}
             aria-haspopup={ariaHaspopup}
+            aria-disabled={ariaDisabled ?? disabled}
+            aria-describedby={ariaDescribedby}
+            aria-pressed={ariaPressed}
+            aria-roledescription={ariaRoledescription}
             href={href}
             target={target}
             download={download}
@@ -400,6 +416,8 @@ export const Button = forwardRef<Element, FinalProps>(
           onMouseOut={onMouseOut}
           onMouseEnter={onMouseEnter}
           onMouseLeave={onMouseLeave}
+          onPointerDown={onPointerDown}
+          onKeyDown={onKeyDown}
         >
           {content}
         </Component>
