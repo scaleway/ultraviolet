@@ -20,7 +20,7 @@ export const NestedExpandable: StoryFn<typeof Expandable> = args => {
       </Button>
       <Expandable opened={toggled}>
         <Button onClick={toggleNested}>
-          {toggled ? <MinusIcon /> : <PlusIcon />}
+          {toggledNested ? <MinusIcon /> : <PlusIcon />}
           Click me to {toggledNested ? 'hide' : 'show'} content
         </Button>
         <Expandable {...args} opened={toggledNested}>
