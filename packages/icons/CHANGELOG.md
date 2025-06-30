@@ -1,5 +1,11 @@
 # Change Log
 
+## 4.0.0-beta.6
+
+### Patch Changes
+
+- [#5291](https://github.com/scaleway/ultraviolet/pull/5291) [`a2ac9c4`](https://github.com/scaleway/ultraviolet/commit/a2ac9c492f673c5395dabfd6d97fd3051e58d6ec) Thanks [@lisalupi](https://github.com/lisalupi)! - New category icons: `BusinessDetails`, `InteractiveDemos`, `KeyManager`, `OrganizationNotifications`, `Organization`, `Privacy`, `Profile` and `ProfileNotifications`
+
 ## 4.0.0-beta.5
 
 ### Patch Changes
