@@ -1,11 +1,11 @@
 import type { Meta } from '@storybook/react'
 import { Snippet, Stack, Text } from '@ultraviolet/ui'
-import { DateField, Form } from '../..'
+import { DateInputField, Form } from '../..'
 import { useForm } from '../../..'
 import { mockErrors } from '../../../mocks'
 
 export default {
-  component: DateField,
+  component: DateInputField,
   decorators: [
     ChildStory => {
       const methods = useForm({
@@ -70,11 +70,11 @@ export default {
     docs: {
       description: {
         component:
-          'DateField is a component used in Form to pick a date. This component is a Wrapper of DateInput https://github.com/scaleway/ultraviolet/tree/main/src/components/DateInput',
+          'DateInputField is a component used in Form to pick a date. This component is a Wrapper of DateInput https://github.com/scaleway/ultraviolet/tree/main/src/components/DateInput',
       },
     },
   },
-  title: 'Form/Components/Fields/DateField',
+  title: 'Form/Components/Fields/DateInputField',
 } as Meta
 
 export { Playground } from './Playground.stories'
