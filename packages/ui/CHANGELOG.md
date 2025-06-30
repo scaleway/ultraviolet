@@ -1,5 +1,16 @@
 # Change Log
 
+## 2.0.0-beta.12
+
+### Patch Changes
+
+- [#5290](https://github.com/scaleway/ultraviolet/pull/5290) [`52e9bf4`](https://github.com/scaleway/ultraviolet/commit/52e9bf49d5c17e0e64bf88eaf12e5815eb304e94) Thanks [@lisalupi](https://github.com/lisalupi)! - `List` and `Table`: fix info icon style
+
+- [#5304](https://github.com/scaleway/ultraviolet/pull/5304) [`a0398de`](https://github.com/scaleway/ultraviolet/commit/a0398debe9d06372fb8888755673fec10ee93f34) Thanks [@lisalupi](https://github.com/lisalupi)! - `UnitInput`: fix id of input
+
+- Updated dependencies [[`a2ac9c4`](https://github.com/scaleway/ultraviolet/commit/a2ac9c492f673c5395dabfd6d97fd3051e58d6ec)]:
+  - @ultraviolet/icons@4.0.0-beta.6
+
 ## 2.0.0-beta.11
 
 ### Patch Changes
@@ -332,7 +343,7 @@
 - Updated dependencies [[`37a7d63`](https://github.com/scaleway/ultraviolet/commit/37a7d632cd1e61d7615e5356fc179ec08f3bec09), [`a928589`](https://github.com/scaleway/ultraviolet/commit/a9285896d638e34eba9bb25c55c38de2aef4e210), [`865c160`](https://github.com/scaleway/ultraviolet/commit/865c160aee2db5bd5e7b357e9693a45a17ef4284)]:
   - @ultraviolet/themes@2.0.0-beta.0
   - @ultraviolet/icons@4.0.0-beta.0
->>>>>>> 96a6d7431 (chore: release (beta) (#5111))
+    > > > > > > > 96a6d7431 (chore: release (beta) (#5111))
 
 ## 1.95.11
 
