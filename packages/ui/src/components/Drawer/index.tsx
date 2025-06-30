@@ -63,6 +63,8 @@ const CustomStack = styled(Stack)`
 const ChildrenContainer = styled.div`
   overflow-y: auto;
   height: 100%;
+`
+export const DrawerContent = styled.div`
   padding-inline: ${({ theme }) => theme.space[2]};
 `
 
@@ -97,12 +99,10 @@ type DrawerProps = Pick<
    */
   footer?: ModalProps['children']
   separator?: boolean
+  noPadding?: boolean
 }
 
-/**
- * A Drawer is a secondary content component that sits off-screen until triggered by the user.
- */
-export const Drawer = ({
+export const BaseDrawer = ({
   size = 'medium',
   onClose,
   open = false,
@@ -118,6 +118,7 @@ export const Drawer = ({
   id,
   isClosable,
   separator = true,
+  noPadding = false,
 }: DrawerProps) => {
   const computeHeader = (modalProps: ModalState) => {
     if (typeof header === 'string') {
@@ -165,18 +166,27 @@ export const Drawer = ({
       backdropClassName="backdrop-drawer"
       isClosable={isClosable}
     >
-      {modalProps => (
-        <CustomStack gap={2}>
-          {computeHeader(modalProps)}
-          {separator ? <Separator /> : null}
-          <ChildrenContainer>
-            {typeof children === 'function' ? children(modalProps) : children}
-          </ChildrenContainer>
-          <Footer>
-            {typeof footer === 'function' ? footer(modalProps) : footer}
-          </Footer>
-        </CustomStack>
-      )}
+      {modalProps => {
+        const content =
+          typeof children === 'function' ? children(modalProps) : children
+
+        return (
+          <CustomStack gap={2}>
+            {computeHeader(modalProps)}
+            {separator ? <Separator /> : null}
+            <ChildrenContainer>
+              {noPadding ? content : <DrawerContent>{content}</DrawerContent>}
+            </ChildrenContainer>
+            <Footer>
+              {typeof footer === 'function' ? footer(modalProps) : footer}
+            </Footer>
+          </CustomStack>
+        )
+      }}
     </StyledModal>
   )
 }
+
+export const Drawer = Object.assign(BaseDrawer, {
+  Content: DrawerContent,
+})
