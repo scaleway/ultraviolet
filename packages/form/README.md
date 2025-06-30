@@ -34,7 +34,7 @@ const INITIAL_VALUES: FormValues = {
 } as const
 
 export default function App() {
-  const methods = useForm({
+  const methods = useForm<FormValues>({
     defaultValues: INITIAL_VALUES,
     mode: 'onChange',
   })
@@ -66,6 +66,7 @@ export default function App() {
 ###  `useWatch` Hook
 
 You can use the `useWatch` hook from `@ultraviolet/form` to watch specific fields in your form thus subscribing to their changes.
+It can be useful for displaying real-time updates or triggering actions based on field values.
 
 ```tsx
 // FirstNameWatched is a component that needs to watch the firstName field
@@ -94,7 +95,66 @@ export default function App() {
 }
 ```
 
-### Zod Validation
+### Form Validation
+
+You can validate each fields passing either `regex` or `validate` to any field that support it. Not all field supports `regex` for instance but all fields support `validate`.
+In addition many field support `required`, `minLength`, `maxLength`, `min`, and `max` validation.
+
+#### Native Validation
+
+```tsx
+<TextInputField 
+  name="firstName" 
+  required
+  minLength={2}
+  maxLength={30}
+/>
+```
+
+#### With Validate
+
+```tsx
+const EXISTING_IPS = ['192.168.1.1']
+
+<TextInputField 
+  name="ip" 
+  validate={{
+  ipAlreadyExists: (ip: string) =>
+    EXISTING_IPS.includes(ip) ? 'This ip is already in use' : undefined,
+  }}
+/>
+```
+
+#### With Regex
+
+```tsx
+<TextInputField 
+  name="email"
+  regex={[/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/]}
+/>
+```
+
+We all know regex can be tricky, so to help you with that we made [Scaleway Regex](https://github.com/scaleway/scaleway-lib/tree/main/packages/regex) library that contains a lot of useful regexes that you can use in your forms.
+You can easily install it with:
+
+```sh
+pnpm add @scaleway/regex
+```
+
+You can then use it like this:
+
+```tsx
+import { email } from '@scaleway/regex'
+
+<TextInputField 
+  name="email"
+  regex={[email]}
+/>
+```
+
+Check all the available regexes in the [Scaleway Regex file](https://github.com/scaleway/scaleway-lib/blob/main/packages/regex/src/index.ts)
+
+### Resolvers | Zod
 
 You can use [Zod](https://zod.dev/) for validation by integrating it with `@ultraviolet/form`. First you will need to install Zod and the Zod resolver for React Hook Form:
 
@@ -129,7 +189,7 @@ const INITIAL_VALUES: FormValues = {
 } as const
 
 export default function App() {
-  const methods = useForm({
+  const methods = useForm<FormValues>({
     defaultValues: INITIAL_VALUES,
     resolver: zodResolver(schema),
     mode: 'onChange',
@@ -158,6 +218,8 @@ export default function App() {
   )
 }
 ```
+
+If you need more examples with other resolvers we invite you to check [React Hook Form Resolvers Documentation](https://github.com/react-hook-form/resolvers#quickstart)
 
 ## Documentation
 
