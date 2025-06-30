@@ -316,7 +316,7 @@ export const UnitInput = ({
             disabled={disabled}
             name={`${name}-value`}
             width={width}
-            id={id ? `${id}-value` : undefined}
+            id={id ?? localId}
             value={val}
             onChange={event => {
               const numericValue = Number.parseInt(event.target.value, 10)
