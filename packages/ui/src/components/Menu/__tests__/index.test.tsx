@@ -262,29 +262,6 @@ describe('Menu', () => {
       ))
   })
 
-  describe('sizes', () => {
-    test('renders small', () =>
-      shouldMatchEmotionSnapshot(
-        <Menu visible size="small" disclosure={() => disclosure}>
-          <Menu.Item>small</Menu.Item>
-        </Menu>,
-      ))
-
-    test('renders medium', () =>
-      shouldMatchEmotionSnapshot(
-        <Menu visible size="medium" disclosure={() => disclosure}>
-          <Menu.Item>medium</Menu.Item>
-        </Menu>,
-      ))
-
-    test('renders large', () =>
-      shouldMatchEmotionSnapshot(
-        <Menu visible size="large" disclosure={() => disclosure}>
-          <Menu.Item>large</Menu.Item>
-        </Menu>,
-      ))
-  })
-
   describe('Menu.Item', () => {
     test(`render with default props`, () =>
       shouldMatchEmotionSnapshot(

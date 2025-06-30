@@ -1,7 +1,7 @@
 'use client'
 
 import styled from '@emotion/styled'
-import type { KeyboardEventHandler, MouseEventHandler, ReactNode } from 'react'
+import type { ReactNode } from 'react'
 import { forwardRef } from 'react'
 
 const StyledCell = styled.td`
@@ -14,44 +14,19 @@ const StyledCell = styled.td`
 type CellProps = {
   children?: ReactNode
   className?: string
-  /**
-   *  @deprecated: This prop won't be needed in the future as expandable will be triggered only via a button.
-   *
-   *  Use this if you want to prevent onClick to be handled by parents (Like when you have an expandable content)
-   * */
-  preventClick?: boolean
   'data-testid'?: string
   colSpan?: number
 }
 
 export const Cell = forwardRef<HTMLTableCellElement, CellProps>(
-  (
-    { children, className, preventClick, 'data-testid': dataTestid, colSpan },
-    ref,
-  ) => {
-    const handleClick: MouseEventHandler<HTMLDivElement> = event => {
-      if (preventClick) {
-        event.stopPropagation()
-      }
-    }
-
-    const handleKeyDown: KeyboardEventHandler<HTMLDivElement> = event => {
-      if (preventClick) {
-        event.stopPropagation()
-      }
-    }
-
-    return (
-      <StyledCell
-        ref={ref}
-        className={className}
-        onClick={handleClick}
-        onKeyDown={handleKeyDown}
-        data-testid={dataTestid}
-        colSpan={colSpan}
-      >
-        {children}
-      </StyledCell>
-    )
-  },
+  ({ children, className, 'data-testid': dataTestid, colSpan }, ref) => (
+    <StyledCell
+      ref={ref}
+      className={className}
+      data-testid={dataTestid}
+      colSpan={colSpan}
+    >
+      {children}
+    </StyledCell>
+  ),
 )
