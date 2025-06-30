@@ -99,6 +99,9 @@ type DrawerProps = Pick<
   separator?: boolean
 }
 
+/**
+ * A Drawer is a secondary content component that sits off-screen until triggered by the user.
+ */
 export const Drawer = ({
   size = 'medium',
   onClose,

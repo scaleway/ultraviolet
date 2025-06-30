@@ -1,15 +1,15 @@
 import type { StoryFn } from '@storybook/react'
 import { Stack } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
-import { DateField } from '..'
+import { DateInputField } from '..'
 import { Submit } from '../../Submit'
 import { TimeInputField } from '../../TimeInputField'
 
 export const MinMaxDateWithTimeField: StoryFn<
-  ComponentProps<typeof DateField>
+  ComponentProps<typeof DateInputField>
 > = ({ name, minDate, maxDate, required }) => (
   <Stack gap={1}>
-    <DateField
+    <DateInputField
       name={name}
       minDate={minDate}
       maxDate={maxDate}

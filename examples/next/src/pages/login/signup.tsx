@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import {
-  DateField,
+  DateInputField,
   Form,
   RadioGroupField,
   Submit,
@@ -119,7 +119,7 @@ const SignUp = () => {
                 className="inputs"
               />
             </Stack>
-            <DateField
+            <DateInputField
               name="birthdate"
               label="Birth Date"
               required

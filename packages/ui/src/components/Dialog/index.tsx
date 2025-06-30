@@ -127,7 +127,6 @@ export const BaseDialog = ({
 
 /**
  * The Dialog component is used to show content on top of an overlay that requires user interaction.
- * @experimental This component is experimental and may be subject to breaking changes in the future.
  */
 export const Dialog = Object.assign(BaseDialog, {
   Buttons: DialogButtons,
