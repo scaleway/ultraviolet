@@ -22,7 +22,7 @@ export const Carousel: StoryFn = props => {
   return (
     <Modal
       image={IMAGES_STEP[step]}
-      size="medium"
+      size="xsmall"
       disclosure={
         <Button onClick={() => setStep(0)}>Open Carousel Modal</Button>
       }
@@ -67,7 +67,7 @@ export const Carousel: StoryFn = props => {
 Carousel.parameters = {
   docs: {
     description: {
-      story: 'Add an image at the top of the modal.',
+      story: 'It is possible to create a carousel',
     },
   },
 }
