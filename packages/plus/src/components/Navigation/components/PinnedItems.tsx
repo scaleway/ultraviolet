@@ -4,7 +4,7 @@ import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import { PinCategoryIcon } from '@ultraviolet/icons/category'
 import { Text } from '@ultraviolet/ui'
-import type { DragEvent } from 'react'
+import type { DragEvent, ReactElement } from 'react'
 import { useCallback } from 'react'
 import { useNavigation } from '../NavigationProvider'
 import type { DragNDropData } from '../types'
@@ -60,12 +60,17 @@ type PinnedItemsProps = {
    * This function will be called when the user reorder the pinned items
    */
   onReorder?: (pinnedItems: string[]) => void
+  /**
+   * Use this prop if it is needed to wrap each PinnedItem component into another component (eg NavLink)
+   */
+  itemWrapper?: (item: ReactElement, itemId: string) => ReactElement
 }
 
 export const PinnedItems = ({
   toggle = true,
   onReorder,
   onToggle,
+  itemWrapper,
 }: PinnedItemsProps) => {
   const context = useNavigation()
 
@@ -132,7 +137,7 @@ export const PinnedItems = ({
       <div style={{ width: animation ? '100%' : undefined }}>
         <Item
           label={locales['navigation.pinned.item.group.label']}
-          categoryIcon=<PinCategoryIcon variant="neutral" />
+          categoryIcon={<PinCategoryIcon variant="neutral" />}
           type="pinnedGroup"
           id="pinned-group"
           data-testid="pinned-group"
@@ -140,14 +145,9 @@ export const PinnedItems = ({
           onToggle={onToggle}
         >
           {pinnedItems.length > 0 ? (
-            pinnedItems.map((itemId, index) =>
-              items[itemId]?.label ? (
-                <RelativeDiv key={itemId}>
-                  <DropableArea
-                    onDragOver={onDragOver}
-                    onDragLeave={onDragLeave}
-                    onDrop={event => onDrop(event, index)}
-                  />
+            pinnedItems.map((itemId, index) => {
+              if (items[itemId]?.label) {
+                const itemElement = (
                   <Item
                     label={items[itemId].label}
                     type="pinned"
@@ -160,9 +160,24 @@ export const PinnedItems = ({
                       items[itemId]?.onClickPinUnpin ?? undefined
                     }
                   />
-                </RelativeDiv>
-              ) : null,
-            )
+                )
+
+                return (
+                  <RelativeDiv key={itemId}>
+                    <DropableArea
+                      onDragOver={onDragOver}
+                      onDragLeave={onDragLeave}
+                      onDrop={event => onDrop(event, index)}
+                    />
+                    {itemWrapper
+                      ? itemWrapper(itemElement, itemId)
+                      : itemElement}
+                  </RelativeDiv>
+                )
+              }
+
+              return null
+            })
           ) : (
             <TextContainer data-expanded={expanded}>
               <Text
