@@ -1,84 +1,8 @@
 import { Meta } from '@storybook/blocks'
+import Readme from '../../../../../nextjs/README.md?raw'
 
 <Meta title="Guides/Next Integration" />
 
-# Next Integration
-
-Learn how to use Ultraviolet UI with Next.js.
-
-## App Router
-
-This section will guide you through the integration of Ultraviolet UI with Next.js [App Router](https://nextjs.org/docs/app).
-
-### Install dependencies
-
-Start by installing Ultraviolet dependencies and emotion dependencies.
-
-```sh
-pnpm add @ultraviolet/ui @ultraviolet/themes @emotion/react @emotion/styled
-```
-
-### Configuration
-
-Inside `app/layout.tsx`, import the `ThemeRegistry` from `@ultraviolet/ui` and wrap your app with it.
-
-```tsx
-// app/layout.tsx
-import { consoleLightTheme } from '@ultraviolet/themes'
-import { ThemeRegistry } from '@ultraviolet/ui'
-import { ReactNode } from 'react'
-
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: ReactNode
-}>) {
-  return (
-    <html lang="en">
-      <body>
-        <ThemeRegistry theme={consoleLightTheme}>
-          {children}
-        </ThemeRegistry>
-      </body>
-    </html>
-  )
-}
-```
-
-`ThemeRegistry` component is responsible for providing the theme context to all components within the app.
-This component has been specially made to work seamlessly with Next.js's App Router.
-
-### Limitations
-
-- **Fonts**: Ultraviolet UI uses custom fonts that need to be imported separately. Make sure to import the fonts CSS file in your project's entry point:
-  ```sh
-  pnpm add @ultraviolet/fonts
-  ```
-
-  then in you `GlobalStyle` file:
-  ```tsx
-  "use client"
-
-  import '@ultraviolet/fonts/fonts.css'
-  ```
-
-- **Styled Components**: in order to customize an emotion component, you need to import the `styled` function from `@emotion/styled` and use it to create your styled components. Emotion is not yet compatible with server components, so you need to use the `styled` function in a client component. Example:
-  ```tsx
-  "use client"
-
-  import { styled } from '@emotion/styled'
-
-  const Button = styled.button`
-    background-color: #0070f3;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  `
-  ```
-
-### Examples
-
-In order to help you integrate Ultraviolet UI with Next.js, we've prepared an example available on GitHub:
-[https://github.com/scaleway/ultraviolet/tree/main/examples/next-app-router](https://github.com/scaleway/ultraviolet/tree/main/examples/next-app-router)
+<Markdown>
+  {Readme}
+</Markdown>

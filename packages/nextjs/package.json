@@ -1,12 +1,12 @@
 {
-  "name": "@ultraviolet/ui",
-  "version": "2.0.0-beta.12",
-  "description": "Ultraviolet UI",
+  "name": "@ultraviolet/nextjs",
+  "version": "0.0.1",
+  "description": "Ultraviolet NextJS utility package",
   "homepage": "https://github.com/scaleway/ultraviolet#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/scaleway/ultraviolet.git",
-    "directory": "packages/ui"
+    "directory": "packages/nextjs"
   },
   "scripts": {
     "type:generate": "tsc --declaration -p tsconfig.build.json",
@@ -15,15 +15,13 @@
     "build": "vite build --config vite.config.ts && pnpm run type:generate",
     "build:profile": "npx vite-bundle-visualizer -c vite.config.ts",
     "typecheck": "tsc --noEmit",
-    "size": "size-limit",
-    "test:unit": "LC_ALL=en_US.UTF-8  pnpm vitest --run --config vite.config.ts",
-    "test:unit:coverage": "pnpm test:unit --coverage",
     "lintpublish": "publint"
   },
   "keywords": [
     "react",
     "reactjs",
-    "ui"
+    "ui",
+    "nextjs"
   ],
   "license": "Apache-2.0",
   "publishConfig": {
@@ -52,48 +50,22 @@
       "default": "./dist/index.js"
     }
   },
-  "size-limit": [
-    {
-      "path": [
-        "dist/**/*.js",
-        "!*.d.ts",
-        "!*.cjs"
-      ],
-      "limit": "800 kB",
-      "webpack": false,
-      "brotli": true,
-      "running": false
-    }
-  ],
   "peerDependencies": {
+    "@emotion/cache": "11.14.0",
     "@emotion/react": "11.14.0",
     "@emotion/styled": "11.14.0",
+    "@ultraviolet/ui": "workspace:*",
+    "next": "15.x",
     "react": "18.x || 19.x",
     "react-dom": "18.x || 19.x"
   },
   "devDependencies": {
-    "@babel/core": "7.27.4",
+    "@emotion/cache": "11.14.0",
     "@emotion/react": "11.14.0",
     "@emotion/styled": "11.14.0",
-    "@types/react": "19.1.8",
-    "@types/react-dom": "19.1.6",
-    "@utils/test": "workspace:*",
+    "@ultraviolet/ui": "workspace:*",
+    "next": "15.3.4",
     "react": "19.1.0",
     "react-dom": "19.1.0"
-  },
-  "dependencies": {
-    "@emotion/serialize": "1.3.3",
-    "@nivo/bar": "0.89.1",
-    "@nivo/core": "0.89.1",
-    "@nivo/line": "0.89.1",
-    "@nivo/pie": "0.89.1",
-    "@nivo/scales": "0.89.0",
-    "@scaleway/random-name": "5.1.2",
-    "@scaleway/use-media": "3.0.3",
-    "@ultraviolet/icons": "workspace:*",
-    "@ultraviolet/themes": "workspace:*",
-    "deepmerge": "4.3.1",
-    "react-toastify": "11.0.5",
-    "react-use-clipboard": "1.0.9"
   }
 }

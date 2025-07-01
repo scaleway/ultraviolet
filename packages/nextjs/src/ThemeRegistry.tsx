@@ -15,7 +15,7 @@ type ThemeRegistryProps = {
  * ThemeRegistry is a component that provides a theme to its children.
  * This solution is provided to work with Next.js app router.
  */
-export default function ThemeRegistry({ children, theme }: ThemeRegistryProps) {
+export const ThemeRegistry = ({ children, theme }: ThemeRegistryProps) => {
   const [{ cache, flush }] = useState(() => {
     const localCache = createCache({ key: 'uv' })
     localCache.compat = true
