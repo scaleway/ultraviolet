@@ -4,7 +4,7 @@
 
 Ultraviolet JS is a utility package to make Ultraviolet UI work with NextJS. This package will guide you through the integration of Ultraviolet UI with Next.js [App Router](https://nextjs.org/docs/app).
 
-## Get Started
+### Get Started
 
 ```sh
 pnpm add @ultraviolet/nextjs @ultraviolet/ui @ultraviolet/themes @emotion/react @emotion/styled @emotion/cache
@@ -40,23 +40,25 @@ export default function RootLayout({
 ### Limitations
 
 - **Fonts**: Ultraviolet UI uses custom fonts that need to be imported separately. Make sure to import the fonts CSS file in your project's entry point:
-  ```sh
-  pnpm add @ultraviolet/fonts
-  ```
+```sh
+pnpm add @ultraviolet/fonts
+```
 
   then in you `GlobalStyle` file:
+  
   ```tsx
   "use client"
-
+  
   import '@ultraviolet/fonts/fonts.css'
   ```
 
 - **Styled Components**: in order to customize an emotion component, you need to import the `styled` function from `@emotion/styled` and use it to create your styled components. Emotion is not yet compatible with server components, so you need to use the `styled` function in a client component. Example:
+
   ```tsx
   "use client"
-
+  
   import { styled } from '@emotion/styled'
-
+  
   const Button = styled.button`
     background-color: #0070f3;
     color: white;
