@@ -123,7 +123,7 @@ exports[`Pagination > should render correctly 1`] = `
 
 .emotion-8 {
   vertical-align: middle;
-  fill: #3f4250;
+  fill: currentColor;
   height: 1rem;
   width: 1rem;
   min-width: 1rem;
@@ -131,7 +131,7 @@ exports[`Pagination > should render correctly 1`] = `
 }
 
 .emotion-8 .fillStroke {
-  stroke: #3f4250;
+  stroke: currentColor;
   fill: none;
 }
 
@@ -558,7 +558,7 @@ exports[`Pagination > should render correctly component with disabled 1`] = `
 
 .emotion-8 {
   vertical-align: middle;
-  fill: #3f4250;
+  fill: currentColor;
   height: 1rem;
   width: 1rem;
   min-width: 1rem;
@@ -566,7 +566,7 @@ exports[`Pagination > should render correctly component with disabled 1`] = `
 }
 
 .emotion-8 .fillStroke {
-  stroke: #3f4250;
+  stroke: currentColor;
   fill: none;
 }
 
@@ -960,7 +960,7 @@ exports[`Pagination > should render correctly component with pageTabCount 1`] = 
 
 .emotion-8 {
   vertical-align: middle;
-  fill: #3f4250;
+  fill: currentColor;
   height: 1rem;
   width: 1rem;
   min-width: 1rem;
@@ -968,7 +968,7 @@ exports[`Pagination > should render correctly component with pageTabCount 1`] = 
 }
 
 .emotion-8 .fillStroke {
-  stroke: #3f4250;
+  stroke: currentColor;
   fill: none;
 }
 
@@ -1363,7 +1363,7 @@ exports[`Pagination > should render correctly with page < 1 1`] = `
 
 .emotion-8 {
   vertical-align: middle;
-  fill: #3f4250;
+  fill: currentColor;
   height: 1rem;
   width: 1rem;
   min-width: 1rem;
@@ -1371,7 +1371,7 @@ exports[`Pagination > should render correctly with page < 1 1`] = `
 }
 
 .emotion-8 .fillStroke {
-  stroke: #3f4250;
+  stroke: currentColor;
   fill: none;
 }
 
@@ -1726,7 +1726,7 @@ exports[`Pagination > should render correctly with page > pageCount 1`] = `
 
 .emotion-8 {
   vertical-align: middle;
-  fill: #3f4250;
+  fill: currentColor;
   height: 1rem;
   width: 1rem;
   min-width: 1rem;
@@ -1734,7 +1734,7 @@ exports[`Pagination > should render correctly with page > pageCount 1`] = `
 }
 
 .emotion-8 .fillStroke {
-  stroke: #3f4250;
+  stroke: currentColor;
   fill: none;
 }
 
@@ -2080,7 +2080,7 @@ exports[`Pagination > should render correctly with pageClick 1`] = `
 
 .emotion-8 {
   vertical-align: middle;
-  fill: #3f4250;
+  fill: currentColor;
   height: 1rem;
   width: 1rem;
   min-width: 1rem;
@@ -2088,7 +2088,7 @@ exports[`Pagination > should render correctly with pageClick 1`] = `
 }
 
 .emotion-8 .fillStroke {
-  stroke: #3f4250;
+  stroke: currentColor;
   fill: none;
 }
 
@@ -2485,7 +2485,7 @@ exports[`Pagination > should render correctly with pageCount is 1 1`] = `
 
 .emotion-8 {
   vertical-align: middle;
-  fill: #3f4250;
+  fill: currentColor;
   height: 1rem;
   width: 1rem;
   min-width: 1rem;
@@ -2493,7 +2493,7 @@ exports[`Pagination > should render correctly with pageCount is 1 1`] = `
 }
 
 .emotion-8 .fillStroke {
-  stroke: #3f4250;
+  stroke: currentColor;
   fill: none;
 }
 
@@ -3010,6 +3010,20 @@ exports[`Pagination > should render correctly with perPage - default values 1`] 
   border: 1px solid #792dd4;
 }
 
+.emotion-30 {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
+}
+
+.emotion-30 .fillStroke {
+  stroke: currentColor;
+  fill: none;
+}
+
 .emotion-32 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -3258,7 +3272,7 @@ exports[`Pagination > should render correctly with perPage - default values 1`] 
             type="button"
           >
             <svg
-              class="emotion-20 emotion-21"
+              class="emotion-30 emotion-21"
               viewBox="0 0 16 16"
             >
               <path
@@ -3329,7 +3343,7 @@ exports[`Pagination > should render correctly with perPage - default values 1`] 
             type="button"
           >
             <svg
-              class="emotion-20 emotion-21"
+              class="emotion-30 emotion-21"
               viewBox="0 0 16 16"
             >
               <path
@@ -3707,6 +3721,20 @@ exports[`Pagination > should render correctly with perPage 1`] = `
   border: 1px solid #792dd4;
 }
 
+.emotion-30 {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
+}
+
+.emotion-30 .fillStroke {
+  stroke: currentColor;
+  fill: none;
+}
+
 .emotion-32 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -3955,7 +3983,7 @@ exports[`Pagination > should render correctly with perPage 1`] = `
             type="button"
           >
             <svg
-              class="emotion-20 emotion-21"
+              class="emotion-30 emotion-21"
               viewBox="0 0 16 16"
             >
               <path
@@ -4026,7 +4054,7 @@ exports[`Pagination > should render correctly with perPage 1`] = `
             type="button"
           >
             <svg
-              class="emotion-20 emotion-21"
+              class="emotion-30 emotion-21"
               viewBox="0 0 16 16"
             >
               <path

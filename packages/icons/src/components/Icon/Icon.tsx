@@ -56,7 +56,7 @@ const StyledIcon = styled('svg', {
   shouldForwardProp: prop =>
     !['size', 'sentiment', 'prominence', 'disabled'].includes(prop),
 })<{
-  sentiment: Color
+  sentiment?: Color
   size: SizesProps
   prominence: ProminenceProps
   disabled?: boolean
@@ -70,12 +70,16 @@ const StyledIcon = styled('svg', {
         ? capitalize(PROMINENCES.default)
         : capitalize(PROMINENCES[prominence])
 
-    const themeColor = theme.colors[sentiment]
-    const icon = `icon${definedProminence}${
-      disabled ? 'Disabled' : ''
-    }` as keyof typeof themeColor
+    if (sentiment) {
+      const themeColor = theme.colors[sentiment]
+      const icon = `icon${definedProminence}${
+        disabled ? 'Disabled' : ''
+      }` as keyof typeof themeColor
 
-    return theme.colors?.[sentiment]?.[icon] || sentiment
+      return theme.colors?.[sentiment]?.[icon] || sentiment
+    }
+
+    return 'currentColor'
   }};
 
   .fillStroke {
@@ -86,12 +90,16 @@ const StyledIcon = styled('svg', {
           ? capitalize(PROMINENCES.default)
           : capitalize(PROMINENCES[prominence])
 
-      const themeColor = theme.colors[sentiment]
-      const icon = `icon${definedProminence}${
-        disabled ? 'Disabled' : ''
-      }` as keyof typeof themeColor
+      if (sentiment) {
+        const themeColor = theme.colors[sentiment]
+        const icon = `icon${definedProminence}${
+          disabled ? 'Disabled' : ''
+        }` as keyof typeof themeColor
 
-      return theme.colors?.[sentiment]?.[icon] || sentiment
+        return theme.colors?.[sentiment]?.[icon] || sentiment
+      }
+
+      return 'currentColor'
     }};
     fill: none;
   }
@@ -117,7 +125,7 @@ export type IconProps = {
 export const Icon = forwardRef<SVGSVGElement, IconProps>(
   (
     {
-      sentiment = 'neutral',
+      sentiment,
       size = 'small',
       prominence = 'default',
       className,
