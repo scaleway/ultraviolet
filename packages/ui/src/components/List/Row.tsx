@@ -4,7 +4,7 @@ import type { Theme } from '@emotion/react'
 import { keyframes, useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import { ArrowDownIcon, ArrowUpIcon } from '@ultraviolet/icons'
-import type { ReactNode, RefObject } from 'react'
+import type { CSSProperties, ReactNode, RefObject } from 'react'
 import {
   Children,
   forwardRef,
@@ -28,7 +28,8 @@ const ExpandableWrapper = styled.tr`
   vertical-align: middle;
   cursor: auto;
   background: ${({ theme }) => theme.colors.neutral.backgroundWeak};
-  border-radius: 0 0 ${({ theme }) => theme.radii.default} ${({ theme }) => theme.radii.default};
+  border-radius: 0 0 ${({ theme }) => theme.radii.default} ${({ theme }) =>
+    theme.radii.default};
   transform: translate3d(0, -${({ theme }) => theme.space['2']}, 0);
   position: relative;
 
@@ -41,7 +42,8 @@ const ExpandableWrapper = styled.tr`
   td {
     border: 1px solid ${({ theme }) => theme.colors.neutral.border};
     border-top: none;
-    border-radius: 0 0 ${({ theme }) => theme.radii.default} ${({ theme }) => theme.radii.default};
+    border-radius: 0 0 ${({ theme }) => theme.radii.default} ${({ theme }) =>
+      theme.radii.default};
   }
 `
 
@@ -71,14 +73,20 @@ const colorChange = (theme: Theme) => keyframes`
 
 export const StyledRow = styled('tr', {
   shouldForwardProp: prop =>
-    !['highlightAnimation', 'sentiment', 'columns', 'columnsStartAt'].includes(
-      prop,
-    ),
+    ![
+      'highlightAnimation',
+      'sentiment',
+      'columns',
+      'columnsStartAt',
+      'data-dragging',
+      'pointerEvent',
+    ].includes(prop),
 })<{
   sentiment: (typeof SENTIMENTS)[number]
   columns: ColumnProps[]
   columnsStartAt?: number
   highlightAnimation?: boolean
+  'data-dragging'?: boolean
 }>`
   /* List itself also apply style about common templating between HeaderRow and other Rows */
 
@@ -108,11 +116,13 @@ export const StyledRow = styled('tr', {
   }
   td:first-child {
     border-left: 1px solid ${({ theme }) => theme.colors.neutral.border};
-    border-radius: ${({ theme }) => theme.radii.default} 0 0 ${({ theme }) => theme.radii.default};
+    border-radius: ${({ theme }) => theme.radii.default} 0 0 ${({ theme }) =>
+      theme.radii.default};
   }
   td:last-child {
     border-right: 1px solid ${({ theme }) => theme.colors.neutral.border};
-    border-radius: 0 ${({ theme }) => theme.radii.default} ${({ theme }) => theme.radii.default} 0;
+    border-radius: 0 ${({ theme }) => theme.radii.default} ${({ theme }) =>
+      theme.radii.default} 0;
   }
 
   &:not([aria-disabled='true']):hover td, &:not([aria-disabled='true']):hover td:first-child, &:not([aria-disabled='true']):hover td:last-child {
@@ -206,7 +216,8 @@ const NoPaddingCell = styled(Cell, {
 const ExpandableCell = styled(Cell, {
   shouldForwardProp: prop => !['padding'].includes(prop),
 })<{ padding?: keyof typeof space }>`
-  padding: ${({ theme, padding }) => (padding ? theme.space[padding] : theme.space['2'])};
+  padding: ${({ theme, padding }) =>
+    padding ? theme.space[padding] : theme.space['2']};
 `
 
 type RowProps = {
@@ -227,6 +238,8 @@ type RowProps = {
   expandablePadding?: keyof typeof space
   highlightAnimation?: boolean
   'data-testid'?: string
+  style?: CSSProperties
+  'data-dragging'?: boolean
 }
 
 export const Row = forwardRef<HTMLTableRowElement, RowProps>(
@@ -243,6 +256,8 @@ export const Row = forwardRef<HTMLTableRowElement, RowProps>(
       className,
       expandablePadding,
       'data-testid': dataTestid,
+      style,
+      'data-dragging': dataDragging,
     },
     forwardedRef,
   ) => {
@@ -343,6 +358,8 @@ export const Row = forwardRef<HTMLTableRowElement, RowProps>(
           columns={columns}
           columnsStartAt={(selectable ? 1 : 0) + (expandButton ? 1 : 0)}
           highlightAnimation={highlightAnimation}
+          style={style}
+          data-dragging={dataDragging}
         >
           {selectable ? (
             <NoPaddingCell
