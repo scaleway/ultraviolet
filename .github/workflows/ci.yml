@@ -260,7 +260,7 @@ jobs:
       - name: Set scw_max_concurrency
         id: set-max-concurrency
         run: |
-          if [[ "${{ env.STORYBOOK_BRANCH_SLUG }}" == "main" ]]; then
+          if [[ "${{ env.STORYBOOK_BRANCH_SLUG }}" == "main" || "${{ env.STORYBOOK_BRANCH_SLUG }}" == "beta" ]]; then
             echo "SCW_MAX_CONCURRENCY=30" >> $GITHUB_ENV
           else
             echo "SCW_MAX_CONCURRENCY=10" >> $GITHUB_ENV
@@ -269,7 +269,7 @@ jobs:
       - name: Set scw_min_scale
         id: set-min-scale
         run: |
-          if [[ "${{ env.STORYBOOK_BRANCH_SLUG }}" == "main" ]]; then
+          if [[ "${{ env.STORYBOOK_BRANCH_SLUG }}" == "main" || "${{ env.STORYBOOK_BRANCH_SLUG }}" == "beta" ]]; then
             echo "SCW_MIN_SCALE=1" >> $GITHUB_ENV
           else
             echo "SCW_MIN_SCALE=0" >> $GITHUB_ENV
@@ -278,7 +278,7 @@ jobs:
       - name: Set scw_limit
         id: set-cpu-limit
         run: |
-          if [[ "${{ env.STORYBOOK_BRANCH_SLUG }}" == "main" ]]; then
+          if [[ "${{ env.STORYBOOK_BRANCH_SLUG }}" == "main" || "${{ env.STORYBOOK_BRANCH_SLUG }}" == "beta" ]]; then
             echo "SCW_CPU_LIMIT=500" >> $GITHUB_ENV
             echo "SCW_MEMORY_LIMIT=1024" >> $GITHUB_ENV
           else
