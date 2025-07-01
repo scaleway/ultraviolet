@@ -65,6 +65,7 @@ exports[`Button > render as an anchor with href prop 1`] = `
     data-testid="testing"
   >
     <a
+      aria-disabled="false"
       class="emotion-0 emotion-1"
       href="http://scaleway.com"
       type="button"
@@ -370,12 +371,71 @@ exports[`Button > render with a tooltip 1`] = `
   color: #f9f9fa;
 }
 
+.emotion-2 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+  height: 3rem;
+  padding: 0 1rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.5rem;
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: Inter,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: #8c40ef;
+  border: none;
+  color: #ffffff;
+}
+
+.emotion-2:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-2:active {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-2 .e1y1n78x0 {
+  stroke: transparent;
+}
+
+.emotion-2:hover,
+.emotion-2:active {
+  background: #792dd4;
+  color: #f9f9fa;
+}
+
 <div
     data-testid="testing"
   >
     <div
-      aria-controls="«r1m»"
-      aria-describedby="«r1m»"
+      aria-controls="«r23»"
+      aria-describedby="«r23»"
       class="emotion-0 emotion-1"
       data-container-full-width="false"
       tabindex="0"
@@ -518,6 +578,57 @@ exports[`Button > render with icon 1`] = `
   stroke: transparent;
 }
 
+.emotion-0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+  height: 3rem;
+  padding: 0 1rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.5rem;
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: not-allowed;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: Inter,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: #8c40ef;
+  border: none;
+  color: #ffffff;
+  background: #e5dbfd;
+  color: #ffffff;
+}
+
+.emotion-0:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-0 .e1y1n78x0 {
+  stroke: transparent;
+}
+
 .emotion-2 {
   vertical-align: middle;
   fill: currentColor;
@@ -560,6 +671,57 @@ exports[`Button > render with icon 1`] = `
 exports[`Button > render with icon on the right 1`] = `
 <DocumentFragment>
   .emotion-0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+  height: 3rem;
+  padding: 0 1rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.5rem;
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: not-allowed;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: Inter,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: #8c40ef;
+  border: none;
+  color: #ffffff;
+  background: #e5dbfd;
+  color: #ffffff;
+}
+
+.emotion-0:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-0 .e1y1n78x0 {
+  stroke: transparent;
+}
+
+.emotion-0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -702,6 +864,57 @@ exports[`Button > render with icon only 1`] = `
   stroke: transparent;
 }
 
+.emotion-0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+  height: 3rem;
+  padding: 0 1rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.5rem;
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: not-allowed;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: Inter,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: #8c40ef;
+  border: none;
+  color: #ffffff;
+  background: #e5dbfd;
+  color: #ffffff;
+}
+
+.emotion-0:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-0 .e1y1n78x0 {
+  stroke: transparent;
+}
+
 .emotion-2 {
   vertical-align: middle;
   fill: currentColor;
@@ -742,6 +955,57 @@ exports[`Button > render with icon only 1`] = `
 exports[`Button > render with isLoading with icon 1`] = `
 <DocumentFragment>
   .emotion-0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+  height: 3rem;
+  padding: 0 1rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.5rem;
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: not-allowed;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: Inter,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: #8c40ef;
+  border: none;
+  color: #ffffff;
+  background: #e5dbfd;
+  color: #ffffff;
+}
+
+.emotion-0:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-0 .emotion-5 {
+  stroke: transparent;
+}
+
+.emotion-0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -938,6 +1202,65 @@ exports[`Button > render with isLoading with icon variant 1`] = `
   color: #f9f9fa;
 }
 
+.emotion-0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+  height: 3rem;
+  padding: 0 1rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.5rem;
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: Inter,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: #8c40ef;
+  border: none;
+  color: #ffffff;
+}
+
+.emotion-0:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-0:active {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-0 .e1y1n78x0 {
+  stroke: transparent;
+}
+
+.emotion-0:hover,
+.emotion-0:active {
+  background: #792dd4;
+  color: #f9f9fa;
+}
+
 .emotion-2 {
   vertical-align: middle;
   fill: currentColor;
@@ -978,6 +1301,57 @@ exports[`Button > render with isLoading with icon variant 1`] = `
 exports[`Button > render with isLoading without icon 1`] = `
 <DocumentFragment>
   .emotion-0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+  height: 3rem;
+  padding: 0 1rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.5rem;
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: not-allowed;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: Inter,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: #8c40ef;
+  border: none;
+  color: #ffffff;
+  background: #e5dbfd;
+  color: #ffffff;
+}
+
+.emotion-0:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-0 .emotion-5 {
+  stroke: transparent;
+}
+
+.emotion-0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1162,7 +1536,9 @@ exports[`Button > render xsmall 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Button > variant-sentiment-disabled combination > render filled&danger 1`] = `
+exports[`Button > variant-sentiment-disabled combination > render filled&black 1`] = `[Function]`;
+
+exports[`Button > variant-sentiment-disabled combination > render filled&black disabled 1`] = `
 <DocumentFragment>
   .emotion-0 {
   display: -webkit-inline-box;
@@ -1199,11 +1575,62 @@ exports[`Button > variant-sentiment-disabled combination > render filled&danger 
   line-height: 1.5rem;
   paragraph-spacing: 0;
   text-case: none;
-  background: #e51963;
+  background: #151a2d;
   border: none;
   color: #ffffff;
-  background: #ffd3e3;
+  background: #e9eaeb;
+  color: #b5b7bd;
+}
+
+.emotion-0:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-0 .e1y1n78x0 {
+  stroke: transparent;
+}
+
+.emotion-0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+  height: 3rem;
+  padding: 0 1rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.5rem;
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: not-allowed;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: Inter,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: #151a2d;
+  border: none;
   color: #ffffff;
+  background: #e9eaeb;
+  color: #b5b7bd;
 }
 
 .emotion-0:hover {
@@ -1228,6 +1655,8 @@ exports[`Button > variant-sentiment-disabled combination > render filled&danger 
   </div>
 </DocumentFragment>
 `;
+
+exports[`Button > variant-sentiment-disabled combination > render filled&danger 1`] = `[Function]`;
 
 exports[`Button > variant-sentiment-disabled combination > render filled&danger disabled 1`] = `
 <DocumentFragment>
@@ -1282,23 +1711,7 @@ exports[`Button > variant-sentiment-disabled combination > render filled&danger 
   stroke: transparent;
 }
 
-<div
-    data-testid="testing"
-  >
-    <button
-      class="emotion-0 emotion-1"
-      disabled=""
-      type="button"
-    >
-      Hello
-    </button>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`Button > variant-sentiment-disabled combination > render filled&info 1`] = `
-<DocumentFragment>
-  .emotion-0 {
+.emotion-0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1333,10 +1746,10 @@ exports[`Button > variant-sentiment-disabled combination > render filled&info 1`
   line-height: 1.5rem;
   paragraph-spacing: 0;
   text-case: none;
-  background: #0078d2;
+  background: #e51963;
   border: none;
   color: #ffffff;
-  background: #bee3ff;
+  background: #ffd3e3;
   color: #ffffff;
 }
 
@@ -1362,6 +1775,8 @@ exports[`Button > variant-sentiment-disabled combination > render filled&info 1`
   </div>
 </DocumentFragment>
 `;
+
+exports[`Button > variant-sentiment-disabled combination > render filled&info 1`] = `[Function]`;
 
 exports[`Button > variant-sentiment-disabled combination > render filled&info disabled 1`] = `
 <DocumentFragment>
@@ -1416,23 +1831,7 @@ exports[`Button > variant-sentiment-disabled combination > render filled&info di
   stroke: transparent;
 }
 
-<div
-    data-testid="testing"
-  >
-    <button
-      class="emotion-0 emotion-1"
-      disabled=""
-      type="button"
-    >
-      Hello
-    </button>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`Button > variant-sentiment-disabled combination > render filled&neutral 1`] = `
-<DocumentFragment>
-  .emotion-0 {
+.emotion-0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1467,11 +1866,11 @@ exports[`Button > variant-sentiment-disabled combination > render filled&neutral
   line-height: 1.5rem;
   paragraph-spacing: 0;
   text-case: none;
-  background: #e9eaeb;
+  background: #0078d2;
   border: none;
-  color: #222638;
-  background: #f3f3f4;
-  color: #b5b7bd;
+  color: #ffffff;
+  background: #bee3ff;
+  color: #ffffff;
 }
 
 .emotion-0:hover {
@@ -1496,6 +1895,8 @@ exports[`Button > variant-sentiment-disabled combination > render filled&neutral
   </div>
 </DocumentFragment>
 `;
+
+exports[`Button > variant-sentiment-disabled combination > render filled&neutral 1`] = `[Function]`;
 
 exports[`Button > variant-sentiment-disabled combination > render filled&neutral disabled 1`] = `
 <DocumentFragment>
@@ -1550,23 +1951,7 @@ exports[`Button > variant-sentiment-disabled combination > render filled&neutral
   stroke: transparent;
 }
 
-<div
-    data-testid="testing"
-  >
-    <button
-      class="emotion-0 emotion-1"
-      disabled=""
-      type="button"
-    >
-      Hello
-    </button>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`Button > variant-sentiment-disabled combination > render filled&primary 1`] = `
-<DocumentFragment>
-  .emotion-0 {
+.emotion-0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1601,11 +1986,11 @@ exports[`Button > variant-sentiment-disabled combination > render filled&primary
   line-height: 1.5rem;
   paragraph-spacing: 0;
   text-case: none;
-  background: #8c40ef;
+  background: #e9eaeb;
   border: none;
-  color: #ffffff;
-  background: #e5dbfd;
-  color: #ffffff;
+  color: #222638;
+  background: #f3f3f4;
+  color: #b5b7bd;
 }
 
 .emotion-0:hover {
@@ -1630,6 +2015,8 @@ exports[`Button > variant-sentiment-disabled combination > render filled&primary
   </div>
 </DocumentFragment>
 `;
+
+exports[`Button > variant-sentiment-disabled combination > render filled&primary 1`] = `[Function]`;
 
 exports[`Button > variant-sentiment-disabled combination > render filled&primary disabled 1`] = `
 <DocumentFragment>
@@ -1684,23 +2071,7 @@ exports[`Button > variant-sentiment-disabled combination > render filled&primary
   stroke: transparent;
 }
 
-<div
-    data-testid="testing"
-  >
-    <button
-      class="emotion-0 emotion-1"
-      disabled=""
-      type="button"
-    >
-      Hello
-    </button>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`Button > variant-sentiment-disabled combination > render filled&secondary 1`] = `
-<DocumentFragment>
-  .emotion-0 {
+.emotion-0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1735,10 +2106,10 @@ exports[`Button > variant-sentiment-disabled combination > render filled&seconda
   line-height: 1.5rem;
   paragraph-spacing: 0;
   text-case: none;
-  background: #b824f9;
+  background: #8c40ef;
   border: none;
   color: #ffffff;
-  background: #f2d5ff;
+  background: #e5dbfd;
   color: #ffffff;
 }
 
@@ -1764,6 +2135,8 @@ exports[`Button > variant-sentiment-disabled combination > render filled&seconda
   </div>
 </DocumentFragment>
 `;
+
+exports[`Button > variant-sentiment-disabled combination > render filled&secondary 1`] = `[Function]`;
 
 exports[`Button > variant-sentiment-disabled combination > render filled&secondary disabled 1`] = `
 <DocumentFragment>
@@ -1818,23 +2191,7 @@ exports[`Button > variant-sentiment-disabled combination > render filled&seconda
   stroke: transparent;
 }
 
-<div
-    data-testid="testing"
-  >
-    <button
-      class="emotion-0 emotion-1"
-      disabled=""
-      type="button"
-    >
-      Hello
-    </button>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`Button > variant-sentiment-disabled combination > render filled&success 1`] = `
-<DocumentFragment>
-  .emotion-0 {
+.emotion-0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1869,10 +2226,10 @@ exports[`Button > variant-sentiment-disabled combination > render filled&success
   line-height: 1.5rem;
   paragraph-spacing: 0;
   text-case: none;
-  background: #2c8564;
+  background: #b824f9;
   border: none;
   color: #ffffff;
-  background: #adebd5;
+  background: #f2d5ff;
   color: #ffffff;
 }
 
@@ -1898,6 +2255,8 @@ exports[`Button > variant-sentiment-disabled combination > render filled&success
   </div>
 </DocumentFragment>
 `;
+
+exports[`Button > variant-sentiment-disabled combination > render filled&success 1`] = `[Function]`;
 
 exports[`Button > variant-sentiment-disabled combination > render filled&success disabled 1`] = `
 <DocumentFragment>
@@ -1952,23 +2311,7 @@ exports[`Button > variant-sentiment-disabled combination > render filled&success
   stroke: transparent;
 }
 
-<div
-    data-testid="testing"
-  >
-    <button
-      class="emotion-0 emotion-1"
-      disabled=""
-      type="button"
-    >
-      Hello
-    </button>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`Button > variant-sentiment-disabled combination > render filled&warning 1`] = `
-<DocumentFragment>
-  .emotion-0 {
+.emotion-0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2003,10 +2346,10 @@ exports[`Button > variant-sentiment-disabled combination > render filled&warning
   line-height: 1.5rem;
   paragraph-spacing: 0;
   text-case: none;
-  background: #fbc600;
+  background: #2c8564;
   border: none;
-  color: #222638;
-  background: #fff0b8;
+  color: #ffffff;
+  background: #adebd5;
   color: #ffffff;
 }
 
@@ -2032,6 +2375,8 @@ exports[`Button > variant-sentiment-disabled combination > render filled&warning
   </div>
 </DocumentFragment>
 `;
+
+exports[`Button > variant-sentiment-disabled combination > render filled&warning 1`] = `[Function]`;
 
 exports[`Button > variant-sentiment-disabled combination > render filled&warning disabled 1`] = `
 <DocumentFragment>
@@ -2086,6 +2431,57 @@ exports[`Button > variant-sentiment-disabled combination > render filled&warning
   stroke: transparent;
 }
 
+.emotion-0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+  height: 3rem;
+  padding: 0 1rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.5rem;
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: not-allowed;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: Inter,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: #fbc600;
+  border: none;
+  color: #222638;
+  background: #fff0b8;
+  color: #ffffff;
+}
+
+.emotion-0:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-0 .e1y1n78x0 {
+  stroke: transparent;
+}
+
 <div
     data-testid="testing"
   >
@@ -2100,7 +2496,129 @@ exports[`Button > variant-sentiment-disabled combination > render filled&warning
 </DocumentFragment>
 `;
 
-exports[`Button > variant-sentiment-disabled combination > render ghost&danger 1`] = `
+exports[`Button > variant-sentiment-disabled combination > render filled&white 1`] = `[Function]`;
+
+exports[`Button > variant-sentiment-disabled combination > render filled&white disabled 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+  height: 3rem;
+  padding: 0 1rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.5rem;
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: not-allowed;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: Inter,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: #ffffff;
+  border: none;
+  color: #151a2d;
+  background: #e9eaeb;
+  color: #b5b7bd;
+}
+
+.emotion-0:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-0 .e1y1n78x0 {
+  stroke: transparent;
+}
+
+.emotion-0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+  height: 3rem;
+  padding: 0 1rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.5rem;
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: not-allowed;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: Inter,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: #ffffff;
+  border: none;
+  color: #151a2d;
+  background: #e9eaeb;
+  color: #b5b7bd;
+}
+
+.emotion-0:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-0 .e1y1n78x0 {
+  stroke: transparent;
+}
+
+<div
+    data-testid="testing"
+  >
+    <button
+      class="emotion-0 emotion-1"
+      disabled=""
+      type="button"
+    >
+      Hello
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Button > variant-sentiment-disabled combination > render ghost&black 1`] = `[Function]`;
+
+exports[`Button > variant-sentiment-disabled combination > render ghost&black disabled 1`] = `
 <DocumentFragment>
   .emotion-0 {
   display: -webkit-inline-box;
@@ -2139,8 +2657,58 @@ exports[`Button > variant-sentiment-disabled combination > render ghost&danger 1
   text-case: none;
   background: none;
   border: none;
-  color: #b3144d;
-  color: #ffbbd3;
+  color: #151a2d;
+  color: #b5b7bd;
+}
+
+.emotion-0:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-0 .e1y1n78x0 {
+  stroke: transparent;
+}
+
+.emotion-0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+  height: 3rem;
+  padding: 0 1rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.5rem;
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: not-allowed;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: Inter,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: none;
+  color: #151a2d;
+  color: #b5b7bd;
 }
 
 .emotion-0:hover {
@@ -2165,6 +2733,8 @@ exports[`Button > variant-sentiment-disabled combination > render ghost&danger 1
   </div>
 </DocumentFragment>
 `;
+
+exports[`Button > variant-sentiment-disabled combination > render ghost&danger 1`] = `[Function]`;
 
 exports[`Button > variant-sentiment-disabled combination > render ghost&danger disabled 1`] = `
 <DocumentFragment>
@@ -2218,23 +2788,7 @@ exports[`Button > variant-sentiment-disabled combination > render ghost&danger d
   stroke: transparent;
 }
 
-<div
-    data-testid="testing"
-  >
-    <button
-      class="emotion-0 emotion-1"
-      disabled=""
-      type="button"
-    >
-      Hello
-    </button>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`Button > variant-sentiment-disabled combination > render ghost&info 1`] = `
-<DocumentFragment>
-  .emotion-0 {
+.emotion-0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2271,8 +2825,8 @@ exports[`Button > variant-sentiment-disabled combination > render ghost&info 1`]
   text-case: none;
   background: none;
   border: none;
-  color: #005da3;
-  color: #9ad4ff;
+  color: #b3144d;
+  color: #ffbbd3;
 }
 
 .emotion-0:hover {
@@ -2297,6 +2851,8 @@ exports[`Button > variant-sentiment-disabled combination > render ghost&info 1`]
   </div>
 </DocumentFragment>
 `;
+
+exports[`Button > variant-sentiment-disabled combination > render ghost&info 1`] = `[Function]`;
 
 exports[`Button > variant-sentiment-disabled combination > render ghost&info disabled 1`] = `
 <DocumentFragment>
@@ -2350,23 +2906,7 @@ exports[`Button > variant-sentiment-disabled combination > render ghost&info dis
   stroke: transparent;
 }
 
-<div
-    data-testid="testing"
-  >
-    <button
-      class="emotion-0 emotion-1"
-      disabled=""
-      type="button"
-    >
-      Hello
-    </button>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`Button > variant-sentiment-disabled combination > render ghost&neutral 1`] = `
-<DocumentFragment>
-  .emotion-0 {
+.emotion-0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2403,8 +2943,8 @@ exports[`Button > variant-sentiment-disabled combination > render ghost&neutral 
   text-case: none;
   background: none;
   border: none;
-  color: #3f4250;
-  color: #b5b7bd;
+  color: #005da3;
+  color: #9ad4ff;
 }
 
 .emotion-0:hover {
@@ -2429,6 +2969,8 @@ exports[`Button > variant-sentiment-disabled combination > render ghost&neutral 
   </div>
 </DocumentFragment>
 `;
+
+exports[`Button > variant-sentiment-disabled combination > render ghost&neutral 1`] = `[Function]`;
 
 exports[`Button > variant-sentiment-disabled combination > render ghost&neutral disabled 1`] = `
 <DocumentFragment>
@@ -2482,23 +3024,7 @@ exports[`Button > variant-sentiment-disabled combination > render ghost&neutral 
   stroke: transparent;
 }
 
-<div
-    data-testid="testing"
-  >
-    <button
-      class="emotion-0 emotion-1"
-      disabled=""
-      type="button"
-    >
-      Hello
-    </button>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`Button > variant-sentiment-disabled combination > render ghost&primary 1`] = `
-<DocumentFragment>
-  .emotion-0 {
+.emotion-0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2535,8 +3061,8 @@ exports[`Button > variant-sentiment-disabled combination > render ghost&primary 
   text-case: none;
   background: none;
   border: none;
-  color: #641cb3;
-  color: #d8c5fc;
+  color: #3f4250;
+  color: #b5b7bd;
 }
 
 .emotion-0:hover {
@@ -2561,6 +3087,8 @@ exports[`Button > variant-sentiment-disabled combination > render ghost&primary 
   </div>
 </DocumentFragment>
 `;
+
+exports[`Button > variant-sentiment-disabled combination > render ghost&primary 1`] = `[Function]`;
 
 exports[`Button > variant-sentiment-disabled combination > render ghost&primary disabled 1`] = `
 <DocumentFragment>
@@ -2614,23 +3142,7 @@ exports[`Button > variant-sentiment-disabled combination > render ghost&primary 
   stroke: transparent;
 }
 
-<div
-    data-testid="testing"
-  >
-    <button
-      class="emotion-0 emotion-1"
-      disabled=""
-      type="button"
-    >
-      Hello
-    </button>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`Button > variant-sentiment-disabled combination > render ghost&secondary 1`] = `
-<DocumentFragment>
-  .emotion-0 {
+.emotion-0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2667,8 +3179,8 @@ exports[`Button > variant-sentiment-disabled combination > render ghost&secondar
   text-case: none;
   background: none;
   border: none;
-  color: #ac22e7;
-  color: #ebbcff;
+  color: #641cb3;
+  color: #d8c5fc;
 }
 
 .emotion-0:hover {
@@ -2693,6 +3205,8 @@ exports[`Button > variant-sentiment-disabled combination > render ghost&secondar
   </div>
 </DocumentFragment>
 `;
+
+exports[`Button > variant-sentiment-disabled combination > render ghost&secondary 1`] = `[Function]`;
 
 exports[`Button > variant-sentiment-disabled combination > render ghost&secondary disabled 1`] = `
 <DocumentFragment>
@@ -2746,23 +3260,7 @@ exports[`Button > variant-sentiment-disabled combination > render ghost&secondar
   stroke: transparent;
 }
 
-<div
-    data-testid="testing"
-  >
-    <button
-      class="emotion-0 emotion-1"
-      disabled=""
-      type="button"
-    >
-      Hello
-    </button>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`Button > variant-sentiment-disabled combination > render ghost&success 1`] = `
-<DocumentFragment>
-  .emotion-0 {
+.emotion-0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2799,8 +3297,8 @@ exports[`Button > variant-sentiment-disabled combination > render ghost&success 
   text-case: none;
   background: none;
   border: none;
-  color: #22674e;
-  color: #7ee0bc;
+  color: #ac22e7;
+  color: #ebbcff;
 }
 
 .emotion-0:hover {
@@ -2825,6 +3323,8 @@ exports[`Button > variant-sentiment-disabled combination > render ghost&success 
   </div>
 </DocumentFragment>
 `;
+
+exports[`Button > variant-sentiment-disabled combination > render ghost&success 1`] = `[Function]`;
 
 exports[`Button > variant-sentiment-disabled combination > render ghost&success disabled 1`] = `
 <DocumentFragment>
@@ -2878,23 +3378,7 @@ exports[`Button > variant-sentiment-disabled combination > render ghost&success 
   stroke: transparent;
 }
 
-<div
-    data-testid="testing"
-  >
-    <button
-      class="emotion-0 emotion-1"
-      disabled=""
-      type="button"
-    >
-      Hello
-    </button>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`Button > variant-sentiment-disabled combination > render ghost&warning 1`] = `
-<DocumentFragment>
-  .emotion-0 {
+.emotion-0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2931,8 +3415,8 @@ exports[`Button > variant-sentiment-disabled combination > render ghost&warning 
   text-case: none;
   background: none;
   border: none;
-  color: #7c5400;
-  color: #ffdd5f;
+  color: #22674e;
+  color: #7ee0bc;
 }
 
 .emotion-0:hover {
@@ -2957,6 +3441,8 @@ exports[`Button > variant-sentiment-disabled combination > render ghost&warning 
   </div>
 </DocumentFragment>
 `;
+
+exports[`Button > variant-sentiment-disabled combination > render ghost&warning 1`] = `[Function]`;
 
 exports[`Button > variant-sentiment-disabled combination > render ghost&warning disabled 1`] = `
 <DocumentFragment>
@@ -3010,6 +3496,56 @@ exports[`Button > variant-sentiment-disabled combination > render ghost&warning 
   stroke: transparent;
 }
 
+.emotion-0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+  height: 3rem;
+  padding: 0 1rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.5rem;
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: not-allowed;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: Inter,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: none;
+  color: #7c5400;
+  color: #ffdd5f;
+}
+
+.emotion-0:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-0 .e1y1n78x0 {
+  stroke: transparent;
+}
+
 <div
     data-testid="testing"
   >
@@ -3024,7 +3560,9 @@ exports[`Button > variant-sentiment-disabled combination > render ghost&warning 
 </DocumentFragment>
 `;
 
-exports[`Button > variant-sentiment-disabled combination > render outlined&danger 1`] = `
+exports[`Button > variant-sentiment-disabled combination > render ghost&white 1`] = `[Function]`;
+
+exports[`Button > variant-sentiment-disabled combination > render ghost&white disabled 1`] = `
 <DocumentFragment>
   .emotion-0 {
   display: -webkit-inline-box;
@@ -3062,10 +3600,59 @@ exports[`Button > variant-sentiment-disabled combination > render outlined&dange
   paragraph-spacing: 0;
   text-case: none;
   background: none;
-  border: 1px solid #b3144d;
-  color: #b3144d;
-  color: #ffbbd3;
-  border: 1px solid #ffbbd3;
+  border: none;
+  color: #ffffff;
+  color: #b5b7bd;
+}
+
+.emotion-0:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-0 .e1y1n78x0 {
+  stroke: transparent;
+}
+
+.emotion-0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+  height: 3rem;
+  padding: 0 1rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.5rem;
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: not-allowed;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: Inter,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: none;
+  color: #ffffff;
+  color: #b5b7bd;
 }
 
 .emotion-0:hover {
@@ -3090,6 +3677,128 @@ exports[`Button > variant-sentiment-disabled combination > render outlined&dange
   </div>
 </DocumentFragment>
 `;
+
+exports[`Button > variant-sentiment-disabled combination > render outlined&black 1`] = `[Function]`;
+
+exports[`Button > variant-sentiment-disabled combination > render outlined&black disabled 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+  height: 3rem;
+  padding: 0 1rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.5rem;
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: not-allowed;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: Inter,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: 1px solid #151a2d;
+  color: #151a2d;
+  color: #b5b7bd;
+  border: 1px solid #b5b7bd;
+}
+
+.emotion-0:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-0 .e1y1n78x0 {
+  stroke: transparent;
+}
+
+.emotion-0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+  height: 3rem;
+  padding: 0 1rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.5rem;
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: not-allowed;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: Inter,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: 1px solid #151a2d;
+  color: #151a2d;
+  color: #b5b7bd;
+  border: 1px solid #b5b7bd;
+}
+
+.emotion-0:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-0 .e1y1n78x0 {
+  stroke: transparent;
+}
+
+<div
+    data-testid="testing"
+  >
+    <button
+      class="emotion-0 emotion-1"
+      disabled=""
+      type="button"
+    >
+      Hello
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Button > variant-sentiment-disabled combination > render outlined&danger 1`] = `[Function]`;
 
 exports[`Button > variant-sentiment-disabled combination > render outlined&danger disabled 1`] = `
 <DocumentFragment>
@@ -3144,23 +3853,7 @@ exports[`Button > variant-sentiment-disabled combination > render outlined&dange
   stroke: transparent;
 }
 
-<div
-    data-testid="testing"
-  >
-    <button
-      class="emotion-0 emotion-1"
-      disabled=""
-      type="button"
-    >
-      Hello
-    </button>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`Button > variant-sentiment-disabled combination > render outlined&info 1`] = `
-<DocumentFragment>
-  .emotion-0 {
+.emotion-0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -3196,10 +3889,10 @@ exports[`Button > variant-sentiment-disabled combination > render outlined&info 
   paragraph-spacing: 0;
   text-case: none;
   background: none;
-  border: 1px solid #005da3;
-  color: #005da3;
-  color: #9ad4ff;
-  border: 1px solid #9ad4ff;
+  border: 1px solid #b3144d;
+  color: #b3144d;
+  color: #ffbbd3;
+  border: 1px solid #ffbbd3;
 }
 
 .emotion-0:hover {
@@ -3224,6 +3917,8 @@ exports[`Button > variant-sentiment-disabled combination > render outlined&info 
   </div>
 </DocumentFragment>
 `;
+
+exports[`Button > variant-sentiment-disabled combination > render outlined&info 1`] = `[Function]`;
 
 exports[`Button > variant-sentiment-disabled combination > render outlined&info disabled 1`] = `
 <DocumentFragment>
@@ -3278,23 +3973,7 @@ exports[`Button > variant-sentiment-disabled combination > render outlined&info 
   stroke: transparent;
 }
 
-<div
-    data-testid="testing"
-  >
-    <button
-      class="emotion-0 emotion-1"
-      disabled=""
-      type="button"
-    >
-      Hello
-    </button>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`Button > variant-sentiment-disabled combination > render outlined&neutral 1`] = `
-<DocumentFragment>
-  .emotion-0 {
+.emotion-0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -3330,10 +4009,10 @@ exports[`Button > variant-sentiment-disabled combination > render outlined&neutr
   paragraph-spacing: 0;
   text-case: none;
   background: none;
-  border: 1px solid #b5b7bd;
-  color: #3f4250;
-  color: #b5b7bd;
-  border: 1px solid #d9dadd;
+  border: 1px solid #005da3;
+  color: #005da3;
+  color: #9ad4ff;
+  border: 1px solid #9ad4ff;
 }
 
 .emotion-0:hover {
@@ -3358,6 +4037,8 @@ exports[`Button > variant-sentiment-disabled combination > render outlined&neutr
   </div>
 </DocumentFragment>
 `;
+
+exports[`Button > variant-sentiment-disabled combination > render outlined&neutral 1`] = `[Function]`;
 
 exports[`Button > variant-sentiment-disabled combination > render outlined&neutral disabled 1`] = `
 <DocumentFragment>
@@ -3412,23 +4093,7 @@ exports[`Button > variant-sentiment-disabled combination > render outlined&neutr
   stroke: transparent;
 }
 
-<div
-    data-testid="testing"
-  >
-    <button
-      class="emotion-0 emotion-1"
-      disabled=""
-      type="button"
-    >
-      Hello
-    </button>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`Button > variant-sentiment-disabled combination > render outlined&primary 1`] = `
-<DocumentFragment>
-  .emotion-0 {
+.emotion-0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -3464,10 +4129,10 @@ exports[`Button > variant-sentiment-disabled combination > render outlined&prima
   paragraph-spacing: 0;
   text-case: none;
   background: none;
-  border: 1px solid #8c40ef;
-  color: #641cb3;
-  color: #d8c5fc;
-  border: 1px solid #d8c5fc;
+  border: 1px solid #b5b7bd;
+  color: #3f4250;
+  color: #b5b7bd;
+  border: 1px solid #d9dadd;
 }
 
 .emotion-0:hover {
@@ -3492,6 +4157,8 @@ exports[`Button > variant-sentiment-disabled combination > render outlined&prima
   </div>
 </DocumentFragment>
 `;
+
+exports[`Button > variant-sentiment-disabled combination > render outlined&primary 1`] = `[Function]`;
 
 exports[`Button > variant-sentiment-disabled combination > render outlined&primary disabled 1`] = `
 <DocumentFragment>
@@ -3546,23 +4213,7 @@ exports[`Button > variant-sentiment-disabled combination > render outlined&prima
   stroke: transparent;
 }
 
-<div
-    data-testid="testing"
-  >
-    <button
-      class="emotion-0 emotion-1"
-      disabled=""
-      type="button"
-    >
-      Hello
-    </button>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`Button > variant-sentiment-disabled combination > render outlined&secondary 1`] = `
-<DocumentFragment>
-  .emotion-0 {
+.emotion-0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -3598,10 +4249,10 @@ exports[`Button > variant-sentiment-disabled combination > render outlined&secon
   paragraph-spacing: 0;
   text-case: none;
   background: none;
-  border: 1px solid #ac22e7;
-  color: #ac22e7;
-  color: #ebbcff;
-  border: 1px solid #ebbcff;
+  border: 1px solid #8c40ef;
+  color: #641cb3;
+  color: #d8c5fc;
+  border: 1px solid #d8c5fc;
 }
 
 .emotion-0:hover {
@@ -3626,6 +4277,8 @@ exports[`Button > variant-sentiment-disabled combination > render outlined&secon
   </div>
 </DocumentFragment>
 `;
+
+exports[`Button > variant-sentiment-disabled combination > render outlined&secondary 1`] = `[Function]`;
 
 exports[`Button > variant-sentiment-disabled combination > render outlined&secondary disabled 1`] = `
 <DocumentFragment>
@@ -3680,23 +4333,7 @@ exports[`Button > variant-sentiment-disabled combination > render outlined&secon
   stroke: transparent;
 }
 
-<div
-    data-testid="testing"
-  >
-    <button
-      class="emotion-0 emotion-1"
-      disabled=""
-      type="button"
-    >
-      Hello
-    </button>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`Button > variant-sentiment-disabled combination > render outlined&success 1`] = `
-<DocumentFragment>
-  .emotion-0 {
+.emotion-0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -3732,10 +4369,10 @@ exports[`Button > variant-sentiment-disabled combination > render outlined&succe
   paragraph-spacing: 0;
   text-case: none;
   background: none;
-  border: 1px solid #22674e;
-  color: #22674e;
-  color: #7ee0bc;
-  border: 1px solid #7ee0bc;
+  border: 1px solid #ac22e7;
+  color: #ac22e7;
+  color: #ebbcff;
+  border: 1px solid #ebbcff;
 }
 
 .emotion-0:hover {
@@ -3760,6 +4397,8 @@ exports[`Button > variant-sentiment-disabled combination > render outlined&succe
   </div>
 </DocumentFragment>
 `;
+
+exports[`Button > variant-sentiment-disabled combination > render outlined&success 1`] = `[Function]`;
 
 exports[`Button > variant-sentiment-disabled combination > render outlined&success disabled 1`] = `
 <DocumentFragment>
@@ -3814,23 +4453,7 @@ exports[`Button > variant-sentiment-disabled combination > render outlined&succe
   stroke: transparent;
 }
 
-<div
-    data-testid="testing"
-  >
-    <button
-      class="emotion-0 emotion-1"
-      disabled=""
-      type="button"
-    >
-      Hello
-    </button>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`Button > variant-sentiment-disabled combination > render outlined&warning 1`] = `
-<DocumentFragment>
-  .emotion-0 {
+.emotion-0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -3866,10 +4489,10 @@ exports[`Button > variant-sentiment-disabled combination > render outlined&warni
   paragraph-spacing: 0;
   text-case: none;
   background: none;
-  border: 1px solid #7c5400;
-  color: #7c5400;
-  color: #ffdd5f;
-  border: 1px solid #ffdd5f;
+  border: 1px solid #22674e;
+  color: #22674e;
+  color: #7ee0bc;
+  border: 1px solid #7ee0bc;
 }
 
 .emotion-0:hover {
@@ -3894,6 +4517,8 @@ exports[`Button > variant-sentiment-disabled combination > render outlined&warni
   </div>
 </DocumentFragment>
 `;
+
+exports[`Button > variant-sentiment-disabled combination > render outlined&warning 1`] = `[Function]`;
 
 exports[`Button > variant-sentiment-disabled combination > render outlined&warning disabled 1`] = `
 <DocumentFragment>
@@ -3948,6 +4573,57 @@ exports[`Button > variant-sentiment-disabled combination > render outlined&warni
   stroke: transparent;
 }
 
+.emotion-0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+  height: 3rem;
+  padding: 0 1rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.5rem;
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: not-allowed;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: Inter,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: 1px solid #7c5400;
+  color: #7c5400;
+  color: #ffdd5f;
+  border: 1px solid #ffdd5f;
+}
+
+.emotion-0:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-0 .e1y1n78x0 {
+  stroke: transparent;
+}
+
 <div
     data-testid="testing"
   >
@@ -3961,3 +4637,125 @@ exports[`Button > variant-sentiment-disabled combination > render outlined&warni
   </div>
 </DocumentFragment>
 `;
+
+exports[`Button > variant-sentiment-disabled combination > render outlined&white 1`] = `[Function]`;
+
+exports[`Button > variant-sentiment-disabled combination > render outlined&white disabled 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+  height: 3rem;
+  padding: 0 1rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.5rem;
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: not-allowed;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: Inter,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  color: #b5b7bd;
+  border: 1px solid #b5b7bd;
+}
+
+.emotion-0:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-0 .e1y1n78x0 {
+  stroke: transparent;
+}
+
+.emotion-0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+  height: 3rem;
+  padding: 0 1rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.5rem;
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: not-allowed;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: Inter,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  color: #b5b7bd;
+  border: 1px solid #b5b7bd;
+}
+
+.emotion-0:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-0 .e1y1n78x0 {
+  stroke: transparent;
+}
+
+<div
+    data-testid="testing"
+  >
+    <button
+      class="emotion-0 emotion-1"
+      disabled=""
+      type="button"
+    >
+      Hello
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Button > work with onPointerDown and onKeyDown 1`] = `[Function]`;
