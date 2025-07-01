@@ -10,7 +10,7 @@ import {
   SecurityCategoryIcon,
   UseCaseCategoryIcon,
 } from '@ultraviolet/icons/category'
-import { Stack, fadeIn, fadeOut } from '@ultraviolet/ui'
+import { Stack, Tooltip, fadeIn, fadeOut } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
 import { useCallback, useEffect, useState } from 'react'
 import { Navigation, NavigationProvider, useNavigation } from '..'
@@ -101,6 +101,11 @@ const PlaygroundContent = ({ ...props }: ComponentProps<typeof Navigation>) => {
       <Navigation.PinnedItems
         toggle={pinnedItemsExpanded}
         onToggle={toggle => setPinnedItemsExpanded(!!toggle)}
+        itemWrapper={(item, id) => (
+          <Tooltip text={id} placement="top">
+            {item}
+          </Tooltip>
+        )}
       />
       <Navigation.Separator />
       <Navigation.Group label="Products">
