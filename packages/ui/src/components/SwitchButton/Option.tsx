@@ -1,7 +1,8 @@
 'use client'
 
 import styled from '@emotion/styled'
-import { ReactNode, useEffect, useRef } from 'react'
+import type { ReactNode } from 'react'
+import { useEffect, useRef } from 'react'
 import { SelectableCard } from '../SelectableCard'
 import { useSwitchButton } from './SwitchButtonContext'
 

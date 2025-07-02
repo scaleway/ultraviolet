@@ -3,6 +3,9 @@ import { SwitchButton } from '..'
 
 export default {
   component: SwitchButton,
+  subcomponents: {
+    'SwitchButton.Option': SwitchButton.Option,
+  },
   title: 'Components/Action/SwitchButton',
 } as Meta
 
