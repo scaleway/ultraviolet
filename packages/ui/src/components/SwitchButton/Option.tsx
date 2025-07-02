@@ -1,13 +1,14 @@
 'use client'
 
 import styled from '@emotion/styled'
-import { ReactNode, useEffect, useRef } from 'react'
+import type { ReactNode } from 'react'
+import { useEffect, useRef } from 'react'
 import { SelectableCard } from '../SelectableCard'
 import { useSwitchButton } from './SwitchButtonContext'
 
 const StyledSelectableCard = styled(SelectableCard, {
   shouldForwardProp: prop => !['sentiment'].includes(prop),
-})<{ sentiment: 'neutral' | 'primary' }>`
+})<{ sentiment: 'neutral' | 'primary'; disabled?: boolean }>`
   border: none;
   padding: ${({ theme }) => theme.space['1']} ${({ theme }) => theme.space['2']};
   font-weight: ${({ theme }) => theme.typography.bodyStrong.weight};
@@ -17,6 +18,7 @@ const StyledSelectableCard = styled(SelectableCard, {
   white-space: nowrap;
   background: transparent;
   height: 100%;
+  user-select: none;
 
   &:hover,
   &:active {
@@ -50,7 +52,28 @@ const StyledSelectableCard = styled(SelectableCard, {
           ? theme.colors.neutral.textHover
           : theme.colors.primary.text};
     }
-  }
+}
+
+  ${({ disabled, theme }) =>
+    disabled
+      ? `
+      &[data-disabled='true'] {
+        background: transparent;
+        border: none;
+      }
+
+      label {
+        color: ${theme.colors.neutral.textDisabled};
+      }
+
+      &:not([data-checked='true']) label {
+        &:hover {
+          background: transparent;
+          color: ${theme.colors.neutral.textDisabled};
+        }
+      }
+  `
+      : ''}
 
 `
 
@@ -58,11 +81,15 @@ type OptionProps = {
   value: string
   children: ReactNode
   'data-testid'?: string
+  disabled?: boolean
+  tooltip?: string
 }
 export const Option = ({
   value,
   children,
   'data-testid': dataTestId,
+  disabled,
+  tooltip,
 }: OptionProps) => {
   const context = useSwitchButton()
   const ref = useRef<HTMLInputElement>(null)
@@ -103,6 +130,8 @@ export const Option = ({
       data-testid={dataTestId ?? `switch-button-${value}`}
       ref={ref}
       sentiment={sentiment}
+      tooltip={tooltip}
+      disabled={disabled}
     />
   )
 }
