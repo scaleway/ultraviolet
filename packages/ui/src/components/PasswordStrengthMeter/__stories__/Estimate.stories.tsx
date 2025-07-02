@@ -15,7 +15,6 @@ type PasswordStrength = {
   score: PasswordStrengthScore
 }
 
-// eslint-disable-next-line @typescript-eslint/no-unnecessary-type-assertion
 const defaultScore = 0 as const
 const mapScoreValue = {
   unknown_score: 0,
