@@ -12,7 +12,8 @@ import { Stack } from '../Stack'
 import { Tooltip } from '../Tooltip'
 import { FocusOverlay } from './FocusOverlay'
 import { Option } from './Option'
-import { RefOptionType, SwitchButtonContext } from './SwitchButtonContext'
+import type { RefOptionType } from './SwitchButtonContext'
+import { SwitchButtonContext } from './SwitchButtonContext'
 import { FOCUS_OVERLAY_SCALE_RATIO } from './constant'
 
 const SIZES = {
