@@ -12,6 +12,7 @@ export default {
 export { Playground } from './Playground.stories'
 export { Size } from './Size.stories'
 export { Options } from './Options.stories'
+export { Disabled } from './Disabled.stories'
 export { WithIcon } from './WithIcon.stories'
 export { Sentiment } from './Sentiment.stories'
 export { OnChange } from './OnChange.stories'

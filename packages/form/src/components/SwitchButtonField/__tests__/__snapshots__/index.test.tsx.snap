@@ -98,6 +98,10 @@ exports[`SwitchButtonField > should render correctly 1`] = `
   white-space: nowrap;
   background: transparent;
   height: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .emotion-7[data-has-label='false']>:first-child {
@@ -656,6 +660,10 @@ exports[`SwitchButtonField > should works with defaultValues 1`] = `
   white-space: nowrap;
   background: transparent;
   height: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .emotion-7[data-has-label='false']>:first-child {
