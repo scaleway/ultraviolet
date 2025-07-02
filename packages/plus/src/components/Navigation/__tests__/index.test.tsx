@@ -1,4 +1,4 @@
-import { screen, waitFor } from '@testing-library/react'
+import { fireEvent, screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { UseCaseCategoryIcon } from '@ultraviolet/icons/category'
 import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
@@ -93,11 +93,11 @@ describe('Navigation', () => {
       name: 'pin',
     })[0]
 
-    await userEvent.click(pinButton)
+    fireEvent.click(pinButton)
     expect(asFragment()).toMatchSnapshot()
 
     const pinnedGroup = screen.getByTestId('pinned-group')
-    await userEvent.click(pinnedGroup)
+    fireEvent.click(pinnedGroup)
 
     expect(asFragment()).toMatchSnapshot()
 
@@ -113,7 +113,7 @@ describe('Navigation', () => {
       name: 'unpin',
     })[0]
 
-    await userEvent.click(unpinButton)
+    fireEvent.click(unpinButton)
     expect(asFragment()).toMatchSnapshot()
   })
 })
