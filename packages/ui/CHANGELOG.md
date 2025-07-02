@@ -1,5 +1,33 @@
 # Change Log
 
+## 2.0.0-beta.13
+
+### Major Changes
+
+- [#5285](https://github.com/scaleway/ultraviolet/pull/5285) [`b3873c7`](https://github.com/scaleway/ultraviolet/commit/b3873c7a0f9e77ed9b075735e0e444c1d33d21b3) Thanks [@matthprost](https://github.com/matthprost)! - ⚠️ Breaking changes:
+
+  - Removal of `<PasswordStrengthMeter />` component => replaced by `<Meter />`
+  - Dialog no long experimental
+
+### Minor Changes
+
+- [#5284](https://github.com/scaleway/ultraviolet/pull/5284) [`dac6d07`](https://github.com/scaleway/ultraviolet/commit/dac6d07a5823b6ae12b98ee9c656fab7105ccfe7) Thanks [@fabienhebert](https://github.com/fabienhebert)! - `Drawer`: new prop `noPadding` which allow to have a non padded content
+
+### Patch Changes
+
+- [#5288](https://github.com/scaleway/ultraviolet/pull/5288) [`bcb7243`](https://github.com/scaleway/ultraviolet/commit/bcb7243c8d2c6112bcc1353d052ba230323c3f34) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<SelectInput />` to display footer when there are values and hide on empty state
+
+- [#5312](https://github.com/scaleway/ultraviolet/pull/5312) [`99eb24a`](https://github.com/scaleway/ultraviolet/commit/99eb24a498e1ac2c270272fa771f0eaa1b2d4fea) Thanks [@lisalupi](https://github.com/lisalupi)! - `Modal`: disclosure onClick should work even when it changes
+
+- [#5289](https://github.com/scaleway/ultraviolet/pull/5289) [`e3570d8`](https://github.com/scaleway/ultraviolet/commit/e3570d88c8f66e89c532f545c727eccd06d5664c) Thanks [@lisalupi](https://github.com/lisalupi)! - Allow DND kit to work with `List` and `Button` :
+
+  - `List.Row` now supports "style" and "data-dragging" props ;
+  - For Security group we don't display header but the List component add to much spaces ;
+  - List.Row do not allow data-dragging prop
+  - `Button` can have props "aria-describedby", "aria-disabled", "aria-pressed", "aria-roledescription", "onPointerDown" and "onKeyDown" to work with DND kit
+
+- [#5294](https://github.com/scaleway/ultraviolet/pull/5294) [`fac72c0`](https://github.com/scaleway/ultraviolet/commit/fac72c03508fe71cb020837975b14e5dabccbfe2) Thanks [@lisalupi](https://github.com/lisalupi)! - `Expandable`: no animation on first render
+
 ## 2.0.0-beta.12
 
 ### Patch Changes
