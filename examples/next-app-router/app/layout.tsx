@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import './globals.css'
+import { ThemeRegistry } from '@ultraviolet/nextjs'
 import { consoleLightTheme } from '@ultraviolet/themes'
-import { ThemeRegistry } from '@ultraviolet/ui'
 import { ReactNode } from 'react'
 import { GlobalStyles } from './GlobalStyles'
 
