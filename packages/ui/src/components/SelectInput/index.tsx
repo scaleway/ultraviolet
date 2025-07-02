@@ -128,6 +128,11 @@ type SelectInputProps<IsMulti extends undefined | boolean = false> = {
    * If you don't know which element to target, you can use `document.body`.
    */
   portalTarget?: ComponentProps<typeof Popup>['portalTarget']
+  /**
+   * Allow to specify a callback called when option dropdown is open
+   * Please wrap that definition in useCallback
+   */
+  onOpen?: () => void
 } & Pick<
   HTMLAttributes<HTMLDivElement>,
   'id' | 'onBlur' | 'onFocus' | 'aria-label' | 'className'
@@ -180,6 +185,7 @@ export const SelectInput = <IsMulti extends undefined | boolean>({
   selectAllGroup = false,
   dropdownAlign,
   portalTarget,
+  onOpen,
 }: SelectInputProps<IsMulti>) => {
   const localId = useId()
   const finalId = id ?? localId
@@ -203,6 +209,7 @@ export const SelectInput = <IsMulti extends undefined | boolean>({
       numberOfOptions={numberOfOptions}
       onChange={onChange}
       refSelect={ref}
+      onOpen={onOpen}
     >
       <SelectInputContainer
         onBlur={onBlur}
