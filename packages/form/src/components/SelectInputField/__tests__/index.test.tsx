@@ -1,4 +1,5 @@
 import { act, fireEvent, screen } from '@testing-library/react'
+import { userEvent } from '@testing-library/user-event'
 import { renderWithForm } from '@utils/test'
 import { afterEach, beforeEach, describe, expect, test, vi } from 'vitest'
 import { SelectInputField } from '..'
@@ -50,7 +51,7 @@ describe('SelectInputField', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('should display right value on grouped options', () => {
+  test('should display right value on grouped options', async () => {
     const selectedOption = { label: 'Group Label', value: 'Group Value' }
     const options = [
       {
@@ -73,7 +74,7 @@ describe('SelectInputField', () => {
       // eslint-disable-next-line testing-library/no-node-access
     ).firstChild as HTMLElement
 
-    act(() => option.click())
+    await userEvent.click(option)
 
     // react-select works with a hidden input to handle value.
     // eslint-disable-next-line testing-library/no-node-access, testing-library/no-container
@@ -86,7 +87,7 @@ describe('SelectInputField', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('should trigger events', () => {
+  test('should trigger events', async () => {
     const onChange = vi.fn()
 
     const { asFragment } = renderWithForm(
@@ -105,7 +106,7 @@ describe('SelectInputField', () => {
       // eslint-disable-next-line testing-library/no-node-access
       screen.getByTestId('option-test-value').firstChild as HTMLElement
 
-    act(() => option.click())
+    await userEvent.click(option)
     expect(onChange).toBeCalledTimes(1)
     act(() => select.blur())
     expect(asFragment()).toMatchSnapshot()

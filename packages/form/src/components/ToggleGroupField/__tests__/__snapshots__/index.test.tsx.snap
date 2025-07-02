@@ -730,6 +730,18 @@ exports[`GroupField > should trigger events correctly with required prop 1`] = `
   cursor: not-allowed;
 }
 
+.emotion-41 {
+  color: #b3144d;
+  font-size: 0.875rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
 <div
     data-testid="testing"
   >
@@ -787,7 +799,7 @@ exports[`GroupField > should trigger events correctly with required prop 1`] = `
                   class="emotion-25 emotion-26"
                   data-checked="false"
                   data-disabled="false"
-                  data-error="false"
+                  data-error="true"
                 >
                   <input
                     aria-checked="false"
@@ -820,7 +832,7 @@ exports[`GroupField > should trigger events correctly with required prop 1`] = `
                   class="emotion-25 emotion-26"
                   data-checked="false"
                   data-disabled="false"
-                  data-error="false"
+                  data-error="true"
                 >
                   <input
                     aria-checked="false"
@@ -835,6 +847,11 @@ exports[`GroupField > should trigger events correctly with required prop 1`] = `
             </div>
           </div>
         </fieldset>
+        <p
+          class="emotion-41 emotion-11"
+        >
+          This field is required
+        </p>
       </div>
     </form>
   </div>

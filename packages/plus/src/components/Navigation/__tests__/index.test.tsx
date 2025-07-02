@@ -1,4 +1,5 @@
-import { screen, waitFor } from '@testing-library/react'
+import { fireEvent, screen, waitFor } from '@testing-library/react'
+import { userEvent } from '@testing-library/user-event'
 import { UseCaseCategoryIcon } from '@ultraviolet/icons/category'
 import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
 import type { ComponentProps } from 'react'
@@ -50,7 +51,7 @@ describe('Navigation', () => {
     const collapseButton = screen.getByRole('button', {
       name: 'Collapse sidebar',
     })
-    collapseButton.click()
+    await userEvent.click(collapseButton)
     await waitFor(() => {
       expect(
         screen.getByRole('button', { name: 'Expand sidebar' }),
@@ -61,7 +62,7 @@ describe('Navigation', () => {
     const expandButton = screen.getByRole('button', {
       name: 'Expand sidebar',
     })
-    expandButton.click()
+    await userEvent.click(expandButton)
     await waitFor(() => {
       expect(
         screen.getByRole('button', { name: 'Collapse sidebar' }),
@@ -92,11 +93,11 @@ describe('Navigation', () => {
       name: 'pin',
     })[0]
 
-    pinButton.click()
+    fireEvent.click(pinButton)
     expect(asFragment()).toMatchSnapshot()
 
     const pinnedGroup = screen.getByTestId('pinned-group')
-    pinnedGroup.click()
+    fireEvent.click(pinnedGroup)
 
     expect(asFragment()).toMatchSnapshot()
 
@@ -112,7 +113,7 @@ describe('Navigation', () => {
       name: 'unpin',
     })[0]
 
-    unpinButton.click()
+    fireEvent.click(unpinButton)
     expect(asFragment()).toMatchSnapshot()
   })
 })
