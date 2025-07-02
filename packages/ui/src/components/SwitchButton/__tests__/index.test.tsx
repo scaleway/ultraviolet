@@ -42,6 +42,21 @@ describe('SwitchButton', () => {
       </SwitchButton>,
     ))
 
+  test('renders with disabled and tooltip on SwitchButton.Option', () =>
+    shouldMatchEmotionSnapshot(
+      <SwitchButton
+        name="test"
+        onChange={() => {}}
+        value="left"
+        tooltip="tooltip"
+      >
+        <SwitchButton.Option value="left" disabled tooltip="This is disabled">
+          Left
+        </SwitchButton.Option>
+        <SwitchButton.Option value="right">Right</SwitchButton.Option>
+      </SwitchButton>,
+    ))
+
   test('renders neutral', () =>
     shouldMatchEmotionSnapshot(
       <SwitchButton
