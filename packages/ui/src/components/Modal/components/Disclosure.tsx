@@ -20,7 +20,7 @@ export const Disclosure = ({
     return () => {
       element?.removeEventListener('click', handleOpen)
     }
-  }, [handleOpen, ref])
+  }, [handleOpen, ref, disclosure])
 
   const finalDisclosure = useMemo(() => {
     if (typeof disclosure === 'function') {
