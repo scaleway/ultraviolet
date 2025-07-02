@@ -67,6 +67,7 @@ type SelectInputProviderProps<IsMulti extends boolean> = {
   onChange?: IsMulti extends true
     ? (value: string[]) => void
     : (value: string) => void
+  onOpen?: () => void
 }
 
 export const SelectInputProvider = <T extends boolean>({
@@ -79,6 +80,7 @@ export const SelectInputProvider = <T extends boolean>({
   children,
   onChange,
   refSelect,
+  onOpen,
 }: SelectInputProviderProps<T>) => {
   const currentValue = useMemo(() => {
     if (value) {
@@ -110,16 +112,15 @@ export const SelectInputProvider = <T extends boolean>({
 
   const handleDropDownVisible = useCallback(
     (newValue: boolean) => {
+      setIsDropdownVisible(newValue)
       if (newValue) {
-        setIsDropdownVisible(newValue)
-      } else {
-        setIsDropdownVisible(newValue)
-        if (refSelect) {
-          refSelect.current?.focus()
-        }
+        onOpen?.()
+      }
+      if (!newValue && refSelect) {
+        refSelect.current?.focus()
       }
     },
-    [refSelect],
+    [refSelect, onOpen],
   )
 
   const allValues: OptionType[] = useMemo(() => {
