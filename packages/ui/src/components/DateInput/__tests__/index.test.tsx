@@ -410,6 +410,7 @@ describe('DateInput', () => {
     await userEvent.click(input)
 
     await userEvent.type(input, '08/21/1995')
+    input.blur()
     expect(mockOnChange).toBeCalled()
     expect(screen.getByText('August', { exact: false })).toBeInTheDocument()
   })
@@ -429,6 +430,7 @@ describe('DateInput', () => {
     await userEvent.click(input)
 
     await userEvent.type(input, '08/21/1995')
+    input.blur()
     expect(mockOnChange).toBeCalled()
     expect(screen.getByText('August', { exact: false })).toBeInTheDocument()
   })
@@ -448,6 +450,8 @@ describe('DateInput', () => {
     await userEvent.click(input)
 
     await userEvent.type(input, '2000/08')
+    input.blur()
+
     expect(mockOnChange).toBeCalled()
     expect(screen.getByText('2000', { exact: false })).toBeInTheDocument()
   })
@@ -455,19 +459,22 @@ describe('DateInput', () => {
   test('handle correctly type in input with select range and showMonthYearPicker', async () => {
     const mockOnChange = vi.fn()
     renderWithTheme(
-      <DateInput
-        label="Date"
-        placeholder="YYYY-MM-DD"
-        selectsRange
-        showMonthYearPicker
-        onChange={mockOnChange}
-      />,
+      <>
+        <DateInput
+          label="Date"
+          placeholder="YYYY-MM-DD"
+          selectsRange
+          showMonthYearPicker
+          onChange={mockOnChange}
+        />
+        test
+      </>,
     )
 
     const input = screen.getByPlaceholderText<HTMLInputElement>('YYYY-MM-DD')
     await userEvent.click(input)
-
     await userEvent.type(input, '2000/08')
+    input.blur()
     expect(mockOnChange).toBeCalled()
     expect(screen.getByText('2000', { exact: false })).toBeInTheDocument()
   })
