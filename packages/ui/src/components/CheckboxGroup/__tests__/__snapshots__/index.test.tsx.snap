@@ -7,10 +7,6 @@ exports[`CheckboxGroup > renders correctly 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -23,6 +19,10 @@ exports[`CheckboxGroup > renders correctly 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-2 {
@@ -36,10 +36,6 @@ exports[`CheckboxGroup > renders correctly 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.75rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -52,6 +48,10 @@ exports[`CheckboxGroup > renders correctly 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.75rem;
 }
 
 .emotion-6 {
@@ -59,10 +59,6 @@ exports[`CheckboxGroup > renders correctly 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -75,6 +71,10 @@ exports[`CheckboxGroup > renders correctly 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .emotion-9 {
@@ -323,10 +323,6 @@ exports[`CheckboxGroup > renders correctly 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -342,6 +338,10 @@ exports[`CheckboxGroup > renders correctly 1`] = `
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .emotion-24 {
@@ -349,10 +349,6 @@ exports[`CheckboxGroup > renders correctly 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -368,6 +364,10 @@ exports[`CheckboxGroup > renders correctly 1`] = `
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.25rem;
 }
 
 .emotion-27 {
@@ -537,10 +537,6 @@ exports[`CheckboxGroup > renders correctly with direction row 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -553,6 +549,10 @@ exports[`CheckboxGroup > renders correctly with direction row 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-2 {
@@ -566,10 +566,6 @@ exports[`CheckboxGroup > renders correctly with direction row 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.75rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -582,6 +578,10 @@ exports[`CheckboxGroup > renders correctly with direction row 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.75rem;
 }
 
 .emotion-6 {
@@ -589,10 +589,6 @@ exports[`CheckboxGroup > renders correctly with direction row 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -605,6 +601,10 @@ exports[`CheckboxGroup > renders correctly with direction row 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .emotion-9 {
@@ -625,10 +625,6 @@ exports[`CheckboxGroup > renders correctly with direction row 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -641,6 +637,10 @@ exports[`CheckboxGroup > renders correctly with direction row 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 1rem;
 }
 
 .emotion-14 {
@@ -876,10 +876,6 @@ exports[`CheckboxGroup > renders correctly with direction row 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -895,6 +891,10 @@ exports[`CheckboxGroup > renders correctly with direction row 1`] = `
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .emotion-24 {
@@ -902,10 +902,6 @@ exports[`CheckboxGroup > renders correctly with direction row 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -921,6 +917,10 @@ exports[`CheckboxGroup > renders correctly with direction row 1`] = `
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.25rem;
 }
 
 .emotion-27 {
@@ -1090,10 +1090,6 @@ exports[`CheckboxGroup > renders correctly with error content 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -1106,6 +1102,10 @@ exports[`CheckboxGroup > renders correctly with error content 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-2 {
@@ -1119,10 +1119,6 @@ exports[`CheckboxGroup > renders correctly with error content 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.75rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -1135,6 +1131,10 @@ exports[`CheckboxGroup > renders correctly with error content 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.75rem;
 }
 
 .emotion-6 {
@@ -1142,10 +1142,6 @@ exports[`CheckboxGroup > renders correctly with error content 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -1158,6 +1154,10 @@ exports[`CheckboxGroup > renders correctly with error content 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .emotion-9 {
@@ -1406,10 +1406,6 @@ exports[`CheckboxGroup > renders correctly with error content 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -1425,6 +1421,10 @@ exports[`CheckboxGroup > renders correctly with error content 1`] = `
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .emotion-24 {
@@ -1432,10 +1432,6 @@ exports[`CheckboxGroup > renders correctly with error content 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1451,6 +1447,10 @@ exports[`CheckboxGroup > renders correctly with error content 1`] = `
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.25rem;
 }
 
 .emotion-27 {
@@ -1639,10 +1639,6 @@ exports[`CheckboxGroup > renders correctly with helper content 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -1655,6 +1651,10 @@ exports[`CheckboxGroup > renders correctly with helper content 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-2 {
@@ -1668,10 +1668,6 @@ exports[`CheckboxGroup > renders correctly with helper content 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.75rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -1684,6 +1680,10 @@ exports[`CheckboxGroup > renders correctly with helper content 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.75rem;
 }
 
 .emotion-6 {
@@ -1691,10 +1691,6 @@ exports[`CheckboxGroup > renders correctly with helper content 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -1707,6 +1703,10 @@ exports[`CheckboxGroup > renders correctly with helper content 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .emotion-9 {
@@ -1955,10 +1955,6 @@ exports[`CheckboxGroup > renders correctly with helper content 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -1974,6 +1970,10 @@ exports[`CheckboxGroup > renders correctly with helper content 1`] = `
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .emotion-24 {
@@ -1981,10 +1981,6 @@ exports[`CheckboxGroup > renders correctly with helper content 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2000,6 +1996,10 @@ exports[`CheckboxGroup > renders correctly with helper content 1`] = `
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.25rem;
 }
 
 .emotion-27 {
@@ -2186,10 +2186,6 @@ exports[`CheckboxGroup > renders correctly with no CheckboxGroup.Checkbox name 1
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -2202,6 +2198,10 @@ exports[`CheckboxGroup > renders correctly with no CheckboxGroup.Checkbox name 1
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-2 {
@@ -2215,10 +2215,6 @@ exports[`CheckboxGroup > renders correctly with no CheckboxGroup.Checkbox name 1
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.75rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -2231,6 +2227,10 @@ exports[`CheckboxGroup > renders correctly with no CheckboxGroup.Checkbox name 1
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.75rem;
 }
 
 .emotion-6 {
@@ -2238,10 +2238,6 @@ exports[`CheckboxGroup > renders correctly with no CheckboxGroup.Checkbox name 1
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -2254,6 +2250,10 @@ exports[`CheckboxGroup > renders correctly with no CheckboxGroup.Checkbox name 1
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .emotion-9 {
@@ -2502,10 +2502,6 @@ exports[`CheckboxGroup > renders correctly with no CheckboxGroup.Checkbox name 1
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -2521,6 +2517,10 @@ exports[`CheckboxGroup > renders correctly with no CheckboxGroup.Checkbox name 1
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .emotion-24 {
@@ -2528,10 +2528,6 @@ exports[`CheckboxGroup > renders correctly with no CheckboxGroup.Checkbox name 1
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2547,6 +2543,10 @@ exports[`CheckboxGroup > renders correctly with no CheckboxGroup.Checkbox name 1
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.25rem;
 }
 
 .emotion-27 {
@@ -2716,10 +2716,6 @@ exports[`CheckboxGroup > renders correctly with required prop 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -2732,6 +2728,10 @@ exports[`CheckboxGroup > renders correctly with required prop 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-2 {
@@ -2745,10 +2745,6 @@ exports[`CheckboxGroup > renders correctly with required prop 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.75rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -2761,6 +2757,10 @@ exports[`CheckboxGroup > renders correctly with required prop 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.75rem;
 }
 
 .emotion-6 {
@@ -2768,10 +2768,6 @@ exports[`CheckboxGroup > renders correctly with required prop 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -2784,6 +2780,10 @@ exports[`CheckboxGroup > renders correctly with required prop 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .emotion-8 {
@@ -2791,10 +2791,6 @@ exports[`CheckboxGroup > renders correctly with required prop 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
   -webkit-align-items: start;
   -webkit-box-align: start;
   -ms-flex-align: start;
@@ -2807,6 +2803,10 @@ exports[`CheckboxGroup > renders correctly with required prop 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.25rem;
 }
 
 .emotion-11 {
@@ -3067,10 +3067,6 @@ exports[`CheckboxGroup > renders correctly with required prop 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -3086,6 +3082,10 @@ exports[`CheckboxGroup > renders correctly with required prop 1`] = `
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .emotion-28 {
@@ -3093,10 +3093,6 @@ exports[`CheckboxGroup > renders correctly with required prop 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -3112,6 +3108,10 @@ exports[`CheckboxGroup > renders correctly with required prop 1`] = `
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.25rem;
 }
 
 .emotion-31 {

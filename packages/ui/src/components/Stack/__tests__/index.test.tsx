@@ -69,11 +69,30 @@ describe('Stack', () => {
       </Stack>,
     ))
 
-  test(`should render correctly with flex 1`, () =>
+  test(`should render different direction and gap on different viewport sizes`, () => {
     shouldMatchEmotionSnapshot(
-      <Stack flex="1">
+      <Stack
+        direction={{
+          xxsmall: 'column',
+          xsmall: 'column',
+          small: 'row',
+          medium: 'row',
+          large: 'row',
+          xlarge: 'row',
+        }}
+        gap={{
+          xxsmall: 1,
+          xsmall: 2,
+          small: 3,
+          medium: 4,
+          large: 5,
+          xlarge: 6,
+        }}
+      >
         <div>first child</div>
         <div>second child</div>
+        <div>third child</div>
       </Stack>,
-    ))
+    )
+  })
 })

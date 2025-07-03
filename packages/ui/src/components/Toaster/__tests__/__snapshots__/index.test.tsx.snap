@@ -374,10 +374,6 @@ exports[`Toaster > renders correctly with all kind of toast 5`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -391,6 +387,10 @@ exports[`Toaster > renders correctly with all kind of toast 5`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   width: 100%;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 1rem;
 }
 
 .emotion-3 {

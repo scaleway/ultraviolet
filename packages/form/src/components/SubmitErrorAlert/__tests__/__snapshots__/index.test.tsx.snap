@@ -62,10 +62,6 @@ exports[`SubmitErrorAlert > should display an alert when submitError is present 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -78,6 +74,10 @@ exports[`SubmitErrorAlert > should display an alert when submitError is present 
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.5rem;
   border-radius: 0.25rem;
   padding: 1rem;
   background-color: #ffebf2;
@@ -90,10 +90,6 @@ exports[`SubmitErrorAlert > should display an alert when submitError is present 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -105,6 +101,10 @@ exports[`SubmitErrorAlert > should display an alert when submitError is present 
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 1rem;
   -webkit-box-flex-wrap: wrap;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
@@ -117,10 +117,6 @@ exports[`SubmitErrorAlert > should display an alert when submitError is present 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
   -webkit-align-items: start;
   -webkit-box-align: start;
   -ms-flex-align: start;
@@ -136,6 +132,10 @@ exports[`SubmitErrorAlert > should display an alert when submitError is present 
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 1rem;
 }
 
 .emotion-10 {
@@ -157,10 +157,6 @@ exports[`SubmitErrorAlert > should display an alert when submitError is present 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.75rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -176,6 +172,10 @@ exports[`SubmitErrorAlert > should display an alert when submitError is present 
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.75rem;
   color: #3f4250;
   -webkit-box-flex-wrap: wrap;
   -webkit-flex-wrap: wrap;

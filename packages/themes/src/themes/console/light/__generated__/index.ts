@@ -10,7 +10,7 @@ export const lightTheme = {
     small: '1080px',
     xlarge: '1800px',
     xsmall: '720px',
-    xxsmall: '0px',
+    xxsmall: '320px',
   },
   colors: {
     danger: {

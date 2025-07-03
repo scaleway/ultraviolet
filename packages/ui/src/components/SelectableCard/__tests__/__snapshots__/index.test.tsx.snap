@@ -7,10 +7,6 @@ exports[`SelectableCard > checkbox > renders correctly with aria label 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
   -webkit-align-items: start;
   -webkit-box-align: start;
   -ms-flex-align: start;
@@ -26,6 +22,10 @@ exports[`SelectableCard > checkbox > renders correctly with aria label 1`] = `
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.25rem;
   position: relative;
   padding: 1rem;
   border-radius: 0.25rem;
@@ -89,10 +89,6 @@ exports[`SelectableCard > checkbox > renders correctly with aria label 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -105,6 +101,10 @@ exports[`SelectableCard > checkbox > renders correctly with aria label 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .emotion-2 {
@@ -112,10 +112,6 @@ exports[`SelectableCard > checkbox > renders correctly with aria label 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -128,6 +124,10 @@ exports[`SelectableCard > checkbox > renders correctly with aria label 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .emotion-5 {
@@ -408,10 +408,6 @@ exports[`SelectableCard > checkbox > renders correctly with aria label 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -425,6 +421,9 @@ exports[`SelectableCard > checkbox > renders correctly with aria label 1`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   width: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .emotion-15[data-has-label='true'] {
@@ -444,10 +443,6 @@ exports[`SelectableCard > checkbox > renders correctly with aria label 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -461,6 +456,9 @@ exports[`SelectableCard > checkbox > renders correctly with aria label 1`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   width: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .emotion-15[data-has-label='true'] {
@@ -554,10 +552,6 @@ exports[`SelectableCard > checkbox > renders correctly with checked prop 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
   -webkit-align-items: start;
   -webkit-box-align: start;
   -ms-flex-align: start;
@@ -573,6 +567,10 @@ exports[`SelectableCard > checkbox > renders correctly with checked prop 1`] = `
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.25rem;
   position: relative;
   padding: 1rem;
   border-radius: 0.25rem;
@@ -917,10 +915,6 @@ exports[`SelectableCard > checkbox > renders correctly with checked prop 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -934,6 +928,9 @@ exports[`SelectableCard > checkbox > renders correctly with checked prop 1`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   width: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .emotion-11[data-has-label='true'] {
@@ -953,10 +950,6 @@ exports[`SelectableCard > checkbox > renders correctly with checked prop 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -970,6 +963,9 @@ exports[`SelectableCard > checkbox > renders correctly with checked prop 1`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   width: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .emotion-11[data-has-label='true'] {
@@ -1063,10 +1059,6 @@ exports[`SelectableCard > checkbox > renders correctly with complex children 1`]
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: start;
   -webkit-box-align: start;
   -ms-flex-align: start;
@@ -1082,6 +1074,10 @@ exports[`SelectableCard > checkbox > renders correctly with complex children 1`]
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
   position: relative;
   padding: 1rem;
   border-radius: 0.25rem;
@@ -1145,10 +1141,6 @@ exports[`SelectableCard > checkbox > renders correctly with complex children 1`]
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: start;
   -webkit-box-align: start;
   -ms-flex-align: start;
@@ -1164,6 +1156,10 @@ exports[`SelectableCard > checkbox > renders correctly with complex children 1`]
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
   position: relative;
   padding: 1rem;
   border-radius: 0.25rem;
@@ -1504,10 +1500,6 @@ exports[`SelectableCard > checkbox > renders correctly with complex children 1`]
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -1523,6 +1515,10 @@ exports[`SelectableCard > checkbox > renders correctly with complex children 1`]
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .emotion-13 {
@@ -1530,10 +1526,6 @@ exports[`SelectableCard > checkbox > renders correctly with complex children 1`]
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1549,6 +1541,10 @@ exports[`SelectableCard > checkbox > renders correctly with complex children 1`]
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.25rem;
 }
 
 .emotion-16 {
@@ -1570,10 +1566,6 @@ exports[`SelectableCard > checkbox > renders correctly with complex children 1`]
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -1587,6 +1579,9 @@ exports[`SelectableCard > checkbox > renders correctly with complex children 1`]
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   width: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .emotion-18[data-has-label='true'] {
@@ -1606,10 +1601,6 @@ exports[`SelectableCard > checkbox > renders correctly with complex children 1`]
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -1623,6 +1614,9 @@ exports[`SelectableCard > checkbox > renders correctly with complex children 1`]
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   width: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .emotion-18[data-has-label='true'] {
@@ -1732,10 +1726,6 @@ exports[`SelectableCard > checkbox > renders correctly with default props 1`] = 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: start;
   -webkit-box-align: start;
   -ms-flex-align: start;
@@ -1751,6 +1741,10 @@ exports[`SelectableCard > checkbox > renders correctly with default props 1`] = 
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
   position: relative;
   padding: 1rem;
   border-radius: 0.25rem;
@@ -1814,10 +1808,6 @@ exports[`SelectableCard > checkbox > renders correctly with default props 1`] = 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: start;
   -webkit-box-align: start;
   -ms-flex-align: start;
@@ -1833,6 +1823,10 @@ exports[`SelectableCard > checkbox > renders correctly with default props 1`] = 
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
   position: relative;
   padding: 1rem;
   border-radius: 0.25rem;
@@ -1896,10 +1890,6 @@ exports[`SelectableCard > checkbox > renders correctly with default props 1`] = 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -1912,6 +1902,10 @@ exports[`SelectableCard > checkbox > renders correctly with default props 1`] = 
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .emotion-2 {
@@ -1919,10 +1913,6 @@ exports[`SelectableCard > checkbox > renders correctly with default props 1`] = 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -1935,6 +1925,10 @@ exports[`SelectableCard > checkbox > renders correctly with default props 1`] = 
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .emotion-5 {
@@ -2362,10 +2356,6 @@ exports[`SelectableCard > checkbox > renders correctly with default props 1`] = 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -2379,6 +2369,9 @@ exports[`SelectableCard > checkbox > renders correctly with default props 1`] = 
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   width: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .emotion-18[data-has-label='true'] {
@@ -2398,10 +2391,6 @@ exports[`SelectableCard > checkbox > renders correctly with default props 1`] = 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -2415,6 +2404,9 @@ exports[`SelectableCard > checkbox > renders correctly with default props 1`] = 
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   width: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .emotion-18[data-has-label='true'] {
@@ -2513,10 +2505,6 @@ exports[`SelectableCard > checkbox > renders correctly with disabled prop 1`] = 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
   -webkit-align-items: start;
   -webkit-box-align: start;
   -ms-flex-align: start;
@@ -2532,6 +2520,10 @@ exports[`SelectableCard > checkbox > renders correctly with disabled prop 1`] = 
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.25rem;
   position: relative;
   padding: 1rem;
   border-radius: 0.25rem;
@@ -2876,10 +2868,6 @@ exports[`SelectableCard > checkbox > renders correctly with disabled prop 1`] = 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -2893,6 +2881,9 @@ exports[`SelectableCard > checkbox > renders correctly with disabled prop 1`] = 
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   width: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .emotion-11[data-has-label='true'] {
@@ -2912,10 +2903,6 @@ exports[`SelectableCard > checkbox > renders correctly with disabled prop 1`] = 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -2929,6 +2916,9 @@ exports[`SelectableCard > checkbox > renders correctly with disabled prop 1`] = 
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   width: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .emotion-11[data-has-label='true'] {
@@ -3021,10 +3011,6 @@ exports[`SelectableCard > checkbox > renders correctly with illustration 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: start;
   -webkit-box-align: start;
   -ms-flex-align: start;
@@ -3040,6 +3026,10 @@ exports[`SelectableCard > checkbox > renders correctly with illustration 1`] = `
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
   position: relative;
   padding: 1rem;
   border-radius: 0.25rem;
@@ -3103,10 +3093,6 @@ exports[`SelectableCard > checkbox > renders correctly with illustration 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: start;
   -webkit-box-align: start;
   -ms-flex-align: start;
@@ -3122,6 +3108,10 @@ exports[`SelectableCard > checkbox > renders correctly with illustration 1`] = `
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
   position: relative;
   padding: 1rem;
   border-radius: 0.25rem;
@@ -3185,10 +3175,6 @@ exports[`SelectableCard > checkbox > renders correctly with illustration 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
   -webkit-align-items: stretch;
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
@@ -3204,6 +3190,9 @@ exports[`SelectableCard > checkbox > renders correctly with illustration 1`] = `
   -ms-flex: 1;
   flex: 1;
   width: 100%;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .emotion-4 {
@@ -3211,10 +3200,6 @@ exports[`SelectableCard > checkbox > renders correctly with illustration 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -3227,6 +3212,9 @@ exports[`SelectableCard > checkbox > renders correctly with illustration 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   padding: 1rem;
   max-width: calc(100% - 10rem);
   -webkit-flex: 0 1 auto;
@@ -3512,10 +3500,6 @@ exports[`SelectableCard > checkbox > renders correctly with illustration 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -3531,6 +3515,10 @@ exports[`SelectableCard > checkbox > renders correctly with illustration 1`] = `
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .emotion-17 {
@@ -3538,10 +3526,6 @@ exports[`SelectableCard > checkbox > renders correctly with illustration 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -3557,6 +3541,10 @@ exports[`SelectableCard > checkbox > renders correctly with illustration 1`] = `
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.25rem;
 }
 
 .emotion-20 {
@@ -3578,10 +3566,6 @@ exports[`SelectableCard > checkbox > renders correctly with illustration 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -3595,6 +3579,9 @@ exports[`SelectableCard > checkbox > renders correctly with illustration 1`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   width: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .emotion-22[data-has-label='true'] {
@@ -3614,10 +3601,6 @@ exports[`SelectableCard > checkbox > renders correctly with illustration 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -3631,6 +3614,9 @@ exports[`SelectableCard > checkbox > renders correctly with illustration 1`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   width: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .emotion-22[data-has-label='true'] {
@@ -3650,10 +3636,6 @@ exports[`SelectableCard > checkbox > renders correctly with illustration 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -3666,6 +3648,9 @@ exports[`SelectableCard > checkbox > renders correctly with illustration 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .emotion-26 {
@@ -3811,10 +3796,6 @@ exports[`SelectableCard > checkbox > renders correctly with isError prop 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: start;
   -webkit-box-align: start;
   -ms-flex-align: start;
@@ -3830,6 +3811,10 @@ exports[`SelectableCard > checkbox > renders correctly with isError prop 1`] = `
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
   position: relative;
   padding: 1rem;
   border-radius: 0.25rem;
@@ -3893,10 +3878,6 @@ exports[`SelectableCard > checkbox > renders correctly with isError prop 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: start;
   -webkit-box-align: start;
   -ms-flex-align: start;
@@ -3912,6 +3893,10 @@ exports[`SelectableCard > checkbox > renders correctly with isError prop 1`] = `
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
   position: relative;
   padding: 1rem;
   border-radius: 0.25rem;
@@ -4252,10 +4237,6 @@ exports[`SelectableCard > checkbox > renders correctly with isError prop 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -4271,6 +4252,10 @@ exports[`SelectableCard > checkbox > renders correctly with isError prop 1`] = `
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .emotion-13 {
@@ -4278,10 +4263,6 @@ exports[`SelectableCard > checkbox > renders correctly with isError prop 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -4297,6 +4278,10 @@ exports[`SelectableCard > checkbox > renders correctly with isError prop 1`] = `
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.25rem;
 }
 
 .emotion-16 {
@@ -4318,10 +4303,6 @@ exports[`SelectableCard > checkbox > renders correctly with isError prop 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -4335,6 +4316,9 @@ exports[`SelectableCard > checkbox > renders correctly with isError prop 1`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   width: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .emotion-18[data-has-label='true'] {
@@ -4354,10 +4338,6 @@ exports[`SelectableCard > checkbox > renders correctly with isError prop 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -4371,6 +4351,9 @@ exports[`SelectableCard > checkbox > renders correctly with isError prop 1`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   width: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .emotion-18[data-has-label='true'] {
@@ -4478,10 +4461,6 @@ exports[`SelectableCard > checkbox > renders correctly with productIcon 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: start;
   -webkit-box-align: start;
   -ms-flex-align: start;
@@ -4497,6 +4476,10 @@ exports[`SelectableCard > checkbox > renders correctly with productIcon 1`] = `
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
   position: relative;
   padding: 1rem;
   border-radius: 0.25rem;
@@ -4560,10 +4543,6 @@ exports[`SelectableCard > checkbox > renders correctly with productIcon 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: start;
   -webkit-box-align: start;
   -ms-flex-align: start;
@@ -4579,6 +4558,10 @@ exports[`SelectableCard > checkbox > renders correctly with productIcon 1`] = `
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
   position: relative;
   padding: 1rem;
   border-radius: 0.25rem;
@@ -4642,10 +4625,6 @@ exports[`SelectableCard > checkbox > renders correctly with productIcon 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
   -webkit-align-items: stretch;
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
@@ -4661,6 +4640,9 @@ exports[`SelectableCard > checkbox > renders correctly with productIcon 1`] = `
   -ms-flex: 1;
   flex: 1;
   width: 100%;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .emotion-4 {
@@ -4668,10 +4650,6 @@ exports[`SelectableCard > checkbox > renders correctly with productIcon 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -4684,6 +4662,9 @@ exports[`SelectableCard > checkbox > renders correctly with productIcon 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   padding: 1rem;
   max-width: calc(100% - 10rem);
   -webkit-flex: 0 1 auto;
@@ -4969,10 +4950,6 @@ exports[`SelectableCard > checkbox > renders correctly with productIcon 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -4988,6 +4965,10 @@ exports[`SelectableCard > checkbox > renders correctly with productIcon 1`] = `
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .emotion-17 {
@@ -4995,10 +4976,6 @@ exports[`SelectableCard > checkbox > renders correctly with productIcon 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -5014,6 +4991,10 @@ exports[`SelectableCard > checkbox > renders correctly with productIcon 1`] = `
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.25rem;
 }
 
 .emotion-20 {
@@ -5035,10 +5016,6 @@ exports[`SelectableCard > checkbox > renders correctly with productIcon 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -5052,6 +5029,9 @@ exports[`SelectableCard > checkbox > renders correctly with productIcon 1`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   width: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .emotion-22[data-has-label='true'] {
@@ -5071,10 +5051,6 @@ exports[`SelectableCard > checkbox > renders correctly with productIcon 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -5088,6 +5064,9 @@ exports[`SelectableCard > checkbox > renders correctly with productIcon 1`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   width: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .emotion-22[data-has-label='true'] {
@@ -5107,10 +5086,6 @@ exports[`SelectableCard > checkbox > renders correctly with productIcon 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -5123,6 +5098,9 @@ exports[`SelectableCard > checkbox > renders correctly with productIcon 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .emotion-26 {
@@ -5295,10 +5273,6 @@ exports[`SelectableCard > checkbox > renders correctly with showTick 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
   -webkit-align-items: start;
   -webkit-box-align: start;
   -ms-flex-align: start;
@@ -5314,6 +5288,10 @@ exports[`SelectableCard > checkbox > renders correctly with showTick 1`] = `
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.25rem;
   position: relative;
   padding: 1rem;
   border-radius: 0.25rem;
@@ -5650,10 +5628,6 @@ exports[`SelectableCard > checkbox > renders correctly with showTick 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -5667,6 +5641,9 @@ exports[`SelectableCard > checkbox > renders correctly with showTick 1`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   width: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .emotion-11[data-has-label='true'] {
@@ -5686,10 +5663,6 @@ exports[`SelectableCard > checkbox > renders correctly with showTick 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -5703,6 +5676,9 @@ exports[`SelectableCard > checkbox > renders correctly with showTick 1`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   width: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .emotion-11[data-has-label='true'] {
@@ -5795,10 +5771,6 @@ exports[`SelectableCard > checkbox > renders correctly with tooltip prop 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -5814,6 +5786,9 @@ exports[`SelectableCard > checkbox > renders correctly with tooltip prop 1`] = `
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .emotion-2 {
@@ -5833,10 +5808,6 @@ exports[`SelectableCard > checkbox > renders correctly with tooltip prop 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: start;
   -webkit-box-align: start;
   -ms-flex-align: start;
@@ -5852,6 +5823,10 @@ exports[`SelectableCard > checkbox > renders correctly with tooltip prop 1`] = `
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
   position: relative;
   padding: 1rem;
   border-radius: 0.25rem;
@@ -5915,10 +5890,6 @@ exports[`SelectableCard > checkbox > renders correctly with tooltip prop 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: start;
   -webkit-box-align: start;
   -ms-flex-align: start;
@@ -5934,6 +5905,10 @@ exports[`SelectableCard > checkbox > renders correctly with tooltip prop 1`] = `
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
   position: relative;
   padding: 1rem;
   border-radius: 0.25rem;
@@ -6274,10 +6249,6 @@ exports[`SelectableCard > checkbox > renders correctly with tooltip prop 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -6293,6 +6264,10 @@ exports[`SelectableCard > checkbox > renders correctly with tooltip prop 1`] = `
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .emotion-17 {
@@ -6300,10 +6275,6 @@ exports[`SelectableCard > checkbox > renders correctly with tooltip prop 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -6319,6 +6290,10 @@ exports[`SelectableCard > checkbox > renders correctly with tooltip prop 1`] = `
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.25rem;
 }
 
 .emotion-20 {
@@ -6340,10 +6315,6 @@ exports[`SelectableCard > checkbox > renders correctly with tooltip prop 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -6357,6 +6328,9 @@ exports[`SelectableCard > checkbox > renders correctly with tooltip prop 1`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   width: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .emotion-22[data-has-label='true'] {
@@ -6376,10 +6350,6 @@ exports[`SelectableCard > checkbox > renders correctly with tooltip prop 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -6393,6 +6363,9 @@ exports[`SelectableCard > checkbox > renders correctly with tooltip prop 1`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   width: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .emotion-22[data-has-label='true'] {
@@ -6510,10 +6483,6 @@ exports[`SelectableCard > radio > renders correctly with aria label 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
   -webkit-align-items: start;
   -webkit-box-align: start;
   -ms-flex-align: start;
@@ -6529,6 +6498,10 @@ exports[`SelectableCard > radio > renders correctly with aria label 1`] = `
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.25rem;
   position: relative;
   padding: 1rem;
   border-radius: 0.25rem;
@@ -6592,10 +6565,6 @@ exports[`SelectableCard > radio > renders correctly with aria label 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -6608,6 +6577,10 @@ exports[`SelectableCard > radio > renders correctly with aria label 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .emotion-5 {
@@ -6814,10 +6787,6 @@ exports[`SelectableCard > radio > renders correctly with aria label 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -6831,6 +6800,9 @@ exports[`SelectableCard > radio > renders correctly with aria label 1`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   width: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .emotion-15[data-has-label='true'] {
@@ -6924,10 +6896,6 @@ exports[`SelectableCard > radio > renders correctly with checked prop 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
   -webkit-align-items: start;
   -webkit-box-align: start;
   -ms-flex-align: start;
@@ -6943,6 +6911,10 @@ exports[`SelectableCard > radio > renders correctly with checked prop 1`] = `
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.25rem;
   position: relative;
   padding: 1rem;
   border-radius: 0.25rem;
@@ -7006,10 +6978,6 @@ exports[`SelectableCard > radio > renders correctly with checked prop 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -7022,6 +6990,10 @@ exports[`SelectableCard > radio > renders correctly with checked prop 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .emotion-5 {
@@ -7228,10 +7200,6 @@ exports[`SelectableCard > radio > renders correctly with checked prop 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -7245,6 +7213,9 @@ exports[`SelectableCard > radio > renders correctly with checked prop 1`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   width: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .emotion-15[data-has-label='true'] {
@@ -7339,10 +7310,6 @@ exports[`SelectableCard > radio > renders correctly with complex children 1`] = 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: start;
   -webkit-box-align: start;
   -ms-flex-align: start;
@@ -7358,6 +7325,10 @@ exports[`SelectableCard > radio > renders correctly with complex children 1`] = 
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
   position: relative;
   padding: 1rem;
   border-radius: 0.25rem;
@@ -7421,10 +7392,6 @@ exports[`SelectableCard > radio > renders correctly with complex children 1`] = 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -7437,6 +7404,10 @@ exports[`SelectableCard > radio > renders correctly with complex children 1`] = 
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .emotion-5 {
@@ -7654,10 +7625,6 @@ exports[`SelectableCard > radio > renders correctly with complex children 1`] = 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -7671,6 +7638,9 @@ exports[`SelectableCard > radio > renders correctly with complex children 1`] = 
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   width: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .emotion-18[data-has-label='true'] {
@@ -7773,10 +7743,6 @@ exports[`SelectableCard > radio > renders correctly with default props 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: start;
   -webkit-box-align: start;
   -ms-flex-align: start;
@@ -7792,6 +7758,10 @@ exports[`SelectableCard > radio > renders correctly with default props 1`] = `
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
   position: relative;
   padding: 1rem;
   border-radius: 0.25rem;
@@ -7855,10 +7825,6 @@ exports[`SelectableCard > radio > renders correctly with default props 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -7871,6 +7837,10 @@ exports[`SelectableCard > radio > renders correctly with default props 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .emotion-5 {
@@ -8088,10 +8058,6 @@ exports[`SelectableCard > radio > renders correctly with default props 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -8105,6 +8071,9 @@ exports[`SelectableCard > radio > renders correctly with default props 1`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   width: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .emotion-18[data-has-label='true'] {
@@ -8203,10 +8172,6 @@ exports[`SelectableCard > radio > renders correctly with disabled prop 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
   -webkit-align-items: start;
   -webkit-box-align: start;
   -ms-flex-align: start;
@@ -8222,6 +8187,10 @@ exports[`SelectableCard > radio > renders correctly with disabled prop 1`] = `
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.25rem;
   position: relative;
   padding: 1rem;
   border-radius: 0.25rem;
@@ -8285,10 +8254,6 @@ exports[`SelectableCard > radio > renders correctly with disabled prop 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -8301,6 +8266,10 @@ exports[`SelectableCard > radio > renders correctly with disabled prop 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .emotion-5 {
@@ -8507,10 +8476,6 @@ exports[`SelectableCard > radio > renders correctly with disabled prop 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -8524,6 +8489,9 @@ exports[`SelectableCard > radio > renders correctly with disabled prop 1`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   width: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .emotion-15[data-has-label='true'] {
@@ -8617,10 +8585,6 @@ exports[`SelectableCard > radio > renders correctly with illustration 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: start;
   -webkit-box-align: start;
   -ms-flex-align: start;
@@ -8636,6 +8600,10 @@ exports[`SelectableCard > radio > renders correctly with illustration 1`] = `
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
   position: relative;
   padding: 1rem;
   border-radius: 0.25rem;
@@ -8699,10 +8667,6 @@ exports[`SelectableCard > radio > renders correctly with illustration 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
   -webkit-align-items: stretch;
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
@@ -8718,6 +8682,9 @@ exports[`SelectableCard > radio > renders correctly with illustration 1`] = `
   -ms-flex: 1;
   flex: 1;
   width: 100%;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .emotion-4 {
@@ -8725,10 +8692,6 @@ exports[`SelectableCard > radio > renders correctly with illustration 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -8741,6 +8704,9 @@ exports[`SelectableCard > radio > renders correctly with illustration 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   padding: 1rem;
   max-width: calc(100% - 10rem);
   -webkit-flex: 0 1 auto;
@@ -8753,10 +8719,6 @@ exports[`SelectableCard > radio > renders correctly with illustration 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -8769,6 +8731,10 @@ exports[`SelectableCard > radio > renders correctly with illustration 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .emotion-9 {
@@ -8982,10 +8948,6 @@ exports[`SelectableCard > radio > renders correctly with illustration 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -8999,6 +8961,9 @@ exports[`SelectableCard > radio > renders correctly with illustration 1`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   width: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .emotion-22[data-has-label='true'] {
@@ -9018,10 +8983,6 @@ exports[`SelectableCard > radio > renders correctly with illustration 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -9034,6 +8995,9 @@ exports[`SelectableCard > radio > renders correctly with illustration 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .emotion-26 {
@@ -9172,10 +9136,6 @@ exports[`SelectableCard > radio > renders correctly with isError prop 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: start;
   -webkit-box-align: start;
   -ms-flex-align: start;
@@ -9191,6 +9151,10 @@ exports[`SelectableCard > radio > renders correctly with isError prop 1`] = `
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
   position: relative;
   padding: 1rem;
   border-radius: 0.25rem;
@@ -9254,10 +9218,6 @@ exports[`SelectableCard > radio > renders correctly with isError prop 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -9270,6 +9230,10 @@ exports[`SelectableCard > radio > renders correctly with isError prop 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .emotion-5 {
@@ -9487,10 +9451,6 @@ exports[`SelectableCard > radio > renders correctly with isError prop 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -9504,6 +9464,9 @@ exports[`SelectableCard > radio > renders correctly with isError prop 1`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   width: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .emotion-18[data-has-label='true'] {
@@ -9604,10 +9567,6 @@ exports[`SelectableCard > radio > renders correctly with productIcon 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: start;
   -webkit-box-align: start;
   -ms-flex-align: start;
@@ -9623,6 +9582,10 @@ exports[`SelectableCard > radio > renders correctly with productIcon 1`] = `
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
   position: relative;
   padding: 1rem;
   border-radius: 0.25rem;
@@ -9686,10 +9649,6 @@ exports[`SelectableCard > radio > renders correctly with productIcon 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
   -webkit-align-items: stretch;
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
@@ -9705,6 +9664,9 @@ exports[`SelectableCard > radio > renders correctly with productIcon 1`] = `
   -ms-flex: 1;
   flex: 1;
   width: 100%;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .emotion-4 {
@@ -9712,10 +9674,6 @@ exports[`SelectableCard > radio > renders correctly with productIcon 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -9728,6 +9686,9 @@ exports[`SelectableCard > radio > renders correctly with productIcon 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   padding: 1rem;
   max-width: calc(100% - 10rem);
   -webkit-flex: 0 1 auto;
@@ -9740,10 +9701,6 @@ exports[`SelectableCard > radio > renders correctly with productIcon 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -9756,6 +9713,10 @@ exports[`SelectableCard > radio > renders correctly with productIcon 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .emotion-9 {
@@ -9969,10 +9930,6 @@ exports[`SelectableCard > radio > renders correctly with productIcon 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -9986,6 +9943,9 @@ exports[`SelectableCard > radio > renders correctly with productIcon 1`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   width: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .emotion-22[data-has-label='true'] {
@@ -10005,10 +9965,6 @@ exports[`SelectableCard > radio > renders correctly with productIcon 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -10021,6 +9977,9 @@ exports[`SelectableCard > radio > renders correctly with productIcon 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .emotion-26 {
@@ -10186,10 +10145,6 @@ exports[`SelectableCard > radio > renders correctly with showTick 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
   -webkit-align-items: start;
   -webkit-box-align: start;
   -ms-flex-align: start;
@@ -10205,6 +10160,10 @@ exports[`SelectableCard > radio > renders correctly with showTick 1`] = `
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.25rem;
   position: relative;
   padding: 1rem;
   border-radius: 0.25rem;
@@ -10268,10 +10227,6 @@ exports[`SelectableCard > radio > renders correctly with showTick 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -10284,6 +10239,10 @@ exports[`SelectableCard > radio > renders correctly with showTick 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .emotion-5 {
@@ -10482,10 +10441,6 @@ exports[`SelectableCard > radio > renders correctly with showTick 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -10499,6 +10454,9 @@ exports[`SelectableCard > radio > renders correctly with showTick 1`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   width: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .emotion-15[data-has-label='true'] {
@@ -10592,10 +10550,6 @@ exports[`SelectableCard > radio > renders correctly with tooltip prop 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -10611,6 +10565,9 @@ exports[`SelectableCard > radio > renders correctly with tooltip prop 1`] = `
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .emotion-2 {
@@ -10630,10 +10587,6 @@ exports[`SelectableCard > radio > renders correctly with tooltip prop 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: start;
   -webkit-box-align: start;
   -ms-flex-align: start;
@@ -10649,6 +10602,10 @@ exports[`SelectableCard > radio > renders correctly with tooltip prop 1`] = `
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
   position: relative;
   padding: 1rem;
   border-radius: 0.25rem;
@@ -10712,10 +10669,6 @@ exports[`SelectableCard > radio > renders correctly with tooltip prop 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -10728,6 +10681,10 @@ exports[`SelectableCard > radio > renders correctly with tooltip prop 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .emotion-9 {
@@ -10945,10 +10902,6 @@ exports[`SelectableCard > radio > renders correctly with tooltip prop 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -10962,6 +10915,9 @@ exports[`SelectableCard > radio > renders correctly with tooltip prop 1`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   width: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .emotion-22[data-has-label='true'] {

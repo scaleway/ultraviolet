@@ -7,10 +7,6 @@ exports[`Stack > should render correctly max width 100% 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -24,6 +20,9 @@ exports[`Stack > should render correctly max width 100% 1`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   max-width: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 <div
@@ -50,10 +49,6 @@ exports[`Stack > should render correctly min width 100% 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -67,6 +62,9 @@ exports[`Stack > should render correctly min width 100% 1`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   min-width: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 <div
@@ -93,10 +91,6 @@ exports[`Stack > should render correctly with alignCenter 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -109,6 +103,9 @@ exports[`Stack > should render correctly with alignCenter 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 <div
@@ -135,10 +132,6 @@ exports[`Stack > should render correctly with default props 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -151,6 +144,9 @@ exports[`Stack > should render correctly with default props 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 <div
@@ -173,51 +169,6 @@ exports[`Stack > should render correctly with default props 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Stack > should render correctly with flex 1 1`] = `
-<DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-
-<div
-    data-testid="testing"
-  >
-    <div
-      class="emotion-0 emotion-1"
-    >
-      <div>
-        first child
-      </div>
-      <div>
-        second child
-      </div>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
 exports[`Stack > should render correctly with row direction 1`] = `
 <DocumentFragment>
   .emotion-0 {
@@ -225,10 +176,6 @@ exports[`Stack > should render correctly with row direction 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -241,6 +188,9 @@ exports[`Stack > should render correctly with row direction 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 <div
@@ -270,10 +220,6 @@ exports[`Stack > should render correctly with width 100% 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -287,6 +233,9 @@ exports[`Stack > should render correctly with width 100% 1`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   width: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 <div
@@ -313,10 +262,6 @@ exports[`Stack > should render correctly with wrap as boolean 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -329,6 +274,9 @@ exports[`Stack > should render correctly with wrap as boolean 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 <div
@@ -355,10 +303,6 @@ exports[`Stack > should render correctly with wrap as string 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -371,6 +315,9 @@ exports[`Stack > should render correctly with wrap as string 1`] = `
   -webkit-flex-wrap: wrap-reverse;
   -ms-flex-wrap: wrap-reverse;
   flex-wrap: wrap-reverse;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 <div
@@ -384,6 +331,131 @@ exports[`Stack > should render correctly with wrap as string 1`] = `
       </div>
       <div>
         second child
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Stack > should render different direction and gap on different viewport sizes 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+@media (min-width: 320px) {
+  .emotion-0 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 720px) {
+  .emotion-0 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 1080px) {
+  .emotion-0 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 1280px) {
+  .emotion-0 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 1440px) {
+  .emotion-0 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 1800px) {
+  .emotion-0 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 320px) {
+  .emotion-0 {
+    gap: 0.5rem;
+  }
+}
+
+@media (min-width: 720px) {
+  .emotion-0 {
+    gap: 1rem;
+  }
+}
+
+@media (min-width: 1080px) {
+  .emotion-0 {
+    gap: 1.5rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .emotion-0 {
+    gap: 2rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .emotion-0 {
+    gap: 2.5rem;
+  }
+}
+
+@media (min-width: 1800px) {
+  .emotion-0 {
+    gap: 3rem;
+  }
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+    >
+      <div>
+        first child
+      </div>
+      <div>
+        second child
+      </div>
+      <div>
+        third child
       </div>
     </div>
   </div>
