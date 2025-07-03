@@ -12,10 +12,6 @@ type CopyButtonProps = {
   copyText?: string
   copiedText?: string
   sentiment?: 'primary' | 'neutral'
-  /**
-   * @deprecated Use `bordered` instead
-   */
-  noBorder?: boolean
   bordered?: boolean
   className?: string
   'data-testid'?: string
@@ -32,7 +28,6 @@ export const CopyButton = ({
   copyText = 'Copy',
   copiedText = 'Copied!',
   sentiment = 'primary',
-  noBorder,
   bordered,
   className,
   children,
@@ -52,7 +47,7 @@ export const CopyButton = ({
       }}
       size={size}
       sentiment={sentiment}
-      variant={noBorder || !bordered ? 'ghost' : 'outlined'}
+      variant={!bordered ? 'ghost' : 'outlined'}
       className={className}
       data-testid={dataTestId}
       aria-label="Copy"

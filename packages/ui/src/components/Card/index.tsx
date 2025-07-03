@@ -14,10 +14,6 @@ type CardProps = {
   header?: ReactNode
   subHeader?: ReactNode
   /**
-   * @deprecated use `active` property instead
-   */
-  isActive?: boolean
-  /**
    * active enable a primary style on Card component for when you need to highlight it.
    */
   active?: boolean
@@ -57,7 +53,6 @@ export const Card = forwardRef(
       header,
       subHeader,
       disabled = false,
-      isActive = false,
       active = false,
       children,
       className,
@@ -86,10 +81,7 @@ export const Card = forwardRef(
         ) : (
           header
         )}
-        <BorderedBox
-          data-is-active={isActive || active}
-          data-disabled={disabled}
-        >
+        <BorderedBox data-is-active={active} data-disabled={disabled}>
           {subHeader ? (
             <Stack gap={2}>
               {typeof subHeader === 'string' ? (
@@ -113,7 +105,7 @@ export const Card = forwardRef(
       </StyledStack>
     ) : (
       <BorderedBox
-        data-is-active={active || isActive}
+        data-is-active={active}
         data-disabled={disabled}
         className={className}
         data-testid={dataTestId}
