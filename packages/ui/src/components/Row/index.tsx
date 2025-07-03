@@ -28,11 +28,31 @@ export const StyledRow = styled('div', {
     justifyContent = 'normal',
     padding,
   }) => `
-    grid-template-columns: ${templateColumns};
+
     ${
-      gap
-        ? `gap: ${theme.space[gap as keyof UltravioletUITheme['space']]};`
-        : ''
+      typeof templateColumns === 'object'
+        ? Object.entries(templateColumns)
+            .map(
+              ([breakpoint, value]) =>
+                `@media (min-width: ${theme.breakpoints[breakpoint as keyof UltravioletUITheme['breakpoints']]}) {
+                  grid-template-columns: ${value};
+                }`,
+            )
+            .join(' ')
+        : `grid-template-columns: ${templateColumns};`
+    }
+
+    ${
+      gap && typeof gap === 'object'
+        ? Object.entries(gap)
+            .map(
+              ([breakpoint, value]) =>
+                `@media (min-width: ${theme.breakpoints[breakpoint as keyof UltravioletUITheme['breakpoints']]}) {
+                gap: ${theme.space[value.toString() as keyof UltravioletUITheme['space']]};
+              }`,
+            )
+            .join(' ')
+        : `gap: ${gap ? theme.space[gap as keyof UltravioletUITheme['space']] : ''};`
     }
     align-items: ${alignItems};
     justify-content: ${justifyContent};
@@ -44,8 +64,18 @@ type RowProps = {
   className?: string
   'data-testid'?: string
   children: ReactNode
-  templateColumns: string
-  gap?: keyof UltravioletUITheme['space'] | number
+  templateColumns:
+    | string
+    | Partial<Record<keyof UltravioletUITheme['breakpoints'], string>>
+  gap?:
+    | keyof UltravioletUITheme['space']
+    | number
+    | Partial<
+        Record<
+          keyof UltravioletUITheme['breakpoints'],
+          keyof UltravioletUITheme['space'] | number
+        >
+      >
   alignItems?: CSSProperties['alignItems']
   justifyContent?: CSSProperties['justifyContent']
   padding?: CSSProperties['padding']

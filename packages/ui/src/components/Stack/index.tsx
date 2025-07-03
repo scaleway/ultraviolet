@@ -5,8 +5,19 @@ import type { CSSProperties, ReactNode } from 'react'
 import type { UltravioletUITheme } from '../../theme'
 
 type StackProps = {
-  gap?: keyof UltravioletUITheme['space'] | number
-  direction?: 'row' | 'column'
+  gap?:
+    | keyof UltravioletUITheme['space']
+    | number
+    | Partial<
+        Record<
+          keyof UltravioletUITheme['breakpoints'],
+          keyof UltravioletUITheme['space'] | number
+        >
+      >
+  direction?:
+    | 'row'
+    | 'column'
+    | Partial<Record<keyof UltravioletUITheme['breakpoints'], 'row' | 'column'>>
   alignItems?: CSSProperties['alignItems']
   justifyContent?: CSSProperties['justifyContent']
   wrap?: boolean | CSSProperties['flexWrap']
@@ -42,7 +53,7 @@ export const Stack = styled('div', {
 
   ${({
     theme,
-    gap = 0,
+    gap,
     direction = 'column',
     alignItems = 'normal',
     justifyContent = 'normal',
@@ -52,8 +63,6 @@ export const Stack = styled('div', {
     minWidth,
     flex,
   }) => `
-    gap: ${theme.space[gap as keyof UltravioletUITheme['space']]};
-    flex-direction: ${direction};
     align-items: ${alignItems};
     justify-content: ${justifyContent};
     flex-wrap: ${typeof wrap === 'boolean' ? 'wrap' : wrap};
@@ -61,5 +70,31 @@ export const Stack = styled('div', {
     ${width ? `width: ${width};` : ''}
     ${maxWidth ? `max-width: ${maxWidth};` : ''}
     ${minWidth ? `min-width: ${minWidth};` : ''}
+
+    ${
+      direction && typeof direction === 'object'
+        ? Object.entries(direction)
+            .map(
+              ([breakpoint, value]) =>
+                `@media (min-width: ${theme.breakpoints[breakpoint as keyof UltravioletUITheme['breakpoints']]}) {
+                flex-direction: ${value};
+              }`,
+            )
+            .join(' ')
+        : `flex-direction: ${direction};`
+    }
+
+    ${
+      gap && typeof gap === 'object'
+        ? Object.entries(gap)
+            .map(
+              ([breakpoint, value]) =>
+                `@media (min-width: ${theme.breakpoints[breakpoint as keyof UltravioletUITheme['breakpoints']]}) {
+                gap: ${theme.space[value.toString() as keyof UltravioletUITheme['space']]};
+              }`,
+            )
+            .join(' ')
+        : `gap: ${gap ? theme.space[gap as keyof UltravioletUITheme['space']] : ''};`
+    }
   `}
 `
