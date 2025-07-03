@@ -11,5 +11,5 @@ Deprecated props removed:
     - prop "variant" removed: only one variant possible now
     - prop "tags" removed -> use "value" instead
 
-- `Toaser`: variant "info" removed
+- `Toaster`: variant "info" removed
 
