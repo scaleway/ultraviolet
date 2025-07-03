@@ -1,6 +1,5 @@
 'use client'
 
-import type { PropsWithRef } from 'react'
 import { cloneElement, isValidElement, useEffect, useMemo } from 'react'
 import type { DisclosureProps } from '../types'
 
@@ -26,11 +25,8 @@ export const Disclosure = ({
     if (typeof disclosure === 'function') {
       return disclosure({
         visible,
-        onClose: handleClose,
         toggle,
-        onOpen: handleOpen,
         modalId: id,
-        hide: handleClose,
         close: handleClose,
         show: handleOpen,
       })
@@ -47,5 +43,5 @@ export const Disclosure = ({
     ref,
     'aria-controls': id,
     'aria-haspopup': 'dialog',
-  } as unknown as PropsWithRef<typeof disclosure>)
+  } as unknown as typeof disclosure)
 }

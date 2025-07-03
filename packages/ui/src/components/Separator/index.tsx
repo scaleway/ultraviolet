@@ -12,8 +12,7 @@ type StyledIconProps = {
 }
 
 const StyledIconWrapper = styled('div', {
-  shouldForwardProp: prop =>
-    !['direction', 'color', 'sentiment'].includes(prop),
+  shouldForwardProp: prop => !['direction', 'sentiment'].includes(prop),
 })<StyledIconProps>`
   display: flex;
   flex-direction: ${({ direction }) =>
@@ -51,10 +50,6 @@ const StyledHr = styled('hr', {
 type SeparatorProps = {
   direction?: Direction
   thickness?: number
-  /**
-   * @deprecated Use `sentiment` instead
-   */
-  color?: Color
   sentiment?: Color
   className?: string
   'data-testid'?: string
@@ -67,7 +62,6 @@ type SeparatorProps = {
 export const Separator = ({
   direction = 'horizontal',
   thickness = 1,
-  color = 'neutral',
   sentiment = 'neutral',
   className,
   'data-testid': dataTestId,
@@ -81,12 +75,10 @@ export const Separator = ({
       className={className}
       data-testid={dataTestId}
       sentiment={sentiment}
-      color={color}
     >
       <StyledHr
         direction={direction}
         thickness={thickness}
-        color={color}
         sentiment={sentiment}
         hasIcon
       />
@@ -94,7 +86,6 @@ export const Separator = ({
       <StyledHr
         direction={direction}
         thickness={thickness}
-        color={color}
         sentiment={sentiment}
         hasIcon
       />
@@ -105,7 +96,6 @@ export const Separator = ({
       aria-orientation={direction}
       direction={direction}
       thickness={thickness}
-      color={color}
       sentiment={sentiment}
       className={className}
       data-testid={dataTestId}

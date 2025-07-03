@@ -13,10 +13,7 @@ describe('Separator', () => {
   test(`renders correctly horizontally`, () =>
     shouldMatchEmotionSnapshot(<Separator direction="horizontal" />))
 
-  test(`renders correctly with custom color`, () =>
-    shouldMatchEmotionSnapshot(<Separator color="primary" />))
-
-  test(`renders correctly with custom color`, () =>
+  test(`renders correctly with custom sentiment`, () =>
     shouldMatchEmotionSnapshot(<Separator sentiment="primary" />))
 
   test(`renders correctly with custom icon`, () =>

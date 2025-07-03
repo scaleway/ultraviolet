@@ -12,8 +12,8 @@ describe('RadioField', () => {
         name="radio"
         legend="Label"
       >
-        <RadioGroupField.Radio name="value-1" value="value-1" label="Radio 1" />
-        <RadioGroupField.Radio name="value-2" value="value-2" label="Radio 2" />
+        <RadioGroupField.Radio value="value-1" label="Radio 1" />
+        <RadioGroupField.Radio value="value-2" label="Radio 2" />
       </RadioGroupField>,
     )
     const [firstInput, secondInput] = screen.getAllByRole('radio', {
@@ -37,8 +37,8 @@ describe('RadioField', () => {
         onChange={onChange}
         legend="RadioGroupField events"
       >
-        <RadioGroupField.Radio name="value-1" value="value-1" label="Radio 1" />
-        <RadioGroupField.Radio name="value-2" value="value-2" label="Radio 2" />
+        <RadioGroupField.Radio value="value-1" label="Radio 1" />
+        <RadioGroupField.Radio value="value-2" label="Radio 2" />
       </RadioGroupField>,
     )
     const input = screen.getAllByRole('radio', { hidden: true })[0]

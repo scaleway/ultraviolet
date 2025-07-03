@@ -222,21 +222,9 @@ export const Demo = () => {
                     setRadioState(event.target.value)
                   }
                 >
-                  <RadioGroup.Radio
-                    value="option-1"
-                    name="option-1"
-                    label="Version 1.3.0"
-                  />
-                  <RadioGroup.Radio
-                    value="option-2"
-                    name="option-2"
-                    label="Version 1.2.0"
-                  />
-                  <RadioGroup.Radio
-                    value="option-3"
-                    name="option-3"
-                    label="Version 1.1.0"
-                  />
+                  <RadioGroup.Radio value="option-1" label="Version 1.3.0" />
+                  <RadioGroup.Radio value="option-2" label="Version 1.2.0" />
+                  <RadioGroup.Radio value="option-3" label="Version 1.1.0" />
                 </RadioGroup>
               </Stack>
             </Card>

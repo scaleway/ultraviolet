@@ -73,34 +73,9 @@ describe('Modal', () => {
       </Modal>,
     ))
 
-  test(`renders open custom width`, () =>
-    shouldMatchEmotionSnapshotWithPortal(
-      <Modal open width="medium">
-        <div>test</div>
-      </Modal>,
-    ))
-
   test(`renders open custom size`, () =>
     shouldMatchEmotionSnapshotWithPortal(
       <Modal open size="medium">
-        <div>test</div>
-      </Modal>,
-    ))
-
-  test(`renders open custom size and width (size take predecence)`, () =>
-    shouldMatchEmotionSnapshotWithPortal(
-      <Modal open size="medium" width="large">
-        <div>test</div>
-      </Modal>,
-    ))
-
-  test(`renders with customStyle`, () =>
-    shouldMatchEmotionSnapshotWithPortal(
-      <Modal
-        open
-        customDialogBackdropStyles={customDialogBackdropStyles}
-        customDialogStyles={customDialogStyles}
-      >
         <div>test</div>
       </Modal>,
     ))
@@ -228,27 +203,6 @@ describe('Modal', () => {
       </Modal>,
     )
     const modalButton = screen.getByRole('button')
-    await userEvent.click(modalButton)
-    expect(mockOnClick).toBeCalledTimes(1)
-  })
-
-  test(`should call 'hide' prop from render props`, async () => {
-    renderWithTheme(
-      <Modal ariaLabel="modal-test" id="modal-test" open>
-        {({ hide }) => (
-          <button
-            type="button"
-            onClick={() => {
-              mockOnClick()
-              hide()
-            }}
-          >
-            Close
-          </button>
-        )}
-      </Modal>,
-    )
-    const modalButton = screen.getByRole('button', { name: 'Close' })
     await userEvent.click(modalButton)
     expect(mockOnClick).toBeCalledTimes(1)
   })

@@ -6,7 +6,7 @@ import type { CSSProperties, ElementType, ReactNode } from 'react'
 import { useRef } from 'react'
 import recursivelyGetChildrenString from '../../helpers/recursivelyGetChildrenString'
 import { useIsOverflowing } from '../../hooks/useIsOverflowing'
-import type { Color, ExtendedColor } from '../../theme'
+import type { ExtendedColor } from '../../theme'
 import { typography } from '../../theme'
 import capitalize from '../../utils/capitalize'
 import { Tooltip } from '../Tooltip'
@@ -73,7 +73,15 @@ const generateStyles = ({
       : undefined
 
   return `
-    ${sentiment ? `color: ${!isSentimentMonochrome ? textColor : theme.colors.other.monochrome[sentiment].text};` : ''}
+    ${
+      sentiment
+        ? `color: ${
+            !isSentimentMonochrome
+              ? textColor
+              : theme.colors.other.monochrome[sentiment].text
+          };`
+        : ''
+    }
 
     font-size: ${theme.typography[variant].fontSize};
     font-family: ${theme.typography[variant].fontFamily};
@@ -103,10 +111,6 @@ type TextProps = {
   children: ReactNode
   placement?: PlacementProps
   variant: TextVariant
-  /**
-   * @deprecated use `sentiment` property instead
-   */
-  color?: Color
   sentiment?: ExtendedColor
   prominence?: ProminenceProps
   as: ElementType
@@ -159,7 +163,6 @@ export const Text = ({
   variant,
   children,
   as,
-  color,
   sentiment,
   oneLine = false,
   placement,
@@ -176,7 +179,6 @@ export const Text = ({
   'data-testid': dataTestId,
   'aria-hidden': ariaHidden,
 }: TextProps) => {
-  const computedSentiment = sentiment ?? color
   const elementRef = useRef(null)
   const isOverflowing = useIsOverflowing(elementRef)
 
@@ -189,7 +191,7 @@ export const Text = ({
         as={as}
         placement={placement}
         prominence={prominence}
-        sentiment={computedSentiment}
+        sentiment={sentiment}
         variant={variant}
         oneLine={oneLine}
         className={className}
