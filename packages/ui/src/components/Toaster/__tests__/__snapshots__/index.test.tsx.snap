@@ -268,7 +268,7 @@ exports[`Toaster > renders correctly with all kind of toast 1`] = `
 <span
   class="emotion-0 emotion-1"
 >
-  This is an info
+  This is a success
 </span>
 `;
 
@@ -287,7 +287,7 @@ exports[`Toaster > renders correctly with all kind of toast 2`] = `
 <span
   class="emotion-0 emotion-1"
 >
-  This is a success
+  This is an error
 </span>
 `;
 
@@ -306,30 +306,11 @@ exports[`Toaster > renders correctly with all kind of toast 3`] = `
 <span
   class="emotion-0 emotion-1"
 >
-  This is an error
-</span>
-`;
-
-exports[`Toaster > renders correctly with all kind of toast 4`] = `
-.emotion-0 {
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-<span
-  class="emotion-0 emotion-1"
->
   This is a warning
 </span>
 `;
 
-exports[`Toaster > renders correctly with all kind of toast 5`] = `
+exports[`Toaster > renders correctly with all kind of toast 4`] = `
 <DocumentFragment>
   .emotion-0 {
   border-radius: 0.25rem;
@@ -439,7 +420,7 @@ exports[`Toaster > renders correctly with all kind of toast 5`] = `
   line-height: 1.25rem;
   paragraph-spacing: 0;
   text-case: none;
-  background: #0078d2;
+  background: #2c8564;
   border: none;
   color: #ffffff;
   background: none;
@@ -453,7 +434,7 @@ exports[`Toaster > renders correctly with all kind of toast 5`] = `
 }
 
 .emotion-6:active {
-  box-shadow: 0px 0px 0px 3px #71c2ff40;
+  box-shadow: 0px 0px 0px 3px #45d19f40;
 }
 
 .emotion-6 .e1y1n78x0 {
@@ -462,7 +443,7 @@ exports[`Toaster > renders correctly with all kind of toast 5`] = `
 
 .emotion-6:hover,
 .emotion-6:active {
-  background: #0071c5;
+  background: #297c5e;
   color: #f9f9fa;
 }
 
@@ -522,7 +503,7 @@ exports[`Toaster > renders correctly with all kind of toast 5`] = `
   line-height: 1.25rem;
   paragraph-spacing: 0;
   text-case: none;
-  background: #2c8564;
+  background: #e51963;
   border: none;
   color: #ffffff;
   background: none;
@@ -536,7 +517,7 @@ exports[`Toaster > renders correctly with all kind of toast 5`] = `
 }
 
 .emotion-16:active {
-  box-shadow: 0px 0px 0px 3px #45d19f40;
+  box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
 .emotion-16 .e1y1n78x0 {
@@ -545,7 +526,7 @@ exports[`Toaster > renders correctly with all kind of toast 5`] = `
 
 .emotion-16:hover,
 .emotion-16:active {
-  background: #297c5e;
+  background: #d6175c;
   color: #f9f9fa;
 }
 
@@ -591,9 +572,9 @@ exports[`Toaster > renders correctly with all kind of toast 5`] = `
   line-height: 1.25rem;
   paragraph-spacing: 0;
   text-case: none;
-  background: #e51963;
+  background: #fbc600;
   border: none;
-  color: #ffffff;
+  color: #222638;
   background: none;
   margin: auto;
   margin-left: 0.5rem;
@@ -605,7 +586,7 @@ exports[`Toaster > renders correctly with all kind of toast 5`] = `
 }
 
 .emotion-26:active {
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
+  box-shadow: 0px 0px 0px 3px #fbc60040;
 }
 
 .emotion-26 .e1y1n78x0 {
@@ -614,81 +595,12 @@ exports[`Toaster > renders correctly with all kind of toast 5`] = `
 
 .emotion-26:hover,
 .emotion-26:active {
-  background: #d6175c;
-  color: #f9f9fa;
-}
-
-.emotion-26:hover,
-.emotion-26:active {
-  background: none;
-  box-shadow: none;
-  border: none;
-}
-
-.emotion-36 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 1.5rem;
-  padding: 0 0.25rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.25rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: #fbc600;
-  border: none;
-  color: #222638;
-  background: none;
-  margin: auto;
-  margin-left: 0.5rem;
-}
-
-.emotion-36:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-36:active {
-  box-shadow: 0px 0px 0px 3px #fbc60040;
-}
-
-.emotion-36 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-36:hover,
-.emotion-36:active {
   background: #ebb200;
   color: #151a2d;
 }
 
-.emotion-36:hover,
-.emotion-36:active {
+.emotion-26:hover,
+.emotion-26:active {
   background: none;
   box-shadow: none;
   border: none;
@@ -711,55 +623,6 @@ exports[`Toaster > renders correctly with all kind of toast 5`] = `
         tabindex="-1"
       >
         <div
-          class="Toastify__toast Toastify__toast-theme--light Toastify__toast--info emotion-0 Toastify--animate Toastify__slide-enter--top-right Toastify__toast--stacked"
-          data-collapsed="true"
-          data-in="true"
-          data-pos="top"
-          id="info"
-          role="alert"
-          style="--y: 0px; --g: 12; --s: 0.925;"
-          tabindex="0"
-        >
-          <div
-            class="emotion-1 emotion-2"
-          >
-            <span
-              class="emotion-3 emotion-4"
-            >
-              This is an info
-            </span>
-          </div>
-          <button
-            aria-label="close"
-            class="emotion-5 emotion-6 emotion-7"
-            type="button"
-          >
-            <svg
-              class="emotion-8 emotion-9"
-              viewBox="0 0 16 16"
-            >
-              <path
-                d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"
-              />
-            </svg>
-          </button>
-          <div
-            class="Toastify__progress-bar--wrp"
-            data-hidden="true"
-          >
-            <div
-              class="Toastify__progress-bar--bg Toastify__progress-bar-theme--light Toastify__progress-bar--info"
-            />
-            <div
-              aria-hidden="true"
-              aria-label="notification timer"
-              class="Toastify__progress-bar Toastify__progress-bar--animated Toastify__progress-bar-theme--light Toastify__progress-bar--info"
-              role="progressbar"
-              style="animation-duration: 6000ms; animation-play-state: paused;"
-            />
-          </div>
-        </div>
-        <div
           class="Toastify__toast Toastify__toast-theme--light Toastify__toast--success emotion-0 Toastify--animate Toastify__slide-enter--top-right Toastify__toast--stacked"
           data-collapsed="true"
           data-in="true"
@@ -780,7 +643,7 @@ exports[`Toaster > renders correctly with all kind of toast 5`] = `
           </div>
           <button
             aria-label="close"
-            class="emotion-5 emotion-16 emotion-7"
+            class="emotion-5 emotion-6 emotion-7"
             type="button"
           >
             <svg
@@ -829,7 +692,7 @@ exports[`Toaster > renders correctly with all kind of toast 5`] = `
           </div>
           <button
             aria-label="close"
-            class="emotion-5 emotion-26 emotion-7"
+            class="emotion-5 emotion-16 emotion-7"
             type="button"
           >
             <svg
@@ -877,7 +740,7 @@ exports[`Toaster > renders correctly with all kind of toast 5`] = `
           </div>
           <button
             aria-label="close"
-            class="emotion-5 emotion-36 emotion-7"
+            class="emotion-5 emotion-26 emotion-7"
             type="button"
           >
             <svg
