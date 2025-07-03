@@ -2,22 +2,20 @@ import { shouldMatchEmotionSnapshot } from '@utils/test'
 import { describe, test } from 'vitest'
 import type { ProminenceProps } from '..'
 import { Link, PROMINENCES } from '..'
-import type { Color } from '../../../theme'
-import { SENTIMENTS } from '../../../theme'
 
 describe('Link', () => {
   test(`render correctly with no sentiment`, () =>
     shouldMatchEmotionSnapshot(<Link href="/">Hello</Link>))
 
   describe('sentiment', () => {
-    test.each(SENTIMENTS.map(sentiment => [`render ${sentiment}`, sentiment]))(
-      '%s',
-      (_, sentiment) =>
-        shouldMatchEmotionSnapshot(
-          <Link href="/" sentiment={sentiment as Color}>
-            Hello
-          </Link>,
-        ),
+    test.each(
+      ['primary', 'info'].map(sentiment => [`render ${sentiment}`, sentiment]),
+    )('%s', (_, sentiment) =>
+      shouldMatchEmotionSnapshot(
+        <Link href="/" sentiment={sentiment as 'primary' | 'info'}>
+          Hello
+        </Link>,
+      ),
     )
   })
 

@@ -27,9 +27,7 @@ const LinkToaster = () => (
     width="100%"
   >
     Personal data updated.
-    <Toast.Link href="https://scaleway.com" sentiment="neutral">
-      Reload
-    </Toast.Link>
+    <Toast.Link href="https://scaleway.com">Reload</Toast.Link>
   </Stack>
 )
 

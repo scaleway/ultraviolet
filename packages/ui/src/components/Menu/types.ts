@@ -6,7 +6,6 @@ import type {
   Ref,
 } from 'react'
 import type { Popup } from '../Popup'
-import type { SIZES } from './constants'
 
 type ChildMenuProps = {
   toggle: () => void
@@ -36,18 +35,10 @@ export type MenuProps = {
   'data-testid'?: string
   maxHeight?: string
   /**
-   * @deprecated: use `size` instead
-   */
-  maxWidth?: string
-  /**
    * By default, the portal target is children container or document.body if children is a function. You can override this
    * behavior by setting a portalTarget prop.
    */
   portalTarget?: HTMLElement
-  /**
-   * @deprecated The size of the menu is automatic now to fit the content. Use this prop to set a fixed size.
-   */
-  size?: keyof typeof SIZES
   /**
    * The behavior of the menu when it is opened. If set to `click`, the menu will open when the user clicks on the disclosure.
    * If set to `hover`, the menu will open when the user hovers over the disclosure.

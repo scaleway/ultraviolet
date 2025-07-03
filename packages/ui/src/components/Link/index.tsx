@@ -16,7 +16,6 @@ import type {
 } from 'react'
 import { forwardRef, useEffect, useMemo, useRef, useState } from 'react'
 import recursivelyGetChildrenString from '../../helpers/recursivelyGetChildrenString'
-import type { ExtendedColor } from '../../theme'
 import capitalize from '../../utils/capitalize'
 import { Tooltip } from '../Tooltip'
 
@@ -38,12 +37,6 @@ export const PROMINENCES = {
 }
 
 export type ProminenceProps = keyof typeof PROMINENCES
-type SupportedSentiments = 'primary'
-
-/**
- * @deprecated Only `primary` is supported
- */
-type DeprecatedSentiments = Exclude<ExtendedColor, SupportedSentiments>
 
 type LinkSizes = 'large' | 'small' | 'xsmall'
 type LinkIconPosition = 'left' | 'right'
@@ -51,11 +44,7 @@ type LinkProps = {
   children: ReactNode
   target?: HTMLAttributeAnchorTarget
   download?: string | boolean
-  /**
-   * **Only sentiment `primary` is supported.**
-   * All the other sentiments are deprecated
-   */
-  sentiment?: SupportedSentiments | DeprecatedSentiments
+  sentiment?: 'primary' | 'info'
   prominence?: ProminenceProps
   size?: LinkSizes
   iconPosition?: LinkIconPosition
@@ -83,7 +72,7 @@ const StyledLink = styled('a', {
   shouldForwardProp: prop =>
     !['sentiment', 'iconPosition', 'as', 'oneLine'].includes(prop),
 })<{
-  sentiment: ExtendedColor
+  sentiment: 'primary' | 'info'
   prominence?: ProminenceProps
   variant: 'captionStrong' | 'bodySmallStrong' | 'bodyStrong'
   iconPosition?: LinkIconPosition
@@ -93,17 +82,11 @@ const StyledLink = styled('a', {
   border: none;
   padding: 0;
   color: ${({ theme, sentiment, prominence }) => {
-    const isMonochrome = sentiment === 'white' || sentiment === 'black'
+    const definedProminence = capitalize(PROMINENCES[prominence ?? 'default'])
+    const themeColor = theme.colors[sentiment]
+    const text = `text${definedProminence}` as keyof typeof themeColor
 
-    if (!isMonochrome) {
-      const definedProminence = capitalize(PROMINENCES[prominence ?? 'default'])
-      const themeColor = theme.colors[sentiment]
-      const text = `text${definedProminence}` as keyof typeof themeColor
-
-      return theme.colors[sentiment]?.[text] ?? theme.colors.neutral.text
-    }
-
-    return theme.colors.other.monochrome[sentiment].text
+    return theme.colors[sentiment]?.[text] ?? theme.colors.neutral.text
   }};
   text-decoration: underline;
   text-decoration-thickness: 1px;
@@ -171,30 +154,19 @@ const StyledLink = styled('a', {
     text-decoration: underline;
     text-decoration-thickness: 1px;
     ${({ theme, sentiment, prominence }) => {
-      const isMonochrome = sentiment === 'white' || sentiment === 'black'
+      const definedProminence = capitalize(PROMINENCES[prominence ?? 'default'])
 
-      if (!isMonochrome) {
-        const definedProminence = capitalize(
-          PROMINENCES[prominence ?? 'default'],
-        )
+      const themeColor = theme.colors[sentiment]
 
-        const themeColor = theme.colors[sentiment]
+      const text = `text${definedProminence}Hover` as keyof typeof themeColor
 
-        const text = `text${definedProminence}Hover` as keyof typeof themeColor
-
-        return `
+      return `
         color: ${
           theme.colors[sentiment]?.[text] ?? theme.colors.neutral.textHover
         };
         text-decoration-color: ${
           theme.colors[sentiment]?.[text] ?? theme.colors.neutral.textHover
         };`
-      }
-
-      return `
-        color: ${theme.colors.other.monochrome[sentiment].textHover};
-        text-decoration-color: ${theme.colors.other.monochrome[sentiment].textHover};
-      `
     }}
 
     &:visited {
@@ -220,15 +192,8 @@ const StyledLink = styled('a', {
 
   &:hover::after,
   &:focus::after {
-    background-color: ${({ theme, sentiment }) => {
-      const isMonochrome = sentiment === 'white' || sentiment === 'black'
-
-      if (!isMonochrome) {
-        return theme.colors[sentiment]?.text ?? theme.colors.neutral.text
-      }
-
-      return theme.colors.other.monochrome[sentiment].text
-    }};
+    background-color: ${({ theme, sentiment }) =>
+      theme.colors[sentiment]?.text ?? theme.colors.neutral.text};
   }
 
   &:active {
