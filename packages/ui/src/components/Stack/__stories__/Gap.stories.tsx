@@ -7,7 +7,7 @@ Gap.parameters = {
   docs: {
     description: {
       story:
-        'prop `Gap` define the spacing between each child based on theme.space. Default value : 0/none',
+        'prop `gap` define the spacing between each child based on `theme.space`.',
     },
   },
 }

@@ -1,11 +1,3 @@
-const screens = {
-  xsmall: 0,
-  small: 576,
-  medium: 768,
-  large: 992,
-  xlarge: 1200,
-}
-
 const fontWeightMap = {
   Regular: 400,
   Medium: 500,
@@ -75,7 +67,6 @@ export const generateThemeCss = ({
   filename,
 }: { uvTheme: UvThemeType; filename: string }) =>
   `:root.${filename}-theme {\n${
-    createCssVariables('screen', screens) +
     createCssVariables('color', uvTheme.colors) +
     createCssVariables('radius', uvTheme.radii) +
     createCssVariables('shadow', uvTheme.shadows) +

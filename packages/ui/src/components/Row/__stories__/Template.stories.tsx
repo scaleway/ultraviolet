@@ -1,16 +1,19 @@
-import styled from '@emotion/styled'
 import type { StoryFn } from '@storybook/react'
 import { Row } from '..'
-
-const DivWithBackground = styled.div`
-  background: ${({ theme }) => theme.colors.primary.background};
-  color: ${({ theme }) => theme.colors.primary.text};
-`
+import { Stack } from '../../Stack'
+import { DivWithBackground } from './DivWithBackground'
 
 export const Template: StoryFn<typeof Row> = ({ ...props }) => (
-  <Row {...props} templateColumns="3fr 6fr 3fr">
-    <DivWithBackground>3fr | 3/12</DivWithBackground>
-    <DivWithBackground>6fr | 6/12</DivWithBackground>
-    <DivWithBackground>3fr | 3/12</DivWithBackground>
-  </Row>
+  <Stack gap={1}>
+    <Row gap={1} {...props} templateColumns="3fr 6fr 3fr">
+      <DivWithBackground data-sentiment="primary">3fr</DivWithBackground>
+      <DivWithBackground data-sentiment="success">6fr</DivWithBackground>
+      <DivWithBackground data-sentiment="danger">3fr</DivWithBackground>
+    </Row>
+    <Row gap={1} {...props} templateColumns="4fr 3fr 4fr">
+      <DivWithBackground data-sentiment="primary">4fr</DivWithBackground>
+      <DivWithBackground data-sentiment="success">3fr</DivWithBackground>
+      <DivWithBackground data-sentiment="danger">4fr</DivWithBackground>
+    </Row>
+  </Stack>
 )
