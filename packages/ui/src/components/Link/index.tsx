@@ -65,6 +65,7 @@ type LinkProps = {
   // For react router shouldn't be used directly
   onClick?: MouseEventHandler<HTMLAnchorElement>
   'aria-label'?: string
+  'aria-current'?: AnchorHTMLAttributes<HTMLAnchorElement>['aria-current']
   oneLine?: boolean
   'data-testid'?: string
   variant?: 'inline' | 'standalone'
@@ -254,6 +255,7 @@ export const Link = forwardRef(
       className,
       onClick,
       'aria-label': ariaLabel,
+      'aria-current': ariaCurrent,
       oneLine = false,
       'data-testid': dataTestId,
       variant = 'standalone',
@@ -299,6 +301,7 @@ export const Link = forwardRef(
           oneLine={oneLine}
           data-testid={dataTestId}
           data-variant={variant}
+          aria-current={ariaCurrent}
         >
           {!isBlank && iconPosition === 'left' ? (
             <StyledArrowLeftIcon size={ICON_SIZE} />
