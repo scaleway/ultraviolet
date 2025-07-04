@@ -151,6 +151,7 @@ export const DateInput = <IsRange extends undefined | boolean>({
   )
   const [hoveredDate, setHoveredDate] = useState<Date | null>(null)
   const refInput = useRef<HTMLInputElement>(null)
+  const popupRef = useRef<HTMLDivElement>(null)
   const MONTHS = getMonths(locale)
   const DAYS = getDays(locale)
   const MONTHS_ARR = getLocalizedMonths(locale)
@@ -276,6 +277,7 @@ export const DateInput = <IsRange extends undefined | boolean>({
         onClick={() => {
           if (!isPopupVisible) setVisible(true)
         }}
+        ref={popupRef}
       >
         {input === 'text' ? (
           <CalendarPopup
