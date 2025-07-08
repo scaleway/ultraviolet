@@ -98,7 +98,7 @@ export const SwitchButton = ({
     setLocalValue(value)
     setWidth(getElement(value)?.offsetWidth ?? 0)
     setPosition(getPosition(getElement(value)))
-  }, [getElement, refOptions, value])
+  }, [getElement, refOptions, value, children])
 
   const handleOnChange = useCallback(
     (event: ChangeEvent<HTMLInputElement>) => {
