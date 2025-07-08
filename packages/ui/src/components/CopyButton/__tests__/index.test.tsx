@@ -30,14 +30,11 @@ describe('CopyButton', () => {
       ))
   })
 
-  test('renders correctly with no border', () =>
-    shouldMatchEmotionSnapshot(<CopyButton value="Test" noBorder />))
+  test('renders correctly with bordered', () =>
+    shouldMatchEmotionSnapshot(<CopyButton value="Test" bordered />))
 
   test('renders correctly with children', () =>
     shouldMatchEmotionSnapshot(<CopyButton value="Test">Copy test</CopyButton>))
-
-  test('renders correctly with bordered', () =>
-    shouldMatchEmotionSnapshot(<CopyButton value="Test" bordered />))
 
   test('renders correctly with custom copy text', () =>
     shouldMatchEmotionSnapshot(<CopyButton value="Test" copyText="Copy me" />))
