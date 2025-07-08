@@ -1,5 +1,27 @@
 # Change Log
 
+## 2.0.0-beta.14
+
+### Major Changes
+
+- [#5306](https://github.com/scaleway/ultraviolet/pull/5306) [`80e0af3`](https://github.com/scaleway/ultraviolet/commit/80e0af3b006b51bf83e49581d84eab9eb94bc4c7) Thanks [@lisalupi](https://github.com/lisalupi)! - **BREAKING CHANGES**
+
+  Deprecated props removed:
+
+  - `Card`: prop "isActive" removed -> use "active" instead
+  - `Checkbox`: props "progress" and "size" removed
+  - `CopyButton`: prop "noBorder" removed -> use "bordered" instead
+
+### Minor Changes
+
+- [#5271](https://github.com/scaleway/ultraviolet/pull/5271) [`a3f9b52`](https://github.com/scaleway/ultraviolet/commit/a3f9b520dce181d481e8230b271cda7e0b730e86) Thanks [@fabienhebert](https://github.com/fabienhebert)! - `SelectInput`: add a `onOpen` prop
+
+### Patch Changes
+
+- [#5323](https://github.com/scaleway/ultraviolet/pull/5323) [`fe3e1c1`](https://github.com/scaleway/ultraviolet/commit/fe3e1c1aae01dd0af0f6b9f10a5d9dbcb591cc29) Thanks [@matthprost](https://github.com/matthprost)! - Add `aria-current` to `<Link />` component
+
+- [#5313](https://github.com/scaleway/ultraviolet/pull/5313) [`a8108ff`](https://github.com/scaleway/ultraviolet/commit/a8108ff2c2fad133172d30db5aa3dcb0e9e42e17) Thanks [@matthprost](https://github.com/matthprost)! - Add `disabled` on `<SwitchButton.Option />`
+
 ## 2.0.0-beta.13
 
 ### Major Changes

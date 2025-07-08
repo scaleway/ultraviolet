@@ -1,5 +1,14 @@
 # @ultraviolet/plus
 
+## 1.0.0-beta.14
+
+### Patch Changes
+
+- [#5334](https://github.com/scaleway/ultraviolet/pull/5334) [`21907b0`](https://github.com/scaleway/ultraviolet/commit/21907b05bf352b91d6f8a5173a0b21ca2a85bc66) Thanks [@lisalupi](https://github.com/lisalupi)! - `OrderSummary`: add prop "additionalInfo"
+
+- Updated dependencies [[`fe3e1c1`](https://github.com/scaleway/ultraviolet/commit/fe3e1c1aae01dd0af0f6b9f10a5d9dbcb591cc29), [`80e0af3`](https://github.com/scaleway/ultraviolet/commit/80e0af3b006b51bf83e49581d84eab9eb94bc4c7), [`a3f9b52`](https://github.com/scaleway/ultraviolet/commit/a3f9b520dce181d481e8230b271cda7e0b730e86), [`a8108ff`](https://github.com/scaleway/ultraviolet/commit/a8108ff2c2fad133172d30db5aa3dcb0e9e42e17)]:
+  - @ultraviolet/ui@2.0.0-beta.14
+
 ## 1.0.0-beta.13
 
 ### Patch Changes
