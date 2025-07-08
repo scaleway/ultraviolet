@@ -58,6 +58,7 @@ type RowProps = ComponentProps<typeof List.Row> & {
     position: 'top' | 'bottom'
     sentiment?: ComponentProps<typeof List.Row>['sentiment']
   }
+  offerName: string
 }
 export const Row = ({
   children,
@@ -66,6 +67,7 @@ export const Row = ({
   id,
   banner,
   expandablePadding,
+  offerName,
   ...props
 }: RowProps) => {
   const {
@@ -140,7 +142,7 @@ export const Row = ({
               disabled={disabled || loading}
               onChange={event => {
                 setRadioSelectedRow(event.currentTarget.id)
-                onChangeSelect?.(event.currentTarget.id)
+                onChangeSelect?.(offerName)
               }}
               data-testid={`radio-offer-list-${id}`}
             />
@@ -173,7 +175,7 @@ export const Row = ({
         {...props}
         disabled={disabled}
         sentiment={sentiment}
-        id={id}
+        id={offerName}
         expandable={computedExpandable}
         selectDisabled={props.selectDisabled || loading}
         expandablePadding={banner ? '0' : undefined}
