@@ -18,13 +18,57 @@ type StackProps = {
     | 'row'
     | 'column'
     | Partial<Record<keyof UltravioletUITheme['breakpoints'], 'row' | 'column'>>
-  alignItems?: CSSProperties['alignItems']
-  justifyContent?: CSSProperties['justifyContent']
-  wrap?: boolean | CSSProperties['flexWrap']
-  width?: CSSProperties['width']
-  maxWidth?: CSSProperties['maxWidth']
-  minWidth?: CSSProperties['minWidth']
-  flex?: CSSProperties['flex']
+  alignItems?:
+    | CSSProperties['alignItems']
+    | Partial<
+        Record<
+          keyof UltravioletUITheme['breakpoints'],
+          CSSProperties['alignItems']
+        >
+      >
+  justifyContent?:
+    | CSSProperties['justifyContent']
+    | Partial<
+        Record<
+          keyof UltravioletUITheme['breakpoints'],
+          CSSProperties['justifyContent']
+        >
+      >
+  wrap?:
+    | boolean
+    | CSSProperties['flexWrap']
+    | Partial<
+        Record<
+          keyof UltravioletUITheme['breakpoints'],
+          boolean | CSSProperties['flexWrap']
+        >
+      >
+  width?:
+    | CSSProperties['width']
+    | Partial<
+        Record<keyof UltravioletUITheme['breakpoints'], CSSProperties['width']>
+      >
+  maxWidth?:
+    | CSSProperties['maxWidth']
+    | Partial<
+        Record<
+          keyof UltravioletUITheme['breakpoints'],
+          CSSProperties['maxWidth']
+        >
+      >
+  minWidth?:
+    | CSSProperties['minWidth']
+    | Partial<
+        Record<
+          keyof UltravioletUITheme['breakpoints'],
+          CSSProperties['minWidth']
+        >
+      >
+  flex?:
+    | CSSProperties['flex']
+    | Partial<
+        Record<keyof UltravioletUITheme['breakpoints'], CSSProperties['flex']>
+      >
   className?: string
   children: ReactNode
   'data-testid'?: string
@@ -63,14 +107,91 @@ export const Stack = styled('div', {
     minWidth,
     flex,
   }) => `
-    align-items: ${alignItems};
-    justify-content: ${justifyContent};
-    flex-wrap: ${typeof wrap === 'boolean' ? 'wrap' : wrap};
-    ${flex ? `flex: ${flex};` : ''}
-    ${width ? `width: ${width};` : ''}
-    ${maxWidth ? `max-width: ${maxWidth};` : ''}
-    ${minWidth ? `min-width: ${minWidth};` : ''}
-
+  ${wrap && typeof wrap === 'boolean' ? 'flex-wrap: wrap;' : ''}
+    ${
+      wrap && typeof wrap === 'object'
+        ? Object.entries(wrap)
+            .map(
+              ([breakpoint, value]) =>
+                `@media (min-width: ${theme.breakpoints[breakpoint as keyof UltravioletUITheme['breakpoints']]}) {
+               flex-wrap: ${value};
+              }`,
+            )
+            .join(' ')
+        : `${wrap && typeof wrap !== 'boolean' ? `flex-wrap: ${wrap};` : ''}`
+    }
+    ${
+      minWidth && typeof minWidth === 'object'
+        ? Object.entries(minWidth)
+            .map(
+              ([breakpoint, value]) =>
+                `@media (min-width: ${theme.breakpoints[breakpoint as keyof UltravioletUITheme['breakpoints']]}) {
+                min-width: ${value};
+              }`,
+            )
+            .join(' ')
+        : `${minWidth ? `min-width: ${minWidth};` : ''}`
+    }
+    ${
+      maxWidth && typeof maxWidth === 'object'
+        ? Object.entries(maxWidth)
+            .map(
+              ([breakpoint, value]) =>
+                `@media (min-width: ${theme.breakpoints[breakpoint as keyof UltravioletUITheme['breakpoints']]}) {
+                max-width: ${value};
+              }`,
+            )
+            .join(' ')
+        : `${maxWidth ? `max-width: ${maxWidth};` : ''}`
+    }
+    ${
+      width && typeof width === 'object'
+        ? Object.entries(width)
+            .map(
+              ([breakpoint, value]) =>
+                `@media (min-width: ${theme.breakpoints[breakpoint as keyof UltravioletUITheme['breakpoints']]}) {
+                width: ${value};
+              }`,
+            )
+            .join(' ')
+        : `${width ? `width: ${width};` : ''}`
+    }
+    ${
+      flex && typeof flex === 'object'
+        ? Object.entries(flex)
+            .map(
+              ([breakpoint, value]) =>
+                `@media (min-width: ${theme.breakpoints[breakpoint as keyof UltravioletUITheme['breakpoints']]}) {
+                flex: ${value};
+              }`,
+            )
+            .join(' ')
+        : `${flex ? `flex: ${flex};` : ''}`
+    }
+    ${
+      alignItems && typeof alignItems === 'object'
+        ? Object.entries(alignItems)
+            .map(
+              ([breakpoint, value]) =>
+                `@media (min-width: ${theme.breakpoints[breakpoint as keyof UltravioletUITheme['breakpoints']]}) {
+                align-items: ${value};
+              }`,
+            )
+            .join(' ')
+        : `${alignItems ? `align-items: ${alignItems};` : ''}`
+    }
+    ${
+      justifyContent && typeof justifyContent === 'object'
+        ? Object.entries(justifyContent)
+            .map(
+              ([breakpoint, value]) =>
+                `@media (min-width: ${theme.breakpoints[breakpoint as keyof UltravioletUITheme['breakpoints']]}) {
+                justify-content: ${value};
+              }`,
+            )
+            .join(' ')
+        : `${justifyContent ? `justify-content: ${justifyContent};` : ''}`
+    }
     ${
       direction && typeof direction === 'object'
         ? Object.entries(direction)
@@ -81,7 +202,7 @@ export const Stack = styled('div', {
               }`,
             )
             .join(' ')
-        : `flex-direction: ${direction};`
+        : `${direction ? `flex-direction: ${direction};` : ''}`
     }
 
     ${
@@ -94,7 +215,7 @@ export const Stack = styled('div', {
               }`,
             )
             .join(' ')
-        : `gap: ${gap ? theme.space[gap as keyof UltravioletUITheme['space']] : ''};`
+        : `${gap ? `gap: ${theme.space[gap as keyof UltravioletUITheme['space']]};` : ''}`
     }
   `}
 `

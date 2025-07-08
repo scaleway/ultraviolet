@@ -39,7 +39,7 @@ export const StyledRow = styled('div', {
                 }`,
             )
             .join(' ')
-        : `grid-template-columns: ${templateColumns};`
+        : `${templateColumns ? `grid-template-columns: ${templateColumns};` : ''}`
     }
 
     ${
@@ -52,11 +52,44 @@ export const StyledRow = styled('div', {
               }`,
             )
             .join(' ')
-        : `gap: ${gap ? theme.space[gap as keyof UltravioletUITheme['space']] : ''};`
+        : `${gap ? `gap: ${theme.space[gap as keyof UltravioletUITheme['space']]};` : ''}`
     }
-    align-items: ${alignItems};
-    justify-content: ${justifyContent};
-    ${padding ? `padding: ${padding};` : ''}
+    ${
+      alignItems && typeof alignItems === 'object'
+        ? Object.entries(alignItems)
+            .map(
+              ([breakpoint, value]) =>
+                `@media (min-width: ${theme.breakpoints[breakpoint as keyof UltravioletUITheme['breakpoints']]}) {
+                align-items: ${value};
+              }`,
+            )
+            .join(' ')
+        : `${alignItems ? `align-items: ${alignItems};` : ''}`
+    }
+    ${
+      justifyContent && typeof justifyContent === 'object'
+        ? Object.entries(justifyContent)
+            .map(
+              ([breakpoint, value]) =>
+                `@media (min-width: ${theme.breakpoints[breakpoint as keyof UltravioletUITheme['breakpoints']]}) {
+                justify-content: ${value};
+              }`,
+            )
+            .join(' ')
+        : `${justifyContent ? `justify-content: ${justifyContent};` : ''}`
+    }
+    ${
+      padding && typeof padding === 'object'
+        ? Object.entries(padding)
+            .map(
+              ([breakpoint, value]) =>
+                `@media (min-width: ${theme.breakpoints[breakpoint as keyof UltravioletUITheme['breakpoints']]}) {
+                padding: ${value};
+              }`,
+            )
+            .join(' ')
+        : `${padding ? `padding: ${padding};` : ''}`
+    }
   `}
 `
 
@@ -76,9 +109,30 @@ type RowProps = {
           keyof UltravioletUITheme['space'] | number
         >
       >
-  alignItems?: CSSProperties['alignItems']
-  justifyContent?: CSSProperties['justifyContent']
-  padding?: CSSProperties['padding']
+  alignItems?:
+    | CSSProperties['alignItems']
+    | Partial<
+        Record<
+          keyof UltravioletUITheme['breakpoints'],
+          CSSProperties['alignItems']
+        >
+      >
+  justifyContent?:
+    | CSSProperties['justifyContent']
+    | Partial<
+        Record<
+          keyof UltravioletUITheme['breakpoints'],
+          CSSProperties['justifyContent']
+        >
+      >
+  padding?:
+    | CSSProperties['padding']
+    | Partial<
+        Record<
+          keyof UltravioletUITheme['breakpoints'],
+          CSSProperties['padding']
+        >
+      >
 }
 
 /**
