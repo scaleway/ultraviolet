@@ -26,6 +26,7 @@ export const Footprint: StoryFn<ComponentProps<typeof OfferList>> = props => (
         key={element.id}
         id={element.id}
         disabled={element.id === 'three'}
+        offerName={element.id}
       >
         <OfferList.Cell
           footPrint={{
