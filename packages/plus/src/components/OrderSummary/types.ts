@@ -108,6 +108,7 @@ export type OrderSummaryProps = {
   children?: ReactNode
   totalPriceInfo?: ReactNode
   totalPriceDescription?: ReactNode
+  additionalInfo?: string
   /**
    * Number of fraction digit to display in the price details
    */

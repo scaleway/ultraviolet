@@ -58,6 +58,7 @@ export const OrderSummary = ({
   onChange,
   onChangeUnitInput,
   totalPriceDescription,
+  additionalInfo,
 }: OrderSummaryProps) => {
   const [timePeriodUnit, setTimePeriodUnit] = useState<TimeUnit>(unitUnitInput)
   const [timePeriodAmount, setTimePeriodAmount] = useState(valueUnitInput)
@@ -204,6 +205,7 @@ export const OrderSummary = ({
           hideDetails={hideDetails}
           unit={unitUnitInput}
           totalPriceDescription={totalPriceDescription}
+          additionalInfo={additionalInfo}
         >
           {children}
         </NonScrollableContent>
