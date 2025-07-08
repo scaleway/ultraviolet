@@ -105,35 +105,11 @@ describe('Checkbox', () => {
       </Checkbox>,
     ))
 
-  test('renders correctly with progress', () =>
-    shouldMatchEmotionSnapshot(
-      <Checkbox onChange={() => {}} progress>
-        Checkbox Label
-      </Checkbox>,
-    ))
-
-  test('renders correctly with progress and no child', () =>
-    shouldMatchEmotionSnapshot(
-      <Checkbox aria-label="check" onChange={() => {}} progress />,
-    ))
-
   test('renders correctly with a value', () =>
     shouldMatchEmotionSnapshot(
       <Checkbox onChange={() => {}} value="test">
         Checkbox Label
       </Checkbox>,
-    ))
-
-  test('renders correctly with sizes', () =>
-    shouldMatchEmotionSnapshot(
-      <>
-        <Checkbox onChange={() => {}} size={37} value="test">
-          Checkbox Label
-        </Checkbox>
-        <Checkbox onChange={() => {}} progress size={37} value="test">
-          Checkbox Label
-        </Checkbox>
-      </>,
     ))
 
   test('renders correctly with indeterminate state', () =>
@@ -147,12 +123,7 @@ describe('Checkbox', () => {
     renderWithTheme(
       <LocalControlValue>
         {({ checked, onChange }) => (
-          <Checkbox
-            onChange={onChange}
-            checked={checked}
-            size={37}
-            value="test"
-          >
+          <Checkbox onChange={onChange} checked={checked} value="test">
             Checkbox Label
           </Checkbox>
         )}
@@ -162,33 +133,6 @@ describe('Checkbox', () => {
     const input = screen.getByRole<HTMLInputElement>('checkbox', {
       hidden: true,
     })
-    await userEvent.click(input)
-    expect(input.checked).toBeTruthy()
-  })
-
-  test('renders with click event with progress', async () => {
-    renderWithTheme(
-      <LocalControlValue defaultChecked={false}>
-        {({ checked, onChange }) => (
-          <Checkbox
-            checked={checked}
-            onChange={onChange}
-            size={37}
-            value="test"
-            progress={checked}
-          >
-            Checkbox Label
-          </Checkbox>
-        )}
-      </LocalControlValue>,
-    )
-
-    const input = screen.getByRole<HTMLInputElement>('checkbox', {
-      hidden: true,
-    })
-    await userEvent.click(input)
-    expect(input.checked).toBeTruthy()
-    // checked value cannot change during progress/loading
     await userEvent.click(input)
     expect(input.checked).toBeTruthy()
   })
