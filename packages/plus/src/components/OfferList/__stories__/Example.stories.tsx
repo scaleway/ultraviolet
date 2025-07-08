@@ -102,6 +102,7 @@ export const Example: StoryFn<ComponentProps<typeof OfferList>> = props => {
         <OfferList.Row
           key={offer.id}
           id={offer.id}
+          offerName={offer.id}
           expandable="Expandable content"
         >
           <OfferList.Cell footPrint={{ score: offer.score }}>

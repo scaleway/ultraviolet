@@ -16,7 +16,7 @@ export const Selectable: StoryFn<ComponentProps<typeof OfferList>> = props => (
       </Text>
       <OfferList {...props} selectable="radio">
         {data.map(planet => (
-          <OfferList.Row key={planet.id} id={planet.id}>
+          <OfferList.Row key={planet.id} id={planet.id} offerName={planet.id}>
             <OfferList.Cell>{planet.name}</OfferList.Cell>
             <OfferList.Cell>{planet.perihelion}AU</OfferList.Cell>
             <OfferList.Cell>{planet.aphelion}AU</OfferList.Cell>
@@ -34,7 +34,7 @@ export const Selectable: StoryFn<ComponentProps<typeof OfferList>> = props => (
       </Text>
       <OfferList {...props} selectable="checkbox">
         {data.map(planet => (
-          <OfferList.Row key={planet.id} id={planet.id}>
+          <OfferList.Row key={planet.id} id={planet.id} offerName={planet.id}>
             <OfferList.Cell>{planet.name}</OfferList.Cell>
             <OfferList.Cell>{planet.perihelion}AU</OfferList.Cell>
             <OfferList.Cell>{planet.aphelion}AU</OfferList.Cell>

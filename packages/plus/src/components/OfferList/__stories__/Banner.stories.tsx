@@ -10,6 +10,7 @@ export const Banner: StoryFn<ComponentProps<typeof OfferList>> = props => (
         <OfferList.Row
           key={planet.id}
           id={planet.id}
+          offerName={planet.id}
           disabled={planet.id === 'mars'}
           expandable="Some text"
           banner={{

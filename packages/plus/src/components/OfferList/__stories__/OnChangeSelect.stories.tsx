@@ -32,6 +32,7 @@ export const OnChange: StoryFn<ComponentProps<typeof OfferList>> = props => {
             key={planet.id}
             id={planet.id}
             disabled={planet.id === 'mars'}
+            offerName={`${planet.id}-offer`}
           >
             <OfferList.Cell>{planet.name}</OfferList.Cell>
             <OfferList.Cell>{planet.perihelion}AU</OfferList.Cell>
