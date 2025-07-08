@@ -120,6 +120,18 @@ describe('OrderSummary', () => {
       />,
     ))
 
+  test('should work with additionalInfo', () =>
+    shouldMatchEmotionSnapshot(
+      <OrderSummary
+        header="summary"
+        items={mockItems}
+        currency="EUR"
+        localeFormat="en-EN"
+        additionalInfo="additional info"
+      >
+        children
+      </OrderSummary>,
+    ))
   test('should work with numberInputs', () =>
     shouldMatchEmotionSnapshot(
       <OrderSummary
