@@ -1,0 +1,57 @@
+import type { StoryFn } from '@storybook/react'
+import { Button, Stack } from '@ultraviolet/ui'
+import { type ComponentProps, useState } from 'react'
+import { OfferList } from '../OfferList'
+import { columns, data } from './resources'
+
+export const OnChange: StoryFn<ComponentProps<typeof OfferList>> = props => {
+  const [selectedRow, setSelectedRow] = useState<string | string[]>()
+  const [selectable, setSelectable] = useState<'checkbox' | 'radio'>('radio')
+
+  return (
+    <Stack gap={1}>
+      <Button
+        onClick={() =>
+          setSelectable(selectable === 'checkbox' ? 'radio' : 'checkbox')
+        }
+      >
+        Set selectable to {selectable === 'checkbox' ? 'radio' : 'checkbox'}
+      </Button>
+      Selected row
+      {Array.isArray(selectedRow) && selectedRow.length > 1 ? 's' : ''}:{' '}
+      {Array.isArray(selectedRow)
+        ? selectedRow.map((value, index) => `${index > 0 ? ', ' : ''}${value}`)
+        : selectedRow}
+      <OfferList
+        {...props}
+        onChangeSelect={setSelectedRow}
+        selectable={selectable}
+      >
+        {data.map(planet => (
+          <OfferList.Row
+            key={planet.id}
+            id={planet.id}
+            disabled={planet.id === 'mars'}
+          >
+            <OfferList.Cell>{planet.name}</OfferList.Cell>
+            <OfferList.Cell>{planet.perihelion}AU</OfferList.Cell>
+            <OfferList.Cell>{planet.aphelion}AU</OfferList.Cell>
+          </OfferList.Row>
+        ))}
+      </OfferList>
+    </Stack>
+  )
+}
+
+OnChange.args = {
+  columns,
+}
+
+OnChange.parameters = {
+  docs: {
+    description: {
+      story:
+        'Use prop `onChangeSelect` to get the selected element(s). Selected row is a string (row id) when `selectable="radio"` and a string[] when `selectable="checkbox"`',
+    },
+  },
+}
