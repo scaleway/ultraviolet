@@ -1,0 +1,30 @@
+import type { StoryFn } from '@storybook/react'
+import type { ComponentProps } from 'react'
+import { OfferList } from '../OfferList'
+import { columns, data } from './resources'
+
+export const Expandable: StoryFn<ComponentProps<typeof OfferList>> = props => (
+  <OfferList {...props} expandable>
+    {data.map(planet => (
+      <OfferList.Row key={planet.id} id={planet.id} expandable="expand content">
+        <OfferList.Cell>{planet.name}</OfferList.Cell>
+        <OfferList.Cell>{planet.perihelion}AU</OfferList.Cell>
+        <OfferList.Cell>{planet.aphelion}AU</OfferList.Cell>
+      </OfferList.Row>
+    ))}
+  </OfferList>
+)
+
+Expandable.args = {
+  columns,
+  selectable: 'radio',
+  autoCollapse: false,
+}
+
+Expandable.parameters = {
+  docs: {
+    description: {
+      story: 'A row can be expandable.',
+    },
+  },
+}
