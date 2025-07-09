@@ -21,10 +21,8 @@ export const UpdateChildren: StoryFn<
         value={value}
         onChange={event => setValue(event.target.value)}
       >
-        <SwitchButton.Option value="1">
-          First ({firstCount})
-        </SwitchButton.Option>
-        <SwitchButton.Option value="3">Button</SwitchButton.Option>
+        <SwitchButton.Option value="1">Button {firstCount}</SwitchButton.Option>
+        <SwitchButton.Option value="2">Button</SwitchButton.Option>
       </SwitchButton>
     </>
   )
