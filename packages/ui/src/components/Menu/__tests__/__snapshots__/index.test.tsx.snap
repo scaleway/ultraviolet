@@ -42,8 +42,8 @@ exports[`Menu > Menu.Item > render with active props 1`] = `
     data-testid="testing"
   >
     <div
-      aria-controls="menu-«r3c»"
-      aria-describedby="menu-«r3c»"
+      aria-controls="menu-«r33»"
+      aria-describedby="menu-«r33»"
       class="emotion-0 emotion-1"
       tabindex="-1"
     >
@@ -61,66 +61,6 @@ exports[`Menu > Menu.Item > render with active props 1`] = `
 `;
 
 exports[`Menu > Menu.Item > render with borderless props 1`] = `
-<DocumentFragment>
-  .emotion-0 {
-  display: inherit;
-}
-
-.emotion-0[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-0[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-0 {
-  display: inherit;
-}
-
-.emotion-0[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-0[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-0 {
-  display: inherit;
-}
-
-.emotion-0[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-0[data-container-full-width="true"] {
-  width: 100%;
-}
-
-<div
-    data-testid="testing"
-  >
-    <div
-      aria-controls="menu-«r39»"
-      aria-describedby="menu-«r39»"
-      class="emotion-0 emotion-1"
-      tabindex="-1"
-    >
-      <button
-        aria-expanded="true"
-        aria-haspopup="dialog"
-        data-testid="disclosure"
-        type="button"
-      >
-        Menu
-      </button>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`Menu > Menu.Item > render with default props 1`] = `
 <DocumentFragment>
   .emotion-0 {
   display: inherit;
@@ -180,6 +120,66 @@ exports[`Menu > Menu.Item > render with default props 1`] = `
 </DocumentFragment>
 `;
 
+exports[`Menu > Menu.Item > render with default props 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: inherit;
+}
+
+.emotion-0[data-container-full-height="true"] {
+  height: 100%;
+}
+
+.emotion-0[data-container-full-width="true"] {
+  width: 100%;
+}
+
+.emotion-0 {
+  display: inherit;
+}
+
+.emotion-0[data-container-full-height="true"] {
+  height: 100%;
+}
+
+.emotion-0[data-container-full-width="true"] {
+  width: 100%;
+}
+
+.emotion-0 {
+  display: inherit;
+}
+
+.emotion-0[data-container-full-height="true"] {
+  height: 100%;
+}
+
+.emotion-0[data-container-full-width="true"] {
+  width: 100%;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      aria-controls="menu-«r2n»"
+      aria-describedby="menu-«r2n»"
+      class="emotion-0 emotion-1"
+      tabindex="-1"
+    >
+      <button
+        aria-expanded="true"
+        aria-haspopup="dialog"
+        data-testid="disclosure"
+        type="button"
+      >
+        Menu
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`Menu > Menu.Item > render with disabled props 1`] = `
 <DocumentFragment>
   .emotion-0 {
@@ -222,8 +222,8 @@ exports[`Menu > Menu.Item > render with disabled props 1`] = `
     data-testid="testing"
   >
     <div
-      aria-controls="menu-«r36»"
-      aria-describedby="menu-«r36»"
+      aria-controls="menu-«r2t»"
+      aria-describedby="menu-«r2t»"
       class="emotion-0 emotion-1"
       tabindex="-1"
     >
@@ -282,8 +282,8 @@ exports[`Menu > Menu.Item > render with sentiment danger 1`] = `
     data-testid="testing"
   >
     <div
-      aria-controls="menu-«r33»"
-      aria-describedby="menu-«r33»"
+      aria-controls="menu-«r2q»"
+      aria-describedby="menu-«r2q»"
       class="emotion-0 emotion-1"
       tabindex="-1"
     >
@@ -1064,186 +1064,6 @@ exports[`Menu > should search on simple complex childs 1`] = `
     <div
       aria-controls="menu-menu"
       aria-describedby="menu-menu"
-      class="emotion-0 emotion-1"
-      tabindex="-1"
-    >
-      <button
-        aria-expanded="true"
-        aria-haspopup="dialog"
-        data-testid="disclosure"
-        type="button"
-      >
-        Menu
-      </button>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`Menu > sizes > renders large 1`] = `
-<DocumentFragment>
-  .emotion-0 {
-  display: inherit;
-}
-
-.emotion-0[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-0[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-0 {
-  display: inherit;
-}
-
-.emotion-0[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-0[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-0 {
-  display: inherit;
-}
-
-.emotion-0[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-0[data-container-full-width="true"] {
-  width: 100%;
-}
-
-<div
-    data-testid="testing"
-  >
-    <div
-      aria-controls="menu-«r2t»"
-      aria-describedby="menu-«r2t»"
-      class="emotion-0 emotion-1"
-      tabindex="-1"
-    >
-      <button
-        aria-expanded="true"
-        aria-haspopup="dialog"
-        data-testid="disclosure"
-        type="button"
-      >
-        Menu
-      </button>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`Menu > sizes > renders medium 1`] = `
-<DocumentFragment>
-  .emotion-0 {
-  display: inherit;
-}
-
-.emotion-0[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-0[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-0 {
-  display: inherit;
-}
-
-.emotion-0[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-0[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-0 {
-  display: inherit;
-}
-
-.emotion-0[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-0[data-container-full-width="true"] {
-  width: 100%;
-}
-
-<div
-    data-testid="testing"
-  >
-    <div
-      aria-controls="menu-«r2q»"
-      aria-describedby="menu-«r2q»"
-      class="emotion-0 emotion-1"
-      tabindex="-1"
-    >
-      <button
-        aria-expanded="true"
-        aria-haspopup="dialog"
-        data-testid="disclosure"
-        type="button"
-      >
-        Menu
-      </button>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`Menu > sizes > renders small 1`] = `
-<DocumentFragment>
-  .emotion-0 {
-  display: inherit;
-}
-
-.emotion-0[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-0[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-0 {
-  display: inherit;
-}
-
-.emotion-0[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-0[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-0 {
-  display: inherit;
-}
-
-.emotion-0[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-0[data-container-full-width="true"] {
-  width: 100%;
-}
-
-<div
-    data-testid="testing"
-  >
-    <div
-      aria-controls="menu-«r2n»"
-      aria-describedby="menu-«r2n»"
       class="emotion-0 emotion-1"
       tabindex="-1"
     >
