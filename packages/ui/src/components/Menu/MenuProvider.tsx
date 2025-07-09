@@ -11,6 +11,8 @@ type MenuContextProps = {
   disclosureRef: RefObject<HTMLButtonElement | null>
   menuRef: RefObject<HTMLDivElement | null>
   parentDisclosureRef?: RefObject<HTMLButtonElement | null>
+  setShouldBeVisible: Dispatch<SetStateAction<true | undefined>>
+  shouldBeVisible: true | undefined
 }
 
 const MenuContext = createContext<MenuContextProps | undefined>(undefined)
@@ -27,6 +29,7 @@ type MenuProviderProps = {
   children: ReactNode
   visible?: boolean
   parentDisclosureRef?: RefObject<HTMLButtonElement | null>
+  triggerMethod?: 'hover' | 'click'
 }
 
 export const MenuProvider = ({
@@ -36,6 +39,9 @@ export const MenuProvider = ({
   parentDisclosureRef,
 }: MenuProviderProps) => {
   const [isVisible, setIsVisible] = useState(visible)
+  const [shouldBeVisible, setShouldBeVisible] = useState<true | undefined>(
+    undefined,
+  )
   const disclosureRef = useRef<HTMLButtonElement>(null)
   const menuRef = useRef<HTMLDivElement>(null)
   const parentMenu = useContext(MenuContext)
@@ -50,6 +56,8 @@ export const MenuProvider = ({
       disclosureRef,
       menuRef,
       parentDisclosureRef: parentDisclosureRef ?? parentMenu?.disclosureRef,
+      shouldBeVisible,
+      setShouldBeVisible,
     }),
     [
       hideOnClickItem,
@@ -57,6 +65,8 @@ export const MenuProvider = ({
       isNested,
       parentDisclosureRef,
       parentMenu?.disclosureRef,
+      shouldBeVisible,
+      setShouldBeVisible,
     ],
   )
 
