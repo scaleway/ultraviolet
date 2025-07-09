@@ -117,8 +117,15 @@ export const Menu = forwardRef(
     }: MenuProps,
     ref: Ref<HTMLButtonElement | null>,
   ) => {
-    const { isVisible, setIsVisible, isNested, disclosureRef, menuRef } =
-      useMenu()
+    const {
+      isVisible,
+      setIsVisible,
+      isNested,
+      disclosureRef,
+      menuRef,
+      setShouldBeVisible,
+      shouldBeVisible,
+    } = useMenu()
     const searchInputRef = useRef<HTMLInputElement>(null)
     const [localChild, setLocalChild] = useState<ReactNode[] | null>(null)
     const contentRef = useRef<HTMLDivElement>(null)
@@ -160,6 +167,36 @@ export const Menu = forwardRef(
         }, 50)
       }
     }, [isVisible, searchable])
+
+    useEffect(() => {
+      if (disclosureRef.current && triggerMethod === 'hover') {
+        const handler = (value: true | undefined) => {
+          setShouldBeVisible(value)
+        }
+
+        disclosureRef.current.addEventListener('focus', () => handler(true))
+        disclosureRef.current.addEventListener('mouseenter', () =>
+          handler(true),
+        )
+        disclosureRef.current.addEventListener('mouseleave', () =>
+          handler(undefined),
+        )
+
+        return () => {
+          disclosureRef.current?.removeEventListener('focus', () =>
+            handler(undefined),
+          )
+          disclosureRef.current?.addEventListener('mouseenter', () =>
+            handler(undefined),
+          )
+          disclosureRef.current?.addEventListener('mouseleave', () =>
+            handler(undefined),
+          )
+        }
+      }
+
+      return undefined
+    }, [])
 
     const finalChild = useMemo(() => {
       if (typeof children === 'function') {
@@ -205,6 +242,9 @@ export const Menu = forwardRef(
               if (indexOfCurrent > 0) {
                 listItem[indexOfCurrent - 1].focus()
               } else listItem[listItem.length - 1].focus()
+            } else if (event.key === 'ArrowLeft' && triggerMethod === 'hover') {
+              disclosureRef.current?.focus()
+              setShouldBeVisible(undefined)
             }
           }
         }
@@ -217,7 +257,7 @@ export const Menu = forwardRef(
         hideOnClickOutside
         aria-label={ariaLabel}
         className={className}
-        visible={triggerMethod === 'click' ? isVisible : undefined}
+        visible={triggerMethod === 'click' ? isVisible : shouldBeVisible}
         placement={isNested ? 'nested-menu' : placement}
         hasArrow={hasArrow}
         data-has-arrow={hasArrow}
@@ -227,8 +267,8 @@ export const Menu = forwardRef(
         onClose={() => {
           setIsVisible(false)
           setLocalChild(null)
-          // Skip focus return when using hover trigger to prevent focus getting stuck in a loop
-          if (triggerMethod !== 'hover') disclosureRef.current?.focus()
+          if (triggerMethod === 'click') disclosureRef.current?.focus()
+          setShouldBeVisible(undefined)
         }}
         tabIndex={-1}
         maxHeight={maxHeight ?? '30rem'}
