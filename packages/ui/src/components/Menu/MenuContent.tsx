@@ -23,8 +23,8 @@ import { searchChildren } from './helpers'
 import type { MenuProps } from './types'
 
 const StyledPopup = styled(Popup, {
-  shouldForwardProp: prop => !['size', 'searchable'].includes(prop),
-})<{ size?: keyof typeof SIZES; searchable: boolean }>`
+  shouldForwardProp: prop => !['searchable'].includes(prop),
+})<{ searchable: boolean }>`
   background-color: ${({ theme }) =>
     theme.colors.other.elevation.background.raised};
   box-shadow: ${({ theme }) =>
@@ -41,7 +41,7 @@ const StyledPopup = styled(Popup, {
 
   min-width: ${SIZES.small};
   max-width: ${SIZES.large};
-  ${({ size }) => (size ? `width: ${SIZES[size]};` : null)}
+  
   ${({ searchable }) => (searchable ? `min-width: 20rem` : null)};
   padding: ${({ theme }) => `${theme.space['0.25']} 0`};
   
@@ -102,9 +102,7 @@ export const Menu = forwardRef(
       className,
       'data-testid': dataTestId,
       maxHeight,
-      maxWidth,
       portalTarget = document.body,
-      size,
       triggerMethod = 'click',
       dynamicDomRendering,
       align,
@@ -189,9 +187,7 @@ export const Menu = forwardRef(
         }}
         tabIndex={-1}
         maxHeight={maxHeight ?? '30rem'}
-        maxWidth={maxWidth}
         searchable={searchable}
-        size={size}
         text={
           <MenuList
             data-testid={dataTestId}
