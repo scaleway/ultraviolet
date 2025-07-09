@@ -362,10 +362,7 @@ export const Row = forwardRef<HTMLTableRowElement, RowProps>(
           data-dragging={dataDragging}
         >
           {selectable ? (
-            <NoPaddingCell
-              preventClick={canClickRowToExpand}
-              maxWidth={theme.sizing[SELECTABLE_CHECKBOX_SIZE]}
-            >
+            <NoPaddingCell maxWidth={theme.sizing[SELECTABLE_CHECKBOX_SIZE]}>
               <StyledCheckboxContainer>
                 <Tooltip
                   text={
