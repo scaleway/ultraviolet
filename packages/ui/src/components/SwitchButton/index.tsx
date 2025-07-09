@@ -98,7 +98,23 @@ export const SwitchButton = ({
     setLocalValue(value)
     setWidth(getElement(value)?.offsetWidth ?? 0)
     setPosition(getPosition(getElement(value)))
-  }, [getElement, refOptions, value, children])
+  }, [refOptions, value])
+
+  useEffect(() => {
+    const element = getElement(value)
+    if (!element) return undefined
+
+    const resizeObserver = new ResizeObserver(() => {
+      setWidth(element.offsetWidth ?? 0)
+      setPosition(getPosition(element))
+    })
+
+    resizeObserver.observe(element)
+
+    return () => {
+      resizeObserver.disconnect()
+    }
+  })
 
   const handleOnChange = useCallback(
     (event: ChangeEvent<HTMLInputElement>) => {
