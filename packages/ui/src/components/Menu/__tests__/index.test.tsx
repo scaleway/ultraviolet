@@ -1,4 +1,4 @@
-import { screen, waitFor } from '@testing-library/react'
+import { fireEvent, screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import {
   renderWithTheme,
@@ -8,7 +8,11 @@ import {
 import { afterAll, beforeEach, describe, expect, test, vi } from 'vitest'
 import { Menu } from '..'
 
-const disclosure = <button type="button">Menu</button>
+const disclosure = (
+  <button data-testid="disclosure" type="button">
+    Menu
+  </button>
+)
 
 describe('Menu', () => {
   beforeEach(() => {
@@ -62,6 +66,22 @@ describe('Menu', () => {
         <Menu.Item href="/link">Menu.Item as Link</Menu.Item>
       </Menu>,
     ))
+
+  test(`renders with triggerMethod "hover"`, async () => {
+    renderWithTheme(
+      <Menu visible disclosure={() => disclosure} triggerMethod="hover">
+        <Menu.Item href="/link">Menu.Item as Link</Menu.Item>
+      </Menu>,
+    )
+
+    const disclosureMenu = screen.getByTestId('disclosure')
+    fireEvent.mouseEnter(disclosureMenu)
+    await waitFor(() => expect(screen.getByRole('menu')).toBeVisible())
+    fireEvent.mouseLeave(disclosureMenu)
+
+    await userEvent.hover(disclosureMenu)
+    await waitFor(() => expect(screen.getByRole('menu')).toBeVisible())
+  })
 
   test(`renders with Menu.ItemLink & Menu.Item disabled`, () =>
     shouldMatchEmotionSnapshotWithPortal(
