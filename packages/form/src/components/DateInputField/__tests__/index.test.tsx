@@ -68,8 +68,9 @@ describe('DateInputField', () => {
 
     const input = screen.getByPlaceholderText<HTMLInputElement>('YYYY-MM-DD')
     await userEvent.click(input)
-    await userEvent.click(screen.getByText('15'))
     await userEvent.click(screen.getByText('18'))
+    await userEvent.click(screen.getByText('15'))
+
     await waitFor(() => {
       expect(onChange).toBeCalledTimes(2)
     })

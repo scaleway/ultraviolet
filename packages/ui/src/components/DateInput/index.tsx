@@ -13,7 +13,12 @@ import { DateInputContext } from './Context'
 import type { ContextProps } from './Context'
 import { CalendarContent } from './components/CalendarContent'
 import { CalendarPopup } from './components/Popup'
-import { formatValue, styleCalendarContainer } from './helpers'
+import {
+  createDate,
+  createDateRange,
+  formatValue,
+  styleCalendarContainer,
+} from './helpers'
 import { getDays, getLocalizedMonths, getMonths } from './helpersLocale'
 
 const Container = styled.div`
@@ -146,6 +151,7 @@ export const DateInput = <IsRange extends undefined | boolean>({
   )
   const [hoveredDate, setHoveredDate] = useState<Date | null>(null)
   const refInput = useRef<HTMLInputElement>(null)
+  const popupRef = useRef<HTMLDivElement>(null)
   const MONTHS = getMonths(locale)
   const DAYS = getDays(locale)
   const MONTHS_ARR = getLocalizedMonths(locale)
@@ -225,28 +231,11 @@ export const DateInput = <IsRange extends undefined | boolean>({
 
   const manageOnChange = (event: ChangeEvent<HTMLInputElement>) => {
     const newValue = event.currentTarget.value
+    // @ts-expect-error can't get the correct type
+    if (!newValue) onChange?.(selectsRange ? [null, null] : null)
 
     if (selectsRange) {
-      const [startDateInput, endDateInput] = newValue.split(' - ').map(val => {
-        if (showMonthYearPicker) {
-          // Force YYYY/MM (since MM/YYYY not recognised as a date in typescript)
-          const res = val.split(/\D+/).map(aa => Number.parseInt(aa, 10))
-
-          return new Date(Math.max(...res), Math.min(...res) - 1)
-        }
-
-        return new Date(val)
-      })
-
-      const computedNewRange: [Date | null, Date | null] = [
-        startDateInput instanceof Date &&
-        !Number.isNaN(startDateInput.getTime())
-          ? startDateInput
-          : null,
-        endDateInput instanceof Date && !Number.isNaN(endDateInput.getTime())
-          ? endDateInput
-          : null,
-      ]
+      const computedNewRange = createDateRange(newValue, showMonthYearPicker)
 
       setRange({ start: computedNewRange[0], end: computedNewRange[1] })
       setInputValue(newValue)
@@ -255,26 +244,37 @@ export const DateInput = <IsRange extends undefined | boolean>({
         setMonthToShow(computedNewRange[0].getMonth() + 1)
         setYearToShow(computedNewRange[0].getFullYear())
       }
-      // TypeScript fails to automatically get the correct type of onChange here
-      ;(
-        onChange as (
-          date: Date[] | [Date | null, Date | null],
-          event: React.SyntheticEvent | undefined,
-        ) => void
-      )?.(computedNewRange, event)
     } else {
-      const computedDate = Date.parse(newValue) ? new Date(newValue) : null
-      setInputValue(newValue)
-      setValue(computedDate)
+      const computedDate = createDate(newValue, showMonthYearPicker)
 
       if (computedDate) {
         setMonthToShow(computedDate.getMonth() + 1)
         setYearToShow(computedDate.getFullYear())
       }
-      // TypeScript fails to automatically get the correct type of onChange here
-      ;(
-        onChange as (date: Date | null, event?: React.SyntheticEvent) => void
-      )?.(computedDate, event)
+    }
+    setInputValue(newValue)
+  }
+
+  const onBlurInput = (event: FocusEvent) => {
+    // Only call onChange when there is a date typed in the input and the user did not click on the calendar (which triggers onChange itself)
+    if (inputValue && !popupRef.current?.contains(event.relatedTarget)) {
+      if (selectsRange) {
+        const computedNewRange = createDateRange(
+          inputValue,
+          showMonthYearPicker,
+        )
+        ;(
+          onChange as (
+            date: Date[] | [Date | null, Date | null],
+            event: React.SyntheticEvent | undefined,
+          ) => void
+        )?.(computedNewRange, event)
+      } else {
+        const computedDate = createDate(inputValue, showMonthYearPicker)
+        ;(
+          onChange as (date: Date | null, event?: React.SyntheticEvent) => void
+        )?.(computedDate, event)
+      }
     }
   }
 
@@ -289,6 +289,7 @@ export const DateInput = <IsRange extends undefined | boolean>({
         onClick={() => {
           if (!isPopupVisible) setVisible(true)
         }}
+        ref={popupRef}
       >
         {input === 'text' ? (
           <CalendarPopup
@@ -322,6 +323,7 @@ export const DateInput = <IsRange extends undefined | boolean>({
               tooltip={tooltip}
               autoComplete="false"
               onChange={manageOnChange}
+              onBlur={onBlurInput}
               clearable={clearable}
             />
           </CalendarPopup>
