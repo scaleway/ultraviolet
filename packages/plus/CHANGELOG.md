@@ -1,5 +1,15 @@
 # @ultraviolet/plus
 
+## 1.0.0-beta.15
+
+### Patch Changes
+
+- [#5339](https://github.com/scaleway/ultraviolet/pull/5339) [`ccb7a52`](https://github.com/scaleway/ultraviolet/commit/ccb7a52bbe49a479333f628c99ced3c4c8eac814) Thanks [@lisalupi](https://github.com/lisalupi)! - `InfoTable.Row`: prop "templateColumn" renamed "templateColumns" (typo) to match `Row` prop
+
+- Updated dependencies [[`288eec8`](https://github.com/scaleway/ultraviolet/commit/288eec8554bec97892574f598cf6193331e1fb7a), [`35780ff`](https://github.com/scaleway/ultraviolet/commit/35780fffd11eb7218dfd7d7134f1376758c871ed), [`7ce2d34`](https://github.com/scaleway/ultraviolet/commit/7ce2d34977de7731e873106d5ccdc3dcbca7b92b)]:
+  - @ultraviolet/ui@2.0.0-beta.15
+  - @ultraviolet/icons@4.0.0-beta.7
+
 ## 1.0.0-beta.14
 
 ### Patch Changes
