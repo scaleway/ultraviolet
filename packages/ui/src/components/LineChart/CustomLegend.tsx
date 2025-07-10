@@ -55,7 +55,7 @@ const StyledText = styled(Text)`
 `
 
 const Cell = ({ value, variant }: CellProps) => (
-  <StyledText variant={variant} color="neutral" as="span">
+  <StyledText variant={variant} sentiment="neutral" as="span">
     {value as string | number}
   </StyledText>
 )

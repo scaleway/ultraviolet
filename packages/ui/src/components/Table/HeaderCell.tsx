@@ -127,7 +127,7 @@ export const HeaderCell = ({
       <StyledText
         as="div"
         variant="bodySmall"
-        color={order !== undefined ? 'primary' : 'neutral'}
+        sentiment={order !== undefined ? 'primary' : 'neutral'}
       >
         {children}
         {info ? (

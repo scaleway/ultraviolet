@@ -32,8 +32,7 @@ export const Sentiments: StoryFn<ComponentProps<typeof Text>> = args => (
 Sentiments.parameters = {
   docs: {
     description: {
-      story:
-        'Set a sentiment using `sentiment` property. (`color` prop is deprecated but still works and has the same effect)',
+      story: 'Set a sentiment using `sentiment` property.',
     },
   },
 }
