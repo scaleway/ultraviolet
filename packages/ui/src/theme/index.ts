@@ -1,6 +1,5 @@
 import { consoleDarkTheme, consoleLightTheme } from '@ultraviolet/themes'
 import deepmerge from 'deepmerge'
-import ThemeRegistry from './ThemeRegistry'
 
 export type ScreenSize = keyof typeof consoleLightTheme.breakpoints
 
@@ -66,7 +65,6 @@ export {
   SENTIMENTS,
   SENTIMENTS_WITHOUT_NEUTRAL,
   typography,
-  ThemeRegistry,
 }
 
 export default consoleLightTheme
