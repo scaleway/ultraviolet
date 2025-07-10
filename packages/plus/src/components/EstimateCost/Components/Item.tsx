@@ -417,7 +417,7 @@ export const Item = memo(
                   </StyledDiv>
                 ) : null}
                 {subLabel && !isOverlay ? (
-                  <StyledText as="p" variant="body" color="primary" italic>
+                  <StyledText as="p" variant="body" sentiment="primary" italic>
                     {subLabel}
                   </StyledText>
                 ) : null}
@@ -469,7 +469,7 @@ export const Item = memo(
                       ? 'weak'
                       : 'default'
                   }
-                  color={
+                  sentiment={
                     computedItemPrice === 0 && computedMaxItemPrice === 0
                       ? 'neutral'
                       : 'primary'

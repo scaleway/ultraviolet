@@ -431,7 +431,7 @@ export const EstimateCostContent = ({
                     <StyledText
                       as="h3"
                       variant="heading"
-                      color="primary"
+                      sentiment="primary"
                       isBeta={isBeta}
                     >
                       <LineThrough
