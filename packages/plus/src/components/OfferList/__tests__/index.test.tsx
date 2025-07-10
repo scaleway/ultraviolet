@@ -32,7 +32,7 @@ describe('InfoTable', () => {
       </OfferList>,
     ))
 
-  it('should work with banner top', () =>
+  it('should work with banner', () =>
     shouldMatchEmotionSnapshot(
       <OfferList columns={columns} expandable>
         {data.map(planet => (
@@ -40,8 +40,7 @@ describe('InfoTable', () => {
             offerName={planet.id}
             key={planet.id}
             id={planet.id}
-            banner={{ text: 'text', position: 'top' }}
-            expanded
+            banner={{ text: 'text' }}
             expandable="text"
           >
             <OfferList.Cell>{planet.name}</OfferList.Cell>
@@ -52,7 +51,7 @@ describe('InfoTable', () => {
       </OfferList>,
     ))
 
-  it('should work with banner bottom', () =>
+  it('should work with banner open', () =>
     shouldMatchEmotionSnapshot(
       <OfferList columns={columns} expandable>
         {data.map(planet => (
@@ -60,7 +59,7 @@ describe('InfoTable', () => {
             offerName={planet.id}
             key={planet.id}
             id={planet.id}
-            banner={{ text: 'text', position: 'bottom', sentiment: 'danger' }}
+            banner={{ text: 'text', sentiment: 'danger' }}
             expandablePadding="3"
             expanded
             expandable="text"
@@ -72,27 +71,9 @@ describe('InfoTable', () => {
         ))}
       </OfferList>,
     ))
-
-  it('should work with footprint', () =>
-    shouldMatchEmotionSnapshot(
-      <OfferList columns={columns}>
-        {data.map(planet => (
-          <OfferList.Row offerName={planet.id} key={planet.id} id={planet.id}>
-            <OfferList.Cell footPrint={{ score: 2 }}>
-              {planet.name}
-            </OfferList.Cell>
-            <OfferList.Cell footPrint={{ score: 3, max: 10 }}>
-              {planet.perihelion}AU
-            </OfferList.Cell>
-            <OfferList.Cell>{planet.aphelion}AU</OfferList.Cell>
-          </OfferList.Row>
-        ))}
-      </OfferList>,
-    ))
-
   it('should work loading', () =>
     shouldMatchEmotionSnapshot(
-      <OfferList columns={columns} loading selectable="radio">
+      <OfferList columns={columns} loading type="radio">
         {data.map(planet => (
           <OfferList.Row offerName={planet.id} key={planet.id} id={planet.id}>
             <OfferList.Cell>{planet.name}</OfferList.Cell>
@@ -105,7 +86,7 @@ describe('InfoTable', () => {
   it('should work with selectable - radio', async () => {
     const onChange = vi.fn()
     const { asFragment } = renderWithTheme(
-      <OfferList columns={columns} onChangeSelect={onChange} selectable="radio">
+      <OfferList columns={columns} onChangeSelect={onChange} type="radio">
         {data.map(planet => (
           <OfferList.Row offerName={planet.id} key={planet.id} id={planet.id}>
             <OfferList.Cell>{planet.name}</OfferList.Cell>
@@ -126,11 +107,7 @@ describe('InfoTable', () => {
   it('should work with selectable - checkbox', async () => {
     const onChange = vi.fn()
     const { asFragment } = renderWithTheme(
-      <OfferList
-        columns={columns}
-        onChangeSelect={onChange}
-        selectable="checkbox"
-      >
+      <OfferList columns={columns} onChangeSelect={onChange} type="checkbox">
         {data.map(planet => (
           <OfferList.Row offerName={planet.id} key={planet.id} id={planet.id}>
             <OfferList.Cell>{planet.name}</OfferList.Cell>
@@ -150,7 +127,7 @@ describe('InfoTable', () => {
 
   it('should work with expandable', async () => {
     const { asFragment } = renderWithTheme(
-      <OfferList columns={columns} selectable="radio" expandable>
+      <OfferList columns={columns} type="radio" expandable>
         {data.map(planet => (
           <OfferList.Row
             offerName={planet.id}
@@ -186,18 +163,6 @@ describe('InfoTable', () => {
       ),
     ).toThrowError(
       'useOfferListContext should be used inside a OfferList component',
-    )
-  })
-
-  it('should throw an error when using OfferList.Cell outside OfferList.Row', () => {
-    expect(() =>
-      shouldMatchEmotionSnapshot(
-        <OfferList columns={columns}>
-          <OfferList.Cell>a cell</OfferList.Cell>
-        </OfferList>,
-      ),
-    ).toThrowError(
-      'OfferList.Cell should be used inside a OfferList.Row component',
     )
   })
 })

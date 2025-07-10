@@ -10,13 +10,16 @@ type OfferListProps = Omit<
   ComponentProps<typeof List>,
   'selectable' | 'onSelectedChange'
 > & {
-  selectable?: 'radio' | 'checkbox'
+  /**
+   * Make offerList selectable by choosing its type
+   */
+  type?: 'radio' | 'checkbox'
   onChangeSelect?: (selected: string | string[]) => void
 }
 
 export const OfferList = ({
   expandable,
-  selectable,
+  type,
   columns,
   children,
   loading,
@@ -25,7 +28,7 @@ export const OfferList = ({
 }: OfferListProps) => {
   const [selectedRows, setSelectedRows] = useState<string[]>([])
   const computedColumns =
-    selectable === 'radio'
+    type === 'radio'
       ? [{ label: '' }, expandable ? { label: '' } : null, ...columns].filter(
           element => !!element,
         )
@@ -35,17 +38,17 @@ export const OfferList = ({
 
   return (
     <OfferListProvider
-      selectable={selectable}
+      selectable={type}
       expandable={expandable}
       loading={loading}
       onChangeSelect={onChangeSelect}
       autoCollapse={autoCollapse}
     >
       <List
-        expandable={expandable && selectable !== 'radio'}
+        expandable={expandable && type !== 'radio'}
         columns={computedColumns}
         autoCollapse={autoCollapse}
-        selectable={selectable === 'checkbox'}
+        selectable={type === 'checkbox'}
         onSelectedChange={setSelectedRows}
       >
         {children}

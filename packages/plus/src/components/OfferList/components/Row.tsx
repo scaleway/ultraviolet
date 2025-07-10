@@ -4,13 +4,8 @@ import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import { ArrowDownIcon, ArrowUpIcon } from '@ultraviolet/icons'
 import { Button, List, Radio, Stack } from '@ultraviolet/ui'
-import {
-  ComponentProps,
-  type ReactNode,
-  createContext,
-  useCallback,
-  useMemo,
-} from 'react'
+import { Children, ComponentProps, useCallback, useMemo } from 'react'
+import type { ReactNode } from 'react'
 import { useOfferListContext } from '../OfferListProvider'
 import { SELECTABLE_RADIO_SIZE } from '../constants'
 import { Banner } from './Banner'
@@ -29,8 +24,8 @@ const NoPaddingCell = styled(List.Cell, {
   max-width: ${({ maxWidth }) => maxWidth};
 `
 const StyledRow = styled(List.Row, {
-  shouldForwardProp: prop => !['selected'].includes(prop),
-})<{ selected: boolean }>`
+  shouldForwardProp: prop => !['selected', 'hasBanner'].includes(prop),
+})<{ selected: boolean; hasBanner: boolean }>`
     ${({ theme, selected }) =>
       selected
         ? `td, td:first-child, td:last-child {
@@ -47,25 +42,27 @@ const StyledRow = styled(List.Row, {
           : null}
     }
 
+    ${({ hasBanner }) =>
+      hasBanner
+        ? `td, td:first-child {
+        border-bottom-right-radius: 0; 
+        border-bottom-left-radius: 0;
+    }
+    `
+        : null}
 `
-
 const CustomExpandable = styled('div', {
   shouldForwardProp: prop => !['padding'].includes(prop),
 })<{ padding?: ComponentProps<typeof List.Row>['expandablePadding'] }>`
     padding: ${({ theme, padding }) =>
       padding ? theme.space[padding] : theme.space['2']};
-
 `
-
-export const RowContext = createContext<{ disabled: boolean } | undefined>(
-  undefined,
-)
 
 type RowProps = ComponentProps<typeof List.Row> & {
   banner?: {
     text: ReactNode
-    position: 'top' | 'bottom'
-    sentiment?: ComponentProps<typeof List.Row>['sentiment']
+    sentiment?: 'neutral' | 'primary' | 'warning' | 'danger'
+    disabled?: boolean
   }
   offerName: string
 }
@@ -77,7 +74,14 @@ export const Row = ({
   banner,
   expandablePadding,
   offerName,
-  ...props
+  expandable: expandableContent,
+  selectDisabled,
+  highlightAnimation,
+  expanded,
+  className,
+  'data-dragging': dataDragging,
+  'data-testid': dataTestId,
+  style,
 }: RowProps) => {
   const {
     selectable,
@@ -91,6 +95,9 @@ export const Row = ({
   const { expandedRowIds, collapseRow, expandRow } = List.useListContext()
   const theme = useTheme()
 
+  const childrenNumber =
+    Children.count(children) + (selectable ? 1 : 0) + (expandable ? 1 : 0)
+
   const toggleRowExpand = useCallback(() => {
     if (!loading) {
       if (expandedRowIds[id]) {
@@ -101,49 +108,46 @@ export const Row = ({
     }
   }, [collapseRow, expandRow, expandedRowIds, id])
 
-  const computedExpandable = useMemo(() => {
-    if (expandable && !loading) {
-      if (banner) {
-        return (
-          <Stack direction="column">
-            {banner.position === 'top' ? (
-              <Banner sentiment={banner.sentiment}>{banner.text}</Banner>
-            ) : null}
-            <CustomExpandable padding={expandablePadding}>
-              {props.expandable}
-            </CustomExpandable>
-            {banner.position === 'bottom' ? (
-              <Banner sentiment={banner.sentiment} borderTop>
-                {banner.text}
-              </Banner>
-            ) : null}
-          </Stack>
-        )
-      }
-
-      return props.expandable
+  const computedExpandableContent = useMemo(() => {
+    if (expandable && !loading && expandedRowIds[id] && banner) {
+      return (
+        <Stack>
+          <CustomExpandable padding={expandablePadding}>
+            {expandableContent}
+          </CustomExpandable>
+          <Banner sentiment={banner.sentiment} disabled={banner.disabled}>
+            {banner.text}
+          </Banner>
+        </Stack>
+      )
     }
+    if (expandable && !loading) return expandableContent
 
     return undefined
-  }, [])
+  }, [expandable, loading, expandedRowIds, banner])
 
   if (selectable === 'radio') {
     return (
-      <RowContext.Provider value={{ disabled: !!disabled }}>
+      <>
         <StyledRow
-          // eslint-disable-next-line react/jsx-props-no-spreading
-          {...props}
+          selectDisabled={selectDisabled}
+          highlightAnimation={highlightAnimation}
+          className={className}
+          data-testid={dataTestId}
+          data-dragging={dataDragging}
+          style={style}
           disabled={disabled}
           sentiment={sentiment}
           id={id}
-          expandable={computedExpandable}
+          expandable={computedExpandableContent}
           expandablePadding={banner ? '0' : undefined}
           selected={radioSelectedRow === id}
-          expanded={expandedRowIds[id]}
+          expanded={expanded ?? expandedRowIds[id]}
+          hasBanner={!!banner}
         >
           <NoPaddingCell maxWidth={theme.sizing[SELECTABLE_RADIO_SIZE]}>
             <Radio
-              name="radio-offer-list"
+              name={`radio-offer-list-${id}`}
               checked={radioSelectedRow === id}
               value={id}
               id={id}
@@ -157,7 +161,6 @@ export const Row = ({
                   collapseRow(id)
                 }
               }}
-              data-testid={`radio-offer-list-${id}`}
             />
           </NoPaddingCell>
           {expandable ? (
@@ -177,24 +180,50 @@ export const Row = ({
           ) : null}
           {children}
         </StyledRow>
-      </RowContext.Provider>
+        {banner && !expandedRowIds[id] ? (
+          <Banner
+            disabled={banner.disabled}
+            colSpan={childrenNumber}
+            type="cell"
+            sentiment={banner.sentiment}
+          >
+            {banner.text}
+          </Banner>
+        ) : null}
+      </>
     )
   }
 
   return (
-    <RowContext.Provider value={{ disabled: !!disabled }}>
-      <List.Row
-        // eslint-disable-next-line react/jsx-props-no-spreading
-        {...props}
+    <>
+      <StyledRow
+        highlightAnimation={highlightAnimation}
+        className={className}
+        data-testid={dataTestId}
+        data-dragging={dataDragging}
+        style={style}
+        expanded={expanded}
         disabled={disabled}
         sentiment={sentiment}
         id={offerName}
-        expandable={computedExpandable}
-        selectDisabled={props.selectDisabled || loading}
+        expandable={computedExpandableContent}
+        selectDisabled={selectDisabled || loading}
         expandablePadding={banner ? '0' : undefined}
+        hasBanner={!!banner}
+        selected={false}
       >
         {children}
-      </List.Row>
-    </RowContext.Provider>
+      </StyledRow>
+      {banner && !expandedRowIds[id] ? (
+        <Banner
+          colSpan={childrenNumber}
+          type="cell"
+          sentiment={banner.sentiment}
+          disabled={banner.disabled}
+        >
+          {banner.text}
+        </Banner>
+      ) : null}
+    </>
   )
 }
