@@ -2,7 +2,6 @@ import { fireEvent, screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme } from '@utils/test'
 import type { ReactNode } from 'react'
-import { act } from 'react'
 import { afterAll, beforeAll, describe, expect, test, vi } from 'vitest'
 import { SelectInput } from '..'
 import { OptionalInfo, cities, dataGrouped, dataUnGrouped } from './resources'
@@ -544,7 +543,8 @@ describe('SelectInput', () => {
     )
     const input = screen.getByTestId('select-input-test')
 
-    act(() => input.click())
+    await userEvent.click(input)
+
     const dropdown = screen.getByRole('dialog')
     const outsideClick = screen.getByText('Test outside element')
 
@@ -568,7 +568,7 @@ describe('SelectInput', () => {
     )
     const input = screen.getByTestId('select-input-test')
 
-    act(() => input.click())
+    await userEvent.click(input)
     const dropdown = screen.getByRole('dialog')
     const venus = screen.getByText('Venus')
 

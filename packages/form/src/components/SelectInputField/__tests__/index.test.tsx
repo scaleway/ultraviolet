@@ -39,12 +39,13 @@ describe('SelectInputField', () => {
       <SelectInputField name="test" options={planets} searchable={false} />,
     )
     const select = screen.getByTestId('select-input-test')
-    act(() => select.click())
+    await userEvent.click(select)
     fireEvent.keyDown(select, { key: 'ArrowDown', keyCode: 40 })
     const mercury = screen.getByTestId(`option-stack-mercury`)
 
-    act(() => mercury.click())
-    act(() => select.click())
+    await userEvent.click(mercury)
+    await userEvent.click(select)
+
     await waitFor(() => {
       expect(screen.getByTestId(`option-stack-mercury`)).toBeVisible()
     })
