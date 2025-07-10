@@ -22,11 +22,7 @@ export const OnChange: StoryFn<ComponentProps<typeof OfferList>> = props => {
       {Array.isArray(selectedRow)
         ? selectedRow.map((value, index) => `${index > 0 ? ', ' : ''}${value}`)
         : selectedRow}
-      <OfferList
-        {...props}
-        onChangeSelect={setSelectedRow}
-        selectable={selectable}
-      >
+      <OfferList {...props} onChangeSelect={setSelectedRow} type={selectable}>
         {data.map(planet => (
           <OfferList.Row
             key={planet.id}

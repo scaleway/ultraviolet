@@ -6,7 +6,7 @@ import { columns, data } from './resources'
 export const Banner: StoryFn<ComponentProps<typeof OfferList>> = props => (
   <OfferList {...props} expandable>
     {data.map((planet, index) =>
-      index < 2 ? (
+      index < 3 ? (
         <OfferList.Row
           key={planet.id}
           id={planet.id}
@@ -14,9 +14,9 @@ export const Banner: StoryFn<ComponentProps<typeof OfferList>> = props => (
           disabled={planet.id === 'mars'}
           expandable="Some text"
           banner={{
-            text: 'This is a banner',
+            text: index === 2 ? 'Disabled banner' : 'This is a banner',
             sentiment: planet.id === 'mercury' ? 'primary' : undefined,
-            position: planet.id === 'venus' ? 'bottom' : 'top',
+            disabled: index === 2,
           }}
         >
           <OfferList.Cell>{planet.name}</OfferList.Cell>

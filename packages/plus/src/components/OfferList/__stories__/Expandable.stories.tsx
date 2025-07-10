@@ -22,7 +22,7 @@ export const Expandable: StoryFn<ComponentProps<typeof OfferList>> = props => (
 
 Expandable.args = {
   columns,
-  selectable: 'radio',
+  type: 'radio',
 }
 
 Expandable.parameters = {
