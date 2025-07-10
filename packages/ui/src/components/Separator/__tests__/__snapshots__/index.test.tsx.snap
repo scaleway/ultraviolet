@@ -19,7 +19,6 @@ exports[`Separator > renders correctly horizontally 1`] = `
     <hr
       aria-orientation="horizontal"
       class="emotion-0 emotion-1"
-      color="neutral"
       role="separator"
     />
   </div>
@@ -45,59 +44,6 @@ exports[`Separator > renders correctly vertically 1`] = `
     <hr
       aria-orientation="vertical"
       class="emotion-0 emotion-1"
-      color="neutral"
-      role="separator"
-    />
-  </div>
-</DocumentFragment>
-`;
-
-exports[`Separator > renders correctly with custom color 1`] = `
-<DocumentFragment>
-  .emotion-0 {
-  margin: 0;
-  border: 0;
-  width: auto;
-  height: 1px;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  background-color: #e9eaeb;
-}
-
-<div
-    data-testid="testing"
-  >
-    <hr
-      aria-orientation="horizontal"
-      class="emotion-0 emotion-1"
-      color="primary"
-      role="separator"
-    />
-  </div>
-</DocumentFragment>
-`;
-
-exports[`Separator > renders correctly with custom color 2`] = `
-<DocumentFragment>
-  .emotion-0 {
-  margin: 0;
-  border: 0;
-  width: auto;
-  height: 1px;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  background-color: #8c40ef;
-}
-
-<div
-    data-testid="testing"
-  >
-    <hr
-      aria-orientation="horizontal"
-      class="emotion-0 emotion-1"
-      color="neutral"
       role="separator"
     />
   </div>
@@ -162,7 +108,6 @@ exports[`Separator > renders correctly with custom icon 1`] = `
     >
       <hr
         class="emotion-2 emotion-3"
-        color="neutral"
       />
       <svg
         class="emotion-4 emotion-5"
@@ -179,7 +124,6 @@ exports[`Separator > renders correctly with custom icon 1`] = `
       </svg>
       <hr
         class="emotion-2 emotion-3"
-        color="neutral"
       />
     </div>
   </div>
@@ -244,7 +188,6 @@ exports[`Separator > renders correctly with custom icon horizontally 1`] = `
     >
       <hr
         class="emotion-2 emotion-3"
-        color="neutral"
       />
       <svg
         class="emotion-4 emotion-5"
@@ -261,7 +204,6 @@ exports[`Separator > renders correctly with custom icon horizontally 1`] = `
       </svg>
       <hr
         class="emotion-2 emotion-3"
-        color="neutral"
       />
     </div>
   </div>
@@ -326,7 +268,6 @@ exports[`Separator > renders correctly with custom icon vertically 1`] = `
     >
       <hr
         class="emotion-2 emotion-3"
-        color="neutral"
       />
       <svg
         class="emotion-4 emotion-5"
@@ -343,9 +284,33 @@ exports[`Separator > renders correctly with custom icon vertically 1`] = `
       </svg>
       <hr
         class="emotion-2 emotion-3"
-        color="neutral"
       />
     </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Separator > renders correctly with custom sentiment 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  margin: 0;
+  border: 0;
+  width: auto;
+  height: 1px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  background-color: #8c40ef;
+}
+
+<div
+    data-testid="testing"
+  >
+    <hr
+      aria-orientation="horizontal"
+      class="emotion-0 emotion-1"
+      role="separator"
+    />
   </div>
 </DocumentFragment>
 `;
@@ -408,7 +373,6 @@ exports[`Separator > renders correctly with custom sentiment and icon 1`] = `
     >
       <hr
         class="emotion-2 emotion-3"
-        color="neutral"
       />
       <svg
         class="emotion-4 emotion-5"
@@ -425,7 +389,6 @@ exports[`Separator > renders correctly with custom sentiment and icon 1`] = `
       </svg>
       <hr
         class="emotion-2 emotion-3"
-        color="neutral"
       />
     </div>
   </div>
@@ -451,7 +414,6 @@ exports[`Separator > renders correctly with custom thickness 1`] = `
     <hr
       aria-orientation="horizontal"
       class="emotion-0 emotion-1"
-      color="neutral"
       role="separator"
     />
   </div>
@@ -477,7 +439,6 @@ exports[`Separator > renders correctly with default props 1`] = `
     <hr
       aria-orientation="horizontal"
       class="emotion-0 emotion-1"
-      color="neutral"
       role="separator"
     />
   </div>
