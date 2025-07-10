@@ -4,7 +4,7 @@ import { InfoTable } from '../InfoTable'
 
 export const MultiLine: StoryFn<ComponentProps<typeof InfoTable>> = props => (
   <InfoTable {...props}>
-    <InfoTable.Row templateColumn="repeat(2, 1fr)">
+    <InfoTable.Row templateColumns="repeat(2, 1fr)">
       <InfoTable.Cell title="without multiLine">
         cell cell cell cell cell cell cell cell cell cell cell cell cell cell
         cell cell cell cell cell cell cell cell cell cell cell cell cell cell

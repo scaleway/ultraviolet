@@ -9,7 +9,7 @@ export const ComplexExample: StoryFn<
 > = props => (
   <Card header="Instance information">
     <InfoTable {...props}>
-      <InfoTable.Row templateColumn="repeat(4, 1fr)">
+      <InfoTable.Row templateColumns="repeat(4, 1fr)">
         <InfoTable.Cell title="Status">
           <Stack direction="row" alignItems="center" gap={1}>
             <Status sentiment="success" />
@@ -27,7 +27,7 @@ export const ComplexExample: StoryFn<
         </InfoTable.Cell>
         <InfoTable.Cell title="Availability Zone">PAR 2</InfoTable.Cell>
       </InfoTable.Row>
-      <InfoTable.Row templateColumn="repeat(4, 1fr)">
+      <InfoTable.Row templateColumns="repeat(4, 1fr)">
         <InfoTable.Cell title="Cores">8</InfoTable.Cell>
         <InfoTable.Cell title="RAM">32 GB</InfoTable.Cell>
         <InfoTable.Cell title="Compatible Storage">
@@ -35,7 +35,7 @@ export const ComplexExample: StoryFn<
         </InfoTable.Cell>
         <InfoTable.Cell title="Bandwidth">800 Mbps</InfoTable.Cell>
       </InfoTable.Row>
-      <InfoTable.Row templateColumn="repeat(2, 1fr)">
+      <InfoTable.Row templateColumns="repeat(2, 1fr)">
         <InfoTable.Cell title="Instance ID">
           <Stack direction="row" alignItems="center" gap={1}>
             4f6be74f-84c1-4ffb-ac80-39befzef808bdd0
@@ -50,11 +50,11 @@ export const ComplexExample: StoryFn<
           </Stack>
         </InfoTable.Cell>
       </InfoTable.Row>
-      <InfoTable.Row templateColumn="repeat(2, 1fr)">
+      <InfoTable.Row templateColumns="repeat(2, 1fr)">
         <InfoTable.Cell title="Volumes">EM-RF23R-DEZZ</InfoTable.Cell>
         <InfoTable.Cell title="Public IP">12.123.12.13</InfoTable.Cell>
       </InfoTable.Row>
-      <InfoTable.Row templateColumn="repeat(1, 1fr)">
+      <InfoTable.Row templateColumns="repeat(1, 1fr)">
         <InfoTable.Cell title="Protected Instance option">
           <LockIcon sentiment="neutral" prominence="weak" /> Enabled
         </InfoTable.Cell>
