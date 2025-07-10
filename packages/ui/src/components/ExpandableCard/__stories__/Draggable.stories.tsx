@@ -1,4 +1,4 @@
-import type { StoryFn } from '@storybook/react'
+import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
 import type { KeyboardEvent } from 'react'
 import { ExpandableCard } from '..'

@@ -181,5 +181,11 @@ export default [
     ...testingLibrary.configs['flat/react'],
   },
   ...oxlint.buildFromOxlintConfigFile('.oxlintrc.json'),
-  ...storybook.configs['flat/recommended'],
+  {
+    ...storybook.configs['flat/recommended'][0],
+    rules: {
+      ...storybook.configs['flat/recommended'][0].rules,
+      'storybook/default-exports': 'off',
+    },
+  },
 ]

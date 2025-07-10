@@ -1,6 +1,6 @@
 import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
-import type { StoryFn } from '@storybook/react'
+import type { StoryFn } from '@storybook/react-vite'
 import { blockStorageWire } from '@ultraviolet/illustrations/products/blockStorage'
 import { Button, Snippet, Stack, Text } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'

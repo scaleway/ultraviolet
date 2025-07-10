@@ -1,4 +1,4 @@
-import type { StoryFn } from '@storybook/react'
+import type { StoryFn } from '@storybook/react-vite'
 import { consoleLightTheme } from '@ultraviolet/themes'
 import { useEffect, useState } from 'react'
 import { Row } from '..'

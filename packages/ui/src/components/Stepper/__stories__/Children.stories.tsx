@@ -1,4 +1,4 @@
-import type { StoryFn } from '@storybook/react'
+import type { StoryFn } from '@storybook/react-vite'
 import { SunIcon } from '@ultraviolet/icons'
 import { Stepper } from '..'
 import { Text } from '../../Text'
