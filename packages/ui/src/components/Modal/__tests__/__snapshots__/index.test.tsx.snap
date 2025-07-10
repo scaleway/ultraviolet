@@ -8,31 +8,7 @@ exports[`Modal > renders open custom size 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Modal > renders open custom size and width (size take predecence) 1`] = `
-<DocumentFragment>
-  <div
-    data-testid="testing"
-  />
-</DocumentFragment>
-`;
-
-exports[`Modal > renders open custom width 1`] = `
-<DocumentFragment>
-  <div
-    data-testid="testing"
-  />
-</DocumentFragment>
-`;
-
 exports[`Modal > renders with custom classNames 1`] = `
-<DocumentFragment>
-  <div
-    data-testid="testing"
-  />
-</DocumentFragment>
-`;
-
-exports[`Modal > renders with customStyle 1`] = `
 <DocumentFragment>
   <div
     data-testid="testing"
@@ -118,22 +94,6 @@ exports[`Modal > renders with disclosure and onClose 1`] = `
     </button>
   </div>
   @keyframes animation-0 {
-  0% {
-    -webkit-transform: translateY(+100%);
-    -moz-transform: translateY(+100%);
-    -ms-transform: translateY(+100%);
-    transform: translateY(+100%);
-  }
-
-  100% {
-    -webkit-transform: translateY(0%);
-    -moz-transform: translateY(0%);
-    -ms-transform: translateY(0%);
-    transform: translateY(0%);
-  }
-}
-
-@keyframes animation-0 {
   0% {
     -webkit-transform: translateY(+100%);
     -moz-transform: translateY(+100%);

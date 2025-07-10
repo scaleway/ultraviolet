@@ -24,10 +24,10 @@ const Introduction = () => (
         <GithubAndDocumentationButtons />
       </Breakpoint>
       <Stack>
-        <Text as="h1" variant="headingLarge" color="primary">
+        <Text as="h1" variant="headingLarge" sentiment="primary">
           Scaleway <b>UI</b>
         </Text>
-        <Text as="h2" variant="heading" color="primary" prominence="weak">
+        <Text as="h2" variant="heading" sentiment="primary" prominence="weak">
           Open Source <br />
           Component Library
         </Text>

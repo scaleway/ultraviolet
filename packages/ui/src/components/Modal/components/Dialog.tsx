@@ -79,7 +79,8 @@ export const StyledDialog = styled('dialog', {
   border: 0;
   padding: ${({ theme }) => theme.space['3']};
   width: ${MODAL_WIDTH.medium}rem;
-  box-shadow: ${({ theme }) => `${theme.shadows.overlay[0]}, ${theme.shadows.overlay[1]}`};
+  box-shadow: ${({ theme }) =>
+    `${theme.shadows.overlay[0]}, ${theme.shadows.overlay[1]}`};
   
 
 
@@ -137,8 +138,6 @@ export const Dialog = ({
   preventBodyScroll,
   hideOnEsc,
   backdropClassName,
-  dialogCss,
-  backdropCss,
   image,
 }: DialogProps) => {
   const [isVisible, setIsVisible] = useState(false)
@@ -309,7 +308,6 @@ export const Dialog = ({
       data-open
       onClick={handleClose}
       className={backdropClassName}
-      css={backdropCss}
       data-testid={dataTestId ? `${dataTestId}-backdrop` : undefined}
       onFocus={stopFocus}
       data-animation={animation}
@@ -317,7 +315,6 @@ export const Dialog = ({
       id="backdrop-modal"
     >
       <StyledDialog
-        css={dialogCss}
         onKeyUp={handleKeyUp}
         onKeyDown={handleFocusTrap}
         className={className}

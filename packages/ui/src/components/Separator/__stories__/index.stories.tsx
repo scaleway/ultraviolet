@@ -9,5 +9,5 @@ export default {
 export { Playground } from './Playground.stories'
 export { Thickness } from './Thickness.stories'
 export { Direction } from './Direction.stories'
-export { Color } from './Color.stories'
+export { Sentiment } from './Sentiment.stories'
 export { Icon } from './Icon.stories'
