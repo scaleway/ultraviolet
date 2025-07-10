@@ -7426,7 +7426,7 @@ exports[`InfoTable > should work with selectable - checkbox 1`] = `
   gap: 0.5rem;
 }
 
-.emotion-11 .eqr7bqq4 {
+.emotion-11 .eqr7bqq3 {
   cursor: pointer;
 }
 
@@ -7435,7 +7435,7 @@ exports[`InfoTable > should work with selectable - checkbox 1`] = `
   color: #b5b7bd;
 }
 
-.emotion-11[aria-disabled='true'] .eqr7bqq4 {
+.emotion-11[aria-disabled='true'] .eqr7bqq3 {
   cursor: not-allowed;
 }
 
@@ -7979,7 +7979,7 @@ exports[`InfoTable > should work with selectable - checkbox 1`] = `
   gap: 0.5rem;
 }
 
-.emotion-41 .eqr7bqq4 {
+.emotion-41 .eqr7bqq3 {
   cursor: pointer;
 }
 
@@ -7988,7 +7988,7 @@ exports[`InfoTable > should work with selectable - checkbox 1`] = `
   color: #b5b7bd;
 }
 
-.emotion-41[aria-disabled='true'] .eqr7bqq4 {
+.emotion-41[aria-disabled='true'] .eqr7bqq3 {
   cursor: not-allowed;
 }
 
@@ -9645,6 +9645,12 @@ exports[`InfoTable > should work with selectable - radio 1`] = `
 .emotion-50 td,
 .emotion-50 td:first-child,
 .emotion-50 td:last-child {
+  border-color: #8c40ef;
+}
+
+.emotion-50[aria-expanded='true'] td,
+.emotion-50[aria-expanded='true'] td:first-child,
+.emotion-50[aria-expanded='true'] td:last-child {
   border-color: #8c40ef;
 }
 

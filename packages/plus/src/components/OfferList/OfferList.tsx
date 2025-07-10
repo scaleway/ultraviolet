@@ -39,6 +39,7 @@ export const OfferList = ({
       expandable={expandable}
       loading={loading}
       onChangeSelect={onChangeSelect}
+      autoCollapse={autoCollapse}
     >
       <List
         expandable={expandable && selectable !== 'radio'}

@@ -9,6 +9,7 @@ type OfferListContextValue = {
   disabled?: boolean
   loading?: boolean
   onChangeSelect?: (selected: string | string[]) => void
+  autoCollapse?: boolean
 }
 const OfferListContext = createContext<OfferListContextValue | undefined>(
   undefined,
@@ -21,6 +22,7 @@ type OfferListProviderProps = {
   disabled?: boolean
   loading?: boolean
   onChangeSelect?: (selected: string | string[]) => void
+  autoCollapse?: boolean
 }
 
 export const OfferListProvider = ({
@@ -30,6 +32,7 @@ export const OfferListProvider = ({
   disabled,
   loading,
   onChangeSelect,
+  autoCollapse,
 }: OfferListProviderProps) => {
   const [radioSelectedRow, setRadioSelectedRow] = useState<string>()
 
@@ -43,6 +46,7 @@ export const OfferListProvider = ({
         disabled,
         loading,
         onChangeSelect,
+        autoCollapse,
       }}
     >
       {children}
