@@ -1,4 +1,4 @@
-import type { Decorator, StoryFn } from '@storybook/react'
+import type { Decorator, StoryFn } from '@storybook/react-vite'
 import { ToastContainer, toast } from '..'
 import { Button } from '../../index'
 
@@ -30,7 +30,7 @@ Sentiments.parameters = {
   docs: {
     description: {
       story:
-        'Sentiments defines different colors of you component. Using `toast.success()`, `toast.error()`, `toast.warning()` or `toast.info()` will automatically set the correct sentiment. **⚠️ `toast.info()` is deprecated ⚠️**',
+        'Sentiments defines different colors of you component. Using `toast.success()`, `toast.error()`, `toast.warning()` or `toast.info()` will automatically set the correct sentiment. **! `toast.info()` is deprecated !**',
     },
   },
 }

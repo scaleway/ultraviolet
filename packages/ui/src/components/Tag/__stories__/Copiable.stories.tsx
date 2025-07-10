@@ -1,4 +1,4 @@
-import type { Decorator } from '@storybook/react'
+import type { Decorator } from '@storybook/react-vite'
 import { Template } from './Template.stories'
 
 export const Copiable = Template.bind({})

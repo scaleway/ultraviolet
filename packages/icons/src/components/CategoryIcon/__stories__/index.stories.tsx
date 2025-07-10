@@ -1,4 +1,4 @@
-import type { Meta } from '@storybook/react'
+import type { Meta } from '@storybook/react-vite'
 import { BaremetalCategoryIcon } from '../__generated__'
 import Documentation from './Documentation.md?raw'
 

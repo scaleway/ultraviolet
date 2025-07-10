@@ -1,4 +1,4 @@
-import type { Decorator, StoryFn } from '@storybook/react'
+import type { Decorator, StoryFn } from '@storybook/react-vite'
 import { NotificationContainer, notification } from '..'
 import { Avatar, Button, Stack, Text } from '../../index'
 

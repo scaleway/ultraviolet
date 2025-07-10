@@ -1,4 +1,4 @@
-import type { StoryFn } from '@storybook/react'
+import type { StoryFn } from '@storybook/react-vite'
 import { progressBarSentiments } from '..'
 import UncontrolledProgressBar from './UncontrolledProgressBar'
 

@@ -1,4 +1,4 @@
-import { StoryFn } from '@storybook/react'
+import { StoryFn } from '@storybook/react-vite'
 import { Button, type Text } from '@ultraviolet/ui'
 import { type ComponentProps, useState } from 'react'
 import { Plans } from '..'

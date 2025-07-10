@@ -3,7 +3,7 @@ import {
   DocsContainer as BaseContainer,
   DocsContainerProps as BaseContainerProps,
   Unstyled,
-} from '@storybook/blocks'
+} from '@storybook/addon-docs/blocks'
 import { consoleLightTheme as lightTheme } from '@ultraviolet/themes'
 import { ReactNode, cloneElement, isValidElement, useState } from 'react'
 import { globalStyles } from './globalStyle'

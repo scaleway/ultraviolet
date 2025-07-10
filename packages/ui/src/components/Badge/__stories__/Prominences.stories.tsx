@@ -1,4 +1,4 @@
-import type { StoryFn } from '@storybook/react'
+import type { StoryFn } from '@storybook/react-vite'
 import { Badge, PROMINENCES } from '..'
 import { SENTIMENTS } from '../../../theme'
 

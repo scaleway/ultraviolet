@@ -1,4 +1,4 @@
-import type { StoryFn } from '@storybook/react'
+import type { StoryFn } from '@storybook/react-vite'
 import { AutoFixIcon } from '@ultraviolet/icons'
 import { useState } from 'react'
 import { Stepper } from '..'

@@ -1,4 +1,4 @@
-import type { StoryFn } from '@storybook/react'
+import type { StoryFn } from '@storybook/react-vite'
 import type { Locale } from 'date-fns'
 import { enGB } from 'date-fns/locale/en-GB'
 import type { ComponentProps } from 'react'

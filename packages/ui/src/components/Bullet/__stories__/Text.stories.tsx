@@ -1,4 +1,4 @@
-import type { StoryFn } from '@storybook/react'
+import type { StoryFn } from '@storybook/react-vite'
 import { Bullet } from '..'
 
 export const Text: StoryFn = props => <Bullet {...props}>A</Bullet>
