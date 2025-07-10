@@ -25,9 +25,9 @@ export const StyledRow = styled(Row)`
 `
 type RowProps = {
   children: ReactNode
-  templateColumn: string
+  templateColumns: string
 }
 
-export const InfoTableRow = ({ children, templateColumn }: RowProps) => (
-  <StyledRow templateColumns={templateColumn}>{children}</StyledRow>
+export const InfoTableRow = ({ children, templateColumns }: RowProps) => (
+  <StyledRow templateColumns={templateColumns}>{children}</StyledRow>
 )
