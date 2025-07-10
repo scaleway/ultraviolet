@@ -1,4 +1,4 @@
-import type { StoryFn } from '@storybook/react'
+import type { StoryFn } from '@storybook/react-vite'
 import { AlertCircleOutlineIcon } from '@ultraviolet/icons'
 import { useState } from 'react'
 import { TextArea } from '..'

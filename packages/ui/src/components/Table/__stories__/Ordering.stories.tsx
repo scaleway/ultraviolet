@@ -1,4 +1,4 @@
-import type { StoryFn } from '@storybook/react'
+import type { StoryFn } from '@storybook/react-vite'
 import { useMemo, useState } from 'react'
 import { Table } from '..'
 import { data as sourceData } from './resources'

@@ -1,4 +1,4 @@
-import type { StoryFn } from '@storybook/react'
+import type { StoryFn } from '@storybook/react-vite'
 import { Snippet, Stack, Text } from '@ultraviolet/ui'
 import * as ProductIcon from '..'
 

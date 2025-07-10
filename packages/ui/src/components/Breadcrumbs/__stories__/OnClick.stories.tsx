@@ -1,4 +1,4 @@
-import type { StoryFn } from '@storybook/react'
+import type { StoryFn } from '@storybook/react-vite'
 import { RestoreIcon } from '@ultraviolet/icons'
 import { type ComponentProps, useCallback, useState } from 'react'
 import { Breadcrumbs } from '..'

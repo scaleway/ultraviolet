@@ -1,4 +1,4 @@
-import type { Decorator } from '@storybook/react'
+import type { Decorator } from '@storybook/react-vite'
 import { Stack } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
 import { EyeIcon } from '../__generated__'

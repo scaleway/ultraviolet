@@ -1,4 +1,4 @@
-import type { Decorator } from '@storybook/react'
+import type { Decorator } from '@storybook/react-vite'
 import { es, fr, ru } from 'date-fns/locale'
 import type { ComponentProps } from 'react'
 import { DateInput } from '..'

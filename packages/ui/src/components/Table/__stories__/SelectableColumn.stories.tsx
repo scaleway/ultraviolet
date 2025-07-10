@@ -1,4 +1,4 @@
-import type { StoryFn } from '@storybook/react'
+import type { StoryFn } from '@storybook/react-vite'
 import type { Dispatch, SetStateAction } from 'react'
 import { useState } from 'react'
 import { Table } from '..'

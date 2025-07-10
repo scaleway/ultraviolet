@@ -1,4 +1,4 @@
-import type { StoryFn } from '@storybook/react'
+import type { StoryFn } from '@storybook/react-vite'
 import { Stack, Text } from '@ultraviolet/ui'
 import { ContentCard } from '../index'
 import { Template } from './Template.stories'

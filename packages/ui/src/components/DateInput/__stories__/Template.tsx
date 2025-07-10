@@ -1,4 +1,4 @@
-import type { StoryFn } from '@storybook/react'
+import type { StoryFn } from '@storybook/react-vite'
 import { DateInput } from '..'
 
 export const Template: StoryFn<typeof DateInput> = props => (
