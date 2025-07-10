@@ -1,4 +1,4 @@
-import type { Meta } from '@storybook/react'
+import type { Meta } from '@storybook/react-vite'
 import { Snippet, Stack, Text } from '@ultraviolet/ui'
 import { Form, SelectableCardOptionGroupField } from '../..'
 import { useForm } from '../../..'

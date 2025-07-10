@@ -1,4 +1,4 @@
-import type { Meta } from '@storybook/react'
+import type { Meta } from '@storybook/react-vite'
 import { Breadcrumbs } from '..'
 import { Item } from '../components/Item'
 

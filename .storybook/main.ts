@@ -1,20 +1,27 @@
+import { createRequire } from "node:module";
+import { dirname, join } from "node:path";
 import type { StorybookConfig } from '@storybook/react-vite'
 import remarkGfm from 'remark-gfm'
+
+const require = createRequire(import.meta.url);
+
+const getAbsolutePath = (value: string): string => {
+  return dirname(require.resolve(join(value, "package.json")));
+}
 
 export default {
   stories: [
     '../packages/*/src/**/__stories__/**/*.mdx',
     '../packages/*/src/**/__stories__/index.stories.tsx',
   ],
+
   addons: [
-    '@storybook/addon-essentials',
-    '@storybook/addon-interactions',
-    '@storybook/addon-links',
-    '@storybook/addon-a11y',
-    '@storybook/addon-themes',
-    'storybook-addon-tag-badges',
+    getAbsolutePath("@storybook/addon-links"),
+    getAbsolutePath("@storybook/addon-a11y"),
+    getAbsolutePath("@storybook/addon-themes"),
+    getAbsolutePath("storybook-addon-tag-badges"),
     {
-      name: '@storybook/addon-docs',
+      name: getAbsolutePath("@storybook/addon-docs"),
       options: {
         mdxPluginOptions: {
           mdxCompileOptions: {
@@ -22,24 +29,24 @@ export default {
           },
         },
       },
-    },
+    }
   ],
+
   framework: {
-    name: '@storybook/react-vite',
+    name: getAbsolutePath("@storybook/react-vite"),
     options: {
       builder: {
         viteConfigPath: '.storybook/vite.config.ts',
       },
     },
   },
-  docs: {
-    autodocs: true,
-  },
+
   core: {
-    builder: '@storybook/builder-vite',
+    builder: getAbsolutePath("@storybook/builder-vite"),
     disableTelemetry: true,
   },
+
   typescript: {
     reactDocgen: 'react-docgen-typescript',
-  },
+  }
 } satisfies StorybookConfig
