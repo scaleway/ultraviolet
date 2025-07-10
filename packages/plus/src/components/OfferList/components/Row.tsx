@@ -38,6 +38,15 @@ const StyledRow = styled(List.Row, {
     }`
         : null}
 
+    &[aria-expanded='true'] {
+      ${({ theme, selected }) =>
+        selected
+          ? `td, td:first-child, td:last-child {
+      border-color: ${theme.colors.primary.border};
+    }`
+          : null}
+    }
+
 `
 
 const CustomExpandable = styled('div', {
@@ -77,6 +86,7 @@ export const Row = ({
     expandable,
     loading,
     onChangeSelect,
+    autoCollapse,
   } = useOfferListContext()
   const { expandedRowIds, collapseRow, expandRow } = List.useListContext()
   const theme = useTheme()
@@ -129,11 +139,9 @@ export const Row = ({
           expandable={computedExpandable}
           expandablePadding={banner ? '0' : undefined}
           selected={radioSelectedRow === id}
+          expanded={expandedRowIds[id]}
         >
-          <NoPaddingCell
-            maxWidth={theme.sizing[SELECTABLE_RADIO_SIZE]}
-            preventClick
-          >
+          <NoPaddingCell maxWidth={theme.sizing[SELECTABLE_RADIO_SIZE]}>
             <Radio
               name="radio-offer-list"
               checked={radioSelectedRow === id}
@@ -143,6 +151,11 @@ export const Row = ({
               onChange={event => {
                 setRadioSelectedRow(event.currentTarget.id)
                 onChangeSelect?.(offerName)
+                if (expandedRowIds[id]) {
+                  expandRow(id)
+                } else if (!autoCollapse) {
+                  collapseRow(id)
+                }
               }}
               data-testid={`radio-offer-list-${id}`}
             />
