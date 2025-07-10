@@ -1,5 +1,38 @@
 # Change Log
 
+## 2.0.0-beta.15
+
+### Major Changes
+
+- [#5308](https://github.com/scaleway/ultraviolet/pull/5308) [`288eec8`](https://github.com/scaleway/ultraviolet/commit/288eec8554bec97892574f598cf6193331e1fb7a) Thanks [@lisalupi](https://github.com/lisalupi)! - **BREAKING CHANGES**
+
+  Deprecated props removed:
+
+  - `Link`: prop "sentiment" can only by "primary" or "info" (default value) now
+  - `List.Cell`: prop "preventClick" removed (it is now default behavior)
+  - `Menu`: prop "size" and "maxWidth" removed, the size is now automatic
+
+- [#5310](https://github.com/scaleway/ultraviolet/pull/5310) [`7ce2d34`](https://github.com/scaleway/ultraviolet/commit/7ce2d34977de7731e873106d5ccdc3dcbca7b92b) Thanks [@lisalupi](https://github.com/lisalupi)! - **BREAKING CHANGES**
+
+  Deprecated props removed:
+
+  - `Modal`:
+    - prop "customDialogBackdropStyles" removed -> use "backdropClassName" instead to style the backdrop
+    - prop "customDialogStyles" removed -> use "customDialogStyles" instead to style the dialog
+    - prop "width" removed -> use "size" instead (same possible values)
+    - prop "opened" removed -> use "open" instead
+    - prop "onOpen" removed -> use "show" instead (ModalState)
+    - prop "onClose" removed -> use "close" instead (ModalState)
+    - prop "hide" removed -> use "close" instead (ModalState)
+  - `RadioGroup.Radio`: prop "name" removed, it is automatically passed from the parent `RadioGroup`
+  - `Separator`: prop "color" removed -> use "sentiment" instead
+  - `Text`: prop "color" removed -> use "sentiment" instead
+
+### Patch Changes
+
+- Updated dependencies [[`35780ff`](https://github.com/scaleway/ultraviolet/commit/35780fffd11eb7218dfd7d7134f1376758c871ed)]:
+  - @ultraviolet/icons@4.0.0-beta.7
+
 ## 2.0.0-beta.14
 
 ### Major Changes

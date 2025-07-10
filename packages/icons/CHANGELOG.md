@@ -1,5 +1,11 @@
 # Change Log
 
+## 4.0.0-beta.7
+
+### Patch Changes
+
+- [#5319](https://github.com/scaleway/ultraviolet/pull/5319) [`35780ff`](https://github.com/scaleway/ultraviolet/commit/35780fffd11eb7218dfd7d7134f1376758c871ed) Thanks [@lisalupi](https://github.com/lisalupi)! - New icon `DedilinkProductIcon`
+
 ## 4.0.0-beta.6
 
 ### Patch Changes
