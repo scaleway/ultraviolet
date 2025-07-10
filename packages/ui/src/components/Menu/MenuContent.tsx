@@ -41,10 +41,10 @@ const StyledPopup = styled(Popup, {
 
   min-width: ${SIZES.small};
   max-width: ${SIZES.large};
-  
+
   ${({ searchable }) => (searchable ? `min-width: 20rem` : null)};
   padding: ${({ theme }) => `${theme.space['0.25']} 0`};
-  
+
 `
 
 const Content = styled(Stack)`
@@ -157,16 +157,12 @@ export const Menu = forwardRef(
     }, [isVisible, searchable])
 
     const finalChild = useMemo(() => {
-      if (typeof children === 'function') {
-        return children({ toggle: () => setIsVisible(!isVisible) })
-      }
-
       if (searchable && localChild) {
         return localChild
       }
 
       return children
-    }, [children, isVisible, localChild, searchable, setIsVisible])
+    }, [children, localChild, searchable])
 
     return (
       <StyledPopup

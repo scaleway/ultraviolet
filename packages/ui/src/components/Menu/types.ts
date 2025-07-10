@@ -7,10 +7,6 @@ import type {
 } from 'react'
 import type { Popup } from '../Popup'
 
-type ChildMenuProps = {
-  toggle: () => void
-}
-
 type DisclosureElement =
   | ((
       disclosure: DisclosureProps,
@@ -24,10 +20,7 @@ export type DisclosureProps = { visible: boolean }
 export type MenuProps = {
   id?: string
   ariaLabel?: string
-  /*
-   * CHILDREN AS FUNCTION IS DEPRECATED: use `hideOnClickWithin` prop instead
-   */
-  children?: ReactNode | (({ toggle }: ChildMenuProps) => ReactNode)
+  children?: ReactNode
   className?: string
   disclosure: DisclosureElement
   hasArrow?: boolean
