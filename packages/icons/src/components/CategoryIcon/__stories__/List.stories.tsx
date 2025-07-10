@@ -1,4 +1,4 @@
-import type { StoryFn } from '@storybook/react'
+import type { StoryFn } from '@storybook/react-vite'
 import { Row, Snippet, Stack, Text } from '@ultraviolet/ui'
 import * as CategoryIcon from '..'
 import { DEPRECATED_ICONS } from '../../../deprecatedIcons'

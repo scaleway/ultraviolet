@@ -1,4 +1,4 @@
-import type { StoryFn } from '@storybook/react'
+import type { StoryFn } from '@storybook/react-vite'
 import { InformationIcon } from '@ultraviolet/icons'
 import { Menu } from '..'
 import { Badge } from '../../Badge'

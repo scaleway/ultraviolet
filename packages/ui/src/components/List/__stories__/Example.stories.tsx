@@ -1,4 +1,4 @@
-import type { StoryFn } from '@storybook/react'
+import type { StoryFn } from '@storybook/react-vite'
 import { PencilIcon } from '@ultraviolet/icons'
 import { useMemo, useState } from 'react'
 import { List } from '..'

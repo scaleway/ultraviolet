@@ -1,4 +1,4 @@
-import type { StoryFn } from '@storybook/react'
+import type { StoryFn } from '@storybook/react-vite'
 import { Button } from '../../Button'
 import { SelectInput } from '../../SelectInput'
 import { Stack } from '../../Stack'

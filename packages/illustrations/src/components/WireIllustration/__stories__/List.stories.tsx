@@ -1,4 +1,4 @@
-import type { Decorator } from '@storybook/react'
+import type { Decorator } from '@storybook/react-vite'
 import { Snippet, Stack, Text } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
 import { WireIllustration } from '..'

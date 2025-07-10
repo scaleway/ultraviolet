@@ -1,4 +1,4 @@
-import type { StoryFn } from '@storybook/react'
+import type { StoryFn } from '@storybook/react-vite'
 import { Bullet } from '..'
 import { SENTIMENTS } from '../../../theme'
 import { Stack } from '../../Stack'
