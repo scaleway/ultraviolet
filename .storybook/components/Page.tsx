@@ -7,7 +7,7 @@ import {
   Stories,
   Subtitle,
   Title,
-} from '@storybook/blocks'
+} from '@storybook/addon-docs/blocks'
 import { Alert, Stack, Text } from '@ultraviolet/ui'
 import background from '../assets/brand-background.png'
 
@@ -90,9 +90,7 @@ const Page = ({
             buttonText={migrationLink ? 'How to migrate?' : undefined}
             onClickButton={migrationLink ? linkTo(migrationLink) : undefined}
           >
-            {deprecatedReason
-              ? deprecatedReason
-              : 'This component is deprecated and should not be used in new projects.'}
+            {deprecatedReason ?? 'This component is deprecated and should not be used in new projects.'}
           </Alert>
         ) : null}
         {experimental ? (

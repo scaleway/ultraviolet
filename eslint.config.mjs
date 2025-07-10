@@ -1,3 +1,6 @@
+// For more info, see https://github.com/storybookjs/eslint-plugin-storybook#configuration-flat-config-format
+import storybook from 'eslint-plugin-storybook'
+
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import babelParser from '@babel/eslint-parser'
@@ -91,7 +94,6 @@ export default [
       },
     },
   },
-
   ...[...scwTypescript, ...scwEmotion].map(config => ({
     ...config,
     files: ['**/*.{ts,tsx}'],
@@ -102,7 +104,6 @@ export default [
       '@typescript-eslint/no-unnecessary-condition': 'off',
     },
   })),
-
   {
     files: [
       '**/__stories__/**/*.{ts,tsx}',
@@ -121,7 +122,6 @@ export default [
       },
     },
   },
-
   {
     files: ['**/scripts/**'],
     rules: {
@@ -129,7 +129,6 @@ export default [
       'no-console': 'off',
     },
   },
-
   ...scwTypescript.map(config => ({
     ...config,
 
@@ -160,7 +159,6 @@ export default [
       '@typescript-eslint/no-unsafe-return': 'off',
     },
   })),
-
   {
     files: ['**/*.d.ts', '**/vite.config.ts'],
 
@@ -168,7 +166,6 @@ export default [
       'import/no-extraneous-dependencies': 'off',
     },
   },
-
   {
     files: ['packages/form/**'],
     rules: {
@@ -184,4 +181,5 @@ export default [
     ...testingLibrary.configs['flat/react'],
   },
   ...oxlint.buildFromOxlintConfigFile('.oxlintrc.json'),
+  ...storybook.configs['flat/recommended'],
 ]
