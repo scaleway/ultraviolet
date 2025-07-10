@@ -1,5 +1,13 @@
 # Change Log
 
+## 2.0.0-beta.16
+
+### Major Changes
+
+- [#5311](https://github.com/scaleway/ultraviolet/pull/5311) [`b8fa3f6`](https://github.com/scaleway/ultraviolet/commit/b8fa3f6542b0b99bd2887b07ac4db0487e9371a1) Thanks [@matthprost](https://github.com/matthprost)! - ⚠️ Breaking changes:
+
+  `ThemeRegistry` is no longer available in this package. You can import it by adding `@ultraviolet/nextjs` package to your project. The component is the same only the import changes.
+
 ## 2.0.0-beta.15
 
 ### Major Changes
