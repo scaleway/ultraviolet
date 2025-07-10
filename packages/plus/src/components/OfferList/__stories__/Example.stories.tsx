@@ -1,4 +1,6 @@
 import type { StoryFn } from '@storybook/react'
+import { LeafIcon } from '@ultraviolet/icons'
+import { Stack } from '@ultraviolet/ui'
 import { type ComponentProps, useMemo, useState } from 'react'
 import { OfferList } from '../OfferList'
 
@@ -105,8 +107,27 @@ export const Example: StoryFn<ComponentProps<typeof OfferList>> = props => {
           offerName={offer.id}
           expandable="Expandable content"
         >
-          <OfferList.Cell footPrint={{ score: offer.score }}>
-            {offer.id}
+          <OfferList.Cell>
+            <Stack direction="column">
+              {offer.id}
+              <Stack direction="row" gap={0.5}>
+                {Array.from({ length: offer.score }).map((_, i) => (
+                  <LeafIcon
+                    key={`green-${i}`}
+                    sentiment="success"
+                    size="small"
+                  />
+                ))}
+                {Array.from({ length: 3 - offer.score }).map((_, i) => (
+                  <LeafIcon
+                    key={`grey-${i}`}
+                    sentiment="neutral"
+                    size="small"
+                    disabled
+                  />
+                ))}
+              </Stack>
+            </Stack>
           </OfferList.Cell>
           <OfferList.Cell>{offer.cpu}</OfferList.Cell>
           <OfferList.Cell>{offer.memory}</OfferList.Cell>
@@ -121,7 +142,7 @@ export const Example: StoryFn<ComponentProps<typeof OfferList>> = props => {
 
 Example.args = {
   expandable: true,
-  selectable: 'checkbox',
+  type: 'radio',
 }
 
 Example.parameters = {
