@@ -12,7 +12,7 @@ exports[`Responsive utilities > down > works with xlarge 1`] = `"@media (max-wid
 
 exports[`Responsive utilities > down > works with xsmall 1`] = `"@media (max-width: calc(720px - 1px)) { border: 1px solid red; }"`;
 
-exports[`Responsive utilities > down > works with xxsmall 1`] = `"@media (max-width: calc(0px - 1px)) { border: 1px solid red; }"`;
+exports[`Responsive utilities > down > works with xxsmall 1`] = `"@media (max-width: calc(320px - 1px)) { border: 1px solid red; }"`;
 
 exports[`Responsive utilities > up > should return null when unknown size 1`] = `""`;
 
@@ -26,4 +26,4 @@ exports[`Responsive utilities > up > works with xlarge 1`] = `"@media (min-width
 
 exports[`Responsive utilities > up > works with xsmall 1`] = `"@media (min-width: 720pxpx) { border: 1px solid red; }"`;
 
-exports[`Responsive utilities > up > works with xxsmall 1`] = `"@media (min-width: 0pxpx) { border: 1px solid red; }"`;
+exports[`Responsive utilities > up > works with xxsmall 1`] = `"@media (min-width: 320pxpx) { border: 1px solid red; }"`;
