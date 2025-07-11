@@ -1,5 +1,17 @@
 # Change Log
 
+## 2.0.0-beta.17
+
+### Minor Changes
+
+- [#5322](https://github.com/scaleway/ultraviolet/pull/5322) [`9c7f608`](https://github.com/scaleway/ultraviolet/commit/9c7f608e254dd93e1316bf4d9d5456f96b7c9b0e) Thanks [@matthprost](https://github.com/matthprost)! - Implement responsive capacities on component `<Row />` and `<Stack />`
+
+### Patch Changes
+
+- Updated dependencies [[`9c7f608`](https://github.com/scaleway/ultraviolet/commit/9c7f608e254dd93e1316bf4d9d5456f96b7c9b0e)]:
+  - @ultraviolet/themes@2.0.0-beta.3
+  - @ultraviolet/icons@4.0.0-beta.8
+
 ## 2.0.0-beta.16
 
 ### Major Changes
