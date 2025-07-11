@@ -2,7 +2,12 @@
 
 import styled from '@emotion/styled'
 import { AlertCircleIcon, CheckCircleIcon } from '@ultraviolet/icons'
-import type { ComponentProps, InputHTMLAttributes, ReactNode } from 'react'
+import type {
+  CSSProperties,
+  ComponentProps,
+  InputHTMLAttributes,
+  ReactNode,
+} from 'react'
 import { useEffect, useId, useMemo, useState } from 'react'
 import { Label } from '../Label'
 import { SelectInput } from '../SelectInput'
@@ -209,7 +214,7 @@ type UnitInputProps = {
   'data-testid'?: string
   helper?: string
   unitError?: string
-  width?: ComponentProps<typeof Stack>['width']
+  width?: CSSProperties['width']
   placeholderUnit?: string
   error?: boolean | string
   success?: boolean | string

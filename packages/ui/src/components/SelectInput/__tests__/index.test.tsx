@@ -544,7 +544,6 @@ describe('SelectInput', () => {
     const input = screen.getByTestId('select-input-test')
 
     await userEvent.click(input)
-
     const dropdown = screen.getByRole('dialog')
     const outsideClick = screen.getByText('Test outside element')
 
