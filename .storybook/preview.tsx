@@ -14,6 +14,31 @@ import { dark, light } from './storybookThemes'
 import '@ultraviolet/fonts/fonts.css'
 import { scan } from "react-scan"
 
+const BREAKPOINT_ORDER = [
+  'xlarge',
+  'large',
+  'medium',
+  'small',
+  'xsmall',
+  'xxsmall',
+]
+
+const VIEWPORTS = BREAKPOINT_ORDER.reduce((acc, key) => {
+  if (key in lightTheme.breakpoints) {
+    return {
+      ...acc,
+      [key]: {
+        name: key,
+        styles: {
+          width: lightTheme.breakpoints[key as keyof typeof lightTheme.breakpoints],
+          height: '600px',
+        },
+      },
+    }
+  }
+  return acc
+}, {})
+
 scan({
   enabled: true,
   log: true,
@@ -52,7 +77,9 @@ const parameters: Preview['parameters'] = {
     canvas: { hidden: false },
   },
   viewport: {
-    viewports: {},
+    viewports: {
+      ...VIEWPORTS
+    }
   },
   options: {
     storySort: {
