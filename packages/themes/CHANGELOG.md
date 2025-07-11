@@ -1,5 +1,11 @@
 # Change Log
 
+## 2.0.0-beta.3
+
+### Major Changes
+
+- [#5322](https://github.com/scaleway/ultraviolet/pull/5322) [`9c7f608`](https://github.com/scaleway/ultraviolet/commit/9c7f608e254dd93e1316bf4d9d5456f96b7c9b0e) Thanks [@matthprost](https://github.com/matthprost)! - Removal of `theme.screen` into CSS variables and fixed breakpoints
+
 ## 2.0.0-beta.2
 
 ### Patch Changes
