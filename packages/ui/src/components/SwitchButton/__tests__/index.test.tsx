@@ -43,7 +43,7 @@ describe('SwitchButton', () => {
 
     const { asFragment } = renderWithTheme(
       <SwitchButton name="test" onChange={() => {}} value="right">
-        <SwitchButton.Option value="left">Left </SwitchButton.Option>
+        <SwitchButton.Option value="left">Left</SwitchButton.Option>
         <SwitchButton.Option value="right">Right</SwitchButton.Option>
       </SwitchButton>,
     )
