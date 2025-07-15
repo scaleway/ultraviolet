@@ -11,12 +11,10 @@
   },
   "plugins": [
     "import",
-    "n",
+    "eslint",
     "node",
     "react-perf",
     "react",
-    "security",
-    "tree_shaking",
     "typescript",
     "unicorn"
   ],
@@ -83,6 +81,7 @@
     "import/unambiguous": "off",
     "import/exports-last": "off",
     "import/no-anonymous-default-export": "off",
+    "import/group-exports": "off",
     "react-perf/jsx-no-jsx-as-prop": "off",
     "react-perf/jsx-no-new-array-as-prop": "off",
     "react-perf/jsx-no-new-function-as-prop": "off",
@@ -122,11 +121,13 @@
     "unicorn/prefer-code-point": "off",
     "unicorn/prefer-dom-node-append": "off",
     "unicorn/prefer-dom-node-remove": "off",
+    "unicorn/prefer-object-from-entries": "off",
     "unicorn/prefer-logical-operator-over-ternary": "off",
     "unicorn/prefer-node-protocol": "off",
     "unicorn/prefer-query-selector": "off",
     "unicorn/prefer-string-replace-all": "off",
-    "unicorn/prefer-string-slice": "off"
+    "unicorn/prefer-string-slice": "off",
+    "unicorn/prefer-global-this": "off"
   },
   "settings": {
     "jsx-a11y": {

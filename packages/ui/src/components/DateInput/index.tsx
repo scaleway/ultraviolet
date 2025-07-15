@@ -9,7 +9,8 @@ import { Card } from '../Card'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
 import { TextInputV2 } from '../TextInputV2'
-import { type ContextProps, DateInputContext } from './Context'
+import type { ContextProps } from './Context'
+import { DateInputContext } from './Context'
 import { CalendarContent } from './components/CalendarContent'
 import { CalendarPopup } from './components/Popup'
 import { formatValue, styleCalendarContainer } from './helpers'
@@ -220,6 +221,7 @@ export const DateInput = <IsRange extends undefined | boolean>({
         end: endDate ?? computedRange.end,
       })
     }
+    // oxlint-disable-next-line react/exhaustive-deps
   }, [endDate, startDate, value])
 
   const manageOnChange = (event: ChangeEvent<HTMLInputElement>) => {

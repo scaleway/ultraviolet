@@ -3,7 +3,8 @@ import styled from '@emotion/styled'
 import type { StoryFn } from '@storybook/react'
 import { blockStorageWire } from '@ultraviolet/illustrations/products/blockStorage'
 import { Button, Expandable, Stack, Text } from '@ultraviolet/ui'
-import { type ComponentProps, useState } from 'react'
+import type { ComponentProps } from 'react'
+import { useState } from 'react'
 import { SteppedListCard } from '../SteppedListCard'
 
 const StyledImage = styled.img`

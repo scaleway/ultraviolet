@@ -2,14 +2,8 @@
 
 import styled from '@emotion/styled'
 import { AsteriskIcon } from '@ultraviolet/icons'
-import {
-  type ComponentProps,
-  type InputHTMLAttributes,
-  type ReactNode,
-  createContext,
-  useContext,
-  useMemo,
-} from 'react'
+import type { ComponentProps, InputHTMLAttributes, ReactNode } from 'react'
+import { createContext, useContext, useMemo } from 'react'
 import { Checkbox } from '../Checkbox'
 import { Stack } from '../Stack'
 import { Text } from '../Text'

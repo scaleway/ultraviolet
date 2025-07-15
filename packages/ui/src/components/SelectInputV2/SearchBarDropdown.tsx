@@ -51,15 +51,15 @@ const findClosestOption = (
       ) {
         const firstFit = Object.keys(possibleOptions)
           .map(group => possibleOptions[group][0])
-          .filter(value => !!value)[0]
+          .find(value => !!value)
 
         return firstFit
       }
     } else {
-      const possibleOptions = [...options].filter(option => !option.disabled)
+      const possibleOption = [...options].find(option => !option.disabled)
 
-      if (possibleOptions.length > 0) {
-        return possibleOptions[0]
+      if (possibleOption) {
+        return possibleOption
       }
     }
   }
@@ -116,9 +116,9 @@ export const SearchBarDropdown = ({
             type: 'selectOption',
             clickedOption: closestOption,
             group: !Array.isArray(options)
-              ? Object.keys(options).filter(group =>
+              ? Object.keys(options).find(group =>
                   options[group].includes(closestOption),
-                )[0]
+                )
               : undefined,
           })
           onChange?.(

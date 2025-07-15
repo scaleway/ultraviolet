@@ -11,7 +11,8 @@ import {
   UseCaseCategoryIcon,
 } from '@ultraviolet/icons/category'
 import { Stack, fadeIn, fadeOut } from '@ultraviolet/ui'
-import { type ComponentProps, useCallback, useEffect, useState } from 'react'
+import type { ComponentProps } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import { Navigation, NavigationProvider, useNavigation } from '..'
 import logoSmall from './assets/logo-small.svg'
 import logo from './assets/logo.svg'

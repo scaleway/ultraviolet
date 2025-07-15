@@ -1,4 +1,5 @@
-import { Children, type ReactNode, cloneElement, isValidElement } from 'react'
+import type { ReactNode } from 'react'
+import { Children, cloneElement, isValidElement } from 'react'
 
 /**
  * Search inside a children (React Element) recursively until a result is found

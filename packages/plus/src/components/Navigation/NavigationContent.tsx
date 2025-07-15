@@ -185,11 +185,12 @@ export const NavigationContent = ({
       document.addEventListener('mousemove', mouseMove)
       window.addEventListener('mouseup', mouseup)
     }
+    const sliderRefCurrent = sliderRef.current
 
-    sliderRef.current?.addEventListener('mousedown', mousedown)
+    sliderRefCurrent?.addEventListener('mousedown', mousedown)
 
     return () => {
-      sliderRef.current?.removeEventListener('mousedown', mousedown)
+      sliderRefCurrent?.removeEventListener('mousedown', mousedown)
     }
   }, [
     expanded,

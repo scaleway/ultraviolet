@@ -1,5 +1,5 @@
 import '@emotion/react'
-import { consoleLightTheme } from '@ultraviolet/themes'
+import type { consoleLightTheme } from '@ultraviolet/themes'
 
 type CustomTheme = typeof consoleLightTheme
 

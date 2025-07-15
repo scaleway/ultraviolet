@@ -19,7 +19,8 @@ import { Text } from '../Text'
 import { DisplayOption } from './DropdownOption'
 import { SearchBarDropdown } from './SearchBarDropdown'
 import { useSelectInput } from './SelectInputProvider'
-import { type DataType, INPUT_SIZE_HEIGHT, type OptionType } from './types'
+import type { DataType, OptionType } from './types'
+import { INPUT_SIZE_HEIGHT } from './types'
 
 const DROPDOWN_MAX_HEIGHT = 256
 
@@ -262,11 +263,11 @@ const handleKeyDown = (
         setDefaultSearch(null)
       }
     } else {
-      const closestOption = [...options].filter(option =>
+      const closestOption = [...options].find(option =>
         option.searchText
           ? option.searchText.toLocaleLowerCase().startsWith(currentSearch)
           : option.value.toLocaleLowerCase().startsWith(currentSearch),
-      )[0]
+      )
       if (closestOption) {
         setDefaultSearch(closestOption.searchText ?? closestOption.value)
       } else {
@@ -721,6 +722,7 @@ export const Dropdown = ({
         } else window.scrollBy({ top: overflow, behavior: 'smooth' })
       }
     }
+    // oxlint-disable-next-line react/exhaustive-deps
   }, [isDropdownVisible, refSelect, size, ref.current])
 
   const resizeDropdown = useCallback(() => {

@@ -1,7 +1,8 @@
 'use client'
 
 import styled from '@emotion/styled'
-import { type ComponentProps, useMemo } from 'react'
+import type { ComponentProps } from 'react'
+import { useMemo } from 'react'
 import { Bullet } from '../Bullet'
 import { Modal } from '../Modal'
 import { Text } from '../Text'
