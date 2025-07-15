@@ -7,7 +7,7 @@ Text.parameters = {
   docs: {
     description: {
       story:
-        'Set `text` using text property. Sentiment and size props affect text.',
+        'Set `text` using children. Sentiment and size props affect children.',
     },
   },
 }

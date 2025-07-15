@@ -51,7 +51,9 @@ const EditorContainer = styled.div`
     user-select: none;
 
     .cm-editor {
-      background-color: ${consoleDarkTheme.colors.neutral.backgroundWeakDisabled};
+      background-color: ${
+        consoleDarkTheme.colors.neutral.backgroundWeakDisabled
+      };
       color: ${consoleDarkTheme.colors.neutral.textDisabled};
     }
 
@@ -103,10 +105,6 @@ const StyledCopyButton = styled(CopyButton)`
 `
 
 type CodeEditorProps = {
-  /**
-   * @deprecated use prop `label` instead
-   */
-  title?: string
   value: string
   onChange: ComponentProps<typeof CodeMirror>['onChange']
   extensions: keyof typeof langs
@@ -130,7 +128,6 @@ type CodeEditorProps = {
 }
 
 export const CodeEditor = ({
-  title,
   value,
   onChange,
   extensions = 'javascript',
@@ -149,9 +146,7 @@ export const CodeEditor = ({
   className,
 }: CodeEditorProps) => (
   <StyledStack gap={0.5} data-disabled={disabled}>
-    {label || title ? (
-      <Label labelDescription={labelDescription}>{label ?? title}</Label>
-    ) : null}
+    {label ? <Label labelDescription={labelDescription}>{label}</Label> : null}
     <EditorContainer data-disabled={disabled}>
       <CodeMirror
         readOnly={readOnly || disabled}
