@@ -1,5 +1,6 @@
 import type { StoryFn } from '@storybook/react'
-import { type ComponentProps, useCallback, useState } from 'react'
+import type { ComponentProps } from 'react'
+import { useCallback, useState } from 'react'
 import { Breadcrumbs } from '..'
 import { Button } from '../../Button'
 import { Separator } from '../../Separator'

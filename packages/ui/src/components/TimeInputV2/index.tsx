@@ -244,6 +244,7 @@ export const TimeInputV2 = ({
         setFilled({ h: true, m: true, s: true })
       }
     }
+    // oxlint-disable-next-line react/exhaustive-deps
   }, [value])
 
   const handleChangePeriod = (key: 'a' | 'p') => {

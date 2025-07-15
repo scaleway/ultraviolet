@@ -3,11 +3,13 @@
 import { css, keyframes } from '@emotion/react'
 import styled from '@emotion/styled'
 import type { ComponentProps } from 'react'
-import { Modal, type ModalProps } from '../Modal'
+import type { ModalProps } from '../Modal'
+import { Modal } from '../Modal'
 import type { ModalState } from '../Modal/types'
 import { Separator } from '../Separator'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
+// oxlint-disable-next-line import/no-unassigned-import
 import './style.css'
 
 export const SIZES = {

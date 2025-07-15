@@ -6,6 +6,7 @@ import Footer from '../components/Footer'
 import GlobalStyle from '../components/GlobalStyle'
 import Head from '../components/Head'
 import Header from '../components/Header'
+// oxlint-disable-next-line import/no-unassigned-import
 import '@ultraviolet/fonts/fonts.css'
 
 type Themes = 'light' | 'dark'

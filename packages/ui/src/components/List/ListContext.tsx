@@ -314,6 +314,7 @@ export const ListProvider = ({
     return () => {
       handlers.forEach(cleanup => cleanup())
     }
+    // oxlint-disable-next-line react/exhaustive-deps
   }, [lastCheckedCheckbox, selectRows])
 
   useEffect(() => {

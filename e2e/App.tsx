@@ -1,4 +1,5 @@
 import { Global, ThemeProvider } from '@emotion/react'
+// oxlint-disable-next-line import/no-unassigned-import
 import '@ultraviolet/fonts/fonts.css'
 import { consoleLightTheme } from '@ultraviolet/themes'
 import { Text, normalize } from '@ultraviolet/ui'

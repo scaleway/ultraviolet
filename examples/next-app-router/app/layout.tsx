@@ -1,8 +1,9 @@
 import type { Metadata } from 'next'
+// oxlint-disable-next-line import/no-unassigned-import
 import './globals.css'
 import { consoleLightTheme } from '@ultraviolet/themes'
 import { ThemeRegistry } from '@ultraviolet/ui'
-import { ReactNode } from 'react'
+import type { ReactNode } from 'react'
 import { GlobalStyles } from './GlobalStyles'
 
 export const metadata: Metadata = {

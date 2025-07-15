@@ -1,6 +1,7 @@
 'use client'
 
-import { type Theme, css } from '@emotion/react'
+import type { Theme } from '@emotion/react'
+import { css } from '@emotion/react'
 import styled from '@emotion/styled'
 import { UploadIcon } from '@ultraviolet/icons'
 import { Icon } from '@ultraviolet/icons/legacy'
