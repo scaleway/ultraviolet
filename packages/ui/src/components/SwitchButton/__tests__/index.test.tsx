@@ -29,6 +29,39 @@ describe('SwitchButton', () => {
       </SwitchButton>,
     ))
 
+  test('renders correctly with children changing', () => {
+    let resizeCallback: ResizeObserverCallback = () => {}
+
+    ResizeObserver = vi.fn((cb: ResizeObserverCallback) => {
+      resizeCallback = cb
+
+      return {
+        observe: vi.fn(),
+        disconnect: vi.fn(),
+      }
+    }) as unknown as typeof ResizeObserver
+
+    const { asFragment } = renderWithTheme(
+      <SwitchButton name="test" onChange={() => {}} value="right">
+        <SwitchButton.Option value="left">Left </SwitchButton.Option>
+        <SwitchButton.Option value="right">Right</SwitchButton.Option>
+      </SwitchButton>,
+    )
+
+    const buttonLeft = screen.getByTestId('switch-button-left')
+    Object.defineProperty(buttonLeft, 'offsetWidth', {
+      configurable: true,
+      value: 1000,
+    })
+
+    resizeCallback(
+      [{ target: buttonLeft } as unknown as ResizeObserverEntry],
+      {} as ResizeObserver,
+    )
+
+    expect(asFragment()).toMatchSnapshot()
+  })
+
   test('renders with tooltip', () =>
     shouldMatchEmotionSnapshot(
       <SwitchButton

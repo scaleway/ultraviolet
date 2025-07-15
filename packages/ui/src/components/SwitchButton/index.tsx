@@ -101,7 +101,7 @@ export const SwitchButton = ({
   }, [refOptions, value])
 
   useEffect(() => {
-    const element = getElement(value)
+    const element = getElement(localValue)
     if (!element) return undefined
 
     const resizeObserver = new ResizeObserver(() => {
@@ -114,7 +114,7 @@ export const SwitchButton = ({
     return () => {
       resizeObserver.disconnect()
     }
-  })
+  }, [children, localValue])
 
   const handleOnChange = useCallback(
     (event: ChangeEvent<HTMLInputElement>) => {
