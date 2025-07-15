@@ -1,4 +1,5 @@
-import { Button, type Text } from '@ultraviolet/ui'
+import { Button } from '@ultraviolet/ui'
+import type { Text } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
 import { Template } from './Template.stories'
 import { domain, fees, gb, pipeline, ssl } from './features'

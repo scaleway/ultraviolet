@@ -120,19 +120,6 @@ export const toast = {
       closeButton: <CloseButton sentiment="danger" />,
       containerId: containerId ?? 'toaster',
     }),
-  /**
-   * @deprecated "Deprecated, please use another variant instead"
-   */
-  info: (
-    children: ReactNode,
-    options?: ToastOptions,
-    containerId?: string,
-  ): number | string =>
-    baseToast.info(<Content>{children}</Content>, {
-      ...options,
-      closeButton: <CloseButton sentiment="info" />,
-      containerId: containerId ?? 'toaster',
-    }),
 
   success: (
     children: ReactNode,

@@ -249,6 +249,7 @@ export const TimeInput = ({
         setFilled({ h: true, m: true, s: true })
       }
     }
+    // oxlint-disable react-hooks/exhaustive-deps
   }, [value])
 
   const handleChangePeriod = (key: 'a' | 'p') => {

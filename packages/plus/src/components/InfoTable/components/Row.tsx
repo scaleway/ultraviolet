@@ -2,7 +2,7 @@
 
 import styled from '@emotion/styled'
 import { Row } from '@ultraviolet/ui'
-import { ReactNode } from 'react'
+import type { ReactNode } from 'react'
 
 export const StyledRow = styled(Row)`
   border-bottom: 1px ${({ theme }) => theme.colors.neutral.border} solid;

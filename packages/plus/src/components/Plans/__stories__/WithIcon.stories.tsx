@@ -3,7 +3,8 @@ import {
   BasicSupportProductIcon,
   EntrepriseSupportProductIcon,
 } from '@ultraviolet/icons/product'
-import { Button, Separator, type Text } from '@ultraviolet/ui'
+import { Button, Separator } from '@ultraviolet/ui'
+import type { Text } from '@ultraviolet/ui'
 import type { ComponentProps, ReactNode } from 'react'
 import { Template } from './Template.stories'
 import { domain, fees, gb, pipeline, ssl } from './features'

@@ -2,7 +2,7 @@
 
 import styled from '@emotion/styled'
 import { Stack, Text } from '@ultraviolet/ui'
-import { ReactNode } from 'react'
+import type { ReactNode } from 'react'
 
 export const Term = styled.dt`
   font-weight: ${({ theme }) => theme.typography.bodyStrong.weight};
