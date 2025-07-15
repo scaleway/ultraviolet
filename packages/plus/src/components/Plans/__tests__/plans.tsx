@@ -1,6 +1,7 @@
 import { EntrepriseSupportProductIcon } from '@ultraviolet/icons/product'
-import { Button, Separator, Text } from '@ultraviolet/ui'
-import { ComponentProps } from 'react'
+import type { Text } from '@ultraviolet/ui'
+import { Button, Separator } from '@ultraviolet/ui'
+import type { ComponentProps } from 'react'
 
 export const planStarter = {
   value: 'starter',
