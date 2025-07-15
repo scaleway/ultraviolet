@@ -6,7 +6,7 @@ import { SENTIMENTS } from '../../../theme'
 
 describe('Bullet', () => {
   test('renders correctly with a text', () =>
-    shouldMatchEmotionSnapshot(<Bullet text="1" />))
+    shouldMatchEmotionSnapshot(<Bullet>1</Bullet>))
 
   test('renders correctly with an icon', () =>
     shouldMatchEmotionSnapshot(
@@ -25,14 +25,14 @@ describe('Bullet', () => {
   describe('sentiment', () => {
     ;['disabled', ...SENTIMENTS].forEach(sentiment => {
       test(`render ${sentiment}`, () =>
-        shouldMatchEmotionSnapshot(<Bullet sentiment={sentiment} text="1" />))
+        shouldMatchEmotionSnapshot(<Bullet sentiment={sentiment}>1</Bullet>))
     })
   })
 
   describe('size', () => {
     ;(['medium', 'small', 'xsmall', 'xxsmall'] as const).forEach(size => {
       test(`render ${size}`, () =>
-        shouldMatchEmotionSnapshot(<Bullet size={size} text="1" />))
+        shouldMatchEmotionSnapshot(<Bullet size={size}>1</Bullet>))
     })
   })
 })
