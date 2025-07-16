@@ -59,6 +59,16 @@ describe('SwitchButton', () => {
       {} as ResizeObserver,
     )
 
+    Object.defineProperty(buttonLeft, 'offsetWidth', {
+      configurable: true,
+      value: 100,
+    })
+
+    resizeCallback(
+      [{ target: buttonLeft } as unknown as ResizeObserverEntry],
+      {} as ResizeObserver,
+    )
+
     expect(asFragment()).toMatchSnapshot()
   })
 
