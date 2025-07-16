@@ -1,5 +1,18 @@
 # Change Log
 
+## 3.17.17
+
+### Patch Changes
+
+- [#5325](https://github.com/scaleway/ultraviolet/pull/5325) [`faaccb7`](https://github.com/scaleway/ultraviolet/commit/faaccb764e48cc9d517c0da1212a9ba77eec3d7a) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@babel/core` to `7.27.7`.
+
+- [#5315](https://github.com/scaleway/ultraviolet/pull/5315) [`029f2bc`](https://github.com/scaleway/ultraviolet/commit/029f2bcc6fb11d24ea2c46cd0a3f5546cffa30fb) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@emotion/styled` to `11.14.1`.
+
+- [#5097](https://github.com/scaleway/ultraviolet/pull/5097) [`ce31fd7`](https://github.com/scaleway/ultraviolet/commit/ce31fd7bca3b9243b6254e0d60999d26cf51c8f5) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `react-hook-form` to `7.56.3`.
+
+- Updated dependencies [[`faaccb7`](https://github.com/scaleway/ultraviolet/commit/faaccb764e48cc9d517c0da1212a9ba77eec3d7a), [`029f2bc`](https://github.com/scaleway/ultraviolet/commit/029f2bcc6fb11d24ea2c46cd0a3f5546cffa30fb), [`c453a01`](https://github.com/scaleway/ultraviolet/commit/c453a01967a64eeec644a2193b145572b6ed1569)]:
+  - @ultraviolet/ui@1.95.13
+
 ## 3.17.16
 
 ### Patch Changes
