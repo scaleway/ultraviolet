@@ -29,7 +29,8 @@ const Day = styled(Button)`
 
   &[aria-label="in-range"]:hover {
     color: ${({ theme }) => theme.colors.neutral.textStronger};
-    background-color: ${({ theme }) => theme.colors.primary.backgroundStrongHover};
+    background-color: ${({ theme }) =>
+      theme.colors.primary.backgroundStrongHover};
   }
 
   &[aria-label="not-current"], :disabled {
