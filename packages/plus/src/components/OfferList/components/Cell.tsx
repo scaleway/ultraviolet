@@ -2,7 +2,7 @@
 
 import styled from '@emotion/styled'
 import { List, Skeleton } from '@ultraviolet/ui'
-import { ComponentProps } from 'react'
+import type { ComponentProps } from 'react'
 import { useOfferListContext } from '../OfferListProvider'
 
 const StyledCell = styled(List.Cell)`

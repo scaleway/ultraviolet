@@ -1,6 +1,7 @@
 import type { StoryFn } from '@storybook/react'
 import { Button, Stack } from '@ultraviolet/ui'
-import { type ComponentProps, useState } from 'react'
+import { useState } from 'react'
+import type { ComponentProps } from 'react'
 import { OfferList } from '../OfferList'
 import { columns, data } from './resources'
 

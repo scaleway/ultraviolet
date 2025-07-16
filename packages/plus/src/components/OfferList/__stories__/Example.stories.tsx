@@ -1,7 +1,8 @@
 import type { StoryFn } from '@storybook/react'
 import { LeafIcon } from '@ultraviolet/icons'
 import { Stack } from '@ultraviolet/ui'
-import { type ComponentProps, useMemo, useState } from 'react'
+import { useMemo, useState } from 'react'
+import type { ComponentProps } from 'react'
 import { OfferList } from '../OfferList'
 
 const data = [

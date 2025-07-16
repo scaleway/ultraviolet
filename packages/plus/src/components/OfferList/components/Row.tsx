@@ -4,8 +4,8 @@ import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import { ArrowDownIcon, ArrowUpIcon } from '@ultraviolet/icons'
 import { Button, List, Radio, Stack } from '@ultraviolet/ui'
-import { Children, ComponentProps, useCallback, useMemo } from 'react'
-import type { ReactNode } from 'react'
+import { Children, useCallback, useMemo } from 'react'
+import type { ComponentProps, ReactNode } from 'react'
 import { useOfferListContext } from '../OfferListProvider'
 import { SELECTABLE_RADIO_SIZE } from '../constants'
 import { Banner } from './Banner'
@@ -106,7 +106,7 @@ export const Row = ({
         expandRow(id)
       }
     }
-  }, [collapseRow, expandRow, expandedRowIds, id])
+  }, [collapseRow, expandRow, expandedRowIds, id, loading])
 
   const computedExpandableContent = useMemo(() => {
     if (expandable && !loading && expandedRowIds[id] && banner) {
@@ -124,7 +124,15 @@ export const Row = ({
     if (expandable && !loading) return expandableContent
 
     return undefined
-  }, [expandable, loading, expandedRowIds, banner])
+  }, [
+    expandable,
+    loading,
+    expandedRowIds,
+    banner,
+    expandablePadding,
+    id,
+    expandableContent,
+  ])
 
   if (selectable === 'radio') {
     return (

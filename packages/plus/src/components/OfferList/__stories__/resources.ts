@@ -1,5 +1,5 @@
-import { ComponentProps } from 'react'
-import { OfferList } from '../OfferList'
+import type { ComponentProps } from 'react'
+import type { OfferList } from '../OfferList'
 
 export const data = [
   {
