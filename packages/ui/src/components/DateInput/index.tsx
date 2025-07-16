@@ -9,8 +9,8 @@ import { Card } from '../Card'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
 import { TextInput } from '../TextInput'
-import type { ContextProps } from './Context'
 import { DateInputContext } from './Context'
+import type { ContextProps } from './Context'
 import { CalendarContent } from './components/CalendarContent'
 import { CalendarPopup } from './components/Popup'
 import {
@@ -227,8 +227,16 @@ export const DateInput = <IsRange extends undefined | boolean>({
         end: endDate ?? computedRange.end,
       })
     }
-    // oxlint-disable-next-line react/exhaustive-deps
-  }, [endDate, startDate, value])
+  }, [
+    endDate,
+    startDate,
+    value,
+    computedRange.start,
+    computedRange.end,
+    selectsRange,
+    format,
+    showMonthYearPicker,
+  ])
 
   const manageOnChange = (event: ChangeEvent<HTMLInputElement>) => {
     const newValue = event.currentTarget.value
@@ -245,24 +253,38 @@ export const DateInput = <IsRange extends undefined | boolean>({
         setMonthToShow(computedNewRange[0].getMonth() + 1)
         setYearToShow(computedNewRange[0].getFullYear())
       }
-      // TypeScript fails to automatically get the correct type of onChange here
-      ;(
-        onChange as (
-          date: Date[] | [Date | null, Date | null],
-          event: React.SyntheticEvent | undefined,
-        ) => void
-      )?.(computedNewRange, event)
     } else {
       const computedDate = createDate(newValue, showMonthYearPicker)
 
       if (computedDate) {
         setMonthToShow(computedDate.getMonth() + 1)
         setYearToShow(computedDate.getFullYear())
+        setValue(computedDate)
       }
-      // TypeScript fails to automatically get the correct type of onChange here
-      ;(
-        onChange as (date: Date | null, event?: React.SyntheticEvent) => void
-      )?.(computedDate, event)
+    }
+    setInputValue(newValue)
+  }
+
+  const onBlurInput = () => {
+    // Only call onChange when there is a date typed in the input and the user did not click on the calendar (which triggers onChange itself)
+    if (inputValue) {
+      if (selectsRange) {
+        const computedNewRange = createDateRange(
+          inputValue,
+          showMonthYearPicker,
+        )
+        ;(
+          onChange as (
+            date: Date[] | [Date | null, Date | null],
+            event: React.SyntheticEvent | undefined,
+          ) => void
+        )?.(computedNewRange, undefined)
+      } else {
+        const computedDate = createDate(inputValue, showMonthYearPicker)
+        ;(
+          onChange as (date: Date | null, event?: React.SyntheticEvent) => void
+        )?.(computedDate, undefined)
+      }
     }
   }
 
@@ -311,7 +333,16 @@ export const DateInput = <IsRange extends undefined | boolean>({
               tooltip={tooltip}
               autoComplete="false"
               onChange={manageOnChange}
-              onBlur={onBlurInput}
+              onBlur={event => {
+                if (!popupRef.current?.contains(event.relatedTarget))
+                  onBlurInput()
+              }}
+              onKeyDown={event => {
+                if (event.key === 'Enter') {
+                  setVisible(!isPopupVisible)
+                  onBlurInput()
+                }
+              }}
               clearable={clearable}
             />
           </CalendarPopup>
