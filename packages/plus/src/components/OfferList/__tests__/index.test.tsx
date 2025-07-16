@@ -5,7 +5,7 @@ import { describe, expect, it, vi } from 'vitest'
 import { OfferList } from '..'
 import { columns, data } from './resources'
 
-describe('InfoTable', () => {
+describe('OfferList', () => {
   it('should work with default props', () =>
     shouldMatchEmotionSnapshot(
       <OfferList columns={columns}>

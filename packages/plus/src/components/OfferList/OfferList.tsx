@@ -1,7 +1,8 @@
 'use client'
 
 import { List } from '@ultraviolet/ui'
-import { ComponentProps, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
+import type { ComponentProps } from 'react'
 import { OfferListProvider } from './OfferListProvider'
 import { Cell } from './components/Cell'
 import { Row } from './components/Row'
@@ -34,7 +35,10 @@ export const OfferList = ({
         )
       : columns
 
-  useEffect(() => onChangeSelect?.(selectedRows), [selectedRows])
+  useEffect(
+    () => onChangeSelect?.(selectedRows),
+    [selectedRows, onChangeSelect],
+  )
 
   return (
     <OfferListProvider

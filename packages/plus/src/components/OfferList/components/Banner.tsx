@@ -2,7 +2,7 @@
 
 import styled from '@emotion/styled'
 import { List, Stack, Text } from '@ultraviolet/ui'
-import { ComponentProps, ReactNode } from 'react'
+import type { ComponentProps, ReactNode } from 'react'
 
 const ExpandableWrapper = styled.tr`
   width: 100%;
