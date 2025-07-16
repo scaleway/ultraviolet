@@ -1,5 +1,14 @@
 # @ultraviolet/illustrations
 
+## 5.0.0-beta.4
+
+### Patch Changes
+
+- [#5315](https://github.com/scaleway/ultraviolet/pull/5315) [`029f2bc`](https://github.com/scaleway/ultraviolet/commit/029f2bcc6fb11d24ea2c46cd0a3f5546cffa30fb) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@emotion/styled` to `11.14.1`.
+
+- Updated dependencies [[`f95c6d2`](https://github.com/scaleway/ultraviolet/commit/f95c6d2b5e1e4402822dc6c1362ca280d513e1dd)]:
+  - @ultraviolet/themes@2.0.0-beta.3
+
 ## 5.0.0-beta.3
 
 ### Patch Changes

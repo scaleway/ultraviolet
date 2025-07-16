@@ -1,5 +1,46 @@
 # Change Log
 
+## 2.0.0-beta.17
+
+### Major Changes
+
+- [`d25d9d8`](https://github.com/scaleway/ultraviolet/commit/d25d9d8c71ffdc922f033daaf4ec6252f8382992) Thanks [@lisalupi](https://github.com/lisalupi)! - **BREAKING CHANGES**
+
+  Deprecated props removed:
+
+  - `TagInput`:
+
+    - props "manualInput" and "onChangeError" removed: the props used to have no effect
+    - prop "variant" removed: only one variant possible now
+    - prop "tags" removed -> use "value" instead
+
+  - `Toaster`: variant "info" removed
+
+- [#5335](https://github.com/scaleway/ultraviolet/pull/5335) [`40e189c`](https://github.com/scaleway/ultraviolet/commit/40e189cb6af270ea830b9d7faeee20d15817425a) Thanks [@lisalupi](https://github.com/lisalupi)! - **BREAKING CHANGES**
+
+  Deprecated props removed:
+
+  - `CodeEditor`: prop "title" removed -> use "label" instead
+  - `Icon`: prop "color" removed -> use "sentiment" instead
+  - `Icon`: prop "size" can only be "xsmall", "small", "medium", "large", "xlarge" or "xxlarge"
+  - `Bullet`: prop "text" removed -> use "children" instead
+
+### Minor Changes
+
+- [#5335](https://github.com/scaleway/ultraviolet/pull/5335) [`f95c6d2`](https://github.com/scaleway/ultraviolet/commit/f95c6d2b5e1e4402822dc6c1362ca280d513e1dd) Thanks [@lisalupi](https://github.com/lisalupi)! - Implement responsive capacities on component `<Row />` and `<Stack />`
+
+### Patch Changes
+
+- [#5325](https://github.com/scaleway/ultraviolet/pull/5325) [`faaccb7`](https://github.com/scaleway/ultraviolet/commit/faaccb764e48cc9d517c0da1212a9ba77eec3d7a) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@babel/core` to `7.27.7`.
+
+- [#5315](https://github.com/scaleway/ultraviolet/pull/5315) [`029f2bc`](https://github.com/scaleway/ultraviolet/commit/029f2bcc6fb11d24ea2c46cd0a3f5546cffa30fb) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@emotion/styled` to `11.14.1`.
+
+- [#5317](https://github.com/scaleway/ultraviolet/pull/5317) [`c453a01`](https://github.com/scaleway/ultraviolet/commit/c453a01967a64eeec644a2193b145572b6ed1569) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@scaleway/use-media` to `3.0.4`.
+
+- Updated dependencies [[`faaccb7`](https://github.com/scaleway/ultraviolet/commit/faaccb764e48cc9d517c0da1212a9ba77eec3d7a), [`029f2bc`](https://github.com/scaleway/ultraviolet/commit/029f2bcc6fb11d24ea2c46cd0a3f5546cffa30fb), [`f95c6d2`](https://github.com/scaleway/ultraviolet/commit/f95c6d2b5e1e4402822dc6c1362ca280d513e1dd), [`40e189c`](https://github.com/scaleway/ultraviolet/commit/40e189cb6af270ea830b9d7faeee20d15817425a)]:
+  - @ultraviolet/icons@4.0.0-beta.8
+  - @ultraviolet/themes@2.0.0-beta.3
+
 ## 2.0.0-beta.16
 
 ### Major Changes
