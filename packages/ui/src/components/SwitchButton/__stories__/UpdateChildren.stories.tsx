@@ -1,5 +1,6 @@
 import type { StoryFn } from '@storybook/react'
-import { type ComponentProps, useState } from 'react'
+import type { ComponentProps } from 'react'
+import { useState } from 'react'
 import { SwitchButton } from '../index'
 
 export const UpdateChildren: StoryFn<

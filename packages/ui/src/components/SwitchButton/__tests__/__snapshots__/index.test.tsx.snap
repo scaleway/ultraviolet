@@ -44,7 +44,21 @@ exports[`SwitchButton > renders correctly 1`] = `
   height: 3rem;
 }
 
-.emotion-5 {
+.emotion-4 {
+  position: absolute;
+  height: calc(100% - 0.5rem);
+  border-radius: 0.25rem;
+  background: #8c40ef;
+  transform-origin: left center;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.emotion-4[data-sentiment='neutral'] {
+  background: #e9eaeb;
+}
+
+.emotion-7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -99,83 +113,83 @@ exports[`SwitchButton > renders correctly 1`] = `
   user-select: none;
 }
 
-.emotion-5[data-has-label='false']>:first-child {
+.emotion-7[data-has-label='false']>:first-child {
   margin-bottom: -0.25rem;
 }
 
-.emotion-5[data-has-default-cursor='true'] {
+.emotion-7[data-has-default-cursor='true'] {
   cursor: default;
 }
 
-.emotion-5[data-checked='true'] {
+.emotion-7[data-checked='true'] {
   border: 1px solid #8c40ef;
 }
 
-.emotion-5[data-error='true'] {
+.emotion-7[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-5[data-disabled='true'] {
+.emotion-7[data-disabled='true'] {
   border: 1px solid #e9eaeb;
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.emotion-5[data-image="illustration"] {
+.emotion-7[data-image="illustration"] {
   padding: 0rem;
 }
 
-.emotion-5[data-image="icon"] {
+.emotion-7[data-image="icon"] {
   padding: 0rem;
   padding-right: 1rem;
 }
 
-.emotion-5:hover:not([data-error='true']):not([data-disabled='true']),
-.emotion-5:active:not([data-error='true']):not([data-disabled='true']) {
+.emotion-7:hover:not([data-error='true']):not([data-disabled='true']),
+.emotion-7:active:not([data-error='true']):not([data-disabled='true']) {
   border: 1px solid #8c40ef;
 }
 
-.emotion-5:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.emotion-5:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
+.emotion-7:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
+.emotion-7:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
 
-.emotion-5[data-has-label='true'] .emotion-8,
-.emotion-5[data-has-label='true'] .eqr7bqq0 {
+.emotion-7[data-has-label='true'] .emotion-10,
+.emotion-7[data-has-label='true'] .eqr7bqq0 {
   width: 100%;
 }
 
-.emotion-5:hover,
-.emotion-5:active {
+.emotion-7:hover,
+.emotion-7:active {
   box-shadow: none;
   border: none;
 }
 
-.emotion-5:hover:not([data-error='true'][data-disabled='true']),
-.emotion-5:active:not([data-error='true'][data-disabled='true']) {
+.emotion-7:hover:not([data-error='true'][data-disabled='true']),
+.emotion-7:active:not([data-error='true'][data-disabled='true']) {
   border: none;
 }
 
-.emotion-5[data-checked='true'] {
+.emotion-7[data-checked='true'] {
   border: none;
 }
 
-.emotion-5 label {
+.emotion-7 label {
   -webkit-transition: color 300ms;
   transition: color 300ms;
   color: #222638;
 }
 
-.emotion-5[data-checked='true'] label {
+.emotion-7[data-checked='true'] label {
   color: #ffffff;
 }
 
-.emotion-5:not([data-checked='true']) label:hover {
+.emotion-7:not([data-checked='true']) label:hover {
   color: #641cb3;
 }
 
-.emotion-7 {
+.emotion-9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -198,7 +212,7 @@ exports[`SwitchButton > renders correctly 1`] = `
   gap: 0.25rem;
 }
 
-.emotion-10 {
+.emotion-12 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -222,104 +236,104 @@ exports[`SwitchButton > renders correctly 1`] = `
   align-items: start;
 }
 
-.emotion-10[aria-disabled='false'],
-.emotion-10[aria-disabled='false']>label {
+.emotion-12[aria-disabled='false'],
+.emotion-12[aria-disabled='false']>label {
   cursor: pointer;
 }
 
-.emotion-10:hover[aria-disabled='false'] .emotion-13+.emotion-15 {
+.emotion-12:hover[aria-disabled='false'] .emotion-15+.emotion-17 {
   fill: #8c40ef;
 }
 
-.emotion-10:hover[aria-disabled='false'] .emotion-13+.emotion-15 .emotion-17 {
+.emotion-12:hover[aria-disabled='false'] .emotion-15+.emotion-17 .emotion-19 {
   fill: #e5dbfd;
 }
 
-.emotion-10:hover[aria-disabled='false'] .emotion-13[aria-invalid='true']+.emotion-15 {
+.emotion-12:hover[aria-disabled='false'] .emotion-15[aria-invalid='true']+.emotion-17 {
   fill: #b3144d;
 }
 
-.emotion-10:hover[aria-disabled='false'] .emotion-13[aria-invalid='true']+.emotion-15 .emotion-17 {
+.emotion-12:hover[aria-disabled='false'] .emotion-15[aria-invalid='true']+.emotion-17 .emotion-19 {
   fill: #ffd3e3;
 }
 
-.emotion-10[aria-disabled='true'] {
+.emotion-12[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.emotion-10[aria-disabled='true']>label,
-.emotion-10[aria-disabled='true'] .emotion-13 {
+.emotion-12[aria-disabled='true']>label,
+.emotion-12[aria-disabled='true'] .emotion-15 {
   cursor: not-allowed;
 }
 
-.emotion-10[aria-disabled='true'] .emotion-15 {
+.emotion-12[aria-disabled='true'] .emotion-17 {
   fill: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-10[aria-disabled='true'] .emotion-15 .emotion-17 {
+.emotion-12[aria-disabled='true'] .emotion-17 .emotion-19 {
   fill: #f3f3f4;
 }
 
-.emotion-10[data-checked='true'] {
+.emotion-12[data-checked='true'] {
   color: #641cb3;
 }
 
-.emotion-10[data-error='true'] {
+.emotion-12[data-error='true'] {
   color: #b3144d;
 }
 
-.emotion-10[aria-disabled='true'] {
+.emotion-12[aria-disabled='true'] {
   color: #b5b7bd;
 }
 
-.emotion-10 input+svg {
+.emotion-12 input+svg {
   display: none;
 }
 
-.emotion-10:hover[aria-disabled='false']:not([data-checked='true']) .emotion-13+.emotion-15 {
+.emotion-12:hover[aria-disabled='false']:not([data-checked='true']) .emotion-15+.emotion-17 {
   fill: #d9dadd;
 }
 
-.emotion-10:hover[aria-disabled='false']:not([data-checked='true']) .emotion-13+.emotion-15 .emotion-17 {
+.emotion-12:hover[aria-disabled='false']:not([data-checked='true']) .emotion-15+.emotion-17 .emotion-19 {
   fill: #ffffff;
 }
 
-.emotion-10:hover[aria-disabled='false']:not([data-checked='true']) .emotion-13[aria-invalid='true']+.emotion-15 {
+.emotion-12:hover[aria-disabled='false']:not([data-checked='true']) .emotion-15[aria-invalid='true']+.emotion-17 {
   fill: #b3144d;
 }
 
-.emotion-10:hover[aria-disabled='false']:not([data-checked='true']) .emotion-13[aria-invalid='true']+.emotion-15 .emotion-17 {
+.emotion-12:hover[aria-disabled='false']:not([data-checked='true']) .emotion-15[aria-invalid='true']+.emotion-17 .emotion-19 {
   fill: #ffffff;
 }
 
-.emotion-10:hover[aria-disabled='false'] .emotion-13+.emotion-15 {
+.emotion-12:hover[aria-disabled='false'] .emotion-15+.emotion-17 {
   fill: #8c40ef;
 }
 
-.emotion-10:hover[aria-disabled='false'] .emotion-13+.emotion-15 .emotion-17 {
+.emotion-12:hover[aria-disabled='false'] .emotion-15+.emotion-17 .emotion-19 {
   fill: #ffffff;
 }
 
-.emotion-10:hover[aria-disabled='false'] .emotion-13[aria-invalid='true']+.emotion-15 {
+.emotion-12:hover[aria-disabled='false'] .emotion-15[aria-invalid='true']+.emotion-17 {
   fill: #b3144d;
 }
 
-.emotion-10:hover[aria-disabled='false'] .emotion-13[aria-invalid='true']+.emotion-15 .emotion-17 {
+.emotion-12:hover[aria-disabled='false'] .emotion-15[aria-invalid='true']+.emotion-17 .emotion-19 {
   fill: #ffffff;
 }
 
-.emotion-10 .emotion-13[aria-disabled='false']:active+.emotion-15 {
+.emotion-12 .emotion-15[aria-disabled='false']:active+.emotion-17 {
   background: none;
   fill: #8c40ef;
 }
 
-.emotion-10 .emotion-13[aria-disabled='false']:active+.emotion-15 .emotion-17 {
+.emotion-12 .emotion-15[aria-disabled='false']:active+.emotion-17 .emotion-19 {
   fill: #ffffff;
 }
 
-.emotion-12 {
+.emotion-14 {
   cursor: pointer;
   position: absolute;
   height: 1.5rem;
@@ -329,7 +343,7 @@ exports[`SwitchButton > renders correctly 1`] = `
   border-width: 0;
 }
 
-.emotion-12+.emotion-15 .emotion-19 {
+.emotion-14+.emotion-17 .emotion-21 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -339,48 +353,48 @@ exports[`SwitchButton > renders correctly 1`] = `
   transform: scale(0);
 }
 
-.emotion-12:checked+svg .emotion-19 {
+.emotion-14:checked+svg .emotion-21 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.emotion-12:checked[aria-disabled='false'][aria-invalid='false']+.emotion-15 {
+.emotion-14:checked[aria-disabled='false'][aria-invalid='false']+.emotion-17 {
   fill: #8c40ef;
 }
 
-.emotion-12:checked[aria-disabled='true'][aria-invalid='false']+.emotion-15 {
+.emotion-14:checked[aria-disabled='true'][aria-invalid='false']+.emotion-17 {
   fill: #d8c5fc;
 }
 
-.emotion-12[aria-invalid='true']:not([aria-disabled='true'])+.emotion-15 {
+.emotion-14[aria-invalid='true']:not([aria-disabled='true'])+.emotion-17 {
   fill: #e51963;
 }
 
-.emotion-12[aria-disabled='false']:active+.emotion-15 {
+.emotion-14[aria-disabled='false']:active+.emotion-17 {
   background-color: #5e127e40;
   fill: #8c40ef;
 }
 
-.emotion-12[aria-disabled='false']:active+.emotion-15 .emotion-17 {
+.emotion-14[aria-disabled='false']:active+.emotion-17 .emotion-19 {
   fill: #f1eefc;
 }
 
-.emotion-12[aria-disabled='false']:focus-visible+.emotion-15 {
+.emotion-14[aria-disabled='false']:focus-visible+.emotion-17 {
   outline: -webkit-focus-ring-color auto 1px;
 }
 
-.emotion-12[aria-invalid='true']:focus+.emotion-15 {
+.emotion-14[aria-invalid='true']:focus+.emotion-17 {
   background-color: #f91b6c40;
   fill: #e51963;
 }
 
-.emotion-12[aria-invalid='true']:focus+.emotion-15 .emotion-17 {
+.emotion-14[aria-invalid='true']:focus+.emotion-17 .emotion-19 {
   fill: #ffebf2;
 }
 
-.emotion-14 {
+.emotion-16 {
   height: 1.5rem;
   width: 1.5rem;
   min-width: 1.5rem;
@@ -389,11 +403,11 @@ exports[`SwitchButton > renders correctly 1`] = `
   fill: #d9dadd;
 }
 
-.emotion-14 .emotion-17 {
+.emotion-16 .emotion-19 {
   fill: #ffffff;
 }
 
-.emotion-21 {
+.emotion-23 {
   font-size: 1rem;
   font-family: Inter,sans-serif;
   font-weight: 400;
@@ -419,7 +433,12 @@ exports[`SwitchButton > renders correctly 1`] = `
         data-size="small"
       >
         <div
-          class="emotion-4 emotion-5 emotion-6"
+          class="emotion-4 emotion-5"
+          data-sentiment="primary"
+          style="width: 500px; left: 0px;"
+        />
+        <div
+          class="emotion-6 emotion-7 emotion-8"
           data-checked="true"
           data-disabled="false"
           data-has-default-cursor="false"
@@ -431,18 +450,18 @@ exports[`SwitchButton > renders correctly 1`] = `
           tabindex="0"
         >
           <div
-            class="emotion-7 emotion-8"
+            class="emotion-9 emotion-10"
           >
             <div
               aria-disabled="false"
-              class="emotion-9 emotion-10 emotion-11"
+              class="emotion-11 emotion-12 emotion-13"
               data-checked="true"
             >
               <input
                 aria-disabled="false"
                 aria-invalid="false"
                 checked=""
-                class="emotion-12 emotion-13"
+                class="emotion-14 emotion-15"
                 id="«r2»"
                 name="test"
                 tabindex="-1"
@@ -450,7 +469,7 @@ exports[`SwitchButton > renders correctly 1`] = `
                 value="left"
               />
               <svg
-                class="emotion-14 emotion-15"
+                class="emotion-16 emotion-17"
                 viewBox="0 0 24 24"
               >
                 <g>
@@ -461,13 +480,13 @@ exports[`SwitchButton > renders correctly 1`] = `
                     stroke-width="2"
                   />
                   <circle
-                    class="emotion-16 emotion-17"
+                    class="emotion-18 emotion-19"
                     cx="12"
                     cy="12"
                     r="8"
                   />
                   <circle
-                    class="emotion-18 emotion-19"
+                    class="emotion-20 emotion-21"
                     cx="12"
                     cy="12"
                     r="5"
@@ -475,7 +494,7 @@ exports[`SwitchButton > renders correctly 1`] = `
                 </g>
               </svg>
               <label
-                class="emotion-20 emotion-21 emotion-22"
+                class="emotion-22 emotion-23 emotion-24"
                 for="«r2»"
               >
                 Left
@@ -484,7 +503,7 @@ exports[`SwitchButton > renders correctly 1`] = `
           </div>
         </div>
         <div
-          class="emotion-4 emotion-5 emotion-6"
+          class="emotion-6 emotion-7 emotion-8"
           data-checked="false"
           data-disabled="false"
           data-has-default-cursor="false"
@@ -496,17 +515,17 @@ exports[`SwitchButton > renders correctly 1`] = `
           tabindex="0"
         >
           <div
-            class="emotion-7 emotion-8"
+            class="emotion-9 emotion-10"
           >
             <div
               aria-disabled="false"
-              class="emotion-9 emotion-10 emotion-11"
+              class="emotion-11 emotion-12 emotion-13"
               data-checked="false"
             >
               <input
                 aria-disabled="false"
                 aria-invalid="false"
-                class="emotion-12 emotion-13"
+                class="emotion-14 emotion-15"
                 id="«r6»"
                 name="test"
                 tabindex="-1"
@@ -514,7 +533,7 @@ exports[`SwitchButton > renders correctly 1`] = `
                 value="right"
               />
               <svg
-                class="emotion-14 emotion-15"
+                class="emotion-16 emotion-17"
                 viewBox="0 0 24 24"
               >
                 <g>
@@ -525,13 +544,13 @@ exports[`SwitchButton > renders correctly 1`] = `
                     stroke-width="2"
                   />
                   <circle
-                    class="emotion-16 emotion-17"
+                    class="emotion-18 emotion-19"
                     cx="12"
                     cy="12"
                     r="8"
                   />
                   <circle
-                    class="emotion-18 emotion-19"
+                    class="emotion-20 emotion-21"
                     cx="12"
                     cy="12"
                     r="5"
@@ -539,7 +558,7 @@ exports[`SwitchButton > renders correctly 1`] = `
                 </g>
               </svg>
               <label
-                class="emotion-20 emotion-21 emotion-22"
+                class="emotion-22 emotion-23 emotion-24"
                 for="«r6»"
               >
                 Right
@@ -597,7 +616,21 @@ exports[`SwitchButton > renders correctly medium 1`] = `
   height: 3rem;
 }
 
-.emotion-5 {
+.emotion-4 {
+  position: absolute;
+  height: calc(100% - 0.5rem);
+  border-radius: 0.25rem;
+  background: #8c40ef;
+  transform-origin: left center;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.emotion-4[data-sentiment='neutral'] {
+  background: #e9eaeb;
+}
+
+.emotion-7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -652,83 +685,83 @@ exports[`SwitchButton > renders correctly medium 1`] = `
   user-select: none;
 }
 
-.emotion-5[data-has-label='false']>:first-child {
+.emotion-7[data-has-label='false']>:first-child {
   margin-bottom: -0.25rem;
 }
 
-.emotion-5[data-has-default-cursor='true'] {
+.emotion-7[data-has-default-cursor='true'] {
   cursor: default;
 }
 
-.emotion-5[data-checked='true'] {
+.emotion-7[data-checked='true'] {
   border: 1px solid #8c40ef;
 }
 
-.emotion-5[data-error='true'] {
+.emotion-7[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-5[data-disabled='true'] {
+.emotion-7[data-disabled='true'] {
   border: 1px solid #e9eaeb;
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.emotion-5[data-image="illustration"] {
+.emotion-7[data-image="illustration"] {
   padding: 0rem;
 }
 
-.emotion-5[data-image="icon"] {
+.emotion-7[data-image="icon"] {
   padding: 0rem;
   padding-right: 1rem;
 }
 
-.emotion-5:hover:not([data-error='true']):not([data-disabled='true']),
-.emotion-5:active:not([data-error='true']):not([data-disabled='true']) {
+.emotion-7:hover:not([data-error='true']):not([data-disabled='true']),
+.emotion-7:active:not([data-error='true']):not([data-disabled='true']) {
   border: 1px solid #8c40ef;
 }
 
-.emotion-5:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.emotion-5:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
+.emotion-7:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
+.emotion-7:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
 
-.emotion-5[data-has-label='true'] .emotion-8,
-.emotion-5[data-has-label='true'] .eqr7bqq0 {
+.emotion-7[data-has-label='true'] .emotion-10,
+.emotion-7[data-has-label='true'] .eqr7bqq0 {
   width: 100%;
 }
 
-.emotion-5:hover,
-.emotion-5:active {
+.emotion-7:hover,
+.emotion-7:active {
   box-shadow: none;
   border: none;
 }
 
-.emotion-5:hover:not([data-error='true'][data-disabled='true']),
-.emotion-5:active:not([data-error='true'][data-disabled='true']) {
+.emotion-7:hover:not([data-error='true'][data-disabled='true']),
+.emotion-7:active:not([data-error='true'][data-disabled='true']) {
   border: none;
 }
 
-.emotion-5[data-checked='true'] {
+.emotion-7[data-checked='true'] {
   border: none;
 }
 
-.emotion-5 label {
+.emotion-7 label {
   -webkit-transition: color 300ms;
   transition: color 300ms;
   color: #222638;
 }
 
-.emotion-5[data-checked='true'] label {
+.emotion-7[data-checked='true'] label {
   color: #ffffff;
 }
 
-.emotion-5:not([data-checked='true']) label:hover {
+.emotion-7:not([data-checked='true']) label:hover {
   color: #641cb3;
 }
 
-.emotion-7 {
+.emotion-9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -751,7 +784,7 @@ exports[`SwitchButton > renders correctly medium 1`] = `
   gap: 0.25rem;
 }
 
-.emotion-10 {
+.emotion-12 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -775,104 +808,104 @@ exports[`SwitchButton > renders correctly medium 1`] = `
   align-items: start;
 }
 
-.emotion-10[aria-disabled='false'],
-.emotion-10[aria-disabled='false']>label {
+.emotion-12[aria-disabled='false'],
+.emotion-12[aria-disabled='false']>label {
   cursor: pointer;
 }
 
-.emotion-10:hover[aria-disabled='false'] .emotion-13+.emotion-15 {
+.emotion-12:hover[aria-disabled='false'] .emotion-15+.emotion-17 {
   fill: #8c40ef;
 }
 
-.emotion-10:hover[aria-disabled='false'] .emotion-13+.emotion-15 .emotion-17 {
+.emotion-12:hover[aria-disabled='false'] .emotion-15+.emotion-17 .emotion-19 {
   fill: #e5dbfd;
 }
 
-.emotion-10:hover[aria-disabled='false'] .emotion-13[aria-invalid='true']+.emotion-15 {
+.emotion-12:hover[aria-disabled='false'] .emotion-15[aria-invalid='true']+.emotion-17 {
   fill: #b3144d;
 }
 
-.emotion-10:hover[aria-disabled='false'] .emotion-13[aria-invalid='true']+.emotion-15 .emotion-17 {
+.emotion-12:hover[aria-disabled='false'] .emotion-15[aria-invalid='true']+.emotion-17 .emotion-19 {
   fill: #ffd3e3;
 }
 
-.emotion-10[aria-disabled='true'] {
+.emotion-12[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.emotion-10[aria-disabled='true']>label,
-.emotion-10[aria-disabled='true'] .emotion-13 {
+.emotion-12[aria-disabled='true']>label,
+.emotion-12[aria-disabled='true'] .emotion-15 {
   cursor: not-allowed;
 }
 
-.emotion-10[aria-disabled='true'] .emotion-15 {
+.emotion-12[aria-disabled='true'] .emotion-17 {
   fill: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-10[aria-disabled='true'] .emotion-15 .emotion-17 {
+.emotion-12[aria-disabled='true'] .emotion-17 .emotion-19 {
   fill: #f3f3f4;
 }
 
-.emotion-10[data-checked='true'] {
+.emotion-12[data-checked='true'] {
   color: #641cb3;
 }
 
-.emotion-10[data-error='true'] {
+.emotion-12[data-error='true'] {
   color: #b3144d;
 }
 
-.emotion-10[aria-disabled='true'] {
+.emotion-12[aria-disabled='true'] {
   color: #b5b7bd;
 }
 
-.emotion-10 input+svg {
+.emotion-12 input+svg {
   display: none;
 }
 
-.emotion-10:hover[aria-disabled='false']:not([data-checked='true']) .emotion-13+.emotion-15 {
+.emotion-12:hover[aria-disabled='false']:not([data-checked='true']) .emotion-15+.emotion-17 {
   fill: #d9dadd;
 }
 
-.emotion-10:hover[aria-disabled='false']:not([data-checked='true']) .emotion-13+.emotion-15 .emotion-17 {
+.emotion-12:hover[aria-disabled='false']:not([data-checked='true']) .emotion-15+.emotion-17 .emotion-19 {
   fill: #ffffff;
 }
 
-.emotion-10:hover[aria-disabled='false']:not([data-checked='true']) .emotion-13[aria-invalid='true']+.emotion-15 {
+.emotion-12:hover[aria-disabled='false']:not([data-checked='true']) .emotion-15[aria-invalid='true']+.emotion-17 {
   fill: #b3144d;
 }
 
-.emotion-10:hover[aria-disabled='false']:not([data-checked='true']) .emotion-13[aria-invalid='true']+.emotion-15 .emotion-17 {
+.emotion-12:hover[aria-disabled='false']:not([data-checked='true']) .emotion-15[aria-invalid='true']+.emotion-17 .emotion-19 {
   fill: #ffffff;
 }
 
-.emotion-10:hover[aria-disabled='false'] .emotion-13+.emotion-15 {
+.emotion-12:hover[aria-disabled='false'] .emotion-15+.emotion-17 {
   fill: #8c40ef;
 }
 
-.emotion-10:hover[aria-disabled='false'] .emotion-13+.emotion-15 .emotion-17 {
+.emotion-12:hover[aria-disabled='false'] .emotion-15+.emotion-17 .emotion-19 {
   fill: #ffffff;
 }
 
-.emotion-10:hover[aria-disabled='false'] .emotion-13[aria-invalid='true']+.emotion-15 {
+.emotion-12:hover[aria-disabled='false'] .emotion-15[aria-invalid='true']+.emotion-17 {
   fill: #b3144d;
 }
 
-.emotion-10:hover[aria-disabled='false'] .emotion-13[aria-invalid='true']+.emotion-15 .emotion-17 {
+.emotion-12:hover[aria-disabled='false'] .emotion-15[aria-invalid='true']+.emotion-17 .emotion-19 {
   fill: #ffffff;
 }
 
-.emotion-10 .emotion-13[aria-disabled='false']:active+.emotion-15 {
+.emotion-12 .emotion-15[aria-disabled='false']:active+.emotion-17 {
   background: none;
   fill: #8c40ef;
 }
 
-.emotion-10 .emotion-13[aria-disabled='false']:active+.emotion-15 .emotion-17 {
+.emotion-12 .emotion-15[aria-disabled='false']:active+.emotion-17 .emotion-19 {
   fill: #ffffff;
 }
 
-.emotion-12 {
+.emotion-14 {
   cursor: pointer;
   position: absolute;
   height: 1.5rem;
@@ -882,7 +915,7 @@ exports[`SwitchButton > renders correctly medium 1`] = `
   border-width: 0;
 }
 
-.emotion-12+.emotion-15 .emotion-19 {
+.emotion-14+.emotion-17 .emotion-21 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -892,48 +925,48 @@ exports[`SwitchButton > renders correctly medium 1`] = `
   transform: scale(0);
 }
 
-.emotion-12:checked+svg .emotion-19 {
+.emotion-14:checked+svg .emotion-21 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.emotion-12:checked[aria-disabled='false'][aria-invalid='false']+.emotion-15 {
+.emotion-14:checked[aria-disabled='false'][aria-invalid='false']+.emotion-17 {
   fill: #8c40ef;
 }
 
-.emotion-12:checked[aria-disabled='true'][aria-invalid='false']+.emotion-15 {
+.emotion-14:checked[aria-disabled='true'][aria-invalid='false']+.emotion-17 {
   fill: #d8c5fc;
 }
 
-.emotion-12[aria-invalid='true']:not([aria-disabled='true'])+.emotion-15 {
+.emotion-14[aria-invalid='true']:not([aria-disabled='true'])+.emotion-17 {
   fill: #e51963;
 }
 
-.emotion-12[aria-disabled='false']:active+.emotion-15 {
+.emotion-14[aria-disabled='false']:active+.emotion-17 {
   background-color: #5e127e40;
   fill: #8c40ef;
 }
 
-.emotion-12[aria-disabled='false']:active+.emotion-15 .emotion-17 {
+.emotion-14[aria-disabled='false']:active+.emotion-17 .emotion-19 {
   fill: #f1eefc;
 }
 
-.emotion-12[aria-disabled='false']:focus-visible+.emotion-15 {
+.emotion-14[aria-disabled='false']:focus-visible+.emotion-17 {
   outline: -webkit-focus-ring-color auto 1px;
 }
 
-.emotion-12[aria-invalid='true']:focus+.emotion-15 {
+.emotion-14[aria-invalid='true']:focus+.emotion-17 {
   background-color: #f91b6c40;
   fill: #e51963;
 }
 
-.emotion-12[aria-invalid='true']:focus+.emotion-15 .emotion-17 {
+.emotion-14[aria-invalid='true']:focus+.emotion-17 .emotion-19 {
   fill: #ffebf2;
 }
 
-.emotion-14 {
+.emotion-16 {
   height: 1.5rem;
   width: 1.5rem;
   min-width: 1.5rem;
@@ -942,11 +975,11 @@ exports[`SwitchButton > renders correctly medium 1`] = `
   fill: #d9dadd;
 }
 
-.emotion-14 .emotion-17 {
+.emotion-16 .emotion-19 {
   fill: #ffffff;
 }
 
-.emotion-21 {
+.emotion-23 {
   font-size: 1rem;
   font-family: Inter,sans-serif;
   font-weight: 400;
@@ -972,7 +1005,12 @@ exports[`SwitchButton > renders correctly medium 1`] = `
         data-size="medium"
       >
         <div
-          class="emotion-4 emotion-5 emotion-6"
+          class="emotion-4 emotion-5"
+          data-sentiment="primary"
+          style="width: 500px; left: 0px;"
+        />
+        <div
+          class="emotion-6 emotion-7 emotion-8"
           data-checked="true"
           data-disabled="false"
           data-has-default-cursor="false"
@@ -984,18 +1022,18 @@ exports[`SwitchButton > renders correctly medium 1`] = `
           tabindex="0"
         >
           <div
-            class="emotion-7 emotion-8"
+            class="emotion-9 emotion-10"
           >
             <div
               aria-disabled="false"
-              class="emotion-9 emotion-10 emotion-11"
+              class="emotion-11 emotion-12 emotion-13"
               data-checked="true"
             >
               <input
                 aria-disabled="false"
                 aria-invalid="false"
                 checked=""
-                class="emotion-12 emotion-13"
+                class="emotion-14 emotion-15"
                 id="«rb»"
                 name="test"
                 tabindex="-1"
@@ -1003,7 +1041,7 @@ exports[`SwitchButton > renders correctly medium 1`] = `
                 value="left"
               />
               <svg
-                class="emotion-14 emotion-15"
+                class="emotion-16 emotion-17"
                 viewBox="0 0 24 24"
               >
                 <g>
@@ -1014,13 +1052,13 @@ exports[`SwitchButton > renders correctly medium 1`] = `
                     stroke-width="2"
                   />
                   <circle
-                    class="emotion-16 emotion-17"
+                    class="emotion-18 emotion-19"
                     cx="12"
                     cy="12"
                     r="8"
                   />
                   <circle
-                    class="emotion-18 emotion-19"
+                    class="emotion-20 emotion-21"
                     cx="12"
                     cy="12"
                     r="5"
@@ -1028,7 +1066,7 @@ exports[`SwitchButton > renders correctly medium 1`] = `
                 </g>
               </svg>
               <label
-                class="emotion-20 emotion-21 emotion-22"
+                class="emotion-22 emotion-23 emotion-24"
                 for="«rb»"
               >
                 Left
@@ -1037,7 +1075,7 @@ exports[`SwitchButton > renders correctly medium 1`] = `
           </div>
         </div>
         <div
-          class="emotion-4 emotion-5 emotion-6"
+          class="emotion-6 emotion-7 emotion-8"
           data-checked="false"
           data-disabled="false"
           data-has-default-cursor="false"
@@ -1049,17 +1087,17 @@ exports[`SwitchButton > renders correctly medium 1`] = `
           tabindex="0"
         >
           <div
-            class="emotion-7 emotion-8"
+            class="emotion-9 emotion-10"
           >
             <div
               aria-disabled="false"
-              class="emotion-9 emotion-10 emotion-11"
+              class="emotion-11 emotion-12 emotion-13"
               data-checked="false"
             >
               <input
                 aria-disabled="false"
                 aria-invalid="false"
-                class="emotion-12 emotion-13"
+                class="emotion-14 emotion-15"
                 id="«rf»"
                 name="test"
                 tabindex="-1"
@@ -1067,7 +1105,7 @@ exports[`SwitchButton > renders correctly medium 1`] = `
                 value="right"
               />
               <svg
-                class="emotion-14 emotion-15"
+                class="emotion-16 emotion-17"
                 viewBox="0 0 24 24"
               >
                 <g>
@@ -1078,13 +1116,13 @@ exports[`SwitchButton > renders correctly medium 1`] = `
                     stroke-width="2"
                   />
                   <circle
-                    class="emotion-16 emotion-17"
+                    class="emotion-18 emotion-19"
                     cx="12"
                     cy="12"
                     r="8"
                   />
                   <circle
-                    class="emotion-18 emotion-19"
+                    class="emotion-20 emotion-21"
                     cx="12"
                     cy="12"
                     r="5"
@@ -1092,7 +1130,7 @@ exports[`SwitchButton > renders correctly medium 1`] = `
                 </g>
               </svg>
               <label
-                class="emotion-20 emotion-21 emotion-22"
+                class="emotion-22 emotion-23 emotion-24"
                 for="«rf»"
               >
                 Right
@@ -1192,7 +1230,35 @@ exports[`SwitchButton > renders correctly with children changing 1`] = `
   height: 3rem;
 }
 
-.emotion-5 {
+.emotion-4 {
+  position: absolute;
+  height: calc(100% - 0.5rem);
+  border-radius: 0.25rem;
+  background: #8c40ef;
+  transform-origin: left center;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.emotion-4[data-sentiment='neutral'] {
+  background: #e9eaeb;
+}
+
+.emotion-4 {
+  position: absolute;
+  height: calc(100% - 0.5rem);
+  border-radius: 0.25rem;
+  background: #8c40ef;
+  transform-origin: left center;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.emotion-4[data-sentiment='neutral'] {
+  background: #e9eaeb;
+}
+
+.emotion-7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1247,83 +1313,83 @@ exports[`SwitchButton > renders correctly with children changing 1`] = `
   user-select: none;
 }
 
-.emotion-5[data-has-label='false']>:first-child {
+.emotion-7[data-has-label='false']>:first-child {
   margin-bottom: -0.25rem;
 }
 
-.emotion-5[data-has-default-cursor='true'] {
+.emotion-7[data-has-default-cursor='true'] {
   cursor: default;
 }
 
-.emotion-5[data-checked='true'] {
+.emotion-7[data-checked='true'] {
   border: 1px solid #8c40ef;
 }
 
-.emotion-5[data-error='true'] {
+.emotion-7[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-5[data-disabled='true'] {
+.emotion-7[data-disabled='true'] {
   border: 1px solid #e9eaeb;
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.emotion-5[data-image="illustration"] {
+.emotion-7[data-image="illustration"] {
   padding: 0rem;
 }
 
-.emotion-5[data-image="icon"] {
+.emotion-7[data-image="icon"] {
   padding: 0rem;
   padding-right: 1rem;
 }
 
-.emotion-5:hover:not([data-error='true']):not([data-disabled='true']),
-.emotion-5:active:not([data-error='true']):not([data-disabled='true']) {
+.emotion-7:hover:not([data-error='true']):not([data-disabled='true']),
+.emotion-7:active:not([data-error='true']):not([data-disabled='true']) {
   border: 1px solid #8c40ef;
 }
 
-.emotion-5:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.emotion-5:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
+.emotion-7:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
+.emotion-7:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
 
-.emotion-5[data-has-label='true'] .emotion-8,
-.emotion-5[data-has-label='true'] .eqr7bqq0 {
+.emotion-7[data-has-label='true'] .emotion-10,
+.emotion-7[data-has-label='true'] .eqr7bqq0 {
   width: 100%;
 }
 
-.emotion-5:hover,
-.emotion-5:active {
+.emotion-7:hover,
+.emotion-7:active {
   box-shadow: none;
   border: none;
 }
 
-.emotion-5:hover:not([data-error='true'][data-disabled='true']),
-.emotion-5:active:not([data-error='true'][data-disabled='true']) {
+.emotion-7:hover:not([data-error='true'][data-disabled='true']),
+.emotion-7:active:not([data-error='true'][data-disabled='true']) {
   border: none;
 }
 
-.emotion-5[data-checked='true'] {
+.emotion-7[data-checked='true'] {
   border: none;
 }
 
-.emotion-5 label {
+.emotion-7 label {
   -webkit-transition: color 300ms;
   transition: color 300ms;
   color: #222638;
 }
 
-.emotion-5[data-checked='true'] label {
+.emotion-7[data-checked='true'] label {
   color: #ffffff;
 }
 
-.emotion-5:not([data-checked='true']) label:hover {
+.emotion-7:not([data-checked='true']) label:hover {
   color: #641cb3;
 }
 
-.emotion-5 {
+.emotion-7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1378,83 +1444,83 @@ exports[`SwitchButton > renders correctly with children changing 1`] = `
   user-select: none;
 }
 
-.emotion-5[data-has-label='false']>:first-child {
+.emotion-7[data-has-label='false']>:first-child {
   margin-bottom: -0.25rem;
 }
 
-.emotion-5[data-has-default-cursor='true'] {
+.emotion-7[data-has-default-cursor='true'] {
   cursor: default;
 }
 
-.emotion-5[data-checked='true'] {
+.emotion-7[data-checked='true'] {
   border: 1px solid #8c40ef;
 }
 
-.emotion-5[data-error='true'] {
+.emotion-7[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-5[data-disabled='true'] {
+.emotion-7[data-disabled='true'] {
   border: 1px solid #e9eaeb;
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.emotion-5[data-image="illustration"] {
+.emotion-7[data-image="illustration"] {
   padding: 0rem;
 }
 
-.emotion-5[data-image="icon"] {
+.emotion-7[data-image="icon"] {
   padding: 0rem;
   padding-right: 1rem;
 }
 
-.emotion-5:hover:not([data-error='true']):not([data-disabled='true']),
-.emotion-5:active:not([data-error='true']):not([data-disabled='true']) {
+.emotion-7:hover:not([data-error='true']):not([data-disabled='true']),
+.emotion-7:active:not([data-error='true']):not([data-disabled='true']) {
   border: 1px solid #8c40ef;
 }
 
-.emotion-5:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.emotion-5:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
+.emotion-7:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
+.emotion-7:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
 
-.emotion-5[data-has-label='true'] .emotion-8,
-.emotion-5[data-has-label='true'] .eqr7bqq0 {
+.emotion-7[data-has-label='true'] .emotion-10,
+.emotion-7[data-has-label='true'] .eqr7bqq0 {
   width: 100%;
 }
 
-.emotion-5:hover,
-.emotion-5:active {
+.emotion-7:hover,
+.emotion-7:active {
   box-shadow: none;
   border: none;
 }
 
-.emotion-5:hover:not([data-error='true'][data-disabled='true']),
-.emotion-5:active:not([data-error='true'][data-disabled='true']) {
+.emotion-7:hover:not([data-error='true'][data-disabled='true']),
+.emotion-7:active:not([data-error='true'][data-disabled='true']) {
   border: none;
 }
 
-.emotion-5[data-checked='true'] {
+.emotion-7[data-checked='true'] {
   border: none;
 }
 
-.emotion-5 label {
+.emotion-7 label {
   -webkit-transition: color 300ms;
   transition: color 300ms;
   color: #222638;
 }
 
-.emotion-5[data-checked='true'] label {
+.emotion-7[data-checked='true'] label {
   color: #ffffff;
 }
 
-.emotion-5:not([data-checked='true']) label:hover {
+.emotion-7:not([data-checked='true']) label:hover {
   color: #641cb3;
 }
 
-.emotion-7 {
+.emotion-9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1477,7 +1543,7 @@ exports[`SwitchButton > renders correctly with children changing 1`] = `
   gap: 0.25rem;
 }
 
-.emotion-7 {
+.emotion-9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1500,7 +1566,7 @@ exports[`SwitchButton > renders correctly with children changing 1`] = `
   gap: 0.25rem;
 }
 
-.emotion-10 {
+.emotion-12 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1524,104 +1590,104 @@ exports[`SwitchButton > renders correctly with children changing 1`] = `
   align-items: start;
 }
 
-.emotion-10[aria-disabled='false'],
-.emotion-10[aria-disabled='false']>label {
+.emotion-12[aria-disabled='false'],
+.emotion-12[aria-disabled='false']>label {
   cursor: pointer;
 }
 
-.emotion-10:hover[aria-disabled='false'] .emotion-13+.emotion-15 {
+.emotion-12:hover[aria-disabled='false'] .emotion-15+.emotion-17 {
   fill: #8c40ef;
 }
 
-.emotion-10:hover[aria-disabled='false'] .emotion-13+.emotion-15 .emotion-17 {
+.emotion-12:hover[aria-disabled='false'] .emotion-15+.emotion-17 .emotion-19 {
   fill: #e5dbfd;
 }
 
-.emotion-10:hover[aria-disabled='false'] .emotion-13[aria-invalid='true']+.emotion-15 {
+.emotion-12:hover[aria-disabled='false'] .emotion-15[aria-invalid='true']+.emotion-17 {
   fill: #b3144d;
 }
 
-.emotion-10:hover[aria-disabled='false'] .emotion-13[aria-invalid='true']+.emotion-15 .emotion-17 {
+.emotion-12:hover[aria-disabled='false'] .emotion-15[aria-invalid='true']+.emotion-17 .emotion-19 {
   fill: #ffd3e3;
 }
 
-.emotion-10[aria-disabled='true'] {
+.emotion-12[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.emotion-10[aria-disabled='true']>label,
-.emotion-10[aria-disabled='true'] .emotion-13 {
+.emotion-12[aria-disabled='true']>label,
+.emotion-12[aria-disabled='true'] .emotion-15 {
   cursor: not-allowed;
 }
 
-.emotion-10[aria-disabled='true'] .emotion-15 {
+.emotion-12[aria-disabled='true'] .emotion-17 {
   fill: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-10[aria-disabled='true'] .emotion-15 .emotion-17 {
+.emotion-12[aria-disabled='true'] .emotion-17 .emotion-19 {
   fill: #f3f3f4;
 }
 
-.emotion-10[data-checked='true'] {
+.emotion-12[data-checked='true'] {
   color: #641cb3;
 }
 
-.emotion-10[data-error='true'] {
+.emotion-12[data-error='true'] {
   color: #b3144d;
 }
 
-.emotion-10[aria-disabled='true'] {
+.emotion-12[aria-disabled='true'] {
   color: #b5b7bd;
 }
 
-.emotion-10 input+svg {
+.emotion-12 input+svg {
   display: none;
 }
 
-.emotion-10:hover[aria-disabled='false']:not([data-checked='true']) .emotion-13+.emotion-15 {
+.emotion-12:hover[aria-disabled='false']:not([data-checked='true']) .emotion-15+.emotion-17 {
   fill: #d9dadd;
 }
 
-.emotion-10:hover[aria-disabled='false']:not([data-checked='true']) .emotion-13+.emotion-15 .emotion-17 {
+.emotion-12:hover[aria-disabled='false']:not([data-checked='true']) .emotion-15+.emotion-17 .emotion-19 {
   fill: #ffffff;
 }
 
-.emotion-10:hover[aria-disabled='false']:not([data-checked='true']) .emotion-13[aria-invalid='true']+.emotion-15 {
+.emotion-12:hover[aria-disabled='false']:not([data-checked='true']) .emotion-15[aria-invalid='true']+.emotion-17 {
   fill: #b3144d;
 }
 
-.emotion-10:hover[aria-disabled='false']:not([data-checked='true']) .emotion-13[aria-invalid='true']+.emotion-15 .emotion-17 {
+.emotion-12:hover[aria-disabled='false']:not([data-checked='true']) .emotion-15[aria-invalid='true']+.emotion-17 .emotion-19 {
   fill: #ffffff;
 }
 
-.emotion-10:hover[aria-disabled='false'] .emotion-13+.emotion-15 {
+.emotion-12:hover[aria-disabled='false'] .emotion-15+.emotion-17 {
   fill: #8c40ef;
 }
 
-.emotion-10:hover[aria-disabled='false'] .emotion-13+.emotion-15 .emotion-17 {
+.emotion-12:hover[aria-disabled='false'] .emotion-15+.emotion-17 .emotion-19 {
   fill: #ffffff;
 }
 
-.emotion-10:hover[aria-disabled='false'] .emotion-13[aria-invalid='true']+.emotion-15 {
+.emotion-12:hover[aria-disabled='false'] .emotion-15[aria-invalid='true']+.emotion-17 {
   fill: #b3144d;
 }
 
-.emotion-10:hover[aria-disabled='false'] .emotion-13[aria-invalid='true']+.emotion-15 .emotion-17 {
+.emotion-12:hover[aria-disabled='false'] .emotion-15[aria-invalid='true']+.emotion-17 .emotion-19 {
   fill: #ffffff;
 }
 
-.emotion-10 .emotion-13[aria-disabled='false']:active+.emotion-15 {
+.emotion-12 .emotion-15[aria-disabled='false']:active+.emotion-17 {
   background: none;
   fill: #8c40ef;
 }
 
-.emotion-10 .emotion-13[aria-disabled='false']:active+.emotion-15 .emotion-17 {
+.emotion-12 .emotion-15[aria-disabled='false']:active+.emotion-17 .emotion-19 {
   fill: #ffffff;
 }
 
-.emotion-10 {
+.emotion-12 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1645,104 +1711,104 @@ exports[`SwitchButton > renders correctly with children changing 1`] = `
   align-items: start;
 }
 
-.emotion-10[aria-disabled='false'],
-.emotion-10[aria-disabled='false']>label {
+.emotion-12[aria-disabled='false'],
+.emotion-12[aria-disabled='false']>label {
   cursor: pointer;
 }
 
-.emotion-10:hover[aria-disabled='false'] .emotion-13+.emotion-15 {
+.emotion-12:hover[aria-disabled='false'] .emotion-15+.emotion-17 {
   fill: #8c40ef;
 }
 
-.emotion-10:hover[aria-disabled='false'] .emotion-13+.emotion-15 .emotion-17 {
+.emotion-12:hover[aria-disabled='false'] .emotion-15+.emotion-17 .emotion-19 {
   fill: #e5dbfd;
 }
 
-.emotion-10:hover[aria-disabled='false'] .emotion-13[aria-invalid='true']+.emotion-15 {
+.emotion-12:hover[aria-disabled='false'] .emotion-15[aria-invalid='true']+.emotion-17 {
   fill: #b3144d;
 }
 
-.emotion-10:hover[aria-disabled='false'] .emotion-13[aria-invalid='true']+.emotion-15 .emotion-17 {
+.emotion-12:hover[aria-disabled='false'] .emotion-15[aria-invalid='true']+.emotion-17 .emotion-19 {
   fill: #ffd3e3;
 }
 
-.emotion-10[aria-disabled='true'] {
+.emotion-12[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.emotion-10[aria-disabled='true']>label,
-.emotion-10[aria-disabled='true'] .emotion-13 {
+.emotion-12[aria-disabled='true']>label,
+.emotion-12[aria-disabled='true'] .emotion-15 {
   cursor: not-allowed;
 }
 
-.emotion-10[aria-disabled='true'] .emotion-15 {
+.emotion-12[aria-disabled='true'] .emotion-17 {
   fill: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-10[aria-disabled='true'] .emotion-15 .emotion-17 {
+.emotion-12[aria-disabled='true'] .emotion-17 .emotion-19 {
   fill: #f3f3f4;
 }
 
-.emotion-10[data-checked='true'] {
+.emotion-12[data-checked='true'] {
   color: #641cb3;
 }
 
-.emotion-10[data-error='true'] {
+.emotion-12[data-error='true'] {
   color: #b3144d;
 }
 
-.emotion-10[aria-disabled='true'] {
+.emotion-12[aria-disabled='true'] {
   color: #b5b7bd;
 }
 
-.emotion-10 input+svg {
+.emotion-12 input+svg {
   display: none;
 }
 
-.emotion-10:hover[aria-disabled='false']:not([data-checked='true']) .emotion-13+.emotion-15 {
+.emotion-12:hover[aria-disabled='false']:not([data-checked='true']) .emotion-15+.emotion-17 {
   fill: #d9dadd;
 }
 
-.emotion-10:hover[aria-disabled='false']:not([data-checked='true']) .emotion-13+.emotion-15 .emotion-17 {
+.emotion-12:hover[aria-disabled='false']:not([data-checked='true']) .emotion-15+.emotion-17 .emotion-19 {
   fill: #ffffff;
 }
 
-.emotion-10:hover[aria-disabled='false']:not([data-checked='true']) .emotion-13[aria-invalid='true']+.emotion-15 {
+.emotion-12:hover[aria-disabled='false']:not([data-checked='true']) .emotion-15[aria-invalid='true']+.emotion-17 {
   fill: #b3144d;
 }
 
-.emotion-10:hover[aria-disabled='false']:not([data-checked='true']) .emotion-13[aria-invalid='true']+.emotion-15 .emotion-17 {
+.emotion-12:hover[aria-disabled='false']:not([data-checked='true']) .emotion-15[aria-invalid='true']+.emotion-17 .emotion-19 {
   fill: #ffffff;
 }
 
-.emotion-10:hover[aria-disabled='false'] .emotion-13+.emotion-15 {
+.emotion-12:hover[aria-disabled='false'] .emotion-15+.emotion-17 {
   fill: #8c40ef;
 }
 
-.emotion-10:hover[aria-disabled='false'] .emotion-13+.emotion-15 .emotion-17 {
+.emotion-12:hover[aria-disabled='false'] .emotion-15+.emotion-17 .emotion-19 {
   fill: #ffffff;
 }
 
-.emotion-10:hover[aria-disabled='false'] .emotion-13[aria-invalid='true']+.emotion-15 {
+.emotion-12:hover[aria-disabled='false'] .emotion-15[aria-invalid='true']+.emotion-17 {
   fill: #b3144d;
 }
 
-.emotion-10:hover[aria-disabled='false'] .emotion-13[aria-invalid='true']+.emotion-15 .emotion-17 {
+.emotion-12:hover[aria-disabled='false'] .emotion-15[aria-invalid='true']+.emotion-17 .emotion-19 {
   fill: #ffffff;
 }
 
-.emotion-10 .emotion-13[aria-disabled='false']:active+.emotion-15 {
+.emotion-12 .emotion-15[aria-disabled='false']:active+.emotion-17 {
   background: none;
   fill: #8c40ef;
 }
 
-.emotion-10 .emotion-13[aria-disabled='false']:active+.emotion-15 .emotion-17 {
+.emotion-12 .emotion-15[aria-disabled='false']:active+.emotion-17 .emotion-19 {
   fill: #ffffff;
 }
 
-.emotion-12 {
+.emotion-14 {
   cursor: pointer;
   position: absolute;
   height: 1.5rem;
@@ -1752,7 +1818,7 @@ exports[`SwitchButton > renders correctly with children changing 1`] = `
   border-width: 0;
 }
 
-.emotion-12+.emotion-15 .emotion-19 {
+.emotion-14+.emotion-17 .emotion-21 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -1762,48 +1828,48 @@ exports[`SwitchButton > renders correctly with children changing 1`] = `
   transform: scale(0);
 }
 
-.emotion-12:checked+svg .emotion-19 {
+.emotion-14:checked+svg .emotion-21 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.emotion-12:checked[aria-disabled='false'][aria-invalid='false']+.emotion-15 {
+.emotion-14:checked[aria-disabled='false'][aria-invalid='false']+.emotion-17 {
   fill: #8c40ef;
 }
 
-.emotion-12:checked[aria-disabled='true'][aria-invalid='false']+.emotion-15 {
+.emotion-14:checked[aria-disabled='true'][aria-invalid='false']+.emotion-17 {
   fill: #d8c5fc;
 }
 
-.emotion-12[aria-invalid='true']:not([aria-disabled='true'])+.emotion-15 {
+.emotion-14[aria-invalid='true']:not([aria-disabled='true'])+.emotion-17 {
   fill: #e51963;
 }
 
-.emotion-12[aria-disabled='false']:active+.emotion-15 {
+.emotion-14[aria-disabled='false']:active+.emotion-17 {
   background-color: #5e127e40;
   fill: #8c40ef;
 }
 
-.emotion-12[aria-disabled='false']:active+.emotion-15 .emotion-17 {
+.emotion-14[aria-disabled='false']:active+.emotion-17 .emotion-19 {
   fill: #f1eefc;
 }
 
-.emotion-12[aria-disabled='false']:focus-visible+.emotion-15 {
+.emotion-14[aria-disabled='false']:focus-visible+.emotion-17 {
   outline: -webkit-focus-ring-color auto 1px;
 }
 
-.emotion-12[aria-invalid='true']:focus+.emotion-15 {
+.emotion-14[aria-invalid='true']:focus+.emotion-17 {
   background-color: #f91b6c40;
   fill: #e51963;
 }
 
-.emotion-12[aria-invalid='true']:focus+.emotion-15 .emotion-17 {
+.emotion-14[aria-invalid='true']:focus+.emotion-17 .emotion-19 {
   fill: #ffebf2;
 }
 
-.emotion-12 {
+.emotion-14 {
   cursor: pointer;
   position: absolute;
   height: 1.5rem;
@@ -1813,7 +1879,7 @@ exports[`SwitchButton > renders correctly with children changing 1`] = `
   border-width: 0;
 }
 
-.emotion-12+.emotion-15 .emotion-19 {
+.emotion-14+.emotion-17 .emotion-21 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -1823,48 +1889,48 @@ exports[`SwitchButton > renders correctly with children changing 1`] = `
   transform: scale(0);
 }
 
-.emotion-12:checked+svg .emotion-19 {
+.emotion-14:checked+svg .emotion-21 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.emotion-12:checked[aria-disabled='false'][aria-invalid='false']+.emotion-15 {
+.emotion-14:checked[aria-disabled='false'][aria-invalid='false']+.emotion-17 {
   fill: #8c40ef;
 }
 
-.emotion-12:checked[aria-disabled='true'][aria-invalid='false']+.emotion-15 {
+.emotion-14:checked[aria-disabled='true'][aria-invalid='false']+.emotion-17 {
   fill: #d8c5fc;
 }
 
-.emotion-12[aria-invalid='true']:not([aria-disabled='true'])+.emotion-15 {
+.emotion-14[aria-invalid='true']:not([aria-disabled='true'])+.emotion-17 {
   fill: #e51963;
 }
 
-.emotion-12[aria-disabled='false']:active+.emotion-15 {
+.emotion-14[aria-disabled='false']:active+.emotion-17 {
   background-color: #5e127e40;
   fill: #8c40ef;
 }
 
-.emotion-12[aria-disabled='false']:active+.emotion-15 .emotion-17 {
+.emotion-14[aria-disabled='false']:active+.emotion-17 .emotion-19 {
   fill: #f1eefc;
 }
 
-.emotion-12[aria-disabled='false']:focus-visible+.emotion-15 {
+.emotion-14[aria-disabled='false']:focus-visible+.emotion-17 {
   outline: -webkit-focus-ring-color auto 1px;
 }
 
-.emotion-12[aria-invalid='true']:focus+.emotion-15 {
+.emotion-14[aria-invalid='true']:focus+.emotion-17 {
   background-color: #f91b6c40;
   fill: #e51963;
 }
 
-.emotion-12[aria-invalid='true']:focus+.emotion-15 .emotion-17 {
+.emotion-14[aria-invalid='true']:focus+.emotion-17 .emotion-19 {
   fill: #ffebf2;
 }
 
-.emotion-14 {
+.emotion-16 {
   height: 1.5rem;
   width: 1.5rem;
   min-width: 1.5rem;
@@ -1873,11 +1939,11 @@ exports[`SwitchButton > renders correctly with children changing 1`] = `
   fill: #d9dadd;
 }
 
-.emotion-14 .emotion-17 {
+.emotion-16 .emotion-19 {
   fill: #ffffff;
 }
 
-.emotion-14 {
+.emotion-16 {
   height: 1.5rem;
   width: 1.5rem;
   min-width: 1.5rem;
@@ -1886,11 +1952,11 @@ exports[`SwitchButton > renders correctly with children changing 1`] = `
   fill: #d9dadd;
 }
 
-.emotion-14 .emotion-17 {
+.emotion-16 .emotion-19 {
   fill: #ffffff;
 }
 
-.emotion-21 {
+.emotion-23 {
   font-size: 1rem;
   font-family: Inter,sans-serif;
   font-weight: 400;
@@ -1905,7 +1971,7 @@ exports[`SwitchButton > renders correctly with children changing 1`] = `
   cursor: pointer;
 }
 
-.emotion-21 {
+.emotion-23 {
   font-size: 1rem;
   font-family: Inter,sans-serif;
   font-weight: 400;
@@ -1931,7 +1997,12 @@ exports[`SwitchButton > renders correctly with children changing 1`] = `
         data-size="small"
       >
         <div
-          class="emotion-4 emotion-5 emotion-6"
+          class="emotion-4 emotion-5"
+          data-sentiment="primary"
+          style="width: 500px; left: 0px;"
+        />
+        <div
+          class="emotion-6 emotion-7 emotion-8"
           data-checked="false"
           data-disabled="false"
           data-has-default-cursor="false"
@@ -1943,17 +2014,17 @@ exports[`SwitchButton > renders correctly with children changing 1`] = `
           tabindex="0"
         >
           <div
-            class="emotion-7 emotion-8"
+            class="emotion-9 emotion-10"
           >
             <div
               aria-disabled="false"
-              class="emotion-9 emotion-10 emotion-11"
+              class="emotion-11 emotion-12 emotion-13"
               data-checked="false"
             >
               <input
                 aria-disabled="false"
                 aria-invalid="false"
-                class="emotion-12 emotion-13"
+                class="emotion-14 emotion-15"
                 id="«rt»"
                 name="test"
                 tabindex="-1"
@@ -1961,7 +2032,7 @@ exports[`SwitchButton > renders correctly with children changing 1`] = `
                 value="left"
               />
               <svg
-                class="emotion-14 emotion-15"
+                class="emotion-16 emotion-17"
                 viewBox="0 0 24 24"
               >
                 <g>
@@ -1972,13 +2043,13 @@ exports[`SwitchButton > renders correctly with children changing 1`] = `
                     stroke-width="2"
                   />
                   <circle
-                    class="emotion-16 emotion-17"
+                    class="emotion-18 emotion-19"
                     cx="12"
                     cy="12"
                     r="8"
                   />
                   <circle
-                    class="emotion-18 emotion-19"
+                    class="emotion-20 emotion-21"
                     cx="12"
                     cy="12"
                     r="5"
@@ -1986,7 +2057,7 @@ exports[`SwitchButton > renders correctly with children changing 1`] = `
                 </g>
               </svg>
               <label
-                class="emotion-20 emotion-21 emotion-22"
+                class="emotion-22 emotion-23 emotion-24"
                 for="«rt»"
               >
                 Left
@@ -1995,7 +2066,7 @@ exports[`SwitchButton > renders correctly with children changing 1`] = `
           </div>
         </div>
         <div
-          class="emotion-4 emotion-5 emotion-6"
+          class="emotion-6 emotion-7 emotion-8"
           data-checked="true"
           data-disabled="false"
           data-has-default-cursor="false"
@@ -2007,18 +2078,18 @@ exports[`SwitchButton > renders correctly with children changing 1`] = `
           tabindex="0"
         >
           <div
-            class="emotion-7 emotion-8"
+            class="emotion-9 emotion-10"
           >
             <div
               aria-disabled="false"
-              class="emotion-9 emotion-10 emotion-11"
+              class="emotion-11 emotion-12 emotion-13"
               data-checked="true"
             >
               <input
                 aria-disabled="false"
                 aria-invalid="false"
                 checked=""
-                class="emotion-12 emotion-13"
+                class="emotion-14 emotion-15"
                 id="«r11»"
                 name="test"
                 tabindex="-1"
@@ -2026,7 +2097,7 @@ exports[`SwitchButton > renders correctly with children changing 1`] = `
                 value="right"
               />
               <svg
-                class="emotion-14 emotion-15"
+                class="emotion-16 emotion-17"
                 viewBox="0 0 24 24"
               >
                 <g>
@@ -2037,13 +2108,13 @@ exports[`SwitchButton > renders correctly with children changing 1`] = `
                     stroke-width="2"
                   />
                   <circle
-                    class="emotion-16 emotion-17"
+                    class="emotion-18 emotion-19"
                     cx="12"
                     cy="12"
                     r="8"
                   />
                   <circle
-                    class="emotion-18 emotion-19"
+                    class="emotion-20 emotion-21"
                     cx="12"
                     cy="12"
                     r="5"
@@ -2051,7 +2122,7 @@ exports[`SwitchButton > renders correctly with children changing 1`] = `
                 </g>
               </svg>
               <label
-                class="emotion-20 emotion-21 emotion-22"
+                class="emotion-22 emotion-23 emotion-24"
                 for="«r11»"
               >
                 Right
@@ -2109,7 +2180,21 @@ exports[`SwitchButton > renders correctly with right value 1`] = `
   height: 3rem;
 }
 
-.emotion-5 {
+.emotion-4 {
+  position: absolute;
+  height: calc(100% - 0.5rem);
+  border-radius: 0.25rem;
+  background: #8c40ef;
+  transform-origin: left center;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.emotion-4[data-sentiment='neutral'] {
+  background: #e9eaeb;
+}
+
+.emotion-7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2164,83 +2249,83 @@ exports[`SwitchButton > renders correctly with right value 1`] = `
   user-select: none;
 }
 
-.emotion-5[data-has-label='false']>:first-child {
+.emotion-7[data-has-label='false']>:first-child {
   margin-bottom: -0.25rem;
 }
 
-.emotion-5[data-has-default-cursor='true'] {
+.emotion-7[data-has-default-cursor='true'] {
   cursor: default;
 }
 
-.emotion-5[data-checked='true'] {
+.emotion-7[data-checked='true'] {
   border: 1px solid #8c40ef;
 }
 
-.emotion-5[data-error='true'] {
+.emotion-7[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-5[data-disabled='true'] {
+.emotion-7[data-disabled='true'] {
   border: 1px solid #e9eaeb;
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.emotion-5[data-image="illustration"] {
+.emotion-7[data-image="illustration"] {
   padding: 0rem;
 }
 
-.emotion-5[data-image="icon"] {
+.emotion-7[data-image="icon"] {
   padding: 0rem;
   padding-right: 1rem;
 }
 
-.emotion-5:hover:not([data-error='true']):not([data-disabled='true']),
-.emotion-5:active:not([data-error='true']):not([data-disabled='true']) {
+.emotion-7:hover:not([data-error='true']):not([data-disabled='true']),
+.emotion-7:active:not([data-error='true']):not([data-disabled='true']) {
   border: 1px solid #8c40ef;
 }
 
-.emotion-5:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.emotion-5:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
+.emotion-7:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
+.emotion-7:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
 
-.emotion-5[data-has-label='true'] .emotion-8,
-.emotion-5[data-has-label='true'] .eqr7bqq0 {
+.emotion-7[data-has-label='true'] .emotion-10,
+.emotion-7[data-has-label='true'] .eqr7bqq0 {
   width: 100%;
 }
 
-.emotion-5:hover,
-.emotion-5:active {
+.emotion-7:hover,
+.emotion-7:active {
   box-shadow: none;
   border: none;
 }
 
-.emotion-5:hover:not([data-error='true'][data-disabled='true']),
-.emotion-5:active:not([data-error='true'][data-disabled='true']) {
+.emotion-7:hover:not([data-error='true'][data-disabled='true']),
+.emotion-7:active:not([data-error='true'][data-disabled='true']) {
   border: none;
 }
 
-.emotion-5[data-checked='true'] {
+.emotion-7[data-checked='true'] {
   border: none;
 }
 
-.emotion-5 label {
+.emotion-7 label {
   -webkit-transition: color 300ms;
   transition: color 300ms;
   color: #222638;
 }
 
-.emotion-5[data-checked='true'] label {
+.emotion-7[data-checked='true'] label {
   color: #ffffff;
 }
 
-.emotion-5:not([data-checked='true']) label:hover {
+.emotion-7:not([data-checked='true']) label:hover {
   color: #641cb3;
 }
 
-.emotion-7 {
+.emotion-9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2263,7 +2348,7 @@ exports[`SwitchButton > renders correctly with right value 1`] = `
   gap: 0.25rem;
 }
 
-.emotion-10 {
+.emotion-12 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2287,104 +2372,104 @@ exports[`SwitchButton > renders correctly with right value 1`] = `
   align-items: start;
 }
 
-.emotion-10[aria-disabled='false'],
-.emotion-10[aria-disabled='false']>label {
+.emotion-12[aria-disabled='false'],
+.emotion-12[aria-disabled='false']>label {
   cursor: pointer;
 }
 
-.emotion-10:hover[aria-disabled='false'] .emotion-13+.emotion-15 {
+.emotion-12:hover[aria-disabled='false'] .emotion-15+.emotion-17 {
   fill: #8c40ef;
 }
 
-.emotion-10:hover[aria-disabled='false'] .emotion-13+.emotion-15 .emotion-17 {
+.emotion-12:hover[aria-disabled='false'] .emotion-15+.emotion-17 .emotion-19 {
   fill: #e5dbfd;
 }
 
-.emotion-10:hover[aria-disabled='false'] .emotion-13[aria-invalid='true']+.emotion-15 {
+.emotion-12:hover[aria-disabled='false'] .emotion-15[aria-invalid='true']+.emotion-17 {
   fill: #b3144d;
 }
 
-.emotion-10:hover[aria-disabled='false'] .emotion-13[aria-invalid='true']+.emotion-15 .emotion-17 {
+.emotion-12:hover[aria-disabled='false'] .emotion-15[aria-invalid='true']+.emotion-17 .emotion-19 {
   fill: #ffd3e3;
 }
 
-.emotion-10[aria-disabled='true'] {
+.emotion-12[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.emotion-10[aria-disabled='true']>label,
-.emotion-10[aria-disabled='true'] .emotion-13 {
+.emotion-12[aria-disabled='true']>label,
+.emotion-12[aria-disabled='true'] .emotion-15 {
   cursor: not-allowed;
 }
 
-.emotion-10[aria-disabled='true'] .emotion-15 {
+.emotion-12[aria-disabled='true'] .emotion-17 {
   fill: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-10[aria-disabled='true'] .emotion-15 .emotion-17 {
+.emotion-12[aria-disabled='true'] .emotion-17 .emotion-19 {
   fill: #f3f3f4;
 }
 
-.emotion-10[data-checked='true'] {
+.emotion-12[data-checked='true'] {
   color: #641cb3;
 }
 
-.emotion-10[data-error='true'] {
+.emotion-12[data-error='true'] {
   color: #b3144d;
 }
 
-.emotion-10[aria-disabled='true'] {
+.emotion-12[aria-disabled='true'] {
   color: #b5b7bd;
 }
 
-.emotion-10 input+svg {
+.emotion-12 input+svg {
   display: none;
 }
 
-.emotion-10:hover[aria-disabled='false']:not([data-checked='true']) .emotion-13+.emotion-15 {
+.emotion-12:hover[aria-disabled='false']:not([data-checked='true']) .emotion-15+.emotion-17 {
   fill: #d9dadd;
 }
 
-.emotion-10:hover[aria-disabled='false']:not([data-checked='true']) .emotion-13+.emotion-15 .emotion-17 {
+.emotion-12:hover[aria-disabled='false']:not([data-checked='true']) .emotion-15+.emotion-17 .emotion-19 {
   fill: #ffffff;
 }
 
-.emotion-10:hover[aria-disabled='false']:not([data-checked='true']) .emotion-13[aria-invalid='true']+.emotion-15 {
+.emotion-12:hover[aria-disabled='false']:not([data-checked='true']) .emotion-15[aria-invalid='true']+.emotion-17 {
   fill: #b3144d;
 }
 
-.emotion-10:hover[aria-disabled='false']:not([data-checked='true']) .emotion-13[aria-invalid='true']+.emotion-15 .emotion-17 {
+.emotion-12:hover[aria-disabled='false']:not([data-checked='true']) .emotion-15[aria-invalid='true']+.emotion-17 .emotion-19 {
   fill: #ffffff;
 }
 
-.emotion-10:hover[aria-disabled='false'] .emotion-13+.emotion-15 {
+.emotion-12:hover[aria-disabled='false'] .emotion-15+.emotion-17 {
   fill: #8c40ef;
 }
 
-.emotion-10:hover[aria-disabled='false'] .emotion-13+.emotion-15 .emotion-17 {
+.emotion-12:hover[aria-disabled='false'] .emotion-15+.emotion-17 .emotion-19 {
   fill: #ffffff;
 }
 
-.emotion-10:hover[aria-disabled='false'] .emotion-13[aria-invalid='true']+.emotion-15 {
+.emotion-12:hover[aria-disabled='false'] .emotion-15[aria-invalid='true']+.emotion-17 {
   fill: #b3144d;
 }
 
-.emotion-10:hover[aria-disabled='false'] .emotion-13[aria-invalid='true']+.emotion-15 .emotion-17 {
+.emotion-12:hover[aria-disabled='false'] .emotion-15[aria-invalid='true']+.emotion-17 .emotion-19 {
   fill: #ffffff;
 }
 
-.emotion-10 .emotion-13[aria-disabled='false']:active+.emotion-15 {
+.emotion-12 .emotion-15[aria-disabled='false']:active+.emotion-17 {
   background: none;
   fill: #8c40ef;
 }
 
-.emotion-10 .emotion-13[aria-disabled='false']:active+.emotion-15 .emotion-17 {
+.emotion-12 .emotion-15[aria-disabled='false']:active+.emotion-17 .emotion-19 {
   fill: #ffffff;
 }
 
-.emotion-12 {
+.emotion-14 {
   cursor: pointer;
   position: absolute;
   height: 1.5rem;
@@ -2394,7 +2479,7 @@ exports[`SwitchButton > renders correctly with right value 1`] = `
   border-width: 0;
 }
 
-.emotion-12+.emotion-15 .emotion-19 {
+.emotion-14+.emotion-17 .emotion-21 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -2404,48 +2489,48 @@ exports[`SwitchButton > renders correctly with right value 1`] = `
   transform: scale(0);
 }
 
-.emotion-12:checked+svg .emotion-19 {
+.emotion-14:checked+svg .emotion-21 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.emotion-12:checked[aria-disabled='false'][aria-invalid='false']+.emotion-15 {
+.emotion-14:checked[aria-disabled='false'][aria-invalid='false']+.emotion-17 {
   fill: #8c40ef;
 }
 
-.emotion-12:checked[aria-disabled='true'][aria-invalid='false']+.emotion-15 {
+.emotion-14:checked[aria-disabled='true'][aria-invalid='false']+.emotion-17 {
   fill: #d8c5fc;
 }
 
-.emotion-12[aria-invalid='true']:not([aria-disabled='true'])+.emotion-15 {
+.emotion-14[aria-invalid='true']:not([aria-disabled='true'])+.emotion-17 {
   fill: #e51963;
 }
 
-.emotion-12[aria-disabled='false']:active+.emotion-15 {
+.emotion-14[aria-disabled='false']:active+.emotion-17 {
   background-color: #5e127e40;
   fill: #8c40ef;
 }
 
-.emotion-12[aria-disabled='false']:active+.emotion-15 .emotion-17 {
+.emotion-14[aria-disabled='false']:active+.emotion-17 .emotion-19 {
   fill: #f1eefc;
 }
 
-.emotion-12[aria-disabled='false']:focus-visible+.emotion-15 {
+.emotion-14[aria-disabled='false']:focus-visible+.emotion-17 {
   outline: -webkit-focus-ring-color auto 1px;
 }
 
-.emotion-12[aria-invalid='true']:focus+.emotion-15 {
+.emotion-14[aria-invalid='true']:focus+.emotion-17 {
   background-color: #f91b6c40;
   fill: #e51963;
 }
 
-.emotion-12[aria-invalid='true']:focus+.emotion-15 .emotion-17 {
+.emotion-14[aria-invalid='true']:focus+.emotion-17 .emotion-19 {
   fill: #ffebf2;
 }
 
-.emotion-14 {
+.emotion-16 {
   height: 1.5rem;
   width: 1.5rem;
   min-width: 1.5rem;
@@ -2454,11 +2539,11 @@ exports[`SwitchButton > renders correctly with right value 1`] = `
   fill: #d9dadd;
 }
 
-.emotion-14 .emotion-17 {
+.emotion-16 .emotion-19 {
   fill: #ffffff;
 }
 
-.emotion-21 {
+.emotion-23 {
   font-size: 1rem;
   font-family: Inter,sans-serif;
   font-weight: 400;
@@ -2484,7 +2569,12 @@ exports[`SwitchButton > renders correctly with right value 1`] = `
         data-size="small"
       >
         <div
-          class="emotion-4 emotion-5 emotion-6"
+          class="emotion-4 emotion-5"
+          data-sentiment="primary"
+          style="width: 500px; left: 0px;"
+        />
+        <div
+          class="emotion-6 emotion-7 emotion-8"
           data-checked="false"
           data-disabled="false"
           data-has-default-cursor="false"
@@ -2496,17 +2586,17 @@ exports[`SwitchButton > renders correctly with right value 1`] = `
           tabindex="0"
         >
           <div
-            class="emotion-7 emotion-8"
+            class="emotion-9 emotion-10"
           >
             <div
               aria-disabled="false"
-              class="emotion-9 emotion-10 emotion-11"
+              class="emotion-11 emotion-12 emotion-13"
               data-checked="false"
             >
               <input
                 aria-disabled="false"
                 aria-invalid="false"
-                class="emotion-12 emotion-13"
+                class="emotion-14 emotion-15"
                 id="«rk»"
                 name="test"
                 tabindex="-1"
@@ -2514,7 +2604,7 @@ exports[`SwitchButton > renders correctly with right value 1`] = `
                 value="left"
               />
               <svg
-                class="emotion-14 emotion-15"
+                class="emotion-16 emotion-17"
                 viewBox="0 0 24 24"
               >
                 <g>
@@ -2525,13 +2615,13 @@ exports[`SwitchButton > renders correctly with right value 1`] = `
                     stroke-width="2"
                   />
                   <circle
-                    class="emotion-16 emotion-17"
+                    class="emotion-18 emotion-19"
                     cx="12"
                     cy="12"
                     r="8"
                   />
                   <circle
-                    class="emotion-18 emotion-19"
+                    class="emotion-20 emotion-21"
                     cx="12"
                     cy="12"
                     r="5"
@@ -2539,7 +2629,7 @@ exports[`SwitchButton > renders correctly with right value 1`] = `
                 </g>
               </svg>
               <label
-                class="emotion-20 emotion-21 emotion-22"
+                class="emotion-22 emotion-23 emotion-24"
                 for="«rk»"
               >
                 Left
@@ -2548,7 +2638,7 @@ exports[`SwitchButton > renders correctly with right value 1`] = `
           </div>
         </div>
         <div
-          class="emotion-4 emotion-5 emotion-6"
+          class="emotion-6 emotion-7 emotion-8"
           data-checked="true"
           data-disabled="false"
           data-has-default-cursor="false"
@@ -2560,18 +2650,18 @@ exports[`SwitchButton > renders correctly with right value 1`] = `
           tabindex="0"
         >
           <div
-            class="emotion-7 emotion-8"
+            class="emotion-9 emotion-10"
           >
             <div
               aria-disabled="false"
-              class="emotion-9 emotion-10 emotion-11"
+              class="emotion-11 emotion-12 emotion-13"
               data-checked="true"
             >
               <input
                 aria-disabled="false"
                 aria-invalid="false"
                 checked=""
-                class="emotion-12 emotion-13"
+                class="emotion-14 emotion-15"
                 id="«ro»"
                 name="test"
                 tabindex="-1"
@@ -2579,7 +2669,7 @@ exports[`SwitchButton > renders correctly with right value 1`] = `
                 value="right"
               />
               <svg
-                class="emotion-14 emotion-15"
+                class="emotion-16 emotion-17"
                 viewBox="0 0 24 24"
               >
                 <g>
@@ -2590,13 +2680,13 @@ exports[`SwitchButton > renders correctly with right value 1`] = `
                     stroke-width="2"
                   />
                   <circle
-                    class="emotion-16 emotion-17"
+                    class="emotion-18 emotion-19"
                     cx="12"
                     cy="12"
                     r="8"
                   />
                   <circle
-                    class="emotion-18 emotion-19"
+                    class="emotion-20 emotion-21"
                     cx="12"
                     cy="12"
                     r="5"
@@ -2604,7 +2694,7 @@ exports[`SwitchButton > renders correctly with right value 1`] = `
                 </g>
               </svg>
               <label
-                class="emotion-20 emotion-21 emotion-22"
+                class="emotion-22 emotion-23 emotion-24"
                 for="«ro»"
               >
                 Right
@@ -2704,7 +2794,35 @@ exports[`SwitchButton > renders neutral 1`] = `
   height: 3rem;
 }
 
-.emotion-5 {
+.emotion-4 {
+  position: absolute;
+  height: calc(100% - 0.5rem);
+  border-radius: 0.25rem;
+  background: #8c40ef;
+  transform-origin: left center;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.emotion-4[data-sentiment='neutral'] {
+  background: #e9eaeb;
+}
+
+.emotion-4 {
+  position: absolute;
+  height: calc(100% - 0.5rem);
+  border-radius: 0.25rem;
+  background: #8c40ef;
+  transform-origin: left center;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.emotion-4[data-sentiment='neutral'] {
+  background: #e9eaeb;
+}
+
+.emotion-7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2759,83 +2877,83 @@ exports[`SwitchButton > renders neutral 1`] = `
   user-select: none;
 }
 
-.emotion-5[data-has-label='false']>:first-child {
+.emotion-7[data-has-label='false']>:first-child {
   margin-bottom: -0.25rem;
 }
 
-.emotion-5[data-has-default-cursor='true'] {
+.emotion-7[data-has-default-cursor='true'] {
   cursor: default;
 }
 
-.emotion-5[data-checked='true'] {
+.emotion-7[data-checked='true'] {
   border: 1px solid #8c40ef;
 }
 
-.emotion-5[data-error='true'] {
+.emotion-7[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-5[data-disabled='true'] {
+.emotion-7[data-disabled='true'] {
   border: 1px solid #e9eaeb;
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.emotion-5[data-image="illustration"] {
+.emotion-7[data-image="illustration"] {
   padding: 0rem;
 }
 
-.emotion-5[data-image="icon"] {
+.emotion-7[data-image="icon"] {
   padding: 0rem;
   padding-right: 1rem;
 }
 
-.emotion-5:hover:not([data-error='true']):not([data-disabled='true']),
-.emotion-5:active:not([data-error='true']):not([data-disabled='true']) {
+.emotion-7:hover:not([data-error='true']):not([data-disabled='true']),
+.emotion-7:active:not([data-error='true']):not([data-disabled='true']) {
   border: 1px solid #8c40ef;
 }
 
-.emotion-5:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.emotion-5:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
+.emotion-7:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
+.emotion-7:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
 
-.emotion-5[data-has-label='true'] .emotion-8,
-.emotion-5[data-has-label='true'] .eqr7bqq0 {
+.emotion-7[data-has-label='true'] .emotion-10,
+.emotion-7[data-has-label='true'] .eqr7bqq0 {
   width: 100%;
 }
 
-.emotion-5:hover,
-.emotion-5:active {
+.emotion-7:hover,
+.emotion-7:active {
   box-shadow: none;
   border: none;
 }
 
-.emotion-5:hover:not([data-error='true'][data-disabled='true']),
-.emotion-5:active:not([data-error='true'][data-disabled='true']) {
+.emotion-7:hover:not([data-error='true'][data-disabled='true']),
+.emotion-7:active:not([data-error='true'][data-disabled='true']) {
   border: none;
 }
 
-.emotion-5[data-checked='true'] {
+.emotion-7[data-checked='true'] {
   border: none;
 }
 
-.emotion-5 label {
+.emotion-7 label {
   -webkit-transition: color 300ms;
   transition: color 300ms;
   color: #222638;
 }
 
-.emotion-5[data-checked='true'] label {
+.emotion-7[data-checked='true'] label {
   color: #222638;
 }
 
-.emotion-5:not([data-checked='true']) label:hover {
+.emotion-7:not([data-checked='true']) label:hover {
   color: #222638;
 }
 
-.emotion-7 {
+.emotion-9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2858,7 +2976,7 @@ exports[`SwitchButton > renders neutral 1`] = `
   gap: 0.25rem;
 }
 
-.emotion-7 {
+.emotion-9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2881,7 +2999,7 @@ exports[`SwitchButton > renders neutral 1`] = `
   gap: 0.25rem;
 }
 
-.emotion-10 {
+.emotion-12 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2905,104 +3023,104 @@ exports[`SwitchButton > renders neutral 1`] = `
   align-items: start;
 }
 
-.emotion-10[aria-disabled='false'],
-.emotion-10[aria-disabled='false']>label {
+.emotion-12[aria-disabled='false'],
+.emotion-12[aria-disabled='false']>label {
   cursor: pointer;
 }
 
-.emotion-10:hover[aria-disabled='false'] .emotion-13+.emotion-15 {
+.emotion-12:hover[aria-disabled='false'] .emotion-15+.emotion-17 {
   fill: #8c40ef;
 }
 
-.emotion-10:hover[aria-disabled='false'] .emotion-13+.emotion-15 .emotion-17 {
+.emotion-12:hover[aria-disabled='false'] .emotion-15+.emotion-17 .emotion-19 {
   fill: #e5dbfd;
 }
 
-.emotion-10:hover[aria-disabled='false'] .emotion-13[aria-invalid='true']+.emotion-15 {
+.emotion-12:hover[aria-disabled='false'] .emotion-15[aria-invalid='true']+.emotion-17 {
   fill: #b3144d;
 }
 
-.emotion-10:hover[aria-disabled='false'] .emotion-13[aria-invalid='true']+.emotion-15 .emotion-17 {
+.emotion-12:hover[aria-disabled='false'] .emotion-15[aria-invalid='true']+.emotion-17 .emotion-19 {
   fill: #ffd3e3;
 }
 
-.emotion-10[aria-disabled='true'] {
+.emotion-12[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.emotion-10[aria-disabled='true']>label,
-.emotion-10[aria-disabled='true'] .emotion-13 {
+.emotion-12[aria-disabled='true']>label,
+.emotion-12[aria-disabled='true'] .emotion-15 {
   cursor: not-allowed;
 }
 
-.emotion-10[aria-disabled='true'] .emotion-15 {
+.emotion-12[aria-disabled='true'] .emotion-17 {
   fill: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-10[aria-disabled='true'] .emotion-15 .emotion-17 {
+.emotion-12[aria-disabled='true'] .emotion-17 .emotion-19 {
   fill: #f3f3f4;
 }
 
-.emotion-10[data-checked='true'] {
+.emotion-12[data-checked='true'] {
   color: #641cb3;
 }
 
-.emotion-10[data-error='true'] {
+.emotion-12[data-error='true'] {
   color: #b3144d;
 }
 
-.emotion-10[aria-disabled='true'] {
+.emotion-12[aria-disabled='true'] {
   color: #b5b7bd;
 }
 
-.emotion-10 input+svg {
+.emotion-12 input+svg {
   display: none;
 }
 
-.emotion-10:hover[aria-disabled='false']:not([data-checked='true']) .emotion-13+.emotion-15 {
+.emotion-12:hover[aria-disabled='false']:not([data-checked='true']) .emotion-15+.emotion-17 {
   fill: #d9dadd;
 }
 
-.emotion-10:hover[aria-disabled='false']:not([data-checked='true']) .emotion-13+.emotion-15 .emotion-17 {
+.emotion-12:hover[aria-disabled='false']:not([data-checked='true']) .emotion-15+.emotion-17 .emotion-19 {
   fill: #ffffff;
 }
 
-.emotion-10:hover[aria-disabled='false']:not([data-checked='true']) .emotion-13[aria-invalid='true']+.emotion-15 {
+.emotion-12:hover[aria-disabled='false']:not([data-checked='true']) .emotion-15[aria-invalid='true']+.emotion-17 {
   fill: #b3144d;
 }
 
-.emotion-10:hover[aria-disabled='false']:not([data-checked='true']) .emotion-13[aria-invalid='true']+.emotion-15 .emotion-17 {
+.emotion-12:hover[aria-disabled='false']:not([data-checked='true']) .emotion-15[aria-invalid='true']+.emotion-17 .emotion-19 {
   fill: #ffffff;
 }
 
-.emotion-10:hover[aria-disabled='false'] .emotion-13+.emotion-15 {
+.emotion-12:hover[aria-disabled='false'] .emotion-15+.emotion-17 {
   fill: #8c40ef;
 }
 
-.emotion-10:hover[aria-disabled='false'] .emotion-13+.emotion-15 .emotion-17 {
+.emotion-12:hover[aria-disabled='false'] .emotion-15+.emotion-17 .emotion-19 {
   fill: #ffffff;
 }
 
-.emotion-10:hover[aria-disabled='false'] .emotion-13[aria-invalid='true']+.emotion-15 {
+.emotion-12:hover[aria-disabled='false'] .emotion-15[aria-invalid='true']+.emotion-17 {
   fill: #b3144d;
 }
 
-.emotion-10:hover[aria-disabled='false'] .emotion-13[aria-invalid='true']+.emotion-15 .emotion-17 {
+.emotion-12:hover[aria-disabled='false'] .emotion-15[aria-invalid='true']+.emotion-17 .emotion-19 {
   fill: #ffffff;
 }
 
-.emotion-10 .emotion-13[aria-disabled='false']:active+.emotion-15 {
+.emotion-12 .emotion-15[aria-disabled='false']:active+.emotion-17 {
   background: none;
   fill: #8c40ef;
 }
 
-.emotion-10 .emotion-13[aria-disabled='false']:active+.emotion-15 .emotion-17 {
+.emotion-12 .emotion-15[aria-disabled='false']:active+.emotion-17 .emotion-19 {
   fill: #ffffff;
 }
 
-.emotion-10 {
+.emotion-12 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -3026,104 +3144,104 @@ exports[`SwitchButton > renders neutral 1`] = `
   align-items: start;
 }
 
-.emotion-10[aria-disabled='false'],
-.emotion-10[aria-disabled='false']>label {
+.emotion-12[aria-disabled='false'],
+.emotion-12[aria-disabled='false']>label {
   cursor: pointer;
 }
 
-.emotion-10:hover[aria-disabled='false'] .emotion-13+.emotion-15 {
+.emotion-12:hover[aria-disabled='false'] .emotion-15+.emotion-17 {
   fill: #8c40ef;
 }
 
-.emotion-10:hover[aria-disabled='false'] .emotion-13+.emotion-15 .emotion-17 {
+.emotion-12:hover[aria-disabled='false'] .emotion-15+.emotion-17 .emotion-19 {
   fill: #e5dbfd;
 }
 
-.emotion-10:hover[aria-disabled='false'] .emotion-13[aria-invalid='true']+.emotion-15 {
+.emotion-12:hover[aria-disabled='false'] .emotion-15[aria-invalid='true']+.emotion-17 {
   fill: #b3144d;
 }
 
-.emotion-10:hover[aria-disabled='false'] .emotion-13[aria-invalid='true']+.emotion-15 .emotion-17 {
+.emotion-12:hover[aria-disabled='false'] .emotion-15[aria-invalid='true']+.emotion-17 .emotion-19 {
   fill: #ffd3e3;
 }
 
-.emotion-10[aria-disabled='true'] {
+.emotion-12[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.emotion-10[aria-disabled='true']>label,
-.emotion-10[aria-disabled='true'] .emotion-13 {
+.emotion-12[aria-disabled='true']>label,
+.emotion-12[aria-disabled='true'] .emotion-15 {
   cursor: not-allowed;
 }
 
-.emotion-10[aria-disabled='true'] .emotion-15 {
+.emotion-12[aria-disabled='true'] .emotion-17 {
   fill: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-10[aria-disabled='true'] .emotion-15 .emotion-17 {
+.emotion-12[aria-disabled='true'] .emotion-17 .emotion-19 {
   fill: #f3f3f4;
 }
 
-.emotion-10[data-checked='true'] {
+.emotion-12[data-checked='true'] {
   color: #641cb3;
 }
 
-.emotion-10[data-error='true'] {
+.emotion-12[data-error='true'] {
   color: #b3144d;
 }
 
-.emotion-10[aria-disabled='true'] {
+.emotion-12[aria-disabled='true'] {
   color: #b5b7bd;
 }
 
-.emotion-10 input+svg {
+.emotion-12 input+svg {
   display: none;
 }
 
-.emotion-10:hover[aria-disabled='false']:not([data-checked='true']) .emotion-13+.emotion-15 {
+.emotion-12:hover[aria-disabled='false']:not([data-checked='true']) .emotion-15+.emotion-17 {
   fill: #d9dadd;
 }
 
-.emotion-10:hover[aria-disabled='false']:not([data-checked='true']) .emotion-13+.emotion-15 .emotion-17 {
+.emotion-12:hover[aria-disabled='false']:not([data-checked='true']) .emotion-15+.emotion-17 .emotion-19 {
   fill: #ffffff;
 }
 
-.emotion-10:hover[aria-disabled='false']:not([data-checked='true']) .emotion-13[aria-invalid='true']+.emotion-15 {
+.emotion-12:hover[aria-disabled='false']:not([data-checked='true']) .emotion-15[aria-invalid='true']+.emotion-17 {
   fill: #b3144d;
 }
 
-.emotion-10:hover[aria-disabled='false']:not([data-checked='true']) .emotion-13[aria-invalid='true']+.emotion-15 .emotion-17 {
+.emotion-12:hover[aria-disabled='false']:not([data-checked='true']) .emotion-15[aria-invalid='true']+.emotion-17 .emotion-19 {
   fill: #ffffff;
 }
 
-.emotion-10:hover[aria-disabled='false'] .emotion-13+.emotion-15 {
+.emotion-12:hover[aria-disabled='false'] .emotion-15+.emotion-17 {
   fill: #8c40ef;
 }
 
-.emotion-10:hover[aria-disabled='false'] .emotion-13+.emotion-15 .emotion-17 {
+.emotion-12:hover[aria-disabled='false'] .emotion-15+.emotion-17 .emotion-19 {
   fill: #ffffff;
 }
 
-.emotion-10:hover[aria-disabled='false'] .emotion-13[aria-invalid='true']+.emotion-15 {
+.emotion-12:hover[aria-disabled='false'] .emotion-15[aria-invalid='true']+.emotion-17 {
   fill: #b3144d;
 }
 
-.emotion-10:hover[aria-disabled='false'] .emotion-13[aria-invalid='true']+.emotion-15 .emotion-17 {
+.emotion-12:hover[aria-disabled='false'] .emotion-15[aria-invalid='true']+.emotion-17 .emotion-19 {
   fill: #ffffff;
 }
 
-.emotion-10 .emotion-13[aria-disabled='false']:active+.emotion-15 {
+.emotion-12 .emotion-15[aria-disabled='false']:active+.emotion-17 {
   background: none;
   fill: #8c40ef;
 }
 
-.emotion-10 .emotion-13[aria-disabled='false']:active+.emotion-15 .emotion-17 {
+.emotion-12 .emotion-15[aria-disabled='false']:active+.emotion-17 .emotion-19 {
   fill: #ffffff;
 }
 
-.emotion-12 {
+.emotion-14 {
   cursor: pointer;
   position: absolute;
   height: 1.5rem;
@@ -3133,7 +3251,7 @@ exports[`SwitchButton > renders neutral 1`] = `
   border-width: 0;
 }
 
-.emotion-12+.emotion-15 .emotion-19 {
+.emotion-14+.emotion-17 .emotion-21 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -3143,48 +3261,48 @@ exports[`SwitchButton > renders neutral 1`] = `
   transform: scale(0);
 }
 
-.emotion-12:checked+svg .emotion-19 {
+.emotion-14:checked+svg .emotion-21 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.emotion-12:checked[aria-disabled='false'][aria-invalid='false']+.emotion-15 {
+.emotion-14:checked[aria-disabled='false'][aria-invalid='false']+.emotion-17 {
   fill: #8c40ef;
 }
 
-.emotion-12:checked[aria-disabled='true'][aria-invalid='false']+.emotion-15 {
+.emotion-14:checked[aria-disabled='true'][aria-invalid='false']+.emotion-17 {
   fill: #d8c5fc;
 }
 
-.emotion-12[aria-invalid='true']:not([aria-disabled='true'])+.emotion-15 {
+.emotion-14[aria-invalid='true']:not([aria-disabled='true'])+.emotion-17 {
   fill: #e51963;
 }
 
-.emotion-12[aria-disabled='false']:active+.emotion-15 {
+.emotion-14[aria-disabled='false']:active+.emotion-17 {
   background-color: #5e127e40;
   fill: #8c40ef;
 }
 
-.emotion-12[aria-disabled='false']:active+.emotion-15 .emotion-17 {
+.emotion-14[aria-disabled='false']:active+.emotion-17 .emotion-19 {
   fill: #f1eefc;
 }
 
-.emotion-12[aria-disabled='false']:focus-visible+.emotion-15 {
+.emotion-14[aria-disabled='false']:focus-visible+.emotion-17 {
   outline: -webkit-focus-ring-color auto 1px;
 }
 
-.emotion-12[aria-invalid='true']:focus+.emotion-15 {
+.emotion-14[aria-invalid='true']:focus+.emotion-17 {
   background-color: #f91b6c40;
   fill: #e51963;
 }
 
-.emotion-12[aria-invalid='true']:focus+.emotion-15 .emotion-17 {
+.emotion-14[aria-invalid='true']:focus+.emotion-17 .emotion-19 {
   fill: #ffebf2;
 }
 
-.emotion-12 {
+.emotion-14 {
   cursor: pointer;
   position: absolute;
   height: 1.5rem;
@@ -3194,7 +3312,7 @@ exports[`SwitchButton > renders neutral 1`] = `
   border-width: 0;
 }
 
-.emotion-12+.emotion-15 .emotion-19 {
+.emotion-14+.emotion-17 .emotion-21 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -3204,48 +3322,48 @@ exports[`SwitchButton > renders neutral 1`] = `
   transform: scale(0);
 }
 
-.emotion-12:checked+svg .emotion-19 {
+.emotion-14:checked+svg .emotion-21 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.emotion-12:checked[aria-disabled='false'][aria-invalid='false']+.emotion-15 {
+.emotion-14:checked[aria-disabled='false'][aria-invalid='false']+.emotion-17 {
   fill: #8c40ef;
 }
 
-.emotion-12:checked[aria-disabled='true'][aria-invalid='false']+.emotion-15 {
+.emotion-14:checked[aria-disabled='true'][aria-invalid='false']+.emotion-17 {
   fill: #d8c5fc;
 }
 
-.emotion-12[aria-invalid='true']:not([aria-disabled='true'])+.emotion-15 {
+.emotion-14[aria-invalid='true']:not([aria-disabled='true'])+.emotion-17 {
   fill: #e51963;
 }
 
-.emotion-12[aria-disabled='false']:active+.emotion-15 {
+.emotion-14[aria-disabled='false']:active+.emotion-17 {
   background-color: #5e127e40;
   fill: #8c40ef;
 }
 
-.emotion-12[aria-disabled='false']:active+.emotion-15 .emotion-17 {
+.emotion-14[aria-disabled='false']:active+.emotion-17 .emotion-19 {
   fill: #f1eefc;
 }
 
-.emotion-12[aria-disabled='false']:focus-visible+.emotion-15 {
+.emotion-14[aria-disabled='false']:focus-visible+.emotion-17 {
   outline: -webkit-focus-ring-color auto 1px;
 }
 
-.emotion-12[aria-invalid='true']:focus+.emotion-15 {
+.emotion-14[aria-invalid='true']:focus+.emotion-17 {
   background-color: #f91b6c40;
   fill: #e51963;
 }
 
-.emotion-12[aria-invalid='true']:focus+.emotion-15 .emotion-17 {
+.emotion-14[aria-invalid='true']:focus+.emotion-17 .emotion-19 {
   fill: #ffebf2;
 }
 
-.emotion-14 {
+.emotion-16 {
   height: 1.5rem;
   width: 1.5rem;
   min-width: 1.5rem;
@@ -3254,11 +3372,11 @@ exports[`SwitchButton > renders neutral 1`] = `
   fill: #d9dadd;
 }
 
-.emotion-14 .emotion-17 {
+.emotion-16 .emotion-19 {
   fill: #ffffff;
 }
 
-.emotion-14 {
+.emotion-16 {
   height: 1.5rem;
   width: 1.5rem;
   min-width: 1.5rem;
@@ -3267,11 +3385,11 @@ exports[`SwitchButton > renders neutral 1`] = `
   fill: #d9dadd;
 }
 
-.emotion-14 .emotion-17 {
+.emotion-16 .emotion-19 {
   fill: #ffffff;
 }
 
-.emotion-21 {
+.emotion-23 {
   font-size: 1rem;
   font-family: Inter,sans-serif;
   font-weight: 400;
@@ -3286,7 +3404,7 @@ exports[`SwitchButton > renders neutral 1`] = `
   cursor: pointer;
 }
 
-.emotion-21 {
+.emotion-23 {
   font-size: 1rem;
   font-family: Inter,sans-serif;
   font-weight: 400;
@@ -3312,7 +3430,12 @@ exports[`SwitchButton > renders neutral 1`] = `
         data-size="small"
       >
         <div
-          class="emotion-4 emotion-5 emotion-6"
+          class="emotion-4 emotion-5"
+          data-sentiment="neutral"
+          style="width: 100px; left: 0px;"
+        />
+        <div
+          class="emotion-6 emotion-7 emotion-8"
           data-checked="true"
           data-disabled="false"
           data-has-default-cursor="false"
@@ -3324,18 +3447,18 @@ exports[`SwitchButton > renders neutral 1`] = `
           tabindex="0"
         >
           <div
-            class="emotion-7 emotion-8"
+            class="emotion-9 emotion-10"
           >
             <div
               aria-disabled="false"
-              class="emotion-9 emotion-10 emotion-11"
+              class="emotion-11 emotion-12 emotion-13"
               data-checked="true"
             >
               <input
                 aria-disabled="false"
                 aria-invalid="false"
                 checked=""
-                class="emotion-12 emotion-13"
+                class="emotion-14 emotion-15"
                 id="«r1o»"
                 name="test"
                 tabindex="-1"
@@ -3343,7 +3466,7 @@ exports[`SwitchButton > renders neutral 1`] = `
                 value="left"
               />
               <svg
-                class="emotion-14 emotion-15"
+                class="emotion-16 emotion-17"
                 viewBox="0 0 24 24"
               >
                 <g>
@@ -3354,13 +3477,13 @@ exports[`SwitchButton > renders neutral 1`] = `
                     stroke-width="2"
                   />
                   <circle
-                    class="emotion-16 emotion-17"
+                    class="emotion-18 emotion-19"
                     cx="12"
                     cy="12"
                     r="8"
                   />
                   <circle
-                    class="emotion-18 emotion-19"
+                    class="emotion-20 emotion-21"
                     cx="12"
                     cy="12"
                     r="5"
@@ -3368,7 +3491,7 @@ exports[`SwitchButton > renders neutral 1`] = `
                 </g>
               </svg>
               <label
-                class="emotion-20 emotion-21 emotion-22"
+                class="emotion-22 emotion-23 emotion-24"
                 for="«r1o»"
               >
                 Left
@@ -3377,7 +3500,7 @@ exports[`SwitchButton > renders neutral 1`] = `
           </div>
         </div>
         <div
-          class="emotion-4 emotion-5 emotion-6"
+          class="emotion-6 emotion-7 emotion-8"
           data-checked="false"
           data-disabled="false"
           data-has-default-cursor="false"
@@ -3389,17 +3512,17 @@ exports[`SwitchButton > renders neutral 1`] = `
           tabindex="0"
         >
           <div
-            class="emotion-7 emotion-8"
+            class="emotion-9 emotion-10"
           >
             <div
               aria-disabled="false"
-              class="emotion-9 emotion-10 emotion-11"
+              class="emotion-11 emotion-12 emotion-13"
               data-checked="false"
             >
               <input
                 aria-disabled="false"
                 aria-invalid="false"
-                class="emotion-12 emotion-13"
+                class="emotion-14 emotion-15"
                 id="«r1s»"
                 name="test"
                 tabindex="-1"
@@ -3407,7 +3530,7 @@ exports[`SwitchButton > renders neutral 1`] = `
                 value="right"
               />
               <svg
-                class="emotion-14 emotion-15"
+                class="emotion-16 emotion-17"
                 viewBox="0 0 24 24"
               >
                 <g>
@@ -3418,13 +3541,13 @@ exports[`SwitchButton > renders neutral 1`] = `
                     stroke-width="2"
                   />
                   <circle
-                    class="emotion-16 emotion-17"
+                    class="emotion-18 emotion-19"
                     cx="12"
                     cy="12"
                     r="8"
                   />
                   <circle
-                    class="emotion-18 emotion-19"
+                    class="emotion-20 emotion-21"
                     cx="12"
                     cy="12"
                     r="5"
@@ -3432,7 +3555,7 @@ exports[`SwitchButton > renders neutral 1`] = `
                 </g>
               </svg>
               <label
-                class="emotion-20 emotion-21 emotion-22"
+                class="emotion-22 emotion-23 emotion-24"
                 for="«r1s»"
               >
                 Right
@@ -3545,6 +3668,34 @@ exports[`SwitchButton > renders with disabled and tooltip on SwitchButton.Option
 }
 
 .emotion-6 {
+  position: absolute;
+  height: calc(100% - 0.5rem);
+  border-radius: 0.25rem;
+  background: #8c40ef;
+  transform-origin: left center;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.emotion-6[data-sentiment='neutral'] {
+  background: #e9eaeb;
+}
+
+.emotion-6 {
+  position: absolute;
+  height: calc(100% - 0.5rem);
+  border-radius: 0.25rem;
+  background: #8c40ef;
+  transform-origin: left center;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.emotion-6[data-sentiment='neutral'] {
+  background: #e9eaeb;
+}
+
+.emotion-8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3569,7 +3720,7 @@ exports[`SwitchButton > renders with disabled and tooltip on SwitchButton.Option
   flex-direction: column;
 }
 
-.emotion-11 {
+.emotion-13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3624,97 +3775,97 @@ exports[`SwitchButton > renders with disabled and tooltip on SwitchButton.Option
   user-select: none;
 }
 
-.emotion-11[data-has-label='false']>:first-child {
+.emotion-13[data-has-label='false']>:first-child {
   margin-bottom: -0.25rem;
 }
 
-.emotion-11[data-has-default-cursor='true'] {
+.emotion-13[data-has-default-cursor='true'] {
   cursor: default;
 }
 
-.emotion-11[data-checked='true'] {
+.emotion-13[data-checked='true'] {
   border: 1px solid #8c40ef;
 }
 
-.emotion-11[data-error='true'] {
+.emotion-13[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-11[data-disabled='true'] {
+.emotion-13[data-disabled='true'] {
   border: 1px solid #e9eaeb;
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.emotion-11[data-image="illustration"] {
+.emotion-13[data-image="illustration"] {
   padding: 0rem;
 }
 
-.emotion-11[data-image="icon"] {
+.emotion-13[data-image="icon"] {
   padding: 0rem;
   padding-right: 1rem;
 }
 
-.emotion-11:hover:not([data-error='true']):not([data-disabled='true']),
-.emotion-11:active:not([data-error='true']):not([data-disabled='true']) {
+.emotion-13:hover:not([data-error='true']):not([data-disabled='true']),
+.emotion-13:active:not([data-error='true']):not([data-disabled='true']) {
   border: 1px solid #8c40ef;
 }
 
-.emotion-11:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.emotion-11:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
+.emotion-13:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
+.emotion-13:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
 
-.emotion-11[data-has-label='true'] .emotion-14,
-.emotion-11[data-has-label='true'] .eqr7bqq0 {
+.emotion-13[data-has-label='true'] .emotion-16,
+.emotion-13[data-has-label='true'] .eqr7bqq0 {
   width: 100%;
 }
 
-.emotion-11:hover,
-.emotion-11:active {
+.emotion-13:hover,
+.emotion-13:active {
   box-shadow: none;
   border: none;
 }
 
-.emotion-11:hover:not([data-error='true'][data-disabled='true']),
-.emotion-11:active:not([data-error='true'][data-disabled='true']) {
+.emotion-13:hover:not([data-error='true'][data-disabled='true']),
+.emotion-13:active:not([data-error='true'][data-disabled='true']) {
   border: none;
 }
 
-.emotion-11[data-checked='true'] {
+.emotion-13[data-checked='true'] {
   border: none;
 }
 
-.emotion-11 label {
+.emotion-13 label {
   -webkit-transition: color 300ms;
   transition: color 300ms;
   color: #222638;
 }
 
-.emotion-11[data-checked='true'] label {
+.emotion-13[data-checked='true'] label {
   color: #ffffff;
 }
 
-.emotion-11:not([data-checked='true']) label:hover {
+.emotion-13:not([data-checked='true']) label:hover {
   color: #641cb3;
 }
 
-.emotion-11[data-disabled='true'] {
+.emotion-13[data-disabled='true'] {
   background: transparent;
   border: none;
 }
 
-.emotion-11 label {
+.emotion-13 label {
   color: #b5b7bd;
 }
 
-.emotion-11:not([data-checked='true']) label:hover {
+.emotion-13:not([data-checked='true']) label:hover {
   background: transparent;
   color: #b5b7bd;
 }
 
-.emotion-13 {
+.emotion-15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3737,7 +3888,7 @@ exports[`SwitchButton > renders with disabled and tooltip on SwitchButton.Option
   gap: 0.25rem;
 }
 
-.emotion-13 {
+.emotion-15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3760,7 +3911,7 @@ exports[`SwitchButton > renders with disabled and tooltip on SwitchButton.Option
   gap: 0.25rem;
 }
 
-.emotion-16 {
+.emotion-18 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -3784,104 +3935,104 @@ exports[`SwitchButton > renders with disabled and tooltip on SwitchButton.Option
   align-items: start;
 }
 
-.emotion-16[aria-disabled='false'],
-.emotion-16[aria-disabled='false']>label {
+.emotion-18[aria-disabled='false'],
+.emotion-18[aria-disabled='false']>label {
   cursor: pointer;
 }
 
-.emotion-16:hover[aria-disabled='false'] .emotion-19+.emotion-21 {
+.emotion-18:hover[aria-disabled='false'] .emotion-21+.emotion-23 {
   fill: #8c40ef;
 }
 
-.emotion-16:hover[aria-disabled='false'] .emotion-19+.emotion-21 .emotion-23 {
+.emotion-18:hover[aria-disabled='false'] .emotion-21+.emotion-23 .emotion-25 {
   fill: #e5dbfd;
 }
 
-.emotion-16:hover[aria-disabled='false'] .emotion-19[aria-invalid='true']+.emotion-21 {
+.emotion-18:hover[aria-disabled='false'] .emotion-21[aria-invalid='true']+.emotion-23 {
   fill: #b3144d;
 }
 
-.emotion-16:hover[aria-disabled='false'] .emotion-19[aria-invalid='true']+.emotion-21 .emotion-23 {
+.emotion-18:hover[aria-disabled='false'] .emotion-21[aria-invalid='true']+.emotion-23 .emotion-25 {
   fill: #ffd3e3;
 }
 
-.emotion-16[aria-disabled='true'] {
+.emotion-18[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.emotion-16[aria-disabled='true']>label,
-.emotion-16[aria-disabled='true'] .emotion-19 {
+.emotion-18[aria-disabled='true']>label,
+.emotion-18[aria-disabled='true'] .emotion-21 {
   cursor: not-allowed;
 }
 
-.emotion-16[aria-disabled='true'] .emotion-21 {
+.emotion-18[aria-disabled='true'] .emotion-23 {
   fill: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-16[aria-disabled='true'] .emotion-21 .emotion-23 {
+.emotion-18[aria-disabled='true'] .emotion-23 .emotion-25 {
   fill: #f3f3f4;
 }
 
-.emotion-16[data-checked='true'] {
+.emotion-18[data-checked='true'] {
   color: #641cb3;
 }
 
-.emotion-16[data-error='true'] {
+.emotion-18[data-error='true'] {
   color: #b3144d;
 }
 
-.emotion-16[aria-disabled='true'] {
+.emotion-18[aria-disabled='true'] {
   color: #b5b7bd;
 }
 
-.emotion-16 input+svg {
+.emotion-18 input+svg {
   display: none;
 }
 
-.emotion-16:hover[aria-disabled='false']:not([data-checked='true']) .emotion-19+.emotion-21 {
+.emotion-18:hover[aria-disabled='false']:not([data-checked='true']) .emotion-21+.emotion-23 {
   fill: #d9dadd;
 }
 
-.emotion-16:hover[aria-disabled='false']:not([data-checked='true']) .emotion-19+.emotion-21 .emotion-23 {
+.emotion-18:hover[aria-disabled='false']:not([data-checked='true']) .emotion-21+.emotion-23 .emotion-25 {
   fill: #ffffff;
 }
 
-.emotion-16:hover[aria-disabled='false']:not([data-checked='true']) .emotion-19[aria-invalid='true']+.emotion-21 {
+.emotion-18:hover[aria-disabled='false']:not([data-checked='true']) .emotion-21[aria-invalid='true']+.emotion-23 {
   fill: #b3144d;
 }
 
-.emotion-16:hover[aria-disabled='false']:not([data-checked='true']) .emotion-19[aria-invalid='true']+.emotion-21 .emotion-23 {
+.emotion-18:hover[aria-disabled='false']:not([data-checked='true']) .emotion-21[aria-invalid='true']+.emotion-23 .emotion-25 {
   fill: #ffffff;
 }
 
-.emotion-16:hover[aria-disabled='false'] .emotion-19+.emotion-21 {
+.emotion-18:hover[aria-disabled='false'] .emotion-21+.emotion-23 {
   fill: #8c40ef;
 }
 
-.emotion-16:hover[aria-disabled='false'] .emotion-19+.emotion-21 .emotion-23 {
+.emotion-18:hover[aria-disabled='false'] .emotion-21+.emotion-23 .emotion-25 {
   fill: #ffffff;
 }
 
-.emotion-16:hover[aria-disabled='false'] .emotion-19[aria-invalid='true']+.emotion-21 {
+.emotion-18:hover[aria-disabled='false'] .emotion-21[aria-invalid='true']+.emotion-23 {
   fill: #b3144d;
 }
 
-.emotion-16:hover[aria-disabled='false'] .emotion-19[aria-invalid='true']+.emotion-21 .emotion-23 {
+.emotion-18:hover[aria-disabled='false'] .emotion-21[aria-invalid='true']+.emotion-23 .emotion-25 {
   fill: #ffffff;
 }
 
-.emotion-16 .emotion-19[aria-disabled='false']:active+.emotion-21 {
+.emotion-18 .emotion-21[aria-disabled='false']:active+.emotion-23 {
   background: none;
   fill: #8c40ef;
 }
 
-.emotion-16 .emotion-19[aria-disabled='false']:active+.emotion-21 .emotion-23 {
+.emotion-18 .emotion-21[aria-disabled='false']:active+.emotion-23 .emotion-25 {
   fill: #ffffff;
 }
 
-.emotion-16 {
+.emotion-18 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -3905,104 +4056,104 @@ exports[`SwitchButton > renders with disabled and tooltip on SwitchButton.Option
   align-items: start;
 }
 
-.emotion-16[aria-disabled='false'],
-.emotion-16[aria-disabled='false']>label {
+.emotion-18[aria-disabled='false'],
+.emotion-18[aria-disabled='false']>label {
   cursor: pointer;
 }
 
-.emotion-16:hover[aria-disabled='false'] .emotion-19+.emotion-21 {
+.emotion-18:hover[aria-disabled='false'] .emotion-21+.emotion-23 {
   fill: #8c40ef;
 }
 
-.emotion-16:hover[aria-disabled='false'] .emotion-19+.emotion-21 .emotion-23 {
+.emotion-18:hover[aria-disabled='false'] .emotion-21+.emotion-23 .emotion-25 {
   fill: #e5dbfd;
 }
 
-.emotion-16:hover[aria-disabled='false'] .emotion-19[aria-invalid='true']+.emotion-21 {
+.emotion-18:hover[aria-disabled='false'] .emotion-21[aria-invalid='true']+.emotion-23 {
   fill: #b3144d;
 }
 
-.emotion-16:hover[aria-disabled='false'] .emotion-19[aria-invalid='true']+.emotion-21 .emotion-23 {
+.emotion-18:hover[aria-disabled='false'] .emotion-21[aria-invalid='true']+.emotion-23 .emotion-25 {
   fill: #ffd3e3;
 }
 
-.emotion-16[aria-disabled='true'] {
+.emotion-18[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.emotion-16[aria-disabled='true']>label,
-.emotion-16[aria-disabled='true'] .emotion-19 {
+.emotion-18[aria-disabled='true']>label,
+.emotion-18[aria-disabled='true'] .emotion-21 {
   cursor: not-allowed;
 }
 
-.emotion-16[aria-disabled='true'] .emotion-21 {
+.emotion-18[aria-disabled='true'] .emotion-23 {
   fill: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-16[aria-disabled='true'] .emotion-21 .emotion-23 {
+.emotion-18[aria-disabled='true'] .emotion-23 .emotion-25 {
   fill: #f3f3f4;
 }
 
-.emotion-16[data-checked='true'] {
+.emotion-18[data-checked='true'] {
   color: #641cb3;
 }
 
-.emotion-16[data-error='true'] {
+.emotion-18[data-error='true'] {
   color: #b3144d;
 }
 
-.emotion-16[aria-disabled='true'] {
+.emotion-18[aria-disabled='true'] {
   color: #b5b7bd;
 }
 
-.emotion-16 input+svg {
+.emotion-18 input+svg {
   display: none;
 }
 
-.emotion-16:hover[aria-disabled='false']:not([data-checked='true']) .emotion-19+.emotion-21 {
+.emotion-18:hover[aria-disabled='false']:not([data-checked='true']) .emotion-21+.emotion-23 {
   fill: #d9dadd;
 }
 
-.emotion-16:hover[aria-disabled='false']:not([data-checked='true']) .emotion-19+.emotion-21 .emotion-23 {
+.emotion-18:hover[aria-disabled='false']:not([data-checked='true']) .emotion-21+.emotion-23 .emotion-25 {
   fill: #ffffff;
 }
 
-.emotion-16:hover[aria-disabled='false']:not([data-checked='true']) .emotion-19[aria-invalid='true']+.emotion-21 {
+.emotion-18:hover[aria-disabled='false']:not([data-checked='true']) .emotion-21[aria-invalid='true']+.emotion-23 {
   fill: #b3144d;
 }
 
-.emotion-16:hover[aria-disabled='false']:not([data-checked='true']) .emotion-19[aria-invalid='true']+.emotion-21 .emotion-23 {
+.emotion-18:hover[aria-disabled='false']:not([data-checked='true']) .emotion-21[aria-invalid='true']+.emotion-23 .emotion-25 {
   fill: #ffffff;
 }
 
-.emotion-16:hover[aria-disabled='false'] .emotion-19+.emotion-21 {
+.emotion-18:hover[aria-disabled='false'] .emotion-21+.emotion-23 {
   fill: #8c40ef;
 }
 
-.emotion-16:hover[aria-disabled='false'] .emotion-19+.emotion-21 .emotion-23 {
+.emotion-18:hover[aria-disabled='false'] .emotion-21+.emotion-23 .emotion-25 {
   fill: #ffffff;
 }
 
-.emotion-16:hover[aria-disabled='false'] .emotion-19[aria-invalid='true']+.emotion-21 {
+.emotion-18:hover[aria-disabled='false'] .emotion-21[aria-invalid='true']+.emotion-23 {
   fill: #b3144d;
 }
 
-.emotion-16:hover[aria-disabled='false'] .emotion-19[aria-invalid='true']+.emotion-21 .emotion-23 {
+.emotion-18:hover[aria-disabled='false'] .emotion-21[aria-invalid='true']+.emotion-23 .emotion-25 {
   fill: #ffffff;
 }
 
-.emotion-16 .emotion-19[aria-disabled='false']:active+.emotion-21 {
+.emotion-18 .emotion-21[aria-disabled='false']:active+.emotion-23 {
   background: none;
   fill: #8c40ef;
 }
 
-.emotion-16 .emotion-19[aria-disabled='false']:active+.emotion-21 .emotion-23 {
+.emotion-18 .emotion-21[aria-disabled='false']:active+.emotion-23 .emotion-25 {
   fill: #ffffff;
 }
 
-.emotion-18 {
+.emotion-20 {
   cursor: pointer;
   position: absolute;
   height: 1.5rem;
@@ -4012,7 +4163,7 @@ exports[`SwitchButton > renders with disabled and tooltip on SwitchButton.Option
   border-width: 0;
 }
 
-.emotion-18+.emotion-21 .emotion-25 {
+.emotion-20+.emotion-23 .emotion-27 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -4022,48 +4173,48 @@ exports[`SwitchButton > renders with disabled and tooltip on SwitchButton.Option
   transform: scale(0);
 }
 
-.emotion-18:checked+svg .emotion-25 {
+.emotion-20:checked+svg .emotion-27 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.emotion-18:checked[aria-disabled='false'][aria-invalid='false']+.emotion-21 {
+.emotion-20:checked[aria-disabled='false'][aria-invalid='false']+.emotion-23 {
   fill: #8c40ef;
 }
 
-.emotion-18:checked[aria-disabled='true'][aria-invalid='false']+.emotion-21 {
+.emotion-20:checked[aria-disabled='true'][aria-invalid='false']+.emotion-23 {
   fill: #d8c5fc;
 }
 
-.emotion-18[aria-invalid='true']:not([aria-disabled='true'])+.emotion-21 {
+.emotion-20[aria-invalid='true']:not([aria-disabled='true'])+.emotion-23 {
   fill: #e51963;
 }
 
-.emotion-18[aria-disabled='false']:active+.emotion-21 {
+.emotion-20[aria-disabled='false']:active+.emotion-23 {
   background-color: #5e127e40;
   fill: #8c40ef;
 }
 
-.emotion-18[aria-disabled='false']:active+.emotion-21 .emotion-23 {
+.emotion-20[aria-disabled='false']:active+.emotion-23 .emotion-25 {
   fill: #f1eefc;
 }
 
-.emotion-18[aria-disabled='false']:focus-visible+.emotion-21 {
+.emotion-20[aria-disabled='false']:focus-visible+.emotion-23 {
   outline: -webkit-focus-ring-color auto 1px;
 }
 
-.emotion-18[aria-invalid='true']:focus+.emotion-21 {
+.emotion-20[aria-invalid='true']:focus+.emotion-23 {
   background-color: #f91b6c40;
   fill: #e51963;
 }
 
-.emotion-18[aria-invalid='true']:focus+.emotion-21 .emotion-23 {
+.emotion-20[aria-invalid='true']:focus+.emotion-23 .emotion-25 {
   fill: #ffebf2;
 }
 
-.emotion-18 {
+.emotion-20 {
   cursor: pointer;
   position: absolute;
   height: 1.5rem;
@@ -4073,7 +4224,7 @@ exports[`SwitchButton > renders with disabled and tooltip on SwitchButton.Option
   border-width: 0;
 }
 
-.emotion-18+.emotion-21 .emotion-25 {
+.emotion-20+.emotion-23 .emotion-27 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -4083,48 +4234,48 @@ exports[`SwitchButton > renders with disabled and tooltip on SwitchButton.Option
   transform: scale(0);
 }
 
-.emotion-18:checked+svg .emotion-25 {
+.emotion-20:checked+svg .emotion-27 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.emotion-18:checked[aria-disabled='false'][aria-invalid='false']+.emotion-21 {
+.emotion-20:checked[aria-disabled='false'][aria-invalid='false']+.emotion-23 {
   fill: #8c40ef;
 }
 
-.emotion-18:checked[aria-disabled='true'][aria-invalid='false']+.emotion-21 {
+.emotion-20:checked[aria-disabled='true'][aria-invalid='false']+.emotion-23 {
   fill: #d8c5fc;
 }
 
-.emotion-18[aria-invalid='true']:not([aria-disabled='true'])+.emotion-21 {
+.emotion-20[aria-invalid='true']:not([aria-disabled='true'])+.emotion-23 {
   fill: #e51963;
 }
 
-.emotion-18[aria-disabled='false']:active+.emotion-21 {
+.emotion-20[aria-disabled='false']:active+.emotion-23 {
   background-color: #5e127e40;
   fill: #8c40ef;
 }
 
-.emotion-18[aria-disabled='false']:active+.emotion-21 .emotion-23 {
+.emotion-20[aria-disabled='false']:active+.emotion-23 .emotion-25 {
   fill: #f1eefc;
 }
 
-.emotion-18[aria-disabled='false']:focus-visible+.emotion-21 {
+.emotion-20[aria-disabled='false']:focus-visible+.emotion-23 {
   outline: -webkit-focus-ring-color auto 1px;
 }
 
-.emotion-18[aria-invalid='true']:focus+.emotion-21 {
+.emotion-20[aria-invalid='true']:focus+.emotion-23 {
   background-color: #f91b6c40;
   fill: #e51963;
 }
 
-.emotion-18[aria-invalid='true']:focus+.emotion-21 .emotion-23 {
+.emotion-20[aria-invalid='true']:focus+.emotion-23 .emotion-25 {
   fill: #ffebf2;
 }
 
-.emotion-20 {
+.emotion-22 {
   height: 1.5rem;
   width: 1.5rem;
   min-width: 1.5rem;
@@ -4133,11 +4284,11 @@ exports[`SwitchButton > renders with disabled and tooltip on SwitchButton.Option
   fill: #d9dadd;
 }
 
-.emotion-20 .emotion-23 {
+.emotion-22 .emotion-25 {
   fill: #ffffff;
 }
 
-.emotion-20 {
+.emotion-22 {
   height: 1.5rem;
   width: 1.5rem;
   min-width: 1.5rem;
@@ -4146,11 +4297,11 @@ exports[`SwitchButton > renders with disabled and tooltip on SwitchButton.Option
   fill: #d9dadd;
 }
 
-.emotion-20 .emotion-23 {
+.emotion-22 .emotion-25 {
   fill: #ffffff;
 }
 
-.emotion-27 {
+.emotion-29 {
   font-size: 1rem;
   font-family: Inter,sans-serif;
   font-weight: 400;
@@ -4165,7 +4316,7 @@ exports[`SwitchButton > renders with disabled and tooltip on SwitchButton.Option
   cursor: pointer;
 }
 
-.emotion-27 {
+.emotion-29 {
   font-size: 1rem;
   font-family: Inter,sans-serif;
   font-weight: 400;
@@ -4180,7 +4331,7 @@ exports[`SwitchButton > renders with disabled and tooltip on SwitchButton.Option
   cursor: pointer;
 }
 
-.emotion-30 {
+.emotion-32 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4235,83 +4386,83 @@ exports[`SwitchButton > renders with disabled and tooltip on SwitchButton.Option
   user-select: none;
 }
 
-.emotion-30[data-has-label='false']>:first-child {
+.emotion-32[data-has-label='false']>:first-child {
   margin-bottom: -0.25rem;
 }
 
-.emotion-30[data-has-default-cursor='true'] {
+.emotion-32[data-has-default-cursor='true'] {
   cursor: default;
 }
 
-.emotion-30[data-checked='true'] {
+.emotion-32[data-checked='true'] {
   border: 1px solid #8c40ef;
 }
 
-.emotion-30[data-error='true'] {
+.emotion-32[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-30[data-disabled='true'] {
+.emotion-32[data-disabled='true'] {
   border: 1px solid #e9eaeb;
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.emotion-30[data-image="illustration"] {
+.emotion-32[data-image="illustration"] {
   padding: 0rem;
 }
 
-.emotion-30[data-image="icon"] {
+.emotion-32[data-image="icon"] {
   padding: 0rem;
   padding-right: 1rem;
 }
 
-.emotion-30:hover:not([data-error='true']):not([data-disabled='true']),
-.emotion-30:active:not([data-error='true']):not([data-disabled='true']) {
+.emotion-32:hover:not([data-error='true']):not([data-disabled='true']),
+.emotion-32:active:not([data-error='true']):not([data-disabled='true']) {
   border: 1px solid #8c40ef;
 }
 
-.emotion-30:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.emotion-30:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
+.emotion-32:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
+.emotion-32:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
 
-.emotion-30[data-has-label='true'] .emotion-14,
-.emotion-30[data-has-label='true'] .eqr7bqq0 {
+.emotion-32[data-has-label='true'] .emotion-16,
+.emotion-32[data-has-label='true'] .eqr7bqq0 {
   width: 100%;
 }
 
-.emotion-30:hover,
-.emotion-30:active {
+.emotion-32:hover,
+.emotion-32:active {
   box-shadow: none;
   border: none;
 }
 
-.emotion-30:hover:not([data-error='true'][data-disabled='true']),
-.emotion-30:active:not([data-error='true'][data-disabled='true']) {
+.emotion-32:hover:not([data-error='true'][data-disabled='true']),
+.emotion-32:active:not([data-error='true'][data-disabled='true']) {
   border: none;
 }
 
-.emotion-30[data-checked='true'] {
+.emotion-32[data-checked='true'] {
   border: none;
 }
 
-.emotion-30 label {
+.emotion-32 label {
   -webkit-transition: color 300ms;
   transition: color 300ms;
   color: #222638;
 }
 
-.emotion-30[data-checked='true'] label {
+.emotion-32[data-checked='true'] label {
   color: #ffffff;
 }
 
-.emotion-30:not([data-checked='true']) label:hover {
+.emotion-32:not([data-checked='true']) label:hover {
   color: #641cb3;
 }
 
-.emotion-30 {
+.emotion-32 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4366,79 +4517,79 @@ exports[`SwitchButton > renders with disabled and tooltip on SwitchButton.Option
   user-select: none;
 }
 
-.emotion-30[data-has-label='false']>:first-child {
+.emotion-32[data-has-label='false']>:first-child {
   margin-bottom: -0.25rem;
 }
 
-.emotion-30[data-has-default-cursor='true'] {
+.emotion-32[data-has-default-cursor='true'] {
   cursor: default;
 }
 
-.emotion-30[data-checked='true'] {
+.emotion-32[data-checked='true'] {
   border: 1px solid #8c40ef;
 }
 
-.emotion-30[data-error='true'] {
+.emotion-32[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-30[data-disabled='true'] {
+.emotion-32[data-disabled='true'] {
   border: 1px solid #e9eaeb;
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.emotion-30[data-image="illustration"] {
+.emotion-32[data-image="illustration"] {
   padding: 0rem;
 }
 
-.emotion-30[data-image="icon"] {
+.emotion-32[data-image="icon"] {
   padding: 0rem;
   padding-right: 1rem;
 }
 
-.emotion-30:hover:not([data-error='true']):not([data-disabled='true']),
-.emotion-30:active:not([data-error='true']):not([data-disabled='true']) {
+.emotion-32:hover:not([data-error='true']):not([data-disabled='true']),
+.emotion-32:active:not([data-error='true']):not([data-disabled='true']) {
   border: 1px solid #8c40ef;
 }
 
-.emotion-30:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.emotion-30:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
+.emotion-32:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
+.emotion-32:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
 
-.emotion-30[data-has-label='true'] .emotion-14,
-.emotion-30[data-has-label='true'] .eqr7bqq0 {
+.emotion-32[data-has-label='true'] .emotion-16,
+.emotion-32[data-has-label='true'] .eqr7bqq0 {
   width: 100%;
 }
 
-.emotion-30:hover,
-.emotion-30:active {
+.emotion-32:hover,
+.emotion-32:active {
   box-shadow: none;
   border: none;
 }
 
-.emotion-30:hover:not([data-error='true'][data-disabled='true']),
-.emotion-30:active:not([data-error='true'][data-disabled='true']) {
+.emotion-32:hover:not([data-error='true'][data-disabled='true']),
+.emotion-32:active:not([data-error='true'][data-disabled='true']) {
   border: none;
 }
 
-.emotion-30[data-checked='true'] {
+.emotion-32[data-checked='true'] {
   border: none;
 }
 
-.emotion-30 label {
+.emotion-32 label {
   -webkit-transition: color 300ms;
   transition: color 300ms;
   color: #222638;
 }
 
-.emotion-30[data-checked='true'] label {
+.emotion-32[data-checked='true'] label {
   color: #ffffff;
 }
 
-.emotion-30:not([data-checked='true']) label:hover {
+.emotion-32:not([data-checked='true']) label:hover {
   color: #641cb3;
 }
 
@@ -4459,7 +4610,12 @@ exports[`SwitchButton > renders with disabled and tooltip on SwitchButton.Option
           data-size="small"
         >
           <div
-            class="emotion-6 emotion-3"
+            class="emotion-6 emotion-7"
+            data-sentiment="primary"
+            style="width: 100px; left: 0px;"
+          />
+          <div
+            class="emotion-8 emotion-3"
           >
             <div
               aria-controls="«r1e»"
@@ -4469,7 +4625,7 @@ exports[`SwitchButton > renders with disabled and tooltip on SwitchButton.Option
               tabindex="0"
             >
               <div
-                class="emotion-10 emotion-11 emotion-12"
+                class="emotion-12 emotion-13 emotion-14"
                 data-checked="true"
                 data-disabled="true"
                 data-has-default-cursor="false"
@@ -4480,18 +4636,18 @@ exports[`SwitchButton > renders with disabled and tooltip on SwitchButton.Option
                 role="button"
               >
                 <div
-                  class="emotion-13 emotion-14"
+                  class="emotion-15 emotion-16"
                 >
                   <div
                     aria-disabled="true"
-                    class="emotion-15 emotion-16 emotion-17"
+                    class="emotion-17 emotion-18 emotion-19"
                     data-checked="true"
                   >
                     <input
                       aria-disabled="true"
                       aria-invalid="false"
                       checked=""
-                      class="emotion-18 emotion-19"
+                      class="emotion-20 emotion-21"
                       disabled=""
                       id="«r1f»"
                       name="test"
@@ -4500,7 +4656,7 @@ exports[`SwitchButton > renders with disabled and tooltip on SwitchButton.Option
                       value="left"
                     />
                     <svg
-                      class="emotion-20 emotion-21"
+                      class="emotion-22 emotion-23"
                       viewBox="0 0 24 24"
                     >
                       <g>
@@ -4511,13 +4667,13 @@ exports[`SwitchButton > renders with disabled and tooltip on SwitchButton.Option
                           stroke-width="2"
                         />
                         <circle
-                          class="emotion-22 emotion-23"
+                          class="emotion-24 emotion-25"
                           cx="12"
                           cy="12"
                           r="8"
                         />
                         <circle
-                          class="emotion-24 emotion-25"
+                          class="emotion-26 emotion-27"
                           cx="12"
                           cy="12"
                           r="5"
@@ -4525,7 +4681,7 @@ exports[`SwitchButton > renders with disabled and tooltip on SwitchButton.Option
                       </g>
                     </svg>
                     <label
-                      class="emotion-26 emotion-27 emotion-28"
+                      class="emotion-28 emotion-29 emotion-30"
                       for="«r1f»"
                     >
                       Left
@@ -4536,7 +4692,7 @@ exports[`SwitchButton > renders with disabled and tooltip on SwitchButton.Option
             </div>
           </div>
           <div
-            class="emotion-10 emotion-30 emotion-12"
+            class="emotion-12 emotion-32 emotion-14"
             data-checked="false"
             data-disabled="false"
             data-has-default-cursor="false"
@@ -4548,17 +4704,17 @@ exports[`SwitchButton > renders with disabled and tooltip on SwitchButton.Option
             tabindex="0"
           >
             <div
-              class="emotion-13 emotion-14"
+              class="emotion-15 emotion-16"
             >
               <div
                 aria-disabled="false"
-                class="emotion-15 emotion-16 emotion-17"
+                class="emotion-17 emotion-18 emotion-19"
                 data-checked="false"
               >
                 <input
                   aria-disabled="false"
                   aria-invalid="false"
-                  class="emotion-18 emotion-19"
+                  class="emotion-20 emotion-21"
                   id="«r1j»"
                   name="test"
                   tabindex="-1"
@@ -4566,7 +4722,7 @@ exports[`SwitchButton > renders with disabled and tooltip on SwitchButton.Option
                   value="right"
                 />
                 <svg
-                  class="emotion-20 emotion-21"
+                  class="emotion-22 emotion-23"
                   viewBox="0 0 24 24"
                 >
                   <g>
@@ -4577,13 +4733,13 @@ exports[`SwitchButton > renders with disabled and tooltip on SwitchButton.Option
                       stroke-width="2"
                     />
                     <circle
-                      class="emotion-22 emotion-23"
+                      class="emotion-24 emotion-25"
                       cx="12"
                       cy="12"
                       r="8"
                     />
                     <circle
-                      class="emotion-24 emotion-25"
+                      class="emotion-26 emotion-27"
                       cx="12"
                       cy="12"
                       r="5"
@@ -4591,7 +4747,7 @@ exports[`SwitchButton > renders with disabled and tooltip on SwitchButton.Option
                   </g>
                 </svg>
                 <label
-                  class="emotion-26 emotion-27 emotion-28"
+                  class="emotion-28 emotion-29 emotion-30"
                   for="«r1j»"
                 >
                   Right
@@ -4704,7 +4860,35 @@ exports[`SwitchButton > renders with icons 1`] = `
   height: 3rem;
 }
 
-.emotion-7 {
+.emotion-6 {
+  position: absolute;
+  height: calc(100% - 0.5rem);
+  border-radius: 0.25rem;
+  background: #8c40ef;
+  transform-origin: left center;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.emotion-6[data-sentiment='neutral'] {
+  background: #e9eaeb;
+}
+
+.emotion-6 {
+  position: absolute;
+  height: calc(100% - 0.5rem);
+  border-radius: 0.25rem;
+  background: #8c40ef;
+  transform-origin: left center;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.emotion-6[data-sentiment='neutral'] {
+  background: #e9eaeb;
+}
+
+.emotion-9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4759,83 +4943,83 @@ exports[`SwitchButton > renders with icons 1`] = `
   user-select: none;
 }
 
-.emotion-7[data-has-label='false']>:first-child {
+.emotion-9[data-has-label='false']>:first-child {
   margin-bottom: -0.25rem;
 }
 
-.emotion-7[data-has-default-cursor='true'] {
+.emotion-9[data-has-default-cursor='true'] {
   cursor: default;
 }
 
-.emotion-7[data-checked='true'] {
+.emotion-9[data-checked='true'] {
   border: 1px solid #8c40ef;
 }
 
-.emotion-7[data-error='true'] {
+.emotion-9[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-7[data-disabled='true'] {
+.emotion-9[data-disabled='true'] {
   border: 1px solid #e9eaeb;
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.emotion-7[data-image="illustration"] {
+.emotion-9[data-image="illustration"] {
   padding: 0rem;
 }
 
-.emotion-7[data-image="icon"] {
+.emotion-9[data-image="icon"] {
   padding: 0rem;
   padding-right: 1rem;
 }
 
-.emotion-7:hover:not([data-error='true']):not([data-disabled='true']),
-.emotion-7:active:not([data-error='true']):not([data-disabled='true']) {
+.emotion-9:hover:not([data-error='true']):not([data-disabled='true']),
+.emotion-9:active:not([data-error='true']):not([data-disabled='true']) {
   border: 1px solid #8c40ef;
 }
 
-.emotion-7:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.emotion-7:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
+.emotion-9:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
+.emotion-9:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
 
-.emotion-7[data-has-label='true'] .emotion-10,
-.emotion-7[data-has-label='true'] .eqr7bqq0 {
+.emotion-9[data-has-label='true'] .emotion-12,
+.emotion-9[data-has-label='true'] .eqr7bqq0 {
   width: 100%;
 }
 
-.emotion-7:hover,
-.emotion-7:active {
+.emotion-9:hover,
+.emotion-9:active {
   box-shadow: none;
   border: none;
 }
 
-.emotion-7:hover:not([data-error='true'][data-disabled='true']),
-.emotion-7:active:not([data-error='true'][data-disabled='true']) {
+.emotion-9:hover:not([data-error='true'][data-disabled='true']),
+.emotion-9:active:not([data-error='true'][data-disabled='true']) {
   border: none;
 }
 
-.emotion-7[data-checked='true'] {
+.emotion-9[data-checked='true'] {
   border: none;
 }
 
-.emotion-7 label {
+.emotion-9 label {
   -webkit-transition: color 300ms;
   transition: color 300ms;
   color: #222638;
 }
 
-.emotion-7[data-checked='true'] label {
+.emotion-9[data-checked='true'] label {
   color: #ffffff;
 }
 
-.emotion-7:not([data-checked='true']) label:hover {
+.emotion-9:not([data-checked='true']) label:hover {
   color: #641cb3;
 }
 
-.emotion-7 {
+.emotion-9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4890,83 +5074,83 @@ exports[`SwitchButton > renders with icons 1`] = `
   user-select: none;
 }
 
-.emotion-7[data-has-label='false']>:first-child {
+.emotion-9[data-has-label='false']>:first-child {
   margin-bottom: -0.25rem;
 }
 
-.emotion-7[data-has-default-cursor='true'] {
+.emotion-9[data-has-default-cursor='true'] {
   cursor: default;
 }
 
-.emotion-7[data-checked='true'] {
+.emotion-9[data-checked='true'] {
   border: 1px solid #8c40ef;
 }
 
-.emotion-7[data-error='true'] {
+.emotion-9[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-7[data-disabled='true'] {
+.emotion-9[data-disabled='true'] {
   border: 1px solid #e9eaeb;
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.emotion-7[data-image="illustration"] {
+.emotion-9[data-image="illustration"] {
   padding: 0rem;
 }
 
-.emotion-7[data-image="icon"] {
+.emotion-9[data-image="icon"] {
   padding: 0rem;
   padding-right: 1rem;
 }
 
-.emotion-7:hover:not([data-error='true']):not([data-disabled='true']),
-.emotion-7:active:not([data-error='true']):not([data-disabled='true']) {
+.emotion-9:hover:not([data-error='true']):not([data-disabled='true']),
+.emotion-9:active:not([data-error='true']):not([data-disabled='true']) {
   border: 1px solid #8c40ef;
 }
 
-.emotion-7:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.emotion-7:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
+.emotion-9:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
+.emotion-9:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
 
-.emotion-7[data-has-label='true'] .emotion-10,
-.emotion-7[data-has-label='true'] .eqr7bqq0 {
+.emotion-9[data-has-label='true'] .emotion-12,
+.emotion-9[data-has-label='true'] .eqr7bqq0 {
   width: 100%;
 }
 
-.emotion-7:hover,
-.emotion-7:active {
+.emotion-9:hover,
+.emotion-9:active {
   box-shadow: none;
   border: none;
 }
 
-.emotion-7:hover:not([data-error='true'][data-disabled='true']),
-.emotion-7:active:not([data-error='true'][data-disabled='true']) {
+.emotion-9:hover:not([data-error='true'][data-disabled='true']),
+.emotion-9:active:not([data-error='true'][data-disabled='true']) {
   border: none;
 }
 
-.emotion-7[data-checked='true'] {
+.emotion-9[data-checked='true'] {
   border: none;
 }
 
-.emotion-7 label {
+.emotion-9 label {
   -webkit-transition: color 300ms;
   transition: color 300ms;
   color: #222638;
 }
 
-.emotion-7[data-checked='true'] label {
+.emotion-9[data-checked='true'] label {
   color: #ffffff;
 }
 
-.emotion-7:not([data-checked='true']) label:hover {
+.emotion-9:not([data-checked='true']) label:hover {
   color: #641cb3;
 }
 
-.emotion-9 {
+.emotion-11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4989,7 +5173,7 @@ exports[`SwitchButton > renders with icons 1`] = `
   gap: 0.25rem;
 }
 
-.emotion-9 {
+.emotion-11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5012,7 +5196,7 @@ exports[`SwitchButton > renders with icons 1`] = `
   gap: 0.25rem;
 }
 
-.emotion-12 {
+.emotion-14 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -5036,104 +5220,104 @@ exports[`SwitchButton > renders with icons 1`] = `
   align-items: start;
 }
 
-.emotion-12[aria-disabled='false'],
-.emotion-12[aria-disabled='false']>label {
+.emotion-14[aria-disabled='false'],
+.emotion-14[aria-disabled='false']>label {
   cursor: pointer;
 }
 
-.emotion-12:hover[aria-disabled='false'] .emotion-15+.emotion-17 {
+.emotion-14:hover[aria-disabled='false'] .emotion-17+.emotion-19 {
   fill: #8c40ef;
 }
 
-.emotion-12:hover[aria-disabled='false'] .emotion-15+.emotion-17 .emotion-19 {
+.emotion-14:hover[aria-disabled='false'] .emotion-17+.emotion-19 .emotion-21 {
   fill: #e5dbfd;
 }
 
-.emotion-12:hover[aria-disabled='false'] .emotion-15[aria-invalid='true']+.emotion-17 {
+.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='true']+.emotion-19 {
   fill: #b3144d;
 }
 
-.emotion-12:hover[aria-disabled='false'] .emotion-15[aria-invalid='true']+.emotion-17 .emotion-19 {
+.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='true']+.emotion-19 .emotion-21 {
   fill: #ffd3e3;
 }
 
-.emotion-12[aria-disabled='true'] {
+.emotion-14[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.emotion-12[aria-disabled='true']>label,
-.emotion-12[aria-disabled='true'] .emotion-15 {
+.emotion-14[aria-disabled='true']>label,
+.emotion-14[aria-disabled='true'] .emotion-17 {
   cursor: not-allowed;
 }
 
-.emotion-12[aria-disabled='true'] .emotion-17 {
+.emotion-14[aria-disabled='true'] .emotion-19 {
   fill: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-12[aria-disabled='true'] .emotion-17 .emotion-19 {
+.emotion-14[aria-disabled='true'] .emotion-19 .emotion-21 {
   fill: #f3f3f4;
 }
 
-.emotion-12[data-checked='true'] {
+.emotion-14[data-checked='true'] {
   color: #641cb3;
 }
 
-.emotion-12[data-error='true'] {
+.emotion-14[data-error='true'] {
   color: #b3144d;
 }
 
-.emotion-12[aria-disabled='true'] {
+.emotion-14[aria-disabled='true'] {
   color: #b5b7bd;
 }
 
-.emotion-12 input+svg {
+.emotion-14 input+svg {
   display: none;
 }
 
-.emotion-12:hover[aria-disabled='false']:not([data-checked='true']) .emotion-15+.emotion-17 {
+.emotion-14:hover[aria-disabled='false']:not([data-checked='true']) .emotion-17+.emotion-19 {
   fill: #d9dadd;
 }
 
-.emotion-12:hover[aria-disabled='false']:not([data-checked='true']) .emotion-15+.emotion-17 .emotion-19 {
+.emotion-14:hover[aria-disabled='false']:not([data-checked='true']) .emotion-17+.emotion-19 .emotion-21 {
   fill: #ffffff;
 }
 
-.emotion-12:hover[aria-disabled='false']:not([data-checked='true']) .emotion-15[aria-invalid='true']+.emotion-17 {
+.emotion-14:hover[aria-disabled='false']:not([data-checked='true']) .emotion-17[aria-invalid='true']+.emotion-19 {
   fill: #b3144d;
 }
 
-.emotion-12:hover[aria-disabled='false']:not([data-checked='true']) .emotion-15[aria-invalid='true']+.emotion-17 .emotion-19 {
+.emotion-14:hover[aria-disabled='false']:not([data-checked='true']) .emotion-17[aria-invalid='true']+.emotion-19 .emotion-21 {
   fill: #ffffff;
 }
 
-.emotion-12:hover[aria-disabled='false'] .emotion-15+.emotion-17 {
+.emotion-14:hover[aria-disabled='false'] .emotion-17+.emotion-19 {
   fill: #8c40ef;
 }
 
-.emotion-12:hover[aria-disabled='false'] .emotion-15+.emotion-17 .emotion-19 {
+.emotion-14:hover[aria-disabled='false'] .emotion-17+.emotion-19 .emotion-21 {
   fill: #ffffff;
 }
 
-.emotion-12:hover[aria-disabled='false'] .emotion-15[aria-invalid='true']+.emotion-17 {
+.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='true']+.emotion-19 {
   fill: #b3144d;
 }
 
-.emotion-12:hover[aria-disabled='false'] .emotion-15[aria-invalid='true']+.emotion-17 .emotion-19 {
+.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='true']+.emotion-19 .emotion-21 {
   fill: #ffffff;
 }
 
-.emotion-12 .emotion-15[aria-disabled='false']:active+.emotion-17 {
+.emotion-14 .emotion-17[aria-disabled='false']:active+.emotion-19 {
   background: none;
   fill: #8c40ef;
 }
 
-.emotion-12 .emotion-15[aria-disabled='false']:active+.emotion-17 .emotion-19 {
+.emotion-14 .emotion-17[aria-disabled='false']:active+.emotion-19 .emotion-21 {
   fill: #ffffff;
 }
 
-.emotion-12 {
+.emotion-14 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -5157,104 +5341,104 @@ exports[`SwitchButton > renders with icons 1`] = `
   align-items: start;
 }
 
-.emotion-12[aria-disabled='false'],
-.emotion-12[aria-disabled='false']>label {
+.emotion-14[aria-disabled='false'],
+.emotion-14[aria-disabled='false']>label {
   cursor: pointer;
 }
 
-.emotion-12:hover[aria-disabled='false'] .emotion-15+.emotion-17 {
+.emotion-14:hover[aria-disabled='false'] .emotion-17+.emotion-19 {
   fill: #8c40ef;
 }
 
-.emotion-12:hover[aria-disabled='false'] .emotion-15+.emotion-17 .emotion-19 {
+.emotion-14:hover[aria-disabled='false'] .emotion-17+.emotion-19 .emotion-21 {
   fill: #e5dbfd;
 }
 
-.emotion-12:hover[aria-disabled='false'] .emotion-15[aria-invalid='true']+.emotion-17 {
+.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='true']+.emotion-19 {
   fill: #b3144d;
 }
 
-.emotion-12:hover[aria-disabled='false'] .emotion-15[aria-invalid='true']+.emotion-17 .emotion-19 {
+.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='true']+.emotion-19 .emotion-21 {
   fill: #ffd3e3;
 }
 
-.emotion-12[aria-disabled='true'] {
+.emotion-14[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.emotion-12[aria-disabled='true']>label,
-.emotion-12[aria-disabled='true'] .emotion-15 {
+.emotion-14[aria-disabled='true']>label,
+.emotion-14[aria-disabled='true'] .emotion-17 {
   cursor: not-allowed;
 }
 
-.emotion-12[aria-disabled='true'] .emotion-17 {
+.emotion-14[aria-disabled='true'] .emotion-19 {
   fill: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-12[aria-disabled='true'] .emotion-17 .emotion-19 {
+.emotion-14[aria-disabled='true'] .emotion-19 .emotion-21 {
   fill: #f3f3f4;
 }
 
-.emotion-12[data-checked='true'] {
+.emotion-14[data-checked='true'] {
   color: #641cb3;
 }
 
-.emotion-12[data-error='true'] {
+.emotion-14[data-error='true'] {
   color: #b3144d;
 }
 
-.emotion-12[aria-disabled='true'] {
+.emotion-14[aria-disabled='true'] {
   color: #b5b7bd;
 }
 
-.emotion-12 input+svg {
+.emotion-14 input+svg {
   display: none;
 }
 
-.emotion-12:hover[aria-disabled='false']:not([data-checked='true']) .emotion-15+.emotion-17 {
+.emotion-14:hover[aria-disabled='false']:not([data-checked='true']) .emotion-17+.emotion-19 {
   fill: #d9dadd;
 }
 
-.emotion-12:hover[aria-disabled='false']:not([data-checked='true']) .emotion-15+.emotion-17 .emotion-19 {
+.emotion-14:hover[aria-disabled='false']:not([data-checked='true']) .emotion-17+.emotion-19 .emotion-21 {
   fill: #ffffff;
 }
 
-.emotion-12:hover[aria-disabled='false']:not([data-checked='true']) .emotion-15[aria-invalid='true']+.emotion-17 {
+.emotion-14:hover[aria-disabled='false']:not([data-checked='true']) .emotion-17[aria-invalid='true']+.emotion-19 {
   fill: #b3144d;
 }
 
-.emotion-12:hover[aria-disabled='false']:not([data-checked='true']) .emotion-15[aria-invalid='true']+.emotion-17 .emotion-19 {
+.emotion-14:hover[aria-disabled='false']:not([data-checked='true']) .emotion-17[aria-invalid='true']+.emotion-19 .emotion-21 {
   fill: #ffffff;
 }
 
-.emotion-12:hover[aria-disabled='false'] .emotion-15+.emotion-17 {
+.emotion-14:hover[aria-disabled='false'] .emotion-17+.emotion-19 {
   fill: #8c40ef;
 }
 
-.emotion-12:hover[aria-disabled='false'] .emotion-15+.emotion-17 .emotion-19 {
+.emotion-14:hover[aria-disabled='false'] .emotion-17+.emotion-19 .emotion-21 {
   fill: #ffffff;
 }
 
-.emotion-12:hover[aria-disabled='false'] .emotion-15[aria-invalid='true']+.emotion-17 {
+.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='true']+.emotion-19 {
   fill: #b3144d;
 }
 
-.emotion-12:hover[aria-disabled='false'] .emotion-15[aria-invalid='true']+.emotion-17 .emotion-19 {
+.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='true']+.emotion-19 .emotion-21 {
   fill: #ffffff;
 }
 
-.emotion-12 .emotion-15[aria-disabled='false']:active+.emotion-17 {
+.emotion-14 .emotion-17[aria-disabled='false']:active+.emotion-19 {
   background: none;
   fill: #8c40ef;
 }
 
-.emotion-12 .emotion-15[aria-disabled='false']:active+.emotion-17 .emotion-19 {
+.emotion-14 .emotion-17[aria-disabled='false']:active+.emotion-19 .emotion-21 {
   fill: #ffffff;
 }
 
-.emotion-14 {
+.emotion-16 {
   cursor: pointer;
   position: absolute;
   height: 1.5rem;
@@ -5264,7 +5448,7 @@ exports[`SwitchButton > renders with icons 1`] = `
   border-width: 0;
 }
 
-.emotion-14+.emotion-17 .emotion-21 {
+.emotion-16+.emotion-19 .emotion-23 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -5274,48 +5458,48 @@ exports[`SwitchButton > renders with icons 1`] = `
   transform: scale(0);
 }
 
-.emotion-14:checked+svg .emotion-21 {
+.emotion-16:checked+svg .emotion-23 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.emotion-14:checked[aria-disabled='false'][aria-invalid='false']+.emotion-17 {
+.emotion-16:checked[aria-disabled='false'][aria-invalid='false']+.emotion-19 {
   fill: #8c40ef;
 }
 
-.emotion-14:checked[aria-disabled='true'][aria-invalid='false']+.emotion-17 {
+.emotion-16:checked[aria-disabled='true'][aria-invalid='false']+.emotion-19 {
   fill: #d8c5fc;
 }
 
-.emotion-14[aria-invalid='true']:not([aria-disabled='true'])+.emotion-17 {
+.emotion-16[aria-invalid='true']:not([aria-disabled='true'])+.emotion-19 {
   fill: #e51963;
 }
 
-.emotion-14[aria-disabled='false']:active+.emotion-17 {
+.emotion-16[aria-disabled='false']:active+.emotion-19 {
   background-color: #5e127e40;
   fill: #8c40ef;
 }
 
-.emotion-14[aria-disabled='false']:active+.emotion-17 .emotion-19 {
+.emotion-16[aria-disabled='false']:active+.emotion-19 .emotion-21 {
   fill: #f1eefc;
 }
 
-.emotion-14[aria-disabled='false']:focus-visible+.emotion-17 {
+.emotion-16[aria-disabled='false']:focus-visible+.emotion-19 {
   outline: -webkit-focus-ring-color auto 1px;
 }
 
-.emotion-14[aria-invalid='true']:focus+.emotion-17 {
+.emotion-16[aria-invalid='true']:focus+.emotion-19 {
   background-color: #f91b6c40;
   fill: #e51963;
 }
 
-.emotion-14[aria-invalid='true']:focus+.emotion-17 .emotion-19 {
+.emotion-16[aria-invalid='true']:focus+.emotion-19 .emotion-21 {
   fill: #ffebf2;
 }
 
-.emotion-14 {
+.emotion-16 {
   cursor: pointer;
   position: absolute;
   height: 1.5rem;
@@ -5325,7 +5509,7 @@ exports[`SwitchButton > renders with icons 1`] = `
   border-width: 0;
 }
 
-.emotion-14+.emotion-17 .emotion-21 {
+.emotion-16+.emotion-19 .emotion-23 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -5335,48 +5519,48 @@ exports[`SwitchButton > renders with icons 1`] = `
   transform: scale(0);
 }
 
-.emotion-14:checked+svg .emotion-21 {
+.emotion-16:checked+svg .emotion-23 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.emotion-14:checked[aria-disabled='false'][aria-invalid='false']+.emotion-17 {
+.emotion-16:checked[aria-disabled='false'][aria-invalid='false']+.emotion-19 {
   fill: #8c40ef;
 }
 
-.emotion-14:checked[aria-disabled='true'][aria-invalid='false']+.emotion-17 {
+.emotion-16:checked[aria-disabled='true'][aria-invalid='false']+.emotion-19 {
   fill: #d8c5fc;
 }
 
-.emotion-14[aria-invalid='true']:not([aria-disabled='true'])+.emotion-17 {
+.emotion-16[aria-invalid='true']:not([aria-disabled='true'])+.emotion-19 {
   fill: #e51963;
 }
 
-.emotion-14[aria-disabled='false']:active+.emotion-17 {
+.emotion-16[aria-disabled='false']:active+.emotion-19 {
   background-color: #5e127e40;
   fill: #8c40ef;
 }
 
-.emotion-14[aria-disabled='false']:active+.emotion-17 .emotion-19 {
+.emotion-16[aria-disabled='false']:active+.emotion-19 .emotion-21 {
   fill: #f1eefc;
 }
 
-.emotion-14[aria-disabled='false']:focus-visible+.emotion-17 {
+.emotion-16[aria-disabled='false']:focus-visible+.emotion-19 {
   outline: -webkit-focus-ring-color auto 1px;
 }
 
-.emotion-14[aria-invalid='true']:focus+.emotion-17 {
+.emotion-16[aria-invalid='true']:focus+.emotion-19 {
   background-color: #f91b6c40;
   fill: #e51963;
 }
 
-.emotion-14[aria-invalid='true']:focus+.emotion-17 .emotion-19 {
+.emotion-16[aria-invalid='true']:focus+.emotion-19 .emotion-21 {
   fill: #ffebf2;
 }
 
-.emotion-16 {
+.emotion-18 {
   height: 1.5rem;
   width: 1.5rem;
   min-width: 1.5rem;
@@ -5385,11 +5569,11 @@ exports[`SwitchButton > renders with icons 1`] = `
   fill: #d9dadd;
 }
 
-.emotion-16 .emotion-19 {
+.emotion-18 .emotion-21 {
   fill: #ffffff;
 }
 
-.emotion-16 {
+.emotion-18 {
   height: 1.5rem;
   width: 1.5rem;
   min-width: 1.5rem;
@@ -5398,18 +5582,18 @@ exports[`SwitchButton > renders with icons 1`] = `
   fill: #d9dadd;
 }
 
-.emotion-16 .emotion-19 {
+.emotion-18 .emotion-21 {
   fill: #ffffff;
-}
-
-.emotion-22 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  cursor: pointer;
 }
 
 .emotion-24 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  cursor: pointer;
+}
+
+.emotion-26 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -5418,7 +5602,7 @@ exports[`SwitchButton > renders with icons 1`] = `
   min-height: 1rem;
 }
 
-.emotion-24 .fillStroke {
+.emotion-26 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
@@ -5440,7 +5624,12 @@ exports[`SwitchButton > renders with icons 1`] = `
           data-size="small"
         >
           <div
-            class="emotion-6 emotion-7 emotion-8"
+            class="emotion-6 emotion-7"
+            data-sentiment="primary"
+            style="width: 100px; left: 0px;"
+          />
+          <div
+            class="emotion-8 emotion-9 emotion-10"
             data-checked="true"
             data-disabled="false"
             data-has-default-cursor="false"
@@ -5452,18 +5641,18 @@ exports[`SwitchButton > renders with icons 1`] = `
             tabindex="0"
           >
             <div
-              class="emotion-9 emotion-10"
+              class="emotion-11 emotion-12"
             >
               <div
                 aria-disabled="false"
-                class="emotion-11 emotion-12 emotion-13"
+                class="emotion-13 emotion-14 emotion-15"
                 data-checked="true"
               >
                 <input
                   aria-disabled="false"
                   aria-invalid="false"
                   checked=""
-                  class="emotion-14 emotion-15"
+                  class="emotion-16 emotion-17"
                   id="«r21»"
                   name="test"
                   tabindex="-1"
@@ -5471,7 +5660,7 @@ exports[`SwitchButton > renders with icons 1`] = `
                   value="left"
                 />
                 <svg
-                  class="emotion-16 emotion-17"
+                  class="emotion-18 emotion-19"
                   viewBox="0 0 24 24"
                 >
                   <g>
@@ -5482,13 +5671,13 @@ exports[`SwitchButton > renders with icons 1`] = `
                       stroke-width="2"
                     />
                     <circle
-                      class="emotion-18 emotion-19"
+                      class="emotion-20 emotion-21"
                       cx="12"
                       cy="12"
                       r="8"
                     />
                     <circle
-                      class="emotion-20 emotion-21"
+                      class="emotion-22 emotion-23"
                       cx="12"
                       cy="12"
                       r="5"
@@ -5496,11 +5685,11 @@ exports[`SwitchButton > renders with icons 1`] = `
                   </g>
                 </svg>
                 <label
-                  class="emotion-22 emotion-23"
+                  class="emotion-24 emotion-25"
                   for="«r21»"
                 >
                   <svg
-                    class="emotion-24 emotion-25"
+                    class="emotion-26 emotion-27"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -5512,7 +5701,7 @@ exports[`SwitchButton > renders with icons 1`] = `
             </div>
           </div>
           <div
-            class="emotion-6 emotion-7 emotion-8"
+            class="emotion-8 emotion-9 emotion-10"
             data-checked="false"
             data-disabled="false"
             data-has-default-cursor="false"
@@ -5524,17 +5713,17 @@ exports[`SwitchButton > renders with icons 1`] = `
             tabindex="0"
           >
             <div
-              class="emotion-9 emotion-10"
+              class="emotion-11 emotion-12"
             >
               <div
                 aria-disabled="false"
-                class="emotion-11 emotion-12 emotion-13"
+                class="emotion-13 emotion-14 emotion-15"
                 data-checked="false"
               >
                 <input
                   aria-disabled="false"
                   aria-invalid="false"
-                  class="emotion-14 emotion-15"
+                  class="emotion-16 emotion-17"
                   id="«r24»"
                   name="test"
                   tabindex="-1"
@@ -5542,7 +5731,7 @@ exports[`SwitchButton > renders with icons 1`] = `
                   value="right"
                 />
                 <svg
-                  class="emotion-16 emotion-17"
+                  class="emotion-18 emotion-19"
                   viewBox="0 0 24 24"
                 >
                   <g>
@@ -5553,13 +5742,13 @@ exports[`SwitchButton > renders with icons 1`] = `
                       stroke-width="2"
                     />
                     <circle
-                      class="emotion-18 emotion-19"
+                      class="emotion-20 emotion-21"
                       cx="12"
                       cy="12"
                       r="8"
                     />
                     <circle
-                      class="emotion-20 emotion-21"
+                      class="emotion-22 emotion-23"
                       cx="12"
                       cy="12"
                       r="5"
@@ -5567,11 +5756,11 @@ exports[`SwitchButton > renders with icons 1`] = `
                   </g>
                 </svg>
                 <label
-                  class="emotion-22 emotion-23"
+                  class="emotion-24 emotion-25"
                   for="«r24»"
                 >
                   <svg
-                    class="emotion-24 emotion-25"
+                    class="emotion-26 emotion-27"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -5711,7 +5900,35 @@ exports[`SwitchButton > renders with tooltip 1`] = `
   height: 3rem;
 }
 
-.emotion-7 {
+.emotion-6 {
+  position: absolute;
+  height: calc(100% - 0.5rem);
+  border-radius: 0.25rem;
+  background: #8c40ef;
+  transform-origin: left center;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.emotion-6[data-sentiment='neutral'] {
+  background: #e9eaeb;
+}
+
+.emotion-6 {
+  position: absolute;
+  height: calc(100% - 0.5rem);
+  border-radius: 0.25rem;
+  background: #8c40ef;
+  transform-origin: left center;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.emotion-6[data-sentiment='neutral'] {
+  background: #e9eaeb;
+}
+
+.emotion-9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5766,83 +5983,83 @@ exports[`SwitchButton > renders with tooltip 1`] = `
   user-select: none;
 }
 
-.emotion-7[data-has-label='false']>:first-child {
+.emotion-9[data-has-label='false']>:first-child {
   margin-bottom: -0.25rem;
 }
 
-.emotion-7[data-has-default-cursor='true'] {
+.emotion-9[data-has-default-cursor='true'] {
   cursor: default;
 }
 
-.emotion-7[data-checked='true'] {
+.emotion-9[data-checked='true'] {
   border: 1px solid #8c40ef;
 }
 
-.emotion-7[data-error='true'] {
+.emotion-9[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-7[data-disabled='true'] {
+.emotion-9[data-disabled='true'] {
   border: 1px solid #e9eaeb;
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.emotion-7[data-image="illustration"] {
+.emotion-9[data-image="illustration"] {
   padding: 0rem;
 }
 
-.emotion-7[data-image="icon"] {
+.emotion-9[data-image="icon"] {
   padding: 0rem;
   padding-right: 1rem;
 }
 
-.emotion-7:hover:not([data-error='true']):not([data-disabled='true']),
-.emotion-7:active:not([data-error='true']):not([data-disabled='true']) {
+.emotion-9:hover:not([data-error='true']):not([data-disabled='true']),
+.emotion-9:active:not([data-error='true']):not([data-disabled='true']) {
   border: 1px solid #8c40ef;
 }
 
-.emotion-7:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.emotion-7:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
+.emotion-9:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
+.emotion-9:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
 
-.emotion-7[data-has-label='true'] .emotion-10,
-.emotion-7[data-has-label='true'] .eqr7bqq0 {
+.emotion-9[data-has-label='true'] .emotion-12,
+.emotion-9[data-has-label='true'] .eqr7bqq0 {
   width: 100%;
 }
 
-.emotion-7:hover,
-.emotion-7:active {
+.emotion-9:hover,
+.emotion-9:active {
   box-shadow: none;
   border: none;
 }
 
-.emotion-7:hover:not([data-error='true'][data-disabled='true']),
-.emotion-7:active:not([data-error='true'][data-disabled='true']) {
+.emotion-9:hover:not([data-error='true'][data-disabled='true']),
+.emotion-9:active:not([data-error='true'][data-disabled='true']) {
   border: none;
 }
 
-.emotion-7[data-checked='true'] {
+.emotion-9[data-checked='true'] {
   border: none;
 }
 
-.emotion-7 label {
+.emotion-9 label {
   -webkit-transition: color 300ms;
   transition: color 300ms;
   color: #222638;
 }
 
-.emotion-7[data-checked='true'] label {
+.emotion-9[data-checked='true'] label {
   color: #ffffff;
 }
 
-.emotion-7:not([data-checked='true']) label:hover {
+.emotion-9:not([data-checked='true']) label:hover {
   color: #641cb3;
 }
 
-.emotion-7 {
+.emotion-9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5897,83 +6114,83 @@ exports[`SwitchButton > renders with tooltip 1`] = `
   user-select: none;
 }
 
-.emotion-7[data-has-label='false']>:first-child {
+.emotion-9[data-has-label='false']>:first-child {
   margin-bottom: -0.25rem;
 }
 
-.emotion-7[data-has-default-cursor='true'] {
+.emotion-9[data-has-default-cursor='true'] {
   cursor: default;
 }
 
-.emotion-7[data-checked='true'] {
+.emotion-9[data-checked='true'] {
   border: 1px solid #8c40ef;
 }
 
-.emotion-7[data-error='true'] {
+.emotion-9[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-7[data-disabled='true'] {
+.emotion-9[data-disabled='true'] {
   border: 1px solid #e9eaeb;
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.emotion-7[data-image="illustration"] {
+.emotion-9[data-image="illustration"] {
   padding: 0rem;
 }
 
-.emotion-7[data-image="icon"] {
+.emotion-9[data-image="icon"] {
   padding: 0rem;
   padding-right: 1rem;
 }
 
-.emotion-7:hover:not([data-error='true']):not([data-disabled='true']),
-.emotion-7:active:not([data-error='true']):not([data-disabled='true']) {
+.emotion-9:hover:not([data-error='true']):not([data-disabled='true']),
+.emotion-9:active:not([data-error='true']):not([data-disabled='true']) {
   border: 1px solid #8c40ef;
 }
 
-.emotion-7:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.emotion-7:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
+.emotion-9:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
+.emotion-9:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
 
-.emotion-7[data-has-label='true'] .emotion-10,
-.emotion-7[data-has-label='true'] .eqr7bqq0 {
+.emotion-9[data-has-label='true'] .emotion-12,
+.emotion-9[data-has-label='true'] .eqr7bqq0 {
   width: 100%;
 }
 
-.emotion-7:hover,
-.emotion-7:active {
+.emotion-9:hover,
+.emotion-9:active {
   box-shadow: none;
   border: none;
 }
 
-.emotion-7:hover:not([data-error='true'][data-disabled='true']),
-.emotion-7:active:not([data-error='true'][data-disabled='true']) {
+.emotion-9:hover:not([data-error='true'][data-disabled='true']),
+.emotion-9:active:not([data-error='true'][data-disabled='true']) {
   border: none;
 }
 
-.emotion-7[data-checked='true'] {
+.emotion-9[data-checked='true'] {
   border: none;
 }
 
-.emotion-7 label {
+.emotion-9 label {
   -webkit-transition: color 300ms;
   transition: color 300ms;
   color: #222638;
 }
 
-.emotion-7[data-checked='true'] label {
+.emotion-9[data-checked='true'] label {
   color: #ffffff;
 }
 
-.emotion-7:not([data-checked='true']) label:hover {
+.emotion-9:not([data-checked='true']) label:hover {
   color: #641cb3;
 }
 
-.emotion-9 {
+.emotion-11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5996,7 +6213,7 @@ exports[`SwitchButton > renders with tooltip 1`] = `
   gap: 0.25rem;
 }
 
-.emotion-9 {
+.emotion-11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6019,7 +6236,7 @@ exports[`SwitchButton > renders with tooltip 1`] = `
   gap: 0.25rem;
 }
 
-.emotion-12 {
+.emotion-14 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -6043,104 +6260,104 @@ exports[`SwitchButton > renders with tooltip 1`] = `
   align-items: start;
 }
 
-.emotion-12[aria-disabled='false'],
-.emotion-12[aria-disabled='false']>label {
+.emotion-14[aria-disabled='false'],
+.emotion-14[aria-disabled='false']>label {
   cursor: pointer;
 }
 
-.emotion-12:hover[aria-disabled='false'] .emotion-15+.emotion-17 {
+.emotion-14:hover[aria-disabled='false'] .emotion-17+.emotion-19 {
   fill: #8c40ef;
 }
 
-.emotion-12:hover[aria-disabled='false'] .emotion-15+.emotion-17 .emotion-19 {
+.emotion-14:hover[aria-disabled='false'] .emotion-17+.emotion-19 .emotion-21 {
   fill: #e5dbfd;
 }
 
-.emotion-12:hover[aria-disabled='false'] .emotion-15[aria-invalid='true']+.emotion-17 {
+.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='true']+.emotion-19 {
   fill: #b3144d;
 }
 
-.emotion-12:hover[aria-disabled='false'] .emotion-15[aria-invalid='true']+.emotion-17 .emotion-19 {
+.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='true']+.emotion-19 .emotion-21 {
   fill: #ffd3e3;
 }
 
-.emotion-12[aria-disabled='true'] {
+.emotion-14[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.emotion-12[aria-disabled='true']>label,
-.emotion-12[aria-disabled='true'] .emotion-15 {
+.emotion-14[aria-disabled='true']>label,
+.emotion-14[aria-disabled='true'] .emotion-17 {
   cursor: not-allowed;
 }
 
-.emotion-12[aria-disabled='true'] .emotion-17 {
+.emotion-14[aria-disabled='true'] .emotion-19 {
   fill: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-12[aria-disabled='true'] .emotion-17 .emotion-19 {
+.emotion-14[aria-disabled='true'] .emotion-19 .emotion-21 {
   fill: #f3f3f4;
 }
 
-.emotion-12[data-checked='true'] {
+.emotion-14[data-checked='true'] {
   color: #641cb3;
 }
 
-.emotion-12[data-error='true'] {
+.emotion-14[data-error='true'] {
   color: #b3144d;
 }
 
-.emotion-12[aria-disabled='true'] {
+.emotion-14[aria-disabled='true'] {
   color: #b5b7bd;
 }
 
-.emotion-12 input+svg {
+.emotion-14 input+svg {
   display: none;
 }
 
-.emotion-12:hover[aria-disabled='false']:not([data-checked='true']) .emotion-15+.emotion-17 {
+.emotion-14:hover[aria-disabled='false']:not([data-checked='true']) .emotion-17+.emotion-19 {
   fill: #d9dadd;
 }
 
-.emotion-12:hover[aria-disabled='false']:not([data-checked='true']) .emotion-15+.emotion-17 .emotion-19 {
+.emotion-14:hover[aria-disabled='false']:not([data-checked='true']) .emotion-17+.emotion-19 .emotion-21 {
   fill: #ffffff;
 }
 
-.emotion-12:hover[aria-disabled='false']:not([data-checked='true']) .emotion-15[aria-invalid='true']+.emotion-17 {
+.emotion-14:hover[aria-disabled='false']:not([data-checked='true']) .emotion-17[aria-invalid='true']+.emotion-19 {
   fill: #b3144d;
 }
 
-.emotion-12:hover[aria-disabled='false']:not([data-checked='true']) .emotion-15[aria-invalid='true']+.emotion-17 .emotion-19 {
+.emotion-14:hover[aria-disabled='false']:not([data-checked='true']) .emotion-17[aria-invalid='true']+.emotion-19 .emotion-21 {
   fill: #ffffff;
 }
 
-.emotion-12:hover[aria-disabled='false'] .emotion-15+.emotion-17 {
+.emotion-14:hover[aria-disabled='false'] .emotion-17+.emotion-19 {
   fill: #8c40ef;
 }
 
-.emotion-12:hover[aria-disabled='false'] .emotion-15+.emotion-17 .emotion-19 {
+.emotion-14:hover[aria-disabled='false'] .emotion-17+.emotion-19 .emotion-21 {
   fill: #ffffff;
 }
 
-.emotion-12:hover[aria-disabled='false'] .emotion-15[aria-invalid='true']+.emotion-17 {
+.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='true']+.emotion-19 {
   fill: #b3144d;
 }
 
-.emotion-12:hover[aria-disabled='false'] .emotion-15[aria-invalid='true']+.emotion-17 .emotion-19 {
+.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='true']+.emotion-19 .emotion-21 {
   fill: #ffffff;
 }
 
-.emotion-12 .emotion-15[aria-disabled='false']:active+.emotion-17 {
+.emotion-14 .emotion-17[aria-disabled='false']:active+.emotion-19 {
   background: none;
   fill: #8c40ef;
 }
 
-.emotion-12 .emotion-15[aria-disabled='false']:active+.emotion-17 .emotion-19 {
+.emotion-14 .emotion-17[aria-disabled='false']:active+.emotion-19 .emotion-21 {
   fill: #ffffff;
 }
 
-.emotion-12 {
+.emotion-14 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -6164,104 +6381,104 @@ exports[`SwitchButton > renders with tooltip 1`] = `
   align-items: start;
 }
 
-.emotion-12[aria-disabled='false'],
-.emotion-12[aria-disabled='false']>label {
+.emotion-14[aria-disabled='false'],
+.emotion-14[aria-disabled='false']>label {
   cursor: pointer;
 }
 
-.emotion-12:hover[aria-disabled='false'] .emotion-15+.emotion-17 {
+.emotion-14:hover[aria-disabled='false'] .emotion-17+.emotion-19 {
   fill: #8c40ef;
 }
 
-.emotion-12:hover[aria-disabled='false'] .emotion-15+.emotion-17 .emotion-19 {
+.emotion-14:hover[aria-disabled='false'] .emotion-17+.emotion-19 .emotion-21 {
   fill: #e5dbfd;
 }
 
-.emotion-12:hover[aria-disabled='false'] .emotion-15[aria-invalid='true']+.emotion-17 {
+.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='true']+.emotion-19 {
   fill: #b3144d;
 }
 
-.emotion-12:hover[aria-disabled='false'] .emotion-15[aria-invalid='true']+.emotion-17 .emotion-19 {
+.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='true']+.emotion-19 .emotion-21 {
   fill: #ffd3e3;
 }
 
-.emotion-12[aria-disabled='true'] {
+.emotion-14[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.emotion-12[aria-disabled='true']>label,
-.emotion-12[aria-disabled='true'] .emotion-15 {
+.emotion-14[aria-disabled='true']>label,
+.emotion-14[aria-disabled='true'] .emotion-17 {
   cursor: not-allowed;
 }
 
-.emotion-12[aria-disabled='true'] .emotion-17 {
+.emotion-14[aria-disabled='true'] .emotion-19 {
   fill: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-12[aria-disabled='true'] .emotion-17 .emotion-19 {
+.emotion-14[aria-disabled='true'] .emotion-19 .emotion-21 {
   fill: #f3f3f4;
 }
 
-.emotion-12[data-checked='true'] {
+.emotion-14[data-checked='true'] {
   color: #641cb3;
 }
 
-.emotion-12[data-error='true'] {
+.emotion-14[data-error='true'] {
   color: #b3144d;
 }
 
-.emotion-12[aria-disabled='true'] {
+.emotion-14[aria-disabled='true'] {
   color: #b5b7bd;
 }
 
-.emotion-12 input+svg {
+.emotion-14 input+svg {
   display: none;
 }
 
-.emotion-12:hover[aria-disabled='false']:not([data-checked='true']) .emotion-15+.emotion-17 {
+.emotion-14:hover[aria-disabled='false']:not([data-checked='true']) .emotion-17+.emotion-19 {
   fill: #d9dadd;
 }
 
-.emotion-12:hover[aria-disabled='false']:not([data-checked='true']) .emotion-15+.emotion-17 .emotion-19 {
+.emotion-14:hover[aria-disabled='false']:not([data-checked='true']) .emotion-17+.emotion-19 .emotion-21 {
   fill: #ffffff;
 }
 
-.emotion-12:hover[aria-disabled='false']:not([data-checked='true']) .emotion-15[aria-invalid='true']+.emotion-17 {
+.emotion-14:hover[aria-disabled='false']:not([data-checked='true']) .emotion-17[aria-invalid='true']+.emotion-19 {
   fill: #b3144d;
 }
 
-.emotion-12:hover[aria-disabled='false']:not([data-checked='true']) .emotion-15[aria-invalid='true']+.emotion-17 .emotion-19 {
+.emotion-14:hover[aria-disabled='false']:not([data-checked='true']) .emotion-17[aria-invalid='true']+.emotion-19 .emotion-21 {
   fill: #ffffff;
 }
 
-.emotion-12:hover[aria-disabled='false'] .emotion-15+.emotion-17 {
+.emotion-14:hover[aria-disabled='false'] .emotion-17+.emotion-19 {
   fill: #8c40ef;
 }
 
-.emotion-12:hover[aria-disabled='false'] .emotion-15+.emotion-17 .emotion-19 {
+.emotion-14:hover[aria-disabled='false'] .emotion-17+.emotion-19 .emotion-21 {
   fill: #ffffff;
 }
 
-.emotion-12:hover[aria-disabled='false'] .emotion-15[aria-invalid='true']+.emotion-17 {
+.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='true']+.emotion-19 {
   fill: #b3144d;
 }
 
-.emotion-12:hover[aria-disabled='false'] .emotion-15[aria-invalid='true']+.emotion-17 .emotion-19 {
+.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='true']+.emotion-19 .emotion-21 {
   fill: #ffffff;
 }
 
-.emotion-12 .emotion-15[aria-disabled='false']:active+.emotion-17 {
+.emotion-14 .emotion-17[aria-disabled='false']:active+.emotion-19 {
   background: none;
   fill: #8c40ef;
 }
 
-.emotion-12 .emotion-15[aria-disabled='false']:active+.emotion-17 .emotion-19 {
+.emotion-14 .emotion-17[aria-disabled='false']:active+.emotion-19 .emotion-21 {
   fill: #ffffff;
 }
 
-.emotion-14 {
+.emotion-16 {
   cursor: pointer;
   position: absolute;
   height: 1.5rem;
@@ -6271,7 +6488,7 @@ exports[`SwitchButton > renders with tooltip 1`] = `
   border-width: 0;
 }
 
-.emotion-14+.emotion-17 .emotion-21 {
+.emotion-16+.emotion-19 .emotion-23 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -6281,48 +6498,48 @@ exports[`SwitchButton > renders with tooltip 1`] = `
   transform: scale(0);
 }
 
-.emotion-14:checked+svg .emotion-21 {
+.emotion-16:checked+svg .emotion-23 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.emotion-14:checked[aria-disabled='false'][aria-invalid='false']+.emotion-17 {
+.emotion-16:checked[aria-disabled='false'][aria-invalid='false']+.emotion-19 {
   fill: #8c40ef;
 }
 
-.emotion-14:checked[aria-disabled='true'][aria-invalid='false']+.emotion-17 {
+.emotion-16:checked[aria-disabled='true'][aria-invalid='false']+.emotion-19 {
   fill: #d8c5fc;
 }
 
-.emotion-14[aria-invalid='true']:not([aria-disabled='true'])+.emotion-17 {
+.emotion-16[aria-invalid='true']:not([aria-disabled='true'])+.emotion-19 {
   fill: #e51963;
 }
 
-.emotion-14[aria-disabled='false']:active+.emotion-17 {
+.emotion-16[aria-disabled='false']:active+.emotion-19 {
   background-color: #5e127e40;
   fill: #8c40ef;
 }
 
-.emotion-14[aria-disabled='false']:active+.emotion-17 .emotion-19 {
+.emotion-16[aria-disabled='false']:active+.emotion-19 .emotion-21 {
   fill: #f1eefc;
 }
 
-.emotion-14[aria-disabled='false']:focus-visible+.emotion-17 {
+.emotion-16[aria-disabled='false']:focus-visible+.emotion-19 {
   outline: -webkit-focus-ring-color auto 1px;
 }
 
-.emotion-14[aria-invalid='true']:focus+.emotion-17 {
+.emotion-16[aria-invalid='true']:focus+.emotion-19 {
   background-color: #f91b6c40;
   fill: #e51963;
 }
 
-.emotion-14[aria-invalid='true']:focus+.emotion-17 .emotion-19 {
+.emotion-16[aria-invalid='true']:focus+.emotion-19 .emotion-21 {
   fill: #ffebf2;
 }
 
-.emotion-14 {
+.emotion-16 {
   cursor: pointer;
   position: absolute;
   height: 1.5rem;
@@ -6332,7 +6549,7 @@ exports[`SwitchButton > renders with tooltip 1`] = `
   border-width: 0;
 }
 
-.emotion-14+.emotion-17 .emotion-21 {
+.emotion-16+.emotion-19 .emotion-23 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -6342,48 +6559,48 @@ exports[`SwitchButton > renders with tooltip 1`] = `
   transform: scale(0);
 }
 
-.emotion-14:checked+svg .emotion-21 {
+.emotion-16:checked+svg .emotion-23 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.emotion-14:checked[aria-disabled='false'][aria-invalid='false']+.emotion-17 {
+.emotion-16:checked[aria-disabled='false'][aria-invalid='false']+.emotion-19 {
   fill: #8c40ef;
 }
 
-.emotion-14:checked[aria-disabled='true'][aria-invalid='false']+.emotion-17 {
+.emotion-16:checked[aria-disabled='true'][aria-invalid='false']+.emotion-19 {
   fill: #d8c5fc;
 }
 
-.emotion-14[aria-invalid='true']:not([aria-disabled='true'])+.emotion-17 {
+.emotion-16[aria-invalid='true']:not([aria-disabled='true'])+.emotion-19 {
   fill: #e51963;
 }
 
-.emotion-14[aria-disabled='false']:active+.emotion-17 {
+.emotion-16[aria-disabled='false']:active+.emotion-19 {
   background-color: #5e127e40;
   fill: #8c40ef;
 }
 
-.emotion-14[aria-disabled='false']:active+.emotion-17 .emotion-19 {
+.emotion-16[aria-disabled='false']:active+.emotion-19 .emotion-21 {
   fill: #f1eefc;
 }
 
-.emotion-14[aria-disabled='false']:focus-visible+.emotion-17 {
+.emotion-16[aria-disabled='false']:focus-visible+.emotion-19 {
   outline: -webkit-focus-ring-color auto 1px;
 }
 
-.emotion-14[aria-invalid='true']:focus+.emotion-17 {
+.emotion-16[aria-invalid='true']:focus+.emotion-19 {
   background-color: #f91b6c40;
   fill: #e51963;
 }
 
-.emotion-14[aria-invalid='true']:focus+.emotion-17 .emotion-19 {
+.emotion-16[aria-invalid='true']:focus+.emotion-19 .emotion-21 {
   fill: #ffebf2;
 }
 
-.emotion-16 {
+.emotion-18 {
   height: 1.5rem;
   width: 1.5rem;
   min-width: 1.5rem;
@@ -6392,11 +6609,11 @@ exports[`SwitchButton > renders with tooltip 1`] = `
   fill: #d9dadd;
 }
 
-.emotion-16 .emotion-19 {
+.emotion-18 .emotion-21 {
   fill: #ffffff;
 }
 
-.emotion-16 {
+.emotion-18 {
   height: 1.5rem;
   width: 1.5rem;
   min-width: 1.5rem;
@@ -6405,11 +6622,11 @@ exports[`SwitchButton > renders with tooltip 1`] = `
   fill: #d9dadd;
 }
 
-.emotion-16 .emotion-19 {
+.emotion-18 .emotion-21 {
   fill: #ffffff;
 }
 
-.emotion-23 {
+.emotion-25 {
   font-size: 1rem;
   font-family: Inter,sans-serif;
   font-weight: 400;
@@ -6424,7 +6641,7 @@ exports[`SwitchButton > renders with tooltip 1`] = `
   cursor: pointer;
 }
 
-.emotion-23 {
+.emotion-25 {
   font-size: 1rem;
   font-family: Inter,sans-serif;
   font-weight: 400;
@@ -6456,7 +6673,12 @@ exports[`SwitchButton > renders with tooltip 1`] = `
           data-size="small"
         >
           <div
-            class="emotion-6 emotion-7 emotion-8"
+            class="emotion-6 emotion-7"
+            data-sentiment="primary"
+            style="width: 100px; left: 0px;"
+          />
+          <div
+            class="emotion-8 emotion-9 emotion-10"
             data-checked="true"
             data-disabled="false"
             data-has-default-cursor="false"
@@ -6468,18 +6690,18 @@ exports[`SwitchButton > renders with tooltip 1`] = `
             tabindex="0"
           >
             <div
-              class="emotion-9 emotion-10"
+              class="emotion-11 emotion-12"
             >
               <div
                 aria-disabled="false"
-                class="emotion-11 emotion-12 emotion-13"
+                class="emotion-13 emotion-14 emotion-15"
                 data-checked="true"
               >
                 <input
                   aria-disabled="false"
                   aria-invalid="false"
                   checked=""
-                  class="emotion-14 emotion-15"
+                  class="emotion-16 emotion-17"
                   id="«r16»"
                   name="test"
                   tabindex="-1"
@@ -6487,7 +6709,7 @@ exports[`SwitchButton > renders with tooltip 1`] = `
                   value="left"
                 />
                 <svg
-                  class="emotion-16 emotion-17"
+                  class="emotion-18 emotion-19"
                   viewBox="0 0 24 24"
                 >
                   <g>
@@ -6498,13 +6720,13 @@ exports[`SwitchButton > renders with tooltip 1`] = `
                       stroke-width="2"
                     />
                     <circle
-                      class="emotion-18 emotion-19"
+                      class="emotion-20 emotion-21"
                       cx="12"
                       cy="12"
                       r="8"
                     />
                     <circle
-                      class="emotion-20 emotion-21"
+                      class="emotion-22 emotion-23"
                       cx="12"
                       cy="12"
                       r="5"
@@ -6512,7 +6734,7 @@ exports[`SwitchButton > renders with tooltip 1`] = `
                   </g>
                 </svg>
                 <label
-                  class="emotion-22 emotion-23 emotion-24"
+                  class="emotion-24 emotion-25 emotion-26"
                   for="«r16»"
                 >
                   Left
@@ -6521,7 +6743,7 @@ exports[`SwitchButton > renders with tooltip 1`] = `
             </div>
           </div>
           <div
-            class="emotion-6 emotion-7 emotion-8"
+            class="emotion-8 emotion-9 emotion-10"
             data-checked="false"
             data-disabled="false"
             data-has-default-cursor="false"
@@ -6533,17 +6755,17 @@ exports[`SwitchButton > renders with tooltip 1`] = `
             tabindex="0"
           >
             <div
-              class="emotion-9 emotion-10"
+              class="emotion-11 emotion-12"
             >
               <div
                 aria-disabled="false"
-                class="emotion-11 emotion-12 emotion-13"
+                class="emotion-13 emotion-14 emotion-15"
                 data-checked="false"
               >
                 <input
                   aria-disabled="false"
                   aria-invalid="false"
-                  class="emotion-14 emotion-15"
+                  class="emotion-16 emotion-17"
                   id="«r1a»"
                   name="test"
                   tabindex="-1"
@@ -6551,7 +6773,7 @@ exports[`SwitchButton > renders with tooltip 1`] = `
                   value="right"
                 />
                 <svg
-                  class="emotion-16 emotion-17"
+                  class="emotion-18 emotion-19"
                   viewBox="0 0 24 24"
                 >
                   <g>
@@ -6562,13 +6784,13 @@ exports[`SwitchButton > renders with tooltip 1`] = `
                       stroke-width="2"
                     />
                     <circle
-                      class="emotion-18 emotion-19"
+                      class="emotion-20 emotion-21"
                       cx="12"
                       cy="12"
                       r="8"
                     />
                     <circle
-                      class="emotion-20 emotion-21"
+                      class="emotion-22 emotion-23"
                       cx="12"
                       cy="12"
                       r="5"
@@ -6576,7 +6798,7 @@ exports[`SwitchButton > renders with tooltip 1`] = `
                   </g>
                 </svg>
                 <label
-                  class="emotion-22 emotion-23 emotion-24"
+                  class="emotion-24 emotion-25 emotion-26"
                   for="«r1a»"
                 >
                   Right

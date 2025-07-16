@@ -2,10 +2,21 @@ import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { MoonIcon, SunIcon } from '@ultraviolet/icons'
 import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
-import { describe, expect, test, vi } from 'vitest'
+import { afterAll, beforeAll, describe, expect, test, vi } from 'vitest'
 import { SwitchButton } from '..'
 
 describe('SwitchButton', () => {
+  beforeAll(() => {
+    Object.defineProperty(HTMLElement.prototype, 'offsetWidth', {
+      configurable: true,
+      value: 500,
+    })
+  })
+
+  afterAll(() => {
+    Object.defineProperty(HTMLElement.prototype, 'offsetWidth', {})
+  })
+
   test('renders correctly', () =>
     shouldMatchEmotionSnapshot(
       <SwitchButton name="test" onChange={() => {}} value="left">
@@ -49,17 +60,8 @@ describe('SwitchButton', () => {
     )
 
     const buttonLeft = screen.getByTestId('switch-button-left')
-    Object.defineProperty(buttonLeft, 'offsetWidth', {
-      configurable: true,
-      value: 1000,
-    })
 
-    resizeCallback(
-      [{ target: buttonLeft } as unknown as ResizeObserverEntry],
-      {} as ResizeObserver,
-    )
-
-    Object.defineProperty(buttonLeft, 'offsetWidth', {
+    Object.defineProperty(HTMLElement.prototype, 'offsetWidth', {
       configurable: true,
       value: 100,
     })
