@@ -77,15 +77,9 @@ exports[`UnitInputField > should handles onChange and selection 1`] = `
   text-decoration: none;
 }
 
-.emotion-11 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+.emotion-12 {
+  display: grid;
+  grid-template-columns: 1fr auto;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -94,48 +88,46 @@ exports[`UnitInputField > should handles onChange and selection 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  width: 100%;
   border: 1px solid #d9dadd;
   border-radius: 0.25rem;
 }
 
-.emotion-11:not([data-disabled='true']):not([data-readonly='true']):not(
+.emotion-12:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
     ):not([data-error='true']):focus,
-.emotion-11:not([data-disabled='true']):not([data-readonly='true']):not(
+.emotion-12:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
     ):not([data-error='true']):active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   border-color: #792dd4;
 }
 
-.emotion-11:not([data-disabled='true']):not([data-readonly='true']):not(
+.emotion-12:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
-    ):not([data-error='true']):focus>.emotion-14,
-.emotion-11:not([data-disabled='true']):not([data-readonly='true']):not(
+    ):not([data-error='true']):focus>.emotion-15,
+.emotion-12:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
-    ):not([data-error='true']):active>.emotion-14 {
+    ):not([data-error='true']):active>.emotion-15 {
   border-right-color: #8c40ef;
 }
 
-.emotion-11:not([data-disabled='true']):not([data-readonly='true']):not(
+.emotion-12:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
     ):not([data-error='true']):focus-within {
   border-color: #792dd4;
 }
 
-.emotion-11:not([data-disabled='true']):not([data-readonly='true']):not(
+.emotion-12:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
-    ):not([data-error='true']):focus-within>.emotion-14 {
+    ):not([data-error='true']):focus-within>.emotion-15 {
   border-right-color: #8c40ef;
 }
 
-.emotion-11:not([data-disabled='true']):not([data-error='true']):not(
+.emotion-12:not([data-disabled='true']):not([data-error='true']):not(
       [data-success='true']
     ):not([data-readonly='true']):hover,
-.emotion-11:not([data-disabled='true']):not([data-error='true']):not(
+.emotion-12:not([data-disabled='true']):not([data-error='true']):not(
       [data-success='true']
     ):focus {
   -webkit-text-decoration: none;
@@ -143,90 +135,90 @@ exports[`UnitInputField > should handles onChange and selection 1`] = `
   border-color: #8c40ef;
 }
 
-.emotion-11:not([data-disabled='true']):not([data-error='true']):not(
+.emotion-12:not([data-disabled='true']):not([data-error='true']):not(
       [data-success='true']
-    ):not([data-readonly='true']):hover>.emotion-14,
-.emotion-11:not([data-disabled='true']):not([data-error='true']):not(
+    ):not([data-readonly='true']):hover>.emotion-15,
+.emotion-12:not([data-disabled='true']):not([data-error='true']):not(
       [data-success='true']
-    ):focus>.emotion-14 {
+    ):focus>.emotion-15 {
   border-right-color: #8c40ef;
 }
 
-.emotion-11[data-readonly='true'] {
+.emotion-12[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-11[data-readonly='true']:active {
+.emotion-12[data-readonly='true']:active {
   border-color: #d9dadd;
 }
 
-.emotion-11[data-size='small'] {
+.emotion-12[data-size='small'] {
   height: 2rem;
 }
 
-.emotion-11[data-size='medium'] {
+.emotion-12[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-11[data-size='large'] {
+.emotion-12[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-11[data-success='true'] {
+.emotion-12[data-success='true'] {
   border: 1px solid #22674e;
 }
 
-.emotion-11[data-success='true']>.emotion-14 {
+.emotion-12[data-success='true']>.emotion-15 {
   border-right-color: #22674e;
 }
 
-.emotion-11[data-success='true']:active {
+.emotion-12[data-success='true']:active {
   border: 1px solid #22674e;
   box-shadow: 0px 0px 0px 3px #45d19f40;
 }
 
-.emotion-11[data-success='true']:active>.emotion-14 {
+.emotion-12[data-success='true']:active>.emotion-15 {
   border-right-color: #22674e;
 }
 
-.emotion-11[data-error='true'] {
+.emotion-12[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-11[data-error='true']>.emotion-14 {
+.emotion-12[data-error='true']>.emotion-15 {
   border-right-color: #b3144d;
 }
 
-.emotion-11[data-error='true']>.emotion-14:hover {
+.emotion-12[data-error='true']>.emotion-15:hover {
   border-right-color: #b3144d;
 }
 
-.emotion-11[data-error='true']:active {
+.emotion-12[data-error='true']:active {
   border: 1px solid #b3144d;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-11[data-error='true']:active>.emotion-14 {
+.emotion-12[data-error='true']:active>.emotion-15 {
   border-right-color: #b3144d;
 }
 
-.emotion-11[data-error='true']:active>.emotion-14:hover {
+.emotion-12[data-error='true']:active>.emotion-15:hover {
   border-right-color: #b3144d;
 }
 
-.emotion-11[data-disabled='true'] {
+.emotion-12[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-11[data-disabled='true']>.emotion-14 {
+.emotion-12[data-disabled='true']>.emotion-15 {
   border-right-color: #e9eaeb;
 }
 
-.emotion-13 {
+.emotion-14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -244,7 +236,7 @@ exports[`UnitInputField > should handles onChange and selection 1`] = `
   height: 100%;
 }
 
-.emotion-15 {
+.emotion-16 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -257,78 +249,78 @@ exports[`UnitInputField > should handles onChange and selection 1`] = `
   color: #3f4250;
 }
 
-.emotion-15[data-size="small"] {
+.emotion-16[data-size="small"] {
   padding-left: 0.5rem;
 }
 
-.emotion-15[data-size="large"] {
+.emotion-16[data-size="large"] {
   font-size: 1rem;
 }
 
-.emotion-15::-webkit-input-placeholder {
+.emotion-16::-webkit-input-placeholder {
   color: #727683;
 }
 
-.emotion-15::-moz-placeholder {
+.emotion-16::-moz-placeholder {
   color: #727683;
 }
 
-.emotion-15:-ms-input-placeholder {
+.emotion-16:-ms-input-placeholder {
   color: #727683;
 }
 
-.emotion-15::placeholder {
+.emotion-16::placeholder {
   color: #727683;
 }
 
-.emotion-15:disabled {
+.emotion-16:disabled {
   cursor: not-allowed;
 }
 
-.emotion-15:disabled::-webkit-input-placeholder {
+.emotion-16:disabled::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-15:disabled::-moz-placeholder {
+.emotion-16:disabled::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-15:disabled:-ms-input-placeholder {
+.emotion-16:disabled:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-15:disabled::placeholder {
+.emotion-16:disabled::placeholder {
   color: #b5b7bd;
 }
 
-.emotion-18 {
+.emotion-19 {
   width: 100%;
   width: 12.6rem;
 }
 
-.emotion-18 #unit {
+.emotion-19 #unit {
   border: none;
   background: transparent;
 }
 
-.emotion-18 #unit:focus,
-.emotion-18 #unit:active {
+.emotion-19 #unit:focus,
+.emotion-19 #unit:active {
   box-shadow: none;
 }
 
-.emotion-20 {
+.emotion-21 {
   display: inherit;
 }
 
-.emotion-20[data-container-full-height="true"] {
+.emotion-21[data-container-full-height="true"] {
   height: 100%;
 }
 
-.emotion-20[data-container-full-width="true"] {
+.emotion-21[data-container-full-width="true"] {
   width: 100%;
 }
 
-.emotion-24 {
+.emotion-25 {
   display: grid;
   width: 100%;
   gap: 0.5rem;
@@ -343,85 +335,85 @@ exports[`UnitInputField > should handles onChange and selection 1`] = `
   width: 100%;
 }
 
-.emotion-24[data-size='small'] {
+.emotion-25[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-24[data-size='medium'] {
+.emotion-25[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-24[data-size='large'] {
+.emotion-25[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-24[data-state='neutral'] {
+.emotion-25[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.emotion-24[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-25[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-24[data-state='neutral']:not([data-disabled='true']):hover {
+.emotion-25[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-24[data-state='neutral']:not([data-disabled='true']):focus-visible {
+.emotion-25[data-state='neutral']:not([data-disabled='true']):focus-visible {
   outline: 5px auto Highlight;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-.emotion-24[data-state='neutral'][data-dropdownvisible='true'] {
+.emotion-25[data-state='neutral'][data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.emotion-24[data-state='success'] {
+.emotion-25[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.emotion-24[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-25[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #1b533f;
   box-shadow: 0px 0px 0px 3px #45d19f40;
 }
 
-.emotion-24[data-state='success'][data-dropdownvisible='true'] {
+.emotion-25[data-state='success'][data-dropdownvisible='true'] {
   border-color: #1b533f;
 }
 
-.emotion-24[data-state='danger'] {
+.emotion-25[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-24[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-25[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-24[data-state='danger'][data-dropdownvisible='true'] {
+.emotion-25[data-state='danger'][data-dropdownvisible='true'] {
   border-color: #92103f;
 }
 
-.emotion-24:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-25:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-24[data-readonly='true'] {
+.emotion-25[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-24[data-disabled='true'] {
+.emotion-25[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-27 {
+.emotion-28 {
   color: #3f4250;
   font-size: 1rem;
   font-family: Inter,sans-serif;
@@ -439,7 +431,7 @@ exports[`UnitInputField > should handles onChange and selection 1`] = `
   align-self: center;
 }
 
-.emotion-29 {
+.emotion-30 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -467,7 +459,7 @@ exports[`UnitInputField > should handles onChange and selection 1`] = `
   display: flex;
 }
 
-.emotion-31 {
+.emotion-32 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1rem;
@@ -476,12 +468,12 @@ exports[`UnitInputField > should handles onChange and selection 1`] = `
   min-height: 1rem;
 }
 
-.emotion-31 .fillStroke {
+.emotion-32 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
 
-.emotion-33 {
+.emotion-34 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -521,21 +513,21 @@ exports[`UnitInputField > should handles onChange and selection 1`] = `
   color: #ffffff;
 }
 
-.emotion-33:hover {
+.emotion-34:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-33:active {
+.emotion-34:active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-33 .e1y1n78x0 {
+.emotion-34 .e1y1n78x0 {
   stroke: transparent;
 }
 
-.emotion-33:hover,
-.emotion-33:active {
+.emotion-34:hover,
+.emotion-34:active {
   background: #792dd4;
   color: #f9f9fa;
 }
@@ -566,20 +558,15 @@ exports[`UnitInputField > should handles onChange and selection 1`] = `
           </span>
         </div>
         <div
-          class="emotion-11 emotion-12"
-          data-disabled="false"
-          data-error="false"
-          data-readonly="false"
-          data-size="large"
-          data-success="false"
+          class="emotion-11 emotion-12 emotion-13"
         >
           <div
-            class="emotion-13 emotion-14"
+            class="emotion-14 emotion-15"
             id="input-field"
           >
             <input
               aria-invalid="false"
-              class="emotion-15 emotion-16"
+              class="emotion-16 emotion-17"
               data-size="large"
               data-testid="unit-input"
               id="«r6»"
@@ -595,12 +582,12 @@ exports[`UnitInputField > should handles onChange and selection 1`] = `
           </div>
           <div
             aria-label="test-unit"
-            class="emotion-17 emotion-18 emotion-19"
+            class="emotion-18 emotion-19 emotion-20"
           >
             <div
               aria-controls="«ra»"
               aria-describedby="«ra»"
-              class="emotion-20 emotion-21"
+              class="emotion-21 emotion-22"
               data-container-full-width="true"
               tabindex="-1"
             >
@@ -610,7 +597,7 @@ exports[`UnitInputField > should handles onChange and selection 1`] = `
                 <div
                   aria-expanded="false"
                   aria-haspopup="listbox"
-                  class="emotion-24 emotion-25"
+                  class="emotion-25 emotion-26"
                   data-disabled="false"
                   data-dropdownvisible="false"
                   data-readonly="false"
@@ -622,16 +609,16 @@ exports[`UnitInputField > should handles onChange and selection 1`] = `
                   tabindex="0"
                 >
                   <div
-                    class="emotion-26 emotion-27 emotion-8"
+                    class="emotion-27 emotion-28 emotion-8"
                   >
                     Days
                   </div>
                   <div
-                    class="emotion-29 emotion-30"
+                    class="emotion-30 emotion-31"
                   >
                     <svg
                       aria-label="show dropdown"
-                      class="emotion-31 emotion-32"
+                      class="emotion-32 emotion-33"
                       viewBox="0 0 16 16"
                     >
                       <path
@@ -648,7 +635,7 @@ exports[`UnitInputField > should handles onChange and selection 1`] = `
         </div>
       </div>
       <button
-        class="emotion-33 emotion-34"
+        class="emotion-34 emotion-35"
         type="submit"
       >
         Submit
@@ -700,15 +687,9 @@ exports[`UnitInputField > should render correctly 1`] = `
   cursor: pointer;
 }
 
-.emotion-7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+.emotion-8 {
+  display: grid;
+  grid-template-columns: 1fr auto;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -717,48 +698,46 @@ exports[`UnitInputField > should render correctly 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  width: 100%;
   border: 1px solid #d9dadd;
   border-radius: 0.25rem;
 }
 
-.emotion-7:not([data-disabled='true']):not([data-readonly='true']):not(
+.emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
     ):not([data-error='true']):focus,
-.emotion-7:not([data-disabled='true']):not([data-readonly='true']):not(
+.emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
     ):not([data-error='true']):active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   border-color: #792dd4;
 }
 
-.emotion-7:not([data-disabled='true']):not([data-readonly='true']):not(
+.emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
-    ):not([data-error='true']):focus>.emotion-10,
-.emotion-7:not([data-disabled='true']):not([data-readonly='true']):not(
+    ):not([data-error='true']):focus>.emotion-11,
+.emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
-    ):not([data-error='true']):active>.emotion-10 {
+    ):not([data-error='true']):active>.emotion-11 {
   border-right-color: #8c40ef;
 }
 
-.emotion-7:not([data-disabled='true']):not([data-readonly='true']):not(
+.emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
     ):not([data-error='true']):focus-within {
   border-color: #792dd4;
 }
 
-.emotion-7:not([data-disabled='true']):not([data-readonly='true']):not(
+.emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
-    ):not([data-error='true']):focus-within>.emotion-10 {
+    ):not([data-error='true']):focus-within>.emotion-11 {
   border-right-color: #8c40ef;
 }
 
-.emotion-7:not([data-disabled='true']):not([data-error='true']):not(
+.emotion-8:not([data-disabled='true']):not([data-error='true']):not(
       [data-success='true']
     ):not([data-readonly='true']):hover,
-.emotion-7:not([data-disabled='true']):not([data-error='true']):not(
+.emotion-8:not([data-disabled='true']):not([data-error='true']):not(
       [data-success='true']
     ):focus {
   -webkit-text-decoration: none;
@@ -766,90 +745,90 @@ exports[`UnitInputField > should render correctly 1`] = `
   border-color: #8c40ef;
 }
 
-.emotion-7:not([data-disabled='true']):not([data-error='true']):not(
+.emotion-8:not([data-disabled='true']):not([data-error='true']):not(
       [data-success='true']
-    ):not([data-readonly='true']):hover>.emotion-10,
-.emotion-7:not([data-disabled='true']):not([data-error='true']):not(
+    ):not([data-readonly='true']):hover>.emotion-11,
+.emotion-8:not([data-disabled='true']):not([data-error='true']):not(
       [data-success='true']
-    ):focus>.emotion-10 {
+    ):focus>.emotion-11 {
   border-right-color: #8c40ef;
 }
 
-.emotion-7[data-readonly='true'] {
+.emotion-8[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-7[data-readonly='true']:active {
+.emotion-8[data-readonly='true']:active {
   border-color: #d9dadd;
 }
 
-.emotion-7[data-size='small'] {
+.emotion-8[data-size='small'] {
   height: 2rem;
 }
 
-.emotion-7[data-size='medium'] {
+.emotion-8[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-7[data-size='large'] {
+.emotion-8[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-7[data-success='true'] {
+.emotion-8[data-success='true'] {
   border: 1px solid #22674e;
 }
 
-.emotion-7[data-success='true']>.emotion-10 {
+.emotion-8[data-success='true']>.emotion-11 {
   border-right-color: #22674e;
 }
 
-.emotion-7[data-success='true']:active {
+.emotion-8[data-success='true']:active {
   border: 1px solid #22674e;
   box-shadow: 0px 0px 0px 3px #45d19f40;
 }
 
-.emotion-7[data-success='true']:active>.emotion-10 {
+.emotion-8[data-success='true']:active>.emotion-11 {
   border-right-color: #22674e;
 }
 
-.emotion-7[data-error='true'] {
+.emotion-8[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-7[data-error='true']>.emotion-10 {
+.emotion-8[data-error='true']>.emotion-11 {
   border-right-color: #b3144d;
 }
 
-.emotion-7[data-error='true']>.emotion-10:hover {
+.emotion-8[data-error='true']>.emotion-11:hover {
   border-right-color: #b3144d;
 }
 
-.emotion-7[data-error='true']:active {
+.emotion-8[data-error='true']:active {
   border: 1px solid #b3144d;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-7[data-error='true']:active>.emotion-10 {
+.emotion-8[data-error='true']:active>.emotion-11 {
   border-right-color: #b3144d;
 }
 
-.emotion-7[data-error='true']:active>.emotion-10:hover {
+.emotion-8[data-error='true']:active>.emotion-11:hover {
   border-right-color: #b3144d;
 }
 
-.emotion-7[data-disabled='true'] {
+.emotion-8[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-7[data-disabled='true']>.emotion-10 {
+.emotion-8[data-disabled='true']>.emotion-11 {
   border-right-color: #e9eaeb;
 }
 
-.emotion-9 {
+.emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -867,7 +846,7 @@ exports[`UnitInputField > should render correctly 1`] = `
   height: 100%;
 }
 
-.emotion-11 {
+.emotion-12 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -880,78 +859,78 @@ exports[`UnitInputField > should render correctly 1`] = `
   color: #3f4250;
 }
 
-.emotion-11[data-size="small"] {
+.emotion-12[data-size="small"] {
   padding-left: 0.5rem;
 }
 
-.emotion-11[data-size="large"] {
+.emotion-12[data-size="large"] {
   font-size: 1rem;
 }
 
-.emotion-11::-webkit-input-placeholder {
+.emotion-12::-webkit-input-placeholder {
   color: #727683;
 }
 
-.emotion-11::-moz-placeholder {
+.emotion-12::-moz-placeholder {
   color: #727683;
 }
 
-.emotion-11:-ms-input-placeholder {
+.emotion-12:-ms-input-placeholder {
   color: #727683;
 }
 
-.emotion-11::placeholder {
+.emotion-12::placeholder {
   color: #727683;
 }
 
-.emotion-11:disabled {
+.emotion-12:disabled {
   cursor: not-allowed;
 }
 
-.emotion-11:disabled::-webkit-input-placeholder {
+.emotion-12:disabled::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-11:disabled::-moz-placeholder {
+.emotion-12:disabled::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-11:disabled:-ms-input-placeholder {
+.emotion-12:disabled:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-11:disabled::placeholder {
+.emotion-12:disabled::placeholder {
   color: #b5b7bd;
 }
 
-.emotion-14 {
+.emotion-15 {
   width: 100%;
   width: 12.6rem;
 }
 
-.emotion-14 #unit {
+.emotion-15 #unit {
   border: none;
   background: transparent;
 }
 
-.emotion-14 #unit:focus,
-.emotion-14 #unit:active {
+.emotion-15 #unit:focus,
+.emotion-15 #unit:active {
   box-shadow: none;
 }
 
-.emotion-16 {
+.emotion-17 {
   display: inherit;
 }
 
-.emotion-16[data-container-full-height="true"] {
+.emotion-17[data-container-full-height="true"] {
   height: 100%;
 }
 
-.emotion-16[data-container-full-width="true"] {
+.emotion-17[data-container-full-width="true"] {
   width: 100%;
 }
 
-.emotion-20 {
+.emotion-21 {
   display: grid;
   width: 100%;
   gap: 0.5rem;
@@ -966,85 +945,85 @@ exports[`UnitInputField > should render correctly 1`] = `
   width: 100%;
 }
 
-.emotion-20[data-size='small'] {
+.emotion-21[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-20[data-size='medium'] {
+.emotion-21[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-20[data-size='large'] {
+.emotion-21[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-20[data-state='neutral'] {
+.emotion-21[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.emotion-20[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-21[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-20[data-state='neutral']:not([data-disabled='true']):hover {
+.emotion-21[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-20[data-state='neutral']:not([data-disabled='true']):focus-visible {
+.emotion-21[data-state='neutral']:not([data-disabled='true']):focus-visible {
   outline: 5px auto Highlight;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-.emotion-20[data-state='neutral'][data-dropdownvisible='true'] {
+.emotion-21[data-state='neutral'][data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.emotion-20[data-state='success'] {
+.emotion-21[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.emotion-20[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-21[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #1b533f;
   box-shadow: 0px 0px 0px 3px #45d19f40;
 }
 
-.emotion-20[data-state='success'][data-dropdownvisible='true'] {
+.emotion-21[data-state='success'][data-dropdownvisible='true'] {
   border-color: #1b533f;
 }
 
-.emotion-20[data-state='danger'] {
+.emotion-21[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-20[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-21[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-20[data-state='danger'][data-dropdownvisible='true'] {
+.emotion-21[data-state='danger'][data-dropdownvisible='true'] {
   border-color: #92103f;
 }
 
-.emotion-20:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-21:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-20[data-readonly='true'] {
+.emotion-21[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-20[data-disabled='true'] {
+.emotion-21[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-23 {
+.emotion-24 {
   color: #727683;
   font-size: 1rem;
   font-family: Inter,sans-serif;
@@ -1063,7 +1042,7 @@ exports[`UnitInputField > should render correctly 1`] = `
   align-self: center;
 }
 
-.emotion-25 {
+.emotion-26 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1091,7 +1070,7 @@ exports[`UnitInputField > should render correctly 1`] = `
   display: flex;
 }
 
-.emotion-27 {
+.emotion-28 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1rem;
@@ -1100,7 +1079,7 @@ exports[`UnitInputField > should render correctly 1`] = `
   min-height: 1rem;
 }
 
-.emotion-27 .fillStroke {
+.emotion-28 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
@@ -1122,20 +1101,15 @@ exports[`UnitInputField > should render correctly 1`] = `
           Test
         </label>
         <div
-          class="emotion-7 emotion-8"
-          data-disabled="false"
-          data-error="false"
-          data-readonly="false"
-          data-size="large"
-          data-success="false"
+          class="emotion-7 emotion-8 emotion-9"
         >
           <div
-            class="emotion-9 emotion-10"
+            class="emotion-10 emotion-11"
             id="input-field"
           >
             <input
               aria-invalid="false"
-              class="emotion-11 emotion-12"
+              class="emotion-12 emotion-13"
               data-size="large"
               data-testid="unit-input"
               id="«r0»"
@@ -1149,12 +1123,12 @@ exports[`UnitInputField > should render correctly 1`] = `
           </div>
           <div
             aria-label="test-unit"
-            class="emotion-13 emotion-14 emotion-15"
+            class="emotion-14 emotion-15 emotion-16"
           >
             <div
               aria-controls="«r3»"
               aria-describedby="«r3»"
-              class="emotion-16 emotion-17"
+              class="emotion-17 emotion-18"
               data-container-full-width="true"
               tabindex="-1"
             >
@@ -1164,7 +1138,7 @@ exports[`UnitInputField > should render correctly 1`] = `
                 <div
                   aria-expanded="false"
                   aria-haspopup="listbox"
-                  class="emotion-20 emotion-21"
+                  class="emotion-21 emotion-22"
                   data-disabled="false"
                   data-dropdownvisible="false"
                   data-readonly="false"
@@ -1176,16 +1150,16 @@ exports[`UnitInputField > should render correctly 1`] = `
                   tabindex="0"
                 >
                   <p
-                    class="emotion-22 emotion-23 emotion-6"
+                    class="emotion-23 emotion-24 emotion-6"
                   >
                     Select item
                   </p>
                   <div
-                    class="emotion-25 emotion-26"
+                    class="emotion-26 emotion-27"
                   >
                     <svg
                       aria-label="show dropdown"
-                      class="emotion-27 emotion-28"
+                      class="emotion-28 emotion-29"
                       viewBox="0 0 16 16"
                     >
                       <path

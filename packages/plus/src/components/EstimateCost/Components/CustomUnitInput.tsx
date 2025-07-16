@@ -37,6 +37,9 @@ export const CustomUnitInput = memo(
 
     return (
       <UnitInput
+        width="100%"
+        templateColumns="auto auto"
+        selectInputWidth="100%"
         name="iteration"
         onChange={inputValue =>
           setIteration({

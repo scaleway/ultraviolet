@@ -28,15 +28,8 @@ const HeaderContainer = styled(Stack)<{ 'data-hidedetails': boolean }>`
     border-bottom: 1px solid ${({ theme }) => theme.colors.neutral.border};
   }
 `
-
 const StyledStack = styled(Stack)`
   background-color: ${({ theme }) => theme.colors.neutral.background};
-  width: 10rem;
-
-  @media (min-width: ${({ theme }) => theme.breakpoints.large}) {
-    width: 11rem;
-  }
-
 `
 
 export const OrderSummary = ({
@@ -177,8 +170,9 @@ export const OrderSummary = ({
             {!hideTimeUnit && !hideDetails ? (
               <StyledStack>
                 <UnitInput
-                  width="100%"
-                  selectInputWidth="fit-content"
+                  width="155px"
+                  templateColumns="2fr 3fr"
+                  selectInputWidth="100%"
                   options={computePeriodOptions}
                   onChange={value => {
                     setTimePeriodAmount(value)
@@ -191,6 +185,7 @@ export const OrderSummary = ({
                   unitValue={unitUnitInput}
                   size="small"
                   dropdownAlign="center"
+                  id="unit-input-order-summary"
                 />
               </StyledStack>
             ) : null}
