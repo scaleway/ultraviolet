@@ -10,6 +10,7 @@ import type {
 } from 'react'
 import { useEffect, useId, useMemo, useState } from 'react'
 import { Label } from '../Label'
+import { Row } from '../Row'
 import { SelectInput } from '../SelectInput'
 import type { OptionType } from '../SelectInput/types'
 import { Stack } from '../Stack'
@@ -61,13 +62,14 @@ const StyledInput = styled.input`
   }
 `
 
-const UnitInputWrapper = styled(Stack)<{
+const UnitInputWrapper = styled(Row)<{
   'data-size': 'small' | 'medium' | 'large'
   'data-success': boolean
   'data-error': boolean
   'data-disabled': boolean
   'data-readonly': boolean
 }>`
+  width: 100%;
   border: 1px solid ${({ theme }) => theme.colors.neutral.border};
   border-radius: ${({ theme }) => theme.radii.default};
 
@@ -222,6 +224,7 @@ type UnitInputProps = {
   labelInformation?: ReactNode
   step?: number | string
   dropdownAlign?: ComponentProps<typeof SelectInput>['dropdownAlign']
+  templateColumns?: ComponentProps<typeof Row>['templateColumns']
 } & Pick<
   InputHTMLAttributes<HTMLInputElement>,
   | 'onFocus'
@@ -268,6 +271,7 @@ export const UnitInput = ({
   onBlur,
   onKeyDown,
   dropdownAlign,
+  templateColumns,
 }: UnitInputProps) => {
   const [val, setVal] = useState(value)
   const localId = useId()
@@ -289,7 +293,13 @@ export const UnitInput = ({
   }, [value])
 
   return (
-    <Stack gap={0.5}>
+    <Stack
+      gap={0.5}
+      onFocus={onFocus}
+      onBlur={onBlur}
+      onKeyDown={onKeyDown}
+      width={width}
+    >
       {label || labelInformation ? (
         <Label
           labelDescription={labelInformation}
@@ -301,17 +311,13 @@ export const UnitInput = ({
         </Label>
       ) : null}
       <UnitInputWrapper
-        direction="row"
+        templateColumns={templateColumns ?? '1fr auto'}
         data-testid={dataTestId}
         data-size={size}
-        width={width}
         data-success={!!success}
         data-error={!!error}
         data-disabled={!!disabled}
         data-readonly={!!readOnly}
-        onFocus={onFocus}
-        onBlur={onBlur}
-        onKeyDown={onKeyDown}
       >
         <StyledNumberInputWrapper id="input-field">
           <StyledInput
@@ -320,7 +326,6 @@ export const UnitInput = ({
             autoFocus={autoFocus}
             disabled={disabled}
             name={`${name}-value`}
-            width={width}
             id={id ?? localId}
             value={val}
             onChange={event => {

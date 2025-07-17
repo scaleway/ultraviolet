@@ -28,7 +28,7 @@ export const Template: StoryFn<typeof UnitInput> = args => {
         options={optionsSelect}
         onChange={val => setValue(val)}
         onChangeUnitValue={val => setUnit(val[0])}
-        width={400}
+        width="300px"
       />
       Value: {value} {unit}
     </Stack>
