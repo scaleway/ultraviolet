@@ -5,6 +5,15 @@ export const button = recipe({
   base: {
     padding: theme.space[1],
     borderRadius: theme.radii.default,
+    background: 'none',
+    border: 'none',
+    boxShadow: 'none',
+    // Target a specific data attribute for styling
+    selectors: {
+      '&[data-has-green-border]': {
+        border: `4px solid green`,
+      },
+    },
   },
   variants: {
     sentiment: {
@@ -13,7 +22,7 @@ export const button = recipe({
       danger: {},
     },
     variant: {
-      strong: {},
+      filled: {},
       outlined: {},
       ghost: {},
     },
@@ -46,29 +55,42 @@ export const button = recipe({
       false: {},
     },
   },
+  // Can be simplified using map but for clarity we keep it like so
   compoundVariants: [
     {
-      variants: { variant: 'strong', sentiment: 'primary' },
+      variants: { variant: 'filled', sentiment: 'primary' },
       style: {
         backgroundColor: theme.colors.primary.backgroundStrong,
         color: theme.colors.primary.textStrong,
         border: `1px solid ${theme.colors.primary.borderStrong}`,
+        ':hover': {
+          backgroundColor: theme.colors.primary.backgroundStrongHover,
+          color: theme.colors.primary.textStrongHover,
+        },
       },
     },
     {
-      variants: { variant: 'strong', sentiment: 'secondary' },
+      variants: { variant: 'filled', sentiment: 'secondary' },
       style: {
         backgroundColor: theme.colors.secondary.backgroundStrong,
         color: theme.colors.secondary.textStrong,
         border: `1px solid ${theme.colors.secondary.borderStrong}`,
+        ':hover': {
+          backgroundColor: theme.colors.secondary.backgroundStrongHover,
+          color: theme.colors.secondary.textStrongHover,
+        },
       },
     },
     {
-      variants: { variant: 'strong', sentiment: 'danger' },
+      variants: { variant: 'filled', sentiment: 'danger' },
       style: {
         backgroundColor: theme.colors.danger.backgroundStrong,
         color: theme.colors.danger.textStrong,
         border: `1px solid ${theme.colors.danger.borderStrong}`,
+        ':hover': {
+          backgroundColor: theme.colors.danger.backgroundStrongHover,
+          color: theme.colors.danger.textStrongHover,
+        },
       },
     },
     {
@@ -77,6 +99,10 @@ export const button = recipe({
         backgroundColor: 'transparent',
         color: theme.colors.primary.text,
         border: `1px solid ${theme.colors.primary.borderStrong}`,
+        ':hover': {
+          backgroundColor: theme.colors.primary.backgroundHover,
+          color: theme.colors.primary.textHover,
+        },
       },
     },
     {
@@ -85,6 +111,10 @@ export const button = recipe({
         backgroundColor: 'transparent',
         color: theme.colors.secondary.text,
         border: `1px solid ${theme.colors.secondary.borderStrong}`,
+        ':hover': {
+          backgroundColor: theme.colors.secondary.backgroundHover,
+          color: theme.colors.secondary.textHover,
+        },
       },
     },
     {
@@ -93,6 +123,10 @@ export const button = recipe({
         backgroundColor: 'transparent',
         color: theme.colors.danger.text,
         border: `1px solid ${theme.colors.danger.borderStrong}`,
+        ':hover': {
+          backgroundColor: theme.colors.danger.backgroundHover,
+          color: theme.colors.danger.textHover,
+        },
       },
     },
     {
@@ -101,6 +135,10 @@ export const button = recipe({
         backgroundColor: 'transparent',
         color: theme.colors.primary.text,
         border: 'none',
+        ':hover': {
+          backgroundColor: theme.colors.primary.backgroundHover,
+          color: theme.colors.primary.textHover,
+        },
       },
     },
     {
@@ -109,6 +147,10 @@ export const button = recipe({
         backgroundColor: 'transparent',
         color: theme.colors.secondary.text,
         border: 'none',
+        ':hover': {
+          backgroundColor: theme.colors.secondary.backgroundHover,
+          color: theme.colors.secondary.textHover,
+        },
       },
     },
     {
@@ -117,90 +159,10 @@ export const button = recipe({
         backgroundColor: 'transparent',
         color: theme.colors.danger.text,
         border: 'none',
-      },
-    },
-    {
-      variants: { variant: 'strong', sentiment: 'primary', disabled: true },
-      style: {
-        backgroundColor: theme.colors.primary.backgroundStrongDisabled,
-        color: theme.colors.primary.textStrongDisabled,
-        border: `1px solid ${theme.colors.primary.borderStrongDisabled}`,
-      },
-    },
-    {
-      variants: {
-        variant: 'strong',
-        sentiment: 'secondary',
-        disabled: true,
-      },
-      style: {
-        backgroundColor: theme.colors.secondary.backgroundStrongDisabled,
-        color: theme.colors.secondary.textStrongDisabled,
-        border: `1px solid ${theme.colors.secondary.borderStrongDisabled}`,
-      },
-    },
-    {
-      variants: { variant: 'strong', sentiment: 'danger', disabled: true },
-      style: {
-        backgroundColor: theme.colors.danger.backgroundStrongDisabled,
-        color: theme.colors.danger.textStrongDisabled,
-        border: `1px solid ${theme.colors.danger.borderStrongDisabled}`,
-      },
-    },
-    {
-      variants: {
-        variant: 'outlined',
-        sentiment: 'primary',
-        disabled: true,
-      },
-      style: {
-        backgroundColor: 'transparent',
-        color: theme.colors.primary.textDisabled,
-        border: `1px solid ${theme.colors.primary.borderStrongDisabled}`,
-      },
-    },
-    {
-      variants: {
-        variant: 'outlined',
-        sentiment: 'secondary',
-        disabled: true,
-      },
-      style: {
-        backgroundColor: 'transparent',
-        color: theme.colors.secondary.textDisabled,
-        border: `1px solid ${theme.colors.secondary.borderStrongDisabled}`,
-      },
-    },
-    {
-      variants: { variant: 'outlined', sentiment: 'danger', disabled: true },
-      style: {
-        backgroundColor: 'transparent',
-        color: theme.colors.danger.textDisabled,
-        border: `1px solid ${theme.colors.danger.borderStrongDisabled}`,
-      },
-    },
-    {
-      variants: { variant: 'ghost', sentiment: 'primary', disabled: true },
-      style: {
-        backgroundColor: 'transparent',
-        color: theme.colors.primary.textDisabled,
-        border: 'none',
-      },
-    },
-    {
-      variants: { variant: 'ghost', sentiment: 'secondary', disabled: true },
-      style: {
-        backgroundColor: 'transparent',
-        color: theme.colors.secondary.textDisabled,
-        border: 'none',
-      },
-    },
-    {
-      variants: { variant: 'ghost', sentiment: 'danger', disabled: true },
-      style: {
-        backgroundColor: 'transparent',
-        color: theme.colors.danger.textDisabled,
-        border: 'none',
+        ':hover': {
+          backgroundColor: theme.colors.danger.backgroundHover,
+          color: theme.colors.danger.textHover,
+        },
       },
     },
   ],
@@ -208,7 +170,6 @@ export const button = recipe({
     size: 'medium',
     fullWidth: false,
     disabled: false,
-    variant: 'strong',
   },
 })
 
