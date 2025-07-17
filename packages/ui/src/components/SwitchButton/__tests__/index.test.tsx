@@ -2,10 +2,21 @@ import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { MoonIcon, SunIcon } from '@ultraviolet/icons'
 import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
-import { describe, expect, test, vi } from 'vitest'
+import { afterAll, beforeAll, describe, expect, test, vi } from 'vitest'
 import { SwitchButton } from '..'
 
 describe('SwitchButton', () => {
+  beforeAll(() => {
+    Object.defineProperty(HTMLElement.prototype, 'offsetWidth', {
+      configurable: true,
+      value: 500,
+    })
+  })
+
+  afterAll(() => {
+    Object.defineProperty(HTMLElement.prototype, 'offsetWidth', {})
+  })
+
   test('renders correctly', () =>
     shouldMatchEmotionSnapshot(
       <SwitchButton name="test" onChange={() => {}} value="left">
@@ -28,6 +39,40 @@ describe('SwitchButton', () => {
         <SwitchButton.Option value="right">Right</SwitchButton.Option>
       </SwitchButton>,
     ))
+
+  test('renders correctly with children changing', () => {
+    let resizeCallback: ResizeObserverCallback = () => {}
+
+    ResizeObserver = vi.fn((cb: ResizeObserverCallback) => {
+      resizeCallback = cb
+
+      return {
+        observe: vi.fn(),
+        disconnect: vi.fn(),
+      }
+    }) as unknown as typeof ResizeObserver
+
+    const { asFragment } = renderWithTheme(
+      <SwitchButton name="test" onChange={() => {}} value="right">
+        <SwitchButton.Option value="left">Left</SwitchButton.Option>
+        <SwitchButton.Option value="right">Right</SwitchButton.Option>
+      </SwitchButton>,
+    )
+
+    const buttonLeft = screen.getByTestId('switch-button-left')
+
+    Object.defineProperty(HTMLElement.prototype, 'offsetWidth', {
+      configurable: true,
+      value: 100,
+    })
+
+    resizeCallback(
+      [{ target: buttonLeft } as unknown as ResizeObserverEntry],
+      {} as ResizeObserver,
+    )
+
+    expect(asFragment()).toMatchSnapshot()
+  })
 
   test('renders with tooltip', () =>
     shouldMatchEmotionSnapshot(

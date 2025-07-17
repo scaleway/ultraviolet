@@ -98,7 +98,33 @@ export const SwitchButton = ({
     setLocalValue(value)
     setWidth(getElement(value)?.offsetWidth ?? 0)
     setPosition(getPosition(getElement(value)))
-  }, [getElement, refOptions, value])
+  }, [refOptions, value, getElement])
+
+  useEffect(() => {
+    const element = getElement(localValue)
+    if (!element) return undefined
+
+    const resizeObserver = new ResizeObserver(() => {
+      if (
+        element.offsetWidth &&
+        (![
+          width,
+          width + FOCUS_OVERLAY_SCALE_RATIO,
+          width - FOCUS_OVERLAY_SCALE_RATIO,
+        ].includes(element.offsetWidth) ||
+          getPosition(element) !== position)
+      ) {
+        setWidth(element.offsetWidth ?? 0)
+        setPosition(getPosition(element))
+      }
+    })
+
+    resizeObserver.observe(element)
+
+    return () => {
+      resizeObserver.disconnect()
+    }
+  }, [getElement, width, position, localValue, children])
 
   const handleOnChange = useCallback(
     (event: ChangeEvent<HTMLInputElement>) => {
