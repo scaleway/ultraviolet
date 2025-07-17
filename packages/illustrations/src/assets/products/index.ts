@@ -9,6 +9,7 @@ import * as appleSilicon from './appleSilicon'
 import * as auditTrail from './auditTrail'
 import * as blockStorage from './blockStorage'
 import * as cli from './cli'
+import * as cloudEssentials from './cloudEssentials'
 import * as cockpit from './cockpit'
 import * as containerRegistry from './containerRegistry'
 import * as containers from './containers'
@@ -16,6 +17,7 @@ import * as costManager from './costManager'
 import * as dataWarehouse from './dataWarehouse'
 import * as dedibox from './dedibox'
 import * as dediboxVps from './dediboxVps'
+import * as dedilink from './dedilink'
 import * as distributedDataLab from './distributedDataLab'
 import * as domainsAndDns from './domainsAndDns'
 import * as edgeServices from './edgeServices'
@@ -71,6 +73,7 @@ export {
   auditTrail,
   blockStorage,
   cli,
+  cloudEssentials,
   cockpit,
   containerRegistry,
   containers,
@@ -78,6 +81,7 @@ export {
   dataWarehouse,
   dedibox,
   dediboxVps,
+  dedilink,
   distributedDataLab,
   domainsAndDns,
   edgeServices,
