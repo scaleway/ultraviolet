@@ -1,5 +1,5 @@
-import { createTheme, createThemeContract } from '@vanilla-extract/css'
 import { consoleDarkTheme, consoleLightTheme } from '@ultraviolet/themes'
+import { createTheme, createThemeContract } from '@vanilla-extract/css'
 
 export const theme = createThemeContract(consoleLightTheme)
 

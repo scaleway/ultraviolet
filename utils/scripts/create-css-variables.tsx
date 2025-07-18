@@ -30,7 +30,13 @@ const makeCSSVariablesRec = (
     .replace(/\./g, '-')
     .toLowerCase() // Replace caps and dots by dashes, convert to kebab-case
 
-  return `    --${prefix}-${formattedKey}-${formattedInnerKey}: ${finalCSSValue};\n`
+  // Create the CSS variable
+  const variableLine = `    --${prefix}-${formattedKey}-${formattedInnerKey}: ${finalCSSValue};\n`
+
+  // Create a class for this variable
+  const classLine = `    .${prefix}-${formattedKey}-${formattedInnerKey} { --${prefix}: var(--${prefix}-${formattedKey}-${formattedInnerKey}); }\n`
+
+  return variableLine + classLine
 }
 
 const createCssVariables = (prefix: string, obj: object) =>
@@ -49,7 +55,13 @@ const createCssVariables = (prefix: string, obj: object) =>
           .join('')
       }
 
-      return `    --${prefix}-${formattedKey}: ${value};\n`
+      // Create the CSS variable
+      const variableLine = `    --${prefix}-${formattedKey}: ${value};\n`
+
+      // Create a class for this variable
+      const classLine = `    .${prefix}-${formattedKey} { --${prefix}: var(--${prefix}-${formattedKey}); }\n`
+
+      return variableLine + classLine
     })
     .join('')
 

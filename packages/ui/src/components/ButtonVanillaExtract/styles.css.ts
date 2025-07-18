@@ -1,4 +1,4 @@
-import { recipe, type RecipeVariants } from '@vanilla-extract/recipes'
+import { type RecipeVariants, recipe } from '@vanilla-extract/recipes'
 import { theme } from './theme.css'
 
 export const button = recipe({

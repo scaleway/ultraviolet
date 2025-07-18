@@ -1,6 +1,6 @@
+import styled from '@emotion/styled'
 import type { Meta } from '@storybook/react'
 import { ButtonVanillaExtract } from '..'
-import styled from '@emotion/styled'
 import { ThemeProvider } from '../ThemeProvider'
 
 const StyledButton = styled(ButtonVanillaExtract)`

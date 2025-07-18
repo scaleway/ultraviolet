@@ -1,9 +1,11 @@
 import type { Meta } from '@storybook/react'
-import { ButtonSolution2 } from '..'
+import { ButtonUtilityClasses } from '..'
 
 export default {
-  component: ButtonSolution2,
-  title: 'Components/Action/ButtonSolution2',
-} as Meta<typeof ButtonSolution2>
+  component: ButtonUtilityClasses,
+  title: 'Components/Action/ButtonUtilityClasses',
+} as Meta<typeof ButtonUtilityClasses>
 
-export const Playground = () => <ButtonSolution2>Click me</ButtonSolution2>
+export const Playground = () => (
+  <ButtonUtilityClasses>Click me</ButtonUtilityClasses>
+)

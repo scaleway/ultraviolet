@@ -1,12 +1,16 @@
 import type { ReactNode } from 'react'
 import './styles.css'
+// eslint-disable-next-line import/no-relative-packages
+import '../../../../themes/public/style/light.css'
 
-type ButtonSolution2Props = {
+type ButtonUtilityClassesProps = {
   children: ReactNode
 }
 
-export const ButtonSolution2 = ({ children }: ButtonSolution2Props) => (
-  <div className="padding-0 full-width" style={{ '--width': '100px' }}>
+export const ButtonUtilityClasses = ({
+  children,
+}: ButtonUtilityClassesProps) => (
+  <button type="button" className="radius-default color-primary-background">
     {children}
-  </div>
+  </button>
 )
