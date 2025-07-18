@@ -221,7 +221,7 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
           textArea.style.minHeight = `calc(${minHeight}px + 2*${padding})`
         }
       }
-    }, [value, rows, theme, maxRows])
+    }, [value, rows, theme, maxRows, textAreaRef.current?.value])
 
     const sentiment = useMemo(() => {
       if (error) {
