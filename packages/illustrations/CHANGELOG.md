@@ -1,5 +1,11 @@
 # @ultraviolet/illustrations
 
+## 5.0.0-beta.5
+
+### Patch Changes
+
+- [#5355](https://github.com/scaleway/ultraviolet/pull/5355) [`f921df0`](https://github.com/scaleway/ultraviolet/commit/f921df0aea3ea46e014311f6008b3d44f95e16cf) Thanks [@lisalupi](https://github.com/lisalupi)! - New illustrations `Dedilink` and `CloudEssential`
+
 ## 5.0.0-beta.4
 
 ### Patch Changes

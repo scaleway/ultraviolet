@@ -1,5 +1,12 @@
 # Change Log
 
+## 4.0.0-beta.9
+
+### Patch Changes
+
+- [#5355](https://github.com/scaleway/ultraviolet/pull/5355) [`f921df0`](https://github.com/scaleway/ultraviolet/commit/f921df0aea3ea46e014311f6008b3d44f95e16cf) Thanks [@lisalupi](https://github.com/lisalupi)! - New product icons: `CustomModelProductIcon` and `CloudEssentialsProductIcon`
+  New icon: `BoxEssentialIcon` (and outline version)
+
 ## 4.0.0-beta.8
 
 ### Major Changes
