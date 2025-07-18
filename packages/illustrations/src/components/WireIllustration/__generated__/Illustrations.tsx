@@ -21,6 +21,8 @@ export const ILLUSTRATIONS = {
   blockStorage:
     'https://assets.scaleway.com/illustrations/products/blockStorage/block-storage-wire.svg',
   cli: 'https://assets.scaleway.com/illustrations/products/cli/cli-wire.svg',
+  cloudEssentials:
+    'https://assets.scaleway.com/illustrations/products/cloudEssentials/cloud-essentials-wire.svg',
   cockpit:
     'https://assets.scaleway.com/illustrations/products/cockpit/cockpit-wire.svg',
   containerRegistry:
@@ -49,6 +51,8 @@ export const ILLUSTRATIONS = {
     'https://assets.scaleway.com/illustrations/products/dediboxVps/dedibox-vps-start-wire.svg',
   dediboxVps:
     'https://assets.scaleway.com/illustrations/products/dediboxVps/dedibox-vps-wire.svg',
+  dedilink:
+    'https://assets.scaleway.com/illustrations/products/dedilink/dedilink-wire.svg',
   distributedDataLab:
     'https://assets.scaleway.com/illustrations/products/distributedDataLab/distributed-data-lab-wire.svg',
   domainsAndDns:
