@@ -53,6 +53,7 @@ export const Playground = () => (
             key={`${sentiment}-${variant}`}
             sentiment={sentiment}
             variant={variant}
+            gap="1"
           >
             {sentiment} {variant}
           </ButtonVanillaExtract>

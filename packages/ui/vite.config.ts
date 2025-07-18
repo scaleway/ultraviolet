@@ -6,5 +6,9 @@ export default mergeConfig(defineConfig(defaultConfig), {
   test: {
     setupFiles: ['./vitest.setup.ts'],
   },
-  plugins: [vanillaExtractPlugin()],
+  plugins: [
+    vanillaExtractPlugin({
+      identifiers: ({ hash }) => `prefix_${hash}`,
+    }),
+  ],
 })

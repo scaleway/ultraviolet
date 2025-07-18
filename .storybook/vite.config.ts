@@ -43,6 +43,7 @@ export default defineConfig({
         plugins: ['@emotion/babel-plugin'],
       },
     }),
-    vanillaExtractPlugin()
+    vanillaExtractPlugin({
+    })
   ],
 })

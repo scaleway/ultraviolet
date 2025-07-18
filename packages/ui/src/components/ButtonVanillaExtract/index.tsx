@@ -20,10 +20,11 @@ export const ButtonVanillaExtract = ({
   size,
   onClick,
   variant,
+  gap,
   hasGreenBorder,
 }: ButtonVanillaExtractProps) => (
   <button
-    className={`${className ?? ''} ${button({ sentiment, disabled, size, variant })}`}
+    className={`${className ?? ''} ${button({ sentiment, disabled, size, variant, gap })}`}
     data-has-green-border={hasGreenBorder ? 'true' : undefined}
     onClick={onClick}
     type="button"

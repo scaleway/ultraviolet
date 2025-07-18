@@ -40,6 +40,13 @@ export const button = recipe({
         fontSize: theme.typography.bodyStrong.fontSize,
       },
     },
+    gap: Object.keys(theme.space).reduce(
+      (acc, size) => ({
+        ...acc,
+        [size]: { gap: theme.space[size as keyof typeof theme.space] },
+      }),
+      {},
+    ) as typeof theme.space,
     fullWidth: {
       true: {
         width: '100%',
