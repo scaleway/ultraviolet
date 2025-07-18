@@ -1,5 +1,12 @@
 # Change Log
 
+## 1.95.14
+
+### Patch Changes
+
+- [#5331](https://github.com/scaleway/ultraviolet/pull/5331) [`4a91262`](https://github.com/scaleway/ultraviolet/commit/4a912623fed44b3a20ed9d1dd8f057a9eb371894) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `next` to `15.3.5`.
+  Updated dependency `eslint-config-next` to `15.3.5`.
+
 ## 1.95.13
 
 ### Patch Changes
