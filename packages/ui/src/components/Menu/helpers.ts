@@ -62,3 +62,29 @@ export const searchChildren = (
   // Filter out null values and flatten the array
   return matches ? matches.filter(Boolean) : []
 }
+
+const getButtonOrLink = (element: Element | null) => {
+  const tag = element?.firstElementChild?.tagName.toLowerCase()
+  if (element) {
+    if (
+      tag === 'button' &&
+      !(element.firstElementChild as HTMLButtonElement).disabled
+    ) {
+      return element.firstElementChild as HTMLButtonElement
+    }
+    if (tag === 'a') {
+      return element.firstElementChild as HTMLAnchorElement
+    }
+  }
+
+  return false
+}
+
+export const getListItem = (listItems: Element[]) =>
+  listItems
+    .map(child =>
+      getButtonOrLink(child)
+        ? getButtonOrLink(child)
+        : getButtonOrLink(child.firstElementChild),
+    )
+    .filter(element => typeof element !== 'boolean')
