@@ -170,7 +170,7 @@ export const Menu = forwardRef(
 
     useEffect(() => {
       if (disclosureRef.current && triggerMethod === 'hover') {
-        const handler = (value: true | undefined) => {
+        const handler = (value: boolean | undefined) => {
           setShouldBeVisible(value)
         }
 
@@ -181,22 +181,22 @@ export const Menu = forwardRef(
         disclosureRef.current.addEventListener('mouseleave', () =>
           handler(undefined),
         )
+        disclosureRef.current.addEventListener('keydown', event => {
+          if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
+            handler(false) // force close menu when navigating with arrow keys
+          }
+        })
 
         return () => {
-          disclosureRef.current?.removeEventListener('focus', () =>
-            handler(undefined),
-          )
-          disclosureRef.current?.addEventListener('mouseenter', () =>
-            handler(undefined),
-          )
-          disclosureRef.current?.addEventListener('mouseleave', () =>
-            handler(undefined),
-          )
+          window.removeEventListener('focus', () => handler(undefined))
+          window.removeEventListener('mouseenter', () => handler(undefined))
+          window.removeEventListener('mouseleave', () => handler(undefined))
+          window.removeEventListener('keydown', () => handler(undefined))
         }
       }
 
       return undefined
-    }, [])
+    }, [setShouldBeVisible, disclosureRef, triggerMethod])
 
     const finalChild = useMemo(() => {
       if (typeof children === 'function') {
