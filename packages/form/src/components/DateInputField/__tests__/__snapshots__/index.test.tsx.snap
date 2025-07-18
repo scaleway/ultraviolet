@@ -496,6 +496,88 @@ exports[`DateInputField > should clear field 1`] = `
   color: #ffffff;
 }
 
+.emotion-67 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+  height: 3rem;
+  padding: 0 1rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.5rem;
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: Inter,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: #8c40ef;
+  border: none;
+  color: #ffffff;
+  height: 1.5625rem;
+  width: 100%;
+  padding: 0;
+  color: #727683;
+}
+
+.emotion-67:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-67:active {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-67 .e1y1n78x0 {
+  stroke: transparent;
+}
+
+.emotion-67:hover,
+.emotion-67:active {
+  background: #792dd4;
+  color: #f9f9fa;
+}
+
+.emotion-67[aria-label="in-range"] {
+  color: #521094;
+  background-color: #f1eefc;
+}
+
+.emotion-67[aria-label="in-range"]:hover {
+  color: #ffffff;
+  background-color: #792dd4;
+}
+
+.emotion-67[aria-label="not-current"],
+.emotion-67:disabled {
+  color: #b5b7bd;
+}
+
+.emotion-67[aria-label="selected"] {
+  color: #ffffff;
+}
+
 <div
     data-testid="testing"
   >
@@ -668,8 +750,8 @@ exports[`DateInputField > should clear field 1`] = `
                   31
                 </button>
                 <button
-                  aria-label="neutral"
-                  class="emotion-57 emotion-58 emotion-24"
+                  aria-label="selected"
+                  class="emotion-57 emotion-67 emotion-68"
                   type="button"
                 >
                   1
