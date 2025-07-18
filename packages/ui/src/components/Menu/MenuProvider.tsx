@@ -11,8 +11,8 @@ type MenuContextProps = {
   disclosureRef: RefObject<HTMLButtonElement | null>
   menuRef: RefObject<HTMLDivElement | null>
   parentDisclosureRef?: RefObject<HTMLButtonElement | null>
-  setShouldBeVisible: Dispatch<SetStateAction<true | undefined>>
-  shouldBeVisible: true | undefined
+  setShouldBeVisible: Dispatch<SetStateAction<boolean | undefined>>
+  shouldBeVisible: boolean | undefined
 }
 
 const MenuContext = createContext<MenuContextProps | undefined>(undefined)
@@ -39,7 +39,7 @@ export const MenuProvider = ({
   parentDisclosureRef,
 }: MenuProviderProps) => {
   const [isVisible, setIsVisible] = useState(visible)
-  const [shouldBeVisible, setShouldBeVisible] = useState<true | undefined>(
+  const [shouldBeVisible, setShouldBeVisible] = useState<boolean | undefined>(
     undefined,
   )
   const disclosureRef = useRef<HTMLButtonElement>(null)
