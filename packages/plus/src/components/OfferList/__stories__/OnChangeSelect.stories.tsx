@@ -12,9 +12,11 @@ export const OnChange: StoryFn<ComponentProps<typeof OfferList>> = props => {
   return (
     <Stack gap={1}>
       <Button
-        onClick={() =>
+        onClick={() => {
           setSelectable(selectable === 'checkbox' ? 'radio' : 'checkbox')
-        }
+          if (selectable === 'checkbox') setSelectedRow('')
+          else setSelectedRow([])
+        }}
       >
         Set selectable to {selectable === 'checkbox' ? 'radio' : 'checkbox'}
       </Button>

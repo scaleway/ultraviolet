@@ -12,7 +12,7 @@ export default {
 } satisfies Meta
 
 export { Playground } from './Playground.stories'
-export { Selectable } from './Selectable.stories'
+export { Type } from './Type.stories'
 export { Expandable } from './Expandable.stories'
 export { Loading } from './Loading.stories'
 export { Banner } from './Banner.stories'
