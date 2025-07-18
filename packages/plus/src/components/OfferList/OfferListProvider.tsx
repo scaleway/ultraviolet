@@ -2,7 +2,7 @@ import { createContext, useContext, useState } from 'react'
 import type { Dispatch, ReactNode, SetStateAction } from 'react'
 
 type OfferListContextValue = {
-  selectable?: 'radio' | 'checkbox'
+  selectable: 'radio' | 'checkbox'
   radioSelectedRow: string | undefined
   setRadioSelectedRow: Dispatch<SetStateAction<string | undefined>>
   expandable?: boolean
@@ -16,7 +16,7 @@ const OfferListContext = createContext<OfferListContextValue | undefined>(
 )
 
 type OfferListProviderProps = {
-  selectable?: 'radio' | 'checkbox'
+  selectable: 'radio' | 'checkbox'
   children: ReactNode
   expandable?: boolean
   disabled?: boolean

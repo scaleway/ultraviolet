@@ -4,7 +4,7 @@ import type { ComponentProps } from 'react'
 import { OfferList } from '../OfferList'
 import { columns, data } from './resources'
 
-export const Selectable: StoryFn<ComponentProps<typeof OfferList>> = props => (
+export const Type: StoryFn<ComponentProps<typeof OfferList>> = props => (
   <Stack gap={3}>
     <Stack gap={1}>
       <Text as="div" variant="body">
@@ -45,15 +45,15 @@ export const Selectable: StoryFn<ComponentProps<typeof OfferList>> = props => (
   </Stack>
 )
 
-Selectable.args = {
+Type.args = {
   columns,
 }
 
-Selectable.parameters = {
+Type.parameters = {
   docs: {
     description: {
       story:
-        'A row can be selectable. For multi select, set prop `selectable` to `checkbox`, for single select, set it to `radio`.',
+        'Offers are selectable. For multi select, set prop `type` to `checkbox`, for single select, set it to `radio`. By default, `type = "radio"`',
     },
   },
 }

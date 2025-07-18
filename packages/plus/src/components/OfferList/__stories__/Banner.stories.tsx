@@ -11,12 +11,14 @@ export const Banner: StoryFn<ComponentProps<typeof OfferList>> = props => (
           key={planet.id}
           id={planet.id}
           offerName={planet.id}
-          disabled={planet.id === 'mars'}
+          disabled={index === 2}
           expandable="Some text"
           banner={{
-            text: index === 2 ? 'Disabled banner' : 'This is a banner',
+            text:
+              index === 2
+                ? 'Disabled banner because row is disabled'
+                : 'This is a banner',
             sentiment: planet.id === 'mercury' ? 'primary' : undefined,
-            disabled: index === 2,
           }}
         >
           <OfferList.Cell>{planet.name}</OfferList.Cell>
@@ -36,7 +38,7 @@ Banner.parameters = {
   docs: {
     description: {
       story:
-        'Use props `bannerTop` or `bannerBottom` to add a banner inside the expandable part of a row',
+        'Use props `banner` to add a banner. When a row is disabled, its banner is also disabled.',
     },
   },
 }

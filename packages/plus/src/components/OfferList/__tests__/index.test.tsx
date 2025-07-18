@@ -73,7 +73,7 @@ describe('OfferList', () => {
     ))
   it('should work loading', () =>
     shouldMatchEmotionSnapshot(
-      <OfferList columns={columns} loading type="radio">
+      <OfferList columns={columns} loading>
         {data.map(planet => (
           <OfferList.Row offerName={planet.id} key={planet.id} id={planet.id}>
             <OfferList.Cell>{planet.name}</OfferList.Cell>
@@ -127,7 +127,7 @@ describe('OfferList', () => {
 
   it('should work with expandable', async () => {
     const { asFragment } = renderWithTheme(
-      <OfferList columns={columns} type="radio" expandable>
+      <OfferList columns={columns} expandable>
         {data.map(planet => (
           <OfferList.Row
             offerName={planet.id}

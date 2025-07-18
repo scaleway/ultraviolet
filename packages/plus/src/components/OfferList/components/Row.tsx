@@ -1,31 +1,25 @@
 'use client'
 
-import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import { ArrowDownIcon, ArrowUpIcon } from '@ultraviolet/icons'
-import { Button, List, Radio, Stack } from '@ultraviolet/ui'
+import { Button, List, Radio } from '@ultraviolet/ui'
 import { Children, useCallback, useMemo } from 'react'
 import type { ComponentProps, ReactNode } from 'react'
 import { useOfferListContext } from '../OfferListProvider'
-import { SELECTABLE_RADIO_SIZE } from '../constants'
 import { Banner } from './Banner'
 
-const NoPaddingCell = styled(List.Cell, {
-  shouldForwardProp: prop => !['maxWidth'].includes(prop),
-})<{
-  maxWidth: string
-}>`
+const NoPaddingCell = styled(List.Cell)`
   padding: 0;
 
   &:first-of-type {
     padding-left: ${({ theme }) => theme.space['2']};
   }
 
-  max-width: ${({ maxWidth }) => maxWidth};
 `
 const StyledRow = styled(List.Row, {
   shouldForwardProp: prop => !['selected', 'hasBanner'].includes(prop),
 })<{ selected: boolean; hasBanner: boolean }>`
+
     ${({ theme, selected }) =>
       selected
         ? `td, td:first-child, td:last-child {
@@ -45,9 +39,12 @@ const StyledRow = styled(List.Row, {
     ${({ hasBanner }) =>
       hasBanner
         ? `td, td:first-child {
-        border-bottom-right-radius: 0; 
         border-bottom-left-radius: 0;
-    }
+        }
+        
+        td, td:last-child {
+          border-bottom-right-radius: 0;
+        }
     `
         : null}
 `
@@ -62,14 +59,12 @@ type RowProps = ComponentProps<typeof List.Row> & {
   banner?: {
     text: ReactNode
     sentiment?: 'neutral' | 'primary' | 'warning' | 'danger'
-    disabled?: boolean
   }
   offerName: string
 }
 export const Row = ({
   children,
   disabled,
-  sentiment = 'neutral',
   id,
   banner,
   expandablePadding,
@@ -93,7 +88,6 @@ export const Row = ({
     autoCollapse,
   } = useOfferListContext()
   const { expandedRowIds, collapseRow, expandRow } = List.useListContext()
-  const theme = useTheme()
 
   const childrenNumber =
     Children.count(children) + (selectable ? 1 : 0) + (expandable ? 1 : 0)
@@ -111,14 +105,14 @@ export const Row = ({
   const computedExpandableContent = useMemo(() => {
     if (expandable && !loading && expandedRowIds[id] && banner) {
       return (
-        <Stack>
+        <>
           <CustomExpandable padding={expandablePadding}>
             {expandableContent}
           </CustomExpandable>
-          <Banner sentiment={banner.sentiment} disabled={banner.disabled}>
+          <Banner sentiment={banner.sentiment} disabled={disabled}>
             {banner.text}
           </Banner>
-        </Stack>
+        </>
       )
     }
     if (expandable && !loading) return expandableContent
@@ -132,6 +126,7 @@ export const Row = ({
     expandablePadding,
     id,
     expandableContent,
+    disabled,
   ])
 
   if (selectable === 'radio') {
@@ -145,7 +140,6 @@ export const Row = ({
           data-dragging={dataDragging}
           style={style}
           disabled={disabled}
-          sentiment={sentiment}
           id={id}
           expandable={computedExpandableContent}
           expandablePadding={banner ? '0' : undefined}
@@ -153,7 +147,7 @@ export const Row = ({
           expanded={expanded ?? expandedRowIds[id]}
           hasBanner={!!banner}
         >
-          <NoPaddingCell maxWidth={theme.sizing[SELECTABLE_RADIO_SIZE]}>
+          <NoPaddingCell>
             <Radio
               name={`radio-offer-list-${id}`}
               checked={radioSelectedRow === id}
@@ -172,12 +166,12 @@ export const Row = ({
             />
           </NoPaddingCell>
           {expandable ? (
-            <NoPaddingCell maxWidth={theme.sizing[SELECTABLE_RADIO_SIZE]}>
+            <NoPaddingCell>
               <Button
                 disabled={disabled || !expandable || loading}
                 onClick={toggleRowExpand}
                 size="small"
-                sentiment={sentiment}
+                sentiment="neutral"
                 variant="ghost"
                 aria-label="expand"
                 data-testid="list-expand-button"
@@ -190,7 +184,7 @@ export const Row = ({
         </StyledRow>
         {banner && !expandedRowIds[id] ? (
           <Banner
-            disabled={banner.disabled}
+            disabled={disabled}
             colSpan={childrenNumber}
             type="cell"
             sentiment={banner.sentiment}
@@ -212,7 +206,6 @@ export const Row = ({
         style={style}
         expanded={expanded}
         disabled={disabled}
-        sentiment={sentiment}
         id={offerName}
         expandable={computedExpandableContent}
         selectDisabled={selectDisabled || loading}
@@ -227,7 +220,7 @@ export const Row = ({
           colSpan={childrenNumber}
           type="cell"
           sentiment={banner.sentiment}
-          disabled={banner.disabled}
+          disabled={disabled}
         >
           {banner.text}
         </Banner>
