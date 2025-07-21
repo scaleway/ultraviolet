@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import type { Meta } from '@storybook/react'
+import type { Meta, StoryFn } from '@storybook/react'
 import { ButtonVanillaExtract } from '..'
 import { ThemeProvider } from '../ThemeProvider'
 
@@ -23,7 +23,7 @@ export default {
 const variants = ['filled', 'ghost', 'outlined'] as const
 const sentiments = ['primary', 'secondary', 'danger'] as const
 
-export const Playground = () => (
+export const Playground: StoryFn<typeof ButtonVanillaExtract> = props => (
   <div
     style={{
       display: 'grid',
@@ -50,6 +50,7 @@ export const Playground = () => (
         </div>
         {variants.map(variant => (
           <ButtonVanillaExtract
+            {...props}
             key={`${sentiment}-${variant}`}
             sentiment={sentiment}
             variant={variant}
@@ -66,8 +67,8 @@ export const Playground = () => (
 /*
  * Works with existing styled emotion components.
  */
-export const WithStyled = () => (
-  <StyledButton sentiment="primary" variant="filled">
+export const WithStyled: StoryFn<typeof ButtonVanillaExtract> = props => (
+  <StyledButton {...props} sentiment="primary" variant="filled">
     Button
   </StyledButton>
 )
@@ -75,8 +76,13 @@ export const WithStyled = () => (
 /*
  * Under the hood ButtonVanillaExtract handle data attributes
  */
-export const DataAttribute = () => (
-  <ButtonVanillaExtract sentiment="primary" variant="outlined" hasGreenBorder>
+export const DataAttribute: StoryFn<typeof ButtonVanillaExtract> = props => (
+  <ButtonVanillaExtract
+    {...props}
+    sentiment="primary"
+    variant="outlined"
+    hasGreenBorder
+  >
     Button
   </ButtonVanillaExtract>
 )

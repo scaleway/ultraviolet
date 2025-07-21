@@ -4,18 +4,70 @@ const fontWeightMap = {
   SemiBold: 600,
 }
 
+// Map prefix to the expected CSS property
+const prefixToProperty: Record<string, string> = {
+  color: 'background', // fallback, will be refined below
+  radius: 'border-radius',
+  shadow: 'box-shadow',
+  space: 'margin', // fallback, could be padding/margin
+  typography: 'font-family', // fallback, will be refined below
+  breakpoint: '', // breakpoints don't map to a CSS property
+}
+
+// Try to infer the property from the variable name
+const inferProperty = (
+  prefix: string,
+  formattedKey: string,
+  formattedInnerKey?: string,
+): string => {
+  // For colors, try to extract the property from the key
+  if (prefix === 'color') {
+    const key = [formattedKey, formattedInnerKey].filter(Boolean).join('-')
+    if (key.includes('background')) return 'background-color'
+    if (key.includes('border')) return 'border-color'
+    if (key.includes('icon')) return 'color'
+    if (key.includes('text')) return 'color'
+    if (key.includes('shadow')) return 'box-shadow'
+    if (key.includes('elevation')) return 'box-shadow'
+    if (key.includes('overlay')) return 'background-color'
+    return 'color'
+  }
+  if (prefix === 'typography') {
+    const key = [formattedKey, formattedInnerKey].filter(Boolean).join('-')
+    if (key.includes('font-family')) return 'font-family'
+    if (key.includes('font-size')) return 'font-size'
+    if (key.includes('font-weight')) return 'font-weight'
+    if (key.includes('letter-spacing')) return 'letter-spacing'
+    if (key.includes('line-height')) return 'line-height'
+    if (key.includes('text-decoration')) return 'text-decoration'
+    if (key.includes('text-case')) return 'text-transform'
+    if (key.includes('paragraph-spacing')) return 'margin-bottom'
+    return 'font-family'
+  }
+  if (prefix === 'radius') return 'border-radius'
+  if (prefix === 'shadow') return 'box-shadow'
+  if (prefix === 'space') return 'margin'
+  return prefixToProperty[prefix] || 'color'
+}
+
 const makeCSSVariablesRec = (
   innerKey: string,
   innerValue: string | object,
   prefix: string,
   formattedKey: string,
-): string => {
+): { variables: string; classes: string } => {
   if (typeof innerValue === 'object') {
     return Object.entries(innerValue)
       .map(([key, value]: [string, string | object]) =>
         makeCSSVariablesRec(key, value, prefix, `${formattedKey}-${innerKey}`),
       )
-      .join('')
+      .reduce(
+        (acc, curr) => ({
+          variables: acc.variables + curr.variables,
+          classes: acc.classes + curr.classes,
+        }),
+        { variables: '', classes: '' },
+      )
   }
   const cssValue = Object.keys(fontWeightMap).includes(
     innerValue as keyof typeof fontWeightMap,
@@ -33,37 +85,51 @@ const makeCSSVariablesRec = (
   // Create the CSS variable
   const variableLine = `    --${prefix}-${formattedKey}-${formattedInnerKey}: ${finalCSSValue};\n`
 
-  // Create a class for this variable
-  const classLine = `    .${prefix}-${formattedKey}-${formattedInnerKey} { --${prefix}: var(--${prefix}-${formattedKey}-${formattedInnerKey}); }\n`
+  // Infer the CSS property for the class
+  const cssProperty = inferProperty(prefix, formattedKey, formattedInnerKey)
+  // Only create a class if cssProperty is not empty
+  const classLine = cssProperty
+    ? `.${prefix}-${formattedKey}-${formattedInnerKey} { ${cssProperty}: var(--${prefix}-${formattedKey}-${formattedInnerKey}); }\n`
+    : ''
 
-  return variableLine + classLine
+  return { variables: variableLine, classes: classLine }
 }
 
-const createCssVariables = (prefix: string, obj: object) =>
-  Object.entries(obj)
-    .map(([key, value]: [string, string | object]) => {
-      const formattedKey = key
-        .replace(/([A-Z])/g, '-$1')
-        .replace(/\./g, '-')
-        .toLowerCase()
+const createCssVariables = (prefix: string, obj: object) => {
+  let variables = ''
+  let classes = ''
+  Object.entries(obj).forEach(([key, value]: [string, string | object]) => {
+    const formattedKey = key
+      .replace(/([A-Z])/g, '-$1')
+      .replace(/\./g, '-')
+      .toLowerCase()
 
-      if (typeof value === 'object' && value !== null) {
-        return Object.entries(value)
-          .map(([innerKey, innerValue]: [string, string | object]) =>
-            makeCSSVariablesRec(innerKey, innerValue, prefix, formattedKey),
-          )
-          .join('')
-      }
-
+    if (typeof value === 'object' && value !== null) {
+      Object.entries(value).forEach(
+        ([innerKey, innerValue]: [string, string | object]) => {
+          const { variables: innerVariables, classes: innerClasses } =
+            makeCSSVariablesRec(innerKey, innerValue, prefix, formattedKey)
+          variables += innerVariables
+          classes += innerClasses
+        },
+      )
+    } else {
       // Create the CSS variable
       const variableLine = `    --${prefix}-${formattedKey}: ${value};\n`
 
-      // Create a class for this variable
-      const classLine = `    .${prefix}-${formattedKey} { --${prefix}: var(--${prefix}-${formattedKey}); }\n`
+      // Infer the CSS property for the class
+      const cssProperty = inferProperty(prefix, formattedKey)
+      // Only create a class if cssProperty is not empty
+      const classLine = cssProperty
+        ? `.${prefix}-${formattedKey} { ${cssProperty}: var(--${prefix}-${formattedKey}); }\n`
+        : ''
 
-      return variableLine + classLine
-    })
-    .join('')
+      variables += variableLine
+      classes += classLine
+    }
+  })
+  return { variables, classes }
+}
 
 type UvThemeType = {
   colors: Record<string, string>
@@ -77,12 +143,28 @@ type UvThemeType = {
 export const generateThemeCss = ({
   uvTheme,
   filename,
-}: { uvTheme: UvThemeType; filename: string }) =>
-  `:root.${filename}-theme {\n${
-    createCssVariables('color', uvTheme.colors) +
-    createCssVariables('radius', uvTheme.radii) +
-    createCssVariables('shadow', uvTheme.shadows) +
-    createCssVariables('space', uvTheme.space) +
-    createCssVariables('typography', uvTheme.typography) +
-    createCssVariables('breakpoint', uvTheme.breakpoints)
-  }}\n`
+}: { uvTheme: UvThemeType; filename: string }) => {
+  const color = createCssVariables('color', uvTheme.colors)
+  const radius = createCssVariables('radius', uvTheme.radii)
+  const shadow = createCssVariables('shadow', uvTheme.shadows)
+  const space = createCssVariables('space', uvTheme.space)
+  const typography = createCssVariables('typography', uvTheme.typography)
+  const breakpoint = createCssVariables('breakpoint', uvTheme.breakpoints)
+
+  return (
+    `:root {\n` +
+    color.variables +
+    radius.variables +
+    shadow.variables +
+    space.variables +
+    typography.variables +
+    breakpoint.variables +
+    '}\n' +
+    color.classes +
+    radius.classes +
+    shadow.classes +
+    space.classes +
+    typography.classes +
+    breakpoint.classes
+  )
+}

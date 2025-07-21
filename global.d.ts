@@ -15,11 +15,6 @@ declare module '*.png' {
   export default content
 }
 
-declare module '*.css' {
-  const content: string
-  export default content
-}
-
 declare module '*.woff2' {
   const woff2Content: string
   export default woff2Content

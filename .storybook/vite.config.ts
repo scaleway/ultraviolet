@@ -12,6 +12,7 @@ export default defineConfig({
     alias: {
       '@ultraviolet/ui': resolve('packages/ui/src'),
       '@ultraviolet/themes': resolve('packages/themes/src'),
+      '@ultraviolet/themesCss': resolve('packages/themes/public'),
       '@ultraviolet/plus': resolve('packages/plus/src'),
       '@ultraviolet/illustrations/various': resolve(
         'packages/illustrations/src/assets/various',

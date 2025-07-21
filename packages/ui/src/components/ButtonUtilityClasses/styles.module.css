@@ -1,0 +1,11 @@
+.base {
+  padding: var(--space-1);
+  border-radius: var(--radius-default);
+  cursor: pointer;
+  border: 1px solid transparent;
+  background: transparent;
+
+  &[data-has-green-border='true'] {
+    border: 4px solid green;
+  }
+}
