@@ -240,8 +240,13 @@ export const DateInput = <IsRange extends undefined | boolean>({
 
   const manageOnChange = (event: ChangeEvent<HTMLInputElement>) => {
     const newValue = event.currentTarget.value
-    // @ts-expect-error can't get the correct type
-    if (!newValue) onChange?.(selectsRange ? [null, null] : null)
+
+    if (!newValue)
+      onChange?.(
+        (selectsRange ? [null, null] : null) as
+          | (Date[] & Date)
+          | ([Date | null, Date | null] & Date),
+      )
 
     if (selectsRange) {
       const computedNewRange = createDateRange(newValue, showMonthYearPicker)
