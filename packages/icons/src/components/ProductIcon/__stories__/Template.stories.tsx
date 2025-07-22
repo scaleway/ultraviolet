@@ -1,4 +1,4 @@
-import type { StoryFn } from '@storybook/react'
+import type { StoryFn } from '@storybook/react-vite'
 import type { ComponentProps } from 'react'
 import { InstanceProductIcon } from '../__generated__'
 

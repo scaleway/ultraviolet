@@ -1,4 +1,4 @@
-import type { Meta, StoryFn } from '@storybook/react'
+import type { Meta, StoryFn } from '@storybook/react-vite'
 import { Stack, Text } from '@ultraviolet/ui'
 import { useState } from 'react'
 import { Form, useForm, useOnFieldChange } from '../..'

@@ -1,4 +1,4 @@
-import type { StoryFn } from '@storybook/react'
+import type { StoryFn } from '@storybook/react-vite'
 import { CockpitProductIcon } from '@ultraviolet/icons/product'
 import { Row, Stack, Text } from '@ultraviolet/ui'
 import illustration from '../assets/illustration.png'
