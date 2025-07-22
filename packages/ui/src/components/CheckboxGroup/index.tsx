@@ -45,6 +45,7 @@ export const CheckboxGroupCheckbox = ({
   autoFocus,
   'data-testid': dataTestId,
   required,
+  tooltip,
 }: CheckboxGroupCheckboxProps) => {
   const context = useContext(CheckboxGroupContext)
 
@@ -74,6 +75,7 @@ export const CheckboxGroupCheckbox = ({
       autoFocus={autoFocus}
       data-testid={dataTestId}
       required={required}
+      tooltip={tooltip}
     >
       {children}
     </StyledCheckbox>
