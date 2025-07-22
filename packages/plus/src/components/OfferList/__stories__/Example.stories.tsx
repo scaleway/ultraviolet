@@ -1,4 +1,4 @@
-import type { StoryFn } from '@storybook/react'
+import type { StoryFn } from '@storybook/react-vite'
 import { LeafIcon } from '@ultraviolet/icons'
 import { Stack } from '@ultraviolet/ui'
 import { useMemo, useState } from 'react'

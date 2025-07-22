@@ -71,6 +71,26 @@ describe('OfferList', () => {
         ))}
       </OfferList>,
     ))
+
+  it('should work with badge', () =>
+    shouldMatchEmotionSnapshot(
+      <OfferList columns={columns} expandable>
+        {data.map(planet => (
+          <OfferList.Row
+            offerName={planet.id}
+            key={planet.id}
+            id={planet.id}
+            badge={{ text: 'text' }}
+            expandable="text"
+          >
+            <OfferList.Cell>{planet.name}</OfferList.Cell>
+            <OfferList.Cell>{planet.perihelion}AU</OfferList.Cell>
+            <OfferList.Cell>{planet.aphelion}AU</OfferList.Cell>
+          </OfferList.Row>
+        ))}
+      </OfferList>,
+    ))
+
   it('should work loading', () =>
     shouldMatchEmotionSnapshot(
       <OfferList columns={columns} loading>

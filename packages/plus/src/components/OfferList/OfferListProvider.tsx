@@ -10,6 +10,10 @@ type OfferListContextValue = {
   loading?: boolean
   onChangeSelect?: (selected: string | string[]) => void
   autoCollapse?: boolean
+  checkboxSelectedRows: Record<string | number, boolean>
+  setCheckboxSelectedRows: Dispatch<
+    SetStateAction<Record<string | number, boolean>>
+  >
 }
 const OfferListContext = createContext<OfferListContextValue | undefined>(
   undefined,
@@ -35,6 +39,9 @@ export const OfferListProvider = ({
   autoCollapse,
 }: OfferListProviderProps) => {
   const [radioSelectedRow, setRadioSelectedRow] = useState<string>()
+  const [checkboxSelectedRows, setCheckboxSelectedRows] = useState<
+    Record<string | number, boolean>
+  >({})
 
   return (
     <OfferListContext.Provider
@@ -42,6 +49,8 @@ export const OfferListProvider = ({
         selectable,
         radioSelectedRow,
         setRadioSelectedRow,
+        checkboxSelectedRows,
+        setCheckboxSelectedRows,
         expandable,
         disabled,
         loading,
