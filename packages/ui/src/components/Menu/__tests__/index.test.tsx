@@ -255,7 +255,7 @@ describe('Menu', () => {
 
   test('can navigate with arrow keys', async () => {
     const { asFragment } = renderWithTheme(
-      <Menu disclosure={() => disclosure} searchable>
+      <Menu disclosure={() => disclosure}>
         <Menu.Item data-testid="item" borderless>
           Power on
         </Menu.Item>
