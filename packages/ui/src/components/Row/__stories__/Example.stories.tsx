@@ -1,4 +1,4 @@
-import type { StoryFn } from '@storybook/react'
+import type { StoryFn } from '@storybook/react-vite'
 import { Row } from '..'
 import { Card, Separator, Stack, Status, Text } from '../..'
 

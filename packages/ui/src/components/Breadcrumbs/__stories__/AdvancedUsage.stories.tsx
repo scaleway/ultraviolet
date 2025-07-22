@@ -1,4 +1,4 @@
-import type { StoryFn } from '@storybook/react'
+import type { StoryFn } from '@storybook/react-vite'
 import { ArrowDownIcon, DotsHorizontalIcon, PlusIcon } from '@ultraviolet/icons'
 import type { ComponentProps } from 'react'
 import { Breadcrumbs } from '..'

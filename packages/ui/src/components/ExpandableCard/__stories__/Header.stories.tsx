@@ -1,4 +1,4 @@
-import type { Decorator, StoryFn } from '@storybook/react'
+import type { Decorator, StoryFn } from '@storybook/react-vite'
 import { DeleteIcon, DotsHorizontalIcon } from '@ultraviolet/icons'
 import { KubernetesProductIcon } from '@ultraviolet/icons/product'
 import { ExpandableCard } from '..'

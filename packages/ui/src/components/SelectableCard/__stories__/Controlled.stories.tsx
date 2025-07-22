@@ -1,4 +1,4 @@
-import type { StoryFn } from '@storybook/react'
+import type { StoryFn } from '@storybook/react-vite'
 import type { ChangeEvent } from 'react'
 import { useState } from 'react'
 import { SelectableCard } from '..'

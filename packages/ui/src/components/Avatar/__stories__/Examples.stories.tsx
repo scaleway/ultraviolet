@@ -1,4 +1,4 @@
-import type { StoryFn } from '@storybook/react'
+import type { StoryFn } from '@storybook/react-vite'
 import { LockIcon } from '@ultraviolet/icons'
 import { useRef, useState } from 'react'
 import { Avatar } from '..'

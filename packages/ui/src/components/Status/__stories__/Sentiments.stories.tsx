@@ -1,4 +1,4 @@
-import type { StoryFn } from '@storybook/react'
+import type { StoryFn } from '@storybook/react-vite'
 import { Status, statusSentiments } from '..'
 
 export const Sentiments: StoryFn<typeof Status> = props => (

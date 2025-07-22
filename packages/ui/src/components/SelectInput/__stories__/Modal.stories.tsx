@@ -1,4 +1,4 @@
-import type { StoryFn } from '@storybook/react'
+import type { StoryFn } from '@storybook/react-vite'
 import { SelectInput } from '..'
 import { Button } from '../../Button'
 import { Modal as ModalComponent } from '../../Modal'

@@ -1,4 +1,4 @@
-import { create } from '@storybook/theming'
+import { create } from 'storybook/theming'
 import lightTheme, { darkTheme } from '../packages/ui/src/theme'
 import logoDark from './assets/logo-dark.png'
 import logoLight from './assets/logo-light.png'

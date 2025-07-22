@@ -1,7 +1,7 @@
 import { Global, ThemeProvider } from '@emotion/react'
 import { withThemeFromJSXProvider } from '@storybook/addon-themes'
-import type { Preview, StoryFn } from '@storybook/react'
-import { themes } from '@storybook/theming'
+import type { Preview, StoryFn } from '@storybook/react-vite'
+import { themes } from 'storybook/theming'
 import {
   consoleDarkTheme as darkTheme,
   consoleDarkerTheme as darkerTheme,
@@ -168,4 +168,5 @@ const decorators = [
 export default {
   parameters,
   decorators,
+  tags: ['autodocs']
 } satisfies Preview

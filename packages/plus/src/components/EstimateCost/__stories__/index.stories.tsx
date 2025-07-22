@@ -1,4 +1,4 @@
-import type { Meta } from '@storybook/react'
+import type { Meta } from '@storybook/react-vite'
 import { EstimateCost } from '..'
 import { Item } from '../Components/Item'
 import { LineThrough } from '../Components/LineThrough'

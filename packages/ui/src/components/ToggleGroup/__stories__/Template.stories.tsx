@@ -1,4 +1,4 @@
-import type { StoryFn } from '@storybook/react'
+import type { StoryFn } from '@storybook/react-vite'
 import { ToggleGroup } from '..'
 
 export const Template: StoryFn<typeof ToggleGroup> = args => (

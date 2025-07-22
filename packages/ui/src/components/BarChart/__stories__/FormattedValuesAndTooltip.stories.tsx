@@ -1,4 +1,4 @@
-import type { StoryFn } from '@storybook/react'
+import type { StoryFn } from '@storybook/react-vite'
 import { format } from 'date-fns'
 import { BarChart } from '..'
 import { barChartSimpleData } from './mockData'
