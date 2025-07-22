@@ -2,11 +2,31 @@
 
 import styled from '@emotion/styled'
 import { ArrowDownIcon, ArrowUpIcon } from '@ultraviolet/icons'
-import { Button, List, Radio } from '@ultraviolet/ui'
+import {
+  Badge as BadgeUV,
+  Button,
+  Checkbox,
+  List,
+  Radio,
+  Tooltip,
+} from '@ultraviolet/ui'
 import { Children, useCallback, useMemo } from 'react'
 import type { ComponentProps, ReactNode } from 'react'
 import { useOfferListContext } from '../OfferListProvider'
 import { Banner } from './Banner'
+
+const StyledBadge = styled(BadgeUV)`
+  position: absolute;
+  left: ${({ theme }) => theme.space[1]};
+  transform: translateY(-150%);
+  top: 0;
+  left: ${({ theme }) => theme.space[3]};
+`
+
+const BadgeContainer = styled.div`
+position: absolute;
+top: ${({ theme }) => theme.space[2]};
+`
 
 const NoPaddingCell = styled(List.Cell)`
   padding: 0;
@@ -48,6 +68,11 @@ const StyledRow = styled(List.Row, {
     `
         : null}
 `
+
+const SelectableContainer = styled.div`
+  display: flex;
+`
+
 const CustomExpandable = styled('div', {
   shouldForwardProp: prop => !['padding'].includes(prop),
 })<{ padding?: ComponentProps<typeof List.Row>['expandablePadding'] }>`
@@ -61,6 +86,10 @@ type RowProps = ComponentProps<typeof List.Row> & {
     sentiment?: 'neutral' | 'primary' | 'warning' | 'danger'
   }
   offerName: string
+  badge?: {
+    text: ReactNode
+    sentiment?: ComponentProps<typeof BadgeUV>['sentiment']
+  }
 }
 export const Row = ({
   children,
@@ -77,11 +106,14 @@ export const Row = ({
   'data-dragging': dataDragging,
   'data-testid': dataTestId,
   style,
+  badge,
 }: RowProps) => {
   const {
     selectable,
     radioSelectedRow,
     setRadioSelectedRow,
+    checkboxSelectedRows,
+    setCheckboxSelectedRows,
     expandable,
     loading,
     onChangeSelect,
@@ -133,7 +165,6 @@ export const Row = ({
     return (
       <>
         <StyledRow
-          selectDisabled={selectDisabled}
           highlightAnimation={highlightAnimation}
           className={className}
           data-testid={dataTestId}
@@ -148,22 +179,43 @@ export const Row = ({
           hasBanner={!!banner}
         >
           <NoPaddingCell>
-            <Radio
-              name={`radio-offer-list-${id}`}
-              checked={radioSelectedRow === id}
-              value={id}
-              id={id}
-              disabled={disabled || loading}
-              onChange={event => {
-                setRadioSelectedRow(event.currentTarget.id)
-                onChangeSelect?.(offerName)
-                if (expandedRowIds[id]) {
-                  expandRow(id)
-                } else if (!autoCollapse) {
-                  collapseRow(id)
+            {badge ? (
+              <BadgeContainer>
+                <StyledBadge
+                  sentiment={badge.sentiment}
+                  disabled={disabled}
+                  size="small"
+                >
+                  {badge.text}
+                </StyledBadge>
+              </BadgeContainer>
+            ) : null}
+            <SelectableContainer>
+              <Tooltip
+                text={
+                  typeof selectDisabled === 'string'
+                    ? selectDisabled
+                    : undefined
                 }
-              }}
-            />
+              >
+                <Radio
+                  name={`radio-offer-list-${id}`}
+                  checked={radioSelectedRow === id}
+                  value={id}
+                  id={id}
+                  disabled={disabled || loading || !!selectDisabled}
+                  onChange={event => {
+                    setRadioSelectedRow(event.currentTarget.id)
+                    onChangeSelect?.(offerName)
+                    if (expandedRowIds[id]) {
+                      expandRow(id)
+                    } else if (!autoCollapse) {
+                      collapseRow(id)
+                    }
+                  }}
+                />
+              </Tooltip>
+            </SelectableContainer>
           </NoPaddingCell>
           {expandable ? (
             <NoPaddingCell>
@@ -204,15 +256,77 @@ export const Row = ({
         data-testid={dataTestId}
         data-dragging={dataDragging}
         style={style}
-        expanded={expanded}
+        expanded={expanded ?? expandedRowIds[id]}
         disabled={disabled}
         id={offerName}
         expandable={computedExpandableContent}
-        selectDisabled={selectDisabled || loading}
         expandablePadding={banner ? '0' : undefined}
         hasBanner={!!banner}
         selected={false}
       >
+        <NoPaddingCell>
+          {badge ? (
+            <BadgeContainer>
+              <StyledBadge
+                sentiment={badge.sentiment}
+                disabled={disabled}
+                size="small"
+              >
+                {badge.text}
+              </StyledBadge>
+            </BadgeContainer>
+          ) : null}
+          <SelectableContainer>
+            <Tooltip
+              text={
+                typeof selectDisabled === 'string' ? selectDisabled : undefined
+              }
+            >
+              <Checkbox
+                name={`checkbox-offer-list-${id}`}
+                aria-label="select"
+                checked={checkboxSelectedRows[id]}
+                value={id}
+                id={id}
+                disabled={disabled || loading || !!selectDisabled}
+                onChange={() => {
+                  const newSelectedRows = {
+                    ...checkboxSelectedRows,
+                    [id]: checkboxSelectedRows[id]
+                      ? !checkboxSelectedRows[id]
+                      : true,
+                  }
+                  setCheckboxSelectedRows(newSelectedRows)
+                  onChangeSelect?.(
+                    Object.keys(newSelectedRows).filter(
+                      key => newSelectedRows[key],
+                    ),
+                  )
+                  if (expandedRowIds[id]) {
+                    expandRow(id)
+                  } else if (!autoCollapse) {
+                    collapseRow(id)
+                  }
+                }}
+              />
+            </Tooltip>
+          </SelectableContainer>
+        </NoPaddingCell>
+        {expandable ? (
+          <NoPaddingCell>
+            <Button
+              disabled={disabled || !expandable || loading}
+              onClick={toggleRowExpand}
+              size="small"
+              sentiment="neutral"
+              variant="ghost"
+              aria-label="expand"
+              data-testid="list-expand-button"
+            >
+              {expandedRowIds[id] ? <ArrowUpIcon /> : <ArrowDownIcon />}
+            </Button>
+          </NoPaddingCell>
+        ) : null}
         {children}
       </StyledRow>
       {banner && !expandedRowIds[id] ? (

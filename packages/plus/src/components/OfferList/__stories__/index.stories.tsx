@@ -1,4 +1,4 @@
-import type { Meta } from '@storybook/react'
+import type { Meta } from '@storybook/react-vite'
 import { OfferList } from '..'
 
 export default {
@@ -16,5 +16,6 @@ export { Type } from './Type.stories'
 export { Expandable } from './Expandable.stories'
 export { Loading } from './Loading.stories'
 export { Banner } from './Banner.stories'
+export { Badge } from './Badge.stories'
 export { OnChange } from './OnChangeSelect.stories'
 export { Example } from './Example.stories'

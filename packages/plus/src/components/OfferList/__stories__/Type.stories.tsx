@@ -1,4 +1,4 @@
-import type { StoryFn } from '@storybook/react'
+import type { StoryFn } from '@storybook/react-vite'
 import { Stack, Text } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
 import { OfferList } from '../OfferList'
@@ -16,7 +16,14 @@ export const Type: StoryFn<ComponentProps<typeof OfferList>> = props => (
       </Text>
       <OfferList {...props} type="radio">
         {data.map(planet => (
-          <OfferList.Row key={planet.id} id={planet.id} offerName={planet.id}>
+          <OfferList.Row
+            key={planet.id}
+            id={planet.id}
+            offerName={planet.id}
+            selectDisabled={
+              planet.id === 'jupiter' ? 'this row cannot be selected' : false
+            }
+          >
             <OfferList.Cell>{planet.name}</OfferList.Cell>
             <OfferList.Cell>{planet.perihelion}AU</OfferList.Cell>
             <OfferList.Cell>{planet.aphelion}AU</OfferList.Cell>
@@ -34,7 +41,16 @@ export const Type: StoryFn<ComponentProps<typeof OfferList>> = props => (
       </Text>
       <OfferList {...props} type="checkbox">
         {data.map(planet => (
-          <OfferList.Row key={planet.id} id={planet.id} offerName={planet.id}>
+          <OfferList.Row
+            key={planet.id}
+            id={planet.id}
+            offerName={planet.id}
+            selectDisabled={
+              planet.id === 'jupiter'
+                ? 'this row cannot be selected (but it is not disabled)'
+                : false
+            }
+          >
             <OfferList.Cell>{planet.name}</OfferList.Cell>
             <OfferList.Cell>{planet.perihelion}AU</OfferList.Cell>
             <OfferList.Cell>{planet.aphelion}AU</OfferList.Cell>
@@ -53,7 +69,7 @@ Type.parameters = {
   docs: {
     description: {
       story:
-        'Offers are selectable. For multi select, set prop `type` to `checkbox`, for single select, set it to `radio`. By default, `type = "radio"`',
+        'Offers are selectable. For multi select, set prop `type` to `checkbox`, for single select, set it to `radio`. By default, `type = "radio"`. Use prop `selectDisabled` to disable selection on a row, without disabling the whole row.',
     },
   },
 }

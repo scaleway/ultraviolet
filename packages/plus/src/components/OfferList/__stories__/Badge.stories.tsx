@@ -3,7 +3,7 @@ import type { ComponentProps } from 'react'
 import { OfferList } from '../OfferList'
 import { columns, data } from './resources'
 
-export const Banner: StoryFn<ComponentProps<typeof OfferList>> = props => (
+export const Badge: StoryFn<ComponentProps<typeof OfferList>> = props => (
   <OfferList {...props} expandable>
     {data.map((planet, index) =>
       index < 3 ? (
@@ -13,12 +13,9 @@ export const Banner: StoryFn<ComponentProps<typeof OfferList>> = props => (
           offerName={planet.id}
           disabled={index === 2}
           expandable="Some text"
-          banner={{
-            text:
-              index === 2
-                ? 'Disabled banner because row is disabled'
-                : 'This is a banner',
-            sentiment: planet.id === 'mercury' ? 'primary' : undefined,
+          badge={{
+            text: 'I am a badge',
+            sentiment: index === 1 ? 'primary' : 'neutral',
           }}
         >
           <OfferList.Cell>{planet.name}</OfferList.Cell>
@@ -30,15 +27,15 @@ export const Banner: StoryFn<ComponentProps<typeof OfferList>> = props => (
   </OfferList>
 )
 
-Banner.args = {
+Badge.args = {
   columns,
 }
 
-Banner.parameters = {
+Badge.parameters = {
   docs: {
     description: {
       story:
-        'Use props `banner` to add a banner. When a row is disabled, its banner is also disabled.',
+        'Use props `badge` to add a badge to the row. When a row is disabled, its badge is also disabled.',
     },
   },
 }
