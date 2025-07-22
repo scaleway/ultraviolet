@@ -1,7 +1,13 @@
 'use client'
 
 import styled from '@emotion/styled'
-import type { ButtonHTMLAttributes, MouseEvent, ReactNode, Ref } from 'react'
+import type {
+  ButtonHTMLAttributes,
+  KeyboardEvent,
+  MouseEvent,
+  ReactNode,
+  Ref,
+} from 'react'
 import {
   cloneElement,
   forwardRef,
@@ -19,7 +25,7 @@ import { SearchInput } from '../SearchInput'
 import { Stack } from '../Stack'
 import { DisclosureContext, useMenu } from './MenuProvider'
 import { SIZES } from './constants'
-import { searchChildren } from './helpers'
+import { getListItem, searchChildren } from './helpers'
 import type { MenuProps } from './types'
 
 const StyledPopup = styled(Popup, {
@@ -111,14 +117,20 @@ export const Menu = forwardRef(
     }: MenuProps,
     ref: Ref<HTMLButtonElement | null>,
   ) => {
-    const { isVisible, setIsVisible, isNested } = useMenu()
+    const {
+      isVisible,
+      setIsVisible,
+      isNested,
+      disclosureRef,
+      menuRef,
+      setShouldBeVisible,
+      shouldBeVisible,
+    } = useMenu()
     const searchInputRef = useRef<HTMLInputElement>(null)
     const [localChild, setLocalChild] = useState<ReactNode[] | null>(null)
-    const popupRef = useRef<HTMLDivElement>(null)
-    const disclosureRef = useRef<HTMLButtonElement>(null)
+    const contentRef = useRef<HTMLDivElement>(null)
     const tempId = useId()
     const finalId = `menu-${id ?? tempId}`
-
     // if you need dialog inside your component, use function, otherwise component is fine
     const target = isValidElement<ButtonHTMLAttributes<HTMLButtonElement>>(
       disclosure,
@@ -156,6 +168,36 @@ export const Menu = forwardRef(
       }
     }, [isVisible, searchable])
 
+    useEffect(() => {
+      if (disclosureRef.current && triggerMethod === 'hover') {
+        const handler = (value: boolean | undefined) => {
+          setShouldBeVisible(value)
+        }
+
+        disclosureRef.current.addEventListener('focus', () => handler(true))
+        disclosureRef.current.addEventListener('mouseenter', () =>
+          handler(true),
+        )
+        disclosureRef.current.addEventListener('mouseleave', () =>
+          handler(undefined),
+        )
+        disclosureRef.current.addEventListener('keydown', event => {
+          if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
+            handler(false) // force close menu when navigating with arrow keys
+          }
+        })
+
+        return () => {
+          window.removeEventListener('focus', () => handler(undefined))
+          window.removeEventListener('mouseenter', () => handler(undefined))
+          window.removeEventListener('mouseleave', () => handler(undefined))
+          window.removeEventListener('keydown', () => handler(undefined))
+        }
+      }
+
+      return undefined
+    }, [setShouldBeVisible, disclosureRef, triggerMethod])
+
     const finalChild = useMemo(() => {
       if (typeof children === 'function') {
         return children({ toggle: () => setIsVisible(!isVisible) })
@@ -168,22 +210,65 @@ export const Menu = forwardRef(
       return children
     }, [children, isVisible, localChild, searchable, setIsVisible])
 
+    const handleTabOpen = (event: KeyboardEvent) => {
+      if (contentRef.current) {
+        const listItem = getListItem([...contentRef.current.children])
+        if (listItem && isVisible && ['Tab', 'ArrowDown'].includes(event.key)) {
+          event?.preventDefault()
+          listItem[0]?.focus()
+        }
+      }
+    }
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (contentRef.current) {
+        const listItem = getListItem([...contentRef.current.children])
+        if (listItem) {
+          const currentElement = listItem.find(
+            item => item === document.activeElement,
+          )
+          if (currentElement) {
+            if (event.key === 'ArrowDown') {
+              event.preventDefault()
+              const indexOfCurrent = listItem.indexOf(currentElement)
+
+              if (indexOfCurrent < listItem.length - 1) {
+                listItem[indexOfCurrent + 1].focus()
+              } else listItem[0].focus()
+            } else if (event.key === 'ArrowUp') {
+              event.preventDefault()
+
+              const indexOfCurrent = listItem.indexOf(currentElement)
+              if (indexOfCurrent > 0) {
+                listItem[indexOfCurrent - 1].focus()
+              } else listItem[listItem.length - 1].focus()
+            } else if (event.key === 'ArrowLeft' && triggerMethod === 'hover') {
+              disclosureRef.current?.focus()
+              setShouldBeVisible(undefined)
+            }
+          }
+        }
+      }
+    }
+
     return (
       <StyledPopup
         debounceDelay={triggerMethod === 'hover' ? 250 : 0}
         hideOnClickOutside
         aria-label={ariaLabel}
         className={className}
-        visible={triggerMethod === 'click' ? isVisible : undefined}
+        visible={triggerMethod === 'click' ? isVisible : shouldBeVisible}
         placement={isNested ? 'nested-menu' : placement}
         hasArrow={hasArrow}
         data-has-arrow={hasArrow}
         role="dialog"
         id={finalId}
-        ref={popupRef}
+        ref={menuRef}
         onClose={() => {
           setIsVisible(false)
           setLocalChild(null)
+          if (triggerMethod === 'click') disclosureRef.current?.focus()
+          setShouldBeVisible(undefined)
         }}
         tabIndex={-1}
         maxHeight={maxHeight ?? '30rem'}
@@ -194,8 +279,9 @@ export const Menu = forwardRef(
             className={className}
             role="menu"
             height={maxHeight ?? '30rem'}
+            onKeyDown={handleKeyDown}
           >
-            <Content>
+            <Content ref={contentRef}>
               {searchable && typeof children !== 'function' ? (
                 <StyledSearchInput
                   size="small"
@@ -211,6 +297,7 @@ export const Menu = forwardRef(
         portalTarget={portalTarget}
         dynamicDomRendering={dynamicDomRendering}
         align={align}
+        onKeyDown={handleTabOpen}
       >
         <DisclosureContext.Provider value>
           {finalDisclosure}
