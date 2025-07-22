@@ -3,10 +3,6 @@ import deepmerge from 'deepmerge'
 
 export type ScreenSize = keyof typeof consoleLightTheme.breakpoints
 
-/**
- * @deprecated use UltravioletUITheme instead
- */
-type SCWUITheme = typeof consoleLightTheme
 type UltravioletUITheme = typeof consoleLightTheme
 
 const { colors, shadows, typography, space, radii, breakpoints } =
@@ -52,7 +48,7 @@ const SENTIMENTS_WITHOUT_NEUTRAL = SENTIMENTS.filter(
   sentiment => sentiment !== 'neutral',
 )
 
-export type { SCWUITheme, UltravioletUITheme, Color, ExtendedColor }
+export type { UltravioletUITheme, Color, ExtendedColor }
 
 export {
   colors,

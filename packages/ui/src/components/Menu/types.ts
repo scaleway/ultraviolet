@@ -24,9 +24,6 @@ export type DisclosureProps = { visible: boolean }
 export type MenuProps = {
   id?: string
   ariaLabel?: string
-  /*
-   * CHILDREN AS FUNCTION IS DEPRECATED: use `hideOnClickWithin` prop instead
-   */
   children?: ReactNode | (({ toggle }: ChildMenuProps) => ReactNode)
   className?: string
   disclosure: DisclosureElement
