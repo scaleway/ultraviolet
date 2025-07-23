@@ -161,6 +161,12 @@ export const Row = ({
     disabled,
   ])
 
+  const isRowSelected = useMemo(() => {
+    if (selectable === 'radio') return radioSelectedRow === offerName
+
+    return checkboxSelectedRows.includes(offerName)
+  }, [offerName, checkboxSelectedRows, radioSelectedRow, selectable])
+
   if (selectable === 'radio') {
     return (
       <>
@@ -200,12 +206,12 @@ export const Row = ({
               >
                 <Radio
                   name={`radio-offer-list-${id}`}
-                  checked={radioSelectedRow === id}
+                  checked={isRowSelected}
                   value={id}
                   id={id}
                   disabled={disabled || loading || !!selectDisabled}
-                  onChange={event => {
-                    setRadioSelectedRow(event.currentTarget.id)
+                  onChange={() => {
+                    setRadioSelectedRow(offerName)
                     onChangeSelect?.(offerName)
                     if (expandedRowIds[id]) {
                       expandRow(id)
@@ -285,23 +291,23 @@ export const Row = ({
               <Checkbox
                 name={`checkbox-offer-list-${id}`}
                 aria-label="select"
-                checked={checkboxSelectedRows[id]}
+                checked={isRowSelected}
                 value={id}
                 id={id}
                 disabled={disabled || loading || !!selectDisabled}
                 onChange={() => {
-                  const newSelectedRows = {
-                    ...checkboxSelectedRows,
-                    [id]: checkboxSelectedRows[id]
-                      ? !checkboxSelectedRows[id]
-                      : true,
+                  if (isRowSelected) {
+                    const newSelectedList = checkboxSelectedRows.filter(
+                      element => element !== offerName,
+                    )
+                    setCheckboxSelectedRows(newSelectedList)
+                    onChangeSelect?.(newSelectedList)
+                  } else {
+                    const newSelectedList = [...checkboxSelectedRows, offerName]
+                    setCheckboxSelectedRows(newSelectedList)
+                    onChangeSelect?.(newSelectedList)
                   }
-                  setCheckboxSelectedRows(newSelectedRows)
-                  onChangeSelect?.(
-                    Object.keys(newSelectedRows).filter(
-                      key => newSelectedRows[key],
-                    ),
-                  )
+
                   if (expandedRowIds[id]) {
                     expandRow(id)
                   } else if (!autoCollapse) {

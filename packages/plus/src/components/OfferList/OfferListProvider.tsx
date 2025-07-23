@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from 'react'
+import { createContext, useContext } from 'react'
 import type { Dispatch, ReactNode, SetStateAction } from 'react'
 
 type OfferListContextValue = {
@@ -10,10 +10,8 @@ type OfferListContextValue = {
   loading?: boolean
   onChangeSelect?: (selected: string | string[]) => void
   autoCollapse?: boolean
-  checkboxSelectedRows: Record<string | number, boolean>
-  setCheckboxSelectedRows: Dispatch<
-    SetStateAction<Record<string | number, boolean>>
-  >
+  checkboxSelectedRows: string[]
+  setCheckboxSelectedRows: Dispatch<SetStateAction<string[]>>
 }
 const OfferListContext = createContext<OfferListContextValue | undefined>(
   undefined,
@@ -27,6 +25,10 @@ type OfferListProviderProps = {
   loading?: boolean
   onChangeSelect?: (selected: string | string[]) => void
   autoCollapse?: boolean
+  radioSelectedRow: string | undefined
+  setRadioSelectedRow: Dispatch<SetStateAction<string | undefined>>
+  checkboxSelectedRows: string[]
+  setCheckboxSelectedRows: Dispatch<SetStateAction<string[]>>
 }
 
 export const OfferListProvider = ({
@@ -37,31 +39,28 @@ export const OfferListProvider = ({
   loading,
   onChangeSelect,
   autoCollapse,
-}: OfferListProviderProps) => {
-  const [radioSelectedRow, setRadioSelectedRow] = useState<string>()
-  const [checkboxSelectedRows, setCheckboxSelectedRows] = useState<
-    Record<string | number, boolean>
-  >({})
-
-  return (
-    <OfferListContext.Provider
-      value={{
-        selectable,
-        radioSelectedRow,
-        setRadioSelectedRow,
-        checkboxSelectedRows,
-        setCheckboxSelectedRows,
-        expandable,
-        disabled,
-        loading,
-        onChangeSelect,
-        autoCollapse,
-      }}
-    >
-      {children}
-    </OfferListContext.Provider>
-  )
-}
+  radioSelectedRow,
+  setRadioSelectedRow,
+  checkboxSelectedRows,
+  setCheckboxSelectedRows,
+}: OfferListProviderProps) => (
+  <OfferListContext.Provider
+    value={{
+      selectable,
+      radioSelectedRow,
+      setRadioSelectedRow,
+      checkboxSelectedRows,
+      setCheckboxSelectedRows,
+      expandable,
+      disabled,
+      loading,
+      onChangeSelect,
+      autoCollapse,
+    }}
+  >
+    {children}
+  </OfferListContext.Provider>
+)
 
 export const useOfferListContext = () => {
   const context = useContext(OfferListContext)

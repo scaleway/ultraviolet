@@ -40,7 +40,10 @@ describe('OfferList', () => {
             offerName={planet.id}
             key={planet.id}
             id={planet.id}
-            banner={{ text: 'text' }}
+            banner={{
+              text: 'text',
+              sentiment: planet.id === 'mercury' ? 'warning' : undefined,
+            }}
             expandable="text"
           >
             <OfferList.Cell>{planet.name}</OfferList.Cell>
@@ -106,7 +109,12 @@ describe('OfferList', () => {
   it('should work with selectable - radio', async () => {
     const onChange = vi.fn()
     const { asFragment } = renderWithTheme(
-      <OfferList columns={columns} onChangeSelect={onChange} type="radio">
+      <OfferList
+        columns={columns}
+        onChangeSelect={onChange}
+        type="radio"
+        selected="jupiter"
+      >
         {data.map(planet => (
           <OfferList.Row offerName={planet.id} key={planet.id} id={planet.id}>
             <OfferList.Cell>{planet.name}</OfferList.Cell>
@@ -117,17 +125,27 @@ describe('OfferList', () => {
       </OfferList>,
     )
 
+    // Default selected value
+    const radioJupiter = screen.getByDisplayValue('jupiter')
+    expect(radioJupiter).toBeChecked()
+
     const radioVenus = screen.getByDisplayValue('venus')
     await userEvent.click(radioVenus)
-    expect(onChange).toHaveBeenCalled()
+    expect(onChange).toHaveBeenCalledOnce()
     expect(radioVenus).toBeChecked()
+    expect(radioJupiter).not.toBeChecked()
     expect(asFragment()).toMatchSnapshot()
   })
 
   it('should work with selectable - checkbox', async () => {
     const onChange = vi.fn()
     const { asFragment } = renderWithTheme(
-      <OfferList columns={columns} onChangeSelect={onChange} type="checkbox">
+      <OfferList
+        columns={columns}
+        onChangeSelect={onChange}
+        type="checkbox"
+        selected={['jupiter']}
+      >
         {data.map(planet => (
           <OfferList.Row offerName={planet.id} key={planet.id} id={planet.id}>
             <OfferList.Cell>{planet.name}</OfferList.Cell>
@@ -137,11 +155,17 @@ describe('OfferList', () => {
         ))}
       </OfferList>,
     )
+    // Default selected value
+    const radioJupiter = screen.getByDisplayValue('jupiter')
+    expect(radioJupiter).toBeChecked()
 
     const radioVenus = screen.getByDisplayValue('venus')
     await userEvent.click(radioVenus)
-    expect(onChange).toHaveBeenCalled()
     expect(radioVenus).toBeChecked()
+
+    await userEvent.click(radioJupiter)
+    expect(radioJupiter).not.toBeChecked()
+    expect(onChange).toHaveBeenCalledTimes(2)
     expect(asFragment()).toMatchSnapshot()
   })
 

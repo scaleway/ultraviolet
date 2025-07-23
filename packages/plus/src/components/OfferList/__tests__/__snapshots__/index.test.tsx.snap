@@ -3271,7 +3271,7 @@ exports[`OfferList > should work with banner 1`] = `
   height: fit-content;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
-  background-color: #f9f9fa;
+  background-color: #fff6e6;
   width: 100%;
   padding-block: 0.25rem;
   padding-inline: 0.5rem;
@@ -3283,6 +3283,39 @@ exports[`OfferList > should work with banner 1`] = `
 }
 
 .emotion-68 {
+  color: #7c5400;
+  font-size: 0.75rem;
+  font-family: Inter,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-109 {
+  display: table-cell;
+  vertical-align: middle;
+  height: 3.75rem;
+  padding: 0 1rem;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  background-color: #f9f9fa;
+  width: 100%;
+  padding-block: 0.25rem;
+  padding-inline: 0.5rem;
+  border-bottom: 1px solid #d9dadd;
+}
+
+.emotion-109[aria-disabled="true"] {
+  background-color: #f3f3f4;
+}
+
+.emotion-111 {
   color: #3f4250;
   font-size: 0.75rem;
   font-family: Inter,sans-serif;
@@ -3568,11 +3601,11 @@ exports[`OfferList > should work with banner 1`] = `
             data-expandable-content="true"
           >
             <td
-              class="emotion-65 emotion-66 emotion-32"
+              class="emotion-65 emotion-109 emotion-32"
               colspan="5"
             >
               <p
-                class="emotion-68 emotion-69"
+                class="emotion-111 emotion-69"
               >
                 text
               </p>
@@ -3679,11 +3712,11 @@ exports[`OfferList > should work with banner 1`] = `
             data-expandable-content="true"
           >
             <td
-              class="emotion-65 emotion-66 emotion-32"
+              class="emotion-65 emotion-109 emotion-32"
               colspan="5"
             >
               <p
-                class="emotion-68 emotion-69"
+                class="emotion-111 emotion-69"
               >
                 text
               </p>
@@ -3790,11 +3823,11 @@ exports[`OfferList > should work with banner 1`] = `
             data-expandable-content="true"
           >
             <td
-              class="emotion-65 emotion-66 emotion-32"
+              class="emotion-65 emotion-109 emotion-32"
               colspan="5"
             >
               <p
-                class="emotion-68 emotion-69"
+                class="emotion-111 emotion-69"
               >
                 text
               </p>
@@ -3901,11 +3934,11 @@ exports[`OfferList > should work with banner 1`] = `
             data-expandable-content="true"
           >
             <td
-              class="emotion-65 emotion-66 emotion-32"
+              class="emotion-65 emotion-109 emotion-32"
               colspan="5"
             >
               <p
-                class="emotion-68 emotion-69"
+                class="emotion-111 emotion-69"
               >
                 text
               </p>
@@ -4012,11 +4045,11 @@ exports[`OfferList > should work with banner 1`] = `
             data-expandable-content="true"
           >
             <td
-              class="emotion-65 emotion-66 emotion-32"
+              class="emotion-65 emotion-109 emotion-32"
               colspan="5"
             >
               <p
-                class="emotion-68 emotion-69"
+                class="emotion-111 emotion-69"
               >
                 text
               </p>
@@ -4123,11 +4156,11 @@ exports[`OfferList > should work with banner 1`] = `
             data-expandable-content="true"
           >
             <td
-              class="emotion-65 emotion-66 emotion-32"
+              class="emotion-65 emotion-109 emotion-32"
               colspan="5"
             >
               <p
-                class="emotion-68 emotion-69"
+                class="emotion-111 emotion-69"
               >
                 text
               </p>
@@ -4234,11 +4267,11 @@ exports[`OfferList > should work with banner 1`] = `
             data-expandable-content="true"
           >
             <td
-              class="emotion-65 emotion-66 emotion-32"
+              class="emotion-65 emotion-109 emotion-32"
               colspan="5"
             >
               <p
-                class="emotion-68 emotion-69"
+                class="emotion-111 emotion-69"
               >
                 text
               </p>
@@ -9658,6 +9691,7 @@ exports[`OfferList > should work with selectable - checkbox 1`] = `
                     aria-checked="false"
                     aria-invalid="false"
                     aria-label="select"
+                    checked=""
                     class="emotion-33 emotion-34"
                     id="jupiter"
                     name="checkbox-offer-list-jupiter"
@@ -11176,6 +11210,7 @@ exports[`OfferList > should work with selectable - radio 1`] = `
                     <input
                       aria-disabled="false"
                       aria-invalid="false"
+                      checked=""
                       class="emotion-35 emotion-36"
                       id="jupiter"
                       name="radio-offer-list-jupiter"

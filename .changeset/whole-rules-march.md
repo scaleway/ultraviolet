@@ -1,5 +1,5 @@
 ---
-"@ultraviolet/plus": patch
+"@ultraviolet/plus": minor
 ---
 
 New component `OfferList`
