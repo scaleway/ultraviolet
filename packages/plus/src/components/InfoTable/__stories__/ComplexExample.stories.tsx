@@ -1,6 +1,13 @@
 import type { StoryFn } from '@storybook/react-vite'
-import { LockIcon } from '@ultraviolet/icons'
-import { Button, Card, CopyButton, Stack, Status } from '@ultraviolet/ui'
+import { InformationOutlineIcon, LockIcon } from '@ultraviolet/icons'
+import {
+  Button,
+  Card,
+  CopyButton,
+  Stack,
+  Status,
+  Tooltip,
+} from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
 import { InfoTable } from '../InfoTable'
 
@@ -28,7 +35,18 @@ export const ComplexExample: StoryFn<
         <InfoTable.Cell title="Availability Zone">PAR 2</InfoTable.Cell>
       </InfoTable.Row>
       <InfoTable.Row templateColumns="repeat(4, 1fr)">
-        <InfoTable.Cell title="Cores">8</InfoTable.Cell>
+        <InfoTable.Cell
+          title={
+            <Stack direction="row" gap="1" alignItems="center">
+              Cores
+              <Tooltip text="number of cores">
+                <InformationOutlineIcon />
+              </Tooltip>
+            </Stack>
+          }
+        >
+          8
+        </InfoTable.Cell>
         <InfoTable.Cell title="RAM">32 GB</InfoTable.Cell>
         <InfoTable.Cell title="Compatible Storage">
           Block / Local
