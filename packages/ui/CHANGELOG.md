@@ -1,5 +1,26 @@
 # Change Log
 
+## 2.0.0-beta.18
+
+### Patch Changes
+
+- [#5335](https://github.com/scaleway/ultraviolet/pull/5335) [`ec7c55a`](https://github.com/scaleway/ultraviolet/commit/ec7c55a7bdad9e5f49a2b8aaf2aca2e228bb725e) Thanks [@lisalupi](https://github.com/lisalupi)! - `SwitchButton`: update size when children changes
+
+- [#5353](https://github.com/scaleway/ultraviolet/pull/5353) [`706bfaa`](https://github.com/scaleway/ultraviolet/commit/706bfaabf558ab751c7dbcd1c3bf5e84dde8f529) Thanks [@lisalupi](https://github.com/lisalupi)! - `TextArea`: height should adapt even without prop value
+
+- [#5351](https://github.com/scaleway/ultraviolet/pull/5351) [`ea55dea`](https://github.com/scaleway/ultraviolet/commit/ea55dea228d3e634f13e1de358d2738de210e7b2) Thanks [@lisalupi](https://github.com/lisalupi)! - `UnitInput`: new prop "templateColumns" to chose sizes of the input and the select input more precisely
+
+- [#5255](https://github.com/scaleway/ultraviolet/pull/5255) [`2ddbbf9`](https://github.com/scaleway/ultraviolet/commit/2ddbbf9a785f40cb79a06b6ba1bfb89e5a22cf6b) Thanks [@lisalupi](https://github.com/lisalupi)! - `<MenuV2 />`: focus on disclosure when closing menu and can use arrow keys to navigate in menu :
+
+  - Arrow Up/Down: browse the items
+  - Arrow Right: open nested menu and focus on the first item
+  - Arrow Left : close nested menu
+
+- [#5365](https://github.com/scaleway/ultraviolet/pull/5365) [`996f5b9`](https://github.com/scaleway/ultraviolet/commit/996f5b98db88ca0ca7c7eac08535697ff36f7365) Thanks [@matthprost](https://github.com/matthprost)! - Fix add missing `tooltip` prop on `CheckboxGroup.Checkbox`
+
+- Updated dependencies [[`f921df0`](https://github.com/scaleway/ultraviolet/commit/f921df0aea3ea46e014311f6008b3d44f95e16cf)]:
+  - @ultraviolet/icons@4.0.0-beta.9
+
 ## 2.0.0-beta.17
 
 ### Major Changes
