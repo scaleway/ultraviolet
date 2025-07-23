@@ -459,16 +459,13 @@ describe('DateInput', () => {
   test('handle correctly type in input with select range and showMonthYearPicker', async () => {
     const mockOnChange = vi.fn()
     renderWithTheme(
-      <>
-        <DateInput
-          label="Date"
-          placeholder="YYYY-MM-DD"
-          selectsRange
-          showMonthYearPicker
-          onChange={mockOnChange}
-        />
-        test
-      </>,
+      <DateInput
+        label="Date"
+        placeholder="YYYY-MM-DD"
+        selectsRange
+        showMonthYearPicker
+        onChange={mockOnChange}
+      />,
     )
 
     const input = screen.getByPlaceholderText<HTMLInputElement>('YYYY-MM-DD')
