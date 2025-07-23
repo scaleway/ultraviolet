@@ -21,7 +21,7 @@ const Desc = styled.dd`
 
 type CellProps = {
   children: ReactNode
-  title: string
+  title: ReactNode
   multiline?: boolean
 }
 
@@ -45,7 +45,7 @@ export const InfoTableCell = ({
   <Stack gap="0.5" width="100%" minWidth="0">
     <Term>
       <Text
-        as="p"
+        as="div"
         variant="bodySmallStrong"
         sentiment="neutral"
         prominence="weak"
