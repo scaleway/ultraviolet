@@ -1,5 +1,14 @@
 # Change Log
 
+## 3.17.18
+
+### Patch Changes
+
+- [#5357](https://github.com/scaleway/ultraviolet/pull/5357) [`942f1e7`](https://github.com/scaleway/ultraviolet/commit/942f1e7290d92f9ae38e5df4c9e8a78ffe078dc8) Thanks [@matthprost](https://github.com/matthprost)! - Fix update react-hook-form issue
+
+- Updated dependencies [[`4a91262`](https://github.com/scaleway/ultraviolet/commit/4a912623fed44b3a20ed9d1dd8f057a9eb371894), [`ad1d4f5`](https://github.com/scaleway/ultraviolet/commit/ad1d4f5dce14977841e4dd617da45e18d2fe39ae)]:
+  - @ultraviolet/ui@1.95.14
+
 ## 3.17.17
 
 ### Patch Changes
