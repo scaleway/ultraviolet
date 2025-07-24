@@ -223,17 +223,17 @@ export const ScrollableContent = () => {
         Object.keys(category).length > 0 && category.category ? (
           <CategoryStack key={category.category} gap={1.5}>
             <CategoryName category={category} />
-            <Stack gap={1}>
-              {category.subCategories &&
-              Object.keys(category.subCategories).length > 0
-                ? category.subCategories.map((subCategory, index) => (
-                    <SubCategory
-                      key={subCategory.title ?? `${index}`}
-                      subCategory={subCategory}
-                    />
-                  ))
-                : null}
-            </Stack>
+            {category.subCategories &&
+            Object.keys(category.subCategories).length > 0 ? (
+              <Stack gap={1}>
+                {category.subCategories.map((subCategory, index) => (
+                  <SubCategory
+                    key={subCategory.title ?? `${index}`}
+                    subCategory={subCategory}
+                  />
+                ))}
+              </Stack>
+            ) : null}
           </CategoryStack>
         ) : null,
       )}
