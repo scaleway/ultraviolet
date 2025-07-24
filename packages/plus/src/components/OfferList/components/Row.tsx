@@ -13,7 +13,7 @@ import {
 import { Children, useCallback, useMemo } from 'react'
 import type { ComponentProps, ReactNode } from 'react'
 import { useOfferListContext } from '../OfferListProvider'
-import { Banner } from './Banner'
+import { Banner, BannerWrapper } from './Banner'
 
 const StyledBadge = styled(BadgeUV)`
   position: absolute;
@@ -30,6 +30,7 @@ top: ${({ theme }) => theme.space[2]};
 
 const NoPaddingCell = styled(List.Cell)`
   padding: 0;
+  width: 32px;
 
   &:first-of-type {
     padding-left: ${({ theme }) => theme.space['2']};
@@ -47,12 +48,25 @@ const StyledRow = styled(List.Row, {
     }`
         : null}
 
+    &[aria-disabled='false']:hover + ${BannerWrapper} td {
+      border-color: ${({ theme }) => theme.colors.primary.border};
+    }
+
+    &[aria-disabled='false'] + ${BannerWrapper} td {
+      ${({ selected, theme }) => (selected ? `border-color: ${theme.colors.primary.border}` : '')}
+    }
+
     &[aria-expanded='true'] {
+      & + ${BannerWrapper} td {
+        border-color: ${({ theme }) => theme.colors.primary.border};
+      }
       ${({ theme, selected }) =>
         selected
-          ? `td, td:first-child, td:last-child {
-      border-color: ${theme.colors.primary.border};
-    }`
+          ? `
+          td, td:first-child, td:last-child, & + tr td {
+            border-color: ${theme.colors.primary.border};
+          }
+    `
           : null}
     }
 
@@ -61,7 +75,7 @@ const StyledRow = styled(List.Row, {
         ? `td, td:first-child {
         border-bottom-left-radius: 0;
         }
-        
+
         td, td:last-child {
           border-bottom-right-radius: 0;
         }
@@ -161,93 +175,6 @@ export const Row = ({
     disabled,
   ])
 
-  if (selectable === 'radio') {
-    return (
-      <>
-        <StyledRow
-          highlightAnimation={highlightAnimation}
-          className={className}
-          data-testid={dataTestId}
-          data-dragging={dataDragging}
-          style={style}
-          disabled={disabled}
-          id={id}
-          expandable={computedExpandableContent}
-          expandablePadding={banner ? '0' : undefined}
-          selected={radioSelectedRow === id}
-          expanded={expanded ?? expandedRowIds[id]}
-          hasBanner={!!banner}
-        >
-          <NoPaddingCell>
-            {badge ? (
-              <BadgeContainer>
-                <StyledBadge
-                  sentiment={badge.sentiment}
-                  disabled={disabled}
-                  size="small"
-                >
-                  {badge.text}
-                </StyledBadge>
-              </BadgeContainer>
-            ) : null}
-            <SelectableContainer>
-              <Tooltip
-                text={
-                  typeof selectDisabled === 'string'
-                    ? selectDisabled
-                    : undefined
-                }
-              >
-                <Radio
-                  name={`radio-offer-list-${id}`}
-                  checked={radioSelectedRow === id}
-                  value={id}
-                  id={id}
-                  disabled={disabled || loading || !!selectDisabled}
-                  onChange={event => {
-                    setRadioSelectedRow(event.currentTarget.id)
-                    onChangeSelect?.(offerName)
-                    if (expandedRowIds[id]) {
-                      expandRow(id)
-                    } else if (!autoCollapse) {
-                      collapseRow(id)
-                    }
-                  }}
-                />
-              </Tooltip>
-            </SelectableContainer>
-          </NoPaddingCell>
-          {expandable ? (
-            <NoPaddingCell>
-              <Button
-                disabled={disabled || !expandable || loading}
-                onClick={toggleRowExpand}
-                size="small"
-                sentiment="neutral"
-                variant="ghost"
-                aria-label="expand"
-                data-testid="list-expand-button"
-              >
-                {expandedRowIds[id] ? <ArrowUpIcon /> : <ArrowDownIcon />}
-              </Button>
-            </NoPaddingCell>
-          ) : null}
-          {children}
-        </StyledRow>
-        {banner && !expandedRowIds[id] ? (
-          <Banner
-            disabled={disabled}
-            colSpan={childrenNumber}
-            type="cell"
-            sentiment={banner.sentiment}
-          >
-            {banner.text}
-          </Banner>
-        ) : null}
-      </>
-    )
-  }
-
   return (
     <>
       <StyledRow
@@ -256,13 +183,17 @@ export const Row = ({
         data-testid={dataTestId}
         data-dragging={dataDragging}
         style={style}
-        expanded={expanded ?? expandedRowIds[id]}
         disabled={disabled}
-        id={offerName}
+        id={id}
         expandable={computedExpandableContent}
         expandablePadding={banner ? '0' : undefined}
+        expanded={expanded ?? expandedRowIds[id]}
         hasBanner={!!banner}
-        selected={false}
+        selected={
+          selectable === 'checkbox'
+            ? checkboxSelectedRows[id]
+            : radioSelectedRow === id
+        }
       >
         <NoPaddingCell>
           {badge ? (
@@ -282,33 +213,52 @@ export const Row = ({
                 typeof selectDisabled === 'string' ? selectDisabled : undefined
               }
             >
-              <Checkbox
-                name={`checkbox-offer-list-${id}`}
-                aria-label="select"
-                checked={checkboxSelectedRows[id]}
-                value={id}
-                id={id}
-                disabled={disabled || loading || !!selectDisabled}
-                onChange={() => {
-                  const newSelectedRows = {
-                    ...checkboxSelectedRows,
-                    [id]: checkboxSelectedRows[id]
-                      ? !checkboxSelectedRows[id]
-                      : true,
-                  }
-                  setCheckboxSelectedRows(newSelectedRows)
-                  onChangeSelect?.(
-                    Object.keys(newSelectedRows).filter(
-                      key => newSelectedRows[key],
-                    ),
-                  )
-                  if (expandedRowIds[id]) {
-                    expandRow(id)
-                  } else if (!autoCollapse) {
-                    collapseRow(id)
-                  }
-                }}
-              />
+              {selectable === 'checkbox' ? (
+                <Checkbox
+                  name={`checkbox-offer-list-${id}`}
+                  aria-label="select"
+                  checked={checkboxSelectedRows[id]}
+                  value={id}
+                  id={id}
+                  disabled={disabled || loading || !!selectDisabled}
+                  onChange={() => {
+                    const newSelectedRows = {
+                      ...checkboxSelectedRows,
+                      [id]: checkboxSelectedRows[id]
+                        ? !checkboxSelectedRows[id]
+                        : true,
+                    }
+                    setCheckboxSelectedRows(newSelectedRows)
+                    onChangeSelect?.(
+                      Object.keys(newSelectedRows).filter(
+                        key => newSelectedRows[key],
+                      ),
+                    )
+                    if (expandedRowIds[id]) {
+                      expandRow(id)
+                    } else if (!autoCollapse) {
+                      collapseRow(id)
+                    }
+                  }}
+                />
+              ) : (
+                <Radio
+                  name={`radio-offer-list-${id}`}
+                  checked={radioSelectedRow === id}
+                  value={id}
+                  id={id}
+                  disabled={disabled || loading || !!selectDisabled}
+                  onChange={event => {
+                    setRadioSelectedRow(event.currentTarget.id)
+                    onChangeSelect?.(offerName)
+                    if (expandedRowIds[id]) {
+                      expandRow(id)
+                    } else if (!autoCollapse) {
+                      collapseRow(id)
+                    }
+                  }}
+                />
+              )}
             </Tooltip>
           </SelectableContainer>
         </NoPaddingCell>
@@ -331,10 +281,10 @@ export const Row = ({
       </StyledRow>
       {banner && !expandedRowIds[id] ? (
         <Banner
+          disabled={disabled}
           colSpan={childrenNumber}
           type="cell"
           sentiment={banner.sentiment}
-          disabled={disabled}
         >
           {banner.text}
         </Banner>

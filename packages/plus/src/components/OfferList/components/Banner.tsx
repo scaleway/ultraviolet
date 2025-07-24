@@ -4,7 +4,7 @@ import styled from '@emotion/styled'
 import { List, Stack, Text } from '@ultraviolet/ui'
 import type { ComponentProps, ReactNode } from 'react'
 
-const ExpandableWrapper = styled.tr`
+export const BannerWrapper = styled.tr`
   width: 100%;
   display: table-row;
   vertical-align: middle;
@@ -98,7 +98,7 @@ export const Banner = ({
       </Text>
     </StyledStack>
   ) : (
-    <ExpandableWrapper data-expandable-content>
+    <BannerWrapper data-expandable-content>
       <StyledCell
         colSpan={colSpan}
         sentiment={sentiment}
@@ -113,5 +113,5 @@ export const Banner = ({
           {children}
         </Text>
       </StyledCell>
-    </ExpandableWrapper>
+    </BannerWrapper>
   )
