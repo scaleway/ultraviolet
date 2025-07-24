@@ -22,7 +22,7 @@ import { useListContext } from './ListContext'
 import { SELECTABLE_CHECKBOX_SIZE } from './constants'
 import type { ColumnProps } from './types'
 
-const ExpandableWrapper = styled.tr`
+export const ExpandableWrapper = styled.tr`
   width: 100%;
   display: table-row;
   vertical-align: middle;
@@ -44,6 +44,10 @@ const ExpandableWrapper = styled.tr`
     border-top: none;
     border-radius: 0 0 ${({ theme }) => theme.radii.default} ${({ theme }) =>
       theme.radii.default};
+  }
+
+  &[data-highlight="true"] td {
+    border-color: ${({ theme }) => theme.colors.primary.border};
   }
 `
 
@@ -406,6 +410,7 @@ export const Row = forwardRef<HTMLTableRowElement, RowProps>(
           <ExpandableWrapper
             id={expandedRowId}
             data-expandable-content
+            data-highlight={selectable && !!selectedRowIds[id]}
             onClick={
               canClickRowToExpand
                 ? e => {
