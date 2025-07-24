@@ -1,5 +1,57 @@
 # @ultraviolet/plus
 
+## 1.0.0
+
+### Major Changes
+
+- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`1d0c535`](https://github.com/scaleway/ultraviolet/commit/1d0c535198671780914a755a137f30e4de404f77) Thanks [@matthprost](https://github.com/matthprost)! - ⚠️ `@ultraviolet/ui` is now a peer-dependency of `@ultraviolet/form` and `@ultraviolet/plus`. This means you need to have an installed version of `@ultraviolet/ui` in your project that matches the version defined by the peer-dependency.
+
+- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7308c5a`](https://github.com/scaleway/ultraviolet/commit/7308c5a929ce611281c2039be7969d83ea0f8b08) Thanks [@matthprost](https://github.com/matthprost)! - Beta release
+
+- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`f778997`](https://github.com/scaleway/ultraviolet/commit/f77899704c59fe96eb4db83bdeed769fd4aeab2e) Thanks [@matthprost](https://github.com/matthprost)! - **BREAKING CHANGES**
+
+  Deprecated props removed:
+
+  - `CodeEditor`: prop "title" removed -> use "label" instead
+  - `Icon`: prop "color" removed -> use "sentiment" instead
+  - `Icon`: prop "size" can only be "xsmall", "small", "medium", "large", "xlarge" or "xxlarge"
+  - `Bullet`: prop "text" removed -> use "children" instead
+
+### Minor Changes
+
+- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`3b23869`](https://github.com/scaleway/ultraviolet/commit/3b23869ee459de19edc09c9303bbe3c8a147286a) Thanks [@matthprost](https://github.com/matthprost)! - New component `OrderSummary`
+
+### Patch Changes
+
+- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`3c75afa`](https://github.com/scaleway/ultraviolet/commit/3c75afaa7bb9a89b8b9807a1501cba22dde04443) Thanks [@matthprost](https://github.com/matthprost)! - `OrderSummary`: add prop "additionalInfo"
+
+- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`1ce1360`](https://github.com/scaleway/ultraviolet/commit/1ce1360f0d8d278b7d99f078dae74589ba5c3736) Thanks [@matthprost](https://github.com/matthprost)! - New component `InfoTable`
+
+- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`f719adc`](https://github.com/scaleway/ultraviolet/commit/f719adc1f286e08a9f86ded0ff9b3b8ce696bb45) Thanks [@matthprost](https://github.com/matthprost)! - New component `<Plans />`
+
+- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`83571ee`](https://github.com/scaleway/ultraviolet/commit/83571ee6535db4a29bd0acf49b0e7581909de073) Thanks [@matthprost](https://github.com/matthprost)! - `EstimateCost`: add `z-index` to overlay
+
+- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`f9f5696`](https://github.com/scaleway/ultraviolet/commit/f9f5696b1c11b71fe92f338992a0567bd8673c17) Thanks [@matthprost](https://github.com/matthprost)! - `InfoTable.Row`: prop "templateColumn" renamed "templateColumns" (typo) to match `Row` prop
+
+- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`36bceff`](https://github.com/scaleway/ultraviolet/commit/36bceff623e8b6d59f4c9d7f9574778e20e98dce) Thanks [@matthprost](https://github.com/matthprost)! - `InfoTable.Cell`: prop "title" is now a ReactNode
+
+- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`6607657`](https://github.com/scaleway/ultraviolet/commit/6607657ca5f41ced7a3c6c605b9c35ceaae577c1) Thanks [@matthprost](https://github.com/matthprost)! - `OrderSummary`: fix size of the UnitInput
+
+- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`5d831e8`](https://github.com/scaleway/ultraviolet/commit/5d831e8500bc5a7148f5dc5280182b0f8b348449) Thanks [@matthprost](https://github.com/matthprost)! - `Navigation`: new prop "itemWrapper" for `Navigation.PinnedItems`. With this prop, it is possible to have a wrapper around each indidividual Pinned element. This can be useful to add a `<NavLink/>` around them, add a tooltip, etc.
+
+- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`8eb9228`](https://github.com/scaleway/ultraviolet/commit/8eb9228508de5d02c0a4d98573dcad13c41695ac) Thanks [@matthprost](https://github.com/matthprost)! - `OrderSummary`: fix empty div when no subcategories (causes misalignment)
+
+- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`010be8e`](https://github.com/scaleway/ultraviolet/commit/010be8e24b9d2b659f8cb20a5629b9051e0cc276) Thanks [@matthprost](https://github.com/matthprost)! - `Navigation`: isActive should work when the Item is wrapped in a Link/NavLink (React rooter)
+
+- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`641e937`](https://github.com/scaleway/ultraviolet/commit/641e937cc16351c6444c23af1c0787a1ef282642) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<SteppedListCard />` content to fit better
+
+- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`969ee58`](https://github.com/scaleway/ultraviolet/commit/969ee5817d0f2cbfa0ece47d8ea0ec1cdc3a76d1) Thanks [@matthprost](https://github.com/matthprost)! - New component `OfferList`
+
+- Updated dependencies [[`bd2875a`](https://github.com/scaleway/ultraviolet/commit/bd2875ae3fb376019cff87b4ca178f28b60885e7), [`90e0248`](https://github.com/scaleway/ultraviolet/commit/90e0248687d67af6793ec7ea32c35c29c807bcc0), [`5d2691f`](https://github.com/scaleway/ultraviolet/commit/5d2691f229cfd68303d98eecb377f7902bb7a112), [`d784891`](https://github.com/scaleway/ultraviolet/commit/d784891222b342ec29f0cd751475ec638bf336d8), [`28f14d7`](https://github.com/scaleway/ultraviolet/commit/28f14d7a796e8b20df69b14a2e0255d171e63167), [`d879db6`](https://github.com/scaleway/ultraviolet/commit/d879db6d98260377773518e188009ff1f86acbd0), [`58b6461`](https://github.com/scaleway/ultraviolet/commit/58b646107e786e9a0cd447337fced6f6b3a78c23), [`6d5afc0`](https://github.com/scaleway/ultraviolet/commit/6d5afc0c45a5da243b8506aa34016fceea461eaa), [`44fe1e0`](https://github.com/scaleway/ultraviolet/commit/44fe1e0cd94a0cc59fef07b6aaf8a923ac0278ee), [`6421d42`](https://github.com/scaleway/ultraviolet/commit/6421d4231eea468a42b6e006a141f60bbb16f6f6), [`5bdecdc`](https://github.com/scaleway/ultraviolet/commit/5bdecdcd9213bc4b2b1572e721380068cee3e834), [`f0f9277`](https://github.com/scaleway/ultraviolet/commit/f0f9277989b72ce477642b7f545242b020298aad), [`ff7e27e`](https://github.com/scaleway/ultraviolet/commit/ff7e27e61d81fb3b2a3b19aacf6c319c6ec1a3b6), [`c91275e`](https://github.com/scaleway/ultraviolet/commit/c91275ec7b69f729834f7208a99774cd81c054ca), [`818572b`](https://github.com/scaleway/ultraviolet/commit/818572be36666eb836eac8f01b3666d3b3248f16), [`be827c4`](https://github.com/scaleway/ultraviolet/commit/be827c435cc5bdc5ec09bba21e8c359f4c85cf7a), [`4dd6004`](https://github.com/scaleway/ultraviolet/commit/4dd600451a921d18f4a9483d3538103d3d4f2a79), [`7cdddc2`](https://github.com/scaleway/ultraviolet/commit/7cdddc211b411c30005688599ac4ce23677e080e), [`51b4975`](https://github.com/scaleway/ultraviolet/commit/51b497591941959a047e82a21d15823d8a42ee38), [`3fdb778`](https://github.com/scaleway/ultraviolet/commit/3fdb77835782c6020cb1ff38ba42ef60a8e01437), [`da62b21`](https://github.com/scaleway/ultraviolet/commit/da62b218b064d3ae608fb5a8c8b35cf5b711187a), [`51c3385`](https://github.com/scaleway/ultraviolet/commit/51c3385708de0c4967174b90d2ad7c213d4c432f), [`e7737fa`](https://github.com/scaleway/ultraviolet/commit/e7737fa7ea4ec007b2ec8b4cd28a51b9545572b5), [`8375d62`](https://github.com/scaleway/ultraviolet/commit/8375d62ccf30af861fd91d3dfe87c3c36a6fbc14), [`6607657`](https://github.com/scaleway/ultraviolet/commit/6607657ca5f41ced7a3c6c605b9c35ceaae577c1), [`9f2defc`](https://github.com/scaleway/ultraviolet/commit/9f2defcda906380de01d5ed755ed6e5c7aa65461), [`c91275e`](https://github.com/scaleway/ultraviolet/commit/c91275ec7b69f729834f7208a99774cd81c054ca), [`b996f13`](https://github.com/scaleway/ultraviolet/commit/b996f130b5db6cf5931bb394ee16af25fde6b835), [`dcd657a`](https://github.com/scaleway/ultraviolet/commit/dcd657a7d7dce04c69c48e4f0060423037c338d6), [`8274b49`](https://github.com/scaleway/ultraviolet/commit/8274b495db0b21925e30b9fe4bef68712bbb085d), [`fa5103e`](https://github.com/scaleway/ultraviolet/commit/fa5103eaa69e1b137589bad9b04b515a19991501), [`2b93e76`](https://github.com/scaleway/ultraviolet/commit/2b93e76234a5a6c75c0d08f6c193aa829f25273f), [`187b6f5`](https://github.com/scaleway/ultraviolet/commit/187b6f517d24a0b19c903be1d0adbececc099805), [`6d2a49f`](https://github.com/scaleway/ultraviolet/commit/6d2a49fb8ca18bb4a23e80b3e4fcb08409e444fc), [`f944d77`](https://github.com/scaleway/ultraviolet/commit/f944d77cd05d047a09a2687c723359382a1eac5c), [`b1b656a`](https://github.com/scaleway/ultraviolet/commit/b1b656ab7fc15f7fb93bf46ae87a28b4cd423c11), [`78d54c4`](https://github.com/scaleway/ultraviolet/commit/78d54c498ee23bdf32eb72d0ab8392630fcda9a0), [`4690b45`](https://github.com/scaleway/ultraviolet/commit/4690b4566573f313615a46667a6d1eec7240907c), [`778f01e`](https://github.com/scaleway/ultraviolet/commit/778f01e0f02e6e5d4929808f36bcada03950d1e2), [`7308c5a`](https://github.com/scaleway/ultraviolet/commit/7308c5a929ce611281c2039be7969d83ea0f8b08), [`b5daeaf`](https://github.com/scaleway/ultraviolet/commit/b5daeaf0022bf7f385dde94177bc274e785005c8), [`3eabd7e`](https://github.com/scaleway/ultraviolet/commit/3eabd7ea06a1a0a179f83a5cf806ceb1f8e1f47e), [`e517a09`](https://github.com/scaleway/ultraviolet/commit/e517a098f53f48be5e8e7d35f16165e802cde70d), [`8af66b1`](https://github.com/scaleway/ultraviolet/commit/8af66b120f5f78d3f83f02bc1374c87dc8f155f1), [`b80ce6b`](https://github.com/scaleway/ultraviolet/commit/b80ce6bc53983206f170968c04637e6393ff8605), [`c0ff3ca`](https://github.com/scaleway/ultraviolet/commit/c0ff3ca7a952d2809388d334069db66815221144), [`1bbd52c`](https://github.com/scaleway/ultraviolet/commit/1bbd52ca8a17a6e4b1764373a14b96e5672c0013), [`af8d65c`](https://github.com/scaleway/ultraviolet/commit/af8d65cc588ce814b4d996313107f69d798594a7), [`d6d7073`](https://github.com/scaleway/ultraviolet/commit/d6d70731e95885eb56f770e5d8cba5c37b1dc960), [`b4cc44c`](https://github.com/scaleway/ultraviolet/commit/b4cc44cb1b1eb4d1cfee441821ac3ec5d1d63a3c), [`9880c7c`](https://github.com/scaleway/ultraviolet/commit/9880c7ceff3bc5ea11a5dda1f39ab73e7a06f4b8), [`e9718e2`](https://github.com/scaleway/ultraviolet/commit/e9718e2268cd55e67b7d43cea5ece683df5b0d4a), [`7c8102c`](https://github.com/scaleway/ultraviolet/commit/7c8102cb699fd9581c30bb881628dc3f31e2e147), [`88984cf`](https://github.com/scaleway/ultraviolet/commit/88984cff456b18ab1ec71184e9b4daa320b48760), [`5ddfcae`](https://github.com/scaleway/ultraviolet/commit/5ddfcae6659489cff63eb844b5d745ea91f3545d), [`6f8c919`](https://github.com/scaleway/ultraviolet/commit/6f8c919b5911faf3206d6a077ac4ddd7e367f30b), [`4268a3d`](https://github.com/scaleway/ultraviolet/commit/4268a3de847f940e70fc47080a9f4c666e351a55), [`7f620ae`](https://github.com/scaleway/ultraviolet/commit/7f620aefd538ee6b2a86e64bb13263cf7307b4e7), [`d277807`](https://github.com/scaleway/ultraviolet/commit/d27780712e79def2e888b52c72e6cf8a152d6de5), [`8fce1ff`](https://github.com/scaleway/ultraviolet/commit/8fce1ffb77f02db756820c2877e24e5a7b8d8298), [`f778997`](https://github.com/scaleway/ultraviolet/commit/f77899704c59fe96eb4db83bdeed769fd4aeab2e), [`9880c7c`](https://github.com/scaleway/ultraviolet/commit/9880c7ceff3bc5ea11a5dda1f39ab73e7a06f4b8)]:
+  - @ultraviolet/ui@2.0.0
+  - @ultraviolet/icons@4.0.0
+  - @ultraviolet/themes@2.0.0
+
 ## 1.0.0-beta.19
 
 ### Patch Changes
@@ -189,8 +241,8 @@
 ### Patch Changes
 
 - Updated dependencies [[`1464f54`](https://github.com/scaleway/ultraviolet/commit/1464f54cb9099b6daa51b254cc935f36147004d0), [`4308966`](https://github.com/scaleway/ultraviolet/commit/4308966450c594969417d3740d984099463e7da8)]:
-    - @ultraviolet/icons@4.0.0-beta.1
-    - @ultraviolet/ui@2.0.0-beta.1
+  - @ultraviolet/icons@4.0.0-beta.1
+  - @ultraviolet/ui@2.0.0-beta.1
 
 ## 1.0.0-beta.0
 
