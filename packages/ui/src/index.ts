@@ -5,7 +5,7 @@ export {
   default as theme,
   extendTheme,
 } from './theme'
-export type { SCWUITheme, UltravioletUITheme } from './theme'
+export type { UltravioletUITheme } from './theme'
 export {
   bounce,
   Breakpoint,

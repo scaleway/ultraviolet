@@ -42,12 +42,6 @@ const styles = {
       padding: ${theme.space['2']};
     }
 
-    &${PREFIX}__toast--info {
-      background-color: ${theme.colors.info.backgroundStrong};
-      color: ${theme.colors.neutral.textStronger};
-      padding: ${theme.space['2']};
-    }
-
     &${PREFIX}__toast--error {
       background-color: ${theme.colors.danger.backgroundStrong};
       color: ${theme.colors.neutral.textStronger};
