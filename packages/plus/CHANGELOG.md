@@ -1,5 +1,16 @@
 # @ultraviolet/plus
 
+## 1.0.0-beta.19
+
+### Patch Changes
+
+- [#5378](https://github.com/scaleway/ultraviolet/pull/5378) [`fa9597a`](https://github.com/scaleway/ultraviolet/commit/fa9597ae4ad1cc8adc9bae485cb98eb2177c8081) Thanks [@lisalupi](https://github.com/lisalupi)! - `OrderSummary`: fix empty div when no subcategories (causes misalignment)
+
+- [#5330](https://github.com/scaleway/ultraviolet/pull/5330) [`f7a5db2`](https://github.com/scaleway/ultraviolet/commit/f7a5db2ea2a90dd4db2dcc7779f8f2fd4a6d77ff) Thanks [@lisalupi](https://github.com/lisalupi)! - New component `OfferList`
+
+- Updated dependencies [[`2169048`](https://github.com/scaleway/ultraviolet/commit/2169048055c37b870c57f2a56ee8a628b36af6c6), [`f791286`](https://github.com/scaleway/ultraviolet/commit/f791286dc4e5dad0f4cbf14c53801d7890e0ee63)]:
+  - @ultraviolet/ui@2.0.0-beta.19
+
 ## 1.0.0-beta.18
 
 ### Patch Changes

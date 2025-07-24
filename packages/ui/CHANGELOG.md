@@ -1,5 +1,17 @@
 # Change Log
 
+## 2.0.0-beta.19
+
+### Major Changes
+
+- [#5366](https://github.com/scaleway/ultraviolet/pull/5366) [`f791286`](https://github.com/scaleway/ultraviolet/commit/f791286dc4e5dad0f4cbf14c53801d7890e0ee63) Thanks [@matthprost](https://github.com/matthprost)! - ⚠️ Breaking changes:
+
+  `SCWUITheme` no longer exists, use `UltravioletUITheme`. The type is the same.
+
+### Patch Changes
+
+- [#5324](https://github.com/scaleway/ultraviolet/pull/5324) [`2169048`](https://github.com/scaleway/ultraviolet/commit/2169048055c37b870c57f2a56ee8a628b36af6c6) Thanks [@lisalupi](https://github.com/lisalupi)! - `DateInput`: value changes onBlur instead of onChange to avoid wrong dates while the user is typing
+
 ## 2.0.0-beta.18
 
 ### Patch Changes
