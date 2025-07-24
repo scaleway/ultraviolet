@@ -1089,6 +1089,10 @@ exports[`List > Should not collapse a row by clicking on expandable content 1`] 
   border-radius: 0 0 0.25rem 0.25rem;
 }
 
+.emotion-38[data-highlight="true"] td {
+  border-color: #8c40ef;
+}
+
 .emotion-41 {
   display: table-cell;
   vertical-align: middle;
@@ -1200,6 +1204,7 @@ exports[`List > Should not collapse a row by clicking on expandable content 1`] 
           <tr
             class="emotion-38 emotion-39"
             data-expandable-content="true"
+            data-highlight="false"
             id="«r9v»"
           >
             <td
@@ -5093,6 +5098,10 @@ exports[`List > Should render correctly with isExpandable and autoClose rows the
   border-radius: 0 0 0.25rem 0.25rem;
 }
 
+.emotion-50[data-highlight="true"] td {
+  border-color: #8c40ef;
+}
+
 .emotion-53 {
   display: table-cell;
   vertical-align: middle;
@@ -5236,6 +5245,7 @@ exports[`List > Should render correctly with isExpandable and autoClose rows the
           <tr
             class="emotion-50 emotion-51"
             data-expandable-content="true"
+            data-highlight="false"
             id="«r6h»"
           >
             <td
