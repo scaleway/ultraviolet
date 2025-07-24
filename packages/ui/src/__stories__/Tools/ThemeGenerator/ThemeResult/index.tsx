@@ -3,7 +3,7 @@ import styled from '@emotion/styled'
 import { ArrowLeftIcon, EyeIcon, EyeOffIcon } from '@ultraviolet/icons'
 import { useCallback, useState } from 'react'
 import { Button, Row, Stack, Text } from '../../../../components'
-import type { SCWUITheme } from '../../../../theme'
+import type { UltravioletUITheme } from '../../../../theme'
 import consoleLightTheme from '../../../../theme'
 import { normalize } from '../../../../utils'
 import { CodeIntegration } from './CodeIntegration'
@@ -15,9 +15,9 @@ const Container = styled.div`
 `
 
 type ThemeResultProps = {
-  theme: SCWUITheme
-  setTheme: (theme: SCWUITheme) => void
-  generatedPalette: SCWUITheme
+  theme: UltravioletUITheme
+  setTheme: (theme: UltravioletUITheme) => void
+  generatedPalette: UltravioletUITheme
   setStep: (step: number) => void
 }
 
