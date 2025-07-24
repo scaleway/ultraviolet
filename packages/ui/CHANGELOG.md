@@ -1,5 +1,340 @@
 # Change Log
 
+## 2.0.0
+
+### Major Changes
+
+- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - **BREAKING CHANGES**
+
+  Deprecated props removed:
+
+  - `Link`: prop "sentiment" can only by "primary" or "info" (default value) now
+  - `List.Cell`: prop "preventClick" removed (it is now default behavior)
+  - `Menu`: prop "size" and "maxWidth" removed, the size is now automatic
+
+- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - All group input have a breaking changes in their props:
+
+  - `label` is now longer needed, use `legend` instead.
+  - `legend` type moved from `ReactNode` to `string`. Use `legendDescription` to add more information.
+  - new prop `legendDescription` to add more information to the legend.
+
+- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - **BREAKING CHANGES**
+
+  Deprecated props removed:
+
+  - `TagInput`:
+
+    - props "manualInput" and "onChangeError" removed: the props used to have no effect
+    - prop "variant" removed: only one variant possible now
+    - prop "tags" removed -> use "value" instead
+
+  - `Toaster`: variant "info" removed
+
+- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - **BREAKING CHANGES**
+
+  Deprecated props removed:
+
+  - `Card`: prop "isActive" removed -> use "active" instead
+  - `Checkbox`: props "progress" and "size" removed
+  - `CopyButton`: prop "noBorder" removed -> use "bordered" instead
+
+- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - ⚠️ Breaking changes:
+
+  `ThemeRegistry` is no longer available in this package. You can import it by adding `@ultraviolet/nextjs` package to your project. The component is the same only the import changes.
+
+- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - Following the icon major update some components have recieved a small update to improve the usage of icons.
+
+  ## Detailed migration per components
+
+  ### Button
+
+  `icon`, `iconPosition`, `iconVariant` props are deprecated. You can directly use the imported icon you need in the children.
+
+  ```tsx
+  // Before
+  import { Button } from "@ultraviolet/ui";
+
+  <Button icon="pencil" iconPosition="right" iconVariant="outline">
+    Edit
+  </Button>;
+  ```
+
+  ```tsx
+  // After
+  import { Button } from "@ultraviolet/ui";
+  import { PencilOutlineIcon } from "@ultraviolet/icons";
+
+  <Button>
+    Edit <PencilOutlineIcon />
+  </Button>;
+  ```
+
+  ### Badge
+
+  `icon` props is deprecated. You can directly use the imported icon you need in the children.
+
+  ```tsx
+  // Before
+  import { Badge } from '@ultraviolet/ui'
+
+  <Badge icon="pencil">
+    Edit
+  </Button>
+  ```
+
+  ```tsx
+  // After
+  import { Badge } from "@ultraviolet/ui";
+  import { PencilOutlineIcon } from "@ultraviolet/icons";
+
+  <Badge>
+    Edit <PencilOutlineIcon />
+  </Badge>;
+  ```
+
+  ### Bullet
+
+  `icon` and `iconVariant` props are deprecated. You can directly use the imported icon you need in the children.
+
+  ```tsx
+  // Before
+  import { Bullet } from '@ultraviolet/ui'
+
+  <Bullet icon="check" />
+  <Bullet icon="check" iconVariant="outlined" />
+  ```
+
+  ```tsx
+  // After
+  import { Bullet } from '@ultraviolet/ui'
+  import { CheckIcon, CheckCircleOutlineIcon } from '@ultraviolet/icons'
+
+  <Bullet>
+    <CheckIcon />
+  </Bullet>
+
+  <Bullet>
+    <CheckCircleOutlineIcon />
+  </Bullet>
+  ```
+
+  ### AvatarV2
+
+  `icon` prop is deprecated. You can directly use the imported icon you need in the children.
+
+  ```tsx
+  // Before
+  import { AvatarV2 } from "@ultraviolet/ui";
+
+  <AvatarV2 variant="icon" shape="circle" sentiment="primary" icon="mosaic" />;
+  ```
+
+  ```tsx
+  // After
+  import { AvatarV2 } from "@ultraviolet/ui";
+  import { MosaicIcon } from "@ultraviolet/icons";
+
+  <AvatarV2 variant="icon" shape="circle" sentiment="primary">
+    <MosaicIcon size="xlarge" />
+  </AvatarV2>;
+  ```
+
+  ### Separator
+
+  `icon` prop is deprecated. You can directly use the imported icon you need in the children.
+
+  ```tsx
+  // Before
+  import { Separator } from "@ultraviolet/ui";
+
+  <Separator direction="vertical" icon="ray-top-arrow" />;
+  ```
+
+  ```tsx
+  // After
+  import { Separator } from "@ultraviolet/ui";
+  import { RayTopArrowIcon } from "@ultraviolet/icons";
+
+  <Separator direction="vertical">
+    <RayTopArrowIcon size="medium" />
+  </Separator>;
+  ```
+
+  ### Tag
+
+  `icon` prop is deprecated. You can directly use the imported icon you need in the children.
+
+  ```tsx
+  // Before
+  import { Tag } from "@ultraviolet/ui";
+
+  <Tag icon="check">Valid</Tag>;
+  ```
+
+  ```tsx
+  // After
+  import { Tag } from "@ultraviolet/ui";
+  import { CheckIcon } from "@ultraviolet/icons";
+
+  <Tag>
+    <CheckIcon size="small" />
+    Valid
+  </Tag>;
+  ```
+
+- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - ⚠️ Breaking changes:
+
+  - Removal of `<PasswordStrengthMeter />` component => replaced by `<Meter />`
+  - Dialog no long experimental
+
+- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - ⚠️ BREAKING CHANGES
+
+  We removed all old components and renamed the V2 components to remove that suffix. Thus, the followng components have changed:
+
+  TextInputV2 -> TextInput [Migration Documentation](https://storybook.ultraviolet.scaleway.com/?path=/docs/migrations-textinput-to-textinputv2--docs)
+  SelectInputV2 -> SelectInput [Migration Documentation](https://storybook.ultraviolet.scaleway.com/?path=/docs/migrations-selectinput-to-selectinputv2--docs)
+  AvatarV2 -> Avatar [Migration Documentation](https://storybook.ultraviolet.scaleway.com/?path=/docs/migrations-avatar-to-avatarv2--docs)
+  MenuV2 -> Menu [Migration Documentation](https://storybook.ultraviolet.scaleway.com/?path=/docs/migrations-menu-to-menuv2--docs)
+  DateInputV2 -> DateInput
+  TimeInputV2 -> TimeInput
+  NumberInputV2 -> NumberInput
+
+- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - ⚠️ Breaking changes:
+
+  `SCWUITheme` no longer exists, use `UltravioletUITheme`. The type is the same.
+
+- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - Beta release
+
+- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - **BREAKING CHANGES**
+
+  Deprecated props removed:
+
+  - `Modal`:
+    - prop "customDialogBackdropStyles" removed -> use "backdropClassName" instead to style the backdrop
+    - prop "customDialogStyles" removed -> use "customDialogStyles" instead to style the dialog
+    - prop "width" removed -> use "size" instead (same possible values)
+    - prop "opened" removed -> use "open" instead
+    - prop "onOpen" removed -> use "show" instead (ModalState)
+    - prop "onClose" removed -> use "close" instead (ModalState)
+    - prop "hide" removed -> use "close" instead (ModalState)
+  - `RadioGroup.Radio`: prop "name" removed, it is automatically passed from the parent `RadioGroup`
+  - `Separator`: prop "color" removed -> use "sentiment" instead
+  - `Text`: prop "color" removed -> use "sentiment" instead
+
+- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - **BREAKING CHANGES**
+
+  Deprecated props removed:
+
+  - `CodeEditor`: prop "title" removed -> use "label" instead
+  - `Icon`: prop "color" removed -> use "sentiment" instead
+  - `Icon`: prop "size" can only be "xsmall", "small", "medium", "large", "xlarge" or "xxlarge"
+  - `Bullet`: prop "text" removed -> use "children" instead
+
+### Minor Changes
+
+- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - `Drawer`: new prop `noPadding` which allow to have a non padded content
+
+- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - `SelectInput`: add a `onOpen` prop
+
+- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - **Breaking changes**
+  `SwitchButton`: New version of the component:
+
+  - props `leftButton` and `rightButton` removed
+  - Use `SwitchButton.Option` to add buttons/options
+  - More than 2 options possible now !
+  - New sizes
+  - New prop `sentiment`
+
+- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - Implement responsive capacities on component `<Row />` and `<Stack />`
+
+### Patch Changes
+
+- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - `<TagList />`: copiable now works
+
+- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - `StepList`: fix width
+
+- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - `SwitchButton`: update size when children changes
+
+- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - `List` and `Table`: fix info icon style
+
+- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - Improve search system on `<MenuV2 />`
+
+- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<Notification />` position to avoid error in index
+
+- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - `UnitInput`: fix id of input
+
+- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - Fix border on `<List />` component in Safari
+
+- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<ActionBar />` within `<Table />` and `<List />`
+
+- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<SelectInput />` to display footer when there are values and hide on empty state
+
+- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - `<MenuV2 />: nested menus
+`<Popup />`: new position "nested-menu", that is right by default and left when there is no available space on the right of the element
+
+- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - `Modal`: returns focus to disclosure element when closing the modal
+
+- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - `Modal`: disclosure onClick should work even when it changes
+
+- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<Slider />` with `input` prop to only apply the value `onBlur` instead of `onChange`. Works also with double slider.
+
+- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - Add `aria-current` to `<Link />` component
+
+- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - `<SelectInputV2 />: hide footer when empty state
+
+- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - `TextArea`: height should adapt even without prop value
+
+- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - `UnitInput`: new prop "templateColumns" to chose sizes of the input and the select input more precisely
+
+- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - `DateInput`: value changes onBlur instead of onChange to avoid wrong dates while the user is typing
+
+- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - Fix all group field to have correct `legend` and `legendDescription`
+
+- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - Fix stepper small size with label on right
+
+- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - Fix visited state of link to match promience
+
+- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - `<TimeInputV2 />`: size "large" by default instead of "medium" and fix width of AM/PM input when large.
+
+- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - `<Loader />`: **breaking changes**
+
+  - align size on system icons : now size can only be "xsmall" (0.75rem/12px), "small" (1rem/16px), "medium" (1.25rem/20px), "large" (1.5rem/24px), "xlarge" (2rem/32px), or "_xxlarge_" (3.5rem/56px). By default, `size = "xlarge"` to match the old size.
+  - remove prop `color`, use `sentiment` instead. By default, `sentiment = primary`.
+  - remove props `trailColor`, `text`and `strokeWidth`.
+
+- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - Allow DND kit to work with `List` and `Button` :
+
+  - `List.Row` now supports "style" and "data-dragging" props ;
+  - For Security group we don't display header but the List component add to much spaces ;
+  - List.Row do not allow data-dragging prop
+  - `Button` can have props "aria-describedby", "aria-disabled", "aria-pressed", "aria-roledescription", "onPointerDown" and "onKeyDown" to work with DND kit
+
+- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - `Expandable`: no animation on first render
+
+- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - `<MenuV2 />`: focus on disclosure when closing menu and can use arrow keys to navigate in menu :
+
+  - Arrow Up/Down: browse the items
+  - Arrow Right: open nested menu and focus on the first item
+  - Arrow Left : close nested menu
+
+- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - `<SelectInputV2 />`: improve overflow
+
+- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - `<Link />`: reduce space between link and icon
+
+- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - Add theme get function for nivo chart components (harmonization of theme)
+
+- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - `<SelectInput />`: improve search
+
+- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - `<ExpandableCard />`: drag & drop
+
+- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - Fix add missing `tooltip` prop on `CheckboxGroup.Checkbox`
+
+- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - Add `disabled` on `<SwitchButton.Option />`
+
+- Updated dependencies [[`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7), [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7), [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7), [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7), [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7), [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7), [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7), [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7), [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7), [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7), [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7), [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7), [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7), [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7)]:
+  - @ultraviolet/icons@4.0.0
+  - @ultraviolet/themes@2.0.0
+
 ## 2.0.0-beta.19
 
 ### Major Changes
@@ -455,6 +790,7 @@
     Valid
   </Tag>;
   ```
+
 ## 2.0.0-beta.0
 
 ### Major Changes
@@ -464,8 +800,8 @@
 ### Patch Changes
 
 - Updated dependencies [[`37a7d63`](https://github.com/scaleway/ultraviolet/commit/37a7d632cd1e61d7615e5356fc179ec08f3bec09), [`a928589`](https://github.com/scaleway/ultraviolet/commit/a9285896d638e34eba9bb25c55c38de2aef4e210), [`865c160`](https://github.com/scaleway/ultraviolet/commit/865c160aee2db5bd5e7b357e9693a45a17ef4284)]:
-    - @ultraviolet/themes@2.0.0-beta.0
-    - @ultraviolet/icons@4.0.0-beta.0
+  - @ultraviolet/themes@2.0.0-beta.0
+  - @ultraviolet/icons@4.0.0-beta.0
 
 ## 1.95.14
 

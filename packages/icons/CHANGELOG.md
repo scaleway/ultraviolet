@@ -1,5 +1,104 @@
 # Change Log
 
+## 4.0.0
+
+### Major Changes
+
+- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - ⚠️ BREAKING CHANGES
+
+  - `GoldSupportProductIcon` => Replaced by `BusinessSupportProductIcon`
+  - `PlatinumSupportProductIcon` => Replace by `EnterpriseSupportProductIcon`
+  - `SilverSupportProductIcon` => Replaced by `AdvancedSupportProductIcon`
+
+  New product icons:
+
+  - `VpnConnectionProductIcon`
+  - `VpnCustomerGatewayProductIcon`
+
+  New system icon:
+
+  - `ClichouseIcon`
+
+- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - Name changing in Category icons:
+
+  - `ToolsServicesCategoryIcon` → `ManagementAndGovernanceCategoryIcon`
+  - `IotCategoryIcon` → `DomainsAndWebHostingCategoryIcon`
+  - `ServerlessCategoryIcon` → `ServerlessComputeCategoryIcon`
+  - `ConsoleCategoryIcon` → `OrganizationDashboardCategoryIcon`
+  - `ObservabilityCategoryIcon` → `MonitoringCategoryIcon`
+  - `ManagedServicesCategoryIcon` → `DataAndAnalyticsCategoryIcon`
+  - `ApplicationIntegrationCategoryIcon` → `IntegrationServicesCategoryIcon`
+  - `EnvironmentalFootprintCategoryIcon` → `CostAndImpactManagerCategoryIcon`
+
+- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - **Beta 1 - Migration of Icons to @ultraviolet/icons with direct imports**
+
+  - `Icon` component has been removed it was previously imported like `import { Icon } from '@ultraviolet/icons/legacy'`. Instead you should import the icon you need directly from `@ultraviolet/icons`.
+
+    Before:
+
+    ```tsx
+    import { Icon } from "@ultraviolet/icons/legacy";
+
+    <Icon name="drag" />;
+    ```
+
+    After:
+
+    ```tsx
+    import { DragIcon } from "@ultraviolet/icons";
+
+    <DragIcon />;
+    ```
+
+  ### Icons removed
+
+  - `DocumentDbProductIcon`: no replacement.
+  - `AsteriskIcon`: use \* in ASCII instead.
+  - `CrossCircleIcon` use `CloseCircleOutlineIcon` instead.
+  - `CrossCircleOutlineIcon` use `CloseCircleOutlineIcon` instead.
+  - `DragVariantIcon`: use `DragIcon` instead.
+
+  ### System icons changes
+
+  - prop `size` no longer support `string` and `number`. You shoud use the sizes supported by the component (`xmsall`, `small`, ect.). Example:
+
+    ```tsx
+    import { DragIcon } from '@ultraviolet/icons'
+
+    // Before
+    <DragIcon size={16} />
+
+    // After
+    <DragIcon size="small" />
+    ```
+
+- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - **BREAKING CHANGES**
+
+  Deprecated props removed:
+
+  - `CodeEditor`: prop "title" removed -> use "label" instead
+  - `Icon`: prop "color" removed -> use "sentiment" instead
+  - `Icon`: prop "size" can only be "xsmall", "small", "medium", "large", "xlarge" or "xxlarge"
+  - `Bullet`: prop "text" removed -> use "children" instead
+
+### Patch Changes
+
+- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - New logo icons
+
+- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - New product icons: `CustomModelProductIcon` and `CloudEssentialsProductIcon`
+  New icon: `BoxEssentialIcon` (and outline version)
+
+- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - New `ProductIcon`: "interlinkDedicated"
+
+- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - New category icons: `BusinessDetails`, `InteractiveDemos`, `KeyManager`, `OrganizationNotifications`, `Organization`, `Privacy`, `Profile` and `ProfileNotifications`
+
+- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - Fix system icons to work with weak prominence
+
+- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - New icon `DedilinkProductIcon`
+
+- Updated dependencies [[`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7), [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7), [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7), [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7)]:
+  - @ultraviolet/themes@2.0.0
+
 ## 4.0.0-beta.9
 
 ### Patch Changes
