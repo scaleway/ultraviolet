@@ -1,5 +1,6 @@
 import styled from '@emotion/styled'
-import { Icon, Link, Stack, Text, down } from '@ultraviolet/ui'
+import { GithubIcon } from '@ultraviolet/icons'
+import { Link, Stack, Text, down } from '@ultraviolet/ui'
 import swForm from '../../assets/icons/icon-scaleway-form.svg'
 import swLib from '../../assets/icons/icon-scaleway-lib.svg'
 import Card from '../../components/Card'
@@ -41,7 +42,7 @@ const OpenSource = () => (
                 Build amazing forms with Ultraviolet UI and React Final Form 🚀
               </StyledDescription>
               <Stack gap={1} direction="row">
-                <Icon name="github" size={20} />
+                <GithubIcon size="small" />
                 <Link
                   href="https://github.com/scaleway/scaleway-form"
                   target="_blank"
@@ -61,7 +62,7 @@ const OpenSource = () => (
                 Scaleway Lib is a set of NPM packages used at Scaleway
               </StyledDescription>
               <Stack gap={1} direction="row">
-                <Icon name="github" size={20} />
+                <GithubIcon size="small" />
                 <Link
                   href="https://github.com/scaleway/scaleway-lib"
                   target="_blank"

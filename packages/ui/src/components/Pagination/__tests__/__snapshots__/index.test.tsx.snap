@@ -7,10 +7,10 @@ exports[`Pagination > should render correctly 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -18,10 +18,9 @@ exports[`Pagination > should render correctly 1`] = `
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .emotion-2 {
@@ -29,10 +28,10 @@ exports[`Pagination > should render correctly 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -41,10 +40,9 @@ exports[`Pagination > should render correctly 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .emotion-4 {
@@ -52,10 +50,10 @@ exports[`Pagination > should render correctly 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -64,10 +62,10 @@ exports[`Pagination > should render correctly 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-6 {
@@ -84,7 +82,7 @@ exports[`Pagination > should render correctly 1`] = `
   gap: 0.5rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 2.5rem;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -99,7 +97,7 @@ exports[`Pagination > should render correctly 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -117,13 +115,17 @@ exports[`Pagination > should render correctly 1`] = `
   text-decoration: none;
 }
 
+.emotion-6 .e1y1n78x0 {
+  stroke: transparent;
+}
+
 .emotion-8 {
   vertical-align: middle;
   fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
 .emotion-8 .fillStroke {
@@ -131,19 +133,15 @@ exports[`Pagination > should render correctly 1`] = `
   fill: none;
 }
 
-.emotion-8 path {
-  fill: currentColor;
-}
-
 .emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -152,10 +150,10 @@ exports[`Pagination > should render correctly 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.5rem;
   margin: 0 0.5rem;
 }
 
@@ -188,7 +186,7 @@ exports[`Pagination > should render correctly 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -207,6 +205,10 @@ exports[`Pagination > should render correctly 1`] = `
 
 .emotion-13:active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-13 .e1y1n78x0 {
+  stroke: transparent;
 }
 
 .emotion-13:hover,
@@ -244,7 +246,7 @@ exports[`Pagination > should render correctly 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -263,6 +265,10 @@ exports[`Pagination > should render correctly 1`] = `
 
 .emotion-16:active {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
+}
+
+.emotion-16 .e1y1n78x0 {
+  stroke: transparent;
 }
 
 .emotion-16:hover,
@@ -286,7 +292,7 @@ exports[`Pagination > should render correctly 1`] = `
   gap: 0.5rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 2.5rem;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -301,7 +307,7 @@ exports[`Pagination > should render correctly 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -319,6 +325,10 @@ exports[`Pagination > should render correctly 1`] = `
 
 .emotion-29:active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-29 .e1y1n78x0 {
+  stroke: transparent;
 }
 
 .emotion-29:hover,
@@ -349,7 +359,6 @@ exports[`Pagination > should render correctly 1`] = `
             <svg
               class="emotion-8 emotion-9"
               viewBox="0 0 16 16"
-              xmlns="http://www.w3.org/2000/svg"
             >
               <path
                 clip-rule="evenodd"
@@ -409,7 +418,6 @@ exports[`Pagination > should render correctly 1`] = `
             <svg
               class="emotion-8 emotion-9"
               viewBox="0 0 16 16"
-              xmlns="http://www.w3.org/2000/svg"
             >
               <path
                 clip-rule="evenodd"
@@ -432,10 +440,10 @@ exports[`Pagination > should render correctly component with disabled 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -443,10 +451,9 @@ exports[`Pagination > should render correctly component with disabled 1`] = `
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .emotion-2 {
@@ -454,10 +461,10 @@ exports[`Pagination > should render correctly component with disabled 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -466,10 +473,9 @@ exports[`Pagination > should render correctly component with disabled 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .emotion-4 {
@@ -477,10 +483,10 @@ exports[`Pagination > should render correctly component with disabled 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -489,10 +495,10 @@ exports[`Pagination > should render correctly component with disabled 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-6 {
@@ -509,7 +515,7 @@ exports[`Pagination > should render correctly component with disabled 1`] = `
   gap: 0.5rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 2.5rem;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -524,7 +530,7 @@ exports[`Pagination > should render correctly component with disabled 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -542,13 +548,17 @@ exports[`Pagination > should render correctly component with disabled 1`] = `
   text-decoration: none;
 }
 
+.emotion-6 .e1y1n78x0 {
+  stroke: transparent;
+}
+
 .emotion-8 {
   vertical-align: middle;
   fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
 .emotion-8 .fillStroke {
@@ -556,19 +566,15 @@ exports[`Pagination > should render correctly component with disabled 1`] = `
   fill: none;
 }
 
-.emotion-8 path {
-  fill: currentColor;
-}
-
 .emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -577,10 +583,10 @@ exports[`Pagination > should render correctly component with disabled 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.5rem;
   margin: 0 0.5rem;
 }
 
@@ -613,7 +619,7 @@ exports[`Pagination > should render correctly component with disabled 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -632,10 +638,14 @@ exports[`Pagination > should render correctly component with disabled 1`] = `
   text-decoration: none;
 }
 
+.emotion-13 .e1y1n78x0 {
+  stroke: transparent;
+}
+
 .emotion-16 {
   color: #b5b7bd;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -680,7 +690,7 @@ exports[`Pagination > should render correctly component with disabled 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -697,6 +707,10 @@ exports[`Pagination > should render correctly component with disabled 1`] = `
 .emotion-22:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
+}
+
+.emotion-22 .e1y1n78x0 {
+  stroke: transparent;
 }
 
 <div
@@ -720,7 +734,6 @@ exports[`Pagination > should render correctly component with disabled 1`] = `
             <svg
               class="emotion-8 emotion-9"
               viewBox="0 0 16 16"
-              xmlns="http://www.w3.org/2000/svg"
             >
               <path
                 clip-rule="evenodd"
@@ -796,7 +809,6 @@ exports[`Pagination > should render correctly component with disabled 1`] = `
             <svg
               class="emotion-8 emotion-9"
               viewBox="0 0 16 16"
-              xmlns="http://www.w3.org/2000/svg"
             >
               <path
                 clip-rule="evenodd"
@@ -819,10 +831,10 @@ exports[`Pagination > should render correctly component with pageTabCount 1`] = 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -830,10 +842,9 @@ exports[`Pagination > should render correctly component with pageTabCount 1`] = 
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .emotion-2 {
@@ -841,10 +852,10 @@ exports[`Pagination > should render correctly component with pageTabCount 1`] = 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -853,10 +864,9 @@ exports[`Pagination > should render correctly component with pageTabCount 1`] = 
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .emotion-4 {
@@ -864,10 +874,10 @@ exports[`Pagination > should render correctly component with pageTabCount 1`] = 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -876,10 +886,10 @@ exports[`Pagination > should render correctly component with pageTabCount 1`] = 
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-6 {
@@ -896,7 +906,7 @@ exports[`Pagination > should render correctly component with pageTabCount 1`] = 
   gap: 0.5rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 2.5rem;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -911,7 +921,7 @@ exports[`Pagination > should render correctly component with pageTabCount 1`] = 
   -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -931,6 +941,10 @@ exports[`Pagination > should render correctly component with pageTabCount 1`] = 
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
+.emotion-6 .e1y1n78x0 {
+  stroke: transparent;
+}
+
 .emotion-6:hover,
 .emotion-6:active {
   background: #e5dbfd;
@@ -941,10 +955,10 @@ exports[`Pagination > should render correctly component with pageTabCount 1`] = 
 .emotion-8 {
   vertical-align: middle;
   fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
 .emotion-8 .fillStroke {
@@ -952,19 +966,15 @@ exports[`Pagination > should render correctly component with pageTabCount 1`] = 
   fill: none;
 }
 
-.emotion-8 path {
-  fill: currentColor;
-}
-
 .emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -973,10 +983,10 @@ exports[`Pagination > should render correctly component with pageTabCount 1`] = 
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.5rem;
   margin: 0 0.5rem;
 }
 
@@ -1009,7 +1019,7 @@ exports[`Pagination > should render correctly component with pageTabCount 1`] = 
   -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -1030,6 +1040,10 @@ exports[`Pagination > should render correctly component with pageTabCount 1`] = 
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
+.emotion-13 .e1y1n78x0 {
+  stroke: transparent;
+}
+
 .emotion-13:hover,
 .emotion-13:active {
   background: #e9eaeb;
@@ -1040,7 +1054,7 @@ exports[`Pagination > should render correctly component with pageTabCount 1`] = 
 .emotion-16 {
   color: #3f4250;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -1085,7 +1099,7 @@ exports[`Pagination > should render correctly component with pageTabCount 1`] = 
   -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -1104,6 +1118,10 @@ exports[`Pagination > should render correctly component with pageTabCount 1`] = 
 
 .emotion-22:active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-22 .e1y1n78x0 {
+  stroke: transparent;
 }
 
 .emotion-22:hover,
@@ -1132,7 +1150,6 @@ exports[`Pagination > should render correctly component with pageTabCount 1`] = 
             <svg
               class="emotion-8 emotion-9"
               viewBox="0 0 16 16"
-              xmlns="http://www.w3.org/2000/svg"
             >
               <path
                 clip-rule="evenodd"
@@ -1202,7 +1219,6 @@ exports[`Pagination > should render correctly component with pageTabCount 1`] = 
             <svg
               class="emotion-8 emotion-9"
               viewBox="0 0 16 16"
-              xmlns="http://www.w3.org/2000/svg"
             >
               <path
                 clip-rule="evenodd"
@@ -1225,10 +1241,10 @@ exports[`Pagination > should render correctly with page < 1 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -1236,10 +1252,9 @@ exports[`Pagination > should render correctly with page < 1 1`] = `
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .emotion-2 {
@@ -1247,10 +1262,10 @@ exports[`Pagination > should render correctly with page < 1 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -1259,10 +1274,9 @@ exports[`Pagination > should render correctly with page < 1 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .emotion-4 {
@@ -1270,10 +1284,10 @@ exports[`Pagination > should render correctly with page < 1 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -1282,10 +1296,10 @@ exports[`Pagination > should render correctly with page < 1 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-6 {
@@ -1302,7 +1316,7 @@ exports[`Pagination > should render correctly with page < 1 1`] = `
   gap: 0.5rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 2.5rem;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1317,7 +1331,7 @@ exports[`Pagination > should render correctly with page < 1 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -1335,13 +1349,17 @@ exports[`Pagination > should render correctly with page < 1 1`] = `
   text-decoration: none;
 }
 
+.emotion-6 .e1y1n78x0 {
+  stroke: transparent;
+}
+
 .emotion-8 {
   vertical-align: middle;
   fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
 .emotion-8 .fillStroke {
@@ -1349,19 +1367,15 @@ exports[`Pagination > should render correctly with page < 1 1`] = `
   fill: none;
 }
 
-.emotion-8 path {
-  fill: currentColor;
-}
-
 .emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -1370,10 +1384,10 @@ exports[`Pagination > should render correctly with page < 1 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.5rem;
   margin: 0 0.5rem;
 }
 
@@ -1406,7 +1420,7 @@ exports[`Pagination > should render correctly with page < 1 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -1425,6 +1439,10 @@ exports[`Pagination > should render correctly with page < 1 1`] = `
 
 .emotion-13:active {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
+}
+
+.emotion-13 .e1y1n78x0 {
+  stroke: transparent;
 }
 
 .emotion-13:hover,
@@ -1448,7 +1466,7 @@ exports[`Pagination > should render correctly with page < 1 1`] = `
   gap: 0.5rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 2.5rem;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1463,7 +1481,7 @@ exports[`Pagination > should render correctly with page < 1 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -1481,6 +1499,10 @@ exports[`Pagination > should render correctly with page < 1 1`] = `
 
 .emotion-20:active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-20 .e1y1n78x0 {
+  stroke: transparent;
 }
 
 .emotion-20:hover,
@@ -1511,7 +1533,6 @@ exports[`Pagination > should render correctly with page < 1 1`] = `
             <svg
               class="emotion-8 emotion-9"
               viewBox="0 0 16 16"
-              xmlns="http://www.w3.org/2000/svg"
             >
               <path
                 clip-rule="evenodd"
@@ -1550,7 +1571,6 @@ exports[`Pagination > should render correctly with page < 1 1`] = `
             <svg
               class="emotion-8 emotion-9"
               viewBox="0 0 16 16"
-              xmlns="http://www.w3.org/2000/svg"
             >
               <path
                 clip-rule="evenodd"
@@ -1573,10 +1593,10 @@ exports[`Pagination > should render correctly with page > pageCount 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -1584,10 +1604,9 @@ exports[`Pagination > should render correctly with page > pageCount 1`] = `
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .emotion-2 {
@@ -1595,10 +1614,10 @@ exports[`Pagination > should render correctly with page > pageCount 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -1607,10 +1626,9 @@ exports[`Pagination > should render correctly with page > pageCount 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .emotion-4 {
@@ -1618,10 +1636,10 @@ exports[`Pagination > should render correctly with page > pageCount 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -1630,10 +1648,10 @@ exports[`Pagination > should render correctly with page > pageCount 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-6 {
@@ -1650,7 +1668,7 @@ exports[`Pagination > should render correctly with page > pageCount 1`] = `
   gap: 0.5rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 2.5rem;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1665,7 +1683,7 @@ exports[`Pagination > should render correctly with page > pageCount 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -1685,6 +1703,10 @@ exports[`Pagination > should render correctly with page > pageCount 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
+.emotion-6 .e1y1n78x0 {
+  stroke: transparent;
+}
+
 .emotion-6:hover,
 .emotion-6:active {
   background: #e5dbfd;
@@ -1695,10 +1717,10 @@ exports[`Pagination > should render correctly with page > pageCount 1`] = `
 .emotion-8 {
   vertical-align: middle;
   fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
 .emotion-8 .fillStroke {
@@ -1706,19 +1728,15 @@ exports[`Pagination > should render correctly with page > pageCount 1`] = `
   fill: none;
 }
 
-.emotion-8 path {
-  fill: currentColor;
-}
-
 .emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -1727,10 +1745,10 @@ exports[`Pagination > should render correctly with page > pageCount 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.5rem;
   margin: 0 0.5rem;
 }
 
@@ -1763,7 +1781,7 @@ exports[`Pagination > should render correctly with page > pageCount 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -1782,6 +1800,10 @@ exports[`Pagination > should render correctly with page > pageCount 1`] = `
 
 .emotion-13:active {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
+}
+
+.emotion-13 .e1y1n78x0 {
+  stroke: transparent;
 }
 
 .emotion-13:hover,
@@ -1805,7 +1827,7 @@ exports[`Pagination > should render correctly with page > pageCount 1`] = `
   gap: 0.5rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 2.5rem;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1820,7 +1842,7 @@ exports[`Pagination > should render correctly with page > pageCount 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -1836,6 +1858,10 @@ exports[`Pagination > should render correctly with page > pageCount 1`] = `
 .emotion-20:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
+}
+
+.emotion-20 .e1y1n78x0 {
+  stroke: transparent;
 }
 
 <div
@@ -1858,7 +1884,6 @@ exports[`Pagination > should render correctly with page > pageCount 1`] = `
             <svg
               class="emotion-8 emotion-9"
               viewBox="0 0 16 16"
-              xmlns="http://www.w3.org/2000/svg"
             >
               <path
                 clip-rule="evenodd"
@@ -1898,7 +1923,6 @@ exports[`Pagination > should render correctly with page > pageCount 1`] = `
             <svg
               class="emotion-8 emotion-9"
               viewBox="0 0 16 16"
-              xmlns="http://www.w3.org/2000/svg"
             >
               <path
                 clip-rule="evenodd"
@@ -1921,10 +1945,10 @@ exports[`Pagination > should render correctly with pageClick 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -1932,10 +1956,9 @@ exports[`Pagination > should render correctly with pageClick 1`] = `
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .emotion-2 {
@@ -1943,10 +1966,10 @@ exports[`Pagination > should render correctly with pageClick 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -1955,10 +1978,9 @@ exports[`Pagination > should render correctly with pageClick 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .emotion-4 {
@@ -1966,10 +1988,10 @@ exports[`Pagination > should render correctly with pageClick 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -1978,10 +2000,10 @@ exports[`Pagination > should render correctly with pageClick 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-6 {
@@ -1998,7 +2020,7 @@ exports[`Pagination > should render correctly with pageClick 1`] = `
   gap: 0.5rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 2.5rem;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2013,7 +2035,7 @@ exports[`Pagination > should render correctly with pageClick 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -2033,6 +2055,10 @@ exports[`Pagination > should render correctly with pageClick 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
+.emotion-6 .e1y1n78x0 {
+  stroke: transparent;
+}
+
 .emotion-6:hover,
 .emotion-6:active {
   background: #e5dbfd;
@@ -2043,10 +2069,10 @@ exports[`Pagination > should render correctly with pageClick 1`] = `
 .emotion-8 {
   vertical-align: middle;
   fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
 .emotion-8 .fillStroke {
@@ -2054,19 +2080,15 @@ exports[`Pagination > should render correctly with pageClick 1`] = `
   fill: none;
 }
 
-.emotion-8 path {
-  fill: currentColor;
-}
-
 .emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -2075,10 +2097,10 @@ exports[`Pagination > should render correctly with pageClick 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.5rem;
   margin: 0 0.5rem;
 }
 
@@ -2111,7 +2133,7 @@ exports[`Pagination > should render correctly with pageClick 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -2130,6 +2152,10 @@ exports[`Pagination > should render correctly with pageClick 1`] = `
 
 .emotion-13:active {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
+}
+
+.emotion-13 .e1y1n78x0 {
+  stroke: transparent;
 }
 
 .emotion-13:hover,
@@ -2168,7 +2194,7 @@ exports[`Pagination > should render correctly with pageClick 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -2189,6 +2215,10 @@ exports[`Pagination > should render correctly with pageClick 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
+.emotion-16 .e1y1n78x0 {
+  stroke: transparent;
+}
+
 .emotion-16:hover,
 .emotion-16:active {
   background: #792dd4;
@@ -2198,7 +2228,7 @@ exports[`Pagination > should render correctly with pageClick 1`] = `
 .emotion-28 {
   color: #3f4250;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -2234,7 +2264,6 @@ exports[`Pagination > should render correctly with pageClick 1`] = `
             <svg
               class="emotion-8 emotion-9"
               viewBox="0 0 16 16"
-              xmlns="http://www.w3.org/2000/svg"
             >
               <path
                 clip-rule="evenodd"
@@ -2306,7 +2335,6 @@ exports[`Pagination > should render correctly with pageClick 1`] = `
             <svg
               class="emotion-8 emotion-9"
               viewBox="0 0 16 16"
-              xmlns="http://www.w3.org/2000/svg"
             >
               <path
                 clip-rule="evenodd"
@@ -2329,10 +2357,10 @@ exports[`Pagination > should render correctly with pageCount is 1 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -2340,10 +2368,9 @@ exports[`Pagination > should render correctly with pageCount is 1 1`] = `
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .emotion-2 {
@@ -2351,10 +2378,10 @@ exports[`Pagination > should render correctly with pageCount is 1 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -2363,10 +2390,9 @@ exports[`Pagination > should render correctly with pageCount is 1 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .emotion-4 {
@@ -2374,10 +2400,10 @@ exports[`Pagination > should render correctly with pageCount is 1 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -2386,10 +2412,10 @@ exports[`Pagination > should render correctly with pageCount is 1 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-6 {
@@ -2406,7 +2432,7 @@ exports[`Pagination > should render correctly with pageCount is 1 1`] = `
   gap: 0.5rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 2.5rem;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2421,7 +2447,7 @@ exports[`Pagination > should render correctly with pageCount is 1 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -2439,13 +2465,17 @@ exports[`Pagination > should render correctly with pageCount is 1 1`] = `
   text-decoration: none;
 }
 
+.emotion-6 .e1y1n78x0 {
+  stroke: transparent;
+}
+
 .emotion-8 {
   vertical-align: middle;
   fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
 .emotion-8 .fillStroke {
@@ -2453,19 +2483,15 @@ exports[`Pagination > should render correctly with pageCount is 1 1`] = `
   fill: none;
 }
 
-.emotion-8 path {
-  fill: currentColor;
-}
-
 .emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -2474,10 +2500,10 @@ exports[`Pagination > should render correctly with pageCount is 1 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.5rem;
   margin: 0 0.5rem;
 }
 
@@ -2510,7 +2536,7 @@ exports[`Pagination > should render correctly with pageCount is 1 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -2529,6 +2555,10 @@ exports[`Pagination > should render correctly with pageCount is 1 1`] = `
 
 .emotion-13:active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-13 .e1y1n78x0 {
+  stroke: transparent;
 }
 
 .emotion-13:hover,
@@ -2558,7 +2588,6 @@ exports[`Pagination > should render correctly with pageCount is 1 1`] = `
             <svg
               class="emotion-8 emotion-9"
               viewBox="0 0 16 16"
-              xmlns="http://www.w3.org/2000/svg"
             >
               <path
                 clip-rule="evenodd"
@@ -2591,7 +2620,6 @@ exports[`Pagination > should render correctly with pageCount is 1 1`] = `
             <svg
               class="emotion-8 emotion-9"
               viewBox="0 0 16 16"
-              xmlns="http://www.w3.org/2000/svg"
             >
               <path
                 clip-rule="evenodd"
@@ -2614,10 +2642,10 @@ exports[`Pagination > should render correctly with perPage - default values 1`] 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -2625,10 +2653,9 @@ exports[`Pagination > should render correctly with perPage - default values 1`] 
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .emotion-2 {
@@ -2636,10 +2663,10 @@ exports[`Pagination > should render correctly with perPage - default values 1`] 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2648,16 +2675,16 @@ exports[`Pagination > should render correctly with perPage - default values 1`] 
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 1rem;
 }
 
 .emotion-4 {
   color: #727683;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -2691,10 +2718,10 @@ exports[`Pagination > should render correctly with perPage - default values 1`] 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -2703,36 +2730,17 @@ exports[`Pagination > should render correctly with perPage - default values 1`] 
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .emotion-13 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: grid;
+  width: 100%;
   gap: 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  grid-template-columns: 1fr auto;
   padding: 0.5rem;
   padding-right: 0;
   padding-left: 1rem;
@@ -2741,7 +2749,6 @@ exports[`Pagination > should render correctly with perPage - default values 1`] 
   background: #ffffff;
   border-radius: 0.25rem;
   width: 100%;
-  overflow: hidden;
 }
 
 .emotion-13[data-size='small'] {
@@ -2825,7 +2832,7 @@ exports[`Pagination > should render correctly with perPage - default values 1`] 
 .emotion-16 {
   color: #3f4250;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -2835,6 +2842,9 @@ exports[`Pagination > should render correctly with perPage - default values 1`] 
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
 }
 
 .emotion-18 {
@@ -2842,10 +2852,10 @@ exports[`Pagination > should render correctly with perPage - default values 1`] 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2854,10 +2864,10 @@ exports[`Pagination > should render correctly with perPage - default values 1`] 
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.5rem;
   padding-right: 1rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2884,10 +2894,10 @@ exports[`Pagination > should render correctly with perPage - default values 1`] 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -2896,10 +2906,9 @@ exports[`Pagination > should render correctly with perPage - default values 1`] 
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .emotion-26 {
@@ -2907,10 +2916,10 @@ exports[`Pagination > should render correctly with perPage - default values 1`] 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -2919,10 +2928,10 @@ exports[`Pagination > should render correctly with perPage - default values 1`] 
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-28 {
@@ -2939,7 +2948,7 @@ exports[`Pagination > should render correctly with perPage - default values 1`] 
   gap: 0.5rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 2rem;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2954,7 +2963,7 @@ exports[`Pagination > should render correctly with perPage - default values 1`] 
   -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -2974,6 +2983,10 @@ exports[`Pagination > should render correctly with perPage - default values 1`] 
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
+.emotion-28 .e1y1n78x0 {
+  stroke: transparent;
+}
+
 .emotion-28:hover,
 .emotion-28:active {
   background: #e5dbfd;
@@ -2984,10 +2997,10 @@ exports[`Pagination > should render correctly with perPage - default values 1`] 
 .emotion-30 {
   vertical-align: middle;
   fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
 .emotion-30 .fillStroke {
@@ -2995,19 +3008,15 @@ exports[`Pagination > should render correctly with perPage - default values 1`] 
   fill: none;
 }
 
-.emotion-30 path {
-  fill: currentColor;
-}
-
 .emotion-32 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -3016,10 +3025,10 @@ exports[`Pagination > should render correctly with perPage - default values 1`] 
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.5rem;
   margin: 0 0.5rem;
 }
 
@@ -3052,7 +3061,7 @@ exports[`Pagination > should render correctly with perPage - default values 1`] 
   -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -3071,6 +3080,10 @@ exports[`Pagination > should render correctly with perPage - default values 1`] 
 
 .emotion-35:active {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
+}
+
+.emotion-35 .e1y1n78x0 {
+  stroke: transparent;
 }
 
 .emotion-35:hover,
@@ -3109,7 +3122,7 @@ exports[`Pagination > should render correctly with perPage - default values 1`] 
   -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -3130,6 +3143,10 @@ exports[`Pagination > should render correctly with perPage - default values 1`] 
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
+.emotion-38 .e1y1n78x0 {
+  stroke: transparent;
+}
+
 .emotion-38:hover,
 .emotion-38:active {
   background: #792dd4;
@@ -3139,7 +3156,7 @@ exports[`Pagination > should render correctly with perPage - default values 1`] 
 .emotion-50 {
   color: #3f4250;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -3239,9 +3256,8 @@ exports[`Pagination > should render correctly with perPage - default values 1`] 
             type="button"
           >
             <svg
-              class="emotion-30 emotion-31"
+              class="emotion-30 emotion-21"
               viewBox="0 0 16 16"
-              xmlns="http://www.w3.org/2000/svg"
             >
               <path
                 clip-rule="evenodd"
@@ -3311,9 +3327,8 @@ exports[`Pagination > should render correctly with perPage - default values 1`] 
             type="button"
           >
             <svg
-              class="emotion-30 emotion-31"
+              class="emotion-30 emotion-21"
               viewBox="0 0 16 16"
-              xmlns="http://www.w3.org/2000/svg"
             >
               <path
                 clip-rule="evenodd"
@@ -3336,10 +3351,10 @@ exports[`Pagination > should render correctly with perPage 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -3347,10 +3362,9 @@ exports[`Pagination > should render correctly with perPage 1`] = `
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .emotion-2 {
@@ -3358,10 +3372,10 @@ exports[`Pagination > should render correctly with perPage 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -3370,16 +3384,16 @@ exports[`Pagination > should render correctly with perPage 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 1rem;
 }
 
 .emotion-4 {
   color: #727683;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -3413,10 +3427,10 @@ exports[`Pagination > should render correctly with perPage 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -3425,36 +3439,17 @@ exports[`Pagination > should render correctly with perPage 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .emotion-13 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: grid;
+  width: 100%;
   gap: 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  grid-template-columns: 1fr auto;
   padding: 0.5rem;
   padding-right: 0;
   padding-left: 1rem;
@@ -3463,7 +3458,6 @@ exports[`Pagination > should render correctly with perPage 1`] = `
   background: #ffffff;
   border-radius: 0.25rem;
   width: 100%;
-  overflow: hidden;
 }
 
 .emotion-13[data-size='small'] {
@@ -3547,7 +3541,7 @@ exports[`Pagination > should render correctly with perPage 1`] = `
 .emotion-16 {
   color: #3f4250;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -3557,6 +3551,9 @@ exports[`Pagination > should render correctly with perPage 1`] = `
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
 }
 
 .emotion-18 {
@@ -3564,10 +3561,10 @@ exports[`Pagination > should render correctly with perPage 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -3576,10 +3573,10 @@ exports[`Pagination > should render correctly with perPage 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.5rem;
   padding-right: 1rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -3606,10 +3603,10 @@ exports[`Pagination > should render correctly with perPage 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -3618,10 +3615,9 @@ exports[`Pagination > should render correctly with perPage 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .emotion-26 {
@@ -3629,10 +3625,10 @@ exports[`Pagination > should render correctly with perPage 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -3641,10 +3637,10 @@ exports[`Pagination > should render correctly with perPage 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-28 {
@@ -3661,7 +3657,7 @@ exports[`Pagination > should render correctly with perPage 1`] = `
   gap: 0.5rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 2rem;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -3676,7 +3672,7 @@ exports[`Pagination > should render correctly with perPage 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -3696,6 +3692,10 @@ exports[`Pagination > should render correctly with perPage 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
+.emotion-28 .e1y1n78x0 {
+  stroke: transparent;
+}
+
 .emotion-28:hover,
 .emotion-28:active {
   background: #e5dbfd;
@@ -3706,10 +3706,10 @@ exports[`Pagination > should render correctly with perPage 1`] = `
 .emotion-30 {
   vertical-align: middle;
   fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
 .emotion-30 .fillStroke {
@@ -3717,19 +3717,15 @@ exports[`Pagination > should render correctly with perPage 1`] = `
   fill: none;
 }
 
-.emotion-30 path {
-  fill: currentColor;
-}
-
 .emotion-32 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -3738,10 +3734,10 @@ exports[`Pagination > should render correctly with perPage 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.5rem;
   margin: 0 0.5rem;
 }
 
@@ -3774,7 +3770,7 @@ exports[`Pagination > should render correctly with perPage 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -3793,6 +3789,10 @@ exports[`Pagination > should render correctly with perPage 1`] = `
 
 .emotion-35:active {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
+}
+
+.emotion-35 .e1y1n78x0 {
+  stroke: transparent;
 }
 
 .emotion-35:hover,
@@ -3831,7 +3831,7 @@ exports[`Pagination > should render correctly with perPage 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -3852,6 +3852,10 @@ exports[`Pagination > should render correctly with perPage 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
+.emotion-38 .e1y1n78x0 {
+  stroke: transparent;
+}
+
 .emotion-38:hover,
 .emotion-38:active {
   background: #792dd4;
@@ -3861,7 +3865,7 @@ exports[`Pagination > should render correctly with perPage 1`] = `
 .emotion-50 {
   color: #3f4250;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -3961,9 +3965,8 @@ exports[`Pagination > should render correctly with perPage 1`] = `
             type="button"
           >
             <svg
-              class="emotion-30 emotion-31"
+              class="emotion-30 emotion-21"
               viewBox="0 0 16 16"
-              xmlns="http://www.w3.org/2000/svg"
             >
               <path
                 clip-rule="evenodd"
@@ -4033,9 +4036,8 @@ exports[`Pagination > should render correctly with perPage 1`] = `
             type="button"
           >
             <svg
-              class="emotion-30 emotion-31"
+              class="emotion-30 emotion-21"
               viewBox="0 0 16 16"
-              xmlns="http://www.w3.org/2000/svg"
             >
               <path
                 clip-rule="evenodd"

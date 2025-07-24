@@ -17,6 +17,8 @@ const SIZES = {
   xxlarge: '700',
 } as const
 
+type SizesProps = keyof typeof SIZES
+
 type Color = Extract<
   keyof typeof theme.colors,
   | 'primary'
@@ -32,28 +34,14 @@ const sizeStyles = ({
   size,
   theme,
 }: {
-  size: keyof typeof SIZES | number | string
+  size: SizesProps
   theme: Theme
-}) => {
-  if (typeof size === 'string' && size in SIZES) {
-    return css`
-        height: ${theme.sizing[SIZES[size as keyof typeof SIZES]]};
-        width: ${theme.sizing[SIZES[size as keyof typeof SIZES]]};
-        min-width: ${theme.sizing[SIZES[size as keyof typeof SIZES]]};
-        min-height: ${theme.sizing[SIZES[size as keyof typeof SIZES]]};
+}) => css`
+    height: ${theme.sizing[SIZES[size]]};
+    width: ${theme.sizing[SIZES[size]]};
+    min-width: ${theme.sizing[SIZES[size]]};
+    min-height: ${theme.sizing[SIZES[size]]};
     `
-  }
-
-  const pxSize =
-    typeof size === 'number' && !Number.isNaN(size) ? `${size}px` : size
-
-  return css`
-    height: ${pxSize};
-    width: ${pxSize};
-    min-width: ${pxSize};
-    min-height: ${pxSize};
-  `
-}
 
 const PROMINENCES = {
   default: '',
@@ -68,8 +56,8 @@ const StyledIcon = styled('svg', {
   shouldForwardProp: prop =>
     !['size', 'sentiment', 'prominence', 'disabled'].includes(prop),
 })<{
-  sentiment: Color | string
-  size: number | string
+  sentiment?: Color
+  size: SizesProps
   prominence: ProminenceProps
   disabled?: boolean
 }>`
@@ -77,16 +65,21 @@ const StyledIcon = styled('svg', {
   fill: ${({ theme, sentiment, prominence, disabled }) => {
     // stronger is available only for neutral sentiment
     const definedProminence =
-      sentiment !== 'neutral' && prominence === 'stronger'
+      (sentiment !== 'neutral' && prominence === 'stronger') ||
+      prominence === 'weak'
         ? capitalize(PROMINENCES.default)
         : capitalize(PROMINENCES[prominence])
 
-    const themeColor = theme.colors[sentiment as Color]
-    const icon = `icon${definedProminence}${
-      disabled ? 'Disabled' : ''
-    }` as keyof typeof themeColor
+    if (sentiment) {
+      const themeColor = theme.colors[sentiment]
+      const icon = `icon${definedProminence}${
+        disabled ? 'Disabled' : ''
+      }` as keyof typeof themeColor
 
-    return theme.colors?.[sentiment as Color]?.[icon] || sentiment
+      return theme.colors?.[sentiment]?.[icon] || sentiment
+    }
+
+    return 'currentColor'
   }};
 
   .fillStroke {
@@ -97,12 +90,16 @@ const StyledIcon = styled('svg', {
           ? capitalize(PROMINENCES.default)
           : capitalize(PROMINENCES[prominence])
 
-      const themeColor = theme.colors[sentiment as Color]
-      const icon = `icon${definedProminence}${
-        disabled ? 'Disabled' : ''
-      }` as keyof typeof themeColor
+      if (sentiment) {
+        const themeColor = theme.colors[sentiment]
+        const icon = `icon${definedProminence}${
+          disabled ? 'Disabled' : ''
+        }` as keyof typeof themeColor
 
-      return theme.colors?.[sentiment as Color]?.[icon] || sentiment
+        return theme.colors?.[sentiment]?.[icon] || sentiment
+      }
+
+      return 'currentColor'
     }};
     fill: none;
   }
@@ -110,15 +107,8 @@ const StyledIcon = styled('svg', {
 `
 
 export type IconProps = {
-  /**
-   * **! IMPORTANT:** `string` and `number` are deprecated. Use `small`, `large`, `xlarge`, `xxlarge` only.
-   */
-  size?: number | string | 'small' | 'large'
+  size?: SizesProps
   prominence?: ProminenceProps
-  /**
-   * @deprecated use `sentiment` property instead
-   */
-  color?: Color
   sentiment?: Color
   'data-testid'?: string
   disabled?: boolean
@@ -129,13 +119,12 @@ export type IconProps = {
 >
 
 /**
- * IconV2 component is our set of system icons in the design system. All of them are SVGs.
+ * Icon component is our set of system icons in the design system. All of them are SVGs.
  */
 
 export const Icon = forwardRef<SVGSVGElement, IconProps>(
   (
     {
-      color = 'currentColor',
       sentiment,
       size = 'small',
       prominence = 'default',
@@ -149,30 +138,26 @@ export const Icon = forwardRef<SVGSVGElement, IconProps>(
       children,
     },
     ref,
-  ) => {
-    const computedSentiment = sentiment ?? color
-
-    return (
-      <StyledIcon
-        ref={ref}
-        sentiment={computedSentiment}
-        prominence={prominence}
-        size={size}
-        viewBox={
-          typeof size === 'string' && ['xsmall', 'small'].includes(size)
-            ? '0 0 16 16'
-            : '0 0 20 20'
-        }
-        className={className}
-        data-testid={dataTestId}
-        stroke={stroke}
-        cursor={cursor}
-        strokeWidth={strokeWidth}
-        disabled={disabled}
-        aria-label={ariaLabel}
-      >
-        {children}
-      </StyledIcon>
-    )
-  },
+  ) => (
+    <StyledIcon
+      ref={ref}
+      sentiment={sentiment}
+      prominence={prominence}
+      size={size}
+      viewBox={
+        typeof size === 'string' && ['xsmall', 'small'].includes(size)
+          ? '0 0 16 16'
+          : '0 0 20 20'
+      }
+      className={className}
+      data-testid={dataTestId}
+      stroke={stroke}
+      cursor={cursor}
+      strokeWidth={strokeWidth}
+      disabled={disabled}
+      aria-label={ariaLabel}
+    >
+      {children}
+    </StyledIcon>
+  ),
 )

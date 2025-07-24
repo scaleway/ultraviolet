@@ -10,7 +10,7 @@ import type { BaseFieldProps } from '../../types'
 type RadioGroupFieldProps<
   TFieldValues extends FieldValues,
   TFieldName extends FieldPath<TFieldValues>,
-> = BaseFieldProps<TFieldValues, TFieldName> &
+> = Omit<BaseFieldProps<TFieldValues, TFieldName>, 'label'> &
   Omit<ComponentProps<typeof RadioGroup>, 'value' | 'onChange' | 'legend'> &
   Partial<Pick<ComponentProps<typeof RadioGroup>, 'legend'>>
 
@@ -23,11 +23,10 @@ export const RadioGroupField = <
   onChange,
   required,
   children,
-  label = '',
   error: customError,
   shouldUnregister = false,
   validate,
-  legend,
+  legend = '',
   ...props
 }: RadioGroupFieldProps<TFieldValues, TFieldName>): JSX.Element => {
   const { getError } = useErrors()
@@ -56,8 +55,8 @@ export const RadioGroupField = <
       }}
       required={required}
       value={field.value}
-      error={getError({ label }, error) ?? customError}
-      legend={legend ?? ''}
+      error={getError({ label: legend }, error) ?? customError}
+      legend={legend}
     >
       {children}
     </RadioGroup>

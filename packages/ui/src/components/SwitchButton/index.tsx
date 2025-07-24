@@ -1,50 +1,26 @@
 'use client'
 
 import styled from '@emotion/styled'
-import type { ChangeEvent, ChangeEventHandler, FocusEventHandler } from 'react'
-import { useCallback, useEffect, useRef, useState } from 'react'
-import { SelectableCard } from '../SelectableCard'
+import type {
+  ChangeEvent,
+  ChangeEventHandler,
+  FocusEventHandler,
+  ReactNode,
+} from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import { Stack } from '../Stack'
 import { Tooltip } from '../Tooltip'
 import { FocusOverlay } from './FocusOverlay'
+import { Option } from './Option'
+import type { RefOptionType } from './SwitchButtonContext'
+import { SwitchButtonContext } from './SwitchButtonContext'
+import { FOCUS_OVERLAY_SCALE_RATIO } from './constant'
 
 const SIZES = {
   small: '500', // sizing token from theme
   medium: '600',
 } as const
 
-const StyledSelectableCard = styled(SelectableCard)`
-  border: none;
-  padding: ${({ theme }) => theme.space['1']} ${({ theme }) => theme.space['2']};
-  font-weight: ${({ theme }) => theme.typography.bodyStrong.weight};
-  justify-content: center;
-  align-items: center;
-  transition: all 200ms ease-in-out;
-  white-space: nowrap;
-  background: transparent;
-
-  &:hover,
-  &:active {
-    box-shadow: none;
-    border: none;
-    &:not([data-error='true'][data-disabled='true']) {
-      border: none;
-    }
-  }
-
-  &[data-checked='true'] {
-    border: none;
-  }
-
-  &[data-checked='true'] label {
-    color: ${({ theme }) => theme.colors.primary.textStrong};
-  }
-
-  &:not([data-checked='true']) label {
-    &:hover {
-      color: ${({ theme }) => theme.colors.primary.text};
-    }
-  }
-`
 const StyledBorderedBox = styled.div<{ 'data-size': 'small' | 'medium' }>`
   border: 1px solid ${({ theme }) => theme.colors.neutral.border};
   border-radius: ${({ theme }) => theme.radii.default};
@@ -54,37 +30,25 @@ const StyledBorderedBox = styled.div<{ 'data-size': 'small' | 'medium' }>`
   position: relative;
 
   &[data-size='small'] {
-    & > ${StyledSelectableCard} {
       height: ${({ theme }) => theme.sizing[SIZES.small]};
-    }
   }
 
   &[data-size='medium'] {
-    & > ${StyledSelectableCard} {
       height: ${({ theme }) => theme.sizing[SIZES.medium]};
-    }
   }
 `
 type SwitchButtonProps = {
   name?: string
+  children: ReactNode
   onBlur?: FocusEventHandler<HTMLInputElement>
   onChange: ChangeEventHandler<HTMLInputElement>
   onFocus?: FocusEventHandler<HTMLInputElement>
   tooltip?: string
-  value?: string | number
-  leftButton: {
-    label: string
-    value: string
-    disabled?: boolean
-  }
-  rightButton: {
-    label: string
-    value: string
-    disabled?: boolean
-  }
+  value: string
   className?: string
   'data-testid'?: string
   size?: 'small' | 'medium'
+  sentiment?: 'primary' | 'neutral'
 }
 
 /**
@@ -96,91 +60,158 @@ export const SwitchButton = ({
   onFocus,
   onBlur,
   name,
-  leftButton,
-  rightButton,
   size = 'small',
+  sentiment = 'primary',
   tooltip,
   className,
+  children,
   'data-testid': dataTestId,
 }: SwitchButtonProps) => {
-  const leftButtonRef = useRef<HTMLDivElement>(null)
-  const rightButtonRef = useRef<HTMLDivElement>(null)
-  const [leftCardWidth, setLeftCardWidth] = useState<number>()
-  const [rightCardWidth, setRightCardWidth] = useState<number>()
-  const [hasMouseDown, setHasMouseDown] = useState(false)
+  const containerRef = useRef<HTMLDivElement>(null)
 
-  const getValueToUse = useCallback(
-    () => (value === leftButton.value ? leftButton.value : rightButton.value),
-    [leftButton.value, rightButton.value, value],
+  const [localValue, setLocalValue] = useState<string>(value)
+  const [refOptions, setRefOptions] = useState<RefOptionType[]>([])
+  const [position, setPosition] = useState(0)
+  const [width, setWidth] = useState(0)
+  const [mouseDownSide, setMouseDownSide] = useState<'left' | 'right' | null>(
+    null,
   )
 
-  const [localValue, setLocalValue] = useState(getValueToUse)
+  const getElement = useCallback(
+    (referenceValue: string) =>
+      refOptions.find(
+        element => element.current && element.value === referenceValue,
+      )?.current,
+    [refOptions],
+  )
 
-  useEffect(() => {
-    setLocalValue(getValueToUse())
-  }, [getValueToUse, value])
+  const getPosition = (curentElement?: HTMLInputElement) => {
+    if (!curentElement) return 0
+    const currentPosition = curentElement.getBoundingClientRect().left
+    const containerPosition =
+      containerRef.current?.getBoundingClientRect().left ?? 0
 
-  const handleOnChange = (event: ChangeEvent<HTMLInputElement>) => {
-    onChange?.(event)
-    setLocalValue(event.target.value)
+    return currentPosition - containerPosition
   }
 
   useEffect(() => {
-    if (!leftButtonRef.current || !rightButtonRef.current) return
-    setLeftCardWidth(leftButtonRef.current.getBoundingClientRect().width)
-    setRightCardWidth(rightButtonRef.current.getBoundingClientRect().width)
-  }, [leftButton.value, leftButtonRef, localValue, rightButtonRef])
+    setLocalValue(value)
+    setWidth(getElement(value)?.offsetWidth ?? 0)
+    setPosition(getPosition(getElement(value)))
+  }, [refOptions, value, getElement])
 
-  const setMouseDown = (isMouseDown: boolean) => () =>
-    setHasMouseDown(isMouseDown)
+  useEffect(() => {
+    const element = getElement(localValue)
+    if (!element) return undefined
+
+    const resizeObserver = new ResizeObserver(() => {
+      if (
+        element.offsetWidth &&
+        (![
+          width,
+          width + FOCUS_OVERLAY_SCALE_RATIO,
+          width - FOCUS_OVERLAY_SCALE_RATIO,
+        ].includes(element.offsetWidth) ||
+          getPosition(element) !== position)
+      ) {
+        setWidth(element.offsetWidth ?? 0)
+        setPosition(getPosition(element))
+      }
+    })
+
+    resizeObserver.observe(element)
+
+    return () => {
+      resizeObserver.disconnect()
+    }
+  }, [getElement, width, position, localValue, children])
+
+  const handleOnChange = useCallback(
+    (event: ChangeEvent<HTMLInputElement>) => {
+      onChange?.(event)
+      setLocalValue(event.target.value)
+
+      const currentElement = getElement(event.target.value)
+
+      if (currentElement && containerRef.current) {
+        const currentWidth = currentElement.offsetWidth ?? 0
+        setWidth(currentWidth)
+        setPosition(getPosition(currentElement))
+      }
+    },
+    [getElement, onChange],
+  )
+
+  const valueContext = useMemo(
+    () => ({
+      localValue,
+      name,
+      onBlur,
+      onFocus,
+      size,
+      handleOnChange,
+      refOptions,
+      setRefOptions,
+      sentiment,
+    }),
+    [
+      handleOnChange,
+      localValue,
+      name,
+      onBlur,
+      onFocus,
+      refOptions,
+      size,
+      sentiment,
+    ],
+  )
 
   return (
-    <Tooltip text={tooltip}>
-      <div
-        style={{ display: 'inline-flex' }}
-        className={className}
-        data-testid={dataTestId}
-      >
-        <StyledBorderedBox
-          onMouseDown={setMouseDown(true)}
-          onMouseUp={setMouseDown(false)}
-          onMouseLeave={setMouseDown(false)}
-          data-size={size}
-        >
-          {rightCardWidth && leftCardWidth ? (
-            <FocusOverlay
-              focusPosition={localValue === leftButton.value ? 'left' : 'right'}
-              rightCardWidth={rightCardWidth}
-              leftCardWidth={leftCardWidth}
-              hasMouseDown={hasMouseDown}
-            />
-          ) : null}
-          <StyledSelectableCard
-            ref={leftButtonRef}
-            name={name}
-            value={leftButton.value}
-            checked={localValue === leftButton.value}
-            onChange={handleOnChange}
-            onBlur={onBlur}
-            onFocus={onFocus}
-            data-checked={localValue === leftButton.value}
-            label={leftButton.label}
-            data-testid={dataTestId ? `${dataTestId}-left` : undefined}
-          />
-          <StyledSelectableCard
-            ref={rightButtonRef}
-            name={name}
-            value={rightButton.value}
-            checked={localValue === rightButton.value}
-            onChange={handleOnChange}
-            onBlur={onBlur}
-            onFocus={onFocus}
-            data-checked={localValue === rightButton.value}
-            label={rightButton.label}
-            data-testid={dataTestId ? `${dataTestId}-right` : undefined}
-          />
-        </StyledBorderedBox>
-      </div>
-    </Tooltip>
+    <SwitchButtonContext.Provider value={valueContext}>
+      <Tooltip text={tooltip}>
+        <Stack direction="row" className={className} data-testid={dataTestId}>
+          <StyledBorderedBox
+            onMouseDown={event => {
+              const rect = event.currentTarget.getBoundingClientRect()
+              const clickX = event.clientX - rect.left
+              const clickInCurrentElement =
+                clickX > position && clickX < position + width
+              if (!clickInCurrentElement) {
+                setMouseDownSide(
+                  clickX < getPosition(getElement(localValue))
+                    ? 'left'
+                    : 'right',
+                )
+                setWidth(width + FOCUS_OVERLAY_SCALE_RATIO)
+              } else {
+                setMouseDownSide(null)
+              }
+            }}
+            onMouseUp={() => {
+              setMouseDownSide(null)
+              if (mouseDownSide) setWidth(width - FOCUS_OVERLAY_SCALE_RATIO)
+            }}
+            onMouseLeave={() => {
+              setMouseDownSide(null)
+              if (mouseDownSide) setWidth(width - FOCUS_OVERLAY_SCALE_RATIO)
+            }}
+            data-size={size}
+            ref={containerRef}
+          >
+            {width ? (
+              <FocusOverlay
+                cardWidth={width}
+                position={position}
+                mouseDownSide={mouseDownSide}
+                sentiment={sentiment}
+              />
+            ) : null}
+            {children}
+          </StyledBorderedBox>
+        </Stack>
+      </Tooltip>
+    </SwitchButtonContext.Provider>
   )
 }
+
+SwitchButton.Option = Option

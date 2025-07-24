@@ -11,38 +11,21 @@ type ToggleGroupFieldProps<
   TFieldValues extends FieldValues,
   TFieldName extends FieldPath<TFieldValues>,
 > = BaseFieldProps<TFieldValues, TFieldName> &
-  Partial<
-    Pick<
-      ComponentProps<typeof ToggleGroup>,
-      | 'className'
-      | 'helper'
-      | 'direction'
-      | 'children'
-      | 'error'
-      | 'legend'
-      | 'description'
-    >
-  > &
-  Required<Pick<ComponentProps<typeof ToggleGroup>, 'legend'>>
+  Omit<ComponentProps<typeof ToggleGroup>, 'value' | 'onChange'>
 
 export const ToggleGroupField = <
   TFieldValues extends FieldValues,
   TFieldName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
 >({
-  legend,
+  legend = '',
   control,
-  className,
-  helper,
-  description,
-  direction,
-  children,
   onChange,
-  label,
   error: customError,
   name,
   required = false,
   shouldUnregister = false,
   validate,
+  ...props
 }: ToggleGroupFieldProps<TFieldValues, TFieldName>) => {
   const { getError } = useErrors()
   const {
@@ -64,6 +47,7 @@ export const ToggleGroupField = <
 
   return (
     <ToggleGroup
+      {...props}
       legend={legend}
       name={field.name}
       value={value}
@@ -80,15 +64,9 @@ export const ToggleGroupField = <
           onChange?.(newValue as PathValue<TFieldValues, Path<TFieldValues>>)
         }
       }}
-      error={customError ?? getError({ label: label ?? '' }, error)}
-      className={className}
-      direction={direction}
-      description={description}
-      helper={helper}
+      error={customError ?? getError({ label: legend }, error)}
       required={required}
-    >
-      {children}
-    </ToggleGroup>
+    />
   )
 }
 

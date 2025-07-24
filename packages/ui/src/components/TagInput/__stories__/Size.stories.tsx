@@ -1,4 +1,4 @@
-import type { StoryFn } from '@storybook/react'
+import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
 import { TAGINPUT_SIZE_PADDING, TagInput } from '..'
 import { Stack } from '../../Stack'

@@ -1,7 +1,8 @@
 'use client'
 
 import styled from '@emotion/styled'
-import { Alert, Icon, Stack, Text } from '@ultraviolet/ui'
+import { CalculatorIcon } from '@ultraviolet/icons'
+import { Alert, Stack, Text } from '@ultraviolet/ui'
 import type { ComponentProps, ReactNode } from 'react'
 import {
   Children,
@@ -59,7 +60,7 @@ const RightAlignedText = styled(Text)`
   text-align: right;
 `
 
-const StyledIcon = styled(Icon)`
+const StyledCalculatorIcon = styled(CalculatorIcon)`
   margin-right: ${({ theme }) => theme.space['1']};
 `
 
@@ -104,7 +105,7 @@ const TitleComponent = memo(
     locales: Required<ComponentProps<typeof EstimateCostContent>['locales']>
   }) => (
     <Title>
-      <StyledIcon name="calculator" color="primary" size={20} />
+      <StyledCalculatorIcon sentiment="primary" size="medium" />
       {locales?.['estimate.cost.label']}
     </Title>
   ),
@@ -430,7 +431,7 @@ export const EstimateCostContent = ({
                     <StyledText
                       as="h3"
                       variant="heading"
-                      color="primary"
+                      sentiment="primary"
                       isBeta={isBeta}
                     >
                       <LineThrough

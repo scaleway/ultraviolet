@@ -1,6 +1,7 @@
 'use client'
 
 import styled from '@emotion/styled'
+import { AlertCircleIcon, CheckIcon } from '@ultraviolet/icons'
 import type { ComponentProps } from 'react'
 import { useMemo } from 'react'
 import { Bullet } from '../Bullet'
@@ -67,12 +68,13 @@ export const BaseDialog = ({
 }: DialogProps) => {
   const headerContent = (
     <>
-      <Bullet
-        sentiment={sentiment}
-        icon={
-          sentiment === 'warning' || sentiment === 'danger' ? 'alert' : 'check'
-        }
-      />
+      <Bullet sentiment={sentiment}>
+        {sentiment === 'warning' || sentiment === 'danger' ? (
+          <AlertCircleIcon />
+        ) : (
+          <CheckIcon />
+        )}
+      </Bullet>
       <StyledTextTitle
         as="h2"
         variant="headingSmallStronger"
@@ -125,7 +127,6 @@ export const BaseDialog = ({
 
 /**
  * The Dialog component is used to show content on top of an overlay that requires user interaction.
- * @experimental This component is experimental and may be subject to breaking changes in the future.
  */
 export const Dialog = Object.assign(BaseDialog, {
   Buttons: DialogButtons,

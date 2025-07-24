@@ -2,7 +2,8 @@
 
 import { css } from '@emotion/react'
 import styled from '@emotion/styled'
-import { Badge, Icon, Stack, Text, Tooltip, zoomIn } from '@ultraviolet/ui'
+import { HelpCircleOutlineIcon } from '@ultraviolet/icons'
+import { Badge, Stack, Text, Tooltip, zoomIn } from '@ultraviolet/ui'
 import type { ComponentProps, ReactNode } from 'react'
 import {
   Children,
@@ -411,16 +412,12 @@ export const Item = memo(
                 {tooltipInfo ? (
                   <StyledDiv>
                     <StyledTooltip text={tooltipInfo}>
-                      <Icon
-                        name="help-circle-outline"
-                        size={20}
-                        variant="outlined"
-                      />
+                      <HelpCircleOutlineIcon size="medium" />
                     </StyledTooltip>
                   </StyledDiv>
                 ) : null}
                 {subLabel && !isOverlay ? (
-                  <StyledText as="p" variant="body" color="primary" italic>
+                  <StyledText as="p" variant="body" sentiment="primary" italic>
                     {subLabel}
                   </StyledText>
                 ) : null}
@@ -472,7 +469,7 @@ export const Item = memo(
                       ? 'weak'
                       : 'default'
                   }
-                  color={
+                  sentiment={
                     computedItemPrice === 0 && computedMaxItemPrice === 0
                       ? 'neutral'
                       : 'primary'

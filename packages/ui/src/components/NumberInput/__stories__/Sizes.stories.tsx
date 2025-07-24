@@ -1,21 +1,25 @@
-import type { Decorator } from '@storybook/react'
+import type { StoryFn } from '@storybook/react-vite'
 import type { ComponentProps } from 'react'
-import { NumberInput } from '..'
 import { Stack } from '../../Stack'
+import { NumberInput } from '../index'
 
-const sizes: ComponentProps<typeof NumberInput>['size'][] = [
-  'large',
-  'medium',
-  'small',
-]
+export const Sizes: StoryFn = (args: ComponentProps<typeof NumberInput>) => (
+  <Stack gap={2}>
+    {(['small', 'medium', 'large'] as const).map(size => (
+      <NumberInput
+        key={size}
+        {...args}
+        size={size}
+        label={size}
+        placeholder="12"
+      />
+    ))}
+  </Stack>
+)
 
-export const Sizes = (props: ComponentProps<typeof NumberInput>) =>
-  sizes.map(size => <NumberInput {...props} size={size} />)
-
-Sizes.decorators = [
-  Story => (
-    <Stack gap={2}>
-      <Story />
-    </Stack>
-  ),
-] as Decorator[]
+Sizes.args = {
+  id: 'number-input',
+  label: 'Number Input',
+  name: 'number-input',
+  onChange: () => {},
+}

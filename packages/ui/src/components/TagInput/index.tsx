@@ -1,7 +1,11 @@
 'use client'
 
 import styled from '@emotion/styled'
-import { AlertCircleIcon, CheckCircleOutlineIcon } from '@ultraviolet/icons'
+import {
+  AlertCircleIcon,
+  CheckCircleOutlineIcon,
+  CloseIcon,
+} from '@ultraviolet/icons'
 import type {
   ChangeEvent,
   ClipboardEventHandler,
@@ -127,26 +131,10 @@ type TagInputProp = (string | { label: string; index: string })[]
 type TagInputProps = {
   disabled?: boolean
   id?: string
-  /**
-   * @deprecated this prop has no more effect
-   */
-  manualInput?: boolean
   name?: string
   onChange?: (tags: string[]) => void
-  /**
-   * @deprecated this prop has no more effect
-   */
-  onChangeError?: (error: Error | string) => void
   placeholder?: string
-  /**
-   * @deprecated use `value` property instead, both properties work the same way
-   */
-  tags?: TagInputProp
   value?: TagInputProp
-  /**
-   * @deprecated there is only one variant now, this prop has no more effect
-   */
-  variant?: string
   className?: string
   'data-testid'?: string
   label?: string
@@ -174,7 +162,6 @@ export const TagInput = ({
   name,
   onChange,
   placeholder,
-  tags,
   value,
   className,
   'data-testid': dataTestId,
@@ -190,10 +177,8 @@ export const TagInput = ({
   tooltip,
   clearable = false,
 }: TagInputProps) => {
-  const tagsProp = value ?? tags
-
   const [tagInputState, setTagInput] = useState(
-    convertTagArrayToTagStateArray(tagsProp),
+    convertTagArrayToTagStateArray(value),
   )
   const [input, setInput] = useState<string>('')
   const [status, setStatus] = useState<{ [key: string]: StatusValue }>({})
@@ -202,8 +187,8 @@ export const TagInput = ({
   const localId = id ?? uniqueId
 
   useEffect(() => {
-    setTagInput(convertTagArrayToTagStateArray(tagsProp))
-  }, [tagsProp, setTagInput])
+    setTagInput(convertTagArrayToTagStateArray(value))
+  }, [value, setTagInput])
 
   const inputRef = useRef<HTMLInputElement>(null)
 
@@ -381,22 +366,23 @@ export const TagInput = ({
                     disabled={disabled}
                     variant="ghost"
                     size="xsmall"
-                    icon="close"
                     onClick={clearAll}
                     sentiment="neutral"
-                  />
+                  >
+                    <CloseIcon />
+                  </Button>
                 ) : null}
                 {success ? (
                   <CheckCircleOutlineIcon
                     sentiment="success"
-                    size={16}
+                    size="small"
                     disabled={disabled}
                   />
                 ) : null}
                 {error ? (
                   <AlertCircleIcon
                     sentiment="danger"
-                    size={16}
+                    size="small"
                     disabled={disabled}
                   />
                 ) : null}

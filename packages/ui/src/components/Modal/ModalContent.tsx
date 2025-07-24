@@ -1,6 +1,7 @@
 'use client'
 
 import styled from '@emotion/styled'
+import { CloseIcon } from '@ultraviolet/icons'
 import type { ComponentProps } from 'react'
 import type { Modal } from '.'
 import { Button } from '../Button'
@@ -16,7 +17,6 @@ const StyledContainer = styled.div`
 type ModalContentProps = ComponentProps<typeof Modal> & {
   visible: boolean
   open: boolean
-  opened: boolean
   placement: ModalPlacement
   finalSize: ModalSize
   finalId: string
@@ -30,7 +30,6 @@ type ModalContentProps = ComponentProps<typeof Modal> & {
 export const ModalContent = ({
   visible,
   open,
-  opened,
   placement,
   finalSize,
   ariaLabel,
@@ -41,8 +40,6 @@ export const ModalContent = ({
   className,
   backdropClassName,
   dataTestId,
-  customDialogStyles,
-  customDialogBackdropStyles,
   isClosable,
   children,
   handleOpen,
@@ -50,9 +47,9 @@ export const ModalContent = ({
   finalId,
   image,
 }: ModalContentProps) =>
-  visible || open || opened ? (
+  visible || open ? (
     <Dialog
-      open={visible || open || opened}
+      open={visible || open}
       placement={placement}
       size={finalSize}
       ariaLabel={ariaLabel}
@@ -64,19 +61,14 @@ export const ModalContent = ({
       backdropClassName={backdropClassName}
       data-testid={dataTestId}
       id={finalId}
-      dialogCss={customDialogStyles}
-      backdropCss={customDialogBackdropStyles}
       image={image}
     >
       <>
         {typeof children === 'function'
           ? children({
               visible,
-              onClose: handleClose,
-              onOpen: handleOpen,
               toggle: handleToggle,
               modalId: finalId,
-              hide: handleClose,
               close: handleClose,
               show: handleOpen,
             })
@@ -90,10 +82,11 @@ export const ModalContent = ({
               onClick={handleClose}
               variant="ghost"
               size="small"
-              icon="close"
               sentiment="neutral"
               aria-label="close"
-            />
+            >
+              <CloseIcon />
+            </Button>
           ) : null}
         </StyledContainer>
       </>

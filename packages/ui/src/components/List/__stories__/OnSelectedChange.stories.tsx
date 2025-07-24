@@ -1,8 +1,7 @@
-import type { StoryFn } from '@storybook/react'
+import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
 import { List } from '..'
 import { Button } from '../../Button'
-import { Stack } from '../../Stack'
 import { Text } from '../../Text'
 import { Template } from './Template.stories'
 import { columns, data } from './resources'
@@ -49,12 +48,7 @@ export const OnSelectedChange: StoryFn = args => {
         ))}
         <List.SelectBar data={data} idKey="id">
           {({ selectedItems, unselectAll }) => (
-            <Stack
-              direction="row"
-              alignItems="center"
-              justifyContent="space-between"
-              gap={2}
-            >
+            <>
               <Text variant="bodyStrong" as="p" sentiment="primary">
                 {selectedItems.length} item(s) selected
               </Text>
@@ -68,7 +62,7 @@ export const OnSelectedChange: StoryFn = args => {
               >
                 Delete
               </Button>
-            </Stack>
+            </>
           )}
         </List.SelectBar>
       </List>
@@ -107,12 +101,7 @@ OnSelectedChange.args = {
       ))}
       <List.SelectBar data={data} idKey="id">
         {({ selectedItems, unselectAll }) => (
-          <Stack
-            direction="row"
-            alignItems="center"
-            justifyContent="space-between"
-            gap={2}
-          >
+          <>
             <Text variant="bodyStrong" as="p" sentiment="primary">
               {selectedItems.length} item(s) selected
             </Text>
@@ -126,7 +115,7 @@ OnSelectedChange.args = {
             >
               Delete
             </Button>
-          </Stack>
+          </>
         )}
       </List.SelectBar>
     </>

@@ -1,9 +1,9 @@
 'use client'
 
+import { UnitInput } from '@ultraviolet/ui'
 import { memo, useMemo } from 'react'
 import { useEstimateCost } from '../EstimateCostProvider'
 import type { Iteration, Units } from '../types'
-import { UnitInput } from './UnitInput'
 
 type CustomUnitInputProps = {
   defaultTimeUnit?: Units
@@ -37,6 +37,9 @@ export const CustomUnitInput = memo(
 
     return (
       <UnitInput
+        width="100%"
+        templateColumns="auto auto"
+        selectInputWidth="100%"
         name="iteration"
         onChange={inputValue =>
           setIteration({
@@ -53,7 +56,7 @@ export const CustomUnitInput = memo(
         placeholder="0"
         value={iteration.value}
         unitValue={iteration.unit || defaultOption?.value}
-        minValue={1}
+        min={1}
         size="medium"
         options={options}
       />

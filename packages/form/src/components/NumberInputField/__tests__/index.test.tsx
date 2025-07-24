@@ -1,111 +1,82 @@
-import { act, screen } from '@testing-library/react'
+import { act, renderHook, screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { renderWithForm } from '@utils/test'
+import { mockFormErrors, renderWithForm, renderWithTheme } from '@utils/test'
+import { useForm } from 'react-hook-form'
 import { describe, expect, test, vi } from 'vitest'
-import { NumberInputField } from '../..'
+import { NumberInputField, Submit } from '../..'
+import { Form } from '../../Form'
 
 describe('NumberInputField', () => {
   test('should render correctly', () => {
-    const { asFragment } = renderWithForm(<NumberInputField name="test" />, {
-      defaultValues: {
-        test: 0,
-      },
-    })
+    const { asFragment } = renderWithForm(
+      <NumberInputField name="test" value={0} />,
+    )
     expect(asFragment()).toMatchSnapshot()
   })
 
   test('should render correctly disabled', () => {
     const { asFragment } = renderWithForm(
-      <NumberInputField name="test" disabled />,
-      {
-        defaultValues: {
-          test: 10,
-        },
-      },
+      <NumberInputField
+        name="test"
+        value={10}
+        disabled
+        aria-label="Number Input"
+      />,
     )
     const input = screen.getByLabelText('Number Input')
     expect(input).toBeDisabled()
 
-    const inputMinus = screen.getByLabelText('Minus')
+    const inputMinus = screen.getByLabelText('minus')
     expect(inputMinus).toBeDisabled()
 
-    const inputPlus = screen.getByLabelText('Plus')
+    const inputPlus = screen.getByLabelText('plus')
     expect(inputPlus).toBeDisabled()
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('should trigger events correctly', async () => {
-    const onFocus = vi.fn(() => {})
-    const onChange = vi.fn(() => {})
-    const onBlur = vi.fn(() => {})
-
-    const { asFragment } = renderWithForm(
-      <NumberInputField
-        name="test"
-        onChange={onChange}
-        onFocus={onFocus}
-        onBlur={onBlur}
-      />,
-      {
+  test('should work fine with form setValue', async () => {
+    const onSubmit = vi.fn()
+    const { result } = renderHook(() =>
+      useForm<{ test: number | null }>({
         defaultValues: {
           test: 10,
         },
-      },
+        mode: 'onChange',
+      }),
     )
-    const input = screen.getByLabelText('Number Input')
-    act(() => {
-      input.focus()
-    })
-    expect(onFocus).toBeCalledTimes(1)
-    await userEvent.click(input)
-    expect(onChange).toBeCalledTimes(0)
-    act(() => {
-      input.blur()
-    })
-    expect(onBlur).toBeCalledTimes(1)
 
-    expect(asFragment()).toMatchSnapshot()
-  })
-
-  test('should trigger event onMinCrossed & onMaxCrossed', async () => {
-    const onMinCrossed = vi.fn(() => {})
-    const onMaxCrossed = vi.fn(() => {})
-    const minValue = 5
-    const maxValue = 20
-
-    const { asFragment } = renderWithForm(
-      <NumberInputField
-        maxValue={maxValue}
-        minValue={minValue}
-        name="test"
-        onMinCrossed={onMinCrossed}
-        onMaxCrossed={onMaxCrossed}
-      />,
-      {
-        defaultValues: {
-          test: 10,
-        },
-      },
+    renderWithTheme(
+      <Form
+        onSubmit={value => onSubmit(value)}
+        errors={mockFormErrors}
+        methods={result.current}
+      >
+        <NumberInputField label="Test" name="test" required />
+        <Submit>Submit</Submit>
+      </Form>,
     )
-    const input = screen.getByRole<HTMLInputElement>('spinbutton')
 
-    // trigger onMinCrossed
-    await userEvent.clear(input)
-    expect(input.value).toBe('')
-    await userEvent.type(input, '1')
-    expect(input.value).toBe('1')
-    await userEvent.click(document.body)
-    expect(input.value).toBe('5')
-    expect(onMinCrossed).toBeCalledTimes(1)
-
-    // trigger onMaxCrossed
-    await userEvent.clear(input)
-    await userEvent.type(input, '100')
-    expect(input.value).toBe('100')
-    await userEvent.click(document.body)
-    expect(input.value).toBe('20')
-    expect(onMaxCrossed).toBeCalledTimes(1)
-
-    expect(asFragment()).toMatchSnapshot()
+    const numberInput = screen.getByLabelText('Test')
+    const submit = screen.getByText('Submit')
+    expect(numberInput).toHaveValue(10)
+    await userEvent.click(submit)
+    expect(onSubmit).toHaveBeenCalledWith({
+      test: 10,
+    })
+    await userEvent.clear(numberInput)
+    expect(numberInput).toHaveValue(null)
+    expect(submit).toBeDisabled()
+    act(() => {
+      result.current.setValue('test', 40, { shouldValidate: true })
+    })
+    await waitFor(() => {
+      expect(numberInput).toHaveValue(40)
+    })
+    await userEvent.click(submit)
+    await waitFor(() => {
+      expect(onSubmit).toHaveBeenNthCalledWith(2, {
+        test: 40,
+      })
+    })
   })
 })

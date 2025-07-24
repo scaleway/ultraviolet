@@ -1,10 +1,10 @@
-import type { StoryFn } from '@storybook/react'
+import type { StoryFn } from '@storybook/react-vite'
 import type { Locale } from 'date-fns'
 import { enGB } from 'date-fns/locale/en-GB'
 import type { ComponentProps } from 'react'
 import { useState } from 'react'
 import { DateInput } from '..'
-import { SelectInputV2 } from '../../SelectInputV2'
+import { SelectInput } from '../../SelectInput'
 
 const locales = ['en', 'fr', 'es', 'de', 'ru'] as const
 
@@ -45,7 +45,7 @@ export const I18n: StoryFn<ComponentProps<typeof DateInput>> = args => {
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
-      <SelectInputV2
+      <SelectInput
         name="locale-switcher"
         label="Switch Locale"
         searchable={false}

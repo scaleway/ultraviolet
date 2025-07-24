@@ -1,10 +1,10 @@
 'use client'
 
 import styled from '@emotion/styled'
-import { AsteriskIcon } from '@ultraviolet/icons'
 import type { ComponentProps, InputHTMLAttributes, ReactNode } from 'react'
 import { createContext, useContext, useMemo } from 'react'
 import { Checkbox } from '../Checkbox'
+import { Label } from '../Label'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
 
@@ -45,6 +45,7 @@ export const CheckboxGroupCheckbox = ({
   autoFocus,
   'data-testid': dataTestId,
   required,
+  tooltip,
 }: CheckboxGroupCheckboxProps) => {
   const context = useContext(CheckboxGroupContext)
 
@@ -74,6 +75,7 @@ export const CheckboxGroupCheckbox = ({
       autoFocus={autoFocus}
       data-testid={dataTestId}
       required={required}
+      tooltip={tooltip}
     >
       {children}
     </StyledCheckbox>
@@ -86,12 +88,9 @@ const FieldSet = styled.fieldset`
   margin: 0;
 `
 
-const StyledRequiredIcon = styled(AsteriskIcon)`
-  vertical-align: super;
-`
-
 type CheckboxGroupProps = {
-  legend?: ReactNode
+  legend?: string
+  legendDescription?: ReactNode
   value?: string[]
   className?: string
   helper?: ReactNode
@@ -108,6 +107,7 @@ type CheckboxGroupProps = {
  */
 export const CheckboxGroup = ({
   legend,
+  legendDescription,
   value,
   className,
   helper,
@@ -138,17 +138,13 @@ export const CheckboxGroup = ({
             {legend || description ? (
               <Stack gap={0.5}>
                 {legend ? (
-                  <Text
+                  <Label
                     as="legend"
-                    variant="bodyStrong"
-                    sentiment="neutral"
-                    prominence="strong"
+                    required={required}
+                    labelDescription={legendDescription}
                   >
-                    {legend}&nbsp;
-                    {required ? (
-                      <StyledRequiredIcon sentiment="danger" size={8} />
-                    ) : null}
-                  </Text>
+                    {legend}
+                  </Label>
                 ) : null}
                 {description ? (
                   <Text

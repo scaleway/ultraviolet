@@ -4,9 +4,8 @@ export {
   darkTheme,
   default as theme,
   extendTheme,
-  ThemeRegistry,
 } from './theme'
-export type { SCWUITheme, UltravioletUITheme } from './theme'
+export type { UltravioletUITheme } from './theme'
 export {
   bounce,
   Breakpoint,

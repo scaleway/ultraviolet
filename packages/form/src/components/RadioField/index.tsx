@@ -14,9 +14,6 @@ type RadioFieldProps<
 > = Omit<BaseFieldProps<TFieldValues, TFieldName>, 'label'> &
   Omit<ComponentProps<typeof Radio>, 'value' | 'onChange'>
 
-/**
- * @deprecated This component is deprecated, use `RadioGroupField` instead.
- */
 export const RadioField = <
   TFieldValues extends FieldValues,
   TFieldName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,

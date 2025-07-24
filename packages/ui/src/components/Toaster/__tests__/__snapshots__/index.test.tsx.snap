@@ -31,7 +31,7 @@ exports[`Toaster > components > renders correctly Toast.Button 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -49,6 +49,10 @@ exports[`Toaster > components > renders correctly Toast.Button 1`] = `
 
 .emotion-0:active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-0 .e1y1n78x0 {
+  stroke: transparent;
 }
 
 .emotion-0:hover,
@@ -101,7 +105,7 @@ exports[`Toaster > components > renders correctly Toast.Button and variant ghost
   -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -120,6 +124,10 @@ exports[`Toaster > components > renders correctly Toast.Button and variant ghost
 
 .emotion-1:active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-1 .e1y1n78x0 {
+  stroke: transparent;
 }
 
 .emotion-1:hover,
@@ -147,7 +155,7 @@ exports[`Toaster > components > renders correctly Toast.Link 1`] = `
   background-color: transparent;
   border: none;
   padding: 0;
-  color: #3f4250;
+  color: #ffffff;
   -webkit-text-decoration: underline;
   text-decoration: underline;
   text-decoration-thickness: 1px;
@@ -162,7 +170,7 @@ exports[`Toaster > components > renders correctly Toast.Link 1`] = `
   width: -moz-fit-content;
   width: fit-content;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -170,8 +178,8 @@ exports[`Toaster > components > renders correctly Toast.Link 1`] = `
   text-case: none;
 }
 
-.emotion-0 .e1afnb7a2,
 .emotion-0 .e1afnb7a3,
+.emotion-0 .e1afnb7a2,
 .emotion-0 .e1afnb7a4 {
   -webkit-transition: -webkit-transform 250ms ease-out;
   transition: transform 250ms ease-out;
@@ -182,8 +190,8 @@ exports[`Toaster > components > renders correctly Toast.Link 1`] = `
 }
 
 .emotion-0:visited {
-  color: #641cb3;
   text-decoration-color: transparent;
+  color: #ffffff;
 }
 
 .emotion-0:hover,
@@ -192,26 +200,26 @@ exports[`Toaster > components > renders correctly Toast.Link 1`] = `
   -webkit-text-decoration: underline;
   text-decoration: underline;
   text-decoration-thickness: 1px;
-  color: #222638;
-  text-decoration-color: #222638;
+  color: #f9f9fa;
+  text-decoration-color: #f9f9fa;
 }
 
-.emotion-0:hover .e1afnb7a2,
-.emotion-0:focus .e1afnb7a2,
 .emotion-0:hover .e1afnb7a3,
 .emotion-0:focus .e1afnb7a3,
+.emotion-0:hover .e1afnb7a2,
+.emotion-0:focus .e1afnb7a2,
 .emotion-0:hover .e1afnb7a4,
 .emotion-0:focus .e1afnb7a4 {
-  -webkit-transform: translate(-0.25rem, 0);
-  -moz-transform: translate(-0.25rem, 0);
-  -ms-transform: translate(-0.25rem, 0);
-  transform: translate(-0.25rem, 0);
+  -webkit-transform: translate(-0.125rem, 0);
+  -moz-transform: translate(-0.125rem, 0);
+  -ms-transform: translate(-0.125rem, 0);
+  transform: translate(-0.125rem, 0);
 }
 
 .emotion-0:hover:visited,
 .emotion-0:focus:visited {
-  color: #521094;
-  text-decoration-color: #521094;
+  text-decoration-color: transparent;
+  color: #ffffff;
 }
 
 .emotion-0[data-variant='inline'] {
@@ -236,7 +244,7 @@ exports[`Toaster > components > renders correctly Toast.Link 1`] = `
       class="emotion-0 emotion-1"
       data-variant="standalone"
       href="scaleway.com"
-      prominence="stronger"
+      prominence="strong"
       variant="bodySmallStrong"
     >
       Test
@@ -248,26 +256,7 @@ exports[`Toaster > components > renders correctly Toast.Link 1`] = `
 exports[`Toaster > renders correctly with all kind of toast 1`] = `
 .emotion-0 {
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-<span
-  class="emotion-0 emotion-1"
->
-  This is an info
-</span>
-`;
-
-exports[`Toaster > renders correctly with all kind of toast 2`] = `
-.emotion-0 {
-  font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -283,10 +272,10 @@ exports[`Toaster > renders correctly with all kind of toast 2`] = `
 </span>
 `;
 
-exports[`Toaster > renders correctly with all kind of toast 3`] = `
+exports[`Toaster > renders correctly with all kind of toast 2`] = `
 .emotion-0 {
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -302,10 +291,10 @@ exports[`Toaster > renders correctly with all kind of toast 3`] = `
 </span>
 `;
 
-exports[`Toaster > renders correctly with all kind of toast 4`] = `
+exports[`Toaster > renders correctly with all kind of toast 3`] = `
 .emotion-0 {
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -321,7 +310,7 @@ exports[`Toaster > renders correctly with all kind of toast 4`] = `
 </span>
 `;
 
-exports[`Toaster > renders correctly with all kind of toast 5`] = `
+exports[`Toaster > renders correctly with all kind of toast 4`] = `
 <DocumentFragment>
   .emotion-0 {
   border-radius: 0.25rem;
@@ -343,12 +332,6 @@ exports[`Toaster > renders correctly with all kind of toast 5`] = `
   padding: 1rem;
 }
 
-.emotion-0.Toastify__toast--info {
-  background-color: #0078d2;
-  color: #ffffff;
-  padding: 1rem;
-}
-
 .emotion-0.Toastify__toast--error {
   background-color: #e51963;
   color: #ffffff;
@@ -366,10 +349,11 @@ exports[`Toaster > renders correctly with all kind of toast 5`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 100%;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -378,16 +362,15 @@ exports[`Toaster > renders correctly with all kind of toast 5`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  width: 100%;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 1rem;
 }
 
 .emotion-3 {
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -410,7 +393,7 @@ exports[`Toaster > renders correctly with all kind of toast 5`] = `
   gap: 0.25rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 1.5rem;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -425,13 +408,13 @@ exports[`Toaster > renders correctly with all kind of toast 5`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
   paragraph-spacing: 0;
   text-case: none;
-  background: #0078d2;
+  background: #2c8564;
   border: none;
   color: #ffffff;
   background: none;
@@ -445,12 +428,16 @@ exports[`Toaster > renders correctly with all kind of toast 5`] = `
 }
 
 .emotion-6:active {
-  box-shadow: 0px 0px 0px 3px #71c2ff40;
+  box-shadow: 0px 0px 0px 3px #45d19f40;
+}
+
+.emotion-6 .e1y1n78x0 {
+  stroke: transparent;
 }
 
 .emotion-6:hover,
 .emotion-6:active {
-  background: #0071c5;
+  background: #297c5e;
   color: #f9f9fa;
 }
 
@@ -464,19 +451,15 @@ exports[`Toaster > renders correctly with all kind of toast 5`] = `
 .emotion-8 {
   vertical-align: middle;
   fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
 .emotion-8 .fillStroke {
   stroke: currentColor;
   fill: none;
-}
-
-.emotion-8 path {
-  fill: currentColor;
 }
 
 .emotion-16 {
@@ -493,7 +476,7 @@ exports[`Toaster > renders correctly with all kind of toast 5`] = `
   gap: 0.25rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 1.5rem;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -508,13 +491,13 @@ exports[`Toaster > renders correctly with all kind of toast 5`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
   paragraph-spacing: 0;
   text-case: none;
-  background: #2c8564;
+  background: #e51963;
   border: none;
   color: #ffffff;
   background: none;
@@ -528,12 +511,16 @@ exports[`Toaster > renders correctly with all kind of toast 5`] = `
 }
 
 .emotion-16:active {
-  box-shadow: 0px 0px 0px 3px #45d19f40;
+  box-shadow: 0px 0px 0px 3px #f91b6c40;
+}
+
+.emotion-16 .e1y1n78x0 {
+  stroke: transparent;
 }
 
 .emotion-16:hover,
 .emotion-16:active {
-  background: #297c5e;
+  background: #d6175c;
   color: #f9f9fa;
 }
 
@@ -558,7 +545,7 @@ exports[`Toaster > renders correctly with all kind of toast 5`] = `
   gap: 0.25rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 1.5rem;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -573,72 +560,7 @@ exports[`Toaster > renders correctly with all kind of toast 5`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: #e51963;
-  border: none;
-  color: #ffffff;
-  background: none;
-  margin: auto;
-  margin-left: 0.5rem;
-}
-
-.emotion-26:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-26:active {
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-26:hover,
-.emotion-26:active {
-  background: #d6175c;
-  color: #f9f9fa;
-}
-
-.emotion-26:hover,
-.emotion-26:active {
-  background: none;
-  box-shadow: none;
-  border: none;
-}
-
-.emotion-36 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 1.5rem;
-  padding: 0 0.25rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.25rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: 1.5rem;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -652,23 +574,27 @@ exports[`Toaster > renders correctly with all kind of toast 5`] = `
   margin-left: 0.5rem;
 }
 
-.emotion-36:hover {
+.emotion-26:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-36:active {
+.emotion-26:active {
   box-shadow: 0px 0px 0px 3px #fbc60040;
 }
 
-.emotion-36:hover,
-.emotion-36:active {
+.emotion-26 .e1y1n78x0 {
+  stroke: transparent;
+}
+
+.emotion-26:hover,
+.emotion-26:active {
   background: #ebb200;
   color: #151a2d;
 }
 
-.emotion-36:hover,
-.emotion-36:active {
+.emotion-26:hover,
+.emotion-26:active {
   background: none;
   box-shadow: none;
   border: none;
@@ -691,56 +617,6 @@ exports[`Toaster > renders correctly with all kind of toast 5`] = `
         tabindex="-1"
       >
         <div
-          class="Toastify__toast Toastify__toast-theme--light Toastify__toast--info emotion-0 Toastify--animate Toastify__slide-enter--top-right Toastify__toast--stacked"
-          data-collapsed="true"
-          data-in="true"
-          data-pos="top"
-          id="info"
-          role="alert"
-          style="--y: 0px; --g: 12; --s: 0.925;"
-          tabindex="0"
-        >
-          <div
-            class="emotion-1 emotion-2"
-          >
-            <span
-              class="emotion-3 emotion-4"
-            >
-              This is an info
-            </span>
-          </div>
-          <button
-            aria-label="close"
-            class="emotion-5 emotion-6 emotion-7"
-            type="button"
-          >
-            <svg
-              class="emotion-8 emotion-9"
-              viewBox="0 0 16 16"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"
-              />
-            </svg>
-          </button>
-          <div
-            class="Toastify__progress-bar--wrp"
-            data-hidden="true"
-          >
-            <div
-              class="Toastify__progress-bar--bg Toastify__progress-bar-theme--light Toastify__progress-bar--info"
-            />
-            <div
-              aria-hidden="true"
-              aria-label="notification timer"
-              class="Toastify__progress-bar Toastify__progress-bar--animated Toastify__progress-bar-theme--light Toastify__progress-bar--info"
-              role="progressbar"
-              style="animation-duration: 6000ms; animation-play-state: paused;"
-            />
-          </div>
-        </div>
-        <div
           class="Toastify__toast Toastify__toast-theme--light Toastify__toast--success emotion-0 Toastify--animate Toastify__slide-enter--top-right Toastify__toast--stacked"
           data-collapsed="true"
           data-in="true"
@@ -761,13 +637,12 @@ exports[`Toaster > renders correctly with all kind of toast 5`] = `
           </div>
           <button
             aria-label="close"
-            class="emotion-5 emotion-16 emotion-7"
+            class="emotion-5 emotion-6 emotion-7"
             type="button"
           >
             <svg
               class="emotion-8 emotion-9"
               viewBox="0 0 16 16"
-              xmlns="http://www.w3.org/2000/svg"
             >
               <path
                 d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"
@@ -811,13 +686,12 @@ exports[`Toaster > renders correctly with all kind of toast 5`] = `
           </div>
           <button
             aria-label="close"
-            class="emotion-5 emotion-26 emotion-7"
+            class="emotion-5 emotion-16 emotion-7"
             type="button"
           >
             <svg
               class="emotion-8 emotion-9"
               viewBox="0 0 16 16"
-              xmlns="http://www.w3.org/2000/svg"
             >
               <path
                 d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"
@@ -860,13 +734,12 @@ exports[`Toaster > renders correctly with all kind of toast 5`] = `
           </div>
           <button
             aria-label="close"
-            class="emotion-5 emotion-36 emotion-7"
+            class="emotion-5 emotion-26 emotion-7"
             type="button"
           >
             <svg
               class="emotion-8 emotion-9"
               viewBox="0 0 16 16"
-              xmlns="http://www.w3.org/2000/svg"
             >
               <path
                 d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"

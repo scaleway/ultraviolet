@@ -8,31 +8,7 @@ exports[`Modal > renders open custom size 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Modal > renders open custom size and width (size take predecence) 1`] = `
-<DocumentFragment>
-  <div
-    data-testid="testing"
-  />
-</DocumentFragment>
-`;
-
-exports[`Modal > renders open custom width 1`] = `
-<DocumentFragment>
-  <div
-    data-testid="testing"
-  />
-</DocumentFragment>
-`;
-
 exports[`Modal > renders with custom classNames 1`] = `
-<DocumentFragment>
-  <div
-    data-testid="testing"
-  />
-</DocumentFragment>
-`;
-
-exports[`Modal > renders with customStyle 1`] = `
 <DocumentFragment>
   <div
     data-testid="testing"
@@ -149,22 +125,6 @@ exports[`Modal > renders with disclosure and onClose 1`] = `
   }
 }
 
-@keyframes animation-0 {
-  0% {
-    -webkit-transform: translateY(+100%);
-    -moz-transform: translateY(+100%);
-    -ms-transform: translateY(+100%);
-    transform: translateY(+100%);
-  }
-
-  100% {
-    -webkit-transform: translateY(0%);
-    -moz-transform: translateY(0%);
-    -ms-transform: translateY(0%);
-    transform: translateY(0%);
-  }
-}
-
 .emotion-0 {
   position: fixed;
   top: 0;
@@ -427,7 +387,7 @@ exports[`Modal > renders with disclosure and onClose 1`] = `
   gap: 0.5rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 2rem;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -442,7 +402,7 @@ exports[`Modal > renders with disclosure and onClose 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -460,6 +420,10 @@ exports[`Modal > renders with disclosure and onClose 1`] = `
 
 .emotion-6:active {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
+}
+
+.emotion-6 .e1y1n78x0 {
+  stroke: transparent;
 }
 
 .emotion-6:hover,
@@ -482,7 +446,7 @@ exports[`Modal > renders with disclosure and onClose 1`] = `
   gap: 0.5rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 2rem;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -497,7 +461,7 @@ exports[`Modal > renders with disclosure and onClose 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -517,6 +481,10 @@ exports[`Modal > renders with disclosure and onClose 1`] = `
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
+.emotion-6 .e1y1n78x0 {
+  stroke: transparent;
+}
+
 .emotion-6:hover,
 .emotion-6:active {
   background: #e9eaeb;
@@ -526,37 +494,29 @@ exports[`Modal > renders with disclosure and onClose 1`] = `
 .emotion-8 {
   vertical-align: middle;
   fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
 .emotion-8 .fillStroke {
   stroke: currentColor;
   fill: none;
-}
-
-.emotion-8 path {
-  fill: currentColor;
 }
 
 .emotion-8 {
   vertical-align: middle;
   fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
 .emotion-8 .fillStroke {
   stroke: currentColor;
   fill: none;
-}
-
-.emotion-8 path {
-  fill: currentColor;
 }
 
 <div>
@@ -596,7 +556,6 @@ exports[`Modal > renders with disclosure and onClose 1`] = `
             <svg
               class="emotion-8 emotion-9"
               viewBox="0 0 16 16"
-              xmlns="http://www.w3.org/2000/svg"
             >
               <path
                 d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"

@@ -1,19 +1,40 @@
+import type { StoryFn } from '@storybook/react-vite'
 import { SelectInput } from '..'
-import { Template } from './Template.stories'
+import { Stack } from '../../Stack'
+import { OptionalInfo, OptionalInfo2 } from './resources'
 
-export const Searchable = Template.bind({})
+export const Searchable: StoryFn<typeof SelectInput> = args => (
+  <Stack gap="2" width="50%">
+    <SelectInput
+      {...args}
+      options={OptionalInfo}
+      label="Searchable true : >= 6 elements"
+      searchable
+    />
+    <SelectInput
+      {...args}
+      options={OptionalInfo2}
+      optionalInfoPlacement="right"
+      label="Searchable true : <6 elements"
+      searchable
+    />
+  </Stack>
+)
+
 Searchable.args = {
-  name: 'required',
-  isSearchable: true,
-  children: [
-    <SelectInput.Option value="a">Option A</SelectInput.Option>,
-    <SelectInput.Option value="b">Option B</SelectInput.Option>,
-  ],
+  name: 'example',
+  placeholder: 'Select item',
+  placeholderSearch: 'Search in list',
+  searchable: false,
+  disabled: false,
+  helper: 'helper',
 }
+
 Searchable.parameters = {
   docs: {
     description: {
-      story: 'This shows how to use `isSearchable` on SelectInput.',
+      story:
+        'Add a search bar in the dropdown to search through the different options. If there are less than 6 options, the search bar will **not** appear, even if the prop is set to `true`.',
     },
   },
 }

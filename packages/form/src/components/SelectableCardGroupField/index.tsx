@@ -11,40 +11,26 @@ type SelectableCardGroupFieldProps<
   TFieldValues extends FieldValues,
   TFieldName extends FieldPath<TFieldValues>,
 > = BaseFieldProps<TFieldValues, TFieldName> &
-  Omit<BaseFieldProps<TFieldValues, TFieldName>, 'label'> &
-  Partial<
-    Pick<
-      ComponentProps<typeof SelectableCardGroup>,
-      | 'helper'
-      | 'error'
-      | 'columns'
-      | 'children'
-      | 'showTick'
-      | 'type'
-      | 'className'
-    >
-  > &
-  Pick<ComponentProps<typeof SelectableCardGroup>, 'legend'>
+  Omit<
+    ComponentProps<typeof SelectableCardGroup>,
+    'name' | 'onChange' | 'value'
+  >
 
 export const SelectableCardGroupField = <
   TFieldValues extends FieldValues,
   TFieldName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
 >({
-  className,
-  legend,
+  legend = '',
   control,
   name,
   onChange,
   required = false,
-  children,
-  label = '',
   error: customError,
-  helper,
   columns = 1,
-  showTick,
   type = 'radio',
   shouldUnregister = false,
   validate,
+  ...props
 }: SelectableCardGroupFieldProps<TFieldValues, TFieldName>): JSX.Element => {
   const { getError } = useErrors()
   const {
@@ -62,10 +48,10 @@ export const SelectableCardGroupField = <
 
   return (
     <SelectableCardGroup
+      {...props}
       legend={legend}
       name={name}
       type={type}
-      showTick={showTick}
       value={field.value}
       onChange={event => {
         if (type === 'checkbox') {
@@ -89,14 +75,10 @@ export const SelectableCardGroupField = <
           >,
         )
       }}
-      error={getError({ label }, error) ?? customError}
-      className={className}
+      error={getError({ label: legend }, error) ?? customError}
       columns={columns}
-      helper={helper}
       required={required}
-    >
-      {children}
-    </SelectableCardGroup>
+    />
   )
 }
 

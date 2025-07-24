@@ -4,7 +4,7 @@ import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import { useCallback, useEffect, useId, useMemo, useRef, useState } from 'react'
 import { Label } from '../../Label'
-import { NumberInputV2 } from '../../NumberInputV2'
+import { NumberInput } from '../../NumberInput'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
 import { THUMB_SIZE } from '../constant'
@@ -149,6 +149,11 @@ export const DoubleSlider = ({
       : [min ?? 0, max ?? 1]
   const [selectedIndexes, setSelectedIndexes] = useState(safeValue)
   const [sliderWidth, setWidth] = useState(0)
+  const [inputValue, setInputValue] = useState<(number | null)[]>(safeValue)
+
+  useEffect(() => {
+    setInputValue(selectedIndexes)
+  }, [selectedIndexes])
 
   useEffect(() => {
     setWidth(Number(refSlider.current?.offsetWidth))
@@ -192,8 +197,12 @@ export const DoubleSlider = ({
 
   const internalOnChangeRef = useCallback(
     (localValue: (number | null)[]) => {
-      const leftSliderValue = localValue[0] === null ? min : localValue[0]
-      const rightSliderValue = localValue[1] === null ? max : localValue[1]
+      let leftSliderValue = localValue[0] === null ? min : localValue[0]
+      let rightSliderValue = localValue[1] === null ? max : localValue[1]
+
+      leftSliderValue = Math.max(min, Math.min(leftSliderValue, max))
+      rightSliderValue = Math.max(min, Math.min(rightSliderValue, max))
+
       const newValues = [leftSliderValue, rightSliderValue]
 
       setSelectedIndexes(newValues)
@@ -222,23 +231,11 @@ export const DoubleSlider = ({
     internalOnChangeRef([selectedIndexes[0], newValue])
   }
 
-  const handleChangeInput = (val: number, side?: 'left' | 'right') => {
+  const handleChangeInput = (val: number | null, side?: 'left' | 'right') => {
     if (side === 'left') {
-      const newValue = Math.max(val, min)
-      if (selectedIndexes[1]) {
-        internalOnChangeRef([
-          Math.min(newValue, selectedIndexes[1]),
-          Math.max(newValue, selectedIndexes[1]),
-        ])
-      } else internalOnChangeRef([newValue, selectedIndexes[1]])
+      setInputValue([val, selectedIndexes[1]])
     } else if (side === 'right') {
-      const newValue = Math.min(val, max)
-      if (selectedIndexes[0]) {
-        internalOnChangeRef([
-          Math.min(newValue, selectedIndexes[0]),
-          Math.max(newValue, selectedIndexes[0]),
-        ])
-      } else internalOnChangeRef([selectedIndexes[0], newValue])
+      setInputValue([selectedIndexes[0], val])
     }
   }
 
@@ -247,12 +244,8 @@ export const DoubleSlider = ({
     side?: 'left' | 'right',
   ) =>
     input && !options ? (
-      <NumberInputV2
-        value={
-          typeof valueNumber === 'string'
-            ? Number.parseFloat(valueNumber)
-            : valueNumber
-        }
+      <NumberInput
+        value={side === 'left' ? inputValue?.[0] : inputValue?.[1]}
         size="small"
         min={min}
         max={max}
@@ -263,13 +256,7 @@ export const DoubleSlider = ({
         data-testid={side ? `slider-input-${side}` : 'slider-input'}
         unit={typeof suffix === 'string' ? suffix : unit}
         onChange={newVal => {
-          if (newVal !== null) {
-            handleChangeInput(newVal, side)
-          } else if (side === 'left') {
-            internalOnChangeRef([null, selectedIndexes[1]])
-          } else if (side === 'right') {
-            internalOnChangeRef([selectedIndexes[0], null])
-          }
+          handleChangeInput(newVal, side)
         }}
         onBlur={event => {
           // Default to min/max when the input is left empty
@@ -286,6 +273,13 @@ export const DoubleSlider = ({
               if (index === 0) {
                 internalOnChangeRef([min, selectedIndexes[1]])
               } else internalOnChangeRef([selectedIndexes[0], max])
+            }
+          } else {
+            const newValue = Number.parseFloat(event.target.value)
+            if (side === 'left') {
+              internalOnChangeRef([newValue, selectedIndexes[1]])
+            } else if (side === 'right') {
+              internalOnChangeRef([selectedIndexes[0], newValue])
             }
           }
         }}

@@ -12,8 +12,8 @@ describe('RadioGroup', () => {
         name="radio"
         legend="Label"
       >
-        <RadioGroup.Radio name="value-1" value="value-1" label="Radio 1" />
-        <RadioGroup.Radio name="value-2" value="value-2" label="Radio 2" />
+        <RadioGroup.Radio value="value-1" label="Radio 1" />
+        <RadioGroup.Radio value="value-2" label="Radio 2" />
       </RadioGroup>,
     ))
 
@@ -26,8 +26,8 @@ describe('RadioGroup', () => {
         legend="Label"
         direction="row"
       >
-        <RadioGroup.Radio name="value-1" value="value-1" label="Radio 1" />
-        <RadioGroup.Radio name="value-2" value="value-2" label="Radio 2" />
+        <RadioGroup.Radio value="value-1" label="Radio 1" />
+        <RadioGroup.Radio value="value-2" label="Radio 2" />
       </RadioGroup>,
     ))
 
@@ -40,8 +40,8 @@ describe('RadioGroup', () => {
         legend="Label"
         helper="Helper content"
       >
-        <RadioGroup.Radio name="value-1" value="value-1" label="Radio 1" />
-        <RadioGroup.Radio name="value-2" value="value-2" label="Radio 2" />
+        <RadioGroup.Radio value="value-1" label="Radio 1" />
+        <RadioGroup.Radio value="value-2" label="Radio 2" />
       </RadioGroup>,
     ))
 
@@ -54,16 +54,14 @@ describe('RadioGroup', () => {
         legend="Label"
         error="Eror content"
       >
-        <RadioGroup.Radio name="value-1" value="value-1" label="Radio 1" />
-        <RadioGroup.Radio name="value-2" value="value-2" label="Radio 2" />
+        <RadioGroup.Radio value="value-1" label="Radio 1" />
+        <RadioGroup.Radio value="value-2" label="Radio 2" />
       </RadioGroup>,
     ))
 
   test('throws if RadioGroup.Radio used without RadioGroup', () => {
     expect(() =>
-      render(
-        <RadioGroup.Radio name="value-1" value="value-1" label="Radio 1" />,
-      ),
+      render(<RadioGroup.Radio value="value-1" label="Radio 1" />),
     ).toThrow('RadioGroup.Radio can only be used inside a RadioGroup')
   })
 })

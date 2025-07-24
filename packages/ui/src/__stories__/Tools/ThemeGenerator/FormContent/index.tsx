@@ -1,9 +1,9 @@
 import styled from '@emotion/styled'
+import { CheckIcon, CloseIcon, RestoreIcon } from '@ultraviolet/icons'
 import { useState } from 'react'
 import {
   Submit,
   TextInputField,
-  TextInputFieldV2,
   useFieldArray,
   useFormContext,
   useFormState,
@@ -46,7 +46,6 @@ export const FormContent = () => {
                 name="sentiment_neutral"
                 id="sentiment_neutral"
                 placeholder="neutral"
-                noTopLabel
                 disabled
                 required
               />
@@ -67,7 +66,6 @@ export const FormContent = () => {
                 name="sentiment_neutral_value"
                 id="sentiment_neutral_value"
                 placeholder="#FFFFFF"
-                noTopLabel
                 disabled
                 required
               />
@@ -111,7 +109,6 @@ export const FormContent = () => {
                     name={`sentiments.${index}.key`}
                     id={`sentiments.${index}.key`}
                     placeholder="neutral"
-                    noTopLabel
                     disabled={isRequiredSentiment}
                     required
                   />
@@ -132,7 +129,7 @@ export const FormContent = () => {
               </CapitalizeText>
               <Stack gap={1} alignItems="center" direction="row">
                 <StyledRow templateColumns="9fr 1fr" gap={1}>
-                  <TextInputFieldV2
+                  <TextInputField
                     name={`sentiments.${index}.value`}
                     id={`sentiments.${index}.value`}
                     placeholder="#FFFFFF"
@@ -142,19 +139,18 @@ export const FormContent = () => {
                     name={`sentiments.${index}.value`}
                     id={`sentiments.${index}.value`}
                     placeholder="#FFFFFF"
-                    noTopLabel
-                    type="color"
                     regex={[hexadecimalColorRegex]}
                   />
                 </StyledRow>
                 {!isRequiredSentiment ? (
                   <Button
-                    icon="close"
                     variant="filled"
                     sentiment="neutral"
                     size="large"
                     onClick={() => remove(index)}
-                  />
+                  >
+                    <CloseIcon />
+                  </Button>
                 ) : null}
               </Stack>
             </Stack>
@@ -168,22 +164,23 @@ export const FormContent = () => {
               <Button
                 sentiment="danger"
                 variant="outlined"
-                icon="close"
                 onClick={() => {
                   setConfirmResetForm(false)
                 }}
               >
+                {' '}
+                <CloseIcon />
                 Cancel
               </Button>
               <Button
                 sentiment="success"
                 variant="outlined"
-                icon="check"
                 onClick={() => {
                   setConfirmResetForm(false)
                   reset(INITIAL_VALUES)
                 }}
               >
+                <CheckIcon />
                 Confirm
               </Button>
             </Row>
@@ -191,11 +188,11 @@ export const FormContent = () => {
             <Button
               sentiment="danger"
               variant="outlined"
-              icon="restore"
               onClick={() => {
                 setConfirmResetForm(true)
               }}
             >
+              <RestoreIcon />
               Reset
             </Button>
           )}

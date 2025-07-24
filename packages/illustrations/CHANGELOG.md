@@ -1,5 +1,60 @@
 # @ultraviolet/illustrations
 
+## 5.0.0-beta.5
+
+### Patch Changes
+
+- [#5355](https://github.com/scaleway/ultraviolet/pull/5355) [`f921df0`](https://github.com/scaleway/ultraviolet/commit/f921df0aea3ea46e014311f6008b3d44f95e16cf) Thanks [@lisalupi](https://github.com/lisalupi)! - New illustrations `Dedilink` and `CloudEssential`
+
+## 5.0.0-beta.4
+
+### Patch Changes
+
+- [#5315](https://github.com/scaleway/ultraviolet/pull/5315) [`029f2bc`](https://github.com/scaleway/ultraviolet/commit/029f2bcc6fb11d24ea2c46cd0a3f5546cffa30fb) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@emotion/styled` to `11.14.1`.
+
+- Updated dependencies [[`f95c6d2`](https://github.com/scaleway/ultraviolet/commit/f95c6d2b5e1e4402822dc6c1362ca280d513e1dd)]:
+  - @ultraviolet/themes@2.0.0-beta.3
+
+## 5.0.0-beta.3
+
+### Patch Changes
+
+- [#5281](https://github.com/scaleway/ultraviolet/pull/5281) [`9dcb50a`](https://github.com/scaleway/ultraviolet/commit/9dcb50a472c3e770075b62ddc52329fae9e76c65) Thanks [@scaleway-bot](https://github.com/scaleway-bot)! - Fix `<WireIllustration />` component to remove the theme from dom
+
+## 5.0.0-beta.2
+
+### Minor Changes
+
+- [`5be10e5`](https://github.com/scaleway/ultraviolet/commit/5be10e504f18fdaac9d18f860ac67cd58c39db7f) Thanks [@lisalupi](https://github.com/lisalupi)! - - Rename script "uploadIllustrations.tsx" to "update-illustrations.tsx", to match other scripts
+  - New component `WireIllustration`
+  - New script "update-illustration-components.tsx" to automatically update `WireIllustration` and `DynamicIllustration` when new assets are added
+  - Now `DynamicIllustration` (as well as the new component) works the same way as every other illustration : everyting is automated, simply add an asset to the correct folder and make a merge request
+  - Update Github action to upload illustration when merging on beta
+  - Update Ultraviolet/illustrations readme
+
+### Patch Changes
+
+- Updated dependencies [[`6b0565d`](https://github.com/scaleway/ultraviolet/commit/6b0565d2991db0510067d91b2140274dcde2ea21)]:
+  - @ultraviolet/themes@2.0.0-beta.2
+
+## 5.0.0-beta.1
+
+### Patch Changes
+
+- Updated dependencies [[`421d104`](https://github.com/scaleway/ultraviolet/commit/421d104ae17d8c805d981ed214417916f73d561c)]:
+  - @ultraviolet/themes@2.0.0-beta.1
+
+## 5.0.0-beta.0
+
+### Major Changes
+
+- [#5112](https://github.com/scaleway/ultraviolet/pull/5112) [`37a7d63`](https://github.com/scaleway/ultraviolet/commit/37a7d632cd1e61d7615e5356fc179ec08f3bec09) Thanks [@matthprost](https://github.com/matthprost)! - Beta release
+
+### Patch Changes
+
+- Updated dependencies [[`37a7d63`](https://github.com/scaleway/ultraviolet/commit/37a7d632cd1e61d7615e5356fc179ec08f3bec09)]:
+  - @ultraviolet/themes@2.0.0-beta.0
+
 ## 4.5.3
 
 ### Patch Changes

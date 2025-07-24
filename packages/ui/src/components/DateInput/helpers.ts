@@ -66,8 +66,14 @@ export const formatValue = (
 ) => {
   if (selectsRange && computedRange) {
     return format
-      ? `${format(computedRange.start ?? undefined) ? `${format(computedRange.start ?? undefined)} - ` : ''}${format(computedRange.end ?? undefined) ?? ''}`
-      : `${getDateISO(showMonthYearPicker, computedRange.start ?? undefined)}${computedRange.start ? ' - ' : ''}${getDateISO(showMonthYearPicker, computedRange.end ?? undefined)}`
+      ? `${
+          format(computedRange.start ?? undefined)
+            ? `${format(computedRange.start ?? undefined)} - `
+            : ''
+        }${format(computedRange.end ?? undefined) ?? ''}`
+      : `${getDateISO(showMonthYearPicker, computedRange.start ?? undefined)}${
+          computedRange.start ? ' - ' : ''
+        }${getDateISO(showMonthYearPicker, computedRange.end ?? undefined)}`
   }
 
   if (computedValue && format) {
@@ -87,3 +93,43 @@ export const styleCalendarContainer = (theme: Theme) => `
   border-radius: ${theme.radii.default};
   background-color: ${theme.colors.other.elevation.background.raised};
 `
+
+export const createDate = (value: string, showMonthYearPicker: boolean) => {
+  if (showMonthYearPicker) {
+    // Force YYYY/MM (since MM/YYYY not recognised as a date in typescript)
+    const res = value.split(/\D+/).map(val => Number.parseInt(val, 10))
+    const year =
+      Math.max(...res) < 100 ? Math.max(...res) + 2000 : Math.max(...res) // MM/YY should be seen as MM/20YY instead of MM/19YY
+
+    const month = Math.min(...res) - 1
+    const computedDate = new Date(year, month)
+    const isValidDate = !!computedDate.getTime()
+
+    return isValidDate ? computedDate : null
+  }
+
+  const computedDate = new Date(value)
+  const isValidDate = !!computedDate.getTime()
+
+  return isValidDate ? computedDate : null
+}
+
+export const createDateRange = (
+  value: string,
+  showMonthYearPicker: boolean,
+) => {
+  const [startDateInput, endDateInput] = value
+    .split(' - ')
+    .map(val => createDate(val, showMonthYearPicker))
+
+  const computedNewRange: [Date | null, Date | null] = [
+    startDateInput instanceof Date && !Number.isNaN(startDateInput.getTime())
+      ? startDateInput
+      : null,
+    endDateInput instanceof Date && !Number.isNaN(endDateInput.getTime())
+      ? endDateInput
+      : null,
+  ]
+
+  return computedNewRange
+}

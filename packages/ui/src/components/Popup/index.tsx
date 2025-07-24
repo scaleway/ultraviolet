@@ -114,7 +114,7 @@ const StyledPopup = styled('div', {
   }
 `
 
-const StyledChildrenContainer = styled.div`
+export const StyledChildrenContainer = styled.div`
   display: inherit;
 
 

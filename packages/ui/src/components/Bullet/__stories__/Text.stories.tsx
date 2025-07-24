@@ -1,13 +1,13 @@
-import type { StoryFn } from '@storybook/react'
+import type { StoryFn } from '@storybook/react-vite'
 import { Bullet } from '..'
 
-export const Text: StoryFn = props => <Bullet {...props} text="A" />
+export const Text: StoryFn = props => <Bullet {...props}>A</Bullet>
 
 Text.parameters = {
   docs: {
     description: {
       story:
-        'Set `text` using text property. Sentiment and size props affect text.',
+        'Set `text` using children. Sentiment and size props affect children.',
     },
   },
 }

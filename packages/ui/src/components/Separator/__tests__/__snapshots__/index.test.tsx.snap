@@ -50,56 +50,6 @@ exports[`Separator > renders correctly vertically 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Separator > renders correctly with custom color 1`] = `
-<DocumentFragment>
-  .emotion-0 {
-  margin: 0;
-  border: 0;
-  width: auto;
-  height: 1px;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  background-color: #521094;
-}
-
-<div
-    data-testid="testing"
-  >
-    <hr
-      aria-orientation="horizontal"
-      class="emotion-0 emotion-1"
-      role="separator"
-    />
-  </div>
-</DocumentFragment>
-`;
-
-exports[`Separator > renders correctly with custom color 2`] = `
-<DocumentFragment>
-  .emotion-0 {
-  margin: 0;
-  border: 0;
-  width: auto;
-  height: 1px;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  background-color: #e9eaeb;
-}
-
-<div
-    data-testid="testing"
-  >
-    <hr
-      aria-orientation="horizontal"
-      class="emotion-0 emotion-1"
-      role="separator"
-    />
-  </div>
-</DocumentFragment>
-`;
-
 exports[`Separator > renders correctly with custom icon 1`] = `
 <DocumentFragment>
   .emotion-0 {
@@ -136,20 +86,16 @@ exports[`Separator > renders correctly with custom icon 1`] = `
 
 .emotion-4 {
   vertical-align: middle;
-  fill: #3f4250;
-  height: 24px;
-  width: 24px;
-  min-width: 24px;
-  min-height: 24px;
+  fill: currentColor;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
 .emotion-4 .fillStroke {
-  stroke: #3f4250;
+  stroke: currentColor;
   fill: none;
-}
-
-.emotion-4 path {
-  fill: currentColor;
 }
 
 <div
@@ -166,7 +112,6 @@ exports[`Separator > renders correctly with custom icon 1`] = `
       <svg
         class="emotion-4 emotion-5"
         viewBox="0 0 16 16"
-        xmlns="http://www.w3.org/2000/svg"
       >
         <path
           clip-rule="evenodd"
@@ -221,20 +166,16 @@ exports[`Separator > renders correctly with custom icon horizontally 1`] = `
 
 .emotion-4 {
   vertical-align: middle;
-  fill: #3f4250;
-  height: 24px;
-  width: 24px;
-  min-width: 24px;
-  min-height: 24px;
+  fill: currentColor;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
 .emotion-4 .fillStroke {
-  stroke: #3f4250;
+  stroke: currentColor;
   fill: none;
-}
-
-.emotion-4 path {
-  fill: currentColor;
 }
 
 <div
@@ -251,7 +192,6 @@ exports[`Separator > renders correctly with custom icon horizontally 1`] = `
       <svg
         class="emotion-4 emotion-5"
         viewBox="0 0 16 16"
-        xmlns="http://www.w3.org/2000/svg"
       >
         <path
           clip-rule="evenodd"
@@ -306,20 +246,16 @@ exports[`Separator > renders correctly with custom icon vertically 1`] = `
 
 .emotion-4 {
   vertical-align: middle;
-  fill: #3f4250;
-  height: 24px;
-  width: 24px;
-  min-width: 24px;
-  min-height: 24px;
+  fill: currentColor;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
 .emotion-4 .fillStroke {
-  stroke: #3f4250;
+  stroke: currentColor;
   fill: none;
-}
-
-.emotion-4 path {
-  fill: currentColor;
 }
 
 <div
@@ -336,7 +272,6 @@ exports[`Separator > renders correctly with custom icon vertically 1`] = `
       <svg
         class="emotion-4 emotion-5"
         viewBox="0 0 16 16"
-        xmlns="http://www.w3.org/2000/svg"
       >
         <path
           clip-rule="evenodd"
@@ -351,6 +286,31 @@ exports[`Separator > renders correctly with custom icon vertically 1`] = `
         class="emotion-2 emotion-3"
       />
     </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Separator > renders correctly with custom sentiment 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  margin: 0;
+  border: 0;
+  width: auto;
+  height: 1px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  background-color: #8c40ef;
+}
+
+<div
+    data-testid="testing"
+  >
+    <hr
+      aria-orientation="horizontal"
+      class="emotion-0 emotion-1"
+      role="separator"
+    />
   </div>
 </DocumentFragment>
 `;
@@ -372,7 +332,7 @@ exports[`Separator > renders correctly with custom sentiment and icon 1`] = `
 }
 
 .emotion-0 svg {
-  fill: #521094;
+  fill: #8c40ef;
 }
 
 .emotion-2 {
@@ -383,7 +343,7 @@ exports[`Separator > renders correctly with custom sentiment and icon 1`] = `
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
-  background-color: #521094;
+  background-color: #8c40ef;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -391,20 +351,16 @@ exports[`Separator > renders correctly with custom sentiment and icon 1`] = `
 
 .emotion-4 {
   vertical-align: middle;
-  fill: #3f4250;
-  height: 24px;
-  width: 24px;
-  min-width: 24px;
-  min-height: 24px;
+  fill: currentColor;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
 .emotion-4 .fillStroke {
-  stroke: #3f4250;
+  stroke: currentColor;
   fill: none;
-}
-
-.emotion-4 path {
-  fill: currentColor;
 }
 
 <div
@@ -421,7 +377,6 @@ exports[`Separator > renders correctly with custom sentiment and icon 1`] = `
       <svg
         class="emotion-4 emotion-5"
         viewBox="0 0 16 16"
-        xmlns="http://www.w3.org/2000/svg"
       >
         <path
           clip-rule="evenodd"

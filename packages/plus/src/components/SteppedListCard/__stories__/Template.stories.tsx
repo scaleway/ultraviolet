@@ -1,8 +1,8 @@
 import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
-import type { StoryFn } from '@storybook/react'
+import type { StoryFn } from '@storybook/react-vite'
 import { blockStorageWire } from '@ultraviolet/illustrations/products/blockStorage'
-import { Button, Stack, Text } from '@ultraviolet/ui'
+import { Button, Snippet, Stack, Text } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
 import { SteppedListCard } from '../SteppedListCard'
 
@@ -37,6 +37,10 @@ export const Template: StoryFn<
       >
         {nextStep => (
           <Stack gap={2} direction="column">
+            <Snippet {...props}>
+              pnpm add @ultraviolet/ui; pnpm install; pnpm start; pnpm build;
+              pnpm test:unit; pnpm test:visual; pnpm build:storybook;
+            </Snippet>
             <Text as="div" variant="body">
               We are thrilled to count you as a Scaleway user! We are looking
               forward to providing you with the very best experience. To order

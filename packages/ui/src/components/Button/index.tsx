@@ -1,19 +1,18 @@
 'use client'
 
 import type { Theme } from '@emotion/react'
+import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
-import { Icon } from '@ultraviolet/icons/legacy'
 import type {
   AriaRole,
   ButtonHTMLAttributes,
-  ComponentProps,
   MouseEventHandler,
   ReactNode,
   Ref,
 } from 'react'
-import { forwardRef } from 'react'
+import { forwardRef, useMemo } from 'react'
 import type { ExtendedColor } from '../../theme'
-import { Loader } from '../Loader'
+import { Loader, StyledCircle } from '../Loader'
 import { Tooltip } from '../Tooltip'
 import { SIZE_GAP_KEY, SIZE_HEIGHT, SIZE_PADDING_KEY } from './constants'
 
@@ -40,20 +39,15 @@ const isMonochrome = (sentiment: ExtendedColor) =>
 
 // VARIANTS
 type StyledButtonProps = Required<
-  Pick<
-    FinalProps,
-    'size' | 'sentiment' | 'disabled' | 'iconPosition' | 'fullWidth'
-  >
-> & { iconOnly: boolean }
+  Pick<FinalProps, 'size' | 'sentiment' | 'disabled' | 'fullWidth'>
+>
 
 const coreStyle = ({
   theme,
   size,
   sentiment,
-  iconPosition,
   fullWidth,
   disabled,
-  iconOnly,
 }: { theme: Theme } & StyledButtonProps) => {
   const font =
     size === 'large'
@@ -63,8 +57,6 @@ const coreStyle = ({
   let width = 'auto'
   if (fullWidth) {
     width = '100%'
-  } else if (iconOnly) {
-    width = `${theme.sizing[SIZE_HEIGHT[size]]}`
   }
 
   return `
@@ -72,7 +64,7 @@ const coreStyle = ({
     position: relative;
     height: ${theme.sizing[SIZE_HEIGHT[size]]};
     padding: 0 ${theme.space[SIZE_PADDING_KEY[size]]};
-    flex-direction: ${iconPosition === 'right' ? 'row-reverse' : 'row'};
+    flex-direction: row;
     gap: ${theme.space[SIZE_GAP_KEY[size]]};
     border-radius: ${theme.radii.default};
     box-sizing: border-box;
@@ -110,13 +102,14 @@ const coreStyle = ({
 }
 
 const StyledFilledButton = styled('button', {
-  shouldForwardProp: prop =>
-    !['size', 'sentiment', 'iconPosition', 'fullWidth', 'iconOnly'].includes(
-      prop,
-    ),
+  shouldForwardProp: prop => !['size', 'sentiment', 'fullWidth'].includes(prop),
 })<StyledButtonProps>`
   ${args => coreStyle(args)}
 
+  ${StyledCircle} {
+    stroke: transparent;
+  }
+    
   background: ${({ theme, sentiment }) =>
     !isMonochrome(sentiment)
       ? theme.colors[sentiment].backgroundStrong
@@ -142,12 +135,13 @@ const StyledFilledButton = styled('button', {
 `
 
 const StyledOutlinedButton = styled('button', {
-  shouldForwardProp: prop =>
-    !['size', 'sentiment', 'iconPosition', 'fullWidth', 'iconOnly'].includes(
-      prop,
-    ),
+  shouldForwardProp: prop => !['size', 'sentiment', 'fullWidth'].includes(prop),
 })<StyledButtonProps>`
   ${args => coreStyle(args)}
+  
+  ${StyledCircle} {
+    stroke: transparent;
+  }
 
   background: none;
   border: 1px solid
@@ -196,12 +190,13 @@ const StyledOutlinedButton = styled('button', {
 `
 
 const StyledGhostButton = styled('button', {
-  shouldForwardProp: prop =>
-    !['size', 'sentiment', 'iconPosition', 'fullWidth', 'iconOnly'].includes(
-      prop,
-    ),
+  shouldForwardProp: prop => !['size', 'sentiment', 'fullWidth'].includes(prop),
 })<StyledButtonProps>`
   ${args => coreStyle(args)}
+
+  ${StyledCircle} {
+    stroke: transparent;
+  }
 
   background: none;
   border: none;
@@ -253,16 +248,6 @@ type CommonProps = {
   'data-testid'?: string
   sentiment?: ExtendedColor
   disabled?: boolean
-  /**
-   * @deprecated `iconPosition` prop is deprecated and will be removed in the next major version.
-   * You can directly set the icon into the children of the Button component.
-   */
-  iconPosition?: 'left' | 'right'
-  /**
-   * @deprecated `iconVariant` prop is deprecated and will be removed in the next major version.
-   * You can directly set the icon into the children of the Button component.
-   */
-  iconVariant?: ComponentProps<typeof Icon>['variant']
   fullWidth?: boolean
   isLoading?: boolean
   'aria-label'?: string
@@ -270,6 +255,10 @@ type CommonProps = {
   'aria-controls'?: string
   'aria-expanded'?: boolean
   'aria-haspopup'?: boolean
+  'aria-describedby'?: string
+  'aria-disabled'?: boolean
+  'aria-pressed'?: boolean
+  'aria-roledescription'?: string
   onClick?: MouseEventHandler<HTMLElement>
   tooltip?: string
   tabIndex?: ButtonHTMLAttributes<HTMLButtonElement>['tabIndex']
@@ -278,64 +267,17 @@ type CommonProps = {
   onMouseOut?: MouseEventHandler<HTMLElement>
   onMouseEnter?: MouseEventHandler<HTMLElement>
   onMouseLeave?: MouseEventHandler<HTMLElement>
+  onPointerDown?: ButtonHTMLAttributes<HTMLButtonElement>['onPointerDown']
+  onKeyDown?: ButtonHTMLAttributes<HTMLButtonElement>['onKeyDown']
 }
 
-// @note: using XOR utility was generating some lint erros
-type FinalProps = CommonProps &
-  (
-    | {
-        // Button : Children + optional Icon
-        children: ReactNode
-        /**
-         * @deprecated `iconVariant` prop is deprecated and will be removed in the next major version.
-         * You can directly set the icon into the children of the Button component.
-         */
-        icon?: ComponentProps<typeof Icon>['name']
-        name?: string
-        href?: never
-        target?: never
-        download?: never
-      }
-    | {
-        // Button : Icon only
-        children?: never
-        /**
-         * @deprecated `iconVariant` prop is deprecated and will be removed in the next major version.
-         * You can directly set the icon into the children of the Button component.
-         */
-        icon: ComponentProps<typeof Icon>['name']
-        name?: string
-        href?: never
-        target?: never
-        download?: never
-      }
-    | {
-        // Anchor : Children + optional Icon
-        children: ReactNode
-        /**
-         * @deprecated `iconVariant` prop is deprecated and will be removed in the next major version.
-         * You can directly set the icon into the children of the Button component.
-         */
-        icon?: ComponentProps<typeof Icon>['name']
-        name?: never
-        href: string
-        target?: string
-        download?: string
-      }
-    | {
-        // Anchor : Children + Icon Only
-        children?: never
-        /**
-         * @deprecated `iconVariant` prop is deprecated and will be removed in the next major version.
-         * You can directly set the icon into the children of the Button component.
-         */
-        icon: ComponentProps<typeof Icon>['name']
-        name?: never
-        href: string
-        target?: string
-        download?: string
-      }
-  )
+type FinalProps = CommonProps & {
+  children: ReactNode
+  name?: string
+  href?: string
+  target?: string
+  download?: string
+}
 
 /**
  * Button component is used to trigger an action or event, such as submitting a form, opening a dialog,
@@ -351,9 +293,6 @@ export const Button = forwardRef<Element, FinalProps>(
       variant = 'filled',
       size = 'large',
       disabled = false,
-      icon,
-      iconPosition = 'left',
-      iconVariant,
       fullWidth = false,
       isLoading = false,
       children,
@@ -363,12 +302,18 @@ export const Button = forwardRef<Element, FinalProps>(
       onMouseOut,
       onMouseEnter,
       onMouseLeave,
+      onPointerDown,
+      onKeyDown,
       name,
       'aria-label': ariaLabel,
       'aria-current': ariaCurrent,
       'aria-controls': ariaControls,
       'aria-expanded': ariaExpanded,
       'aria-haspopup': ariaHaspopup,
+      'aria-describedby': ariaDescribedby,
+      'aria-disabled': ariaDisabled,
+      'aria-pressed': ariaPressed,
+      'aria-roledescription': ariaRoledescription,
       href,
       download,
       target,
@@ -380,19 +325,21 @@ export const Button = forwardRef<Element, FinalProps>(
     ref,
   ) => {
     const computeIsDisabled = disabled || isLoading
+    const { theme } = useTheme()
+    const computedSentimentLoader = useMemo(() => {
+      if (variant === 'filled' && !['black', 'white'].includes(sentiment)) {
+        if (theme === 'light') return 'white'
+
+        return 'black'
+      }
+
+      return sentiment
+    }, [sentiment, theme, variant])
 
     const content = (
       <>
-        {!isLoading && icon ? (
-          <Icon name={icon} size="small" variant={iconVariant} />
-        ) : null}
         {isLoading ? (
-          <Loader
-            active
-            trailColor="transparent"
-            size="1em"
-            color="currentColor"
-          />
+          <Loader active size="small" sentiment={computedSentimentLoader} />
         ) : null}
         {children}
       </>
@@ -410,7 +357,6 @@ export const Button = forwardRef<Element, FinalProps>(
             data-testid={dataTestId}
             disabled={false}
             fullWidth={fullWidth}
-            iconPosition={iconPosition}
             sentiment={sentiment}
             size={size}
             type={type}
@@ -420,11 +366,14 @@ export const Button = forwardRef<Element, FinalProps>(
             aria-controls={ariaControls}
             aria-expanded={ariaExpanded}
             aria-haspopup={ariaHaspopup}
+            aria-disabled={ariaDisabled ?? disabled}
+            aria-describedby={ariaDescribedby}
+            aria-pressed={ariaPressed}
+            aria-roledescription={ariaRoledescription}
             href={href}
             target={target}
             download={download}
             ref={ref as Ref<HTMLAnchorElement>}
-            iconOnly={!!icon && !children}
             tabIndex={tabIndex}
             autoFocus={autoFocus}
             onMouseDown={onMouseDown}
@@ -449,7 +398,6 @@ export const Button = forwardRef<Element, FinalProps>(
           data-testid={dataTestId}
           disabled={computeIsDisabled}
           fullWidth={fullWidth}
-          iconPosition={iconPosition}
           sentiment={sentiment}
           size={size}
           type={type}
@@ -461,7 +409,6 @@ export const Button = forwardRef<Element, FinalProps>(
           aria-controls={ariaControls}
           aria-expanded={ariaExpanded}
           aria-haspopup={ariaHaspopup}
-          iconOnly={!!icon && !children}
           tabIndex={tabIndex}
           autoFocus={autoFocus}
           onMouseDown={onMouseDown}
@@ -469,6 +416,8 @@ export const Button = forwardRef<Element, FinalProps>(
           onMouseOut={onMouseOut}
           onMouseEnter={onMouseEnter}
           onMouseLeave={onMouseLeave}
+          onPointerDown={onPointerDown}
+          onKeyDown={onKeyDown}
         >
           {content}
         </Component>

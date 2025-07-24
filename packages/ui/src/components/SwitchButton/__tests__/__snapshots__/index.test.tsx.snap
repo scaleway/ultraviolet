@@ -1,120 +1,30 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`FocusOverlay > renders correctly when left is focused 1`] = `
-<DocumentFragment>
-  .emotion-0 {
-  position: absolute;
-  height: calc(100% - 0.5rem);
-  border-radius: 0.25rem;
-  background: #8c40ef;
-  transform-origin: left center;
-  -webkit-transition: all 200ms ease-in-out;
-  transition: all 200ms ease-in-out;
-}
-
-.emotion-0[data-focusposition='right'] {
-  transform-origin: right center;
-}
-
-<div
-    data-testid="testing"
-  >
-    <div
-      class="emotion-0 emotion-1"
-      data-focusposition="left"
-      style="transform: translate3d(0px, 0, 0) scale3d(1, 1, 1); width: 400px;"
-    />
-  </div>
-</DocumentFragment>
-`;
-
-exports[`FocusOverlay > renders correctly when left is focused and has mouse down 1`] = `
-<DocumentFragment>
-  .emotion-0 {
-  position: absolute;
-  height: calc(100% - 0.5rem);
-  border-radius: 0.25rem;
-  background: #8c40ef;
-  transform-origin: left center;
-  -webkit-transition: all 200ms ease-in-out;
-  transition: all 200ms ease-in-out;
-}
-
-.emotion-0[data-focusposition='right'] {
-  transform-origin: right center;
-}
-
-<div
-    data-testid="testing"
-  >
-    <div
-      class="emotion-0 emotion-1"
-      data-focusposition="left"
-      style="transform: translate3d(0px, 0, 0) scale3d(1.015, 1, 1); width: 400px;"
-    />
-  </div>
-</DocumentFragment>
-`;
-
-exports[`FocusOverlay > renders correctly when right is focused 1`] = `
-<DocumentFragment>
-  .emotion-0 {
-  position: absolute;
-  height: calc(100% - 0.5rem);
-  border-radius: 0.25rem;
-  background: #8c40ef;
-  transform-origin: left center;
-  -webkit-transition: all 200ms ease-in-out;
-  transition: all 200ms ease-in-out;
-}
-
-.emotion-0[data-focusposition='right'] {
-  transform-origin: right center;
-}
-
-<div
-    data-testid="testing"
-  >
-    <div
-      class="emotion-0 emotion-1"
-      data-focusposition="right"
-      style="transform: translate3d(408px, 0, 0) scale3d(1, 1, 1); width: 200px;"
-    />
-  </div>
-</DocumentFragment>
-`;
-
-exports[`FocusOverlay > renders correctly when right is focused and has mouse down 1`] = `
-<DocumentFragment>
-  .emotion-0 {
-  position: absolute;
-  height: calc(100% - 0.5rem);
-  border-radius: 0.25rem;
-  background: #8c40ef;
-  transform-origin: left center;
-  -webkit-transition: all 200ms ease-in-out;
-  transition: all 200ms ease-in-out;
-}
-
-.emotion-0[data-focusposition='right'] {
-  transform-origin: right center;
-}
-
-<div
-    data-testid="testing"
-  >
-    <div
-      class="emotion-0 emotion-1"
-      data-focusposition="right"
-      style="transform: translate3d(408px, 0, 0) scale3d(1.03, 1, 1); width: 200px;"
-    />
-  </div>
-</DocumentFragment>
-`;
-
 exports[`SwitchButton > renders correctly 1`] = `
 <DocumentFragment>
   .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.emotion-2 {
   border: 1px solid #d9dadd;
   border-radius: 0.25rem;
   padding: 0.25rem;
@@ -126,23 +36,40 @@ exports[`SwitchButton > renders correctly 1`] = `
   position: relative;
 }
 
-.emotion-0[data-size='small']>.emotion-2 {
+.emotion-2[data-size='small'] {
   height: 2.5rem;
 }
 
-.emotion-0[data-size='medium']>.emotion-2 {
+.emotion-2[data-size='medium'] {
   height: 3rem;
 }
 
-.emotion-3 {
+.emotion-4 {
+  position: absolute;
+  height: calc(100% - 0.5rem);
+  border-radius: 0.25rem;
+  background: #8c40ef;
+  transform-origin: left center;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.emotion-4[data-sentiment='neutral'] {
+  background: #e9eaeb;
+}
+
+.emotion-7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   -webkit-align-items: start;
   -webkit-box-align: start;
   -ms-flex-align: start;
@@ -151,13 +78,10 @@ exports[`SwitchButton > renders correctly 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
   position: relative;
   padding: 1rem;
   border-radius: 0.25rem;
@@ -182,87 +106,98 @@ exports[`SwitchButton > renders correctly 1`] = `
   transition: all 200ms ease-in-out;
   white-space: nowrap;
   background: transparent;
+  height: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
-.emotion-3[data-has-label='false']>:first-child {
+.emotion-7[data-has-label='false']>:first-child {
   margin-bottom: -0.25rem;
 }
 
-.emotion-3[data-has-default-cursor='true'] {
+.emotion-7[data-has-default-cursor='true'] {
   cursor: default;
 }
 
-.emotion-3[data-checked='true'] {
+.emotion-7[data-checked='true'] {
   border: 1px solid #8c40ef;
 }
 
-.emotion-3[data-error='true'] {
+.emotion-7[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-3[data-disabled='true'] {
+.emotion-7[data-disabled='true'] {
   border: 1px solid #e9eaeb;
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.emotion-3[data-image="illustration"] {
+.emotion-7[data-image="illustration"] {
   padding: 0rem;
 }
 
-.emotion-3[data-image="icon"] {
+.emotion-7[data-image="icon"] {
   padding: 0rem;
   padding-right: 1rem;
 }
 
-.emotion-3:hover:not([data-error='true']):not([data-disabled='true']),
-.emotion-3:active:not([data-error='true']):not([data-disabled='true']) {
+.emotion-7:hover:not([data-error='true']):not([data-disabled='true']),
+.emotion-7:active:not([data-error='true']):not([data-disabled='true']) {
   border: 1px solid #8c40ef;
 }
 
-.emotion-3:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.emotion-3:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
+.emotion-7:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
+.emotion-7:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
 
-.emotion-3[data-has-label='true'] .emotion-6,
-.emotion-3[data-has-label='true'] .eqr7bqq1 {
+.emotion-7[data-has-label='true'] .emotion-10,
+.emotion-7[data-has-label='true'] .eqr7bqq0 {
   width: 100%;
 }
 
-.emotion-3:hover,
-.emotion-3:active {
+.emotion-7:hover,
+.emotion-7:active {
   box-shadow: none;
   border: none;
 }
 
-.emotion-3:hover:not([data-error='true'][data-disabled='true']),
-.emotion-3:active:not([data-error='true'][data-disabled='true']) {
+.emotion-7:hover:not([data-error='true'][data-disabled='true']),
+.emotion-7:active:not([data-error='true'][data-disabled='true']) {
   border: none;
 }
 
-.emotion-3[data-checked='true'] {
+.emotion-7[data-checked='true'] {
   border: none;
 }
 
-.emotion-3[data-checked='true'] label {
+.emotion-7 label {
+  -webkit-transition: color 300ms;
+  transition: color 300ms;
+  color: #222638;
+}
+
+.emotion-7[data-checked='true'] label {
   color: #ffffff;
 }
 
-.emotion-3:not([data-checked='true']) label:hover {
+.emotion-7:not([data-checked='true']) label:hover {
   color: #641cb3;
 }
 
-.emotion-5 {
+.emotion-9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -271,13 +206,13 @@ exports[`SwitchButton > renders correctly 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
-.emotion-8 {
+.emotion-12 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -301,104 +236,104 @@ exports[`SwitchButton > renders correctly 1`] = `
   align-items: start;
 }
 
-.emotion-8[aria-disabled='false'],
-.emotion-8[aria-disabled='false']>label {
+.emotion-12[aria-disabled='false'],
+.emotion-12[aria-disabled='false']>label {
   cursor: pointer;
 }
 
-.emotion-8:hover[aria-disabled='false'] .emotion-11+.emotion-13 {
+.emotion-12:hover[aria-disabled='false'] .emotion-15+.emotion-17 {
   fill: #8c40ef;
 }
 
-.emotion-8:hover[aria-disabled='false'] .emotion-11+.emotion-13 .emotion-15 {
+.emotion-12:hover[aria-disabled='false'] .emotion-15+.emotion-17 .emotion-19 {
   fill: #e5dbfd;
 }
 
-.emotion-8:hover[aria-disabled='false'] .emotion-11[aria-invalid='true']+.emotion-13 {
+.emotion-12:hover[aria-disabled='false'] .emotion-15[aria-invalid='true']+.emotion-17 {
   fill: #b3144d;
 }
 
-.emotion-8:hover[aria-disabled='false'] .emotion-11[aria-invalid='true']+.emotion-13 .emotion-15 {
+.emotion-12:hover[aria-disabled='false'] .emotion-15[aria-invalid='true']+.emotion-17 .emotion-19 {
   fill: #ffd3e3;
 }
 
-.emotion-8[aria-disabled='true'] {
+.emotion-12[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.emotion-8[aria-disabled='true']>label,
-.emotion-8[aria-disabled='true'] .emotion-11 {
+.emotion-12[aria-disabled='true']>label,
+.emotion-12[aria-disabled='true'] .emotion-15 {
   cursor: not-allowed;
 }
 
-.emotion-8[aria-disabled='true'] .emotion-13 {
+.emotion-12[aria-disabled='true'] .emotion-17 {
   fill: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-8[aria-disabled='true'] .emotion-13 .emotion-15 {
+.emotion-12[aria-disabled='true'] .emotion-17 .emotion-19 {
   fill: #f3f3f4;
 }
 
-.emotion-8[data-checked='true'] {
+.emotion-12[data-checked='true'] {
   color: #641cb3;
 }
 
-.emotion-8[data-error='true'] {
+.emotion-12[data-error='true'] {
   color: #b3144d;
 }
 
-.emotion-8[aria-disabled='true'] {
+.emotion-12[aria-disabled='true'] {
   color: #b5b7bd;
 }
 
-.emotion-8 input+svg {
+.emotion-12 input+svg {
   display: none;
 }
 
-.emotion-8:hover[aria-disabled='false']:not([data-checked='true']) .emotion-11+.emotion-13 {
+.emotion-12:hover[aria-disabled='false']:not([data-checked='true']) .emotion-15+.emotion-17 {
   fill: #d9dadd;
 }
 
-.emotion-8:hover[aria-disabled='false']:not([data-checked='true']) .emotion-11+.emotion-13 .emotion-15 {
+.emotion-12:hover[aria-disabled='false']:not([data-checked='true']) .emotion-15+.emotion-17 .emotion-19 {
   fill: #ffffff;
 }
 
-.emotion-8:hover[aria-disabled='false']:not([data-checked='true']) .emotion-11[aria-invalid='true']+.emotion-13 {
+.emotion-12:hover[aria-disabled='false']:not([data-checked='true']) .emotion-15[aria-invalid='true']+.emotion-17 {
   fill: #b3144d;
 }
 
-.emotion-8:hover[aria-disabled='false']:not([data-checked='true']) .emotion-11[aria-invalid='true']+.emotion-13 .emotion-15 {
+.emotion-12:hover[aria-disabled='false']:not([data-checked='true']) .emotion-15[aria-invalid='true']+.emotion-17 .emotion-19 {
   fill: #ffffff;
 }
 
-.emotion-8:hover[aria-disabled='false'] .emotion-11+.emotion-13 {
+.emotion-12:hover[aria-disabled='false'] .emotion-15+.emotion-17 {
   fill: #8c40ef;
 }
 
-.emotion-8:hover[aria-disabled='false'] .emotion-11+.emotion-13 .emotion-15 {
+.emotion-12:hover[aria-disabled='false'] .emotion-15+.emotion-17 .emotion-19 {
   fill: #ffffff;
 }
 
-.emotion-8:hover[aria-disabled='false'] .emotion-11[aria-invalid='true']+.emotion-13 {
+.emotion-12:hover[aria-disabled='false'] .emotion-15[aria-invalid='true']+.emotion-17 {
   fill: #b3144d;
 }
 
-.emotion-8:hover[aria-disabled='false'] .emotion-11[aria-invalid='true']+.emotion-13 .emotion-15 {
+.emotion-12:hover[aria-disabled='false'] .emotion-15[aria-invalid='true']+.emotion-17 .emotion-19 {
   fill: #ffffff;
 }
 
-.emotion-8 .emotion-11[aria-disabled='false']:active+.emotion-13 {
+.emotion-12 .emotion-15[aria-disabled='false']:active+.emotion-17 {
   background: none;
   fill: #8c40ef;
 }
 
-.emotion-8 .emotion-11[aria-disabled='false']:active+.emotion-13 .emotion-15 {
+.emotion-12 .emotion-15[aria-disabled='false']:active+.emotion-17 .emotion-19 {
   fill: #ffffff;
 }
 
-.emotion-10 {
+.emotion-14 {
   cursor: pointer;
   position: absolute;
   height: 1.5rem;
@@ -408,7 +343,7 @@ exports[`SwitchButton > renders correctly 1`] = `
   border-width: 0;
 }
 
-.emotion-10+.emotion-13 .emotion-17 {
+.emotion-14+.emotion-17 .emotion-21 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -418,48 +353,48 @@ exports[`SwitchButton > renders correctly 1`] = `
   transform: scale(0);
 }
 
-.emotion-10:checked+svg .emotion-17 {
+.emotion-14:checked+svg .emotion-21 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.emotion-10:checked[aria-disabled='false'][aria-invalid='false']+.emotion-13 {
+.emotion-14:checked[aria-disabled='false'][aria-invalid='false']+.emotion-17 {
   fill: #8c40ef;
 }
 
-.emotion-10:checked[aria-disabled='true'][aria-invalid='false']+.emotion-13 {
+.emotion-14:checked[aria-disabled='true'][aria-invalid='false']+.emotion-17 {
   fill: #d8c5fc;
 }
 
-.emotion-10[aria-invalid='true']:not([aria-disabled='true'])+.emotion-13 {
+.emotion-14[aria-invalid='true']:not([aria-disabled='true'])+.emotion-17 {
   fill: #e51963;
 }
 
-.emotion-10[aria-disabled='false']:active+.emotion-13 {
+.emotion-14[aria-disabled='false']:active+.emotion-17 {
   background-color: #5e127e40;
   fill: #8c40ef;
 }
 
-.emotion-10[aria-disabled='false']:active+.emotion-13 .emotion-15 {
+.emotion-14[aria-disabled='false']:active+.emotion-17 .emotion-19 {
   fill: #f1eefc;
 }
 
-.emotion-10[aria-disabled='false']:focus-visible+.emotion-13 {
+.emotion-14[aria-disabled='false']:focus-visible+.emotion-17 {
   outline: -webkit-focus-ring-color auto 1px;
 }
 
-.emotion-10[aria-invalid='true']:focus+.emotion-13 {
+.emotion-14[aria-invalid='true']:focus+.emotion-17 {
   background-color: #f91b6c40;
   fill: #e51963;
 }
 
-.emotion-10[aria-invalid='true']:focus+.emotion-13 .emotion-15 {
+.emotion-14[aria-invalid='true']:focus+.emotion-17 .emotion-19 {
   fill: #ffebf2;
 }
 
-.emotion-12 {
+.emotion-16 {
   height: 1.5rem;
   width: 1.5rem;
   min-width: 1.5rem;
@@ -468,13 +403,13 @@ exports[`SwitchButton > renders correctly 1`] = `
   fill: #d9dadd;
 }
 
-.emotion-12 .emotion-15 {
+.emotion-16 .emotion-19 {
   fill: #ffffff;
 }
 
-.emotion-19 {
+.emotion-23 {
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -491,35 +426,42 @@ exports[`SwitchButton > renders correctly 1`] = `
     data-testid="testing"
   >
     <div
-      style="display: inline-flex;"
+      class="emotion-0 emotion-1"
     >
       <div
-        class="emotion-0 emotion-1"
+        class="emotion-2 emotion-3"
         data-size="small"
       >
         <div
-          class="emotion-2 emotion-3 emotion-4"
-          data-checked="false"
+          class="emotion-4 emotion-5"
+          data-sentiment="primary"
+          style="width: 500px; left: 0px;"
+        />
+        <div
+          class="emotion-6 emotion-7 emotion-8"
+          data-checked="true"
           data-disabled="false"
           data-has-default-cursor="false"
           data-has-label="true"
           data-image="none"
+          data-testid="switch-button-left"
           data-type="radio"
           role="button"
           tabindex="0"
         >
           <div
-            class="emotion-5 emotion-6"
+            class="emotion-9 emotion-10"
           >
             <div
               aria-disabled="false"
-              class="emotion-7 emotion-8 emotion-9"
-              data-checked="false"
+              class="emotion-11 emotion-12 emotion-13"
+              data-checked="true"
             >
               <input
                 aria-disabled="false"
                 aria-invalid="false"
-                class="emotion-10 emotion-11"
+                checked=""
+                class="emotion-14 emotion-15"
                 id="«r2»"
                 name="test"
                 tabindex="-1"
@@ -527,7 +469,7 @@ exports[`SwitchButton > renders correctly 1`] = `
                 value="left"
               />
               <svg
-                class="emotion-12 emotion-13"
+                class="emotion-16 emotion-17"
                 viewBox="0 0 24 24"
               >
                 <g>
@@ -538,13 +480,13 @@ exports[`SwitchButton > renders correctly 1`] = `
                     stroke-width="2"
                   />
                   <circle
-                    class="emotion-14 emotion-15"
+                    class="emotion-18 emotion-19"
                     cx="12"
                     cy="12"
                     r="8"
                   />
                   <circle
-                    class="emotion-16 emotion-17"
+                    class="emotion-20 emotion-21"
                     cx="12"
                     cy="12"
                     r="5"
@@ -552,7 +494,7 @@ exports[`SwitchButton > renders correctly 1`] = `
                 </g>
               </svg>
               <label
-                class="emotion-18 emotion-19 emotion-20"
+                class="emotion-22 emotion-23 emotion-24"
                 for="«r2»"
               >
                 Left
@@ -561,29 +503,29 @@ exports[`SwitchButton > renders correctly 1`] = `
           </div>
         </div>
         <div
-          class="emotion-2 emotion-3 emotion-4"
-          data-checked="true"
+          class="emotion-6 emotion-7 emotion-8"
+          data-checked="false"
           data-disabled="false"
           data-has-default-cursor="false"
           data-has-label="true"
           data-image="none"
+          data-testid="switch-button-right"
           data-type="radio"
           role="button"
           tabindex="0"
         >
           <div
-            class="emotion-5 emotion-6"
+            class="emotion-9 emotion-10"
           >
             <div
               aria-disabled="false"
-              class="emotion-7 emotion-8 emotion-9"
-              data-checked="true"
+              class="emotion-11 emotion-12 emotion-13"
+              data-checked="false"
             >
               <input
                 aria-disabled="false"
                 aria-invalid="false"
-                checked=""
-                class="emotion-10 emotion-11"
+                class="emotion-14 emotion-15"
                 id="«r6»"
                 name="test"
                 tabindex="-1"
@@ -591,7 +533,7 @@ exports[`SwitchButton > renders correctly 1`] = `
                 value="right"
               />
               <svg
-                class="emotion-12 emotion-13"
+                class="emotion-16 emotion-17"
                 viewBox="0 0 24 24"
               >
                 <g>
@@ -602,13 +544,13 @@ exports[`SwitchButton > renders correctly 1`] = `
                     stroke-width="2"
                   />
                   <circle
-                    class="emotion-14 emotion-15"
+                    class="emotion-18 emotion-19"
                     cx="12"
                     cy="12"
                     r="8"
                   />
                   <circle
-                    class="emotion-16 emotion-17"
+                    class="emotion-20 emotion-21"
                     cx="12"
                     cy="12"
                     r="5"
@@ -616,7 +558,7 @@ exports[`SwitchButton > renders correctly 1`] = `
                 </g>
               </svg>
               <label
-                class="emotion-18 emotion-19 emotion-20"
+                class="emotion-22 emotion-23 emotion-24"
                 for="«r6»"
               >
                 Right
@@ -633,6 +575,28 @@ exports[`SwitchButton > renders correctly 1`] = `
 exports[`SwitchButton > renders correctly medium 1`] = `
 <DocumentFragment>
   .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.emotion-2 {
   border: 1px solid #d9dadd;
   border-radius: 0.25rem;
   padding: 0.25rem;
@@ -644,23 +608,40 @@ exports[`SwitchButton > renders correctly medium 1`] = `
   position: relative;
 }
 
-.emotion-0[data-size='small']>.emotion-2 {
+.emotion-2[data-size='small'] {
   height: 2.5rem;
 }
 
-.emotion-0[data-size='medium']>.emotion-2 {
+.emotion-2[data-size='medium'] {
   height: 3rem;
 }
 
-.emotion-3 {
+.emotion-4 {
+  position: absolute;
+  height: calc(100% - 0.5rem);
+  border-radius: 0.25rem;
+  background: #8c40ef;
+  transform-origin: left center;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.emotion-4[data-sentiment='neutral'] {
+  background: #e9eaeb;
+}
+
+.emotion-7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   -webkit-align-items: start;
   -webkit-box-align: start;
   -ms-flex-align: start;
@@ -669,13 +650,10 @@ exports[`SwitchButton > renders correctly medium 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
   position: relative;
   padding: 1rem;
   border-radius: 0.25rem;
@@ -700,87 +678,98 @@ exports[`SwitchButton > renders correctly medium 1`] = `
   transition: all 200ms ease-in-out;
   white-space: nowrap;
   background: transparent;
+  height: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
-.emotion-3[data-has-label='false']>:first-child {
+.emotion-7[data-has-label='false']>:first-child {
   margin-bottom: -0.25rem;
 }
 
-.emotion-3[data-has-default-cursor='true'] {
+.emotion-7[data-has-default-cursor='true'] {
   cursor: default;
 }
 
-.emotion-3[data-checked='true'] {
+.emotion-7[data-checked='true'] {
   border: 1px solid #8c40ef;
 }
 
-.emotion-3[data-error='true'] {
+.emotion-7[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-3[data-disabled='true'] {
+.emotion-7[data-disabled='true'] {
   border: 1px solid #e9eaeb;
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.emotion-3[data-image="illustration"] {
+.emotion-7[data-image="illustration"] {
   padding: 0rem;
 }
 
-.emotion-3[data-image="icon"] {
+.emotion-7[data-image="icon"] {
   padding: 0rem;
   padding-right: 1rem;
 }
 
-.emotion-3:hover:not([data-error='true']):not([data-disabled='true']),
-.emotion-3:active:not([data-error='true']):not([data-disabled='true']) {
+.emotion-7:hover:not([data-error='true']):not([data-disabled='true']),
+.emotion-7:active:not([data-error='true']):not([data-disabled='true']) {
   border: 1px solid #8c40ef;
 }
 
-.emotion-3:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.emotion-3:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
+.emotion-7:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
+.emotion-7:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
 
-.emotion-3[data-has-label='true'] .emotion-6,
-.emotion-3[data-has-label='true'] .eqr7bqq1 {
+.emotion-7[data-has-label='true'] .emotion-10,
+.emotion-7[data-has-label='true'] .eqr7bqq0 {
   width: 100%;
 }
 
-.emotion-3:hover,
-.emotion-3:active {
+.emotion-7:hover,
+.emotion-7:active {
   box-shadow: none;
   border: none;
 }
 
-.emotion-3:hover:not([data-error='true'][data-disabled='true']),
-.emotion-3:active:not([data-error='true'][data-disabled='true']) {
+.emotion-7:hover:not([data-error='true'][data-disabled='true']),
+.emotion-7:active:not([data-error='true'][data-disabled='true']) {
   border: none;
 }
 
-.emotion-3[data-checked='true'] {
+.emotion-7[data-checked='true'] {
   border: none;
 }
 
-.emotion-3[data-checked='true'] label {
+.emotion-7 label {
+  -webkit-transition: color 300ms;
+  transition: color 300ms;
+  color: #222638;
+}
+
+.emotion-7[data-checked='true'] label {
   color: #ffffff;
 }
 
-.emotion-3:not([data-checked='true']) label:hover {
+.emotion-7:not([data-checked='true']) label:hover {
   color: #641cb3;
 }
 
-.emotion-5 {
+.emotion-9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -789,13 +778,13 @@ exports[`SwitchButton > renders correctly medium 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
-.emotion-8 {
+.emotion-12 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -819,104 +808,104 @@ exports[`SwitchButton > renders correctly medium 1`] = `
   align-items: start;
 }
 
-.emotion-8[aria-disabled='false'],
-.emotion-8[aria-disabled='false']>label {
+.emotion-12[aria-disabled='false'],
+.emotion-12[aria-disabled='false']>label {
   cursor: pointer;
 }
 
-.emotion-8:hover[aria-disabled='false'] .emotion-11+.emotion-13 {
+.emotion-12:hover[aria-disabled='false'] .emotion-15+.emotion-17 {
   fill: #8c40ef;
 }
 
-.emotion-8:hover[aria-disabled='false'] .emotion-11+.emotion-13 .emotion-15 {
+.emotion-12:hover[aria-disabled='false'] .emotion-15+.emotion-17 .emotion-19 {
   fill: #e5dbfd;
 }
 
-.emotion-8:hover[aria-disabled='false'] .emotion-11[aria-invalid='true']+.emotion-13 {
+.emotion-12:hover[aria-disabled='false'] .emotion-15[aria-invalid='true']+.emotion-17 {
   fill: #b3144d;
 }
 
-.emotion-8:hover[aria-disabled='false'] .emotion-11[aria-invalid='true']+.emotion-13 .emotion-15 {
+.emotion-12:hover[aria-disabled='false'] .emotion-15[aria-invalid='true']+.emotion-17 .emotion-19 {
   fill: #ffd3e3;
 }
 
-.emotion-8[aria-disabled='true'] {
+.emotion-12[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.emotion-8[aria-disabled='true']>label,
-.emotion-8[aria-disabled='true'] .emotion-11 {
+.emotion-12[aria-disabled='true']>label,
+.emotion-12[aria-disabled='true'] .emotion-15 {
   cursor: not-allowed;
 }
 
-.emotion-8[aria-disabled='true'] .emotion-13 {
+.emotion-12[aria-disabled='true'] .emotion-17 {
   fill: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-8[aria-disabled='true'] .emotion-13 .emotion-15 {
+.emotion-12[aria-disabled='true'] .emotion-17 .emotion-19 {
   fill: #f3f3f4;
 }
 
-.emotion-8[data-checked='true'] {
+.emotion-12[data-checked='true'] {
   color: #641cb3;
 }
 
-.emotion-8[data-error='true'] {
+.emotion-12[data-error='true'] {
   color: #b3144d;
 }
 
-.emotion-8[aria-disabled='true'] {
+.emotion-12[aria-disabled='true'] {
   color: #b5b7bd;
 }
 
-.emotion-8 input+svg {
+.emotion-12 input+svg {
   display: none;
 }
 
-.emotion-8:hover[aria-disabled='false']:not([data-checked='true']) .emotion-11+.emotion-13 {
+.emotion-12:hover[aria-disabled='false']:not([data-checked='true']) .emotion-15+.emotion-17 {
   fill: #d9dadd;
 }
 
-.emotion-8:hover[aria-disabled='false']:not([data-checked='true']) .emotion-11+.emotion-13 .emotion-15 {
+.emotion-12:hover[aria-disabled='false']:not([data-checked='true']) .emotion-15+.emotion-17 .emotion-19 {
   fill: #ffffff;
 }
 
-.emotion-8:hover[aria-disabled='false']:not([data-checked='true']) .emotion-11[aria-invalid='true']+.emotion-13 {
+.emotion-12:hover[aria-disabled='false']:not([data-checked='true']) .emotion-15[aria-invalid='true']+.emotion-17 {
   fill: #b3144d;
 }
 
-.emotion-8:hover[aria-disabled='false']:not([data-checked='true']) .emotion-11[aria-invalid='true']+.emotion-13 .emotion-15 {
+.emotion-12:hover[aria-disabled='false']:not([data-checked='true']) .emotion-15[aria-invalid='true']+.emotion-17 .emotion-19 {
   fill: #ffffff;
 }
 
-.emotion-8:hover[aria-disabled='false'] .emotion-11+.emotion-13 {
+.emotion-12:hover[aria-disabled='false'] .emotion-15+.emotion-17 {
   fill: #8c40ef;
 }
 
-.emotion-8:hover[aria-disabled='false'] .emotion-11+.emotion-13 .emotion-15 {
+.emotion-12:hover[aria-disabled='false'] .emotion-15+.emotion-17 .emotion-19 {
   fill: #ffffff;
 }
 
-.emotion-8:hover[aria-disabled='false'] .emotion-11[aria-invalid='true']+.emotion-13 {
+.emotion-12:hover[aria-disabled='false'] .emotion-15[aria-invalid='true']+.emotion-17 {
   fill: #b3144d;
 }
 
-.emotion-8:hover[aria-disabled='false'] .emotion-11[aria-invalid='true']+.emotion-13 .emotion-15 {
+.emotion-12:hover[aria-disabled='false'] .emotion-15[aria-invalid='true']+.emotion-17 .emotion-19 {
   fill: #ffffff;
 }
 
-.emotion-8 .emotion-11[aria-disabled='false']:active+.emotion-13 {
+.emotion-12 .emotion-15[aria-disabled='false']:active+.emotion-17 {
   background: none;
   fill: #8c40ef;
 }
 
-.emotion-8 .emotion-11[aria-disabled='false']:active+.emotion-13 .emotion-15 {
+.emotion-12 .emotion-15[aria-disabled='false']:active+.emotion-17 .emotion-19 {
   fill: #ffffff;
 }
 
-.emotion-10 {
+.emotion-14 {
   cursor: pointer;
   position: absolute;
   height: 1.5rem;
@@ -926,7 +915,7 @@ exports[`SwitchButton > renders correctly medium 1`] = `
   border-width: 0;
 }
 
-.emotion-10+.emotion-13 .emotion-17 {
+.emotion-14+.emotion-17 .emotion-21 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -936,48 +925,48 @@ exports[`SwitchButton > renders correctly medium 1`] = `
   transform: scale(0);
 }
 
-.emotion-10:checked+svg .emotion-17 {
+.emotion-14:checked+svg .emotion-21 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.emotion-10:checked[aria-disabled='false'][aria-invalid='false']+.emotion-13 {
+.emotion-14:checked[aria-disabled='false'][aria-invalid='false']+.emotion-17 {
   fill: #8c40ef;
 }
 
-.emotion-10:checked[aria-disabled='true'][aria-invalid='false']+.emotion-13 {
+.emotion-14:checked[aria-disabled='true'][aria-invalid='false']+.emotion-17 {
   fill: #d8c5fc;
 }
 
-.emotion-10[aria-invalid='true']:not([aria-disabled='true'])+.emotion-13 {
+.emotion-14[aria-invalid='true']:not([aria-disabled='true'])+.emotion-17 {
   fill: #e51963;
 }
 
-.emotion-10[aria-disabled='false']:active+.emotion-13 {
+.emotion-14[aria-disabled='false']:active+.emotion-17 {
   background-color: #5e127e40;
   fill: #8c40ef;
 }
 
-.emotion-10[aria-disabled='false']:active+.emotion-13 .emotion-15 {
+.emotion-14[aria-disabled='false']:active+.emotion-17 .emotion-19 {
   fill: #f1eefc;
 }
 
-.emotion-10[aria-disabled='false']:focus-visible+.emotion-13 {
+.emotion-14[aria-disabled='false']:focus-visible+.emotion-17 {
   outline: -webkit-focus-ring-color auto 1px;
 }
 
-.emotion-10[aria-invalid='true']:focus+.emotion-13 {
+.emotion-14[aria-invalid='true']:focus+.emotion-17 {
   background-color: #f91b6c40;
   fill: #e51963;
 }
 
-.emotion-10[aria-invalid='true']:focus+.emotion-13 .emotion-15 {
+.emotion-14[aria-invalid='true']:focus+.emotion-17 .emotion-19 {
   fill: #ffebf2;
 }
 
-.emotion-12 {
+.emotion-16 {
   height: 1.5rem;
   width: 1.5rem;
   min-width: 1.5rem;
@@ -986,13 +975,13 @@ exports[`SwitchButton > renders correctly medium 1`] = `
   fill: #d9dadd;
 }
 
-.emotion-12 .emotion-15 {
+.emotion-16 .emotion-19 {
   fill: #ffffff;
 }
 
-.emotion-19 {
+.emotion-23 {
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -1009,35 +998,42 @@ exports[`SwitchButton > renders correctly medium 1`] = `
     data-testid="testing"
   >
     <div
-      style="display: inline-flex;"
+      class="emotion-0 emotion-1"
     >
       <div
-        class="emotion-0 emotion-1"
+        class="emotion-2 emotion-3"
         data-size="medium"
       >
         <div
-          class="emotion-2 emotion-3 emotion-4"
-          data-checked="false"
+          class="emotion-4 emotion-5"
+          data-sentiment="primary"
+          style="width: 500px; left: 0px;"
+        />
+        <div
+          class="emotion-6 emotion-7 emotion-8"
+          data-checked="true"
           data-disabled="false"
           data-has-default-cursor="false"
           data-has-label="true"
           data-image="none"
+          data-testid="switch-button-left"
           data-type="radio"
           role="button"
           tabindex="0"
         >
           <div
-            class="emotion-5 emotion-6"
+            class="emotion-9 emotion-10"
           >
             <div
               aria-disabled="false"
-              class="emotion-7 emotion-8 emotion-9"
-              data-checked="false"
+              class="emotion-11 emotion-12 emotion-13"
+              data-checked="true"
             >
               <input
                 aria-disabled="false"
                 aria-invalid="false"
-                class="emotion-10 emotion-11"
+                checked=""
+                class="emotion-14 emotion-15"
                 id="«rb»"
                 name="test"
                 tabindex="-1"
@@ -1045,7 +1041,7 @@ exports[`SwitchButton > renders correctly medium 1`] = `
                 value="left"
               />
               <svg
-                class="emotion-12 emotion-13"
+                class="emotion-16 emotion-17"
                 viewBox="0 0 24 24"
               >
                 <g>
@@ -1056,13 +1052,13 @@ exports[`SwitchButton > renders correctly medium 1`] = `
                     stroke-width="2"
                   />
                   <circle
-                    class="emotion-14 emotion-15"
+                    class="emotion-18 emotion-19"
                     cx="12"
                     cy="12"
                     r="8"
                   />
                   <circle
-                    class="emotion-16 emotion-17"
+                    class="emotion-20 emotion-21"
                     cx="12"
                     cy="12"
                     r="5"
@@ -1070,7 +1066,7 @@ exports[`SwitchButton > renders correctly medium 1`] = `
                 </g>
               </svg>
               <label
-                class="emotion-18 emotion-19 emotion-20"
+                class="emotion-22 emotion-23 emotion-24"
                 for="«rb»"
               >
                 Left
@@ -1079,29 +1075,29 @@ exports[`SwitchButton > renders correctly medium 1`] = `
           </div>
         </div>
         <div
-          class="emotion-2 emotion-3 emotion-4"
-          data-checked="true"
+          class="emotion-6 emotion-7 emotion-8"
+          data-checked="false"
           data-disabled="false"
           data-has-default-cursor="false"
           data-has-label="true"
           data-image="none"
+          data-testid="switch-button-right"
           data-type="radio"
           role="button"
           tabindex="0"
         >
           <div
-            class="emotion-5 emotion-6"
+            class="emotion-9 emotion-10"
           >
             <div
               aria-disabled="false"
-              class="emotion-7 emotion-8 emotion-9"
-              data-checked="true"
+              class="emotion-11 emotion-12 emotion-13"
+              data-checked="false"
             >
               <input
                 aria-disabled="false"
                 aria-invalid="false"
-                checked=""
-                class="emotion-10 emotion-11"
+                class="emotion-14 emotion-15"
                 id="«rf»"
                 name="test"
                 tabindex="-1"
@@ -1109,7 +1105,7 @@ exports[`SwitchButton > renders correctly medium 1`] = `
                 value="right"
               />
               <svg
-                class="emotion-12 emotion-13"
+                class="emotion-16 emotion-17"
                 viewBox="0 0 24 24"
               >
                 <g>
@@ -1120,13 +1116,13 @@ exports[`SwitchButton > renders correctly medium 1`] = `
                     stroke-width="2"
                   />
                   <circle
-                    class="emotion-14 emotion-15"
+                    class="emotion-18 emotion-19"
                     cx="12"
                     cy="12"
                     r="8"
                   />
                   <circle
-                    class="emotion-16 emotion-17"
+                    class="emotion-20 emotion-21"
                     cx="12"
                     cy="12"
                     r="5"
@@ -1134,8 +1130,1000 @@ exports[`SwitchButton > renders correctly medium 1`] = `
                 </g>
               </svg>
               <label
-                class="emotion-18 emotion-19 emotion-20"
+                class="emotion-22 emotion-23 emotion-24"
                 for="«rf»"
+              >
+                Right
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`SwitchButton > renders correctly with children changing 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.emotion-2 {
+  border: 1px solid #d9dadd;
+  border-radius: 0.25rem;
+  padding: 0.25rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  position: relative;
+}
+
+.emotion-2[data-size='small'] {
+  height: 2.5rem;
+}
+
+.emotion-2[data-size='medium'] {
+  height: 3rem;
+}
+
+.emotion-2 {
+  border: 1px solid #d9dadd;
+  border-radius: 0.25rem;
+  padding: 0.25rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  position: relative;
+}
+
+.emotion-2[data-size='small'] {
+  height: 2.5rem;
+}
+
+.emotion-2[data-size='medium'] {
+  height: 3rem;
+}
+
+.emotion-4 {
+  position: absolute;
+  height: calc(100% - 0.5rem);
+  border-radius: 0.25rem;
+  background: #8c40ef;
+  transform-origin: left center;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.emotion-4[data-sentiment='neutral'] {
+  background: #e9eaeb;
+}
+
+.emotion-4 {
+  position: absolute;
+  height: calc(100% - 0.5rem);
+  border-radius: 0.25rem;
+  background: #8c40ef;
+  transform-origin: left center;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.emotion-4[data-sentiment='neutral'] {
+  background: #e9eaeb;
+}
+
+.emotion-7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
+  position: relative;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
+  transition: border-color 200ms ease,box-shadow 200ms ease;
+  cursor: pointer;
+  background: #ffffff;
+  border: 1px solid #d9dadd;
+  color: #3f4250;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  white-space: nowrap;
+  background: transparent;
+  height: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-7[data-has-label='false']>:first-child {
+  margin-bottom: -0.25rem;
+}
+
+.emotion-7[data-has-default-cursor='true'] {
+  cursor: default;
+}
+
+.emotion-7[data-checked='true'] {
+  border: 1px solid #8c40ef;
+}
+
+.emotion-7[data-error='true'] {
+  border: 1px solid #b3144d;
+}
+
+.emotion-7[data-disabled='true'] {
+  border: 1px solid #e9eaeb;
+  color: #b5b7bd;
+  background: #f3f3f4;
+  cursor: not-allowed;
+}
+
+.emotion-7[data-image="illustration"] {
+  padding: 0rem;
+}
+
+.emotion-7[data-image="icon"] {
+  padding: 0rem;
+  padding-right: 1rem;
+}
+
+.emotion-7:hover:not([data-error='true']):not([data-disabled='true']),
+.emotion-7:active:not([data-error='true']):not([data-disabled='true']) {
+  border: 1px solid #8c40ef;
+}
+
+.emotion-7:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
+.emotion-7:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
+  box-shadow: 0px 4px 16px 4px #f6f3ffcc;
+}
+
+.emotion-7[data-has-label='true'] .emotion-10,
+.emotion-7[data-has-label='true'] .eqr7bqq0 {
+  width: 100%;
+}
+
+.emotion-7:hover,
+.emotion-7:active {
+  box-shadow: none;
+  border: none;
+}
+
+.emotion-7:hover:not([data-error='true'][data-disabled='true']),
+.emotion-7:active:not([data-error='true'][data-disabled='true']) {
+  border: none;
+}
+
+.emotion-7[data-checked='true'] {
+  border: none;
+}
+
+.emotion-7 label {
+  -webkit-transition: color 300ms;
+  transition: color 300ms;
+  color: #222638;
+}
+
+.emotion-7[data-checked='true'] label {
+  color: #ffffff;
+}
+
+.emotion-7:not([data-checked='true']) label:hover {
+  color: #641cb3;
+}
+
+.emotion-7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
+  position: relative;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
+  transition: border-color 200ms ease,box-shadow 200ms ease;
+  cursor: pointer;
+  background: #ffffff;
+  border: 1px solid #d9dadd;
+  color: #3f4250;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  white-space: nowrap;
+  background: transparent;
+  height: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-7[data-has-label='false']>:first-child {
+  margin-bottom: -0.25rem;
+}
+
+.emotion-7[data-has-default-cursor='true'] {
+  cursor: default;
+}
+
+.emotion-7[data-checked='true'] {
+  border: 1px solid #8c40ef;
+}
+
+.emotion-7[data-error='true'] {
+  border: 1px solid #b3144d;
+}
+
+.emotion-7[data-disabled='true'] {
+  border: 1px solid #e9eaeb;
+  color: #b5b7bd;
+  background: #f3f3f4;
+  cursor: not-allowed;
+}
+
+.emotion-7[data-image="illustration"] {
+  padding: 0rem;
+}
+
+.emotion-7[data-image="icon"] {
+  padding: 0rem;
+  padding-right: 1rem;
+}
+
+.emotion-7:hover:not([data-error='true']):not([data-disabled='true']),
+.emotion-7:active:not([data-error='true']):not([data-disabled='true']) {
+  border: 1px solid #8c40ef;
+}
+
+.emotion-7:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
+.emotion-7:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
+  box-shadow: 0px 4px 16px 4px #f6f3ffcc;
+}
+
+.emotion-7[data-has-label='true'] .emotion-10,
+.emotion-7[data-has-label='true'] .eqr7bqq0 {
+  width: 100%;
+}
+
+.emotion-7:hover,
+.emotion-7:active {
+  box-shadow: none;
+  border: none;
+}
+
+.emotion-7:hover:not([data-error='true'][data-disabled='true']),
+.emotion-7:active:not([data-error='true'][data-disabled='true']) {
+  border: none;
+}
+
+.emotion-7[data-checked='true'] {
+  border: none;
+}
+
+.emotion-7 label {
+  -webkit-transition: color 300ms;
+  transition: color 300ms;
+  color: #222638;
+}
+
+.emotion-7[data-checked='true'] label {
+  color: #ffffff;
+}
+
+.emotion-7:not([data-checked='true']) label:hover {
+  color: #641cb3;
+}
+
+.emotion-9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.emotion-9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.emotion-12 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  gap: 0.5rem;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+}
+
+.emotion-12[aria-disabled='false'],
+.emotion-12[aria-disabled='false']>label {
+  cursor: pointer;
+}
+
+.emotion-12:hover[aria-disabled='false'] .emotion-15+.emotion-17 {
+  fill: #8c40ef;
+}
+
+.emotion-12:hover[aria-disabled='false'] .emotion-15+.emotion-17 .emotion-19 {
+  fill: #e5dbfd;
+}
+
+.emotion-12:hover[aria-disabled='false'] .emotion-15[aria-invalid='true']+.emotion-17 {
+  fill: #b3144d;
+}
+
+.emotion-12:hover[aria-disabled='false'] .emotion-15[aria-invalid='true']+.emotion-17 .emotion-19 {
+  fill: #ffd3e3;
+}
+
+.emotion-12[aria-disabled='true'] {
+  cursor: not-allowed;
+  color: #b5b7bd;
+}
+
+.emotion-12[aria-disabled='true']>label,
+.emotion-12[aria-disabled='true'] .emotion-15 {
+  cursor: not-allowed;
+}
+
+.emotion-12[aria-disabled='true'] .emotion-17 {
+  fill: #e9eaeb;
+  cursor: not-allowed;
+}
+
+.emotion-12[aria-disabled='true'] .emotion-17 .emotion-19 {
+  fill: #f3f3f4;
+}
+
+.emotion-12[data-checked='true'] {
+  color: #641cb3;
+}
+
+.emotion-12[data-error='true'] {
+  color: #b3144d;
+}
+
+.emotion-12[aria-disabled='true'] {
+  color: #b5b7bd;
+}
+
+.emotion-12 input+svg {
+  display: none;
+}
+
+.emotion-12:hover[aria-disabled='false']:not([data-checked='true']) .emotion-15+.emotion-17 {
+  fill: #d9dadd;
+}
+
+.emotion-12:hover[aria-disabled='false']:not([data-checked='true']) .emotion-15+.emotion-17 .emotion-19 {
+  fill: #ffffff;
+}
+
+.emotion-12:hover[aria-disabled='false']:not([data-checked='true']) .emotion-15[aria-invalid='true']+.emotion-17 {
+  fill: #b3144d;
+}
+
+.emotion-12:hover[aria-disabled='false']:not([data-checked='true']) .emotion-15[aria-invalid='true']+.emotion-17 .emotion-19 {
+  fill: #ffffff;
+}
+
+.emotion-12:hover[aria-disabled='false'] .emotion-15+.emotion-17 {
+  fill: #8c40ef;
+}
+
+.emotion-12:hover[aria-disabled='false'] .emotion-15+.emotion-17 .emotion-19 {
+  fill: #ffffff;
+}
+
+.emotion-12:hover[aria-disabled='false'] .emotion-15[aria-invalid='true']+.emotion-17 {
+  fill: #b3144d;
+}
+
+.emotion-12:hover[aria-disabled='false'] .emotion-15[aria-invalid='true']+.emotion-17 .emotion-19 {
+  fill: #ffffff;
+}
+
+.emotion-12 .emotion-15[aria-disabled='false']:active+.emotion-17 {
+  background: none;
+  fill: #8c40ef;
+}
+
+.emotion-12 .emotion-15[aria-disabled='false']:active+.emotion-17 .emotion-19 {
+  fill: #ffffff;
+}
+
+.emotion-12 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  gap: 0.5rem;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+}
+
+.emotion-12[aria-disabled='false'],
+.emotion-12[aria-disabled='false']>label {
+  cursor: pointer;
+}
+
+.emotion-12:hover[aria-disabled='false'] .emotion-15+.emotion-17 {
+  fill: #8c40ef;
+}
+
+.emotion-12:hover[aria-disabled='false'] .emotion-15+.emotion-17 .emotion-19 {
+  fill: #e5dbfd;
+}
+
+.emotion-12:hover[aria-disabled='false'] .emotion-15[aria-invalid='true']+.emotion-17 {
+  fill: #b3144d;
+}
+
+.emotion-12:hover[aria-disabled='false'] .emotion-15[aria-invalid='true']+.emotion-17 .emotion-19 {
+  fill: #ffd3e3;
+}
+
+.emotion-12[aria-disabled='true'] {
+  cursor: not-allowed;
+  color: #b5b7bd;
+}
+
+.emotion-12[aria-disabled='true']>label,
+.emotion-12[aria-disabled='true'] .emotion-15 {
+  cursor: not-allowed;
+}
+
+.emotion-12[aria-disabled='true'] .emotion-17 {
+  fill: #e9eaeb;
+  cursor: not-allowed;
+}
+
+.emotion-12[aria-disabled='true'] .emotion-17 .emotion-19 {
+  fill: #f3f3f4;
+}
+
+.emotion-12[data-checked='true'] {
+  color: #641cb3;
+}
+
+.emotion-12[data-error='true'] {
+  color: #b3144d;
+}
+
+.emotion-12[aria-disabled='true'] {
+  color: #b5b7bd;
+}
+
+.emotion-12 input+svg {
+  display: none;
+}
+
+.emotion-12:hover[aria-disabled='false']:not([data-checked='true']) .emotion-15+.emotion-17 {
+  fill: #d9dadd;
+}
+
+.emotion-12:hover[aria-disabled='false']:not([data-checked='true']) .emotion-15+.emotion-17 .emotion-19 {
+  fill: #ffffff;
+}
+
+.emotion-12:hover[aria-disabled='false']:not([data-checked='true']) .emotion-15[aria-invalid='true']+.emotion-17 {
+  fill: #b3144d;
+}
+
+.emotion-12:hover[aria-disabled='false']:not([data-checked='true']) .emotion-15[aria-invalid='true']+.emotion-17 .emotion-19 {
+  fill: #ffffff;
+}
+
+.emotion-12:hover[aria-disabled='false'] .emotion-15+.emotion-17 {
+  fill: #8c40ef;
+}
+
+.emotion-12:hover[aria-disabled='false'] .emotion-15+.emotion-17 .emotion-19 {
+  fill: #ffffff;
+}
+
+.emotion-12:hover[aria-disabled='false'] .emotion-15[aria-invalid='true']+.emotion-17 {
+  fill: #b3144d;
+}
+
+.emotion-12:hover[aria-disabled='false'] .emotion-15[aria-invalid='true']+.emotion-17 .emotion-19 {
+  fill: #ffffff;
+}
+
+.emotion-12 .emotion-15[aria-disabled='false']:active+.emotion-17 {
+  background: none;
+  fill: #8c40ef;
+}
+
+.emotion-12 .emotion-15[aria-disabled='false']:active+.emotion-17 .emotion-19 {
+  fill: #ffffff;
+}
+
+.emotion-14 {
+  cursor: pointer;
+  position: absolute;
+  height: 1.5rem;
+  width: 1.5rem;
+  opacity: 0;
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.emotion-14+.emotion-17 .emotion-21 {
+  transform-origin: center;
+  -webkit-transition: 200ms -webkit-transform ease-in-out;
+  transition: 200ms transform ease-in-out;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+}
+
+.emotion-14:checked+svg .emotion-21 {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.emotion-14:checked[aria-disabled='false'][aria-invalid='false']+.emotion-17 {
+  fill: #8c40ef;
+}
+
+.emotion-14:checked[aria-disabled='true'][aria-invalid='false']+.emotion-17 {
+  fill: #d8c5fc;
+}
+
+.emotion-14[aria-invalid='true']:not([aria-disabled='true'])+.emotion-17 {
+  fill: #e51963;
+}
+
+.emotion-14[aria-disabled='false']:active+.emotion-17 {
+  background-color: #5e127e40;
+  fill: #8c40ef;
+}
+
+.emotion-14[aria-disabled='false']:active+.emotion-17 .emotion-19 {
+  fill: #f1eefc;
+}
+
+.emotion-14[aria-disabled='false']:focus-visible+.emotion-17 {
+  outline: -webkit-focus-ring-color auto 1px;
+}
+
+.emotion-14[aria-invalid='true']:focus+.emotion-17 {
+  background-color: #f91b6c40;
+  fill: #e51963;
+}
+
+.emotion-14[aria-invalid='true']:focus+.emotion-17 .emotion-19 {
+  fill: #ffebf2;
+}
+
+.emotion-14 {
+  cursor: pointer;
+  position: absolute;
+  height: 1.5rem;
+  width: 1.5rem;
+  opacity: 0;
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.emotion-14+.emotion-17 .emotion-21 {
+  transform-origin: center;
+  -webkit-transition: 200ms -webkit-transform ease-in-out;
+  transition: 200ms transform ease-in-out;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+}
+
+.emotion-14:checked+svg .emotion-21 {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.emotion-14:checked[aria-disabled='false'][aria-invalid='false']+.emotion-17 {
+  fill: #8c40ef;
+}
+
+.emotion-14:checked[aria-disabled='true'][aria-invalid='false']+.emotion-17 {
+  fill: #d8c5fc;
+}
+
+.emotion-14[aria-invalid='true']:not([aria-disabled='true'])+.emotion-17 {
+  fill: #e51963;
+}
+
+.emotion-14[aria-disabled='false']:active+.emotion-17 {
+  background-color: #5e127e40;
+  fill: #8c40ef;
+}
+
+.emotion-14[aria-disabled='false']:active+.emotion-17 .emotion-19 {
+  fill: #f1eefc;
+}
+
+.emotion-14[aria-disabled='false']:focus-visible+.emotion-17 {
+  outline: -webkit-focus-ring-color auto 1px;
+}
+
+.emotion-14[aria-invalid='true']:focus+.emotion-17 {
+  background-color: #f91b6c40;
+  fill: #e51963;
+}
+
+.emotion-14[aria-invalid='true']:focus+.emotion-17 .emotion-19 {
+  fill: #ffebf2;
+}
+
+.emotion-16 {
+  height: 1.5rem;
+  width: 1.5rem;
+  min-width: 1.5rem;
+  min-height: 1.5rem;
+  border-radius: 100%;
+  fill: #d9dadd;
+}
+
+.emotion-16 .emotion-19 {
+  fill: #ffffff;
+}
+
+.emotion-16 {
+  height: 1.5rem;
+  width: 1.5rem;
+  min-width: 1.5rem;
+  min-height: 1.5rem;
+  border-radius: 100%;
+  fill: #d9dadd;
+}
+
+.emotion-16 .emotion-19 {
+  fill: #ffffff;
+}
+
+.emotion-23 {
+  font-size: 1rem;
+  font-family: Inter,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  cursor: pointer;
+}
+
+.emotion-23 {
+  font-size: 1rem;
+  font-family: Inter,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  cursor: pointer;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+    >
+      <div
+        class="emotion-2 emotion-3"
+        data-size="small"
+      >
+        <div
+          class="emotion-4 emotion-5"
+          data-sentiment="primary"
+          style="width: 500px; left: 0px;"
+        />
+        <div
+          class="emotion-6 emotion-7 emotion-8"
+          data-checked="false"
+          data-disabled="false"
+          data-has-default-cursor="false"
+          data-has-label="true"
+          data-image="none"
+          data-testid="switch-button-left"
+          data-type="radio"
+          role="button"
+          tabindex="0"
+        >
+          <div
+            class="emotion-9 emotion-10"
+          >
+            <div
+              aria-disabled="false"
+              class="emotion-11 emotion-12 emotion-13"
+              data-checked="false"
+            >
+              <input
+                aria-disabled="false"
+                aria-invalid="false"
+                class="emotion-14 emotion-15"
+                id="«rt»"
+                name="test"
+                tabindex="-1"
+                type="radio"
+                value="left"
+              />
+              <svg
+                class="emotion-16 emotion-17"
+                viewBox="0 0 24 24"
+              >
+                <g>
+                  <circle
+                    cx="12"
+                    cy="12"
+                    r="10"
+                    stroke-width="2"
+                  />
+                  <circle
+                    class="emotion-18 emotion-19"
+                    cx="12"
+                    cy="12"
+                    r="8"
+                  />
+                  <circle
+                    class="emotion-20 emotion-21"
+                    cx="12"
+                    cy="12"
+                    r="5"
+                  />
+                </g>
+              </svg>
+              <label
+                class="emotion-22 emotion-23 emotion-24"
+                for="«rt»"
+              >
+                Left
+              </label>
+            </div>
+          </div>
+        </div>
+        <div
+          class="emotion-6 emotion-7 emotion-8"
+          data-checked="true"
+          data-disabled="false"
+          data-has-default-cursor="false"
+          data-has-label="true"
+          data-image="none"
+          data-testid="switch-button-right"
+          data-type="radio"
+          role="button"
+          tabindex="0"
+        >
+          <div
+            class="emotion-9 emotion-10"
+          >
+            <div
+              aria-disabled="false"
+              class="emotion-11 emotion-12 emotion-13"
+              data-checked="true"
+            >
+              <input
+                aria-disabled="false"
+                aria-invalid="false"
+                checked=""
+                class="emotion-14 emotion-15"
+                id="«r11»"
+                name="test"
+                tabindex="-1"
+                type="radio"
+                value="right"
+              />
+              <svg
+                class="emotion-16 emotion-17"
+                viewBox="0 0 24 24"
+              >
+                <g>
+                  <circle
+                    cx="12"
+                    cy="12"
+                    r="10"
+                    stroke-width="2"
+                  />
+                  <circle
+                    class="emotion-18 emotion-19"
+                    cx="12"
+                    cy="12"
+                    r="8"
+                  />
+                  <circle
+                    class="emotion-20 emotion-21"
+                    cx="12"
+                    cy="12"
+                    r="5"
+                  />
+                </g>
+              </svg>
+              <label
+                class="emotion-22 emotion-23 emotion-24"
+                for="«r11»"
               >
                 Right
               </label>
@@ -1151,6 +2139,28 @@ exports[`SwitchButton > renders correctly medium 1`] = `
 exports[`SwitchButton > renders correctly with right value 1`] = `
 <DocumentFragment>
   .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.emotion-2 {
   border: 1px solid #d9dadd;
   border-radius: 0.25rem;
   padding: 0.25rem;
@@ -1162,23 +2172,40 @@ exports[`SwitchButton > renders correctly with right value 1`] = `
   position: relative;
 }
 
-.emotion-0[data-size='small']>.emotion-2 {
+.emotion-2[data-size='small'] {
   height: 2.5rem;
 }
 
-.emotion-0[data-size='medium']>.emotion-2 {
+.emotion-2[data-size='medium'] {
   height: 3rem;
 }
 
-.emotion-3 {
+.emotion-4 {
+  position: absolute;
+  height: calc(100% - 0.5rem);
+  border-radius: 0.25rem;
+  background: #8c40ef;
+  transform-origin: left center;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.emotion-4[data-sentiment='neutral'] {
+  background: #e9eaeb;
+}
+
+.emotion-7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   -webkit-align-items: start;
   -webkit-box-align: start;
   -ms-flex-align: start;
@@ -1187,13 +2214,10 @@ exports[`SwitchButton > renders correctly with right value 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
   position: relative;
   padding: 1rem;
   border-radius: 0.25rem;
@@ -1218,87 +2242,98 @@ exports[`SwitchButton > renders correctly with right value 1`] = `
   transition: all 200ms ease-in-out;
   white-space: nowrap;
   background: transparent;
+  height: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
-.emotion-3[data-has-label='false']>:first-child {
+.emotion-7[data-has-label='false']>:first-child {
   margin-bottom: -0.25rem;
 }
 
-.emotion-3[data-has-default-cursor='true'] {
+.emotion-7[data-has-default-cursor='true'] {
   cursor: default;
 }
 
-.emotion-3[data-checked='true'] {
+.emotion-7[data-checked='true'] {
   border: 1px solid #8c40ef;
 }
 
-.emotion-3[data-error='true'] {
+.emotion-7[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-3[data-disabled='true'] {
+.emotion-7[data-disabled='true'] {
   border: 1px solid #e9eaeb;
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.emotion-3[data-image="illustration"] {
+.emotion-7[data-image="illustration"] {
   padding: 0rem;
 }
 
-.emotion-3[data-image="icon"] {
+.emotion-7[data-image="icon"] {
   padding: 0rem;
   padding-right: 1rem;
 }
 
-.emotion-3:hover:not([data-error='true']):not([data-disabled='true']),
-.emotion-3:active:not([data-error='true']):not([data-disabled='true']) {
+.emotion-7:hover:not([data-error='true']):not([data-disabled='true']),
+.emotion-7:active:not([data-error='true']):not([data-disabled='true']) {
   border: 1px solid #8c40ef;
 }
 
-.emotion-3:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.emotion-3:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
+.emotion-7:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
+.emotion-7:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
 
-.emotion-3[data-has-label='true'] .emotion-6,
-.emotion-3[data-has-label='true'] .eqr7bqq1 {
+.emotion-7[data-has-label='true'] .emotion-10,
+.emotion-7[data-has-label='true'] .eqr7bqq0 {
   width: 100%;
 }
 
-.emotion-3:hover,
-.emotion-3:active {
+.emotion-7:hover,
+.emotion-7:active {
   box-shadow: none;
   border: none;
 }
 
-.emotion-3:hover:not([data-error='true'][data-disabled='true']),
-.emotion-3:active:not([data-error='true'][data-disabled='true']) {
+.emotion-7:hover:not([data-error='true'][data-disabled='true']),
+.emotion-7:active:not([data-error='true'][data-disabled='true']) {
   border: none;
 }
 
-.emotion-3[data-checked='true'] {
+.emotion-7[data-checked='true'] {
   border: none;
 }
 
-.emotion-3[data-checked='true'] label {
+.emotion-7 label {
+  -webkit-transition: color 300ms;
+  transition: color 300ms;
+  color: #222638;
+}
+
+.emotion-7[data-checked='true'] label {
   color: #ffffff;
 }
 
-.emotion-3:not([data-checked='true']) label:hover {
+.emotion-7:not([data-checked='true']) label:hover {
   color: #641cb3;
 }
 
-.emotion-5 {
+.emotion-9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -1307,13 +2342,13 @@ exports[`SwitchButton > renders correctly with right value 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
-.emotion-8 {
+.emotion-12 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1337,104 +2372,104 @@ exports[`SwitchButton > renders correctly with right value 1`] = `
   align-items: start;
 }
 
-.emotion-8[aria-disabled='false'],
-.emotion-8[aria-disabled='false']>label {
+.emotion-12[aria-disabled='false'],
+.emotion-12[aria-disabled='false']>label {
   cursor: pointer;
 }
 
-.emotion-8:hover[aria-disabled='false'] .emotion-11+.emotion-13 {
+.emotion-12:hover[aria-disabled='false'] .emotion-15+.emotion-17 {
   fill: #8c40ef;
 }
 
-.emotion-8:hover[aria-disabled='false'] .emotion-11+.emotion-13 .emotion-15 {
+.emotion-12:hover[aria-disabled='false'] .emotion-15+.emotion-17 .emotion-19 {
   fill: #e5dbfd;
 }
 
-.emotion-8:hover[aria-disabled='false'] .emotion-11[aria-invalid='true']+.emotion-13 {
+.emotion-12:hover[aria-disabled='false'] .emotion-15[aria-invalid='true']+.emotion-17 {
   fill: #b3144d;
 }
 
-.emotion-8:hover[aria-disabled='false'] .emotion-11[aria-invalid='true']+.emotion-13 .emotion-15 {
+.emotion-12:hover[aria-disabled='false'] .emotion-15[aria-invalid='true']+.emotion-17 .emotion-19 {
   fill: #ffd3e3;
 }
 
-.emotion-8[aria-disabled='true'] {
+.emotion-12[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.emotion-8[aria-disabled='true']>label,
-.emotion-8[aria-disabled='true'] .emotion-11 {
+.emotion-12[aria-disabled='true']>label,
+.emotion-12[aria-disabled='true'] .emotion-15 {
   cursor: not-allowed;
 }
 
-.emotion-8[aria-disabled='true'] .emotion-13 {
+.emotion-12[aria-disabled='true'] .emotion-17 {
   fill: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-8[aria-disabled='true'] .emotion-13 .emotion-15 {
+.emotion-12[aria-disabled='true'] .emotion-17 .emotion-19 {
   fill: #f3f3f4;
 }
 
-.emotion-8[data-checked='true'] {
+.emotion-12[data-checked='true'] {
   color: #641cb3;
 }
 
-.emotion-8[data-error='true'] {
+.emotion-12[data-error='true'] {
   color: #b3144d;
 }
 
-.emotion-8[aria-disabled='true'] {
+.emotion-12[aria-disabled='true'] {
   color: #b5b7bd;
 }
 
-.emotion-8 input+svg {
+.emotion-12 input+svg {
   display: none;
 }
 
-.emotion-8:hover[aria-disabled='false']:not([data-checked='true']) .emotion-11+.emotion-13 {
+.emotion-12:hover[aria-disabled='false']:not([data-checked='true']) .emotion-15+.emotion-17 {
   fill: #d9dadd;
 }
 
-.emotion-8:hover[aria-disabled='false']:not([data-checked='true']) .emotion-11+.emotion-13 .emotion-15 {
+.emotion-12:hover[aria-disabled='false']:not([data-checked='true']) .emotion-15+.emotion-17 .emotion-19 {
   fill: #ffffff;
 }
 
-.emotion-8:hover[aria-disabled='false']:not([data-checked='true']) .emotion-11[aria-invalid='true']+.emotion-13 {
+.emotion-12:hover[aria-disabled='false']:not([data-checked='true']) .emotion-15[aria-invalid='true']+.emotion-17 {
   fill: #b3144d;
 }
 
-.emotion-8:hover[aria-disabled='false']:not([data-checked='true']) .emotion-11[aria-invalid='true']+.emotion-13 .emotion-15 {
+.emotion-12:hover[aria-disabled='false']:not([data-checked='true']) .emotion-15[aria-invalid='true']+.emotion-17 .emotion-19 {
   fill: #ffffff;
 }
 
-.emotion-8:hover[aria-disabled='false'] .emotion-11+.emotion-13 {
+.emotion-12:hover[aria-disabled='false'] .emotion-15+.emotion-17 {
   fill: #8c40ef;
 }
 
-.emotion-8:hover[aria-disabled='false'] .emotion-11+.emotion-13 .emotion-15 {
+.emotion-12:hover[aria-disabled='false'] .emotion-15+.emotion-17 .emotion-19 {
   fill: #ffffff;
 }
 
-.emotion-8:hover[aria-disabled='false'] .emotion-11[aria-invalid='true']+.emotion-13 {
+.emotion-12:hover[aria-disabled='false'] .emotion-15[aria-invalid='true']+.emotion-17 {
   fill: #b3144d;
 }
 
-.emotion-8:hover[aria-disabled='false'] .emotion-11[aria-invalid='true']+.emotion-13 .emotion-15 {
+.emotion-12:hover[aria-disabled='false'] .emotion-15[aria-invalid='true']+.emotion-17 .emotion-19 {
   fill: #ffffff;
 }
 
-.emotion-8 .emotion-11[aria-disabled='false']:active+.emotion-13 {
+.emotion-12 .emotion-15[aria-disabled='false']:active+.emotion-17 {
   background: none;
   fill: #8c40ef;
 }
 
-.emotion-8 .emotion-11[aria-disabled='false']:active+.emotion-13 .emotion-15 {
+.emotion-12 .emotion-15[aria-disabled='false']:active+.emotion-17 .emotion-19 {
   fill: #ffffff;
 }
 
-.emotion-10 {
+.emotion-14 {
   cursor: pointer;
   position: absolute;
   height: 1.5rem;
@@ -1444,7 +2479,7 @@ exports[`SwitchButton > renders correctly with right value 1`] = `
   border-width: 0;
 }
 
-.emotion-10+.emotion-13 .emotion-17 {
+.emotion-14+.emotion-17 .emotion-21 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -1454,48 +2489,48 @@ exports[`SwitchButton > renders correctly with right value 1`] = `
   transform: scale(0);
 }
 
-.emotion-10:checked+svg .emotion-17 {
+.emotion-14:checked+svg .emotion-21 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.emotion-10:checked[aria-disabled='false'][aria-invalid='false']+.emotion-13 {
+.emotion-14:checked[aria-disabled='false'][aria-invalid='false']+.emotion-17 {
   fill: #8c40ef;
 }
 
-.emotion-10:checked[aria-disabled='true'][aria-invalid='false']+.emotion-13 {
+.emotion-14:checked[aria-disabled='true'][aria-invalid='false']+.emotion-17 {
   fill: #d8c5fc;
 }
 
-.emotion-10[aria-invalid='true']:not([aria-disabled='true'])+.emotion-13 {
+.emotion-14[aria-invalid='true']:not([aria-disabled='true'])+.emotion-17 {
   fill: #e51963;
 }
 
-.emotion-10[aria-disabled='false']:active+.emotion-13 {
+.emotion-14[aria-disabled='false']:active+.emotion-17 {
   background-color: #5e127e40;
   fill: #8c40ef;
 }
 
-.emotion-10[aria-disabled='false']:active+.emotion-13 .emotion-15 {
+.emotion-14[aria-disabled='false']:active+.emotion-17 .emotion-19 {
   fill: #f1eefc;
 }
 
-.emotion-10[aria-disabled='false']:focus-visible+.emotion-13 {
+.emotion-14[aria-disabled='false']:focus-visible+.emotion-17 {
   outline: -webkit-focus-ring-color auto 1px;
 }
 
-.emotion-10[aria-invalid='true']:focus+.emotion-13 {
+.emotion-14[aria-invalid='true']:focus+.emotion-17 {
   background-color: #f91b6c40;
   fill: #e51963;
 }
 
-.emotion-10[aria-invalid='true']:focus+.emotion-13 .emotion-15 {
+.emotion-14[aria-invalid='true']:focus+.emotion-17 .emotion-19 {
   fill: #ffebf2;
 }
 
-.emotion-12 {
+.emotion-16 {
   height: 1.5rem;
   width: 1.5rem;
   min-width: 1.5rem;
@@ -1504,13 +2539,13 @@ exports[`SwitchButton > renders correctly with right value 1`] = `
   fill: #d9dadd;
 }
 
-.emotion-12 .emotion-15 {
+.emotion-16 .emotion-19 {
   fill: #ffffff;
 }
 
-.emotion-19 {
+.emotion-23 {
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -1527,35 +2562,41 @@ exports[`SwitchButton > renders correctly with right value 1`] = `
     data-testid="testing"
   >
     <div
-      style="display: inline-flex;"
+      class="emotion-0 emotion-1"
     >
       <div
-        class="emotion-0 emotion-1"
+        class="emotion-2 emotion-3"
         data-size="small"
       >
         <div
-          class="emotion-2 emotion-3 emotion-4"
+          class="emotion-4 emotion-5"
+          data-sentiment="primary"
+          style="width: 500px; left: 0px;"
+        />
+        <div
+          class="emotion-6 emotion-7 emotion-8"
           data-checked="false"
           data-disabled="false"
           data-has-default-cursor="false"
           data-has-label="true"
           data-image="none"
+          data-testid="switch-button-left"
           data-type="radio"
           role="button"
           tabindex="0"
         >
           <div
-            class="emotion-5 emotion-6"
+            class="emotion-9 emotion-10"
           >
             <div
               aria-disabled="false"
-              class="emotion-7 emotion-8 emotion-9"
+              class="emotion-11 emotion-12 emotion-13"
               data-checked="false"
             >
               <input
                 aria-disabled="false"
                 aria-invalid="false"
-                class="emotion-10 emotion-11"
+                class="emotion-14 emotion-15"
                 id="«rk»"
                 name="test"
                 tabindex="-1"
@@ -1563,7 +2604,7 @@ exports[`SwitchButton > renders correctly with right value 1`] = `
                 value="left"
               />
               <svg
-                class="emotion-12 emotion-13"
+                class="emotion-16 emotion-17"
                 viewBox="0 0 24 24"
               >
                 <g>
@@ -1574,13 +2615,13 @@ exports[`SwitchButton > renders correctly with right value 1`] = `
                     stroke-width="2"
                   />
                   <circle
-                    class="emotion-14 emotion-15"
+                    class="emotion-18 emotion-19"
                     cx="12"
                     cy="12"
                     r="8"
                   />
                   <circle
-                    class="emotion-16 emotion-17"
+                    class="emotion-20 emotion-21"
                     cx="12"
                     cy="12"
                     r="5"
@@ -1588,7 +2629,7 @@ exports[`SwitchButton > renders correctly with right value 1`] = `
                 </g>
               </svg>
               <label
-                class="emotion-18 emotion-19 emotion-20"
+                class="emotion-22 emotion-23 emotion-24"
                 for="«rk»"
               >
                 Left
@@ -1597,29 +2638,30 @@ exports[`SwitchButton > renders correctly with right value 1`] = `
           </div>
         </div>
         <div
-          class="emotion-2 emotion-3 emotion-4"
+          class="emotion-6 emotion-7 emotion-8"
           data-checked="true"
           data-disabled="false"
           data-has-default-cursor="false"
           data-has-label="true"
           data-image="none"
+          data-testid="switch-button-right"
           data-type="radio"
           role="button"
           tabindex="0"
         >
           <div
-            class="emotion-5 emotion-6"
+            class="emotion-9 emotion-10"
           >
             <div
               aria-disabled="false"
-              class="emotion-7 emotion-8 emotion-9"
+              class="emotion-11 emotion-12 emotion-13"
               data-checked="true"
             >
               <input
                 aria-disabled="false"
                 aria-invalid="false"
                 checked=""
-                class="emotion-10 emotion-11"
+                class="emotion-14 emotion-15"
                 id="«ro»"
                 name="test"
                 tabindex="-1"
@@ -1627,7 +2669,7 @@ exports[`SwitchButton > renders correctly with right value 1`] = `
                 value="right"
               />
               <svg
-                class="emotion-12 emotion-13"
+                class="emotion-16 emotion-17"
                 viewBox="0 0 24 24"
               >
                 <g>
@@ -1638,13 +2680,13 @@ exports[`SwitchButton > renders correctly with right value 1`] = `
                     stroke-width="2"
                   />
                   <circle
-                    class="emotion-14 emotion-15"
+                    class="emotion-18 emotion-19"
                     cx="12"
                     cy="12"
                     r="8"
                   />
                   <circle
-                    class="emotion-16 emotion-17"
+                    class="emotion-20 emotion-21"
                     cx="12"
                     cy="12"
                     r="5"
@@ -1652,11 +2694,3105 @@ exports[`SwitchButton > renders correctly with right value 1`] = `
                 </g>
               </svg>
               <label
-                class="emotion-18 emotion-19 emotion-20"
+                class="emotion-22 emotion-23 emotion-24"
                 for="«ro»"
               >
                 Right
               </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`SwitchButton > renders neutral 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.emotion-2 {
+  border: 1px solid #d9dadd;
+  border-radius: 0.25rem;
+  padding: 0.25rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  position: relative;
+}
+
+.emotion-2[data-size='small'] {
+  height: 2.5rem;
+}
+
+.emotion-2[data-size='medium'] {
+  height: 3rem;
+}
+
+.emotion-2 {
+  border: 1px solid #d9dadd;
+  border-radius: 0.25rem;
+  padding: 0.25rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  position: relative;
+}
+
+.emotion-2[data-size='small'] {
+  height: 2.5rem;
+}
+
+.emotion-2[data-size='medium'] {
+  height: 3rem;
+}
+
+.emotion-4 {
+  position: absolute;
+  height: calc(100% - 0.5rem);
+  border-radius: 0.25rem;
+  background: #8c40ef;
+  transform-origin: left center;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.emotion-4[data-sentiment='neutral'] {
+  background: #e9eaeb;
+}
+
+.emotion-4 {
+  position: absolute;
+  height: calc(100% - 0.5rem);
+  border-radius: 0.25rem;
+  background: #8c40ef;
+  transform-origin: left center;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.emotion-4[data-sentiment='neutral'] {
+  background: #e9eaeb;
+}
+
+.emotion-7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
+  position: relative;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
+  transition: border-color 200ms ease,box-shadow 200ms ease;
+  cursor: pointer;
+  background: #ffffff;
+  border: 1px solid #d9dadd;
+  color: #3f4250;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  white-space: nowrap;
+  background: transparent;
+  height: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-7[data-has-label='false']>:first-child {
+  margin-bottom: -0.25rem;
+}
+
+.emotion-7[data-has-default-cursor='true'] {
+  cursor: default;
+}
+
+.emotion-7[data-checked='true'] {
+  border: 1px solid #8c40ef;
+}
+
+.emotion-7[data-error='true'] {
+  border: 1px solid #b3144d;
+}
+
+.emotion-7[data-disabled='true'] {
+  border: 1px solid #e9eaeb;
+  color: #b5b7bd;
+  background: #f3f3f4;
+  cursor: not-allowed;
+}
+
+.emotion-7[data-image="illustration"] {
+  padding: 0rem;
+}
+
+.emotion-7[data-image="icon"] {
+  padding: 0rem;
+  padding-right: 1rem;
+}
+
+.emotion-7:hover:not([data-error='true']):not([data-disabled='true']),
+.emotion-7:active:not([data-error='true']):not([data-disabled='true']) {
+  border: 1px solid #8c40ef;
+}
+
+.emotion-7:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
+.emotion-7:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
+  box-shadow: 0px 4px 16px 4px #f6f3ffcc;
+}
+
+.emotion-7[data-has-label='true'] .emotion-10,
+.emotion-7[data-has-label='true'] .eqr7bqq0 {
+  width: 100%;
+}
+
+.emotion-7:hover,
+.emotion-7:active {
+  box-shadow: none;
+  border: none;
+}
+
+.emotion-7:hover:not([data-error='true'][data-disabled='true']),
+.emotion-7:active:not([data-error='true'][data-disabled='true']) {
+  border: none;
+}
+
+.emotion-7[data-checked='true'] {
+  border: none;
+}
+
+.emotion-7 label {
+  -webkit-transition: color 300ms;
+  transition: color 300ms;
+  color: #222638;
+}
+
+.emotion-7[data-checked='true'] label {
+  color: #222638;
+}
+
+.emotion-7:not([data-checked='true']) label:hover {
+  color: #222638;
+}
+
+.emotion-9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.emotion-9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.emotion-12 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  gap: 0.5rem;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+}
+
+.emotion-12[aria-disabled='false'],
+.emotion-12[aria-disabled='false']>label {
+  cursor: pointer;
+}
+
+.emotion-12:hover[aria-disabled='false'] .emotion-15+.emotion-17 {
+  fill: #8c40ef;
+}
+
+.emotion-12:hover[aria-disabled='false'] .emotion-15+.emotion-17 .emotion-19 {
+  fill: #e5dbfd;
+}
+
+.emotion-12:hover[aria-disabled='false'] .emotion-15[aria-invalid='true']+.emotion-17 {
+  fill: #b3144d;
+}
+
+.emotion-12:hover[aria-disabled='false'] .emotion-15[aria-invalid='true']+.emotion-17 .emotion-19 {
+  fill: #ffd3e3;
+}
+
+.emotion-12[aria-disabled='true'] {
+  cursor: not-allowed;
+  color: #b5b7bd;
+}
+
+.emotion-12[aria-disabled='true']>label,
+.emotion-12[aria-disabled='true'] .emotion-15 {
+  cursor: not-allowed;
+}
+
+.emotion-12[aria-disabled='true'] .emotion-17 {
+  fill: #e9eaeb;
+  cursor: not-allowed;
+}
+
+.emotion-12[aria-disabled='true'] .emotion-17 .emotion-19 {
+  fill: #f3f3f4;
+}
+
+.emotion-12[data-checked='true'] {
+  color: #641cb3;
+}
+
+.emotion-12[data-error='true'] {
+  color: #b3144d;
+}
+
+.emotion-12[aria-disabled='true'] {
+  color: #b5b7bd;
+}
+
+.emotion-12 input+svg {
+  display: none;
+}
+
+.emotion-12:hover[aria-disabled='false']:not([data-checked='true']) .emotion-15+.emotion-17 {
+  fill: #d9dadd;
+}
+
+.emotion-12:hover[aria-disabled='false']:not([data-checked='true']) .emotion-15+.emotion-17 .emotion-19 {
+  fill: #ffffff;
+}
+
+.emotion-12:hover[aria-disabled='false']:not([data-checked='true']) .emotion-15[aria-invalid='true']+.emotion-17 {
+  fill: #b3144d;
+}
+
+.emotion-12:hover[aria-disabled='false']:not([data-checked='true']) .emotion-15[aria-invalid='true']+.emotion-17 .emotion-19 {
+  fill: #ffffff;
+}
+
+.emotion-12:hover[aria-disabled='false'] .emotion-15+.emotion-17 {
+  fill: #8c40ef;
+}
+
+.emotion-12:hover[aria-disabled='false'] .emotion-15+.emotion-17 .emotion-19 {
+  fill: #ffffff;
+}
+
+.emotion-12:hover[aria-disabled='false'] .emotion-15[aria-invalid='true']+.emotion-17 {
+  fill: #b3144d;
+}
+
+.emotion-12:hover[aria-disabled='false'] .emotion-15[aria-invalid='true']+.emotion-17 .emotion-19 {
+  fill: #ffffff;
+}
+
+.emotion-12 .emotion-15[aria-disabled='false']:active+.emotion-17 {
+  background: none;
+  fill: #8c40ef;
+}
+
+.emotion-12 .emotion-15[aria-disabled='false']:active+.emotion-17 .emotion-19 {
+  fill: #ffffff;
+}
+
+.emotion-12 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  gap: 0.5rem;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+}
+
+.emotion-12[aria-disabled='false'],
+.emotion-12[aria-disabled='false']>label {
+  cursor: pointer;
+}
+
+.emotion-12:hover[aria-disabled='false'] .emotion-15+.emotion-17 {
+  fill: #8c40ef;
+}
+
+.emotion-12:hover[aria-disabled='false'] .emotion-15+.emotion-17 .emotion-19 {
+  fill: #e5dbfd;
+}
+
+.emotion-12:hover[aria-disabled='false'] .emotion-15[aria-invalid='true']+.emotion-17 {
+  fill: #b3144d;
+}
+
+.emotion-12:hover[aria-disabled='false'] .emotion-15[aria-invalid='true']+.emotion-17 .emotion-19 {
+  fill: #ffd3e3;
+}
+
+.emotion-12[aria-disabled='true'] {
+  cursor: not-allowed;
+  color: #b5b7bd;
+}
+
+.emotion-12[aria-disabled='true']>label,
+.emotion-12[aria-disabled='true'] .emotion-15 {
+  cursor: not-allowed;
+}
+
+.emotion-12[aria-disabled='true'] .emotion-17 {
+  fill: #e9eaeb;
+  cursor: not-allowed;
+}
+
+.emotion-12[aria-disabled='true'] .emotion-17 .emotion-19 {
+  fill: #f3f3f4;
+}
+
+.emotion-12[data-checked='true'] {
+  color: #641cb3;
+}
+
+.emotion-12[data-error='true'] {
+  color: #b3144d;
+}
+
+.emotion-12[aria-disabled='true'] {
+  color: #b5b7bd;
+}
+
+.emotion-12 input+svg {
+  display: none;
+}
+
+.emotion-12:hover[aria-disabled='false']:not([data-checked='true']) .emotion-15+.emotion-17 {
+  fill: #d9dadd;
+}
+
+.emotion-12:hover[aria-disabled='false']:not([data-checked='true']) .emotion-15+.emotion-17 .emotion-19 {
+  fill: #ffffff;
+}
+
+.emotion-12:hover[aria-disabled='false']:not([data-checked='true']) .emotion-15[aria-invalid='true']+.emotion-17 {
+  fill: #b3144d;
+}
+
+.emotion-12:hover[aria-disabled='false']:not([data-checked='true']) .emotion-15[aria-invalid='true']+.emotion-17 .emotion-19 {
+  fill: #ffffff;
+}
+
+.emotion-12:hover[aria-disabled='false'] .emotion-15+.emotion-17 {
+  fill: #8c40ef;
+}
+
+.emotion-12:hover[aria-disabled='false'] .emotion-15+.emotion-17 .emotion-19 {
+  fill: #ffffff;
+}
+
+.emotion-12:hover[aria-disabled='false'] .emotion-15[aria-invalid='true']+.emotion-17 {
+  fill: #b3144d;
+}
+
+.emotion-12:hover[aria-disabled='false'] .emotion-15[aria-invalid='true']+.emotion-17 .emotion-19 {
+  fill: #ffffff;
+}
+
+.emotion-12 .emotion-15[aria-disabled='false']:active+.emotion-17 {
+  background: none;
+  fill: #8c40ef;
+}
+
+.emotion-12 .emotion-15[aria-disabled='false']:active+.emotion-17 .emotion-19 {
+  fill: #ffffff;
+}
+
+.emotion-14 {
+  cursor: pointer;
+  position: absolute;
+  height: 1.5rem;
+  width: 1.5rem;
+  opacity: 0;
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.emotion-14+.emotion-17 .emotion-21 {
+  transform-origin: center;
+  -webkit-transition: 200ms -webkit-transform ease-in-out;
+  transition: 200ms transform ease-in-out;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+}
+
+.emotion-14:checked+svg .emotion-21 {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.emotion-14:checked[aria-disabled='false'][aria-invalid='false']+.emotion-17 {
+  fill: #8c40ef;
+}
+
+.emotion-14:checked[aria-disabled='true'][aria-invalid='false']+.emotion-17 {
+  fill: #d8c5fc;
+}
+
+.emotion-14[aria-invalid='true']:not([aria-disabled='true'])+.emotion-17 {
+  fill: #e51963;
+}
+
+.emotion-14[aria-disabled='false']:active+.emotion-17 {
+  background-color: #5e127e40;
+  fill: #8c40ef;
+}
+
+.emotion-14[aria-disabled='false']:active+.emotion-17 .emotion-19 {
+  fill: #f1eefc;
+}
+
+.emotion-14[aria-disabled='false']:focus-visible+.emotion-17 {
+  outline: -webkit-focus-ring-color auto 1px;
+}
+
+.emotion-14[aria-invalid='true']:focus+.emotion-17 {
+  background-color: #f91b6c40;
+  fill: #e51963;
+}
+
+.emotion-14[aria-invalid='true']:focus+.emotion-17 .emotion-19 {
+  fill: #ffebf2;
+}
+
+.emotion-14 {
+  cursor: pointer;
+  position: absolute;
+  height: 1.5rem;
+  width: 1.5rem;
+  opacity: 0;
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.emotion-14+.emotion-17 .emotion-21 {
+  transform-origin: center;
+  -webkit-transition: 200ms -webkit-transform ease-in-out;
+  transition: 200ms transform ease-in-out;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+}
+
+.emotion-14:checked+svg .emotion-21 {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.emotion-14:checked[aria-disabled='false'][aria-invalid='false']+.emotion-17 {
+  fill: #8c40ef;
+}
+
+.emotion-14:checked[aria-disabled='true'][aria-invalid='false']+.emotion-17 {
+  fill: #d8c5fc;
+}
+
+.emotion-14[aria-invalid='true']:not([aria-disabled='true'])+.emotion-17 {
+  fill: #e51963;
+}
+
+.emotion-14[aria-disabled='false']:active+.emotion-17 {
+  background-color: #5e127e40;
+  fill: #8c40ef;
+}
+
+.emotion-14[aria-disabled='false']:active+.emotion-17 .emotion-19 {
+  fill: #f1eefc;
+}
+
+.emotion-14[aria-disabled='false']:focus-visible+.emotion-17 {
+  outline: -webkit-focus-ring-color auto 1px;
+}
+
+.emotion-14[aria-invalid='true']:focus+.emotion-17 {
+  background-color: #f91b6c40;
+  fill: #e51963;
+}
+
+.emotion-14[aria-invalid='true']:focus+.emotion-17 .emotion-19 {
+  fill: #ffebf2;
+}
+
+.emotion-16 {
+  height: 1.5rem;
+  width: 1.5rem;
+  min-width: 1.5rem;
+  min-height: 1.5rem;
+  border-radius: 100%;
+  fill: #d9dadd;
+}
+
+.emotion-16 .emotion-19 {
+  fill: #ffffff;
+}
+
+.emotion-16 {
+  height: 1.5rem;
+  width: 1.5rem;
+  min-width: 1.5rem;
+  min-height: 1.5rem;
+  border-radius: 100%;
+  fill: #d9dadd;
+}
+
+.emotion-16 .emotion-19 {
+  fill: #ffffff;
+}
+
+.emotion-23 {
+  font-size: 1rem;
+  font-family: Inter,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  cursor: pointer;
+}
+
+.emotion-23 {
+  font-size: 1rem;
+  font-family: Inter,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  cursor: pointer;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+    >
+      <div
+        class="emotion-2 emotion-3"
+        data-size="small"
+      >
+        <div
+          class="emotion-4 emotion-5"
+          data-sentiment="neutral"
+          style="width: 100px; left: 0px;"
+        />
+        <div
+          class="emotion-6 emotion-7 emotion-8"
+          data-checked="true"
+          data-disabled="false"
+          data-has-default-cursor="false"
+          data-has-label="true"
+          data-image="none"
+          data-testid="switch-button-left"
+          data-type="radio"
+          role="button"
+          tabindex="0"
+        >
+          <div
+            class="emotion-9 emotion-10"
+          >
+            <div
+              aria-disabled="false"
+              class="emotion-11 emotion-12 emotion-13"
+              data-checked="true"
+            >
+              <input
+                aria-disabled="false"
+                aria-invalid="false"
+                checked=""
+                class="emotion-14 emotion-15"
+                id="«r1o»"
+                name="test"
+                tabindex="-1"
+                type="radio"
+                value="left"
+              />
+              <svg
+                class="emotion-16 emotion-17"
+                viewBox="0 0 24 24"
+              >
+                <g>
+                  <circle
+                    cx="12"
+                    cy="12"
+                    r="10"
+                    stroke-width="2"
+                  />
+                  <circle
+                    class="emotion-18 emotion-19"
+                    cx="12"
+                    cy="12"
+                    r="8"
+                  />
+                  <circle
+                    class="emotion-20 emotion-21"
+                    cx="12"
+                    cy="12"
+                    r="5"
+                  />
+                </g>
+              </svg>
+              <label
+                class="emotion-22 emotion-23 emotion-24"
+                for="«r1o»"
+              >
+                Left
+              </label>
+            </div>
+          </div>
+        </div>
+        <div
+          class="emotion-6 emotion-7 emotion-8"
+          data-checked="false"
+          data-disabled="false"
+          data-has-default-cursor="false"
+          data-has-label="true"
+          data-image="none"
+          data-testid="switch-button-right"
+          data-type="radio"
+          role="button"
+          tabindex="0"
+        >
+          <div
+            class="emotion-9 emotion-10"
+          >
+            <div
+              aria-disabled="false"
+              class="emotion-11 emotion-12 emotion-13"
+              data-checked="false"
+            >
+              <input
+                aria-disabled="false"
+                aria-invalid="false"
+                class="emotion-14 emotion-15"
+                id="«r1s»"
+                name="test"
+                tabindex="-1"
+                type="radio"
+                value="right"
+              />
+              <svg
+                class="emotion-16 emotion-17"
+                viewBox="0 0 24 24"
+              >
+                <g>
+                  <circle
+                    cx="12"
+                    cy="12"
+                    r="10"
+                    stroke-width="2"
+                  />
+                  <circle
+                    class="emotion-18 emotion-19"
+                    cx="12"
+                    cy="12"
+                    r="8"
+                  />
+                  <circle
+                    class="emotion-20 emotion-21"
+                    cx="12"
+                    cy="12"
+                    r="5"
+                  />
+                </g>
+              </svg>
+              <label
+                class="emotion-22 emotion-23 emotion-24"
+                for="«r1s»"
+              >
+                Right
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`SwitchButton > renders with disabled and tooltip on SwitchButton.Option 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: inherit;
+}
+
+.emotion-0[data-container-full-height="true"] {
+  height: 100%;
+}
+
+.emotion-0[data-container-full-width="true"] {
+  width: 100%;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.emotion-4 {
+  border: 1px solid #d9dadd;
+  border-radius: 0.25rem;
+  padding: 0.25rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  position: relative;
+}
+
+.emotion-4[data-size='small'] {
+  height: 2.5rem;
+}
+
+.emotion-4[data-size='medium'] {
+  height: 3rem;
+}
+
+.emotion-4 {
+  border: 1px solid #d9dadd;
+  border-radius: 0.25rem;
+  padding: 0.25rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  position: relative;
+}
+
+.emotion-4[data-size='small'] {
+  height: 2.5rem;
+}
+
+.emotion-4[data-size='medium'] {
+  height: 3rem;
+}
+
+.emotion-6 {
+  position: absolute;
+  height: calc(100% - 0.5rem);
+  border-radius: 0.25rem;
+  background: #8c40ef;
+  transform-origin: left center;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.emotion-6[data-sentiment='neutral'] {
+  background: #e9eaeb;
+}
+
+.emotion-6 {
+  position: absolute;
+  height: calc(100% - 0.5rem);
+  border-radius: 0.25rem;
+  background: #8c40ef;
+  transform-origin: left center;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.emotion-6[data-sentiment='neutral'] {
+  background: #e9eaeb;
+}
+
+.emotion-8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emotion-13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
+  position: relative;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
+  transition: border-color 200ms ease,box-shadow 200ms ease;
+  cursor: pointer;
+  background: #ffffff;
+  border: 1px solid #d9dadd;
+  color: #3f4250;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  white-space: nowrap;
+  background: transparent;
+  height: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-13[data-has-label='false']>:first-child {
+  margin-bottom: -0.25rem;
+}
+
+.emotion-13[data-has-default-cursor='true'] {
+  cursor: default;
+}
+
+.emotion-13[data-checked='true'] {
+  border: 1px solid #8c40ef;
+}
+
+.emotion-13[data-error='true'] {
+  border: 1px solid #b3144d;
+}
+
+.emotion-13[data-disabled='true'] {
+  border: 1px solid #e9eaeb;
+  color: #b5b7bd;
+  background: #f3f3f4;
+  cursor: not-allowed;
+}
+
+.emotion-13[data-image="illustration"] {
+  padding: 0rem;
+}
+
+.emotion-13[data-image="icon"] {
+  padding: 0rem;
+  padding-right: 1rem;
+}
+
+.emotion-13:hover:not([data-error='true']):not([data-disabled='true']),
+.emotion-13:active:not([data-error='true']):not([data-disabled='true']) {
+  border: 1px solid #8c40ef;
+}
+
+.emotion-13:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
+.emotion-13:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
+  box-shadow: 0px 4px 16px 4px #f6f3ffcc;
+}
+
+.emotion-13[data-has-label='true'] .emotion-16,
+.emotion-13[data-has-label='true'] .eqr7bqq0 {
+  width: 100%;
+}
+
+.emotion-13:hover,
+.emotion-13:active {
+  box-shadow: none;
+  border: none;
+}
+
+.emotion-13:hover:not([data-error='true'][data-disabled='true']),
+.emotion-13:active:not([data-error='true'][data-disabled='true']) {
+  border: none;
+}
+
+.emotion-13[data-checked='true'] {
+  border: none;
+}
+
+.emotion-13 label {
+  -webkit-transition: color 300ms;
+  transition: color 300ms;
+  color: #222638;
+}
+
+.emotion-13[data-checked='true'] label {
+  color: #ffffff;
+}
+
+.emotion-13:not([data-checked='true']) label:hover {
+  color: #641cb3;
+}
+
+.emotion-13[data-disabled='true'] {
+  background: transparent;
+  border: none;
+}
+
+.emotion-13 label {
+  color: #b5b7bd;
+}
+
+.emotion-13:not([data-checked='true']) label:hover {
+  background: transparent;
+  color: #b5b7bd;
+}
+
+.emotion-15 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.emotion-15 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.emotion-18 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  gap: 0.5rem;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+}
+
+.emotion-18[aria-disabled='false'],
+.emotion-18[aria-disabled='false']>label {
+  cursor: pointer;
+}
+
+.emotion-18:hover[aria-disabled='false'] .emotion-21+.emotion-23 {
+  fill: #8c40ef;
+}
+
+.emotion-18:hover[aria-disabled='false'] .emotion-21+.emotion-23 .emotion-25 {
+  fill: #e5dbfd;
+}
+
+.emotion-18:hover[aria-disabled='false'] .emotion-21[aria-invalid='true']+.emotion-23 {
+  fill: #b3144d;
+}
+
+.emotion-18:hover[aria-disabled='false'] .emotion-21[aria-invalid='true']+.emotion-23 .emotion-25 {
+  fill: #ffd3e3;
+}
+
+.emotion-18[aria-disabled='true'] {
+  cursor: not-allowed;
+  color: #b5b7bd;
+}
+
+.emotion-18[aria-disabled='true']>label,
+.emotion-18[aria-disabled='true'] .emotion-21 {
+  cursor: not-allowed;
+}
+
+.emotion-18[aria-disabled='true'] .emotion-23 {
+  fill: #e9eaeb;
+  cursor: not-allowed;
+}
+
+.emotion-18[aria-disabled='true'] .emotion-23 .emotion-25 {
+  fill: #f3f3f4;
+}
+
+.emotion-18[data-checked='true'] {
+  color: #641cb3;
+}
+
+.emotion-18[data-error='true'] {
+  color: #b3144d;
+}
+
+.emotion-18[aria-disabled='true'] {
+  color: #b5b7bd;
+}
+
+.emotion-18 input+svg {
+  display: none;
+}
+
+.emotion-18:hover[aria-disabled='false']:not([data-checked='true']) .emotion-21+.emotion-23 {
+  fill: #d9dadd;
+}
+
+.emotion-18:hover[aria-disabled='false']:not([data-checked='true']) .emotion-21+.emotion-23 .emotion-25 {
+  fill: #ffffff;
+}
+
+.emotion-18:hover[aria-disabled='false']:not([data-checked='true']) .emotion-21[aria-invalid='true']+.emotion-23 {
+  fill: #b3144d;
+}
+
+.emotion-18:hover[aria-disabled='false']:not([data-checked='true']) .emotion-21[aria-invalid='true']+.emotion-23 .emotion-25 {
+  fill: #ffffff;
+}
+
+.emotion-18:hover[aria-disabled='false'] .emotion-21+.emotion-23 {
+  fill: #8c40ef;
+}
+
+.emotion-18:hover[aria-disabled='false'] .emotion-21+.emotion-23 .emotion-25 {
+  fill: #ffffff;
+}
+
+.emotion-18:hover[aria-disabled='false'] .emotion-21[aria-invalid='true']+.emotion-23 {
+  fill: #b3144d;
+}
+
+.emotion-18:hover[aria-disabled='false'] .emotion-21[aria-invalid='true']+.emotion-23 .emotion-25 {
+  fill: #ffffff;
+}
+
+.emotion-18 .emotion-21[aria-disabled='false']:active+.emotion-23 {
+  background: none;
+  fill: #8c40ef;
+}
+
+.emotion-18 .emotion-21[aria-disabled='false']:active+.emotion-23 .emotion-25 {
+  fill: #ffffff;
+}
+
+.emotion-18 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  gap: 0.5rem;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+}
+
+.emotion-18[aria-disabled='false'],
+.emotion-18[aria-disabled='false']>label {
+  cursor: pointer;
+}
+
+.emotion-18:hover[aria-disabled='false'] .emotion-21+.emotion-23 {
+  fill: #8c40ef;
+}
+
+.emotion-18:hover[aria-disabled='false'] .emotion-21+.emotion-23 .emotion-25 {
+  fill: #e5dbfd;
+}
+
+.emotion-18:hover[aria-disabled='false'] .emotion-21[aria-invalid='true']+.emotion-23 {
+  fill: #b3144d;
+}
+
+.emotion-18:hover[aria-disabled='false'] .emotion-21[aria-invalid='true']+.emotion-23 .emotion-25 {
+  fill: #ffd3e3;
+}
+
+.emotion-18[aria-disabled='true'] {
+  cursor: not-allowed;
+  color: #b5b7bd;
+}
+
+.emotion-18[aria-disabled='true']>label,
+.emotion-18[aria-disabled='true'] .emotion-21 {
+  cursor: not-allowed;
+}
+
+.emotion-18[aria-disabled='true'] .emotion-23 {
+  fill: #e9eaeb;
+  cursor: not-allowed;
+}
+
+.emotion-18[aria-disabled='true'] .emotion-23 .emotion-25 {
+  fill: #f3f3f4;
+}
+
+.emotion-18[data-checked='true'] {
+  color: #641cb3;
+}
+
+.emotion-18[data-error='true'] {
+  color: #b3144d;
+}
+
+.emotion-18[aria-disabled='true'] {
+  color: #b5b7bd;
+}
+
+.emotion-18 input+svg {
+  display: none;
+}
+
+.emotion-18:hover[aria-disabled='false']:not([data-checked='true']) .emotion-21+.emotion-23 {
+  fill: #d9dadd;
+}
+
+.emotion-18:hover[aria-disabled='false']:not([data-checked='true']) .emotion-21+.emotion-23 .emotion-25 {
+  fill: #ffffff;
+}
+
+.emotion-18:hover[aria-disabled='false']:not([data-checked='true']) .emotion-21[aria-invalid='true']+.emotion-23 {
+  fill: #b3144d;
+}
+
+.emotion-18:hover[aria-disabled='false']:not([data-checked='true']) .emotion-21[aria-invalid='true']+.emotion-23 .emotion-25 {
+  fill: #ffffff;
+}
+
+.emotion-18:hover[aria-disabled='false'] .emotion-21+.emotion-23 {
+  fill: #8c40ef;
+}
+
+.emotion-18:hover[aria-disabled='false'] .emotion-21+.emotion-23 .emotion-25 {
+  fill: #ffffff;
+}
+
+.emotion-18:hover[aria-disabled='false'] .emotion-21[aria-invalid='true']+.emotion-23 {
+  fill: #b3144d;
+}
+
+.emotion-18:hover[aria-disabled='false'] .emotion-21[aria-invalid='true']+.emotion-23 .emotion-25 {
+  fill: #ffffff;
+}
+
+.emotion-18 .emotion-21[aria-disabled='false']:active+.emotion-23 {
+  background: none;
+  fill: #8c40ef;
+}
+
+.emotion-18 .emotion-21[aria-disabled='false']:active+.emotion-23 .emotion-25 {
+  fill: #ffffff;
+}
+
+.emotion-20 {
+  cursor: pointer;
+  position: absolute;
+  height: 1.5rem;
+  width: 1.5rem;
+  opacity: 0;
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.emotion-20+.emotion-23 .emotion-27 {
+  transform-origin: center;
+  -webkit-transition: 200ms -webkit-transform ease-in-out;
+  transition: 200ms transform ease-in-out;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+}
+
+.emotion-20:checked+svg .emotion-27 {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.emotion-20:checked[aria-disabled='false'][aria-invalid='false']+.emotion-23 {
+  fill: #8c40ef;
+}
+
+.emotion-20:checked[aria-disabled='true'][aria-invalid='false']+.emotion-23 {
+  fill: #d8c5fc;
+}
+
+.emotion-20[aria-invalid='true']:not([aria-disabled='true'])+.emotion-23 {
+  fill: #e51963;
+}
+
+.emotion-20[aria-disabled='false']:active+.emotion-23 {
+  background-color: #5e127e40;
+  fill: #8c40ef;
+}
+
+.emotion-20[aria-disabled='false']:active+.emotion-23 .emotion-25 {
+  fill: #f1eefc;
+}
+
+.emotion-20[aria-disabled='false']:focus-visible+.emotion-23 {
+  outline: -webkit-focus-ring-color auto 1px;
+}
+
+.emotion-20[aria-invalid='true']:focus+.emotion-23 {
+  background-color: #f91b6c40;
+  fill: #e51963;
+}
+
+.emotion-20[aria-invalid='true']:focus+.emotion-23 .emotion-25 {
+  fill: #ffebf2;
+}
+
+.emotion-20 {
+  cursor: pointer;
+  position: absolute;
+  height: 1.5rem;
+  width: 1.5rem;
+  opacity: 0;
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.emotion-20+.emotion-23 .emotion-27 {
+  transform-origin: center;
+  -webkit-transition: 200ms -webkit-transform ease-in-out;
+  transition: 200ms transform ease-in-out;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+}
+
+.emotion-20:checked+svg .emotion-27 {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.emotion-20:checked[aria-disabled='false'][aria-invalid='false']+.emotion-23 {
+  fill: #8c40ef;
+}
+
+.emotion-20:checked[aria-disabled='true'][aria-invalid='false']+.emotion-23 {
+  fill: #d8c5fc;
+}
+
+.emotion-20[aria-invalid='true']:not([aria-disabled='true'])+.emotion-23 {
+  fill: #e51963;
+}
+
+.emotion-20[aria-disabled='false']:active+.emotion-23 {
+  background-color: #5e127e40;
+  fill: #8c40ef;
+}
+
+.emotion-20[aria-disabled='false']:active+.emotion-23 .emotion-25 {
+  fill: #f1eefc;
+}
+
+.emotion-20[aria-disabled='false']:focus-visible+.emotion-23 {
+  outline: -webkit-focus-ring-color auto 1px;
+}
+
+.emotion-20[aria-invalid='true']:focus+.emotion-23 {
+  background-color: #f91b6c40;
+  fill: #e51963;
+}
+
+.emotion-20[aria-invalid='true']:focus+.emotion-23 .emotion-25 {
+  fill: #ffebf2;
+}
+
+.emotion-22 {
+  height: 1.5rem;
+  width: 1.5rem;
+  min-width: 1.5rem;
+  min-height: 1.5rem;
+  border-radius: 100%;
+  fill: #d9dadd;
+}
+
+.emotion-22 .emotion-25 {
+  fill: #ffffff;
+}
+
+.emotion-22 {
+  height: 1.5rem;
+  width: 1.5rem;
+  min-width: 1.5rem;
+  min-height: 1.5rem;
+  border-radius: 100%;
+  fill: #d9dadd;
+}
+
+.emotion-22 .emotion-25 {
+  fill: #ffffff;
+}
+
+.emotion-29 {
+  font-size: 1rem;
+  font-family: Inter,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  cursor: pointer;
+}
+
+.emotion-29 {
+  font-size: 1rem;
+  font-family: Inter,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  cursor: pointer;
+}
+
+.emotion-32 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
+  position: relative;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
+  transition: border-color 200ms ease,box-shadow 200ms ease;
+  cursor: pointer;
+  background: #ffffff;
+  border: 1px solid #d9dadd;
+  color: #3f4250;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  white-space: nowrap;
+  background: transparent;
+  height: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-32[data-has-label='false']>:first-child {
+  margin-bottom: -0.25rem;
+}
+
+.emotion-32[data-has-default-cursor='true'] {
+  cursor: default;
+}
+
+.emotion-32[data-checked='true'] {
+  border: 1px solid #8c40ef;
+}
+
+.emotion-32[data-error='true'] {
+  border: 1px solid #b3144d;
+}
+
+.emotion-32[data-disabled='true'] {
+  border: 1px solid #e9eaeb;
+  color: #b5b7bd;
+  background: #f3f3f4;
+  cursor: not-allowed;
+}
+
+.emotion-32[data-image="illustration"] {
+  padding: 0rem;
+}
+
+.emotion-32[data-image="icon"] {
+  padding: 0rem;
+  padding-right: 1rem;
+}
+
+.emotion-32:hover:not([data-error='true']):not([data-disabled='true']),
+.emotion-32:active:not([data-error='true']):not([data-disabled='true']) {
+  border: 1px solid #8c40ef;
+}
+
+.emotion-32:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
+.emotion-32:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
+  box-shadow: 0px 4px 16px 4px #f6f3ffcc;
+}
+
+.emotion-32[data-has-label='true'] .emotion-16,
+.emotion-32[data-has-label='true'] .eqr7bqq0 {
+  width: 100%;
+}
+
+.emotion-32:hover,
+.emotion-32:active {
+  box-shadow: none;
+  border: none;
+}
+
+.emotion-32:hover:not([data-error='true'][data-disabled='true']),
+.emotion-32:active:not([data-error='true'][data-disabled='true']) {
+  border: none;
+}
+
+.emotion-32[data-checked='true'] {
+  border: none;
+}
+
+.emotion-32 label {
+  -webkit-transition: color 300ms;
+  transition: color 300ms;
+  color: #222638;
+}
+
+.emotion-32[data-checked='true'] label {
+  color: #ffffff;
+}
+
+.emotion-32:not([data-checked='true']) label:hover {
+  color: #641cb3;
+}
+
+.emotion-32 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
+  position: relative;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
+  transition: border-color 200ms ease,box-shadow 200ms ease;
+  cursor: pointer;
+  background: #ffffff;
+  border: 1px solid #d9dadd;
+  color: #3f4250;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  white-space: nowrap;
+  background: transparent;
+  height: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-32[data-has-label='false']>:first-child {
+  margin-bottom: -0.25rem;
+}
+
+.emotion-32[data-has-default-cursor='true'] {
+  cursor: default;
+}
+
+.emotion-32[data-checked='true'] {
+  border: 1px solid #8c40ef;
+}
+
+.emotion-32[data-error='true'] {
+  border: 1px solid #b3144d;
+}
+
+.emotion-32[data-disabled='true'] {
+  border: 1px solid #e9eaeb;
+  color: #b5b7bd;
+  background: #f3f3f4;
+  cursor: not-allowed;
+}
+
+.emotion-32[data-image="illustration"] {
+  padding: 0rem;
+}
+
+.emotion-32[data-image="icon"] {
+  padding: 0rem;
+  padding-right: 1rem;
+}
+
+.emotion-32:hover:not([data-error='true']):not([data-disabled='true']),
+.emotion-32:active:not([data-error='true']):not([data-disabled='true']) {
+  border: 1px solid #8c40ef;
+}
+
+.emotion-32:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
+.emotion-32:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
+  box-shadow: 0px 4px 16px 4px #f6f3ffcc;
+}
+
+.emotion-32[data-has-label='true'] .emotion-16,
+.emotion-32[data-has-label='true'] .eqr7bqq0 {
+  width: 100%;
+}
+
+.emotion-32:hover,
+.emotion-32:active {
+  box-shadow: none;
+  border: none;
+}
+
+.emotion-32:hover:not([data-error='true'][data-disabled='true']),
+.emotion-32:active:not([data-error='true'][data-disabled='true']) {
+  border: none;
+}
+
+.emotion-32[data-checked='true'] {
+  border: none;
+}
+
+.emotion-32 label {
+  -webkit-transition: color 300ms;
+  transition: color 300ms;
+  color: #222638;
+}
+
+.emotion-32[data-checked='true'] label {
+  color: #ffffff;
+}
+
+.emotion-32:not([data-checked='true']) label:hover {
+  color: #641cb3;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      aria-controls="«r1d»"
+      aria-describedby="«r1d»"
+      class="emotion-0 emotion-1"
+      tabindex="0"
+    >
+      <div
+        class="emotion-2 emotion-3"
+      >
+        <div
+          class="emotion-4 emotion-5"
+          data-size="small"
+        >
+          <div
+            class="emotion-6 emotion-7"
+            data-sentiment="primary"
+            style="width: 100px; left: 0px;"
+          />
+          <div
+            class="emotion-8 emotion-3"
+          >
+            <div
+              aria-controls="«r1e»"
+              aria-describedby="«r1e»"
+              class="emotion-0 emotion-1"
+              data-container-full-height="true"
+              tabindex="0"
+            >
+              <div
+                class="emotion-12 emotion-13 emotion-14"
+                data-checked="true"
+                data-disabled="true"
+                data-has-default-cursor="false"
+                data-has-label="true"
+                data-image="none"
+                data-testid="switch-button-left"
+                data-type="radio"
+                role="button"
+              >
+                <div
+                  class="emotion-15 emotion-16"
+                >
+                  <div
+                    aria-disabled="true"
+                    class="emotion-17 emotion-18 emotion-19"
+                    data-checked="true"
+                  >
+                    <input
+                      aria-disabled="true"
+                      aria-invalid="false"
+                      checked=""
+                      class="emotion-20 emotion-21"
+                      disabled=""
+                      id="«r1f»"
+                      name="test"
+                      tabindex="-1"
+                      type="radio"
+                      value="left"
+                    />
+                    <svg
+                      class="emotion-22 emotion-23"
+                      viewBox="0 0 24 24"
+                    >
+                      <g>
+                        <circle
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          stroke-width="2"
+                        />
+                        <circle
+                          class="emotion-24 emotion-25"
+                          cx="12"
+                          cy="12"
+                          r="8"
+                        />
+                        <circle
+                          class="emotion-26 emotion-27"
+                          cx="12"
+                          cy="12"
+                          r="5"
+                        />
+                      </g>
+                    </svg>
+                    <label
+                      class="emotion-28 emotion-29 emotion-30"
+                      for="«r1f»"
+                    >
+                      Left
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="emotion-12 emotion-32 emotion-14"
+            data-checked="false"
+            data-disabled="false"
+            data-has-default-cursor="false"
+            data-has-label="true"
+            data-image="none"
+            data-testid="switch-button-right"
+            data-type="radio"
+            role="button"
+            tabindex="0"
+          >
+            <div
+              class="emotion-15 emotion-16"
+            >
+              <div
+                aria-disabled="false"
+                class="emotion-17 emotion-18 emotion-19"
+                data-checked="false"
+              >
+                <input
+                  aria-disabled="false"
+                  aria-invalid="false"
+                  class="emotion-20 emotion-21"
+                  id="«r1j»"
+                  name="test"
+                  tabindex="-1"
+                  type="radio"
+                  value="right"
+                />
+                <svg
+                  class="emotion-22 emotion-23"
+                  viewBox="0 0 24 24"
+                >
+                  <g>
+                    <circle
+                      cx="12"
+                      cy="12"
+                      r="10"
+                      stroke-width="2"
+                    />
+                    <circle
+                      class="emotion-24 emotion-25"
+                      cx="12"
+                      cy="12"
+                      r="8"
+                    />
+                    <circle
+                      class="emotion-26 emotion-27"
+                      cx="12"
+                      cy="12"
+                      r="5"
+                    />
+                  </g>
+                </svg>
+                <label
+                  class="emotion-28 emotion-29 emotion-30"
+                  for="«r1j»"
+                >
+                  Right
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`SwitchButton > renders with icons 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: inherit;
+}
+
+.emotion-0[data-container-full-height="true"] {
+  height: 100%;
+}
+
+.emotion-0[data-container-full-width="true"] {
+  width: 100%;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.emotion-4 {
+  border: 1px solid #d9dadd;
+  border-radius: 0.25rem;
+  padding: 0.25rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  position: relative;
+}
+
+.emotion-4[data-size='small'] {
+  height: 2.5rem;
+}
+
+.emotion-4[data-size='medium'] {
+  height: 3rem;
+}
+
+.emotion-4 {
+  border: 1px solid #d9dadd;
+  border-radius: 0.25rem;
+  padding: 0.25rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  position: relative;
+}
+
+.emotion-4[data-size='small'] {
+  height: 2.5rem;
+}
+
+.emotion-4[data-size='medium'] {
+  height: 3rem;
+}
+
+.emotion-6 {
+  position: absolute;
+  height: calc(100% - 0.5rem);
+  border-radius: 0.25rem;
+  background: #8c40ef;
+  transform-origin: left center;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.emotion-6[data-sentiment='neutral'] {
+  background: #e9eaeb;
+}
+
+.emotion-6 {
+  position: absolute;
+  height: calc(100% - 0.5rem);
+  border-radius: 0.25rem;
+  background: #8c40ef;
+  transform-origin: left center;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.emotion-6[data-sentiment='neutral'] {
+  background: #e9eaeb;
+}
+
+.emotion-9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
+  position: relative;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
+  transition: border-color 200ms ease,box-shadow 200ms ease;
+  cursor: pointer;
+  background: #ffffff;
+  border: 1px solid #d9dadd;
+  color: #3f4250;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  white-space: nowrap;
+  background: transparent;
+  height: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-9[data-has-label='false']>:first-child {
+  margin-bottom: -0.25rem;
+}
+
+.emotion-9[data-has-default-cursor='true'] {
+  cursor: default;
+}
+
+.emotion-9[data-checked='true'] {
+  border: 1px solid #8c40ef;
+}
+
+.emotion-9[data-error='true'] {
+  border: 1px solid #b3144d;
+}
+
+.emotion-9[data-disabled='true'] {
+  border: 1px solid #e9eaeb;
+  color: #b5b7bd;
+  background: #f3f3f4;
+  cursor: not-allowed;
+}
+
+.emotion-9[data-image="illustration"] {
+  padding: 0rem;
+}
+
+.emotion-9[data-image="icon"] {
+  padding: 0rem;
+  padding-right: 1rem;
+}
+
+.emotion-9:hover:not([data-error='true']):not([data-disabled='true']),
+.emotion-9:active:not([data-error='true']):not([data-disabled='true']) {
+  border: 1px solid #8c40ef;
+}
+
+.emotion-9:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
+.emotion-9:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
+  box-shadow: 0px 4px 16px 4px #f6f3ffcc;
+}
+
+.emotion-9[data-has-label='true'] .emotion-12,
+.emotion-9[data-has-label='true'] .eqr7bqq0 {
+  width: 100%;
+}
+
+.emotion-9:hover,
+.emotion-9:active {
+  box-shadow: none;
+  border: none;
+}
+
+.emotion-9:hover:not([data-error='true'][data-disabled='true']),
+.emotion-9:active:not([data-error='true'][data-disabled='true']) {
+  border: none;
+}
+
+.emotion-9[data-checked='true'] {
+  border: none;
+}
+
+.emotion-9 label {
+  -webkit-transition: color 300ms;
+  transition: color 300ms;
+  color: #222638;
+}
+
+.emotion-9[data-checked='true'] label {
+  color: #ffffff;
+}
+
+.emotion-9:not([data-checked='true']) label:hover {
+  color: #641cb3;
+}
+
+.emotion-9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
+  position: relative;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
+  transition: border-color 200ms ease,box-shadow 200ms ease;
+  cursor: pointer;
+  background: #ffffff;
+  border: 1px solid #d9dadd;
+  color: #3f4250;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  white-space: nowrap;
+  background: transparent;
+  height: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-9[data-has-label='false']>:first-child {
+  margin-bottom: -0.25rem;
+}
+
+.emotion-9[data-has-default-cursor='true'] {
+  cursor: default;
+}
+
+.emotion-9[data-checked='true'] {
+  border: 1px solid #8c40ef;
+}
+
+.emotion-9[data-error='true'] {
+  border: 1px solid #b3144d;
+}
+
+.emotion-9[data-disabled='true'] {
+  border: 1px solid #e9eaeb;
+  color: #b5b7bd;
+  background: #f3f3f4;
+  cursor: not-allowed;
+}
+
+.emotion-9[data-image="illustration"] {
+  padding: 0rem;
+}
+
+.emotion-9[data-image="icon"] {
+  padding: 0rem;
+  padding-right: 1rem;
+}
+
+.emotion-9:hover:not([data-error='true']):not([data-disabled='true']),
+.emotion-9:active:not([data-error='true']):not([data-disabled='true']) {
+  border: 1px solid #8c40ef;
+}
+
+.emotion-9:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
+.emotion-9:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
+  box-shadow: 0px 4px 16px 4px #f6f3ffcc;
+}
+
+.emotion-9[data-has-label='true'] .emotion-12,
+.emotion-9[data-has-label='true'] .eqr7bqq0 {
+  width: 100%;
+}
+
+.emotion-9:hover,
+.emotion-9:active {
+  box-shadow: none;
+  border: none;
+}
+
+.emotion-9:hover:not([data-error='true'][data-disabled='true']),
+.emotion-9:active:not([data-error='true'][data-disabled='true']) {
+  border: none;
+}
+
+.emotion-9[data-checked='true'] {
+  border: none;
+}
+
+.emotion-9 label {
+  -webkit-transition: color 300ms;
+  transition: color 300ms;
+  color: #222638;
+}
+
+.emotion-9[data-checked='true'] label {
+  color: #ffffff;
+}
+
+.emotion-9:not([data-checked='true']) label:hover {
+  color: #641cb3;
+}
+
+.emotion-11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.emotion-11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.emotion-14 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  gap: 0.5rem;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+}
+
+.emotion-14[aria-disabled='false'],
+.emotion-14[aria-disabled='false']>label {
+  cursor: pointer;
+}
+
+.emotion-14:hover[aria-disabled='false'] .emotion-17+.emotion-19 {
+  fill: #8c40ef;
+}
+
+.emotion-14:hover[aria-disabled='false'] .emotion-17+.emotion-19 .emotion-21 {
+  fill: #e5dbfd;
+}
+
+.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='true']+.emotion-19 {
+  fill: #b3144d;
+}
+
+.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='true']+.emotion-19 .emotion-21 {
+  fill: #ffd3e3;
+}
+
+.emotion-14[aria-disabled='true'] {
+  cursor: not-allowed;
+  color: #b5b7bd;
+}
+
+.emotion-14[aria-disabled='true']>label,
+.emotion-14[aria-disabled='true'] .emotion-17 {
+  cursor: not-allowed;
+}
+
+.emotion-14[aria-disabled='true'] .emotion-19 {
+  fill: #e9eaeb;
+  cursor: not-allowed;
+}
+
+.emotion-14[aria-disabled='true'] .emotion-19 .emotion-21 {
+  fill: #f3f3f4;
+}
+
+.emotion-14[data-checked='true'] {
+  color: #641cb3;
+}
+
+.emotion-14[data-error='true'] {
+  color: #b3144d;
+}
+
+.emotion-14[aria-disabled='true'] {
+  color: #b5b7bd;
+}
+
+.emotion-14 input+svg {
+  display: none;
+}
+
+.emotion-14:hover[aria-disabled='false']:not([data-checked='true']) .emotion-17+.emotion-19 {
+  fill: #d9dadd;
+}
+
+.emotion-14:hover[aria-disabled='false']:not([data-checked='true']) .emotion-17+.emotion-19 .emotion-21 {
+  fill: #ffffff;
+}
+
+.emotion-14:hover[aria-disabled='false']:not([data-checked='true']) .emotion-17[aria-invalid='true']+.emotion-19 {
+  fill: #b3144d;
+}
+
+.emotion-14:hover[aria-disabled='false']:not([data-checked='true']) .emotion-17[aria-invalid='true']+.emotion-19 .emotion-21 {
+  fill: #ffffff;
+}
+
+.emotion-14:hover[aria-disabled='false'] .emotion-17+.emotion-19 {
+  fill: #8c40ef;
+}
+
+.emotion-14:hover[aria-disabled='false'] .emotion-17+.emotion-19 .emotion-21 {
+  fill: #ffffff;
+}
+
+.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='true']+.emotion-19 {
+  fill: #b3144d;
+}
+
+.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='true']+.emotion-19 .emotion-21 {
+  fill: #ffffff;
+}
+
+.emotion-14 .emotion-17[aria-disabled='false']:active+.emotion-19 {
+  background: none;
+  fill: #8c40ef;
+}
+
+.emotion-14 .emotion-17[aria-disabled='false']:active+.emotion-19 .emotion-21 {
+  fill: #ffffff;
+}
+
+.emotion-14 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  gap: 0.5rem;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+}
+
+.emotion-14[aria-disabled='false'],
+.emotion-14[aria-disabled='false']>label {
+  cursor: pointer;
+}
+
+.emotion-14:hover[aria-disabled='false'] .emotion-17+.emotion-19 {
+  fill: #8c40ef;
+}
+
+.emotion-14:hover[aria-disabled='false'] .emotion-17+.emotion-19 .emotion-21 {
+  fill: #e5dbfd;
+}
+
+.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='true']+.emotion-19 {
+  fill: #b3144d;
+}
+
+.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='true']+.emotion-19 .emotion-21 {
+  fill: #ffd3e3;
+}
+
+.emotion-14[aria-disabled='true'] {
+  cursor: not-allowed;
+  color: #b5b7bd;
+}
+
+.emotion-14[aria-disabled='true']>label,
+.emotion-14[aria-disabled='true'] .emotion-17 {
+  cursor: not-allowed;
+}
+
+.emotion-14[aria-disabled='true'] .emotion-19 {
+  fill: #e9eaeb;
+  cursor: not-allowed;
+}
+
+.emotion-14[aria-disabled='true'] .emotion-19 .emotion-21 {
+  fill: #f3f3f4;
+}
+
+.emotion-14[data-checked='true'] {
+  color: #641cb3;
+}
+
+.emotion-14[data-error='true'] {
+  color: #b3144d;
+}
+
+.emotion-14[aria-disabled='true'] {
+  color: #b5b7bd;
+}
+
+.emotion-14 input+svg {
+  display: none;
+}
+
+.emotion-14:hover[aria-disabled='false']:not([data-checked='true']) .emotion-17+.emotion-19 {
+  fill: #d9dadd;
+}
+
+.emotion-14:hover[aria-disabled='false']:not([data-checked='true']) .emotion-17+.emotion-19 .emotion-21 {
+  fill: #ffffff;
+}
+
+.emotion-14:hover[aria-disabled='false']:not([data-checked='true']) .emotion-17[aria-invalid='true']+.emotion-19 {
+  fill: #b3144d;
+}
+
+.emotion-14:hover[aria-disabled='false']:not([data-checked='true']) .emotion-17[aria-invalid='true']+.emotion-19 .emotion-21 {
+  fill: #ffffff;
+}
+
+.emotion-14:hover[aria-disabled='false'] .emotion-17+.emotion-19 {
+  fill: #8c40ef;
+}
+
+.emotion-14:hover[aria-disabled='false'] .emotion-17+.emotion-19 .emotion-21 {
+  fill: #ffffff;
+}
+
+.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='true']+.emotion-19 {
+  fill: #b3144d;
+}
+
+.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='true']+.emotion-19 .emotion-21 {
+  fill: #ffffff;
+}
+
+.emotion-14 .emotion-17[aria-disabled='false']:active+.emotion-19 {
+  background: none;
+  fill: #8c40ef;
+}
+
+.emotion-14 .emotion-17[aria-disabled='false']:active+.emotion-19 .emotion-21 {
+  fill: #ffffff;
+}
+
+.emotion-16 {
+  cursor: pointer;
+  position: absolute;
+  height: 1.5rem;
+  width: 1.5rem;
+  opacity: 0;
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.emotion-16+.emotion-19 .emotion-23 {
+  transform-origin: center;
+  -webkit-transition: 200ms -webkit-transform ease-in-out;
+  transition: 200ms transform ease-in-out;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+}
+
+.emotion-16:checked+svg .emotion-23 {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.emotion-16:checked[aria-disabled='false'][aria-invalid='false']+.emotion-19 {
+  fill: #8c40ef;
+}
+
+.emotion-16:checked[aria-disabled='true'][aria-invalid='false']+.emotion-19 {
+  fill: #d8c5fc;
+}
+
+.emotion-16[aria-invalid='true']:not([aria-disabled='true'])+.emotion-19 {
+  fill: #e51963;
+}
+
+.emotion-16[aria-disabled='false']:active+.emotion-19 {
+  background-color: #5e127e40;
+  fill: #8c40ef;
+}
+
+.emotion-16[aria-disabled='false']:active+.emotion-19 .emotion-21 {
+  fill: #f1eefc;
+}
+
+.emotion-16[aria-disabled='false']:focus-visible+.emotion-19 {
+  outline: -webkit-focus-ring-color auto 1px;
+}
+
+.emotion-16[aria-invalid='true']:focus+.emotion-19 {
+  background-color: #f91b6c40;
+  fill: #e51963;
+}
+
+.emotion-16[aria-invalid='true']:focus+.emotion-19 .emotion-21 {
+  fill: #ffebf2;
+}
+
+.emotion-16 {
+  cursor: pointer;
+  position: absolute;
+  height: 1.5rem;
+  width: 1.5rem;
+  opacity: 0;
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.emotion-16+.emotion-19 .emotion-23 {
+  transform-origin: center;
+  -webkit-transition: 200ms -webkit-transform ease-in-out;
+  transition: 200ms transform ease-in-out;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+}
+
+.emotion-16:checked+svg .emotion-23 {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.emotion-16:checked[aria-disabled='false'][aria-invalid='false']+.emotion-19 {
+  fill: #8c40ef;
+}
+
+.emotion-16:checked[aria-disabled='true'][aria-invalid='false']+.emotion-19 {
+  fill: #d8c5fc;
+}
+
+.emotion-16[aria-invalid='true']:not([aria-disabled='true'])+.emotion-19 {
+  fill: #e51963;
+}
+
+.emotion-16[aria-disabled='false']:active+.emotion-19 {
+  background-color: #5e127e40;
+  fill: #8c40ef;
+}
+
+.emotion-16[aria-disabled='false']:active+.emotion-19 .emotion-21 {
+  fill: #f1eefc;
+}
+
+.emotion-16[aria-disabled='false']:focus-visible+.emotion-19 {
+  outline: -webkit-focus-ring-color auto 1px;
+}
+
+.emotion-16[aria-invalid='true']:focus+.emotion-19 {
+  background-color: #f91b6c40;
+  fill: #e51963;
+}
+
+.emotion-16[aria-invalid='true']:focus+.emotion-19 .emotion-21 {
+  fill: #ffebf2;
+}
+
+.emotion-18 {
+  height: 1.5rem;
+  width: 1.5rem;
+  min-width: 1.5rem;
+  min-height: 1.5rem;
+  border-radius: 100%;
+  fill: #d9dadd;
+}
+
+.emotion-18 .emotion-21 {
+  fill: #ffffff;
+}
+
+.emotion-18 {
+  height: 1.5rem;
+  width: 1.5rem;
+  min-width: 1.5rem;
+  min-height: 1.5rem;
+  border-radius: 100%;
+  fill: #d9dadd;
+}
+
+.emotion-18 .emotion-21 {
+  fill: #ffffff;
+}
+
+.emotion-24 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  cursor: pointer;
+}
+
+.emotion-26 {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
+}
+
+.emotion-26 .fillStroke {
+  stroke: currentColor;
+  fill: none;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      aria-controls="«r1v»"
+      aria-describedby="«r1v»"
+      class="emotion-0 emotion-1"
+      tabindex="0"
+    >
+      <div
+        class="emotion-2 emotion-3"
+      >
+        <div
+          class="emotion-4 emotion-5"
+          data-size="small"
+        >
+          <div
+            class="emotion-6 emotion-7"
+            data-sentiment="primary"
+            style="width: 100px; left: 0px;"
+          />
+          <div
+            class="emotion-8 emotion-9 emotion-10"
+            data-checked="true"
+            data-disabled="false"
+            data-has-default-cursor="false"
+            data-has-label="true"
+            data-image="none"
+            data-testid="switch-button-left"
+            data-type="radio"
+            role="button"
+            tabindex="0"
+          >
+            <div
+              class="emotion-11 emotion-12"
+            >
+              <div
+                aria-disabled="false"
+                class="emotion-13 emotion-14 emotion-15"
+                data-checked="true"
+              >
+                <input
+                  aria-disabled="false"
+                  aria-invalid="false"
+                  checked=""
+                  class="emotion-16 emotion-17"
+                  id="«r21»"
+                  name="test"
+                  tabindex="-1"
+                  type="radio"
+                  value="left"
+                />
+                <svg
+                  class="emotion-18 emotion-19"
+                  viewBox="0 0 24 24"
+                >
+                  <g>
+                    <circle
+                      cx="12"
+                      cy="12"
+                      r="10"
+                      stroke-width="2"
+                    />
+                    <circle
+                      class="emotion-20 emotion-21"
+                      cx="12"
+                      cy="12"
+                      r="8"
+                    />
+                    <circle
+                      class="emotion-22 emotion-23"
+                      cx="12"
+                      cy="12"
+                      r="5"
+                    />
+                  </g>
+                </svg>
+                <label
+                  class="emotion-24 emotion-25"
+                  for="«r21»"
+                >
+                  <svg
+                    class="emotion-26 emotion-27"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M14.9543 10.6781C15.1672 10.2014 14.5937 9.79573 14.1149 10.0038C13.3621 10.3309 12.5313 10.5123 11.6581 10.5123C8.25024 10.5123 5.48762 7.74964 5.48762 4.34178C5.48762 3.46865 5.66897 2.63787 5.99605 1.88507C6.20408 1.40628 5.79836 0.832829 5.32171 1.0457C2.77491 2.1831 1 4.73805 1 7.70756C1 11.735 4.26491 14.9999 8.29238 14.9999C11.2619 14.9999 13.8169 13.225 14.9543 10.6781Z"
+                    />
+                  </svg>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div
+            class="emotion-8 emotion-9 emotion-10"
+            data-checked="false"
+            data-disabled="false"
+            data-has-default-cursor="false"
+            data-has-label="true"
+            data-image="none"
+            data-testid="switch-button-right"
+            data-type="radio"
+            role="button"
+            tabindex="0"
+          >
+            <div
+              class="emotion-11 emotion-12"
+            >
+              <div
+                aria-disabled="false"
+                class="emotion-13 emotion-14 emotion-15"
+                data-checked="false"
+              >
+                <input
+                  aria-disabled="false"
+                  aria-invalid="false"
+                  class="emotion-16 emotion-17"
+                  id="«r24»"
+                  name="test"
+                  tabindex="-1"
+                  type="radio"
+                  value="right"
+                />
+                <svg
+                  class="emotion-18 emotion-19"
+                  viewBox="0 0 24 24"
+                >
+                  <g>
+                    <circle
+                      cx="12"
+                      cy="12"
+                      r="10"
+                      stroke-width="2"
+                    />
+                    <circle
+                      class="emotion-20 emotion-21"
+                      cx="12"
+                      cy="12"
+                      r="8"
+                    />
+                    <circle
+                      class="emotion-22 emotion-23"
+                      cx="12"
+                      cy="12"
+                      r="5"
+                    />
+                  </g>
+                </svg>
+                <label
+                  class="emotion-24 emotion-25"
+                  for="«r24»"
+                >
+                  <svg
+                    class="emotion-26 emotion-27"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M8 1C8.41421 1 8.75 1.33579 8.75 1.75V3.25C8.75 3.66421 8.41421 4 8 4C7.58579 4 7.25 3.66421 7.25 3.25V1.75C7.25 1.33579 7.58579 1 8 1Z"
+                    />
+                    <path
+                      d="M10.5 8C10.5 9.38071 9.38071 10.5 8 10.5C6.61929 10.5 5.5 9.38071 5.5 8C5.5 6.61929 6.61929 5.5 8 5.5C9.38071 5.5 10.5 6.61929 10.5 8Z"
+                    />
+                    <path
+                      d="M12.9498 4.11089C13.2427 3.81799 13.2427 3.34312 12.9498 3.05023C12.6569 2.75733 12.182 2.75733 11.8891 3.05023L10.8284 4.11089C10.5356 4.40378 10.5356 4.87865 10.8284 5.17155C11.1213 5.46444 11.5962 5.46444 11.8891 5.17155L12.9498 4.11089Z"
+                    />
+                    <path
+                      d="M15 8C15 8.41421 14.6642 8.75 14.25 8.75H12.75C12.3358 8.75 12 8.41421 12 8C12 7.58579 12.3358 7.25 12.75 7.25H14.25C14.6642 7.25 15 7.58579 15 8Z"
+                    />
+                    <path
+                      d="M11.8891 12.9498C12.182 13.2427 12.6569 13.2427 12.9498 12.9498C13.2427 12.6569 13.2427 12.182 12.9498 11.8891L11.8891 10.8284C11.5962 10.5356 11.1213 10.5356 10.8285 10.8284C10.5356 11.1213 10.5356 11.5962 10.8285 11.8891L11.8891 12.9498Z"
+                    />
+                    <path
+                      d="M8 12C8.41421 12 8.75 12.3358 8.75 12.75V14.25C8.75 14.6642 8.41421 15 8 15C7.58579 15 7.25 14.6642 7.25 14.25V12.75C7.25 12.3358 7.58579 12 8 12Z"
+                    />
+                    <path
+                      d="M5.17157 11.8891C5.46446 11.5962 5.46446 11.1213 5.17157 10.8284C4.87867 10.5355 4.4038 10.5355 4.11091 10.8284L3.05025 11.8891C2.75735 12.182 2.75735 12.6569 3.05025 12.9497C3.34314 13.2426 3.81801 13.2426 4.11091 12.9497L5.17157 11.8891Z"
+                    />
+                    <path
+                      d="M4 8C4 8.41421 3.66421 8.75 3.25 8.75H1.75C1.33579 8.75 1 8.41421 1 8C1 7.58579 1.33579 7.25 1.75 7.25H3.25C3.66421 7.25 4 7.58579 4 8Z"
+                    />
+                    <path
+                      d="M4.11091 5.17157C4.40381 5.46446 4.87868 5.46446 5.17157 5.17157C5.46447 4.87867 5.46447 4.4038 5.17157 4.11091L4.11091 3.05025C3.81802 2.75735 3.34315 2.75735 3.05025 3.05024C2.75736 3.34314 2.75736 3.81801 3.05025 4.11091L4.11091 5.17157Z"
+                    />
+                  </svg>
+                </label>
+              </div>
             </div>
           </div>
         </div>
@@ -1681,6 +5817,50 @@ exports[`SwitchButton > renders with tooltip 1`] = `
 }
 
 .emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.emotion-4 {
   border: 1px solid #d9dadd;
   border-radius: 0.25rem;
   padding: 0.25rem;
@@ -1692,23 +5872,74 @@ exports[`SwitchButton > renders with tooltip 1`] = `
   position: relative;
 }
 
-.emotion-2[data-size='small']>.emotion-4 {
+.emotion-4[data-size='small'] {
   height: 2.5rem;
 }
 
-.emotion-2[data-size='medium']>.emotion-4 {
+.emotion-4[data-size='medium'] {
   height: 3rem;
 }
 
-.emotion-5 {
+.emotion-4 {
+  border: 1px solid #d9dadd;
+  border-radius: 0.25rem;
+  padding: 0.25rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  gap: 0.5rem;
+  position: relative;
+}
+
+.emotion-4[data-size='small'] {
+  height: 2.5rem;
+}
+
+.emotion-4[data-size='medium'] {
+  height: 3rem;
+}
+
+.emotion-6 {
+  position: absolute;
+  height: calc(100% - 0.5rem);
+  border-radius: 0.25rem;
+  background: #8c40ef;
+  transform-origin: left center;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.emotion-6[data-sentiment='neutral'] {
+  background: #e9eaeb;
+}
+
+.emotion-6 {
+  position: absolute;
+  height: calc(100% - 0.5rem);
+  border-radius: 0.25rem;
+  background: #8c40ef;
+  transform-origin: left center;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.emotion-6[data-sentiment='neutral'] {
+  background: #e9eaeb;
+}
+
+.emotion-9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   -webkit-align-items: start;
   -webkit-box-align: start;
   -ms-flex-align: start;
@@ -1717,13 +5948,10 @@ exports[`SwitchButton > renders with tooltip 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
   position: relative;
   padding: 1rem;
   border-radius: 0.25rem;
@@ -1748,87 +5976,229 @@ exports[`SwitchButton > renders with tooltip 1`] = `
   transition: all 200ms ease-in-out;
   white-space: nowrap;
   background: transparent;
+  height: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
-.emotion-5[data-has-label='false']>:first-child {
+.emotion-9[data-has-label='false']>:first-child {
   margin-bottom: -0.25rem;
 }
 
-.emotion-5[data-has-default-cursor='true'] {
+.emotion-9[data-has-default-cursor='true'] {
   cursor: default;
 }
 
-.emotion-5[data-checked='true'] {
+.emotion-9[data-checked='true'] {
   border: 1px solid #8c40ef;
 }
 
-.emotion-5[data-error='true'] {
+.emotion-9[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-5[data-disabled='true'] {
+.emotion-9[data-disabled='true'] {
   border: 1px solid #e9eaeb;
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.emotion-5[data-image="illustration"] {
+.emotion-9[data-image="illustration"] {
   padding: 0rem;
 }
 
-.emotion-5[data-image="icon"] {
+.emotion-9[data-image="icon"] {
   padding: 0rem;
   padding-right: 1rem;
 }
 
-.emotion-5:hover:not([data-error='true']):not([data-disabled='true']),
-.emotion-5:active:not([data-error='true']):not([data-disabled='true']) {
+.emotion-9:hover:not([data-error='true']):not([data-disabled='true']),
+.emotion-9:active:not([data-error='true']):not([data-disabled='true']) {
   border: 1px solid #8c40ef;
 }
 
-.emotion-5:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.emotion-5:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
+.emotion-9:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
+.emotion-9:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
 
-.emotion-5[data-has-label='true'] .emotion-8,
-.emotion-5[data-has-label='true'] .eqr7bqq1 {
+.emotion-9[data-has-label='true'] .emotion-12,
+.emotion-9[data-has-label='true'] .eqr7bqq0 {
   width: 100%;
 }
 
-.emotion-5:hover,
-.emotion-5:active {
+.emotion-9:hover,
+.emotion-9:active {
   box-shadow: none;
   border: none;
 }
 
-.emotion-5:hover:not([data-error='true'][data-disabled='true']),
-.emotion-5:active:not([data-error='true'][data-disabled='true']) {
+.emotion-9:hover:not([data-error='true'][data-disabled='true']),
+.emotion-9:active:not([data-error='true'][data-disabled='true']) {
   border: none;
 }
 
-.emotion-5[data-checked='true'] {
+.emotion-9[data-checked='true'] {
   border: none;
 }
 
-.emotion-5[data-checked='true'] label {
+.emotion-9 label {
+  -webkit-transition: color 300ms;
+  transition: color 300ms;
+  color: #222638;
+}
+
+.emotion-9[data-checked='true'] label {
   color: #ffffff;
 }
 
-.emotion-5:not([data-checked='true']) label:hover {
+.emotion-9:not([data-checked='true']) label:hover {
   color: #641cb3;
 }
 
-.emotion-7 {
+.emotion-9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+  gap: 0.25rem;
+  position: relative;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
+  transition: border-color 200ms ease,box-shadow 200ms ease;
+  cursor: pointer;
+  background: #ffffff;
+  border: 1px solid #d9dadd;
+  color: #3f4250;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  white-space: nowrap;
+  background: transparent;
+  height: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-9[data-has-label='false']>:first-child {
+  margin-bottom: -0.25rem;
+}
+
+.emotion-9[data-has-default-cursor='true'] {
+  cursor: default;
+}
+
+.emotion-9[data-checked='true'] {
+  border: 1px solid #8c40ef;
+}
+
+.emotion-9[data-error='true'] {
+  border: 1px solid #b3144d;
+}
+
+.emotion-9[data-disabled='true'] {
+  border: 1px solid #e9eaeb;
+  color: #b5b7bd;
+  background: #f3f3f4;
+  cursor: not-allowed;
+}
+
+.emotion-9[data-image="illustration"] {
+  padding: 0rem;
+}
+
+.emotion-9[data-image="icon"] {
+  padding: 0rem;
+  padding-right: 1rem;
+}
+
+.emotion-9:hover:not([data-error='true']):not([data-disabled='true']),
+.emotion-9:active:not([data-error='true']):not([data-disabled='true']) {
+  border: 1px solid #8c40ef;
+}
+
+.emotion-9:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
+.emotion-9:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
+  box-shadow: 0px 4px 16px 4px #f6f3ffcc;
+}
+
+.emotion-9[data-has-label='true'] .emotion-12,
+.emotion-9[data-has-label='true'] .eqr7bqq0 {
+  width: 100%;
+}
+
+.emotion-9:hover,
+.emotion-9:active {
+  box-shadow: none;
+  border: none;
+}
+
+.emotion-9:hover:not([data-error='true'][data-disabled='true']),
+.emotion-9:active:not([data-error='true'][data-disabled='true']) {
+  border: none;
+}
+
+.emotion-9[data-checked='true'] {
+  border: none;
+}
+
+.emotion-9 label {
+  -webkit-transition: color 300ms;
+  transition: color 300ms;
+  color: #222638;
+}
+
+.emotion-9[data-checked='true'] label {
+  color: #ffffff;
+}
+
+.emotion-9:not([data-checked='true']) label:hover {
+  color: #641cb3;
+}
+
+.emotion-11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -1837,13 +6207,36 @@ exports[`SwitchButton > renders with tooltip 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.emotion-11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-flex-wrap: nowrap;
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
-.emotion-10 {
+.emotion-14 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1867,104 +6260,225 @@ exports[`SwitchButton > renders with tooltip 1`] = `
   align-items: start;
 }
 
-.emotion-10[aria-disabled='false'],
-.emotion-10[aria-disabled='false']>label {
+.emotion-14[aria-disabled='false'],
+.emotion-14[aria-disabled='false']>label {
   cursor: pointer;
 }
 
-.emotion-10:hover[aria-disabled='false'] .emotion-13+.emotion-15 {
+.emotion-14:hover[aria-disabled='false'] .emotion-17+.emotion-19 {
   fill: #8c40ef;
 }
 
-.emotion-10:hover[aria-disabled='false'] .emotion-13+.emotion-15 .emotion-17 {
+.emotion-14:hover[aria-disabled='false'] .emotion-17+.emotion-19 .emotion-21 {
   fill: #e5dbfd;
 }
 
-.emotion-10:hover[aria-disabled='false'] .emotion-13[aria-invalid='true']+.emotion-15 {
+.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='true']+.emotion-19 {
   fill: #b3144d;
 }
 
-.emotion-10:hover[aria-disabled='false'] .emotion-13[aria-invalid='true']+.emotion-15 .emotion-17 {
+.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='true']+.emotion-19 .emotion-21 {
   fill: #ffd3e3;
 }
 
-.emotion-10[aria-disabled='true'] {
+.emotion-14[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.emotion-10[aria-disabled='true']>label,
-.emotion-10[aria-disabled='true'] .emotion-13 {
+.emotion-14[aria-disabled='true']>label,
+.emotion-14[aria-disabled='true'] .emotion-17 {
   cursor: not-allowed;
 }
 
-.emotion-10[aria-disabled='true'] .emotion-15 {
+.emotion-14[aria-disabled='true'] .emotion-19 {
   fill: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-10[aria-disabled='true'] .emotion-15 .emotion-17 {
+.emotion-14[aria-disabled='true'] .emotion-19 .emotion-21 {
   fill: #f3f3f4;
 }
 
-.emotion-10[data-checked='true'] {
+.emotion-14[data-checked='true'] {
   color: #641cb3;
 }
 
-.emotion-10[data-error='true'] {
+.emotion-14[data-error='true'] {
   color: #b3144d;
 }
 
-.emotion-10[aria-disabled='true'] {
+.emotion-14[aria-disabled='true'] {
   color: #b5b7bd;
 }
 
-.emotion-10 input+svg {
+.emotion-14 input+svg {
   display: none;
 }
 
-.emotion-10:hover[aria-disabled='false']:not([data-checked='true']) .emotion-13+.emotion-15 {
+.emotion-14:hover[aria-disabled='false']:not([data-checked='true']) .emotion-17+.emotion-19 {
   fill: #d9dadd;
 }
 
-.emotion-10:hover[aria-disabled='false']:not([data-checked='true']) .emotion-13+.emotion-15 .emotion-17 {
+.emotion-14:hover[aria-disabled='false']:not([data-checked='true']) .emotion-17+.emotion-19 .emotion-21 {
   fill: #ffffff;
 }
 
-.emotion-10:hover[aria-disabled='false']:not([data-checked='true']) .emotion-13[aria-invalid='true']+.emotion-15 {
+.emotion-14:hover[aria-disabled='false']:not([data-checked='true']) .emotion-17[aria-invalid='true']+.emotion-19 {
   fill: #b3144d;
 }
 
-.emotion-10:hover[aria-disabled='false']:not([data-checked='true']) .emotion-13[aria-invalid='true']+.emotion-15 .emotion-17 {
+.emotion-14:hover[aria-disabled='false']:not([data-checked='true']) .emotion-17[aria-invalid='true']+.emotion-19 .emotion-21 {
   fill: #ffffff;
 }
 
-.emotion-10:hover[aria-disabled='false'] .emotion-13+.emotion-15 {
+.emotion-14:hover[aria-disabled='false'] .emotion-17+.emotion-19 {
   fill: #8c40ef;
 }
 
-.emotion-10:hover[aria-disabled='false'] .emotion-13+.emotion-15 .emotion-17 {
+.emotion-14:hover[aria-disabled='false'] .emotion-17+.emotion-19 .emotion-21 {
   fill: #ffffff;
 }
 
-.emotion-10:hover[aria-disabled='false'] .emotion-13[aria-invalid='true']+.emotion-15 {
+.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='true']+.emotion-19 {
   fill: #b3144d;
 }
 
-.emotion-10:hover[aria-disabled='false'] .emotion-13[aria-invalid='true']+.emotion-15 .emotion-17 {
+.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='true']+.emotion-19 .emotion-21 {
   fill: #ffffff;
 }
 
-.emotion-10 .emotion-13[aria-disabled='false']:active+.emotion-15 {
+.emotion-14 .emotion-17[aria-disabled='false']:active+.emotion-19 {
   background: none;
   fill: #8c40ef;
 }
 
-.emotion-10 .emotion-13[aria-disabled='false']:active+.emotion-15 .emotion-17 {
+.emotion-14 .emotion-17[aria-disabled='false']:active+.emotion-19 .emotion-21 {
   fill: #ffffff;
 }
 
-.emotion-12 {
+.emotion-14 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  gap: 0.5rem;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+}
+
+.emotion-14[aria-disabled='false'],
+.emotion-14[aria-disabled='false']>label {
+  cursor: pointer;
+}
+
+.emotion-14:hover[aria-disabled='false'] .emotion-17+.emotion-19 {
+  fill: #8c40ef;
+}
+
+.emotion-14:hover[aria-disabled='false'] .emotion-17+.emotion-19 .emotion-21 {
+  fill: #e5dbfd;
+}
+
+.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='true']+.emotion-19 {
+  fill: #b3144d;
+}
+
+.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='true']+.emotion-19 .emotion-21 {
+  fill: #ffd3e3;
+}
+
+.emotion-14[aria-disabled='true'] {
+  cursor: not-allowed;
+  color: #b5b7bd;
+}
+
+.emotion-14[aria-disabled='true']>label,
+.emotion-14[aria-disabled='true'] .emotion-17 {
+  cursor: not-allowed;
+}
+
+.emotion-14[aria-disabled='true'] .emotion-19 {
+  fill: #e9eaeb;
+  cursor: not-allowed;
+}
+
+.emotion-14[aria-disabled='true'] .emotion-19 .emotion-21 {
+  fill: #f3f3f4;
+}
+
+.emotion-14[data-checked='true'] {
+  color: #641cb3;
+}
+
+.emotion-14[data-error='true'] {
+  color: #b3144d;
+}
+
+.emotion-14[aria-disabled='true'] {
+  color: #b5b7bd;
+}
+
+.emotion-14 input+svg {
+  display: none;
+}
+
+.emotion-14:hover[aria-disabled='false']:not([data-checked='true']) .emotion-17+.emotion-19 {
+  fill: #d9dadd;
+}
+
+.emotion-14:hover[aria-disabled='false']:not([data-checked='true']) .emotion-17+.emotion-19 .emotion-21 {
+  fill: #ffffff;
+}
+
+.emotion-14:hover[aria-disabled='false']:not([data-checked='true']) .emotion-17[aria-invalid='true']+.emotion-19 {
+  fill: #b3144d;
+}
+
+.emotion-14:hover[aria-disabled='false']:not([data-checked='true']) .emotion-17[aria-invalid='true']+.emotion-19 .emotion-21 {
+  fill: #ffffff;
+}
+
+.emotion-14:hover[aria-disabled='false'] .emotion-17+.emotion-19 {
+  fill: #8c40ef;
+}
+
+.emotion-14:hover[aria-disabled='false'] .emotion-17+.emotion-19 .emotion-21 {
+  fill: #ffffff;
+}
+
+.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='true']+.emotion-19 {
+  fill: #b3144d;
+}
+
+.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='true']+.emotion-19 .emotion-21 {
+  fill: #ffffff;
+}
+
+.emotion-14 .emotion-17[aria-disabled='false']:active+.emotion-19 {
+  background: none;
+  fill: #8c40ef;
+}
+
+.emotion-14 .emotion-17[aria-disabled='false']:active+.emotion-19 .emotion-21 {
+  fill: #ffffff;
+}
+
+.emotion-16 {
   cursor: pointer;
   position: absolute;
   height: 1.5rem;
@@ -1974,7 +6488,7 @@ exports[`SwitchButton > renders with tooltip 1`] = `
   border-width: 0;
 }
 
-.emotion-12+.emotion-15 .emotion-19 {
+.emotion-16+.emotion-19 .emotion-23 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -1984,48 +6498,109 @@ exports[`SwitchButton > renders with tooltip 1`] = `
   transform: scale(0);
 }
 
-.emotion-12:checked+svg .emotion-19 {
+.emotion-16:checked+svg .emotion-23 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.emotion-12:checked[aria-disabled='false'][aria-invalid='false']+.emotion-15 {
+.emotion-16:checked[aria-disabled='false'][aria-invalid='false']+.emotion-19 {
   fill: #8c40ef;
 }
 
-.emotion-12:checked[aria-disabled='true'][aria-invalid='false']+.emotion-15 {
+.emotion-16:checked[aria-disabled='true'][aria-invalid='false']+.emotion-19 {
   fill: #d8c5fc;
 }
 
-.emotion-12[aria-invalid='true']:not([aria-disabled='true'])+.emotion-15 {
+.emotion-16[aria-invalid='true']:not([aria-disabled='true'])+.emotion-19 {
   fill: #e51963;
 }
 
-.emotion-12[aria-disabled='false']:active+.emotion-15 {
+.emotion-16[aria-disabled='false']:active+.emotion-19 {
   background-color: #5e127e40;
   fill: #8c40ef;
 }
 
-.emotion-12[aria-disabled='false']:active+.emotion-15 .emotion-17 {
+.emotion-16[aria-disabled='false']:active+.emotion-19 .emotion-21 {
   fill: #f1eefc;
 }
 
-.emotion-12[aria-disabled='false']:focus-visible+.emotion-15 {
+.emotion-16[aria-disabled='false']:focus-visible+.emotion-19 {
   outline: -webkit-focus-ring-color auto 1px;
 }
 
-.emotion-12[aria-invalid='true']:focus+.emotion-15 {
+.emotion-16[aria-invalid='true']:focus+.emotion-19 {
   background-color: #f91b6c40;
   fill: #e51963;
 }
 
-.emotion-12[aria-invalid='true']:focus+.emotion-15 .emotion-17 {
+.emotion-16[aria-invalid='true']:focus+.emotion-19 .emotion-21 {
   fill: #ffebf2;
 }
 
-.emotion-14 {
+.emotion-16 {
+  cursor: pointer;
+  position: absolute;
+  height: 1.5rem;
+  width: 1.5rem;
+  opacity: 0;
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.emotion-16+.emotion-19 .emotion-23 {
+  transform-origin: center;
+  -webkit-transition: 200ms -webkit-transform ease-in-out;
+  transition: 200ms transform ease-in-out;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+}
+
+.emotion-16:checked+svg .emotion-23 {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.emotion-16:checked[aria-disabled='false'][aria-invalid='false']+.emotion-19 {
+  fill: #8c40ef;
+}
+
+.emotion-16:checked[aria-disabled='true'][aria-invalid='false']+.emotion-19 {
+  fill: #d8c5fc;
+}
+
+.emotion-16[aria-invalid='true']:not([aria-disabled='true'])+.emotion-19 {
+  fill: #e51963;
+}
+
+.emotion-16[aria-disabled='false']:active+.emotion-19 {
+  background-color: #5e127e40;
+  fill: #8c40ef;
+}
+
+.emotion-16[aria-disabled='false']:active+.emotion-19 .emotion-21 {
+  fill: #f1eefc;
+}
+
+.emotion-16[aria-disabled='false']:focus-visible+.emotion-19 {
+  outline: -webkit-focus-ring-color auto 1px;
+}
+
+.emotion-16[aria-invalid='true']:focus+.emotion-19 {
+  background-color: #f91b6c40;
+  fill: #e51963;
+}
+
+.emotion-16[aria-invalid='true']:focus+.emotion-19 .emotion-21 {
+  fill: #ffebf2;
+}
+
+.emotion-18 {
   height: 1.5rem;
   width: 1.5rem;
   min-width: 1.5rem;
@@ -2034,13 +6609,41 @@ exports[`SwitchButton > renders with tooltip 1`] = `
   fill: #d9dadd;
 }
 
-.emotion-14 .emotion-17 {
+.emotion-18 .emotion-21 {
   fill: #ffffff;
 }
 
-.emotion-21 {
+.emotion-18 {
+  height: 1.5rem;
+  width: 1.5rem;
+  min-width: 1.5rem;
+  min-height: 1.5rem;
+  border-radius: 100%;
+  fill: #d9dadd;
+}
+
+.emotion-18 .emotion-21 {
+  fill: #ffffff;
+}
+
+.emotion-25 {
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  cursor: pointer;
+}
+
+.emotion-25 {
+  font-size: 1rem;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -2057,49 +6660,56 @@ exports[`SwitchButton > renders with tooltip 1`] = `
     data-testid="testing"
   >
     <div
-      aria-controls="«rr»"
-      aria-describedby="«rr»"
+      aria-controls="«r14»"
+      aria-describedby="«r14»"
       class="emotion-0 emotion-1"
       tabindex="0"
     >
       <div
-        style="display: inline-flex;"
+        class="emotion-2 emotion-3"
       >
         <div
-          class="emotion-2 emotion-3"
+          class="emotion-4 emotion-5"
           data-size="small"
         >
           <div
-            class="emotion-4 emotion-5 emotion-6"
-            data-checked="false"
+            class="emotion-6 emotion-7"
+            data-sentiment="primary"
+            style="width: 100px; left: 0px;"
+          />
+          <div
+            class="emotion-8 emotion-9 emotion-10"
+            data-checked="true"
             data-disabled="false"
             data-has-default-cursor="false"
             data-has-label="true"
             data-image="none"
+            data-testid="switch-button-left"
             data-type="radio"
             role="button"
             tabindex="0"
           >
             <div
-              class="emotion-7 emotion-8"
+              class="emotion-11 emotion-12"
             >
               <div
                 aria-disabled="false"
-                class="emotion-9 emotion-10 emotion-11"
-                data-checked="false"
+                class="emotion-13 emotion-14 emotion-15"
+                data-checked="true"
               >
                 <input
                   aria-disabled="false"
                   aria-invalid="false"
-                  class="emotion-12 emotion-13"
-                  id="«rt»"
+                  checked=""
+                  class="emotion-16 emotion-17"
+                  id="«r16»"
                   name="test"
                   tabindex="-1"
                   type="radio"
                   value="left"
                 />
                 <svg
-                  class="emotion-14 emotion-15"
+                  class="emotion-18 emotion-19"
                   viewBox="0 0 24 24"
                 >
                   <g>
@@ -2110,13 +6720,13 @@ exports[`SwitchButton > renders with tooltip 1`] = `
                       stroke-width="2"
                     />
                     <circle
-                      class="emotion-16 emotion-17"
+                      class="emotion-20 emotion-21"
                       cx="12"
                       cy="12"
                       r="8"
                     />
                     <circle
-                      class="emotion-18 emotion-19"
+                      class="emotion-22 emotion-23"
                       cx="12"
                       cy="12"
                       r="5"
@@ -2124,8 +6734,8 @@ exports[`SwitchButton > renders with tooltip 1`] = `
                   </g>
                 </svg>
                 <label
-                  class="emotion-20 emotion-21 emotion-22"
-                  for="«rt»"
+                  class="emotion-24 emotion-25 emotion-26"
+                  for="«r16»"
                 >
                   Left
                 </label>
@@ -2133,37 +6743,37 @@ exports[`SwitchButton > renders with tooltip 1`] = `
             </div>
           </div>
           <div
-            class="emotion-4 emotion-5 emotion-6"
-            data-checked="true"
+            class="emotion-8 emotion-9 emotion-10"
+            data-checked="false"
             data-disabled="false"
             data-has-default-cursor="false"
             data-has-label="true"
             data-image="none"
+            data-testid="switch-button-right"
             data-type="radio"
             role="button"
             tabindex="0"
           >
             <div
-              class="emotion-7 emotion-8"
+              class="emotion-11 emotion-12"
             >
               <div
                 aria-disabled="false"
-                class="emotion-9 emotion-10 emotion-11"
-                data-checked="true"
+                class="emotion-13 emotion-14 emotion-15"
+                data-checked="false"
               >
                 <input
                   aria-disabled="false"
                   aria-invalid="false"
-                  checked=""
-                  class="emotion-12 emotion-13"
-                  id="«r11»"
+                  class="emotion-16 emotion-17"
+                  id="«r1a»"
                   name="test"
                   tabindex="-1"
                   type="radio"
                   value="right"
                 />
                 <svg
-                  class="emotion-14 emotion-15"
+                  class="emotion-18 emotion-19"
                   viewBox="0 0 24 24"
                 >
                   <g>
@@ -2174,13 +6784,13 @@ exports[`SwitchButton > renders with tooltip 1`] = `
                       stroke-width="2"
                     />
                     <circle
-                      class="emotion-16 emotion-17"
+                      class="emotion-20 emotion-21"
                       cx="12"
                       cy="12"
                       r="8"
                     />
                     <circle
-                      class="emotion-18 emotion-19"
+                      class="emotion-22 emotion-23"
                       cx="12"
                       cy="12"
                       r="5"
@@ -2188,8 +6798,8 @@ exports[`SwitchButton > renders with tooltip 1`] = `
                   </g>
                 </svg>
                 <label
-                  class="emotion-20 emotion-21 emotion-22"
-                  for="«r11»"
+                  class="emotion-24 emotion-25 emotion-26"
+                  for="«r1a»"
                 >
                   Right
                 </label>

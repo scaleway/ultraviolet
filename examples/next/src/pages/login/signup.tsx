@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import {
-  DateField,
+  DateInputField,
   Form,
   RadioGroupField,
   Submit,
@@ -94,7 +94,7 @@ const SignUp = () => {
         onSubmit={handleSubmit}
       >
         <Stack gap={1} alignItems="center">
-          <ProfileIcon size="1.7em" />
+          <ProfileIcon size="small" />
           <Text as="div" placement="center" variant="heading">
             Sign up form
           </Text>
@@ -119,7 +119,7 @@ const SignUp = () => {
                 className="inputs"
               />
             </Stack>
-            <DateField
+            <DateInputField
               name="birthdate"
               label="Birth Date"
               required

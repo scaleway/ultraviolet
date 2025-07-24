@@ -3,6 +3,7 @@
 import type { Theme } from '@emotion/react'
 import { ClassNames, css, useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
+import { CloseIcon } from '@ultraviolet/icons'
 import type { ReactNode } from 'react'
 import type { ToastOptions } from 'react-toastify'
 import {
@@ -37,12 +38,6 @@ const styles = {
 
     &${PREFIX}__toast--success {
       background-color: ${theme.colors.neutral.backgroundStronger};
-      color: ${theme.colors.neutral.textStronger};
-      padding: ${theme.space['2']};
-    }
-
-    &${PREFIX}__toast--info {
-      background-color: ${theme.colors.info.backgroundStrong};
       color: ${theme.colors.neutral.textStronger};
       padding: ${theme.space['2']};
     }
@@ -84,11 +79,12 @@ const CloseButton = ({
 }: CloseButtonProps) => (
   <StyledButton
     aria-label="close"
-    icon="close"
     onClick={closeToast}
     sentiment={sentiment}
     size="xsmall"
-  />
+  >
+    <CloseIcon />
+  </StyledButton>
 )
 
 type ContentProps = {
@@ -116,19 +112,6 @@ export const toast = {
     baseToast.error(<Content>{children}</Content>, {
       ...options,
       closeButton: <CloseButton sentiment="danger" />,
-      containerId: containerId ?? 'toaster',
-    }),
-  /**
-   * @deprecated "Deprecated, please use another variant instead"
-   */
-  info: (
-    children: ReactNode,
-    options?: ToastOptions,
-    containerId?: string,
-  ): number | string =>
-    baseToast.info(<Content>{children}</Content>, {
-      ...options,
-      closeButton: <CloseButton sentiment="info" />,
       containerId: containerId ?? 'toaster',
     }),
 

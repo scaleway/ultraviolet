@@ -18,7 +18,6 @@ exports[`List > Should expand a row by pressing Space 1`] = `
   width: 100%;
   box-sizing: content-box;
   gap: 0.5rem;
-  border-collapse: collapsed;
   border-spacing: 0 1rem;
   position: relative;
 }
@@ -27,7 +26,6 @@ exports[`List > Should expand a row by pressing Space 1`] = `
   width: 100%;
   box-sizing: content-box;
   gap: 0.5rem;
-  border-collapse: collapsed;
   border-spacing: 0 1rem;
   position: relative;
 }
@@ -38,47 +36,19 @@ exports[`List > Should expand a row by pressing Space 1`] = `
   padding: 0 1rem;
 }
 
-.emotion-4:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border: 1px solid transparent;
-  border-radius: 0.25rem;
-  pointer-events: none;
-  -webkit-transition: box-shadow 200ms ease,border-color 200ms ease;
-  transition: box-shadow 200ms ease,border-color 200ms ease;
-}
-
 .emotion-4 {
   display: table-row;
   vertical-align: middle;
   padding: 0 1rem;
 }
 
-.emotion-4:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border: 1px solid transparent;
-  border-radius: 0.25rem;
-  pointer-events: none;
-  -webkit-transition: box-shadow 200ms ease,border-color 200ms ease;
-  transition: box-shadow 200ms ease,border-color 200ms ease;
-}
-
 .emotion-6 {
   display: table-cell;
   text-align: left;
   vertical-align: middle;
   font-size: 0.875rem;
   font-weight: 400;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   color: #3f4250;
   gap: 0.5rem;
   padding: 0 1rem;
@@ -102,7 +72,7 @@ exports[`List > Should expand a row by pressing Space 1`] = `
   vertical-align: middle;
   font-size: 0.875rem;
   font-weight: 400;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   color: #3f4250;
   gap: 0.5rem;
   padding: 0 1rem;
@@ -125,10 +95,10 @@ exports[`List > Should expand a row by pressing Space 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -137,10 +107,10 @@ exports[`List > Should expand a row by pressing Space 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.5rem;
 }
 
 .emotion-8 {
@@ -148,10 +118,10 @@ exports[`List > Should expand a row by pressing Space 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -160,10 +130,10 @@ exports[`List > Should expand a row by pressing Space 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.5rem;
 }
 
 .emotion-26 {
@@ -187,31 +157,50 @@ exports[`List > Should expand a row by pressing Space 1`] = `
   cursor: pointer;
 }
 
-.emotion-26:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-  pointer-events: none;
+.emotion-26 td,
+.emotion-26 td:first-child,
+.emotion-26 td:last-child {
   -webkit-transition: box-shadow 200ms ease,border-color 200ms ease;
   transition: box-shadow 200ms ease,border-color 200ms ease;
 }
 
-.emotion-26:not([aria-disabled='true']):hover::before {
+.emotion-26 td {
+  border-top: 1px solid #d9dadd;
+  border-bottom: 1px solid #d9dadd;
+}
+
+.emotion-26 td:first-child {
+  border-left: 1px solid #d9dadd;
+  border-radius: 0.25rem 0 0 0.25rem;
+}
+
+.emotion-26 td:last-child {
+  border-right: 1px solid #d9dadd;
+  border-radius: 0 0.25rem 0.25rem 0;
+}
+
+.emotion-26:not([aria-disabled='true']):hover td,
+.emotion-26:not([aria-disabled='true']):hover td:first-child,
+.emotion-26:not([aria-disabled='true']):hover td:last-child {
   border-color: #8c40ef;
 }
 
-.emotion-26:not([aria-disabled='true']):hover+.ei4uyz15:before {
+.emotion-26:not([aria-disabled='true']):hover+.ei4uyz15 td {
   border-color: #8c40ef;
 }
 
-.emotion-26[aria-expanded='true']:before {
-  border-radius: 0.25rem 0.25rem 0 0;
+.emotion-26[aria-expanded='true'] td {
   border-bottom-color: #d9dadd;
+}
+
+.emotion-26[aria-expanded='true'] td:first-child {
+  border-left: 1px solid #d9dadd;
+  border-radius: 0.25rem 0 0 0;
+}
+
+.emotion-26[aria-expanded='true'] td:last-child {
+  border-right: 1px solid #d9dadd;
+  border-radius: 0 0.25rem 0 0;
 }
 
 .emotion-26 [data-expandable-content] {
@@ -224,8 +213,13 @@ exports[`List > Should expand a row by pressing Space 1`] = `
 }
 
 .emotion-26[data-highlight='true'] {
-  border-color: #8c40ef;
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
+}
+
+.emotion-26[data-highlight='true'] td,
+.emotion-26[data-highlight='true'] td:first-child,
+.emotion-26[data-highlight='true'] td:last-child {
+  border-color: #8c40ef;
 }
 
 .emotion-26[aria-disabled='true'] {
@@ -255,31 +249,50 @@ exports[`List > Should expand a row by pressing Space 1`] = `
   cursor: pointer;
 }
 
-.emotion-26:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-  pointer-events: none;
+.emotion-26 td,
+.emotion-26 td:first-child,
+.emotion-26 td:last-child {
   -webkit-transition: box-shadow 200ms ease,border-color 200ms ease;
   transition: box-shadow 200ms ease,border-color 200ms ease;
 }
 
-.emotion-26:not([aria-disabled='true']):hover::before {
+.emotion-26 td {
+  border-top: 1px solid #d9dadd;
+  border-bottom: 1px solid #d9dadd;
+}
+
+.emotion-26 td:first-child {
+  border-left: 1px solid #d9dadd;
+  border-radius: 0.25rem 0 0 0.25rem;
+}
+
+.emotion-26 td:last-child {
+  border-right: 1px solid #d9dadd;
+  border-radius: 0 0.25rem 0.25rem 0;
+}
+
+.emotion-26:not([aria-disabled='true']):hover td,
+.emotion-26:not([aria-disabled='true']):hover td:first-child,
+.emotion-26:not([aria-disabled='true']):hover td:last-child {
   border-color: #8c40ef;
 }
 
-.emotion-26:not([aria-disabled='true']):hover+.ei4uyz15:before {
+.emotion-26:not([aria-disabled='true']):hover+.ei4uyz15 td {
   border-color: #8c40ef;
 }
 
-.emotion-26[aria-expanded='true']:before {
-  border-radius: 0.25rem 0.25rem 0 0;
+.emotion-26[aria-expanded='true'] td {
   border-bottom-color: #d9dadd;
+}
+
+.emotion-26[aria-expanded='true'] td:first-child {
+  border-left: 1px solid #d9dadd;
+  border-radius: 0.25rem 0 0 0;
+}
+
+.emotion-26[aria-expanded='true'] td:last-child {
+  border-right: 1px solid #d9dadd;
+  border-radius: 0 0.25rem 0 0;
 }
 
 .emotion-26 [data-expandable-content] {
@@ -292,8 +305,13 @@ exports[`List > Should expand a row by pressing Space 1`] = `
 }
 
 .emotion-26[data-highlight='true'] {
-  border-color: #8c40ef;
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
+}
+
+.emotion-26[data-highlight='true'] td,
+.emotion-26[data-highlight='true'] td:first-child,
+.emotion-26[data-highlight='true'] td:last-child {
+  border-color: #8c40ef;
 }
 
 .emotion-26[aria-disabled='true'] {
@@ -728,7 +746,6 @@ exports[`List > Should not collapse a row by clicking on expandable content 1`] 
   width: 100%;
   box-sizing: content-box;
   gap: 0.5rem;
-  border-collapse: collapsed;
   border-spacing: 0 1rem;
   position: relative;
 }
@@ -737,7 +754,6 @@ exports[`List > Should not collapse a row by clicking on expandable content 1`] 
   width: 100%;
   box-sizing: content-box;
   gap: 0.5rem;
-  border-collapse: collapsed;
   border-spacing: 0 1rem;
   position: relative;
 }
@@ -748,47 +764,19 @@ exports[`List > Should not collapse a row by clicking on expandable content 1`] 
   padding: 0 1rem;
 }
 
-.emotion-4:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border: 1px solid transparent;
-  border-radius: 0.25rem;
-  pointer-events: none;
-  -webkit-transition: box-shadow 200ms ease,border-color 200ms ease;
-  transition: box-shadow 200ms ease,border-color 200ms ease;
-}
-
 .emotion-4 {
   display: table-row;
   vertical-align: middle;
   padding: 0 1rem;
 }
 
-.emotion-4:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border: 1px solid transparent;
-  border-radius: 0.25rem;
-  pointer-events: none;
-  -webkit-transition: box-shadow 200ms ease,border-color 200ms ease;
-  transition: box-shadow 200ms ease,border-color 200ms ease;
-}
-
 .emotion-6 {
   display: table-cell;
   text-align: left;
   vertical-align: middle;
   font-size: 0.875rem;
   font-weight: 400;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   color: #3f4250;
   gap: 0.5rem;
   padding: 0 1rem;
@@ -812,7 +800,7 @@ exports[`List > Should not collapse a row by clicking on expandable content 1`] 
   vertical-align: middle;
   font-size: 0.875rem;
   font-weight: 400;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   color: #3f4250;
   gap: 0.5rem;
   padding: 0 1rem;
@@ -835,10 +823,10 @@ exports[`List > Should not collapse a row by clicking on expandable content 1`] 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -847,10 +835,10 @@ exports[`List > Should not collapse a row by clicking on expandable content 1`] 
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.5rem;
 }
 
 .emotion-8 {
@@ -858,10 +846,10 @@ exports[`List > Should not collapse a row by clicking on expandable content 1`] 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -870,10 +858,10 @@ exports[`List > Should not collapse a row by clicking on expandable content 1`] 
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.5rem;
 }
 
 .emotion-26 {
@@ -897,31 +885,50 @@ exports[`List > Should not collapse a row by clicking on expandable content 1`] 
   cursor: pointer;
 }
 
-.emotion-26:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-  pointer-events: none;
+.emotion-26 td,
+.emotion-26 td:first-child,
+.emotion-26 td:last-child {
   -webkit-transition: box-shadow 200ms ease,border-color 200ms ease;
   transition: box-shadow 200ms ease,border-color 200ms ease;
 }
 
-.emotion-26:not([aria-disabled='true']):hover::before {
+.emotion-26 td {
+  border-top: 1px solid #d9dadd;
+  border-bottom: 1px solid #d9dadd;
+}
+
+.emotion-26 td:first-child {
+  border-left: 1px solid #d9dadd;
+  border-radius: 0.25rem 0 0 0.25rem;
+}
+
+.emotion-26 td:last-child {
+  border-right: 1px solid #d9dadd;
+  border-radius: 0 0.25rem 0.25rem 0;
+}
+
+.emotion-26:not([aria-disabled='true']):hover td,
+.emotion-26:not([aria-disabled='true']):hover td:first-child,
+.emotion-26:not([aria-disabled='true']):hover td:last-child {
   border-color: #8c40ef;
 }
 
-.emotion-26:not([aria-disabled='true']):hover+.emotion-39:before {
+.emotion-26:not([aria-disabled='true']):hover+.emotion-39 td {
   border-color: #8c40ef;
 }
 
-.emotion-26[aria-expanded='true']:before {
-  border-radius: 0.25rem 0.25rem 0 0;
+.emotion-26[aria-expanded='true'] td {
   border-bottom-color: #d9dadd;
+}
+
+.emotion-26[aria-expanded='true'] td:first-child {
+  border-left: 1px solid #d9dadd;
+  border-radius: 0.25rem 0 0 0;
+}
+
+.emotion-26[aria-expanded='true'] td:last-child {
+  border-right: 1px solid #d9dadd;
+  border-radius: 0 0.25rem 0 0;
 }
 
 .emotion-26 [data-expandable-content] {
@@ -934,8 +941,13 @@ exports[`List > Should not collapse a row by clicking on expandable content 1`] 
 }
 
 .emotion-26[data-highlight='true'] {
-  border-color: #8c40ef;
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
+}
+
+.emotion-26[data-highlight='true'] td,
+.emotion-26[data-highlight='true'] td:first-child,
+.emotion-26[data-highlight='true'] td:last-child {
+  border-color: #8c40ef;
 }
 
 .emotion-26[aria-disabled='true'] {
@@ -965,31 +977,50 @@ exports[`List > Should not collapse a row by clicking on expandable content 1`] 
   cursor: pointer;
 }
 
-.emotion-26:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-  pointer-events: none;
+.emotion-26 td,
+.emotion-26 td:first-child,
+.emotion-26 td:last-child {
   -webkit-transition: box-shadow 200ms ease,border-color 200ms ease;
   transition: box-shadow 200ms ease,border-color 200ms ease;
 }
 
-.emotion-26:not([aria-disabled='true']):hover::before {
+.emotion-26 td {
+  border-top: 1px solid #d9dadd;
+  border-bottom: 1px solid #d9dadd;
+}
+
+.emotion-26 td:first-child {
+  border-left: 1px solid #d9dadd;
+  border-radius: 0.25rem 0 0 0.25rem;
+}
+
+.emotion-26 td:last-child {
+  border-right: 1px solid #d9dadd;
+  border-radius: 0 0.25rem 0.25rem 0;
+}
+
+.emotion-26:not([aria-disabled='true']):hover td,
+.emotion-26:not([aria-disabled='true']):hover td:first-child,
+.emotion-26:not([aria-disabled='true']):hover td:last-child {
   border-color: #8c40ef;
 }
 
-.emotion-26:not([aria-disabled='true']):hover+.emotion-39:before {
+.emotion-26:not([aria-disabled='true']):hover+.emotion-39 td {
   border-color: #8c40ef;
 }
 
-.emotion-26[aria-expanded='true']:before {
-  border-radius: 0.25rem 0.25rem 0 0;
+.emotion-26[aria-expanded='true'] td {
   border-bottom-color: #d9dadd;
+}
+
+.emotion-26[aria-expanded='true'] td:first-child {
+  border-left: 1px solid #d9dadd;
+  border-radius: 0.25rem 0 0 0;
+}
+
+.emotion-26[aria-expanded='true'] td:last-child {
+  border-right: 1px solid #d9dadd;
+  border-radius: 0 0.25rem 0 0;
 }
 
 .emotion-26 [data-expandable-content] {
@@ -1002,8 +1033,13 @@ exports[`List > Should not collapse a row by clicking on expandable content 1`] 
 }
 
 .emotion-26[data-highlight='true'] {
-  border-color: #8c40ef;
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
+}
+
+.emotion-26[data-highlight='true'] td,
+.emotion-26[data-highlight='true'] td:first-child,
+.emotion-26[data-highlight='true'] td:last-child {
+  border-color: #8c40ef;
 }
 
 .emotion-26[aria-disabled='true'] {
@@ -1040,19 +1076,21 @@ exports[`List > Should not collapse a row by clicking on expandable content 1`] 
   position: relative;
 }
 
-.emotion-38:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+.emotion-38 td,
+.emotion-38 td:first-child,
+.emotion-38 td:last-child {
+  -webkit-transition: box-shadow 200ms ease,border-color 200ms ease;
+  transition: box-shadow 200ms ease,border-color 200ms ease;
+}
+
+.emotion-38 td {
   border: 1px solid #d9dadd;
   border-top: none;
   border-radius: 0 0 0.25rem 0.25rem;
-  pointer-events: none;
-  -webkit-transition: box-shadow 200ms ease,border-color 200ms ease;
-  transition: box-shadow 200ms ease,border-color 200ms ease;
+}
+
+.emotion-38[data-highlight="true"] td {
+  border-color: #8c40ef;
 }
 
 .emotion-41 {
@@ -1130,7 +1168,7 @@ exports[`List > Should not collapse a row by clicking on expandable content 1`] 
         </thead>
         <tbody>
           <tr
-            aria-controls="«ra9»"
+            aria-controls="«r9v»"
             aria-expanded="true"
             class="emotion-26 emotion-27"
             data-highlight="false"
@@ -1166,7 +1204,8 @@ exports[`List > Should not collapse a row by clicking on expandable content 1`] 
           <tr
             class="emotion-38 emotion-39"
             data-expandable-content="true"
-            id="«ra9»"
+            data-highlight="false"
+            id="«r9v»"
           >
             <td
               class="emotion-40 emotion-41 emotion-29"
@@ -1482,7 +1521,6 @@ exports[`List > Should render correctly 1`] = `
   width: 100%;
   box-sizing: content-box;
   gap: 0.5rem;
-  border-collapse: collapsed;
   border-spacing: 0 1rem;
   position: relative;
 }
@@ -1493,27 +1531,13 @@ exports[`List > Should render correctly 1`] = `
   padding: 0 1rem;
 }
 
-.emotion-4:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border: 1px solid transparent;
-  border-radius: 0.25rem;
-  pointer-events: none;
-  -webkit-transition: box-shadow 200ms ease,border-color 200ms ease;
-  transition: box-shadow 200ms ease,border-color 200ms ease;
-}
-
 .emotion-6 {
   display: table-cell;
   text-align: left;
   vertical-align: middle;
   font-size: 0.875rem;
   font-weight: 400;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   color: #3f4250;
   gap: 0.5rem;
   padding: 0 1rem;
@@ -1536,10 +1560,10 @@ exports[`List > Should render correctly 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1548,10 +1572,10 @@ exports[`List > Should render correctly 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.5rem;
 }
 
 .emotion-26 {
@@ -1575,31 +1599,50 @@ exports[`List > Should render correctly 1`] = `
   cursor: pointer;
 }
 
-.emotion-26:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-  pointer-events: none;
+.emotion-26 td,
+.emotion-26 td:first-child,
+.emotion-26 td:last-child {
   -webkit-transition: box-shadow 200ms ease,border-color 200ms ease;
   transition: box-shadow 200ms ease,border-color 200ms ease;
 }
 
-.emotion-26:not([aria-disabled='true']):hover::before {
+.emotion-26 td {
+  border-top: 1px solid #d9dadd;
+  border-bottom: 1px solid #d9dadd;
+}
+
+.emotion-26 td:first-child {
+  border-left: 1px solid #d9dadd;
+  border-radius: 0.25rem 0 0 0.25rem;
+}
+
+.emotion-26 td:last-child {
+  border-right: 1px solid #d9dadd;
+  border-radius: 0 0.25rem 0.25rem 0;
+}
+
+.emotion-26:not([aria-disabled='true']):hover td,
+.emotion-26:not([aria-disabled='true']):hover td:first-child,
+.emotion-26:not([aria-disabled='true']):hover td:last-child {
   border-color: #8c40ef;
 }
 
-.emotion-26:not([aria-disabled='true']):hover+.ei4uyz15:before {
+.emotion-26:not([aria-disabled='true']):hover+.ei4uyz15 td {
   border-color: #8c40ef;
 }
 
-.emotion-26[aria-expanded='true']:before {
-  border-radius: 0.25rem 0.25rem 0 0;
+.emotion-26[aria-expanded='true'] td {
   border-bottom-color: #d9dadd;
+}
+
+.emotion-26[aria-expanded='true'] td:first-child {
+  border-left: 1px solid #d9dadd;
+  border-radius: 0.25rem 0 0 0;
+}
+
+.emotion-26[aria-expanded='true'] td:last-child {
+  border-right: 1px solid #d9dadd;
+  border-radius: 0 0.25rem 0 0;
 }
 
 .emotion-26 [data-expandable-content] {
@@ -1612,8 +1655,13 @@ exports[`List > Should render correctly 1`] = `
 }
 
 .emotion-26[data-highlight='true'] {
-  border-color: #8c40ef;
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
+}
+
+.emotion-26[data-highlight='true'] td,
+.emotion-26[data-highlight='true'] td:first-child,
+.emotion-26[data-highlight='true'] td:last-child {
+  border-color: #8c40ef;
 }
 
 .emotion-26[aria-disabled='true'] {
@@ -2030,7 +2078,6 @@ exports[`List > Should render correctly with bad sort value 1`] = `
   width: 100%;
   box-sizing: content-box;
   gap: 0.5rem;
-  border-collapse: collapsed;
   border-spacing: 0 1rem;
   position: relative;
 }
@@ -2039,7 +2086,6 @@ exports[`List > Should render correctly with bad sort value 1`] = `
   width: 100%;
   box-sizing: content-box;
   gap: 0.5rem;
-  border-collapse: collapsed;
   border-spacing: 0 1rem;
   position: relative;
 }
@@ -2050,47 +2096,19 @@ exports[`List > Should render correctly with bad sort value 1`] = `
   padding: 0 1rem;
 }
 
-.emotion-4:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border: 1px solid transparent;
-  border-radius: 0.25rem;
-  pointer-events: none;
-  -webkit-transition: box-shadow 200ms ease,border-color 200ms ease;
-  transition: box-shadow 200ms ease,border-color 200ms ease;
-}
-
 .emotion-4 {
   display: table-row;
   vertical-align: middle;
   padding: 0 1rem;
 }
 
-.emotion-4:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border: 1px solid transparent;
-  border-radius: 0.25rem;
-  pointer-events: none;
-  -webkit-transition: box-shadow 200ms ease,border-color 200ms ease;
-  transition: box-shadow 200ms ease,border-color 200ms ease;
-}
-
 .emotion-6 {
   display: table-cell;
   text-align: left;
   vertical-align: middle;
   font-size: 0.875rem;
   font-weight: 400;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   color: #3f4250;
   gap: 0.5rem;
   padding: 0 1rem;
@@ -2114,7 +2132,7 @@ exports[`List > Should render correctly with bad sort value 1`] = `
   vertical-align: middle;
   font-size: 0.875rem;
   font-weight: 400;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   color: #3f4250;
   gap: 0.5rem;
   padding: 0 1rem;
@@ -2137,10 +2155,10 @@ exports[`List > Should render correctly with bad sort value 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2149,10 +2167,10 @@ exports[`List > Should render correctly with bad sort value 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.5rem;
 }
 
 .emotion-8 {
@@ -2160,10 +2178,10 @@ exports[`List > Should render correctly with bad sort value 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2172,10 +2190,10 @@ exports[`List > Should render correctly with bad sort value 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.5rem;
 }
 
 .emotion-26 {
@@ -2199,31 +2217,50 @@ exports[`List > Should render correctly with bad sort value 1`] = `
   cursor: pointer;
 }
 
-.emotion-26:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-  pointer-events: none;
+.emotion-26 td,
+.emotion-26 td:first-child,
+.emotion-26 td:last-child {
   -webkit-transition: box-shadow 200ms ease,border-color 200ms ease;
   transition: box-shadow 200ms ease,border-color 200ms ease;
 }
 
-.emotion-26:not([aria-disabled='true']):hover::before {
+.emotion-26 td {
+  border-top: 1px solid #d9dadd;
+  border-bottom: 1px solid #d9dadd;
+}
+
+.emotion-26 td:first-child {
+  border-left: 1px solid #d9dadd;
+  border-radius: 0.25rem 0 0 0.25rem;
+}
+
+.emotion-26 td:last-child {
+  border-right: 1px solid #d9dadd;
+  border-radius: 0 0.25rem 0.25rem 0;
+}
+
+.emotion-26:not([aria-disabled='true']):hover td,
+.emotion-26:not([aria-disabled='true']):hover td:first-child,
+.emotion-26:not([aria-disabled='true']):hover td:last-child {
   border-color: #8c40ef;
 }
 
-.emotion-26:not([aria-disabled='true']):hover+.ei4uyz15:before {
+.emotion-26:not([aria-disabled='true']):hover+.ei4uyz15 td {
   border-color: #8c40ef;
 }
 
-.emotion-26[aria-expanded='true']:before {
-  border-radius: 0.25rem 0.25rem 0 0;
+.emotion-26[aria-expanded='true'] td {
   border-bottom-color: #d9dadd;
+}
+
+.emotion-26[aria-expanded='true'] td:first-child {
+  border-left: 1px solid #d9dadd;
+  border-radius: 0.25rem 0 0 0;
+}
+
+.emotion-26[aria-expanded='true'] td:last-child {
+  border-right: 1px solid #d9dadd;
+  border-radius: 0 0.25rem 0 0;
 }
 
 .emotion-26 [data-expandable-content] {
@@ -2236,8 +2273,13 @@ exports[`List > Should render correctly with bad sort value 1`] = `
 }
 
 .emotion-26[data-highlight='true'] {
-  border-color: #8c40ef;
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
+}
+
+.emotion-26[data-highlight='true'] td,
+.emotion-26[data-highlight='true'] td:first-child,
+.emotion-26[data-highlight='true'] td:last-child {
+  border-color: #8c40ef;
 }
 
 .emotion-26[aria-disabled='true'] {
@@ -2267,31 +2309,50 @@ exports[`List > Should render correctly with bad sort value 1`] = `
   cursor: pointer;
 }
 
-.emotion-26:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-  pointer-events: none;
+.emotion-26 td,
+.emotion-26 td:first-child,
+.emotion-26 td:last-child {
   -webkit-transition: box-shadow 200ms ease,border-color 200ms ease;
   transition: box-shadow 200ms ease,border-color 200ms ease;
 }
 
-.emotion-26:not([aria-disabled='true']):hover::before {
+.emotion-26 td {
+  border-top: 1px solid #d9dadd;
+  border-bottom: 1px solid #d9dadd;
+}
+
+.emotion-26 td:first-child {
+  border-left: 1px solid #d9dadd;
+  border-radius: 0.25rem 0 0 0.25rem;
+}
+
+.emotion-26 td:last-child {
+  border-right: 1px solid #d9dadd;
+  border-radius: 0 0.25rem 0.25rem 0;
+}
+
+.emotion-26:not([aria-disabled='true']):hover td,
+.emotion-26:not([aria-disabled='true']):hover td:first-child,
+.emotion-26:not([aria-disabled='true']):hover td:last-child {
   border-color: #8c40ef;
 }
 
-.emotion-26:not([aria-disabled='true']):hover+.ei4uyz15:before {
+.emotion-26:not([aria-disabled='true']):hover+.ei4uyz15 td {
   border-color: #8c40ef;
 }
 
-.emotion-26[aria-expanded='true']:before {
-  border-radius: 0.25rem 0.25rem 0 0;
+.emotion-26[aria-expanded='true'] td {
   border-bottom-color: #d9dadd;
+}
+
+.emotion-26[aria-expanded='true'] td:first-child {
+  border-left: 1px solid #d9dadd;
+  border-radius: 0.25rem 0 0 0;
+}
+
+.emotion-26[aria-expanded='true'] td:last-child {
+  border-right: 1px solid #d9dadd;
+  border-radius: 0 0.25rem 0 0;
 }
 
 .emotion-26 [data-expandable-content] {
@@ -2304,8 +2365,13 @@ exports[`List > Should render correctly with bad sort value 1`] = `
 }
 
 .emotion-26[data-highlight='true'] {
-  border-color: #8c40ef;
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
+}
+
+.emotion-26[data-highlight='true'] td,
+.emotion-26[data-highlight='true'] td:first-child,
+.emotion-26[data-highlight='true'] td:last-child {
+  border-color: #8c40ef;
 }
 
 .emotion-26[aria-disabled='true'] {
@@ -2723,7 +2789,6 @@ exports[`List > Should render correctly with disabled rows 1`] = `
   width: 100%;
   box-sizing: content-box;
   gap: 0.5rem;
-  border-collapse: collapsed;
   border-spacing: 0 1rem;
   position: relative;
 }
@@ -2734,27 +2799,13 @@ exports[`List > Should render correctly with disabled rows 1`] = `
   padding: 0 1rem;
 }
 
-.emotion-4:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border: 1px solid transparent;
-  border-radius: 0.25rem;
-  pointer-events: none;
-  -webkit-transition: box-shadow 200ms ease,border-color 200ms ease;
-  transition: box-shadow 200ms ease,border-color 200ms ease;
-}
-
 .emotion-6 {
   display: table-cell;
   text-align: left;
   vertical-align: middle;
   font-size: 0.875rem;
   font-weight: 400;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   color: #3f4250;
   gap: 0.5rem;
   padding: 0 1rem;
@@ -2777,10 +2828,10 @@ exports[`List > Should render correctly with disabled rows 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2789,10 +2840,10 @@ exports[`List > Should render correctly with disabled rows 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.5rem;
 }
 
 .emotion-26 {
@@ -2816,31 +2867,50 @@ exports[`List > Should render correctly with disabled rows 1`] = `
   cursor: pointer;
 }
 
-.emotion-26:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-  pointer-events: none;
+.emotion-26 td,
+.emotion-26 td:first-child,
+.emotion-26 td:last-child {
   -webkit-transition: box-shadow 200ms ease,border-color 200ms ease;
   transition: box-shadow 200ms ease,border-color 200ms ease;
 }
 
-.emotion-26:not([aria-disabled='true']):hover::before {
+.emotion-26 td {
+  border-top: 1px solid #d9dadd;
+  border-bottom: 1px solid #d9dadd;
+}
+
+.emotion-26 td:first-child {
+  border-left: 1px solid #d9dadd;
+  border-radius: 0.25rem 0 0 0.25rem;
+}
+
+.emotion-26 td:last-child {
+  border-right: 1px solid #d9dadd;
+  border-radius: 0 0.25rem 0.25rem 0;
+}
+
+.emotion-26:not([aria-disabled='true']):hover td,
+.emotion-26:not([aria-disabled='true']):hover td:first-child,
+.emotion-26:not([aria-disabled='true']):hover td:last-child {
   border-color: #8c40ef;
 }
 
-.emotion-26:not([aria-disabled='true']):hover+.ei4uyz15:before {
+.emotion-26:not([aria-disabled='true']):hover+.ei4uyz15 td {
   border-color: #8c40ef;
 }
 
-.emotion-26[aria-expanded='true']:before {
-  border-radius: 0.25rem 0.25rem 0 0;
+.emotion-26[aria-expanded='true'] td {
   border-bottom-color: #d9dadd;
+}
+
+.emotion-26[aria-expanded='true'] td:first-child {
+  border-left: 1px solid #d9dadd;
+  border-radius: 0.25rem 0 0 0;
+}
+
+.emotion-26[aria-expanded='true'] td:last-child {
+  border-right: 1px solid #d9dadd;
+  border-radius: 0 0.25rem 0 0;
 }
 
 .emotion-26 [data-expandable-content] {
@@ -2853,8 +2923,13 @@ exports[`List > Should render correctly with disabled rows 1`] = `
 }
 
 .emotion-26[data-highlight='true'] {
-  border-color: #8c40ef;
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
+}
+
+.emotion-26[data-highlight='true'] td,
+.emotion-26[data-highlight='true'] td:first-child,
+.emotion-26[data-highlight='true'] td:last-child {
+  border-color: #8c40ef;
 }
 
 .emotion-26[aria-disabled='true'] {
@@ -3275,7 +3350,6 @@ exports[`List > Should render correctly with expandable rows 1`] = `
   width: 100%;
   box-sizing: content-box;
   gap: 0.5rem;
-  border-collapse: collapsed;
   border-spacing: 0 1rem;
   position: relative;
 }
@@ -3286,27 +3360,13 @@ exports[`List > Should render correctly with expandable rows 1`] = `
   padding: 0 1rem;
 }
 
-.emotion-4:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border: 1px solid transparent;
-  border-radius: 0.25rem;
-  pointer-events: none;
-  -webkit-transition: box-shadow 200ms ease,border-color 200ms ease;
-  transition: box-shadow 200ms ease,border-color 200ms ease;
-}
-
 .emotion-6 {
   display: table-cell;
   text-align: left;
   vertical-align: middle;
   font-size: 0.875rem;
   font-weight: 400;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   color: #3f4250;
   gap: 0.5rem;
   padding: 0 1rem;
@@ -3329,10 +3389,10 @@ exports[`List > Should render correctly with expandable rows 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -3341,10 +3401,10 @@ exports[`List > Should render correctly with expandable rows 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.5rem;
 }
 
 .emotion-26 {
@@ -3368,31 +3428,50 @@ exports[`List > Should render correctly with expandable rows 1`] = `
   cursor: pointer;
 }
 
-.emotion-26:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-  pointer-events: none;
+.emotion-26 td,
+.emotion-26 td:first-child,
+.emotion-26 td:last-child {
   -webkit-transition: box-shadow 200ms ease,border-color 200ms ease;
   transition: box-shadow 200ms ease,border-color 200ms ease;
 }
 
-.emotion-26:not([aria-disabled='true']):hover::before {
+.emotion-26 td {
+  border-top: 1px solid #d9dadd;
+  border-bottom: 1px solid #d9dadd;
+}
+
+.emotion-26 td:first-child {
+  border-left: 1px solid #d9dadd;
+  border-radius: 0.25rem 0 0 0.25rem;
+}
+
+.emotion-26 td:last-child {
+  border-right: 1px solid #d9dadd;
+  border-radius: 0 0.25rem 0.25rem 0;
+}
+
+.emotion-26:not([aria-disabled='true']):hover td,
+.emotion-26:not([aria-disabled='true']):hover td:first-child,
+.emotion-26:not([aria-disabled='true']):hover td:last-child {
   border-color: #8c40ef;
 }
 
-.emotion-26:not([aria-disabled='true']):hover+.ei4uyz15:before {
+.emotion-26:not([aria-disabled='true']):hover+.ei4uyz15 td {
   border-color: #8c40ef;
 }
 
-.emotion-26[aria-expanded='true']:before {
-  border-radius: 0.25rem 0.25rem 0 0;
+.emotion-26[aria-expanded='true'] td {
   border-bottom-color: #d9dadd;
+}
+
+.emotion-26[aria-expanded='true'] td:first-child {
+  border-left: 1px solid #d9dadd;
+  border-radius: 0.25rem 0 0 0;
+}
+
+.emotion-26[aria-expanded='true'] td:last-child {
+  border-right: 1px solid #d9dadd;
+  border-radius: 0 0.25rem 0 0;
 }
 
 .emotion-26 [data-expandable-content] {
@@ -3405,8 +3484,13 @@ exports[`List > Should render correctly with expandable rows 1`] = `
 }
 
 .emotion-26[data-highlight='true'] {
-  border-color: #8c40ef;
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
+}
+
+.emotion-26[data-highlight='true'] td,
+.emotion-26[data-highlight='true'] td:first-child,
+.emotion-26[data-highlight='true'] td:last-child {
+  border-color: #8c40ef;
 }
 
 .emotion-26[aria-disabled='true'] {
@@ -3843,7 +3927,6 @@ exports[`List > Should render correctly with info 1`] = `
   width: 100%;
   box-sizing: content-box;
   gap: 0.5rem;
-  border-collapse: collapsed;
   border-spacing: 0 1rem;
   position: relative;
 }
@@ -3852,7 +3935,6 @@ exports[`List > Should render correctly with info 1`] = `
   width: 100%;
   box-sizing: content-box;
   gap: 0.5rem;
-  border-collapse: collapsed;
   border-spacing: 0 1rem;
   position: relative;
 }
@@ -3863,47 +3945,19 @@ exports[`List > Should render correctly with info 1`] = `
   padding: 0 1rem;
 }
 
-.emotion-4:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border: 1px solid transparent;
-  border-radius: 0.25rem;
-  pointer-events: none;
-  -webkit-transition: box-shadow 200ms ease,border-color 200ms ease;
-  transition: box-shadow 200ms ease,border-color 200ms ease;
-}
-
 .emotion-4 {
   display: table-row;
   vertical-align: middle;
   padding: 0 1rem;
 }
 
-.emotion-4:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border: 1px solid transparent;
-  border-radius: 0.25rem;
-  pointer-events: none;
-  -webkit-transition: box-shadow 200ms ease,border-color 200ms ease;
-  transition: box-shadow 200ms ease,border-color 200ms ease;
-}
-
 .emotion-6 {
   display: table-cell;
   text-align: left;
   vertical-align: middle;
   font-size: 0.875rem;
   font-weight: 400;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   color: #3f4250;
   gap: 0.5rem;
   padding: 0 1rem;
@@ -3927,7 +3981,7 @@ exports[`List > Should render correctly with info 1`] = `
   vertical-align: middle;
   font-size: 0.875rem;
   font-weight: 400;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   color: #3f4250;
   gap: 0.5rem;
   padding: 0 1rem;
@@ -3950,10 +4004,10 @@ exports[`List > Should render correctly with info 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -3962,10 +4016,10 @@ exports[`List > Should render correctly with info 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.5rem;
 }
 
 .emotion-8 {
@@ -3973,10 +4027,10 @@ exports[`List > Should render correctly with info 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -3985,10 +4039,10 @@ exports[`List > Should render correctly with info 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.5rem;
 }
 
 .emotion-10 {
@@ -4005,11 +4059,11 @@ exports[`List > Should render correctly with info 1`] = `
 
 .emotion-12 {
   vertical-align: middle;
-  fill: #727683;
-  height: 1.5rem;
-  width: 1.5rem;
-  min-width: 1.5rem;
-  min-height: 1.5rem;
+  fill: #3f4250;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
 .emotion-12 .fillStroke {
@@ -4038,31 +4092,50 @@ exports[`List > Should render correctly with info 1`] = `
   cursor: pointer;
 }
 
-.emotion-46:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-  pointer-events: none;
+.emotion-46 td,
+.emotion-46 td:first-child,
+.emotion-46 td:last-child {
   -webkit-transition: box-shadow 200ms ease,border-color 200ms ease;
   transition: box-shadow 200ms ease,border-color 200ms ease;
 }
 
-.emotion-46:not([aria-disabled='true']):hover::before {
+.emotion-46 td {
+  border-top: 1px solid #d9dadd;
+  border-bottom: 1px solid #d9dadd;
+}
+
+.emotion-46 td:first-child {
+  border-left: 1px solid #d9dadd;
+  border-radius: 0.25rem 0 0 0.25rem;
+}
+
+.emotion-46 td:last-child {
+  border-right: 1px solid #d9dadd;
+  border-radius: 0 0.25rem 0.25rem 0;
+}
+
+.emotion-46:not([aria-disabled='true']):hover td,
+.emotion-46:not([aria-disabled='true']):hover td:first-child,
+.emotion-46:not([aria-disabled='true']):hover td:last-child {
   border-color: #8c40ef;
 }
 
-.emotion-46:not([aria-disabled='true']):hover+.ei4uyz15:before {
+.emotion-46:not([aria-disabled='true']):hover+.ei4uyz15 td {
   border-color: #8c40ef;
 }
 
-.emotion-46[aria-expanded='true']:before {
-  border-radius: 0.25rem 0.25rem 0 0;
+.emotion-46[aria-expanded='true'] td {
   border-bottom-color: #d9dadd;
+}
+
+.emotion-46[aria-expanded='true'] td:first-child {
+  border-left: 1px solid #d9dadd;
+  border-radius: 0.25rem 0 0 0;
+}
+
+.emotion-46[aria-expanded='true'] td:last-child {
+  border-right: 1px solid #d9dadd;
+  border-radius: 0 0.25rem 0 0;
 }
 
 .emotion-46 [data-expandable-content] {
@@ -4075,8 +4148,13 @@ exports[`List > Should render correctly with info 1`] = `
 }
 
 .emotion-46[data-highlight='true'] {
-  border-color: #8c40ef;
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
+}
+
+.emotion-46[data-highlight='true'] td,
+.emotion-46[data-highlight='true'] td:first-child,
+.emotion-46[data-highlight='true'] td:last-child {
+  border-color: #8c40ef;
 }
 
 .emotion-46[aria-disabled='true'] {
@@ -4106,31 +4184,50 @@ exports[`List > Should render correctly with info 1`] = `
   cursor: pointer;
 }
 
-.emotion-46:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-  pointer-events: none;
+.emotion-46 td,
+.emotion-46 td:first-child,
+.emotion-46 td:last-child {
   -webkit-transition: box-shadow 200ms ease,border-color 200ms ease;
   transition: box-shadow 200ms ease,border-color 200ms ease;
 }
 
-.emotion-46:not([aria-disabled='true']):hover::before {
+.emotion-46 td {
+  border-top: 1px solid #d9dadd;
+  border-bottom: 1px solid #d9dadd;
+}
+
+.emotion-46 td:first-child {
+  border-left: 1px solid #d9dadd;
+  border-radius: 0.25rem 0 0 0.25rem;
+}
+
+.emotion-46 td:last-child {
+  border-right: 1px solid #d9dadd;
+  border-radius: 0 0.25rem 0.25rem 0;
+}
+
+.emotion-46:not([aria-disabled='true']):hover td,
+.emotion-46:not([aria-disabled='true']):hover td:first-child,
+.emotion-46:not([aria-disabled='true']):hover td:last-child {
   border-color: #8c40ef;
 }
 
-.emotion-46:not([aria-disabled='true']):hover+.ei4uyz15:before {
+.emotion-46:not([aria-disabled='true']):hover+.ei4uyz15 td {
   border-color: #8c40ef;
 }
 
-.emotion-46[aria-expanded='true']:before {
-  border-radius: 0.25rem 0.25rem 0 0;
+.emotion-46[aria-expanded='true'] td {
   border-bottom-color: #d9dadd;
+}
+
+.emotion-46[aria-expanded='true'] td:first-child {
+  border-left: 1px solid #d9dadd;
+  border-radius: 0.25rem 0 0 0;
+}
+
+.emotion-46[aria-expanded='true'] td:last-child {
+  border-right: 1px solid #d9dadd;
+  border-radius: 0 0.25rem 0 0;
 }
 
 .emotion-46 [data-expandable-content] {
@@ -4143,8 +4240,13 @@ exports[`List > Should render correctly with info 1`] = `
 }
 
 .emotion-46[data-highlight='true'] {
-  border-color: #8c40ef;
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
+}
+
+.emotion-46[data-highlight='true'] td,
+.emotion-46[data-highlight='true'] td:first-child,
+.emotion-46[data-highlight='true'] td:last-child {
+  border-color: #8c40ef;
 }
 
 .emotion-46[aria-disabled='true'] {
@@ -4189,18 +4291,18 @@ exports[`List > Should render correctly with info 1`] = `
               >
                 Column 1
                 <div
-                  aria-controls="«raj»"
-                  aria-describedby="«raj»"
+                  aria-controls="«ra9»"
+                  aria-describedby="«ra9»"
                   class="emotion-10 emotion-11"
                   tabindex="0"
                 >
                   <svg
                     class="emotion-12 emotion-13"
-                    viewBox="0 0 20 20"
+                    viewBox="0 0 16 16"
                   >
                     <path
                       clip-rule="evenodd"
-                      d="M18 10C18 14.4183 14.4183 18 10 18C5.58172 18 2 14.4183 2 10C2 5.58172 5.58172 2 10 2C14.4183 2 18 5.58172 18 10ZM11 6C11 6.55228 10.5523 7 10 7C9.44771 7 9 6.55228 9 6C9 5.44772 9.44771 5 10 5C10.5523 5 11 5.44772 11 6ZM9 9C8.58579 9 8.25 9.33579 8.25 9.75C8.25 10.1642 8.58579 10.5 9 10.5H9.25338C9.41332 10.5 9.53213 10.6481 9.49743 10.8042L9.03829 12.8704C8.79542 13.9633 9.62706 15 10.7466 15H11C11.4142 15 11.75 14.6642 11.75 14.25C11.75 13.8358 11.4142 13.5 11 13.5H10.7466C10.5867 13.5 10.4679 13.3519 10.5026 13.1958L10.9617 11.1296C11.2046 10.0367 10.3729 9 9.25338 9H9Z"
+                      d="M8 2.3125C4.85888 2.3125 2.3125 4.85888 2.3125 8C2.3125 11.1411 4.85888 13.6875 8 13.6875C11.1411 13.6875 13.6875 11.1411 13.6875 8C13.6875 4.85888 11.1411 2.3125 8 2.3125ZM1 8C1 4.13401 4.13401 1 8 1C11.866 1 15 4.13401 15 8C15 11.866 11.866 15 8 15C4.13401 15 1 11.866 1 8ZM7.34375 5.35677C7.34375 4.99433 7.63756 4.70052 8 4.70052H8.00529C8.36772 4.70052 8.66154 4.99433 8.66154 5.35677V5.36206C8.66154 5.72449 8.36772 6.01831 8.00529 6.01831H8C7.63756 6.01831 7.34375 5.72449 7.34375 5.36206V5.35677ZM7.55734 8.12213C7.28751 8.1578 7.01294 8.02195 6.88439 7.76484C6.7223 7.44066 6.8537 7.04647 7.17787 6.88439L7.20711 6.86976C8.11256 6.41704 9.13206 7.23485 8.88653 8.21695L8.44266 9.99246C8.71249 9.95679 8.98705 10.0926 9.11561 10.3497C9.2777 10.6739 9.14631 11.0681 8.82214 11.2302L8.79289 11.2448L8.79289 11.2448C7.88744 11.6975 6.86794 10.8797 7.11347 9.89764L7.55734 8.12213Z"
                       fill-rule="evenodd"
                     />
                   </svg>
@@ -4216,18 +4318,18 @@ exports[`List > Should render correctly with info 1`] = `
               >
                 Column 2
                 <div
-                  aria-controls="«rak»"
-                  aria-describedby="«rak»"
+                  aria-controls="«raa»"
+                  aria-describedby="«raa»"
                   class="emotion-10 emotion-11"
                   tabindex="0"
                 >
                   <svg
                     class="emotion-12 emotion-13"
-                    viewBox="0 0 20 20"
+                    viewBox="0 0 16 16"
                   >
                     <path
                       clip-rule="evenodd"
-                      d="M18 10C18 14.4183 14.4183 18 10 18C5.58172 18 2 14.4183 2 10C2 5.58172 5.58172 2 10 2C14.4183 2 18 5.58172 18 10ZM11 6C11 6.55228 10.5523 7 10 7C9.44771 7 9 6.55228 9 6C9 5.44772 9.44771 5 10 5C10.5523 5 11 5.44772 11 6ZM9 9C8.58579 9 8.25 9.33579 8.25 9.75C8.25 10.1642 8.58579 10.5 9 10.5H9.25338C9.41332 10.5 9.53213 10.6481 9.49743 10.8042L9.03829 12.8704C8.79542 13.9633 9.62706 15 10.7466 15H11C11.4142 15 11.75 14.6642 11.75 14.25C11.75 13.8358 11.4142 13.5 11 13.5H10.7466C10.5867 13.5 10.4679 13.3519 10.5026 13.1958L10.9617 11.1296C11.2046 10.0367 10.3729 9 9.25338 9H9Z"
+                      d="M8 2.3125C4.85888 2.3125 2.3125 4.85888 2.3125 8C2.3125 11.1411 4.85888 13.6875 8 13.6875C11.1411 13.6875 13.6875 11.1411 13.6875 8C13.6875 4.85888 11.1411 2.3125 8 2.3125ZM1 8C1 4.13401 4.13401 1 8 1C11.866 1 15 4.13401 15 8C15 11.866 11.866 15 8 15C4.13401 15 1 11.866 1 8ZM7.34375 5.35677C7.34375 4.99433 7.63756 4.70052 8 4.70052H8.00529C8.36772 4.70052 8.66154 4.99433 8.66154 5.35677V5.36206C8.66154 5.72449 8.36772 6.01831 8.00529 6.01831H8C7.63756 6.01831 7.34375 5.72449 7.34375 5.36206V5.35677ZM7.55734 8.12213C7.28751 8.1578 7.01294 8.02195 6.88439 7.76484C6.7223 7.44066 6.8537 7.04647 7.17787 6.88439L7.20711 6.86976C8.11256 6.41704 9.13206 7.23485 8.88653 8.21695L8.44266 9.99246C8.71249 9.95679 8.98705 10.0926 9.11561 10.3497C9.2777 10.6739 9.14631 11.0681 8.82214 11.2302L8.79289 11.2448L8.79289 11.2448C7.88744 11.6975 6.86794 10.8797 7.11347 9.89764L7.55734 8.12213Z"
                       fill-rule="evenodd"
                     />
                   </svg>
@@ -4243,18 +4345,18 @@ exports[`List > Should render correctly with info 1`] = `
               >
                 Column 3
                 <div
-                  aria-controls="«ral»"
-                  aria-describedby="«ral»"
+                  aria-controls="«rab»"
+                  aria-describedby="«rab»"
                   class="emotion-10 emotion-11"
                   tabindex="0"
                 >
                   <svg
                     class="emotion-12 emotion-13"
-                    viewBox="0 0 20 20"
+                    viewBox="0 0 16 16"
                   >
                     <path
                       clip-rule="evenodd"
-                      d="M18 10C18 14.4183 14.4183 18 10 18C5.58172 18 2 14.4183 2 10C2 5.58172 5.58172 2 10 2C14.4183 2 18 5.58172 18 10ZM11 6C11 6.55228 10.5523 7 10 7C9.44771 7 9 6.55228 9 6C9 5.44772 9.44771 5 10 5C10.5523 5 11 5.44772 11 6ZM9 9C8.58579 9 8.25 9.33579 8.25 9.75C8.25 10.1642 8.58579 10.5 9 10.5H9.25338C9.41332 10.5 9.53213 10.6481 9.49743 10.8042L9.03829 12.8704C8.79542 13.9633 9.62706 15 10.7466 15H11C11.4142 15 11.75 14.6642 11.75 14.25C11.75 13.8358 11.4142 13.5 11 13.5H10.7466C10.5867 13.5 10.4679 13.3519 10.5026 13.1958L10.9617 11.1296C11.2046 10.0367 10.3729 9 9.25338 9H9Z"
+                      d="M8 2.3125C4.85888 2.3125 2.3125 4.85888 2.3125 8C2.3125 11.1411 4.85888 13.6875 8 13.6875C11.1411 13.6875 13.6875 11.1411 13.6875 8C13.6875 4.85888 11.1411 2.3125 8 2.3125ZM1 8C1 4.13401 4.13401 1 8 1C11.866 1 15 4.13401 15 8C15 11.866 11.866 15 8 15C4.13401 15 1 11.866 1 8ZM7.34375 5.35677C7.34375 4.99433 7.63756 4.70052 8 4.70052H8.00529C8.36772 4.70052 8.66154 4.99433 8.66154 5.35677V5.36206C8.66154 5.72449 8.36772 6.01831 8.00529 6.01831H8C7.63756 6.01831 7.34375 5.72449 7.34375 5.36206V5.35677ZM7.55734 8.12213C7.28751 8.1578 7.01294 8.02195 6.88439 7.76484C6.7223 7.44066 6.8537 7.04647 7.17787 6.88439L7.20711 6.86976C8.11256 6.41704 9.13206 7.23485 8.88653 8.21695L8.44266 9.99246C8.71249 9.95679 8.98705 10.0926 9.11561 10.3497C9.2777 10.6739 9.14631 11.0681 8.82214 11.2302L8.79289 11.2448L8.79289 11.2448C7.88744 11.6975 6.86794 10.8797 7.11347 9.89764L7.55734 8.12213Z"
                       fill-rule="evenodd"
                     />
                   </svg>
@@ -4270,18 +4372,18 @@ exports[`List > Should render correctly with info 1`] = `
               >
                 Column 4
                 <div
-                  aria-controls="«ram»"
-                  aria-describedby="«ram»"
+                  aria-controls="«rac»"
+                  aria-describedby="«rac»"
                   class="emotion-10 emotion-11"
                   tabindex="0"
                 >
                   <svg
                     class="emotion-12 emotion-13"
-                    viewBox="0 0 20 20"
+                    viewBox="0 0 16 16"
                   >
                     <path
                       clip-rule="evenodd"
-                      d="M18 10C18 14.4183 14.4183 18 10 18C5.58172 18 2 14.4183 2 10C2 5.58172 5.58172 2 10 2C14.4183 2 18 5.58172 18 10ZM11 6C11 6.55228 10.5523 7 10 7C9.44771 7 9 6.55228 9 6C9 5.44772 9.44771 5 10 5C10.5523 5 11 5.44772 11 6ZM9 9C8.58579 9 8.25 9.33579 8.25 9.75C8.25 10.1642 8.58579 10.5 9 10.5H9.25338C9.41332 10.5 9.53213 10.6481 9.49743 10.8042L9.03829 12.8704C8.79542 13.9633 9.62706 15 10.7466 15H11C11.4142 15 11.75 14.6642 11.75 14.25C11.75 13.8358 11.4142 13.5 11 13.5H10.7466C10.5867 13.5 10.4679 13.3519 10.5026 13.1958L10.9617 11.1296C11.2046 10.0367 10.3729 9 9.25338 9H9Z"
+                      d="M8 2.3125C4.85888 2.3125 2.3125 4.85888 2.3125 8C2.3125 11.1411 4.85888 13.6875 8 13.6875C11.1411 13.6875 13.6875 11.1411 13.6875 8C13.6875 4.85888 11.1411 2.3125 8 2.3125ZM1 8C1 4.13401 4.13401 1 8 1C11.866 1 15 4.13401 15 8C15 11.866 11.866 15 8 15C4.13401 15 1 11.866 1 8ZM7.34375 5.35677C7.34375 4.99433 7.63756 4.70052 8 4.70052H8.00529C8.36772 4.70052 8.66154 4.99433 8.66154 5.35677V5.36206C8.66154 5.72449 8.36772 6.01831 8.00529 6.01831H8C7.63756 6.01831 7.34375 5.72449 7.34375 5.36206V5.35677ZM7.55734 8.12213C7.28751 8.1578 7.01294 8.02195 6.88439 7.76484C6.7223 7.44066 6.8537 7.04647 7.17787 6.88439L7.20711 6.86976C8.11256 6.41704 9.13206 7.23485 8.88653 8.21695L8.44266 9.99246C8.71249 9.95679 8.98705 10.0926 9.11561 10.3497C9.2777 10.6739 9.14631 11.0681 8.82214 11.2302L8.79289 11.2448L8.79289 11.2448C7.88744 11.6975 6.86794 10.8797 7.11347 9.89764L7.55734 8.12213Z"
                       fill-rule="evenodd"
                     />
                   </svg>
@@ -4297,18 +4399,18 @@ exports[`List > Should render correctly with info 1`] = `
               >
                 Column 5
                 <div
-                  aria-controls="«ran»"
-                  aria-describedby="«ran»"
+                  aria-controls="«rad»"
+                  aria-describedby="«rad»"
                   class="emotion-10 emotion-11"
                   tabindex="0"
                 >
                   <svg
                     class="emotion-12 emotion-13"
-                    viewBox="0 0 20 20"
+                    viewBox="0 0 16 16"
                   >
                     <path
                       clip-rule="evenodd"
-                      d="M18 10C18 14.4183 14.4183 18 10 18C5.58172 18 2 14.4183 2 10C2 5.58172 5.58172 2 10 2C14.4183 2 18 5.58172 18 10ZM11 6C11 6.55228 10.5523 7 10 7C9.44771 7 9 6.55228 9 6C9 5.44772 9.44771 5 10 5C10.5523 5 11 5.44772 11 6ZM9 9C8.58579 9 8.25 9.33579 8.25 9.75C8.25 10.1642 8.58579 10.5 9 10.5H9.25338C9.41332 10.5 9.53213 10.6481 9.49743 10.8042L9.03829 12.8704C8.79542 13.9633 9.62706 15 10.7466 15H11C11.4142 15 11.75 14.6642 11.75 14.25C11.75 13.8358 11.4142 13.5 11 13.5H10.7466C10.5867 13.5 10.4679 13.3519 10.5026 13.1958L10.9617 11.1296C11.2046 10.0367 10.3729 9 9.25338 9H9Z"
+                      d="M8 2.3125C4.85888 2.3125 2.3125 4.85888 2.3125 8C2.3125 11.1411 4.85888 13.6875 8 13.6875C11.1411 13.6875 13.6875 11.1411 13.6875 8C13.6875 4.85888 11.1411 2.3125 8 2.3125ZM1 8C1 4.13401 4.13401 1 8 1C11.866 1 15 4.13401 15 8C15 11.866 11.866 15 8 15C4.13401 15 1 11.866 1 8ZM7.34375 5.35677C7.34375 4.99433 7.63756 4.70052 8 4.70052H8.00529C8.36772 4.70052 8.66154 4.99433 8.66154 5.35677V5.36206C8.66154 5.72449 8.36772 6.01831 8.00529 6.01831H8C7.63756 6.01831 7.34375 5.72449 7.34375 5.36206V5.35677ZM7.55734 8.12213C7.28751 8.1578 7.01294 8.02195 6.88439 7.76484C6.7223 7.44066 6.8537 7.04647 7.17787 6.88439L7.20711 6.86976C8.11256 6.41704 9.13206 7.23485 8.88653 8.21695L8.44266 9.99246C8.71249 9.95679 8.98705 10.0926 9.11561 10.3497C9.2777 10.6739 9.14631 11.0681 8.82214 11.2302L8.79289 11.2448L8.79289 11.2448C7.88744 11.6975 6.86794 10.8797 7.11347 9.89764L7.55734 8.12213Z"
                       fill-rule="evenodd"
                     />
                   </svg>
@@ -4653,7 +4755,6 @@ exports[`List > Should render correctly with isExpandable and autoClose rows the
   width: 100%;
   box-sizing: content-box;
   gap: 0.5rem;
-  border-collapse: collapsed;
   border-spacing: 0 1rem;
   position: relative;
 }
@@ -4662,7 +4763,6 @@ exports[`List > Should render correctly with isExpandable and autoClose rows the
   width: 100%;
   box-sizing: content-box;
   gap: 0.5rem;
-  border-collapse: collapsed;
   border-spacing: 0 1rem;
   position: relative;
 }
@@ -4673,47 +4773,19 @@ exports[`List > Should render correctly with isExpandable and autoClose rows the
   padding: 0 1rem;
 }
 
-.emotion-4:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border: 1px solid transparent;
-  border-radius: 0.25rem;
-  pointer-events: none;
-  -webkit-transition: box-shadow 200ms ease,border-color 200ms ease;
-  transition: box-shadow 200ms ease,border-color 200ms ease;
-}
-
 .emotion-4 {
   display: table-row;
   vertical-align: middle;
   padding: 0 1rem;
 }
 
-.emotion-4:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border: 1px solid transparent;
-  border-radius: 0.25rem;
-  pointer-events: none;
-  -webkit-transition: box-shadow 200ms ease,border-color 200ms ease;
-  transition: box-shadow 200ms ease,border-color 200ms ease;
-}
-
 .emotion-6 {
   display: table-cell;
   text-align: left;
   vertical-align: middle;
   font-size: 0.875rem;
   font-weight: 400;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   color: #3f4250;
   gap: 0.5rem;
   padding: 0 1rem;
@@ -4737,7 +4809,7 @@ exports[`List > Should render correctly with isExpandable and autoClose rows the
   vertical-align: middle;
   font-size: 0.875rem;
   font-weight: 400;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   color: #3f4250;
   gap: 0.5rem;
   padding: 0 1rem;
@@ -4760,10 +4832,10 @@ exports[`List > Should render correctly with isExpandable and autoClose rows the
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -4772,10 +4844,10 @@ exports[`List > Should render correctly with isExpandable and autoClose rows the
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.5rem;
 }
 
 .emotion-8 {
@@ -4783,10 +4855,10 @@ exports[`List > Should render correctly with isExpandable and autoClose rows the
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -4795,10 +4867,10 @@ exports[`List > Should render correctly with isExpandable and autoClose rows the
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.5rem;
 }
 
 .emotion-26 {
@@ -4822,31 +4894,50 @@ exports[`List > Should render correctly with isExpandable and autoClose rows the
   cursor: pointer;
 }
 
-.emotion-26:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-  pointer-events: none;
+.emotion-26 td,
+.emotion-26 td:first-child,
+.emotion-26 td:last-child {
   -webkit-transition: box-shadow 200ms ease,border-color 200ms ease;
   transition: box-shadow 200ms ease,border-color 200ms ease;
 }
 
-.emotion-26:not([aria-disabled='true']):hover::before {
+.emotion-26 td {
+  border-top: 1px solid #d9dadd;
+  border-bottom: 1px solid #d9dadd;
+}
+
+.emotion-26 td:first-child {
+  border-left: 1px solid #d9dadd;
+  border-radius: 0.25rem 0 0 0.25rem;
+}
+
+.emotion-26 td:last-child {
+  border-right: 1px solid #d9dadd;
+  border-radius: 0 0.25rem 0.25rem 0;
+}
+
+.emotion-26:not([aria-disabled='true']):hover td,
+.emotion-26:not([aria-disabled='true']):hover td:first-child,
+.emotion-26:not([aria-disabled='true']):hover td:last-child {
   border-color: #8c40ef;
 }
 
-.emotion-26:not([aria-disabled='true']):hover+.emotion-51:before {
+.emotion-26:not([aria-disabled='true']):hover+.emotion-51 td {
   border-color: #8c40ef;
 }
 
-.emotion-26[aria-expanded='true']:before {
-  border-radius: 0.25rem 0.25rem 0 0;
+.emotion-26[aria-expanded='true'] td {
   border-bottom-color: #d9dadd;
+}
+
+.emotion-26[aria-expanded='true'] td:first-child {
+  border-left: 1px solid #d9dadd;
+  border-radius: 0.25rem 0 0 0;
+}
+
+.emotion-26[aria-expanded='true'] td:last-child {
+  border-right: 1px solid #d9dadd;
+  border-radius: 0 0.25rem 0 0;
 }
 
 .emotion-26 [data-expandable-content] {
@@ -4859,8 +4950,13 @@ exports[`List > Should render correctly with isExpandable and autoClose rows the
 }
 
 .emotion-26[data-highlight='true'] {
-  border-color: #8c40ef;
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
+}
+
+.emotion-26[data-highlight='true'] td,
+.emotion-26[data-highlight='true'] td:first-child,
+.emotion-26[data-highlight='true'] td:last-child {
+  border-color: #8c40ef;
 }
 
 .emotion-26[aria-disabled='true'] {
@@ -4890,31 +4986,50 @@ exports[`List > Should render correctly with isExpandable and autoClose rows the
   cursor: pointer;
 }
 
-.emotion-26:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-  pointer-events: none;
+.emotion-26 td,
+.emotion-26 td:first-child,
+.emotion-26 td:last-child {
   -webkit-transition: box-shadow 200ms ease,border-color 200ms ease;
   transition: box-shadow 200ms ease,border-color 200ms ease;
 }
 
-.emotion-26:not([aria-disabled='true']):hover::before {
+.emotion-26 td {
+  border-top: 1px solid #d9dadd;
+  border-bottom: 1px solid #d9dadd;
+}
+
+.emotion-26 td:first-child {
+  border-left: 1px solid #d9dadd;
+  border-radius: 0.25rem 0 0 0.25rem;
+}
+
+.emotion-26 td:last-child {
+  border-right: 1px solid #d9dadd;
+  border-radius: 0 0.25rem 0.25rem 0;
+}
+
+.emotion-26:not([aria-disabled='true']):hover td,
+.emotion-26:not([aria-disabled='true']):hover td:first-child,
+.emotion-26:not([aria-disabled='true']):hover td:last-child {
   border-color: #8c40ef;
 }
 
-.emotion-26:not([aria-disabled='true']):hover+.emotion-51:before {
+.emotion-26:not([aria-disabled='true']):hover+.emotion-51 td {
   border-color: #8c40ef;
 }
 
-.emotion-26[aria-expanded='true']:before {
-  border-radius: 0.25rem 0.25rem 0 0;
+.emotion-26[aria-expanded='true'] td {
   border-bottom-color: #d9dadd;
+}
+
+.emotion-26[aria-expanded='true'] td:first-child {
+  border-left: 1px solid #d9dadd;
+  border-radius: 0.25rem 0 0 0;
+}
+
+.emotion-26[aria-expanded='true'] td:last-child {
+  border-right: 1px solid #d9dadd;
+  border-radius: 0 0.25rem 0 0;
 }
 
 .emotion-26 [data-expandable-content] {
@@ -4927,8 +5042,13 @@ exports[`List > Should render correctly with isExpandable and autoClose rows the
 }
 
 .emotion-26[data-highlight='true'] {
-  border-color: #8c40ef;
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
+}
+
+.emotion-26[data-highlight='true'] td,
+.emotion-26[data-highlight='true'] td:first-child,
+.emotion-26[data-highlight='true'] td:last-child {
+  border-color: #8c40ef;
 }
 
 .emotion-26[aria-disabled='true'] {
@@ -4965,19 +5085,21 @@ exports[`List > Should render correctly with isExpandable and autoClose rows the
   position: relative;
 }
 
-.emotion-50:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+.emotion-50 td,
+.emotion-50 td:first-child,
+.emotion-50 td:last-child {
+  -webkit-transition: box-shadow 200ms ease,border-color 200ms ease;
+  transition: box-shadow 200ms ease,border-color 200ms ease;
+}
+
+.emotion-50 td {
   border: 1px solid #d9dadd;
   border-top: none;
   border-radius: 0 0 0.25rem 0.25rem;
-  pointer-events: none;
-  -webkit-transition: box-shadow 200ms ease,border-color 200ms ease;
-  transition: box-shadow 200ms ease,border-color 200ms ease;
+}
+
+.emotion-50[data-highlight="true"] td {
+  border-color: #8c40ef;
 }
 
 .emotion-53 {
@@ -5087,7 +5209,7 @@ exports[`List > Should render correctly with isExpandable and autoClose rows the
             </td>
           </tr>
           <tr
-            aria-controls="«r6r»"
+            aria-controls="«r6h»"
             aria-expanded="true"
             class="emotion-26 emotion-27"
             data-highlight="false"
@@ -5123,7 +5245,8 @@ exports[`List > Should render correctly with isExpandable and autoClose rows the
           <tr
             class="emotion-50 emotion-51"
             data-expandable-content="true"
-            id="«r6r»"
+            data-highlight="false"
+            id="«r6h»"
           >
             <td
               class="emotion-52 emotion-53 emotion-29"
@@ -5413,7 +5536,6 @@ exports[`List > Should render correctly with isExpandable rows then click 1`] = 
   width: 100%;
   box-sizing: content-box;
   gap: 0.5rem;
-  border-collapse: collapsed;
   border-spacing: 0 1rem;
   position: relative;
 }
@@ -5422,7 +5544,6 @@ exports[`List > Should render correctly with isExpandable rows then click 1`] = 
   width: 100%;
   box-sizing: content-box;
   gap: 0.5rem;
-  border-collapse: collapsed;
   border-spacing: 0 1rem;
   position: relative;
 }
@@ -5433,47 +5554,19 @@ exports[`List > Should render correctly with isExpandable rows then click 1`] = 
   padding: 0 1rem;
 }
 
-.emotion-4:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border: 1px solid transparent;
-  border-radius: 0.25rem;
-  pointer-events: none;
-  -webkit-transition: box-shadow 200ms ease,border-color 200ms ease;
-  transition: box-shadow 200ms ease,border-color 200ms ease;
-}
-
 .emotion-4 {
   display: table-row;
   vertical-align: middle;
   padding: 0 1rem;
 }
 
-.emotion-4:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border: 1px solid transparent;
-  border-radius: 0.25rem;
-  pointer-events: none;
-  -webkit-transition: box-shadow 200ms ease,border-color 200ms ease;
-  transition: box-shadow 200ms ease,border-color 200ms ease;
-}
-
 .emotion-6 {
   display: table-cell;
   text-align: left;
   vertical-align: middle;
   font-size: 0.875rem;
   font-weight: 400;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   color: #3f4250;
   gap: 0.5rem;
   padding: 0 1rem;
@@ -5497,7 +5590,7 @@ exports[`List > Should render correctly with isExpandable rows then click 1`] = 
   vertical-align: middle;
   font-size: 0.875rem;
   font-weight: 400;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   color: #3f4250;
   gap: 0.5rem;
   padding: 0 1rem;
@@ -5520,10 +5613,10 @@ exports[`List > Should render correctly with isExpandable rows then click 1`] = 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -5532,10 +5625,10 @@ exports[`List > Should render correctly with isExpandable rows then click 1`] = 
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.5rem;
 }
 
 .emotion-8 {
@@ -5543,10 +5636,10 @@ exports[`List > Should render correctly with isExpandable rows then click 1`] = 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -5555,10 +5648,10 @@ exports[`List > Should render correctly with isExpandable rows then click 1`] = 
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.5rem;
 }
 
 .emotion-26 {
@@ -5582,31 +5675,50 @@ exports[`List > Should render correctly with isExpandable rows then click 1`] = 
   cursor: pointer;
 }
 
-.emotion-26:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-  pointer-events: none;
+.emotion-26 td,
+.emotion-26 td:first-child,
+.emotion-26 td:last-child {
   -webkit-transition: box-shadow 200ms ease,border-color 200ms ease;
   transition: box-shadow 200ms ease,border-color 200ms ease;
 }
 
-.emotion-26:not([aria-disabled='true']):hover::before {
+.emotion-26 td {
+  border-top: 1px solid #d9dadd;
+  border-bottom: 1px solid #d9dadd;
+}
+
+.emotion-26 td:first-child {
+  border-left: 1px solid #d9dadd;
+  border-radius: 0.25rem 0 0 0.25rem;
+}
+
+.emotion-26 td:last-child {
+  border-right: 1px solid #d9dadd;
+  border-radius: 0 0.25rem 0.25rem 0;
+}
+
+.emotion-26:not([aria-disabled='true']):hover td,
+.emotion-26:not([aria-disabled='true']):hover td:first-child,
+.emotion-26:not([aria-disabled='true']):hover td:last-child {
   border-color: #8c40ef;
 }
 
-.emotion-26:not([aria-disabled='true']):hover+.ei4uyz15:before {
+.emotion-26:not([aria-disabled='true']):hover+.ei4uyz15 td {
   border-color: #8c40ef;
 }
 
-.emotion-26[aria-expanded='true']:before {
-  border-radius: 0.25rem 0.25rem 0 0;
+.emotion-26[aria-expanded='true'] td {
   border-bottom-color: #d9dadd;
+}
+
+.emotion-26[aria-expanded='true'] td:first-child {
+  border-left: 1px solid #d9dadd;
+  border-radius: 0.25rem 0 0 0;
+}
+
+.emotion-26[aria-expanded='true'] td:last-child {
+  border-right: 1px solid #d9dadd;
+  border-radius: 0 0.25rem 0 0;
 }
 
 .emotion-26 [data-expandable-content] {
@@ -5619,8 +5731,13 @@ exports[`List > Should render correctly with isExpandable rows then click 1`] = 
 }
 
 .emotion-26[data-highlight='true'] {
-  border-color: #8c40ef;
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
+}
+
+.emotion-26[data-highlight='true'] td,
+.emotion-26[data-highlight='true'] td:first-child,
+.emotion-26[data-highlight='true'] td:last-child {
+  border-color: #8c40ef;
 }
 
 .emotion-26[aria-disabled='true'] {
@@ -5650,31 +5767,50 @@ exports[`List > Should render correctly with isExpandable rows then click 1`] = 
   cursor: pointer;
 }
 
-.emotion-26:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-  pointer-events: none;
+.emotion-26 td,
+.emotion-26 td:first-child,
+.emotion-26 td:last-child {
   -webkit-transition: box-shadow 200ms ease,border-color 200ms ease;
   transition: box-shadow 200ms ease,border-color 200ms ease;
 }
 
-.emotion-26:not([aria-disabled='true']):hover::before {
+.emotion-26 td {
+  border-top: 1px solid #d9dadd;
+  border-bottom: 1px solid #d9dadd;
+}
+
+.emotion-26 td:first-child {
+  border-left: 1px solid #d9dadd;
+  border-radius: 0.25rem 0 0 0.25rem;
+}
+
+.emotion-26 td:last-child {
+  border-right: 1px solid #d9dadd;
+  border-radius: 0 0.25rem 0.25rem 0;
+}
+
+.emotion-26:not([aria-disabled='true']):hover td,
+.emotion-26:not([aria-disabled='true']):hover td:first-child,
+.emotion-26:not([aria-disabled='true']):hover td:last-child {
   border-color: #8c40ef;
 }
 
-.emotion-26:not([aria-disabled='true']):hover+.ei4uyz15:before {
+.emotion-26:not([aria-disabled='true']):hover+.ei4uyz15 td {
   border-color: #8c40ef;
 }
 
-.emotion-26[aria-expanded='true']:before {
-  border-radius: 0.25rem 0.25rem 0 0;
+.emotion-26[aria-expanded='true'] td {
   border-bottom-color: #d9dadd;
+}
+
+.emotion-26[aria-expanded='true'] td:first-child {
+  border-left: 1px solid #d9dadd;
+  border-radius: 0.25rem 0 0 0;
+}
+
+.emotion-26[aria-expanded='true'] td:last-child {
+  border-right: 1px solid #d9dadd;
+  border-radius: 0 0.25rem 0 0;
 }
 
 .emotion-26 [data-expandable-content] {
@@ -5687,8 +5823,13 @@ exports[`List > Should render correctly with isExpandable rows then click 1`] = 
 }
 
 .emotion-26[data-highlight='true'] {
-  border-color: #8c40ef;
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
+}
+
+.emotion-26[data-highlight='true'] td,
+.emotion-26[data-highlight='true'] td:first-child,
+.emotion-26[data-highlight='true'] td:last-child {
+  border-color: #8c40ef;
 }
 
 .emotion-26[aria-disabled='true'] {
@@ -6136,7 +6277,6 @@ exports[`List > Should render correctly with loading 1`] = `
   width: 100%;
   box-sizing: content-box;
   gap: 0.5rem;
-  border-collapse: collapsed;
   border-spacing: 0 1rem;
   position: relative;
 }
@@ -6147,27 +6287,13 @@ exports[`List > Should render correctly with loading 1`] = `
   padding: 0 1rem;
 }
 
-.emotion-4:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border: 1px solid transparent;
-  border-radius: 0.25rem;
-  pointer-events: none;
-  -webkit-transition: box-shadow 200ms ease,border-color 200ms ease;
-  transition: box-shadow 200ms ease,border-color 200ms ease;
-}
-
 .emotion-6 {
   display: table-cell;
   text-align: left;
   vertical-align: middle;
   font-size: 0.875rem;
   font-weight: 400;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   color: #3f4250;
   gap: 0.5rem;
   padding: 0 1rem;
@@ -6190,10 +6316,10 @@ exports[`List > Should render correctly with loading 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -6202,10 +6328,10 @@ exports[`List > Should render correctly with loading 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.5rem;
 }
 
 .emotion-26 {
@@ -6230,31 +6356,50 @@ exports[`List > Should render correctly with loading 1`] = `
   cursor: pointer;
 }
 
-.emotion-26:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-  pointer-events: none;
+.emotion-26 td,
+.emotion-26 td:first-child,
+.emotion-26 td:last-child {
   -webkit-transition: box-shadow 200ms ease,border-color 200ms ease;
   transition: box-shadow 200ms ease,border-color 200ms ease;
 }
 
-.emotion-26:not([aria-disabled='true']):hover::before {
+.emotion-26 td {
+  border-top: 1px solid #d9dadd;
+  border-bottom: 1px solid #d9dadd;
+}
+
+.emotion-26 td:first-child {
+  border-left: 1px solid #d9dadd;
+  border-radius: 0.25rem 0 0 0.25rem;
+}
+
+.emotion-26 td:last-child {
+  border-right: 1px solid #d9dadd;
+  border-radius: 0 0.25rem 0.25rem 0;
+}
+
+.emotion-26:not([aria-disabled='true']):hover td,
+.emotion-26:not([aria-disabled='true']):hover td:first-child,
+.emotion-26:not([aria-disabled='true']):hover td:last-child {
   border-color: #8c40ef;
 }
 
-.emotion-26:not([aria-disabled='true']):hover+.ei4uyz15:before {
+.emotion-26:not([aria-disabled='true']):hover+.ei4uyz15 td {
   border-color: #8c40ef;
 }
 
-.emotion-26[aria-expanded='true']:before {
-  border-radius: 0.25rem 0.25rem 0 0;
+.emotion-26[aria-expanded='true'] td {
   border-bottom-color: #d9dadd;
+}
+
+.emotion-26[aria-expanded='true'] td:first-child {
+  border-left: 1px solid #d9dadd;
+  border-radius: 0.25rem 0 0 0;
+}
+
+.emotion-26[aria-expanded='true'] td:last-child {
+  border-right: 1px solid #d9dadd;
+  border-radius: 0 0.25rem 0 0;
 }
 
 .emotion-26 [data-expandable-content] {
@@ -6267,8 +6412,13 @@ exports[`List > Should render correctly with loading 1`] = `
 }
 
 .emotion-26[data-highlight='true'] {
-  border-color: #8c40ef;
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
+}
+
+.emotion-26[data-highlight='true'] td,
+.emotion-26[data-highlight='true'] td:first-child,
+.emotion-26[data-highlight='true'] td:last-child {
+  border-color: #8c40ef;
 }
 
 .emotion-26[aria-disabled='true'] {
@@ -6870,7 +7020,6 @@ exports[`List > Should render correctly with loading with selectable 1`] = `
   width: 100%;
   box-sizing: content-box;
   gap: 0.5rem;
-  border-collapse: collapsed;
   border-spacing: 0 1rem;
   position: relative;
 }
@@ -6881,27 +7030,13 @@ exports[`List > Should render correctly with loading with selectable 1`] = `
   padding: 0 1rem;
 }
 
-.emotion-4:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border: 1px solid transparent;
-  border-radius: 0.25rem;
-  pointer-events: none;
-  -webkit-transition: box-shadow 200ms ease,border-color 200ms ease;
-  transition: box-shadow 200ms ease,border-color 200ms ease;
-}
-
 .emotion-7 {
   display: table-cell;
   text-align: left;
   vertical-align: middle;
   font-size: 0.875rem;
   font-weight: 400;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   color: #3f4250;
   gap: 0.5rem;
   padding: 0 1rem;
@@ -6930,10 +7065,10 @@ exports[`List > Should render correctly with loading with selectable 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -6942,10 +7077,10 @@ exports[`List > Should render correctly with loading with selectable 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.5rem;
 }
 
 .emotion-11 {
@@ -6961,7 +7096,7 @@ exports[`List > Should render correctly with loading with selectable 1`] = `
   gap: 0.5rem;
 }
 
-.emotion-11 .eqr7bqq4 {
+.emotion-11 .eqr7bqq3 {
   cursor: pointer;
 }
 
@@ -6970,7 +7105,7 @@ exports[`List > Should render correctly with loading with selectable 1`] = `
   color: #b5b7bd;
 }
 
-.emotion-11[aria-disabled='true'] .eqr7bqq4 {
+.emotion-11[aria-disabled='true'] .eqr7bqq3 {
   cursor: not-allowed;
 }
 
@@ -7043,7 +7178,7 @@ exports[`List > Should render correctly with loading with selectable 1`] = `
   stroke: #e51963;
 }
 
-.emotion-11 .emotion-14[aria-checked="mixed"]+.emotion-16 .eqr7bqq6 {
+.emotion-11 .emotion-14[aria-checked="mixed"]+.emotion-16 .eqr7bqq5 {
   fill: #ffffff;
 }
 
@@ -7176,7 +7311,7 @@ exports[`List > Should render correctly with loading with selectable 1`] = `
   vertical-align: middle;
   font-size: 0.875rem;
   font-weight: 400;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   color: #3f4250;
   gap: 0.5rem;
   padding: 0 1rem;
@@ -7216,31 +7351,50 @@ exports[`List > Should render correctly with loading with selectable 1`] = `
   cursor: pointer;
 }
 
-.emotion-39:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-  pointer-events: none;
+.emotion-39 td,
+.emotion-39 td:first-child,
+.emotion-39 td:last-child {
   -webkit-transition: box-shadow 200ms ease,border-color 200ms ease;
   transition: box-shadow 200ms ease,border-color 200ms ease;
 }
 
-.emotion-39:not([aria-disabled='true']):hover::before {
+.emotion-39 td {
+  border-top: 1px solid #d9dadd;
+  border-bottom: 1px solid #d9dadd;
+}
+
+.emotion-39 td:first-child {
+  border-left: 1px solid #d9dadd;
+  border-radius: 0.25rem 0 0 0.25rem;
+}
+
+.emotion-39 td:last-child {
+  border-right: 1px solid #d9dadd;
+  border-radius: 0 0.25rem 0.25rem 0;
+}
+
+.emotion-39:not([aria-disabled='true']):hover td,
+.emotion-39:not([aria-disabled='true']):hover td:first-child,
+.emotion-39:not([aria-disabled='true']):hover td:last-child {
   border-color: #8c40ef;
 }
 
-.emotion-39:not([aria-disabled='true']):hover+.ei4uyz15:before {
+.emotion-39:not([aria-disabled='true']):hover+.ei4uyz15 td {
   border-color: #8c40ef;
 }
 
-.emotion-39[aria-expanded='true']:before {
-  border-radius: 0.25rem 0.25rem 0 0;
+.emotion-39[aria-expanded='true'] td {
   border-bottom-color: #d9dadd;
+}
+
+.emotion-39[aria-expanded='true'] td:first-child {
+  border-left: 1px solid #d9dadd;
+  border-radius: 0.25rem 0 0 0;
+}
+
+.emotion-39[aria-expanded='true'] td:last-child {
+  border-right: 1px solid #d9dadd;
+  border-radius: 0 0.25rem 0 0;
 }
 
 .emotion-39 [data-expandable-content] {
@@ -7253,8 +7407,13 @@ exports[`List > Should render correctly with loading with selectable 1`] = `
 }
 
 .emotion-39[data-highlight='true'] {
-  border-color: #8c40ef;
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
+}
+
+.emotion-39[data-highlight='true'] td,
+.emotion-39[data-highlight='true'] td:first-child,
+.emotion-39[data-highlight='true'] td:last-child {
+  border-color: #8c40ef;
 }
 
 .emotion-39[aria-disabled='true'] {
@@ -7911,7 +8070,6 @@ exports[`List > Should render correctly with preventClick cell then click but ev
   width: 100%;
   box-sizing: content-box;
   gap: 0.5rem;
-  border-collapse: collapsed;
   border-spacing: 0 1rem;
   position: relative;
 }
@@ -7920,7 +8078,6 @@ exports[`List > Should render correctly with preventClick cell then click but ev
   width: 100%;
   box-sizing: content-box;
   gap: 0.5rem;
-  border-collapse: collapsed;
   border-spacing: 0 1rem;
   position: relative;
 }
@@ -7931,47 +8088,19 @@ exports[`List > Should render correctly with preventClick cell then click but ev
   padding: 0 1rem;
 }
 
-.emotion-4:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border: 1px solid transparent;
-  border-radius: 0.25rem;
-  pointer-events: none;
-  -webkit-transition: box-shadow 200ms ease,border-color 200ms ease;
-  transition: box-shadow 200ms ease,border-color 200ms ease;
-}
-
 .emotion-4 {
   display: table-row;
   vertical-align: middle;
   padding: 0 1rem;
 }
 
-.emotion-4:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border: 1px solid transparent;
-  border-radius: 0.25rem;
-  pointer-events: none;
-  -webkit-transition: box-shadow 200ms ease,border-color 200ms ease;
-  transition: box-shadow 200ms ease,border-color 200ms ease;
-}
-
 .emotion-6 {
   display: table-cell;
   text-align: left;
   vertical-align: middle;
   font-size: 0.875rem;
   font-weight: 400;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   color: #3f4250;
   gap: 0.5rem;
   padding: 0 1rem;
@@ -7995,7 +8124,7 @@ exports[`List > Should render correctly with preventClick cell then click but ev
   vertical-align: middle;
   font-size: 0.875rem;
   font-weight: 400;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   color: #3f4250;
   gap: 0.5rem;
   padding: 0 1rem;
@@ -8018,10 +8147,10 @@ exports[`List > Should render correctly with preventClick cell then click but ev
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -8030,10 +8159,10 @@ exports[`List > Should render correctly with preventClick cell then click but ev
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.5rem;
 }
 
 .emotion-8 {
@@ -8041,10 +8170,10 @@ exports[`List > Should render correctly with preventClick cell then click but ev
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -8053,10 +8182,10 @@ exports[`List > Should render correctly with preventClick cell then click but ev
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.5rem;
 }
 
 .emotion-26 {
@@ -8080,31 +8209,50 @@ exports[`List > Should render correctly with preventClick cell then click but ev
   cursor: pointer;
 }
 
-.emotion-26:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-  pointer-events: none;
+.emotion-26 td,
+.emotion-26 td:first-child,
+.emotion-26 td:last-child {
   -webkit-transition: box-shadow 200ms ease,border-color 200ms ease;
   transition: box-shadow 200ms ease,border-color 200ms ease;
 }
 
-.emotion-26:not([aria-disabled='true']):hover::before {
+.emotion-26 td {
+  border-top: 1px solid #d9dadd;
+  border-bottom: 1px solid #d9dadd;
+}
+
+.emotion-26 td:first-child {
+  border-left: 1px solid #d9dadd;
+  border-radius: 0.25rem 0 0 0.25rem;
+}
+
+.emotion-26 td:last-child {
+  border-right: 1px solid #d9dadd;
+  border-radius: 0 0.25rem 0.25rem 0;
+}
+
+.emotion-26:not([aria-disabled='true']):hover td,
+.emotion-26:not([aria-disabled='true']):hover td:first-child,
+.emotion-26:not([aria-disabled='true']):hover td:last-child {
   border-color: #8c40ef;
 }
 
-.emotion-26:not([aria-disabled='true']):hover+.ei4uyz15:before {
+.emotion-26:not([aria-disabled='true']):hover+.ei4uyz15 td {
   border-color: #8c40ef;
 }
 
-.emotion-26[aria-expanded='true']:before {
-  border-radius: 0.25rem 0.25rem 0 0;
+.emotion-26[aria-expanded='true'] td {
   border-bottom-color: #d9dadd;
+}
+
+.emotion-26[aria-expanded='true'] td:first-child {
+  border-left: 1px solid #d9dadd;
+  border-radius: 0.25rem 0 0 0;
+}
+
+.emotion-26[aria-expanded='true'] td:last-child {
+  border-right: 1px solid #d9dadd;
+  border-radius: 0 0.25rem 0 0;
 }
 
 .emotion-26 [data-expandable-content] {
@@ -8117,8 +8265,13 @@ exports[`List > Should render correctly with preventClick cell then click but ev
 }
 
 .emotion-26[data-highlight='true'] {
-  border-color: #8c40ef;
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
+}
+
+.emotion-26[data-highlight='true'] td,
+.emotion-26[data-highlight='true'] td:first-child,
+.emotion-26[data-highlight='true'] td:last-child {
+  border-color: #8c40ef;
 }
 
 .emotion-26[aria-disabled='true'] {
@@ -8148,31 +8301,50 @@ exports[`List > Should render correctly with preventClick cell then click but ev
   cursor: pointer;
 }
 
-.emotion-26:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-  pointer-events: none;
+.emotion-26 td,
+.emotion-26 td:first-child,
+.emotion-26 td:last-child {
   -webkit-transition: box-shadow 200ms ease,border-color 200ms ease;
   transition: box-shadow 200ms ease,border-color 200ms ease;
 }
 
-.emotion-26:not([aria-disabled='true']):hover::before {
+.emotion-26 td {
+  border-top: 1px solid #d9dadd;
+  border-bottom: 1px solid #d9dadd;
+}
+
+.emotion-26 td:first-child {
+  border-left: 1px solid #d9dadd;
+  border-radius: 0.25rem 0 0 0.25rem;
+}
+
+.emotion-26 td:last-child {
+  border-right: 1px solid #d9dadd;
+  border-radius: 0 0.25rem 0.25rem 0;
+}
+
+.emotion-26:not([aria-disabled='true']):hover td,
+.emotion-26:not([aria-disabled='true']):hover td:first-child,
+.emotion-26:not([aria-disabled='true']):hover td:last-child {
   border-color: #8c40ef;
 }
 
-.emotion-26:not([aria-disabled='true']):hover+.ei4uyz15:before {
+.emotion-26:not([aria-disabled='true']):hover+.ei4uyz15 td {
   border-color: #8c40ef;
 }
 
-.emotion-26[aria-expanded='true']:before {
-  border-radius: 0.25rem 0.25rem 0 0;
+.emotion-26[aria-expanded='true'] td {
   border-bottom-color: #d9dadd;
+}
+
+.emotion-26[aria-expanded='true'] td:first-child {
+  border-left: 1px solid #d9dadd;
+  border-radius: 0.25rem 0 0 0;
+}
+
+.emotion-26[aria-expanded='true'] td:last-child {
+  border-right: 1px solid #d9dadd;
+  border-radius: 0 0.25rem 0 0;
 }
 
 .emotion-26 [data-expandable-content] {
@@ -8185,8 +8357,13 @@ exports[`List > Should render correctly with preventClick cell then click but ev
 }
 
 .emotion-26[data-highlight='true'] {
-  border-color: #8c40ef;
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
+}
+
+.emotion-26[data-highlight='true'] td,
+.emotion-26[data-highlight='true'] td:first-child,
+.emotion-26[data-highlight='true'] td:last-child {
+  border-color: #8c40ef;
 }
 
 .emotion-26[aria-disabled='true'] {
@@ -8604,7 +8781,6 @@ exports[`List > Should render correctly with row expanded 1`] = `
   width: 100%;
   box-sizing: content-box;
   gap: 0.5rem;
-  border-collapse: collapsed;
   border-spacing: 0 1rem;
   position: relative;
 }
@@ -8615,27 +8791,13 @@ exports[`List > Should render correctly with row expanded 1`] = `
   padding: 0 1rem;
 }
 
-.emotion-4:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border: 1px solid transparent;
-  border-radius: 0.25rem;
-  pointer-events: none;
-  -webkit-transition: box-shadow 200ms ease,border-color 200ms ease;
-  transition: box-shadow 200ms ease,border-color 200ms ease;
-}
-
 .emotion-6 {
   display: table-cell;
   text-align: left;
   vertical-align: middle;
   font-size: 0.875rem;
   font-weight: 400;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   color: #3f4250;
   gap: 0.5rem;
   padding: 0 1rem;
@@ -8658,10 +8820,10 @@ exports[`List > Should render correctly with row expanded 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -8670,10 +8832,10 @@ exports[`List > Should render correctly with row expanded 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.5rem;
 }
 
 .emotion-26 {
@@ -8697,31 +8859,50 @@ exports[`List > Should render correctly with row expanded 1`] = `
   cursor: pointer;
 }
 
-.emotion-26:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-  pointer-events: none;
+.emotion-26 td,
+.emotion-26 td:first-child,
+.emotion-26 td:last-child {
   -webkit-transition: box-shadow 200ms ease,border-color 200ms ease;
   transition: box-shadow 200ms ease,border-color 200ms ease;
 }
 
-.emotion-26:not([aria-disabled='true']):hover::before {
+.emotion-26 td {
+  border-top: 1px solid #d9dadd;
+  border-bottom: 1px solid #d9dadd;
+}
+
+.emotion-26 td:first-child {
+  border-left: 1px solid #d9dadd;
+  border-radius: 0.25rem 0 0 0.25rem;
+}
+
+.emotion-26 td:last-child {
+  border-right: 1px solid #d9dadd;
+  border-radius: 0 0.25rem 0.25rem 0;
+}
+
+.emotion-26:not([aria-disabled='true']):hover td,
+.emotion-26:not([aria-disabled='true']):hover td:first-child,
+.emotion-26:not([aria-disabled='true']):hover td:last-child {
   border-color: #8c40ef;
 }
 
-.emotion-26:not([aria-disabled='true']):hover+.ei4uyz15:before {
+.emotion-26:not([aria-disabled='true']):hover+.ei4uyz15 td {
   border-color: #8c40ef;
 }
 
-.emotion-26[aria-expanded='true']:before {
-  border-radius: 0.25rem 0.25rem 0 0;
+.emotion-26[aria-expanded='true'] td {
   border-bottom-color: #d9dadd;
+}
+
+.emotion-26[aria-expanded='true'] td:first-child {
+  border-left: 1px solid #d9dadd;
+  border-radius: 0.25rem 0 0 0;
+}
+
+.emotion-26[aria-expanded='true'] td:last-child {
+  border-right: 1px solid #d9dadd;
+  border-radius: 0 0.25rem 0 0;
 }
 
 .emotion-26 [data-expandable-content] {
@@ -8734,8 +8915,13 @@ exports[`List > Should render correctly with row expanded 1`] = `
 }
 
 .emotion-26[data-highlight='true'] {
-  border-color: #8c40ef;
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
+}
+
+.emotion-26[data-highlight='true'] td,
+.emotion-26[data-highlight='true'] td:first-child,
+.emotion-26[data-highlight='true'] td:last-child {
+  border-color: #8c40ef;
 }
 
 .emotion-26[aria-disabled='true'] {
@@ -9146,7 +9332,6 @@ exports[`List > Should render correctly with selectable 1`] = `
   width: 100%;
   box-sizing: content-box;
   gap: 0.5rem;
-  border-collapse: collapsed;
   border-spacing: 0 1rem;
   position: relative;
 }
@@ -9157,27 +9342,13 @@ exports[`List > Should render correctly with selectable 1`] = `
   padding: 0 1rem;
 }
 
-.emotion-4:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border: 1px solid transparent;
-  border-radius: 0.25rem;
-  pointer-events: none;
-  -webkit-transition: box-shadow 200ms ease,border-color 200ms ease;
-  transition: box-shadow 200ms ease,border-color 200ms ease;
-}
-
 .emotion-7 {
   display: table-cell;
   text-align: left;
   vertical-align: middle;
   font-size: 0.875rem;
   font-weight: 400;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   color: #3f4250;
   gap: 0.5rem;
   padding: 0 1rem;
@@ -9206,10 +9377,10 @@ exports[`List > Should render correctly with selectable 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -9218,10 +9389,10 @@ exports[`List > Should render correctly with selectable 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.5rem;
 }
 
 .emotion-11 {
@@ -9237,7 +9408,7 @@ exports[`List > Should render correctly with selectable 1`] = `
   gap: 0.5rem;
 }
 
-.emotion-11 .eqr7bqq4 {
+.emotion-11 .eqr7bqq3 {
   cursor: pointer;
 }
 
@@ -9246,7 +9417,7 @@ exports[`List > Should render correctly with selectable 1`] = `
   color: #b5b7bd;
 }
 
-.emotion-11[aria-disabled='true'] .eqr7bqq4 {
+.emotion-11[aria-disabled='true'] .eqr7bqq3 {
   cursor: not-allowed;
 }
 
@@ -9319,7 +9490,7 @@ exports[`List > Should render correctly with selectable 1`] = `
   stroke: #e51963;
 }
 
-.emotion-11 .emotion-14[aria-checked="mixed"]+.emotion-16 .eqr7bqq6 {
+.emotion-11 .emotion-14[aria-checked="mixed"]+.emotion-16 .eqr7bqq5 {
   fill: #ffffff;
 }
 
@@ -9452,7 +9623,7 @@ exports[`List > Should render correctly with selectable 1`] = `
   vertical-align: middle;
   font-size: 0.875rem;
   font-weight: 400;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   color: #3f4250;
   gap: 0.5rem;
   padding: 0 1rem;
@@ -9491,31 +9662,50 @@ exports[`List > Should render correctly with selectable 1`] = `
   cursor: pointer;
 }
 
-.emotion-39:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-  pointer-events: none;
+.emotion-39 td,
+.emotion-39 td:first-child,
+.emotion-39 td:last-child {
   -webkit-transition: box-shadow 200ms ease,border-color 200ms ease;
   transition: box-shadow 200ms ease,border-color 200ms ease;
 }
 
-.emotion-39:not([aria-disabled='true']):hover::before {
+.emotion-39 td {
+  border-top: 1px solid #d9dadd;
+  border-bottom: 1px solid #d9dadd;
+}
+
+.emotion-39 td:first-child {
+  border-left: 1px solid #d9dadd;
+  border-radius: 0.25rem 0 0 0.25rem;
+}
+
+.emotion-39 td:last-child {
+  border-right: 1px solid #d9dadd;
+  border-radius: 0 0.25rem 0.25rem 0;
+}
+
+.emotion-39:not([aria-disabled='true']):hover td,
+.emotion-39:not([aria-disabled='true']):hover td:first-child,
+.emotion-39:not([aria-disabled='true']):hover td:last-child {
   border-color: #8c40ef;
 }
 
-.emotion-39:not([aria-disabled='true']):hover+.ei4uyz15:before {
+.emotion-39:not([aria-disabled='true']):hover+.ei4uyz15 td {
   border-color: #8c40ef;
 }
 
-.emotion-39[aria-expanded='true']:before {
-  border-radius: 0.25rem 0.25rem 0 0;
+.emotion-39[aria-expanded='true'] td {
   border-bottom-color: #d9dadd;
+}
+
+.emotion-39[aria-expanded='true'] td:first-child {
+  border-left: 1px solid #d9dadd;
+  border-radius: 0.25rem 0 0 0;
+}
+
+.emotion-39[aria-expanded='true'] td:last-child {
+  border-right: 1px solid #d9dadd;
+  border-radius: 0 0.25rem 0 0;
 }
 
 .emotion-39 [data-expandable-content] {
@@ -9528,8 +9718,13 @@ exports[`List > Should render correctly with selectable 1`] = `
 }
 
 .emotion-39[data-highlight='true'] {
-  border-color: #8c40ef;
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
+}
+
+.emotion-39[data-highlight='true'] td,
+.emotion-39[data-highlight='true'] td:first-child,
+.emotion-39[data-highlight='true'] td:last-child {
+  border-color: #8c40ef;
 }
 
 .emotion-39[aria-disabled='true'] {
@@ -9571,7 +9766,7 @@ exports[`List > Should render correctly with selectable 1`] = `
   gap: 0.5rem;
 }
 
-.emotion-47 .eqr7bqq4 {
+.emotion-47 .eqr7bqq3 {
   cursor: pointer;
 }
 
@@ -9580,7 +9775,7 @@ exports[`List > Should render correctly with selectable 1`] = `
   color: #b5b7bd;
 }
 
-.emotion-47[aria-disabled='true'] .eqr7bqq4 {
+.emotion-47[aria-disabled='true'] .eqr7bqq3 {
   cursor: not-allowed;
 }
 
@@ -9653,7 +9848,7 @@ exports[`List > Should render correctly with selectable 1`] = `
   stroke: #e51963;
 }
 
-.emotion-47 .emotion-14[aria-checked="mixed"]+.emotion-16 .eqr7bqq6 {
+.emotion-47 .emotion-14[aria-checked="mixed"]+.emotion-16 .eqr7bqq5 {
   fill: #ffffff;
 }
 
@@ -10677,7 +10872,6 @@ exports[`List > Should render correctly with selectable then click on first row 
   width: 100%;
   box-sizing: content-box;
   gap: 0.5rem;
-  border-collapse: collapsed;
   border-spacing: 0 1rem;
   position: relative;
 }
@@ -10686,7 +10880,6 @@ exports[`List > Should render correctly with selectable then click on first row 
   width: 100%;
   box-sizing: content-box;
   gap: 0.5rem;
-  border-collapse: collapsed;
   border-spacing: 0 1rem;
   position: relative;
 }
@@ -10697,47 +10890,19 @@ exports[`List > Should render correctly with selectable then click on first row 
   padding: 0 1rem;
 }
 
-.emotion-4:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border: 1px solid transparent;
-  border-radius: 0.25rem;
-  pointer-events: none;
-  -webkit-transition: box-shadow 200ms ease,border-color 200ms ease;
-  transition: box-shadow 200ms ease,border-color 200ms ease;
-}
-
 .emotion-4 {
   display: table-row;
   vertical-align: middle;
   padding: 0 1rem;
 }
 
-.emotion-4:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border: 1px solid transparent;
-  border-radius: 0.25rem;
-  pointer-events: none;
-  -webkit-transition: box-shadow 200ms ease,border-color 200ms ease;
-  transition: box-shadow 200ms ease,border-color 200ms ease;
-}
-
 .emotion-7 {
   display: table-cell;
   text-align: left;
   vertical-align: middle;
   font-size: 0.875rem;
   font-weight: 400;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   color: #3f4250;
   gap: 0.5rem;
   padding: 0 1rem;
@@ -10767,7 +10932,7 @@ exports[`List > Should render correctly with selectable then click on first row 
   vertical-align: middle;
   font-size: 0.875rem;
   font-weight: 400;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   color: #3f4250;
   gap: 0.5rem;
   padding: 0 1rem;
@@ -10796,10 +10961,10 @@ exports[`List > Should render correctly with selectable then click on first row 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -10808,10 +10973,10 @@ exports[`List > Should render correctly with selectable then click on first row 
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.5rem;
 }
 
 .emotion-9 {
@@ -10819,10 +10984,10 @@ exports[`List > Should render correctly with selectable then click on first row 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -10831,10 +10996,10 @@ exports[`List > Should render correctly with selectable then click on first row 
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.5rem;
 }
 
 .emotion-11 {
@@ -10850,7 +11015,7 @@ exports[`List > Should render correctly with selectable then click on first row 
   gap: 0.5rem;
 }
 
-.emotion-11 .eqr7bqq4 {
+.emotion-11 .eqr7bqq3 {
   cursor: pointer;
 }
 
@@ -10859,7 +11024,7 @@ exports[`List > Should render correctly with selectable then click on first row 
   color: #b5b7bd;
 }
 
-.emotion-11[aria-disabled='true'] .eqr7bqq4 {
+.emotion-11[aria-disabled='true'] .eqr7bqq3 {
   cursor: not-allowed;
 }
 
@@ -10932,7 +11097,7 @@ exports[`List > Should render correctly with selectable then click on first row 
   stroke: #e51963;
 }
 
-.emotion-11 .emotion-14[aria-checked="mixed"]+.emotion-16 .eqr7bqq6 {
+.emotion-11 .emotion-14[aria-checked="mixed"]+.emotion-16 .eqr7bqq5 {
   fill: #ffffff;
 }
 
@@ -10988,7 +11153,7 @@ exports[`List > Should render correctly with selectable then click on first row 
   gap: 0.5rem;
 }
 
-.emotion-11 .eqr7bqq4 {
+.emotion-11 .eqr7bqq3 {
   cursor: pointer;
 }
 
@@ -10997,7 +11162,7 @@ exports[`List > Should render correctly with selectable then click on first row 
   color: #b5b7bd;
 }
 
-.emotion-11[aria-disabled='true'] .eqr7bqq4 {
+.emotion-11[aria-disabled='true'] .eqr7bqq3 {
   cursor: not-allowed;
 }
 
@@ -11070,7 +11235,7 @@ exports[`List > Should render correctly with selectable then click on first row 
   stroke: #e51963;
 }
 
-.emotion-11 .emotion-14[aria-checked="mixed"]+.emotion-16 .eqr7bqq6 {
+.emotion-11 .emotion-14[aria-checked="mixed"]+.emotion-16 .eqr7bqq5 {
   fill: #ffffff;
 }
 
@@ -11287,7 +11452,7 @@ exports[`List > Should render correctly with selectable then click on first row 
   vertical-align: middle;
   font-size: 0.875rem;
   font-weight: 400;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   color: #3f4250;
   gap: 0.5rem;
   padding: 0 1rem;
@@ -11311,7 +11476,7 @@ exports[`List > Should render correctly with selectable then click on first row 
   vertical-align: middle;
   font-size: 0.875rem;
   font-weight: 400;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   color: #3f4250;
   gap: 0.5rem;
   padding: 0 1rem;
@@ -11350,31 +11515,50 @@ exports[`List > Should render correctly with selectable then click on first row 
   cursor: pointer;
 }
 
-.emotion-39:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-  pointer-events: none;
+.emotion-39 td,
+.emotion-39 td:first-child,
+.emotion-39 td:last-child {
   -webkit-transition: box-shadow 200ms ease,border-color 200ms ease;
   transition: box-shadow 200ms ease,border-color 200ms ease;
 }
 
-.emotion-39:not([aria-disabled='true']):hover::before {
+.emotion-39 td {
+  border-top: 1px solid #d9dadd;
+  border-bottom: 1px solid #d9dadd;
+}
+
+.emotion-39 td:first-child {
+  border-left: 1px solid #d9dadd;
+  border-radius: 0.25rem 0 0 0.25rem;
+}
+
+.emotion-39 td:last-child {
+  border-right: 1px solid #d9dadd;
+  border-radius: 0 0.25rem 0.25rem 0;
+}
+
+.emotion-39:not([aria-disabled='true']):hover td,
+.emotion-39:not([aria-disabled='true']):hover td:first-child,
+.emotion-39:not([aria-disabled='true']):hover td:last-child {
   border-color: #8c40ef;
 }
 
-.emotion-39:not([aria-disabled='true']):hover+.ei4uyz15:before {
+.emotion-39:not([aria-disabled='true']):hover+.ei4uyz15 td {
   border-color: #8c40ef;
 }
 
-.emotion-39[aria-expanded='true']:before {
-  border-radius: 0.25rem 0.25rem 0 0;
+.emotion-39[aria-expanded='true'] td {
   border-bottom-color: #d9dadd;
+}
+
+.emotion-39[aria-expanded='true'] td:first-child {
+  border-left: 1px solid #d9dadd;
+  border-radius: 0.25rem 0 0 0;
+}
+
+.emotion-39[aria-expanded='true'] td:last-child {
+  border-right: 1px solid #d9dadd;
+  border-radius: 0 0.25rem 0 0;
 }
 
 .emotion-39 [data-expandable-content] {
@@ -11387,8 +11571,13 @@ exports[`List > Should render correctly with selectable then click on first row 
 }
 
 .emotion-39[data-highlight='true'] {
-  border-color: #8c40ef;
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
+}
+
+.emotion-39[data-highlight='true'] td,
+.emotion-39[data-highlight='true'] td:first-child,
+.emotion-39[data-highlight='true'] td:last-child {
+  border-color: #8c40ef;
 }
 
 .emotion-39[aria-disabled='true'] {
@@ -11418,31 +11607,50 @@ exports[`List > Should render correctly with selectable then click on first row 
   cursor: pointer;
 }
 
-.emotion-39:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-  pointer-events: none;
+.emotion-39 td,
+.emotion-39 td:first-child,
+.emotion-39 td:last-child {
   -webkit-transition: box-shadow 200ms ease,border-color 200ms ease;
   transition: box-shadow 200ms ease,border-color 200ms ease;
 }
 
-.emotion-39:not([aria-disabled='true']):hover::before {
+.emotion-39 td {
+  border-top: 1px solid #d9dadd;
+  border-bottom: 1px solid #d9dadd;
+}
+
+.emotion-39 td:first-child {
+  border-left: 1px solid #d9dadd;
+  border-radius: 0.25rem 0 0 0.25rem;
+}
+
+.emotion-39 td:last-child {
+  border-right: 1px solid #d9dadd;
+  border-radius: 0 0.25rem 0.25rem 0;
+}
+
+.emotion-39:not([aria-disabled='true']):hover td,
+.emotion-39:not([aria-disabled='true']):hover td:first-child,
+.emotion-39:not([aria-disabled='true']):hover td:last-child {
   border-color: #8c40ef;
 }
 
-.emotion-39:not([aria-disabled='true']):hover+.ei4uyz15:before {
+.emotion-39:not([aria-disabled='true']):hover+.ei4uyz15 td {
   border-color: #8c40ef;
 }
 
-.emotion-39[aria-expanded='true']:before {
-  border-radius: 0.25rem 0.25rem 0 0;
+.emotion-39[aria-expanded='true'] td {
   border-bottom-color: #d9dadd;
+}
+
+.emotion-39[aria-expanded='true'] td:first-child {
+  border-left: 1px solid #d9dadd;
+  border-radius: 0.25rem 0 0 0;
+}
+
+.emotion-39[aria-expanded='true'] td:last-child {
+  border-right: 1px solid #d9dadd;
+  border-radius: 0 0.25rem 0 0;
 }
 
 .emotion-39 [data-expandable-content] {
@@ -11455,8 +11663,13 @@ exports[`List > Should render correctly with selectable then click on first row 
 }
 
 .emotion-39[data-highlight='true'] {
-  border-color: #8c40ef;
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
+}
+
+.emotion-39[data-highlight='true'] td,
+.emotion-39[data-highlight='true'] td:first-child,
+.emotion-39[data-highlight='true'] td:last-child {
+  border-color: #8c40ef;
 }
 
 .emotion-39[aria-disabled='true'] {
@@ -11518,7 +11731,7 @@ exports[`List > Should render correctly with selectable then click on first row 
   gap: 0.5rem;
 }
 
-.emotion-47 .eqr7bqq4 {
+.emotion-47 .eqr7bqq3 {
   cursor: pointer;
 }
 
@@ -11527,7 +11740,7 @@ exports[`List > Should render correctly with selectable then click on first row 
   color: #b5b7bd;
 }
 
-.emotion-47[aria-disabled='true'] .eqr7bqq4 {
+.emotion-47[aria-disabled='true'] .eqr7bqq3 {
   cursor: not-allowed;
 }
 
@@ -11600,7 +11813,7 @@ exports[`List > Should render correctly with selectable then click on first row 
   stroke: #e51963;
 }
 
-.emotion-47 .emotion-14[aria-checked="mixed"]+.emotion-16 .eqr7bqq6 {
+.emotion-47 .emotion-14[aria-checked="mixed"]+.emotion-16 .eqr7bqq5 {
   fill: #ffffff;
 }
 
@@ -11656,7 +11869,7 @@ exports[`List > Should render correctly with selectable then click on first row 
   gap: 0.5rem;
 }
 
-.emotion-47 .eqr7bqq4 {
+.emotion-47 .eqr7bqq3 {
   cursor: pointer;
 }
 
@@ -11665,7 +11878,7 @@ exports[`List > Should render correctly with selectable then click on first row 
   color: #b5b7bd;
 }
 
-.emotion-47[aria-disabled='true'] .eqr7bqq4 {
+.emotion-47[aria-disabled='true'] .eqr7bqq3 {
   cursor: not-allowed;
 }
 
@@ -11738,7 +11951,7 @@ exports[`List > Should render correctly with selectable then click on first row 
   stroke: #e51963;
 }
 
-.emotion-47 .emotion-14[aria-checked="mixed"]+.emotion-16 .eqr7bqq6 {
+.emotion-47 .emotion-14[aria-checked="mixed"]+.emotion-16 .eqr7bqq5 {
   fill: #ffffff;
 }
 
@@ -12769,7 +12982,6 @@ exports[`List > Should render correctly with selectable with shift click for mul
   width: 100%;
   box-sizing: content-box;
   gap: 0.5rem;
-  border-collapse: collapsed;
   border-spacing: 0 1rem;
   position: relative;
 }
@@ -12778,7 +12990,6 @@ exports[`List > Should render correctly with selectable with shift click for mul
   width: 100%;
   box-sizing: content-box;
   gap: 0.5rem;
-  border-collapse: collapsed;
   border-spacing: 0 1rem;
   position: relative;
 }
@@ -12789,47 +13000,19 @@ exports[`List > Should render correctly with selectable with shift click for mul
   padding: 0 1rem;
 }
 
-.emotion-4:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border: 1px solid transparent;
-  border-radius: 0.25rem;
-  pointer-events: none;
-  -webkit-transition: box-shadow 200ms ease,border-color 200ms ease;
-  transition: box-shadow 200ms ease,border-color 200ms ease;
-}
-
 .emotion-4 {
   display: table-row;
   vertical-align: middle;
   padding: 0 1rem;
 }
 
-.emotion-4:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border: 1px solid transparent;
-  border-radius: 0.25rem;
-  pointer-events: none;
-  -webkit-transition: box-shadow 200ms ease,border-color 200ms ease;
-  transition: box-shadow 200ms ease,border-color 200ms ease;
-}
-
 .emotion-7 {
   display: table-cell;
   text-align: left;
   vertical-align: middle;
   font-size: 0.875rem;
   font-weight: 400;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   color: #3f4250;
   gap: 0.5rem;
   padding: 0 1rem;
@@ -12859,7 +13042,7 @@ exports[`List > Should render correctly with selectable with shift click for mul
   vertical-align: middle;
   font-size: 0.875rem;
   font-weight: 400;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   color: #3f4250;
   gap: 0.5rem;
   padding: 0 1rem;
@@ -12888,10 +13071,10 @@ exports[`List > Should render correctly with selectable with shift click for mul
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -12900,10 +13083,10 @@ exports[`List > Should render correctly with selectable with shift click for mul
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.5rem;
 }
 
 .emotion-9 {
@@ -12911,10 +13094,10 @@ exports[`List > Should render correctly with selectable with shift click for mul
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -12923,10 +13106,10 @@ exports[`List > Should render correctly with selectable with shift click for mul
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.5rem;
 }
 
 .emotion-11 {
@@ -12942,7 +13125,7 @@ exports[`List > Should render correctly with selectable with shift click for mul
   gap: 0.5rem;
 }
 
-.emotion-11 .eqr7bqq4 {
+.emotion-11 .eqr7bqq3 {
   cursor: pointer;
 }
 
@@ -12951,7 +13134,7 @@ exports[`List > Should render correctly with selectable with shift click for mul
   color: #b5b7bd;
 }
 
-.emotion-11[aria-disabled='true'] .eqr7bqq4 {
+.emotion-11[aria-disabled='true'] .eqr7bqq3 {
   cursor: not-allowed;
 }
 
@@ -13080,7 +13263,7 @@ exports[`List > Should render correctly with selectable with shift click for mul
   gap: 0.5rem;
 }
 
-.emotion-11 .eqr7bqq4 {
+.emotion-11 .eqr7bqq3 {
   cursor: pointer;
 }
 
@@ -13089,7 +13272,7 @@ exports[`List > Should render correctly with selectable with shift click for mul
   color: #b5b7bd;
 }
 
-.emotion-11[aria-disabled='true'] .eqr7bqq4 {
+.emotion-11[aria-disabled='true'] .eqr7bqq3 {
   cursor: not-allowed;
 }
 
@@ -13379,7 +13562,7 @@ exports[`List > Should render correctly with selectable with shift click for mul
   vertical-align: middle;
   font-size: 0.875rem;
   font-weight: 400;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   color: #3f4250;
   gap: 0.5rem;
   padding: 0 1rem;
@@ -13403,7 +13586,7 @@ exports[`List > Should render correctly with selectable with shift click for mul
   vertical-align: middle;
   font-size: 0.875rem;
   font-weight: 400;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   color: #3f4250;
   gap: 0.5rem;
   padding: 0 1rem;
@@ -13442,31 +13625,50 @@ exports[`List > Should render correctly with selectable with shift click for mul
   cursor: pointer;
 }
 
-.emotion-41:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-  pointer-events: none;
+.emotion-41 td,
+.emotion-41 td:first-child,
+.emotion-41 td:last-child {
   -webkit-transition: box-shadow 200ms ease,border-color 200ms ease;
   transition: box-shadow 200ms ease,border-color 200ms ease;
 }
 
-.emotion-41:not([aria-disabled='true']):hover::before {
+.emotion-41 td {
+  border-top: 1px solid #d9dadd;
+  border-bottom: 1px solid #d9dadd;
+}
+
+.emotion-41 td:first-child {
+  border-left: 1px solid #d9dadd;
+  border-radius: 0.25rem 0 0 0.25rem;
+}
+
+.emotion-41 td:last-child {
+  border-right: 1px solid #d9dadd;
+  border-radius: 0 0.25rem 0.25rem 0;
+}
+
+.emotion-41:not([aria-disabled='true']):hover td,
+.emotion-41:not([aria-disabled='true']):hover td:first-child,
+.emotion-41:not([aria-disabled='true']):hover td:last-child {
   border-color: #8c40ef;
 }
 
-.emotion-41:not([aria-disabled='true']):hover+.ei4uyz15:before {
+.emotion-41:not([aria-disabled='true']):hover+.ei4uyz15 td {
   border-color: #8c40ef;
 }
 
-.emotion-41[aria-expanded='true']:before {
-  border-radius: 0.25rem 0.25rem 0 0;
+.emotion-41[aria-expanded='true'] td {
   border-bottom-color: #d9dadd;
+}
+
+.emotion-41[aria-expanded='true'] td:first-child {
+  border-left: 1px solid #d9dadd;
+  border-radius: 0.25rem 0 0 0;
+}
+
+.emotion-41[aria-expanded='true'] td:last-child {
+  border-right: 1px solid #d9dadd;
+  border-radius: 0 0.25rem 0 0;
 }
 
 .emotion-41 [data-expandable-content] {
@@ -13479,8 +13681,13 @@ exports[`List > Should render correctly with selectable with shift click for mul
 }
 
 .emotion-41[data-highlight='true'] {
-  border-color: #8c40ef;
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
+}
+
+.emotion-41[data-highlight='true'] td,
+.emotion-41[data-highlight='true'] td:first-child,
+.emotion-41[data-highlight='true'] td:last-child {
+  border-color: #8c40ef;
 }
 
 .emotion-41[aria-disabled='true'] {
@@ -13510,31 +13717,50 @@ exports[`List > Should render correctly with selectable with shift click for mul
   cursor: pointer;
 }
 
-.emotion-41:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-  pointer-events: none;
+.emotion-41 td,
+.emotion-41 td:first-child,
+.emotion-41 td:last-child {
   -webkit-transition: box-shadow 200ms ease,border-color 200ms ease;
   transition: box-shadow 200ms ease,border-color 200ms ease;
 }
 
-.emotion-41:not([aria-disabled='true']):hover::before {
+.emotion-41 td {
+  border-top: 1px solid #d9dadd;
+  border-bottom: 1px solid #d9dadd;
+}
+
+.emotion-41 td:first-child {
+  border-left: 1px solid #d9dadd;
+  border-radius: 0.25rem 0 0 0.25rem;
+}
+
+.emotion-41 td:last-child {
+  border-right: 1px solid #d9dadd;
+  border-radius: 0 0.25rem 0.25rem 0;
+}
+
+.emotion-41:not([aria-disabled='true']):hover td,
+.emotion-41:not([aria-disabled='true']):hover td:first-child,
+.emotion-41:not([aria-disabled='true']):hover td:last-child {
   border-color: #8c40ef;
 }
 
-.emotion-41:not([aria-disabled='true']):hover+.ei4uyz15:before {
+.emotion-41:not([aria-disabled='true']):hover+.ei4uyz15 td {
   border-color: #8c40ef;
 }
 
-.emotion-41[aria-expanded='true']:before {
-  border-radius: 0.25rem 0.25rem 0 0;
+.emotion-41[aria-expanded='true'] td {
   border-bottom-color: #d9dadd;
+}
+
+.emotion-41[aria-expanded='true'] td:first-child {
+  border-left: 1px solid #d9dadd;
+  border-radius: 0.25rem 0 0 0;
+}
+
+.emotion-41[aria-expanded='true'] td:last-child {
+  border-right: 1px solid #d9dadd;
+  border-radius: 0 0.25rem 0 0;
 }
 
 .emotion-41 [data-expandable-content] {
@@ -13547,8 +13773,13 @@ exports[`List > Should render correctly with selectable with shift click for mul
 }
 
 .emotion-41[data-highlight='true'] {
-  border-color: #8c40ef;
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
+}
+
+.emotion-41[data-highlight='true'] td,
+.emotion-41[data-highlight='true'] td:first-child,
+.emotion-41[data-highlight='true'] td:last-child {
+  border-color: #8c40ef;
 }
 
 .emotion-41[aria-disabled='true'] {
@@ -13610,7 +13841,7 @@ exports[`List > Should render correctly with selectable with shift click for mul
   gap: 0.5rem;
 }
 
-.emotion-49 .eqr7bqq4 {
+.emotion-49 .eqr7bqq3 {
   cursor: pointer;
 }
 
@@ -13619,7 +13850,7 @@ exports[`List > Should render correctly with selectable with shift click for mul
   color: #b5b7bd;
 }
 
-.emotion-49[aria-disabled='true'] .eqr7bqq4 {
+.emotion-49[aria-disabled='true'] .eqr7bqq3 {
   cursor: not-allowed;
 }
 
@@ -13748,7 +13979,7 @@ exports[`List > Should render correctly with selectable with shift click for mul
   gap: 0.5rem;
 }
 
-.emotion-49 .eqr7bqq4 {
+.emotion-49 .eqr7bqq3 {
   cursor: pointer;
 }
 
@@ -13757,7 +13988,7 @@ exports[`List > Should render correctly with selectable with shift click for mul
   color: #b5b7bd;
 }
 
-.emotion-49[aria-disabled='true'] .eqr7bqq4 {
+.emotion-49[aria-disabled='true'] .eqr7bqq3 {
   cursor: not-allowed;
 }
 
@@ -13918,7 +14149,7 @@ exports[`List > Should render correctly with selectable with shift click for mul
                     aria-invalid="false"
                     aria-label="select all"
                     class="emotion-13 emotion-14"
-                    id="«rb2»"
+                    id="«rao»"
                     name="list-select-checkbox"
                     type="checkbox"
                     value="all"
@@ -14026,7 +14257,7 @@ exports[`List > Should render correctly with selectable with shift click for mul
                     aria-invalid="false"
                     aria-label="select"
                     class="emotion-13 emotion-14"
-                    id="«rb6»"
+                    id="«ras»"
                     name="list-select-checkbox"
                     type="checkbox"
                     value="1"
@@ -14109,7 +14340,7 @@ exports[`List > Should render correctly with selectable with shift click for mul
                     aria-invalid="false"
                     aria-label="select"
                     class="emotion-13 emotion-14"
-                    id="«rba»"
+                    id="«rb0»"
                     name="list-select-checkbox"
                     type="checkbox"
                     value="2"
@@ -14192,7 +14423,7 @@ exports[`List > Should render correctly with selectable with shift click for mul
                     aria-invalid="false"
                     aria-label="select"
                     class="emotion-13 emotion-14"
-                    id="«rbe»"
+                    id="«rb4»"
                     name="list-select-checkbox"
                     type="checkbox"
                     value="3"
@@ -14275,7 +14506,7 @@ exports[`List > Should render correctly with selectable with shift click for mul
                     aria-invalid="false"
                     aria-label="select"
                     class="emotion-13 emotion-14"
-                    id="«rbi»"
+                    id="«rb8»"
                     name="list-select-checkbox"
                     type="checkbox"
                     value="4"
@@ -14358,7 +14589,7 @@ exports[`List > Should render correctly with selectable with shift click for mul
                     aria-invalid="false"
                     aria-label="select"
                     class="emotion-13 emotion-14"
-                    id="«rbm»"
+                    id="«rbc»"
                     name="list-select-checkbox"
                     type="checkbox"
                     value="5"
@@ -14441,7 +14672,7 @@ exports[`List > Should render correctly with selectable with shift click for mul
                     aria-invalid="false"
                     aria-label="select"
                     class="emotion-13 emotion-14"
-                    id="«rbq»"
+                    id="«rbg»"
                     name="list-select-checkbox"
                     type="checkbox"
                     value="6"
@@ -14524,7 +14755,7 @@ exports[`List > Should render correctly with selectable with shift click for mul
                     aria-invalid="false"
                     aria-label="select"
                     class="emotion-13 emotion-14"
-                    id="«rbu»"
+                    id="«rbk»"
                     name="list-select-checkbox"
                     type="checkbox"
                     value="7"
@@ -14607,7 +14838,7 @@ exports[`List > Should render correctly with selectable with shift click for mul
                     aria-invalid="false"
                     aria-label="select"
                     class="emotion-13 emotion-14"
-                    id="«rc2»"
+                    id="«rbo»"
                     name="list-select-checkbox"
                     type="checkbox"
                     value="8"
@@ -14690,7 +14921,7 @@ exports[`List > Should render correctly with selectable with shift click for mul
                     aria-invalid="false"
                     aria-label="select"
                     class="emotion-13 emotion-14"
-                    id="«rc6»"
+                    id="«rbs»"
                     name="list-select-checkbox"
                     type="checkbox"
                     value="9"
@@ -14773,7 +15004,7 @@ exports[`List > Should render correctly with selectable with shift click for mul
                     aria-invalid="false"
                     aria-label="select"
                     class="emotion-13 emotion-14"
-                    id="«rca»"
+                    id="«rc0»"
                     name="list-select-checkbox"
                     type="checkbox"
                     value="10"
@@ -14853,7 +15084,6 @@ exports[`List > Should render correctly with sentiment rows 1`] = `
   width: 100%;
   box-sizing: content-box;
   gap: 0.5rem;
-  border-collapse: collapsed;
   border-spacing: 0 1rem;
   position: relative;
 }
@@ -14864,27 +15094,13 @@ exports[`List > Should render correctly with sentiment rows 1`] = `
   padding: 0 1rem;
 }
 
-.emotion-4:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border: 1px solid transparent;
-  border-radius: 0.25rem;
-  pointer-events: none;
-  -webkit-transition: box-shadow 200ms ease,border-color 200ms ease;
-  transition: box-shadow 200ms ease,border-color 200ms ease;
-}
-
 .emotion-6 {
   display: table-cell;
   text-align: left;
   vertical-align: middle;
   font-size: 0.875rem;
   font-weight: 400;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   color: #3f4250;
   gap: 0.5rem;
   padding: 0 1rem;
@@ -14907,10 +15123,10 @@ exports[`List > Should render correctly with sentiment rows 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -14919,10 +15135,10 @@ exports[`List > Should render correctly with sentiment rows 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.5rem;
 }
 
 .emotion-26 {
@@ -14946,31 +15162,50 @@ exports[`List > Should render correctly with sentiment rows 1`] = `
   cursor: pointer;
 }
 
-.emotion-26:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-  pointer-events: none;
+.emotion-26 td,
+.emotion-26 td:first-child,
+.emotion-26 td:last-child {
   -webkit-transition: box-shadow 200ms ease,border-color 200ms ease;
   transition: box-shadow 200ms ease,border-color 200ms ease;
 }
 
-.emotion-26:not([aria-disabled='true']):hover::before {
+.emotion-26 td {
+  border-top: 1px solid #d9dadd;
+  border-bottom: 1px solid #d9dadd;
+}
+
+.emotion-26 td:first-child {
+  border-left: 1px solid #d9dadd;
+  border-radius: 0.25rem 0 0 0.25rem;
+}
+
+.emotion-26 td:last-child {
+  border-right: 1px solid #d9dadd;
+  border-radius: 0 0.25rem 0.25rem 0;
+}
+
+.emotion-26:not([aria-disabled='true']):hover td,
+.emotion-26:not([aria-disabled='true']):hover td:first-child,
+.emotion-26:not([aria-disabled='true']):hover td:last-child {
   border-color: #8c40ef;
 }
 
-.emotion-26:not([aria-disabled='true']):hover+.ei4uyz15:before {
+.emotion-26:not([aria-disabled='true']):hover+.ei4uyz15 td {
   border-color: #8c40ef;
 }
 
-.emotion-26[aria-expanded='true']:before {
-  border-radius: 0.25rem 0.25rem 0 0;
+.emotion-26[aria-expanded='true'] td {
   border-bottom-color: #d9dadd;
+}
+
+.emotion-26[aria-expanded='true'] td:first-child {
+  border-left: 1px solid #d9dadd;
+  border-radius: 0.25rem 0 0 0;
+}
+
+.emotion-26[aria-expanded='true'] td:last-child {
+  border-right: 1px solid #d9dadd;
+  border-radius: 0 0.25rem 0 0;
 }
 
 .emotion-26 [data-expandable-content] {
@@ -14978,8 +15213,13 @@ exports[`List > Should render correctly with sentiment rows 1`] = `
 }
 
 .emotion-26[data-highlight='true'] {
-  border-color: #8c40ef;
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
+}
+
+.emotion-26[data-highlight='true'] td,
+.emotion-26[data-highlight='true'] td:first-child,
+.emotion-26[data-highlight='true'] td:last-child {
+  border-color: #8c40ef;
 }
 
 .emotion-26[aria-disabled='true'] {
@@ -15410,7 +15650,6 @@ exports[`List > Should render correctly with sort 1`] = `
   width: 100%;
   box-sizing: content-box;
   gap: 0.5rem;
-  border-collapse: collapsed;
   border-spacing: 0 1rem;
   position: relative;
 }
@@ -15421,27 +15660,13 @@ exports[`List > Should render correctly with sort 1`] = `
   padding: 0 1rem;
 }
 
-.emotion-4:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border: 1px solid transparent;
-  border-radius: 0.25rem;
-  pointer-events: none;
-  -webkit-transition: box-shadow 200ms ease,border-color 200ms ease;
-  transition: box-shadow 200ms ease,border-color 200ms ease;
-}
-
 .emotion-6 {
   display: table-cell;
   text-align: left;
   vertical-align: middle;
   font-size: 0.875rem;
   font-weight: 400;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   color: #3f4250;
   gap: 0.5rem;
   padding: 0 1rem;
@@ -15464,10 +15689,10 @@ exports[`List > Should render correctly with sort 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -15476,10 +15701,10 @@ exports[`List > Should render correctly with sort 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.5rem;
 }
 
 .emotion-26 {
@@ -15503,31 +15728,50 @@ exports[`List > Should render correctly with sort 1`] = `
   cursor: pointer;
 }
 
-.emotion-26:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-  pointer-events: none;
+.emotion-26 td,
+.emotion-26 td:first-child,
+.emotion-26 td:last-child {
   -webkit-transition: box-shadow 200ms ease,border-color 200ms ease;
   transition: box-shadow 200ms ease,border-color 200ms ease;
 }
 
-.emotion-26:not([aria-disabled='true']):hover::before {
+.emotion-26 td {
+  border-top: 1px solid #d9dadd;
+  border-bottom: 1px solid #d9dadd;
+}
+
+.emotion-26 td:first-child {
+  border-left: 1px solid #d9dadd;
+  border-radius: 0.25rem 0 0 0.25rem;
+}
+
+.emotion-26 td:last-child {
+  border-right: 1px solid #d9dadd;
+  border-radius: 0 0.25rem 0.25rem 0;
+}
+
+.emotion-26:not([aria-disabled='true']):hover td,
+.emotion-26:not([aria-disabled='true']):hover td:first-child,
+.emotion-26:not([aria-disabled='true']):hover td:last-child {
   border-color: #8c40ef;
 }
 
-.emotion-26:not([aria-disabled='true']):hover+.ei4uyz15:before {
+.emotion-26:not([aria-disabled='true']):hover+.ei4uyz15 td {
   border-color: #8c40ef;
 }
 
-.emotion-26[aria-expanded='true']:before {
-  border-radius: 0.25rem 0.25rem 0 0;
+.emotion-26[aria-expanded='true'] td {
   border-bottom-color: #d9dadd;
+}
+
+.emotion-26[aria-expanded='true'] td:first-child {
+  border-left: 1px solid #d9dadd;
+  border-radius: 0.25rem 0 0 0;
+}
+
+.emotion-26[aria-expanded='true'] td:last-child {
+  border-right: 1px solid #d9dadd;
+  border-radius: 0 0.25rem 0 0;
 }
 
 .emotion-26 [data-expandable-content] {
@@ -15540,8 +15784,13 @@ exports[`List > Should render correctly with sort 1`] = `
 }
 
 .emotion-26[data-highlight='true'] {
-  border-color: #8c40ef;
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
+}
+
+.emotion-26[data-highlight='true'] td,
+.emotion-26[data-highlight='true'] td:first-child,
+.emotion-26[data-highlight='true'] td:last-child {
+  border-color: #8c40ef;
 }
 
 .emotion-26[aria-disabled='true'] {
@@ -15958,7 +16207,6 @@ exports[`List > Should render correctly with sort then click 1`] = `
   width: 100%;
   box-sizing: content-box;
   gap: 0.5rem;
-  border-collapse: collapsed;
   border-spacing: 0 1rem;
   position: relative;
 }
@@ -15967,7 +16215,6 @@ exports[`List > Should render correctly with sort then click 1`] = `
   width: 100%;
   box-sizing: content-box;
   gap: 0.5rem;
-  border-collapse: collapsed;
   border-spacing: 0 1rem;
   position: relative;
 }
@@ -15978,47 +16225,19 @@ exports[`List > Should render correctly with sort then click 1`] = `
   padding: 0 1rem;
 }
 
-.emotion-4:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border: 1px solid transparent;
-  border-radius: 0.25rem;
-  pointer-events: none;
-  -webkit-transition: box-shadow 200ms ease,border-color 200ms ease;
-  transition: box-shadow 200ms ease,border-color 200ms ease;
-}
-
 .emotion-4 {
   display: table-row;
   vertical-align: middle;
   padding: 0 1rem;
 }
 
-.emotion-4:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border: 1px solid transparent;
-  border-radius: 0.25rem;
-  pointer-events: none;
-  -webkit-transition: box-shadow 200ms ease,border-color 200ms ease;
-  transition: box-shadow 200ms ease,border-color 200ms ease;
-}
-
 .emotion-6 {
   display: table-cell;
   text-align: left;
   vertical-align: middle;
   font-size: 0.875rem;
   font-weight: 400;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   color: #3f4250;
   gap: 0.5rem;
   padding: 0 1rem;
@@ -16042,7 +16261,7 @@ exports[`List > Should render correctly with sort then click 1`] = `
   vertical-align: middle;
   font-size: 0.875rem;
   font-weight: 400;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   color: #3f4250;
   gap: 0.5rem;
   padding: 0 1rem;
@@ -16065,10 +16284,10 @@ exports[`List > Should render correctly with sort then click 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -16077,10 +16296,10 @@ exports[`List > Should render correctly with sort then click 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.5rem;
 }
 
 .emotion-8 {
@@ -16088,10 +16307,10 @@ exports[`List > Should render correctly with sort then click 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -16100,10 +16319,10 @@ exports[`List > Should render correctly with sort then click 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.5rem;
 }
 
 .emotion-10 {
@@ -16161,31 +16380,50 @@ exports[`List > Should render correctly with sort then click 1`] = `
   cursor: pointer;
 }
 
-.emotion-37:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-  pointer-events: none;
+.emotion-37 td,
+.emotion-37 td:first-child,
+.emotion-37 td:last-child {
   -webkit-transition: box-shadow 200ms ease,border-color 200ms ease;
   transition: box-shadow 200ms ease,border-color 200ms ease;
 }
 
-.emotion-37:not([aria-disabled='true']):hover::before {
+.emotion-37 td {
+  border-top: 1px solid #d9dadd;
+  border-bottom: 1px solid #d9dadd;
+}
+
+.emotion-37 td:first-child {
+  border-left: 1px solid #d9dadd;
+  border-radius: 0.25rem 0 0 0.25rem;
+}
+
+.emotion-37 td:last-child {
+  border-right: 1px solid #d9dadd;
+  border-radius: 0 0.25rem 0.25rem 0;
+}
+
+.emotion-37:not([aria-disabled='true']):hover td,
+.emotion-37:not([aria-disabled='true']):hover td:first-child,
+.emotion-37:not([aria-disabled='true']):hover td:last-child {
   border-color: #8c40ef;
 }
 
-.emotion-37:not([aria-disabled='true']):hover+.ei4uyz15:before {
+.emotion-37:not([aria-disabled='true']):hover+.ei4uyz15 td {
   border-color: #8c40ef;
 }
 
-.emotion-37[aria-expanded='true']:before {
-  border-radius: 0.25rem 0.25rem 0 0;
+.emotion-37[aria-expanded='true'] td {
   border-bottom-color: #d9dadd;
+}
+
+.emotion-37[aria-expanded='true'] td:first-child {
+  border-left: 1px solid #d9dadd;
+  border-radius: 0.25rem 0 0 0;
+}
+
+.emotion-37[aria-expanded='true'] td:last-child {
+  border-right: 1px solid #d9dadd;
+  border-radius: 0 0.25rem 0 0;
 }
 
 .emotion-37 [data-expandable-content] {
@@ -16198,8 +16436,13 @@ exports[`List > Should render correctly with sort then click 1`] = `
 }
 
 .emotion-37[data-highlight='true'] {
-  border-color: #8c40ef;
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
+}
+
+.emotion-37[data-highlight='true'] td,
+.emotion-37[data-highlight='true'] td:first-child,
+.emotion-37[data-highlight='true'] td:last-child {
+  border-color: #8c40ef;
 }
 
 .emotion-37[aria-disabled='true'] {
@@ -16229,31 +16472,50 @@ exports[`List > Should render correctly with sort then click 1`] = `
   cursor: pointer;
 }
 
-.emotion-37:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-  pointer-events: none;
+.emotion-37 td,
+.emotion-37 td:first-child,
+.emotion-37 td:last-child {
   -webkit-transition: box-shadow 200ms ease,border-color 200ms ease;
   transition: box-shadow 200ms ease,border-color 200ms ease;
 }
 
-.emotion-37:not([aria-disabled='true']):hover::before {
+.emotion-37 td {
+  border-top: 1px solid #d9dadd;
+  border-bottom: 1px solid #d9dadd;
+}
+
+.emotion-37 td:first-child {
+  border-left: 1px solid #d9dadd;
+  border-radius: 0.25rem 0 0 0.25rem;
+}
+
+.emotion-37 td:last-child {
+  border-right: 1px solid #d9dadd;
+  border-radius: 0 0.25rem 0.25rem 0;
+}
+
+.emotion-37:not([aria-disabled='true']):hover td,
+.emotion-37:not([aria-disabled='true']):hover td:first-child,
+.emotion-37:not([aria-disabled='true']):hover td:last-child {
   border-color: #8c40ef;
 }
 
-.emotion-37:not([aria-disabled='true']):hover+.ei4uyz15:before {
+.emotion-37:not([aria-disabled='true']):hover+.ei4uyz15 td {
   border-color: #8c40ef;
 }
 
-.emotion-37[aria-expanded='true']:before {
-  border-radius: 0.25rem 0.25rem 0 0;
+.emotion-37[aria-expanded='true'] td {
   border-bottom-color: #d9dadd;
+}
+
+.emotion-37[aria-expanded='true'] td:first-child {
+  border-left: 1px solid #d9dadd;
+  border-radius: 0.25rem 0 0 0;
+}
+
+.emotion-37[aria-expanded='true'] td:last-child {
+  border-right: 1px solid #d9dadd;
+  border-radius: 0 0.25rem 0 0;
 }
 
 .emotion-37 [data-expandable-content] {
@@ -16266,8 +16528,13 @@ exports[`List > Should render correctly with sort then click 1`] = `
 }
 
 .emotion-37[data-highlight='true'] {
-  border-color: #8c40ef;
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
+}
+
+.emotion-37[data-highlight='true'] td,
+.emotion-37[data-highlight='true'] td:first-child,
+.emotion-37[data-highlight='true'] td:last-child {
+  border-color: #8c40ef;
 }
 
 .emotion-37[aria-disabled='true'] {

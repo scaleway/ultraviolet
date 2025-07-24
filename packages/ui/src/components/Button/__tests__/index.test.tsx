@@ -1,16 +1,20 @@
-import { shouldMatchEmotionSnapshot } from '@utils/test'
-import { describe, test } from 'vitest'
+import { screen } from '@testing-library/react'
+import { userEvent } from '@testing-library/user-event'
+import { PencilIcon, PencilOutlineIcon } from '@ultraviolet/icons'
+import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
+import { describe, expect, test, vi } from 'vitest'
 import { Button, buttonSizes, buttonVariants } from '..'
 import { SENTIMENTS } from '../../../theme'
 
 const MockOnClick = () => {}
+const EXTENDED_SENTIMENTS = [...SENTIMENTS, 'black', 'white'] as const
 
 describe('Button', () => {
   describe('variant-sentiment-disabled combination', () => {
     buttonVariants.forEach(variant => {
-      SENTIMENTS.forEach(sentiment => {
-        test(`render ${variant}&${sentiment}`, () =>
-          shouldMatchEmotionSnapshot(
+      EXTENDED_SENTIMENTS.forEach(sentiment => {
+        test(`render ${variant}&${sentiment}`, async () => {
+          const { asFragment } = renderWithTheme(
             <Button
               onClick={MockOnClick}
               variant={variant}
@@ -19,7 +23,11 @@ describe('Button', () => {
             >
               Hello
             </Button>,
-          ))
+          )
+
+          await userEvent.hover(screen.getByRole('button'))
+          expect(asFragment).toMatchSnapshot()
+        })
         test(`render ${variant}&${sentiment} disabled`, () =>
           shouldMatchEmotionSnapshot(
             <Button
@@ -44,28 +52,50 @@ describe('Button', () => {
       ))
   })
 
+  test(`work with onPointerDown and onKeyDown`, async () => {
+    const onPointerDown = vi.fn()
+    const onKeyDown = vi.fn()
+    const { asFragment } = renderWithTheme(
+      <Button
+        onPointerDown={onPointerDown}
+        onKeyDown={onKeyDown}
+        aria-describedby="test"
+        aria-disabled={false}
+        aria-pressed={false}
+        aria-roledescription="button"
+      >
+        Hello
+      </Button>,
+    )
+    await userEvent.click(screen.getByRole('button'))
+    expect(onPointerDown).toHaveBeenCalledOnce()
+    await userEvent.keyboard('a')
+    expect(onKeyDown).toHaveBeenCalledOnce()
+
+    expect(asFragment).toMatchSnapshot()
+  })
+
   test(`render with icon`, () =>
     shouldMatchEmotionSnapshot(
-      <Button onClick={MockOnClick} disabled icon="pencil">
+      <Button onClick={MockOnClick} disabled>
+        <PencilIcon />
         Hello
       </Button>,
     ))
 
   test(`render with icon on the right`, () =>
     shouldMatchEmotionSnapshot(
-      <Button onClick={MockOnClick} disabled icon="pencil" iconPosition="right">
+      <Button onClick={MockOnClick} disabled>
         Hello
+        <PencilIcon />
       </Button>,
     ))
 
   test(`render with icon only`, () =>
     shouldMatchEmotionSnapshot(
-      <Button
-        onClick={MockOnClick}
-        disabled
-        icon="pencil"
-        iconPosition="right"
-      />,
+      <Button onClick={MockOnClick} disabled>
+        <PencilOutlineIcon />
+      </Button>,
     ))
 
   test(`render with fullWidth`, () =>
@@ -84,14 +114,16 @@ describe('Button', () => {
 
   test(`render with isLoading with icon`, () =>
     shouldMatchEmotionSnapshot(
-      <Button onClick={MockOnClick} isLoading icon="pencil">
+      <Button onClick={MockOnClick} isLoading>
+        <PencilIcon />
         Hello
       </Button>,
     ))
 
   test(`render with isLoading with icon variant`, () =>
     shouldMatchEmotionSnapshot(
-      <Button onClick={MockOnClick} icon="pencil" variant="outlined">
+      <Button onClick={MockOnClick}>
+        <PencilOutlineIcon />
         Hello
       </Button>,
     ))

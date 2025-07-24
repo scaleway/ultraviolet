@@ -1,3 +1,4 @@
+import { LockIcon } from '@ultraviolet/icons'
 import { shouldMatchEmotionSnapshot } from '@utils/test'
 import { describe, test } from 'vitest'
 import { Tag } from '..'
@@ -15,7 +16,12 @@ describe('Tag', () => {
     shouldMatchEmotionSnapshot(<Tag sentiment="primary">test</Tag>))
 
   test('renders correctly with icon', () =>
-    shouldMatchEmotionSnapshot(<Tag icon="lock">test</Tag>))
+    shouldMatchEmotionSnapshot(
+      <Tag>
+        <LockIcon />
+        test
+      </Tag>,
+    ))
 
   test('renders correctly with isLoading', () =>
     shouldMatchEmotionSnapshot(<Tag isLoading>test</Tag>))

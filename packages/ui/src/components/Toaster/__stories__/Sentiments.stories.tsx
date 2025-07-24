@@ -1,4 +1,4 @@
-import type { Decorator, StoryFn } from '@storybook/react'
+import type { Decorator, StoryFn } from '@storybook/react-vite'
 import { ToastContainer, toast } from '..'
 import { Button } from '../../index'
 
@@ -10,9 +10,6 @@ export const Sentiments: StoryFn<typeof ToastContainer> = args => (
       onClick={() => toast.success('This is success')}
     >
       Success
-    </Button>
-    <Button sentiment="info" onClick={() => toast.info('This is info')}>
-      Info
     </Button>
     <Button sentiment="danger" onClick={() => toast.error('This is error')}>
       Error
@@ -30,7 +27,7 @@ Sentiments.parameters = {
   docs: {
     description: {
       story:
-        'Sentiments defines different colors of you component. Using `toast.success()`, `toast.error()`, `toast.warning()` or `toast.info()` will automatically set the correct sentiment. **⚠️ `toast.info()` is deprecated ⚠️**',
+        'Sentiments defines different colors of you component. Using `toast.success()`, `toast.error()` or `toast.warning()` will automatically set the correct sentiment.',
     },
   },
 }

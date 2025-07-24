@@ -1,4 +1,4 @@
-import type { Meta } from '@storybook/react'
+import type { Meta } from '@storybook/react-vite'
 import { ExpandableCard } from '..'
 
 export default {
@@ -15,3 +15,4 @@ export { Header } from './Header.stories'
 export { Disabled } from './Disabled.stories'
 export { Controlled } from './Controlled.stories'
 export { Name } from './Name.stories'
+export { Draggable } from './Draggable.stories'

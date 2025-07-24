@@ -1,4 +1,4 @@
-import type { Meta } from '@storybook/react'
+import type { Meta } from '@storybook/react-vite'
 import { List } from '..'
 
 export default {
@@ -15,7 +15,6 @@ export { Loading } from './Loading.stories'
 export { Expandable } from './Expandable.stories'
 export { ExpandableAutocollapse } from './ExpandableAutocollapse.stories'
 export { ExpandButton } from './ExpandButton.stories'
-export { PreventClick } from './PreventClick.stories'
 export { Selectable } from './Selectable.stories'
 export { OnSelectedChange } from './OnSelectedChange.stories'
 export { Sentiments } from './Sentiment.stories'

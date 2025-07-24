@@ -22,7 +22,6 @@ const StyledTable = styled.table`
   width: 100%;
   box-sizing: content-box;
   gap: ${({ theme }) => theme.space['1']};
-  border-collapse: collapsed;
   border-spacing: 0 ${({ theme }) => theme.space['2']};
   position: relative;
 `
@@ -45,6 +44,7 @@ type ListProps = {
    * Action when selection changes (get the list of selected rows)
    */
   onSelectedChange?: Dispatch<SetStateAction<string[]>>
+  className?: string
 }
 
 const TableContainer = ({ children }: { children: ReactNode }) => {
@@ -76,6 +76,7 @@ const BaseList = forwardRef<HTMLTableElement, ListProps>(
       loading,
       autoCollapse = false,
       onSelectedChange,
+      className,
     },
     ref,
   ) => (
@@ -87,7 +88,7 @@ const BaseList = forwardRef<HTMLTableElement, ListProps>(
       columns={columns}
     >
       <TableContainer>
-        <StyledTable ref={ref}>
+        <StyledTable ref={ref} className={className}>
           <HeaderRow hasSelectAllColumn={selectable}>
             {columns.map((column, index) => (
               <HeaderCell

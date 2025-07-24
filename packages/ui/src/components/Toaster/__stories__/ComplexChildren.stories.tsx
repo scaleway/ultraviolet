@@ -1,4 +1,4 @@
-import type { StoryFn } from '@storybook/react'
+import type { StoryFn } from '@storybook/react-vite'
 import { Toast, ToastContainer, toast } from '..'
 import { Button } from '../../Button'
 import { Stack } from '../../Stack'
@@ -27,9 +27,7 @@ const LinkToaster = () => (
     width="100%"
   >
     Personal data updated.
-    <Toast.Link href="https://scaleway.com" sentiment="neutral">
-      Reload
-    </Toast.Link>
+    <Toast.Link href="https://scaleway.com">Reload</Toast.Link>
   </Stack>
 )
 

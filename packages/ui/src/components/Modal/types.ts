@@ -1,5 +1,4 @@
-import type { ReactElement, ReactNode } from 'react'
-import type React from 'react'
+import type { ReactElement, ReactNode, RefObject } from 'react'
 
 export type ModalSize = 'large' | 'medium' | 'small' | 'xsmall' | 'xxsmall'
 
@@ -15,21 +14,9 @@ export type ModalPlacement =
   | 'left'
 
 export type ModalState = {
-  /**
-   * @deprecated use show
-   */
-  onOpen: () => void
-  /**
-   * @deprecated use close
-   */
-  onClose: () => void
   toggle: () => void
   visible: boolean
   modalId: string
-  /**
-   * @deprecated use close
-   */
-  hide: () => void
   close: () => void
   show: () => void
 }
@@ -41,6 +28,7 @@ export type DisclosureProps = {
   visible: ModalState['visible']
   toggle: ModalState['toggle']
   id: string
+  ref: RefObject<HTMLDivElement | null>
 }
 
 export type DialogProps = {
@@ -57,7 +45,5 @@ export type DialogProps = {
   onClose: () => void
   'data-testid'?: string
   children: ReactNode
-  backdropCss: React.JSX.IntrinsicAttributes['css']
-  dialogCss: React.JSX.IntrinsicAttributes['css']
   image?: string
 }

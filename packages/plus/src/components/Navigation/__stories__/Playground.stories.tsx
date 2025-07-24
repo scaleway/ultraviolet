@@ -1,16 +1,16 @@
 import styled from '@emotion/styled'
-import type { StoryFn } from '@storybook/react'
+import type { StoryFn } from '@storybook/react-vite'
 import {
   BaremetalCategoryIcon,
-  ConsoleCategoryIcon,
+  DataAndAnalyticsCategoryIcon,
   DatabaseCategoryIcon,
-  ManagedServicesCategoryIcon,
+  MonitoringCategoryIcon,
   NetworkCategoryIcon,
-  ObservabilityCategoryIcon,
+  OrganizationDashboardCategoryIcon,
   SecurityCategoryIcon,
   UseCaseCategoryIcon,
 } from '@ultraviolet/icons/category'
-import { Stack, fadeIn, fadeOut } from '@ultraviolet/ui'
+import { Stack, Tooltip, fadeIn, fadeOut } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
 import { useCallback, useEffect, useState } from 'react'
 import { Navigation, NavigationProvider, useNavigation } from '..'
@@ -81,7 +81,7 @@ const PlaygroundContent = ({ ...props }: ComponentProps<typeof Navigation>) => {
       <Navigation.Item
         label="Organization Dashboard"
         id="organization-dashboard"
-        categoryIcon={<ConsoleCategoryIcon variant="neutral" />}
+        categoryIcon={<OrganizationDashboardCategoryIcon variant="neutral" />}
         noPinButton
         active={active === 'Organization Dashboard'}
         onClickPinUnpin={onClickPinUnpin}
@@ -101,6 +101,11 @@ const PlaygroundContent = ({ ...props }: ComponentProps<typeof Navigation>) => {
       <Navigation.PinnedItems
         toggle={pinnedItemsExpanded}
         onToggle={toggle => setPinnedItemsExpanded(!!toggle)}
+        itemWrapper={(item, id) => (
+          <Tooltip text={id} placement="top">
+            {item}
+          </Tooltip>
+        )}
       />
       <Navigation.Separator />
       <Navigation.Group label="Products">
@@ -174,7 +179,7 @@ const PlaygroundContent = ({ ...props }: ComponentProps<typeof Navigation>) => {
         <Navigation.Item
           label="Storage"
           id="storage"
-          categoryIcon={<ManagedServicesCategoryIcon variant="primary" />}
+          categoryIcon={<DataAndAnalyticsCategoryIcon variant="primary" />}
         >
           <Navigation.Item
             label="Block Storage"
@@ -250,7 +255,7 @@ const PlaygroundContent = ({ ...props }: ComponentProps<typeof Navigation>) => {
         <Navigation.Item
           label="Monitoring"
           id="monitoring"
-          categoryIcon={<ObservabilityCategoryIcon variant="primary" />}
+          categoryIcon={<MonitoringCategoryIcon variant="primary" />}
         >
           <Navigation.Item
             label="Logs"

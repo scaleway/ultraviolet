@@ -2,7 +2,7 @@
 
 import styled from '@emotion/styled'
 import {
-  InformationIcon,
+  InformationOutlineIcon,
   SortIcon as SortIconUV,
   SouthShortIcon,
 } from '@ultraviolet/icons'
@@ -13,7 +13,8 @@ import { Tooltip } from '../Tooltip'
 const StyledSortIcon = styled(SouthShortIcon, {
   shouldForwardProp: prop => !['order'].includes(prop),
 })<{ order: 'ascending' | 'descending' }>`
-    transform: ${({ order }) => (order === 'ascending' ? 'rotate(-180deg)' : 'none')};
+    transform: ${({ order }) =>
+      order === 'ascending' ? 'rotate(-180deg)' : 'none'};
     transition: transform 0.2s;
 `
 
@@ -126,13 +127,13 @@ export const HeaderCell = ({
       <StyledText
         as="div"
         variant="bodySmall"
-        color={order !== undefined ? 'primary' : 'neutral'}
+        sentiment={order !== undefined ? 'primary' : 'neutral'}
       >
         {children}
         {info ? (
           <Tooltip text={info}>
-            <InformationIcon
-              size="large"
+            <InformationOutlineIcon
+              size="small"
               prominence="weak"
               sentiment="neutral"
             />

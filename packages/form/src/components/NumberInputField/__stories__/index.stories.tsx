@@ -1,4 +1,4 @@
-import type { Meta } from '@storybook/react'
+import type { Meta } from '@storybook/react-vite'
 import { Snippet, Stack, Text } from '@ultraviolet/ui'
 import { Form, NumberInputField } from '../..'
 import { useForm } from '../../..'
@@ -8,11 +8,7 @@ export default {
   component: NumberInputField,
   decorators: [
     ChildStory => {
-      const methods = useForm({
-        defaultValues: {
-          value: 0,
-        },
-      })
+      const methods = useForm()
       const {
         errors,
         isDirty,
@@ -30,7 +26,13 @@ export default {
       return (
         <Form onSubmit={() => {}} errors={mockErrors} methods={methods}>
           <Stack gap={2}>
-            <ChildStory />
+            <div
+              style={{
+                width: '250px',
+              }}
+            >
+              <ChildStory />
+            </div>
             <Stack gap={1}>
               <Text variant="bodyStrong" as="p">
                 Form input values:
@@ -74,13 +76,8 @@ export default {
         component: 'A NumberInput field',
       },
     },
-    deprecated: true,
-    deprecatedReason:
-      'This component is deprecated, use NumberInputFieldV2 instead.',
-    migrationLink: 'Migrations/NumberInput to NumberInputV2',
   },
   title: 'Form/Components/Fields/NumberInputField',
-  tags: ['deprecated'],
 } as Meta
 
 export { Playground } from './Playground.stories'

@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 // oxlint-disable-next-line import/no-unassigned-import
 import './globals.css'
+import { ThemeRegistry } from '@ultraviolet/nextjs'
 import { consoleLightTheme } from '@ultraviolet/themes'
-import { ThemeRegistry } from '@ultraviolet/ui'
 import type { ReactNode } from 'react'
 import { GlobalStyles } from './GlobalStyles'
 

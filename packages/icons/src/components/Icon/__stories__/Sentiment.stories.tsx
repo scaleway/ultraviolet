@@ -1,7 +1,7 @@
-import type { Decorator } from '@storybook/react'
+import type { Decorator } from '@storybook/react-vite'
 import { Stack } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
-import { EyeIcon } from '..'
+import { EyeIcon } from '../__generated__'
 
 const COLORS = ['primary', 'success', 'warning'] as const
 

@@ -1,16 +1,12 @@
 import { consoleDarkTheme, consoleLightTheme } from '@ultraviolet/themes'
 import deepmerge from 'deepmerge'
-import ThemeRegistry from './ThemeRegistry'
 
-export type ScreenSize = keyof typeof consoleLightTheme.screens
+export type ScreenSize = keyof typeof consoleLightTheme.breakpoints
 
-/**
- * @deprecated use UltravioletUITheme instead
- */
-type SCWUITheme = typeof consoleLightTheme
 type UltravioletUITheme = typeof consoleLightTheme
 
-const { colors, shadows, typography, space, radii, screens } = consoleLightTheme
+const { colors, shadows, typography, space, radii, breakpoints } =
+  consoleLightTheme
 
 type RecursivePartial<T> = {
   [P in keyof T]?: RecursivePartial<T[P]>
@@ -52,20 +48,19 @@ const SENTIMENTS_WITHOUT_NEUTRAL = SENTIMENTS.filter(
   sentiment => sentiment !== 'neutral',
 )
 
-export type { SCWUITheme, UltravioletUITheme, Color, ExtendedColor }
+export type { UltravioletUITheme, Color, ExtendedColor }
 
 export {
   colors,
   shadows,
   space,
   radii,
-  screens,
+  breakpoints as screens,
   consoleDarkTheme as darkTheme,
   extendTheme,
   SENTIMENTS,
   SENTIMENTS_WITHOUT_NEUTRAL,
   typography,
-  ThemeRegistry,
 }
 
 export default consoleLightTheme

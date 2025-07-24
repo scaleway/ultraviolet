@@ -7,10 +7,10 @@ exports[`GlobalAlert > renders correctly with all variants > renders correctly v
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -19,10 +19,9 @@ exports[`GlobalAlert > renders correctly with all variants > renders correctly v
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   width: 100%;
   height: 3.5rem;
   padding: 0 1rem;
@@ -45,10 +44,10 @@ exports[`GlobalAlert > renders correctly with all variants > renders correctly v
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -57,16 +56,16 @@ exports[`GlobalAlert > renders correctly with all variants > renders correctly v
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 1rem;
 }
 
 .emotion-4 {
   color: #ffffff;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -89,7 +88,7 @@ exports[`GlobalAlert > renders correctly with all variants > renders correctly v
   gap: 0.25rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 1.5rem;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -104,7 +103,7 @@ exports[`GlobalAlert > renders correctly with all variants > renders correctly v
   -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -127,6 +126,10 @@ exports[`GlobalAlert > renders correctly with all variants > renders correctly v
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
+.emotion-7 .e1y1n78x0 {
+  stroke: transparent;
+}
+
 .emotion-7:hover,
 .emotion-7:active {
   background: #792dd4;
@@ -142,19 +145,15 @@ exports[`GlobalAlert > renders correctly with all variants > renders correctly v
 .emotion-9 {
   vertical-align: middle;
   fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
 .emotion-9 .fillStroke {
   stroke: currentColor;
   fill: none;
-}
-
-.emotion-9 path {
-  fill: currentColor;
 }
 
 <div
@@ -180,7 +179,6 @@ exports[`GlobalAlert > renders correctly with all variants > renders correctly v
         <svg
           class="emotion-9 emotion-10"
           viewBox="0 0 16 16"
-          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"
@@ -199,10 +197,10 @@ exports[`GlobalAlert > renders correctly with all variants > renders correctly v
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -211,10 +209,9 @@ exports[`GlobalAlert > renders correctly with all variants > renders correctly v
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   width: 100%;
   height: 3.5rem;
   padding: 0 1rem;
@@ -237,10 +234,10 @@ exports[`GlobalAlert > renders correctly with all variants > renders correctly v
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -249,16 +246,16 @@ exports[`GlobalAlert > renders correctly with all variants > renders correctly v
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 1rem;
 }
 
 .emotion-4 {
   color: #ffffff;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -281,7 +278,7 @@ exports[`GlobalAlert > renders correctly with all variants > renders correctly v
   gap: 0.25rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 1.5rem;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -296,7 +293,7 @@ exports[`GlobalAlert > renders correctly with all variants > renders correctly v
   -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -319,6 +316,10 @@ exports[`GlobalAlert > renders correctly with all variants > renders correctly v
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
+.emotion-7 .e1y1n78x0 {
+  stroke: transparent;
+}
+
 .emotion-7:hover,
 .emotion-7:active {
   background: #792dd4;
@@ -334,19 +335,15 @@ exports[`GlobalAlert > renders correctly with all variants > renders correctly v
 .emotion-9 {
   vertical-align: middle;
   fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
 .emotion-9 .fillStroke {
   stroke: currentColor;
   fill: none;
-}
-
-.emotion-9 path {
-  fill: currentColor;
 }
 
 <div
@@ -372,7 +369,6 @@ exports[`GlobalAlert > renders correctly with all variants > renders correctly v
         <svg
           class="emotion-9 emotion-10"
           viewBox="0 0 16 16"
-          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"
@@ -391,10 +387,10 @@ exports[`GlobalAlert > renders correctly with all variants > renders correctly v
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -403,10 +399,9 @@ exports[`GlobalAlert > renders correctly with all variants > renders correctly v
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   width: 100%;
   height: 3.5rem;
   padding: 0 1rem;
@@ -429,10 +424,10 @@ exports[`GlobalAlert > renders correctly with all variants > renders correctly v
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -441,16 +436,16 @@ exports[`GlobalAlert > renders correctly with all variants > renders correctly v
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 1rem;
 }
 
 .emotion-4 {
   color: #ffffff;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -473,7 +468,7 @@ exports[`GlobalAlert > renders correctly with all variants > renders correctly v
   gap: 0.25rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 1.5rem;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -488,7 +483,7 @@ exports[`GlobalAlert > renders correctly with all variants > renders correctly v
   -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -511,6 +506,10 @@ exports[`GlobalAlert > renders correctly with all variants > renders correctly v
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
+.emotion-7 .e1y1n78x0 {
+  stroke: transparent;
+}
+
 .emotion-7:hover,
 .emotion-7:active {
   background: #792dd4;
@@ -526,19 +525,15 @@ exports[`GlobalAlert > renders correctly with all variants > renders correctly v
 .emotion-9 {
   vertical-align: middle;
   fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
 .emotion-9 .fillStroke {
   stroke: currentColor;
   fill: none;
-}
-
-.emotion-9 path {
-  fill: currentColor;
 }
 
 <div
@@ -564,7 +559,6 @@ exports[`GlobalAlert > renders correctly with all variants > renders correctly v
         <svg
           class="emotion-9 emotion-10"
           viewBox="0 0 16 16"
-          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"
@@ -583,10 +577,10 @@ exports[`GlobalAlert > renders correctly with buttonText and onClickButton 1`] =
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -595,10 +589,9 @@ exports[`GlobalAlert > renders correctly with buttonText and onClickButton 1`] =
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   width: 100%;
   height: 3.5rem;
   padding: 0 1rem;
@@ -621,10 +614,10 @@ exports[`GlobalAlert > renders correctly with buttonText and onClickButton 1`] =
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -633,16 +626,16 @@ exports[`GlobalAlert > renders correctly with buttonText and onClickButton 1`] =
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 1rem;
 }
 
 .emotion-4 {
   color: #ffffff;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -680,7 +673,7 @@ exports[`GlobalAlert > renders correctly with buttonText and onClickButton 1`] =
   -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -698,6 +691,10 @@ exports[`GlobalAlert > renders correctly with buttonText and onClickButton 1`] =
 
 .emotion-6:active {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
+}
+
+.emotion-6 .e1y1n78x0 {
+  stroke: transparent;
 }
 
 .emotion-6:hover,
@@ -720,7 +717,7 @@ exports[`GlobalAlert > renders correctly with buttonText and onClickButton 1`] =
   gap: 0.25rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 1.5rem;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -735,7 +732,7 @@ exports[`GlobalAlert > renders correctly with buttonText and onClickButton 1`] =
   -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -758,6 +755,10 @@ exports[`GlobalAlert > renders correctly with buttonText and onClickButton 1`] =
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
+.emotion-9 .e1y1n78x0 {
+  stroke: transparent;
+}
+
 .emotion-9:hover,
 .emotion-9:active {
   background: #792dd4;
@@ -773,19 +774,15 @@ exports[`GlobalAlert > renders correctly with buttonText and onClickButton 1`] =
 .emotion-11 {
   vertical-align: middle;
   fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
 .emotion-11 .fillStroke {
   stroke: currentColor;
   fill: none;
-}
-
-.emotion-11 path {
-  fill: currentColor;
 }
 
 <div
@@ -817,7 +814,6 @@ exports[`GlobalAlert > renders correctly with buttonText and onClickButton 1`] =
         <svg
           class="emotion-11 emotion-12"
           viewBox="0 0 16 16"
-          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"
@@ -836,10 +832,10 @@ exports[`GlobalAlert > renders correctly with children as component 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -848,10 +844,9 @@ exports[`GlobalAlert > renders correctly with children as component 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   width: 100%;
   height: 3.5rem;
   padding: 0 1rem;
@@ -874,10 +869,10 @@ exports[`GlobalAlert > renders correctly with children as component 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -886,16 +881,16 @@ exports[`GlobalAlert > renders correctly with children as component 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 1rem;
 }
 
 .emotion-4 {
   color: #ffffff;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -918,7 +913,7 @@ exports[`GlobalAlert > renders correctly with children as component 1`] = `
   gap: 0.25rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 1.5rem;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -933,7 +928,7 @@ exports[`GlobalAlert > renders correctly with children as component 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -956,6 +951,10 @@ exports[`GlobalAlert > renders correctly with children as component 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
+.emotion-7 .e1y1n78x0 {
+  stroke: transparent;
+}
+
 .emotion-7:hover,
 .emotion-7:active {
   background: #792dd4;
@@ -971,19 +970,15 @@ exports[`GlobalAlert > renders correctly with children as component 1`] = `
 .emotion-9 {
   vertical-align: middle;
   fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
 .emotion-9 .fillStroke {
   stroke: currentColor;
   fill: none;
-}
-
-.emotion-9 path {
-  fill: currentColor;
 }
 
 <div
@@ -1009,7 +1004,6 @@ exports[`GlobalAlert > renders correctly with children as component 1`] = `
         <svg
           class="emotion-9 emotion-10"
           viewBox="0 0 16 16"
-          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"
@@ -1028,10 +1022,10 @@ exports[`GlobalAlert > renders correctly with closable and onClose 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1040,10 +1034,9 @@ exports[`GlobalAlert > renders correctly with closable and onClose 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   width: 100%;
   height: 3.5rem;
   padding: 0 1rem;
@@ -1066,10 +1059,10 @@ exports[`GlobalAlert > renders correctly with closable and onClose 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1078,16 +1071,16 @@ exports[`GlobalAlert > renders correctly with closable and onClose 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 1rem;
 }
 
 .emotion-4 {
   color: #ffffff;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -1110,7 +1103,7 @@ exports[`GlobalAlert > renders correctly with closable and onClose 1`] = `
   gap: 0.25rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 1.5rem;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1125,7 +1118,7 @@ exports[`GlobalAlert > renders correctly with closable and onClose 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -1148,6 +1141,10 @@ exports[`GlobalAlert > renders correctly with closable and onClose 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
+.emotion-7 .e1y1n78x0 {
+  stroke: transparent;
+}
+
 .emotion-7:hover,
 .emotion-7:active {
   background: #792dd4;
@@ -1163,19 +1160,15 @@ exports[`GlobalAlert > renders correctly with closable and onClose 1`] = `
 .emotion-9 {
   vertical-align: middle;
   fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
 .emotion-9 .fillStroke {
   stroke: currentColor;
   fill: none;
-}
-
-.emotion-9 path {
-  fill: currentColor;
 }
 
 <div
@@ -1201,7 +1194,6 @@ exports[`GlobalAlert > renders correctly with closable and onClose 1`] = `
         <svg
           class="emotion-9 emotion-10"
           viewBox="0 0 16 16"
-          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"
@@ -1220,10 +1212,10 @@ exports[`GlobalAlert > renders correctly with default values 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1232,10 +1224,9 @@ exports[`GlobalAlert > renders correctly with default values 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   width: 100%;
   height: 3.5rem;
   padding: 0 1rem;
@@ -1258,10 +1249,10 @@ exports[`GlobalAlert > renders correctly with default values 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1270,16 +1261,16 @@ exports[`GlobalAlert > renders correctly with default values 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 1rem;
 }
 
 .emotion-4 {
   color: #ffffff;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -1302,7 +1293,7 @@ exports[`GlobalAlert > renders correctly with default values 1`] = `
   gap: 0.25rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 1.5rem;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1317,7 +1308,7 @@ exports[`GlobalAlert > renders correctly with default values 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -1340,6 +1331,10 @@ exports[`GlobalAlert > renders correctly with default values 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
+.emotion-7 .e1y1n78x0 {
+  stroke: transparent;
+}
+
 .emotion-7:hover,
 .emotion-7:active {
   background: #792dd4;
@@ -1355,19 +1350,15 @@ exports[`GlobalAlert > renders correctly with default values 1`] = `
 .emotion-9 {
   vertical-align: middle;
   fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
 .emotion-9 .fillStroke {
   stroke: currentColor;
   fill: none;
-}
-
-.emotion-9 path {
-  fill: currentColor;
 }
 
 <div
@@ -1393,7 +1384,6 @@ exports[`GlobalAlert > renders correctly with default values 1`] = `
         <svg
           class="emotion-9 emotion-10"
           viewBox="0 0 16 16"
-          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"
@@ -1412,10 +1402,10 @@ exports[`GlobalAlert > renders correctly with link 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1424,10 +1414,9 @@ exports[`GlobalAlert > renders correctly with link 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   width: 100%;
   height: 3.5rem;
   padding: 0 1rem;
@@ -1450,10 +1439,10 @@ exports[`GlobalAlert > renders correctly with link 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1462,10 +1451,9 @@ exports[`GlobalAlert > renders correctly with link 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   width: 100%;
   height: 3.5rem;
   padding: 0 1rem;
@@ -1488,10 +1476,10 @@ exports[`GlobalAlert > renders correctly with link 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1500,10 +1488,10 @@ exports[`GlobalAlert > renders correctly with link 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 1rem;
 }
 
 .emotion-2 {
@@ -1511,10 +1499,10 @@ exports[`GlobalAlert > renders correctly with link 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1523,16 +1511,16 @@ exports[`GlobalAlert > renders correctly with link 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 1rem;
 }
 
 .emotion-4 {
   color: #ffffff;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -1544,7 +1532,7 @@ exports[`GlobalAlert > renders correctly with link 1`] = `
 .emotion-4 {
   color: #ffffff;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -1572,7 +1560,7 @@ exports[`GlobalAlert > renders correctly with link 1`] = `
   width: -moz-fit-content;
   width: fit-content;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -1580,8 +1568,8 @@ exports[`GlobalAlert > renders correctly with link 1`] = `
   text-case: none;
 }
 
-.emotion-6 .e1afnb7a2,
 .emotion-6 .e1afnb7a3,
+.emotion-6 .e1afnb7a2,
 .emotion-6 .e1afnb7a4 {
   -webkit-transition: -webkit-transform 250ms ease-out;
   transition: transform 250ms ease-out;
@@ -1592,8 +1580,8 @@ exports[`GlobalAlert > renders correctly with link 1`] = `
 }
 
 .emotion-6:visited {
-  color: #641cb3;
   text-decoration-color: transparent;
+  color: #ffffff;
 }
 
 .emotion-6:hover,
@@ -1606,22 +1594,22 @@ exports[`GlobalAlert > renders correctly with link 1`] = `
   text-decoration-color: #f9f9fa;
 }
 
-.emotion-6:hover .e1afnb7a2,
-.emotion-6:focus .e1afnb7a2,
 .emotion-6:hover .e1afnb7a3,
 .emotion-6:focus .e1afnb7a3,
+.emotion-6:hover .e1afnb7a2,
+.emotion-6:focus .e1afnb7a2,
 .emotion-6:hover .e1afnb7a4,
 .emotion-6:focus .e1afnb7a4 {
-  -webkit-transform: translate(-0.25rem, 0);
-  -moz-transform: translate(-0.25rem, 0);
-  -ms-transform: translate(-0.25rem, 0);
-  transform: translate(-0.25rem, 0);
+  -webkit-transform: translate(-0.125rem, 0);
+  -moz-transform: translate(-0.125rem, 0);
+  -ms-transform: translate(-0.125rem, 0);
+  transform: translate(-0.125rem, 0);
 }
 
 .emotion-6:hover:visited,
 .emotion-6:focus:visited {
-  color: #521094;
-  text-decoration-color: #521094;
+  text-decoration-color: transparent;
+  color: #ffffff;
 }
 
 .emotion-6[data-variant='inline'] {
@@ -1653,7 +1641,7 @@ exports[`GlobalAlert > renders correctly with link 1`] = `
   gap: 0.25rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 1.5rem;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1668,7 +1656,7 @@ exports[`GlobalAlert > renders correctly with link 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -1689,6 +1677,10 @@ exports[`GlobalAlert > renders correctly with link 1`] = `
 
 .emotion-9:active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-9 .e1y1n78x0 {
+  stroke: transparent;
 }
 
 .emotion-9:hover,
@@ -1717,7 +1709,7 @@ exports[`GlobalAlert > renders correctly with link 1`] = `
   gap: 0.25rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 1.5rem;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1732,7 +1724,7 @@ exports[`GlobalAlert > renders correctly with link 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -1755,6 +1747,10 @@ exports[`GlobalAlert > renders correctly with link 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
+.emotion-9 .e1y1n78x0 {
+  stroke: transparent;
+}
+
 .emotion-9:hover,
 .emotion-9:active {
   background: #792dd4;
@@ -1770,37 +1766,29 @@ exports[`GlobalAlert > renders correctly with link 1`] = `
 .emotion-11 {
   vertical-align: middle;
   fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
 .emotion-11 .fillStroke {
   stroke: currentColor;
   fill: none;
-}
-
-.emotion-11 path {
-  fill: currentColor;
 }
 
 .emotion-11 {
   vertical-align: middle;
   fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
 .emotion-11 .fillStroke {
   stroke: currentColor;
   fill: none;
-}
-
-.emotion-11 path {
-  fill: currentColor;
 }
 
 <div
@@ -1836,7 +1824,6 @@ exports[`GlobalAlert > renders correctly with link 1`] = `
         <svg
           class="emotion-11 emotion-12"
           viewBox="0 0 16 16"
-          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"

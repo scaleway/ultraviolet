@@ -1,4 +1,10 @@
 import styled from '@emotion/styled'
+import {
+  ArrowDownIcon,
+  ArrowUpIcon,
+  MinusIcon,
+  PlusIcon,
+} from '@ultraviolet/icons'
 import { Button, Expandable, Snippet, Stack, Text } from '@ultraviolet/ui'
 import { useReducer } from 'react'
 import * as assets from '../index'
@@ -16,7 +22,7 @@ const StyledSnippet = styled(Snippet)`
 
 const StyledStack = styled(Stack)`
   min-width: 0;
-  padding-righti: ${({ theme }) => theme.space['2']};
+  padding-right: ${({ theme }) => theme.space['2']};
 `
 
 const StyledButton = styled(Button)`
@@ -24,8 +30,7 @@ const StyledButton = styled(Button)`
   height: fit-content;
   background: none;
   border: none;
-  padding: ${({ theme }) => theme.space['0.5']}
-    ${({ theme }) => theme.space['1']};
+  padding: ${({ theme }) => theme.space['0.5']} ${({ theme }) => theme.space['1']};
   text-align: left;
 `
 
@@ -66,11 +71,8 @@ const SubListElement = ({
   category,
 }: SubListElementProps) => (
   <MargedStack gap={1}>
-    <StyledButton
-      sentiment="neutral"
-      onClick={setIsExpanded}
-      icon={isExpanded ? 'arrow-up' : 'arrow-down'}
-    >
+    <StyledButton sentiment="neutral" onClick={setIsExpanded}>
+      {isExpanded ? <ArrowUpIcon /> : <ArrowDownIcon />}
       {productName}
     </StyledButton>
     <Expandable opened={isExpanded}>
@@ -158,11 +160,8 @@ export const List = () => {
 
   return (
     <Stack gap={3}>
-      <Button
-        sentiment="primary"
-        onClick={toggleAllExpanded}
-        icon={isAllExpanded ? 'minus' : 'plus'}
-      >
+      <Button sentiment="primary" onClick={toggleAllExpanded}>
+        {isAllExpanded ? <MinusIcon /> : <PlusIcon />}
         {isAllExpanded ? 'Collapse' : 'Expand'} all
       </Button>
       <Stack gap={1}>
@@ -178,8 +177,8 @@ export const List = () => {
                   newExpandedStates[category] = !expandedStates[category]
                   setExpandedStates(newExpandedStates)
                 }}
-                icon={expandedStates[category] ? 'arrow-up' : 'arrow-down'}
               >
+                {expandedStates[category] ? <ArrowUpIcon /> : <ArrowDownIcon />}
                 {category}
               </StyledButton>
               <Expandable opened={expandedStates[category]}>

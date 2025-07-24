@@ -1,7 +1,7 @@
 import { Global, ThemeProvider } from '@emotion/react'
 import { withThemeFromJSXProvider } from '@storybook/addon-themes'
-import type { Preview, StoryFn } from '@storybook/react'
-import { themes } from '@storybook/theming'
+import type { Preview, StoryFn } from '@storybook/react-vite'
+import { themes } from 'storybook/theming'
 import {
   consoleDarkTheme as darkTheme,
   consoleDarkerTheme as darkerTheme,
@@ -13,6 +13,31 @@ import { globalStyles } from './components/globalStyle'
 import { dark, light } from './storybookThemes'
 import '@ultraviolet/fonts/fonts.css'
 import { scan } from "react-scan"
+
+const BREAKPOINT_ORDER = [
+  'xlarge',
+  'large',
+  'medium',
+  'small',
+  'xsmall',
+  'xxsmall',
+]
+
+const VIEWPORTS = BREAKPOINT_ORDER.reduce((acc, key) => {
+  if (key in lightTheme.breakpoints) {
+    return {
+      ...acc,
+      [key]: {
+        name: key,
+        styles: {
+          width: lightTheme.breakpoints[key as keyof typeof lightTheme.breakpoints],
+          height: '600px',
+        },
+      },
+    }
+  }
+  return acc
+}, {})
 
 scan({
   enabled: true,
@@ -52,7 +77,9 @@ const parameters: Preview['parameters'] = {
     canvas: { hidden: false },
   },
   viewport: {
-    viewports: {},
+    viewports: {
+      ...VIEWPORTS
+    }
   },
   options: {
     storySort: {
@@ -141,4 +168,5 @@ const decorators = [
 export default {
   parameters,
   decorators,
+  tags: ['autodocs']
 } satisfies Preview

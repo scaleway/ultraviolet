@@ -1,4 +1,5 @@
-import type { StoryFn } from '@storybook/react'
+import type { StoryFn } from '@storybook/react-vite'
+import { PlusIcon, RestoreIcon } from '@ultraviolet/icons'
 import type { ComponentProps, MouseEvent } from 'react'
 import { useCallback, useState } from 'react'
 import { Breadcrumbs } from '..'
@@ -50,19 +51,18 @@ export const Interactive: StoryFn<
         <Stack gap={1} direction="row">
           <div style={{ width: 'fit-content' }}>
             <Button
-              icon="restore"
               onClick={() => {
                 setValue(ITEMS)
               }}
               size="small"
               sentiment="neutral"
             >
+              <RestoreIcon />
               Reset
             </Button>
           </div>
           <div style={{ width: 'fit-content' }}>
             <Button
-              icon="plus"
               onClick={() => {
                 setValue([
                   ...value,
@@ -72,18 +72,19 @@ export const Interactive: StoryFn<
               size="small"
               sentiment="primary"
             >
+              <PlusIcon />
               Add item
             </Button>
           </div>
           <div style={{ width: 'fit-content' }}>
             <Button
-              icon="plus"
               onClick={() => {
                 setValue([...value, { label: `Page ${value.length + 1}` }])
               }}
               size="small"
               sentiment="primary"
             >
+              <PlusIcon />
               Add onClick item
             </Button>
           </div>

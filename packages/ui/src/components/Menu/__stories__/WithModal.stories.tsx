@@ -1,6 +1,7 @@
-import type { StoryFn } from '@storybook/react'
+import type { StoryFn } from '@storybook/react-vite'
 import { Menu } from '..'
 import { Modal } from '../../Modal'
+import { TextInput } from '../../TextInput'
 import { DefaultDisclosure } from './Template.stories'
 
 const NestedModal = () => (
@@ -11,6 +12,7 @@ const NestedModal = () => (
     <div style={{ padding: 32 }}>
       Content should be present in center of the modal
     </div>
+    <TextInput name="test" label="Test input events" />
   </Modal>
 )
 
@@ -32,7 +34,7 @@ WithModal.parameters = {
 
 WithModal.decorators = [
   StoryComponent => (
-    <div style={{ height: '100px' }}>
+    <div style={{ height: '100px', width: 'min-content' }}>
       <StoryComponent />
     </div>
   ),

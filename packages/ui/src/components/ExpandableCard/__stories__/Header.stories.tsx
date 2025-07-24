@@ -1,7 +1,8 @@
-import type { Decorator, StoryFn } from '@storybook/react'
+import type { Decorator, StoryFn } from '@storybook/react-vite'
+import { DeleteIcon, DotsHorizontalIcon } from '@ultraviolet/icons'
 import { KubernetesProductIcon } from '@ultraviolet/icons/product'
 import { ExpandableCard } from '..'
-import { Button, MenuV2, Stack, Text } from '../..'
+import { Button, Menu, Stack, Text } from '../..'
 
 export const Header: StoryFn<typeof ExpandableCard> = () => (
   <Stack gap={1}>
@@ -25,20 +26,19 @@ export const Header: StoryFn<typeof ExpandableCard> = () => (
             </div>
           </Stack>
           <Stack direction="row" gap={1} alignItems="center">
-            <Button sentiment="danger" icon="delete" size="small" />
-            <MenuV2
+            <Button sentiment="danger" size="small">
+              <DeleteIcon />
+            </Button>
+            <Menu
               disclosure={
-                <Button
-                  icon="dots-horizontal"
-                  sentiment="neutral"
-                  variant="ghost"
-                  size="small"
-                />
+                <Button sentiment="neutral" variant="ghost" size="small">
+                  <DotsHorizontalIcon />
+                </Button>
               }
             >
-              <MenuV2.Item>Action 1</MenuV2.Item>
-              <MenuV2.Item>Action 2</MenuV2.Item>
-            </MenuV2>
+              <Menu.Item>Action 1</Menu.Item>
+              <Menu.Item>Action 2</Menu.Item>
+            </Menu>
           </Stack>
         </Stack>
       }

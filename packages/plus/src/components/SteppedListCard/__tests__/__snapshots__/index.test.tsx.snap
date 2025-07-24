@@ -7,10 +7,10 @@ exports[`SteppedListCard > should hide the toggle button 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 1.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -19,10 +19,10 @@ exports[`SteppedListCard > should hide the toggle button 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 .emotion-2 {
@@ -74,10 +74,10 @@ exports[`SteppedListCard > should hide the toggle button 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 2rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -86,10 +86,10 @@ exports[`SteppedListCard > should hide the toggle button 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 2rem;
   padding: 1.5rem;
   border-right: solid #d9dadd 1px;
 }
@@ -106,7 +106,7 @@ exports[`SteppedListCard > should hide the toggle button 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   gap: 1.5rem;
-  font-size:font-family: Inter,Asap,sans-serif;
+  font-size:font-family: Inter,sans-serif;
   font-size: 1rem;
   font-weight: Regular;
   letter-spacing: 0;
@@ -168,11 +168,12 @@ exports[`SteppedListCard > should hide the toggle button 1`] = `
   margin: auto;
   line-height: 32px;
   font-size: 24px;
+  min-width: 0;
 }
 
 .emotion-21 {
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -223,7 +224,7 @@ exports[`SteppedListCard > should hide the toggle button 1`] = `
 
 .emotion-31 {
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -255,10 +256,10 @@ exports[`SteppedListCard > should hide the toggle button 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -267,10 +268,10 @@ exports[`SteppedListCard > should hide the toggle button 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
   padding: 1.5rem;
   padding-top: 2rem;
 }
@@ -403,10 +404,10 @@ exports[`SteppedListCard > should work with custom hide action 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 1.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -415,10 +416,10 @@ exports[`SteppedListCard > should work with custom hide action 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 .emotion-2 {
@@ -436,7 +437,7 @@ exports[`SteppedListCard > should work with custom hide action 1`] = `
 
 .emotion-4 {
   font-size: 1.5625rem;
-  font-family: Space Grotesk,Inter,Asap,sans-serif;
+  font-family: Space Grotesk,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 2rem;
@@ -474,7 +475,7 @@ exports[`SteppedListCard > should work with custom hide action 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -492,6 +493,10 @@ exports[`SteppedListCard > should work with custom hide action 1`] = `
 
 .emotion-6:active {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
+}
+
+.emotion-6 .e1y1n78x0 {
+  stroke: transparent;
 }
 
 .emotion-6:hover,
@@ -536,10 +541,10 @@ exports[`SteppedListCard > should work with custom hide action 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 2rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -548,10 +553,10 @@ exports[`SteppedListCard > should work with custom hide action 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 2rem;
   padding: 1.5rem;
   border-right: solid #d9dadd 1px;
 }
@@ -568,7 +573,7 @@ exports[`SteppedListCard > should work with custom hide action 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   gap: 1.5rem;
-  font-size:font-family: Inter,Asap,sans-serif;
+  font-size:font-family: Inter,sans-serif;
   font-size: 1rem;
   font-weight: Regular;
   letter-spacing: 0;
@@ -630,11 +635,12 @@ exports[`SteppedListCard > should work with custom hide action 1`] = `
   margin: auto;
   line-height: 32px;
   font-size: 24px;
+  min-width: 0;
 }
 
 .emotion-25 {
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -685,7 +691,7 @@ exports[`SteppedListCard > should work with custom hide action 1`] = `
 
 .emotion-35 {
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -717,10 +723,10 @@ exports[`SteppedListCard > should work with custom hide action 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -729,10 +735,10 @@ exports[`SteppedListCard > should work with custom hide action 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
   padding: 1.5rem;
   padding-top: 2rem;
 }
@@ -860,10 +866,10 @@ exports[`SteppedListCard > should work with default props 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 1.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -872,10 +878,10 @@ exports[`SteppedListCard > should work with default props 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 .emotion-2 {
@@ -932,7 +938,7 @@ exports[`SteppedListCard > should work with default props 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -950,6 +956,10 @@ exports[`SteppedListCard > should work with default props 1`] = `
 
 .emotion-6:active {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
+}
+
+.emotion-6 .e1y1n78x0 {
+  stroke: transparent;
 }
 
 .emotion-6:hover,
@@ -994,10 +1004,10 @@ exports[`SteppedListCard > should work with default props 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 2rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -1006,10 +1016,10 @@ exports[`SteppedListCard > should work with default props 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 2rem;
   padding: 1.5rem;
   border-right: solid #d9dadd 1px;
 }
@@ -1026,7 +1036,7 @@ exports[`SteppedListCard > should work with default props 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   gap: 1.5rem;
-  font-size:font-family: Inter,Asap,sans-serif;
+  font-size:font-family: Inter,sans-serif;
   font-size: 1rem;
   font-weight: Regular;
   letter-spacing: 0;
@@ -1088,11 +1098,12 @@ exports[`SteppedListCard > should work with default props 1`] = `
   margin: auto;
   line-height: 32px;
   font-size: 24px;
+  min-width: 0;
 }
 
 .emotion-25 {
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -1143,7 +1154,7 @@ exports[`SteppedListCard > should work with default props 1`] = `
 
 .emotion-35 {
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -1175,10 +1186,10 @@ exports[`SteppedListCard > should work with default props 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -1187,10 +1198,10 @@ exports[`SteppedListCard > should work with default props 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
   padding: 1.5rem;
   padding-top: 2rem;
 }
@@ -1337,10 +1348,10 @@ exports[`SteppedListCard > should work with pre-completed step 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 1.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -1349,10 +1360,10 @@ exports[`SteppedListCard > should work with pre-completed step 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 .emotion-0 {
@@ -1360,10 +1371,10 @@ exports[`SteppedListCard > should work with pre-completed step 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 1.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -1372,10 +1383,10 @@ exports[`SteppedListCard > should work with pre-completed step 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 .emotion-2 {
@@ -1433,7 +1444,7 @@ exports[`SteppedListCard > should work with pre-completed step 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -1451,6 +1462,10 @@ exports[`SteppedListCard > should work with pre-completed step 1`] = `
 
 .emotion-4:active {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
+}
+
+.emotion-4 .e1y1n78x0 {
+  stroke: transparent;
 }
 
 .emotion-4:hover,
@@ -1488,7 +1503,7 @@ exports[`SteppedListCard > should work with pre-completed step 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -1506,6 +1521,10 @@ exports[`SteppedListCard > should work with pre-completed step 1`] = `
 
 .emotion-4:active {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
+}
+
+.emotion-4 .e1y1n78x0 {
+  stroke: transparent;
 }
 
 .emotion-4:hover,
@@ -1581,10 +1600,10 @@ exports[`SteppedListCard > should work with pre-completed step 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 2rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -1593,10 +1612,10 @@ exports[`SteppedListCard > should work with pre-completed step 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 2rem;
   padding: 1.5rem;
   border-right: solid #d9dadd 1px;
 }
@@ -1606,10 +1625,10 @@ exports[`SteppedListCard > should work with pre-completed step 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 2rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -1618,10 +1637,10 @@ exports[`SteppedListCard > should work with pre-completed step 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 2rem;
   padding: 1.5rem;
   border-right: solid #d9dadd 1px;
 }
@@ -1638,7 +1657,7 @@ exports[`SteppedListCard > should work with pre-completed step 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   gap: 1.5rem;
-  font-size:font-family: Inter,Asap,sans-serif;
+  font-size:font-family: Inter,sans-serif;
   font-size: 1rem;
   font-weight: Regular;
   letter-spacing: 0;
@@ -1662,7 +1681,7 @@ exports[`SteppedListCard > should work with pre-completed step 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   gap: 1.5rem;
-  font-size:font-family: Inter,Asap,sans-serif;
+  font-size:font-family: Inter,sans-serif;
   font-size: 1rem;
   font-weight: Regular;
   letter-spacing: 0;
@@ -1767,6 +1786,7 @@ exports[`SteppedListCard > should work with pre-completed step 1`] = `
   margin: auto;
   line-height: 32px;
   font-size: 24px;
+  min-width: 0;
 }
 
 .emotion-20 {
@@ -1776,11 +1796,12 @@ exports[`SteppedListCard > should work with pre-completed step 1`] = `
   margin: auto;
   line-height: 32px;
   font-size: 24px;
+  min-width: 0;
 }
 
 .emotion-23 {
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -1809,7 +1830,7 @@ exports[`SteppedListCard > should work with pre-completed step 1`] = `
 
 .emotion-23 {
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -1883,42 +1904,34 @@ exports[`SteppedListCard > should work with pre-completed step 1`] = `
 .emotion-30 {
   vertical-align: middle;
   fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
 .emotion-30 .fillStroke {
   stroke: currentColor;
   fill: none;
-}
-
-.emotion-30 path {
-  fill: currentColor;
 }
 
 .emotion-30 {
   vertical-align: middle;
   fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
 .emotion-30 .fillStroke {
   stroke: currentColor;
   fill: none;
-}
-
-.emotion-30 path {
-  fill: currentColor;
 }
 
 .emotion-35 {
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -1947,7 +1960,7 @@ exports[`SteppedListCard > should work with pre-completed step 1`] = `
 
 .emotion-35 {
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -1979,10 +1992,10 @@ exports[`SteppedListCard > should work with pre-completed step 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -1991,10 +2004,10 @@ exports[`SteppedListCard > should work with pre-completed step 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
   padding: 1.5rem;
   padding-top: 2rem;
 }
@@ -2004,10 +2017,10 @@ exports[`SteppedListCard > should work with pre-completed step 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -2016,10 +2029,10 @@ exports[`SteppedListCard > should work with pre-completed step 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
   padding: 1.5rem;
   padding-top: 2rem;
 }
@@ -2135,9 +2148,7 @@ exports[`SteppedListCard > should work with pre-completed step 1`] = `
                 >
                   <svg
                     class="emotion-30 emotion-31"
-                    fill="none"
                     viewBox="0 0 16 16"
-                    xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
                       clip-rule="evenodd"

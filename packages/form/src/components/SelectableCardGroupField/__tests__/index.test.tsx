@@ -11,6 +11,7 @@ describe('SelectableCardField', () => {
         name="test"
         value="test"
         legend="test"
+        type="radio"
         onChange={() => {}}
       >
         <SelectableCardGroupField.Card value="radio 1" label="Radio 1" />

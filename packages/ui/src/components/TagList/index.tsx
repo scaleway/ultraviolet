@@ -3,7 +3,7 @@
 import styled from '@emotion/styled'
 import { consoleLightTheme } from '@ultraviolet/themes'
 import { useEffect, useMemo, useRef, useState } from 'react'
-import type { ComponentProps } from 'react'
+import type { ComponentProps, ReactNode } from 'react'
 import { Popover } from '../Popover'
 import { Tag } from '../Tag'
 
@@ -58,9 +58,7 @@ const StyledTagContainer = styled.div<{
   `};
 `
 
-export type TagType =
-  | string
-  | { label: string; icon: NonNullable<ComponentProps<typeof Tag>['icon']> }
+export type TagType = string | { label: string; icon: ReactNode }
 
 type TagListProps = {
   /**
@@ -283,19 +281,30 @@ export const TagList = ({
     return null
   }
 
-  const renderTag = (tag: TagType, index: number, isEllipsis = false) => (
-    <Tag
-      // useful when two tags are identical `${tag}-${index}`
-      key={`${getTagLabel(tag)}-${index}`}
-      copiable={copiable}
-      copyText={copyText}
-      copiedText={copiedText}
-      icon={typeof tag === 'object' ? tag.icon : undefined}
-      className={isEllipsis ? 'ellipsed' : ''}
-    >
-      {getTagLabel(tag)}
-    </Tag>
-  )
+  const renderTag = (tag: TagType, index: number, isEllipsis = false) =>
+    typeof tag !== 'string' && tag.icon ? (
+      <Tag
+        // useful when two tags are identical `${tag}-${index}`
+        key={`${getTagLabel(tag)}-${index}`}
+        copiable={copiable}
+        copyText={copyText}
+        copiedText={copiedText}
+        className={isEllipsis ? 'ellipsed' : ''}
+      >
+        {tag.icon}
+        {getTagLabel(tag)}
+      </Tag>
+    ) : (
+      <Tag
+        key={`${getTagLabel(tag)}-${index}`}
+        copiable={copiable}
+        copyText={copyText}
+        copiedText={copiedText}
+        className={isEllipsis ? 'ellipsed' : ''}
+      >
+        {getTagLabel(tag)}
+      </Tag>
+    )
 
   return (
     <StyledContainer

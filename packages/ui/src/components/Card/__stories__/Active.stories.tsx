@@ -1,4 +1,5 @@
-import type { StoryFn } from '@storybook/react'
+import type { StoryFn } from '@storybook/react-vite'
+import { CancelIcon, CheckIcon, PencilIcon } from '@ultraviolet/icons'
 import { useState } from 'react'
 import { Button } from '../../Button'
 import { Stack } from '../../Stack'
@@ -12,8 +13,8 @@ export const Active: StoryFn = args => {
     <Card {...args} header="Active Card" active={active}>
       <Stack gap={6} direction="row" justifyContent="space-between">
         <Text as="p" variant="body" sentiment={active ? 'primary' : 'neutral'}>
-          This card is currently highlighted through isActive prop. In this
-          example we use it to show the content is being edited.
+          This card is currently highlighted through <strong>active</strong>{' '}
+          prop. In this example we use it to show the content is being edited.
         </Text>
 
         {active ? (
@@ -21,22 +22,22 @@ export const Active: StoryFn = args => {
             <Button
               variant="outlined"
               sentiment="success"
-              icon="check"
               onClick={() => setActive(false)}
-            />
+            >
+              <CheckIcon />
+            </Button>
             <Button
               variant="outlined"
               sentiment="danger"
-              icon="cancel"
               onClick={() => setActive(false)}
-            />
+            >
+              <CancelIcon />
+            </Button>
           </Stack>
         ) : (
-          <Button
-            sentiment="neutral"
-            icon="pencil"
-            onClick={() => setActive(true)}
-          />
+          <Button sentiment="neutral" onClick={() => setActive(true)}>
+            <PencilIcon />
+          </Button>
         )}
       </Stack>
     </Card>
@@ -46,7 +47,7 @@ export const Active: StoryFn = args => {
 Active.parameters = {
   docs: {
     description: {
-      story: 'You can highlight a Card by passing the `isActive` prop.',
+      story: 'You can highlight a Card by passing the `active` prop.',
     },
   },
 }
