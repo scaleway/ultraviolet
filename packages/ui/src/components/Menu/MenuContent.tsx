@@ -28,6 +28,8 @@ import { getListItem, searchChildren } from './helpers'
 import { DisclosureContext, useMenu } from './MenuProvider'
 import type { MenuProps } from './types'
 
+const SPACE_DISCLOSURE_POPUP = 24 // in px
+
 const StyledPopup = styled(Popup, {
   shouldForwardProp: prop => !['searchable'].includes(prop),
 })<{ searchable: boolean }>`
@@ -62,12 +64,13 @@ const Footer = styled(Stack)`
 `
 
 const MenuList = styled(Stack, {
-  shouldForwardProp: prop => !['height'].includes(prop),
-})<{ height: string }>`
+  shouldForwardProp: prop => !['height', 'heightAvailableSpace'].includes(prop),
+})<{ height: string; heightAvailableSpace: string }>`
   overflow-y: auto;
   overflow-x: hidden;
-  max-height: calc(${({ height }) => height} - ${({ theme }) =>
-    theme.space['0.5']});
+  max-height: ${({ theme, height, heightAvailableSpace }) =>
+    `calc(min(${height}, ${heightAvailableSpace}) - ${theme.space['0.5']})`};
+
   &:after,
   &:before {
     border: solid transparent;
@@ -114,6 +117,7 @@ export const Menu = forwardRef(
       align,
       searchable = false,
       footer,
+      noShrink = false,
     }: MenuProps,
     ref: Ref<HTMLButtonElement | null>,
   ) => {
@@ -128,6 +132,9 @@ export const Menu = forwardRef(
     } = useMenu()
     const searchInputRef = useRef<HTMLInputElement>(null)
     const [localChild, setLocalChild] = useState<ReactNode[] | null>(null)
+    const [popupMaxHeight, setPopupMaxHeight] = useState<string>(
+      maxHeight ?? '30rem',
+    )
     const contentRef = useRef<HTMLDivElement>(null)
     const tempId = useId()
     const finalId = `menu-${id ?? tempId}`
@@ -255,6 +262,24 @@ export const Menu = forwardRef(
       }
     }
 
+    useEffect(() => {
+      if (disclosureRef.current && placement === 'bottom' && !noShrink) {
+        const disclosureRect = disclosureRef.current.getBoundingClientRect()
+        const disclosureBottom = disclosureRect.bottom
+        const windowSize = window.innerHeight
+        const availableSpace =
+          windowSize - disclosureBottom - SPACE_DISCLOSURE_POPUP
+
+        setPopupMaxHeight(`${availableSpace}px`)
+      }
+    }, [
+      isVisible,
+      portalTarget.scrollHeight,
+      disclosureRef,
+      placement,
+      noShrink,
+    ])
+
     return (
       <StyledPopup
         align={align}
@@ -266,7 +291,7 @@ export const Menu = forwardRef(
         hasArrow={hasArrow}
         hideOnClickOutside
         id={finalId}
-        maxHeight={maxHeight ?? '30rem'}
+        maxHeight={popupMaxHeight}
         onClose={() => {
           setIsVisible(false)
           setLocalChild(null)
@@ -275,11 +300,6 @@ export const Menu = forwardRef(
           }
           setShouldBeVisible(undefined)
         }}
-        onKeyDown={handleTabOpen}
-        placement={isNested ? 'nested-menu' : placement}
-        portalTarget={portalTarget}
-        ref={menuRef}
-        role="dialog"
         searchable={searchable}
         tabIndex={-1}
         text={
@@ -287,6 +307,7 @@ export const Menu = forwardRef(
             className={className}
             data-testid={dataTestId}
             height={maxHeight ?? '30rem'}
+            heightAvailableSpace={popupMaxHeight}
             onKeyDown={handleKeyDown}
             role="menu"
           >
