@@ -218,11 +218,7 @@ export const Banner = ({
             ) : null}
             {linkText ? (
               <Link
-                sentiment={
-                  theme === 'light' && variant !== 'promotional'
-                    ? 'primary'
-                    : undefined
-                }
+                sentiment="primary"
                 prominence={prominence}
                 size="small"
                 target="_blank"
