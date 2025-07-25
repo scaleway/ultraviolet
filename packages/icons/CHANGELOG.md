@@ -1,5 +1,14 @@
 # Change Log
 
+## 4.0.1
+
+### Patch Changes
+
+- [#5359](https://github.com/scaleway/ultraviolet/pull/5359) [`b28f612`](https://github.com/scaleway/ultraviolet/commit/b28f612a171e1e6d0beb63cc0e83211fe8369984) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@babel/core` to `7.28.0`.
+  Updated dependency `@babel/eslint-parser` to `7.28.0`.
+  Updated dependency `@babel/plugin-transform-runtime` to `7.28.0`.
+  Updated dependency `@babel/preset-env` to `7.28.0`.
+
 ## 4.0.0
 
 ### Major Changes
