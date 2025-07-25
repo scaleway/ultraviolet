@@ -220,11 +220,7 @@ export const Banner = ({
               <Link
                 href={linkHref ?? ''}
                 prominence={prominence}
-                sentiment={
-                  theme === 'light' && variant !== 'promotional'
-                    ? 'primary'
-                    : undefined
-                }
+                sentiment="primary"
                 size="small"
                 target="_blank"
               >
