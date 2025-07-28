@@ -10,8 +10,16 @@ import type {
   RefObject,
   SetStateAction,
 } from 'react'
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import {
+  useCallback,
+  useContext,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from 'react'
 import { Checkbox } from '../Checkbox'
+import { ModalContext } from '../Modal/ModalProvider'
 import { Popup } from '../Popup'
 import { Skeleton } from '../Skeleton'
 import { Stack } from '../Stack'
@@ -708,6 +716,7 @@ export const Dropdown = ({
   const ref = useRef<HTMLDivElement>(null)
   const [search, setSearch] = useState<string>('')
   const [maxWidth, setWidth] = useState<string | number>()
+  const modalContext = useContext(ModalContext)
 
   useEffect(() => {
     if (refSelect.current && isDropdownVisible) {
@@ -716,12 +725,19 @@ export const Dropdown = ({
         DROPDOWN_MAX_HEIGHT +
         Number(theme.sizing[INPUT_SIZE_HEIGHT[size]].replace('rem', '')) * 16 +
         Number.parseInt(theme.space['5'], 10)
-      const overflow = position - window.innerHeight
-      if (overflow > 0) {
-        const modalElement = document.getElementById('backdrop-modal')
+      const overflow = position - window.innerHeight + 32
+      if (overflow > 0 && modalContext) {
+        const currentModal = modalContext.openedModals[0]
+        const modalElement = currentModal?.ref.current
 
         if (modalElement) {
-          modalElement.scrollBy({ behavior: 'smooth', top: overflow })
+          const parentElement = modalElement.parentNode as HTMLElement
+          if (parentElement) {
+            parentElement.scrollBy({
+              behavior: 'smooth',
+              top: overflow,
+            })
+          }
         } else window.scrollBy({ behavior: 'smooth', top: overflow })
       }
     }
