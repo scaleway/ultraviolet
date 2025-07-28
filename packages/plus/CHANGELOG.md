@@ -1,5 +1,21 @@
 # @ultraviolet/plus
 
+## 1.0.1
+
+### Patch Changes
+
+- [#5303](https://github.com/scaleway/ultraviolet/pull/5303) [`3edf7d5`](https://github.com/scaleway/ultraviolet/commit/3edf7d5395e4a5155853b708637736e370d93ae1) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@uiw/codemirror-extensions-langs` to `4.24.1`.
+  Updated dependency `@uiw/codemirror-theme-material` to `4.24.1`.
+  Updated dependency `@uiw/react-codemirror` to `4.24.1`.
+
+- [#5359](https://github.com/scaleway/ultraviolet/pull/5359) [`b28f612`](https://github.com/scaleway/ultraviolet/commit/b28f612a171e1e6d0beb63cc0e83211fe8369984) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@babel/core` to `7.28.0`.
+  Updated dependency `@babel/eslint-parser` to `7.28.0`.
+  Updated dependency `@babel/plugin-transform-runtime` to `7.28.0`.
+  Updated dependency `@babel/preset-env` to `7.28.0`.
+- Updated dependencies [[`b28f612`](https://github.com/scaleway/ultraviolet/commit/b28f612a171e1e6d0beb63cc0e83211fe8369984), [`e18cc72`](https://github.com/scaleway/ultraviolet/commit/e18cc72310f4ae681da95e4d94bfa39e35c4626b)]:
+  - @ultraviolet/icons@4.0.1
+  - @ultraviolet/ui@2.0.1
+
 ## 1.0.0
 
 ### Major Changes
