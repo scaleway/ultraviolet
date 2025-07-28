@@ -218,7 +218,7 @@ export const Radio = forwardRef<HTMLInputElement, RadioProps>(
               aria-disabled={disabled}
               aria-invalid={!!error}
               aria-label={ariaLabel}
-              autoFocus={autoFocus}
+              
               checked={checked}
               disabled={disabled}
               id={localId}

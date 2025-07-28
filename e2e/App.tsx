@@ -25,7 +25,7 @@ const pagesToRender = Object.keys(modules)
     path.includes('render.tsx')
       ? {
           Component: lazy(
-            () => import(`./tests/${path?.split('/')[2]}/render.tsx`),
+            () => import(`./tests/${path.split('/')[2]}/render.tsx`),
           ),
           name: path.replace('.tsx', ''),
         }
@@ -76,8 +76,8 @@ const App = () => (
               return (
                 <Route
                   element={<Element />}
-                  key={path?.name}
-                  path={path?.name?.split('/')[2]?.toLowerCase()}
+                  key={path.name}
+                  path={path.name.split('/')[2]?.toLowerCase()}
                 />
               )
             }

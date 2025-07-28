@@ -11,12 +11,12 @@
   },
   "plugins": [
     "import",
-    "eslint",
     "node",
-    "react-perf",
+    "oxc",
     "react",
     "typescript",
-    "unicorn"
+    "unicorn",
+    "jsx-a11y"
   ],
   "overrides": [
     {
@@ -49,6 +49,7 @@
     "eslint/no-duplicate-imports": "off",
     "eslint/no-empty-function": "off",
     "eslint/no-magic-numbers": "off",
+    "eslint/id-length": "off",
     "eslint/no-ternary": "off",
     "eslint/no-undefined": "off",
     "eslint/sort-keys": "off",
@@ -73,10 +74,19 @@
     "eslint/init-declarations": "off",
     "eslint/curly": "off",
 
+    "oxc/bad-bitwise-operator": "error",
+    "oxc/no-accumulating-spread": "off",
+    "oxc/no-async-await": "off",
+    "oxc/no-barrel-file": "off",
+    "oxc/no-const-enum": "error",
+    "oxc/no-optional-chaining": "off",
+    "oxc/no-rest-spread-properties": "off",
+
     "import/no-namespace": "off",
     "import/max-dependencies": "off",
     "import/namespace": "off",
     "import/no-default-export": "off",
+    "import/prefer-default-export": "off",
     "import/no-duplicates": "off",
     "import/unambiguous": "off",
     "import/exports-last": "off",

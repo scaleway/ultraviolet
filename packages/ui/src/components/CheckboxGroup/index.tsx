@@ -62,7 +62,7 @@ export const CheckboxGroupCheckbox = ({
 
   return (
     <StyledCheckbox
-      autoFocus={autoFocus}
+      
       checked={groupValues?.includes(checkboxValue)}
       className={className}
       data-testid={dataTestId}

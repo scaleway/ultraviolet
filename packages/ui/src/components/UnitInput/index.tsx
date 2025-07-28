@@ -322,7 +322,7 @@ export const UnitInput = ({
         <StyledNumberInputWrapper id="input-field">
           <StyledInput
             aria-invalid={!!error}
-            autoFocus={autoFocus}
+            
             className={className}
             data-error={error}
             data-size={size}

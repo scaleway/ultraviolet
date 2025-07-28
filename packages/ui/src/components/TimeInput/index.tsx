@@ -422,7 +422,7 @@ export const TimeInput = ({
                       : undefined
                   }
                   autoComplete="false"
-                  autoFocus={autoFocus && type === 'h'}
+                  
                   data-size={size}
                   data-testid={`${fullName()}-input`}
                   disabled={disabled}

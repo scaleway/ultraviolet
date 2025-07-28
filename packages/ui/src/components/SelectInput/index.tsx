@@ -243,7 +243,7 @@ export const SelectInput = <IsMulti extends undefined | boolean>({
               </Label>
             ) : null}
             <SelectBar
-              autoFocus={autofocus}
+              
               clearable={clearable}
               data-testid={finalDataTestId}
               disabled={disabled}

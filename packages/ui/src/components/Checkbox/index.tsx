@@ -340,7 +340,7 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
             aria-describedby={error ? `${localId}-hint` : undefined}
             aria-invalid={!!error}
             aria-label={ariaLabel}
-            autoFocus={autoFocus}
+            
             checked={isCheck}
             disabled={disabled}
             id={localId}

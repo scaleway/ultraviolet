@@ -331,7 +331,7 @@ export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
                 aria-label={ariaLabel}
                 aria-labelledby={ariaLabelledBy}
                 autoComplete={autoComplete}
-                autoFocus={autoFocus}
+                
                 data-size={size}
                 data-testid={dataTestId}
                 defaultValue={defaultValue}
