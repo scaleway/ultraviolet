@@ -28,8 +28,8 @@ const slideIn = (translation: number) => keyframes`
  `
 
 const slideAnimation = (size: 'small' | 'medium' | 'large') => {
-  if (size === 'small') return css`animation: ${slideIn(22)} linear 150ms;`
-  if (size === 'medium') return css`animation: ${slideIn(48)} linear 250ms;`
+  if (size === 'small') {return css`animation: ${slideIn(22)} linear 150ms;`}
+  if (size === 'medium') {return css`animation: ${slideIn(48)} linear 250ms;`}
 
   return css`animation: ${slideIn(70)} linear 300ms;`
 }

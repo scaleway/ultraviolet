@@ -166,7 +166,7 @@ export const List = () => {
       </Button>
       <Stack gap={1}>
         {Object.keys(assets.default).map(category => {
-          if (category === 'components') return null
+          if (category === 'components') {return null}
 
           return (
             <>

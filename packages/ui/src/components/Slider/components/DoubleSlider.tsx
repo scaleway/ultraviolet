@@ -162,7 +162,7 @@ export const DoubleSlider = ({
   const activeValue = (side: 'left' | 'right') => {
     // Find the index of the min value (if side="left") and max value (side="right")
     if (side === 'left') {
-      if (selectedIndexes[0] === null) return 0
+      if (selectedIndexes[0] === null) {return 0}
       if (
         selectedIndexes[1] !== null &&
         selectedIndexes[1] < selectedIndexes[0]
@@ -173,7 +173,7 @@ export const DoubleSlider = ({
       return 0
     }
 
-    if (selectedIndexes[1] === null) return 1
+    if (selectedIndexes[1] === null) {return 1}
     if (
       selectedIndexes[0] !== null &&
       selectedIndexes[1] < selectedIndexes[0]
@@ -258,14 +258,14 @@ export const DoubleSlider = ({
               const index = activeValue('left')
               if (index === 0) {
                 internalOnChangeRef([min, selectedIndexes[1]])
-              } else internalOnChangeRef([selectedIndexes[0], max])
+              } else {internalOnChangeRef([selectedIndexes[0], max])}
             }
 
             if (side === 'right') {
               const index = activeValue('right')
               if (index === 0) {
                 internalOnChangeRef([min, selectedIndexes[1]])
-              } else internalOnChangeRef([selectedIndexes[0], max])
+              } else {internalOnChangeRef([selectedIndexes[0], max])}
             }
           } else {
             const newValue = Number.parseFloat(event.target.value)
@@ -310,9 +310,9 @@ export const DoubleSlider = ({
     if (tooltip === true) {
       return [Math.min(...selectedIndexes), Math.max(...selectedIndexes)]
     }
-    if (Array.isArray(tooltip)) return tooltip
+    if (Array.isArray(tooltip)) {return tooltip}
 
-    if (typeof tooltip === 'string') return tooltip
+    if (typeof tooltip === 'string') {return tooltip}
 
     return [null, null]
   }, [tooltip, selectedIndexes])

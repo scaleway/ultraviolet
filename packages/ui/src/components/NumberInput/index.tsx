@@ -304,7 +304,7 @@ export const NumberInput = forwardRef(
       }
 
       const numericValue = Number(localRef?.current?.value)
-      if (Number.isNaN(numericValue)) return false
+      if (Number.isNaN(numericValue)) {return false}
 
       const minValue = typeof min === 'number' ? min : Number(min)
 
@@ -317,7 +317,7 @@ export const NumberInput = forwardRef(
       }
 
       const numericValue = Number(localRef?.current?.value)
-      if (Number.isNaN(numericValue)) return false
+      if (Number.isNaN(numericValue)) {return false}
 
       const maxValue = typeof max === 'number' ? max : Number(max)
 

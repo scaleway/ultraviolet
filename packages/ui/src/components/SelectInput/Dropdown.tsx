@@ -738,7 +738,7 @@ export const Dropdown = ({
               top: overflow,
             })
           }
-        } else window.scrollBy({ behavior: 'smooth', top: overflow })
+        } else {window.scrollBy({ behavior: 'smooth', top: overflow })}
       }
     }
     // oxlint-disable-next-line react/exhaustive-deps
@@ -817,7 +817,7 @@ export const Dropdown = ({
   // No data is displayed (because of the search or because no data is provided)
   // Set to true when noData by default
   const isEmpty = useMemo(() => {
-    if (numberOfOptions === 0) return true
+    if (numberOfOptions === 0) {return true}
     if (Array.isArray(displayedOptions)) {
       return displayedOptions.length === 0
     }

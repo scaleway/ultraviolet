@@ -239,7 +239,7 @@ export const VerificationCode = ({
       const vals = [...values]
 
       switch (event.key) {
-        case 'Backspace':
+        case 'Backspace': { 
           event.preventDefault()
 
           if (values[index]) {
@@ -253,30 +253,42 @@ export const VerificationCode = ({
             triggerChange(vals)
           }
           break
+        }
+        
 
-        case 'ArrowLeft':
+        case 'ArrowLeft': { 
           event.preventDefault()
           prev?.current?.focus()
           break
+        }
+        
 
-        case 'ArrowRight':
+        case 'ArrowRight': { 
           event.preventDefault()
           next?.current?.focus()
           break
+        }
+        
 
-        case 'ArrowUp':
+        case 'ArrowUp': { 
           event.preventDefault()
           first?.current?.focus()
           break
+        }
+        
 
-        case 'ArrowDown':
+        case 'ArrowDown': { 
           event.preventDefault()
           last?.current?.focus()
 
           break
+        }
+        
 
-        default:
+        default: { 
           break
+        }
+        
       }
     }
 

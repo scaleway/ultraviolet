@@ -110,8 +110,8 @@ const SteppedListCard = ({
   )
 
   const onClickHideButton = () => {
-    if (onClickHide) onClickHide()
-    else setHidden(!hidden)
+    if (onClickHide) {onClickHide()}
+    else {setHidden(!hidden)}
   }
 
   return (

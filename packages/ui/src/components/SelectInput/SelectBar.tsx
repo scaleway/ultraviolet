@@ -507,10 +507,10 @@ const SelectBar = ({
       if (refTag.current) {
         setInnerWidth(refTag.current.offsetWidth)
       } else
-        setInnerWidth(
+        {setInnerWidth(
           innerRef.current?.offsetWidth ??
             0 - (arrowRef.current?.offsetWidth ?? 0) - SIZES_TAG.paddings,
-        )
+        )}
     }
     getWidth()
     window.addEventListener('resize', getWidth)

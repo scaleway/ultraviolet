@@ -16,8 +16,8 @@ export const OnChange: StoryFn<ComponentProps<typeof OfferList>> = props => {
       <Button
         onClick={() => {
           setSelectable(selectable === 'checkbox' ? 'radio' : 'checkbox')
-          if (selectable === 'checkbox') setSelectedRow('venus-offer')
-          else setSelectedRow(['mercury-offer', 'jupiter-offer'])
+          if (selectable === 'checkbox') {setSelectedRow('venus-offer')}
+          else {setSelectedRow(['mercury-offer', 'jupiter-offer'])}
         }}
       >
         Set selectable to {selectable === 'checkbox' ? 'radio' : 'checkbox'}

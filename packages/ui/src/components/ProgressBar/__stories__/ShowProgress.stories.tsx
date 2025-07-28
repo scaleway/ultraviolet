@@ -6,8 +6,8 @@ export const ShowProgress: StoryFn = props => {
   const [value, setValue] = useState(0)
   useEffect(() => {
     const interval = setInterval(() => {
-      if (value >= 100) setValue(0)
-      else setValue(prevValue => prevValue + 1)
+      if (value >= 100) {setValue(0)}
+      else {setValue(prevValue => prevValue + 1)}
     }, 200)
 
     return () => {

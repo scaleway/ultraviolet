@@ -89,7 +89,7 @@ const StyledLine = styled.div<{
       border-radius: ${({ theme }) => theme.radii.default};
       background-color: ${({ theme }) => theme.colors.primary.backgroundStrong};
       ${({ temporal }) => {
-        if (temporal === 'done') return 'width: 100%;'
+        if (temporal === 'done') {return 'width: 100%;'}
 
         return null
       }}
@@ -130,9 +130,9 @@ export const Stepper = ({
       >
         {Children.map(cleanChildren, (child, index) => {
           const getTemporal = () => {
-            if (index < selected) return 'done'
+            if (index < selected) {return 'done'}
 
-            if (index === selected) return 'current'
+            if (index === selected) {return 'current'}
 
             return 'next'
           }

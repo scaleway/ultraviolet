@@ -236,8 +236,8 @@ export const Link = forwardRef(
 
     const finalStringChildren = recursivelyGetChildrenString(children)
     const textVariant = useMemo(() => {
-      if (size === 'xsmall') return 'captionStrong'
-      if (size === 'small') return 'bodySmallStrong'
+      if (size === 'xsmall') {return 'captionStrong'}
+      if (size === 'small') {return 'bodySmallStrong'}
 
       return 'bodyStrong'
     }, [size])

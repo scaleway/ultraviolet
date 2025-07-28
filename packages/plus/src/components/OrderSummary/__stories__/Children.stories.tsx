@@ -53,7 +53,7 @@ export const Children: StoryFn<ComponentProps<typeof OrderSummary>> = props => {
           setCommitment(event.target.value === 'false' ? 'false' : 'true')
           if (event.target.value === 'false') {
             setDiscount(0)
-          } else setDiscount(commitmentChoice === 'monthly' ? 0.07 : 0.1)
+          } else {setDiscount(commitmentChoice === 'monthly' ? 0.07 : 0.1)}
         }}
         value={commitment}
       >

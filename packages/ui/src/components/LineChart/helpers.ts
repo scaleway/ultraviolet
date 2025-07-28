@@ -1,9 +1,9 @@
 import type { DatumValue, Serie } from '@nivo/line'
 
 const parse = (data?: DatumValue | null): number => {
-  if (typeof data === 'number') return data || 0
-  if (typeof data === 'string') return Number.parseFloat(data) || 0
-  if (data instanceof Date) return data.getTime()
+  if (typeof data === 'number') {return data || 0}
+  if (typeof data === 'string') {return Number.parseFloat(data) || 0}
+  if (data instanceof Date) {return data.getTime()}
 
   return 0
 }
@@ -24,7 +24,7 @@ export const getAverage = (values: DatumValue[] = []): number =>
     : 0
 
 export const getMaxChartValue = (preppedData?: Serie[]): number => {
-  if (!preppedData?.length) return 0
+  if (!preppedData?.length) {return 0}
 
   const maximum = Math.max(
     ...preppedData.map(({ data }) => getMax(data.map(({ y }) => y || 0))),
@@ -34,7 +34,7 @@ export const getMaxChartValue = (preppedData?: Serie[]): number => {
 }
 
 export const getMinChartValue = (preppedData?: Serie[]): number => {
-  if (!preppedData?.length) return 0
+  if (!preppedData?.length) {return 0}
 
   const minimum = Math.min(
     ...preppedData.map(({ data }) => getMin(data.map(({ y }) => y || 0))),

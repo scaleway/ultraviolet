@@ -74,7 +74,7 @@ export const AnimatedExpandable = ({
 
   useEffect(() => {
     setTimeout(() => {
-      if (isFirstRender.current) isFirstRender.current = false
+      if (isFirstRender.current) {isFirstRender.current = false}
     }, 0)
   }, [])
   /**

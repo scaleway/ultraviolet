@@ -259,17 +259,17 @@ export const Daily = () => {
         }
 
         const createTestId = () => {
-          if (isInHoveredRange) return 'rangeButton'
-          if (data.month === -1) return 'dayLastMonth'
-          if (data.month === 1) return 'dayNextMonth'
+          if (isInHoveredRange) {return 'rangeButton'}
+          if (data.month === -1) {return 'dayLastMonth'}
+          if (data.month === 1) {return 'dayNextMonth'}
 
           return undefined
         }
 
         const dayState = () => {
-          if (isSelected) return 'selected'
-          if (isInHoveredRange) return 'in-range'
-          if (data.month !== 0) return 'not-current'
+          if (isSelected) {return 'selected'}
+          if (isInHoveredRange) {return 'in-range'}
+          if (data.month !== 0) {return 'not-current'}
 
           return 'neutral'
         }
@@ -297,7 +297,7 @@ export const Daily = () => {
               }
             }}
             onMouseEnter={() => {
-              if (selectsRange && range?.start) setHoveredDate(constructedDate)
+              if (selectsRange && range?.start) {setHoveredDate(constructedDate)}
             }}
             sentiment={isSelected || isInHoveredRange ? 'primary' : 'neutral'}
             variant={isSelected || isInHoveredRange ? 'filled' : 'ghost'}

@@ -90,7 +90,7 @@ export const Pagination = ({
   }, [page, pageCount, onChange])
 
   useEffect(() => {
-    if (perPage) setPerPage(perPage)
+    if (perPage) {setPerPage(perPage)}
   }, [perPage])
 
   return (

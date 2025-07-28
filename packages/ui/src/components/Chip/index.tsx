@@ -97,8 +97,8 @@ export const Chip = ({
   const chipRef = useRef<HTMLDivElement>(null) // ref to the parent container
   const iconRef = useRef<HTMLButtonElement>(null)
   const prominence = useMemo(() => {
-    if (isActive) return 'stronger'
-    if (disabled) return 'weak'
+    if (isActive) {return 'stronger'}
+    if (disabled) {return 'weak'}
 
     return 'default'
   }, [isActive, disabled])
@@ -118,7 +118,7 @@ export const Chip = ({
       // This will mean that there is a trailing icon
       if (lastChildNode === iconRef.current) {
         setTrailingIcon(true)
-      } else setTrailingIcon(false)
+      } else {setTrailingIcon(false)}
     }
   }, [children, iconRef])
 

@@ -234,14 +234,14 @@ export const Menu = forwardRef(
 
               if (indexOfCurrent < listItem.length - 1) {
                 listItem[indexOfCurrent + 1].focus()
-              } else listItem[0].focus()
+              } else {listItem[0].focus()}
             } else if (event.key === 'ArrowUp') {
               event.preventDefault()
 
               const indexOfCurrent = listItem.indexOf(currentElement)
               if (indexOfCurrent > 0) {
                 listItem[indexOfCurrent - 1].focus()
-              } else listItem[listItem.length - 1].focus()
+              } else {listItem[listItem.length - 1].focus()}
             } else if (event.key === 'ArrowLeft' && triggerMethod === 'hover') {
               disclosureRef.current?.focus()
               setShouldBeVisible(undefined)
@@ -266,7 +266,7 @@ export const Menu = forwardRef(
         onClose={() => {
           setIsVisible(false)
           setLocalChild(null)
-          if (triggerMethod === 'click') disclosureRef.current?.focus()
+          if (triggerMethod === 'click') {disclosureRef.current?.focus()}
           setShouldBeVisible(undefined)
         }}
         onKeyDown={handleTabOpen}

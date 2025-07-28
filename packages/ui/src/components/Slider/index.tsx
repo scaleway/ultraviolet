@@ -46,8 +46,8 @@ export const Slider = ({
     ? { max: Array.isArray(options) ? options.length - 1 : max, min: 0 }
     : { max, min }
   const gap = useMemo(() => {
-    if (options) return 3
-    if (input && double && !helper) return 0
+    if (options) {return 3}
+    if (input && double && !helper) {return 0}
 
     return 1
   }, [options, input, double, helper])

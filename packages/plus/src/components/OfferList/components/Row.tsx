@@ -161,7 +161,7 @@ export const Row = ({
         </>
       )
     }
-    if (expandable && !loading) return expandableContent
+    if (expandable && !loading) {return expandableContent}
 
     return undefined
   }, [

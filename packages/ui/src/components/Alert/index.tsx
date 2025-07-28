@@ -120,7 +120,7 @@ export const Alert = ({
   const [opened, setOpened] = useState(true)
   const Icon = sentimentIcons[sentiment]
 
-  if (!opened) return null
+  if (!opened) {return null}
 
   return (
     <StyledStackContainer

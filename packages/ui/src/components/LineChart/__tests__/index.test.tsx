@@ -81,7 +81,7 @@ describe('LineChart', () => {
     )
     // eslint-disable-next-line testing-library/no-node-access
     const line = document.querySelector('svg[role="img"] g path')
-    if (!line) throw new Error('LineChart line path not found')
+    if (!line) {throw new Error('LineChart line path not found')}
     await userEvent.unhover(line)
     await userEvent.hover(line)
     expect(asFragment()).toMatchSnapshot()

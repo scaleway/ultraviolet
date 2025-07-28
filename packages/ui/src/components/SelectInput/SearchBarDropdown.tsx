@@ -22,8 +22,8 @@ const StyledInput = styled(TextInput)`
   padding-right: ${({ theme }) => theme.space[2]};
 `
 export const getReferenceText = (option: OptionType) => {
-  if (option.searchText) return normalizeString(option.searchText)
-  if (typeof option.label === 'string') return normalizeString(option.label)
+  if (option.searchText) {return normalizeString(option.searchText)}
+  if (typeof option.label === 'string') {return normalizeString(option.label)}
 
   return ''
 }
