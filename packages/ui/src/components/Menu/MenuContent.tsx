@@ -179,7 +179,7 @@ export const Menu = forwardRef(
           handler(true),
         )
         disclosureRef.current.addEventListener('mouseleave', () =>
-          handler(undefined),
+          handler(false),
         )
         disclosureRef.current.addEventListener('keydown', event => {
           if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
