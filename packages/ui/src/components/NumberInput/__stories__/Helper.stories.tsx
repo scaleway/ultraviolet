@@ -3,11 +3,11 @@ import { Template } from './Template.stories'
 export const Helper = Template.bind({})
 
 Helper.args = {
+  helper: 'You should enter a number only',
   id: 'number-input',
   label: 'Number Input',
   name: 'number-input',
   onChange: () => {},
-  helper: 'You should enter a number only',
 }
 
 Helper.parameters = {

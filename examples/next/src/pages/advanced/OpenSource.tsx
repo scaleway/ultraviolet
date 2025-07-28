@@ -25,7 +25,7 @@ const OpenSource = () => (
   <section>
     <Stack gap={5}>
       <Stack gap={2}>
-        <StyledTitle as="h3" variant="heading" id="open-source">
+        <StyledTitle as="h3" id="open-source" variant="heading">
           Open Source
         </StyledTitle>
         <Text as="p" variant="body">
@@ -33,15 +33,14 @@ const OpenSource = () => (
         </Text>
       </Stack>
 
-      <StyledStack gap={2} direction="row">
+      <StyledStack direction="row" gap={2}>
         <StyledCard
-          title="Ultraviolet Form"
           description={
             <>
               <StyledDescription>
                 Build amazing forms with Ultraviolet UI and React Final Form 🚀
               </StyledDescription>
-              <Stack gap={1} direction="row">
+              <Stack direction="row" gap={1}>
                 <GithubIcon size="small" />
                 <Link
                   href="https://github.com/scaleway/scaleway-form"
@@ -53,15 +52,15 @@ const OpenSource = () => (
             </>
           }
           icon={swForm}
+          title="Ultraviolet Form"
         />
         <StyledCard
-          title="Scaleway Lib"
           description={
             <>
               <StyledDescription>
                 Scaleway Lib is a set of NPM packages used at Scaleway
               </StyledDescription>
-              <Stack gap={1} direction="row">
+              <Stack direction="row" gap={1}>
                 <GithubIcon size="small" />
                 <Link
                   href="https://github.com/scaleway/scaleway-lib"
@@ -73,6 +72,7 @@ const OpenSource = () => (
             </>
           }
           icon={swLib}
+          title="Scaleway Lib"
         />
       </StyledStack>
     </Stack>

@@ -17,39 +17,39 @@ export const Disabled: StoryFn<typeof SelectableCardOptionGroup> = args => {
     <Stack direction="column" gap={8}>
       <SelectableCardOptionGroup
         {...args}
-        value={value}
-        optionValue={option}
-        onChangeOption={(newValue: string) => {
-          onChangeOption(newValue)
-        }}
         onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
           console.log('ok')
           onChange(event.currentTarget.value)
         }}
+        onChangeOption={(newValue: string) => {
+          onChangeOption(newValue)
+        }}
+        optionValue={option}
+        value={value}
       >
         <SelectableCardOptionGroup.Option
-          value="ubuntu"
+          disabled
+          image={ubuntu}
           label="Ubuntu"
           options={ubuntuOptions}
-          image={ubuntu}
-          disabled
           tooltip="Coming soon"
+          value="ubuntu"
         />
         <SelectableCardOptionGroup.Option
-          value="debian"
+          disabled
+          image={debian}
           label="Debian"
           options={debianOptions}
-          image={debian}
-          disabled
           tooltip="Coming soon"
+          value="debian"
         />
         <SelectableCardOptionGroup.Option
-          value="centos"
+          disabled
+          image={centos}
           label="CentOS"
           options={centosOptions}
-          image={centos}
-          disabled
           tooltip="Coming soon"
+          value="centos"
         />
       </SelectableCardOptionGroup>
       <Stack>

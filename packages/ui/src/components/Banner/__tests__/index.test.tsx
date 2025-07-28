@@ -20,14 +20,14 @@ describe('Banner', () => {
 
   test('renders correctly with a button', () =>
     shouldMatchEmotionSnapshot(
-      <Banner title="Title" buttonText="Button">
+      <Banner buttonText="Button" title="Title">
         Description
       </Banner>,
     ))
 
   test('renders correctly with a link', () =>
     shouldMatchEmotionSnapshot(
-      <Banner title="Title" linkText="Link">
+      <Banner linkText="Link" title="Title">
         Description
       </Banner>,
     ))
@@ -37,7 +37,7 @@ describe('Banner', () => {
       (['intro', 'promotional'] as const).forEach(variant => {
         test(`renders correctly with size ${size} and variant ${variant}`, () =>
           shouldMatchEmotionSnapshot(
-            <Banner title="Title" size={size} variant={variant}>
+            <Banner size={size} title="Title" variant={variant}>
               Description
             </Banner>,
           ))
@@ -47,21 +47,21 @@ describe('Banner', () => {
 
   test('renders correctly with direction row', () =>
     shouldMatchEmotionSnapshot(
-      <Banner title="Title" direction="row">
+      <Banner direction="row" title="Title">
         Description
       </Banner>,
     ))
 
   test('renders correctly with closable to false', () =>
     shouldMatchEmotionSnapshot(
-      <Banner title="Title" direction="row" closable={false}>
+      <Banner closable={false} direction="row" title="Title">
         Description
       </Banner>,
     ))
 
   test(`should render banner and then close it`, async () => {
     renderWithTheme(
-      <Banner title="Title" direction="row" data-testid="banner">
+      <Banner data-testid="banner" direction="row" title="Title">
         Description
       </Banner>,
     )
@@ -79,7 +79,7 @@ describe('Banner', () => {
 
   test(`should render correctly with dark theme`, () =>
     shouldMatchEmotionSnapshot(
-      <Banner title="Title" linkText="Learn more">
+      <Banner linkText="Learn more" title="Title">
         Descritpion
       </Banner>,
       consoleDarkTheme,

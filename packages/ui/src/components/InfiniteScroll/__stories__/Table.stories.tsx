@@ -8,9 +8,9 @@ import { generateRandomNamesArray, TABLE_COLUMNS, TABLE_DATA } from './data'
 const ListLoader = () => (
   <>
     {[1, 2, 3, 4].map(value => (
-      <UVTable.Row key={value} id={`loader-${value}`}>
+      <UVTable.Row id={`loader-${value}`} key={value}>
         <UVTable.Cell>
-          <Skeleton variant="line" length={100} />
+          <Skeleton length={100} variant="line" />
         </UVTable.Cell>
         <UVTable.Cell>
           <Skeleton variant="line" />
@@ -34,12 +34,12 @@ export const Table: StoryFn<typeof InfiniteScroll> = args => {
     await new Promise(resolve => {
       setTimeout(() => {
         const newData = generateRandomNamesArray(5, 10).map(name => ({
+          director: 'George Lucas',
+          id: Math.random().toString(),
           name,
           releaseYear: 2000,
-          trilogy: 'Unknown',
-          director: 'George Lucas',
           storyBy: 'George Lucas',
-          id: Math.random().toString(),
+          trilogy: 'Unknown',
         }))
 
         setData(prevData => [...prevData, ...newData])
@@ -54,7 +54,7 @@ export const Table: StoryFn<typeof InfiniteScroll> = args => {
       <UVTable columns={TABLE_COLUMNS}>
         <UVTable.Body>
           {data.map(movie => (
-            <UVTable.Row key={movie.id} id={movie.id}>
+            <UVTable.Row id={movie.id} key={movie.id}>
               <UVTable.Cell>{movie.name}</UVTable.Cell>
               <UVTable.Cell>{movie.releaseYear}</UVTable.Cell>
               <UVTable.Cell>{movie.trilogy}</UVTable.Cell>
@@ -64,10 +64,10 @@ export const Table: StoryFn<typeof InfiniteScroll> = args => {
           <InfiniteScroll
             {...args}
             as="tr"
-            scrollParentRef={containerRef}
-            loader={<ListLoader />}
             height={144}
+            loader={<ListLoader />}
             onLoadMore={loadMoreData}
+            scrollParentRef={containerRef}
           />
         </UVTable.Body>
       </UVTable>

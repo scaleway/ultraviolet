@@ -6,7 +6,7 @@ import { SIZES } from '../Icon'
 export const Sizes: StoryFn<typeof ConsoleProductIcon> = props => (
   <Stack gap={1}>
     {Object.keys(SIZES).map(size => (
-      <Stack direction="row" gap={1} alignItems="center">
+      <Stack alignItems="center" direction="row" gap={1}>
         <ConsoleProductIcon {...props} size={size as keyof typeof SIZES} />
         <Text as="span" variant="bodyStrong">
           {size}

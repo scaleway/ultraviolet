@@ -5,12 +5,16 @@ import { domain, fees, gb, pipeline, ssl } from './features'
 import { Template } from './Template.stories'
 
 const planStarter = {
-  value: 'starter',
-  title: 'Starter',
-  sentiment: 'primary' as ComponentProps<typeof Text>['sentiment'],
+  data: {
+    domain: true,
+    fees: true,
+    gb: '100 GB',
+    pipeline: '1 pipeline',
+    ssl: true,
+  },
   header: {
     cta: (
-      <Button size="medium" fullWidth>
+      <Button fullWidth size="medium">
         Select plan
       </Button>
     ),
@@ -18,22 +22,22 @@ const planStarter = {
     priceDescription: '/month',
     separator: true,
   },
-  data: {
-    gb: '100 GB',
-    pipeline: '1 pipeline',
-    domain: true,
-    ssl: true,
-    fees: true,
-  },
+  sentiment: 'primary' as ComponentProps<typeof Text>['sentiment'],
+  title: 'Starter',
+  value: 'starter',
 }
 
 const planProfessional = {
-  value: 'professional',
-  title: 'professional',
-  sentiment: 'primary' as ComponentProps<typeof Text>['sentiment'],
+  data: {
+    domain: true,
+    fees: true,
+    gb: '1 TB',
+    pipeline: '10 pipelines',
+    ssl: true,
+  },
   header: {
     cta: (
-      <Button size="medium" fullWidth disabled tooltip="Already selected">
+      <Button disabled fullWidth size="medium" tooltip="Already selected">
         Select plan
       </Button>
     ),
@@ -41,22 +45,22 @@ const planProfessional = {
     priceDescription: '/month',
     separator: true,
   },
-  data: {
-    gb: '1 TB',
-    pipeline: '10 pipelines',
-    domain: true,
-    ssl: true,
-    fees: true,
-  },
+  sentiment: 'primary' as ComponentProps<typeof Text>['sentiment'],
+  title: 'professional',
+  value: 'professional',
 }
 
 const planAdvanced = {
-  value: 'advanced',
-  title: 'Advanced',
-  sentiment: 'primary' as ComponentProps<typeof Text>['sentiment'],
+  data: {
+    domain: true,
+    fees: false,
+    gb: '10 TB',
+    pipeline: '100 pipelines',
+    ssl: true,
+  },
   header: {
     cta: (
-      <Button size="medium" fullWidth>
+      <Button fullWidth size="medium">
         Select plan
       </Button>
     ),
@@ -64,19 +68,15 @@ const planAdvanced = {
     priceDescription: '/month',
     separator: true,
   },
-  data: {
-    gb: '10 TB',
-    pipeline: '100 pipelines',
-    domain: true,
-    ssl: true,
-    fees: false,
-  },
+  sentiment: 'primary' as ComponentProps<typeof Text>['sentiment'],
+  title: 'Advanced',
+  value: 'advanced',
 }
 
 export const Playground = Template.bind({})
 
 Playground.args = {
-  plans: [planStarter, planProfessional, planAdvanced],
   features: [gb, pipeline, domain, ssl, fees],
+  plans: [planStarter, planProfessional, planAdvanced],
   value: 'professional',
 }

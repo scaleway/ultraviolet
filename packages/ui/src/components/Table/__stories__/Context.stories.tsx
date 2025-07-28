@@ -23,7 +23,7 @@ export const Context: StoryFn = args => {
     <Table {...args} columns={columns} selectable>
       <Table.Body>
         {data.map(movie => (
-          <Table.Row key={movie.id} id={movie.id}>
+          <Table.Row id={movie.id} key={movie.id}>
             <Table.Cell>{movie.name}</Table.Cell>
             <Table.Cell>{movie.releaseYear}</Table.Cell>
             <Table.Cell>{movie.trilogy}</Table.Cell>

@@ -8,16 +8,16 @@ export const Template: StoryFn<typeof TextInput> = ({ ...args }) => {
   return (
     <TextInput
       {...args}
-      value={value}
       onChange={event => setValue(event.target.value)}
+      value={value}
     />
   )
 }
 
 Template.args = {
-  placeholder: 'Placeholder',
-  value: 'Text',
-  role: 'status',
-  'aria-live': 'polite',
   'aria-atomic': 'true',
+  'aria-live': 'polite',
+  placeholder: 'Placeholder',
+  role: 'status',
+  value: 'Text',
 }

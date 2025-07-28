@@ -8,7 +8,7 @@ export const Disabled: StoryFn<typeof Chip> = ({ ...args }) => (
       Disabled inactive
       <Chip.Icon name="close" onClick={() => alert('Deleted')} />
     </Chip>
-    <Chip {...args} disabled active>
+    <Chip {...args} active disabled>
       Disabled active
       <Chip.Icon name="close" onClick={() => alert('Deleted')} />
     </Chip>

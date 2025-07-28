@@ -14,13 +14,13 @@ export const Label: StoryFn = props => (
         </Badge>
       }
     />
-    <ProgressBar label="Label" value={30} showProgress />
+    <ProgressBar label="Label" showProgress value={30} />
   </Stack>
 )
 
 Label.args = {
-  value: 40,
   label: 'Label',
+  value: 40,
 }
 
 Label.parameters = {

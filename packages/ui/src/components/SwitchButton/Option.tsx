@@ -110,8 +110,8 @@ export const Option = ({
       refOptions.filter(option => option.value === value).length === 0
     ) {
       const option = {
-        value,
         current: ref.current,
+        value,
       }
       setRefOptions([...refOptions, option])
     }
@@ -119,19 +119,19 @@ export const Option = ({
 
   return (
     <StyledSelectableCard
-      name={name}
-      value={value}
       checked={localValue === value}
-      onChange={handleOnChange}
-      onBlur={onBlur}
-      onFocus={onFocus}
       data-checked={localValue === value}
-      label={children}
       data-testid={dataTestId ?? `switch-button-${value}`}
+      disabled={disabled}
+      label={children}
+      name={name}
+      onBlur={onBlur}
+      onChange={handleOnChange}
+      onFocus={onFocus}
       ref={ref}
       sentiment={sentiment}
       tooltip={tooltip}
-      disabled={disabled}
+      value={value}
     />
   )
 }

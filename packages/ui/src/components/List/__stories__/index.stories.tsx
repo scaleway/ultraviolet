@@ -3,11 +3,11 @@ import { List } from '..'
 
 export default {
   component: List,
-  title: 'Components/Data Display/List',
   subcomponents: {
-    'List.Row': List.Row,
     'List.Cell': List.Cell,
+    'List.Row': List.Row,
   },
+  title: 'Components/Data Display/List',
 } as Meta<typeof List>
 
 export { ColumnInfo } from './ColumnInfo.stories'

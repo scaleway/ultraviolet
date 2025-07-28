@@ -2,8 +2,8 @@ import { Template } from './Template.stories'
 
 export const Fields = Template.bind({})
 Fields.args = {
-  label: 'Verification code',
   fields: 6,
+  label: 'Verification code',
 }
 
 Fields.parameters = {

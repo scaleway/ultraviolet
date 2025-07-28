@@ -16,10 +16,10 @@ describe('Button', () => {
         test(`render ${variant}&${sentiment}`, async () => {
           const { asFragment } = renderWithTheme(
             <Button
-              onClick={MockOnClick}
-              variant={variant}
-              sentiment={sentiment}
               disabled
+              onClick={MockOnClick}
+              sentiment={sentiment}
+              variant={variant}
             >
               Hello
             </Button>,
@@ -31,10 +31,10 @@ describe('Button', () => {
         test(`render ${variant}&${sentiment} disabled`, () =>
           shouldMatchEmotionSnapshot(
             <Button
-              onClick={MockOnClick}
-              variant={variant}
-              sentiment={sentiment}
               disabled
+              onClick={MockOnClick}
+              sentiment={sentiment}
+              variant={variant}
             >
               Hello
             </Button>,
@@ -57,12 +57,12 @@ describe('Button', () => {
     const onKeyDown = vi.fn()
     const { asFragment } = renderWithTheme(
       <Button
-        onPointerDown={onPointerDown}
-        onKeyDown={onKeyDown}
         aria-describedby="test"
         aria-disabled={false}
         aria-pressed={false}
         aria-roledescription="button"
+        onKeyDown={onKeyDown}
+        onPointerDown={onPointerDown}
       >
         Hello
       </Button>,
@@ -77,7 +77,7 @@ describe('Button', () => {
 
   test(`render with icon`, () =>
     shouldMatchEmotionSnapshot(
-      <Button onClick={MockOnClick} disabled>
+      <Button disabled onClick={MockOnClick}>
         <PencilIcon />
         Hello
       </Button>,
@@ -85,7 +85,7 @@ describe('Button', () => {
 
   test(`render with icon on the right`, () =>
     shouldMatchEmotionSnapshot(
-      <Button onClick={MockOnClick} disabled>
+      <Button disabled onClick={MockOnClick}>
         Hello
         <PencilIcon />
       </Button>,
@@ -93,28 +93,28 @@ describe('Button', () => {
 
   test(`render with icon only`, () =>
     shouldMatchEmotionSnapshot(
-      <Button onClick={MockOnClick} disabled>
+      <Button disabled onClick={MockOnClick}>
         <PencilOutlineIcon />
       </Button>,
     ))
 
   test(`render with fullWidth`, () =>
     shouldMatchEmotionSnapshot(
-      <Button onClick={MockOnClick} fullWidth>
+      <Button fullWidth onClick={MockOnClick}>
         Hello
       </Button>,
     ))
 
   test(`render with isLoading without icon`, () =>
     shouldMatchEmotionSnapshot(
-      <Button onClick={MockOnClick} isLoading>
+      <Button isLoading onClick={MockOnClick}>
         Hello
       </Button>,
     ))
 
   test(`render with isLoading with icon`, () =>
     shouldMatchEmotionSnapshot(
-      <Button onClick={MockOnClick} isLoading>
+      <Button isLoading onClick={MockOnClick}>
         <PencilIcon />
         Hello
       </Button>,
@@ -130,7 +130,7 @@ describe('Button', () => {
 
   test(`render as an anchor with href prop`, () =>
     shouldMatchEmotionSnapshot(
-      <Button onClick={MockOnClick} href="http://scaleway.com">
+      <Button href="http://scaleway.com" onClick={MockOnClick}>
         Scaleway
       </Button>,
     ))

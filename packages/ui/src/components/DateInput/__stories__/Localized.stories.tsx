@@ -15,9 +15,9 @@ export const Localized = (props: ComponentProps<typeof DateInput>) =>
     <DateInput
       key={label}
       {...props}
-      onChange={() => {}}
       label={label}
       locale={locale}
+      onChange={() => {}}
     />
   ))
 

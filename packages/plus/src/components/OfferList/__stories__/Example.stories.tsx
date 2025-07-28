@@ -7,47 +7,47 @@ import { OfferList } from '../OfferList'
 
 const data = [
   {
-    id: 'EM-A115X-SSD',
-    cpu: '1x Intel Xeon E3 1220\n4C/4T 3.1 GHz',
-    memory: '32 GB',
-    disks: '2 x 1.02 TB SSD',
     bandwidth: '500 Mpbs public\n1 Gpbs private',
+    cpu: '1x Intel Xeon E3 1220\n4C/4T 3.1 GHz',
+    disks: '2 x 1.02 TB SSD',
+    id: 'EM-A115X-SSD',
+    memory: '32 GB',
     price: '€0.091/hour',
     score: 2,
   },
   {
-    id: 'EM-A215R-HDD',
-    cpu: '1x AMD Ryzen PRO 3600\n6C/12T 3.G GHz',
-    memory: '16 GB',
-    disks: '2 x 1 TB HDD',
     bandwidth: '500 Mpbs public\n1 Gpbs private',
+    cpu: '1x AMD Ryzen PRO 3600\n6C/12T 3.G GHz',
+    disks: '2 x 1 TB HDD',
+    id: 'EM-A215R-HDD',
+    memory: '16 GB',
     price: '€0.101/hour',
     score: 2,
   },
   {
-    id: 'EM-610R-NVMe',
-    cpu: '1x AMD Ryzen PRO 3600\n6C/12T 3.6 GHz',
-    memory: '32 GB',
-    disks: '2 x 1.02 TB NVMe',
     bandwidth: '500 Mpbs public\n1 Gpbs private',
+    cpu: '1x AMD Ryzen PRO 3600\n6C/12T 3.6 GHz',
+    disks: '2 x 1.02 TB NVMe',
+    id: 'EM-610R-NVMe',
+    memory: '32 GB',
     price: '€0.11/hour',
     score: 2,
   },
   {
-    id: 'EM-A315X-SSD',
-    cpu: '1x Intel Xeon E3 1410 v2\n4C/8T 2.8 GHz',
-    memory: '64 GB',
-    disks: '2 x 1.02 TB SSD',
     bandwidth: '1 Gbps public\n1 Gpbs private',
+    cpu: '1x Intel Xeon E3 1410 v2\n4C/8T 2.8 GHz',
+    disks: '2 x 1.02 TB SSD',
+    id: 'EM-A315X-SSD',
+    memory: '64 GB',
     price: '€0.153/hour',
     score: 1,
   },
   {
-    id: 'EM-A410X-SSD',
-    cpu: '1x Intel Xeon E3 1650\n6C/8T 3.2 GHz',
-    memory: '64 GB',
-    disks: '2 x 1.02 TB SSD',
     bandwidth: '1 Gbps public\n1Gpbs private',
+    cpu: '1x Intel Xeon E3 1650\n6C/8T 3.2 GHz',
+    disks: '2 x 1.02 TB SSD',
+    id: 'EM-A410X-SSD',
+    memory: '64 GB',
     price: '€0.153/hour',
     score: 2,
   },
@@ -79,22 +79,22 @@ export const Example: StoryFn<ComponentProps<typeof OfferList>> = props => {
       {...props}
       columns={[
         {
-          label: 'Name',
           info: 'Info',
           isOrdered: currentOrder.columnId === 'id',
-          orderDirection: currentOrder.order,
+          label: 'Name',
           onOrder: newOrder =>
             setCurrentOrder({ columnId: 'id', order: newOrder }),
+          orderDirection: currentOrder.order,
         },
         {
           label: 'CPU(s)',
         },
         {
-          label: 'Memory',
           isOrdered: currentOrder.columnId === 'memory',
-          orderDirection: currentOrder.order,
+          label: 'Memory',
           onOrder: newOrder =>
             setCurrentOrder({ columnId: 'memory', order: newOrder }),
+          orderDirection: currentOrder.order,
         },
         { label: 'Disks' },
         { label: 'Bandwidth' },
@@ -103,10 +103,10 @@ export const Example: StoryFn<ComponentProps<typeof OfferList>> = props => {
     >
       {sortedData.map(offer => (
         <OfferList.Row
-          key={offer.id}
-          id={offer.id}
-          offerName={offer.id}
           expandable="Expandable content"
+          id={offer.id}
+          key={offer.id}
+          offerName={offer.id}
         >
           <OfferList.Cell>
             <Stack direction="column">
@@ -121,10 +121,10 @@ export const Example: StoryFn<ComponentProps<typeof OfferList>> = props => {
                 ))}
                 {Array.from({ length: 3 - offer.score }).map((_, i) => (
                   <LeafIcon
+                    disabled
                     key={`grey-${i}`}
                     sentiment="neutral"
                     size="small"
-                    disabled
                   />
                 ))}
               </Stack>

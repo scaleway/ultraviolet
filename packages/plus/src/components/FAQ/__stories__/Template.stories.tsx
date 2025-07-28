@@ -7,9 +7,9 @@ export const Template: StoryFn<ComponentProps<typeof FAQ>> = props => (
 )
 
 Template.args = {
-  title: 'Need help?',
   description:
     'Our Sales team can help you tailor the best solution for your needs.',
   illustrationText: 'sms',
   productIconName: 'sms',
+  title: 'Need help?',
 }

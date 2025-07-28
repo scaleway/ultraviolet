@@ -16,9 +16,9 @@ type KeyGroupProps = {
 }
 
 export const KeyGroup = ({ keys, disabled, onClick }: KeyGroupProps) => (
-  <ClickableStack gap={0.5} direction="row" onClick={onClick}>
+  <ClickableStack direction="row" gap={0.5} onClick={onClick}>
     {keys.map(key => (
-      <Key key={key} disabled={disabled}>
+      <Key disabled={disabled} key={key}>
         {key}
       </Key>
     ))}

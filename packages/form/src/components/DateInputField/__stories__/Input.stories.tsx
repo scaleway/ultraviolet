@@ -12,7 +12,7 @@ export const Input: StoryFn<ComponentProps<typeof DateInputField>> = args => (
 )
 
 Input.args = {
+  input: 'calendar',
   name: 'date',
   required: true,
-  input: 'calendar',
 }

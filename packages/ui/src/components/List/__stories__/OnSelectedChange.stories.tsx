@@ -32,14 +32,14 @@ export const OnSelectedChange: StoryFn = args => {
       <List
         {...args}
         columns={columns}
-        selectable
         onSelectedChange={onSelectedChange}
+        selectable
       >
         {data.map(planet => (
           <List.Row
-            key={planet.id}
-            id={planet.id}
             expandable="Planet description"
+            id={planet.id}
+            key={planet.id}
           >
             <List.Cell>{planet.name}</List.Cell>
             <List.Cell>{planet.perihelion}AU</List.Cell>
@@ -49,16 +49,16 @@ export const OnSelectedChange: StoryFn = args => {
         <List.SelectBar data={data} idKey="id">
           {({ selectedItems, unselectAll }) => (
             <>
-              <Text variant="bodyStrong" as="p" sentiment="primary">
+              <Text as="p" sentiment="primary" variant="bodyStrong">
                 {selectedItems.length} item(s) selected
               </Text>
               <Button
-                size="small"
                 onClick={() => {
                   // oxlint-disable-next-line eslint/no-alert
                   alert('elements could be deleted')
                   unselectAll()
                 }}
+                size="small"
               >
                 Delete
               </Button>
@@ -72,14 +72,13 @@ export const OnSelectedChange: StoryFn = args => {
 
 OnSelectedChange.args = {
   ...Template.args,
-  selectable: true,
   children: (
     <>
       {data.map(planet => (
         <List.Row
-          key={planet.id}
-          id={planet.id}
           disabled={planet.id === 'mercury'}
+          id={planet.id}
+          key={planet.id}
           selectDisabled={
             planet.id === 'home-sweet-home'
               ? "Earth isn't selectable"
@@ -102,16 +101,16 @@ OnSelectedChange.args = {
       <List.SelectBar data={data} idKey="id">
         {({ selectedItems, unselectAll }) => (
           <>
-            <Text variant="bodyStrong" as="p" sentiment="primary">
+            <Text as="p" sentiment="primary" variant="bodyStrong">
               {selectedItems.length} item(s) selected
             </Text>
             <Button
-              size="small"
               onClick={() => {
                 // oxlint-disable-next-line eslint/no-alert
                 alert('elements could be deleted')
                 unselectAll()
               }}
+              size="small"
             >
               Delete
             </Button>
@@ -120,6 +119,7 @@ OnSelectedChange.args = {
       </List.SelectBar>
     </>
   ),
+  selectable: true,
 }
 
 OnSelectedChange.parameters = {

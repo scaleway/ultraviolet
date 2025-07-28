@@ -7,61 +7,61 @@ describe('RadioGroup', () => {
   test('renders correctly', () =>
     shouldMatchEmotionSnapshot(
       <RadioGroup
-        value="value-1"
-        onChange={() => {}}
-        name="radio"
         legend="Label"
+        name="radio"
+        onChange={() => {}}
+        value="value-1"
       >
-        <RadioGroup.Radio value="value-1" label="Radio 1" />
-        <RadioGroup.Radio value="value-2" label="Radio 2" />
+        <RadioGroup.Radio label="Radio 1" value="value-1" />
+        <RadioGroup.Radio label="Radio 2" value="value-2" />
       </RadioGroup>,
     ))
 
   test('renders correctly with direction row', () =>
     shouldMatchEmotionSnapshot(
       <RadioGroup
-        value="value-1"
-        onChange={() => {}}
-        name="radio"
-        legend="Label"
         direction="row"
+        legend="Label"
+        name="radio"
+        onChange={() => {}}
+        value="value-1"
       >
-        <RadioGroup.Radio value="value-1" label="Radio 1" />
-        <RadioGroup.Radio value="value-2" label="Radio 2" />
+        <RadioGroup.Radio label="Radio 1" value="value-1" />
+        <RadioGroup.Radio label="Radio 2" value="value-2" />
       </RadioGroup>,
     ))
 
   test('renders correctly with helper content', () =>
     shouldMatchEmotionSnapshot(
       <RadioGroup
-        value="value-1"
-        onChange={() => {}}
-        name="radio"
-        legend="Label"
         helper="Helper content"
+        legend="Label"
+        name="radio"
+        onChange={() => {}}
+        value="value-1"
       >
-        <RadioGroup.Radio value="value-1" label="Radio 1" />
-        <RadioGroup.Radio value="value-2" label="Radio 2" />
+        <RadioGroup.Radio label="Radio 1" value="value-1" />
+        <RadioGroup.Radio label="Radio 2" value="value-2" />
       </RadioGroup>,
     ))
 
   test('renders correctly with error content', () =>
     shouldMatchEmotionSnapshot(
       <RadioGroup
-        value="value-1"
-        onChange={() => {}}
-        name="radio"
-        legend="Label"
         error="Eror content"
+        legend="Label"
+        name="radio"
+        onChange={() => {}}
+        value="value-1"
       >
-        <RadioGroup.Radio value="value-1" label="Radio 1" />
-        <RadioGroup.Radio value="value-2" label="Radio 2" />
+        <RadioGroup.Radio label="Radio 1" value="value-1" />
+        <RadioGroup.Radio label="Radio 2" value="value-2" />
       </RadioGroup>,
     ))
 
   test('throws if RadioGroup.Radio used without RadioGroup', () => {
     expect(() =>
-      render(<RadioGroup.Radio value="value-1" label="Radio 1" />),
+      render(<RadioGroup.Radio label="Radio 1" value="value-1" />),
     ).toThrow('RadioGroup.Radio can only be used inside a RadioGroup')
   })
 })

@@ -7,12 +7,12 @@ export const Multiple: StoryFn<
   ComponentProps<typeof SelectInputField>
 > = () => (
   <SelectInputField
-    selectAllGroup
+    multiselect
+    name="options"
+    options={planets}
     selectAll={{
       label: 'Select all',
     }}
-    name="options"
-    multiselect
-    options={planets}
+    selectAllGroup
   />
 )

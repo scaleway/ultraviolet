@@ -17,9 +17,9 @@ export const Size: StoryFn<typeof TagInput> = args => {
           key={size}
           {...args}
           label={size}
+          onChange={setTags}
           size={size}
           value={tags}
-          onChange={setTags}
         />
       ))}
     </Stack>

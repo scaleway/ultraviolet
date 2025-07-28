@@ -15,10 +15,10 @@ const isLocales = (locale: string): locale is LocalSupportedType =>
 
 const loadDateFNS = async (locale: LocalSupportedType) =>
   ({
-    en: (await import('date-fns/locale/en-GB')).enGB,
-    fr: (await import('date-fns/locale/fr')).fr,
-    es: (await import('date-fns/locale/es')).es,
     de: (await import('date-fns/locale/de')).de,
+    en: (await import('date-fns/locale/en-GB')).enGB,
+    es: (await import('date-fns/locale/es')).es,
+    fr: (await import('date-fns/locale/fr')).fr,
     ru: (await import('date-fns/locale/ru')).ru,
   })[locale] ?? (await import('date-fns/locale/en-GB')).enGB
 
@@ -46,23 +46,23 @@ export const I18n: StoryFn<ComponentProps<typeof DateInput>> = args => {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
       <SelectInput
-        name="locale-switcher"
         label="Switch Locale"
-        searchable={false}
-        options={localesOptions}
-        value={currentLocale}
+        name="locale-switcher"
         onChange={onChange}
+        options={localesOptions}
+        searchable={false}
+        value={currentLocale}
       />
 
       <DateInput
         {...args}
+        label={currentLocale}
         locale={dateFns}
-        value={value}
         onChange={v => {
           setValue(v as Date)
         }}
-        label={currentLocale}
         selectsRange={false}
+        value={value}
       />
     </div>
   )

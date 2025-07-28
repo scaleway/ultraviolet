@@ -187,8 +187,8 @@ export const DoubleSlider = ({
   const ticks = useMemo(() => {
     if (options) {
       return options.map((element, index) => ({
-        value: index,
         label: element.label,
+        value: index,
       }))
     }
 
@@ -245,19 +245,12 @@ export const DoubleSlider = ({
   ) =>
     input && !options ? (
       <NumberInput
-        value={side === 'left' ? inputValue?.[0] : inputValue?.[1]}
-        size="small"
-        min={min}
-        max={max}
-        step={step}
         aria-label={`input-${side}`}
         controls={false}
-        disabled={disabled}
         data-testid={side ? `slider-input-${side}` : 'slider-input'}
-        unit={typeof suffix === 'string' ? suffix : unit}
-        onChange={newVal => {
-          handleChangeInput(newVal, side)
-        }}
+        disabled={disabled}
+        max={max}
+        min={min}
         onBlur={event => {
           // Default to min/max when the input is left empty
           if (!event.target.value) {
@@ -283,18 +276,25 @@ export const DoubleSlider = ({
             }
           }
         }}
+        onChange={newVal => {
+          handleChangeInput(newVal, side)
+        }}
+        size="small"
+        step={step}
+        unit={typeof suffix === 'string' ? suffix : unit}
+        value={side === 'left' ? inputValue?.[0] : inputValue?.[1]}
       />
     ) : (
       <StyledTextValue
         as="span"
-        variant="bodySmall"
-        sentiment="neutral"
-        placement={direction !== 'row' ? 'right' : 'center'}
-        double
-        isColumn={direction === 'column'}
         data-testid={
           dataTestId ? `${dataTestId}-value-${side}` : `value-${side}`
         }
+        double
+        isColumn={direction === 'column'}
+        placement={direction !== 'row' ? 'right' : 'center'}
+        sentiment="neutral"
+        variant="bodySmall"
       >
         {prefix}
         {valueNumber}
@@ -345,9 +345,9 @@ export const DoubleSlider = ({
   }, [min, max, value])
 
   return (
-    <Stack gap={1} direction="column" justifyContent="left">
+    <Stack direction="column" gap={1} justifyContent="left">
       {label ? (
-        <Stack justifyContent="space-between" direction="row">
+        <Stack direction="row" justifyContent="space-between">
           <Label htmlFor={finalId} required={required}>
             {label}
           </Label>
@@ -355,7 +355,7 @@ export const DoubleSlider = ({
       ) : null}
       <Stack direction={direction} gap={1} width="100%">
         {direction === 'column' ? (
-          <Stack justifyContent="space-between" direction="row">
+          <Stack direction="row" justifyContent="space-between">
             {styledValue(leftToShow, 'left')}
             {styledValue(rightToShow, 'right')}
           </Stack>
@@ -363,92 +363,92 @@ export const DoubleSlider = ({
         {direction === 'row' ? styledValue(leftToShow, 'left') : null}
         <DoubleSliderWrapper>
           <StyledTooltip
-            text={typeof tooltipText === 'string' ? tooltipText : undefined}
-            placement={tooltipPosition}
             left={(placementTooltip[0] + placementTooltip[1]) / 2}
+            placement={tooltipPosition}
+            text={typeof tooltipText === 'string' ? tooltipText : undefined}
           >
             <CustomRail>
               <InnerRail
-                style={{ left: `${minPos}%`, right: `${100 - maxPos}%` }}
-                data-error={!!error}
                 aria-disabled={!!disabled}
+                data-error={!!error}
+                style={{ left: `${minPos}%`, right: `${100 - maxPos}%` }}
               />
             </CustomRail>
 
             <StyledTooltip
-              text={Array.isArray(tooltipText) ? tooltipText[0] : undefined}
-              placement={tooltipPosition}
               left={placementTooltip[0]}
+              placement={tooltipPosition}
+              text={Array.isArray(tooltipText) ? tooltipText[0] : undefined}
             >
               <SliderElement
-                className={className}
-                name={name}
-                id={finalId}
-                disabled={!!disabled}
-                onBlur={onBlur}
-                onFocus={onFocus}
-                data-error={error}
-                data-direction={direction}
-                type="range"
-                value={selectedIndexes[0]}
-                min={min}
-                suffix={!!(suffix || unit)}
                 aria-label={ariaLabel ?? name}
-                max={max}
-                step={step}
+                className={className}
+                data-direction={direction}
+                data-error={error}
                 data-testid={dataTestId ? `${dataTestId}-left` : 'handle-left'}
+                disabled={!!disabled}
+                hasTooltip={!!tooltip}
+                id={finalId}
+                left={((selectedIndexes[0] - min) * 100) / (max - min)}
+                max={max}
+                min={min}
+                name={name}
+                onBlur={onBlur}
                 onChange={event => {
                   event.preventDefault()
                   handleMinChange(Number.parseFloat(event.target.value))
                 }}
-                themeSlider={theme}
+                onFocus={onFocus}
                 ref={refSlider}
-                left={((selectedIndexes[0] - min) * 100) / (max - min)}
-                hasTooltip={!!tooltip}
+                step={step}
+                suffix={!!(suffix || unit)}
+                themeSlider={theme}
+                type="range"
+                value={selectedIndexes[0]}
               />
             </StyledTooltip>
             <StyledTooltip
-              text={Array.isArray(tooltipText) ? tooltipText[1] : undefined}
-              placement={tooltipPosition}
               left={placementTooltip[1]}
+              placement={tooltipPosition}
+              text={Array.isArray(tooltipText) ? tooltipText[1] : undefined}
             >
               <SliderElement
-                className={className}
-                type="range"
-                value={selectedIndexes[1]}
-                name={name}
-                disabled={!!disabled}
-                suffix={!!(suffix || unit)}
-                id={finalId}
-                onBlur={onBlur}
-                onFocus={onFocus}
-                data-error={error}
-                data-direction={direction}
                 aria-label={ariaLabel ?? name}
+                className={className}
+                data-direction={direction}
+                data-error={error}
                 data-testid={
                   dataTestId ? `${dataTestId}-right` : 'handle-right'
                 }
-                min={min}
+                disabled={!!disabled}
+                hasTooltip={!!tooltip}
+                id={finalId}
+                left={((selectedIndexes[1] - min) * 100) / (max - min)}
                 max={max}
-                step={step}
+                min={min}
+                name={name}
+                onBlur={onBlur}
                 onChange={event => {
                   event.preventDefault()
                   handleMaxChange(Number.parseFloat(event.target.value))
                 }}
+                onFocus={onFocus}
+                step={step}
+                suffix={!!(suffix || unit)}
                 themeSlider={theme}
-                left={((selectedIndexes[1] - min) * 100) / (max - min)}
-                hasTooltip={!!tooltip}
+                type="range"
+                value={selectedIndexes[1]}
               />
             </StyledTooltip>
           </StyledTooltip>
           {options ? (
             <Options
-              ticks={ticks}
-              min={min}
               max={max}
+              min={min}
               sliderWidth={sliderWidth}
-              value={selectedIndexes}
               step={step}
+              ticks={ticks}
+              value={selectedIndexes}
             />
           ) : null}
         </DoubleSliderWrapper>

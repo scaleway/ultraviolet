@@ -97,23 +97,23 @@ export const OverlayComponent = ({
     days: totalPrice.maxOverlayHourly * multiplier.days,
     hours: totalPrice.maxOverlayHourly,
     minutes: totalPrice.maxOverlayHourly * multiplier.minutes,
-    seconds: totalPrice.maxOverlayHourly * multiplier.seconds,
     months: totalPrice.maxOverlayHourly * multiplier.months,
+    seconds: totalPrice.maxOverlayHourly * multiplier.seconds,
   }[unit]
 
   const overlayPrice = {
     days: totalPrice.overlayHourly * multiplier.days,
     hours: totalPrice.overlayHourly,
     minutes: totalPrice.overlayHourly * multiplier.minutes,
-    seconds: totalPrice.overlayHourly * multiplier.seconds,
     months: totalPrice.overlayHourly * multiplier.months,
+    seconds: totalPrice.overlayHourly * multiplier.seconds,
   }[unit]
 
   return (
     <OverlayContextProvider value={value}>
       <OverlayContainer
-        inView={inView}
         data-testid="summary-overlay"
+        inView={inView}
         overlayMargin={overlayMargin}
       >
         <List>
@@ -133,7 +133,7 @@ export const OverlayComponent = ({
               : null,
           )}
           <OverlayRow>
-            <Stack direction="row" alignItems="center" gap={1}>
+            <Stack alignItems="center" direction="row" gap={1}>
               <CalculatorIcon sentiment="primary" size="medium" />
               {locales['estimate.cost.label']}
             </Stack>

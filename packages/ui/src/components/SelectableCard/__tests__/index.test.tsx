@@ -13,10 +13,10 @@ describe('SelectableCard', () => {
       test('renders correctly with default props', () =>
         shouldMatchEmotionSnapshot(
           <SelectableCard
-            onChange={() => {}}
-            name="test"
-            value="choice"
             label="test"
+            name="test"
+            onChange={() => {}}
+            value="choice"
           >
             Radio card
           </SelectableCard>,
@@ -25,10 +25,10 @@ describe('SelectableCard', () => {
       test('renders correctly with aria label', () =>
         shouldMatchEmotionSnapshot(
           <SelectableCard
-            onChange={() => {}}
-            name="test"
-            value="choice"
             aria-label="test"
+            name="test"
+            onChange={() => {}}
+            value="choice"
           >
             Radio card
           </SelectableCard>,
@@ -37,12 +37,12 @@ describe('SelectableCard', () => {
       test('renders correctly with showTick', () =>
         shouldMatchEmotionSnapshot(
           <SelectableCard
-            onChange={() => {}}
-            name="test"
-            value="choice"
-            type={type}
             aria-label="test"
+            name="test"
+            onChange={() => {}}
             showTick
+            type={type}
+            value="choice"
           >
             Checkbox card
           </SelectableCard>,
@@ -51,12 +51,12 @@ describe('SelectableCard', () => {
       test('renders correctly with checked prop', () =>
         shouldMatchEmotionSnapshot(
           <SelectableCard
-            onChange={() => {}}
-            name="test"
-            type={type}
             aria-label="test"
-            value="choice"
             checked
+            name="test"
+            onChange={() => {}}
+            type={type}
+            value="choice"
           >
             Radio card
           </SelectableCard>,
@@ -65,12 +65,12 @@ describe('SelectableCard', () => {
       test('renders correctly with disabled prop', () =>
         shouldMatchEmotionSnapshot(
           <SelectableCard
-            onChange={() => {}}
-            name="test"
-            type={type}
             aria-label="test"
-            value="choice"
             disabled
+            name="test"
+            onChange={() => {}}
+            type={type}
+            value="choice"
           >
             Radio card
           </SelectableCard>,
@@ -79,12 +79,12 @@ describe('SelectableCard', () => {
       test('renders correctly with isError prop', () =>
         shouldMatchEmotionSnapshot(
           <SelectableCard
-            onChange={() => {}}
-            name="test"
+            isError
             label="test"
+            name="test"
+            onChange={() => {}}
             type={type}
             value="choice"
-            isError
           >
             Radio card
           </SelectableCard>,
@@ -93,12 +93,12 @@ describe('SelectableCard', () => {
       test('renders correctly with tooltip prop', () =>
         shouldMatchEmotionSnapshot(
           <SelectableCard
-            onChange={() => {}}
-            name="test"
-            type={type}
             label="test"
-            value="choice"
+            name="test"
+            onChange={() => {}}
             tooltip="test"
+            type={type}
+            value="choice"
           >
             Checkbox card
           </SelectableCard>,
@@ -107,12 +107,12 @@ describe('SelectableCard', () => {
       test('renders correctly with complex children', () =>
         shouldMatchEmotionSnapshot(
           <SelectableCard
-            onChange={() => {}}
-            name="test"
+            disabled
             label="test"
+            name="test"
+            onChange={() => {}}
             type={type}
             value="choice"
-            disabled
           >
             {({ checked, disabled }) => (
               <div
@@ -130,13 +130,13 @@ describe('SelectableCard', () => {
       test('renders correctly with illustration', () =>
         shouldMatchEmotionSnapshot(
           <SelectableCard
-            name="label-14"
-            value="label-14"
-            type={type}
-            label="label"
-            showTick
-            onChange={() => {}}
             illustration={illustration}
+            label="label"
+            name="label-14"
+            onChange={() => {}}
+            showTick
+            type={type}
+            value="label-14"
           >
             Offer the best experience to your Mac, iPhone and iPad users with
             VNC, the remote desktop-sharing protocol. Learn more
@@ -146,13 +146,13 @@ describe('SelectableCard', () => {
       test('renders correctly with productIcon', () =>
         shouldMatchEmotionSnapshot(
           <SelectableCard
-            name="label-14"
-            value="label-14"
-            type={type}
             label="label"
+            name="label-14"
+            onChange={() => {}}
             productIcon="macMini"
             showTick
-            onChange={() => {}}
+            type={type}
+            value="label-14"
           >
             Offer the best experience to your Mac, iPhone and iPad users with
             VNC, the remote desktop-sharing protocol. Learn more
@@ -164,11 +164,11 @@ describe('SelectableCard', () => {
 
         renderWithTheme(
           <SelectableCard
-            onChange={onChange}
-            value="choice"
             label="test"
-            type={type}
             name="test"
+            onChange={onChange}
+            type={type}
+            value="choice"
           >
             {`${type.charAt(0).toUpperCase() + type.slice(1)} card`}
           </SelectableCard>,
@@ -188,11 +188,11 @@ describe('SelectableCard', () => {
 
         renderWithTheme(
           <SelectableCard
+            label="test"
+            name="test"
             onChange={onChange}
             type={type}
             value="choice"
-            label="test"
-            name="test"
           >
             {`${type.charAt(0).toUpperCase() + type.slice(1)} card`}
           </SelectableCard>,
@@ -211,11 +211,11 @@ describe('SelectableCard', () => {
 
         renderWithTheme(
           <SelectableCard
+            label="test"
+            name="test"
             onChange={onChange}
             type={type}
             value="choice"
-            label="test"
-            name="test"
           >
             {`${type.charAt(0).toUpperCase() + type.slice(1)} card`}
           </SelectableCard>,
@@ -234,11 +234,11 @@ describe('SelectableCard', () => {
 
         renderWithTheme(
           <SelectableCard
+            label="test"
+            name="test"
             onChange={onChange}
             type={type}
             value="choice"
-            label="test"
-            name="test"
           >
             {`${type.charAt(0).toUpperCase() + type.slice(1)} card`}
           </SelectableCard>,

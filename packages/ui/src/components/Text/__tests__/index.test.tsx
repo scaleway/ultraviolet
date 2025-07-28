@@ -14,7 +14,7 @@ describe('Text', () => {
   test(`renders correctly with tooltip`, () =>
     shouldMatchEmotionSnapshot(
       <div style={{ marginBottom: 16, marginTop: 8, width: 500 }}>
-        <Text as="div" variant="body" oneLine>
+        <Text as="div" oneLine variant="body">
           This text is quite long. Lorem ipsum dolor sit amet, consectetur
           adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
           magna aliqua.
@@ -25,7 +25,7 @@ describe('Text', () => {
   test(`renders correctly with placement`, () =>
     shouldMatchEmotionSnapshot(
       <div style={{ marginBottom: 16, marginTop: 8, width: 500 }}>
-        <Text as="div" variant="body" placement="end">
+        <Text as="div" placement="end" variant="body">
           This text is quite long. Lorem ipsum dolor sit amet, consectetur
           adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
           magna aliqua.
@@ -36,7 +36,7 @@ describe('Text', () => {
   test(`renders correctly with dir`, () =>
     shouldMatchEmotionSnapshot(
       <div style={{ marginBottom: 16, marginTop: 8, width: 500 }}>
-        <Text as="div" variant="body" oneLine dir="rtl">
+        <Text as="div" dir="rtl" oneLine variant="body">
           This text is quite long. Lorem ipsum dolor sit amet, consectetur
           adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
           magna aliqua.
@@ -47,7 +47,7 @@ describe('Text', () => {
   test(`renders correctly with htmlFor`, () =>
     shouldMatchEmotionSnapshot(
       <div style={{ marginBottom: 16, marginTop: 8, width: 500 }}>
-        <Text as="div" variant="body" htmlFor="test">
+        <Text as="div" htmlFor="test" variant="body">
           This text is quite long. Lorem ipsum dolor sit amet, consectetur
           adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
           magna aliqua.
@@ -60,7 +60,7 @@ describe('Text', () => {
       <Text as="div" variant="body">
         Lorem
         <span>Ipsum</span>
-        <Text variant="heading" as="span">
+        <Text as="span" variant="heading">
           <span>Dolor</span>
         </Text>
         Sit
@@ -69,33 +69,33 @@ describe('Text', () => {
 
   test(`with prominence stronger on non neutral`, () =>
     shouldMatchEmotionSnapshot(
-      <Text as="div" variant="body" prominence="stronger" sentiment="danger">
+      <Text as="div" prominence="stronger" sentiment="danger" variant="body">
         Lorem Ipsum
       </Text>,
     ))
   test(`with italic`, () =>
     shouldMatchEmotionSnapshot(
-      <Text as="div" variant="body" italic>
+      <Text as="div" italic variant="body">
         Lorem Ipsum
       </Text>,
     ))
   test(`with underline`, () =>
     shouldMatchEmotionSnapshot(
-      <Text as="div" variant="body" underline>
+      <Text as="div" underline variant="body">
         Lorem Ipsum
       </Text>,
     ))
 
   test(`with disabled`, () =>
     shouldMatchEmotionSnapshot(
-      <Text as="div" variant="body" disabled>
+      <Text as="div" disabled variant="body">
         Lorem Ipsum
       </Text>,
     ))
 
   test(`with monochrome`, () =>
     shouldMatchEmotionSnapshot(
-      <Text as="div" variant="body" sentiment="black">
+      <Text as="div" sentiment="black" variant="body">
         Lorem Ipsum
       </Text>,
     ))

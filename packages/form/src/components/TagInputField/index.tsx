@@ -36,8 +36,8 @@ export const TagInputField = <
     field,
     fieldState: { error },
   } = useController<TFieldValues, TFieldName>({
-    name,
     control,
+    name,
     rules: {
       required,
       shouldUnregister,
@@ -56,18 +56,18 @@ export const TagInputField = <
   return (
     <TagInput
       {...props}
+      aria-label={ariaLabel}
+      error={getError(
+        { label: label ?? ariaLabel ?? name, regex: regexes },
+        error,
+      )}
+      label={label}
       name={field.name}
       onChange={newTags => {
         field.onChange(newTags)
         onChange?.(newTags as PathValue<TFieldValues, Path<TFieldValues>>)
       }}
       value={field.value}
-      label={label}
-      aria-label={ariaLabel}
-      error={getError(
-        { regex: regexes, label: label ?? ariaLabel ?? name },
-        error,
-      )}
     />
   )
 }

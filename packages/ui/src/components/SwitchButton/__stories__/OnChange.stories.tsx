@@ -10,8 +10,8 @@ export const OnChange: StoryFn<ComponentProps<typeof SwitchButton>> = () => {
   return (
     <Stack gap={2}>
       <SwitchButton
-        value={value}
         onChange={event => setValue(event.target.value)}
+        value={value}
       >
         <SwitchButton.Option value="option1">Option1</SwitchButton.Option>
         <SwitchButton.Option value="option2">Option2</SwitchButton.Option>

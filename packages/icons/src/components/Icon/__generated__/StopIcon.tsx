@@ -14,15 +14,15 @@ export const StopIcon = ({ ...props }: Omit<IconProps, 'children'>) => (
     {typeof props.size === 'string' &&
     ['medium', 'large', 'xlarge', 'xxlarge'].includes(props.size) ? (
       <path
-        fillRule="evenodd"
         clipRule="evenodd"
         d="M2 10C2 5.58172 5.58172 2 10 2C14.4183 2 18 5.58172 18 10C18 14.4183 14.4183 18 10 18C5.58172 18 2 14.4183 2 10ZM7 7.75C7 7.33579 7.33579 7 7.75 7H12.25C12.6642 7 13 7.33579 13 7.75V12.25C13 12.6642 12.6642 13 12.25 13H7.75C7.33579 13 7 12.6642 7 12.25V7.75Z"
+        fillRule="evenodd"
       />
     ) : (
       <path
-        fillRule="evenodd"
         clipRule="evenodd"
         d="M8 15C11.866 15 15 11.866 15 8C15 4.13401 11.866 1 8 1C4.13401 1 1 4.13401 1 8C1 11.866 4.13401 15 8 15ZM6.5 5.5C5.94772 5.5 5.5 5.94772 5.5 6.5V9.5C5.5 10.0523 5.94772 10.5 6.5 10.5H9.5C10.0523 10.5 10.5 10.0523 10.5 9.5V6.5C10.5 5.94772 10.0523 5.5 9.5 5.5H6.5Z"
+        fillRule="evenodd"
       />
     )}
   </Icon>

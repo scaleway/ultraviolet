@@ -40,18 +40,18 @@ export const CopyButton = ({
 
   return (
     <Button
-      type="button"
+      aria-label="Copy"
+      className={className}
+      data-testid={dataTestId}
       onClick={() => {
         setCopied()
         onCopy?.()
       }}
-      size={size}
       sentiment={sentiment}
-      variant={!bordered ? 'ghost' : 'outlined'}
-      className={className}
-      data-testid={dataTestId}
-      aria-label="Copy"
+      size={size}
       tooltip={isCopied ? copiedText : copyText}
+      type="button"
+      variant={!bordered ? 'ghost' : 'outlined'}
     >
       {isCopied ? <CheckIcon /> : <CopyContentIcon />}
       {children}

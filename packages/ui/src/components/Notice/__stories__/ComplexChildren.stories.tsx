@@ -7,7 +7,7 @@ export const ComplexChildren = (args: ComponentProps<typeof Notice>) => (
   <Notice {...args}>
     <Text as="p" variant="caption">
       This is a link to&nbsp;
-      <Link href="//google.com" target="_blank" size="small">
+      <Link href="//google.com" size="small" target="_blank">
         Google
       </Link>
     </Text>

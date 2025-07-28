@@ -5,23 +5,19 @@ import { DefaultDisclosure, Template } from './Template.stories'
 
 export const Footer = Template.bind({})
 const FooterComponent = () => (
-  <Stack direction="row" justifyContent="end" gap="1">
-    <Button sentiment="primary" variant="outlined" fullWidth>
+  <Stack direction="row" gap="1" justifyContent="end">
+    <Button fullWidth sentiment="primary" variant="outlined">
       Secondary
     </Button>
-    <Button sentiment="primary" variant="filled" fullWidth>
+    <Button fullWidth sentiment="primary" variant="filled">
       Primary
     </Button>
   </Stack>
 )
 
 Footer.args = {
-  disclosure: DefaultDisclosure,
-  footer: <FooterComponent />,
-  header: 'With a footer',
-  size: 'small',
   children: (
-    <Text as="p" variant="body" sentiment="neutral">
+    <Text as="p" sentiment="neutral" variant="body">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce iaculis non
       lectus sed sagittis. Etiam luctus velit ac semper accumsan. Orci varius
       natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
@@ -43,4 +39,8 @@ Footer.args = {
       finibus. Vivamus efficitur dolor eu sem elementum condimentum.
     </Text>
   ),
+  disclosure: DefaultDisclosure,
+  footer: <FooterComponent />,
+  header: 'With a footer',
+  size: 'small',
 }

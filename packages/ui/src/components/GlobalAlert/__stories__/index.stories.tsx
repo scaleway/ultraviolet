@@ -3,8 +3,8 @@ import { GlobalAlert } from '..'
 
 export default {
   component: GlobalAlert,
-  title: 'Components/Feedback/GlobalAlert',
   subcomponents: { 'GlobalAlert.Link': GlobalAlert.Link },
+  title: 'Components/Feedback/GlobalAlert',
 } as Meta
 
 export { Button } from './Button.stories'

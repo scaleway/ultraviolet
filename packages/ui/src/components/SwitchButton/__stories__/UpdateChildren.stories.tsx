@@ -12,15 +12,15 @@ export const UpdateChildren: StoryFn<
   return (
     <>
       <button
-        type="button"
         onClick={() => setFirstCount(current => (current === 1 ? 10000000 : 1))}
+        type="button"
       >
         Change children size
       </button>
 
       <SwitchButton
-        value={value}
         onChange={event => setValue(event.target.value)}
+        value={value}
       >
         <SwitchButton.Option value="1">Button {firstCount}</SwitchButton.Option>
         <SwitchButton.Option value="2">Button</SwitchButton.Option>

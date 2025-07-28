@@ -3,11 +3,11 @@ import { Template } from './Template.stories'
 export const Error = Template.bind({})
 
 Error.args = {
+  error: 'Your input is invalid',
   id: 'number-input',
   label: 'Number Input',
   name: 'number-input',
   onChange: () => {},
-  error: 'Your input is invalid',
 }
 
 Error.parameters = {

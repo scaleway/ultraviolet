@@ -48,9 +48,11 @@ export const TextAreaField = <
     field,
     fieldState: { error },
   } = useController<TFieldValues, TFieldName>({
-    name,
     control,
+    name,
     rules: {
+      maxLength,
+      minLength,
       required,
       validate: {
         ...(regexes
@@ -60,8 +62,6 @@ export const TextAreaField = <
           : {}),
         ...validate,
       },
-      minLength,
-      maxLength,
     },
   })
 
@@ -87,16 +87,16 @@ export const TextAreaField = <
       {...props}
       error={getError(
         {
-          regex: regexes,
-          minLength,
-          maxLength,
           label: label ?? ariaLabel ?? name,
+          maxLength,
+          minLength,
+          regex: regexes,
           value: field.value,
         },
         error,
       )}
-      minLength={minLength}
       maxLength={maxLength}
+      minLength={minLength}
       name={name}
       onBlur={event => {
         onBlur?.(event)

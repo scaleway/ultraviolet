@@ -31,42 +31,42 @@ export const FormContent = () => {
 
   return (
     <Stack gap={6}>
-      <Stack gap={1} direction="row">
-        <Stack gap={1} flex={1}>
+      <Stack direction="row" gap={1}>
+        <Stack flex={1} gap={1}>
           <CapitalizeText
-            variant="bodyStrong"
             as="label"
             htmlFor="sentiment_neutral"
+            variant="bodyStrong"
           >
             Neutral sentiment name
           </CapitalizeText>
           <Tooltip text="Neutral sentiment name cannot be changed as it is essential for the theme to work.">
             <Stack flex={1}>
               <TextInputField
-                name="sentiment_neutral"
-                id="sentiment_neutral"
-                placeholder="neutral"
                 disabled
+                id="sentiment_neutral"
+                name="sentiment_neutral"
+                placeholder="neutral"
                 required
               />
             </Stack>
           </Tooltip>
         </Stack>
-        <Stack gap={1} flex={1}>
+        <Stack flex={1} gap={1}>
           <CapitalizeText
-            variant="bodyStrong"
             as="label"
             htmlFor="sentiment_neutral_value"
+            variant="bodyStrong"
           >
             Neutral sentiment value
           </CapitalizeText>
           <Tooltip text="Neutral sentiment value cannot be changed as it is essential for the theme to work.">
             <Stack flex={1}>
               <TextInputField
-                name="sentiment_neutral_value"
-                id="sentiment_neutral_value"
-                placeholder="#FFFFFF"
                 disabled
+                id="sentiment_neutral_value"
+                name="sentiment_neutral_value"
+                placeholder="#FFFFFF"
                 required
               />
             </Stack>
@@ -84,12 +84,12 @@ export const FormContent = () => {
         console.log({ errors })
 
         return (
-          <Stack gap={1} direction="row" key={field.id}>
-            <Stack gap={1} flex={1}>
+          <Stack direction="row" gap={1} key={field.id}>
+            <Stack flex={1} gap={1}>
               <CapitalizeText
-                variant="bodyStrong"
                 as="label"
                 htmlFor={`sentiments.${index}.key`}
+                variant="bodyStrong"
               >
                 {isRequiredSentiment
                   ? `${field.key} sentiment name`
@@ -106,20 +106,20 @@ export const FormContent = () => {
               >
                 <Stack flex={1}>
                   <TextInputField
-                    name={`sentiments.${index}.key`}
-                    id={`sentiments.${index}.key`}
-                    placeholder="neutral"
                     disabled={isRequiredSentiment}
+                    id={`sentiments.${index}.key`}
+                    name={`sentiments.${index}.key`}
+                    placeholder="neutral"
                     required
                   />
                 </Stack>
               </Tooltip>
             </Stack>
-            <Stack gap={1} flex={1}>
+            <Stack flex={1} gap={1}>
               <CapitalizeText
-                variant="bodyStrong"
                 as="label"
                 htmlFor={`sentiments.${index}.value`}
+                variant="bodyStrong"
               >
                 {isRequiredSentiment
                   ? `${field.key} sentiment value`
@@ -127,27 +127,27 @@ export const FormContent = () => {
                       index - countRequiredSentiments + 1
                     } value`}
               </CapitalizeText>
-              <Stack gap={1} alignItems="center" direction="row">
-                <StyledRow templateColumns="9fr 1fr" gap={1}>
+              <Stack alignItems="center" direction="row" gap={1}>
+                <StyledRow gap={1} templateColumns="9fr 1fr">
                   <TextInputField
-                    name={`sentiments.${index}.value`}
                     id={`sentiments.${index}.value`}
+                    name={`sentiments.${index}.value`}
                     placeholder="#FFFFFF"
                     regex={[hexadecimalColorRegex]}
                   />
                   <TextInputField
-                    name={`sentiments.${index}.value`}
                     id={`sentiments.${index}.value`}
+                    name={`sentiments.${index}.value`}
                     placeholder="#FFFFFF"
                     regex={[hexadecimalColorRegex]}
                   />
                 </StyledRow>
                 {!isRequiredSentiment ? (
                   <Button
-                    variant="filled"
+                    onClick={() => remove(index)}
                     sentiment="neutral"
                     size="large"
-                    onClick={() => remove(index)}
+                    variant="filled"
                   >
                     <CloseIcon />
                   </Button>
@@ -162,23 +162,23 @@ export const FormContent = () => {
           {confirmResetForm ? (
             <Row gap={1} templateColumns="1fr 1fr">
               <Button
-                sentiment="danger"
-                variant="outlined"
                 onClick={() => {
                   setConfirmResetForm(false)
                 }}
+                sentiment="danger"
+                variant="outlined"
               >
                 {' '}
                 <CloseIcon />
                 Cancel
               </Button>
               <Button
-                sentiment="success"
-                variant="outlined"
                 onClick={() => {
                   setConfirmResetForm(false)
                   reset(INITIAL_VALUES)
                 }}
+                sentiment="success"
+                variant="outlined"
               >
                 <CheckIcon />
                 Confirm
@@ -186,11 +186,11 @@ export const FormContent = () => {
             </Row>
           ) : (
             <Button
-              sentiment="danger"
-              variant="outlined"
               onClick={() => {
                 setConfirmResetForm(true)
               }}
+              sentiment="danger"
+              variant="outlined"
             >
               <RestoreIcon />
               Reset

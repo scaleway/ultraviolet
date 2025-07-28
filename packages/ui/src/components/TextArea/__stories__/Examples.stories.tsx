@@ -15,39 +15,39 @@ export const Examples: StoryFn<typeof TextArea> = () => {
     <Stack gap={2}>
       <TextArea
         label="Label"
+        maxLength={200}
         name="example-1"
-        value={value}
         onChange={setValue}
         success="Value has been updated!"
-        maxLength={200}
+        value={value}
       />
       <TextArea
+        error="Value has been updated!"
         label="Label"
         name="example-2"
-        value={value}
         onChange={setValue}
-        error="Value has been updated!"
+        value={value}
       />
       <TextArea
         label="Label"
         labelDescription={<Badge size="small">New</Badge>}
-        required
         name="example-3"
-        value={value}
         onChange={setValue}
+        required
+        value={value}
       />
       <TextArea
+        helper="Helper text"
         label="Label"
         labelDescription={
           <Tooltip text="Tooltip message">
             <AlertCircleOutlineIcon sentiment="neutral" />
           </Tooltip>
         }
-        required
         name="example-4"
-        value={value}
         onChange={setValue}
-        helper="Helper text"
+        required
+        value={value}
       />
     </Stack>
   )

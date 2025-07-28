@@ -19,9 +19,9 @@ import { Text } from '../Text'
 import { Tooltip } from '../Tooltip'
 
 const SIZES = {
-  small: '400', // sizing theme tokens key
-  medium: '500',
   large: '600',
+  medium: '500',
+  small: '400', // sizing theme tokens key
 } as const
 
 type Sizes = keyof typeof SIZES
@@ -343,11 +343,11 @@ export const NumberInput = forwardRef(
     }
 
     return (
-      <Stack gap="0.5" className={className}>
+      <Stack className={className} gap="0.5">
         {label || labelDescription ? (
           <Label
-            labelDescription={labelDescription}
             htmlFor={id ?? localId}
+            labelDescription={labelDescription}
             required={required}
             size={size}
           >
@@ -357,44 +357,57 @@ export const NumberInput = forwardRef(
         <div>
           <Tooltip text={tooltip}>
             <Container
+              data-controls={controls}
               data-disabled={disabled}
-              data-readonly={readOnly}
               data-error={!!error}
+              data-readonly={readOnly}
+              data-size={size}
               data-success={!!success}
               data-unit={!!unit}
-              data-controls={controls}
-              data-size={size}
             >
               {controls ? (
                 <SideContainer
-                  justifyContent="center"
                   alignItems="center"
                   data-size={size}
+                  justifyContent="center"
                 >
                   <Button
-                    sentiment="neutral"
-                    variant="ghost"
-                    size={size === 'small' ? 'xsmall' : 'small'}
+                    aria-label="minus"
                     disabled={disabled || readOnly || isMinusDisabled}
                     onClick={onClickSideButton('down')}
-                    aria-label="minus"
+                    sentiment="neutral"
+                    size={size === 'small' ? 'xsmall' : 'small'}
+                    variant="ghost"
                   >
                     <MinusIcon size={size === 'large' ? 'small' : 'small'} />
                   </Button>
                 </SideContainer>
               ) : null}
               <InputContainer
-                justifyContent="space-between"
                 alignItems="center"
+                justifyContent="space-between"
                 templateColumns="1fr auto"
               >
                 <Input
-                  ref={localRef}
-                  type="number"
-                  name={name}
-                  id={localId}
-                  placeholder={placeholder}
+                  aria-label={ariaLabel}
+                  autoFocus={autoFocus}
+                  data-controls={controls}
+                  data-has-unit={!!unit}
                   data-size={size}
+                  data-testid={dataTestId}
+                  disabled={disabled}
+                  id={localId}
+                  max={max}
+                  min={min}
+                  name={name}
+                  onBlur={event => {
+                    if (value && value > max) {
+                      onChange?.(max)
+                    } else if (value && value < min) {
+                      onChange?.(min)
+                    }
+                    onBlur?.(event)
+                  }}
                   onChange={
                     onChange
                       ? event => {
@@ -405,35 +418,22 @@ export const NumberInput = forwardRef(
                         }
                       : undefined
                   }
-                  value={inputValue}
                   onFocus={onFocus}
-                  onBlur={event => {
-                    if (value && value > max) {
-                      onChange?.(max)
-                    } else if (value && value < min) {
-                      onChange?.(min)
-                    }
-                    onBlur?.(event)
-                  }}
-                  step={step}
-                  disabled={disabled}
-                  aria-label={ariaLabel}
-                  data-testid={dataTestId}
-                  min={min}
-                  max={max}
-                  required={required}
-                  autoFocus={autoFocus}
+                  placeholder={placeholder}
                   readOnly={readOnly}
-                  data-has-unit={!!unit}
-                  data-controls={controls}
+                  ref={localRef}
+                  required={required}
+                  step={step}
+                  type="number"
+                  value={inputValue}
                 />
                 {unit ? (
                   <Unit
-                    variant="body"
-                    sentiment="neutral"
                     as="span"
                     disabled={disabled}
+                    sentiment="neutral"
                     size={size}
+                    variant="body"
                   >
                     {unit}
                   </Unit>
@@ -441,17 +441,17 @@ export const NumberInput = forwardRef(
               </InputContainer>
               {controls ? (
                 <SideContainer
-                  justifyContent="center"
                   alignItems="center"
                   data-size={size}
+                  justifyContent="center"
                 >
                   <Button
-                    sentiment="neutral"
-                    variant="ghost"
-                    size={size === 'small' ? 'xsmall' : 'small'}
+                    aria-label="plus"
                     disabled={disabled || readOnly || isPlusDisabled}
                     onClick={onClickSideButton('up')}
-                    aria-label="plus"
+                    sentiment="neutral"
+                    size={size === 'small' ? 'xsmall' : 'small'}
+                    variant="ghost"
                   >
                     <PlusIcon size={size === 'large' ? 'small' : 'small'} />
                   </Button>
@@ -462,11 +462,11 @@ export const NumberInput = forwardRef(
         </div>
         {error || typeof success === 'string' || typeof helper === 'string' ? (
           <Text
-            variant="caption"
             as="span"
+            disabled={disabled || readOnly}
             prominence={!error && !success ? 'weak' : 'default'}
             sentiment={helperSentiment}
-            disabled={disabled || readOnly}
+            variant="caption"
           >
             {error || success || helper}
           </Text>

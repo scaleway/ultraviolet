@@ -7,10 +7,10 @@ export const Template: StoryFn<ComponentProps<typeof CodeEditor>> = ({
 }) => <CodeEditor {...props} />
 
 Template.args = {
-  label: 'Code Editor',
   extensions: 'javascript',
   height: '300px',
+  helper: 'Example of helper text',
+  label: 'Code Editor',
   readOnly: false,
   value: "console.debug('CodeEditor')",
-  helper: 'Example of helper text',
 }

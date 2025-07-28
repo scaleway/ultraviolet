@@ -55,21 +55,21 @@ export const Tooltip = forwardRef(
     tooltipRef: Ref<HTMLDivElement>,
   ) => (
     <StyledPopup
+      className={className}
+      containerFullHeight={containerFullHeight}
+      containerFullWidth={containerFullWidth}
+      data-testid={dataTestId}
+      debounceDelay={debounceDelay}
       id={id}
+      innerRef={innerRef}
+      maxWidth={maxWidth}
+      placement={placement}
+      portalTarget={portalTarget}
       ref={tooltipRef}
       role={role}
-      data-testid={dataTestId}
-      className={className}
-      containerFullWidth={containerFullWidth}
-      containerFullHeight={containerFullHeight}
-      maxWidth={maxWidth}
-      visible={visible}
-      placement={placement}
-      text={text}
-      innerRef={innerRef}
-      portalTarget={portalTarget}
       tabIndex={tabIndex}
-      debounceDelay={debounceDelay}
+      text={text}
+      visible={visible}
     >
       {children}
     </StyledPopup>

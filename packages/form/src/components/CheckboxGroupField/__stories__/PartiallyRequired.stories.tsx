@@ -11,8 +11,8 @@ const PartiallyRequiredStory = (
     <CheckboxGroupField {...args}>
       <CheckboxGroupField.Checkbox
         name="termsAndConditions"
-        value="termsAndConditions"
         required
+        value="termsAndConditions"
       >
         Accept terms and conditions
       </CheckboxGroupField.Checkbox>
@@ -41,6 +41,6 @@ PartiallyRequired.parameters = {
 }
 
 PartiallyRequired.args = {
-  name: 'conditions',
   legend: 'Conditions',
+  name: 'conditions',
 }

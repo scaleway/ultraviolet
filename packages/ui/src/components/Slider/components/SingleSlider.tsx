@@ -124,8 +124,8 @@ export const SingleSlider = ({
   const ticks = useMemo(() => {
     if (options) {
       return options.map((element, index) => ({
-        value: index,
         label: element.label,
+        value: index,
       }))
     }
 
@@ -189,30 +189,30 @@ export const SingleSlider = ({
   const styledValue = (valueNumber: string | number | null) =>
     input && !options ? (
       <StyledNumberInput
-        value={inputValue}
-        size="small"
-        min={min}
         aria-label="input"
-        max={max}
-        step={step}
         controls={false}
-        disabled={disabled}
         data-testid={dataTestId ? `${dataTestId}-input` : 'slider-input'}
-        unit={typeof suffix === 'string' ? suffix : unit}
-        onChange={setInputValue}
+        disabled={disabled}
+        max={max}
+        min={min}
         onBlur={event => {
           internalOnChange(Number.parseFloat(event.target.value))
         }}
+        onChange={setInputValue}
+        size="small"
+        step={step}
+        unit={typeof suffix === 'string' ? suffix : unit}
+        value={inputValue}
       />
     ) : (
       <StyledTextValue
         as="span"
-        variant="bodySmall"
-        sentiment="neutral"
-        placement={direction === 'column' ? 'right' : 'center'}
+        data-testid={dataTestId ? `${dataTestId}-value` : 'slider-value'}
         double={false}
         isColumn={direction === 'column'}
-        data-testid={dataTestId ? `${dataTestId}-value` : 'slider-value'}
+        placement={direction === 'column' ? 'right' : 'center'}
+        sentiment="neutral"
+        variant="bodySmall"
       >
         {prefix}
         {valueNumber}
@@ -239,12 +239,12 @@ export const SingleSlider = ({
   const valueToShow = options ? options[selectedIndex]?.value : selectedIndex
 
   return (
-    <Stack gap={1} direction={direction} justifyContent="left">
+    <Stack direction={direction} gap={1} justifyContent="left">
       {label ? (
         <Stack
-          justifyContent="space-between"
-          direction="row"
           alignItems="center"
+          direction="row"
+          justifyContent="space-between"
         >
           <Label htmlFor={finalId} required={required}>
             {label}
@@ -256,47 +256,47 @@ export const SingleSlider = ({
       <Stack direction="row" justifyContent="end">
         {direction === 'column' && !label ? styledValue(valueToShow) : null}
       </Stack>
-      <Stack direction="column" width="100%" gap={1} justifyContent="center">
+      <Stack direction="column" gap={1} justifyContent="center" width="100%">
         <StyledTooltip
-          text={tooltipText}
-          placement={tooltipPosition}
           left={placementTooltip}
+          placement={tooltipPosition}
+          text={tooltipText}
         >
           <SliderElement
-            type="range"
-            value={selectedIndex}
+            aria-disabled={disabled}
+            aria-label={ariaLabel ?? name}
+            className={className}
+            data-direction={direction}
+            data-error={!!error}
+            data-testid={dataTestId}
+            disabled={!!disabled}
+            id={finalId}
+            left={leftPosition}
+            max={max}
+            min={min}
+            name={name}
+            onBlur={onBlur}
             onChange={event => {
               internalOnChange(Number.parseFloat(event.target.value))
             }}
-            min={min}
-            max={max}
-            tabIndex={0}
-            step={step}
-            name={name}
-            disabled={!!disabled}
-            aria-disabled={disabled}
-            data-testid={dataTestId}
-            id={finalId}
-            onBlur={onBlur}
             onFocus={onFocus}
-            aria-label={ariaLabel ?? name}
-            className={className}
-            style={getBackgroundSize}
-            data-error={!!error}
-            data-direction={direction}
-            themeSlider={theme}
             ref={refSlider}
-            left={leftPosition}
+            step={step}
+            style={getBackgroundSize}
+            tabIndex={0}
+            themeSlider={theme}
+            type="range"
+            value={selectedIndex}
           />
         </StyledTooltip>
         {options ? (
           <Options
-            ticks={ticks}
-            min={min}
             max={max}
+            min={min}
             sliderWidth={sliderWidth}
-            value={selectedIndex}
             step={step}
+            ticks={ticks}
+            value={selectedIndex}
           />
         ) : null}
       </Stack>

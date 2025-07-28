@@ -30,7 +30,7 @@ export const Strong = memo(
     children = null,
     isDisabledOnOverlay = false,
   }: StrongProps) => (
-    <StyledStrong variant={variant} isDisabledOnOverlay={isDisabledOnOverlay}>
+    <StyledStrong isDisabledOnOverlay={isDisabledOnOverlay} variant={variant}>
       {children}
     </StyledStrong>
   ),

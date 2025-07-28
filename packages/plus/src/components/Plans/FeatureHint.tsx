@@ -22,30 +22,30 @@ export const FeatureHint = ({ hint }: FeatureHintProps) => {
   if (hint.type === 'tooltip') {
     return (
       <Tooltip text={hint.text}>
-        <InformationOutlineIcon sentiment="neutral" prominence="weak" />
+        <InformationOutlineIcon prominence="weak" sentiment="neutral" />
       </Tooltip>
     )
   }
 
   return (
     <Popover
-      title={hint.title}
       content={hint.content}
-      visible={visible}
       onClose={() => setVisible(false)}
+      title={hint.title}
+      visible={visible}
     >
       <IconWrapper
-        role="button"
+        data-testid="hint-popover"
+        onClick={() => setVisible(true)}
         onKeyDown={event => {
           if (event.key === 'Space' || event.key === 'Enter') {
             setVisible(true)
           }
         }}
-        onClick={() => setVisible(true)}
+        role="button"
         tabIndex={0}
-        data-testid="hint-popover"
       >
-        <InformationOutlineIcon sentiment="neutral" prominence="weak" />
+        <InformationOutlineIcon prominence="weak" sentiment="neutral" />
       </IconWrapper>
     </Popover>
   )

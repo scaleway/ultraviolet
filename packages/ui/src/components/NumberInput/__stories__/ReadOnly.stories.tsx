@@ -3,11 +3,11 @@ import { Template } from './Template.stories'
 export const ReadOnly = Template.bind({})
 
 ReadOnly.args = {
-  readOnly: true,
   id: 'number-input',
   label: 'Number Input',
   name: 'number-input',
   onChange: () => {},
+  readOnly: true,
   value: 50,
 }
 

@@ -13,29 +13,29 @@ export const GmailLogo = ({ ...props }: Omit<IconProps, 'children'>) => (
   <Icon {...props}>
     <g clipPath="url(#a)">
       <path
-        fill="#4285F4"
         d="M3.09 16h2.546V9.818L2 7.091v7.818c0 .604.49 1.09 1.09 1.09"
+        fill="#4285F4"
       />
       <path
-        fill="#34A853"
         d="M14.364 16h2.545c.604 0 1.09-.49 1.09-1.091V7.091l-3.635 2.727"
+        fill="#34A853"
       />
       <path
-        fill="#FBBC04"
         d="M14.364 5.09v4.728L18 7.091V5.636c0-1.349-1.54-2.118-2.618-1.309"
+        fill="#FBBC04"
       />
       <path
-        fill="#EA4335"
         d="M5.636 9.818V5.091L10 8.364l4.364-3.273v4.727L10 13.091"
+        fill="#EA4335"
       />
       <path
-        fill="#C5221F"
         d="M2 5.636v1.455l3.636 2.727V5.091l-1.018-.764C3.538 3.518 2 4.287 2 5.637"
+        fill="#C5221F"
       />
     </g>
     <defs>
       <clipPath id="a">
-        <path fill="#fff" d="M2 4h16v12H2z" />
+        <path d="M2 4h16v12H2z" fill="#fff" />
       </clipPath>
     </defs>
   </Icon>

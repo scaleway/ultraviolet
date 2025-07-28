@@ -117,7 +117,7 @@ export const Tabs = ({
     ) as HTMLElement
 
     if (tab && tabsRef.current.scrollTo) {
-      tabsRef.current.scrollTo({ left: tab.offsetLeft, behavior: 'smooth' })
+      tabsRef.current.scrollTo({ behavior: 'smooth', left: tab.offsetLeft })
     }
   }, [selected])
 
@@ -158,15 +158,15 @@ export const Tabs = ({
   return (
     <TabsContext.Provider value={value}>
       <TabsContainer
-        ref={tabsRef}
-        role="tablist"
         className={className}
         data-testid={dataTestId}
+        ref={tabsRef}
+        role="tablist"
         {...props}
       >
         {children}
         {displayMore ? (
-          <StyledTabMenu ref={moreStaticRef} disclosure={moreDisclosure}>
+          <StyledTabMenu disclosure={moreDisclosure} ref={moreStaticRef}>
             <MenuContainer>{menuItemChildren}</MenuContainer>
           </StyledTabMenu>
         ) : null}

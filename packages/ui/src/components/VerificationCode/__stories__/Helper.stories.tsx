@@ -2,8 +2,8 @@ import { Template } from './Template.stories'
 
 export const Helper = Template.bind({})
 Helper.args = {
-  label: 'Verification code',
   helper: 'Code sent to your email',
+  label: 'Verification code',
 }
 
 Helper.parameters = {

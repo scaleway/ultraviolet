@@ -7,22 +7,22 @@ export const Double: StoryFn<typeof Slider> = () => {
 
   return (
     <Slider
-      name="slider"
-      onChange={setValue}
       data-testid="slider"
-      value={value}
       double
       input
+      name="slider"
+      onChange={setValue}
+      value={value}
     />
   )
 }
 
 Double.args = {
-  value: [1, 2],
-  step: 0.5,
   double: true,
   input: true,
   label: 'Label',
+  step: 0.5,
+  value: [1, 2],
 }
 
 Double.parameters = {

@@ -7,14 +7,14 @@ import { RadioField } from '..'
 describe('RadioField', () => {
   test('should render correctly', () => {
     const { asFragment } = renderWithForm(
-      <RadioField name="test" value="test" label="Radio field" />,
+      <RadioField label="Radio field" name="test" value="test" />,
     )
     expect(asFragment()).toMatchSnapshot()
   })
 
   test('should render correctly with aria-label', () => {
     const { asFragment } = renderWithForm(
-      <RadioField name="test" value="test" aria-label="Radio field" />,
+      <RadioField aria-label="Radio field" name="test" value="test" />,
     )
     expect(asFragment()).toMatchSnapshot()
   })
@@ -22,10 +22,10 @@ describe('RadioField', () => {
   test('should render correctly disabled', () => {
     const { asFragment } = renderWithForm(
       <RadioField
-        name="test"
-        value="disabled"
         disabled
         label="Radio field disabled"
+        name="test"
+        value="disabled"
       />,
     )
     const input = screen.getByRole('radio', { hidden: true })
@@ -35,7 +35,7 @@ describe('RadioField', () => {
 
   test('should render correctly checked', () => {
     const { asFragment } = renderWithForm(
-      <RadioField name="test" value="checked" label="Radio field checked" />,
+      <RadioField label="Radio field checked" name="test" value="checked" />,
       { defaultValues: { test: 'checked' } },
     )
     const input = screen.getByRole('radio', { hidden: true })
@@ -50,12 +50,12 @@ describe('RadioField', () => {
 
     const { asFragment } = renderWithForm(
       <RadioField
+        label="Radio field events"
         name="test"
-        value="events"
+        onBlur={onBlur}
         onChange={onChange}
         onFocus={onFocus}
-        onBlur={onBlur}
-        label="Radio field events"
+        value="events"
       />,
     )
     const input = screen.getByRole('radio', { hidden: true })

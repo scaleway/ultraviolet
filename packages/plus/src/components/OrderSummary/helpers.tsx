@@ -17,9 +17,9 @@ export const formatNumber = (
   fractionDigits = 10,
 ) => {
   const numberFormat = new Intl.NumberFormat(locale, {
-    style: 'currency',
     currency,
     maximumFractionDigits: fractionDigits,
+    style: 'currency',
   })
 
   return numberFormat.format(number)
@@ -70,36 +70,36 @@ export const calculateSubCategoryPrice = (
   if (Array.isArray(subCategory.amount)) {
     const minPrice =
       calculatePrice({
-        price: subCategory.price ?? 0,
         amount: subCategory.amount?.[0] ?? 1,
         amountFree: subCategory.amountFree,
-        timeUnit: hideTimeUnit ? 'hours' : timePeriodUnit,
-        timeAmount: hideTimeUnit ? 1 : timePeriodAmount,
         discount: subCategory.discount,
         fixedPrice: subCategory.fixedPrice,
+        price: subCategory.price ?? 0,
+        timeAmount: hideTimeUnit ? 1 : timePeriodAmount,
+        timeUnit: hideTimeUnit ? 'hours' : timePeriodUnit,
       }) || 0
     const maxPrice =
       calculatePrice({
-        price: subCategory.price ?? 0,
         amount: subCategory.amount?.[1] ?? 1,
         amountFree: subCategory.amountFree,
-        timeUnit: hideTimeUnit ? 'hours' : timePeriodUnit,
-        timeAmount: hideTimeUnit ? 1 : timePeriodAmount,
         discount: subCategory.discount,
         fixedPrice: subCategory.fixedPrice,
+        price: subCategory.price ?? 0,
+        timeAmount: hideTimeUnit ? 1 : timePeriodAmount,
+        timeUnit: hideTimeUnit ? 'hours' : timePeriodUnit,
       }) || 0
 
     return [minPrice, maxPrice]
   }
   const price =
     calculatePrice({
-      price: subCategory.price ?? 0,
       amount: subCategory.amount ?? 1,
       amountFree: subCategory.amountFree,
-      timeUnit: hideTimeUnit ? 'hours' : timePeriodUnit,
-      timeAmount: hideTimeUnit ? 1 : timePeriodAmount,
       discount: subCategory.discount,
       fixedPrice: subCategory.fixedPrice,
+      price: subCategory.price ?? 0,
+      timeAmount: hideTimeUnit ? 1 : timePeriodAmount,
+      timeUnit: hideTimeUnit ? 'hours' : timePeriodUnit,
     }) || 0
 
   return [price, price]

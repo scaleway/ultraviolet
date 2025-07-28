@@ -174,7 +174,7 @@ export const BarStack = ({
   )
 
   return (
-    <StyledContainer data-testid={dataTestId} className={className}>
+    <StyledContainer className={className} data-testid={dataTestId}>
       {data.map(
         ({
           id,
@@ -189,30 +189,30 @@ export const BarStack = ({
           tooltip,
         }) => (
           <StyledBarWrapper
-            style={{ width: `${(value / computedTotal) * 100}%` }}
             key={id}
+            style={{ width: `${(value / computedTotal) * 100}%` }}
           >
             {tooltip ? (
               <Tooltip id={`tooltip-${id}`} text={tooltip}>
                 <StyledBar
-                  onMouseDown={onMouseDown}
-                  onMouseUp={onMouseUp}
                   onClick={onClick}
                   onDoubleClick={onDoubleClick}
+                  onMouseDown={onMouseDown}
                   onMouseEnter={onMouseEnter}
                   onMouseLeave={onMouseLeave}
+                  onMouseUp={onMouseUp}
                 >
                   {text}
                 </StyledBar>
               </Tooltip>
             ) : (
               <StyledBar
-                onMouseDown={onMouseDown}
-                onMouseUp={onMouseUp}
                 onClick={onClick}
                 onDoubleClick={onDoubleClick}
+                onMouseDown={onMouseDown}
                 onMouseEnter={onMouseEnter}
                 onMouseLeave={onMouseLeave}
+                onMouseUp={onMouseUp}
               >
                 {text}
               </StyledBar>

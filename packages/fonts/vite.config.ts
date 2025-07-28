@@ -6,8 +6,8 @@ export default defineConfig({
     rollupOptions: {
       input: path.resolve(__dirname, 'src/fonts.css'),
       output: {
-        dir: path.resolve(__dirname, 'dist'),
         assetFileNames: '[name][extname]',
+        dir: path.resolve(__dirname, 'dist'),
       },
     },
   },

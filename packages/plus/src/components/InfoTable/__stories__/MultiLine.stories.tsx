@@ -11,7 +11,7 @@ export const MultiLine: StoryFn<ComponentProps<typeof InfoTable>> = props => (
         cell cell cell cell cell cell cell cell cell cell cell cell cell cell
         cell cell
       </InfoTable.Cell>
-      <InfoTable.Cell title="with multiLine" multiline>
+      <InfoTable.Cell multiline title="with multiLine">
         cell cell cell cell cell cell cell cell cell cell cell cell cell cell
         cell cell cell cell cell cell cell cell cell cell cell cell cell cell
         cell cell cell cell cell cell cell cell cell cell cell cell cell cell

@@ -201,37 +201,37 @@ export const SelectInput = <IsMulti extends undefined | boolean>({
 
   return (
     <SelectInputProvider
-      options={options}
       multiselect={multiselect}
-      selectAll={selectAll}
-      value={value}
-      selectAllGroup={selectAllGroup}
       numberOfOptions={numberOfOptions}
       onChange={onChange}
-      refSelect={ref}
       onOpen={onOpen}
+      options={options}
+      refSelect={ref}
+      selectAll={selectAll}
+      selectAllGroup={selectAllGroup}
+      value={value}
     >
       <SelectInputContainer
+        aria-label={name}
+        className={className}
         onBlur={onBlur}
         onFocus={onFocus}
-        className={className}
-        aria-label={name}
       >
         <Dropdown
-          emptyState={emptyState}
           descriptionDirection={descriptionDirection}
-          searchable={searchable}
-          placeholder={placeholderSearch}
+          dropdownAlign={dropdownAlign}
+          emptyState={emptyState}
           footer={footer}
-          refSelect={ref}
+          isLoading={isLoading}
           loadMore={loadMore}
           optionalInfoPlacement={optionalInfoPlacement}
-          isLoading={isLoading}
-          size={size}
-          dropdownAlign={dropdownAlign}
+          placeholder={placeholderSearch}
           portalTarget={portalTarget}
+          refSelect={ref}
+          searchable={searchable}
+          size={size}
         >
-          <Stack gap={0.5} aria-label={ariaLabel}>
+          <Stack aria-label={ariaLabel} gap={0.5}>
             {label || labelDescription ? (
               <Label
                 htmlFor={finalId}
@@ -243,38 +243,38 @@ export const SelectInput = <IsMulti extends undefined | boolean>({
               </Label>
             ) : null}
             <SelectBar
-              size={size}
-              data-testid={finalDataTestId}
-              clearable={clearable}
-              readOnly={readOnly}
-              disabled={disabled}
-              placeholder={placeholder}
-              success={success}
-              error={error}
               autoFocus={autofocus}
-              innerRef={ref}
+              clearable={clearable}
+              data-testid={finalDataTestId}
+              disabled={disabled}
+              error={error}
               id={finalId}
+              innerRef={ref}
               label={label}
+              placeholder={placeholder}
+              readOnly={readOnly}
+              size={size}
+              success={success}
               tooltip={tooltip}
             />
           </Stack>
         </Dropdown>
         {!error && !success && helper ? (
           <HelperText
-            variant="caption"
             as="p"
-            sentiment="neutral"
             prominence="weak"
+            sentiment="neutral"
+            variant="caption"
           >
             {helper}
           </HelperText>
         ) : null}
         {(error && typeof error === 'string') || success ? (
           <HelperText
-            variant="caption"
             as="p"
-            sentiment={error ? 'danger' : 'success'}
             prominence="default"
+            sentiment={error ? 'danger' : 'success'}
+            variant="caption"
           >
             {error || success}
           </HelperText>

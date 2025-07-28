@@ -9,12 +9,12 @@ export const Checked: StoryFn<{ errors: FormErrors }> = ({ errors }) => {
   const methods = useForm({ defaultValues: { foo: 'bar' } })
 
   return (
-    <Form onSubmit={() => {}} errors={errors} methods={methods}>
+    <Form errors={errors} methods={methods} onSubmit={() => {}}>
       <Stack gap={2}>
-        <SelectableCardField name="foo" value="bar" label="Radio Left">
+        <SelectableCardField label="Radio Left" name="foo" value="bar">
           Radio left
         </SelectableCardField>
-        <SelectableCardField name="foo" value="barbar" label="Radio Right">
+        <SelectableCardField label="Radio Right" name="foo" value="barbar">
           Radio right
         </SelectableCardField>
       </Stack>

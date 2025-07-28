@@ -19,24 +19,24 @@ export const Template: StoryFn<
 
   const illustrationImage =
     theme.theme === 'light' ? (
-      <StyledImage src={blockStorageWire} width={200} alt="blockStorage" />
+      <StyledImage alt="blockStorage" src={blockStorageWire} width={200} />
     ) : (
-      <img src={blockStorageWire} width={200} alt="blockStorage" />
+      <img alt="blockStorage" src={blockStorageWire} width={200} />
     )
 
   return (
     <SteppedListCard {...props}>
       <SteppedListCard.Step
+        image={illustrationImage}
         stepNumber={1}
         subHeader={
-          <Text as="h3" variant="headingSmallStrong" sentiment="primary">
+          <Text as="h3" sentiment="primary" variant="headingSmallStrong">
             Welcome aboard!
           </Text>
         }
-        image={illustrationImage}
       >
         {nextStep => (
-          <Stack gap={2} direction="column">
+          <Stack direction="column" gap={2}>
             <Snippet {...props}>
               pnpm add @ultraviolet/ui; pnpm install; pnpm start; pnpm build;
               pnpm test:unit; pnpm test:visual; pnpm build:storybook;
@@ -58,14 +58,14 @@ export const Template: StoryFn<
         )}
       </SteppedListCard.Step>
       <SteppedListCard.Step
+        image={illustrationImage}
         stepNumber={2}
         subHeader="Second step"
-        image={illustrationImage}
       >
         {nextStep => (
-          <Stack gap={2} direction="column">
+          <Stack direction="column" gap={2}>
             Second step description
-            <Stack gap={2} direction="row">
+            <Stack direction="row" gap={2}>
               <Button onClick={() => nextStep(false)} variant="outlined">
                 Skip
               </Button>
@@ -75,14 +75,14 @@ export const Template: StoryFn<
         )}
       </SteppedListCard.Step>
       <SteppedListCard.Step
+        image={illustrationImage}
         stepNumber={3}
         subHeader="Last step"
-        image={illustrationImage}
       >
         {nextStep => (
           <Stack gap={2}>
             Second step description
-            <Stack gap={2} direction="row">
+            <Stack direction="row" gap={2}>
               <Button onClick={() => nextStep(true)}>Validate and close</Button>
             </Stack>
           </Stack>
@@ -94,8 +94,8 @@ export const Template: StoryFn<
 
 Template.args = {
   header: 'Header',
-  hideTooltipText: 'To hide the content, click on the "hide" button',
   hideText: 'Hide',
+  hideTooltipText: 'To hide the content, click on the "hide" button',
   showText: 'Show',
   showTooltipText: 'To show, click on this button',
   steps: ['Start', 'First step', 'Second step'],

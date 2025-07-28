@@ -92,25 +92,25 @@ export const Item = ({
   minWidth,
 }: ItemProps) => (
   <ItemContainer
-    aria-disabled={disabled}
-    onClick={onClick}
     aria-current={ariaCurrent}
+    aria-disabled={disabled}
     className={className}
     maxWidth={maxWidth}
     minWidth={minWidth}
+    onClick={onClick}
   >
     {to ? (
-      <StyledLink prominence="stronger" href={to} size="small">
+      <StyledLink href={to} prominence="stronger" size="small">
         {children}
       </StyledLink>
     ) : (
       <StyledButton
-        variant="ghost"
-        sentiment="neutral"
         disabled={disabled}
-        size="small"
         maxWidth={maxWidth}
         minWidth={minWidth}
+        sentiment="neutral"
+        size="small"
+        variant="ghost"
       >
         {children}
       </StyledButton>

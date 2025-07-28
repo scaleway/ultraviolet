@@ -7,13 +7,13 @@ import { TextArea } from '..'
 describe('TextArea', () => {
   test('should render correctly with basic props', () =>
     shouldMatchEmotionSnapshot(
-      <TextArea label="Test" value="test" onChange={() => {}} />,
+      <TextArea label="Test" onChange={() => {}} value="test" />,
     ))
 
   test('should control the value', () => {
     const onChange = vi.fn()
 
-    renderWithTheme(<TextArea label="Test" value="test" onChange={onChange} />)
+    renderWithTheme(<TextArea label="Test" onChange={onChange} value="test" />)
 
     const textarea = screen.getByLabelText<HTMLTextAreaElement>('Test')
     expect(textarea.value).toBe('test')
@@ -26,7 +26,7 @@ describe('TextArea', () => {
     const onChange = vi.fn()
 
     renderWithTheme(
-      <TextArea label="Test" value="test" onChange={onChange} clearable />,
+      <TextArea clearable label="Test" onChange={onChange} value="test" />,
     )
 
     const textarea = screen.getByLabelText<HTMLTextAreaElement>('Test')
@@ -38,74 +38,74 @@ describe('TextArea', () => {
 
   test('should render correctly when input is disabled', () =>
     shouldMatchEmotionSnapshot(
-      <TextArea label="Test" value="test" onChange={() => {}} disabled />,
+      <TextArea disabled label="Test" onChange={() => {}} value="test" />,
     ))
 
   test('should render correctly when input is readOnly', () =>
     shouldMatchEmotionSnapshot(
-      <TextArea label="Test" value="test" onChange={() => {}} readOnly />,
+      <TextArea label="Test" onChange={() => {}} readOnly value="test" />,
     ))
 
   test('should render correctly when it is required', () =>
     shouldMatchEmotionSnapshot(
-      <TextArea label="Test" value="test" onChange={() => {}} required />,
+      <TextArea label="Test" onChange={() => {}} required value="test" />,
     ))
 
   test('should render correctly with maxlength', () =>
     shouldMatchEmotionSnapshot(
-      <TextArea label="Test" value="test" onChange={() => {}} maxLength={3} />,
+      <TextArea label="Test" maxLength={3} onChange={() => {}} value="test" />,
     ))
 
   test('should render correctly when input has a success sentiment', () =>
     shouldMatchEmotionSnapshot(
       <TextArea
         label="Test"
-        value="test"
         onChange={() => {}}
         success="success"
+        value="test"
       />,
     ))
 
   test('should render correctly when input  has a error sentiment', () =>
     shouldMatchEmotionSnapshot(
       <TextArea
-        label="Test"
-        value="test"
-        onChange={() => {}}
         error="success"
+        label="Test"
+        onChange={() => {}}
+        value="test"
       />,
     ))
 
   test('should render with auto rows', () =>
     shouldMatchEmotionSnapshot(
       <TextArea
-        label="Test"
-        value="test"
-        onChange={() => {}}
         error="success"
+        label="Test"
+        onChange={() => {}}
         rows="auto"
+        value="test"
       />,
     ))
 
   test('should render with AutoExpandMax', () =>
     shouldMatchEmotionSnapshot(
       <TextArea
-        label="Test"
-        value="test"
-        onChange={() => {}}
         error="success"
+        label="Test"
         maxRows={3}
+        onChange={() => {}}
+        value="test"
       />,
     ))
   test('should render with AutoExpandMax and rows', () =>
     shouldMatchEmotionSnapshot(
       <TextArea
-        label="Test"
-        value="test"
-        onChange={() => {}}
         error="success"
-        rows={2}
+        label="Test"
         maxRows={3}
+        onChange={() => {}}
+        rows={2}
+        value="test"
       />,
     ))
 
@@ -116,9 +116,9 @@ describe('TextArea', () => {
     renderWithTheme(
       <TextArea
         label="Test"
-        value="test"
         onChange={onChange}
         success={successMessage}
+        value="test"
       />,
     )
 
@@ -132,9 +132,9 @@ describe('TextArea', () => {
     renderWithTheme(
       <TextArea
         label="Test"
-        value="test"
         onChange={onChange}
         success={errorMessage}
+        value="test"
       />,
     )
 
@@ -147,10 +147,10 @@ describe('TextArea', () => {
 
     renderWithTheme(
       <TextArea
-        label="Test"
-        value="test"
-        onChange={onChange}
         helper={helperMessage}
+        label="Test"
+        onChange={onChange}
+        value="test"
       />,
     )
 
@@ -164,11 +164,11 @@ describe('TextArea', () => {
 
     renderWithTheme(
       <TextArea
+        helper={helperMessage}
         label="Test"
-        value="test"
         onChange={onChange}
         success={successMessage}
-        helper={helperMessage}
+        value="test"
       />,
     )
 
@@ -183,11 +183,11 @@ describe('TextArea', () => {
 
     renderWithTheme(
       <TextArea
-        label="Test"
-        value="test"
-        onChange={onChange}
         error={error}
         helper={helperMessage}
+        label="Test"
+        onChange={onChange}
+        value="test"
       />,
     )
 

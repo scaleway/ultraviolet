@@ -26,11 +26,11 @@ describe('Double slider', () => {
   test('renders correctly direction row double', () => {
     shouldMatchEmotionSnapshot(
       <Slider
-        value={[1, 14]}
-        name="Name"
-        label="Label"
         direction="row"
         double
+        label="Label"
+        name="Name"
+        value={[1, 14]}
       />,
     )
   })
@@ -38,51 +38,51 @@ describe('Double slider', () => {
   test('renders correctly with value empty', () => {
     shouldMatchEmotionSnapshot(
       /* @ts-expect-error testing purpose */
-      <Slider name="Name" label="Label" double />,
+      <Slider double label="Label" name="Name" />,
     )
   })
 
   test('renders correctly with value empty array and no min max', () => {
     shouldMatchEmotionSnapshot(
-      <Slider value={[]} name="Name" label="Label" double />,
+      <Slider double label="Label" name="Name" value={[]} />,
     )
   })
 
   test('renders correctly with value empty array with min max', () => {
     shouldMatchEmotionSnapshot(
-      <Slider value={[]} name="Name" label="Label" double min={0} max={10} />,
+      <Slider double label="Label" max={10} min={0} name="Name" value={[]} />,
     )
   })
 
   test('renders correctly direction row double with input', () => {
     shouldMatchEmotionSnapshot(
       <Slider
-        value={[1, 14]}
-        name="Name"
-        label="Label"
         direction="row"
         double
         input
+        label="Label"
+        name="Name"
+        value={[1, 14]}
       />,
     )
   })
 
   test('renders correctly double ', () => {
     shouldMatchEmotionSnapshot(
-      <Slider value={[12, 14]} name="Name" label="Label" double />,
+      <Slider double label="Label" name="Name" value={[12, 14]} />,
     )
   })
 
   test('renders correctly double with value outside of min-max', () => {
     const { asFragment } = renderWithTheme(
       <Slider
-        value={[-140, 140]}
-        name="Name"
-        label="Label"
-        min={10}
-        max={50}
         data-testid="slider"
         double
+        label="Label"
+        max={50}
+        min={10}
+        name="Name"
+        value={[-140, 140]}
       />,
     )
     expect(asFragment()).toMatchSnapshot()
@@ -94,59 +94,59 @@ describe('Double slider', () => {
 
   test('renders correctly double disabled', () => {
     shouldMatchEmotionSnapshot(
-      <Slider value={[12, 14]} name="Name" label="Label" disabled double />,
+      <Slider disabled double label="Label" name="Name" value={[12, 14]} />,
     )
   })
 
   test('renders correctly double input', () => {
     shouldMatchEmotionSnapshot(
-      <Slider value={[12, 14]} name="Name" label="Label" input double />,
+      <Slider double input label="Label" name="Name" value={[12, 14]} />,
     )
   })
 
   test('renders correctly double custom tooltip', () => {
     shouldMatchEmotionSnapshot(
       <Slider
-        value={[12, 14]}
-        name="Name"
-        label="Label"
-        tooltip={['tooltip', 'tooltip2']}
         double
+        label="Label"
+        name="Name"
+        tooltip={['tooltip', 'tooltip2']}
+        value={[12, 14]}
       />,
     )
   })
 
   test('renders correctly double default toolipt ', () => {
     shouldMatchEmotionSnapshot(
-      <Slider value={[12, 14]} name="Name" label="Label" tooltip double />,
+      <Slider double label="Label" name="Name" tooltip value={[12, 14]} />,
     )
   })
   test('renders correctly double with single tooltip', () => {
     shouldMatchEmotionSnapshot(
       <Slider
-        value={[12, 14]}
-        name="Name"
-        label="Label"
-        tooltip="tooltip"
         double
+        label="Label"
+        name="Name"
+        tooltip="tooltip"
+        value={[12, 14]}
       />,
     )
   })
 
   test('renders correctly double with default ticks', () => {
     shouldMatchEmotionSnapshot(
-      <Slider value={[12, 14]} name="Name" label="Label" double unit="%" />,
+      <Slider double label="Label" name="Name" unit="%" value={[12, 14]} />,
     )
   })
 
   test('renders correctly double with custom ticks', () => {
     shouldMatchEmotionSnapshot(
       <Slider
-        value={[0, 3]}
-        name="Name"
-        label="Label"
-        options={options}
         double
+        label="Label"
+        name="Name"
+        options={options}
+        value={[0, 3]}
       />,
     )
   })
@@ -154,11 +154,11 @@ describe('Double slider', () => {
   test('renders correctly double with custom scale', () => {
     shouldMatchEmotionSnapshot(
       <Slider
-        value={[0, 3]}
-        name="Name"
-        label="Label"
-        options={options}
         double
+        label="Label"
+        name="Name"
+        options={options}
+        value={[0, 3]}
       />,
     )
   })
@@ -166,19 +166,19 @@ describe('Double slider', () => {
   test('renders correctly double min max', () => {
     shouldMatchEmotionSnapshot(
       <Slider
-        value={[1, 4]}
-        name="Name"
-        label="Label"
-        min={1}
-        max={10}
         double
+        label="Label"
+        max={10}
+        min={1}
+        name="Name"
+        value={[1, 4]}
       />,
     )
   })
 
   test('renders correctly double step', () => {
     shouldMatchEmotionSnapshot(
-      <Slider value={[12, 14]} name="Name" label="Label" step={0.5} double />,
+      <Slider double label="Label" name="Name" step={0.5} value={[12, 14]} />,
     )
   })
 
@@ -187,12 +187,12 @@ describe('Double slider', () => {
 
     const { asFragment } = renderWithTheme(
       <Slider
-        name="slider"
-        onChange={onChange}
         data-testid="slider"
-        value={[1, 2]}
         double
         input
+        name="slider"
+        onChange={onChange}
+        value={[1, 2]}
       />,
     )
     const sliderRight = screen.getByTestId<HTMLInputElement>('slider-right')
@@ -224,14 +224,14 @@ describe('Double slider', () => {
 
     const { asFragment } = renderWithTheme(
       <Slider
-        name="slider"
-        onChange={onChange}
         data-testid="slider"
-        value={[3, 5]}
+        double
         input
         max={10}
         min={2}
-        double
+        name="slider"
+        onChange={onChange}
+        value={[3, 5]}
       />,
     )
     const sliderRight = screen.getByTestId<HTMLInputElement>('slider-right')
@@ -261,13 +261,13 @@ describe('Double slider', () => {
 
     const { asFragment } = renderWithTheme(
       <Slider
+        data-testid="slider"
+        double
         name="slider"
         onChange={onChange}
-        data-testid="slider"
-        value={[1, 3]}
-        double
-        unit="Mb"
         options={options}
+        unit="Mb"
+        value={[1, 3]}
       />,
     )
     const sliderRight = screen.getByTestId<HTMLInputElement>('slider-right')

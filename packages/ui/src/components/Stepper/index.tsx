@@ -8,8 +8,8 @@ import { Step } from './Step'
 import { StepperProvider } from './StepperProvider'
 
 const LINE_HEIGHT_SIZES = {
-  small: 2,
   medium: 4,
+  small: 2,
 } as const
 
 type Temporal = 'done' | 'current' | 'next'
@@ -114,19 +114,19 @@ export const Stepper = ({
 
   return (
     <StepperProvider
-      interactive={interactive}
-      selected={selected}
       animated={animated}
+      interactive={interactive}
       labelPosition={labelPosition}
-      size={size}
+      selected={selected}
       separator={separator}
+      size={size}
     >
       <StyledContainer
         className={className}
         data-testid={dataTestId}
         labelPosition={labelPosition}
-        size={size}
         separator={separator}
+        size={size}
       >
         {Children.map(cleanChildren, (child, index) => {
           const getTemporal = () => {
@@ -145,9 +145,9 @@ export const Stepper = ({
 
               {isNotLast && separator && labelPosition === 'right' ? (
                 <StyledLine
-                  temporal={temporal}
                   animated={animated}
                   data-size={size}
+                  temporal={temporal}
                 />
               ) : null}
             </Fragment>

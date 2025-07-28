@@ -33,12 +33,12 @@ const StyledInput = styled(TextInputFieldV2)`
 
 const LogIn = () => {
   const methods = useForm({
-    mode: 'onChange',
     defaultValues: {
       email: '',
       password: '',
       remember: false,
     },
+    mode: 'onChange',
   })
 
   const values = useWatch(methods)
@@ -57,8 +57,8 @@ const LogIn = () => {
 
   return (
     <StyledLoginContainer>
-      <Form methods={methods} errors={mockErrors} onSubmit={handleSubmit}>
-        <Stack gap={1} alignItems="center">
+      <Form errors={mockErrors} methods={methods} onSubmit={handleSubmit}>
+        <Stack alignItems="center" gap={1}>
           <IdIcon size="small" />
           <Text as="h1" variant="heading">
             Login form
@@ -66,21 +66,21 @@ const LogIn = () => {
           <StyledInput
             label="Email"
             name="email"
-            required
             placeholder="example@email.com"
             regex={[emailRegex]}
+            required
           />
           <StyledInput
-            label="Password"
-            name="password"
-            type="password"
-            required
-            minLength={8}
             helper="Min 8 characters"
+            label="Password"
+            minLength={8}
+            name="password"
+            required
+            type="password"
           />
           <CheckboxField name="remember">Remember me</CheckboxField>
           <Submit>Log in</Submit>
-          <Link sentiment="primary" size="small" prominence="weak" href="/">
+          <Link href="/" prominence="weak" sentiment="primary" size="small">
             Forgot password?
           </Link>
         </Stack>

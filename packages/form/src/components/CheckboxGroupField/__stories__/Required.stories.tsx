@@ -37,7 +37,7 @@ Required.parameters = {
 }
 
 Required.args = {
-  name: 'conditions',
   legend: 'Conditions',
+  name: 'conditions',
   required: true,
 }

@@ -7,17 +7,17 @@ import { Stack } from '../Stack'
 import { Text } from '../Text'
 
 const CONTAINER_SIZES = {
-  small: 45, // in rem
-  medium: 45,
   large: 71.25,
+  medium: 45,
+  small: 45, // in rem
 } as const
 
 type SizesTypes = keyof typeof CONTAINER_SIZES
 
 const IMAGE_SIZES: Record<SizesTypes, number> = {
-  small: 4, // in rem
-  medium: 6,
   large: 15,
+  medium: 6,
+  small: 4, // in rem
 }
 
 const CenteredText = styled(Text)`
@@ -96,28 +96,28 @@ export const EmptyState = ({
   'data-testid': dataTestId,
 }: EmptyStateProps) => (
   <Container
-    size={size}
     bordered={bordered}
     className={className}
     data-testid={dataTestId}
+    size={size}
   >
     <StyledStack
+      alignItems="center"
       gap={size === 'small' ? 2 : 3}
       justifyContent="center"
-      alignItems="center"
     >
-      <Stack gap={2} justifyContent="center" alignItems="center">
+      <Stack alignItems="center" gap={2} justifyContent="center">
         {image && typeof image === 'string' ? (
-          <Image size={IMAGE_SIZES[size]} alt="" src={image} />
+          <Image alt="" size={IMAGE_SIZES[size]} src={image} />
         ) : (
           image
         )}
-        <Stack gap={0.5} alignItems="center">
+        <Stack alignItems="center" gap={0.5}>
           {title ? (
             <CenteredText
               as="h2"
-              variant={size === 'small' ? 'bodyStrong' : 'headingSmall'}
               prominence="strong"
+              variant={size === 'small' ? 'bodyStrong' : 'headingSmall'}
             >
               {title}
             </CenteredText>
@@ -130,7 +130,7 @@ export const EmptyState = ({
           </CenteredText>
         </Stack>
       </Stack>
-      <Stack gap={2} justifyContent="center" alignItems="center">
+      <Stack alignItems="center" gap={2} justifyContent="center">
         <Stack direction="row" gap={2}>
           {secondaryButton}
           {primaryButton}
@@ -138,9 +138,9 @@ export const EmptyState = ({
         {learnMore?.text ? (
           <Link
             href={learnMore.link}
-            target={learnMore.target}
             iconPosition="right"
             size={size === 'small' ? 'small' : undefined}
+            target={learnMore.target}
           >
             {learnMore.text}
           </Link>

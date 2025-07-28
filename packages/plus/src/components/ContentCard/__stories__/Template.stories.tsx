@@ -14,11 +14,11 @@ export const Template: StoryFn<ComponentProps<typeof ContentCard>> = ({
 )
 
 Template.args = {
-  direction: 'column',
-  image: illustration,
-  icon: <CockpitProductIcon size="large" />,
-  subtitle: 'New update',
-  title: 'Create your first function',
   description:
     'The Scaleway Serverless Functions platform makes your functions available, executes them on demand and manages resource allocation for you.',
+  direction: 'column',
+  icon: <CockpitProductIcon size="large" />,
+  image: illustration,
+  subtitle: 'New update',
+  title: 'Create your first function',
 }

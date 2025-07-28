@@ -56,20 +56,20 @@ describe('Checkbox', () => {
 
     renderWithTheme(
       <>
-        <Chip onClick={mockOnClick1} data-testid="test">
+        <Chip data-testid="test" onClick={mockOnClick1}>
           test
           <Chip.Icon
+            data-testid="test-icon"
             name="arrowDown"
             onClick={mockOnClickIcon1}
-            data-testid="test-icon"
           />
         </Chip>
-        <Chip onClick={mockOnClick2} data-testid="test-disabled" disabled>
+        <Chip data-testid="test-disabled" disabled onClick={mockOnClick2}>
           test Disabled
           <Chip.Icon
+            data-testid="test-icon-disabled"
             name="arrowDown"
             onClick={mockOnClickIcon2}
-            data-testid="test-icon-disabled"
           />
         </Chip>
       </>,

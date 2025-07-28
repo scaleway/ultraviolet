@@ -19,11 +19,11 @@ export const OnChange: StoryFn<ComponentProps<typeof OrderSummary>> = () => {
     <Stack direction="row" gap={3}>
       <Button onClick={onClick}>Change elements</Button>
       <OrderSummary
-        items={elements}
         currency="EUR"
+        header="Summary"
+        items={elements}
         localeFormat="en-US"
         onChange={setPrices}
-        header="Summary"
       />
       <ul>
         Prices:

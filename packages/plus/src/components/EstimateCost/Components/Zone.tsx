@@ -49,17 +49,17 @@ export const Zone = memo(
 
     return (
       <Item
-        label={locales['estimate.cost.az.label']}
-        shouldBeHidden={shouldBeHidden}
-        priceText={priceText}
         animated={animated}
+        discount={discount}
         isFirstElement={isFirstElement}
         isLastElement={isLastElement}
-        productsCallback={productsCallback}
         iteration={iteration}
-        discount={discount}
+        label={locales['estimate.cost.az.label']}
         noBorder={noBorder}
         noPrice={noPrice}
+        priceText={priceText}
+        productsCallback={productsCallback}
+        shouldBeHidden={shouldBeHidden}
       >
         <Strong>
           <StyledImage alt={label} src={image} />

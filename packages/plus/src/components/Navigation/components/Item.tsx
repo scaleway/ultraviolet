@@ -399,7 +399,7 @@ export const Item = memo(
 
     useEffect(() => {
       if (type !== 'pinnedGroup' && pinnedFeature) {
-        registerItem({ [id]: { label, active, onToggle, onClickPinUnpin } })
+        registerItem({ [id]: { active, label, onClickPinUnpin, onToggle } })
       }
       // oxlint-disable-next-line react/exhaustive-deps
     }, [active, id, label, registerItem])
@@ -515,7 +515,7 @@ export const Item = memo(
         if (expanded) {
           event.dataTransfer.setData(
             'text/plain',
-            JSON.stringify({ label, index }),
+            JSON.stringify({ index, label }),
           )
           // eslint-disable-next-line no-param-reassign
           event.currentTarget.style.opacity = '0.5'
@@ -537,35 +537,35 @@ export const Item = memo(
       return (
         <>
           <Container
-            gap={1}
-            direction="row"
             alignItems={categoryIcon ? 'flex-start' : 'center'}
-            justifyContent="space-between"
-            data-has-sub-label={!!subLabel}
-            onClick={triggerToggle}
             aria-expanded={ariaExpanded}
-            href={href}
-            target={target}
-            rel={rel}
-            data-is-pinnable={shouldShowPinnedButton}
-            data-is-active={active}
             data-animation={shouldAnimate ? animation : undefined}
             data-animation-type={animationType}
-            data-has-children={!!children}
             data-has-active-children={hasActiveChildren}
+            data-has-children={!!children}
             data-has-no-expand={noExpand}
+            data-has-sub-label={!!subLabel}
+            data-is-active={active}
+            data-is-pinnable={shouldShowPinnedButton}
             data-pinned-feature={pinnedFeature}
+            data-testid={dataTestId}
+            direction="row"
             disabled={disabled}
             draggable={type === 'pinned' && expanded}
-            onDragStart={onDragStart}
-            onDragEnd={onDragEnd}
+            gap={1}
+            href={href}
             id={id}
-            data-testid={dataTestId}
+            justifyContent="space-between"
+            onClick={triggerToggle}
+            onDragEnd={onDragEnd}
+            onDragStart={onDragStart}
+            rel={rel}
+            target={target}
           >
             <Stack
+              alignItems={categoryIcon ? 'flex-start' : 'center'}
               direction="row"
               gap={1}
-              alignItems={categoryIcon ? 'flex-start' : 'center'}
               justifyContent="center"
             >
               {categoryIcon ? (
@@ -578,25 +578,25 @@ export const Item = memo(
               ) : null}
               {type === 'pinned' && expanded ? (
                 <GrabIcon
-                  sentiment="neutral"
-                  prominence="weak"
-                  size="small"
                   disabled={disabled}
+                  prominence="weak"
+                  sentiment="neutral"
+                  size="small"
                 />
               ) : null}
               <Stack>
                 {!animation ? (
                   <WrapText
                     as="span"
-                    variant="bodySmallStrong"
-                    sentiment={active ? 'primary' : 'neutral'}
+                    data-animation={animation}
+                    disabled={disabled}
                     prominence={
                       (categoryIcon || !hasParents) && !active
                         ? 'strong'
                         : 'default'
                     }
-                    data-animation={animation}
-                    disabled={disabled}
+                    sentiment={active ? 'primary' : 'neutral'}
+                    variant="bodySmallStrong"
                     whiteSpace="pre-wrap"
                   >
                     {label}
@@ -605,11 +605,11 @@ export const Item = memo(
                 {subLabel && !animation ? (
                   <WrapText
                     as="span"
-                    variant="caption"
-                    sentiment="neutral"
-                    prominence="weak"
                     data-animation={animation}
                     disabled={disabled}
+                    prominence="weak"
+                    sentiment="neutral"
+                    variant="caption"
                     whiteSpace="pre-wrap"
                   >
                     {subLabel}
@@ -618,38 +618,35 @@ export const Item = memo(
               </Stack>
             </Stack>
             <Stack
-              direction="row"
               alignItems="center"
+              direction="row"
               gap={href ? 1 : undefined}
             >
               {badgeText || hasPinnedFeatureAndNoChildren ? (
                 <>
                   {badgeText && !animation ? (
                     <StyledBadge
+                      disabled={disabled}
+                      prominence="strong"
                       sentiment={badgeSentiment}
                       size="small"
-                      prominence="strong"
-                      disabled={disabled}
                     >
                       {badgeText}
                     </StyledBadge>
                   ) : null}
                   {shouldShowPinnedButton ? (
                     <Tooltip
+                      placement="right"
                       text={
                         isItemPinned
                           ? locales['navigation.unpin.tooltip']
                           : pinTooltipLocale
                       }
-                      placement="right"
                     >
                       <RelativeDiv>
                         <PinnedButton
-                          role="button"
                           aria-label={isItemPinned ? 'unpin' : 'pin'}
-                          size="xsmall"
-                          variant="ghost"
-                          sentiment={active ? 'primary' : 'neutral'}
+                          disabled={isItemPinned ? false : isPinDisabled}
                           onClick={(event: MouseEvent<HTMLDivElement>) => {
                             if (pinnedItems.length < pinLimit || isItemPinned) {
                               event.preventDefault()
@@ -662,19 +659,22 @@ export const Item = memo(
                               }
 
                               onClickPinUnpin?.({
-                                state: isItemPinned ? 'unpin' : 'pin',
                                 id,
+                                state: isItemPinned ? 'unpin' : 'pin',
                                 totalPinned: newValue,
                               })
                             }
                           }}
-                          disabled={isItemPinned ? false : isPinDisabled}
+                          role="button"
+                          sentiment={active ? 'primary' : 'neutral'}
+                          size="xsmall"
+                          variant="ghost"
                         >
                           <PinUnpinIcon
-                            size="medium"
+                            active={active}
                             disabled={isItemPinned ? false : isPinDisabled}
                             sentiment={active ? 'primary' : 'neutral'}
-                            active={active}
+                            size="medium"
                           />
                         </PinnedButton>
                       </RelativeDiv>
@@ -684,15 +684,15 @@ export const Item = memo(
               ) : null}
               {hasHrefAndNoChildren && target === '_blank' && !animation ? (
                 <AnimatedIcon
-                  sentiment="neutral"
-                  prominence="default"
                   disabled={disabled}
+                  prominence="default"
+                  sentiment="neutral"
                 />
               ) : null}
               {children ? (
-                <StackIcon gap={1} direction="row" alignItems="center">
+                <StackIcon alignItems="center" direction="row" gap={1}>
                   {!animation && !noExpand ? (
-                    <ArrowIcon sentiment="neutral" prominence="weak" />
+                    <ArrowIcon prominence="weak" sentiment="neutral" />
                   ) : null}
                 </StackIcon>
               ) : null}
@@ -702,7 +702,7 @@ export const Item = memo(
             <>
               {!noExpand ? (
                 <ItemProvider>
-                  <Expandable opened={internalExpanded} animationDuration={0}>
+                  <Expandable animationDuration={0} opened={internalExpanded}>
                     <PaddedStack width={animation ? '100%' : undefined}>
                       {children}
                     </PaddedStack>
@@ -724,23 +724,21 @@ export const Item = memo(
     // This content is the menu of the navigation when collapsed
     if (categoryIcon || (Children.count(children) > 0 && !hasParents)) {
       return (
-        <MenuStack gap={1} alignItems="start" justifyContent="start">
+        <MenuStack alignItems="start" gap={1} justifyContent="start">
           {Children.count(children) > 0 ? (
             <StyledMenu
-              triggerMethod="hover"
-              dynamicDomRendering={false} // As we parse the children we don't need dynamic rendering
               disclosure={
                 <Button
-                  sentiment="neutral"
-                  variant={hasActiveChildren ? 'filled' : 'ghost'}
-                  size="small"
                   aria-label={label}
+                  sentiment="neutral"
+                  size="small"
+                  variant={hasActiveChildren ? 'filled' : 'ghost'}
                 >
                   {categoryIcon ? (
                     <Stack
+                      alignItems="center"
                       direction="row"
                       gap={1}
-                      alignItems="center"
                       justifyContent="center"
                     >
                       {categoryIcon}
@@ -748,22 +746,24 @@ export const Item = memo(
                   ) : null}
                 </Button>
               }
+              dynamicDomRendering={false} // As we parse the children we don't need dynamic rendering
               placement="right"
+              triggerMethod="hover"
             >
               <ItemProvider>{children}</ItemProvider>
             </StyledMenu>
           ) : (
-            <Tooltip text={label} placement="right" tabIndex={-1}>
+            <Tooltip placement="right" tabIndex={-1} text={label}>
               <Button
-                sentiment="neutral"
-                variant={active ? 'filled' : 'ghost'}
-                size="small"
                 aria-label={label}
+                sentiment="neutral"
+                size="small"
+                variant={active ? 'filled' : 'ghost'}
               >
                 <Stack
+                  alignItems="center"
                   direction="row"
                   gap={1}
-                  alignItems="center"
                   justifyContent="center"
                 >
                   {categoryIcon || (
@@ -783,23 +783,23 @@ export const Item = memo(
     if (hasParents) {
       return (
         <StyledMenuItem
-          pinnedFeature={pinnedFeature}
-          href={href}
-          target={target}
-          rel={rel}
-          borderless
           active={active}
+          borderless
           disabled={disabled}
-          sentiment={active ? 'primary' : 'neutral'}
+          href={href}
           isPinnable={shouldShowPinnedButton}
           onClick={() => onToggle?.(!!active)}
+          pinnedFeature={pinnedFeature}
+          rel={rel}
+          sentiment={active ? 'primary' : 'neutral'}
+          target={target}
         >
           <Stack
-            gap={1}
-            direction="row"
             alignItems="center"
-            justifyContent="space-between"
+            direction="row"
             flex={1}
+            gap={1}
+            justifyContent="space-between"
             width="100%"
           >
             {!animation ? (
@@ -810,37 +810,34 @@ export const Item = memo(
             <Stack direction="row">
               {badgeText && !animation ? (
                 <StyledBadge
+                  disabled={disabled}
+                  prominence="strong"
                   sentiment={badgeSentiment}
                   size="small"
-                  prominence="strong"
-                  disabled={disabled}
                 >
                   {badgeText}
                 </StyledBadge>
               ) : null}
               {hasHrefAndNoChildren && target === '_blank' ? (
                 <AnimatedIcon
-                  sentiment="neutral"
-                  prominence="weak"
                   disabled={disabled}
+                  prominence="weak"
+                  sentiment="neutral"
                 />
               ) : null}
               {shouldShowPinnedButton ? (
                 <Tooltip
+                  placement="right"
                   text={
                     isItemPinned
                       ? locales['navigation.unpin.tooltip']
                       : pinTooltipLocale
                   }
-                  placement="right"
                 >
                   <RelativeDiv>
                     <PinnedButton
-                      role="button"
-                      size="xsmall"
                       aria-label={isItemPinned ? 'unpin' : 'pin'}
-                      variant="ghost"
-                      sentiment={active ? 'primary' : 'neutral'}
+                      disabled={isItemPinned ? false : isPinDisabled}
                       onClick={(event: MouseEvent<HTMLDivElement>) => {
                         if (pinnedItems.length < pinLimit || isItemPinned) {
                           event.preventDefault()
@@ -853,19 +850,22 @@ export const Item = memo(
                             newValue = pinItem(id)
                           }
                           onClickPinUnpin?.({
-                            state: isItemPinned ? 'unpin' : 'pin',
                             id,
+                            state: isItemPinned ? 'unpin' : 'pin',
                             totalPinned: newValue,
                           })
                         }
                       }}
-                      disabled={isItemPinned ? false : isPinDisabled}
+                      role="button"
+                      sentiment={active ? 'primary' : 'neutral'}
+                      size="xsmall"
+                      variant="ghost"
                     >
                       <PinUnpinIcon
-                        size="medium"
+                        active={active}
                         disabled={isItemPinned ? false : isPinDisabled}
                         sentiment={active ? 'primary' : 'neutral'}
-                        active={active}
+                        size="medium"
                       />
                     </PinnedButton>
                   </RelativeDiv>
@@ -880,17 +880,17 @@ export const Item = memo(
     // This content is for when navigation is collapsed and we show an icon of link
     if (!hasParents && href) {
       return (
-        <Tooltip text={label} placement="right">
-          <MenuStack gap={1} alignItems="start" justifyContent="start">
+        <Tooltip placement="right" text={label}>
+          <MenuStack alignItems="start" gap={1} justifyContent="start">
             <Container
-              gap={1}
               alignItems="center"
-              justifyContent="center"
+              gap={1}
               href={href}
-              target={target}
+              justifyContent="center"
               rel={rel}
+              target={target}
             >
-              <AnimatedIcon sentiment="neutral" prominence="weak" />
+              <AnimatedIcon prominence="weak" sentiment="neutral" />
             </Container>
           </MenuStack>
         </Tooltip>

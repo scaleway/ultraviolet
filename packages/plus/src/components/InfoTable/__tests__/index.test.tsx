@@ -46,7 +46,7 @@ describe('InfoTable', () => {
           <InfoTable.Cell title="title">cell</InfoTable.Cell>
         </InfoTable.Row>
         <InfoTable.Row templateColumns="repeat(3, 1fr)">
-          <InfoTable.Cell title="title" multiline>
+          <InfoTable.Cell multiline title="title">
             cell cell cell cell cell cell cell cell cell cell cell cell cell
             cell cell cell cell cell cell cell cell cell cell cell cell cell
             cell cell cell cell

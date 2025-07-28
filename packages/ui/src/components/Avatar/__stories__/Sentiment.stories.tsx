@@ -6,21 +6,21 @@ import { Avatar } from '..'
 export const Sentiment: StoryFn<typeof Avatar> = props => (
   <>
     <Avatar {...props} />
-    <Avatar variant="text" text="UV" shape="circle" sentiment="neutral" />
-    <Avatar variant="icon" shape="circle">
+    <Avatar sentiment="neutral" shape="circle" text="UV" variant="text" />
+    <Avatar shape="circle" variant="icon">
       <MosaicIcon />
     </Avatar>
-    <Avatar variant="icon" shape="circle" sentiment="neutral">
+    <Avatar sentiment="neutral" shape="circle" variant="icon">
       <MosaicIcon />
     </Avatar>
   </>
 )
 
 Sentiment.args = {
-  variant: 'text',
-  text: 'UV',
-  shape: 'circle',
   sentiment: 'primary',
+  shape: 'circle',
+  text: 'UV',
+  variant: 'text',
 }
 
 Sentiment.parameters = {
@@ -34,7 +34,7 @@ Sentiment.parameters = {
 
 Sentiment.decorators = [
   Story => (
-    <Stack gap={2} direction="row">
+    <Stack direction="row" gap={2}>
       <Story />
     </Stack>
   ),

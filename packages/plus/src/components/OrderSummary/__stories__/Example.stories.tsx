@@ -24,11 +24,11 @@ const mockItems = (
     category: 'Requests cost',
     subCategories: [
       {
-        title: `${requestsAmount} requests`,
-        price: 0.00000015,
         amount: requestsAmount ?? 0,
-        priceUnit: 'request',
         fixedPrice: true,
+        price: 0.00000015,
+        priceUnit: 'request',
+        title: `${requestsAmount} requests`,
       },
     ],
   }
@@ -49,7 +49,7 @@ export const Example: StoryFn<ComponentProps<typeof OrderSummary>> = () => {
 
   return (
     <OrderSummary
-      unitUnitInput="hours"
+      currency="EUR"
       footer={
         <Stack gap="1">
           <Checkbox checked={checked} onChange={() => setChecked(!checked)}>
@@ -61,9 +61,9 @@ export const Example: StoryFn<ComponentProps<typeof OrderSummary>> = () => {
           </Button>
           <Text
             as="span"
+            prominence="weak"
             sentiment="neutral"
             variant="bodySmall"
-            prominence="weak"
           >
             *For this estimation, 1 month is considered 730 hours.&nbsp;
             <Link href="#" size="small" target="_blank">
@@ -72,10 +72,10 @@ export const Example: StoryFn<ComponentProps<typeof OrderSummary>> = () => {
           </Text>
         </Stack>
       }
-      items={mockItems(requestsAmount, setRequestsAmount)}
-      currency="EUR"
-      localeFormat="en-US"
       header="Summary"
+      items={mockItems(requestsAmount, setRequestsAmount)}
+      localeFormat="en-US"
+      unitUnitInput="hours"
     />
   )
 }

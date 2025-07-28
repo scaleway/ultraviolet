@@ -33,8 +33,8 @@ export const ThemeGenerator = () => {
   >(null)
 
   const methods = useForm({
-    values: savedFormValues ?? INITIAL_VALUES,
     mode: 'onChange',
+    values: savedFormValues ?? INITIAL_VALUES,
   })
 
   useEffect(() => {
@@ -51,8 +51,8 @@ export const ThemeGenerator = () => {
               [localKey]: SHADES_KEYS.reduce(
                 (secondAcc, shadeKey, index) => ({
                   [shadeKey]: {
-                    value: generateShadeContrast(shadeKey, value, index),
                     type: 'color',
+                    value: generateShadeContrast(shadeKey, value, index),
                   },
                   ...secondAcc,
                 }),
@@ -70,8 +70,8 @@ export const ThemeGenerator = () => {
         [SHADES_KEYS_MATCHING[key]]: SHADES_KEYS.reduce(
           (secondAcc, shadeKey, index) => ({
             [shadeKey]: {
-              value: generateShadeContrast(shadeKey, value, index),
               type: 'color',
+              value: generateShadeContrast(shadeKey, value, index),
             },
             ...secondAcc,
           }),
@@ -97,8 +97,8 @@ export const ThemeGenerator = () => {
 
     const tempGeneratedPalette = generatePalette(overloadedTokens, {
       inputTheme: 'productLight',
-      palette: 'paletteLight',
       outputTheme: 'light',
+      palette: 'paletteLight',
     }) as UltravioletUITheme
 
     setGeneratedPalette(tempGeneratedPalette)
@@ -110,7 +110,7 @@ export const ThemeGenerator = () => {
       {step === 0 ? (
         <Stack gap={2}>
           <Stack>
-            <Text variant="headingLarge" as="h1">
+            <Text as="h1" variant="headingLarge">
               ✨ Theme generator
             </Text>
             <Text as="p" variant="body">
@@ -120,7 +120,7 @@ export const ThemeGenerator = () => {
               create a new theme for your project FAST 🚀.
             </Text>
 
-            <Text variant="headingSmall" as="h3">
+            <Text as="h3" variant="headingSmall">
               How does it work?
             </Text>
             <Text as="p" variant="body">
@@ -132,29 +132,29 @@ export const ThemeGenerator = () => {
             </Text>
           </Stack>
           <Form
-            onSubmit={onSubmit}
-            methods={methods}
             errors={{
-              min: () => '',
+              isInteger: () => '',
               max: () => '',
-              minLength: () => '',
+              maxDate: () => '',
               maxLength: () => '',
+              min: () => '',
+              minDate: () => '',
+              minLength: () => '',
               pattern: () => 'The hexadecimal color is not valid.',
               required: () => '',
-              maxDate: () => '',
-              minDate: () => '',
-              isInteger: () => '',
             }}
+            methods={methods}
+            onSubmit={onSubmit}
           >
             <FormContent />
           </Form>
         </Stack>
       ) : (
         <ThemeResult
-          theme={theme}
-          setTheme={setTheme}
           generatedPalette={generatedPalette}
           setStep={setStep}
+          setTheme={setTheme}
+          theme={theme}
         />
       )}
     </Stack>

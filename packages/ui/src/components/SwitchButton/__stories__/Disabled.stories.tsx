@@ -6,9 +6,9 @@ export const Disabled: StoryFn<ComponentProps<typeof SwitchButton>> = args => (
   <SwitchButton {...args} size="small">
     <SwitchButton.Option value="option1">Option 1</SwitchButton.Option>
     <SwitchButton.Option
-      value="option2"
       disabled
       tooltip="This option is disabled"
+      value="option2"
     >
       Option Disabled
     </SwitchButton.Option>

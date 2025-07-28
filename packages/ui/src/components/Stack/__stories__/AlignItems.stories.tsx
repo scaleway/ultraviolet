@@ -13,7 +13,7 @@ AlignItems.parameters = {
 }
 
 AlignItems.args = {
+  alignItems: 'center',
   children: coloredChildren,
   gap: 2,
-  alignItems: 'center',
 }

@@ -65,9 +65,9 @@ export const Group = ({ children, label }: GroupProps) => {
           {isDiplay ? (
             <StyledText
               as="span"
-              variant="bodySmallStrong"
-              sentiment="neutral"
               prominence="weak"
+              sentiment="neutral"
+              variant="bodySmallStrong"
             >
               {label}
             </StyledText>

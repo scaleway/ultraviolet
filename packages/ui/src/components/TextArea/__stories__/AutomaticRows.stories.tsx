@@ -17,45 +17,45 @@ export const AutomaticRows: StoryFn<typeof TextArea> = () => {
   return (
     <Stack gap={2}>
       <TextArea
+        aria-label={undefined}
         label="Rows=auto"
         name="example-1"
-        aria-label={undefined}
+        onChange={setValue1}
         rows="auto"
         value={value1}
-        onChange={setValue1}
       />
       <TextArea
+        aria-label={undefined}
         label="Rows=2"
         name="example-2"
-        aria-label={undefined}
+        onChange={setValue2}
         rows={2}
         value={value2}
-        onChange={setValue2}
       />
       <TextArea
+        aria-label={undefined}
         label="AutoExpandMax=4"
-        aria-label={undefined}
         maxRows={4}
-        value={value3}
         onChange={setValue3}
+        value={value3}
       />
       <TextArea
+        aria-label={undefined}
         label="Rows=2, AutoExpandMax=4"
-        name="example-4"
-        aria-label={undefined}
-        rows={2}
         maxRows={4}
-        value={value4}
+        name="example-4"
         onChange={setValue4}
+        rows={2}
+        value={value4}
       />
       <TextArea
-        label="Rows=auto, AutoExpandMax=4"
-        name="example-5"
         aria-label={undefined}
-        rows="auto"
+        label="Rows=auto, AutoExpandMax=4"
         maxRows={4}
-        value={value5}
+        name="example-5"
         onChange={setValue5}
+        rows="auto"
+        value={value5}
       />
     </Stack>
   )

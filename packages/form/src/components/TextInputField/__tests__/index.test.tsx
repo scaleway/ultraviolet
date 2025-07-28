@@ -23,11 +23,11 @@ describe('TextInputField', () => {
 
     const { asFragment } = renderWithTheme(
       <Form
-        onSubmit={onSubmit}
         errors={mockFormErrors}
         methods={result.current}
+        onSubmit={onSubmit}
       >
-        <TextInputField label="Test" name="test" required clearable />
+        <TextInputField clearable label="Test" name="test" required />
         <Submit>Submit</Submit>
       </Form>,
     )

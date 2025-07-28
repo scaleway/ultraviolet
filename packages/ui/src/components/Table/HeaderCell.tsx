@@ -101,7 +101,11 @@ export const HeaderCell = ({
 
   return (
     <StyledHeaderCell
+      align={align}
+      aria-sort={order}
       className={className}
+      maxWidth={maxWidth}
+      minWidth={minWidth}
       onClick={handleOrder}
       onKeyDown={
         handleOrder
@@ -118,24 +122,20 @@ export const HeaderCell = ({
       }
       role={onOrder ? 'button columnheader' : undefined}
       tabIndex={handleOrder ? 0 : -1}
-      aria-sort={order}
-      align={align}
       width={width}
-      maxWidth={maxWidth}
-      minWidth={minWidth}
     >
       <StyledText
         as="div"
-        variant="bodySmall"
         sentiment={order !== undefined ? 'primary' : 'neutral'}
+        variant="bodySmall"
       >
         {children}
         {info ? (
           <Tooltip text={info}>
             <InformationOutlineIcon
-              size="small"
               prominence="weak"
               sentiment="neutral"
+              size="small"
             />
           </Tooltip>
         ) : null}

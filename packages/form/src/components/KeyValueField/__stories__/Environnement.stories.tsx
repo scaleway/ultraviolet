@@ -17,7 +17,11 @@ const HIDDEN_SECRET_VALUE = '************'
 const alphanumDashUnderscoreDots = /^[a-zA-Z0-9-._]*$/
 
 Environnement.args = {
-  name: 'environnementVariables',
+  addButton: {
+    maxSizeReachedTooltip: 'This is a tooltip when the max size is reached',
+    name: 'Add an ENV variable',
+    tooltip: 'This is a tooltip',
+  },
   inputKey: {
     label: 'key',
     regex: [alphanumDashUnderscoreDots],
@@ -25,14 +29,10 @@ Environnement.args = {
   },
   inputValue: {
     label: 'value',
-    type: 'password',
     placeholder: HIDDEN_SECRET_VALUE,
     regex: [alphanumDashUnderscoreDots],
     required: true,
+    type: 'password',
   },
-  addButton: {
-    name: 'Add an ENV variable',
-    tooltip: 'This is a tooltip',
-    maxSizeReachedTooltip: 'This is a tooltip when the max size is reached',
-  },
+  name: 'environnementVariables',
 }

@@ -26,81 +26,81 @@ export const Examples: StoryFn = args => {
   })
 
   return (
-    <Stack gap={8} flex={1}>
-      <Stack gap={1} flex={1}>
+    <Stack flex={1} gap={8}>
+      <Stack flex={1} gap={1}>
         <SelectableCard
           {...args}
-          name="label-29"
           checked={value === 'label-29'}
-          value="label-29"
-          type="radio"
-          onChange={event => onChange(event.currentTarget.value)}
-          showTick
           label={
-            <Stack direction="row" justifyContent="space-between" flex={1}>
-              <Text variant="bodyStrong" as="span">
+            <Stack direction="row" flex={1} justifyContent="space-between">
+              <Text as="span" variant="bodyStrong">
                 Option 1
               </Text>
-              <Text variant="bodyStronger" as="span">
+              <Text as="span" variant="bodyStronger">
                 1.99€
               </Text>
             </Stack>
           }
+          name="label-29"
+          onChange={event => onChange(event.currentTarget.value)}
+          showTick
+          type="radio"
+          value="label-29"
         >
-          <Text as="p" variant="body" prominence="weak" sentiment="neutral">
+          <Text as="p" prominence="weak" sentiment="neutral" variant="body">
             This option will cost you 1.99€ and provide you with a lot of
             happiness
           </Text>
         </SelectableCard>
         <SelectableCard
           {...args}
-          name="label-15"
           checked={value === 'label-15'}
-          value="label-15"
-          type="radio"
-          onChange={event => onChange(event.currentTarget.value)}
-          showTick
           label={
-            <Stack direction="row" justifyContent="space-between" flex={1}>
-              <Text variant="bodyStrong" as="span">
+            <Stack direction="row" flex={1} justifyContent="space-between">
+              <Text as="span" variant="bodyStrong">
                 Option 2
               </Text>
-              <Text variant="bodyStronger" as="span">
+              <Text as="span" variant="bodyStronger">
                 2.99€
               </Text>
             </Stack>
           }
+          name="label-15"
+          onChange={event => onChange(event.currentTarget.value)}
+          showTick
+          type="radio"
+          value="label-15"
         >
-          <Text as="p" variant="body" prominence="weak" sentiment="neutral">
+          <Text as="p" prominence="weak" sentiment="neutral" variant="body">
             This option will cost you 2.99€ and provide you with a lot more of
             happiness
           </Text>
         </SelectableCard>
       </Stack>
-      <Stack gap={1} flex={1}>
+      <Stack flex={1} gap={1}>
         <SelectableCard
           {...args}
-          name="label-20"
           checked={value2['label-20']}
-          value="label-20"
-          type="checkbox"
-          onChange={event =>
-            onChange2({ ...value2, 'label-20': event.currentTarget.checked })
-          }
-          showTick
           label={
-            <Stack direction="row" justifyContent="space-between" flex={1}>
-              <Text variant="bodyStrong" as="span">
+            <Stack direction="row" flex={1} justifyContent="space-between">
+              <Text as="span" variant="bodyStrong">
                 Optional option 1
               </Text>
-              <Text variant="bodyStronger" as="span">
+              <Text as="span" variant="bodyStronger">
                 4.99€
               </Text>
             </Stack>
           }
+          name="label-20"
+          onChange={event =>
+            onChange2({ ...value2, 'label-20': event.currentTarget.checked })
+          }
+          showTick
+          type="checkbox"
+          value="label-20"
         >
           <Stack gap={1}>
-            <Text as="p" variant="body" prominence="weak" sentiment="neutral">
+            <Text as="p" prominence="weak" sentiment="neutral" variant="body">
               This option will cost you 1.99€ and provide you with a lot of
               happiness
               <SelectInput
@@ -117,46 +117,39 @@ export const Examples: StoryFn = args => {
         </SelectableCard>
         <SelectableCard
           {...args}
-          name="label-21"
           checked={value2['label-21']}
-          value="label-21"
-          type="checkbox"
-          onChange={event =>
-            onChange2({ ...value2, 'label-21': event.currentTarget.checked })
-          }
-          showTick
           label={
-            <Stack direction="row" justifyContent="space-between" flex={1}>
-              <Text variant="bodyStrong" as="span">
+            <Stack direction="row" flex={1} justifyContent="space-between">
+              <Text as="span" variant="bodyStrong">
                 Optional option 2
               </Text>
-              <Text variant="bodyStronger" as="span">
+              <Text as="span" variant="bodyStronger">
                 9.99€
               </Text>
             </Stack>
           }
+          name="label-21"
+          onChange={event =>
+            onChange2({ ...value2, 'label-21': event.currentTarget.checked })
+          }
+          showTick
+          type="checkbox"
+          value="label-21"
         >
-          <Text as="p" variant="body" prominence="weak" sentiment="neutral">
+          <Text as="p" prominence="weak" sentiment="neutral" variant="body">
             This option will cost you 2.99€ and provide you with a lot more of
             happiness
           </Text>
         </SelectableCard>
       </Stack>
 
-      <Row templateColumns="repeat(2, auto)" gap={1}>
+      <Row gap={1} templateColumns="repeat(2, auto)">
         <SelectableCard
           {...args}
-          name="label-22"
           checked={value3['label-22']}
-          value="label-22"
-          type="checkbox"
-          onChange={event =>
-            onChange3({ ...value3, 'label-22': event.currentTarget.checked })
-          }
-          showTick
           label={
-            <Stack direction="row" gap={1} flex={1} alignItems="center">
-              <Text variant="bodyStrong" as="span">
+            <Stack alignItems="center" direction="row" flex={1} gap={1}>
+              <Text as="span" variant="bodyStrong">
                 Backup
               </Text>
               <Badge sentiment="primary" size="small">
@@ -164,25 +157,25 @@ export const Examples: StoryFn = args => {
               </Badge>
             </Stack>
           }
+          name="label-22"
+          onChange={event =>
+            onChange3({ ...value3, 'label-22': event.currentTarget.checked })
+          }
+          showTick
+          type="checkbox"
+          value="label-22"
         >
-          <Text as="p" variant="body" prominence="weak" sentiment="neutral">
+          <Text as="p" prominence="weak" sentiment="neutral" variant="body">
             This option will cost you 2.99€ and provide you with a lot more of
             happiness
           </Text>
         </SelectableCard>
         <SelectableCard
           {...args}
-          name="label-23"
           checked={value3['label-23']}
-          value="label-23"
-          type="checkbox"
-          onChange={event =>
-            onChange3({ ...value3, 'label-23': event.currentTarget.checked })
-          }
-          showTick
           label={
-            <Stack direction="row" gap={1} flex={1} alignItems="center">
-              <Text variant="bodyStrong" as="span">
+            <Stack alignItems="center" direction="row" flex={1} gap={1}>
+              <Text as="span" variant="bodyStrong">
                 Redundancy
               </Text>
               <Badge sentiment="primary" size="small">
@@ -190,8 +183,15 @@ export const Examples: StoryFn = args => {
               </Badge>
             </Stack>
           }
+          name="label-23"
+          onChange={event =>
+            onChange3({ ...value3, 'label-23': event.currentTarget.checked })
+          }
+          showTick
+          type="checkbox"
+          value="label-23"
         >
-          <Text as="p" variant="body" prominence="weak" sentiment="neutral">
+          <Text as="p" prominence="weak" sentiment="neutral" variant="body">
             This option will cost you 2.99€ and provide you with a lot more of
             happiness
           </Text>
@@ -199,17 +199,10 @@ export const Examples: StoryFn = args => {
 
         <SelectableCard
           {...args}
-          name="label-24"
           checked={value3['label-24']}
-          value="label-24"
-          type="checkbox"
-          onChange={event =>
-            onChange3({ ...value3, 'label-24': event.currentTarget.checked })
-          }
-          showTick
           label={
-            <Stack direction="row" gap={1} flex={1} alignItems="center">
-              <Text variant="bodyStrong" as="span">
+            <Stack alignItems="center" direction="row" flex={1} gap={1}>
+              <Text as="span" variant="bodyStrong">
                 Morning Reboot 9am
               </Text>
               <Badge sentiment="neutral" size="small">
@@ -217,8 +210,15 @@ export const Examples: StoryFn = args => {
               </Badge>
             </Stack>
           }
+          name="label-24"
+          onChange={event =>
+            onChange3({ ...value3, 'label-24': event.currentTarget.checked })
+          }
+          showTick
+          type="checkbox"
+          value="label-24"
         >
-          <Text as="p" variant="body" prominence="weak" sentiment="neutral">
+          <Text as="p" prominence="weak" sentiment="neutral" variant="body">
             This option will cost you 2.99€ and provide you with a lot more of
             happiness
           </Text>
@@ -226,17 +226,10 @@ export const Examples: StoryFn = args => {
 
         <SelectableCard
           {...args}
-          name="label-25"
           checked={value3['label-25']}
-          value="label-25"
-          type="checkbox"
-          onChange={event =>
-            onChange3({ ...value3, 'label-25': event.currentTarget.checked })
-          }
-          showTick
           label={
-            <Stack direction="row" gap={1} flex={1} alignItems="center">
-              <Text variant="bodyStrong" as="span">
+            <Stack alignItems="center" direction="row" flex={1} gap={1}>
+              <Text as="span" variant="bodyStrong">
                 Monitoring
               </Text>
               <Badge sentiment="neutral" size="small">
@@ -244,72 +237,79 @@ export const Examples: StoryFn = args => {
               </Badge>
             </Stack>
           }
+          name="label-25"
+          onChange={event =>
+            onChange3({ ...value3, 'label-25': event.currentTarget.checked })
+          }
+          showTick
+          type="checkbox"
+          value="label-25"
         >
-          <Text as="p" variant="body" prominence="weak" sentiment="neutral">
+          <Text as="p" prominence="weak" sentiment="neutral" variant="body">
             This option will cost you 2.99€ and provide you with a lot more of
             happiness
           </Text>
         </SelectableCard>
       </Row>
 
-      <Row templateColumns="repeat(3, auto)" gap={1}>
+      <Row gap={1} templateColumns="repeat(3, auto)">
         <SelectableCard
           {...args}
-          name="label-26"
           checked={value4['label-26']}
-          value="label-26"
-          type="checkbox"
-          onChange={event =>
-            onChange4({ ...value4, 'label-26': event.currentTarget.checked })
-          }
-          showTick
           label={
-            <Stack direction="row" gap={1} flex={1} alignItems="center">
-              <img src={fr} alt="fr" width={24} />
-              <Text variant="bodyStrong" as="span">
+            <Stack alignItems="center" direction="row" flex={1} gap={1}>
+              <img alt="fr" src={fr} width={24} />
+              <Text as="span" variant="bodyStrong">
                 France
               </Text>
             </Stack>
           }
+          name="label-26"
+          onChange={event =>
+            onChange4({ ...value4, 'label-26': event.currentTarget.checked })
+          }
+          showTick
+          type="checkbox"
+          value="label-26"
         />
         <SelectableCard
           {...args}
-          name="label-27"
           checked={value4['label-27']}
-          value="label-27"
-          type="checkbox"
-          onChange={event =>
-            onChange4({ ...value4, 'label-27': event.currentTarget.checked })
-          }
-          showTick
           label={
-            <Stack direction="row" gap={1} flex={1} alignItems="center">
-              <img src={nl} alt="nl" width={24} />
-              <Text variant="bodyStrong" as="span">
+            <Stack alignItems="center" direction="row" flex={1} gap={1}>
+              <img alt="nl" src={nl} width={24} />
+              <Text as="span" variant="bodyStrong">
                 Netherlands
               </Text>
             </Stack>
           }
+          name="label-27"
+          onChange={event =>
+            onChange4({ ...value4, 'label-27': event.currentTarget.checked })
+          }
+          showTick
+          type="checkbox"
+          value="label-27"
         />
 
         <SelectableCard
           {...args}
-          name="label-28"
           checked={value4['label-28']}
-          value="label-28"
-          type="checkbox"
-          onChange={event =>
-            onChange4({ ...value4, 'label-28': event.currentTarget.checked })
-          }
-          showTick
           label={
-            <Stack direction="row" gap={1} flex={1} alignItems="center">
-              <img src={pl} alt="pl" width={24} />
-              <Text variant="bodyStrong" as="span">
+            <Stack alignItems="center" direction="row" flex={1} gap={1}>
+              <img alt="pl" src={pl} width={24} />
+              <Text as="span" variant="bodyStrong">
                 Poland
               </Text>
             </Stack>
           }
+          name="label-28"
+          onChange={event =>
+            onChange4({ ...value4, 'label-28': event.currentTarget.checked })
+          }
+          showTick
+          type="checkbox"
+          value="label-28"
         />
       </Row>
     </Stack>

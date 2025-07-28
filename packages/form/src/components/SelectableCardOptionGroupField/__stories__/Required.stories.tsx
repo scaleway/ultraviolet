@@ -14,22 +14,22 @@ export const Required: StoryFn<
   <Stack gap={1}>
     <SelectableCardOptionGroupField {...args}>
       <SelectableCardOptionGroupField.Option
-        value="ubuntu"
+        image={ubuntu}
         label="Ubuntu"
         options={ubuntuOptions}
-        image={ubuntu}
+        value="ubuntu"
       />
       <SelectableCardOptionGroupField.Option
-        value="debian"
+        image={debian}
         label="Debian"
         options={debianOptions}
-        image={debian}
+        value="debian"
       />
       <SelectableCardOptionGroupField.Option
-        value="centos"
+        image={centos}
         label="CentOS"
         options={centosOptions}
-        image={centos}
+        value="centos"
       />
     </SelectableCardOptionGroupField>
     <Submit>Submit</Submit>
@@ -37,8 +37,8 @@ export const Required: StoryFn<
 )
 
 Required.args = {
-  name: 'os',
-  legend: 'Choose your OS',
   helper: 'Choose the OS and version you need to install on your server',
+  legend: 'Choose your OS',
+  name: 'os',
   required: true,
 }

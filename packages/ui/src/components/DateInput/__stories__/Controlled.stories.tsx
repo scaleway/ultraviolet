@@ -15,8 +15,8 @@ export const Controlled: StoryFn<ComponentProps<typeof DateInput>> = args => {
       <DateInput
         {...args}
         label="Date"
-        value={value as Date}
         onChange={setValue}
+        value={value as Date}
       />
       Selected date : {value?.toString()}
       <Button onClick={() => setValue(new Date('December 26, 1995 03:24:00'))}>

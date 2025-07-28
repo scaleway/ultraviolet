@@ -32,10 +32,10 @@ describe('LineChart', () => {
   test('renders correctly with data transformer', () =>
     shouldMatchEmotionSnapshot(
       <LineChart
-        data={lineChartData}
         axisFormatters={{
           bottom: value => value.toString(),
         }}
+        data={lineChartData}
         xScale={{ type: 'linear' }}
       />,
     ))

@@ -2,6 +2,11 @@ import type { Meta } from '@storybook/react-vite'
 import { CheckboxGroup } from '..'
 
 export default {
+  args: {
+    legend: 'Conditions:',
+    name: 'conditions',
+    value: ['value-1'],
+  },
   component: CheckboxGroup,
   decorators: [
     StoryComponent => (
@@ -11,11 +16,6 @@ export default {
     ),
   ],
   title: 'Components/Data Entry/CheckboxGroup',
-  args: {
-    name: 'conditions',
-    legend: 'Conditions:',
-    value: ['value-1'],
-  },
 } as Meta<typeof CheckboxGroup>
 
 export { Controlled } from './Controlled.stories'

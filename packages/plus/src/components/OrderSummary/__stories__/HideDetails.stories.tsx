@@ -9,9 +9,9 @@ import { Template } from './Template.stories'
 export const HideDetails = Template.bind({})
 
 HideDetails.args = {
+  header: 'Summary',
   hideDetails: true,
   hideTimeUnit: true,
-  header: 'Summary',
   items: [categoryAZ, categoryM2, categoryOptions, categoryDefault],
 }
 

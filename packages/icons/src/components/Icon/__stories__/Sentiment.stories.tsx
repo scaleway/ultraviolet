@@ -18,7 +18,7 @@ Sentiment.parameters = {
 
 Sentiment.decorators = [
   Story => (
-    <Stack gap={2} alignItems="center" direction="row">
+    <Stack alignItems="center" direction="row" gap={2}>
       <Story />
     </Stack>
   ),

@@ -13,9 +13,9 @@ export const Standalone: StoryFn<typeof SearchInput> = ({ ...args }) => {
       <Stack direction="row" gap={1}>
         <SearchInput
           {...args}
-          placeholder="Type something"
-          onSearch={setValue}
           onClose={() => {}}
+          onSearch={setValue}
+          placeholder="Type something"
         />
         <Button onClick={() => setSubmit(value)}>Search</Button>
       </Stack>

@@ -27,22 +27,22 @@ const data: FakeDataType[] = Array.from(
   { length: 10 },
   (_, index) => index + 1,
 ).map(rowNum => ({
-  id: `${rowNum}`,
   columnA: `Row ${rowNum} Column 1`,
   columnB: `Row ${rowNum} Column 2`,
   columnC: `Row ${rowNum} Column 3`,
   columnD: `Row ${rowNum} Column 4`,
   columnE: `Row ${rowNum} Column 5`,
   columnF: `Row ${rowNum} expandable content`,
+  id: `${rowNum}`,
 }))
 
 const columns: NonNullable<ComponentProps<typeof Table>['columns']> =
   Array.from({ length: 5 }, (_, index) => index + 1).map(columnNumber => ({
-    label: `Column ${columnNumber}`,
     id: `${columnNumber}`,
-    width: '100px',
-    minWidth: '100px',
+    label: `Column ${columnNumber}`,
     maxWidth: '200px',
+    minWidth: '100px',
+    width: '100px',
   }))
 
 const Wrapper = ({ theme = defaultTheme, children }: WrapperProps) => (
@@ -58,7 +58,7 @@ describe('Table', () => {
     expect(() =>
       renderWithTheme(
         data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
-          <Table.Row key={id} id={id}>
+          <Table.Row id={id} key={id}>
             <Table.Cell>{columnA}</Table.Cell>
             <Table.Cell>{columnB}</Table.Cell>
             <Table.Cell>{columnC}</Table.Cell>
@@ -77,7 +77,7 @@ describe('Table', () => {
       <Table columns={columns}>
         <Table.Body>
           {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
-            <Table.Row key={id} id={id}>
+            <Table.Row id={id} key={id}>
               <Table.Cell>{columnA}</Table.Cell>
               <Table.Cell>{columnB}</Table.Cell>
               <Table.Cell>{columnC}</Table.Cell>
@@ -94,7 +94,7 @@ describe('Table', () => {
       <Table columns={columns} loading>
         <Table.Body>
           {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
-            <Table.Row key={id} id={id}>
+            <Table.Row id={id} key={id}>
               <Table.Cell>{columnA}</Table.Cell>
               <Table.Cell>{columnB}</Table.Cell>
               <Table.Cell>{columnC}</Table.Cell>
@@ -111,7 +111,7 @@ describe('Table', () => {
       <Table columns={columns} selectable>
         <Table.Body>
           {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
-            <Table.Row key={id} id={id}>
+            <Table.Row id={id} key={id}>
               <Table.Cell>{columnA}</Table.Cell>
               <Table.Cell>{columnB}</Table.Cell>
               <Table.Cell>{columnC}</Table.Cell>
@@ -181,7 +181,7 @@ describe('Table', () => {
         },
       )
 
-      return <div>{children({ value, setValue })}</div>
+      return <div>{children({ setValue, value })}</div>
     }
 
     const { asFragment } = renderWithTheme(
@@ -191,19 +191,19 @@ describe('Table', () => {
             columns={columns.map((column, index) => ({
               ...column,
               isOrdered: value.columnIndex === index,
-              orderDirection: value.order,
               onOrder: newOrder => {
                 setValue({
                   columnIndex: index,
                   order: newOrder,
                 })
               },
+              orderDirection: value.order,
             }))}
           >
             <Table.Body>
               {data.map(
                 ({ id, columnA, columnB, columnC, columnD, columnE }) => (
-                  <Table.Row key={id} id={id}>
+                  <Table.Row id={id} key={id}>
                     <Table.Cell>{columnA}</Table.Cell>
                     <Table.Cell>{columnB}</Table.Cell>
                     <Table.Cell>{columnC}</Table.Cell>
@@ -251,7 +251,7 @@ describe('Table', () => {
       >
         <Table.Body>
           {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
-            <Table.Row key={id} id={id}>
+            <Table.Row id={id} key={id}>
               <Table.Cell>{columnA}</Table.Cell>
               <Table.Cell>{columnB}</Table.Cell>
               <Table.Cell>{columnC}</Table.Cell>
@@ -271,7 +271,7 @@ describe('Table', () => {
       <Table columns={columns} selectable>
         <Table.Body>
           {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
-            <Table.Row key={id} id={id}>
+            <Table.Row id={id} key={id}>
               <Table.Cell>{columnA}</Table.Cell>
               <Table.Cell>{columnB}</Table.Cell>
               <Table.Cell>{columnC}</Table.Cell>
@@ -289,7 +289,7 @@ describe('Table', () => {
       <Table columns={columns} selectable>
         <Table.Body>
           {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
-            <Table.Row selectDisabled={id === selectedIds[0]} key={id} id={id}>
+            <Table.Row id={id} key={id} selectDisabled={id === selectedIds[0]}>
               <Table.Cell>{columnA}</Table.Cell>
               <Table.Cell>{columnB}</Table.Cell>
               <Table.Cell>{columnC}</Table.Cell>
@@ -307,7 +307,7 @@ describe('Table', () => {
       <Table columns={columns}>
         <Table.Body>
           {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
-            <Table.Row key={id} selectDisabled="reason" id={id}>
+            <Table.Row id={id} key={id} selectDisabled="reason">
               <Table.Cell>{columnA}</Table.Cell>
               <Table.Cell>{columnB}</Table.Cell>
               <Table.Cell>{columnC}</Table.Cell>
@@ -321,10 +321,10 @@ describe('Table', () => {
 
   test('Should render correctly with stipped', () =>
     shouldMatchEmotionSnapshot(
-      <Table columns={columns} stripped bordered>
+      <Table bordered columns={columns} stripped>
         <Table.Body>
           {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
-            <Table.Row key={id} id={id}>
+            <Table.Row id={id} key={id}>
               <Table.Cell>{columnA}</Table.Cell>
               <Table.Cell>{columnB}</Table.Cell>
               <Table.Cell>{columnC}</Table.Cell>
@@ -339,16 +339,16 @@ describe('Table', () => {
   test('Should render correctly with info', () =>
     shouldMatchEmotionSnapshot(
       <Table
+        bordered
         columns={[
-          { label: 'Name', info: 'This column is important' },
+          { info: 'This column is important', label: 'Name' },
           ...columns.slice(1, 3),
         ]}
         stripped
-        bordered
       >
         <Table.Body>
           {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
-            <Table.Row key={id} id={id}>
+            <Table.Row id={id} key={id}>
               <Table.Cell>{columnA}</Table.Cell>
               <Table.Cell>{columnB}</Table.Cell>
               <Table.Cell>{columnC}</Table.Cell>
@@ -364,13 +364,13 @@ describe('Table', () => {
     shouldMatchEmotionSnapshot(
       <Table
         columns={[
-          { label: 'Name', info: 'This column is important' },
+          { info: 'This column is important', label: 'Name' },
           ...columns.slice(1, 3),
         ]}
       >
         <Table.Body>
           {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
-            <Table.Row key={id} id={id} highlightAnimation>
+            <Table.Row highlightAnimation id={id} key={id}>
               <Table.Cell>{columnA}</Table.Cell>
               <Table.Cell>{columnB}</Table.Cell>
               <Table.Cell>{columnC}</Table.Cell>
@@ -387,7 +387,7 @@ describe('Table', () => {
       <Table columns={columns} selectable>
         <Table.Body>
           {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
-            <Table.Row key={id} id={id}>
+            <Table.Row id={id} key={id}>
               <Table.Cell>{columnA}</Table.Cell>
               <Table.Cell>{columnB}</Table.Cell>
               <Table.Cell>{columnC}</Table.Cell>

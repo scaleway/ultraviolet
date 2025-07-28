@@ -14,8 +14,8 @@ const selectInputOptions = [
         Monthly <Badge sentiment="success">Save 7%</Badge>
       </Stack>
     ),
-    value: 'monthly',
     searchText: 'monthly',
+    value: 'monthly',
   },
   {
     label: (
@@ -23,8 +23,8 @@ const selectInputOptions = [
         Yearly <Badge sentiment="success">Save 10%</Badge>
       </Stack>
     ),
-    value: 'yearly',
     searchText: 'yearly',
+    value: 'yearly',
   },
 ]
 
@@ -47,34 +47,34 @@ export const Children: StoryFn<ComponentProps<typeof OrderSummary>> = props => {
   return (
     <OrderSummary {...props} discount={discount}>
       <RadioGroup
+        legend="Commitment terms"
         name="commitment"
-        value={commitment}
         onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
           setCommitment(event.target.value === 'false' ? 'false' : 'true')
           if (event.target.value === 'false') {
             setDiscount(0)
           } else setDiscount(commitmentChoice === 'monthly' ? 0.07 : 0.1)
         }}
-        legend="Commitment terms"
+        value={commitment}
       >
-        <RadioGroup.Radio value="false" label="No commitment" />
-        <RadioGroup.Radio value="true" label="Commitment" />
+        <RadioGroup.Radio label="No commitment" value="false" />
+        <RadioGroup.Radio label="Commitment" value="true" />
       </RadioGroup>
       <SelectInput
-        options={selectInputOptions}
+        disabled={commitment === 'false'}
         name="commitment"
         onChange={onChangeCommitment}
-        disabled={commitment === 'false'}
-        value={commitmentChoice}
+        options={selectInputOptions}
         size="medium"
+        value={commitmentChoice}
       />
     </OrderSummary>
   )
 }
 
 Children.args = {
-  items: mockItems,
   header: 'Summary',
+  items: mockItems,
 }
 
 Children.parameters = {

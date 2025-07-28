@@ -55,7 +55,7 @@ const StyledText = styled(Text)`
 `
 
 const Cell = ({ value, variant }: CellProps) => (
-  <StyledText variant={variant} sentiment="neutral" as="span">
+  <StyledText as="span" sentiment="neutral" variant={variant}>
     {value as string | number}
   </StyledText>
 )
@@ -101,10 +101,10 @@ export const CustomLegend = ({
       css={styles.head}
     >
       <LongContainer>Legend</LongContainer>
-      <Cell variant="body" value="Minimum" />
-      <Cell variant="body" value="Maximum" />
-      <Cell variant="body" value="Average" />
-      <Cell variant="body" value="Current" />
+      <Cell value="Minimum" variant="body" />
+      <Cell value="Maximum" variant="body" />
+      <Cell value="Average" variant="body" />
+      <Cell value="Current" variant="body" />
     </div>
     <div
       // oxlint-disable-next-line no-unknown-property
@@ -117,9 +117,10 @@ export const CustomLegend = ({
 
         return (
           <div
-            key={labelIndexed}
             // oxlint-disable-next-line no-unknown-property
             css={styles.row}
+            // oxlint-disable-next-line no-unknown-property
+            key={labelIndexed}
           >
             <LongContainer>
               <Checkbox
@@ -130,26 +131,27 @@ export const CustomLegend = ({
                 }
               >
                 <CellValueContainer>
-                  <Text as="span" variant="bodySmall" sentiment="neutral">
+                  <Text as="span" sentiment="neutral" variant="bodySmall">
                     {row?.['label']}
                   </Text>
                   <div
-                    data-testid={`label-${id}`}
                     // oxlint-disable-next-line no-unknown-property
                     css={styles.legend(index)}
+                    // oxlint-disable-next-line no-unknown-property
+                    data-testid={`label-${id}`}
                   />
                 </CellValueContainer>
               </Checkbox>
             </LongContainer>
-            <Cell variant="bodySmall" value={axisTransformer(getMin(values))} />
-            <Cell variant="bodySmall" value={axisTransformer(getMax(values))} />
+            <Cell value={axisTransformer(getMin(values))} variant="bodySmall" />
+            <Cell value={axisTransformer(getMax(values))} variant="bodySmall" />
             <Cell
-              variant="bodySmall"
               value={axisTransformer(getAverage(values))}
+              variant="bodySmall"
             />
             <Cell
-              variant="bodySmall"
               value={axisTransformer(getCurrent(values))}
+              variant="bodySmall"
             />
           </div>
         )

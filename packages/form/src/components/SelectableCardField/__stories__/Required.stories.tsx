@@ -15,7 +15,7 @@ export const Required: StoryFn<
 )
 Required.args = {
   name: 'required',
-  showTick: true,
   required: true,
+  showTick: true,
   value: 'required',
 }

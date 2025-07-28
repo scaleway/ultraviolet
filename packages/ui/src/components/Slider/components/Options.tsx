@@ -76,17 +76,17 @@ export const Options = ({
 
         return (
           <Option
+            data-element-left={index === 0}
+            data-element-right={index === length - 1}
+            data-value={element.value}
             key={element.value}
             left={left}
             width={optionWidth}
-            data-value={element.value}
-            data-element-left={index === 0}
-            data-element-right={index === length - 1}
           >
             <Text
               as="p"
-              variant={isSelected ? 'captionStrong' : 'caption'}
               sentiment={isSelected ? 'primary' : 'neutral'}
+              variant={isSelected ? 'captionStrong' : 'caption'}
             >
               {formatedElement}
             </Text>

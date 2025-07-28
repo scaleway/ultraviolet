@@ -49,17 +49,17 @@ describe('UnitInputField', () => {
 
     const { asFragment } = renderWithTheme(
       <Form
-        onSubmit={value => onSubmit(value)}
         errors={mockErrors}
         methods={result.current}
+        onSubmit={value => onSubmit(value)}
       >
         <UnitInputField
           label="Test"
           name="test"
-          required
           options={optionsSelect}
           placeholder="input"
           placeholderUnit="select"
+          required
         />
         <Submit>Submit</Submit>
       </Form>,

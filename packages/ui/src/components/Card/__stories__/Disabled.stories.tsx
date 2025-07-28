@@ -5,12 +5,12 @@ import { Text } from '../../Text'
 import { Card } from '../index'
 
 export const Disabled: StoryFn = args => (
-  <Card {...args} header="Disabled Card" disabled>
+  <Card {...args} disabled header="Disabled Card">
     <Stack gap={1}>
-      <Text as="p" variant="body" disabled sentiment="neutral">
+      <Text as="p" disabled sentiment="neutral" variant="body">
         This is a disabled card children.
       </Text>
-      <Button sentiment="neutral" disabled>
+      <Button disabled sentiment="neutral">
         Button
       </Button>
     </Stack>

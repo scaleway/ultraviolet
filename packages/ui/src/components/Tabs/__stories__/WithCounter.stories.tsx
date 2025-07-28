@@ -6,19 +6,19 @@ export const WithCounter = Template.bind({})
 WithCounter.args = {
   children: [
     <Tabs.Tab value={1}>No Counter</Tabs.Tab>,
-    <Tabs.Tab value={2} counter={0}>
+    <Tabs.Tab counter={0} value={2}>
       No items
     </Tabs.Tab>,
-    <Tabs.Tab value={3} counter={8}>
+    <Tabs.Tab counter={8} value={3}>
       Some items
     </Tabs.Tab>,
-    <Tabs.Tab value={4} counter={80}>
+    <Tabs.Tab counter={80} value={4}>
       Some items
     </Tabs.Tab>,
-    <Tabs.Tab value={5} counter={8000}>
+    <Tabs.Tab counter={8000} value={5}>
       Some items
     </Tabs.Tab>,
-    <Tabs.Tab value={6} counter="99+">
+    <Tabs.Tab counter="99+" value={6}>
       Some items
     </Tabs.Tab>,
   ],

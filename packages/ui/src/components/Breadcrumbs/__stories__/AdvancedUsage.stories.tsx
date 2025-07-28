@@ -16,91 +16,91 @@ export const AdvancedUsage: StoryFn<
         align="start"
         disclosure={
           <Breadcrumbs.Item>
-            <Stack direction="row" gap={1} alignItems="center">
-              <Avatar variant="text" text="AS" shape="square" size="xsmall" />
+            <Stack alignItems="center" direction="row" gap={1}>
+              <Avatar shape="square" size="xsmall" text="AS" variant="text" />
               Organization
               <ArrowDownIcon />
             </Stack>
           </Breadcrumbs.Item>
         }
       >
-        <Menu.Item sentiment="primary" active>
-          <Stack direction="row" gap={1} alignItems="center">
-            <Avatar variant="text" text="AS" shape="square" size="xsmall" />
+        <Menu.Item active sentiment="primary">
+          <Stack alignItems="center" direction="row" gap={1}>
+            <Avatar shape="square" size="xsmall" text="AS" variant="text" />
             Aria Sinclair
           </Stack>
         </Menu.Item>
         <Menu.Item>
-          <Stack direction="row" gap={1} alignItems="center">
-            <Avatar variant="text" text="JQ" shape="square" size="xsmall" />
+          <Stack alignItems="center" direction="row" gap={1}>
+            <Avatar shape="square" size="xsmall" text="JQ" variant="text" />
             Jasper Quinn
           </Stack>
         </Menu.Item>
       </Menu>
       <Menu
         align="start"
-        searchable
-        hideOnClickItem
         disclosure={
           <Breadcrumbs.Item>
-            <Stack direction="row" gap={1} alignItems="center">
+            <Stack alignItems="center" direction="row" gap={1}>
               <Avatar
-                variant="colors"
                 colors={['#BF95F9', '#3D1862']}
                 shape="circle"
                 size="xsmall"
+                variant="colors"
               />
               Default Project
               <ArrowDownIcon />
             </Stack>
           </Breadcrumbs.Item>
         }
+        hideOnClickItem
+        searchable
       >
         <Menu.Group
           label="Projects"
           labelDescription={
             <Stack
-              direction="row"
               alignItems="center"
+              direction="row"
               justifyContent="end"
               width="100%"
             >
-              <Button sentiment="info" variant="ghost" size="xsmall">
+              <Button sentiment="info" size="xsmall" variant="ghost">
                 <PlusIcon />
                 Create Project
               </Button>
             </Stack>
           }
         >
-          <Menu.Item sentiment="primary" active borderless>
-            <Stack direction="row" gap={1} alignItems="center">
+          <Menu.Item active borderless sentiment="primary">
+            <Stack alignItems="center" direction="row" gap={1}>
               <Avatar
-                variant="colors"
                 colors={['#BF95F9', '#3D1862']}
                 shape="circle"
                 size="xsmall"
+                variant="colors"
               />
               Default Project
             </Stack>
           </Menu.Item>
           <Menu.Item borderless>
-            <Stack direction="row" gap={1} alignItems="center">
+            <Stack alignItems="center" direction="row" gap={1}>
               <Avatar
-                variant="colors"
                 colors={['#FFBFAB', '#822F15']}
                 shape="circle"
                 size="xsmall"
+                variant="colors"
               />
               Project 1
             </Stack>
           </Menu.Item>
           <Menu.Item borderless>
-            <Stack direction="row" gap={1} alignItems="center">
+            <Stack alignItems="center" direction="row" gap={1}>
               <Avatar
-                variant="colors"
                 colors={['#FF9EC1', '#740D32']}
                 shape="circle"
                 size="xsmall"
+                variant="colors"
               />
               Project 2
             </Stack>

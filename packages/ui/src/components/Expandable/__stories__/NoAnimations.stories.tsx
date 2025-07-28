@@ -15,7 +15,7 @@ export const NoAnimations: StoryFn<typeof Expandable> = args => {
         {toggled ? <MinusIcon /> : <PlusIcon />}
         Click me to {toggled ? 'hide' : 'show'} content
       </Button>
-      <Expandable {...args} opened={toggled} animationDuration={0}>
+      <Expandable {...args} animationDuration={0} opened={toggled}>
         I&lsquo;m a visible Expandable content
       </Expandable>
     </>

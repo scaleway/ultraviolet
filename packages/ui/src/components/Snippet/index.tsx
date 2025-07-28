@@ -162,11 +162,11 @@ const CodeContent = ({
 }: CodeContentProps) => (
   <PreText
     as="pre"
-    variant="code"
     hasShowMoreButton={hasShowMoreButton}
-    showMore={showMore}
     noExpandable={noExpandable}
     rows={rows}
+    showMore={showMore}
+    variant="code"
     whiteSpace={!multiline ? 'nowrap' : undefined}
   >
     {multiline ? (
@@ -234,18 +234,18 @@ export const Snippet = ({
 
   return (
     <Container
-      multiline={multiline}
       className={className}
       data-testid={dataTestId}
+      multiline={multiline}
     >
       <StyledStack>
         {hasShowMoreButton ? (
           <Expandable minHeight={minHeight} opened={showMore}>
             <CodeContent
-              prefix={prefix}
-              multiline={multiline}
               lines={lines}
+              multiline={multiline}
               noExpandable={noExpandable}
+              prefix={prefix}
               rows={rows}
             >
               {children}
@@ -253,10 +253,10 @@ export const Snippet = ({
           </Expandable>
         ) : (
           <CodeContent
-            prefix={prefix}
-            multiline={multiline}
             lines={lines}
+            multiline={multiline}
             noExpandable={noExpandable}
+            prefix={prefix}
             rows={rows}
           >
             {children}
@@ -264,24 +264,24 @@ export const Snippet = ({
         )}
         <ButtonContainer multiline={multiline && numberOfLines > 1}>
           <CopyButton
-            value={children}
-            copyText={copyText}
             copiedText={copiedText}
+            copyText={copyText}
             onCopy={onCopy}
             sentiment="neutral"
+            value={children}
           />
         </ButtonContainer>
         {hasShowMoreButton ? (
           <ShowMoreContainer showMore={showMore}>
             <StyledButton
-              type="button"
-              onClick={setShowMore}
               aria-expanded={showMore}
+              onClick={setShowMore}
+              type="button"
             >
               <AlignCenterText
                 as="span"
-                variant="bodySmallStrong"
                 sentiment="neutral"
+                variant="bodySmallStrong"
               >
                 {showMore ? hideText : showText}
                 &nbsp;

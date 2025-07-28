@@ -10,34 +10,34 @@ describe('Plans', () => {
   it('should work with default props', () =>
     shouldMatchEmotionSnapshot(
       <Plans
-        plans={[planStarter]}
         features={[gb, pipeline, domain, ssl, fees]}
+        plans={[planStarter]}
       />,
     ))
 
   it('should work with hideLabels', () =>
     shouldMatchEmotionSnapshot(
       <Plans
-        plans={[planStarter]}
         features={[gb, pipeline, domain, ssl, fees]}
         hideLabels
+        plans={[planStarter]}
       />,
     ))
 
   it('should work with hideFeatureText', () =>
     shouldMatchEmotionSnapshot(
       <Plans
-        plans={[planStarter]}
         features={[gb, pipeline, domain, ssl, fees]}
         hideFeatureText
+        plans={[planStarter]}
       />,
     ))
 
   it('should work with value', () =>
     shouldMatchEmotionSnapshot(
       <Plans
-        plans={[planStarter]}
         features={[gb, pipeline, domain, ssl, fees]}
+        plans={[planStarter]}
         value="advanced"
       />,
     ))
@@ -46,11 +46,11 @@ describe('Plans', () => {
     const mockOnChange = vi.fn()
     const { asFragment } = renderWithTheme(
       <Plans
-        plans={[planAdvanced]}
         features={[gb, pipeline, domain, ssl, fees]}
-        value="professional"
         fieldName="fieldName"
         onChange={mockOnChange}
+        plans={[planAdvanced]}
+        value="professional"
       />,
     )
     const hint = screen.getByTestId('hint-popover')
@@ -68,11 +68,11 @@ describe('Plans', () => {
     const mockOnChange = vi.fn()
     const { asFragment } = renderWithTheme(
       <Plans
-        plans={[planStarter, planProfessional, planAdvanced]}
         features={[gb, pipeline, domain, ssl, fees]}
-        value="professional"
         fieldName="fieldName"
         onChange={mockOnChange}
+        plans={[planStarter, planProfessional, planAdvanced]}
+        value="professional"
       />,
     )
     const plan = screen.getByTestId('advanced')
@@ -91,8 +91,8 @@ describe('Plans', () => {
   it('should work with group', () =>
     shouldMatchEmotionSnapshot(
       <Plans
-        plans={[planStarter]}
         features={[gb, group, pipeline, domain, ssl, fees]}
+        plans={[planStarter]}
       />,
     ))
 })

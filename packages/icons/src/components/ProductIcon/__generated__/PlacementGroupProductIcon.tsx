@@ -16,72 +16,72 @@ export const PlacementGroupProductIcon = ({
     <g className="Placement-Group">
       <g className=".Square">
         <path
-          fill="#EEF"
-          d="M0 16C0 7.163 7.163 0 16 0h32c8.837 0 16 7.163 16 16v32c0 8.837-7.163 16-16 16H16C7.163 64 0 56.837 0 48z"
           className="fillWeak"
+          d="M0 16C0 7.163 7.163 0 16 0h32c8.837 0 16 7.163 16 16v32c0 8.837-7.163 16-16 16H16C7.163 64 0 56.837 0 48z"
+          fill="#EEF"
         />
       </g>
       <path
-        fill="#A365F6"
+        className="fillStrong"
+        clipRule="evenodd"
         d="M36 45h-8v-2h8z"
-        className="fillStrong"
-        clipRule="evenodd"
+        fill="#A365F6"
         fillRule="evenodd"
       />
       <path
-        fill="#4F0599"
+        className="fill"
+        clipRule="evenodd"
         d="M50 38H38v12h12zm-12-2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V38a2 2 0 0 0-2-2z"
-        className="fill"
-        clipRule="evenodd"
+        fill="#4F0599"
         fillRule="evenodd"
       />
       <path
-        fill="#A365F6"
+        className="fillStrong"
+        clipRule="evenodd"
         d="M44 46a2 2 0 1 0 0-4 2 2 0 0 0 0 4m0 2a4 4 0 1 0 0-8 4 4 0 0 0 0 8"
-        className="fillStrong"
-        clipRule="evenodd"
+        fill="#A365F6"
         fillRule="evenodd"
       />
       <path
-        fill="#4F0599"
+        className="fill"
+        clipRule="evenodd"
         d="M26 38H14v12h12zm-12-2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V38a2 2 0 0 0-2-2z"
-        className="fill"
-        clipRule="evenodd"
+        fill="#4F0599"
         fillRule="evenodd"
       />
       <path
-        fill="#A365F6"
+        className="fillStrong"
+        clipRule="evenodd"
         d="M20 46a2 2 0 1 0 0-4 2 2 0 0 0 0 4m0 2a4 4 0 1 0 0-8 4 4 0 0 0 0 8m23-12v-8h2v8zm-24 0v-8h2v8zm17-15h-8v-2h8z"
-        className="fillStrong"
-        clipRule="evenodd"
+        fill="#A365F6"
         fillRule="evenodd"
       />
       <path
-        fill="#4F0599"
+        className="fill"
+        clipRule="evenodd"
         d="M50 14H38v12h12zm-12-2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V14a2 2 0 0 0-2-2z"
-        className="fill"
-        clipRule="evenodd"
-        fillRule="evenodd"
-      />
-      <path
-        fill="#A365F6"
-        d="M44 22a2 2 0 1 0 0-4 2 2 0 0 0 0 4m0 2a4 4 0 1 0 0-8 4 4 0 0 0 0 8"
-        className="fillStrong"
-        clipRule="evenodd"
-        fillRule="evenodd"
-      />
-      <path
         fill="#4F0599"
-        d="M26 14H14v12h12zm-12-2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V14a2 2 0 0 0-2-2z"
-        className="fill"
-        clipRule="evenodd"
         fillRule="evenodd"
       />
       <path
-        fill="#A365F6"
-        d="M20 22a2 2 0 1 0 0-4 2 2 0 0 0 0 4m0 2a4 4 0 1 0 0-8 4 4 0 0 0 0 8"
         className="fillStrong"
         clipRule="evenodd"
+        d="M44 22a2 2 0 1 0 0-4 2 2 0 0 0 0 4m0 2a4 4 0 1 0 0-8 4 4 0 0 0 0 8"
+        fill="#A365F6"
+        fillRule="evenodd"
+      />
+      <path
+        className="fill"
+        clipRule="evenodd"
+        d="M26 14H14v12h12zm-12-2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V14a2 2 0 0 0-2-2z"
+        fill="#4F0599"
+        fillRule="evenodd"
+      />
+      <path
+        className="fillStrong"
+        clipRule="evenodd"
+        d="M20 22a2 2 0 1 0 0-4 2 2 0 0 0 0 4m0 2a4 4 0 1 0 0-8 4 4 0 0 0 0 8"
+        fill="#A365F6"
         fillRule="evenodd"
       />
     </g>

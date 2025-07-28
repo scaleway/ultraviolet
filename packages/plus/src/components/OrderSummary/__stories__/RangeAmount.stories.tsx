@@ -5,9 +5,9 @@ export const RangeAmount = Template.bind({})
 
 RangeAmount.args = {
   ...Template.args,
+  fractionDigits: 10,
   hideTimeUnit: false,
   items: [categoryAZ, rangePriceContent],
-  fractionDigits: 10,
   periodOptions: ['minutes', 'hours', 'days'],
 }
 

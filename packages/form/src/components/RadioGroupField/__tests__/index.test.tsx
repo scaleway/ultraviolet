@@ -8,13 +8,13 @@ describe('RadioField', () => {
   test('should render correctly checked', async () => {
     const { asFragment } = renderWithForm(
       <RadioGroupField
-        value="value-1"
-        onChange={() => {}}
-        name="radio"
         legend="Label"
+        name="radio"
+        onChange={() => {}}
+        value="value-1"
       >
-        <RadioGroupField.Radio value="value-1" label="Radio 1" />
-        <RadioGroupField.Radio value="value-2" label="Radio 2" />
+        <RadioGroupField.Radio label="Radio 1" value="value-1" />
+        <RadioGroupField.Radio label="Radio 2" value="value-2" />
       </RadioGroupField>,
     )
     const [firstInput, secondInput] = screen.getAllByRole('radio', {
@@ -33,13 +33,13 @@ describe('RadioField', () => {
 
     const { asFragment } = renderWithForm(
       <RadioGroupField
-        name="test"
-        value="value-2"
-        onChange={onChange}
         legend="RadioGroupField events"
+        name="test"
+        onChange={onChange}
+        value="value-2"
       >
-        <RadioGroupField.Radio value="value-1" label="Radio 1" />
-        <RadioGroupField.Radio value="value-2" label="Radio 2" />
+        <RadioGroupField.Radio label="Radio 1" value="value-1" />
+        <RadioGroupField.Radio label="Radio 2" value="value-2" />
       </RadioGroupField>,
     )
     const input = screen.getAllByRole('radio', { hidden: true })[0]

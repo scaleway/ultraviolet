@@ -14,11 +14,11 @@ export const getNivoTheme = (theme: ReturnType<typeof useTheme>) =>
     },
     text: {
       fill: theme.colors.neutral.text,
-      outlineColor: theme.colors.neutral.background,
       fontFamily: theme.typography.body.fontFamily,
       fontSize: theme.typography.bodySmall.fontSize,
       fontWeight: theme.typography.bodySmall.fontWeight,
-      lineHeight: theme.typography.bodySmall.lineHeight,
       letterSpacing: theme.typography.bodySmall.letterSpacing,
+      lineHeight: theme.typography.bodySmall.lineHeight,
+      outlineColor: theme.colors.neutral.background,
     },
   }) satisfies NivoTheme

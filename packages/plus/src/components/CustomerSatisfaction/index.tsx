@@ -17,29 +17,29 @@ import rating5NS from './assets/5-5NB.svg'
 
 const ratings = [
   {
-    value: 1,
-    imgSelected: rating1,
     imgNotSelected: rating1NS,
+    imgSelected: rating1,
+    value: 1,
   },
   {
-    value: 2,
-    imgSelected: rating2,
     imgNotSelected: rating2NS,
+    imgSelected: rating2,
+    value: 2,
   },
   {
-    value: 3,
-    imgSelected: rating3,
     imgNotSelected: rating3NS,
+    imgSelected: rating3,
+    value: 3,
   },
   {
-    value: 4,
-    imgSelected: rating4,
     imgNotSelected: rating4NS,
+    imgSelected: rating4,
+    value: 4,
   },
   {
-    value: 5,
-    imgSelected: rating5,
     imgNotSelected: rating5NS,
+    imgSelected: rating5,
+    value: 5,
   },
 ] as const
 
@@ -129,10 +129,10 @@ export const CustomerSatisfaction = ({
 
   return (
     <Stack
-      direction="row"
-      justifyContent="space-between"
       className={className}
       data-testid={dataTestId}
+      direction="row"
+      justifyContent="space-between"
     >
       {ratings.map(rating => {
         const isSelected = rating.value === value
@@ -141,15 +141,11 @@ export const CustomerSatisfaction = ({
 
         return (
           <Image
-            key={rating.value}
+            data-testid={`${dataTestId}-${rating.value}`}
             isHappy={isHappy}
             isHovered={isHovered}
             isSelected={isSelected}
-            src={
-              isSelected || isOverfly || rating.value <= value
-                ? rating.imgSelected
-                : rating.imgNotSelected
-            }
+            key={rating.value}
             onClick={() => {
               onChange(rating.value)
             }}
@@ -159,7 +155,11 @@ export const CustomerSatisfaction = ({
             onMouseLeave={() => {
               setHoveredValue(0)
             }}
-            data-testid={`${dataTestId}-${rating.value}`}
+            src={
+              isSelected || isOverfly || rating.value <= value
+                ? rating.imgSelected
+                : rating.imgNotSelected
+            }
           />
         )
       })}

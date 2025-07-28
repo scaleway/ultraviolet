@@ -37,20 +37,20 @@ type ContextProps = {
 )
 
 const SelectInputContext = createContext<ContextProps>({
-  options: [],
-  multiselect: false as true | false,
-  onSearch: () => {},
+  displayedOptions: [],
   isDropdownVisible: false,
-  setIsDropdownVisible: () => {},
+  multiselect: false as true | false,
+  numberOfOptions: 0,
+  onChange: () => {},
+  onSearch: () => {},
+  options: [],
   searchInput: '',
-  setSearchInput: () => {},
   selectAll: { label: '' },
   selectAllGroup: false,
-  numberOfOptions: 0,
-  displayedOptions: [],
   selectedData: { allSelected: false, selectedGroups: [], selectedValues: [] },
+  setIsDropdownVisible: () => {},
+  setSearchInput: () => {},
   setSelectedData: () => {},
-  onChange: () => {},
 })
 
 export const useSelectInput = () => useContext(SelectInputContext)
@@ -148,28 +148,28 @@ export const SelectInputProvider = <T extends boolean>({
     switch (action.type) {
       case 'selectAll':
         if (state.allSelected) {
-          return { selectedValues: [], allSelected: false, selectedGroups: [] }
+          return { allSelected: false, selectedGroups: [], selectedValues: [] }
         }
 
         return {
-          selectedValues: allValues.map(option => option.value),
           allSelected: true,
           selectedGroups: allGroups,
+          selectedValues: allValues.map(option => option.value),
         }
 
       case 'selectGroup':
         if (!Array.isArray(options)) {
           if (state.selectedGroups.includes(action.selectedGroup)) {
             return {
+              allSelected: false,
+              selectedGroups: state.selectedGroups.filter(
+                selectedGroup => selectedGroup !== action.selectedGroup,
+              ),
               selectedValues: [...state.selectedValues].filter(
                 selectedValue =>
                   !options[action.selectedGroup].find(
                     option => option.value === selectedValue,
                   ),
-              ),
-              allSelected: false,
-              selectedGroups: state.selectedGroups.filter(
-                selectedGroup => selectedGroup !== action.selectedGroup,
               ),
             }
           }
@@ -183,9 +183,9 @@ export const SelectInputProvider = <T extends boolean>({
           )
 
           return {
-            selectedValues: newSelectedValues,
             allSelected: newSelectedValues.length === numberOfOptions,
             selectedGroups: [...state.selectedGroups, action.selectedGroup],
+            selectedValues: newSelectedValues,
           }
         }
 
@@ -195,9 +195,6 @@ export const SelectInputProvider = <T extends boolean>({
         if (multiselect) {
           if (state.selectedValues.includes(action.clickedOption.value)) {
             return {
-              selectedValues: state.selectedValues.filter(
-                val => val !== action.clickedOption.value,
-              ),
               allSelected: false,
               selectedGroups:
                 action.group && state.selectedGroups.includes(action.group)
@@ -205,14 +202,13 @@ export const SelectInputProvider = <T extends boolean>({
                       selectedGroup => selectedGroup !== action.group,
                     )
                   : [],
+              selectedValues: state.selectedValues.filter(
+                val => val !== action.clickedOption.value,
+              ),
             }
           }
 
           return {
-            selectedValues: [
-              ...state.selectedValues,
-              action.clickedOption.value,
-            ],
             allSelected: state.selectedValues.length + 1 === numberOfOptions,
             selectedGroups:
               !Array.isArray(options) &&
@@ -226,22 +222,26 @@ export const SelectInputProvider = <T extends boolean>({
               )
                 ? [...state.selectedGroups, action.group]
                 : state.selectedGroups,
+            selectedValues: [
+              ...state.selectedValues,
+              action.clickedOption.value,
+            ],
           }
         }
 
         return {
-          selectedValues: [action.clickedOption.value],
           allSelected: false,
           selectedGroups: state.selectedGroups,
+          selectedValues: [action.clickedOption.value],
         }
 
       case 'clearAll':
-        return { selectedGroups: [], selectedValues: [], allSelected: false }
+        return { allSelected: false, selectedGroups: [], selectedValues: [] }
 
       case 'update':
         return {
-          selectedGroups: state.selectedGroups,
           allSelected: state.allSelected,
+          selectedGroups: state.selectedGroups,
           selectedValues: state.selectedValues.filter(selectedValue => {
             if (!Array.isArray(options)) {
               return Object.keys(options).some(group =>
@@ -259,9 +259,9 @@ export const SelectInputProvider = <T extends boolean>({
 
       case 'reset':
         return {
-          selectedValues: action.selectedValues,
           allSelected: false,
           selectedGroups: action.selectedGroups,
+          selectedValues: action.selectedValues,
         }
 
       default:
@@ -270,36 +270,36 @@ export const SelectInputProvider = <T extends boolean>({
   }
 
   const [selectedData, setSelectedData] = useReducer(reducer, {
-    selectedValues: currentValue,
     allSelected: false,
     selectedGroups,
+    selectedValues: currentValue,
   })
 
   useEffect(() => {
     setSelectedData({
-      type: 'reset',
       selectedGroups,
       selectedValues: currentValue,
+      type: 'reset',
     })
   }, [currentValue, selectedGroups])
 
   const providerValue = useMemo(
     () =>
       ({
-        onSearch: setDisplayedOptions,
+        displayedOptions,
         isDropdownVisible,
-        setIsDropdownVisible: handleDropDownVisible,
-        searchInput,
-        setSearchInput,
-        options,
         multiselect,
+        numberOfOptions,
+        onChange,
+        onSearch: setDisplayedOptions,
+        options,
+        searchInput,
         selectAll,
         selectAllGroup,
-        numberOfOptions,
-        displayedOptions,
         selectedData,
+        setIsDropdownVisible: handleDropDownVisible,
+        setSearchInput,
         setSelectedData,
-        onChange,
       }) as ContextProps,
     [
       isDropdownVisible,

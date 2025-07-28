@@ -24,7 +24,7 @@ describe('SwitchButtonField', () => {
     )
 
     const { asFragment } = renderWithTheme(
-      <Form onSubmit={onSubmit} errors={mockErrors} methods={result.current}>
+      <Form errors={mockErrors} methods={result.current} onSubmit={onSubmit}>
         <SwitchButtonField name="test" onChange={() => vi.fn()}>
           <SwitchButtonField.Option value="left">Left</SwitchButtonField.Option>
           <SwitchButtonField.Option value="right">

@@ -112,9 +112,9 @@ export const ProgressBar = ({
   'aria-label': ariaLabel,
 }: ProgressBarProps) => (
   <Stack
-    gap={direction === 'column' ? 1 : 2}
-    direction={direction}
     alignItems="center"
+    direction={direction}
+    gap={direction === 'column' ? 1 : 2}
   >
     {direction === 'column' && (label || showProgress) ? (
       <Stack
@@ -128,9 +128,9 @@ export const ProgressBar = ({
         {showProgress ? (
           <Text
             as="label"
-            variant="bodySmall"
-            sentiment="neutral"
             placement="right"
+            sentiment="neutral"
+            variant="bodySmall"
           >
             {prefix}
             {suffix === '%' ? (100 * value) / max : value}
@@ -147,27 +147,27 @@ export const ProgressBar = ({
     ) : null}
 
     <StyledProgressContainer
-      role="progressbar"
-      aria-valuenow={value}
-      aria-valuemin={0}
+      aria-label={ariaLabel}
+      aria-labelledby={ariaLabelledBy}
       aria-valuemax={max}
+      aria-valuemin={0}
+      aria-valuenow={value}
       className={className}
       data-testid={dataTestId}
-      aria-labelledby={ariaLabelledBy}
-      aria-label={ariaLabel}
+      role="progressbar"
     >
       {progress ? (
         <StyledProgress />
       ) : (
         <StyledFilled
-          sentiment={sentiment}
           percentageValue={(100 * Math.max(0, Math.min(max, value))) / max}
+          sentiment={sentiment}
         />
       )}
     </StyledProgressContainer>
     {showProgress && direction === 'row' ? (
       <StyledStack direction="row" gap={1}>
-        <StyledText as="label" variant="bodySmall" sentiment="neutral">
+        <StyledText as="label" sentiment="neutral" variant="bodySmall">
           {prefix}
           {suffix === '%' ? (100 * value) / max : value}
           {suffix}

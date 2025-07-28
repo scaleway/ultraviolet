@@ -8,9 +8,9 @@ export const Region = Template.bind({})
 
 Region.args = {
   children: [
-    <EstimateCost.Region label="PAR" image={frFlag} />,
-    <EstimateCost.Region label="AMS" image={nlFlag} />,
-    <EstimateCost.Region label="WAW" image={plFlag} />,
+    <EstimateCost.Region image={frFlag} label="PAR" />,
+    <EstimateCost.Region image={nlFlag} label="AMS" />,
+    <EstimateCost.Region image={plFlag} label="WAW" />,
   ],
 }
 

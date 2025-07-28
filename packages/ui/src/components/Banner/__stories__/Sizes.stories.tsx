@@ -5,10 +5,10 @@ export const Sizes: StoryFn = args => (
   <>
     <Banner
       {...args}
-      title="Apply to Scaleway Startup programs"
       buttonText="Apply now"
       linkText="Learn more"
       size="medium"
+      title="Apply to Scaleway Startup programs"
     >
       The Scaleway Startup programs offer the perfect combination of cloud
       credits, advisors and startup experts to develop your business and limit
@@ -16,11 +16,11 @@ export const Sizes: StoryFn = args => (
     </Banner>
     <Banner
       {...args}
-      title="Apply to Scaleway Startup programs"
       buttonText="Apply now"
+      direction="row"
       linkText="Learn more"
       size="small"
-      direction="row"
+      title="Apply to Scaleway Startup programs"
     >
       The Scaleway Startup programs offer the perfect combination of cloud
       credits, advisors and startup experts to develop your business and limit
@@ -28,10 +28,10 @@ export const Sizes: StoryFn = args => (
     </Banner>
     <Banner
       {...args}
-      title="Apply to Scaleway Startup programs"
       buttonText="Apply now"
       linkText="Learn more"
       size="medium"
+      title="Apply to Scaleway Startup programs"
       variant="promotional"
     >
       The Scaleway Startup programs offer the perfect combination of cloud
@@ -40,12 +40,12 @@ export const Sizes: StoryFn = args => (
     </Banner>
     <Banner
       {...args}
-      title="Apply to Scaleway Startup programs"
       buttonText="Apply now"
+      direction="row"
       linkText="Learn more"
       size="small"
+      title="Apply to Scaleway Startup programs"
       variant="promotional"
-      direction="row"
     >
       The Scaleway Startup programs offer the perfect combination of cloud
       credits, advisors and startup experts to develop your business and limit

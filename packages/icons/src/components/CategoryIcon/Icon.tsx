@@ -37,11 +37,11 @@ export const Icon = ({
   children,
 }: IconProps) => (
   <StyledIcon
-    width="20"
-    height="20"
-    viewBox="0 0 20 20"
-    variant={variant}
     disabled={disabled}
+    height="20"
+    variant={variant}
+    viewBox="0 0 20 20"
+    width="20"
   >
     {children}
   </StyledIcon>

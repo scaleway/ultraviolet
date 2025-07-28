@@ -10,15 +10,10 @@ export const WithMenu: StoryFn<typeof Table> = ({ ...props }) => (
 )
 
 WithMenu.args = {
-  columns: [
-    { label: 'Name', info: 'This column is important' },
-    ...columns.slice(1, 4),
-    { label: '', width: '42px' },
-  ],
   children: (
     <Table.Body>
       {data.map(movie => (
-        <Table.Row key={movie.id} id={movie.id}>
+        <Table.Row id={movie.id} key={movie.id}>
           <Table.Cell>{movie.name}</Table.Cell>
           <Table.Cell>{movie.releaseYear}</Table.Cell>
           <Table.Cell>{movie.trilogy}</Table.Cell>
@@ -26,25 +21,25 @@ WithMenu.args = {
           <Table.Cell>
             <Menu
               disclosure={
-                <Button sentiment="neutral" variant="ghost" size="small">
+                <Button sentiment="neutral" size="small" variant="ghost">
                   <DotsHorizontalIcon />
                 </Button>
               }
             >
               <Menu.Item borderless>default (neutral)</Menu.Item>
-              <Menu.Item sentiment="danger" borderless>
+              <Menu.Item borderless sentiment="danger">
                 Danger
               </Menu.Item>
               <Menu.Item
-                href="/?path=/docs/components-navigation-menu--borderless"
                 borderless
+                href="/?path=/docs/components-navigation-menu--borderless"
               >
                 Link Neutral
               </Menu.Item>
               <Menu.Item
-                sentiment="danger"
-                href="/?path=/docs/components-navigation-menu--borderless"
                 borderless
+                href="/?path=/docs/components-navigation-menu--borderless"
+                sentiment="danger"
               >
                 Link Danger
               </Menu.Item>
@@ -54,4 +49,9 @@ WithMenu.args = {
       ))}
     </Table.Body>
   ),
+  columns: [
+    { info: 'This column is important', label: 'Name' },
+    ...columns.slice(1, 4),
+    { label: '', width: '42px' },
+  ],
 }

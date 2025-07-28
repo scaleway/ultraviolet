@@ -51,10 +51,10 @@ export const ActionBar = ({
 }: ActionBarProps) =>
   createPortal(
     <StyledDiv
-      rank={rank}
-      role={role}
       className={className}
       data-testid={dataTestId}
+      rank={rank}
+      role={role}
     >
       <Container alignItems="center">{children}</Container>
     </StyledDiv>,

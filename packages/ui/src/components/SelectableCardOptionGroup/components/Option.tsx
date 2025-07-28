@@ -103,60 +103,60 @@ export const Option = ({
 
   return (
     <StyledSelectableCard
-      value={value}
+      checked={groupValue === value}
+      className={className}
+      data-testid={dataTestId}
+      disabled={disabled || groupDisabled}
+      isError={error}
       onChange={event => {
         onChange?.(event)
         if (Array.isArray(options)) {
           onChangeOption?.(options?.[0]?.value)
         }
       }}
-      className={className}
-      type="radio"
       showTick
-      disabled={disabled || groupDisabled}
-      checked={groupValue === value}
-      isError={error}
-      data-testid={dataTestId}
       tooltip={tooltip}
+      type="radio"
+      value={value}
       {...(label ? { id: inputId } : { 'aria-label': ariaLabel as string })}
     >
       <FullHeightStack
         direction="column"
-        width="100%"
         flex="1 1 auto"
-        justifyContent="space-between"
         gap={2}
+        justifyContent="space-between"
+        width="100%"
       >
         <StyledPaddedStack
-          direction="column"
           alignItems="center"
+          direction="column"
+          gap={1}
           justifyContent="center"
           width="100%"
-          gap={1}
         >
           {typeof image === 'string' ? (
             <Image
-              src={image}
               alt={typeof label === 'string' ? label : value}
-              size={size}
               disabled={disabled || groupDisabled}
+              size={size}
+              src={image}
             />
           ) : (
             image
           )}
           <Stack
-            direction="column"
             alignItems="center"
+            direction="column"
+            gap={0.5}
             justifyContent="center"
             width="100%"
-            gap={0.5}
           >
             {typeof label === 'string' ? (
               <Label
-                sentiment={groupValue === value ? 'primary' : 'neutral'}
-                htmlFor={inputId}
                 disabled={disabled || groupDisabled}
+                htmlFor={inputId}
                 labelDescription={labelDescription}
+                sentiment={groupValue === value ? 'primary' : 'neutral'}
               >
                 {label}
               </Label>
@@ -167,19 +167,19 @@ export const Option = ({
           </Stack>
         </StyledPaddedStack>
         <StyledSelectInput
-          value={optionValue}
-          onChange={onChangeOption}
-          options={options}
-          name="selectable-card-option"
-          size="medium"
-          disabled={disabled || groupDisabled}
-          error={error}
-          checked={groupValue === value}
           aria-label={
             typeof label === 'string' ? `${label} option` : `${value} option`
           }
+          checked={groupValue === value}
           data-testid={dataTestId ? `${dataTestId}-select` : undefined}
+          disabled={disabled || groupDisabled}
+          error={error}
+          name="selectable-card-option"
+          onChange={onChangeOption}
+          options={options}
           placeholder={optionPlaceholder}
+          size="medium"
+          value={optionValue}
         />
       </FullHeightStack>
     </StyledSelectableCard>

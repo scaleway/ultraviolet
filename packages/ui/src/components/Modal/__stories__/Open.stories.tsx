@@ -10,7 +10,7 @@ export const Open: StoryFn = props => {
   return (
     <Stack gap={2}>
       <Button onClick={toggleOpen}>Open modal</Button>
-      <Modal {...props} open={open} onClose={toggleOpen}>
+      <Modal {...props} onClose={toggleOpen} open={open}>
         Modal content
       </Modal>
     </Stack>

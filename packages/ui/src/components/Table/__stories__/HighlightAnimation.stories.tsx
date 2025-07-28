@@ -21,23 +21,23 @@ export const HighlightAnimation: StoryFn<typeof Table> = ({ ...props }) => {
   const [data, setData] = useState<Movie[]>(DATA)
 
   const newData = {
-    id: (data.length + 1).toString(),
-    name: 'New Movie',
     director: 'Unknown',
+    id: (data.length + 1).toString(),
+    isNew: true,
+    name: 'New Movie',
+    releaseYear: 2024,
     storyBy: 'Unknown',
     trilogy: 'Unknown',
-    releaseYear: 2024,
-    isNew: true,
   } satisfies Movie
 
   return (
     <Stack gap={1}>
-      <Row templateColumns="repeat(4, 1fr)" gap={2}>
+      <Row gap={2} templateColumns="repeat(4, 1fr)">
         <Button onClick={() => setData([...data, newData])}>
           <PlusIcon />
           Add data
         </Button>
-        <Button sentiment="neutral" onClick={() => setData(DATA)}>
+        <Button onClick={() => setData(DATA)} sentiment="neutral">
           <RestoreIcon />
           Reset data
         </Button>
@@ -46,9 +46,9 @@ export const HighlightAnimation: StoryFn<typeof Table> = ({ ...props }) => {
         <Table.Body>
           {data.map(movie => (
             <Table.Row
-              key={movie.id}
-              id={movie.id}
               highlightAnimation={movie.isNew}
+              id={movie.id}
+              key={movie.id}
             >
               <Table.Cell>{movie.name}</Table.Cell>
               <Table.Cell>{movie.releaseYear}</Table.Cell>

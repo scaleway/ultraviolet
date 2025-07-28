@@ -7,10 +7,10 @@ export const Responsive: StoryFn<
 > = props => (
   <div
     style={{
-      resize: 'both',
-      overflow: 'auto',
       border: '1px solid black',
+      overflow: 'auto',
       padding: '10px',
+      resize: 'both',
     }}
   >
     <Breadcrumbs {...props}>
@@ -18,10 +18,10 @@ export const Responsive: StoryFn<
       <Breadcrumbs.Item to="/products">Products</Breadcrumbs.Item>
       <Breadcrumbs.Item to="/products/1">Instance</Breadcrumbs.Item>
       <Breadcrumbs.Item to="/products/1/details">Overview</Breadcrumbs.Item>
-      <Breadcrumbs.Item to="/products/1/details/1255889966" minWidth="100px">
+      <Breadcrumbs.Item minWidth="100px" to="/products/1/details/1255889966">
         Instance Number 1255889966
       </Breadcrumbs.Item>
-      <Breadcrumbs.Item onClick={() => {}} minWidth="100px" maxWidth="200px">
+      <Breadcrumbs.Item maxWidth="200px" minWidth="100px" onClick={() => {}}>
         Instance Number 1255889966 IP Address
       </Breadcrumbs.Item>
     </Breadcrumbs>

@@ -13,6 +13,6 @@ Gap.parameters = {
 }
 
 Gap.args = {
-  gap: 4,
   children: coloredChildren,
+  gap: 4,
 }

@@ -15,46 +15,46 @@ const HeadingContainer = styled(Stack)`
 const Introduction = () => (
   <Stack gap={6}>
     <HeadingContainer
-      gap={2}
       alignItems="center"
-      justifyContent="space-between"
       direction="row"
+      gap={2}
+      justifyContent="space-between"
     >
       <Breakpoint down="medium">
         <GithubAndDocumentationButtons />
       </Breakpoint>
       <Stack>
-        <Text as="h1" variant="headingLarge" sentiment="primary">
+        <Text as="h1" sentiment="primary" variant="headingLarge">
           Scaleway <b>UI</b>
         </Text>
-        <Text as="h2" variant="heading" sentiment="primary" prominence="weak">
+        <Text as="h2" prominence="weak" sentiment="primary" variant="heading">
           Open Source <br />
           Component Library
         </Text>
       </Stack>
       <Image
-        src={introductionIllustration}
         alt="A woman and a man designing a digital user interface"
-        width={500}
         priority
+        src={introductionIllustration}
+        width={500}
       />
     </HeadingContainer>
 
-    <HeadingContainer gap={2} justifyContent="space-between" direction="row">
+    <HeadingContainer direction="row" gap={2} justifyContent="space-between">
       <Card
-        title="Accessibility"
         description="We follow WAI-ARIA standards for each component."
         icon={swA11y}
+        title="Accessibility"
       />
       <Card
-        title="Customizable"
         description="Easily define dark and light themes and customize them with various colors."
         icon={swCustom}
+        title="Customizable"
       />
       <Card
-        title="Developer XP"
         description="Ultraviolet UI is the main library in the Scaleway frontend environment. It is open source and continually maintained by our developers."
         icon={swDx}
+        title="Developer XP"
       />
     </HeadingContainer>
   </Stack>

@@ -100,19 +100,19 @@ const TagInner = ({
   disabled = false,
 }: TagInnerProps) => (
   <>
-    <StyledText as="div" variant="caption" oneLine aria-disabled={disabled}>
+    <StyledText aria-disabled={disabled} as="div" oneLine variant="caption">
       {children}
     </StyledText>
 
     {onClose && !isLoading ? (
       <StyledCloseButton
-        onClick={onClose}
-        disabled={disabled}
         aria-label="Close tag"
         data-testid="close-tag"
-        variant="ghost"
+        disabled={disabled}
+        onClick={onClose}
         sentiment="neutral"
         size="small"
+        variant="ghost"
       >
         <CloseIcon size="small" />
       </StyledCloseButton>
@@ -160,13 +160,13 @@ export const Tag = ({
       <Tooltip text={isCopied ? copiedText : copyText}>
         <Container
           // @note: sending disabled as a special sentiment is a bit weird
-          sentiment={disabled ? 'disabled' : sentiment}
-          copiable
-          onClick={setCopied}
           className={className}
+          copiable
           data-testid={dataTestId}
+          onClick={setCopied}
+          sentiment={disabled ? 'disabled' : sentiment}
         >
-          <TagInner isLoading={isLoading} onClose={onClose} disabled={disabled}>
+          <TagInner disabled={disabled} isLoading={isLoading} onClose={onClose}>
             {children}
           </TagInner>
         </Container>
@@ -176,11 +176,11 @@ export const Tag = ({
 
   return (
     <StyledContainer
-      sentiment={disabled ? 'disabled' : sentiment}
       className={className}
       data-testid={dataTestId}
+      sentiment={disabled ? 'disabled' : sentiment}
     >
-      <TagInner isLoading={isLoading} onClose={onClose} disabled={disabled}>
+      <TagInner disabled={disabled} isLoading={isLoading} onClose={onClose}>
         {children}
       </TagInner>
     </StyledContainer>

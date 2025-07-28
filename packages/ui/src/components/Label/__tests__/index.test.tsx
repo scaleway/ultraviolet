@@ -46,10 +46,10 @@ describe('DateInput', () => {
   test('renders correctly with htmlFor', async () => {
     const { asFragment } = renderWithTheme(
       <div>
-        <Label size="small" htmlFor="id" id="id-label">
+        <Label htmlFor="id" id="id-label" size="small">
           Label
         </Label>
-        <input id="id" data-testid="test-input" />
+        <input data-testid="test-input" id="id" />
       </div>,
     )
 

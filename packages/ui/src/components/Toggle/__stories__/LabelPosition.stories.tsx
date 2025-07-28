@@ -4,8 +4,8 @@ export const LabelPosition = Template.bind({})
 
 LabelPosition.args = {
   label: 'Toggle me on',
-  name: 'label',
   labelPosition: 'left',
+  name: 'label',
 }
 
 LabelPosition.parameters = {

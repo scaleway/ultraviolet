@@ -5,8 +5,8 @@ export const Multiselect = Template.bind({})
 
 Multiselect.args = {
   ...Template.args,
-  options: dataGrouped,
   multiselect: true,
+  options: dataGrouped,
   value: '',
 }
 Multiselect.decorators = [

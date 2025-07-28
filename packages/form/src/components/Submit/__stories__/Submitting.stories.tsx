@@ -12,12 +12,12 @@ export const Submitting: StoryFn = () => {
   return (
     <Form
       errors={mockErrors}
+      methods={methods}
       onSubmit={() =>
         new Promise(resolve => {
           setTimeout(() => resolve(undefined), 5000)
         })
       }
-      methods={methods}
     >
       <Submit>
         {isSubmitting ? 'This form is submitting' : 'Click to submit for 5sec'}

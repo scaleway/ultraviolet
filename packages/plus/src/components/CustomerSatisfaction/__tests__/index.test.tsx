@@ -7,7 +7,7 @@ import { CustomerSatisfaction } from '..'
 describe('CustomerSatisfaction', () => {
   it('should work with parameters', () => {
     const { asFragment } = renderWithTheme(
-      <CustomerSatisfaction value={4} onChange={vi.fn()} />,
+      <CustomerSatisfaction onChange={vi.fn()} value={4} />,
     )
     expect(asFragment()).toMatchSnapshot()
   })
@@ -15,9 +15,9 @@ describe('CustomerSatisfaction', () => {
   it('should check hover and unhover', async () => {
     const { asFragment } = renderWithTheme(
       <CustomerSatisfaction
-        value={4}
-        onChange={() => {}}
         data-testid="customer-satisfaction"
+        onChange={() => {}}
+        value={4}
       />,
     )
     await userEvent.hover(screen.getByTestId('customer-satisfaction-1'))

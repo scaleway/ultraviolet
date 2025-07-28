@@ -38,16 +38,16 @@ export const SelectInput: StoryFn<typeof InfiniteScroll> = args => {
 
   return (
     <SelectInputUV
-      name="select-input"
       label="Select input"
-      options={data}
       loadMore={
         <InfiniteScroll
           {...args}
-          onLoadMore={loadMoreData}
           loader={InfiniteScrollLoader}
+          onLoadMore={loadMoreData}
         />
       }
+      name="select-input"
+      options={data}
     />
   )
 }

@@ -79,7 +79,7 @@ export const PieChart = ({
     () =>
       emptyLegend ? (
         <EmptyLegend>
-          <Text variant="body" as="p">
+          <Text as="p" variant="body">
             {emptyLegend}
           </Text>
         </EmptyLegend>
@@ -95,10 +95,10 @@ export const PieChart = ({
         <EmptyLegendDisplayed />
       ) : (
         <Legends
-          focused={currentFocusIndex}
-          data={data}
-          onFocusChange={setCurrentFocusIndex}
           colors={localColors}
+          data={data}
+          focused={currentFocusIndex}
+          onFocusChange={setCurrentFocusIndex}
         />
       ),
     [isEmpty, currentFocusIndex, data, EmptyLegendDisplayed, localColors],
@@ -108,12 +108,9 @@ export const PieChart = ({
     <Container height={height}>
       <div style={{ position: 'relative' }}>
         <Pie
+          activeOuterRadiusOffset={!isEmpty ? 4 : 0}
           colors={localColors}
-          height={height}
-          width={width}
-          value="percent"
-          enableArcLabels={false}
-          enableArcLinkLabels={false}
+          cornerRadius={0}
           data={
             !isEmpty
               ? data
@@ -135,12 +132,11 @@ export const PieChart = ({
               type: 'patternLines',
             },
           ]}
-          margin={margin}
+          enableArcLabels={false}
+          enableArcLinkLabels={false}
+          height={height}
           innerRadius={0.8}
-          cornerRadius={0}
-          padAngle={1}
-          activeOuterRadiusOffset={!isEmpty ? 4 : 0}
-          tooltip={emptyTooltip}
+          margin={margin}
           onMouseEnter={(datum, event) => {
             if (!isEmpty) {
               const pie = event.currentTarget
@@ -149,7 +145,11 @@ export const PieChart = ({
             }
           }}
           onMouseLeave={() => setCurrentFocusIndex(undefined)}
+          padAngle={1}
           theme={getNivoTheme(theme)}
+          tooltip={emptyTooltip}
+          value="percent"
+          width={width}
           {...chartProps}
         />
         {content ? <StyledContent>{content}</StyledContent> : null}

@@ -53,16 +53,16 @@ export const OfferList = ({
 
   return (
     <OfferListProvider
-      selectable={type}
+      autoCollapse={autoCollapse}
       expandable={expandable}
       loading={loading}
       onChangeSelect={onChangeSelect}
-      autoCollapse={autoCollapse}
+      selectable={type}
     >
       <StyledList
-        expandable={false}
-        columns={computedColumns}
         autoCollapse={autoCollapse}
+        columns={computedColumns}
+        expandable={false}
         onSelectedChange={setSelectedRows}
         selectable={false}
       >

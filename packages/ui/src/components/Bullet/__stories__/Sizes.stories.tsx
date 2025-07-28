@@ -24,7 +24,7 @@ Sizes.parameters = {
 Sizes.decorators = [
   StoryComponent => (
     <div
-      style={{ display: 'flex', alignItems: 'start', flexWrap: 'wrap', gap: 8 }}
+      style={{ alignItems: 'start', display: 'flex', flexWrap: 'wrap', gap: 8 }}
     >
       <StoryComponent />
     </div>

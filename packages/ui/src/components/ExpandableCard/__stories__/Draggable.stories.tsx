@@ -40,13 +40,13 @@ export const Draggable: StoryFn<typeof ExpandableCard> = args => {
           <ExpandableCard
             key={name}
             {...args}
-            name="pool"
-            header={name}
-            value={name}
-            onDrop={onDrop}
             draggable
+            header={name}
             index={index}
+            name="pool"
+            onDrop={onDrop}
             onKeyDown={onKeyDown}
+            value={name}
           >
             Content for {name}
           </ExpandableCard>

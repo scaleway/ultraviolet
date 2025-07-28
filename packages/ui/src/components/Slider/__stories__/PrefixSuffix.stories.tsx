@@ -53,54 +53,54 @@ export const PrefixSuffix: StoryFn<typeof Slider> = args => {
     <Stack gap={4}>
       <Slider
         {...args}
-        value={34}
-        suffix="%"
         label="Suffix"
         max={100}
         onChange={() => {}}
+        suffix="%"
         tooltip={false}
+        value={34}
       />
-      <Slider {...args} prefix="+" label="Prefix" />
+      <Slider {...args} label="Prefix" prefix="+" />
       <Slider
         {...args}
         double
-        unit="GB"
         label="Double"
-        value={[15, 70]}
         onChange={() => {}}
-        tooltip={false}
         suffix={undefined}
+        tooltip={false}
+        unit="GB"
+        value={[15, 70]}
       />
       <Slider
         {...args}
-        value={value}
+        label="Interactive label"
         onChange={onChange}
         suffix={suffix}
-        label="Interactive label"
         tooltip={false}
+        value={value}
       />
       <Slider
         {...args}
-        value={values}
         double
+        label="Interactive label double!"
         onChange={onChangeDouble}
         suffix={suffixDouble}
-        label="Interactive label double!"
         tooltip={false}
+        value={values}
       />
       <Slider
         {...args}
-        unit="€"
         label="Unit"
-        value={53}
         onChange={() => {}}
         tooltip={false}
+        unit="€"
+        value={53}
       />
     </Stack>
   )
 }
 
-PrefixSuffix.args = { value: 34, step: 1, min: 0, max: 100 }
+PrefixSuffix.args = { max: 100, min: 0, step: 1, value: 34 }
 
 PrefixSuffix.parameters = {
   docs: {

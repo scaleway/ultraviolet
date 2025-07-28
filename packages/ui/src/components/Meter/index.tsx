@@ -66,6 +66,7 @@ export const Meter = ({
 
   return (
     <div
+      aria-labelledby="meter-label"
       aria-live="polite"
       aria-valuemax={strength.length ?? 0}
       aria-valuemin={0}
@@ -75,14 +76,13 @@ export const Meter = ({
       id={id}
       role="meter"
       title={title}
-      aria-labelledby="meter-label"
     >
-      <Text id="meter-label" variant="bodySmallStrong" as="p">
+      <Text as="p" id="meter-label" variant="bodySmallStrong">
         {title}
         <StyledStrength
           as="span"
-          variant="bodySmallStrong"
           strength={strength[value]}
+          variant="bodySmallStrong"
         >
           {text}
         </StyledStrength>

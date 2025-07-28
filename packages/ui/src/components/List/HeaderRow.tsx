@@ -41,12 +41,12 @@ export const HeaderRow = ({ children, hasSelectAllColumn }: RowProps) => {
         {hasSelectAllColumn ? (
           <NoPaddingHeaderCell>
             <Checkbox
-              name="list-select-checkbox"
-              value="all"
               aria-label="select all"
               checked={allRowSelectValue}
-              onChange={selectAllHandler}
               disabled={selectableRowCount === 0}
+              name="list-select-checkbox"
+              onChange={selectAllHandler}
+              value="all"
             />
           </NoPaddingHeaderCell>
         ) : null}

@@ -39,6 +39,6 @@ NotRequired.parameters = {
 }
 
 NotRequired.args = {
-  name: 'conditions',
   legend: 'Conditions',
+  name: 'conditions',
 }

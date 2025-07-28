@@ -12,12 +12,12 @@ type ContextType = {
 
 export const Data = createContext<ContextType>({
   currentStep: 1,
-  setCurrentStep: () => {},
-  numberOfSteps: 1,
   done: [false, false, false, false, false],
+  numberOfSteps: 1,
+  onClickHide: () => {},
+  setCurrentStep: () => {},
   setDone: () => {},
   setHidden: () => {},
-  onClickHide: () => {},
 })
 
 type NextStepProps = {

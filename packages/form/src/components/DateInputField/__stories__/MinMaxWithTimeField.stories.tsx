@@ -10,9 +10,9 @@ export const MinMaxDateWithTimeField: StoryFn<
 > = ({ name, minDate, maxDate, required }) => (
   <Stack gap={1}>
     <DateInputField
-      name={name}
-      minDate={minDate}
       maxDate={maxDate}
+      minDate={minDate}
+      name={name}
       required={required}
     />
     <TimeInputField name={name} />

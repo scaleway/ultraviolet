@@ -22,9 +22,9 @@ import type { OptionType } from './types'
 import { INPUT_SIZE_HEIGHT } from './types'
 
 const SIZES_TAG = {
+  gap: 8,
   paddings: 16,
   plusTag: 48,
-  gap: 8,
 }
 
 type SelectBarProps = {
@@ -224,11 +224,11 @@ const DisplayValues = ({
 
   return multiselect ? (
     <MultiselectStack
+      alignItems="center"
       direction="row"
       gap="1"
-      wrap="nowrap"
       ref={refTag}
-      alignItems="center"
+      wrap="nowrap"
     >
       {/* Hidden div to measure the width of the tags */}
       <div
@@ -239,10 +239,10 @@ const DisplayValues = ({
       >
         {potentiallyNonOverflowedValues.map(option => (
           <CustomTag
-            onClose={() => {}}
             className={option.value}
-            key={option.value}
             hidden
+            key={option.value}
+            onClose={() => {}}
           >
             {option?.label}
           </CustomTag>
@@ -251,9 +251,8 @@ const DisplayValues = ({
       {nonOverflowedValues.map((option, index) => (
         <CustomTag
           data-testid="selected-options-tags"
-          sentiment="neutral"
-          key={option?.value}
           disabled={disabled}
+          key={option?.value}
           lastElementMaxWidth={
             index === nonOverflowedValues.length - 1 && overflow
               ? lastElementMaxWidth
@@ -264,8 +263,8 @@ const DisplayValues = ({
               ? event => {
                   event.stopPropagation()
                   setSelectedData({
-                    type: 'selectOption',
                     clickedOption: option,
+                    type: 'selectOption',
                   })
                   const newSelectedValues = selectedData.selectedValues?.filter(
                     val => val !== option.value,
@@ -274,19 +273,20 @@ const DisplayValues = ({
                 }
               : undefined
           }
+          sentiment="neutral"
         >
           {option?.label}
         </CustomTag>
       ))}
 
       {overflowed ? (
-        <Stack ref={refPlusTag} justifyContent="center">
+        <Stack justifyContent="center" ref={refPlusTag}>
           <PlusTag
-            sentiment="neutral"
+            aria-label="Plus tag"
+            data-testid="plus-tag"
             disabled={disabled}
             key="+"
-            data-testid="plus-tag"
-            aria-label="Plus tag"
+            sentiment="neutral"
           >
             <PlusIcon size="xsmall" />
             {overflowAmount}
@@ -297,10 +297,10 @@ const DisplayValues = ({
   ) : (
     <SelectedValues
       as="div"
-      variant={size === 'large' ? 'body' : 'bodySmall'}
       disabled={disabled}
       prominence="default"
       sentiment="neutral"
+      variant={size === 'large' ? 'body' : 'bodySmall'}
     >
       {selectedData.selectedValues[0]
         ? findOptionInOptions(options, selectedData.selectedValues[0])?.label
@@ -415,12 +415,6 @@ const SelectBar = ({
           const canBeVisible = newAccumulatedWidth <= innerWidth
 
           return {
-            measuredVisibleTags: [
-              ...accumulator.measuredVisibleTags,
-              canBeVisible && potentiallyNonOverflowedValues[index],
-            ].filter(Boolean) as OptionType[],
-            measuredHiddenTags:
-              accumulator.measuredHiddenTags + (!canBeVisible ? 1 : 0),
             accumulatedWidth: !canBeVisible
               ? accumulator.accumulatedWidth
               : newAccumulatedWidth,
@@ -430,14 +424,20 @@ const SelectBar = ({
             lastVisibleLabel: canBeVisible
               ? potentiallyNonOverflowedValues[index].label
               : accumulator.lastVisibleLabel,
+            measuredHiddenTags:
+              accumulator.measuredHiddenTags + (!canBeVisible ? 1 : 0),
+            measuredVisibleTags: [
+              ...accumulator.measuredVisibleTags,
+              canBeVisible && potentiallyNonOverflowedValues[index],
+            ].filter(Boolean) as OptionType[],
           }
         },
         {
-          measuredVisibleTags: [],
-          measuredHiddenTags: 0,
           accumulatedWidth: 0,
           lastVisibleElementWidth: 0,
           lastVisibleLabel: '',
+          measuredHiddenTags: 0,
+          measuredVisibleTags: [],
         },
       )
 
@@ -543,18 +543,20 @@ const SelectBar = ({
   return (
     <Tooltip text={tooltip}>
       <StyledInputWrapper
-        role="combobox"
-        id={id}
+        aria-expanded={isDropdownVisible}
+        aria-haspopup="listbox"
+        aria-label={label}
+        autoFocus={autoFocus}
         data-disabled={disabled}
+        data-dropdownvisible={isDropdownVisible}
         data-readonly={readOnly}
         data-size={size}
-        data-dropdownvisible={isDropdownVisible}
         data-state={state}
+        data-testid={dataTestId}
+        id={id}
         onClick={
           openable ? () => setIsDropdownVisible(!isDropdownVisible) : undefined
         }
-        data-testid={dataTestId}
-        autoFocus={autoFocus}
         onKeyDown={event => {
           if (event.key === 'ArrowDown') {
             if (!isDropdownVisible) {
@@ -572,46 +574,43 @@ const SelectBar = ({
             : null
         }}
         ref={innerRef}
-        aria-haspopup="listbox"
-        aria-expanded={isDropdownVisible}
+        role="combobox"
         tabIndex={0}
-        aria-label={label}
       >
         {shouldDisplayValues ? (
           <DisplayValues
-            refTag={refTag}
-            nonOverflowedValues={nonOverflowedValues}
-            potentiallyNonOverflowedValues={potentiallyNonOverflowedValues}
             disabled={disabled}
-            readOnly={readOnly}
-            overflowed={!!overflowAmount}
-            overflowAmount={overflowAmount}
-            size={size}
-            measureRef={measureRef}
             lastElementMaxWidth={lastElementMaxWidth}
+            measureRef={measureRef}
+            nonOverflowedValues={nonOverflowedValues}
             overflow={overflow}
+            overflowAmount={overflowAmount}
+            overflowed={!!overflowAmount}
+            potentiallyNonOverflowedValues={potentiallyNonOverflowedValues}
+            readOnly={readOnly}
             refPlusTag={refPlusTag}
+            refTag={refTag}
+            size={size}
           />
         ) : (
           <Placeholder
             as="p"
-            variant={size === 'large' ? 'body' : 'bodySmall'}
-            sentiment="neutral"
             disabled={disabled}
             prominence="weak"
+            sentiment="neutral"
+            variant={size === 'large' ? 'body' : 'bodySmall'}
           >
             {placeholder}
           </Placeholder>
         )}
-        <StateStack direction="row" gap={1} alignItems="center" ref={arrowRef}>
+        <StateStack alignItems="center" direction="row" gap={1} ref={arrowRef}>
           {error ? <AlertCircleIcon sentiment="danger" /> : null}
           {success && !error ? <CheckCircleIcon sentiment="success" /> : null}
           {clearable && selectedData.selectedValues.length > 0 ? (
             <Button
               aria-label="clear value"
+              data-testid="clear-all"
               disabled={disabled || !selectedData.selectedValues[0] || readOnly}
-              variant="ghost"
-              size="small"
               onClick={event => {
                 event.stopPropagation()
                 setSelectedData({ type: 'clearAll' })
@@ -622,16 +621,17 @@ const SelectBar = ({
                 }
               }}
               sentiment="neutral"
-              data-testid="clear-all"
+              size="small"
+              variant="ghost"
             >
               <CloseIcon />
             </Button>
           ) : null}
           <ArrowDownIcon
             aria-label="show dropdown"
-            size="small"
-            sentiment="neutral"
             disabled={disabled || readOnly}
+            sentiment="neutral"
+            size="small"
           />
         </StateStack>
       </StyledInputWrapper>

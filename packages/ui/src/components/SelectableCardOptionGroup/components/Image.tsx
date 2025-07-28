@@ -24,11 +24,11 @@ type ImageType = {
 
 export const Image = ({ src, alt, size, disabled, className }: ImageType) => (
   <StyledImage
-    src={src}
     alt={alt}
-    width={IMAGE_SIZES[size]}
-    height={IMAGE_SIZES[size]}
-    data-disabled={disabled}
     className={className}
+    data-disabled={disabled}
+    height={IMAGE_SIZES[size]}
+    src={src}
+    width={IMAGE_SIZES[size]}
   />
 )

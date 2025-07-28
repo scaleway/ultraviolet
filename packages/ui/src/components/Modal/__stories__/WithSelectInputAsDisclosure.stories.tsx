@@ -20,9 +20,6 @@ const OPTIONS = [
 
 export const WithSelectInputAsDisclosure: StoryFn = props => (
   <SelectInput
-    label="Choose an option"
-    name="example"
-    options={OPTIONS}
     footer={
       <Modal
         disclosure={<Button>Open Modal with SelectInput</Button>}
@@ -33,6 +30,9 @@ export const WithSelectInputAsDisclosure: StoryFn = props => (
         </div>
       </Modal>
     }
+    label="Choose an option"
+    name="example"
+    options={OPTIONS}
   />
 )
 WithSelectInputAsDisclosure.parameters = {

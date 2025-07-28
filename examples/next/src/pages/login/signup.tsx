@@ -48,7 +48,7 @@ type AlertProps = {
 const SignUpAlert = ({ alert, values, age }: AlertProps) => {
   if (alert === 'success') {
     return (
-      <Alert sentiment="success" title="Account Created" closable>
+      <Alert closable sentiment="success" title="Account Created">
         Welcome {values.gender} {values.firstname} {values.lastname}, {age}
         year{age > 1 ? 's' : ''} old. Your email adress is {values.email}.
       </Alert>
@@ -56,7 +56,7 @@ const SignUpAlert = ({ alert, values, age }: AlertProps) => {
   }
   if (alert === 'too young') {
     return (
-      <Alert sentiment="danger" closable>
+      <Alert closable sentiment="danger">
         Must be 1+
       </Alert>
     )
@@ -66,15 +66,15 @@ const SignUpAlert = ({ alert, values, age }: AlertProps) => {
 
 const SignUp = () => {
   const methods = useForm({
-    mode: 'onChange',
     defaultValues: {
-      email: '',
-      password: '',
-      gender: '',
-      firstname: '',
-      lastname: '',
       birthdate: new Date(),
+      email: '',
+      firstname: '',
+      gender: '',
+      lastname: '',
+      password: '',
     },
+    mode: 'onChange',
   })
   const values = useWatch({ control: methods.control })
   const [alertSubmit, setAlertSubmit] = useState('default')
@@ -89,63 +89,63 @@ const SignUp = () => {
   return (
     <StyledSignUpContainer>
       <Form<FormValues>
-        methods={methods}
         errors={mockErrors}
+        methods={methods}
         onSubmit={handleSubmit}
       >
-        <Stack gap={1} alignItems="center">
+        <Stack alignItems="center" gap={1}>
           <ProfileIcon size="small" />
           <Text as="div" placement="center" variant="heading">
             Sign up form
           </Text>
           <Stack width="100%">
-            <RadioGroupField name="gender" direction="row">
-              <RadioGroupField.Radio name="mr" value="mr" label="Mr" />
-              <RadioGroupField.Radio name="mrs" value="mrs" label="Mrs" />
+            <RadioGroupField direction="row" name="gender">
+              <RadioGroupField.Radio label="Mr" name="mr" value="mr" />
+              <RadioGroupField.Radio label="Mrs" name="mrs" value="mrs" />
             </RadioGroupField>
-            <Stack gap={3} direction="row">
+            <Stack direction="row" gap={3}>
               <StyledInput
-                required
+                className="inputs"
                 label="First Name"
                 name="firstname"
                 placeholder="John"
-                className="inputs"
+                required
               />
               <StyledInput
-                required
+                className="inputs"
                 label="Last Name"
                 name="lastname"
                 placeholder="Smith"
-                className="inputs"
+                required
               />
             </Stack>
             <DateInputField
-              name="birthdate"
-              label="Birth Date"
-              required
               className="age-input"
+              label="Birth Date"
+              name="birthdate"
+              required
             />
             <StyledInput
+              className="inputs"
               label="Email"
               name="email"
-              required
               placeholder="example@email.com"
               regex={[EMAIL_REGEX]}
-              className="inputs"
+              required
             />
             <StyledInput
-              label="Password"
-              name="password"
-              type="password"
-              required
-              minLength={8}
               helper="Min 8 characters"
+              label="Password"
+              minLength={8}
+              name="password"
+              required
+              type="password"
             />
           </Stack>
           <Submit>Create an account</Submit>
         </Stack>
       </Form>
-      <SignUpAlert alert={alertSubmit} values={values} age={age} />
+      <SignUpAlert age={age} alert={alertSubmit} values={values} />
     </StyledSignUpContainer>
   )
 }

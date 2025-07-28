@@ -3,7 +3,7 @@ import { Row } from '../../Row'
 import { Card } from '../index'
 
 export const Layout: StoryFn = args => (
-  <Row templateColumns="repeat(2, 1fr)" gap={2}>
+  <Row gap={2} templateColumns="repeat(2, 1fr)">
     <Card {...args} header="Lorem Ipsum">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit Pellentesque sit
     </Card>

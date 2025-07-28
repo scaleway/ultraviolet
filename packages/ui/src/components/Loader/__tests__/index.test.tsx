@@ -9,14 +9,14 @@ describe('Loader', () => {
     shouldMatchEmotionSnapshot(<Loader label="Loading test" />))
 
   test(`renders active with default percentage`, () =>
-    shouldMatchEmotionSnapshot(<Loader label="Loading test" active />))
+    shouldMatchEmotionSnapshot(<Loader active label="Loading test" />))
 
   test(`renders active with custom percentage`, () =>
-    shouldMatchEmotionSnapshot(<Loader label="Loading test" active />))
+    shouldMatchEmotionSnapshot(<Loader active label="Loading test" />))
 
   test(`renders with percentage 75`, () =>
     shouldMatchEmotionSnapshot(
-      <Loader label="Loading test" active percentage={75} />,
+      <Loader active label="Loading test" percentage={75} />,
     ))
 
   test(`renders with color neutral and primary`, () =>

@@ -36,13 +36,13 @@ export const SelectableCardField = <
     field,
     fieldState: { error },
   } = useController<TFieldValues, TFieldName>({
-    name,
     control,
-    shouldUnregister,
+    name,
     rules: {
       required,
       validate,
     },
+    shouldUnregister,
   })
 
   const isChecked =
@@ -55,8 +55,13 @@ export const SelectableCardField = <
       {...props}
       {...(productIcon ? { productIcon } : { illustration })}
       {...(label ? { label } : { 'aria-label': ariaLabel as string })}
-      isError={!!error}
       checked={isChecked}
+      isError={!!error}
+      name={field.name}
+      onBlur={event => {
+        field.onBlur()
+        onBlur?.(event)
+      }}
       onChange={event => {
         if (type === 'checkbox') {
           const fieldValue = (field.value ?? []) as string[]
@@ -79,16 +84,11 @@ export const SelectableCardField = <
           >,
         )
       }}
-      onBlur={event => {
-        field.onBlur()
-        onBlur?.(event)
-      }}
       onFocus={event => {
         onFocus?.(event)
       }}
       type={type}
       value={value ?? ''}
-      name={field.name}
     />
   )
 }

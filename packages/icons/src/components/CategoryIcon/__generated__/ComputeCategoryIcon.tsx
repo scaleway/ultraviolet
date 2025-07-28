@@ -15,21 +15,21 @@ export const ComputeCategoryIcon = ({
   <Icon {...props}>
     <g className="Compute">
       <path
-        fill="#A365F6"
-        d="M11 16a1 1 0 1 1 2 0v1a1 1 0 1 1-2 0zm-4 0a1 1 0 1 1 2 0v1a1 1 0 1 1-2 0zm8-4a1 1 0 0 1 1-1h1a1 1 0 1 1 0 2h-1a1 1 0 0 1-1-1M2 12a1 1 0 0 1 1-1h1a1 1 0 1 1 0 2H3a1 1 0 0 1-1-1m13-4a1 1 0 0 1 1-1h1a1 1 0 1 1 0 2h-1a1 1 0 0 1-1-1M2 8a1 1 0 0 1 1-1h1a1 1 0 0 1 0 2H3a1 1 0 0 1-1-1m9-5a1 1 0 1 1 2 0v1a1 1 0 1 1-2 0zM7 3a1 1 0 0 1 2 0v1a1 1 0 0 1-2 0z"
         className="fillStrong"
+        d="M11 16a1 1 0 1 1 2 0v1a1 1 0 1 1-2 0zm-4 0a1 1 0 1 1 2 0v1a1 1 0 1 1-2 0zm8-4a1 1 0 0 1 1-1h1a1 1 0 1 1 0 2h-1a1 1 0 0 1-1-1M2 12a1 1 0 0 1 1-1h1a1 1 0 1 1 0 2H3a1 1 0 0 1-1-1m13-4a1 1 0 0 1 1-1h1a1 1 0 1 1 0 2h-1a1 1 0 0 1-1-1M2 8a1 1 0 0 1 1-1h1a1 1 0 0 1 0 2H3a1 1 0 0 1-1-1m9-5a1 1 0 1 1 2 0v1a1 1 0 1 1-2 0zM7 3a1 1 0 0 1 2 0v1a1 1 0 0 1-2 0z"
+        fill="#A365F6"
       />
       <path
-        fill="#4F0599"
-        d="M14 6H6v8h8zM6 4a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z"
         className="fill"
         clipRule="evenodd"
+        d="M14 6H6v8h8zM6 4a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z"
+        fill="#4F0599"
         fillRule="evenodd"
       />
       <path
-        fill="#A365F6"
-        d="M8 9a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1z"
         className="fillStrong"
+        d="M8 9a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1z"
+        fill="#A365F6"
       />
     </g>
   </Icon>

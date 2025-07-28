@@ -5,9 +5,9 @@ export const PriceUnit = Template.bind({})
 
 PriceUnit.args = {
   ...Template.args,
+  fractionDigits: 10,
   hideTimeUnit: false,
   items: [categoryAZ, categoryRequest],
-  fractionDigits: 10,
 }
 
 PriceUnit.parameters = {

@@ -3,7 +3,6 @@ import { UnitInput } from '..'
 
 export default {
   component: UnitInput,
-  title: 'Components/Data Entry/UnitInput',
   decorators: [
     StoryComponent => (
       <div style={{ height: 250 }}>
@@ -11,6 +10,7 @@ export default {
       </div>
     ),
   ],
+  title: 'Components/Data Entry/UnitInput',
 } as Meta
 
 export { DefaultValues } from './DefaultValues.stories'

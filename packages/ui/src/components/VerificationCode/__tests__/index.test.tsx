@@ -23,7 +23,7 @@ describe('VerificationCode', () => {
 
   test('should handle keyDown and special key cases and focus/change events', () => {
     const { asFragment } = renderWithTheme(
-      <VerificationCode type="number" fields={4} initialValue="1" />,
+      <VerificationCode fields={4} initialValue="1" type="number" />,
     )
 
     const input0 = screen.getByTestId('0')
@@ -47,7 +47,7 @@ describe('VerificationCode', () => {
 
   test('should handle paste with no overflowing values', () => {
     const { asFragment } = renderWithTheme(
-      <VerificationCode type="number" fields={4} initialValue="1" />,
+      <VerificationCode fields={4} initialValue="1" type="number" />,
     )
     pasteEventWithValue(screen.getByDisplayValue('1'), '1234')
     expect(asFragment()).toMatchSnapshot()
@@ -79,7 +79,7 @@ describe('VerificationCode', () => {
 
   test('should handle paste when type is not number', () => {
     const { asFragment } = renderWithTheme(
-      <VerificationCode type="text" fields={6} initialValue="12" />,
+      <VerificationCode fields={6} initialValue="12" type="text" />,
     )
     pasteEventWithValue(screen.getByDisplayValue('2'), 'h23a*6')
     expect(asFragment()).toMatchSnapshot()
@@ -91,11 +91,11 @@ describe('VerificationCode', () => {
 
     renderWithTheme(
       <VerificationCode
-        type="number"
         fields={4}
         initialValue="1"
         onChange={onChange}
         onComplete={onComplete}
+        type="number"
       />,
     )
 
@@ -111,7 +111,7 @@ describe('VerificationCode', () => {
 
   test('should handle error', () => {
     const { asFragment } = renderWithTheme(
-      <VerificationCode error type="number" fields={4} initialValue="1" />,
+      <VerificationCode error fields={4} initialValue="1" type="number" />,
     )
     expect(asFragment()).toMatchSnapshot()
   })

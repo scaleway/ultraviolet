@@ -46,10 +46,11 @@ export const TextInputField = <
     field,
     fieldState: { error },
   } = useController<TFieldValues, TFieldName>({
-    name,
-    shouldUnregister,
     control,
+    name,
     rules: {
+      maxLength,
+      minLength,
       required,
       validate: {
         ...(regexes
@@ -59,27 +60,27 @@ export const TextInputField = <
           : {}),
         ...validate,
       },
-      minLength,
-      maxLength,
     },
+    shouldUnregister,
   })
 
   return (
     <TextInput
       {...props}
+      aria-label={ariaLabel}
       error={getError(
         {
-          regex: regexes,
-          minLength,
-          maxLength,
           label: label ?? ariaLabel ?? name,
+          maxLength,
+          minLength,
+          regex: regexes,
           value: field.value,
         },
         error,
       )}
       label={label}
-      minLength={minLength}
       maxLength={maxLength}
+      minLength={minLength}
       name={name}
       onBlur={event => {
         onBlur?.(event)
@@ -93,7 +94,6 @@ export const TextInputField = <
       }}
       required={required}
       value={field.value === undefined ? '' : field.value}
-      aria-label={ariaLabel}
     />
   )
 }

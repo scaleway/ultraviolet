@@ -92,19 +92,6 @@ export const LineChart = ({
     <>
       <div style={{ height }}>
         <ResponsiveLine
-          colors={localColors}
-          data={finalData ?? []}
-          margin={margin}
-          xScale={xScale}
-          yScale={
-            {
-              max: getMaxChartValue(finalData),
-              min: getMinChartValue(finalData),
-              ...yScale,
-            } as LineSvgProps['yScale']
-          }
-          xFormat={pointFormatters?.x}
-          yFormat={pointFormatters?.y}
           axisBottom={{
             format: axisFormatters?.bottom,
             tickPadding: 5,
@@ -119,21 +106,34 @@ export const LineChart = ({
             tickSize: 5,
             tickValues: tickValues?.left,
           }}
-          pointSize={10}
-          useMesh
-          theme={getNivoTheme(theme)}
+          colors={localColors}
           curve="monotoneX"
-          tooltip={LineChartTooltip}
+          data={finalData ?? []}
           data-testid={dataTestId}
+          margin={margin}
+          pointSize={10}
+          theme={getNivoTheme(theme)}
+          tooltip={LineChartTooltip}
+          useMesh
+          xFormat={pointFormatters?.x}
+          xScale={xScale}
+          yFormat={pointFormatters?.y}
+          yScale={
+            {
+              max: getMaxChartValue(finalData),
+              min: getMinChartValue(finalData),
+              ...yScale,
+            } as LineSvgProps['yScale']
+          }
           {...chartProps}
         />
       </div>
       {withLegend && (
         <CustomLegend
+          axisTransformer={axisFormatters?.left}
           data={dataset.datasets}
           selected={selected ?? []}
           setSelected={setSelected}
-          axisTransformer={axisFormatters?.left}
         />
       )}
     </>

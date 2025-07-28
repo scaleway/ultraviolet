@@ -11,7 +11,7 @@ const StyledText = styled(Text)`
 export const Sizes = (props: ComponentProps<typeof CopyButton>) => (
   <Stack gap={1}>
     {(['xsmall', 'small', 'medium', 'large'] as const).map(size => (
-      <Stack gap={1} direction="row" key={size}>
+      <Stack direction="row" gap={1} key={size}>
         <StyledText as="span" variant="body">
           {size}:
         </StyledText>

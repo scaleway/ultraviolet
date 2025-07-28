@@ -12,7 +12,7 @@ export const Required: StoryFn<ComponentProps<typeof SliderField>> = args => (
 )
 
 Required.args = {
+  label: 'This slider is required',
   name: 'required-slider',
   required: true,
-  label: 'This slider is required',
 }

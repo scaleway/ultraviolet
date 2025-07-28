@@ -4,9 +4,9 @@ import { Button } from '../../Button'
 import { Status } from '..'
 
 export const Notification: StoryFn<typeof Status> = props => (
-  <Button variant="ghost" sentiment="neutral" size="medium">
+  <Button sentiment="neutral" size="medium" variant="ghost">
     <NotificationIcon />
-    <Status {...props} sentiment="danger" notification />
+    <Status {...props} notification sentiment="danger" />
   </Button>
 )
 

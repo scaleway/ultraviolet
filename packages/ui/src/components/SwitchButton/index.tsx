@@ -17,8 +17,8 @@ import type { RefOptionType } from './SwitchButtonContext'
 import { SwitchButtonContext } from './SwitchButtonContext'
 
 const SIZES = {
-  small: '500', // sizing token from theme
   medium: '600',
+  small: '500', // sizing token from theme
 } as const
 
 const StyledBorderedBox = styled.div<{ 'data-size': 'small' | 'medium' }>`
@@ -144,15 +144,15 @@ export const SwitchButton = ({
 
   const valueContext = useMemo(
     () => ({
+      handleOnChange,
       localValue,
       name,
       onBlur,
       onFocus,
-      size,
-      handleOnChange,
       refOptions,
-      setRefOptions,
       sentiment,
+      setRefOptions,
+      size,
     }),
     [
       handleOnChange,
@@ -169,8 +169,9 @@ export const SwitchButton = ({
   return (
     <SwitchButtonContext.Provider value={valueContext}>
       <Tooltip text={tooltip}>
-        <Stack direction="row" className={className} data-testid={dataTestId}>
+        <Stack className={className} data-testid={dataTestId} direction="row">
           <StyledBorderedBox
+            data-size={size}
             onMouseDown={event => {
               const rect = event.currentTarget.getBoundingClientRect()
               const clickX = event.clientX - rect.left
@@ -187,22 +188,21 @@ export const SwitchButton = ({
                 setMouseDownSide(null)
               }
             }}
-            onMouseUp={() => {
-              setMouseDownSide(null)
-              if (mouseDownSide) setWidth(width - FOCUS_OVERLAY_SCALE_RATIO)
-            }}
             onMouseLeave={() => {
               setMouseDownSide(null)
               if (mouseDownSide) setWidth(width - FOCUS_OVERLAY_SCALE_RATIO)
             }}
-            data-size={size}
+            onMouseUp={() => {
+              setMouseDownSide(null)
+              if (mouseDownSide) setWidth(width - FOCUS_OVERLAY_SCALE_RATIO)
+            }}
             ref={containerRef}
           >
             {width ? (
               <FocusOverlay
                 cardWidth={width}
-                position={position}
                 mouseDownSide={mouseDownSide}
+                position={position}
                 sentiment={sentiment}
               />
             ) : null}

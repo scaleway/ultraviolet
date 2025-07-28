@@ -7,8 +7,8 @@ Item.args = {
   children: [
     <EstimateCost.Item
       label="My server"
-      subLabel="Here is subLabel text"
       price={0.017}
+      subLabel="Here is subLabel text"
     >
       <EstimateCost.Strong>Powerful</EstimateCost.Strong>
       <EstimateCost.Regular>100 Cores</EstimateCost.Regular>

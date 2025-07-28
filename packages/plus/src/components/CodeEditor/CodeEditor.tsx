@@ -145,46 +145,46 @@ export const CodeEditor = ({
   'data-testid': dataTestId,
   className,
 }: CodeEditorProps) => (
-  <StyledStack gap={0.5} data-disabled={disabled}>
+  <StyledStack data-disabled={disabled} gap={0.5}>
     {label ? <Label labelDescription={labelDescription}>{label}</Label> : null}
     <EditorContainer data-disabled={disabled}>
       <CodeMirror
-        readOnly={readOnly || disabled}
-        width="100%"
-        height={height}
-        theme={material}
-        onChange={onChange}
-        value={value}
-        extensions={[langs[extensions]()]}
-        onBlur={onBlur}
+        aria-disabled={disabled}
+        aria-label={ariaLabel}
         basicSetup={{
+          autocompletion: autoCompletion,
           highlightActiveLine: false,
           highlightActiveLineGutter: false,
-          autocompletion: autoCompletion,
         }}
-        id={id}
-        aria-label={ariaLabel}
-        data-testid={dataTestId}
         className={className}
+        data-testid={dataTestId}
         editable={!disabled || !readOnly}
-        aria-disabled={disabled}
+        extensions={[langs[extensions]()]}
+        height={height}
+        id={id}
+        onBlur={onBlur}
+        onChange={onChange}
         onUpdate={() => {
           if (disabled) document.getSelection()?.empty()
         }}
+        readOnly={readOnly || disabled}
+        theme={material}
+        value={value}
+        width="100%"
       />
       {copyButton && !disabled ? (
         <StyledCopyButton
           bordered
-          value={value}
           sentiment="neutral"
           size="small"
+          value={value}
         >
           {typeof copyButton === 'string' ? copyButton : undefined}
         </StyledCopyButton>
       ) : null}
     </EditorContainer>
     {helper ? (
-      <Text as="span" variant="caption" prominence="weak" sentiment="neutral">
+      <Text as="span" prominence="weak" sentiment="neutral" variant="caption">
         {helper}
       </Text>
     ) : null}

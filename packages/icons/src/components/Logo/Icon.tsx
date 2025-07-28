@@ -4,9 +4,9 @@ import styled from '@emotion/styled'
 import type { ReactNode } from 'react'
 
 const SIZES = {
-  small: '200',
-  medium: '250',
   large: '400',
+  medium: '250',
+  small: '200',
   xlarge: '700',
 } as const
 
@@ -30,7 +30,7 @@ export type IconProps = {
  * Logo component is used to render a set of logos. Their style cannot be changed
  */
 export const Icon = ({ size = 'small', className, children }: IconProps) => (
-  <StyledIcon size={size} viewBox="0 0 20 20" className={className}>
+  <StyledIcon className={className} size={size} viewBox="0 0 20 20">
     {children}
   </StyledIcon>
 )

@@ -8,8 +8,8 @@ Playground.args = {
     <EstimateCost.Item
       key={1}
       label="My server"
-      subLabel="Here is subLabel text"
       price={0.1}
+      subLabel="Here is subLabel text"
     >
       <EstimateCost.Strong>Powerful</EstimateCost.Strong>
       <EstimateCost.Regular>100 Cores</EstimateCost.Regular>

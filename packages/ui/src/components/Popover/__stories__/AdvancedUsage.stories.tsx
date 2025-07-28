@@ -14,12 +14,12 @@ const StyledPopover = styled(Popover)`
 
 const options: ComponentProps<typeof SelectInput>['options'] = [
   {
-    value: 'option 1',
     label: 'Option 1',
+    value: 'option 1',
   },
   {
-    value: 'option 2',
     label: 'Option 2',
+    value: 'option 2',
   },
 ]
 
@@ -32,9 +32,6 @@ export const AdvancedUsage: StoryFn<typeof Popover> = () => {
 
   return (
     <StyledPopover
-      visible={opened}
-      title="Popover Title"
-      onClose={onCloseCallBack}
       content={
         <>
           <Modal
@@ -43,21 +40,24 @@ export const AdvancedUsage: StoryFn<typeof Popover> = () => {
             <div>
               <div>Modal</div>
               <SelectInput
-                name="options"
                 label="Choose an option"
+                name="options"
                 options={options}
               />
               <TextInput label="Type something here" />
             </div>
           </Modal>
           <SelectInput
-            name="options"
             label="Choose an option"
+            name="options"
             options={options}
           />
           <TextInput label="Type something here" />
         </>
       }
+      onClose={onCloseCallBack}
+      title="Popover Title"
+      visible={opened}
     >
       <Button onClick={() => setOpened(true)} sentiment="neutral">
         Open Popover

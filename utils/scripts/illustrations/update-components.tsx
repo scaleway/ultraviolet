@@ -72,7 +72,7 @@ const filterDynamicIllustrations = (
     const dir =
       dynamicIllustrations.find(i => i.category.startsWith(base))?.dir ?? ''
 
-    return { dir, category: base }
+    return { category: base, dir }
   })
 }
 

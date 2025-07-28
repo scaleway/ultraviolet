@@ -7,7 +7,7 @@ import { NumberInput } from '..'
 describe('NumberInput', () => {
   it('should renders correctly', () =>
     shouldMatchEmotionSnapshot(
-      <NumberInput min={0} max={100} onChange={() => {}} />,
+      <NumberInput max={100} min={0} onChange={() => {}} />,
     ))
 
   it('should renders correctly disabled', () =>
@@ -36,27 +36,27 @@ describe('NumberInput', () => {
     ))
 
   it('should renders correctly min value', () =>
-    shouldMatchEmotionSnapshot(<NumberInput min={0} max={100} />))
+    shouldMatchEmotionSnapshot(<NumberInput max={100} min={0} />))
 
   it('should renders correctly max value', () =>
-    shouldMatchEmotionSnapshot(<NumberInput min={0} max={100} />))
+    shouldMatchEmotionSnapshot(<NumberInput max={100} min={0} />))
 
   describe('should renders correctly all sizes', () => {
     ;(['large', 'medium', 'small'] as const).forEach(size => {
       it(`with size ${size}`, () =>
         shouldMatchEmotionSnapshot(
-          <NumberInput min={0} max={100} size={size} />,
+          <NumberInput max={100} min={0} size={size} />,
         ))
       it(`with size ${size} and unit`, () =>
         shouldMatchEmotionSnapshot(
-          <NumberInput min={0} max={100} size={size} unit="GB" />,
+          <NumberInput max={100} min={0} size={size} unit="GB" />,
         ))
     })
   })
 
   it('should click on min button', async () => {
     const { asFragment } = renderWithTheme(
-      <NumberInput min={0} step={1} max={100} value={10} />,
+      <NumberInput max={100} min={0} step={1} value={10} />,
     )
 
     const minus = screen.getByLabelText('minus')
@@ -72,7 +72,7 @@ describe('NumberInput', () => {
 
   it('should click on plus button with a step value', async () => {
     const { asFragment } = renderWithTheme(
-      <NumberInput min={0} step={10} max={100} onBlur={() => {}} />,
+      <NumberInput max={100} min={0} onBlur={() => {}} step={10} />,
     )
     const plus = screen.getByLabelText('plus')
     const input = screen.getByRole<HTMLInputElement>('spinbutton')
@@ -89,10 +89,10 @@ describe('NumberInput', () => {
     const onChange = vi.fn()
     const { asFragment } = renderWithTheme(
       <NumberInput
-        min={10}
-        step={10}
         max={100}
+        min={10}
         onChange={onChange}
+        step={10}
         value={1}
       />,
     )
@@ -109,7 +109,7 @@ describe('NumberInput', () => {
   it('should focus input and modify value when value > max', async () => {
     const onChange = vi.fn()
     const { asFragment } = renderWithTheme(
-      <NumberInput min={1} step={1} max={5} onChange={onChange} value={10} />,
+      <NumberInput max={5} min={1} onChange={onChange} step={1} value={10} />,
     )
     const input = screen.getByRole<HTMLInputElement>('spinbutton')
 
@@ -124,7 +124,7 @@ describe('NumberInput', () => {
 
   it('should click on plus button with a step value and an in-between value set', async () => {
     const { asFragment } = renderWithTheme(
-      <NumberInput min={0} step={10} max={100} onBlur={() => {}} />,
+      <NumberInput max={100} min={0} onBlur={() => {}} step={10} />,
     )
     const plus = screen.getByLabelText('plus')
     const input = screen.getByRole<HTMLInputElement>('spinbutton')

@@ -3,7 +3,7 @@ import NextHead from 'next/head'
 const Head = () => (
   <NextHead>
     <title>Ultraviolet UI</title>
-    <meta name="description" content="Scaleway Open Source Component Library" />
+    <meta content="Scaleway Open Source Component Library" name="description" />
   </NextHead>
 )
 

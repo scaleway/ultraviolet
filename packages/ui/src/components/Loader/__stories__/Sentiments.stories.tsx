@@ -10,8 +10,8 @@ export const Sentiments: StoryFn = props => (
       <Stack alignItems="center">
         <Loader
           {...props}
-          sentiment={sentiment as ExtendedColor}
           key={sentiment}
+          sentiment={sentiment as ExtendedColor}
         />
         {sentiment}
       </Stack>

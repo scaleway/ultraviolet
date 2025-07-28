@@ -5,9 +5,9 @@ export const Variants: StoryFn = args => (
   <>
     <Banner
       {...args}
-      title="Apply to Scaleway Startup programs"
       buttonText="Apply now"
       linkText="Learn more"
+      title="Apply to Scaleway Startup programs"
       variant="intro"
     >
       The Scaleway Startup programs offer the perfect combination of cloud
@@ -16,10 +16,10 @@ export const Variants: StoryFn = args => (
     </Banner>
     <Banner
       {...args}
-      title="Apply to Scaleway Startup programs"
       buttonText="Apply now"
-      linkText="Learn more"
       linkHref="/?path=/story/components-other-banner--variants&globals=theme:light"
+      linkText="Learn more"
+      title="Apply to Scaleway Startup programs"
       variant="promotional"
     >
       The Scaleway Startup programs offer the perfect combination of cloud

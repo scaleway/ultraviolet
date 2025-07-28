@@ -2,9 +2,9 @@ import { Template } from './Template.stories'
 
 export const Success = Template.bind({})
 Success.args = {
+  initialValue: '1337',
   label: 'Verification code',
   success: 'Valid code',
-  initialValue: '1337',
 }
 
 Success.parameters = {

@@ -33,14 +33,14 @@ describe('TagInput', () => {
 
   it('should renders correctly with some tags', () =>
     shouldMatchEmotionSnapshot(
-      <TagInput onChange={() => {}} name="radio" value={['hello', 'world']} />,
+      <TagInput name="radio" onChange={() => {}} value={['hello', 'world']} />,
     ))
 
   it('should renders correctly with some tags objects', () =>
     shouldMatchEmotionSnapshot(
       <TagInput
-        onChange={() => {}}
         name="radio"
+        onChange={() => {}}
         value={[
           { index: 'index', label: 'hello' },
           { index: 'secondIndex', label: 'world' },
@@ -51,7 +51,7 @@ describe('TagInput', () => {
   it('should be able to be controlled', async () => {
     const mockOnChange = vi.fn()
 
-    renderWithTheme(<TagInput value={['first']} onChange={mockOnChange} />)
+    renderWithTheme(<TagInput onChange={mockOnChange} value={['first']} />)
     const input = screen.getByRole<HTMLInputElement>('textbox')
     await userEvent.type(input, 'new ')
     expect(mockOnChange).toHaveBeenCalledWith(['first', 'new'])
@@ -61,7 +61,7 @@ describe('TagInput', () => {
     const mockOnChange = vi.fn()
 
     renderWithTheme(
-      <TagInput value={['first']} onChange={mockOnChange} clearable />,
+      <TagInput clearable onChange={mockOnChange} value={['first']} />,
     )
     const clearableButton = screen.getByLabelText('clear value')
     await userEvent.click(clearableButton)
@@ -72,7 +72,7 @@ describe('TagInput', () => {
     const mockOnChange = vi.fn()
 
     renderWithTheme(
-      <TagInput value={['first', 'second']} onChange={mockOnChange} />,
+      <TagInput onChange={mockOnChange} value={['first', 'second']} />,
     )
 
     const firstTag = screen.queryByText(/first/)
@@ -91,8 +91,8 @@ describe('TagInput', () => {
     renderWithTheme(
       <TagInput
         id="test"
-        onChange={mockOnChange}
         name="radio"
+        onChange={mockOnChange}
         value={['hello', 'world']}
       />,
     )
@@ -111,8 +111,8 @@ describe('TagInput', () => {
     renderWithTheme(
       <TagInput
         id="test"
-        onChange={mockOnChange}
         name="radio"
+        onChange={mockOnChange}
         value={['hello', 'world']}
       />,
     )

@@ -5,10 +5,6 @@ import { DefaultDisclosure, Template } from './Template.stories'
 export const NoPadding = Template.bind({})
 
 NoPadding.args = {
-  disclosure: DefaultDisclosure,
-  header: 'With a nopadding content',
-  size: 'small',
-  noPadding: true,
   children: (
     <div>
       <Drawer.Content>first part</Drawer.Content>
@@ -16,6 +12,10 @@ NoPadding.args = {
       <Drawer.Content>second part</Drawer.Content>
     </div>
   ),
+  disclosure: DefaultDisclosure,
+  header: 'With a nopadding content',
+  noPadding: true,
+  size: 'small',
 }
 
 NoPadding.parameters = {

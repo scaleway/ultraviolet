@@ -3,15 +3,15 @@ import { Stack } from '../..'
 import { VerificationCode, verificationCodeSizes } from '..'
 
 export const Size: StoryFn<typeof VerificationCode> = args => (
-  <Stack gap={2} direction="column">
+  <Stack direction="column" gap={2}>
     {verificationCodeSizes.map(size => (
       <VerificationCode
         {...args}
-        key={size}
-        size={size}
         fields={4}
-        label={size}
         initialValue="1"
+        key={size}
+        label={size}
+        size={size}
       />
     ))}
   </Stack>

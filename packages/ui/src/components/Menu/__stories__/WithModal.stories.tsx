@@ -12,7 +12,7 @@ const NestedModal = () => (
     <div style={{ padding: 32 }}>
       Content should be present in center of the modal
     </div>
-    <TextInput name="test" label="Test input events" />
+    <TextInput label="Test input events" name="test" />
   </Modal>
 )
 

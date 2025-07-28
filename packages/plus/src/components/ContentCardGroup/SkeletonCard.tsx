@@ -19,7 +19,7 @@ const StyledSquareSkeleton = styled(Skeleton)`
 
 export const SkeletonCard = () => (
   <StyledWrapper>
-    <Stack direction="row" alignItems="center" justifyContent="space-between">
+    <Stack alignItems="center" direction="row" justifyContent="space-between">
       <Stack gap={2}>
         <Skeleton variant="line" />
         <Skeleton variant="line" />

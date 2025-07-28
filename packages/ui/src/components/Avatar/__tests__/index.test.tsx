@@ -15,38 +15,38 @@ describe('Avatar', () => {
         size => {
           it('renders correctly with variant user', () =>
             shouldMatchEmotionSnapshot(
-              <Avatar shape={shape} variant="user" size={size} />,
+              <Avatar shape={shape} size={size} variant="user" />,
             ))
 
           it('renders correctly with variant image', () =>
             shouldMatchEmotionSnapshot(
               <Avatar
-                shape={shape}
-                variant="image"
                 image={support}
+                shape={shape}
                 size={size}
+                variant="image"
               />,
             ))
 
           it('renders correctly with variant text', () =>
             shouldMatchEmotionSnapshot(
-              <Avatar shape={shape} variant="text" text="UV" size={size} />,
+              <Avatar shape={shape} size={size} text="UV" variant="text" />,
             ))
 
           it('renders correctly with variant text and sentiment neutral', () =>
             shouldMatchEmotionSnapshot(
               <Avatar
-                shape={shape}
-                variant="text"
-                text="UV"
                 sentiment="neutral"
+                shape={shape}
                 size={size}
+                text="UV"
+                variant="text"
               />,
             ))
 
           it('renders correctly with variant icon', () =>
             shouldMatchEmotionSnapshot(
-              <Avatar shape={shape} variant="icon" size={size}>
+              <Avatar shape={shape} size={size} variant="icon">
                 <MosaicIcon />
               </Avatar>,
             ))
@@ -54,10 +54,10 @@ describe('Avatar', () => {
           it('renders correctly with variant icon and sentiment neutral', () =>
             shouldMatchEmotionSnapshot(
               <Avatar
-                shape={shape}
-                variant="icon"
                 sentiment="neutral"
+                shape={shape}
                 size={size}
+                variant="icon"
               >
                 <MosaicIcon />
               </Avatar>,
@@ -65,20 +65,20 @@ describe('Avatar', () => {
 
           it('renders correctly with variant colors', () =>
             shouldMatchEmotionSnapshot(
-              <Avatar shape={shape} variant="colors" size={size} />,
+              <Avatar shape={shape} size={size} variant="colors" />,
             ))
 
           it('renders correctly with variant text and upload', async () => {
             const onClick = vi.fn()
             const { asFragment } = renderWithTheme(
               <Avatar
-                shape={shape}
-                variant="text"
-                text="UV"
-                size={size}
-                upload
                 data-testid="avatar"
                 onClick={onClick}
+                shape={shape}
+                size={size}
+                text="UV"
+                upload
+                variant="text"
               />,
             )
             const avatar = screen.getByTestId('avatar')

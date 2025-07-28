@@ -4,8 +4,8 @@ export const Closable = Template.bind({})
 
 Closable.args = {
   children: 'Your trial has expired. Upgrade your plan to continue',
-  variant: 'danger',
   closable: false,
+  variant: 'danger',
 }
 
 Closable.parameters = {

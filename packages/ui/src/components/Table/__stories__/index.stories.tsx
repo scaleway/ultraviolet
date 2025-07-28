@@ -3,8 +3,8 @@ import { Table } from '..'
 
 export default {
   component: Table,
+  subcomponents: { 'Table.Cell': Table.Cell, 'Table.Row': Table.Row },
   title: 'Components/Data Display/Table',
-  subcomponents: { 'Table.Row': Table.Row, 'Table.Cell': Table.Cell },
 } as Meta
 
 export { Align } from './Align.stories'

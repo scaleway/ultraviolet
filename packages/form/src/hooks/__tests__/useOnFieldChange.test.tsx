@@ -19,13 +19,13 @@ type Wrapers = {
 }
 
 const initial = {
-  textInputName: 'test',
   check: true,
+  textInputName: 'test',
 }
 
 const updated = {
-  textInputName: 'updated',
   check: false,
+  textInputName: 'updated',
 }
 
 const Wrapper = ({ children, defaultValues }: Wrapers) => {
@@ -36,8 +36,8 @@ const Wrapper = ({ children, defaultValues }: Wrapers) => {
   return (
     <ThemeProvider theme={lightTheme}>
       <Form<FormValues>
-        methods={methods}
         errors={mockErrors}
+        methods={methods}
         onSubmit={() => {}}
       >
         {children}
@@ -96,13 +96,12 @@ describe('useOnFieldChange', () => {
         )
       },
       {
-        wrapper: ({ children }) => (
-          <Wrapper defaultValues={defaultValues}>{children}</Wrapper>
-        ),
-
         initialProps: {
           enabled: false,
         },
+        wrapper: ({ children }) => (
+          <Wrapper defaultValues={defaultValues}>{children}</Wrapper>
+        ),
       },
     )
 

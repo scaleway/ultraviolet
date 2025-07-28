@@ -31,30 +31,30 @@ const SwitchButtonField = <
   ...props
 }: SwitchButtonFieldProps<TFieldValues, TFieldName>) => {
   const { field } = useController<TFieldValues>({
+    control,
     name,
     shouldUnregister,
-    control,
   })
 
   return (
     <SwitchButton
       {...props}
+      className={className}
       name={name}
+      onBlur={event => {
+        field.onBlur()
+        onBlur?.(event)
+      }}
       onChange={event => {
         field.onChange(event)
         onChange?.(
           event.target as PathValue<TFieldValues, TFieldName> | undefined,
         )
       }}
-      value={field.value}
-      tooltip={tooltip}
-      size={size}
-      className={className}
       onFocus={onFocus}
-      onBlur={event => {
-        field.onBlur()
-        onBlur?.(event)
-      }}
+      size={size}
+      tooltip={tooltip}
+      value={field.value}
     />
   )
 }

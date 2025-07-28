@@ -9,9 +9,9 @@ import {
 import { afterEach, beforeEach, expect, vi } from 'vitest'
 
 const MockResize = vi.fn(() => ({
+  disconnect: vi.fn(),
   observe: vi.fn(),
   unobserve: vi.fn(),
-  disconnect: vi.fn(),
 }))
 
 export const setup = () => {

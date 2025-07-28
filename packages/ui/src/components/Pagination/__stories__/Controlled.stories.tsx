@@ -15,13 +15,13 @@ export const Controlled: StoryFn = props => {
 }
 
 Controlled.args = {
-  value: 40,
+  label: 'Label',
   labelDescription: (
     <Badge sentiment="primary" size="small">
       New
     </Badge>
   ),
-  label: 'Label',
+  value: 40,
 }
 
 Controlled.parameters = {

@@ -2,12 +2,12 @@ import { Toast, ToastContainer } from '..'
 
 export default {
   component: ToastContainer,
-  title: 'Components/Feedback/Toaster',
   subcomponents: {
-    ToastContainer,
     'Toast.Button': Toast.Button,
     'Toast.Link': Toast.Link,
+    ToastContainer,
   },
+  title: 'Components/Feedback/Toaster',
 }
 
 export { ComplexChildren } from './ComplexChildren.stories'

@@ -16,12 +16,12 @@ export const PackerProductIcon = ({
     <g className="Packer">
       <g className=".Square">
         <path
-          fill="#EEF"
-          d="M0 16C0 7.163 7.163 0 16 0h32c8.837 0 16 7.163 16 16v32c0 8.837-7.163 16-16 16H16C7.163 64 0 56.837 0 48z"
           className="fillWeak"
+          d="M0 16C0 7.163 7.163 0 16 0h32c8.837 0 16 7.163 16 16v32c0 8.837-7.163 16-16 16H16C7.163 64 0 56.837 0 48z"
+          fill="#EEF"
         />
       </g>
-      <g fill="#4F0599" className="fill">
+      <g className="fill" fill="#4F0599">
         <path d="m25.314 12 14.069 8.114c2.794 1.612 5.074 5.189 5.097 8v12.412c0 2.788-2.28 3.754-5.074 2.143l-4.509-2.589V23.166l-9.583-5.532z" />
         <path d="M32.966 24.377 20 16.886v27.623L32.966 52z" />
       </g>

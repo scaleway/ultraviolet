@@ -42,8 +42,8 @@ export const OnClick: StoryFn<ComponentProps<typeof Breadcrumbs>> = props => {
               onClick={() => {
                 setValue(ITEMS)
               }}
-              size="small"
               sentiment="neutral"
+              size="small"
             >
               <RestoreIcon />
               Reset

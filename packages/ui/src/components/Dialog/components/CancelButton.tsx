@@ -15,10 +15,10 @@ export const DialogCancelButton = ({
   disabled,
 }: DialogCancelButtonProps) => (
   <Button
-    variant="outlined"
-    sentiment="neutral"
-    onClick={onClick}
     disabled={disabled}
+    onClick={onClick}
+    sentiment="neutral"
+    variant="outlined"
   >
     {children}
   </Button>

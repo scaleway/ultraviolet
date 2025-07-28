@@ -6,7 +6,7 @@ export default {
   component: CopyButton,
   decorators: [
     StoryComponent => (
-      <Stack gap={2} direction="row">
+      <Stack direction="row" gap={2}>
         <StoryComponent />
       </Stack>
     ),

@@ -17,10 +17,10 @@ export const Size: StoryFn<typeof TextInput> = args => {
           {...args}
           key={size}
           label={size}
-          size={size}
-          value={value}
           onChange={event => setValue(event.target.value)}
           placeholder="Placeholder"
+          size={size}
+          value={value}
         />
       ))}
     </Stack>

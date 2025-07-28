@@ -22,9 +22,9 @@ describe('UnitInput', () => {
   test(`renders with default props`, () =>
     shouldMatchEmotionSnapshot(
       <UnitInput
+        name="test"
         onChange={() => {}}
         onChangeUnitValue={() => {}}
-        name="test"
         options={options}
       />,
     ))
@@ -32,43 +32,43 @@ describe('UnitInput', () => {
   test(`renders with min max`, () =>
     shouldMatchEmotionSnapshot(
       <UnitInput
+        max={100}
+        min={10}
         onChange={() => {}}
         onChangeUnitValue={() => {}}
         options={options}
-        min={10}
-        max={100}
       />,
     ))
   test(`renders with size small`, () =>
     shouldMatchEmotionSnapshot(
       <UnitInput
-        size="small"
+        name="test"
         onChange={() => {}}
         onChangeUnitValue={() => {}}
-        name="test"
         options={options}
+        size="small"
       />,
     ))
 
   test(`renders with size medioum`, () =>
     shouldMatchEmotionSnapshot(
       <UnitInput
-        size="medium"
+        name="test"
         onChange={() => {}}
         onChangeUnitValue={() => {}}
-        name="test"
         options={options}
+        size="medium"
       />,
     ))
 
   test(`renders click`, async () => {
     const { asFragment } = renderWithTheme(
       <UnitInput
-        size="medium"
+        name="test"
         onChange={() => {}}
         onChangeUnitValue={() => {}}
-        name="test"
         options={options}
+        size="medium"
       />,
     )
 
@@ -80,73 +80,73 @@ describe('UnitInput', () => {
   test(`renders with size large`, () =>
     shouldMatchEmotionSnapshot(
       <UnitInput
-        size="large"
+        name="test"
         onChange={() => {}}
         onChangeUnitValue={() => {}}
-        name="test"
         options={options}
+        size="large"
       />,
     ))
 
   test(`renders with disabled and placeHolder`, () =>
     shouldMatchEmotionSnapshot(
       <UnitInput
+        disabled
+        name="test"
         onChange={() => {}}
         onChangeUnitValue={() => {}}
-        name="test"
         options={options}
         placeholder="100"
-        disabled
       />,
     ))
 
   test(`renders with dropdownAlign center`, () =>
     shouldMatchEmotionSnapshot(
       <UnitInput
+        dropdownAlign="center"
+        name="test"
         onChange={() => {}}
         onChangeUnitValue={() => {}}
-        name="test"
         options={options}
         placeholder="100"
-        dropdownAlign="center"
       />,
     ))
 
   test(`renders with success`, () =>
     shouldMatchEmotionSnapshot(
       <UnitInput
+        helper="text"
+        name="test"
         onChange={() => {}}
         onChangeUnitValue={() => {}}
-        name="test"
         options={options}
         placeholder="100"
         success
-        helper="text"
       />,
     ))
 
   test(`renders with error`, () =>
     shouldMatchEmotionSnapshot(
       <UnitInput
-        onChange={() => {}}
-        onChangeUnitValue={() => {}}
-        name="test"
-        options={options}
-        placeholder="100"
         error="error"
         helper="test"
+        name="test"
+        onChange={() => {}}
+        onChangeUnitValue={() => {}}
+        options={options}
+        placeholder="100"
       />,
     ))
   test(`renders with error  and success`, () =>
     shouldMatchEmotionSnapshot(
       <UnitInput
-        onChange={() => {}}
-        onChangeUnitValue={() => {}}
-        name="test"
-        options={options}
-        placeholder="100"
         error
         helper="helper"
+        name="test"
+        onChange={() => {}}
+        onChangeUnitValue={() => {}}
+        options={options}
+        placeholder="100"
         success="success"
       />,
     ))
@@ -155,16 +155,16 @@ describe('UnitInput', () => {
     renderWithTheme(
       <div>
         <UnitInput
-          onChange={() => {}}
-          onChangeUnitValue={() => {}}
-          name="test"
-          max={30}
-          min={2}
-          options={options}
-          placeholder="100"
           error
           helper="test"
           id="test"
+          max={30}
+          min={2}
+          name="test"
+          onChange={() => {}}
+          onChangeUnitValue={() => {}}
+          options={options}
+          placeholder="100"
         />
         <button data-testid="test" type="button">
           button
@@ -186,16 +186,16 @@ describe('UnitInput', () => {
     renderWithTheme(
       <div>
         <UnitInput
-          onChange={() => {}}
-          onChangeUnitValue={() => {}}
-          name="test"
-          max={30}
-          min={2}
-          options={options}
-          placeholder="100"
           error
           helper="test"
           id="test"
+          max={30}
+          min={2}
+          name="test"
+          onChange={() => {}}
+          onChangeUnitValue={() => {}}
+          options={options}
+          placeholder="100"
         />
         <button data-testid="test" type="button">
           button
@@ -209,53 +209,53 @@ describe('UnitInput', () => {
   test(`renders with label and no label information`, () =>
     shouldMatchEmotionSnapshot(
       <UnitInput
-        onChange={() => {}}
-        onChangeUnitValue={() => {}}
-        name="test"
-        options={options}
-        placeholder="100"
         disabled
         label="label"
+        name="test"
+        onChange={() => {}}
+        onChangeUnitValue={() => {}}
+        options={options}
+        placeholder="100"
       />,
     ))
   test(`renders with label and label information`, () =>
     shouldMatchEmotionSnapshot(
       <UnitInput
-        onChange={() => {}}
-        onChangeUnitValue={() => {}}
-        name="test"
-        options={options}
-        placeholder="100"
         disabled
         label="label"
         labelInformation="label information"
+        name="test"
+        onChange={() => {}}
+        onChangeUnitValue={() => {}}
+        options={options}
+        placeholder="100"
       />,
     ))
   test(`renders with no label and label information`, () =>
     shouldMatchEmotionSnapshot(
       <UnitInput
-        onChange={() => {}}
-        onChangeUnitValue={() => {}}
-        name="test"
-        options={options}
-        placeholder="100"
         disabled
         labelInformation="label information"
+        name="test"
+        onChange={() => {}}
+        onChangeUnitValue={() => {}}
+        options={options}
+        placeholder="100"
       />,
     ))
 
   test(`renders with default value`, () =>
     shouldMatchEmotionSnapshot(
       <UnitInput
-        onChange={() => {}}
-        onChangeUnitValue={() => {}}
-        name="test"
-        options={options}
-        placeholder="100"
         disabled
         labelInformation="label information"
-        value={1}
+        name="test"
+        onChange={() => {}}
+        onChangeUnitValue={() => {}}
+        options={options}
+        placeholder="100"
         unitValue="kb"
+        value={1}
       />,
     ))
 })

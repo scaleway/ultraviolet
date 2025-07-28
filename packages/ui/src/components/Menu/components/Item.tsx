@@ -94,7 +94,7 @@ const StyledItem = styled('button', {
   sentiment: MenuItemSentiment
 }>`
   ${({ theme, borderless, sentiment, disabled }) =>
-    itemCoreStyle({ theme, borderless, sentiment, disabled })}
+    itemCoreStyle({ borderless, disabled, sentiment, theme })}
   background: none;
 `
 
@@ -106,7 +106,7 @@ const StyledLinkItem = styled('a', {
   sentiment: MenuItemSentiment
 }>`
   ${({ theme, borderless, sentiment, disabled }) =>
-    itemCoreStyle({ theme, borderless, sentiment, disabled })}
+    itemCoreStyle({ borderless, disabled, sentiment, theme })}
   text-decoration: none;
 
   &:focus {
@@ -222,28 +222,28 @@ const Item = forwardRef<HTMLElement, ItemProps>(
         <Container borderless={borderless} data-search-text={searchText}>
           <Tooltip text={tooltip}>
             <StyledLinkItem
-              data-active={active}
               borderless
-              href={href}
-              target={target}
-              rel={rel}
-              ref={ref as Ref<HTMLAnchorElement>}
-              onClick={onClickHandle}
-              role="menuitem"
-              disabled={disabled}
-              sentiment={sentiment}
               className={className}
-              data-testid={dataTestId}
+              data-active={active}
               data-is-disclosure={isDisclosure}
               data-is-menu-item
+              data-testid={dataTestId}
+              disabled={disabled}
+              href={href}
+              onClick={onClickHandle}
               onKeyDown={handleKeyDown}
+              ref={ref as Ref<HTMLAnchorElement>}
+              rel={rel}
+              role="menuitem"
+              sentiment={sentiment}
+              target={target}
             >
               {isDisclosure ? (
                 <Stack
-                  justifyContent="space-between"
-                  direction="row"
-                  width="100%"
                   alignItems="center"
+                  direction="row"
+                  justifyContent="space-between"
+                  width="100%"
                 >
                   {children} <ArrowRightIcon />
                 </Stack>
@@ -260,9 +260,12 @@ const Item = forwardRef<HTMLElement, ItemProps>(
       <Container borderless={borderless} data-search-text={searchText}>
         <Tooltip text={tooltip}>
           <StyledItem
-            type="button"
-            ref={ref as Ref<HTMLButtonElement>}
-            role="menuitem"
+            borderless={borderless}
+            className={className}
+            data-active={active || (isVisible && isDisclosure)}
+            data-is-disclosure={isDisclosure}
+            data-is-menu-item
+            data-testid={dataTestId}
             disabled={disabled}
             onClick={event => {
               onClick?.(event)
@@ -270,21 +273,18 @@ const Item = forwardRef<HTMLElement, ItemProps>(
                 setIsVisible(false)
               }
             }}
-            borderless={borderless}
-            sentiment={sentiment}
-            className={className}
-            data-testid={dataTestId}
-            data-active={active || (isVisible && isDisclosure)}
-            data-is-disclosure={isDisclosure}
-            data-is-menu-item
             onKeyDown={handleKeyDown}
+            ref={ref as Ref<HTMLButtonElement>}
+            role="menuitem"
+            sentiment={sentiment}
+            type="button"
           >
             {isDisclosure ? (
               <Stack
-                justifyContent="space-between"
-                direction="row"
-                width="100%"
                 alignItems="center"
+                direction="row"
+                justifyContent="space-between"
+                width="100%"
               >
                 {children} <ArrowRightIcon />
               </Stack>

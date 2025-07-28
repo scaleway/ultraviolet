@@ -13,8 +13,8 @@ export const ToastButton = ({
   ...props
 }: ComponentProps<typeof Button>) => {
   if (variant === 'ghost') {
-    return <StyledButton {...props} variant={variant} size="xsmall" />
+    return <StyledButton {...props} size="xsmall" variant={variant} />
   }
 
-  return <Button {...props} variant={variant} size="xsmall" />
+  return <Button {...props} size="xsmall" variant={variant} />
 }

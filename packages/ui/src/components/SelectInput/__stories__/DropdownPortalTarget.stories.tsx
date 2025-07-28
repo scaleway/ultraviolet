@@ -11,11 +11,11 @@ export const DropdownPortalTarget: StoryFn<typeof SelectInput> = args => (
 )
 
 DropdownPortalTarget.args = {
-  options: dataGrouped,
+  disabled: false,
   name: 'example',
+  options: dataGrouped,
   placeholder: 'Select item',
   placeholderSearch: 'Search in list',
-  disabled: false,
 }
 
 DropdownPortalTarget.parameters = {

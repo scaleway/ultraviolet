@@ -5,10 +5,10 @@ import { Toast, ToastContainer, toast } from '..'
 
 const ButtonToaster = () => (
   <Stack
-    gap={1}
-    justifyContent="space-between"
     alignItems="center"
     direction="row"
+    gap={1}
+    justifyContent="space-between"
     width="100%"
   >
     Personal data updated.
@@ -20,10 +20,10 @@ const ButtonToaster = () => (
 
 const LinkToaster = () => (
   <Stack
-    gap={1}
-    justifyContent="space-between"
     alignItems="center"
     direction="row"
+    gap={1}
+    justifyContent="space-between"
     width="100%"
   >
     Personal data updated.
@@ -36,24 +36,24 @@ export const ComplexChildren: StoryFn<typeof ToastContainer> = args => (
     <Stack gap={2}>
       <ToastContainer
         {...args}
+        autoClose={0}
         containerId="complex-children"
         position="bottom-left"
-        autoClose={0}
       />
       <Button
-        sentiment="neutral"
         onClick={() =>
           toast.success(<ButtonToaster />, undefined, 'complex-children')
         }
+        sentiment="neutral"
       >
         Open toaster with button
       </Button>
 
       <Button
-        sentiment="neutral"
         onClick={() =>
           toast.success(<LinkToaster />, undefined, 'complex-children')
         }
+        sentiment="neutral"
       >
         Open toaster with link
       </Button>

@@ -72,28 +72,28 @@ export const GlobalAlert = ({
 
   return (
     <Container
-      justifyContent="center"
       alignItems="center"
-      direction="row"
-      data-variant={variant}
-      data-testid={dataTestId}
       className={className}
+      data-testid={dataTestId}
+      data-variant={variant}
+      direction="row"
+      justifyContent="center"
     >
       <Stack
-        gap={2}
-        direction="row"
-        justifyContent="center"
         alignItems="center"
+        direction="row"
+        gap={2}
+        justifyContent="center"
       >
-        <Text variant="bodySmall" as="p" sentiment="white">
+        <Text as="p" sentiment="white" variant="bodySmall">
           {children}
         </Text>
         {onClickButton && buttonText ? (
           <Button
             onClick={onClickButton}
-            variant="filled"
             sentiment="white"
             size="small"
+            variant="filled"
           >
             {buttonText}
           </Button>
@@ -101,13 +101,13 @@ export const GlobalAlert = ({
       </Stack>
       {closable ? (
         <CloseButton
-          variant="filled"
-          size="xsmall"
-          sentiment="primary"
           onClick={() => {
             toggleOpened()
             onClose?.()
           }}
+          sentiment="primary"
+          size="xsmall"
+          variant="filled"
         >
           <CloseIcon />
         </CloseButton>

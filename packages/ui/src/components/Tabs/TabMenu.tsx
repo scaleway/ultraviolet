@@ -56,17 +56,13 @@ export const TabMenu = forwardRef(
   ) => (
     <StyledPositioningWrapper>
       <Menu
-        visible={visible}
-        id={id}
-        ref={ref}
-        portalTarget={document.body} // We need to attach it to the body to avoid overflow issues
         disclosure={
           <StyledMenu
-            role="tab"
             aria-disabled={disabled ?? 'false'}
-            disabled={disabled}
             aria-haspopup="menu"
             className={className}
+            disabled={disabled}
+            role="tab"
             type="button"
             {...props}
           >
@@ -74,6 +70,10 @@ export const TabMenu = forwardRef(
             <ArrowIcon />
           </StyledMenu>
         }
+        id={id}
+        portalTarget={document.body}
+        ref={ref} // We need to attach it to the body to avoid overflow issues
+        visible={visible}
       >
         {children}
       </Menu>

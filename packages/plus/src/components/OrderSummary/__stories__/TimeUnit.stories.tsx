@@ -4,10 +4,10 @@ export const TimeUnit = Template.bind({})
 
 TimeUnit.args = {
   ...Template.args,
-  periodOptions: ['minutes', 'hours', 'days', 'months'],
   hideTimeUnit: false,
-  valueUnitInput: 1,
+  periodOptions: ['minutes', 'hours', 'days', 'months'],
   unitUnitInput: 'hours',
+  valueUnitInput: 1,
 }
 
 TimeUnit.parameters = {

@@ -13,13 +13,13 @@ type Themes = 'light' | 'dark'
 
 const COMMON_THEME_PROPS = {
   typography: {
-    headingLarge: {
-      fontSize: '72px',
-      lineHeight: '80px',
-    },
     heading: {
       fontSize: '42px',
       lineHeight: '52px',
+    },
+    headingLarge: {
+      fontSize: '72px',
+      lineHeight: '80px',
     },
     headingSmall: {
       fontSize: '28px',
@@ -43,8 +43,8 @@ const App = ({ Component, pageProps }: AppProps) => {
         },
       },
     }),
-    theme: 'light',
     setTheme: setThemeCallBack,
+    theme: 'light',
   } as const
 
   const localDarkTheme = {
@@ -52,8 +52,8 @@ const App = ({ Component, pageProps }: AppProps) => {
       ...dark,
       ...COMMON_THEME_PROPS,
     }),
-    theme: 'dark',
     setTheme: setThemeCallBack,
+    theme: 'dark',
   } as const
 
   useEffect(() => {
@@ -79,7 +79,7 @@ const App = ({ Component, pageProps }: AppProps) => {
     <ThemeProvider theme={theme === 'light' ? localLightTheme : localDarkTheme}>
       <GlobalStyle />
       <Head />
-      <Stack gap={4} alignItems="center">
+      <Stack alignItems="center" gap={4}>
         <Header />
         <Component
           // eslint-disable-next-line react/jsx-props-no-spreading

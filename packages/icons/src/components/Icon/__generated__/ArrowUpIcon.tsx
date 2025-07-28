@@ -14,15 +14,15 @@ export const ArrowUpIcon = ({ ...props }: Omit<IconProps, 'children'>) => (
     {typeof props.size === 'string' &&
     ['medium', 'large', 'xlarge', 'xxlarge'].includes(props.size) ? (
       <path
-        fillRule="evenodd"
-        d="M9.72 7.47a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 1 1-1.06 1.06l-3.72-3.72-3.72 3.72a.75.75 0 0 1-1.06-1.06z"
         clipRule="evenodd"
+        d="M9.72 7.47a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 1 1-1.06 1.06l-3.72-3.72-3.72 3.72a.75.75 0 0 1-1.06-1.06z"
+        fillRule="evenodd"
       />
     ) : (
       <path
-        fillRule="evenodd"
-        d="M11.78 10.53a.75.75 0 0 1-1.06 0L8 7.81l-2.72 2.72a.75.75 0 1 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06"
         clipRule="evenodd"
+        d="M11.78 10.53a.75.75 0 0 1-1.06 0L8 7.81l-2.72 2.72a.75.75 0 1 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06"
+        fillRule="evenodd"
       />
     )}
   </Icon>

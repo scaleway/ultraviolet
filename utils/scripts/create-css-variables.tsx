@@ -1,6 +1,6 @@
 const fontWeightMap = {
-  Regular: 400,
   Medium: 500,
+  Regular: 400,
   SemiBold: 600,
 }
 

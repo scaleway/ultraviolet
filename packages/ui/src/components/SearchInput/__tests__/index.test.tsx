@@ -19,10 +19,10 @@ describe('SearchInput', () => {
   test('renders correctly without children props', () =>
     shouldMatchEmotionSnapshot(
       <SearchInput
+        onClose={() => {}}
+        onSearch={() => {}}
         placeholder="Type something"
         popupPlacement="bottom"
-        onSearch={() => {}}
-        onClose={() => {}}
       >
         <div />
       </SearchInput>,
@@ -31,11 +31,11 @@ describe('SearchInput', () => {
   test('renders with disabled prop', () =>
     shouldMatchEmotionSnapshot(
       <SearchInput
+        disabled
+        onClose={() => {}}
+        onSearch={() => {}}
         placeholder="Type something"
         popupPlacement="bottom"
-        onSearch={() => {}}
-        onClose={() => {}}
-        disabled
       >
         <div />
       </SearchInput>,
@@ -45,10 +45,10 @@ describe('SearchInput', () => {
     test('as boolean', () =>
       shouldMatchEmotionSnapshot(
         <SearchInput
+          onClose={() => {}}
+          onSearch={() => {}}
           placeholder="Type something"
           popupPlacement="bottom"
-          onSearch={() => {}}
-          onClose={() => {}}
           shortcut
         >
           <div />
@@ -57,10 +57,10 @@ describe('SearchInput', () => {
     test('as array of string', () =>
       shouldMatchEmotionSnapshot(
         <SearchInput
+          onClose={() => {}}
+          onSearch={() => {}}
           placeholder="Type something"
           popupPlacement="bottom"
-          onSearch={() => {}}
-          onClose={() => {}}
           shortcut={['Control', 'Shift', 'A']}
         >
           <div />
@@ -71,11 +71,11 @@ describe('SearchInput', () => {
   test('renders with error prop', () =>
     shouldMatchEmotionSnapshot(
       <SearchInput
+        error="there is an error"
+        onClose={() => {}}
+        onSearch={() => {}}
         placeholder="Type something"
         popupPlacement="bottom"
-        onSearch={() => {}}
-        onClose={() => {}}
-        error="there is an error"
       >
         <div />
       </SearchInput>,
@@ -86,15 +86,15 @@ describe('SearchInput', () => {
 
     renderWithTheme(
       <SearchInput
-        size="medium"
-        placeholder="Type something"
+        data-testid="search-bar"
         label="input-label"
-        popupPlacement="bottom"
-        threshold={2}
         onSearch={value => {
           searchValue = value
         }}
-        data-testid="search-bar"
+        placeholder="Type something"
+        popupPlacement="bottom"
+        size="medium"
+        threshold={2}
       >
         {({ searchTerms }) => <div>{searchTerms}</div>}
       </SearchInput>,
@@ -115,20 +115,20 @@ describe('SearchInput', () => {
 
     renderWithTheme(
       <SearchInput
-        size="large"
-        placeholder="Type something"
-        label="input-label"
         data-testid="search-bar"
-        popupPlacement="bottom"
+        label="input-label"
         onSearch={value => {
           searchValue = value
         }}
+        placeholder="Type something"
+        popupPlacement="bottom"
+        size="large"
       >
         <div>
-          <a href="/" data-testid="children-1">
+          <a data-testid="children-1" href="/">
             Result 1
           </a>
-          <a href="/" data-testid="children-2">
+          <a data-testid="children-2" href="/">
             Result 2
           </a>
         </div>
@@ -179,19 +179,19 @@ describe('SearchInput', () => {
   test('check if shortcut as boolean works', async () => {
     renderWithTheme(
       <SearchInput
-        size="large"
-        placeholder="Type something"
-        label="input-label"
         data-testid="search-bar"
-        popupPlacement="bottom"
+        label="input-label"
         onSearch={() => {}}
+        placeholder="Type something"
+        popupPlacement="bottom"
         shortcut
+        size="large"
       >
         <div>
-          <a href="/" data-testid="children-1">
+          <a data-testid="children-1" href="/">
             Result 1
           </a>
-          <a href="/" data-testid="children-2">
+          <a data-testid="children-2" href="/">
             Result 2
           </a>
         </div>
@@ -207,19 +207,19 @@ describe('SearchInput', () => {
   test('check if custom shortcut works', async () => {
     renderWithTheme(
       <SearchInput
-        size="large"
-        placeholder="Type something"
-        label="input-label"
         data-testid="search-bar"
-        popupPlacement="bottom"
+        label="input-label"
         onSearch={() => {}}
+        placeholder="Type something"
+        popupPlacement="bottom"
         shortcut={['Control', 'Shift', 'A']}
+        size="large"
       >
         <div>
-          <a href="/" data-testid="children-1">
+          <a data-testid="children-1" href="/">
             Result 1
           </a>
-          <a href="/" data-testid="children-2">
+          <a data-testid="children-2" href="/">
             Result 2
           </a>
         </div>
@@ -235,19 +235,19 @@ describe('SearchInput', () => {
   test('search icon is clickable', async () => {
     renderWithTheme(
       <SearchInput
-        size="large"
-        placeholder="Type something"
-        label="input-label"
         data-testid="search-bar"
-        popupPlacement="bottom"
+        label="input-label"
         onSearch={() => {}}
+        placeholder="Type something"
+        popupPlacement="bottom"
         shortcut={['Control', 'Shift', 'A']}
+        size="large"
       >
         <div>
-          <a href="/" data-testid="children-1">
+          <a data-testid="children-1" href="/">
             Result 1
           </a>
-          <a href="/" data-testid="children-2">
+          <a data-testid="children-2" href="/">
             Result 2
           </a>
         </div>
@@ -266,19 +266,19 @@ describe('SearchInput', () => {
   test('search shotcut are clickable', async () => {
     renderWithTheme(
       <SearchInput
-        size="large"
-        placeholder="Type something"
-        label="input-label"
         data-testid="search-bar"
-        popupPlacement="bottom"
+        label="input-label"
         onSearch={() => {}}
+        placeholder="Type something"
+        popupPlacement="bottom"
         shortcut={['Control']}
+        size="large"
       >
         <div>
-          <a href="/" data-testid="children-1">
+          <a data-testid="children-1" href="/">
             Result 1
           </a>
-          <a href="/" data-testid="children-2">
+          <a data-testid="children-2" href="/">
             Result 2
           </a>
         </div>

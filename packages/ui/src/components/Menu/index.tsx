@@ -13,7 +13,7 @@ const Component = forwardRef(
     { children, visible, hideOnClickItem, ...props }: MenuProps,
     ref: Ref<HTMLButtonElement>,
   ) => (
-    <MenuProvider visible={visible} hideOnClickItem={hideOnClickItem}>
+    <MenuProvider hideOnClickItem={hideOnClickItem} visible={visible}>
       <MenuContent {...props} ref={ref}>
         {children}
       </MenuContent>
@@ -21,4 +21,4 @@ const Component = forwardRef(
   ),
 )
 
-export const Menu = Object.assign(Component, { Item, Group })
+export const Menu = Object.assign(Component, { Group, Item })

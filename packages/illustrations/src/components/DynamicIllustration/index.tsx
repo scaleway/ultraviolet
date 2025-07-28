@@ -34,12 +34,12 @@ export const DynamicIllustration = ({
 
   return (
     <img
+      alt={name}
       className={className}
       data-testid={dataTestId}
-      src={ILLUSTRATIONS[theme === 'light' ? 'light' : 'dark'][name]}
-      alt={name}
-      width={width}
       height={height}
+      src={ILLUSTRATIONS[theme === 'light' ? 'light' : 'dark'][name]}
+      width={width}
     />
   )
 }

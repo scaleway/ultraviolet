@@ -30,9 +30,9 @@ const Home = () => {
   return (
     <StyledPage>
       <StyledSwitchButton
-        value="login"
         name="switch button"
         onChange={event => setTab((event.target as HTMLInputElement).value)}
+        value="login"
       >
         <SwitchButton.Option value="login">Log In</SwitchButton.Option>
         <SwitchButton.Option value="signup">Sign Up</SwitchButton.Option>

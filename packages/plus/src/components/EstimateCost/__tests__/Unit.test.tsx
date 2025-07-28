@@ -41,12 +41,12 @@ describe('EstimateCost - Unit Item', () => {
     shouldMatchEmotionSnapshot(
       <EstimateCost>
         <EstimateCost.Item
-          label="Storage"
-          subLabel="50 GB Free"
-          price={0.001}
-          unit="GB"
-          amountFree={50}
           amount={100}
+          amountFree={50}
+          label="Storage"
+          price={0.001}
+          subLabel="50 GB Free"
+          unit="GB"
         >
           <EstimateCost.Unit unit="GB" />
         </EstimateCost.Item>
@@ -57,14 +57,14 @@ describe('EstimateCost - Unit Item', () => {
     shouldMatchEmotionSnapshot(
       <EstimateCost>
         <EstimateCost.Item
-          label="Storage"
-          subLabel="50 GB Free"
-          price={0.001}
-          unit="GB"
-          amountFree={50}
           amount={100}
-          noIteration
+          amountFree={50}
+          label="Storage"
           maxAmount={100}
+          noIteration
+          price={0.001}
+          subLabel="50 GB Free"
+          unit="GB"
         >
           <EstimateCost.Unit unit="GB" />
         </EstimateCost.Item>
@@ -75,26 +75,26 @@ describe('EstimateCost - Unit Item', () => {
     shouldMatchEmotionSnapshot(
       <EstimateCost>
         <EstimateCost.Item
-          label="value"
-          subLabel="value"
-          price={0.001}
-          unit="value"
-          amountFree={75}
           amount={100}
+          amountFree={75}
           hideFromOverlay
+          label="value"
+          price={0.001}
+          subLabel="value"
+          unit="value"
         >
           <EstimateCost.Unit unit="value" />
         </EstimateCost.Item>
         <EstimateCost.Item
-          label="value"
-          subLabel="value"
-          price={0.0003}
-          unit="value"
-          amountFree={75}
           amount={100}
+          amountFree={75}
           hideFromOverlay
-          noIteration
+          label="value"
           maxAmount={150}
+          noIteration
+          price={0.0003}
+          subLabel="value"
+          unit="value"
         >
           <EstimateCost.Unit unit="value" />
         </EstimateCost.Item>
@@ -113,7 +113,7 @@ describe('EstimateCost - Unit Item', () => {
   test('render with 0 amount', () =>
     shouldMatchEmotionSnapshot(
       <EstimateCost>
-        <EstimateCost.Item label="Unit" price={10} amount={0}>
+        <EstimateCost.Item amount={0} label="Unit" price={10}>
           <EstimateCost.Unit />
         </EstimateCost.Item>
       </EstimateCost>,
@@ -122,7 +122,7 @@ describe('EstimateCost - Unit Item', () => {
   test('render with 10 amount', () =>
     shouldMatchEmotionSnapshot(
       <EstimateCost>
-        <EstimateCost.Item label="Unit" price={10} amount={10}>
+        <EstimateCost.Item amount={10} label="Unit" price={10}>
           <EstimateCost.Unit />
         </EstimateCost.Item>
       </EstimateCost>,

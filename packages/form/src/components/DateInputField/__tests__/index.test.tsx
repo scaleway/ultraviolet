@@ -12,7 +12,7 @@ describe('DateInputField', () => {
 
   test('should render correctly disabled', () => {
     const { asFragment } = renderWithForm(
-      <DateInputField name="test" disabled />,
+      <DateInputField disabled name="test" />,
     )
     expect(asFragment()).toMatchSnapshot()
   })
@@ -88,11 +88,11 @@ describe('DateInputField', () => {
     const onChange = vi.fn()
     const { asFragment, resultForm } = renderWithForm(
       <DateInputField
+        clearable
         name="test"
         onBlur={onBlur}
         onChange={onChange}
         placeholder="YYYY-MM-DD"
-        clearable
       />,
       {
         defaultValues: {

@@ -94,16 +94,16 @@ export const Footer = ({ onToggleExpand, contentRef }: FooterProps) => {
 
   return (
     <StickyFooter data-has-overflow-style={footerHasOverflowStyle}>
-      <Tooltip text={label} placement="right">
+      <Tooltip placement="right" text={label}>
         <Button
-          variant="ghost"
-          sentiment="neutral"
-          size="small"
           aria-label={label}
           onClick={() => {
             toggleExpand()
             onToggleExpand?.(!expanded)
           }}
+          sentiment="neutral"
+          size="small"
+          variant="ghost"
         >
           <Icon />
         </Button>

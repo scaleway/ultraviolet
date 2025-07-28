@@ -4,10 +4,10 @@ import { Table } from '..'
 import { columns, data } from './resources'
 
 const combos = [
-  { stripped: false, bordered: false, id: 1 },
-  { stripped: true, bordered: false, id: 2 },
-  { stripped: false, bordered: true, id: 3 },
-  { stripped: true, bordered: true, id: 4 },
+  { bordered: false, id: 1, stripped: false },
+  { bordered: false, id: 2, stripped: true },
+  { bordered: true, id: 3, stripped: false },
+  { bordered: true, id: 4, stripped: true },
 ] as const
 
 export const Style: StoryFn = args => (
@@ -20,21 +20,21 @@ export const Style: StoryFn = args => (
         </Text>
         <Table
           {...args}
-          columns={columns}
           bordered={combo.bordered}
-          stripped={combo.stripped}
+          columns={columns}
           expandable
+          stripped={combo.stripped}
         >
           <Table.Body>
             {data.slice(0, 3).map(movie => (
               <Table.Row
-                key={movie.id}
-                id={movie.id}
                 expandable={
                   <Text as="p" variant="bodySmall">
                     A movie to watch
                   </Text>
                 }
+                id={movie.id}
+                key={movie.id}
               >
                 <Table.Cell>{movie.name}</Table.Cell>
                 <Table.Cell>{movie.releaseYear}</Table.Cell>

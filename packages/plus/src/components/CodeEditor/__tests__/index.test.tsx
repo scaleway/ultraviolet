@@ -10,58 +10,58 @@ describe.skip('CodeEditor', () => {
   it('should render correctly with content', () =>
     shouldMatchEmotionSnapshot(
       <CodeEditor
-        value="configuration: 1/ntest: 'ok'"
         extensions="yaml"
         height="600px"
-        onChange={newValue => newValue}
         helper="Helper text"
         label="Code"
         labelDescription="Code description"
+        onChange={newValue => newValue}
+        value="configuration: 1/ntest: 'ok'"
       />,
     ))
 
   it('should render correctly with label', () =>
     shouldMatchEmotionSnapshot(
       <CodeEditor
-        value="configuration: 1/ntest: 'ok'"
         extensions="yaml"
         height="600px"
-        onChange={newValue => newValue}
         helper="Helper text"
         label="title"
+        onChange={newValue => newValue}
+        value="configuration: 1/ntest: 'ok'"
       />,
     ))
 
   it('should render correctly disbled', () =>
     shouldMatchEmotionSnapshot(
       <CodeEditor
-        value="configuration: 1/ntest: 'ok'"
+        disabled
         extensions="yaml"
         height="600px"
         onChange={newValue => newValue}
-        disabled
+        value="configuration: 1/ntest: 'ok'"
       />,
     ))
 
   it('should render correctly with copyButton as boolean', () =>
     shouldMatchEmotionSnapshot(
       <CodeEditor
-        value="configuration: 1/ntest: 'ok'"
+        copyButton
         extensions="yaml"
         height="600px"
         onChange={newValue => newValue}
-        copyButton
+        value="configuration: 1/ntest: 'ok'"
       />,
     ))
 
   it('should render correctly with copyButton as string', () =>
     shouldMatchEmotionSnapshot(
       <CodeEditor
-        value="configuration: 1/ntest: 'ok'"
+        copyButton="Copy"
         extensions="yaml"
         height="600px"
         onChange={newValue => newValue}
-        copyButton="Copy"
+        value="configuration: 1/ntest: 'ok'"
       />,
     ))
 })

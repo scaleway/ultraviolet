@@ -31,10 +31,10 @@ const Provider = ({
   const value = useMemo<TableContextValue>(
     () => ({
       ...listContext,
-      subscribeHandler,
       bordered,
       columns,
       stripped,
+      subscribeHandler,
     }),
     [bordered, columns, stripped, subscribeHandler, listContext],
   )
@@ -51,8 +51,8 @@ export const TableProvider = ({
 }: TableProviderProps) => (
   <ListProvider columns={[]} {...props}>
     <Provider
-      columns={columns}
       bordered={bordered}
+      columns={columns}
       stripped={stripped}
       {...props}
     >

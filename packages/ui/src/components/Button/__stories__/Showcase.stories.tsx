@@ -29,16 +29,16 @@ export const Showcase: StoryFn<typeof Button> = args => (
   <Table columns={COLUMNS}>
     <Table.Body>
       {([...SENTIMENTS, 'white', 'black'] as const).map(sentiment => (
-        <StyledRow key={sentiment} id={sentiment} sentiment={sentiment}>
+        <StyledRow id={sentiment} key={sentiment} sentiment={sentiment}>
           <Table.Cell>
             <Text
               as="span"
-              variant="bodyStrong"
               sentiment={
                 sentiment === 'white' || sentiment === 'black'
                   ? sentiment
                   : undefined
               }
+              variant="bodyStrong"
             >
               {sentiment.toUpperCase()}
             </Text>
@@ -49,8 +49,8 @@ export const Showcase: StoryFn<typeof Button> = args => (
                 <Button
                   {...args}
                   onClick={onClick}
-                  variant={variant}
                   sentiment={sentiment}
+                  variant={variant}
                 >
                   Button
                 </Button>

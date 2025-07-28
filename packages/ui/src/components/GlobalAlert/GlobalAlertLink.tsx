@@ -20,18 +20,18 @@ export const GlobalAlertLink = ({
 
   return (
     <Link
-      href={href}
-      target={target}
-      download={download}
-      prominence={theme === 'light' ? 'strong' : 'stronger'}
-      size="small"
-      variant="inline"
-      rel={rel}
-      className={className}
-      onClick={onClick}
       aria-label={ariaLabel}
-      oneLine={oneLine}
+      className={className}
       data-testid={dataTestId}
+      download={download}
+      href={href}
+      onClick={onClick}
+      oneLine={oneLine}
+      prominence={theme === 'light' ? 'strong' : 'stronger'}
+      rel={rel}
+      size="small"
+      target={target}
+      variant="inline"
     >
       {children}
     </Link>

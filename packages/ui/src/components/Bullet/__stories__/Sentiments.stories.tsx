@@ -6,7 +6,7 @@ import { Bullet } from '..'
 
 export const Sentiments: StoryFn = props => (
   <Stack gap={1}>
-    <Stack direction="row" gap={1} alignItems="center">
+    <Stack alignItems="center" direction="row" gap={1}>
       <Text as="span" variant="bodyStrong">
         Prominence default:
       </Text>
@@ -16,7 +16,7 @@ export const Sentiments: StoryFn = props => (
         </Bullet>
       ))}
     </Stack>
-    <Stack direction="row" gap={1} alignItems="center">
+    <Stack alignItems="center" direction="row" gap={1}>
       <Text as="span" variant="bodyStrong">
         Prominence strong:
       </Text>
@@ -24,8 +24,8 @@ export const Sentiments: StoryFn = props => (
         <Bullet
           {...props}
           key={sentiment}
-          sentiment={sentiment}
           prominence="strong"
+          sentiment={sentiment}
         >
           1
         </Bullet>

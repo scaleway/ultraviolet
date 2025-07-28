@@ -4,7 +4,6 @@ import { Loader } from '..'
 
 export default {
   component: Loader,
-  title: 'Components/Feedback/Loader',
   decorators: [
     StoryComponent => (
       <Stack direction="row" gap={1}>
@@ -12,6 +11,7 @@ export default {
       </Stack>
     ),
   ],
+  title: 'Components/Feedback/Loader',
 } as Meta
 
 export { Active } from './Active.stories'

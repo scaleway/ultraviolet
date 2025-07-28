@@ -15,7 +15,7 @@ export const MinHeight: StoryFn<typeof Expandable> = args => {
         {toggled ? <MinusIcon /> : <PlusIcon />}
         Click me to {toggled ? 'hide' : 'show'} content
       </Button>
-      <Expandable {...args} opened={toggled} minHeight={35}>
+      <Expandable {...args} minHeight={35} opened={toggled}>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
         veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea

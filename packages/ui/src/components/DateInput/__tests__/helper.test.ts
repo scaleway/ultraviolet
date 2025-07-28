@@ -10,8 +10,8 @@ import {
 } from '../helpers'
 
 const rangeDate = {
-  start: new Date('20 October 2000'),
   end: new Date('31 October 2000'),
+  start: new Date('20 October 2000'),
 }
 
 const date = new Date('20 November 2000')

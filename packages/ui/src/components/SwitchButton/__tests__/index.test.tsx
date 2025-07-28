@@ -26,7 +26,7 @@ describe('SwitchButton', () => {
     ))
   test('renders correctly medium', () =>
     shouldMatchEmotionSnapshot(
-      <SwitchButton name="test" onChange={() => {}} value="left" size="medium">
+      <SwitchButton name="test" onChange={() => {}} size="medium" value="left">
         <SwitchButton.Option value="left">Left</SwitchButton.Option>
         <SwitchButton.Option value="right">Right</SwitchButton.Option>
       </SwitchButton>,
@@ -47,8 +47,8 @@ describe('SwitchButton', () => {
       resizeCallback = cb
 
       return {
-        observe: vi.fn(),
         disconnect: vi.fn(),
+        observe: vi.fn(),
       }
     }) as unknown as typeof ResizeObserver
 
@@ -79,8 +79,8 @@ describe('SwitchButton', () => {
       <SwitchButton
         name="test"
         onChange={() => {}}
-        value="left"
         tooltip="tooltip"
+        value="left"
       >
         <SwitchButton.Option value="left">Left</SwitchButton.Option>
         <SwitchButton.Option value="right">Right</SwitchButton.Option>
@@ -92,10 +92,10 @@ describe('SwitchButton', () => {
       <SwitchButton
         name="test"
         onChange={() => {}}
-        value="left"
         tooltip="tooltip"
+        value="left"
       >
-        <SwitchButton.Option value="left" disabled tooltip="This is disabled">
+        <SwitchButton.Option disabled tooltip="This is disabled" value="left">
           Left
         </SwitchButton.Option>
         <SwitchButton.Option value="right">Right</SwitchButton.Option>
@@ -107,8 +107,8 @@ describe('SwitchButton', () => {
       <SwitchButton
         name="test"
         onChange={() => {}}
-        value="left"
         sentiment="neutral"
+        value="left"
       >
         <SwitchButton.Option value="left">Left</SwitchButton.Option>
         <SwitchButton.Option value="right">Right</SwitchButton.Option>
@@ -120,8 +120,8 @@ describe('SwitchButton', () => {
       <SwitchButton
         name="test"
         onChange={() => {}}
-        value="left"
         tooltip="tooltip"
+        value="left"
       >
         <SwitchButton.Option value="left">
           <MoonIcon />

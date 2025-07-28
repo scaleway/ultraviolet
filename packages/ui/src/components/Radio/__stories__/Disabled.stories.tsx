@@ -9,24 +9,24 @@ export const Disabled: StoryFn = args => {
     <>
       <Radio
         {...args}
-        name="disabled-label-1"
-        disabled
         checked={value === 'disabled-label-1'}
-        value="disabled-label-1"
+        disabled
+        label="Label 1"
+        name="disabled-label-1"
         onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
           onChange(e.currentTarget.value)
         }
-        label="Label 1"
+        value="disabled-label-1"
       />
       <Radio
         {...args}
-        name="disabled-label-2"
         checked={value === 'disabled-label-2'}
-        value="disabled-label-2"
+        label="Label 2"
+        name="disabled-label-2"
         onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
           onChange(e.currentTarget.value)
         }
-        label="Label 2"
+        value="disabled-label-2"
       />
     </>
   )

@@ -7,93 +7,93 @@ describe('SelectableCardGroup', () => {
   test('renders correctly', () =>
     shouldMatchEmotionSnapshot(
       <SelectableCardGroup
-        value={['value-1']}
-        onChange={() => {}}
-        name="checkbox"
         legend="Label"
+        name="checkbox"
+        onChange={() => {}}
         type="checkbox"
+        value={['value-1']}
       >
-        <SelectableCardGroup.Card value="value-1" label="Checkbox 1" />
-        <SelectableCardGroup.Card value="value-2" label="Checkbox 2" />
+        <SelectableCardGroup.Card label="Checkbox 1" value="value-1" />
+        <SelectableCardGroup.Card label="Checkbox 2" value="value-2" />
       </SelectableCardGroup>,
     ))
 
   test('renders correctly with direction multiple columns', () =>
     shouldMatchEmotionSnapshot(
       <SelectableCardGroup
-        value={['value-1']}
-        onChange={() => {}}
-        name="checkbox"
-        legend="Label"
         columns={2}
+        legend="Label"
+        name="checkbox"
+        onChange={() => {}}
         type="checkbox"
+        value={['value-1']}
       >
-        <SelectableCardGroup.Card value="value-1" label="Checkbox 1" />
-        <SelectableCardGroup.Card value="value-2" label="Checkbox 2" />
+        <SelectableCardGroup.Card label="Checkbox 1" value="value-1" />
+        <SelectableCardGroup.Card label="Checkbox 2" value="value-2" />
       </SelectableCardGroup>,
     ))
 
   test('renders correctly with helper content', () =>
     shouldMatchEmotionSnapshot(
       <SelectableCardGroup
-        value={['value-1']}
-        onChange={() => {}}
-        name="checkbox"
-        legend="Label"
-        type="checkbox"
         helper="Helper content"
+        legend="Label"
+        name="checkbox"
+        onChange={() => {}}
+        type="checkbox"
+        value={['value-1']}
       >
-        <SelectableCardGroup.Card value="value-1" label="Checkbox 1" />
-        <SelectableCardGroup.Card value="value-2" label="Checkbox 2" />
+        <SelectableCardGroup.Card label="Checkbox 1" value="value-1" />
+        <SelectableCardGroup.Card label="Checkbox 2" value="value-2" />
       </SelectableCardGroup>,
     ))
   test('renders correctly required and showTick', () =>
     shouldMatchEmotionSnapshot(
       <SelectableCardGroup
-        value={['value-1']}
-        onChange={() => {}}
-        name="checkbox"
         legend="Label"
-        type="checkbox"
+        name="checkbox"
+        onChange={() => {}}
         required
         showTick
+        type="checkbox"
+        value={['value-1']}
       >
-        <SelectableCardGroup.Card value="value-1" label="Checkbox 1" />
-        <SelectableCardGroup.Card value="value-2" label="Checkbox 2" />
+        <SelectableCardGroup.Card label="Checkbox 1" value="value-1" />
+        <SelectableCardGroup.Card label="Checkbox 2" value="value-2" />
       </SelectableCardGroup>,
     ))
   test('renders correctly with error content', () =>
     shouldMatchEmotionSnapshot(
       <SelectableCardGroup
-        value={['value-1']}
-        onChange={() => {}}
-        name="checkbox"
-        legend="Label"
         error="Error content"
+        legend="Label"
+        name="checkbox"
+        onChange={() => {}}
         type="checkbox"
+        value={['value-1']}
       >
-        <SelectableCardGroup.Card value="value-1" label="Checkbox 1" />
-        <SelectableCardGroup.Card value="value-2" label="Checkbox 2" />
+        <SelectableCardGroup.Card label="Checkbox 1" value="value-1" />
+        <SelectableCardGroup.Card label="Checkbox 2" value="value-2" />
       </SelectableCardGroup>,
     ))
   test('renders correctly as a radio', () =>
     shouldMatchEmotionSnapshot(
       <SelectableCardGroup
-        value="value-1"
-        onChange={() => {}}
-        name="radio"
-        legend="Label"
         error="Error content"
+        legend="Label"
+        name="radio"
+        onChange={() => {}}
         type="radio"
+        value="value-1"
       >
-        <SelectableCardGroup.Card value="value-1" label="Radio 1" />
-        <SelectableCardGroup.Card value="value-2" label="Radio 2" />
+        <SelectableCardGroup.Card label="Radio 1" value="value-1" />
+        <SelectableCardGroup.Card label="Radio 2" value="value-2" />
       </SelectableCardGroup>,
     ))
 
   test('throws if SelectableCardGroup.Card is used without SelectableCardGroup', () => {
     expect(() =>
-      render(<SelectableCardGroup.Card value="value-1" label="Checkbox 1" />),
+      render(<SelectableCardGroup.Card label="Checkbox 1" value="value-1" />),
     ).toThrow(
       'SelectableCardGroup.Card can only be used inside a SelectableCardGroup',
     )

@@ -327,15 +327,15 @@ export const Item = memo(
     useEffect(() => {
       if (!isOverlay) {
         productsCallback?.add({
-          id,
           amount,
-          price,
           amountFree,
+          discount,
+          id,
           isVariant,
+          longFractionDigits,
           maxAmount,
           noIteration,
-          longFractionDigits,
-          discount,
+          price,
         })
       }
     }, [
@@ -355,12 +355,12 @@ export const Item = memo(
     const computedItemPrice = useMemo(
       () =>
         calculatePrice({
-          price,
           amount,
           amountFree,
-          timeUnit: noIteration ? 'hours' : (iteration?.unit ?? 'hours'),
-          timeAmount: noIteration ? 1 : (iteration?.value ?? 1),
           discount,
+          price,
+          timeAmount: noIteration ? 1 : (iteration?.value ?? 1),
+          timeUnit: noIteration ? 'hours' : (iteration?.unit ?? 'hours'),
         }),
       [price, amount, amountFree, iteration, noIteration, discount],
     )
@@ -368,12 +368,12 @@ export const Item = memo(
     const computedMaxItemPrice = useMemo(
       () =>
         calculatePrice({
-          price,
           amount: maxAmount,
           amountFree,
-          timeUnit: noIteration ? 'hours' : (iteration?.unit ?? 'hours'),
-          timeAmount: noIteration ? 1 : (iteration?.value ?? 1),
           discount,
+          price,
+          timeAmount: noIteration ? 1 : (iteration?.value ?? 1),
+          timeUnit: noIteration ? 'hours' : (iteration?.unit ?? 'hours'),
         }),
       [price, maxAmount, amountFree, iteration, noIteration, discount],
     )
@@ -390,22 +390,22 @@ export const Item = memo(
 
     return (
       <Row
+        hideFromOverlay={hideFromOverlay}
         isFirstElement={isFirstElement}
         shouldBeHidden={shouldBeHidden}
-        hideFromOverlay={hideFromOverlay}
       >
         <Cell
-          width={!isOverlay ? MAX_CELL_WIDTH : 'inherit'}
           hasBorder={!isLastElement && !noBorder && !isOverlay}
           tabulation={tabulation}
+          width={!isOverlay ? MAX_CELL_WIDTH : 'inherit'}
         >
           <LeftSide>
             <Stack>
               <Stack direction="row">
                 <Text
                   as="p"
-                  variant={labelTextVariant ?? 'body'}
                   prominence={labelTextProminence ?? 'default'}
+                  variant={labelTextVariant ?? 'body'}
                 >
                   {label}
                 </Text>
@@ -417,33 +417,33 @@ export const Item = memo(
                   </StyledDiv>
                 ) : null}
                 {subLabel && !isOverlay ? (
-                  <StyledText as="p" variant="body" sentiment="primary" italic>
+                  <StyledText as="p" italic sentiment="primary" variant="body">
                     {subLabel}
                   </StyledText>
                 ) : null}
                 {discount > 0 && discountText ? (
                   <StyledBadge
                     prominence="strong"
-                    size="small"
                     sentiment="warning"
+                    size="small"
                   >
                     {discountText}
                   </StyledBadge>
                 ) : null}
               </Stack>
               {notice ? (
-                <MaxWidthText as="p" variant="caption" prominence="weak">
+                <MaxWidthText as="p" prominence="weak" variant="caption">
                   {notice}
                 </MaxWidthText>
               ) : null}
             </Stack>
-            <StyledResourceName isOverlay={isOverlay} animated={animated}>
+            <StyledResourceName animated={animated} isOverlay={isOverlay}>
               {isDefined
                 ? Children.map(children, child =>
                     isValidElement<ExtraProps>(child)
                       ? cloneElement(child, {
-                          itemCallback,
                           amount,
+                          itemCallback,
                           maxAmount,
                           unit,
                         })
@@ -462,8 +462,6 @@ export const Item = memo(
               <>
                 <StyleNoPriceItem
                   as="p"
-                  strikeThrough={strikeThrough}
-                  variant={noIterationText ? 'headingSmall' : 'bodyStrong'}
                   prominence={
                     computedItemPrice === 0 && computedMaxItemPrice === 0
                       ? 'weak'
@@ -474,6 +472,8 @@ export const Item = memo(
                       ? 'neutral'
                       : 'primary'
                   }
+                  strikeThrough={strikeThrough}
+                  variant={noIterationText ? 'headingSmall' : 'bodyStrong'}
                 >
                   {priceText}
                   {!priceText
@@ -482,7 +482,7 @@ export const Item = memo(
                       })
                     : null}
                   {noIterationText ? (
-                    <Text sentiment="primary" as="span" variant="bodySmall">
+                    <Text as="span" sentiment="primary" variant="bodySmall">
                       /{noIterationText}
                     </Text>
                   ) : null}
@@ -497,11 +497,11 @@ export const Item = memo(
                   <TextAlignRight as="p" variant="body">
                     {formatNumber(
                       calculatePrice({
-                        price,
                         amount: 1,
-                        timeUnit: 'hours',
-                        timeAmount: 1,
                         discount,
+                        price,
+                        timeAmount: 1,
+                        timeUnit: 'hours',
                       }),
                       {
                         maximumFractionDigits: longFractionDigits

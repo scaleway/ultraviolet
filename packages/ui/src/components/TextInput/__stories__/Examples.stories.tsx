@@ -14,64 +14,64 @@ export const Examples: StoryFn<typeof TextInput> = args => {
       <TextInput
         {...args}
         label="With prefix"
+        onChange={event => setValue(event.target.value)}
         prefix="https://"
         value={value}
-        onChange={event => setValue(event.target.value)}
       />
       <TextInput
         {...args}
         label="Text input with random hook"
-        prefix="https://"
-        value={value}
         onChange={event => setValue(event.target.value)}
         onRandomize={() => setValue(randomName())}
+        prefix="https://"
+        value={value}
       />
       <TextInput
         {...args}
         label="Password input with random hook"
-        prefix="https://"
-        value={value}
         onChange={event => setValue(event.target.value)}
         onRandomize={() => setValue(randomName())}
+        prefix="https://"
         type="password"
+        value={value}
       />
       <TextInput
         {...args}
+        clearable
         label="All at once"
+        loading
+        onChange={event => setValue(event.target.value)}
+        onRandomize={() => setValue(randomName())}
         prefix="https://"
+        success="Field has been updated!"
         suffix=".com"
         value={value}
-        onChange={event => setValue(event.target.value)}
-        onRandomize={() => setValue(randomName())}
-        success="Field has been updated!"
-        loading
-        clearable
       />
       <TextInput
         {...args}
-        label="With an helper but disabled"
         disabled
         helper="Notice to fill the field"
-        value={value}
+        label="With an helper but disabled"
+        loading
         onChange={event => setValue(event.target.value)}
         onRandomize={() => setValue(randomName())}
-        loading
+        value={value}
       />
       <TextInput
         {...args}
-        label="Complex helper"
         helper={
-          <Text as="p" variant="caption" sentiment="neutral" prominence="weak">
+          <Text as="p" prominence="weak" sentiment="neutral" variant="caption">
             Notice example.{' '}
-            <Link href="http://scaleway.com" target="_blank" size="small">
+            <Link href="http://scaleway.com" size="small" target="_blank">
               Learn more
             </Link>
           </Text>
         }
-        value={value}
+        label="Complex helper"
+        loading
         onChange={event => setValue(event.target.value)}
         onRandomize={() => setValue(randomName())}
-        loading
+        value={value}
       />
     </Stack>
   )

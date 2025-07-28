@@ -4,7 +4,7 @@ import { Loader, SIZES } from '../index'
 export const Sizes: StoryFn = props => (
   <>
     {Object.keys(SIZES).map(size => (
-      <Loader {...props} size={size as keyof typeof SIZES} key={size} />
+      <Loader {...props} key={size} size={size as keyof typeof SIZES} />
     ))}
   </>
 )

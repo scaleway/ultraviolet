@@ -3,12 +3,12 @@ import { InfoTable } from '..'
 
 export default {
   component: InfoTable,
-  title: 'Plus/Compositions/InfoTable',
   subcomponents: {
     InfoTable,
-    'InfoTable.Row': InfoTable.Row,
     'InfoTable.Cell': InfoTable.Cell,
+    'InfoTable.Row': InfoTable.Row,
   },
+  title: 'Plus/Compositions/InfoTable',
 } satisfies Meta
 
 export { ComplexExample } from './ComplexExample.stories'

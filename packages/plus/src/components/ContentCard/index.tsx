@@ -182,13 +182,13 @@ export const ContentCard = forwardRef<
 
     return (
       <Container
-        target={target}
-        onClick={!disabled ? onClick : undefined}
-        href={!disabled ? href : undefined}
-        role={onClick && !href ? 'button' : undefined}
-        ref={ref}
         className={className}
         disabled={disabled}
+        href={!disabled ? href : undefined}
+        onClick={!disabled ? onClick : undefined}
+        ref={ref}
+        role={onClick && !href ? 'button' : undefined}
+        target={target}
       >
         {loading ? (
           <Skeleton direction={direction} />
@@ -197,45 +197,45 @@ export const ContentCard = forwardRef<
             {image ? (
               <Image
                 alt=""
-                src={image}
-                height={direction === 'column' ? 120 : undefined}
-                width={direction === 'row' ? 220 : undefined}
-                direction={direction}
-                subContainerHeight={subContainerHeight}
                 data-disabled={disabled}
+                direction={direction}
+                height={direction === 'column' ? 120 : undefined}
+                src={image}
+                subContainerHeight={subContainerHeight}
+                width={direction === 'row' ? 220 : undefined}
               />
             ) : null}
-            <Stack gap={2} direction={direction} flex={1}>
+            <Stack direction={direction} flex={1} gap={2}>
               <SubContainer
-                gap={2}
-                flex="1 1 auto"
                 alignItems={
                   !subtitle && !description && !children ? 'center' : undefined
                 }
                 direction={direction}
+                flex="1 1 auto"
+                gap={2}
                 href={href}
                 ref={subContainerRef}
               >
                 {icon ?? null}
-                <Stack gap={2} justifyContent="space-between" flex="1 1 auto">
+                <Stack flex="1 1 auto" gap={2} justifyContent="space-between">
                   <Stack gap={0.5}>
                     <Stack>
                       {subtitle ? (
                         <Text
                           as="small"
-                          variant="caption"
+                          disabled={disabled}
                           prominence="weak"
                           sentiment="neutral"
-                          disabled={disabled}
+                          variant="caption"
                         >
                           {subtitle}
                         </Text>
                       ) : null}
                       <Text
                         as={headingTag}
-                        variant="bodyStrong"
-                        sentiment="neutral"
                         disabled={disabled}
+                        sentiment="neutral"
+                        variant="bodyStrong"
                       >
                         {title}
                       </Text>
@@ -243,9 +243,9 @@ export const ContentCard = forwardRef<
                     {description ? (
                       <Text
                         as="p"
-                        variant="bodySmall"
-                        sentiment="neutral"
                         disabled={disabled}
+                        sentiment="neutral"
+                        variant="bodySmall"
                       >
                         {description}
                       </Text>
@@ -256,13 +256,13 @@ export const ContentCard = forwardRef<
               </SubContainer>
               {href ? (
                 <StyledIconStack
-                  flex={1}
                   alignItems={direction === 'column' ? 'flex-end' : 'center'}
-                  justifyContent={direction === 'column' ? 'center' : 'end'}
                   direction={direction}
+                  flex={1}
+                  justifyContent={direction === 'column' ? 'center' : 'end'}
                 >
                   <IconContainer>
-                    <OpenInNewIcon sentiment="neutral" disabled={disabled} />
+                    <OpenInNewIcon disabled={disabled} sentiment="neutral" />
                   </IconContainer>
                 </StyledIconStack>
               ) : null}

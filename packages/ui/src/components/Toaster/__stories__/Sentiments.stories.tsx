@@ -6,17 +6,17 @@ export const Sentiments: StoryFn<typeof ToastContainer> = args => (
   <div style={{ height: '300px' }}>
     <ToastContainer {...args} />
     <Button
-      sentiment="neutral"
       onClick={() => toast.success('This is success')}
+      sentiment="neutral"
     >
       Success
     </Button>
-    <Button sentiment="danger" onClick={() => toast.error('This is error')}>
+    <Button onClick={() => toast.error('This is error')} sentiment="danger">
       Error
     </Button>
     <Button
-      sentiment="warning"
       onClick={() => toast.warning('This is warning')}
+      sentiment="warning"
     >
       Warning
     </Button>

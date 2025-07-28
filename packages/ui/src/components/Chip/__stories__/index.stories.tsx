@@ -3,9 +3,6 @@ import { Chip } from '..'
 
 export default {
   component: Chip,
-  subcomponents: {
-    'Chip.Icon': Chip.Icon,
-  },
   decorators: [
     StoryComponent => (
       <div style={{ display: 'flex', flexDirection: 'column' }}>
@@ -13,6 +10,9 @@ export default {
       </div>
     ),
   ],
+  subcomponents: {
+    'Chip.Icon': Chip.Icon,
+  },
   title: 'Components/Badges/Chip',
 } as Meta<typeof Chip>
 

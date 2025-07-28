@@ -140,34 +140,34 @@ export const BaseTable = forwardRef<HTMLTableElement, TableProps>(
 
     return (
       <TableProvider
-        selectable={selectable}
-        expandButton={expandable}
-        stripped={stripped}
-        bordered={bordered}
         autoCollapse={autoCollapse}
+        bordered={bordered}
         columns={columns}
+        expandButton={expandable}
         onSelectedChange={onSelectedChange}
+        selectable={selectable}
+        stripped={stripped}
       >
         <TableContainer>
           <StyledTable
+            bordered={bordered}
             ref={ref}
             stripped={stripped}
-            bordered={bordered}
             template={computeTemplate}
           >
             <Header>
               <HeaderRow hasSelectAllColumn={selectable}>
                 {columns.map((column, index) => (
                   <HeaderCell
-                    key={`header-column-${index}`}
-                    isOrdered={column.isOrdered}
-                    orderDirection={column.orderDirection}
-                    onOrder={column.onOrder}
-                    width={column.width}
-                    minWidth={column.minWidth}
-                    maxWidth={column.maxWidth}
-                    info={column.info}
                     align={column.align}
+                    info={column.info}
+                    isOrdered={column.isOrdered}
+                    key={`header-column-${index}`}
+                    maxWidth={column.maxWidth}
+                    minWidth={column.minWidth}
+                    onOrder={column.onOrder}
+                    orderDirection={column.orderDirection}
+                    width={column.width}
                   >
                     {column.label}
                   </HeaderCell>
@@ -177,9 +177,9 @@ export const BaseTable = forwardRef<HTMLTableElement, TableProps>(
             {loading ? (
               <Body>
                 <SkeletonRows
-                  selectable={selectable}
-                  rows={5}
                   cols={columns.length}
+                  rows={5}
+                  selectable={selectable}
                 />
               </Body>
             ) : (
@@ -197,8 +197,8 @@ export const BaseTable = forwardRef<HTMLTableElement, TableProps>(
  */
 export const Table = Object.assign(BaseTable, {
   Body,
-  Row,
   Cell,
-  useTableContext,
+  Row,
   SelectBar,
+  useTableContext,
 })

@@ -26,7 +26,7 @@ export const SkeletonRows = ({ selectable, rows, cols }: SkeletonRowsProps) => {
   return (
     <>
       {rowArray.map(index => (
-        <StyledLoadingRow role="row" id={`skeleton-${index}`} key={index}>
+        <StyledLoadingRow id={`skeleton-${index}`} key={index} role="row">
           {selectable ? <Cell /> : null}
           {colArray.map(columnIndex => (
             <Cell key={columnIndex}>

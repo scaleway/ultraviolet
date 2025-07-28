@@ -5,10 +5,10 @@ describe('EstimateCost - helper', () => {
   it('should calculate price of 0, amount 0, amountFree 0 for 24 hours', () => {
     expect(
       calculatePrice({
-        price: 0,
         amount: 0,
-        timeUnit: 'hours',
+        price: 0,
         timeAmount: 24,
+        timeUnit: 'hours',
       }),
     ).toEqual(0)
   })
@@ -16,10 +16,10 @@ describe('EstimateCost - helper', () => {
   it('should calculate negative price of -1, amount 1, amountFree 0 for 24 hours', () => {
     expect(
       calculatePrice({
-        price: -1,
         amount: 1,
-        timeUnit: 'hours',
+        price: -1,
         timeAmount: 24,
+        timeUnit: 'hours',
       }),
     ).toEqual(-24)
   })
@@ -27,11 +27,11 @@ describe('EstimateCost - helper', () => {
   it('should calculate price of 0.004, amount 5, amountFree 2 for 3 months', () => {
     expect(
       calculatePrice({
-        price: 0.0014,
         amount: 5,
         amountFree: 2,
-        timeUnit: 'months',
+        price: 0.0014,
         timeAmount: 3,
+        timeUnit: 'months',
       }),
     ).toEqual(9.198)
   })
@@ -39,11 +39,11 @@ describe('EstimateCost - helper', () => {
   it('should calculate work with NaN timeAmount number', () => {
     expect(
       calculatePrice({
-        price: 0.0014,
         amount: 5,
         amountFree: 2,
-        timeUnit: 'months',
+        price: 0.0014,
         timeAmount: Number.NaN,
+        timeUnit: 'months',
       }),
     ).toEqual(0)
   })

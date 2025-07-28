@@ -22,7 +22,7 @@ export const OneLine: StoryFn<typeof Text> = args => (
     </Container>
     <strong>With ellipsis (a tooltip is displayed on hover)</strong>
     <Container>
-      <Text {...args} as="div" variant="body" oneLine>
+      <Text {...args} as="div" oneLine variant="body">
         This text is quite long. Lorem ipsum dolor sit amet, consectetur
         adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
         magna aliqua.

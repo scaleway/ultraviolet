@@ -13,14 +13,14 @@ const ToggleGroupFieldStory = (
     <Stack gap={2}>
       <ToggleGroupField {...args}>
         <ToggleGroupField.Toggle
+          label="Automatically run a save every monday at 6 am"
           name="weekly-save"
           value="weekly-save"
-          label="Automatically run a save every monday at 6 am"
         />
         <ToggleGroupField.Toggle
+          label="Reboot server every day at 9 am"
           name="daily-reboot"
           value="daily-reboot"
-          label="Reboot server every day at 9 am"
         />
       </ToggleGroupField>
       <span>
@@ -35,6 +35,6 @@ export const Template: StoryFn<typeof ToggleGroupField> = args => (
 )
 
 Template.args = {
-  name: 'options',
   legend: 'Choose options:',
+  name: 'options',
 }

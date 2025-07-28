@@ -15,17 +15,17 @@ export const ContainersCategoryIcon = ({
   <Icon {...props}>
     <g className="Containers">
       <path
-        fill="#4F0599"
-        d="M3 5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2zm12 0H5v10h10z"
         className="fill"
         clipRule="evenodd"
+        d="M3 5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2zm12 0H5v10h10z"
+        fill="#4F0599"
         fillRule="evenodd"
       />
       <path
-        fill="#A365F6"
-        d="M8 7a1 1 0 0 1 1 1v4a1 1 0 0 1-2 0V8a1 1 0 0 1 1-1m4 0a1 1 0 0 1 1 1v4a1 1 0 0 1-2 0V8a1 1 0 0 1 1-1"
         className="fillStrong"
         clipRule="evenodd"
+        d="M8 7a1 1 0 0 1 1 1v4a1 1 0 0 1-2 0V8a1 1 0 0 1 1-1m4 0a1 1 0 0 1 1 1v4a1 1 0 0 1-2 0V8a1 1 0 0 1 1-1"
+        fill="#A365F6"
         fillRule="evenodd"
       />
     </g>

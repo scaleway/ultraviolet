@@ -31,26 +31,26 @@ export const PerPage: StoryFn = props => {
       </StyledList>
       <Pagination
         {...props}
-        onChange={setPage}
-        page={page}
-        perPage={perPage}
-        pageCount={computeNumberOfPages}
-        onChangePerPage={setPerPage}
         numberOfItems={NUMBER_OF_ITEMS}
+        onChange={setPage}
+        onChangePerPage={setPerPage}
+        page={page}
+        pageCount={computeNumberOfPages}
+        perPage={perPage}
       />
     </Stack>
   )
 }
 
 PerPage.args = {
-  value: 40,
+  label: 'Label',
   labelDescription: (
     <Badge sentiment="primary" size="small">
       New
     </Badge>
   ),
-  label: 'Label',
   numberOfItemsText: `of ${NUMBER_OF_ITEMS} items`,
+  value: 40,
 }
 
 PerPage.parameters = {

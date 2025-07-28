@@ -5,7 +5,7 @@ import { data, overflowColumns } from './resources'
 export const Overflow: StoryFn = args => (
   <List {...args} columns={overflowColumns} selectable>
     {data.map(planet => (
-      <List.Row key={planet.id} id={planet.id} expandable="Planet description">
+      <List.Row expandable="Planet description" id={planet.id} key={planet.id}>
         <List.Cell>{planet.id}</List.Cell>
         <List.Cell>{planet.name}</List.Cell>
         <List.Cell>{planet.perihelion}AU</List.Cell>

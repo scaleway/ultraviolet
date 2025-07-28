@@ -13,8 +13,8 @@ export const Sentiments: StoryFn<typeof Menu> = () => (
     </Menu.Item>
     <Menu.Item href="/?/?path=/docs/components-navigation-menu">Link</Menu.Item>
     <Menu.Item
-      sentiment="danger"
       href="/?/?path=/docs/components-navigation-menu"
+      sentiment="danger"
       tooltip="test"
     >
       Link Danger

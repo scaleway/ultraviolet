@@ -10,24 +10,24 @@ export const Error: StoryFn = args => {
     <>
       <SelectableCard
         {...args}
-        name="label-12"
         checked={value === 'label-12'}
-        value="label-12"
-        type="radio"
         isError
-        showTick
-        onChange={event => onChange(event.currentTarget.value)}
         label="Radio Left"
+        name="label-12"
+        onChange={event => onChange(event.currentTarget.value)}
+        showTick
+        type="radio"
+        value="label-12"
       />
       <SelectableCard
         {...args}
-        name="label-13"
         checked={value === 'label-13'}
-        value="label-13"
-        type="radio"
-        showTick
-        onChange={event => onChange(event.currentTarget.value)}
         label="Radio Right"
+        name="label-13"
+        onChange={event => onChange(event.currentTarget.value)}
+        showTick
+        type="radio"
+        value="label-13"
       />
     </>
   )

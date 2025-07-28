@@ -12,11 +12,11 @@ WithAnimation.parameters = {
 }
 
 WithAnimation.args = {
+  animated: true,
   children: [
     <Stepper.Step title="Step 1" />,
     <Stepper.Step title="Step 2" />,
     <Stepper.Step title="Step 3" />,
   ],
   selected: 1,
-  animated: true,
 }

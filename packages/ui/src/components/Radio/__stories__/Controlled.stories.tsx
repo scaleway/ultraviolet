@@ -9,23 +9,23 @@ export const Controlled: StoryFn = args => {
     <>
       <Radio
         {...args}
-        name="label-1"
         checked={value === 'label-1'}
-        value="label-1"
+        label="Label 1"
+        name="label-1"
         onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
           onChange(e.currentTarget.value)
         }
-        label="Label 1"
+        value="label-1"
       />
       <Radio
         {...args}
-        name="label-2"
         checked={value === 'label-2'}
-        value="label-2"
+        label="Label 2"
+        name="label-2"
         onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
           onChange(e.currentTarget.value)
         }
-        label="Label 2"
+        value="label-2"
       />
     </>
   )

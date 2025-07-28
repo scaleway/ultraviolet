@@ -8,14 +8,14 @@ describe('SelectableCardField', () => {
   test('should render correctly', () => {
     const { asFragment } = renderWithForm(
       <SelectableCardGroupField
-        name="test"
-        value="test"
         legend="test"
-        type="radio"
+        name="test"
         onChange={() => {}}
+        type="radio"
+        value="test"
       >
-        <SelectableCardGroupField.Card value="radio 1" label="Radio 1" />
-        <SelectableCardGroupField.Card value="radio 2" label="Radio 2" />
+        <SelectableCardGroupField.Card label="Radio 1" value="radio 1" />
+        <SelectableCardGroupField.Card label="Radio 2" value="radio 2" />
       </SelectableCardGroupField>,
     )
     expect(asFragment()).toMatchSnapshot()
@@ -24,15 +24,15 @@ describe('SelectableCardField', () => {
   test('should render correctly checked as radiofield', () => {
     const { asFragment } = renderWithForm(
       <SelectableCardGroupField
-        name="test"
-        value="checked"
         legend="test"
+        name="test"
         type="radio"
+        value="checked"
       >
         <SelectableCardGroupField.Card
-          value="checked"
-          label="Radio 1"
           data-testid="checked"
+          label="Radio 1"
+          value="checked"
         />
       </SelectableCardGroupField>,
       { defaultValues: { test: 'checked' } },
@@ -45,15 +45,15 @@ describe('SelectableCardField', () => {
   test('should render correctly checked as a checkbox', () => {
     const { asFragment } = renderWithForm(
       <SelectableCardGroupField
-        name="test"
-        value={['checked']}
         legend="test"
+        name="test"
         type="checkbox"
+        value={['checked']}
       >
         <SelectableCardGroupField.Card
-          value="checked"
-          label="Checkbox 1"
           data-testid="checked"
+          label="Checkbox 1"
+          value="checked"
         />
       </SelectableCardGroupField>,
       { defaultValues: { test: 'checked' } },
@@ -68,14 +68,14 @@ describe('SelectableCardField', () => {
 
     const { asFragment } = renderWithForm(
       <SelectableCardGroupField
-        name="test"
-        value="events"
-        onChange={onChange}
         legend="test"
+        name="test"
+        onChange={onChange}
         type="checkbox"
+        value="events"
       >
-        <SelectableCardGroupField.Card value="radio 1" label="Radio 1" />
-        <SelectableCardGroupField.Card value="radio 2" label="Radio 2" />
+        <SelectableCardGroupField.Card label="Radio 1" value="radio 1" />
+        <SelectableCardGroupField.Card label="Radio 2" value="radio 2" />
       </SelectableCardGroupField>,
     )
     const input = screen.getByLabelText('Radio 1')

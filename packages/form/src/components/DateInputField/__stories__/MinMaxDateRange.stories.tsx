@@ -14,9 +14,9 @@ export const MinMaxDateRange: StoryFn<
 )
 
 MinMaxDateRange.args = {
+  maxDate: new Date(Date.now()),
   // A month ago
   minDate: new Date(Date.now() - 60 * 60 * 24 * 30 * 1000),
-  maxDate: new Date(Date.now()),
   name: 'date',
   required: true,
   selectsRange: true,

@@ -131,13 +131,13 @@ export const SearchBarDropdown = ({
       if (closestOption) {
         if (multiselect) {
           setSelectedData({
-            type: 'selectOption',
             clickedOption: closestOption,
             group: !Array.isArray(options)
               ? Object.keys(options).find(group =>
                   options[group].includes(closestOption),
                 )
               : undefined,
+            type: 'selectOption',
           })
           onChange?.(
             selectedData.selectedValues.includes(closestOption.value)
@@ -146,8 +146,8 @@ export const SearchBarDropdown = ({
           )
         } else {
           setSelectedData({
-            type: 'selectOption',
             clickedOption: closestOption,
+            type: 'selectOption',
           })
           onChange?.(selectedData.selectedValues[0] ?? '')
         }
@@ -167,17 +167,17 @@ export const SearchBarDropdown = ({
 
   return (
     <StyledInput
-      value={searchInput}
-      onChange={event => handleChange(event.target.value)}
-      placeholder={placeholder}
-      onFocus={() => setSearchBarActive(true)}
-      onBlur={() => setSearchBarActive(false)}
-      data-testid="search-bar"
-      prefix={<SearchIcon size="small" sentiment="neutral" />}
-      onKeyDown={event => handleKeyDown(event.key, searchInput)}
-      size="medium"
       aria-label="search-bar"
+      data-testid="search-bar"
+      onBlur={() => setSearchBarActive(false)}
+      onChange={event => handleChange(event.target.value)}
+      onFocus={() => setSearchBarActive(true)}
+      onKeyDown={event => handleKeyDown(event.key, searchInput)}
+      placeholder={placeholder}
+      prefix={<SearchIcon sentiment="neutral" size="small" />}
       ref={searchInputRef}
+      size="medium"
+      value={searchInput}
     />
   )
 }

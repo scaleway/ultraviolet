@@ -24,10 +24,10 @@ const pagesToRender = Object.keys(modules)
   .map(path =>
     path.includes('render.tsx')
       ? {
-          name: path.replace('.tsx', ''),
           Component: lazy(
             () => import(`./tests/${path?.split('/')[2]}/render.tsx`),
           ),
+          name: path.replace('.tsx', ''),
         }
       : null,
   )
@@ -68,16 +68,16 @@ const App = () => (
     <GlobalWrapper>
       <Router>
         <Routes>
-          <Route path="/" element={<WelcomePage />} />
+          <Route element={<WelcomePage />} path="/" />
           {pagesToRender.map(path => {
             const Element = path?.Component
 
             if (Element) {
               return (
                 <Route
+                  element={<Element />}
                   key={path?.name}
                   path={path?.name?.split('/')[2]?.toLowerCase()}
-                  element={<Element />}
                 />
               )
             }

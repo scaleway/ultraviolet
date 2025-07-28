@@ -13,10 +13,10 @@ export const Playground: StoryFn<typeof Popover> = args => {
   return (
     <Popover
       {...args}
-      visible={opened}
-      title="Popover Title"
       content="This is a simple text content inside the popover. You can customize it by passing text into content property."
       onClose={onCloseCallBack}
+      title="Popover Title"
+      visible={opened}
     >
       <Button onClick={() => setOpened(true)} sentiment="neutral">
         Open Popover

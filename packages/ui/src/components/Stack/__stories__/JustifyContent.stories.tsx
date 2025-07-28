@@ -13,7 +13,7 @@ JustifyContent.parameters = {
 }
 
 JustifyContent.args = {
+  children: coloredChildren,
   direction: 'row',
   justifyContent: 'space-between',
-  children: coloredChildren,
 }

@@ -18,9 +18,9 @@ export const DialogButton = ({
 
   return (
     <Button
-      sentiment={context.sentiment}
-      onClick={onClick}
       disabled={disabled}
+      onClick={onClick}
+      sentiment={context.sentiment}
       tooltip={tooltip}
     >
       {children}

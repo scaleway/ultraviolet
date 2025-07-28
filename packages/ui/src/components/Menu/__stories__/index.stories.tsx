@@ -18,11 +18,11 @@ export default {
       },
     },
   },
-  title: 'Components/Overlay/Menu',
   subcomponents: {
-    'Menu.Item': Menu.Item,
     'Menu.Group': Menu.Group,
+    'Menu.Item': Menu.Item,
   },
+  title: 'Components/Overlay/Menu',
 } as Meta<typeof Menu>
 
 export { Active } from './Active.stories'

@@ -4,7 +4,7 @@ import { Button } from '../../index'
 import { Menu } from '..'
 
 export const DefaultDisclosure = (
-  <Button sentiment="neutral" variant="ghost" size="small">
+  <Button sentiment="neutral" size="small" variant="ghost">
     <DotsHorizontalIcon />
   </Button>
 )

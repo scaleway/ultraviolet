@@ -34,23 +34,21 @@ export const Example: StoryFn = args => {
   return (
     <List
       {...args}
-      selectable
-      expandable
       columns={[
         {
-          label: 'Solar system Planet',
           isOrdered: currentOrder.columnId === 'name',
-          orderDirection: currentOrder.order,
+          label: 'Solar system Planet',
           onOrder: newOrder =>
             setCurrentOrder({ columnId: 'name', order: newOrder }),
+          orderDirection: currentOrder.order,
         },
         {
-          label: 'Perihelion',
-          width: '200px',
           isOrdered: currentOrder.columnId === 'perihelion',
-          orderDirection: currentOrder.order,
+          label: 'Perihelion',
           onOrder: newOrder =>
             setCurrentOrder({ columnId: 'perihelion', order: newOrder }),
+          orderDirection: currentOrder.order,
+          width: '200px',
         },
         {
           label: 'Aphelion',
@@ -61,11 +59,11 @@ export const Example: StoryFn = args => {
           width: '64px',
         },
       ]}
+      expandable
+      selectable
     >
       {sortedData.map(planet => (
         <List.Row
-          key={planet.id}
-          id={planet.id}
           expandable={
             <Stack direction="row" justifyContent="space-between">
               <div>A planet description</div>
@@ -82,13 +80,15 @@ export const Example: StoryFn = args => {
                     Edit description
                   </Text>
                   <TextInput
-                    name="description"
                     label="Type planet description"
+                    name="description"
                   />
                 </Stack>
               </Modal>
             </Stack>
           }
+          id={planet.id}
+          key={planet.id}
           sentiment={planet.id === 'home-sweet-home' ? 'info' : undefined}
         >
           <List.Cell>{planet.name}</List.Cell>

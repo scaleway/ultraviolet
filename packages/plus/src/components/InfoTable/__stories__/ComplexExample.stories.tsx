@@ -18,14 +18,14 @@ export const ComplexExample: StoryFn<
     <InfoTable {...props}>
       <InfoTable.Row templateColumns="repeat(4, 1fr)">
         <InfoTable.Cell title="Status">
-          <Stack direction="row" alignItems="center" gap={1}>
+          <Stack alignItems="center" direction="row" gap={1}>
             <Status sentiment="success" />
             Ready
           </Stack>
         </InfoTable.Cell>
         <InfoTable.Cell title="Type">
           GP1-S{' '}
-          <Button variant="ghost" size="xsmall" sentiment="primary">
+          <Button sentiment="primary" size="xsmall" variant="ghost">
             Change offer
           </Button>
         </InfoTable.Cell>
@@ -37,7 +37,7 @@ export const ComplexExample: StoryFn<
       <InfoTable.Row templateColumns="repeat(4, 1fr)">
         <InfoTable.Cell
           title={
-            <Stack direction="row" gap="1" alignItems="center">
+            <Stack alignItems="center" direction="row" gap="1">
               Cores
               <Tooltip text="number of cores">
                 <InformationOutlineIcon />
@@ -55,16 +55,16 @@ export const ComplexExample: StoryFn<
       </InfoTable.Row>
       <InfoTable.Row templateColumns="repeat(2, 1fr)">
         <InfoTable.Cell title="Instance ID">
-          <Stack direction="row" alignItems="center" gap={1}>
+          <Stack alignItems="center" direction="row" gap={1}>
             4f6be74f-84c1-4ffb-ac80-39befzef808bdd0
-            <CopyButton value="this-is-an-id-3424-2342" sentiment="neutral" />
+            <CopyButton sentiment="neutral" value="this-is-an-id-3424-2342" />
           </Stack>
         </InfoTable.Cell>
         <InfoTable.Cell title="Image Id">
           {' '}
-          <Stack direction="row" alignItems="center" gap={1}>
+          <Stack alignItems="center" direction="row" gap={1}>
             4f6be74f-84c1-4ffb-ac80-39bezefzef7808bdd0
-            <CopyButton value="this-is-an-id-3424-2342" sentiment="neutral" />
+            <CopyButton sentiment="neutral" value="this-is-an-id-3424-2342" />
           </Stack>
         </InfoTable.Cell>
       </InfoTable.Row>
@@ -74,7 +74,7 @@ export const ComplexExample: StoryFn<
       </InfoTable.Row>
       <InfoTable.Row templateColumns="repeat(1, 1fr)">
         <InfoTable.Cell title="Protected Instance option">
-          <LockIcon sentiment="neutral" prominence="weak" /> Enabled
+          <LockIcon prominence="weak" sentiment="neutral" /> Enabled
         </InfoTable.Cell>
       </InfoTable.Row>
     </InfoTable>

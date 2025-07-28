@@ -49,41 +49,41 @@ export const ModalContent = ({
 }: ModalContentProps) =>
   visible || open ? (
     <Dialog
-      open={visible || open}
-      placement={placement}
-      size={finalSize}
       ariaLabel={ariaLabel}
+      backdropClassName={backdropClassName}
+      className={className}
+      data-testid={dataTestId}
       hideOnClickOutside={hideOnClickOutside}
       hideOnEsc={hideOnEsc}
-      preventBodyScroll={preventBodyScroll}
-      onClose={handleClose}
-      className={className}
-      backdropClassName={backdropClassName}
-      data-testid={dataTestId}
       id={finalId}
       image={image}
+      onClose={handleClose}
+      open={visible || open}
+      placement={placement}
+      preventBodyScroll={preventBodyScroll}
+      size={finalSize}
     >
       <>
         {typeof children === 'function'
           ? children({
-              visible,
-              toggle: handleToggle,
-              modalId: finalId,
               close: handleClose,
+              modalId: finalId,
               show: handleOpen,
+              toggle: handleToggle,
+              visible,
             })
           : children}
         <StyledContainer>
           {isClosable ? (
             <Button
+              aria-label="close"
               data-testid={
                 dataTestId ? `${dataTestId}-close-button` : undefined
               }
               onClick={handleClose}
-              variant="ghost"
-              size="small"
               sentiment="neutral"
-              aria-label="close"
+              size="small"
+              variant="ghost"
             >
               <CloseIcon />
             </Button>

@@ -22,6 +22,7 @@ export const buttonSizes = Object.keys(SIZE_HEIGHT) as ButtonSize[]
 
 // FOCUS RING
 const FOCUS_RING_KEY = {
+  black: 'focusNeutral',
   danger: 'focusDanger',
   info: 'focusInfo',
   neutral: 'focusNeutral',
@@ -31,7 +32,6 @@ const FOCUS_RING_KEY = {
   success: 'focusSuccess',
   warning: 'focusWarning',
   white: 'focusNeutral',
-  black: 'focusNeutral',
 } as const
 
 const isMonochrome = (sentiment: ExtendedColor) =>
@@ -223,13 +223,13 @@ const VARIANTS_COMPONENTS = {
     button: StyledFilledButton,
     link: StyledFilledButton.withComponent('a'),
   },
-  outlined: {
-    button: StyledOutlinedButton,
-    link: StyledOutlinedButton.withComponent('a'),
-  },
   ghost: {
     button: StyledGhostButton,
     link: StyledGhostButton.withComponent('a'),
+  },
+  outlined: {
+    button: StyledOutlinedButton,
+    link: StyledOutlinedButton.withComponent('a'),
   },
 }
 
@@ -339,7 +339,7 @@ export const Button = forwardRef<Element, FinalProps>(
     const content = (
       <>
         {isLoading ? (
-          <Loader active size="small" sentiment={computedSentimentLoader} />
+          <Loader active sentiment={computedSentimentLoader} size="small" />
         ) : null}
         {children}
       </>
@@ -350,37 +350,37 @@ export const Button = forwardRef<Element, FinalProps>(
       const Component = VARIANTS_COMPONENTS[variant].link
 
       return (
-        <Tooltip text={tooltip} containerFullWidth={fullWidth}>
+        <Tooltip containerFullWidth={fullWidth} text={tooltip}>
           <Component
-            role={role}
+            aria-controls={ariaControls}
+            aria-current={ariaCurrent}
+            aria-describedby={ariaDescribedby}
+            aria-disabled={ariaDisabled ?? disabled}
+            aria-expanded={ariaExpanded}
+            aria-haspopup={ariaHaspopup}
+            aria-label={ariaLabel}
+            aria-pressed={ariaPressed}
+            aria-roledescription={ariaRoledescription}
+            autoFocus={autoFocus}
             className={className}
             data-testid={dataTestId}
             disabled={false}
-            fullWidth={fullWidth}
-            sentiment={sentiment}
-            size={size}
-            type={type}
-            onClick={onClick}
-            aria-label={ariaLabel}
-            aria-current={ariaCurrent}
-            aria-controls={ariaControls}
-            aria-expanded={ariaExpanded}
-            aria-haspopup={ariaHaspopup}
-            aria-disabled={ariaDisabled ?? disabled}
-            aria-describedby={ariaDescribedby}
-            aria-pressed={ariaPressed}
-            aria-roledescription={ariaRoledescription}
-            href={href}
-            target={target}
             download={download}
-            ref={ref as Ref<HTMLAnchorElement>}
-            tabIndex={tabIndex}
-            autoFocus={autoFocus}
+            fullWidth={fullWidth}
+            href={href}
+            onClick={onClick}
             onMouseDown={onMouseDown}
-            onMouseUp={onMouseUp}
-            onMouseOut={onMouseOut}
             onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}
+            onMouseOut={onMouseOut}
+            onMouseUp={onMouseUp}
+            ref={ref as Ref<HTMLAnchorElement>}
+            role={role}
+            sentiment={sentiment}
+            size={size}
+            tabIndex={tabIndex}
+            target={target}
+            type={type}
           >
             {content}
           </Component>
@@ -391,33 +391,33 @@ export const Button = forwardRef<Element, FinalProps>(
     const Component = VARIANTS_COMPONENTS[variant].button
 
     return (
-      <Tooltip text={tooltip} containerFullWidth={fullWidth}>
+      <Tooltip containerFullWidth={fullWidth} text={tooltip}>
         <Component
-          role={role}
+          aria-controls={ariaControls}
+          aria-current={ariaCurrent}
+          aria-expanded={ariaExpanded}
+          aria-haspopup={ariaHaspopup}
+          aria-label={ariaLabel}
+          autoFocus={autoFocus}
           className={className}
           data-testid={dataTestId}
           disabled={computeIsDisabled}
           fullWidth={fullWidth}
-          sentiment={sentiment}
-          size={size}
-          type={type}
-          onClick={onClick}
-          ref={ref as Ref<HTMLButtonElement>}
           name={name}
-          aria-label={ariaLabel}
-          aria-current={ariaCurrent}
-          aria-controls={ariaControls}
-          aria-expanded={ariaExpanded}
-          aria-haspopup={ariaHaspopup}
-          tabIndex={tabIndex}
-          autoFocus={autoFocus}
+          onClick={onClick}
+          onKeyDown={onKeyDown}
           onMouseDown={onMouseDown}
-          onMouseUp={onMouseUp}
-          onMouseOut={onMouseOut}
           onMouseEnter={onMouseEnter}
           onMouseLeave={onMouseLeave}
+          onMouseOut={onMouseOut}
+          onMouseUp={onMouseUp}
           onPointerDown={onPointerDown}
-          onKeyDown={onKeyDown}
+          ref={ref as Ref<HTMLButtonElement>}
+          role={role}
+          sentiment={sentiment}
+          size={size}
+          tabIndex={tabIndex}
+          type={type}
         >
           {content}
         </Component>

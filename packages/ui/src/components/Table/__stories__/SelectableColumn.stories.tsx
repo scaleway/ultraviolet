@@ -56,17 +56,16 @@ export const SelectableColumn: StoryFn = () => {
   return (
     <Stack gap={1}>
       <Table
-        stripped
         columns={[
           { label: 'Channel', width: '100px' },
           {
             label: (
               <Checkbox
-                onChange={() => selectAll(setIndicentNotifications)}
                 checked={getAllState(incidentNotifications)}
                 id="incident"
+                onChange={() => selectAll(setIndicentNotifications)}
               >
-                <Text as="span" variant="bodySmall" htmlFor="incident">
+                <Text as="span" htmlFor="incident" variant="bodySmall">
                   Incident notifications
                 </Text>
               </Checkbox>
@@ -74,13 +73,13 @@ export const SelectableColumn: StoryFn = () => {
           },
           {
             label: (
-              <Stack direction="row" gap={1} alignItems="center">
+              <Stack alignItems="center" direction="row" gap={1}>
                 <Checkbox
-                  onChange={() => selectAll(setTechnicalNotifications)}
                   checked={getAllState(technicalNotifications)}
                   id="technical"
+                  onChange={() => selectAll(setTechnicalNotifications)}
                 >
-                  <Text as="span" variant="bodySmall" htmlFor="technical">
+                  <Text as="span" htmlFor="technical" variant="bodySmall">
                     Technical notifications
                   </Text>
                 </Checkbox>
@@ -90,8 +89,8 @@ export const SelectableColumn: StoryFn = () => {
           {
             label: (
               <Checkbox
-                onChange={() => selectAll(setBillingNotifications)}
                 checked={getAllState(billingNotifications)}
+                onChange={() => selectAll(setBillingNotifications)}
               >
                 <Text as="span" variant="bodySmall">
                   Billing notifications
@@ -100,10 +99,11 @@ export const SelectableColumn: StoryFn = () => {
             ),
           },
         ]}
+        stripped
       >
         <Table.Body>
           {CHANNELS.map(channel => (
-            <Table.Row key={channel} id={channel}>
+            <Table.Row id={channel} key={channel}>
               <Table.Cell>{channel}</Table.Cell>
               <Table.Cell>
                 {selectableCell(

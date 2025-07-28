@@ -141,12 +141,12 @@ export const Menu = forwardRef(
     useImperativeHandle(ref, () => innerRef.current)
 
     const finalDisclosure = cloneElement(target, {
+      'aria-expanded': isVisible,
+      'aria-haspopup': 'dialog',
       onClick: (event: MouseEvent<HTMLButtonElement>) => {
         target.props.onClick?.(event)
         setIsVisible(!isVisible)
       },
-      'aria-haspopup': 'dialog',
-      'aria-expanded': isVisible,
       // @ts-expect-error not sure how to fix this
       ref: disclosureRef,
     })
@@ -253,40 +253,43 @@ export const Menu = forwardRef(
 
     return (
       <StyledPopup
-        debounceDelay={triggerMethod === 'hover' ? 250 : 0}
-        hideOnClickOutside
+        align={align}
         aria-label={ariaLabel}
         className={className}
-        visible={triggerMethod === 'click' ? isVisible : shouldBeVisible}
-        placement={isNested ? 'nested-menu' : placement}
-        hasArrow={hasArrow}
         data-has-arrow={hasArrow}
-        role="dialog"
+        debounceDelay={triggerMethod === 'hover' ? 250 : 0}
+        dynamicDomRendering={dynamicDomRendering}
+        hasArrow={hasArrow}
+        hideOnClickOutside
         id={finalId}
-        ref={menuRef}
+        maxHeight={maxHeight ?? '30rem'}
         onClose={() => {
           setIsVisible(false)
           setLocalChild(null)
           if (triggerMethod === 'click') disclosureRef.current?.focus()
           setShouldBeVisible(undefined)
         }}
-        tabIndex={-1}
-        maxHeight={maxHeight ?? '30rem'}
+        onKeyDown={handleTabOpen}
+        placement={isNested ? 'nested-menu' : placement}
+        portalTarget={portalTarget}
+        ref={menuRef}
+        role="dialog"
         searchable={searchable}
+        tabIndex={-1}
         text={
           <MenuList
-            data-testid={dataTestId}
             className={className}
-            role="menu"
+            data-testid={dataTestId}
             height={maxHeight ?? '30rem'}
             onKeyDown={handleKeyDown}
+            role="menu"
           >
             <Content ref={contentRef}>
               {searchable && typeof children !== 'function' ? (
                 <StyledSearchInput
-                  size="small"
                   onSearch={onSearch}
                   ref={searchInputRef}
+                  size="small"
                 />
               ) : null}
               {finalChild}
@@ -294,10 +297,7 @@ export const Menu = forwardRef(
             {footer ? <Footer>{footer}</Footer> : null}
           </MenuList>
         }
-        portalTarget={portalTarget}
-        dynamicDomRendering={dynamicDomRendering}
-        align={align}
-        onKeyDown={handleTabOpen}
+        visible={triggerMethod === 'click' ? isVisible : shouldBeVisible}
       >
         <DisclosureContext.Provider value>
           {finalDisclosure}

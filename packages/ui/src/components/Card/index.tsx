@@ -62,34 +62,34 @@ export const Card = forwardRef(
   ) =>
     header ? (
       <StyledStack
-        gap={1}
         className={className}
-        data-testid={dataTestId}
         data-disabled={disabled}
+        data-testid={dataTestId}
+        gap={1}
         ref={ref}
       >
         {typeof header === 'string' ? (
           <Text
-            variant="heading"
             as="h2"
             disabled={disabled}
-            sentiment="neutral"
             prominence="strong"
+            sentiment="neutral"
+            variant="heading"
           >
             {header}
           </Text>
         ) : (
           header
         )}
-        <BorderedBox data-is-active={active} data-disabled={disabled}>
+        <BorderedBox data-disabled={disabled} data-is-active={active}>
           {subHeader ? (
             <Stack gap={2}>
               {typeof subHeader === 'string' ? (
                 <Text
                   as="h3"
-                  variant="headingSmallStrong"
-                  sentiment="neutral"
                   disabled={disabled}
+                  sentiment="neutral"
+                  variant="headingSmallStrong"
                 >
                   {subHeader}
                 </Text>
@@ -105,9 +105,9 @@ export const Card = forwardRef(
       </StyledStack>
     ) : (
       <BorderedBox
-        data-is-active={active}
-        data-disabled={disabled}
         className={className}
+        data-disabled={disabled}
+        data-is-active={active}
         data-testid={dataTestId}
         ref={ref}
       >
@@ -116,9 +116,9 @@ export const Card = forwardRef(
             {typeof subHeader === 'string' ? (
               <Text
                 as="h3"
-                variant="headingSmallStrong"
-                sentiment="neutral"
                 disabled={disabled}
+                sentiment="neutral"
+                variant="headingSmallStrong"
               >
                 {subHeader}
               </Text>

@@ -29,9 +29,9 @@ export const Template: StoryFn<
 )
 
 Template.args = {
+  helper: 'helper',
   label: 'Label',
   name: 'example',
   options: optionsSelect,
-  helper: 'helper',
   placeholder: 'Placeholder',
 }

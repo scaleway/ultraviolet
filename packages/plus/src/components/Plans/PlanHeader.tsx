@@ -52,23 +52,23 @@ export const PlanHeader = ({
   <>
     {fieldName && onChange && !disabled ? (
       <StyledInput
+        data-testid={plan.value}
         id={plan.value}
-        type="radio"
         name={fieldName}
-        value={plan.value}
+        onBlur={() => {
+          setFocusedPlan(undefined)
+        }}
         onChange={() => onChange(plan.value)}
         onFocus={() => {
           setFocusedPlan(plan.value)
         }}
-        onBlur={() => {
-          setFocusedPlan(undefined)
-        }}
-        data-testid={plan.value}
+        type="radio"
+        value={plan.value}
       />
     ) : null}
-    <FullHeightStack gap={2} alignItems="center" justifyContent="space-between">
-      <Stack gap={3} alignItems="center" width="100%">
-        <Stack gap={1} alignItems="center">
+    <FullHeightStack alignItems="center" gap={2} justifyContent="space-between">
+      <Stack alignItems="center" gap={3} width="100%">
+        <Stack alignItems="center" gap={1}>
           <Badge
             disabled={disabled}
             sentiment={
@@ -85,19 +85,19 @@ export const PlanHeader = ({
           <Stack alignItems="center">
             <Text
               as="span"
-              variant="headingSmallStrong"
-              sentiment={plan.sentiment ?? 'primary'}
               disabled={disabled}
+              sentiment={plan.sentiment ?? 'primary'}
+              variant="headingSmallStrong"
             >
               {plan.header.price}
             </Text>
             <Stack style={{ minHeight: '16px' }}>
               {plan.header.priceDescription ? (
                 <Text
-                  disabled={disabled}
                   as="span"
-                  variant="caption"
+                  disabled={disabled}
                   sentiment={plan.sentiment ?? 'primary'}
+                  variant="caption"
                 >
                   {plan.header.priceDescription}
                 </Text>
@@ -107,13 +107,13 @@ export const PlanHeader = ({
         </Stack>
         {plan.header.description ? (
           <PlanDescription>
-            <Text as="div" variant="caption" disabled={disabled}>
+            <Text as="div" disabled={disabled} variant="caption">
               {plan.header.description}
             </Text>
           </PlanDescription>
         ) : null}
       </Stack>
-      <Stack width="100%" gap={3} alignItems="center">
+      <Stack alignItems="center" gap={3} width="100%">
         {plan.header.cta && currentPlanValue !== plan.value
           ? plan.header.cta
           : null}
@@ -121,9 +121,9 @@ export const PlanHeader = ({
           <CurrentPlanWrapper>
             <Text
               as="span"
-              variant="bodySmallStrong"
-              sentiment={plan.sentiment ?? 'primary'}
               disabled={disabled}
+              sentiment={plan.sentiment ?? 'primary'}
+              variant="bodySmallStrong"
             >
               {locales['plans.currentPlan']}
             </Text>

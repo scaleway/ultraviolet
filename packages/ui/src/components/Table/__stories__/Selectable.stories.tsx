@@ -11,13 +11,13 @@ export const Selectable: StoryFn<typeof Table> = args => {
 
   return (
     <>
-      <Table {...args} selectable columns={columns}>
+      <Table {...args} columns={columns} selectable>
         <Table.Body>
           {data.map(movie =>
             movie.id !== '4' || clicked ? (
               <Table.Row
-                key={movie.id}
                 id={movie.id}
+                key={movie.id}
                 selectDisabled={
                   movie.id === '1' ? 'This movie is not selectable' : undefined
                 }
@@ -33,12 +33,12 @@ export const Selectable: StoryFn<typeof Table> = args => {
         <Table.SelectBar data={data} idKey="id">
           {({ selectedItems, unselectAll }) => (
             <Stack
-              direction="row"
               alignItems="center"
-              justifyContent="space-between"
+              direction="row"
               gap={2}
+              justifyContent="space-between"
             >
-              <Text variant="bodyStrong" as="p" sentiment="primary">
+              <Text as="p" sentiment="primary" variant="bodyStrong">
                 {selectedItems.length} item(s) selected (
                 {selectedItems.map(
                   (item, index) => `${index > 0 ? ', ' : ''}${item.name}`,
@@ -46,13 +46,13 @@ export const Selectable: StoryFn<typeof Table> = args => {
                 )
               </Text>
               <Button
-                sentiment="danger"
-                size="small"
                 onClick={() => {
                   // oxlint-disable-next-line eslint/no-alert
                   alert('elements could be deleted')
                   unselectAll()
                 }}
+                sentiment="danger"
+                size="small"
               >
                 Delete
               </Button>
@@ -60,7 +60,7 @@ export const Selectable: StoryFn<typeof Table> = args => {
           )}
         </Table.SelectBar>
       </Table>
-      <button type="button" onClick={() => setClick(!clicked)}>
+      <button onClick={() => setClick(!clicked)} type="button">
         {clicked ? 'remove ' : 'add '}
         The Empire Strikes Back
       </button>

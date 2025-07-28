@@ -12,7 +12,7 @@ export const Playground: StoryFn<ComponentProps<typeof Submit>> = ({
   const methods = useForm()
 
   return (
-    <Form onSubmit={() => {}} errors={mockErrors} methods={methods}>
+    <Form errors={mockErrors} methods={methods} onSubmit={() => {}}>
       <Submit {...props}>This form is ready to submit</Submit>
     </Form>
   )

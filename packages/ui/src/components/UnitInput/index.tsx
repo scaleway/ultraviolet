@@ -17,9 +17,9 @@ import { Stack } from '../Stack'
 import { Text } from '../Text'
 
 const INPUT_SIZE_HEIGHT = {
-  small: '400', // sizing theme tokens key
-  medium: '500',
   large: '600',
+  medium: '500',
+  small: '400', // sizing theme tokens key
 } as const
 
 const StyledNumberInputWrapper = styled.div`
@@ -295,39 +295,44 @@ export const UnitInput = ({
   return (
     <Stack
       gap={0.5}
-      onFocus={onFocus}
       onBlur={onBlur}
+      onFocus={onFocus}
       onKeyDown={onKeyDown}
       width={width}
     >
       {label || labelInformation ? (
         <Label
+          htmlFor={id ?? localId}
           labelDescription={labelInformation}
           required={required}
           size={size}
-          htmlFor={id ?? localId}
         >
           {label}
         </Label>
       ) : null}
       <UnitInputWrapper
-        templateColumns={templateColumns ?? '1fr auto'}
-        data-testid={dataTestId}
+        data-disabled={!!disabled}
+        data-error={!!error}
+        data-readonly={!!readOnly}
         data-size={size}
         data-success={!!success}
-        data-error={!!error}
-        data-disabled={!!disabled}
-        data-readonly={!!readOnly}
+        data-testid={dataTestId}
+        templateColumns={templateColumns ?? '1fr auto'}
       >
         <StyledNumberInputWrapper id="input-field">
           <StyledInput
-            type="number"
             aria-invalid={!!error}
             autoFocus={autoFocus}
+            className={className}
+            data-error={error}
+            data-size={size}
+            data-success={success}
+            data-testid="unit-input"
             disabled={disabled}
-            name={`${name}-value`}
             id={id ?? localId}
-            value={val}
+            max={max}
+            min={min}
+            name={`${name}-value`}
             onChange={event => {
               const numericValue = Number.parseInt(event.target.value, 10)
               if (numericValue > max) {
@@ -342,48 +347,43 @@ export const UnitInput = ({
               }
             }}
             placeholder={placeholder}
-            max={max}
             readOnly={readOnly}
-            min={min}
-            step={step}
-            data-success={success}
-            data-error={error}
-            data-testid="unit-input"
             required={required}
-            className={className}
-            data-size={size}
+            step={step}
+            type="number"
+            value={val}
           />
           {error ? <AlertCircleIcon sentiment="danger" /> : null}
           {success && !error ? <CheckCircleIcon sentiment="success" /> : null}
         </StyledNumberInputWrapper>
         <CustomSelectInput
+          clearable={false}
           data-disabled={disabled}
+          disabled={disabled}
+          dropdownAlign={dropdownAlign}
+          error={unitError}
           id="unit"
+          multiselect={false}
           name={`${name}-unit`}
           onChange={(newValue: string) => {
             onChangeUnitValue?.(newValue)
           }}
-          error={unitError}
-          value={unitValue}
           options={options}
-          width={selectInputWidth}
-          searchable={false}
-          clearable={false}
           placeholder={placeholderUnit}
-          disabled={disabled}
-          size={size}
-          multiselect={false}
           readOnly={readOnly}
-          dropdownAlign={dropdownAlign}
+          searchable={false}
+          size={size}
+          value={unitValue}
+          width={selectInputWidth}
         />
       </UnitInputWrapper>
       {error || typeof success === 'string' || typeof helper === 'string' ? (
         <Text
           as="p"
-          variant="caption"
-          sentiment={sentiment}
           disabled={disabled}
           prominence={sentiment === 'neutral' ? 'weak' : 'default'}
+          sentiment={sentiment}
+          variant="caption"
         >
           {error || success || helper}
         </Text>

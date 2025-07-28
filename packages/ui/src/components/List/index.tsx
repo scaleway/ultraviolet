@@ -81,25 +81,25 @@ const BaseList = forwardRef<HTMLTableElement, ListProps>(
     ref,
   ) => (
     <ListProvider
-      selectable={selectable}
-      expandButton={expandable}
       autoCollapse={autoCollapse}
-      onSelectedChange={onSelectedChange}
       columns={columns}
+      expandButton={expandable}
+      onSelectedChange={onSelectedChange}
+      selectable={selectable}
     >
       <TableContainer>
-        <StyledTable ref={ref} className={className}>
+        <StyledTable className={className} ref={ref}>
           <HeaderRow hasSelectAllColumn={selectable}>
             {columns.map((column, index) => (
               <HeaderCell
-                key={`header-column-${index}`}
-                isOrdered={column.isOrdered}
-                orderDirection={column.orderDirection}
-                onOrder={column.onOrder}
                 info={column.info}
-                width={column.width}
-                minWith={column.minWidth}
+                isOrdered={column.isOrdered}
+                key={`header-column-${index}`}
                 maxWidth={column.maxWidth}
+                minWith={column.minWidth}
+                onOrder={column.onOrder}
+                orderDirection={column.orderDirection}
+                width={column.width}
               >
                 {column.label}
               </HeaderCell>
@@ -108,9 +108,9 @@ const BaseList = forwardRef<HTMLTableElement, ListProps>(
           <tbody>
             {loading ? (
               <SkeletonRows
-                selectable={selectable}
-                rows={5}
                 cols={columns.length}
+                rows={5}
+                selectable={selectable}
               />
             ) : (
               children
@@ -126,8 +126,8 @@ const BaseList = forwardRef<HTMLTableElement, ListProps>(
  * List is a component that displays a list of items based on the columns you provide and the data you pass.
  */
 export const List = Object.assign(BaseList, {
-  Row,
   Cell,
+  Row,
   SelectBar,
   useListContext,
 })

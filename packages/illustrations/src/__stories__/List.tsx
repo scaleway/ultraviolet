@@ -71,7 +71,7 @@ const SubListElement = ({
   category,
 }: SubListElementProps) => (
   <MargedStack gap={1}>
-    <StyledButton sentiment="neutral" onClick={setIsExpanded}>
+    <StyledButton onClick={setIsExpanded} sentiment="neutral">
       {isExpanded ? <ArrowUpIcon /> : <ArrowDownIcon />}
       {productName}
     </StyledButton>
@@ -85,26 +85,26 @@ const SubListElement = ({
           ]
 
           return (
-            <Card direction="row" gap={2} flex={1} alignItems="center">
+            <Card alignItems="center" direction="row" flex={1} gap={2}>
               {category === 'products' ? (
                 <StyledImageProduct
-                  width={200}
+                  alt={productName}
                   src={
                     (defaultAssets as AssetsModule)[category][productName][
                       productImg
                     ]
                   }
-                  alt={productName}
+                  width={200}
                 />
               ) : (
                 <StyledImageVarious
-                  width={200}
+                  alt={productName}
                   src={
                     (defaultAssets as AssetsModule)[category][productName][
                       productImg
                     ]
                   }
-                  alt={productName}
+                  width={200}
                 />
               )}
               <StyledStack direction="column">
@@ -160,7 +160,7 @@ export const List = () => {
 
   return (
     <Stack gap={3}>
-      <Button sentiment="primary" onClick={toggleAllExpanded}>
+      <Button onClick={toggleAllExpanded} sentiment="primary">
         {isAllExpanded ? <MinusIcon /> : <PlusIcon />}
         {isAllExpanded ? 'Collapse' : 'Expand'} all
       </Button>
@@ -171,12 +171,12 @@ export const List = () => {
           return (
             <>
               <StyledButton
-                sentiment="neutral"
                 onClick={() => {
                   const newExpandedStates = { ...expandedStates }
                   newExpandedStates[category] = !expandedStates[category]
                   setExpandedStates(newExpandedStates)
                 }}
+                sentiment="neutral"
               >
                 {expandedStates[category] ? <ArrowUpIcon /> : <ArrowDownIcon />}
                 {category}
@@ -186,9 +186,9 @@ export const List = () => {
                   {Object.keys((defaultAssets as AssetsModule)[category]).map(
                     productName => (
                       <SubListElement
-                        productName={productName}
                         category={category}
                         isExpanded={expandedStates[productName]}
+                        productName={productName}
                         setIsExpanded={() => {
                           // Toggle the expanded state for a specific element
                           const newExpandedStates = { ...expandedStates }

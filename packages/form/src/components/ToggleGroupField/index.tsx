@@ -32,15 +32,15 @@ export const ToggleGroupField = <
     field,
     fieldState: { error },
   } = useController<TFieldValues, TFieldName>({
-    name,
     control,
-    shouldUnregister,
+    name,
     rules: {
       validate: {
         ...(required ? { required: value => value.length > 0 } : undefined),
         ...validate,
       },
     },
+    shouldUnregister,
   })
 
   const value = field.value as string[]
@@ -48,9 +48,9 @@ export const ToggleGroupField = <
   return (
     <ToggleGroup
       {...props}
+      error={customError ?? getError({ label: legend }, error)}
       legend={legend}
       name={field.name}
-      value={value}
       onChange={event => {
         if (value.includes(event.currentTarget.value)) {
           const newValue = value.filter(
@@ -64,8 +64,8 @@ export const ToggleGroupField = <
           onChange?.(newValue as PathValue<TFieldValues, Path<TFieldValues>>)
         }
       }}
-      error={customError ?? getError({ label: legend }, error)}
       required={required}
+      value={value}
     />
   )
 }

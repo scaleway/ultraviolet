@@ -113,7 +113,7 @@ export const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(
 
     const content =
       typeof children === 'function'
-        ? children({ searchTerms, isOpen, toggleIsOpen })
+        ? children({ isOpen, searchTerms, toggleIsOpen })
         : children
 
     const resizeSearchBar = () => {
@@ -277,28 +277,54 @@ export const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(
       <div style={{ width: '100%' }}>
         <StyledPopup
           data-testid={`popup-${dataTestId}`}
-          role="dialog"
-          visible={isOpen}
+          debounceDelay={0}
+          hasArrow={false}
+          hideOnClickOutside
+          innerRef={popupRef}
+          maxHeight={410}
+          maxWidth={containerWidth}
           onClose={onCloseCallback}
           placement={popupPlacement}
-          maxWidth={containerWidth}
-          hideOnClickOutside
-          hasArrow={false}
-          innerRef={popupRef}
+          role="dialog"
           text={content}
-          maxHeight={410}
-          debounceDelay={0}
+          visible={isOpen}
         >
           <StyledTextInput
-            ref={innerSearchInputRef}
+            aria-atomic={ariaAtomic}
+            aria-labelledby={ariaLabelledby}
+            aria-live={ariaLive}
+            autoComplete={autoComplete}
+            autoFocus={autoFocus}
+            className={className}
+            clearable
+            data-testid={dataTestId}
+            disabled={disabled}
+            error={error}
+            id={id}
+            label={label}
+            labelDescription={labelDescription}
+            loading={loading}
+            maxLength={maxLength}
+            minLength={minLength}
+            name={name}
+            onBlur={onBlur}
+            onChange={event => onSearchCallback(event.target.value)}
+            onFocus={onFocus}
+            onKeyDown={onKeyDown}
+            placeholder={placeholder}
             prefix={
               <ClickableStack
-                onClick={() => innerSearchInputRef.current?.focus()}
                 data-testid={`search-icon${dataTestId ? `-${dataTestId}` : ''}`}
+                onClick={() => innerSearchInputRef.current?.focus()}
               >
                 <SearchIcon disabled={disabled} sentiment="neutral" />
               </ClickableStack>
             }
+            readOnly={readOnly}
+            ref={innerSearchInputRef}
+            required={required}
+            role={role}
+            size={size}
             suffix={
               shortcut && searchTerms.length === 0 ? (
                 <KeyGroup
@@ -308,34 +334,8 @@ export const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(
                 />
               ) : undefined
             }
-            data-testid={dataTestId}
-            error={error}
-            value={searchTerms}
-            size={size}
-            label={label}
-            placeholder={placeholder}
-            loading={loading}
-            onChange={event => onSearchCallback(event.target.value)}
-            clearable
-            disabled={disabled}
-            className={className}
-            aria-atomic={ariaAtomic}
-            autoComplete={autoComplete}
-            aria-labelledby={ariaLabelledby}
-            aria-live={ariaLive}
-            id={id}
-            name={name}
-            readOnly={readOnly}
-            required={required}
-            autoFocus={autoFocus}
-            maxLength={maxLength}
-            minLength={minLength}
-            onBlur={onBlur}
-            onFocus={onFocus}
-            onKeyDown={onKeyDown}
-            role={role}
             tooltip={tooltip}
-            labelDescription={labelDescription}
+            value={searchTerms}
           />
         </StyledPopup>
       </div>

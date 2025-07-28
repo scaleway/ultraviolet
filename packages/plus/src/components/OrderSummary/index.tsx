@@ -71,9 +71,9 @@ export const OrderSummary = ({
           [category.category]: {
             maxPrice: categoryPrice[1],
             maxPriceWithDiscount: discountedPrice[1],
+            timeUnit: unitUnitInput,
             totalPrice: categoryPrice[0],
             totalPriceWithDiscount: discountedPrice[0],
-            timeUnit: unitUnitInput,
           },
         }
       }, {}),
@@ -96,13 +96,13 @@ export const OrderSummary = ({
           (discount >= 1 ? Math.abs(discount) : 0),
         0,
       ),
+      timeUnit: unitUnitInput,
       totalPrice: Math.max(price[0], 0),
       totalPriceWithDiscount: Math.max(
         price[0] * (discount < 1 ? 1 - discount : 1) -
           (discount >= 1 ? Math.abs(discount) : 0),
         0,
       ),
-      timeUnit: unitUnitInput,
     }
 
     return computedPrice
@@ -110,15 +110,15 @@ export const OrderSummary = ({
 
   const valueContext = useMemo(
     () => ({
-      currency,
-      localeFormat,
-      items,
       categoriesPrice,
-      hideTimeUnit,
-      timePeriodUnit,
-      timePeriodAmount,
-      locales,
+      currency,
       fractionDigits,
+      hideTimeUnit,
+      items,
+      localeFormat,
+      locales,
+      timePeriodAmount,
+      timePeriodUnit,
     }),
     [
       currency,
@@ -138,8 +138,8 @@ export const OrderSummary = ({
 
     periodOptions.forEach(option =>
       computedPeriodOptions.push({
-        value: option,
         label: locales[`order.summary.units.${option}.label` as const],
+        value: option,
       }),
     )
 
@@ -155,25 +155,22 @@ export const OrderSummary = ({
       <Container justifyContent={hideDetails ? 'flex-start' : 'space-between'}>
         {header ? (
           <HeaderContainer
+            data-hidedetails={hideDetails}
             direction="row"
             justifyContent="space-between"
-            data-hidedetails={hideDetails}
           >
             <Text
               as="h3"
-              variant="headingSmallStrong"
-              sentiment="neutral"
               prominence="strong"
+              sentiment="neutral"
+              variant="headingSmallStrong"
             >
               {header}
             </Text>
             {!hideTimeUnit && !hideDetails ? (
               <StyledStack>
                 <UnitInput
-                  width="155px"
-                  templateColumns="2fr 3fr"
-                  selectInputWidth="100%"
-                  options={computePeriodOptions}
+                  dropdownAlign="center"
                   onChange={value => {
                     setTimePeriodAmount(value)
                   }}
@@ -181,10 +178,13 @@ export const OrderSummary = ({
                     setTimePeriodUnit(val as TimeUnit)
                     onChangeUnitInput?.(val)
                   }}
-                  value={valueUnitInput}
-                  unitValue={unitUnitInput}
+                  options={computePeriodOptions}
+                  selectInputWidth="100%"
                   size="small"
-                  dropdownAlign="center"
+                  templateColumns="2fr 3fr"
+                  unitValue={unitUnitInput}
+                  value={valueUnitInput}
+                  width="155px"
                 />
               </StyledStack>
             ) : null}
@@ -192,14 +192,14 @@ export const OrderSummary = ({
         ) : null}
         {!hideDetails ? <ScrollableContent /> : null}
         <NonScrollableContent
-          totalPrice={totalPrice}
+          additionalInfo={additionalInfo}
           discount={discount}
           footer={footer}
-          totalPriceInfo={totalPriceInfo}
           hideDetails={hideDetails}
-          unit={unitUnitInput}
+          totalPrice={totalPrice}
           totalPriceDescription={totalPriceDescription}
-          additionalInfo={additionalInfo}
+          totalPriceInfo={totalPriceInfo}
+          unit={unitUnitInput}
         >
           {children}
         </NonScrollableContent>

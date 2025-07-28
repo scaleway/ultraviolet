@@ -37,14 +37,14 @@ describe('Menu', () => {
     ))
   test(`renders with Menu.Item`, () =>
     shouldMatchEmotionSnapshotWithPortal(
-      <Menu visible disclosure={() => disclosure}>
+      <Menu disclosure={() => disclosure} visible>
         <Menu.Item>Menu.Item</Menu.Item>
       </Menu>,
     ))
 
   test(`renders with Menu.Group`, () =>
     shouldMatchEmotionSnapshotWithPortal(
-      <Menu visible disclosure={() => disclosure}>
+      <Menu disclosure={() => disclosure} visible>
         <Menu.Group label="Group">
           <Menu.Item>Menu.Item</Menu.Item>
         </Menu.Group>
@@ -53,7 +53,7 @@ describe('Menu', () => {
 
   test(`renders with Menu.Group and labelDescription`, () =>
     shouldMatchEmotionSnapshotWithPortal(
-      <Menu visible disclosure={() => disclosure}>
+      <Menu disclosure={() => disclosure} visible>
         <Menu.Group label="Group" labelDescription="This is a description">
           <Menu.Item>Menu.Item</Menu.Item>
         </Menu.Group>
@@ -62,14 +62,14 @@ describe('Menu', () => {
 
   test(`renders with Menu.ItemLink`, () =>
     shouldMatchEmotionSnapshotWithPortal(
-      <Menu visible disclosure={() => disclosure}>
+      <Menu disclosure={() => disclosure} visible>
         <Menu.Item href="/link">Menu.Item as Link</Menu.Item>
       </Menu>,
     ))
 
   test(`renders with triggerMethod "hover"`, async () => {
     renderWithTheme(
-      <Menu visible disclosure={() => disclosure} triggerMethod="hover">
+      <Menu disclosure={() => disclosure} triggerMethod="hover" visible>
         <Menu.Item href="/link">Menu.Item as Link</Menu.Item>
       </Menu>,
     )
@@ -85,9 +85,9 @@ describe('Menu', () => {
 
   test(`renders with Menu.ItemLink & Menu.Item disabled`, () =>
     shouldMatchEmotionSnapshotWithPortal(
-      <Menu visible disclosure={() => disclosure}>
+      <Menu disclosure={() => disclosure} visible>
         <Menu.Item disabled>Menu.Item disabled</Menu.Item>
-        <Menu.Item href="/link" disabled>
+        <Menu.Item disabled href="/link">
           Menu.Item Link disabled
         </Menu.Item>
       </Menu>,
@@ -95,7 +95,7 @@ describe('Menu', () => {
 
   test('disclosure Component render with function disclosure', async () => {
     renderWithTheme(
-      <Menu id="menu" disclosure={() => disclosure}>
+      <Menu disclosure={() => disclosure} id="menu">
         <Menu.Item href="/link">Menu.Item as Link</Menu.Item>
       </Menu>,
     )
@@ -108,7 +108,7 @@ describe('Menu', () => {
 
   test('disclosure Component render with function children', async () => {
     renderWithTheme(
-      <Menu id="menu" disclosure={() => disclosure}>
+      <Menu disclosure={() => disclosure} id="menu">
         {({ toggle }) => (
           <Menu.Item onClick={toggle}>
             Menu.Item as Button with toggle
@@ -134,7 +134,7 @@ describe('Menu', () => {
 
   test('should hideOnClickItem', async () => {
     renderWithTheme(
-      <Menu id="menu" hideOnClickItem disclosure={() => disclosure}>
+      <Menu disclosure={() => disclosure} hideOnClickItem id="menu">
         <Menu.Item>Test</Menu.Item>
       </Menu>,
     )
@@ -157,7 +157,7 @@ describe('Menu', () => {
 
   test('should search on simple childs', async () => {
     const { asFragment } = renderWithTheme(
-      <Menu id="menu" searchable disclosure={() => disclosure}>
+      <Menu disclosure={() => disclosure} id="menu" searchable>
         <Menu.Item>Disk</Menu.Item>
         <Menu.Item>Ram</Menu.Item>
       </Menu>,
@@ -183,7 +183,7 @@ describe('Menu', () => {
 
   test('should search on simple complex childs', async () => {
     const { asFragment } = renderWithTheme(
-      <Menu id="menu" searchable disclosure={() => disclosure}>
+      <Menu disclosure={() => disclosure} id="menu" searchable>
         <Menu.Item>
           <div>
             <div>Volume type:</div>
@@ -218,7 +218,7 @@ describe('Menu', () => {
   })
   test('renders with footer', () =>
     shouldMatchEmotionSnapshot(
-      <Menu visible footer="Footer" disclosure={() => disclosure}>
+      <Menu disclosure={() => disclosure} footer="Footer" visible>
         <Menu.Item>Not footer</Menu.Item>
       </Menu>,
     ))
@@ -256,7 +256,7 @@ describe('Menu', () => {
   test('can navigate with arrow keys', async () => {
     const { asFragment } = renderWithTheme(
       <Menu disclosure={() => disclosure}>
-        <Menu.Item data-testid="item" borderless>
+        <Menu.Item borderless data-testid="item">
           Power on
         </Menu.Item>
         <Menu
@@ -296,27 +296,27 @@ describe('Menu', () => {
   describe('placement', () => {
     test('renders top', () =>
       shouldMatchEmotionSnapshot(
-        <Menu visible placement="top" disclosure={() => disclosure}>
+        <Menu disclosure={() => disclosure} placement="top" visible>
           <Menu.Item>top</Menu.Item>
         </Menu>,
       ))
 
     test('renders bottom', () =>
       shouldMatchEmotionSnapshot(
-        <Menu visible placement="bottom" disclosure={() => disclosure}>
+        <Menu disclosure={() => disclosure} placement="bottom" visible>
           <Menu.Item>bottom</Menu.Item>
         </Menu>,
       ))
 
     test('renders left', () =>
       shouldMatchEmotionSnapshot(
-        <Menu visible placement="left" disclosure={() => disclosure}>
+        <Menu disclosure={() => disclosure} placement="left" visible>
           <Menu.Item>left</Menu.Item>
         </Menu>,
       ))
     test('renders right', () =>
       shouldMatchEmotionSnapshot(
-        <Menu visible placement="right" disclosure={() => disclosure}>
+        <Menu disclosure={() => disclosure} placement="right" visible>
           <Menu.Item>right</Menu.Item>
         </Menu>,
       ))
@@ -325,33 +325,33 @@ describe('Menu', () => {
   describe('Menu.Item', () => {
     test(`render with default props`, () =>
       shouldMatchEmotionSnapshot(
-        <Menu visible disclosure={disclosure}>
+        <Menu disclosure={disclosure} visible>
           <Menu.Item>Default Props</Menu.Item>
         </Menu>,
       ))
 
     test(`render with sentiment danger`, () =>
       shouldMatchEmotionSnapshot(
-        <Menu visible disclosure={disclosure}>
+        <Menu disclosure={disclosure} visible>
           <Menu.Item sentiment="danger">Danger</Menu.Item>
         </Menu>,
       ))
 
     test(`render with disabled props`, () =>
       shouldMatchEmotionSnapshot(
-        <Menu visible disclosure={disclosure}>
+        <Menu disclosure={disclosure} visible>
           <Menu.Item disabled>Disabled Props</Menu.Item>
         </Menu>,
       ))
     test(`render with borderless props`, () =>
       shouldMatchEmotionSnapshot(
-        <Menu visible disclosure={disclosure}>
+        <Menu disclosure={disclosure} visible>
           <Menu.Item borderless>Borderless Props</Menu.Item>
         </Menu>,
       ))
     test(`render with active props`, () =>
       shouldMatchEmotionSnapshot(
-        <Menu visible disclosure={disclosure}>
+        <Menu disclosure={disclosure} visible>
           <Menu.Item active>Active Props</Menu.Item>
         </Menu>,
       ))

@@ -21,28 +21,28 @@ export const Carousel: StoryFn = props => {
 
   return (
     <Modal
-      image={IMAGES_STEP[step]}
-      size="xsmall"
       disclosure={
         <Button onClick={() => setStep(0)}>Open Carousel Modal</Button>
       }
+      image={IMAGES_STEP[step]}
+      size="xsmall"
       {...props}
     >
       {({ close }) => (
         <Stack direction="column" gap="2">
-          <Text as="p" variant="body" sentiment="neutral">
+          <Text as="p" sentiment="neutral" variant="body">
             {TEXT_STEP[step]}
           </Text>
           <Stack
+            alignItems="end"
             direction="row"
             justifyContent="space-between"
-            alignItems="end"
           >
             <Text
               as="span"
-              variant="bodySmall"
-              sentiment="neutral"
               prominence="weak"
+              sentiment="neutral"
+              variant="bodySmall"
             >
               {step + 1} of {IMAGES_STEP.length}
             </Text>

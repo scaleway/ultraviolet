@@ -10,9 +10,9 @@ export const Examples = (props: ComponentProps<typeof Link>) => (
       To know more about that feature please visit{' '}
       <Link
         {...props}
+        href="https://example.com"
         target="_blank"
         variant="inline"
-        href="https://example.com"
       >
         our website
       </Link>{' '}
@@ -20,14 +20,14 @@ export const Examples = (props: ComponentProps<typeof Link>) => (
     </Text>
     <Text as="p" variant="body">
       To know more about that feature please visit{' '}
-      <Link {...props} target="_blank" href="https://example.com">
+      <Link {...props} href="https://example.com" target="_blank">
         our website
       </Link>{' '}
       that is available any time.
     </Text>
     <Text as="p" variant="body">
       To know more about that feature please visit{' '}
-      <Link {...props} iconPosition="right" href="https://example.com">
+      <Link {...props} href="https://example.com" iconPosition="right">
         our website
       </Link>{' '}
       that is available any time.

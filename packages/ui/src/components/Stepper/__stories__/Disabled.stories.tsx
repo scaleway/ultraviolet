@@ -11,8 +11,8 @@ Disabled.args = {
     <Stepper.Step disabled title="Step 4" />,
     <Stepper.Step title="Step 5" />,
   ],
-  selected: 2,
   interactive: true,
+  selected: 2,
 }
 
 Disabled.parameters = {

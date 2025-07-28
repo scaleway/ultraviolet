@@ -10,8 +10,8 @@ export const ToggleStory: StoryFn = () => {
     <Modal
       disclosure={dialog => (
         <Toggle
-          name="toggle"
           checked={toggled}
+          name="toggle"
           onChange={() => {
             dialog?.toggle?.()
             setToggled(true)

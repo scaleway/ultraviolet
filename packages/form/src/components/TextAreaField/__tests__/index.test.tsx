@@ -21,9 +21,9 @@ describe('TextAreaField', () => {
 
     const { asFragment } = renderWithTheme(
       <Form
-        onSubmit={onSubmit}
         errors={mockFormErrors}
         methods={result.current}
+        onSubmit={onSubmit}
       >
         <TextAreaField label="Test" name="test" submitOnEnter />
         <Submit>Submit</Submit>
@@ -49,11 +49,11 @@ describe('TextAreaField', () => {
 
     const { asFragment } = renderWithTheme(
       <Form
-        onSubmit={onSubmit}
         errors={mockFormErrors}
         methods={result.current}
+        onSubmit={onSubmit}
       >
-        <TextAreaField label="Test" name="test" required clearable />
+        <TextAreaField clearable label="Test" name="test" required />
         <Submit>Submit</Submit>
       </Form>,
     )

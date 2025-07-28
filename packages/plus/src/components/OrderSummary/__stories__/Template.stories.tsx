@@ -15,6 +15,6 @@ export const Template: StoryFn<ComponentProps<typeof OrderSummary>> = props => (
 )
 
 Template.args = {
-  items: mockItems,
   header: 'Summary',
+  items: mockItems,
 }

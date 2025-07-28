@@ -16,9 +16,9 @@ export const ExpandableCardTitle = ({
 }: ExpandableCardTitleProps) => (
   <Text
     as={as ?? 'h2'}
-    variant={size === 'medium' ? 'bodyStrong' : 'headingSmallStrong'}
-    sentiment="neutral"
     disabled={disabled}
+    sentiment="neutral"
+    variant={size === 'medium' ? 'bodyStrong' : 'headingSmallStrong'}
   >
     {children}
   </Text>

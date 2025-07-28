@@ -3,8 +3,8 @@ import { ContentCardGroup } from '..'
 
 export default {
   component: ContentCardGroup,
-  title: 'Plus/Compositions/ContentCardGroup',
   subcomponents: { 'ContentCardGroup.Card': ContentCardGroup.Card },
+  title: 'Plus/Compositions/ContentCardGroup',
 } as Meta
 
 export { Custom } from './Custom.stories'

@@ -7,19 +7,17 @@ export const Expandable = Template.bind({})
 
 Expandable.args = {
   ...Template.args,
-  expandable: true,
-  selectable: true,
   children: (
     <Table.Body>
       {data.map(movie => (
         <Table.Row
-          key={movie.id}
-          id={movie.id}
           expandable={
             <Text as="p" variant="bodySmall">
               A movie to watch
             </Text>
           }
+          id={movie.id}
+          key={movie.id}
         >
           <Table.Cell>{movie.name}</Table.Cell>
           <Table.Cell>{movie.releaseYear}</Table.Cell>
@@ -29,6 +27,8 @@ Expandable.args = {
       ))}
     </Table.Body>
   ),
+  expandable: true,
+  selectable: true,
 }
 
 Expandable.parameters = {

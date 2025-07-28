@@ -35,11 +35,11 @@ export const Cell = ({
   align = 'left',
 }: CellProps) => (
   <StyledCell
+    align={align}
     className={className}
     colSpan={colSpan}
     rowSpan={rowSpan}
     sentiment={sentiment}
-    align={align}
   >
     {children}
   </StyledCell>

@@ -32,7 +32,7 @@ describe('PieChart', () => {
 
   test('renders correctly with data and content', () => {
     const { asFragment } = renderWithTheme(
-      <PieChart data={data} content="Test" />,
+      <PieChart content="Test" data={data} />,
     )
     expect(asFragment()).toMatchSnapshot()
   })
@@ -60,7 +60,7 @@ describe('PieChart', () => {
 
   test('renders correctly with empty legend placeholder', () => {
     const { asFragment } = renderWithTheme(
-      <PieChart withLegend emptyLegend="I am a legend" />,
+      <PieChart emptyLegend="I am a legend" withLegend />,
     )
     expect(asFragment()).toMatchSnapshot()
   })

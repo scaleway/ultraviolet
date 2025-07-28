@@ -66,9 +66,9 @@ export const BarChart = ({
 
       return (
         <BarChartTooltip
+          color={color}
           formattedValue={formattedValue}
           indexValue={indexValue.toString()}
-          color={color}
         />
       )
     },
@@ -76,11 +76,8 @@ export const BarChart = ({
   )
 
   return (
-    <div style={{ height }} className={className} data-testid={dataTestId}>
+    <div className={className} data-testid={dataTestId} style={{ height }}>
       <ResponsiveBar
-        colors={getLegendColor(theme)}
-        data={data}
-        margin={margin}
         axisBottom={{
           format: axisFormatters?.bottom,
           tickPadding: 5,
@@ -95,10 +92,13 @@ export const BarChart = ({
           tickSize: 5,
           tickValues: tickValues?.left,
         }}
+        colors={getLegendColor(theme)}
+        data={data}
+        enableLabel={false}
+        keys={keys}
+        margin={margin}
         theme={getNivoTheme(theme)}
         tooltip={tooltip}
-        keys={keys}
-        enableLabel={false}
         {...chartProps}
       />
     </div>

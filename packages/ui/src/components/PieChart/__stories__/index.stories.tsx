@@ -3,11 +3,11 @@ import { PieChart } from '..'
 
 export default {
   component: PieChart,
-  title: 'Components/Data Display/Chart/PieChart',
   parameters: {
     experimental: true,
   },
   tags: ['experimental'],
+  title: 'Components/Data Display/Chart/PieChart',
 } as Meta<typeof PieChart>
 
 export { Content } from './Content.stories'

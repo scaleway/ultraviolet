@@ -12,45 +12,45 @@ export const Type: StoryFn = args => {
       <Stack direction="row" gap={2}>
         <SelectableCard
           {...args}
-          name="label-3"
           checked={value === 'label-3'}
-          value="label-3"
-          type="radio"
-          onChange={event => onChange(event.currentTarget.value)}
           label="Radio Left"
+          name="label-3"
+          onChange={event => onChange(event.currentTarget.value)}
+          type="radio"
+          value="label-3"
         />
         <SelectableCard
           {...args}
-          name="label-4"
           checked={value === 'label-4'}
-          value="label-4"
-          type="radio"
-          onChange={event => onChange(event.currentTarget.value)}
           label="Radio Right"
+          name="label-4"
+          onChange={event => onChange(event.currentTarget.value)}
+          type="radio"
+          value="label-4"
         />
       </Stack>
       <Stack direction="row" gap={2}>
         <SelectableCard
           {...args}
-          name="label-1"
           checked={value2['label-1']}
-          value="label-1"
-          type="checkbox"
+          label="Checkbox 1"
+          name="label-1"
           onChange={event =>
             onChange2({ ...value2, 'label-1': !event.currentTarget.checked })
           }
-          label="Checkbox 1"
+          type="checkbox"
+          value="label-1"
         />
         <SelectableCard
           {...args}
-          name="label-2"
           checked={value2['label-2']}
-          value="label-2"
-          type="checkbox"
+          label="Checkbox 2"
+          name="label-2"
           onChange={event =>
             onChange2({ ...value2, 'label-2': !event.currentTarget.checked })
           }
-          label="Checkbox 2"
+          type="checkbox"
+          value="label-2"
         />
       </Stack>
     </>

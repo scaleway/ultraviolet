@@ -9,10 +9,10 @@ export const Template: StoryFn<typeof SelectInput> = args => (
 )
 
 Template.args = {
-  name: 'example',
+  disabled: false,
   label: 'Label',
+  name: 'example',
   placeholder: 'Select item',
   placeholderSearch: 'Search in list',
   searchable: true,
-  disabled: false,
 }

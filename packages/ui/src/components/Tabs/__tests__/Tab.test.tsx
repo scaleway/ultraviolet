@@ -9,6 +9,6 @@ describe('Tab', () => {
 
   test('renders correctly with counter, badge and subtitle', () =>
     shouldMatchEmotionSnapshot(
-      <Tab counter={1} badge="badge" subtitle="subtitle" />,
+      <Tab badge="badge" counter={1} subtitle="subtitle" />,
     ))
 })

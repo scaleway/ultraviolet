@@ -10,12 +10,12 @@ describe('Toggle', () => {
 
   test('renders correctly when checked', () =>
     shouldMatchEmotionSnapshot(
-      <Toggle name="test" onChange={() => {}} checked />,
+      <Toggle checked name="test" onChange={() => {}} />,
     ))
 
   test('renders correctly when disabled', () =>
     shouldMatchEmotionSnapshot(
-      <Toggle name="test" onChange={() => {}} disabled />,
+      <Toggle disabled name="test" onChange={() => {}} />,
     ))
 
   test('renders correctly when required with label', () =>
@@ -41,15 +41,15 @@ describe('Toggle', () => {
 
   test('renders correctly label', () =>
     shouldMatchEmotionSnapshot(
-      <Toggle name="test" onChange={() => {}} label="This is a label" />,
+      <Toggle label="This is a label" name="test" onChange={() => {}} />,
     ))
 
   test('renders correctly with tooltip', () =>
     shouldMatchEmotionSnapshot(
       <Toggle
+        label="This is a label"
         name="test"
         onChange={() => {}}
-        label="This is a label"
         tooltip="test"
       />,
     ))
@@ -57,30 +57,30 @@ describe('Toggle', () => {
   test('renders correctly with labels on left', () =>
     shouldMatchEmotionSnapshot(
       <Toggle
+        label="This is a label"
+        labelPosition="left"
         name="test"
         onChange={() => {}}
-        labelPosition="left"
-        label="This is a label"
       />,
     ))
 
   test('renders correctly with custom labels on right', () =>
     shouldMatchEmotionSnapshot(
       <Toggle
+        label="This is a label"
+        labelPosition="right"
         name="test"
         onChange={() => {}}
-        labelPosition="right"
-        label="This is a label"
       />,
     ))
 
   test('renders correctly with complex label', () =>
     shouldMatchEmotionSnapshot(
-      <Toggle name="test" label={<span>Custom label rendered</span>} />,
+      <Toggle label={<span>Custom label rendered</span>} name="test" />,
     ))
 
   test('renders and click on toggle on', async () => {
-    renderWithTheme(<Toggle name="test" label="This is a label" />)
+    renderWithTheme(<Toggle label="This is a label" name="test" />)
 
     const input = screen.getByRole('checkbox')
     await userEvent.click(input)
@@ -89,15 +89,15 @@ describe('Toggle', () => {
 
   test('renders correctly with helper', () =>
     shouldMatchEmotionSnapshot(
-      <Toggle name="test" label="This is a label" helper="This is a helper" />,
+      <Toggle helper="This is a helper" label="This is a label" name="test" />,
     ))
   test('renders correctly with error', () =>
     shouldMatchEmotionSnapshot(
       <Toggle
-        name="test"
-        label="This is a label"
-        helper="This is a helper"
         error="error text"
+        helper="This is a helper"
+        label="This is a label"
+        name="test"
       />,
     ))
 })

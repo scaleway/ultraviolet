@@ -11,25 +11,25 @@ export const Controlled: StoryFn = args => {
     <>
       <SelectableCard
         {...args}
-        name="label-1"
         checked={value === 'label-1'}
-        value="label-1"
         label="Left Radio"
-        type="radio"
+        name="label-1"
         onChange={(event: ChangeEvent<HTMLInputElement>) =>
           onChange(event.currentTarget.value)
         }
+        type="radio"
+        value="label-1"
       />
       <SelectableCard
         {...args}
-        name="label-2"
         checked={value === 'label-2'}
-        value="label-2"
-        type="radio"
         label="Right Radio"
+        name="label-2"
         onChange={(event: ChangeEvent<HTMLInputElement>) =>
           onChange(event.currentTarget.value)
         }
+        type="radio"
+        value="label-2"
       />
     </>
   )

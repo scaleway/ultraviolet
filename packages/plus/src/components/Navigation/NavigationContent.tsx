@@ -204,18 +204,18 @@ export const NavigationContent = ({
   return (
     <StyledNav className={className} id={id}>
       <Container
-        ref={navigationRef}
         data-animation={shouldAnimate ? animation : undefined}
         data-expanded={expanded}
+        ref={navigationRef}
         width={width}
       >
         {logo ? <Header logo={logo} /> : null}
         <ContentContainer>
           <Content
-            ref={contentRef}
-            gap={0.25}
-            data-is-expanded={expanded}
             data-animation={shouldAnimate ? animation : undefined}
+            data-is-expanded={expanded}
+            gap={0.25}
+            ref={contentRef}
           >
             {children}
           </Content>

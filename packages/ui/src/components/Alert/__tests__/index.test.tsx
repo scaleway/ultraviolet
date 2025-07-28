@@ -50,7 +50,7 @@ describe('Alert', () => {
 
   test(`should render alert and then close it`, async () => {
     renderWithTheme(
-      <Alert closable onClose={() => 'ok'} data-testid="alert">
+      <Alert closable data-testid="alert" onClose={() => 'ok'}>
         Sample Alert
       </Alert>,
     )
@@ -68,7 +68,7 @@ describe('Alert', () => {
 
   test('renders correctly with disabled', () =>
     shouldMatchEmotionSnapshot(
-      <Alert disabled buttonText="button">
+      <Alert buttonText="button" disabled>
         Sample Alert
       </Alert>,
     ))

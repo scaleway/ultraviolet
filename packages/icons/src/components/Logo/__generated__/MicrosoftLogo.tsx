@@ -12,15 +12,15 @@ export const MicrosoftLogo = ({ ...props }: Omit<IconProps, 'children'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
   <Icon {...props}>
     <g clipPath="url(#a)">
-      <path fill="#F3F3F3" d="M2 2h16v16H2z" />
-      <path fill="#F35325" d="M2.696 2.696h6.956v6.956H2.696z" />
-      <path fill="#81BC06" d="M10.348 2.696h6.956v6.956h-6.956z" />
-      <path fill="#05A6F0" d="M2.696 10.348h6.956v6.956H2.696z" />
-      <path fill="#FFBA08" d="M10.348 10.348h6.956v6.956h-6.956z" />
+      <path d="M2 2h16v16H2z" fill="#F3F3F3" />
+      <path d="M2.696 2.696h6.956v6.956H2.696z" fill="#F35325" />
+      <path d="M10.348 2.696h6.956v6.956h-6.956z" fill="#81BC06" />
+      <path d="M2.696 10.348h6.956v6.956H2.696z" fill="#05A6F0" />
+      <path d="M10.348 10.348h6.956v6.956h-6.956z" fill="#FFBA08" />
     </g>
     <defs>
       <clipPath id="a">
-        <path fill="#fff" d="M2 2h16v16H2z" />
+        <path d="M2 2h16v16H2z" fill="#fff" />
       </clipPath>
     </defs>
   </Icon>

@@ -7,19 +7,19 @@ import avatar from './assets/avatar.svg'
 export const Variant: StoryFn<typeof Avatar> = props => (
   <>
     <Avatar {...props} />
-    <Avatar variant="user" shape="circle" />
-    <Avatar variant="image" size="large" shape="square" image={avatar} />
-    <Avatar variant="icon" shape="circle" sentiment="primary">
+    <Avatar shape="circle" variant="user" />
+    <Avatar image={avatar} shape="square" size="large" variant="image" />
+    <Avatar sentiment="primary" shape="circle" variant="icon">
       <MosaicIcon size="xlarge" />
     </Avatar>
-    <Avatar variant="colors" shape="circle" colors={['primary', 'secondary']} />
+    <Avatar colors={['primary', 'secondary']} shape="circle" variant="colors" />
   </>
 )
 
 Variant.args = {
-  variant: 'text',
-  text: 'UV',
   shape: 'circle',
+  text: 'UV',
+  variant: 'text',
 }
 
 Variant.parameters = {
@@ -33,7 +33,7 @@ Variant.parameters = {
 
 Variant.decorators = [
   Story => (
-    <Stack gap={2} direction="row">
+    <Stack direction="row" gap={2}>
       <Story />
     </Stack>
   ),

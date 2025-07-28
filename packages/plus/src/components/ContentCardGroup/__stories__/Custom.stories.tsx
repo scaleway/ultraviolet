@@ -8,12 +8,12 @@ export const Custom: StoryFn<ComponentProps<typeof ContentCardGroup>> = ({
 }) => (
   <ContentCardGroup {...props}>
     <ContentCardGroup.Card
-      subtitle="Sept 22, 2023 - 11h01"
       href="http://scaleway.com/example"
+      subtitle="Sept 22, 2023 - 11h01"
     >
-      <Row templateColumns="repeat(2, auto)" gap={1} alignItems="center">
+      <Row alignItems="center" gap={1} templateColumns="repeat(2, auto)">
         <Status sentiment="success" />
-        <Text as="h3" variant="bodyStrong" sentiment="neutral" oneLine>
+        <Text as="h3" oneLine sentiment="neutral" variant="bodyStrong">
           [PAR] Servers are ups, Lorem ipsum dolor sit amet, consectetur
           adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat
           nibh.
@@ -21,12 +21,12 @@ export const Custom: StoryFn<ComponentProps<typeof ContentCardGroup>> = ({
       </Row>
     </ContentCardGroup.Card>
     <ContentCardGroup.Card
-      subtitle="Sept 22, 2023 - 11h00"
       href="http://scaleway.com/example"
+      subtitle="Sept 22, 2023 - 11h00"
     >
-      <Row templateColumns="repeat(2, auto)" gap={1} alignItems="center">
+      <Row alignItems="center" gap={1} templateColumns="repeat(2, auto)">
         <Status sentiment="danger" />
-        <Text as="h3" variant="bodyStrong" sentiment="neutral" oneLine>
+        <Text as="h3" oneLine sentiment="neutral" variant="bodyStrong">
           [PAR] Servers are down, Lorem ipsum dolor sit amet, consectetur
           adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat
           nibh.
@@ -34,12 +34,12 @@ export const Custom: StoryFn<ComponentProps<typeof ContentCardGroup>> = ({
       </Row>
     </ContentCardGroup.Card>
     <ContentCardGroup.Card
-      subtitle="Sept 22, 2023 - 11h00"
       href="http://scaleway.com/example"
+      subtitle="Sept 22, 2023 - 11h00"
     >
-      <Row templateColumns="repeat(2, auto)" gap={1} alignItems="center">
+      <Row alignItems="center" gap={1} templateColumns="repeat(2, auto)">
         <Status sentiment="warning" />
-        <Text as="h3" variant="bodyStrong" sentiment="neutral" oneLine>
+        <Text as="h3" oneLine sentiment="neutral" variant="bodyStrong">
           [PAR] Servers are flacky, Lorem ipsum dolor sit amet, consectetur
           adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat
           nibh.

@@ -12,8 +12,8 @@ export default {
   subcomponents: {
     'Conversation.Date': Date,
     'Conversation.Message': Message,
-    'Conversation.Tag': Tag,
     'Conversation.MessageInfos': MessageInfos,
+    'Conversation.Tag': Tag,
   },
   title: 'Plus/Compositions/Conversation',
 } as Meta<typeof Conversation>

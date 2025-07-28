@@ -215,22 +215,22 @@ export const Radio = forwardRef<HTMLInputElement, RadioProps>(
             data-testid={dataTestId}
           >
             <RadioInput
-              type="radio"
-              aria-invalid={!!error}
               aria-disabled={disabled}
+              aria-invalid={!!error}
               aria-label={ariaLabel}
+              autoFocus={autoFocus}
               checked={checked}
+              disabled={disabled}
               id={localId}
+              name={name}
+              onBlur={onBlur}
               onChange={onChange}
               onFocus={onFocus}
               onKeyDown={onKeyDown}
-              onBlur={onBlur}
-              value={value}
-              disabled={disabled}
-              name={name}
-              autoFocus={autoFocus}
               ref={forwadedRef}
               tabIndex={tabIndex}
+              type="radio"
+              value={value}
             />
             <Ring viewBox="0 0 24 24">
               <RadioMarkedIcon />
@@ -240,9 +240,9 @@ export const Radio = forwardRef<HTMLInputElement, RadioProps>(
                 {typeof label === 'string' ? (
                   <StyledTextLabel
                     as="label"
-                    variant="body"
-                    prominence="default"
                     htmlFor={localId}
+                    prominence="default"
+                    variant="body"
                   >
                     {label}
                   </StyledTextLabel>
@@ -255,9 +255,9 @@ export const Radio = forwardRef<HTMLInputElement, RadioProps>(
           {helper ? (
             <MargedText
               as="span"
-              variant="caption"
               prominence="weak"
               sentiment="neutral"
+              variant="caption"
             >
               {helper}
             </MargedText>

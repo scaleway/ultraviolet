@@ -40,12 +40,12 @@ export const TimeInputField = <
     field,
     fieldState: { error },
   } = useController<TFieldValues, TFieldName>({
-    name,
-    shouldUnregister,
     control,
+    name,
     rules: {
       required,
     },
+    shouldUnregister,
   })
 
   return (

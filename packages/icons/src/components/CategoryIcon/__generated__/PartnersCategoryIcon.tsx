@@ -13,16 +13,16 @@ export const PartnersCategoryIcon = ({
 }: Omit<IconProps, 'children'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
   <Icon {...props}>
-    <g fillRule="evenodd" className="Partners" clipRule="evenodd">
+    <g className="Partners" clipRule="evenodd" fillRule="evenodd">
       <path
-        fill="#521094"
-        d="M3 4a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-1a1 1 0 1 1 0-2V5H5v6a1 1 0 1 1 0 2H4a1 1 0 0 1-1-1z"
         className="fill"
+        d="M3 4a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-1a1 1 0 1 1 0-2V5H5v6a1 1 0 1 1 0 2H4a1 1 0 0 1-1-1z"
+        fill="#521094"
       />
       <path
-        fill="#A060F6"
-        d="M7 8a1 1 0 0 1 1-1h1a1 1 0 0 1 0 2v6h6V9a1 1 0 1 1 0-2h1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1z"
         className="fillStrong"
+        d="M7 8a1 1 0 0 1 1-1h1a1 1 0 0 1 0 2v6h6V9a1 1 0 1 1 0-2h1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1z"
+        fill="#A060F6"
       />
     </g>
   </Icon>

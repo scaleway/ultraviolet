@@ -29,20 +29,20 @@ export const Ordering: StoryFn = args => {
       {...args}
       columns={[
         {
-          label: 'Solar system Planet',
           isOrdered: currentOrder.columnId === 'name',
-          orderDirection: currentOrder.order,
+          label: 'Solar system Planet',
           onOrder: newOrder =>
             setCurrentOrder({ columnId: 'name', order: newOrder }),
+          orderDirection: currentOrder.order,
         },
         {
-          label: 'Perihelion',
-          width: '200px',
+          info: 'Nearest to the Sun',
           isOrdered: currentOrder.columnId === 'perihelion',
-          orderDirection: currentOrder.order,
+          label: 'Perihelion',
           onOrder: newOrder =>
             setCurrentOrder({ columnId: 'perihelion', order: newOrder }),
-          info: 'Nearest to the Sun',
+          orderDirection: currentOrder.order,
+          width: '200px',
         },
         {
           label: 'Aphelion',
@@ -51,7 +51,7 @@ export const Ordering: StoryFn = args => {
       ]}
     >
       {sortedData.map(planet => (
-        <List.Row key={planet.id} id={planet.id}>
+        <List.Row id={planet.id} key={planet.id}>
           <List.Cell>{planet.name}</List.Cell>
           <List.Cell>{planet.perihelion}AU</List.Cell>
           <List.Cell>{planet.aphelion}AU</List.Cell>

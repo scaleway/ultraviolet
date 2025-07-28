@@ -4,12 +4,12 @@ import { Slider } from '..'
 export const Input: StoryFn<typeof Slider> = args => <Slider {...args} />
 
 Input.args = {
-  value: [3, 5],
-  step: 0.5,
-  input: true,
-  max: 10,
   double: true,
+  input: true,
   label: 'Label',
+  max: 10,
+  step: 0.5,
+  value: [3, 5],
 }
 
 Input.parameters = {

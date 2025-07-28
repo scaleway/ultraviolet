@@ -69,13 +69,13 @@ export const SteppedListContent = ({
           ? children((completedArg: boolean) =>
               nextStep({
                 completed: completedArg,
-                setCompleted: setDone,
                 done,
-                stepNumber,
-                setCurrentStep,
                 numberOfSteps,
-                setHidden,
                 onClickHide,
+                setCompleted: setDone,
+                setCurrentStep,
+                setHidden,
+                stepNumber,
               }),
             )
           : children}

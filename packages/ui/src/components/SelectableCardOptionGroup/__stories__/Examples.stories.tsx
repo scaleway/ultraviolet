@@ -29,17 +29,17 @@ export const Examples: StoryFn<typeof SelectableCardOptionGroup> = args => {
       <Stack direction="column" gap={8}>
         <SelectableCardOptionGroup
           {...args}
-          value={value}
-          optionValue={option}
-          onChangeOption={(newValue: string) => onChangeOption(newValue)}
+          columns={4}
           onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
             onChange(event.currentTarget.value)
           }
+          onChangeOption={(newValue: string) => onChangeOption(newValue)}
+          optionValue={option}
           size="large"
-          columns={4}
+          value={value}
         >
           <SelectableCardOptionGroup.Option
-            value="ubuntu"
+            image={ubuntu}
             label="Ubuntu"
             labelDescription={
               <Badge sentiment="primary" size="small">
@@ -47,46 +47,46 @@ export const Examples: StoryFn<typeof SelectableCardOptionGroup> = args => {
               </Badge>
             }
             options={ubuntuOptionsLegacy}
-            image={ubuntu}
+            value="ubuntu"
           >
             <Text
               as="p"
-              variant="bodySmall"
-              sentiment="neutral"
-              prominence="weak"
               placement="center"
+              prominence="weak"
+              sentiment="neutral"
+              variant="bodySmall"
             >
               New versions has been added recently
             </Text>
           </SelectableCardOptionGroup.Option>
           <SelectableCardOptionGroup.Option
-            value="debian"
+            image={debian}
             label="Debian"
             options={debianOptions}
-            image={debian}
+            value="debian"
           >
             <Text
               as="p"
-              variant="bodySmall"
-              sentiment="neutral"
-              prominence="weak"
               placement="center"
+              prominence="weak"
+              sentiment="neutral"
+              variant="bodySmall"
             >
               Easy to configure and maintain
             </Text>
           </SelectableCardOptionGroup.Option>
           <SelectableCardOptionGroup.Option
-            value="centos"
+            image={centos}
             label="CentOS"
             options={centosOptions}
-            image={centos}
+            value="centos"
           >
             <Text
               as="p"
-              variant="bodySmall"
-              sentiment="neutral"
-              prominence="weak"
               placement="center"
+              prominence="weak"
+              sentiment="neutral"
+              variant="bodySmall"
             >
               Used by many enterprises
             </Text>
@@ -112,26 +112,26 @@ export const Examples: StoryFn<typeof SelectableCardOptionGroup> = args => {
       </Stack>
       <SelectableCardOptionGroup
         {...args}
-        value={value2}
-        optionValue={option2}
-        onChangeOption={(newValue: string) => onChangeOption2(newValue)}
+        columns={4}
         onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
           onChange2(event.currentTarget.value)
         }
+        onChangeOption={(newValue: string) => onChangeOption2(newValue)}
+        optionValue={option2}
         size="large"
-        columns={4}
+        value={value2}
       >
         <SelectableCardOptionGroup.Option
-          value="mysql"
+          image={mysql}
           label="MySQL"
           options={mysqlOptions}
-          image={mysql}
+          value="mysql"
         />
         <SelectableCardOptionGroup.Option
-          value="postgresql"
+          image={postgresql}
           label="PostgreSQL"
           options={postgresqlOptions}
-          image={postgresql}
+          value="postgresql"
         />
       </SelectableCardOptionGroup>
     </Stack>
@@ -139,8 +139,8 @@ export const Examples: StoryFn<typeof SelectableCardOptionGroup> = args => {
 }
 
 Examples.args = {
-  legend: 'Choose your OS',
   helper: 'Choose the OS and version you need to install on your server',
+  legend: 'Choose your OS',
 }
 
 Examples.decorators = [

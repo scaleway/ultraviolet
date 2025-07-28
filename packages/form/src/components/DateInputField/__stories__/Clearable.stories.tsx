@@ -14,7 +14,7 @@ export const Clearable: StoryFn<
 )
 
 Clearable.args = {
+  clearable: true,
   name: 'date',
   required: true,
-  clearable: true,
 }

@@ -35,33 +35,33 @@ export const UnitInputField = <
   const { getError } = useErrors()
   const { field: unitField } = useController({
     name: optionName ?? `${name}-unit`,
-    shouldUnregister,
     rules: { required },
+    shouldUnregister,
   })
 
   const { field: valueField, fieldState: valueFieldState } = useController<
     TFieldValues,
     TFieldName
   >({
-    name,
-    shouldUnregister,
     control,
+    name,
     rules: {
-      required,
-      min,
       max,
+      min,
+      required,
       validate,
     },
+    shouldUnregister,
   })
 
   return (
     <UnitInput
       {...props}
-      name={name}
-      required={required}
+      error={getError({ label }, valueFieldState.error)}
+      label={label}
       max={max}
       min={min}
-      error={getError({ label }, valueFieldState.error)}
+      name={name}
       onChange={event => {
         valueField.onChange(event)
         onChange?.(event as PathValue<TFieldValues, Path<TFieldValues>>)
@@ -70,9 +70,9 @@ export const UnitInputField = <
         unitField.onChange(event)
         onChangeUnitValue?.(event)
       }}
-      value={valueField.value as number}
+      required={required}
       unitValue={unitField.value as string}
-      label={label}
+      value={valueField.value as number}
     />
   )
 }

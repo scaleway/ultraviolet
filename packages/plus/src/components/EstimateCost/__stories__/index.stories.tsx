@@ -13,9 +13,9 @@ export default {
   subcomponents: {
     Item,
     LineThrough,
+    NumberInput,
     Region,
     Regular,
-    NumberInput,
     Strong,
     Unit,
   },

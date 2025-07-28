@@ -5,7 +5,7 @@ import { ExpandableCard } from '..'
 export const Name: StoryFn<typeof ExpandableCard> = args => (
   <Stack gap={1}>
     {['Pool-1', 'Pool-2', 'Pool-3'].map(name => (
-      <ExpandableCard key={name} {...args} name="pool" header={name}>
+      <ExpandableCard key={name} {...args} header={name} name="pool">
         Content for {name}
       </ExpandableCard>
     ))}

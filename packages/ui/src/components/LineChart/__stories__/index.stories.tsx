@@ -3,11 +3,11 @@ import { LineChart } from '..'
 
 export default {
   component: LineChart,
-  title: 'Components/Data Display/Chart/LineChart',
   parameters: {
     experimental: true,
   },
   tags: ['experimental'],
+  title: 'Components/Data Display/Chart/LineChart',
 } as Meta
 
 export { FormattedAxisAndPoints } from './FormattedAxisAndPoints.stories'

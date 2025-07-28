@@ -7,6 +7,6 @@ Tooltip.parameters = {
   },
 }
 Tooltip.args = {
-  tooltip: 'A tooltip text',
   sentiment: 'success',
+  tooltip: 'A tooltip text',
 }

@@ -46,16 +46,16 @@ export const OfferListProvider = ({
   return (
     <OfferListContext.Provider
       value={{
-        selectable,
-        radioSelectedRow,
-        setRadioSelectedRow,
+        autoCollapse,
         checkboxSelectedRows,
-        setCheckboxSelectedRows,
-        expandable,
         disabled,
+        expandable,
         loading,
         onChangeSelect,
-        autoCollapse,
+        radioSelectedRow,
+        selectable,
+        setCheckboxSelectedRows,
+        setRadioSelectedRow,
       }}
     >
       {children}

@@ -36,11 +36,11 @@ export const SkeletonRows = ({
     <>
       {rowArray.map(index => (
         <StyledLoadingRow
-          sentiment="neutral"
-          role="row"
-          id={`skeleton-${index}`}
           columns={columns}
+          id={`skeleton-${index}`}
           key={index}
+          role="row"
+          sentiment="neutral"
         >
           {selectable ? <td /> : null}
           {colArray.map(columnIndex => (

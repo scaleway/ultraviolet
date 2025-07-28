@@ -5,8 +5,8 @@ import { ConsoleProductIcon } from '../__generated__'
 export const Variants: StoryFn<typeof ConsoleProductIcon> = props => (
   <Stack gap={1}>
     {(['primary', 'original', 'danger', 'warning'] as const).map(variant => (
-      <Stack direction="row" gap={1} alignItems="center">
-        <ConsoleProductIcon {...props} variant={variant} size="large" />
+      <Stack alignItems="center" direction="row" gap={1}>
+        <ConsoleProductIcon {...props} size="large" variant={variant} />
         <Text as="span" variant="bodyStrong">
           {variant}
         </Text>

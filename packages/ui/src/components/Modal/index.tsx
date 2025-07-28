@@ -89,58 +89,58 @@ export const Modal = ({
     <>
       {disclosure ? (
         <Disclosure
-          id={finalId}
-          handleOpen={handleOpen}
           disclosure={disclosure}
           handleClose={handleClose}
-          visible={visible}
-          toggle={handleToggle}
+          handleOpen={handleOpen}
+          id={finalId}
           ref={disclosureRef}
+          toggle={handleToggle}
+          visible={visible}
         />
       ) : null}
       {!context ? (
         <ModalProvider>
           <ModalContent
-            open={open}
-            visible={visible}
-            placement={placement}
-            finalSize={size}
             ariaLabel={ariaLabel}
-            hideOnClickOutside={hideOnClickOutside}
-            hideOnEsc={hideOnEsc}
-            preventBodyScroll={preventBodyScroll}
-            handleClose={handleClose}
-            className={className}
             backdropClassName={backdropClassName}
+            className={className}
             dataTestId={dataTestId}
-            isClosable={isClosable}
+            finalId={finalId}
+            finalSize={size}
+            handleClose={handleClose}
             handleOpen={handleOpen}
             handleToggle={handleToggle}
-            finalId={finalId}
+            hideOnClickOutside={hideOnClickOutside}
+            hideOnEsc={hideOnEsc}
             image={image}
+            isClosable={isClosable}
+            open={open}
+            placement={placement}
+            preventBodyScroll={preventBodyScroll}
+            visible={visible}
           >
             {children}
           </ModalContent>
         </ModalProvider>
       ) : (
         <ModalContent
-          open={open}
-          visible={visible}
-          placement={placement}
-          finalSize={size}
           ariaLabel={ariaLabel}
-          hideOnClickOutside={hideOnClickOutside}
-          hideOnEsc={hideOnEsc}
-          preventBodyScroll={preventBodyScroll}
-          handleClose={handleClose}
-          className={className}
           backdropClassName={backdropClassName}
+          className={className}
           dataTestId={dataTestId}
-          isClosable={isClosable}
+          finalId={finalId}
+          finalSize={size}
+          handleClose={handleClose}
           handleOpen={handleOpen}
           handleToggle={handleToggle}
-          finalId={finalId}
+          hideOnClickOutside={hideOnClickOutside}
+          hideOnEsc={hideOnEsc}
           image={image}
+          isClosable={isClosable}
+          open={open}
+          placement={placement}
+          preventBodyScroll={preventBodyScroll}
+          visible={visible}
         >
           {children}
         </ModalContent>

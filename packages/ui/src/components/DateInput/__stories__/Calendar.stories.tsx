@@ -11,11 +11,11 @@ export const Calendar: StoryFn<ComponentProps<typeof DateInput>> = args => {
     <Stack gap={2}>
       <DateInput
         {...args}
-        label="As a calendar"
-        value={value}
-        onChange={setValue}
         input="calendar"
+        label="As a calendar"
+        onChange={setValue}
         selectsRange={false}
+        value={value}
       />
       Selected date: {value?.toDateString()}
     </Stack>

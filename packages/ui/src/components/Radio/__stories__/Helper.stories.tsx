@@ -4,11 +4,11 @@ import { Radio } from '..'
 export const Helper: StoryFn = args => (
   <Radio
     {...args}
-    name="helper-label-1"
     helper="Helper content"
-    value="helper-label-1"
-    onChange={() => {}}
     label="Label 1"
+    name="helper-label-1"
+    onChange={() => {}}
+    value="helper-label-1"
   />
 )
 

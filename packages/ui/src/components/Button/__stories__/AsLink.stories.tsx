@@ -4,13 +4,13 @@ import { Stack } from '../..'
 import { Button, buttonVariants } from '..'
 
 export const AsLink: StoryFn<typeof Button> = () => (
-  <Stack alignItems="center" gap={2} direction="row">
+  <Stack alignItems="center" direction="row" gap={2}>
     {buttonVariants.map(variant => (
       <Button
         href="https://ultraviolet.scaleway.com/"
-        target="_blank"
         key={variant}
         onClick={() => {}}
+        target="_blank"
         variant={variant}
       >
         <PencilIcon />

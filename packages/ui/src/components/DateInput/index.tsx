@@ -134,8 +134,8 @@ export const DateInput = <IsRange extends undefined | boolean>({
     value && !selectsRange ? new Date(value) : null,
   )
   const [computedRange, setRange] = useState({
-    start: startDate ?? null,
     end: endDate ?? null,
+    start: startDate ?? null,
   })
   const [isPopupVisible, setVisible] = useState(false)
   const [monthToShow, setMonthToShow] = useState(defaultMonthToShow)
@@ -159,30 +159,30 @@ export const DateInput = <IsRange extends undefined | boolean>({
   const valueContext = useMemo(
     () =>
       ({
-        showMonthYearPicker,
+        DAYS,
         disabled,
-        readOnly,
-        value: computedValue,
-        range: computedRange,
-        setRange,
-        setValue,
-        monthToShow,
-        yearToShow,
-        setMonthToShow,
-        setYearToShow,
         excludeDates,
-        maxDate,
-        minDate,
+        format,
+        hoveredDate,
         MONTHS,
         MONTHS_ARR,
-        DAYS,
+        maxDate,
+        minDate,
+        monthToShow,
         onChange,
+        range: computedRange,
+        readOnly,
         selectsRange,
-        format,
-        setInputValue,
-        setVisible,
-        hoveredDate,
         setHoveredDate,
+        setInputValue,
+        setMonthToShow,
+        setRange,
+        setValue,
+        setVisible,
+        setYearToShow,
+        showMonthYearPicker,
+        value: computedValue,
+        yearToShow,
       }) as ContextProps,
     [
       showMonthYearPicker,
@@ -223,8 +223,8 @@ export const DateInput = <IsRange extends undefined | boolean>({
     }
     if (selectsRange) {
       setRange({
-        start: startDate ?? computedRange.start,
         end: endDate ?? computedRange.end,
+        start: startDate ?? computedRange.start,
       })
     }
   }, [
@@ -251,7 +251,7 @@ export const DateInput = <IsRange extends undefined | boolean>({
     if (selectsRange) {
       const computedNewRange = createDateRange(newValue, showMonthYearPicker)
 
-      setRange({ start: computedNewRange[0], end: computedNewRange[1] })
+      setRange({ end: computedNewRange[1], start: computedNewRange[0] })
       setInputValue(newValue)
 
       if (computedNewRange[0]) {
@@ -296,59 +296,59 @@ export const DateInput = <IsRange extends undefined | boolean>({
   return (
     <DateInputContext.Provider value={valueContext}>
       <Container
-        id={id}
         className={className}
         data-testid={dataTestId}
+        id={id}
         onBlur={onBlur}
-        onFocus={onFocus}
         onClick={() => {
           if (!isPopupVisible) setVisible(true)
         }}
+        onFocus={onFocus}
         ref={popupRef}
       >
         {input === 'text' ? (
           <CalendarPopup
-            visible={isPopupVisible}
-            setVisible={setVisible}
-            refInput={refInput}
             content={<CalendarContent />}
+            refInput={refInput}
+            setVisible={setVisible}
+            visible={isPopupVisible}
           >
             <TextInput
-              label={label}
-              placeholder={placeholder}
-              value={inputValue}
-              required={required}
-              error={error}
-              success={success}
-              readOnly={readOnly}
-              disabled={disabled}
-              size={size}
+              autoComplete="false"
               autoFocus={autoFocus}
+              clearable={clearable}
+              disabled={disabled}
+              error={error}
               helper={helper}
+              label={label}
               labelDescription={labelDescription}
               name={name}
-              suffix={
-                <CalendarRangeIcon
-                  size="medium"
-                  sentiment="neutral"
-                  disabled={disabled}
-                />
-              }
-              ref={refInput}
-              tooltip={tooltip}
-              autoComplete="false"
-              onChange={manageOnChange}
               onBlur={event => {
                 if (!popupRef.current?.contains(event.relatedTarget))
                   onBlurInput()
               }}
+              onChange={manageOnChange}
               onKeyDown={event => {
                 if (event.key === 'Enter') {
                   setVisible(!isPopupVisible)
                   onBlurInput()
                 }
               }}
-              clearable={clearable}
+              placeholder={placeholder}
+              readOnly={readOnly}
+              ref={refInput}
+              required={required}
+              size={size}
+              success={success}
+              suffix={
+                <CalendarRangeIcon
+                  disabled={disabled}
+                  sentiment="neutral"
+                  size="medium"
+                />
+              }
+              tooltip={tooltip}
+              value={inputValue}
             />
           </CalendarPopup>
         ) : (
@@ -357,9 +357,9 @@ export const DateInput = <IsRange extends undefined | boolean>({
               <Stack direction="row" gap="1">
                 <Text
                   as="label"
-                  variant="bodyStrong"
                   prominence="strong"
                   sentiment="neutral"
+                  variant="bodyStrong"
                 >
                   {label}
                 </Text>
@@ -368,9 +368,9 @@ export const DateInput = <IsRange extends undefined | boolean>({
             ) : (
               <Text
                 as="label"
-                variant="bodyStrong"
                 prominence="strong"
                 sentiment="neutral"
+                variant="bodyStrong"
               >
                 {label}
               </Text>

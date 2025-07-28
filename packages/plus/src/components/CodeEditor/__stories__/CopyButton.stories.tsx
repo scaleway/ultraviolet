@@ -21,5 +21,5 @@ export const CopyButton: StoryFn<ComponentProps<typeof CodeEditor>> = ({
 }) => {
   const [value, setValue] = useState(DEFAULT_VALUE)
 
-  return <CodeEditor {...props} value={value} copyButton onChange={setValue} />
+  return <CodeEditor {...props} copyButton onChange={setValue} value={value} />
 }

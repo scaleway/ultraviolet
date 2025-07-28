@@ -14,9 +14,9 @@ export const Template: StoryFn<
 )
 
 Template.args = {
+  'aria-atomic': 'true',
+  'aria-live': 'polite',
   label: 'Label',
   name: 'example',
   role: 'status',
-  'aria-live': 'polite',
-  'aria-atomic': 'true',
 }

@@ -10,42 +10,42 @@ Showcase.args = {
       Choice 1
     </Tabs.Tab>,
     <Tabs.Tab
-      key={2}
-      value={2}
       as="a"
       href="https://scaleway.com"
+      key={2}
       target="_blank"
+      value={2}
     >
       Link
     </Tabs.Tab>,
-    <Tabs.Tab key={3} value={3} disabled>
+    <Tabs.Tab disabled key={3} value={3}>
       Disabled
     </Tabs.Tab>,
-    <Tabs.Tab key={4} value={4} href="https://scaleway.com" as="a" disabled>
+    <Tabs.Tab as="a" disabled href="https://scaleway.com" key={4} value={4}>
       Disabled too
     </Tabs.Tab>,
     <Tabs.Tab
-      key={5}
-      value={5}
       as="a"
       href="https://scaleway.com"
+      key={5}
       target="_blank"
+      value={5}
     >
       Link no value
     </Tabs.Tab>,
-    <Tabs.Tab key={6} value={6} as="div">
+    <Tabs.Tab as="div" key={6} value={6}>
       Choice 6
     </Tabs.Tab>,
     <Tabs.Tab key="six" value="six">
       Choice 6 too but six value
     </Tabs.Tab>,
-    <Tabs.Tab key="tooltip" value="tooltip" tooltip="Awesome tooltip">
+    <Tabs.Tab key="tooltip" tooltip="Awesome tooltip" value="tooltip">
       With tooltip
     </Tabs.Tab>,
-    <Tabs.Tab key="8" value="8" counter={1}>
+    <Tabs.Tab counter={1} key="8" value="8">
       Choice 8
     </Tabs.Tab>,
-    <Tabs.Tab key="9" value="9" counter={10}>
+    <Tabs.Tab counter={10} key="9" value="9">
       Choice 9
     </Tabs.Tab>,
     <Tabs.Tab key="10" value="10">

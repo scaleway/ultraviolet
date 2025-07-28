@@ -37,7 +37,7 @@ describe('Popup', () => {
 
   test(`should display Popup on hover with no animation`, async () => {
     renderWithTheme(
-      <Popup debounceDelay={0} id="test" text="test success!" disableAnimation>
+      <Popup debounceDelay={0} disableAnimation id="test" text="test success!">
         <p data-testid="children">Hover me</p>
       </Popup>,
     )
@@ -51,7 +51,7 @@ describe('Popup', () => {
 
   test(`should display Popup on hover with maxHeight`, async () => {
     renderWithTheme(
-      <Popup debounceDelay={0} id="test" text="test success!" maxHeight="200px">
+      <Popup debounceDelay={0} id="test" maxHeight="200px" text="test success!">
         <p data-testid="children">Hover me</p>
       </Popup>,
     )
@@ -133,7 +133,7 @@ describe('Popup', () => {
 
   test(`should renders Popup with maxWidth`, async () => {
     renderWithTheme(
-      <Popup debounceDelay={0} text="test success!" maxWidth={100}>
+      <Popup debounceDelay={0} maxWidth={100} text="test success!">
         <p data-testid="children">Hover me</p>
       </Popup>,
     )
@@ -151,8 +151,8 @@ describe('Popup', () => {
         renderWithTheme(
           <Popup
             debounceDelay={0}
-            text="test success!"
             placement={placement as ComponentProps<typeof Popup>['placement']}
+            text="test success!"
           >
             <p data-testid="children">Hover me</p>
           </Popup>,
@@ -169,7 +169,7 @@ describe('Popup', () => {
 
   test(`should verify accessibility`, async () => {
     renderWithTheme(
-      <Popup debounceDelay={0} text="test success!" maxWidth={100}>
+      <Popup debounceDelay={0} maxWidth={100} text="test success!">
         <p data-testid="children">Hover me</p>
       </Popup>,
     )
@@ -187,11 +187,11 @@ describe('Popup', () => {
 
   test(`should verify trap focus`, async () => {
     renderWithTheme(
-      <Popup debounceDelay={0} text="test success!" maxWidth={100}>
-        <button type="button" data-testid="1">
+      <Popup debounceDelay={0} maxWidth={100} text="test success!">
+        <button data-testid="1" type="button">
           Focus me
         </button>
-        <button type="button" data-testid="2">
+        <button data-testid="2" type="button">
           Focus me too
         </button>
       </Popup>,

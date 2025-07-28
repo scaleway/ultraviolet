@@ -49,27 +49,26 @@ export const SelectableCardOptionGroupField = <
     field,
     fieldState: { error },
   } = useController<TFieldValues, TFieldName>({
-    name,
     control,
-    shouldUnregister,
+    name,
     rules: {
       required,
       validate,
     },
+    shouldUnregister,
   })
 
   const { field: optionField } = useController({
     name: optionName ?? `${name}Option`,
-    shouldUnregister,
     rules: { required },
+    shouldUnregister,
   })
 
   return (
     <SelectableCardOptionGroup
+      error={getError({ label: legend }, error) ?? customError}
       legend={legend}
       name={name}
-      value={field.value as string}
-      optionValue={String(optionField.value)}
       onChange={event => {
         field.onChange(event)
         onChange?.(event)
@@ -78,8 +77,9 @@ export const SelectableCardOptionGroupField = <
         optionField.onChange(value)
         onChangeOption?.(value)
       }}
-      error={getError({ label: legend }, error) ?? customError}
+      optionValue={String(optionField.value)}
       required={required}
+      value={field.value as string}
       {...props}
     >
       {children}

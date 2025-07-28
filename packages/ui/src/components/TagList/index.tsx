@@ -148,9 +148,9 @@ export const TagList = ({
     const surelyHiddenTags = tags.slice(potentiallyVisibleTagsLength)
 
     return {
-      tmpThreshold,
       potentiallyVisibleTags,
       surelyHiddenTags,
+      tmpThreshold,
     }
   }, [maxLength, tags, threshold])
 
@@ -200,23 +200,23 @@ export const TagList = ({
             Number.parseInt(TAGS_GAP, 10)
 
           return {
-            measuredVisibleTags: [
-              ...accumulator.measuredVisibleTags,
-              newAccumulatedWidth <= parentWidth && tags[index + 1],
-            ].filter(Boolean) as TagType[],
+            accumulatedWidth: newAccumulatedWidth,
             measuredHiddenTags: [
               ...accumulator.measuredHiddenTags,
               newAccumulatedWidth > parentWidth && tags[index + 1],
             ].filter(Boolean) as TagType[],
-            accumulatedWidth: newAccumulatedWidth,
+            measuredVisibleTags: [
+              ...accumulator.measuredVisibleTags,
+              newAccumulatedWidth <= parentWidth && tags[index + 1],
+            ].filter(Boolean) as TagType[],
           }
         },
         {
-          measuredVisibleTags: [tags[0]], // we need to always show one tag
-          measuredHiddenTags: [],
           accumulatedWidth:
             (firstTag as HTMLDivElement).offsetWidth +
             Number.parseInt(TAGS_GAP, 10),
+          measuredHiddenTags: [],
+          measuredVisibleTags: [tags[0]], // we need to always show one tag
         },
       )
 
@@ -285,22 +285,22 @@ export const TagList = ({
     typeof tag !== 'string' && tag.icon ? (
       <Tag
         // useful when two tags are identical `${tag}-${index}`
-        key={`${getTagLabel(tag)}-${index}`}
-        copiable={copiable}
-        copyText={copyText}
-        copiedText={copiedText}
         className={isEllipsis ? 'ellipsed' : ''}
+        copiable={copiable}
+        copiedText={copiedText}
+        copyText={copyText}
+        key={`${getTagLabel(tag)}-${index}`}
       >
         {tag.icon}
         {getTagLabel(tag)}
       </Tag>
     ) : (
       <Tag
-        key={`${getTagLabel(tag)}-${index}`}
-        copiable={copiable}
-        copyText={copyText}
-        copiedText={copiedText}
         className={isEllipsis ? 'ellipsed' : ''}
+        copiable={copiable}
+        copiedText={copiedText}
+        copyText={copyText}
+        key={`${getTagLabel(tag)}-${index}`}
       >
         {getTagLabel(tag)}
       </Tag>
@@ -316,12 +316,12 @@ export const TagList = ({
     >
       <StyledTagContainer
         gap={TAGS_GAP}
-        multiline={multiline}
-        popoverTriggerWidth={popoverTriggerWidth}
-        ref={containerRef}
         haveOnlySingleLongTag={
           visibleTags.length === 1 && hiddenTags.length === 0
         }
+        multiline={multiline}
+        popoverTriggerWidth={popoverTriggerWidth}
+        ref={containerRef}
       >
         {visibleTags.map((tag, index) =>
           renderTag(
@@ -336,8 +336,8 @@ export const TagList = ({
       <div
         ref={measureRef}
         style={{
-          visibility: 'hidden',
           position: 'absolute',
+          visibility: 'hidden',
           whiteSpace: 'nowrap',
         }}
       >
@@ -347,22 +347,22 @@ export const TagList = ({
       </div>
       {hiddenTags.length > 0 && (
         <Popover
-          title={popoverTitle}
-          visible={isPopoverVisible}
-          size="small"
-          onClose={() => setIsPopoverVisible(false)}
-          placement={popoverPlacement}
-          maxHeight={popoverMaxHeight}
           content={
-            <StyledTagContainer multiline gap={TAGS_GAP}>
+            <StyledTagContainer gap={TAGS_GAP} multiline>
               {hiddenTags.map((tag, index) => renderTag(tag, index))}
             </StyledTagContainer>
           }
+          maxHeight={popoverMaxHeight}
+          onClose={() => setIsPopoverVisible(false)}
+          placement={popoverPlacement}
+          size="small"
+          title={popoverTitle}
+          visible={isPopoverVisible}
         >
           <TagsWrapper
-            ref={popoverTriggerRef}
             data-testid={`${dataTestId ?? 'taglist'}-open`}
             onClick={() => setIsPopoverVisible(true)}
+            ref={popoverTriggerRef}
           >
             +{hiddenTags.length}
           </TagsWrapper>

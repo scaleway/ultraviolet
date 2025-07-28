@@ -7,27 +7,27 @@ export const Searchable: StoryFn<typeof SelectInput> = args => (
   <Stack gap="2" width="50%">
     <SelectInput
       {...args}
-      options={OptionalInfo}
       label="Searchable true : >= 6 elements"
+      options={OptionalInfo}
       searchable
     />
     <SelectInput
       {...args}
-      options={OptionalInfo2}
-      optionalInfoPlacement="right"
       label="Searchable true : <6 elements"
+      optionalInfoPlacement="right"
+      options={OptionalInfo2}
       searchable
     />
   </Stack>
 )
 
 Searchable.args = {
+  disabled: false,
+  helper: 'helper',
   name: 'example',
   placeholder: 'Select item',
   placeholderSearch: 'Search in list',
   searchable: false,
-  disabled: false,
-  helper: 'helper',
 }
 
 Searchable.parameters = {

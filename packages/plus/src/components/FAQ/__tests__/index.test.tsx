@@ -4,17 +4,17 @@ import { FAQ } from '..'
 
 describe('FAQ', () => {
   it('should work with default props', () =>
-    shouldMatchEmotionSnapshot(<FAQ title="Title" description="Description" />))
+    shouldMatchEmotionSnapshot(<FAQ description="Description" title="Title" />))
   it('should work with notes', () =>
     shouldMatchEmotionSnapshot(
-      <FAQ title="Title" description="Description" notes="Notes" />,
+      <FAQ description="Description" notes="Notes" title="Title" />,
     ))
   it('should work with illustrationTest', () =>
     shouldMatchEmotionSnapshot(
-      <FAQ title="Title" description="Description" illustrationText={1} />,
+      <FAQ description="Description" illustrationText={1} title="Title" />,
     ))
   it('should work with productIconName', () =>
     shouldMatchEmotionSnapshot(
-      <FAQ title="Title" description="Description" productIconName="support" />,
+      <FAQ description="Description" productIconName="support" title="Title" />,
     ))
 })

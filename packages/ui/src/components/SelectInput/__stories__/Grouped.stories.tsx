@@ -8,8 +8,8 @@ export const Grouped: StoryFn<typeof SelectInput> = args => (
     <SelectInput label="Label" {...args} options={dataGrouped} />
     <SelectInput
       {...args}
-      options={dataGroupedWithEmptyName}
       label="Grouped with empty group name"
+      options={dataGroupedWithEmptyName}
     />
   </Stack>
 )

@@ -32,35 +32,35 @@ const CategoryName = ({ category }: { category: ItemsType }) => {
   const { categoriesPrice } = useContext(OrderSummaryContext)
 
   const categoryPrice = categoriesPrice[category.category] ?? {
-    totalPrice: 0,
-    totalPriceWithDiscount: 0,
     maxPrice: 0,
     maxPriceWithDiscount: 0,
     timeUnit: 'hours',
+    totalPrice: 0,
+    totalPriceWithDiscount: 0,
   }
 
   return category.category ? (
-    <Stack justifyContent="space-between" direction="row" alignItems="center">
+    <Stack alignItems="center" direction="row" justifyContent="space-between">
       {category.additionalInfo ? (
-        <Stack direction="row" gap={1} alignItems="center">
+        <Stack alignItems="center" direction="row" gap={1}>
           <Text
             as="span"
-            variant="bodyStrong"
-            sentiment="neutral"
             prominence="strong"
+            sentiment="neutral"
+            variant="bodyStrong"
           >
             {category.category}
           </Text>
-          <Text as="span" variant="bodySmall" italic sentiment="primary">
+          <Text as="span" italic sentiment="primary" variant="bodySmall">
             {category.additionalInfo}
           </Text>
         </Stack>
       ) : (
         <Text
           as="span"
-          variant="bodyStrong"
-          sentiment="neutral"
           prominence="strong"
+          sentiment="neutral"
+          variant="bodyStrong"
         >
           {category.category}
         </Text>
@@ -68,11 +68,11 @@ const CategoryName = ({ category }: { category: ItemsType }) => {
       {category.customContent}
       {category.numberInput ? (
         <StyledNumberInputV2
-          value={category.numberInputValue}
+          controls={category.numberInputControls}
           onChange={category.onChangeInput}
           size="small"
-          controls={category.numberInputControls}
           unit={category.numberInputUnit}
+          value={category.numberInputValue}
         />
       ) : null}
       {!category.customContent &&
@@ -80,34 +80,34 @@ const CategoryName = ({ category }: { category: ItemsType }) => {
       categoryPrice.totalPrice === categoryPrice.totalPriceWithDiscount ? (
         <Text
           as="span"
-          variant="bodyStrong"
-          sentiment="neutral"
           prominence="strong"
+          sentiment="neutral"
+          variant="bodyStrong"
         >
-          <DisplayPrice price={categoryPrice} beforeOrAfter="after" />
+          <DisplayPrice beforeOrAfter="after" price={categoryPrice} />
         </Text>
       ) : null}
 
       {!category.customContent &&
       !category.numberInput &&
       categoryPrice.totalPrice !== categoryPrice.totalPriceWithDiscount ? (
-        <Stack direction="row" gap={1} alignItems="center">
+        <Stack alignItems="center" direction="row" gap={1}>
           <Text
             as="span"
-            variant="bodySmallStrong"
-            sentiment="neutral"
             prominence="weak"
+            sentiment="neutral"
             strikeThrough
+            variant="bodySmallStrong"
           >
-            <DisplayPrice price={categoryPrice} beforeOrAfter="before" />
+            <DisplayPrice beforeOrAfter="before" price={categoryPrice} />
           </Text>
           <Text
             as="span"
-            variant="bodyStrong"
-            sentiment="neutral"
             prominence="strong"
+            sentiment="neutral"
+            variant="bodyStrong"
           >
-            <DisplayPrice price={categoryPrice} beforeOrAfter="after" />
+            <DisplayPrice beforeOrAfter="after" price={categoryPrice} />
           </Text>
         </Stack>
       ) : null}
@@ -133,13 +133,13 @@ const SubCategory = ({ subCategory }: { subCategory: SubCategoryType }) => {
 
   return (
     <Stack direction="column" gap={1}>
-      <Stack justifyContent="space-between" direction="row" alignItems="center">
+      <Stack alignItems="center" direction="row" justifyContent="space-between">
         {subCategory.title ? (
           <Text
             as="span"
-            variant="bodySmallStrong"
-            sentiment="neutral"
             prominence="strong"
+            sentiment="neutral"
+            variant="bodySmallStrong"
           >
             {subCategory.title}
           </Text>
@@ -147,28 +147,28 @@ const SubCategory = ({ subCategory }: { subCategory: SubCategoryType }) => {
         {subCategory.customContent ? (
           <Text
             as="span"
-            variant="bodySmallStrong"
-            sentiment="neutral"
             prominence="strong"
+            sentiment="neutral"
+            variant="bodySmallStrong"
           >
             {subCategory.customContent}
           </Text>
         ) : null}
         {subCategory.numberInput ? (
           <StyledNumberInputV2
-            value={subCategory.numberInputValue}
+            controls={subCategory.numberInputControls}
             onChange={subCategory.onChangeInput}
             size="small"
-            controls={subCategory.numberInputControls}
             unit={subCategory.numberInputUnit}
+            value={subCategory.numberInputValue}
           />
         ) : null}
         {subCategory.price !== undefined && !subCategory.hidePrice ? (
           <Text
             as="span"
-            variant="bodySmallStrong"
-            sentiment="neutral"
             prominence="strong"
+            sentiment="neutral"
+            variant="bodySmallStrong"
           >
             {subCategoryPrice[0] === subCategoryPrice[1] ||
             subCategory.priceUnit
@@ -200,10 +200,10 @@ const SubCategory = ({ subCategory }: { subCategory: SubCategoryType }) => {
         {subCategory.details?.map(detail =>
           detail ? (
             <Text
-              key={detail}
               as="span"
-              variant="bodySmall"
+              key={detail}
               sentiment="neutral"
+              variant="bodySmall"
             >
               {detail}
             </Text>
@@ -221,7 +221,7 @@ export const ScrollableContent = () => {
     <ContainerScrollable gap={3}>
       {items.map(category =>
         Object.keys(category).length > 0 && category.category ? (
-          <CategoryStack key={category.category} gap={1.5}>
+          <CategoryStack gap={1.5} key={category.category}>
             <CategoryName category={category} />
             {category.subCategories &&
             Object.keys(category.subCategories).length > 0 ? (

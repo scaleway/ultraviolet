@@ -63,13 +63,13 @@ export const WireIllustration = ({
 
   return (
     <StyledIllustration
-      data-testid={dataTestId}
       className={className}
-      width={width}
+      data-testid={dataTestId}
       height={height}
-      theme={theme}
       sentiment={sentiment}
+      theme={theme}
       url={ILLUSTRATIONS[name]}
+      width={width}
     />
   )
 }

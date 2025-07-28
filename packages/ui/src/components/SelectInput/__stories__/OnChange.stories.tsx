@@ -11,9 +11,9 @@ export const OnChange: StoryFn<typeof SelectInput> = args => {
   >(['par'])
   const defaultOptions = [
     {
+      disabled: false,
       label: 'Create a new city',
       value: 'new city',
-      disabled: false,
     },
     ...OptionalInfo4,
   ]
@@ -54,11 +54,11 @@ export const OnChange: StoryFn<typeof SelectInput> = args => {
       <Stack direction="row" gap={4}>
         <SelectInput
           {...args}
+          label="Simple onChange to get the selected value"
           multiselect
-          value={values}
           onChange={setValues}
           options={dataGrouped}
-          label="Simple onChange to get the selected value"
+          value={values}
         />
         Selected values:
         <ul>
@@ -69,25 +69,25 @@ export const OnChange: StoryFn<typeof SelectInput> = args => {
       </Stack>
       <SelectInput
         {...args}
-        value={values2}
-        multiselect
-        options={options}
-        onChange={onChange}
-        searchable={false}
         label="More complex onChange, to update the state of some options"
+        multiselect
+        onChange={onChange}
+        options={options}
+        searchable={false}
+        value={values2}
       />
     </>
   )
 }
 
 OnChange.args = {
+  disabled: false,
+  helper: 'helper',
+  multiselect: true,
   name: 'example',
   placeholder: 'Select item',
   placeholderSearch: 'Search in list',
   searchable: true,
-  disabled: false,
-  helper: 'helper',
-  multiselect: true,
 }
 
 OnChange.parameters = {

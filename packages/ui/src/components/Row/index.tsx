@@ -149,13 +149,13 @@ export const Row = ({
   padding,
 }: RowProps) => (
   <StyledRow
+    alignItems={alignItems}
     className={className}
     data-testid={dataTestId}
     gap={gap}
-    templateColumns={templateColumns}
-    alignItems={alignItems}
     justifyContent={justifyContent}
     padding={padding}
+    templateColumns={templateColumns}
   >
     {children}
   </StyledRow>

@@ -24,17 +24,17 @@ export const Link = forwardRef<HTMLAnchorElement, LinkPropsType>(
     return (
       <NextLink
         href={href}
+        legacyBehavior
+        locale={locale}
+        passHref
         replace={replace}
         scroll={scroll}
         shallow={shallow}
-        locale={locale}
-        passHref
-        legacyBehavior
       >
         <UVLink
-          ref={ref}
           href={href}
           iconPosition={iconPosition}
+          ref={ref}
           {...uvprops}
         />
       </NextLink>

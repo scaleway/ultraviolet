@@ -5,9 +5,9 @@ import { Dialog } from '..'
 export const Specifications: StoryFn<typeof Dialog> = props => (
   <Dialog
     {...props}
-    title="Discard changes?"
-    sentiment="danger"
     disclosure={<Button>Open Dialog</Button>}
+    sentiment="danger"
+    title="Discard changes?"
   >
     {({ close }) => (
       <Dialog.Stack>
@@ -16,11 +16,11 @@ export const Specifications: StoryFn<typeof Dialog> = props => (
           to the policy? Any unsaved modifications will be lost
         </Dialog.Text>
         <Dialog.Buttons
-          secondaryButton={
-            <Dialog.CancelButton onClick={close}>Cancel</Dialog.CancelButton>
-          }
           primaryButton={
             <Dialog.Button onClick={close}>Discard changes</Dialog.Button>
+          }
+          secondaryButton={
+            <Dialog.CancelButton onClick={close}>Cancel</Dialog.CancelButton>
           }
         />
       </Dialog.Stack>

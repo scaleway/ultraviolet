@@ -20,8 +20,8 @@ const FullWidthStack = styled(Stack)`
 
 const GettingStarted = () => (
   <section>
-    <Stack gap={5} alignItems="center">
-      <Text as="h3" variant="heading" id="getting-started">
+    <Stack alignItems="center" gap={5}>
+      <Text as="h3" id="getting-started" variant="heading">
         Getting Started
       </Text>
       <FullWidthStack gap={4}>
@@ -46,7 +46,7 @@ const GettingStarted = () => (
           Integrate the theme into your project to use our components.
         </Text>
         <CopyBox>
-          <CopyBox.Command title="Theme" command={themeExample} />
+          <CopyBox.Command command={themeExample} title="Theme" />
         </CopyBox>
       </FullWidthStack>
       <GithubAndDocumentationButtons />

@@ -23,7 +23,7 @@ describe('Stack', () => {
 
   test(`should render correctly with alignCenter`, () =>
     shouldMatchEmotionSnapshot(
-      <Stack direction="row" alignItems="center">
+      <Stack alignItems="center" direction="row">
         <div>first child</div>
         <div>second child</div>
       </Stack>,
@@ -73,20 +73,20 @@ describe('Stack', () => {
     shouldMatchEmotionSnapshot(
       <Stack
         direction={{
-          xxsmall: 'column',
-          xsmall: 'column',
-          small: 'row',
-          medium: 'row',
           large: 'row',
+          medium: 'row',
+          small: 'row',
           xlarge: 'row',
+          xsmall: 'column',
+          xxsmall: 'column',
         }}
         gap={{
-          xxsmall: 1,
-          xsmall: 2,
-          small: 3,
-          medium: 4,
           large: 5,
+          medium: 4,
+          small: 3,
           xlarge: 6,
+          xsmall: 2,
+          xxsmall: 1,
         }}
       >
         <div>first child</div>

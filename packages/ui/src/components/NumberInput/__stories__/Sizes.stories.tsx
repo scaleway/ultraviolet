@@ -9,9 +9,9 @@ export const Sizes: StoryFn = (args: ComponentProps<typeof NumberInput>) => (
       <NumberInput
         key={size}
         {...args}
-        size={size}
         label={size}
         placeholder="12"
+        size={size}
       />
     ))}
   </Stack>

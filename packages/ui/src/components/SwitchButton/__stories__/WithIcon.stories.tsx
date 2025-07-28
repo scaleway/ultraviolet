@@ -7,12 +7,12 @@ import { SwitchButton } from '../index'
 export const WithIcon: StoryFn<ComponentProps<typeof SwitchButton>> = args => (
   <SwitchButton {...args} size="small">
     <SwitchButton.Option value="option1">
-      <Stack direction="row" alignItems="center">
+      <Stack alignItems="center" direction="row">
         <SunIcon />
       </Stack>
     </SwitchButton.Option>
     <SwitchButton.Option value="option2">
-      <Stack direction="row" alignItems="center">
+      <Stack alignItems="center" direction="row">
         <MoonIcon />
       </Stack>
     </SwitchButton.Option>

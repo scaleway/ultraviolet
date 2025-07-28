@@ -8,7 +8,7 @@ export const Checked: StoryFn<{ errors: FormErrors }> = ({ errors }) => {
   const methods = useForm({ defaultValues: { foo: true } })
 
   return (
-    <Form onSubmit={() => {}} errors={errors} methods={methods}>
+    <Form errors={errors} methods={methods} onSubmit={() => {}}>
       <CheckboxField name="foo">Checked Item</CheckboxField>
       <CheckboxField name="bar">Not Checked Item</CheckboxField>
     </Form>

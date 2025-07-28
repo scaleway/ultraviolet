@@ -6,7 +6,7 @@ import { DefaultDisclosure } from './Template.stories'
 
 export const TriggerMethod: StoryFn<typeof Menu> = () => (
   <Stack gap={3} width="100%">
-    <Stack gap={1} direction="row" alignItems="center">
+    <Stack alignItems="center" direction="row" gap={1}>
       <Text as="p" variant="bodyStrong">
         Menu with triggerMethod set to click:
       </Text>
@@ -18,7 +18,7 @@ export const TriggerMethod: StoryFn<typeof Menu> = () => (
         </Menu.Item>
       </Menu>
     </Stack>
-    <Stack gap={1} direction="row" alignItems="center">
+    <Stack alignItems="center" direction="row" gap={1}>
       <Text as="p" variant="bodyStrong">
         Menu with triggerMethod set to hover:
       </Text>

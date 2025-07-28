@@ -60,7 +60,7 @@ export const Monthly = () => {
   ) // Used when selectsRange is True. It is used to know the current state of the range: none when start date not selected, start when start date is selected, done when start & end date selected
 
   return (
-    <Row templateColumns="1fr 1fr 1fr" gap={1}>
+    <Row gap={1} templateColumns="1fr 1fr 1fr">
       {Object.entries(MONTHS).map((month, index) => {
         const constructedDate = new Date(yearToShow, index, 1)
 
@@ -105,12 +105,12 @@ export const Monthly = () => {
           if (selectsRange) {
             // Selecting end date
             if (rangeState === 'end' && isAfterStartDate) {
-              setRange?.({ start: range.start, end: newDate })
+              setRange?.({ end: newDate, start: range.start })
               onChange?.([range.start, newDate], event)
               setInputValue(
                 formatValue(
                   null,
-                  { start: range.start, end: newDate },
+                  { end: newDate, start: range.start },
                   true,
                   true,
                   format,
@@ -120,12 +120,12 @@ export const Monthly = () => {
               // If we click on another date, it will reset the range
               setRangeState('start')
             } else if (rangeState === 'end' && !isAfterStartDate && range) {
-              setRange?.({ start: newDate, end: range.start })
+              setRange?.({ end: range.start, start: newDate })
               onChange?.([newDate, range.start], event)
               setInputValue(
                 formatValue(
                   null,
-                  { start: newDate, end: range.start },
+                  { end: range.start, start: newDate },
                   true,
                   true,
                   format,
@@ -135,12 +135,12 @@ export const Monthly = () => {
               // If we click on another date, it will reset the range
               setRangeState('start')
             } else {
-              setRange?.({ start: newDate, end: null })
+              setRange?.({ end: null, start: newDate })
               onChange?.([newDate, null], event)
               setInputValue(
                 formatValue(
                   null,
-                  { start: newDate, end: null },
+                  { end: null, start: newDate },
                   true,
                   true,
                   format,
@@ -160,8 +160,7 @@ export const Monthly = () => {
 
         return (
           <Month
-            variant={isSelected || isInHoveredRange ? 'filled' : 'ghost'}
-            sentiment={isSelected || isInHoveredRange ? 'primary' : 'neutral'}
+            aria-label={monthState()}
             disabled={disabled || isExcluded || isOutsideRange}
             key={month[0]}
             onClick={event => {
@@ -180,7 +179,8 @@ export const Monthly = () => {
               }
             }}
             onMouseEnter={() => setHoveredDate(constructedDate)}
-            aria-label={monthState()}
+            sentiment={isSelected || isInHoveredRange ? 'primary' : 'neutral'}
+            variant={isSelected || isInHoveredRange ? 'filled' : 'ghost'}
           >
             {month[1]}
           </Month>

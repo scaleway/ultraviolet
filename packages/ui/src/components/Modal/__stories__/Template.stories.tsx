@@ -7,7 +7,7 @@ export const DefaultDisclosure = <Button>Open Modal</Button>
 
 export const Template: StoryFn<typeof Modal> = ({ disclosure, ...props }) => (
   <Modal disclosure={disclosure} {...props}>
-    <Text as="p" variant="body" sentiment="neutral">
+    <Text as="p" sentiment="neutral" variant="body">
       Content should be present in center of the modal
     </Text>
   </Modal>

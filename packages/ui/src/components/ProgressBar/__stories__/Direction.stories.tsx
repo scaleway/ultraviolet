@@ -11,13 +11,13 @@ export const Direction: StoryFn = props => (
 )
 
 Direction.args = {
-  value: 40,
+  label: 'Label',
   labelDescription: (
     <Badge sentiment="primary" size="small">
       New
     </Badge>
   ),
-  label: 'Label',
+  value: 40,
 }
 
 Direction.parameters = {

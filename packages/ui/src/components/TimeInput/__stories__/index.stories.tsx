@@ -3,8 +3,8 @@ import { TimeInput } from '..'
 
 export default {
   component: TimeInput,
-  title: 'Components/Data Entry/TimeInput',
   decorators: [Story => <Story />],
+  title: 'Components/Data Entry/TimeInput',
 } as Meta<typeof TimeInput>
 
 export { Controlled } from './Controlled.stories'

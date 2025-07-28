@@ -8,19 +8,19 @@ describe('KeyValueField', () => {
   it('should render with default props', async () => {
     const { asFragment } = renderWithForm(
       <KeyValueField
-        name="test"
+        addButton={{
+          maxSizeReachedTooltip:
+            'This is a tooltip when the max size is reached',
+          name: 'add',
+          tooltip: 'This is a tooltip',
+        }}
         inputKey={{
           label: 'key',
         }}
         inputValue={{
           label: 'value',
         }}
-        addButton={{
-          name: 'add',
-          tooltip: 'This is a tooltip',
-          maxSizeReachedTooltip:
-            'This is a tooltip when the max size is reached',
-        }}
+        name="test"
       />,
     )
     const addButton = screen.getByTestId('add-button')
@@ -34,20 +34,20 @@ describe('KeyValueField', () => {
   it('should render with default props & max size', () => {
     const { asFragment } = renderWithForm(
       <KeyValueField
-        name="test"
+        addButton={{
+          maxSizeReachedTooltip:
+            'This is a tooltip when the max size is reached',
+          name: 'add',
+          tooltip: 'This is a tooltip',
+        }}
         inputKey={{
           label: 'key',
         }}
         inputValue={{
           label: 'value',
         }}
-        addButton={{
-          name: 'add',
-          tooltip: 'This is a tooltip',
-          maxSizeReachedTooltip:
-            'This is a tooltip when the max size is reached',
-        }}
         maxSize={42}
+        name="test"
       />,
     )
     expect(asFragment()).toMatchSnapshot()
@@ -56,19 +56,19 @@ describe('KeyValueField', () => {
   it('should render with default props in readonly mode', () => {
     const { asFragment } = renderWithForm(
       <KeyValueField
-        name="test"
+        addButton={{
+          maxSizeReachedTooltip:
+            'This is a tooltip when the max size is reached',
+          name: 'add',
+          tooltip: 'This is a tooltip',
+        }}
         inputKey={{
           label: 'key',
         }}
         inputValue={{
           label: 'value',
         }}
-        addButton={{
-          name: 'add',
-          tooltip: 'This is a tooltip',
-          maxSizeReachedTooltip:
-            'This is a tooltip when the max size is reached',
-        }}
+        name="test"
         readOnly
       />,
     )

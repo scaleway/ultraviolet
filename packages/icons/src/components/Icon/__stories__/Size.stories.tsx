@@ -5,22 +5,22 @@ import { EyeIcon } from '../__generated__'
 
 export const Size = (args: ComponentProps<typeof EyeIcon>) => (
   <Stack>
-    <Stack direction="row" alignItems="center" gap={3}>
+    <Stack alignItems="center" direction="row" gap={3}>
       <EyeIcon size="xsmall" {...args} /> xsmall
     </Stack>
-    <Stack direction="row" alignItems="center" gap={3}>
+    <Stack alignItems="center" direction="row" gap={3}>
       <EyeIcon size="small" {...args} /> small
     </Stack>
-    <Stack direction="row" alignItems="center" gap={3}>
+    <Stack alignItems="center" direction="row" gap={3}>
       <EyeIcon size="medium" {...args} /> medium
     </Stack>
-    <Stack direction="row" gap={3} alignItems="center">
+    <Stack alignItems="center" direction="row" gap={3}>
       <EyeIcon size="large" {...args} /> large
     </Stack>
-    <Stack direction="row" gap={3} alignItems="center">
+    <Stack alignItems="center" direction="row" gap={3}>
       <EyeIcon size="xlarge" {...args} /> xlarge
     </Stack>
-    <Stack direction="row" gap={3} alignItems="center">
+    <Stack alignItems="center" direction="row" gap={3}>
       <EyeIcon size="xxlarge" {...args} /> xxlarge
     </Stack>
   </Stack>
@@ -34,7 +34,7 @@ Size.parameters = {
 
 Size.decorators = [
   Story => (
-    <Stack gap={2} alignItems="center" direction="row">
+    <Stack alignItems="center" direction="row" gap={2}>
       <Story />
     </Stack>
   ),

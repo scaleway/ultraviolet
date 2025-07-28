@@ -11,14 +11,14 @@ import { Template } from './Template.stories'
 
 export const Examples: StoryFn<typeof ContentCard> = args => (
   <Stack gap={2}>
-    <Row templateColumns="repeat(3, 1fr)" gap={1}>
+    <Row gap={1} templateColumns="repeat(3, 1fr)">
       <ContentCard
         {...args}
+        description="The Scaleway Serverless Functions platform makes your functions available, executes them on demand and manages resource allocation for you."
         direction="column"
         image={undefined}
         subtitle="Tutorial"
         title="Create your first function"
-        description="The Scaleway Serverless Functions platform makes your functions available, executes them on demand and manages resource allocation for you."
       >
         <Button>
           <BookOpenOutlineIcon />
@@ -26,14 +26,14 @@ export const Examples: StoryFn<typeof ContentCard> = args => (
         </Button>
       </ContentCard>
     </Row>
-    <Row templateColumns="repeat(3, 1fr)" gap={1}>
+    <Row gap={1} templateColumns="repeat(3, 1fr)">
       <ContentCard
         {...args}
+        description="The Scaleway Serverless Functions platform makes your functions available, executes them on demand and manages resource allocation for you."
         direction="column"
         image={undefined}
         subtitle="Tutorial"
         title="Create your first function"
-        description="The Scaleway Serverless Functions platform makes your functions available, executes them on demand and manages resource allocation for you."
       >
         <Button>
           <BookOpenOutlineIcon />
@@ -42,11 +42,11 @@ export const Examples: StoryFn<typeof ContentCard> = args => (
       </ContentCard>
       <ContentCard
         {...args}
-        direction="column"
-        image={undefined}
-        subtitle="Tutorial"
-        title="Create your first function"
         description="The Scaleway Serverless Functions platform makes your functions available, executes them on demand and manages resource allocation for you. This one is a bit longer than the others."
+        direction="column"
+        image={undefined}
+        subtitle="Tutorial"
+        title="Create your first function"
       >
         <Button>
           <BookOpenOutlineIcon />
@@ -55,11 +55,11 @@ export const Examples: StoryFn<typeof ContentCard> = args => (
       </ContentCard>
       <ContentCard
         {...args}
+        description="The Scaleway Serverless Functions platform makes your functions available, executes them on demand and manages resource allocation for you."
         direction="column"
         image={undefined}
         subtitle="Tutorial"
         title="Create your first function"
-        description="The Scaleway Serverless Functions platform makes your functions available, executes them on demand and manages resource allocation for you."
       >
         <Button>
           <BookOpenOutlineIcon />
@@ -68,106 +68,106 @@ export const Examples: StoryFn<typeof ContentCard> = args => (
       </ContentCard>
     </Row>
 
-    <Row templateColumns="repeat(2, 1fr)" gap={1}>
+    <Row gap={1} templateColumns="repeat(2, 1fr)">
       <ContentCard
         {...args}
+        description="Check all our documentation to discover tips"
         direction="row"
+        href="https://scaleway.com"
         image={undefined}
         subtitle={undefined}
         title="How cPanel is working?"
-        description="Check all our documentation to discover tips"
-        href="https://scaleway.com"
       />
     </Row>
 
-    <Row templateColumns="repeat(2, 1fr)" gap={1}>
+    <Row gap={1} templateColumns="repeat(2, 1fr)">
       <ContentCard
         {...args}
+        description="Check all our documentation to discover tips"
         direction="row"
+        icon={undefined}
         image={illustration2}
         subtitle={undefined}
-        icon={undefined}
         title="How cPanel is working?"
-        description="Check all our documentation to discover tips"
       />
     </Row>
 
-    <Row templateColumns="repeat(2, 1fr)" gap={1}>
+    <Row gap={1} templateColumns="repeat(2, 1fr)">
       <ContentCard
         {...args}
-        direction="row"
-        subtitle={undefined}
-        image={undefined}
-        title="How cPanel is working?"
         description="Check all our documentation to discover tips"
+        direction="row"
+        image={undefined}
+        subtitle={undefined}
+        title="How cPanel is working?"
       >
         <Stack gap={1}>
-          <Link href="https://scaleway.com" size="small" iconPosition="right">
+          <Link href="https://scaleway.com" iconPosition="right" size="small">
             What is cPanel
           </Link>
-          <Link href="https://scaleway.com" size="small" iconPosition="right">
+          <Link href="https://scaleway.com" iconPosition="right" size="small">
             cPanel Quickstart
           </Link>
         </Stack>
       </ContentCard>
     </Row>
 
-    <Row templateColumns="repeat(2, 1fr)" gap={1}>
+    <Row gap={1} templateColumns="repeat(2, 1fr)">
       <ContentCard
         {...args}
+        description="Check all our documentation to discover tips"
         direction="row"
-        subtitle={undefined}
         icon={undefined}
         image={undefined}
+        subtitle={undefined}
         title="How cPanel is working?"
-        description="Check all our documentation to discover tips"
       >
         <Stack gap={1}>
-          <Link href="https://scaleway.com" size="small" iconPosition="right">
+          <Link href="https://scaleway.com" iconPosition="right" size="small">
             What is cPanel
           </Link>
-          <Link href="https://scaleway.com" size="small" iconPosition="right">
+          <Link href="https://scaleway.com" iconPosition="right" size="small">
             cPanel Quickstart
           </Link>
         </Stack>
       </ContentCard>
     </Row>
 
-    <Row templateColumns="repeat(2, 1fr)" gap={1}>
+    <Row gap={1} templateColumns="repeat(2, 1fr)">
       <ContentCard
         {...args}
-        direction="row"
-        subtitle={undefined}
-        image={undefined}
-        title="Manage Scaleway data"
         description="Grafana users can visualise all their resources logs and metrics in their Grafana dashboards."
+        direction="row"
         href="https://scaleway.com"
+        image={undefined}
+        subtitle={undefined}
+        title="Manage Scaleway data"
       />
     </Row>
 
-    <Row templateColumns="repeat(2, 1fr)" gap={1}>
+    <Row gap={1} templateColumns="repeat(2, 1fr)">
       <ContentCard
         {...args}
+        description="Grafana users can visualise all their resources logs and metrics in their Grafana dashboards."
         direction="row"
-        subtitle={undefined}
-        image={undefined}
+        href="https://scaleway.com"
         icon={<AdvancedSettingsProductIcon size="large" />}
+        image={undefined}
+        subtitle={undefined}
         title="Manage Scaleway data"
-        description="Grafana users can visualise all their resources logs and metrics in their Grafana dashboards."
-        href="https://scaleway.com"
       />
     </Row>
 
-    <Row templateColumns="repeat(2, 1fr)" gap={1}>
+    <Row gap={1} templateColumns="repeat(2, 1fr)">
       <ContentCard
         {...args}
         description={undefined}
         direction="row"
-        subtitle={undefined}
-        image={undefined}
-        icon={<ConsoleProductIcon size="medium" />}
-        title="Get help"
         href="https://scaleway.com"
+        icon={<ConsoleProductIcon size="medium" />}
+        image={undefined}
+        subtitle={undefined}
+        title="Get help"
       />
     </Row>
   </Stack>

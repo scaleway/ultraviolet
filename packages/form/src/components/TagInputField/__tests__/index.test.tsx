@@ -20,11 +20,11 @@ describe('TagInputField', () => {
     const { asFragment } = renderWithForm(
       <>
         <TagInputField
+          clearable
           label="Test"
           name="test"
-          required
-          clearable
           regex={[alpha]}
+          required
         />
         <Submit>Test</Submit>
       </>,
@@ -40,8 +40,8 @@ describe('TagInputField', () => {
     )
 
     const { asFragment } = renderWithTheme(
-      <Form onSubmit={onSubmit} errors={mockErrors} methods={result.current}>
-        <TagInputField label="Test" name="test" required clearable />
+      <Form errors={mockErrors} methods={result.current} onSubmit={onSubmit}>
+        <TagInputField clearable label="Test" name="test" required />
         <Submit>Submit</Submit>
       </Form>,
     )

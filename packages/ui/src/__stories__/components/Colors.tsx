@@ -54,7 +54,7 @@ const Colors = () => {
 
   return (
     <Stack gap={2}>
-      <Text variant="heading" as="h2">
+      <Text as="h2" variant="heading">
         Sentiments
       </Text>
       {filteredColors.map(sentiment => {
@@ -63,33 +63,33 @@ const Colors = () => {
         ) as AvailableContexts[]
 
         return (
-          <Stack key={sentiment} gap={1}>
-            <CapitalizedText variant="headingSmallStrong" as="h3">
+          <Stack gap={1} key={sentiment}>
+            <CapitalizedText as="h3" variant="headingSmallStrong">
               {sentiment}
             </CapitalizedText>
-            <Row templateColumns="repeat(3, 1fr)" gap={2}>
+            <Row gap={2} templateColumns="repeat(3, 1fr)">
               <Stack direction="column" gap={2}>
                 {colorContextKeys
                   .filter(context => context.includes('background'))
                   .map(context => (
                     <Stack key={context}>
                       <Stack
-                        direction="row"
                         alignItems="center"
+                        direction="row"
                         justifyContent="space-between"
                       >
-                        <Text variant="body" as="p">
+                        <Text as="p" variant="body">
                           {context}
                         </Text>
-                        <Text variant="caption" as="small">
+                        <Text as="small" variant="caption">
                           {theme.colors[sentiment][context]}
                         </Text>
                       </Stack>
 
                       <StyledCard
+                        context={context}
                         key={context}
                         sentiment={sentiment}
-                        context={context}
                       >
                         {' '}
                       </StyledCard>
@@ -102,18 +102,18 @@ const Colors = () => {
                   .map(context => (
                     <Stack key={context}>
                       <Stack
-                        direction="row"
                         alignItems="center"
+                        direction="row"
                         justifyContent="space-between"
                       >
-                        <Text variant="body" as="p">
+                        <Text as="p" variant="body">
                           {context}
                         </Text>
-                        <Text variant="caption" as="small">
+                        <Text as="small" variant="caption">
                           {theme.colors[sentiment][context]}
                         </Text>
                       </Stack>
-                      <StyledCard sentiment={sentiment} context={context}>
+                      <StyledCard context={context} sentiment={sentiment}>
                         {' '}
                       </StyledCard>
                     </Stack>
@@ -125,18 +125,18 @@ const Colors = () => {
                   .map(context => (
                     <Stack key={context}>
                       <Stack
-                        direction="row"
                         alignItems="center"
+                        direction="row"
                         justifyContent="space-between"
                       >
-                        <Text variant="body" as="p">
+                        <Text as="p" variant="body">
                           {context}
                         </Text>
-                        <Text variant="caption" as="small">
+                        <Text as="small" variant="caption">
                           {theme.colors[sentiment][context]}
                         </Text>
                       </Stack>
-                      <StyledCard sentiment={sentiment} context={context}>
+                      <StyledCard context={context} sentiment={sentiment}>
                         {' '}
                       </StyledCard>
                     </Stack>
@@ -149,25 +149,25 @@ const Colors = () => {
       })}
 
       <Stack gap={2}>
-        <Text variant="heading" as="h2">
+        <Text as="h2" variant="heading">
           Other
         </Text>
-        <Text variant="headingSmall" as="h3">
+        <Text as="h3" variant="headingSmall">
           Data
         </Text>
-        <Row templateColumns="repeat(3, 1fr)" gap={2}>
+        <Row gap={2} templateColumns="repeat(3, 1fr)">
           {(Object.keys(dataColors) as (keyof typeof dataColors)[]).map(
             data => (
               <Stack key={dataColors[data]}>
                 <Stack
-                  direction="row"
                   alignItems="center"
+                  direction="row"
                   justifyContent="space-between"
                 >
-                  <Text variant="body" as="p">
+                  <Text as="p" variant="body">
                     {data}
                   </Text>
-                  <Text variant="caption" as="small">
+                  <Text as="small" variant="caption">
                     {dataColors[data]}
                   </Text>
                 </Stack>
@@ -178,7 +178,7 @@ const Colors = () => {
             ),
           )}
         </Row>
-        <Text variant="headingSmall" as="h3">
+        <Text as="h3" variant="headingSmall">
           Gradients
         </Text>
         <Stack direction="column" gap={2}>
@@ -203,7 +203,7 @@ const Colors = () => {
                 <Text as="h4" variant="bodyStrong">
                   {type}
                 </Text>
-                <Row templateColumns="repeat(3, 1fr)" gap={2}>
+                <Row gap={2} templateColumns="repeat(3, 1fr)">
                   {Object.keys(
                     gradientBackgroundColors[
                       type as keyof typeof gradientBackgroundColors
@@ -211,11 +211,11 @@ const Colors = () => {
                   ).map(background => (
                     <Stack key={background}>
                       <Stack
-                        direction="row"
                         alignItems="center"
+                        direction="row"
                         justifyContent="space-between"
                       >
-                        <Text variant="body" as="p">
+                        <Text as="p" variant="body">
                           {background}
                         </Text>
                       </Stack>
@@ -236,39 +236,39 @@ const Colors = () => {
               </Stack>
             ))}
         </Stack>
-        <Text variant="headingSmall" as="h3">
+        <Text as="h3" variant="headingSmall">
           Icon
         </Text>
         <Stack gap={3}>
           {Object.keys(iconColors).map(type => (
             <Stack key={type}>
               <Stack direction="column">
-                <Text variant="bodyStronger" as="h4">
+                <Text as="h4" variant="bodyStronger">
                   {type}
                 </Text>
                 <Stack gap={3}>
                   {Object.keys(iconColors[type as keyof typeof iconColors]).map(
                     sentiment => (
-                      <Stack key={sentiment} direction="column">
-                        <NoMarginText variant="bodyStrong" as="h4">
+                      <Stack direction="column" key={sentiment}>
+                        <NoMarginText as="h4" variant="bodyStrong">
                           {sentiment}
                         </NoMarginText>
-                        <Row templateColumns="repeat(3, 1fr)" gap={2}>
+                        <Row gap={2} templateColumns="repeat(3, 1fr)">
                           {Object.keys(
                             // @ts-expect-error can't infer properly
                             // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
                             iconColors[type][sentiment],
                           ).map(value => (
-                            <Stack key={value} gap={1}>
+                            <Stack gap={1} key={value}>
                               <Stack
-                                direction="row"
                                 alignItems="center"
+                                direction="row"
                                 justifyContent="space-between"
                               >
-                                <NoMarginText variant="body" as="p">
+                                <NoMarginText as="p" variant="body">
                                   {value}
                                 </NoMarginText>
-                                <Text variant="caption" as="small">
+                                <Text as="small" variant="caption">
                                   {
                                     // @ts-expect-error can't infer properly
 

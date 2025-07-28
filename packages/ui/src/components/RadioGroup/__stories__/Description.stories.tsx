@@ -3,9 +3,9 @@ import { Template } from './Template.stories'
 export const Description = Template.bind({})
 
 Description.args = {
-  name: 'helper',
-  legend: 'Legend label',
   description: 'Choose the option that best fits your needs',
+  legend: 'Legend label',
+  name: 'helper',
 }
 
 Description.parameters = {

@@ -40,7 +40,7 @@ describe('Drawer', () => {
 
   test(`renders with default Props and function children`, async () => {
     const { asFragment } = renderWithTheme(
-      <Drawer header="header" disclosure={<button type="button">Open</button>}>
+      <Drawer disclosure={<button type="button">Open</button>} header="header">
         {({ close }) => (
           <button onClick={close} type="button">
             Close
@@ -64,7 +64,7 @@ describe('Drawer', () => {
 
   test(`renders with open={true}`, () =>
     shouldMatchEmotionSnapshotWithPortal(
-      <Drawer open header="header">
+      <Drawer header="header" open>
         <div>test</div>
       </Drawer>,
     ))
@@ -72,9 +72,9 @@ describe('Drawer', () => {
   test(`renders custom size=medium`, async () => {
     const { asFragment } = renderWithTheme(
       <Drawer
+        disclosure={<button type="button">button</button>}
         header="header"
         size="medium"
-        disclosure={<button type="button">button</button>}
       >
         <div>test</div>
       </Drawer>,
@@ -87,9 +87,9 @@ describe('Drawer', () => {
   test(`renders custom size=large`, async () => {
     const { asFragment } = renderWithTheme(
       <Drawer
+        disclosure={<button type="button">button</button>}
         header="header"
         size="large"
-        disclosure={<button type="button">button</button>}
       >
         <div>test</div>
       </Drawer>,
@@ -103,9 +103,9 @@ describe('Drawer', () => {
   test(`renders custom size=small`, async () => {
     const { asFragment } = renderWithTheme(
       <Drawer
+        disclosure={<button type="button">button</button>}
         header="header"
         size="small"
-        disclosure={<button type="button">button</button>}
       >
         <div>test</div>
       </Drawer>,
@@ -118,7 +118,7 @@ describe('Drawer', () => {
 
   test(`renders with custom classNames`, () =>
     shouldMatchEmotionSnapshotWithPortal(
-      <Drawer open header="header" className="test">
+      <Drawer className="test" header="header" open>
         <div>test</div>
       </Drawer>,
     ))
@@ -127,9 +127,9 @@ describe('Drawer', () => {
     shouldMatchEmotionSnapshotWithPortal(
       <Drawer
         ariaLabel="drawer-test"
-        id="drawer-test"
-        header="header"
         disclosure={<button type="button">Test</button>}
+        header="header"
+        id="drawer-test"
       >
         <div>drawer</div>
       </Drawer>,
@@ -140,10 +140,10 @@ describe('Drawer', () => {
     const { asFragment } = renderWithTheme(
       <Drawer
         ariaLabel="drawer-test"
-        id="drawer-test"
-        header="header"
-        disclosure={<button type="button">Open drawer</button>}
         data-testid="test"
+        disclosure={<button type="button">Open drawer</button>}
+        header="header"
+        id="drawer-test"
         onClose={() => {
           count += 1
         }}
@@ -169,13 +169,13 @@ describe('Drawer', () => {
     renderWithTheme(
       <Drawer
         ariaLabel="drawer-test"
-        id="drawer-test"
-        header="header"
         disclosure={() => (
-          <button type="button" onClick={mockOnClick}>
+          <button onClick={mockOnClick} type="button">
             Open
           </button>
         )}
+        header="header"
+        id="drawer-test"
       >
         <div> test</div>
       </Drawer>,
@@ -190,20 +190,20 @@ describe('Drawer', () => {
 
     renderWithTheme(
       <Drawer
-        header="header"
         ariaLabel="drawer-test"
-        id="drawer-test"
         disclosure={({ toggle }) => (
           <button
-            type="button"
             onClick={() => {
               toggle()
               mockOnClick()
             }}
+            type="button"
           >
             Open
           </button>
         )}
+        header="header"
+        id="drawer-test"
       >
         <div> test</div>
       </Drawer>,
@@ -217,14 +217,14 @@ describe('Drawer', () => {
     const mockOnClick = vi.fn()
 
     renderWithTheme(
-      <Drawer ariaLabel="drawer-test" id="drawer-test" open header="header">
+      <Drawer ariaLabel="drawer-test" header="header" id="drawer-test" open>
         {({ close }) => (
           <button
-            type="button"
             onClick={() => {
               mockOnClick()
               close()
             }}
+            type="button"
           >
             Close
           </button>
@@ -241,14 +241,14 @@ describe('Drawer', () => {
 
     renderWithTheme(
       <Drawer
-        header="header"
         ariaLabel="drawer-test"
-        id="drawer-test"
         disclosure={
-          <button type="button" onClick={mockOnClick}>
+          <button onClick={mockOnClick} type="button">
             Open
           </button>
         }
+        header="header"
+        id="drawer-test"
       >
         <div> test</div>
       </Drawer>,
@@ -263,12 +263,12 @@ describe('Drawer', () => {
     const mockOnClose = vi.fn(() => {})
     renderWithTheme(
       <Drawer
-        header="header"
         ariaLabel="drawer-test"
-        id="drawer-test"
+        header="header"
         hideOnEsc
-        open
+        id="drawer-test"
         onClose={mockOnClose}
+        open
       >
         <div> test</div>
       </Drawer>,
@@ -285,21 +285,21 @@ describe('Drawer', () => {
     const { asFragment } = renderWithTheme(
       <Drawer
         ariaLabel="drawer-test"
-        id="drawer-test"
-        header="header"
         disclosure={<button type="button">Open</button>}
         footer={({ close }) => (
           <button
+            data-testid="buttonClose"
             onClick={() => {
               close()
               mockOnClick()
             }}
             type="button"
-            data-testid="buttonClose"
           >
             Close
           </button>
         )}
+        header="header"
+        id="drawer-test"
       >
         <div> test</div>
       </Drawer>,
@@ -315,14 +315,14 @@ describe('Drawer', () => {
     shouldMatchEmotionSnapshotWithPortal(
       <Drawer
         ariaLabel="drawer-test"
-        id="drawer-test"
-        header="header"
         disclosure={<button type="button">Open</button>}
         footer={
           <button type="button">
             A custom button that can close the drawer
           </button>
         }
+        header="header"
+        id="drawer-test"
       >
         <div> test</div>
       </Drawer>,
@@ -333,10 +333,10 @@ describe('Drawer', () => {
     shouldMatchEmotionSnapshotWithPortal(
       <Drawer
         ariaLabel="drawer-test"
-        id="drawer-test"
-        footer="footer"
         disclosure={<button type="button">Open</button>}
+        footer="footer"
         header={<h1>Custom header</h1>}
+        id="drawer-test"
         open
       >
         <div> test</div>
@@ -350,22 +350,22 @@ describe('Drawer', () => {
     const { asFragment } = renderWithTheme(
       <Drawer
         ariaLabel="drawer-test"
-        id="drawer-test"
-        isClosable={false}
-        footer="footer"
         disclosure={<button type="button">Open</button>}
+        footer="footer"
         header={({ close }) => (
           <button
+            data-testid="buttonClose"
             onClick={() => {
               close()
               mockOnClick()
             }}
             type="button"
-            data-testid="buttonClose"
           >
             Close
           </button>
         )}
+        id="drawer-test"
+        isClosable={false}
       >
         <div> test</div>
       </Drawer>,

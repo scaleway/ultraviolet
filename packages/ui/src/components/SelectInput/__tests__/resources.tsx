@@ -11,186 +11,184 @@ const optionalInfo1 = <Badge>Optional info</Badge>
 
 export const dataUnGrouped = [
   {
-    value: 'mercury',
+    disabled: false,
     label: 'Mercury',
-    disabled: false,
+    value: 'mercury',
   },
   {
-    value: 'venus',
+    disabled: false,
     label: 'Venus',
-    disabled: false,
+    value: 'venus',
   },
   {
-    value: 'earth',
-    label: 'Earth',
-    disabled: false,
     description: 'Our home planet',
-    searchText: 'earth',
-  },
-  {
-    value: 'mars',
-    label: 'Mars',
-    disabled: true,
-    tooltip: 'This option is disabled',
-  },
-  {
-    value: 'jupiter',
-    label: 'Jupiter',
     disabled: false,
+    label: 'Earth',
+    searchText: 'earth',
+    value: 'earth',
+  },
+  {
+    disabled: true,
+    label: 'Mars',
+    tooltip: 'This option is disabled',
+    value: 'mars',
+  },
+  {
     description:
       'Jupiter is the fifth planet from the Sun and the largest in the Solar System. It is a gas giant with a mass more than two and a half times that of all the other planets in the Solar System combined, and slightly less than one one-thousandth the mass of the Sun.',
+    disabled: false,
+    label: 'Jupiter',
+    value: 'jupiter',
   },
   {
-    value: 'saturn',
+    disabled: false,
     label: 'Saturn',
-    disabled: false,
+    value: 'saturn',
   },
   {
-    value: 'uranus',
+    disabled: false,
     label: 'Uranus',
-    disabled: false,
+    value: 'uranus',
   },
   {
-    value: 'neptune',
-    label: reactNeptune,
     disabled: false,
+    label: reactNeptune,
     searchText: 'neptune',
+    value: 'neptune',
   },
 ]
 
 export const dataGrouped = {
-  'terrestrial planets': [
-    {
-      value: 'mercury',
-      label: 'Mercury',
-      disabled: false,
-    },
-    {
-      value: 'venus',
-      label: 'Venus',
-      disabled: false,
-    },
-    {
-      value: 'earth',
-      label: 'Earth',
-      disabled: false,
-      description: 'Our home planet',
-      searchText: 'earth',
-    },
-    {
-      value: 'mars',
-      label: 'Mars',
-      disabled: true,
-    },
-    {
-      value: 'pluto',
-      label: 'Pluto',
-      disabled: false,
-      description:
-        'Pluto does not fit the usual classification of either terrestrial or Jovian planets, but is rocky',
-    },
-  ],
-
   'jovian planets': [
     {
-      value: 'jupiter',
-      label: 'Jupiter',
-      disabled: false,
       description:
         'Jupiter is the fifth planet from the Sun and the largest in the Solar System. It is a gas giant with a mass more than two and a half times that of all the other planets in the Solar System combined, and slightly less than one one-thousandth the mass of the Sun.',
+      disabled: false,
+      label: 'Jupiter',
+      value: 'jupiter',
     },
     {
-      value: 'saturn',
+      disabled: false,
       label: 'Saturn',
-      disabled: false,
+      value: 'saturn',
     },
     {
-      value: 'uranus',
-      label: 'Uranus',
       disabled: false,
+      label: 'Uranus',
+      value: 'uranus',
     },
 
     {
-      value: 'neptune',
-      label: reactNeptune,
       disabled: false,
+      label: reactNeptune,
       searchText: 'neptune',
+      value: 'neptune',
+    },
+  ],
+  'terrestrial planets': [
+    {
+      disabled: false,
+      label: 'Mercury',
+      value: 'mercury',
+    },
+    {
+      disabled: false,
+      label: 'Venus',
+      value: 'venus',
+    },
+    {
+      description: 'Our home planet',
+      disabled: false,
+      label: 'Earth',
+      searchText: 'earth',
+      value: 'earth',
+    },
+    {
+      disabled: true,
+      label: 'Mars',
+      value: 'mars',
+    },
+    {
+      description:
+        'Pluto does not fit the usual classification of either terrestrial or Jovian planets, but is rocky',
+      disabled: false,
+      label: 'Pluto',
+      value: 'pluto',
     },
   ],
 }
 
 export const OptionalInfo = {
+  'jovian planets': [
+    {
+      description:
+        'Jupiter is the fifth planet from the Sun and the largest in the Solar System. It is a gas giant with a mass more than two and a half times that of all the other planets in the Solar System combined, and slightly less than one one-thousandth the mass of the Sun.',
+      disabled: false,
+      label: 'Jupiter',
+
+      optionalInfo: optionalInfo1,
+      value: 'jupiter',
+    },
+
+    {
+      disabled: false,
+      label: 'Saturn',
+      value: 'saturn',
+    },
+    {
+      disabled: false,
+      label: 'Uranus',
+      optionalInfo: optionalInfo1,
+      value: 'uranus',
+    },
+
+    {
+      disabled: false,
+      label: 'Neptune',
+      value: 'neptune',
+    },
+  ],
   'terrestrial planets': [
     {
-      value: 'mercury',
+      disabled: false,
       label: 'Mercury',
-      disabled: false,
       optionalInfo: optionalInfo1,
+      value: 'mercury',
     },
     {
-      value: 'venus',
+      disabled: false,
       label: 'Venus',
-      disabled: false,
       optionalInfo: optionalInfo1,
+      value: 'venus',
     },
     {
-      value: 'earth',
-      label: 'Earth',
-      disabled: false,
       description: 'Our home planet',
-    },
-    {
-      value: 'mars',
-      label: 'Mars',
       disabled: false,
+      label: 'Earth',
+      value: 'earth',
     },
     {
-      value: 'pluto',
+      disabled: false,
+      label: 'Mars',
+      value: 'mars',
+    },
+    {
+      description:
+        'Pluto does not fit the usual classification of either terrestrial or Jovian planets, but is rocky',
+      disabled: false,
       label: (
-        <Text as="div" variant="body" italic>
+        <Text as="div" italic variant="body">
           Pluto
         </Text>
       ),
-      disabled: false,
-      description:
-        'Pluto does not fit the usual classification of either terrestrial or Jovian planets, but is rocky',
       searchText: 'pluto',
-    },
-  ],
-
-  'jovian planets': [
-    {
-      value: 'jupiter',
-      label: 'Jupiter',
-      disabled: false,
-      description:
-        'Jupiter is the fifth planet from the Sun and the largest in the Solar System. It is a gas giant with a mass more than two and a half times that of all the other planets in the Solar System combined, and slightly less than one one-thousandth the mass of the Sun.',
-
-      optionalInfo: optionalInfo1,
-    },
-
-    {
-      value: 'saturn',
-      label: 'Saturn',
-      disabled: false,
-    },
-    {
-      value: 'uranus',
-      label: 'Uranus',
-      disabled: false,
-      optionalInfo: optionalInfo1,
-    },
-
-    {
-      value: 'neptune',
-      label: 'Neptune',
-      disabled: false,
+      value: 'pluto',
     },
   ],
 }
 
 export const cities = [
-  { value: 'par', label: 'Paris', disabled: false },
-  { value: 'ams', label: 'Amsterdam', disabled: false },
-  { value: 'waw', label: 'Warsaw', disabled: false },
+  { disabled: false, label: 'Paris', value: 'par' },
+  { disabled: false, label: 'Amsterdam', value: 'ams' },
+  { disabled: false, label: 'Warsaw', value: 'waw' },
 ]

@@ -9,5 +9,5 @@ export const Template: StoryFn<
   const [change, onChange] = useState(selected)
   const onChangeHandler = (e?: string | number) => onChange(e)
 
-  return <Tabs selected={change} onChange={onChangeHandler} {...args} />
+  return <Tabs onChange={onChangeHandler} selected={change} {...args} />
 }

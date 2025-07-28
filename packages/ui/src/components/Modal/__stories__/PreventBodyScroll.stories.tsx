@@ -4,7 +4,7 @@ import { Stack } from '../../Stack'
 import { Modal } from '..'
 
 export const PreventBodyScroll: StoryFn = props => (
-  <Stack gap={2} direction="row">
+  <Stack direction="row" gap={2}>
     <Modal
       {...props}
       disclosure={<Button>Scroll prevented</Button>}

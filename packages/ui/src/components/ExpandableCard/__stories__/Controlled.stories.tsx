@@ -13,8 +13,8 @@ export const Controlled: StoryFn<typeof ExpandableCard> = args => {
       </Button>
       <ExpandableCard
         {...args}
-        header="Controlled"
         expanded={expanded}
+        header="Controlled"
         onToggleExpand={onToggleExpand}
       >
         A nice content

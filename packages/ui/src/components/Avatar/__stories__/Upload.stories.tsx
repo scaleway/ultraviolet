@@ -10,11 +10,11 @@ export const Upload: StoryFn<typeof Avatar> = props => (
 )
 
 Upload.args = {
-  variant: 'text',
-  text: 'UV',
-  shape: 'circle',
-  upload: true,
   onClick: () => alert('Upload avatar'),
+  shape: 'circle',
+  text: 'UV',
+  upload: true,
+  variant: 'text',
 }
 
 Upload.parameters = {
@@ -28,7 +28,7 @@ Upload.parameters = {
 
 Upload.decorators = [
   Story => (
-    <Stack gap={2} direction="row">
+    <Stack direction="row" gap={2}>
       <Story />
     </Stack>
   ),

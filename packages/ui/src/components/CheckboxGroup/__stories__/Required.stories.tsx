@@ -19,8 +19,8 @@ export const Required: StoryFn<typeof CheckboxGroup> = props => (
     <CheckboxGroup {...props}>
       <CheckboxGroup.Checkbox
         name="termsAndConditions"
-        value="termsAndConditions"
         required
+        value="termsAndConditions"
       >
         Accept terms and conditions (required)
       </CheckboxGroup.Checkbox>

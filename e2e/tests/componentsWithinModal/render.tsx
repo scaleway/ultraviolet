@@ -22,19 +22,26 @@ const Render = () => {
         />
         <div data-testid="input-value">{firstName}</div>
 
-        <Form errors={mockErrors} onSubmit={() => {}} methods={methods}>
+        <Form errors={mockErrors} methods={methods} onSubmit={() => {}}>
           <Stack gap={1}>
             <TextInputField
-              name="lastName"
-              label="Last name"
               control={methods.control}
+              label="Last name"
+              name="lastName"
             />
             <div data-testid="form-content">{methods.watch().lastName}</div>
 
             <SelectInputField
-              name="color"
-              label="Color"
               control={methods.control}
+              footer={
+                <Modal disclosure={<Button>Open Nested Modal</Button>}>
+                  <Text as="p" variant="body">
+                    This is the nested modal
+                  </Text>
+                </Modal>
+              }
+              label="Color"
+              name="color"
               options={[
                 {
                   label: 'Red',
@@ -49,13 +56,6 @@ const Render = () => {
                   value: 'blue',
                 },
               ]}
-              footer={
-                <Modal disclosure={<Button>Open Nested Modal</Button>}>
-                  <Text as="p" variant="body">
-                    This is the nested modal
-                  </Text>
-                </Modal>
-              }
             />
           </Stack>
         </Form>

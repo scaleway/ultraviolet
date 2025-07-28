@@ -12,9 +12,9 @@ import { Template } from './Template.stories'
 const StyledDiv = ({ children }: { children: ReactNode }) => (
   <div
     style={{
-      gap: '16px',
       display: 'flex',
       flexDirection: 'column',
+      gap: '16px',
       height: '82px',
       justifyContent: 'space-between',
     }}
@@ -23,10 +23,13 @@ const StyledDiv = ({ children }: { children: ReactNode }) => (
   </div>
 )
 const planStarter = {
-  value: 'starter',
-  title: 'Starter',
-  sentiment: 'primary' as ComponentProps<typeof Text>['sentiment'],
-  titleHeader: <BasicSupportProductIcon size="xlarge" />,
+  data: {
+    domain: true,
+    fees: true,
+    gb: '100 GB',
+    pipeline: '1 pipeline',
+    ssl: true,
+  },
 
   header: {
     cta: (
@@ -47,20 +50,20 @@ const planStarter = {
     price: '€0.99',
     priceDescription: '/month',
   },
-  data: {
-    gb: '100 GB',
-    pipeline: '1 pipeline',
-    domain: true,
-    ssl: true,
-    fees: true,
-  },
+  sentiment: 'primary' as ComponentProps<typeof Text>['sentiment'],
+  title: 'Starter',
+  titleHeader: <BasicSupportProductIcon size="xlarge" />,
+  value: 'starter',
 }
 
 const planProfessional = {
-  value: 'professional',
-  title: 'professional',
-  sentiment: 'primary' as ComponentProps<typeof Text>['sentiment'],
-  titleHeader: <AdvancedSupportProductIcon size="xlarge" />,
+  data: {
+    domain: true,
+    fees: true,
+    gb: '1 TB',
+    pipeline: '10 pipelines',
+    ssl: true,
+  },
   header: {
     cta: (
       <Button fullWidth size="medium">
@@ -78,20 +81,20 @@ const planProfessional = {
     price: '€12.99',
     priceDescription: '/month',
   },
-  data: {
-    gb: '1 TB',
-    pipeline: '10 pipelines',
-    domain: true,
-    ssl: true,
-    fees: true,
-  },
+  sentiment: 'primary' as ComponentProps<typeof Text>['sentiment'],
+  title: 'professional',
+  titleHeader: <AdvancedSupportProductIcon size="xlarge" />,
+  value: 'professional',
 }
 
 const planAdvanced = {
-  value: 'advanced',
-  title: 'Advanced',
-  sentiment: 'primary' as ComponentProps<typeof Text>['sentiment'],
-  titleHeader: <EntrepriseSupportProductIcon size="xlarge" />,
+  data: {
+    domain: true,
+    fees: true,
+    gb: '10 TB',
+    pipeline: '100 pipelines',
+    ssl: true,
+  },
 
   header: {
     cta: (
@@ -112,19 +115,16 @@ const planAdvanced = {
     price: '€109.99',
     priceDescription: '/month',
   },
-  data: {
-    gb: '10 TB',
-    pipeline: '100 pipelines',
-    domain: true,
-    ssl: true,
-    fees: true,
-  },
+  sentiment: 'primary' as ComponentProps<typeof Text>['sentiment'],
+  title: 'Advanced',
+  titleHeader: <EntrepriseSupportProductIcon size="xlarge" />,
+  value: 'advanced',
 }
 
 export const WithIcon = Template.bind({})
 
 WithIcon.args = {
-  plans: [planStarter, planProfessional, planAdvanced],
   features: [gb, pipeline, domain, ssl, fees],
+  plans: [planStarter, planProfessional, planAdvanced],
   value: 'professional',
 }

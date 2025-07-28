@@ -3,12 +3,12 @@ import { OfferList } from '..'
 
 export default {
   component: OfferList,
-  title: 'Plus/Compositions/OfferList',
   subcomponents: {
     OfferList,
-    'OfferList.Row': OfferList.Row,
     'OfferList.Cell': OfferList.Cell,
+    'OfferList.Row': OfferList.Row,
   },
+  title: 'Plus/Compositions/OfferList',
 } satisfies Meta
 
 export { Badge } from './Badge.stories'

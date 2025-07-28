@@ -3,10 +3,10 @@ import { ExpandableCard } from '..'
 
 export default {
   component: ExpandableCard,
-  title: 'Components/Layout/ExpandableCard',
   subcomponents: {
     'ExpandableCard.Title': ExpandableCard.Title,
   },
+  title: 'Components/Layout/ExpandableCard',
 } as Meta
 
 export { Controlled } from './Controlled.stories'

@@ -19,17 +19,17 @@ type BulletSentiment = (typeof BULLET_SENTIMENTS)[number]
 
 // Values are then used as theme.sizing[X]
 const SIZES = {
-  xxsmall: '200',
-  xsmall: '250',
-  small: '300',
   medium: '400',
+  small: '300',
+  xsmall: '250',
+  xxsmall: '200',
 } as const
 
 const TEXT_VARIANT = {
-  xxsmall: 'captionSmallStrong',
-  xsmall: 'caption',
-  small: 'bodySmall',
   medium: 'body',
+  small: 'bodySmall',
+  xsmall: 'caption',
+  xxsmall: 'captionSmallStrong',
 } as const
 
 const sentimentStyles = ({
@@ -63,6 +63,11 @@ const sentimentStyles = ({
       }),
       {},
     ),
+    disabled: `
+      color: ${theme.colors.neutral.textWeak};
+      background: ${theme.colors.neutral.backgroundStrong};
+      border: none;
+    `,
     neutral: `
       color: ${
         prominence === PROMINENCES.strong
@@ -71,11 +76,6 @@ const sentimentStyles = ({
       };
       background: ${theme.colors.neutral.background};
       border: 1px solid ${theme.colors.neutral.border};
-    `,
-    disabled: `
-      color: ${theme.colors.neutral.textWeak};
-      background: ${theme.colors.neutral.backgroundStrong};
-      border: none;
     `,
   }
 }
@@ -96,7 +96,7 @@ const StyledContainer = styled('div')<StyledContainerType>`
   font-size: ${({ size, theme }) =>
     theme.typography[TEXT_VARIANT[size]].fontSize};
   ${({ theme, prominence, sentiment }) =>
-    (sentimentStyles({ theme, prominence }) as Record<BulletSentiment, string>)[
+    (sentimentStyles({ prominence, theme }) as Record<BulletSentiment, string>)[
       sentiment
     ]};
 `
@@ -127,11 +127,11 @@ export const Bullet = ({
 }: BulletProps) => (
   <Tooltip id={tooltipBaseId} text={tooltip}>
     <StyledContainer
-      sentiment={sentiment}
-      size={size}
       className={className}
       data-testid={dataTestId}
       prominence={prominence}
+      sentiment={sentiment}
+      size={size}
     >
       {children}
     </StyledContainer>

@@ -5,10 +5,10 @@ export const Directions: StoryFn = args => (
   <>
     <Banner
       {...args}
-      title="Apply to Scaleway Startup programs"
       buttonText="Apply now"
-      linkText="Learn more"
       direction="row"
+      linkText="Learn more"
+      title="Apply to Scaleway Startup programs"
     >
       The Scaleway Startup programs offer the perfect combination of cloud
       credits, infrastructure advisors and startup experts to develop your
@@ -16,10 +16,10 @@ export const Directions: StoryFn = args => (
     </Banner>
     <Banner
       {...args}
-      title="Apply to Scaleway Startup programs"
       buttonText="Apply now"
-      linkText="Learn more"
       direction="column"
+      linkText="Learn more"
+      title="Apply to Scaleway Startup programs"
     >
       The Scaleway Startup programs offer the perfect combination of cloud
       credits, infrastructure advisors and startup experts to develop your

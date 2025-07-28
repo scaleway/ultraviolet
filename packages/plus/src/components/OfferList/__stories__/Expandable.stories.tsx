@@ -7,9 +7,9 @@ export const Expandable: StoryFn<ComponentProps<typeof OfferList>> = props => (
   <OfferList {...props} expandable>
     {data.map(planet => (
       <OfferList.Row
-        key={planet.id}
-        id={planet.id}
         expandable="expand content"
+        id={planet.id}
+        key={planet.id}
         offerName={planet.id}
       >
         <OfferList.Cell>{planet.name}</OfferList.Cell>

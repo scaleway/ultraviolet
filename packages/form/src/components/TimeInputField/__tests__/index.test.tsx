@@ -27,9 +27,9 @@ describe('TextInputField', () => {
       <>
         <TimeInputField
           name="Test"
-          onFocus={onFocus}
-          onChange={onChange}
           onBlur={onBlur}
+          onChange={onChange}
+          onFocus={onFocus}
         />
         blur
       </>,
