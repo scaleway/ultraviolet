@@ -266,19 +266,12 @@ export const Menu = forwardRef(
       if (disclosureRef.current && placement === 'bottom' && !noShrink) {
         const disclosureRect = disclosureRef.current.getBoundingClientRect()
         const disclosureBottom = disclosureRect.bottom
-        const windowSize = window.innerHeight
+        const targetSize = portalTarget.getBoundingClientRect().bottom
         const availableSpace =
-          windowSize - disclosureBottom - SPACE_DISCLOSURE_POPUP
-
+          targetSize - disclosureBottom - SPACE_DISCLOSURE_POPUP
         setPopupMaxHeight(`${availableSpace}px`)
       }
-    }, [
-      isVisible,
-      portalTarget.scrollHeight,
-      disclosureRef,
-      placement,
-      noShrink,
-    ])
+    }, [isVisible, portalTarget, disclosureRef, placement, noShrink])
 
     return (
       <StyledPopup
@@ -291,7 +284,7 @@ export const Menu = forwardRef(
         hasArrow={hasArrow}
         hideOnClickOutside
         id={finalId}
-        maxHeight={popupMaxHeight}
+        maxHeight={maxHeight ?? '30rem'}
         onClose={() => {
           setIsVisible(false)
           setLocalChild(null)

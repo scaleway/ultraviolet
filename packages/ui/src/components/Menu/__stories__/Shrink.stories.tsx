@@ -30,7 +30,7 @@ Shrink.parameters = {
   docs: {
     description: {
       story:
-        'When the menu is at the bottom of a page (with `placement = "bottom"`), it will shrink so that it does not cause overflow. It is possible to removet this feature using prop `noShrink`',
+        'When the menu is at the bottom of a page (not possible to scroll down further), with `placement = "bottom"`, it will shrink so that it does not cause overflow. It is possible to remove this feature using prop `noShrink`',
     },
   },
 }
