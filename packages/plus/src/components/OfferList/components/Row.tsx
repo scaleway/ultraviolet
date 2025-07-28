@@ -175,6 +175,12 @@ export const Row = ({
     disabled,
   ])
 
+  const isRowSelected = useMemo(() => {
+    if (selectable === 'radio') return radioSelectedRow === offerName
+
+    return checkboxSelectedRows.includes(offerName)
+  }, [offerName, checkboxSelectedRows, radioSelectedRow, selectable])
+
   return (
     <>
       <StyledRow
@@ -189,9 +195,9 @@ export const Row = ({
         highlightAnimation={highlightAnimation}
         id={id}
         selected={
-          selectable === 'checkbox'
-            ? checkboxSelectedRows[id]
-            : radioSelectedRow === id
+          selectable === 'radio'
+            ? radioSelectedRow === offerName
+            : checkboxSelectedRows.includes(offerName)
         }
         style={style}
       >
@@ -213,26 +219,15 @@ export const Row = ({
                 typeof selectDisabled === 'string' ? selectDisabled : undefined
               }
             >
-              {selectable === 'checkbox' ? (
-                <Checkbox
-                  aria-label="select"
-                  checked={checkboxSelectedRows[id]}
+              {selectable === 'radio' ? (
+                <Radio
+                  checked={isRowSelected}
                   disabled={disabled || loading || !!selectDisabled}
                   id={id}
-                  name={`checkbox-offer-list-${id}`}
+                  name={`radio-offer-list-${id}`}
                   onChange={() => {
-                    const newSelectedRows = {
-                      ...checkboxSelectedRows,
-                      [id]: checkboxSelectedRows[id]
-                        ? !checkboxSelectedRows[id]
-                        : true,
-                    }
-                    setCheckboxSelectedRows(newSelectedRows)
-                    onChangeSelect?.(
-                      Object.keys(newSelectedRows).filter(
-                        key => newSelectedRows[key],
-                      ),
-                    )
+                    setRadioSelectedRow(offerName)
+                    onChangeSelect?.(offerName)
                     if (expandedRowIds[id]) {
                       expandRow(id)
                     } else if (!autoCollapse) {
@@ -242,14 +237,28 @@ export const Row = ({
                   value={id}
                 />
               ) : (
-                <Radio
-                  checked={radioSelectedRow === id}
+                <Checkbox
+                  aria-label="select"
+                  checked={isRowSelected}
                   disabled={disabled || loading || !!selectDisabled}
                   id={id}
-                  name={`radio-offer-list-${id}`}
-                  onChange={event => {
-                    setRadioSelectedRow(event.currentTarget.id)
-                    onChangeSelect?.(offerName)
+                  name={`checkbox-offer-list-${id}`}
+                  onChange={() => {
+                    if (isRowSelected) {
+                      const newSelectedList = checkboxSelectedRows.filter(
+                        element => element !== offerName,
+                      )
+                      setCheckboxSelectedRows(newSelectedList)
+                      onChangeSelect?.(newSelectedList)
+                    } else {
+                      const newSelectedList = [
+                        ...checkboxSelectedRows,
+                        offerName,
+                      ]
+                      setCheckboxSelectedRows(newSelectedList)
+                      onChangeSelect?.(newSelectedList)
+                    }
+
                     if (expandedRowIds[id]) {
                       expandRow(id)
                     } else if (!autoCollapse) {

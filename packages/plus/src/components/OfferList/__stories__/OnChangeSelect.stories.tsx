@@ -6,7 +6,9 @@ import { OfferList } from '../OfferList'
 import { columns, data } from './resources'
 
 export const OnChange: StoryFn<ComponentProps<typeof OfferList>> = props => {
-  const [selectedRow, setSelectedRow] = useState<string | string[]>()
+  const [selectedRow, setSelectedRow] = useState<string | string[]>(
+    'venus-offer',
+  )
   const [selectable, setSelectable] = useState<'checkbox' | 'radio'>('radio')
 
   return (
@@ -14,8 +16,8 @@ export const OnChange: StoryFn<ComponentProps<typeof OfferList>> = props => {
       <Button
         onClick={() => {
           setSelectable(selectable === 'checkbox' ? 'radio' : 'checkbox')
-          if (selectable === 'checkbox') setSelectedRow('')
-          else setSelectedRow([])
+          if (selectable === 'checkbox') setSelectedRow('venus-offer')
+          else setSelectedRow(['mercury-offer', 'jupiter-offer'])
         }}
       >
         Set selectable to {selectable === 'checkbox' ? 'radio' : 'checkbox'}
@@ -25,7 +27,12 @@ export const OnChange: StoryFn<ComponentProps<typeof OfferList>> = props => {
       {Array.isArray(selectedRow)
         ? selectedRow.map((value, index) => `${index > 0 ? ', ' : ''}${value}`)
         : selectedRow}
-      <OfferList {...props} onChangeSelect={setSelectedRow} type={selectable}>
+      <OfferList
+        {...props}
+        onChangeSelect={setSelectedRow}
+        selected={selectedRow}
+        type={selectable}
+      >
         {data.map(planet => (
           <OfferList.Row
             disabled={planet.id === 'mars'}
@@ -51,7 +58,7 @@ OnChange.parameters = {
   docs: {
     description: {
       story:
-        'Use prop `onChangeSelect` to get the selected element(s). Selected row is a string (row id) when `selectable="radio"` and a string[] when `selectable="checkbox"`',
+        'Use prop `onChangeSelect` to get the selected element(s). Selected row is a string (row offerName) when `selectable="radio"` and a string[] when `selectable="checkbox"`. A row can be pre-selected using prop `selected` (using the offer name)',
     },
   },
 }
