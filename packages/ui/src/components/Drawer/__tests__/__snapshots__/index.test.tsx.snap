@@ -586,10 +586,10 @@ exports[`Drawer > renders with disclosure and onClose 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 1rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -598,10 +598,10 @@ exports[`Drawer > renders with disclosure and onClose 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 1rem;
   height: 100%;
   position: relative;
 }
@@ -611,22 +611,22 @@ exports[`Drawer > renders with disclosure and onClose 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   gap: 1rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
   height: 100%;
   position: relative;
 }
@@ -684,24 +684,30 @@ exports[`Drawer > renders with disclosure and onClose 1`] = `
 .emotion-12 {
   overflow-y: auto;
   height: 100%;
-  padding-inline: 1rem;
 }
 
 .emotion-12 {
   overflow-y: auto;
   height: 100%;
+}
+
+.emotion-14 {
   padding-inline: 1rem;
 }
 
 .emotion-14 {
+  padding-inline: 1rem;
+}
+
+.emotion-16 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -710,23 +716,22 @@ exports[`Drawer > renders with disclosure and onClose 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   padding: 1rem;
   padding-top: 0;
 }
 
-.emotion-14 {
+.emotion-16 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -735,27 +740,26 @@ exports[`Drawer > renders with disclosure and onClose 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   padding: 1rem;
   padding-top: 0;
 }
 
-.emotion-16 {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-}
-
-.emotion-16 {
+.emotion-18 {
   position: absolute;
   top: 1rem;
   right: 1rem;
 }
 
 .emotion-18 {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.emotion-20 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -769,7 +773,7 @@ exports[`Drawer > renders with disclosure and onClose 1`] = `
   gap: 0.5rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 2rem;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -784,7 +788,7 @@ exports[`Drawer > renders with disclosure and onClose 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -795,22 +799,26 @@ exports[`Drawer > renders with disclosure and onClose 1`] = `
   color: #3f4250;
 }
 
-.emotion-18:hover {
+.emotion-20:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-18:active {
+.emotion-20:active {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.emotion-18:hover,
-.emotion-18:active {
+.emotion-20 .e1y1n78x0 {
+  stroke: transparent;
+}
+
+.emotion-20:hover,
+.emotion-20:active {
   background: #e9eaeb;
   color: #222638;
 }
 
-.emotion-18 {
+.emotion-20 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -824,7 +832,7 @@ exports[`Drawer > renders with disclosure and onClose 1`] = `
   gap: 0.5rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 2rem;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -839,7 +847,7 @@ exports[`Drawer > renders with disclosure and onClose 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -850,55 +858,51 @@ exports[`Drawer > renders with disclosure and onClose 1`] = `
   color: #3f4250;
 }
 
-.emotion-18:hover {
+.emotion-20:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-18:active {
+.emotion-20:active {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.emotion-18:hover,
-.emotion-18:active {
+.emotion-20 .e1y1n78x0 {
+  stroke: transparent;
+}
+
+.emotion-20:hover,
+.emotion-20:active {
   background: #e9eaeb;
   color: #222638;
 }
 
-.emotion-20 {
+.emotion-22 {
   vertical-align: middle;
   fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
-.emotion-20 .fillStroke {
+.emotion-22 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.emotion-20 path {
-  fill: currentColor;
-}
-
-.emotion-20 {
+.emotion-22 {
   vertical-align: middle;
   fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
-.emotion-20 .fillStroke {
+.emotion-22 .fillStroke {
   stroke: currentColor;
   fill: none;
-}
-
-.emotion-20 path {
-  fill: currentColor;
 }
 
 <div>
@@ -939,27 +943,30 @@ exports[`Drawer > renders with disclosure and onClose 1`] = `
           <div
             class="emotion-12 emotion-13"
           >
-            <div>
-              drawer
+            <div
+              class="emotion-14 emotion-15"
+            >
+              <div>
+                drawer
+              </div>
             </div>
           </div>
           <div
-            class="emotion-14 emotion-15"
+            class="emotion-16 emotion-17"
           />
         </div>
         <div
-          class="emotion-16 emotion-17"
+          class="emotion-18 emotion-19"
         >
           <button
             aria-label="close"
-            class="emotion-18 emotion-19"
+            class="emotion-20 emotion-21"
             data-testid="test-close-button"
             type="button"
           >
             <svg
-              class="emotion-20 emotion-21"
+              class="emotion-22 emotion-23"
               viewBox="0 0 16 16"
-              xmlns="http://www.w3.org/2000/svg"
             >
               <path
                 d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"

@@ -45,13 +45,6 @@ describe('Toaster', () => {
         container: document.body,
       },
     )
-    act(() => {
-      toast.info('This is an info', {
-        toastId: 'info',
-      })
-    })
-
-    expect(await screen.findByText('This is an info')).toMatchSnapshot()
 
     act(() => {
       toast.success('This is a success', {

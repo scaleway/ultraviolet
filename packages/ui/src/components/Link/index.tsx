@@ -16,16 +16,18 @@ import type {
 } from 'react'
 import { forwardRef, useEffect, useMemo, useRef, useState } from 'react'
 import recursivelyGetChildrenString from '../../helpers/recursivelyGetChildrenString'
-import type { ExtendedColor } from '../../theme'
 import capitalize from '../../utils/capitalize'
 import { Tooltip } from '../Tooltip'
 
 const StyledArrowLeftIcon = styled(ArrowLeftIcon)`
-  margin-left: ${({ theme }) => theme.space['1']};
+  margin-right: ${({ theme }) => theme.space['0.5']};
 `
 
-const StyledArrowRightIcon = StyledArrowLeftIcon.withComponent(ArrowRightIcon)
-const StyledOpenInNewIcon = StyledArrowLeftIcon.withComponent(OpenInNewIcon)
+const StyledArrowRightIcon = styled(ArrowRightIcon)`
+  margin-left: ${({ theme }) => theme.space['0.5']};
+`
+
+const StyledOpenInNewIcon = StyledArrowRightIcon.withComponent(OpenInNewIcon)
 
 export const PROMINENCES = {
   default: '',
@@ -35,12 +37,6 @@ export const PROMINENCES = {
 }
 
 export type ProminenceProps = keyof typeof PROMINENCES
-type SupportedSentiments = 'primary'
-
-/**
- * @deprecated Only `primary` is supported
- */
-type DeprecatedSentiments = Exclude<ExtendedColor, SupportedSentiments>
 
 type LinkSizes = 'large' | 'small' | 'xsmall'
 type LinkIconPosition = 'left' | 'right'
@@ -48,11 +44,7 @@ type LinkProps = {
   children: ReactNode
   target?: HTMLAttributeAnchorTarget
   download?: string | boolean
-  /**
-   * **Only sentiment `primary` is supported.**
-   * All the other sentiments are deprecated
-   */
-  sentiment?: SupportedSentiments | DeprecatedSentiments
+  sentiment?: 'primary' | 'info'
   prominence?: ProminenceProps
   size?: LinkSizes
   iconPosition?: LinkIconPosition
@@ -62,13 +54,14 @@ type LinkProps = {
   // For react router shouldn't be used directly
   onClick?: MouseEventHandler<HTMLAnchorElement>
   'aria-label'?: string
+  'aria-current'?: AnchorHTMLAttributes<HTMLAnchorElement>['aria-current']
   oneLine?: boolean
   'data-testid'?: string
   variant?: 'inline' | 'standalone'
 }
 
-const ICON_SIZE = 16
-const BLANK_TARGET_ICON_SIZE = 14
+const ICON_SIZE = 'small'
+const BLANK_TARGET_ICON_SIZE = 'small'
 const TRANSITION_DURATION = 250
 
 const StyledExternalIconContainer = styled.span`
@@ -80,7 +73,7 @@ const StyledLink = styled('a', {
   shouldForwardProp: prop =>
     !['sentiment', 'iconPosition', 'as', 'oneLine'].includes(prop),
 })<{
-  sentiment: ExtendedColor
+  sentiment: 'primary' | 'info'
   prominence?: ProminenceProps
   variant: 'captionStrong' | 'bodySmallStrong' | 'bodyStrong'
   iconPosition?: LinkIconPosition
@@ -90,17 +83,11 @@ const StyledLink = styled('a', {
   border: none;
   padding: 0;
   color: ${({ theme, sentiment, prominence }) => {
-    const isMonochrome = sentiment === 'white' || sentiment === 'black'
+    const definedProminence = capitalize(PROMINENCES[prominence ?? 'default'])
+    const themeColor = theme.colors[sentiment]
+    const text = `text${definedProminence}` as keyof typeof themeColor
 
-    if (!isMonochrome) {
-      const definedProminence = capitalize(PROMINENCES[prominence ?? 'default'])
-      const themeColor = theme.colors[sentiment]
-      const text = `text${definedProminence}` as keyof typeof themeColor
-
-      return theme.colors[sentiment]?.[text] ?? theme.colors.neutral.text
-    }
-
-    return theme.colors.other.monochrome[sentiment].text
+    return theme.colors[sentiment]?.[text] ?? theme.colors.neutral.text
   }};
   text-decoration: underline;
   text-decoration-thickness: 1px;
@@ -141,8 +128,17 @@ const StyledLink = styled('a', {
 
 
   &:visited {
-      color: ${({ theme }) => theme.colors.primary.text};
       text-decoration-color: transparent;
+
+      color: ${({ theme, prominence }) => {
+        const definedProminence = capitalize(
+          PROMINENCES[prominence ?? 'default'],
+        )
+        const themeColor = theme.colors.primary
+        const text = `text${definedProminence}` as keyof typeof themeColor
+
+        return theme.colors.primary[text] ?? theme.colors.primary.text
+      }};
   }
 
 
@@ -151,44 +147,43 @@ const StyledLink = styled('a', {
     ${StyledArrowLeftIcon}, ${StyledArrowRightIcon}, ${StyledOpenInNewIcon} {
       transform: ${({ theme, iconPosition }) =>
         iconPosition === 'left'
-          ? `translate(${theme.space['0.5']}, 0)`
-          : `translate(-${theme.space['0.5']}, 0)`};
+          ? `translate(${theme.space['0.25']}, 0)`
+          : `translate(-${theme.space['0.25']}, 0)`};
     }
 
     outline: none;
     text-decoration: underline;
     text-decoration-thickness: 1px;
     ${({ theme, sentiment, prominence }) => {
-      const isMonochrome = sentiment === 'white' || sentiment === 'black'
+      const definedProminence = capitalize(PROMINENCES[prominence ?? 'default'])
 
-      if (!isMonochrome) {
-        const definedProminence = capitalize(
-          PROMINENCES[prominence ?? 'default'],
-        )
+      const themeColor = theme.colors[sentiment]
 
-        const themeColor = theme.colors[sentiment]
+      const text = `text${definedProminence}Hover` as keyof typeof themeColor
 
-        const text = `text${definedProminence}Hover` as keyof typeof themeColor
-
-        return `
+      return `
         color: ${
           theme.colors[sentiment]?.[text] ?? theme.colors.neutral.textHover
         };
         text-decoration-color: ${
           theme.colors[sentiment]?.[text] ?? theme.colors.neutral.textHover
         };`
-      }
-
-      return `
-        color: ${theme.colors.other.monochrome[sentiment].textHover};
-        text-decoration-color: ${theme.colors.other.monochrome[sentiment].textHover};
-      `
     }}
 
     &:visited {
-      color: ${({ theme }) => theme.colors.primary.textHover};
-      text-decoration-color: ${({ theme }) => theme.colors.primary.textHover};
-    }
+      text-decoration-color: transparent;
+
+      color: ${({ theme, prominence }) => {
+        const definedProminence = capitalize(
+          PROMINENCES[prominence ?? 'default'],
+        )
+        const themeColor = theme.colors.primary
+        const text = `text${definedProminence}` as keyof typeof themeColor
+
+        return theme.colors.primary[text] ?? theme.colors.primary.text
+      }};
+  }
+
   }
 
   &[data-variant='inline'] {
@@ -198,15 +193,8 @@ const StyledLink = styled('a', {
 
   &:hover::after,
   &:focus::after {
-    background-color: ${({ theme, sentiment }) => {
-      const isMonochrome = sentiment === 'white' || sentiment === 'black'
-
-      if (!isMonochrome) {
-        return theme.colors[sentiment]?.text ?? theme.colors.neutral.text
-      }
-
-      return theme.colors.other.monochrome[sentiment].text
-    }};
+    background-color: ${({ theme, sentiment }) =>
+      theme.colors[sentiment]?.text ?? theme.colors.neutral.text};
   }
 
   &:active {
@@ -232,6 +220,7 @@ export const Link = forwardRef(
       className,
       onClick,
       'aria-label': ariaLabel,
+      'aria-current': ariaCurrent,
       oneLine = false,
       'data-testid': dataTestId,
       variant = 'standalone',
@@ -277,6 +266,7 @@ export const Link = forwardRef(
           oneLine={oneLine}
           data-testid={dataTestId}
           data-variant={variant}
+          aria-current={ariaCurrent}
         >
           {!isBlank && iconPosition === 'left' ? (
             <StyledArrowLeftIcon size={ICON_SIZE} />

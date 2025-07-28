@@ -1,5 +1,17 @@
 # @ultraviolet/fonts
 
+## 2.0.0
+
+### Major Changes
+
+- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - Beta release
+
+## 2.0.0-beta.0
+
+### Major Changes
+
+- [#5112](https://github.com/scaleway/ultraviolet/pull/5112) [`37a7d63`](https://github.com/scaleway/ultraviolet/commit/37a7d632cd1e61d7615e5356fc179ec08f3bec09) Thanks [@matthprost](https://github.com/matthprost)! - Beta release
+
 ## 1.0.2
 
 ### Patch Changes

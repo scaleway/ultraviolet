@@ -1,9 +1,9 @@
 'use client'
 
 import styled from '@emotion/styled'
-import { AsteriskIcon } from '@ultraviolet/icons'
 import type { ComponentProps, InputHTMLAttributes, ReactNode } from 'react'
 import { createContext, useContext, useMemo } from 'react'
+import { Label } from '../Label'
 import { Radio } from '../Radio'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
@@ -21,20 +21,13 @@ const RadioGroupContext = createContext<RadioGroupContextType | undefined>(
 
 type RadioGroupRadioProps = Omit<
   ComponentProps<typeof Radio>,
-  'onChange' | 'checked' | 'required'
-> & {
-  /**
-   * @deprecated you don't need to use `name` anymore, the name will be passed from the parent `RadioGroup`.
-   */
-  name?: string
-}
-
+  'onChange' | 'checked' | 'required' | 'name'
+>
 const RadioGroupRadio = ({
   onFocus,
   onBlur,
   disabled,
   error,
-  name,
   value,
   label,
   helper,
@@ -60,7 +53,7 @@ const RadioGroupRadio = ({
       onBlur={onBlur}
       disabled={disabled}
       error={error || errorContext}
-      name={groupName ?? name}
+      name={groupName}
       value={value}
       label={label}
       helper={helper}
@@ -79,12 +72,9 @@ const FieldSet = styled.fieldset`
   margin: 0;
 `
 
-const StyledRequiredIcon = styled(AsteriskIcon)`
-  vertical-align: super;
-`
-
 type RadioGroupProps = {
-  legend?: ReactNode
+  legend?: string
+  legendDescription?: ReactNode
   value: string | number
   className?: string
   helper?: ReactNode
@@ -100,6 +90,7 @@ type RadioGroupProps = {
  */
 export const RadioGroup = ({
   legend,
+  legendDescription,
   value,
   className,
   helper,
@@ -130,17 +121,13 @@ export const RadioGroup = ({
             {legend || description ? (
               <Stack gap={0.5}>
                 {legend ? (
-                  <Text
+                  <Label
                     as="legend"
-                    variant="bodyStrong"
-                    sentiment="neutral"
-                    prominence="strong"
+                    required={required}
+                    labelDescription={legendDescription}
                   >
-                    {legend}&nbsp;
-                    {required ? (
-                      <StyledRequiredIcon sentiment="danger" size={8} />
-                    ) : null}
-                  </Text>
+                    {legend}
+                  </Label>
                 ) : null}
                 {description ? (
                   <Text

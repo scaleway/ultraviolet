@@ -45,10 +45,10 @@ exports[`Banner > renders correctly with a button 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -57,10 +57,9 @@ exports[`Banner > renders correctly with a button 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   width: 140px;
 }
 
@@ -69,10 +68,10 @@ exports[`Banner > renders correctly with a button 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 1rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: start;
   -webkit-box-align: start;
   -ms-flex-align: start;
@@ -80,10 +79,10 @@ exports[`Banner > renders correctly with a button 1`] = `
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .emotion-6 {
@@ -91,10 +90,10 @@ exports[`Banner > renders correctly with a button 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -103,16 +102,16 @@ exports[`Banner > renders correctly with a button 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .emotion-8 {
   color: #641cb3;
   font-size: 1.3125rem;
-  font-family: Space Grotesk,Inter,Asap,sans-serif;
+  font-family: Space Grotesk,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 2rem;
@@ -124,7 +123,7 @@ exports[`Banner > renders correctly with a button 1`] = `
 .emotion-10 {
   color: #3f4250;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -138,10 +137,10 @@ exports[`Banner > renders correctly with a button 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -150,10 +149,10 @@ exports[`Banner > renders correctly with a button 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 1rem;
 }
 
 .emotion-14 {
@@ -185,7 +184,7 @@ exports[`Banner > renders correctly with a button 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -203,6 +202,10 @@ exports[`Banner > renders correctly with a button 1`] = `
 
 .emotion-14:active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-14 .e1y1n78x0 {
+  stroke: transparent;
 }
 
 .emotion-14:hover,
@@ -225,7 +228,7 @@ exports[`Banner > renders correctly with a button 1`] = `
   gap: 0.5rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 2rem;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -240,7 +243,7 @@ exports[`Banner > renders correctly with a button 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -260,6 +263,10 @@ exports[`Banner > renders correctly with a button 1`] = `
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
+.emotion-16 .e1y1n78x0 {
+  stroke: transparent;
+}
+
 .emotion-16:hover,
 .emotion-16:active {
   background: #e9eaeb;
@@ -269,19 +276,15 @@ exports[`Banner > renders correctly with a button 1`] = `
 .emotion-18 {
   vertical-align: middle;
   fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
 .emotion-18 .fillStroke {
   stroke: currentColor;
   fill: none;
-}
-
-.emotion-18 path {
-  fill: currentColor;
 }
 
 <div
@@ -336,7 +339,6 @@ exports[`Banner > renders correctly with a button 1`] = `
         <svg
           class="emotion-18 emotion-19"
           viewBox="0 0 16 16"
-          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"
@@ -393,10 +395,10 @@ exports[`Banner > renders correctly with a link 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -405,10 +407,9 @@ exports[`Banner > renders correctly with a link 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   width: 140px;
 }
 
@@ -417,10 +418,10 @@ exports[`Banner > renders correctly with a link 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 1rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: start;
   -webkit-box-align: start;
   -ms-flex-align: start;
@@ -428,10 +429,10 @@ exports[`Banner > renders correctly with a link 1`] = `
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .emotion-6 {
@@ -439,10 +440,10 @@ exports[`Banner > renders correctly with a link 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -451,16 +452,16 @@ exports[`Banner > renders correctly with a link 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .emotion-8 {
   color: #641cb3;
   font-size: 1.3125rem;
-  font-family: Space Grotesk,Inter,Asap,sans-serif;
+  font-family: Space Grotesk,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 2rem;
@@ -472,7 +473,7 @@ exports[`Banner > renders correctly with a link 1`] = `
 .emotion-10 {
   color: #3f4250;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -486,10 +487,10 @@ exports[`Banner > renders correctly with a link 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -498,10 +499,10 @@ exports[`Banner > renders correctly with a link 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 1rem;
 }
 
 .emotion-14 {
@@ -523,7 +524,7 @@ exports[`Banner > renders correctly with a link 1`] = `
   width: -moz-fit-content;
   width: fit-content;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -531,8 +532,8 @@ exports[`Banner > renders correctly with a link 1`] = `
   text-case: none;
 }
 
-.emotion-14 .e1afnb7a2,
 .emotion-14 .e1afnb7a3,
+.emotion-14 .e1afnb7a2,
 .emotion-14 .emotion-18 {
   -webkit-transition: -webkit-transform 250ms ease-out;
   transition: transform 250ms ease-out;
@@ -543,8 +544,8 @@ exports[`Banner > renders correctly with a link 1`] = `
 }
 
 .emotion-14:visited {
-  color: #641cb3;
   text-decoration-color: transparent;
+  color: #641cb3;
 }
 
 .emotion-14:hover,
@@ -557,22 +558,22 @@ exports[`Banner > renders correctly with a link 1`] = `
   text-decoration-color: #521094;
 }
 
-.emotion-14:hover .e1afnb7a2,
-.emotion-14:focus .e1afnb7a2,
 .emotion-14:hover .e1afnb7a3,
 .emotion-14:focus .e1afnb7a3,
+.emotion-14:hover .e1afnb7a2,
+.emotion-14:focus .e1afnb7a2,
 .emotion-14:hover .emotion-18,
 .emotion-14:focus .emotion-18 {
-  -webkit-transform: translate(-0.25rem, 0);
-  -moz-transform: translate(-0.25rem, 0);
-  -ms-transform: translate(-0.25rem, 0);
-  transform: translate(-0.25rem, 0);
+  -webkit-transform: translate(-0.125rem, 0);
+  -moz-transform: translate(-0.125rem, 0);
+  -ms-transform: translate(-0.125rem, 0);
+  transform: translate(-0.125rem, 0);
 }
 
 .emotion-14:hover:visited,
 .emotion-14:focus:visited {
-  color: #521094;
-  text-decoration-color: #521094;
+  text-decoration-color: transparent;
+  color: #641cb3;
 }
 
 .emotion-14[data-variant='inline'] {
@@ -601,11 +602,11 @@ exports[`Banner > renders correctly with a link 1`] = `
 .emotion-19 {
   vertical-align: middle;
   fill: currentColor;
-  height: 14px;
-  width: 14px;
-  min-width: 14px;
-  min-height: 14px;
-  margin-left: 0.5rem;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
+  margin-left: 0.25rem;
 }
 
 .emotion-19 .fillStroke {
@@ -627,7 +628,7 @@ exports[`Banner > renders correctly with a link 1`] = `
   gap: 0.5rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 2rem;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -642,7 +643,7 @@ exports[`Banner > renders correctly with a link 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -662,6 +663,10 @@ exports[`Banner > renders correctly with a link 1`] = `
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
+.emotion-21 .e1y1n78x0 {
+  stroke: transparent;
+}
+
 .emotion-21:hover,
 .emotion-21:active {
   background: #e9eaeb;
@@ -671,19 +676,15 @@ exports[`Banner > renders correctly with a link 1`] = `
 .emotion-23 {
   vertical-align: middle;
   fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
 .emotion-23 .fillStroke {
   stroke: currentColor;
   fill: none;
-}
-
-.emotion-23 path {
-  fill: currentColor;
 }
 
 <div
@@ -737,7 +738,7 @@ exports[`Banner > renders correctly with a link 1`] = `
             >
               <svg
                 class="emotion-18 emotion-19 emotion-20"
-                viewBox="0 0 20 20"
+                viewBox="0 0 16 16"
               >
                 <path
                   d="M6.22 8.72a.75.75 0 0 0 1.06 1.06l5.22-5.22v1.69a.75.75 0 0 0 1.5 0v-3.5a.75.75 0 0 0-.75-.75h-3.5a.75.75 0 0 0 0 1.5h1.69z"
@@ -756,9 +757,8 @@ exports[`Banner > renders correctly with a link 1`] = `
         type="button"
       >
         <svg
-          class="emotion-23 emotion-24"
+          class="emotion-23 emotion-20"
           viewBox="0 0 16 16"
-          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"
@@ -815,10 +815,10 @@ exports[`Banner > renders correctly with closable to false 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -827,10 +827,9 @@ exports[`Banner > renders correctly with closable to false 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   width: 140px;
 }
 
@@ -839,10 +838,10 @@ exports[`Banner > renders correctly with closable to false 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -850,10 +849,10 @@ exports[`Banner > renders correctly with closable to false 1`] = `
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 1rem;
 }
 
 .emotion-6 {
@@ -861,10 +860,10 @@ exports[`Banner > renders correctly with closable to false 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -873,16 +872,16 @@ exports[`Banner > renders correctly with closable to false 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .emotion-8 {
   color: #641cb3;
   font-size: 1.3125rem;
-  font-family: Space Grotesk,Inter,Asap,sans-serif;
+  font-family: Space Grotesk,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 2rem;
@@ -894,7 +893,7 @@ exports[`Banner > renders correctly with closable to false 1`] = `
 .emotion-10 {
   color: #3f4250;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -987,10 +986,10 @@ exports[`Banner > renders correctly with default values 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -999,10 +998,9 @@ exports[`Banner > renders correctly with default values 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   width: 140px;
 }
 
@@ -1011,10 +1009,10 @@ exports[`Banner > renders correctly with default values 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 1rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: start;
   -webkit-box-align: start;
   -ms-flex-align: start;
@@ -1022,10 +1020,10 @@ exports[`Banner > renders correctly with default values 1`] = `
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .emotion-6 {
@@ -1033,10 +1031,10 @@ exports[`Banner > renders correctly with default values 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -1045,16 +1043,16 @@ exports[`Banner > renders correctly with default values 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .emotion-8 {
   color: #641cb3;
   font-size: 1.3125rem;
-  font-family: Space Grotesk,Inter,Asap,sans-serif;
+  font-family: Space Grotesk,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 2rem;
@@ -1066,7 +1064,7 @@ exports[`Banner > renders correctly with default values 1`] = `
 .emotion-10 {
   color: #3f4250;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -1089,7 +1087,7 @@ exports[`Banner > renders correctly with default values 1`] = `
   gap: 0.5rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 2rem;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1104,7 +1102,7 @@ exports[`Banner > renders correctly with default values 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -1124,6 +1122,10 @@ exports[`Banner > renders correctly with default values 1`] = `
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
+.emotion-12 .e1y1n78x0 {
+  stroke: transparent;
+}
+
 .emotion-12:hover,
 .emotion-12:active {
   background: #e9eaeb;
@@ -1133,19 +1135,15 @@ exports[`Banner > renders correctly with default values 1`] = `
 .emotion-14 {
   vertical-align: middle;
   fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
 .emotion-14 .fillStroke {
   stroke: currentColor;
   fill: none;
-}
-
-.emotion-14 path {
-  fill: currentColor;
 }
 
 <div
@@ -1190,7 +1188,6 @@ exports[`Banner > renders correctly with default values 1`] = `
         <svg
           class="emotion-14 emotion-15"
           viewBox="0 0 16 16"
-          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"
@@ -1247,10 +1244,10 @@ exports[`Banner > renders correctly with direction row 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -1259,10 +1256,9 @@ exports[`Banner > renders correctly with direction row 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   width: 140px;
 }
 
@@ -1271,10 +1267,10 @@ exports[`Banner > renders correctly with direction row 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1282,10 +1278,10 @@ exports[`Banner > renders correctly with direction row 1`] = `
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 1rem;
 }
 
 .emotion-6 {
@@ -1293,10 +1289,10 @@ exports[`Banner > renders correctly with direction row 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -1305,16 +1301,16 @@ exports[`Banner > renders correctly with direction row 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .emotion-8 {
   color: #641cb3;
   font-size: 1.3125rem;
-  font-family: Space Grotesk,Inter,Asap,sans-serif;
+  font-family: Space Grotesk,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 2rem;
@@ -1326,7 +1322,7 @@ exports[`Banner > renders correctly with direction row 1`] = `
 .emotion-10 {
   color: #3f4250;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -1349,7 +1345,7 @@ exports[`Banner > renders correctly with direction row 1`] = `
   gap: 0.5rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 2rem;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1364,7 +1360,7 @@ exports[`Banner > renders correctly with direction row 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -1384,6 +1380,10 @@ exports[`Banner > renders correctly with direction row 1`] = `
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
+.emotion-12 .e1y1n78x0 {
+  stroke: transparent;
+}
+
 .emotion-12:hover,
 .emotion-12:active {
   background: #e9eaeb;
@@ -1393,19 +1393,15 @@ exports[`Banner > renders correctly with direction row 1`] = `
 .emotion-14 {
   vertical-align: middle;
   fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
 .emotion-14 .fillStroke {
   stroke: currentColor;
   fill: none;
-}
-
-.emotion-14 path {
-  fill: currentColor;
 }
 
 <div
@@ -1450,7 +1446,6 @@ exports[`Banner > renders correctly with direction row 1`] = `
         <svg
           class="emotion-14 emotion-15"
           viewBox="0 0 16 16"
-          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"
@@ -1507,10 +1502,10 @@ exports[`Banner > should render correctly with dark theme 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -1519,10 +1514,9 @@ exports[`Banner > should render correctly with dark theme 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   width: 140px;
 }
 
@@ -1531,10 +1525,10 @@ exports[`Banner > should render correctly with dark theme 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -1543,10 +1537,9 @@ exports[`Banner > should render correctly with dark theme 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   width: 140px;
 }
 
@@ -1555,10 +1548,10 @@ exports[`Banner > should render correctly with dark theme 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 1rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: start;
   -webkit-box-align: start;
   -ms-flex-align: start;
@@ -1566,10 +1559,10 @@ exports[`Banner > should render correctly with dark theme 1`] = `
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .emotion-6 {
@@ -1577,10 +1570,10 @@ exports[`Banner > should render correctly with dark theme 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -1589,10 +1582,10 @@ exports[`Banner > should render correctly with dark theme 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .emotion-6 {
@@ -1600,10 +1593,10 @@ exports[`Banner > should render correctly with dark theme 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -1612,16 +1605,16 @@ exports[`Banner > should render correctly with dark theme 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .emotion-8 {
   color: #bf96f8;
   font-size: 1.3125rem;
-  font-family: Space Grotesk,Inter,Asap,sans-serif;
+  font-family: Space Grotesk,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 2rem;
@@ -1633,7 +1626,7 @@ exports[`Banner > should render correctly with dark theme 1`] = `
 .emotion-10 {
   color: #ffffff;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -1647,10 +1640,10 @@ exports[`Banner > should render correctly with dark theme 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1659,10 +1652,10 @@ exports[`Banner > should render correctly with dark theme 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 1rem;
 }
 
 .emotion-14 {
@@ -1684,7 +1677,7 @@ exports[`Banner > should render correctly with dark theme 1`] = `
   width: -moz-fit-content;
   width: fit-content;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -1692,8 +1685,8 @@ exports[`Banner > should render correctly with dark theme 1`] = `
   text-case: none;
 }
 
-.emotion-14 .e1afnb7a2,
 .emotion-14 .e1afnb7a3,
+.emotion-14 .e1afnb7a2,
 .emotion-14 .emotion-18 {
   -webkit-transition: -webkit-transform 250ms ease-out;
   transition: transform 250ms ease-out;
@@ -1704,8 +1697,8 @@ exports[`Banner > should render correctly with dark theme 1`] = `
 }
 
 .emotion-14:visited {
-  color: #bf96f8;
   text-decoration-color: transparent;
+  color: #bf96f8;
 }
 
 .emotion-14:hover,
@@ -1718,22 +1711,22 @@ exports[`Banner > should render correctly with dark theme 1`] = `
   text-decoration-color: #e9e9ec;
 }
 
-.emotion-14:hover .e1afnb7a2,
-.emotion-14:focus .e1afnb7a2,
 .emotion-14:hover .e1afnb7a3,
 .emotion-14:focus .e1afnb7a3,
+.emotion-14:hover .e1afnb7a2,
+.emotion-14:focus .e1afnb7a2,
 .emotion-14:hover .emotion-18,
 .emotion-14:focus .emotion-18 {
-  -webkit-transform: translate(-0.25rem, 0);
-  -moz-transform: translate(-0.25rem, 0);
-  -ms-transform: translate(-0.25rem, 0);
-  transform: translate(-0.25rem, 0);
+  -webkit-transform: translate(-0.125rem, 0);
+  -moz-transform: translate(-0.125rem, 0);
+  -ms-transform: translate(-0.125rem, 0);
+  transform: translate(-0.125rem, 0);
 }
 
 .emotion-14:hover:visited,
 .emotion-14:focus:visited {
-  color: #ccaefc;
-  text-decoration-color: #ccaefc;
+  text-decoration-color: transparent;
+  color: #bf96f8;
 }
 
 .emotion-14[data-variant='inline'] {
@@ -1762,11 +1755,11 @@ exports[`Banner > should render correctly with dark theme 1`] = `
 .emotion-19 {
   vertical-align: middle;
   fill: currentColor;
-  height: 14px;
-  width: 14px;
-  min-width: 14px;
-  min-height: 14px;
-  margin-left: 0.5rem;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
+  margin-left: 0.25rem;
 }
 
 .emotion-19 .fillStroke {
@@ -1788,7 +1781,7 @@ exports[`Banner > should render correctly with dark theme 1`] = `
   gap: 0.5rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 2rem;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1803,7 +1796,7 @@ exports[`Banner > should render correctly with dark theme 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -1823,6 +1816,10 @@ exports[`Banner > should render correctly with dark theme 1`] = `
   box-shadow: 0px 0px 0px 3px #0c0f1a8c;
 }
 
+.emotion-21 .e1y1n78x0 {
+  stroke: transparent;
+}
+
 .emotion-21:hover,
 .emotion-21:active {
   background: #303445;
@@ -1832,37 +1829,29 @@ exports[`Banner > should render correctly with dark theme 1`] = `
 .emotion-23 {
   vertical-align: middle;
   fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
 .emotion-23 .fillStroke {
   stroke: currentColor;
   fill: none;
-}
-
-.emotion-23 path {
-  fill: currentColor;
 }
 
 .emotion-23 {
   vertical-align: middle;
   fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
 .emotion-23 .fillStroke {
   stroke: currentColor;
   fill: none;
-}
-
-.emotion-23 path {
-  fill: currentColor;
 }
 
 <div
@@ -1916,7 +1905,7 @@ exports[`Banner > should render correctly with dark theme 1`] = `
             >
               <svg
                 class="emotion-18 emotion-19 emotion-20"
-                viewBox="0 0 20 20"
+                viewBox="0 0 16 16"
               >
                 <path
                   d="M6.22 8.72a.75.75 0 0 0 1.06 1.06l5.22-5.22v1.69a.75.75 0 0 0 1.5 0v-3.5a.75.75 0 0 0-.75-.75h-3.5a.75.75 0 0 0 0 1.5h1.69z"
@@ -1935,9 +1924,8 @@ exports[`Banner > should render correctly with dark theme 1`] = `
         type="button"
       >
         <svg
-          class="emotion-23 emotion-24"
+          class="emotion-23 emotion-20"
           viewBox="0 0 16 16"
-          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"
@@ -1994,10 +1982,10 @@ exports[`Banner > sizes and variants > renders correctly with size medium and va
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -2006,10 +1994,9 @@ exports[`Banner > sizes and variants > renders correctly with size medium and va
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   width: 140px;
 }
 
@@ -2018,10 +2005,10 @@ exports[`Banner > sizes and variants > renders correctly with size medium and va
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 1rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: start;
   -webkit-box-align: start;
   -ms-flex-align: start;
@@ -2029,10 +2016,10 @@ exports[`Banner > sizes and variants > renders correctly with size medium and va
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .emotion-6 {
@@ -2040,10 +2027,10 @@ exports[`Banner > sizes and variants > renders correctly with size medium and va
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -2052,16 +2039,16 @@ exports[`Banner > sizes and variants > renders correctly with size medium and va
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .emotion-8 {
   color: #641cb3;
   font-size: 1.3125rem;
-  font-family: Space Grotesk,Inter,Asap,sans-serif;
+  font-family: Space Grotesk,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 2rem;
@@ -2073,7 +2060,7 @@ exports[`Banner > sizes and variants > renders correctly with size medium and va
 .emotion-10 {
   color: #3f4250;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -2096,7 +2083,7 @@ exports[`Banner > sizes and variants > renders correctly with size medium and va
   gap: 0.5rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 2rem;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2111,7 +2098,7 @@ exports[`Banner > sizes and variants > renders correctly with size medium and va
   -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -2131,6 +2118,10 @@ exports[`Banner > sizes and variants > renders correctly with size medium and va
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
+.emotion-12 .e1y1n78x0 {
+  stroke: transparent;
+}
+
 .emotion-12:hover,
 .emotion-12:active {
   background: #e9eaeb;
@@ -2140,19 +2131,15 @@ exports[`Banner > sizes and variants > renders correctly with size medium and va
 .emotion-14 {
   vertical-align: middle;
   fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
 .emotion-14 .fillStroke {
   stroke: currentColor;
   fill: none;
-}
-
-.emotion-14 path {
-  fill: currentColor;
 }
 
 <div
@@ -2197,7 +2184,6 @@ exports[`Banner > sizes and variants > renders correctly with size medium and va
         <svg
           class="emotion-14 emotion-15"
           viewBox="0 0 16 16"
-          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"
@@ -2254,10 +2240,10 @@ exports[`Banner > sizes and variants > renders correctly with size medium and va
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -2266,10 +2252,9 @@ exports[`Banner > sizes and variants > renders correctly with size medium and va
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   width: 140px;
 }
 
@@ -2278,10 +2263,10 @@ exports[`Banner > sizes and variants > renders correctly with size medium and va
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 1rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: start;
   -webkit-box-align: start;
   -ms-flex-align: start;
@@ -2289,10 +2274,10 @@ exports[`Banner > sizes and variants > renders correctly with size medium and va
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .emotion-6 {
@@ -2300,10 +2285,10 @@ exports[`Banner > sizes and variants > renders correctly with size medium and va
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -2312,16 +2297,16 @@ exports[`Banner > sizes and variants > renders correctly with size medium and va
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .emotion-8 {
   color: #ffffff;
   font-size: 1.3125rem;
-  font-family: Space Grotesk,Inter,Asap,sans-serif;
+  font-family: Space Grotesk,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 2rem;
@@ -2333,7 +2318,7 @@ exports[`Banner > sizes and variants > renders correctly with size medium and va
 .emotion-10 {
   color: #ffffff;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -2356,7 +2341,7 @@ exports[`Banner > sizes and variants > renders correctly with size medium and va
   gap: 0.5rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 2rem;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2371,7 +2356,7 @@ exports[`Banner > sizes and variants > renders correctly with size medium and va
   -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -2391,6 +2376,10 @@ exports[`Banner > sizes and variants > renders correctly with size medium and va
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
+.emotion-12 .e1y1n78x0 {
+  stroke: transparent;
+}
+
 .emotion-12:hover,
 .emotion-12:active {
   background: #792dd4;
@@ -2400,19 +2389,15 @@ exports[`Banner > sizes and variants > renders correctly with size medium and va
 .emotion-14 {
   vertical-align: middle;
   fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
 .emotion-14 .fillStroke {
   stroke: currentColor;
   fill: none;
-}
-
-.emotion-14 path {
-  fill: currentColor;
 }
 
 <div
@@ -2457,7 +2442,6 @@ exports[`Banner > sizes and variants > renders correctly with size medium and va
         <svg
           class="emotion-14 emotion-15"
           viewBox="0 0 16 16"
-          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"
@@ -2514,10 +2498,10 @@ exports[`Banner > sizes and variants > renders correctly with size small and var
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -2526,10 +2510,9 @@ exports[`Banner > sizes and variants > renders correctly with size small and var
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   width: 74px;
 }
 
@@ -2538,10 +2521,10 @@ exports[`Banner > sizes and variants > renders correctly with size small and var
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 1rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: start;
   -webkit-box-align: start;
   -ms-flex-align: start;
@@ -2549,10 +2532,10 @@ exports[`Banner > sizes and variants > renders correctly with size small and var
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .emotion-6 {
@@ -2560,10 +2543,10 @@ exports[`Banner > sizes and variants > renders correctly with size small and var
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -2572,16 +2555,16 @@ exports[`Banner > sizes and variants > renders correctly with size small and var
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .emotion-8 {
   color: #641cb3;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 600;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -2593,7 +2576,7 @@ exports[`Banner > sizes and variants > renders correctly with size small and var
 .emotion-10 {
   color: #3f4250;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -2616,7 +2599,7 @@ exports[`Banner > sizes and variants > renders correctly with size small and var
   gap: 0.5rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 2rem;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2631,7 +2614,7 @@ exports[`Banner > sizes and variants > renders correctly with size small and var
   -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -2651,6 +2634,10 @@ exports[`Banner > sizes and variants > renders correctly with size small and var
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
+.emotion-12 .e1y1n78x0 {
+  stroke: transparent;
+}
+
 .emotion-12:hover,
 .emotion-12:active {
   background: #e9eaeb;
@@ -2660,19 +2647,15 @@ exports[`Banner > sizes and variants > renders correctly with size small and var
 .emotion-14 {
   vertical-align: middle;
   fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
 .emotion-14 .fillStroke {
   stroke: currentColor;
   fill: none;
-}
-
-.emotion-14 path {
-  fill: currentColor;
 }
 
 <div
@@ -2717,7 +2700,6 @@ exports[`Banner > sizes and variants > renders correctly with size small and var
         <svg
           class="emotion-14 emotion-15"
           viewBox="0 0 16 16"
-          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"
@@ -2774,10 +2756,10 @@ exports[`Banner > sizes and variants > renders correctly with size small and var
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -2786,10 +2768,9 @@ exports[`Banner > sizes and variants > renders correctly with size small and var
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   width: 74px;
 }
 
@@ -2798,10 +2779,10 @@ exports[`Banner > sizes and variants > renders correctly with size small and var
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 1rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: start;
   -webkit-box-align: start;
   -ms-flex-align: start;
@@ -2809,10 +2790,10 @@ exports[`Banner > sizes and variants > renders correctly with size small and var
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .emotion-6 {
@@ -2820,10 +2801,10 @@ exports[`Banner > sizes and variants > renders correctly with size small and var
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -2832,16 +2813,16 @@ exports[`Banner > sizes and variants > renders correctly with size small and var
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .emotion-8 {
   color: #ffffff;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 600;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -2853,7 +2834,7 @@ exports[`Banner > sizes and variants > renders correctly with size small and var
 .emotion-10 {
   color: #ffffff;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -2876,7 +2857,7 @@ exports[`Banner > sizes and variants > renders correctly with size small and var
   gap: 0.5rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 2rem;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2891,7 +2872,7 @@ exports[`Banner > sizes and variants > renders correctly with size small and var
   -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -2911,6 +2892,10 @@ exports[`Banner > sizes and variants > renders correctly with size small and var
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
+.emotion-12 .e1y1n78x0 {
+  stroke: transparent;
+}
+
 .emotion-12:hover,
 .emotion-12:active {
   background: #792dd4;
@@ -2920,19 +2905,15 @@ exports[`Banner > sizes and variants > renders correctly with size small and var
 .emotion-14 {
   vertical-align: middle;
   fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
 .emotion-14 .fillStroke {
   stroke: currentColor;
   fill: none;
-}
-
-.emotion-14 path {
-  fill: currentColor;
 }
 
 <div
@@ -2977,7 +2958,6 @@ exports[`Banner > sizes and variants > renders correctly with size small and var
         <svg
           class="emotion-14 emotion-15"
           viewBox="0 0 16 16"
-          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"

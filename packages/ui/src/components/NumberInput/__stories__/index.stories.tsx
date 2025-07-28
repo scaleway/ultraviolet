@@ -1,4 +1,4 @@
-import type { Meta } from '@storybook/react'
+import type { Meta } from '@storybook/react-vite'
 import { NumberInput } from '..'
 
 export default {
@@ -7,32 +7,26 @@ export default {
     StoryComponent => (
       <div
         style={{
-          width: 'fit-content',
-          minWidth: '200px',
+          width: '250px',
         }}
       >
         <StoryComponent />
       </div>
     ),
   ],
-  tags: ['deprecated'],
-  parameters: {
-    deprecated: true,
-    deprecatedReason:
-      'This component is deprecated. Please use NumberInputV2 instead.',
-    migrationLink: 'Migrations/NumberInput to NumberInputV2',
-  },
   title: 'Components/Data Entry/NumberInput',
 } as Meta<typeof NumberInput>
 
 export { Playground } from './Playground.stories'
-export { Placeholder } from './Placeholder.stories'
-export { Text } from './Text.stories'
-export { DisabledTooltip } from './DisabledTooltip.stories'
-export { Steps } from './Steps.stories'
 export { Sizes } from './Sizes.stories'
+export { Placeholder } from './Placeholder.stories'
+export { Helper } from './Helper.stories'
+export { MinMax } from './MinMax.stories'
+export { Step } from './Step.stories'
+export { Unit } from './Unit.stories'
 export { Disabled } from './Disabled.stories'
+export { ReadOnly } from './ReadOnly.stories'
 export { Error } from './Error.stories'
-export { Events } from './Events.stories'
-export { Controlled } from './Controlled.stories'
-export { DefaultValue } from './DefaultValue.stories'
+export { Success } from './Success.stories'
+export { LabelDescription } from './LabelDescription.stories'
+export { Controls } from './Controls.stories'

@@ -1,11 +1,12 @@
-import type { StoryFn } from '@storybook/react'
+import type { StoryFn } from '@storybook/react-vite'
 import type { ChangeEvent } from 'react'
 import { useState } from 'react'
 import { SelectableCard } from '..'
 import { Badge } from '../../Badge'
 import { Checkbox } from '../../Checkbox'
-import { SelectInputV2 } from '../../SelectInputV2'
+import { SelectInput } from '../../SelectInput'
 import { Stack } from '../../Stack'
+import { Text } from '../../Text'
 
 export const Children: StoryFn = args => {
   const [value, onChange] = useState('label-9')
@@ -25,13 +26,15 @@ export const Children: StoryFn = args => {
       >
         {({ checked }) => (
           <Stack gap={1}>
-            I am a children with a badge &nbsp;
-            <Badge
-              sentiment={checked ? 'info' : 'neutral'}
-              prominence={checked ? 'default' : 'strong'}
-            >
-              info
-            </Badge>
+            <Text as="p" variant="body" prominence="weak" sentiment="neutral">
+              I am a children with a badge &nbsp;
+              <Badge
+                sentiment={checked ? 'info' : 'neutral'}
+                prominence={checked ? 'default' : 'strong'}
+              >
+                info
+              </Badge>
+            </Text>
           </Stack>
         )}
       </SelectableCard>
@@ -47,23 +50,25 @@ export const Children: StoryFn = args => {
         label="Middle Radio"
       >
         <Stack gap={2}>
-          I am a children with clickable select input
-          <Stack gap={1}>
-            <Checkbox name="test" value="test" onChange={() => {}}>
-              First element
-            </Checkbox>
-            <Checkbox name="test" value="test" onChange={() => {}}>
-              Second element
-            </Checkbox>
-          </Stack>
-          <SelectInputV2
-            name="options"
-            label="Select an option"
-            options={[
-              { label: 'Option 1', value: 'option-1' },
-              { label: 'Option 2', value: 'option-2' },
-            ]}
-          />
+          <Text as="p" variant="body" prominence="weak" sentiment="neutral">
+            I am a children with clickable select input
+            <Stack gap={1}>
+              <Checkbox name="test" value="test" onChange={() => {}}>
+                First element
+              </Checkbox>
+              <Checkbox name="test" value="test" onChange={() => {}}>
+                Second element
+              </Checkbox>
+            </Stack>
+            <SelectInput
+              name="options"
+              label="Select an option"
+              options={[
+                { label: 'Option 1', value: 'option-1' },
+                { label: 'Option 2', value: 'option-2' },
+              ]}
+            />
+          </Text>
         </Stack>
       </SelectableCard>
       <SelectableCard

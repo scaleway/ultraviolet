@@ -1,4 +1,4 @@
-import type { StoryFn } from '@storybook/react'
+import type { StoryFn } from '@storybook/react-vite'
 import { Menu } from '..'
 import { DefaultDisclosure } from './Template.stories'
 
@@ -34,7 +34,7 @@ Borderless.parameters = {
 
 Borderless.decorators = [
   StoryComponent => (
-    <div style={{ height: '250px' }}>
+    <div style={{ height: '250px', width: 'min-content' }}>
       <StoryComponent />
     </div>
   ),

@@ -1,4 +1,4 @@
-import type { Meta } from '@storybook/react'
+import type { Meta } from '@storybook/react-vite'
 import { Snippet, Stack, Text } from '@ultraviolet/ui'
 import { Form, RadioField } from '../..'
 import { useForm } from '../../..'
@@ -74,9 +74,6 @@ export default {
         component: 'A radio field',
       },
     },
-    deprecated: true,
-    deprecatedReason:
-      'This component is deprecated, use RadioGroupField instead.',
   },
   title: 'Form/Components/Fields/RadioField',
 } as Meta

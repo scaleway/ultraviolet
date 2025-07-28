@@ -1,26 +1,18 @@
-import type { Meta } from '@storybook/react'
+import type { Meta } from '@storybook/react-vite'
 import { TimeInput } from '..'
 
 export default {
   component: TimeInput,
-  parameters: {
-    experimental: true,
-  },
-  tags: ['experimental'],
   title: 'Components/Data Entry/TimeInput',
-  decorators: [
-    Story => (
-      <div style={{ height: 300 }}>
-        <Story />
-      </div>
-    ),
-  ],
+  decorators: [Story => <Story />],
 } as Meta<typeof TimeInput>
 
 export { Playground } from './Playground.stories'
-export { Controlled } from './Controlled.stories'
-export { Placeholder } from './Placeholder.stories'
+export { Size } from './Size.stories'
 export { Disabled } from './Disabled.stories'
-export { Required } from './Required.stories'
+export { ReadOnly } from './ReadOnly.stories'
+export { Placeholder } from './Placeholder.stories'
 export { Error } from './Error.stories'
-export { Schedule } from './Schedule.stories'
+export { Required } from './Required.stories'
+export { TimeFormat } from './TimeFormat.stories'
+export { Controlled } from './Controlled.stories'

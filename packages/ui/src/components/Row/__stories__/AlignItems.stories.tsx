@@ -1,33 +1,37 @@
-import styled from '@emotion/styled'
-import type { StoryFn } from '@storybook/react'
+import type { StoryFn } from '@storybook/react-vite'
 import { Row } from '..'
-import { Separator, Stack } from '../..'
-
-const DivWithBackground = styled.div`
-  background: ${({ theme }) => theme.colors.primary.background};
-  color: ${({ theme }) => theme.colors.primary.text};
-`
+import { Separator } from '../../Separator'
+import { Stack } from '../../Stack'
+import { Text } from '../../Text'
+import { DivWithBackground } from './DivWithBackground'
 
 export const AlignItems: StoryFn = args => (
   <Stack gap={2}>
-    <Row {...args} templateColumns="repeat(3, 1fr)">
-      <DivWithBackground style={{ height: '100px' }}>
-        100px height & default align
-      </DivWithBackground>
-      <DivWithBackground style={{ height: '50px' }}>
-        50px height & default align
-      </DivWithBackground>
-      <DivWithBackground>auto height & default align</DivWithBackground>
+    <Text as="p" variant="bodyStrong">
+      alignItems=&ldquo;start&ldquo;
+    </Text>
+    <Row {...args} templateColumns="repeat(3, 1fr)" alignItems="start" gap={1}>
+      <DivWithBackground style={{ height: '100px' }}>1fr</DivWithBackground>
+      <DivWithBackground style={{ height: '50px' }}>1fr</DivWithBackground>
+      <DivWithBackground>1fr</DivWithBackground>
     </Row>
     <Separator />
-    <Row {...args} templateColumns="repeat(3, 1fr)" alignItems="center">
-      <DivWithBackground style={{ height: '100px' }}>
-        100px height & align center
-      </DivWithBackground>
-      <DivWithBackground style={{ height: '50px' }}>
-        50px height & align center
-      </DivWithBackground>
-      <DivWithBackground>auto height & align center</DivWithBackground>
+    <Text as="p" variant="bodyStrong">
+      alignItems=&ldquo;center&ldquo;
+    </Text>
+    <Row {...args} templateColumns="repeat(3, 1fr)" alignItems="center" gap={1}>
+      <DivWithBackground style={{ height: '100px' }}>1fr</DivWithBackground>
+      <DivWithBackground style={{ height: '50px' }}>1fr</DivWithBackground>
+      <DivWithBackground>1fr</DivWithBackground>
+    </Row>
+    <Separator />
+    <Text as="p" variant="bodyStrong">
+      alignItems=&ldquo;end&ldquo;
+    </Text>
+    <Row {...args} templateColumns="repeat(3, 1fr)" alignItems="end" gap={1}>
+      <DivWithBackground style={{ height: '100px' }}>1fr</DivWithBackground>
+      <DivWithBackground style={{ height: '50px' }}>1fr</DivWithBackground>
+      <DivWithBackground>1fr</DivWithBackground>
     </Row>
   </Stack>
 )

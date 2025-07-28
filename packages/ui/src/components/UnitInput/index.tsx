@@ -2,11 +2,17 @@
 
 import styled from '@emotion/styled'
 import { AlertCircleIcon, CheckCircleIcon } from '@ultraviolet/icons'
-import type { ComponentProps, InputHTMLAttributes, ReactNode } from 'react'
+import type {
+  CSSProperties,
+  ComponentProps,
+  InputHTMLAttributes,
+  ReactNode,
+} from 'react'
 import { useEffect, useId, useMemo, useState } from 'react'
 import { Label } from '../Label'
-import { SelectInputV2 } from '../SelectInputV2'
-import type { OptionType } from '../SelectInputV2/types'
+import { Row } from '../Row'
+import { SelectInput } from '../SelectInput'
+import type { OptionType } from '../SelectInput/types'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
 
@@ -35,7 +41,6 @@ const StyledInput = styled.input`
   padding-left: ${({ theme }) => theme.space['2']};
   background: transparent;
   color: ${({ theme }) => theme.colors.neutral.text};
-  font-size: ${({ theme }) => theme.typography.bodySmall.fontSize};
   &[data-size="small"] {
     padding-left: ${({ theme }) => theme.space['1']};
   }
@@ -57,16 +62,16 @@ const StyledInput = styled.input`
   }
 `
 
-const UnitInputWrapper = styled(Stack)<{
+const UnitInputWrapper = styled(Row)<{
   'data-size': 'small' | 'medium' | 'large'
   'data-success': boolean
   'data-error': boolean
   'data-disabled': boolean
   'data-readonly': boolean
 }>`
+  width: 100%;
   border: 1px solid ${({ theme }) => theme.colors.neutral.border};
   border-radius: ${({ theme }) => theme.radii.default};
-  background-color: ${({ theme }) => theme.colors.neutral.background};
 
   &:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
@@ -173,20 +178,22 @@ const UnitInputWrapper = styled(Stack)<{
     }
   }
 `
-const SelectInputWrapper = styled.div<{
-  width: number | string
-}>`
-${({ width }) => width && `width: ${typeof width === 'number' ? `${width}px` : width};`}
-display: flex;
-`
 
-const CustomSelectInput = styled(SelectInputV2)<{
+const CustomSelectInput = styled(SelectInput)<{
+  width?: number | string
+  maxWidth?: number | string
   'data-disabled': boolean
 }>`
   #unit {
     border: none;
     background: transparent;
   }
+
+  ${({ width }) =>
+    width && `width: ${typeof width === 'string' ? width : `${width}px`};`}
+  ${({ maxWidth }) =>
+    maxWidth &&
+    `max-width: ${typeof maxWidth === 'string' ? maxWidth : `${maxWidth}px`};`}
 
   #unit:focus,
   #unit:active {
@@ -209,14 +216,15 @@ type UnitInputProps = {
   'data-testid'?: string
   helper?: string
   unitError?: string
-  width?: ComponentProps<typeof Stack>['width']
+  width?: CSSProperties['width']
   placeholderUnit?: string
   error?: boolean | string
   success?: boolean | string
   label?: string
   labelInformation?: ReactNode
   step?: number | string
-  dropdownAlign?: ComponentProps<typeof SelectInputV2>['dropdownAlign']
+  dropdownAlign?: ComponentProps<typeof SelectInput>['dropdownAlign']
+  templateColumns?: ComponentProps<typeof Row>['templateColumns']
 } & Pick<
   InputHTMLAttributes<HTMLInputElement>,
   | 'onFocus'
@@ -263,6 +271,7 @@ export const UnitInput = ({
   onBlur,
   onKeyDown,
   dropdownAlign,
+  templateColumns,
 }: UnitInputProps) => {
   const [val, setVal] = useState(value)
   const localId = useId()
@@ -284,7 +293,13 @@ export const UnitInput = ({
   }, [value])
 
   return (
-    <Stack gap={0.5}>
+    <Stack
+      gap={0.5}
+      onFocus={onFocus}
+      onBlur={onBlur}
+      onKeyDown={onKeyDown}
+      width={width}
+    >
       {label || labelInformation ? (
         <Label
           labelDescription={labelInformation}
@@ -296,17 +311,13 @@ export const UnitInput = ({
         </Label>
       ) : null}
       <UnitInputWrapper
-        direction="row"
+        templateColumns={templateColumns ?? '1fr auto'}
         data-testid={dataTestId}
         data-size={size}
-        width={width}
         data-success={!!success}
         data-error={!!error}
         data-disabled={!!disabled}
         data-readonly={!!readOnly}
-        onFocus={onFocus}
-        onBlur={onBlur}
-        onKeyDown={onKeyDown}
       >
         <StyledNumberInputWrapper id="input-field">
           <StyledInput
@@ -315,7 +326,6 @@ export const UnitInput = ({
             autoFocus={autoFocus}
             disabled={disabled}
             name={`${name}-value`}
-            width={width}
             id={id ?? localId}
             value={val}
             onChange={event => {
@@ -345,28 +355,27 @@ export const UnitInput = ({
           />
           {error ? <AlertCircleIcon sentiment="danger" /> : null}
           {success && !error ? <CheckCircleIcon sentiment="success" /> : null}
-        </StyledNumberInputWrapper>{' '}
-        <SelectInputWrapper width={selectInputWidth}>
-          <CustomSelectInput
-            data-disabled={disabled}
-            id="unit"
-            name={`${name}-unit`}
-            onChange={(newValue: string) => {
-              onChangeUnitValue?.(newValue)
-            }}
-            error={unitError}
-            value={unitValue}
-            options={options}
-            searchable={false}
-            clearable={false}
-            placeholder={placeholderUnit}
-            disabled={disabled}
-            size={size}
-            multiselect={false}
-            readOnly={readOnly}
-            dropdownAlign={dropdownAlign}
-          />
-        </SelectInputWrapper>
+        </StyledNumberInputWrapper>
+        <CustomSelectInput
+          data-disabled={disabled}
+          id="unit"
+          name={`${name}-unit`}
+          onChange={(newValue: string) => {
+            onChangeUnitValue?.(newValue)
+          }}
+          error={unitError}
+          value={unitValue}
+          options={options}
+          width={selectInputWidth}
+          searchable={false}
+          clearable={false}
+          placeholder={placeholderUnit}
+          disabled={disabled}
+          size={size}
+          multiselect={false}
+          readOnly={readOnly}
+          dropdownAlign={dropdownAlign}
+        />
       </UnitInputWrapper>
       {error || typeof success === 'string' || typeof helper === 'string' ? (
         <Text

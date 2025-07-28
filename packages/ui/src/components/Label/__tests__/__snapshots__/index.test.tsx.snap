@@ -5,7 +5,7 @@ exports[`DateInput > renders correctly large 1`] = `
   .emotion-1 {
   color: #3f4250;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -32,7 +32,7 @@ exports[`DateInput > renders correctly medium 1`] = `
   .emotion-1 {
   color: #3f4250;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -61,10 +61,10 @@ exports[`DateInput > renders correctly required 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: start;
   -webkit-box-align: start;
   -ms-flex-align: start;
@@ -73,16 +73,16 @@ exports[`DateInput > renders correctly required 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.25rem;
 }
 
 .emotion-3 {
   color: #3f4250;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -95,7 +95,7 @@ exports[`DateInput > renders correctly required 1`] = `
 .emotion-5 {
   color: #b3144d;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -130,7 +130,7 @@ exports[`DateInput > renders correctly small 1`] = `
   .emotion-1 {
   color: #3f4250;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -157,7 +157,7 @@ exports[`DateInput > renders correctly with default props 1`] = `
   .emotion-1 {
   color: #3f4250;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -184,7 +184,7 @@ exports[`DateInput > renders correctly with htmlFor 1`] = `
   .emotion-1 {
   color: #3f4250;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -221,10 +221,10 @@ exports[`DateInput > renders correctly with label description (ReactNode) 1`] = 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -233,16 +233,16 @@ exports[`DateInput > renders correctly with label description (ReactNode) 1`] = 
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.5rem;
 }
 
 .emotion-3 {
   color: #3f4250;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -278,10 +278,10 @@ exports[`DateInput > renders correctly with label description (string) 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -290,16 +290,16 @@ exports[`DateInput > renders correctly with label description (string) 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.5rem;
 }
 
 .emotion-3 {
   color: #3f4250;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -311,7 +311,7 @@ exports[`DateInput > renders correctly with label description (string) 1`] = `
 
 .emotion-5 {
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.25rem;

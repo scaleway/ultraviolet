@@ -59,7 +59,7 @@ exports[`LineChart > renders correctly when data is async 1`] = `
 .emotion-6 {
   color: #3f4250;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -79,7 +79,7 @@ exports[`LineChart > renders correctly when data is async 1`] = `
 .emotion-6 {
   color: #3f4250;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -223,7 +223,7 @@ exports[`LineChart > renders correctly when data is async 1`] = `
   stroke: #e51963;
 }
 
-.emotion-21 .emotion-24[aria-checked="mixed"]+.emotion-26 .eqr7bqq6 {
+.emotion-21 .emotion-24[aria-checked="mixed"]+.emotion-26 .eqr7bqq5 {
   fill: #ffffff;
 }
 
@@ -361,7 +361,7 @@ exports[`LineChart > renders correctly when data is async 1`] = `
   stroke: #e51963;
 }
 
-.emotion-21 .emotion-24[aria-checked="mixed"]+.emotion-26 .eqr7bqq6 {
+.emotion-21 .emotion-24[aria-checked="mixed"]+.emotion-26 .eqr7bqq5 {
   fill: #ffffff;
 }
 
@@ -577,10 +577,13 @@ exports[`LineChart > renders correctly when data is async 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -589,13 +592,10 @@ exports[`LineChart > renders correctly when data is async 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .emotion-29 {
@@ -603,10 +603,13 @@ exports[`LineChart > renders correctly when data is async 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -615,13 +618,10 @@ exports[`LineChart > renders correctly when data is async 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .emotion-31 {
@@ -629,10 +629,13 @@ exports[`LineChart > renders correctly when data is async 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -641,13 +644,10 @@ exports[`LineChart > renders correctly when data is async 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.25rem;
 }
 
 .emotion-31 {
@@ -655,10 +655,13 @@ exports[`LineChart > renders correctly when data is async 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -667,13 +670,10 @@ exports[`LineChart > renders correctly when data is async 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.25rem;
 }
 
 .emotion-33 {
@@ -711,7 +711,7 @@ exports[`LineChart > renders correctly when data is async 1`] = `
 .emotion-37 {
   color: #3f4250;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -723,7 +723,7 @@ exports[`LineChart > renders correctly when data is async 1`] = `
 .emotion-37 {
   color: #3f4250;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -749,7 +749,7 @@ exports[`LineChart > renders correctly when data is async 1`] = `
 .emotion-41 {
   color: #3f4250;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -769,7 +769,7 @@ exports[`LineChart > renders correctly when data is async 1`] = `
 .emotion-41 {
   color: #3f4250;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -1212,7 +1212,7 @@ exports[`LineChart > renders correctly when legend is deselected 1`] = `
 .emotion-6 {
   color: #3f4250;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -1232,7 +1232,7 @@ exports[`LineChart > renders correctly when legend is deselected 1`] = `
 .emotion-6 {
   color: #3f4250;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -1376,7 +1376,7 @@ exports[`LineChart > renders correctly when legend is deselected 1`] = `
   stroke: #e51963;
 }
 
-.emotion-21 .emotion-24[aria-checked="mixed"]+.emotion-26 .eqr7bqq6 {
+.emotion-21 .emotion-24[aria-checked="mixed"]+.emotion-26 .eqr7bqq5 {
   fill: #ffffff;
 }
 
@@ -1514,7 +1514,7 @@ exports[`LineChart > renders correctly when legend is deselected 1`] = `
   stroke: #e51963;
 }
 
-.emotion-21 .emotion-24[aria-checked="mixed"]+.emotion-26 .eqr7bqq6 {
+.emotion-21 .emotion-24[aria-checked="mixed"]+.emotion-26 .eqr7bqq5 {
   fill: #ffffff;
 }
 
@@ -1730,10 +1730,13 @@ exports[`LineChart > renders correctly when legend is deselected 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -1742,13 +1745,10 @@ exports[`LineChart > renders correctly when legend is deselected 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .emotion-29 {
@@ -1756,10 +1756,13 @@ exports[`LineChart > renders correctly when legend is deselected 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -1768,13 +1771,10 @@ exports[`LineChart > renders correctly when legend is deselected 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .emotion-31 {
@@ -1782,10 +1782,13 @@ exports[`LineChart > renders correctly when legend is deselected 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1794,13 +1797,10 @@ exports[`LineChart > renders correctly when legend is deselected 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.25rem;
 }
 
 .emotion-31 {
@@ -1808,10 +1808,13 @@ exports[`LineChart > renders correctly when legend is deselected 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1820,13 +1823,10 @@ exports[`LineChart > renders correctly when legend is deselected 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.25rem;
 }
 
 .emotion-33 {
@@ -1864,7 +1864,7 @@ exports[`LineChart > renders correctly when legend is deselected 1`] = `
 .emotion-37 {
   color: #3f4250;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -1876,7 +1876,7 @@ exports[`LineChart > renders correctly when legend is deselected 1`] = `
 .emotion-37 {
   color: #3f4250;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -1902,7 +1902,7 @@ exports[`LineChart > renders correctly when legend is deselected 1`] = `
 .emotion-41 {
   color: #3f4250;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -1922,7 +1922,7 @@ exports[`LineChart > renders correctly when legend is deselected 1`] = `
 .emotion-41 {
   color: #3f4250;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -2151,7 +2151,7 @@ exports[`LineChart > renders correctly with detailed legend 1`] = `
 .emotion-6 {
   color: #3f4250;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -2279,7 +2279,7 @@ exports[`LineChart > renders correctly with detailed legend 1`] = `
   stroke: #e51963;
 }
 
-.emotion-21 .emotion-24[aria-checked="mixed"]+.emotion-26 .eqr7bqq6 {
+.emotion-21 .emotion-24[aria-checked="mixed"]+.emotion-26 .eqr7bqq5 {
   fill: #ffffff;
 }
 
@@ -2411,10 +2411,13 @@ exports[`LineChart > renders correctly with detailed legend 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -2423,13 +2426,10 @@ exports[`LineChart > renders correctly with detailed legend 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .emotion-31 {
@@ -2437,10 +2437,13 @@ exports[`LineChart > renders correctly with detailed legend 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2449,13 +2452,10 @@ exports[`LineChart > renders correctly with detailed legend 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.25rem;
 }
 
 .emotion-33 {
@@ -2477,7 +2477,7 @@ exports[`LineChart > renders correctly with detailed legend 1`] = `
 .emotion-37 {
   color: #3f4250;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -2496,7 +2496,7 @@ exports[`LineChart > renders correctly with detailed legend 1`] = `
 .emotion-41 {
   color: #3f4250;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -2693,7 +2693,7 @@ exports[`LineChart > renders correctly with multiple series 1`] = `
 .emotion-6 {
   color: #3f4250;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -2821,7 +2821,7 @@ exports[`LineChart > renders correctly with multiple series 1`] = `
   stroke: #e51963;
 }
 
-.emotion-21 .emotion-24[aria-checked="mixed"]+.emotion-26 .eqr7bqq6 {
+.emotion-21 .emotion-24[aria-checked="mixed"]+.emotion-26 .eqr7bqq5 {
   fill: #ffffff;
 }
 
@@ -2953,10 +2953,13 @@ exports[`LineChart > renders correctly with multiple series 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -2965,13 +2968,10 @@ exports[`LineChart > renders correctly with multiple series 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .emotion-31 {
@@ -2979,10 +2979,13 @@ exports[`LineChart > renders correctly with multiple series 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2991,13 +2994,10 @@ exports[`LineChart > renders correctly with multiple series 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.25rem;
 }
 
 .emotion-33 {
@@ -3019,7 +3019,7 @@ exports[`LineChart > renders correctly with multiple series 1`] = `
 .emotion-37 {
   color: #3f4250;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -3038,7 +3038,7 @@ exports[`LineChart > renders correctly with multiple series 1`] = `
 .emotion-41 {
   color: #3f4250;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -3459,7 +3459,7 @@ exports[`LineChart > renders correctly with timeline data 1`] = `
 .emotion-6 {
   color: #3f4250;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -3587,7 +3587,7 @@ exports[`LineChart > renders correctly with timeline data 1`] = `
   stroke: #e51963;
 }
 
-.emotion-21 .emotion-24[aria-checked="mixed"]+.emotion-26 .eqr7bqq6 {
+.emotion-21 .emotion-24[aria-checked="mixed"]+.emotion-26 .eqr7bqq5 {
   fill: #ffffff;
 }
 
@@ -3719,10 +3719,13 @@ exports[`LineChart > renders correctly with timeline data 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -3731,13 +3734,10 @@ exports[`LineChart > renders correctly with timeline data 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .emotion-31 {
@@ -3745,10 +3745,13 @@ exports[`LineChart > renders correctly with timeline data 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -3757,13 +3760,10 @@ exports[`LineChart > renders correctly with timeline data 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.25rem;
 }
 
 .emotion-33 {
@@ -3785,7 +3785,7 @@ exports[`LineChart > renders correctly with timeline data 1`] = `
 .emotion-37 {
   color: #3f4250;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -3804,7 +3804,7 @@ exports[`LineChart > renders correctly with timeline data 1`] = `
 .emotion-41 {
   color: #3f4250;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.25rem;

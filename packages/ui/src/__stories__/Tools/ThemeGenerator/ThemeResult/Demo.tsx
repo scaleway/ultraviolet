@@ -2,8 +2,14 @@ import styled from '@emotion/styled'
 import type { ChangeEvent } from 'react'
 import { useState } from 'react'
 import {
+  AlertCircleIcon,
+  ArrowRightIcon,
+  CheckIcon,
+  ClockOutlineIcon,
+} from '../../../../../../icons/src'
+import {
   Alert,
-  AvatarV2,
+  Avatar,
   Badge,
   Button,
   Card,
@@ -114,7 +120,8 @@ export const Demo = () => {
             <Badge sentiment="neutral">UV-UI</Badge>
             <Badge sentiment="primary">UV-CORE</Badge>
             <Badge sentiment="secondary">UV-FORM</Badge>
-            <Badge sentiment="danger" icon="alert">
+            <Badge sentiment="danger">
+              <AlertCircleIcon />
               Badge
             </Badge>
             <Badge sentiment="warning">Badge</Badge>
@@ -130,14 +137,14 @@ export const Demo = () => {
           <Card>
             <StyledStepList>
               <StepList.Item
-                bulletIcon="check"
+                bulletContent={<CheckIcon />}
                 sentiment="success"
                 size="small"
               >
                 Registration completed
               </StepList.Item>
               <StepList.Item
-                bulletIcon="clock-outline"
+                bulletContent={<ClockOutlineIcon />}
                 size="small"
                 sentiment="info"
               >
@@ -170,7 +177,7 @@ export const Demo = () => {
                 gap={1}
               >
                 <Stack direction="row" alignItems="center" gap={2}>
-                  <AvatarV2 variant="text" text="MA" shape="circle" />
+                  <Avatar variant="text" text="MA" shape="circle" />
                   <StyledStack>
                     <Text variant="bodySmall" as="span" sentiment="primary">
                       Review from Marc - 2 days ago
@@ -180,12 +187,9 @@ export const Demo = () => {
                     </Text>
                   </StyledStack>
                 </Stack>
-                <Button
-                  sentiment="neutral"
-                  icon="arrow-right"
-                  variant="ghost"
-                  size="small"
-                />
+                <Button sentiment="neutral" variant="ghost" size="small">
+                  <ArrowRightIcon />
+                </Button>
               </Stack>
             </Card>
             <Card>
@@ -198,9 +202,14 @@ export const Demo = () => {
                       event.target.value as 'downgrade' | 'upgrade',
                     )
                   }
-                  leftButton={{ label: 'Downgrade', value: 'downgrade' }}
-                  rightButton={{ label: 'Upgrade', value: 'upgrade' }}
-                />
+                >
+                  <SwitchButton.Option value="downgrade">
+                    Downgrade
+                  </SwitchButton.Option>
+                  <SwitchButton.Option value="upgrade">
+                    Upgrade
+                  </SwitchButton.Option>
+                </SwitchButton>
                 <RadioGroup
                   legend={`${switchState
                     .charAt(0)
@@ -213,21 +222,9 @@ export const Demo = () => {
                     setRadioState(event.target.value)
                   }
                 >
-                  <RadioGroup.Radio
-                    value="option-1"
-                    name="option-1"
-                    label="Version 1.3.0"
-                  />
-                  <RadioGroup.Radio
-                    value="option-2"
-                    name="option-2"
-                    label="Version 1.2.0"
-                  />
-                  <RadioGroup.Radio
-                    value="option-3"
-                    name="option-3"
-                    label="Version 1.1.0"
-                  />
+                  <RadioGroup.Radio value="option-1" label="Version 1.3.0" />
+                  <RadioGroup.Radio value="option-2" label="Version 1.2.0" />
+                  <RadioGroup.Radio value="option-3" label="Version 1.1.0" />
                 </RadioGroup>
               </Stack>
             </Card>

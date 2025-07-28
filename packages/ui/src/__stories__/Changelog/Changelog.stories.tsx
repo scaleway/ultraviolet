@@ -1,4 +1,4 @@
-import { Markdown } from '@storybook/blocks'
+import { Markdown } from '@storybook/addon-docs/blocks'
 import { useState } from 'react'
 import ChangelogMdForm from '../../../../form/CHANGELOG.md?raw'
 import ChangelogMdIcons from '../../../../icons/CHANGELOG.md?raw'

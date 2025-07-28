@@ -1,4 +1,4 @@
-import type { Meta } from '@storybook/react'
+import type { Meta } from '@storybook/react-vite'
 import { Loader } from '..'
 import { Stack } from '../../Stack'
 
@@ -17,8 +17,5 @@ export default {
 export { Playground } from './Playground.stories'
 export { Percentages } from './Percentages.stories'
 export { Sizes } from './Sizes.stories'
-export { Colors } from './Colors.stories'
-export { TrailColor } from './TrailColor.stories'
-export { StrokeWidth } from './StrokeWidth.stories'
-export { Text } from './Text.stories'
+export { Sentiments } from './Sentiments.stories'
 export { Active } from './Active.stories'

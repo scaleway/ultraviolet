@@ -1,4 +1,4 @@
-import type { StoryFn } from '@storybook/react'
+import type { StoryFn } from '@storybook/react-vite'
 import { Alert } from '../../Alert'
 import { Badge } from '../../Badge'
 import { Stack } from '../../Stack'

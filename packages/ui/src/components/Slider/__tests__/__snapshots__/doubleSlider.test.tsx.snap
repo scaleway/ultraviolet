@@ -7,10 +7,10 @@ exports[`Double slider > handles correctly onChange custom scale double 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 1.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -19,10 +19,10 @@ exports[`Double slider > handles correctly onChange custom scale double 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 .emotion-0[data-options='true'][data-double='true'] {
@@ -34,10 +34,10 @@ exports[`Double slider > handles correctly onChange custom scale double 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 1.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -46,10 +46,10 @@ exports[`Double slider > handles correctly onChange custom scale double 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 .emotion-0[data-options='true'][data-double='true'] {
@@ -61,10 +61,10 @@ exports[`Double slider > handles correctly onChange custom scale double 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -73,10 +73,10 @@ exports[`Double slider > handles correctly onChange custom scale double 1`] = `
   -ms-flex-pack: left;
   -webkit-justify-content: left;
   justify-content: left;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-2 {
@@ -84,10 +84,10 @@ exports[`Double slider > handles correctly onChange custom scale double 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -96,10 +96,10 @@ exports[`Double slider > handles correctly onChange custom scale double 1`] = `
   -ms-flex-pack: left;
   -webkit-justify-content: left;
   justify-content: left;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-4 {
@@ -107,10 +107,11 @@ exports[`Double slider > handles correctly onChange custom scale double 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 100%;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -119,11 +120,10 @@ exports[`Double slider > handles correctly onChange custom scale double 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  width: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-4 {
@@ -131,10 +131,11 @@ exports[`Double slider > handles correctly onChange custom scale double 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 100%;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -143,11 +144,10 @@ exports[`Double slider > handles correctly onChange custom scale double 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  width: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-6 {
@@ -155,10 +155,10 @@ exports[`Double slider > handles correctly onChange custom scale double 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -166,10 +166,9 @@ exports[`Double slider > handles correctly onChange custom scale double 1`] = `
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .emotion-6 {
@@ -177,10 +176,10 @@ exports[`Double slider > handles correctly onChange custom scale double 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -188,16 +187,15 @@ exports[`Double slider > handles correctly onChange custom scale double 1`] = `
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .emotion-9 {
   color: #3f4250;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -213,7 +211,7 @@ exports[`Double slider > handles correctly onChange custom scale double 1`] = `
 .emotion-9 {
   color: #3f4250;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -785,7 +783,7 @@ exports[`Double slider > handles correctly onChange custom scale double 1`] = `
 .emotion-28 {
   color: #641cb3;
   font-size: 0.75rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1rem;
@@ -797,7 +795,7 @@ exports[`Double slider > handles correctly onChange custom scale double 1`] = `
 .emotion-28 {
   color: #641cb3;
   font-size: 0.75rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1rem;
@@ -865,7 +863,7 @@ exports[`Double slider > handles correctly onChange custom scale double 1`] = `
 .emotion-32 {
   color: #3f4250;
   font-size: 0.75rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1rem;
@@ -877,7 +875,7 @@ exports[`Double slider > handles correctly onChange custom scale double 1`] = `
 .emotion-32 {
   color: #3f4250;
   font-size: 0.75rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1rem;
@@ -1135,10 +1133,10 @@ exports[`Double slider > handles correctly onChange double 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -1147,10 +1145,9 @@ exports[`Double slider > handles correctly onChange double 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .emotion-0[data-options='true'][data-double='true'] {
@@ -1162,10 +1159,10 @@ exports[`Double slider > handles correctly onChange double 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -1174,10 +1171,9 @@ exports[`Double slider > handles correctly onChange double 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .emotion-0[data-options='true'][data-double='true'] {
@@ -1189,10 +1185,10 @@ exports[`Double slider > handles correctly onChange double 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -1201,10 +1197,10 @@ exports[`Double slider > handles correctly onChange double 1`] = `
   -ms-flex-pack: left;
   -webkit-justify-content: left;
   justify-content: left;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-2 {
@@ -1212,10 +1208,10 @@ exports[`Double slider > handles correctly onChange double 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -1224,10 +1220,10 @@ exports[`Double slider > handles correctly onChange double 1`] = `
   -ms-flex-pack: left;
   -webkit-justify-content: left;
   justify-content: left;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-4 {
@@ -1235,10 +1231,11 @@ exports[`Double slider > handles correctly onChange double 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 100%;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -1247,11 +1244,10 @@ exports[`Double slider > handles correctly onChange double 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  width: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-4 {
@@ -1259,78 +1255,11 @@ exports[`Double slider > handles correctly onChange double 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
   -webkit-box-flex-wrap: nowrap;
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   width: 100%;
-}
-
-.emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.emotion-8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -1339,10 +1268,52 @@ exports[`Double slider > handles correctly onChange double 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-flex-wrap: nowrap;
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .emotion-8 {
@@ -1350,10 +1321,10 @@ exports[`Double slider > handles correctly onChange double 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -1362,10 +1333,33 @@ exports[`Double slider > handles correctly onChange double 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.emotion-8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-flex-wrap: nowrap;
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .emotion-10 {
@@ -1537,7 +1531,7 @@ exports[`Double slider > handles correctly onChange double 1`] = `
   width: 100%;
   color: #3f4250;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: Regular;
   line-height: 1.25rem;
   text-align: center;
@@ -1575,7 +1569,7 @@ exports[`Double slider > handles correctly onChange double 1`] = `
 .emotion-15[data-size='large'] {
   height: 3rem;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: Regular;
   line-height: 1.5rem;
 }
@@ -1592,11 +1586,11 @@ exports[`Double slider > handles correctly onChange double 1`] = `
   border-block: 1px solid #d9dadd;
 }
 
-.emotion-15:-moz-read-only~.e1b9qdjy2 {
+.emotion-15:-moz-read-only~.exvap482 {
   background: #f9f9fa;
 }
 
-.emotion-15:read-only~.e1b9qdjy2 {
+.emotion-15:read-only~.exvap482 {
   background: #f9f9fa;
 }
 
@@ -1607,7 +1601,7 @@ exports[`Double slider > handles correctly onChange double 1`] = `
   border-block: 1px solid #e9eaeb;
 }
 
-.emotion-15:disabled~.e1b9qdjy2 {
+.emotion-15:disabled~.exvap482 {
   background: #f3f3f4;
   cursor: not-allowed;
   -webkit-user-select: none;
@@ -1616,7 +1610,7 @@ exports[`Double slider > handles correctly onChange double 1`] = `
   user-select: none;
 }
 
-.emotion-15:placeholder-shown~.e1b9qdjy2 {
+.emotion-15:placeholder-shown~.exvap482 {
   color: #727683;
   font-size: 1rem;
 }
@@ -1632,7 +1626,7 @@ exports[`Double slider > handles correctly onChange double 1`] = `
   width: 100%;
   color: #3f4250;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: Regular;
   line-height: 1.25rem;
   text-align: center;
@@ -1670,7 +1664,7 @@ exports[`Double slider > handles correctly onChange double 1`] = `
 .emotion-15[data-size='large'] {
   height: 3rem;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: Regular;
   line-height: 1.5rem;
 }
@@ -1687,11 +1681,11 @@ exports[`Double slider > handles correctly onChange double 1`] = `
   border-block: 1px solid #d9dadd;
 }
 
-.emotion-15:-moz-read-only~.e1b9qdjy2 {
+.emotion-15:-moz-read-only~.exvap482 {
   background: #f9f9fa;
 }
 
-.emotion-15:read-only~.e1b9qdjy2 {
+.emotion-15:read-only~.exvap482 {
   background: #f9f9fa;
 }
 
@@ -1702,7 +1696,7 @@ exports[`Double slider > handles correctly onChange double 1`] = `
   border-block: 1px solid #e9eaeb;
 }
 
-.emotion-15:disabled~.e1b9qdjy2 {
+.emotion-15:disabled~.exvap482 {
   background: #f3f3f4;
   cursor: not-allowed;
   -webkit-user-select: none;
@@ -1711,7 +1705,7 @@ exports[`Double slider > handles correctly onChange double 1`] = `
   user-select: none;
 }
 
-.emotion-15:placeholder-shown~.e1b9qdjy2 {
+.emotion-15:placeholder-shown~.exvap482 {
   color: #727683;
   font-size: 1rem;
 }
@@ -2112,7 +2106,7 @@ exports[`Double slider > handles correctly onChange double 1`] = `
                       placeholder=""
                       step="1"
                       type="number"
-                      value="3"
+                      value="35"
                     />
                   </div>
                 </div>
@@ -2208,10 +2202,10 @@ exports[`Double slider > handles correctly onChange with min and max double 1`] 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -2220,10 +2214,9 @@ exports[`Double slider > handles correctly onChange with min and max double 1`] 
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .emotion-0[data-options='true'][data-double='true'] {
@@ -2235,10 +2228,10 @@ exports[`Double slider > handles correctly onChange with min and max double 1`] 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -2247,10 +2240,9 @@ exports[`Double slider > handles correctly onChange with min and max double 1`] 
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .emotion-0[data-options='true'][data-double='true'] {
@@ -2262,10 +2254,10 @@ exports[`Double slider > handles correctly onChange with min and max double 1`] 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -2274,10 +2266,10 @@ exports[`Double slider > handles correctly onChange with min and max double 1`] 
   -ms-flex-pack: left;
   -webkit-justify-content: left;
   justify-content: left;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-2 {
@@ -2285,10 +2277,10 @@ exports[`Double slider > handles correctly onChange with min and max double 1`] 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -2297,10 +2289,10 @@ exports[`Double slider > handles correctly onChange with min and max double 1`] 
   -ms-flex-pack: left;
   -webkit-justify-content: left;
   justify-content: left;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-4 {
@@ -2308,10 +2300,11 @@ exports[`Double slider > handles correctly onChange with min and max double 1`] 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 100%;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -2320,11 +2313,10 @@ exports[`Double slider > handles correctly onChange with min and max double 1`] 
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  width: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-4 {
@@ -2332,78 +2324,11 @@ exports[`Double slider > handles correctly onChange with min and max double 1`] 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
   -webkit-box-flex-wrap: nowrap;
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   width: 100%;
-}
-
-.emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.emotion-8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -2412,10 +2337,52 @@ exports[`Double slider > handles correctly onChange with min and max double 1`] 
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-flex-wrap: nowrap;
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .emotion-8 {
@@ -2423,10 +2390,10 @@ exports[`Double slider > handles correctly onChange with min and max double 1`] 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -2435,10 +2402,33 @@ exports[`Double slider > handles correctly onChange with min and max double 1`] 
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.emotion-8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-flex-wrap: nowrap;
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .emotion-10 {
@@ -2610,7 +2600,7 @@ exports[`Double slider > handles correctly onChange with min and max double 1`] 
   width: 100%;
   color: #3f4250;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: Regular;
   line-height: 1.25rem;
   text-align: center;
@@ -2648,7 +2638,7 @@ exports[`Double slider > handles correctly onChange with min and max double 1`] 
 .emotion-15[data-size='large'] {
   height: 3rem;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: Regular;
   line-height: 1.5rem;
 }
@@ -2665,11 +2655,11 @@ exports[`Double slider > handles correctly onChange with min and max double 1`] 
   border-block: 1px solid #d9dadd;
 }
 
-.emotion-15:-moz-read-only~.e1b9qdjy2 {
+.emotion-15:-moz-read-only~.exvap482 {
   background: #f9f9fa;
 }
 
-.emotion-15:read-only~.e1b9qdjy2 {
+.emotion-15:read-only~.exvap482 {
   background: #f9f9fa;
 }
 
@@ -2680,7 +2670,7 @@ exports[`Double slider > handles correctly onChange with min and max double 1`] 
   border-block: 1px solid #e9eaeb;
 }
 
-.emotion-15:disabled~.e1b9qdjy2 {
+.emotion-15:disabled~.exvap482 {
   background: #f3f3f4;
   cursor: not-allowed;
   -webkit-user-select: none;
@@ -2689,7 +2679,7 @@ exports[`Double slider > handles correctly onChange with min and max double 1`] 
   user-select: none;
 }
 
-.emotion-15:placeholder-shown~.e1b9qdjy2 {
+.emotion-15:placeholder-shown~.exvap482 {
   color: #727683;
   font-size: 1rem;
 }
@@ -2705,7 +2695,7 @@ exports[`Double slider > handles correctly onChange with min and max double 1`] 
   width: 100%;
   color: #3f4250;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: Regular;
   line-height: 1.25rem;
   text-align: center;
@@ -2743,7 +2733,7 @@ exports[`Double slider > handles correctly onChange with min and max double 1`] 
 .emotion-15[data-size='large'] {
   height: 3rem;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: Regular;
   line-height: 1.5rem;
 }
@@ -2760,11 +2750,11 @@ exports[`Double slider > handles correctly onChange with min and max double 1`] 
   border-block: 1px solid #d9dadd;
 }
 
-.emotion-15:-moz-read-only~.e1b9qdjy2 {
+.emotion-15:-moz-read-only~.exvap482 {
   background: #f9f9fa;
 }
 
-.emotion-15:read-only~.e1b9qdjy2 {
+.emotion-15:read-only~.exvap482 {
   background: #f9f9fa;
 }
 
@@ -2775,7 +2765,7 @@ exports[`Double slider > handles correctly onChange with min and max double 1`] 
   border-block: 1px solid #e9eaeb;
 }
 
-.emotion-15:disabled~.e1b9qdjy2 {
+.emotion-15:disabled~.exvap482 {
   background: #f3f3f4;
   cursor: not-allowed;
   -webkit-user-select: none;
@@ -2784,7 +2774,7 @@ exports[`Double slider > handles correctly onChange with min and max double 1`] 
   user-select: none;
 }
 
-.emotion-15:placeholder-shown~.e1b9qdjy2 {
+.emotion-15:placeholder-shown~.exvap482 {
   color: #727683;
   font-size: 1rem;
 }
@@ -3533,10 +3523,10 @@ exports[`Double slider > renders correctly direction row double 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -3545,10 +3535,10 @@ exports[`Double slider > renders correctly direction row double 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-0[data-options='true'][data-double='true'] {
@@ -3560,10 +3550,10 @@ exports[`Double slider > renders correctly direction row double 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -3572,10 +3562,10 @@ exports[`Double slider > renders correctly direction row double 1`] = `
   -ms-flex-pack: left;
   -webkit-justify-content: left;
   justify-content: left;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-4 {
@@ -3583,10 +3573,10 @@ exports[`Double slider > renders correctly direction row double 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -3594,16 +3584,15 @@ exports[`Double slider > renders correctly direction row double 1`] = `
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .emotion-7 {
   color: #3f4250;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -3618,10 +3607,11 @@ exports[`Double slider > renders correctly direction row double 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 100%;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -3630,17 +3620,16 @@ exports[`Double slider > renders correctly direction row double 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  width: 100%;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.5rem;
 }
 
 .emotion-12 {
   color: #3f4250;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -4043,10 +4032,10 @@ exports[`Double slider > renders correctly direction row double with input 1`] =
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -4055,10 +4044,9 @@ exports[`Double slider > renders correctly direction row double with input 1`] =
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .emotion-0[data-options='true'][data-double='true'] {
@@ -4070,10 +4058,10 @@ exports[`Double slider > renders correctly direction row double with input 1`] =
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -4082,10 +4070,10 @@ exports[`Double slider > renders correctly direction row double with input 1`] =
   -ms-flex-pack: left;
   -webkit-justify-content: left;
   justify-content: left;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-4 {
@@ -4093,10 +4081,10 @@ exports[`Double slider > renders correctly direction row double with input 1`] =
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -4104,16 +4092,15 @@ exports[`Double slider > renders correctly direction row double with input 1`] =
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .emotion-7 {
   color: #3f4250;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -4128,10 +4115,11 @@ exports[`Double slider > renders correctly direction row double with input 1`] =
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 100%;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -4140,11 +4128,10 @@ exports[`Double slider > renders correctly direction row double with input 1`] =
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  width: 100%;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.5rem;
 }
 
 .emotion-11 {
@@ -4152,10 +4139,10 @@ exports[`Double slider > renders correctly direction row double with input 1`] =
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -4164,10 +4151,10 @@ exports[`Double slider > renders correctly direction row double with input 1`] =
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .emotion-13 {
@@ -4258,7 +4245,7 @@ exports[`Double slider > renders correctly direction row double with input 1`] =
   width: 100%;
   color: #3f4250;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: Regular;
   line-height: 1.25rem;
   text-align: center;
@@ -4296,7 +4283,7 @@ exports[`Double slider > renders correctly direction row double with input 1`] =
 .emotion-18[data-size='large'] {
   height: 3rem;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: Regular;
   line-height: 1.5rem;
 }
@@ -4313,11 +4300,11 @@ exports[`Double slider > renders correctly direction row double with input 1`] =
   border-block: 1px solid #d9dadd;
 }
 
-.emotion-18:-moz-read-only~.e1b9qdjy2 {
+.emotion-18:-moz-read-only~.exvap482 {
   background: #f9f9fa;
 }
 
-.emotion-18:read-only~.e1b9qdjy2 {
+.emotion-18:read-only~.exvap482 {
   background: #f9f9fa;
 }
 
@@ -4328,7 +4315,7 @@ exports[`Double slider > renders correctly direction row double with input 1`] =
   border-block: 1px solid #e9eaeb;
 }
 
-.emotion-18:disabled~.e1b9qdjy2 {
+.emotion-18:disabled~.exvap482 {
   background: #f3f3f4;
   cursor: not-allowed;
   -webkit-user-select: none;
@@ -4337,7 +4324,7 @@ exports[`Double slider > renders correctly direction row double with input 1`] =
   user-select: none;
 }
 
-.emotion-18:placeholder-shown~.e1b9qdjy2 {
+.emotion-18:placeholder-shown~.exvap482 {
   color: #727683;
   font-size: 1rem;
 }
@@ -4793,10 +4780,10 @@ exports[`Double slider > renders correctly double  1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -4805,10 +4792,10 @@ exports[`Double slider > renders correctly double  1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-0[data-options='true'][data-double='true'] {
@@ -4820,10 +4807,10 @@ exports[`Double slider > renders correctly double  1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -4832,10 +4819,10 @@ exports[`Double slider > renders correctly double  1`] = `
   -ms-flex-pack: left;
   -webkit-justify-content: left;
   justify-content: left;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-4 {
@@ -4843,10 +4830,10 @@ exports[`Double slider > renders correctly double  1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -4854,16 +4841,15 @@ exports[`Double slider > renders correctly double  1`] = `
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .emotion-7 {
   color: #3f4250;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -4878,10 +4864,11 @@ exports[`Double slider > renders correctly double  1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 100%;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -4890,17 +4877,16 @@ exports[`Double slider > renders correctly double  1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  width: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-14 {
   color: #3f4250;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -5306,10 +5292,10 @@ exports[`Double slider > renders correctly double custom tooltip 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -5318,10 +5304,10 @@ exports[`Double slider > renders correctly double custom tooltip 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-0[data-options='true'][data-double='true'] {
@@ -5333,10 +5319,10 @@ exports[`Double slider > renders correctly double custom tooltip 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -5345,10 +5331,10 @@ exports[`Double slider > renders correctly double custom tooltip 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-0[data-options='true'][data-double='true'] {
@@ -5360,10 +5346,10 @@ exports[`Double slider > renders correctly double custom tooltip 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -5372,10 +5358,10 @@ exports[`Double slider > renders correctly double custom tooltip 1`] = `
   -ms-flex-pack: left;
   -webkit-justify-content: left;
   justify-content: left;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-2 {
@@ -5383,10 +5369,10 @@ exports[`Double slider > renders correctly double custom tooltip 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -5395,10 +5381,10 @@ exports[`Double slider > renders correctly double custom tooltip 1`] = `
   -ms-flex-pack: left;
   -webkit-justify-content: left;
   justify-content: left;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-4 {
@@ -5406,10 +5392,10 @@ exports[`Double slider > renders correctly double custom tooltip 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -5417,10 +5403,9 @@ exports[`Double slider > renders correctly double custom tooltip 1`] = `
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .emotion-4 {
@@ -5428,10 +5413,10 @@ exports[`Double slider > renders correctly double custom tooltip 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -5439,16 +5424,15 @@ exports[`Double slider > renders correctly double custom tooltip 1`] = `
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .emotion-7 {
   color: #3f4250;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -5461,7 +5445,7 @@ exports[`Double slider > renders correctly double custom tooltip 1`] = `
 .emotion-7 {
   color: #3f4250;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -5476,10 +5460,11 @@ exports[`Double slider > renders correctly double custom tooltip 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 100%;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -5488,11 +5473,10 @@ exports[`Double slider > renders correctly double custom tooltip 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  width: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-9 {
@@ -5500,10 +5484,11 @@ exports[`Double slider > renders correctly double custom tooltip 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 100%;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -5512,17 +5497,16 @@ exports[`Double slider > renders correctly double custom tooltip 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  width: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-14 {
   color: #3f4250;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -5538,7 +5522,7 @@ exports[`Double slider > renders correctly double custom tooltip 1`] = `
 .emotion-14 {
   color: #3f4250;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -6025,10 +6009,10 @@ exports[`Double slider > renders correctly double default toolipt  1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -6037,10 +6021,10 @@ exports[`Double slider > renders correctly double default toolipt  1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-0[data-options='true'][data-double='true'] {
@@ -6052,10 +6036,10 @@ exports[`Double slider > renders correctly double default toolipt  1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -6064,10 +6048,10 @@ exports[`Double slider > renders correctly double default toolipt  1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-0[data-options='true'][data-double='true'] {
@@ -6079,10 +6063,10 @@ exports[`Double slider > renders correctly double default toolipt  1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -6091,10 +6075,10 @@ exports[`Double slider > renders correctly double default toolipt  1`] = `
   -ms-flex-pack: left;
   -webkit-justify-content: left;
   justify-content: left;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-2 {
@@ -6102,10 +6086,10 @@ exports[`Double slider > renders correctly double default toolipt  1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -6114,10 +6098,10 @@ exports[`Double slider > renders correctly double default toolipt  1`] = `
   -ms-flex-pack: left;
   -webkit-justify-content: left;
   justify-content: left;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-4 {
@@ -6125,10 +6109,10 @@ exports[`Double slider > renders correctly double default toolipt  1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -6136,10 +6120,9 @@ exports[`Double slider > renders correctly double default toolipt  1`] = `
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .emotion-4 {
@@ -6147,10 +6130,10 @@ exports[`Double slider > renders correctly double default toolipt  1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -6158,16 +6141,15 @@ exports[`Double slider > renders correctly double default toolipt  1`] = `
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .emotion-7 {
   color: #3f4250;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -6180,7 +6162,7 @@ exports[`Double slider > renders correctly double default toolipt  1`] = `
 .emotion-7 {
   color: #3f4250;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -6195,10 +6177,11 @@ exports[`Double slider > renders correctly double default toolipt  1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 100%;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -6207,11 +6190,10 @@ exports[`Double slider > renders correctly double default toolipt  1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  width: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-9 {
@@ -6219,10 +6201,11 @@ exports[`Double slider > renders correctly double default toolipt  1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 100%;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -6231,17 +6214,16 @@ exports[`Double slider > renders correctly double default toolipt  1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  width: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-14 {
   color: #3f4250;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -6257,7 +6239,7 @@ exports[`Double slider > renders correctly double default toolipt  1`] = `
 .emotion-14 {
   color: #3f4250;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -6744,10 +6726,10 @@ exports[`Double slider > renders correctly double disabled 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -6756,10 +6738,10 @@ exports[`Double slider > renders correctly double disabled 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-0[data-options='true'][data-double='true'] {
@@ -6771,10 +6753,10 @@ exports[`Double slider > renders correctly double disabled 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -6783,10 +6765,10 @@ exports[`Double slider > renders correctly double disabled 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-0[data-options='true'][data-double='true'] {
@@ -6798,10 +6780,10 @@ exports[`Double slider > renders correctly double disabled 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -6810,10 +6792,10 @@ exports[`Double slider > renders correctly double disabled 1`] = `
   -ms-flex-pack: left;
   -webkit-justify-content: left;
   justify-content: left;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-2 {
@@ -6821,10 +6803,10 @@ exports[`Double slider > renders correctly double disabled 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -6833,10 +6815,10 @@ exports[`Double slider > renders correctly double disabled 1`] = `
   -ms-flex-pack: left;
   -webkit-justify-content: left;
   justify-content: left;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-4 {
@@ -6844,10 +6826,10 @@ exports[`Double slider > renders correctly double disabled 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -6855,10 +6837,9 @@ exports[`Double slider > renders correctly double disabled 1`] = `
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .emotion-4 {
@@ -6866,10 +6847,10 @@ exports[`Double slider > renders correctly double disabled 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -6877,16 +6858,15 @@ exports[`Double slider > renders correctly double disabled 1`] = `
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .emotion-7 {
   color: #3f4250;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -6899,7 +6879,7 @@ exports[`Double slider > renders correctly double disabled 1`] = `
 .emotion-7 {
   color: #3f4250;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -6914,10 +6894,11 @@ exports[`Double slider > renders correctly double disabled 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 100%;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -6926,11 +6907,10 @@ exports[`Double slider > renders correctly double disabled 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  width: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-9 {
@@ -6938,10 +6918,11 @@ exports[`Double slider > renders correctly double disabled 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 100%;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -6950,17 +6931,16 @@ exports[`Double slider > renders correctly double disabled 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  width: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-14 {
   color: #3f4250;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -6976,7 +6956,7 @@ exports[`Double slider > renders correctly double disabled 1`] = `
 .emotion-14 {
   color: #3f4250;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -7403,10 +7383,10 @@ exports[`Double slider > renders correctly double input 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -7415,10 +7395,9 @@ exports[`Double slider > renders correctly double input 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .emotion-0[data-options='true'][data-double='true'] {
@@ -7430,10 +7409,10 @@ exports[`Double slider > renders correctly double input 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -7442,10 +7421,10 @@ exports[`Double slider > renders correctly double input 1`] = `
   -ms-flex-pack: left;
   -webkit-justify-content: left;
   justify-content: left;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-2 {
@@ -7453,10 +7432,10 @@ exports[`Double slider > renders correctly double input 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -7465,10 +7444,10 @@ exports[`Double slider > renders correctly double input 1`] = `
   -ms-flex-pack: left;
   -webkit-justify-content: left;
   justify-content: left;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-4 {
@@ -7476,10 +7455,10 @@ exports[`Double slider > renders correctly double input 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -7487,10 +7466,9 @@ exports[`Double slider > renders correctly double input 1`] = `
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .emotion-4 {
@@ -7498,10 +7476,10 @@ exports[`Double slider > renders correctly double input 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -7509,16 +7487,15 @@ exports[`Double slider > renders correctly double input 1`] = `
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .emotion-7 {
   color: #3f4250;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -7531,7 +7508,7 @@ exports[`Double slider > renders correctly double input 1`] = `
 .emotion-7 {
   color: #3f4250;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -7546,10 +7523,11 @@ exports[`Double slider > renders correctly double input 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 100%;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -7558,11 +7536,10 @@ exports[`Double slider > renders correctly double input 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  width: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-9 {
@@ -7570,10 +7547,11 @@ exports[`Double slider > renders correctly double input 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 100%;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -7582,11 +7560,10 @@ exports[`Double slider > renders correctly double input 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  width: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-13 {
@@ -7594,10 +7571,10 @@ exports[`Double slider > renders correctly double input 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -7606,10 +7583,10 @@ exports[`Double slider > renders correctly double input 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .emotion-15 {
@@ -7700,7 +7677,7 @@ exports[`Double slider > renders correctly double input 1`] = `
   width: 100%;
   color: #3f4250;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: Regular;
   line-height: 1.25rem;
   text-align: center;
@@ -7738,7 +7715,7 @@ exports[`Double slider > renders correctly double input 1`] = `
 .emotion-20[data-size='large'] {
   height: 3rem;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: Regular;
   line-height: 1.5rem;
 }
@@ -7755,11 +7732,11 @@ exports[`Double slider > renders correctly double input 1`] = `
   border-block: 1px solid #d9dadd;
 }
 
-.emotion-20:-moz-read-only~.e1b9qdjy2 {
+.emotion-20:-moz-read-only~.exvap482 {
   background: #f9f9fa;
 }
 
-.emotion-20:read-only~.e1b9qdjy2 {
+.emotion-20:read-only~.exvap482 {
   background: #f9f9fa;
 }
 
@@ -7770,7 +7747,7 @@ exports[`Double slider > renders correctly double input 1`] = `
   border-block: 1px solid #e9eaeb;
 }
 
-.emotion-20:disabled~.e1b9qdjy2 {
+.emotion-20:disabled~.exvap482 {
   background: #f3f3f4;
   cursor: not-allowed;
   -webkit-user-select: none;
@@ -7779,7 +7756,7 @@ exports[`Double slider > renders correctly double input 1`] = `
   user-select: none;
 }
 
-.emotion-20:placeholder-shown~.e1b9qdjy2 {
+.emotion-20:placeholder-shown~.exvap482 {
   color: #727683;
   font-size: 1rem;
 }
@@ -8286,10 +8263,10 @@ exports[`Double slider > renders correctly double min max 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -8298,10 +8275,10 @@ exports[`Double slider > renders correctly double min max 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-0[data-options='true'][data-double='true'] {
@@ -8313,10 +8290,10 @@ exports[`Double slider > renders correctly double min max 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -8325,10 +8302,10 @@ exports[`Double slider > renders correctly double min max 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-0[data-options='true'][data-double='true'] {
@@ -8340,10 +8317,10 @@ exports[`Double slider > renders correctly double min max 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -8352,10 +8329,10 @@ exports[`Double slider > renders correctly double min max 1`] = `
   -ms-flex-pack: left;
   -webkit-justify-content: left;
   justify-content: left;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-2 {
@@ -8363,10 +8340,10 @@ exports[`Double slider > renders correctly double min max 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -8375,10 +8352,10 @@ exports[`Double slider > renders correctly double min max 1`] = `
   -ms-flex-pack: left;
   -webkit-justify-content: left;
   justify-content: left;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-4 {
@@ -8386,10 +8363,10 @@ exports[`Double slider > renders correctly double min max 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -8397,10 +8374,9 @@ exports[`Double slider > renders correctly double min max 1`] = `
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .emotion-4 {
@@ -8408,10 +8384,10 @@ exports[`Double slider > renders correctly double min max 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -8419,16 +8395,15 @@ exports[`Double slider > renders correctly double min max 1`] = `
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .emotion-7 {
   color: #3f4250;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -8441,7 +8416,7 @@ exports[`Double slider > renders correctly double min max 1`] = `
 .emotion-7 {
   color: #3f4250;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -8456,10 +8431,11 @@ exports[`Double slider > renders correctly double min max 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 100%;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -8468,11 +8444,10 @@ exports[`Double slider > renders correctly double min max 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  width: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-9 {
@@ -8480,10 +8455,11 @@ exports[`Double slider > renders correctly double min max 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 100%;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -8492,17 +8468,16 @@ exports[`Double slider > renders correctly double min max 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  width: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-14 {
   color: #3f4250;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -8518,7 +8493,7 @@ exports[`Double slider > renders correctly double min max 1`] = `
 .emotion-14 {
   color: #3f4250;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -9097,10 +9072,10 @@ exports[`Double slider > renders correctly double step 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -9109,10 +9084,10 @@ exports[`Double slider > renders correctly double step 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-0[data-options='true'][data-double='true'] {
@@ -9124,10 +9099,10 @@ exports[`Double slider > renders correctly double step 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -9136,10 +9111,10 @@ exports[`Double slider > renders correctly double step 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-0[data-options='true'][data-double='true'] {
@@ -9151,10 +9126,10 @@ exports[`Double slider > renders correctly double step 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -9163,10 +9138,10 @@ exports[`Double slider > renders correctly double step 1`] = `
   -ms-flex-pack: left;
   -webkit-justify-content: left;
   justify-content: left;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-2 {
@@ -9174,10 +9149,10 @@ exports[`Double slider > renders correctly double step 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -9186,10 +9161,10 @@ exports[`Double slider > renders correctly double step 1`] = `
   -ms-flex-pack: left;
   -webkit-justify-content: left;
   justify-content: left;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-4 {
@@ -9197,10 +9172,10 @@ exports[`Double slider > renders correctly double step 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -9208,10 +9183,9 @@ exports[`Double slider > renders correctly double step 1`] = `
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .emotion-4 {
@@ -9219,10 +9193,10 @@ exports[`Double slider > renders correctly double step 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -9230,16 +9204,15 @@ exports[`Double slider > renders correctly double step 1`] = `
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .emotion-7 {
   color: #3f4250;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -9252,7 +9225,7 @@ exports[`Double slider > renders correctly double step 1`] = `
 .emotion-7 {
   color: #3f4250;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -9267,10 +9240,11 @@ exports[`Double slider > renders correctly double step 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 100%;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -9279,11 +9253,10 @@ exports[`Double slider > renders correctly double step 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  width: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-9 {
@@ -9291,10 +9264,11 @@ exports[`Double slider > renders correctly double step 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 100%;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -9303,17 +9277,16 @@ exports[`Double slider > renders correctly double step 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  width: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-14 {
   color: #3f4250;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -9329,7 +9302,7 @@ exports[`Double slider > renders correctly double step 1`] = `
 .emotion-14 {
   color: #3f4250;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -9782,10 +9755,10 @@ exports[`Double slider > renders correctly double with custom scale 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 1.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -9794,10 +9767,10 @@ exports[`Double slider > renders correctly double with custom scale 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 .emotion-0[data-options='true'][data-double='true'] {
@@ -9809,10 +9782,10 @@ exports[`Double slider > renders correctly double with custom scale 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -9821,10 +9794,10 @@ exports[`Double slider > renders correctly double with custom scale 1`] = `
   -ms-flex-pack: left;
   -webkit-justify-content: left;
   justify-content: left;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-2 {
@@ -9832,10 +9805,10 @@ exports[`Double slider > renders correctly double with custom scale 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -9844,10 +9817,10 @@ exports[`Double slider > renders correctly double with custom scale 1`] = `
   -ms-flex-pack: left;
   -webkit-justify-content: left;
   justify-content: left;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-4 {
@@ -9855,10 +9828,10 @@ exports[`Double slider > renders correctly double with custom scale 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -9866,10 +9839,9 @@ exports[`Double slider > renders correctly double with custom scale 1`] = `
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .emotion-4 {
@@ -9877,10 +9849,10 @@ exports[`Double slider > renders correctly double with custom scale 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -9888,16 +9860,15 @@ exports[`Double slider > renders correctly double with custom scale 1`] = `
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .emotion-7 {
   color: #3f4250;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -9910,7 +9881,7 @@ exports[`Double slider > renders correctly double with custom scale 1`] = `
 .emotion-7 {
   color: #3f4250;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -9925,10 +9896,11 @@ exports[`Double slider > renders correctly double with custom scale 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 100%;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -9937,11 +9909,10 @@ exports[`Double slider > renders correctly double with custom scale 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  width: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-9 {
@@ -9949,10 +9920,11 @@ exports[`Double slider > renders correctly double with custom scale 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 100%;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -9961,17 +9933,16 @@ exports[`Double slider > renders correctly double with custom scale 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  width: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-14 {
   color: #3f4250;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -9987,7 +9958,7 @@ exports[`Double slider > renders correctly double with custom scale 1`] = `
 .emotion-14 {
   color: #3f4250;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -10643,7 +10614,7 @@ exports[`Double slider > renders correctly double with custom scale 1`] = `
 .emotion-33 {
   color: #641cb3;
   font-size: 0.75rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1rem;
@@ -10683,7 +10654,7 @@ exports[`Double slider > renders correctly double with custom scale 1`] = `
 .emotion-37 {
   color: #3f4250;
   font-size: 0.75rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1rem;
@@ -10895,10 +10866,10 @@ exports[`Double slider > renders correctly double with custom ticks 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 1.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -10907,10 +10878,10 @@ exports[`Double slider > renders correctly double with custom ticks 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 .emotion-0[data-options='true'][data-double='true'] {
@@ -10922,10 +10893,10 @@ exports[`Double slider > renders correctly double with custom ticks 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -10934,10 +10905,10 @@ exports[`Double slider > renders correctly double with custom ticks 1`] = `
   -ms-flex-pack: left;
   -webkit-justify-content: left;
   justify-content: left;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-2 {
@@ -10945,10 +10916,10 @@ exports[`Double slider > renders correctly double with custom ticks 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -10957,10 +10928,10 @@ exports[`Double slider > renders correctly double with custom ticks 1`] = `
   -ms-flex-pack: left;
   -webkit-justify-content: left;
   justify-content: left;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-4 {
@@ -10968,10 +10939,10 @@ exports[`Double slider > renders correctly double with custom ticks 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -10979,10 +10950,9 @@ exports[`Double slider > renders correctly double with custom ticks 1`] = `
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .emotion-4 {
@@ -10990,10 +10960,10 @@ exports[`Double slider > renders correctly double with custom ticks 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -11001,16 +10971,15 @@ exports[`Double slider > renders correctly double with custom ticks 1`] = `
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .emotion-7 {
   color: #3f4250;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -11023,7 +10992,7 @@ exports[`Double slider > renders correctly double with custom ticks 1`] = `
 .emotion-7 {
   color: #3f4250;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -11038,10 +11007,11 @@ exports[`Double slider > renders correctly double with custom ticks 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 100%;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -11050,11 +11020,10 @@ exports[`Double slider > renders correctly double with custom ticks 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  width: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-9 {
@@ -11062,10 +11031,11 @@ exports[`Double slider > renders correctly double with custom ticks 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 100%;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -11074,17 +11044,16 @@ exports[`Double slider > renders correctly double with custom ticks 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  width: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-14 {
   color: #3f4250;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -11100,7 +11069,7 @@ exports[`Double slider > renders correctly double with custom ticks 1`] = `
 .emotion-14 {
   color: #3f4250;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -11756,7 +11725,7 @@ exports[`Double slider > renders correctly double with custom ticks 1`] = `
 .emotion-33 {
   color: #641cb3;
   font-size: 0.75rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1rem;
@@ -11796,7 +11765,7 @@ exports[`Double slider > renders correctly double with custom ticks 1`] = `
 .emotion-37 {
   color: #3f4250;
   font-size: 0.75rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1rem;
@@ -12008,10 +11977,10 @@ exports[`Double slider > renders correctly double with default ticks 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -12020,10 +11989,10 @@ exports[`Double slider > renders correctly double with default ticks 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-0[data-options='true'][data-double='true'] {
@@ -12035,10 +12004,10 @@ exports[`Double slider > renders correctly double with default ticks 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -12047,10 +12016,10 @@ exports[`Double slider > renders correctly double with default ticks 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-0[data-options='true'][data-double='true'] {
@@ -12062,10 +12031,10 @@ exports[`Double slider > renders correctly double with default ticks 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -12074,10 +12043,10 @@ exports[`Double slider > renders correctly double with default ticks 1`] = `
   -ms-flex-pack: left;
   -webkit-justify-content: left;
   justify-content: left;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-2 {
@@ -12085,10 +12054,10 @@ exports[`Double slider > renders correctly double with default ticks 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -12097,10 +12066,10 @@ exports[`Double slider > renders correctly double with default ticks 1`] = `
   -ms-flex-pack: left;
   -webkit-justify-content: left;
   justify-content: left;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-4 {
@@ -12108,10 +12077,10 @@ exports[`Double slider > renders correctly double with default ticks 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -12119,10 +12088,9 @@ exports[`Double slider > renders correctly double with default ticks 1`] = `
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .emotion-4 {
@@ -12130,10 +12098,10 @@ exports[`Double slider > renders correctly double with default ticks 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -12141,16 +12109,15 @@ exports[`Double slider > renders correctly double with default ticks 1`] = `
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .emotion-7 {
   color: #3f4250;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -12163,7 +12130,7 @@ exports[`Double slider > renders correctly double with default ticks 1`] = `
 .emotion-7 {
   color: #3f4250;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -12178,10 +12145,11 @@ exports[`Double slider > renders correctly double with default ticks 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 100%;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -12190,11 +12158,10 @@ exports[`Double slider > renders correctly double with default ticks 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  width: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-9 {
@@ -12202,10 +12169,11 @@ exports[`Double slider > renders correctly double with default ticks 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 100%;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -12214,17 +12182,16 @@ exports[`Double slider > renders correctly double with default ticks 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  width: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-14 {
   color: #3f4250;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -12240,7 +12207,7 @@ exports[`Double slider > renders correctly double with default ticks 1`] = `
 .emotion-14 {
   color: #3f4250;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -12693,10 +12660,10 @@ exports[`Double slider > renders correctly double with single tooltip 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -12705,10 +12672,10 @@ exports[`Double slider > renders correctly double with single tooltip 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-0[data-options='true'][data-double='true'] {
@@ -12720,10 +12687,10 @@ exports[`Double slider > renders correctly double with single tooltip 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -12732,10 +12699,10 @@ exports[`Double slider > renders correctly double with single tooltip 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-0[data-options='true'][data-double='true'] {
@@ -12747,10 +12714,10 @@ exports[`Double slider > renders correctly double with single tooltip 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -12759,10 +12726,10 @@ exports[`Double slider > renders correctly double with single tooltip 1`] = `
   -ms-flex-pack: left;
   -webkit-justify-content: left;
   justify-content: left;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-2 {
@@ -12770,10 +12737,10 @@ exports[`Double slider > renders correctly double with single tooltip 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -12782,10 +12749,10 @@ exports[`Double slider > renders correctly double with single tooltip 1`] = `
   -ms-flex-pack: left;
   -webkit-justify-content: left;
   justify-content: left;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-4 {
@@ -12793,10 +12760,10 @@ exports[`Double slider > renders correctly double with single tooltip 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -12804,10 +12771,9 @@ exports[`Double slider > renders correctly double with single tooltip 1`] = `
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .emotion-4 {
@@ -12815,10 +12781,10 @@ exports[`Double slider > renders correctly double with single tooltip 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -12826,16 +12792,15 @@ exports[`Double slider > renders correctly double with single tooltip 1`] = `
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .emotion-7 {
   color: #3f4250;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -12848,7 +12813,7 @@ exports[`Double slider > renders correctly double with single tooltip 1`] = `
 .emotion-7 {
   color: #3f4250;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -12863,10 +12828,11 @@ exports[`Double slider > renders correctly double with single tooltip 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 100%;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -12875,11 +12841,10 @@ exports[`Double slider > renders correctly double with single tooltip 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  width: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-9 {
@@ -12887,10 +12852,11 @@ exports[`Double slider > renders correctly double with single tooltip 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 100%;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -12899,17 +12865,16 @@ exports[`Double slider > renders correctly double with single tooltip 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  width: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-14 {
   color: #3f4250;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -12925,7 +12890,7 @@ exports[`Double slider > renders correctly double with single tooltip 1`] = `
 .emotion-14 {
   color: #3f4250;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -13405,10 +13370,10 @@ exports[`Double slider > renders correctly double with value outside of min-max 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -13417,10 +13382,10 @@ exports[`Double slider > renders correctly double with value outside of min-max 
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-0[data-options='true'][data-double='true'] {
@@ -13432,10 +13397,10 @@ exports[`Double slider > renders correctly double with value outside of min-max 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -13444,10 +13409,10 @@ exports[`Double slider > renders correctly double with value outside of min-max 
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-0[data-options='true'][data-double='true'] {
@@ -13459,10 +13424,10 @@ exports[`Double slider > renders correctly double with value outside of min-max 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -13471,10 +13436,10 @@ exports[`Double slider > renders correctly double with value outside of min-max 
   -ms-flex-pack: left;
   -webkit-justify-content: left;
   justify-content: left;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-2 {
@@ -13482,10 +13447,10 @@ exports[`Double slider > renders correctly double with value outside of min-max 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -13494,10 +13459,10 @@ exports[`Double slider > renders correctly double with value outside of min-max 
   -ms-flex-pack: left;
   -webkit-justify-content: left;
   justify-content: left;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-4 {
@@ -13505,10 +13470,10 @@ exports[`Double slider > renders correctly double with value outside of min-max 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -13516,10 +13481,9 @@ exports[`Double slider > renders correctly double with value outside of min-max 
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .emotion-4 {
@@ -13527,10 +13491,10 @@ exports[`Double slider > renders correctly double with value outside of min-max 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -13538,16 +13502,15 @@ exports[`Double slider > renders correctly double with value outside of min-max 
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .emotion-7 {
   color: #3f4250;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -13560,7 +13523,7 @@ exports[`Double slider > renders correctly double with value outside of min-max 
 .emotion-7 {
   color: #3f4250;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -13575,10 +13538,11 @@ exports[`Double slider > renders correctly double with value outside of min-max 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 100%;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -13587,11 +13551,10 @@ exports[`Double slider > renders correctly double with value outside of min-max 
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  width: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-9 {
@@ -13599,10 +13562,11 @@ exports[`Double slider > renders correctly double with value outside of min-max 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 100%;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -13611,17 +13575,16 @@ exports[`Double slider > renders correctly double with value outside of min-max 
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  width: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-14 {
   color: #3f4250;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -13637,7 +13600,7 @@ exports[`Double slider > renders correctly double with value outside of min-max 
 .emotion-14 {
   color: #3f4250;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -14342,10 +14305,10 @@ exports[`Double slider > renders correctly with value empty 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -14354,10 +14317,10 @@ exports[`Double slider > renders correctly with value empty 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-0[data-options='true'][data-double='true'] {
@@ -14369,10 +14332,10 @@ exports[`Double slider > renders correctly with value empty 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -14381,10 +14344,10 @@ exports[`Double slider > renders correctly with value empty 1`] = `
   -ms-flex-pack: left;
   -webkit-justify-content: left;
   justify-content: left;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-4 {
@@ -14392,10 +14355,10 @@ exports[`Double slider > renders correctly with value empty 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -14403,16 +14366,15 @@ exports[`Double slider > renders correctly with value empty 1`] = `
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .emotion-7 {
   color: #3f4250;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -14427,10 +14389,11 @@ exports[`Double slider > renders correctly with value empty 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 100%;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -14439,17 +14402,16 @@ exports[`Double slider > renders correctly with value empty 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  width: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-14 {
   color: #3f4250;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -14855,10 +14817,10 @@ exports[`Double slider > renders correctly with value empty array and no min max
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -14867,10 +14829,10 @@ exports[`Double slider > renders correctly with value empty array and no min max
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-0[data-options='true'][data-double='true'] {
@@ -14882,10 +14844,10 @@ exports[`Double slider > renders correctly with value empty array and no min max
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -14894,10 +14856,10 @@ exports[`Double slider > renders correctly with value empty array and no min max
   -ms-flex-pack: left;
   -webkit-justify-content: left;
   justify-content: left;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-4 {
@@ -14905,10 +14867,10 @@ exports[`Double slider > renders correctly with value empty array and no min max
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -14916,16 +14878,15 @@ exports[`Double slider > renders correctly with value empty array and no min max
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .emotion-7 {
   color: #3f4250;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -14940,10 +14901,11 @@ exports[`Double slider > renders correctly with value empty array and no min max
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 100%;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -14952,17 +14914,16 @@ exports[`Double slider > renders correctly with value empty array and no min max
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  width: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-14 {
   color: #3f4250;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -15368,10 +15329,10 @@ exports[`Double slider > renders correctly with value empty array with min max 1
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -15380,10 +15341,10 @@ exports[`Double slider > renders correctly with value empty array with min max 1
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-0[data-options='true'][data-double='true'] {
@@ -15395,10 +15356,10 @@ exports[`Double slider > renders correctly with value empty array with min max 1
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -15407,10 +15368,10 @@ exports[`Double slider > renders correctly with value empty array with min max 1
   -ms-flex-pack: left;
   -webkit-justify-content: left;
   justify-content: left;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-4 {
@@ -15418,10 +15379,10 @@ exports[`Double slider > renders correctly with value empty array with min max 1
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -15429,16 +15390,15 @@ exports[`Double slider > renders correctly with value empty array with min max 1
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .emotion-7 {
   color: #3f4250;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -15453,10 +15413,11 @@ exports[`Double slider > renders correctly with value empty array with min max 1
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 100%;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -15465,17 +15426,16 @@ exports[`Double slider > renders correctly with value empty array with min max 1
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  width: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-14 {
   color: #3f4250;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.25rem;

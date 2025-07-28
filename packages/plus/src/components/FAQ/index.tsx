@@ -41,7 +41,7 @@ export const FAQ = ({
       <Stack gap={2} direction="row">
         <div>
           {!productIconName && illustrationText ? (
-            <Bullet sentiment="primary" text={illustrationText.toString()} />
+            <Bullet sentiment="primary">{illustrationText.toString()}</Bullet>
           ) : null}
           {ProductIconUsed ? <ProductIconUsed size="xlarge" /> : null}
         </div>

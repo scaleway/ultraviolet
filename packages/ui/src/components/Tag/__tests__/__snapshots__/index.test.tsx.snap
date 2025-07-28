@@ -30,7 +30,7 @@ exports[`Tag > renders correctly 1`] = `
 
 .emotion-3 {
   font-size: 0.75rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1rem;
@@ -89,7 +89,7 @@ exports[`Tag > renders correctly colored 1`] = `
 
 .emotion-3 {
   font-size: 0.75rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1rem;
@@ -149,7 +149,7 @@ exports[`Tag > renders correctly disabled 1`] = `
 
 .emotion-3 {
   font-size: 0.75rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1rem;
@@ -208,7 +208,7 @@ exports[`Tag > renders correctly neutral 1`] = `
 
 .emotion-3 {
   font-size: 0.75rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1rem;
@@ -290,7 +290,7 @@ exports[`Tag > renders correctly with copiable 1`] = `
 
 .emotion-5 {
   font-size: 0.75rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1rem;
@@ -354,27 +354,9 @@ exports[`Tag > renders correctly with icon 1`] = `
   border: solid 1px #d9dadd;
 }
 
-.emotion-2 {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
-}
-
-.emotion-2 .fillStroke {
-  stroke: currentColor;
-  fill: none;
-}
-
-.emotion-2 path {
-  fill: currentColor;
-}
-
-.emotion-5 {
+.emotion-3 {
   font-size: 0.75rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1rem;
@@ -387,28 +369,39 @@ exports[`Tag > renders correctly with icon 1`] = `
   max-width: 14.5rem;
 }
 
+.emotion-5 {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
+}
+
+.emotion-5 .fillStroke {
+  stroke: currentColor;
+  fill: none;
+}
+
 <div
     data-testid="testing"
   >
     <span
       class="emotion-0 emotion-1"
     >
-      <svg
-        class="emotion-2 emotion-3"
-        fill="none"
-        viewBox="0 0 16 16"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          clip-rule="evenodd"
-          d="M8 1C6.067 1 4.5 2.567 4.5 4.5L4.5 7C3.67157 7 3 7.67157 3 8.5V13.5C3 14.3284 3.67157 15 4.5 15H11.5C12.3284 15 13 14.3284 13 13.5V8.5C13 7.67157 12.3284 7 11.5 7V4.5C11.5 2.567 9.933 1 8 1ZM10 7V4.5C10 3.39543 9.10457 2.5 8 2.5C6.89543 2.5 6 3.39543 6 4.5V7H10Z"
-          fill="black"
-          fill-rule="evenodd"
-        />
-      </svg>
       <div
-        class="emotion-4 emotion-5 emotion-6"
+        class="emotion-2 emotion-3 emotion-4"
       >
+        <svg
+          class="emotion-5 emotion-6"
+          viewBox="0 0 16 16"
+        >
+          <path
+            clip-rule="evenodd"
+            d="M8 1C6.067 1 4.5 2.567 4.5 4.5L4.5 7C3.67157 7 3 7.67157 3 8.5V13.5C3 14.3284 3.67157 15 4.5 15H11.5C12.3284 15 13 14.3284 13 13.5V8.5C13 7.67157 12.3284 7 11.5 7V4.5C11.5 2.567 9.933 1 8 1ZM10 7V4.5C10 3.39543 9.10457 2.5 8 2.5C6.89543 2.5 6 3.39543 6 4.5V7H10Z"
+            fill-rule="evenodd"
+          />
+        </svg>
         test
       </div>
     </span>
@@ -446,7 +439,7 @@ exports[`Tag > renders correctly with isLoading 1`] = `
 
 .emotion-3 {
   font-size: 0.75rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1rem;
@@ -465,6 +458,10 @@ exports[`Tag > renders correctly with isLoading 1`] = `
 }
 
 .emotion-7 {
+  stroke: #d9dadd;
+}
+
+.emotion-9 {
   -webkit-transition: stroke-dashoffset 0.5s ease 0s;
   transition: stroke-dashoffset 0.5s ease 0s;
 }
@@ -488,19 +485,19 @@ exports[`Tag > renders correctly with isLoading 1`] = `
         aria-valuetext="20%"
         class="emotion-5 emotion-6"
         role="progressbar"
-        style="height: 16px; width: 16px;"
+        style="height: 1rem; width: 1rem;"
         viewBox="0 0 100 100"
       >
         <circle
+          class="emotion-7 emotion-8"
           cx="50"
           cy="50"
           fill="none"
           r="42"
-          stroke="#d9dadd"
           stroke-width="16"
         />
         <circle
-          class="emotion-7"
+          class="emotion-9"
           cx="50"
           cy="50"
           fill="none"
@@ -547,7 +544,7 @@ exports[`Tag > renders correctly with onClose 1`] = `
 
 .emotion-3 {
   font-size: 0.75rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1rem;
@@ -574,7 +571,7 @@ exports[`Tag > renders correctly with onClose 1`] = `
   gap: 0.5rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 2rem;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -589,7 +586,7 @@ exports[`Tag > renders correctly with onClose 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -616,6 +613,10 @@ exports[`Tag > renders correctly with onClose 1`] = `
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
+.emotion-6 .e1y1n78x0 {
+  stroke: transparent;
+}
+
 .emotion-6:hover,
 .emotion-6:active {
   background: #e9eaeb;
@@ -625,19 +626,15 @@ exports[`Tag > renders correctly with onClose 1`] = `
 .emotion-8 {
   vertical-align: middle;
   fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
 .emotion-8 .fillStroke {
   stroke: currentColor;
   fill: none;
-}
-
-.emotion-8 path {
-  fill: currentColor;
 }
 
 <div
@@ -660,7 +657,6 @@ exports[`Tag > renders correctly with onClose 1`] = `
         <svg
           class="emotion-8 emotion-9"
           viewBox="0 0 16 16"
-          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"

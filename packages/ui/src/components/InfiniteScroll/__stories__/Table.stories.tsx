@@ -1,4 +1,4 @@
-import type { StoryFn } from '@storybook/react'
+import type { StoryFn } from '@storybook/react-vite'
 import { useRef, useState } from 'react'
 import { InfiniteScroll } from '..'
 import { Skeleton } from '../../Skeleton'

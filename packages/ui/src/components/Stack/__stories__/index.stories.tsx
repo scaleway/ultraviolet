@@ -1,4 +1,4 @@
-import type { Meta } from '@storybook/react'
+import type { Meta } from '@storybook/react-vite'
 import { Stack } from '..'
 
 export default {
@@ -11,3 +11,4 @@ export { Gap } from './Gap.stories'
 export { Direction } from './Direction.stories'
 export { AlignItems } from './AlignItems.stories'
 export { JustifyContent } from './JustifyContent.stories'
+export { Responsive } from './Responsive.stories'

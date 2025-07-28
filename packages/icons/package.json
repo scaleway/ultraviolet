@@ -1,6 +1,6 @@
 {
   "name": "@ultraviolet/icons",
-  "version": "3.15.8",
+  "version": "4.0.0",
   "description": "Ultraviolet Icons",
   "homepage": "https://github.com/scaleway/ultraviolet#readme",
   "repository": {
@@ -48,10 +48,10 @@
       "default": "./dist/index.js"
     },
     "./*": {
-      "types": "./dist/components/Icon/__generatedIcons__/*.d.ts",
-      "require": "./dist/components/Icon/__generatedIcons__/*.cjs",
-      "import": "./dist/components/Icon/__generatedIcons__/*.js",
-      "default": "./dist/components/Icon/__generatedIcons__/*.js"
+      "types": "./dist/components/Icon/__generated__/*.d.ts",
+      "require": "./dist/components/Icon/__generated__/*.cjs",
+      "import": "./dist/components/Icon/__generated__/*.js",
+      "default": "./dist/components/Icon/__generated__/*.js"
     },
     "./product": {
       "types": "./dist/components/ProductIcon/index.d.ts",
@@ -60,10 +60,10 @@
       "default": "./dist/components/ProductIcon/index.js"
     },
     "./product/*": {
-      "types": "./dist/components/ProductIcon/__generatedIcons__/*.d.ts",
-      "require": "./dist/components/ProductIcon/__generatedIcons__/*.cjs",
-      "import": "./dist/components/ProductIcon/__generatedIcons__/*.js",
-      "default": "./dist/components/ProductIcon/__generatedIcons__/*.js"
+      "types": "./dist/components/ProductIcon/__generated__/*.d.ts",
+      "require": "./dist/components/ProductIcon/__generated__/*.cjs",
+      "import": "./dist/components/ProductIcon/__generated__/*.js",
+      "default": "./dist/components/ProductIcon/__generated__/*.js"
     },
     "./category": {
       "types": "./dist/components/CategoryIcon/index.d.ts",
@@ -72,16 +72,10 @@
       "default": "./dist/components/CategoryIcon/index.js"
     },
     "./category/*": {
-      "types": "./dist/components/CategoryIcon/__generatedIcons__/*.d.ts",
-      "require": "./dist/components/CategoryIcon/__generatedIcons__/*.cjs",
-      "import": "./dist/components/CategoryIcon/__generatedIcons__/*.js",
-      "default": "./dist/components/CategoryIcon/__generatedIcons__/*.js"
-    },
-    "./legacy": {
-      "types": "./dist/components/Icon/legacy/index.d.ts",
-      "require": "./dist/components/Icon/legacy/index.cjs",
-      "import": "./dist/components/Icon/legacy/index.js",
-      "default": "./dist/components/Icon/legacy/index.js"
+      "types": "./dist/components/CategoryIcon/__generated__/*.d.ts",
+      "require": "./dist/components/CategoryIcon/__generated__/*.cjs",
+      "import": "./dist/components/CategoryIcon/__generated__/*.js",
+      "default": "./dist/components/CategoryIcon/__generated__/*.js"
     },
     "./logo": {
       "types": "./dist/components/Logo/index.d.ts",
@@ -90,10 +84,10 @@
       "default": "./dist/components/Logo/index.js"
     },
     "./logo/*": {
-      "types": "./dist/components/Logo/__generatedIcons__/*.d.ts",
-      "require": "./dist/components/Logo/__generatedIcons__/*.cjs",
-      "import": "./dist/components/Logo/__generatedIcons__/*.js",
-      "default": "./dist/components/Logo/__generatedIcons__/*.js"
+      "types": "./dist/components/Logo/__generated__/*.d.ts",
+      "require": "./dist/components/Logo/__generated__/*.cjs",
+      "import": "./dist/components/Logo/__generated__/*.js",
+      "default": "./dist/components/Logo/__generated__/*.js"
     }
   },
   "size-limit": [
@@ -116,7 +110,7 @@
     "react-dom": "18.x || 19.x"
   },
   "devDependencies": {
-    "@babel/core": "7.27.7",
+    "@babel/core": "7.28.0",
     "@emotion/react": "11.14.0",
     "@emotion/styled": "11.14.1",
     "@types/react": "19.1.8",

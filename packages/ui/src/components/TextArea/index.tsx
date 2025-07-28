@@ -2,7 +2,7 @@
 
 import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
-import { AlertCircleIcon, CheckCircleIcon } from '@ultraviolet/icons'
+import { AlertCircleIcon, CheckCircleIcon, CloseIcon } from '@ultraviolet/icons'
 import type { DOMAttributes, ReactNode } from 'react'
 import {
   forwardRef,
@@ -20,7 +20,7 @@ import { Stack } from '../Stack'
 import { Text } from '../Text'
 import { Tooltip } from '../Tooltip'
 
-const STATE_ICON_SIZE = 16
+const STATE_ICON_SIZE = 'small'
 
 const StyledTextAreaWrapper = styled.div`
   position: relative;
@@ -221,7 +221,7 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
           textArea.style.minHeight = `calc(${minHeight}px + 2*${padding})`
         }
       }
-    }, [value, rows, theme, maxRows])
+    }, [value, rows, theme, maxRows, textAreaRef.current?.value])
 
     const sentiment = useMemo(() => {
       if (error) {
@@ -288,12 +288,13 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
                   aria-label="clear value"
                   variant="ghost"
                   size="xsmall"
-                  icon="close"
                   onClick={() => {
                     onChange('')
                   }}
                   sentiment="neutral"
-                />
+                >
+                  <CloseIcon />
+                </Button>
               ) : null}
               {success ? (
                 <CheckCircleIcon sentiment="success" size={STATE_ICON_SIZE} />

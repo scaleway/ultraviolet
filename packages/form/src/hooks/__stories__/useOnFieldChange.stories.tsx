@@ -1,4 +1,4 @@
-import type { Meta, StoryFn } from '@storybook/react'
+import type { Meta, StoryFn } from '@storybook/react-vite'
 import { Stack, Text } from '@ultraviolet/ui'
 import { useState } from 'react'
 import { Form, useForm, useOnFieldChange } from '../..'
@@ -71,13 +71,13 @@ const FormContent = () => {
         <Text as="label" variant="bodyStrong">
           Email
         </Text>
-        <TextInputField name="email" noTopLabel valid={valid} />
+        <TextInputField name="email" helper={valid} />
       </Stack>
       <Stack gap={1}>
         <Text as="label" variant="bodyStrong">
           Password
         </Text>
-        <TextInputField name="password" noTopLabel />
+        <TextInputField name="password" />
       </Stack>
     </Stack>
   )

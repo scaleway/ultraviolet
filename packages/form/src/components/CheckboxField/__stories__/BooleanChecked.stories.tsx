@@ -1,4 +1,4 @@
-import type { StoryFn } from '@storybook/react'
+import type { StoryFn } from '@storybook/react-vite'
 import { CheckboxField } from '..'
 import { useForm } from '../../..'
 import type { FormErrors } from '../../../types'

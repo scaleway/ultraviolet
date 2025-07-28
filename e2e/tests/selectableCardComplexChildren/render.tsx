@@ -1,4 +1,4 @@
-import { SelectInputV2, SelectableCard, Stack, Text } from '@ultraviolet/ui'
+import { SelectInput, SelectableCard, Stack, Text } from '@ultraviolet/ui'
 import { useState } from 'react'
 
 const CheckboxSelectableCard = () => {
@@ -30,7 +30,7 @@ const CheckboxSelectableCard = () => {
         <Stack gap={1}>
           This option will cost you 1.99€ and provide you with a lot of
           happiness checkbox
-          <SelectInputV2
+          <SelectInput
             value={selectInputValue}
             onChange={(newValue: string) => setSelectInputValue(newValue)}
             label="Select a sub option checkbox"
@@ -97,7 +97,7 @@ const RadioSelectableCard = () => {
         <Stack gap={1}>
           This option will cost you 1.99€ and provide you with a lot of
           happiness radio
-          <SelectInputV2
+          <SelectInput
             value={selectInputValue}
             onChange={(newValue: string) => setSelectInputValue(newValue)}
             label="Select a sub option radio"

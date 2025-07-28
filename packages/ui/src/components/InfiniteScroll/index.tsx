@@ -2,7 +2,7 @@
 
 import type { ElementType, ReactNode, RefObject } from 'react'
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
-import { LOADER_SIZE, Loader } from '../Loader'
+import { Loader } from '../Loader'
 
 // This is the distance from the bottom of the scrollable container where the `onLoadMore` function will be called.
 // Change this value if you want increase or decrease the distance from scroll bottom.
@@ -49,7 +49,7 @@ export const InfiniteScroll = ({
   'data-testid': dataTestId,
   onLoadMore,
   scrollParentRef,
-  height = LOADER_SIZE,
+  height = '2.5rem',
   loader,
   id,
   as: Component = 'div',

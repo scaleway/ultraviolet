@@ -1,10 +1,10 @@
 import styled from '@emotion/styled'
 import { useState } from 'react'
 import { Snippet, Stack, Tabs, Text } from '../../../../components'
-import type { SCWUITheme } from '../../../../theme'
+import type { UltravioletUITheme } from '../../../../theme'
 
 type CodeIntegrationProps = {
-  theme: SCWUITheme
+  theme: UltravioletUITheme
 }
 
 const StyledSnippet = styled(Snippet)`

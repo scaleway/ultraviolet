@@ -144,7 +144,7 @@ exports[`Tabs > renders correctly with Tabs and last disabled 1`] = `
   border-bottom-color: #d9dadd;
   outline: none;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -236,7 +236,7 @@ exports[`Tabs > renders correctly with Tabs and last disabled 1`] = `
   border-bottom-color: #d9dadd;
   outline: none;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -297,10 +297,10 @@ exports[`Tabs > renders correctly with Tabs and last disabled 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -309,10 +309,10 @@ exports[`Tabs > renders correctly with Tabs and last disabled 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .emotion-4 {
@@ -320,10 +320,10 @@ exports[`Tabs > renders correctly with Tabs and last disabled 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -332,10 +332,10 @@ exports[`Tabs > renders correctly with Tabs and last disabled 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .emotion-6 {
@@ -343,10 +343,10 @@ exports[`Tabs > renders correctly with Tabs and last disabled 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -355,10 +355,9 @@ exports[`Tabs > renders correctly with Tabs and last disabled 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .emotion-6 {
@@ -366,10 +365,10 @@ exports[`Tabs > renders correctly with Tabs and last disabled 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -378,10 +377,9 @@ exports[`Tabs > renders correctly with Tabs and last disabled 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 <div
@@ -522,7 +520,7 @@ exports[`Tabs > renders correctly with Tabs menu selected 1`] = `
   border-bottom-color: #d9dadd;
   outline: none;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -583,10 +581,10 @@ exports[`Tabs > renders correctly with Tabs menu selected 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -595,10 +593,10 @@ exports[`Tabs > renders correctly with Tabs menu selected 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .emotion-6 {
@@ -606,10 +604,10 @@ exports[`Tabs > renders correctly with Tabs menu selected 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -618,10 +616,9 @@ exports[`Tabs > renders correctly with Tabs menu selected 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .emotion-20 {
@@ -684,7 +681,7 @@ exports[`Tabs > renders correctly with Tabs menu selected 1`] = `
   border-bottom-color: #d9dadd;
   outline: none;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -999,7 +996,7 @@ exports[`Tabs > renders correctly with Tabs name 1`] = `
   border-bottom-color: #d9dadd;
   outline: none;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -1091,7 +1088,7 @@ exports[`Tabs > renders correctly with Tabs name 1`] = `
   border-bottom-color: #d9dadd;
   outline: none;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -1152,10 +1149,10 @@ exports[`Tabs > renders correctly with Tabs name 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -1164,10 +1161,10 @@ exports[`Tabs > renders correctly with Tabs name 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .emotion-4 {
@@ -1175,10 +1172,10 @@ exports[`Tabs > renders correctly with Tabs name 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -1187,10 +1184,10 @@ exports[`Tabs > renders correctly with Tabs name 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .emotion-6 {
@@ -1198,10 +1195,10 @@ exports[`Tabs > renders correctly with Tabs name 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1210,10 +1207,9 @@ exports[`Tabs > renders correctly with Tabs name 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .emotion-6 {
@@ -1221,10 +1217,10 @@ exports[`Tabs > renders correctly with Tabs name 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1233,10 +1229,9 @@ exports[`Tabs > renders correctly with Tabs name 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 <div
@@ -1378,7 +1373,7 @@ exports[`Tabs > renders correctly with Tabs with prop 1`] = `
   border-bottom-color: #d9dadd;
   outline: none;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -1439,10 +1434,10 @@ exports[`Tabs > renders correctly with Tabs with prop 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -1451,10 +1446,10 @@ exports[`Tabs > renders correctly with Tabs with prop 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .emotion-6 {
@@ -1462,10 +1457,10 @@ exports[`Tabs > renders correctly with Tabs with prop 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1474,15 +1469,14 @@ exports[`Tabs > renders correctly with Tabs with prop 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .emotion-10 {
   font-size: 0.75rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1rem;
@@ -1519,7 +1513,7 @@ exports[`Tabs > renders correctly with Tabs with prop 1`] = `
 
 .emotion-32 {
   font-size: 0.75rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1rem;
@@ -1622,7 +1616,7 @@ exports[`Tabs > renders correctly with Tabs with prop 1`] = `
   border-bottom-color: #d9dadd;
   outline: none;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -1742,7 +1736,7 @@ exports[`Tabs > renders correctly with Tabs with prop 1`] = `
   border-bottom-color: #d9dadd;
   outline: none;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -2327,10 +2321,10 @@ exports[`Tabs > renders correctly with Tabs with prop 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -2339,10 +2333,9 @@ exports[`Tabs > renders correctly with Tabs with prop 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   overflow-y: auto;
   overflow-x: hidden;
   max-height: calc(30rem - 0.25rem);
@@ -2376,10 +2369,10 @@ exports[`Tabs > renders correctly with Tabs with prop 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -2388,16 +2381,16 @@ exports[`Tabs > renders correctly with Tabs with prop 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   overflow: auto;
 }
 
 .emotion-7 {
   border-bottom: 1px solid #d9dadd;
   padding: 0.25rem 0.25rem;
+  width: 100%;
 }
 
 .emotion-7:last-child {
@@ -2440,14 +2433,14 @@ exports[`Tabs > renders correctly with Tabs with prop 1`] = `
 }
 
 .emotion-10:hover,
-.emotion-10:focus,
+.emotion-10:focus-visible,
 .emotion-10[data-active='true'] {
   background-color: #e9eaeb;
   color: #222638;
 }
 
 .emotion-10:hover svg,
-.emotion-10:focus svg,
+.emotion-10:focus-visible svg,
 .emotion-10[data-active='true'] svg {
   fill: #222638;
 }
@@ -2476,6 +2469,9 @@ exports[`Tabs > renders correctly with Tabs with prop 1`] = `
         >
           <button
             class="emotion-9 emotion-10 emotion-11"
+            data-active="false"
+            data-is-disclosure="false"
+            data-is-menu-item="true"
             role="menuitem"
             type="button"
           >
@@ -2487,6 +2483,9 @@ exports[`Tabs > renders correctly with Tabs with prop 1`] = `
         >
           <button
             class="emotion-9 emotion-10 emotion-11"
+            data-active="false"
+            data-is-disclosure="false"
+            data-is-menu-item="true"
             role="menuitem"
             type="button"
           >
@@ -2577,10 +2576,10 @@ exports[`Tabs > renders correctly with Tabs with prop 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -2589,10 +2588,9 @@ exports[`Tabs > renders correctly with Tabs with prop 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   overflow-y: auto;
   overflow-x: hidden;
   max-height: calc(30rem - 0.25rem);
@@ -2626,10 +2624,10 @@ exports[`Tabs > renders correctly with Tabs with prop 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -2638,10 +2636,9 @@ exports[`Tabs > renders correctly with Tabs with prop 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   overflow: auto;
 }
 
@@ -2710,7 +2707,7 @@ exports[`Tabs > renders correctly with Tabs with prop 1`] = `
   border-bottom-color: #d9dadd;
   outline: none;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -2771,10 +2768,10 @@ exports[`Tabs > renders correctly with Tabs with prop 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -2783,10 +2780,10 @@ exports[`Tabs > renders correctly with Tabs with prop 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .emotion-13 {
@@ -2794,10 +2791,10 @@ exports[`Tabs > renders correctly with Tabs with prop 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2806,15 +2803,14 @@ exports[`Tabs > renders correctly with Tabs with prop 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .emotion-17 {
   font-size: 0.75rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1rem;
@@ -2851,7 +2847,7 @@ exports[`Tabs > renders correctly with Tabs with prop 1`] = `
 
 .emotion-39 {
   font-size: 0.75rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1rem;
@@ -2954,7 +2950,7 @@ exports[`Tabs > renders correctly with Tabs with prop 1`] = `
   border-bottom-color: #d9dadd;
   outline: none;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -3450,18 +3446,18 @@ exports[`Tabs > renders correctly with Tabs with prop 1`] = `
   @keyframes animation-0 {
   0% {
     opacity: 0;
-    -webkit-transform: translate3d(0px, 4px, 0);
-    -moz-transform: translate3d(0px, 4px, 0);
-    -ms-transform: translate3d(0px, 4px, 0);
-    transform: translate3d(0px, 4px, 0);
+    -webkit-transform: translate3d(8px, 0px, 0);
+    -moz-transform: translate3d(8px, 0px, 0);
+    -ms-transform: translate3d(8px, 0px, 0);
+    transform: translate3d(8px, 0px, 0);
   }
 
   100% {
     opacity: 1;
-    -webkit-transform: translate3d(0px, 4px, 0);
-    -moz-transform: translate3d(0px, 4px, 0);
-    -ms-transform: translate3d(0px, 4px, 0);
-    transform: translate3d(0px, 4px, 0);
+    -webkit-transform: translate3d(8px, 0px, 0);
+    -moz-transform: translate3d(8px, 0px, 0);
+    -ms-transform: translate3d(8px, 0px, 0);
+    transform: translate3d(8px, 0px, 0);
   }
 }
 
@@ -3482,10 +3478,10 @@ exports[`Tabs > renders correctly with Tabs with prop 1`] = `
   left: 0;
   opacity: 0;
   z-index: 1;
-  -webkit-transform: translate3d(0px, 4px, 0);
-  -moz-transform: translate3d(0px, 4px, 0);
-  -ms-transform: translate3d(0px, 4px, 0);
-  transform: translate3d(0px, 4px, 0);
+  -webkit-transform: translate3d(8px, 0px, 0);
+  -moz-transform: translate3d(8px, 0px, 0);
+  -ms-transform: translate3d(8px, 0px, 0);
+  transform: translate3d(8px, 0px, 0);
   background-color: #ffffff;
   box-shadow: 0px 4px 8px 0px #22263829,0px 8px 24px 0px #2226383d;
   padding: 0;
@@ -3502,12 +3498,12 @@ exports[`Tabs > renders correctly with Tabs with prop 1`] = `
 .emotion-1[data-has-arrow="true"]::after {
   content: " ";
   position: absolute;
-  top: -5px;
-  left: 0px;
-  -webkit-transform: rotate(180deg);
-  -moz-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  transform: rotate(180deg);
+  top: 0px;
+  left: -5px;
+  -webkit-transform: translate(50%, -50%) rotate(90deg);
+  -moz-transform: translate(50%, -50%) rotate(90deg);
+  -ms-transform: translate(50%, -50%) rotate(90deg);
+  transform: translate(50%, -50%) rotate(90deg);
   margin-left: -8px;
   border-width: 8px;
   border-style: solid;
@@ -3528,10 +3524,10 @@ exports[`Tabs > renders correctly with Tabs with prop 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -3540,10 +3536,9 @@ exports[`Tabs > renders correctly with Tabs with prop 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   overflow-y: auto;
   overflow-x: hidden;
   max-height: calc(30rem - 0.25rem);
@@ -3577,10 +3572,10 @@ exports[`Tabs > renders correctly with Tabs with prop 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -3589,16 +3584,16 @@ exports[`Tabs > renders correctly with Tabs with prop 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   overflow: auto;
 }
 
 .emotion-7 {
   border-bottom: 1px solid #d9dadd;
   padding: 0.25rem 0.25rem;
+  width: 100%;
 }
 
 .emotion-7:last-child {
@@ -3641,14 +3636,14 @@ exports[`Tabs > renders correctly with Tabs with prop 1`] = `
 }
 
 .emotion-10:hover,
-.emotion-10:focus,
+.emotion-10:focus-visible,
 .emotion-10[data-active='true'] {
   background-color: #e9eaeb;
   color: #222638;
 }
 
 .emotion-10:hover svg,
-.emotion-10:focus svg,
+.emotion-10:focus-visible svg,
 .emotion-10[data-active='true'] svg {
   fill: #222638;
 }
@@ -3677,6 +3672,9 @@ exports[`Tabs > renders correctly with Tabs with prop 1`] = `
         >
           <button
             class="emotion-9 emotion-10 emotion-11"
+            data-active="false"
+            data-is-disclosure="false"
+            data-is-menu-item="true"
             role="menuitem"
             type="button"
           >
@@ -3688,6 +3686,9 @@ exports[`Tabs > renders correctly with Tabs with prop 1`] = `
         >
           <button
             class="emotion-9 emotion-10 emotion-11"
+            data-active="false"
+            data-is-disclosure="false"
+            data-is-menu-item="true"
             role="menuitem"
             type="button"
           >
@@ -3800,7 +3801,7 @@ exports[`Tabs > renders correctly with custom Tabs component 1`] = `
   border-bottom-color: #d9dadd;
   outline: none;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -3892,7 +3893,7 @@ exports[`Tabs > renders correctly with custom Tabs component 1`] = `
   border-bottom-color: #d9dadd;
   outline: none;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -3953,10 +3954,10 @@ exports[`Tabs > renders correctly with custom Tabs component 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -3965,10 +3966,10 @@ exports[`Tabs > renders correctly with custom Tabs component 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .emotion-4 {
@@ -3976,10 +3977,10 @@ exports[`Tabs > renders correctly with custom Tabs component 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -3988,10 +3989,10 @@ exports[`Tabs > renders correctly with custom Tabs component 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .emotion-6 {
@@ -3999,10 +4000,10 @@ exports[`Tabs > renders correctly with custom Tabs component 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -4011,10 +4012,9 @@ exports[`Tabs > renders correctly with custom Tabs component 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .emotion-6 {
@@ -4022,10 +4022,10 @@ exports[`Tabs > renders correctly with custom Tabs component 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -4034,10 +4034,9 @@ exports[`Tabs > renders correctly with custom Tabs component 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .emotion-15 {
@@ -4059,7 +4058,7 @@ exports[`Tabs > renders correctly with custom Tabs component 1`] = `
   width: -moz-fit-content;
   width: fit-content;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -4100,14 +4099,14 @@ exports[`Tabs > renders correctly with custom Tabs component 1`] = `
   border-bottom-color: #d9dadd;
   outline: none;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.5rem;
 }
 
-.emotion-15 .e1afnb7a2,
 .emotion-15 .e1afnb7a3,
+.emotion-15 .e1afnb7a2,
 .emotion-15 .e1afnb7a4 {
   -webkit-transition: -webkit-transform 250ms ease-out;
   transition: transform 250ms ease-out;
@@ -4118,8 +4117,8 @@ exports[`Tabs > renders correctly with custom Tabs component 1`] = `
 }
 
 .emotion-15:visited {
-  color: #641cb3;
   text-decoration-color: transparent;
+  color: #641cb3;
 }
 
 .emotion-15:hover,
@@ -4132,22 +4131,22 @@ exports[`Tabs > renders correctly with custom Tabs component 1`] = `
   text-decoration-color: #004c85;
 }
 
-.emotion-15:hover .e1afnb7a2,
-.emotion-15:focus .e1afnb7a2,
 .emotion-15:hover .e1afnb7a3,
 .emotion-15:focus .e1afnb7a3,
+.emotion-15:hover .e1afnb7a2,
+.emotion-15:focus .e1afnb7a2,
 .emotion-15:hover .e1afnb7a4,
 .emotion-15:focus .e1afnb7a4 {
-  -webkit-transform: translate(-0.25rem, 0);
-  -moz-transform: translate(-0.25rem, 0);
-  -ms-transform: translate(-0.25rem, 0);
-  transform: translate(-0.25rem, 0);
+  -webkit-transform: translate(-0.125rem, 0);
+  -moz-transform: translate(-0.125rem, 0);
+  -ms-transform: translate(-0.125rem, 0);
+  transform: translate(-0.125rem, 0);
 }
 
 .emotion-15:hover:visited,
 .emotion-15:focus:visited {
-  color: #521094;
-  text-decoration-color: #521094;
+  text-decoration-color: transparent;
+  color: #641cb3;
 }
 
 .emotion-15[data-variant='inline'] {

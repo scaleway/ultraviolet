@@ -1,20 +1,21 @@
 'use client'
 
+import { DeleteIcon, PlusIcon } from '@ultraviolet/icons'
 import { Button, Row, Stack } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
-import { useFieldArray } from 'react-hook-form'
 import type { Control, FieldArrayPath, FieldValues } from 'react-hook-form'
-import { TextInputField as TextInputFieldV2 } from '../TextInputFieldV2'
+import { useFieldArray } from 'react-hook-form'
+import { TextInputField } from '../TextInputField'
 
 type InputKeyProps = {
-  label: ComponentProps<typeof TextInputFieldV2>['label']
-  required?: ComponentProps<typeof TextInputFieldV2>['required']
-  regex?: ComponentProps<typeof TextInputFieldV2>['regex']
+  label: ComponentProps<typeof TextInputField>['label']
+  required?: ComponentProps<typeof TextInputField>['required']
+  regex?: ComponentProps<typeof TextInputField>['regex']
 }
 
 type InputValueProps = {
-  type?: ComponentProps<typeof TextInputFieldV2>['type']
-  placeholder?: ComponentProps<typeof TextInputFieldV2>['placeholder']
+  type?: ComponentProps<typeof TextInputField>['type']
+  placeholder?: ComponentProps<typeof TextInputField>['placeholder']
 } & InputKeyProps
 
 type AddButtonProps = {
@@ -74,14 +75,14 @@ export const KeyValueField = <
               gap={2}
               alignItems="end"
             >
-              <TextInputFieldV2
+              <TextInputField
                 readOnly={readOnly}
                 required={inputKey.required}
                 name={`${name}.${index}.key`}
                 label={inputKey.label}
                 regex={inputKey.regex}
               />
-              <TextInputFieldV2
+              <TextInputField
                 readOnly={readOnly}
                 required={inputValue.required}
                 name={`${name}.${index}.value`}
@@ -95,12 +96,13 @@ export const KeyValueField = <
               <Button
                 disabled={readOnly}
                 data-testid={`remove-button-${index}`}
-                icon="delete"
                 variant="outlined"
                 sentiment="danger"
                 size="large"
                 onClick={() => remove(index)}
-              />
+              >
+                <DeleteIcon />
+              </Button>
             </Row>
           ))}
         </Stack>
@@ -108,7 +110,6 @@ export const KeyValueField = <
       <Stack direction="row" justifyContent="flex-start">
         <Button
           data-testid="add-button"
-          icon="plus"
           variant="outlined"
           sentiment="primary"
           fullWidth={addButton.fullWidth}
@@ -117,6 +118,7 @@ export const KeyValueField = <
           // @ts-expect-error can't infer properly
           onClick={() => append({ key: '', value: '' })}
         >
+          <PlusIcon />
           {addButton.name}
         </Button>
       </Stack>

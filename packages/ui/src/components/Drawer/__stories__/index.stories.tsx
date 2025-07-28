@@ -1,4 +1,4 @@
-import type { Meta } from '@storybook/react'
+import type { Meta } from '@storybook/react-vite'
 import { Drawer } from '..'
 
 export default {
@@ -10,3 +10,4 @@ export { Playground } from './Playground.stories'
 export { Size } from './Size.stories'
 export { Footer } from './Footer.stories'
 export { FunctionProps } from './FunctionProps.stories'
+export { NoPadding } from './NoPadding.stories'

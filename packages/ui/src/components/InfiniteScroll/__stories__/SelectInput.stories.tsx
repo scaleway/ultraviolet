@@ -1,8 +1,8 @@
 import styled from '@emotion/styled'
-import type { StoryFn } from '@storybook/react'
+import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
 import { InfiniteScroll } from '..'
-import { SelectInputV2 } from '../../SelectInputV2'
+import { SelectInput as SelectInputUV } from '../../SelectInput'
 import { Skeleton } from '../../Skeleton'
 import { Stack } from '../../Stack'
 import { SELECT_INPUT_DATA, generateRandomNamesArray } from './data'
@@ -37,7 +37,7 @@ export const SelectInput: StoryFn<typeof InfiniteScroll> = args => {
   }
 
   return (
-    <SelectInputV2
+    <SelectInputUV
       name="select-input"
       label="Select input"
       options={data}
@@ -64,7 +64,7 @@ SelectInput.parameters = {
   docs: {
     description: {
       story:
-        'Here is an example of implementation within SelectInputV2 component. You can easily customise the loader by passing `loader` prop. This way you could have a more representative skeleton loader.',
+        'Here is an example of implementation within SelectInput component. You can easily customise the loader by passing `loader` prop. This way you could have a more representative skeleton loader.',
     },
   },
 }

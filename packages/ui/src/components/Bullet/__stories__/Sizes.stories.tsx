@@ -1,11 +1,13 @@
-import type { StoryFn } from '@storybook/react'
+import type { StoryFn } from '@storybook/react-vite'
 import { Bullet } from '..'
 
 export const Sizes: StoryFn = props => (
   <>
     {(['medium', 'small', 'xsmall', 'xxsmall'] as const).map(size => (
       <div key={size}>
-        <Bullet {...props} size={size} text="1" />
+        <Bullet {...props} size={size}>
+          1
+        </Bullet>
       </div>
     ))}
   </>

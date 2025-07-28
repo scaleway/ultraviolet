@@ -1,14 +1,12 @@
-import type { StoryFn } from '@storybook/react'
+import type { StoryFn } from '@storybook/react-vite'
+import { DotsHorizontalIcon } from '@ultraviolet/icons'
 import { Menu } from '..'
 import { Button } from '../../index'
 
 export const DefaultDisclosure = (
-  <Button
-    icon="dots-horizontal"
-    sentiment="neutral"
-    variant="ghost"
-    size="small"
-  />
+  <Button sentiment="neutral" variant="ghost" size="small">
+    <DotsHorizontalIcon />
+  </Button>
 )
 
 export const Template: StoryFn<typeof Menu> = ({

@@ -1,6 +1,7 @@
 'use client'
 
 import styled from '@emotion/styled'
+import { CloseIcon } from '@ultraviolet/icons'
 import type { ReactNode } from 'react'
 import { useReducer } from 'react'
 import { Button } from '../Button'
@@ -102,13 +103,14 @@ export const GlobalAlert = ({
         <CloseButton
           variant="filled"
           size="xsmall"
-          icon="close"
           sentiment="primary"
           onClick={() => {
             toggleOpened()
             onClose?.()
           }}
-        />
+        >
+          <CloseIcon />
+        </CloseButton>
       ) : null}
     </Container>
   )

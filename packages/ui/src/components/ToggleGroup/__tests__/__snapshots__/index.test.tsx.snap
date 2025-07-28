@@ -7,10 +7,10 @@ exports[`ToggleGroup > renders correctly 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -19,10 +19,10 @@ exports[`ToggleGroup > renders correctly 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-2 {
@@ -36,10 +36,10 @@ exports[`ToggleGroup > renders correctly 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.75rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -48,10 +48,10 @@ exports[`ToggleGroup > renders correctly 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.75rem;
 }
 
 .emotion-6 {
@@ -59,10 +59,10 @@ exports[`ToggleGroup > renders correctly 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -71,33 +71,34 @@ exports[`ToggleGroup > renders correctly 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
-.emotion-8 {
-  color: #222638;
+.emotion-9 {
+  color: #3f4250;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  cursor: text;
 }
 
-.emotion-10 {
+.emotion-11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 1rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -106,13 +107,13 @@ exports[`ToggleGroup > renders correctly 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 1rem;
 }
 
-.emotion-12 {
+.emotion-13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -131,24 +132,24 @@ exports[`ToggleGroup > renders correctly 1`] = `
   flex-direction: row-reverse;
 }
 
-.emotion-12:active .emotion-21[data-disabled='false']:after {
+.emotion-13:active .emotion-22[data-disabled='false']:after {
   width: calc(1rem * 1.3775);
 }
 
-.emotion-12[aria-disabled="true"] {
+.emotion-13[aria-disabled="true"] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.emotion-14 {
+.emotion-15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.125rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: baseline;
   -webkit-box-align: baseline;
   -ms-flex-align: baseline;
@@ -157,13 +158,13 @@ exports[`ToggleGroup > renders correctly 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.125rem;
 }
 
-.emotion-16 {
+.emotion-17 {
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 0.5rem;
@@ -177,10 +178,10 @@ exports[`ToggleGroup > renders correctly 1`] = `
   justify-content: normal;
 }
 
-.emotion-18 {
+.emotion-19 {
   color: #3f4250;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -189,7 +190,7 @@ exports[`ToggleGroup > renders correctly 1`] = `
   text-decoration: none;
 }
 
-.emotion-20 {
+.emotion-21 {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -211,11 +212,11 @@ exports[`ToggleGroup > renders correctly 1`] = `
   height: 1.5rem;
 }
 
-.emotion-20:hover {
+.emotion-21:hover {
   background-color: #d9dadd;
 }
 
-.emotion-20:after {
+.emotion-21:after {
   content: "";
   position: absolute;
   top: calc(1.5rem / 2 - 1rem / 2);
@@ -228,25 +229,25 @@ exports[`ToggleGroup > renders correctly 1`] = `
   transition: all 300ms;
 }
 
-.emotion-20:focus-within,
-.emotion-20:focus {
+.emotion-21:focus-within,
+.emotion-21:focus {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.emotion-20[data-disabled="false"]:active:after {
+.emotion-21[data-disabled="false"]:active:after {
   width: calc(1rem * 1.3775);
 }
 
-.emotion-20[data-checked="true"] {
+.emotion-21[data-checked="true"] {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.emotion-20[data-checked="true"]:hover {
+.emotion-21[data-checked="true"]:hover {
   background-color: #792dd4;
 }
 
-.emotion-20[data-checked="true"]:after {
+.emotion-21[data-checked="true"]:after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -254,41 +255,41 @@ exports[`ToggleGroup > renders correctly 1`] = `
   transform: translateX(-100%);
 }
 
-.emotion-20[data-checked="true"]:focus-within,
-.emotion-20[data-checked="true"]:focus {
+.emotion-21[data-checked="true"]:focus-within,
+.emotion-21[data-checked="true"]:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-20[data-disabled="true"] {
+.emotion-21[data-disabled="true"] {
   background: #f3f3f4;
 }
 
-.emotion-20[data-disabled="true"][data-checked="true"] {
+.emotion-21[data-disabled="true"][data-checked="true"] {
   background: #e5dbfd;
 }
 
-.emotion-20[data-error="true"] {
+.emotion-21[data-error="true"] {
   background-color: #ffebf2;
 }
 
-.emotion-20[data-error="true"]:focus-within,
-.emotion-20[data-error="true"]:focus {
+.emotion-21[data-error="true"]:focus-within,
+.emotion-21[data-error="true"]:focus {
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-20[data-error="true"][data-checked="true"] {
+.emotion-21[data-error="true"][data-checked="true"] {
   background-color: #e51963;
 }
 
-.emotion-20[data-error="true"][data-disabled="true"] {
+.emotion-21[data-error="true"][data-disabled="true"] {
   background-color: #fff3f7;
 }
 
-.emotion-20[data-error="true"][data-disabled="true"][data-checked="true"] {
+.emotion-21[data-error="true"][data-disabled="true"][data-checked="true"] {
   background-color: #ffd3e3;
 }
 
-.emotion-22 {
+.emotion-23 {
   position: absolute;
   opacity: 0;
   top: 0;
@@ -298,7 +299,7 @@ exports[`ToggleGroup > renders correctly 1`] = `
   cursor: pointer;
 }
 
-.emotion-22[disabled] {
+.emotion-23[disabled] {
   cursor: not-allowed;
 }
 
@@ -318,40 +319,40 @@ exports[`ToggleGroup > renders correctly 1`] = `
             class="emotion-6 emotion-1"
           >
             <legend
-              class="emotion-8 emotion-9"
+              class="emotion-8 emotion-9 emotion-10"
             >
-              Label 
+              Label
             </legend>
           </div>
           <div
-            class="emotion-10 emotion-1"
+            class="emotion-11 emotion-1"
           >
             <label
               aria-disabled="false"
-              class="emotion-12 emotion-13"
+              class="emotion-13 emotion-14"
             >
               <div
-                class="emotion-14 emotion-1"
+                class="emotion-15 emotion-1"
               >
                 <div
-                  class="emotion-16 emotion-17"
+                  class="emotion-17 emotion-18"
                 >
                   <span
-                    class="emotion-18 emotion-9"
+                    class="emotion-19 emotion-10"
                   >
                     Toggle 1
                   </span>
                 </div>
               </div>
               <div
-                class="emotion-20 emotion-21"
+                class="emotion-21 emotion-22"
                 data-checked="false"
                 data-disabled="false"
                 data-error="false"
               >
                 <input
                   aria-checked="false"
-                  class="emotion-22 emotion-23"
+                  class="emotion-23 emotion-24"
                   id="«r1»"
                   name="Toggle.value-1"
                   type="checkbox"
@@ -361,30 +362,30 @@ exports[`ToggleGroup > renders correctly 1`] = `
             </label>
             <label
               aria-disabled="false"
-              class="emotion-12 emotion-13"
+              class="emotion-13 emotion-14"
             >
               <div
-                class="emotion-14 emotion-1"
+                class="emotion-15 emotion-1"
               >
                 <div
-                  class="emotion-16 emotion-17"
+                  class="emotion-17 emotion-18"
                 >
                   <span
-                    class="emotion-18 emotion-9"
+                    class="emotion-19 emotion-10"
                   >
                     Toggle 2
                   </span>
                 </div>
               </div>
               <div
-                class="emotion-20 emotion-21"
+                class="emotion-21 emotion-22"
                 data-checked="false"
                 data-disabled="false"
                 data-error="false"
               >
                 <input
                   aria-checked="false"
-                  class="emotion-22 emotion-23"
+                  class="emotion-23 emotion-24"
                   id="«r4»"
                   name="Toggle.value-2"
                   type="checkbox"
@@ -407,10 +408,10 @@ exports[`ToggleGroup > renders correctly with direction row 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -419,10 +420,10 @@ exports[`ToggleGroup > renders correctly with direction row 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-2 {
@@ -436,10 +437,10 @@ exports[`ToggleGroup > renders correctly with direction row 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.75rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -448,10 +449,10 @@ exports[`ToggleGroup > renders correctly with direction row 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.75rem;
 }
 
 .emotion-6 {
@@ -459,10 +460,10 @@ exports[`ToggleGroup > renders correctly with direction row 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -471,33 +472,34 @@ exports[`ToggleGroup > renders correctly with direction row 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
-.emotion-8 {
-  color: #222638;
+.emotion-9 {
+  color: #3f4250;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  cursor: text;
 }
 
-.emotion-10 {
+.emotion-11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -506,13 +508,13 @@ exports[`ToggleGroup > renders correctly with direction row 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 1rem;
 }
 
-.emotion-12 {
+.emotion-13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -531,24 +533,24 @@ exports[`ToggleGroup > renders correctly with direction row 1`] = `
   flex-direction: row-reverse;
 }
 
-.emotion-12:active .emotion-21[data-disabled='false']:after {
+.emotion-13:active .emotion-22[data-disabled='false']:after {
   width: calc(1rem * 1.3775);
 }
 
-.emotion-12[aria-disabled="true"] {
+.emotion-13[aria-disabled="true"] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.emotion-14 {
+.emotion-15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.125rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: baseline;
   -webkit-box-align: baseline;
   -ms-flex-align: baseline;
@@ -557,13 +559,13 @@ exports[`ToggleGroup > renders correctly with direction row 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.125rem;
 }
 
-.emotion-16 {
+.emotion-17 {
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 0.5rem;
@@ -577,10 +579,10 @@ exports[`ToggleGroup > renders correctly with direction row 1`] = `
   justify-content: normal;
 }
 
-.emotion-18 {
+.emotion-19 {
   color: #3f4250;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -589,7 +591,7 @@ exports[`ToggleGroup > renders correctly with direction row 1`] = `
   text-decoration: none;
 }
 
-.emotion-20 {
+.emotion-21 {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -611,11 +613,11 @@ exports[`ToggleGroup > renders correctly with direction row 1`] = `
   height: 1.5rem;
 }
 
-.emotion-20:hover {
+.emotion-21:hover {
   background-color: #d9dadd;
 }
 
-.emotion-20:after {
+.emotion-21:after {
   content: "";
   position: absolute;
   top: calc(1.5rem / 2 - 1rem / 2);
@@ -628,25 +630,25 @@ exports[`ToggleGroup > renders correctly with direction row 1`] = `
   transition: all 300ms;
 }
 
-.emotion-20:focus-within,
-.emotion-20:focus {
+.emotion-21:focus-within,
+.emotion-21:focus {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.emotion-20[data-disabled="false"]:active:after {
+.emotion-21[data-disabled="false"]:active:after {
   width: calc(1rem * 1.3775);
 }
 
-.emotion-20[data-checked="true"] {
+.emotion-21[data-checked="true"] {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.emotion-20[data-checked="true"]:hover {
+.emotion-21[data-checked="true"]:hover {
   background-color: #792dd4;
 }
 
-.emotion-20[data-checked="true"]:after {
+.emotion-21[data-checked="true"]:after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -654,41 +656,41 @@ exports[`ToggleGroup > renders correctly with direction row 1`] = `
   transform: translateX(-100%);
 }
 
-.emotion-20[data-checked="true"]:focus-within,
-.emotion-20[data-checked="true"]:focus {
+.emotion-21[data-checked="true"]:focus-within,
+.emotion-21[data-checked="true"]:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-20[data-disabled="true"] {
+.emotion-21[data-disabled="true"] {
   background: #f3f3f4;
 }
 
-.emotion-20[data-disabled="true"][data-checked="true"] {
+.emotion-21[data-disabled="true"][data-checked="true"] {
   background: #e5dbfd;
 }
 
-.emotion-20[data-error="true"] {
+.emotion-21[data-error="true"] {
   background-color: #ffebf2;
 }
 
-.emotion-20[data-error="true"]:focus-within,
-.emotion-20[data-error="true"]:focus {
+.emotion-21[data-error="true"]:focus-within,
+.emotion-21[data-error="true"]:focus {
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-20[data-error="true"][data-checked="true"] {
+.emotion-21[data-error="true"][data-checked="true"] {
   background-color: #e51963;
 }
 
-.emotion-20[data-error="true"][data-disabled="true"] {
+.emotion-21[data-error="true"][data-disabled="true"] {
   background-color: #fff3f7;
 }
 
-.emotion-20[data-error="true"][data-disabled="true"][data-checked="true"] {
+.emotion-21[data-error="true"][data-disabled="true"][data-checked="true"] {
   background-color: #ffd3e3;
 }
 
-.emotion-22 {
+.emotion-23 {
   position: absolute;
   opacity: 0;
   top: 0;
@@ -698,7 +700,7 @@ exports[`ToggleGroup > renders correctly with direction row 1`] = `
   cursor: pointer;
 }
 
-.emotion-22[disabled] {
+.emotion-23[disabled] {
   cursor: not-allowed;
 }
 
@@ -718,40 +720,40 @@ exports[`ToggleGroup > renders correctly with direction row 1`] = `
             class="emotion-6 emotion-1"
           >
             <legend
-              class="emotion-8 emotion-9"
+              class="emotion-8 emotion-9 emotion-10"
             >
-              Label 
+              Label
             </legend>
           </div>
           <div
-            class="emotion-10 emotion-1"
+            class="emotion-11 emotion-1"
           >
             <label
               aria-disabled="false"
-              class="emotion-12 emotion-13"
+              class="emotion-13 emotion-14"
             >
               <div
-                class="emotion-14 emotion-1"
+                class="emotion-15 emotion-1"
               >
                 <div
-                  class="emotion-16 emotion-17"
+                  class="emotion-17 emotion-18"
                 >
                   <span
-                    class="emotion-18 emotion-9"
+                    class="emotion-19 emotion-10"
                   >
                     Toggle 1
                   </span>
                 </div>
               </div>
               <div
-                class="emotion-20 emotion-21"
+                class="emotion-21 emotion-22"
                 data-checked="false"
                 data-disabled="false"
                 data-error="false"
               >
                 <input
                   aria-checked="false"
-                  class="emotion-22 emotion-23"
+                  class="emotion-23 emotion-24"
                   id="«r8»"
                   name="Toggle.value-1"
                   type="checkbox"
@@ -761,30 +763,30 @@ exports[`ToggleGroup > renders correctly with direction row 1`] = `
             </label>
             <label
               aria-disabled="false"
-              class="emotion-12 emotion-13"
+              class="emotion-13 emotion-14"
             >
               <div
-                class="emotion-14 emotion-1"
+                class="emotion-15 emotion-1"
               >
                 <div
-                  class="emotion-16 emotion-17"
+                  class="emotion-17 emotion-18"
                 >
                   <span
-                    class="emotion-18 emotion-9"
+                    class="emotion-19 emotion-10"
                   >
                     Toggle 2
                   </span>
                 </div>
               </div>
               <div
-                class="emotion-20 emotion-21"
+                class="emotion-21 emotion-22"
                 data-checked="false"
                 data-disabled="false"
                 data-error="false"
               >
                 <input
                   aria-checked="false"
-                  class="emotion-22 emotion-23"
+                  class="emotion-23 emotion-24"
                   id="«rb»"
                   name="Toggle.value-2"
                   type="checkbox"
@@ -807,10 +809,10 @@ exports[`ToggleGroup > renders correctly with error content 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -819,10 +821,10 @@ exports[`ToggleGroup > renders correctly with error content 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-2 {
@@ -836,10 +838,10 @@ exports[`ToggleGroup > renders correctly with error content 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.75rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -848,10 +850,10 @@ exports[`ToggleGroup > renders correctly with error content 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.75rem;
 }
 
 .emotion-6 {
@@ -859,10 +861,10 @@ exports[`ToggleGroup > renders correctly with error content 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -871,33 +873,34 @@ exports[`ToggleGroup > renders correctly with error content 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
-.emotion-8 {
-  color: #222638;
+.emotion-9 {
+  color: #3f4250;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  cursor: text;
 }
 
-.emotion-10 {
+.emotion-11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 1rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -906,13 +909,13 @@ exports[`ToggleGroup > renders correctly with error content 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 1rem;
 }
 
-.emotion-12 {
+.emotion-13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -931,24 +934,24 @@ exports[`ToggleGroup > renders correctly with error content 1`] = `
   flex-direction: row-reverse;
 }
 
-.emotion-12:active .emotion-21[data-disabled='false']:after {
+.emotion-13:active .emotion-22[data-disabled='false']:after {
   width: calc(1rem * 1.3775);
 }
 
-.emotion-12[aria-disabled="true"] {
+.emotion-13[aria-disabled="true"] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.emotion-14 {
+.emotion-15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.125rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: baseline;
   -webkit-box-align: baseline;
   -ms-flex-align: baseline;
@@ -957,13 +960,13 @@ exports[`ToggleGroup > renders correctly with error content 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.125rem;
 }
 
-.emotion-16 {
+.emotion-17 {
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 0.5rem;
@@ -977,10 +980,10 @@ exports[`ToggleGroup > renders correctly with error content 1`] = `
   justify-content: normal;
 }
 
-.emotion-18 {
+.emotion-19 {
   color: #3f4250;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -989,7 +992,7 @@ exports[`ToggleGroup > renders correctly with error content 1`] = `
   text-decoration: none;
 }
 
-.emotion-20 {
+.emotion-21 {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -1011,11 +1014,11 @@ exports[`ToggleGroup > renders correctly with error content 1`] = `
   height: 1.5rem;
 }
 
-.emotion-20:hover {
+.emotion-21:hover {
   background-color: #d9dadd;
 }
 
-.emotion-20:after {
+.emotion-21:after {
   content: "";
   position: absolute;
   top: calc(1.5rem / 2 - 1rem / 2);
@@ -1028,25 +1031,25 @@ exports[`ToggleGroup > renders correctly with error content 1`] = `
   transition: all 300ms;
 }
 
-.emotion-20:focus-within,
-.emotion-20:focus {
+.emotion-21:focus-within,
+.emotion-21:focus {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.emotion-20[data-disabled="false"]:active:after {
+.emotion-21[data-disabled="false"]:active:after {
   width: calc(1rem * 1.3775);
 }
 
-.emotion-20[data-checked="true"] {
+.emotion-21[data-checked="true"] {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.emotion-20[data-checked="true"]:hover {
+.emotion-21[data-checked="true"]:hover {
   background-color: #792dd4;
 }
 
-.emotion-20[data-checked="true"]:after {
+.emotion-21[data-checked="true"]:after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -1054,41 +1057,41 @@ exports[`ToggleGroup > renders correctly with error content 1`] = `
   transform: translateX(-100%);
 }
 
-.emotion-20[data-checked="true"]:focus-within,
-.emotion-20[data-checked="true"]:focus {
+.emotion-21[data-checked="true"]:focus-within,
+.emotion-21[data-checked="true"]:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-20[data-disabled="true"] {
+.emotion-21[data-disabled="true"] {
   background: #f3f3f4;
 }
 
-.emotion-20[data-disabled="true"][data-checked="true"] {
+.emotion-21[data-disabled="true"][data-checked="true"] {
   background: #e5dbfd;
 }
 
-.emotion-20[data-error="true"] {
+.emotion-21[data-error="true"] {
   background-color: #ffebf2;
 }
 
-.emotion-20[data-error="true"]:focus-within,
-.emotion-20[data-error="true"]:focus {
+.emotion-21[data-error="true"]:focus-within,
+.emotion-21[data-error="true"]:focus {
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-20[data-error="true"][data-checked="true"] {
+.emotion-21[data-error="true"][data-checked="true"] {
   background-color: #e51963;
 }
 
-.emotion-20[data-error="true"][data-disabled="true"] {
+.emotion-21[data-error="true"][data-disabled="true"] {
   background-color: #fff3f7;
 }
 
-.emotion-20[data-error="true"][data-disabled="true"][data-checked="true"] {
+.emotion-21[data-error="true"][data-disabled="true"][data-checked="true"] {
   background-color: #ffd3e3;
 }
 
-.emotion-22 {
+.emotion-23 {
   position: absolute;
   opacity: 0;
   top: 0;
@@ -1098,14 +1101,14 @@ exports[`ToggleGroup > renders correctly with error content 1`] = `
   cursor: pointer;
 }
 
-.emotion-22[disabled] {
+.emotion-23[disabled] {
   cursor: not-allowed;
 }
 
-.emotion-36 {
-  color: #b3144d;
+.emotion-37 {
+  color: undefined;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -1130,40 +1133,40 @@ exports[`ToggleGroup > renders correctly with error content 1`] = `
             class="emotion-6 emotion-1"
           >
             <legend
-              class="emotion-8 emotion-9"
+              class="emotion-8 emotion-9 emotion-10"
             >
-              Label 
+              Label
             </legend>
           </div>
           <div
-            class="emotion-10 emotion-1"
+            class="emotion-11 emotion-1"
           >
             <label
               aria-disabled="false"
-              class="emotion-12 emotion-13"
+              class="emotion-13 emotion-14"
             >
               <div
-                class="emotion-14 emotion-1"
+                class="emotion-15 emotion-1"
               >
                 <div
-                  class="emotion-16 emotion-17"
+                  class="emotion-17 emotion-18"
                 >
                   <span
-                    class="emotion-18 emotion-9"
+                    class="emotion-19 emotion-10"
                   >
                     Toggle 1
                   </span>
                 </div>
               </div>
               <div
-                class="emotion-20 emotion-21"
+                class="emotion-21 emotion-22"
                 data-checked="false"
                 data-disabled="false"
                 data-error="true"
               >
                 <input
                   aria-checked="false"
-                  class="emotion-22 emotion-23"
+                  class="emotion-23 emotion-24"
                   id="«rn»"
                   name="Toggle.value-1"
                   type="checkbox"
@@ -1173,30 +1176,30 @@ exports[`ToggleGroup > renders correctly with error content 1`] = `
             </label>
             <label
               aria-disabled="false"
-              class="emotion-12 emotion-13"
+              class="emotion-13 emotion-14"
             >
               <div
-                class="emotion-14 emotion-1"
+                class="emotion-15 emotion-1"
               >
                 <div
-                  class="emotion-16 emotion-17"
+                  class="emotion-17 emotion-18"
                 >
                   <span
-                    class="emotion-18 emotion-9"
+                    class="emotion-19 emotion-10"
                   >
                     Toggle 2
                   </span>
                 </div>
               </div>
               <div
-                class="emotion-20 emotion-21"
+                class="emotion-21 emotion-22"
                 data-checked="false"
                 data-disabled="false"
                 data-error="true"
               >
                 <input
                   aria-checked="false"
-                  class="emotion-22 emotion-23"
+                  class="emotion-23 emotion-24"
                   id="«rq»"
                   name="Toggle.value-2"
                   type="checkbox"
@@ -1208,7 +1211,7 @@ exports[`ToggleGroup > renders correctly with error content 1`] = `
         </div>
       </fieldset>
       <p
-        class="emotion-36 emotion-9"
+        class="emotion-37 emotion-10"
       >
         Eror content
       </p>
@@ -1224,10 +1227,10 @@ exports[`ToggleGroup > renders correctly with helper content 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -1236,10 +1239,10 @@ exports[`ToggleGroup > renders correctly with helper content 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-2 {
@@ -1253,10 +1256,10 @@ exports[`ToggleGroup > renders correctly with helper content 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.75rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -1265,10 +1268,10 @@ exports[`ToggleGroup > renders correctly with helper content 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.75rem;
 }
 
 .emotion-6 {
@@ -1276,10 +1279,10 @@ exports[`ToggleGroup > renders correctly with helper content 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -1288,33 +1291,34 @@ exports[`ToggleGroup > renders correctly with helper content 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
-.emotion-8 {
-  color: #222638;
+.emotion-9 {
+  color: #3f4250;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  cursor: text;
 }
 
-.emotion-10 {
+.emotion-11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 1rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -1323,13 +1327,13 @@ exports[`ToggleGroup > renders correctly with helper content 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 1rem;
 }
 
-.emotion-12 {
+.emotion-13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1348,24 +1352,24 @@ exports[`ToggleGroup > renders correctly with helper content 1`] = `
   flex-direction: row-reverse;
 }
 
-.emotion-12:active .emotion-21[data-disabled='false']:after {
+.emotion-13:active .emotion-22[data-disabled='false']:after {
   width: calc(1rem * 1.3775);
 }
 
-.emotion-12[aria-disabled="true"] {
+.emotion-13[aria-disabled="true"] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.emotion-14 {
+.emotion-15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.125rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: baseline;
   -webkit-box-align: baseline;
   -ms-flex-align: baseline;
@@ -1374,13 +1378,13 @@ exports[`ToggleGroup > renders correctly with helper content 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.125rem;
 }
 
-.emotion-16 {
+.emotion-17 {
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 0.5rem;
@@ -1394,10 +1398,10 @@ exports[`ToggleGroup > renders correctly with helper content 1`] = `
   justify-content: normal;
 }
 
-.emotion-18 {
+.emotion-19 {
   color: #3f4250;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -1406,7 +1410,7 @@ exports[`ToggleGroup > renders correctly with helper content 1`] = `
   text-decoration: none;
 }
 
-.emotion-20 {
+.emotion-21 {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -1428,11 +1432,11 @@ exports[`ToggleGroup > renders correctly with helper content 1`] = `
   height: 1.5rem;
 }
 
-.emotion-20:hover {
+.emotion-21:hover {
   background-color: #d9dadd;
 }
 
-.emotion-20:after {
+.emotion-21:after {
   content: "";
   position: absolute;
   top: calc(1.5rem / 2 - 1rem / 2);
@@ -1445,25 +1449,25 @@ exports[`ToggleGroup > renders correctly with helper content 1`] = `
   transition: all 300ms;
 }
 
-.emotion-20:focus-within,
-.emotion-20:focus {
+.emotion-21:focus-within,
+.emotion-21:focus {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.emotion-20[data-disabled="false"]:active:after {
+.emotion-21[data-disabled="false"]:active:after {
   width: calc(1rem * 1.3775);
 }
 
-.emotion-20[data-checked="true"] {
+.emotion-21[data-checked="true"] {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.emotion-20[data-checked="true"]:hover {
+.emotion-21[data-checked="true"]:hover {
   background-color: #792dd4;
 }
 
-.emotion-20[data-checked="true"]:after {
+.emotion-21[data-checked="true"]:after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -1471,41 +1475,41 @@ exports[`ToggleGroup > renders correctly with helper content 1`] = `
   transform: translateX(-100%);
 }
 
-.emotion-20[data-checked="true"]:focus-within,
-.emotion-20[data-checked="true"]:focus {
+.emotion-21[data-checked="true"]:focus-within,
+.emotion-21[data-checked="true"]:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-20[data-disabled="true"] {
+.emotion-21[data-disabled="true"] {
   background: #f3f3f4;
 }
 
-.emotion-20[data-disabled="true"][data-checked="true"] {
+.emotion-21[data-disabled="true"][data-checked="true"] {
   background: #e5dbfd;
 }
 
-.emotion-20[data-error="true"] {
+.emotion-21[data-error="true"] {
   background-color: #ffebf2;
 }
 
-.emotion-20[data-error="true"]:focus-within,
-.emotion-20[data-error="true"]:focus {
+.emotion-21[data-error="true"]:focus-within,
+.emotion-21[data-error="true"]:focus {
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-20[data-error="true"][data-checked="true"] {
+.emotion-21[data-error="true"][data-checked="true"] {
   background-color: #e51963;
 }
 
-.emotion-20[data-error="true"][data-disabled="true"] {
+.emotion-21[data-error="true"][data-disabled="true"] {
   background-color: #fff3f7;
 }
 
-.emotion-20[data-error="true"][data-disabled="true"][data-checked="true"] {
+.emotion-21[data-error="true"][data-disabled="true"][data-checked="true"] {
   background-color: #ffd3e3;
 }
 
-.emotion-22 {
+.emotion-23 {
   position: absolute;
   opacity: 0;
   top: 0;
@@ -1515,14 +1519,14 @@ exports[`ToggleGroup > renders correctly with helper content 1`] = `
   cursor: pointer;
 }
 
-.emotion-22[disabled] {
+.emotion-23[disabled] {
   cursor: not-allowed;
 }
 
-.emotion-36 {
+.emotion-37 {
   color: #727683;
   font-size: 0.75rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1rem;
@@ -1547,40 +1551,40 @@ exports[`ToggleGroup > renders correctly with helper content 1`] = `
             class="emotion-6 emotion-1"
           >
             <legend
-              class="emotion-8 emotion-9"
+              class="emotion-8 emotion-9 emotion-10"
             >
-              Label 
+              Label
             </legend>
           </div>
           <div
-            class="emotion-10 emotion-1"
+            class="emotion-11 emotion-1"
           >
             <label
               aria-disabled="false"
-              class="emotion-12 emotion-13"
+              class="emotion-13 emotion-14"
             >
               <div
-                class="emotion-14 emotion-1"
+                class="emotion-15 emotion-1"
               >
                 <div
-                  class="emotion-16 emotion-17"
+                  class="emotion-17 emotion-18"
                 >
                   <span
-                    class="emotion-18 emotion-9"
+                    class="emotion-19 emotion-10"
                   >
                     Toggle 1
                   </span>
                 </div>
               </div>
               <div
-                class="emotion-20 emotion-21"
+                class="emotion-21 emotion-22"
                 data-checked="false"
                 data-disabled="false"
                 data-error="false"
               >
                 <input
                   aria-checked="false"
-                  class="emotion-22 emotion-23"
+                  class="emotion-23 emotion-24"
                   id="«rf»"
                   name="Toggle.value-1"
                   type="checkbox"
@@ -1590,30 +1594,30 @@ exports[`ToggleGroup > renders correctly with helper content 1`] = `
             </label>
             <label
               aria-disabled="false"
-              class="emotion-12 emotion-13"
+              class="emotion-13 emotion-14"
             >
               <div
-                class="emotion-14 emotion-1"
+                class="emotion-15 emotion-1"
               >
                 <div
-                  class="emotion-16 emotion-17"
+                  class="emotion-17 emotion-18"
                 >
                   <span
-                    class="emotion-18 emotion-9"
+                    class="emotion-19 emotion-10"
                   >
                     Toggle 2
                   </span>
                 </div>
               </div>
               <div
-                class="emotion-20 emotion-21"
+                class="emotion-21 emotion-22"
                 data-checked="false"
                 data-disabled="false"
                 data-error="false"
               >
                 <input
                   aria-checked="false"
-                  class="emotion-22 emotion-23"
+                  class="emotion-23 emotion-24"
                   id="«ri»"
                   name="Toggle.value-2"
                   type="checkbox"
@@ -1625,7 +1629,7 @@ exports[`ToggleGroup > renders correctly with helper content 1`] = `
         </div>
       </fieldset>
       <p
-        class="emotion-36 emotion-9"
+        class="emotion-37 emotion-10"
       >
         Helper content
       </p>
@@ -1641,10 +1645,10 @@ exports[`ToggleGroup > renders correctly with required prop 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -1653,10 +1657,10 @@ exports[`ToggleGroup > renders correctly with required prop 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .emotion-2 {
@@ -1670,10 +1674,10 @@ exports[`ToggleGroup > renders correctly with required prop 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.75rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -1682,10 +1686,10 @@ exports[`ToggleGroup > renders correctly with required prop 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.75rem;
 }
 
 .emotion-6 {
@@ -1693,10 +1697,10 @@ exports[`ToggleGroup > renders correctly with required prop 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.25rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -1705,16 +1709,52 @@ exports[`ToggleGroup > renders correctly with required prop 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.emotion-8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-flex-wrap: nowrap;
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.25rem;
 }
 
-.emotion-8 {
-  color: #222638;
+.emotion-11 {
+  color: #3f4250;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: text;
+}
+
+.emotion-13 {
+  color: #b3144d;
+  font-size: 1rem;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -1723,30 +1763,15 @@ exports[`ToggleGroup > renders correctly with required prop 1`] = `
   text-decoration: none;
 }
 
-.emotion-11 {
-  vertical-align: middle;
-  fill: #b3144d;
-  height: 8px;
-  width: 8px;
-  min-width: 8px;
-  min-height: 8px;
-  vertical-align: super;
-}
-
-.emotion-11 .fillStroke {
-  stroke: #b3144d;
-  fill: none;
-}
-
-.emotion-13 {
+.emotion-15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 1rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -1755,13 +1780,13 @@ exports[`ToggleGroup > renders correctly with required prop 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 1rem;
 }
 
-.emotion-15 {
+.emotion-17 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1780,24 +1805,24 @@ exports[`ToggleGroup > renders correctly with required prop 1`] = `
   flex-direction: row-reverse;
 }
 
-.emotion-15:active .emotion-24[data-disabled='false']:after {
+.emotion-17:active .emotion-26[data-disabled='false']:after {
   width: calc(1rem * 1.3775);
 }
 
-.emotion-15[aria-disabled="true"] {
+.emotion-17[aria-disabled="true"] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.emotion-17 {
+.emotion-19 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.125rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: baseline;
   -webkit-box-align: baseline;
   -ms-flex-align: baseline;
@@ -1806,13 +1831,13 @@ exports[`ToggleGroup > renders correctly with required prop 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.125rem;
 }
 
-.emotion-19 {
+.emotion-21 {
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 0.5rem;
@@ -1826,10 +1851,10 @@ exports[`ToggleGroup > renders correctly with required prop 1`] = `
   justify-content: normal;
 }
 
-.emotion-21 {
+.emotion-23 {
   color: #3f4250;
   font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -1838,7 +1863,7 @@ exports[`ToggleGroup > renders correctly with required prop 1`] = `
   text-decoration: none;
 }
 
-.emotion-23 {
+.emotion-25 {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -1860,11 +1885,11 @@ exports[`ToggleGroup > renders correctly with required prop 1`] = `
   height: 1.5rem;
 }
 
-.emotion-23:hover {
+.emotion-25:hover {
   background-color: #d9dadd;
 }
 
-.emotion-23:after {
+.emotion-25:after {
   content: "";
   position: absolute;
   top: calc(1.5rem / 2 - 1rem / 2);
@@ -1877,25 +1902,25 @@ exports[`ToggleGroup > renders correctly with required prop 1`] = `
   transition: all 300ms;
 }
 
-.emotion-23:focus-within,
-.emotion-23:focus {
+.emotion-25:focus-within,
+.emotion-25:focus {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.emotion-23[data-disabled="false"]:active:after {
+.emotion-25[data-disabled="false"]:active:after {
   width: calc(1rem * 1.3775);
 }
 
-.emotion-23[data-checked="true"] {
+.emotion-25[data-checked="true"] {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.emotion-23[data-checked="true"]:hover {
+.emotion-25[data-checked="true"]:hover {
   background-color: #792dd4;
 }
 
-.emotion-23[data-checked="true"]:after {
+.emotion-25[data-checked="true"]:after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -1903,41 +1928,41 @@ exports[`ToggleGroup > renders correctly with required prop 1`] = `
   transform: translateX(-100%);
 }
 
-.emotion-23[data-checked="true"]:focus-within,
-.emotion-23[data-checked="true"]:focus {
+.emotion-25[data-checked="true"]:focus-within,
+.emotion-25[data-checked="true"]:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-23[data-disabled="true"] {
+.emotion-25[data-disabled="true"] {
   background: #f3f3f4;
 }
 
-.emotion-23[data-disabled="true"][data-checked="true"] {
+.emotion-25[data-disabled="true"][data-checked="true"] {
   background: #e5dbfd;
 }
 
-.emotion-23[data-error="true"] {
+.emotion-25[data-error="true"] {
   background-color: #ffebf2;
 }
 
-.emotion-23[data-error="true"]:focus-within,
-.emotion-23[data-error="true"]:focus {
+.emotion-25[data-error="true"]:focus-within,
+.emotion-25[data-error="true"]:focus {
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-23[data-error="true"][data-checked="true"] {
+.emotion-25[data-error="true"][data-checked="true"] {
   background-color: #e51963;
 }
 
-.emotion-23[data-error="true"][data-disabled="true"] {
+.emotion-25[data-error="true"][data-disabled="true"] {
   background-color: #fff3f7;
 }
 
-.emotion-23[data-error="true"][data-disabled="true"][data-checked="true"] {
+.emotion-25[data-error="true"][data-disabled="true"][data-checked="true"] {
   background-color: #ffd3e3;
 }
 
-.emotion-25 {
+.emotion-27 {
   position: absolute;
   opacity: 0;
   top: 0;
@@ -1947,7 +1972,7 @@ exports[`ToggleGroup > renders correctly with required prop 1`] = `
   cursor: pointer;
 }
 
-.emotion-25[disabled] {
+.emotion-27[disabled] {
   cursor: not-allowed;
 }
 
@@ -1966,50 +1991,51 @@ exports[`ToggleGroup > renders correctly with required prop 1`] = `
           <div
             class="emotion-6 emotion-1"
           >
-            <legend
-              class="emotion-8 emotion-9"
+            <div
+              class="emotion-8 emotion-1"
             >
-              Label 
-              <svg
+              <legend
                 class="emotion-10 emotion-11 emotion-12"
-                viewBox="0 0 20 20"
               >
-                <path
-                  d="M10 2h4l-.79 7.91 6.45-4.64 2 3.46L14.42 12l7.24 3.27-2 3.46-6.45-4.64L14 22h-4l.79-7.91-6.45 4.64-2-3.46L9.58 12 2.34 8.73l2-3.46 6.45 4.64z"
-                />
-              </svg>
-            </legend>
+                Label
+              </legend>
+              <span
+                class="emotion-13 emotion-12"
+              >
+                *
+              </span>
+            </div>
           </div>
           <div
-            class="emotion-13 emotion-1"
+            class="emotion-15 emotion-1"
           >
             <label
               aria-disabled="false"
-              class="emotion-15 emotion-16"
+              class="emotion-17 emotion-18"
             >
               <div
-                class="emotion-17 emotion-1"
+                class="emotion-19 emotion-1"
               >
                 <div
-                  class="emotion-19 emotion-20"
+                  class="emotion-21 emotion-22"
                 >
                   <span
-                    class="emotion-21 emotion-9"
+                    class="emotion-23 emotion-12"
                   >
                     Toggle 1
                   </span>
                 </div>
               </div>
               <div
-                class="emotion-23 emotion-24"
+                class="emotion-25 emotion-26"
                 data-checked="false"
                 data-disabled="false"
                 data-error="false"
               >
                 <input
                   aria-checked="false"
-                  class="emotion-25 emotion-26"
-                  id="«rv»"
+                  class="emotion-27 emotion-28"
+                  id="«r10»"
                   name="Toggle.value-1"
                   type="checkbox"
                   value="value-1"
@@ -2018,31 +2044,31 @@ exports[`ToggleGroup > renders correctly with required prop 1`] = `
             </label>
             <label
               aria-disabled="false"
-              class="emotion-15 emotion-16"
+              class="emotion-17 emotion-18"
             >
               <div
-                class="emotion-17 emotion-1"
+                class="emotion-19 emotion-1"
               >
                 <div
-                  class="emotion-19 emotion-20"
+                  class="emotion-21 emotion-22"
                 >
                   <span
-                    class="emotion-21 emotion-9"
+                    class="emotion-23 emotion-12"
                   >
                     Toggle 2
                   </span>
                 </div>
               </div>
               <div
-                class="emotion-23 emotion-24"
+                class="emotion-25 emotion-26"
                 data-checked="false"
                 data-disabled="false"
                 data-error="false"
               >
                 <input
                   aria-checked="false"
-                  class="emotion-25 emotion-26"
-                  id="«r12»"
+                  class="emotion-27 emotion-28"
+                  id="«r13»"
                   name="Toggle.value-2"
                   type="checkbox"
                   value="value-2"

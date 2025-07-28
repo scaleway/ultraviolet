@@ -1,5 +1,298 @@
 # Change Log
 
+## 4.0.0
+
+### Major Changes
+
+- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - All group input have a breaking changes in their props:
+
+  - `label` is now longer needed, use `legend` instead.
+  - `legend` type moved from `ReactNode` to `string`. Use `legendDescription` to add more information.
+  - new prop `legendDescription` to add more information to the legend.
+
+- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - ⚠️ Breaking changes:
+
+  - `<RadioField />` no longer deprecated
+  - `<DateField />` renamed `<DateInputField />` to be consistent with other input fields
+
+- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - ⚠️ `@ultraviolet/ui` is now a peer-dependency of `@ultraviolet/form` and `@ultraviolet/plus`. This means you need to have an installed version of `@ultraviolet/ui` in your project that matches the version defined by the peer-dependency.
+
+- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - Beta release
+
+- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - ⚠️ BREAKING CHANGES
+
+  We removed all old components and renamed the V2 components to remove that suffix. Thus, the followng components have changed:
+
+  TextInputFieldV2 -> TextInputField
+  SelectInputFieldV2 -> SelectInputField
+  AvatarFieldV2 -> AvatarField
+  MenuFieldV2 -> MenuField
+  DateInputFieldV2 -> DateInputField
+  TimeInputFieldV2 -> TimeInputField
+  NumberInputFieldV2 -> NumberInputField
+
+### Minor Changes
+
+- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - Spread props instead of manually adding them to avoid forgetting some
+
+  Breaking changes :
+
+  - `SelectableCardGroupField`: prop `type` is now mandatory
+  - `VerificationCodeField` : rename `id` as `inputId`
+
+- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - **Breaking changes**
+  `SwitchButton`: New version of the component:
+  - props `leftButton` and `rightButton` removed
+  - Use `SwitchButton.Option` to add buttons/options
+  - More than 2 options possible now !
+  - New sizes
+  - New prop `sentiment`
+
+### Patch Changes
+
+- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - Fix all group field to have correct `legend` and `legendDescription`
+
+- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - `ToggleField` and `SelectableCardField`: Fix type of prop `label`
+
+- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - Missing spread of prop `legend` in `<CheckboxGroupField />`
+
+- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - Fix `value` prop on all fields
+
+- Updated dependencies [[`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7), [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7), [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7), [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7), [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7), [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7), [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7), [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7), [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7), [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7), [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7), [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7), [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7), [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7), [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7), [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7), [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7), [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7), [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7), [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7), [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7), [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7), [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7), [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7), [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7), [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7), [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7), [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7), [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7), [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7), [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7), [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7), [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7), [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7), [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7), [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7), [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7), [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7), [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7), [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7), [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7), [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7), [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7), [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7), [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7), [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7), [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7), [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7), [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7), [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7), [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7), [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7), [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7), [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7), [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7), [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7), [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7), [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7), [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7), [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7), [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7), [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7)]:
+  - @ultraviolet/ui@2.0.0
+  - @ultraviolet/icons@4.0.0
+  - @ultraviolet/themes@2.0.0
+
+## 4.0.0-beta.20
+
+### Patch Changes
+
+- Updated dependencies [[`2169048`](https://github.com/scaleway/ultraviolet/commit/2169048055c37b870c57f2a56ee8a628b36af6c6), [`f791286`](https://github.com/scaleway/ultraviolet/commit/f791286dc4e5dad0f4cbf14c53801d7890e0ee63)]:
+  - @ultraviolet/ui@2.0.0-beta.19
+
+## 4.0.0-beta.19
+
+### Patch Changes
+
+- Updated dependencies [[`ec7c55a`](https://github.com/scaleway/ultraviolet/commit/ec7c55a7bdad9e5f49a2b8aaf2aca2e228bb725e), [`f921df0`](https://github.com/scaleway/ultraviolet/commit/f921df0aea3ea46e014311f6008b3d44f95e16cf), [`706bfaa`](https://github.com/scaleway/ultraviolet/commit/706bfaabf558ab751c7dbcd1c3bf5e84dde8f529), [`ea55dea`](https://github.com/scaleway/ultraviolet/commit/ea55dea228d3e634f13e1de358d2738de210e7b2), [`2ddbbf9`](https://github.com/scaleway/ultraviolet/commit/2ddbbf9a785f40cb79a06b6ba1bfb89e5a22cf6b), [`996f5b9`](https://github.com/scaleway/ultraviolet/commit/996f5b98db88ca0ca7c7eac08535697ff36f7365)]:
+  - @ultraviolet/ui@2.0.0-beta.18
+  - @ultraviolet/icons@4.0.0-beta.9
+
+## 4.0.0-beta.18
+
+### Patch Changes
+
+- [#5325](https://github.com/scaleway/ultraviolet/pull/5325) [`faaccb7`](https://github.com/scaleway/ultraviolet/commit/faaccb764e48cc9d517c0da1212a9ba77eec3d7a) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@babel/core` to `7.27.7`.
+
+- [#5315](https://github.com/scaleway/ultraviolet/pull/5315) [`029f2bc`](https://github.com/scaleway/ultraviolet/commit/029f2bcc6fb11d24ea2c46cd0a3f5546cffa30fb) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@emotion/styled` to `11.14.1`.
+
+- [#5097](https://github.com/scaleway/ultraviolet/pull/5097) [`ce31fd7`](https://github.com/scaleway/ultraviolet/commit/ce31fd7bca3b9243b6254e0d60999d26cf51c8f5) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `react-hook-form` to `7.56.3`.
+
+- Updated dependencies [[`d25d9d8`](https://github.com/scaleway/ultraviolet/commit/d25d9d8c71ffdc922f033daaf4ec6252f8382992), [`faaccb7`](https://github.com/scaleway/ultraviolet/commit/faaccb764e48cc9d517c0da1212a9ba77eec3d7a), [`029f2bc`](https://github.com/scaleway/ultraviolet/commit/029f2bcc6fb11d24ea2c46cd0a3f5546cffa30fb), [`c453a01`](https://github.com/scaleway/ultraviolet/commit/c453a01967a64eeec644a2193b145572b6ed1569), [`f95c6d2`](https://github.com/scaleway/ultraviolet/commit/f95c6d2b5e1e4402822dc6c1362ca280d513e1dd), [`40e189c`](https://github.com/scaleway/ultraviolet/commit/40e189cb6af270ea830b9d7faeee20d15817425a), [`f95c6d2`](https://github.com/scaleway/ultraviolet/commit/f95c6d2b5e1e4402822dc6c1362ca280d513e1dd)]:
+  - @ultraviolet/ui@2.0.0-beta.17
+  - @ultraviolet/icons@4.0.0-beta.8
+  - @ultraviolet/themes@2.0.0-beta.3
+
+## 4.0.0-beta.17
+
+### Patch Changes
+
+- Updated dependencies [[`b8fa3f6`](https://github.com/scaleway/ultraviolet/commit/b8fa3f6542b0b99bd2887b07ac4db0487e9371a1)]:
+  - @ultraviolet/ui@2.0.0-beta.16
+
+## 4.0.0-beta.16
+
+### Patch Changes
+
+- Updated dependencies [[`288eec8`](https://github.com/scaleway/ultraviolet/commit/288eec8554bec97892574f598cf6193331e1fb7a), [`35780ff`](https://github.com/scaleway/ultraviolet/commit/35780fffd11eb7218dfd7d7134f1376758c871ed), [`7ce2d34`](https://github.com/scaleway/ultraviolet/commit/7ce2d34977de7731e873106d5ccdc3dcbca7b92b)]:
+  - @ultraviolet/ui@2.0.0-beta.15
+  - @ultraviolet/icons@4.0.0-beta.7
+
+## 4.0.0-beta.15
+
+### Patch Changes
+
+- Updated dependencies [[`fe3e1c1`](https://github.com/scaleway/ultraviolet/commit/fe3e1c1aae01dd0af0f6b9f10a5d9dbcb591cc29), [`80e0af3`](https://github.com/scaleway/ultraviolet/commit/80e0af3b006b51bf83e49581d84eab9eb94bc4c7), [`a3f9b52`](https://github.com/scaleway/ultraviolet/commit/a3f9b520dce181d481e8230b271cda7e0b730e86), [`a8108ff`](https://github.com/scaleway/ultraviolet/commit/a8108ff2c2fad133172d30db5aa3dcb0e9e42e17)]:
+  - @ultraviolet/ui@2.0.0-beta.14
+
+## 4.0.0-beta.14
+
+### Major Changes
+
+- [#5285](https://github.com/scaleway/ultraviolet/pull/5285) [`b3873c7`](https://github.com/scaleway/ultraviolet/commit/b3873c7a0f9e77ed9b075735e0e444c1d33d21b3) Thanks [@matthprost](https://github.com/matthprost)! - ⚠️ Breaking changes:
+
+  - `<RadioField />` no longer deprecated
+  - `<DateField />` renamed `<DateInputField />` to be consistent with other input fields
+
+### Patch Changes
+
+- Updated dependencies [[`bcb7243`](https://github.com/scaleway/ultraviolet/commit/bcb7243c8d2c6112bcc1353d052ba230323c3f34), [`99eb24a`](https://github.com/scaleway/ultraviolet/commit/99eb24a498e1ac2c270272fa771f0eaa1b2d4fea), [`b3873c7`](https://github.com/scaleway/ultraviolet/commit/b3873c7a0f9e77ed9b075735e0e444c1d33d21b3), [`dac6d07`](https://github.com/scaleway/ultraviolet/commit/dac6d07a5823b6ae12b98ee9c656fab7105ccfe7), [`e3570d8`](https://github.com/scaleway/ultraviolet/commit/e3570d88c8f66e89c532f545c727eccd06d5664c), [`fac72c0`](https://github.com/scaleway/ultraviolet/commit/fac72c03508fe71cb020837975b14e5dabccbfe2)]:
+  - @ultraviolet/ui@2.0.0-beta.13
+
+## 4.0.0-beta.13
+
+### Patch Changes
+
+- Updated dependencies [[`52e9bf4`](https://github.com/scaleway/ultraviolet/commit/52e9bf49d5c17e0e64bf88eaf12e5815eb304e94), [`a0398de`](https://github.com/scaleway/ultraviolet/commit/a0398debe9d06372fb8888755673fec10ee93f34), [`a2ac9c4`](https://github.com/scaleway/ultraviolet/commit/a2ac9c492f673c5395dabfd6d97fd3051e58d6ec)]:
+  - @ultraviolet/ui@2.0.0-beta.12
+  - @ultraviolet/icons@4.0.0-beta.6
+
+## 4.0.0-beta.12
+
+### Patch Changes
+
+- Updated dependencies [[`5870ea6`](https://github.com/scaleway/ultraviolet/commit/5870ea62864ba881ffc888a924bcf731387636ba), [`b03ed1b`](https://github.com/scaleway/ultraviolet/commit/b03ed1b50e7807eb72f8ae392bcd34f42772ca02), [`1275792`](https://github.com/scaleway/ultraviolet/commit/12757925af5c4fd08b857f165027b1cd6dee8b08), [`f41150e`](https://github.com/scaleway/ultraviolet/commit/f41150ebb2d97a95c074080f3db8fcd91c2b5d93), [`40d4066`](https://github.com/scaleway/ultraviolet/commit/40d40662d7305712b0ca23d08759b37590a677a0), [`80d5c50`](https://github.com/scaleway/ultraviolet/commit/80d5c50e294efdc5fe714a55ef985ff142c07b6e)]:
+  - @ultraviolet/ui@2.0.0-beta.11
+
+## 4.0.0-beta.11
+
+### Major Changes
+
+- [#5228](https://github.com/scaleway/ultraviolet/pull/5228) [`0040779`](https://github.com/scaleway/ultraviolet/commit/00407792bf0cd64eee0c02db107f3c43d42fa1a4) Thanks [@matthprost](https://github.com/matthprost)! - ⚠️ BREAKING CHANGES
+
+  We removed all old components and renamed the V2 components to remove that suffix. Thus, the followng components have changed:
+
+  TextInputFieldV2 -> TextInputField
+  SelectInputFieldV2 -> SelectInputField
+  AvatarFieldV2 -> AvatarField
+  MenuFieldV2 -> MenuField
+  DateInputFieldV2 -> DateInputField
+  TimeInputFieldV2 -> TimeInputField
+  NumberInputFieldV2 -> NumberInputField
+
+### Patch Changes
+
+- Updated dependencies [[`0040779`](https://github.com/scaleway/ultraviolet/commit/00407792bf0cd64eee0c02db107f3c43d42fa1a4)]:
+  - @ultraviolet/ui@2.0.0-beta.10
+
+## 4.0.0-beta.10
+
+### Minor Changes
+
+- [`0608206`](https://github.com/scaleway/ultraviolet/commit/0608206affcae3630ef6d373ca260c43f30fd036) Thanks [@lisalupi](https://github.com/lisalupi)! - **Breaking changes**
+  `SwitchButton`: New version of the component:
+  - props `leftButton` and `rightButton` removed
+  - Use `SwitchButton.Option` to add buttons/options
+  - More than 2 options possible now !
+  - New sizes
+  - New prop `sentiment`
+
+### Patch Changes
+
+- Updated dependencies [[`b4279e4`](https://github.com/scaleway/ultraviolet/commit/b4279e441718dfc00ecfe271c9744d51f2dcacf9), [`0cf10d4`](https://github.com/scaleway/ultraviolet/commit/0cf10d4b48b8a09992b0e8b92552b2d26357b173), [`edc91f5`](https://github.com/scaleway/ultraviolet/commit/edc91f508667d221d616616f782a79579a516156), [`0608206`](https://github.com/scaleway/ultraviolet/commit/0608206affcae3630ef6d373ca260c43f30fd036)]:
+  - @ultraviolet/ui@2.0.0-beta.9
+
+## 4.0.0-beta.9
+
+### Patch Changes
+
+- [`f133fc1`](https://github.com/scaleway/ultraviolet/commit/f133fc156b0815ca36baa0bb1383cb78068fcaba) Thanks [@matthprost](https://github.com/matthprost)! - Fix `value` prop on all fields
+
+- Updated dependencies [[`f8df4dd`](https://github.com/scaleway/ultraviolet/commit/f8df4ddce45073537a4ae9a334030d472b9f0d96)]:
+  - @ultraviolet/icons@4.0.0-beta.5
+  - @ultraviolet/ui@2.0.0-beta.8
+
+## 4.0.0-beta.8
+
+### Patch Changes
+
+- [`9d11919`](https://github.com/scaleway/ultraviolet/commit/9d11919349dbfd0d3463050e98c73909eea1ddf4) Thanks [@lisalupi](https://github.com/lisalupi)! - `ToggleField` and `SelectableCardField`: Fix type of prop `label`
+
+- [#5227](https://github.com/scaleway/ultraviolet/pull/5227) [`03df29d`](https://github.com/scaleway/ultraviolet/commit/03df29d7069ed7d670ebe0013628c6969903110f) Thanks [@Lawndlwd](https://github.com/Lawndlwd)! - Fix: Make Form without style
+
+- Updated dependencies [[`15fd34a`](https://github.com/scaleway/ultraviolet/commit/15fd34ad677dfaf551a4e6884ca9ecee18280654), [`cfe5bbe`](https://github.com/scaleway/ultraviolet/commit/cfe5bbed94318b75a6643cd8fb11b761f7aa3e48), [`08e0353`](https://github.com/scaleway/ultraviolet/commit/08e03530fcd28a1c478fda9ddca41a63d5124581)]:
+  - @ultraviolet/icons@4.0.0-beta.4
+  - @ultraviolet/ui@2.0.0-beta.7
+
+## 4.0.0-beta.7
+
+### Minor Changes
+
+- [`5d0a970`](https://github.com/scaleway/ultraviolet/commit/5d0a9702142eb4de78f4511e38004b60e2264634) Thanks [@lisalupi](https://github.com/lisalupi)! - Spread props instead of manually adding them to avoid forgetting some
+
+  Breaking changes :
+
+  - `SelectableCardGroupField`: prop `type` is now mandatory
+  - `VerificationCodeField` : rename `id` as `inputId`
+
+### Patch Changes
+
+- Updated dependencies [[`5d0a970`](https://github.com/scaleway/ultraviolet/commit/5d0a9702142eb4de78f4511e38004b60e2264634)]:
+  - @ultraviolet/ui@2.0.0-beta.6
+
+## 4.0.0-beta.6
+
+### Patch Changes
+
+- Updated dependencies [[`bb47261`](https://github.com/scaleway/ultraviolet/commit/bb472611b711cb3988c186d6d384c29f3c9037e2), [`be22eef`](https://github.com/scaleway/ultraviolet/commit/be22eef5335a4a6b96378547b70053a086476107), [`cc10503`](https://github.com/scaleway/ultraviolet/commit/cc1050379db613d13c921a3af172128aa4cf225b), [`53fcf41`](https://github.com/scaleway/ultraviolet/commit/53fcf415f169f61b4593f72fdacd7de3ebbd9387), [`6b0565d`](https://github.com/scaleway/ultraviolet/commit/6b0565d2991db0510067d91b2140274dcde2ea21), [`6752ec1`](https://github.com/scaleway/ultraviolet/commit/6752ec1b60483e1f882bb6448a82dce62a03a0a7), [`c5b82c2`](https://github.com/scaleway/ultraviolet/commit/c5b82c2674ba8189ee4432178b358f1a4ee05b02)]:
+  - @ultraviolet/ui@2.0.0-beta.5
+  - @ultraviolet/themes@2.0.0-beta.2
+  - @ultraviolet/icons@4.0.0-beta.3
+
+## 4.0.0-beta.5
+
+### Patch Changes
+
+- Updated dependencies [[`b1c9952`](https://github.com/scaleway/ultraviolet/commit/b1c99521313cf8c2a2b3f58090a577084060ed56)]:
+  - @ultraviolet/ui@2.0.0-beta.4
+
+## 4.0.0-beta.4
+
+### Patch Changes
+
+- [#5174](https://github.com/scaleway/ultraviolet/pull/5174) [`e920e03`](https://github.com/scaleway/ultraviolet/commit/e920e03c3637b2db5fb0a7d921695fd522538a0a) Thanks [@matthprost](https://github.com/matthprost)! - Missing spread of prop `legend` in `<CheckboxGroupField />`
+
+## 4.0.0-beta.3
+
+### Major Changes
+
+- [`855a68c`](https://github.com/scaleway/ultraviolet/commit/855a68cc2740225d56f7f326338d6b6b482f804b) Thanks [@matthprost](https://github.com/matthprost)! - All group input have a breaking changes in their props:
+
+  - `label` is now longer needed, use `legend` instead.
+  - `legend` type moved from `ReactNode` to `string`. Use `legendDescription` to add more information.
+  - new prop `legendDescription` to add more information to the legend.
+
+### Patch Changes
+
+- [`855a68c`](https://github.com/scaleway/ultraviolet/commit/855a68cc2740225d56f7f326338d6b6b482f804b) Thanks [@matthprost](https://github.com/matthprost)! - Fix all group field to have correct `legend` and `legendDescription`
+
+- Updated dependencies [[`855a68c`](https://github.com/scaleway/ultraviolet/commit/855a68cc2740225d56f7f326338d6b6b482f804b), [`fd88786`](https://github.com/scaleway/ultraviolet/commit/fd887868e66208f5d3ab6de2e25df9ed7518eec7), [`da3e7f7`](https://github.com/scaleway/ultraviolet/commit/da3e7f7c41ce6bad2c0dcd9a05693cee587f2ef3), [`855a68c`](https://github.com/scaleway/ultraviolet/commit/855a68cc2740225d56f7f326338d6b6b482f804b), [`ae4ca59`](https://github.com/scaleway/ultraviolet/commit/ae4ca592099b440cdedfafdb1c5a2ea0540d97f8), [`421d104`](https://github.com/scaleway/ultraviolet/commit/421d104ae17d8c805d981ed214417916f73d561c)]:
+  - @ultraviolet/ui@2.0.0-beta.3
+  - @ultraviolet/icons@4.0.0-beta.2
+  - @ultraviolet/themes@2.0.0-beta.1
+
+## 4.0.0-beta.2
+
+### Patch Changes
+
+- Updated dependencies [[`f9dc10c`](https://github.com/scaleway/ultraviolet/commit/f9dc10cbe3ea826e4d6f682fbd5567ff0463f75b)]:
+  - @ultraviolet/ui@2.0.0-beta.2
+
+## 4.0.0-beta.1
+
+### Patch Changes
+
+- Updated dependencies [[`1464f54`](https://github.com/scaleway/ultraviolet/commit/1464f54cb9099b6daa51b254cc935f36147004d0), [`4308966`](https://github.com/scaleway/ultraviolet/commit/4308966450c594969417d3740d984099463e7da8)]:
+  - @ultraviolet/icons@4.0.0-beta.1
+  - @ultraviolet/ui@2.0.0-beta.1
+
+## 4.0.0-beta.0
+
+### Major Changes
+
+- [#5126](https://github.com/scaleway/ultraviolet/pull/5126) [`17da30c`](https://github.com/scaleway/ultraviolet/commit/17da30c133f624964daff6398e481568bd6da446) Thanks [@matthprost](https://github.com/matthprost)! - ⚠️ `@ultraviolet/ui` is now a peer-dependency of `@ultraviolet/form` and `@ultraviolet/plus`. This means you need to have an installed version of `@ultraviolet/ui` in your project that matches the version defined by the peer-dependency.
+
+- [#5112](https://github.com/scaleway/ultraviolet/pull/5112) [`37a7d63`](https://github.com/scaleway/ultraviolet/commit/37a7d632cd1e61d7615e5356fc179ec08f3bec09) Thanks [@matthprost](https://github.com/matthprost)! - Beta release
+
+## 3.17.18
+
+### Patch Changes
+
+- [#5357](https://github.com/scaleway/ultraviolet/pull/5357) [`942f1e7`](https://github.com/scaleway/ultraviolet/commit/942f1e7290d92f9ae38e5df4c9e8a78ffe078dc8) Thanks [@matthprost](https://github.com/matthprost)! - Fix update react-hook-form issue
+
+- Updated dependencies [[`4a91262`](https://github.com/scaleway/ultraviolet/commit/4a912623fed44b3a20ed9d1dd8f057a9eb371894), [`ad1d4f5`](https://github.com/scaleway/ultraviolet/commit/ad1d4f5dce14977841e4dd617da45e18d2fe39ae)]:
+  - @ultraviolet/ui@1.95.14
+
 ## 3.17.17
 
 ### Patch Changes
@@ -17,8 +310,10 @@
 
 ### Patch Changes
 
-- Updated dependencies [[`40d4066`](https://github.com/scaleway/ultraviolet/commit/40d40662d7305712b0ca23d08759b37590a677a0), [`80d5c50`](https://github.com/scaleway/ultraviolet/commit/80d5c50e294efdc5fe714a55ef985ff142c07b6e)]:
-  - @ultraviolet/ui@1.95.12
+- Updated dependencies [[`37a7d63`](https://github.com/scaleway/ultraviolet/commit/37a7d632cd1e61d7615e5356fc179ec08f3bec09), [`a928589`](https://github.com/scaleway/ultraviolet/commit/a9285896d638e34eba9bb25c55c38de2aef4e210), [`865c160`](https://github.com/scaleway/ultraviolet/commit/865c160aee2db5bd5e7b357e9693a45a17ef4284)]:
+  - @ultraviolet/themes@2.0.0-beta.0
+  - @ultraviolet/ui@2.0.0-beta.0
+  - @ultraviolet/icons@4.0.0-beta.0
 
 ## 3.17.15
 

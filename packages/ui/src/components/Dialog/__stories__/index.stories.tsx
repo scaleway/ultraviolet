@@ -1,13 +1,9 @@
-import type { Meta } from '@storybook/react'
+import type { Meta } from '@storybook/react-vite'
 import { Dialog } from '..'
 
 export default {
   component: Dialog,
   title: 'Components/Overlay/Dialog',
-  parameters: {
-    experimental: true,
-  },
-  tags: ['experimental'],
 } as Meta<typeof Dialog>
 
 export { Playground } from './Playground.stories'

@@ -1,8 +1,8 @@
-import type { SelectInputV2 } from '@ultraviolet/ui'
+import type { SelectInput } from '@ultraviolet/ui'
 import { Badge } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
 
-export const ubuntuOptions: ComponentProps<typeof SelectInputV2>['options'] = [
+export const ubuntuOptions: ComponentProps<typeof SelectInput>['options'] = [
   {
     label: 'Ubuntu 20.04 Focal Fossa',
     value: 'ubuntu-20.04',
@@ -14,7 +14,7 @@ export const ubuntuOptions: ComponentProps<typeof SelectInputV2>['options'] = [
 ]
 
 export const ubuntuOptionsLegacy: ComponentProps<
-  typeof SelectInputV2
+  typeof SelectInput
 >['options'] = [
   {
     label: 'Ubuntu 20.04 Focal Fossa',
@@ -32,7 +32,7 @@ export const ubuntuOptionsLegacy: ComponentProps<
   },
 ]
 
-export const debianOptions: ComponentProps<typeof SelectInputV2>['options'] = [
+export const debianOptions: ComponentProps<typeof SelectInput>['options'] = [
   {
     label: 'Debian 10',
     value: 'debian-10',
@@ -43,7 +43,7 @@ export const debianOptions: ComponentProps<typeof SelectInputV2>['options'] = [
   },
 ]
 
-export const centosOptions: ComponentProps<typeof SelectInputV2>['options'] = [
+export const centosOptions: ComponentProps<typeof SelectInput>['options'] = [
   {
     label: 'CentOS 8',
     value: 'centos-8',

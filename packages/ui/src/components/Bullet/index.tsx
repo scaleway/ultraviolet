@@ -2,8 +2,7 @@
 
 import type { Theme } from '@emotion/react'
 import styled from '@emotion/styled'
-import { Icon } from '@ultraviolet/icons/legacy'
-import type { ComponentProps, ReactNode } from 'react'
+import type { ReactNode } from 'react'
 import { SENTIMENTS, SENTIMENTS_WITHOUT_NEUTRAL } from '../../theme'
 import capitalize from '../../utils/capitalize'
 import { Tooltip } from '../Tooltip'
@@ -94,7 +93,8 @@ const StyledContainer = styled('div')<StyledContainerType>`
   align-items: center;
   width: ${({ size, theme }) => theme.sizing[SIZES[size]]};
   height: ${({ size, theme }) => theme.sizing[SIZES[size]]};
-  font-size: ${({ size, theme }) => theme.typography[TEXT_VARIANT[size]].fontSize};
+  font-size: ${({ size, theme }) =>
+    theme.typography[TEXT_VARIANT[size]].fontSize};
   ${({ theme, prominence, sentiment }) =>
     (sentimentStyles({ theme, prominence }) as Record<BulletSentiment, string>)[
       sentiment
@@ -110,18 +110,6 @@ type BulletProps = {
   'data-testid'?: string
   prominence?: ProminenceType
   children?: ReactNode
-  /**
-   * @deprecated Add the icon directly into the children
-   */
-  icon?: ComponentProps<typeof Icon>['name']
-  /**
-   * @deprecated Add the icon directly into the children
-   */
-  iconVariant?: ComponentProps<typeof Icon>['variant']
-  /**
-   * @deprecated Add the text directly into the children
-   */
-  text?: string
 }
 
 /**
@@ -131,9 +119,6 @@ export const Bullet = ({
   className,
   sentiment = 'neutral',
   size = 'medium',
-  icon,
-  iconVariant,
-  text,
   tooltip,
   tooltipBaseId,
   'data-testid': dataTestId,
@@ -148,7 +133,6 @@ export const Bullet = ({
       data-testid={dataTestId}
       prominence={prominence}
     >
-      {icon ? <Icon name={icon} size="small" variant={iconVariant} /> : text}
       {children}
     </StyledContainer>
   </Tooltip>

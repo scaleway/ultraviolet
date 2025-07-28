@@ -22,10 +22,10 @@ exports[`Snippet > renders correctly 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -34,10 +34,9 @@ exports[`Snippet > renders correctly 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   width: 100%;
 }
 
@@ -106,7 +105,7 @@ exports[`Snippet > renders correctly 1`] = `
   gap: 0.5rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 2rem;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -121,7 +120,7 @@ exports[`Snippet > renders correctly 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -141,6 +140,10 @@ exports[`Snippet > renders correctly 1`] = `
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
+.emotion-13 .e1y1n78x0 {
+  stroke: transparent;
+}
+
 .emotion-13:hover,
 .emotion-13:active {
   background: #e9eaeb;
@@ -150,19 +153,15 @@ exports[`Snippet > renders correctly 1`] = `
 .emotion-15 {
   vertical-align: middle;
   fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
 .emotion-15 .fillStroke {
   stroke: currentColor;
   fill: none;
-}
-
-.emotion-15 path {
-  fill: currentColor;
 }
 
 <div
@@ -201,7 +200,6 @@ exports[`Snippet > renders correctly 1`] = `
               <svg
                 class="emotion-15 emotion-16"
                 viewBox="0 0 16 16"
-                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   clip-rule="evenodd"
@@ -246,10 +244,10 @@ exports[`Snippet > renders correctly in multiline  1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -258,10 +256,9 @@ exports[`Snippet > renders correctly in multiline  1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   width: 100%;
 }
 
@@ -337,7 +334,7 @@ exports[`Snippet > renders correctly in multiline  1`] = `
   gap: 0.5rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 2rem;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -352,7 +349,7 @@ exports[`Snippet > renders correctly in multiline  1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -372,6 +369,10 @@ exports[`Snippet > renders correctly in multiline  1`] = `
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
+.emotion-27 .e1y1n78x0 {
+  stroke: transparent;
+}
+
 .emotion-27:hover,
 .emotion-27:active {
   background: #e9eaeb;
@@ -381,19 +382,15 @@ exports[`Snippet > renders correctly in multiline  1`] = `
 .emotion-29 {
   vertical-align: middle;
   fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
 .emotion-29 .fillStroke {
   stroke: currentColor;
   fill: none;
-}
-
-.emotion-29 path {
-  fill: currentColor;
 }
 
 .emotion-31 {
@@ -413,7 +410,7 @@ exports[`Snippet > renders correctly in multiline  1`] = `
 .emotion-36 {
   color: #3f4250;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -466,7 +463,8 @@ exports[`Snippet > renders correctly in multiline  1`] = `
       >
         <div
           class="emotion-4 emotion-5"
-          data-is-animated="true"
+          data-is-animated="false"
+          style="max-height: 112px; overflow: hidden;"
         >
           <pre
             class="emotion-6 emotion-7 emotion-8"
@@ -524,7 +522,6 @@ exports[`Snippet > renders correctly in multiline  1`] = `
               <svg
                 class="emotion-29 emotion-30"
                 viewBox="0 0 16 16"
-                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   clip-rule="evenodd"
@@ -553,7 +550,7 @@ exports[`Snippet > renders correctly in multiline  1`] = `
             >
               Show 
               <svg
-                class="emotion-38 emotion-39 emotion-40"
+                class="emotion-38 emotion-39 emotion-30"
                 viewBox="0 0 16 16"
               >
                 <path
@@ -594,10 +591,10 @@ exports[`Snippet > renders correctly in multiline with prefix command 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -606,10 +603,9 @@ exports[`Snippet > renders correctly in multiline with prefix command 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   width: 100%;
 }
 
@@ -700,7 +696,7 @@ exports[`Snippet > renders correctly in multiline with prefix command 1`] = `
   gap: 0.5rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 2rem;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -715,7 +711,7 @@ exports[`Snippet > renders correctly in multiline with prefix command 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -735,6 +731,10 @@ exports[`Snippet > renders correctly in multiline with prefix command 1`] = `
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
+.emotion-27 .e1y1n78x0 {
+  stroke: transparent;
+}
+
 .emotion-27:hover,
 .emotion-27:active {
   background: #e9eaeb;
@@ -744,19 +744,15 @@ exports[`Snippet > renders correctly in multiline with prefix command 1`] = `
 .emotion-29 {
   vertical-align: middle;
   fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
 .emotion-29 .fillStroke {
   stroke: currentColor;
   fill: none;
-}
-
-.emotion-29 path {
-  fill: currentColor;
 }
 
 .emotion-31 {
@@ -776,7 +772,7 @@ exports[`Snippet > renders correctly in multiline with prefix command 1`] = `
 .emotion-36 {
   color: #3f4250;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -829,7 +825,8 @@ exports[`Snippet > renders correctly in multiline with prefix command 1`] = `
       >
         <div
           class="emotion-4 emotion-5"
-          data-is-animated="true"
+          data-is-animated="false"
+          style="max-height: 112px; overflow: hidden;"
         >
           <pre
             class="emotion-6 emotion-7 emotion-8"
@@ -887,7 +884,6 @@ exports[`Snippet > renders correctly in multiline with prefix command 1`] = `
               <svg
                 class="emotion-29 emotion-30"
                 viewBox="0 0 16 16"
-                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   clip-rule="evenodd"
@@ -916,7 +912,7 @@ exports[`Snippet > renders correctly in multiline with prefix command 1`] = `
             >
               Show 
               <svg
-                class="emotion-38 emotion-39 emotion-40"
+                class="emotion-38 emotion-39 emotion-30"
                 viewBox="0 0 16 16"
               >
                 <path
@@ -957,10 +953,10 @@ exports[`Snippet > renders correctly in multiline with prefix lines number 1`] =
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -969,10 +965,9 @@ exports[`Snippet > renders correctly in multiline with prefix lines number 1`] =
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   width: 100%;
 }
 
@@ -1064,7 +1059,7 @@ exports[`Snippet > renders correctly in multiline with prefix lines number 1`] =
   gap: 0.5rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 2rem;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1079,7 +1074,7 @@ exports[`Snippet > renders correctly in multiline with prefix lines number 1`] =
   -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -1099,6 +1094,10 @@ exports[`Snippet > renders correctly in multiline with prefix lines number 1`] =
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
+.emotion-27 .e1y1n78x0 {
+  stroke: transparent;
+}
+
 .emotion-27:hover,
 .emotion-27:active {
   background: #e9eaeb;
@@ -1108,19 +1107,15 @@ exports[`Snippet > renders correctly in multiline with prefix lines number 1`] =
 .emotion-29 {
   vertical-align: middle;
   fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
 .emotion-29 .fillStroke {
   stroke: currentColor;
   fill: none;
-}
-
-.emotion-29 path {
-  fill: currentColor;
 }
 
 .emotion-31 {
@@ -1140,7 +1135,7 @@ exports[`Snippet > renders correctly in multiline with prefix lines number 1`] =
 .emotion-36 {
   color: #3f4250;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -1193,7 +1188,8 @@ exports[`Snippet > renders correctly in multiline with prefix lines number 1`] =
       >
         <div
           class="emotion-4 emotion-5"
-          data-is-animated="true"
+          data-is-animated="false"
+          style="max-height: 112px; overflow: hidden;"
         >
           <pre
             class="emotion-6 emotion-7 emotion-8"
@@ -1251,7 +1247,6 @@ exports[`Snippet > renders correctly in multiline with prefix lines number 1`] =
               <svg
                 class="emotion-29 emotion-30"
                 viewBox="0 0 16 16"
-                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   clip-rule="evenodd"
@@ -1280,7 +1275,7 @@ exports[`Snippet > renders correctly in multiline with prefix lines number 1`] =
             >
               Show 
               <svg
-                class="emotion-38 emotion-39 emotion-40"
+                class="emotion-38 emotion-39 emotion-30"
                 viewBox="0 0 16 16"
               >
                 <path
@@ -1320,10 +1315,10 @@ exports[`Snippet > renders correctly with copiedText 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -1332,10 +1327,9 @@ exports[`Snippet > renders correctly with copiedText 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   width: 100%;
 }
 
@@ -1404,7 +1398,7 @@ exports[`Snippet > renders correctly with copiedText 1`] = `
   gap: 0.5rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 2rem;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1419,7 +1413,7 @@ exports[`Snippet > renders correctly with copiedText 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -1439,6 +1433,10 @@ exports[`Snippet > renders correctly with copiedText 1`] = `
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
+.emotion-13 .e1y1n78x0 {
+  stroke: transparent;
+}
+
 .emotion-13:hover,
 .emotion-13:active {
   background: #e9eaeb;
@@ -1448,19 +1446,15 @@ exports[`Snippet > renders correctly with copiedText 1`] = `
 .emotion-15 {
   vertical-align: middle;
   fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
 .emotion-15 .fillStroke {
   stroke: currentColor;
   fill: none;
-}
-
-.emotion-15 path {
-  fill: currentColor;
 }
 
 <div
@@ -1499,7 +1493,6 @@ exports[`Snippet > renders correctly with copiedText 1`] = `
               <svg
                 class="emotion-15 emotion-16"
                 viewBox="0 0 16 16"
-                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   clip-rule="evenodd"
@@ -1543,10 +1536,10 @@ exports[`Snippet > renders correctly with copyText 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -1555,10 +1548,9 @@ exports[`Snippet > renders correctly with copyText 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   width: 100%;
 }
 
@@ -1627,7 +1619,7 @@ exports[`Snippet > renders correctly with copyText 1`] = `
   gap: 0.5rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 2rem;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1642,7 +1634,7 @@ exports[`Snippet > renders correctly with copyText 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -1662,6 +1654,10 @@ exports[`Snippet > renders correctly with copyText 1`] = `
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
+.emotion-13 .e1y1n78x0 {
+  stroke: transparent;
+}
+
 .emotion-13:hover,
 .emotion-13:active {
   background: #e9eaeb;
@@ -1671,19 +1667,15 @@ exports[`Snippet > renders correctly with copyText 1`] = `
 .emotion-15 {
   vertical-align: middle;
   fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
 .emotion-15 .fillStroke {
   stroke: currentColor;
   fill: none;
-}
-
-.emotion-15 path {
-  fill: currentColor;
 }
 
 <div
@@ -1722,7 +1714,6 @@ exports[`Snippet > renders correctly with copyText 1`] = `
               <svg
                 class="emotion-15 emotion-16"
                 viewBox="0 0 16 16"
-                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   clip-rule="evenodd"
@@ -1783,10 +1774,10 @@ exports[`Snippet > renders correctly with custom number of rows 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -1795,10 +1786,9 @@ exports[`Snippet > renders correctly with custom number of rows 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   width: 100%;
 }
 
@@ -1807,10 +1797,10 @@ exports[`Snippet > renders correctly with custom number of rows 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -1819,10 +1809,9 @@ exports[`Snippet > renders correctly with custom number of rows 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   width: 100%;
 }
 
@@ -1938,7 +1927,7 @@ exports[`Snippet > renders correctly with custom number of rows 1`] = `
   gap: 0.5rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 2rem;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1953,7 +1942,7 @@ exports[`Snippet > renders correctly with custom number of rows 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -1971,6 +1960,10 @@ exports[`Snippet > renders correctly with custom number of rows 1`] = `
 
 .emotion-25:active {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
+}
+
+.emotion-25 .e1y1n78x0 {
+  stroke: transparent;
 }
 
 .emotion-25:hover,
@@ -1993,7 +1986,7 @@ exports[`Snippet > renders correctly with custom number of rows 1`] = `
   gap: 0.5rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 2rem;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2008,7 +2001,7 @@ exports[`Snippet > renders correctly with custom number of rows 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -2028,6 +2021,10 @@ exports[`Snippet > renders correctly with custom number of rows 1`] = `
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
+.emotion-25 .e1y1n78x0 {
+  stroke: transparent;
+}
+
 .emotion-25:hover,
 .emotion-25:active {
   background: #e9eaeb;
@@ -2037,37 +2034,29 @@ exports[`Snippet > renders correctly with custom number of rows 1`] = `
 .emotion-27 {
   vertical-align: middle;
   fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
 .emotion-27 .fillStroke {
   stroke: currentColor;
   fill: none;
-}
-
-.emotion-27 path {
-  fill: currentColor;
 }
 
 .emotion-27 {
   vertical-align: middle;
   fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
 .emotion-27 .fillStroke {
   stroke: currentColor;
   fill: none;
-}
-
-.emotion-27 path {
-  fill: currentColor;
 }
 
 <div
@@ -2134,7 +2123,6 @@ exports[`Snippet > renders correctly with custom number of rows 1`] = `
               <svg
                 class="emotion-27 emotion-28"
                 viewBox="0 0 16 16"
-                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   clip-rule="evenodd"
@@ -2179,10 +2167,10 @@ exports[`Snippet > renders correctly with hideText 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -2191,10 +2179,9 @@ exports[`Snippet > renders correctly with hideText 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   width: 100%;
 }
 
@@ -2270,7 +2257,7 @@ exports[`Snippet > renders correctly with hideText 1`] = `
   gap: 0.5rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 2rem;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2285,7 +2272,7 @@ exports[`Snippet > renders correctly with hideText 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -2305,6 +2292,10 @@ exports[`Snippet > renders correctly with hideText 1`] = `
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
+.emotion-27 .e1y1n78x0 {
+  stroke: transparent;
+}
+
 .emotion-27:hover,
 .emotion-27:active {
   background: #e9eaeb;
@@ -2314,19 +2305,15 @@ exports[`Snippet > renders correctly with hideText 1`] = `
 .emotion-29 {
   vertical-align: middle;
   fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
 .emotion-29 .fillStroke {
   stroke: currentColor;
   fill: none;
-}
-
-.emotion-29 path {
-  fill: currentColor;
 }
 
 .emotion-31 {
@@ -2346,7 +2333,7 @@ exports[`Snippet > renders correctly with hideText 1`] = `
 .emotion-36 {
   color: #3f4250;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -2399,7 +2386,8 @@ exports[`Snippet > renders correctly with hideText 1`] = `
       >
         <div
           class="emotion-4 emotion-5"
-          data-is-animated="true"
+          data-is-animated="false"
+          style="max-height: 112px; overflow: hidden;"
         >
           <pre
             class="emotion-6 emotion-7 emotion-8"
@@ -2457,7 +2445,6 @@ exports[`Snippet > renders correctly with hideText 1`] = `
               <svg
                 class="emotion-29 emotion-30"
                 viewBox="0 0 16 16"
-                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   clip-rule="evenodd"
@@ -2486,7 +2473,7 @@ exports[`Snippet > renders correctly with hideText 1`] = `
             >
               Show 
               <svg
-                class="emotion-38 emotion-39 emotion-40"
+                class="emotion-38 emotion-39 emotion-30"
                 viewBox="0 0 16 16"
               >
                 <path
@@ -2543,10 +2530,10 @@ exports[`Snippet > renders correctly with initiallyExpanded 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -2555,10 +2542,9 @@ exports[`Snippet > renders correctly with initiallyExpanded 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   width: 100%;
 }
 
@@ -2567,10 +2553,10 @@ exports[`Snippet > renders correctly with initiallyExpanded 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -2579,10 +2565,9 @@ exports[`Snippet > renders correctly with initiallyExpanded 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   width: 100%;
 }
 
@@ -2716,7 +2701,7 @@ exports[`Snippet > renders correctly with initiallyExpanded 1`] = `
   gap: 0.5rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 2rem;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2731,7 +2716,7 @@ exports[`Snippet > renders correctly with initiallyExpanded 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -2749,6 +2734,10 @@ exports[`Snippet > renders correctly with initiallyExpanded 1`] = `
 
 .emotion-27:active {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
+}
+
+.emotion-27 .e1y1n78x0 {
+  stroke: transparent;
 }
 
 .emotion-27:hover,
@@ -2771,7 +2760,7 @@ exports[`Snippet > renders correctly with initiallyExpanded 1`] = `
   gap: 0.5rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 2rem;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2786,7 +2775,7 @@ exports[`Snippet > renders correctly with initiallyExpanded 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -2806,6 +2795,10 @@ exports[`Snippet > renders correctly with initiallyExpanded 1`] = `
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
+.emotion-27 .e1y1n78x0 {
+  stroke: transparent;
+}
+
 .emotion-27:hover,
 .emotion-27:active {
   background: #e9eaeb;
@@ -2815,37 +2808,29 @@ exports[`Snippet > renders correctly with initiallyExpanded 1`] = `
 .emotion-29 {
   vertical-align: middle;
   fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
 .emotion-29 .fillStroke {
   stroke: currentColor;
   fill: none;
-}
-
-.emotion-29 path {
-  fill: currentColor;
 }
 
 .emotion-29 {
   vertical-align: middle;
   fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
 .emotion-29 .fillStroke {
   stroke: currentColor;
   fill: none;
-}
-
-.emotion-29 path {
-  fill: currentColor;
 }
 
 .emotion-31 {
@@ -2874,7 +2859,7 @@ exports[`Snippet > renders correctly with initiallyExpanded 1`] = `
 .emotion-36 {
   color: #3f4250;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -2898,7 +2883,7 @@ exports[`Snippet > renders correctly with initiallyExpanded 1`] = `
 .emotion-36 {
   color: #3f4250;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -2951,7 +2936,7 @@ exports[`Snippet > renders correctly with initiallyExpanded 1`] = `
       >
         <div
           class="emotion-4 emotion-5"
-          data-is-animated="true"
+          data-is-animated="false"
         >
           <pre
             class="emotion-6 emotion-7 emotion-8"
@@ -3009,7 +2994,6 @@ exports[`Snippet > renders correctly with initiallyExpanded 1`] = `
               <svg
                 class="emotion-29 emotion-30"
                 viewBox="0 0 16 16"
-                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   clip-rule="evenodd"
@@ -3038,7 +3022,7 @@ exports[`Snippet > renders correctly with initiallyExpanded 1`] = `
             >
               Hide 
               <svg
-                class="emotion-38 emotion-39 emotion-40"
+                class="emotion-38 emotion-39 emotion-30"
                 viewBox="0 0 16 16"
               >
                 <path
@@ -3095,10 +3079,10 @@ exports[`Snippet > renders correctly with noExpandable 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -3107,10 +3091,9 @@ exports[`Snippet > renders correctly with noExpandable 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   width: 100%;
 }
 
@@ -3119,10 +3102,10 @@ exports[`Snippet > renders correctly with noExpandable 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -3131,10 +3114,9 @@ exports[`Snippet > renders correctly with noExpandable 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   width: 100%;
 }
 
@@ -3233,7 +3215,7 @@ exports[`Snippet > renders correctly with noExpandable 1`] = `
   gap: 0.5rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 2rem;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -3248,7 +3230,7 @@ exports[`Snippet > renders correctly with noExpandable 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -3266,6 +3248,10 @@ exports[`Snippet > renders correctly with noExpandable 1`] = `
 
 .emotion-25:active {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
+}
+
+.emotion-25 .e1y1n78x0 {
+  stroke: transparent;
 }
 
 .emotion-25:hover,
@@ -3288,7 +3274,7 @@ exports[`Snippet > renders correctly with noExpandable 1`] = `
   gap: 0.5rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 2rem;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -3303,7 +3289,7 @@ exports[`Snippet > renders correctly with noExpandable 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -3323,6 +3309,10 @@ exports[`Snippet > renders correctly with noExpandable 1`] = `
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
+.emotion-25 .e1y1n78x0 {
+  stroke: transparent;
+}
+
 .emotion-25:hover,
 .emotion-25:active {
   background: #e9eaeb;
@@ -3332,37 +3322,29 @@ exports[`Snippet > renders correctly with noExpandable 1`] = `
 .emotion-27 {
   vertical-align: middle;
   fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
 .emotion-27 .fillStroke {
   stroke: currentColor;
   fill: none;
-}
-
-.emotion-27 path {
-  fill: currentColor;
 }
 
 .emotion-27 {
   vertical-align: middle;
   fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
 .emotion-27 .fillStroke {
   stroke: currentColor;
   fill: none;
-}
-
-.emotion-27 path {
-  fill: currentColor;
 }
 
 <div
@@ -3429,7 +3411,6 @@ exports[`Snippet > renders correctly with noExpandable 1`] = `
               <svg
                 class="emotion-27 emotion-28"
                 viewBox="0 0 16 16"
-                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   clip-rule="evenodd"
@@ -3490,10 +3471,10 @@ exports[`Snippet > renders correctly with showText 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -3502,10 +3483,9 @@ exports[`Snippet > renders correctly with showText 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   width: 100%;
 }
 
@@ -3514,10 +3494,10 @@ exports[`Snippet > renders correctly with showText 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -3526,10 +3506,9 @@ exports[`Snippet > renders correctly with showText 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   width: 100%;
 }
 
@@ -3663,7 +3642,7 @@ exports[`Snippet > renders correctly with showText 1`] = `
   gap: 0.5rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 2rem;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -3678,7 +3657,7 @@ exports[`Snippet > renders correctly with showText 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -3696,6 +3675,10 @@ exports[`Snippet > renders correctly with showText 1`] = `
 
 .emotion-27:active {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
+}
+
+.emotion-27 .e1y1n78x0 {
+  stroke: transparent;
 }
 
 .emotion-27:hover,
@@ -3718,7 +3701,7 @@ exports[`Snippet > renders correctly with showText 1`] = `
   gap: 0.5rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 2rem;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -3733,7 +3716,7 @@ exports[`Snippet > renders correctly with showText 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -3753,6 +3736,10 @@ exports[`Snippet > renders correctly with showText 1`] = `
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
+.emotion-27 .e1y1n78x0 {
+  stroke: transparent;
+}
+
 .emotion-27:hover,
 .emotion-27:active {
   background: #e9eaeb;
@@ -3762,37 +3749,29 @@ exports[`Snippet > renders correctly with showText 1`] = `
 .emotion-29 {
   vertical-align: middle;
   fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
 .emotion-29 .fillStroke {
   stroke: currentColor;
   fill: none;
-}
-
-.emotion-29 path {
-  fill: currentColor;
 }
 
 .emotion-29 {
   vertical-align: middle;
   fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
 .emotion-29 .fillStroke {
   stroke: currentColor;
   fill: none;
-}
-
-.emotion-29 path {
-  fill: currentColor;
 }
 
 .emotion-31 {
@@ -3826,7 +3805,7 @@ exports[`Snippet > renders correctly with showText 1`] = `
 .emotion-36 {
   color: #3f4250;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -3850,7 +3829,7 @@ exports[`Snippet > renders correctly with showText 1`] = `
 .emotion-36 {
   color: #3f4250;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -3924,7 +3903,8 @@ exports[`Snippet > renders correctly with showText 1`] = `
       >
         <div
           class="emotion-4 emotion-5"
-          data-is-animated="true"
+          data-is-animated="false"
+          style="max-height: 112px; overflow: hidden;"
         >
           <pre
             class="emotion-6 emotion-7 emotion-8"
@@ -3982,7 +3962,6 @@ exports[`Snippet > renders correctly with showText 1`] = `
               <svg
                 class="emotion-29 emotion-30"
                 viewBox="0 0 16 16"
-                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   clip-rule="evenodd"
@@ -4011,7 +3990,7 @@ exports[`Snippet > renders correctly with showText 1`] = `
             >
               Test 
               <svg
-                class="emotion-38 emotion-39 emotion-40"
+                class="emotion-38 emotion-39 emotion-30"
                 viewBox="0 0 16 16"
               >
                 <path
@@ -4051,10 +4030,10 @@ exports[`Snippet > renders correctly with single line with prefix command 1`] = 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -4063,10 +4042,9 @@ exports[`Snippet > renders correctly with single line with prefix command 1`] = 
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   width: 100%;
 }
 
@@ -4150,7 +4128,7 @@ exports[`Snippet > renders correctly with single line with prefix command 1`] = 
   gap: 0.5rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 2rem;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -4165,7 +4143,7 @@ exports[`Snippet > renders correctly with single line with prefix command 1`] = 
   -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -4185,6 +4163,10 @@ exports[`Snippet > renders correctly with single line with prefix command 1`] = 
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
+.emotion-13 .e1y1n78x0 {
+  stroke: transparent;
+}
+
 .emotion-13:hover,
 .emotion-13:active {
   background: #e9eaeb;
@@ -4194,19 +4176,15 @@ exports[`Snippet > renders correctly with single line with prefix command 1`] = 
 .emotion-15 {
   vertical-align: middle;
   fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
 .emotion-15 .fillStroke {
   stroke: currentColor;
   fill: none;
-}
-
-.emotion-15 path {
-  fill: currentColor;
 }
 
 <div
@@ -4245,7 +4223,6 @@ exports[`Snippet > renders correctly with single line with prefix command 1`] = 
               <svg
                 class="emotion-15 emotion-16"
                 viewBox="0 0 16 16"
-                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   clip-rule="evenodd"
@@ -4289,10 +4266,10 @@ exports[`Snippet > renders correctly with single line with prefix lines number 1
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -4301,10 +4278,9 @@ exports[`Snippet > renders correctly with single line with prefix lines number 1
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   width: 100%;
 }
 
@@ -4389,7 +4365,7 @@ exports[`Snippet > renders correctly with single line with prefix lines number 1
   gap: 0.5rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 2rem;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -4404,7 +4380,7 @@ exports[`Snippet > renders correctly with single line with prefix lines number 1
   -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -4424,6 +4400,10 @@ exports[`Snippet > renders correctly with single line with prefix lines number 1
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
+.emotion-13 .e1y1n78x0 {
+  stroke: transparent;
+}
+
 .emotion-13:hover,
 .emotion-13:active {
   background: #e9eaeb;
@@ -4433,19 +4413,15 @@ exports[`Snippet > renders correctly with single line with prefix lines number 1
 .emotion-15 {
   vertical-align: middle;
   fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
 .emotion-15 .fillStroke {
   stroke: currentColor;
   fill: none;
-}
-
-.emotion-15 path {
-  fill: currentColor;
 }
 
 <div
@@ -4484,7 +4460,6 @@ exports[`Snippet > renders correctly with single line with prefix lines number 1
               <svg
                 class="emotion-15 emotion-16"
                 viewBox="0 0 16 16"
-                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   clip-rule="evenodd"
@@ -4545,10 +4520,10 @@ exports[`Snippet > should click on extend button to display full content on  1`]
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -4557,10 +4532,9 @@ exports[`Snippet > should click on extend button to display full content on  1`]
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   width: 100%;
 }
 
@@ -4569,10 +4543,10 @@ exports[`Snippet > should click on extend button to display full content on  1`]
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -4581,10 +4555,9 @@ exports[`Snippet > should click on extend button to display full content on  1`]
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   width: 100%;
 }
 
@@ -4718,7 +4691,7 @@ exports[`Snippet > should click on extend button to display full content on  1`]
   gap: 0.5rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 2rem;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -4733,7 +4706,7 @@ exports[`Snippet > should click on extend button to display full content on  1`]
   -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -4751,6 +4724,10 @@ exports[`Snippet > should click on extend button to display full content on  1`]
 
 .emotion-27:active {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
+}
+
+.emotion-27 .e1y1n78x0 {
+  stroke: transparent;
 }
 
 .emotion-27:hover,
@@ -4773,7 +4750,7 @@ exports[`Snippet > should click on extend button to display full content on  1`]
   gap: 0.5rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 2rem;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -4788,7 +4765,7 @@ exports[`Snippet > should click on extend button to display full content on  1`]
   -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -4808,6 +4785,10 @@ exports[`Snippet > should click on extend button to display full content on  1`]
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
+.emotion-27 .e1y1n78x0 {
+  stroke: transparent;
+}
+
 .emotion-27:hover,
 .emotion-27:active {
   background: #e9eaeb;
@@ -4817,37 +4798,29 @@ exports[`Snippet > should click on extend button to display full content on  1`]
 .emotion-29 {
   vertical-align: middle;
   fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
 .emotion-29 .fillStroke {
   stroke: currentColor;
   fill: none;
-}
-
-.emotion-29 path {
-  fill: currentColor;
 }
 
 .emotion-29 {
   vertical-align: middle;
   fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
 .emotion-29 .fillStroke {
   stroke: currentColor;
   fill: none;
-}
-
-.emotion-29 path {
-  fill: currentColor;
 }
 
 .emotion-31 {
@@ -4876,7 +4849,7 @@ exports[`Snippet > should click on extend button to display full content on  1`]
 .emotion-36 {
   color: #3f4250;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -4900,7 +4873,7 @@ exports[`Snippet > should click on extend button to display full content on  1`]
 .emotion-36 {
   color: #3f4250;
   font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
+  font-family: Inter,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
@@ -4954,6 +4927,7 @@ exports[`Snippet > should click on extend button to display full content on  1`]
         <div
           class="emotion-4 emotion-5"
           data-is-animated="true"
+          style="max-height: 112px; overflow: hidden;"
         >
           <pre
             class="emotion-6 emotion-7 emotion-8"
@@ -5011,7 +4985,6 @@ exports[`Snippet > should click on extend button to display full content on  1`]
               <svg
                 class="emotion-29 emotion-30"
                 viewBox="0 0 16 16"
-                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   clip-rule="evenodd"
@@ -5040,7 +5013,7 @@ exports[`Snippet > should click on extend button to display full content on  1`]
             >
               Hide 
               <svg
-                class="emotion-38 emotion-39 emotion-40"
+                class="emotion-38 emotion-39 emotion-30"
                 viewBox="0 0 16 16"
               >
                 <path

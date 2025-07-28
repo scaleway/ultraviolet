@@ -16,7 +16,7 @@ exports[`Expandable > renders correctly opened 1`] = `
   >
     <div
       class="emotion-0 emotion-1"
-      data-is-animated="true"
+      data-is-animated="false"
     >
       Sample Expandable
     </div>
@@ -40,7 +40,8 @@ exports[`Expandable > renders correctly with animationDuration 1`] = `
   >
     <div
       class="emotion-0 emotion-1"
-      data-is-animated="true"
+      data-is-animated="false"
+      style="max-height: 0px; overflow: hidden;"
     >
       Sample Expandable
     </div>
@@ -78,7 +79,8 @@ exports[`Expandable > renders correctly with className 1`] = `
   >
     <div
       class="test emotion-0 emotion-1"
-      data-is-animated="true"
+      data-is-animated="false"
+      style="max-height: 0px; overflow: hidden;"
     >
       Sample Expandable
     </div>
@@ -102,7 +104,8 @@ exports[`Expandable > renders correctly with default values 1`] = `
   >
     <div
       class="emotion-0 emotion-1"
-      data-is-animated="true"
+      data-is-animated="false"
+      style="max-height: 0px; overflow: hidden;"
     >
       Sample Expandable
     </div>
@@ -126,7 +129,8 @@ exports[`Expandable > renders correctly with minHeight 1`] = `
   >
     <div
       class="emotion-0 emotion-1"
-      data-is-animated="true"
+      data-is-animated="false"
+      style="max-height: 5px; overflow: hidden;"
     >
       Sample Expandable
     </div>

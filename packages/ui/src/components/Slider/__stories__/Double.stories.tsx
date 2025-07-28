@@ -1,10 +1,24 @@
-import type { StoryFn } from '@storybook/react'
+import type { StoryFn } from '@storybook/react-vite'
+import { useState } from 'react'
 import { Slider } from '..'
 
-export const Double: StoryFn<typeof Slider> = args => <Slider {...args} />
+export const Double: StoryFn<typeof Slider> = () => {
+  const [value, setValue] = useState<number[]>([1, 2])
+
+  return (
+    <Slider
+      name="slider"
+      onChange={setValue}
+      data-testid="slider"
+      value={value}
+      double
+      input
+    />
+  )
+}
 
 Double.args = {
-  value: [3, 50],
+  value: [1, 2],
   step: 0.5,
   double: true,
   input: true,

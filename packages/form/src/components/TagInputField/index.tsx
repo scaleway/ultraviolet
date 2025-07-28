@@ -12,25 +12,7 @@ export type TagInputFieldProps<
   TFieldValues extends FieldValues,
   TFieldName extends FieldPath<TFieldValues>,
 > = BaseFieldProps<TFieldValues, TFieldName> &
-  Partial<
-    Pick<
-      ComponentProps<typeof TagInput>,
-      | 'variant'
-      | 'placeholder'
-      | 'disabled'
-      | 'className'
-      | 'id'
-      | 'data-testid'
-      | 'clearable'
-      | 'label'
-      | 'labelDescription'
-      | 'size'
-      | 'success'
-      | 'readOnly'
-      | 'tooltip'
-      | 'aria-label'
-    >
-  > & {
+  Omit<ComponentProps<typeof TagInput>, 'name' | 'onChange' | 'value'> & {
     regex?: (RegExp | RegExp[])[]
   }
 
@@ -39,26 +21,15 @@ export const TagInputField = <
   TFieldName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
 >({
   regex: regexes,
-  className,
-  disabled,
-  id,
   control,
   name,
   onChange,
-  placeholder,
   required,
-  variant,
   shouldUnregister = false,
-  'data-testid': dataTestId,
-  clearable,
   label,
-  labelDescription,
-  size,
-  success,
-  readOnly,
-  tooltip,
   validate,
   'aria-label': ariaLabel,
+  ...props
 }: TagInputFieldProps<TFieldValues, TFieldName>) => {
   const { getError } = useErrors()
   const {
@@ -84,30 +55,19 @@ export const TagInputField = <
 
   return (
     <TagInput
+      {...props}
       name={field.name}
-      className={className}
-      disabled={disabled}
-      id={id}
       onChange={newTags => {
         field.onChange(newTags)
         onChange?.(newTags as PathValue<TFieldValues, Path<TFieldValues>>)
       }}
-      placeholder={placeholder}
-      variant={variant}
       value={field.value}
-      data-testid={dataTestId}
-      clearable={clearable}
       label={label}
       aria-label={ariaLabel}
-      labelDescription={labelDescription}
-      size={size}
-      success={success}
       error={getError(
         { regex: regexes, label: label ?? ariaLabel ?? name },
         error,
       )}
-      readOnly={readOnly}
-      tooltip={tooltip}
     />
   )
 }

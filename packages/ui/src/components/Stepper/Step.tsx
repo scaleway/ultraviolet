@@ -2,6 +2,7 @@
 
 import { css, keyframes } from '@emotion/react'
 import styled from '@emotion/styled'
+import { CheckIcon } from '@ultraviolet/icons'
 import type { ReactNode } from 'react'
 import { useMemo } from 'react'
 import { Bullet } from '../Bullet'
@@ -52,8 +53,6 @@ const StyledBullet = styled(Bullet)<{
   size: 'small' | 'medium'
   isActive: boolean
 }>`
-  margin-top: ${({ theme, size }) =>
-    size === 'small' ? theme.space['0.5'] : 0};
   transition: box-shadow 300ms;
   min-width: ${({ theme, size }) =>
     size === 'small' ? theme.space[3] : theme.space[4]};
@@ -185,8 +184,7 @@ const StyledStepContainer = styled(Stack)<{
     }
 
     &:last-child {
-      margin-top: ${({ theme, size }) =>
-        size === 'small' ? '0px' : theme.space[1]};
+      margin-top: ${({ theme }) => theme.space[1]};
     }
   }
 `
@@ -240,19 +238,21 @@ export const Step = ({
       {isDone && !disabled ? (
         <StyledBullet
           sentiment="primary"
-          icon="check"
           prominence="strong"
           size={currentState.size}
           isActive={isActive}
-        />
+        >
+          <CheckIcon />
+        </StyledBullet>
       ) : (
         <StyledBullet
           sentiment={isDone || isActive ? 'primary' : 'neutral'}
-          text={(index + 1).toString()}
           prominence="strong"
           size={currentState.size}
           isActive={isActive}
-        />
+        >
+          {(index + 1).toString()}
+        </StyledBullet>
       )}
       {title ? (
         <StyledText

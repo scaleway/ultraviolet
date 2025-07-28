@@ -1,6 +1,7 @@
 import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
-import { Breakpoint, Icon, Toggle } from '@ultraviolet/ui'
+import { MoonIcon, SunIcon } from '@ultraviolet/icons'
+import { Breakpoint, Toggle } from '@ultraviolet/ui'
 import { APP_MAX_WIDTH } from '../constants'
 import GithubAndDocumentationButtons from './GithubAndDocumentationButtons'
 import Logo from './Logo'
@@ -46,13 +47,13 @@ const TopBar = () => {
           <Breakpoint up="medium">
             <GithubAndDocumentationButtons />
           </Breakpoint>
-          <Icon size={20} name="sun" />
+          <SunIcon size="small" />
           <Toggle
             name="darkMode"
             checked={theme === 'dark'}
             onChange={() => setTheme(theme === 'light' ? 'dark' : 'light')}
           />
-          <Icon size={20} name="moon" />
+          <MoonIcon size="small" />
         </HorizontalStack>
       </HeaderRow>
     </Header>

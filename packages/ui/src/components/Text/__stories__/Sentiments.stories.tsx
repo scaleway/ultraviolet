@@ -1,4 +1,4 @@
-import type { StoryFn } from '@storybook/react'
+import type { StoryFn } from '@storybook/react-vite'
 import type { ComponentProps } from 'react'
 import { SENTIMENTS } from '../../../theme'
 import { Text } from '../index'
@@ -32,8 +32,7 @@ export const Sentiments: StoryFn<ComponentProps<typeof Text>> = args => (
 Sentiments.parameters = {
   docs: {
     description: {
-      story:
-        'Set a sentiment using `sentiment` property. (`color` prop is deprecated but still works and has the same effect)',
+      story: 'Set a sentiment using `sentiment` property.',
     },
   },
 }

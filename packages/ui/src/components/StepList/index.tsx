@@ -34,13 +34,10 @@ const StyledDiv = styled('div', {
   margin: auto;
   line-height: ${({ size }) => (size === 'medium' ? '32px' : '24px')};
   font-size: ${({ size }) => (size === 'medium' ? '24px' : '16px')};
+  min-width: 0;
 `
 
 export type Sizes = 'small' | 'medium'
-
-type ContentProps =
-  | { bulletIcon: ComponentProps<typeof Bullet>['icon']; bulletText?: never }
-  | { bulletIcon?: never; bulletText: string }
 
 type ItemProps = {
   sentiment?: ComponentProps<typeof Bullet>['sentiment']
@@ -50,11 +47,11 @@ type ItemProps = {
   children: ReactNode
   onClick?: () => void
   className?: string
-} & ContentProps
+  bulletContent?: ReactNode
+}
 
 const Item = ({
-  bulletText,
-  bulletIcon,
+  bulletContent,
   sentiment,
   prominence,
   children,
@@ -64,21 +61,14 @@ const Item = ({
   className,
 }: ItemProps) => (
   <Step disabled={disabled} className={className} onClick={onClick}>
-    {bulletIcon ? (
+    {bulletContent ? (
       <Bullet
-        icon={bulletIcon}
         size={size}
         sentiment={disabled ? 'disabled' : sentiment}
         prominence={prominence}
-      />
-    ) : null}
-    {bulletText ? (
-      <Bullet
-        text={bulletText}
-        size={size}
-        sentiment={disabled ? 'disabled' : sentiment}
-        prominence={prominence}
-      />
+      >
+        {bulletContent}
+      </Bullet>
     ) : null}
     <StyledDiv size={size}>{children}</StyledDiv>
   </Step>

@@ -10,12 +10,12 @@ import {
   PinOutlineIcon,
   UnpinIcon,
 } from '@ultraviolet/icons'
-import { ConsoleCategoryIcon } from '@ultraviolet/icons/category'
+import { OrganizationDashboardCategoryIcon } from '@ultraviolet/icons/category'
 import {
   Badge,
   Button,
   Expandable,
-  MenuV2,
+  Menu,
   Stack,
   Text,
   Tooltip,
@@ -101,7 +101,7 @@ const GrabIcon = styled(DragIcon)`
 
 const StyledBadge = styled(Badge)``
 
-const StyledMenuItem = styled(MenuV2.Item, {
+const StyledMenuItem = styled(Menu.Item, {
   shouldForwardProp: prop => !['isPinnable', 'pinnedFeature'].includes(prop),
 })<{
   isPinnable?: boolean
@@ -116,12 +116,13 @@ const StyledMenuItem = styled(MenuV2.Item, {
     }
 
     ${StyledBadge} {
-      opacity: ${({ isPinnable, pinnedFeature }) => (isPinnable && pinnedFeature ? 0 : 1)};
+      opacity: ${({ isPinnable, pinnedFeature }) =>
+        isPinnable && pinnedFeature ? 0 : 1};
     }
   }
 `
 
-const StyledMenu = styled(MenuV2)`
+const StyledMenu = styled(Menu)`
   width: 180px;
 `
 
@@ -213,7 +214,7 @@ const StyledContainer = styled(Stack)`
     background-color: ${({ theme }) => theme.colors.neutral.backgroundHover};
   }
 
-  &[data-is-active="true"][data-is-pinnable="true"],
+  &[data-is-active="true"],
   &:hover[data-has-active="true"] {
     background-color: ${({ theme }) => theme.colors.primary.background};
 
@@ -265,6 +266,10 @@ const ContainerCategoryIcon = styled(Stack)`
 
 type ItemType = 'default' | 'pinned' | 'pinnedGroup'
 
+type LinkProps = {
+  to: string
+  children?: { props: ItemProps }
+}
 type ItemProps = {
   children?: ReactNode
   /**
@@ -434,9 +439,18 @@ export const Item = memo(
       if (!children) return false
 
       return (
-        Children.map(children, child =>
-          isValidElement<ItemProps>(child) ? child.props?.active : false,
-        ) as boolean[]
+        Children.map(children, child => {
+          if (isValidElement<ItemProps | LinkProps>(child)) {
+            // In case the Item is wrapped in a link
+            if ('to' in child.props) {
+              return child.props.children?.props.active
+            }
+
+            return child.props.active
+          }
+
+          return null
+        }) as boolean[]
       ).includes(true)
     }, [children])
 
@@ -720,7 +734,6 @@ export const Item = memo(
                   sentiment="neutral"
                   variant={hasActiveChildren ? 'filled' : 'ghost'}
                   size="small"
-                  icon={!categoryIcon ? 'dots-horizontal' : undefined}
                   aria-label={label}
                 >
                   {categoryIcon ? (
@@ -754,7 +767,7 @@ export const Item = memo(
                   justifyContent="center"
                 >
                   {categoryIcon || (
-                    <ConsoleCategoryIcon
+                    <OrganizationDashboardCategoryIcon
                       variant={active ? 'primary' : 'neutral'}
                     />
                   )}

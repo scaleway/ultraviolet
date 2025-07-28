@@ -1,4 +1,4 @@
-import type { Meta } from '@storybook/react'
+import type { Meta } from '@storybook/react-vite'
 import { BarChart } from '..'
 
 export default {
@@ -10,3 +10,4 @@ export { Playground } from './Playground.stories'
 export { FormattedValuesAndTooltip } from './FormattedValuesAndTooltip.stories'
 export { MultiSeries } from './MultiSeries.stories'
 export { PositiveNegative } from './PositiveNegative.stories'
+export { Label } from './Label.stories'

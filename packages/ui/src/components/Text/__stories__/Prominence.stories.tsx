@@ -3,7 +3,7 @@ import { Template } from './Template.stories'
 export const Prominence = Template.bind({})
 Prominence.args = {
   children: 'This is a colored text with prominence',
-  color: 'danger',
+  sentiment: 'danger',
   prominence: 'weak',
   variant: 'body',
 }
