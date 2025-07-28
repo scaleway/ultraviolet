@@ -315,7 +315,7 @@ export const DateInput = <IsRange extends undefined | boolean>({
           >
             <TextInput
               autoComplete="false"
-              
+              autoFocus={autoFocus}
               clearable={clearable}
               disabled={disabled}
               error={error}

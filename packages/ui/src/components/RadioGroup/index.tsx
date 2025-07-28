@@ -47,7 +47,7 @@ const RadioGroupRadio = ({
 
   return (
     <Radio
-      
+      autoFocus={autoFocus}
       checked={groupValue === value}
       className={className}
       data-testid={dataTestId}

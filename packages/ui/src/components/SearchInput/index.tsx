@@ -294,7 +294,7 @@ export const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(
             aria-labelledby={ariaLabelledby}
             aria-live={ariaLive}
             autoComplete={autoComplete}
-            
+            autoFocus={autoFocus}
             className={className}
             clearable
             data-testid={dataTestId}

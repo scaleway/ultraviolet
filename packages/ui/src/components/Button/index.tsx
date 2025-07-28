@@ -361,7 +361,7 @@ export const Button = forwardRef<Element, FinalProps>(
             aria-label={ariaLabel}
             aria-pressed={ariaPressed}
             aria-roledescription={ariaRoledescription}
-            
+            autoFocus={autoFocus}
             className={className}
             data-testid={dataTestId}
             disabled={false}
@@ -398,7 +398,7 @@ export const Button = forwardRef<Element, FinalProps>(
           aria-expanded={ariaExpanded}
           aria-haspopup={ariaHaspopup}
           aria-label={ariaLabel}
-          
+          autoFocus={autoFocus}
           className={className}
           data-testid={dataTestId}
           disabled={computeIsDisabled}

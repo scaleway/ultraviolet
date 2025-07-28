@@ -254,7 +254,7 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
             <StyledTextArea
               aria-invalid={!!error}
               aria-label={ariaLabel}
-              
+              autoFocus={autoFocus}
               data-error={!!error}
               data-readonly={readOnly}
               data-success={!!success}

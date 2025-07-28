@@ -390,7 +390,7 @@ export const NumberInput = forwardRef(
               >
                 <Input
                   aria-label={ariaLabel}
-                  
+                  autoFocus={autoFocus}
                   data-controls={controls}
                   data-has-unit={!!unit}
                   data-size={size}

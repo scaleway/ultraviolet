@@ -110,7 +110,7 @@ type SelectInputProps<IsMulti extends undefined | boolean = false> = {
    */
   selectAllGroup?: boolean
   dropdownAlign?: ComponentProps<typeof Popup>['align']
-  autofocus?: boolean
+  autoFocus?: boolean
   /**
    * Whether it is possible to select multiple options
    */
@@ -177,7 +177,7 @@ export const SelectInput = <IsMulti extends undefined | boolean>({
   multiselect = false,
   required = false,
   labelDescription,
-  autofocus,
+  autoFocus,
   loadMore,
   optionalInfoPlacement = 'right',
   isLoading,
@@ -243,7 +243,7 @@ export const SelectInput = <IsMulti extends undefined | boolean>({
               </Label>
             ) : null}
             <SelectBar
-              
+              autoFocus={autoFocus}
               clearable={clearable}
               data-testid={finalDataTestId}
               disabled={disabled}
