@@ -1,9 +1,9 @@
 import styled from '@emotion/styled'
 import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
-import { Pagination } from '..'
 import { Badge } from '../../Badge'
 import { Stack } from '../../Stack'
+import { Pagination } from '..'
 
 const NUMBER_OF_ITEMS = 134
 const StyledList = styled.ul`

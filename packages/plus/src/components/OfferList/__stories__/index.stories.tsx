@@ -11,11 +11,11 @@ export default {
   },
 } satisfies Meta
 
-export { Playground } from './Playground.stories'
-export { Type } from './Type.stories'
+export { Badge } from './Badge.stories'
+export { Banner } from './Banner.stories'
+export { Example } from './Example.stories'
 export { Expandable } from './Expandable.stories'
 export { Loading } from './Loading.stories'
-export { Banner } from './Banner.stories'
-export { Badge } from './Badge.stories'
 export { OnChange } from './OnChangeSelect.stories'
-export { Example } from './Example.stories'
+export { Playground } from './Playground.stories'
+export { Type } from './Type.stories'

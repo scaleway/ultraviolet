@@ -1,6 +1,6 @@
 import type { StoryFn } from '@storybook/react-vite'
-import { UnitInput } from '..'
 import { Stack } from '../../Stack'
+import { UnitInput } from '..'
 import { Template } from './Template.stories'
 
 const optionsSelect = [

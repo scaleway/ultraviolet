@@ -1,8 +1,8 @@
 import type { Meta } from '@storybook/react-vite'
 import { Snippet, Stack, Text } from '@ultraviolet/ui'
-import { CheckboxField, Form } from '../..'
 import { useForm } from '../../..'
 import { mockErrors } from '../../../mocks'
+import { CheckboxField, Form } from '../..'
 
 export default {
   component: CheckboxField,

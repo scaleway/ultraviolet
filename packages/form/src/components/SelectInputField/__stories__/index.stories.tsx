@@ -1,8 +1,8 @@
 import type { Meta } from '@storybook/react-vite'
 import { Snippet, Stack, Text } from '@ultraviolet/ui'
-import { Form, SelectInputField } from '../..'
 import { useForm } from '../../..'
 import { mockErrors } from '../../../mocks'
+import { Form, SelectInputField } from '../..'
 
 export default {
   component: SelectInputField,
@@ -79,5 +79,5 @@ export default {
   title: 'Form/Components/Fields/SelectInputField',
 } as Meta
 
-export { Playground } from './Playground.stories'
 export { Multiple } from './Multiple.stories'
+export { Playground } from './Playground.stories'

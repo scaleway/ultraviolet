@@ -1,13 +1,15 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { Snippet, Stack, Text } from '@ultraviolet/ui'
+import { useForm } from '../../..'
+import { emailRegex, mockErrors } from '../../../mocks/mockErrors'
 import {
   CheckboxField,
   DateInputField,
   Form,
   NumberInputField,
   RadioField,
-  SelectInputField,
   SelectableCardField,
+  SelectInputField,
   Submit,
   SubmitErrorAlert,
   TagInputField,
@@ -15,8 +17,6 @@ import {
   TimeInputField,
   ToggleField,
 } from '../..'
-import { useForm } from '../../..'
-import { emailRegex, mockErrors } from '../../../mocks/mockErrors'
 
 const data = [
   { value: '1', label: '1', disabled: false },

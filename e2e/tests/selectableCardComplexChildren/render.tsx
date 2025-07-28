@@ -1,4 +1,4 @@
-import { SelectInput, SelectableCard, Stack, Text } from '@ultraviolet/ui'
+import { SelectableCard, SelectInput, Stack, Text } from '@ultraviolet/ui'
 import { useState } from 'react'
 
 const CheckboxSelectableCard = () => {

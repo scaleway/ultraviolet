@@ -1,7 +1,7 @@
 import { PlusIcon } from '@ultraviolet/icons'
 import { Button } from '../../Button'
-import { Template } from './Template.stories'
 import kapsuleLogo from './illustrations/kapsule.webp'
+import { Template } from './Template.stories'
 
 export const Playground = Template.bind({})
 

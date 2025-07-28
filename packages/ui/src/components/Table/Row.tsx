@@ -10,8 +10,8 @@ import { Button } from '../Button'
 import { Checkbox } from '../Checkbox'
 import { Tooltip } from '../Tooltip'
 import { Cell } from './Cell'
-import { useTableContext } from './TableContext'
 import { SELECTABLE_CHECKBOX_SIZE } from './constants'
+import { useTableContext } from './TableContext'
 import type { ColumnProps } from './types'
 
 const ExpandableWrapper = styled.tr`

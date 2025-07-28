@@ -1,8 +1,8 @@
 import type { StoryFn } from '@storybook/react-vite'
-import { useState } from 'react'
 import type { KeyboardEvent } from 'react'
-import { ExpandableCard } from '..'
+import { useState } from 'react'
 import { Stack } from '../..'
+import { ExpandableCard } from '..'
 
 export const Draggable: StoryFn<typeof ExpandableCard> = args => {
   const [cards, setCards] = useState(['Pool-1', 'Pool-2', 'Pool-3', 'Pool-4'])

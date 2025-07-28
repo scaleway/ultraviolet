@@ -1,8 +1,8 @@
 import { MoonIcon, MoonOutlineIcon } from '@ultraviolet/icons'
 import { shouldMatchEmotionSnapshot } from '@utils/test'
 import { describe, test } from 'vitest'
-import { Bullet } from '..'
 import { SENTIMENTS } from '../../../theme'
+import { Bullet } from '..'
 
 describe('Bullet', () => {
   test('renders correctly with a text', () =>

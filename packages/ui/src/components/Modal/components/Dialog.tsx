@@ -11,8 +11,8 @@ import { useCallback, useEffect, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { slideFromBottom } from '../../../utils/animations'
 import { Stack } from '../../Stack'
-import { useModal } from '../ModalProvider'
 import { MODAL_PLACEMENT, MODAL_WIDTH } from '../constants'
+import { useModal } from '../ModalProvider'
 import type { DialogProps, ModalPlacement, ModalSize } from '../types'
 
 const StyledDiv = styled(Stack)`

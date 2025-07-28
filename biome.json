@@ -1,8 +1,6 @@
 {
   "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
-  "organizeImports": {
-    "enabled": true
-  },
+  "assist": { "actions": { "source": { "organizeImports": "on" } } },
   "linter": {
     "enabled": false
   },
@@ -11,19 +9,20 @@
     "useIgnoreFile": true
   },
   "files": {
-    "ignore": [
-      ".turbo/",
-      ".next/",
-      "coverage/",
-      "**/node_modules/",
-      "**/storybook-static",
-      "dist",
-      "**/pnpm-lock.yaml",
-      "**/package.json",
-      "**/CHANGELOG.md",
-      "*.snap",
-      "**/__snapshots__/",
-      ".storybook/**"
+    "includes": [
+      "**",
+      "!**/.turbo/",
+      "!**/.next/",
+      "!**/coverage/",
+      "!**/node_modules/",
+      "!**/storybook-static",
+      "!**/dist",
+      "!**/pnpm-lock.yaml",
+      "!**/package.json",
+      "!**/CHANGELOG.md",
+      "!**/*.snap",
+      "!**/__snapshots__/",
+      "!**/.storybook/**"
     ]
   },
   "formatter": {

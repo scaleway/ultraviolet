@@ -2,10 +2,10 @@ import type { StoryFn } from '@storybook/react-vite'
 import { PlusIcon, RestoreIcon } from '@ultraviolet/icons'
 import type { ComponentProps, MouseEvent } from 'react'
 import { useCallback, useState } from 'react'
-import { Breadcrumbs } from '..'
 import { Button } from '../../Button'
 import { Separator } from '../../Separator'
 import { Stack } from '../../Stack'
+import { Breadcrumbs } from '..'
 
 type ItemProp = { label: string; to?: string }[]
 

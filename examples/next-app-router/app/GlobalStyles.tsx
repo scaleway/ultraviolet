@@ -1,6 +1,6 @@
 'use client'
 
-import { Global, css } from '@emotion/react'
+import { css, Global } from '@emotion/react'
 import { normalize } from '@ultraviolet/ui'
 // oxlint-disable-next-line import/no-unassigned-import
 import '@ultraviolet/fonts/fonts.css'

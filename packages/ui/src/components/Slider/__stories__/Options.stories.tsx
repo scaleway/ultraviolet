@@ -1,9 +1,9 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
-import { Slider } from '..'
 import { Button } from '../../Button'
 import { Modal } from '../../Modal'
 import { Stack } from '../../Stack'
+import { Slider } from '..'
 
 const options = [
   { label: '1 Mbps', value: 1 },

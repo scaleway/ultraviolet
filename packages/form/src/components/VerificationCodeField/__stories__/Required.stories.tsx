@@ -1,8 +1,8 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { Stack } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
-import { VerificationCodeField } from '..'
 import { Submit } from '../../Submit'
+import { VerificationCodeField } from '..'
 import { Template } from './Template.stories'
 
 export const Required: StoryFn<

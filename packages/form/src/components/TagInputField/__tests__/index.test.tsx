@@ -3,8 +3,8 @@ import { userEvent } from '@testing-library/user-event'
 import { renderWithForm, renderWithTheme } from '@utils/test'
 import { useForm } from 'react-hook-form'
 import { describe, expect, test, vi } from 'vitest'
-import { Form, Submit, TagInputField } from '../..'
 import { mockErrors } from '../../../mocks'
+import { Form, Submit, TagInputField } from '../..'
 
 const alpha = /^[a-zA-Z]*$/
 

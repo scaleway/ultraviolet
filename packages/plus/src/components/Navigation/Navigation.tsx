@@ -1,10 +1,10 @@
 'use client'
 
-import { NavigationContent } from './NavigationContent'
 import { Group } from './components/Group'
 import { Item } from './components/Item'
 import { PinnedItems } from './components/PinnedItems'
 import { Separator } from './components/Separator'
+import { NavigationContent } from './NavigationContent'
 import type { NavigationProps } from './types'
 
 /**

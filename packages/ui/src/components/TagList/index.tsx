@@ -2,8 +2,8 @@
 
 import styled from '@emotion/styled'
 import { consoleLightTheme } from '@ultraviolet/themes'
-import { useEffect, useMemo, useRef, useState } from 'react'
 import type { ComponentProps, ReactNode } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { Popover } from '../Popover'
 import { Tag } from '../Tag'
 

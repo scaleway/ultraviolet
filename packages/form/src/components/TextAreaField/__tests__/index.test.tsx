@@ -3,9 +3,9 @@ import { userEvent } from '@testing-library/user-event'
 import { mockFormErrors, renderWithForm, renderWithTheme } from '@utils/test'
 import { useForm } from 'react-hook-form'
 import { describe, expect, test, vi } from 'vitest'
-import { TextAreaField } from '..'
 import { Submit } from '../..'
 import { Form } from '../../Form'
+import { TextAreaField } from '..'
 
 describe('TextAreaField', () => {
   test('should render correctly', () => {

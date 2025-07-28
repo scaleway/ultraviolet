@@ -10,7 +10,7 @@ export default {
   tags: ['experimental'],
 } as Meta
 
-export { Playground } from './Playground.stories'
-export { Time } from './Time.stories'
 export { FormattedAxisAndPoints } from './FormattedAxisAndPoints.stories'
 export { MultipleSeriesWithCustomLegend } from './MultipleSeriesWithCustomLegend.stories'
+export { Playground } from './Playground.stories'
+export { Time } from './Time.stories'

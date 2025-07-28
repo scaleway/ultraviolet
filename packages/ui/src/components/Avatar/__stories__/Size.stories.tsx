@@ -1,7 +1,7 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { MosaicIcon } from '@ultraviolet/icons'
-import { Avatar } from '..'
 import { Stack } from '../../Stack'
+import { Avatar } from '..'
 
 export const Size: StoryFn<typeof Avatar> = props => (
   <Stack gap={2}>

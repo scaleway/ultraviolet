@@ -1,6 +1,6 @@
 import type { StoryFn } from '@storybook/react-vite'
-import { SENTIMENTS } from '../../../theme'
 import type { ExtendedColor } from '../../../theme'
+import { SENTIMENTS } from '../../../theme'
 import { Stack } from '../../Stack'
 import { Loader } from '../index'
 

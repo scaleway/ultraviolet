@@ -10,11 +10,11 @@ import type {
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { Stack } from '../Stack'
 import { Tooltip } from '../Tooltip'
+import { FOCUS_OVERLAY_SCALE_RATIO } from './constant'
 import { FocusOverlay } from './FocusOverlay'
 import { Option } from './Option'
 import type { RefOptionType } from './SwitchButtonContext'
 import { SwitchButtonContext } from './SwitchButtonContext'
-import { FOCUS_OVERLAY_SCALE_RATIO } from './constant'
 
 const SIZES = {
   small: '500', // sizing token from theme

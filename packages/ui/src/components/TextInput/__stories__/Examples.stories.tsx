@@ -1,10 +1,10 @@
 import randomName from '@scaleway/random-name'
 import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
-import { TextInput } from '..'
 import { Link } from '../../Link'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
+import { TextInput } from '..'
 
 export const Examples: StoryFn<typeof TextInput> = args => {
   const [value, setValue] = useState<string>('Text')

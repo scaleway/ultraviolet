@@ -6,7 +6,7 @@ export default {
   title: 'Components/Other/Banner',
 } as Meta<typeof Banner>
 
-export { Playground } from './Playground.stories'
-export { Variants } from './Variants.stories'
-export { Sizes } from './Sizes.stories'
 export { Directions } from './Directions.stories'
+export { Playground } from './Playground.stories'
+export { Sizes } from './Sizes.stories'
+export { Variants } from './Variants.stories'

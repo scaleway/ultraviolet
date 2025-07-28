@@ -1,5 +1,5 @@
 import type { Theme } from '@emotion/react'
-import { Global, css } from '@emotion/react'
+import { css, Global } from '@emotion/react'
 import { normalize } from '@ultraviolet/ui'
 
 const baseStyles = (theme: Theme) => css`

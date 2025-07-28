@@ -1,6 +1,6 @@
 import type { StoryFn } from '@storybook/react-vite'
-import { TagList } from '..'
 import { Stack } from '../../Stack'
+import { TagList } from '..'
 
 export const ParentWithDefinedWidth: StoryFn<typeof TagList> = args => (
   <Stack gap={2}>

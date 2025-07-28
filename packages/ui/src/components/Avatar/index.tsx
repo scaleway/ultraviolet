@@ -1,7 +1,7 @@
 'use client'
 
-import { css } from '@emotion/react'
 import type { Theme } from '@emotion/react'
+import { css } from '@emotion/react'
 import styled from '@emotion/styled'
 import { UploadIcon } from '@ultraviolet/icons'
 import { UserProductIcon } from '@ultraviolet/icons/product'
@@ -10,8 +10,8 @@ import {
   DEFAULT_COLORS,
   RADIUS_SIZES,
   SENTIMENTS,
-  TEXT_VARIANT_BY_SIZE,
   sizes,
+  TEXT_VARIANT_BY_SIZE,
 } from './constants'
 import type { AvatarProps, Colors, SentimentColors, Shape } from './types'
 

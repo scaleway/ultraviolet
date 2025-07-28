@@ -3,8 +3,8 @@ import { CheckCircleIcon, CloseIcon } from '@ultraviolet/icons'
 import { Badge, Stack, Text } from '@ultraviolet/ui'
 import { useState } from 'react'
 import { FeatureHint } from './FeatureHint'
-import { PlanHeader } from './PlanHeader'
 import PlansLocales from './locales/en'
+import { PlanHeader } from './PlanHeader'
 import type { Feature, PlanType } from './types'
 
 const PlanTable = styled.table`

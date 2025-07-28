@@ -1,6 +1,6 @@
 import type { StoryFn } from '@storybook/react-vite'
-import { Drawer, SIZES } from '..'
 import { Button } from '../../Button'
+import { Drawer, SIZES } from '..'
 
 export const Size: StoryFn = props => (
   <>

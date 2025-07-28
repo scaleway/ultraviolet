@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import { Text, down } from '@ultraviolet/ui'
+import { down, Text } from '@ultraviolet/ui'
 import { APP_MAX_WIDTH } from '../constants'
 import GithubAndDocumentationButtons from './GithubAndDocumentationButtons'
 import Logo from './Logo'

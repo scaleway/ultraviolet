@@ -1,5 +1,5 @@
 import { ThemeProvider } from '@emotion/react'
-import { Stack, darkTheme as dark, extendTheme } from '@ultraviolet/ui'
+import { darkTheme as dark, extendTheme, Stack } from '@ultraviolet/ui'
 import type { AppProps } from 'next/app'
 import { useCallback, useEffect, useState } from 'react'
 import Footer from '../components/Footer'

@@ -8,8 +8,8 @@ import type { ReactNode } from 'react'
 import type { ToastOptions } from 'react-toastify'
 import {
   ToastContainer as BaseToastContainer,
-  Slide,
   toast as baseToast,
+  Slide,
 } from 'react-toastify'
 import type { SENTIMENTS } from '../../theme'
 import { Button } from '../Button'

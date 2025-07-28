@@ -1,9 +1,9 @@
 import type { Meta } from '@storybook/react-vite'
 import { Snippet, Stack, Text } from '@ultraviolet/ui'
-import { CheckboxGroupField } from '..'
-import { Form } from '../..'
 import { useForm } from '../../..'
 import { mockErrors } from '../../../mocks'
+import { Form } from '../..'
+import { CheckboxGroupField } from '..'
 
 export default {
   component: CheckboxGroupField,
@@ -83,7 +83,7 @@ export default {
   },
 } as Meta<typeof CheckboxGroupField>
 
+export { NotRequired } from './NotRequired.stories'
+export { PartiallyRequired } from './PartiallyRequired.stories'
 export { Playground } from './Playground.stories'
 export { Required } from './Required.stories'
-export { PartiallyRequired } from './PartiallyRequired.stories'
-export { NotRequired } from './NotRequired.stories'

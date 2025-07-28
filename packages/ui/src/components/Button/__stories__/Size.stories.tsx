@@ -1,7 +1,7 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { PencilIcon } from '@ultraviolet/icons'
-import { Button, buttonSizes } from '..'
 import { Stack } from '../..'
+import { Button, buttonSizes } from '..'
 
 export const Size: StoryFn<typeof Button> = args => (
   <Stack alignItems="center" gap={2} direction="row">

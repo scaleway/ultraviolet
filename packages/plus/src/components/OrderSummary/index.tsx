@@ -1,12 +1,12 @@
 import styled from '@emotion/styled'
 import { Stack, Text, UnitInput } from '@ultraviolet/ui'
 import { useEffect, useMemo, useState } from 'react'
-import { NonScrollableContent } from './NonScrollableContent'
-import { OrderSummaryContext } from './Provider'
-import { ScrollableContent } from './ScrollableContent'
 import { Units } from './constants'
 import { calculateCategoryPrice } from './helpers'
 import orderSummaryLocales from './locales/en'
+import { NonScrollableContent } from './NonScrollableContent'
+import { OrderSummaryContext } from './Provider'
+import { ScrollableContent } from './ScrollableContent'
 import type { OrderSummaryProps, PriceType, TimeUnit } from './types'
 
 const Container = styled(Stack)`

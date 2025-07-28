@@ -6,7 +6,7 @@ export default {
   title: 'Plus/Compositions/CodeEditor',
 } as Meta
 
-export { Playground } from './Playground.stories'
 export { AutoCompletion } from './AutoCompletion.stories'
-export { Disabled } from './Disabled.stories'
 export { CopyButton } from './CopyButton.stories'
+export { Disabled } from './Disabled.stories'
+export { Playground } from './Playground.stories'

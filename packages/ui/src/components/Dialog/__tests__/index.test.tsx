@@ -5,8 +5,8 @@ import {
   shouldMatchEmotionSnapshotWithPortal,
 } from '@utils/test'
 import { describe, expect, it, vi } from 'vitest'
-import { Dialog } from '..'
 import { Button } from '../../Button'
+import { Dialog } from '..'
 
 describe('Dialog', () => {
   it('should renders correctly', () =>

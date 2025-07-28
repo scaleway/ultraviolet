@@ -3,8 +3,8 @@
 import { Slider } from '@ultraviolet/ui'
 import type { ComponentProps, FocusEvent, ReactNode } from 'react'
 import { useMemo } from 'react'
-import { useController } from 'react-hook-form'
 import type { FieldPath, FieldValues, Path, PathValue } from 'react-hook-form'
+import { useController } from 'react-hook-form'
 import { useErrors } from '../../providers'
 import type { BaseFieldProps } from '../../types'
 

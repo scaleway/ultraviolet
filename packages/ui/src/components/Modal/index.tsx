@@ -2,9 +2,9 @@
 
 import type { ReactElement, ReactNode } from 'react'
 import { useCallback, useContext, useId, useRef, useState } from 'react'
+import { Disclosure } from './components/Disclosure'
 import { ModalContent } from './ModalContent'
 import { ModalContext, ModalProvider } from './ModalProvider'
-import { Disclosure } from './components/Disclosure'
 import type { ModalPlacement, ModalSize, ModalState } from './types'
 
 export type ModalProps = {

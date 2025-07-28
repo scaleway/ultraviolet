@@ -1,6 +1,6 @@
 import { Button } from '../../Button'
-import { Template } from './Template.stories'
 import errorImg from './illustrations/product-error.svg'
+import { Template } from './Template.stories'
 
 export const AnErrorOccurred = Template.bind({})
 AnErrorOccurred.args = {

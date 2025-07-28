@@ -1,7 +1,7 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { Button, Stack } from '@ultraviolet/ui'
-import { useState } from 'react'
 import type { ComponentProps } from 'react'
+import { useState } from 'react'
 import { OfferList } from '../OfferList'
 import { columns, data } from './resources'
 

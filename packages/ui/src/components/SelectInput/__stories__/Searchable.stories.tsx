@@ -1,6 +1,6 @@
 import type { StoryFn } from '@storybook/react-vite'
-import { SelectInput } from '..'
 import { Stack } from '../../Stack'
+import { SelectInput } from '..'
 import { OptionalInfo, OptionalInfo2 } from './resources'
 
 export const Searchable: StoryFn<typeof SelectInput> = args => (

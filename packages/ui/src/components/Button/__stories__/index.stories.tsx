@@ -6,11 +6,11 @@ export default {
   title: 'Components/Action/Button',
 } as Meta<typeof Button>
 
+export { AsLink } from './AsLink.stories'
+export { FullWidth } from './FullWidth.stories'
+export { IconOnly } from './IconOnly.stories'
+export { IsLoading } from './IsLoading.stories'
 export { Playground } from './Playground.stories'
 export { Showcase } from './Showcase.stories'
 export { Size } from './Size.stories'
-export { IconOnly } from './IconOnly.stories'
-export { IsLoading } from './IsLoading.stories'
-export { FullWidth } from './FullWidth.stories'
 export { Tooltip } from './Tooltip.stories'
-export { AsLink } from './AsLink.stories'

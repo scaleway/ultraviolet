@@ -10,8 +10,8 @@ export default {
   tags: ['experimental'],
 } as Meta<typeof PieChart>
 
-export { Playground } from './Playground.stories'
 export { Content } from './Content.stories'
-export { Legends } from './Legends.stories'
-export { PopperDetails } from './PopperDetails.stories'
 export { EmptyLegend } from './EmptyLegend.stories'
+export { Legends } from './Legends.stories'
+export { Playground } from './Playground.stories'
+export { PopperDetails } from './PopperDetails.stories'

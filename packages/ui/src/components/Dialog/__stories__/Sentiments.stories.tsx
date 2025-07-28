@@ -1,7 +1,7 @@
 import type { StoryFn } from '@storybook/react-vite'
-import { Dialog } from '..'
 import { Button } from '../../Button'
 import { Stack } from '../../Stack'
+import { Dialog } from '..'
 import { DIALOG_SENTIMENTS } from '../constants'
 
 export const Sentiments: StoryFn<typeof Dialog> = props => (

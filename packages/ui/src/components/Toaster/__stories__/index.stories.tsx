@@ -10,7 +10,7 @@ export default {
   },
 }
 
+export { ComplexChildren } from './ComplexChildren.stories'
+export { ContainerId } from './ContainerId.stories'
 export { Playground } from './Playground.stories'
 export { Sentiments } from './Sentiments.stories'
-export { ContainerId } from './ContainerId.stories'
-export { ComplexChildren } from './ComplexChildren.stories'

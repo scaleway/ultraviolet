@@ -1,6 +1,6 @@
 import type { Decorator, StoryFn } from '@storybook/react-vite'
-import { NotificationContainer, notification } from '..'
 import { Avatar, Button, Stack, Text } from '../../index'
+import { NotificationContainer, notification } from '..'
 
 export const Children: StoryFn<typeof NotificationContainer> = args => (
   <div style={{ height: '150px' }}>

@@ -7,10 +7,10 @@ import type { JSX, ReactNode } from 'react'
 import { Children, cloneElement, isValidElement, useMemo } from 'react'
 import { LineThrough } from './Components/LineThrough'
 import { Strong } from './Components/Strong'
-import { useEstimateCost } from './EstimateCostProvider'
-import { OverlayContextProvider } from './OverlayContext'
 import { ItemResourceName, OverlayRow, StyledBadge } from './componentStyle'
 import { maximumFractionDigits, multiplier } from './constants'
+import { useEstimateCost } from './EstimateCostProvider'
+import { OverlayContextProvider } from './OverlayContext'
 import type { Units } from './types'
 
 const OverlayContainer = styled('div', {

@@ -4,7 +4,7 @@ import { renderWithTheme } from '@utils/test'
 import type { ReactNode } from 'react'
 import { afterAll, beforeAll, describe, expect, test, vi } from 'vitest'
 import { SelectInput } from '..'
-import { OptionalInfo, cities, dataGrouped, dataUnGrouped } from './resources'
+import { cities, dataGrouped, dataUnGrouped, OptionalInfo } from './resources'
 
 export type OptionType = {
   value: string

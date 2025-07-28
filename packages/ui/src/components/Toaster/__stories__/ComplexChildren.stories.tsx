@@ -1,7 +1,7 @@
 import type { StoryFn } from '@storybook/react-vite'
-import { Toast, ToastContainer, toast } from '..'
 import { Button } from '../../Button'
 import { Stack } from '../../Stack'
+import { Toast, ToastContainer, toast } from '..'
 
 const ButtonToaster = () => (
   <Stack

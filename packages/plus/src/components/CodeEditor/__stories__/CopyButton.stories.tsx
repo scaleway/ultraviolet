@@ -1,6 +1,6 @@
 import type { StoryFn } from '@storybook/react-vite'
-import { useState } from 'react'
 import type { ComponentProps } from 'react'
+import { useState } from 'react'
 import { CodeEditor } from '..'
 
 const DEFAULT_VALUE = `function findSequence(goal) {

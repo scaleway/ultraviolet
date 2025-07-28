@@ -1,7 +1,7 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { Row, Snippet, Stack, Text } from '@ultraviolet/ui'
-import * as CategoryIcon from '..'
 import { DEPRECATED_ICONS } from '../../../deprecatedIcons'
+import * as CategoryIcon from '..'
 
 export const List: StoryFn<typeof CategoryIcon> = props => (
   <Stack gap={1}>

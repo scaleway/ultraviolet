@@ -1,8 +1,8 @@
 import type { Decorator } from '@storybook/react-vite'
 import { Snippet, Stack, Text } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
-import * as Icon from '..'
 import { DEPRECATED_ICONS } from '../../../deprecatedIcons'
+import * as Icon from '..'
 import type { AddressIcon } from '../__generated__'
 
 export const List = (args: ComponentProps<typeof AddressIcon>) =>

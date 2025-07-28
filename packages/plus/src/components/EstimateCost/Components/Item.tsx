@@ -16,8 +16,6 @@ import {
   useMemo,
   useState,
 } from 'react'
-import { useEstimateCost } from '../EstimateCostProvider'
-import { useOverlay } from '../OverlayContext'
 import {
   OverlayRow,
   PriceCell,
@@ -32,7 +30,9 @@ import {
   maximumFractionDigitsLong,
   multiplier,
 } from '../constants'
+import { useEstimateCost } from '../EstimateCostProvider'
 import { calculatePrice } from '../helper'
+import { useOverlay } from '../OverlayContext'
 import type {
   BareEstimateProduct,
   EstimateProduct,

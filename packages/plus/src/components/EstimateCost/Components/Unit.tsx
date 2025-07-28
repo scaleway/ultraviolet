@@ -3,8 +3,8 @@
 import styled from '@emotion/styled'
 import { NumberInput } from '@ultraviolet/ui'
 import { useEffect, useState } from 'react'
-import { useOverlay } from '../OverlayContext'
 import { ItemResourceName } from '../componentStyle'
+import { useOverlay } from '../OverlayContext'
 import { Regular } from './Regular'
 
 const StyledNumberInput = styled(NumberInput)`

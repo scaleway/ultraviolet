@@ -5,8 +5,8 @@ import { ArrowLeftDoubleIcon, ArrowRightDoubleIcon } from '@ultraviolet/icons'
 import { Button, Tooltip } from '@ultraviolet/ui'
 import type { RefObject } from 'react'
 import { useCallback, useEffect, useMemo, useState } from 'react'
-import { useNavigation } from './NavigationProvider'
 import { ANIMATION_DURATION } from './constants'
+import { useNavigation } from './NavigationProvider'
 import type { NavigationProps } from './types'
 
 const StickyFooter = styled.div`

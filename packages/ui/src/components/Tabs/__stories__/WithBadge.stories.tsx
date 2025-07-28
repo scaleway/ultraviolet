@@ -1,5 +1,5 @@
-import { Tabs } from '..'
 import { Badge } from '../../Badge'
+import { Tabs } from '..'
 import { Template } from './Template.stories'
 
 export const WithBadge = Template.bind({})

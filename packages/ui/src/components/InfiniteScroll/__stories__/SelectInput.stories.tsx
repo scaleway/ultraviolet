@@ -1,11 +1,11 @@
 import styled from '@emotion/styled'
 import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
-import { InfiniteScroll } from '..'
 import { SelectInput as SelectInputUV } from '../../SelectInput'
 import { Skeleton } from '../../Skeleton'
 import { Stack } from '../../Stack'
-import { SELECT_INPUT_DATA, generateRandomNamesArray } from './data'
+import { InfiniteScroll } from '..'
+import { generateRandomNamesArray, SELECT_INPUT_DATA } from './data'
 
 const StyledStack = styled(Stack)`
   padding: 0 ${({ theme }) => theme.space[3]};

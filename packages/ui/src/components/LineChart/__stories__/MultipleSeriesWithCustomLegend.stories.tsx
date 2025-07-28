@@ -1,6 +1,6 @@
 import { format } from 'date-fns'
-import { Template } from './Template.stories'
 import { lineChartMultipleData } from './mockData'
+import { Template } from './Template.stories'
 
 export const MultipleSeriesWithCustomLegend = Template.bind({})
 

@@ -27,9 +27,9 @@ import type { PositionsType } from './animations'
 import { animation, exitAnimation } from './animations'
 import type { PopupAlign, PopupPlacement } from './helpers'
 import {
+  computePositions,
   DEFAULT_ARROW_WIDTH,
   DEFAULT_POSITIONS,
-  computePositions,
 } from './helpers'
 
 const DEFAULT_ANIMATION_DURATION = 230 // in ms

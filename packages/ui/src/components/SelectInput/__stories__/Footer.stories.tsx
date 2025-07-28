@@ -1,9 +1,9 @@
 import type { StoryFn } from '@storybook/react-vite'
-import { SelectInput } from '..'
 import { Button } from '../../Button'
 import { Stack } from '../../Stack'
-import { Template } from './Template.stories'
+import { SelectInput } from '..'
 import { dataGrouped } from './resources'
+import { Template } from './Template.stories'
 
 const PopupFooter = () => (
   <Stack direction="row" gap="1" width="100%">
@@ -18,7 +18,9 @@ const PopupFooter = () => (
 
 const PopupFooteronClick = ({
   closeDropdown,
-}: { closeDropdown: () => void }) => (
+}: {
+  closeDropdown: () => void
+}) => (
   <Stack direction="row" gap="1" width="100%">
     <Button
       variant="outlined"

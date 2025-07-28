@@ -1,8 +1,8 @@
 import type { Meta } from '@storybook/react-vite'
 import { Snippet, Stack, Text } from '@ultraviolet/ui'
-import { Form, NumberInputField } from '../..'
 import { useForm } from '../../..'
 import { mockErrors } from '../../../mocks'
+import { Form, NumberInputField } from '../..'
 
 export default {
   component: NumberInputField,

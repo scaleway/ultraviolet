@@ -3,8 +3,8 @@ import { userEvent } from '@testing-library/user-event'
 import { renderWithForm, renderWithTheme } from '@utils/test'
 import { useForm } from 'react-hook-form'
 import { describe, expect, test, vi } from 'vitest'
-import { Form, Submit, SwitchButtonField } from '../..'
 import { mockErrors } from '../../../mocks'
+import { Form, Submit, SwitchButtonField } from '../..'
 
 describe('SwitchButtonField', () => {
   test('should render correctly', () => {

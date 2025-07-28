@@ -10,8 +10,8 @@ import {
   Radio,
   Tooltip,
 } from '@ultraviolet/ui'
-import { Children, useCallback, useMemo } from 'react'
 import type { ComponentProps, ReactNode } from 'react'
+import { Children, useCallback, useMemo } from 'react'
 import { useOfferListContext } from '../OfferListProvider'
 import { Banner, BannerWrapper } from './Banner'
 

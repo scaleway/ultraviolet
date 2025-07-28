@@ -1,7 +1,7 @@
 import { shouldMatchEmotionSnapshot } from '@utils/test'
 import { describe, test } from 'vitest'
-import { Meter } from '..'
 import { colors } from '../../../theme'
+import { Meter } from '..'
 
 describe('Meter', () => {
   const strengthLevels = [

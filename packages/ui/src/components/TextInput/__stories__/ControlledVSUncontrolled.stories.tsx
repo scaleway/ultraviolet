@@ -1,8 +1,8 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
-import { TextInput } from '..'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
+import { TextInput } from '..'
 
 export const ControlledVSUncontrolled: StoryFn<typeof TextInput> = props => {
   const [value, setValue] = useState('content')

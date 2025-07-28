@@ -6,8 +6,8 @@ export default {
   title: 'Components/Data Display/Chart/BarChart',
 } as Meta<typeof BarChart>
 
-export { Playground } from './Playground.stories'
 export { FormattedValuesAndTooltip } from './FormattedValuesAndTooltip.stories'
-export { MultiSeries } from './MultiSeries.stories'
-export { PositiveNegative } from './PositiveNegative.stories'
 export { Label } from './Label.stories'
+export { MultiSeries } from './MultiSeries.stories'
+export { Playground } from './Playground.stories'
+export { PositiveNegative } from './PositiveNegative.stories'

@@ -2,8 +2,8 @@
 
 import styled from '@emotion/styled'
 import { CloseIcon } from '@ultraviolet/icons'
-import { useMemo } from 'react'
 import type { MouseEventHandler, ReactNode } from 'react'
+import { useMemo } from 'react'
 import useClipboard from 'react-use-clipboard'
 import type { Color } from '../../theme'
 import { Button } from '../Button'

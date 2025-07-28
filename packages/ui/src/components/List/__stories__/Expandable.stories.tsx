@@ -1,8 +1,8 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
-import { List } from '..'
 import { Button } from '../../Button'
 import { Stack } from '../../Stack'
+import { List } from '..'
 import { columns, data } from './resources'
 
 export const Expandable: StoryFn<typeof List> = props => {

@@ -1,8 +1,8 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { Stack } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
-import { ToggleGroupField } from '..'
 import { useWatch } from '../../..'
+import { ToggleGroupField } from '..'
 
 const ToggleGroupFieldStory = (
   args: ComponentProps<typeof ToggleGroupField>,

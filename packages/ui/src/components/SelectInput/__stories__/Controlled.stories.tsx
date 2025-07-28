@@ -1,10 +1,10 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
-import { SelectInput } from '..'
 import { Button } from '../../Button'
 import { Stack } from '../../Stack'
-import { Template } from './Template.stories'
+import { SelectInput } from '..'
 import { dataUnGrouped } from './resources'
+import { Template } from './Template.stories'
 
 export const Controlled: StoryFn<typeof SelectInput> = () => {
   const [valueSingle, setValueSingle] =

@@ -1,6 +1,6 @@
 import type { StoryFn } from '@storybook/react-vite'
-import { SearchInput } from '..'
 import { Text } from '../../Text'
+import { SearchInput } from '..'
 
 export const Template: StoryFn<typeof SearchInput> = ({ ...args }) => (
   <div style={{ height: '120px' }}>

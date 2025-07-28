@@ -1,6 +1,6 @@
 import { List } from '..'
-import { Template } from './Template.stories'
 import { data } from './resources'
+import { Template } from './Template.stories'
 
 export const ExpandableAutocollapse = Template.bind({})
 

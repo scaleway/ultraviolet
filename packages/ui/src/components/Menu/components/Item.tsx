@@ -13,8 +13,8 @@ import type {
 import { forwardRef, useCallback } from 'react'
 import { Stack } from '../../Stack'
 import { Tooltip } from '../../Tooltip'
-import { useDisclosureContext, useMenu } from '../MenuProvider'
 import { getListItem } from '../helpers'
+import { useDisclosureContext, useMenu } from '../MenuProvider'
 
 type MenuItemSentiment = 'neutral' | 'primary' | 'danger'
 

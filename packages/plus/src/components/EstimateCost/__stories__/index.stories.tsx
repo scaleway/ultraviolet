@@ -22,14 +22,14 @@ export default {
   title: 'Plus/Compositions/EstimateCost',
 } as Meta
 
-export { Playground } from './Playground.stories'
 export { DefaultLocales } from './DefaultLocales.stories'
-export { Item } from './Item.stories'
-export { Region } from './Region.stories'
-export { NumberInput } from './NumberInput.stories'
-export { Unit } from './Unit.stories'
+export { Design } from './Design.stories'
 export { GlobalDiscount } from './GlobalDiscount.stories'
+export { Item } from './Item.stories'
 export { LocalDiscount } from './LocalDiscount.stories'
 export { NegativeValues } from './NegativeValues.stories'
-export { Design } from './Design.stories'
 export { NewPrice } from './NewPrice.stories'
+export { NumberInput } from './NumberInput.stories'
+export { Playground } from './Playground.stories'
+export { Region } from './Region.stories'
+export { Unit } from './Unit.stories'

@@ -10,8 +10,8 @@ import { useEffect, useState } from 'react'
 import { getLegendColor } from '../../helpers/legend'
 import { getNivoTheme } from '../../helpers/nivoTheme'
 import { CustomLegend } from './CustomLegend'
-import { LineChartTooltip } from './Tooltip'
 import { getMaxChartValue, getMinChartValue } from './helpers'
+import { LineChartTooltip } from './Tooltip'
 
 type LineChartProps = {
   height?: string | number

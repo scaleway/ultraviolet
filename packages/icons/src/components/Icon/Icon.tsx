@@ -30,13 +30,7 @@ type Color = Extract<
   | 'info'
 >
 
-const sizeStyles = ({
-  size,
-  theme,
-}: {
-  size: SizesProps
-  theme: Theme
-}) => css`
+const sizeStyles = ({ size, theme }: { size: SizesProps; theme: Theme }) => css`
     height: ${theme.sizing[SIZES[size]]};
     width: ${theme.sizing[SIZES[size]]};
     min-width: ${theme.sizing[SIZES[size]]};

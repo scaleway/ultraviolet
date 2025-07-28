@@ -1,6 +1,6 @@
 import type { StoryFn } from '@storybook/react-vite'
-import { Slider } from '..'
 import { Stack } from '../../Stack'
+import { Slider } from '..'
 
 export const Error: StoryFn<typeof Slider> = args => (
   <Stack gap={4}>

@@ -1,7 +1,7 @@
 import type { StoryFn } from '@storybook/react-vite'
-import { Modal } from '..'
 import { Button } from '../../Button'
 import { Stack } from '../../Stack'
+import { Modal } from '..'
 
 export const PreventBodyScroll: StoryFn = props => (
   <Stack gap={2} direction="row">

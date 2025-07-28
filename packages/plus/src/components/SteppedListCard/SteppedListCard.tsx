@@ -2,11 +2,11 @@
 
 import styled from '@emotion/styled'
 import { Button, Card, Row, Stack, StepList, Text } from '@ultraviolet/ui'
-import { Children, useMemo, useState } from 'react'
 import type { ReactNode } from 'react'
+import { Children, useMemo, useState } from 'react'
+import { Data } from './helper'
 import { SteppedList } from './Step'
 import { SteppedListContent } from './SteppedListContent'
-import { Data } from './helper'
 
 const StyledCard = styled(Card)`
   padding: 0;

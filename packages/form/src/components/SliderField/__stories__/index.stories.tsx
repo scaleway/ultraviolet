@@ -1,8 +1,8 @@
 import type { Meta } from '@storybook/react-vite'
 import { Snippet, Stack, Text } from '@ultraviolet/ui'
-import { Form, SliderField } from '../..'
 import { useForm } from '../../..'
 import { mockErrors } from '../../../mocks'
+import { Form, SliderField } from '../..'
 
 export default {
   component: SliderField,
@@ -87,7 +87,7 @@ export default {
   title: 'Form/Components/Fields/SliderField',
 } as Meta
 
-export { Playground } from './Playground.stories'
 export { Double } from './Double.stories'
 export { Options } from './Options.stories'
+export { Playground } from './Playground.stories'
 export { Required } from './Required.stories'

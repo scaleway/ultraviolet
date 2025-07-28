@@ -1,5 +1,5 @@
-import { createContext, useContext, useState } from 'react'
 import type { Dispatch, ReactNode, SetStateAction } from 'react'
+import { createContext, useContext, useState } from 'react'
 
 type OfferListContextValue = {
   selectable: 'radio' | 'checkbox'

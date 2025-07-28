@@ -65,7 +65,10 @@ type UvThemeType = {
 export const generateThemeCss = ({
   uvTheme,
   filename,
-}: { uvTheme: UvThemeType; filename: string }) =>
+}: {
+  uvTheme: UvThemeType
+  filename: string
+}) =>
   `:root.${filename}-theme {\n${
     createCssVariables('color', uvTheme.colors) +
     createCssVariables('radius', uvTheme.radii) +

@@ -1,8 +1,8 @@
 import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
-import { useReducer } from 'react'
 import type { ActionDispatch } from 'react'
+import { useReducer } from 'react'
 import { describe, expect, test } from 'vitest'
 import { Checkbox } from '..'
 

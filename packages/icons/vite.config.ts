@@ -1,5 +1,5 @@
-import { resolve } from 'path'
 import svgr from '@svgr/rollup'
+import { resolve } from 'path'
 import { defineConfig, mergeConfig } from 'vite'
 import { defaultConfig } from '../../vite.config'
 

@@ -1,10 +1,10 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { AlertCircleOutlineIcon } from '@ultraviolet/icons'
 import { useState } from 'react'
-import { TextArea } from '..'
 import { Badge } from '../../Badge'
 import { Stack } from '../../Stack'
 import { Tooltip } from '../../Tooltip'
+import { TextArea } from '..'
 
 export const Examples: StoryFn<typeof TextArea> = () => {
   const [value, setValue] = useState<string>(

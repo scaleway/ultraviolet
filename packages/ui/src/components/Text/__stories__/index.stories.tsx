@@ -6,14 +6,14 @@ export default {
   title: 'Components/Typography/Text',
 } as Meta
 
-export { Playground } from './Playground.stories'
-export { Variants } from './Variants.stories'
-export { Sentiments } from './Sentiments.stories'
 export { As } from './As.stories'
-export { Prominence } from './Prominence.stories'
+export { Dir } from './Dir.stories'
 export { Disabled } from './Disabled.stories'
 export { Italic } from './Italic.stories'
-export { Underline } from './Underline.stories'
 export { OneLine } from './OneLine.stories'
-export { Dir } from './Dir.stories'
 export { Placement } from './Placement.stories'
+export { Playground } from './Playground.stories'
+export { Prominence } from './Prominence.stories'
+export { Sentiments } from './Sentiments.stories'
+export { Underline } from './Underline.stories'
+export { Variants } from './Variants.stories'

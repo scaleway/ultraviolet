@@ -14,5 +14,5 @@ export default {
   },
 } as Meta
 
-export { Playground } from './Playground.stories'
 export { List } from './List.stories'
+export { Playground } from './Playground.stories'

@@ -1,8 +1,8 @@
 import type { Decorator, StoryFn } from '@storybook/react-vite'
 import { DeleteIcon, DotsHorizontalIcon } from '@ultraviolet/icons'
 import { KubernetesProductIcon } from '@ultraviolet/icons/product'
-import { ExpandableCard } from '..'
 import { Button, Menu, Stack, Text } from '../..'
+import { ExpandableCard } from '..'
 
 export const Header: StoryFn<typeof ExpandableCard> = () => (
   <Stack gap={1}>

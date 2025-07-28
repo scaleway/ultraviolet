@@ -1,6 +1,6 @@
 import type { StoryFn } from '@storybook/react-vite'
-import { Modal } from '..'
 import { Button } from '../../Button'
+import { Modal } from '..'
 
 export const HideOnClickOutside: StoryFn = props => (
   <Modal

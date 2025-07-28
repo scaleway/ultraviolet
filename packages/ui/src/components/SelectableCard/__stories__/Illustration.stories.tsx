@@ -5,11 +5,11 @@ import {
   // @ts-expect-error can't import ultraviolet/illustration in ui (cyclic dependencies)
 } from '@ultraviolet/illustrations/products/appleSilicon'
 import { useState } from 'react'
-import { SelectableCard } from '..'
 import { Badge } from '../../Badge'
 import { Link } from '../../Link'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
+import { SelectableCard } from '..'
 
 export const Illustration: StoryFn = args => {
   const [value, onChange] = useState('label-30')

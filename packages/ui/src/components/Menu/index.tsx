@@ -2,10 +2,10 @@
 
 import type { Ref } from 'react'
 import { forwardRef } from 'react'
-import { Menu as MenuContent } from './MenuContent'
-import { MenuProvider } from './MenuProvider'
 import { Group } from './components/Group'
 import Item from './components/Item'
+import { Menu as MenuContent } from './MenuContent'
+import { MenuProvider } from './MenuProvider'
 import type { MenuProps } from './types'
 
 const Component = forwardRef(

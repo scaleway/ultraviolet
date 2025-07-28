@@ -9,7 +9,7 @@ import {
   useFormState,
 } from '../../../../../../form/src'
 import { Button, Row, Stack, Text, Tooltip } from '../../../../components'
-import { INITIAL_VALUES, hexadecimalColorRegex } from '../contants'
+import { hexadecimalColorRegex, INITIAL_VALUES } from '../contants'
 
 const CapitalizeText = styled(Text)`
   &::first-letter {

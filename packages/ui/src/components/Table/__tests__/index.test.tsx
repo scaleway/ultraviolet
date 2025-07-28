@@ -5,8 +5,8 @@ import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
 import type { ComponentProps, Dispatch, ReactNode, SetStateAction } from 'react'
 import { useState } from 'react'
 import { describe, expect, test, vi } from 'vitest'
-import { Table } from '..'
 import defaultTheme from '../../../theme'
+import { Table } from '..'
 
 type WrapperProps = {
   theme?: typeof defaultTheme

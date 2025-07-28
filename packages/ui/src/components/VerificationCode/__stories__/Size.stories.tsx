@@ -1,6 +1,6 @@
 import type { StoryFn } from '@storybook/react-vite'
-import { VerificationCode, verificationCodeSizes } from '..'
 import { Stack } from '../..'
+import { VerificationCode, verificationCodeSizes } from '..'
 
 export const Size: StoryFn<typeof VerificationCode> = args => (
   <Stack gap={2} direction="column">

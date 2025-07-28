@@ -1,7 +1,7 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
-import { Modal } from '..'
 import { Toggle } from '../../Toggle'
+import { Modal } from '..'
 
 export const ToggleStory: StoryFn = () => {
   const [toggled, setToggled] = useState(false)

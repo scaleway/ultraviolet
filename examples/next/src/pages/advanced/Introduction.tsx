@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import { Breakpoint, Stack, Text, down } from '@ultraviolet/ui'
+import { Breakpoint, down, Stack, Text } from '@ultraviolet/ui'
 import Image from 'next/image'
 import swA11y from '../../assets/icons/icon-scaleway-a11y.svg'
 import swCustom from '../../assets/icons/icon-scaleway-custom.svg'

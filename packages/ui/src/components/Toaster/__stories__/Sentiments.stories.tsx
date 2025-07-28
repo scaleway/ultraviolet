@@ -1,6 +1,6 @@
 import type { Decorator, StoryFn } from '@storybook/react-vite'
-import { ToastContainer, toast } from '..'
 import { Button } from '../../index'
+import { ToastContainer, toast } from '..'
 
 export const Sentiments: StoryFn<typeof ToastContainer> = args => (
   <div style={{ height: '300px' }}>

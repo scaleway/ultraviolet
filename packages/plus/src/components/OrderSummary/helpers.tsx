@@ -1,6 +1,6 @@
 import { useContext } from 'react'
-import { OrderSummaryContext } from './Provider'
 import { multiplier } from './constants'
+import { OrderSummaryContext } from './Provider'
 import type {
   CurrencyType,
   ItemsType,

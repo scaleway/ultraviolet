@@ -14,8 +14,8 @@ import { Unit } from './Components/Unit'
 import { Zone } from './Components/Zone'
 import { EstimateCostContent } from './EstimateCostContent'
 import { EstimateCostProvider } from './EstimateCostProvider'
-import { useOverlay } from './OverlayContext'
 import EstimateCostLocales from './locales/en'
+import { useOverlay } from './OverlayContext'
 import type { EstimateCostProps, Units } from './types'
 
 const MaxWidthText = styled(Text)<{ maxWidth?: number }>`

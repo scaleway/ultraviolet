@@ -15,11 +15,11 @@ import {
   Badge,
   Button,
   Expandable,
+  fadeIn,
   Menu,
   Stack,
   Text,
   Tooltip,
-  fadeIn,
 } from '@ultraviolet/ui'
 import type {
   ComponentProps,
@@ -38,8 +38,8 @@ import {
   useMemo,
   useReducer,
 } from 'react'
-import { useNavigation } from '../NavigationProvider'
 import { ANIMATION_DURATION, shrinkHeight } from '../constants'
+import { useNavigation } from '../NavigationProvider'
 import type { PinUnPinType } from '../types'
 import { ItemContext, ItemProvider } from './ItemProvider'
 

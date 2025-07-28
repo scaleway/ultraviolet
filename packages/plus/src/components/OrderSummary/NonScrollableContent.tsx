@@ -1,9 +1,9 @@
 import styled from '@emotion/styled'
 import { Stack, Text } from '@ultraviolet/ui'
-import { useContext } from 'react'
 import type { ReactNode } from 'react'
-import { OrderSummaryContext } from './Provider'
+import { useContext } from 'react'
 import { DisplayPrice } from './helpers'
+import { OrderSummaryContext } from './Provider'
 import type { PriceTypeSingle, TimeUnit } from './types'
 
 const NonScrollableContainer = styled(Stack)`

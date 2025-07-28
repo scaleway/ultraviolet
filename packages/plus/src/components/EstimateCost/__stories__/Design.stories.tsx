@@ -1,6 +1,6 @@
 import { EstimateCost } from '..'
-import { Template } from './Template'
 import frFlag from './assets/fr.svg'
+import { Template } from './Template'
 
 export const Design = Template.bind({})
 

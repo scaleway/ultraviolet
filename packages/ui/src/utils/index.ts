@@ -1,4 +1,3 @@
-export { getUUID } from './ids'
 export {
   bounce,
   fadeIn,
@@ -28,7 +27,8 @@ export {
   zoomIn,
   zoomOut,
 } from './animations'
-export { down, up, Breakpoint } from './responsive'
+export { getUUID } from './ids'
 export { default as normalize } from './normalize'
-export { orderBy } from './orderBy'
 export type { ComparableType } from './orderBy'
+export { orderBy } from './orderBy'
+export { Breakpoint, down, up } from './responsive'

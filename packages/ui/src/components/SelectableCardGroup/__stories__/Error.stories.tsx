@@ -1,7 +1,7 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
-import { SelectableCardGroup } from '..'
 import { Stack } from '../../Stack'
+import { SelectableCardGroup } from '..'
 
 export const Error: StoryFn<typeof SelectableCardGroup> = args => {
   const [values, onChange] = useState(['value-1'])

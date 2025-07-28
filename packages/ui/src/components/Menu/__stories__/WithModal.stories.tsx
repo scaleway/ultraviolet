@@ -1,7 +1,7 @@
 import type { StoryFn } from '@storybook/react-vite'
-import { Menu } from '..'
 import { Modal } from '../../Modal'
 import { TextInput } from '../../TextInput'
+import { Menu } from '..'
 import { DefaultDisclosure } from './Template.stories'
 
 const NestedModal = () => (

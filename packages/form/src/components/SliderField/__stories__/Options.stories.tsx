@@ -1,8 +1,8 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { Stack } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
-import { SliderField } from '..'
 import { Submit } from '../../Submit'
+import { SliderField } from '..'
 
 export const Options: StoryFn<ComponentProps<typeof SliderField>> = ({
   name,

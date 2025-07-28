@@ -17,9 +17,6 @@ import { useInView } from 'react-intersection-observer'
 import { CustomUnitInput } from './Components/CustomUnitInput'
 import { Item } from './Components/Item'
 import { LineThrough } from './Components/LineThrough'
-import { useEstimateCost } from './EstimateCostProvider'
-import { OverlayComponent } from './OverlayComponent'
-import { OverlayContextProvider } from './OverlayContext'
 import {
   BadgeBeta,
   Cell,
@@ -34,8 +31,11 @@ import {
   TotalPriceCell,
 } from './componentStyle'
 import { maximumFractionDigits, maximumFractionDigitsLong } from './constants'
+import { useEstimateCost } from './EstimateCostProvider'
 import { calculatePrice } from './helper'
 import EstimateCostLocales from './locales/en'
+import { OverlayComponent } from './OverlayComponent'
+import { OverlayContextProvider } from './OverlayContext'
 import type {
   BareEstimateProduct,
   EstimateCostProps,

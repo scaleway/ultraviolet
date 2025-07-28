@@ -1,8 +1,8 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { Stack } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
-import { NumberInputField } from '..'
 import { Submit } from '../../Submit'
+import { NumberInputField } from '..'
 
 export const Required: StoryFn<
   ComponentProps<typeof NumberInputField>

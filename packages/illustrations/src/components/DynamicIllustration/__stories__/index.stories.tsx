@@ -6,5 +6,5 @@ export default {
   title: 'Illustrations/DynamicIllustration',
 } as Meta<typeof DynamicIllustration>
 
-export { Playground } from './Playground.stories'
 export { List } from './List.stories'
+export { Playground } from './Playground.stories'

@@ -6,7 +6,7 @@ export default {
   title: 'Plus/Compositions/Plans',
 } as Meta<typeof Plans>
 
-export { Playground } from './Playground.stories'
 export { HideLabels } from './HideLabels.stories'
-export { WithIcon } from './WithIcon.stories'
+export { Playground } from './Playground.stories'
 export { Selectable } from './Selectable.stories'
+export { WithIcon } from './WithIcon.stories'

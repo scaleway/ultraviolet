@@ -1,14 +1,18 @@
 import { CheckCircleIcon } from '@ultraviolet/icons'
 import { Button, Text } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
-import { Template } from './Template.stories'
 import { domain, fees, gb, pipeline, ssl } from './features'
+import { Template } from './Template.stories'
 
 const ContentPlan = ({
   description,
   title,
   iconAlign,
-}: { description?: string; title: string; iconAlign?: 'center' | 'top' }) => (
+}: {
+  description?: string
+  title: string
+  iconAlign?: 'center' | 'top'
+}) => (
   <div
     style={{
       display: 'grid',

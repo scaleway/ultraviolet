@@ -1,8 +1,8 @@
 import { EstimateCost } from '..'
-import { Template } from './Template'
 import frFlag from './assets/fr.svg'
 import nlFlag from './assets/nl.svg'
 import plFlag from './assets/pl.svg'
+import { Template } from './Template'
 
 export const Region = Template.bind({})
 

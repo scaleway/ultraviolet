@@ -1,9 +1,9 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
-import { Table } from '..'
 import { Button } from '../../Button'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
+import { Table } from '..'
 import { columns, data } from './resources'
 
 export const Selectable: StoryFn<typeof Table> = args => {

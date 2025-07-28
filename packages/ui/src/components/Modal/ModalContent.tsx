@@ -3,8 +3,8 @@
 import styled from '@emotion/styled'
 import { CloseIcon } from '@ultraviolet/icons'
 import type { ComponentProps } from 'react'
-import type { Modal } from '.'
 import { Button } from '../Button'
+import type { Modal } from '.'
 import { Dialog } from './components/Dialog'
 import type { ModalPlacement, ModalSize } from './types'
 

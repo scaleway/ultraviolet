@@ -1,8 +1,8 @@
 import type { Decorator } from '@storybook/react-vite'
 import type { ComponentProps } from 'react'
-import { Link } from '..'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
+import { Link } from '..'
 
 export const Examples = (props: ComponentProps<typeof Link>) => (
   <>

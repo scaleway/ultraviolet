@@ -1,9 +1,9 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { MinusIcon, PlusIcon } from '@ultraviolet/icons'
 import { useState } from 'react'
-import { Expandable } from '..'
 import { Button } from '../../Button'
 import { Stack } from '../../Stack'
+import { Expandable } from '..'
 
 export const NestedExpandable: StoryFn<typeof Expandable> = args => {
   const [toggled, onToggle] = useState(false)

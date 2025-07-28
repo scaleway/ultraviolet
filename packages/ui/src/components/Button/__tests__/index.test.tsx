@@ -3,8 +3,8 @@ import { userEvent } from '@testing-library/user-event'
 import { PencilIcon, PencilOutlineIcon } from '@ultraviolet/icons'
 import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
 import { describe, expect, test, vi } from 'vitest'
-import { Button, buttonSizes, buttonVariants } from '..'
 import { SENTIMENTS } from '../../../theme'
+import { Button, buttonSizes, buttonVariants } from '..'
 
 const MockOnClick = () => {}
 const EXTENDED_SENTIMENTS = [...SENTIMENTS, 'black', 'white'] as const

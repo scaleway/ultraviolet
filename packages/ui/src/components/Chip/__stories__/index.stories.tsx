@@ -16,8 +16,8 @@ export default {
   title: 'Components/Badges/Chip',
 } as Meta<typeof Chip>
 
-export { Playground } from './Playground.stories'
-export { Icons } from './Icons.stories'
-export { Groups } from './Groups.stories.tsx'
-export { Size } from './Size.stories'
 export { Disabled } from './Disabled.stories'
+export { Groups } from './Groups.stories.tsx'
+export { Icons } from './Icons.stories'
+export { Playground } from './Playground.stories'
+export { Size } from './Size.stories'

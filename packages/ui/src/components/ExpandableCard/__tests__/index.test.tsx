@@ -2,8 +2,8 @@ import { fireEvent, screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme } from '@utils/test'
 import { describe, expect, test, vi } from 'vitest'
-import { ExpandableCard } from '..'
 import { Text } from '../../Text'
+import { ExpandableCard } from '..'
 
 describe('ExpandableCard', () => {
   test('renders correctly with default values', () => {

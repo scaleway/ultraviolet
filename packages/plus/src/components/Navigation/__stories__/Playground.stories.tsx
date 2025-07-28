@@ -10,12 +10,12 @@ import {
   SecurityCategoryIcon,
   UseCaseCategoryIcon,
 } from '@ultraviolet/icons/category'
-import { Stack, Tooltip, fadeIn, fadeOut } from '@ultraviolet/ui'
+import { fadeIn, fadeOut, Stack, Tooltip } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
 import { useCallback, useEffect, useState } from 'react'
 import { Navigation, NavigationProvider, useNavigation } from '..'
-import logoSmall from './assets/logo-small.svg'
 import logo from './assets/logo.svg'
+import logoSmall from './assets/logo-small.svg'
 
 const Image = styled.img`
   animation: ${fadeIn} 300ms ease-in-out;

@@ -1,6 +1,6 @@
 import { format } from 'date-fns'
-import { Template } from './Template.stories'
 import { lineChartHoursData } from './mockData'
+import { Template } from './Template.stories'
 
 export const FormattedAxisAndPoints = Template.bind({})
 

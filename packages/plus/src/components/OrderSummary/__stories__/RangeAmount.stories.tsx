@@ -1,5 +1,5 @@
-import { Template } from './Template.stories'
 import { categoryAZ, rangePriceContent } from './productsExample'
+import { Template } from './Template.stories'
 
 export const RangeAmount = Template.bind({})
 

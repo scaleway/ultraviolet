@@ -1,18 +1,18 @@
 'use client'
 
 import type { Theme } from '@emotion/react'
-import { ClassNames, Global, css, useTheme } from '@emotion/react'
+import { ClassNames, css, Global, useTheme } from '@emotion/react'
 import { CloseIcon } from '@ultraviolet/icons'
 import type { ReactNode } from 'react'
-import {
-  ToastContainer as BaseToastContainer,
-  Slide,
-  toast as baseToast,
-} from 'react-toastify'
 import type {
   Theme as ThemeToastify,
   ToastOptions,
   TypeOptions,
+} from 'react-toastify'
+import {
+  ToastContainer as BaseToastContainer,
+  toast as baseToast,
+  Slide,
 } from 'react-toastify'
 import { Button } from '../Button'
 import { Stack } from '../Stack'

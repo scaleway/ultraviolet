@@ -1,8 +1,8 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { Stack } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
-import { KeyValueField } from '..'
 import { Submit } from '../../Submit'
+import { KeyValueField } from '..'
 
 export const Regex: StoryFn<ComponentProps<typeof KeyValueField>> = args => (
   <Stack gap={1}>

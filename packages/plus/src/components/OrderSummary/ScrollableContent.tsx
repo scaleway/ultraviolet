@@ -1,12 +1,12 @@
 import styled from '@emotion/styled'
 import { NumberInput, Stack, Text } from '@ultraviolet/ui'
 import { useContext } from 'react'
-import { OrderSummaryContext } from './Provider'
 import {
-  DisplayPrice,
   calculateSubCategoryPrice,
+  DisplayPrice,
   formatNumber,
 } from './helpers'
+import { OrderSummaryContext } from './Provider'
 import type { ItemsType, SubCategoryType } from './types'
 
 const StyledNumberInputV2 = styled(NumberInput)`

@@ -3,9 +3,9 @@
 import { useTheme } from '@emotion/react'
 import type { ReactNode } from 'react'
 import { Checkbox } from '../Checkbox'
+import { SELECTABLE_CHECKBOX_SIZE } from './constants'
 import { HeaderCell } from './HeaderCell'
 import { useTableContext } from './TableContext'
-import { SELECTABLE_CHECKBOX_SIZE } from './constants'
 
 type HeaderRowProps = {
   children: ReactNode

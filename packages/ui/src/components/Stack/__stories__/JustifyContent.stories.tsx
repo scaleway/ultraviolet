@@ -1,5 +1,5 @@
-import { Template } from './Template.stories'
 import { coloredChildren } from './helper'
+import { Template } from './Template.stories'
 
 export const JustifyContent = Template.bind({})
 

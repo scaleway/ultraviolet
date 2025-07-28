@@ -1,8 +1,8 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { LockIcon } from '@ultraviolet/icons'
 import { useRef, useState } from 'react'
-import { Avatar } from '..'
 import { Stack } from '../../Stack'
+import { Avatar } from '..'
 
 export const Examples: StoryFn<typeof Avatar> = props => {
   const [image, setImage] = useState<string | undefined>(undefined)

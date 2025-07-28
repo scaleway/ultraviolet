@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import { GithubIcon } from '@ultraviolet/icons'
-import { Link, Stack, Text, down } from '@ultraviolet/ui'
+import { down, Link, Stack, Text } from '@ultraviolet/ui'
 import swForm from '../../assets/icons/icon-scaleway-form.svg'
 import swLib from '../../assets/icons/icon-scaleway-lib.svg'
 import Card from '../../components/Card'

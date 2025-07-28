@@ -1,14 +1,14 @@
 // eslint-disable-next-line no-restricted-syntax
 export * from './components'
+export type { UltravioletUITheme } from './theme'
 export {
   darkTheme,
   default as theme,
   extendTheme,
 } from './theme'
-export type { UltravioletUITheme } from './theme'
 export {
-  bounce,
   Breakpoint,
+  bounce,
   down,
   fadeIn,
   fadeOut,

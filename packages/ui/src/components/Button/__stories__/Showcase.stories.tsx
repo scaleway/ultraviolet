@@ -1,9 +1,9 @@
 import styled from '@emotion/styled'
 import type { StoryFn } from '@storybook/react-vite'
-import { Button, buttonVariants } from '..'
-import { Stack, Table, Text } from '../..'
 import type { ExtendedColor } from '../../../theme'
 import { SENTIMENTS } from '../../../theme'
+import { Stack, Table, Text } from '../..'
+import { Button, buttonVariants } from '..'
 
 const StyledRow = styled(Table.Row, {
   shouldForwardProp: prop => !['sentiment'].includes(prop),

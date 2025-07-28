@@ -18,10 +18,10 @@ export default {
   },
 } as Meta<typeof CheckboxGroup>
 
-export { Playground } from './Playground.stories'
 export { Controlled } from './Controlled.stories'
-export { Direction } from './Direction.stories'
-export { Required } from './Required.stories'
 export { Description } from './Description.stories'
-export { Helper } from './Helper.stories'
+export { Direction } from './Direction.stories'
 export { Error } from './Error.stories'
+export { Helper } from './Helper.stories'
+export { Playground } from './Playground.stories'
+export { Required } from './Required.stories'

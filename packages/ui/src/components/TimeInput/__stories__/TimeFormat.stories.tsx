@@ -1,6 +1,6 @@
 import type { StoryFn } from '@storybook/react-vite'
-import { TimeInput } from '..'
 import { Stack } from '../../Stack'
+import { TimeInput } from '..'
 
 export const TimeFormat: StoryFn<typeof TimeInput> = () => {
   const defaultDate = new Date()

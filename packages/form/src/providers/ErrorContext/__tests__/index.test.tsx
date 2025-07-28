@@ -3,8 +3,8 @@ import { mockFormErrors, renderWithTheme } from '@utils/test'
 import type { ReactNode } from 'react'
 import { useForm } from 'react-hook-form'
 import { describe, expect, test } from 'vitest'
-import { useErrors } from '..'
 import { Form } from '../../../components/Form'
+import { useErrors } from '..'
 
 const HookWrapper = ({ children }: { children: ReactNode }) => {
   const methods = useForm()

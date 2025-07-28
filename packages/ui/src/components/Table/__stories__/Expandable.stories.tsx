@@ -1,7 +1,7 @@
-import { Table } from '..'
 import { Text } from '../../Text'
-import { Template } from './Template.stories'
+import { Table } from '..'
 import { data } from './resources'
+import { Template } from './Template.stories'
 
 export const Expandable = Template.bind({})
 

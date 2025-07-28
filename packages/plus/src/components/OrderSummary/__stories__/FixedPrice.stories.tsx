@@ -1,5 +1,5 @@
-import { Template } from './Template.stories'
 import { categoryAZ, fixePrice } from './productsExample'
+import { Template } from './Template.stories'
 
 export const FixedPrice = Template.bind({})
 

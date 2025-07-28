@@ -1,11 +1,11 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { PlusIcon, RestoreIcon } from '@ultraviolet/icons'
 import { useState } from 'react'
-import { List } from '..'
 import { Button } from '../../Button'
 import { Row } from '../../Row'
 import { Stack } from '../../Stack'
-import { data as DATA, columns } from './resources'
+import { List } from '..'
+import { columns, data as DATA } from './resources'
 
 type Planets = {
   id: string

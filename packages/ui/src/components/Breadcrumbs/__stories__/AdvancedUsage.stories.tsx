@@ -1,11 +1,11 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { ArrowDownIcon, DotsHorizontalIcon, PlusIcon } from '@ultraviolet/icons'
 import type { ComponentProps } from 'react'
-import { Breadcrumbs } from '..'
 import { Avatar } from '../../Avatar'
 import { Button } from '../../Button'
 import { Menu } from '../../Menu'
 import { Stack } from '../../Stack'
+import { Breadcrumbs } from '..'
 
 export const AdvancedUsage: StoryFn<
   ComponentProps<typeof Breadcrumbs>

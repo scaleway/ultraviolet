@@ -8,8 +8,8 @@ import {
 } from '@utils/test'
 import { afterAll, beforeEach, describe, expect, test, vi } from 'vitest'
 import { Modal } from '..'
-import { useModal } from '../ModalProvider'
 import illustration from '../__stories__/assets/illustration.webp'
+import { useModal } from '../ModalProvider'
 
 const customDialogBackdropStyles = css`
   background-color: aliceblue;

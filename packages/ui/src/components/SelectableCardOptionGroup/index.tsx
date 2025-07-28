@@ -7,8 +7,8 @@ import { Label } from '../Label'
 import { Row } from '../Row'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
-import { SelectableCardOptionGroupContext } from './Provider'
 import { Option } from './components/Option'
+import { SelectableCardOptionGroupContext } from './Provider'
 import type { Sizes } from './types'
 
 const FieldSet = styled.fieldset`

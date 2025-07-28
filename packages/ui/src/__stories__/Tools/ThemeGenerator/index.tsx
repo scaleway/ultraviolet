@@ -1,16 +1,16 @@
 import { useCallback, useEffect, useState } from 'react'
 import {
-  TOKENS_URL,
   generatePalette,
+  TOKENS_URL,
 } from '../../../../../../utils/scripts/figma-synchronise-tokens'
 import { Form, useForm } from '../../../../../form/src'
 import { Stack, Text } from '../../../components'
 import type { UltravioletUITheme } from '../../../theme'
 import consoleLightTheme from '../../../theme'
-import { FormContent } from './FormContent'
-import { ThemeResult } from './ThemeResult'
 import { INITIAL_VALUES, SHADES_KEYS, SHADES_KEYS_MATCHING } from './contants'
+import { FormContent } from './FormContent'
 import { generateShadeContrast } from './helpers'
+import { ThemeResult } from './ThemeResult'
 
 type JsonTokenType = {
   paletteLight: {

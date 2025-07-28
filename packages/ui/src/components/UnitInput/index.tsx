@@ -3,8 +3,8 @@
 import styled from '@emotion/styled'
 import { AlertCircleIcon, CheckCircleIcon } from '@ultraviolet/icons'
 import type {
-  CSSProperties,
   ComponentProps,
+  CSSProperties,
   InputHTMLAttributes,
   ReactNode,
 } from 'react'

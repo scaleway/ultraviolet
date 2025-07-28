@@ -1,6 +1,6 @@
 import type { StoryFn } from '@storybook/react-vite'
-import { SelectInput } from '..'
 import { Stack } from '../../Stack'
+import { SelectInput } from '..'
 import { dataGrouped } from './resources'
 
 export const DropdownAlign: StoryFn<typeof SelectInput> = args => (

@@ -1,5 +1,5 @@
-import { Template } from './Template.stories'
 import { dataWithLegendsAndDetails } from './mockData'
+import { Template } from './Template.stories'
 
 export const PopperDetails = Template.bind({})
 

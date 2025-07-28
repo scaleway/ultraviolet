@@ -1,5 +1,5 @@
-import { Template } from './Template.stories'
 import { dataUnGrouped } from './resources'
+import { Template } from './Template.stories'
 
 export const Playground = Template.bind({})
 

@@ -1,6 +1,6 @@
 import type { StoryFn } from '@storybook/react-vite'
-import { Slider } from '..'
 import { Stack } from '../../Stack'
+import { Slider } from '..'
 
 export const Disabled: StoryFn<typeof Slider> = () => (
   <Stack gap={4}>

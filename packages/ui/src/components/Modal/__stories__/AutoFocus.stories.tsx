@@ -1,7 +1,7 @@
 import type { StoryFn } from '@storybook/react-vite'
-import { Modal } from '..'
 import { Button } from '../../Button'
 import { TextInput } from '../../TextInput'
+import { Modal } from '..'
 
 export const DefaultDisclosure = <Button>Open Modal</Button>
 

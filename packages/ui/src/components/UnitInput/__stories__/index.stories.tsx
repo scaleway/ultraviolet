@@ -13,8 +13,8 @@ export default {
   ],
 } as Meta
 
-export { Playground } from './Playground.stories'
-export { LabelInformation } from './LabelInformation.stories'
 export { DefaultValues } from './DefaultValues.stories'
-export { States } from './State.stories'
 export { Disabled } from './Disabled.stories'
+export { LabelInformation } from './LabelInformation.stories'
+export { Playground } from './Playground.stories'
+export { States } from './State.stories'

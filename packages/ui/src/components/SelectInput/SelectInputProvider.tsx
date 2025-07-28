@@ -1,5 +1,6 @@
 'use client'
 
+import type { Dispatch, ReactNode, RefObject, SetStateAction } from 'react'
 import {
   createContext,
   useCallback,
@@ -9,7 +10,6 @@ import {
   useReducer,
   useState,
 } from 'react'
-import type { Dispatch, ReactNode, RefObject, SetStateAction } from 'react'
 import type { DataType, OptionType, ReducerAction, ReducerState } from './types'
 
 type ContextProps = {

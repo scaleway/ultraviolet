@@ -1,8 +1,8 @@
 import type { StoryFn } from '@storybook/react-vite'
 import type { ComponentProps } from 'react'
 import { useState } from 'react'
-import { DateInput } from '..'
 import { Stack } from '../../Stack'
+import { DateInput } from '..'
 
 export const Calendar: StoryFn<ComponentProps<typeof DateInput>> = args => {
   const [value, setValue] = useState<Date | null>()
