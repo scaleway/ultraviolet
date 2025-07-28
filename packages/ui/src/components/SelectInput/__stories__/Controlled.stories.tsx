@@ -1,10 +1,10 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
-import { SelectInput } from '..'
 import { Button } from '../../Button'
 import { Stack } from '../../Stack'
-import { Template } from './Template.stories'
+import { SelectInput } from '..'
 import { dataUnGrouped } from './resources'
+import { Template } from './Template.stories'
 
 export const Controlled: StoryFn<typeof SelectInput> = () => {
   const [valueSingle, setValueSingle] =
@@ -14,7 +14,7 @@ export const Controlled: StoryFn<typeof SelectInput> = () => {
   >(['neptune', 'uranus'])
 
   return (
-    <Stack width="50%" direction="column" gap={2}>
+    <Stack direction="column" gap={2} width="50%">
       <Button
         onClick={() => {
           setValueSingle('mercury')
@@ -24,18 +24,18 @@ export const Controlled: StoryFn<typeof SelectInput> = () => {
         Change Value
       </Button>
       <SelectInput
+        multiselect={false}
         name="single"
+        onChange={value => setValueSingle(value)}
         options={dataUnGrouped}
         value={valueSingle}
-        multiselect={false}
-        onChange={value => setValueSingle(value)}
       />
       <SelectInput
+        multiselect
         name="multi"
+        onChange={value => setValueMulti(value)}
         options={dataUnGrouped}
         value={valueMulti}
-        multiselect
-        onChange={value => setValueMulti(value)}
       />
     </Stack>
   )

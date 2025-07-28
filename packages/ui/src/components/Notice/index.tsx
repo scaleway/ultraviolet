@@ -27,16 +27,16 @@ export const Notice = ({
 }: NoticeProps) => (
   <StyledSpan
     as="span"
-    variant="caption"
-    sentiment="neutral"
-    prominence="weak"
-    data-testid={dataTestId}
     className={className}
+    data-testid={dataTestId}
+    prominence="weak"
+    sentiment="neutral"
+    variant="caption"
   >
     <InformationOutlineIcon
-      size="small"
-      sentiment="neutral"
       prominence="weak"
+      sentiment="neutral"
+      size="small"
     />
     {children}
   </StyledSpan>

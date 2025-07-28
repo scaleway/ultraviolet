@@ -1,7 +1,7 @@
 import type { StoryFn } from '@storybook/react-vite'
-import { ProgressBar } from '..'
 import { Badge } from '../../Badge'
 import { Stack } from '../../Stack'
+import { ProgressBar } from '..'
 
 export const Direction: StoryFn = props => (
   <Stack gap={3}>
@@ -11,13 +11,13 @@ export const Direction: StoryFn = props => (
 )
 
 Direction.args = {
-  value: 40,
+  label: 'Label',
   labelDescription: (
     <Badge sentiment="primary" size="small">
       New
     </Badge>
   ),
-  label: 'Label',
+  value: 40,
 }
 
 Direction.parameters = {

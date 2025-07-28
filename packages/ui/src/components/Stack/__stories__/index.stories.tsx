@@ -6,9 +6,9 @@ export default {
   title: 'Components/Layout/Stack',
 } as Meta<typeof Stack>
 
-export { Playground } from './Playground.stories'
-export { Gap } from './Gap.stories'
-export { Direction } from './Direction.stories'
 export { AlignItems } from './AlignItems.stories'
+export { Direction } from './Direction.stories'
+export { Gap } from './Gap.stories'
 export { JustifyContent } from './JustifyContent.stories'
+export { Playground } from './Playground.stories'
 export { Responsive } from './Responsive.stories'

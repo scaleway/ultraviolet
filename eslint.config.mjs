@@ -1,5 +1,4 @@
 // For more info, see https://github.com/storybookjs/eslint-plugin-storybook#configuration-flat-config-format
-import storybook from 'eslint-plugin-storybook'
 
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
@@ -8,6 +7,7 @@ import scwEmotion from '@scaleway/eslint-config-react/emotion'
 import scwJavascript from '@scaleway/eslint-config-react/javascript'
 import scwTypescript from '@scaleway/eslint-config-react/typescript'
 import oxlint from 'eslint-plugin-oxlint'
+import storybook from 'eslint-plugin-storybook'
 import testingLibrary from 'eslint-plugin-testing-library'
 import globals from 'globals'
 

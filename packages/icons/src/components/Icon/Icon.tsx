@@ -9,11 +9,11 @@ import { forwardRef } from 'react'
 import capitalize from '../../utils/capitalize'
 
 const SIZES = {
-  xsmall: '150',
-  small: '200',
-  medium: '250',
   large: '300',
+  medium: '250',
+  small: '200',
   xlarge: '400',
+  xsmall: '150',
   xxlarge: '700',
 } as const
 
@@ -30,13 +30,7 @@ type Color = Extract<
   | 'info'
 >
 
-const sizeStyles = ({
-  size,
-  theme,
-}: {
-  size: SizesProps
-  theme: Theme
-}) => css`
+const sizeStyles = ({ size, theme }: { size: SizesProps; theme: Theme }) => css`
     height: ${theme.sizing[SIZES[size]]};
     width: ${theme.sizing[SIZES[size]]};
     min-width: ${theme.sizing[SIZES[size]]};
@@ -140,22 +134,22 @@ export const Icon = forwardRef<SVGSVGElement, IconProps>(
     ref,
   ) => (
     <StyledIcon
+      aria-label={ariaLabel}
+      className={className}
+      cursor={cursor}
+      data-testid={dataTestId}
+      disabled={disabled}
+      prominence={prominence}
       ref={ref}
       sentiment={sentiment}
-      prominence={prominence}
       size={size}
+      stroke={stroke}
+      strokeWidth={strokeWidth}
       viewBox={
         typeof size === 'string' && ['xsmall', 'small'].includes(size)
           ? '0 0 16 16'
           : '0 0 20 20'
       }
-      className={className}
-      data-testid={dataTestId}
-      stroke={stroke}
-      cursor={cursor}
-      strokeWidth={strokeWidth}
-      disabled={disabled}
-      aria-label={ariaLabel}
     >
       {children}
     </StyledIcon>

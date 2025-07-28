@@ -1,8 +1,8 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { Stack } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
-import { CheckboxGroupField } from '..'
 import { useFormContext } from '../../..'
+import { CheckboxGroupField } from '..'
 
 const DirectionTemplate = (args: ComponentProps<typeof CheckboxGroupField>) => {
   const { watch } = useFormContext()
@@ -40,7 +40,7 @@ Direction.parameters = {
 }
 
 Direction.args = {
-  name: 'conditions',
-  legend: 'Conditions',
   direction: 'row',
+  legend: 'Conditions',
+  name: 'conditions',
 }

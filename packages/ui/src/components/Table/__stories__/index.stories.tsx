@@ -3,22 +3,22 @@ import { Table } from '..'
 
 export default {
   component: Table,
+  subcomponents: { 'Table.Cell': Table.Cell, 'Table.Row': Table.Row },
   title: 'Components/Data Display/Table',
-  subcomponents: { 'Table.Row': Table.Row, 'Table.Cell': Table.Cell },
 } as Meta
 
-export { Playground } from './Playground.stories'
-export { Ordering } from './Ordering.stories'
-export { Selectable } from './Selectable.stories'
-export { Expandable } from './Expandable.stories'
-export { Style } from './Style.stories'
-export { ColumnWidth } from './ColumnWidth.stories'
 export { Align } from './Align.stories'
-export { Spanning } from './Spanning.stories'
-export { Loading } from './Loading.stories'
-export { Overflow } from './Overflow.stories'
 export { ColumnInfo } from './ColumnInfo.stories'
+export { ColumnWidth } from './ColumnWidth.stories'
 export { Context } from './Context.stories'
-export { WithMenu } from './WithMenu.stories'
+export { Expandable } from './Expandable.stories'
 export { HighlightAnimation } from './HighlightAnimation.stories'
+export { Loading } from './Loading.stories'
+export { Ordering } from './Ordering.stories'
+export { Overflow } from './Overflow.stories'
+export { Playground } from './Playground.stories'
+export { Selectable } from './Selectable.stories'
 export { SelectableColumn } from './SelectableColumn.stories'
+export { Spanning } from './Spanning.stories'
+export { Style } from './Style.stories'
+export { WithMenu } from './WithMenu.stories'

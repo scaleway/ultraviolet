@@ -55,8 +55,8 @@ export const KeyValueField = <
   control,
 }: KeyValueFieldProps<TFieldValues, TFieldArrayName>) => {
   const { fields, append, remove } = useFieldArray({
-    name,
     control,
+    name,
   })
 
   const canAdd = fields.length !== undefined && fields.length < maxSize
@@ -70,36 +70,36 @@ export const KeyValueField = <
         <Stack gap={3}>
           {fields.map((field, index) => (
             <Row
+              alignItems="end"
+              gap={2}
               key={field.id}
               templateColumns="1fr 1fr auto"
-              gap={2}
-              alignItems="end"
             >
               <TextInputField
-                readOnly={readOnly}
-                required={inputKey.required}
-                name={`${name}.${index}.key`}
                 label={inputKey.label}
+                name={`${name}.${index}.key`}
+                readOnly={readOnly}
                 regex={inputKey.regex}
+                required={inputKey.required}
               />
               <TextInputField
-                readOnly={readOnly}
-                required={inputValue.required}
-                name={`${name}.${index}.value`}
-                label={inputValue.label}
-                placeholder={inputValue.placeholder}
-                type={inputValue.type}
                 autoComplete="off"
+                label={inputValue.label}
+                name={`${name}.${index}.value`}
+                placeholder={inputValue.placeholder}
+                readOnly={readOnly}
                 regex={inputValue.regex}
+                required={inputValue.required}
+                type={inputValue.type}
               />
 
               <Button
-                disabled={readOnly}
                 data-testid={`remove-button-${index}`}
-                variant="outlined"
+                disabled={readOnly}
+                onClick={() => remove(index)}
                 sentiment="danger"
                 size="large"
-                onClick={() => remove(index)}
+                variant="outlined"
               >
                 <DeleteIcon />
               </Button>
@@ -110,13 +110,13 @@ export const KeyValueField = <
       <Stack direction="row" justifyContent="flex-start">
         <Button
           data-testid="add-button"
-          variant="outlined"
-          sentiment="primary"
-          fullWidth={addButton.fullWidth}
           disabled={!canAdd || readOnly}
-          tooltip={!canAdd ? maxSizeReachedTooltip : addButton.tooltip}
+          fullWidth={addButton.fullWidth}
           // @ts-expect-error can't infer properly
           onClick={() => append({ key: '', value: '' })}
+          sentiment="primary"
+          tooltip={!canAdd ? maxSizeReachedTooltip : addButton.tooltip}
+          variant="outlined"
         >
           <PlusIcon />
           {addButton.name}

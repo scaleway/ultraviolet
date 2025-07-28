@@ -8,7 +8,7 @@ Disabled.args = {
     <Tabs.Tab key="first" value="first">
       Choice 1
     </Tabs.Tab>,
-    <Tabs.Tab key="second" value="second" disabled>
+    <Tabs.Tab disabled key="second" value="second">
       Choice 2
     </Tabs.Tab>,
     <Tabs.Tab key="3" value={3}>

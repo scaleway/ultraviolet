@@ -9,14 +9,14 @@ export const Template: StoryFn<typeof CheckboxGroup> = args => (
     >
       Accept terms and conditions
     </CheckboxGroup.Checkbox>
-    <CheckboxGroup.Checkbox name="newsletter" value="newsletter" tooltip="keke">
+    <CheckboxGroup.Checkbox name="newsletter" tooltip="keke" value="newsletter">
       Accept to receive newsletter
     </CheckboxGroup.Checkbox>
   </CheckboxGroup>
 )
 
 Template.args = {
-  name: 'conditions',
   legend: 'Conditions:',
+  name: 'conditions',
   value: ['termsAndConditions'],
 }

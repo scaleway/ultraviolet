@@ -31,8 +31,8 @@ describe('EstimateCost - Regular Item', () => {
   test('render basic props with overlay', () =>
     shouldMatchEmotionSnapshot(
       <EstimateCost
-        OverlayRight={OverlaySubmitButton}
         OverlayLeft={OverlaySubmitButton}
+        OverlayRight={OverlaySubmitButton}
       >
         <EstimateCost.Item label="Regular">
           <EstimateCost.Regular>
@@ -41,7 +41,7 @@ describe('EstimateCost - Regular Item', () => {
             </EstimateCost.Ellipsis>
           </EstimateCost.Regular>
         </EstimateCost.Item>
-        <EstimateCost.Item label="Regular" shouldBeHidden hideFromOverlay>
+        <EstimateCost.Item hideFromOverlay label="Regular" shouldBeHidden>
           <EstimateCost.Regular>Hidden element in overlay</EstimateCost.Regular>
         </EstimateCost.Item>
       </EstimateCost>,
@@ -49,12 +49,12 @@ describe('EstimateCost - Regular Item', () => {
 
   test('render basic props with overlay beta', () =>
     shouldMatchEmotionSnapshot(
-      <EstimateCost OverlayRight={OverlaySubmitButton} isBeta>
+      <EstimateCost isBeta OverlayRight={OverlaySubmitButton}>
         <EstimateCost.Item
-          label="Regular"
-          price={0.001}
           amount={0}
+          label="Regular"
           maxAmount={100}
+          price={0.001}
         >
           <EstimateCost.Regular>
             <EstimateCost.Ellipsis>
@@ -69,7 +69,7 @@ describe('EstimateCost - Regular Item', () => {
   test('render basic props with long fractions digits', () =>
     shouldMatchEmotionSnapshot(
       <EstimateCost>
-        <EstimateCost.Item label="Regular" price={0.000001} longFractionDigits>
+        <EstimateCost.Item label="Regular" longFractionDigits price={0.000001}>
           <EstimateCost.Regular>This is a regular Item</EstimateCost.Regular>
         </EstimateCost.Item>
       </EstimateCost>,
@@ -79,11 +79,11 @@ describe('EstimateCost - Regular Item', () => {
     shouldMatchEmotionSnapshot(
       <EstimateCost>
         <EstimateCost.Item
-          label="Regular"
-          price={0.000001}
-          longFractionDigits
           amount={10}
+          label="Regular"
+          longFractionDigits
           maxAmount={100}
+          price={0.000001}
         >
           <EstimateCost.Regular>This is a regular Item</EstimateCost.Regular>
         </EstimateCost.Item>
@@ -94,10 +94,10 @@ describe('EstimateCost - Regular Item', () => {
     shouldMatchEmotionSnapshot(
       <EstimateCost>
         <EstimateCost.Item
-          label="Regular"
-          price={0.000001}
           amount={0}
+          label="Regular"
           maxAmount={100}
+          price={0.000001}
           unit="Node"
         >
           <EstimateCost.Regular>This is a regular Item</EstimateCost.Regular>
@@ -108,7 +108,7 @@ describe('EstimateCost - Regular Item', () => {
   test('render basic props with is not defined', () =>
     shouldMatchEmotionSnapshot(
       <EstimateCost>
-        <EstimateCost.Item label="Regular" isDefined={false}>
+        <EstimateCost.Item isDefined={false} label="Regular">
           <EstimateCost.Regular>This is a regular Item</EstimateCost.Regular>
         </EstimateCost.Item>
       </EstimateCost>,
@@ -172,10 +172,10 @@ describe('EstimateCost - Regular Item', () => {
     renderWithTheme(
       <EstimateCost>
         <EstimateCost.Item
-          label="Node options"
-          price={0.0001}
           amount={1}
+          label="Node options"
           maxAmount={10}
+          price={0.0001}
           unit="node"
         >
           <EstimateCost.Regular>1 - 10 Nodes</EstimateCost.Regular>
@@ -194,12 +194,12 @@ describe('EstimateCost - Regular Item', () => {
     renderWithTheme(
       <EstimateCost>
         <EstimateCost.Item
-          label="Node options"
-          price={0.0001}
           amount={1}
-          maxAmount={10}
-          unit="node"
+          label="Node options"
           longFractionDigits
+          maxAmount={10}
+          price={0.0001}
+          unit="node"
         >
           <EstimateCost.Regular>1 - 10 Nodes</EstimateCost.Regular>
         </EstimateCost.Item>

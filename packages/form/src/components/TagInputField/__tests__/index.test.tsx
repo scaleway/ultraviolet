@@ -3,8 +3,8 @@ import { userEvent } from '@testing-library/user-event'
 import { renderWithForm, renderWithTheme } from '@utils/test'
 import { useForm } from 'react-hook-form'
 import { describe, expect, test, vi } from 'vitest'
-import { Form, Submit, TagInputField } from '../..'
 import { mockErrors } from '../../../mocks'
+import { Form, Submit, TagInputField } from '../..'
 
 const alpha = /^[a-zA-Z]*$/
 
@@ -20,11 +20,11 @@ describe('TagInputField', () => {
     const { asFragment } = renderWithForm(
       <>
         <TagInputField
+          clearable
           label="Test"
           name="test"
-          required
-          clearable
           regex={[alpha]}
+          required
         />
         <Submit>Test</Submit>
       </>,
@@ -40,8 +40,8 @@ describe('TagInputField', () => {
     )
 
     const { asFragment } = renderWithTheme(
-      <Form onSubmit={onSubmit} errors={mockErrors} methods={result.current}>
-        <TagInputField label="Test" name="test" required clearable />
+      <Form errors={mockErrors} methods={result.current} onSubmit={onSubmit}>
+        <TagInputField clearable label="Test" name="test" required />
         <Submit>Submit</Submit>
       </Form>,
     )

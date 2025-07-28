@@ -24,7 +24,7 @@ describe('EstimateCost - index', () => {
 
   test('render isBeta with discount', () =>
     shouldMatchEmotionSnapshot(
-      <EstimateCost isBeta discount={0.5}>
+      <EstimateCost discount={0.5} isBeta>
         <EstimateCost.Item label="Test" monthlyPrice={99}>
           <EstimateCost.Strong>Test</EstimateCost.Strong>
         </EstimateCost.Item>
@@ -33,7 +33,7 @@ describe('EstimateCost - index', () => {
 
   test('render isBeta with discount more than 100%', () =>
     shouldMatchEmotionSnapshot(
-      <EstimateCost isBeta discount={2}>
+      <EstimateCost discount={2} isBeta>
         <EstimateCost.Item label="Test" monthlyPrice={99}>
           <EstimateCost.Strong>Test</EstimateCost.Strong>
         </EstimateCost.Item>
@@ -42,7 +42,7 @@ describe('EstimateCost - index', () => {
 
   test('render isBeta with discount equal to 100%', () =>
     shouldMatchEmotionSnapshot(
-      <EstimateCost isBeta discount={1}>
+      <EstimateCost discount={1} isBeta>
         <EstimateCost.Item label="Test" monthlyPrice={99}>
           <EstimateCost.Strong>Test</EstimateCost.Strong>
         </EstimateCost.Item>
@@ -60,7 +60,7 @@ describe('EstimateCost - index', () => {
 
   test('render with isBeta but undefined discount', () =>
     shouldMatchEmotionSnapshot(
-      <EstimateCost isBeta discount={undefined}>
+      <EstimateCost discount={undefined} isBeta>
         <EstimateCost.Item label="Test" monthlyPrice={99}>
           <EstimateCost.Strong>Test</EstimateCost.Strong>
         </EstimateCost.Item>
@@ -69,7 +69,7 @@ describe('EstimateCost - index', () => {
 
   test('render with isBeta, price, discount 50%', () =>
     shouldMatchEmotionSnapshot(
-      <EstimateCost isBeta discount={0.5}>
+      <EstimateCost discount={0.5} isBeta>
         <EstimateCost.Item label="Test" price={99}>
           <EstimateCost.Strong>Test</EstimateCost.Strong>
         </EstimateCost.Item>
@@ -79,7 +79,7 @@ describe('EstimateCost - index', () => {
   test('render with item discount 50%', () =>
     shouldMatchEmotionSnapshot(
       <EstimateCost>
-        <EstimateCost.Item label="Test" discount={0.5} monthlyPrice={99}>
+        <EstimateCost.Item discount={0.5} label="Test" monthlyPrice={99}>
           <EstimateCost.Strong>Test</EstimateCost.Strong>
         </EstimateCost.Item>
       </EstimateCost>,
@@ -89,9 +89,9 @@ describe('EstimateCost - index', () => {
     shouldMatchEmotionSnapshot(
       <EstimateCost>
         <EstimateCost.Item
-          label="Test"
           discount={0.5}
           discountText="Nice discount"
+          label="Test"
           monthlyPrice={99}
         >
           <EstimateCost.Strong>Test</EstimateCost.Strong>
@@ -102,7 +102,7 @@ describe('EstimateCost - index', () => {
   test('render with item discount 50% and defaultTimeUnit months', () =>
     shouldMatchEmotionSnapshot(
       <EstimateCost defaultTimeUnit="months">
-        <EstimateCost.Item label="Test" discount={0.5} monthlyPrice={99}>
+        <EstimateCost.Item discount={0.5} label="Test" monthlyPrice={99}>
           <EstimateCost.Strong>Test</EstimateCost.Strong>
         </EstimateCost.Item>
       </EstimateCost>,
@@ -121,7 +121,7 @@ describe('EstimateCost - index', () => {
 
   test('render with discount 1, isBeta and defaultTimeUnit months', () =>
     shouldMatchEmotionSnapshot(
-      <EstimateCost isBeta discount={1} defaultTimeUnit="months">
+      <EstimateCost defaultTimeUnit="months" discount={1} isBeta>
         <EstimateCost.Item label="Test" monthlyPrice={99}>
           <EstimateCost.Strong>Test</EstimateCost.Strong>
         </EstimateCost.Item>
@@ -130,7 +130,7 @@ describe('EstimateCost - index', () => {
 
   test('render with discount 1 and defaultTimeUnit months', () =>
     shouldMatchEmotionSnapshot(
-      <EstimateCost discount={1} defaultTimeUnit="months">
+      <EstimateCost defaultTimeUnit="months" discount={1}>
         <EstimateCost.Item label="Test" monthlyPrice={99}>
           <EstimateCost.Strong>Test</EstimateCost.Strong>
         </EstimateCost.Item>
@@ -139,7 +139,7 @@ describe('EstimateCost - index', () => {
 
   test('render with discount 0 and defaultTimeUnit months', () =>
     shouldMatchEmotionSnapshot(
-      <EstimateCost discount={0} defaultTimeUnit="months">
+      <EstimateCost defaultTimeUnit="months" discount={0}>
         <EstimateCost.Item label="Test" monthlyPrice={99}>
           <EstimateCost.Strong>Test</EstimateCost.Strong>
         </EstimateCost.Item>
@@ -148,7 +148,7 @@ describe('EstimateCost - index', () => {
 
   test('render with isBeta, discount 0 and defaultTimeUnit months', () => {
     const { asFragment } = renderWithTheme(
-      <EstimateCost isBeta discount={0} defaultTimeUnit="months">
+      <EstimateCost defaultTimeUnit="months" discount={0} isBeta>
         <EstimateCost.Item label="Test" monthlyPrice={99}>
           <EstimateCost.Strong>Test</EstimateCost.Strong>
         </EstimateCost.Item>
@@ -159,7 +159,7 @@ describe('EstimateCost - index', () => {
 
   test('render with isBeta, discount 0.5 and defaultTimeUnit months', () => {
     const { asFragment } = renderWithTheme(
-      <EstimateCost isBeta discount={0.5} defaultTimeUnit="months">
+      <EstimateCost defaultTimeUnit="months" discount={0.5} isBeta>
         <EstimateCost.Item label="Test" monthlyPrice={99}>
           <EstimateCost.Strong>Test</EstimateCost.Strong>
         </EstimateCost.Item>
@@ -170,7 +170,7 @@ describe('EstimateCost - index', () => {
 
   test('render with discount 0.5 and defaultTimeUnit months', () => {
     const { asFragment } = renderWithTheme(
-      <EstimateCost discount={0.5} defaultTimeUnit="months">
+      <EstimateCost defaultTimeUnit="months" discount={0.5}>
         <EstimateCost.Item label="Test" monthlyPrice={99}>
           <EstimateCost.Strong>Test</EstimateCost.Strong>
         </EstimateCost.Item>
@@ -203,7 +203,7 @@ describe('EstimateCost - index', () => {
 
   test('render with commitmentFees', () => {
     const { asFragment } = renderWithTheme(
-      <EstimateCost hideTotal commitmentFees={10}>
+      <EstimateCost commitmentFees={10} hideTotal>
         <EstimateCost.Item label="Test" monthlyPrice={99}>
           <EstimateCost.Strong>Test</EstimateCost.Strong>
         </EstimateCost.Item>
@@ -214,7 +214,7 @@ describe('EstimateCost - index', () => {
 
   test('render with commitmentFees and iscommitmentFeesCreditCard', () => {
     const { asFragment } = renderWithTheme(
-      <EstimateCost hideTotal commitmentFees={10}>
+      <EstimateCost commitmentFees={10} hideTotal>
         <EstimateCost.Item label="Test" monthlyPrice={99}>
           <EstimateCost.Strong>Test</EstimateCost.Strong>
         </EstimateCost.Item>

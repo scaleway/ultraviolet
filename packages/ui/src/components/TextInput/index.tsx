@@ -33,9 +33,9 @@ import { Tooltip } from '../Tooltip'
 
 // SIZE
 export const TEXTINPUT_SIZE_HEIGHT = {
-  small: '400', // sizing theme tokens key
-  medium: '500',
   large: '600',
+  medium: '500',
+  small: '400', // sizing theme tokens key
 } as const
 type TextInputSize = keyof typeof TEXTINPUT_SIZE_HEIGHT
 
@@ -279,19 +279,19 @@ export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
 
     return (
       <Stack
-        gap={0.5}
-        className={className}
-        role={role}
-        aria-live={ariaLive}
         aria-atomic={ariaAtomic}
+        aria-live={ariaLive}
+        className={className}
+        gap={0.5}
+        role={role}
       >
         {label || labelDescription ? (
           <Label
+            htmlFor={id ?? localId}
+            id={ariaLabelledBy}
             labelDescription={labelDescription}
             required={required}
             size={size}
-            htmlFor={id ?? localId}
-            id={ariaLabelledBy}
           >
             {label}
           </Label>
@@ -299,25 +299,25 @@ export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
         <div>
           <Tooltip text={tooltip}>
             <StyledInputWrapper
-              hasFocus={hasFocus}
               data-disabled={disabled}
+              data-error={!!error}
               data-readonly={readOnly}
               data-success={!!success}
-              data-error={!!error}
+              hasFocus={hasFocus}
               size={size}
             >
               {prefix ? (
                 <BasicPrefixStack
-                  direction="row"
                   alignItems="center"
                   data-size={size}
+                  direction="row"
                 >
                   {typeof prefix === 'string' ? (
                     <Text
                       as="span"
+                      disabled={disabled}
                       sentiment="neutral"
                       variant="bodySmall"
-                      disabled={disabled}
                     >
                       {prefix}
                     </Text>
@@ -327,86 +327,86 @@ export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
                 </BasicPrefixStack>
               ) : null}
               <StyledInput
-                type={computedType}
                 aria-invalid={!!error}
-                id={id ?? localId}
-                tabIndex={tabIndex}
+                aria-label={ariaLabel}
+                aria-labelledby={ariaLabelledBy}
+                autoComplete={autoComplete}
                 autoFocus={autoFocus}
-                disabled={disabled}
-                ref={inputRef}
-                value={value}
-                defaultValue={defaultValue}
-                onChange={onChangeCallback}
                 data-size={size}
-                placeholder={placeholder}
                 data-testid={dataTestId}
+                defaultValue={defaultValue}
+                disabled={disabled}
+                id={id ?? localId}
+                maxLength={maxLength}
+                minLength={minLength}
                 name={name}
-                onFocus={event => {
-                  setHasFocus(true)
-                  onFocus?.(event)
-                }}
                 onBlur={event => {
                   setHasFocus(false)
                   onBlur?.(event)
                 }}
-                readOnly={readOnly}
-                minLength={minLength}
-                maxLength={maxLength}
-                aria-labelledby={ariaLabelledBy}
-                aria-label={ariaLabel}
-                autoComplete={autoComplete}
-                required={required}
+                onChange={onChangeCallback}
+                onFocus={event => {
+                  setHasFocus(true)
+                  onFocus?.(event)
+                }}
                 onKeyDown={onKeyDown}
                 onKeyUp={onKeyUp}
+                placeholder={placeholder}
+                readOnly={readOnly}
+                ref={inputRef}
+                required={required}
+                tabIndex={tabIndex}
+                type={computedType}
+                value={value}
               />
               {success || error || loading || computedClearable ? (
-                <StateStack direction="row" gap={1} alignItems="center">
+                <StateStack alignItems="center" direction="row" gap={1}>
                   {computedClearable ? (
                     <Button
                       aria-label="clear value"
                       disabled={disabled || !computedValue}
-                      variant="ghost"
-                      size={size === 'small' ? 'xsmall' : 'small'}
                       onClick={() => {
                         if (inputRef?.current) {
                           inputRef.current.value = ''
                           setLocalValue('')
                           onChangeCallback({
-                            target: { value: '' },
                             currentTarget: { value: '' },
+                            target: { value: '' },
                           } as ChangeEvent<HTMLInputElement>)
                         }
                       }}
                       sentiment="neutral"
+                      size={size === 'small' ? 'xsmall' : 'small'}
+                      variant="ghost"
                     >
                       <CloseIcon size="small" />
                     </Button>
                   ) : null}
                   {success ? (
                     <CheckCircleIcon
+                      disabled={disabled}
                       sentiment="success"
                       size="small"
-                      disabled={disabled}
                     />
                   ) : null}
                   {error ? (
                     <AlertCircleIcon
+                      disabled={disabled}
                       sentiment="danger"
                       size="small"
-                      disabled={disabled}
                     />
                   ) : null}
                   {loading && !disabled ? <Loader active size="small" /> : null}
                 </StateStack>
               ) : null}
               {suffix ? (
-                <BasicSuffixStack direction="row" alignItems="center">
+                <BasicSuffixStack alignItems="center" direction="row">
                   {typeof suffix === 'string' ? (
                     <Text
                       as="span"
+                      disabled={disabled}
                       sentiment="neutral"
                       variant="bodySmall"
-                      disabled={disabled}
                     >
                       {suffix}
                     </Text>
@@ -416,32 +416,32 @@ export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
                 </BasicSuffixStack>
               ) : null}
               {type === 'password' ? (
-                <CTASuffixStack direction="row" alignItems="center">
+                <CTASuffixStack alignItems="center" direction="row">
                   <Button
-                    disabled={disabled}
+                    aria-label={isPasswordVisible ? 'hide' : 'show'}
                     data-testid={
                       dataTestId ? `${dataTestId}-visibility-button` : undefined
                     }
-                    aria-label={isPasswordVisible ? 'hide' : 'show'}
+                    disabled={disabled}
                     onClick={() => {
                       setIsPasswordVisible(!isPasswordVisible)
                     }}
-                    variant="ghost"
                     sentiment="neutral"
                     size={size === 'small' ? 'xsmall' : 'small'}
+                    variant="ghost"
                   >
                     {isPasswordVisible ? <EyeOffIcon /> : <EyeIcon />}
                   </Button>
                 </CTASuffixStack>
               ) : null}
               {onRandomize ? (
-                <CTASuffixStack direction="row" alignItems="center">
+                <CTASuffixStack alignItems="center" direction="row">
                   <Button
                     disabled={disabled}
+                    onClick={onRandomize}
+                    sentiment="neutral"
                     size={size === 'small' ? 'xsmall' : 'small'}
                     variant="ghost"
-                    sentiment="neutral"
-                    onClick={onRandomize}
                   >
                     <AutoFixIcon />
                   </Button>
@@ -453,10 +453,10 @@ export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
         {error || typeof success === 'string' || typeof helper === 'string' ? (
           <Text
             as="p"
-            variant="caption"
-            sentiment={sentiment}
-            prominence={!error && !success ? 'weak' : 'default'}
             disabled={disabled}
+            prominence={!error && !success ? 'weak' : 'default'}
+            sentiment={sentiment}
+            variant="caption"
           >
             {error || success || helper}
           </Text>

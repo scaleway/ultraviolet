@@ -16,29 +16,29 @@ describe('SelectableCardOptionGroup', () => {
   test('renders correctly', () => {
     const { asFragment } = renderWithTheme(
       <SelectableCardOptionGroup
-        value="ubuntu"
-        optionValue="ubuntu-20.04"
+        legend="Select your OS"
         onChange={() => {}}
         onChangeOption={() => {}}
-        legend="Select your OS"
+        optionValue="ubuntu-20.04"
+        value="ubuntu"
       >
         <SelectableCardOptionGroup.Option
-          value="ubuntu"
+          image={ubuntu}
           label="Ubuntu"
           options={ubuntuOptions}
-          image={ubuntu}
+          value="ubuntu"
         />
         <SelectableCardOptionGroup.Option
-          value="debian"
+          image={debian}
           label="Debian"
           options={debianOptions}
-          image={debian}
+          value="debian"
         />
         <SelectableCardOptionGroup.Option
-          value="centos"
+          image={centos}
           label="CentOS"
           options={centosOptions}
-          image={centos}
+          value="centos"
         />
       </SelectableCardOptionGroup>,
     )
@@ -49,29 +49,29 @@ describe('SelectableCardOptionGroup', () => {
   test('renders correctly with medium size', () => {
     const { asFragment } = renderWithTheme(
       <SelectableCardOptionGroup
-        value="ubuntu"
-        optionValue="ubuntu-20.04"
         onChange={() => {}}
         onChangeOption={() => {}}
+        optionValue="ubuntu-20.04"
         size="medium"
+        value="ubuntu"
       >
         <SelectableCardOptionGroup.Option
-          value="ubuntu"
+          image={ubuntu}
           label="Ubuntu"
           options={ubuntuOptions}
-          image={ubuntu}
+          value="ubuntu"
         />
         <SelectableCardOptionGroup.Option
-          value="debian"
+          image={debian}
           label="Debian"
           options={debianOptions}
-          image={debian}
+          value="debian"
         />
         <SelectableCardOptionGroup.Option
-          value="centos"
+          image={centos}
           label="CentOS"
           options={centosOptions}
-          image={centos}
+          value="centos"
         />
       </SelectableCardOptionGroup>,
     )
@@ -82,30 +82,30 @@ describe('SelectableCardOptionGroup', () => {
   test('renders correctly with aria-label', () => {
     const { asFragment } = renderWithTheme(
       <SelectableCardOptionGroup
-        value="ubuntu"
-        optionValue="ubuntu-20.04"
+        aria-label="Select your OS"
         onChange={() => {}}
         onChangeOption={() => {}}
+        optionValue="ubuntu-20.04"
         size="medium"
-        aria-label="Select your OS"
+        value="ubuntu"
       >
         <SelectableCardOptionGroup.Option
-          value="ubuntu"
           aria-label="Ubuntu"
-          options={ubuntuOptions}
           image={ubuntu}
+          options={ubuntuOptions}
+          value="ubuntu"
         />
         <SelectableCardOptionGroup.Option
-          value="debian"
           aria-label="Debian"
-          options={debianOptions}
           image={debian}
+          options={debianOptions}
+          value="debian"
         />
         <SelectableCardOptionGroup.Option
-          value="centos"
           aria-label="CentOS"
-          options={centosOptions}
           image={centos}
+          options={centosOptions}
+          value="centos"
         />
       </SelectableCardOptionGroup>,
     )
@@ -116,32 +116,32 @@ describe('SelectableCardOptionGroup', () => {
   test('renders correctly with id', () => {
     const { asFragment } = renderWithTheme(
       <SelectableCardOptionGroup
-        value="ubuntu"
-        optionValue="ubuntu-20.04"
         onChange={() => {}}
         onChangeOption={() => {}}
+        optionValue="ubuntu-20.04"
         size="medium"
+        value="ubuntu"
       >
         <SelectableCardOptionGroup.Option
-          value="ubuntu"
+          id="ubuntu-option"
+          image={ubuntu}
           label="Ubuntu"
           options={ubuntuOptions}
-          image={ubuntu}
-          id="ubuntu-option"
+          value="ubuntu"
         />
         <SelectableCardOptionGroup.Option
-          value="debian"
+          id="debian-option"
+          image={debian}
           label="Debian"
           options={debianOptions}
-          image={debian}
-          id="debian-option"
+          value="debian"
         />
         <SelectableCardOptionGroup.Option
-          value="centos"
+          id="centos-option"
+          image={centos}
           label="CentOS"
           options={centosOptions}
-          image={centos}
-          id="centos-option"
+          value="centos"
         />
       </SelectableCardOptionGroup>,
     )
@@ -152,29 +152,29 @@ describe('SelectableCardOptionGroup', () => {
   test('renders correctly with all options disabled', () => {
     const { asFragment } = renderWithTheme(
       <SelectableCardOptionGroup
-        value="ubuntu"
-        optionValue="ubuntu-20.04"
+        disabled
         onChange={() => {}}
         onChangeOption={() => {}}
-        disabled
+        optionValue="ubuntu-20.04"
+        value="ubuntu"
       >
         <SelectableCardOptionGroup.Option
-          value="ubuntu"
+          image={ubuntu}
           label="Ubuntu"
           options={ubuntuOptions}
-          image={ubuntu}
+          value="ubuntu"
         />
         <SelectableCardOptionGroup.Option
-          value="debian"
+          image={debian}
           label="Debian"
           options={debianOptions}
-          image={debian}
+          value="debian"
         />
         <SelectableCardOptionGroup.Option
-          value="centos"
+          image={centos}
           label="CentOS"
           options={centosOptions}
-          image={centos}
+          value="centos"
         />
       </SelectableCardOptionGroup>,
     )
@@ -188,29 +188,29 @@ describe('SelectableCardOptionGroup', () => {
 
     const { asFragment } = renderWithTheme(
       <SelectableCardOptionGroup
-        value="ubuntu"
-        optionValue="ubuntu-20.04"
         onChange={onChange}
         onChangeOption={onChangeOption}
+        optionValue="ubuntu-20.04"
+        value="ubuntu"
       >
         <SelectableCardOptionGroup.Option
-          value="ubuntu"
+          image={ubuntu}
           label="Ubuntu"
           options={ubuntuOptions}
-          image={ubuntu}
+          value="ubuntu"
         />
         <SelectableCardOptionGroup.Option
-          value="debian"
+          disabled
+          image={debian}
           label="Debian"
           options={debianOptions}
-          image={debian}
-          disabled
+          value="debian"
         />
         <SelectableCardOptionGroup.Option
-          value="centos"
+          image={centos}
           label="CentOS"
           options={centosOptions}
-          image={centos}
+          value="centos"
         />
       </SelectableCardOptionGroup>,
     )
@@ -227,29 +227,29 @@ describe('SelectableCardOptionGroup', () => {
   test('renders correctly with error message', () => {
     const { asFragment } = renderWithTheme(
       <SelectableCardOptionGroup
-        value="ubuntu"
-        optionValue="ubuntu-20.04"
+        error="Error message"
         onChange={() => {}}
         onChangeOption={() => {}}
-        error="Error message"
+        optionValue="ubuntu-20.04"
+        value="ubuntu"
       >
         <SelectableCardOptionGroup.Option
-          value="ubuntu"
+          image={ubuntu}
           label="Ubuntu"
           options={ubuntuOptions}
-          image={ubuntu}
+          value="ubuntu"
         />
         <SelectableCardOptionGroup.Option
-          value="debian"
+          image={debian}
           label="Debian"
           options={debianOptions}
-          image={debian}
+          value="debian"
         />
         <SelectableCardOptionGroup.Option
-          value="centos"
+          image={centos}
           label="CentOS"
           options={centosOptions}
-          image={centos}
+          value="centos"
         />
       </SelectableCardOptionGroup>,
     )
@@ -261,29 +261,29 @@ describe('SelectableCardOptionGroup', () => {
   test('renders correctly with error as boolean', () => {
     const { asFragment } = renderWithTheme(
       <SelectableCardOptionGroup
-        value="ubuntu"
-        optionValue="ubuntu-20.04"
+        error
         onChange={() => {}}
         onChangeOption={() => {}}
-        error
+        optionValue="ubuntu-20.04"
+        value="ubuntu"
       >
         <SelectableCardOptionGroup.Option
-          value="ubuntu"
+          image={ubuntu}
           label="Ubuntu"
           options={ubuntuOptions}
-          image={ubuntu}
+          value="ubuntu"
         />
         <SelectableCardOptionGroup.Option
-          value="debian"
+          image={debian}
           label="Debian"
           options={debianOptions}
-          image={debian}
+          value="debian"
         />
         <SelectableCardOptionGroup.Option
-          value="centos"
+          image={centos}
           label="CentOS"
           options={centosOptions}
-          image={centos}
+          value="centos"
         />
       </SelectableCardOptionGroup>,
     )
@@ -294,28 +294,28 @@ describe('SelectableCardOptionGroup', () => {
   test('renders correctly with image as ReactNode', () => {
     const { asFragment } = renderWithTheme(
       <SelectableCardOptionGroup
-        value="ubuntu"
-        optionValue="ubuntu-20.04"
         onChange={() => {}}
         onChangeOption={() => {}}
+        optionValue="ubuntu-20.04"
+        value="ubuntu"
       >
         <SelectableCardOptionGroup.Option
-          value="ubuntu"
+          image={<img alt="Ubuntu" src={ubuntu} />}
           label="Ubuntu"
           options={ubuntuOptions}
-          image={<img src={ubuntu} alt="Ubuntu" />}
+          value="ubuntu"
         />
         <SelectableCardOptionGroup.Option
-          value="debian"
+          image={<img alt="Debian" src={debian} />}
           label="Debian"
           options={debianOptions}
-          image={<img src={debian} alt="Debian" />}
+          value="debian"
         />
         <SelectableCardOptionGroup.Option
-          value="centos"
+          image={<img alt="CentOS" src={centos} />}
           label="CentOS"
           options={centosOptions}
-          image={<img src={centos} alt="CentOS" />}
+          value="centos"
         />
       </SelectableCardOptionGroup>,
     )
@@ -326,29 +326,29 @@ describe('SelectableCardOptionGroup', () => {
   test('renders correctly 4 columns', () => {
     const { asFragment } = renderWithTheme(
       <SelectableCardOptionGroup
-        value="ubuntu"
-        optionValue="ubuntu-20.04"
+        columns={4}
         onChange={() => {}}
         onChangeOption={() => {}}
-        columns={4}
+        optionValue="ubuntu-20.04"
+        value="ubuntu"
       >
         <SelectableCardOptionGroup.Option
-          value="ubuntu"
+          image={ubuntu}
           label="Ubuntu"
           options={ubuntuOptions}
-          image={ubuntu}
+          value="ubuntu"
         />
         <SelectableCardOptionGroup.Option
-          value="debian"
+          image={debian}
           label="Debian"
           options={debianOptions}
-          image={debian}
+          value="debian"
         />
         <SelectableCardOptionGroup.Option
-          value="centos"
+          image={centos}
           label="CentOS"
           options={centosOptions}
-          image={centos}
+          value="centos"
         />
       </SelectableCardOptionGroup>,
     )
@@ -359,29 +359,29 @@ describe('SelectableCardOptionGroup', () => {
   test('renders correctly with helper', () => {
     const { asFragment } = renderWithTheme(
       <SelectableCardOptionGroup
-        value="ubuntu"
-        optionValue="ubuntu-20.04"
+        helper="Helper message"
         onChange={() => {}}
         onChangeOption={() => {}}
-        helper="Helper message"
+        optionValue="ubuntu-20.04"
+        value="ubuntu"
       >
         <SelectableCardOptionGroup.Option
-          value="ubuntu"
+          image={ubuntu}
           label="Ubuntu"
           options={ubuntuOptions}
-          image={ubuntu}
+          value="ubuntu"
         />
         <SelectableCardOptionGroup.Option
-          value="debian"
+          image={debian}
           label="Debian"
           options={debianOptions}
-          image={debian}
+          value="debian"
         />
         <SelectableCardOptionGroup.Option
-          value="centos"
+          image={centos}
           label="CentOS"
           options={centosOptions}
-          image={centos}
+          value="centos"
         />
       </SelectableCardOptionGroup>,
     )
@@ -396,28 +396,28 @@ describe('SelectableCardOptionGroup', () => {
 
     const { asFragment } = renderWithTheme(
       <SelectableCardOptionGroup
-        value="ubuntu"
-        optionValue="ubuntu-20.04"
         onChange={onChange}
         onChangeOption={onChangeOption}
+        optionValue="ubuntu-20.04"
+        value="ubuntu"
       >
         <SelectableCardOptionGroup.Option
-          value="ubuntu"
+          image={ubuntu}
           label="Ubuntu"
           options={ubuntuOptions}
-          image={ubuntu}
+          value="ubuntu"
         />
         <SelectableCardOptionGroup.Option
-          value="debian"
+          image={debian}
           label="Debian"
           options={debianOptions}
-          image={debian}
+          value="debian"
         />
         <SelectableCardOptionGroup.Option
-          value="centos"
+          image={centos}
           label="CentOS"
           options={centosOptions}
-          image={centos}
+          value="centos"
         />
       </SelectableCardOptionGroup>,
     )
@@ -435,16 +435,16 @@ describe('SelectableCardOptionGroup', () => {
   test('tabulation works in correct order selectable card > select input', async () => {
     renderWithTheme(
       <SelectableCardOptionGroup
-        value="ubuntu"
-        optionValue="ubuntu-20.04"
         onChange={() => {}}
         onChangeOption={() => {}}
+        optionValue="ubuntu-20.04"
+        value="ubuntu"
       >
         <SelectableCardOptionGroup.Option
-          value="ubuntu"
+          image={ubuntu}
           label="Ubuntu"
           options={ubuntuOptions}
-          image={ubuntu}
+          value="ubuntu"
         />
       </SelectableCardOptionGroup>,
     )

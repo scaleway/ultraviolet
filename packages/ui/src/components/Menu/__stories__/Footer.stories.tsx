@@ -1,8 +1,8 @@
 import type { StoryFn } from '@storybook/react-vite'
-import { Menu } from '..'
 import { Badge } from '../../Badge'
 import { Button } from '../../Button'
 import { Stack } from '../../Stack'
+import { Menu } from '..'
 import { DefaultDisclosure } from './Template.stories'
 
 export const Footer: StoryFn<typeof Menu> = ({ ...props }) => (
@@ -19,19 +19,19 @@ export const Footer: StoryFn<typeof Menu> = ({ ...props }) => (
     <Menu.Group label="Server">
       <Menu.Item borderless>
         <Stack
-          direction="row"
-          justifyContent="space-between"
           alignItems="center"
+          direction="row"
           flex={1}
+          justifyContent="space-between"
         >
           Information&nbsp;
-          <Badge size="small" sentiment="success">
+          <Badge sentiment="success" size="small">
             New
           </Badge>
         </Stack>
       </Menu.Item>
       <Menu.Item borderless>Power on</Menu.Item>
-      <Menu.Item sentiment="neutral" borderless>
+      <Menu.Item borderless sentiment="neutral">
         Power off
       </Menu.Item>
       <Menu.Item sentiment="danger">Delete</Menu.Item>
@@ -39,19 +39,19 @@ export const Footer: StoryFn<typeof Menu> = ({ ...props }) => (
     <Menu.Group label="Dedicated Server">
       <Menu.Item borderless>
         <Stack
-          direction="row"
-          justifyContent="space-between"
           alignItems="center"
+          direction="row"
           flex={1}
+          justifyContent="space-between"
         >
           Information&nbsp;
-          <Badge size="small" sentiment="success">
+          <Badge sentiment="success" size="small">
             New
           </Badge>
         </Stack>
       </Menu.Item>
       <Menu.Item borderless>Power on</Menu.Item>
-      <Menu.Item sentiment="neutral" borderless>
+      <Menu.Item borderless sentiment="neutral">
         Power off
       </Menu.Item>
       <Menu.Item sentiment="danger">Delete</Menu.Item>
@@ -59,19 +59,19 @@ export const Footer: StoryFn<typeof Menu> = ({ ...props }) => (
     <Menu.Group label="Kubernetes">
       <Menu.Item borderless>
         <Stack
-          direction="row"
-          justifyContent="space-between"
           alignItems="center"
+          direction="row"
           flex={1}
+          justifyContent="space-between"
         >
           Information&nbsp;
-          <Badge size="small" sentiment="success">
+          <Badge sentiment="success" size="small">
             New
           </Badge>
         </Stack>
       </Menu.Item>
       <Menu.Item borderless>Power on</Menu.Item>
-      <Menu.Item sentiment="neutral" borderless>
+      <Menu.Item borderless sentiment="neutral">
         Power off
       </Menu.Item>
       <Menu.Item sentiment="danger">Delete</Menu.Item>
@@ -79,22 +79,22 @@ export const Footer: StoryFn<typeof Menu> = ({ ...props }) => (
     <Menu.Group label="Serverless">
       <Menu.Item borderless>
         <Stack
-          direction="row"
-          justifyContent="space-between"
           alignItems="center"
+          direction="row"
           flex={1}
+          justifyContent="space-between"
         >
           Information&nbsp;
-          <Badge size="small" sentiment="success">
+          <Badge sentiment="success" size="small">
             New
           </Badge>
         </Stack>
       </Menu.Item>
       <Menu.Item borderless>Power on</Menu.Item>
-      <Menu.Item sentiment="neutral" borderless>
+      <Menu.Item borderless sentiment="neutral">
         Power off
       </Menu.Item>
-      <Menu.Item sentiment="danger" borderless>
+      <Menu.Item borderless sentiment="danger">
         Delete
       </Menu.Item>
     </Menu.Group>

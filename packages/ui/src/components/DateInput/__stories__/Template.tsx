@@ -7,6 +7,6 @@ export const Template: StoryFn<typeof DateInput> = props => (
 
 Template.args = {
   label: 'Date Input',
-  required: true,
   placeholder: 'MM-DD-YYYY',
+  required: true,
 }

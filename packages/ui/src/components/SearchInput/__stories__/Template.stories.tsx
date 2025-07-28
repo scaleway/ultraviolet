@@ -1,19 +1,19 @@
 import type { StoryFn } from '@storybook/react-vite'
-import { SearchInput } from '..'
 import { Text } from '../../Text'
+import { SearchInput } from '..'
 
 export const Template: StoryFn<typeof SearchInput> = ({ ...args }) => (
   <div style={{ height: '120px' }}>
     <SearchInput
       {...args}
-      placeholder="Type something"
-      onSearch={() => {}}
       onClose={() => {}}
+      onSearch={() => {}}
+      placeholder="Type something"
     >
       {({ searchTerms }) => (
-        <Text as="p" variant="body" sentiment="neutral">
+        <Text as="p" sentiment="neutral" variant="body">
           You are currently searching for:&nbsp;
-          <Text as="span" variant="bodyStrong" sentiment="neutral">
+          <Text as="span" sentiment="neutral" variant="bodyStrong">
             {searchTerms}
           </Text>
         </Text>

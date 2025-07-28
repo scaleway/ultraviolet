@@ -3,9 +3,9 @@ import { Template } from './Template.stories'
 export const Helper = Template.bind({})
 
 Helper.args = {
-  name: 'helper',
-  legend: 'Legend label',
   helper: 'Helper content',
+  legend: 'Legend label',
+  name: 'helper',
 }
 
 Helper.parameters = {

@@ -8,8 +8,8 @@ import type { ReactNode } from 'react'
 import type { ToastOptions } from 'react-toastify'
 import {
   ToastContainer as BaseToastContainer,
-  Slide,
   toast as baseToast,
+  Slide,
 } from 'react-toastify'
 import type { SENTIMENTS } from '../../theme'
 import { Button } from '../Button'
@@ -92,9 +92,9 @@ type ContentProps = {
 }
 
 const Content = ({ children }: ContentProps) => (
-  <Stack gap={2} direction="row" width="100%">
+  <Stack direction="row" gap={2} width="100%">
     {typeof children === 'string' ? (
-      <Text variant="bodySmallStrong" as="span">
+      <Text as="span" variant="bodySmallStrong">
         {children}
       </Text>
     ) : (
@@ -189,21 +189,21 @@ export const ToastContainer = ({
       {/* eslint-disable-next-line @typescript-eslint/unbound-method */}
       {({ css: localCss }) => (
         <BaseToastContainer
-          data-testid={dataTestId}
-          toastClassName={localCss(styles.toast(theme))}
           autoClose={autoClose ?? AUTOCLOSE_DELAY}
+          className={className}
+          containerId={containerId}
+          data-testid={dataTestId}
+          draggable={false}
+          hideProgressBar
           icon={false}
-          newestOnTop={newestOnTop}
           limit={limit}
+          newestOnTop={newestOnTop}
+          pauseOnFocusLoss={false}
+          pauseOnHover={false}
           position={position}
           stacked
-          hideProgressBar
-          className={className}
+          toastClassName={localCss(styles.toast(theme))}
           transition={Slide}
-          containerId={containerId}
-          pauseOnFocusLoss={false}
-          draggable={false}
-          pauseOnHover={false}
         />
       )}
     </ClassNames>

@@ -1,6 +1,6 @@
 import type { StoryFn } from '@storybook/react-vite'
-import { Stepper } from '..'
 import { Stack } from '../../Stack'
+import { Stepper } from '..'
 
 export const Separator: StoryFn<typeof Stepper> = args => (
   <Stack direction="column" gap={3}>
@@ -14,13 +14,13 @@ export const Separator: StoryFn<typeof Stepper> = args => (
 )
 
 Separator.args = {
-  selected: 1,
-  interactive: true,
   children: [
     <Stepper.Step title="Step 1" />,
     <Stepper.Step title="Step 2" />,
     <Stepper.Step title="Step 3" />,
   ],
+  interactive: true,
+  selected: 1,
 }
 
 Separator.parameters = {

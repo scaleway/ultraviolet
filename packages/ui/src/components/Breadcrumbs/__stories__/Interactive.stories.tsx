@@ -2,10 +2,10 @@ import type { StoryFn } from '@storybook/react-vite'
 import { PlusIcon, RestoreIcon } from '@ultraviolet/icons'
 import type { ComponentProps, MouseEvent } from 'react'
 import { useCallback, useState } from 'react'
-import { Breadcrumbs } from '..'
 import { Button } from '../../Button'
 import { Separator } from '../../Separator'
 import { Stack } from '../../Stack'
+import { Breadcrumbs } from '..'
 
 type ItemProp = { label: string; to?: string }[]
 
@@ -37,10 +37,10 @@ export const Interactive: StoryFn<
         {value.map(item => (
           <Breadcrumbs.Item
             key={item.label}
-            to={item.to}
             onClick={event => {
               setPage(event, item.label)
             }}
+            to={item.to}
           >
             {item.label}
           </Breadcrumbs.Item>
@@ -48,14 +48,14 @@ export const Interactive: StoryFn<
       </Breadcrumbs>
       <Stack gap={2}>
         <Separator />
-        <Stack gap={1} direction="row">
+        <Stack direction="row" gap={1}>
           <div style={{ width: 'fit-content' }}>
             <Button
               onClick={() => {
                 setValue(ITEMS)
               }}
-              size="small"
               sentiment="neutral"
+              size="small"
             >
               <RestoreIcon />
               Reset
@@ -69,8 +69,8 @@ export const Interactive: StoryFn<
                   { label: `Page ${value.length + 1}`, to: '/' },
                 ])
               }}
-              size="small"
               sentiment="primary"
+              size="small"
             >
               <PlusIcon />
               Add item
@@ -81,8 +81,8 @@ export const Interactive: StoryFn<
               onClick={() => {
                 setValue([...value, { label: `Page ${value.length + 1}` }])
               }}
-              size="small"
               sentiment="primary"
+              size="small"
             >
               <PlusIcon />
               Add onClick item

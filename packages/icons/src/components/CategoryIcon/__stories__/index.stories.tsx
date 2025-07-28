@@ -4,7 +4,6 @@ import Documentation from './Documentation.md?raw'
 
 export default {
   component: BaremetalCategoryIcon,
-  title: 'Icons/CategoryIcon',
   parameters: {
     docs: {
       description: {
@@ -12,7 +11,8 @@ export default {
       },
     },
   },
+  title: 'Icons/CategoryIcon',
 } as Meta
 
-export { Playground } from './Playground.stories'
 export { List } from './List.stories'
+export { Playground } from './Playground.stories'

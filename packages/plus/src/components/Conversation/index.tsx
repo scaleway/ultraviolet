@@ -28,7 +28,7 @@ const StyledText = styled(Text)`
 `
 
 export const Date = ({ children }: { children: ReactNode }) => (
-  <StyledText as="p" variant="bodySmall" prominence="weak">
+  <StyledText as="p" prominence="weak" variant="bodySmall">
     {children}
   </StyledText>
 )

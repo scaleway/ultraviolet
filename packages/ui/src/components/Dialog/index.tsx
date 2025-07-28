@@ -77,8 +77,8 @@ export const BaseDialog = ({
       </Bullet>
       <StyledTextTitle
         as="h2"
-        variant="headingSmallStronger"
         sentiment="neutral"
+        variant="headingSmallStronger"
       >
         {title}
       </StyledTextTitle>
@@ -129,8 +129,8 @@ export const BaseDialog = ({
  * The Dialog component is used to show content on top of an overlay that requires user interaction.
  */
 export const Dialog = Object.assign(BaseDialog, {
-  Buttons: DialogButtons,
   Button: DialogButton,
+  Buttons: DialogButtons,
   CancelButton: DialogCancelButton,
   Stack: DialogStack,
   Text: DialogText,

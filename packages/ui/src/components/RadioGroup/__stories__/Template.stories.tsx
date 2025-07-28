@@ -3,12 +3,12 @@ import { RadioGroup } from '..'
 
 export const Template: StoryFn<typeof RadioGroup> = args => (
   <RadioGroup {...args}>
-    <RadioGroup.Radio value="value-1" label="Radio 1" />
-    <RadioGroup.Radio value="value-2" label="Radio 2" />
+    <RadioGroup.Radio label="Radio 1" value="value-1" />
+    <RadioGroup.Radio label="Radio 2" value="value-2" />
   </RadioGroup>
 )
 
 Template.args = {
-  name: 'template',
   legend: 'Legend label',
+  name: 'template',
 }

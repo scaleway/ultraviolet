@@ -1,25 +1,25 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
-import { TextInput } from '..'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
+import { TextInput } from '..'
 
 export const ControlledVSUncontrolled: StoryFn<typeof TextInput> = props => {
   const [value, setValue] = useState('content')
 
   return (
     <Stack direction="column" gap={2}>
-      <TextInput label="Uncontrolled" defaultValue="content" {...props} />
+      <TextInput defaultValue="content" label="Uncontrolled" {...props} />
       <Stack gap={1}>
         <TextInput
           label="Controlled"
-          value={value}
           onChange={event => setValue(event.target.value)}
+          value={value}
           {...props}
         />
-        <Text as="p" variant="body" sentiment="neutral">
+        <Text as="p" sentiment="neutral" variant="body">
           We can get the value from the input, which is:{' '}
-          <Text as="span" variant="body" sentiment="neutral" italic>
+          <Text as="span" italic sentiment="neutral" variant="body">
             {value}
           </Text>
         </Text>

@@ -4,8 +4,8 @@ export const Placeholder = Template.bind({})
 
 Placeholder.args = {
   ...Template.args,
-  value: '',
   placeholder: 'This is the placeholder',
+  value: '',
 }
 
 Placeholder.parameters = {

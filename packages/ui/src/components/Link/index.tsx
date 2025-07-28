@@ -31,9 +31,9 @@ const StyledOpenInNewIcon = StyledArrowRightIcon.withComponent(OpenInNewIcon)
 
 export const PROMINENCES = {
   default: '',
-  weak: 'weak',
   strong: 'strong',
   stronger: 'stronger',
+  weak: 'weak',
 }
 
 export type ProminenceProps = keyof typeof PROMINENCES
@@ -251,22 +251,22 @@ export const Link = forwardRef(
     return (
       <Tooltip text={oneLine && isTruncated ? finalStringChildren : ''}>
         <StyledLink
-          href={href}
-          target={target}
-          download={download}
-          ref={usedRef}
-          sentiment={sentiment}
-          prominence={prominence}
-          rel={computedRel}
-          className={className}
-          variant={textVariant}
-          onClick={onClick}
-          iconPosition={iconPosition}
+          aria-current={ariaCurrent}
           aria-label={ariaLabel}
-          oneLine={oneLine}
+          className={className}
           data-testid={dataTestId}
           data-variant={variant}
-          aria-current={ariaCurrent}
+          download={download}
+          href={href}
+          iconPosition={iconPosition}
+          onClick={onClick}
+          oneLine={oneLine}
+          prominence={prominence}
+          ref={usedRef}
+          rel={computedRel}
+          sentiment={sentiment}
+          target={target}
+          variant={textVariant}
         >
           {!isBlank && iconPosition === 'left' ? (
             <StyledArrowLeftIcon size={ICON_SIZE} />

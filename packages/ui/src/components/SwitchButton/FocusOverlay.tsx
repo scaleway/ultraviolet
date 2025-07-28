@@ -32,10 +32,10 @@ export const FocusOverlay = ({
   <StyledDiv
     data-sentiment={sentiment}
     style={{
-      width: `${cardWidth}px`,
       left: `${
         position - (mouseDownSide === 'left' ? FOCUS_OVERLAY_SCALE_RATIO : 0)
       }px`,
+      width: `${cardWidth}px`,
     }}
   />
 )

@@ -38,8 +38,8 @@ export const SelectBar = <T,>({
       <Stack
         alignItems="center"
         direction="row"
-        justifyContent="space-between"
         flex="1 1 auto"
+        justifyContent="space-between"
         width="100%"
       >
         {children({

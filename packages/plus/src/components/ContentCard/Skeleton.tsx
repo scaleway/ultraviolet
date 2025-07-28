@@ -31,10 +31,10 @@ type SkeletonProps = {
 export const Skeleton = ({ direction }: SkeletonProps) => (
   <Stack direction={direction}>
     <SkeletonImage
-      variant="square"
-      height={direction === 'column' ? '120px' : 'unset'}
-      width={direction === 'row' ? '220px' : undefined}
       direction={direction}
+      height={direction === 'column' ? '120px' : 'unset'}
+      variant="square"
+      width={direction === 'row' ? '220px' : undefined}
     />
     <StyledStack gap={2}>
       <UltravioletSkeleton variant="line" />

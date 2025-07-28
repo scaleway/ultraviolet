@@ -1,5 +1,5 @@
-import { Template } from './Template.stories'
 import { coloredChildren } from './helper'
+import { Template } from './Template.stories'
 
 export const JustifyContent = Template.bind({})
 
@@ -13,7 +13,7 @@ JustifyContent.parameters = {
 }
 
 JustifyContent.args = {
+  children: coloredChildren,
   direction: 'row',
   justifyContent: 'space-between',
-  children: coloredChildren,
 }

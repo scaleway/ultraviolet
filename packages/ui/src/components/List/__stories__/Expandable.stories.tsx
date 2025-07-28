@@ -1,8 +1,8 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
-import { List } from '..'
 import { Button } from '../../Button'
 import { Stack } from '../../Stack'
+import { List } from '..'
 import { columns, data } from './resources'
 
 export const Expandable: StoryFn<typeof List> = props => {
@@ -10,18 +10,18 @@ export const Expandable: StoryFn<typeof List> = props => {
 
   return (
     <Stack gap={1}>
-      <Button sentiment="primary" onClick={() => setExpanded(!expanded)}>
+      <Button onClick={() => setExpanded(!expanded)} sentiment="primary">
         {expanded ? 'Collapse' : 'Expand'} all row
       </Button>
       <List {...props} columns={columns} expandable>
         {data.map(planet => (
           <List.Row
-            key={planet.id}
-            id={planet.id}
-            expandablePadding="2"
-            expandable={<p>Test</p>}
-            expanded={expanded}
             disabled={planet.id === 'mercury'}
+            expandable={<p>Test</p>}
+            expandablePadding="2"
+            expanded={expanded}
+            id={planet.id}
+            key={planet.id}
           >
             <List.Cell>
               {planet.name}

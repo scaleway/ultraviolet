@@ -1,7 +1,7 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
-import { UnitInput } from '..'
 import { Stack } from '../../Stack'
+import { UnitInput } from '..'
 
 const optionsSelect = [
   {
@@ -22,12 +22,12 @@ export const Template: StoryFn<typeof UnitInput> = args => {
   const [unit, setUnit] = useState<string>()
 
   return (
-    <Stack width="600px" gap={5}>
+    <Stack gap={5} width="600px">
       <UnitInput
         {...args}
-        options={optionsSelect}
         onChange={val => setValue(val)}
         onChangeUnitValue={val => setUnit(val[0])}
+        options={optionsSelect}
         width="300px"
       />
       Value: {value} {unit}
@@ -36,9 +36,9 @@ export const Template: StoryFn<typeof UnitInput> = args => {
 }
 
 Template.args = {
+  helper: 'Helper',
+  label: 'Label',
   name: 'Hello',
   options: optionsSelect,
-  helper: 'Helper',
   placeholder: 'Placeholder',
-  label: 'Label',
 }

@@ -1,8 +1,8 @@
 import { Link as UVLink } from '@ultraviolet/ui'
-import NextLink from 'next/link'
 import type { LinkProps } from 'next/link'
-import { forwardRef } from 'react'
+import NextLink from 'next/link'
 import type { ComponentProps } from 'react'
+import { forwardRef } from 'react'
 
 type LinkPropsType = Omit<LinkProps, ''> &
   Omit<ComponentProps<typeof UVLink>, ''>
@@ -24,17 +24,17 @@ export const Link = forwardRef<HTMLAnchorElement, LinkPropsType>(
     return (
       <NextLink
         href={href}
+        legacyBehavior
+        locale={locale}
+        passHref
         replace={replace}
         scroll={scroll}
         shallow={shallow}
-        locale={locale}
-        passHref
-        legacyBehavior
       >
         <UVLink
-          ref={ref}
           href={href}
           iconPosition={iconPosition}
+          ref={ref}
           {...uvprops}
         />
       </NextLink>

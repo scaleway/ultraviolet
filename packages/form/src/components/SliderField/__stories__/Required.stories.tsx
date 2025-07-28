@@ -1,8 +1,8 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { Stack } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
-import { SliderField } from '..'
 import { Submit } from '../../Submit'
+import { SliderField } from '..'
 
 export const Required: StoryFn<ComponentProps<typeof SliderField>> = args => (
   <Stack gap={1}>
@@ -12,7 +12,7 @@ export const Required: StoryFn<ComponentProps<typeof SliderField>> = args => (
 )
 
 Required.args = {
+  label: 'This slider is required',
   name: 'required-slider',
   required: true,
-  label: 'This slider is required',
 }

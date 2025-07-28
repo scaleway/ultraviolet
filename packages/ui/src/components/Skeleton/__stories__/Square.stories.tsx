@@ -4,7 +4,7 @@ export const Square = Template.bind({})
 
 Square.decorators = [
   StoryComponent => (
-    <div style={{ width: '100px', height: '100px' }}>
+    <div style={{ height: '100px', width: '100px' }}>
       <StoryComponent />
     </div>
   ),

@@ -114,24 +114,24 @@ const Legends = ({ focused, data, onFocusChange, colors }: LegendsProps) => (
 
       return (
         <Tooltip
-          key={item.id}
-          visible={isSegmentFocused}
           id={id}
+          key={item.id}
           text={<TooltipContainer data={item} />}
+          visible={isSegmentFocused}
         >
           <ListItem isFocused={isSegmentFocused}>
             <ToggleBox
               data-testid={id}
-              onMouseOver={() => onFocusChange(item.id)}
+              onBlur={() => onFocusChange()}
               onFocus={() => onFocusChange(item.id)}
               onMouseOut={() => onFocusChange()}
-              onBlur={() => onFocusChange()}
+              onMouseOver={() => onFocusChange(item.id)}
             />
             <Bullet
               color={colors[index]}
+              id={`chart-legend-${item.id}`}
               isFocused={isSegmentFocused}
               needPattern={item.needPattern}
-              id={`chart-legend-${item.id}`}
             />
             <Label>
               <Text isFocused={isSegmentFocused}>{item.name}</Text>

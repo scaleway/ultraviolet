@@ -8,7 +8,7 @@ export const List: StoryFn = props => (
       const FoundProductIcon = ProductIcon[iconName as keyof typeof ProductIcon]
 
       return (
-        <Stack direction="row" gap={1} alignItems="center" key={iconName}>
+        <Stack alignItems="center" direction="row" gap={1} key={iconName}>
           <FoundProductIcon size="large" {...props} />
           <Text as="span" variant="bodyStrong">
             <Snippet>{`import { ${iconName} } from '@ultraviolet/icons/logo'`}</Snippet>

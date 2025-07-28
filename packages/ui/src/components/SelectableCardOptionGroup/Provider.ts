@@ -16,14 +16,14 @@ type SelectableCardOptionGroupContextType = {
 
 export const SelectableCardOptionGroupContext =
   createContext<SelectableCardOptionGroupContextType>({
+    disabled: false,
+    error: false,
     groupName: '',
     onChange: () => {},
     onChangeOption: () => {},
-    required: false,
-    error: false,
-    disabled: false,
-    size: 'large',
     optionValue: '',
+    required: false,
+    size: 'large',
   })
 
 export const useSelectableCardOptionGroup = () => {

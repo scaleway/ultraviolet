@@ -1,8 +1,8 @@
 'use client'
 
 import { SelectInput } from '@ultraviolet/ui'
-import { useCallback } from 'react'
 import type { ComponentProps } from 'react'
+import { useCallback } from 'react'
 import type { FieldPath, FieldValues, PathValue } from 'react-hook-form'
 import { useController } from 'react-hook-form'
 import { useErrors } from '../../providers'
@@ -34,13 +34,13 @@ export const SelectInputField = <
     field,
     fieldState: { error },
   } = useController<TFieldValues, TFieldName>({
-    name,
     control,
-    shouldUnregister,
+    name,
     rules: {
       required,
       validate,
     },
+    shouldUnregister,
   })
 
   const { getError } = useErrors()
@@ -57,18 +57,18 @@ export const SelectInputField = <
 
   return (
     <SelectInput
-      name={field.name}
+      aria-label={ariaLabel}
+      error={getError({ label: label ?? ariaLabel ?? name }, error)}
+      label={label}
       multiselect={multiselect}
-      required={required}
+      name={field.name}
       onBlur={event => {
         field.onBlur()
         onBlur?.(event)
       }}
-      value={field.value as string | string[]}
-      error={getError({ label: label ?? ariaLabel ?? name }, error)}
-      label={label}
-      aria-label={ariaLabel}
       onChange={handleChange}
+      required={required}
+      value={field.value as string | string[]}
       {...props}
     />
   )

@@ -1,13 +1,5 @@
 'use client'
 
-import {
-  createContext,
-  useCallback,
-  useContext,
-  useEffect,
-  useMemo,
-  useState,
-} from 'react'
 import type {
   ComponentProps,
   Dispatch,
@@ -15,6 +7,14 @@ import type {
   ReactNode,
   RefObject,
   SetStateAction,
+} from 'react'
+import {
+  createContext,
+  useCallback,
+  useContext,
+  useEffect,
+  useMemo,
+  useState,
 } from 'react'
 import type { Checkbox } from '../Checkbox'
 import type { ColumnProps } from './types'
@@ -332,25 +332,25 @@ export const ListProvider = ({
   const value = useMemo<ListContextValue>(
     () => ({
       allRowSelectValue,
-      selectAllHandler,
-      subscribeHandler,
       collapseRow,
       columns,
       expandButton,
       expandedRowIds,
       expandRow,
+      handleOnChange,
       inRange,
+      refList,
       registerExpandableRow,
       registerSelectableRow,
-      selectable,
       selectAll,
+      selectAllHandler,
+      selectable,
       selectedRowIds,
       selectRow,
+      setRefList,
+      subscribeHandler,
       unselectAll,
       unselectRow,
-      refList,
-      setRefList,
-      handleOnChange,
     }),
     [
       allRowSelectValue,

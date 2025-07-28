@@ -50,11 +50,11 @@ const alertStyles = ({
 }
 
 const sentimentIcons = {
-  warning: AlertCircleIcon,
-  info: InformationOutlineIcon,
-  success: CheckCircleOutlineIcon,
   danger: AlertCircleIcon,
+  info: InformationOutlineIcon,
   neutral: LightBulbIcon,
+  success: CheckCircleOutlineIcon,
+  warning: AlertCircleIcon,
 }
 
 const StyledStackContainer = styled(Stack, {
@@ -124,33 +124,33 @@ export const Alert = ({
 
   return (
     <StyledStackContainer
-      gap={1}
-      direction="row"
-      sentiment={sentiment}
       className={className}
       data-testid={dataTestId}
+      direction="row"
+      gap={1}
+      sentiment={sentiment}
     >
       <WrapStack
-        direction="row"
         alignItems="center"
-        justifyContent="space-between"
+        direction="row"
         gap={2}
+        justifyContent="space-between"
       >
-        <Stack alignItems="start" direction="row" gap={2} flex="1 1 auto">
+        <Stack alignItems="start" direction="row" flex="1 1 auto" gap={2}>
           <Icon
             aria-hidden="true"
-            size="large"
             prominence={sentiment === 'neutral' ? 'strong' : undefined}
             sentiment={sentiment}
+            size="large"
           />
-          <TextStack gap={1.5} direction="row" flex="1 1 auto">
+          <TextStack direction="row" flex="1 1 auto" gap={1.5}>
             {title ? (
-              <Text variant="bodyStronger" as="span" sentiment={sentiment}>
+              <Text as="span" sentiment={sentiment} variant="bodyStronger">
                 {title}
               </Text>
             ) : null}
             {typeof children === 'string' ? (
-              <Text variant="body" as="p">
+              <Text as="p" variant="body">
                 {children}
               </Text>
             ) : (
@@ -160,10 +160,10 @@ export const Alert = ({
         </Stack>
         {buttonText ? (
           <StyledButton
-            sentiment={sentiment}
-            onClick={onClickButton}
-            size="small"
             disabled={disabled}
+            onClick={onClickButton}
+            sentiment={sentiment}
+            size="small"
           >
             {buttonText}
           </StyledButton>
@@ -171,14 +171,14 @@ export const Alert = ({
       </WrapStack>
       {closable || onClose ? (
         <CloseButton
-          variant="ghost"
-          size="small"
+          aria-label="close"
           onClick={() => {
             setOpened(false)
             onClose?.()
           }}
           sentiment="neutral"
-          aria-label="close"
+          size="small"
+          variant="ghost"
         >
           <CloseIcon />
         </CloseButton>

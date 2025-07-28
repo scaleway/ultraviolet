@@ -28,8 +28,8 @@ export const Header = memo(({ logo }: HeaderProps) => {
   return (
     <HeaderContainer>
       <LogoContainer
-        justifyContent={!expanded ? 'center' : undefined}
         alignItems="start"
+        justifyContent={!expanded ? 'center' : undefined}
       >
         {typeof logo === 'function' ? logo(animation ? false : expanded) : logo}
       </LogoContainer>

@@ -28,10 +28,10 @@ describe('BarChart', () => {
   test('renders correctly with data transformer', () =>
     shouldMatchEmotionSnapshot(
       <BarChart
-        data={barChartSimpleData}
         axisFormatters={{
           bottom: value => value.toString(),
         }}
+        data={barChartSimpleData}
       />,
     ))
 

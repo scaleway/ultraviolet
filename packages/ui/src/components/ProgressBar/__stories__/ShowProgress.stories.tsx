@@ -19,8 +19,8 @@ export const ShowProgress: StoryFn = props => {
 }
 
 ShowProgress.args = {
-  label: 'Label',
   direction: 'column',
+  label: 'Label',
   showProgress: true,
 }
 ShowProgress.decorators = [

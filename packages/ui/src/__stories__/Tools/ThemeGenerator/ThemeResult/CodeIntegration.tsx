@@ -42,8 +42,8 @@ export const CodeIntegration = ({ theme }: CodeIntegrationProps) => {
       </Text>
       <Stack>
         <Tabs
-          selected={tabState}
           onChange={(e: number | string) => setTabState(e)}
+          selected={tabState}
         >
           <Tabs.Tab value={1}>JSON</Tabs.Tab>
           <Tabs.Tab value={2}>React</Tabs.Tab>

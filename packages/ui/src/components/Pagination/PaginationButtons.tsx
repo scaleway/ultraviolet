@@ -58,13 +58,13 @@ const MakeButton = ({
     {hasEllipsisBefore ? (
       <Ellipsis
         aria-label="ellipsis"
-        disabled={disabled}
-        variant="body"
-        sentiment="neutral"
-        prominence="default"
         as="span"
+        disabled={disabled}
         placement="center"
+        prominence="default"
+        sentiment="neutral"
         size={perPage ? 'small' : 'medium'}
+        variant="body"
       >
         ...
       </Ellipsis>
@@ -72,11 +72,11 @@ const MakeButton = ({
     <PageButton
       aria-current={pageNumber === page}
       disabled={disabled}
-      variant={pageNumber === page ? 'filled' : 'outlined'}
-      sentiment={pageNumber === page ? 'primary' : 'neutral'}
       onClick={handlePageClick(pageNumber)}
-      type="button"
+      sentiment={pageNumber === page ? 'primary' : 'neutral'}
       size={perPage ? 'small' : 'medium'}
+      type="button"
+      variant={pageNumber === page ? 'filled' : 'outlined'}
       width={perPage ? 'small' : 'medium'}
     >
       {pageNumber}
@@ -120,10 +120,10 @@ export const PaginationButtons = ({
         <Button
           aria-label="Back"
           disabled={page <= 1 || disabled}
-          variant="outlined"
-          sentiment="primary"
           onClick={goToPreviousPage}
+          sentiment="primary"
           size={perPage ? 'small' : 'medium'}
+          variant="outlined"
         >
           <ArrowLeftIcon />
         </Button>
@@ -131,17 +131,17 @@ export const PaginationButtons = ({
       <PageNumbersContainer direction="row" gap={1}>
         {pageNumbersToDisplay.map((pageNumber, index) => (
           <MakeButton
+            disabled={disabled}
+            handlePageClick={handlePageClick}
             hasEllipsisBefore={
               !(
                 index === 0 ||
                 pageNumbersToDisplay[index - 1] === pageNumber - 1
               )
             }
+            key={pageNumber}
             page={page}
             pageNumber={pageNumber}
-            handlePageClick={handlePageClick}
-            disabled={disabled}
-            key={pageNumber}
             perPage={perPage}
           />
         ))}
@@ -150,10 +150,10 @@ export const PaginationButtons = ({
         <Button
           aria-label="Next"
           disabled={page >= pageCount || disabled}
-          variant="outlined"
-          sentiment="primary"
           onClick={goToNextPage}
+          sentiment="primary"
           size={perPage ? 'small' : 'medium'}
+          variant="outlined"
         >
           <ArrowRightIcon />
         </Button>

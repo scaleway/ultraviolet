@@ -82,7 +82,7 @@ const ComponentState = () => {
             </Text>
             .
           </Text>
-          <Text variant="body" as="p">
+          <Text as="p" variant="body">
             An experimental component won&apos;t generate major version when
             having a breaking change.
           </Text>
@@ -119,8 +119,8 @@ const ComponentState = () => {
               { label: 'Category' },
               { label: 'State' },
             ]}
-            stripped
             loading={!modules}
+            stripped
           >
             <Table.Body>
               {modules?.map(module => {
@@ -143,15 +143,15 @@ const ComponentState = () => {
 
                   return (
                     <Table.Row
-                      key={module.value.default.title}
                       id={module.value.default.title}
+                      key={module.value.default.title}
                     >
                       <Table.Cell>
                         <Text as="span" variant="bodyStrong">
                           <Button
                             onClick={linkTo(module.value.default.title)}
-                            variant="ghost"
                             size="small"
+                            variant="ghost"
                           >
                             {componentName}
                           </Button>

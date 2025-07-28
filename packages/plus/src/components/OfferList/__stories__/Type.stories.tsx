@@ -17,8 +17,8 @@ export const Type: StoryFn<ComponentProps<typeof OfferList>> = props => (
       <OfferList {...props} type="radio">
         {data.map(planet => (
           <OfferList.Row
-            key={planet.id}
             id={planet.id}
+            key={planet.id}
             offerName={planet.id}
             selectDisabled={
               planet.id === 'jupiter' ? 'this row cannot be selected' : false
@@ -42,8 +42,8 @@ export const Type: StoryFn<ComponentProps<typeof OfferList>> = props => (
       <OfferList {...props} type="checkbox">
         {data.map(planet => (
           <OfferList.Row
-            key={planet.id}
             id={planet.id}
+            key={planet.id}
             offerName={planet.id}
             selectDisabled={
               planet.id === 'jupiter'

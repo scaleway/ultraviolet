@@ -124,14 +124,14 @@ export const Daily = () => {
   ] // Array of the days to display { day : day n°, isCurrentMonth: if it is the current day}
 
   return (
-    <Row templateColumns="repeat(7, 1fr)" gap={1}>
+    <Row gap={1} templateColumns="repeat(7, 1fr)">
       {Object.entries(DAYS).map(day => (
         <CapitalizedText
           as="p"
-          variant="bodyStrong"
-          sentiment="neutral"
-          key={day[0]}
           disabled={disabled}
+          key={day[0]}
+          sentiment="neutral"
+          variant="bodyStrong"
         >
           {day[1]}
         </CapitalizedText>
@@ -205,12 +205,12 @@ export const Daily = () => {
           if (selectsRange) {
             // Selecting the end date
             if (rangeState === 'end' && isAfterStartDate) {
-              setRange?.({ start: range.start, end: newDate })
+              setRange?.({ end: newDate, start: range.start })
               onChange?.([range.start, newDate], event)
               setInputValue(
                 formatValue(
                   null,
-                  { start: range.start, end: newDate },
+                  { end: newDate, start: range.start },
                   false,
                   true,
                   format,
@@ -226,12 +226,12 @@ export const Daily = () => {
               !isAfterStartDate &&
               range?.start
             ) {
-              setRange?.({ start: newDate, end: range.start })
+              setRange?.({ end: range.start, start: newDate })
               onChange?.([newDate, range.start], event)
               setInputValue(
                 formatValue(
                   null,
-                  { start: newDate, end: range.start },
+                  { end: range.start, start: newDate },
                   false,
                   true,
                   format,
@@ -242,12 +242,12 @@ export const Daily = () => {
             }
             // Selecting the start date
             else {
-              setRange?.({ start: newDate, end: null })
+              setRange?.({ end: null, start: newDate })
               onChange?.([newDate, null], event)
               setInputValue(
                 formatValue(
                   null,
-                  { start: newDate, end: null },
+                  { end: null, start: newDate },
                   false,
                   true,
                   format,
@@ -276,8 +276,8 @@ export const Daily = () => {
 
         return (
           <Day
-            variant={isSelected || isInHoveredRange ? 'filled' : 'ghost'}
-            sentiment={isSelected || isInHoveredRange ? 'primary' : 'neutral'}
+            aria-label={dayState()}
+            data-testid={createTestId()}
             disabled={disabled || isExcluded || isOutsideRange}
             key={`${data.month}-${data.day}`}
             onClick={event => {
@@ -299,8 +299,8 @@ export const Daily = () => {
             onMouseEnter={() => {
               if (selectsRange && range?.start) setHoveredDate(constructedDate)
             }}
-            aria-label={dayState()}
-            data-testid={createTestId()}
+            sentiment={isSelected || isInHoveredRange ? 'primary' : 'neutral'}
+            variant={isSelected || isInHoveredRange ? 'filled' : 'ghost'}
           >
             {data.day}
           </Day>

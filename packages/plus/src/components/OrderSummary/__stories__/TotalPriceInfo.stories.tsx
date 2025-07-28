@@ -6,12 +6,12 @@ export const TotalPriceInfo = Template.bind({})
 TotalPriceInfo.args = {
   ...Template.args,
   discount: 0.5,
+  hideTimeUnit: false,
   totalPriceInfo: (
-    <Badge sentiment="warning" prominence="strong" size="small">
+    <Badge prominence="strong" sentiment="warning" size="small">
       50% OFF DURING BETA
     </Badge>
   ),
-  hideTimeUnit: false,
 }
 
 TotalPriceInfo.parameters = {

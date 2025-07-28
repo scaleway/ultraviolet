@@ -1,8 +1,8 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { Stack } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
-import { UnitInputField } from '..'
 import { Submit } from '../..'
+import { UnitInputField } from '..'
 
 const optionsSelect = [
   {
@@ -29,9 +29,9 @@ export const Template: StoryFn<
 )
 
 Template.args = {
+  helper: 'helper',
   label: 'Label',
   name: 'example',
   options: optionsSelect,
-  helper: 'helper',
   placeholder: 'Placeholder',
 }

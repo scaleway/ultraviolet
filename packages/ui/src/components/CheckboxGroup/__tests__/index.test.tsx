@@ -6,7 +6,7 @@ import { CheckboxGroup } from '..'
 describe('CheckboxGroup', () => {
   test('renders correctly', () =>
     shouldMatchEmotionSnapshot(
-      <CheckboxGroup onChange={() => {}} name="Checkbox" legend="Label">
+      <CheckboxGroup legend="Label" name="Checkbox" onChange={() => {}}>
         <CheckboxGroup.Checkbox name="value-1" value="value-1">
           Checkbox 1
         </CheckboxGroup.Checkbox>
@@ -18,7 +18,7 @@ describe('CheckboxGroup', () => {
 
   test('renders correctly with no CheckboxGroup.Checkbox name', () =>
     shouldMatchEmotionSnapshot(
-      <CheckboxGroup onChange={() => {}} name="Checkbox" legend="Label">
+      <CheckboxGroup legend="Label" name="Checkbox" onChange={() => {}}>
         <CheckboxGroup.Checkbox value="value-1">
           Checkbox 1
         </CheckboxGroup.Checkbox>
@@ -31,10 +31,10 @@ describe('CheckboxGroup', () => {
   test('renders correctly with direction row', () =>
     shouldMatchEmotionSnapshot(
       <CheckboxGroup
-        onChange={() => {}}
-        name="Checkbox"
-        legend="Label"
         direction="row"
+        legend="Label"
+        name="Checkbox"
+        onChange={() => {}}
       >
         <CheckboxGroup.Checkbox name="value-1" value="value-1">
           Checkbox 1
@@ -48,10 +48,10 @@ describe('CheckboxGroup', () => {
   test('renders correctly with helper content', () =>
     shouldMatchEmotionSnapshot(
       <CheckboxGroup
-        onChange={() => {}}
-        name="Checkbox"
-        legend="Label"
         helper="Helper content"
+        legend="Label"
+        name="Checkbox"
+        onChange={() => {}}
       >
         <CheckboxGroup.Checkbox name="value-1" value="value-1">
           Checkbox 1
@@ -65,10 +65,10 @@ describe('CheckboxGroup', () => {
   test('renders correctly with error content', () =>
     shouldMatchEmotionSnapshot(
       <CheckboxGroup
-        onChange={() => {}}
-        name="Checkbox"
-        legend="Label"
         error="Eror content"
+        legend="Label"
+        name="Checkbox"
+        onChange={() => {}}
       >
         <CheckboxGroup.Checkbox name="value-1" value="value-1">
           Checkbox 1
@@ -82,9 +82,9 @@ describe('CheckboxGroup', () => {
   test('renders correctly with required prop', () =>
     shouldMatchEmotionSnapshot(
       <CheckboxGroup
-        onChange={() => {}}
-        name="Checkbox"
         legend="Label"
+        name="Checkbox"
+        onChange={() => {}}
         required
       >
         <CheckboxGroup.Checkbox name="value-1" value="value-1">

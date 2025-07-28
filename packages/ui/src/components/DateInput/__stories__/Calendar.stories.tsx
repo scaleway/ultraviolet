@@ -1,8 +1,8 @@
 import type { StoryFn } from '@storybook/react-vite'
 import type { ComponentProps } from 'react'
 import { useState } from 'react'
-import { DateInput } from '..'
 import { Stack } from '../../Stack'
+import { DateInput } from '..'
 
 export const Calendar: StoryFn<ComponentProps<typeof DateInput>> = args => {
   const [value, setValue] = useState<Date | null>()
@@ -11,11 +11,11 @@ export const Calendar: StoryFn<ComponentProps<typeof DateInput>> = args => {
     <Stack gap={2}>
       <DateInput
         {...args}
-        label="As a calendar"
-        value={value}
-        onChange={setValue}
         input="calendar"
+        label="As a calendar"
+        onChange={setValue}
         selectsRange={false}
+        value={value}
       />
       Selected date: {value?.toDateString()}
     </Stack>

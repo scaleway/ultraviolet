@@ -5,11 +5,11 @@ import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
 import type { ComponentProps } from 'react'
 import { useCallback, useState } from 'react'
 import { describe, expect, test, vi } from 'vitest'
-import { Popover } from '..'
 import { Button } from '../../Button'
 import { Modal } from '../../Modal'
 import { SelectInput } from '../../SelectInput'
 import { TextInput } from '../../TextInput'
+import { Popover } from '..'
 
 const StyledPopover = styled(Popover)`
   height: 600px;
@@ -17,12 +17,12 @@ const StyledPopover = styled(Popover)`
 
 const options: ComponentProps<typeof SelectInput>['options'] = [
   {
-    value: 'option 1',
     label: 'Option 1',
+    value: 'option 1',
   },
   {
-    value: 'option 2',
     label: 'Option 2',
+    value: 'option 2',
   },
 ]
 
@@ -34,49 +34,49 @@ const AdvancedPopover = () => {
 
   return (
     <StyledPopover
-      visible={opened}
-      title="Popover Title"
-      onClose={onClose}
-      data-testid="popover"
       content={
         <>
           <Modal
+            data-testid="modal"
             disclosure={() => (
-              <Button sentiment="neutral" data-testid="button-modal">
+              <Button data-testid="button-modal" sentiment="neutral">
                 Open Modal
               </Button>
             )}
-            data-testid="modal"
           >
             <div>
               <div>Modal</div>
               <SelectInput
-                name="options"
                 label="Choose an option"
+                name="options"
                 options={options}
               />
               <TextInput
-                label="Type something here"
                 data-testid="modal-text-input"
+                label="Type something here"
               />
             </div>
           </Modal>
           <SelectInput
-            name="options"
             label="Choose an option"
+            name="options"
             options={options}
           />
           <TextInput
-            label="Type something here"
             data-testid="popover-text-input"
+            label="Type something here"
           />
         </>
       }
+      data-testid="popover"
+      onClose={onClose}
+      title="Popover Title"
+      visible={opened}
     >
       <Button
+        data-testid="button-popover"
         onClick={() => setOpened(true)}
         sentiment="neutral"
-        data-testid="button-popover"
       >
         Open Popover
       </Button>
@@ -87,21 +87,21 @@ const AdvancedPopover = () => {
 describe('Tooltip', () => {
   test('should render correctly with required props', () =>
     shouldMatchEmotionSnapshot(
-      <Popover title="Test" content="Test" onClose={() => {}}>
+      <Popover content="Test" onClose={() => {}} title="Test">
         Children
       </Popover>,
     ))
 
   test('should render correctly with required props and visible', () =>
     shouldMatchEmotionSnapshot(
-      <Popover title="Test" content="Test" onClose={() => {}} visible>
+      <Popover content="Test" onClose={() => {}} title="Test" visible>
         Children
       </Popover>,
     ))
 
   test('should render correctly with component in content prop', () =>
     shouldMatchEmotionSnapshot(
-      <Popover title="Test" content={<p>Test</p>} onClose={() => {}} visible>
+      <Popover content={<p>Test</p>} onClose={() => {}} title="Test" visible>
         Children
       </Popover>,
     ))
@@ -111,11 +111,11 @@ describe('Tooltip', () => {
       test(`should renders tooltip with placement ${placement}`, () => {
         shouldMatchEmotionSnapshot(
           <Popover
-            title="Test"
             content="Test"
-            visible
-            placement={placement as ComponentProps<typeof Popover>['placement']}
             onClose={() => {}}
+            placement={placement as ComponentProps<typeof Popover>['placement']}
+            title="Test"
+            visible
           >
             <p data-testid="children">Children</p>
           </Popover>,
@@ -129,11 +129,11 @@ describe('Tooltip', () => {
       test(`should renders tooltip with placement ${sentiment}`, () => {
         shouldMatchEmotionSnapshot(
           <Popover
-            title="Test"
             content="Test"
-            visible
-            sentiment={sentiment}
             onClose={() => {}}
+            sentiment={sentiment}
+            title="Test"
+            visible
           >
             <p data-testid="children">Children</p>
           </Popover>,
@@ -147,11 +147,11 @@ describe('Tooltip', () => {
       test(`should renders tooltip with placement ${size}`, () => {
         const { asFragment } = renderWithTheme(
           <Popover
-            title="Test"
             content="Test"
-            visible
-            size={size as ComponentProps<typeof Popover>['size']}
             onClose={() => {}}
+            size={size as ComponentProps<typeof Popover>['size']}
+            title="Test"
+            visible
           >
             <p data-testid="children">Children</p>
           </Popover>,
@@ -166,11 +166,11 @@ describe('Tooltip', () => {
 
     renderWithTheme(
       <Popover
-        title="Test"
         content="Test"
-        visible
         data-testid="popover"
         onClose={onClose}
+        title="Test"
+        visible
       >
         Children
       </Popover>,
@@ -192,11 +192,11 @@ describe('Tooltip', () => {
       <div>
         <div style={{ height: '500px', width: '500px' }}>
           <Popover
-            title="Test"
             content="Test"
-            visible
             data-testid="popover"
             onClose={onClose}
+            title="Test"
+            visible
           >
             Children
           </Popover>

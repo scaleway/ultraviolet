@@ -18,8 +18,8 @@ import { Button } from '../Button'
 import { Checkbox } from '../Checkbox'
 import { Tooltip } from '../Tooltip'
 import { Cell } from './Cell'
-import { useListContext } from './ListContext'
 import { SELECTABLE_CHECKBOX_SIZE } from './constants'
+import { useListContext } from './ListContext'
 import type { ColumnProps } from './types'
 
 export const ExpandableWrapper = styled.tr`
@@ -336,9 +336,18 @@ export const Row = forwardRef<HTMLTableRowElement, RowProps>(
     return (
       <>
         <StyledRow
+          aria-controls={
+            expandable && expandedRowIds[id] ? expandedRowId : undefined
+          }
+          aria-disabled={disabled}
+          aria-expanded={expandable ? expandedRowIds[id] : undefined}
           className={className}
-          ref={forwardedRef}
-          role={canClickRowToExpand ? 'button row' : undefined}
+          columns={columns}
+          columnsStartAt={(selectable ? 1 : 0) + (expandButton ? 1 : 0)}
+          data-dragging={dataDragging}
+          data-highlight={selectable && !!selectedRowIds[id]}
+          data-testid={dataTestid}
+          highlightAnimation={highlightAnimation}
           onClick={canClickRowToExpand ? toggleRowExpand : undefined}
           onKeyDown={
             canClickRowToExpand
@@ -350,20 +359,11 @@ export const Row = forwardRef<HTMLTableRowElement, RowProps>(
                 }
               : undefined
           }
-          tabIndex={canClickRowToExpand ? 0 : -1}
+          ref={forwardedRef}
+          role={canClickRowToExpand ? 'button row' : undefined}
           sentiment={sentiment}
-          aria-disabled={disabled}
-          aria-expanded={expandable ? expandedRowIds[id] : undefined}
-          aria-controls={
-            expandable && expandedRowIds[id] ? expandedRowId : undefined
-          }
-          data-highlight={selectable && !!selectedRowIds[id]}
-          data-testid={dataTestid}
-          columns={columns}
-          columnsStartAt={(selectable ? 1 : 0) + (expandButton ? 1 : 0)}
-          highlightAnimation={highlightAnimation}
           style={style}
-          data-dragging={dataDragging}
+          tabIndex={canClickRowToExpand ? 0 : -1}
         >
           {selectable ? (
             <NoPaddingCell maxWidth={theme.sizing[SELECTABLE_CHECKBOX_SIZE]}>
@@ -376,14 +376,14 @@ export const Row = forwardRef<HTMLTableRowElement, RowProps>(
                   }
                 >
                   <StyledCheckbox
-                    name="list-select-checkbox"
                     aria-label="select"
                     checked={selectedRowIds[id]}
-                    value={id}
-                    ref={checkboxRef}
                     disabled={isSelectDisabled}
                     inRange={inRange?.includes(id)}
+                    name="list-select-checkbox"
                     onChange={() => handleOnChange(id, selectedRowIds[id])}
+                    ref={checkboxRef}
+                    value={id}
                   />
                 </Tooltip>
               </StyledCheckboxContainer>
@@ -392,13 +392,13 @@ export const Row = forwardRef<HTMLTableRowElement, RowProps>(
           {expandButton ? (
             <NoPaddingCell maxWidth={theme.sizing[SELECTABLE_CHECKBOX_SIZE]}>
               <Button
-                disabled={disabled || !expandable}
-                onClick={toggleRowExpand}
-                size="small"
-                sentiment={sentiment}
-                variant="ghost"
                 aria-label="expand"
                 data-testid="list-expand-button"
+                disabled={disabled || !expandable}
+                onClick={toggleRowExpand}
+                sentiment={sentiment}
+                size="small"
+                variant="ghost"
               >
                 {expandedRowIds[id] ? <ArrowUpIcon /> : <ArrowDownIcon />}
               </Button>
@@ -408,9 +408,9 @@ export const Row = forwardRef<HTMLTableRowElement, RowProps>(
         </StyledRow>
         {expandable && expandedRowIds[id] ? (
           <ExpandableWrapper
-            id={expandedRowId}
             data-expandable-content
             data-highlight={selectable && !!selectedRowIds[id]}
+            id={expandedRowId}
             onClick={
               canClickRowToExpand
                 ? e => {

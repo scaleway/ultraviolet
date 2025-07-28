@@ -5,7 +5,7 @@ import { TextArea } from '..'
 export const Template: StoryFn<typeof TextArea> = ({ ...args }) => {
   const [value, setValue] = useState<string | undefined>(args.value)
 
-  return <TextArea {...args} value={value} onChange={setValue} />
+  return <TextArea {...args} onChange={setValue} value={value} />
 }
 
 Template.args = {

@@ -16,7 +16,7 @@ describe('EstimateCost - Item', () => {
   test('render with noPrice and noBorder', () => {
     const { asFragment } = renderWithTheme(
       <EstimateCost>
-        <EstimateCost.Item label="Test" noPrice noBorder>
+        <EstimateCost.Item label="Test" noBorder noPrice>
           <EstimateCost.Strong>Test</EstimateCost.Strong>
         </EstimateCost.Item>
       </EstimateCost>,

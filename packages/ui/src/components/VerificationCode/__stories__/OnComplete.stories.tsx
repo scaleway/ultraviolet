@@ -9,8 +9,8 @@ const onCompleteHandler = (value: unknown) => {
 export const OnComplete: StoryFn<typeof VerificationCode> = args => (
   <VerificationCode
     {...args}
-    onComplete={onCompleteHandler}
     label="Verification code"
+    onComplete={onCompleteHandler}
   />
 )
 

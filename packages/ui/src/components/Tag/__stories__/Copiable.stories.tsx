@@ -6,8 +6,8 @@ export const Copiable = Template.bind({})
 Copiable.args = {
   children: 'Tag content',
   copiable: true,
-  copyText: 'Click to copy',
   copiedText: 'Value copied!',
+  copyText: 'Click to copy',
 }
 
 Copiable.parameters = {

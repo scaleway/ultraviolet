@@ -1,16 +1,16 @@
 import type { StoryFn } from '@storybook/react-vite'
-import { Modal } from '..'
 import { Button } from '../../Button'
+import { Modal } from '..'
 import { MODAL_PLACEMENT } from '../constants'
 
 export const Placement: StoryFn = props => (
   <>
     {Object.keys(MODAL_PLACEMENT).map(placement => (
-      <div style={{ display: 'inline-block', padding: 16 }} key={placement}>
+      <div key={placement} style={{ display: 'inline-block', padding: 16 }}>
         <Modal
           {...props}
-          placement={placement as keyof typeof MODAL_PLACEMENT}
           disclosure={<Button>{placement}</Button>}
+          placement={placement as keyof typeof MODAL_PLACEMENT}
         >
           <div style={{ padding: 32 }}>Content of the {placement} modal</div>
         </Modal>

@@ -187,24 +187,24 @@ export const Text = ({
   return (
     <Tooltip text={oneLine && isOverflowing ? finalStringChildren : ''}>
       <StyledText
-        ref={elementRef}
+        aria-hidden={ariaHidden}
         as={as}
+        className={className}
+        data-testid={dataTestId}
+        dir={dir}
+        disabled={disabled}
+        htmlFor={htmlFor}
+        id={id}
+        italic={italic}
+        oneLine={oneLine}
         placement={placement}
         prominence={prominence}
+        ref={elementRef}
         sentiment={sentiment}
-        variant={variant}
-        oneLine={oneLine}
-        className={className}
-        disabled={disabled}
-        italic={italic}
-        underline={underline}
         strikeThrough={strikeThrough}
-        id={id}
-        dir={dir}
-        htmlFor={htmlFor}
-        data-testid={dataTestId}
+        underline={underline}
+        variant={variant}
         whiteSpace={whiteSpace}
-        aria-hidden={ariaHidden}
       >
         {children}
       </StyledText>

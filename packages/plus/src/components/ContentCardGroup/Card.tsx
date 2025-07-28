@@ -78,11 +78,11 @@ export const Card = forwardRef<HTMLAnchorElement, CardProps>(
     },
     ref,
   ) => (
-    <StyledWrapper href={href} target={target} ref={ref}>
+    <StyledWrapper href={href} ref={ref} target={target}>
       <FullHeightStack
+        alignItems="center"
         direction="row"
         gap={2}
-        alignItems="center"
         justifyContent="space-between"
       >
         <StyledStack gap="0.5">
@@ -90,25 +90,25 @@ export const Card = forwardRef<HTMLAnchorElement, CardProps>(
             {subtitle ? (
               <Text
                 as={subtitleAs || 'h5'}
-                variant="caption"
+                oneLine
                 prominence="weak"
                 sentiment="neutral"
-                oneLine
+                variant="caption"
               >
                 {subtitle}
               </Text>
             ) : null}
             <Text
               as={titleAs || 'h3'}
-              variant="bodyStrong"
-              sentiment="neutral"
               oneLine
+              sentiment="neutral"
+              variant="bodyStrong"
             >
               {title}
             </Text>
           </div>
           {description ? (
-            <Text as="p" variant="bodySmall" sentiment="neutral" oneLine>
+            <Text as="p" oneLine sentiment="neutral" variant="bodySmall">
               {description}
             </Text>
           ) : null}

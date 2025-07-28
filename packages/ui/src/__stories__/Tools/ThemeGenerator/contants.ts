@@ -22,12 +22,12 @@ export const SHADES_KEYS = [
  * If there is an array it means that one sentiment share the same shades.
  */
 export const SHADES_KEYS_MATCHING = {
+  danger: 'fuchsia',
+  info: 'blue',
   primary: 'violet',
   secondary: 'purple',
-  danger: 'fuchsia',
-  warning: ['yellow', 'brown'],
   success: 'emerald',
-  info: 'blue',
+  warning: ['yellow', 'brown'],
 }
 
 /**
@@ -39,33 +39,33 @@ export const INITIAL_VALUES = {
   sentiments: [
     {
       key: 'primary',
-      value: '#521094',
       required: true,
+      value: '#521094',
     },
     {
       key: 'secondary',
-      value: '#b824f9',
       required: true,
+      value: '#b824f9',
     },
     {
       key: 'success',
-      value: '#2c8564',
       required: true,
+      value: '#2c8564',
     },
     {
       key: 'warning',
-      value: '#fbc600',
       required: true,
+      value: '#fbc600',
     },
     {
       key: 'danger',
-      value: '#e51963',
       required: true,
+      value: '#e51963',
     },
     {
       key: 'info',
-      value: '#0078d2',
       required: true,
+      value: '#0078d2',
     },
   ],
 } as const

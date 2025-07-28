@@ -46,9 +46,9 @@ const NoAnimationExpandable = ({
   'data-testid': dataTestId,
 }: ExpandableProps) => (
   <div
-    style={{ minHeight, display: !opened ? 'none' : undefined }}
-    data-testid={dataTestId}
     className={className}
+    data-testid={dataTestId}
+    style={{ display: !opened ? 'none' : undefined, minHeight }}
   >
     {children}
   </div>
@@ -136,11 +136,11 @@ export const AnimatedExpandable = ({
 
   return (
     <StyledExpandable
+      animationDuration={animationDuration}
+      className={className}
+      data-is-animated={shouldBeAnimated && !isFirstRender.current}
       data-testid={dataTestId}
       ref={ref}
-      className={className}
-      animationDuration={animationDuration}
-      data-is-animated={shouldBeAnimated && !isFirstRender.current}
     >
       {children}
     </StyledExpandable>
@@ -163,11 +163,11 @@ export const Expandable = ({
   if (animationDuration > 0) {
     return (
       <AnimatedExpandable
-        opened={opened}
-        minHeight={minHeight}
+        animationDuration={animationDuration}
         className={className}
         data-testid={dataTestId}
-        animationDuration={animationDuration}
+        minHeight={minHeight}
+        opened={opened}
       >
         {children}
       </AnimatedExpandable>
@@ -176,8 +176,8 @@ export const Expandable = ({
 
   return (
     <NoAnimationExpandable
-      data-testid={dataTestId}
       className={className}
+      data-testid={dataTestId}
       minHeight={minHeight}
       opened={opened}
     >

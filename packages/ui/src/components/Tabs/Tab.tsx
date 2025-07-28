@@ -158,15 +158,13 @@ export const Tab = forwardRef(
     return (
       <StyledTooltip text={tooltip}>
         <StyledTabButton
-          role="tab"
-          ref={ref as unknown as Ref<HTMLButtonElement>}
-          className={className}
-          as={computedAs}
+          aria-disabled={disabled}
           aria-label={value ? `${value}` : undefined}
           aria-selected={isSelected}
-          aria-disabled={disabled}
+          as={computedAs}
+          className={className}
+          data-is-selected={isSelected}
           disabled={computedAs === 'button' ? disabled : undefined}
-          type={computedAs === 'button' ? 'button' : undefined}
           onClick={event => {
             if (value !== undefined) {
               onChange(value)
@@ -177,16 +175,18 @@ export const Tab = forwardRef(
             onKeyDown?.(event)
             if (!event.defaultPrevented && !disabled && value) onChange(value)
           }}
-          data-is-selected={isSelected}
+          ref={ref as unknown as Ref<HTMLButtonElement>}
+          role="tab"
+          type={computedAs === 'button' ? 'button' : undefined}
           {...props}
         >
           <Stack direction="column" gap={0.5}>
-            <Stack direction="row" alignItems="center">
+            <Stack alignItems="center" direction="row">
               {children}
               {typeof counter === 'number' || typeof counter === 'string' ? (
                 <StyledBadge
-                  sentiment={isSelected ? 'primary' : 'neutral'}
                   prominence={isSelected ? 'strong' : 'default'}
+                  sentiment={isSelected ? 'primary' : 'neutral'}
                   size="medium"
                 >
                   {counter}
@@ -198,9 +198,9 @@ export const Tab = forwardRef(
               <Stack direction="row">
                 <StyledText
                   as="span"
-                  variant="bodySmall"
-                  sentiment="neutral"
                   prominence="weak"
+                  sentiment="neutral"
+                  variant="bodySmall"
                 >
                   {subtitle}
                 </StyledText>

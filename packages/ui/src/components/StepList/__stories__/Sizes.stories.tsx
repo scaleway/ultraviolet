@@ -1,5 +1,5 @@
-import { StepList } from '..'
 import type { Sizes as SizesType } from '..'
+import { StepList } from '..'
 import { Template } from './Template.stories'
 
 export const Sizes = Template.bind({})

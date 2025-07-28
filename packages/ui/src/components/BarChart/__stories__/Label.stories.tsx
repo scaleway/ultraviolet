@@ -8,19 +8,19 @@ export const Label: StoryFn<typeof BarChart> = ({ ...props }) => (
 
 Label.args = {
   chartProps: {
+    enableLabel: true,
     label: d => `${d.value} €`,
     labelOffset: 10,
     labelPosition: 'end',
-    enableLabel: true,
     legends: [
       {
-        dataFrom: 'keys',
         anchor: 'bottom-left',
+        dataFrom: 'keys',
         direction: 'row',
-        translateY: 50,
+        itemHeight: 16,
         itemsSpacing: 3,
         itemWidth: 100,
-        itemHeight: 16,
+        translateY: 50,
       },
     ],
   },

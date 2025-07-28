@@ -10,12 +10,12 @@ import {
   SecurityCategoryIcon,
   UseCaseCategoryIcon,
 } from '@ultraviolet/icons/category'
-import { Stack, Tooltip, fadeIn, fadeOut } from '@ultraviolet/ui'
+import { fadeIn, fadeOut, Stack, Tooltip } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
 import { useCallback, useEffect, useState } from 'react'
 import { Navigation, NavigationProvider, useNavigation } from '..'
-import logoSmall from './assets/logo-small.svg'
 import logo from './assets/logo.svg'
+import logoSmall from './assets/logo-small.svg'
 
 const Image = styled.img`
   animation: ${fadeIn} 300ms ease-in-out;
@@ -61,289 +61,289 @@ const PlaygroundContent = ({ ...props }: ComponentProps<typeof Navigation>) => {
 
   return (
     <Navigation
-      onWidthResize={saveWidthInLocalStorage}
-      onToggleExpand={saveExpandedInLocalStorage}
       logo={
         <a
-          href="https://scaleway.com"
-          target="_blank"
-          rel="noreferrer"
           aria-label="logo"
+          href="https://scaleway.com"
+          rel="noreferrer"
+          target="_blank"
         >
-          <Stack gap={1} direction="row">
-            <img src={logoSmall} alt="" height="22px" />
-            <Image src={logo} alt="" height="22px" data-expanded={expanded} />
+          <Stack direction="row" gap={1}>
+            <img alt="" height="22px" src={logoSmall} />
+            <Image alt="" data-expanded={expanded} height="22px" src={logo} />
           </Stack>
         </a>
       }
+      onToggleExpand={saveExpandedInLocalStorage}
+      onWidthResize={saveWidthInLocalStorage}
       {...props}
     >
       <Navigation.Item
-        label="Organization Dashboard"
-        id="organization-dashboard"
-        categoryIcon={<OrganizationDashboardCategoryIcon variant="neutral" />}
-        noPinButton
         active={active === 'Organization Dashboard'}
+        categoryIcon={<OrganizationDashboardCategoryIcon variant="neutral" />}
+        id="organization-dashboard"
+        label="Organization Dashboard"
+        noPinButton
         onClickPinUnpin={onClickPinUnpin}
         onToggle={() => setActive('Organization Dashboard')}
       />
       <Navigation.Item
-        label="Project Dashboard"
-        id="project-dashboard"
-        categoryIcon={<UseCaseCategoryIcon variant="neutral" />}
-        badgeText="setup"
-        badgeSentiment="primary"
-        noPinButton
         active={active === 'Project Dashboard'}
+        badgeSentiment="primary"
+        badgeText="setup"
+        categoryIcon={<UseCaseCategoryIcon variant="neutral" />}
+        id="project-dashboard"
+        label="Project Dashboard"
+        noPinButton
         onClickPinUnpin={onClickPinUnpin}
         onToggle={() => setActive('Project Dashboard')}
       />
       <Navigation.PinnedItems
-        toggle={pinnedItemsExpanded}
-        onToggle={toggle => setPinnedItemsExpanded(!!toggle)}
         itemWrapper={(item, id) => (
-          <Tooltip text={id} placement="top">
+          <Tooltip placement="top" text={id}>
             {item}
           </Tooltip>
         )}
+        onToggle={toggle => setPinnedItemsExpanded(!!toggle)}
+        toggle={pinnedItemsExpanded}
       />
       <Navigation.Separator />
       <Navigation.Group label="Products">
         <Navigation.Item
-          label="Compute"
-          id="compute"
-          subLabel="All compute ressources"
           categoryIcon={<BaremetalCategoryIcon variant="primary" />}
+          id="compute"
+          label="Compute"
+          subLabel="All compute ressources"
         >
           <Navigation.Item
-            label="Instance"
-            id="instance"
-            badgeText="new"
-            badgeSentiment="success"
             active={active === 'Instance'}
+            badgeSentiment="success"
+            badgeText="new"
+            id="instance"
+            label="Instance"
             onClickPinUnpin={onClickPinUnpin}
             onToggle={() => setActive('Instance')}
           />
           <Navigation.Item
-            label="Elastic Metal"
-            id="elastic-metal"
-            disabled
             active={active === 'Elastic Metal'}
+            disabled
+            id="elastic-metal"
+            label="Elastic Metal"
             onClickPinUnpin={onClickPinUnpin}
             onToggle={() => setActive('Elastic Metal')}
           />
           <Navigation.Item
-            label="Dedibox"
-            id="dedibox"
-            href="https://scaleway.com"
-            target="_blank"
             active={active === 'Dedibox'}
+            href="https://scaleway.com"
+            id="dedibox"
+            label="Dedibox"
             onClickPinUnpin={onClickPinUnpin}
             onToggle={() => setActive('Dedibox')}
+            target="_blank"
           />
           <Navigation.Item
-            label="Very long product name with spaces"
-            id="very-long-product-name-with-spaces"
-            badgeText="internal"
-            badgeSentiment="danger"
             active={active === 'Very long product name with spaces'}
+            badgeSentiment="danger"
+            badgeText="internal"
+            id="very-long-product-name-with-spaces"
+            label="Very long product name with spaces"
             onClickPinUnpin={onClickPinUnpin}
             onToggle={() => setActive('Very long product name with spaces')}
           />
           <Navigation.Item
-            label="Verylongproductnamewithoutspace"
-            id="verylongproductnamewithoutspace"
-            badgeText="internal"
-            badgeSentiment="danger"
             active={active === 'Verylongproductnamewithoutspace'}
+            badgeSentiment="danger"
+            badgeText="internal"
+            id="verylongproductnamewithoutspace"
+            label="Verylongproductnamewithoutspace"
             onClickPinUnpin={onClickPinUnpin}
             onToggle={() => setActive('Verylongproductnamewithoutspace')}
           />
           <Navigation.Item id="advanced" label="Advanced">
             <Navigation.Item
-              label="Kubernetes"
-              id="kubernetes"
               active={active === 'Kubernetes'}
+              id="kubernetes"
+              label="Kubernetes"
               onClickPinUnpin={onClickPinUnpin}
               onToggle={() => setActive('Kubernetes')}
             />
             <Navigation.Item
-              label="OpenStack"
-              id="openstack"
               active={active === 'OpenStack'}
+              id="openstack"
+              label="OpenStack"
               onClickPinUnpin={onClickPinUnpin}
               onToggle={() => setActive('OpenStack')}
             />
           </Navigation.Item>
         </Navigation.Item>
         <Navigation.Item
-          label="Storage"
-          id="storage"
           categoryIcon={<DataAndAnalyticsCategoryIcon variant="primary" />}
+          id="storage"
+          label="Storage"
         >
           <Navigation.Item
-            label="Block Storage"
-            id="block-storage"
             active={active === 'Block Storage'}
+            id="block-storage"
+            label="Block Storage"
             onClickPinUnpin={onClickPinUnpin}
             onToggle={() => setActive('Block Storage')}
           />
           <Navigation.Item
-            label="Object Storage"
-            id="object-storage"
-            badgeText="beta"
-            badgeSentiment="warning"
             active={active === 'Object Storage'}
+            badgeSentiment="warning"
+            badgeText="beta"
+            id="object-storage"
+            label="Object Storage"
             onClickPinUnpin={onClickPinUnpin}
             onToggle={() => setActive('Object Storage')}
           />
         </Navigation.Item>
         <Navigation.Item
-          label="Network with a very long name"
-          id="network"
           categoryIcon={<NetworkCategoryIcon variant="primary" />}
+          id="network"
+          label="Network with a very long name"
         >
           <Navigation.Item
-            label="Load Balancer"
-            id="load-balancer"
             active={active === 'Load Balancer'}
+            id="load-balancer"
+            label="Load Balancer"
             onClickPinUnpin={onClickPinUnpin}
             onToggle={() => setActive('Load Balancer')}
           />
           <Navigation.Item
-            label="IP"
-            id="ip"
             active={active === 'IP'}
+            id="ip"
+            label="IP"
             onClickPinUnpin={onClickPinUnpin}
             onToggle={() => setActive('IP')}
           />
           <Navigation.Item
-            label="VPC"
-            id="vpc"
             active={active === 'VPC'}
+            id="vpc"
+            label="VPC"
             onClickPinUnpin={onClickPinUnpin}
             onToggle={() => setActive('VPC')}
           />
         </Navigation.Item>
         <Navigation.Item
+          categoryIcon={<DatabaseCategoryIcon variant="primary" />}
           id="database"
           label="Database"
-          categoryIcon={<DatabaseCategoryIcon variant="primary" />}
         >
           <Navigation.Item
-            label="Managed Database"
-            id="managed-database"
             active={active === 'Managed Database'}
+            id="managed-database"
+            label="Managed Database"
             onClickPinUnpin={onClickPinUnpin}
             onToggle={() => setActive('Managed Database')}
           />
           <Navigation.Item
-            label="Redis"
-            id="redis"
             active={active === 'Redis'}
+            id="redis"
+            label="Redis"
             onClickPinUnpin={onClickPinUnpin}
             onToggle={() => setActive('Redis')}
           />
           <Navigation.Item
-            label="Elasticsearch"
-            id="elasticsearch"
             active={active === 'Elasticsearch'}
+            id="elasticsearch"
+            label="Elasticsearch"
             onClickPinUnpin={onClickPinUnpin}
             onToggle={() => setActive('Elasticsearch')}
           />
         </Navigation.Item>
         <Navigation.Item
-          label="Monitoring"
-          id="monitoring"
           categoryIcon={<MonitoringCategoryIcon variant="primary" />}
+          id="monitoring"
+          label="Monitoring"
         >
           <Navigation.Item
-            label="Logs"
-            id="logs"
             active={active === 'Logs'}
+            id="logs"
+            label="Logs"
             onClickPinUnpin={onClickPinUnpin}
             onToggle={() => setActive('Logs')}
           />
           <Navigation.Item
-            label="Metrics"
-            id="metrics"
             active={active === 'Metrics'}
+            id="metrics"
+            label="Metrics"
             onClickPinUnpin={onClickPinUnpin}
             onToggle={() => setActive('Metrics')}
           />
           <Navigation.Item
-            label="Alerts"
-            id="alerts"
             active={active === 'Alerts'}
+            id="alerts"
+            label="Alerts"
             onClickPinUnpin={onClickPinUnpin}
             onToggle={() => setActive('Alerts')}
           />
         </Navigation.Item>
         <Navigation.Item
-          label="Security"
-          id="security"
           categoryIcon={<SecurityCategoryIcon variant="primary" />}
+          id="security"
+          label="Security"
         >
           <Navigation.Item
-            label="Firewall"
-            id="firewall"
             active={active === 'Firewall'}
+            id="firewall"
+            label="Firewall"
             onClickPinUnpin={onClickPinUnpin}
             onToggle={() => setActive('Firewall')}
           />
           <Navigation.Item
-            label="Certificate"
-            id="certificate"
             active={active === 'Certificate'}
+            id="certificate"
+            label="Certificate"
             onClickPinUnpin={onClickPinUnpin}
             onToggle={() => setActive('Certificate')}
           />
           <Navigation.Item
-            label="VPN"
-            id="vpn"
             active={active === 'VPN'}
+            id="vpn"
+            label="VPN"
             onClickPinUnpin={onClickPinUnpin}
             onToggle={() => setActive('VPN')}
           />
         </Navigation.Item>
       </Navigation.Group>
       <Navigation.Separator />
-      <Navigation.Item label="Quick Links" id="quick-links" noExpand>
+      <Navigation.Item id="quick-links" label="Quick Links" noExpand>
         <Navigation.Item
-          label="Support"
-          id="support"
-          noPinButton
           active={active === 'Support'}
+          id="support"
+          label="Support"
+          noPinButton
           onClickPinUnpin={onClickPinUnpin}
           onToggle={() => setActive('Support')}
         />
         <Navigation.Item
-          label="Abuse"
-          id="abuse"
-          noPinButton
           active={active === 'Abuse'}
+          id="abuse"
+          label="Abuse"
+          noPinButton
           onClickPinUnpin={onClickPinUnpin}
           onToggle={() => setActive('Abuse')}
         />
         <Navigation.Item
-          label="Documentation"
-          id="documentation"
-          badgeText="new"
-          badgeSentiment="success"
-          href="http://scaleway.com"
-          target="_blank"
           active={active === 'Documentation'}
+          badgeSentiment="success"
+          badgeText="new"
+          href="http://scaleway.com"
+          id="documentation"
+          label="Documentation"
           onClickPinUnpin={onClickPinUnpin}
           onToggle={() => setActive('Documentation')}
+          target="_blank"
         />
         <Navigation.Item
-          label="Feature Request"
-          id="feature-request"
-          href="http://scaleway.com"
-          target="_blank"
           active={active === 'Feature Request'}
+          href="http://scaleway.com"
+          id="feature-request"
+          label="Feature Request"
           onClickPinUnpin={onClickPinUnpin}
           onToggle={() => setActive('Feature Request')}
+          target="_blank"
         />
       </Navigation.Item>
     </Navigation>
@@ -359,16 +359,16 @@ export const Playground: StoryFn<ComponentProps<typeof Navigation>> = props => {
   return (
     <div
       style={{
-        height: '800px',
-        display: 'flex',
         background: '#f1f1f1',
+        display: 'flex',
+        height: '800px',
         margin: '-10px 0', // This is to compensate the border added by storybook around the story
       }}
     >
       <NavigationProvider
         initialExpanded={navigationExpanded}
-        initialWidth={navigationWidth}
         initialPinned={pinnedItems}
+        initialWidth={navigationWidth}
         pinLimit={2}
         pinnedFeature
       >
@@ -376,20 +376,20 @@ export const Playground: StoryFn<ComponentProps<typeof Navigation>> = props => {
       </NavigationProvider>
       <div
         style={{
-          overflowY: 'scroll',
-          display: 'flex',
-          flexDirection: 'column',
           alignItems: 'center',
+          display: 'flex',
           flex: '1',
+          flexDirection: 'column',
           gap: '16px',
+          overflowY: 'scroll',
           padding: '16px',
         }}
       >
         <img
+          alt="logo"
+          height="256px"
           src="https://via.placeholder.com/256"
           width="256px"
-          height="256px"
-          alt="logo"
         />
         <div>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempor

@@ -42,13 +42,13 @@ export const InfoTableCell = ({
   title,
   multiline = false,
 }: CellProps) => (
-  <Stack gap="0.5" width="100%" minWidth="0">
+  <Stack gap="0.5" minWidth="0" width="100%">
     <Term>
       <Text
         as="div"
-        variant="bodySmallStrong"
-        sentiment="neutral"
         prominence="weak"
+        sentiment="neutral"
+        variant="bodySmallStrong"
       >
         {title}
       </Text>
@@ -56,10 +56,10 @@ export const InfoTableCell = ({
     <Desc>
       <StyledText
         as="div"
-        variant="body"
-        sentiment="neutral"
-        prominence="default"
         oneLine={!multiline}
+        prominence="default"
+        sentiment="neutral"
+        variant="body"
       >
         {children}
       </StyledText>

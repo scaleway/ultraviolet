@@ -2,18 +2,18 @@ import { GithubIcon } from '@ultraviolet/icons'
 import { Button, Stack } from '@ultraviolet/ui'
 
 const GithubAndDocumentationButtons = () => (
-  <Stack gap={2} direction="row">
+  <Stack direction="row" gap={2}>
     <Button
-      variant="filled"
-      sentiment="neutral"
-      href="https://github.com/scaleway/ultraviolet"
       aria-label="github"
+      href="https://github.com/scaleway/ultraviolet"
+      sentiment="neutral"
+      variant="filled"
     >
       <GithubIcon size="large" />
     </Button>
     <Button
-      href="https://storybook.ultraviolet.scaleway.com/"
       aria-label="documentation"
+      href="https://storybook.ultraviolet.scaleway.com/"
     >
       Documentation
     </Button>

@@ -80,21 +80,23 @@ export const CheckboxGroupField = <
     field,
     fieldState: { error },
   } = useController<TFieldValues, TFieldName>({
-    name,
     control,
-    shouldUnregister,
+    name,
     rules: {
       validate: {
         checkboxValid,
         ...validate,
       },
     },
+    shouldUnregister,
   })
 
   return (
     <CheckboxGroup
       {...props}
-      value={field.value}
+      error={getError({ label: legend }, error) ?? customError}
+      legend={legend}
+      name={name}
       onChange={event => {
         const fieldValue = field.value as string[]
         if (fieldValue?.includes(event.currentTarget.value)) {
@@ -114,10 +116,8 @@ export const CheckboxGroupField = <
           >,
         )
       }}
-      error={getError({ label: legend }, error) ?? customError}
-      name={name}
       required={required}
-      legend={legend}
+      value={field.value}
     >
       {children}
     </CheckboxGroup>

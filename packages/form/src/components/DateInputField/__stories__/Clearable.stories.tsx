@@ -1,8 +1,8 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { Stack } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
-import { DateInputField } from '..'
 import { Submit } from '../../Submit'
+import { DateInputField } from '..'
 
 export const Clearable: StoryFn<
   ComponentProps<typeof DateInputField>
@@ -14,7 +14,7 @@ export const Clearable: StoryFn<
 )
 
 Clearable.args = {
+  clearable: true,
   name: 'date',
   required: true,
-  clearable: true,
 }

@@ -7,8 +7,8 @@ import { Label } from '../Label'
 import { Row } from '../Row'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
-import { SelectableCardOptionGroupContext } from './Provider'
 import { Option } from './components/Option'
+import { SelectableCardOptionGroupContext } from './Provider'
 import type { Sizes } from './types'
 
 const FieldSet = styled.fieldset`
@@ -65,14 +65,14 @@ export const SelectableCardOptionGroup = ({
 }: SelectableCardOptionGroupProps) => {
   const contextValue = useMemo(
     () => ({
+      disabled,
+      error: !!error,
       groupName: name,
       groupValue: value,
       onChange,
       onChangeOption,
       optionValue,
       required,
-      disabled,
-      error: !!error,
       size,
     }),
     [
@@ -96,8 +96,8 @@ export const SelectableCardOptionGroup = ({
             {legend ? (
               <Label
                 as="legend"
-                required={required}
                 labelDescription={legendDescription}
+                required={required}
               >
                 {legend}
               </Label>
@@ -110,9 +110,9 @@ export const SelectableCardOptionGroup = ({
         {(error && typeof error === 'string') || helper ? (
           <Text
             as="span"
-            variant="caption"
             prominence="weak"
             sentiment={error ? 'danger' : 'neutral'}
+            variant="caption"
           >
             {helper || error}
           </Text>

@@ -136,37 +136,37 @@ export const PinnedItems = ({
     return (
       <div style={{ width: animation ? '100%' : undefined }}>
         <Item
-          label={locales['navigation.pinned.item.group.label']}
           categoryIcon={<PinCategoryIcon variant="neutral" />}
-          type="pinnedGroup"
-          id="pinned-group"
           data-testid="pinned-group"
-          toggle={toggle}
+          id="pinned-group"
+          label={locales['navigation.pinned.item.group.label']}
           onToggle={onToggle}
+          toggle={toggle}
+          type="pinnedGroup"
         >
           {pinnedItems.length > 0 ? (
             pinnedItems.map((itemId, index) => {
               if (items[itemId]?.label) {
                 const itemElement = (
                   <Item
-                    label={items[itemId].label}
-                    type="pinned"
-                    index={index}
-                    toggle={toggle}
-                    onToggle={items[itemId]?.onToggle}
-                    id={itemId}
                     active={items[itemId]?.active ?? false}
+                    id={itemId}
+                    index={index}
+                    label={items[itemId].label}
                     onClickPinUnpin={
                       items[itemId]?.onClickPinUnpin ?? undefined
                     }
+                    onToggle={items[itemId]?.onToggle}
+                    toggle={toggle}
+                    type="pinned"
                   />
                 )
 
                 return (
                   <RelativeDiv key={itemId}>
                     <DropableArea
-                      onDragOver={onDragOver}
                       onDragLeave={onDragLeave}
+                      onDragOver={onDragOver}
                       onDrop={event => onDrop(event, index)}
                     />
                     {itemWrapper
@@ -182,9 +182,9 @@ export const PinnedItems = ({
             <TextContainer data-expanded={expanded}>
               <Text
                 as="p"
-                variant="caption"
                 prominence="weak"
                 sentiment="neutral"
+                variant="caption"
               >
                 {locales['navigation.pinned.item.group.empty']}
               </Text>
@@ -193,8 +193,8 @@ export const PinnedItems = ({
 
           <RelativeDiv>
             <DropableArea
-              onDragOver={onDragOver}
               onDragLeave={onDragLeave}
+              onDragOver={onDragOver}
               onDrop={event => onDrop(event, pinnedItems.length)}
             />
           </RelativeDiv>

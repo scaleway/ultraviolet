@@ -9,8 +9,8 @@ Playground.args = {
     <>
       <Conversation.Date>2022-03-02</Conversation.Date>
       <Conversation.Message
-        avatar={<Avatar shape="circle" variant="text" text="MC" />}
         align="right"
+        avatar={<Avatar shape="circle" text="MC" variant="text" />}
       >
         I finally tried that new café downtown. Their coffee is amazing!
       </Conversation.Message>
@@ -19,8 +19,8 @@ Playground.args = {
         sent
       </Conversation.MessageInfos>
       <Conversation.Message
-        avatar={<Avatar shape="circle" variant="text" text="TM" />}
         align="left"
+        avatar={<Avatar shape="circle" text="TM" variant="text" />}
       >
         Oh really? I&#39;ve heard good things. Did you get one of those fancy
         lattes with the art on top?
@@ -30,7 +30,7 @@ Playground.args = {
         read
       </Conversation.MessageInfos>
       <Conversation.Message
-        avatar={<Avatar shape="circle" variant="text" text="TM" />}
+        avatar={<Avatar shape="circle" text="TM" variant="text" />}
       >
         Yeah, they made a leaf pattern. I almost didn’t want to drink it, but I
         couldn’t resist!

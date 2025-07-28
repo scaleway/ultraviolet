@@ -6,8 +6,8 @@ describe('VerificationCodeField', () => {
   test('should render correctly', () => {
     const { asFragment } = renderWithForm(
       <VerificationCodeField
-        name="code"
         label="Code"
+        name="code"
         placeholder="0"
         required
       />,

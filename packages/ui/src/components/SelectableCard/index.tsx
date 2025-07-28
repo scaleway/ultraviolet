@@ -362,7 +362,7 @@ export const SelectableCard = forwardRef(
         if (tooltip) {
           return (
             <Stack flex={1}>
-              <Tooltip text={tooltip} containerFullHeight>
+              <Tooltip containerFullHeight text={tooltip}>
                 {subChildren}
               </Tooltip>
             </Stack>
@@ -378,11 +378,11 @@ export const SelectableCard = forwardRef(
         if (ProductIconUsed || illustration) {
           return (
             <Stack
-              flex={1}
+              alignItems="stretch"
               direction="row"
+              flex={1}
               justifyContent="space-between"
               width="100%"
-              alignItems="stretch"
             >
               <IllustrationStack>{subChildren}</IllustrationStack>
               <Stack justifyContent="center">
@@ -398,8 +398,8 @@ export const SelectableCard = forwardRef(
                     />
                   ) : (
                     <StyledImg
-                      src={illustration}
                       alt="illustration"
+                      src={illustration}
                       width={220}
                     />
                   )}
@@ -455,76 +455,76 @@ export const SelectableCard = forwardRef(
     return (
       <ParentContainer>
         <Container
+          alignItems="start"
+          className={className}
+          data-checked={checked}
+          data-disabled={disabled}
+          data-error={isError}
+          data-has-default-cursor={type === 'checkbox' && isComplexChildren}
+          data-has-label={!!label}
+          data-image={image}
+          data-testid={dataTestId}
+          data-type={type}
+          direction={label ? 'column' : 'row'}
+          flex={1}
+          gap={0.5}
           onClick={
             type === 'checkbox' && isComplexChildren
               ? undefined
               : onClickContainer
           }
           onKeyDown={onKeyDown}
-          className={className}
-          data-checked={checked}
-          data-disabled={disabled}
-          data-error={isError}
-          data-testid={dataTestId}
-          data-type={type}
-          data-has-label={!!label}
-          data-image={image}
           ref={ref}
-          alignItems="start"
-          direction={label ? 'column' : 'row'}
-          gap={0.5}
-          flex={1}
-          tabIndex={disabled ? undefined : 0}
           role="button"
-          data-has-default-cursor={type === 'checkbox' && isComplexChildren}
+          tabIndex={disabled ? undefined : 0}
         >
           <IllustrationContainer>
             {type === 'radio' ? (
               <StyledRadio
-                name={name}
-                value={value}
-                onChange={onChange}
-                showTick={showTick}
                 checked={checked}
+                data-error={isError}
                 disabled={disabled}
                 error={isError}
-                onFocus={onFocus}
-                onBlur={onBlur}
                 hasLabel={!!label}
                 id={id}
+                name={name}
+                onBlur={onBlur}
+                onChange={onChange}
+                onFocus={onFocus}
                 ref={innerRef}
-                data-error={isError}
+                showTick={showTick}
                 tabIndex={-1}
+                value={value}
                 {...(label ? { label } : { 'aria-label': ariaLabel as string })}
               />
             ) : (
               <StyledCheckbox
-                name={name}
-                value={value}
-                onChange={onChange}
-                showTick={showTick}
                 checked={checked}
+                data-error={isError}
                 disabled={disabled}
                 error={isError}
-                onFocus={onFocus}
-                onBlur={onBlur}
                 hasLabel={!!label}
                 id={id}
+                name={name}
+                onBlur={onBlur}
+                onChange={onChange}
+                onFocus={onFocus}
                 ref={innerRef}
-                data-error={isError}
+                showTick={showTick}
                 tabIndex={-1}
+                value={value}
                 {...(label
-                  ? { children: label, 'aria-label': undefined }
+                  ? { 'aria-label': undefined, children: label }
                   : { 'aria-label': ariaLabel as string })}
               />
             )}
             {children ? (
               <StyledStack
-                ref={childrenRef}
-                data-has-label={!!label && showTick}
                 data-has-default-cursor={
                   type === 'checkbox' && isComplexChildren
                 }
+                data-has-label={!!label && showTick}
+                ref={childrenRef}
                 width="100%"
               >
                 {typeof children === 'function'

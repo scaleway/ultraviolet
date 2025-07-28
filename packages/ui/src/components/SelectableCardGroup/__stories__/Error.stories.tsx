@@ -1,7 +1,7 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
-import { SelectableCardGroup } from '..'
 import { Stack } from '../../Stack'
+import { SelectableCardGroup } from '..'
 
 export const Error: StoryFn<typeof SelectableCardGroup> = args => {
   const [values, onChange] = useState(['value-1'])
@@ -11,11 +11,8 @@ export const Error: StoryFn<typeof SelectableCardGroup> = args => {
     <Stack gap={4}>
       <SelectableCardGroup
         {...args}
-        legend="Error with 1 column and checkbox"
-        value={values}
         columns={1}
-        showTick
-        type="checkbox"
+        legend="Error with 1 column and checkbox"
         onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
           const data = [...values]
           if (data.includes(event.currentTarget.value)) {
@@ -25,33 +22,36 @@ export const Error: StoryFn<typeof SelectableCardGroup> = args => {
           }
           onChange(data)
         }}
+        showTick
+        type="checkbox"
+        value={values}
       >
-        <SelectableCardGroup.Card value="value-1" label="Checkbox 1" />
-        <SelectableCardGroup.Card value="value-2" label="Checkbox 2" />
+        <SelectableCardGroup.Card label="Checkbox 1" value="value-1" />
+        <SelectableCardGroup.Card label="Checkbox 2" value="value-2" />
       </SelectableCardGroup>
 
       <SelectableCardGroup
         {...args}
-        legend="Error with 2 columns and radio"
         columns={2}
-        value={valueRow}
-        showTick
-        type="radio"
+        legend="Error with 2 columns and radio"
         onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
           onChange2(event.currentTarget.value)
         }
+        showTick
+        type="radio"
+        value={valueRow}
       >
-        <SelectableCardGroup.Card value="radio-1" label="Radio 1" />
-        <SelectableCardGroup.Card value="radio-2" label="Radio 2" />
+        <SelectableCardGroup.Card label="Radio 1" value="radio-1" />
+        <SelectableCardGroup.Card label="Radio 2" value="radio-2" />
       </SelectableCardGroup>
     </Stack>
   )
 }
 
 Error.args = {
-  name: 'template',
-  legend: 'Error',
   error: 'This is an error',
+  legend: 'Error',
+  name: 'template',
 }
 Error.parameters = {
   docs: {

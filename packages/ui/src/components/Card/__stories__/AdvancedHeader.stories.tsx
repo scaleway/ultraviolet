@@ -8,8 +8,8 @@ import { Card } from '../index'
 export const AdvancedHeader: StoryFn = args => {
   const CustomHeader = (
     <Stack gap={1}>
-      <Stack gap={1} direction="row" alignItems="center">
-        <Text variant="heading" as="h4" sentiment="neutral" prominence="strong">
+      <Stack alignItems="center" direction="row" gap={1}>
+        <Text as="h4" prominence="strong" sentiment="neutral" variant="heading">
           Advanced Header
         </Text>
         <Badge sentiment="success" size="small">

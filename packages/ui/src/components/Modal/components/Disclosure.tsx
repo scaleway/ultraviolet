@@ -24,11 +24,11 @@ export const Disclosure = ({
   const finalDisclosure = useMemo(() => {
     if (typeof disclosure === 'function') {
       return disclosure({
-        visible,
-        toggle,
-        modalId: id,
         close: handleClose,
+        modalId: id,
         show: handleOpen,
+        toggle,
+        visible,
       })
     }
 
@@ -40,8 +40,8 @@ export const Disclosure = ({
   }
 
   return cloneElement(finalDisclosure, {
-    ref,
     'aria-controls': id,
     'aria-haspopup': 'dialog',
+    ref,
   } as unknown as typeof disclosure)
 }

@@ -1,12 +1,12 @@
 import type { Meta } from '@storybook/react-vite'
-import { CopyButton } from '..'
 import { Stack } from '../../Stack'
+import { CopyButton } from '..'
 
 export default {
   component: CopyButton,
   decorators: [
     StoryComponent => (
-      <Stack gap={2} direction="row">
+      <Stack direction="row" gap={2}>
         <StoryComponent />
       </Stack>
     ),
@@ -14,9 +14,9 @@ export default {
   title: 'Components/Action/CopyButton',
 } as Meta<typeof CopyButton>
 
-export { Playground } from './Playground.stories'
+export { Bordered } from './Bordered.stories'
 export { Children } from './Children.stories'
+export { CustomTexts } from './CustomTexts.stories'
+export { Playground } from './Playground.stories'
 export { Sentiments } from './Sentiments.stories'
 export { Sizes } from './Sizes.stories'
-export { Bordered } from './Bordered.stories'
-export { CustomTexts } from './CustomTexts.stories'

@@ -3,6 +3,6 @@ import { Template } from './Template.stories'
 export const Playground = Template.bind({})
 
 Playground.args = {
-  name: 'playground',
   label: 'Select',
+  name: 'playground',
 }

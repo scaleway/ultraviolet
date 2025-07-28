@@ -19,11 +19,11 @@ const mockItems = (
     category: 'Requests cost',
     subCategories: [
       {
-        title: `${requestsAmount} requests`,
-        price: 0.00000015,
         amount: requestsAmount,
-        priceUnit: 'request',
         fixedPrice: true,
+        price: 0.00000015,
+        priceUnit: 'request',
+        title: `${requestsAmount} requests`,
       },
     ],
   }
@@ -32,19 +32,19 @@ const mockItems = (
     category: 'Duration',
     subCategories: [
       {
-        title: 'Choose a duration',
-        numberInput: true,
-        numberInputValue: requestsAmount2,
-        onChangeInput: setRequestsAmount2,
         hidePrice: true,
+        numberInput: true,
         numberInputControls: false,
         numberInputUnit: 'ms',
+        numberInputValue: requestsAmount2,
+        onChangeInput: setRequestsAmount2,
+        title: 'Choose a duration',
       },
       {
-        title: `Duration: ${requestsAmount2}ms`,
-        price: 100,
         amount: requestsAmount2,
         fixePrice: true,
+        price: 100,
+        title: `Duration: ${requestsAmount2}ms`,
       },
     ],
   }
@@ -66,8 +66,8 @@ export const NumberInput: StoryFn<ComponentProps<typeof OrderSummary>> = () => {
 
   return (
     <OrderSummary
-      items={mockItems(requestsAmount, onChange, requestsAmount2, onChange2)}
       currency="EUR"
+      items={mockItems(requestsAmount, onChange, requestsAmount2, onChange2)}
       localeFormat="en-US"
     />
   )

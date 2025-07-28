@@ -17,9 +17,6 @@ import { useInView } from 'react-intersection-observer'
 import { CustomUnitInput } from './Components/CustomUnitInput'
 import { Item } from './Components/Item'
 import { LineThrough } from './Components/LineThrough'
-import { useEstimateCost } from './EstimateCostProvider'
-import { OverlayComponent } from './OverlayComponent'
-import { OverlayContextProvider } from './OverlayContext'
 import {
   BadgeBeta,
   Cell,
@@ -34,8 +31,11 @@ import {
   TotalPriceCell,
 } from './componentStyle'
 import { maximumFractionDigits, maximumFractionDigitsLong } from './constants'
+import { useEstimateCost } from './EstimateCostProvider'
 import { calculatePrice } from './helper'
 import EstimateCostLocales from './locales/en'
+import { OverlayComponent } from './OverlayComponent'
+import { OverlayContextProvider } from './OverlayContext'
 import type {
   BareEstimateProduct,
   EstimateCostProps,
@@ -143,16 +143,16 @@ export const EstimateCostContent = ({
   const [ref, inView] = useInView()
   const [products, setProducts] = useState<EstimateProduct[]>([]) // product is used to store each items with their price and amount
   const [totalPrice, setTotalPrice] = useState({
-    overlayHourly: 0,
-    maxOverlayHourly: 0,
     hourly: 0,
     maxHourly: 0,
-    total: 0,
+    maxOverlayHourly: 0,
     maxTotal: 0,
+    overlayHourly: 0,
+    total: 0,
   })
   const [iteration, setIteration] = useState<Iteration>({
-    value: 1,
     unit: defaultTimeUnit ?? 'hours',
+    value: 1,
   })
 
   const [isLongFractionDigits, setIsLongFractionDigits] = useState(false)
@@ -207,36 +207,6 @@ export const EstimateCostContent = ({
       !!products.find(product => product.longFractionDigits),
     )
     setTotalPrice({
-      total: !hideTotal
-        ? products.reduce(
-            (acc, product) =>
-              acc +
-              calculatePrice({
-                price: product.price,
-                amount: product.amount,
-                amountFree: product.amountFree,
-                timeUnit: product.noIteration ? 'hours' : iteration.unit,
-                timeAmount: product.noIteration ? 1 : iteration.value,
-                discount: product.discount,
-              }),
-            0,
-          )
-        : 0,
-      maxTotal: isMaxAmountInProducts
-        ? products.reduce(
-            (acc, product) =>
-              acc +
-              calculatePrice({
-                price: product.price,
-                amount: product.maxAmount || product.amount, // Not all products have maxAmount, so we need to check both
-                amountFree: product.amountFree,
-                timeUnit: product.noIteration ? 'hours' : iteration.unit,
-                timeAmount: product.noIteration ? 1 : iteration.value,
-                discount: product.discount,
-              }),
-            0,
-          )
-        : 0,
       hourly: products.reduce(
         (acc, product) =>
           acc +
@@ -257,6 +227,32 @@ export const EstimateCostContent = ({
             0,
           )
         : 0,
+      maxOverlayHourly: isMaxAmountInProducts
+        ? products.reduce(
+            (acc, product) =>
+              acc +
+              (product.noIteration
+                ? 0
+                : (product.price - product.price * product.discount) *
+                  Math.max(product.maxAmount - product.amountFree, 0)),
+            0,
+          )
+        : 0,
+      maxTotal: isMaxAmountInProducts
+        ? products.reduce(
+            (acc, product) =>
+              acc +
+              calculatePrice({
+                amount: product.maxAmount || product.amount, // Not all products have maxAmount, so we need to check both
+                amountFree: product.amountFree,
+                discount: product.discount,
+                price: product.price,
+                timeAmount: product.noIteration ? 1 : iteration.value,
+                timeUnit: product.noIteration ? 'hours' : iteration.unit,
+              }),
+            0,
+          )
+        : 0,
       overlayHourly: products.reduce(
         (acc, product) =>
           acc +
@@ -266,14 +262,18 @@ export const EstimateCostContent = ({
               Math.max(product.amount - product.amountFree, 0)),
         0,
       ),
-      maxOverlayHourly: isMaxAmountInProducts
+      total: !hideTotal
         ? products.reduce(
             (acc, product) =>
               acc +
-              (product.noIteration
-                ? 0
-                : (product.price - product.price * product.discount) *
-                  Math.max(product.maxAmount - product.amountFree, 0)),
+              calculatePrice({
+                amount: product.amount,
+                amountFree: product.amountFree,
+                discount: product.discount,
+                price: product.price,
+                timeAmount: product.noIteration ? 1 : iteration.value,
+                timeUnit: product.noIteration ? 'hours' : iteration.unit,
+              }),
             0,
           )
         : 0,
@@ -307,16 +307,16 @@ export const EstimateCostContent = ({
     <Stack gap={2}>
       {!hideOverlay ? (
         <OverlayComponent
-          inView={inView}
-          totalPrice={totalPrice}
           disableOverlayLeft={disableOverlayLeft}
           disableOverlayRight={disableOverlayRight}
+          discount={discount}
+          inView={inView}
+          isBeta={isBeta}
           OverlayLeft={OverlayLeft}
           OverlayRight={OverlayRight}
-          isBeta={isBeta}
-          discount={discount}
-          unit={overlayUnit ?? 'hours'}
           overlayMargin={overlayMargin}
+          totalPrice={totalPrice}
+          unit={overlayUnit ?? 'hours'}
         >
           {children}
         </OverlayComponent>
@@ -335,9 +335,9 @@ export const EstimateCostContent = ({
             <StyledTable
               cellPadding="0"
               cellSpacing="0"
-              ref={ref}
               data-testid="summary"
               noTotal={hideTotal}
+              ref={ref}
             >
               <colgroup>
                 <col />
@@ -353,8 +353,8 @@ export const EstimateCostContent = ({
                       <TimeCell>
                         <CustomUnitInput
                           defaultTimeUnit={defaultTimeUnit}
-                          setIteration={setIteration}
                           iteration={iteration}
+                          setIteration={setIteration}
                           timeUnits={timeUnits}
                         />
                       </TimeCell>
@@ -366,9 +366,6 @@ export const EstimateCostContent = ({
                 {Children.map(children, (child, index) =>
                   isValidElement<ExtraProps>(child)
                     ? cloneElement(child, {
-                        isLastElement: index === Children.count(children) - 1,
-                        productsCallback,
-                        iteration,
                         discount:
                           discount &&
                           !(
@@ -390,6 +387,9 @@ export const EstimateCostContent = ({
                                   discount?: number
                                 }
                               ).discount,
+                        isLastElement: index === Children.count(children) - 1,
+                        iteration,
+                        productsCallback,
                       })
                     : child,
                 )}
@@ -408,7 +408,6 @@ export const EstimateCostContent = ({
                   <TotalPriceCell hasBorder={false}>
                     {isBeta ? (
                       <BadgeBeta
-                        prominence="strong"
                         long={
                           locales[
                             `estimate.cost.beta.${
@@ -416,6 +415,7 @@ export const EstimateCostContent = ({
                             }`
                           ].length > 25
                         }
+                        prominence="strong"
                         sentiment="warning"
                       >
                         {`${discount > 0 ? discount * 100 : ''}
@@ -430,9 +430,9 @@ export const EstimateCostContent = ({
                     ) : null}
                     <StyledText
                       as="h3"
-                      variant="heading"
-                      sentiment="primary"
                       isBeta={isBeta}
+                      sentiment="primary"
+                      variant="heading"
                     >
                       <LineThrough
                         isActive={isBeta && (discount === 0 || discount >= 1)}
@@ -487,13 +487,13 @@ export const EstimateCostContent = ({
               <StyledFeesTable>
                 <tbody>
                   <Item
+                    isLastElement
                     label={
                       commitmentFees
                         ? locales['estimate.cost.fees.commitment']
                         : monthlyFeesLabel
                     }
                     noIteration
-                    isLastElement
                     price={commitmentFees || monthlyFees}
                     productsCallback={{
                       add: () => {},

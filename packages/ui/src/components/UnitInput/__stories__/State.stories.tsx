@@ -1,6 +1,6 @@
 import type { StoryFn } from '@storybook/react-vite'
-import { UnitInput } from '..'
 import { Stack } from '../../Stack'
+import { UnitInput } from '..'
 import { Template } from './Template.stories'
 
 const optionsSelect = [
@@ -21,17 +21,17 @@ export const States: StoryFn<typeof UnitInput> = props => (
   <Stack gap={2}>
     <UnitInput
       {...props}
-      options={optionsSelect}
-      success="success"
       label="Success"
       name="Success"
+      options={optionsSelect}
+      success="success"
     />
     <UnitInput
       {...props}
-      options={optionsSelect}
       error="error"
       label="Error"
       name="Error"
+      options={optionsSelect}
     />
   </Stack>
 )

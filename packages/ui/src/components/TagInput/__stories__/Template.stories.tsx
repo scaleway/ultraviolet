@@ -5,7 +5,7 @@ import { TagInput } from '..'
 export const Template: StoryFn<typeof TagInput> = args => {
   const [tags, setTags] = useState(['default'])
 
-  return <TagInput name="template" value={tags} onChange={setTags} {...args} />
+  return <TagInput name="template" onChange={setTags} value={tags} {...args} />
 }
 
 Template.args = {

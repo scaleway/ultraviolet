@@ -1,6 +1,6 @@
 import {
-  consoleDarkTheme,
   consoleDarkerTheme,
+  consoleDarkTheme,
   consoleLightTheme,
 } from '@ultraviolet/themes'
 import { shouldMatchEmotionSnapshot } from '@utils/test'

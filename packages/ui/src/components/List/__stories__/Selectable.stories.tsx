@@ -1,9 +1,9 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
-import { List } from '..'
 import { Button } from '../../Button'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
+import { List } from '..'
 import { columns, data } from './resources'
 
 export const Selectable: StoryFn<typeof List> = args => {
@@ -15,9 +15,9 @@ export const Selectable: StoryFn<typeof List> = args => {
         {data.map(planet =>
           planet.id !== 'mars' || clicked ? (
             <List.Row
-              key={planet.id}
-              id={planet.id}
               expandable="Planet description"
+              id={planet.id}
+              key={planet.id}
             >
               <List.Cell>{planet.id}</List.Cell>
               <List.Cell>{planet.name}</List.Cell>
@@ -30,12 +30,12 @@ export const Selectable: StoryFn<typeof List> = args => {
         <List.SelectBar data={data} idKey="id">
           {({ selectedItems, unselectAll }) => (
             <Stack
-              direction="row"
               alignItems="center"
-              justifyContent="space-between"
+              direction="row"
               gap={2}
+              justifyContent="space-between"
             >
-              <Text variant="bodyStrong" as="p" sentiment="primary">
+              <Text as="p" sentiment="primary" variant="bodyStrong">
                 {selectedItems.length} item(s) selected (
                 {selectedItems.map(
                   (item, index) => `${index > 0 ? ', ' : ''}${item.name}`,
@@ -43,12 +43,12 @@ export const Selectable: StoryFn<typeof List> = args => {
                 )
               </Text>
               <Button
-                size="small"
                 onClick={() => {
                   // oxlint-disable-next-line eslint/no-alert
                   alert('elements could be deleted')
                   unselectAll()
                 }}
+                size="small"
               >
                 Delete
               </Button>
@@ -57,7 +57,7 @@ export const Selectable: StoryFn<typeof List> = args => {
         </List.SelectBar>
       </List>
 
-      <button type="button" onClick={() => setClick(!clicked)}>
+      <button onClick={() => setClick(!clicked)} type="button">
         {clicked ? 'remove' : 'add'} mars as a planet
       </button>
     </>

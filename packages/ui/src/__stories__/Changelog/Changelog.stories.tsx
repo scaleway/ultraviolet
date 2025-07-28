@@ -12,7 +12,7 @@ export const Changelog = () => {
 
   return (
     <Stack gap={2}>
-      <Tabs selected={selected} onChange={onChangeHandler}>
+      <Tabs onChange={onChangeHandler} selected={selected}>
         <Tabs.Tab value="components">Components</Tabs.Tab>
         <Tabs.Tab value="form">Form</Tabs.Tab>
         <Tabs.Tab value="themes">Themes</Tabs.Tab>

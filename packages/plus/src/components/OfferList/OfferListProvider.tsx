@@ -1,5 +1,5 @@
-import { createContext, useContext, useState } from 'react'
 import type { Dispatch, ReactNode, SetStateAction } from 'react'
+import { createContext, useContext, useState } from 'react'
 
 type OfferListContextValue = {
   selectable: 'radio' | 'checkbox'
@@ -46,16 +46,16 @@ export const OfferListProvider = ({
   return (
     <OfferListContext.Provider
       value={{
-        selectable,
-        radioSelectedRow,
-        setRadioSelectedRow,
+        autoCollapse,
         checkboxSelectedRows,
-        setCheckboxSelectedRows,
-        expandable,
         disabled,
+        expandable,
         loading,
         onChangeSelect,
-        autoCollapse,
+        radioSelectedRow,
+        selectable,
+        setCheckboxSelectedRows,
+        setRadioSelectedRow,
       }}
     >
       {children}

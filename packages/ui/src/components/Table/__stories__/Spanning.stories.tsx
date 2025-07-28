@@ -14,17 +14,17 @@ export const Spanning: StoryFn = args => (
   >
     <Table.Body>
       {data.map((movie, index) => (
-        <Table.Row key={movie.id} id={movie.id}>
+        <Table.Row id={movie.id} key={movie.id}>
           <Table.Cell>{movie.name}</Table.Cell>
           <Table.Cell>{movie.releaseYear}</Table.Cell>
           {index % 3 === 0 ? (
-            <Table.Cell sentiment="warning" rowSpan={3}>
+            <Table.Cell rowSpan={3} sentiment="warning">
               {movie.trilogy}
             </Table.Cell>
           ) : null}
           <Table.Cell
-            sentiment="success"
             colSpan={movie.director === movie.storyBy ? 2 : 1}
+            sentiment="success"
           >
             {movie.director}
           </Table.Cell>

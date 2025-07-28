@@ -1,7 +1,7 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { Snippet, Stack, Text } from '@ultraviolet/ui'
-import * as ProductIcon from '..'
 import { DEPRECATED_ICONS } from '../../../deprecatedIcons'
+import * as ProductIcon from '..'
 
 export const List: StoryFn = props => (
   <Stack gap={1}>
@@ -10,10 +10,10 @@ export const List: StoryFn = props => (
       const deprecated = DEPRECATED_ICONS.find(icon => icon.name === iconName)
 
       return (
-        <Stack direction="row" gap={1} alignItems="center" key={iconName}>
+        <Stack alignItems="center" direction="row" gap={1} key={iconName}>
           <FoundProductIcon size="large" {...props} />
           <div style={{ width: '880px' }}>
-            <Text as="code" variant="code" strikeThrough={!!deprecated}>
+            <Text as="code" strikeThrough={!!deprecated} variant="code">
               <Snippet>
                 {`import { ${iconName} } from '@ultraviolet/icons/product'`}
               </Snippet>
@@ -21,7 +21,7 @@ export const List: StoryFn = props => (
           </div>
           {deprecated ? (
             <Text as="span" variant="bodySmall">
-              <Text as="span" variant="bodySmallStrong" sentiment="danger">
+              <Text as="span" sentiment="danger" variant="bodySmallStrong">
                 Deprecated:&nbsp;
               </Text>
               {deprecated.deprecatedReason}

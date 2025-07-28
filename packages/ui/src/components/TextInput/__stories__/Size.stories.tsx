@@ -1,7 +1,7 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
-import { TEXTINPUT_SIZE_HEIGHT, TextInput } from '..'
 import { Stack } from '../../Stack'
+import { TEXTINPUT_SIZE_HEIGHT, TextInput } from '..'
 
 export const Size: StoryFn<typeof TextInput> = args => {
   const [value, setValue] = useState<string>('Text')
@@ -17,10 +17,10 @@ export const Size: StoryFn<typeof TextInput> = args => {
           {...args}
           key={size}
           label={size}
-          size={size}
-          value={value}
           onChange={event => setValue(event.target.value)}
           placeholder="Placeholder"
+          size={size}
+          value={value}
         />
       ))}
     </Stack>

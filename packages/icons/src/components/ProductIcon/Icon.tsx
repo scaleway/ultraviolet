@@ -6,11 +6,11 @@ import type { ReactNode } from 'react'
 type Variants = 'primary' | 'danger' | 'warning' | 'original'
 
 export const SIZES = {
-  xsmall: '300',
-  small: '400',
-  medium: '500',
   large: '600',
+  medium: '500',
+  small: '400',
   xlarge: '800',
+  xsmall: '300',
 } as const
 
 const StyledIcon = styled('svg', {
@@ -76,11 +76,11 @@ export const Icon = ({
   children,
 }: IconProps) => (
   <StyledIcon
-    variant={variant}
+    className={className}
     disabled={disabled}
     size={size}
+    variant={variant}
     viewBox="0 0 64 64"
-    className={className}
   >
     {children}
   </StyledIcon>

@@ -103,7 +103,7 @@ export const Chip = ({
     return 'default'
   }, [isActive, disabled])
   const value = useMemo(
-    () => ({ isActive, disabled, iconRef }),
+    () => ({ disabled, iconRef, isActive }),
     [isActive, disabled, iconRef],
   )
   useEffect(() => {
@@ -126,24 +126,24 @@ export const Chip = ({
     <ChipContext.Provider value={value}>
       <Text as="div" variant={size === 'large' ? 'bodySmall' : 'caption'}>
         <StyledContainer
+          alignItems="center"
+          className={className}
+          data-active={isActive}
+          data-disabled={disabled}
+          data-prominence={prominence}
           data-size={size}
+          data-testid={dataTestId}
+          data-trailing-icon={hasTrailingIcon}
+          direction="row"
+          gap={1}
+          justifyContent="center"
           onClick={() => {
             if (!disabled) {
               setIsActive(!isActive)
               onClick?.(!isActive)
             }
           }}
-          className={className}
-          data-active={isActive}
-          data-testid={dataTestId}
-          alignItems="center"
-          justifyContent="center"
-          data-disabled={disabled}
-          data-prominence={prominence}
-          direction="row"
-          gap={1}
           ref={chipRef}
-          data-trailing-icon={hasTrailingIcon}
         >
           {children}
         </StyledContainer>

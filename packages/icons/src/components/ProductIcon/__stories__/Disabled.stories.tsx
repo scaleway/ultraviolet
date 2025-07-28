@@ -2,9 +2,9 @@ import { Template } from './Template.stories'
 
 export const Disabled = Template.bind({})
 Disabled.args = {
-  variant: 'primary',
-  size: 'large',
   disabled: true,
+  size: 'large',
+  variant: 'primary',
 }
 
 Disabled.parameters = {

@@ -91,13 +91,13 @@ export const Skeleton = ({
 
   return (
     <StyledContainer
-      className={className}
       aria-busy
-      aria-live="polite"
       aria-label={ariaLabel}
+      aria-live="polite"
+      className={className}
       data-testid={dataTestId}
     >
-      <Component length={length} col={col} />
+      <Component col={col} length={length} />
 
       <StyledDiv />
     </StyledContainer>

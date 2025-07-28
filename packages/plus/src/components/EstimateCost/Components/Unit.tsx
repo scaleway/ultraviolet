@@ -3,8 +3,8 @@
 import styled from '@emotion/styled'
 import { NumberInput } from '@ultraviolet/ui'
 import { useEffect, useState } from 'react'
-import { useOverlay } from '../OverlayContext'
 import { ItemResourceName } from '../componentStyle'
+import { useOverlay } from '../OverlayContext'
 import { Regular } from './Regular'
 
 const StyledNumberInput = styled(NumberInput)`
@@ -53,12 +53,8 @@ export const Unit = ({
   ) : (
     <div style={{ width: '150px' }}>
       <StyledNumberInput
-        size="small"
-        unit={unit}
-        placeholder="00"
-        name="capacity"
-        value={capacity}
         controls={false}
+        name="capacity"
         onChange={capacityText => {
           const newCapacity =
             Number(capacityText) < 0 ? 0 : Number(capacityText)
@@ -66,6 +62,10 @@ export const Unit = ({
           itemCallback?.(newCapacity, true)
           getAmountValue?.(capacity)
         }}
+        placeholder="00"
+        size="small"
+        unit={unit}
+        value={capacity}
       />
     </div>
   )

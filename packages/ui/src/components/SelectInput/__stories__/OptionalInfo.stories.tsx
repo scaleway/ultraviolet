@@ -1,6 +1,6 @@
 import type { StoryFn } from '@storybook/react-vite'
-import { SelectInput } from '..'
 import { Stack } from '../../Stack'
+import { SelectInput } from '..'
 import {
   OptionalInfo,
   OptionalInfo2,
@@ -13,44 +13,44 @@ export const AdditionalInfo: StoryFn<typeof SelectInput> = args => (
   <Stack gap="2" width="50%">
     <SelectInput
       {...args}
-      options={OptionalInfo}
       label="Bigger badge - right"
       optionalInfoPlacement="right"
+      options={OptionalInfo}
     />
     <SelectInput
       {...args}
+      label="Right"
+      optionalInfoPlacement="right"
       options={OptionalInfo2}
-      optionalInfoPlacement="right"
-      label="Right"
     />
     <SelectInput
       {...args}
-      options={OptionalInfo3}
-      optionalInfoPlacement="left"
       label="Left"
+      optionalInfoPlacement="left"
+      options={OptionalInfo3}
     />
     <SelectInput
       {...args}
-      options={OptionalInfo4}
-      optionalInfoPlacement="right"
       label="Right"
+      optionalInfoPlacement="right"
+      options={OptionalInfo4}
     />
     <SelectInput
       {...args}
-      options={OptionalInfo5}
-      optionalInfoPlacement="right"
       label="With option disabled and button"
+      optionalInfoPlacement="right"
+      options={OptionalInfo5}
     />
   </Stack>
 )
 
 AdditionalInfo.args = {
+  disabled: false,
+  helper: 'helper',
   name: 'example',
   placeholder: 'Select item',
   placeholderSearch: 'Search in list',
   searchable: false,
-  disabled: false,
-  helper: 'helper',
 }
 
 AdditionalInfo.parameters = {

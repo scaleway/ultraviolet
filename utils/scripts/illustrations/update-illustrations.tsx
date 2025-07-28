@@ -22,8 +22,8 @@ const updateListIllustrationsCategories = (directory: string) => {
     const parentDir = path.dirname(directory)
     const parentDirName = path.basename(parentDir)
     ILLUSTRATIONS_CATEGORIES.push({
-      dir: parentDirName,
       category: dirName.replace('-wire.svg', ''),
+      dir: parentDirName,
     })
   }
 
@@ -31,8 +31,8 @@ const updateListIllustrationsCategories = (directory: string) => {
     const parentDir = path.dirname(directory)
     const parentDirName = path.basename(parentDir)
     DYNAMIC_ILLUSTRATIONS.push({
-      dir: parentDirName,
       category: dirName.replace('.webp', ''),
+      dir: parentDirName,
     })
   }
 }

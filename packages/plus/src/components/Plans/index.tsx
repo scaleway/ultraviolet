@@ -3,8 +3,8 @@ import { CheckCircleIcon, CloseIcon } from '@ultraviolet/icons'
 import { Badge, Stack, Text } from '@ultraviolet/ui'
 import { useState } from 'react'
 import { FeatureHint } from './FeatureHint'
-import { PlanHeader } from './PlanHeader'
 import PlansLocales from './locales/en'
+import { PlanHeader } from './PlanHeader'
 import type { Feature, PlanType } from './types'
 
 const PlanTable = styled.table`
@@ -196,18 +196,18 @@ export const Plans = <T extends string>({
 
             return (
               <PlanCell
-                key={plan.value}
-                data-disabled={computedDisabled}
                 data-active={value === plan.value}
+                data-disabled={computedDisabled}
                 data-focus={focusedPlan === plan.value}
                 data-hover={hoveredPlan === plan.value}
                 data-selectable={selectable}
+                key={plan.value}
                 onClick={selectable ? () => onChange(plan.value) : undefined}
-                onMouseOver={
-                  selectable ? () => setHoveredPlan(plan.value) : undefined
-                }
                 onMouseOut={
                   selectable ? () => setHoveredPlan(undefined) : undefined
+                }
+                onMouseOver={
+                  selectable ? () => setHoveredPlan(plan.value) : undefined
                 }
               >
                 {plan.outOfStock ? (
@@ -221,12 +221,12 @@ export const Plans = <T extends string>({
                   </OutOfStockBadge>
                 ) : null}
                 <PlanHeader
-                  fieldName={fieldName}
-                  setFocusedPlan={setFocusedPlan}
-                  onChange={onChange}
                   currentPlanValue={value}
-                  plan={plan}
                   disabled={computedDisabled}
+                  fieldName={fieldName}
+                  onChange={onChange}
+                  plan={plan}
+                  setFocusedPlan={setFocusedPlan}
                 />
               </PlanCell>
             )
@@ -237,13 +237,13 @@ export const Plans = <T extends string>({
         {features.map(feature => {
           if ('group' in feature) {
             return (
-              <tr key={feature.group} data-hide={hideLabels}>
+              <tr data-hide={hideLabels} key={feature.group}>
                 <PlanCell>
-                  <Stack direction="row" alignItems="center" gap={1}>
+                  <Stack alignItems="center" direction="row" gap={1}>
                     <UppercaseText
                       as="p"
-                      variant="bodySmallStronger"
                       sentiment="neutral"
+                      variant="bodySmallStronger"
                     >
                       {feature.group}
                     </UppercaseText>
@@ -252,11 +252,11 @@ export const Plans = <T extends string>({
                 </PlanCell>
                 {plans.map(plan => (
                   <PlanCell
-                    key={plan.value}
-                    data-disabled={plan.outOfStock || plan.disabled}
                     data-active={value === plan.value}
+                    data-disabled={plan.outOfStock || plan.disabled}
                     data-focus={focusedPlan === plan.value}
                     data-hover={hoveredPlan === plan.value}
+                    key={plan.value}
                   />
                 ))}
               </tr>
@@ -278,10 +278,10 @@ export const Plans = <T extends string>({
                   {feature.description ? (
                     <Text
                       as="div"
-                      variant="caption"
+                      placement="start"
                       prominence="weak"
                       sentiment="neutral"
-                      placement="start"
+                      variant="caption"
                     >
                       {feature.description}
                     </Text>
@@ -294,21 +294,15 @@ export const Plans = <T extends string>({
 
                 return (
                   <PlanCell
-                    key={plan.value}
-                    data-disabled={computedDisabled}
-                    data-selectable={selectable}
-                    onClick={
-                      selectable ? () => onChange(plan.value) : undefined
-                    }
                     data-active={value === plan.value}
+                    data-disabled={computedDisabled}
                     data-focus={focusedPlan === plan.value}
                     data-hover={hoveredPlan === plan.value}
-                    onMouseOver={
-                      selectable
-                        ? () => {
-                            setHoveredPlan(plan.value)
-                          }
-                        : undefined
+                    data-selectable={selectable}
+                    data-testid={`${plan.value}-${feature.key}`}
+                    key={plan.value}
+                    onClick={
+                      selectable ? () => onChange(plan.value) : undefined
                     }
                     onMouseOut={
                       selectable
@@ -317,29 +311,35 @@ export const Plans = <T extends string>({
                           }
                         : undefined
                     }
-                    data-testid={`${plan.value}-${feature.key}`}
+                    onMouseOver={
+                      selectable
+                        ? () => {
+                            setHoveredPlan(plan.value)
+                          }
+                        : undefined
+                    }
                   >
                     {plan.data[featureKey] === false ? (
                       <CloseIcon
                         disabled={computedDisabled}
-                        size="large"
-                        sentiment="neutral"
                         prominence="weak"
+                        sentiment="neutral"
+                        size="large"
                       />
                     ) : null}
                     {plan.data[featureKey] === true ? (
                       <CheckCircleIcon
                         disabled={computedDisabled}
-                        size="medium"
                         sentiment="success"
+                        size="medium"
                       />
                     ) : null}
                     {typeof plan.data[featureKey] !== 'boolean' ? (
                       <Text
-                        disabled={computedDisabled}
                         as="span"
-                        variant="body"
+                        disabled={computedDisabled}
                         sentiment="neutral"
+                        variant="body"
                       >
                         {plan.data[featureKey]}
                       </Text>

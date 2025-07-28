@@ -14,31 +14,31 @@ describe('SelectableCardOptionGroupField', () => {
   test('should render correctly', () => {
     const { asFragment } = renderWithForm(
       <SelectableCardOptionGroupField
+        legend="Select your OS"
         name="os"
-        optionName="version"
-        value="ubuntu"
-        optionValue="ubuntu-20.04"
         onChange={() => {}}
         onChangeOption={() => {}}
-        legend="Select your OS"
+        optionName="version"
+        optionValue="ubuntu-20.04"
+        value="ubuntu"
       >
         <SelectableCardOptionGroupField.Option
-          value="ubuntu"
+          image={ubuntu}
           label="Ubuntu"
           options={ubuntuOptions}
-          image={ubuntu}
+          value="ubuntu"
         />
         <SelectableCardOptionGroupField.Option
-          value="debian"
+          image={debian}
           label="Debian"
           options={debianOptions}
-          image={debian}
+          value="debian"
         />
         <SelectableCardOptionGroupField.Option
-          value="centos"
+          image={centos}
           label="CentOS"
           options={centosOptions}
-          image={centos}
+          value="centos"
         />
       </SelectableCardOptionGroupField>,
     )

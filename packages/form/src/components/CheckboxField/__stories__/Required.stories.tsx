@@ -1,8 +1,8 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { Stack } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
-import { CheckboxField } from '..'
 import { Submit } from '../../Submit'
+import { CheckboxField } from '..'
 
 export const Required: StoryFn<ComponentProps<typeof CheckboxField>> = args => (
   <Stack gap={1}>
@@ -12,7 +12,7 @@ export const Required: StoryFn<ComponentProps<typeof CheckboxField>> = args => (
 )
 
 Required.args = {
+  children: 'Checkbox required',
   name: 'required',
   required: true,
-  children: 'Checkbox required',
 }

@@ -47,21 +47,21 @@ const RadioGroupRadio = ({
 
   return (
     <Radio
-      onChange={onChange}
+      autoFocus={autoFocus}
       checked={groupValue === value}
-      onFocus={onFocus}
-      onBlur={onBlur}
+      className={className}
+      data-testid={dataTestId}
       disabled={disabled}
       error={error || errorContext}
-      name={groupName}
-      value={value}
-      label={label}
       helper={helper}
-      className={className}
-      autoFocus={autoFocus}
+      label={label}
+      name={groupName}
+      onBlur={onBlur}
+      onChange={onChange}
+      onFocus={onFocus}
       onKeyDown={onKeyDown}
-      data-testid={dataTestId}
       tooltip={tooltip}
+      value={value}
     />
   )
 }
@@ -104,11 +104,11 @@ export const RadioGroup = ({
 }: RadioGroupProps) => {
   const contextValue = useMemo(
     () => ({
+      error: !!error,
       groupName: name,
       groupValue: value,
       onChange,
       required,
-      error: !!error,
     }),
     [name, value, onChange, required, error],
   )
@@ -123,18 +123,18 @@ export const RadioGroup = ({
                 {legend ? (
                   <Label
                     as="legend"
-                    required={required}
                     labelDescription={legendDescription}
+                    required={required}
                   >
                     {legend}
                   </Label>
                 ) : null}
                 {description ? (
                   <Text
-                    variant="bodySmall"
                     as={typeof description === 'string' ? 'p' : 'div'}
                     prominence="weak"
                     sentiment="neutral"
+                    variant="bodySmall"
                   >
                     {description}
                   </Text>
@@ -142,9 +142,9 @@ export const RadioGroup = ({
               </Stack>
             ) : null}
             <Stack
-              gap={direction === 'column' ? 1 : 2}
-              direction={direction}
               alignItems="start"
+              direction={direction}
+              gap={direction === 'column' ? 1 : 2}
             >
               {children}
             </Stack>
@@ -153,15 +153,15 @@ export const RadioGroup = ({
         {helper ? (
           <Text
             as="span"
-            variant="caption"
             prominence="weak"
             sentiment="neutral"
+            variant="caption"
           >
             {helper}
           </Text>
         ) : null}
         {error ? (
-          <Text as="span" variant="caption" sentiment="danger">
+          <Text as="span" sentiment="danger" variant="caption">
             {error}
           </Text>
         ) : null}

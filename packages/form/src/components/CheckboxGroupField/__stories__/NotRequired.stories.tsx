@@ -1,8 +1,8 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { Stack } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
-import { CheckboxGroupField } from '..'
 import { Submit } from '../..'
+import { CheckboxGroupField } from '..'
 
 export const NotRequiredTemplate = (
   args: ComponentProps<typeof CheckboxGroupField>,
@@ -39,6 +39,6 @@ NotRequired.parameters = {
 }
 
 NotRequired.args = {
-  name: 'conditions',
   legend: 'Conditions',
+  name: 'conditions',
 }

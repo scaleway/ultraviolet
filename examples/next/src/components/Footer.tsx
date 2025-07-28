@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import { Text, down } from '@ultraviolet/ui'
+import { down, Text } from '@ultraviolet/ui'
 import { APP_MAX_WIDTH } from '../constants'
 import GithubAndDocumentationButtons from './GithubAndDocumentationButtons'
 import Logo from './Logo'
@@ -35,7 +35,7 @@ const Footer = () => (
         <Text as="p" variant="body">
           Hosted in green datacenters in France
         </Text>
-        <Text as="p" variant="bodySmall" prominence="weak">
+        <Text as="p" prominence="weak" variant="bodySmall">
           Our datacenters are designed and built to deliver excellent energy
           efficiency. They offer a low carbon footprint with our guaranteed
           clean energy source. We embrace both disruptive and state-of-the-art

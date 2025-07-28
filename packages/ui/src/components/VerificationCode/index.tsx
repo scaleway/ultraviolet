@@ -15,17 +15,17 @@ import { Text } from '../Text'
 type Size = 'small' | 'medium' | 'large' | 'xlarge'
 
 const SIZE_HEIGHT = {
-  xlarge: '800',
   large: '600',
   medium: '500',
   small: '400',
+  xlarge: '800',
 } as const
 
 const SIZE_WIDTH = {
-  xlarge: '700',
   large: '500',
   medium: '400',
   small: '300',
+  xlarge: '700',
 } as const
 
 export const verificationCodeSizes = Object.keys(SIZE_HEIGHT) as Size[]
@@ -341,36 +341,36 @@ export const VerificationCode = ({
       <div>
         {values.map((value: string, index: number) => (
           <StyledInput
-            css={[inputStyle]}
             aria-invalid={!!error}
-            data-success={!!success}
-            inputSize={size}
-            type={type === 'number' ? 'tel' : type}
-            pattern={type === 'number' ? '[0-9]*' : undefined}
-            key={`field-${index}`}
-            data-testid={index}
-            value={value}
-            id={`${inputId || uniqueId}-${index}`}
-            ref={inputRefs[index]}
-            onChange={inputOnChange(index)}
-            onKeyDown={inputOnKeyDown(index)}
-            onPaste={inputOnPaste(index)}
-            onFocus={inputOnFocus}
-            disabled={disabled}
-            required={required}
-            placeholder={placeholder?.[index] ?? ''}
             aria-label={`${ariaLabel} ${index}`}
             autoComplete="off"
+            css={[inputStyle]}
+            data-success={!!success}
+            data-testid={index}
+            disabled={disabled}
+            id={`${inputId || uniqueId}-${index}`}
+            inputSize={size}
+            key={`field-${index}`}
+            onChange={inputOnChange(index)}
+            onFocus={inputOnFocus}
+            onKeyDown={inputOnKeyDown(index)}
+            onPaste={inputOnPaste(index)}
+            pattern={type === 'number' ? '[0-9]*' : undefined}
+            placeholder={placeholder?.[index] ?? ''}
+            ref={inputRefs[index]}
+            required={required}
+            type={type === 'number' ? 'tel' : type}
+            value={value}
           />
         ))}
       </div>
       {error || typeof success === 'string' || typeof helper === 'string' ? (
         <Text
           as="p"
-          variant="caption"
-          sentiment={sentiment}
-          prominence={!error && !success ? 'weak' : 'default'}
           disabled={disabled}
+          prominence={!error && !success ? 'weak' : 'default'}
+          sentiment={sentiment}
+          variant="caption"
         >
           {error || success || helper}
         </Text>

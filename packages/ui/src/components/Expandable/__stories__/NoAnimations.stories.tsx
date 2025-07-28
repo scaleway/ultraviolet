@@ -1,9 +1,9 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { MinusIcon, PlusIcon } from '@ultraviolet/icons'
 import { useState } from 'react'
-import { Expandable } from '..'
 import { Button } from '../../Button'
 import { Stack } from '../../Stack'
+import { Expandable } from '..'
 
 export const NoAnimations: StoryFn<typeof Expandable> = args => {
   const [toggled, onToggle] = useState(false)
@@ -15,7 +15,7 @@ export const NoAnimations: StoryFn<typeof Expandable> = args => {
         {toggled ? <MinusIcon /> : <PlusIcon />}
         Click me to {toggled ? 'hide' : 'show'} content
       </Button>
-      <Expandable {...args} opened={toggled} animationDuration={0}>
+      <Expandable {...args} animationDuration={0} opened={toggled}>
         I&lsquo;m a visible Expandable content
       </Expandable>
     </>

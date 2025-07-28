@@ -57,17 +57,17 @@ export const CalendarPopup = ({
 
   return (
     <StyledPopup
-      visible={visible}
-      text={content}
+      align="start"
+      debounceDelay={0}
+      disableAnimation
+      hasArrow={false}
+      maxWidth={POPUP_WIDTH}
       placement="bottom"
       ref={ref}
-      hasArrow={false}
-      tabIndex={0}
       role="dialog"
-      debounceDelay={0}
-      maxWidth={POPUP_WIDTH}
-      disableAnimation
-      align="start"
+      tabIndex={0}
+      text={content}
+      visible={visible}
     >
       {children}
     </StyledPopup>

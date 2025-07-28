@@ -30,23 +30,23 @@ const LabelRequiredOrNot = ({
   disabled,
 }: LabelProps) =>
   required ? (
-    <Stack direction="row" gap="0.5" alignItems="start">
+    <Stack alignItems="start" direction="row" gap="0.5">
       <TextPointer
         as={as === 'label' ? 'label' : 'legend'}
-        id={id}
-        variant={size === 'large' ? 'bodyStrong' : 'bodySmallStrong'}
-        sentiment={sentiment}
-        htmlFor={htmlFor}
         disabled={disabled}
+        htmlFor={htmlFor}
+        id={id}
+        sentiment={sentiment}
+        variant={size === 'large' ? 'bodyStrong' : 'bodySmallStrong'}
       >
         {children}
       </TextPointer>
       <Text
-        as="span"
-        variant={size === 'large' ? 'bodyStrong' : 'bodySmallStrong'}
-        sentiment="danger"
         aria-label="required"
+        as="span"
         disabled={disabled}
+        sentiment="danger"
+        variant={size === 'large' ? 'bodyStrong' : 'bodySmallStrong'}
       >
         *
       </Text>
@@ -54,11 +54,11 @@ const LabelRequiredOrNot = ({
   ) : (
     <TextPointer
       as={as === 'label' ? 'label' : 'legend'}
-      id={id}
-      variant={size === 'large' ? 'bodyStrong' : 'bodySmallStrong'}
-      sentiment={sentiment}
-      htmlFor={htmlFor}
       disabled={disabled}
+      htmlFor={htmlFor}
+      id={id}
+      sentiment={sentiment}
+      variant={size === 'large' ? 'bodyStrong' : 'bodySmallStrong'}
     >
       {children}
     </TextPointer>
@@ -94,15 +94,15 @@ export const Label = ({
   disabled,
 }: LabelProps) =>
   labelDescription ? (
-    <Stack direction="row" gap="1" alignItems="center">
+    <Stack alignItems="center" direction="row" gap="1">
       <LabelRequiredOrNot
-        required={required}
-        size={size}
+        as={as}
+        disabled={disabled}
         htmlFor={htmlFor}
         id={id}
-        as={as}
+        required={required}
         sentiment={sentiment}
-        disabled={disabled}
+        size={size}
       >
         {children}
       </LabelRequiredOrNot>
@@ -116,13 +116,13 @@ export const Label = ({
     </Stack>
   ) : (
     <LabelRequiredOrNot
-      required={required}
-      size={size}
+      as={as}
+      disabled={disabled}
       htmlFor={htmlFor}
       id={id}
-      as={as}
+      required={required}
       sentiment={sentiment}
-      disabled={disabled}
+      size={size}
     >
       {children}
     </LabelRequiredOrNot>

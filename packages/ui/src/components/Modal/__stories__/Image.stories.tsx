@@ -1,28 +1,28 @@
 import type { StoryFn } from '@storybook/react-vite'
-import { Modal } from '..'
 import { Badge } from '../../Badge'
 import { Button } from '../../Button'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
+import { Modal } from '..'
 import image from './assets/illustration.webp'
 import imageCorrectFormat from './assets/illustrationCorrectFormat.webp'
 
 export const Image: StoryFn = props => (
-  <Stack gap={2} direction="row">
+  <Stack direction="row" gap={2}>
     <Modal
+      disclosure={<Button>Open Modal with image (incorrect ratio)</Button>}
       image={image}
       size="medium"
-      disclosure={<Button>Open Modal with image (incorrect ratio)</Button>}
       {...props}
     >
       <Stack direction="column" gap="2">
-        <Badge sentiment="warning" prominence="strong">
+        <Badge prominence="strong" sentiment="warning">
           Beta
         </Badge>
-        <Text as="p" variant="heading" sentiment="neutral" prominence="strong">
+        <Text as="p" prominence="strong" sentiment="neutral" variant="heading">
           Incorrect ratio
         </Text>
-        <Text as="p" variant="body" sentiment="neutral">
+        <Text as="p" sentiment="neutral" variant="body">
           <strong>Content</strong>
           <br />
           When the image does not have the correct ratio, it is cropped.
@@ -30,19 +30,19 @@ export const Image: StoryFn = props => (
       </Stack>
     </Modal>
     <Modal
+      disclosure={<Button>Open Modal with image (correct ratio)</Button>}
       image={imageCorrectFormat}
       size="xsmall"
-      disclosure={<Button>Open Modal with image (correct ratio)</Button>}
       {...props}
     >
       <Stack direction="column" gap="2">
-        <Badge sentiment="warning" prominence="strong">
+        <Badge prominence="strong" sentiment="warning">
           Beta
         </Badge>
-        <Text as="p" variant="heading" sentiment="neutral" prominence="strong">
+        <Text as="p" prominence="strong" sentiment="neutral" variant="heading">
           Correct ratio
         </Text>
-        <Text as="p" variant="body" sentiment="neutral">
+        <Text as="p" sentiment="neutral" variant="body">
           <strong>Content</strong>
           <br />
           When the image does have the correct ratio, it fills the entire

@@ -11,16 +11,16 @@ describe('TimeInput', () => {
     shouldMatchEmotionSnapshot(<TimeInput />))
 
   test('renders correctly disabled', () =>
-    shouldMatchEmotionSnapshot(<TimeInput label="test" disabled />))
+    shouldMatchEmotionSnapshot(<TimeInput disabled label="test" />))
 
   test('renders correctly readOnly', () =>
     shouldMatchEmotionSnapshot(<TimeInput label="test" readOnly />))
 
   test('renders correctly with error', () =>
-    shouldMatchEmotionSnapshot(<TimeInput label="test" error="error" />))
+    shouldMatchEmotionSnapshot(<TimeInput error="error" label="test" />))
 
   test('renders correctly clearable', () =>
-    shouldMatchEmotionSnapshot(<TimeInput label="test" clearable />))
+    shouldMatchEmotionSnapshot(<TimeInput clearable label="test" />))
 
   test('renders correctly required', () =>
     shouldMatchEmotionSnapshot(<TimeInput label="test" required />))
@@ -37,19 +37,19 @@ describe('TimeInput', () => {
   test('renders correctly with label description and helper', () =>
     shouldMatchEmotionSnapshot(
       <TimeInput
+        helper="helper"
         label="label"
         labelDescription={<h1>label</h1>}
-        helper="helper"
       />,
     ))
 
   test('renders correctly with helper and error', () =>
     shouldMatchEmotionSnapshot(
       <TimeInput
+        error
+        helper="helper"
         label="label"
         labelDescription="label description"
-        helper="helper"
-        error
       />,
     ))
 
@@ -57,12 +57,12 @@ describe('TimeInput', () => {
     const mockOnChange = vi.fn()
     const { asFragment } = renderWithTheme(
       <TimeInput
+        helper="helper"
         label="label"
         labelDescription="labeldescription"
-        helper="helper"
         onChange={mockOnChange}
-        value={DEFAULT_VALUE}
         timeFormat={12}
+        value={DEFAULT_VALUE}
       />,
     )
     const hours = screen.getByTestId('hours-input')
@@ -95,12 +95,12 @@ describe('TimeInput', () => {
     const mockOnChange = vi.fn()
     const { asFragment } = renderWithTheme(
       <TimeInput
+        helper="helper"
         label="label"
         labelDescription="labeldescription"
-        helper="helper"
         onChange={mockOnChange}
-        value={DEFAULT_VALUE}
         timeFormat={24}
+        value={DEFAULT_VALUE}
       />,
     )
     const hours = screen.getByTestId('hours-input')
@@ -128,13 +128,13 @@ describe('TimeInput', () => {
     const mockOnChange = vi.fn()
     const { asFragment } = renderWithTheme(
       <TimeInput
+        clearable
+        helper="helper"
         label="label"
         labelDescription="labeldescription"
-        helper="helper"
         onChange={mockOnChange}
-        value={DEFAULT_VALUE}
         timeFormat={12}
-        clearable
+        value={DEFAULT_VALUE}
       />,
     )
     await userEvent.click(screen.getByTestId('clear'))
@@ -147,12 +147,12 @@ describe('TimeInput', () => {
     const mockOnChange = vi.fn()
     const { asFragment } = renderWithTheme(
       <TimeInput
+        helper="helper"
         label="label"
         labelDescription="labeldescription"
-        helper="helper"
         onChange={mockOnChange}
-        value={DEFAULT_VALUE}
         timeFormat={12}
+        value={DEFAULT_VALUE}
       />,
     )
 
@@ -184,13 +184,13 @@ describe('TimeInput', () => {
     const mockOnChange = vi.fn()
     const { asFragment } = renderWithTheme(
       <TimeInput
+        clearable
+        helper="helper"
         label="label"
         labelDescription="labeldescription"
-        helper="helper"
         onChange={mockOnChange}
-        value={DEFAULT_VALUE}
         timeFormat={24}
-        clearable
+        value={DEFAULT_VALUE}
       />,
     )
     const hours = screen.getByTestId('hours-input')

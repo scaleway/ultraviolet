@@ -36,7 +36,7 @@ describe('GlobalAlert', () => {
 
   test(`should render GlobalAlert and then close it`, async () => {
     renderWithTheme(
-      <GlobalAlert onClose={() => 'ok'} data-testid="GlobalAlert">
+      <GlobalAlert data-testid="GlobalAlert" onClose={() => 'ok'}>
         Sample GlobalAlert
       </GlobalAlert>,
     )

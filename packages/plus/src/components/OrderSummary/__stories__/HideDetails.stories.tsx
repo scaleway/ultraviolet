@@ -1,17 +1,17 @@
-import { Template } from './Template.stories'
 import {
   categoryAZ,
   categoryDefault,
   categoryM2,
   categoryOptions,
 } from './productsExample'
+import { Template } from './Template.stories'
 
 export const HideDetails = Template.bind({})
 
 HideDetails.args = {
+  header: 'Summary',
   hideDetails: true,
   hideTimeUnit: true,
-  header: 'Summary',
   items: [categoryAZ, categoryM2, categoryOptions, categoryDefault],
 }
 

@@ -1,9 +1,9 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
-import { SelectableCardGroup } from '..'
 import { Badge } from '../../Badge'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
+import { SelectableCardGroup } from '..'
 import fr from './assets/fr.svg'
 import nl from './assets/nl.svg'
 import pl from './assets/pl.svg'
@@ -14,52 +14,52 @@ export const Examples: StoryFn = args => {
   const [value4, onChange4] = useState([''])
 
   return (
-    <Stack gap={8} flex={1}>
+    <Stack flex={1} gap={8}>
       <SelectableCardGroup
         {...args}
-        type="radio"
         legend="First group"
         name="First group"
-        showTick
-        value={value}
         onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
           onChange(event.currentTarget.value)
         }
+        showTick
+        type="radio"
+        value={value}
       >
         <SelectableCardGroup.Card
-          name="label-14"
-          value="label-14"
           label={
-            <Stack direction="row" justifyContent="space-between" flex={1}>
-              <Text variant="bodyStrong" as="span">
+            <Stack direction="row" flex={1} justifyContent="space-between">
+              <Text as="span" variant="bodyStrong">
                 Option 1
               </Text>
-              <Text variant="bodyStronger" as="span">
+              <Text as="span" variant="bodyStronger">
                 1.99€
               </Text>
             </Stack>
           }
+          name="label-14"
+          value="label-14"
         >
-          <Text as="p" variant="body" prominence="weak" sentiment="neutral">
+          <Text as="p" prominence="weak" sentiment="neutral" variant="body">
             This option will cost you 1.99€ and provide you with a lot of
             happiness
           </Text>
         </SelectableCardGroup.Card>
         <SelectableCardGroup.Card
-          name="label-14"
-          value="label-15"
           label={
-            <Stack direction="row" justifyContent="space-between" flex={1}>
-              <Text variant="bodyStrong" as="span">
+            <Stack direction="row" flex={1} justifyContent="space-between">
+              <Text as="span" variant="bodyStrong">
                 Option 2
               </Text>
-              <Text variant="bodyStronger" as="span">
+              <Text as="span" variant="bodyStronger">
                 2.99€
               </Text>
             </Stack>
           }
+          name="label-14"
+          value="label-15"
         >
-          <Text as="p" variant="body" prominence="weak" sentiment="neutral">
+          <Text as="p" prominence="weak" sentiment="neutral" variant="body">
             This option will cost you 2.99€ and provide you with a lot more of
             happiness
           </Text>
@@ -68,12 +68,9 @@ export const Examples: StoryFn = args => {
 
       <SelectableCardGroup
         {...args}
-        name="label-22"
-        legend="Second group"
-        value={value3}
-        type="checkbox"
         columns={2}
-        showTick
+        legend="Second group"
+        name="label-22"
         onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
           const data = [...value3]
           if (data.includes(event.currentTarget.value)) {
@@ -85,12 +82,14 @@ export const Examples: StoryFn = args => {
           // oxlint-disable-next-line eslint/no-console
           console.log(data)
         }}
+        showTick
+        type="checkbox"
+        value={value3}
       >
         <SelectableCardGroup.Card
-          value="label-22"
           label={
-            <Stack direction="row" gap={1} flex={1} alignItems="center">
-              <Text variant="bodyStrong" as="span">
+            <Stack alignItems="center" direction="row" flex={1} gap={1}>
+              <Text as="span" variant="bodyStrong">
                 Backup
               </Text>
               <Badge sentiment="primary" size="small">
@@ -98,19 +97,18 @@ export const Examples: StoryFn = args => {
               </Badge>
             </Stack>
           }
+          value="label-22"
         >
-          <Text as="p" variant="body" prominence="weak" sentiment="neutral">
+          <Text as="p" prominence="weak" sentiment="neutral" variant="body">
             This option will cost you 2.99€ and provide you with a lot more of
             happiness
           </Text>
         </SelectableCardGroup.Card>
         <SelectableCardGroup.Card
           {...args}
-          name="label-23"
-          value="label-23"
           label={
-            <Stack direction="row" gap={1} flex={1} alignItems="center">
-              <Text variant="bodyStrong" as="span">
+            <Stack alignItems="center" direction="row" flex={1} gap={1}>
+              <Text as="span" variant="bodyStrong">
                 Redundancy
               </Text>
               <Badge sentiment="primary" size="small">
@@ -118,19 +116,19 @@ export const Examples: StoryFn = args => {
               </Badge>
             </Stack>
           }
+          name="label-23"
+          value="label-23"
         >
-          <Text as="p" variant="body" prominence="weak" sentiment="neutral">
+          <Text as="p" prominence="weak" sentiment="neutral" variant="body">
             This option will cost you 2.99€ and provide you with a lot more of
             happiness
           </Text>
         </SelectableCardGroup.Card>
 
         <SelectableCardGroup.Card
-          name="label-24"
-          value="label-24"
           label={
-            <Stack direction="row" gap={1} flex={1} alignItems="center">
-              <Text variant="bodyStrong" as="span">
+            <Stack alignItems="center" direction="row" flex={1} gap={1}>
+              <Text as="span" variant="bodyStrong">
                 Morning Reboot 9am
               </Text>
               <Badge sentiment="neutral" size="small">
@@ -138,19 +136,19 @@ export const Examples: StoryFn = args => {
               </Badge>
             </Stack>
           }
+          name="label-24"
+          value="label-24"
         >
-          <Text as="p" variant="body" prominence="weak" sentiment="neutral">
+          <Text as="p" prominence="weak" sentiment="neutral" variant="body">
             This option will cost you 2.99€ and provide you with a lot more of
             happiness
           </Text>
         </SelectableCardGroup.Card>
 
         <SelectableCardGroup.Card
-          name="label-25"
-          value="label-25"
           label={
-            <Stack direction="row" gap={1} flex={1} alignItems="center">
-              <Text variant="bodyStrong" as="span">
+            <Stack alignItems="center" direction="row" flex={1} gap={1}>
+              <Text as="span" variant="bodyStrong">
                 Monitoring
               </Text>
               <Badge sentiment="neutral" size="small">
@@ -158,8 +156,10 @@ export const Examples: StoryFn = args => {
               </Badge>
             </Stack>
           }
+          name="label-25"
+          value="label-25"
         >
-          <Text as="p" variant="body" prominence="weak" sentiment="neutral">
+          <Text as="p" prominence="weak" sentiment="neutral" variant="body">
             This option will cost you 2.99€ and provide you with a lot more of
             happiness
           </Text>
@@ -168,13 +168,10 @@ export const Examples: StoryFn = args => {
 
       <SelectableCardGroup
         {...args}
-        name="label-23"
-        legend="Choose country"
-        helper="Select one or more countries"
-        value={value4}
-        type="checkbox"
         columns={3}
-        showTick
+        helper="Select one or more countries"
+        legend="Choose country"
+        name="label-23"
         onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
           const data = [...value4]
           if (data.includes(event.currentTarget.value)) {
@@ -186,43 +183,46 @@ export const Examples: StoryFn = args => {
           // oxlint-disable-next-line eslint/no-console
           console.log(data)
         }}
+        showTick
+        type="checkbox"
+        value={value4}
       >
         <SelectableCardGroup.Card
-          value="label-23"
           label={
-            <Stack direction="row" gap={1} flex={1} alignItems="center">
-              <img src={fr} alt="fr" width={24} />
-              <Text variant="bodyStrong" as="span">
+            <Stack alignItems="center" direction="row" flex={1} gap={1}>
+              <img alt="fr" src={fr} width={24} />
+              <Text as="span" variant="bodyStrong">
                 France
               </Text>
             </Stack>
           }
+          value="label-23"
         />
         <SelectableCardGroup.Card
           {...args}
-          name="label-24"
-          value="label-24"
           label={
-            <Stack direction="row" gap={1} flex={1} alignItems="center">
-              <img src={nl} alt="nl" width={24} />
-              <Text variant="bodyStrong" as="span">
+            <Stack alignItems="center" direction="row" flex={1} gap={1}>
+              <img alt="nl" src={nl} width={24} />
+              <Text as="span" variant="bodyStrong">
                 Netherlands
               </Text>
             </Stack>
           }
+          name="label-24"
+          value="label-24"
         />
 
         <SelectableCardGroup.Card
-          name="label-25"
-          value="label-25"
           label={
-            <Stack direction="row" gap={1} flex={1} alignItems="center">
-              <img src={pl} alt="pl" width={24} />
-              <Text variant="bodyStrong" as="span">
+            <Stack alignItems="center" direction="row" flex={1} gap={1}>
+              <img alt="pl" src={pl} width={24} />
+              <Text as="span" variant="bodyStrong">
                 Poland
               </Text>
             </Stack>
           }
+          name="label-25"
+          value="label-25"
         />
       </SelectableCardGroup>
     </Stack>

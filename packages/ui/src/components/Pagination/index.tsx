@@ -97,23 +97,23 @@ export const Pagination = ({
     <Stack direction="row" justifyContent="space-between">
       {perPage ? (
         <PerPage
-          onChangePerPage={onChangePerPage}
-          perPageText={perPageText}
-          perPage={perPageComputed}
-          setPerPage={setPerPage}
-          numberOfItemsText={numberOfItemsText}
-          page={page}
           numberOfItems={numberOfItems}
+          numberOfItemsText={numberOfItemsText}
+          onChangePerPage={onChangePerPage}
+          page={page}
+          perPage={perPageComputed}
+          perPageText={perPageText}
+          setPerPage={setPerPage}
         />
       ) : null}
       <PaginationButtons
-        disabled={disabled}
-        pageCount={pageCount}
-        pageTabCount={pageTabCount}
         className={className}
         data-testid={dataTestId}
+        disabled={disabled}
         onChange={onChange}
         page={page}
+        pageCount={pageCount}
+        pageTabCount={pageTabCount}
         perPage={!!perPage}
       />
     </Stack>

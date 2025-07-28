@@ -5,7 +5,7 @@ import { columns, data } from './resources'
 export const Context: StoryFn = args => (
   <List {...args} columns={columns} selectable>
     {data.map(planet => (
-      <List.Row key={planet.id} id={planet.id} expandable="Planet description">
+      <List.Row expandable="Planet description" id={planet.id} key={planet.id}>
         <List.Cell>{planet.name}</List.Cell>
         <List.Cell>{planet.perihelion}AU</List.Cell>
         <List.Cell>{planet.aphelion}AU</List.Cell>

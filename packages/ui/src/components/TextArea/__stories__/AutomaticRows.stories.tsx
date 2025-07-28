@@ -1,7 +1,7 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
-import { TextArea } from '..'
 import { Stack } from '../../Stack'
+import { TextArea } from '..'
 
 const LONG_VALUE =
   'A long time ago, in a galaxy far, far away, amidst the swirling constellations and distant star systems, there existed a realm of unimaginable wonders and ancient mysteries waiting to be discovered. This distant galaxy, filled with countless planets, moons, and celestial phenomena, was home to diverse civilizations, each with their own unique cultures, histories, and legends. Among the stars, epic tales of heroism, adventure, and conflict unfolded, shaping the destinies of countless beings and leaving an indelible mark on the fabric of the universe itself.'
@@ -17,45 +17,45 @@ export const AutomaticRows: StoryFn<typeof TextArea> = () => {
   return (
     <Stack gap={2}>
       <TextArea
+        aria-label={undefined}
         label="Rows=auto"
         name="example-1"
-        aria-label={undefined}
+        onChange={setValue1}
         rows="auto"
         value={value1}
-        onChange={setValue1}
       />
       <TextArea
+        aria-label={undefined}
         label="Rows=2"
         name="example-2"
-        aria-label={undefined}
+        onChange={setValue2}
         rows={2}
         value={value2}
-        onChange={setValue2}
       />
       <TextArea
+        aria-label={undefined}
         label="AutoExpandMax=4"
-        aria-label={undefined}
         maxRows={4}
-        value={value3}
         onChange={setValue3}
+        value={value3}
       />
       <TextArea
+        aria-label={undefined}
         label="Rows=2, AutoExpandMax=4"
-        name="example-4"
-        aria-label={undefined}
-        rows={2}
         maxRows={4}
-        value={value4}
+        name="example-4"
         onChange={setValue4}
+        rows={2}
+        value={value4}
       />
       <TextArea
-        label="Rows=auto, AutoExpandMax=4"
-        name="example-5"
         aria-label={undefined}
-        rows="auto"
+        label="Rows=auto, AutoExpandMax=4"
         maxRows={4}
-        value={value5}
+        name="example-5"
         onChange={setValue5}
+        rows="auto"
+        value={value5}
       />
     </Stack>
   )

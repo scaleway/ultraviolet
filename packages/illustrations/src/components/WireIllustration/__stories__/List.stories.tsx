@@ -10,9 +10,9 @@ const illustrationKeys = Object.keys(ILLUSTRATIONS).filter(
 
 export const List = (args: ComponentProps<typeof WireIllustration>) =>
   illustrationKeys.map(name => (
-    <Stack direction="row" gap={1} alignItems="center" key={name}>
-      <Stack direction="column" alignItems="start">
-        <Stack direction="row" gap={1} alignItems="center">
+    <Stack alignItems="center" direction="row" gap={1} key={name}>
+      <Stack alignItems="start" direction="column">
+        <Stack alignItems="center" direction="row" gap={1}>
           <WireIllustration
             {...args}
             name={name as ComponentProps<typeof WireIllustration>['name']}
@@ -28,8 +28,8 @@ export const List = (args: ComponentProps<typeof WireIllustration>) =>
   ))
 
 List.args = {
-  width: 200,
   height: 200,
+  width: 200,
 }
 List.decorators = [
   Story => (

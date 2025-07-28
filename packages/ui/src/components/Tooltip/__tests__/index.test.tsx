@@ -115,7 +115,7 @@ describe('Tooltip', () => {
 
   test(`should renders tooltip with maxWidth`, async () => {
     renderWithTheme(
-      <Tooltip debounceDelay={0} text="test success!" maxWidth={100}>
+      <Tooltip debounceDelay={0} maxWidth={100} text="test success!">
         <p data-testid="children">Hover me</p>
       </Tooltip>,
     )
@@ -133,8 +133,8 @@ describe('Tooltip', () => {
         renderWithTheme(
           <Tooltip
             debounceDelay={0}
-            text="test success!"
             placement={placement as ComponentProps<typeof Tooltip>['placement']}
+            text="test success!"
           >
             <p data-testid="children">Hover me</p>
           </Tooltip>,
@@ -151,7 +151,7 @@ describe('Tooltip', () => {
 
   test(`should verify accessibility`, async () => {
     renderWithTheme(
-      <Tooltip debounceDelay={0} text="test success!" maxWidth={100}>
+      <Tooltip debounceDelay={0} maxWidth={100} text="test success!">
         <p data-testid="children">Hover me</p>
       </Tooltip>,
     )

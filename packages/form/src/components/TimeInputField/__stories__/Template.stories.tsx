@@ -1,8 +1,8 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { Stack } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
-import { TimeInputField } from '..'
 import { Submit } from '../..'
+import { TimeInputField } from '..'
 
 export const Template: StoryFn<
   ComponentProps<typeof TimeInputField>

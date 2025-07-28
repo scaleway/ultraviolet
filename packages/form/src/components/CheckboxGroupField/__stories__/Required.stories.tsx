@@ -1,8 +1,8 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { Stack } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
-import { CheckboxGroupField } from '..'
 import { Submit } from '../..'
+import { CheckboxGroupField } from '..'
 
 export const RequiredTemplate = (
   args: ComponentProps<typeof CheckboxGroupField>,
@@ -37,7 +37,7 @@ Required.parameters = {
 }
 
 Required.args = {
-  name: 'conditions',
   legend: 'Conditions',
+  name: 'conditions',
   required: true,
 }

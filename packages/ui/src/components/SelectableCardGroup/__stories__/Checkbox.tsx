@@ -8,9 +8,6 @@ export const Checkbox: StoryFn<typeof SelectableCardGroup> = args => {
   return (
     <SelectableCardGroup
       {...args}
-      type="checkbox"
-      value={values}
-      showTick
       onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
         const data = [...values]
         if (data.includes(event.currentTarget.value)) {
@@ -20,15 +17,18 @@ export const Checkbox: StoryFn<typeof SelectableCardGroup> = args => {
         }
         onChange(data)
       }}
+      showTick
+      type="checkbox"
+      value={values}
     >
-      <SelectableCardGroup.Card value="value-1" label="Checkbox 1" />
-      <SelectableCardGroup.Card value="value-2" label="Checkbox 2" />
+      <SelectableCardGroup.Card label="Checkbox 1" value="value-1" />
+      <SelectableCardGroup.Card label="Checkbox 2" value="value-2" />
     </SelectableCardGroup>
   )
 }
 
 Checkbox.args = {
-  name: 'template',
   legend: 'Checkbox',
+  name: 'template',
   required: true,
 }

@@ -1,22 +1,22 @@
 import { shouldMatchEmotionSnapshot } from '@utils/test'
 import type { ComponentProps } from 'react'
 import { describe, test } from 'vitest'
-import { Loader, SIZES } from '..'
 import { SENTIMENTS } from '../../../theme'
+import { Loader, SIZES } from '..'
 
 describe('Loader', () => {
   test(`renders default props`, () =>
     shouldMatchEmotionSnapshot(<Loader label="Loading test" />))
 
   test(`renders active with default percentage`, () =>
-    shouldMatchEmotionSnapshot(<Loader label="Loading test" active />))
+    shouldMatchEmotionSnapshot(<Loader active label="Loading test" />))
 
   test(`renders active with custom percentage`, () =>
-    shouldMatchEmotionSnapshot(<Loader label="Loading test" active />))
+    shouldMatchEmotionSnapshot(<Loader active label="Loading test" />))
 
   test(`renders with percentage 75`, () =>
     shouldMatchEmotionSnapshot(
-      <Loader label="Loading test" active percentage={75} />,
+      <Loader active label="Loading test" percentage={75} />,
     ))
 
   test(`renders with color neutral and primary`, () =>

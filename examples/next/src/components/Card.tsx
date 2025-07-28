@@ -21,10 +21,10 @@ const StyledBorderedBox = styled(ScwUICard)`
 const Card = ({ title, description, icon, className }: CardProps) => (
   <StyledBorderedBox className={className}>
     <div>
-      <Image src={icon} alt="icon" width={64} height={64} />
+      <Image alt="icon" height={64} src={icon} width={64} />
     </div>
     <div>
-      <Text as="h3" variant="headingSmall" sentiment="primary">
+      <Text as="h3" sentiment="primary" variant="headingSmall">
         {title}
       </Text>
       {typeof description === 'string' ? (

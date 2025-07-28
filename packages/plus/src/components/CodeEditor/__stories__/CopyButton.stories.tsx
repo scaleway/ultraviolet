@@ -1,6 +1,6 @@
 import type { StoryFn } from '@storybook/react-vite'
-import { useState } from 'react'
 import type { ComponentProps } from 'react'
+import { useState } from 'react'
 import { CodeEditor } from '..'
 
 const DEFAULT_VALUE = `function findSequence(goal) {
@@ -21,5 +21,5 @@ export const CopyButton: StoryFn<ComponentProps<typeof CodeEditor>> = ({
 }) => {
   const [value, setValue] = useState(DEFAULT_VALUE)
 
-  return <CodeEditor {...props} value={value} copyButton onChange={setValue} />
+  return <CodeEditor {...props} copyButton onChange={setValue} value={value} />
 }

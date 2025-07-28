@@ -3,8 +3,8 @@ import { Template } from './Template.stories'
 export const Placeholder = Template.bind({})
 
 Placeholder.args = {
-  placeholder: { m: '--', s: '--', h: '--', period: '-M' },
   label: 'Custom placeholder',
+  placeholder: { h: '--', m: '--', period: '-M', s: '--' },
   timeFormat: 12,
 }
 

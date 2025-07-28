@@ -1,12 +1,12 @@
 import type { StoryFn } from '@storybook/react-vite'
 import type { ChangeEvent } from 'react'
 import { useState } from 'react'
-import { SelectableCard } from '..'
 import { Badge } from '../../Badge'
 import { Checkbox } from '../../Checkbox'
 import { SelectInput } from '../../SelectInput'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
+import { SelectableCard } from '..'
 
 export const Children: StoryFn = args => {
   const [value, onChange] = useState('label-9')
@@ -15,22 +15,22 @@ export const Children: StoryFn = args => {
     <>
       <SelectableCard
         {...args}
-        name="label-9"
         checked={value === 'label-9'}
-        value="label-9"
-        type="radio"
+        label="Left Radio"
+        name="label-9"
         onChange={(event: ChangeEvent<HTMLInputElement>) =>
           onChange(event.currentTarget.value)
         }
-        label="Left Radio"
+        type="radio"
+        value="label-9"
       >
         {({ checked }) => (
           <Stack gap={1}>
-            <Text as="p" variant="body" prominence="weak" sentiment="neutral">
+            <Text as="p" prominence="weak" sentiment="neutral" variant="body">
               I am a children with a badge &nbsp;
               <Badge
-                sentiment={checked ? 'info' : 'neutral'}
                 prominence={checked ? 'default' : 'strong'}
+                sentiment={checked ? 'info' : 'neutral'}
               >
                 info
               </Badge>
@@ -40,29 +40,29 @@ export const Children: StoryFn = args => {
       </SelectableCard>
       <SelectableCard
         {...args}
-        name="label-10"
         checked={value === 'label-10'}
-        value="label-10"
-        type="radio"
+        label="Middle Radio"
+        name="label-10"
         onChange={(event: ChangeEvent<HTMLInputElement>) =>
           onChange(event.currentTarget.value)
         }
-        label="Middle Radio"
+        type="radio"
+        value="label-10"
       >
         <Stack gap={2}>
-          <Text as="p" variant="body" prominence="weak" sentiment="neutral">
+          <Text as="p" prominence="weak" sentiment="neutral" variant="body">
             I am a children with clickable select input
             <Stack gap={1}>
-              <Checkbox name="test" value="test" onChange={() => {}}>
+              <Checkbox name="test" onChange={() => {}} value="test">
                 First element
               </Checkbox>
-              <Checkbox name="test" value="test" onChange={() => {}}>
+              <Checkbox name="test" onChange={() => {}} value="test">
                 Second element
               </Checkbox>
             </Stack>
             <SelectInput
-              name="options"
               label="Select an option"
+              name="options"
               options={[
                 { label: 'Option 1', value: 'option-1' },
                 { label: 'Option 2', value: 'option-2' },
@@ -73,15 +73,15 @@ export const Children: StoryFn = args => {
       </SelectableCard>
       <SelectableCard
         {...args}
-        name="label-11"
         checked={value === 'label-11'}
-        value="label-11"
-        type="radio"
         disabled
+        label="Right Radio"
+        name="label-11"
         onChange={(event: ChangeEvent<HTMLInputElement>) =>
           onChange(event.currentTarget.value)
         }
-        label="Right Radio"
+        type="radio"
+        value="label-11"
       >
         {({ disabled }) => (
           <Stack gap={1}>

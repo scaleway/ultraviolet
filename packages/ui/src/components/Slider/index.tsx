@@ -43,8 +43,8 @@ export const Slider = ({
 }: SliderProps) => {
   // we check if options exists if so we set the bounds to the length of the options
   const correctedBounds = options
-    ? { min: 0, max: Array.isArray(options) ? options.length - 1 : max }
-    : { min, max }
+    ? { max: Array.isArray(options) ? options.length - 1 : max, min: 0 }
+    : { max, min }
   const gap = useMemo(() => {
     if (options) return 3
     if (input && double && !helper) return 0
@@ -55,71 +55,71 @@ export const Slider = ({
   return (
     <SliderContainer
       aria-label={ariaLabel}
-      data-options={!!options}
       data-double={double}
+      data-options={!!options}
       gap={gap}
     >
       {double ? (
         <DoubleSlider
-          name={name}
-          min={correctedBounds.min}
-          max={correctedBounds.max}
-          label={label}
-          step={step}
-          value={value as number[]}
-          tooltip={tooltip as string[] | boolean | undefined}
+          aria-label={ariaLabel}
+          className={className}
+          data-testid={dataTestId}
+          direction={direction}
           disabled={disabled}
           error={error}
-          onChange={onChange as (value: number[]) => void}
-          data-testid={dataTestId}
           id={id}
-          onBlur={onBlur}
-          tooltipPosition={tooltipPosition}
-          onFocus={onFocus}
-          className={className}
-          options={options}
           input={input}
-          unit={unit}
+          label={label}
+          max={correctedBounds.max}
+          min={correctedBounds.min}
+          name={name}
+          onBlur={onBlur}
+          onChange={onChange as (value: number[]) => void}
+          onFocus={onFocus}
+          options={options}
           prefix={prefix}
-          suffix={suffix as ReactNode[]}
           required={required}
-          direction={direction}
-          aria-label={ariaLabel}
+          step={step}
+          suffix={suffix as ReactNode[]}
+          tooltip={tooltip as string[] | boolean | undefined}
+          tooltipPosition={tooltipPosition}
+          unit={unit}
+          value={value as number[]}
         />
       ) : (
         <SingleSlider
-          name={name}
-          min={correctedBounds.min}
-          max={correctedBounds.max}
-          step={step}
-          value={value as number}
-          tooltip={tooltip as string | boolean | undefined}
+          aria-label={ariaLabel}
+          className={className}
+          data-testid={dataTestId}
+          direction={direction}
           disabled={disabled}
           error={error}
-          onChange={onChange as (value: number) => void}
-          options={options}
-          data-testid={dataTestId}
           id={id}
-          tooltipPosition={tooltipPosition}
-          onBlur={onBlur}
-          onFocus={onFocus}
-          className={className}
-          direction={direction}
           input={input}
-          prefix={prefix}
           label={label}
-          unit={unit}
-          suffix={suffix as ReactNode}
+          max={correctedBounds.max}
+          min={correctedBounds.min}
+          name={name}
+          onBlur={onBlur}
+          onChange={onChange as (value: number) => void}
+          onFocus={onFocus}
+          options={options}
+          prefix={prefix}
           required={required}
-          aria-label={ariaLabel}
+          step={step}
+          suffix={suffix as ReactNode}
+          tooltip={tooltip as string | boolean | undefined}
+          tooltipPosition={tooltipPosition}
+          unit={unit}
+          value={value as number}
         />
       )}
       {error || helper ? (
         <Text
           as="p"
-          variant="caption"
-          sentiment={error ? 'danger' : 'neutral'}
           prominence="weak"
+          sentiment={error ? 'danger' : 'neutral'}
+          variant="caption"
         >
           {typeof error === 'string' ? error : helper}
         </Text>

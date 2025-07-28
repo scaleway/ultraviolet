@@ -25,149 +25,149 @@ describe('Single slider', () => {
 
   test('renders correctly', () => {
     shouldMatchEmotionSnapshot(
-      <Slider value={1} name="Name" label="Label" helper="helper" />,
+      <Slider helper="helper" label="Label" name="Name" value={1} />,
     )
   })
 
   test('renders correctly required', () => {
     shouldMatchEmotionSnapshot(
-      <Slider value={1} name="Name" label="Label" required />,
+      <Slider label="Label" name="Name" required value={1} />,
     )
   })
 
   test('renders correctly suffix string', () => {
     shouldMatchEmotionSnapshot(
-      <Slider value={1} name="Name" label="Label" suffix="%" />,
+      <Slider label="Label" name="Name" suffix="%" value={1} />,
     )
   })
 
   test('renders correctly suffix complex', () => {
     shouldMatchEmotionSnapshot(
       <Slider
-        value={1}
-        name="Name"
         label="Label"
+        name="Name"
         suffix={<button type="button">suffix</button>}
+        value={1}
       />,
     )
   })
 
   test('renders correctly suffix string input', () => {
     shouldMatchEmotionSnapshot(
-      <Slider value={1} name="Name" label="Label" suffix="%" input />,
+      <Slider input label="Label" name="Name" suffix="%" value={1} />,
     )
   })
 
   test('renders correctly prefix', () => {
     shouldMatchEmotionSnapshot(
-      <Slider value={1} name="Name" label="Label" prefix="%" />,
+      <Slider label="Label" name="Name" prefix="%" value={1} />,
     )
   })
 
   test('renders correctly direction row', () => {
     shouldMatchEmotionSnapshot(
-      <Slider value={1} name="Name" label="Label" direction="row" />,
+      <Slider direction="row" label="Label" name="Name" value={1} />,
     )
   })
 
   test('renders correctly direction row with input', () => {
     shouldMatchEmotionSnapshot(
-      <Slider value={1} name="Name" label="Label" direction="row" input />,
+      <Slider direction="row" input label="Label" name="Name" value={1} />,
     )
   })
 
   test('renders correctly with value < min', () => {
     shouldMatchEmotionSnapshot(
-      <Slider value={-1} name="Name" label="Label" min={10} />,
+      <Slider label="Label" min={10} name="Name" value={-1} />,
     )
   })
 
   test('renders correctly with value > max', () => {
     shouldMatchEmotionSnapshot(
-      <Slider value={90} name="Name" label="Label" max={10} />,
+      <Slider label="Label" max={10} name="Name" value={90} />,
     )
   })
 
   test('renders correctly disabled', () => {
     shouldMatchEmotionSnapshot(
-      <Slider value={1} name="Name" label="Label" disabled />,
+      <Slider disabled label="Label" name="Name" value={1} />,
     )
   })
 
   test('renders correctly error boolean', () => {
     shouldMatchEmotionSnapshot(
-      <Slider value={1} name="Name" label="Label" error helper="helper" />,
+      <Slider error helper="helper" label="Label" name="Name" value={1} />,
     )
   })
 
   test('renders correctly error boolean and helper', () => {
     shouldMatchEmotionSnapshot(
-      <Slider value={1} name="Name" label="Label" error helper="helper" />,
+      <Slider error helper="helper" label="Label" name="Name" value={1} />,
     )
   })
 
   test('renders correctly error string', () => {
     shouldMatchEmotionSnapshot(
-      <Slider value={1} name="Name" label="Label" error="error" />,
+      <Slider error="error" label="Label" name="Name" value={1} />,
     )
   })
   test('renders correctly error string and helper', () => {
     shouldMatchEmotionSnapshot(
       <Slider
-        value={1}
-        name="Name"
-        label="Label"
         error="error"
         helper="helper"
+        label="Label"
+        name="Name"
+        value={1}
       />,
     )
   })
 
   test('renders correctly input', () => {
     shouldMatchEmotionSnapshot(
-      <Slider value={1} name="Name" label="Label" input />,
+      <Slider input label="Label" name="Name" value={1} />,
     )
   })
 
   test('renders correctly custom tooltip', () => {
     shouldMatchEmotionSnapshot(
-      <Slider value={1} name="Name" label="Label" tooltip="tooltip" />,
+      <Slider label="Label" name="Name" tooltip="tooltip" value={1} />,
     )
   })
 
   test('renders correctly default tooltip', () => {
     shouldMatchEmotionSnapshot(
-      <Slider value={1} name="Name" label="Label" tooltip />,
+      <Slider label="Label" name="Name" tooltip value={1} />,
     )
   })
 
   test('renders correctly with custom ticks', () => {
     shouldMatchEmotionSnapshot(
-      <Slider value={1} name="Name" label="Label" options={options} unit="%" />,
+      <Slider label="Label" name="Name" options={options} unit="%" value={1} />,
     )
   })
 
   test('renders correctly with default ticks without label', () => {
     shouldMatchEmotionSnapshot(
       <Slider
-        value={1}
-        name="Name"
         label="Label"
+        name="Name"
         options={options2}
         unit="%"
+        value={1}
       />,
     )
   })
 
   test('renders correctly min max', () => {
     shouldMatchEmotionSnapshot(
-      <Slider value={1} name="Name" label="Label" min={1} max={10} />,
+      <Slider label="Label" max={10} min={1} name="Name" value={1} />,
     )
   })
 
   test('renders correctly step', () => {
     shouldMatchEmotionSnapshot(
-      <Slider value={1} name="Name" label="Label" step={0.5} />,
+      <Slider label="Label" name="Name" step={0.5} value={1} />,
     )
   })
 
@@ -176,13 +176,13 @@ describe('Single slider', () => {
 
     const { asFragment } = renderWithTheme(
       <Slider
-        name="slider"
-        onChange={onChange}
         data-testid="slider"
-        value={3}
         input
         max={10}
         min={2}
+        name="slider"
+        onChange={onChange}
+        value={3}
       />,
     )
     const slider = screen.getByRole<HTMLInputElement>('slider')
@@ -212,17 +212,17 @@ describe('Single slider', () => {
 
     const { asFragment } = renderWithTheme(
       <Slider
+        data-testid="slider"
+        input
         name="slider"
         onChange={onChange}
-        data-testid="slider"
-        value={3}
-        input
         options={[
           { label: '3', value: 3 },
           { label: '5', value: 5 },
           { label: '6', value: 6 },
           { label: '10', value: 10 },
         ]}
+        value={3}
       />,
     )
     const slider = screen.getByRole<HTMLInputElement>('slider')

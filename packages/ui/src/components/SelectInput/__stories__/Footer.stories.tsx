@@ -1,16 +1,16 @@
 import type { StoryFn } from '@storybook/react-vite'
-import { SelectInput } from '..'
 import { Button } from '../../Button'
 import { Stack } from '../../Stack'
-import { Template } from './Template.stories'
+import { SelectInput } from '..'
 import { dataGrouped } from './resources'
+import { Template } from './Template.stories'
 
 const PopupFooter = () => (
   <Stack direction="row" gap="1" width="100%">
-    <Button variant="outlined" sentiment="primary" fullWidth>
+    <Button fullWidth sentiment="primary" variant="outlined">
       Button 1
     </Button>
-    <Button variant="filled" sentiment="primary" fullWidth>
+    <Button fullWidth sentiment="primary" variant="filled">
       Button 2
     </Button>
   </Stack>
@@ -18,17 +18,19 @@ const PopupFooter = () => (
 
 const PopupFooteronClick = ({
   closeDropdown,
-}: { closeDropdown: () => void }) => (
+}: {
+  closeDropdown: () => void
+}) => (
   <Stack direction="row" gap="1" width="100%">
     <Button
-      variant="outlined"
-      sentiment="primary"
       fullWidth
       onClick={() => closeDropdown()}
+      sentiment="primary"
+      variant="outlined"
     >
       Click me (close the dropdown)
     </Button>
-    <Button variant="filled" sentiment="primary" fullWidth>
+    <Button fullWidth sentiment="primary" variant="filled">
       Click me (do not close the dropdown)
     </Button>
   </Stack>
@@ -38,25 +40,25 @@ export const Footer: StoryFn<typeof SelectInput> = args => (
   <Stack gap={2}>
     <SelectInput
       {...args}
+      footer={<PopupFooter />}
       label="Default footer"
       options={dataGrouped}
-      footer={<PopupFooter />}
     />
     <SelectInput
       {...args}
-      label="Function footer"
-      options={dataGrouped}
       footer={closeDropdown => (
         <PopupFooteronClick closeDropdown={closeDropdown} />
       )}
+      label="Function footer"
+      options={dataGrouped}
     />
   </Stack>
 )
 
 Footer.args = {
   ...Template.args,
-  options: dataGrouped,
   footer: <PopupFooter />,
+  options: dataGrouped,
 }
 Footer.decorators = [
   StoryComponent => (

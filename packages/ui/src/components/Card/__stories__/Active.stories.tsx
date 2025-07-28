@@ -10,32 +10,32 @@ export const Active: StoryFn = args => {
   const [active, setActive] = useState(true)
 
   return (
-    <Card {...args} header="Active Card" active={active}>
-      <Stack gap={6} direction="row" justifyContent="space-between">
-        <Text as="p" variant="body" sentiment={active ? 'primary' : 'neutral'}>
+    <Card {...args} active={active} header="Active Card">
+      <Stack direction="row" gap={6} justifyContent="space-between">
+        <Text as="p" sentiment={active ? 'primary' : 'neutral'} variant="body">
           This card is currently highlighted through <strong>active</strong>{' '}
           prop. In this example we use it to show the content is being edited.
         </Text>
 
         {active ? (
-          <Stack gap={1} direction="row">
+          <Stack direction="row" gap={1}>
             <Button
-              variant="outlined"
-              sentiment="success"
               onClick={() => setActive(false)}
+              sentiment="success"
+              variant="outlined"
             >
               <CheckIcon />
             </Button>
             <Button
-              variant="outlined"
-              sentiment="danger"
               onClick={() => setActive(false)}
+              sentiment="danger"
+              variant="outlined"
             >
               <CancelIcon />
             </Button>
           </Stack>
         ) : (
-          <Button sentiment="neutral" onClick={() => setActive(true)}>
+          <Button onClick={() => setActive(true)} sentiment="neutral">
             <PencilIcon />
           </Button>
         )}

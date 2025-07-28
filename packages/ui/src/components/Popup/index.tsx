@@ -27,9 +27,9 @@ import type { PositionsType } from './animations'
 import { animation, exitAnimation } from './animations'
 import type { PopupAlign, PopupPlacement } from './helpers'
 import {
+  computePositions,
   DEFAULT_ARROW_WIDTH,
   DEFAULT_POSITIONS,
-  computePositions,
 } from './helpers'
 
 const DEFAULT_ANIMATION_DURATION = 230 // in ms
@@ -281,12 +281,12 @@ export const Popup = forwardRef(
       if (childrenRef.current && innerPopupRef.current) {
         setPositions(
           computePositions({
-            childrenRef,
-            placement,
-            popupRef: innerPopupRef,
-            popupPortalTarget: popupPortalTarget as HTMLElement,
-            hasArrow,
             align,
+            childrenRef,
+            hasArrow,
+            placement,
+            popupPortalTarget: popupPortalTarget as HTMLElement,
+            popupRef: innerPopupRef,
           }),
         )
       }
@@ -550,20 +550,20 @@ export const Popup = forwardRef(
 
       return (
         <StyledChildrenContainer
-          aria-describedby={generatedId}
           aria-controls={generatedId}
+          aria-describedby={generatedId}
+          aria-haspopup={ariaHasPopup}
+          data-container-full-height={containerFullHeight}
+          data-container-full-width={containerFullWidth}
           onBlur={!isControlled ? onPointerEvent(false) : noop}
           onFocus={!isControlled ? onPointerEvent(true) : noop}
+          onKeyDown={event => {
+            onKeyDown?.(event)
+          }}
           onPointerEnter={!isControlled ? onPointerEvent(true) : noop}
           onPointerLeave={!isControlled ? onPointerEvent(false) : noop}
           ref={childrenRef}
           tabIndex={tabIndex}
-          onKeyDown={event => {
-            onKeyDown?.(event)
-          }}
-          data-container-full-width={containerFullWidth}
-          data-container-full-height={containerFullHeight}
-          aria-haspopup={ariaHasPopup}
         >
           {children}
         </StyledChildrenContainer>
@@ -606,26 +606,26 @@ export const Popup = forwardRef(
         {shouldRender
           ? createPortal(
               <StyledPopup
-                ref={innerPopupRef}
-                positions={positions}
-                maxWidth={maxWidth}
-                maxHeight={maxHeight}
-                role={role}
-                id={generatedId}
-                className={className}
-                reverseAnimation={reverseAnimation}
-                data-testid={dataTestId}
-                data-has-arrow={hasArrow}
-                onClick={stopClickPropagation}
-                onPointerEnter={!isControlled ? onPointerEvent(true) : noop}
-                onPointerLeave={!isControlled ? onPointerEvent(false) : noop}
                 animationDuration={animationDuration}
-                onKeyDown={role === 'dialog' ? handleFocusTrap : undefined}
-                isDialog={role === 'dialog'}
+                className={className}
+                data-animated={animationDuration > 0 && !maxHeight}
+                data-has-arrow={hasArrow}
+                data-testid={dataTestId}
                 data-visible-in-dom={
                   !dynamicDomRendering ? visibleInDom : undefined
                 }
-                data-animated={animationDuration > 0 && !maxHeight}
+                id={generatedId}
+                isDialog={role === 'dialog'}
+                maxHeight={maxHeight}
+                maxWidth={maxWidth}
+                onClick={stopClickPropagation}
+                onKeyDown={role === 'dialog' ? handleFocusTrap : undefined}
+                onPointerEnter={!isControlled ? onPointerEvent(true) : noop}
+                onPointerLeave={!isControlled ? onPointerEvent(false) : noop}
+                positions={positions}
+                ref={innerPopupRef}
+                reverseAnimation={reverseAnimation}
+                role={role}
               >
                 {text}
               </StyledPopup>,

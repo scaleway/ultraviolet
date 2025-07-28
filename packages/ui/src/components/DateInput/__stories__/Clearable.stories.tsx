@@ -3,9 +3,9 @@ import { Template } from './Template'
 export const Clearable = Template.bind({})
 
 Clearable.args = {
+  clearable: true,
   label: 'Clearable',
   placeholder: 'MM-DD-YYYY',
-  clearable: true,
 }
 
 Clearable.decorators = [

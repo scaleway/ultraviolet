@@ -52,25 +52,25 @@ const CardSelectableCard = ({
 
   return (
     <SelectableCard
-      name={groupName}
-      value={value}
-      showTick={showTick}
-      type={type}
-      disabled={disabled}
-      className={className}
-      isError={isError || error}
-      onFocus={onFocus}
-      onBlur={onBlur}
-      tooltip={tooltip}
-      id={id}
-      label={label}
-      onChange={onChange}
       checked={
         typeof groupValue === 'object'
           ? groupValue.includes(value)
           : groupValue === value
       }
+      className={className}
       data-testid={dataTestId}
+      disabled={disabled}
+      id={id}
+      isError={isError || error}
+      label={label}
+      name={groupName}
+      onBlur={onBlur}
+      onChange={onChange}
+      onFocus={onFocus}
+      showTick={showTick}
+      tooltip={tooltip}
+      type={type}
+      value={value}
     >
       {children}
     </SelectableCard>
@@ -118,13 +118,13 @@ export const SelectableCardGroup = ({
 }: SelectableCardGroupProps) => {
   const contextValue = useMemo(
     () => ({
+      error: !!error,
       groupName: name,
       groupValue: value,
       onChange,
       required,
-      type,
       showTick,
-      error: !!error,
+      type,
     }),
     [name, value, onChange, required, type, showTick, error],
   )
@@ -137,8 +137,8 @@ export const SelectableCardGroup = ({
             {legend ? (
               <Label
                 as="legend"
-                required={required}
                 labelDescription={legendDescription}
+                required={required}
               >
                 {legend}
               </Label>
@@ -151,15 +151,15 @@ export const SelectableCardGroup = ({
         {helper ? (
           <Text
             as="span"
-            variant="caption"
             prominence="weak"
             sentiment="neutral"
+            variant="caption"
           >
             {helper}
           </Text>
         ) : null}
         {error ? (
-          <Text as="span" variant="caption" sentiment="danger">
+          <Text as="span" sentiment="danger" variant="caption">
             {error}
           </Text>
         ) : null}

@@ -83,7 +83,7 @@ export const Chart = () => {
   }, [])
 
   return (
-    <Row templateColumns="9fr 3fr" gap="3">
+    <Row gap="3" templateColumns="9fr 3fr">
       <Card>
         <Text as="h1" variant="headingSmall">
           Chart

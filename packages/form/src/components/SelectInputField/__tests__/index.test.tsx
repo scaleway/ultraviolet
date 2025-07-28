@@ -15,21 +15,21 @@ describe('SelectInputField', () => {
 
   test('should render correctly disabled', () => {
     const { asFragment } = renderWithForm(
-      <SelectInputField name="test" options={cities} disabled />,
+      <SelectInputField disabled name="test" options={cities} />,
     )
     expect(asFragment()).toMatchSnapshot()
   })
 
   test('should render correctly multiselect', () => {
     const { asFragment } = renderWithForm(
-      <SelectInputField name="test" options={cities} multiselect />,
+      <SelectInputField multiselect name="test" options={cities} />,
     )
     expect(asFragment()).toMatchSnapshot()
   })
 
   test('should render correctly grouped', () => {
     const { asFragment } = renderWithForm(
-      <SelectInputField name="test" options={planets} multiselect />,
+      <SelectInputField multiselect name="test" options={planets} />,
     )
     expect(asFragment()).toMatchSnapshot()
   })
@@ -58,9 +58,9 @@ describe('SelectInputField', () => {
     const { asFragment } = renderWithForm(
       <SelectInputField
         name="test"
+        onChange={onChange}
         options={planets}
         searchable={false}
-        onChange={onChange}
       />,
     )
     const select = screen.getByTestId('select-input-test')

@@ -5,22 +5,22 @@ import {
   shouldMatchEmotionSnapshotWithPortal,
 } from '@utils/test'
 import { describe, expect, it, vi } from 'vitest'
-import { Dialog } from '..'
 import { Button } from '../../Button'
+import { Dialog } from '..'
 
 describe('Dialog', () => {
   it('should renders correctly', () =>
     shouldMatchEmotionSnapshotWithPortal(
-      <Dialog title="Test" sentiment="primary" open>
+      <Dialog open sentiment="primary" title="Test">
         <Dialog.Stack>
           <Dialog.Text>text example</Dialog.Text>
           <Dialog.Buttons
+            primaryButton={<Button sentiment="danger">Discard changes</Button>}
             secondaryButton={
               <Dialog.CancelButton onClick={() => {}}>
                 Cancel
               </Dialog.CancelButton>
             }
-            primaryButton={<Button sentiment="danger">Discard changes</Button>}
           />
         </Dialog.Stack>
       </Dialog>,
@@ -29,21 +29,21 @@ describe('Dialog', () => {
   it('should handle disclosure & render prop', async () => {
     renderWithTheme(
       <Dialog
-        title="Title Test"
-        sentiment="primary"
         disclosure={<Button>Open Dialog</Button>}
+        sentiment="primary"
+        title="Title Test"
       >
         {({ close }) => (
           <Dialog.Stack>
             <Dialog.Text>text example</Dialog.Text>
             <Dialog.Buttons
+              primaryButton={
+                <Button sentiment="danger">Discard changes</Button>
+              }
               secondaryButton={
                 <Dialog.CancelButton onClick={close}>
                   Cancel
                 </Dialog.CancelButton>
-              }
-              primaryButton={
-                <Button sentiment="danger">Discard changes</Button>
               }
             />
           </Dialog.Stack>

@@ -36,14 +36,14 @@ describe('EstimateCost - NumberInput Item', () => {
     shouldMatchEmotionSnapshot(
       <EstimateCost>
         <EstimateCost.Item
-          label="Chocolates"
-          subLabel="Chocolate is never free :("
-          price={1}
-          unit="chocolate"
           amount={50}
+          label="Chocolates"
           longFractionDigits
+          price={1}
+          subLabel="Chocolate is never free :("
+          unit="chocolate"
         >
-          <EstimateCost.NumberInput minValue={0} maxValue={51} />
+          <EstimateCost.NumberInput maxValue={51} minValue={0} />
         </EstimateCost.Item>
       </EstimateCost>,
     ))

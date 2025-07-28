@@ -71,7 +71,7 @@ export const CarouselItem = ({
   children,
   width = '240px',
 }: CarouselItemProps) => (
-  <StyledBorderWrapper width={width} draggable="true">
+  <StyledBorderWrapper draggable="true" width={width}>
     {children}
   </StyledBorderWrapper>
 )
@@ -128,11 +128,17 @@ export const Carousel = ({
     <StyledWrapper className={className} data-testid={dataTestId}>
       <StyledBeforeScroll
         data-testid={`${dataTestId}-before`}
-        onMouseOver={handleScrollRight}
         onMouseLeave={() => clearInterval(intervalRight)}
+        onMouseOver={handleScrollRight}
       />
       <StyledScrollableWrapper
-        ref={scrollRef}
+        className={className}
+        data-testid={`${dataTestId}-wrapper`}
+        onDrag={() => handleScrollX(deltaX)}
+        onDragEnd={() => {
+          setDeltaX(0)
+          setDragStartX(0)
+        }}
         onDragOver={e => {
           setDeltaX(dragStartX - e.pageX)
           setDragStartX(e.pageX)
@@ -145,25 +151,19 @@ export const Carousel = ({
           e.dataTransfer.setDragImage(blankImg, 0, 0)
           setDragStartX(e.clientX)
         }}
-        onDrag={() => handleScrollX(deltaX)}
-        onDragEnd={() => {
-          setDeltaX(0)
-          setDragStartX(0)
-        }}
         onMouseUp={e => {
           e.preventDefault()
           e.stopPropagation()
         }}
-        className={className}
-        data-testid={`${dataTestId}-wrapper`}
+        ref={scrollRef}
       >
         {children}
       </StyledScrollableWrapper>
 
       <StyledAfterScroll
         data-testid={`${dataTestId}-after`}
-        onMouseOver={handleScrollLeft}
         onMouseLeave={() => clearInterval(intervalLeft)}
+        onMouseOver={handleScrollLeft}
       />
     </StyledWrapper>
   )

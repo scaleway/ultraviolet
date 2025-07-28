@@ -1,6 +1,6 @@
 import type { StoryFn } from '@storybook/react-vite'
-import { Avatar } from '..'
 import { Stack } from '../../Stack'
+import { Avatar } from '..'
 
 export const Shape: StoryFn<typeof Avatar> = props => (
   <>
@@ -10,10 +10,10 @@ export const Shape: StoryFn<typeof Avatar> = props => (
 )
 
 Shape.args = {
-  variant: 'text',
-  text: 'UV',
-  size: 'medium',
   shape: 'circle',
+  size: 'medium',
+  text: 'UV',
+  variant: 'text',
 }
 
 Shape.parameters = {
@@ -26,7 +26,7 @@ Shape.parameters = {
 
 Shape.decorators = [
   Story => (
-    <Stack gap={2} direction="row">
+    <Stack direction="row" gap={2}>
       <Story />
     </Stack>
   ),

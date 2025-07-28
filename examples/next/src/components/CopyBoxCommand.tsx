@@ -40,12 +40,12 @@ const CopyBox = ({ children }: CopyBoxProps) => {
     <StyledStack gap={2}>
       {flatChild.length > 1 ? (
         <Tabs
-          selected={tab}
           onChange={value => {
             if (typeof value === 'number') {
               setTab(value)
             }
           }}
+          selected={tab}
         >
           {flatChild.map(({ props: { title } }, index) => (
             <Tabs.Tab key={`tab-${title}`} value={index}>
@@ -71,13 +71,13 @@ const Command = ({ command, showLineNumbers = true }: CommandProps) => {
 
   return (
     <SyntaxHighlighter
-      language="typescript"
-      style={theme === 'light' ? oneLight : dracula}
       customStyle={{ background: 'none', fontSize: '14px', padding: 0 }}
+      language="typescript"
       lineProps={{
         style: { whiteSpace: 'pre-wrap', wordBreak: 'break-all' },
       }}
       showLineNumbers={showLineNumbers}
+      style={theme === 'light' ? oneLight : dracula}
     >
       {command}
     </SyntaxHighlighter>

@@ -6,11 +6,11 @@ import { barChartMultiData } from './mockData'
 export const MultiSeries: StoryFn<typeof BarChart> = props => (
   <BarChart
     {...props}
-    keys={['sent', 'received']}
-    data={barChartMultiData}
     axisFormatters={{
       bottom: value => format(new Date(value), 'dd-MM-Y'),
     }}
+    data={barChartMultiData}
+    keys={['sent', 'received']}
     tooltipFunction={({ value, indexValue, color }) => ({
       color,
       formattedValue: `${value}`,

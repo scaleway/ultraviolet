@@ -7,7 +7,7 @@ import { CheckboxGroupField } from '..'
 describe('CheckboxField', () => {
   test('should render correctly checked', async () => {
     const { asFragment } = renderWithForm(
-      <CheckboxGroupField onChange={() => {}} name="Checkbox" legend="Label">
+      <CheckboxGroupField legend="Label" name="Checkbox" onChange={() => {}}>
         <CheckboxGroupField.Checkbox name="value-1" value="value-1">
           Checkbox 1
         </CheckboxGroupField.Checkbox>
@@ -39,9 +39,9 @@ describe('CheckboxField', () => {
 
     const { asFragment } = renderWithForm(
       <CheckboxGroupField
+        legend="CheckboxGroupField events"
         name="test"
         onChange={onChange}
-        legend="CheckboxGroupField events"
         required
       >
         <CheckboxGroupField.Checkbox name="value-1" value="value-1">

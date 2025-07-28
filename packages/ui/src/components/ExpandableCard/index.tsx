@@ -236,26 +236,24 @@ const BaseExpandableCard = forwardRef(
 
     return (
       <StyledStack
+        data-draggable={draggable}
+        data-name={name}
+        data-value={value}
         direction="row"
+        draggable={draggable}
         gap={2}
-        ref={containerRef}
-        width="100%"
+        onDragEnd={onDragEnd}
+        onDragStart={onDragStart}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
-        onDragStart={onDragStart}
-        onDragEnd={onDragEnd}
-        draggable={draggable}
-        data-name={name}
-        data-draggable={draggable}
-        data-value={value}
+        ref={containerRef}
+        width="100%"
       >
         {draggable ? (
           <DragIconContainer
+            data-testid={`draggable-icon-${value}`}
             data-visible={isHovered}
             justifyContent="center"
-            onMouseDown={() => setClicking(true)}
-            onMouseUp={() => setClicking(false)}
-            data-testid={`draggable-icon-${value}`}
             onKeyDown={event => {
               if (event.key === 'Enter' || event.key === ' ') {
                 event.preventDefault()
@@ -271,34 +269,35 @@ const BaseExpandableCard = forwardRef(
                 onKeyDown?.(event)
               }
             }}
+            onMouseDown={() => setClicking(true)}
+            onMouseUp={() => setClicking(false)}
           >
             <Tooltip
               text={draggableTooltip}
               visible={clicking ? false : undefined} // Hide the tooltip when dragging the card
             >
               <DragIcon
-                sentiment="neutral"
-                prominence={clicking ? 'strong' : 'weak'}
-                size="small"
                 disabled={disabled}
+                prominence={clicking ? 'strong' : 'weak'}
+                sentiment="neutral"
+                size="small"
               />
             </Tooltip>
           </DragIconContainer>
         ) : null}
         <StyledDetails
           className={className}
+          data-clicking={clicking}
           data-testid={dataTestId}
-          tabIndex={disabled ? -1 : undefined}
+          key={clicking ? 'closed' : 'open'}
           name={name}
           open={expanded}
           ref={ref}
-          data-clicking={clicking}
-          key={clicking ? 'closed' : 'open'}
+          tabIndex={disabled ? -1 : undefined}
         >
           <StyledSummary
             data-disabled={!!disabled}
             data-testid={dataTestId ? `${dataTestId}-summary` : undefined}
-            ref={headerRef}
             onClick={event => {
               if (disabled || onToggleExpand) {
                 onToggleExpand?.()
@@ -318,10 +317,11 @@ const BaseExpandableCard = forwardRef(
                   }
                 : undefined
             }
+            ref={headerRef}
           >
-            <StyledArrowIcon sentiment="neutral" disabled={disabled} />
+            <StyledArrowIcon disabled={disabled} sentiment="neutral" />
             {typeof header === 'string' ? (
-              <ExpandableCardTitle size={size} disabled={disabled}>
+              <ExpandableCardTitle disabled={disabled} size={size}>
                 {header}
               </ExpandableCardTitle>
             ) : (
@@ -332,22 +332,22 @@ const BaseExpandableCard = forwardRef(
         </StyledDetails>
         {draggable && index === 0 ? (
           <DropableArea
-            ref={draggableFirstRef}
             data-first
+            onDragLeave={event => onDrag(event, 'transparent', true)}
             onDragOver={event =>
               onDrag(event, theme.colors.primary.border, true)
             }
-            onDragLeave={event => onDrag(event, 'transparent', true)}
             onDrop={event => handleDrop(event, true)}
+            ref={draggableFirstRef}
           />
         ) : null}
         {draggable ? (
           <DropableArea
-            ref={draggableRef}
-            onDragOver={event => onDrag(event, theme.colors.primary.border)}
-            onDragLeave={event => onDrag(event, 'transparent')}
-            onDrop={handleDrop}
             data-testid={`${value}-dropable-area`}
+            onDragLeave={event => onDrag(event, 'transparent')}
+            onDragOver={event => onDrag(event, theme.colors.primary.border)}
+            onDrop={handleDrop}
+            ref={draggableRef}
           />
         ) : null}
       </StyledStack>

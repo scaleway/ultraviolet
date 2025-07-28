@@ -1,13 +1,15 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { Snippet, Stack, Text } from '@ultraviolet/ui'
+import { useForm } from '../../..'
+import { emailRegex, mockErrors } from '../../../mocks/mockErrors'
 import {
   CheckboxField,
   DateInputField,
   Form,
   NumberInputField,
   RadioField,
-  SelectInputField,
   SelectableCardField,
+  SelectInputField,
   Submit,
   SubmitErrorAlert,
   TagInputField,
@@ -15,12 +17,10 @@ import {
   TimeInputField,
   ToggleField,
 } from '../..'
-import { useForm } from '../../..'
-import { emailRegex, mockErrors } from '../../../mocks/mockErrors'
 
 const data = [
-  { value: '1', label: '1', disabled: false },
-  { value: '2', label: '2', disabled: false },
+  { disabled: false, label: '1', value: '1' },
+  { disabled: false, label: '2', value: '2' },
 ]
 
 type FormValues = {
@@ -40,15 +40,15 @@ type FormValues = {
 
 export const Playground: StoryFn<typeof Form> = () => {
   const methods = useForm<FormValues>({
-    mode: 'onChange',
     defaultValues: {
-      receiveEmailUpdates: true,
       choice: '2',
-      tags: ['cloud', 'of', 'choice'],
-      selectableCard: '1',
       disableName: false,
       email: 'email',
+      receiveEmailUpdates: true,
+      selectableCard: '1',
+      tags: ['cloud', 'of', 'choice'],
     },
+    mode: 'onChange',
   })
 
   const disableName = methods.watch('disableName')
@@ -77,120 +77,120 @@ export const Playground: StoryFn<typeof Form> = () => {
       }
     >
       <Stack gap={3}>
-        <CheckboxField name="disableName" control={methods.control}>
+        <CheckboxField control={methods.control} name="disableName">
           I&apos;m disabling the field name to remove validation
         </CheckboxField>
-        <Stack gap={2} direction="row">
+        <Stack direction="row" gap={2}>
           <RadioField
-            name="choice"
-            value="1"
-            required
+            control={methods.control}
             label="1"
-            control={methods.control}
+            name="choice"
+            required
+            value="1"
           />
           <RadioField
-            name="choice"
-            value="2"
-            required
+            control={methods.control}
             label="2"
-            control={methods.control}
+            name="choice"
+            required
+            value="2"
           />
           <RadioField
-            name="choice"
-            value="3"
-            required
-            label="3"
             control={methods.control}
+            label="3"
+            name="choice"
+            required
+            value="3"
           />
         </Stack>
-        <Stack gap={2} direction="row">
+        <Stack direction="row" gap={2}>
           <DateInputField
-            name="date"
-            label="Date"
-            required
             control={methods.control}
+            label="Date"
+            name="date"
+            required
           />
-          <TimeInputField name="time" required control={methods.control} />
+          <TimeInputField control={methods.control} name="time" required />
         </Stack>
 
-        <Stack gap={2} direction="row">
+        <Stack direction="row" gap={2}>
           <SelectableCardField
-            name="selectableCard"
             aria-label="Select"
-            value="1"
-            required
             control={methods.control}
+            name="selectableCard"
+            required
+            value="1"
           >
             Selectable Card 1
           </SelectableCardField>
           <SelectableCardField
-            name="selectableCard"
             aria-label="Select"
-            value="2"
-            required
             control={methods.control}
+            name="selectableCard"
+            required
+            value="2"
           >
             Selectable Card 2
           </SelectableCardField>
           <SelectableCardField
-            name="selectableCard"
             aria-label="Select"
-            value="3"
-            required
             control={methods.control}
+            name="selectableCard"
+            required
+            value="3"
           >
             Selectable Card 3
           </SelectableCardField>
         </Stack>
 
         <TextInputField
-          name="name"
-          label="Name"
-          placeholder="John"
           autoComplete="given-name"
-          required={!disableName}
-          disabled={disableName}
           control={methods.control}
+          disabled={disableName}
+          label="Name"
+          name="name"
+          placeholder="John"
+          required={!disableName}
         />
         <NumberInputField
-          name="age"
           control={methods.control}
-          min={1}
           max={99}
+          min={1}
+          name="age"
         />
         <TextInputField
-          name="email"
-          label="Email"
-          type="email"
-          placeholder="john.smith@email.com"
-          required
-          regex={[emailRegex]}
           control={methods.control}
+          label="Email"
+          name="email"
+          placeholder="john.smith@email.com"
+          regex={[emailRegex]}
+          required
+          type="email"
         />
 
         <SelectInputField
-          name="select"
-          required
-          options={data}
-          searchable={false}
           control={methods.control}
+          name="select"
+          options={data}
+          required
+          searchable={false}
         />
 
         <TagInputField
+          control={methods.control}
           name="tags"
           placeholder="TagInput..."
-          control={methods.control}
         />
 
-        <Stack gap={2} direction="row" justifyContent="center">
-          <CheckboxField name="receiveEmailUpdates" control={methods.control}>
+        <Stack direction="row" gap={2} justifyContent="center">
+          <CheckboxField control={methods.control} name="receiveEmailUpdates">
             I&apos;d like to receive news updates
           </CheckboxField>
 
           <ToggleField
-            name="receiveEmailUpdates"
-            label="Toggle"
             control={methods.control}
+            label="Toggle"
+            name="receiveEmailUpdates"
           />
         </Stack>
 
@@ -199,31 +199,31 @@ export const Playground: StoryFn<typeof Form> = () => {
       </Stack>
       <Stack gap={2}>
         <Stack gap={1}>
-          <Text variant="bodyStrong" as="p">
+          <Text as="p" variant="bodyStrong">
             Form input values:
           </Text>
-          <Snippet prefix="lines" initiallyExpanded>
+          <Snippet initiallyExpanded prefix="lines">
             {JSON.stringify(methods.watch(), null, 1)}
           </Snippet>
         </Stack>
         <Stack gap={1}>
-          <Text variant="bodyStrong" as="p">
+          <Text as="p" variant="bodyStrong">
             Form values:
           </Text>
           <Snippet prefix="lines">
             {JSON.stringify(
               {
+                dirtyFields,
                 errors,
                 isDirty,
-                isSubmitting,
-                touchedFields,
-                submitCount,
-                dirtyFields,
-                isValid,
                 isLoading,
-                isSubmitted,
-                isValidating,
                 isSubmitSuccessful,
+                isSubmitted,
+                isSubmitting,
+                isValid,
+                isValidating,
+                submitCount,
+                touchedFields,
               },
               null,
               1,

@@ -60,12 +60,12 @@ const Item = ({
   disabled = false,
   className,
 }: ItemProps) => (
-  <Step disabled={disabled} className={className} onClick={onClick}>
+  <Step className={className} disabled={disabled} onClick={onClick}>
     {bulletContent ? (
       <Bullet
-        size={size}
-        sentiment={disabled ? 'disabled' : sentiment}
         prominence={prominence}
+        sentiment={disabled ? 'disabled' : sentiment}
+        size={size}
       >
         {bulletContent}
       </Bullet>

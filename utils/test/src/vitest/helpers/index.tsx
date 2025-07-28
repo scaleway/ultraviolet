@@ -1,7 +1,7 @@
 import createCache from '@emotion/cache'
 import { CacheProvider, ThemeProvider } from '@emotion/react'
-import { render, renderHook } from '@testing-library/react'
 import type { RenderOptions } from '@testing-library/react'
+import { render, renderHook } from '@testing-library/react'
 import { consoleLightTheme } from '@ultraviolet/themes'
 import type { ComponentProps, ReactElement, ReactNode } from 'react'
 import type { FormErrors, UseFormProps } from '../../../../../packages/form/src'
@@ -28,25 +28,6 @@ export const ComponentWrapper = ({
 )
 
 export const mockFormErrors: FormErrors = {
-  maxLength: ({ maxLength }) =>
-    `This field should have a length lower than ${maxLength ?? ''}`,
-  minLength: ({ minLength }) =>
-    `This field should have a length greater than ${minLength ?? ''}`,
-  pattern: ({ regex }) =>
-    `This field should match the regex ${(regex ?? [])
-      .map(r =>
-        Array.isArray(r)
-          ? r.map(nestedRegex => nestedRegex.source).join(' or ')
-          : r.source,
-      )
-      .join(' and ')}`,
-  required: () => 'This field is required',
-  max: ({ max }) => `This field is too high (maximum is : ${max ?? ''})`,
-  min: ({ min }) => `This field is too low (minimum is: ${min ?? ''})`,
-  maxDate: ({ maxDate }) =>
-    `This field should be before ${maxDate?.toString() ?? ''}`,
-  minDate: ({ minDate }) =>
-    `This field should be after ${minDate?.toString() ?? ''}`,
   isInteger: ({ isInteger }) => {
     if (typeof isInteger === 'number') {
       if (Number.isInteger(isInteger)) {
@@ -58,6 +39,25 @@ export const mockFormErrors: FormErrors = {
 
     return 'This field should be a number'
   },
+  max: ({ max }) => `This field is too high (maximum is : ${max ?? ''})`,
+  maxDate: ({ maxDate }) =>
+    `This field should be before ${maxDate?.toString() ?? ''}`,
+  maxLength: ({ maxLength }) =>
+    `This field should have a length lower than ${maxLength ?? ''}`,
+  min: ({ min }) => `This field is too low (minimum is: ${min ?? ''})`,
+  minDate: ({ minDate }) =>
+    `This field should be after ${minDate?.toString() ?? ''}`,
+  minLength: ({ minLength }) =>
+    `This field should have a length greater than ${minLength ?? ''}`,
+  pattern: ({ regex }) =>
+    `This field should match the regex ${(regex ?? [])
+      .map(r =>
+        Array.isArray(r)
+          ? r.map(nestedRegex => nestedRegex.source).join(' or ')
+          : r.source,
+      )
+      .join(' and ')}`,
+  required: () => 'This field is required',
 }
 
 /**
@@ -130,9 +130,9 @@ export const renderWithForm = (
   return {
     ...renderWithTheme(
       <Form
-        onSubmit={() => {}}
         errors={mockFormErrors}
         methods={result.current}
+        onSubmit={() => {}}
         {...formProps}
       >
         {compoment}

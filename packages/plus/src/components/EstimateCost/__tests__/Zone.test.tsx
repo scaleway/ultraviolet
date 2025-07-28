@@ -18,14 +18,14 @@ describe('EstimateCost - Zone', () => {
   test('render zone component', () =>
     shouldMatchEmotionSnapshot(
       <EstimateCost defaultTimeUnit="hours">
-        <EstimateCost.Zone label="fr-par-1" image={frFlag} />
+        <EstimateCost.Zone image={frFlag} label="fr-par-1" />
       </EstimateCost>,
     ))
 
   test('render region component, with animation', () =>
     shouldMatchEmotionSnapshot(
       <EstimateCost defaultTimeUnit="hours">
-        <EstimateCost.Zone label="nl-ams-1" image={frFlag} animated />
+        <EstimateCost.Zone animated image={frFlag} label="nl-ams-1" />
       </EstimateCost>,
     ))
 })

@@ -84,7 +84,7 @@ describe('Link', () => {
   test(`render correctly with bad sentiment`, () =>
     shouldMatchEmotionSnapshot(
       // @ts-expect-error Use a wrong sentiment
-      <Link sentiment="wrong" href="/">
+      <Link href="/" sentiment="wrong">
         Hello
       </Link>,
     ))
@@ -92,15 +92,15 @@ describe('Link', () => {
   test(`render correctly with sizes`, () =>
     shouldMatchEmotionSnapshot(
       <>
-        <Link size="large" href="/">
+        <Link href="/" size="large">
           Hello
         </Link>
         ,
-        <Link size="small" href="/">
+        <Link href="/" size="small">
           Hello
         </Link>
         ,
-        <Link size="xsmall" href="/">
+        <Link href="/" size="xsmall">
           Hello
         </Link>
       </>,

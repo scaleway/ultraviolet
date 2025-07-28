@@ -39,15 +39,9 @@ const targets = resolveToEsbuildTarget(
 
 export const defaultConfig: ViteUserConfig = {
   build: {
-    outDir: 'dist',
-    target: [...targets],
-    minify: false,
-    ssr: true,
     emptyOutDir: true,
     lib: {
-      name: pkg.name,
       entry: 'src/index.ts',
-      formats: ['es', 'cjs'],
       fileName: (format, filename) => {
         if (format === 'es') {
           return `${filename}.js`
@@ -55,73 +49,42 @@ export const defaultConfig: ViteUserConfig = {
 
         return `${filename}.${format}`
       },
+      formats: ['es', 'cjs'],
+      name: pkg.name,
     },
+    minify: false,
+    outDir: 'dist',
     rollupOptions: {
-      preserveSymlinks: true,
       external,
       output: {
         interop: 'compat',
         preserveModules: true,
         preserveModulesRoot: './src',
       },
+      preserveSymlinks: true,
     },
+    ssr: true,
+    target: [...targets],
   },
   plugins: [
     react({
-      jsxRuntime: 'automatic',
-      jsxImportSource: '@emotion/react',
       babel: {
         plugins: ['@emotion/babel-plugin'],
       },
+      jsxImportSource: '@emotion/react',
+      jsxRuntime: 'automatic',
     }),
     preserveDirectives(),
   ],
   test: {
-    name: 'browser-jsdom',
-    globals: true,
-    clearMocks: true,
-    restoreMocks: true,
-    mockReset: true,
-    environment: 'jsdom',
-    testTimeout: 10000,
     alias: {
       '.*\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
         '<rootDir>/.vitest/fileMock.js',
       '\\.svg$': '<rootDir>/.vitest/svg.ts',
     },
-    setupFiles: ['vitest-localstorage-mock', 'vitest-canvas-mock'],
-    server: {
-      deps: {
-        inline: true,
-      },
-    },
-    deps: {
-      optimizer: {
-        web: {
-          enabled: true,
-          include: ['react-select', '@nivo/*'],
-        },
-      },
-    },
     allowOnly: false,
-    css: true,
-    logHeapUsage: true,
-    reporters: ['default', 'junit'],
-    outputFile: {
-      junit: '.reports/tests.xml',
-    },
-    exclude: [
-      '**/node_modules/**',
-      '**/{dist,build}/**',
-      '**/__stories__/**',
-      '**.stories.*',
-      '**/coverages/**',
-      '**/__stories__/**',
-      '**/.{idea,git,cache,output,temp,reports,jest}/**',
-    ],
+    clearMocks: true,
     coverage: {
-      provider: 'istanbul',
-      reporter: ['text', 'json', 'cobertura', 'html', 'json-summary'],
       exclude: [
         '.reports/**',
         '**/.eslintrc.*',
@@ -134,7 +97,44 @@ export const defaultConfig: ViteUserConfig = {
         '**/__stories__/**',
         '**.svg',
       ],
+      provider: 'istanbul',
+      reporter: ['text', 'json', 'cobertura', 'html', 'json-summary'],
     },
+    css: true,
+    deps: {
+      optimizer: {
+        web: {
+          enabled: true,
+          include: ['react-select', '@nivo/*'],
+        },
+      },
+    },
+    environment: 'jsdom',
+    exclude: [
+      '**/node_modules/**',
+      '**/{dist,build}/**',
+      '**/__stories__/**',
+      '**.stories.*',
+      '**/coverages/**',
+      '**/__stories__/**',
+      '**/.{idea,git,cache,output,temp,reports,jest}/**',
+    ],
+    globals: true,
+    logHeapUsage: true,
+    mockReset: true,
+    name: 'browser-jsdom',
+    outputFile: {
+      junit: '.reports/tests.xml',
+    },
+    reporters: ['default', 'junit'],
+    restoreMocks: true,
+    server: {
+      deps: {
+        inline: true,
+      },
+    },
+    setupFiles: ['vitest-localstorage-mock', 'vitest-canvas-mock'],
+    testTimeout: 10000,
   },
 }
 

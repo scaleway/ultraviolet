@@ -1,63 +1,23 @@
 {
   "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
-  "organizeImports": {
-    "enabled": true
-  },
-  "linter": {
-    "enabled": false
-  },
-  "vcs": {
-    "clientKind": "git",
-    "useIgnoreFile": true
-  },
-  "files": {
-    "ignore": [
-      ".turbo/",
-      ".next/",
-      "coverage/",
-      "**/node_modules/",
-      "**/storybook-static",
-      "dist",
-      "**/pnpm-lock.yaml",
-      "**/package.json",
-      "**/CHANGELOG.md",
-      "*.snap",
-      "**/__snapshots__/",
-      ".storybook/**"
+  "assist": {
+    "actions": {
+      "source": {
+        "organizeImports": "on",
+        "useSortedAttributes": "on",
+        "useSortedKeys": "on",
+        "useSortedProperties": "on"
+      }
+    },
+    "includes": [
+      "!**/package.json",
+      "**/*.ts",
+      "**/*.tsx",
+      "!**/dist/**",
+      "!**/build/**",
+      "!**/.turbo/**",
+      "!**/prebuild.ts"
     ]
-  },
-  "formatter": {
-    "enabled": true,
-    "formatWithErrors": false,
-    "indentStyle": "space",
-    "indentWidth": 2,
-    "lineEnding": "lf",
-    "lineWidth": 80,
-    "attributePosition": "auto"
-  },
-  "javascript": {
-    "formatter": {
-      "jsxQuoteStyle": "double",
-      "quoteProperties": "asNeeded",
-      "trailingCommas": "all",
-      "semicolons": "asNeeded",
-      "arrowParentheses": "asNeeded",
-      "bracketSpacing": true,
-      "bracketSameLine": false,
-      "quoteStyle": "single",
-      "attributePosition": "auto"
-    }
-  },
-  "json": {
-    "formatter": {
-      "enabled": true
-    },
-    "parser": {
-      "allowComments": true
-    },
-    "linter": {
-      "enabled": true
-    }
   },
   "css": {
     "formatter": {
@@ -71,5 +31,80 @@
       "allowWrongLineComments": false,
       "cssModules": true
     }
+  },
+  "files": {
+    "includes": [
+      "**",
+      "!**/.turbo/",
+      "!**/.next/",
+      "!**/coverage/",
+      "!**/node_modules/",
+      "!**/storybook-static",
+      "!**/dist",
+      "!**/pnpm-lock.yaml",
+      "!**/package.json",
+      "!**/CHANGELOG.md",
+      "!**/*.snap",
+      "!**/__snapshots__/",
+      "!**/.storybook/**"
+    ]
+  },
+  "formatter": {
+    "attributePosition": "auto",
+    "enabled": true,
+    "formatWithErrors": false,
+    "includes": [
+      "**/*.ts",
+      "**/*.tsx",
+      "!**/dist/**",
+      "!**/build/**",
+      "!**/.turbo/**"
+    ],
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "lineEnding": "lf",
+    "lineWidth": 80
+  },
+  "javascript": {
+    "formatter": {
+      "arrowParentheses": "asNeeded",
+      "attributePosition": "auto",
+      "bracketSameLine": false,
+      "bracketSpacing": true,
+      "jsxQuoteStyle": "double",
+      "quoteProperties": "asNeeded",
+      "quoteStyle": "single",
+      "semicolons": "asNeeded",
+      "trailingCommas": "all"
+    }
+  },
+  "json": {
+    "formatter": {
+      "enabled": true
+    },
+    "linter": {
+      "enabled": true
+    },
+    "parser": {
+      "allowComments": true
+    }
+  },
+  "linter": {
+    "enabled": false
+  },
+  "overrides": [
+    {
+      "assist": {
+        "actions": {
+          "source": {
+            "useSortedKeys": "off"
+          }
+        }
+      }
+    }
+  ],
+  "vcs": {
+    "clientKind": "git",
+    "useIgnoreFile": true
   }
 }

@@ -2,8 +2,8 @@ import { fireEvent, screen } from '@testing-library/react'
 import { consoleLightTheme } from '@ultraviolet/themes'
 import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
 import { describe, expect, test, vi } from 'vitest'
-import { Tabs } from '..'
 import { Link } from '../../Link'
+import { Tabs } from '..'
 
 describe('Tabs', () => {
   test('renders correctly', () => {
@@ -26,17 +26,17 @@ describe('Tabs', () => {
     })
 
     const { asFragment } = renderWithTheme(
-      <Tabs selected={0} onChange={() => {}}>
-        <Tabs.Tab value={0} counter={2}>
+      <Tabs onChange={() => {}} selected={0}>
+        <Tabs.Tab counter={2} value={0}>
           First
         </Tabs.Tab>
         <Tabs.Tab value={1}>Second</Tabs.Tab>
         <Tabs.Tab value={undefined}>Undefined</Tabs.Tab>
         <Tabs.Tab counter={12}>Counter</Tabs.Tab>
-        <Tabs.Tab value={2} counter={0}>
+        <Tabs.Tab counter={0} value={2}>
           Counter no items
         </Tabs.Tab>
-        <Tabs.Tab counter={12} badge="Badge">
+        <Tabs.Tab badge="Badge" counter={12}>
           Conter and badge
         </Tabs.Tab>
         <Tabs.Tab badge="Badge">Badge</Tabs.Tab>
@@ -51,7 +51,7 @@ describe('Tabs', () => {
         <Tabs.Tab>Very long tab name</Tabs.Tab>
         <Tabs.Tab>Very long tab name</Tabs.Tab>
         <Tabs.Tab>Very long tab name</Tabs.Tab>
-        <Tabs.Menu visible id="test" disclosure="Blabla">
+        <Tabs.Menu disclosure="Blabla" id="test" visible>
           <Tabs.MenuItem value={3}>Test</Tabs.MenuItem>
           <Tabs.MenuItem value={4}>Test 2</Tabs.MenuItem>
         </Tabs.Menu>
@@ -73,11 +73,11 @@ describe('Tabs', () => {
 
   test('renders correctly with Tabs menu selected', () => {
     const { asFragment } = renderWithTheme(
-      <Tabs selected={4} onChange={() => {}}>
+      <Tabs onChange={() => {}} selected={4}>
         <Tabs.Tab value={0}>First</Tabs.Tab>
         <Tabs.Tab value={1}>Second</Tabs.Tab>
         <Tabs.Tab value={2}>Very long tab name</Tabs.Tab>
-        <Tabs.Menu visible id="test" disclosure="More">
+        <Tabs.Menu disclosure="More" id="test" visible>
           <Tabs.MenuItem>Test</Tabs.MenuItem>
           <Tabs.MenuItem disabled>Test</Tabs.MenuItem>
           <Tabs.MenuItem value={undefined}>Test</Tabs.MenuItem>
@@ -94,10 +94,10 @@ describe('Tabs', () => {
 
   test('renders correctly with Tabs and last disabled', () => {
     shouldMatchEmotionSnapshot(
-      <Tabs selected={2} onChange={() => {}}>
+      <Tabs onChange={() => {}} selected={2}>
         <Tabs.Tab value={0}>First</Tabs.Tab>
         <Tabs.Tab value={1}>Second</Tabs.Tab>
-        <Tabs.Tab value={2} disabled>
+        <Tabs.Tab disabled value={2}>
           Very long tab name
         </Tabs.Tab>
       </Tabs>,
@@ -106,10 +106,10 @@ describe('Tabs', () => {
 
   test('renders correctly with Tabs name', () => {
     shouldMatchEmotionSnapshot(
-      <Tabs selected="second" onChange={() => {}}>
+      <Tabs onChange={() => {}} selected="second">
         <Tabs.Tab value="first">First</Tabs.Tab>
         <Tabs.Tab value="second">Second</Tabs.Tab>
-        <Tabs.Tab value="three" disabled>
+        <Tabs.Tab disabled value="three">
           Very long tab name
         </Tabs.Tab>
       </Tabs>,
@@ -121,7 +121,7 @@ describe('Tabs', () => {
       <Tabs onChange={() => {}}>
         <Tabs.Tab as="div">First</Tabs.Tab>
         <Tabs.Tab as="a">Second</Tabs.Tab>
-        <Tabs.Tab as={Link} href="#" disabled>
+        <Tabs.Tab as={Link} disabled href="#">
           Very long tab name
         </Tabs.Tab>
       </Tabs>,
@@ -133,11 +133,11 @@ describe('Tabs', () => {
     const onFirstTabClick = vi.fn()
     renderWithTheme(
       <Tabs onChange={onChange}>
-        <Tabs.Tab value={1} onClick={onFirstTabClick}>
+        <Tabs.Tab onClick={onFirstTabClick} value={1}>
           First
         </Tabs.Tab>
         <Tabs.Tab value={2}>Second</Tabs.Tab>
-        <Tabs.Tab value={3} disabled>
+        <Tabs.Tab disabled value={3}>
           Disabled
         </Tabs.Tab>
         <Tabs.Tab>No value</Tabs.Tab>
@@ -161,15 +161,15 @@ describe('Tabs', () => {
     const onFirstTabClick = vi.fn()
     renderWithTheme(
       <Tabs onChange={onChange}>
-        <Tabs.Tab value="first" onClick={onFirstTabClick}>
+        <Tabs.Tab onClick={onFirstTabClick} value="first">
           First
         </Tabs.Tab>
         <Tabs.Tab value="second">Second</Tabs.Tab>
         <Tabs.Tab>No value</Tabs.Tab>
-        <Tabs.Tab value={3} disabled>
+        <Tabs.Tab disabled value={3}>
           Disabled
         </Tabs.Tab>
-        <Tabs.Tab value={4} subtitle="subtitle" disabled>
+        <Tabs.Tab disabled subtitle="subtitle" value={4}>
           Disabled with Subtitle
         </Tabs.Tab>
         <Tabs.Menu disclosure="More" visible>
@@ -196,14 +196,14 @@ describe('Tabs', () => {
     const onClick = vi.fn()
     const { unmount } = renderWithTheme(
       <Tabs onChange={() => {}}>
-        <Tabs.Tab value="first" onClick={onClick}>
+        <Tabs.Tab onClick={onClick} value="first">
           First
         </Tabs.Tab>
         <Tabs.Tab onClick={onClick} value="second">
           Second
         </Tabs.Tab>
         <Tabs.Tab onClick={onClick}>No value</Tabs.Tab>
-        <Tabs.Tab onClick={onClick} value={3} disabled>
+        <Tabs.Tab disabled onClick={onClick} value={3}>
           Disabled
         </Tabs.Tab>
         <Tabs.Menu disclosure="More" visible>

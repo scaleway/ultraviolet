@@ -1,4 +1,4 @@
-import { SelectInput, SelectableCard, Stack, Text } from '@ultraviolet/ui'
+import { SelectableCard, SelectInput, Stack, Text } from '@ultraviolet/ui'
 import { useState } from 'react'
 
 const CheckboxSelectableCard = () => {
@@ -6,62 +6,62 @@ const CheckboxSelectableCard = () => {
   const [selectInputValue, setSelectInputValue] = useState('')
 
   return (
-    <Stack gap={1} flex={1}>
+    <Stack flex={1} gap={1}>
       <SelectableCard
-        name="option1"
         checked={value.option1}
-        value="option1"
-        type="checkbox"
-        onChange={event =>
-          setValue({ ...value, option1: event.currentTarget.checked })
-        }
-        showTick
         label={
-          <Stack direction="row" justifyContent="space-between" flex={1}>
-            <Text variant="bodyStrong" as="span">
+          <Stack direction="row" flex={1} justifyContent="space-between">
+            <Text as="span" variant="bodyStrong">
               Optional option 1
             </Text>
-            <Text variant="bodyStronger" as="span">
+            <Text as="span" variant="bodyStronger">
               4.99€
             </Text>
           </Stack>
         }
+        name="option1"
+        onChange={event =>
+          setValue({ ...value, option1: event.currentTarget.checked })
+        }
+        showTick
+        type="checkbox"
+        value="option1"
       >
         <Stack gap={1}>
           This option will cost you 1.99€ and provide you with a lot of
           happiness checkbox
           <SelectInput
-            value={selectInputValue}
-            onChange={(newValue: string) => setSelectInputValue(newValue)}
             label="Select a sub option checkbox"
+            onChange={(newValue: string) => setSelectInputValue(newValue)}
             options={[
               {
                 label: 'Sub option 1',
                 value: 'option1',
               },
             ]}
+            value={selectInputValue}
           />
         </Stack>
       </SelectableCard>
       <SelectableCard
-        name="option2"
         checked={value.option2}
-        value="option2"
-        type="checkbox"
-        onChange={event =>
-          setValue({ ...value, option2: event.currentTarget.checked })
-        }
-        showTick
         label={
-          <Stack direction="row" justifyContent="space-between" flex={1}>
-            <Text variant="bodyStrong" as="span">
+          <Stack direction="row" flex={1} justifyContent="space-between">
+            <Text as="span" variant="bodyStrong">
               Optional option 2
             </Text>
-            <Text variant="bodyStronger" as="span">
+            <Text as="span" variant="bodyStronger">
               9.99€
             </Text>
           </Stack>
         }
+        name="option2"
+        onChange={event =>
+          setValue({ ...value, option2: event.currentTarget.checked })
+        }
+        showTick
+        type="checkbox"
+        value="option2"
       >
         This option will cost you 2.99€ and provide you with a lot more of
         happiness checkbox
@@ -75,58 +75,58 @@ const RadioSelectableCard = () => {
   const [selectInputValue, setSelectInputValue] = useState('')
 
   return (
-    <Stack gap={1} flex={1}>
+    <Stack flex={1} gap={1}>
       <SelectableCard
-        name="option1"
         checked={value === 'option1'}
-        value="option1"
-        type="radio"
-        onChange={() => setValue('option1')}
-        showTick
         label={
-          <Stack direction="row" justifyContent="space-between" flex={1}>
-            <Text variant="bodyStrong" as="span">
+          <Stack direction="row" flex={1} justifyContent="space-between">
+            <Text as="span" variant="bodyStrong">
               Optional option 1
             </Text>
-            <Text variant="bodyStronger" as="span">
+            <Text as="span" variant="bodyStronger">
               4.99€
             </Text>
           </Stack>
         }
+        name="option1"
+        onChange={() => setValue('option1')}
+        showTick
+        type="radio"
+        value="option1"
       >
         <Stack gap={1}>
           This option will cost you 1.99€ and provide you with a lot of
           happiness radio
           <SelectInput
-            value={selectInputValue}
-            onChange={(newValue: string) => setSelectInputValue(newValue)}
             label="Select a sub option radio"
+            onChange={(newValue: string) => setSelectInputValue(newValue)}
             options={[
               {
                 label: 'Sub option 1',
                 value: 'option1',
               },
             ]}
+            value={selectInputValue}
           />
         </Stack>
       </SelectableCard>
       <SelectableCard
-        name="option2"
         checked={value === 'option2'}
-        value="option2"
-        type="radio"
-        onChange={() => setValue('option2')}
-        showTick
         label={
-          <Stack direction="row" justifyContent="space-between" flex={1}>
-            <Text variant="bodyStrong" as="span">
+          <Stack direction="row" flex={1} justifyContent="space-between">
+            <Text as="span" variant="bodyStrong">
               Optional option 2
             </Text>
-            <Text variant="bodyStronger" as="span">
+            <Text as="span" variant="bodyStronger">
               9.99€
             </Text>
           </Stack>
         }
+        name="option2"
+        onChange={() => setValue('option2')}
+        showTick
+        type="radio"
+        value="option2"
       >
         This option will cost you 2.99€ and provide you with a lot more of
         happiness radio

@@ -1,8 +1,8 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { Stack } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
-import { SelectableCardField } from '..'
 import { Submit } from '../../Submit'
+import { SelectableCardField } from '..'
 
 export const Required: StoryFn<
   ComponentProps<typeof SelectableCardField>
@@ -15,7 +15,7 @@ export const Required: StoryFn<
 )
 Required.args = {
   name: 'required',
-  showTick: true,
   required: true,
+  showTick: true,
   value: 'required',
 }

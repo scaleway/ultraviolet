@@ -10,23 +10,23 @@ describe('SteppedListCard', () => {
     shouldMatchEmotionSnapshot(
       <SteppedListCard
         header={<h1>Header</h1>}
-        hideTooltipText="hide"
         hideText="hide button"
+        hideTooltipText="hide"
         showText="show button"
         showTooltipText="show"
         steps={['step1', 'step2']}
       >
         <SteppedListCard.Step
+          image={<img alt="blockStorage" src={blockStorageWire} width={200} />}
           stepNumber={1}
           subHeader="First step"
-          image={<img src={blockStorageWire} width={200} alt="blockStorage" />}
         >
           Description
         </SteppedListCard.Step>
         <SteppedListCard.Step
+          image={<img alt="blockStorage" src={blockStorageWire} width={200} />}
           stepNumber={2}
           subHeader={<h1>Title</h1>}
-          image={<img src={blockStorageWire} width={200} alt="blockStorage" />}
         >
           Description step 2
         </SteppedListCard.Step>
@@ -41,16 +41,16 @@ describe('SteppedListCard', () => {
         steps={['step1', 'step2']}
       >
         <SteppedListCard.Step
+          image={<img alt="blockStorage" src={blockStorageWire} width={200} />}
           stepNumber={1}
           subHeader="First step"
-          image={<img src={blockStorageWire} width={200} alt="blockStorage" />}
         >
           Description
         </SteppedListCard.Step>
         <SteppedListCard.Step
+          image={<img alt="blockStorage" src={blockStorageWire} width={200} />}
           stepNumber={2}
           subHeader={<h1>Title</h1>}
-          image={<img src={blockStorageWire} width={200} alt="blockStorage" />}
         >
           Description step 2
         </SteppedListCard.Step>
@@ -61,21 +61,21 @@ describe('SteppedListCard', () => {
     shouldMatchEmotionSnapshot(
       <SteppedListCard
         header="Header"
-        steps={['step1', 'step2']}
-        // oxlint-disable-next-line no-console
         onClickHide={() => console.log('test')}
+        // oxlint-disable-next-line no-console
+        steps={['step1', 'step2']}
       >
         <SteppedListCard.Step
+          image={<img alt="blockStorage" src={blockStorageWire} width={200} />}
           stepNumber={1}
           subHeader={<h1>First step</h1>}
-          image={<img src={blockStorageWire} width={200} alt="blockStorage" />}
         >
           Description
         </SteppedListCard.Step>
         <SteppedListCard.Step
+          image={<img alt="blockStorage" src={blockStorageWire} width={200} />}
           stepNumber={2}
           subHeader={<h1>Title</h1>}
-          image={<img src={blockStorageWire} width={200} alt="blockStorage" />}
         >
           Description step 2
         </SteppedListCard.Step>
@@ -86,15 +86,15 @@ describe('SteppedListCard', () => {
     renderWithTheme(
       <SteppedListCard
         header="Header"
-        steps={['step1', 'step2']}
-        // oxlint-disable-next-line no-console
         onClickHide={() => console.log('test')}
+        // oxlint-disable-next-line no-console
+        steps={['step1', 'step2']}
       >
         <SteppedListCard.Step
+          data-testid="step1id"
+          image={<img alt="blockStorage" src={blockStorageWire} width={200} />}
           stepNumber={1}
           subHeader="step1title"
-          image={<img src={blockStorageWire} width={200} alt="blockStorage" />}
-          data-testid="step1id"
         >
           {nextStep => (
             <>
@@ -106,9 +106,9 @@ describe('SteppedListCard', () => {
           )}
         </SteppedListCard.Step>
         <SteppedListCard.Step
+          image={<img alt="blockStorage" src={blockStorageWire} width={200} />}
           stepNumber={2}
           subHeader="step2title"
-          image={<img src={blockStorageWire} width={200} alt="blockStorage" />}
         >
           {nextStep => (
             <>
@@ -120,9 +120,9 @@ describe('SteppedListCard', () => {
           )}
         </SteppedListCard.Step>
         <SteppedListCard.Step
+          image={<img alt="blockStorage" src={blockStorageWire} width={200} />}
           stepNumber={3}
           subHeader="step3title"
-          image={<img src={blockStorageWire} width={200} alt="blockStorage" />}
         >
           {nextStep => (
             <>
@@ -159,15 +159,15 @@ describe('SteppedListCard', () => {
     renderWithTheme(
       <SteppedListCard
         header="Header"
-        steps={['step1', 'step2']}
-        // oxlint-disable-next-line no-console
         onClickHide={() => console.log('hide clicked')}
+        // oxlint-disable-next-line no-console
+        steps={['step1', 'step2']}
       >
         <SteppedListCard.Step
+          data-testid="step1id"
+          image={<img alt="blockStorage" src={blockStorageWire} width={200} />}
           stepNumber={1}
           subHeader="step1title"
-          image={<img src={blockStorageWire} width={200} alt="blockStorage" />}
-          data-testid="step1id"
         >
           {nextStep => (
             <>
@@ -179,9 +179,9 @@ describe('SteppedListCard', () => {
           )}
         </SteppedListCard.Step>
         <SteppedListCard.Step
+          image={<img alt="blockStorage" src={blockStorageWire} width={200} />}
           stepNumber={2}
           subHeader="step2title"
-          image={<img src={blockStorageWire} width={200} alt="blockStorage" />}
         >
           {nextStep => (
             <>
@@ -213,10 +213,10 @@ describe('SteppedListCard', () => {
     renderWithTheme(
       <SteppedListCard header="Header" steps={['step1', 'step2']}>
         <SteppedListCard.Step
+          data-testid="step1id"
+          image={<img alt="blockStorage" src={blockStorageWire} width={200} />}
           stepNumber={1}
           subHeader="step1title"
-          image={<img src={blockStorageWire} width={200} alt="blockStorage" />}
-          data-testid="step1id"
         >
           {nextStep => (
             <>
@@ -228,9 +228,9 @@ describe('SteppedListCard', () => {
           )}
         </SteppedListCard.Step>
         <SteppedListCard.Step
+          image={<img alt="blockStorage" src={blockStorageWire} width={200} />}
           stepNumber={2}
           subHeader="step2title"
-          image={<img src={blockStorageWire} width={200} alt="blockStorage" />}
         >
           {nextStep => (
             <>
@@ -263,17 +263,17 @@ describe('SteppedListCard', () => {
     shouldMatchEmotionSnapshot(
       <SteppedListCard header={<h1>Header</h1>} steps={['step1', 'step2']}>
         <SteppedListCard.Step
+          image={<img alt="blockStorage" src={blockStorageWire} width={200} />}
           stepNumber={1}
           subHeader="First step"
-          image={<img src={blockStorageWire} width={200} alt="blockStorage" />}
         >
           Description
         </SteppedListCard.Step>
         <SteppedListCard.Step
+          completed
+          image={<img alt="blockStorage" src={blockStorageWire} width={200} />}
           stepNumber={2}
           subHeader={<div>Title</div>}
-          image={<img src={blockStorageWire} width={200} alt="blockStorage" />}
-          completed
         >
           Description step 2
         </SteppedListCard.Step>

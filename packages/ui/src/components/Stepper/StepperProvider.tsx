@@ -14,13 +14,13 @@ type ContextType = {
 }
 
 const StepperContext = createContext<ContextType>({
-  step: 0,
-  setStep: () => {},
-  interactive: false,
-  size: 'medium',
   animated: false,
+  interactive: false,
   labelPosition: 'bottom',
   separator: true,
+  setStep: () => {},
+  size: 'medium',
+  step: 0,
 })
 
 type StepperProviderProps = {
@@ -50,13 +50,13 @@ export const StepperProvider = ({
   const [step, setStep] = useState(currentSelected)
   const value = useMemo(
     () => ({
-      step,
-      setStep,
-      interactive,
-      size,
       animated,
+      interactive,
       labelPosition,
       separator,
+      setStep,
+      size,
+      step,
     }),
     [step, interactive, size, animated, labelPosition, separator],
   )

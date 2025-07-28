@@ -1,6 +1,6 @@
 import type { StoryFn } from '@storybook/react-vite'
-import { SENTIMENTS } from '../../../theme'
 import type { ExtendedColor } from '../../../theme'
+import { SENTIMENTS } from '../../../theme'
 import { Stack } from '../../Stack'
 import { Loader } from '../index'
 
@@ -10,8 +10,8 @@ export const Sentiments: StoryFn = props => (
       <Stack alignItems="center">
         <Loader
           {...props}
-          sentiment={sentiment as ExtendedColor}
           key={sentiment}
+          sentiment={sentiment as ExtendedColor}
         />
         {sentiment}
       </Stack>

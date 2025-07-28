@@ -37,13 +37,13 @@ export const RadioField = <
     field,
     fieldState: { error },
   } = useController<TFieldValues, TFieldName>({
-    name,
     control,
-    shouldUnregister,
+    name,
     rules: {
       required,
       validate,
     },
+    shouldUnregister,
   })
 
   const errorLabel = useMemo(() => {
@@ -61,17 +61,17 @@ export const RadioField = <
   return (
     <Radio
       {...props}
-      name={field.name}
       checked={field.value === value}
       disabled={disabled}
       error={getError({ label: errorLabel }, error)}
-      onChange={() => {
-        field.onChange(value)
-        onChange?.(value)
-      }}
+      name={field.name}
       onBlur={event => {
         field.onBlur()
         onBlur?.(event)
+      }}
+      onChange={() => {
+        field.onChange(value)
+        onChange?.(value)
       }}
       onFocus={onFocus}
       required={required}

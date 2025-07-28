@@ -21,10 +21,10 @@ type CellProps = {
 export const Cell = forwardRef<HTMLTableCellElement, CellProps>(
   ({ children, className, 'data-testid': dataTestid, colSpan }, ref) => (
     <StyledCell
-      ref={ref}
       className={className}
-      data-testid={dataTestid}
       colSpan={colSpan}
+      data-testid={dataTestid}
+      ref={ref}
     >
       {children}
     </StyledCell>

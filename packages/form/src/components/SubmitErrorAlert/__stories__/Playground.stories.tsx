@@ -13,8 +13,8 @@ export const Playground: StoryFn<
   return (
     <Form
       errors={mockErrors}
-      onSubmit={() => 'An error occurred'}
       methods={methods}
+      onSubmit={() => 'An error occurred'}
     >
       <Stack gap={1}>
         <SubmitErrorAlert />

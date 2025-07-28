@@ -58,11 +58,11 @@ export const Demo = () => {
 
   return (
     <Container>
-      <Row templateColumns="1fr 1fr" gap={2}>
+      <Row gap={2} templateColumns="1fr 1fr">
         <Stack gap={2}>
           <Tabs
-            selected={tabState}
             onChange={(e: number | string) => setTabState(e)}
+            selected={tabState}
           >
             <Tabs.Tab value={1}>UI</Tabs.Tab>
             <Tabs.Tab value={2}>Form</Tabs.Tab>
@@ -72,32 +72,31 @@ export const Demo = () => {
           <Card>
             <Stack gap={2}>
               <Stack>
-                <Text variant="bodySmall" as="small" prominence="weak">
+                <Text as="small" prominence="weak" variant="bodySmall">
                   21.08.2023
                 </Text>
-                <Stack direction="row" alignItems="center" gap={1}>
-                  <Status sentiment="info" animated />
-                  <Text variant="heading" as="span">
+                <Stack alignItems="center" direction="row" gap={1}>
+                  <Status animated sentiment="info" />
+                  <Text as="span" variant="heading">
                     Update soon available
                   </Text>
                 </Stack>
               </Stack>
-              <Text variant="body" as="p">
+              <Text as="p" variant="body">
                 A new major version of Ultraviolet is coming soon. It will
                 include a lot of new features and improvements.&nbsp;
                 <Link href="https://scaleway.com" target="_blank">
                   Learn more
                 </Link>
               </Text>
-              <Checkbox name="valid" checked required>
+              <Checkbox checked name="valid" required>
                 I accept terms and conditions
               </Checkbox>
-              <Row templateColumns="1fr 1fr" gap={2}>
+              <Row gap={2} templateColumns="1fr 1fr">
                 <Button sentiment="neutral" variant="outlined">
                   Install Later
                 </Button>
                 <Button
-                  sentiment="primary"
                   isLoading={buttonLoading}
                   onClick={() => {
                     setButtonLoading(true)
@@ -105,6 +104,7 @@ export const Demo = () => {
                       setButtonLoading(false)
                     }, 2000)
                   }}
+                  sentiment="primary"
                 >
                   Install
                 </Button>
@@ -129,9 +129,9 @@ export const Demo = () => {
           </Stack>
           <Card>
             <Toggle
-              name="toggle"
-              label="Automatically update newest version of Ultraviolet UI"
               checked
+              label="Automatically update newest version of Ultraviolet UI"
+              name="toggle"
             />
           </Card>
           <Card>
@@ -145,8 +145,8 @@ export const Demo = () => {
               </StepList.Item>
               <StepList.Item
                 bulletContent={<ClockOutlineIcon />}
-                size="small"
                 sentiment="info"
+                size="small"
               >
                 You have 10 days of trial
               </StepList.Item>
@@ -171,23 +171,23 @@ export const Demo = () => {
           <Stack gap={1}>
             <Card>
               <Stack
-                direction="row"
                 alignItems="center"
-                justifyContent="space-between"
+                direction="row"
                 gap={1}
+                justifyContent="space-between"
               >
-                <Stack direction="row" alignItems="center" gap={2}>
-                  <Avatar variant="text" text="MA" shape="circle" />
+                <Stack alignItems="center" direction="row" gap={2}>
+                  <Avatar shape="circle" text="MA" variant="text" />
                   <StyledStack>
-                    <Text variant="bodySmall" as="span" sentiment="primary">
+                    <Text as="span" sentiment="primary" variant="bodySmall">
                       Review from Marc - 2 days ago
                     </Text>
-                    <Text variant="body" as="span">
+                    <Text as="span" variant="body">
                       Ultraviolet is the best UI library I...
                     </Text>
                   </StyledStack>
                 </Stack>
-                <Button sentiment="neutral" variant="ghost" size="small">
+                <Button sentiment="neutral" size="small" variant="ghost">
                   <ArrowRightIcon />
                 </Button>
               </Stack>
@@ -196,12 +196,12 @@ export const Demo = () => {
               <Stack gap={2}>
                 <SwitchButton
                   name="switch-version"
-                  value={switchState}
                   onChange={(event: ChangeEvent<HTMLInputElement>) =>
                     setSwitchState(
                       event.target.value as 'downgrade' | 'upgrade',
                     )
                   }
+                  value={switchState}
                 >
                   <SwitchButton.Option value="downgrade">
                     Downgrade
@@ -217,33 +217,33 @@ export const Demo = () => {
                     1,
                   )} to a previous version:`}
                   name="downgrade"
-                  value={radioState}
                   onChange={(event: ChangeEvent<HTMLInputElement>) =>
                     setRadioState(event.target.value)
                   }
+                  value={radioState}
                 >
-                  <RadioGroup.Radio value="option-1" label="Version 1.3.0" />
-                  <RadioGroup.Radio value="option-2" label="Version 1.2.0" />
-                  <RadioGroup.Radio value="option-3" label="Version 1.1.0" />
+                  <RadioGroup.Radio label="Version 1.3.0" value="option-1" />
+                  <RadioGroup.Radio label="Version 1.2.0" value="option-2" />
+                  <RadioGroup.Radio label="Version 1.1.0" value="option-3" />
                 </RadioGroup>
               </Stack>
             </Card>
-            <Row templateColumns="1fr 1fr" gap={1}>
+            <Row gap={1} templateColumns="1fr 1fr">
               <SelectableCard
-                value="option-1"
                 checked={selectableCardState === 'option-1'}
+                label="Update Automatically"
                 onChange={event =>
                   setSelectableCardState(event.currentTarget.value)
                 }
-                label="Update Automatically"
+                value="option-1"
               />
               <SelectableCard
-                value="option-2"
                 checked={selectableCardState === 'option-2'}
+                label="Update Manually"
                 onChange={event =>
                   setSelectableCardState(event.currentTarget.value)
                 }
-                label="Update Manually"
+                value="option-2"
               />
             </Row>
           </Stack>

@@ -159,7 +159,8 @@
     #3d1862 28.91%,
     #151a2d 75.01%
   );
-  --color-other-gradients-background-radial-aqua-fuschia: radial-gradient(
+  --color-other-gradients-background-radial-aqua-fuschia:
+    radial-gradient(
       15% 40% at -4% 50%,
       rgba(251, 198, 0, 0.3) 0%,
       rgba(251, 198, 0, 0) 100%
@@ -179,7 +180,8 @@
       rgba(3, 207, 218, 1) 60%,
       rgba(3, 207, 218, 0) 120%
     ), #110b1e;
-  --color-other-gradients-background-radial-aqua-purple: radial-gradient(
+  --color-other-gradients-background-radial-aqua-purple:
+    radial-gradient(
       15% 40% at -4% 50%,
       rgba(251, 198, 0, 0.3) 0%,
       rgba(251, 198, 0, 0) 100%
@@ -199,7 +201,8 @@
       rgba(3, 207, 218, 1) 60%,
       rgba(3, 207, 218, 0) 120%
     ), #110b1e;
-  --color-other-gradients-background-radial-fuschia-purple: radial-gradient(
+  --color-other-gradients-background-radial-fuschia-purple:
+    radial-gradient(
       15% 40% at -4% 50%,
       rgba(251, 198, 0, 0.3) 0%,
       rgba(251, 198, 0, 0) 100%
@@ -219,7 +222,8 @@
       rgba(3, 207, 218, 1) 60%,
       rgba(3, 207, 218, 0) 120%
     ), #110b1e;
-  --color-other-gradients-background-radial-lime: radial-gradient(
+  --color-other-gradients-background-radial-lime:
+    radial-gradient(
       15% 40% at -4% 50%,
       rgba(251, 198, 0, 0.3) 0%,
       rgba(251, 198, 0, 0) 100%
@@ -239,7 +243,8 @@
       rgba(122, 186, 38, 1) 60%,
       rgba(122, 186, 38, 0) 120%
     ), #110b1e;
-  --color-other-gradients-background-radial-magenta: radial-gradient(
+  --color-other-gradients-background-radial-magenta:
+    radial-gradient(
       15% 40% at -4% 50%,
       rgba(251, 198, 0, 0.3) 0%,
       rgba(251, 198, 0, 0) 100%
@@ -259,7 +264,8 @@
       rgba(236, 11, 195, 1) 60%,
       rgba(236, 11, 195, 0) 120%
     ), #110b1e;
-  --color-other-gradients-background-radial-purple: radial-gradient(
+  --color-other-gradients-background-radial-purple:
+    radial-gradient(
       15% 40% at -4% 50%,
       rgba(251, 198, 0, 0.3) 0%,
       rgba(251, 198, 0, 0) 100%
@@ -445,10 +451,10 @@
   --shadow-default-shadow: 0px 0px 8px 2px #0c0f1a66;
   --shadow-drawer: 0px 0px 40px 10px #0c0f1a8c;
   --shadow-dropdown: 0px 4px 24px 6px #0c0f1a66;
-  --shadow-fixed-0: 0px 0px 0px 0px rgba(0, 0, 0, 0.0);
-  --shadow-fixed-1: 0px 0px 0px 0px rgba(0, 0, 0, 0.0);
-  --shadow-fixed-reversed-0: 0px 0px 0px 0px rgba(0, 0, 0, 0.0);
-  --shadow-fixed-reversed-1: 0px 0px 0px 0px rgba(0, 0, 0, 0.0);
+  --shadow-fixed-0: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+  --shadow-fixed-1: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+  --shadow-fixed-reversed-0: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+  --shadow-fixed-reversed-1: 0px 0px 0px 0px rgba(0, 0, 0, 0);
   --shadow-focus-danger: 0px 0px 0px 3px #e7196440;
   --shadow-focus-info: 0px 0px 0px 3px #004b8340;
   --shadow-focus-neutral: 0px 0px 0px 3px #0c0f1a8c;
@@ -463,13 +469,13 @@
   --shadow-hover-warning: 0px 4px 16px 4px #302000cc;
   --shadow-menu: 0px 0px 24px 6px #0c0f1a66;
   --shadow-modal: 0px 8px 40px 10px #0c0f1a8c;
-  --shadow-overlay-0: 0px 0px 0px 0px rgba(0, 0, 0, 0.0);
-  --shadow-overlay-1: 0px 0px 0px 0px rgba(0, 0, 0, 0.0);
+  --shadow-overlay-0: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+  --shadow-overlay-1: 0px 0px 0px 0px rgba(0, 0, 0, 0);
   --shadow-popover: 0px 4px 32px 8px #0c0f1a8c;
-  --shadow-raised-0: 0px 0px 0px 0px rgba(0, 0, 0, 0.0);
-  --shadow-raised-1: 0px 0px 0px 0px rgba(0, 0, 0, 0.0);
-  --shadow-raised-reversed-0: 0px 0px 0px 0px rgba(0, 0, 0, 0.0);
-  --shadow-raised-reversed-1: 0px 0px 0px 0px rgba(0, 0, 0, 0.0);
+  --shadow-raised-0: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+  --shadow-raised-1: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+  --shadow-raised-reversed-0: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+  --shadow-raised-reversed-1: 0px 0px 0px 0px rgba(0, 0, 0, 0);
   --shadow-tab-bar-active: 0px -2px 0px 0px #bf96f8;
   --shadow-tab-bar-off: 0px -1px 0px 0px #484b5a;
   --shadow-tooltip: 0px 4px 32px 8px #0c0f1a66;

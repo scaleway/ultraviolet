@@ -51,18 +51,18 @@ export const Region = memo(
 
     return (
       <Item
-        label={locales['estimate.cost.region.label']}
-        shouldBeHidden={shouldBeHidden}
-        priceText={priceText}
         animated={animated}
+        discount={discount}
+        hideFromOverlay={hideFromOverlay}
         isFirstElement={isFirstElement}
         isLastElement={isLastElement}
-        productsCallback={productsCallback}
         iteration={iteration}
-        discount={discount}
+        label={locales['estimate.cost.region.label']}
         noBorder={noBorder}
         noPrice={noPrice}
-        hideFromOverlay={hideFromOverlay}
+        priceText={priceText}
+        productsCallback={productsCallback}
+        shouldBeHidden={shouldBeHidden}
       >
         <Strong>
           <StyledImage alt={label} src={image} />

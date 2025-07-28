@@ -12,25 +12,9 @@ const times = {
 }
 
 export default defineConfig({
-  webServer: {
-    // it will start web app before running tests so you don't need to start it manually
-    command: 'pnpm run start',
-    url: baseURL,
-    stdout: 'ignore',
-    stderr: 'pipe',
-  },
-  testDir: './tests',
-  fullyParallel: true,
   forbidOnly: !!isCI,
-  retries: isCI ? 2 : 0,
-  workers: isCI ? 1 : undefined,
-  reporter: 'line',
+  fullyParallel: true,
   globalTimeout: isCI ? 5 * times['1min'] : undefined,
-  timeout: isCI ? 1 * times['1min'] : undefined,
-  use: {
-    baseURL,
-    trace: 'on-first-retry',
-  },
 
   /* Configure projects for major browsers */
   projects: [
@@ -47,4 +31,20 @@ export default defineConfig({
       use: { ...devices['Desktop Safari'] },
     },
   ],
+  reporter: 'line',
+  retries: isCI ? 2 : 0,
+  testDir: './tests',
+  timeout: isCI ? 1 * times['1min'] : undefined,
+  use: {
+    baseURL,
+    trace: 'on-first-retry',
+  },
+  webServer: {
+    // it will start web app before running tests so you don't need to start it manually
+    command: 'pnpm run start',
+    stderr: 'pipe',
+    stdout: 'ignore',
+    url: baseURL,
+  },
+  workers: isCI ? 1 : undefined,
 })

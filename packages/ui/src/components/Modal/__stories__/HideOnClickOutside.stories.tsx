@@ -1,13 +1,13 @@
 import type { StoryFn } from '@storybook/react-vite'
-import { Modal } from '..'
 import { Button } from '../../Button'
+import { Modal } from '..'
 
 export const HideOnClickOutside: StoryFn = props => (
   <Modal
     {...props}
     disclosure={<Button>hideOnClickOutside</Button>}
-    size="small"
     hideOnClickOutside={false}
+    size="small"
   >
     <div style={{ padding: 32 }}>Try to click outside of the Modal</div>
   </Modal>

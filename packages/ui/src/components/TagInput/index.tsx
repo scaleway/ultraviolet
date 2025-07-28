@@ -298,13 +298,13 @@ export const TagInput = ({
   const computedClearable = clearable && tagInputState.length > 0
 
   return (
-    <Stack gap="0.5" className={className}>
+    <Stack className={className} gap="0.5">
       {label || labelDescription ? (
         <Label
+          htmlFor={id ?? localId}
+          labelDescription={labelDescription}
           required={required}
           size={size}
-          labelDescription={labelDescription}
-          htmlFor={id ?? localId}
         >
           {label}
         </Label>
@@ -312,22 +312,21 @@ export const TagInput = ({
       <div>
         <Tooltip text={tooltip}>
           <TagInputContainer
-            onClick={handleContainerClick}
             className={className}
-            data-testid={dataTestId}
-            size={size}
             data-disabled={disabled}
-            data-readonly={readOnly}
             data-error={!!error}
+            data-readonly={readOnly}
             data-success={!!success}
+            data-testid={dataTestId}
+            onClick={handleContainerClick}
+            size={size}
           >
             <DataContainer>
               {tagInputState.map(tag => (
                 <Tag
-                  sentiment="neutral"
                   disabled={disabled}
-                  key={tag.index}
                   isLoading={status[tag.index] === STATUS.LOADING}
+                  key={tag.index}
                   onClose={
                     !readOnly
                       ? e => {
@@ -336,25 +335,26 @@ export const TagInput = ({
                         }
                       : undefined
                   }
+                  sentiment="neutral"
                 >
                   {tag.label}
                 </Tag>
               ))}
               {!disabled ? (
                 <StyledInput
+                  aria-label={ariaLabel}
+                  data-size={size}
                   id={localId}
                   name={name}
-                  aria-label={ariaLabel}
-                  type="text"
-                  placeholder={tagInputState.length === 0 ? placeholder : ''}
-                  value={input}
                   onBlur={addTag}
                   onChange={onInputChange}
                   onKeyDown={handleInputKeydown}
                   onPaste={handlePaste}
-                  ref={inputRef}
+                  placeholder={tagInputState.length === 0 ? placeholder : ''}
                   readOnly={readOnly}
-                  data-size={size}
+                  ref={inputRef}
+                  type="text"
+                  value={input}
                 />
               ) : null}
             </DataContainer>
@@ -364,26 +364,26 @@ export const TagInput = ({
                   <Button
                     aria-label="clear value"
                     disabled={disabled}
-                    variant="ghost"
-                    size="xsmall"
                     onClick={clearAll}
                     sentiment="neutral"
+                    size="xsmall"
+                    variant="ghost"
                   >
                     <CloseIcon />
                   </Button>
                 ) : null}
                 {success ? (
                   <CheckCircleOutlineIcon
+                    disabled={disabled}
                     sentiment="success"
                     size="small"
-                    disabled={disabled}
                   />
                 ) : null}
                 {error ? (
                   <AlertCircleIcon
+                    disabled={disabled}
                     sentiment="danger"
                     size="small"
-                    disabled={disabled}
                   />
                 ) : null}
               </StateContainer>
@@ -393,11 +393,11 @@ export const TagInput = ({
       </div>
       {error || typeof success === 'string' || helper ? (
         <Text
-          variant="caption"
           as="span"
+          disabled={disabled || readOnly}
           prominence={!error && !success ? 'weak' : undefined}
           sentiment={helperSentiment}
-          disabled={disabled || readOnly}
+          variant="caption"
         >
           {error || success || helper}
         </Text>

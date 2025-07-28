@@ -4,20 +4,20 @@ import { ToggleGroup } from '..'
 export const Template: StoryFn<typeof ToggleGroup> = args => (
   <ToggleGroup {...args}>
     <ToggleGroup.Toggle
+      label="Automatically run a save every monday at 6 am"
       name="weekly-save"
       value="weekly-save"
-      label="Automatically run a save every monday at 6 am"
     />
     <ToggleGroup.Toggle
+      label="Reboot server every day at 9 am"
       name="daily-reboot"
       value="daily-reboot"
-      label="Reboot server every day at 9 am"
     />
   </ToggleGroup>
 )
 
 Template.args = {
-  name: 'options',
   legend: 'Choose options:',
+  name: 'options',
   value: ['value-2'],
 }

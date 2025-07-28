@@ -1,16 +1,16 @@
 import type { StoryFn } from '@storybook/react-vite'
-import { Modal } from '..'
 import { Button } from '../../Button'
+import { Modal } from '..'
 import { MODAL_WIDTH } from '../constants'
 
 export const Size: StoryFn = props => (
   <>
     {Object.keys(MODAL_WIDTH).map(size => (
-      <div style={{ display: 'inline-block', padding: 16 }} key={size}>
+      <div key={size} style={{ display: 'inline-block', padding: 16 }}>
         <Modal
           {...props}
-          size={size as keyof typeof MODAL_WIDTH}
           disclosure={<Button>{size}</Button>}
+          size={size as keyof typeof MODAL_WIDTH}
         >
           <div style={{ padding: 32 }}>Content of the {size} modal</div>
         </Modal>

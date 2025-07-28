@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import { Button, Separator, Stack, Text, down } from '@ultraviolet/ui'
+import { Button, down, Separator, Stack, Text } from '@ultraviolet/ui'
 import Image from 'next/image'
 import slackLogo from '../../assets/icons/icon-slack.svg'
 import { APP_MAX_WIDTH } from '../../constants'
@@ -38,13 +38,13 @@ const Home = () => (
     <Separator />
     <OpenSource />
     <StyledCommunityContainer
-      justifyContent="space-evenly"
-      direction="row"
       alignItems="center"
+      direction="row"
       gap={2}
+      justifyContent="space-evenly"
     >
-      <Stack gap={3} direction="row" alignItems="center">
-        <Image src={slackLogo} width="48" height="48" alt="Slack logo" />
+      <Stack alignItems="center" direction="row" gap={3}>
+        <Image alt="Slack logo" height="48" src={slackLogo} width="48" />
         <div>
           <Text as="h4" variant="headingSmall">
             Connect with the community
@@ -56,17 +56,17 @@ const Home = () => (
         </div>
       </Stack>
       <Button
+        aria-label="join slack community"
         href="https://scaleway-community.slack.com/archives/C02M4HDPGB0"
         size="large"
-        aria-label="join slack community"
       >
         Join the Community Slack
       </Button>
     </StyledCommunityContainer>
-    <Stack justifyContent="center" alignItems="center" direction="row">
+    <Stack alignItems="center" direction="row" justifyContent="center">
       <Text as="span" variant="heading">
         Built with&nbsp;
-        <svg width={35} height={35} viewBox="0 0 24 24" aria-label="heart">
+        <svg aria-label="heart" height={35} viewBox="0 0 24 24" width={35}>
           <StyledGroup>
             <path d="M0 0h24v24H0V0z" fill="none" />
             <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />

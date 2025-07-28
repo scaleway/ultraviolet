@@ -14,8 +14,8 @@ import { Unit } from './Components/Unit'
 import { Zone } from './Components/Zone'
 import { EstimateCostContent } from './EstimateCostContent'
 import { EstimateCostProvider } from './EstimateCostProvider'
-import { useOverlay } from './OverlayContext'
 import EstimateCostLocales from './locales/en'
+import { useOverlay } from './OverlayContext'
 import type { EstimateCostProps, Units } from './types'
 
 const MaxWidthText = styled(Text)<{ maxWidth?: number }>`
@@ -54,35 +54,35 @@ const EstimateCost = ({
   onTotalPriceChange,
 }: EstimateCostProps) => (
   <EstimateCostProvider
-    locales={locales}
     currency={currency}
+    locales={locales}
     numberLocales={numberLocales}
   >
     <EstimateCostContent
-      description={description}
       alert={alert}
       alertTitle={alertTitle}
       alertVariant={alertVariant}
-      defaultTimeUnit={defaultTimeUnit}
-      timeUnits={timeUnits}
-      hideOverlay={hideOverlay}
-      disableOverlayLeft={disableOverlayLeft}
-      disableOverlayRight={disableOverlayRight}
-      hideTimeUnit={hideTimeUnit}
-      hideTotal={hideTotal}
-      discount={discount}
-      OverlayRight={OverlayRight}
-      OverlayLeft={OverlayLeft}
-      isBeta={isBeta}
       commitmentFees={commitmentFees}
       commitmentFeesContent={commitmentFeesContent}
-      monthlyFees={monthlyFees}
-      monthlyFeesLabel={monthlyFeesLabel}
-      monthlyFeesContent={monthlyFeesContent}
-      overlayUnit={overlayUnit}
+      defaultTimeUnit={defaultTimeUnit}
+      description={description}
+      disableOverlayLeft={disableOverlayLeft}
+      disableOverlayRight={disableOverlayRight}
+      discount={discount}
+      hideOverlay={hideOverlay}
+      hideTimeUnit={hideTimeUnit}
+      hideTotal={hideTotal}
+      isBeta={isBeta}
       locales={locales}
-      overlayMargin={overlayMargin}
+      monthlyFees={monthlyFees}
+      monthlyFeesContent={monthlyFeesContent}
+      monthlyFeesLabel={monthlyFeesLabel}
+      OverlayLeft={OverlayLeft}
+      OverlayRight={OverlayRight}
       onTotalPriceChange={onTotalPriceChange}
+      overlayMargin={overlayMargin}
+      overlayUnit={overlayUnit}
+      timeUnits={timeUnits}
     >
       {children}
     </EstimateCostContent>
@@ -124,14 +124,14 @@ const Ellipsis = ({
 
   return (
     <div
-      style={{ display: !isOverlay ? 'inline-flex' : undefined }}
       data-testid={dataTestId}
+      style={{ display: !isOverlay ? 'inline-flex' : undefined }}
     >
       <MaxWidthText
         as="p"
+        maxWidth={isOverlay ? 200 : maxWidth}
         oneLine
         variant="bodyStrong"
-        maxWidth={isOverlay ? 200 : maxWidth}
       >
         {text}
       </MaxWidthText>

@@ -1,6 +1,6 @@
 import type { StoryFn } from '@storybook/react-vite'
-import { Menu } from '..'
 import { Button } from '../../Button'
+import { Menu } from '..'
 import type { DisclosureProps } from '../types'
 
 const CustomDisclosure = ({ visible }: DisclosureProps) => (

@@ -2,8 +2,8 @@
 
 import { NumberInput as NumberInputUV } from '@ultraviolet/ui'
 import { useEffect, useState } from 'react'
-import { useOverlay } from '../OverlayContext'
 import { ItemResourceName } from '../componentStyle'
+import { useOverlay } from '../OverlayContext'
 import { Regular } from './Regular'
 
 type NumberInputProps = {
@@ -36,16 +36,16 @@ export const NumberInput = ({
     </ItemResourceName>
   ) : (
     <NumberInputUV
-      min={minValue}
+      controls={controls}
       max={maxValue}
-      size="small"
+      min={minValue}
       onChange={newValue => {
         setValue(newValue)
         itemCallback?.(newValue, true)
         getAmountValue?.(newValue)
       }}
+      size="small"
       value={value}
-      controls={controls}
     />
   )
 }

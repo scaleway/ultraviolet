@@ -1,7 +1,7 @@
 'use client'
 
-import { css } from '@emotion/react'
 import type { Theme } from '@emotion/react'
+import { css } from '@emotion/react'
 import styled from '@emotion/styled'
 import { UploadIcon } from '@ultraviolet/icons'
 import { UserProductIcon } from '@ultraviolet/icons/product'
@@ -10,8 +10,8 @@ import {
   DEFAULT_COLORS,
   RADIUS_SIZES,
   SENTIMENTS,
-  TEXT_VARIANT_BY_SIZE,
   sizes,
+  TEXT_VARIANT_BY_SIZE,
 } from './constants'
 import type { AvatarProps, Colors, SentimentColors, Shape } from './types'
 
@@ -199,22 +199,22 @@ export const Avatar = ({
   'data-testid': dataTestId,
 }: AvatarProps) => (
   <Container
+    className={className}
+    data-has-background={!['user', 'image'].includes(variant)}
+    data-sentiment={sentiment}
     data-shape={shape}
     data-size={size}
-    data-sentiment={sentiment}
+    data-testid={dataTestId}
     data-upload={upload}
-    data-has-background={!['user', 'image'].includes(variant)}
     image={image}
     onClick={onClick}
     role={onClick ? 'button' : undefined}
-    size={size}
-    className={className}
-    data-testid={dataTestId}
     sentiment={sentiment}
+    size={size}
   >
     {upload ? (
       <UploadContainer data-shape={shape} size={size}>
-        <UploadIcon size="large" sentiment="neutral" prominence="stronger" />
+        <UploadIcon prominence="stronger" sentiment="neutral" size="large" />
       </UploadContainer>
     ) : null}
     {variant === 'user' ? (
@@ -229,9 +229,9 @@ export const Avatar = ({
       <ElementContainer data-shape={shape}>
         <Text
           as="span"
-          variant={TEXT_VARIANT_BY_SIZE[size]}
-          sentiment="neutral"
           prominence={sentiment === 'primary' ? 'stronger' : 'strong'}
+          sentiment="neutral"
+          variant={TEXT_VARIANT_BY_SIZE[size]}
         >
           {text}
         </Text>
@@ -239,9 +239,9 @@ export const Avatar = ({
     ) : null}
     {variant === 'colors' ? (
       <StyledColors
-        size={size}
         colors={colors}
         shape={shape}
+        size={size}
         style={{
           height: size,
           width: size,

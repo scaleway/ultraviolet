@@ -7,15 +7,15 @@ import { Card } from '../index'
 export const SubHeader: StoryFn = args => (
   <Stack>
     <Card {...args}>
-      <Text as="p" variant="body" sentiment="neutral">
+      <Text as="p" sentiment="neutral" variant="body">
         This is the content of a card.
       </Text>
     </Card>
     <Card
       {...args}
       subHeader={
-        <Stack gap={1} direction="row" alignItems="center">
-          <Text as="h5" variant="headingSmallStrong" sentiment="neutral">
+        <Stack alignItems="center" direction="row" gap={1}>
+          <Text as="h5" sentiment="neutral" variant="headingSmallStrong">
             Advanced subHeader
           </Text>
           <Badge sentiment="success" size="small">
@@ -24,7 +24,7 @@ export const SubHeader: StoryFn = args => (
         </Stack>
       }
     >
-      <Text as="p" variant="body" sentiment="neutral">
+      <Text as="p" sentiment="neutral" variant="body">
         This is the content of a card with an advanced subHeader
       </Text>
     </Card>

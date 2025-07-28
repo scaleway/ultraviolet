@@ -24,8 +24,8 @@ export const CustomUnitInput = memo(
     const options = useMemo(
       () =>
         timeUnits.map(unit => ({
-          value: unit,
           label: locales[`estimate.cost.units.${unit}.label`],
+          value: unit,
         })),
       [timeUnits, locales],
     )
@@ -37,9 +37,7 @@ export const CustomUnitInput = memo(
 
     return (
       <UnitInput
-        width="100%"
-        templateColumns="auto auto"
-        selectInputWidth="100%"
+        min={1}
         name="iteration"
         onChange={inputValue =>
           setIteration({
@@ -53,12 +51,14 @@ export const CustomUnitInput = memo(
             value: iteration.value,
           })
         }}
-        placeholder="0"
-        value={iteration.value}
-        unitValue={iteration.unit || defaultOption?.value}
-        min={1}
-        size="medium"
         options={options}
+        placeholder="0"
+        selectInputWidth="100%"
+        size="medium"
+        templateColumns="auto auto"
+        unitValue={iteration.unit || defaultOption?.value}
+        value={iteration.value}
+        width="100%"
       />
     )
   },

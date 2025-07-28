@@ -92,7 +92,7 @@ const Properties = () => {
         return accumulator
       }, [])
 
-      return { ...acc, [property]: { count, components: componentsMatching } }
+      return { ...acc, [property]: { components: componentsMatching, count } }
     },
     {},
   )
@@ -233,7 +233,7 @@ const Properties = () => {
               ]
 
               return (
-                <StyledTableRow key={property} id={property}>
+                <StyledTableRow id={property} key={property}>
                   <Table.Cell>
                     <Text as="span" variant="bodyStrong">
                       {property}

@@ -3,15 +3,15 @@
 import styled from '@emotion/styled'
 import { Stack } from '@ultraviolet/ui'
 import { useEffect, useRef } from 'react'
-import { Footer } from './Footer'
-import { Header } from './Header'
-import { useNavigation } from './NavigationProvider'
 import {
   ANIMATION_DURATION,
   NAVIGATION_COLLASPED_WIDTH,
   NAVIGATION_MAX_WIDTH,
   NAVIGATION_MIN_WIDTH,
 } from './constants'
+import { Footer } from './Footer'
+import { Header } from './Header'
+import { useNavigation } from './NavigationProvider'
 import type { NavigationProps } from './types'
 
 const StyledNav = styled.nav`
@@ -204,18 +204,18 @@ export const NavigationContent = ({
   return (
     <StyledNav className={className} id={id}>
       <Container
-        ref={navigationRef}
         data-animation={shouldAnimate ? animation : undefined}
         data-expanded={expanded}
+        ref={navigationRef}
         width={width}
       >
         {logo ? <Header logo={logo} /> : null}
         <ContentContainer>
           <Content
-            ref={contentRef}
-            gap={0.25}
-            data-is-expanded={expanded}
             data-animation={shouldAnimate ? animation : undefined}
+            data-is-expanded={expanded}
+            gap={0.25}
+            ref={contentRef}
           >
             {children}
           </Content>

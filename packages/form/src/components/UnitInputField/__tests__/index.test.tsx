@@ -3,8 +3,8 @@ import { userEvent } from '@testing-library/user-event'
 import { renderWithForm, renderWithTheme } from '@utils/test'
 import { useForm } from 'react-hook-form'
 import { describe, expect, test, vi } from 'vitest'
-import { Submit, UnitInputField } from '../..'
 import { mockErrors } from '../../../mocks'
+import { Submit, UnitInputField } from '../..'
 import { Form } from '../../Form'
 
 const optionsSelect = [
@@ -49,17 +49,17 @@ describe('UnitInputField', () => {
 
     const { asFragment } = renderWithTheme(
       <Form
-        onSubmit={value => onSubmit(value)}
         errors={mockErrors}
         methods={result.current}
+        onSubmit={value => onSubmit(value)}
       >
         <UnitInputField
           label="Test"
           name="test"
-          required
           options={optionsSelect}
           placeholder="input"
           placeholderUnit="select"
+          required
         />
         <Submit>Submit</Submit>
       </Form>,

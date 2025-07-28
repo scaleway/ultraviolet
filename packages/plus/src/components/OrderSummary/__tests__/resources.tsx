@@ -2,36 +2,33 @@ import { InformationOutlineIcon } from '@ultraviolet/icons'
 import { Tooltip } from '@ultraviolet/ui'
 
 export const categoryDefault = {
-  category: 'Category',
-  total: 0,
-  subCategories: [
-    { title: 'SubCategory', price: 12.2, details: ['Detail 1', 'Detail 2'] },
-  ],
   additionalInfo: (
     <Tooltip text="Info">
-      <InformationOutlineIcon size="small" sentiment="neutral" />7 days of free
+      <InformationOutlineIcon sentiment="neutral" size="small" />7 days of free
       backup
     </Tooltip>
   ),
+  category: 'Category',
+  subCategories: [
+    { details: ['Detail 1', 'Detail 2'], price: 12.2, title: 'SubCategory' },
+  ],
+  total: 0,
 }
 export const simpleCategory = {
   category: 'SimpleCategory',
-  subCategories: [{ title: 'subcategory', price: 5 }],
+  subCategories: [{ price: 5, title: 'subcategory' }],
 }
 
 export const categoryAZ = {
   category: 'Availability Zone',
-  subCategories: [{ title: 'PARIS 1', price: 5 }],
   discount: 0.5,
+  subCategories: [{ price: 5, title: 'PARIS 1' }],
 }
 
 export const categoryM2 = {
   category: 'Configuration',
   subCategories: [
     {
-      title: 'M2-M',
-      price: 124.1,
-      discount: 5,
       details: [
         'Apple M2 Chip',
         '8 Cores CPU 8 cores GPU',
@@ -39,10 +36,13 @@ export const categoryM2 = {
         '16 GB memory',
         '1 GB bandwidth',
       ],
+      discount: 5,
+      price: 124.1,
+      title: 'M2-M',
     },
     {
-      title: 'macOs Sonoma',
       price: 10,
+      title: 'macOs Sonoma',
     },
   ],
 }
@@ -55,16 +55,16 @@ export const categoryOptions = {
 }
 
 export const negativeItem = {
-  category: 'Coupon',
-  subCategories: [{ title: 'PROMO2025', price: -10, fixedPrice: true }],
   allowNegative: true,
+  category: 'Coupon',
+  subCategories: [{ fixedPrice: true, price: -10, title: 'PROMO2025' }],
 }
 
 export const fixePrice = {
   category: 'One time fees',
   subCategories: [
-    { title: 'Setup', price: 200, fixedPrice: true },
-    { title: 'Shipping', price: 50, fixedPrice: true },
+    { fixedPrice: true, price: 200, title: 'Setup' },
+    { fixedPrice: true, price: 50, title: 'Shipping' },
   ],
 }
 
@@ -72,30 +72,30 @@ export const categoryRequest = {
   category: 'Requests cost',
   subCategories: [
     {
-      title: '200000 requests',
-      price: 0.00000015,
       amount: 200000,
-      priceUnit: 'request',
       fixedPrice: true,
+      price: 0.00000015,
+      priceUnit: 'request',
+      title: '200000 requests',
     },
   ],
 }
 
 export const categoryStorage = {
-  category: 'Storage',
   additionalInfo: (
     <>
-      <InformationOutlineIcon size="small" sentiment="neutral" />
+      <InformationOutlineIcon sentiment="neutral" size="small" />
       75GB free on public images
     </>
   ),
+  category: 'Storage',
   subCategories: [
     {
-      title: '100 GB of storage',
-      price: 0.00003425,
       amount: 100,
-      priceUnit: 'GB/hours',
       amountFree: 75,
+      price: 0.00003425,
+      priceUnit: 'GB/hours',
+      title: '100 GB of storage',
     },
   ],
 }
@@ -116,13 +116,13 @@ export const numberInputSubCategory = {
   category: 'Duration',
   subCategories: [
     {
-      title: 'Choose a duration',
-      numberInput: true,
-      numberInputValue: 2,
-      onChangeInput: () => {},
       hidePrice: true,
+      numberInput: true,
       numberInputControls: false,
       numberInputUnit: 'ms',
+      numberInputValue: 2,
+      onChangeInput: () => {},
+      title: 'Choose a duration',
     },
 
     {
@@ -138,9 +138,9 @@ export const rangePriceContent = {
   category: 'Nodes',
   subCategories: [
     {
-      title: '20-30 nodes',
-      price: 10,
       amount: [20, 30],
+      price: 10,
+      title: '20-30 nodes',
     },
   ],
 }

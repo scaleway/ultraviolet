@@ -1,13 +1,12 @@
 import type { Decorator, StoryFn } from '@storybook/react-vite'
-import { NotificationContainer, notification } from '..'
 import { Avatar, Button, Stack, Text } from '../../index'
+import { NotificationContainer, notification } from '..'
 
 export const Children: StoryFn<typeof NotificationContainer> = args => (
   <div style={{ height: '150px' }}>
     <NotificationContainer {...args} />
-    <Stack gap={2} direction="row">
+    <Stack direction="row" gap={2}>
       <Button
-        sentiment="neutral"
         onClick={() =>
           notification(
             ({ closeToast }) => (
@@ -19,16 +18,16 @@ export const Children: StoryFn<typeof NotificationContainer> = args => (
                   <Button
                     onClick={closeToast}
                     sentiment="neutral"
-                    variant="outlined"
                     size="small"
+                    variant="outlined"
                   >
                     Decline
                   </Button>
                   <Button
                     onClick={closeToast}
                     sentiment="primary"
-                    variant="filled"
                     size="small"
+                    variant="filled"
                   >
                     Accept
                   </Button>
@@ -37,15 +36,15 @@ export const Children: StoryFn<typeof NotificationContainer> = args => (
             ),
 
             'Invitation',
-            <Avatar text="AB" variant="text" shape="circle" />,
+            <Avatar shape="circle" text="AB" variant="text" />,
             false,
           )
         }
+        sentiment="neutral"
       >
         Invitation with decline/accept
       </Button>
       <Button
-        sentiment="neutral"
         onClick={() =>
           notification(
             <Text as="p" variant="bodySmall">
@@ -56,6 +55,7 @@ export const Children: StoryFn<typeof NotificationContainer> = args => (
             true,
           )
         }
+        sentiment="neutral"
       >
         Invitation with simple close button
       </Button>

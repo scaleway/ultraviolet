@@ -1,17 +1,17 @@
 import type { StoryFn } from '@storybook/react-vite'
-import { ProgressBar } from '..'
 import { Stack } from '../../Stack'
+import { ProgressBar } from '..'
 
 export const PrefixSuffix: StoryFn = props => (
   <Stack gap={2}>
     <ProgressBar
       {...props}
       label="Prefix"
-      value={30}
       prefix="Value : "
       suffix={false}
+      value={30}
     />
-    <ProgressBar {...props} label="Suffix" value={30} suffix="/100" />
+    <ProgressBar {...props} label="Suffix" suffix="/100" value={30} />
   </Stack>
 )
 

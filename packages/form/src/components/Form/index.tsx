@@ -34,8 +34,8 @@ export const Form = <TFieldValues extends FieldValues>({
 
     if (result) {
       methods.setError('root.submit', {
-        type: 'custom',
         message: result,
+        type: 'custom',
       })
     }
   })
@@ -44,13 +44,13 @@ export const Form = <TFieldValues extends FieldValues>({
     <FormProvider {...methods}>
       <ErrorProvider errors={{ ...defaultErrors, ...errors }}>
         <StyledForm
+          name={name}
+          noValidate
           onSubmit={async e => {
             e.preventDefault()
             e.stopPropagation()
             await handleSubmit(e)
           }}
-          name={name}
-          noValidate
         >
           {children}
         </StyledForm>

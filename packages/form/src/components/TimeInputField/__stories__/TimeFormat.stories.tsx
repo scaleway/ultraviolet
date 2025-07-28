@@ -1,8 +1,8 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { Stack } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
-import { TimeInputField } from '..'
 import { Submit } from '../../Submit'
+import { TimeInputField } from '..'
 import { Template } from './Template.stories'
 
 export const TimeFormat: StoryFn<
@@ -14,4 +14,4 @@ export const TimeFormat: StoryFn<
   </Stack>
 )
 
-TimeFormat.args = { ...Template.args, timeFormat: 12, label: '12-hour format' }
+TimeFormat.args = { ...Template.args, label: '12-hour format', timeFormat: 12 }

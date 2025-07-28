@@ -1,7 +1,7 @@
 import type { StoryFn } from '@storybook/react-vite'
-import { ProgressBar } from '..'
 import { Badge } from '../../Badge'
 import { Stack } from '../../Stack'
+import { ProgressBar } from '..'
 
 export const Label: StoryFn = props => (
   <Stack gap={3}>
@@ -14,13 +14,13 @@ export const Label: StoryFn = props => (
         </Badge>
       }
     />
-    <ProgressBar label="Label" value={30} showProgress />
+    <ProgressBar label="Label" showProgress value={30} />
   </Stack>
 )
 
 Label.args = {
-  value: 40,
   label: 'Label',
+  value: 40,
 }
 
 Label.parameters = {

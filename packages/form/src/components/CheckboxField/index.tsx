@@ -38,36 +38,36 @@ export const CheckboxField = <
     field,
     fieldState: { error },
   } = useController<TFieldValues, TFieldName>({
-    name,
-    disabled,
-    shouldUnregister,
     control,
+    disabled,
+    name,
     rules: {
       required,
       validate,
     },
+    shouldUnregister,
   })
 
   return (
     <Checkbox
       {...props}
+      checked={!!field.value}
+      disabled={field.disabled}
+      error={getError({ label: label ?? ariaLabel ?? name }, error)}
       name={field.name}
+      onBlur={event => {
+        field.onBlur()
+        onBlur?.(event)
+      }}
       onChange={event => {
         field.onChange(event.target.checked)
         onChange?.(
           event.target.checked as PathValue<TFieldValues, Path<TFieldValues>>,
         )
       }}
-      onBlur={event => {
-        field.onBlur()
-        onBlur?.(event)
-      }}
-      disabled={field.disabled}
-      checked={!!field.value}
-      error={getError({ label: label ?? ariaLabel ?? name }, error)}
       ref={field.ref}
       {...(children
-        ? { children, 'aria-label': undefined }
+        ? { 'aria-label': undefined, children }
         : { 'aria-label': ariaLabel as string })}
     />
   )

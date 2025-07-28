@@ -77,7 +77,7 @@ describe('Stepper', () => {
 
   test('renders correctly without separator with label on the right', () =>
     shouldMatchEmotionSnapshot(
-      <Stepper separator={false} labelPosition="right">
+      <Stepper labelPosition="right" separator={false}>
         <Stepper.Step title="step 1" />
         <Stepper.Step title="step 2" />
         <Stepper.Step title="step 3" />
@@ -87,15 +87,15 @@ describe('Stepper', () => {
   test('renders correctly with disabled steps', () =>
     shouldMatchEmotionSnapshot(
       <Stepper selected={0}>
-        <Stepper.Step title="step 1" disabled />
+        <Stepper.Step disabled title="step 1" />
         <Stepper.Step title="step 2" />
-        <Stepper.Step title="step 3" disabled />
+        <Stepper.Step disabled title="step 3" />
       </Stepper>,
     ))
 
   test('handles clicks when interactive', async () => {
     const { asFragment } = renderWithTheme(
-      <Stepper selected={1} interactive>
+      <Stepper interactive selected={1}>
         <Stepper.Step title="step 1" />
         <Stepper.Step title="step 2" />
         <Stepper.Step title="step 3" />
@@ -108,7 +108,7 @@ describe('Stepper', () => {
 
   test('handles clicks when interactive and small', async () => {
     const { asFragment } = renderWithTheme(
-      <Stepper selected={1} interactive size="small">
+      <Stepper interactive selected={1} size="small">
         <Stepper.Step title="step 1" />
         <Stepper.Step title="step 2" />
         <Stepper.Step title="step 3" />

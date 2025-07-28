@@ -36,13 +36,13 @@ export const ToggleField = <
     field,
     fieldState: { error },
   } = useController<TFieldValues, TFieldName>({
-    name,
     control,
-    shouldUnregister,
+    name,
     rules: {
       required,
       validate,
     },
+    shouldUnregister,
   })
   const { getError } = useErrors()
 
@@ -57,9 +57,13 @@ export const ToggleField = <
   return (
     <Toggle
       {...props}
-      name={field.name}
-      ref={field.ref}
       checked={transformedValue()}
+      error={getError(
+        { label: typeof label === 'string' ? label : (ariaLabel ?? name) },
+        error,
+      )}
+      label={label}
+      name={field.name}
       onChange={event => {
         if (parse) {
           field.onChange(parse(event.target.checked))
@@ -70,12 +74,8 @@ export const ToggleField = <
           event.target.checked as PathValue<TFieldValues, Path<TFieldValues>>,
         )
       }}
-      label={label}
+      ref={field.ref}
       required={required}
-      error={getError(
-        { label: typeof label === 'string' ? label : (ariaLabel ?? name) },
-        error,
-      )}
     />
   )
 }

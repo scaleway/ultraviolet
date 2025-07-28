@@ -21,9 +21,9 @@ import { Text } from '../Text'
 type SentimentType = 'neutral' | 'primary'
 
 const SIZES_WIDTH = {
-  small: 20, // in rem
-  medium: 26.25,
   large: 32.5,
+  medium: 26.25,
+  small: 20, // in rem
 }
 
 const StyledPopup = styled(Popup, {
@@ -73,29 +73,29 @@ const ContentWrapper = ({
   <StyledStack gap={1}>
     <Stack direction="row" justifyContent="space-between">
       <Text
-        variant="bodyStrong"
         as="h3"
-        sentiment={sentiment === 'neutral' ? 'neutral' : 'white'}
         prominence={sentiment === 'neutral' ? 'strong' : 'stronger'}
+        sentiment={sentiment === 'neutral' ? 'neutral' : 'white'}
+        variant="bodyStrong"
       >
         {title}
       </Text>
       <Button
-        variant={sentiment === 'neutral' ? 'ghost' : 'filled'}
-        sentiment={sentiment === 'neutral' ? 'neutral' : 'primary'}
-        onClick={onClose}
-        size="small"
         aria-label="close"
+        onClick={onClose}
+        sentiment={sentiment === 'neutral' ? 'neutral' : 'primary'}
+        size="small"
+        variant={sentiment === 'neutral' ? 'ghost' : 'filled'}
       >
         <CloseIcon />
       </Button>
     </Stack>
     {typeof children === 'string' ? (
       <Text
-        variant="bodySmall"
         as="p"
-        sentiment={sentiment === 'neutral' ? 'neutral' : 'white'}
         prominence={sentiment === 'neutral' ? 'strong' : 'stronger'}
+        sentiment={sentiment === 'neutral' ? 'neutral' : 'white'}
+        variant="bodySmall"
       >
         {children}
       </Text>
@@ -178,33 +178,33 @@ export const Popover = forwardRef(
 
     return (
       <StyledPopup
-        hideOnClickOutside
+        align={align}
+        className={className}
+        data-testid={dataTestId}
         debounceDelay={0}
-        visible={localVisible}
+        dynamicDomRendering={dynamicDomRendering}
+        hideOnClickOutside
+        innerRef={innerRef}
+        maxHeight={maxHeight}
+        maxWidth={maxWidth}
+        onClose={localOnClose}
         placement={placement}
+        portalTarget={smartPortalTarget}
+        ref={ref}
+        role="dialog"
+        sentiment={sentiment}
+        size={size}
+        tabIndex={-1}
         text={
           <ContentWrapper
-            title={title}
             onClose={localOnClose}
             sentiment={sentiment}
+            title={title}
           >
             {content}
           </ContentWrapper>
         }
-        className={className}
-        sentiment={sentiment}
-        data-testid={dataTestId}
-        size={size}
-        role="dialog"
-        ref={ref}
-        tabIndex={-1}
-        innerRef={innerRef}
-        onClose={localOnClose}
-        maxWidth={maxWidth}
-        maxHeight={maxHeight}
-        portalTarget={smartPortalTarget}
-        dynamicDomRendering={dynamicDomRendering}
-        align={align}
+        visible={localVisible}
       >
         {children}
       </StyledPopup>

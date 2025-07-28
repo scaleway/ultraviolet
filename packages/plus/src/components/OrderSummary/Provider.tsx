@@ -21,12 +21,12 @@ export type ContextProps = {
 }
 
 export const OrderSummaryContext = createContext<ContextProps>({
-  currency: 'EUR',
-  localeFormat: 'en-US',
-  items: [{ category: '', subCategories: [] }],
-  hideTimeUnit: false,
-  timePeriodUnit: 'hours',
-  timePeriodAmount: 1,
-  locales: orderSummaryLocales,
   categoriesPrice: {},
+  currency: 'EUR',
+  hideTimeUnit: false,
+  items: [{ category: '', subCategories: [] }],
+  localeFormat: 'en-US',
+  locales: orderSummaryLocales,
+  timePeriodAmount: 1,
+  timePeriodUnit: 'hours',
 })

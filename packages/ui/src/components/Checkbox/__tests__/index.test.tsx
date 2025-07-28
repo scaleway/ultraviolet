@@ -1,8 +1,8 @@
 import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
-import { useReducer } from 'react'
 import type { ActionDispatch } from 'react'
+import { useReducer } from 'react'
 import { describe, expect, test } from 'vitest'
 import { Checkbox } from '..'
 
@@ -22,10 +22,10 @@ describe('Checkbox', () => {
   test('renders correctly', () =>
     shouldMatchEmotionSnapshot(
       <Checkbox
-        onBlur={() => {}}
-        onFocus={() => {}}
-        onChange={() => {}}
         name="testing"
+        onBlur={() => {}}
+        onChange={() => {}}
+        onFocus={() => {}}
       >
         Checkbox Label
       </Checkbox>,
@@ -38,7 +38,7 @@ describe('Checkbox', () => {
 
   test('renders correctly disabled', () =>
     shouldMatchEmotionSnapshot(
-      <Checkbox onChange={() => {}} disabled>
+      <Checkbox disabled onChange={() => {}}>
         Checkbox Label
       </Checkbox>,
     ))
@@ -59,48 +59,48 @@ describe('Checkbox', () => {
 
   test('renders correctly checked', () =>
     shouldMatchEmotionSnapshot(
-      <Checkbox onChange={() => {}} checked>
+      <Checkbox checked onChange={() => {}}>
         Checkbox Label
       </Checkbox>,
     ))
   test('renders correctly checked with helper', () =>
     shouldMatchEmotionSnapshot(
-      <Checkbox onChange={() => {}} checked helper="helper">
+      <Checkbox checked helper="helper" onChange={() => {}}>
         Checkbox Label
       </Checkbox>,
     ))
 
   test('renders correctly indeterminate', () =>
     shouldMatchEmotionSnapshot(
-      <Checkbox onChange={() => {}} checked="indeterminate">
+      <Checkbox checked="indeterminate" onChange={() => {}}>
         Checkbox Label
       </Checkbox>,
     ))
 
   test('renders correctly checked and disabled', () =>
     shouldMatchEmotionSnapshot(
-      <Checkbox onChange={() => {}} checked disabled>
+      <Checkbox checked disabled onChange={() => {}}>
         Checkbox Label
       </Checkbox>,
     ))
 
   test('renders correctly indeterminate and disabled', () =>
     shouldMatchEmotionSnapshot(
-      <Checkbox onChange={() => {}} checked="indeterminate" disabled>
+      <Checkbox checked="indeterminate" disabled onChange={() => {}}>
         Checkbox Label
       </Checkbox>,
     ))
 
   test('renders correctly invisible', () =>
     shouldMatchEmotionSnapshot(
-      <Checkbox onChange={() => {}} data-visibility="true">
+      <Checkbox data-visibility="true" onChange={() => {}}>
         Checkbox Label
       </Checkbox>,
     ))
 
   test('renders correctly with an error', () =>
     shouldMatchEmotionSnapshot(
-      <Checkbox onChange={() => {}} error="test error">
+      <Checkbox error="test error" onChange={() => {}}>
         Checkbox Label
       </Checkbox>,
     ))
@@ -114,7 +114,7 @@ describe('Checkbox', () => {
 
   test('renders correctly with indeterminate state', () =>
     shouldMatchEmotionSnapshot(
-      <Checkbox onChange={() => {}} checked="indeterminate">
+      <Checkbox checked="indeterminate" onChange={() => {}}>
         Checkbox Label
       </Checkbox>,
     ))
@@ -123,7 +123,7 @@ describe('Checkbox', () => {
     renderWithTheme(
       <LocalControlValue>
         {({ checked, onChange }) => (
-          <Checkbox onChange={onChange} checked={checked} value="test">
+          <Checkbox checked={checked} onChange={onChange} value="test">
             Checkbox Label
           </Checkbox>
         )}

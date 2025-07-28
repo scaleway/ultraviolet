@@ -5,11 +5,11 @@ import {
   // @ts-expect-error can't import ultraviolet/illustration in ui (cyclic dependencies)
 } from '@ultraviolet/illustrations/products/appleSilicon'
 import { useState } from 'react'
-import { SelectableCard } from '..'
 import { Badge } from '../../Badge'
 import { Link } from '../../Link'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
+import { SelectableCard } from '..'
 
 export const Illustration: StoryFn = args => {
   const [value, onChange] = useState('label-30')
@@ -17,18 +17,14 @@ export const Illustration: StoryFn = args => {
 
   return (
     <Stack gap={8}>
-      <Stack gap={1} flex={1}>
+      <Stack flex={1} gap={1}>
         ProductIcon:
         <SelectableCard
           {...args}
-          name="label-30"
           checked={value === 'label-30'}
-          value="label-30"
-          type="radio"
-          onChange={event => onChange(event.currentTarget.value)}
           label={
-            <Stack direction="row" gap={1} flex={1} alignItems="center">
-              <Text variant="bodyStrong" as="span">
+            <Stack alignItems="center" direction="row" flex={1} gap={1}>
+              <Text as="span" variant="bodyStrong">
                 M1
               </Text>
               <Badge sentiment="primary" size="small">
@@ -36,27 +32,27 @@ export const Illustration: StoryFn = args => {
               </Badge>
             </Stack>
           }
+          name="label-30"
+          onChange={event => onChange(event.currentTarget.value)}
           productIcon="macMini"
           showTick
+          type="radio"
+          value="label-30"
         >
-          <Text as="p" variant="body" prominence="weak" sentiment="neutral">
+          <Text as="p" prominence="weak" sentiment="neutral" variant="body">
             Offer the best experience to your Mac, iPhone and iPad users with
             VNC, the remote desktop-sharing protocol.
           </Text>
-          <Link target="_blank" href="scaleway.com" size="small">
+          <Link href="scaleway.com" size="small" target="_blank">
             Learn more
           </Link>
         </SelectableCard>
         <SelectableCard
           {...args}
-          name="label-31"
           checked={value === 'label-31'}
-          value="label-31"
-          type="radio"
-          onChange={event => onChange(event.currentTarget.value)}
           label={
-            <Stack direction="row" gap={1} flex={1} alignItems="center">
-              <Text variant="bodyStrong" as="span">
+            <Stack alignItems="center" direction="row" flex={1} gap={1}>
+              <Text as="span" variant="bodyStrong">
                 M2
               </Text>
               <Badge sentiment="primary" size="small">
@@ -64,29 +60,30 @@ export const Illustration: StoryFn = args => {
               </Badge>
             </Stack>
           }
+          name="label-31"
+          onChange={event => onChange(event.currentTarget.value)}
           productIcon="macMiniM2"
           showTick
+          type="radio"
+          value="label-31"
         >
-          <Text as="p" variant="body" prominence="weak" sentiment="neutral">
+          <Text as="p" prominence="weak" sentiment="neutral" variant="body">
             Offer the best experience to your Mac
           </Text>
-          <Link target="_blank" href="scaleway.com" size="small">
+          <Link href="scaleway.com" size="small" target="_blank">
             Learn more
           </Link>
         </SelectableCard>
       </Stack>
-      <Stack gap={1} flex={1}>
+      <Stack flex={1} gap={1}>
         Illustration (white — switch to dark or darker theme):
         <SelectableCard
           {...args}
-          name="label-24"
           checked={value2 === 'label-24'}
-          value="label-24"
-          type="radio"
-          onChange={event => onChange2(event.currentTarget.value)}
+          illustration={appleSiliconWire as string}
           label={
-            <Stack direction="row" gap={1} flex={1} alignItems="center">
-              <Text variant="bodyStrong" as="span">
+            <Stack alignItems="center" direction="row" flex={1} gap={1}>
+              <Text as="span" variant="bodyStrong">
                 M1
               </Text>
               <Badge sentiment="primary" size="small">
@@ -94,27 +91,27 @@ export const Illustration: StoryFn = args => {
               </Badge>
             </Stack>
           }
-          illustration={appleSiliconWire as string}
+          name="label-24"
+          onChange={event => onChange2(event.currentTarget.value)}
           showTick
+          type="radio"
+          value="label-24"
         >
-          <Text as="p" variant="body" prominence="weak" sentiment="neutral">
+          <Text as="p" prominence="weak" sentiment="neutral" variant="body">
             Offer the best experience to your Mac, iPhone and iPad users with
             VNC, the remote desktop-sharing protocol.
           </Text>
-          <Link target="_blank" href="scaleway.com" size="small">
+          <Link href="scaleway.com" size="small" target="_blank">
             Learn more
           </Link>
         </SelectableCard>
         <SelectableCard
           {...args}
-          name="label-25"
           checked={value2 === 'label-25'}
-          value="label-25"
-          type="radio"
-          onChange={event => onChange2(event.currentTarget.value)}
+          illustration={appleSiliconM2Wire as string}
           label={
-            <Stack direction="row" gap={1} flex={1} alignItems="center">
-              <Text variant="bodyStrong" as="span">
+            <Stack alignItems="center" direction="row" flex={1} gap={1}>
+              <Text as="span" variant="bodyStrong">
                 M2
               </Text>
               <Badge sentiment="primary" size="small">
@@ -122,13 +119,16 @@ export const Illustration: StoryFn = args => {
               </Badge>
             </Stack>
           }
-          illustration={appleSiliconM2Wire as string}
+          name="label-25"
+          onChange={event => onChange2(event.currentTarget.value)}
           showTick
+          type="radio"
+          value="label-25"
         >
-          <Text as="p" variant="body" prominence="weak" sentiment="neutral">
+          <Text as="p" prominence="weak" sentiment="neutral" variant="body">
             Offer the best experience to your Mac
           </Text>
-          <Link target="_blank" href="scaleway.com" size="small">
+          <Link href="scaleway.com" size="small" target="_blank">
             Learn more
           </Link>
         </SelectableCard>

@@ -2,8 +2,8 @@
 
 import { NumberInput } from '@ultraviolet/ui'
 import type { ComponentProps, FocusEvent } from 'react'
-import { useController } from 'react-hook-form'
 import type { FieldPath, FieldValues, Path, PathValue } from 'react-hook-form'
+import { useController } from 'react-hook-form'
 import { useErrors } from '../../providers'
 import type { BaseFieldProps } from '../../types'
 import { isInteger } from '../../validators/isInteger'
@@ -37,9 +37,8 @@ export const NumberInputField = <
     field,
     fieldState: { error },
   } = useController<TFieldValues, TFieldName>({
-    name,
     control,
-    shouldUnregister,
+    name,
     rules: {
       max,
       min,
@@ -49,13 +48,21 @@ export const NumberInputField = <
         isInteger: isInteger(step),
       },
     },
+    shouldUnregister,
   })
 
   return (
     <NumberInput
       {...props}
+      aria-label={ariaLabel}
+      error={getError(
+        { isInteger: step, label: label ?? ariaLabel ?? name, max, min },
+        error,
+      )}
+      label={label}
+      max={max}
+      min={min}
       name={field.name}
-      value={field.value}
       onBlur={(event: FocusEvent<HTMLInputElement>) => {
         field.onBlur()
         onBlur?.(event)
@@ -65,16 +72,9 @@ export const NumberInputField = <
         field.onChange(newValue)
         onChange?.(newValue as PathValue<TFieldValues, Path<TFieldValues>>)
       }}
-      max={max}
-      min={min}
-      step={step}
-      label={label}
-      error={getError(
-        { label: label ?? ariaLabel ?? name, max, min, isInteger: step },
-        error,
-      )}
-      aria-label={ariaLabel}
       required={required}
+      step={step}
+      value={field.value}
     />
   )
 }

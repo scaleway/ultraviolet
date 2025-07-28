@@ -6,17 +6,17 @@ import { EstimateCost } from '..'
 export const NewPrice: StoryFn<ComponentProps<typeof EstimateCost>> = props => (
   <Stack gap={4}>
     <EstimateCost {...props} hideOverlay>
-      <EstimateCost.Item label="New server" price={20} noBorder />
+      <EstimateCost.Item label="New server" noBorder price={20} />
     </EstimateCost>
 
     <EstimateCost
       {...props}
-      hideOverlay
-      hideTotal
       description={false}
+      hideOverlay
       hideTimeUnit
+      hideTotal
     >
-      <EstimateCost.Item strikeThrough label="Old server" price={10} noBorder />
+      <EstimateCost.Item label="Old server" noBorder price={10} strikeThrough />
     </EstimateCost>
   </Stack>
 )

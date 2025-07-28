@@ -1,5 +1,5 @@
-import { Template } from './Template.stories'
 import { coloredChildren } from './helper'
+import { Template } from './Template.stories'
 
 export const Gap = Template.bind({})
 
@@ -13,6 +13,6 @@ Gap.parameters = {
 }
 
 Gap.args = {
-  gap: 4,
   children: coloredChildren,
+  gap: 4,
 }

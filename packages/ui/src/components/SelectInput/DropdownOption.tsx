@@ -35,23 +35,23 @@ export const DisplayOption = ({
     return (
       <Tooltip text={option.tooltip}>
         <Stack
-          gap={0.5}
-          direction="row"
-          justifyContent="left"
           data-testid={`option-stack-${option.value}`}
+          direction="row"
+          gap={0.5}
+          justifyContent="left"
         >
-          <CustomStack gap={0.5} direction="row" alignItems="center">
+          <CustomStack alignItems="center" direction="row" gap={0.5}>
             {option.optionalInfo ?? null}
-            <TextItem as="span" variant="body" placement="left">
+            <TextItem as="span" placement="left" variant="body">
               {option.label}
             </TextItem>
             {option.description ? (
               <Text
                 as="span"
-                variant="bodySmall"
-                sentiment="neutral"
                 placement="left"
                 prominence="weak"
+                sentiment="neutral"
+                variant="bodySmall"
               >
                 {option.description}
               </Text>
@@ -66,23 +66,23 @@ export const DisplayOption = ({
     return (
       <Tooltip text={option.tooltip}>
         <Stack
-          gap={0.5}
-          direction="row"
-          justifyContent="space-between"
           alignItems="baseline"
           data-testid={`option-stack-${option.value}`}
+          direction="row"
+          gap={0.5}
+          justifyContent="space-between"
         >
-          <CustomStack gap={0.5} direction="row" alignItems="baseline">
-            <TextItem as="span" variant="body" placement="left">
+          <CustomStack alignItems="baseline" direction="row" gap={0.5}>
+            <TextItem as="span" placement="left" variant="body">
               {option.label}
             </TextItem>
             {option.description ? (
               <Text
                 as="span"
-                variant="bodySmall"
-                sentiment="neutral"
                 placement="left"
                 prominence="weak"
+                sentiment="neutral"
+                variant="bodySmall"
               >
                 {option.description}
               </Text>
@@ -100,28 +100,28 @@ export const DisplayOption = ({
     return (
       <Tooltip text={option.tooltip}>
         <Stack
-          gap={0.5}
-          direction="row"
-          justifyContent={option.optionalInfo ? 'left' : 'space-between'}
           alignItems="normal"
+          direction="row"
+          gap={0.5}
+          justifyContent={option.optionalInfo ? 'left' : 'space-between'}
         >
           {option.optionalInfo ?? null}
 
           <CustomStack
-            gap={0.5}
-            direction="column"
             data-testid={`option-stack-${option.value}`}
+            direction="column"
+            gap={0.5}
           >
-            <TextItem as="span" variant="body" placement="left">
+            <TextItem as="span" placement="left" variant="body">
               {option.label}
             </TextItem>
             {option.description ? (
               <Text
                 as="span"
-                variant="bodySmall"
-                sentiment="neutral"
                 placement="left"
                 prominence="weak"
+                sentiment="neutral"
+                variant="bodySmall"
               >
                 {option.description}
               </Text>
@@ -135,13 +135,13 @@ export const DisplayOption = ({
   return (
     <Tooltip text={option.tooltip}>
       <Stack
-        gap={0.5}
-        direction="column"
         alignItems="normal"
         data-testid={`option-stack-${option.value}`}
+        direction="column"
+        gap={0.5}
       >
-        <CustomStack gap={0.5} direction="row" justifyContent="space-between">
-          <TextItem as="span" variant="body" placement="left">
+        <CustomStack direction="row" gap={0.5} justifyContent="space-between">
+          <TextItem as="span" placement="left" variant="body">
             {option.label}
           </TextItem>
           {option.optionalInfo ? (
@@ -151,10 +151,10 @@ export const DisplayOption = ({
         {option.description ? (
           <Text
             as="span"
-            variant="bodySmall"
-            sentiment="neutral"
             placement="left"
             prominence="weak"
+            sentiment="neutral"
+            variant="bodySmall"
           >
             {option.description}
           </Text>

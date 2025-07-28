@@ -1,12 +1,12 @@
-import { Template } from './Template.stories'
 import { dataGrouped } from './resources'
+import { Template } from './Template.stories'
 
 export const OnOpen = Template.bind({})
 
 OnOpen.args = {
   ...Template.args,
-  options: dataGrouped,
   onOpen: () => {},
+  options: dataGrouped,
   value: '',
 }
 OnOpen.decorators = [

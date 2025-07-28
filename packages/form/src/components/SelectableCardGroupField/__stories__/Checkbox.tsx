@@ -6,13 +6,13 @@ export const Checkbox: StoryFn<
   ComponentProps<typeof SelectableCardGroupField>
 > = args => (
   <SelectableCardGroupField {...args} type="checkbox">
-    <SelectableCardGroupField.Card value="radio 1" label="Radio 1" />
-    <SelectableCardGroupField.Card value="radio 2" label="Radio 2" />
+    <SelectableCardGroupField.Card label="Radio 1" value="radio 1" />
+    <SelectableCardGroupField.Card label="Radio 2" value="radio 2" />
   </SelectableCardGroupField>
 )
 
 Checkbox.args = {
-  name: 'mySelectableCardGroup',
   legend: 'Checkbox',
+  name: 'mySelectableCardGroup',
   showTick: true,
 }

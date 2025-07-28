@@ -5,19 +5,19 @@ import { DefaultDisclosure } from './Template.stories'
 export const Borderless: StoryFn<typeof Menu> = () => (
   <Menu disclosure={DefaultDisclosure}>
     <Menu.Item borderless>default (neutral)</Menu.Item>
-    <Menu.Item sentiment="danger" borderless>
+    <Menu.Item borderless sentiment="danger">
       Danger
     </Menu.Item>
     <Menu.Item
-      href="/?path=/docs/components-navigation-menu--borderless"
       borderless
+      href="/?path=/docs/components-navigation-menu--borderless"
     >
       Link Neutral
     </Menu.Item>
     <Menu.Item
-      sentiment="danger"
-      href="/?path=/docs/components-navigation-menu--borderless"
       borderless
+      href="/?path=/docs/components-navigation-menu--borderless"
+      sentiment="danger"
     >
       Link Danger
     </Menu.Item>

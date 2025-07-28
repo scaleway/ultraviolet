@@ -6,7 +6,7 @@ import { Button } from '../../Button'
 import { Text } from '../../Text'
 
 const reactNeptune = (
-  <Text as="span" variant="bodySmall" sentiment="primary">
+  <Text as="span" sentiment="primary" variant="bodySmall">
     Neptune <Badge size="small">Label</Badge>
   </Text>
 )
@@ -32,94 +32,94 @@ const optionalInfo43 = (
 
 export const dataUnGrouped = [
   {
-    value: 'mercury',
     label: 'Mercury',
+    value: 'mercury',
   },
   {
-    value: 'venus',
     label: 'Venus',
+    value: 'venus',
   },
   {
-    value: 'earth',
-    label: 'Earth',
     description: 'Our home planet',
+    label: 'Earth',
     searchText: 'earth',
+    value: 'earth',
   },
   {
-    value: 'mars',
-    label: 'Mars',
     disabled: true,
+    label: 'Mars',
     tooltip: 'Mars cant be selected',
+    value: 'mars',
   },
   {
-    value: 'jupiter',
-    label: 'Jupiter',
     description:
       'Jupiter is the fifth planet from the Sun and the largest in the Solar System. It is a gas giant with a mass more than two and a half times that of all the other planets in the Solar System combined, and slightly less than one one-thousandth the mass of the Sun.',
+    label: 'Jupiter',
+    value: 'jupiter',
   },
   {
-    value: 'saturn',
     label: 'Saturn',
+    value: 'saturn',
   },
   {
-    value: 'uranus',
     label: 'Uranus',
+    value: 'uranus',
   },
   {
-    value: 'neptune',
     label: reactNeptune,
     searchText: 'neptune',
+    value: 'neptune',
   },
 ]
 
 export const dataGrouped = {
-  'terrestrial planets': [
-    {
-      value: 'mercury',
-      label: 'Mercury',
-    },
-    {
-      value: 'venus',
-      label: 'Venus',
-    },
-    {
-      value: 'earth',
-      label: 'Earth',
-      description: 'Our home planet',
-      searchText: 'earth',
-    },
-    {
-      value: 'mars',
-      label: 'Mars',
-      disabled: true,
-    },
-    {
-      value: 'pluto',
-      label: 'Pluto',
-      description:
-        'Pluto does not fit the usual classification of either terrestrial or Jovian planets, but is rocky',
-    },
-  ],
   'jovian planets': [
     {
-      value: 'jupiter',
-      label: 'Jupiter',
       description:
         'Jupiter is the fifth planet from the Sun and the largest in the Solar System. It is a gas giant with a mass more than two and a half times that of all the other planets in the Solar System combined, and slightly less than one one-thousandth the mass of the Sun.',
+      label: 'Jupiter',
+      value: 'jupiter',
     },
     {
-      value: 'saturn',
       label: 'Saturn',
+      value: 'saturn',
     },
     {
-      value: 'uranus',
       label: 'Uranus',
+      value: 'uranus',
     },
 
     {
-      value: 'neptune',
       label: reactNeptune,
       searchText: 'neptune',
+      value: 'neptune',
+    },
+  ],
+  'terrestrial planets': [
+    {
+      label: 'Mercury',
+      value: 'mercury',
+    },
+    {
+      label: 'Venus',
+      value: 'venus',
+    },
+    {
+      description: 'Our home planet',
+      label: 'Earth',
+      searchText: 'earth',
+      value: 'earth',
+    },
+    {
+      disabled: true,
+      label: 'Mars',
+      value: 'mars',
+    },
+    {
+      description:
+        'Pluto does not fit the usual classification of either terrestrial or Jovian planets, but is rocky',
+      label: 'Pluto',
+      value: 'pluto',
     },
   ],
 }
@@ -127,213 +127,212 @@ export const dataGrouped = {
 export const dataGroupedWithEmptyName = {
   '': [
     {
-      value: 'mercury',
       label: 'Mercury',
+      value: 'mercury',
     },
     {
-      value: 'venus',
       label: 'Venus',
-    },
-  ],
-  'Three planets': [
-    {
-      value: 'earth',
-      label: 'Earth',
-      description: 'Our home planet',
-      searchText: 'earth',
-    },
-    {
-      value: 'mars',
-      label: 'Mars',
-      disabled: true,
-    },
-    {
-      value: 'pluto',
-      label: 'Pluto',
-      description:
-        'Pluto does not fit the usual classification of either terrestrial or Jovian planets, but is rocky',
+      value: 'venus',
     },
   ],
 
   'jovian planets': [
     {
-      value: 'jupiter',
-      label: 'Jupiter',
       description:
         'Jupiter is the fifth planet from the Sun and the largest in the Solar System. It is a gas giant with a mass more than two and a half times that of all the other planets in the Solar System combined, and slightly less than one one-thousandth the mass of the Sun.',
+      label: 'Jupiter',
+      value: 'jupiter',
     },
     {
-      value: 'saturn',
       label: 'Saturn',
+      value: 'saturn',
     },
     {
-      value: 'uranus',
       label: 'Uranus',
+      value: 'uranus',
     },
 
     {
-      value: 'neptune',
       label: reactNeptune,
       searchText: 'neptune',
+      value: 'neptune',
+    },
+  ],
+  'Three planets': [
+    {
+      description: 'Our home planet',
+      label: 'Earth',
+      searchText: 'earth',
+      value: 'earth',
+    },
+    {
+      disabled: true,
+      label: 'Mars',
+      value: 'mars',
+    },
+    {
+      description:
+        'Pluto does not fit the usual classification of either terrestrial or Jovian planets, but is rocky',
+      label: 'Pluto',
+      value: 'pluto',
     },
   ],
 }
 
 export const OptionalInfo = {
+  'jovian planets': [
+    {
+      description:
+        'Jupiter is the fifth planet from the Sun and the largest in the Solar System. It is a gas giant with a mass more than two and a half times that of all the other planets in the Solar System combined, and slightly less than one one-thousandth the mass of the Sun.',
+      label: 'Jupiter',
+
+      optionalInfo: optionalInfo1,
+      value: 'jupiter',
+    },
+
+    {
+      label: 'Saturn',
+      value: 'saturn',
+    },
+    {
+      label: 'Uranus',
+      optionalInfo: optionalInfo1,
+      value: 'uranus',
+    },
+
+    {
+      label: 'Neptune',
+      value: 'neptune',
+    },
+  ],
   'terrestrial planets': [
     {
-      value: 'mercury',
       label: 'Mercury',
       optionalInfo: optionalInfo1,
+      value: 'mercury',
     },
     {
-      value: 'venus',
       label: 'Venus',
       optionalInfo: optionalInfo1,
+      value: 'venus',
     },
     {
-      value: 'earth',
-      label: 'Earth',
       description: 'Our home planet',
+      label: 'Earth',
+      value: 'earth',
     },
     {
-      value: 'mars',
       label: 'Mars',
+      value: 'mars',
     },
     {
-      value: 'pluto',
+      description:
+        'Pluto does not fit the usual classification of either terrestrial or Jovian planets, but is rocky',
+      disabled: false,
       label: (
-        <Text as="div" variant="body" italic>
+        <Text as="div" italic variant="body">
           Pluto
         </Text>
       ),
-      disabled: false,
-      description:
-        'Pluto does not fit the usual classification of either terrestrial or Jovian planets, but is rocky',
       searchText: 'pluto',
-    },
-  ],
-
-  'jovian planets': [
-    {
-      value: 'jupiter',
-      label: 'Jupiter',
-      description:
-        'Jupiter is the fifth planet from the Sun and the largest in the Solar System. It is a gas giant with a mass more than two and a half times that of all the other planets in the Solar System combined, and slightly less than one one-thousandth the mass of the Sun.',
-
-      optionalInfo: optionalInfo1,
-    },
-
-    {
-      value: 'saturn',
-      label: 'Saturn',
-    },
-    {
-      value: 'uranus',
-      label: 'Uranus',
-      optionalInfo: optionalInfo1,
-    },
-
-    {
-      value: 'neptune',
-      label: 'Neptune',
+      value: 'pluto',
     },
   ],
 }
 
 export const OptionalInfo2 = [
   {
-    value: 'par',
+    description: 'France',
     label: 'Paris',
     optionalInfo: optionalInfo2,
-    description: 'France',
     searchText: 'paris',
+    value: 'par',
   },
   {
-    value: 'ams',
     label: 'Amsterdam',
     optionalInfo: optionalInfo2,
     searcText: 'amsterdam',
+    value: 'ams',
   },
   {
-    value: 'waw',
     label: 'Warsaw',
     optionalInfo: optionalInfo2,
     searchText: 'warsaw',
+    value: 'waw',
   },
 ]
 
 export const OptionalInfo3 = [
   {
-    value: 'par',
+    description: 'France',
     label: 'Paris',
     optionalInfo: optionalInfo3,
-    description: 'France',
     searchText: 'paris',
+    value: 'par',
   },
   {
-    value: 'ams',
     label: 'Amsterdam',
     optionalInfo: optionalInfo3,
     searcText: 'amsterdam',
+    value: 'ams',
   },
   {
-    value: 'waw',
     label: 'Warsaw',
     optionalInfo: optionalInfo3,
     searchText: 'warsaw',
+    value: 'waw',
   },
 ]
 
 export const OptionalInfo4 = [
   {
-    value: 'par',
-    label: 'Paris',
-    optionalInfo: optionalInfo41,
     description: 'France',
     disabled: false,
+    label: 'Paris',
+    optionalInfo: optionalInfo41,
+    value: 'par',
   },
   {
-    value: 'ams',
+    disabled: false,
     label: 'Amsterdam',
     optionalInfo: optionalInfo42,
-    disabled: false,
+    value: 'ams',
   },
   {
-    value: 'waw',
+    disabled: false,
     label: 'Warsaw',
     optionalInfo: optionalInfo43,
-    disabled: false,
+    value: 'waw',
   },
 ]
 
 export const OptionalInfo5 = [
   {
-    value: 'par',
-    label: 'Paris',
-    optionalInfo: optionalInfo41,
     description: 'France',
     disabled: false,
+    label: 'Paris',
+    optionalInfo: optionalInfo41,
+    value: 'par',
   },
   {
-    value: 'ams',
+    disabled: false,
     label: 'Amsterdam',
     optionalInfo: optionalInfo42,
-    disabled: false,
+    value: 'ams',
   },
   {
-    value: 'waw',
-    label: 'Warsaw',
     disabled: true,
+    label: 'Warsaw',
     optionalInfo: (
       <Button
-        size="xsmall"
-        sentiment="neutral"
         onClick={() => alert('We will enable Warsaw soon!')}
+        sentiment="neutral"
+        size="xsmall"
       >
         <EmailOutlineIcon />
         Contact us
       </Button>
     ),
+    value: 'waw',
   },
 ]

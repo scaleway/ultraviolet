@@ -11,8 +11,8 @@ import { Text } from '../Text'
 import { useStepper } from './StepperProvider'
 
 const LINE_HEIGHT_SIZES = {
-  small: 2,
   medium: 4,
+  small: 2,
 } as const
 
 type StepProps = {
@@ -212,12 +212,19 @@ export const Step = ({
 
   return (
     <StyledStepContainer
-      gap={currentState.labelPosition === 'right' ? 1 : 0}
-      direction={currentState.labelPosition === 'right' ? 'row' : 'column'}
       alignItems="center"
-      justifyContent="flex-start"
       className={className ?? 'step'}
+      data-animated={currentState.animated}
+      data-disabled={disabled}
+      data-done={isDone}
+      data-hide-separator={!currentState.separator}
       data-interactive={currentState.interactive && isDone}
+      data-label-position={currentState.labelPosition}
+      data-selected={isActive}
+      data-testid={dataTestId ?? `stepper-step-${index}`}
+      direction={currentState.labelPosition === 'right' ? 'row' : 'column'}
+      gap={currentState.labelPosition === 'right' ? 1 : 0}
+      justifyContent="flex-start"
       onClick={() => {
         if (currentState.interactive && !disabled) {
           if (index < currentState.step) {
@@ -226,30 +233,23 @@ export const Step = ({
           onClick?.(index)
         }
       }}
-      data-disabled={disabled}
-      data-testid={dataTestId ?? `stepper-step-${index}`}
-      data-hide-separator={!currentState.separator}
-      data-label-position={currentState.labelPosition}
       size={currentState.size}
-      data-selected={isActive}
-      data-done={isDone}
-      data-animated={currentState.animated}
     >
       {isDone && !disabled ? (
         <StyledBullet
-          sentiment="primary"
-          prominence="strong"
-          size={currentState.size}
           isActive={isActive}
+          prominence="strong"
+          sentiment="primary"
+          size={currentState.size}
         >
           <CheckIcon />
         </StyledBullet>
       ) : (
         <StyledBullet
-          sentiment={isDone || isActive ? 'primary' : 'neutral'}
-          prominence="strong"
-          size={currentState.size}
           isActive={isActive}
+          prominence="strong"
+          sentiment={isDone || isActive ? 'primary' : 'neutral'}
+          size={currentState.size}
         >
           {(index + 1).toString()}
         </StyledBullet>
@@ -257,9 +257,9 @@ export const Step = ({
       {title ? (
         <StyledText
           as="span"
-          variant={textVariant}
           prominence={isDone || isActive ? 'default' : 'weak'}
           sentiment={isActive ? 'primary' : 'neutral'}
+          variant={textVariant}
           whiteSpace="normal"
         >
           {title}

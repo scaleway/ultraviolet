@@ -1,12 +1,12 @@
-import { Template } from './Template.stories'
 import { dataGrouped } from './resources'
+import { Template } from './Template.stories'
 
 export const Multiselect = Template.bind({})
 
 Multiselect.args = {
   ...Template.args,
-  options: dataGrouped,
   multiselect: true,
+  options: dataGrouped,
   value: '',
 }
 Multiselect.decorators = [

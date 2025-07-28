@@ -9,24 +9,24 @@ export const Error: StoryFn = args => {
     <>
       <Radio
         {...args}
-        name="error-label-1"
-        error="invalid"
         checked={value === 'error-label-1'}
-        value="error-label-1"
+        error="invalid"
+        label="Label 1"
+        name="error-label-1"
         onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
           onChange(e.currentTarget.value)
         }
-        label="Label 1"
+        value="error-label-1"
       />
       <Radio
         {...args}
-        name="error-label-2"
         checked={value === 'error-label-2'}
-        value="error-label-2"
+        label="Label 1"
+        name="error-label-2"
         onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
           onChange(e.currentTarget.value)
         }
-        label="Label 1"
+        value="error-label-2"
       />
     </>
   )

@@ -8,22 +8,22 @@ export const Sentiments: StoryFn<ComponentProps<typeof Text>> = args => (
     {SENTIMENTS.map(sentiment => (
       <Text
         {...args}
-        key={sentiment}
         as="div"
-        variant="body"
+        key={sentiment}
         sentiment={sentiment}
+        variant="body"
       >
         This text uses {sentiment} sentiment.
       </Text>
     ))}
 
     <div style={{ background: 'white' }}>
-      <Text {...args} as="div" variant="body" sentiment="black">
+      <Text {...args} as="div" sentiment="black" variant="body">
         Use black sentiment to make text black no matter the theme.
       </Text>
     </div>
     <div style={{ background: 'black' }}>
-      <Text {...args} as="div" variant="body" sentiment="white">
+      <Text {...args} as="div" sentiment="white" variant="body">
         Use white sentiment to make text white no matter the theme.
       </Text>
     </div>

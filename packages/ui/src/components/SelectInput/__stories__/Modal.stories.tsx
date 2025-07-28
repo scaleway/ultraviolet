@@ -1,9 +1,9 @@
 import type { StoryFn } from '@storybook/react-vite'
-import { SelectInput } from '..'
 import { Button } from '../../Button'
 import { Modal as ModalComponent } from '../../Modal'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
+import { SelectInput } from '..'
 import { dataGrouped } from './resources'
 
 export const Modal: StoryFn<typeof SelectInput> = args => (
@@ -12,14 +12,14 @@ export const Modal: StoryFn<typeof SelectInput> = args => (
     placement="bottom"
   >
     <Stack gap={2}>
-      <Text as="h1" variant="heading" sentiment="neutral">
+      <Text as="h1" sentiment="neutral" variant="heading">
         Title
       </Text>
-      <Text as="p" variant="body" sentiment="neutral">
+      <Text as="p" sentiment="neutral" variant="body">
         This is an example of SelectInput inside a modal.
       </Text>
       <SelectInput {...args} label="Label" />
-      <Text as="p" variant="body" sentiment="neutral">
+      <Text as="p" sentiment="neutral" variant="body">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
         veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
@@ -33,14 +33,14 @@ export const Modal: StoryFn<typeof SelectInput> = args => (
 )
 
 Modal.args = {
-  options: dataGrouped,
+  disabled: false,
+  helper: 'helper',
   multiselect: true,
   name: 'example',
+  options: dataGrouped,
   placeholder: 'Select item',
   placeholderSearch: 'Search in list',
   searchable: true,
-  disabled: false,
-  helper: 'helper',
 }
 Modal.decorators = [
   StoryComponent => (

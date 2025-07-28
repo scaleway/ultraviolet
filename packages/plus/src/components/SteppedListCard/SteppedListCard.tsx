@@ -2,11 +2,11 @@
 
 import styled from '@emotion/styled'
 import { Button, Card, Row, Stack, StepList, Text } from '@ultraviolet/ui'
-import { Children, useMemo, useState } from 'react'
 import type { ReactNode } from 'react'
+import { Children, useMemo, useState } from 'react'
+import { Data } from './helper'
 import { SteppedList } from './Step'
 import { SteppedListContent } from './SteppedListContent'
-import { Data } from './helper'
 
 const StyledCard = styled(Card)`
   padding: 0;
@@ -91,12 +91,12 @@ const SteppedListCard = ({
   const values = useMemo(
     () => ({
       currentStep,
-      setCurrentStep,
-      numberOfSteps,
       done,
+      numberOfSteps,
+      onClickHide,
+      setCurrentStep,
       setDone,
       setHidden,
-      onClickHide,
     }),
     [
       currentStep,
@@ -128,10 +128,10 @@ const SteppedListCard = ({
           {showToggleOption ? (
             <Button
               onClick={onClickHideButton}
-              variant="ghost"
               sentiment="neutral"
               size="small"
               tooltip={hidden ? showTooltipText : hideTooltipText}
+              variant="ghost"
             >
               {hidden ? showText : hideText}
             </Button>
@@ -144,10 +144,10 @@ const SteppedListCard = ({
                 <StepList>
                   {steps.map((step, index) => (
                     <SteppedList
+                      completed={done[index]}
                       key={step}
                       stepNumber={index + 1}
                       stepTitle={step}
-                      completed={done[index]}
                     />
                   ))}
                 </StepList>

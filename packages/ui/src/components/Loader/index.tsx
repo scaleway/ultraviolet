@@ -10,11 +10,11 @@ const HALF_VIEWBOX_WIDTH = VIEWBOX_WIDTH / 2
 const HALF_VIEWBOX_HEIGHT = VIEWBOX_HEIGHT / 2
 
 export const SIZES = {
-  xsmall: '150',
-  small: '200',
-  medium: '250',
   large: '300',
+  medium: '250',
+  small: '200',
   xlarge: '400',
+  xsmall: '150',
   xxlarge: '700',
 } as const
 
@@ -72,23 +72,23 @@ export const Loader = ({
   return (
     <StyledSvg
       active={active}
-      role="progressbar"
       aria-label={label}
-      aria-valuemin={0}
       aria-valuemax={100}
+      aria-valuemin={0}
       aria-valuenow={percentage}
       aria-valuetext={`${percentage}%`}
-      viewBox={`0 0 ${VIEWBOX_WIDTH} ${VIEWBOX_HEIGHT}`}
+      role="progressbar"
       style={{
         height: theme.sizing[SIZES[size]],
         width: theme.sizing[SIZES[size]],
       }}
+      viewBox={`0 0 ${VIEWBOX_WIDTH} ${VIEWBOX_HEIGHT}`}
     >
       <StyledCircle
         cx={HALF_VIEWBOX_WIDTH}
         cy={HALF_VIEWBOX_HEIGHT}
-        r={circleRadius}
         fill="none"
+        r={circleRadius}
         strokeWidth={16}
       />
       <circle
@@ -98,17 +98,17 @@ export const Loader = ({
         `}
         cx={HALF_VIEWBOX_WIDTH}
         cy={HALF_VIEWBOX_HEIGHT}
-        r={circleRadius}
         fill="none"
-        strokeWidth={16}
-        strokeDasharray={circleDiameter}
-        strokeDashoffset={(1 - boundedPercentage) * circleDiameter}
+        r={circleRadius}
         stroke={
           sentiment === 'black' || sentiment === 'white'
             ? theme.colors.other.monochrome[sentiment].background
             : theme.colors[sentiment]?.backgroundStrong
         }
+        strokeDasharray={circleDiameter}
+        strokeDashoffset={(1 - boundedPercentage) * circleDiameter}
         strokeLinecap="round"
+        strokeWidth={16}
       />
     </StyledSvg>
   )

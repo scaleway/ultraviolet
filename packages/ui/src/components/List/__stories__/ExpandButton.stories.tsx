@@ -1,6 +1,6 @@
 import { List } from '..'
-import { Template } from './Template.stories'
 import { data } from './resources'
+import { Template } from './Template.stories'
 
 export const ExpandButton = Template.bind({})
 
@@ -10,13 +10,12 @@ export const ExpandButton = Template.bind({})
  */
 ExpandButton.args = {
   ...Template.args,
-  expandable: true,
   children: data.map(planet => (
     <List.Row
-      key={planet.id}
-      id={planet.id}
-      expandable="Planet description"
       disabled={planet.id === 'mercury'}
+      expandable="Planet description"
+      id={planet.id}
+      key={planet.id}
     >
       <List.Cell>
         {planet.name}{' '}
@@ -26,4 +25,5 @@ ExpandButton.args = {
       <List.Cell>{planet.aphelion}AU</List.Cell>
     </List.Row>
   )),
+  expandable: true,
 }

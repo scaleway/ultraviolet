@@ -2,7 +2,7 @@ import { Global, ThemeProvider } from '@emotion/react'
 // oxlint-disable-next-line import/no-unassigned-import
 import '@ultraviolet/fonts/fonts.css'
 import { consoleLightTheme } from '@ultraviolet/themes'
-import { Text, normalize } from '@ultraviolet/ui'
+import { normalize, Text } from '@ultraviolet/ui'
 import type { ReactNode } from 'react'
 import { lazy } from 'react'
 import {
@@ -24,10 +24,10 @@ const pagesToRender = Object.keys(modules)
   .map(path =>
     path.includes('render.tsx')
       ? {
-          name: path.replace('.tsx', ''),
           Component: lazy(
             () => import(`./tests/${path?.split('/')[2]}/render.tsx`),
           ),
+          name: path.replace('.tsx', ''),
         }
       : null,
   )
@@ -68,16 +68,16 @@ const App = () => (
     <GlobalWrapper>
       <Router>
         <Routes>
-          <Route path="/" element={<WelcomePage />} />
+          <Route element={<WelcomePage />} path="/" />
           {pagesToRender.map(path => {
             const Element = path?.Component
 
             if (Element) {
               return (
                 <Route
+                  element={<Element />}
                   key={path?.name}
                   path={path?.name?.split('/')[2]?.toLowerCase()}
-                  element={<Element />}
                 />
               )
             }

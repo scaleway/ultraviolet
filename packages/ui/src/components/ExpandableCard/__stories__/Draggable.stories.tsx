@@ -1,8 +1,8 @@
 import type { StoryFn } from '@storybook/react-vite'
-import { useState } from 'react'
 import type { KeyboardEvent } from 'react'
-import { ExpandableCard } from '..'
+import { useState } from 'react'
 import { Stack } from '../..'
+import { ExpandableCard } from '..'
 
 export const Draggable: StoryFn<typeof ExpandableCard> = args => {
   const [cards, setCards] = useState(['Pool-1', 'Pool-2', 'Pool-3', 'Pool-4'])
@@ -40,13 +40,13 @@ export const Draggable: StoryFn<typeof ExpandableCard> = args => {
           <ExpandableCard
             key={name}
             {...args}
-            name="pool"
-            header={name}
-            value={name}
-            onDrop={onDrop}
             draggable
+            header={name}
             index={index}
+            name="pool"
+            onDrop={onDrop}
             onKeyDown={onKeyDown}
+            value={name}
           >
             Content for {name}
           </ExpandableCard>

@@ -19,9 +19,9 @@ export const OnClickHide: StoryFn<
 
   const illustrationImage =
     theme.theme === 'light' ? (
-      <StyledImage src={blockStorageWire} width={200} alt="blockStorage" />
+      <StyledImage alt="blockStorage" src={blockStorageWire} width={200} />
     ) : (
-      <img src={blockStorageWire} width={200} alt="blockStorage" />
+      <img alt="blockStorage" src={blockStorageWire} width={200} />
     )
   const [visible, setVisible] = useState(true)
 
@@ -34,20 +34,20 @@ export const OnClickHide: StoryFn<
       <Expandable opened={visible}>
         <SteppedListCard {...props} onClickHide={() => setVisible(!visible)}>
           <SteppedListCard.Step
+            image={illustrationImage}
             stepNumber={1}
             subHeader={
-              <Text as="h3" variant="headingSmallStrong" sentiment="primary">
+              <Text as="h3" sentiment="primary" variant="headingSmallStrong">
                 First step
               </Text>
             }
-            image={illustrationImage}
           >
             {nextStep => (
-              <Stack gap={2} direction="column">
+              <Stack direction="column" gap={2}>
                 <Text as="div" variant="body">
                   First step description
                 </Text>
-                <Stack gap={2} direction="row">
+                <Stack direction="row" gap={2}>
                   <Button onClick={() => nextStep(false)} variant="outlined">
                     Skip
                   </Button>
@@ -57,14 +57,14 @@ export const OnClickHide: StoryFn<
             )}
           </SteppedListCard.Step>
           <SteppedListCard.Step
+            image={illustrationImage}
             stepNumber={2}
             subHeader="Second step"
-            image={illustrationImage}
           >
             {nextStep => (
               <Stack gap={2}>
                 Step description
-                <Stack gap={2} direction="row">
+                <Stack direction="row" gap={2}>
                   <Button onClick={() => nextStep(true)}>
                     Validate and close. It will trigger
                     &quot;onClickHidden&quot;

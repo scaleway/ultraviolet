@@ -1,11 +1,11 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { DotsHorizontalIcon } from '@ultraviolet/icons'
 import type { ComponentProps, ReactNode } from 'react'
-import { Menu } from '..'
 import { Avatar } from '../../Avatar'
 import { Badge } from '../../Badge'
 import { Button } from '../../Button'
 import { Stack } from '../../Stack'
+import { Menu } from '..'
 
 type ItemProps = {
   sentiment?: ComponentProps<typeof Menu.Item>['sentiment']
@@ -22,9 +22,9 @@ const Item = ({
   children,
   searchText,
 }: ItemProps) => (
-  <Menu.Item sentiment={sentiment} active={active} searchText={searchText}>
-    <Stack direction="row" gap={1} alignItems="center">
-      <Avatar variant="colors" colors={colors} shape="circle" size="xsmall" />
+  <Menu.Item active={active} searchText={searchText} sentiment={sentiment}>
+    <Stack alignItems="center" direction="row" gap={1}>
+      <Avatar colors={colors} shape="circle" size="xsmall" variant="colors" />
       {children}
     </Stack>
   </Menu.Item>
@@ -34,28 +34,28 @@ export const Searchable: StoryFn<typeof Menu> = props => (
   <Menu
     {...props}
     align="start"
-    searchable
-    hideOnClickItem
     disclosure={
-      <Button sentiment="neutral" variant="ghost" size="small">
+      <Button sentiment="neutral" size="small" variant="ghost">
         <DotsHorizontalIcon />
       </Button>
     }
+    hideOnClickItem
+    searchable
   >
     <Item
-      colors={['#BF95F9', '#3D1862']}
       active
+      colors={['#BF95F9', '#3D1862']}
       searchText="default project"
       sentiment="primary"
     >
-      <Stack direction="row" gap={1} alignItems="center">
+      <Stack alignItems="center" direction="row" gap={1}>
         Default Project
         <Badge sentiment="success" size="small">
           NEW
         </Badge>
       </Stack>
     </Item>
-    <Menu.Group label="Projects" emptyState="No project">
+    <Menu.Group emptyState="No project" label="Projects">
       <Item colors={['#FFBFAB', '#822F15']}>Project 1</Item>
       <Item colors={['#FF9EC1', '#740D32']}>Project 2</Item>
     </Menu.Group>

@@ -1,8 +1,8 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
-import { SelectableCardOptionGroup } from '..'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
+import { SelectableCardOptionGroup } from '..'
 import centos from './assets/centos.svg'
 import debian from './assets/debian.svg'
 import ubuntu from './assets/ubuntu.svg'
@@ -16,33 +16,33 @@ export const Template: StoryFn<typeof SelectableCardOptionGroup> = args => {
     <Stack direction="column" gap={8}>
       <SelectableCardOptionGroup
         {...args}
-        value={value}
-        optionValue={option}
-        onChangeOption={(newValue: string) => {
-          onChangeOption(newValue)
-        }}
         onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
           console.log('ok')
           onChange(event.currentTarget.value)
         }}
+        onChangeOption={(newValue: string) => {
+          onChangeOption(newValue)
+        }}
+        optionValue={option}
+        value={value}
       >
         <SelectableCardOptionGroup.Option
-          value="ubuntu"
+          image={ubuntu}
           label="Ubuntu"
           options={ubuntuOptions}
-          image={ubuntu}
+          value="ubuntu"
         />
         <SelectableCardOptionGroup.Option
-          value="debian"
+          image={debian}
           label="Debian"
           options={debianOptions}
-          image={debian}
+          value="debian"
         />
         <SelectableCardOptionGroup.Option
-          value="centos"
+          image={centos}
           label="CentOS"
           options={centosOptions}
-          image={centos}
+          value="centos"
         />
       </SelectableCardOptionGroup>
       <Stack>
@@ -67,8 +67,8 @@ export const Template: StoryFn<typeof SelectableCardOptionGroup> = args => {
 }
 
 Template.args = {
-  legend: 'Choose your OS',
   helper: 'Choose the OS and version you need to install on your server',
+  legend: 'Choose your OS',
 }
 
 Template.decorators = [

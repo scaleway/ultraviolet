@@ -9,41 +9,41 @@ class MyDocument extends Document {
         <Head>
           <meta charSet="utf8" />
           <meta
+            content="Scaleway Open Source Component Library"
             name="description"
-            content="Scaleway Open Source Component Library"
           />
-          <meta property="og:title" content="Ultraviolet UI" />
+          <meta content="Ultraviolet UI" property="og:title" />
           <meta
+            content="Scaleway Open Source Component Library"
             property="og:description"
-            content="Scaleway Open Source Component Library"
           />
-          <meta property="og:type" content="website" />
-          <meta property="og:url" content="https://ultraviolet.scaleway.com" />
-          <meta property="og:local" content="en_US" />
+          <meta content="website" property="og:type" />
+          <meta content="https://ultraviolet.scaleway.com" property="og:url" />
+          <meta content="en_US" property="og:local" />
           <meta
+            content="https://ultraviolet.scaleway.com/social.png"
             property="og:image"
-            content="https://ultraviolet.scaleway.com/social.png"
           />
-          <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:title" content="Ultraviolet UI" />
+          <meta content="summary_large_image" name="twitter:card" />
+          <meta content="Ultraviolet UI" name="twitter:title" />
           <meta
-            name="twitter:description"
             content="Scaleway Open Source Component Library"
+            name="twitter:description"
           />
           <meta
-            name="twitter:image"
             content="https://ultraviolet.scaleway.com/social.png"
+            name="twitter:image"
           />
           <link
+            href="/favicon/favicon-lightdark.svg"
             rel="icon"
             type="image/svg+xml"
-            href="/favicon/favicon-lightdark.svg"
           />
-          <link rel="icon" href="/favicon/favicon.ico" />
+          <link href="/favicon/favicon.ico" rel="icon" />
           <link
+            href="/favicon/apple-touch-icon-180x180.png"
             rel="apple-touch-icon"
             sizes="180x180"
-            href="/favicon/apple-touch-icon-180x180.png"
           />
 
           <script

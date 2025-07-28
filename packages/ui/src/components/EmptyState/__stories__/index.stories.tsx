@@ -6,7 +6,7 @@ export default {
   title: 'Components/Data Display/EmptyState',
 } as Meta<typeof EmptyState>
 
-export { Playground } from './Playground.stories'
+export { AnErrorOccurred } from './AnErrorOccurred.stories'
 export { EmptyList } from './EmptyList.stories'
 export { InATinySpace } from './InATinySpace.stories'
-export { AnErrorOccurred } from './AnErrorOccurred.stories'
+export { Playground } from './Playground.stories'

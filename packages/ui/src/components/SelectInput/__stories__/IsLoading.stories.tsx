@@ -1,12 +1,12 @@
-import { Template } from './Template.stories'
 import { dataUnGrouped } from './resources'
+import { Template } from './Template.stories'
 
 export const IsLoading = Template.bind({})
 
 IsLoading.args = {
   ...Template.args,
-  options: dataUnGrouped,
   isLoading: true,
+  options: dataUnGrouped,
 }
 IsLoading.decorators = [
   StoryComponent => (

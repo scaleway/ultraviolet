@@ -65,7 +65,7 @@ describe('TagList', () => {
     mockOffsetWidth(tags)
 
     const { asFragment } = renderWithTheme(
-      <TagList popoverTitle="Additional" tags={tags} popoverPlacement="top" />,
+      <TagList popoverPlacement="top" popoverTitle="Additional" tags={tags} />,
     )
 
     expect(asFragment()).toMatchSnapshot()
@@ -77,7 +77,7 @@ describe('TagList', () => {
     mockOffsetWidth(tags)
 
     const { asFragment } = renderWithTheme(
-      <TagList popoverTitle="Additional" threshold={2} tags={tags} />,
+      <TagList popoverTitle="Additional" tags={tags} threshold={2} />,
     )
 
     expect(asFragment()).toMatchSnapshot()
@@ -89,7 +89,7 @@ describe('TagList', () => {
     mockOffsetWidth(tags)
 
     const { asFragment } = renderWithTheme(
-      <TagList popoverTitle="Additional" threshold={2} tags={tags} />,
+      <TagList popoverTitle="Additional" tags={tags} threshold={2} />,
     )
 
     expect(asFragment()).toMatchSnapshot()
@@ -101,7 +101,7 @@ describe('TagList', () => {
     mockOffsetWidth(tags, 150)
 
     const { asFragment } = renderWithTheme(
-      <TagList popoverTitle="Additional" threshold={2} tags={tags} />,
+      <TagList popoverTitle="Additional" tags={tags} threshold={2} />,
     )
 
     expect(asFragment()).toMatchSnapshot()
@@ -126,10 +126,10 @@ describe('TagList', () => {
 
     const { asFragment } = renderWithTheme(
       <TagList
-        popoverTitle="Additional"
         maxLength={10}
-        threshold={2}
+        popoverTitle="Additional"
         tags={tags}
+        threshold={2}
       />,
     )
 
@@ -142,7 +142,7 @@ describe('TagList', () => {
     mockOffsetWidth(tags)
 
     const { asFragment } = renderWithTheme(
-      <TagList popoverTitle="Additional" multiline threshold={2} tags={tags} />,
+      <TagList multiline popoverTitle="Additional" tags={tags} threshold={2} />,
     )
 
     expect(asFragment()).toMatchSnapshot()
@@ -154,7 +154,7 @@ describe('TagList', () => {
     mockOffsetWidth(tags)
 
     const { asFragment } = renderWithTheme(
-      <TagList popoverTitle="Additional" copiable threshold={2} tags={tags} />,
+      <TagList copiable popoverTitle="Additional" tags={tags} threshold={2} />,
     )
 
     expect(asFragment()).toMatchSnapshot()
@@ -166,7 +166,7 @@ describe('TagList', () => {
     mockOffsetWidth(tags)
 
     const { asFragment } = renderWithTheme(
-      <TagList popoverTitle="Additional" copiable threshold={4} tags={tags} />,
+      <TagList copiable popoverTitle="Additional" tags={tags} threshold={4} />,
     )
 
     expect(asFragment()).toMatchSnapshot()
@@ -174,16 +174,16 @@ describe('TagList', () => {
 
   test('renders correctly when clicking on popover', async () => {
     const tags: TagType[] = [
-      { label: 'smooth', icon: 'id' },
+      { icon: 'id', label: 'smooth' },
       'code',
-      { label: 'hello', icon: 'lock' },
-      { label: 'world', icon: 'plus' },
+      { icon: 'lock', label: 'hello' },
+      { icon: 'plus', label: 'world' },
     ]
 
     mockOffsetWidth(tags)
 
     renderWithTheme(
-      <TagList popoverTitle="Additional" threshold={1} tags={tags} />,
+      <TagList popoverTitle="Additional" tags={tags} threshold={1} />,
     )
 
     expect(screen.queryByText('Additional')).not.toBeInTheDocument()
@@ -215,8 +215,8 @@ describe('TagList', () => {
 
     const { asFragment } = renderWithTheme(
       <TagList
-        popoverTitle="Additional"
         popoverMaxHeight="100px"
+        popoverTitle="Additional"
         tags={tags}
         threshold={5}
       />,

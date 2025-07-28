@@ -6,6 +6,6 @@ export default {
   title: 'Plus/Compositions/SteppedListCard',
 } satisfies Meta
 
-export { Playground } from './Playground.stories'
 export { OnClickHide } from './OnClickHide.stories'
+export { Playground } from './Playground.stories'
 export { WithoutToggleButton } from './WithoutToggleButton.stories'

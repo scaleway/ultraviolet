@@ -14,7 +14,7 @@ describe('ContentCardGroup', () => {
   test('renders correctly with required title & hread', () =>
     shouldMatchEmotionSnapshot(
       <ContentCardGroup>
-        <ContentCardGroup.Card title="title" href="http://scaleway.com" />
+        <ContentCardGroup.Card href="http://scaleway.com" title="title" />
       </ContentCardGroup>,
     ))
 
@@ -22,9 +22,9 @@ describe('ContentCardGroup', () => {
     shouldMatchEmotionSnapshot(
       <ContentCardGroup>
         <ContentCardGroup.Card
-          title="title"
           href="http://scaleway.com"
           subtitle="subtitle"
+          title="title"
         />
       </ContentCardGroup>,
     ))
@@ -33,9 +33,9 @@ describe('ContentCardGroup', () => {
     shouldMatchEmotionSnapshot(
       <ContentCardGroup>
         <ContentCardGroup.Card
-          title="title"
-          href="http://scaleway.com"
           description="description"
+          href="http://scaleway.com"
+          title="title"
         />
       </ContentCardGroup>,
     ))
@@ -43,7 +43,7 @@ describe('ContentCardGroup', () => {
   test('renders correctly with loading prop', () => {
     const { asFragment } = renderWithTheme(
       <ContentCardGroup loading>
-        <ContentCardGroup.Card title="title" href="http://scaleway.com" />
+        <ContentCardGroup.Card href="http://scaleway.com" title="title" />
       </ContentCardGroup>,
     )
     expect(asFragment()).toMatchSnapshot()
@@ -53,9 +53,9 @@ describe('ContentCardGroup', () => {
     shouldMatchEmotionSnapshot(
       <ContentCardGroup>
         <ContentCardGroup.Card
-          title="title"
           href="http://scaleway.com"
           target="_parent"
+          title="title"
         />
       </ContentCardGroup>,
     ))
@@ -73,11 +73,11 @@ describe('ContentCardGroup', () => {
     shouldMatchEmotionSnapshot(
       <ContentCardGroup>
         <ContentCardGroup.Card
-          title="title"
-          titleAs="h1"
+          href="http://scaleway.com"
           subtitle="subtitle"
           subtitleAs="h2"
-          href="http://scaleway.com"
+          title="title"
+          titleAs="h1"
         >
           <div>test</div>
         </ContentCardGroup.Card>

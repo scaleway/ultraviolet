@@ -8,20 +8,20 @@ import { Text } from '../Text'
 
 const optionsItemsPerPage = [
   {
-    value: '10',
     label: '10',
+    value: '10',
   },
   {
-    value: '25',
     label: '25',
+    value: '25',
   },
   {
-    value: '50',
     label: '50',
+    value: '50',
   },
   {
-    value: '100',
     label: '100',
+    value: '100',
   },
 ]
 
@@ -56,18 +56,18 @@ export const PerPage = ({
   }
 
   return (
-    <Stack direction="row" gap="2" alignItems="center">
-      <Text as="span" variant="body" sentiment="neutral" prominence="weak">
+    <Stack alignItems="center" direction="row" gap="2">
+      <Text as="span" prominence="weak" sentiment="neutral" variant="body">
         {perPageText ?? 'Items per page'}
       </Text>
       <StyledSelectInput
-        value={perPage.toString()}
-        options={optionsItemsPerPage}
-        onChange={handleChange}
         name="select-items-per-page"
+        onChange={handleChange}
+        options={optionsItemsPerPage}
         size="small"
+        value={perPage.toString()}
       />
-      <Text as="span" variant="body" sentiment="neutral" prominence="weak">
+      <Text as="span" prominence="weak" sentiment="neutral" variant="body">
         {(page - 1) * perPage + 1}-{Math.min(page * perPage, numberOfItems)}{' '}
         {numberOfItemsText ?? `of ${numberOfItems} items"`}
       </Text>

@@ -1,7 +1,7 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { useReducer } from 'react'
-import { ExpandableCard } from '..'
 import { Button, Stack } from '../..'
+import { ExpandableCard } from '..'
 
 export const Controlled: StoryFn<typeof ExpandableCard> = args => {
   const [expanded, onToggleExpand] = useReducer(prevState => !prevState, false)
@@ -13,8 +13,8 @@ export const Controlled: StoryFn<typeof ExpandableCard> = args => {
       </Button>
       <ExpandableCard
         {...args}
-        header="Controlled"
         expanded={expanded}
+        header="Controlled"
         onToggleExpand={onToggleExpand}
       >
         A nice content

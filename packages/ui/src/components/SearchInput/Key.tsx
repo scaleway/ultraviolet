@@ -27,19 +27,19 @@ const Container = styled.div`
 `
 
 export const KEYS_MATCH = {
-  Enter: '↵',
   ' ': '␣',
-  Meta: '⌘',
-  Control: 'Ctrl',
   Alt: 'Alt',
-  ArrowUp: '↑',
   ArrowDown: '↓',
   ArrowLeft: '←',
   ArrowRight: '→',
+  ArrowUp: '↑',
   Backspace: '⌫',
-  Delete: '⌦',
-  Escape: 'Esc',
   CapsLock: 'Caps',
+  Control: 'Ctrl',
+  Delete: '⌦',
+  Enter: '↵',
+  Escape: 'Esc',
+  Meta: '⌘',
 } as const
 
 type KeyProps = {
@@ -55,11 +55,11 @@ export const Key = ({ children, disabled }: KeyProps) => {
 
   return (
     <Container
-      data-disabled={disabled}
       data-children-length={children.length > 1}
+      data-disabled={disabled}
       data-testid={`key-${children}`}
     >
-      <Text as="span" variant="caption" sentiment="neutral" disabled={disabled}>
+      <Text as="span" disabled={disabled} sentiment="neutral" variant="caption">
         {isSpecialKey
           ? KEYS_MATCH[children as keyof typeof KEYS_MATCH]
           : children}

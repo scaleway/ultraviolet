@@ -18,7 +18,7 @@ describe('EstimateCost - Region', () => {
   test('render region component', () => {
     const { asFragment } = renderWithTheme(
       <EstimateCost defaultTimeUnit="hours">
-        <EstimateCost.Region label="nl-ams" image={frFlag} />
+        <EstimateCost.Region image={frFlag} label="nl-ams" />
       </EstimateCost>,
     )
     expect(asFragment()).toMatchSnapshot()

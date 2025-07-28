@@ -41,17 +41,17 @@ export const PasswordCheck = ({
 }: PasswordCheckProps) => (
   <PasswordCheckContainer className={className} data-testid={dataTestId}>
     {rules.map(rule => (
-      <Stack direction="row" gap={1} alignItems="center" key={rule.name}>
+      <Stack alignItems="center" direction="row" gap={1} key={rule.name}>
         {rule.valid ? (
           <CheckCircleOutlineIcon
-            sentiment="success"
             prominence="weak"
+            sentiment="success"
             size="large"
           />
         ) : (
           <CloseCircleOutlineIcon
-            sentiment="neutral"
             prominence="weak"
+            sentiment="neutral"
             size="large"
           />
         )}

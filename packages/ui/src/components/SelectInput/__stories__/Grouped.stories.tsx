@@ -1,6 +1,6 @@
 import type { StoryFn } from '@storybook/react-vite'
-import { SelectInput } from '..'
 import { Stack } from '../../Stack'
+import { SelectInput } from '..'
 import { dataGrouped, dataGroupedWithEmptyName } from './resources'
 
 export const Grouped: StoryFn<typeof SelectInput> = args => (
@@ -8,8 +8,8 @@ export const Grouped: StoryFn<typeof SelectInput> = args => (
     <SelectInput label="Label" {...args} options={dataGrouped} />
     <SelectInput
       {...args}
-      options={dataGroupedWithEmptyName}
       label="Grouped with empty group name"
+      options={dataGroupedWithEmptyName}
     />
   </Stack>
 )

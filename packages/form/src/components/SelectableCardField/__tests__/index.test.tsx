@@ -7,7 +7,7 @@ import { SelectableCardField } from '../..'
 describe('SelectableCardField', () => {
   test('should render correctly', () => {
     const { asFragment } = renderWithForm(
-      <SelectableCardField name="test" value="test" label="test">
+      <SelectableCardField label="test" name="test" value="test">
         Radio field
       </SelectableCardField>,
     )
@@ -16,7 +16,7 @@ describe('SelectableCardField', () => {
 
   test('should render correctly disabled', () => {
     const { asFragment } = renderWithForm(
-      <SelectableCardField name="test" value="disabled" disabled label="test">
+      <SelectableCardField disabled label="test" name="test" value="disabled">
         Radio field disabled
       </SelectableCardField>,
     )
@@ -27,7 +27,7 @@ describe('SelectableCardField', () => {
 
   test('should render correctly checked', () => {
     const { asFragment } = renderWithForm(
-      <SelectableCardField name="test" value="checked" label="test">
+      <SelectableCardField label="test" name="test" value="checked">
         Radio field checked
       </SelectableCardField>,
       { defaultValues: { test: 'checked' } },
@@ -44,12 +44,12 @@ describe('SelectableCardField', () => {
 
     const { asFragment } = renderWithForm(
       <SelectableCardField
+        label="test"
         name="test"
-        value="events"
+        onBlur={onBlur}
         onChange={onChange}
         onFocus={onFocus}
-        onBlur={onBlur}
-        label="test"
+        value="events"
       >
         Radio field events
       </SelectableCardField>,
@@ -68,7 +68,7 @@ describe('SelectableCardField', () => {
   test('should render correctly with errors', async () => {
     const { asFragment } = renderWithForm(
       <>
-        <SelectableCardField name="test" value="checked" required label="test">
+        <SelectableCardField label="test" name="test" required value="checked">
           Radio field error
         </SelectableCardField>
         <button type="submit">Submit</button>

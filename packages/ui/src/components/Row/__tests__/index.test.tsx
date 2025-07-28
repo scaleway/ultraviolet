@@ -13,7 +13,7 @@ describe('Row', () => {
 
   test('renders correctly with specific gap', () =>
     shouldMatchEmotionSnapshot(
-      <Row templateColumns="repeat(2, 1fr)" gap={1}>
+      <Row gap={1} templateColumns="repeat(2, 1fr)">
         <div>First col</div>
         <div>Second col</div>
       </Row>,
@@ -21,7 +21,7 @@ describe('Row', () => {
 
   test('renders correctly with specific align', () =>
     shouldMatchEmotionSnapshot(
-      <Row templateColumns="repeat(2, 1fr)" gap={1} alignItems="center">
+      <Row alignItems="center" gap={1} templateColumns="repeat(2, 1fr)">
         <div>First col</div>
         <div>Second col</div>
       </Row>,
@@ -29,7 +29,7 @@ describe('Row', () => {
 
   test('renders correctly with specific padding', () =>
     shouldMatchEmotionSnapshot(
-      <Row templateColumns="repeat(2, 1fr)" gap={1} padding="10px">
+      <Row gap={1} padding="10px" templateColumns="repeat(2, 1fr)">
         <div>First col</div>
         <div>Second col</div>
       </Row>,

@@ -90,6 +90,8 @@ export const HeaderCell = ({
     <StyledHeaderCell
       aria-sort={order}
       className={className}
+      maxWidth={maxWidth}
+      minWidth={minWith}
       onClick={handleOrder}
       onKeyDown={
         handleOrder
@@ -107,17 +109,15 @@ export const HeaderCell = ({
       role={onOrder ? 'button columnheader' : undefined}
       tabIndex={handleOrder ? 0 : -1}
       width={width}
-      maxWidth={maxWidth}
-      minWidth={minWith}
     >
-      <Stack direction="row" gap={1} alignItems="center">
+      <Stack alignItems="center" direction="row" gap={1}>
         {children}
         {info ? (
           <Tooltip text={info}>
             <InformationOutlineIcon
-              size="small"
               prominence="weak"
               sentiment="neutral"
+              size="small"
             />
           </Tooltip>
         ) : null}

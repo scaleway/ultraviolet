@@ -41,29 +41,29 @@ export const ThemeResult = ({
 
   return (
     <Stack gap={4}>
-      <Row templateColumns="1fr 2fr 1fr" alignItems="center">
+      <Row alignItems="center" templateColumns="1fr 2fr 1fr">
         <div style={{ display: 'inline-block' }}>
           <Button
+            onClick={() => setStep(0)}
             sentiment="neutral"
             variant="filled"
-            onClick={() => setStep(0)}
           >
             <ArrowLeftIcon />
             Back
           </Button>
         </div>
-        <Stack justifyContent="center" alignItems="center">
+        <Stack alignItems="center" justifyContent="center">
           <Text as="h1" variant="heading">
             Generated Result
           </Text>
         </Stack>
         <div style={{ display: 'inline-block', textAlign: 'end' }}>
           <Button
+            onMouseDown={onMouseDown}
+            onMouseOut={onMouseUp}
+            onMouseUp={onMouseUp}
             sentiment="primary"
             variant="outlined"
-            onMouseDown={onMouseDown}
-            onMouseUp={onMouseUp}
-            onMouseOut={onMouseUp}
           >
             {isVisible ? <EyeIcon /> : <EyeOffIcon />}
             Preview original theme

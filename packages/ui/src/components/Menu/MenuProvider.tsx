@@ -49,15 +49,15 @@ export const MenuProvider = ({
 
   const values = useMemo(
     () => ({
-      hideOnClickItem,
-      isVisible,
-      setIsVisible,
-      isNested,
       disclosureRef,
+      hideOnClickItem,
+      isNested,
+      isVisible,
       menuRef,
       parentDisclosureRef: parentDisclosureRef ?? parentMenu?.disclosureRef,
-      shouldBeVisible,
+      setIsVisible,
       setShouldBeVisible,
+      shouldBeVisible,
     }),
     [
       hideOnClickItem,

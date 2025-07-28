@@ -4,8 +4,8 @@ export const Playground = Template.bind({})
 
 Playground.args = {
   input: true,
-  min: 0,
-  max: 10,
   label: 'Label',
+  max: 10,
+  min: 0,
   name: 'name',
 }

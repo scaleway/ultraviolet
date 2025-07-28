@@ -18,8 +18,8 @@ describe('EstimateCost - CustomUnitInput', () => {
   test('render default values', () =>
     shouldMatchEmotionSnapshot(
       <CustomUnitInput
+        iteration={{ unit: 'hours', value: 1 }}
         setIteration={() => {}}
-        iteration={{ value: 1, unit: 'hours' }}
         timeUnits={['seconds', 'minutes', 'hours', 'days', 'months']}
       />,
     ))
@@ -27,8 +27,8 @@ describe('EstimateCost - CustomUnitInput', () => {
   test('render and trigger on blur when leaving input empty', async () => {
     renderWithTheme(
       <CustomUnitInput
+        iteration={{ unit: 'hours', value: 1 }}
         setIteration={() => {}}
-        iteration={{ value: 1, unit: 'hours' }}
         timeUnits={['seconds', 'minutes', 'hours', 'days', 'months']}
       />,
     )

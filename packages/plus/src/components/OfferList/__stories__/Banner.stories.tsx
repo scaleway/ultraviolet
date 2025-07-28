@@ -8,18 +8,18 @@ export const Banner: StoryFn<ComponentProps<typeof OfferList>> = props => (
     {data.map((planet, index) =>
       index < 3 ? (
         <OfferList.Row
-          key={planet.id}
-          id={planet.id}
-          offerName={planet.id}
-          disabled={index === 2}
-          expandable="Some text"
           banner={{
+            sentiment: planet.id === 'mercury' ? 'primary' : undefined,
             text:
               index === 2
                 ? 'Disabled banner because row is disabled'
                 : 'This is a banner',
-            sentiment: planet.id === 'mercury' ? 'primary' : undefined,
           }}
+          disabled={index === 2}
+          expandable="Some text"
+          id={planet.id}
+          key={planet.id}
+          offerName={planet.id}
         >
           <OfferList.Cell>{planet.name}</OfferList.Cell>
           <OfferList.Cell>{planet.perihelion}AU</OfferList.Cell>

@@ -52,16 +52,16 @@ export const ToggleGroupToggle = ({
 
   return (
     <Toggle
-      onChange={onChange}
       checked={groupValues?.includes(ToggleValue)}
-      disabled={disabled}
-      name={ToggleName}
-      value={ToggleValue}
-      helper={helper}
       className={className}
       data-testid={dataTestId}
-      label={label}
+      disabled={disabled}
       error={error || contextError}
+      helper={helper}
+      label={label}
+      name={ToggleName}
+      onChange={onChange}
+      value={ToggleValue}
     />
   )
 }
@@ -102,10 +102,10 @@ export const ToggleGroup = ({
 }: ToggleGroupProps) => {
   const contextValue = useMemo(
     () => ({
+      error: !!error,
       groupName: name,
       groupValues: value ?? [],
       onChange,
-      error: !!error,
     }),
     [name, value, onChange, error],
   )
@@ -120,36 +120,36 @@ export const ToggleGroup = ({
                 {legend ? (
                   <Label
                     as="legend"
-                    required={required}
                     labelDescription={legendDescription}
+                    required={required}
                   >
                     {legend}
                   </Label>
                 ) : null}
                 {description ? (
                   <Text
-                    variant="bodySmall"
                     as={typeof description === 'string' ? 'p' : 'div'}
                     prominence="weak"
                     sentiment="neutral"
+                    variant="bodySmall"
                   >
                     {description}
                   </Text>
                 ) : null}
               </Stack>
             ) : null}
-            <Stack gap={2} direction={direction}>
+            <Stack direction={direction} gap={2}>
               {children}
             </Stack>
           </Stack>
         </FieldSet>
         {helper ? (
-          <Text as="p" sentiment="neutral" variant="caption" prominence="weak">
+          <Text as="p" prominence="weak" sentiment="neutral" variant="caption">
             {helper}
           </Text>
         ) : null}
         {error ? (
-          <Text as="p" variant="bodySmall" sentiment="danger" prominence="weak">
+          <Text as="p" prominence="weak" sentiment="danger" variant="bodySmall">
             {error}
           </Text>
         ) : null}

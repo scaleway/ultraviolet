@@ -5,8 +5,8 @@ import { DivWithBackground } from './DivWithBackground'
 export const Responsive: StoryFn = props => (
   <Stack
     {...props}
-    direction={{ xxsmall: 'column', xsmall: 'row', small: 'row' }}
-    gap={{ xxsmall: 1, xsmall: 2, small: 3 }}
+    direction={{ small: 'row', xsmall: 'row', xxsmall: 'column' }}
+    gap={{ small: 3, xsmall: 2, xxsmall: 1 }}
   >
     <DivWithBackground data-width-full>First child</DivWithBackground>
     <DivWithBackground data-width-full>Second child</DivWithBackground>

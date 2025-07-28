@@ -34,18 +34,20 @@ export const RadioGroupField = <
     field,
     fieldState: { error },
   } = useController<TFieldValues, TFieldName>({
-    name,
     control,
-    shouldUnregister,
+    name,
     rules: {
       required,
       validate,
     },
+    shouldUnregister,
   })
 
   return (
     <RadioGroup
       {...props}
+      error={getError({ label: legend }, error) ?? customError}
+      legend={legend}
       name={field.name}
       onChange={event => {
         field.onChange(event)
@@ -55,8 +57,6 @@ export const RadioGroupField = <
       }}
       required={required}
       value={field.value}
-      error={getError({ label: legend }, error) ?? customError}
-      legend={legend}
     >
       {children}
     </RadioGroup>

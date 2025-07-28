@@ -1,8 +1,8 @@
 'use client'
 
 import { useTheme } from '@emotion/react'
-import { ILLUSTRATIONS } from './__generated__/Illustrations'
 import type { IllustrationsKeys } from './__generated__/Illustrations'
+import { ILLUSTRATIONS } from './__generated__/Illustrations'
 
 type DynamicIllustrationProps = {
   /**
@@ -34,12 +34,12 @@ export const DynamicIllustration = ({
 
   return (
     <img
+      alt={name}
       className={className}
       data-testid={dataTestId}
-      src={ILLUSTRATIONS[theme === 'light' ? 'light' : 'dark'][name]}
-      alt={name}
-      width={width}
       height={height}
+      src={ILLUSTRATIONS[theme === 'light' ? 'light' : 'dark'][name]}
+      width={width}
     />
   )
 }

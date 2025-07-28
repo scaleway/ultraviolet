@@ -19,7 +19,7 @@ describe('Card', () => {
 
   test('renders correctly with header and subHeader', () =>
     shouldMatchEmotionSnapshot(
-      <Card subHeader="Title" header="Main title">
+      <Card header="Main title" subHeader="Title">
         Hello
       </Card>,
     ))
@@ -27,8 +27,8 @@ describe('Card', () => {
   test('renders correctly with advanced header and subHeader', () =>
     shouldMatchEmotionSnapshot(
       <Card
-        subHeader={<h2>Advanced subHeader</h2>}
         header={<h2>Advanced Title</h2>}
+        subHeader={<h2>Advanced subHeader</h2>}
       >
         Hello
       </Card>,
@@ -42,7 +42,7 @@ describe('Card', () => {
 
   test('renders correctly with disabled and header', () =>
     shouldMatchEmotionSnapshot(
-      <Card header="Title" disabled>
+      <Card disabled header="Title">
         Hello
       </Card>,
     ))

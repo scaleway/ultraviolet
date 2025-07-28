@@ -6,6 +6,6 @@ export default {
   title: 'Components/Overlay/Tooltip',
 } as Meta
 
-export { Playground } from './Playground.stories'
-export { Placement } from './Placement.stories'
 export { MaxWidth } from './MaxWidth.stories'
+export { Placement } from './Placement.stories'
+export { Playground } from './Playground.stories'

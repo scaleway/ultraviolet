@@ -9,8 +9,8 @@ describe('Pagination', () => {
     const mockOnClick = vi.fn()
     const { asFragment } = renderWithTheme(
       <Pagination
-        page={1}
         onChange={mockOnClick}
+        page={1}
         pageCount={5}
         pageTabCount={5}
       />,
@@ -26,7 +26,7 @@ describe('Pagination', () => {
     const mockOnClick = vi.fn()
 
     const { asFragment } = renderWithTheme(
-      <Pagination page={1} onChange={mockOnClick} pageCount={1} />,
+      <Pagination onChange={mockOnClick} page={1} pageCount={1} />,
     )
     const nextButton = screen.getByRole('button', { name: 'Next' })
     await userEvent.click(nextButton)
@@ -39,7 +39,7 @@ describe('Pagination', () => {
     const mockOnClick = vi.fn()
 
     const { asFragment } = renderWithTheme(
-      <Pagination page={12} pageCount={16} onChange={mockOnClick} />,
+      <Pagination onChange={mockOnClick} page={12} pageCount={16} />,
     )
     const nextButton = screen.getByRole('button', { name: 'Next' })
     await userEvent.click(nextButton)
@@ -52,7 +52,7 @@ describe('Pagination', () => {
     const mockOnClick = vi.fn()
 
     const { asFragment } = renderWithTheme(
-      <Pagination page={5} pageCount={10} onChange={mockOnClick} disabled />,
+      <Pagination disabled onChange={mockOnClick} page={5} pageCount={10} />,
     )
     const nextButton = screen.getByRole('button', { name: 'Next' })
     await userEvent.click(nextButton)
@@ -65,7 +65,7 @@ describe('Pagination', () => {
     const mockOnClick = vi.fn()
 
     const { asFragment } = renderWithTheme(
-      <Pagination page={0} onChange={mockOnClick} pageCount={2} />,
+      <Pagination onChange={mockOnClick} page={0} pageCount={2} />,
     )
     expect(mockOnClick).toHaveBeenCalledOnce()
     expect(asFragment()).toMatchSnapshot()
@@ -75,7 +75,7 @@ describe('Pagination', () => {
     const mockOnClick = vi.fn()
 
     const { asFragment } = renderWithTheme(
-      <Pagination page={3} onChange={mockOnClick} pageCount={2} />,
+      <Pagination onChange={mockOnClick} page={3} pageCount={2} />,
     )
     expect(mockOnClick).toHaveBeenCalledOnce()
     expect(asFragment()).toMatchSnapshot()
@@ -85,7 +85,7 @@ describe('Pagination', () => {
     const mockOnClick = vi.fn()
 
     const { asFragment } = renderWithTheme(
-      <Pagination page={2} pageCount={10} onChange={mockOnClick} />,
+      <Pagination onChange={mockOnClick} page={2} pageCount={10} />,
     )
     const nextButton = screen.getByRole('button', { name: 'Next' })
     const backButton = screen.getByRole('button', { name: 'Back' })
@@ -109,11 +109,11 @@ describe('Pagination', () => {
 
     const { asFragment } = renderWithTheme(
       <Pagination
+        numberOfItems={100}
+        onChange={mockOnClick}
         page={2}
         pageCount={10}
-        onChange={mockOnClick}
         perPage={10}
-        numberOfItems={100}
       />,
     )
     const nextButton = screen.getByRole('button', { name: 'Next' })
@@ -128,13 +128,13 @@ describe('Pagination', () => {
 
     const { asFragment } = renderWithTheme(
       <Pagination
-        page={2}
-        pageCount={10}
-        onChange={mockOnClick}
-        perPage={10}
-        perPageText="test"
         numberOfItems={30}
         numberOfItemsText="items"
+        onChange={mockOnClick}
+        page={2}
+        pageCount={10}
+        perPage={10}
+        perPageText="test"
       />,
     )
     const nextButton = screen.getByRole('button', { name: 'Next' })
@@ -150,14 +150,14 @@ describe('Pagination', () => {
 
     renderWithTheme(
       <Pagination
-        page={2}
-        pageCount={10}
-        onChange={mockOnClick}
-        perPage={10}
-        perPageText="test"
-        onChangePerPage={mockOnClickPerPage}
         numberOfItems={100}
         numberOfItemsText="items"
+        onChange={mockOnClick}
+        onChangePerPage={mockOnClickPerPage}
+        page={2}
+        pageCount={10}
+        perPage={10}
+        perPageText="test"
       />,
     )
     const nextButton = screen.getByRole('button', { name: 'Next' })

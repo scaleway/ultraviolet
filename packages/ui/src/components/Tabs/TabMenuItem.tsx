@@ -31,13 +31,13 @@ export const TabMenuItem = ({
 
   return (
     <StyledMenuItem
+      aria-selected={isSelected}
       onClick={event => {
         if (value !== undefined) {
           onChange(value)
         }
         onClick?.(event)
       }}
-      aria-selected={isSelected}
       {...props}
     >
       {children}

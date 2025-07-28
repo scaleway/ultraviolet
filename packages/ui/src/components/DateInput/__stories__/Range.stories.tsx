@@ -1,8 +1,8 @@
 import type { StoryFn } from '@storybook/react-vite'
 import type { ComponentProps } from 'react'
 import { useState } from 'react'
-import { DateInput } from '..'
 import { Stack } from '../../Stack'
+import { DateInput } from '..'
 
 const MONTHS = [
   'January',
@@ -42,22 +42,22 @@ export const Range: StoryFn<ComponentProps<typeof DateInput>> = args => {
   return (
     <Stack>
       <DateInput
+        endDate={endDate}
         label="Date"
         onChange={onChange}
-        startDate={startDate}
-        endDate={endDate}
         selectsRange
+        startDate={startDate}
         {...args}
       />
       Selected dates : {startDate?.toDateString()} - {endDate?.toDateString()}
       <DateInput
         {...args}
+        endDate={endMonth}
         label="Month"
         onChange={onChangeMonth}
-        startDate={startMonth}
-        endDate={endMonth}
         selectsRange
         showMonthYearPicker
+        startDate={startMonth}
       />
       Selected months : {startMonth ? MONTHS[startMonth.getMonth()] : null}
       {startMonth?.getFullYear()} -

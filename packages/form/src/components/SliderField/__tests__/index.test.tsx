@@ -31,14 +31,14 @@ describe('SliderField', () => {
 
   test('should render correctly with possible values and double', () => {
     const { asFragment } = renderWithForm(
-      <SliderField name="test" double options={options} />,
+      <SliderField double name="test" options={options} />,
     )
     expect(asFragment()).toMatchSnapshot()
   })
 
   test('should render correctly disabled', () => {
     const { asFragment } = renderWithForm(
-      <SliderField name="test" value={10} disabled aria-label="Slider Input" />,
+      <SliderField aria-label="Slider Input" disabled name="test" value={10} />,
     )
     const input = screen.getAllByLabelText('Slider Input')[1]
     expect(input).toBeDisabled()
@@ -52,14 +52,14 @@ describe('SliderField', () => {
 
     const { asFragment } = renderWithForm(
       <SliderField
-        label="Test"
-        name="test"
-        required
         input
+        label="Test"
         max={10}
         min={0}
+        name="test"
         onBlur={onBlur}
         onFocus={onFocus}
+        required
       />,
     )
     const input = screen.getByRole('slider', { hidden: true })
@@ -84,18 +84,18 @@ describe('SliderField', () => {
 
     renderWithTheme(
       <Form
-        onSubmit={value => onSubmit(value)}
         errors={mockFormErrors}
         methods={result.current}
+        onSubmit={value => onSubmit(value)}
       >
         <SliderField
-          label="Test"
-          name="test"
-          required
           input
+          label="Test"
           max={10}
           min={0}
+          name="test"
           onBlur={onBlur}
+          required
         />
         <Submit>Submit</Submit>
       </Form>,
@@ -120,9 +120,9 @@ describe('SliderField', () => {
 
     renderWithTheme(
       <Form
-        onSubmit={() => {}}
         errors={mockFormErrors}
         methods={result.current}
+        onSubmit={() => {}}
       >
         <SliderField label="Test" name="test" options={options} />
       </Form>,
@@ -144,11 +144,11 @@ describe('SliderField', () => {
 
     renderWithTheme(
       <Form
-        onSubmit={() => {}}
         errors={mockFormErrors}
         methods={result.current}
+        onSubmit={() => {}}
       >
-        <SliderField label="Test" name="test" double options={options} />
+        <SliderField double label="Test" name="test" options={options} />
       </Form>,
     )
 

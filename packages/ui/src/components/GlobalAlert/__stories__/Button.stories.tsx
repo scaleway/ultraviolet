@@ -3,10 +3,10 @@ import { Template } from './Template.stories'
 export const Button = Template.bind({})
 
 Button.args = {
-  children: 'Your trial has expired. Upgrade your plan to continue',
-  variant: 'info',
   buttonText: 'Upgrade',
+  children: 'Your trial has expired. Upgrade your plan to continue',
   onClickButton: () => {},
+  variant: 'info',
 }
 
 Button.parameters = {

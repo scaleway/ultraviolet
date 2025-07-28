@@ -10,8 +10,8 @@ import { Button } from '../Button'
 import { Checkbox } from '../Checkbox'
 import { Tooltip } from '../Tooltip'
 import { Cell } from './Cell'
-import { useTableContext } from './TableContext'
 import { SELECTABLE_CHECKBOX_SIZE } from './constants'
+import { useTableContext } from './TableContext'
 import type { ColumnProps } from './types'
 
 const ExpandableWrapper = styled.tr`
@@ -186,11 +186,11 @@ export const Row = ({
     <>
       <StyledTr
         className={className}
+        columns={columns}
+        columnsStartAt={(selectable ? 1 : 0) + (expandButton ? 1 : 0)}
         data-testid={dataTestid}
         highlightAnimation={highlightAnimation}
         role={canClickRowToExpand ? 'button row' : 'row'}
-        columns={columns}
-        columnsStartAt={(selectable ? 1 : 0) + (expandButton ? 1 : 0)}
       >
         {selectable ? (
           <NoPaddingCell maxWidth={theme.sizing[SELECTABLE_CHECKBOX_SIZE]}>
@@ -203,14 +203,14 @@ export const Row = ({
                 }
               >
                 <StyledCheckbox
-                  name="table-select-checkbox"
                   aria-label="select"
                   checked={selectedRowIds[id]}
-                  value={id}
-                  inRange={inRange?.includes(id)}
                   disabled={selectDisabled !== undefined}
-                  ref={checkboxRowRef}
+                  inRange={inRange?.includes(id)}
+                  name="table-select-checkbox"
                   onChange={() => handleOnChange(id, selectedRowIds[id])}
+                  ref={checkboxRowRef}
+                  value={id}
                 />
               </Tooltip>
             </StyledCheckboxContainer>
@@ -219,13 +219,13 @@ export const Row = ({
         {expandButton ? (
           <NoPaddingCell>
             <Button
-              disabled={!expandable}
-              onClick={toggleRowExpand}
-              size="xsmall"
-              sentiment="neutral"
-              variant="ghost"
               aria-label="expand"
               data-testid="list-expand-button"
+              disabled={!expandable}
+              onClick={toggleRowExpand}
+              sentiment="neutral"
+              size="xsmall"
+              variant="ghost"
             >
               {expandedRowIds[id] ? <ArrowUpIcon /> : <ArrowDownIcon />}
             </Button>

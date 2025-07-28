@@ -59,24 +59,24 @@ export const ChipIcon = ({
 
   return (
     <Container
+      as={onClick ? 'button' : 'div'}
+      data-active={isActive}
+      data-disabled={disabled}
+      data-has-onclick={!!onClick && !disabled}
+      data-testid={dataTestId}
       onClick={event => {
         if (!disabled && onClick) {
           event.stopPropagation()
           onClick()
         }
       }}
-      data-testid={dataTestId}
-      data-disabled={disabled}
-      data-active={isActive}
-      data-has-onclick={!!onClick && !disabled}
-      as={onClick ? 'button' : 'div'}
       ref={iconRef}
     >
       <IconUsed
-        size="small"
+        disabled={disabled}
         prominence={isActive ? 'stronger' : 'default'}
         sentiment="neutral"
-        disabled={disabled}
+        size="small"
       />
     </Container>
   )

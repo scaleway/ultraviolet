@@ -20,8 +20,8 @@ export const Template: StoryFn<
 }
 
 Template.args = {
-  value: 1,
   onChange: rating => {
     console.log(rating)
   },
+  value: 1,
 }

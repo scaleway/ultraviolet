@@ -1,8 +1,8 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { Stack } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
-import { SelectableCardOptionGroupField } from '..'
 import { Submit } from '../..'
+import { SelectableCardOptionGroupField } from '..'
 import centos from './assets/centos.svg'
 import debian from './assets/debian.svg'
 import ubuntu from './assets/ubuntu.svg'
@@ -14,22 +14,22 @@ export const Error: StoryFn<
   <Stack gap={1}>
     <SelectableCardOptionGroupField {...args}>
       <SelectableCardOptionGroupField.Option
-        value="ubuntu"
+        image={ubuntu}
         label="Ubuntu"
         options={ubuntuOptions}
-        image={ubuntu}
+        value="ubuntu"
       />
       <SelectableCardOptionGroupField.Option
-        value="debian"
+        image={debian}
         label="Debian"
         options={debianOptions}
-        image={debian}
+        value="debian"
       />
       <SelectableCardOptionGroupField.Option
-        value="centos"
+        image={centos}
         label="CentOS"
         options={centosOptions}
-        image={centos}
+        value="centos"
       />
     </SelectableCardOptionGroupField>
     <Submit>Submit</Submit>
@@ -37,9 +37,9 @@ export const Error: StoryFn<
 )
 
 Error.args = {
-  name: 'os',
-  legend: 'Choose your OS',
-  helper: 'Choose the OS and version you need to install on your server',
   error: 'Select at list one OS',
+  helper: 'Choose the OS and version you need to install on your server',
+  legend: 'Choose your OS',
+  name: 'os',
   required: true,
 }

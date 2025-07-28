@@ -10,12 +10,12 @@ export const WithoutToggleButton: StoryFn<
     <SteppedListCard.Step
       stepNumber={1}
       subHeader={
-        <Text as="h3" variant="headingSmallStrong" sentiment="primary">
+        <Text as="h3" sentiment="primary" variant="headingSmallStrong">
           First step
         </Text>
       }
     >
-      <Stack gap={2} direction="column">
+      <Stack direction="column" gap={2}>
         <Text as="div" variant="body">
           First step description
         </Text>
@@ -24,12 +24,12 @@ export const WithoutToggleButton: StoryFn<
     <SteppedListCard.Step
       stepNumber={2}
       subHeader={
-        <Text as="h3" variant="headingSmallStrong" sentiment="primary">
+        <Text as="h3" sentiment="primary" variant="headingSmallStrong">
           Second step
         </Text>
       }
     >
-      <Stack gap={2} direction="column">
+      <Stack direction="column" gap={2}>
         <Text as="div" variant="body">
           Second step description
         </Text>

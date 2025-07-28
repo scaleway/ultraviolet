@@ -6,7 +6,7 @@ export const LabelDescription = Template.bind({})
 LabelDescription.args = {
   children: 'Label',
   labelDescription: (
-    <Badge size="small" sentiment="info">
+    <Badge sentiment="info" size="small">
       badge
     </Badge>
   ),

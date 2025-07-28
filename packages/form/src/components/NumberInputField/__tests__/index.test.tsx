@@ -17,10 +17,10 @@ describe('NumberInputField', () => {
   test('should render correctly disabled', () => {
     const { asFragment } = renderWithForm(
       <NumberInputField
+        aria-label="Number Input"
+        disabled
         name="test"
         value={10}
-        disabled
-        aria-label="Number Input"
       />,
     )
     const input = screen.getByLabelText('Number Input')
@@ -47,9 +47,9 @@ describe('NumberInputField', () => {
 
     renderWithTheme(
       <Form
-        onSubmit={value => onSubmit(value)}
         errors={mockFormErrors}
         methods={result.current}
+        onSubmit={value => onSubmit(value)}
       >
         <NumberInputField label="Test" name="test" required />
         <Submit>Submit</Submit>

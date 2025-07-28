@@ -155,15 +155,15 @@ export const Badge = ({
   return (
     <StyledSpan
       aria-label={ariaLabel}
+      as="span"
+      className={className}
+      data-testid={dataTestId}
+      prominence={disabled ? 'weak' : 'default'}
       sentimentStyles={
         disabled ? generatedStyles['disabled'] : generatedStyles[sentiment]
       }
       size={size}
       variant={TEXT_VARIANT[size]}
-      as="span"
-      prominence={disabled ? 'weak' : 'default'}
-      className={className}
-      data-testid={dataTestId}
       whiteSpace="nowrap"
     >
       {children}

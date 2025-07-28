@@ -1,6 +1,6 @@
 import type { StoryFn } from '@storybook/react-vite'
-import { Badge, PROMINENCES } from '..'
 import { SENTIMENTS } from '../../../theme'
+import { Badge, PROMINENCES } from '..'
 
 export const Prominences: StoryFn = props => (
   <>
@@ -11,8 +11,8 @@ export const Prominences: StoryFn = props => (
           <Badge
             {...props}
             key={`${prominence}-${sentiment}`}
-            sentiment={sentiment}
             prominence={prominence as keyof typeof PROMINENCES}
+            sentiment={sentiment}
           >
             {sentiment}
           </Badge>

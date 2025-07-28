@@ -1,8 +1,8 @@
 import type { Decorator } from '@storybook/react-vite'
 import { Snippet, Stack, Text } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
-import * as Icon from '..'
 import { DEPRECATED_ICONS } from '../../../deprecatedIcons'
+import * as Icon from '..'
 import type { AddressIcon } from '../__generated__'
 
 export const List = (args: ComponentProps<typeof AddressIcon>) =>
@@ -12,21 +12,21 @@ export const List = (args: ComponentProps<typeof AddressIcon>) =>
     const deprecated = DEPRECATED_ICONS.find(icon => icon.name === name)
 
     return (
-      <Stack direction="row" gap={1} alignItems="center" key={name}>
-        <Stack direction="column" alignItems="start">
-          <Stack direction="row" gap={1} alignItems="center">
+      <Stack alignItems="center" direction="row" gap={1} key={name}>
+        <Stack alignItems="start" direction="column">
+          <Stack alignItems="center" direction="row" gap={1}>
             <FoundIcon {...args} size="small" />
             <FoundIcon {...args} size="large" />
           </Stack>
         </Stack>
         <div style={{ width: '880px' }}>
-          <Text as="code" variant="code" strikeThrough={!!deprecated}>
+          <Text as="code" strikeThrough={!!deprecated} variant="code">
             <Snippet>{`import { ${name} } from '@ultraviolet/icons'`}</Snippet>
           </Text>
         </div>
         {deprecated ? (
           <Text as="span" variant="bodySmall">
-            <Text as="span" variant="bodySmallStrong" sentiment="danger">
+            <Text as="span" sentiment="danger" variant="bodySmallStrong">
               Deprecated:&nbsp;
             </Text>
             {deprecated.deprecatedReason}

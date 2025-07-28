@@ -5,66 +5,66 @@ import { Radio } from '..'
 describe('Radio', () => {
   test('renders correctly', () =>
     shouldMatchEmotionSnapshot(
-      <Radio onChange={() => {}} name="radio" value="choice" label="Choice" />,
+      <Radio label="Choice" name="radio" onChange={() => {}} value="choice" />,
     ))
 
   test('renders correctly when disabled', () =>
     shouldMatchEmotionSnapshot(
       <Radio
-        onChange={() => {}}
-        name="radio"
-        value="choice"
         disabled
         label="Choice"
+        name="radio"
+        onChange={() => {}}
+        value="choice"
       />,
     ))
 
   test('renders correctly with tooltip', () =>
     shouldMatchEmotionSnapshot(
       <Radio
-        onChange={() => {}}
-        name="radio"
-        value="choice"
-        tooltip="test"
         label="Choice"
+        name="radio"
+        onChange={() => {}}
+        tooltip="test"
+        value="choice"
       />,
     ))
 
   test('renders without name', () =>
     shouldMatchEmotionSnapshot(
-      <Radio onChange={() => {}} value="choice" disabled label="Choice" />,
+      <Radio disabled label="Choice" onChange={() => {}} value="choice" />,
     ))
 
   test('renders correctly when checked', () =>
     shouldMatchEmotionSnapshot(
       <Radio
-        onChange={() => {}}
-        name="radio"
-        value="choice"
         checked
         label="Choice"
+        name="radio"
+        onChange={() => {}}
+        value="choice"
       />,
     ))
 
   test('renders correctly when error', () =>
     shouldMatchEmotionSnapshot(
       <Radio
-        onChange={() => {}}
-        name="radio"
-        value="choice"
         error="Invalid value"
         label="Choice"
+        name="radio"
+        onChange={() => {}}
+        value="choice"
       />,
     ))
 
   test('renders correctly when helper', () =>
     shouldMatchEmotionSnapshot(
       <Radio
-        onChange={() => {}}
-        name="radio"
-        value="choice"
         helper="Helper"
         label="Choice"
+        name="radio"
+        onChange={() => {}}
+        value="choice"
       />,
     ))
 })

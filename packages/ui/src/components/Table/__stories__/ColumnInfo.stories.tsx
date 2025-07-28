@@ -7,14 +7,10 @@ export const ColumnInfo: StoryFn<typeof Table> = ({ ...props }) => (
 )
 
 ColumnInfo.args = {
-  columns: [
-    { label: 'Name', info: 'This column is important' },
-    ...columns.slice(1, 4),
-  ],
   children: (
     <Table.Body>
       {data.map(movie => (
-        <Table.Row key={movie.id} id={movie.id}>
+        <Table.Row id={movie.id} key={movie.id}>
           <Table.Cell>{movie.name}</Table.Cell>
           <Table.Cell>{movie.releaseYear}</Table.Cell>
           <Table.Cell>{movie.trilogy}</Table.Cell>
@@ -23,4 +19,8 @@ ColumnInfo.args = {
       ))}
     </Table.Body>
   ),
+  columns: [
+    { info: 'This column is important', label: 'Name' },
+    ...columns.slice(1, 4),
+  ],
 }

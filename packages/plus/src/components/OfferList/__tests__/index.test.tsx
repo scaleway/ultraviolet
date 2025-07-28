@@ -10,7 +10,7 @@ describe('OfferList', () => {
     shouldMatchEmotionSnapshot(
       <OfferList columns={columns}>
         {data.map(planet => (
-          <OfferList.Row key={planet.id} id={planet.id} offerName={planet.id}>
+          <OfferList.Row id={planet.id} key={planet.id} offerName={planet.id}>
             <OfferList.Cell>{planet.name}</OfferList.Cell>
             <OfferList.Cell>{planet.perihelion}AU</OfferList.Cell>
             <OfferList.Cell>{planet.aphelion}AU</OfferList.Cell>
@@ -23,7 +23,7 @@ describe('OfferList', () => {
     shouldMatchEmotionSnapshot(
       <OfferList columns={columns}>
         {data.map(planet => (
-          <OfferList.Row key={planet.id} id={planet.id} offerName={planet.id}>
+          <OfferList.Row id={planet.id} key={planet.id} offerName={planet.id}>
             <OfferList.Cell>{planet.name}</OfferList.Cell>
             <OfferList.Cell>{planet.perihelion}AU</OfferList.Cell>
             <OfferList.Cell>{planet.aphelion}AU</OfferList.Cell>
@@ -37,11 +37,11 @@ describe('OfferList', () => {
       <OfferList columns={columns} expandable>
         {data.map(planet => (
           <OfferList.Row
-            offerName={planet.id}
-            key={planet.id}
-            id={planet.id}
             banner={{ text: 'text' }}
             expandable="text"
+            id={planet.id}
+            key={planet.id}
+            offerName={planet.id}
           >
             <OfferList.Cell>{planet.name}</OfferList.Cell>
             <OfferList.Cell>{planet.perihelion}AU</OfferList.Cell>
@@ -56,13 +56,13 @@ describe('OfferList', () => {
       <OfferList columns={columns} expandable>
         {data.map(planet => (
           <OfferList.Row
-            offerName={planet.id}
-            key={planet.id}
-            id={planet.id}
-            banner={{ text: 'text', sentiment: 'danger' }}
+            banner={{ sentiment: 'danger', text: 'text' }}
+            expandable="text"
             expandablePadding="3"
             expanded
-            expandable="text"
+            id={planet.id}
+            key={planet.id}
+            offerName={planet.id}
           >
             <OfferList.Cell>{planet.name}</OfferList.Cell>
             <OfferList.Cell>{planet.perihelion}AU</OfferList.Cell>
@@ -77,11 +77,11 @@ describe('OfferList', () => {
       <OfferList columns={columns} expandable>
         {data.map(planet => (
           <OfferList.Row
-            offerName={planet.id}
-            key={planet.id}
-            id={planet.id}
             badge={{ text: 'text' }}
             expandable="text"
+            id={planet.id}
+            key={planet.id}
+            offerName={planet.id}
           >
             <OfferList.Cell>{planet.name}</OfferList.Cell>
             <OfferList.Cell>{planet.perihelion}AU</OfferList.Cell>
@@ -95,7 +95,7 @@ describe('OfferList', () => {
     shouldMatchEmotionSnapshot(
       <OfferList columns={columns} loading>
         {data.map(planet => (
-          <OfferList.Row offerName={planet.id} key={planet.id} id={planet.id}>
+          <OfferList.Row id={planet.id} key={planet.id} offerName={planet.id}>
             <OfferList.Cell>{planet.name}</OfferList.Cell>
             <OfferList.Cell>{planet.perihelion}AU</OfferList.Cell>
             <OfferList.Cell>{planet.aphelion}AU</OfferList.Cell>
@@ -108,7 +108,7 @@ describe('OfferList', () => {
     const { asFragment } = renderWithTheme(
       <OfferList columns={columns} onChangeSelect={onChange} type="radio">
         {data.map(planet => (
-          <OfferList.Row offerName={planet.id} key={planet.id} id={planet.id}>
+          <OfferList.Row id={planet.id} key={planet.id} offerName={planet.id}>
             <OfferList.Cell>{planet.name}</OfferList.Cell>
             <OfferList.Cell>{planet.perihelion}AU</OfferList.Cell>
             <OfferList.Cell>{planet.aphelion}AU</OfferList.Cell>
@@ -129,7 +129,7 @@ describe('OfferList', () => {
     const { asFragment } = renderWithTheme(
       <OfferList columns={columns} onChangeSelect={onChange} type="checkbox">
         {data.map(planet => (
-          <OfferList.Row offerName={planet.id} key={planet.id} id={planet.id}>
+          <OfferList.Row id={planet.id} key={planet.id} offerName={planet.id}>
             <OfferList.Cell>{planet.name}</OfferList.Cell>
             <OfferList.Cell>{planet.perihelion}AU</OfferList.Cell>
             <OfferList.Cell>{planet.aphelion}AU</OfferList.Cell>
@@ -150,10 +150,10 @@ describe('OfferList', () => {
       <OfferList columns={columns} expandable>
         {data.map(planet => (
           <OfferList.Row
-            offerName={planet.id}
-            key={planet.id}
-            id={planet.id}
             expandable="expandable content"
+            id={planet.id}
+            key={planet.id}
+            offerName={planet.id}
           >
             <OfferList.Cell>{planet.name}</OfferList.Cell>
             <OfferList.Cell>{planet.perihelion}AU</OfferList.Cell>
@@ -177,7 +177,7 @@ describe('OfferList', () => {
   it('should throw an error when using OfferList.Row outside OfferList', () => {
     expect(() =>
       shouldMatchEmotionSnapshot(
-        <OfferList.Row offerName="cell" id="cell">
+        <OfferList.Row id="cell" offerName="cell">
           <OfferList.Cell>a cell</OfferList.Cell>
         </OfferList.Row>,
       ),

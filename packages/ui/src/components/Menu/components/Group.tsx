@@ -32,12 +32,12 @@ export const Group = ({
   return (
     <>
       <Container>
-        <Stack gap={1} alignItems="center" direction="row">
+        <Stack alignItems="center" direction="row" gap={1}>
           <Text
-            variant="captionStrong"
             as="span"
             prominence="weak"
             sentiment="neutral"
+            variant="captionStrong"
           >
             {label}
           </Text>

@@ -41,24 +41,24 @@ describe('OrderSummary', () => {
   test('should work without unitInput', () =>
     shouldMatchEmotionSnapshot(
       <OrderSummary
-        header="summary"
-        items={mockItems}
         currency="EUR"
-        localeFormat="en-EN"
+        header="summary"
         hideTimeUnit
+        items={mockItems}
+        localeFormat="en-EN"
       />,
     ))
 
   test('should work with custom timeUnit', async () => {
     renderWithTheme(
       <OrderSummary
+        currency="EUR"
         header="summary"
         items={[categoryAZ]}
-        currency="EUR"
         localeFormat="en-EN"
         periodOptions={['minutes', 'hours', 'days', 'months']}
-        valueUnitInput={2}
         unitUnitInput="days"
+        valueUnitInput={2}
       />,
     )
     const unitInput = screen.getByTestId('unit-input')
@@ -78,9 +78,9 @@ describe('OrderSummary', () => {
   test('should work with children', () =>
     shouldMatchEmotionSnapshot(
       <OrderSummary
+        currency="EUR"
         header="summary"
         items={mockItems}
-        currency="EUR"
         localeFormat="en-EN"
       >
         children
@@ -90,31 +90,31 @@ describe('OrderSummary', () => {
   test('should work with footer', () =>
     shouldMatchEmotionSnapshot(
       <OrderSummary
+        currency="EUR"
+        footer="footer"
         header="summary"
         items={mockItems}
-        currency="EUR"
         localeFormat="en-EN"
-        footer="footer"
       />,
     ))
 
   test('should work with price as a range', () =>
     shouldMatchEmotionSnapshot(
       <OrderSummary
+        currency="EUR"
+        footer="footer"
         header="summary"
         items={[rangePriceContent]}
-        currency="EUR"
         localeFormat="en-EN"
-        footer="footer"
       />,
     ))
 
   test('should work with totalPriceInfo', () =>
     shouldMatchEmotionSnapshot(
       <OrderSummary
+        currency="EUR"
         header="summary"
         items={mockItems}
-        currency="EUR"
         localeFormat="en-EN"
         totalPriceInfo="total price info"
       />,
@@ -123,11 +123,11 @@ describe('OrderSummary', () => {
   test('should work with additionalInfo', () =>
     shouldMatchEmotionSnapshot(
       <OrderSummary
+        additionalInfo="additional info"
+        currency="EUR"
         header="summary"
         items={mockItems}
-        currency="EUR"
         localeFormat="en-EN"
-        additionalInfo="additional info"
       >
         children
       </OrderSummary>,
@@ -135,9 +135,9 @@ describe('OrderSummary', () => {
   test('should work with numberInputs', () =>
     shouldMatchEmotionSnapshot(
       <OrderSummary
+        currency="EUR"
         header="summary"
         items={[numberInputCategory, numberInputSubCategory]}
-        currency="EUR"
         localeFormat="en-EN"
         totalPriceInfo="total price info"
       />,
@@ -146,11 +146,11 @@ describe('OrderSummary', () => {
   test('should work with discount in  %', () => {
     const { asFragment } = renderWithTheme(
       <OrderSummary
+        currency="EUR"
+        discount={0.5}
         header="summary"
         items={[simpleCategory]}
-        currency="EUR"
         localeFormat="en-EN"
-        discount={0.5}
       />,
     )
 
@@ -163,11 +163,11 @@ describe('OrderSummary', () => {
   test('should work with discount', () => {
     const { asFragment } = renderWithTheme(
       <OrderSummary
+        currency="EUR"
+        discount={10}
         header="summary"
         items={[simpleCategory]}
-        currency="EUR"
         localeFormat="en-EN"
-        discount={10}
       />,
     )
 
@@ -180,12 +180,12 @@ describe('OrderSummary', () => {
   test('should work with fractionDigits', () => {
     const { asFragment } = renderWithTheme(
       <OrderSummary
-        header="summary"
-        items={[simpleCategory]}
         currency="EUR"
-        localeFormat="en-EN"
         discount={0.5}
         fractionDigits={0}
+        header="summary"
+        items={[simpleCategory]}
+        localeFormat="en-EN"
       />,
     )
 
@@ -198,12 +198,12 @@ describe('OrderSummary', () => {
   test('works with hideDetails', () =>
     shouldMatchEmotionSnapshot(
       <>
-        <OrderSummary header="summary" items={[categoryAZ]} hideDetails />
+        <OrderSummary header="summary" hideDetails items={[categoryAZ]} />
         <OrderSummary
-          header="summary"
-          items={[categoryAZ]}
-          hideDetails
           discount={0.5}
+          header="summary"
+          hideDetails
+          items={[categoryAZ]}
         />
       </>,
     ))

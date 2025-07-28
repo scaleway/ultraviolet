@@ -2,11 +2,11 @@
 
 import styled from '@emotion/styled'
 import { List } from '@ultraviolet/ui'
-import { useEffect, useState } from 'react'
 import type { ComponentProps } from 'react'
-import { OfferListProvider } from './OfferListProvider'
+import { useEffect, useState } from 'react'
 import { Cell } from './components/Cell'
 import { Row } from './components/Row'
+import { OfferListProvider } from './OfferListProvider'
 
 const StyledList = styled(List)`
    td:first-child,
@@ -53,16 +53,16 @@ export const OfferList = ({
 
   return (
     <OfferListProvider
-      selectable={type}
+      autoCollapse={autoCollapse}
       expandable={expandable}
       loading={loading}
       onChangeSelect={onChangeSelect}
-      autoCollapse={autoCollapse}
+      selectable={type}
     >
       <StyledList
-        expandable={false}
-        columns={computedColumns}
         autoCollapse={autoCollapse}
+        columns={computedColumns}
+        expandable={false}
         onSelectedChange={setSelectedRows}
         selectable={false}
       >

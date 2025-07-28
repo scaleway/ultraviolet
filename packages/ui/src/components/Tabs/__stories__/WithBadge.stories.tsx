@@ -1,5 +1,5 @@
-import { Tabs } from '..'
 import { Badge } from '../../Badge'
+import { Tabs } from '..'
 import { Template } from './Template.stories'
 
 export const WithBadge = Template.bind({})
@@ -7,69 +7,69 @@ export const WithBadge = Template.bind({})
 WithBadge.args = {
   children: [
     <Tabs.Tab
+      badge={
+        <Badge sentiment="warning" size="small">
+          Beta
+        </Badge>
+      }
       value={1}
+    >
+      Text
+    </Tabs.Tab>,
+    <Tabs.Tab
       badge={
         <Badge sentiment="warning" size="small">
           Beta
         </Badge>
       }
-    >
-      Text
-    </Tabs.Tab>,
-    <Tabs.Tab
+      counter={1}
       value={2}
-      counter={1}
+    >
+      Text
+    </Tabs.Tab>,
+    <Tabs.Tab
       badge={
         <Badge sentiment="warning" size="small">
           Beta
         </Badge>
       }
-    >
-      Text
-    </Tabs.Tab>,
-    <Tabs.Tab
+      counter={10}
       value={3}
-      counter={10}
+    >
+      Text
+    </Tabs.Tab>,
+    <Tabs.Tab
       badge={
         <Badge sentiment="warning" size="small">
           Beta
         </Badge>
       }
-    >
-      Text
-    </Tabs.Tab>,
-    <Tabs.Tab
+      disabled
       value={4}
-      disabled
+    >
+      Text
+    </Tabs.Tab>,
+    <Tabs.Tab
       badge={
         <Badge sentiment="warning" size="small">
           Beta
         </Badge>
       }
-    >
-      Text
-    </Tabs.Tab>,
-    <Tabs.Tab
-      value={5}
-      disabled
       counter={1}
-      badge={
-        <Badge sentiment="warning" size="small">
-          Beta
-        </Badge>
-      }
+      disabled
+      value={5}
     >
       Text
     </Tabs.Tab>,
     <Tabs.Tab
-      value={6}
-      disabled
-      counter={10}
       badge={
         <Badge sentiment="warning" size="small">
           Beta
         </Badge>
       }
+      counter={10}
+      disabled
+      value={6}
     >
       Text
     </Tabs.Tab>,

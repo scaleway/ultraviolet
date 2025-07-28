@@ -84,8 +84,8 @@ export const Status = ({
   <Tooltip text={tooltip}>
     <Container
       className={className}
-      data-testid={dataTestId}
       data-notification={notification}
+      data-testid={dataTestId}
     >
       {animated ? <StyledAnimatedCircle sentiment={sentiment} /> : null}
       <StyledCircle sentiment={sentiment} />

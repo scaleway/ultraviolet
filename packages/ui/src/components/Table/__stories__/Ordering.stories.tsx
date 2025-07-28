@@ -29,19 +29,19 @@ export const Ordering: StoryFn = args => {
       {...args}
       columns={[
         {
-          label: 'Movie name',
+          info: 'info works fine with the ordering',
           isOrdered: currentOrder.columnId === 'name',
-          orderDirection: currentOrder.order,
+          label: 'Movie name',
           onOrder: newOrder =>
             setCurrentOrder({ columnId: 'name', order: newOrder }),
-          info: 'info works fine with the ordering',
+          orderDirection: currentOrder.order,
         },
         {
-          label: 'Release year',
           isOrdered: currentOrder.columnId === 'releaseYear',
-          orderDirection: currentOrder.order,
+          label: 'Release year',
           onOrder: newOrder =>
             setCurrentOrder({ columnId: 'releaseYear', order: newOrder }),
+          orderDirection: currentOrder.order,
         },
         { label: 'Trilogy' },
         { label: 'Director' },
@@ -49,7 +49,7 @@ export const Ordering: StoryFn = args => {
     >
       <Table.Body>
         {sortedData.map(movie => (
-          <Table.Row key={movie.id} id={movie.id}>
+          <Table.Row id={movie.id} key={movie.id}>
             <Table.Cell>{movie.name}</Table.Cell>
             <Table.Cell>{movie.releaseYear}</Table.Cell>
             <Table.Cell>{movie.trilogy}</Table.Cell>

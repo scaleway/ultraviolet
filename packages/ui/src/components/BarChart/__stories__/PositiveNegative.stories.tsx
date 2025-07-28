@@ -10,8 +10,6 @@ export const PositiveNegative: StoryFn<typeof BarChart> = props => {
   return (
     <BarChart
       {...props}
-      height={200}
-      data={barChartPositiveNegativeData}
       axisFormatters={{
         bottom: value => format(new Date(value), 'dd-MM-Y'),
         left: value => {
@@ -20,14 +18,6 @@ export const PositiveNegative: StoryFn<typeof BarChart> = props => {
 
           return ''
         },
-      }}
-      tooltipFunction={({ value, indexValue, color }) => ({
-        color,
-        formattedValue: value === 1 ? 'Active' : 'Inactive',
-        indexValue: format(new Date(indexValue), 'dd-MM-Y'),
-      })}
-      tickValues={{
-        left: 10,
       }}
       chartProps={{
         colors: ({ value }) =>
@@ -38,6 +28,16 @@ export const PositiveNegative: StoryFn<typeof BarChart> = props => {
         maxValue: 1,
         minValue: -1,
       }}
+      data={barChartPositiveNegativeData}
+      height={200}
+      tickValues={{
+        left: 10,
+      }}
+      tooltipFunction={({ value, indexValue, color }) => ({
+        color,
+        formattedValue: value === 1 ? 'Active' : 'Inactive',
+        indexValue: format(new Date(indexValue), 'dd-MM-Y'),
+      })}
     />
   )
 }

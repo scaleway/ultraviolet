@@ -3,14 +3,14 @@ import { mockFormErrors, renderWithTheme } from '@utils/test'
 import type { ReactNode } from 'react'
 import { useForm } from 'react-hook-form'
 import { describe, expect, test } from 'vitest'
-import { useErrors } from '..'
 import { Form } from '../../../components/Form'
+import { useErrors } from '..'
 
 const HookWrapper = ({ children }: { children: ReactNode }) => {
   const methods = useForm()
 
   return (
-    <Form errors={mockFormErrors} onSubmit={() => null} methods={methods}>
+    <Form errors={mockFormErrors} methods={methods} onSubmit={() => null}>
       {children}
     </Form>
   )
@@ -21,9 +21,9 @@ describe('ErrorProvider', () => {
     const { result } = renderHook(() => useForm())
     const { asFragment } = renderWithTheme(
       <Form
-        onSubmit={() => null}
         errors={mockFormErrors}
         methods={result.current}
+        onSubmit={() => null}
       >
         Test
       </Form>,
@@ -55,7 +55,7 @@ describe('ErrorProvider', () => {
     expect(
       result.current.getError(
         { label: 'test', minLength: 3 },
-        { type: 'minLength', message: customErrorString },
+        { message: customErrorString, type: 'minLength' },
       ),
     ).toEqual(customErrorString)
   })

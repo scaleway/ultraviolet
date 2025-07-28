@@ -1,6 +1,6 @@
 import type { StoryFn } from '@storybook/react-vite'
-import { Dialog } from '..'
 import { Button } from '../../Button'
+import { Dialog } from '..'
 
 export const Template: StoryFn<typeof Dialog> = props => (
   <Dialog {...props}>
@@ -12,10 +12,10 @@ export const Template: StoryFn<typeof Dialog> = props => (
           malesuada vitae elit.
         </Dialog.Text>
         <Dialog.Buttons
+          primaryButton={<Dialog.Button onClick={close}>Confirm</Dialog.Button>}
           secondaryButton={
             <Dialog.CancelButton onClick={close}>Cancel</Dialog.CancelButton>
           }
-          primaryButton={<Dialog.Button onClick={close}>Confirm</Dialog.Button>}
         />
       </Dialog.Stack>
     )}

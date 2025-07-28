@@ -98,7 +98,7 @@ const StyledTitle = styled(Text)`
 const AdvancedUseCases = () => (
   <section>
     <Stack gap={5}>
-      <StyledTitle as="h3" variant="heading" id="advanced-use-cases">
+      <StyledTitle as="h3" id="advanced-use-cases" variant="heading">
         Advanced Use Cases
       </StyledTitle>
       <Text as="p" variant="body">
@@ -106,8 +106,8 @@ const AdvancedUseCases = () => (
         UI allows you to do it easily
       </Text>
       <CopyBox>
-        <CopyBox.Command title="Dark theme" command={useCase1} />
-        <CopyBox.Command title="Simple Form" command={useCase2} />
+        <CopyBox.Command command={useCase1} title="Dark theme" />
+        <CopyBox.Command command={useCase2} title="Simple Form" />
       </CopyBox>
     </Stack>
   </section>

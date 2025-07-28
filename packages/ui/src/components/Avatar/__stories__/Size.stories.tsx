@@ -1,50 +1,50 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { MosaicIcon } from '@ultraviolet/icons'
-import { Avatar } from '..'
 import { Stack } from '../../Stack'
+import { Avatar } from '..'
 
 export const Size: StoryFn<typeof Avatar> = props => (
   <Stack gap={2}>
-    <Stack gap={2} direction="row">
+    <Stack direction="row" gap={2}>
       <>
         <Avatar {...props} />
-        <Avatar variant="text" text="UV" shape="circle" size="medium" />
-        <Avatar variant="text" text="UV" shape="circle" size="small" />
-        <Avatar variant="text" text="UV" shape="circle" size="xsmall" />
+        <Avatar shape="circle" size="medium" text="UV" variant="text" />
+        <Avatar shape="circle" size="small" text="UV" variant="text" />
+        <Avatar shape="circle" size="xsmall" text="UV" variant="text" />
       </>
       <>
-        <Avatar variant="icon" shape="circle" size="large">
+        <Avatar shape="circle" size="large" variant="icon">
           <MosaicIcon />
         </Avatar>
-        <Avatar variant="icon" shape="circle" size="medium">
+        <Avatar shape="circle" size="medium" variant="icon">
           <MosaicIcon />
         </Avatar>
-        <Avatar variant="icon" shape="circle" size="small">
+        <Avatar shape="circle" size="small" variant="icon">
           <MosaicIcon />
         </Avatar>
-        <Avatar variant="icon" shape="circle" size="xsmall">
+        <Avatar shape="circle" size="xsmall" variant="icon">
           <MosaicIcon />
         </Avatar>
       </>
     </Stack>
-    <Stack gap={2} direction="row">
+    <Stack direction="row" gap={2}>
       <>
-        <Avatar variant="text" text="UV" shape="square" size="large" />
-        <Avatar variant="text" text="UV" shape="square" size="medium" />
-        <Avatar variant="text" text="UV" shape="square" size="small" />
-        <Avatar variant="text" text="UV" shape="square" size="xsmall" />
+        <Avatar shape="square" size="large" text="UV" variant="text" />
+        <Avatar shape="square" size="medium" text="UV" variant="text" />
+        <Avatar shape="square" size="small" text="UV" variant="text" />
+        <Avatar shape="square" size="xsmall" text="UV" variant="text" />
       </>
       <>
-        <Avatar variant="icon" shape="square" size="large">
+        <Avatar shape="square" size="large" variant="icon">
           <MosaicIcon />
         </Avatar>
-        <Avatar variant="icon" shape="square" size="medium">
+        <Avatar shape="square" size="medium" variant="icon">
           <MosaicIcon />
         </Avatar>
-        <Avatar variant="icon" shape="square" size="small">
+        <Avatar shape="square" size="small" variant="icon">
           <MosaicIcon />
         </Avatar>
-        <Avatar variant="icon" shape="square" size="xsmall">
+        <Avatar shape="square" size="xsmall" variant="icon">
           <MosaicIcon />
         </Avatar>
       </>
@@ -53,10 +53,10 @@ export const Size: StoryFn<typeof Avatar> = props => (
 )
 
 Size.args = {
-  variant: 'text',
-  text: 'UV',
   shape: 'circle',
   size: 'large',
+  text: 'UV',
+  variant: 'text',
 }
 
 Size.parameters = {
@@ -70,7 +70,7 @@ Size.parameters = {
 
 Size.decorators = [
   Story => (
-    <Stack gap={2} direction="row">
+    <Stack direction="row" gap={2}>
       <Story />
     </Stack>
   ),

@@ -1,7 +1,7 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { useCallback, useState } from 'react'
-import { SelectInput } from '..'
 import { Button } from '../../Button'
+import { SelectInput } from '..'
 import { dataUnGrouped } from './resources'
 
 export const LoadMore: StoryFn<typeof SelectInput> = args => {
@@ -11,8 +11,8 @@ export const LoadMore: StoryFn<typeof SelectInput> = args => {
 
   const loadMore = useCallback(() => {
     const newPlanet = {
-      value: `planet-${counter}`,
       label: `Planet ${counter}`,
+      value: `planet-${counter}`,
     }
     setLoading(true)
 
@@ -26,12 +26,12 @@ export const LoadMore: StoryFn<typeof SelectInput> = args => {
   return (
     <SelectInput
       {...args}
-      options={options}
       loadMore={
-        <Button onClick={loadMore} isLoading={loading}>
+        <Button isLoading={loading} onClick={loadMore}>
           Load more
         </Button>
       }
+      options={options}
     />
   )
 }

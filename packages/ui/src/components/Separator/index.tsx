@@ -69,35 +69,35 @@ export const Separator = ({
 }: SeparatorProps) =>
   children ? (
     <StyledIconWrapper
-      role="separator"
       aria-orientation={direction}
-      direction={direction}
       className={className}
       data-testid={dataTestId}
+      direction={direction}
+      role="separator"
       sentiment={sentiment}
     >
       <StyledHr
         direction={direction}
-        thickness={thickness}
-        sentiment={sentiment}
         hasIcon
+        sentiment={sentiment}
+        thickness={thickness}
       />
       {children}
       <StyledHr
         direction={direction}
-        thickness={thickness}
-        sentiment={sentiment}
         hasIcon
+        sentiment={sentiment}
+        thickness={thickness}
       />
     </StyledIconWrapper>
   ) : (
     <StyledHr
-      role="separator"
       aria-orientation={direction}
-      direction={direction}
-      thickness={thickness}
-      sentiment={sentiment}
       className={className}
       data-testid={dataTestId}
+      direction={direction}
+      role="separator"
+      sentiment={sentiment}
+      thickness={thickness}
     />
   )

@@ -1,7 +1,7 @@
 'use client'
 
-import { createContext } from 'react'
 import type { Dispatch, SetStateAction } from 'react'
+import { createContext } from 'react'
 
 export type ContextProps = {
   showMonthYearPicker?: boolean
@@ -61,20 +61,20 @@ export type ContextProps = {
     }
 )
 export const DateInputContext = createContext<ContextProps>({
-  showMonthYearPicker: false,
+  DAYS: {},
   disabled: false,
-  setValue: () => null,
-  setInputValue: () => null,
-  monthToShow: 1,
-  yearToShow: 2000,
-  setMonthToShow: () => null,
-  setYearToShow: () => null,
   excludeDates: [],
   MONTHS: {},
-  DAYS: {},
   MONTHS_ARR: [],
-  selectsRange: false,
-  setVisible: () => null,
+  monthToShow: 1,
   readOnly: false,
+  selectsRange: false,
   setHoveredDate: () => null,
+  setInputValue: () => null,
+  setMonthToShow: () => null,
+  setValue: () => null,
+  setVisible: () => null,
+  setYearToShow: () => null,
+  showMonthYearPicker: false,
+  yearToShow: 2000,
 })

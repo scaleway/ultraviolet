@@ -11,8 +11,8 @@ import { useCallback, useEffect, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { slideFromBottom } from '../../../utils/animations'
 import { Stack } from '../../Stack'
-import { useModal } from '../ModalProvider'
 import { MODAL_PLACEMENT, MODAL_WIDTH } from '../constants'
+import { useModal } from '../ModalProvider'
 import type { DialogProps, ModalPlacement, ModalSize } from '../types'
 
 const StyledDiv = styled(Stack)`
@@ -305,40 +305,40 @@ export const Dialog = ({
 
   return createPortal(
     <StyledBackdrop
-      data-open
-      onClick={handleClose}
       className={backdropClassName}
-      data-testid={dataTestId ? `${dataTestId}-backdrop` : undefined}
-      onFocus={stopFocus}
       data-animation={animation}
+      data-open
+      data-testid={dataTestId ? `${dataTestId}-backdrop` : undefined}
       data-visible={isVisible}
       id="backdrop-modal"
+      onClick={handleClose}
+      onFocus={stopFocus}
     >
       <StyledDialog
-        onKeyUp={handleKeyUp}
-        onKeyDown={handleFocusTrap}
-        className={className}
-        id={id}
-        data-testid={dataTestId}
         aria-label={ariaLabel}
+        aria-modal
+        className={className}
+        data-animation={animation}
+        data-has-image={!!image}
         data-placement={placement}
         data-size={size}
-        open
+        data-testid={dataTestId}
+        id={id}
         onCancel={stopCancel}
         onClose={stopCancel}
-        aria-modal
-        ref={dialogRef}
-        tabIndex={0}
+        onKeyDown={handleFocusTrap}
+        onKeyUp={handleKeyUp}
+        open
         position={position}
-        top={Math.max(top, 0)}
-        data-animation={animation}
+        ref={dialogRef}
         size={size}
-        data-has-image={!!image}
+        tabIndex={0}
+        top={Math.max(top, 0)}
       >
         {image ? (
           <>
             <StyledDiv alignItems="end" justifyContent="center">
-              <StyledImg src={image} alt="illustration" />
+              <StyledImg alt="illustration" src={image} />
             </StyledDiv>
             <StyledStack gap={5}>{children}</StyledStack>
           </>

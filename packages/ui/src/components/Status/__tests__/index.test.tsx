@@ -8,8 +8,8 @@ describe('Status', () => {
   )
 
   test(`render animated`, () =>
-    shouldMatchEmotionSnapshot(<Status sentiment="success" animated />))
+    shouldMatchEmotionSnapshot(<Status animated sentiment="success" />))
 
   test(`render with className`, () =>
-    shouldMatchEmotionSnapshot(<Status sentiment="success" className="test" />))
+    shouldMatchEmotionSnapshot(<Status className="test" sentiment="success" />))
 })

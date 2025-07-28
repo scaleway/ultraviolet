@@ -3,14 +3,14 @@ import { ContentCardGroup } from '..'
 
 export default {
   component: ContentCardGroup,
-  title: 'Plus/Compositions/ContentCardGroup',
   subcomponents: { 'ContentCardGroup.Card': ContentCardGroup.Card },
+  title: 'Plus/Compositions/ContentCardGroup',
 } as Meta
 
-export { Playground } from './Playground.stories'
-export { Loading } from './Loading.stories'
-export { Subtitle } from './Subtitle.stories'
-export { Description } from './Description.stories'
 export { Custom } from './Custom.stories'
-export { WithRow } from './WithRow.stories'
+export { Description } from './Description.stories'
+export { Loading } from './Loading.stories'
+export { Playground } from './Playground.stories'
+export { Subtitle } from './Subtitle.stories'
 export { WithLargeHeight } from './WithLargeHeight.stories'
+export { WithRow } from './WithRow.stories'

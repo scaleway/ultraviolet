@@ -1,8 +1,8 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { Stack } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
-import { SliderField } from '..'
 import { Submit } from '../../Submit'
+import { SliderField } from '..'
 
 export const Options: StoryFn<ComponentProps<typeof SliderField>> = ({
   name,
@@ -11,12 +11,12 @@ export const Options: StoryFn<ComponentProps<typeof SliderField>> = ({
 }) => (
   <Stack gap={5}>
     <Stack gap={2}>
-      <SliderField name={name} label={label} {...args} />
+      <SliderField label={label} name={name} {...args} />
       <SliderField
         {...args}
         double
-        name={`${name}-double`}
         label={`${label}-double`}
+        name={`${name}-double`}
       />
     </Stack>
     <Submit>Submit</Submit>
@@ -24,8 +24,8 @@ export const Options: StoryFn<ComponentProps<typeof SliderField>> = ({
 )
 
 Options.args = {
-  name: 'options',
   label: 'Custom Options',
+  name: 'options',
   options: [
     { label: '0.5Gbps', value: 0.5 },
     { label: '1', value: 1 },

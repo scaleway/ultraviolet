@@ -13,10 +13,10 @@ import { Text } from '../Text'
 import './style.css'
 
 export const SIZES = {
+  large: 75.5,
+  medium: 49,
   // 1 rem = 16 px
   small: 22.25,
-  medium: 49,
-  large: 75.5,
 }
 const slideIn = (translation: number) => keyframes`
   from {
@@ -125,9 +125,9 @@ export const BaseDrawer = ({
       return (
         <StyledText
           as="h2"
-          variant="headingSmallStrong"
-          sentiment="neutral"
           prominence="default"
+          sentiment="neutral"
+          variant="headingSmallStrong"
         >
           {header}
         </StyledText>
@@ -137,9 +137,9 @@ export const BaseDrawer = ({
       return (
         <StyledText
           as="h2"
-          variant="headingSmallStrong"
-          sentiment="neutral"
           prominence="default"
+          sentiment="neutral"
+          variant="headingSmallStrong"
         >
           {header(modalProps)}
         </StyledText>
@@ -151,20 +151,20 @@ export const BaseDrawer = ({
 
   return (
     <StyledModal
-      disclosure={disclosure}
-      size={size}
-      onClose={onClose}
-      open={open}
       ariaLabel={ariaLabel}
+      backdropClassName="backdrop-drawer"
       className={className}
+      data-size={size}
       data-testid={dataTestId}
+      disclosure={disclosure}
       hideOnClickOutside={hideOnClickOutside}
       hideOnEsc={hideOnEsc}
       id={id}
-      data-size={size}
-      placement="top-right"
-      backdropClassName="backdrop-drawer"
       isClosable={isClosable}
+      onClose={onClose}
+      open={open}
+      placement="top-right"
+      size={size}
     >
       {modalProps => {
         const content =

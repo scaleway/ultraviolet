@@ -1,14 +1,11 @@
 import type { Meta } from '@storybook/react-vite'
 import { Snippet, Stack, Text } from '@ultraviolet/ui'
-import { Form, SelectableCardGroupField } from '../..'
 import { useForm } from '../../..'
 import { mockErrors } from '../../../mocks'
+import { Form, SelectableCardGroupField } from '../..'
 
 export default {
   component: SelectableCardGroupField,
-  subcomponents: {
-    'SelectableCardGroupField.Card': SelectableCardGroupField.Card,
-  },
   decorators: [
     ChildStory => {
       const methods = useForm()
@@ -27,35 +24,35 @@ export default {
       } = methods.formState
 
       return (
-        <Form onSubmit={() => {}} errors={mockErrors} methods={methods}>
+        <Form errors={mockErrors} methods={methods} onSubmit={() => {}}>
           <Stack gap={2}>
             <ChildStory />
             <Stack gap={1}>
-              <Text variant="bodyStrong" as="p">
+              <Text as="p" variant="bodyStrong">
                 Form input values:
               </Text>
-              <Snippet prefix="lines" initiallyExpanded>
+              <Snippet initiallyExpanded prefix="lines">
                 {JSON.stringify(methods.watch(), null, 1)}
               </Snippet>
             </Stack>
             <Stack gap={1}>
-              <Text variant="bodyStrong" as="p">
+              <Text as="p" variant="bodyStrong">
                 Form values:
               </Text>
               <Snippet prefix="lines">
                 {JSON.stringify(
                   {
+                    dirtyFields,
                     errors,
                     isDirty,
-                    isSubmitting,
-                    touchedFields,
-                    submitCount,
-                    dirtyFields,
-                    isValid,
                     isLoading,
-                    isSubmitted,
-                    isValidating,
                     isSubmitSuccessful,
+                    isSubmitted,
+                    isSubmitting,
+                    isValid,
+                    isValidating,
+                    submitCount,
+                    touchedFields,
                   },
                   null,
                   1,
@@ -74,10 +71,13 @@ export default {
       },
     },
   },
+  subcomponents: {
+    'SelectableCardGroupField.Card': SelectableCardGroupField.Card,
+  },
   title: 'Form/Components/Fields/SelectableCardGroupField',
 } as Meta
 
-export { Playground } from './Playground.stories'
 export { Checkbox } from './Checkbox'
-export { Required } from './Required.stories'
 export { Error } from './Error.stories'
+export { Playground } from './Playground.stories'
+export { Required } from './Required.stories'

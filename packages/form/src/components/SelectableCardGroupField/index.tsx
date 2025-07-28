@@ -37,22 +37,22 @@ export const SelectableCardGroupField = <
     field,
     fieldState: { error },
   } = useController<TFieldValues, TFieldName>({
-    name,
     control,
-    shouldUnregister,
+    name,
     rules: {
       required,
       validate,
     },
+    shouldUnregister,
   })
 
   return (
     <SelectableCardGroup
       {...props}
+      columns={columns}
+      error={getError({ label: legend }, error) ?? customError}
       legend={legend}
       name={name}
-      type={type}
-      value={field.value}
       onChange={event => {
         if (type === 'checkbox') {
           const fieldValue = (field.value ?? []) as string[]
@@ -75,9 +75,9 @@ export const SelectableCardGroupField = <
           >,
         )
       }}
-      error={getError({ label: legend }, error) ?? customError}
-      columns={columns}
       required={required}
+      type={type}
+      value={field.value}
     />
   )
 }

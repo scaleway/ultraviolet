@@ -18,7 +18,7 @@ describe('EmptySpace', () => {
     shouldMatchEmotionSnapshot(
       <EmptyState
         description="test"
-        image={<img src={kapsuleLogo} alt="kapsule logo" />}
+        image={<img alt="kapsule logo" src={kapsuleLogo} />}
       >
         content
       </EmptyState>,
@@ -56,7 +56,7 @@ describe('EmptySpace', () => {
 
   it('should work with border', () =>
     shouldMatchEmotionSnapshot(
-      <EmptyState description="test" bordered>
+      <EmptyState bordered description="test">
         content
       </EmptyState>,
     ))

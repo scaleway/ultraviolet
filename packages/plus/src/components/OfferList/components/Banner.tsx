@@ -92,23 +92,23 @@ export const Banner = ({
   type = 'div',
 }: BannerProps) =>
   type === 'div' ? (
-    <StyledStack sentiment={sentiment} aria-disabled={disabled}>
-      <Text as="p" variant="caption" sentiment={sentiment} disabled={disabled}>
+    <StyledStack aria-disabled={disabled} sentiment={sentiment}>
+      <Text as="p" disabled={disabled} sentiment={sentiment} variant="caption">
         {children}
       </Text>
     </StyledStack>
   ) : (
     <BannerWrapper data-expandable-content>
       <StyledCell
+        aria-disabled={disabled}
         colSpan={colSpan}
         sentiment={sentiment}
-        aria-disabled={disabled}
       >
         <Text
           as="p"
-          variant="caption"
-          sentiment={sentiment}
           disabled={disabled}
+          sentiment={sentiment}
+          variant="caption"
         >
           {children}
         </Text>

@@ -3,8 +3,8 @@
 import { Slider } from '@ultraviolet/ui'
 import type { ComponentProps, FocusEvent, ReactNode } from 'react'
 import { useMemo } from 'react'
-import { useController } from 'react-hook-form'
 import type { FieldPath, FieldValues, Path, PathValue } from 'react-hook-form'
+import { useController } from 'react-hook-form'
 import { useErrors } from '../../providers'
 import type { BaseFieldProps } from '../../types'
 
@@ -41,15 +41,15 @@ export const SliderField = <
     field,
     fieldState: { error },
   } = useController<TFieldValues, TFieldName>({
-    name,
     control,
-    shouldUnregister,
+    name,
     rules: {
       max,
       min,
       required,
       validate,
     },
+    shouldUnregister,
   })
 
   const finalValue = useMemo(() => {
@@ -76,8 +76,12 @@ export const SliderField = <
 
   return (
     <Slider
+      aria-label={ariaLabel}
+      error={getError({ label: label ?? ariaLabel ?? name, max, min }, error)}
+      label={label}
+      max={max}
+      min={min}
       name={field.name}
-      value={finalValue as PathValue<TFieldValues, Path<TFieldValues>>}
       onBlur={(event: FocusEvent<HTMLInputElement>) => {
         field.onBlur()
         onBlur?.(event)
@@ -99,13 +103,9 @@ export const SliderField = <
           onChange?.(newValue as PathValue<TFieldValues, Path<TFieldValues>>)
         }
       }}
-      max={max}
-      min={min}
-      error={getError({ label: label ?? ariaLabel ?? name, max, min }, error)}
-      label={label}
-      required={required}
       options={options}
-      aria-label={ariaLabel}
+      required={required}
+      value={finalValue as PathValue<TFieldValues, Path<TFieldValues>>}
       {...props}
     />
   )

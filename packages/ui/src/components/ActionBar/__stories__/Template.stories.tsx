@@ -1,9 +1,9 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { DeleteIcon } from '@ultraviolet/icons'
 import { useState } from 'react'
-import { ActionBar } from '..'
 import { Button } from '../../Button'
 import { Stack } from '../../Stack'
+import { ActionBar } from '..'
 
 export const Template: StoryFn<typeof ActionBar> = args => {
   const [state, setState] = useState(false)
@@ -23,12 +23,12 @@ export const Template: StoryFn<typeof ActionBar> = args => {
           <Stack
             alignItems="center"
             direction="row"
-            justifyContent="space-between"
             flex="1 1 auto"
+            justifyContent="space-between"
             width="100%"
           >
             <div>I am the Playground Action Bar</div>
-            <Button variant="outlined" sentiment="danger" size="small">
+            <Button sentiment="danger" size="small" variant="outlined">
               <DeleteIcon />
             </Button>
           </Stack>

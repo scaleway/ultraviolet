@@ -3,9 +3,9 @@
 import styled from '@emotion/styled'
 import type { ReactNode } from 'react'
 import { Checkbox } from '../Checkbox'
+import { SELECTABLE_CHECKBOX_SIZE } from './constants'
 import { HeaderCell } from './HeaderCell'
 import { useListContext } from './ListContext'
-import { SELECTABLE_CHECKBOX_SIZE } from './constants'
 
 const StyledHeaderRow = styled.tr`
   /* List itself also apply style about common templating between HeaderRow and other Rows */
@@ -41,12 +41,12 @@ export const HeaderRow = ({ children, hasSelectAllColumn }: RowProps) => {
         {hasSelectAllColumn ? (
           <NoPaddingHeaderCell>
             <Checkbox
-              name="list-select-checkbox"
-              value="all"
               aria-label="select all"
               checked={allRowSelectValue}
-              onChange={selectAllHandler}
               disabled={selectableRowCount === 0}
+              name="list-select-checkbox"
+              onChange={selectAllHandler}
+              value="all"
             />
           </NoPaddingHeaderCell>
         ) : null}

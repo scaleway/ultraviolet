@@ -6,10 +6,10 @@ export default {
   title: 'Plus/Compositions/ContentCard',
 } as Meta
 
-export { Playground } from './Playground.stories'
-export { Directions } from './Directions.stories'
-export { Loading } from './Loading.stories'
-export { Disabled } from './Disabled.stories'
-export { Link } from './Link.stories'
 export { Click } from './Click.stories'
+export { Directions } from './Directions.stories'
+export { Disabled } from './Disabled.stories'
 export { Examples } from './Examples.stories'
+export { Link } from './Link.stories'
+export { Loading } from './Loading.stories'
+export { Playground } from './Playground.stories'

@@ -1,8 +1,8 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
-import { TextInput } from '..'
 import { CopyButton } from '../../CopyButton'
 import { Stack } from '../../Stack'
+import { TextInput } from '..'
 
 const generateRandomPassword = (length = 12) => {
   const charset =
@@ -23,36 +23,36 @@ export const Password: StoryFn<typeof TextInput> = ({ ...args }) => {
       <TextInput
         {...args}
         label="Password"
-        value={value}
         onChange={event => setValue(event.target.value)}
         type="password"
+        value={value}
       />
       <TextInput
         {...args}
         label="Password with randomize"
-        value={value2}
         onChange={event => setValue2(event.target.value)}
-        type="password"
         onRandomize={() => {
           setValue2(generateRandomPassword())
         }}
+        type="password"
+        value={value2}
       />
       <TextInput
         {...args}
         label="Passord with copy button"
-        value={value3}
         onChange={event => setValue3(event.target.value)}
+        suffix={<CopyButton sentiment="neutral" value={value3 ?? ''} />}
         type="password"
-        suffix={<CopyButton value={value3 ?? ''} sentiment="neutral" />}
+        value={value3}
       />
     </Stack>
   )
 }
 
 Password.args = {
-  placeholder: 'Placeholder',
-  value: 'Text',
-  role: 'status',
-  'aria-live': 'polite',
   'aria-atomic': 'true',
+  'aria-live': 'polite',
+  placeholder: 'Placeholder',
+  role: 'status',
+  value: 'Text',
 }

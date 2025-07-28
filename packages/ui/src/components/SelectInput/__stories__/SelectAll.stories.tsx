@@ -1,40 +1,40 @@
 import type { StoryFn } from '@storybook/react-vite'
-import { SelectInput } from '..'
 import { Stack } from '../../Stack'
+import { SelectInput } from '..'
 import { dataGrouped } from './resources'
 
 export const SelectAll: StoryFn<typeof SelectInput> = args => (
   <Stack gap={5} width="50%">
     <SelectInput
       {...args}
+      label="SelectAll"
       selectAll={{
-        label: 'Select All',
         description:
           'You can click here to select every option. This description is optional',
+        label: 'Select All',
       }}
-      label="SelectAll"
     />
-    <SelectInput {...args} selectAllGroup label="SelectAllGroup" />
+    <SelectInput {...args} label="SelectAllGroup" selectAllGroup />
     <SelectInput
       {...args}
-      selectAllGroup
       label="SelectAllGroup & SelectAll"
       selectAll={{
         label: 'Select All',
       }}
+      selectAllGroup
     />
   </Stack>
 )
 
 SelectAll.args = {
-  options: dataGrouped,
+  disabled: false,
+  helper: 'helper',
   multiselect: true,
   name: 'example',
+  options: dataGrouped,
   placeholder: 'Select item',
   placeholderSearch: 'Search in list',
   searchable: true,
-  disabled: false,
-  helper: 'helper',
 }
 SelectAll.decorators = [
   StoryComponent => (

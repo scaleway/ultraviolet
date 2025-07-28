@@ -3,12 +3,12 @@ import { Template } from './Template.stories'
 export const Closable = Template.bind({})
 
 Closable.args = {
+  buttonText: 'More info',
   children: 'This is a closable alert',
+  closable: true,
+  onClickButton: () => alert('Button clicked'),
   sentiment: 'info',
   title: 'Information',
-  buttonText: 'More info',
-  onClickButton: () => alert('Button clicked'),
-  closable: true,
 }
 
 Closable.parameters = {

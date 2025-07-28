@@ -1,5 +1,5 @@
-import { Template } from './Template.stories'
 import { coloredChildren } from './helper'
+import { Template } from './Template.stories'
 
 export const AlignItems = Template.bind({})
 
@@ -13,7 +13,7 @@ AlignItems.parameters = {
 }
 
 AlignItems.args = {
+  alignItems: 'center',
   children: coloredChildren,
   gap: 2,
-  alignItems: 'center',
 }

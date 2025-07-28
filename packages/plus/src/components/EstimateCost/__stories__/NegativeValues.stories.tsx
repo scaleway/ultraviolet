@@ -7,12 +7,11 @@ import { Template } from './Template'
 export const NegativeValues = Template.bind({})
 
 NegativeValues.args = {
-  defaultTimeUnit: 'months',
   children: [
     <EstimateCost.Item
       label="My server"
-      subLabel="Here is subLabel text"
       monthlyPrice={100}
+      subLabel="Here is subLabel text"
     >
       <EstimateCost.Strong>Powerful</EstimateCost.Strong>
       <EstimateCost.Regular>100 Cores</EstimateCost.Regular>
@@ -26,6 +25,7 @@ NegativeValues.args = {
       </EstimateCost.Strong>
     </EstimateCost.Item>,
   ],
+  defaultTimeUnit: 'months',
 }
 
 NegativeValues.parameters = {

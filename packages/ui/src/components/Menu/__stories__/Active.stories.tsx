@@ -5,11 +5,11 @@ import { DefaultDisclosure } from './Template.stories'
 export const Active: StoryFn<typeof Menu> = () => (
   <Menu disclosure={DefaultDisclosure}>
     <Menu.Item>default (neutral)</Menu.Item>
-    <Menu.Item sentiment="danger" active>
+    <Menu.Item active sentiment="danger">
       Active Danger
     </Menu.Item>
     <Menu.Item active>Active Neutral</Menu.Item>
-    <Menu.Item sentiment="primary" active>
+    <Menu.Item active sentiment="primary">
       Active Primary
     </Menu.Item>
   </Menu>

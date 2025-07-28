@@ -49,25 +49,28 @@ export const DateInputField = <
     field,
     fieldState: { error },
   } = useController<TFieldValues, TFieldName>({
-    name,
     control,
-    shouldUnregister,
+    name,
     rules: {
       required,
       validate: {
-        minDate: minDateValidator(minDate),
         maxDate: maxDateValidator(maxDate),
+        minDate: minDateValidator(minDate),
         ...validate,
       },
     },
+    shouldUnregister,
   })
 
   return (
     <DateInput
       {...props}
-      name={field.name}
-      label={label}
-      value={Array.isArray(field.value) ? undefined : field.value}
+      endDate={
+        selectsRange && Array.isArray(field.value)
+          ? (field.value as [Date | null, Date | null])[1]
+          : undefined
+      }
+      error={getError({ label, maxDate, minDate }, error)}
       format={
         format ||
         (value => {
@@ -76,13 +79,20 @@ export const DateInputField = <
 
           return showMonthYearPicker
             ? date.toLocaleDateString(undefined, {
-                year: 'numeric',
                 month: 'numeric',
+                year: 'numeric',
               })
             : date.toLocaleDateString()
         })
       }
-      required={required}
+      label={label}
+      maxDate={maxDate}
+      minDate={minDate}
+      name={field.name}
+      onBlur={(e: FocusEvent<HTMLInputElement>) => {
+        field.onBlur()
+        onBlur?.(e)
+      }}
       onChange={(val: DateExtends | null) => {
         if (val && val instanceof Date) {
           onChange?.(val as PathValue<TFieldValues, Path<TFieldValues>>)
@@ -103,13 +113,7 @@ export const DateInputField = <
           field.onChange(val)
         }
       }}
-      onBlur={(e: FocusEvent<HTMLInputElement>) => {
-        field.onBlur()
-        onBlur?.(e)
-      }}
-      maxDate={maxDate}
-      minDate={minDate}
-      error={getError({ minDate, maxDate, label }, error)}
+      required={required}
       selectsRange={selectsRange}
       showMonthYearPicker={showMonthYearPicker}
       startDate={
@@ -117,11 +121,7 @@ export const DateInputField = <
           ? (field.value as [Date | null, Date | null])[0]
           : undefined
       }
-      endDate={
-        selectsRange && Array.isArray(field.value)
-          ? (field.value as [Date | null, Date | null])[1]
-          : undefined
-      }
+      value={Array.isArray(field.value) ? undefined : field.value}
     />
   )
 }

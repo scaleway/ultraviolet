@@ -1,8 +1,8 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
-import { TimeInput } from '..'
 import { Button } from '../../Button'
 import { Stack } from '../../Stack'
+import { TimeInput } from '..'
 
 export const Controlled: StoryFn<typeof TimeInput> = args => {
   const [value24, setValue24] = useState<Date>()
@@ -13,11 +13,11 @@ export const Controlled: StoryFn<typeof TimeInput> = args => {
       <Stack gap={1}>
         <TimeInput
           {...args}
+          labelDescription="24 format"
           onChange={newValue => {
             setValue24(newValue)
           }}
           value={value24}
-          labelDescription="24 format"
         />
         Time: {value24?.toString()}
         <Button onClick={() => setValue24(new Date('01/01/2000 12:34:56'))}>
@@ -27,12 +27,12 @@ export const Controlled: StoryFn<typeof TimeInput> = args => {
       <Stack gap={1}>
         <TimeInput
           {...args}
+          labelDescription="12 format"
           onChange={newValue => {
             setValue12(newValue)
           }}
-          value={value12}
           timeFormat={12}
-          labelDescription="12 format"
+          value={value12}
         />
         Time: {value12?.toString()}
       </Stack>

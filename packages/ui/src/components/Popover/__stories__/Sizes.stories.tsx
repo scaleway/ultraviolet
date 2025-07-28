@@ -18,39 +18,39 @@ export const Sizes: StoryFn<typeof Popover> = () => {
   )
 
   return (
-    <div style={{ gap: '16px', display: 'inline-flex' }}>
+    <div style={{ display: 'inline-flex', gap: '16px' }}>
       <Popover
-        visible={openedSmall}
-        title="Popover Title"
         content="This is a simple text content inside the popover. You can customize it by passing text into content property."
         onClose={() => onCloseCallBack(setOpenedSmall)}
         size="small"
+        title="Popover Title"
+        visible={openedSmall}
       >
-        <Button sentiment="neutral" onClick={() => setOpenedSmall(true)}>
+        <Button onClick={() => setOpenedSmall(true)} sentiment="neutral">
           Open Popover small size
         </Button>
       </Popover>
 
       <Popover
-        visible={openedMedium}
-        title="Popover Title"
         content="This is a simple text content inside the popover. You can customize it by passing text into content property."
         onClose={() => onCloseCallBack(setOpenedMedium)}
         size="medium"
+        title="Popover Title"
+        visible={openedMedium}
       >
-        <Button sentiment="neutral" onClick={() => setOpenedMedium(true)}>
+        <Button onClick={() => setOpenedMedium(true)} sentiment="neutral">
           Open Popover medium size
         </Button>
       </Popover>
 
       <Popover
-        visible={openedLarge}
-        title="Popover Title"
         content="This is a simple text content inside the popover. You can customize it by passing text into content property."
         onClose={() => onCloseCallBack(setOpenedLarge)}
         size="large"
+        title="Popover Title"
+        visible={openedLarge}
       >
-        <Button sentiment="neutral" onClick={() => setOpenedLarge(true)}>
+        <Button onClick={() => setOpenedLarge(true)} sentiment="neutral">
           Open Popover large size
         </Button>
       </Popover>

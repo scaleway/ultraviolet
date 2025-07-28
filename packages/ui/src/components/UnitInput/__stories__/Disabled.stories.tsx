@@ -1,6 +1,6 @@
 import type { StoryFn } from '@storybook/react-vite'
-import { UnitInput } from '..'
 import { Stack } from '../../Stack'
+import { UnitInput } from '..'
 import { Template } from './Template.stories'
 
 const optionsSelect = [
@@ -21,21 +21,21 @@ export const Disabled: StoryFn<typeof UnitInput> = props => (
   <Stack gap={2}>
     <UnitInput
       {...props}
-      options={optionsSelect}
       disabled
       label="Disabled"
       name="Disabled"
+      options={optionsSelect}
       placeholder="I am disabled"
       placeholderUnit="Cannot select"
     />
     <UnitInput
       {...props}
-      options={optionsSelect}
-      readOnly
       label="ReadOnly"
       name="ReadOnly"
+      options={optionsSelect}
       placeholder="I am readOnly"
       placeholderUnit="Cannot select"
+      readOnly
     />
   </Stack>
 )

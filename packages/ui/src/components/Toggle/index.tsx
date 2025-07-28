@@ -225,21 +225,21 @@ export const Toggle = forwardRef(
       <Tooltip text={tooltip}>
         <StyledLabel
           aria-disabled={disabled}
-          size={size}
-          onClick={evt => evt.stopPropagation()}
           className={className}
           data-testid={dataTestId}
           labelPosition={labelPosition}
+          onClick={evt => evt.stopPropagation()}
+          size={size}
         >
-          <Stack gap={0.25} alignItems="baseline">
+          <Stack alignItems="baseline" gap={0.25}>
             {label ? (
-              <Row templateColumns="auto 1fr" gap={1} alignItems="center">
+              <Row alignItems="center" gap={1} templateColumns="auto 1fr">
                 {typeof label === 'string' ? (
                   <Text
                     as="span"
-                    variant={size === 'large' ? 'body' : 'bodySmall'}
                     prominence="default"
                     sentiment="neutral"
+                    variant={size === 'large' ? 'body' : 'bodySmall'}
                   >
                     {label}
                   </Text>
@@ -247,7 +247,7 @@ export const Toggle = forwardRef(
                   label
                 )}
                 {required ? (
-                  <Text as="sup" variant="body" sentiment="danger">
+                  <Text as="sup" sentiment="danger" variant="body">
                     *
                   </Text>
                 ) : null}
@@ -256,10 +256,10 @@ export const Toggle = forwardRef(
             {typeof error === 'string' ? (
               <Text
                 as="p"
-                variant="bodySmall"
+                disabled={disabled}
                 prominence="default"
                 sentiment="danger"
-                disabled={disabled}
+                variant="bodySmall"
               >
                 {error}
               </Text>
@@ -267,31 +267,31 @@ export const Toggle = forwardRef(
             {helper && !error ? (
               <Text
                 as="p"
-                variant="caption"
                 prominence="weak"
                 sentiment="neutral"
+                variant="caption"
               >
                 {helper}
               </Text>
             ) : null}
           </Stack>
           <StyledToggle
-            size={size}
             data-checked={state}
             data-disabled={disabled}
             data-error={!!error}
+            size={size}
           >
             <StyledCheckbox
-              id={id || uniqueId}
-              checked={state}
               aria-checked={state}
+              aria-label={ariaLabel}
+              checked={state}
               disabled={disabled}
+              id={id || uniqueId}
               name={name}
               onChange={onLocalChange}
-              type="checkbox"
               ref={ref}
+              type="checkbox"
               value={value}
-              aria-label={ariaLabel}
             />
           </StyledToggle>
         </StyledLabel>

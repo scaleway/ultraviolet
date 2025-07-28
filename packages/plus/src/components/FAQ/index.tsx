@@ -38,7 +38,7 @@ export const FAQ = ({
 
   return (
     <StyledCard>
-      <Stack gap={2} direction="row">
+      <Stack direction="row" gap={2}>
         <div>
           {!productIconName && illustrationText ? (
             <Bullet sentiment="primary">{illustrationText.toString()}</Bullet>
@@ -46,13 +46,13 @@ export const FAQ = ({
           {ProductIconUsed ? <ProductIconUsed size="xlarge" /> : null}
         </div>
         <div>
-          <Text as="p" variant="bodyStronger" prominence="strong">
+          <Text as="p" prominence="strong" variant="bodyStronger">
             {title}
           </Text>
           <Text as="div" variant="bodySmall">
             {description}
             {notes ? (
-              <Text variant="caption" as="small" italic>
+              <Text as="small" italic variant="caption">
                 {notes}
               </Text>
             ) : null}

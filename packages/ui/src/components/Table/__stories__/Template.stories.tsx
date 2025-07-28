@@ -7,11 +7,10 @@ export const Template: StoryFn<typeof Table> = ({ ...props }) => (
 )
 
 Template.args = {
-  columns,
   children: (
     <Table.Body>
       {data.map(movie => (
-        <Table.Row key={movie.id} id={movie.id}>
+        <Table.Row id={movie.id} key={movie.id}>
           <Table.Cell>{movie.name}</Table.Cell>
           <Table.Cell>{movie.releaseYear}</Table.Cell>
           <Table.Cell>{movie.trilogy}</Table.Cell>
@@ -20,4 +19,5 @@ Template.args = {
       ))}
     </Table.Body>
   ),
+  columns,
 }

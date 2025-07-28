@@ -1,8 +1,8 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { LockIcon } from '@ultraviolet/icons'
 import { useRef, useState } from 'react'
-import { Avatar } from '..'
 import { Stack } from '../../Stack'
+import { Avatar } from '..'
 
 export const Examples: StoryFn<typeof Avatar> = props => {
   const [image, setImage] = useState<string | undefined>(undefined)
@@ -10,41 +10,41 @@ export const Examples: StoryFn<typeof Avatar> = props => {
 
   return (
     <>
-      <Stack gap={1} direction="row" alignItems="center" {...props}>
-        <Avatar variant="icon" shape="circle" sentiment="neutral" size="small">
+      <Stack alignItems="center" direction="row" gap={1} {...props}>
+        <Avatar sentiment="neutral" shape="circle" size="small" variant="icon">
           <LockIcon />
         </Avatar>
         Locked Profile
       </Stack>
-      <Stack gap={1} direction="row" alignItems="start">
+      <Stack alignItems="start" direction="row" gap={1}>
         {image ? (
           <Avatar
-            variant="image"
             image={image}
+            onClick={() => inputRef?.current?.click()}
             shape="square"
             upload
-            onClick={() => inputRef?.current?.click()}
+            variant="image"
           />
         ) : (
           <Avatar
-            variant="text"
-            text="UV"
-            shape="square"
-            upload
             onClick={() => inputRef?.current?.click()}
+            shape="square"
+            text="UV"
+            upload
+            variant="text"
           />
         )}
         <input
-          type="file"
-          ref={inputRef}
-          style={{ display: 'none' }}
           onChange={event => {
             if (event.target.files) {
               setImage(URL.createObjectURL(event.target.files[0]))
             }
           }}
+          ref={inputRef}
+          style={{ display: 'none' }}
+          type="file"
         />
-        <Stack direction="column" alignItems="start">
+        <Stack alignItems="start" direction="column">
           <p>
             <b>My Profile</b>
           </p>
@@ -68,7 +68,7 @@ Examples.parameters = {
 
 Examples.decorators = [
   Story => (
-    <Stack gap={4} direction="column">
+    <Stack direction="column" gap={4}>
       <Story />
     </Stack>
   ),

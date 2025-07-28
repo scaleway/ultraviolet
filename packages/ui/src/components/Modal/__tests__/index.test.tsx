@@ -8,8 +8,8 @@ import {
 } from '@utils/test'
 import { afterAll, beforeEach, describe, expect, test, vi } from 'vitest'
 import { Modal } from '..'
-import { useModal } from '../ModalProvider'
 import illustration from '../__stories__/assets/illustration.webp'
+import { useModal } from '../ModalProvider'
 
 const customDialogBackdropStyles = css`
   background-color: aliceblue;
@@ -68,7 +68,7 @@ describe('Modal', () => {
 
   test(`renders with open={true} and no close icon`, () =>
     shouldMatchEmotionSnapshotWithPortal(
-      <Modal open isClosable={false}>
+      <Modal isClosable={false} open>
         <div>test</div>
       </Modal>,
     ))
@@ -83,9 +83,9 @@ describe('Modal', () => {
   test(`renders with custom classNames`, () =>
     shouldMatchEmotionSnapshotWithPortal(
       <Modal
-        open
         backdropClassName={customDialogBackdropStyles.name}
         className={customDialogStyles.name}
+        open
       >
         <div>test</div>
       </Modal>,
@@ -93,7 +93,7 @@ describe('Modal', () => {
 
   test(`renders with image`, () =>
     shouldMatchEmotionSnapshotWithPortal(
-      <Modal open isClosable={false} image={illustration}>
+      <Modal image={illustration} isClosable={false} open>
         <div>test</div>
       </Modal>,
     ))
@@ -102,8 +102,8 @@ describe('Modal', () => {
     shouldMatchEmotionSnapshotWithPortal(
       <Modal
         ariaLabel="modal-test"
-        id="modal-test"
         disclosure={<button type="button">Test</button>}
+        id="modal-test"
       >
         <div>modal</div>
       </Modal>,
@@ -114,12 +114,12 @@ describe('Modal', () => {
     const { asFragment } = renderWithTheme(
       <Modal
         ariaLabel="modal-test"
-        id="modal-test"
+        data-testid="test"
         disclosure={<button type="button">Open modal</button>}
+        id="modal-test"
         onBeforeClose={() => {
           count += 1
         }}
-        data-testid="test"
       >
         <div>modal</div>
       </Modal>,
@@ -141,9 +141,9 @@ describe('Modal', () => {
     const { asFragment } = renderWithTheme(
       <Modal
         ariaLabel="modal-test"
-        id="modal-test"
-        disclosure={<button type="button">Open modal</button>}
         data-testid="test"
+        disclosure={<button type="button">Open modal</button>}
+        id="modal-test"
         onClose={() => {
           count += 1
         }}
@@ -167,12 +167,12 @@ describe('Modal', () => {
     renderWithTheme(
       <Modal
         ariaLabel="modal-test"
-        id="modal-test"
         disclosure={() => (
-          <button type="button" onClick={mockOnClick}>
+          <button onClick={mockOnClick} type="button">
             Open
           </button>
         )}
+        id="modal-test"
       >
         <div> test</div>
       </Modal>,
@@ -186,18 +186,18 @@ describe('Modal', () => {
     renderWithTheme(
       <Modal
         ariaLabel="modal-test"
-        id="modal-test"
         disclosure={({ toggle }) => (
           <button
-            type="button"
             onClick={() => {
               toggle()
               mockOnClick()
             }}
+            type="button"
           >
             Open
           </button>
         )}
+        id="modal-test"
       >
         <div> test</div>
       </Modal>,
@@ -212,11 +212,11 @@ describe('Modal', () => {
       <Modal ariaLabel="modal-test" id="modal-test" open>
         {({ close }) => (
           <button
-            type="button"
             onClick={() => {
               mockOnClick()
               close()
             }}
+            type="button"
           >
             Close
           </button>
@@ -232,12 +232,12 @@ describe('Modal', () => {
     renderWithTheme(
       <Modal
         ariaLabel="modal-test"
-        id="modal-test"
         disclosure={
-          <button type="button" onClick={mockOnClick}>
+          <button onClick={mockOnClick} type="button">
             Open
           </button>
         }
+        id="modal-test"
       >
         <div> test</div>
       </Modal>,
@@ -253,8 +253,8 @@ describe('Modal', () => {
     renderWithTheme(
       <Modal
         ariaLabel="modal-test"
-        id="modal-test"
         hideOnEsc
+        id="modal-test"
         onBeforeClose={mockOnClose}
         open
       >
@@ -272,8 +272,8 @@ describe('Modal', () => {
     renderWithTheme(
       <Modal
         ariaLabel="modal-test"
-        id="modal-test"
         hideOnEsc={false}
+        id="modal-test"
         onBeforeClose={mockOnClose}
         open
       >
@@ -290,11 +290,11 @@ describe('Modal', () => {
     renderWithTheme(
       <Modal
         ariaLabel="modal-test"
-        id="modal-test"
+        data-testid="test"
         hideOnClickOutside
+        id="modal-test"
         onBeforeClose={mockOnClose}
         open
-        data-testid="test"
       >
         <div> test</div>
       </Modal>,
@@ -310,11 +310,11 @@ describe('Modal', () => {
     renderWithTheme(
       <Modal
         ariaLabel="modal-test"
-        id="modal-test"
+        data-testid="test"
         hideOnClickOutside={false}
+        id="modal-test"
         onBeforeClose={mockOnClose}
         open
-        data-testid="test"
       >
         <div> test</div>
       </Modal>,

@@ -11,8 +11,8 @@ Error.parameters = {
 }
 
 Error.args = {
-  label: 'Error',
   error: 'This is an error',
+  label: 'Error',
 }
 
 Error.decorators = [

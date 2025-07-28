@@ -1,16 +1,16 @@
 import { EstimateCost } from '..'
-import { Template } from './Template'
 import frFlag from './assets/fr.svg'
 import nlFlag from './assets/nl.svg'
 import plFlag from './assets/pl.svg'
+import { Template } from './Template'
 
 export const Region = Template.bind({})
 
 Region.args = {
   children: [
-    <EstimateCost.Region label="PAR" image={frFlag} />,
-    <EstimateCost.Region label="AMS" image={nlFlag} />,
-    <EstimateCost.Region label="WAW" image={plFlag} />,
+    <EstimateCost.Region image={frFlag} label="PAR" />,
+    <EstimateCost.Region image={nlFlag} label="AMS" />,
+    <EstimateCost.Region image={plFlag} label="WAW" />,
   ],
 }
 

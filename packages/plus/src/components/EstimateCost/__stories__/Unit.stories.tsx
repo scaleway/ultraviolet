@@ -13,10 +13,10 @@ export const Unit: StoryFn<ComponentProps<typeof EstimateCost>> = props => {
       <Button onClick={() => setValue(20)}>Set value to 20</Button>
       <EstimateCost {...props} hideOverlay>
         <EstimateCost.Item
+          amount={value}
           label="Screen pixels"
           price={1}
           unit="Px"
-          amount={value}
         >
           <EstimateCost.Unit />
         </EstimateCost.Item>

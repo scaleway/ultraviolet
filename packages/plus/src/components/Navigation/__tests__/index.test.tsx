@@ -18,16 +18,16 @@ const BasicNavigation = ({ pinnedFeature = true }: BasicNavigationProps) => (
       <Navigation.Separator />
       <Navigation.Group label="Products">
         <Navigation.Item
-          label="item1"
-          id="item1"
-          categoryIcon={<UseCaseCategoryIcon variant="neutral" />}
-          noPinButton
           active
+          categoryIcon={<UseCaseCategoryIcon variant="neutral" />}
+          id="item1"
+          label="item1"
+          noPinButton
         />
         <Navigation.Item
-          label="item1"
-          id="item1"
           categoryIcon={<UseCaseCategoryIcon />}
+          id="item1"
+          label="item1"
         />
       </Navigation.Group>
       {/* @ts-expect-error we try to test whe no children is provided */}

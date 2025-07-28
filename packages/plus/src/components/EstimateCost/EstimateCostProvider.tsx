@@ -7,7 +7,7 @@ import EstimateCostLocales from './locales/en'
 const EstimateCostContext = createContext<{
   locales: Record<keyof typeof EstimateCostLocales, string>
   formatNumber: (number: number, options: FormatNumberOption) => string
-}>({ locales: EstimateCostLocales, formatNumber: () => '' })
+}>({ formatNumber: () => '', locales: EstimateCostLocales })
 
 export const useEstimateCost = () => useContext(EstimateCostContext)
 
@@ -45,8 +45,8 @@ export const EstimateCostProvider = ({
   const formatNumber = useCallback(
     (number: number, options: FormatNumberOption) => {
       const numberFormat = new Intl.NumberFormat(numberLocales, {
-        style: 'currency',
         currency,
+        style: 'currency',
         ...options,
       })
 
@@ -57,8 +57,8 @@ export const EstimateCostProvider = ({
 
   const value = useMemo(
     () => ({
-      locales: newLocales,
       formatNumber,
+      locales: newLocales,
     }),
     [formatNumber, newLocales],
   )

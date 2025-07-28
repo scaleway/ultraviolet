@@ -1,8 +1,8 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { consoleLightTheme } from '@ultraviolet/themes'
 import { useEffect, useState } from 'react'
-import { Row } from '..'
 import { Stack } from '../../Stack'
+import { Row } from '..'
 import { DivWithBackground } from './DivWithBackground'
 
 export const Responsive: StoryFn = props => {
@@ -33,15 +33,15 @@ export const Responsive: StoryFn = props => {
   }, [])
 
   const row1Columns = {
-    xxsmall: ['1fr', '1fr', '1fr'],
-    xsmall: ['2fr', '2fr', '2fr'],
     small: ['3fr', '6fr', '3fr'],
+    xsmall: ['2fr', '2fr', '2fr'],
+    xxsmall: ['1fr', '1fr', '1fr'],
   } as const
 
   const row2Columns = {
-    xxsmall: ['1fr', '1fr', '1fr'],
-    xsmall: ['2fr', '2fr', '2fr'],
     small: ['4fr', '3fr', '4fr'],
+    xsmall: ['2fr', '2fr', '2fr'],
+    xxsmall: ['1fr', '1fr', '1fr'],
   } as const
 
   // Helper to get current columns for a row
@@ -55,22 +55,22 @@ export const Responsive: StoryFn = props => {
     <Stack gap={1}>
       <Row
         {...props}
-        templateColumns={{
-          xxsmall: '1fr',
-          xsmall: '2fr 2fr 2fr',
-          small: '3fr 6fr 3fr',
-        }}
         gap={{
-          xxsmall: 1,
-          xsmall: 1,
           small: 2,
+          xsmall: 1,
+          xxsmall: 1,
+        }}
+        templateColumns={{
+          small: '3fr 6fr 3fr',
+          xsmall: '2fr 2fr 2fr',
+          xxsmall: '1fr',
         }}
       >
         {row1Current.map((col, idx) => {
           const sentiments = ['primary', 'success', 'danger']
 
           return (
-            <DivWithBackground key={idx} data-sentiment={sentiments[idx]}>
+            <DivWithBackground data-sentiment={sentiments[idx]} key={idx}>
               {col}
             </DivWithBackground>
           )
@@ -78,22 +78,22 @@ export const Responsive: StoryFn = props => {
       </Row>
       <Row
         {...props}
-        templateColumns={{
-          xxsmall: '1fr',
-          xsmall: '2fr 2fr 2fr',
-          small: '4fr 3fr 4fr',
-        }}
         gap={{
-          xxsmall: 1,
-          xsmall: 1,
           small: 2,
+          xsmall: 1,
+          xxsmall: 1,
+        }}
+        templateColumns={{
+          small: '4fr 3fr 4fr',
+          xsmall: '2fr 2fr 2fr',
+          xxsmall: '1fr',
         }}
       >
         {row2Current.map((col, idx) => {
           const sentiments = ['primary', 'success', 'danger']
 
           return (
-            <DivWithBackground key={idx} data-sentiment={sentiments[idx]}>
+            <DivWithBackground data-sentiment={sentiments[idx]} key={idx}>
               {col}
             </DivWithBackground>
           )

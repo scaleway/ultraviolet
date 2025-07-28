@@ -6,31 +6,31 @@ import { DEPRECATED_ICONS } from '../../packages/icons/src/deprecatedIcons'
 
 const COMPONENTS = [
   {
-    name: 'System Icons',
-    suffix: 'Icon',
     input: 'packages/icons/src/components/Icon/assets',
+    name: 'System Icons',
     output: 'packages/icons/src/components/Icon/__generated__',
+    suffix: 'Icon',
     typeName: 'SystemIconNames',
   },
   {
-    name: 'Product Icons',
-    suffix: 'ProductIcon',
     input: 'packages/icons/src/components/ProductIcon/assets',
+    name: 'Product Icons',
     output: 'packages/icons/src/components/ProductIcon/__generated__',
+    suffix: 'ProductIcon',
     typeName: 'ProductIconNames',
   },
   {
-    name: 'Category Icons',
-    suffix: 'CategoryIcon',
     input: 'packages/icons/src/components/CategoryIcon/assets',
+    name: 'Category Icons',
     output: 'packages/icons/src/components/CategoryIcon/__generated__',
+    suffix: 'CategoryIcon',
     typeName: 'CategoryIconNames',
   },
   {
-    name: 'Logo',
-    suffix: 'Logo',
     input: 'packages/icons/src/components/Logo/assets',
+    name: 'Logo',
     output: 'packages/icons/src/components/Logo/__generated__',
+    suffix: 'Logo',
     typeName: 'LogoIconNames',
   },
 ]

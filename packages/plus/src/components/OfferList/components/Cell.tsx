@@ -22,13 +22,13 @@ export const Cell = ({
 
   return loading ? (
     <LoadingCell>
-      <Skeleton variant="line" data-state={loading} />
+      <Skeleton data-state={loading} variant="line" />
     </LoadingCell>
   ) : (
     <StyledCell
       className={className}
-      data-testid={dataTestId}
       colSpan={colSpan}
+      data-testid={dataTestId}
     >
       {children}
     </StyledCell>

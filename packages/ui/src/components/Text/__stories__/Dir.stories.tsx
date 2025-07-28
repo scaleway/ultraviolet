@@ -6,7 +6,7 @@ export const Dir: StoryFn<typeof Text> = args => (
   <Stack gap={2}>
     <div>
       <strong>ltr</strong>
-      <Text {...args} as="div" variant="body" dir="ltr">
+      <Text {...args} as="div" dir="ltr" variant="body">
         This text is quite long. Lorem ipsum dolor sit amet, consectetur
         adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
         magna aliqua.
@@ -14,7 +14,7 @@ export const Dir: StoryFn<typeof Text> = args => (
     </div>
     <div>
       <strong>rtl</strong>
-      <Text {...args} as="div" variant="body" dir="rtl">
+      <Text {...args} as="div" dir="rtl" variant="body">
         This text is quite long. Lorem ipsum dolor sit amet, consectetur
         adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
         magna aliqua.
@@ -22,7 +22,7 @@ export const Dir: StoryFn<typeof Text> = args => (
     </div>
     <div>
       <strong>auto</strong>
-      <Text {...args} as="div" variant="body" dir="auto">
+      <Text {...args} as="div" dir="auto" variant="body">
         This text is quite long. Lorem ipsum dolor sit amet, consectetur
         adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
         magna aliqua.

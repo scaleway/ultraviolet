@@ -63,9 +63,9 @@ export const ModalProvider = ({ children }: ModalProviderProps) => {
   const value = useMemo(
     () => ({
       openedModals,
+      previsousOpenedModales,
       registerModal,
       unregisterModal,
-      previsousOpenedModales,
     }),
     [openedModals, registerModal, unregisterModal, previsousOpenedModales],
   )

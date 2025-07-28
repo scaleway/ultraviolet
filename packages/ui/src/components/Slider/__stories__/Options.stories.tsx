@@ -1,9 +1,9 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
-import { Slider } from '..'
 import { Button } from '../../Button'
 import { Modal } from '../../Modal'
 import { Stack } from '../../Stack'
+import { Slider } from '..'
 
 const options = [
   { label: '1 Mbps', value: 1 },
@@ -32,12 +32,12 @@ export const Options: StoryFn<typeof Slider> = args => {
       <Stack gap={1}>
         <Slider
           {...args}
-          options={options}
+          label="Custom options"
           name="name"
+          onChange={setValue}
+          options={options}
           tooltip={false}
           value={value}
-          onChange={setValue}
-          label="Custom options"
         />
         Actual input value: {value}
         <br />
@@ -46,37 +46,37 @@ export const Options: StoryFn<typeof Slider> = args => {
 
       <Stack gap={1}>
         <Slider
-          options={options}
-          name="name"
           input
-          unit="Gbps"
-          tooltip={false}
-          value={3}
           label="Custom options with unit prop"
-        />
-      </Stack>
-
-      <Stack gap={1}>
-        <Slider
-          options={partialOptions}
           name="name"
-          input
-          unit="Gbps"
+          options={options}
           tooltip={false}
+          unit="Gbps"
           value={3}
-          label="Partial options with only the min and max value"
         />
       </Stack>
 
       <Stack gap={1}>
         <Slider
-          name="slider"
+          input
+          label="Partial options with only the min and max value"
+          name="name"
+          options={partialOptions}
+          tooltip={false}
+          unit="Gbps"
+          value={3}
+        />
+      </Stack>
+
+      <Stack gap={1}>
+        <Slider
           data-testid="slider"
-          value={doubleValue}
           double
-          unit="Mb"
-          options={options}
+          name="slider"
           onChange={setDoubleValue}
+          options={options}
+          unit="Mb"
+          value={doubleValue}
         />
         Actual input value: [{doubleValue[0]}, {doubleValue[1]}]
         <br />
@@ -88,9 +88,9 @@ export const Options: StoryFn<typeof Slider> = args => {
         <Modal disclosure={<Button>Open modal</Button>}>
           <Slider
             {...args}
+            label="Label"
             options={options}
             tooltip={false}
-            label="Label"
             unit="Gbps"
           />
         </Modal>

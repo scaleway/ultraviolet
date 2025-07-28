@@ -5,10 +5,10 @@ export const Icons = Template.bind({})
 
 Icons.args = {
   tags: [
-    { label: 'smooth', icon: <IdIcon /> },
+    { icon: <IdIcon />, label: 'smooth' },
     'code',
-    { label: 'hello', icon: <LockIcon /> },
-    { label: 'world', icon: <PlusIcon /> },
+    { icon: <LockIcon />, label: 'hello' },
+    { icon: <PlusIcon />, label: 'world' },
   ],
   threshold: 3,
 }

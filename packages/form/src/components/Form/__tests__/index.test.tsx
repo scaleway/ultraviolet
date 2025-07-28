@@ -10,9 +10,9 @@ describe('Form', () => {
     const { result } = renderHook(() => useForm())
     const { asFragment } = renderWithTheme(
       <Form
-        onSubmit={() => {}}
         errors={mockFormErrors}
         methods={result.current}
+        onSubmit={() => {}}
       >
         Test
       </Form>,
@@ -27,8 +27,8 @@ describe('Form', () => {
     const { asFragment } = renderWithTheme(
       <Form
         errors={mockFormErrors}
-        onSubmit={onSubmit}
         methods={result.current}
+        onSubmit={onSubmit}
       >
         <button type="submit">Submit</button>
       </Form>,

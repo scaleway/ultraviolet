@@ -3,9 +3,9 @@ import { userEvent } from '@testing-library/user-event'
 import { mockFormErrors, renderWithForm, renderWithTheme } from '@utils/test'
 import { useForm } from 'react-hook-form'
 import { describe, expect, test, vi } from 'vitest'
-import { TextInputField } from '..'
 import { Submit } from '../..'
 import { Form } from '../../Form'
+import { TextInputField } from '..'
 
 describe('TextInputField', () => {
   test('should render correctly', () => {
@@ -23,11 +23,11 @@ describe('TextInputField', () => {
 
     const { asFragment } = renderWithTheme(
       <Form
-        onSubmit={onSubmit}
         errors={mockFormErrors}
         methods={result.current}
+        onSubmit={onSubmit}
       >
-        <TextInputField label="Test" name="test" required clearable />
+        <TextInputField clearable label="Test" name="test" required />
         <Submit>Submit</Submit>
       </Form>,
     )

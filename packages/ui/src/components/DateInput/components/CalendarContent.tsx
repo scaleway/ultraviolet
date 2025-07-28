@@ -30,12 +30,13 @@ export const CalendarContent = () => {
 
   return (
     <Stack gap={2}>
-      <Stack direction="row" width="100%" justifyContent="space-between">
+      <Stack direction="row" justifyContent="space-between" width="100%">
         <Button
           data-testid="previous-month"
-          variant="ghost"
-          sentiment="neutral"
-          size="xsmall"
+          disabled={
+            !!(minDate && minDate > new Date(yearToShow, monthToShow - 1, 0)) ||
+            disabled
+          }
           onClick={() => {
             if (
               (!minDate ||
@@ -54,27 +55,27 @@ export const CalendarContent = () => {
               }
             }
           }}
-          disabled={
-            !!(minDate && minDate > new Date(yearToShow, monthToShow - 1, 0)) ||
-            disabled
-          }
+          sentiment="neutral"
+          size="xsmall"
+          variant="ghost"
         >
           <ArrowLeftIcon />
         </Button>
         <CapitalizedText
           as="span"
-          variant="bodyStrong"
-          sentiment="neutral"
           disabled={disabled}
+          sentiment="neutral"
+          variant="bodyStrong"
         >
           {!showMonthYearPicker ? MONTHS_ARR[monthToShow - 1] : null}&nbsp;
           {yearToShow}
         </CapitalizedText>
         <Button
           data-testid="next-month"
-          variant="ghost"
-          sentiment="neutral"
-          size="xsmall"
+          disabled={
+            !!(maxDate && maxDate < new Date(yearToShow, monthToShow, 1)) ||
+            disabled
+          }
           onClick={() => {
             if (
               (!maxDate || maxDate >= new Date(yearToShow, monthToShow, 1)) &&
@@ -89,10 +90,9 @@ export const CalendarContent = () => {
               }
             }
           }}
-          disabled={
-            !!(maxDate && maxDate < new Date(yearToShow, monthToShow, 1)) ||
-            disabled
-          }
+          sentiment="neutral"
+          size="xsmall"
+          variant="ghost"
         >
           <ArrowRightIcon />
         </Button>

@@ -1,9 +1,9 @@
 import styled from '@emotion/styled'
 import { Stack, Text } from '@ultraviolet/ui'
-import { useContext } from 'react'
 import type { ReactNode } from 'react'
-import { OrderSummaryContext } from './Provider'
+import { useContext } from 'react'
 import { DisplayPrice } from './helpers'
+import { OrderSummaryContext } from './Provider'
 import type { PriceTypeSingle, TimeUnit } from './types'
 
 const NonScrollableContainer = styled(Stack)`
@@ -38,15 +38,15 @@ export const NonScrollableContent = ({
   return (
     <NonScrollableContainer gap={3}>
       {children}
-      <Stack direction="row" justifyContent="space-between" alignItems="center">
+      <Stack alignItems="center" direction="row" justifyContent="space-between">
         {totalPriceInfo ? (
           <Stack>
-            <Stack direction="row" gap={1} alignItems="center">
+            <Stack alignItems="center" direction="row" gap={1}>
               <Text
                 as="span"
-                variant="bodyStrong"
-                sentiment="neutral"
                 prominence="strong"
+                sentiment="neutral"
+                variant="bodyStrong"
               >
                 {locales['order.summary.total']}:
               </Text>
@@ -55,12 +55,12 @@ export const NonScrollableContent = ({
             {totalPriceInfo}
           </Stack>
         ) : (
-          <Stack direction="row" gap={1} alignItems="center">
+          <Stack alignItems="center" direction="row" gap={1}>
             <Text
               as="span"
-              variant="bodyStrong"
-              sentiment="neutral"
               prominence="strong"
+              sentiment="neutral"
+              variant="bodyStrong"
             >
               {locales['order.summary.total']}
               {additionalInfo ? ` ${additionalInfo}` : null}:
@@ -71,33 +71,33 @@ export const NonScrollableContent = ({
         {totalPrice.totalPrice === totalPrice.totalPriceWithDiscount ? (
           <Text
             as="span"
-            variant="headingSmallStrong"
-            sentiment="neutral"
             data-testid="total-price"
             prominence="strong"
+            sentiment="neutral"
+            variant="headingSmallStrong"
           >
-            <DisplayPrice price={totalPrice} beforeOrAfter="after" />
+            <DisplayPrice beforeOrAfter="after" price={totalPrice} />
             {hideDetails ? `/${unit}` : null}
           </Text>
         ) : (
-          <Stack direction="row" gap={1} alignItems="center">
+          <Stack alignItems="center" direction="row" gap={1}>
             <Text
               as="span"
-              variant="bodySmallStrong"
-              sentiment="neutral"
               prominence="weak"
+              sentiment="neutral"
               strikeThrough
+              variant="bodySmallStrong"
             >
-              <DisplayPrice price={totalPrice} beforeOrAfter="before" />
+              <DisplayPrice beforeOrAfter="before" price={totalPrice} />
             </Text>
             <Text
               as="span"
-              variant="headingSmallStrong"
-              sentiment="neutral"
               data-testid="total-price"
               prominence="strong"
+              sentiment="neutral"
+              variant="headingSmallStrong"
             >
-              <DisplayPrice price={totalPrice} beforeOrAfter="after" />
+              <DisplayPrice beforeOrAfter="after" price={totalPrice} />
               {hideDetails ? `/${unit}` : null}
             </Text>
           </Stack>

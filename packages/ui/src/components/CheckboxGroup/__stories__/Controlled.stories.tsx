@@ -9,7 +9,6 @@ export const Controlled: StoryFn = () => {
     <CheckboxGroup
       legend="Conditions:"
       name="conditions"
-      value={values}
       onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
         const data = [...values]
         if (data.includes(e.currentTarget.value)) {
@@ -19,6 +18,7 @@ export const Controlled: StoryFn = () => {
         }
         onChange(data)
       }}
+      value={values}
     >
       <CheckboxGroup.Checkbox
         name="termsAndConditions"

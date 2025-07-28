@@ -48,8 +48,8 @@ export const Regular = memo(
     return !isDisabledOnOverlay || !isOverlay ? (
       <StyledRegular
         className={className}
-        variant={variant}
         isOverlay={isOverlay}
+        variant={variant}
       >
         {children}
       </StyledRegular>

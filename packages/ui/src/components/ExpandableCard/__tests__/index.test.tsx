@@ -2,8 +2,8 @@ import { fireEvent, screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme } from '@utils/test'
 import { describe, expect, test, vi } from 'vitest'
-import { ExpandableCard } from '..'
 import { Text } from '../../Text'
+import { ExpandableCard } from '..'
 
 describe('ExpandableCard', () => {
   test('renders correctly with default values', () => {
@@ -40,7 +40,7 @@ describe('ExpandableCard', () => {
 
   test('works properly when disabled', async () => {
     renderWithTheme(
-      <ExpandableCard header="Title" disabled>
+      <ExpandableCard disabled header="Title">
         Content
       </ExpandableCard>,
     )
@@ -62,13 +62,13 @@ describe('ExpandableCard', () => {
     const { asFragment } = renderWithTheme(
       ['card-1', 'card-2', 'card-3'].map((name, index) => (
         <ExpandableCard
-          key={name}
-          header="Title"
           draggable
-          value={name}
+          header="Title"
+          index={index}
+          key={name}
           onDrop={onDrop}
           onKeyDown={onKeyDown}
-          index={index}
+          value={name}
         >
           Content
         </ExpandableCard>
@@ -106,10 +106,10 @@ describe('ExpandableCard', () => {
     const onToggleExpand = vi.fn()
     renderWithTheme(
       <ExpandableCard
-        header="Title"
-        expanded={false}
-        onToggleExpand={onToggleExpand}
         data-testid="expandablecard"
+        expanded={false}
+        header="Title"
+        onToggleExpand={onToggleExpand}
       >
         Content
       </ExpandableCard>,

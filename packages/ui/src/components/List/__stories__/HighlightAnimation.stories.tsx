@@ -1,11 +1,11 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { PlusIcon, RestoreIcon } from '@ultraviolet/icons'
 import { useState } from 'react'
-import { List } from '..'
 import { Button } from '../../Button'
 import { Row } from '../../Row'
 import { Stack } from '../../Stack'
-import { data as DATA, columns } from './resources'
+import { List } from '..'
+import { columns, data as DATA } from './resources'
 
 type Planets = {
   id: string
@@ -19,21 +19,21 @@ export const HighlightAnimation: StoryFn<typeof List> = ({ ...props }) => {
   const [data, setData] = useState<Planets[]>(DATA)
 
   const newData = {
+    aphelion: 0,
     id: (data.length + 1).toString(),
+    isNew: true,
     name: 'New planet',
     perihelion: 0,
-    aphelion: 0,
-    isNew: true,
   } satisfies Planets
 
   return (
     <Stack gap={1}>
-      <Row templateColumns="repeat(4, 1fr)" gap={2}>
+      <Row gap={2} templateColumns="repeat(4, 1fr)">
         <Button onClick={() => setData([...data, newData])}>
           <PlusIcon />
           Add data
         </Button>
-        <Button sentiment="neutral" onClick={() => setData(DATA)}>
+        <Button onClick={() => setData(DATA)} sentiment="neutral">
           <RestoreIcon />
           Reset data
         </Button>
@@ -41,9 +41,9 @@ export const HighlightAnimation: StoryFn<typeof List> = ({ ...props }) => {
       <List {...props} columns={columns}>
         {data.map(planet => (
           <List.Row
-            key={planet.id}
-            id={planet.id}
             highlightAnimation={planet.isNew}
+            id={planet.id}
+            key={planet.id}
           >
             <List.Cell>{planet.name}</List.Cell>
             <List.Cell>{planet.perihelion}AU</List.Cell>

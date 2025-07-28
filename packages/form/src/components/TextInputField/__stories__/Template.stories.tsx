@@ -1,8 +1,8 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { Stack } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
-import { TextInputField } from '..'
 import { Submit } from '../..'
+import { TextInputField } from '..'
 
 export const Template: StoryFn<
   ComponentProps<typeof TextInputField>
@@ -14,9 +14,9 @@ export const Template: StoryFn<
 )
 
 Template.args = {
+  'aria-atomic': 'true',
+  'aria-live': 'polite',
   label: 'Label',
   name: 'example',
   role: 'status',
-  'aria-live': 'polite',
-  'aria-atomic': 'true',
 }

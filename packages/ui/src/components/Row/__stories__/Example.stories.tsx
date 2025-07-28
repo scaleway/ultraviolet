@@ -1,16 +1,16 @@
 import type { StoryFn } from '@storybook/react-vite'
-import { Row } from '..'
 import { Card, Separator, Stack, Status, Text } from '../..'
+import { Row } from '..'
 
 export const Example: StoryFn = args => (
   <Card header="Overview">
     <Stack gap={2}>
-      <Row {...args} templateColumns="repeat(4, 1fr)" gap={2}>
+      <Row {...args} gap={2} templateColumns="repeat(4, 1fr)">
         <Stack>
           <Text as="span" variant="bodyStrong">
             Status
           </Text>
-          <Stack direction="row" gap={1} alignItems="center">
+          <Stack alignItems="center" direction="row" gap={1}>
             <Status sentiment="success" />
             <Text as="span" variant="body">
               Running
@@ -43,7 +43,7 @@ export const Example: StoryFn = args => (
         </Stack>
       </Row>
       <Separator />
-      <Row {...args} templateColumns="repeat(2, 1fr)" gap={2}>
+      <Row {...args} gap={2} templateColumns="repeat(2, 1fr)">
         <Stack>
           <Stack direction="row" gap={2}>
             <Text as="span" variant="bodyStrong">
@@ -66,7 +66,7 @@ export const Example: StoryFn = args => (
         </Stack>
       </Row>
       <Separator />
-      <Row {...args} templateColumns="repeat(3, 1fr)" gap={2}>
+      <Row {...args} gap={2} templateColumns="repeat(3, 1fr)">
         <div>
           <Text as="div" variant="bodyStrong">
             IPV6

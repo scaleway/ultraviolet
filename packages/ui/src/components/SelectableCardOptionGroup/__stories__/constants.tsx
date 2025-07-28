@@ -44,14 +44,14 @@ export const ubuntuOptionsLegacy: ComponentProps<
     value: 'ubuntu-20.04',
   },
   {
-    label: 'Ubuntu 18.04 LTS',
-    value: 'ubuntu-18.04',
     description: 'This version is legacy please choose a higher version.',
+    label: 'Ubuntu 18.04 LTS',
     optionalInfo: (
       <Badge sentiment="warning" size="small">
         Legacy
       </Badge>
     ),
+    value: 'ubuntu-18.04',
   },
 ]
 

@@ -35,11 +35,11 @@ type ThemeType = {
 const themesMatches = [
   {
     inputTheme: 'productDarker',
-    palette: 'paletteDarker',
     outputTheme: 'darker',
+    palette: 'paletteDarker',
   },
-  { inputTheme: 'productDark', palette: 'paletteDark', outputTheme: 'dark' },
-  { inputTheme: 'productLight', palette: 'paletteLight', outputTheme: 'light' },
+  { inputTheme: 'productDark', outputTheme: 'dark', palette: 'paletteDark' },
+  { inputTheme: 'productLight', outputTheme: 'light', palette: 'paletteLight' },
 ]
 
 const hexColorRegex = /#(?:(?:[\da-f]{3}){1,2}(?:[\da-f]{2}){0,1})/gi
@@ -64,7 +64,7 @@ type UvThemeType = {
 }
 
 const createCSSFile = (theme: string, content: UvThemeType) => {
-  const cssContent = generateThemeCss({ uvTheme: content, filename: theme })
+  const cssContent = generateThemeCss({ filename: theme, uvTheme: content })
   const filePath = `packages/themes/public/style/${theme}.css`
   fs.writeFileSync(filePath, cssContent, 'utf8')
 }
@@ -242,7 +242,7 @@ export const generatePalette = (
   // Variable : theme color
   const colors = getValues(inputTheme, {
     typeFilter: 'color',
-    variables: { shades: paletteShades ?? {}, other: paletteOther ?? {} },
+    variables: { other: paletteOther ?? {}, shades: paletteShades ?? {} },
   })
 
   console.log('colors generated')
@@ -264,9 +264,9 @@ export const generatePalette = (
   const typography = getValues(inputTheme, {
     typeFilter: 'typography',
     variables: {
+      fontSize: fontSize ?? {},
       lineHeight: lineHeight ?? {},
       sizing: sizing ?? {},
-      fontSize: fontSize ?? {},
     },
   })
 
@@ -296,6 +296,7 @@ export const generatePalette = (
   console.log('breakpoints generated')
 
   const output = alphaOrder({
+    breakpoints: breakpoints ?? {},
     colors: {
       ...(typeof colors === 'object' ? colors : {}),
       neutral: {
@@ -312,11 +313,10 @@ export const generatePalette = (
     },
     radii: radii ?? {},
     shadows: formatShadows(shadows as ShadowType),
-    space: space ?? {},
     sizing: sizing ?? {},
+    space: space ?? {},
     theme: themeMatch.outputTheme,
     typography: typography ?? {},
-    breakpoints: breakpoints ?? {},
   })
 
   return output

@@ -35,14 +35,14 @@ export const Submit = ({
     <Button
       className={className}
       disabled={isDisabled}
+      fullWidth={fullWidth}
       isLoading={isSubmitting}
+      onClick={onClick}
+      sentiment={sentiment}
       size={size}
+      tooltip={tooltip}
       type="submit"
       variant={variant}
-      sentiment={sentiment}
-      tooltip={tooltip}
-      fullWidth={fullWidth}
-      onClick={onClick}
     >
       {children}
     </Button>

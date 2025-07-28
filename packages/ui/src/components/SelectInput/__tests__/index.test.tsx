@@ -4,7 +4,7 @@ import { renderWithTheme } from '@utils/test'
 import type { ReactNode } from 'react'
 import { afterAll, beforeAll, describe, expect, test, vi } from 'vitest'
 import { SelectInput } from '..'
-import { OptionalInfo, cities, dataGrouped, dataUnGrouped } from './resources'
+import { cities, dataGrouped, dataUnGrouped, OptionalInfo } from './resources'
 
 export type OptionType = {
   value: string
@@ -28,7 +28,7 @@ describe('SelectInput', () => {
 
   test.skip('renders correctly', () => {
     const { asFragment } = renderWithTheme(
-      <SelectInput name="test" options={dataUnGrouped} label="label" />,
+      <SelectInput label="label" name="test" options={dataUnGrouped} />,
     )
     expect(asFragment()).toMatchSnapshot()
   })
@@ -36,9 +36,9 @@ describe('SelectInput', () => {
   test.skip('renders correctly small', () => {
     const { asFragment } = renderWithTheme(
       <SelectInput
+        label="label"
         name="test"
         options={dataUnGrouped}
-        label="label"
         size="small"
       />,
     )
@@ -48,9 +48,9 @@ describe('SelectInput', () => {
   test.skip('renders correctly with tooltip', () => {
     const { asFragment } = renderWithTheme(
       <SelectInput
+        label="label"
         name="test"
         options={dataUnGrouped}
-        label="label"
         tooltip="tooltip"
       />,
     )
@@ -60,9 +60,9 @@ describe('SelectInput', () => {
   test.skip('renders correctly required', () => {
     const { asFragment } = renderWithTheme(
       <SelectInput
+        label="label"
         name="test"
         options={dataUnGrouped}
-        label="label"
         required
       />,
     )
@@ -72,11 +72,11 @@ describe('SelectInput', () => {
   test.skip('renders correctly not clearable', () => {
     const { asFragment } = renderWithTheme(
       <SelectInput
+        clearable={false}
         name="test"
         options={dataUnGrouped}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
-        clearable={false}
         searchable={false}
         value={dataUnGrouped[4].value}
       />,
@@ -130,12 +130,12 @@ describe('SelectInput', () => {
   test.skip('renders correctly with footer', async () => {
     const { asFragment } = renderWithTheme(
       <SelectInput
+        footer="this is a footer"
         name="test"
         options={dataGrouped}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
         value={dataGrouped['terrestrial planets'][4].value}
-        footer="this is a footer"
       />,
     )
     const input = screen.getByText('Pluto')
@@ -146,12 +146,12 @@ describe('SelectInput', () => {
   test.skip('renders correctly multiselect', async () => {
     const { asFragment } = renderWithTheme(
       <SelectInput
+        multiselect
         name="test"
         options={dataGrouped}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
         value={[dataGrouped['terrestrial planets'][4].value]}
-        multiselect
       />,
     )
     const input = screen.getByText('Pluto')
@@ -162,12 +162,12 @@ describe('SelectInput', () => {
   test.skip('renders correctly with label on the right and optional info on the left', async () => {
     const { asFragment } = renderWithTheme(
       <SelectInput
+        descriptionDirection="row"
         name="test"
+        onChange={() => {}}
         options={OptionalInfo}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
-        descriptionDirection="row"
-        onChange={() => {}}
       />,
     )
     const input = screen.getByText('placeholder')
@@ -178,12 +178,12 @@ describe('SelectInput', () => {
   test.skip('renders correctly with label on the right and optional info on the right', async () => {
     const { asFragment } = renderWithTheme(
       <SelectInput
+        descriptionDirection="row"
         name="test"
+        optionalInfoPlacement="right"
         options={OptionalInfo}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
-        descriptionDirection="row"
-        optionalInfoPlacement="right"
       />,
     )
     const input = screen.getByText('placeholder')
@@ -194,12 +194,12 @@ describe('SelectInput', () => {
   test.skip('renders correctly with label on the bottom and optional info on the left', async () => {
     const { asFragment } = renderWithTheme(
       <SelectInput
+        descriptionDirection="column"
         name="test"
+        optionalInfoPlacement="left"
         options={OptionalInfo}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
-        descriptionDirection="column"
-        optionalInfoPlacement="left"
       />,
     )
     const input = screen.getByText('placeholder')
@@ -210,12 +210,12 @@ describe('SelectInput', () => {
   test.skip('renders correctly with label on the bottom and optional info on the right', async () => {
     const { asFragment } = renderWithTheme(
       <SelectInput
+        descriptionDirection="column"
         name="test"
+        optionalInfoPlacement="right"
         options={OptionalInfo}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
-        descriptionDirection="column"
-        optionalInfoPlacement="right"
       />,
     )
     const input = screen.getByText('placeholder')
@@ -226,13 +226,13 @@ describe('SelectInput', () => {
   test.skip('renders correctly loadMore', () => {
     const { asFragment } = renderWithTheme(
       <SelectInput
+        clearable={false}
+        loadMore="LoadMore"
         name="test"
         options={cities}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
-        clearable={false}
         searchable={false}
-        loadMore="LoadMore"
       />,
     )
     expect(asFragment()).toMatchSnapshot()
@@ -241,11 +241,11 @@ describe('SelectInput', () => {
   test.skip('renders correctly with emptyState', async () => {
     const { asFragment } = renderWithTheme(
       <SelectInput
+        emptyState="no option"
         name="emptystate"
         options={{}}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
-        emptyState="no option"
       />,
     )
     const input = screen.getByText('placeholder')
@@ -256,11 +256,11 @@ describe('SelectInput', () => {
   test.skip('renders correctly disabled', async () => {
     const { asFragment } = renderWithTheme(
       <SelectInput
+        disabled
         name="test"
         options={dataUnGrouped}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
-        disabled
       />,
     )
     const input = screen.getByText('placeholder')
@@ -287,12 +287,12 @@ describe('SelectInput', () => {
   test.skip('renders correctly with dropdownAlign', async () => {
     const { asFragment } = renderWithTheme(
       <SelectInput
+        dropdownAlign="center"
         name="test"
         options={dataUnGrouped}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
         required
-        dropdownAlign="center"
       />,
     )
 
@@ -319,11 +319,11 @@ describe('SelectInput', () => {
   test.skip('renders correctly with error', async () => {
     const { asFragment } = renderWithTheme(
       <SelectInput
+        error="error"
         name="test"
         options={dataUnGrouped}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
-        error="error"
       />,
     )
     const input = screen.getByText('placeholder')
@@ -364,12 +364,12 @@ describe('SelectInput', () => {
   test.skip('handles correctly dropdown with clicks - grouped', async () => {
     renderWithTheme(
       <SelectInput
+        multiselect
         name="test"
         options={dataGrouped}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
         searchable={false}
-        multiselect
       />,
     )
 
@@ -386,12 +386,12 @@ describe('SelectInput', () => {
   test.skip('handles correctly dropdown with clicks - ungrouped', async () => {
     renderWithTheme(
       <SelectInput
+        multiselect
         name="test"
         options={dataGrouped}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
         searchable={false}
-        multiselect
         size="medium"
       />,
     )
@@ -409,14 +409,14 @@ describe('SelectInput', () => {
   test.skip('handles correctly closable tags', async () => {
     renderWithTheme(
       <SelectInput
+        multiselect
         name="test"
+        onChange={() => {}}
         options={dataUnGrouped}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
         searchable={false}
-        multiselect
         value={[dataUnGrouped[1].value]}
-        onChange={() => {}}
       />,
     )
     const venusCloseButton = screen.getByTestId('close-tag')
@@ -427,15 +427,15 @@ describe('SelectInput', () => {
   test.skip('renders correctly unclosable tags when readonly', () => {
     const { asFragment } = renderWithTheme(
       <SelectInput
+        multiselect
         name="test"
+        onChange={() => {}}
         options={dataUnGrouped}
-        readOnly
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
+        readOnly
         searchable={false}
-        multiselect
         value={[dataUnGrouped[1].value]}
-        onChange={() => {}}
       />,
     )
     expect(asFragment()).toMatchSnapshot()
@@ -515,12 +515,12 @@ describe('SelectInput', () => {
   test.skip('handles correctly clear all', async () => {
     renderWithTheme(
       <SelectInput
+        clearable
         name="test"
         options={dataUnGrouped}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
         searchable={false}
-        clearable
         value={dataUnGrouped[4].value}
       />,
     )
@@ -559,10 +559,10 @@ describe('SelectInput', () => {
     renderWithTheme(
       <SelectInput
         name="test"
+        onChange={onChange}
         options={dataUnGrouped}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
-        onChange={onChange}
       />,
     )
     const input = screen.getByTestId('select-input-test')
@@ -624,11 +624,11 @@ describe('SelectInput', () => {
     renderWithTheme(
       <SelectInput
         name="test"
+        onChange={(values: (string | undefined)[]) => values}
         options={dataGrouped}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
         searchable={false}
-        onChange={(values: (string | undefined)[]) => values}
       />,
     )
     const input = screen.getByTestId('select-input-test')
@@ -640,13 +640,13 @@ describe('SelectInput', () => {
   test.skip('renders with onChange - multiselect', async () => {
     renderWithTheme(
       <SelectInput
+        multiselect
         name="test"
+        onChange={(values: (string | undefined)[]) => values}
         options={dataGrouped}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
         searchable={false}
-        onChange={(values: (string | undefined)[]) => values}
-        multiselect
       />,
     )
     const input = screen.getByTestId('select-input-test')
@@ -659,10 +659,10 @@ describe('SelectInput', () => {
     renderWithTheme(
       <SelectInput
         name="test"
+        onChange={(values: (string | undefined)[]) => values}
         options={dataGrouped}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
-        onChange={(values: (string | undefined)[]) => values}
       />,
     )
     const input = screen.getByTestId('select-input-test')
@@ -712,12 +712,12 @@ describe('SelectInput', () => {
     // There is issues with this test
     renderWithTheme(
       <SelectInput
+        multiselect
         name="test"
+        onChange={(values: (string | undefined)[]) => values}
         options={dataUnGrouped}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
-        multiselect
-        onChange={(values: (string | undefined)[]) => values}
         searchable
       />,
     )
@@ -762,12 +762,12 @@ describe('SelectInput', () => {
     // There is issues with this test
     renderWithTheme(
       <SelectInput
+        multiselect
         name="test"
+        onChange={(values: (string | undefined)[]) => values}
         options={dataGrouped}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
-        multiselect
-        onChange={(values: (string | undefined)[]) => values}
         searchable
       />,
     )
@@ -815,14 +815,14 @@ describe('SelectInput', () => {
   test.skip('renders correctly selected tags when multiselect', async () => {
     renderWithTheme(
       <SelectInput
-        name="test"
-        options={dataGrouped}
+        descriptionDirection="column"
         multiselect
-        placeholder="placeholder"
-        value={[dataGrouped['jovian planets'][1].value]}
+        name="test"
         onChange={(values: (string | undefined)[]) => values}
         optionalInfoPlacement="left"
-        descriptionDirection="column"
+        options={dataGrouped}
+        placeholder="placeholder"
+        value={[dataGrouped['jovian planets'][1].value]}
       />,
     )
 
@@ -849,14 +849,14 @@ describe('SelectInput', () => {
   test.skip('handles correcty selectAll grouped data', async () => {
     renderWithTheme(
       <SelectInput
-        name="test"
-        options={dataGrouped}
         multiselect
-        placeholder="placeholder"
+        name="test"
         onChange={(values: (string | undefined)[]) => values}
+        options={dataGrouped}
+        placeholder="placeholder"
         selectAll={{
-          label: 'Select',
           description: 'all',
+          label: 'Select',
         }}
       />,
     )
@@ -906,14 +906,14 @@ describe('SelectInput', () => {
   test.skip('handles correcty selectAll ungrouped data', async () => {
     renderWithTheme(
       <SelectInput
-        name="test"
-        options={dataUnGrouped}
         multiselect
-        placeholder="placeholder"
+        name="test"
         onChange={(values: (string | undefined)[]) => values}
+        options={dataUnGrouped}
+        placeholder="placeholder"
         selectAll={{
-          label: 'Select',
           description: 'all',
+          label: 'Select',
         }}
       />,
     )
@@ -963,11 +963,11 @@ describe('SelectInput', () => {
   test.skip('handles correcty selectAllGroup', async () => {
     renderWithTheme(
       <SelectInput
-        name="test"
-        options={dataGrouped}
         multiselect
-        placeholder="placeholder"
+        name="test"
         onChange={(values: (string | undefined)[]) => values}
+        options={dataGrouped}
+        placeholder="placeholder"
         selectAllGroup
       />,
     )
@@ -1007,11 +1007,11 @@ describe('SelectInput', () => {
   test.skip('handles correcty selectAllGroup - keyboard events', async () => {
     renderWithTheme(
       <SelectInput
-        name="test"
-        options={dataGrouped}
         multiselect
-        placeholder="placeholder"
+        name="test"
         onChange={(values: (string | undefined)[]) => values}
+        options={dataGrouped}
+        placeholder="placeholder"
         selectAllGroup
       />,
     )
@@ -1040,17 +1040,17 @@ describe('SelectInput', () => {
   test.skip('handles correcty selectAllGroup with selectAll - grouped data', async () => {
     renderWithTheme(
       <SelectInput
-        name="test"
-        options={dataGrouped}
-        multiselect
         clearable={false}
-        placeholder="placeholder"
+        multiselect
+        name="test"
         onChange={(values: (string | undefined)[]) => values}
-        selectAllGroup
+        options={dataGrouped}
+        placeholder="placeholder"
         selectAll={{
-          label: 'Select',
           description: 'all',
+          label: 'Select',
         }}
+        selectAllGroup
       />,
     )
 
@@ -1099,12 +1099,12 @@ describe('SelectInput', () => {
   test.skip('handles correctly click on item - optionalInfoPlacement="left" & descriptionDirection="row" & multiselect', async () => {
     renderWithTheme(
       <SelectInput
-        name="test"
-        options={dataGrouped}
-        multiselect
-        placeholder="placeholder"
-        optionalInfoPlacement="left"
         descriptionDirection="row"
+        multiselect
+        name="test"
+        optionalInfoPlacement="left"
+        options={dataGrouped}
+        placeholder="placeholder"
       />,
     )
     const input = screen.getByTestId('select-input-test')
@@ -1115,12 +1115,12 @@ describe('SelectInput', () => {
   test.skip('handles correctly click on item - optionalInfoPlacement="right" & descriptionDirection="row" & multiselect', async () => {
     renderWithTheme(
       <SelectInput
-        name="test"
-        options={dataGrouped}
-        multiselect
-        placeholder="placeholder"
-        optionalInfoPlacement="right"
         descriptionDirection="row"
+        multiselect
+        name="test"
+        optionalInfoPlacement="right"
+        options={dataGrouped}
+        placeholder="placeholder"
       />,
     )
     const input = screen.getByTestId('select-input-test')
@@ -1131,12 +1131,12 @@ describe('SelectInput', () => {
   test.skip('handles correctly click on item - optionalInfoPlacement="left" & descriptionDirection="column" & multiselect', async () => {
     renderWithTheme(
       <SelectInput
-        name="test"
-        options={dataGrouped}
-        multiselect
-        placeholder="placeholder"
-        optionalInfoPlacement="left"
         descriptionDirection="column"
+        multiselect
+        name="test"
+        optionalInfoPlacement="left"
+        options={dataGrouped}
+        placeholder="placeholder"
       />,
     )
     const input = screen.getByTestId('select-input-test')
@@ -1147,12 +1147,12 @@ describe('SelectInput', () => {
   test.skip('handles correctly click on item - optionalInfoPlacement="right" & descriptionDirection="column" & multiselect', async () => {
     renderWithTheme(
       <SelectInput
-        name="test"
-        options={dataGrouped}
-        multiselect
-        placeholder="placeholder"
-        optionalInfoPlacement="right"
         descriptionDirection="column"
+        multiselect
+        name="test"
+        optionalInfoPlacement="right"
+        options={dataGrouped}
+        placeholder="placeholder"
       />,
     )
     const input = screen.getByTestId('select-input-test')
@@ -1163,11 +1163,11 @@ describe('SelectInput', () => {
   test.skip('handles correctly click on item - optionalInfoPlacement="left" & descriptionDirection="row"', async () => {
     renderWithTheme(
       <SelectInput
+        descriptionDirection="row"
         name="test"
+        optionalInfoPlacement="left"
         options={dataGrouped}
         placeholder="placeholder"
-        optionalInfoPlacement="left"
-        descriptionDirection="row"
       />,
     )
     const input = screen.getByTestId('select-input-test')
@@ -1178,11 +1178,11 @@ describe('SelectInput', () => {
   test.skip('handles correctly click on item - optionalInfoPlacement="right" & descriptionDirection="row"', async () => {
     renderWithTheme(
       <SelectInput
+        descriptionDirection="row"
         name="test"
+        optionalInfoPlacement="right"
         options={dataGrouped}
         placeholder="placeholder"
-        optionalInfoPlacement="right"
-        descriptionDirection="row"
       />,
     )
     const input = screen.getByTestId('select-input-test')
@@ -1193,11 +1193,11 @@ describe('SelectInput', () => {
   test.skip('handles correctly click on item - optionalInfoPlacement="left" & descriptionDirection="column"', async () => {
     renderWithTheme(
       <SelectInput
+        descriptionDirection="column"
         name="test"
+        optionalInfoPlacement="left"
         options={dataGrouped}
         placeholder="placeholder"
-        optionalInfoPlacement="left"
-        descriptionDirection="column"
       />,
     )
     const input = screen.getByTestId('select-input-test')
@@ -1208,11 +1208,11 @@ describe('SelectInput', () => {
   test.skip('handles correctly click on item - optionalInfoPlacement="right" & descriptionDirection="column"', async () => {
     renderWithTheme(
       <SelectInput
+        descriptionDirection="column"
         name="test"
+        optionalInfoPlacement="right"
         options={dataGrouped}
         placeholder="placeholder"
-        optionalInfoPlacement="right"
-        descriptionDirection="column"
       />,
     )
     const input = screen.getByTestId('select-input-test')
@@ -1223,12 +1223,12 @@ describe('SelectInput', () => {
   test.skip('renders correctly loading - grouped data', async () => {
     const { asFragment } = renderWithTheme(
       <SelectInput
+        descriptionDirection="row"
+        isLoading
         name="test"
         options={dataGrouped}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
-        descriptionDirection="row"
-        isLoading
       />,
     )
     const input = screen.getByText('placeholder')
@@ -1239,12 +1239,12 @@ describe('SelectInput', () => {
   test.skip('renders correctly loading - ungrouped data', async () => {
     const { asFragment } = renderWithTheme(
       <SelectInput
+        descriptionDirection="row"
+        isLoading
         name="test"
         options={dataUnGrouped}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
-        descriptionDirection="row"
-        isLoading
       />,
     )
     const input = screen.getByText('placeholder')
@@ -1257,23 +1257,23 @@ describe('SelectInput', () => {
 
     const { asFragment } = renderWithTheme(
       <SelectInput
-        name="test"
-        options={dataGrouped}
-        placeholder="placeholder"
-        placeholderSearch="placeholdersearch"
-        value={dataGrouped['terrestrial planets'][4].value}
         footer={closeDropdown => (
           <button
+            data-testid="buttonclose"
             onClick={() => {
               f()
               closeDropdown()
             }}
             type="button"
-            data-testid="buttonclose"
           >
             click
           </button>
         )}
+        name="test"
+        options={dataGrouped}
+        placeholder="placeholder"
+        placeholderSearch="placeholdersearch"
+        value={dataGrouped['terrestrial planets'][4].value}
       />,
     )
     const input = screen.getByText('Pluto')

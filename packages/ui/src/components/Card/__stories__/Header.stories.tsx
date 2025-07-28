@@ -2,8 +2,8 @@ import { Template } from './Template.stories'
 
 export const Header = Template.bind({})
 Header.args = {
-  header: 'Simple Header',
   children: 'This is the content of a Card',
+  header: 'Simple Header',
 }
 
 Header.parameters = {

@@ -1,7 +1,7 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { Button, Stack } from '@ultraviolet/ui'
-import { useState } from 'react'
 import type { ComponentProps } from 'react'
+import { useState } from 'react'
 import { OfferList } from '../OfferList'
 import { columns, data } from './resources'
 
@@ -28,9 +28,9 @@ export const OnChange: StoryFn<ComponentProps<typeof OfferList>> = props => {
       <OfferList {...props} onChangeSelect={setSelectedRow} type={selectable}>
         {data.map(planet => (
           <OfferList.Row
-            key={planet.id}
-            id={planet.id}
             disabled={planet.id === 'mars'}
+            id={planet.id}
+            key={planet.id}
             offerName={`${planet.id}-offer`}
           >
             <OfferList.Cell>{planet.name}</OfferList.Cell>

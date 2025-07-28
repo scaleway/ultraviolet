@@ -55,10 +55,10 @@ export const SteppedList = ({
   return completed ? (
     <StyledItem
       bulletContent={<CheckIcon />}
+      data-testid={dataTestId}
+      onClick={() => containerData.setCurrentStep(stepNumber)}
       prominence={active ? 'strong' : 'default'}
       sentiment="primary"
-      onClick={() => containerData.setCurrentStep(stepNumber)}
-      data-testid={dataTestId}
     >
       <CustomText as="h3" variant={active ? 'bodyStrong' : 'body'}>
         {stepTitle}
@@ -67,10 +67,10 @@ export const SteppedList = ({
   ) : (
     <StyledItem
       bulletContent={String(stepNumber)}
+      data-testid={dataTestId}
+      onClick={() => containerData.setCurrentStep(stepNumber)}
       prominence={active ? 'strong' : undefined}
       sentiment={active ? 'primary' : undefined}
-      onClick={() => containerData.setCurrentStep(stepNumber)}
-      data-testid={dataTestId}
     >
       <CustomText as="h3" variant={active ? 'bodyStrong' : 'body'}>
         {stepTitle}

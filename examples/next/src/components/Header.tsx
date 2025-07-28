@@ -49,8 +49,8 @@ const TopBar = () => {
           </Breakpoint>
           <SunIcon size="small" />
           <Toggle
-            name="darkMode"
             checked={theme === 'dark'}
+            name="darkMode"
             onChange={() => setTheme(theme === 'light' ? 'dark' : 'light')}
           />
           <MoonIcon size="small" />

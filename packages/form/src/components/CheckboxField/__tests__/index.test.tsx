@@ -14,14 +14,14 @@ describe('CheckboxField', () => {
 
   test('should render correctly with aria-label', () => {
     const { asFragment } = renderWithForm(
-      <CheckboxField name="test" aria-label="test" />,
+      <CheckboxField aria-label="test" name="test" />,
     )
     expect(asFragment()).toMatchSnapshot()
   })
 
   test('should render correctly disabled', () => {
     const { asFragment } = renderWithForm(
-      <CheckboxField name="test" disabled />,
+      <CheckboxField disabled name="test" />,
     )
 
     const input = screen.getByRole('checkbox', { hidden: true })
@@ -60,9 +60,9 @@ describe('CheckboxField', () => {
     const { asFragment } = renderWithForm(
       <CheckboxField
         name="test"
+        onBlur={onBlur}
         onChange={onChange}
         onFocus={onFocus}
-        onBlur={onBlur}
       >
         Checkbox field events
       </CheckboxField>,
@@ -82,9 +82,9 @@ describe('CheckboxField', () => {
     const { result } = renderHook(() => useForm({ mode: 'onChange' }))
     const { asFragment } = renderWithTheme(
       <Form
-        onSubmit={() => {}}
         errors={mockFormErrors}
         methods={result.current}
+        onSubmit={() => {}}
       >
         <CheckboxField name="test" required>
           Checkbox field error

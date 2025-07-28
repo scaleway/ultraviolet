@@ -1,15 +1,15 @@
 import type { StoryFn } from '@storybook/react-vite'
-import { Drawer } from '..'
 import { Button } from '../../Button'
 import { Stack } from '../../Stack'
+import { Drawer } from '..'
 
 export const FunctionProps: StoryFn = props => (
   <Stack direction="row" gap={2}>
     <Drawer
       {...props}
       disclosure={<Button>Function children</Button>}
-      header="Function children"
       footer="Footer"
+      header="Function children"
     >
       {({ close }) => (
         <Button onClick={close}>
@@ -21,26 +21,26 @@ export const FunctionProps: StoryFn = props => (
     <Drawer
       {...props}
       disclosure={<Button>Function footer</Button>}
-      header="Function footer"
       footer={({ close }) => (
         <Button onClick={close}>
           A custom button that can close the drawer
         </Button>
       )}
+      header="Function footer"
     >
       Children
     </Drawer>
 
     <Drawer
       {...props}
-      isClosable={false}
       disclosure={<Button>Function header</Button>}
+      footer="footer"
       header={({ close }) => (
         <Button onClick={close}>
           A custom button that can close the drawer
         </Button>
       )}
-      footer="footer"
+      isClosable={false}
     >
       children
     </Drawer>

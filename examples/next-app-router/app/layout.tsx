@@ -7,8 +7,8 @@ import type { ReactNode } from 'react'
 import { GlobalStyles } from './GlobalStyles'
 
 export const metadata: Metadata = {
-  title: 'Ultraviolet',
   description: 'Design System',
+  title: 'Ultraviolet',
 }
 
 export default function RootLayout({

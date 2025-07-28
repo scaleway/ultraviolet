@@ -1,8 +1,8 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { Stack } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
-import { DateInputField } from '..'
 import { Submit } from '../../Submit'
+import { DateInputField } from '..'
 
 export const MinMaxDateRange: StoryFn<
   ComponentProps<typeof DateInputField>
@@ -14,9 +14,9 @@ export const MinMaxDateRange: StoryFn<
 )
 
 MinMaxDateRange.args = {
+  maxDate: new Date(Date.now()),
   // A month ago
   minDate: new Date(Date.now() - 60 * 60 * 24 * 30 * 1000),
-  maxDate: new Date(Date.now()),
   name: 'date',
   required: true,
   selectsRange: true,

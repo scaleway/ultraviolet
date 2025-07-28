@@ -239,12 +239,12 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
     const computedClearable = clearable && !!value
 
     return (
-      <Stack gap="0.5" className={className}>
+      <Stack className={className} gap="0.5">
         {label || labelDescription ? (
           <Label
+            htmlFor={id ?? localId}
             labelDescription={labelDescription}
             required={required}
-            htmlFor={id ?? localId}
           >
             {label}
           </Label>
@@ -253,45 +253,45 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
           <StyledTextAreaWrapper>
             <StyledTextArea
               aria-invalid={!!error}
-              id={id ?? localId}
-              tabIndex={tabIndex}
+              aria-label={ariaLabel}
               autoFocus={autoFocus}
+              data-error={!!error}
+              data-readonly={readOnly}
+              data-success={!!success}
+              data-testid={dataTestId}
               disabled={disabled}
-              rows={rows !== 'auto' ? rows : 1}
-              ref={textAreaRef}
-              value={value}
+              hasSentimentIcon={!!success || !!error}
+              id={id ?? localId}
+              isClearable={!!computedClearable}
+              maxLength={maxLength}
+              minLength={minLength}
+              name={name}
+              onBlur={onBlur}
               onChange={event => {
                 onChange(event.currentTarget.value)
               }}
-              hasSentimentIcon={!!success || !!error}
-              data-readonly={readOnly}
-              data-success={!!success}
-              data-error={!!error}
-              isClearable={!!computedClearable}
-              minLength={minLength}
-              maxLength={maxLength}
-              placeholder={placeholder}
-              data-testid={dataTestId}
-              name={name}
               onFocus={onFocus}
-              onBlur={onBlur}
               onKeyDown={onKeyDown}
-              aria-label={ariaLabel}
+              placeholder={placeholder}
+              ref={textAreaRef}
+              rows={rows !== 'auto' ? rows : 1}
+              tabIndex={tabIndex}
+              value={value}
             />
             <StyledTextAreaAbsoluteStack
-              direction="row"
               alignItems="center"
+              direction="row"
               gap="1"
             >
               {computedClearable ? (
                 <Button
                   aria-label="clear value"
-                  variant="ghost"
-                  size="xsmall"
                   onClick={() => {
                     onChange('')
                   }}
                   sentiment="neutral"
+                  size="xsmall"
+                  variant="ghost"
                 >
                   <CloseIcon />
                 </Button>
@@ -305,15 +305,15 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
         </Tooltip>
 
         {notice || maxLength ? (
-          <Row templateColumns="minmax(0, 1fr) min-content" gap="1">
+          <Row gap="1" templateColumns="minmax(0, 1fr) min-content">
             <div>
               {error || success || typeof helper === 'string' ? (
                 <Text
                   as="p"
-                  variant="caption"
-                  sentiment={sentiment}
-                  prominence={!error && !success ? 'weak' : 'default'}
                   disabled={disabled}
+                  prominence={!error && !success ? 'weak' : 'default'}
+                  sentiment={sentiment}
+                  variant="caption"
                 >
                   {error || success || helper}
                 </Text>
@@ -325,8 +325,8 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
             {maxLength ? (
               <Text
                 as="div"
-                sentiment="neutral"
                 prominence="weak"
+                sentiment="neutral"
                 variant="caption"
               >
                 {value?.length ?? 0}/{maxLength}

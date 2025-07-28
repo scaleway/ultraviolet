@@ -21,7 +21,7 @@ describe('Breadcrumbs', () => {
     shouldMatchEmotionSnapshot(
       <Breadcrumbs>
         <Breadcrumbs.Item to="/step1">Step 1</Breadcrumbs.Item>
-        <Breadcrumbs.Item to="/step1/step2" minWidth="100px" maxWidth="200px">
+        <Breadcrumbs.Item maxWidth="200px" minWidth="100px" to="/step1/step2">
           I&apos;m a very long long long long long long long long long long long
           long step
         </Breadcrumbs.Item>

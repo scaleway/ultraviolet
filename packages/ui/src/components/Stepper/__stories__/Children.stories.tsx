@@ -1,13 +1,13 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { SunIcon } from '@ultraviolet/icons'
-import { Stepper } from '..'
 import { Text } from '../../Text'
+import { Stepper } from '..'
 
 export const Children: StoryFn<typeof Stepper> = args => (
   <Stepper {...args}>
     <Stepper.Step title="Step 1">Children</Stepper.Step>
     <Stepper.Step title="Step 2">
-      <Text as="span" variant="body" sentiment="primary">
+      <Text as="span" sentiment="primary" variant="body">
         Custom text!
       </Text>
     </Stepper.Step>
@@ -28,6 +28,6 @@ Children.parameters = {
 }
 
 Children.args = {
-  selected: 3,
   interactive: false,
+  selected: 3,
 }

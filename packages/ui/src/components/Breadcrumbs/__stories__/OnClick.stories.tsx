@@ -2,10 +2,10 @@ import type { StoryFn } from '@storybook/react-vite'
 import { RestoreIcon } from '@ultraviolet/icons'
 import type { ComponentProps } from 'react'
 import { useCallback, useState } from 'react'
-import { Breadcrumbs } from '..'
 import { Button } from '../../Button'
 import { Separator } from '../../Separator'
 import { Stack } from '../../Stack'
+import { Breadcrumbs } from '..'
 
 const ITEMS = ['Home', 'Products', 'Instance', 'Overview']
 
@@ -42,8 +42,8 @@ export const OnClick: StoryFn<ComponentProps<typeof Breadcrumbs>> = props => {
               onClick={() => {
                 setValue(ITEMS)
               }}
-              size="small"
               sentiment="neutral"
+              size="small"
             >
               <RestoreIcon />
               Reset

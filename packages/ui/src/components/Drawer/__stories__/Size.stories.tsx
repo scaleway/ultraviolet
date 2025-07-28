@@ -1,16 +1,16 @@
 import type { StoryFn } from '@storybook/react-vite'
-import { Drawer, SIZES } from '..'
 import { Button } from '../../Button'
+import { Drawer, SIZES } from '..'
 
 export const Size: StoryFn = props => (
   <>
     {Object.keys(SIZES).map(width => (
-      <div style={{ display: 'inline-block', padding: 16 }} key={width}>
+      <div key={width} style={{ display: 'inline-block', padding: 16 }}>
         <Drawer
           {...props}
-          size={width as keyof typeof SIZES}
           disclosure={<Button>{width}</Button>}
           header={width}
+          size={width as keyof typeof SIZES}
         >
           <div>Content of the {width} drawer</div>
         </Drawer>

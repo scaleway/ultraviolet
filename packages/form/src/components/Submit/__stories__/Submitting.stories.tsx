@@ -1,8 +1,8 @@
 import type { StoryFn } from '@storybook/react-vite'
-import { Submit } from '..'
 import { useForm } from '../../..'
 import { mockErrors } from '../../../mocks'
 import { Form } from '../../Form'
+import { Submit } from '..'
 
 export const Submitting: StoryFn = () => {
   const methods = useForm()
@@ -12,12 +12,12 @@ export const Submitting: StoryFn = () => {
   return (
     <Form
       errors={mockErrors}
+      methods={methods}
       onSubmit={() =>
         new Promise(resolve => {
           setTimeout(() => resolve(undefined), 5000)
         })
       }
-      methods={methods}
     >
       <Submit>
         {isSubmitting ? 'This form is submitting' : 'Click to submit for 5sec'}

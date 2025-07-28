@@ -10,8 +10,8 @@ import { Button } from '../Button'
 import { Link } from '../Link'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
-import defaultIllustrationSmall from './assets/default-image-small.svg'
 import defaultIllustration from './assets/default-image.svg'
+import defaultIllustrationSmall from './assets/default-image-small.svg'
 
 type Variant = 'intro' | 'promotional'
 type Size = 'small' | 'medium'
@@ -77,7 +77,7 @@ const Container = styled('div', {
   flex-direction: row;
   justify-content: space-between;
   gap: ${({ theme }) => theme.space['2']};
-  ${({ theme, variant, size }) => styles({ theme, variant, size })};
+  ${({ theme, variant, size }) => styles({ size, theme, variant })};
 
   > svg:first-child,
   > img {
@@ -162,71 +162,71 @@ export const Banner = ({
 
   return (
     <Container
-      variant={variant}
-      size={size}
       className={className}
       data-testid={dataTestId}
+      size={size}
+      variant={variant}
     >
       {image ? (
-        <ImageStack size={size} justifyContent="center">
-          {typeof image === 'string' ? <img src={image} alt="" /> : image}
+        <ImageStack justifyContent="center" size={size}>
+          {typeof image === 'string' ? <img alt="" src={image} /> : image}
         </ImageStack>
       ) : (
-        <ImageStack size={size} justifyContent="center">
-          <img src={defaultImage} alt="" />
+        <ImageStack justifyContent="center" size={size}>
+          <img alt="" src={defaultImage} />
         </ImageStack>
       )}
       <Stack
+        alignItems={direction === 'column' ? 'start' : 'center'}
         direction={direction}
         gap={2}
         justifyContent="space-between"
-        alignItems={direction === 'column' ? 'start' : 'center'}
         style={{ flex: 1 }}
       >
-        <Stack gap={0.5} style={{ flex: 1 }} justifyContent="center">
+        <Stack gap={0.5} justifyContent="center" style={{ flex: 1 }}>
           <Text
             as="p"
-            variant={size === 'medium' ? 'headingSmall' : 'bodyStronger'}
-            sentiment={variant === 'promotional' ? 'white' : 'primary'}
             prominence={variant === 'intro' ? 'default' : 'strong'}
+            sentiment={variant === 'promotional' ? 'white' : 'primary'}
+            variant={size === 'medium' ? 'headingSmall' : 'bodyStronger'}
           >
             {title}
           </Text>
           <Text
             as="p"
-            variant="body"
             sentiment={
               variant === 'promotional' || theme !== 'light'
                 ? 'white'
                 : 'neutral'
             }
+            variant="body"
           >
             {children}
           </Text>
         </Stack>
         {buttonText || linkText ? (
-          <Stack direction="row" gap={2} alignItems="center">
+          <Stack alignItems="center" direction="row" gap={2}>
             {buttonText ? (
               <Button
-                size="medium"
-                sentiment={variant === 'intro' ? 'primary' : 'white'}
-                variant="filled"
                 onClick={onClickButton}
+                sentiment={variant === 'intro' ? 'primary' : 'white'}
+                size="medium"
+                variant="filled"
               >
                 {buttonText}
               </Button>
             ) : null}
             {linkText ? (
               <Link
+                href={linkHref ?? ''}
+                prominence={prominence}
                 sentiment={
                   theme === 'light' && variant !== 'promotional'
                     ? 'primary'
                     : undefined
                 }
-                prominence={prominence}
                 size="small"
                 target="_blank"
-                href={linkHref ?? ''}
               >
                 {linkText}
               </Link>
@@ -236,19 +236,19 @@ export const Banner = ({
       </Stack>
       {closable ? (
         <Button
-          size="small"
           name="close"
-          variant={variant === 'intro' ? 'ghost' : 'filled'}
+          onClick={() => {
+            setOpened(false)
+            onClose?.()
+          }}
           sentiment={
             variant === 'intro' ||
             (variant === 'promotional' && theme !== 'light')
               ? 'neutral'
               : 'primary'
           }
-          onClick={() => {
-            setOpened(false)
-            onClose?.()
-          }}
+          size="small"
+          variant={variant === 'intro' ? 'ghost' : 'filled'}
         >
           <CloseIcon />
         </Button>

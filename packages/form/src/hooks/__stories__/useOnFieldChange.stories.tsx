@@ -6,6 +6,34 @@ import { TextInputField } from '../../components'
 import { mockErrors } from '../../mocks'
 
 export default {
+  argTypes: {
+    argName: {
+      control: {},
+      description: 'Name of the field to listen to.',
+      table: {
+        type: {
+          summary: 'string',
+        },
+      },
+    },
+    callback: {
+      description: 'Function to call when the field changes.',
+      table: {
+        type: {
+          summary: '(value: any, name: string) => void',
+        },
+      },
+    },
+    enabled: {
+      description: 'Whether the callback should be called or not.',
+      table: {
+        defaultValue: { summary: 'true' },
+        type: {
+          summary: 'boolean',
+        },
+      },
+    },
+  },
   parameters: {
     docs: {
       description: {
@@ -21,34 +49,6 @@ useOnFieldChange('email', () => {
   }, 3000)
 })
 \``,
-      },
-    },
-  },
-  argTypes: {
-    argName: {
-      description: 'Name of the field to listen to.',
-      table: {
-        type: {
-          summary: 'string',
-        },
-      },
-      control: {},
-    },
-    callback: {
-      description: 'Function to call when the field changes.',
-      table: {
-        type: {
-          summary: '(value: any, name: string) => void',
-        },
-      },
-    },
-    enabled: {
-      description: 'Whether the callback should be called or not.',
-      table: {
-        type: {
-          summary: 'boolean',
-        },
-        defaultValue: { summary: 'true' },
       },
     },
   },
@@ -71,7 +71,7 @@ const FormContent = () => {
         <Text as="label" variant="bodyStrong">
           Email
         </Text>
-        <TextInputField name="email" helper={valid} />
+        <TextInputField helper={valid} name="email" />
       </Stack>
       <Stack gap={1}>
         <Text as="label" variant="bodyStrong">
@@ -87,7 +87,7 @@ export const Usage: StoryFn = () => {
   const methods = useForm({ defaultValues: { email: 'test@test.com' } })
 
   return (
-    <Form methods={methods} onSubmit={() => {}} errors={mockErrors}>
+    <Form errors={mockErrors} methods={methods} onSubmit={() => {}}>
       <FormContent />
     </Form>
   )

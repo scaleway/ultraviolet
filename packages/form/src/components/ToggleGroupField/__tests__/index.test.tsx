@@ -7,16 +7,16 @@ import { ToggleGroupField } from '..'
 describe('GroupField', () => {
   test('should render correctly checked', async () => {
     const { asFragment } = renderWithForm(
-      <ToggleGroupField onChange={() => {}} name="Group" legend="Label">
+      <ToggleGroupField legend="Label" name="Group" onChange={() => {}}>
         <ToggleGroupField.Toggle
+          label="value 1"
           name="value-1"
           value="value-1"
-          label="value 1"
         />
         <ToggleGroupField.Toggle
+          label="value 1"
           name="value-2"
           value="value-2"
-          label="value 1"
         />
       </ToggleGroupField>,
       {
@@ -40,20 +40,20 @@ describe('GroupField', () => {
 
     const { asFragment } = renderWithForm(
       <ToggleGroupField
+        legend="ToggleGroupField events"
         name="test"
         onChange={onChange}
-        legend="ToggleGroupField events"
         required
       >
         <ToggleGroupField.Toggle
+          label="value 1"
           name="value-1"
           value="value-1"
-          label="value 1"
         />
         <ToggleGroupField.Toggle
+          label="value 1"
           name="value-2"
           value="value-2"
-          label="value 1"
         />
       </ToggleGroupField>,
       {

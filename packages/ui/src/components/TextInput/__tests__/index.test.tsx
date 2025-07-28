@@ -7,7 +7,7 @@ import { TextInput } from '..'
 describe('TextInput', () => {
   test('should render correctly with basic props', () =>
     shouldMatchEmotionSnapshot(
-      <TextInput label="Test" value="test" onChange={() => {}} />,
+      <TextInput label="Test" onChange={() => {}} value="test" />,
     ))
 
   test('should control the value', () => {
@@ -17,9 +17,9 @@ describe('TextInput', () => {
     renderWithTheme(
       <TextInput
         label="Test"
-        value="test"
         onChange={onChange}
         onChangeValue={onChangeValue}
+        value="test"
       />,
     )
 
@@ -34,7 +34,7 @@ describe('TextInput', () => {
     const onChange = vi.fn()
 
     renderWithTheme(
-      <TextInput label="Test" value="test" onChange={onChange} clearable />,
+      <TextInput clearable label="Test" onChange={onChange} value="test" />,
     )
 
     const textarea = screen.getByLabelText<HTMLTextAreaElement>('Test')
@@ -42,38 +42,38 @@ describe('TextInput', () => {
     const clearableButton = screen.getByLabelText('clear value')
     await userEvent.click(clearableButton)
     expect(onChange).toHaveBeenCalledWith({
-      target: { value: '' },
       currentTarget: { value: '' },
+      target: { value: '' },
     })
   })
 
   test('should render correctly when input is disabled', () =>
     shouldMatchEmotionSnapshot(
-      <TextInput label="Test" value="test" onChange={() => {}} disabled />,
+      <TextInput disabled label="Test" onChange={() => {}} value="test" />,
     ))
 
   test('should render correctly when input is readOnly', () =>
     shouldMatchEmotionSnapshot(
-      <TextInput label="Test" value="test" onChange={() => {}} readOnly />,
+      <TextInput label="Test" onChange={() => {}} readOnly value="test" />,
     ))
 
   test('should render correctly when input has a success sentiment', () =>
     shouldMatchEmotionSnapshot(
       <TextInput
         label="Test"
-        value="test"
         onChange={() => {}}
         success="success"
+        value="test"
       />,
     ))
 
   test('should render correctly when input  has a error sentiment', () =>
     shouldMatchEmotionSnapshot(
       <TextInput
-        label="Test"
-        value="test"
-        onChange={() => {}}
         error="success"
+        label="Test"
+        onChange={() => {}}
+        value="test"
       />,
     ))
 
@@ -84,9 +84,9 @@ describe('TextInput', () => {
     renderWithTheme(
       <TextInput
         label="Test"
-        value="test"
         onChange={onChange}
         success={successMessage}
+        value="test"
       />,
     )
 
@@ -100,9 +100,9 @@ describe('TextInput', () => {
     renderWithTheme(
       <TextInput
         label="Test"
-        value="test"
         onChange={onChange}
         success={errorMessage}
+        value="test"
       />,
     )
 
@@ -115,10 +115,10 @@ describe('TextInput', () => {
 
     renderWithTheme(
       <TextInput
-        label="Test"
-        value="test"
-        onChange={onChange}
         helper={helperMessage}
+        label="Test"
+        onChange={onChange}
+        value="test"
       />,
     )
 
@@ -132,11 +132,11 @@ describe('TextInput', () => {
 
     renderWithTheme(
       <TextInput
+        helper={helperMessage}
         label="Test"
-        value="test"
         onChange={onChange}
         success={successMessage}
-        helper={helperMessage}
+        value="test"
       />,
     )
 
@@ -151,11 +151,11 @@ describe('TextInput', () => {
 
     renderWithTheme(
       <TextInput
-        label="Test"
-        value="test"
-        onChange={onChange}
         error={error}
         helper={helperMessage}
+        label="Test"
+        onChange={onChange}
+        value="test"
       />,
     )
 

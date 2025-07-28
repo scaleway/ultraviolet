@@ -32,22 +32,22 @@ type TooltipProps = {
 }
 
 const Tooltip = ({ data }: TooltipProps) => (
-  <div tabIndex={-1} role="tooltip">
+  <div role="tooltip" tabIndex={-1}>
     <StyledList>
       <StyledItem>
-        <Text as="p" variant="body" prominence="stronger">
+        <Text as="p" prominence="stronger" variant="body">
           {data.name}
         </Text>
-        <Text as="p" variant="body" prominence="stronger">
+        <Text as="p" prominence="stronger" variant="body">
           {data.value}
         </Text>
       </StyledItem>
       {data.details?.map(detail => (
         <StyledItem key={detail.name}>
-          <Text as="p" variant="bodySmall" prominence="stronger">
+          <Text as="p" prominence="stronger" variant="bodySmall">
             {detail.name}
           </Text>
-          <Text as="p" variant="bodySmall" prominence="stronger">
+          <Text as="p" prominence="stronger" variant="bodySmall">
             {detail.value}
           </Text>
         </StyledItem>

@@ -1,9 +1,9 @@
 import type { StoryFn } from '@storybook/react-vite'
 import type { ComponentProps } from 'react'
-import { Submit } from '..'
 import { useForm } from '../../..'
 import { mockErrors } from '../../../mocks'
 import { Form } from '../../Form'
+import { Submit } from '..'
 
 export const Playground: StoryFn<ComponentProps<typeof Submit>> = ({
   children,
@@ -12,7 +12,7 @@ export const Playground: StoryFn<ComponentProps<typeof Submit>> = ({
   const methods = useForm()
 
   return (
-    <Form onSubmit={() => {}} errors={mockErrors} methods={methods}>
+    <Form errors={mockErrors} methods={methods} onSubmit={() => {}}>
       <Submit {...props}>This form is ready to submit</Submit>
     </Form>
   )

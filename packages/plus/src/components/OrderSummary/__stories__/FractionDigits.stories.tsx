@@ -5,8 +5,8 @@ export const FractionDigits = Template.bind({})
 FractionDigits.args = {
   ...Template.args,
   fractionDigits: 10,
-  unitUnitInput: 'seconds',
   hideTimeUnit: false,
+  unitUnitInput: 'seconds',
 }
 
 FractionDigits.parameters = {

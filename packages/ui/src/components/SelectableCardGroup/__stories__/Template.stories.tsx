@@ -8,19 +8,19 @@ export const Template: StoryFn<typeof SelectableCardGroup> = args => {
   return (
     <SelectableCardGroup
       {...args}
-      value={value}
       onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
         onChange(event.currentTarget.value)
       }
+      value={value}
     >
-      <SelectableCardGroup.Card value="value-1" label="Radio 1" />
-      <SelectableCardGroup.Card value="value-2" label="Radio 2" />
+      <SelectableCardGroup.Card label="Radio 1" value="value-1" />
+      <SelectableCardGroup.Card label="Radio 2" value="value-2" />
     </SelectableCardGroup>
   )
 }
 
 Template.args = {
-  name: 'template',
-  legend: 'Radio',
   helper: 'Helper content for the group',
+  legend: 'Radio',
+  name: 'template',
 }

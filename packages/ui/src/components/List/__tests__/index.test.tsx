@@ -5,8 +5,8 @@ import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
 import type { ComponentProps, Dispatch, ReactNode, SetStateAction } from 'react'
 import { useState } from 'react'
 import { afterEach, beforeEach, describe, expect, test, vi } from 'vitest'
-import { List } from '..'
 import defaultTheme from '../../../theme'
+import { List } from '..'
 
 type WrapperProps = {
   theme?: typeof defaultTheme
@@ -27,21 +27,21 @@ const data: FakeDataType[] = Array.from(
   { length: 10 },
   (_, index) => index + 1,
 ).map(rowNum => ({
-  id: `${rowNum}`,
   columnA: `Row ${rowNum} Column 1`,
   columnB: `Row ${rowNum} Column 2`,
   columnC: `Row ${rowNum} Column 3`,
   columnD: `Row ${rowNum} Column 4`,
   columnE: `Row ${rowNum} Column 5`,
   columnF: `Row ${rowNum} expandable content`,
+  id: `${rowNum}`,
 }))
 
 const columns: NonNullable<ComponentProps<typeof List>['columns']> = Array.from(
   { length: 5 },
   (_, index) => index + 1,
 ).map(columnNumber => ({
-  label: `Column ${columnNumber}`,
   id: `${columnNumber}`,
+  label: `Column ${columnNumber}`,
 }))
 
 const Wrapper = ({ theme = defaultTheme, children }: WrapperProps) => (
@@ -64,7 +64,7 @@ describe('List', () => {
     expect(() => {
       renderWithTheme(
         data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
-          <List.Row key={id} id={id}>
+          <List.Row id={id} key={id}>
             <List.Cell>{columnA}</List.Cell>
             <List.Cell>{columnB}</List.Cell>
             <List.Cell>{columnC}</List.Cell>
@@ -83,7 +83,7 @@ describe('List', () => {
     shouldMatchEmotionSnapshot(
       <List columns={columns}>
         {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
-          <List.Row key={id} id={id}>
+          <List.Row id={id} key={id}>
             <List.Cell>{columnA}</List.Cell>
             <List.Cell>{columnB}</List.Cell>
             <List.Cell>{columnC}</List.Cell>
@@ -98,7 +98,7 @@ describe('List', () => {
     shouldMatchEmotionSnapshot(
       <List columns={columns.map(column => ({ ...column, sort: 'none' }))}>
         {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
-          <List.Row key={id} id={id}>
+          <List.Row id={id} key={id}>
             <List.Cell>{columnA}</List.Cell>
             <List.Cell>{columnB}</List.Cell>
             <List.Cell>{columnC}</List.Cell>
@@ -113,7 +113,7 @@ describe('List', () => {
     shouldMatchEmotionSnapshot(
       <List columns={columns.map(column => ({ ...column, sort: 'none' }))}>
         {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
-          <List.Row key={id} id={id} expanded>
+          <List.Row expanded id={id} key={id}>
             <List.Cell>{columnA}</List.Cell>
             <List.Cell>{columnB}</List.Cell>
             <List.Cell>{columnC}</List.Cell>
@@ -128,7 +128,7 @@ describe('List', () => {
     shouldMatchEmotionSnapshot(
       <List columns={columns} selectable>
         {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
-          <List.Row key={id} id={id}>
+          <List.Row id={id} key={id}>
             <List.Cell>{columnA}</List.Cell>
             <List.Cell>{columnB}</List.Cell>
             <List.Cell>{columnC}</List.Cell>
@@ -143,7 +143,7 @@ describe('List', () => {
     shouldMatchEmotionSnapshot(
       <List columns={columns} loading>
         {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
-          <List.Row key={id} id={id}>
+          <List.Row id={id} key={id}>
             <List.Cell>{columnA}</List.Cell>
             <List.Cell>{columnB}</List.Cell>
             <List.Cell>{columnC}</List.Cell>
@@ -158,7 +158,7 @@ describe('List', () => {
     shouldMatchEmotionSnapshot(
       <List columns={columns} loading selectable>
         {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
-          <List.Row key={id} id={id}>
+          <List.Row id={id} key={id}>
             <List.Cell>{columnA}</List.Cell>
             <List.Cell>{columnB}</List.Cell>
             <List.Cell>{columnC}</List.Cell>
@@ -173,7 +173,7 @@ describe('List', () => {
     shouldMatchEmotionSnapshot(
       <List columns={columns}>
         {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
-          <List.Row key={id} disabled id={id}>
+          <List.Row disabled id={id} key={id}>
             <List.Cell>{columnA}</List.Cell>
             <List.Cell>{columnB}</List.Cell>
             <List.Cell>{columnC}</List.Cell>
@@ -190,10 +190,10 @@ describe('List', () => {
         {data.map(
           ({ id, columnA, columnB, columnC, columnD, columnE, columnF }) => (
             <List.Row
-              key={id}
-              id={id}
               expandable={columnF}
               expandablePadding="10"
+              id={id}
+              key={id}
             >
               <List.Cell>{columnA}</List.Cell>
               <List.Cell>{columnB}</List.Cell>
@@ -211,7 +211,7 @@ describe('List', () => {
       <List columns={columns}>
         {data.map(
           ({ id, columnA, columnB, columnC, columnD, columnE, columnF }) => (
-            <List.Row sentiment="info" key={id} id={id} expandable={columnF}>
+            <List.Row expandable={columnF} id={id} key={id} sentiment="info">
               <List.Cell>{columnA}</List.Cell>
               <List.Cell>{columnB}</List.Cell>
               <List.Cell>{columnC}</List.Cell>
@@ -227,7 +227,7 @@ describe('List', () => {
     const { asFragment } = renderWithTheme(
       <List columns={columns} selectable>
         {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
-          <List.Row key={id} id={id}>
+          <List.Row id={id} key={id}>
             <List.Cell>{columnA}</List.Cell>
             <List.Cell>{columnB}</List.Cell>
             <List.Cell>{columnC}</List.Cell>
@@ -292,7 +292,7 @@ describe('List', () => {
         },
       )
 
-      return <div>{children({ value, setValue })}</div>
+      return <div>{children({ setValue, value })}</div>
     }
 
     const { asFragment } = renderWithTheme(
@@ -302,17 +302,17 @@ describe('List', () => {
             columns={columns.map((column, index) => ({
               ...column,
               isOrdered: value.columnIndex === index,
-              orderDirection: value.order,
               onOrder: newOrder => {
                 setValue({
                   columnIndex: index,
                   order: newOrder,
                 })
               },
+              orderDirection: value.order,
             }))}
           >
             {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
-              <List.Row key={id} id={id}>
+              <List.Row id={id} key={id}>
                 <List.Cell>{columnA}</List.Cell>
                 <List.Cell>{columnB}</List.Cell>
                 <List.Cell>{columnC}</List.Cell>
@@ -352,7 +352,7 @@ describe('List', () => {
     const { rerender } = render(
       <List columns={columns} selectable>
         {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
-          <List.Row key={id} id={id}>
+          <List.Row id={id} key={id}>
             <List.Cell>{columnA}</List.Cell>
             <List.Cell>{columnB}</List.Cell>
             <List.Cell>{columnC}</List.Cell>
@@ -368,7 +368,7 @@ describe('List', () => {
     rerender(
       <List columns={columns} selectable>
         {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
-          <List.Row key={id} id={id}>
+          <List.Row id={id} key={id}>
             <List.Cell>{columnA}</List.Cell>
             <List.Cell>{columnB}</List.Cell>
             <List.Cell>{columnC}</List.Cell>
@@ -381,7 +381,7 @@ describe('List', () => {
     rerender(
       <List columns={columns} selectable>
         {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
-          <List.Row key={id} id={id}>
+          <List.Row id={id} key={id}>
             <List.Cell>{columnA}</List.Cell>
             <List.Cell>{columnB}</List.Cell>
             <List.Cell>{columnC}</List.Cell>
@@ -394,7 +394,7 @@ describe('List', () => {
     rerender(
       <List columns={columns} selectable>
         {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
-          <List.Row key={id} id={id}>
+          <List.Row id={id} key={id}>
             <List.Cell>{columnA}</List.Cell>
             <List.Cell>{columnB}</List.Cell>
             <List.Cell>{columnC}</List.Cell>
@@ -411,7 +411,7 @@ describe('List', () => {
       <List columns={columns}>
         {data.map(
           ({ id, columnA, columnB, columnC, columnD, columnE, columnF }) => (
-            <List.Row key={id} id={id} expandable={columnF}>
+            <List.Row expandable={columnF} id={id} key={id}>
               <List.Cell>{columnA}</List.Cell>
               <List.Cell>{columnB}</List.Cell>
               <List.Cell>{columnC}</List.Cell>
@@ -436,7 +436,7 @@ describe('List', () => {
       <List autoCollapse columns={columns}>
         {data.map(
           ({ id, columnA, columnB, columnC, columnD, columnE, columnF }) => (
-            <List.Row key={id} id={id} expandable={columnF}>
+            <List.Row expandable={columnF} id={id} key={id}>
               <List.Cell>{columnA}</List.Cell>
               <List.Cell>{columnB}</List.Cell>
               <List.Cell>{columnC}</List.Cell>
@@ -468,7 +468,7 @@ describe('List', () => {
         }))}
       >
         {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
-          <List.Row key={id} id={id}>
+          <List.Row id={id} key={id}>
             <List.Cell>{columnA}</List.Cell>
             <List.Cell>{columnB}</List.Cell>
             <List.Cell>{columnC}</List.Cell>
@@ -485,7 +485,7 @@ describe('List', () => {
     const { rerender } = render(
       <List columns={columns} selectable>
         {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
-          <List.Row key={id} id={id}>
+          <List.Row id={id} key={id}>
             <List.Cell>{columnA}</List.Cell>
             <List.Cell>{columnB}</List.Cell>
             <List.Cell>{columnC}</List.Cell>
@@ -501,7 +501,7 @@ describe('List', () => {
     rerender(
       <List columns={columns} selectable>
         {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
-          <List.Row disabled={id === selectedIds[0]} key={id} id={id}>
+          <List.Row disabled={id === selectedIds[0]} id={id} key={id}>
             <List.Cell>{columnA}</List.Cell>
             <List.Cell>{columnB}</List.Cell>
             <List.Cell>{columnC}</List.Cell>
@@ -514,7 +514,7 @@ describe('List', () => {
     rerender(
       <List columns={columns} selectable>
         {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
-          <List.Row key={id} id={id}>
+          <List.Row id={id} key={id}>
             <List.Cell>{columnA}</List.Cell>
             <List.Cell>{columnB}</List.Cell>
             <List.Cell>{columnC}</List.Cell>
@@ -527,7 +527,7 @@ describe('List', () => {
     rerender(
       <List columns={columns} selectable>
         {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
-          <List.Row selectDisabled={id === selectedIds[0]} key={id} id={id}>
+          <List.Row id={id} key={id} selectDisabled={id === selectedIds[0]}>
             <List.Cell>{columnA}</List.Cell>
             <List.Cell>{columnB}</List.Cell>
             <List.Cell>{columnC}</List.Cell>
@@ -543,7 +543,7 @@ describe('List', () => {
     const { rerender } = render(
       <List columns={columns}>
         {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
-          <List.Row key={id} id={id} expandable="test">
+          <List.Row expandable="test" id={id} key={id}>
             <List.Cell>{columnA}</List.Cell>
             <List.Cell>{columnB}</List.Cell>
             <List.Cell>{columnC}</List.Cell>
@@ -561,7 +561,7 @@ describe('List', () => {
         {data
           .filter((_, index) => index !== 0)
           .map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
-            <List.Row key={id} id={id} expandable="test">
+            <List.Row expandable="test" id={id} key={id}>
               <List.Cell>{columnA}</List.Cell>
               <List.Cell>{columnB}</List.Cell>
               <List.Cell>{columnC}</List.Cell>
@@ -578,7 +578,7 @@ describe('List', () => {
       <List autoCollapse columns={columns}>
         {data.map(
           ({ id, columnA, columnB, columnC, columnD, columnE, columnF }) => (
-            <List.Row key={id} id={id} expandable={columnF}>
+            <List.Row expandable={columnF} id={id} key={id}>
               <List.Cell>{columnA}</List.Cell>
               <List.Cell>{columnB}</List.Cell>
               <List.Cell>{columnC}</List.Cell>
@@ -612,7 +612,7 @@ describe('List', () => {
       <List autoCollapse columns={columns}>
         {data.map(
           ({ id, columnA, columnB, columnC, columnD, columnE, columnF }) => (
-            <List.Row key={id} id={id} expandable={columnF}>
+            <List.Row expandable={columnF} id={id} key={id}>
               <List.Cell>{columnA}</List.Cell>
               <List.Cell>{columnB}</List.Cell>
               <List.Cell>{columnC}</List.Cell>
@@ -638,7 +638,7 @@ describe('List', () => {
     shouldMatchEmotionSnapshot(
       <List columns={columns.map(column => ({ ...column, info: 'example' }))}>
         {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
-          <List.Row key={id} id={id}>
+          <List.Row id={id} key={id}>
             <List.Cell>{columnA}</List.Cell>
             <List.Cell>{columnB}</List.Cell>
             <List.Cell>{columnC}</List.Cell>
@@ -652,9 +652,9 @@ describe('List', () => {
 
   test('Should render correctly with selectable with shift click for multiselect', async () => {
     const { asFragment } = renderWithTheme(
-      <List columns={columns} selectable onSelectedChange={vi.fn()}>
+      <List columns={columns} onSelectedChange={vi.fn()} selectable>
         {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
-          <List.Row key={id} id={id}>
+          <List.Row id={id} key={id}>
             <List.Cell>{columnA}</List.Cell>
             <List.Cell>{columnB}</List.Cell>
             <List.Cell>{columnC}</List.Cell>
@@ -692,13 +692,13 @@ describe('List', () => {
     }
 
     await userEvent.click(firstRowCheckbox)
-    fireEvent.keyDown(document, { key: 'Shift', code: 'ShiftLeft' })
+    fireEvent.keyDown(document, { code: 'ShiftLeft', key: 'Shift' })
 
     // Test hovering
     fireEvent.mouseMove(secondRowCheckbox, { shiftKey: true })
     fireEvent.mouseMove(thirdRowCheckbox, { shiftKey: true })
     fireEvent.mouseLeave(thirdRowCheckbox, { shiftKey: true })
-    fireEvent.keyUp(document, { key: 'Shift', code: 'ShiftLeft' })
+    fireEvent.keyUp(document, { code: 'ShiftLeft', key: 'Shift' })
 
     fireEvent.click(thirdRowCheckbox, { shiftKey: true })
     fireEvent.click(fifthRowCheckbox, { shiftKey: true })
@@ -706,7 +706,7 @@ describe('List', () => {
 
     expect(thirdRowCheckbox).toBeChecked()
 
-    fireEvent.keyUp(document, { key: 'Shift', code: 'ShiftLeft' })
+    fireEvent.keyUp(document, { code: 'ShiftLeft', key: 'Shift' })
 
     expect(asFragment()).toMatchSnapshot()
   })
