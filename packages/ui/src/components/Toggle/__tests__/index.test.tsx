@@ -84,7 +84,7 @@ describe('Toggle', () => {
 
     const input = screen.getByRole('checkbox')
     await userEvent.click(input)
-    expect(input.getAttribute('aria-checked')).toBe('true')
+    expect(input).toBeChecked()
   })
 
   test('renders correctly with helper', () =>
