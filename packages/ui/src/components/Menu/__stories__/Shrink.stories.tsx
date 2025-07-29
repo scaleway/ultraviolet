@@ -1,6 +1,6 @@
 import type { StoryFn } from '@storybook/react-vite'
-import { Menu } from '..'
 import { Button } from '../../Button'
+import { Menu } from '..'
 
 export const Shrink: StoryFn<typeof Menu> = () => (
   <>
@@ -39,12 +39,12 @@ Shrink.decorators = [
   StoryComponent => (
     <div
       style={{
-        width: '100%',
-        display: 'flex',
         alignItems: 'flex-end',
-        position: 'absolute',
-        justifyContent: 'center',
+        display: 'flex',
         gap: '16px',
+        justifyContent: 'center',
+        position: 'absolute',
+        width: '100%',
       }}
     >
       <StoryComponent />

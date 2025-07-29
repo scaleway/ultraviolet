@@ -293,6 +293,11 @@ export const Menu = forwardRef(
           }
           setShouldBeVisible(undefined)
         }}
+        onKeyDown={handleTabOpen}
+        placement={isNested ? 'nested-menu' : placement}
+        portalTarget={portalTarget}
+        ref={menuRef}
+        role="dialog"
         searchable={searchable}
         tabIndex={-1}
         text={
