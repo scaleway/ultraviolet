@@ -14,7 +14,7 @@ export default {
   title: 'Icons/Icon',
 } as Meta
 
-export { List } from './List.stories'
 export { Playground } from './Playground.stories'
-export { Sentiment } from './Sentiment.stories'
+export { List } from './List.stories'
 export { Size } from './Size.stories'
+export { Sentiment } from './Sentiment.stories'

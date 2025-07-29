@@ -1,8 +1,8 @@
 import type { Meta } from '@storybook/react-vite'
 import { Snippet, Stack, Text } from '@ultraviolet/ui'
+import { Form, RadioField } from '../..'
 import { useForm } from '../../..'
 import { mockErrors } from '../../../mocks'
-import { Form, RadioField } from '../..'
 
 export default {
   component: RadioField,
@@ -28,35 +28,35 @@ export default {
       } = methods.formState
 
       return (
-        <Form errors={mockErrors} methods={methods} onSubmit={() => {}}>
+        <Form onSubmit={() => {}} errors={mockErrors} methods={methods}>
           <Stack gap={2}>
             <ChildStory />
             <Stack gap={1}>
-              <Text as="p" variant="bodyStrong">
+              <Text variant="bodyStrong" as="p">
                 Form input values:
               </Text>
-              <Snippet initiallyExpanded prefix="lines">
+              <Snippet prefix="lines" initiallyExpanded>
                 {JSON.stringify(methods.watch(), null, 1)}
               </Snippet>
             </Stack>
             <Stack gap={1}>
-              <Text as="p" variant="bodyStrong">
+              <Text variant="bodyStrong" as="p">
                 Form values:
               </Text>
               <Snippet prefix="lines">
                 {JSON.stringify(
                   {
-                    dirtyFields,
                     errors,
                     isDirty,
-                    isLoading,
-                    isSubmitSuccessful,
-                    isSubmitted,
                     isSubmitting,
-                    isValid,
-                    isValidating,
-                    submitCount,
                     touchedFields,
+                    submitCount,
+                    dirtyFields,
+                    isValid,
+                    isLoading,
+                    isSubmitted,
+                    isValidating,
+                    isSubmitSuccessful,
                   },
                   null,
                   1,

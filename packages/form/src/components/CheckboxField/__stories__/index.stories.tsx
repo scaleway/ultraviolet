@@ -1,8 +1,8 @@
 import type { Meta } from '@storybook/react-vite'
 import { Snippet, Stack, Text } from '@ultraviolet/ui'
+import { CheckboxField, Form } from '../..'
 import { useForm } from '../../..'
 import { mockErrors } from '../../../mocks'
-import { CheckboxField, Form } from '../..'
 
 export default {
   component: CheckboxField,
@@ -24,11 +24,11 @@ export default {
       } = methods.formState
 
       return (
-        <Form errors={mockErrors} methods={methods} onSubmit={() => {}}>
+        <Form onSubmit={() => {}} errors={mockErrors} methods={methods}>
           <Stack gap={2}>
             <ChildStory />
             <Stack gap={1}>
-              <Text as="p" variant="bodyStrong">
+              <Text variant="bodyStrong" as="p">
                 Form input values:
               </Text>
               <Snippet prefix="lines">
@@ -36,23 +36,23 @@ export default {
               </Snippet>
             </Stack>
             <Stack gap={1}>
-              <Text as="p" variant="bodyStrong">
+              <Text variant="bodyStrong" as="p">
                 Form values:
               </Text>
               <Snippet prefix="lines">
                 {JSON.stringify(
                   {
-                    dirtyFields,
                     errors,
                     isDirty,
-                    isLoading,
-                    isSubmitSuccessful,
-                    isSubmitted,
                     isSubmitting,
-                    isValid,
-                    isValidating,
-                    submitCount,
                     touchedFields,
+                    submitCount,
+                    dirtyFields,
+                    isValid,
+                    isLoading,
+                    isSubmitted,
+                    isValidating,
+                    isSubmitSuccessful,
                   },
                   null,
                   1,

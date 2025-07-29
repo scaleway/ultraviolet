@@ -1,8 +1,8 @@
 import type { Meta } from '@storybook/react-vite'
 import { Snippet, Stack, Text } from '@ultraviolet/ui'
+import { DateInputField, Form } from '../..'
 import { useForm } from '../../..'
 import { mockErrors } from '../../../mocks'
-import { DateInputField, Form } from '../..'
 
 export default {
   component: DateInputField,
@@ -26,35 +26,35 @@ export default {
       } = methods.formState
 
       return (
-        <Form errors={mockErrors} methods={methods} onSubmit={() => {}}>
+        <Form onSubmit={() => {}} errors={mockErrors} methods={methods}>
           <Stack gap={2}>
             <ChildStory />
             <Stack gap={1}>
-              <Text as="p" variant="bodyStrong">
+              <Text variant="bodyStrong" as="p">
                 Form input values:
               </Text>
-              <Snippet initiallyExpanded prefix="lines">
+              <Snippet prefix="lines" initiallyExpanded>
                 {JSON.stringify(methods.watch(), null, 1)}
               </Snippet>
             </Stack>
             <Stack gap={1}>
-              <Text as="p" variant="bodyStrong">
+              <Text variant="bodyStrong" as="p">
                 Form values:
               </Text>
               <Snippet prefix="lines">
                 {JSON.stringify(
                   {
-                    dirtyFields,
                     errors,
                     isDirty,
-                    isLoading,
-                    isSubmitSuccessful,
-                    isSubmitted,
                     isSubmitting,
-                    isValid,
-                    isValidating,
-                    submitCount,
                     touchedFields,
+                    submitCount,
+                    dirtyFields,
+                    isValid,
+                    isLoading,
+                    isSubmitted,
+                    isValidating,
+                    isSubmitSuccessful,
                   },
                   null,
                   1,
@@ -77,10 +77,10 @@ export default {
   title: 'Form/Components/Fields/DateInputField',
 } as Meta
 
-export { Clearable } from './Clearable.stories'
-export { Input } from './Input.stories'
-export { MinMaxDate } from './MinMaxDate.stories'
-export { MinMaxDateRange } from './MinMaxDateRange.stories'
-export { MinMaxDateWithTimeField } from './MinMaxWithTimeField.stories'
 export { Playground } from './Playground.stories'
 export { Required } from './Required.stories'
+export { Clearable } from './Clearable.stories'
+export { MinMaxDate } from './MinMaxDate.stories'
+export { MinMaxDateWithTimeField } from './MinMaxWithTimeField.stories'
+export { MinMaxDateRange } from './MinMaxDateRange.stories'
+export { Input } from './Input.stories'

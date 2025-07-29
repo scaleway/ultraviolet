@@ -18,24 +18,24 @@ export default {
       },
     },
   },
-  subcomponents: {
-    'Menu.Group': Menu.Group,
-    'Menu.Item': Menu.Item,
-  },
   title: 'Components/Overlay/Menu',
+  subcomponents: {
+    'Menu.Item': Menu.Item,
+    'Menu.Group': Menu.Group,
+  },
 } as Meta<typeof Menu>
 
-export { Active } from './Active.stories'
-export { Borderless } from './Borderless.stories'
-export { Footer } from './Footer.stories'
-export { FunctionChildrenToggle } from './FunctionChildrenToggle.stories'
-export { FunctionDisclosure } from './FunctionDisclosure.stories'
-export { Group } from './Group.stories'
-export { LongMenu } from './LongMenu.stories'
-export { Nested } from './Nested.stories'
-export { Overflowing } from './Overflowing.stories'
 export { Playground } from './Playground.stories'
-export { Searchable } from './Searchable.stories'
 export { Sentiments } from './Sentiments.stories'
+export { Borderless } from './Borderless.stories'
+export { Group } from './Group.stories'
+export { Active } from './Active.stories'
+export { Searchable } from './Searchable.stories'
+export { LongMenu } from './LongMenu.stories'
 export { TriggerMethod } from './TriggerMethod.stories'
 export { WithModal } from './WithModal.stories'
+export { FunctionDisclosure } from './FunctionDisclosure.stories'
+export { FunctionChildrenToggle } from './FunctionChildrenToggle.stories'
+export { Overflowing } from './Overflowing.stories'
+export { Footer } from './Footer.stories'
+export { Nested } from './Nested.stories'

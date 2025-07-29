@@ -1,8 +1,8 @@
 import type { Meta } from '@storybook/react-vite'
 import { Snippet, Stack, Text } from '@ultraviolet/ui'
+import { Form, SelectInputField } from '../..'
 import { useForm } from '../../..'
 import { mockErrors } from '../../../mocks'
-import { Form, SelectInputField } from '../..'
 
 export default {
   component: SelectInputField,
@@ -25,39 +25,39 @@ export default {
 
       return (
         <Form
+          onSubmit={() => {}}
           errors={mockErrors}
           methods={methods}
           name="SelectInput"
-          onSubmit={() => {}}
         >
           <Stack gap={2}>
             <ChildStory />
             <Stack gap={1}>
-              <Text as="p" variant="bodyStrong">
+              <Text variant="bodyStrong" as="p">
                 Form input values:
               </Text>
-              <Snippet initiallyExpanded prefix="lines">
+              <Snippet prefix="lines" initiallyExpanded>
                 {JSON.stringify(methods.watch(), null, 1)}
               </Snippet>
             </Stack>
             <Stack gap={1}>
-              <Text as="p" variant="bodyStrong">
+              <Text variant="bodyStrong" as="p">
                 Form values:
               </Text>
               <Snippet prefix="lines">
                 {JSON.stringify(
                   {
-                    dirtyFields,
                     errors,
                     isDirty,
-                    isLoading,
-                    isSubmitSuccessful,
-                    isSubmitted,
                     isSubmitting,
-                    isValid,
-                    isValidating,
-                    submitCount,
                     touchedFields,
+                    submitCount,
+                    dirtyFields,
+                    isValid,
+                    isLoading,
+                    isSubmitted,
+                    isValidating,
+                    isSubmitSuccessful,
                   },
                   null,
                   1,
@@ -79,5 +79,5 @@ export default {
   title: 'Form/Components/Fields/SelectInputField',
 } as Meta
 
-export { Multiple } from './Multiple.stories'
 export { Playground } from './Playground.stories'
+export { Multiple } from './Multiple.stories'

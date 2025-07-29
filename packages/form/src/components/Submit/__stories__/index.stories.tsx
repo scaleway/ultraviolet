@@ -13,6 +13,6 @@ export default {
   title: 'Form/Components/Submit',
 } as Meta
 
-export { Invalid } from './Invalid.stories'
 export { Playground } from './Playground.stories'
+export { Invalid } from './Invalid.stories'
 export { Submitting } from './Submitting.stories'

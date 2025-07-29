@@ -6,7 +6,7 @@ export default {
   title: 'Components/Overlay/Popover',
 } as Meta<typeof Popover>
 
-export { AdvancedUsage } from './AdvancedUsage.stories'
 export { Playground } from './Playground.stories'
 export { Sentiments } from './Sentiments.stories'
 export { Sizes } from './Sizes.stories'
+export { AdvancedUsage } from './AdvancedUsage.stories'

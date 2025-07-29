@@ -13,10 +13,10 @@ export default {
   title: 'Components/Data Display/TagList',
 } as Meta
 
+export { Playground } from './Playground.stories'
+export { Threshold } from './Threshold.stories'
+export { Multiline } from './Multiline.stories'
 export { Copiable } from './Copiable.stories'
 export { Icons } from './Icons.stories'
-export { Multiline } from './Multiline.stories'
 export { ParentWithDefinedWidth } from './ParentWithWidth.stories'
-export { Playground } from './Playground.stories'
 export { PopoverMaxHeight } from './PopoverMaxHeight.stories'
-export { Threshold } from './Threshold.stories'

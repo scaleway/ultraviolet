@@ -6,11 +6,11 @@ export default {
   title: 'Components/Badges/Tag',
 } as Meta
 
-export { Copiable } from './Copiable.stories'
-export { Disabled } from './Disabled.stories'
-export { Icons } from './Icons.stories'
-export { Loading } from './Loading.stories'
-export { LongTag } from './LongTag.stories'
-export { OnClose } from './OnClose.stories'
 export { Playground } from './Playground.stories'
 export { Sentiments } from './Sentiments.stories'
+export { Icons } from './Icons.stories'
+export { OnClose } from './OnClose.stories'
+export { Loading } from './Loading.stories'
+export { Disabled } from './Disabled.stories'
+export { Copiable } from './Copiable.stories'
+export { LongTag } from './LongTag.stories'
