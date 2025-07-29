@@ -178,7 +178,7 @@ export const Row = ({
   ])
 
   const isRowSelected = useMemo(() => {
-    if (selectable === 'radio') return radioSelectedRow === offerName
+    if (selectable === 'radio') {return radioSelectedRow === offerName}
 
     return checkboxSelectedRows.includes(offerName)
   }, [offerName, checkboxSelectedRows, radioSelectedRow, selectable])

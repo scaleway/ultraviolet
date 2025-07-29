@@ -41,6 +41,7 @@ type SelectBarProps = {
   'data-testid': string
   label?: string
   tooltip?: string
+  dropdownId?: string
 }
 
 type DisplayValuesProps = {
@@ -323,6 +324,7 @@ const SelectBar = ({
   id,
   'data-testid': dataTestId,
   label,
+  dropdownId,
 }: SelectBarProps) => {
   const {
     isDropdownVisible,
@@ -544,6 +546,7 @@ const SelectBar = ({
   return (
     <Tooltip text={tooltip}>
       <StyledInputWrapper
+        aria-controls={dropdownId}
         aria-expanded={isDropdownVisible}
         aria-label={label}
         autoFocus={autoFocus}

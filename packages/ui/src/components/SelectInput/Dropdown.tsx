@@ -33,6 +33,7 @@ import { INPUT_SIZE_HEIGHT } from './types'
 const DROPDOWN_MAX_HEIGHT = 256
 
 export type DropdownProps = {
+  id?: string
   children: ReactNode
   emptyState: ReactNode
   descriptionDirection: 'row' | 'column'
@@ -700,6 +701,7 @@ export const Dropdown = ({
   size,
   dropdownAlign,
   portalTarget,
+  id,
 }: DropdownProps) => {
   const {
     setIsDropdownVisible,
@@ -857,6 +859,7 @@ export const Dropdown = ({
       disableAnimation
       hasArrow={false}
       hideOnClickOutside
+      id={id}
       maxWidth={maxWidth ?? refSelect.current?.offsetWidth}
       onClose={() => setIsDropdownVisible(false)}
       placement="bottom"
