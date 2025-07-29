@@ -4,7 +4,7 @@ import { DeleteIcon, PlusIcon } from '@ultraviolet/icons'
 import { Button, Row, Stack } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
 import type { Control, FieldArrayPath, FieldValues } from 'react-hook-form'
-import { useFieldArray } from 'react-hook-form'
+import { useFieldArray, useFormContext } from 'react-hook-form'
 import { TextInputField } from '../TextInputField'
 
 type InputKeyProps = {
@@ -25,6 +25,11 @@ type AddButtonProps = {
   maxSizeReachedTooltip?: string
 }
 
+type KeyValuePair = {
+  key: string
+  value: string
+}
+
 type KeyValueFieldProps<
   TFieldValues extends FieldValues,
   TFieldArrayName extends FieldArrayPath<TFieldValues>,
@@ -36,6 +41,8 @@ type KeyValueFieldProps<
   maxSize?: number
   readOnly?: boolean
   control?: Control<TFieldValues>
+  onChange?: (values: KeyValuePair[]) => void
+  onBlur?: (values: KeyValuePair[]) => void
 }
 
 /**
@@ -53,11 +60,23 @@ export const KeyValueField = <
   maxSize = 100,
   readOnly = false,
   control,
+  onChange,
+  onBlur,
 }: KeyValueFieldProps<TFieldValues, TFieldArrayName>) => {
   const { fields, append, remove } = useFieldArray({
     control,
     name,
   })
+
+  const { getValues } = useFormContext()
+
+  const handleFieldChange = () => {
+    onChange?.(getValues(name))
+  }
+
+  const handleFieldBlur = () => {
+    onBlur?.(getValues(name))
+  }
 
   const canAdd = fields.length !== undefined && fields.length < maxSize
   const maxSizeReachedTooltip =
@@ -78,6 +97,8 @@ export const KeyValueField = <
               <TextInputField
                 label={inputKey.label}
                 name={`${name}.${index}.key`}
+                onBlur={handleFieldBlur}
+                onChange={handleFieldChange}
                 readOnly={readOnly}
                 regex={inputKey.regex}
                 required={inputKey.required}
@@ -86,6 +107,8 @@ export const KeyValueField = <
                 autoComplete="off"
                 label={inputValue.label}
                 name={`${name}.${index}.value`}
+                onBlur={handleFieldBlur}
+                onChange={handleFieldChange}
                 placeholder={inputValue.placeholder}
                 readOnly={readOnly}
                 regex={inputValue.regex}
@@ -96,7 +119,10 @@ export const KeyValueField = <
               <Button
                 data-testid={`remove-button-${index}`}
                 disabled={readOnly}
-                onClick={() => remove(index)}
+                onClick={() => {
+                  remove(index)
+                  handleFieldChange()
+                }}
                 sentiment="danger"
                 size="large"
                 variant="outlined"
@@ -112,8 +138,11 @@ export const KeyValueField = <
           data-testid="add-button"
           disabled={!canAdd || readOnly}
           fullWidth={addButton.fullWidth}
-          // @ts-expect-error can't infer properly
-          onClick={() => append({ key: '', value: '' })}
+          onClick={() => {
+            // @ts-expect-error can't infer properly
+            append({ key: '', value: '' })
+            handleFieldChange()
+          }}
           sentiment="primary"
           tooltip={!canAdd ? maxSizeReachedTooltip : addButton.tooltip}
           variant="outlined"
