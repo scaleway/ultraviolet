@@ -5,6 +5,8 @@ import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
 import { afterAll, beforeAll, describe, expect, test, vi } from 'vitest'
 import { SwitchButton } from '..'
 
+let resizeCallback: ResizeObserverCallback = () => {}
+
 describe('SwitchButton', () => {
   beforeAll(() => {
     Object.defineProperty(HTMLElement.prototype, 'offsetWidth', {
@@ -41,8 +43,6 @@ describe('SwitchButton', () => {
     ))
 
   test('renders correctly with children changing', () => {
-    let resizeCallback: ResizeObserverCallback = () => {}
-
     ResizeObserver = vi.fn((cb: ResizeObserverCallback) => {
       resizeCallback = cb
 

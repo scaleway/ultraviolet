@@ -115,17 +115,29 @@ export const DateInput = <IsRange extends undefined | boolean>({
   'data-testid': dataTestId,
 }: DateInputProps<IsRange>) => {
   const defaultMonthToShow = useMemo(() => {
-    if (value) {return new Date(value).getMonth() + 1}
-    if (startDate && selectsRange) {return startDate.getMonth() + 1}
-    if (endDate && selectsRange) {return endDate.getMonth() + 1}
+    if (value) {
+      return new Date(value).getMonth() + 1
+    }
+    if (startDate && selectsRange) {
+      return startDate.getMonth() + 1
+    }
+    if (endDate && selectsRange) {
+      return endDate.getMonth() + 1
+    }
 
     return new Date().getMonth() + 1
   }, [endDate, selectsRange, startDate, value])
 
   const defaultYearToShow = useMemo(() => {
-    if (value) {return new Date(value).getFullYear()}
-    if (startDate && selectsRange) {return startDate.getFullYear()}
-    if (endDate && selectsRange) {return endDate.getFullYear()}
+    if (value) {
+      return new Date(value).getFullYear()
+    }
+    if (startDate && selectsRange) {
+      return startDate.getFullYear()
+    }
+    if (endDate && selectsRange) {
+      return endDate.getFullYear()
+    }
 
     return new Date().getFullYear()
   }, [endDate, selectsRange, startDate, value])
@@ -241,12 +253,13 @@ export const DateInput = <IsRange extends undefined | boolean>({
   const manageOnChange = (event: ChangeEvent<HTMLInputElement>) => {
     const newValue = event.currentTarget.value
 
-    if (!newValue)
-      {onChange?.(
+    if (!newValue) {
+      onChange?.(
         (selectsRange ? [null, null] : null) as
           | (Date[] & Date)
           | ([Date | null, Date | null] & Date),
-      )}
+      )
+    }
 
     if (selectsRange) {
       const computedNewRange = createDateRange(newValue, showMonthYearPicker)
@@ -301,7 +314,9 @@ export const DateInput = <IsRange extends undefined | boolean>({
         id={id}
         onBlur={onBlur}
         onClick={() => {
-          if (!isPopupVisible) {setVisible(true)}
+          if (!isPopupVisible) {
+            setVisible(true)
+          }
         }}
         onFocus={onFocus}
         ref={popupRef}
@@ -324,8 +339,9 @@ export const DateInput = <IsRange extends undefined | boolean>({
               labelDescription={labelDescription}
               name={name}
               onBlur={event => {
-                if (!popupRef.current?.contains(event.relatedTarget))
-                  {onBlurInput()}
+                if (!popupRef.current?.contains(event.relatedTarget)) {
+                  onBlurInput()
+                }
               }}
               onChange={manageOnChange}
               onKeyDown={event => {

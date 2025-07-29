@@ -74,7 +74,9 @@ export const DateInputField = <
       format={
         format ||
         (value => {
-          if (!value) {return ''}
+          if (!value) {
+            return ''
+          }
           const date = parseDate(value)
 
           return showMonthYearPicker

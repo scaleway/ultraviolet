@@ -158,7 +158,9 @@ export const Banner = ({
 
   const [opened, setOpened] = useState(true)
 
-  if (!opened) {return null}
+  if (!opened) {
+    return null
+  }
 
   return (
     <Container

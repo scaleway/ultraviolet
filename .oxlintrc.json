@@ -5,7 +5,8 @@
     "**/package.config.d.ts",
     "eslint.config.mjs",
     "next.config.js",
-    "*.d.ts"
+    "*.d.ts",
+    "svgo.config.mjs"
   ],
   "categories": {
     "correctness": "deny",
@@ -30,7 +31,8 @@
       "files": ["**/__stories__/**/*.{ts,tsx}", "**/__tests__/**/*.{ts,tsx}"],
       "rules": {
         "eslint/no-console": "off",
-        "eslint/no-alert": "off"
+        "eslint/no-alert": "off",
+        "import/no-anonymous-default-export": "off"
       }
     },
     {

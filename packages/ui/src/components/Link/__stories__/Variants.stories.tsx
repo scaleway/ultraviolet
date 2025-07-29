@@ -5,7 +5,7 @@ import { Link } from '..'
 
 export const Variants = (props: ComponentProps<typeof Link>) =>
   (['inline', 'standalone'] as const).map(variant => (
-    <Link {...props} key={variant} variant={variant}>
+    <Link key={variant} {...props} variant={variant}>
       {variant}
     </Link>
   ))

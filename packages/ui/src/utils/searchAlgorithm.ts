@@ -7,8 +7,12 @@ export const normalizeString = (string: string) =>
     .toLowerCase()
 
 export const levenshteinDistance = (query: string, slice: string): number => {
-  if (query.length === 0) {return slice.length}
-  if (slice.length === 0) {return query.length}
+  if (query.length === 0) {
+    return slice.length
+  }
+  if (slice.length === 0) {
+    return query.length
+  }
   const distancesArray = []
   for (let i = 0; i <= slice.length; i += 1) {
     distancesArray[i] = [i]
@@ -45,13 +49,19 @@ export const isFuzzyMatch = (
   const normQuery = normalizeString(query)
   const normTarget = normalizeString(target)
 
-  if (normQuery.length === 0) {return true}
-  if (normQuery.length > normTarget.length) {return false}
+  if (normQuery.length === 0) {
+    return true
+  }
+  if (normQuery.length > normTarget.length) {
+    return false
+  }
 
   for (let i = 0; i <= normTarget.length - normQuery.length; i += 1) {
     const slice = normTarget.slice(i, i + normQuery.length)
     const dist = levenshteinDistance(normQuery, slice)
-    if (dist <= maxDistance) {return true}
+    if (dist <= maxDistance) {
+      return true
+    }
   }
 
   return false

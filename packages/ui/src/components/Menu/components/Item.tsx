@@ -165,7 +165,9 @@ const Item = forwardRef<HTMLElement, ItemProps>(
 
     const onClickHandle = useCallback(
       (event: MouseEvent<HTMLAnchorElement>) => {
-        if (disabled) {return undefined}
+        if (disabled) {
+          return undefined
+        }
         onClick?.(event)
         if (hideOnClickItem) {
           setIsVisible(false)

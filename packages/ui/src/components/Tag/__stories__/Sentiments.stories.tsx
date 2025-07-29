@@ -5,7 +5,7 @@ import { Tag } from '..'
 
 export const Sentiments = (props: ComponentProps<typeof Tag>) =>
   SENTIMENTS.map(sentiment => (
-    <Tag {...props} key={sentiment} sentiment={sentiment}>
+    <Tag key={sentiment} {...props} sentiment={sentiment}>
       {sentiment}
     </Tag>
   ))

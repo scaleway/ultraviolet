@@ -139,7 +139,9 @@ export const Tabs = ({
     }
 
     return () => {
-      if (displayMore) {element.removeEventListener('scroll', handler)}
+      if (displayMore) {
+        element.removeEventListener('scroll', handler)
+      }
     }
   }, [displayMore])
 

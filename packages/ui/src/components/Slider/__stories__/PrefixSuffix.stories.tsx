@@ -33,13 +33,13 @@ export const PrefixSuffix: StoryFn<typeof Slider> = args => {
 
   const suffixDouble = useMemo(
     () => [
-      <Text as="span" variant="bodySmall">
+      <Text as="span" key="first suffix" variant="bodySmall">
         GB -{' '}
         <Text as="span" variant="bodySmallStrong">
           ${prices[0]}€/month
         </Text>
       </Text>,
-      <Text as="span" variant="bodySmall">
+      <Text as="span" key="second suffix" variant="bodySmall">
         GB -{' '}
         <Text as="span" variant="bodySmallStrong">
           ${prices[1]}€/month

@@ -72,7 +72,7 @@ describe('useIsOverflowing', () => {
       useIsOverflowing({ current: document.createElement('div') }),
     )
 
-    const removeEventListenerSpy = vi.spyOn(window, 'removeEventListener')
+    const removeEventListenerSpy = vi.spyOn(globalThis, 'removeEventListener')
     unmount()
 
     expect(removeEventListenerSpy).toHaveBeenCalledWith(

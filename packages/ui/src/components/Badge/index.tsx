@@ -99,8 +99,12 @@ const StyledSpan = styled(Text, {
   border-radius: ${({ theme }) => theme.radii.xlarge};
   padding: 0
     ${({ theme, size }) => {
-      if (size === 'small') {return theme.space['1']}
-      if (size === 'large') {return theme.space['2']}
+      if (size === 'small') {
+        return theme.space['1']
+      }
+      if (size === 'large') {
+        return theme.space['2']
+      }
 
       return theme.space['1.5']
     }};

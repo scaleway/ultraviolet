@@ -545,7 +545,6 @@ const SelectBar = ({
     <Tooltip text={tooltip}>
       <StyledInputWrapper
         aria-expanded={isDropdownVisible}
-        aria-haspopup="listbox"
         aria-label={label}
         autoFocus={autoFocus}
         data-disabled={disabled}

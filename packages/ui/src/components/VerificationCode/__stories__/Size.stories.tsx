@@ -6,10 +6,10 @@ export const Size: StoryFn<typeof VerificationCode> = args => (
   <Stack direction="column" gap={2}>
     {verificationCodeSizes.map(size => (
       <VerificationCode
+        key={size}
         {...args}
         fields={4}
         initialValue="1"
-        key={size}
         label={size}
         size={size}
       />

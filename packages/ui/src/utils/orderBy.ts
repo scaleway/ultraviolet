@@ -14,7 +14,9 @@ export const orderBy = <T extends Record<string, unknown>>(
   return (a, b) => {
     const transformedA = transform(a) as ComparableType
     const transformedB = transform(b) as ComparableType
-    if (transformedA > transformedB) {return direction}
+    if (transformedA > transformedB) {
+      return direction
+    }
 
     return transformedB > transformedA ? -1 * direction : 0
   }

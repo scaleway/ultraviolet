@@ -260,7 +260,7 @@ export const Popup = forwardRef(
       }
 
       // We check if window exists for SSR
-      if (typeof window !== 'undefined') {
+      if (typeof globalThis !== 'undefined') {
         return document.body
       }
 
@@ -467,18 +467,19 @@ export const Popup = forwardRef(
         const popupCurrent = innerPopupRef.current
         const childrenCurrent = childrenRef.current
 
-        if (popupCurrent && hideOnClickOutside && !event.defaultPrevented) {
-          if (
-            event.target &&
-            event.target !== popupCurrent &&
-            event.target !== childrenCurrent &&
-            !childrenCurrent?.contains(event.target as Node) &&
-            !popupCurrent.contains(event.target as Node)
-          ) {
-            event.preventDefault()
-            event.stopPropagation()
-            closePopup()
-          }
+        if (
+          popupCurrent &&
+          hideOnClickOutside &&
+          !event.defaultPrevented &&
+          event.target &&
+          event.target !== popupCurrent &&
+          event.target !== childrenCurrent &&
+          !childrenCurrent?.contains(event.target as Node) &&
+          !popupCurrent.contains(event.target as Node)
+        ) {
+          event.preventDefault()
+          event.stopPropagation()
+          closePopup()
         }
       }
       if (visibleInDom) {

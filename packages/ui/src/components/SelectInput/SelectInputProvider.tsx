@@ -146,7 +146,7 @@ export const SelectInputProvider = <T extends boolean>({
     action: ReducerAction,
   ): ReducerState => {
     switch (action.type) {
-      case 'selectAll': { 
+      case 'selectAll': {
         if (state.allSelected) {
           return { allSelected: false, selectedGroups: [], selectedValues: [] }
         }
@@ -157,9 +157,8 @@ export const SelectInputProvider = <T extends boolean>({
           selectedValues: allValues.map(option => option.value),
         }
       }
-      
 
-      case 'selectGroup': { 
+      case 'selectGroup': {
         if (!Array.isArray(options)) {
           if (state.selectedGroups.includes(action.selectedGroup)) {
             return {
@@ -193,9 +192,8 @@ export const SelectInputProvider = <T extends boolean>({
 
         return state
       }
-      
 
-      case 'selectOption': { 
+      case 'selectOption': {
         if (multiselect) {
           if (state.selectedValues.includes(action.clickedOption.value)) {
             return {
@@ -239,14 +237,12 @@ export const SelectInputProvider = <T extends boolean>({
           selectedValues: [action.clickedOption.value],
         }
       }
-      
 
-      case 'clearAll': { 
+      case 'clearAll': {
         return { allSelected: false, selectedGroups: [], selectedValues: [] }
       }
-      
 
-      case 'update': { 
+      case 'update': {
         return {
           allSelected: state.allSelected,
           selectedGroups: state.selectedGroups,
@@ -265,21 +261,18 @@ export const SelectInputProvider = <T extends boolean>({
           }),
         }
       }
-      
 
-      case 'reset': { 
+      case 'reset': {
         return {
           allSelected: false,
           selectedGroups: action.selectedGroups,
           selectedValues: action.selectedValues,
         }
       }
-      
 
-      default: { 
+      default: {
         return state
       }
-      
     }
   }
 

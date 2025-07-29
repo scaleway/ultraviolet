@@ -13,7 +13,7 @@ import {
 describe('PieChart', () => {
   beforeAll(() => {
     // Have to mock ResizeObserver as Nivo doesn't add automatically ResizeObserver polyfill anymore (v0.79.0)
-    global.ResizeObserver = vi.fn().mockImplementation(() => ({
+    globalThis.ResizeObserver = vi.fn().mockImplementation(() => ({
       disconnect: vi.fn(),
       observe: vi.fn(),
       unobserve: vi.fn(),
@@ -72,7 +72,9 @@ describe('PieChart', () => {
     )
     // eslint-disable-next-line testing-library/no-container, testing-library/no-node-access
     const slice = container.querySelector('svg g path')
-    if (!slice) {throw new Error('PieChart slice path not found')}
+    if (!slice) {
+      throw new Error('PieChart slice path not found')
+    }
     await userEvent.unhover(slice)
     await userEvent.hover(slice)
   })

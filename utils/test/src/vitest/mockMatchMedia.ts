@@ -26,5 +26,5 @@ const getMockImplementation = ({ media, matches = false }: MockMatchMedia) => {
 
 export const mockMatchMedia = ({ media, matches = false }: MockMatchMedia) => {
   const mockedImplementation = getMockImplementation({ matches, media })
-  vi.spyOn(window, 'matchMedia').mockImplementation(mockedImplementation)
+  vi.spyOn(globalThis, 'matchMedia').mockImplementation(mockedImplementation)
 }

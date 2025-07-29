@@ -12,8 +12,12 @@ const isValidNewHour = (old: number, key: number, timeFormat: number) => {
 }
 
 export const isCompleteHour = (timeFormat: number, value: number) => {
-  if (timeFormat === 12 && value > 1) {return true}
-  if (timeFormat === 24 && value > 2) {return true}
+  if (timeFormat === 12 && value > 1) {
+    return true
+  }
+  if (timeFormat === 24 && value > 2) {
+    return true
+  }
 
   return false
 }
@@ -30,7 +34,9 @@ export const canConcat = (
 
 export const getLastTypedChar = (value: string, oldValue?: number) => {
   // Detect the newly typed character(s)
-  if (!oldValue) {return value}
+  if (!oldValue) {
+    return value
+  }
 
   const oldValueString = oldValue.toString()
   const valueCorrected = value.startsWith('0') ? value.slice(1) : value
@@ -48,9 +54,15 @@ export const getValueByType = (
   type: (typeof TIME_KEYS)[number],
   value?: Date | null,
 ) => {
-  if (!value) {return 0}
-  if (type === 'h') {return value.getHours()}
-  if (type === 'm') {return value.getMinutes()}
+  if (!value) {
+    return 0
+  }
+  if (type === 'h') {
+    return value.getHours()
+  }
+  if (type === 'm') {
+    return value.getMinutes()
+  }
 
   return value.getSeconds()
 }
@@ -60,8 +72,12 @@ export const setValueByType = (
   date: Date | undefined,
   value: number,
 ) => {
-  if (type === 'h') {return date?.setHours(value)}
-  if (type === 'm') {return date?.setMinutes(value)}
+  if (type === 'h') {
+    return date?.setHours(value)
+  }
+  if (type === 'm') {
+    return date?.setMinutes(value)
+  }
 
   return date?.setSeconds(value)
 }

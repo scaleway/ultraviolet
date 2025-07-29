@@ -152,8 +152,12 @@ export const Monthly = () => {
         }
 
         const monthState = () => {
-          if (isSelected) {return 'selected'}
-          if (isInHoveredRange) {return 'in-range'}
+          if (isSelected) {
+            return 'selected'
+          }
+          if (isInHoveredRange) {
+            return 'in-range'
+          }
 
           return 'neutral'
         }

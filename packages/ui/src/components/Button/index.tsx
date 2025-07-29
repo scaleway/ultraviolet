@@ -328,7 +328,9 @@ export const Button = forwardRef<Element, FinalProps>(
     const { theme } = useTheme()
     const computedSentimentLoader = useMemo(() => {
       if (variant === 'filled' && !['black', 'white'].includes(sentiment)) {
-        if (theme === 'light') {return 'white'}
+        if (theme === 'light') {
+          return 'white'
+        }
 
         return 'black'
       }

@@ -13,8 +13,12 @@ export const PositiveNegative: StoryFn<typeof BarChart> = props => {
       axisFormatters={{
         bottom: value => format(new Date(value), 'dd-MM-Y'),
         left: value => {
-          if (value === 1) {return 'Active'}
-          if (value === -1) {return 'Inactive'}
+          if (value === 1) {
+            return 'Active'
+          }
+          if (value === -1) {
+            return 'Inactive'
+          }
 
           return ''
         },

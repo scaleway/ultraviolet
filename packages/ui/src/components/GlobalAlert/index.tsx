@@ -68,7 +68,9 @@ export const GlobalAlert = ({
 }: GlobalAlertProps) => {
   const [opened, toggleOpened] = useReducer(value => !value, true)
 
-  if (!opened) {return null}
+  if (!opened) {
+    return null
+  }
 
   return (
     <Container
