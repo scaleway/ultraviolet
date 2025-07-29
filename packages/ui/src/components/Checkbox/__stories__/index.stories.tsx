@@ -13,11 +13,11 @@ export default {
   title: 'Components/Data Entry/Checkbox',
 } as Meta<typeof Checkbox>
 
+export { Playground } from './Playground.stories'
 export { Checked } from './Checked.stories'
 export { Disabled } from './Disabled.stories'
-export { EmptyText } from './EmptyText.stories'
 export { Errors } from './Errors.stories'
-export { Helper } from './Helper.stories'
-export { Playground } from './Playground.stories'
-export { Required } from './Required.stories'
 export { Value } from './Value.stories'
+export { EmptyText } from './EmptyText.stories'
+export { Required } from './Required.stories'
+export { Helper } from './Helper.stories'

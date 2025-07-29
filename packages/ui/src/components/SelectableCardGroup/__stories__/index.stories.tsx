@@ -6,8 +6,8 @@ export default {
   title: 'Components/Data Entry/SelectableCardGroup',
 } as Meta<typeof SelectableCardGroup>
 
-export { Checkbox } from './Checkbox'
+export { Playground } from './Playground.stories'
 export { Columns } from './Columns.stories'
+export { Checkbox } from './Checkbox'
 export { Error } from './Error.stories'
 export { Examples } from './Examples.stories'
-export { Playground } from './Playground.stories'

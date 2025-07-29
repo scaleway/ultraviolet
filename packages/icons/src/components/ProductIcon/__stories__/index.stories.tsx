@@ -4,6 +4,7 @@ import Documentation from './Documentation.md?raw'
 
 export default {
   component: ConsoleProductIcon,
+  title: 'Icons/ProductIcon',
   parameters: {
     docs: {
       description: {
@@ -11,11 +12,10 @@ export default {
       },
     },
   },
-  title: 'Icons/ProductIcon',
 } as Meta
 
-export { Disabled } from './Disabled.stories'
-export { List } from './List.stories'
 export { Playground } from './Playground.stories'
-export { Sizes } from './Sizes.stories'
 export { Variants } from './Variants.stories'
+export { Disabled } from './Disabled.stories'
+export { Sizes } from './Sizes.stories'
+export { List } from './List.stories'

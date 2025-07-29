@@ -6,6 +6,6 @@ export default {
   title: 'Components/Feedback/Notification',
 } as Meta<typeof NotificationContainer>
 
+export { Playground } from './Playground.stories'
 export { Children } from './Children'
 export { ContainerId } from './ContainerId'
-export { Playground } from './Playground.stories'

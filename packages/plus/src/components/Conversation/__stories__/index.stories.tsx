@@ -12,14 +12,14 @@ export default {
   subcomponents: {
     'Conversation.Date': Date,
     'Conversation.Message': Message,
-    'Conversation.MessageInfos': MessageInfos,
     'Conversation.Tag': Tag,
+    'Conversation.MessageInfos': MessageInfos,
   },
   title: 'Plus/Compositions/Conversation',
 } as Meta<typeof Conversation>
 
+export { Playground } from './Playground.stories'
 export { Date } from './Date.stories'
 export { Message } from './Message.stories'
-export { MessageInfos } from './MessageInfos.stories'
-export { Playground } from './Playground.stories'
 export { Tag } from './Tag.stories'
+export { MessageInfos } from './MessageInfos.stories'
