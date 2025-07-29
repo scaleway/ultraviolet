@@ -2,13 +2,12 @@
 
 import styled from '@emotion/styled'
 import type {
-  ChangeEvent,
   ChangeEventHandler,
   InputHTMLAttributes,
   ReactNode,
   Ref,
 } from 'react'
-import { forwardRef, useCallback, useEffect, useId, useState } from 'react'
+import { forwardRef, useId } from 'react'
 import { Row } from '../Row'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
@@ -27,11 +26,22 @@ export const SIZES = {
   },
 } as const
 
+const StyledCheckbox = styled.input`
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+
+  &[disabled] {
+    cursor: not-allowed;
+  }
+`
+
 const StyledToggle = styled.div<{
-  'data-checked': boolean
-  'data-disabled': boolean
   size: 'small' | 'large'
-  'data-error': boolean
 }>`
   box-sizing: content-box;
   outline: none;
@@ -72,7 +82,7 @@ const StyledToggle = styled.div<{
     width: ${({ size, theme }) => `calc(${theme.sizing[SIZES[size].ball]} * 1.3775)`};
   }
 
-  &[data-checked="true"] {
+  &:has(:checked) {
     color: ${({ theme }) => theme.colors.neutral.textStrong};
     background-color: ${({ theme }) => theme.colors.primary.backgroundStrong};
 
@@ -95,7 +105,7 @@ const StyledToggle = styled.div<{
   &[data-disabled="true"] {
     background: ${({ theme }) => theme.colors.neutral.backgroundStrongDisabled};
 
-    &[data-checked="true"] {
+    &:has(:checked) {
       background: ${({ theme }) =>
         theme.colors.primary.backgroundStrongDisabled};
     }
@@ -109,32 +119,18 @@ const StyledToggle = styled.div<{
       box-shadow: ${({ theme }) => theme.shadows.focusDanger};
     }
 
-    &[data-checked="true"] {
+    &:has(:checked) {
       background-color: ${({ theme }) => theme.colors.danger.backgroundStrong};
     }
 
     &[data-disabled="true"] {
       background-color: ${({ theme }) => theme.colors.danger.backgroundDisabled};
 
-      &[data-checked="true"] {
+      &:has(:checked) {
         background-color: ${({ theme }) =>
           theme.colors.danger.backgroundStrongDisabled};
       }
     }
-  }
-`
-
-const StyledCheckbox = styled.input`
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-
-  &[disabled] {
-    cursor: not-allowed;
   }
 `
 
@@ -187,7 +183,7 @@ type ToggleProps = {
 export const Toggle = forwardRef(
   (
     {
-      checked = false,
+      checked,
       disabled = false,
       id,
       name,
@@ -206,20 +202,7 @@ export const Toggle = forwardRef(
     }: ToggleProps,
     ref: Ref<HTMLInputElement>,
   ) => {
-    const [state, setState] = useState(checked)
     const uniqueId = useId()
-
-    const onLocalChange = useCallback(
-      (event: ChangeEvent<HTMLInputElement>) => {
-        if (onChange) onChange?.(event)
-        else setState(event.target.checked)
-      },
-      [onChange, setState],
-    )
-
-    useEffect(() => {
-      setState(checked)
-    }, [checked, setState])
 
     return (
       <Tooltip text={tooltip}>
@@ -228,7 +211,6 @@ export const Toggle = forwardRef(
           className={className}
           data-testid={dataTestId}
           labelPosition={labelPosition}
-          onClick={evt => evt.stopPropagation()}
           size={size}
         >
           <Stack alignItems="baseline" gap={0.25}>
@@ -276,20 +258,20 @@ export const Toggle = forwardRef(
             ) : null}
           </Stack>
           <StyledToggle
-            data-checked={state}
             data-disabled={disabled}
             data-error={!!error}
             size={size}
           >
             <StyledCheckbox
-              aria-checked={state}
+              aria-invalid={!!error}
               aria-label={ariaLabel}
-              checked={state}
+              checked={checked}
               disabled={disabled}
-              id={id || uniqueId}
+              id={id ?? uniqueId}
               name={name}
-              onChange={onLocalChange}
+              onChange={onChange}
               ref={ref}
+              required={required}
               type="checkbox"
               value={value}
             />

@@ -238,16 +238,16 @@ exports[`ToggleGroup > renders correctly 1`] = `
   width: calc(1rem * 1.3775);
 }
 
-.emotion-21[data-checked="true"] {
+.emotion-21:has(:checked) {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.emotion-21[data-checked="true"]:hover {
+.emotion-21:has(:checked):hover {
   background-color: #792dd4;
 }
 
-.emotion-21[data-checked="true"]:after {
+.emotion-21:has(:checked):after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -255,8 +255,8 @@ exports[`ToggleGroup > renders correctly 1`] = `
   transform: translateX(-100%);
 }
 
-.emotion-21[data-checked="true"]:focus-within,
-.emotion-21[data-checked="true"]:focus {
+.emotion-21:has(:checked):focus-within,
+.emotion-21:has(:checked):focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
@@ -264,7 +264,7 @@ exports[`ToggleGroup > renders correctly 1`] = `
   background: #f3f3f4;
 }
 
-.emotion-21[data-disabled="true"][data-checked="true"] {
+.emotion-21[data-disabled="true"]:has(:checked) {
   background: #e5dbfd;
 }
 
@@ -277,7 +277,7 @@ exports[`ToggleGroup > renders correctly 1`] = `
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-21[data-error="true"][data-checked="true"] {
+.emotion-21[data-error="true"]:has(:checked) {
   background-color: #e51963;
 }
 
@@ -285,7 +285,7 @@ exports[`ToggleGroup > renders correctly 1`] = `
   background-color: #fff3f7;
 }
 
-.emotion-21[data-error="true"][data-disabled="true"][data-checked="true"] {
+.emotion-21[data-error="true"][data-disabled="true"]:has(:checked) {
   background-color: #ffd3e3;
 }
 
@@ -346,12 +346,11 @@ exports[`ToggleGroup > renders correctly 1`] = `
               </div>
               <div
                 class="emotion-21 emotion-22"
-                data-checked="false"
                 data-disabled="false"
                 data-error="false"
               >
                 <input
-                  aria-checked="false"
+                  aria-invalid="false"
                   class="emotion-23 emotion-24"
                   id="«r1»"
                   name="Toggle.value-1"
@@ -379,12 +378,11 @@ exports[`ToggleGroup > renders correctly 1`] = `
               </div>
               <div
                 class="emotion-21 emotion-22"
-                data-checked="false"
                 data-disabled="false"
                 data-error="false"
               >
                 <input
-                  aria-checked="false"
+                  aria-invalid="false"
                   class="emotion-23 emotion-24"
                   id="«r4»"
                   name="Toggle.value-2"
@@ -639,16 +637,16 @@ exports[`ToggleGroup > renders correctly with direction row 1`] = `
   width: calc(1rem * 1.3775);
 }
 
-.emotion-21[data-checked="true"] {
+.emotion-21:has(:checked) {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.emotion-21[data-checked="true"]:hover {
+.emotion-21:has(:checked):hover {
   background-color: #792dd4;
 }
 
-.emotion-21[data-checked="true"]:after {
+.emotion-21:has(:checked):after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -656,8 +654,8 @@ exports[`ToggleGroup > renders correctly with direction row 1`] = `
   transform: translateX(-100%);
 }
 
-.emotion-21[data-checked="true"]:focus-within,
-.emotion-21[data-checked="true"]:focus {
+.emotion-21:has(:checked):focus-within,
+.emotion-21:has(:checked):focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
@@ -665,7 +663,7 @@ exports[`ToggleGroup > renders correctly with direction row 1`] = `
   background: #f3f3f4;
 }
 
-.emotion-21[data-disabled="true"][data-checked="true"] {
+.emotion-21[data-disabled="true"]:has(:checked) {
   background: #e5dbfd;
 }
 
@@ -678,7 +676,7 @@ exports[`ToggleGroup > renders correctly with direction row 1`] = `
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-21[data-error="true"][data-checked="true"] {
+.emotion-21[data-error="true"]:has(:checked) {
   background-color: #e51963;
 }
 
@@ -686,7 +684,7 @@ exports[`ToggleGroup > renders correctly with direction row 1`] = `
   background-color: #fff3f7;
 }
 
-.emotion-21[data-error="true"][data-disabled="true"][data-checked="true"] {
+.emotion-21[data-error="true"][data-disabled="true"]:has(:checked) {
   background-color: #ffd3e3;
 }
 
@@ -747,12 +745,11 @@ exports[`ToggleGroup > renders correctly with direction row 1`] = `
               </div>
               <div
                 class="emotion-21 emotion-22"
-                data-checked="false"
                 data-disabled="false"
                 data-error="false"
               >
                 <input
-                  aria-checked="false"
+                  aria-invalid="false"
                   class="emotion-23 emotion-24"
                   id="«r8»"
                   name="Toggle.value-1"
@@ -780,12 +777,11 @@ exports[`ToggleGroup > renders correctly with direction row 1`] = `
               </div>
               <div
                 class="emotion-21 emotion-22"
-                data-checked="false"
                 data-disabled="false"
                 data-error="false"
               >
                 <input
-                  aria-checked="false"
+                  aria-invalid="false"
                   class="emotion-23 emotion-24"
                   id="«rb»"
                   name="Toggle.value-2"
@@ -1040,16 +1036,16 @@ exports[`ToggleGroup > renders correctly with error content 1`] = `
   width: calc(1rem * 1.3775);
 }
 
-.emotion-21[data-checked="true"] {
+.emotion-21:has(:checked) {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.emotion-21[data-checked="true"]:hover {
+.emotion-21:has(:checked):hover {
   background-color: #792dd4;
 }
 
-.emotion-21[data-checked="true"]:after {
+.emotion-21:has(:checked):after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -1057,8 +1053,8 @@ exports[`ToggleGroup > renders correctly with error content 1`] = `
   transform: translateX(-100%);
 }
 
-.emotion-21[data-checked="true"]:focus-within,
-.emotion-21[data-checked="true"]:focus {
+.emotion-21:has(:checked):focus-within,
+.emotion-21:has(:checked):focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
@@ -1066,7 +1062,7 @@ exports[`ToggleGroup > renders correctly with error content 1`] = `
   background: #f3f3f4;
 }
 
-.emotion-21[data-disabled="true"][data-checked="true"] {
+.emotion-21[data-disabled="true"]:has(:checked) {
   background: #e5dbfd;
 }
 
@@ -1079,7 +1075,7 @@ exports[`ToggleGroup > renders correctly with error content 1`] = `
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-21[data-error="true"][data-checked="true"] {
+.emotion-21[data-error="true"]:has(:checked) {
   background-color: #e51963;
 }
 
@@ -1087,7 +1083,7 @@ exports[`ToggleGroup > renders correctly with error content 1`] = `
   background-color: #fff3f7;
 }
 
-.emotion-21[data-error="true"][data-disabled="true"][data-checked="true"] {
+.emotion-21[data-error="true"][data-disabled="true"]:has(:checked) {
   background-color: #ffd3e3;
 }
 
@@ -1160,12 +1156,11 @@ exports[`ToggleGroup > renders correctly with error content 1`] = `
               </div>
               <div
                 class="emotion-21 emotion-22"
-                data-checked="false"
                 data-disabled="false"
                 data-error="true"
               >
                 <input
-                  aria-checked="false"
+                  aria-invalid="true"
                   class="emotion-23 emotion-24"
                   id="«rn»"
                   name="Toggle.value-1"
@@ -1193,12 +1188,11 @@ exports[`ToggleGroup > renders correctly with error content 1`] = `
               </div>
               <div
                 class="emotion-21 emotion-22"
-                data-checked="false"
                 data-disabled="false"
                 data-error="true"
               >
                 <input
-                  aria-checked="false"
+                  aria-invalid="true"
                   class="emotion-23 emotion-24"
                   id="«rq»"
                   name="Toggle.value-2"
@@ -1458,16 +1452,16 @@ exports[`ToggleGroup > renders correctly with helper content 1`] = `
   width: calc(1rem * 1.3775);
 }
 
-.emotion-21[data-checked="true"] {
+.emotion-21:has(:checked) {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.emotion-21[data-checked="true"]:hover {
+.emotion-21:has(:checked):hover {
   background-color: #792dd4;
 }
 
-.emotion-21[data-checked="true"]:after {
+.emotion-21:has(:checked):after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -1475,8 +1469,8 @@ exports[`ToggleGroup > renders correctly with helper content 1`] = `
   transform: translateX(-100%);
 }
 
-.emotion-21[data-checked="true"]:focus-within,
-.emotion-21[data-checked="true"]:focus {
+.emotion-21:has(:checked):focus-within,
+.emotion-21:has(:checked):focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
@@ -1484,7 +1478,7 @@ exports[`ToggleGroup > renders correctly with helper content 1`] = `
   background: #f3f3f4;
 }
 
-.emotion-21[data-disabled="true"][data-checked="true"] {
+.emotion-21[data-disabled="true"]:has(:checked) {
   background: #e5dbfd;
 }
 
@@ -1497,7 +1491,7 @@ exports[`ToggleGroup > renders correctly with helper content 1`] = `
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-21[data-error="true"][data-checked="true"] {
+.emotion-21[data-error="true"]:has(:checked) {
   background-color: #e51963;
 }
 
@@ -1505,7 +1499,7 @@ exports[`ToggleGroup > renders correctly with helper content 1`] = `
   background-color: #fff3f7;
 }
 
-.emotion-21[data-error="true"][data-disabled="true"][data-checked="true"] {
+.emotion-21[data-error="true"][data-disabled="true"]:has(:checked) {
   background-color: #ffd3e3;
 }
 
@@ -1578,12 +1572,11 @@ exports[`ToggleGroup > renders correctly with helper content 1`] = `
               </div>
               <div
                 class="emotion-21 emotion-22"
-                data-checked="false"
                 data-disabled="false"
                 data-error="false"
               >
                 <input
-                  aria-checked="false"
+                  aria-invalid="false"
                   class="emotion-23 emotion-24"
                   id="«rf»"
                   name="Toggle.value-1"
@@ -1611,12 +1604,11 @@ exports[`ToggleGroup > renders correctly with helper content 1`] = `
               </div>
               <div
                 class="emotion-21 emotion-22"
-                data-checked="false"
                 data-disabled="false"
                 data-error="false"
               >
                 <input
-                  aria-checked="false"
+                  aria-invalid="false"
                   class="emotion-23 emotion-24"
                   id="«ri»"
                   name="Toggle.value-2"
@@ -1911,16 +1903,16 @@ exports[`ToggleGroup > renders correctly with required prop 1`] = `
   width: calc(1rem * 1.3775);
 }
 
-.emotion-25[data-checked="true"] {
+.emotion-25:has(:checked) {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.emotion-25[data-checked="true"]:hover {
+.emotion-25:has(:checked):hover {
   background-color: #792dd4;
 }
 
-.emotion-25[data-checked="true"]:after {
+.emotion-25:has(:checked):after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -1928,8 +1920,8 @@ exports[`ToggleGroup > renders correctly with required prop 1`] = `
   transform: translateX(-100%);
 }
 
-.emotion-25[data-checked="true"]:focus-within,
-.emotion-25[data-checked="true"]:focus {
+.emotion-25:has(:checked):focus-within,
+.emotion-25:has(:checked):focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
@@ -1937,7 +1929,7 @@ exports[`ToggleGroup > renders correctly with required prop 1`] = `
   background: #f3f3f4;
 }
 
-.emotion-25[data-disabled="true"][data-checked="true"] {
+.emotion-25[data-disabled="true"]:has(:checked) {
   background: #e5dbfd;
 }
 
@@ -1950,7 +1942,7 @@ exports[`ToggleGroup > renders correctly with required prop 1`] = `
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-25[data-error="true"][data-checked="true"] {
+.emotion-25[data-error="true"]:has(:checked) {
   background-color: #e51963;
 }
 
@@ -1958,7 +1950,7 @@ exports[`ToggleGroup > renders correctly with required prop 1`] = `
   background-color: #fff3f7;
 }
 
-.emotion-25[data-error="true"][data-disabled="true"][data-checked="true"] {
+.emotion-25[data-error="true"][data-disabled="true"]:has(:checked) {
   background-color: #ffd3e3;
 }
 
@@ -2028,12 +2020,11 @@ exports[`ToggleGroup > renders correctly with required prop 1`] = `
               </div>
               <div
                 class="emotion-25 emotion-26"
-                data-checked="false"
                 data-disabled="false"
                 data-error="false"
               >
                 <input
-                  aria-checked="false"
+                  aria-invalid="false"
                   class="emotion-27 emotion-28"
                   id="«r10»"
                   name="Toggle.value-1"
@@ -2061,12 +2052,11 @@ exports[`ToggleGroup > renders correctly with required prop 1`] = `
               </div>
               <div
                 class="emotion-25 emotion-26"
-                data-checked="false"
                 data-disabled="false"
                 data-error="false"
               >
                 <input
-                  aria-checked="false"
+                  aria-invalid="false"
                   class="emotion-27 emotion-28"
                   id="«r13»"
                   name="Toggle.value-2"

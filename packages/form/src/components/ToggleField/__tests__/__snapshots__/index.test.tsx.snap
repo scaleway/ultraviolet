@@ -105,16 +105,16 @@ exports[`ToggleField > should render correctly 1`] = `
   width: calc(1rem * 1.3775);
 }
 
-.emotion-6[data-checked="true"] {
+.emotion-6:has(:checked) {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.emotion-6[data-checked="true"]:hover {
+.emotion-6:has(:checked):hover {
   background-color: #792dd4;
 }
 
-.emotion-6[data-checked="true"]:after {
+.emotion-6:has(:checked):after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -122,8 +122,8 @@ exports[`ToggleField > should render correctly 1`] = `
   transform: translateX(-100%);
 }
 
-.emotion-6[data-checked="true"]:focus-within,
-.emotion-6[data-checked="true"]:focus {
+.emotion-6:has(:checked):focus-within,
+.emotion-6:has(:checked):focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
@@ -131,7 +131,7 @@ exports[`ToggleField > should render correctly 1`] = `
   background: #f3f3f4;
 }
 
-.emotion-6[data-disabled="true"][data-checked="true"] {
+.emotion-6[data-disabled="true"]:has(:checked) {
   background: #e5dbfd;
 }
 
@@ -144,7 +144,7 @@ exports[`ToggleField > should render correctly 1`] = `
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-6[data-error="true"][data-checked="true"] {
+.emotion-6[data-error="true"]:has(:checked) {
   background-color: #e51963;
 }
 
@@ -152,7 +152,7 @@ exports[`ToggleField > should render correctly 1`] = `
   background-color: #fff3f7;
 }
 
-.emotion-6[data-error="true"][data-disabled="true"][data-checked="true"] {
+.emotion-6[data-error="true"][data-disabled="true"]:has(:checked) {
   background-color: #ffd3e3;
 }
 
@@ -186,12 +186,11 @@ exports[`ToggleField > should render correctly 1`] = `
         />
         <div
           class="emotion-6 emotion-7"
-          data-checked="false"
           data-disabled="false"
           data-error="false"
         >
           <input
-            aria-checked="false"
+            aria-invalid="false"
             class="emotion-8 emotion-9"
             id="«r0»"
             name="test"
@@ -309,16 +308,16 @@ exports[`ToggleField > should render correctly checked 1`] = `
   width: calc(1rem * 1.3775);
 }
 
-.emotion-6[data-checked="true"] {
+.emotion-6:has(:checked) {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.emotion-6[data-checked="true"]:hover {
+.emotion-6:has(:checked):hover {
   background-color: #792dd4;
 }
 
-.emotion-6[data-checked="true"]:after {
+.emotion-6:has(:checked):after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -326,8 +325,8 @@ exports[`ToggleField > should render correctly checked 1`] = `
   transform: translateX(-100%);
 }
 
-.emotion-6[data-checked="true"]:focus-within,
-.emotion-6[data-checked="true"]:focus {
+.emotion-6:has(:checked):focus-within,
+.emotion-6:has(:checked):focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
@@ -335,7 +334,7 @@ exports[`ToggleField > should render correctly checked 1`] = `
   background: #f3f3f4;
 }
 
-.emotion-6[data-disabled="true"][data-checked="true"] {
+.emotion-6[data-disabled="true"]:has(:checked) {
   background: #e5dbfd;
 }
 
@@ -348,7 +347,7 @@ exports[`ToggleField > should render correctly checked 1`] = `
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-6[data-error="true"][data-checked="true"] {
+.emotion-6[data-error="true"]:has(:checked) {
   background-color: #e51963;
 }
 
@@ -356,7 +355,7 @@ exports[`ToggleField > should render correctly checked 1`] = `
   background-color: #fff3f7;
 }
 
-.emotion-6[data-error="true"][data-disabled="true"][data-checked="true"] {
+.emotion-6[data-error="true"][data-disabled="true"]:has(:checked) {
   background-color: #ffd3e3;
 }
 
@@ -390,12 +389,11 @@ exports[`ToggleField > should render correctly checked 1`] = `
         />
         <div
           class="emotion-6 emotion-7"
-          data-checked="true"
           data-disabled="false"
           data-error="false"
         >
           <input
-            aria-checked="true"
+            aria-invalid="false"
             checked=""
             class="emotion-8 emotion-9"
             id="«r4»"
@@ -514,16 +512,16 @@ exports[`ToggleField > should render correctly disabled 1`] = `
   width: calc(1rem * 1.3775);
 }
 
-.emotion-6[data-checked="true"] {
+.emotion-6:has(:checked) {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.emotion-6[data-checked="true"]:hover {
+.emotion-6:has(:checked):hover {
   background-color: #792dd4;
 }
 
-.emotion-6[data-checked="true"]:after {
+.emotion-6:has(:checked):after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -531,8 +529,8 @@ exports[`ToggleField > should render correctly disabled 1`] = `
   transform: translateX(-100%);
 }
 
-.emotion-6[data-checked="true"]:focus-within,
-.emotion-6[data-checked="true"]:focus {
+.emotion-6:has(:checked):focus-within,
+.emotion-6:has(:checked):focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
@@ -540,7 +538,7 @@ exports[`ToggleField > should render correctly disabled 1`] = `
   background: #f3f3f4;
 }
 
-.emotion-6[data-disabled="true"][data-checked="true"] {
+.emotion-6[data-disabled="true"]:has(:checked) {
   background: #e5dbfd;
 }
 
@@ -553,7 +551,7 @@ exports[`ToggleField > should render correctly disabled 1`] = `
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-6[data-error="true"][data-checked="true"] {
+.emotion-6[data-error="true"]:has(:checked) {
   background-color: #e51963;
 }
 
@@ -561,7 +559,7 @@ exports[`ToggleField > should render correctly disabled 1`] = `
   background-color: #fff3f7;
 }
 
-.emotion-6[data-error="true"][data-disabled="true"][data-checked="true"] {
+.emotion-6[data-error="true"][data-disabled="true"]:has(:checked) {
   background-color: #ffd3e3;
 }
 
@@ -595,12 +593,11 @@ exports[`ToggleField > should render correctly disabled 1`] = `
         />
         <div
           class="emotion-6 emotion-7"
-          data-checked="false"
           data-disabled="true"
           data-error="false"
         >
           <input
-            aria-checked="false"
+            aria-invalid="false"
             class="emotion-8 emotion-9"
             disabled=""
             id="«r2»"
@@ -745,16 +742,16 @@ exports[`ToggleField > should render correctly with label and checked 1`] = `
   width: calc(1rem * 1.3775);
 }
 
-.emotion-10[data-checked="true"] {
+.emotion-10:has(:checked) {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.emotion-10[data-checked="true"]:hover {
+.emotion-10:has(:checked):hover {
   background-color: #792dd4;
 }
 
-.emotion-10[data-checked="true"]:after {
+.emotion-10:has(:checked):after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -762,8 +759,8 @@ exports[`ToggleField > should render correctly with label and checked 1`] = `
   transform: translateX(-100%);
 }
 
-.emotion-10[data-checked="true"]:focus-within,
-.emotion-10[data-checked="true"]:focus {
+.emotion-10:has(:checked):focus-within,
+.emotion-10:has(:checked):focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
@@ -771,7 +768,7 @@ exports[`ToggleField > should render correctly with label and checked 1`] = `
   background: #f3f3f4;
 }
 
-.emotion-10[data-disabled="true"][data-checked="true"] {
+.emotion-10[data-disabled="true"]:has(:checked) {
   background: #e5dbfd;
 }
 
@@ -784,7 +781,7 @@ exports[`ToggleField > should render correctly with label and checked 1`] = `
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-10[data-error="true"][data-checked="true"] {
+.emotion-10[data-error="true"]:has(:checked) {
   background-color: #e51963;
 }
 
@@ -792,7 +789,7 @@ exports[`ToggleField > should render correctly with label and checked 1`] = `
   background-color: #fff3f7;
 }
 
-.emotion-10[data-error="true"][data-disabled="true"][data-checked="true"] {
+.emotion-10[data-error="true"][data-disabled="true"]:has(:checked) {
   background-color: #ffd3e3;
 }
 
@@ -836,12 +833,11 @@ exports[`ToggleField > should render correctly with label and checked 1`] = `
         </div>
         <div
           class="emotion-10 emotion-11"
-          data-checked="true"
           data-disabled="false"
           data-error="false"
         >
           <input
-            aria-checked="true"
+            aria-invalid="false"
             checked=""
             class="emotion-12 emotion-13"
             id="«r6»"

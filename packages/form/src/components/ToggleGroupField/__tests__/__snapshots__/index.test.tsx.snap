@@ -242,16 +242,16 @@ exports[`GroupField > should render correctly checked 1`] = `
   width: calc(1rem * 1.3775);
 }
 
-.emotion-23[data-checked="true"] {
+.emotion-23:has(:checked) {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.emotion-23[data-checked="true"]:hover {
+.emotion-23:has(:checked):hover {
   background-color: #792dd4;
 }
 
-.emotion-23[data-checked="true"]:after {
+.emotion-23:has(:checked):after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -259,8 +259,8 @@ exports[`GroupField > should render correctly checked 1`] = `
   transform: translateX(-100%);
 }
 
-.emotion-23[data-checked="true"]:focus-within,
-.emotion-23[data-checked="true"]:focus {
+.emotion-23:has(:checked):focus-within,
+.emotion-23:has(:checked):focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
@@ -268,7 +268,7 @@ exports[`GroupField > should render correctly checked 1`] = `
   background: #f3f3f4;
 }
 
-.emotion-23[data-disabled="true"][data-checked="true"] {
+.emotion-23[data-disabled="true"]:has(:checked) {
   background: #e5dbfd;
 }
 
@@ -281,7 +281,7 @@ exports[`GroupField > should render correctly checked 1`] = `
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-23[data-error="true"][data-checked="true"] {
+.emotion-23[data-error="true"]:has(:checked) {
   background-color: #e51963;
 }
 
@@ -289,7 +289,7 @@ exports[`GroupField > should render correctly checked 1`] = `
   background-color: #fff3f7;
 }
 
-.emotion-23[data-error="true"][data-disabled="true"][data-checked="true"] {
+.emotion-23[data-error="true"][data-disabled="true"]:has(:checked) {
   background-color: #ffd3e3;
 }
 
@@ -354,12 +354,11 @@ exports[`GroupField > should render correctly checked 1`] = `
                 </div>
                 <div
                   class="emotion-23 emotion-24"
-                  data-checked="false"
                   data-disabled="false"
                   data-error="false"
                 >
                   <input
-                    aria-checked="false"
+                    aria-invalid="false"
                     class="emotion-25 emotion-26"
                     id="«r1»"
                     name="Group.value-1"
@@ -387,12 +386,11 @@ exports[`GroupField > should render correctly checked 1`] = `
                 </div>
                 <div
                   class="emotion-23 emotion-24"
-                  data-checked="true"
                   data-disabled="false"
                   data-error="false"
                 >
                   <input
-                    aria-checked="true"
+                    aria-invalid="false"
                     class="emotion-25 emotion-26"
                     id="«r4»"
                     name="Group.value-2"
@@ -687,16 +685,16 @@ exports[`GroupField > should trigger events correctly with required prop 1`] = `
   width: calc(1rem * 1.3775);
 }
 
-.emotion-27[data-checked="true"] {
+.emotion-27:has(:checked) {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.emotion-27[data-checked="true"]:hover {
+.emotion-27:has(:checked):hover {
   background-color: #792dd4;
 }
 
-.emotion-27[data-checked="true"]:after {
+.emotion-27:has(:checked):after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -704,8 +702,8 @@ exports[`GroupField > should trigger events correctly with required prop 1`] = `
   transform: translateX(-100%);
 }
 
-.emotion-27[data-checked="true"]:focus-within,
-.emotion-27[data-checked="true"]:focus {
+.emotion-27:has(:checked):focus-within,
+.emotion-27:has(:checked):focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
@@ -713,7 +711,7 @@ exports[`GroupField > should trigger events correctly with required prop 1`] = `
   background: #f3f3f4;
 }
 
-.emotion-27[data-disabled="true"][data-checked="true"] {
+.emotion-27[data-disabled="true"]:has(:checked) {
   background: #e5dbfd;
 }
 
@@ -726,7 +724,7 @@ exports[`GroupField > should trigger events correctly with required prop 1`] = `
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-27[data-error="true"][data-checked="true"] {
+.emotion-27[data-error="true"]:has(:checked) {
   background-color: #e51963;
 }
 
@@ -734,7 +732,7 @@ exports[`GroupField > should trigger events correctly with required prop 1`] = `
   background-color: #fff3f7;
 }
 
-.emotion-27[data-error="true"][data-disabled="true"][data-checked="true"] {
+.emotion-27[data-error="true"][data-disabled="true"]:has(:checked) {
   background-color: #ffd3e3;
 }
 
@@ -820,12 +818,11 @@ exports[`GroupField > should trigger events correctly with required prop 1`] = `
                 </div>
                 <div
                   class="emotion-27 emotion-28"
-                  data-checked="false"
                   data-disabled="false"
                   data-error="true"
                 >
                   <input
-                    aria-checked="false"
+                    aria-invalid="true"
                     class="emotion-29 emotion-30"
                     id="«r9»"
                     name="test.value-1"
@@ -853,12 +850,11 @@ exports[`GroupField > should trigger events correctly with required prop 1`] = `
                 </div>
                 <div
                   class="emotion-27 emotion-28"
-                  data-checked="false"
                   data-disabled="false"
                   data-error="true"
                 >
                   <input
-                    aria-checked="false"
+                    aria-invalid="true"
                     class="emotion-29 emotion-30"
                     id="«rc»"
                     name="test.value-2"

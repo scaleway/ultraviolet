@@ -101,16 +101,16 @@ exports[`Toggle > renders correctly 1`] = `
   width: calc(1rem * 1.3775);
 }
 
-.emotion-4[data-checked="true"] {
+.emotion-4:has(:checked) {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.emotion-4[data-checked="true"]:hover {
+.emotion-4:has(:checked):hover {
   background-color: #792dd4;
 }
 
-.emotion-4[data-checked="true"]:after {
+.emotion-4:has(:checked):after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -118,8 +118,8 @@ exports[`Toggle > renders correctly 1`] = `
   transform: translateX(-100%);
 }
 
-.emotion-4[data-checked="true"]:focus-within,
-.emotion-4[data-checked="true"]:focus {
+.emotion-4:has(:checked):focus-within,
+.emotion-4:has(:checked):focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
@@ -127,7 +127,7 @@ exports[`Toggle > renders correctly 1`] = `
   background: #f3f3f4;
 }
 
-.emotion-4[data-disabled="true"][data-checked="true"] {
+.emotion-4[data-disabled="true"]:has(:checked) {
   background: #e5dbfd;
 }
 
@@ -140,7 +140,7 @@ exports[`Toggle > renders correctly 1`] = `
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-4[data-error="true"][data-checked="true"] {
+.emotion-4[data-error="true"]:has(:checked) {
   background-color: #e51963;
 }
 
@@ -148,7 +148,7 @@ exports[`Toggle > renders correctly 1`] = `
   background-color: #fff3f7;
 }
 
-.emotion-4[data-error="true"][data-disabled="true"][data-checked="true"] {
+.emotion-4[data-error="true"][data-disabled="true"]:has(:checked) {
   background-color: #ffd3e3;
 }
 
@@ -178,12 +178,11 @@ exports[`Toggle > renders correctly 1`] = `
       />
       <div
         class="emotion-4 emotion-5"
-        data-checked="false"
         data-disabled="false"
         data-error="false"
       >
         <input
-          aria-checked="false"
+          aria-invalid="false"
           class="emotion-6 emotion-7"
           id="«r0»"
           name="test"
@@ -322,16 +321,16 @@ exports[`Toggle > renders correctly label 1`] = `
   width: calc(1rem * 1.3775);
 }
 
-.emotion-8[data-checked="true"] {
+.emotion-8:has(:checked) {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.emotion-8[data-checked="true"]:hover {
+.emotion-8:has(:checked):hover {
   background-color: #792dd4;
 }
 
-.emotion-8[data-checked="true"]:after {
+.emotion-8:has(:checked):after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -339,8 +338,8 @@ exports[`Toggle > renders correctly label 1`] = `
   transform: translateX(-100%);
 }
 
-.emotion-8[data-checked="true"]:focus-within,
-.emotion-8[data-checked="true"]:focus {
+.emotion-8:has(:checked):focus-within,
+.emotion-8:has(:checked):focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
@@ -348,7 +347,7 @@ exports[`Toggle > renders correctly label 1`] = `
   background: #f3f3f4;
 }
 
-.emotion-8[data-disabled="true"][data-checked="true"] {
+.emotion-8[data-disabled="true"]:has(:checked) {
   background: #e5dbfd;
 }
 
@@ -361,7 +360,7 @@ exports[`Toggle > renders correctly label 1`] = `
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-8[data-error="true"][data-checked="true"] {
+.emotion-8[data-error="true"]:has(:checked) {
   background-color: #e51963;
 }
 
@@ -369,7 +368,7 @@ exports[`Toggle > renders correctly label 1`] = `
   background-color: #fff3f7;
 }
 
-.emotion-8[data-error="true"][data-disabled="true"][data-checked="true"] {
+.emotion-8[data-error="true"][data-disabled="true"]:has(:checked) {
   background-color: #ffd3e3;
 }
 
@@ -409,12 +408,11 @@ exports[`Toggle > renders correctly label 1`] = `
       </div>
       <div
         class="emotion-8 emotion-9"
-        data-checked="false"
         data-disabled="false"
         data-error="false"
       >
         <input
-          aria-checked="false"
+          aria-invalid="false"
           class="emotion-10 emotion-11"
           id="«rg»"
           name="test"
@@ -527,16 +525,16 @@ exports[`Toggle > renders correctly when checked 1`] = `
   width: calc(1rem * 1.3775);
 }
 
-.emotion-4[data-checked="true"] {
+.emotion-4:has(:checked) {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.emotion-4[data-checked="true"]:hover {
+.emotion-4:has(:checked):hover {
   background-color: #792dd4;
 }
 
-.emotion-4[data-checked="true"]:after {
+.emotion-4:has(:checked):after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -544,8 +542,8 @@ exports[`Toggle > renders correctly when checked 1`] = `
   transform: translateX(-100%);
 }
 
-.emotion-4[data-checked="true"]:focus-within,
-.emotion-4[data-checked="true"]:focus {
+.emotion-4:has(:checked):focus-within,
+.emotion-4:has(:checked):focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
@@ -553,7 +551,7 @@ exports[`Toggle > renders correctly when checked 1`] = `
   background: #f3f3f4;
 }
 
-.emotion-4[data-disabled="true"][data-checked="true"] {
+.emotion-4[data-disabled="true"]:has(:checked) {
   background: #e5dbfd;
 }
 
@@ -566,7 +564,7 @@ exports[`Toggle > renders correctly when checked 1`] = `
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-4[data-error="true"][data-checked="true"] {
+.emotion-4[data-error="true"]:has(:checked) {
   background-color: #e51963;
 }
 
@@ -574,7 +572,7 @@ exports[`Toggle > renders correctly when checked 1`] = `
   background-color: #fff3f7;
 }
 
-.emotion-4[data-error="true"][data-disabled="true"][data-checked="true"] {
+.emotion-4[data-error="true"][data-disabled="true"]:has(:checked) {
   background-color: #ffd3e3;
 }
 
@@ -604,12 +602,11 @@ exports[`Toggle > renders correctly when checked 1`] = `
       />
       <div
         class="emotion-4 emotion-5"
-        data-checked="true"
         data-disabled="false"
         data-error="false"
       >
         <input
-          aria-checked="true"
+          aria-invalid="false"
           checked=""
           class="emotion-6 emotion-7"
           id="«r2»"
@@ -723,16 +720,16 @@ exports[`Toggle > renders correctly when disabled 1`] = `
   width: calc(1rem * 1.3775);
 }
 
-.emotion-4[data-checked="true"] {
+.emotion-4:has(:checked) {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.emotion-4[data-checked="true"]:hover {
+.emotion-4:has(:checked):hover {
   background-color: #792dd4;
 }
 
-.emotion-4[data-checked="true"]:after {
+.emotion-4:has(:checked):after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -740,8 +737,8 @@ exports[`Toggle > renders correctly when disabled 1`] = `
   transform: translateX(-100%);
 }
 
-.emotion-4[data-checked="true"]:focus-within,
-.emotion-4[data-checked="true"]:focus {
+.emotion-4:has(:checked):focus-within,
+.emotion-4:has(:checked):focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
@@ -749,7 +746,7 @@ exports[`Toggle > renders correctly when disabled 1`] = `
   background: #f3f3f4;
 }
 
-.emotion-4[data-disabled="true"][data-checked="true"] {
+.emotion-4[data-disabled="true"]:has(:checked) {
   background: #e5dbfd;
 }
 
@@ -762,7 +759,7 @@ exports[`Toggle > renders correctly when disabled 1`] = `
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-4[data-error="true"][data-checked="true"] {
+.emotion-4[data-error="true"]:has(:checked) {
   background-color: #e51963;
 }
 
@@ -770,7 +767,7 @@ exports[`Toggle > renders correctly when disabled 1`] = `
   background-color: #fff3f7;
 }
 
-.emotion-4[data-error="true"][data-disabled="true"][data-checked="true"] {
+.emotion-4[data-error="true"][data-disabled="true"]:has(:checked) {
   background-color: #ffd3e3;
 }
 
@@ -800,12 +797,11 @@ exports[`Toggle > renders correctly when disabled 1`] = `
       />
       <div
         class="emotion-4 emotion-5"
-        data-checked="false"
         data-disabled="true"
         data-error="false"
       >
         <input
-          aria-checked="false"
+          aria-invalid="false"
           class="emotion-6 emotion-7"
           disabled=""
           id="«r4»"
@@ -957,16 +953,16 @@ exports[`Toggle > renders correctly when required with label 1`] = `
   width: calc(1rem * 1.3775);
 }
 
-.emotion-10[data-checked="true"] {
+.emotion-10:has(:checked) {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.emotion-10[data-checked="true"]:hover {
+.emotion-10:has(:checked):hover {
   background-color: #792dd4;
 }
 
-.emotion-10[data-checked="true"]:after {
+.emotion-10:has(:checked):after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -974,8 +970,8 @@ exports[`Toggle > renders correctly when required with label 1`] = `
   transform: translateX(-100%);
 }
 
-.emotion-10[data-checked="true"]:focus-within,
-.emotion-10[data-checked="true"]:focus {
+.emotion-10:has(:checked):focus-within,
+.emotion-10:has(:checked):focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
@@ -983,7 +979,7 @@ exports[`Toggle > renders correctly when required with label 1`] = `
   background: #f3f3f4;
 }
 
-.emotion-10[data-disabled="true"][data-checked="true"] {
+.emotion-10[data-disabled="true"]:has(:checked) {
   background: #e5dbfd;
 }
 
@@ -996,7 +992,7 @@ exports[`Toggle > renders correctly when required with label 1`] = `
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-10[data-error="true"][data-checked="true"] {
+.emotion-10[data-error="true"]:has(:checked) {
   background-color: #e51963;
 }
 
@@ -1004,7 +1000,7 @@ exports[`Toggle > renders correctly when required with label 1`] = `
   background-color: #fff3f7;
 }
 
-.emotion-10[data-error="true"][data-disabled="true"][data-checked="true"] {
+.emotion-10[data-error="true"][data-disabled="true"]:has(:checked) {
   background-color: #ffd3e3;
 }
 
@@ -1049,15 +1045,15 @@ exports[`Toggle > renders correctly when required with label 1`] = `
       </div>
       <div
         class="emotion-10 emotion-11"
-        data-checked="false"
         data-disabled="false"
         data-error="false"
       >
         <input
-          aria-checked="false"
+          aria-invalid="false"
           class="emotion-12 emotion-13"
           id="«r6»"
           name="test"
+          required=""
           type="checkbox"
         />
       </div>
@@ -1205,16 +1201,16 @@ exports[`Toggle > renders correctly when required with label left 1`] = `
   width: calc(1rem * 1.3775);
 }
 
-.emotion-10[data-checked="true"] {
+.emotion-10:has(:checked) {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.emotion-10[data-checked="true"]:hover {
+.emotion-10:has(:checked):hover {
   background-color: #792dd4;
 }
 
-.emotion-10[data-checked="true"]:after {
+.emotion-10:has(:checked):after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -1222,8 +1218,8 @@ exports[`Toggle > renders correctly when required with label left 1`] = `
   transform: translateX(-100%);
 }
 
-.emotion-10[data-checked="true"]:focus-within,
-.emotion-10[data-checked="true"]:focus {
+.emotion-10:has(:checked):focus-within,
+.emotion-10:has(:checked):focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
@@ -1231,7 +1227,7 @@ exports[`Toggle > renders correctly when required with label left 1`] = `
   background: #f3f3f4;
 }
 
-.emotion-10[data-disabled="true"][data-checked="true"] {
+.emotion-10[data-disabled="true"]:has(:checked) {
   background: #e5dbfd;
 }
 
@@ -1244,7 +1240,7 @@ exports[`Toggle > renders correctly when required with label left 1`] = `
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-10[data-error="true"][data-checked="true"] {
+.emotion-10[data-error="true"]:has(:checked) {
   background-color: #e51963;
 }
 
@@ -1252,7 +1248,7 @@ exports[`Toggle > renders correctly when required with label left 1`] = `
   background-color: #fff3f7;
 }
 
-.emotion-10[data-error="true"][data-disabled="true"][data-checked="true"] {
+.emotion-10[data-error="true"][data-disabled="true"]:has(:checked) {
   background-color: #ffd3e3;
 }
 
@@ -1297,15 +1293,15 @@ exports[`Toggle > renders correctly when required with label left 1`] = `
       </div>
       <div
         class="emotion-10 emotion-11"
-        data-checked="false"
         data-disabled="false"
         data-error="false"
       >
         <input
-          aria-checked="false"
+          aria-invalid="false"
           class="emotion-12 emotion-13"
           id="«ra»"
           name="test"
+          required=""
           type="checkbox"
         />
       </div>
@@ -1429,16 +1425,16 @@ exports[`Toggle > renders correctly with complex label 1`] = `
   width: calc(1rem * 1.3775);
 }
 
-.emotion-6[data-checked="true"] {
+.emotion-6:has(:checked) {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.emotion-6[data-checked="true"]:hover {
+.emotion-6:has(:checked):hover {
   background-color: #792dd4;
 }
 
-.emotion-6[data-checked="true"]:after {
+.emotion-6:has(:checked):after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -1446,8 +1442,8 @@ exports[`Toggle > renders correctly with complex label 1`] = `
   transform: translateX(-100%);
 }
 
-.emotion-6[data-checked="true"]:focus-within,
-.emotion-6[data-checked="true"]:focus {
+.emotion-6:has(:checked):focus-within,
+.emotion-6:has(:checked):focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
@@ -1455,7 +1451,7 @@ exports[`Toggle > renders correctly with complex label 1`] = `
   background: #f3f3f4;
 }
 
-.emotion-6[data-disabled="true"][data-checked="true"] {
+.emotion-6[data-disabled="true"]:has(:checked) {
   background: #e5dbfd;
 }
 
@@ -1468,7 +1464,7 @@ exports[`Toggle > renders correctly with complex label 1`] = `
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-6[data-error="true"][data-checked="true"] {
+.emotion-6[data-error="true"]:has(:checked) {
   background-color: #e51963;
 }
 
@@ -1476,7 +1472,7 @@ exports[`Toggle > renders correctly with complex label 1`] = `
   background-color: #fff3f7;
 }
 
-.emotion-6[data-error="true"][data-disabled="true"][data-checked="true"] {
+.emotion-6[data-error="true"][data-disabled="true"]:has(:checked) {
   background-color: #ffd3e3;
 }
 
@@ -1514,12 +1510,11 @@ exports[`Toggle > renders correctly with complex label 1`] = `
       </div>
       <div
         class="emotion-6 emotion-7"
-        data-checked="false"
         data-disabled="false"
         data-error="false"
       >
         <input
-          aria-checked="false"
+          aria-invalid="false"
           class="emotion-8 emotion-9"
           id="«rs»"
           name="test"
@@ -1658,16 +1653,16 @@ exports[`Toggle > renders correctly with custom labels on right 1`] = `
   width: calc(1rem * 1.3775);
 }
 
-.emotion-8[data-checked="true"] {
+.emotion-8:has(:checked) {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.emotion-8[data-checked="true"]:hover {
+.emotion-8:has(:checked):hover {
   background-color: #792dd4;
 }
 
-.emotion-8[data-checked="true"]:after {
+.emotion-8:has(:checked):after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -1675,8 +1670,8 @@ exports[`Toggle > renders correctly with custom labels on right 1`] = `
   transform: translateX(-100%);
 }
 
-.emotion-8[data-checked="true"]:focus-within,
-.emotion-8[data-checked="true"]:focus {
+.emotion-8:has(:checked):focus-within,
+.emotion-8:has(:checked):focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
@@ -1684,7 +1679,7 @@ exports[`Toggle > renders correctly with custom labels on right 1`] = `
   background: #f3f3f4;
 }
 
-.emotion-8[data-disabled="true"][data-checked="true"] {
+.emotion-8[data-disabled="true"]:has(:checked) {
   background: #e5dbfd;
 }
 
@@ -1697,7 +1692,7 @@ exports[`Toggle > renders correctly with custom labels on right 1`] = `
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-8[data-error="true"][data-checked="true"] {
+.emotion-8[data-error="true"]:has(:checked) {
   background-color: #e51963;
 }
 
@@ -1705,7 +1700,7 @@ exports[`Toggle > renders correctly with custom labels on right 1`] = `
   background-color: #fff3f7;
 }
 
-.emotion-8[data-error="true"][data-disabled="true"][data-checked="true"] {
+.emotion-8[data-error="true"][data-disabled="true"]:has(:checked) {
   background-color: #ffd3e3;
 }
 
@@ -1745,12 +1740,11 @@ exports[`Toggle > renders correctly with custom labels on right 1`] = `
       </div>
       <div
         class="emotion-8 emotion-9"
-        data-checked="false"
         data-disabled="false"
         data-error="false"
       >
         <input
-          aria-checked="false"
+          aria-invalid="false"
           class="emotion-10 emotion-11"
           id="«rp»"
           name="test"
@@ -1978,16 +1972,16 @@ exports[`Toggle > renders correctly with error 1`] = `
   width: calc(1rem * 1.3775);
 }
 
-.emotion-10[data-checked="true"] {
+.emotion-10:has(:checked) {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.emotion-10[data-checked="true"]:hover {
+.emotion-10:has(:checked):hover {
   background-color: #792dd4;
 }
 
-.emotion-10[data-checked="true"]:after {
+.emotion-10:has(:checked):after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -1995,8 +1989,8 @@ exports[`Toggle > renders correctly with error 1`] = `
   transform: translateX(-100%);
 }
 
-.emotion-10[data-checked="true"]:focus-within,
-.emotion-10[data-checked="true"]:focus {
+.emotion-10:has(:checked):focus-within,
+.emotion-10:has(:checked):focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
@@ -2004,7 +1998,7 @@ exports[`Toggle > renders correctly with error 1`] = `
   background: #f3f3f4;
 }
 
-.emotion-10[data-disabled="true"][data-checked="true"] {
+.emotion-10[data-disabled="true"]:has(:checked) {
   background: #e5dbfd;
 }
 
@@ -2017,7 +2011,7 @@ exports[`Toggle > renders correctly with error 1`] = `
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-10[data-error="true"][data-checked="true"] {
+.emotion-10[data-error="true"]:has(:checked) {
   background-color: #e51963;
 }
 
@@ -2025,7 +2019,7 @@ exports[`Toggle > renders correctly with error 1`] = `
   background-color: #fff3f7;
 }
 
-.emotion-10[data-error="true"][data-disabled="true"][data-checked="true"] {
+.emotion-10[data-error="true"][data-disabled="true"]:has(:checked) {
   background-color: #ffd3e3;
 }
 
@@ -2077,16 +2071,16 @@ exports[`Toggle > renders correctly with error 1`] = `
   width: calc(1rem * 1.3775);
 }
 
-.emotion-10[data-checked="true"] {
+.emotion-10:has(:checked) {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.emotion-10[data-checked="true"]:hover {
+.emotion-10:has(:checked):hover {
   background-color: #792dd4;
 }
 
-.emotion-10[data-checked="true"]:after {
+.emotion-10:has(:checked):after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -2094,8 +2088,8 @@ exports[`Toggle > renders correctly with error 1`] = `
   transform: translateX(-100%);
 }
 
-.emotion-10[data-checked="true"]:focus-within,
-.emotion-10[data-checked="true"]:focus {
+.emotion-10:has(:checked):focus-within,
+.emotion-10:has(:checked):focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
@@ -2103,7 +2097,7 @@ exports[`Toggle > renders correctly with error 1`] = `
   background: #f3f3f4;
 }
 
-.emotion-10[data-disabled="true"][data-checked="true"] {
+.emotion-10[data-disabled="true"]:has(:checked) {
   background: #e5dbfd;
 }
 
@@ -2116,7 +2110,7 @@ exports[`Toggle > renders correctly with error 1`] = `
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-10[data-error="true"][data-checked="true"] {
+.emotion-10[data-error="true"]:has(:checked) {
   background-color: #e51963;
 }
 
@@ -2124,7 +2118,7 @@ exports[`Toggle > renders correctly with error 1`] = `
   background-color: #fff3f7;
 }
 
-.emotion-10[data-error="true"][data-disabled="true"][data-checked="true"] {
+.emotion-10[data-error="true"][data-disabled="true"]:has(:checked) {
   background-color: #ffd3e3;
 }
 
@@ -2183,12 +2177,11 @@ exports[`Toggle > renders correctly with error 1`] = `
       </div>
       <div
         class="emotion-10 emotion-11"
-        data-checked="false"
         data-disabled="false"
         data-error="true"
       >
         <input
-          aria-checked="false"
+          aria-invalid="true"
           class="emotion-12 emotion-13"
           id="«r15»"
           name="test"
@@ -2416,16 +2409,16 @@ exports[`Toggle > renders correctly with helper 1`] = `
   width: calc(1rem * 1.3775);
 }
 
-.emotion-10[data-checked="true"] {
+.emotion-10:has(:checked) {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.emotion-10[data-checked="true"]:hover {
+.emotion-10:has(:checked):hover {
   background-color: #792dd4;
 }
 
-.emotion-10[data-checked="true"]:after {
+.emotion-10:has(:checked):after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -2433,8 +2426,8 @@ exports[`Toggle > renders correctly with helper 1`] = `
   transform: translateX(-100%);
 }
 
-.emotion-10[data-checked="true"]:focus-within,
-.emotion-10[data-checked="true"]:focus {
+.emotion-10:has(:checked):focus-within,
+.emotion-10:has(:checked):focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
@@ -2442,7 +2435,7 @@ exports[`Toggle > renders correctly with helper 1`] = `
   background: #f3f3f4;
 }
 
-.emotion-10[data-disabled="true"][data-checked="true"] {
+.emotion-10[data-disabled="true"]:has(:checked) {
   background: #e5dbfd;
 }
 
@@ -2455,7 +2448,7 @@ exports[`Toggle > renders correctly with helper 1`] = `
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-10[data-error="true"][data-checked="true"] {
+.emotion-10[data-error="true"]:has(:checked) {
   background-color: #e51963;
 }
 
@@ -2463,7 +2456,7 @@ exports[`Toggle > renders correctly with helper 1`] = `
   background-color: #fff3f7;
 }
 
-.emotion-10[data-error="true"][data-disabled="true"][data-checked="true"] {
+.emotion-10[data-error="true"][data-disabled="true"]:has(:checked) {
   background-color: #ffd3e3;
 }
 
@@ -2515,16 +2508,16 @@ exports[`Toggle > renders correctly with helper 1`] = `
   width: calc(1rem * 1.3775);
 }
 
-.emotion-10[data-checked="true"] {
+.emotion-10:has(:checked) {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.emotion-10[data-checked="true"]:hover {
+.emotion-10:has(:checked):hover {
   background-color: #792dd4;
 }
 
-.emotion-10[data-checked="true"]:after {
+.emotion-10:has(:checked):after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -2532,8 +2525,8 @@ exports[`Toggle > renders correctly with helper 1`] = `
   transform: translateX(-100%);
 }
 
-.emotion-10[data-checked="true"]:focus-within,
-.emotion-10[data-checked="true"]:focus {
+.emotion-10:has(:checked):focus-within,
+.emotion-10:has(:checked):focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
@@ -2541,7 +2534,7 @@ exports[`Toggle > renders correctly with helper 1`] = `
   background: #f3f3f4;
 }
 
-.emotion-10[data-disabled="true"][data-checked="true"] {
+.emotion-10[data-disabled="true"]:has(:checked) {
   background: #e5dbfd;
 }
 
@@ -2554,7 +2547,7 @@ exports[`Toggle > renders correctly with helper 1`] = `
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-10[data-error="true"][data-checked="true"] {
+.emotion-10[data-error="true"]:has(:checked) {
   background-color: #e51963;
 }
 
@@ -2562,7 +2555,7 @@ exports[`Toggle > renders correctly with helper 1`] = `
   background-color: #fff3f7;
 }
 
-.emotion-10[data-error="true"][data-disabled="true"][data-checked="true"] {
+.emotion-10[data-error="true"][data-disabled="true"]:has(:checked) {
   background-color: #ffd3e3;
 }
 
@@ -2621,12 +2614,11 @@ exports[`Toggle > renders correctly with helper 1`] = `
       </div>
       <div
         class="emotion-10 emotion-11"
-        data-checked="false"
         data-disabled="false"
         data-error="false"
       >
         <input
-          aria-checked="false"
+          aria-invalid="false"
           class="emotion-12 emotion-13"
           id="«r11»"
           name="test"
@@ -2765,16 +2757,16 @@ exports[`Toggle > renders correctly with labels on left 1`] = `
   width: calc(1rem * 1.3775);
 }
 
-.emotion-8[data-checked="true"] {
+.emotion-8:has(:checked) {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.emotion-8[data-checked="true"]:hover {
+.emotion-8:has(:checked):hover {
   background-color: #792dd4;
 }
 
-.emotion-8[data-checked="true"]:after {
+.emotion-8:has(:checked):after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -2782,8 +2774,8 @@ exports[`Toggle > renders correctly with labels on left 1`] = `
   transform: translateX(-100%);
 }
 
-.emotion-8[data-checked="true"]:focus-within,
-.emotion-8[data-checked="true"]:focus {
+.emotion-8:has(:checked):focus-within,
+.emotion-8:has(:checked):focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
@@ -2791,7 +2783,7 @@ exports[`Toggle > renders correctly with labels on left 1`] = `
   background: #f3f3f4;
 }
 
-.emotion-8[data-disabled="true"][data-checked="true"] {
+.emotion-8[data-disabled="true"]:has(:checked) {
   background: #e5dbfd;
 }
 
@@ -2804,7 +2796,7 @@ exports[`Toggle > renders correctly with labels on left 1`] = `
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-8[data-error="true"][data-checked="true"] {
+.emotion-8[data-error="true"]:has(:checked) {
   background-color: #e51963;
 }
 
@@ -2812,7 +2804,7 @@ exports[`Toggle > renders correctly with labels on left 1`] = `
   background-color: #fff3f7;
 }
 
-.emotion-8[data-error="true"][data-disabled="true"][data-checked="true"] {
+.emotion-8[data-error="true"][data-disabled="true"]:has(:checked) {
   background-color: #ffd3e3;
 }
 
@@ -2852,12 +2844,11 @@ exports[`Toggle > renders correctly with labels on left 1`] = `
       </div>
       <div
         class="emotion-8 emotion-9"
-        data-checked="false"
         data-disabled="false"
         data-error="false"
       >
         <input
-          aria-checked="false"
+          aria-invalid="false"
           class="emotion-10 emotion-11"
           id="«rm»"
           name="test"
@@ -2970,16 +2961,16 @@ exports[`Toggle > renders correctly with non default size 1`] = `
   width: calc(0.75rem * 1.3775);
 }
 
-.emotion-4[data-checked="true"] {
+.emotion-4:has(:checked) {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.emotion-4[data-checked="true"]:hover {
+.emotion-4:has(:checked):hover {
   background-color: #792dd4;
 }
 
-.emotion-4[data-checked="true"]:after {
+.emotion-4:has(:checked):after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -2987,8 +2978,8 @@ exports[`Toggle > renders correctly with non default size 1`] = `
   transform: translateX(-100%);
 }
 
-.emotion-4[data-checked="true"]:focus-within,
-.emotion-4[data-checked="true"]:focus {
+.emotion-4:has(:checked):focus-within,
+.emotion-4:has(:checked):focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
@@ -2996,7 +2987,7 @@ exports[`Toggle > renders correctly with non default size 1`] = `
   background: #f3f3f4;
 }
 
-.emotion-4[data-disabled="true"][data-checked="true"] {
+.emotion-4[data-disabled="true"]:has(:checked) {
   background: #e5dbfd;
 }
 
@@ -3009,7 +3000,7 @@ exports[`Toggle > renders correctly with non default size 1`] = `
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-4[data-error="true"][data-checked="true"] {
+.emotion-4[data-error="true"]:has(:checked) {
   background-color: #e51963;
 }
 
@@ -3017,7 +3008,7 @@ exports[`Toggle > renders correctly with non default size 1`] = `
   background-color: #fff3f7;
 }
 
-.emotion-4[data-error="true"][data-disabled="true"][data-checked="true"] {
+.emotion-4[data-error="true"][data-disabled="true"]:has(:checked) {
   background-color: #ffd3e3;
 }
 
@@ -3047,12 +3038,11 @@ exports[`Toggle > renders correctly with non default size 1`] = `
       />
       <div
         class="emotion-4 emotion-5"
-        data-checked="false"
         data-disabled="false"
         data-error="false"
       >
         <input
-          aria-checked="false"
+          aria-invalid="false"
           class="emotion-6 emotion-7"
           id="«re»"
           name="test"
@@ -3203,16 +3193,16 @@ exports[`Toggle > renders correctly with tooltip 1`] = `
   width: calc(1rem * 1.3775);
 }
 
-.emotion-10[data-checked="true"] {
+.emotion-10:has(:checked) {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.emotion-10[data-checked="true"]:hover {
+.emotion-10:has(:checked):hover {
   background-color: #792dd4;
 }
 
-.emotion-10[data-checked="true"]:after {
+.emotion-10:has(:checked):after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -3220,8 +3210,8 @@ exports[`Toggle > renders correctly with tooltip 1`] = `
   transform: translateX(-100%);
 }
 
-.emotion-10[data-checked="true"]:focus-within,
-.emotion-10[data-checked="true"]:focus {
+.emotion-10:has(:checked):focus-within,
+.emotion-10:has(:checked):focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
@@ -3229,7 +3219,7 @@ exports[`Toggle > renders correctly with tooltip 1`] = `
   background: #f3f3f4;
 }
 
-.emotion-10[data-disabled="true"][data-checked="true"] {
+.emotion-10[data-disabled="true"]:has(:checked) {
   background: #e5dbfd;
 }
 
@@ -3242,7 +3232,7 @@ exports[`Toggle > renders correctly with tooltip 1`] = `
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-10[data-error="true"][data-checked="true"] {
+.emotion-10[data-error="true"]:has(:checked) {
   background-color: #e51963;
 }
 
@@ -3250,7 +3240,7 @@ exports[`Toggle > renders correctly with tooltip 1`] = `
   background-color: #fff3f7;
 }
 
-.emotion-10[data-error="true"][data-disabled="true"][data-checked="true"] {
+.emotion-10[data-error="true"][data-disabled="true"]:has(:checked) {
   background-color: #ffd3e3;
 }
 
@@ -3296,12 +3286,11 @@ exports[`Toggle > renders correctly with tooltip 1`] = `
         </div>
         <div
           class="emotion-10 emotion-11"
-          data-checked="false"
           data-disabled="false"
           data-error="false"
         >
           <input
-            aria-checked="false"
+            aria-invalid="false"
             class="emotion-12 emotion-13"
             id="«rj»"
             name="test"
