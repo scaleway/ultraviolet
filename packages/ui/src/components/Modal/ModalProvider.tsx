@@ -1,6 +1,6 @@
 'use client'
 
-import type { ReactNode, Ref } from 'react'
+import type { ReactNode, RefObject } from 'react'
 import {
   createContext,
   useCallback,
@@ -11,7 +11,7 @@ import {
 
 type ModalObject = {
   id: string
-  ref: Ref<HTMLDialogElement>
+  ref: RefObject<HTMLDialogElement | null>
 }
 
 type ModalContextValues = {

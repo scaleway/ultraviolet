@@ -81,7 +81,7 @@ export const StyledDialog = styled('dialog', {
   width: ${MODAL_WIDTH.medium}rem;
   box-shadow: ${({ theme }) =>
     `${theme.shadows.overlay[0]}, ${theme.shadows.overlay[1]}`};
-  
+
 
 
   ${Object.entries(MODAL_WIDTH).map(
@@ -310,7 +310,6 @@ export const Dialog = ({
       data-open
       data-testid={dataTestId ? `${dataTestId}-backdrop` : undefined}
       data-visible={isVisible}
-      id="backdrop-modal"
       onClick={handleClose}
       onFocus={stopFocus}
     >
