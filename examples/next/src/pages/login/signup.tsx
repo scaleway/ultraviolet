@@ -4,7 +4,7 @@ import {
   Form,
   RadioGroupField,
   Submit,
-  TextInputFieldV2,
+  TextInputField,
   useForm,
   useWatch,
 } from '@ultraviolet/form'
@@ -28,7 +28,7 @@ const StyledSignUpContainer = styled(Stack)`
   padding: ${({ theme }) => theme.space['4']};
 `
 
-const StyledInput = styled(TextInputFieldV2)`
+const StyledInput = styled(TextInputField)`
   padding: ${({ theme }) => theme.space['1.5']}
     ${({ theme }) => theme.space['0']};
   width: 100%;
@@ -100,8 +100,8 @@ const SignUp = () => {
           </Text>
           <Stack width="100%">
             <RadioGroupField direction="row" name="gender">
-              <RadioGroupField.Radio label="Mr" name="mr" value="mr" />
-              <RadioGroupField.Radio label="Mrs" name="mrs" value="mrs" />
+              <RadioGroupField.Radio label="Mr" value="mr" />
+              <RadioGroupField.Radio label="Mrs" value="mrs" />
             </RadioGroupField>
             <Stack direction="row" gap={3}>
               <StyledInput
