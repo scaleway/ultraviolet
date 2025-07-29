@@ -1,5 +1,12 @@
 # Change Log
 
+## 4.0.2
+
+### Patch Changes
+
+- Updated dependencies [[`35e725f`](https://github.com/scaleway/ultraviolet/commit/35e725fd1f72da4ea67ade2230bafbb4845b356b)]:
+  - @ultraviolet/ui@2.0.2
+
 ## 4.0.1
 
 ### Patch Changes
