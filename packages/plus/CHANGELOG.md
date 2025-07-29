@@ -1,5 +1,14 @@
 # @ultraviolet/plus
 
+## 1.0.2
+
+### Patch Changes
+
+- [#5395](https://github.com/scaleway/ultraviolet/pull/5395) [`2772b6e`](https://github.com/scaleway/ultraviolet/commit/2772b6e5d6dd005000cd864295d10b0982eb0485) Thanks [@lisalupi](https://github.com/lisalupi)! - `OfferList`: new prop "selected"
+
+- Updated dependencies [[`35e725f`](https://github.com/scaleway/ultraviolet/commit/35e725fd1f72da4ea67ade2230bafbb4845b356b)]:
+  - @ultraviolet/ui@2.0.2
+
 ## 1.0.1
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # Change Log
 
+## 2.0.2
+
+### Patch Changes
+
+- [#5391](https://github.com/scaleway/ultraviolet/pull/5391) [`35e725f`](https://github.com/scaleway/ultraviolet/commit/35e725fd1f72da4ea67ade2230bafbb4845b356b) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<Modal />` and `<SelectInput />` together scroll down not using id but context
+
 ## 2.0.1
 
 ### Patch Changes
