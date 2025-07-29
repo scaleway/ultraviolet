@@ -26,6 +26,10 @@ type OfferListProps = Omit<
    */
   type?: 'radio' | 'checkbox'
   onChangeSelect?: (selected: string | string[]) => void
+  /**
+   * Pre-selected rows (using their offerName). Must be an array when `type = "checkbox"`.
+   */
+  selected?: string | string[]
 }
 
 export const OfferList = ({
@@ -35,9 +39,16 @@ export const OfferList = ({
   children,
   loading,
   autoCollapse,
+  selected,
   onChangeSelect,
 }: OfferListProps) => {
-  const [selectedRows, setSelectedRows] = useState<string[]>([])
+  const [radioSelectedRow, setRadioSelectedRow] = useState<string | undefined>(
+    typeof selected === 'string' ? selected : undefined,
+  )
+  const [checkboxSelectedRows, setCheckboxSelectedRows] = useState<string[]>(
+    Array.isArray(selected) ? selected : [],
+  )
+
   const computedColumns = [
     {
       label: '',
@@ -46,24 +57,33 @@ export const OfferList = ({
     ...columns,
   ].filter(element => !!element)
 
-  useEffect(
-    () => onChangeSelect?.(selectedRows),
-    [selectedRows, onChangeSelect],
-  )
+  useEffect(() => {
+    if (selected) {
+      if (typeof selected === 'string' && type === 'radio') {
+        setRadioSelectedRow(selected)
+      }
+      if (Array.isArray(selected) && type === 'checkbox') {
+        setCheckboxSelectedRows(selected)
+      }
+    }
+  }, [type, selected])
 
   return (
     <OfferListProvider
       autoCollapse={autoCollapse}
+      checkboxSelectedRows={checkboxSelectedRows}
       expandable={expandable}
       loading={loading}
       onChangeSelect={onChangeSelect}
+      radioSelectedRow={radioSelectedRow}
       selectable={type}
+      setCheckboxSelectedRows={setCheckboxSelectedRows}
+      setRadioSelectedRow={setRadioSelectedRow}
     >
       <StyledList
         autoCollapse={autoCollapse}
         columns={computedColumns}
         expandable={false}
-        onSelectedChange={setSelectedRows}
         selectable={false}
       >
         {children}
