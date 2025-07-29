@@ -172,7 +172,7 @@ const CustomTag = styled(Tag, {
   width: fit-content;
   min-width: ${({ lastElementMaxWidth }) =>
     lastElementMaxWidth ? 'auto' : 'fit-content'};
-  
+
   max-width: ${({ lastElementMaxWidth, hidden }) =>
     lastElementMaxWidth && !hidden ? `${lastElementMaxWidth}px` : '100%'};
 
@@ -506,16 +506,17 @@ const SelectBar = ({
     const getWidth = () => {
       if (refTag.current) {
         setInnerWidth(refTag.current.offsetWidth)
-      } else
-        {setInnerWidth(
+      } else {
+        setInnerWidth(
           innerRef.current?.offsetWidth ??
             0 - (arrowRef.current?.offsetWidth ?? 0) - SIZES_TAG.paddings,
-        )}
+        )
+      }
     }
     getWidth()
-    window.addEventListener('resize', getWidth)
+    globalThis.addEventListener('resize', getWidth)
 
-    return () => window.removeEventListener('resize', getWidth)
+    return () => globalThis.removeEventListener('resize', getWidth)
   }, [innerRef, refTag, selectedData.selectedValues])
 
   const shouldDisplayValues = useMemo(() => {

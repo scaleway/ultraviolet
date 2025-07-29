@@ -6,7 +6,7 @@ import { Button, buttonSizes } from '..'
 export const Size: StoryFn<typeof Button> = args => (
   <Stack alignItems="center" direction="row" gap={2}>
     {buttonSizes.map(size => (
-      <Button {...args} key={size} onClick={() => {}} size={size}>
+      <Button key={size} {...args} onClick={() => {}} size={size}>
         <PencilIcon />
         {size}
       </Button>

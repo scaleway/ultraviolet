@@ -74,8 +74,12 @@ export const InfiniteScroll = ({
 
   const handleScroll = useCallback(
     (scrollableContainer: HTMLElement) => {
-      if (!containerRef.current) {return}
-      if (!onLoadMore) {return}
+      if (!containerRef.current) {
+        return
+      }
+      if (!onLoadMore) {
+        return
+      }
 
       const { scrollTop, scrollHeight, clientHeight } = scrollableContainer
 
@@ -98,18 +102,22 @@ export const InfiniteScroll = ({
   )
 
   useEffect(() => {
-    if (!hasMore) {return}
+    if (!hasMore) {
+      return
+    }
     let scrollableContainer =
       scrollParentRef?.current || containerRef.current?.parentElement
     while (scrollableContainer && scrollableContainer !== document.body) {
-      const { overflowY } = window.getComputedStyle(scrollableContainer)
+      const { overflowY } = globalThis.getComputedStyle(scrollableContainer)
       if (overflowY === 'auto' || overflowY === 'scroll') {
         break
       }
       scrollableContainer = scrollableContainer.parentElement
     }
 
-    if (!scrollableContainer) {return}
+    if (!scrollableContainer) {
+      return
+    }
 
     const debouncedHandleScroll = debounce(
       () => handleScroll(scrollableContainer),
@@ -127,7 +135,9 @@ export const InfiniteScroll = ({
 
   const localLoader = useMemo(() => loader || <Loader active />, [loader])
 
-  if (isLoading) {return localLoader}
+  if (isLoading) {
+    return localLoader
+  }
 
   return (
     <Component

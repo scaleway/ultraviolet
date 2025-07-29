@@ -11,7 +11,7 @@ export const Sentiments: StoryFn = props => (
         Prominence default:
       </Text>
       {SENTIMENTS.map(sentiment => (
-        <Bullet {...props} key={sentiment} sentiment={sentiment}>
+        <Bullet key={sentiment} {...props} sentiment={sentiment}>
           1
         </Bullet>
       ))}
@@ -22,8 +22,8 @@ export const Sentiments: StoryFn = props => (
       </Text>
       {SENTIMENTS.map(sentiment => (
         <Bullet
-          {...props}
           key={sentiment}
+          {...props}
           prominence="strong"
           sentiment={sentiment}
         >

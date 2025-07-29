@@ -5,12 +5,19 @@ export const LocalDiscount = Template.bind({})
 
 LocalDiscount.args = {
   children: [
-    <EstimateCost.Item amount={100} label="Storage" price={0.001} unit="GB">
+    <EstimateCost.Item
+      amount={100}
+      key="Storage"
+      label="Storage"
+      price={0.001}
+      unit="GB"
+    >
       <EstimateCost.Unit unit="GB" />
     </EstimateCost.Item>,
     <EstimateCost.Item
       amount={100}
       discount={0.5}
+      key="Screen pixels"
       label="Screen pixels"
       price={1}
       subLabel="This item is 50% discount"

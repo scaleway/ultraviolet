@@ -47,10 +47,10 @@ const StyledPopup = styled(Popup, {
 
   min-width: ${SIZES.small};
   max-width: ${SIZES.large};
-  
+
   ${({ searchable }) => (searchable ? `min-width: 20rem` : null)};
   padding: ${({ theme }) => `${theme.space['0.25']} 0`};
-  
+
 `
 
 const Content = styled(Stack)`
@@ -188,10 +188,10 @@ export const Menu = forwardRef(
         })
 
         return () => {
-          window.removeEventListener('focus', () => handler(undefined))
-          window.removeEventListener('mouseenter', () => handler(undefined))
-          window.removeEventListener('mouseleave', () => handler(undefined))
-          window.removeEventListener('keydown', () => handler(undefined))
+          globalThis.removeEventListener('focus', () => handler(undefined))
+          globalThis.removeEventListener('mouseenter', () => handler(undefined))
+          globalThis.removeEventListener('mouseleave', () => handler(undefined))
+          globalThis.removeEventListener('keydown', () => handler(undefined))
         }
       }
 
@@ -234,14 +234,18 @@ export const Menu = forwardRef(
 
               if (indexOfCurrent < listItem.length - 1) {
                 listItem[indexOfCurrent + 1].focus()
-              } else {listItem[0].focus()}
+              } else {
+                listItem[0].focus()
+              }
             } else if (event.key === 'ArrowUp') {
               event.preventDefault()
 
               const indexOfCurrent = listItem.indexOf(currentElement)
               if (indexOfCurrent > 0) {
                 listItem[indexOfCurrent - 1].focus()
-              } else {listItem[listItem.length - 1].focus()}
+              } else {
+                listItem[listItem.length - 1].focus()
+              }
             } else if (event.key === 'ArrowLeft' && triggerMethod === 'hover') {
               disclosureRef.current?.focus()
               setShouldBeVisible(undefined)
@@ -266,7 +270,9 @@ export const Menu = forwardRef(
         onClose={() => {
           setIsVisible(false)
           setLocalChild(null)
-          if (triggerMethod === 'click') {disclosureRef.current?.focus()}
+          if (triggerMethod === 'click') {
+            disclosureRef.current?.focus()
+          }
           setShouldBeVisible(undefined)
         }}
         onKeyDown={handleTabOpen}

@@ -49,7 +49,7 @@ const DocsContainer = ({ children, context }: DocsContainerProps) => {
 
   if (
     import.meta.env['STORYBOOK_ENVIRONMENT'] === 'production' &&
-    window.location.hostname === 'storybook.ultraviolet.scaleway.com'
+    globalThis.location.hostname === 'storybook.ultraviolet.scaleway.com'
   ) {
     fetch('https://api.github.com/repos/scaleway/ultraviolet/branches/beta')
       .then((data) => {
@@ -68,7 +68,7 @@ const DocsContainer = ({ children, context }: DocsContainerProps) => {
         {isBeta ?
         <GlobalAlert
           buttonText="Access to Beta"
-          onClickButton={() => window.top?.location.assign('https://beta.storybook.ultraviolet.scaleway.com')}
+          onClickButton={() => globalThis.top?.location.assign('https://beta.storybook.ultraviolet.scaleway.com')}
           closable={false}
         >
           A Beta version is available. Please use this version if your dependencies include the Beta release.

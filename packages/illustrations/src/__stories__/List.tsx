@@ -85,7 +85,13 @@ const SubListElement = ({
           ]
 
           return (
-            <Card alignItems="center" direction="row" flex={1} gap={2}>
+            <Card
+              alignItems="center"
+              direction="row"
+              flex={1}
+              gap={2}
+              key={productImg}
+            >
               {category === 'products' ? (
                 <StyledImageProduct
                   alt={productName}
@@ -166,10 +172,12 @@ export const List = () => {
       </Button>
       <Stack gap={1}>
         {Object.keys(assets.default).map(category => {
-          if (category === 'components') {return null}
+          if (category === 'components') {
+            return null
+          }
 
           return (
-            <>
+            <div key={category}>
               <StyledButton
                 onClick={() => {
                   const newExpandedStates = { ...expandedStates }
@@ -188,6 +196,7 @@ export const List = () => {
                       <SubListElement
                         category={category}
                         isExpanded={expandedStates[productName]}
+                        key={`${category}-${productName}`}
                         productName={productName}
                         setIsExpanded={() => {
                           // Toggle the expanded state for a specific element
@@ -201,7 +210,7 @@ export const List = () => {
                   )}
                 </Stack>
               </Expandable>
-            </>
+            </div>
           )
         })}
       </Stack>

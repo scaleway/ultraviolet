@@ -725,7 +725,7 @@ export const Dropdown = ({
         DROPDOWN_MAX_HEIGHT +
         Number(theme.sizing[INPUT_SIZE_HEIGHT[size]].replace('rem', '')) * 16 +
         Number.parseInt(theme.space['5'], 10)
-      const overflow = position - window.innerHeight + 32
+      const overflow = position - globalThis.innerHeight + 32
       if (overflow > 0 && modalContext) {
         const currentModal = modalContext.openedModals[0]
         const modalElement = currentModal?.ref.current
@@ -738,7 +738,9 @@ export const Dropdown = ({
               top: overflow,
             })
           }
-        } else {window.scrollBy({ behavior: 'smooth', top: overflow })}
+        } else {
+          globalThis.scrollBy({ behavior: 'smooth', top: overflow })
+        }
       }
     }
     // oxlint-disable-next-line react/exhaustive-deps
@@ -756,9 +758,9 @@ export const Dropdown = ({
   useEffect(() => {
     resizeDropdown()
 
-    window.addEventListener('resize', resizeDropdown)
+    globalThis.addEventListener('resize', resizeDropdown)
 
-    return () => window.removeEventListener('resize', resizeDropdown)
+    return () => globalThis.removeEventListener('resize', resizeDropdown)
   }, [resizeDropdown])
 
   useEffect(() => {
@@ -817,7 +819,9 @@ export const Dropdown = ({
   // No data is displayed (because of the search or because no data is provided)
   // Set to true when noData by default
   const isEmpty = useMemo(() => {
-    if (numberOfOptions === 0) {return true}
+    if (numberOfOptions === 0) {
+      return true
+    }
     if (Array.isArray(displayedOptions)) {
       return displayedOptions.length === 0
     }

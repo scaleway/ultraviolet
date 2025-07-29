@@ -20,7 +20,9 @@ export const useIsOverflowing = (
 
       const hasOverflow = element.clientWidth < element.scrollWidth
       setIsOverflowing(hasOverflow)
-      if (callback) {callback(hasOverflow)}
+      if (callback) {
+        callback(hasOverflow)
+      }
     }
 
     // This will add the function into the browser event queue after the DOM is painted
@@ -28,11 +30,11 @@ export const useIsOverflowing = (
     setTimeout(() => handleResize(), 0)
 
     // Listen for resize events
-    window.addEventListener('resize', handleResize)
+    globalThis.addEventListener('resize', handleResize)
 
     // Cleanup the event listener
     return () => {
-      window.removeEventListener('resize', handleResize)
+      globalThis.removeEventListener('resize', handleResize)
     }
   }, [ref, callback])
 

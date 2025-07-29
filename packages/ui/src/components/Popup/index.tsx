@@ -244,11 +244,17 @@ export const Popup = forwardRef(
 
     const timer = useRef<ReturnType<typeof setTimeout>>(undefined)
     const popupPortalTarget = useMemo(() => {
-      if (portalTarget) {return portalTarget}
+      if (portalTarget) {
+        return portalTarget
+      }
 
       if (role === 'dialog') {
-        if (childrenRef.current) {return childrenRef.current}
-        if (isClientSide) {return document.body}
+        if (childrenRef.current) {
+          return childrenRef.current
+        }
+        if (isClientSide) {
+          return document.body
+        }
 
         return null
       }
@@ -311,7 +317,7 @@ export const Popup = forwardRef(
       setVisibleInDom(false)
       setReverseAnimation(false)
 
-      window.removeEventListener('scroll', onWindowChangeDetected, true)
+      globalThis.removeEventListener('scroll', onWindowChangeDetected, true)
     }, [onWindowChangeDetected])
 
     /**
@@ -408,14 +414,14 @@ export const Popup = forwardRef(
         if (popupPortalTarget === document.body) {
           // We want to detect scroll and resize in order to recompute positions of popup
           // Adding true as third parameter to event listener will detect nested scrolls.
-          window.addEventListener('scroll', onWindowChangeDetected, true)
+          globalThis.addEventListener('scroll', onWindowChangeDetected, true)
         }
-        window.addEventListener('resize', onWindowChangeDetected, true)
+        globalThis.addEventListener('resize', onWindowChangeDetected, true)
       }
 
       return () => {
-        window.removeEventListener('scroll', onWindowChangeDetected, true)
-        window.removeEventListener('resize', onWindowChangeDetected, true)
+        globalThis.removeEventListener('scroll', onWindowChangeDetected, true)
+        globalThis.removeEventListener('resize', onWindowChangeDetected, true)
         if (timer.current) {
           clearTimeout(timer.current)
           timer.current = undefined

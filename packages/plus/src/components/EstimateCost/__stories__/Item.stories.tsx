@@ -6,6 +6,7 @@ export const Item = Template.bind({})
 Item.args = {
   children: [
     <EstimateCost.Item
+      key="My server"
       label="My server"
       price={0.017}
       subLabel="Here is subLabel text"
@@ -13,7 +14,7 @@ Item.args = {
       <EstimateCost.Strong>Powerful</EstimateCost.Strong>
       <EstimateCost.Regular>100 Cores</EstimateCost.Regular>
     </EstimateCost.Item>,
-    <EstimateCost.Item label="Some storage" price={0.001}>
+    <EstimateCost.Item key="Some storage" label="Some storage" price={0.001}>
       <EstimateCost.Strong>100 GB</EstimateCost.Strong>
     </EstimateCost.Item>,
   ],

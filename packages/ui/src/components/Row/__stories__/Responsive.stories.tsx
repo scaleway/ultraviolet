@@ -13,12 +13,12 @@ export const Responsive: StoryFn = props => {
   useEffect(() => {
     const calc = () => {
       if (
-        window.innerWidth <=
+        globalThis.innerWidth <=
         Number(consoleLightTheme.breakpoints.xxsmall.replace('px', ''))
       ) {
         setBreakpoint('xxsmall')
       } else if (
-        window.innerWidth <=
+        globalThis.innerWidth <=
         Number(consoleLightTheme.breakpoints.xsmall.replace('px', ''))
       ) {
         setBreakpoint('xsmall')
@@ -27,9 +27,9 @@ export const Responsive: StoryFn = props => {
       }
     }
     calc()
-    window.addEventListener('resize', calc)
+    globalThis.addEventListener('resize', calc)
 
-    return () => window.removeEventListener('resize', calc)
+    return () => globalThis.removeEventListener('resize', calc)
   }, [])
 
   const row1Columns = {

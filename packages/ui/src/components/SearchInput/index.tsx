@@ -159,9 +159,9 @@ export const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(
     useEffect(() => {
       resizeSearchBar()
 
-      window.addEventListener('resize', resizeSearchBar)
+      globalThis.addEventListener('resize', resizeSearchBar)
 
-      return () => window.removeEventListener('resize', resizeSearchBar)
+      return () => globalThis.removeEventListener('resize', resizeSearchBar)
     }, [])
 
     useEffect(() => {

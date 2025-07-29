@@ -167,10 +167,10 @@ export const SingleSlider = ({
     const setWidthResize = () => {
       setWidth(Number(refSlider.current?.offsetWidth))
     }
-    window.addEventListener('resize', setWidthResize)
+    globalThis.addEventListener('resize', setWidthResize)
 
     return () => {
-      window.removeEventListener('resize', setWidthResize)
+      globalThis.removeEventListener('resize', setWidthResize)
     }
   }, [])
 

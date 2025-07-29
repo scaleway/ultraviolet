@@ -27,6 +27,13 @@
   ],
   "overrides": [
     {
+      "files": ["**/__stories__/**/*.{ts,tsx}", "**/__tests__/**/*.{ts,tsx}"],
+      "rules": {
+        "eslint/no-console": "off",
+        "eslint/no-alert": "off"
+      }
+    },
+    {
       "files": [
         "**/__tests__/**/*.{ts,tsx}",
         "**/__mocks__/**/*.{ts,tsx}",

@@ -431,7 +431,9 @@ export const Item = memo(
       pinnedFeature && !children && !noPinButton
     const isItemPinned = pinnedItems.includes(id)
     const shouldShowPinnedButton = useMemo(() => {
-      if (href || disabled) {return false}
+      if (href || disabled) {
+        return false
+      }
 
       if (hasPinnedFeatureAndNoChildren && type !== 'default') {
         return true
@@ -445,7 +447,9 @@ export const Item = memo(
     }, [disabled, hasPinnedFeatureAndNoChildren, href, type])
 
     const hasActiveChildren = useMemo(() => {
-      if (!children) {return false}
+      if (!children) {
+        return false
+      }
 
       return (
         Children.map(children, child => {
