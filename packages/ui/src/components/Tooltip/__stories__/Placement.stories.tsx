@@ -13,8 +13,8 @@ const PLACEMENTS: ComponentProps<typeof Tooltip>['placement'][] = [
 export const Placement = (props: ComponentProps<typeof Tooltip>) =>
   PLACEMENTS.map(placement => (
     <Tooltip
-      {...props}
       key={placement}
+      {...props}
       placement={placement}
       text="Hello there"
     >

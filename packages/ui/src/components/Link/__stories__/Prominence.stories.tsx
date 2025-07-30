@@ -7,8 +7,8 @@ import { Link, PROMINENCES } from '..'
 export const Prominence = (props: ComponentProps<typeof Link>) =>
   Object.keys(PROMINENCES).map(prominence => (
     <Link
-      {...props}
       key={prominence}
+      {...props}
       prominence={prominence as ProminenceProps}
     >
       {prominence}

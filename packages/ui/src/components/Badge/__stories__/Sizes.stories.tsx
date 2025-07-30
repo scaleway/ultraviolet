@@ -4,7 +4,7 @@ import { Badge } from '..'
 export const Sizes: StoryFn = props => (
   <>
     {(['small', 'medium', 'large'] as const).map(size => (
-      <Badge {...props} key={size} sentiment="primary" size={size}>
+      <Badge key={size} {...props} sentiment="primary" size={size}>
         {size}
       </Badge>
     ))}

@@ -19,8 +19,8 @@ export const makeShouldMatchEmotionSnapshotWithPortal = (
   },
 ) => {
   // Save the instance of console (disable warning about adding element directly to document.body which is necessary when testing portal components)
-  const { console } = global
-  global.console = { ...console, error: vi.fn() }
+  const { console } = globalThis
+  globalThis.console = { ...console, error: vi.fn() }
 
   const { asFragment, unmount } = render(
     <CacheProvider value={emotionCache}>{children}</CacheProvider>,
@@ -30,5 +30,5 @@ export const makeShouldMatchEmotionSnapshotWithPortal = (
 
   // Unmounting to don't see the warning message described above
   unmount()
-  global.console = console
+  globalThis.console = console
 }

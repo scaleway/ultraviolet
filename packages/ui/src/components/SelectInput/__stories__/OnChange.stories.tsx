@@ -45,7 +45,9 @@ export const OnChange: StoryFn<typeof SelectInput> = args => {
       setOptions(newOptions)
       if (vals.length > 0) {
         setValues2(vals.filter(value => typeof value === 'string'))
-      } else setValues2([])
+      } else {
+        setValues2([])
+      }
     }
   }
 

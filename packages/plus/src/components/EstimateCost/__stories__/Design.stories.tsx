@@ -6,15 +6,15 @@ export const Design = Template.bind({})
 
 Design.args = {
   children: [
-    <EstimateCost.Region image={frFlag} label="PAR" />,
-    <EstimateCost.Item label="Server" noBorder price={0.01} />,
-    <EstimateCost.Item label="CPU" noBorder noPrice tabulation={3}>
+    <EstimateCost.Region image={frFlag} key={frFlag} label="PAR" />,
+    <EstimateCost.Item key="Server" label="Server" noBorder price={0.01} />,
+    <EstimateCost.Item key="CPU" label="CPU" noBorder noPrice tabulation={3}>
       <EstimateCost.Regular>4 Cores</EstimateCost.Regular>
     </EstimateCost.Item>,
-    <EstimateCost.Item label="RAM" noBorder noPrice tabulation={3}>
+    <EstimateCost.Item key="RAM" label="RAM" noBorder noPrice tabulation={3}>
       <EstimateCost.Regular>8 GB</EstimateCost.Regular>
     </EstimateCost.Item>,
-    <EstimateCost.Item label="SSD" noBorder noPrice tabulation={3}>
+    <EstimateCost.Item key="SSD" label="SSD" noBorder noPrice tabulation={3}>
       <EstimateCost.Regular>50 GB</EstimateCost.Regular>
     </EstimateCost.Item>,
   ],

@@ -173,7 +173,9 @@ export const Tab = forwardRef(
           }}
           onKeyDown={event => {
             onKeyDown?.(event)
-            if (!event.defaultPrevented && !disabled && value) onChange(value)
+            if (!event.defaultPrevented && !disabled && value) {
+              onChange(value)
+            }
           }}
           ref={ref as unknown as Ref<HTMLButtonElement>}
           role="tab"

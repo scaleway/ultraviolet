@@ -50,6 +50,7 @@ export const TabMenu = forwardRef(
       id,
       disabled,
       className,
+      'aria-selected': ariaSelected,
       ...props
     }: TabMenuProps,
     ref: Ref<HTMLButtonElement>,
@@ -60,6 +61,7 @@ export const TabMenu = forwardRef(
           <StyledMenu
             aria-disabled={disabled ?? 'false'}
             aria-haspopup="menu"
+            aria-selected={ariaSelected}
             className={className}
             disabled={disabled}
             role="tab"

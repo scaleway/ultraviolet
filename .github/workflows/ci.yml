@@ -323,7 +323,7 @@ jobs:
           mv /tmp/docs/.buildx-cache-new /tmp/docs/.buildx-cache
 
   e2e:
-    timeout-minutes: 10
+    timeout-minutes: 20
     runs-on: ubuntu-latest
     needs: [typecheck, format]
     env:

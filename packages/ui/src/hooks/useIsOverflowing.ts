@@ -20,7 +20,9 @@ export const useIsOverflowing = (
 
       const hasOverflow = element.clientWidth < element.scrollWidth
       setIsOverflowing(hasOverflow)
-      if (callback) callback(hasOverflow)
+      if (callback) {
+        callback(hasOverflow)
+      }
     }
 
     // This will add the function into the browser event queue after the DOM is painted

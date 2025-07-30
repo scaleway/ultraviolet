@@ -15,6 +15,6 @@ export const generateData = (count?: number, prefix?: string): MockData[] =>
     reference: prefix ? `${prefix}-${index}` : index,
   }))
 
-export default {
-  generateData,
-}
+const listMock = { generateData }
+
+export default listMock

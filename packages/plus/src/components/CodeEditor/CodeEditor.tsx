@@ -165,7 +165,9 @@ export const CodeEditor = ({
         onBlur={onBlur}
         onChange={onChange}
         onUpdate={() => {
-          if (disabled) document.getSelection()?.empty()
+          if (disabled) {
+            document.getSelection()?.empty()
+          }
         }}
         readOnly={readOnly || disabled}
         theme={material}

@@ -20,26 +20,19 @@ export const Link = forwardRef<HTMLAnchorElement, LinkPropsType>(
       ...uvprops
     },
     ref,
-  ) => {
-    return (
-      <NextLink
-        href={href}
-        legacyBehavior
-        locale={locale}
-        passHref
-        replace={replace}
-        scroll={scroll}
-        shallow={shallow}
-      >
-        <UVLink
-          href={href}
-          iconPosition={iconPosition}
-          ref={ref}
-          {...uvprops}
-        />
-      </NextLink>
-    )
-  },
+  ) => (
+    <NextLink
+      href={href}
+      legacyBehavior
+      locale={locale}
+      passHref
+      replace={replace}
+      scroll={scroll}
+      shallow={shallow}
+    >
+      <UVLink href={href} iconPosition={iconPosition} ref={ref} {...uvprops} />
+    </NextLink>
+  ),
 )
 
 export default Link

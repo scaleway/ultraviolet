@@ -15,9 +15,9 @@ export const Separator: StoryFn<typeof Stepper> = args => (
 
 Separator.args = {
   children: [
-    <Stepper.Step title="Step 1" />,
-    <Stepper.Step title="Step 2" />,
-    <Stepper.Step title="Step 3" />,
+    <Stepper.Step key="step-1" title="Step 1" />,
+    <Stepper.Step key="step-2" title="Step 2" />,
+    <Stepper.Step key="step-3" title="Step 3" />,
   ],
   interactive: true,
   selected: 1,

@@ -12,6 +12,7 @@ WithSubtitle.args = {
           Beta
         </Badge>
       }
+      key={1}
       subtitle="Subtitle"
       value={1}
     >
@@ -24,6 +25,7 @@ WithSubtitle.args = {
         </Badge>
       }
       counter={1}
+      key={2}
       subtitle="Subtitle"
       value={2}
     >
@@ -36,6 +38,7 @@ WithSubtitle.args = {
         </Badge>
       }
       counter={10}
+      key={3}
       subtitle="Subtitle"
       value={3}
     >
@@ -48,6 +51,7 @@ WithSubtitle.args = {
         </Badge>
       }
       disabled
+      key={4}
       subtitle="Subtitle Beta"
       value={4}
     >
@@ -61,6 +65,7 @@ WithSubtitle.args = {
       }
       counter={1}
       disabled
+      key={5}
       subtitle="Subtitle short"
       value={5}
     >
@@ -69,6 +74,7 @@ WithSubtitle.args = {
     <Tabs.Tab
       counter={10}
       disabled
+      key={6}
       subtitle="Subtitle with a long long long long long long text"
       value={6}
     >
@@ -76,6 +82,7 @@ WithSubtitle.args = {
     </Tabs.Tab>,
     <Tabs.Tab
       counter={10}
+      key={7}
       subtitle="Subtitle with a long long long long long long text"
       value={6}
     >
