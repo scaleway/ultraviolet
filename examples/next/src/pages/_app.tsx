@@ -57,12 +57,12 @@ const App = ({ Component, pageProps }: AppProps) => {
   } as const
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
+    if (typeof globalThis !== 'undefined') {
       const storageTheme = localStorage.getItem('theme')
       if (storageTheme) {
         setTheme(storageTheme as 'light' | 'dark')
       } else {
-        const isThemeDark = window.matchMedia(
+        const isThemeDark = globalThis.matchMedia(
           '(prefers-color-scheme: dark)',
         ).matches
 
