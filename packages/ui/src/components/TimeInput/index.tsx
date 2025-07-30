@@ -223,7 +223,9 @@ export const TimeInput = ({
 }: TimeInputProps) => {
   const localId = useId()
   const defaultPeriod = useMemo(() => {
-    if (value) return value.getHours() >= 12 ? 'pm' : 'am'
+    if (value) {
+      return value.getHours() >= 12 ? 'pm' : 'am'
+    }
 
     return undefined
   }, [value])
@@ -281,7 +283,9 @@ export const TimeInput = ({
       const newValue = (valueToChange % 10) * 10 + key
 
       setValueByType(type, newTime, newValue)
-    } else setValueByType(type, newTime, key)
+    } else {
+      setValueByType(type, newTime, key)
+    }
 
     const newValue = getValueByType(type, newTime)
     // Focus to next input if the current input has a valid time
@@ -291,10 +295,8 @@ export const TimeInput = ({
       refSeconds.current?.focus()
     }
 
-    if (type === 'h') {
-      if (isCompleteHour(timeFormat, newValue)) {
-        refMinutes.current?.focus()
-      }
+    if (type === 'h' && isCompleteHour(timeFormat, newValue)) {
+      refMinutes.current?.focus()
     }
     const newFilled = { ...filled }
     newFilled[type] = true
@@ -346,15 +348,25 @@ export const TimeInput = ({
 
   // Go to next input
   const handleNext = (type: 'h' | 'm' | 's') => {
-    if (type === 'h') refMinutes.current?.focus()
-    if (type === 'm') refSeconds.current?.focus()
-    if (type === 's' && timeFormat === 12) refPeriod.current?.focus()
+    if (type === 'h') {
+      refMinutes.current?.focus()
+    }
+    if (type === 'm') {
+      refSeconds.current?.focus()
+    }
+    if (type === 's' && timeFormat === 12) {
+      refPeriod.current?.focus()
+    }
   }
 
   // Go to previous input
   const handlePrevious = (type: 'h' | 'm' | 's') => {
-    if (type === 'm') refHours.current?.focus()
-    if (type === 's') refMinutes.current?.focus()
+    if (type === 'm') {
+      refHours.current?.focus()
+    }
+    if (type === 's') {
+      refMinutes.current?.focus()
+    }
   }
 
   return (
@@ -388,21 +400,33 @@ export const TimeInput = ({
         <Stack direction="row">
           {TIME_KEYS.map(type => {
             const computedRef = () => {
-              if (type === 'h') return refHours
-              if (type === 'm') return refMinutes
+              if (type === 'h') {
+                return refHours
+              }
+              if (type === 'm') {
+                return refMinutes
+              }
 
               return refSeconds
             }
             const fullName = () => {
-              if (type === 'h') return 'hours'
-              if (type === 'm') return 'minutes'
+              if (type === 'h') {
+                return 'hours'
+              }
+              if (type === 'm') {
+                return 'minutes'
+              }
 
               return 'seconds'
             }
 
             const computeMaxValue = () => {
-              if (type === 'h' && timeFormat === 12) return 12
-              if (type === 'h' && timeFormat === 24) return 23
+              if (type === 'h' && timeFormat === 12) {
+                return 12
+              }
+              if (type === 'h' && timeFormat === 24) {
+                return 23
+              }
 
               return 59
             }
@@ -495,7 +519,9 @@ export const TimeInput = ({
               onChange={event => {
                 if (!readOnly && !disabled) {
                   const key = event.target.value.slice(-1)
-                  if (isAOrP(key)) handleChangePeriod(key as 'a' | 'p')
+                  if (isAOrP(key)) {
+                    handleChangePeriod(key as 'a' | 'p')
+                  }
                 }
               }}
               onClick={event => event.stopPropagation()}

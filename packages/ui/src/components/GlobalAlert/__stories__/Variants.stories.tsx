@@ -5,7 +5,7 @@ import { GlobalAlert } from '../index'
 
 export const Variants = (props: ComponentProps<typeof GlobalAlert>) =>
   (['info', 'danger', 'promotional'] as const).map(variant => (
-    <GlobalAlert {...props} key={variant} variant={variant}>
+    <GlobalAlert key={variant} {...props} variant={variant}>
       This is a global alert with the {variant} variant
     </GlobalAlert>
   ))

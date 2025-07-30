@@ -9,8 +9,12 @@ const StyledRow = styled(Table.Row, {
   shouldForwardProp: prop => !['sentiment'].includes(prop),
 })<{ sentiment: ExtendedColor }>`
   background: ${({ sentiment }) => {
-    if (sentiment === 'white') return 'black'
-    if (sentiment === 'black') return 'white'
+    if (sentiment === 'white') {
+      return 'black'
+    }
+    if (sentiment === 'black') {
+      return 'white'
+    }
 
     return 'none'
   }};

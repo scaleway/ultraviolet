@@ -47,6 +47,10 @@ const RelativeDiv = styled.div`
   position: relative;
 `
 
+const PaddedSpan = styled.span`
+  padding-left: ${({ theme }) => theme.space[1]}
+`
+
 const StyledPinIconOutline = styled(PinOutlineIcon, {
   shouldForwardProp: prop => !['active'].includes(prop),
 })<{ active?: boolean }>`
@@ -282,6 +286,10 @@ type ItemProps = {
    */
   label: string
   /**
+   * It will be added after the label when you want to have complementory information with the label
+   */
+  labelDescription?: ReactNode
+  /**
    * It should be a unique id and will be used for pin/unpin feature.
    */
   id: string
@@ -354,6 +362,7 @@ export const Item = memo(
     children,
     categoryIcon,
     label,
+    labelDescription,
     subLabel,
     badgeText,
     badgeSentiment,
@@ -422,7 +431,9 @@ export const Item = memo(
       pinnedFeature && !children && !noPinButton
     const isItemPinned = pinnedItems.includes(id)
     const shouldShowPinnedButton = useMemo(() => {
-      if (href || disabled) return false
+      if (href || disabled) {
+        return false
+      }
 
       if (hasPinnedFeatureAndNoChildren && type !== 'default') {
         return true
@@ -436,7 +447,9 @@ export const Item = memo(
     }, [disabled, hasPinnedFeatureAndNoChildren, href, type])
 
     const hasActiveChildren = useMemo(() => {
-      if (!children) return false
+      if (!children) {
+        return false
+      }
 
       return (
         Children.map(children, child => {
@@ -600,6 +613,9 @@ export const Item = memo(
                     whiteSpace="pre-wrap"
                   >
                     {label}
+                    {labelDescription ? (
+                      <PaddedSpan>{labelDescription}</PaddedSpan>
+                    ) : null}
                   </WrapText>
                 ) : null}
                 {subLabel && !animation ? (
@@ -806,6 +822,9 @@ export const Item = memo(
               <WrapText as="span" variant="bodySmall" whiteSpace="pre-wrap">
                 {label}
               </WrapText>
+            ) : null}
+            {labelDescription ? (
+              <PaddedSpan>{labelDescription}</PaddedSpan>
             ) : null}
             <Stack direction="row">
               {badgeText && !animation ? (

@@ -22,8 +22,12 @@ const StyledInput = styled(TextInput)`
   padding-right: ${({ theme }) => theme.space[2]};
 `
 export const getReferenceText = (option: OptionType) => {
-  if (option.searchText) return normalizeString(option.searchText)
-  if (typeof option.label === 'string') return normalizeString(option.label)
+  if (option.searchText) {
+    return normalizeString(option.searchText)
+  }
+  if (typeof option.label === 'string') {
+    return normalizeString(option.label)
+  }
 
   return ''
 }
@@ -80,6 +84,10 @@ const findClosestOption = (
 
   return null
 }
+
+const escapeRegExp = (string: string) =>
+  string.replace(/[.*+?^{}()|[\]\\]/g, String.raw`\$&`)
+
 export const SearchBarDropdown = ({
   placeholder,
   displayedOptions,
@@ -96,8 +104,6 @@ export const SearchBarDropdown = ({
     setSelectedData,
     selectedData,
   } = useSelectInput()
-  const escapeRegExp = (string: string) =>
-    string.replace(/[.*+?^{}()|[\]\\]/g, String.raw`\$&`)
 
   const handleChange = (search: string) => {
     if (search.length > 0) {

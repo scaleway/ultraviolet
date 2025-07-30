@@ -18,6 +18,6 @@ export default {
 
 export { Playground } from './Playground.stories'
 export { Icons } from './Icons.stories'
-export { Groups } from './Groups.stories.tsx'
+export { Groups } from './Groups.stories'
 export { Size } from './Size.stories'
 export { Disabled } from './Disabled.stories'

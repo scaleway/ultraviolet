@@ -257,10 +257,8 @@ export const ListProvider = ({
           const end = Math.max(lastCheckedIndex, index)
 
           updatedRefList.forEach((checkbox, key) => {
-            if (start < key && key <= end) {
-              if (!checkbox.current?.disabled) {
-                checkboxesInRange.push(checkbox.current?.value)
-              }
+            if (start < key && key <= end && !checkbox.current?.disabled) {
+              checkboxesInRange.push(checkbox.current?.value)
             }
           })
 

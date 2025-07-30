@@ -7,10 +7,10 @@ import { Loader } from '../index'
 export const Sentiments: StoryFn = props => (
   <Stack gap={4}>
     {[...SENTIMENTS, 'white', 'black'].map(sentiment => (
-      <Stack alignItems="center">
+      <Stack alignItems="center" key={sentiment}>
         <Loader
-          {...props}
           key={sentiment}
+          {...props}
           sentiment={sentiment as ExtendedColor}
         />
         {sentiment}

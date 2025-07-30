@@ -18,6 +18,7 @@ Sizes.decorators = [
       {['small', 'medium'].map((size, index) => (
         <StepList.Item
           bulletContent={(index + 1).toString()}
+          key={size}
           size={size as SizesType}
         >
           {size}

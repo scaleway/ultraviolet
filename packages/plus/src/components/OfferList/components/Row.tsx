@@ -161,7 +161,9 @@ export const Row = ({
         </>
       )
     }
-    if (expandable && !loading) return expandableContent
+    if (expandable && !loading) {
+      return expandableContent
+    }
 
     return undefined
   }, [
@@ -176,7 +178,9 @@ export const Row = ({
   ])
 
   const isRowSelected = useMemo(() => {
-    if (selectable === 'radio') return radioSelectedRow === offerName
+    if (selectable === 'radio') {
+      return radioSelectedRow === offerName
+    }
 
     return checkboxSelectedRows.includes(offerName)
   }, [offerName, checkboxSelectedRows, radioSelectedRow, selectable])

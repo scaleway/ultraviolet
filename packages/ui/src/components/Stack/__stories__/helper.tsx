@@ -24,7 +24,7 @@ const ThirdChild = styled(Child)`
 `
 
 export const coloredChildren = [
-  <FirstChild>1</FirstChild>,
-  <SecondChild>2</SecondChild>,
-  <ThirdChild>3</ThirdChild>,
+  <FirstChild key="1">1</FirstChild>,
+  <SecondChild key="2">2</SecondChild>,
+  <ThirdChild key="3">3</ThirdChild>,
 ]

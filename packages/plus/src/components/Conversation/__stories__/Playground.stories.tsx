@@ -6,7 +6,7 @@ export const Playground = Template.bind({})
 
 Playground.args = {
   children: [
-    <>
+    <div key="conversation">
       <Conversation.Date>2022-03-02</Conversation.Date>
       <Conversation.Message
         align="right"
@@ -39,6 +39,6 @@ Playground.args = {
         <Conversation.Tag>few seconds ago</Conversation.Tag>
         sent
       </Conversation.MessageInfos>
-    </>,
+    </div>,
   ],
 }
