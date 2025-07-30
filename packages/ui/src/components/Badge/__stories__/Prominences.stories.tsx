@@ -5,12 +5,15 @@ import { Badge, PROMINENCES } from '..'
 export const Prominences: StoryFn = props => (
   <>
     {Object.keys(PROMINENCES).map(prominence => (
-      <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
+      <div
+        key={prominence}
+        style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}
+      >
         {prominence}:
         {SENTIMENTS.map(sentiment => (
           <Badge
-            {...props}
             key={`${prominence}-${sentiment}`}
+            {...props}
             prominence={prominence as keyof typeof PROMINENCES}
             sentiment={sentiment}
           >

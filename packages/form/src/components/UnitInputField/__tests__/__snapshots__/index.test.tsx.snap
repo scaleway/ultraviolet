@@ -547,7 +547,7 @@ exports[`UnitInputField > should handles onChange and selection 1`] = `
         >
           <label
             class="emotion-6 emotion-7 emotion-8"
-            for="«r6»"
+            for="«r7»"
           >
             Test
           </label>
@@ -569,7 +569,7 @@ exports[`UnitInputField > should handles onChange and selection 1`] = `
               class="emotion-16 emotion-17"
               data-size="large"
               data-testid="unit-input"
-              id="«r6»"
+              id="«r7»"
               max="9007199254740991"
               min="0"
               name="test-value"
@@ -585,8 +585,8 @@ exports[`UnitInputField > should handles onChange and selection 1`] = `
             class="emotion-18 emotion-19 emotion-20"
           >
             <div
-              aria-controls="«ra»"
-              aria-describedby="«ra»"
+              aria-controls="«rb»"
+              aria-describedby="«rb»"
               class="emotion-21 emotion-22"
               data-container-full-width="true"
               tabindex="-1"
@@ -595,8 +595,8 @@ exports[`UnitInputField > should handles onChange and selection 1`] = `
                 class="emotion-2 emotion-3"
               >
                 <div
+                  aria-controls="«rb»"
                   aria-expanded="false"
-                  aria-haspopup="listbox"
                   class="emotion-25 emotion-26"
                   data-disabled="false"
                   data-dropdownvisible="false"
@@ -1136,8 +1136,8 @@ exports[`UnitInputField > should render correctly 1`] = `
                 class="emotion-2 emotion-3"
               >
                 <div
+                  aria-controls="«r3»"
                   aria-expanded="false"
-                  aria-haspopup="listbox"
                   class="emotion-21 emotion-22"
                   data-disabled="false"
                   data-dropdownvisible="false"

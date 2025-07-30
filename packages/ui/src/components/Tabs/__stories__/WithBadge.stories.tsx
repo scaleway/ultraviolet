@@ -12,6 +12,7 @@ WithBadge.args = {
           Beta
         </Badge>
       }
+      key={1}
       value={1}
     >
       Text
@@ -23,6 +24,7 @@ WithBadge.args = {
         </Badge>
       }
       counter={1}
+      key={2}
       value={2}
     >
       Text
@@ -34,6 +36,7 @@ WithBadge.args = {
         </Badge>
       }
       counter={10}
+      key={3}
       value={3}
     >
       Text
@@ -45,6 +48,7 @@ WithBadge.args = {
         </Badge>
       }
       disabled
+      key={4}
       value={4}
     >
       Text
@@ -57,6 +61,7 @@ WithBadge.args = {
       }
       counter={1}
       disabled
+      key={5}
       value={5}
     >
       Text
@@ -69,6 +74,7 @@ WithBadge.args = {
       }
       counter={10}
       disabled
+      key={6}
       value={6}
     >
       Text

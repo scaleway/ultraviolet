@@ -7,9 +7,9 @@ export const Sentiments: StoryFn<ComponentProps<typeof Text>> = args => (
   <div>
     {SENTIMENTS.map(sentiment => (
       <Text
+        key={sentiment}
         {...args}
         as="div"
-        key={sentiment}
         sentiment={sentiment}
         variant="body"
       >

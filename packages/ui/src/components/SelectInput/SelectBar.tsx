@@ -41,6 +41,7 @@ type SelectBarProps = {
   'data-testid': string
   label?: string
   tooltip?: string
+  dropdownId?: string
 }
 
 type DisplayValuesProps = {
@@ -172,7 +173,7 @@ const CustomTag = styled(Tag, {
   width: fit-content;
   min-width: ${({ lastElementMaxWidth }) =>
     lastElementMaxWidth ? 'auto' : 'fit-content'};
-  
+
   max-width: ${({ lastElementMaxWidth, hidden }) =>
     lastElementMaxWidth && !hidden ? `${lastElementMaxWidth}px` : '100%'};
 
@@ -323,6 +324,7 @@ const SelectBar = ({
   id,
   'data-testid': dataTestId,
   label,
+  dropdownId,
 }: SelectBarProps) => {
   const {
     isDropdownVisible,
@@ -506,11 +508,12 @@ const SelectBar = ({
     const getWidth = () => {
       if (refTag.current) {
         setInnerWidth(refTag.current.offsetWidth)
-      } else
+      } else {
         setInnerWidth(
           innerRef.current?.offsetWidth ??
             0 - (arrowRef.current?.offsetWidth ?? 0) - SIZES_TAG.paddings,
         )
+      }
     }
     getWidth()
     window.addEventListener('resize', getWidth)
@@ -543,8 +546,8 @@ const SelectBar = ({
   return (
     <Tooltip text={tooltip}>
       <StyledInputWrapper
+        aria-controls={dropdownId}
         aria-expanded={isDropdownVisible}
-        aria-haspopup="listbox"
         aria-label={label}
         autoFocus={autoFocus}
         data-disabled={disabled}

@@ -1,11 +1,13 @@
 import { Global, ThemeProvider } from '@emotion/react'
+import type {
+  DocsContainerProps as BaseContainerProps} from '@storybook/addon-docs/blocks';
 import {
   DocsContainer as BaseContainer,
-  DocsContainerProps as BaseContainerProps,
   Unstyled,
 } from '@storybook/addon-docs/blocks'
 import { consoleLightTheme as lightTheme } from '@ultraviolet/themes'
-import { ReactNode, cloneElement, isValidElement, useState } from 'react'
+import type { ReactNode } from 'react'
+import { cloneElement, isValidElement, useState } from 'react'
 import { globalStyles } from './globalStyle'
 import '@ultraviolet/fonts/fonts.css'
 import { GlobalAlert } from '@ultraviolet/ui'

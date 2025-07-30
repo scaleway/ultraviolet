@@ -33,6 +33,7 @@ import { INPUT_SIZE_HEIGHT } from './types'
 const DROPDOWN_MAX_HEIGHT = 256
 
 export type DropdownProps = {
+  id?: string
   children: ReactNode
   emptyState: ReactNode
   descriptionDirection: 'row' | 'column'
@@ -700,6 +701,7 @@ export const Dropdown = ({
   size,
   dropdownAlign,
   portalTarget,
+  id,
 }: DropdownProps) => {
   const {
     setIsDropdownVisible,
@@ -738,7 +740,9 @@ export const Dropdown = ({
               top: overflow,
             })
           }
-        } else window.scrollBy({ behavior: 'smooth', top: overflow })
+        } else {
+          window.scrollBy({ behavior: 'smooth', top: overflow })
+        }
       }
     }
     // oxlint-disable-next-line react/exhaustive-deps
@@ -817,7 +821,9 @@ export const Dropdown = ({
   // No data is displayed (because of the search or because no data is provided)
   // Set to true when noData by default
   const isEmpty = useMemo(() => {
-    if (numberOfOptions === 0) return true
+    if (numberOfOptions === 0) {
+      return true
+    }
     if (Array.isArray(displayedOptions)) {
       return displayedOptions.length === 0
     }
@@ -853,6 +859,7 @@ export const Dropdown = ({
       disableAnimation
       hasArrow={false}
       hideOnClickOutside
+      id={id}
       maxWidth={maxWidth ?? refSelect.current?.offsetWidth}
       onClose={() => setIsDropdownVisible(false)}
       placement="bottom"

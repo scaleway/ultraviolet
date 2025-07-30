@@ -323,8 +323,12 @@ export const SelectableCard = forwardRef(
     const childrenRef = useRef<HTMLDivElement>(null)
     const [svgContent, setSvgContent] = useState<string | null>(null)
     const image = useMemo(() => {
-      if (illustration) return 'illustration'
-      if (productIcon) return 'icon'
+      if (illustration) {
+        return 'illustration'
+      }
+      if (productIcon) {
+        return 'icon'
+      }
 
       return 'none'
     }, [illustration, productIcon])
@@ -416,11 +420,9 @@ export const SelectableCard = forwardRef(
 
     const onKeyDown: KeyboardEventHandler = useCallback(
       event => {
-        if (event.key === ' ') {
-          if (innerRef?.current) {
-            event.preventDefault()
-            innerRef.current.click()
-          }
+        if (event.key === ' ' && innerRef?.current) {
+          event.preventDefault()
+          innerRef.current.click()
         }
       },
       [innerRef],

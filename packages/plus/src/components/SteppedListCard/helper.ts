@@ -49,7 +49,11 @@ export const nextStep = ({
     index === stepNumber - 1 ? completed : item,
   )
   setCompleted(tempDone)
-  if (numberOfSteps > stepNumber) setCurrentStep(stepNumber + 1)
-  else if (onClickHide) onClickHide()
-  else setHidden(true)
+  if (numberOfSteps > stepNumber) {
+    setCurrentStep(stepNumber + 1)
+  } else if (onClickHide) {
+    onClickHide()
+  } else {
+    setHidden(true)
+  }
 }

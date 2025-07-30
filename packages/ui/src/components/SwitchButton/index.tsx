@@ -86,7 +86,9 @@ export const SwitchButton = ({
   )
 
   const getPosition = (curentElement?: HTMLInputElement) => {
-    if (!curentElement) return 0
+    if (!curentElement) {
+      return 0
+    }
     const currentPosition = curentElement.getBoundingClientRect().left
     const containerPosition =
       containerRef.current?.getBoundingClientRect().left ?? 0
@@ -102,7 +104,9 @@ export const SwitchButton = ({
 
   useEffect(() => {
     const element = getElement(localValue)
-    if (!element) return undefined
+    if (!element) {
+      return undefined
+    }
 
     const resizeObserver = new ResizeObserver(() => {
       if (
@@ -190,11 +194,15 @@ export const SwitchButton = ({
             }}
             onMouseLeave={() => {
               setMouseDownSide(null)
-              if (mouseDownSide) setWidth(width - FOCUS_OVERLAY_SCALE_RATIO)
+              if (mouseDownSide) {
+                setWidth(width - FOCUS_OVERLAY_SCALE_RATIO)
+              }
             }}
             onMouseUp={() => {
               setMouseDownSide(null)
-              if (mouseDownSide) setWidth(width - FOCUS_OVERLAY_SCALE_RATIO)
+              if (mouseDownSide) {
+                setWidth(width - FOCUS_OVERLAY_SCALE_RATIO)
+              }
             }}
             ref={containerRef}
           >

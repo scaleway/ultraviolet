@@ -4,7 +4,7 @@ import {
   CheckboxField,
   Form,
   Submit,
-  TextInputFieldV2,
+  TextInputField,
   useForm,
   useWatch,
 } from '@ultraviolet/form'
@@ -25,7 +25,7 @@ const StyledLoginContainer = styled(Stack)`
   padding: ${({ theme }) => theme.space['4']};
 `
 
-const StyledInput = styled(TextInputFieldV2)`
+const StyledInput = styled(TextInputField)`
   padding: ${({ theme }) => theme.space['1.5']}
     ${({ theme }) => theme.space['5']};
   width: 100%;

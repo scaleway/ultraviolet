@@ -244,11 +244,17 @@ export const Popup = forwardRef(
 
     const timer = useRef<ReturnType<typeof setTimeout>>(undefined)
     const popupPortalTarget = useMemo(() => {
-      if (portalTarget) return portalTarget
+      if (portalTarget) {
+        return portalTarget
+      }
 
       if (role === 'dialog') {
-        if (childrenRef.current) return childrenRef.current
-        if (isClientSide) return document.body
+        if (childrenRef.current) {
+          return childrenRef.current
+        }
+        if (isClientSide) {
+          return document.body
+        }
 
         return null
       }
@@ -461,18 +467,19 @@ export const Popup = forwardRef(
         const popupCurrent = innerPopupRef.current
         const childrenCurrent = childrenRef.current
 
-        if (popupCurrent && hideOnClickOutside && !event.defaultPrevented) {
-          if (
-            event.target &&
-            event.target !== popupCurrent &&
-            event.target !== childrenCurrent &&
-            !childrenCurrent?.contains(event.target as Node) &&
-            !popupCurrent.contains(event.target as Node)
-          ) {
-            event.preventDefault()
-            event.stopPropagation()
-            closePopup()
-          }
+        if (
+          popupCurrent &&
+          hideOnClickOutside &&
+          !event.defaultPrevented &&
+          event.target &&
+          event.target !== popupCurrent &&
+          event.target !== childrenCurrent &&
+          !childrenCurrent?.contains(event.target as Node) &&
+          !popupCurrent.contains(event.target as Node)
+        ) {
+          event.preventDefault()
+          event.stopPropagation()
+          closePopup()
         }
       }
       if (visibleInDom) {

@@ -5,7 +5,7 @@ import { Badge } from '..'
 export const Sentiments: StoryFn = props => (
   <>
     {SENTIMENTS.map(sentiment => (
-      <Badge {...props} key={sentiment} sentiment={sentiment}>
+      <Badge key={sentiment} {...props} sentiment={sentiment}>
         {sentiment}
       </Badge>
     ))}
