@@ -68,7 +68,7 @@ const computePlacement = ({
   if (isNestedMenu) {
     if (
       overloadedChildrenRight + popupWidth + TOTAL_USED_SPACE >
-      globalThis.innerWidth
+      window.innerWidth
     ) {
       return 'left'
     }
@@ -86,7 +86,7 @@ const computePlacement = ({
 
   if (
     overloadedChildrenRight + popupWidth + TOTAL_USED_SPACE >
-    globalThis.innerWidth
+    window.innerWidth
   ) {
     return 'left'
   }
@@ -110,7 +110,7 @@ const findOffsetParent = (element: RefObject<HTMLDivElement>) => {
   let currentElement = element?.current
 
   while (currentElement && currentElement.tagName !== 'BODY') {
-    const { position } = globalThis.getComputedStyle(currentElement)
+    const { position } = window.getComputedStyle(currentElement)
 
     // Check if the current element is a potential offset parent
     if (position !== 'static') {
@@ -199,7 +199,7 @@ const getPopupOverflowFromParent = (
       return Math.abs(popupOverflowTop)
     }
 
-    if (childrenBottom + popupHeight > globalThis.innerHeight) {
+    if (childrenBottom + popupHeight > window.innerHeight) {
       return -popupHalfHeightWithArrow
     }
   }

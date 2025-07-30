@@ -1,11 +1,13 @@
 import { Global, ThemeProvider } from '@emotion/react'
+import type {
+  DocsContainerProps as BaseContainerProps} from '@storybook/addon-docs/blocks';
 import {
   DocsContainer as BaseContainer,
-  DocsContainerProps as BaseContainerProps,
   Unstyled,
 } from '@storybook/addon-docs/blocks'
 import { consoleLightTheme as lightTheme } from '@ultraviolet/themes'
-import { ReactNode, cloneElement, isValidElement, useState } from 'react'
+import type { ReactNode} from 'react';
+import { cloneElement, isValidElement, useState } from 'react'
 import { globalStyles } from './globalStyle'
 import '@ultraviolet/fonts/fonts.css'
 import { GlobalAlert } from '@ultraviolet/ui'
@@ -49,7 +51,7 @@ const DocsContainer = ({ children, context }: DocsContainerProps) => {
 
   if (
     import.meta.env['STORYBOOK_ENVIRONMENT'] === 'production' &&
-    globalThis.location.hostname === 'storybook.ultraviolet.scaleway.com'
+    window.location.hostname === 'storybook.ultraviolet.scaleway.com'
   ) {
     fetch('https://api.github.com/repos/scaleway/ultraviolet/branches/beta')
       .then((data) => {
@@ -68,7 +70,7 @@ const DocsContainer = ({ children, context }: DocsContainerProps) => {
         {isBeta ?
         <GlobalAlert
           buttonText="Access to Beta"
-          onClickButton={() => globalThis.top?.location.assign('https://beta.storybook.ultraviolet.scaleway.com')}
+          onClickButton={() => window.top?.location.assign('https://beta.storybook.ultraviolet.scaleway.com')}
           closable={false}
         >
           A Beta version is available. Please use this version if your dependencies include the Beta release.

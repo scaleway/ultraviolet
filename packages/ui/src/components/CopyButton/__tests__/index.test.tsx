@@ -9,7 +9,7 @@ describe('CopyButton', () => {
     let data = ''
 
     // @ts-expect-error we are voluntarily based on an older browser spec
-    globalThis.clipboardData = {
+    window.clipboardData = {
       getData: vi.fn(() => data),
       setData: vi.fn((_, val: string) => {
         data = val
@@ -58,6 +58,6 @@ describe('CopyButton', () => {
     expect(onCopy).toBeCalledTimes(1)
     // @ts-expect-error we are voluntarily based on an older browser spec
 
-    expect(globalThis.clipboardData.getData()).toBe('test')
+    expect(window.clipboardData.getData()).toBe('test')
   })
 })

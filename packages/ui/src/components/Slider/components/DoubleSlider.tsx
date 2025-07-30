@@ -220,10 +220,10 @@ export const DoubleSlider = ({
     const setWidthResize = () => {
       setWidth(Number(refSlider.current?.offsetWidth))
     }
-    globalThis.addEventListener('resize', setWidthResize)
+    window.addEventListener('resize', setWidthResize)
 
     return () => {
-      globalThis.removeEventListener('resize', setWidthResize)
+      window.removeEventListener('resize', setWidthResize)
     }
   }, [])
 

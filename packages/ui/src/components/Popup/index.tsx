@@ -260,7 +260,7 @@ export const Popup = forwardRef(
       }
 
       // We check if window exists for SSR
-      if (typeof globalThis !== 'undefined') {
+      if (typeof window !== 'undefined') {
         return document.body
       }
 
@@ -317,7 +317,7 @@ export const Popup = forwardRef(
       setVisibleInDom(false)
       setReverseAnimation(false)
 
-      globalThis.removeEventListener('scroll', onWindowChangeDetected, true)
+      window.removeEventListener('scroll', onWindowChangeDetected, true)
     }, [onWindowChangeDetected])
 
     /**
@@ -414,14 +414,14 @@ export const Popup = forwardRef(
         if (popupPortalTarget === document.body) {
           // We want to detect scroll and resize in order to recompute positions of popup
           // Adding true as third parameter to event listener will detect nested scrolls.
-          globalThis.addEventListener('scroll', onWindowChangeDetected, true)
+          window.addEventListener('scroll', onWindowChangeDetected, true)
         }
-        globalThis.addEventListener('resize', onWindowChangeDetected, true)
+        window.addEventListener('resize', onWindowChangeDetected, true)
       }
 
       return () => {
-        globalThis.removeEventListener('scroll', onWindowChangeDetected, true)
-        globalThis.removeEventListener('resize', onWindowChangeDetected, true)
+        window.removeEventListener('scroll', onWindowChangeDetected, true)
+        window.removeEventListener('resize', onWindowChangeDetected, true)
         if (timer.current) {
           clearTimeout(timer.current)
           timer.current = undefined

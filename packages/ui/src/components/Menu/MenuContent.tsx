@@ -188,10 +188,10 @@ export const Menu = forwardRef(
         })
 
         return () => {
-          globalThis.removeEventListener('focus', () => handler(undefined))
-          globalThis.removeEventListener('mouseenter', () => handler(undefined))
-          globalThis.removeEventListener('mouseleave', () => handler(undefined))
-          globalThis.removeEventListener('keydown', () => handler(undefined))
+          window.removeEventListener('focus', () => handler(undefined))
+          window.removeEventListener('mouseenter', () => handler(undefined))
+          window.removeEventListener('mouseleave', () => handler(undefined))
+          window.removeEventListener('keydown', () => handler(undefined))
         }
       }
 

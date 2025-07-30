@@ -28,11 +28,12 @@
   ],
   "overrides": [
     {
-      "files": ["**/__stories__/**/*.{ts,tsx}", "**/__tests__/**/*.{ts,tsx}"],
+      "files": ["**/__stories__/**/*.{ts,tsx}", "**/__tests__/**/*.{ts,tsx}", ".storybook/**/*.{ts,tsx}"],
       "rules": {
         "eslint/no-console": "off",
         "eslint/no-alert": "off",
-        "import/no-anonymous-default-export": "off"
+        "import/no-anonymous-default-export": "off",
+        "import/no-unassigned-import": "off"
       }
     },
     {
@@ -267,12 +268,13 @@
     "react/no-unknown-property": "error",
     "react/react-in-jsx-scope": "off",
     "react/require-render-return": "error",
+    "react/no-danger": "off",
     "unicorn/no-instanceof-builtins": "error",
     "unicorn/prefer-array-index-of": "off",
     "unicorn/prefer-array-find": "off",
     "unicorn/no-for-loop": "off",
     "unicorn/prefer-object-from-entries": "off",
-    "unicorn/prefer-global-this": "error",
+    "unicorn/prefer-global-this": "off",
     "unicorn/catch-error-name": "error",
     "unicorn/empty-brace-spaces": "error",
     "unicorn/error-message": "off",

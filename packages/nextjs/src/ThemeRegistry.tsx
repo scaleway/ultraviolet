@@ -51,7 +51,6 @@ export const ThemeRegistry = ({ children, theme }: ThemeRegistryProps) => {
 
     return (
       <style
-        // eslint-disable-next-line react/no-danger
         dangerouslySetInnerHTML={{
           __html: styles,
         }}

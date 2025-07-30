@@ -727,7 +727,7 @@ export const Dropdown = ({
         DROPDOWN_MAX_HEIGHT +
         Number(theme.sizing[INPUT_SIZE_HEIGHT[size]].replace('rem', '')) * 16 +
         Number.parseInt(theme.space['5'], 10)
-      const overflow = position - globalThis.innerHeight + 32
+      const overflow = position - window.innerHeight + 32
       if (overflow > 0 && modalContext) {
         const currentModal = modalContext.openedModals[0]
         const modalElement = currentModal?.ref.current
@@ -741,7 +741,7 @@ export const Dropdown = ({
             })
           }
         } else {
-          globalThis.scrollBy({ behavior: 'smooth', top: overflow })
+          window.scrollBy({ behavior: 'smooth', top: overflow })
         }
       }
     }
@@ -760,9 +760,9 @@ export const Dropdown = ({
   useEffect(() => {
     resizeDropdown()
 
-    globalThis.addEventListener('resize', resizeDropdown)
+    window.addEventListener('resize', resizeDropdown)
 
-    return () => globalThis.removeEventListener('resize', resizeDropdown)
+    return () => window.removeEventListener('resize', resizeDropdown)
   }, [resizeDropdown])
 
   useEffect(() => {

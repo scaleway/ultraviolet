@@ -516,9 +516,9 @@ const SelectBar = ({
       }
     }
     getWidth()
-    globalThis.addEventListener('resize', getWidth)
+    window.addEventListener('resize', getWidth)
 
-    return () => globalThis.removeEventListener('resize', getWidth)
+    return () => window.removeEventListener('resize', getWidth)
   }, [innerRef, refTag, selectedData.selectedValues])
 
   const shouldDisplayValues = useMemo(() => {

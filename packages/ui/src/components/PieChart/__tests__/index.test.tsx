@@ -13,7 +13,7 @@ import {
 describe('PieChart', () => {
   beforeAll(() => {
     // Have to mock ResizeObserver as Nivo doesn't add automatically ResizeObserver polyfill anymore (v0.79.0)
-    globalThis.ResizeObserver = vi.fn().mockImplementation(() => ({
+    window.ResizeObserver = vi.fn().mockImplementation(() => ({
       disconnect: vi.fn(),
       observe: vi.fn(),
       unobserve: vi.fn(),

@@ -176,14 +176,14 @@ export const NavigationContent = ({
         }
 
         document.removeEventListener('mousemove', mouseMove)
-        globalThis.removeEventListener('mouseup', mouseup)
+        window.removeEventListener('mouseup', mouseup)
 
         document.body.style.pointerEvents = ''
         document.body.style.userSelect = ''
       }
 
       document.addEventListener('mousemove', mouseMove)
-      globalThis.addEventListener('mouseup', mouseup)
+      window.addEventListener('mouseup', mouseup)
     }
     const sliderRefCurrent = sliderRef.current
 

@@ -9,11 +9,11 @@ import {
 describe('ids', () => {
   describe('getUUID', () => {
     beforeEach(() => {
-      vi.spyOn(globalThis.Math, 'random').mockReturnValue(0.4155913669444804)
+      vi.spyOn(global.Math, 'random').mockReturnValue(0.4155913669444804)
     })
 
     afterEach(() => {
-      vi.spyOn(globalThis.Math, 'random').mockRestore()
+      vi.spyOn(global.Math, 'random').mockRestore()
     })
 
     test('returns correctly without arguments', () => {

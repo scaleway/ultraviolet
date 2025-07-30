@@ -30,11 +30,11 @@ export const useIsOverflowing = (
     setTimeout(() => handleResize(), 0)
 
     // Listen for resize events
-    globalThis.addEventListener('resize', handleResize)
+    window.addEventListener('resize', handleResize)
 
     // Cleanup the event listener
     return () => {
-      globalThis.removeEventListener('resize', handleResize)
+      window.removeEventListener('resize', handleResize)
     }
   }, [ref, callback])
 

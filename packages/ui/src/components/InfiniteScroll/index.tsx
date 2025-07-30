@@ -108,7 +108,7 @@ export const InfiniteScroll = ({
     let scrollableContainer =
       scrollParentRef?.current || containerRef.current?.parentElement
     while (scrollableContainer && scrollableContainer !== document.body) {
-      const { overflowY } = globalThis.getComputedStyle(scrollableContainer)
+      const { overflowY } = window.getComputedStyle(scrollableContainer)
       if (overflowY === 'auto' || overflowY === 'scroll') {
         break
       }

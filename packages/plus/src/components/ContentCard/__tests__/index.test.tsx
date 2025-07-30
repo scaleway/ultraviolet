@@ -6,12 +6,12 @@ import illustration from '../assets/illustration.png'
 describe('ContentCard', () => {
   beforeEach(() => {
     vi.useFakeTimers()
-    vi.spyOn(globalThis.Math, 'random').mockReturnValue(0.4155913669444804)
+    vi.spyOn(global.Math, 'random').mockReturnValue(0.4155913669444804)
   })
 
   afterEach(() => {
     vi.useRealTimers()
-    vi.spyOn(globalThis.Math, 'random').mockRestore()
+    vi.spyOn(global.Math, 'random').mockRestore()
   })
 
   test('renders correctly with required title', () => {
