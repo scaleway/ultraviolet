@@ -1,5 +1,6 @@
 import styled from '@emotion/styled'
 import type { StoryFn } from '@storybook/react-vite'
+import { InformationIcon } from '@ultraviolet/icons'
 import {
   BaremetalCategoryIcon,
   DataAndAnalyticsCategoryIcon,
@@ -113,6 +114,11 @@ const PlaygroundContent = ({ ...props }: ComponentProps<typeof Navigation>) => {
           categoryIcon={<BaremetalCategoryIcon variant="primary" />}
           id="compute"
           label="Compute"
+          labelDescription={
+            <Tooltip text="All computer cloud">
+              <InformationIcon />
+            </Tooltip>
+          }
           subLabel="All compute ressources"
         >
           <Navigation.Item
