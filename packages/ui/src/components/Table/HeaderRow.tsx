@@ -22,7 +22,10 @@ export const HeaderRow = ({ children, hasSelectAllColumn }: HeaderRowProps) => {
   return (
     <tr role="row">
       {hasSelectAllColumn ? (
-        <HeaderCell maxWidth={theme.sizing[SELECTABLE_CHECKBOX_SIZE]}>
+        <HeaderCell
+          isCheckbox
+          maxWidth={theme.sizing[SELECTABLE_CHECKBOX_SIZE]}
+        >
           <Checkbox
             aria-label="select all"
             checked={allRowSelectValue}
