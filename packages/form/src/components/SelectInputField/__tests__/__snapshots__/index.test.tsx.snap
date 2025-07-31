@@ -373,6 +373,10 @@ exports[`SelectInputField > should display right value on grouped options 1`] = 
   padding-right: 1rem;
   padding-left: 1rem;
   height: 2rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   text-align: left;
   margin-bottom: 0.125rem;
 }
