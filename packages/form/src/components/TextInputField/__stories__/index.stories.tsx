@@ -8,7 +8,10 @@ export default {
   component: TextInputField,
   decorators: [
     ChildStory => {
-      const methods = useForm()
+      const methods = useForm({
+        mode: 'onChange',
+      })
+
       const {
         errors,
         isDirty,
@@ -69,3 +72,4 @@ export default {
 
 export { Playground } from './Playground.stories'
 export { Required } from './Required.stories'
+export { AsyncValidation } from './AsyncValidation.stories'
