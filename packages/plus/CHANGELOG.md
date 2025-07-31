@@ -1,5 +1,25 @@
 # @ultraviolet/plus
 
+## 1.0.3
+
+### Patch Changes
+
+- [#5404](https://github.com/scaleway/ultraviolet/pull/5404) [`35a6123`](https://github.com/scaleway/ultraviolet/commit/35a6123aff795d1dc829cd9ffde83d4a61cafe4d) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `react` to `19.1.1`.
+  Updated dependency `react-dom` to `19.1.1`.
+
+- [#5406](https://github.com/scaleway/ultraviolet/pull/5406) [`330fd6d`](https://github.com/scaleway/ultraviolet/commit/330fd6dbfd053c50e830152358565173b6d63ad0) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `19.1.9`.
+  Updated dependency `@types/react-dom` to `19.1.7`.
+
+- [#5409](https://github.com/scaleway/ultraviolet/pull/5409) [`6044fc2`](https://github.com/scaleway/ultraviolet/commit/6044fc227ad58d9d61b931617d61667026322ac2) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@uiw/codemirror-extensions-langs` to `4.24.2`.
+  Updated dependency `@uiw/codemirror-theme-material` to `4.24.2`.
+  Updated dependency `@uiw/react-codemirror` to `4.24.2`.
+
+- [#5407](https://github.com/scaleway/ultraviolet/pull/5407) [`8d1201a`](https://github.com/scaleway/ultraviolet/commit/8d1201a338484261ce86dba25046ca1db9752cd9) Thanks [@matthprost](https://github.com/matthprost)! - Add props `labelDescription` on `<Navigation.Item />` to allow more custom elements on items
+
+- Updated dependencies [[`b144d15`](https://github.com/scaleway/ultraviolet/commit/b144d152b50d1f6c7a1eda04c680b9e687db6e11), [`cd3ba5b`](https://github.com/scaleway/ultraviolet/commit/cd3ba5b70ac1678b3a781a3213357acad0fae277), [`35a6123`](https://github.com/scaleway/ultraviolet/commit/35a6123aff795d1dc829cd9ffde83d4a61cafe4d), [`330fd6d`](https://github.com/scaleway/ultraviolet/commit/330fd6dbfd053c50e830152358565173b6d63ad0)]:
+  - @ultraviolet/ui@2.0.3
+  - @ultraviolet/icons@4.0.2
+
 ## 1.0.2
 
 ### Patch Changes
