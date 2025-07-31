@@ -1,5 +1,14 @@
 # @ultraviolet/nextjs
 
+## 1.0.3
+
+### Patch Changes
+
+- [#5404](https://github.com/scaleway/ultraviolet/pull/5404) [`35a6123`](https://github.com/scaleway/ultraviolet/commit/35a6123aff795d1dc829cd9ffde83d4a61cafe4d) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `react` to `19.1.1`.
+  Updated dependency `react-dom` to `19.1.1`.
+- Updated dependencies [[`b144d15`](https://github.com/scaleway/ultraviolet/commit/b144d152b50d1f6c7a1eda04c680b9e687db6e11), [`cd3ba5b`](https://github.com/scaleway/ultraviolet/commit/cd3ba5b70ac1678b3a781a3213357acad0fae277), [`35a6123`](https://github.com/scaleway/ultraviolet/commit/35a6123aff795d1dc829cd9ffde83d4a61cafe4d), [`330fd6d`](https://github.com/scaleway/ultraviolet/commit/330fd6dbfd053c50e830152358565173b6d63ad0)]:
+  - @ultraviolet/ui@2.0.3
+
 ## 1.0.2
 
 ### Patch Changes

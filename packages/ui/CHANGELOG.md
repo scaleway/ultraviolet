@@ -1,5 +1,21 @@
 # Change Log
 
+## 2.0.3
+
+### Patch Changes
+
+- [#5402](https://github.com/scaleway/ultraviolet/pull/5402) [`b144d15`](https://github.com/scaleway/ultraviolet/commit/b144d152b50d1f6c7a1eda04c680b9e687db6e11) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<Toggle />` to use native behavior for uncontrolled version
+
+- [#5384](https://github.com/scaleway/ultraviolet/pull/5384) [`cd3ba5b`](https://github.com/scaleway/ultraviolet/commit/cd3ba5b70ac1678b3a781a3213357acad0fae277) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<Banner />` wrong sentiment on dark color
+
+- [#5404](https://github.com/scaleway/ultraviolet/pull/5404) [`35a6123`](https://github.com/scaleway/ultraviolet/commit/35a6123aff795d1dc829cd9ffde83d4a61cafe4d) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `react` to `19.1.1`.
+  Updated dependency `react-dom` to `19.1.1`.
+
+- [#5406](https://github.com/scaleway/ultraviolet/pull/5406) [`330fd6d`](https://github.com/scaleway/ultraviolet/commit/330fd6dbfd053c50e830152358565173b6d63ad0) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `19.1.9`.
+  Updated dependency `@types/react-dom` to `19.1.7`.
+- Updated dependencies [[`35a6123`](https://github.com/scaleway/ultraviolet/commit/35a6123aff795d1dc829cd9ffde83d4a61cafe4d), [`330fd6d`](https://github.com/scaleway/ultraviolet/commit/330fd6dbfd053c50e830152358565173b6d63ad0)]:
+  - @ultraviolet/icons@4.0.2
+
 ## 2.0.2
 
 ### Patch Changes

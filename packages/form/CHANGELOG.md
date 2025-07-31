@@ -1,5 +1,23 @@
 # Change Log
 
+## 4.0.3
+
+### Patch Changes
+
+- [#5404](https://github.com/scaleway/ultraviolet/pull/5404) [`35a6123`](https://github.com/scaleway/ultraviolet/commit/35a6123aff795d1dc829cd9ffde83d4a61cafe4d) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `react` to `19.1.1`.
+  Updated dependency `react-dom` to `19.1.1`.
+
+- [#5401](https://github.com/scaleway/ultraviolet/pull/5401) [`f28d479`](https://github.com/scaleway/ultraviolet/commit/f28d4794f7bb76fb74d1e98dd654ea4c90f1d874) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@babel/runtime` to `7.28.2`.
+
+- [#5406](https://github.com/scaleway/ultraviolet/pull/5406) [`330fd6d`](https://github.com/scaleway/ultraviolet/commit/330fd6dbfd053c50e830152358565173b6d63ad0) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `19.1.9`.
+  Updated dependency `@types/react-dom` to `19.1.7`.
+
+- [#5405](https://github.com/scaleway/ultraviolet/pull/5405) [`c8785c8`](https://github.com/scaleway/ultraviolet/commit/c8785c88cd7a613bfa30c69b9652365184d1a3ff) Thanks [@Lawndlwd](https://github.com/Lawndlwd)! - fix: add onBlur on keyValueField
+
+- Updated dependencies [[`b144d15`](https://github.com/scaleway/ultraviolet/commit/b144d152b50d1f6c7a1eda04c680b9e687db6e11), [`cd3ba5b`](https://github.com/scaleway/ultraviolet/commit/cd3ba5b70ac1678b3a781a3213357acad0fae277), [`35a6123`](https://github.com/scaleway/ultraviolet/commit/35a6123aff795d1dc829cd9ffde83d4a61cafe4d), [`330fd6d`](https://github.com/scaleway/ultraviolet/commit/330fd6dbfd053c50e830152358565173b6d63ad0)]:
+  - @ultraviolet/ui@2.0.3
+  - @ultraviolet/icons@4.0.2
+
 ## 4.0.2
 
 ### Patch Changes
