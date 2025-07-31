@@ -4,7 +4,12 @@ import type { Theme } from '@emotion/react'
 import { keyframes, useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import { ArrowDownIcon, ArrowUpIcon } from '@ultraviolet/icons'
-import type { CSSProperties, ReactNode, RefObject } from 'react'
+import type {
+  CSSProperties,
+  MouseEventHandler,
+  ReactNode,
+  RefObject,
+} from 'react'
 import {
   Children,
   forwardRef,
@@ -244,6 +249,8 @@ type RowProps = {
   'data-testid'?: string
   style?: CSSProperties
   'data-dragging'?: boolean
+  onMouseEnter?: MouseEventHandler<HTMLTableRowElement>
+  onMouseLeave?: MouseEventHandler<HTMLTableRowElement>
 }
 
 export const Row = forwardRef<HTMLTableRowElement, RowProps>(
@@ -262,6 +269,8 @@ export const Row = forwardRef<HTMLTableRowElement, RowProps>(
       'data-testid': dataTestid,
       style,
       'data-dragging': dataDragging,
+      onMouseEnter,
+      onMouseLeave,
     },
     forwardedRef,
   ) => {
@@ -359,6 +368,8 @@ export const Row = forwardRef<HTMLTableRowElement, RowProps>(
                 }
               : undefined
           }
+          onMouseEnter={onMouseEnter}
+          onMouseLeave={onMouseLeave}
           ref={forwardedRef}
           role={canClickRowToExpand ? 'button row' : undefined}
           sentiment={sentiment}
