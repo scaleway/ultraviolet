@@ -288,6 +288,8 @@ export const Menu = forwardRef(
             data-testid={dataTestId}
             height={maxHeight ?? '30rem'}
             onKeyDown={handleKeyDown}
+            onMouseEnter={() => setShouldBeVisible(true)}
+            onMouseLeave={() => setShouldBeVisible(false)}
             role="menu"
           >
             <Content ref={contentRef}>

@@ -80,7 +80,16 @@ describe('Menu', () => {
     fireEvent.mouseLeave(disclosureMenu)
 
     await userEvent.hover(disclosureMenu)
-    await waitFor(() => expect(screen.getByRole('menu')).toBeVisible())
+
+    const menu = screen.getByRole('menu')
+    await waitFor(() => expect(menu).toBeVisible())
+
+    const menuItem = screen.getByRole<HTMLLinkElement>('menuitem')
+    await userEvent.hover(menuItem)
+    expect(menu).toBeVisible()
+
+    fireEvent.mouseLeave(menu)
+    await waitFor(() => expect(menu).not.toBeVisible())
   })
 
   test(`renders with Menu.ItemLink & Menu.Item disabled`, () =>
