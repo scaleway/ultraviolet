@@ -9,7 +9,7 @@ import {
   PlusIcon,
 } from '@ultraviolet/icons'
 import type { ReactNode, RefObject } from 'react'
-import { useEffect, useMemo, useRef, useState } from 'react'
+import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react'
 import { Button } from '../Button'
 import { StyledChildrenContainer } from '../Popup'
 import { Stack } from '../Stack'
@@ -57,6 +57,7 @@ type DisplayValuesProps = {
   lastElementMaxWidth: number
   overflow?: boolean
   refPlusTag: RefObject<HTMLDivElement | null>
+  displayShadowCopy?: boolean
 }
 
 const StateStack = styled(Stack)`
@@ -219,6 +220,7 @@ const DisplayValues = ({
   lastElementMaxWidth,
   overflow,
   refPlusTag,
+  displayShadowCopy,
 }: DisplayValuesProps) => {
   const { multiselect, selectedData, setSelectedData, options, onChange } =
     useSelectInput()
@@ -232,23 +234,25 @@ const DisplayValues = ({
       wrap="nowrap"
     >
       {/* Hidden div to measure the width of the tags */}
-      <div
-        ref={measureRef}
-        style={{
-          position: 'absolute',
-        }}
-      >
-        {potentiallyNonOverflowedValues.map(option => (
-          <CustomTag
-            className={option.value}
-            hidden
-            key={option.value}
-            onClose={() => {}}
-          >
-            {option?.label}
-          </CustomTag>
-        ))}
-      </div>
+      {displayShadowCopy ? (
+        <div
+          ref={measureRef}
+          style={{
+            position: 'absolute',
+          }}
+        >
+          {potentiallyNonOverflowedValues.map(option => (
+            <CustomTag
+              className={option.value}
+              hidden
+              key={option.value}
+              onClose={() => {}}
+            >
+              {option?.label}
+            </CustomTag>
+          ))}
+        </div>
+      ) : null}
       {nonOverflowedValues.map((option, index) => (
         <CustomTag
           data-testid="selected-options-tags"
@@ -336,6 +340,7 @@ const SelectBar = ({
     multiselect,
   } = useSelectInput()
   const openable = !(readOnly || disabled)
+  const [displayShadowCopy, setDisplayShadowCopy] = useState(false)
   const refTag = useRef<HTMLDivElement>(null)
   const measureRef = useRef<HTMLDivElement>(null)
   const arrowRef = useRef<HTMLDivElement>(null)
@@ -382,11 +387,20 @@ const SelectBar = ({
     return 'neutral'
   }, [error, success])
 
+  // First we display shadow copy of tags to render it
   useEffect(() => {
+    setDisplayShadowCopy(true)
+  }, [selectedData.selectedValues.length])
+
+  // We then want to measure the tags length before displaying them
+  // so we can determine if there is an overflow or not
+  // We use useLayoutEffect to ensure the measurement is done before the browser paints
+  useLayoutEffect(() => {
     if (selectedData.selectedValues.length === 0) {
       setOverflowAmount(0)
       setNonOverFlowedValues([])
     }
+
     if (measureRef.current && selectedData.selectedValues.length > 0) {
       const toMeasureElements: HTMLCollection = measureRef.current.children
       const toMeasureElementsArray = [...toMeasureElements]
@@ -494,10 +508,12 @@ const SelectBar = ({
         setNonOverFlowedValues(measuredVisibleTags)
       }
     }
+    setDisplayShadowCopy(false)
   }, [
-    selectedData.selectedValues.length,
+    displayShadowCopy,
     innerWidth,
     potentiallyNonOverflowedValues,
+    selectedData.selectedValues.length,
   ])
 
   useEffect(() => {
@@ -583,6 +599,7 @@ const SelectBar = ({
         {shouldDisplayValues ? (
           <DisplayValues
             disabled={disabled}
+            displayShadowCopy={displayShadowCopy}
             lastElementMaxWidth={lastElementMaxWidth}
             measureRef={measureRef}
             nonOverflowedValues={nonOverflowedValues}

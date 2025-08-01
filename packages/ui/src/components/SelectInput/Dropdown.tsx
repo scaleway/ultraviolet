@@ -107,6 +107,7 @@ const DropdownGroup = styled.button<{ 'data-selectgroup': boolean }>`
   padding-right: ${({ theme }) => theme.space[2]};
   padding-left: ${({ theme }) => theme.space[2]};
   height: ${({ theme }) => theme.space[4]};
+  display: flex;
   text-align: left;
   margin-bottom: ${({ theme }) => theme.space['0.25']};
 
