@@ -211,14 +211,6 @@ exports[`OfferList > should work loading 1`] = `
   width: 200px;
 }
 
-.emotion-24[aria-disabled='false']:hover+.edd5t9g2 td {
-  border-color: #8c40ef;
-}
-
-.emotion-24[aria-expanded='true']+.edd5t9g2 td {
-  border-color: #8c40ef;
-}
-
 .emotion-27 {
   display: table-cell;
   vertical-align: middle;
@@ -1567,14 +1559,6 @@ exports[`OfferList > should work with badge 1`] = `
 
 .emotion-28 td:nth-of-type(5) {
   width: 200px;
-}
-
-.emotion-28[aria-disabled='false']:hover+.edd5t9g2 td {
-  border-color: #8c40ef;
-}
-
-.emotion-28[aria-expanded='true']+.edd5t9g2 td {
-  border-color: #8c40ef;
 }
 
 .emotion-31 {
@@ -2989,14 +2973,6 @@ exports[`OfferList > should work with banner 1`] = `
   width: 200px;
 }
 
-.emotion-28[aria-disabled='false']:hover+.emotion-64 td {
-  border-color: #8c40ef;
-}
-
-.emotion-28[aria-expanded='true']+.emotion-64 td {
-  border-color: #8c40ef;
-}
-
 .emotion-28 td,
 .emotion-28 td:first-child {
   border-bottom-left-radius: 0;
@@ -3268,10 +3244,6 @@ exports[`OfferList > should work with banner 1`] = `
   cursor: auto;
   background: #f9f9fa;
   border-radius: 0 0 0.25rem 0.25rem;
-  -webkit-transform: translate3d(0, -1rem, 0);
-  -moz-transform: translate3d(0, -1rem, 0);
-  -ms-transform: translate3d(0, -1rem, 0);
-  transform: translate3d(0, -1rem, 0);
   position: relative;
 }
 
@@ -3280,12 +3252,6 @@ exports[`OfferList > should work with banner 1`] = `
 .emotion-63 td:last-child {
   -webkit-transition: box-shadow 200ms ease,border-color 200ms ease;
   transition: box-shadow 200ms ease,border-color 200ms ease;
-}
-
-.emotion-63 td {
-  border: 1px solid #d9dadd;
-  border-top: none;
-  border-radius: 0 0 0.25rem 0.25rem;
 }
 
 .emotion-66 {
@@ -3298,19 +3264,32 @@ exports[`OfferList > should work with banner 1`] = `
   height: fit-content;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
+  width: 100%;
+  padding: 0;
+}
+
+.emotion-69 {
+  font-size: 0.75rem;
+  font-family: Inter,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-transition: border-color 200ms ease;
+  transition: border-color 200ms ease;
+  margin-top: -1rem;
+  padding-block: 0.25rem;
+  padding-inline: 0.5rem;
+  border: 1px solid #d9dadd;
+  border-top: none;
+  border-radius: 0 0 0.25rem 0.25rem;
   background-color: #fff6e6;
-  width: 100%;
-  padding-block: 0.25rem;
-  padding-inline: 0.5rem;
-  border-bottom: 1px solid #d9dadd;
-}
-
-.emotion-66[aria-disabled="true"] {
-  background-color: #f3f3f4;
-}
-
-.emotion-68 {
   color: #7c5400;
+}
+
+.emotion-113 {
   font-size: 0.75rem;
   font-family: Inter,sans-serif;
   font-weight: 400;
@@ -3319,39 +3298,16 @@ exports[`OfferList > should work with banner 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-}
-
-.emotion-109 {
-  display: table-cell;
-  vertical-align: middle;
-  height: 3.75rem;
-  padding: 0 1rem;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-  background-color: #f9f9fa;
-  width: 100%;
+  -webkit-transition: border-color 200ms ease;
+  transition: border-color 200ms ease;
+  margin-top: -1rem;
   padding-block: 0.25rem;
   padding-inline: 0.5rem;
-  border-bottom: 1px solid #d9dadd;
-}
-
-.emotion-109[aria-disabled="true"] {
+  border: 1px solid #d9dadd;
+  border-top: none;
+  border-radius: 0 0 0.25rem 0.25rem;
   background-color: #f3f3f4;
-}
-
-.emotion-111 {
   color: #3f4250;
-  font-size: 0.75rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
 }
 
 <div
@@ -3514,14 +3470,13 @@ exports[`OfferList > should work with banner 1`] = `
           </tr>
           <tr
             class="emotion-63 emotion-64"
-            data-expandable-content="true"
           >
             <td
               class="emotion-65 emotion-66 emotion-32"
               colspan="5"
             >
               <p
-                class="emotion-68 emotion-69"
+                class="emotion-68 emotion-69 emotion-70"
               >
                 text
               </p>
@@ -3625,14 +3580,13 @@ exports[`OfferList > should work with banner 1`] = `
           </tr>
           <tr
             class="emotion-63 emotion-64"
-            data-expandable-content="true"
           >
             <td
-              class="emotion-65 emotion-109 emotion-32"
+              class="emotion-65 emotion-66 emotion-32"
               colspan="5"
             >
               <p
-                class="emotion-111 emotion-69"
+                class="emotion-68 emotion-113 emotion-70"
               >
                 text
               </p>
@@ -3736,14 +3690,13 @@ exports[`OfferList > should work with banner 1`] = `
           </tr>
           <tr
             class="emotion-63 emotion-64"
-            data-expandable-content="true"
           >
             <td
-              class="emotion-65 emotion-109 emotion-32"
+              class="emotion-65 emotion-66 emotion-32"
               colspan="5"
             >
               <p
-                class="emotion-111 emotion-69"
+                class="emotion-68 emotion-113 emotion-70"
               >
                 text
               </p>
@@ -3847,14 +3800,13 @@ exports[`OfferList > should work with banner 1`] = `
           </tr>
           <tr
             class="emotion-63 emotion-64"
-            data-expandable-content="true"
           >
             <td
-              class="emotion-65 emotion-109 emotion-32"
+              class="emotion-65 emotion-66 emotion-32"
               colspan="5"
             >
               <p
-                class="emotion-111 emotion-69"
+                class="emotion-68 emotion-113 emotion-70"
               >
                 text
               </p>
@@ -3958,14 +3910,13 @@ exports[`OfferList > should work with banner 1`] = `
           </tr>
           <tr
             class="emotion-63 emotion-64"
-            data-expandable-content="true"
           >
             <td
-              class="emotion-65 emotion-109 emotion-32"
+              class="emotion-65 emotion-66 emotion-32"
               colspan="5"
             >
               <p
-                class="emotion-111 emotion-69"
+                class="emotion-68 emotion-113 emotion-70"
               >
                 text
               </p>
@@ -4069,14 +4020,13 @@ exports[`OfferList > should work with banner 1`] = `
           </tr>
           <tr
             class="emotion-63 emotion-64"
-            data-expandable-content="true"
           >
             <td
-              class="emotion-65 emotion-109 emotion-32"
+              class="emotion-65 emotion-66 emotion-32"
               colspan="5"
             >
               <p
-                class="emotion-111 emotion-69"
+                class="emotion-68 emotion-113 emotion-70"
               >
                 text
               </p>
@@ -4180,14 +4130,13 @@ exports[`OfferList > should work with banner 1`] = `
           </tr>
           <tr
             class="emotion-63 emotion-64"
-            data-expandable-content="true"
           >
             <td
-              class="emotion-65 emotion-109 emotion-32"
+              class="emotion-65 emotion-66 emotion-32"
               colspan="5"
             >
               <p
-                class="emotion-111 emotion-69"
+                class="emotion-68 emotion-113 emotion-70"
               >
                 text
               </p>
@@ -4291,14 +4240,13 @@ exports[`OfferList > should work with banner 1`] = `
           </tr>
           <tr
             class="emotion-63 emotion-64"
-            data-expandable-content="true"
           >
             <td
-              class="emotion-65 emotion-109 emotion-32"
+              class="emotion-65 emotion-66 emotion-32"
               colspan="5"
             >
               <p
-                class="emotion-111 emotion-69"
+                class="emotion-68 emotion-113 emotion-70"
               >
                 text
               </p>
@@ -4510,14 +4458,6 @@ exports[`OfferList > should work with banner open 1`] = `
 
 .emotion-28 td:nth-of-type(5) {
   width: 200px;
-}
-
-.emotion-28[aria-disabled='false']:hover+.edd5t9g2 td {
-  border-color: #8c40ef;
-}
-
-.emotion-28[aria-expanded='true']+.edd5t9g2 td {
-  border-color: #8c40ef;
 }
 
 .emotion-28 td,
@@ -6128,14 +6068,6 @@ exports[`OfferList > should work with default props 1`] = `
   width: 200px;
 }
 
-.emotion-24[aria-disabled='false']:hover+.edd5t9g2 td {
-  border-color: #8c40ef;
-}
-
-.emotion-24[aria-expanded='true']+.edd5t9g2 td {
-  border-color: #8c40ef;
-}
-
 .emotion-27 {
   display: table-cell;
   vertical-align: middle;
@@ -7262,14 +7194,6 @@ exports[`OfferList > should work with expandable 1`] = `
   width: 200px;
 }
 
-.emotion-28[aria-disabled='false']:hover+.edd5t9g2 td {
-  border-color: #8c40ef;
-}
-
-.emotion-28[aria-expanded='true']+.edd5t9g2 td {
-  border-color: #8c40ef;
-}
-
 .emotion-28 {
   display: table-row;
   vertical-align: middle;
@@ -7368,14 +7292,6 @@ exports[`OfferList > should work with expandable 1`] = `
 
 .emotion-28 td:nth-of-type(5) {
   width: 200px;
-}
-
-.emotion-28[aria-disabled='false']:hover+.edd5t9g2 td {
-  border-color: #8c40ef;
-}
-
-.emotion-28[aria-expanded='true']+.edd5t9g2 td {
-  border-color: #8c40ef;
 }
 
 .emotion-31 {
@@ -9023,14 +8939,6 @@ exports[`OfferList > should work with selectable - checkbox 1`] = `
   width: 200px;
 }
 
-.emotion-24[aria-disabled='false']:hover+.edd5t9g2 td {
-  border-color: #8c40ef;
-}
-
-.emotion-24[aria-expanded='true']+.edd5t9g2 td {
-  border-color: #8c40ef;
-}
-
 .emotion-24 {
   display: table-row;
   vertical-align: middle;
@@ -9129,14 +9037,6 @@ exports[`OfferList > should work with selectable - checkbox 1`] = `
 
 .emotion-24 td:nth-of-type(4) {
   width: 200px;
-}
-
-.emotion-24[aria-disabled='false']:hover+.edd5t9g2 td {
-  border-color: #8c40ef;
-}
-
-.emotion-24[aria-expanded='true']+.edd5t9g2 td {
-  border-color: #8c40ef;
 }
 
 .emotion-27 {
@@ -9523,22 +9423,10 @@ exports[`OfferList > should work with selectable - checkbox 1`] = `
   border-color: #8c40ef;
 }
 
-.emotion-49[aria-disabled='false']:hover+.edd5t9g2 td {
-  border-color: #8c40ef;
-}
-
-.emotion-49[aria-disabled='false']+.edd5t9g2 td {
-  border-color: #8c40ef;
-}
-
 .emotion-49[aria-expanded='true'] td,
 .emotion-49[aria-expanded='true'] td:first-child,
 .emotion-49[aria-expanded='true'] td:last-child,
 .emotion-49[aria-expanded='true']+tr td {
-  border-color: #8c40ef;
-}
-
-.emotion-49[aria-expanded='true']+.edd5t9g2 td {
   border-color: #8c40ef;
 }
 
@@ -10488,14 +10376,6 @@ exports[`OfferList > should work with selectable - radio 1`] = `
   width: 200px;
 }
 
-.emotion-24[aria-disabled='false']:hover+.edd5t9g2 td {
-  border-color: #8c40ef;
-}
-
-.emotion-24[aria-expanded='true']+.edd5t9g2 td {
-  border-color: #8c40ef;
-}
-
 .emotion-24 {
   display: table-row;
   vertical-align: middle;
@@ -10594,14 +10474,6 @@ exports[`OfferList > should work with selectable - radio 1`] = `
 
 .emotion-24 td:nth-of-type(4) {
   width: 200px;
-}
-
-.emotion-24[aria-disabled='false']:hover+.edd5t9g2 td {
-  border-color: #8c40ef;
-}
-
-.emotion-24[aria-expanded='true']+.edd5t9g2 td {
-  border-color: #8c40ef;
 }
 
 .emotion-27 {
@@ -11072,22 +10944,10 @@ exports[`OfferList > should work with selectable - radio 1`] = `
   border-color: #8c40ef;
 }
 
-.emotion-53[aria-disabled='false']:hover+.edd5t9g2 td {
-  border-color: #8c40ef;
-}
-
-.emotion-53[aria-disabled='false']+.edd5t9g2 td {
-  border-color: #8c40ef;
-}
-
 .emotion-53[aria-expanded='true'] td,
 .emotion-53[aria-expanded='true'] td:first-child,
 .emotion-53[aria-expanded='true'] td:last-child,
 .emotion-53[aria-expanded='true']+tr td {
-  border-color: #8c40ef;
-}
-
-.emotion-53[aria-expanded='true']+.edd5t9g2 td {
   border-color: #8c40ef;
 }
 
@@ -11936,14 +11796,6 @@ exports[`OfferList > should work with sentiment 1`] = `
 
 .emotion-24 td:nth-of-type(4) {
   width: 200px;
-}
-
-.emotion-24[aria-disabled='false']:hover+.edd5t9g2 td {
-  border-color: #8c40ef;
-}
-
-.emotion-24[aria-expanded='true']+.edd5t9g2 td {
-  border-color: #8c40ef;
 }
 
 .emotion-27 {

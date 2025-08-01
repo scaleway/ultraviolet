@@ -11,9 +11,9 @@ import {
   Tooltip,
 } from '@ultraviolet/ui'
 import type { ComponentProps, ReactNode } from 'react'
-import { Children, useCallback, useMemo } from 'react'
+import { Children, useCallback, useMemo, useState } from 'react'
 import { useOfferListContext } from '../OfferListProvider'
-import { Banner, BannerWrapper } from './Banner'
+import { Banner } from './Banner'
 
 const StyledBadge = styled(BadgeUV)`
   position: absolute;
@@ -40,7 +40,6 @@ const NoPaddingCell = styled(List.Cell)`
 const StyledRow = styled(List.Row, {
   shouldForwardProp: prop => !['selected', 'hasBanner'].includes(prop),
 })<{ selected: boolean; hasBanner: boolean }>`
-
     ${({ theme, selected }) =>
       selected
         ? `td, td:first-child, td:last-child {
@@ -48,18 +47,7 @@ const StyledRow = styled(List.Row, {
     }`
         : null}
 
-    &[aria-disabled='false']:hover + ${BannerWrapper} td {
-      border-color: ${({ theme }) => theme.colors.primary.border};
-    }
-
-    &[aria-disabled='false'] + ${BannerWrapper} td {
-      ${({ selected, theme }) => (selected ? `border-color: ${theme.colors.primary.border}` : '')}
-    }
-
     &[aria-expanded='true'] {
-      & + ${BannerWrapper} td {
-        border-color: ${({ theme }) => theme.colors.primary.border};
-      }
       ${({ theme, selected }) =>
         selected
           ? `
@@ -135,6 +123,7 @@ export const Row = ({
   } = useOfferListContext()
   const { expandedRowIds, collapseRow, expandRow } = List.useListContext()
 
+  const [isHovered, setHovered] = useState(false)
   const childrenNumber =
     Children.count(children) + (selectable ? 1 : 0) + (expandable ? 1 : 0)
 
@@ -198,6 +187,8 @@ export const Row = ({
         hasBanner={!!banner}
         highlightAnimation={highlightAnimation}
         id={id}
+        onMouseEnter={() => setHovered(true)}
+        onMouseLeave={() => setHovered(false)}
         selected={
           selectable === 'radio'
             ? radioSelectedRow === offerName
@@ -297,6 +288,7 @@ export const Row = ({
           colSpan={childrenNumber}
           disabled={disabled}
           sentiment={banner.sentiment}
+          shouldHavePrimaryBorder={isHovered || isRowSelected}
           type="cell"
         >
           {banner.text}
