@@ -52,7 +52,9 @@ ${({ width, maxWidth, minWidth }) => `
   }
 
   &:first-of-type {
-    padding-left: ${({ theme }) => theme.space['2']};
+    &[data-checkbox="true"] {
+      padding-left: ${({ theme }) => theme.space['2']};
+    } 
   }
 `
 
@@ -74,6 +76,7 @@ type HeaderCellProps = {
   width?: string
   maxWidth?: string
   minWidth?: string
+  isCheckbox?: boolean
 }
 
 export const HeaderCell = ({
@@ -87,6 +90,7 @@ export const HeaderCell = ({
   width,
   maxWidth,
   minWidth,
+  isCheckbox,
 }: HeaderCellProps) => {
   let order: undefined | 'ascending' | 'descending'
   if (isOrdered && orderDirection === 'asc') {
@@ -104,6 +108,7 @@ export const HeaderCell = ({
       align={align}
       aria-sort={order}
       className={className}
+      data-checkbox={isCheckbox}
       maxWidth={maxWidth}
       minWidth={minWidth}
       onClick={handleOrder}

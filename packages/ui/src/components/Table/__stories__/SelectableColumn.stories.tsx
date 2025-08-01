@@ -159,7 +159,7 @@ SelectableColumn.parameters = {
   docs: {
     description: {
       story:
-        'This is an exemple which show usage of checkbox for each column. You can check the story code on the repository : https://github.com/scaleway/ultraviolet/blob/main/packages/ui/src/components/Table/__stories__/SelectableColumn.stories.tsx',
+        'This is an exemple which show usage of checkbox for each column. You can check the story code on the repository : [https://github.com/scaleway/ultraviolet/blob/main/packages/ui/src/components/Table/__stories__/SelectableColumn.stories.tsx](https://github.com/scaleway/ultraviolet/blob/main/packages/ui/src/components/Table/__stories__/SelectableColumn.stories.tsx)',
     },
   },
 }
