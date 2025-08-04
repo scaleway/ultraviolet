@@ -2338,7 +2338,7 @@ exports[`Tabs > renders correctly with Tabs with prop 1`] = `
   flex-direction: column;
   overflow-y: auto;
   overflow-x: hidden;
-  max-height: calc(30rem - 0.25rem);
+  max-height: calc(min(30rem, -24px) - 0.25rem);
   background-color: #ffffff;
   color: #3f4250;
   border-radius: 0.25rem;
@@ -2593,7 +2593,7 @@ exports[`Tabs > renders correctly with Tabs with prop 1`] = `
   flex-direction: column;
   overflow-y: auto;
   overflow-x: hidden;
-  max-height: calc(30rem - 0.25rem);
+  max-height: calc(min(30rem, -24px) - 0.25rem);
   background-color: #ffffff;
   color: #3f4250;
   border-radius: 0.25rem;
@@ -3541,7 +3541,7 @@ exports[`Tabs > renders correctly with Tabs with prop 1`] = `
   flex-direction: column;
   overflow-y: auto;
   overflow-x: hidden;
-  max-height: calc(30rem - 0.25rem);
+  max-height: calc(min(30rem, -24px) - 0.25rem);
   background-color: #ffffff;
   color: #3f4250;
   border-radius: 0.25rem;
