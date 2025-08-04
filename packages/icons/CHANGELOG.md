@@ -1,5 +1,12 @@
 # Change Log
 
+## 4.0.3
+
+### Patch Changes
+
+- [#5414](https://github.com/scaleway/ultraviolet/pull/5414) [`c38483f`](https://github.com/scaleway/ultraviolet/commit/c38483f88c2ddc09c85e825553adb25be33c8e2f) Thanks [@lisalupi](https://github.com/lisalupi)! - - New productIcon: `ManagedKafkaProductIcon`
+  - Fix script `icons:update` to correctly format generated files
+
 ## 4.0.2
 
 ### Patch Changes
