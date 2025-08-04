@@ -3,7 +3,7 @@ import { Template } from './Template.stories'
 export const CustomShortcut = Template.bind({})
 
 CustomShortcut.args = {
-  shortcut: ['Control', 'Shift', 'A'],
+  shortcut: ['Shift', 'A'],
 }
 
 CustomShortcut.parameters = {
