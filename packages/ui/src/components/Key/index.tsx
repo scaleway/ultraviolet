@@ -38,6 +38,7 @@ const KeyContainer = styled.kbd`
   &[data-disabled='true'] {
     background-color: ${({ theme }) => theme.colors.neutral.backgroundWeakDisabled};
     border-color: ${({ theme }) => theme.colors.neutral.borderWeakDisabled};
+    cursor: not-allowed;
   }
 
   /** Primary style */
@@ -56,6 +57,7 @@ const KeyContainer = styled.kbd`
     &[data-disabled='true'] {
       background: ${({ theme }) => theme.colors.primary.backgroundDisabled};
       border-color: ${({ theme }) => theme.colors.neutral.borderDisabled};
+      cursor: not-allowed;
     }
   }
 
