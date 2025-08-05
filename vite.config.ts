@@ -105,7 +105,7 @@ export const defaultConfig: ViteUserConfig = {
       optimizer: {
         web: {
           enabled: true,
-          include: ['react-select', '@nivo/*'],
+          include: ['@nivo/*'],
         },
       },
     },
