@@ -3,7 +3,12 @@ import { defineConfig, mergeConfig } from 'vite'
 import { defaultConfig } from '../../vite.config'
 
 export default mergeConfig(defineConfig(defaultConfig), {
-  plugins: [vanillaExtractPlugin({ unstable_mode: 'transform' })], // Enable unstable mode for better compatibility with Vitest
+  plugins: [
+    vanillaExtractPlugin({
+      identifiers: ({ hash }) => `uv_${hash}`,
+      unstable_mode: 'transform',
+    }),
+  ], // Enable unstable mode for better compatibility with Vitest
   test: {
     setupFiles: ['./vitest.setup.ts'],
   },
