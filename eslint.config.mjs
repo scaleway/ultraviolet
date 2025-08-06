@@ -109,6 +109,7 @@ export default [
       '**/__stories__/**/*.{ts,tsx}',
       '**/__tests__/**/*.{ts,tsx}',
       '**/vite.config.*',
+      '**/vitest.config.*',
       'utils/test/**/*.{ts,tsx}',
       '**/vitest.setup.ts',
     ],
@@ -136,6 +137,7 @@ export default [
       '**/__stories__/**/*.{ts,tsx}',
       '**/__tests__/**/*.{ts,tsx}',
       '**/vite.config.*',
+      '**/vitest.config.*',
       'utils/test/**/*.{ts,tsx}',
       '**/vitest.setup.ts',
       '.storybook/**',
@@ -160,7 +162,8 @@ export default [
     },
   })),
   {
-    files: ['**/*.d.ts', '**/vite.config.ts'],
+    files: ['**/*.d.ts', '**/vite.config.ts', '**/vitest.config.*',
+],
 
     rules: {
       'import/no-extraneous-dependencies': 'off',
