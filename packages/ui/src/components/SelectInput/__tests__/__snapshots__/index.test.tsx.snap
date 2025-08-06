@@ -3240,44 +3240,7 @@ exports[`SelectInput > renders correctly multiselect 1`] = `
   max-width: 14.5rem;
 }
 
-.emotion-17 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 2rem;
-  padding: 0 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #3f4250;
+.emotion-16 {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -3287,26 +3250,7 @@ exports[`SelectInput > renders correctly multiselect 1`] = `
   padding: 0.125rem;
 }
 
-.emotion-17:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-17:active {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.emotion-17 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-17:hover,
-.emotion-17:active {
-  background: #e9eaeb;
-  color: #222638;
-}
-
-.emotion-19 {
+.emotion-18 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -3315,12 +3259,12 @@ exports[`SelectInput > renders correctly multiselect 1`] = `
   min-height: 1rem;
 }
 
-.emotion-19 .fillStroke {
+.emotion-18 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.emotion-21 {
+.emotion-20 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3348,7 +3292,7 @@ exports[`SelectInput > renders correctly multiselect 1`] = `
   display: flex;
 }
 
-.emotion-23 {
+.emotion-22 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1rem;
@@ -3357,12 +3301,12 @@ exports[`SelectInput > renders correctly multiselect 1`] = `
   min-height: 1rem;
 }
 
-.emotion-23 .fillStroke {
+.emotion-22 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
 
-.emotion-26 {
+.emotion-25 {
   background: #151a2d;
   color: #ffffff;
   border-radius: 0.25rem;
@@ -3390,12 +3334,12 @@ exports[`SelectInput > renders correctly multiselect 1`] = `
   margin-bottom: 5rem;
 }
 
-.emotion-26[data-animated="true"] {
+.emotion-25[data-animated="true"] {
   -webkit-animation: 0ms animation-0 forwards;
   animation: 0ms animation-0 forwards;
 }
 
-.emotion-26[data-has-arrow="true"]::after {
+.emotion-25[data-has-arrow="true"]::after {
   content: " ";
   position: absolute;
   top: -5px;
@@ -3411,11 +3355,11 @@ exports[`SelectInput > renders correctly multiselect 1`] = `
   pointer-events: none;
 }
 
-.emotion-26[data-visible-in-dom="false"] {
+.emotion-25[data-visible-in-dom="false"] {
   display: none;
 }
 
-.emotion-28 {
+.emotion-27 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3437,7 +3381,7 @@ exports[`SelectInput > renders correctly multiselect 1`] = `
   flex-direction: column;
 }
 
-.emotion-31 {
+.emotion-30 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3464,7 +3408,7 @@ exports[`SelectInput > renders correctly multiselect 1`] = `
   padding-right: 1rem;
 }
 
-.emotion-33 {
+.emotion-32 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3480,69 +3424,69 @@ exports[`SelectInput > renders correctly multiselect 1`] = `
   border: 1px solid #8c40ef;
 }
 
-.emotion-33>.emotion-40 {
+.emotion-32>.emotion-39 {
   color: #3f4250;
 }
 
-.emotion-33>.emotion-40::-webkit-input-placeholder {
+.emotion-32>.emotion-39::-webkit-input-placeholder {
   color: #727683;
 }
 
-.emotion-33>.emotion-40::-moz-placeholder {
+.emotion-32>.emotion-39::-moz-placeholder {
   color: #727683;
 }
 
-.emotion-33>.emotion-40:-ms-input-placeholder {
+.emotion-32>.emotion-39:-ms-input-placeholder {
   color: #727683;
 }
 
-.emotion-33>.emotion-40::placeholder {
+.emotion-32>.emotion-39::placeholder {
   color: #727683;
 }
 
-.emotion-33[data-success='true'] {
+.emotion-32[data-success='true'] {
   border-color: #22674e;
 }
 
-.emotion-33[data-error='true'] {
+.emotion-32[data-error='true'] {
   border-color: #b3144d;
 }
 
-.emotion-33[data-readonly='true'] {
+.emotion-32[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
 }
 
-.emotion-33[data-disabled='true'] {
+.emotion-32[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
 }
 
-.emotion-33[data-disabled='true']>.emotion-40 {
+.emotion-32[data-disabled='true']>.emotion-39 {
   color: #b5b7bd;
 }
 
-.emotion-33[data-disabled='true']>.emotion-40::-webkit-input-placeholder {
+.emotion-32[data-disabled='true']>.emotion-39::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-33[data-disabled='true']>.emotion-40::-moz-placeholder {
+.emotion-32[data-disabled='true']>.emotion-39::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-33[data-disabled='true']>.emotion-40:-ms-input-placeholder {
+.emotion-32[data-disabled='true']>.emotion-39:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-33[data-disabled='true']>.emotion-40::placeholder {
+.emotion-32[data-disabled='true']>.emotion-39::placeholder {
   color: #b5b7bd;
 }
 
-.emotion-33:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-32:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-35 {
+.emotion-34 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3567,11 +3511,11 @@ exports[`SelectInput > renders correctly multiselect 1`] = `
   border-color: inherit;
 }
 
-.emotion-35[data-size="small"] {
+.emotion-34[data-size="small"] {
   padding: 0.5rem;
 }
 
-.emotion-39 {
+.emotion-38 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -3584,15 +3528,15 @@ exports[`SelectInput > renders correctly multiselect 1`] = `
   font-size: 0.875rem;
 }
 
-.emotion-39[data-size='large'] {
+.emotion-38[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-39[data-size='small'] {
+.emotion-38[data-size='small'] {
   padding-left: 0.5rem;
 }
 
-.emotion-41 {
+.emotion-40 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3619,11 +3563,11 @@ exports[`SelectInput > renders correctly multiselect 1`] = `
   padding-top: 0.25rem;
 }
 
-.emotion-41[data-grouped="true"] {
+.emotion-40[data-grouped="true"] {
   padding-top: 0rem;
 }
 
-.emotion-43 {
+.emotion-42 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3646,13 +3590,13 @@ exports[`SelectInput > renders correctly multiselect 1`] = `
   gap: 0.125rem;
 }
 
-.emotion-45 {
+.emotion-44 {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
 }
 
-.emotion-47 {
+.emotion-46 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3682,21 +3626,21 @@ exports[`SelectInput > renders correctly multiselect 1`] = `
   margin-bottom: 0.125rem;
 }
 
-.emotion-47:focus {
+.emotion-46:focus {
   background-color: #f9f9fa;
   outline: none;
 }
 
-.emotion-47[data-selectgroup='true'] {
+.emotion-46[data-selectgroup='true'] {
   padding-left: 1rem;
   border-left: 0.25rem solid #f9f9fa;
 }
 
-.emotion-47[data-selectgroup='true']:focus {
+.emotion-46[data-selectgroup='true']:focus {
   background-color: #e9eaeb;
 }
 
-.emotion-49 {
+.emotion-48 {
   color: #3f4250;
   font-size: 0.75rem;
   font-family: Inter,sans-serif;
@@ -3709,7 +3653,7 @@ exports[`SelectInput > renders correctly multiselect 1`] = `
   text-align: left;
 }
 
-.emotion-53 {
+.emotion-52 {
   text-align: left;
   border: none;
   background-color: #ffffff;
@@ -3721,31 +3665,31 @@ exports[`SelectInput > renders correctly multiselect 1`] = `
   border: 1px transparent solid;
 }
 
-.emotion-53:hover,
-.emotion-53:focus {
+.emotion-52:hover,
+.emotion-52:focus {
   background-color: #f1eefc;
   color: #641cb3;
   cursor: pointer;
 }
 
-.emotion-53[aria-selected='true'] {
+.emotion-52[aria-selected='true'] {
   background-color: #f1eefc;
 }
 
-.emotion-53[aria-disabled="true"] {
+.emotion-52[aria-disabled="true"] {
   background-color: #f3f3f4;
   color: #b5b7bd;
 }
 
-.emotion-53[aria-disabled="true"]:hover,
-.emotion-53 [aria-disabled="true"]:focus {
+.emotion-52[aria-disabled="true"]:hover,
+.emotion-52 [aria-disabled="true"]:focus {
   background-color: #f3f3f4;
   color: #b5b7bd;
   cursor: not-allowed;
   outline: none;
 }
 
-.emotion-56 {
+.emotion-55 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -3766,65 +3710,65 @@ exports[`SelectInput > renders correctly multiselect 1`] = `
   pointer-events: none;
 }
 
-.emotion-56 .emotion-69 {
+.emotion-55 .emotion-68 {
   cursor: pointer;
 }
 
-.emotion-56[aria-disabled='true'] {
+.emotion-55[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.emotion-56[aria-disabled='true'] .emotion-69 {
+.emotion-55[aria-disabled='true'] .emotion-68 {
   cursor: not-allowed;
 }
 
-.emotion-56[aria-disabled='true'] .emotion-61 {
+.emotion-55[aria-disabled='true'] .emotion-60 {
   fill: #e9eaeb;
 }
 
-.emotion-56[aria-disabled='true'] .emotion-61 .emotion-63 {
+.emotion-55[aria-disabled='true'] .emotion-60 .emotion-62 {
   stroke: #d9dadd;
   fill: #f3f3f4;
 }
 
-.emotion-56[aria-disabled='true'] .emotion-59[aria-invalid="true"]:checked+.emotion-61 {
+.emotion-55[aria-disabled='true'] .emotion-58[aria-invalid="true"]:checked+.emotion-60 {
   fill: #ffd3e3;
 }
 
-.emotion-56[aria-disabled='true'] .emotion-59[aria-invalid="true"]:checked+.emotion-61 .emotion-63 {
+.emotion-55[aria-disabled='true'] .emotion-58[aria-invalid="true"]:checked+.emotion-60 .emotion-62 {
   stroke: #ffd3e3;
   fill: #ffd3e3;
 }
 
-.emotion-56[aria-disabled='true'] .emotion-59[aria-invalid="true"]+.emotion-61 {
+.emotion-55[aria-disabled='true'] .emotion-58[aria-invalid="true"]+.emotion-60 {
   fill: #ffebf2;
 }
 
-.emotion-56[aria-disabled='true'] .emotion-59[aria-invalid="true"]+.emotion-61 .emotion-63 {
+.emotion-55[aria-disabled='true'] .emotion-58[aria-invalid="true"]+.emotion-60 .emotion-62 {
   stroke: #ffbbd3;
   fill: #ffebf2;
 }
 
-.emotion-56[aria-disabled='true'] .emotion-59:checked+.emotion-61 {
+.emotion-55[aria-disabled='true'] .emotion-58:checked+.emotion-60 {
   fill: #e5dbfd;
 }
 
-.emotion-56[aria-disabled='true'] .emotion-59:checked+.emotion-61 .emotion-63 {
+.emotion-55[aria-disabled='true'] .emotion-58:checked+.emotion-60 .emotion-62 {
   stroke: #d8c5fc;
   fill: #d8c5fc;
 }
 
-.emotion-56[aria-disabled='true'] .emotion-59[aria-checked="mixed"]+.emotion-61 {
+.emotion-55[aria-disabled='true'] .emotion-58[aria-checked="mixed"]+.emotion-60 {
   fill: #e5dbfd;
 }
 
-.emotion-56[aria-disabled='true'] .emotion-59[aria-checked="mixed"]+.emotion-61 .emotion-63 {
+.emotion-55[aria-disabled='true'] .emotion-58[aria-checked="mixed"]+.emotion-60 .emotion-62 {
   stroke: #e5dbfd;
   fill: #e5dbfd;
 }
 
-.emotion-56 .emotion-59:checked+.emotion-61 path {
+.emotion-55 .emotion-58:checked+.emotion-60 path {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -3838,60 +3782,60 @@ exports[`SelectInput > renders correctly multiselect 1`] = `
   transform: translate(2px, 2px);
 }
 
-.emotion-56 .emotion-59:checked+.emotion-61 .emotion-63 {
+.emotion-55 .emotion-58:checked+.emotion-60 .emotion-62 {
   fill: #8c40ef;
   stroke: #8c40ef;
 }
 
-.emotion-56 .emotion-59[aria-invalid="true"]:checked+.emotion-61 .emotion-63 {
+.emotion-55 .emotion-58[aria-invalid="true"]:checked+.emotion-60 .emotion-62 {
   fill: #e51963;
   stroke: #e51963;
 }
 
-.emotion-56 .emotion-59[aria-checked="mixed"]+.emotion-61 .eqr7bqq5 {
+.emotion-55 .emotion-58[aria-checked="mixed"]+.emotion-60 .eqr7bqq5 {
   fill: #ffffff;
 }
 
-.emotion-56 .emotion-59[aria-checked="mixed"]+.emotion-61 .emotion-63 {
+.emotion-55 .emotion-58[aria-checked="mixed"]+.emotion-60 .emotion-62 {
   fill: #8c40ef;
   stroke: #8c40ef;
 }
 
-.emotion-56:hover[aria-disabled='false'] .emotion-59[aria-invalid='false'][aria-checked='false']+.emotion-61 .emotion-63 {
+.emotion-55:hover[aria-disabled='false'] .emotion-58[aria-invalid='false'][aria-checked='false']+.emotion-60 .emotion-62 {
   stroke: #792dd4;
   fill: #e5dbfd;
 }
 
-.emotion-56:hover[aria-disabled='false'] .emotion-59[aria-invalid='false'][aria-checked='true']+.emotion-61 .emotion-63 {
+.emotion-55:hover[aria-disabled='false'] .emotion-58[aria-invalid='false'][aria-checked='true']+.emotion-60 .emotion-62 {
   stroke: #792dd4;
   fill: #792dd4;
 }
 
-.emotion-56:hover[aria-disabled='false'] .emotion-59[aria-invalid='false'][aria-checked='mixed']+.emotion-61 .emotion-63 {
+.emotion-55:hover[aria-disabled='false'] .emotion-58[aria-invalid='false'][aria-checked='mixed']+.emotion-60 .emotion-62 {
   stroke: #792dd4;
   fill: #792dd4;
 }
 
-.emotion-56:hover[aria-disabled='false'] .emotion-59[aria-invalid='true'][aria-checked='false']+.emotion-61 .emotion-63 {
+.emotion-55:hover[aria-disabled='false'] .emotion-58[aria-invalid='true'][aria-checked='false']+.emotion-60 .emotion-62 {
   stroke: #92103f;
   fill: #ffd3e3;
 }
 
-.emotion-56:hover[aria-disabled='false'] .emotion-59[aria-invalid='true'][aria-checked='true']+.emotion-61 .emotion-63 {
+.emotion-55:hover[aria-disabled='false'] .emotion-58[aria-invalid='true'][aria-checked='true']+.emotion-60 .emotion-62 {
   stroke: #d6175c;
   fill: #d6175c;
 }
 
-.emotion-56 .emotion-59[aria-invalid="true"]+.emotion-61 {
+.emotion-55 .emotion-58[aria-invalid="true"]+.emotion-60 {
   fill: #e51963;
 }
 
-.emotion-56 .emotion-59[aria-invalid="true"]+.emotion-61 .emotion-63 {
+.emotion-55 .emotion-58[aria-invalid="true"]+.emotion-60 .emotion-62 {
   stroke: #e51963;
   fill: #ffebf2;
 }
 
-.emotion-58 {
+.emotion-57 {
   position: absolute;
   white-space: nowrap;
   height: 1.5rem;
@@ -3900,57 +3844,57 @@ exports[`SelectInput > renders correctly multiselect 1`] = `
   border-width: 0;
 }
 
-.emotion-58:not(:disabled) {
+.emotion-57:not(:disabled) {
   cursor: pointer;
 }
 
-.emotion-58:disabled {
+.emotion-57:disabled {
   cursor: not-allowed;
 }
 
-.emotion-58:not(:disabled):checked+.emotion-61,
-.emotion-58:not(:disabled)[aria-checked='mixed']+.emotion-61 {
+.emotion-57:not(:disabled):checked+.emotion-60,
+.emotion-57:not(:disabled)[aria-checked='mixed']+.emotion-60 {
   fill: #8c40ef;
 }
 
-.emotion-58:not(:disabled):checked+.emotion-61 .emotion-63,
-.emotion-58:not(:disabled)[aria-checked='mixed']+.emotion-61 .emotion-63 {
+.emotion-57:not(:disabled):checked+.emotion-60 .emotion-62,
+.emotion-57:not(:disabled)[aria-checked='mixed']+.emotion-60 .emotion-62 {
   stroke: #8c40ef;
 }
 
-.emotion-58:not(:disabled)[aria-invalid='true']+.emotion-61,
-.emotion-58:not(:disabled)[aria-invalid='mixed']+.emotion-61 {
+.emotion-57:not(:disabled)[aria-invalid='true']+.emotion-60,
+.emotion-57:not(:disabled)[aria-invalid='mixed']+.emotion-60 {
   fill: #ffebf2;
 }
 
-.emotion-58:not(:disabled)[aria-invalid='true']+.emotion-61 .emotion-63,
-.emotion-58:not(:disabled)[aria-invalid='mixed']+.emotion-61 .emotion-63 {
+.emotion-57:not(:disabled)[aria-invalid='true']+.emotion-60 .emotion-62,
+.emotion-57:not(:disabled)[aria-invalid='mixed']+.emotion-60 .emotion-62 {
   stroke: #b3144d;
 }
 
-.emotion-58:focus+.emotion-61 {
+.emotion-57:focus+.emotion-60 {
   background-color: #f1eefc;
   fill: #ffebf2;
   outline: 1px solid 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-58:focus+.emotion-61 .emotion-63 {
+.emotion-57:focus+.emotion-60 .emotion-62 {
   stroke: #792dd4;
   fill: #e5dbfd;
 }
 
-.emotion-58[aria-invalid='true']:focus+.emotion-61 {
+.emotion-57[aria-invalid='true']:focus+.emotion-60 {
   background-color: #ffebf2;
   fill: #ffebf2;
   outline: 1px solid 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-58[aria-invalid='true']:focus+.emotion-61 .emotion-63 {
+.emotion-57[aria-invalid='true']:focus+.emotion-60 .emotion-62 {
   stroke: #92103f;
   fill: #ffd3e3;
 }
 
-.emotion-60 {
+.emotion-59 {
   border-radius: 0.25rem;
   height: 1.5rem;
   width: 1.5rem;
@@ -3958,7 +3902,7 @@ exports[`SelectInput > renders correctly multiselect 1`] = `
   min-height: 1.5rem;
 }
 
-.emotion-60 path {
+.emotion-59 path {
   fill: #ffffff;
   -webkit-transform: translate(2px, 2px);
   -moz-transform: translate(2px, 2px);
@@ -3970,12 +3914,12 @@ exports[`SelectInput > renders correctly multiselect 1`] = `
   transform: scale(0);
 }
 
-.emotion-62 {
+.emotion-61 {
   fill: #ffffff;
   stroke: #d9dadd;
 }
 
-.emotion-64 {
+.emotion-63 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4001,7 +3945,7 @@ exports[`SelectInput > renders correctly multiselect 1`] = `
   gap: 0.25rem;
 }
 
-.emotion-66 {
+.emotion-65 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4027,12 +3971,12 @@ exports[`SelectInput > renders correctly multiselect 1`] = `
   gap: 0.25rem;
 }
 
-.emotion-68 {
+.emotion-67 {
   width: 100%;
   cursor: pointer;
 }
 
-.emotion-72 {
+.emotion-71 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4055,7 +3999,7 @@ exports[`SelectInput > renders correctly multiselect 1`] = `
   overflow: hidden;
 }
 
-.emotion-75 {
+.emotion-74 {
   font-size: 1rem;
   font-family: Inter,sans-serif;
   font-weight: 400;
@@ -4077,7 +4021,7 @@ exports[`SelectInput > renders correctly multiselect 1`] = `
   max-width: 100%;
 }
 
-.emotion-77 {
+.emotion-76 {
   color: #727683;
   font-size: 0.875rem;
   font-family: Inter,sans-serif;
@@ -4090,7 +4034,7 @@ exports[`SelectInput > renders correctly multiselect 1`] = `
   text-align: left;
 }
 
-.emotion-151 {
+.emotion-150 {
   font-size: 1rem;
   font-family: Inter,sans-serif;
   font-weight: 400;
@@ -4101,7 +4045,7 @@ exports[`SelectInput > renders correctly multiselect 1`] = `
   text-decoration: none;
 }
 
-.emotion-154 {
+.emotion-153 {
   font-size: 0.75rem;
   font-family: Inter,sans-serif;
   font-weight: 400;
@@ -4181,12 +4125,12 @@ exports[`SelectInput > renders correctly multiselect 1`] = `
                 </div>
                 <button
                   aria-label="Close tag"
-                  class="emotion-16 emotion-17 emotion-18"
+                  class="emotion-16 emotion-17 styles__e1wcoe0 styles_size_small__e1wcoe3 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   data-testid="close-tag"
                   type="button"
                 >
                   <svg
-                    class="emotion-19 emotion-20"
+                    class="emotion-18 emotion-19"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -4197,11 +4141,11 @@ exports[`SelectInput > renders correctly multiselect 1`] = `
               </span>
             </div>
             <div
-              class="emotion-21 emotion-22"
+              class="emotion-20 emotion-21"
             >
               <svg
                 aria-label="show dropdown"
-                class="emotion-23 emotion-20"
+                class="emotion-22 emotion-19"
                 viewBox="0 0 16 16"
               >
                 <path
@@ -4214,7 +4158,7 @@ exports[`SelectInput > renders correctly multiselect 1`] = `
           </div>
         </div>
         <div
-          class="emotion-25 emotion-26 emotion-27"
+          class="emotion-24 emotion-25 emotion-26"
           data-animated="false"
           data-has-arrow="false"
           id="«r4q»"
@@ -4222,25 +4166,25 @@ exports[`SelectInput > renders correctly multiselect 1`] = `
           style="opacity: 1;"
         >
           <div
-            class="emotion-28 emotion-5"
+            class="emotion-27 emotion-5"
           >
             <div
-              class="emotion-30 emotion-31 emotion-5"
+              class="emotion-29 emotion-30 emotion-5"
             >
               <div>
                 <div
-                  class="emotion-33 emotion-34"
+                  class="emotion-32 emotion-33"
                   data-disabled="false"
                   data-error="false"
                   data-readonly="false"
                   data-success="false"
                 >
                   <div
-                    class="emotion-35 emotion-36"
+                    class="emotion-34 emotion-35"
                     data-size="medium"
                   >
                     <svg
-                      class="emotion-23 emotion-20"
+                      class="emotion-22 emotion-19"
                       viewBox="0 0 16 16"
                     >
                       <path
@@ -4253,7 +4197,7 @@ exports[`SelectInput > renders correctly multiselect 1`] = `
                   <input
                     aria-invalid="false"
                     aria-label="search-bar"
-                    class="emotion-39 emotion-40"
+                    class="emotion-38 emotion-39"
                     data-size="medium"
                     data-testid="search-bar"
                     id="«r51»"
@@ -4265,19 +4209,19 @@ exports[`SelectInput > renders correctly multiselect 1`] = `
               </div>
             </div>
             <div
-              class="emotion-41 emotion-42"
+              class="emotion-40 emotion-41"
               data-grouped="true"
               id="select-dropdown"
               role="listbox"
             >
               <div
-                class="emotion-43 emotion-5"
+                class="emotion-42 emotion-5"
               >
                 <div
-                  class="emotion-45 emotion-46"
+                  class="emotion-44 emotion-45"
                 >
                   <button
-                    class="emotion-47 emotion-48"
+                    class="emotion-46 emotion-47"
                     data-selectgroup="false"
                     data-testid="group-0"
                     role="group"
@@ -4285,21 +4229,21 @@ exports[`SelectInput > renders correctly multiselect 1`] = `
                     type="button"
                   >
                     <span
-                      class="emotion-49 emotion-15"
+                      class="emotion-48 emotion-15"
                     >
                       JOVIAN PLANETS
                     </span>
                   </button>
                 </div>
                 <div
-                  class="emotion-43 emotion-5"
+                  class="emotion-42 emotion-5"
                   id="items"
                 >
                   <div
                     aria-disabled="false"
                     aria-label="jupiter"
                     aria-selected="false"
-                    class="emotion-53 emotion-54"
+                    class="emotion-52 emotion-53"
                     data-testid="option-jupiter"
                     id="option-0"
                     role="option"
@@ -4307,27 +4251,27 @@ exports[`SelectInput > renders correctly multiselect 1`] = `
                   >
                     <div
                       aria-disabled="false"
-                      class="emotion-55 emotion-56 emotion-57"
+                      class="emotion-54 emotion-55 emotion-56"
                       data-checked="false"
                       data-error="false"
                     >
                       <input
                         aria-checked="false"
                         aria-invalid="false"
-                        class="emotion-58 emotion-59"
+                        class="emotion-57 emotion-58"
                         id="«r54»"
                         tabindex="-1"
                         type="checkbox"
                         value="jupiter"
                       />
                       <svg
-                        class="emotion-60 emotion-61"
+                        class="emotion-59 emotion-60"
                         fill="none"
                         viewBox="0 0 24 24"
                       >
                         <g>
                           <rect
-                            class="emotion-62 emotion-63"
+                            class="emotion-61 emotion-62"
                             height="16"
                             rx="0.125rem"
                             stroke-width="2"
@@ -4348,13 +4292,13 @@ exports[`SelectInput > renders correctly multiselect 1`] = `
                         </g>
                       </svg>
                       <div
-                        class="emotion-64 emotion-5"
+                        class="emotion-63 emotion-5"
                       >
                         <div
-                          class="emotion-66 emotion-5"
+                          class="emotion-65 emotion-5"
                         >
                           <label
-                            class="emotion-68 emotion-69"
+                            class="emotion-67 emotion-68"
                             for="«r54»"
                           >
                             <div
@@ -4362,16 +4306,16 @@ exports[`SelectInput > renders correctly multiselect 1`] = `
                               data-testid="option-stack-jupiter"
                             >
                               <div
-                                class="emotion-72 emotion-73"
+                                class="emotion-71 emotion-72"
                               >
                                 <span
-                                  class="emotion-74 emotion-75 emotion-15"
+                                  class="emotion-73 emotion-74 emotion-15"
                                 >
                                   Jupiter
                                 </span>
                               </div>
                               <span
-                                class="emotion-77 emotion-15"
+                                class="emotion-76 emotion-15"
                               >
                                 Jupiter is the fifth planet from the Sun and the largest in the Solar System. It is a gas giant with a mass more than two and a half times that of all the other planets in the Solar System combined, and slightly less than one one-thousandth the mass of the Sun.
                               </span>
@@ -4385,7 +4329,7 @@ exports[`SelectInput > renders correctly multiselect 1`] = `
                     aria-disabled="false"
                     aria-label="saturn"
                     aria-selected="false"
-                    class="emotion-53 emotion-54"
+                    class="emotion-52 emotion-53"
                     data-testid="option-saturn"
                     id="option-1"
                     role="option"
@@ -4393,27 +4337,27 @@ exports[`SelectInput > renders correctly multiselect 1`] = `
                   >
                     <div
                       aria-disabled="false"
-                      class="emotion-55 emotion-56 emotion-57"
+                      class="emotion-54 emotion-55 emotion-56"
                       data-checked="false"
                       data-error="false"
                     >
                       <input
                         aria-checked="false"
                         aria-invalid="false"
-                        class="emotion-58 emotion-59"
+                        class="emotion-57 emotion-58"
                         id="«r59»"
                         tabindex="-1"
                         type="checkbox"
                         value="saturn"
                       />
                       <svg
-                        class="emotion-60 emotion-61"
+                        class="emotion-59 emotion-60"
                         fill="none"
                         viewBox="0 0 24 24"
                       >
                         <g>
                           <rect
-                            class="emotion-62 emotion-63"
+                            class="emotion-61 emotion-62"
                             height="16"
                             rx="0.125rem"
                             stroke-width="2"
@@ -4434,13 +4378,13 @@ exports[`SelectInput > renders correctly multiselect 1`] = `
                         </g>
                       </svg>
                       <div
-                        class="emotion-64 emotion-5"
+                        class="emotion-63 emotion-5"
                       >
                         <div
-                          class="emotion-66 emotion-5"
+                          class="emotion-65 emotion-5"
                         >
                           <label
-                            class="emotion-68 emotion-69"
+                            class="emotion-67 emotion-68"
                             for="«r59»"
                           >
                             <div
@@ -4448,10 +4392,10 @@ exports[`SelectInput > renders correctly multiselect 1`] = `
                               data-testid="option-stack-saturn"
                             >
                               <div
-                                class="emotion-72 emotion-73"
+                                class="emotion-71 emotion-72"
                               >
                                 <span
-                                  class="emotion-74 emotion-75 emotion-15"
+                                  class="emotion-73 emotion-74 emotion-15"
                                 >
                                   Saturn
                                 </span>
@@ -4466,7 +4410,7 @@ exports[`SelectInput > renders correctly multiselect 1`] = `
                     aria-disabled="false"
                     aria-label="uranus"
                     aria-selected="false"
-                    class="emotion-53 emotion-54"
+                    class="emotion-52 emotion-53"
                     data-testid="option-uranus"
                     id="option-2"
                     role="option"
@@ -4474,27 +4418,27 @@ exports[`SelectInput > renders correctly multiselect 1`] = `
                   >
                     <div
                       aria-disabled="false"
-                      class="emotion-55 emotion-56 emotion-57"
+                      class="emotion-54 emotion-55 emotion-56"
                       data-checked="false"
                       data-error="false"
                     >
                       <input
                         aria-checked="false"
                         aria-invalid="false"
-                        class="emotion-58 emotion-59"
+                        class="emotion-57 emotion-58"
                         id="«r5d»"
                         tabindex="-1"
                         type="checkbox"
                         value="uranus"
                       />
                       <svg
-                        class="emotion-60 emotion-61"
+                        class="emotion-59 emotion-60"
                         fill="none"
                         viewBox="0 0 24 24"
                       >
                         <g>
                           <rect
-                            class="emotion-62 emotion-63"
+                            class="emotion-61 emotion-62"
                             height="16"
                             rx="0.125rem"
                             stroke-width="2"
@@ -4515,13 +4459,13 @@ exports[`SelectInput > renders correctly multiselect 1`] = `
                         </g>
                       </svg>
                       <div
-                        class="emotion-64 emotion-5"
+                        class="emotion-63 emotion-5"
                       >
                         <div
-                          class="emotion-66 emotion-5"
+                          class="emotion-65 emotion-5"
                         >
                           <label
-                            class="emotion-68 emotion-69"
+                            class="emotion-67 emotion-68"
                             for="«r5d»"
                           >
                             <div
@@ -4529,10 +4473,10 @@ exports[`SelectInput > renders correctly multiselect 1`] = `
                               data-testid="option-stack-uranus"
                             >
                               <div
-                                class="emotion-72 emotion-73"
+                                class="emotion-71 emotion-72"
                               >
                                 <span
-                                  class="emotion-74 emotion-75 emotion-15"
+                                  class="emotion-73 emotion-74 emotion-15"
                                 >
                                   Uranus
                                 </span>
@@ -4547,7 +4491,7 @@ exports[`SelectInput > renders correctly multiselect 1`] = `
                     aria-disabled="false"
                     aria-label="neptune"
                     aria-selected="false"
-                    class="emotion-53 emotion-54"
+                    class="emotion-52 emotion-53"
                     data-testid="option-neptune"
                     id="option-3"
                     role="option"
@@ -4555,27 +4499,27 @@ exports[`SelectInput > renders correctly multiselect 1`] = `
                   >
                     <div
                       aria-disabled="false"
-                      class="emotion-55 emotion-56 emotion-57"
+                      class="emotion-54 emotion-55 emotion-56"
                       data-checked="false"
                       data-error="false"
                     >
                       <input
                         aria-checked="false"
                         aria-invalid="false"
-                        class="emotion-58 emotion-59"
+                        class="emotion-57 emotion-58"
                         id="«r5h»"
                         tabindex="-1"
                         type="checkbox"
                         value="neptune"
                       />
                       <svg
-                        class="emotion-60 emotion-61"
+                        class="emotion-59 emotion-60"
                         fill="none"
                         viewBox="0 0 24 24"
                       >
                         <g>
                           <rect
-                            class="emotion-62 emotion-63"
+                            class="emotion-61 emotion-62"
                             height="16"
                             rx="0.125rem"
                             stroke-width="2"
@@ -4596,13 +4540,13 @@ exports[`SelectInput > renders correctly multiselect 1`] = `
                         </g>
                       </svg>
                       <div
-                        class="emotion-64 emotion-5"
+                        class="emotion-63 emotion-5"
                       >
                         <div
-                          class="emotion-66 emotion-5"
+                          class="emotion-65 emotion-5"
                         >
                           <label
-                            class="emotion-68 emotion-69"
+                            class="emotion-67 emotion-68"
                             for="«r5h»"
                           >
                             <div
@@ -4610,17 +4554,17 @@ exports[`SelectInput > renders correctly multiselect 1`] = `
                               data-testid="option-stack-neptune"
                             >
                               <div
-                                class="emotion-72 emotion-73"
+                                class="emotion-71 emotion-72"
                               >
                                 <span
-                                  class="emotion-74 emotion-75 emotion-15"
+                                  class="emotion-73 emotion-74 emotion-15"
                                 >
                                   <div
-                                    class="emotion-151 emotion-15"
+                                    class="emotion-150 emotion-15"
                                   >
                                     Neptune 
                                     <span
-                                      class="emotion-153 emotion-154 emotion-15"
+                                      class="emotion-152 emotion-153 emotion-15"
                                     >
                                       Label
                                     </span>
@@ -4636,13 +4580,13 @@ exports[`SelectInput > renders correctly multiselect 1`] = `
                 </div>
               </div>
               <div
-                class="emotion-43 emotion-5"
+                class="emotion-42 emotion-5"
               >
                 <div
-                  class="emotion-45 emotion-46"
+                  class="emotion-44 emotion-45"
                 >
                   <button
-                    class="emotion-47 emotion-48"
+                    class="emotion-46 emotion-47"
                     data-selectgroup="false"
                     data-testid="group-1"
                     role="group"
@@ -4650,21 +4594,21 @@ exports[`SelectInput > renders correctly multiselect 1`] = `
                     type="button"
                   >
                     <span
-                      class="emotion-49 emotion-15"
+                      class="emotion-48 emotion-15"
                     >
                       TERRESTRIAL PLANETS
                     </span>
                   </button>
                 </div>
                 <div
-                  class="emotion-43 emotion-5"
+                  class="emotion-42 emotion-5"
                   id="items"
                 >
                   <div
                     aria-disabled="false"
                     aria-label="mercury"
                     aria-selected="false"
-                    class="emotion-53 emotion-54"
+                    class="emotion-52 emotion-53"
                     data-testid="option-mercury"
                     id="option-0"
                     role="option"
@@ -4672,27 +4616,27 @@ exports[`SelectInput > renders correctly multiselect 1`] = `
                   >
                     <div
                       aria-disabled="false"
-                      class="emotion-55 emotion-56 emotion-57"
+                      class="emotion-54 emotion-55 emotion-56"
                       data-checked="false"
                       data-error="false"
                     >
                       <input
                         aria-checked="false"
                         aria-invalid="false"
-                        class="emotion-58 emotion-59"
+                        class="emotion-57 emotion-58"
                         id="«r5o»"
                         tabindex="-1"
                         type="checkbox"
                         value="mercury"
                       />
                       <svg
-                        class="emotion-60 emotion-61"
+                        class="emotion-59 emotion-60"
                         fill="none"
                         viewBox="0 0 24 24"
                       >
                         <g>
                           <rect
-                            class="emotion-62 emotion-63"
+                            class="emotion-61 emotion-62"
                             height="16"
                             rx="0.125rem"
                             stroke-width="2"
@@ -4713,13 +4657,13 @@ exports[`SelectInput > renders correctly multiselect 1`] = `
                         </g>
                       </svg>
                       <div
-                        class="emotion-64 emotion-5"
+                        class="emotion-63 emotion-5"
                       >
                         <div
-                          class="emotion-66 emotion-5"
+                          class="emotion-65 emotion-5"
                         >
                           <label
-                            class="emotion-68 emotion-69"
+                            class="emotion-67 emotion-68"
                             for="«r5o»"
                           >
                             <div
@@ -4727,10 +4671,10 @@ exports[`SelectInput > renders correctly multiselect 1`] = `
                               data-testid="option-stack-mercury"
                             >
                               <div
-                                class="emotion-72 emotion-73"
+                                class="emotion-71 emotion-72"
                               >
                                 <span
-                                  class="emotion-74 emotion-75 emotion-15"
+                                  class="emotion-73 emotion-74 emotion-15"
                                 >
                                   Mercury
                                 </span>
@@ -4745,7 +4689,7 @@ exports[`SelectInput > renders correctly multiselect 1`] = `
                     aria-disabled="false"
                     aria-label="venus"
                     aria-selected="false"
-                    class="emotion-53 emotion-54"
+                    class="emotion-52 emotion-53"
                     data-testid="option-venus"
                     id="option-1"
                     role="option"
@@ -4753,27 +4697,27 @@ exports[`SelectInput > renders correctly multiselect 1`] = `
                   >
                     <div
                       aria-disabled="false"
-                      class="emotion-55 emotion-56 emotion-57"
+                      class="emotion-54 emotion-55 emotion-56"
                       data-checked="false"
                       data-error="false"
                     >
                       <input
                         aria-checked="false"
                         aria-invalid="false"
-                        class="emotion-58 emotion-59"
+                        class="emotion-57 emotion-58"
                         id="«r5s»"
                         tabindex="-1"
                         type="checkbox"
                         value="venus"
                       />
                       <svg
-                        class="emotion-60 emotion-61"
+                        class="emotion-59 emotion-60"
                         fill="none"
                         viewBox="0 0 24 24"
                       >
                         <g>
                           <rect
-                            class="emotion-62 emotion-63"
+                            class="emotion-61 emotion-62"
                             height="16"
                             rx="0.125rem"
                             stroke-width="2"
@@ -4794,13 +4738,13 @@ exports[`SelectInput > renders correctly multiselect 1`] = `
                         </g>
                       </svg>
                       <div
-                        class="emotion-64 emotion-5"
+                        class="emotion-63 emotion-5"
                       >
                         <div
-                          class="emotion-66 emotion-5"
+                          class="emotion-65 emotion-5"
                         >
                           <label
-                            class="emotion-68 emotion-69"
+                            class="emotion-67 emotion-68"
                             for="«r5s»"
                           >
                             <div
@@ -4808,10 +4752,10 @@ exports[`SelectInput > renders correctly multiselect 1`] = `
                               data-testid="option-stack-venus"
                             >
                               <div
-                                class="emotion-72 emotion-73"
+                                class="emotion-71 emotion-72"
                               >
                                 <span
-                                  class="emotion-74 emotion-75 emotion-15"
+                                  class="emotion-73 emotion-74 emotion-15"
                                 >
                                   Venus
                                 </span>
@@ -4826,7 +4770,7 @@ exports[`SelectInput > renders correctly multiselect 1`] = `
                     aria-disabled="false"
                     aria-label="earth"
                     aria-selected="false"
-                    class="emotion-53 emotion-54"
+                    class="emotion-52 emotion-53"
                     data-testid="option-earth"
                     id="option-2"
                     role="option"
@@ -4834,27 +4778,27 @@ exports[`SelectInput > renders correctly multiselect 1`] = `
                   >
                     <div
                       aria-disabled="false"
-                      class="emotion-55 emotion-56 emotion-57"
+                      class="emotion-54 emotion-55 emotion-56"
                       data-checked="false"
                       data-error="false"
                     >
                       <input
                         aria-checked="false"
                         aria-invalid="false"
-                        class="emotion-58 emotion-59"
+                        class="emotion-57 emotion-58"
                         id="«r60»"
                         tabindex="-1"
                         type="checkbox"
                         value="earth"
                       />
                       <svg
-                        class="emotion-60 emotion-61"
+                        class="emotion-59 emotion-60"
                         fill="none"
                         viewBox="0 0 24 24"
                       >
                         <g>
                           <rect
-                            class="emotion-62 emotion-63"
+                            class="emotion-61 emotion-62"
                             height="16"
                             rx="0.125rem"
                             stroke-width="2"
@@ -4875,13 +4819,13 @@ exports[`SelectInput > renders correctly multiselect 1`] = `
                         </g>
                       </svg>
                       <div
-                        class="emotion-64 emotion-5"
+                        class="emotion-63 emotion-5"
                       >
                         <div
-                          class="emotion-66 emotion-5"
+                          class="emotion-65 emotion-5"
                         >
                           <label
-                            class="emotion-68 emotion-69"
+                            class="emotion-67 emotion-68"
                             for="«r60»"
                           >
                             <div
@@ -4889,16 +4833,16 @@ exports[`SelectInput > renders correctly multiselect 1`] = `
                               data-testid="option-stack-earth"
                             >
                               <div
-                                class="emotion-72 emotion-73"
+                                class="emotion-71 emotion-72"
                               >
                                 <span
-                                  class="emotion-74 emotion-75 emotion-15"
+                                  class="emotion-73 emotion-74 emotion-15"
                                 >
                                   Earth
                                 </span>
                               </div>
                               <span
-                                class="emotion-77 emotion-15"
+                                class="emotion-76 emotion-15"
                               >
                                 Our home planet
                               </span>
@@ -4912,7 +4856,7 @@ exports[`SelectInput > renders correctly multiselect 1`] = `
                     aria-disabled="true"
                     aria-label="mars"
                     aria-selected="false"
-                    class="emotion-53 emotion-54"
+                    class="emotion-52 emotion-53"
                     data-testid="option-mars"
                     id="option-3"
                     role="option"
@@ -4920,14 +4864,14 @@ exports[`SelectInput > renders correctly multiselect 1`] = `
                   >
                     <div
                       aria-disabled="true"
-                      class="emotion-55 emotion-56 emotion-57"
+                      class="emotion-54 emotion-55 emotion-56"
                       data-checked="false"
                       data-error="false"
                     >
                       <input
                         aria-checked="false"
                         aria-invalid="false"
-                        class="emotion-58 emotion-59"
+                        class="emotion-57 emotion-58"
                         disabled=""
                         id="«r65»"
                         tabindex="-1"
@@ -4935,13 +4879,13 @@ exports[`SelectInput > renders correctly multiselect 1`] = `
                         value="mars"
                       />
                       <svg
-                        class="emotion-60 emotion-61"
+                        class="emotion-59 emotion-60"
                         fill="none"
                         viewBox="0 0 24 24"
                       >
                         <g>
                           <rect
-                            class="emotion-62 emotion-63"
+                            class="emotion-61 emotion-62"
                             height="16"
                             rx="0.125rem"
                             stroke-width="2"
@@ -4962,13 +4906,13 @@ exports[`SelectInput > renders correctly multiselect 1`] = `
                         </g>
                       </svg>
                       <div
-                        class="emotion-64 emotion-5"
+                        class="emotion-63 emotion-5"
                       >
                         <div
-                          class="emotion-66 emotion-5"
+                          class="emotion-65 emotion-5"
                         >
                           <label
-                            class="emotion-68 emotion-69"
+                            class="emotion-67 emotion-68"
                             for="«r65»"
                           >
                             <div
@@ -4976,10 +4920,10 @@ exports[`SelectInput > renders correctly multiselect 1`] = `
                               data-testid="option-stack-mars"
                             >
                               <div
-                                class="emotion-72 emotion-73"
+                                class="emotion-71 emotion-72"
                               >
                                 <span
-                                  class="emotion-74 emotion-75 emotion-15"
+                                  class="emotion-73 emotion-74 emotion-15"
                                 >
                                   Mars
                                 </span>
@@ -4994,7 +4938,7 @@ exports[`SelectInput > renders correctly multiselect 1`] = `
                     aria-disabled="false"
                     aria-label="pluto"
                     aria-selected="true"
-                    class="emotion-53 emotion-54"
+                    class="emotion-52 emotion-53"
                     data-testid="option-pluto"
                     id="option-4"
                     role="option"
@@ -5002,7 +4946,7 @@ exports[`SelectInput > renders correctly multiselect 1`] = `
                   >
                     <div
                       aria-disabled="false"
-                      class="emotion-55 emotion-56 emotion-57"
+                      class="emotion-54 emotion-55 emotion-56"
                       data-checked="true"
                       data-error="false"
                     >
@@ -5010,20 +4954,20 @@ exports[`SelectInput > renders correctly multiselect 1`] = `
                         aria-checked="true"
                         aria-invalid="false"
                         checked=""
-                        class="emotion-58 emotion-59"
+                        class="emotion-57 emotion-58"
                         id="«r69»"
                         tabindex="-1"
                         type="checkbox"
                         value="pluto"
                       />
                       <svg
-                        class="emotion-60 emotion-61"
+                        class="emotion-59 emotion-60"
                         fill="none"
                         viewBox="0 0 24 24"
                       >
                         <g>
                           <rect
-                            class="emotion-62 emotion-63"
+                            class="emotion-61 emotion-62"
                             height="16"
                             rx="0.125rem"
                             stroke-width="2"
@@ -5044,13 +4988,13 @@ exports[`SelectInput > renders correctly multiselect 1`] = `
                         </g>
                       </svg>
                       <div
-                        class="emotion-64 emotion-5"
+                        class="emotion-63 emotion-5"
                       >
                         <div
-                          class="emotion-66 emotion-5"
+                          class="emotion-65 emotion-5"
                         >
                           <label
-                            class="emotion-68 emotion-69"
+                            class="emotion-67 emotion-68"
                             for="«r69»"
                           >
                             <div
@@ -5058,16 +5002,16 @@ exports[`SelectInput > renders correctly multiselect 1`] = `
                               data-testid="option-stack-pluto"
                             >
                               <div
-                                class="emotion-72 emotion-73"
+                                class="emotion-71 emotion-72"
                               >
                                 <span
-                                  class="emotion-74 emotion-75 emotion-15"
+                                  class="emotion-73 emotion-74 emotion-15"
                                 >
                                   Pluto
                                 </span>
                               </div>
                               <span
-                                class="emotion-77 emotion-15"
+                                class="emotion-76 emotion-15"
                               >
                                 Pluto does not fit the usual classification of either terrestrial or Jovian planets, but is rocky
                               </span>
