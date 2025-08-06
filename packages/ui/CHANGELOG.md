@@ -1,5 +1,26 @@
 # Change Log
 
+## 3.0.0-beta.0
+
+### Major Changes
+
+- [#5428](https://github.com/scaleway/ultraviolet/pull/5428) [`177fd92`](https://github.com/scaleway/ultraviolet/commit/177fd92f018b692084815705bf10537832368330) Thanks [@matthprost](https://github.com/matthprost)! - ⚠️ BREAKING CHANGES ⚠️
+  In order to start using the new style, you will need to import new `<ThemeProvider />` and import new CSS generated at build time:
+
+  ```tsx
+  import { ThemeProvider } from "@emotion/react";
+  import { consoleLightTheme } from "@ultraviolet/themes";
+
+  import { ThemeProvider as ThemeProviderUV } from "@ultraviolet/ui"; // ThemeProvider that generate the theme applied to components
+  import "@ultraviolet/ui/styles"; // Generated CSS used by components
+
+  export const App = (children) => {
+    <ThemeProvider theme={consoleLightTheme}>
+      <ThemeProviderUV>{children}</ThemeProviderUV>
+    </ThemeProvider>;
+  };
+  ```
+
 ## 2.0.5
 
 ### Patch Changes
