@@ -297,65 +297,6 @@ exports[`DateInputField > should clear field 1`] = `
 }
 
 .emotion-23 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 1.5rem;
-  padding: 0 0.25rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.25rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #3f4250;
-}
-
-.emotion-23:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-23:active {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.emotion-23 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-23:hover,
-.emotion-23:active {
-  background: #e9eaeb;
-  color: #222638;
-}
-
-.emotion-25 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -364,12 +305,12 @@ exports[`DateInputField > should clear field 1`] = `
   min-height: 1rem;
 }
 
-.emotion-25 .fillStroke {
+.emotion-23 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.emotion-28 {
+.emotion-26 {
   color: #3f4250;
   font-size: 1rem;
   font-family: Inter,sans-serif;
@@ -382,7 +323,7 @@ exports[`DateInputField > should clear field 1`] = `
   text-transform: capitalize;
 }
 
-.emotion-34 {
+.emotion-30 {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   gap: 0.5rem;
@@ -396,7 +337,7 @@ exports[`DateInputField > should clear field 1`] = `
   justify-content: normal;
 }
 
-.emotion-37 {
+.emotion-33 {
   color: #3f4250;
   font-size: 1rem;
   font-family: Inter,sans-serif;
@@ -410,171 +351,33 @@ exports[`DateInputField > should clear field 1`] = `
   text-transform: lowercase;
 }
 
-.emotion-37::first-letter {
+.emotion-33::first-letter {
   text-transform: uppercase;
 }
 
-.emotion-58 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 3rem;
-  padding: 0 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #3f4250;
+.emotion-53 {
   height: 1.5625rem;
   width: 100%;
   padding: 0;
   color: #727683;
 }
 
-.emotion-58:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-58:active {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.emotion-58 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-58:hover,
-.emotion-58:active {
-  background: #e9eaeb;
-  color: #222638;
-}
-
-.emotion-58[aria-label="in-range"] {
+.emotion-53[aria-label="in-range"] {
   color: #521094;
   background-color: #f1eefc;
 }
 
-.emotion-58[aria-label="in-range"]:hover {
+.emotion-53[aria-label="in-range"]:hover {
   color: #ffffff;
   background-color: #792dd4;
 }
 
-.emotion-58[aria-label="not-current"],
-.emotion-58:disabled {
+.emotion-53[aria-label="not-current"],
+.emotion-53:disabled {
   color: #b5b7bd;
 }
 
-.emotion-58[aria-label="selected"] {
-  color: #ffffff;
-}
-
-.emotion-67 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 3rem;
-  padding: 0 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: #8c40ef;
-  border: none;
-  color: #ffffff;
-  height: 1.5625rem;
-  width: 100%;
-  padding: 0;
-  color: #727683;
-}
-
-.emotion-67:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-67:active {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-67 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-67:hover,
-.emotion-67:active {
-  background: #792dd4;
-  color: #f9f9fa;
-}
-
-.emotion-67[aria-label="in-range"] {
-  color: #521094;
-  background-color: #f1eefc;
-}
-
-.emotion-67[aria-label="in-range"]:hover {
-  color: #ffffff;
-  background-color: #792dd4;
-}
-
-.emotion-67[aria-label="not-current"],
-.emotion-67:disabled {
-  color: #b5b7bd;
-}
-
-.emotion-67[aria-label="selected"] {
+.emotion-53[aria-label="selected"] {
   color: #ffffff;
 }
 
@@ -650,12 +453,12 @@ exports[`DateInputField > should clear field 1`] = `
                 class="emotion-21 emotion-7"
               >
                 <button
-                  class="emotion-23 emotion-24"
+                  class=" uv_e1wcoe0 uv_e1wcoe4 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                   data-testid="previous-month"
                   type="button"
                 >
                   <svg
-                    class="emotion-25 emotion-15"
+                    class="emotion-23 emotion-15"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -666,17 +469,17 @@ exports[`DateInputField > should clear field 1`] = `
                   </svg>
                 </button>
                 <span
-                  class="emotion-27 emotion-28 emotion-29"
+                  class="emotion-25 emotion-26 emotion-27"
                 >
                   September 2022
                 </span>
                 <button
-                  class="emotion-23 emotion-24"
+                  class=" uv_e1wcoe0 uv_e1wcoe4 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                   data-testid="next-month"
                   type="button"
                 >
                   <svg
-                    class="emotion-25 emotion-15"
+                    class="emotion-23 emotion-15"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -688,46 +491,46 @@ exports[`DateInputField > should clear field 1`] = `
                 </button>
               </div>
               <div
-                class="emotion-34 emotion-35"
+                class="emotion-30 emotion-31"
               >
                 <p
-                  class="emotion-36 emotion-37 emotion-29"
+                  class="emotion-32 emotion-33 emotion-27"
                 >
                   Mo
                 </p>
                 <p
-                  class="emotion-36 emotion-37 emotion-29"
+                  class="emotion-32 emotion-33 emotion-27"
                 >
                   Tu
                 </p>
                 <p
-                  class="emotion-36 emotion-37 emotion-29"
+                  class="emotion-32 emotion-33 emotion-27"
                 >
                   We
                 </p>
                 <p
-                  class="emotion-36 emotion-37 emotion-29"
+                  class="emotion-32 emotion-33 emotion-27"
                 >
                   Th
                 </p>
                 <p
-                  class="emotion-36 emotion-37 emotion-29"
+                  class="emotion-32 emotion-33 emotion-27"
                 >
                   Fr
                 </p>
                 <p
-                  class="emotion-36 emotion-37 emotion-29"
+                  class="emotion-32 emotion-33 emotion-27"
                 >
                   Sa
                 </p>
                 <p
-                  class="emotion-36 emotion-37 emotion-29"
+                  class="emotion-32 emotion-33 emotion-27"
                 >
                   Su
                 </p>
                 <button
                   aria-label="not-current"
-                  class="emotion-57 emotion-58 emotion-24"
+                  class="emotion-53 emotion-54 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                   data-testid="dayLastMonth"
                   type="button"
                 >
@@ -735,7 +538,7 @@ exports[`DateInputField > should clear field 1`] = `
                 </button>
                 <button
                   aria-label="not-current"
-                  class="emotion-57 emotion-58 emotion-24"
+                  class="emotion-53 emotion-54 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                   data-testid="dayLastMonth"
                   type="button"
                 >
@@ -743,7 +546,7 @@ exports[`DateInputField > should clear field 1`] = `
                 </button>
                 <button
                   aria-label="not-current"
-                  class="emotion-57 emotion-58 emotion-24"
+                  class="emotion-53 emotion-54 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                   data-testid="dayLastMonth"
                   type="button"
                 >
@@ -751,217 +554,217 @@ exports[`DateInputField > should clear field 1`] = `
                 </button>
                 <button
                   aria-label="selected"
-                  class="emotion-57 emotion-67 emotion-68"
+                  class="emotion-53 emotion-54 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoeg uv_e1wcoe7 uv_e1wcoel"
                   type="button"
                 >
                   1
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-57 emotion-58 emotion-24"
+                  class="emotion-53 emotion-54 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                   type="button"
                 >
                   2
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-57 emotion-58 emotion-24"
+                  class="emotion-53 emotion-54 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                   type="button"
                 >
                   3
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-57 emotion-58 emotion-24"
+                  class="emotion-53 emotion-54 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                   type="button"
                 >
                   4
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-57 emotion-58 emotion-24"
+                  class="emotion-53 emotion-54 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                   type="button"
                 >
                   5
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-57 emotion-58 emotion-24"
+                  class="emotion-53 emotion-54 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                   type="button"
                 >
                   6
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-57 emotion-58 emotion-24"
+                  class="emotion-53 emotion-54 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                   type="button"
                 >
                   7
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-57 emotion-58 emotion-24"
+                  class="emotion-53 emotion-54 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                   type="button"
                 >
                   8
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-57 emotion-58 emotion-24"
+                  class="emotion-53 emotion-54 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                   type="button"
                 >
                   9
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-57 emotion-58 emotion-24"
+                  class="emotion-53 emotion-54 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                   type="button"
                 >
                   10
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-57 emotion-58 emotion-24"
+                  class="emotion-53 emotion-54 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                   type="button"
                 >
                   11
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-57 emotion-58 emotion-24"
+                  class="emotion-53 emotion-54 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                   type="button"
                 >
                   12
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-57 emotion-58 emotion-24"
+                  class="emotion-53 emotion-54 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                   type="button"
                 >
                   13
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-57 emotion-58 emotion-24"
+                  class="emotion-53 emotion-54 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                   type="button"
                 >
                   14
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-57 emotion-58 emotion-24"
+                  class="emotion-53 emotion-54 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                   type="button"
                 >
                   15
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-57 emotion-58 emotion-24"
+                  class="emotion-53 emotion-54 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                   type="button"
                 >
                   16
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-57 emotion-58 emotion-24"
+                  class="emotion-53 emotion-54 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                   type="button"
                 >
                   17
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-57 emotion-58 emotion-24"
+                  class="emotion-53 emotion-54 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                   type="button"
                 >
                   18
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-57 emotion-58 emotion-24"
+                  class="emotion-53 emotion-54 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                   type="button"
                 >
                   19
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-57 emotion-58 emotion-24"
+                  class="emotion-53 emotion-54 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                   type="button"
                 >
                   20
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-57 emotion-58 emotion-24"
+                  class="emotion-53 emotion-54 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                   type="button"
                 >
                   21
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-57 emotion-58 emotion-24"
+                  class="emotion-53 emotion-54 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                   type="button"
                 >
                   22
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-57 emotion-58 emotion-24"
+                  class="emotion-53 emotion-54 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                   type="button"
                 >
                   23
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-57 emotion-58 emotion-24"
+                  class="emotion-53 emotion-54 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                   type="button"
                 >
                   24
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-57 emotion-58 emotion-24"
+                  class="emotion-53 emotion-54 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                   type="button"
                 >
                   25
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-57 emotion-58 emotion-24"
+                  class="emotion-53 emotion-54 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                   type="button"
                 >
                   26
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-57 emotion-58 emotion-24"
+                  class="emotion-53 emotion-54 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                   type="button"
                 >
                   27
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-57 emotion-58 emotion-24"
+                  class="emotion-53 emotion-54 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                   type="button"
                 >
                   28
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-57 emotion-58 emotion-24"
+                  class="emotion-53 emotion-54 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                   type="button"
                 >
                   29
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-57 emotion-58 emotion-24"
+                  class="emotion-53 emotion-54 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                   type="button"
                 >
                   30
                 </button>
                 <button
                   aria-label="not-current"
-                  class="emotion-57 emotion-58 emotion-24"
+                  class="emotion-53 emotion-54 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                   data-testid="dayNextMonth"
                   type="button"
                 >
@@ -969,7 +772,7 @@ exports[`DateInputField > should clear field 1`] = `
                 </button>
                 <button
                   aria-label="not-current"
-                  class="emotion-57 emotion-58 emotion-24"
+                  class="emotion-53 emotion-54 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                   data-testid="dayNextMonth"
                   type="button"
                 >
@@ -977,7 +780,7 @@ exports[`DateInputField > should clear field 1`] = `
                 </button>
                 <button
                   aria-label="not-current"
-                  class="emotion-57 emotion-58 emotion-24"
+                  class="emotion-53 emotion-54 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                   data-testid="dayNextMonth"
                   type="button"
                 >
@@ -985,7 +788,7 @@ exports[`DateInputField > should clear field 1`] = `
                 </button>
                 <button
                   aria-label="not-current"
-                  class="emotion-57 emotion-58 emotion-24"
+                  class="emotion-53 emotion-54 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                   data-testid="dayNextMonth"
                   type="button"
                 >
@@ -993,7 +796,7 @@ exports[`DateInputField > should clear field 1`] = `
                 </button>
                 <button
                   aria-label="not-current"
-                  class="emotion-57 emotion-58 emotion-24"
+                  class="emotion-53 emotion-54 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                   data-testid="dayNextMonth"
                   type="button"
                 >
@@ -1001,7 +804,7 @@ exports[`DateInputField > should clear field 1`] = `
                 </button>
                 <button
                   aria-label="not-current"
-                  class="emotion-57 emotion-58 emotion-24"
+                  class="emotion-53 emotion-54 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                   data-testid="dayNextMonth"
                   type="button"
                 >
@@ -1009,7 +812,7 @@ exports[`DateInputField > should clear field 1`] = `
                 </button>
                 <button
                   aria-label="not-current"
-                  class="emotion-57 emotion-58 emotion-24"
+                  class="emotion-53 emotion-54 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                   data-testid="dayNextMonth"
                   type="button"
                 >
@@ -1017,7 +820,7 @@ exports[`DateInputField > should clear field 1`] = `
                 </button>
                 <button
                   aria-label="not-current"
-                  class="emotion-57 emotion-58 emotion-24"
+                  class="emotion-53 emotion-54 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                   data-testid="dayNextMonth"
                   type="button"
                 >
@@ -1025,7 +828,7 @@ exports[`DateInputField > should clear field 1`] = `
                 </button>
                 <button
                   aria-label="not-current"
-                  class="emotion-57 emotion-58 emotion-24"
+                  class="emotion-53 emotion-54 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                   data-testid="dayNextMonth"
                   type="button"
                 >
