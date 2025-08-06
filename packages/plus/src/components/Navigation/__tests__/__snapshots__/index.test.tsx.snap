@@ -1435,124 +1435,20 @@ exports[`navigation > click on expand / collapse button 1`] = `
 }
 
 .emotion-94 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 2rem;
-  padding: 0 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #3f4250;
+  vertical-align: middle;
+  fill: currentColor;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
-.emotion-94:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-94:active {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.emotion-94 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-94:hover,
-.emotion-94:active {
-  background: #e9eaeb;
-  color: #222638;
+.emotion-94 .fillStroke {
+  stroke: currentColor;
+  fill: none;
 }
 
 .emotion-94 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 2rem;
-  padding: 0 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #3f4250;
-}
-
-.emotion-94:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-94:active {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.emotion-94 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-94:hover,
-.emotion-94:active {
-  background: #e9eaeb;
-  color: #222638;
-}
-
-.emotion-96 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -1561,26 +1457,12 @@ exports[`navigation > click on expand / collapse button 1`] = `
   min-height: 1rem;
 }
 
-.emotion-96 .fillStroke {
+.emotion-94 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
 .emotion-96 {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-96 .fillStroke {
-  stroke: currentColor;
-  fill: none;
-}
-
-.emotion-98 {
   background: transparent;
   position: absolute;
   top: 0;
@@ -1595,11 +1477,11 @@ exports[`navigation > click on expand / collapse button 1`] = `
   display: flex;
 }
 
-.emotion-98:hover {
+.emotion-96:hover {
   border-color: #8c40ef;
 }
 
-.emotion-98 {
+.emotion-96 {
   background: transparent;
   position: absolute;
   top: 0;
@@ -1614,7 +1496,7 @@ exports[`navigation > click on expand / collapse button 1`] = `
   display: flex;
 }
 
-.emotion-98:hover {
+.emotion-96:hover {
   border-color: #8c40ef;
 }
 
@@ -1929,11 +1811,11 @@ exports[`navigation > click on expand / collapse button 1`] = `
             >
               <button
                 aria-label="Collapse sidebar"
-                class="emotion-94 emotion-95"
+                class=" uv_e1wcoe0 uv_e1wcoe3 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                 type="button"
               >
                 <svg
-                  class="emotion-96 emotion-30"
+                  class="emotion-94 emotion-30"
                   viewBox="0 0 16 16"
                 >
                   <path
@@ -1948,7 +1830,7 @@ exports[`navigation > click on expand / collapse button 1`] = `
         </div>
       </div>
       <div
-        class="emotion-98 emotion-99"
+        class="emotion-96 emotion-97"
         data-testid="slider"
       />
     </nav>
@@ -2302,124 +2184,6 @@ exports[`navigation > click on expand / collapse button 2`] = `
 }
 
 .emotion-16 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 2rem;
-  padding: 0 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #3f4250;
-}
-
-.emotion-16:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-16:active {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.emotion-16 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-16:hover,
-.emotion-16:active {
-  background: #e9eaeb;
-  color: #222638;
-}
-
-.emotion-16 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 2rem;
-  padding: 0 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #3f4250;
-}
-
-.emotion-16:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-16:active {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.emotion-16 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-16:hover,
-.emotion-16:active {
-  background: #e9eaeb;
-  color: #222638;
-}
-
-.emotion-18 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2442,23 +2206,23 @@ exports[`navigation > click on expand / collapse button 2`] = `
   gap: 0.5rem;
 }
 
-.emotion-20 .fill {
+.emotion-18 .fill {
   fill: #151a2d;
 }
 
-.emotion-20 .fillStrong {
+.emotion-18 .fillStrong {
   fill: #b5b7bd;
 }
 
-.emotion-20 .fill {
+.emotion-18 .fill {
   fill: #151a2d;
 }
 
-.emotion-20 .fillStrong {
+.emotion-18 .fillStrong {
   fill: #b5b7bd;
 }
 
-.emotion-23 {
+.emotion-21 {
   margin: 0;
   border: 0;
   width: auto;
@@ -2470,7 +2234,7 @@ exports[`navigation > click on expand / collapse button 2`] = `
   margin: 1rem -1rem;
 }
 
-.emotion-23 {
+.emotion-21 {
   margin: 0;
   border: 0;
   width: auto;
@@ -2482,27 +2246,27 @@ exports[`navigation > click on expand / collapse button 2`] = `
   margin: 1rem -1rem;
 }
 
-.emotion-25[data-animation='expand'][data-animation-type="complex"] .eh4zgrv2 {
+.emotion-23[data-animation='expand'][data-animation-type="complex"] .eh4zgrv2 {
   -webkit-animation: animation-0 250ms ease-in-out;
   animation: animation-0 250ms ease-in-out;
 }
 
-.emotion-25[data-animation='collapse'][data-animation-type="complex"] .eh4zgrv2 {
+.emotion-23[data-animation='collapse'][data-animation-type="complex"] .eh4zgrv2 {
   -webkit-animation: animation-0 250ms ease-in-out reverse;
   animation: animation-0 250ms ease-in-out reverse;
 }
 
-.emotion-25[data-animation='expand'][data-animation-type="complex"] .eh4zgrv2 {
+.emotion-23[data-animation='expand'][data-animation-type="complex"] .eh4zgrv2 {
   -webkit-animation: animation-0 250ms ease-in-out;
   animation: animation-0 250ms ease-in-out;
 }
 
-.emotion-25[data-animation='collapse'][data-animation-type="complex"] .eh4zgrv2 {
+.emotion-23[data-animation='collapse'][data-animation-type="complex"] .eh4zgrv2 {
   -webkit-animation: animation-0 250ms ease-in-out reverse;
   animation: animation-0 250ms ease-in-out reverse;
 }
 
-.emotion-27 {
+.emotion-25 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2525,7 +2289,7 @@ exports[`navigation > click on expand / collapse button 2`] = `
   padding-top: 0.5rem;
 }
 
-.emotion-27 {
+.emotion-25 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2548,82 +2312,23 @@ exports[`navigation > click on expand / collapse button 2`] = `
   padding-top: 0.5rem;
 }
 
-.emotion-33 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 2rem;
-  padding: 0 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: #e9eaeb;
-  border: none;
-  color: #222638;
-}
-
-.emotion-33:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-33:active {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.emotion-33 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-33:hover,
-.emotion-33:active {
-  background: #d9dadd;
-  color: #151a2d;
-}
-
-.emotion-47 .fill {
+.emotion-41 .fill {
   fill: #521094;
 }
 
-.emotion-47 .fillStrong {
+.emotion-41 .fillStrong {
   fill: #a060f6;
 }
 
-.emotion-47 .fill {
+.emotion-41 .fill {
   fill: #521094;
 }
 
-.emotion-47 .fillStrong {
+.emotion-41 .fillStrong {
   fill: #a060f6;
 }
 
-.emotion-49 {
+.emotion-43 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2643,12 +2348,12 @@ exports[`navigation > click on expand / collapse button 2`] = `
   justify-content: flex-end;
 }
 
-.emotion-49[data-has-overflow-style="false"] {
+.emotion-43[data-has-overflow-style="false"] {
   box-shadow: none;
   border: none;
 }
 
-.emotion-49 {
+.emotion-43 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2668,12 +2373,12 @@ exports[`navigation > click on expand / collapse button 2`] = `
   justify-content: flex-end;
 }
 
-.emotion-49[data-has-overflow-style="false"] {
+.emotion-43[data-has-overflow-style="false"] {
   box-shadow: none;
   border: none;
 }
 
-.emotion-55 {
+.emotion-47 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -2682,12 +2387,12 @@ exports[`navigation > click on expand / collapse button 2`] = `
   min-height: 1rem;
 }
 
-.emotion-55 .fillStroke {
+.emotion-47 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.emotion-55 {
+.emotion-47 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -2696,12 +2401,12 @@ exports[`navigation > click on expand / collapse button 2`] = `
   min-height: 1rem;
 }
 
-.emotion-55 .fillStroke {
+.emotion-47 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.emotion-57 {
+.emotion-49 {
   background: transparent;
   position: absolute;
   top: 0;
@@ -2716,11 +2421,11 @@ exports[`navigation > click on expand / collapse button 2`] = `
   display: flex;
 }
 
-.emotion-57:hover {
+.emotion-49:hover {
   border-color: #8c40ef;
 }
 
-.emotion-57 {
+.emotion-49 {
   background: transparent;
   position: absolute;
   top: 0;
@@ -2735,7 +2440,7 @@ exports[`navigation > click on expand / collapse button 2`] = `
   display: flex;
 }
 
-.emotion-57:hover {
+.emotion-49:hover {
   border-color: #8c40ef;
 }
 
@@ -2785,14 +2490,14 @@ exports[`navigation > click on expand / collapse button 2`] = `
                     aria-expanded="false"
                     aria-haspopup="dialog"
                     aria-label="Pinned items"
-                    class="emotion-16 emotion-17"
+                    class=" uv_e1wcoe0 uv_e1wcoe3 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                     type="button"
                   >
                     <div
-                      class="emotion-18 emotion-19"
+                      class="emotion-16 emotion-17"
                     >
                       <svg
-                        class="emotion-20 emotion-21"
+                        class="emotion-18 emotion-19"
                         height="20"
                         viewBox="0 0 20 20"
                         width="20"
@@ -2821,16 +2526,16 @@ exports[`navigation > click on expand / collapse button 2`] = `
             </div>
             <hr
               aria-orientation="horizontal"
-              class="emotion-22 emotion-23 emotion-24"
+              class="emotion-20 emotion-21 emotion-22"
               role="separator"
             />
             <div
-              class="emotion-25 emotion-26"
+              class="emotion-23 emotion-24"
               data-animation="false"
               style=""
             >
               <div
-                class="emotion-27 emotion-28"
+                class="emotion-25 emotion-26"
               >
                 <div
                   class="emotion-12 emotion-13"
@@ -2843,14 +2548,14 @@ exports[`navigation > click on expand / collapse button 2`] = `
                   >
                     <button
                       aria-label="item1"
-                      class="emotion-33 emotion-34"
+                      class=" uv_e1wcoe0 uv_e1wcoe3 uv_e1wcoe6 uv_e1wcoek uv_e1wcoeg uv_e1wcoed uv_e1wcoer"
                       type="button"
                     >
                       <div
-                        class="emotion-18 emotion-19"
+                        class="emotion-16 emotion-17"
                       >
                         <svg
-                          class="emotion-20 emotion-21"
+                          class="emotion-18 emotion-19"
                           height="20"
                           viewBox="0 0 20 20"
                           width="20"
@@ -2893,14 +2598,14 @@ exports[`navigation > click on expand / collapse button 2`] = `
                   >
                     <button
                       aria-label="item1"
-                      class="emotion-16 emotion-17"
+                      class=" uv_e1wcoe0 uv_e1wcoe3 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                       type="button"
                     >
                       <div
-                        class="emotion-18 emotion-19"
+                        class="emotion-16 emotion-17"
                       >
                         <svg
-                          class="emotion-47 emotion-21"
+                          class="emotion-41 emotion-19"
                           height="20"
                           viewBox="0 0 20 20"
                           width="20"
@@ -2936,7 +2641,7 @@ exports[`navigation > click on expand / collapse button 2`] = `
             </div>
           </div>
           <div
-            class="emotion-49 emotion-50"
+            class="emotion-43 emotion-44"
             data-has-overflow-style="false"
           >
             <div
@@ -2947,11 +2652,11 @@ exports[`navigation > click on expand / collapse button 2`] = `
             >
               <button
                 aria-label="Expand sidebar"
-                class="emotion-16 emotion-17"
+                class=" uv_e1wcoe0 uv_e1wcoe3 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                 type="button"
               >
                 <svg
-                  class="emotion-55 emotion-56"
+                  class="emotion-47 emotion-48"
                   viewBox="0 0 16 16"
                 >
                   <path
@@ -2966,7 +2671,7 @@ exports[`navigation > click on expand / collapse button 2`] = `
         </div>
       </div>
       <div
-        class="emotion-57 emotion-58"
+        class="emotion-49 emotion-50"
         data-testid="slider"
       />
     </nav>
@@ -4587,124 +4292,20 @@ exports[`navigation > pin and unpin an item 1`] = `
 }
 
 .emotion-117 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 2rem;
-  padding: 0 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #3f4250;
+  vertical-align: middle;
+  fill: currentColor;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
-.emotion-117:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-117:active {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.emotion-117 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-117:hover,
-.emotion-117:active {
-  background: #e9eaeb;
-  color: #222638;
+.emotion-117 .fillStroke {
+  stroke: currentColor;
+  fill: none;
 }
 
 .emotion-117 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 2rem;
-  padding: 0 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #3f4250;
-}
-
-.emotion-117:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-117:active {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.emotion-117 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-117:hover,
-.emotion-117:active {
-  background: #e9eaeb;
-  color: #222638;
-}
-
-.emotion-119 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -4713,26 +4314,12 @@ exports[`navigation > pin and unpin an item 1`] = `
   min-height: 1rem;
 }
 
-.emotion-119 .fillStroke {
+.emotion-117 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
 .emotion-119 {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-119 .fillStroke {
-  stroke: currentColor;
-  fill: none;
-}
-
-.emotion-121 {
   background: transparent;
   position: absolute;
   top: 0;
@@ -4747,11 +4334,11 @@ exports[`navigation > pin and unpin an item 1`] = `
   display: flex;
 }
 
-.emotion-121:hover {
+.emotion-119:hover {
   border-color: #8c40ef;
 }
 
-.emotion-121 {
+.emotion-119 {
   background: transparent;
   position: absolute;
   top: 0;
@@ -4766,7 +4353,7 @@ exports[`navigation > pin and unpin an item 1`] = `
   display: flex;
 }
 
-.emotion-121:hover {
+.emotion-119:hover {
   border-color: #8c40ef;
 }
 
@@ -5141,11 +4728,11 @@ exports[`navigation > pin and unpin an item 1`] = `
             >
               <button
                 aria-label="Collapse sidebar"
-                class="emotion-117 emotion-118"
+                class=" uv_e1wcoe0 uv_e1wcoe3 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                 type="button"
               >
                 <svg
-                  class="emotion-119 emotion-30"
+                  class="emotion-117 emotion-30"
                   viewBox="0 0 16 16"
                 >
                   <path
@@ -5160,7 +4747,7 @@ exports[`navigation > pin and unpin an item 1`] = `
         </div>
       </div>
       <div
-        class="emotion-121 emotion-122"
+        class="emotion-119 emotion-120"
         data-testid="slider"
       />
     </nav>
@@ -6781,124 +6368,20 @@ exports[`navigation > pin and unpin an item 2`] = `
 }
 
 .emotion-117 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 2rem;
-  padding: 0 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #3f4250;
+  vertical-align: middle;
+  fill: currentColor;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
-.emotion-117:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-117:active {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.emotion-117 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-117:hover,
-.emotion-117:active {
-  background: #e9eaeb;
-  color: #222638;
+.emotion-117 .fillStroke {
+  stroke: currentColor;
+  fill: none;
 }
 
 .emotion-117 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 2rem;
-  padding: 0 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #3f4250;
-}
-
-.emotion-117:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-117:active {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.emotion-117 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-117:hover,
-.emotion-117:active {
-  background: #e9eaeb;
-  color: #222638;
-}
-
-.emotion-119 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -6907,26 +6390,12 @@ exports[`navigation > pin and unpin an item 2`] = `
   min-height: 1rem;
 }
 
-.emotion-119 .fillStroke {
+.emotion-117 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
 .emotion-119 {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-119 .fillStroke {
-  stroke: currentColor;
-  fill: none;
-}
-
-.emotion-121 {
   background: transparent;
   position: absolute;
   top: 0;
@@ -6941,11 +6410,11 @@ exports[`navigation > pin and unpin an item 2`] = `
   display: flex;
 }
 
-.emotion-121:hover {
+.emotion-119:hover {
   border-color: #8c40ef;
 }
 
-.emotion-121 {
+.emotion-119 {
   background: transparent;
   position: absolute;
   top: 0;
@@ -6960,7 +6429,7 @@ exports[`navigation > pin and unpin an item 2`] = `
   display: flex;
 }
 
-.emotion-121:hover {
+.emotion-119:hover {
   border-color: #8c40ef;
 }
 
@@ -7337,11 +6806,11 @@ exports[`navigation > pin and unpin an item 2`] = `
             >
               <button
                 aria-label="Collapse sidebar"
-                class="emotion-117 emotion-118"
+                class=" uv_e1wcoe0 uv_e1wcoe3 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                 type="button"
               >
                 <svg
-                  class="emotion-119 emotion-30"
+                  class="emotion-117 emotion-30"
                   viewBox="0 0 16 16"
                 >
                   <path
@@ -7356,7 +6825,7 @@ exports[`navigation > pin and unpin an item 2`] = `
         </div>
       </div>
       <div
-        class="emotion-121 emotion-122"
+        class="emotion-119 emotion-120"
         data-testid="slider"
       />
     </nav>
@@ -8839,124 +8308,20 @@ exports[`navigation > pin and unpin an item 3`] = `
 }
 
 .emotion-94 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 2rem;
-  padding: 0 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #3f4250;
+  vertical-align: middle;
+  fill: currentColor;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
-.emotion-94:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-94:active {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.emotion-94 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-94:hover,
-.emotion-94:active {
-  background: #e9eaeb;
-  color: #222638;
+.emotion-94 .fillStroke {
+  stroke: currentColor;
+  fill: none;
 }
 
 .emotion-94 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 2rem;
-  padding: 0 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #3f4250;
-}
-
-.emotion-94:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-94:active {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.emotion-94 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-94:hover,
-.emotion-94:active {
-  background: #e9eaeb;
-  color: #222638;
-}
-
-.emotion-96 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -8965,26 +8330,12 @@ exports[`navigation > pin and unpin an item 3`] = `
   min-height: 1rem;
 }
 
-.emotion-96 .fillStroke {
+.emotion-94 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
 .emotion-96 {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-96 .fillStroke {
-  stroke: currentColor;
-  fill: none;
-}
-
-.emotion-98 {
   background: transparent;
   position: absolute;
   top: 0;
@@ -8999,11 +8350,11 @@ exports[`navigation > pin and unpin an item 3`] = `
   display: flex;
 }
 
-.emotion-98:hover {
+.emotion-96:hover {
   border-color: #8c40ef;
 }
 
-.emotion-98 {
+.emotion-96 {
   background: transparent;
   position: absolute;
   top: 0;
@@ -9018,7 +8369,7 @@ exports[`navigation > pin and unpin an item 3`] = `
   display: flex;
 }
 
-.emotion-98:hover {
+.emotion-96:hover {
   border-color: #8c40ef;
 }
 
@@ -9335,11 +8686,11 @@ exports[`navigation > pin and unpin an item 3`] = `
             >
               <button
                 aria-label="Collapse sidebar"
-                class="emotion-94 emotion-95"
+                class=" uv_e1wcoe0 uv_e1wcoe3 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                 type="button"
               >
                 <svg
-                  class="emotion-96 emotion-30"
+                  class="emotion-94 emotion-30"
                   viewBox="0 0 16 16"
                 >
                   <path
@@ -9354,7 +8705,7 @@ exports[`navigation > pin and unpin an item 3`] = `
         </div>
       </div>
       <div
-        class="emotion-98 emotion-99"
+        class="emotion-96 emotion-97"
         data-testid="slider"
       />
     </nav>
@@ -10081,65 +9432,6 @@ exports[`navigation > render with basic content 1`] = `
 }
 
 .emotion-94 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 2rem;
-  padding: 0 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #3f4250;
-}
-
-.emotion-94:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-94:active {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.emotion-94 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-94:hover,
-.emotion-94:active {
-  background: #e9eaeb;
-  color: #222638;
-}
-
-.emotion-96 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -10148,12 +9440,12 @@ exports[`navigation > render with basic content 1`] = `
   min-height: 1rem;
 }
 
-.emotion-96 .fillStroke {
+.emotion-94 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.emotion-98 {
+.emotion-96 {
   background: transparent;
   position: absolute;
   top: 0;
@@ -10168,7 +9460,7 @@ exports[`navigation > render with basic content 1`] = `
   display: flex;
 }
 
-.emotion-98:hover {
+.emotion-96:hover {
   border-color: #8c40ef;
 }
 
@@ -10483,11 +9775,11 @@ exports[`navigation > render with basic content 1`] = `
             >
               <button
                 aria-label="Collapse sidebar"
-                class="emotion-94 emotion-95"
+                class=" uv_e1wcoe0 uv_e1wcoe3 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                 type="button"
               >
                 <svg
-                  class="emotion-96 emotion-30"
+                  class="emotion-94 emotion-30"
                   viewBox="0 0 16 16"
                 >
                   <path
@@ -10502,7 +9794,7 @@ exports[`navigation > render with basic content 1`] = `
         </div>
       </div>
       <div
-        class="emotion-98 emotion-99"
+        class="emotion-96 emotion-97"
         data-testid="slider"
       />
     </nav>
@@ -11099,65 +10391,6 @@ exports[`navigation > render without pinnedFeature 1`] = `
 }
 
 .emotion-56 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 2rem;
-  padding: 0 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #3f4250;
-}
-
-.emotion-56:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-56:active {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.emotion-56 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-56:hover,
-.emotion-56:active {
-  background: #e9eaeb;
-  color: #222638;
-}
-
-.emotion-58 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -11166,12 +10399,12 @@ exports[`navigation > render without pinnedFeature 1`] = `
   min-height: 1rem;
 }
 
-.emotion-58 .fillStroke {
+.emotion-56 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.emotion-60 {
+.emotion-58 {
   background: transparent;
   position: absolute;
   top: 0;
@@ -11186,7 +10419,7 @@ exports[`navigation > render without pinnedFeature 1`] = `
   display: flex;
 }
 
-.emotion-60:hover {
+.emotion-58:hover {
   border-color: #8c40ef;
 }
 
@@ -11377,11 +10610,11 @@ exports[`navigation > render without pinnedFeature 1`] = `
             >
               <button
                 aria-label="Collapse sidebar"
-                class="emotion-56 emotion-57"
+                class=" uv_e1wcoe0 uv_e1wcoe3 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                 type="button"
               >
                 <svg
-                  class="emotion-58 emotion-59"
+                  class="emotion-56 emotion-57"
                   viewBox="0 0 16 16"
                 >
                   <path
@@ -11396,7 +10629,7 @@ exports[`navigation > render without pinnedFeature 1`] = `
         </div>
       </div>
       <div
-        class="emotion-60 emotion-61"
+        class="emotion-58 emotion-59"
         data-testid="slider"
       />
     </nav>
@@ -12839,124 +12072,20 @@ exports[`navigation > resize manually the navigation using slider 1`] = `
 }
 
 .emotion-94 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 2rem;
-  padding: 0 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #3f4250;
+  vertical-align: middle;
+  fill: currentColor;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
-.emotion-94:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-94:active {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.emotion-94 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-94:hover,
-.emotion-94:active {
-  background: #e9eaeb;
-  color: #222638;
+.emotion-94 .fillStroke {
+  stroke: currentColor;
+  fill: none;
 }
 
 .emotion-94 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 2rem;
-  padding: 0 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #3f4250;
-}
-
-.emotion-94:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-94:active {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.emotion-94 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-94:hover,
-.emotion-94:active {
-  background: #e9eaeb;
-  color: #222638;
-}
-
-.emotion-96 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -12965,26 +12094,12 @@ exports[`navigation > resize manually the navigation using slider 1`] = `
   min-height: 1rem;
 }
 
-.emotion-96 .fillStroke {
+.emotion-94 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
 .emotion-96 {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-96 .fillStroke {
-  stroke: currentColor;
-  fill: none;
-}
-
-.emotion-98 {
   background: transparent;
   position: absolute;
   top: 0;
@@ -12999,11 +12114,11 @@ exports[`navigation > resize manually the navigation using slider 1`] = `
   display: flex;
 }
 
-.emotion-98:hover {
+.emotion-96:hover {
   border-color: #8c40ef;
 }
 
-.emotion-98 {
+.emotion-96 {
   background: transparent;
   position: absolute;
   top: 0;
@@ -13018,7 +12133,7 @@ exports[`navigation > resize manually the navigation using slider 1`] = `
   display: flex;
 }
 
-.emotion-98:hover {
+.emotion-96:hover {
   border-color: #8c40ef;
 }
 
@@ -13333,11 +12448,11 @@ exports[`navigation > resize manually the navigation using slider 1`] = `
             >
               <button
                 aria-label="Collapse sidebar"
-                class="emotion-94 emotion-95"
+                class=" uv_e1wcoe0 uv_e1wcoe3 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                 type="button"
               >
                 <svg
-                  class="emotion-96 emotion-30"
+                  class="emotion-94 emotion-30"
                   viewBox="0 0 16 16"
                 >
                   <path
@@ -13352,7 +12467,7 @@ exports[`navigation > resize manually the navigation using slider 1`] = `
         </div>
       </div>
       <div
-        class="emotion-98 emotion-99"
+        class="emotion-96 emotion-97"
         data-testid="slider"
       />
     </nav>
