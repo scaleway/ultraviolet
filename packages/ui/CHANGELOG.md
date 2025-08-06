@@ -1,5 +1,11 @@
 # Change Log
 
+## 3.0.0-beta.2
+
+### Patch Changes
+
+- [#5435](https://github.com/scaleway/ultraviolet/pull/5435) [`c4b76f1`](https://github.com/scaleway/ultraviolet/commit/c4b76f1293eaf9b621af3f5a3584fc72d1eda80a) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<ThemeProvider />` to inject theme variable in the `<head>` of the page
+
 ## 3.0.0-beta.1
 
 ### Patch Changes
