@@ -1156,124 +1156,20 @@ exports[`timeInput > renders can move with arrow keys - 24-hour format 1`] = `
 }
 
 .emotion-33 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 2rem;
-  padding: 0 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #3f4250;
+  vertical-align: middle;
+  fill: currentColor;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
-.emotion-33:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-33:active {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.emotion-33 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-33:hover,
-.emotion-33:active {
-  background: #e9eaeb;
-  color: #222638;
+.emotion-33 .fillStroke {
+  stroke: currentColor;
+  fill: none;
 }
 
 .emotion-33 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 2rem;
-  padding: 0 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #3f4250;
-}
-
-.emotion-33:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-33:active {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.emotion-33 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-33:hover,
-.emotion-33:active {
-  background: #e9eaeb;
-  color: #222638;
-}
-
-.emotion-35 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -1282,26 +1178,12 @@ exports[`timeInput > renders can move with arrow keys - 24-hour format 1`] = `
   min-height: 1rem;
 }
 
-.emotion-35 .fillStroke {
+.emotion-33 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
 .emotion-35 {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-35 .fillStroke {
-  stroke: currentColor;
-  fill: none;
-}
-
-.emotion-37 {
   color: #727683;
   font-size: 0.75rem;
   font-family: Inter,sans-serif;
@@ -1313,7 +1195,7 @@ exports[`timeInput > renders can move with arrow keys - 24-hour format 1`] = `
   text-decoration: none;
 }
 
-.emotion-37 {
+.emotion-35 {
   color: #727683;
   font-size: 0.75rem;
   font-family: Inter,sans-serif;
@@ -1420,12 +1302,12 @@ exports[`timeInput > renders can move with arrow keys - 24-hour format 1`] = `
         >
           <button
             aria-label="clear value"
-            class="emotion-33 emotion-34"
+            class=" styles__e1wcoe0 styles_size_small__e1wcoe3 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
             data-testid="clear"
             type="button"
           >
             <svg
-              class="emotion-35 emotion-36"
+              class="emotion-33 emotion-34"
               viewBox="0 0 16 16"
             >
               <path
@@ -1436,7 +1318,7 @@ exports[`timeInput > renders can move with arrow keys - 24-hour format 1`] = `
         </div>
       </div>
       <p
-        class="emotion-37 emotion-6"
+        class="emotion-35 emotion-6"
       >
         helper
       </p>
@@ -1690,65 +1572,6 @@ exports[`timeInput > renders correctly clearable 1`] = `
 }
 
 .emotion-29 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 2rem;
-  padding: 0 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #3f4250;
-}
-
-.emotion-29:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-29:active {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.emotion-29 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-29:hover,
-.emotion-29:active {
-  background: #e9eaeb;
-  color: #222638;
-}
-
-.emotion-31 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -1757,7 +1580,7 @@ exports[`timeInput > renders correctly clearable 1`] = `
   min-height: 1rem;
 }
 
-.emotion-31 .fillStroke {
+.emotion-29 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
@@ -1845,12 +1668,12 @@ exports[`timeInput > renders correctly clearable 1`] = `
         >
           <button
             aria-label="clear value"
-            class="emotion-29 emotion-30"
+            class=" styles__e1wcoe0 styles_size_small__e1wcoe3 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
             data-testid="clear"
             type="button"
           >
             <svg
-              class="emotion-31 emotion-32"
+              class="emotion-29 emotion-30"
               viewBox="0 0 16 16"
             >
               <path
@@ -2374,124 +2197,20 @@ exports[`timeInput > renders correctly clearable 2`] = `
 }
 
 .emotion-35 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 2rem;
-  padding: 0 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #3f4250;
+  vertical-align: middle;
+  fill: currentColor;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
-.emotion-35:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-35:active {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.emotion-35 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-35:hover,
-.emotion-35:active {
-  background: #e9eaeb;
-  color: #222638;
+.emotion-35 .fillStroke {
+  stroke: currentColor;
+  fill: none;
 }
 
 .emotion-35 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 2rem;
-  padding: 0 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #3f4250;
-}
-
-.emotion-35:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-35:active {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.emotion-35 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-35:hover,
-.emotion-35:active {
-  background: #e9eaeb;
-  color: #222638;
-}
-
-.emotion-37 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -2500,26 +2219,12 @@ exports[`timeInput > renders correctly clearable 2`] = `
   min-height: 1rem;
 }
 
-.emotion-37 .fillStroke {
+.emotion-35 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
 .emotion-37 {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-37 .fillStroke {
-  stroke: currentColor;
-  fill: none;
-}
-
-.emotion-39 {
   color: #727683;
   font-size: 0.75rem;
   font-family: Inter,sans-serif;
@@ -2531,7 +2236,7 @@ exports[`timeInput > renders correctly clearable 2`] = `
   text-decoration: none;
 }
 
-.emotion-39 {
+.emotion-37 {
   color: #727683;
   font-size: 0.75rem;
   font-family: Inter,sans-serif;
@@ -2652,12 +2357,12 @@ exports[`timeInput > renders correctly clearable 2`] = `
         >
           <button
             aria-label="clear value"
-            class="emotion-35 emotion-36"
+            class=" styles__e1wcoe0 styles_size_small__e1wcoe3 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
             data-testid="clear"
             type="button"
           >
             <svg
-              class="emotion-37 emotion-38"
+              class="emotion-35 emotion-36"
               viewBox="0 0 16 16"
             >
               <path
@@ -2668,7 +2373,7 @@ exports[`timeInput > renders correctly clearable 2`] = `
         </div>
       </div>
       <p
-        class="emotion-39 emotion-6"
+        class="emotion-37 emotion-6"
       >
         helper
       </p>
