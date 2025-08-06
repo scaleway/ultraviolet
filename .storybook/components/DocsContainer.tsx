@@ -10,7 +10,7 @@ import type { ReactNode } from 'react'
 import { cloneElement, isValidElement, useState } from 'react'
 import { globalStyles } from './globalStyle'
 import '@ultraviolet/fonts/fonts.css'
-import { GlobalAlert } from '@ultraviolet/ui'
+import { GlobalAlert, ThemeProvider as ThemeProviderUV } from '@ultraviolet/ui'
 
 type ExtraProps = {
   /**
@@ -66,28 +66,30 @@ const DocsContainer = ({ children, context }: DocsContainerProps) => {
 
   return (
     <Unstyled>
-      <ThemeProvider theme={lightTheme}>
-        {isBeta ?
-        <GlobalAlert
-          buttonText="Access to Beta"
-          onClickButton={() => window.top?.location.assign('https://beta.storybook.ultraviolet.scaleway.com')}
-          closable={false}
-        >
-          A Beta version is available. Please use this version if your dependencies include the Beta release.
-        </GlobalAlert> : null}
-        <Global styles={[globalStyles]} />
-        <BaseContainer context={context}>
-          {isValidElement<ExtraProps>(children)
-            ? cloneElement(children, {
-                deprecated: parameters?.deprecated,
-                deprecatedReason: parameters?.deprecatedReason,
-                migrationLink: parameters?.migrationLink,
-                hideArgsTable: parameters?.hideArgsTable,
-                experimental: isPlusLibrary ? true : parameters?.experimental,
-              })
-            : children}
-        </BaseContainer>
-      </ThemeProvider>
+      <ThemeProviderUV>
+        <ThemeProvider theme={lightTheme}>
+          {isBeta ?
+          <GlobalAlert
+            buttonText="Access to Beta"
+            onClickButton={() => window.top?.location.assign('https://beta.storybook.ultraviolet.scaleway.com')}
+            closable={false}
+          >
+            A Beta version is available. Please use this version if your dependencies include the Beta release.
+          </GlobalAlert> : null}
+          <Global styles={[globalStyles]} />
+          <BaseContainer context={context}>
+            {isValidElement<ExtraProps>(children)
+              ? cloneElement(children, {
+                  deprecated: parameters?.deprecated,
+                  deprecatedReason: parameters?.deprecatedReason,
+                  migrationLink: parameters?.migrationLink,
+                  hideArgsTable: parameters?.hideArgsTable,
+                  experimental: isPlusLibrary ? true : parameters?.experimental,
+                })
+              : children}
+          </BaseContainer>
+        </ThemeProvider>
+      </ThemeProviderUV>
     </Unstyled>
   )
 }

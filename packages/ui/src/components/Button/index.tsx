@@ -1,8 +1,5 @@
 'use client'
 
-import type { Theme } from '@emotion/react'
-import { useTheme } from '@emotion/react'
-import styled from '@emotion/styled'
 import type {
   AriaRole,
   ButtonHTMLAttributes,
@@ -11,244 +8,23 @@ import type {
   Ref,
 } from 'react'
 import { forwardRef, useMemo } from 'react'
-import type { ExtendedColor } from '../../theme'
-import { Loader, StyledCircle } from '../Loader'
+import { useTheme } from '../../theme/ThemeProvider'
+import { Loader } from '../Loader'
 import { Tooltip } from '../Tooltip'
-import { SIZE_GAP_KEY, SIZE_HEIGHT, SIZE_PADDING_KEY } from './constants'
+import { SIZE_HEIGHT } from './constants'
+import type { ButtonVariants } from './styles.css'
+import { button } from './styles.css'
 
 type ButtonSize = keyof typeof SIZE_HEIGHT
 
 export const buttonSizes = Object.keys(SIZE_HEIGHT) as ButtonSize[]
 
-// FOCUS RING
-const FOCUS_RING_KEY = {
-  black: 'focusNeutral',
-  danger: 'focusDanger',
-  info: 'focusInfo',
-  neutral: 'focusNeutral',
-  primary: 'focusPrimary',
-  // @note: no focusSecondary so far, it will be added later, so far focusPrimary sounds fine
-  secondary: 'focusPrimary',
-  success: 'focusSuccess',
-  warning: 'focusWarning',
-  white: 'focusNeutral',
-} as const
-
-const isMonochrome = (sentiment: ExtendedColor) =>
-  sentiment === 'white' || sentiment === 'black'
-
-// VARIANTS
-type StyledButtonProps = Required<
-  Pick<FinalProps, 'size' | 'sentiment' | 'disabled' | 'fullWidth'>
->
-
-const coreStyle = ({
-  theme,
-  size,
-  sentiment,
-  fullWidth,
-  disabled,
-}: { theme: Theme } & StyledButtonProps) => {
-  const font =
-    size === 'large'
-      ? theme.typography.bodyStrong
-      : theme.typography.bodySmallStrong
-
-  let width = 'auto'
-  if (fullWidth) {
-    width = '100%'
-  }
-
-  return `
-    display: inline-flex;
-    position: relative;
-    height: ${theme.sizing[SIZE_HEIGHT[size]]};
-    padding: 0 ${theme.space[SIZE_PADDING_KEY[size]]};
-    flex-direction: row;
-    gap: ${theme.space[SIZE_GAP_KEY[size]]};
-    border-radius: ${theme.radii.default};
-    box-sizing: border-box;
-    width: ${width};
-    align-items: center;
-    cursor: ${disabled ? 'not-allowed' : 'pointer'};
-    justify-content: center;
-    outline-offset: 2px;
-    white-space: nowrap;
-    text-decoration: none;
-    &:hover {
-      text-decoration: none;
-    }
-
-
-    ${
-      disabled
-        ? ''
-        : `
-            &:active {
-              box-shadow: ${theme.shadows[FOCUS_RING_KEY[sentiment]]};
-            }
-          `
-    }
-
-    /* We can't use Text component because of button hover effect, so we need to duplicate */
-    font-size: ${font.fontSize};
-    font-family: ${font.fontFamily};
-    font-weight: ${font.weight};
-    letter-spacing: ${font.letterSpacing};
-    line-height: ${font.lineHeight};
-    paragraph-spacing: ${font.paragraphSpacing};
-    text-case: ${font.textCase};
-  `
-}
-
-const StyledFilledButton = styled('button', {
-  shouldForwardProp: prop => !['size', 'sentiment', 'fullWidth'].includes(prop),
-})<StyledButtonProps>`
-  ${args => coreStyle(args)}
-
-  ${StyledCircle} {
-    stroke: transparent;
-  }
-    
-  background: ${({ theme, sentiment }) =>
-    !isMonochrome(sentiment)
-      ? theme.colors[sentiment].backgroundStrong
-      : theme.colors.other.monochrome[sentiment].background};
-  border: none;
-  color: ${({ theme, sentiment }) => (!isMonochrome(sentiment) ? theme.colors[sentiment].textStrong : theme.colors.other.monochrome[sentiment === 'white' ? 'black' : 'white'].text)};
-
-  ${({ theme, sentiment, disabled }) =>
-    disabled
-      ? `
-            background: ${!isMonochrome(sentiment) ? theme.colors[sentiment].backgroundStrongDisabled : theme.colors.other.monochrome[sentiment].backgroundDisabled};
-            color:
-              ${!isMonochrome(sentiment) ? theme.colors[sentiment].textStrongDisabled : theme.colors.other.monochrome[sentiment].textDisabled};
-        `
-      : `
-            &:hover, &:active
-            {
-                background: ${!isMonochrome(sentiment) ? theme.colors[sentiment].backgroundStrongHover : theme.colors.other.monochrome[sentiment].backgroundHover};
-                color:
-                ${!isMonochrome(sentiment) ? theme.colors[sentiment].textStrongHover : theme.colors.other.monochrome[sentiment === 'white' ? 'black' : 'white'].textHover};
-            }
-  `}
-`
-
-const StyledOutlinedButton = styled('button', {
-  shouldForwardProp: prop => !['size', 'sentiment', 'fullWidth'].includes(prop),
-})<StyledButtonProps>`
-  ${args => coreStyle(args)}
-  
-  ${StyledCircle} {
-    stroke: transparent;
-  }
-
-  background: none;
-  border: 1px solid
-    ${({ theme, sentiment }) =>
-      !isMonochrome(sentiment)
-        ? theme.colors[sentiment][
-            sentiment === 'neutral' ? 'borderStrong' : 'border'
-          ]
-        : theme.colors.other.monochrome[sentiment].border};
-  color: ${({ theme, sentiment }) => (!isMonochrome(sentiment) ? theme.colors[sentiment].text : theme.colors.other.monochrome[sentiment].text)};
-
-  ${({ theme, sentiment, disabled }) =>
-    disabled
-      ? `
-        color:
-          ${!isMonochrome(sentiment) ? theme.colors[sentiment].textDisabled : theme.colors.other.monochrome[sentiment].textDisabled};
-        border: 1px solid ${
-          !isMonochrome(sentiment)
-            ? theme.colors[sentiment][
-                sentiment === 'neutral'
-                  ? 'borderStrongDisabled'
-                  : 'borderDisabled'
-              ]
-            : theme.colors.other.monochrome[sentiment].borderDisabled
-        };
-
-    `
-      : `
-        &:hover, &:active
-       {
-            background: ${!isMonochrome(sentiment) ? theme.colors[sentiment].backgroundHover : theme.colors.other.monochrome[sentiment].backgroundHover};
-            color:
-            ${!isMonochrome(sentiment) ? theme.colors[sentiment].textHover : theme.colors.other.monochrome[sentiment === 'white' ? 'black' : 'white'].textHover};
-            border: 1px solid ${
-              !isMonochrome(sentiment)
-                ? theme.colors[sentiment][
-                    sentiment === 'neutral'
-                      ? 'borderStrongHover'
-                      : 'borderHover'
-                  ]
-                : theme.colors.other.monochrome[sentiment].borderHover
-            };
-
-        }
-`};
-`
-
-const StyledGhostButton = styled('button', {
-  shouldForwardProp: prop => !['size', 'sentiment', 'fullWidth'].includes(prop),
-})<StyledButtonProps>`
-  ${args => coreStyle(args)}
-
-  ${StyledCircle} {
-    stroke: transparent;
-  }
-
-  background: none;
-  border: none;
-  color: ${({ theme, sentiment }) => (!isMonochrome(sentiment) ? theme.colors[sentiment].text : theme.colors.other.monochrome[sentiment].text)};
-
-  ${({ theme, sentiment, disabled }) =>
-    disabled
-      ? `
-        color:
-          ${!isMonochrome(sentiment) ? theme.colors[sentiment].textDisabled : theme.colors.other.monochrome[sentiment].textDisabled};
-      `
-      : `
-        &:hover, &:active
-        {
-            background: ${!isMonochrome(sentiment) ? theme.colors[sentiment].backgroundHover : theme.colors.other.monochrome[sentiment].backgroundHover};
-            color:
-              ${!isMonochrome(sentiment) ? theme.colors[sentiment].textHover : theme.colors.other.monochrome[sentiment === 'white' ? 'black' : 'white'].textHover};
-        }
-`}
-`
-
-const VARIANTS_COMPONENTS = {
-  filled: {
-    button: StyledFilledButton,
-    link: StyledFilledButton.withComponent('a'),
-  },
-  ghost: {
-    button: StyledGhostButton,
-    link: StyledGhostButton.withComponent('a'),
-  },
-  outlined: {
-    button: StyledOutlinedButton,
-    link: StyledOutlinedButton.withComponent('a'),
-  },
-}
-
-type ButtonVariant = keyof typeof VARIANTS_COMPONENTS
-export const buttonVariants = Object.keys(
-  VARIANTS_COMPONENTS,
-) as ButtonVariant[]
-
 type CommonProps = {
   type?: ButtonHTMLAttributes<HTMLButtonElement>['type']
   autoFocus?: ButtonHTMLAttributes<HTMLButtonElement>['autoFocus']
-  variant?: ButtonVariant
   role?: AriaRole
-  size?: ButtonSize
   className?: string
   'data-testid'?: string
-  sentiment?: ExtendedColor
-  disabled?: boolean
-  fullWidth?: boolean
   isLoading?: boolean
   'aria-label'?: string
   'aria-current'?: boolean
@@ -266,11 +42,12 @@ type CommonProps = {
   onMouseDown?: MouseEventHandler<HTMLElement>
   onMouseUp?: MouseEventHandler<HTMLElement>
   onMouseOut?: MouseEventHandler<HTMLElement>
+  onBlur?: ButtonHTMLAttributes<HTMLElement>['onBlur']
   onMouseEnter?: MouseEventHandler<HTMLElement>
   onMouseLeave?: MouseEventHandler<HTMLElement>
   onPointerDown?: ButtonHTMLAttributes<HTMLButtonElement>['onPointerDown']
   onKeyDown?: ButtonHTMLAttributes<HTMLButtonElement>['onKeyDown']
-}
+} & ButtonVariants
 
 type FinalProps = CommonProps & {
   children: ReactNode
@@ -301,6 +78,7 @@ export const Button = forwardRef<Element, FinalProps>(
       onMouseDown,
       onMouseUp,
       onMouseOut,
+      onBlur,
       onMouseEnter,
       onMouseLeave,
       onPointerDown,
@@ -351,11 +129,9 @@ export const Button = forwardRef<Element, FinalProps>(
 
     // @note: an anchor can't be disabled
     if (href && !computeIsDisabled) {
-      const Component = VARIANTS_COMPONENTS[variant].link
-
       return (
         <Tooltip containerFullWidth={fullWidth} text={tooltip}>
-          <Component
+          <a
             aria-controls={ariaControls}
             aria-current={ariaCurrent}
             aria-describedby={ariaDescribedby}
@@ -367,12 +143,11 @@ export const Button = forwardRef<Element, FinalProps>(
             aria-pressed={ariaPressed}
             aria-roledescription={ariaRoledescription}
             autoFocus={autoFocus}
-            className={className}
+            className={`${className ?? ''} ${button({ disabled, fullWidth, sentiment, size, variant })}`}
             data-testid={dataTestId}
-            disabled={false}
             download={download}
-            fullWidth={fullWidth}
             href={href}
+            onBlur={onBlur}
             onClick={onClick}
             onMouseDown={onMouseDown}
             onMouseEnter={onMouseEnter}
@@ -381,34 +156,30 @@ export const Button = forwardRef<Element, FinalProps>(
             onMouseUp={onMouseUp}
             ref={ref as Ref<HTMLAnchorElement>}
             role={role}
-            sentiment={sentiment}
-            size={size}
             tabIndex={tabIndex}
             target={target}
             type={type}
           >
             {content}
-          </Component>
+          </a>
         </Tooltip>
       )
     }
 
-    const Component = VARIANTS_COMPONENTS[variant].button
-
     return (
       <Tooltip containerFullWidth={fullWidth} text={tooltip}>
-        <Component
+        <button
           aria-controls={ariaControls}
           aria-current={ariaCurrent}
           aria-expanded={ariaExpanded}
           aria-haspopup={ariaHaspopup}
           aria-label={ariaLabel}
           autoFocus={autoFocus}
-          className={className}
+          className={`${className ?? ''} ${button({ disabled, fullWidth, sentiment, size, variant })}`}
           data-testid={dataTestId}
           disabled={computeIsDisabled}
-          fullWidth={fullWidth}
           name={name}
+          onBlur={onBlur}
           onClick={onClick}
           onKeyDown={onKeyDown}
           onMouseDown={onMouseDown}
@@ -419,13 +190,11 @@ export const Button = forwardRef<Element, FinalProps>(
           onPointerDown={onPointerDown}
           ref={ref as Ref<HTMLButtonElement>}
           role={role}
-          sentiment={sentiment}
-          size={size}
           tabIndex={tabIndex}
           type={type}
         >
           {content}
-        </Component>
+        </button>
       </Tooltip>
     )
   },

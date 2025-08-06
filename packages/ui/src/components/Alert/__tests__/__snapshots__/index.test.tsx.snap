@@ -1024,64 +1024,8 @@ exports[`alert > renders correctly with buttonText and onClickButton 1`] = `
   text-decoration: none;
 }
 
-.emotion-13 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 2rem;
-  padding: 0 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: #e51963;
-  border: none;
-  color: #ffffff;
+.emotion-12 {
   margin-left: 2.5rem;
-}
-
-.emotion-13:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-13:active {
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-13 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-13:hover,
-.emotion-13:active {
-  background: #d6175c;
-  color: #f9f9fa;
 }
 
 <div
@@ -1117,7 +1061,7 @@ exports[`alert > renders correctly with buttonText and onClickButton 1`] = `
           </div>
         </div>
         <button
-          class="emotion-12 emotion-13 emotion-14"
+          class="emotion-12 emotion-13 styles__e1wcoe0 styles_size_small__e1wcoe3 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_filled__e1wcoeg styles_sentiment_danger__e1wcoe9 styles_undefined_compound_2__e1wcoen"
           type="button"
         >
           Button
@@ -1431,69 +1375,13 @@ exports[`alert > renders correctly with closable and onClose 1`] = `
   text-decoration: none;
 }
 
-.emotion-13 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 2rem;
-  padding: 0 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #3f4250;
+.emotion-12 {
   -webkit-align-self: start;
   -ms-flex-item-align: start;
   align-self: start;
 }
 
-.emotion-13:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-13:active {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.emotion-13 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-13:hover,
-.emotion-13:active {
-  background: #e9eaeb;
-  color: #222638;
-}
-
-.emotion-15 {
+.emotion-14 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -1502,7 +1390,7 @@ exports[`alert > renders correctly with closable and onClose 1`] = `
   min-height: 1rem;
 }
 
-.emotion-15 .fillStroke {
+.emotion-14 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
@@ -1542,11 +1430,11 @@ exports[`alert > renders correctly with closable and onClose 1`] = `
       </div>
       <button
         aria-label="close"
-        class="emotion-12 emotion-13 emotion-14"
+        class="emotion-12 emotion-13 styles__e1wcoe0 styles_size_small__e1wcoe3 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
         type="button"
       >
         <svg
-          class="emotion-15 emotion-7"
+          class="emotion-14 emotion-7"
           viewBox="0 0 16 16"
         >
           <path
@@ -2012,56 +1900,8 @@ exports[`alert > renders correctly with disabled 1`] = `
   text-decoration: none;
 }
 
-.emotion-13 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 2rem;
-  padding: 0 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: not-allowed;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: #e51963;
-  border: none;
-  color: #ffffff;
-  background: #ffd3e3;
-  color: #ffffff;
+.emotion-12 {
   margin-left: 2.5rem;
-}
-
-.emotion-13:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-13 .e1y1n78x0 {
-  stroke: transparent;
 }
 
 <div
@@ -2097,7 +1937,7 @@ exports[`alert > renders correctly with disabled 1`] = `
           </div>
         </div>
         <button
-          class="emotion-12 emotion-13 emotion-14"
+          class="emotion-12 emotion-13 styles__e1wcoe0 styles_size_small__e1wcoe3 styles_fullWidth_false__e1wcoe6 styles_disabled_true__e1wcoej styles_variant_filled__e1wcoeg styles_sentiment_danger__e1wcoe9 styles_undefined_compound_2__e1wcoen"
           disabled=""
           type="button"
         >

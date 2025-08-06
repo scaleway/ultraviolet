@@ -28,11 +28,15 @@ const generateStorybookTheme = ({
     appBorderColor: theme.colors.neutral.borderWeak,
     appContentBg: theme.colors.neutral.background,
     barBg: theme.colors.neutral.backgroundWeak,
-    barSelectedColor: theme.colors.primary.textWeak,
+    barSelectedColor: theme.colors.primary.text,
 
     // Toolbar default and active colors
     barTextColor: theme.colors.neutral.textWeak,
-    base,
+    barSelectedColor: theme.colors.primary.text,
+    barBg: theme.colors.neutral.backgroundWeak,
+
+    buttonBg: theme.colors.neutral.background,
+    buttonBorder: theme.colors.neutral.border,
 
     // BIZARRE
     booleanBg: theme.colors.neutral.background,

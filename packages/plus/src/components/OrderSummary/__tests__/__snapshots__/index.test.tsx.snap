@@ -13774,7 +13774,7 @@ exports[`orderSummary > should work with numberInputs 1`] = `
   cursor: not-allowed;
 }
 
-.emotion-44[data-controls='false']>.emotion-52 {
+.emotion-44[data-controls='false']>.emotion-50 {
   border-width: 0;
 }
 
@@ -13827,65 +13827,6 @@ exports[`orderSummary > should work with numberInputs 1`] = `
 }
 
 .emotion-48 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 1.5rem;
-  padding: 0 0.25rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.25rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #3f4250;
-}
-
-.emotion-48:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-48:active {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.emotion-48 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-48:hover,
-.emotion-48:active {
-  background: #e9eaeb;
-  color: #222638;
-}
-
-.emotion-50 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -13894,12 +13835,12 @@ exports[`orderSummary > should work with numberInputs 1`] = `
   min-height: 1rem;
 }
 
-.emotion-50 .fillStroke {
+.emotion-48 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.emotion-53 {
+.emotion-51 {
   display: grid;
   grid-template-columns: 1fr auto;
   -webkit-align-items: center;
@@ -13916,7 +13857,7 @@ exports[`orderSummary > should work with numberInputs 1`] = `
   width: 100%;
 }
 
-.emotion-55 {
+.emotion-53 {
   outline: none;
   border: none;
   padding: 0;
@@ -13931,18 +13872,18 @@ exports[`orderSummary > should work with numberInputs 1`] = `
   background: none;
 }
 
-.emotion-55[data-has-unit='true'] {
+.emotion-53[data-has-unit='true'] {
   text-align: left;
   padding: 0.5rem 0 0.5rem 0.5rem;
 }
 
-.emotion-55::-webkit-outer-spin-button,
-.emotion-55::-webkit-inner-spin-button {
+.emotion-53::-webkit-outer-spin-button,
+.emotion-53::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.emotion-55 {
+.emotion-53 {
   -moz-appearance: textfield;
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
@@ -13950,15 +13891,15 @@ exports[`orderSummary > should work with numberInputs 1`] = `
   appearance: textfield;
 }
 
-.emotion-55[data-size='small'] {
+.emotion-53[data-size='small'] {
   height: 2rem;
 }
 
-.emotion-55[data-size='medium'] {
+.emotion-53[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-55[data-size='large'] {
+.emotion-53[data-size='large'] {
   height: 3rem;
   font-size: 1rem;
   font-family: Inter,sans-serif;
@@ -13966,34 +13907,34 @@ exports[`orderSummary > should work with numberInputs 1`] = `
   line-height: 1.5rem;
 }
 
-.emotion-55:-moz-read-only {
+.emotion-53:-moz-read-only {
   color: #3f4250;
   background: #f9f9fa;
   border-block: 1px solid #d9dadd;
 }
 
-.emotion-55:read-only {
+.emotion-53:read-only {
   color: #3f4250;
   background: #f9f9fa;
   border-block: 1px solid #d9dadd;
 }
 
-.emotion-55:-moz-read-only~.emotion-89 {
+.emotion-53:-moz-read-only~.emotion-85 {
   background: #f9f9fa;
 }
 
-.emotion-55:read-only~.emotion-89 {
+.emotion-53:read-only~.emotion-85 {
   background: #f9f9fa;
 }
 
-.emotion-55:disabled {
+.emotion-53:disabled {
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
   border-block: 1px solid #e9eaeb;
 }
 
-.emotion-55:disabled~.emotion-89 {
+.emotion-53:disabled~.emotion-85 {
   background: #f3f3f4;
   cursor: not-allowed;
   -webkit-user-select: none;
@@ -14002,16 +13943,16 @@ exports[`orderSummary > should work with numberInputs 1`] = `
   user-select: none;
 }
 
-.emotion-55:placeholder-shown~.emotion-89 {
+.emotion-53:placeholder-shown~.emotion-85 {
   color: #727683;
   font-size: 1rem;
 }
 
-.emotion-55[data-controls='false'] {
+.emotion-53[data-controls='false'] {
   text-align: left;
 }
 
-.emotion-71 {
+.emotion-67 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -14034,7 +13975,7 @@ exports[`orderSummary > should work with numberInputs 1`] = `
   gap: 0.5rem;
 }
 
-.emotion-71 {
+.emotion-67 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -14057,7 +13998,7 @@ exports[`orderSummary > should work with numberInputs 1`] = `
   gap: 0.5rem;
 }
 
-.emotion-77 {
+.emotion-73 {
   color: #222638;
   font-size: 0.875rem;
   font-family: Inter,sans-serif;
@@ -14069,7 +14010,7 @@ exports[`orderSummary > should work with numberInputs 1`] = `
   text-decoration: none;
 }
 
-.emotion-77 {
+.emotion-73 {
   color: #222638;
   font-size: 0.875rem;
   font-family: Inter,sans-serif;
@@ -14081,7 +14022,7 @@ exports[`orderSummary > should work with numberInputs 1`] = `
   text-decoration: none;
 }
 
-.emotion-90 {
+.emotion-86 {
   color: #3f4250;
   font-size: 1rem;
   font-family: Inter,sans-serif;
@@ -14104,7 +14045,7 @@ exports[`orderSummary > should work with numberInputs 1`] = `
   font-size: 0.875rem;
 }
 
-.emotion-92 {
+.emotion-88 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -14128,7 +14069,7 @@ exports[`orderSummary > should work with numberInputs 1`] = `
   padding-left: 0.5rem;
 }
 
-.emotion-92 {
+.emotion-88 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -14152,7 +14093,32 @@ exports[`orderSummary > should work with numberInputs 1`] = `
   padding-left: 0.5rem;
 }
 
-.emotion-110 {
+.emotion-106 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  border-top: 1px solid #d9dadd;
+}
+
+.emotion-106 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -14197,12 +14163,9 @@ exports[`orderSummary > should work with numberInputs 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  gap: 1.5rem;
-  padding: 1.5rem;
-  border-top: 1px solid #d9dadd;
 }
 
-.emotion-114 {
+.emotion-110 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -14224,29 +14187,7 @@ exports[`orderSummary > should work with numberInputs 1`] = `
   flex-direction: column;
 }
 
-.emotion-114 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.emotion-116 {
+.emotion-112 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -14269,7 +14210,7 @@ exports[`orderSummary > should work with numberInputs 1`] = `
   gap: 0.5rem;
 }
 
-.emotion-116 {
+.emotion-112 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -14424,11 +14365,11 @@ exports[`orderSummary > should work with numberInputs 1`] = `
                   >
                     <button
                       aria-label="minus"
-                      class="emotion-48 emotion-49"
+                      class=" uv_e1wcoe0 uv_e1wcoe4 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                       type="button"
                     >
                       <svg
-                        class="emotion-50 emotion-32"
+                        class="emotion-48 emotion-32"
                         viewBox="0 0 16 16"
                       >
                         <path
@@ -14438,10 +14379,10 @@ exports[`orderSummary > should work with numberInputs 1`] = `
                     </button>
                   </div>
                   <div
-                    class="emotion-52 emotion-53 emotion-12"
+                    class="emotion-50 emotion-51 emotion-12"
                   >
                     <input
-                      class="emotion-55 emotion-56"
+                      class="emotion-53 emotion-54"
                       data-controls="true"
                       data-has-unit="false"
                       data-size="small"
@@ -14459,11 +14400,11 @@ exports[`orderSummary > should work with numberInputs 1`] = `
                   >
                     <button
                       aria-label="plus"
-                      class="emotion-48 emotion-49"
+                      class=" uv_e1wcoe0 uv_e1wcoe4 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                       type="button"
                     >
                       <svg
-                        class="emotion-50 emotion-32"
+                        class="emotion-48 emotion-32"
                         viewBox="0 0 16 16"
                       >
                         <path
@@ -14495,16 +14436,16 @@ exports[`orderSummary > should work with numberInputs 1`] = `
             </span>
           </div>
           <div
-            class="emotion-71 emotion-9"
+            class="emotion-67 emotion-9"
           >
             <div
-              class="emotion-71 emotion-9"
+              class="emotion-67 emotion-9"
             >
               <div
                 class="emotion-37 emotion-9"
               >
                 <span
-                  class="emotion-77 emotion-5"
+                  class="emotion-73 emotion-5"
                 >
                   Choose a duration
                 </span>
@@ -14522,10 +14463,10 @@ exports[`orderSummary > should work with numberInputs 1`] = `
                       data-unit="true"
                     >
                       <div
-                        class="emotion-52 emotion-53 emotion-12"
+                        class="emotion-50 emotion-51 emotion-12"
                       >
                         <input
-                          class="emotion-55 emotion-56"
+                          class="emotion-53 emotion-54"
                           data-controls="false"
                           data-has-unit="true"
                           data-size="small"
@@ -14537,7 +14478,7 @@ exports[`orderSummary > should work with numberInputs 1`] = `
                           value="2"
                         />
                         <span
-                          class="emotion-89 emotion-90 emotion-5"
+                          class="emotion-85 emotion-86 emotion-5"
                         >
                           ms
                         </span>
@@ -14547,55 +14488,55 @@ exports[`orderSummary > should work with numberInputs 1`] = `
                 </div>
               </div>
               <div
-                class="emotion-92 emotion-93"
+                class="emotion-88 emotion-89"
               />
             </div>
             <div
-              class="emotion-71 emotion-9"
+              class="emotion-67 emotion-9"
             >
               <div
                 class="emotion-37 emotion-9"
               >
                 <span
-                  class="emotion-77 emotion-5"
+                  class="emotion-73 emotion-5"
                 >
                   duration
                 </span>
               </div>
               <div
-                class="emotion-92 emotion-93"
+                class="emotion-88 emotion-89"
               />
             </div>
             <div
-              class="emotion-71 emotion-9"
+              class="emotion-67 emotion-9"
             >
               <div
                 class="emotion-37 emotion-9"
               >
                 <span
-                  class="emotion-77 emotion-5"
+                  class="emotion-73 emotion-5"
                 >
                   €1.00
                 </span>
               </div>
               <div
-                class="emotion-92 emotion-93"
+                class="emotion-88 emotion-89"
               />
             </div>
           </div>
         </div>
       </div>
       <div
-        class="emotion-110 emotion-111"
+        class="emotion-106 emotion-107"
       >
         <div
           class="emotion-37 emotion-9"
         >
           <div
-            class="emotion-114 emotion-9"
+            class="emotion-110 emotion-9"
           >
             <div
-              class="emotion-116 emotion-9"
+              class="emotion-112 emotion-9"
             >
               <span
                 class="emotion-39 emotion-5"

@@ -156,124 +156,6 @@ exports[`banner > renders correctly with a button 1`] = `
 }
 
 .emotion-14 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 2.5rem;
-  padding: 0 0.75rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: #8c40ef;
-  border: none;
-  color: #ffffff;
-}
-
-.emotion-14:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-14:active {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-14 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-14:hover,
-.emotion-14:active {
-  background: #792dd4;
-  color: #f9f9fa;
-}
-
-.emotion-16 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 2rem;
-  padding: 0 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #3f4250;
-}
-
-.emotion-16:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-16:active {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.emotion-16 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-16:hover,
-.emotion-16:active {
-  background: #e9eaeb;
-  color: #222638;
-}
-
-.emotion-18 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -282,7 +164,7 @@ exports[`banner > renders correctly with a button 1`] = `
   min-height: 1rem;
 }
 
-.emotion-18 .fillStroke {
+.emotion-14 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
@@ -324,7 +206,7 @@ exports[`banner > renders correctly with a button 1`] = `
           class="emotion-12 emotion-5"
         >
           <button
-            class="emotion-14 emotion-15"
+            class=" styles__e1wcoe0 styles_size_medium__e1wcoe2 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_filled__e1wcoeg styles_sentiment_primary__e1wcoe7 styles_undefined_compound_0__e1wcoel"
             type="button"
           >
             Button
@@ -332,12 +214,12 @@ exports[`banner > renders correctly with a button 1`] = `
         </div>
       </div>
       <button
-        class="emotion-16 emotion-17"
+        class=" styles__e1wcoe0 styles_size_small__e1wcoe3 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
         name="close"
         type="button"
       >
         <svg
-          class="emotion-18 emotion-19"
+          class="emotion-14 emotion-15"
           viewBox="0 0 16 16"
         >
           <path
@@ -615,65 +497,6 @@ exports[`banner > renders correctly with a link 1`] = `
 }
 
 .emotion-21 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 2rem;
-  padding: 0 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #3f4250;
-}
-
-.emotion-21:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-21:active {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.emotion-21 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-21:hover,
-.emotion-21:active {
-  background: #e9eaeb;
-  color: #222638;
-}
-
-.emotion-23 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -682,7 +505,7 @@ exports[`banner > renders correctly with a link 1`] = `
   min-height: 1rem;
 }
 
-.emotion-23 .fillStroke {
+.emotion-21 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
@@ -752,12 +575,12 @@ exports[`banner > renders correctly with a link 1`] = `
         </div>
       </div>
       <button
-        class="emotion-21 emotion-22"
+        class=" styles__e1wcoe0 styles_size_small__e1wcoe3 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
         name="close"
         type="button"
       >
         <svg
-          class="emotion-23 emotion-20"
+          class="emotion-21 emotion-20"
           viewBox="0 0 16 16"
         >
           <path
@@ -1074,65 +897,6 @@ exports[`banner > renders correctly with default values 1`] = `
 }
 
 .emotion-12 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 2rem;
-  padding: 0 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #3f4250;
-}
-
-.emotion-12:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-12:active {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.emotion-12 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-12:hover,
-.emotion-12:active {
-  background: #e9eaeb;
-  color: #222638;
-}
-
-.emotion-14 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -1141,7 +905,7 @@ exports[`banner > renders correctly with default values 1`] = `
   min-height: 1rem;
 }
 
-.emotion-14 .fillStroke {
+.emotion-12 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
@@ -1181,12 +945,12 @@ exports[`banner > renders correctly with default values 1`] = `
         </div>
       </div>
       <button
-        class="emotion-12 emotion-13"
+        class=" styles__e1wcoe0 styles_size_small__e1wcoe3 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
         name="close"
         type="button"
       >
         <svg
-          class="emotion-14 emotion-15"
+          class="emotion-12 emotion-13"
           viewBox="0 0 16 16"
         >
           <path
@@ -1332,65 +1096,6 @@ exports[`banner > renders correctly with direction row 1`] = `
 }
 
 .emotion-12 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 2rem;
-  padding: 0 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #3f4250;
-}
-
-.emotion-12:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-12:active {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.emotion-12 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-12:hover,
-.emotion-12:active {
-  background: #e9eaeb;
-  color: #222638;
-}
-
-.emotion-14 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -1399,7 +1104,7 @@ exports[`banner > renders correctly with direction row 1`] = `
   min-height: 1rem;
 }
 
-.emotion-14 .fillStroke {
+.emotion-12 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
@@ -1439,12 +1144,12 @@ exports[`banner > renders correctly with direction row 1`] = `
         </div>
       </div>
       <button
-        class="emotion-12 emotion-13"
+        class=" styles__e1wcoe0 styles_size_small__e1wcoe3 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
         name="close"
         type="button"
       >
         <svg
-          class="emotion-14 emotion-15"
+          class="emotion-12 emotion-13"
           viewBox="0 0 16 16"
         >
           <path
@@ -1768,65 +1473,6 @@ exports[`banner > should render correctly with dark theme 1`] = `
 }
 
 .emotion-21 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 2rem;
-  padding: 0 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #b8bac0;
-}
-
-.emotion-21:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-21:active {
-  box-shadow: 0px 0px 0px 3px #0c0f1a8c;
-}
-
-.emotion-21 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-21:hover,
-.emotion-21:active {
-  background: #303445;
-  color: #e9e9ec;
-}
-
-.emotion-23 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -1835,12 +1481,12 @@ exports[`banner > should render correctly with dark theme 1`] = `
   min-height: 1rem;
 }
 
-.emotion-23 .fillStroke {
+.emotion-21 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.emotion-23 {
+.emotion-21 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -1849,7 +1495,7 @@ exports[`banner > should render correctly with dark theme 1`] = `
   min-height: 1rem;
 }
 
-.emotion-23 .fillStroke {
+.emotion-21 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
@@ -1919,12 +1565,12 @@ exports[`banner > should render correctly with dark theme 1`] = `
         </div>
       </div>
       <button
-        class="emotion-21 emotion-22"
+        class=" styles__e1wcoe0 styles_size_small__e1wcoe3 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
         name="close"
         type="button"
       >
         <svg
-          class="emotion-23 emotion-20"
+          class="emotion-21 emotion-20"
           viewBox="0 0 16 16"
         >
           <path
@@ -2070,65 +1716,6 @@ exports[`banner > sizes and variants > renders correctly with size medium and va
 }
 
 .emotion-12 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 2rem;
-  padding: 0 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #3f4250;
-}
-
-.emotion-12:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-12:active {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.emotion-12 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-12:hover,
-.emotion-12:active {
-  background: #e9eaeb;
-  color: #222638;
-}
-
-.emotion-14 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -2137,7 +1724,7 @@ exports[`banner > sizes and variants > renders correctly with size medium and va
   min-height: 1rem;
 }
 
-.emotion-14 .fillStroke {
+.emotion-12 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
@@ -2177,12 +1764,12 @@ exports[`banner > sizes and variants > renders correctly with size medium and va
         </div>
       </div>
       <button
-        class="emotion-12 emotion-13"
+        class=" styles__e1wcoe0 styles_size_small__e1wcoe3 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
         name="close"
         type="button"
       >
         <svg
-          class="emotion-14 emotion-15"
+          class="emotion-12 emotion-13"
           viewBox="0 0 16 16"
         >
           <path
@@ -2328,65 +1915,6 @@ exports[`banner > sizes and variants > renders correctly with size medium and va
 }
 
 .emotion-12 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 2rem;
-  padding: 0 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: #8c40ef;
-  border: none;
-  color: #ffffff;
-}
-
-.emotion-12:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-12:active {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-12 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-12:hover,
-.emotion-12:active {
-  background: #792dd4;
-  color: #f9f9fa;
-}
-
-.emotion-14 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -2395,7 +1923,7 @@ exports[`banner > sizes and variants > renders correctly with size medium and va
   min-height: 1rem;
 }
 
-.emotion-14 .fillStroke {
+.emotion-12 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
@@ -2435,12 +1963,12 @@ exports[`banner > sizes and variants > renders correctly with size medium and va
         </div>
       </div>
       <button
-        class="emotion-12 emotion-13"
+        class=" styles__e1wcoe0 styles_size_small__e1wcoe3 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_filled__e1wcoeg styles_sentiment_primary__e1wcoe7 styles_undefined_compound_0__e1wcoel"
         name="close"
         type="button"
       >
         <svg
-          class="emotion-14 emotion-15"
+          class="emotion-12 emotion-13"
           viewBox="0 0 16 16"
         >
           <path
@@ -2586,65 +2114,6 @@ exports[`banner > sizes and variants > renders correctly with size small and var
 }
 
 .emotion-12 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 2rem;
-  padding: 0 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #3f4250;
-}
-
-.emotion-12:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-12:active {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.emotion-12 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-12:hover,
-.emotion-12:active {
-  background: #e9eaeb;
-  color: #222638;
-}
-
-.emotion-14 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -2653,7 +2122,7 @@ exports[`banner > sizes and variants > renders correctly with size small and var
   min-height: 1rem;
 }
 
-.emotion-14 .fillStroke {
+.emotion-12 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
@@ -2693,12 +2162,12 @@ exports[`banner > sizes and variants > renders correctly with size small and var
         </div>
       </div>
       <button
-        class="emotion-12 emotion-13"
+        class=" styles__e1wcoe0 styles_size_small__e1wcoe3 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
         name="close"
         type="button"
       >
         <svg
-          class="emotion-14 emotion-15"
+          class="emotion-12 emotion-13"
           viewBox="0 0 16 16"
         >
           <path
@@ -2844,65 +2313,6 @@ exports[`banner > sizes and variants > renders correctly with size small and var
 }
 
 .emotion-12 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 2rem;
-  padding: 0 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: #8c40ef;
-  border: none;
-  color: #ffffff;
-}
-
-.emotion-12:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-12:active {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-12 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-12:hover,
-.emotion-12:active {
-  background: #792dd4;
-  color: #f9f9fa;
-}
-
-.emotion-14 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -2911,7 +2321,7 @@ exports[`banner > sizes and variants > renders correctly with size small and var
   min-height: 1rem;
 }
 
-.emotion-14 .fillStroke {
+.emotion-12 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
@@ -2951,12 +2361,12 @@ exports[`banner > sizes and variants > renders correctly with size small and var
         </div>
       </div>
       <button
-        class="emotion-12 emotion-13"
+        class=" styles__e1wcoe0 styles_size_small__e1wcoe3 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_filled__e1wcoeg styles_sentiment_primary__e1wcoe7 styles_undefined_compound_0__e1wcoel"
         name="close"
         type="button"
       >
         <svg
-          class="emotion-14 emotion-15"
+          class="emotion-12 emotion-13"
           viewBox="0 0 16 16"
         >
           <path
