@@ -4,7 +4,9 @@ import { PencilIcon, PencilOutlineIcon } from '@ultraviolet/icons'
 import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
 import { describe, expect, test, vi } from 'vitest'
 import { SENTIMENTS } from '../../../theme'
-import { Button, buttonSizes, buttonVariants } from '..'
+import { Button, buttonSizes } from '..'
+
+const buttonVariants = ['ghost', 'filled', 'outlined'] as const
 
 const MockOnClick = () => {}
 const EXTENDED_SENTIMENTS = [...SENTIMENTS, 'black', 'white'] as const

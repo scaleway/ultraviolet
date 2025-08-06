@@ -31,16 +31,20 @@ You will also need to import fonts in your project by adding:
 
 ```tsx
 import { Global, ThemeProvider, css } from '@emotion/react'
+import { ThemeProvider as ThemeProviderUV } from '@ultraviolet/ui'
 import { Button, normalize, theme } from '@ultraviolet/ui'
+import '@ultraviolet/ui/styles'
 
 const App = () => (
   <ThemeProvider theme={theme}>
-    <Global
-      styles={css`
-        ${normalize()}
-      `}
-    />
-    <Button onClick={() => console.log('clicked')}>Click Me</Button>
+    <ThemeProviderUV>
+      <Global
+        styles={css`
+          ${normalize()}
+        `}
+      />
+      <Button onClick={() => console.log('clicked')}>Click Me</Button>
+    </ThemeProviderUV>
   </ThemeProvider>
 )
 ```
