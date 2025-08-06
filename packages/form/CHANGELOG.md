@@ -1,5 +1,14 @@
 # Change Log
 
+## 4.0.5
+
+### Patch Changes
+
+- [#5432](https://github.com/scaleway/ultraviolet/pull/5432) [`5eed7c8`](https://github.com/scaleway/ultraviolet/commit/5eed7c8834e4011fcc248bf8034e8e3c7d6b9c77) Thanks [@matthprost](https://github.com/matthprost)! - Remove unused package `react-select`
+
+- Updated dependencies [[`4285555`](https://github.com/scaleway/ultraviolet/commit/4285555acb58cd7648e58881daec180d76621e23)]:
+  - @ultraviolet/ui@2.0.5
+
 ## 4.0.4
 
 ### Patch Changes

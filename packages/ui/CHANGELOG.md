@@ -1,5 +1,11 @@
 # Change Log
 
+## 2.0.5
+
+### Patch Changes
+
+- [#5413](https://github.com/scaleway/ultraviolet/pull/5413) [`4285555`](https://github.com/scaleway/ultraviolet/commit/4285555acb58cd7648e58881daec180d76621e23) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<SelectInput />` to handle better tag display
+
 ## 2.0.4
 
 ### Patch Changes
