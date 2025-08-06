@@ -70,12 +70,12 @@
 - Updated dependencies [[`2779f6d`](https://github.com/scaleway/ultraviolet/commit/2779f6de81b6e4522cf304d94d09dcd4f2bcc6f7), [`0f049c0`](https://github.com/scaleway/ultraviolet/commit/0f049c044ba9208abf7a1a6a6ea0d911803ea542)]:
   - @ultraviolet/ui@2.1.1
 
-## 2.0.0
+## 2.0.0-beta.0
 
 ### Patch Changes
 
-- Updated dependencies [[`2be6ab9`](https://github.com/scaleway/ultraviolet/commit/2be6ab95b33591fb937f0c78e362a69702944bc4)]:
-  - @ultraviolet/ui@2.1.0
+- Updated dependencies [[`177fd92`](https://github.com/scaleway/ultraviolet/commit/177fd92f018b692084815705bf10537832368330)]:
+  - @ultraviolet/ui@3.0.0-beta.0
 
 ## 1.0.6
 
