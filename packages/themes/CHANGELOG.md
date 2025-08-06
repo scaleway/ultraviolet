@@ -1,5 +1,11 @@
 # Change Log
 
+## 2.1.0-beta.0
+
+### Minor Changes
+
+- [#5433](https://github.com/scaleway/ultraviolet/pull/5433) [`6f5f565`](https://github.com/scaleway/ultraviolet/commit/6f5f5650031f99808c710bfe069bdf7094ce336b) Thanks [@matthprost](https://github.com/matthprost)! - New `theme` provided that is a contract interface for vanilla extract
+
 ## 2.1.0
 
 ### Minor Changes
