@@ -48,18 +48,14 @@ const StyledSpan = styled('span', {
   display: block;
 
 
-  &:not([data-multiline]) {
-    &:after {
-      content: "";
-      ${({ theme }) => `padding-right: ${theme.space['8']}`};
-    }
+  &:not([data-multiline]):after {
+    content: "";
+    ${({ theme }) => `padding-right: ${theme.space['8']}`};
   }
 
-  &[data-multiline="true"]:nth-child(-n+2) {
-    &:after {
-      content: "";
-      ${({ theme }) => `padding-right: ${theme.space['8']}`};
-    }
+  &[data-multiline="true"]:nth-child(-n+2):after {
+    content: "";
+    ${({ theme }) => `padding-right: ${theme.space['8']}`};
   }
 
   ${({ prefix, theme }) =>
