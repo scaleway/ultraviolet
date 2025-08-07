@@ -52,7 +52,12 @@ type StyledPopupProps = {
 const stopClickPropagation: MouseEventHandler = event => {
   event.nativeEvent.stopImmediatePropagation()
 }
+const Container = styled.div`
 
+  &[data-max-height="true"] {
+    overflow: auto;
+  }
+`
 const StyledPopup = styled('div', {
   shouldForwardProp: prop =>
     ![
@@ -74,7 +79,6 @@ const StyledPopup = styled('div', {
     typeof maxWidth === 'number' ? `${maxWidth}px` : maxWidth};
   max-height: ${({ maxHeight }) =>
     typeof maxHeight === 'number' ? `${maxHeight}px` : maxHeight};
-  overflow: ${({ maxHeight }) => (maxHeight ? 'auto' : undefined)};
   overflow-wrap: break-word;
   font-size: 0.8rem;
   inset: 0 auto auto 0;
@@ -112,6 +116,10 @@ const StyledPopup = styled('div', {
   &[data-visible-in-dom="false"] {
     display: none;
   }
+
+  & > ${Container} {
+  max-height: ${({ theme, maxHeight }) => (maxHeight ? `calc(${typeof maxHeight === 'number' ? `${maxHeight}px` : maxHeight} - ${theme.space[2]})` : '100%')}
+}
 `
 
 export const StyledChildrenContainer = styled.div`
@@ -634,7 +642,7 @@ export const Popup = forwardRef(
                 reverseAnimation={reverseAnimation}
                 role={role}
               >
-                {text}
+                <Container data-max-height={!!maxHeight}>{text}</Container>
               </StyledPopup>,
               popupPortalTarget as HTMLElement,
             )

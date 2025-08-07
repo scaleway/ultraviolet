@@ -269,7 +269,15 @@ exports[`SelectInputField > should display right value on grouped options 1`] = 
   display: none;
 }
 
-.emotion-20 {
+.emotion-18>.emotion-21 {
+  max-height: 100%;
+}
+
+.emotion-20[data-max-height="true"] {
+  overflow: auto;
+}
+
+.emotion-22 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -291,7 +299,7 @@ exports[`SelectInputField > should display right value on grouped options 1`] = 
   flex-direction: column;
 }
 
-.emotion-22 {
+.emotion-24 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -318,11 +326,11 @@ exports[`SelectInputField > should display right value on grouped options 1`] = 
   padding-top: 0.25rem;
 }
 
-.emotion-22[data-grouped="true"] {
+.emotion-24[data-grouped="true"] {
   padding-top: 0rem;
 }
 
-.emotion-24 {
+.emotion-26 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -345,13 +353,13 @@ exports[`SelectInputField > should display right value on grouped options 1`] = 
   gap: 0.125rem;
 }
 
-.emotion-26 {
+.emotion-28 {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
 }
 
-.emotion-28 {
+.emotion-30 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -381,21 +389,21 @@ exports[`SelectInputField > should display right value on grouped options 1`] = 
   margin-bottom: 0.125rem;
 }
 
-.emotion-28:focus {
+.emotion-30:focus {
   background-color: #f9f9fa;
   outline: none;
 }
 
-.emotion-28[data-selectgroup='true'] {
+.emotion-30[data-selectgroup='true'] {
   padding-left: 1rem;
   border-left: 0.25rem solid #f9f9fa;
 }
 
-.emotion-28[data-selectgroup='true']:focus {
+.emotion-30[data-selectgroup='true']:focus {
   background-color: #e9eaeb;
 }
 
-.emotion-30 {
+.emotion-32 {
   color: #3f4250;
   font-size: 0.75rem;
   font-family: Inter,sans-serif;
@@ -408,7 +416,7 @@ exports[`SelectInputField > should display right value on grouped options 1`] = 
   text-align: left;
 }
 
-.emotion-34 {
+.emotion-36 {
   text-align: left;
   border: none;
   background-color: #ffffff;
@@ -420,31 +428,31 @@ exports[`SelectInputField > should display right value on grouped options 1`] = 
   border: 1px transparent solid;
 }
 
-.emotion-34:hover,
-.emotion-34:focus {
+.emotion-36:hover,
+.emotion-36:focus {
   background-color: #f1eefc;
   color: #641cb3;
   cursor: pointer;
 }
 
-.emotion-34[aria-selected='true'] {
+.emotion-36[aria-selected='true'] {
   background-color: #f1eefc;
 }
 
-.emotion-34[aria-disabled="true"] {
+.emotion-36[aria-disabled="true"] {
   background-color: #f3f3f4;
   color: #b5b7bd;
 }
 
-.emotion-34[aria-disabled="true"]:hover,
-.emotion-34 [aria-disabled="true"]:focus {
+.emotion-36[aria-disabled="true"]:hover,
+.emotion-36 [aria-disabled="true"]:focus {
   background-color: #f3f3f4;
   color: #b5b7bd;
   cursor: not-allowed;
   outline: none;
 }
 
-.emotion-38 {
+.emotion-40 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -467,7 +475,7 @@ exports[`SelectInputField > should display right value on grouped options 1`] = 
   overflow: hidden;
 }
 
-.emotion-41 {
+.emotion-43 {
   font-size: 1rem;
   font-family: Inter,sans-serif;
   font-weight: 400;
@@ -489,7 +497,7 @@ exports[`SelectInputField > should display right value on grouped options 1`] = 
   max-width: 100%;
 }
 
-.emotion-43 {
+.emotion-45 {
   color: #727683;
   font-size: 0.875rem;
   font-family: Inter,sans-serif;
@@ -569,304 +577,309 @@ exports[`SelectInputField > should display right value on grouped options 1`] = 
             style="opacity: 1;"
           >
             <div
-              class="emotion-20 emotion-7"
+              class="emotion-20 emotion-21"
+              data-max-height="false"
             >
               <div
-                class="emotion-22 emotion-23"
-                data-grouped="true"
-                id="select-dropdown"
-                role="listbox"
+                class="emotion-22 emotion-7"
               >
                 <div
-                  class="emotion-24 emotion-7"
+                  class="emotion-24 emotion-25"
+                  data-grouped="true"
+                  id="select-dropdown"
+                  role="listbox"
                 >
                   <div
-                    class="emotion-26 emotion-27"
+                    class="emotion-26 emotion-7"
                   >
-                    <button
+                    <div
                       class="emotion-28 emotion-29"
-                      data-selectgroup="false"
-                      data-testid="group-0"
-                      role="group"
-                      tabindex="-1"
-                      type="button"
                     >
-                      <span
-                        class="emotion-30 emotion-12"
+                      <button
+                        class="emotion-30 emotion-31"
+                        data-selectgroup="false"
+                        data-testid="group-0"
+                        role="group"
+                        tabindex="-1"
+                        type="button"
                       >
-                        JOVIAN PLANETS
-                      </span>
-                    </button>
-                  </div>
-                  <div
-                    class="emotion-24 emotion-7"
-                    id="items"
-                  >
-                    <div
-                      aria-disabled="false"
-                      aria-label="jupiter"
-                      aria-selected="false"
-                      class="emotion-34 emotion-35"
-                      data-testid="option-jupiter"
-                      id="option-0"
-                      role="option"
-                      tabindex="0"
-                    >
-                      <div
-                        class="emotion-6 emotion-7"
-                        data-testid="option-stack-jupiter"
-                      >
-                        <div
-                          class="emotion-38 emotion-39"
-                        >
-                          <span
-                            class="emotion-40 emotion-41 emotion-12"
-                          >
-                            Jupiter
-                          </span>
-                        </div>
                         <span
-                          class="emotion-43 emotion-12"
+                          class="emotion-32 emotion-12"
                         >
-                          Jupiter is the fifth planet from the Sun and the largest in the Solar System. It is a gas giant with a mass more than two and a half times that of all the other planets in the Solar System combined, and slightly less than one one-thousandth the mass of the Sun.
+                          JOVIAN PLANETS
                         </span>
-                      </div>
+                      </button>
                     </div>
                     <div
-                      aria-disabled="false"
-                      aria-label="saturn"
-                      aria-selected="false"
-                      class="emotion-34 emotion-35"
-                      data-testid="option-saturn"
-                      id="option-1"
-                      role="option"
-                      tabindex="0"
+                      class="emotion-26 emotion-7"
+                      id="items"
                     >
                       <div
-                        class="emotion-6 emotion-7"
-                        data-testid="option-stack-saturn"
+                        aria-disabled="false"
+                        aria-label="jupiter"
+                        aria-selected="false"
+                        class="emotion-36 emotion-37"
+                        data-testid="option-jupiter"
+                        id="option-0"
+                        role="option"
+                        tabindex="0"
                       >
                         <div
-                          class="emotion-38 emotion-39"
+                          class="emotion-6 emotion-7"
+                          data-testid="option-stack-jupiter"
                         >
-                          <span
-                            class="emotion-40 emotion-41 emotion-12"
+                          <div
+                            class="emotion-40 emotion-41"
                           >
-                            Saturn
+                            <span
+                              class="emotion-42 emotion-43 emotion-12"
+                            >
+                              Jupiter
+                            </span>
+                          </div>
+                          <span
+                            class="emotion-45 emotion-12"
+                          >
+                            Jupiter is the fifth planet from the Sun and the largest in the Solar System. It is a gas giant with a mass more than two and a half times that of all the other planets in the Solar System combined, and slightly less than one one-thousandth the mass of the Sun.
                           </span>
                         </div>
                       </div>
-                    </div>
-                    <div
-                      aria-disabled="false"
-                      aria-label="uranus"
-                      aria-selected="false"
-                      class="emotion-34 emotion-35"
-                      data-testid="option-uranus"
-                      id="option-2"
-                      role="option"
-                      tabindex="0"
-                    >
                       <div
-                        class="emotion-6 emotion-7"
-                        data-testid="option-stack-uranus"
+                        aria-disabled="false"
+                        aria-label="saturn"
+                        aria-selected="false"
+                        class="emotion-36 emotion-37"
+                        data-testid="option-saturn"
+                        id="option-1"
+                        role="option"
+                        tabindex="0"
                       >
                         <div
-                          class="emotion-38 emotion-39"
+                          class="emotion-6 emotion-7"
+                          data-testid="option-stack-saturn"
                         >
-                          <span
-                            class="emotion-40 emotion-41 emotion-12"
+                          <div
+                            class="emotion-40 emotion-41"
                           >
-                            Uranus
-                          </span>
+                            <span
+                              class="emotion-42 emotion-43 emotion-12"
+                            >
+                              Saturn
+                            </span>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <div
-                      aria-disabled="false"
-                      aria-label="neptune"
-                      aria-selected="false"
-                      class="emotion-34 emotion-35"
-                      data-testid="option-neptune"
-                      id="option-3"
-                      role="option"
-                      tabindex="0"
-                    >
                       <div
-                        class="emotion-6 emotion-7"
-                        data-testid="option-stack-neptune"
+                        aria-disabled="false"
+                        aria-label="uranus"
+                        aria-selected="false"
+                        class="emotion-36 emotion-37"
+                        data-testid="option-uranus"
+                        id="option-2"
+                        role="option"
+                        tabindex="0"
                       >
                         <div
-                          class="emotion-38 emotion-39"
+                          class="emotion-6 emotion-7"
+                          data-testid="option-stack-uranus"
                         >
-                          <span
-                            class="emotion-40 emotion-41 emotion-12"
+                          <div
+                            class="emotion-40 emotion-41"
                           >
-                            Neptune
-                          </span>
+                            <span
+                              class="emotion-42 emotion-43 emotion-12"
+                            >
+                              Uranus
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        aria-disabled="false"
+                        aria-label="neptune"
+                        aria-selected="false"
+                        class="emotion-36 emotion-37"
+                        data-testid="option-neptune"
+                        id="option-3"
+                        role="option"
+                        tabindex="0"
+                      >
+                        <div
+                          class="emotion-6 emotion-7"
+                          data-testid="option-stack-neptune"
+                        >
+                          <div
+                            class="emotion-40 emotion-41"
+                          >
+                            <span
+                              class="emotion-42 emotion-43 emotion-12"
+                            >
+                              Neptune
+                            </span>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div
-                  class="emotion-24 emotion-7"
-                >
                   <div
-                    class="emotion-26 emotion-27"
+                    class="emotion-26 emotion-7"
                   >
-                    <button
+                    <div
                       class="emotion-28 emotion-29"
-                      data-selectgroup="false"
-                      data-testid="group-1"
-                      role="group"
-                      tabindex="-1"
-                      type="button"
                     >
-                      <span
-                        class="emotion-30 emotion-12"
+                      <button
+                        class="emotion-30 emotion-31"
+                        data-selectgroup="false"
+                        data-testid="group-1"
+                        role="group"
+                        tabindex="-1"
+                        type="button"
                       >
-                        TERRESTRIAL PLANETS
-                      </span>
-                    </button>
-                  </div>
-                  <div
-                    class="emotion-24 emotion-7"
-                    id="items"
-                  >
-                    <div
-                      aria-disabled="false"
-                      aria-label="mercury"
-                      aria-selected="true"
-                      class="emotion-34 emotion-35"
-                      data-testid="option-mercury"
-                      id="option-0"
-                      role="option"
-                      tabindex="0"
-                    >
-                      <div
-                        class="emotion-6 emotion-7"
-                        data-testid="option-stack-mercury"
-                      >
-                        <div
-                          class="emotion-38 emotion-39"
-                        >
-                          <span
-                            class="emotion-40 emotion-41 emotion-12"
-                          >
-                            Mercury
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      aria-disabled="false"
-                      aria-label="venus"
-                      aria-selected="false"
-                      class="emotion-34 emotion-35"
-                      data-testid="option-venus"
-                      id="option-1"
-                      role="option"
-                      tabindex="0"
-                    >
-                      <div
-                        class="emotion-6 emotion-7"
-                        data-testid="option-stack-venus"
-                      >
-                        <div
-                          class="emotion-38 emotion-39"
-                        >
-                          <span
-                            class="emotion-40 emotion-41 emotion-12"
-                          >
-                            Venus
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      aria-disabled="false"
-                      aria-label="earth"
-                      aria-selected="false"
-                      class="emotion-34 emotion-35"
-                      data-testid="option-earth"
-                      id="option-2"
-                      role="option"
-                      tabindex="0"
-                    >
-                      <div
-                        class="emotion-6 emotion-7"
-                        data-testid="option-stack-earth"
-                      >
-                        <div
-                          class="emotion-38 emotion-39"
-                        >
-                          <span
-                            class="emotion-40 emotion-41 emotion-12"
-                          >
-                            Earth
-                          </span>
-                        </div>
                         <span
-                          class="emotion-43 emotion-12"
+                          class="emotion-32 emotion-12"
                         >
-                          Our home planet
+                          TERRESTRIAL PLANETS
                         </span>
-                      </div>
+                      </button>
                     </div>
                     <div
-                      aria-disabled="true"
-                      aria-label="mars"
-                      aria-selected="false"
-                      class="emotion-34 emotion-35"
-                      data-testid="option-mars"
-                      id="option-3"
-                      role="option"
-                      tabindex="-1"
+                      class="emotion-26 emotion-7"
+                      id="items"
                     >
                       <div
-                        class="emotion-6 emotion-7"
-                        data-testid="option-stack-mars"
+                        aria-disabled="false"
+                        aria-label="mercury"
+                        aria-selected="true"
+                        class="emotion-36 emotion-37"
+                        data-testid="option-mercury"
+                        id="option-0"
+                        role="option"
+                        tabindex="0"
                       >
                         <div
-                          class="emotion-38 emotion-39"
+                          class="emotion-6 emotion-7"
+                          data-testid="option-stack-mercury"
                         >
-                          <span
-                            class="emotion-40 emotion-41 emotion-12"
+                          <div
+                            class="emotion-40 emotion-41"
                           >
-                            Mars
+                            <span
+                              class="emotion-42 emotion-43 emotion-12"
+                            >
+                              Mercury
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        aria-disabled="false"
+                        aria-label="venus"
+                        aria-selected="false"
+                        class="emotion-36 emotion-37"
+                        data-testid="option-venus"
+                        id="option-1"
+                        role="option"
+                        tabindex="0"
+                      >
+                        <div
+                          class="emotion-6 emotion-7"
+                          data-testid="option-stack-venus"
+                        >
+                          <div
+                            class="emotion-40 emotion-41"
+                          >
+                            <span
+                              class="emotion-42 emotion-43 emotion-12"
+                            >
+                              Venus
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        aria-disabled="false"
+                        aria-label="earth"
+                        aria-selected="false"
+                        class="emotion-36 emotion-37"
+                        data-testid="option-earth"
+                        id="option-2"
+                        role="option"
+                        tabindex="0"
+                      >
+                        <div
+                          class="emotion-6 emotion-7"
+                          data-testid="option-stack-earth"
+                        >
+                          <div
+                            class="emotion-40 emotion-41"
+                          >
+                            <span
+                              class="emotion-42 emotion-43 emotion-12"
+                            >
+                              Earth
+                            </span>
+                          </div>
+                          <span
+                            class="emotion-45 emotion-12"
+                          >
+                            Our home planet
                           </span>
                         </div>
                       </div>
-                    </div>
-                    <div
-                      aria-disabled="false"
-                      aria-label="pluto"
-                      aria-selected="false"
-                      class="emotion-34 emotion-35"
-                      data-testid="option-pluto"
-                      id="option-4"
-                      role="option"
-                      tabindex="0"
-                    >
                       <div
-                        class="emotion-6 emotion-7"
-                        data-testid="option-stack-pluto"
+                        aria-disabled="true"
+                        aria-label="mars"
+                        aria-selected="false"
+                        class="emotion-36 emotion-37"
+                        data-testid="option-mars"
+                        id="option-3"
+                        role="option"
+                        tabindex="-1"
                       >
                         <div
-                          class="emotion-38 emotion-39"
+                          class="emotion-6 emotion-7"
+                          data-testid="option-stack-mars"
                         >
-                          <span
-                            class="emotion-40 emotion-41 emotion-12"
+                          <div
+                            class="emotion-40 emotion-41"
                           >
-                            Pluto
+                            <span
+                              class="emotion-42 emotion-43 emotion-12"
+                            >
+                              Mars
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        aria-disabled="false"
+                        aria-label="pluto"
+                        aria-selected="false"
+                        class="emotion-36 emotion-37"
+                        data-testid="option-pluto"
+                        id="option-4"
+                        role="option"
+                        tabindex="0"
+                      >
+                        <div
+                          class="emotion-6 emotion-7"
+                          data-testid="option-stack-pluto"
+                        >
+                          <div
+                            class="emotion-40 emotion-41"
+                          >
+                            <span
+                              class="emotion-42 emotion-43 emotion-12"
+                            >
+                              Pluto
+                            </span>
+                          </div>
+                          <span
+                            class="emotion-45 emotion-12"
+                          >
+                            Pluto does not fit the usual classification of either terrestrial or Jovian planets, but is rocky
                           </span>
                         </div>
-                        <span
-                          class="emotion-43 emotion-12"
-                        >
-                          Pluto does not fit the usual classification of either terrestrial or Jovian planets, but is rocky
-                        </span>
                       </div>
                     </div>
                   </div>
