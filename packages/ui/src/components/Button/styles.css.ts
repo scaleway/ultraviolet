@@ -213,11 +213,11 @@ function getGhostStyle(sentiment: (typeof sentiments)[number]) {
 }
 
 const sharedSizeStyled = {
-  fontSize: theme.typography.bodyStrong.fontSize,
-  fontFamily: theme.typography.bodyStrong.fontFamily,
-  fontWeight: theme.typography.bodyStrong.weight,
-  letterSpacing: theme.typography.bodyStrong.letterSpacing,
-  lineHeight: theme.typography.bodyStrong.lineHeight,
+  fontSize: theme.typography.bodySmallStrong.fontSize,
+  fontFamily: theme.typography.bodySmallStrong.fontFamily,
+  fontWeight: theme.typography.bodySmallStrong.weight,
+  letterSpacing: theme.typography.bodySmallStrong.letterSpacing,
+  lineHeight: theme.typography.bodySmallStrong.lineHeight,
 }
 
 export const button = recipe({
@@ -245,7 +245,11 @@ export const button = recipe({
         paddingLeft: theme.space[SIZE_PADDING_KEY.large],
         paddingRight: theme.space[SIZE_PADDING_KEY.large],
         gap: theme.space[SIZE_GAP_KEY.large],
-        ...sharedSizeStyled,
+        fontSize: theme.typography.bodyStrong.fontSize,
+        fontFamily: theme.typography.bodyStrong.fontFamily,
+        fontWeight: theme.typography.bodyStrong.weight,
+        letterSpacing: theme.typography.bodyStrong.letterSpacing,
+        lineHeight: theme.typography.bodyStrong.lineHeight,
       },
       medium: {
         height: theme.sizing[SIZE_HEIGHT.medium],
