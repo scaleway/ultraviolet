@@ -1,6 +1,5 @@
 'use client'
 
-import styled from '@emotion/styled'
 import type { ReactNode } from 'react'
 import type { FieldValues, UseFormReturn } from 'react-hook-form'
 import { FormProvider } from 'react-hook-form'
@@ -17,10 +16,6 @@ type FormProps<TFieldValues extends FieldValues> = {
   onSubmit: (data: TFieldValues) => Promise<OnSubmitReturn> | OnSubmitReturn
   methods: UseFormReturn<TFieldValues>
 }
-
-const StyledForm = styled.form`
-  display: contents;
-`
 
 export const Form = <TFieldValues extends FieldValues>({
   children,
@@ -43,7 +38,7 @@ export const Form = <TFieldValues extends FieldValues>({
   return (
     <FormProvider {...methods}>
       <ErrorProvider errors={{ ...defaultErrors, ...errors }}>
-        <StyledForm
+        <form
           name={name}
           noValidate
           onSubmit={async e => {
@@ -51,9 +46,10 @@ export const Form = <TFieldValues extends FieldValues>({
             e.stopPropagation()
             await handleSubmit(e)
           }}
+          style={{ display: 'contents' }}
         >
           {children}
-        </StyledForm>
+        </form>
       </ErrorProvider>
     </FormProvider>
   )
