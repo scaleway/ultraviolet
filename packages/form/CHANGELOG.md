@@ -67,6 +67,19 @@
   - @ultraviolet/icons@4.0.4
   - @ultraviolet/ui@2.1.1
 
+## 5.0.0-beta.3
+
+### Minor Changes
+
+- [#5439](https://github.com/scaleway/ultraviolet/pull/5439) [`32f1db8`](https://github.com/scaleway/ultraviolet/commit/32f1db8081e1dcb36c4ba39a035990e0a78d6eec) Thanks [@matthprost](https://github.com/matthprost)! - Remove all usages of `emotion` within the package
+
+### Patch Changes
+
+- [#5445](https://github.com/scaleway/ultraviolet/pull/5445) [`db1aedc`](https://github.com/scaleway/ultraviolet/commit/db1aedce578a5d1caedc299d666d8584250421b1) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<TextArea />` when tooltip is set
+
+- Updated dependencies [[`9187560`](https://github.com/scaleway/ultraviolet/commit/9187560d39c6f7b1145bbc2df76898d7a797b78a), [`db1aedc`](https://github.com/scaleway/ultraviolet/commit/db1aedce578a5d1caedc299d666d8584250421b1), [`cd7bed7`](https://github.com/scaleway/ultraviolet/commit/cd7bed7983dcae8c072b1140d1cbd92d8d026624)]:
+  - @ultraviolet/ui@3.0.0-beta.3
+
 ## 5.0.0-beta.2
 
 ### Patch Changes
