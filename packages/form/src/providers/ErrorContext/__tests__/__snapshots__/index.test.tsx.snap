@@ -2,16 +2,12 @@
 
 exports[`errorProvider > renders correctly  1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: contents;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <form
-      class="emotion-0 emotion-1"
       novalidate=""
+      style="display: contents;"
     >
       Test
     </form>
