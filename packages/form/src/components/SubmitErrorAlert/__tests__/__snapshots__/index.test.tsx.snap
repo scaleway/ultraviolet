@@ -3,10 +3,6 @@
 exports[`submitErrorAlert > should display an alert when submitError is present 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  display: contents;
-}
-
-.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -34,7 +30,7 @@ exports[`submitErrorAlert > should display an alert when submitError is present 
   border-left: 4px solid #b3144d;
 }
 
-.emotion-4 {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -61,7 +57,7 @@ exports[`submitErrorAlert > should display an alert when submitError is present 
   width: 100%;
 }
 
-.emotion-6 {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -87,7 +83,7 @@ exports[`submitErrorAlert > should display an alert when submitError is present 
   gap: 1rem;
 }
 
-.emotion-8 {
+.emotion-6 {
   vertical-align: middle;
   fill: #b3144d;
   height: 1.5rem;
@@ -96,12 +92,12 @@ exports[`submitErrorAlert > should display an alert when submitError is present 
   min-height: 1.5rem;
 }
 
-.emotion-8 .fillStroke {
+.emotion-6 .fillStroke {
   stroke: #b3144d;
   fill: none;
 }
 
-.emotion-10 {
+.emotion-8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -132,7 +128,7 @@ exports[`submitErrorAlert > should display an alert when submitError is present 
   flex-wrap: wrap;
 }
 
-.emotion-12 {
+.emotion-10 {
   font-size: 1rem;
   font-family: Inter,sans-serif;
   font-weight: 400;
@@ -147,8 +143,8 @@ exports[`submitErrorAlert > should display an alert when submitError is present 
     data-testid="testing"
   >
     <form
-      class="emotion-0 emotion-1"
       novalidate=""
+      style="display: contents;"
     >
       <button
         class=" uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoej uv_e1wcoeg uv_e1wcoe7 uv_e1wcoel"
@@ -158,16 +154,16 @@ exports[`submitErrorAlert > should display an alert when submitError is present 
         Submit
       </button>
       <div
-        class="emotion-2 emotion-3"
+        class="emotion-0 emotion-1"
       >
         <div
-          class="emotion-4 emotion-5"
+          class="emotion-2 emotion-3"
         >
           <div
-            class="emotion-6 emotion-7"
+            class="emotion-4 emotion-5"
           >
             <svg
-              class="emotion-8 emotion-9"
+              class="emotion-6 emotion-7"
               viewBox="0 0 20 20"
             >
               <path
@@ -177,10 +173,10 @@ exports[`submitErrorAlert > should display an alert when submitError is present 
               />
             </svg>
             <div
-              class="emotion-10 emotion-11"
+              class="emotion-8 emotion-9"
             >
               <p
-                class="emotion-12 emotion-13"
+                class="emotion-10 emotion-11"
               >
                 hello
               </p>
@@ -196,16 +192,12 @@ exports[`submitErrorAlert > should display an alert when submitError is present 
 
 exports[`submitErrorAlert > should render nothing if no error 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: contents;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <form
-      class="emotion-0 emotion-1"
       novalidate=""
+      style="display: contents;"
     />
   </div>
 </DocumentFragment>

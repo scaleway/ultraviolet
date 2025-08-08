@@ -3,10 +3,6 @@
 exports[`textAreaField > should render correctly 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  display: contents;
-}
-
-.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -29,7 +25,7 @@ exports[`textAreaField > should render correctly 1`] = `
   gap: 0.25rem;
 }
 
-.emotion-5 {
+.emotion-3 {
   color: #3f4250;
   font-size: 1rem;
   font-family: Inter,sans-serif;
@@ -42,7 +38,7 @@ exports[`textAreaField > should render correctly 1`] = `
   cursor: pointer;
 }
 
-.emotion-7 {
+.emotion-5 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -51,7 +47,7 @@ exports[`textAreaField > should render correctly 1`] = `
   width: 100%;
 }
 
-.emotion-9 {
+.emotion-7 {
   width: 100%;
   resize: vertical;
   background: #ffffff;
@@ -62,68 +58,68 @@ exports[`textAreaField > should render correctly 1`] = `
   padding-right: calc(1.5rem + 0px + 0px);
 }
 
-.emotion-9::-webkit-input-placeholder {
+.emotion-7::-webkit-input-placeholder {
   color: #727683;
 }
 
-.emotion-9::-moz-placeholder {
+.emotion-7::-moz-placeholder {
   color: #727683;
 }
 
-.emotion-9:-ms-input-placeholder {
+.emotion-7:-ms-input-placeholder {
   color: #727683;
 }
 
-.emotion-9::placeholder {
+.emotion-7::placeholder {
   color: #727683;
 }
 
-.emotion-9[data-success='true'] {
+.emotion-7[data-success='true'] {
   border-color: #22674e;
 }
 
-.emotion-9[data-error='true'] {
+.emotion-7[data-error='true'] {
   border-color: #b3144d;
 }
 
-.emotion-9[data-readonly='true'] {
+.emotion-7[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
 }
 
-.emotion-9:disabled {
+.emotion-7:disabled {
   background: #f3f3f4;
   border-color: #e9eaeb;
   color: #b5b7bd;
 }
 
-.emotion-9:disabled::-webkit-input-placeholder {
+.emotion-7:disabled::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-9:disabled::-moz-placeholder {
+.emotion-7:disabled::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-9:disabled:-ms-input-placeholder {
+.emotion-7:disabled:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-9:disabled::placeholder {
+.emotion-7:disabled::placeholder {
   color: #b5b7bd;
 }
 
-.emotion-9:not(:disabled):hover {
+.emotion-7:not(:disabled):hover {
   border-color: #8c40ef;
 }
 
-.emotion-9:not(:disabled):focus {
+.emotion-7:not(:disabled):focus {
   outline: none;
   border-color: #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-11 {
+.emotion-9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -153,33 +149,33 @@ exports[`textAreaField > should render correctly 1`] = `
     data-testid="testing"
   >
     <form
-      class="emotion-0 emotion-1"
       novalidate=""
+      style="display: contents;"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="emotion-0 emotion-1"
       >
         <label
-          class="emotion-4 emotion-5 emotion-6"
-          for="_r_0_"
+          class="emotion-2 emotion-3 emotion-4"
+          for="«r0»"
         >
           Test
         </label>
         <div
-          class="emotion-7 emotion-8"
+          class="emotion-5 emotion-6"
         >
           <textarea
             aria-invalid="false"
-            class="emotion-9 emotion-10"
+            class="emotion-7 emotion-8"
             data-error="false"
             data-readonly="false"
             data-success="false"
-            id="_r_0_"
+            id="«r0»"
             name="test"
             rows="3"
           />
           <div
-            class="emotion-11 emotion-12"
+            class="emotion-9 emotion-10"
           />
         </div>
       </div>
@@ -191,10 +187,6 @@ exports[`textAreaField > should render correctly 1`] = `
 exports[`textAreaField > should render correctly generated 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  display: contents;
-}
-
-.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -217,7 +209,7 @@ exports[`textAreaField > should render correctly generated 1`] = `
   gap: 0.25rem;
 }
 
-.emotion-4 {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -240,7 +232,7 @@ exports[`textAreaField > should render correctly generated 1`] = `
   gap: 0.25rem;
 }
 
-.emotion-7 {
+.emotion-5 {
   color: #3f4250;
   font-size: 1rem;
   font-family: Inter,sans-serif;
@@ -253,7 +245,7 @@ exports[`textAreaField > should render correctly generated 1`] = `
   cursor: pointer;
 }
 
-.emotion-9 {
+.emotion-7 {
   color: #b3144d;
   font-size: 1rem;
   font-family: Inter,sans-serif;
@@ -265,7 +257,7 @@ exports[`textAreaField > should render correctly generated 1`] = `
   text-decoration: none;
 }
 
-.emotion-11 {
+.emotion-9 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -274,7 +266,7 @@ exports[`textAreaField > should render correctly generated 1`] = `
   width: 100%;
 }
 
-.emotion-13 {
+.emotion-11 {
   width: 100%;
   resize: vertical;
   background: #ffffff;
@@ -285,68 +277,68 @@ exports[`textAreaField > should render correctly generated 1`] = `
   padding-right: calc(1.5rem + 300px + 0px);
 }
 
-.emotion-13::-webkit-input-placeholder {
+.emotion-11::-webkit-input-placeholder {
   color: #727683;
 }
 
-.emotion-13::-moz-placeholder {
+.emotion-11::-moz-placeholder {
   color: #727683;
 }
 
-.emotion-13:-ms-input-placeholder {
+.emotion-11:-ms-input-placeholder {
   color: #727683;
 }
 
-.emotion-13::placeholder {
+.emotion-11::placeholder {
   color: #727683;
 }
 
-.emotion-13[data-success='true'] {
+.emotion-11[data-success='true'] {
   border-color: #22674e;
 }
 
-.emotion-13[data-error='true'] {
+.emotion-11[data-error='true'] {
   border-color: #b3144d;
 }
 
-.emotion-13[data-readonly='true'] {
+.emotion-11[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
 }
 
-.emotion-13:disabled {
+.emotion-11:disabled {
   background: #f3f3f4;
   border-color: #e9eaeb;
   color: #b5b7bd;
 }
 
-.emotion-13:disabled::-webkit-input-placeholder {
+.emotion-11:disabled::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-13:disabled::-moz-placeholder {
+.emotion-11:disabled::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-13:disabled:-ms-input-placeholder {
+.emotion-11:disabled:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-13:disabled::placeholder {
+.emotion-11:disabled::placeholder {
   color: #b5b7bd;
 }
 
-.emotion-13:not(:disabled):hover {
+.emotion-11:not(:disabled):hover {
   border-color: #8c40ef;
 }
 
-.emotion-13:not(:disabled):focus {
+.emotion-11:not(:disabled):focus {
   outline: none;
   border-color: #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-15 {
+.emotion-13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -372,7 +364,7 @@ exports[`textAreaField > should render correctly generated 1`] = `
   right: 0.5rem;
 }
 
-.emotion-17 {
+.emotion-15 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -381,7 +373,7 @@ exports[`textAreaField > should render correctly generated 1`] = `
   min-height: 1rem;
 }
 
-.emotion-17 .fillStroke {
+.emotion-15 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
@@ -390,44 +382,44 @@ exports[`textAreaField > should render correctly generated 1`] = `
     data-testid="testing"
   >
     <form
-      class="emotion-0 emotion-1"
       novalidate=""
+      style="display: contents;"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="emotion-0 emotion-1"
       >
         <div
-          class="emotion-4 emotion-3"
+          class="emotion-2 emotion-1"
         >
           <label
-            class="emotion-6 emotion-7 emotion-8"
-            for="_r_7_"
+            class="emotion-4 emotion-5 emotion-6"
+            for="«r7»"
           >
             Test
           </label>
           <span
-            class="emotion-9 emotion-8"
+            class="emotion-7 emotion-6"
           >
             *
           </span>
         </div>
         <div
-          class="emotion-11 emotion-12"
+          class="emotion-9 emotion-10"
         >
           <textarea
             aria-invalid="false"
-            class="emotion-13 emotion-14"
+            class="emotion-11 emotion-12"
             data-error="false"
             data-readonly="false"
             data-success="false"
-            id="_r_7_"
+            id="«r7»"
             name="test"
             rows="3"
           >
             This is an example
           </textarea>
           <div
-            class="emotion-15 emotion-16"
+            class="emotion-13 emotion-14"
           >
             <button
               aria-label="clear value"
@@ -435,7 +427,7 @@ exports[`textAreaField > should render correctly generated 1`] = `
               type="button"
             >
               <svg
-                class="emotion-17 emotion-18"
+                class="emotion-15 emotion-16"
                 viewBox="0 0 16 16"
               >
                 <path
@@ -460,10 +452,6 @@ exports[`textAreaField > should render correctly generated 1`] = `
 exports[`textAreaField > should submit with onSubmitEnter prop 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  display: contents;
-}
-
-.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -486,7 +474,7 @@ exports[`textAreaField > should submit with onSubmitEnter prop 1`] = `
   gap: 0.25rem;
 }
 
-.emotion-5 {
+.emotion-3 {
   color: #3f4250;
   font-size: 1rem;
   font-family: Inter,sans-serif;
@@ -499,7 +487,7 @@ exports[`textAreaField > should submit with onSubmitEnter prop 1`] = `
   cursor: pointer;
 }
 
-.emotion-7 {
+.emotion-5 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -508,7 +496,7 @@ exports[`textAreaField > should submit with onSubmitEnter prop 1`] = `
   width: 100%;
 }
 
-.emotion-9 {
+.emotion-7 {
   width: 100%;
   resize: vertical;
   background: #ffffff;
@@ -519,68 +507,68 @@ exports[`textAreaField > should submit with onSubmitEnter prop 1`] = `
   padding-right: calc(1.5rem + 0px + 0px);
 }
 
-.emotion-9::-webkit-input-placeholder {
+.emotion-7::-webkit-input-placeholder {
   color: #727683;
 }
 
-.emotion-9::-moz-placeholder {
+.emotion-7::-moz-placeholder {
   color: #727683;
 }
 
-.emotion-9:-ms-input-placeholder {
+.emotion-7:-ms-input-placeholder {
   color: #727683;
 }
 
-.emotion-9::placeholder {
+.emotion-7::placeholder {
   color: #727683;
 }
 
-.emotion-9[data-success='true'] {
+.emotion-7[data-success='true'] {
   border-color: #22674e;
 }
 
-.emotion-9[data-error='true'] {
+.emotion-7[data-error='true'] {
   border-color: #b3144d;
 }
 
-.emotion-9[data-readonly='true'] {
+.emotion-7[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
 }
 
-.emotion-9:disabled {
+.emotion-7:disabled {
   background: #f3f3f4;
   border-color: #e9eaeb;
   color: #b5b7bd;
 }
 
-.emotion-9:disabled::-webkit-input-placeholder {
+.emotion-7:disabled::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-9:disabled::-moz-placeholder {
+.emotion-7:disabled::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-9:disabled:-ms-input-placeholder {
+.emotion-7:disabled:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-9:disabled::placeholder {
+.emotion-7:disabled::placeholder {
   color: #b5b7bd;
 }
 
-.emotion-9:not(:disabled):hover {
+.emotion-7:not(:disabled):hover {
   border-color: #8c40ef;
 }
 
-.emotion-9:not(:disabled):focus {
+.emotion-7:not(:disabled):focus {
   outline: none;
   border-color: #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-11 {
+.emotion-9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -610,35 +598,35 @@ exports[`textAreaField > should submit with onSubmitEnter prop 1`] = `
     data-testid="testing"
   >
     <form
-      class="emotion-0 emotion-1"
       novalidate=""
+      style="display: contents;"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="emotion-0 emotion-1"
       >
         <label
-          class="emotion-4 emotion-5 emotion-6"
-          for="_r_3_"
+          class="emotion-2 emotion-3 emotion-4"
+          for="«r3»"
         >
           Test
         </label>
         <div
-          class="emotion-7 emotion-8"
+          class="emotion-5 emotion-6"
         >
           <textarea
             aria-invalid="false"
-            class="emotion-9 emotion-10"
+            class="emotion-7 emotion-8"
             data-error="false"
             data-readonly="false"
             data-success="false"
-            id="_r_3_"
+            id="«r3»"
             name="test"
             rows="3"
           >
             This is an example
           </textarea>
           <div
-            class="emotion-11 emotion-12"
+            class="emotion-9 emotion-10"
           />
         </div>
       </div>

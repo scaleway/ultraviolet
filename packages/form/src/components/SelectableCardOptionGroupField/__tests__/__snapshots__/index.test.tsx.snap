@@ -3,10 +3,6 @@
 exports[`selectableCardOptionGroupField > should render correctly 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  display: contents;
-}
-
-.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -29,13 +25,13 @@ exports[`selectableCardOptionGroupField > should render correctly 1`] = `
   gap: 0.5rem;
 }
 
-.emotion-4 {
+.emotion-2 {
   border: none;
   padding: 0;
   margin: 0;
 }
 
-.emotion-6 {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -58,7 +54,7 @@ exports[`selectableCardOptionGroupField > should render correctly 1`] = `
   gap: 0.75rem;
 }
 
-.emotion-9 {
+.emotion-7 {
   color: #3f4250;
   font-size: 1rem;
   font-family: Inter,sans-serif;
@@ -71,7 +67,7 @@ exports[`selectableCardOptionGroupField > should render correctly 1`] = `
   cursor: text;
 }
 
-.emotion-11 {
+.emotion-9 {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
@@ -85,7 +81,7 @@ exports[`selectableCardOptionGroupField > should render correctly 1`] = `
   justify-content: normal;
 }
 
-.emotion-14 {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -123,60 +119,60 @@ exports[`selectableCardOptionGroupField > should render correctly 1`] = `
   cursor: pointer;
 }
 
-.emotion-14[data-has-label='false']>:first-child {
+.emotion-12[data-has-label='false']>:first-child {
   margin-bottom: -0.25rem;
 }
 
-.emotion-14[data-has-default-cursor='true'] {
+.emotion-12[data-has-default-cursor='true'] {
   cursor: default;
 }
 
-.emotion-14[data-checked='true'] {
+.emotion-12[data-checked='true'] {
   border: 1px solid #8c40ef;
 }
 
-.emotion-14[data-error='true'] {
+.emotion-12[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-14[data-disabled='true'] {
+.emotion-12[data-disabled='true'] {
   border: 1px solid #e9eaeb;
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.emotion-14[data-image="illustration"] {
+.emotion-12[data-image="illustration"] {
   padding: 0rem;
 }
 
-.emotion-14[data-image="icon"] {
+.emotion-12[data-image="icon"] {
   padding: 0rem;
   padding-right: 1rem;
 }
 
-.emotion-14:hover:not([data-error='true']):not([data-disabled='true']),
-.emotion-14:active:not([data-error='true']):not([data-disabled='true']) {
+.emotion-12:hover:not([data-error='true']):not([data-disabled='true']),
+.emotion-12:active:not([data-error='true']):not([data-disabled='true']) {
   border: 1px solid #8c40ef;
 }
 
-.emotion-14:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.emotion-14:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
+.emotion-12:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
+.emotion-12:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
 
-.emotion-14[data-has-label='true'] .emotion-17,
-.emotion-14[data-has-label='true'] .eqr7bqq0 {
+.emotion-12[data-has-label='true'] .emotion-15,
+.emotion-12[data-has-label='true'] .eqr7bqq0 {
   width: 100%;
 }
 
-.emotion-14 .emotion-17 {
+.emotion-12 .emotion-15 {
   position: absolute;
   padding: 8px;
   margin-top: -1rem;
 }
 
-.emotion-16 {
+.emotion-14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -199,7 +195,7 @@ exports[`selectableCardOptionGroupField > should render correctly 1`] = `
   gap: 0.25rem;
 }
 
-.emotion-19 {
+.emotion-17 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -223,100 +219,100 @@ exports[`selectableCardOptionGroupField > should render correctly 1`] = `
   align-items: start;
 }
 
-.emotion-19[aria-disabled='false'],
-.emotion-19[aria-disabled='false']>label {
+.emotion-17[aria-disabled='false'],
+.emotion-17[aria-disabled='false']>label {
   cursor: pointer;
 }
 
-.emotion-19:hover[aria-disabled='false'] .emotion-22+.emotion-24 {
+.emotion-17:hover[aria-disabled='false'] .emotion-20+.emotion-22 {
   fill: #8c40ef;
 }
 
-.emotion-19:hover[aria-disabled='false'] .emotion-22+.emotion-24 .emotion-26 {
+.emotion-17:hover[aria-disabled='false'] .emotion-20+.emotion-22 .emotion-24 {
   fill: #e5dbfd;
 }
 
-.emotion-19:hover[aria-disabled='false'] .emotion-22[aria-invalid='true']+.emotion-24 {
+.emotion-17:hover[aria-disabled='false'] .emotion-20[aria-invalid='true']+.emotion-22 {
   fill: #b3144d;
 }
 
-.emotion-19:hover[aria-disabled='false'] .emotion-22[aria-invalid='true']+.emotion-24 .emotion-26 {
+.emotion-17:hover[aria-disabled='false'] .emotion-20[aria-invalid='true']+.emotion-22 .emotion-24 {
   fill: #ffd3e3;
 }
 
-.emotion-19[aria-disabled='true'] {
+.emotion-17[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.emotion-19[aria-disabled='true']>label,
-.emotion-19[aria-disabled='true'] .emotion-22 {
+.emotion-17[aria-disabled='true']>label,
+.emotion-17[aria-disabled='true'] .emotion-20 {
   cursor: not-allowed;
 }
 
-.emotion-19[aria-disabled='true'] .emotion-24 {
+.emotion-17[aria-disabled='true'] .emotion-22 {
   fill: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-19[aria-disabled='true'] .emotion-24 .emotion-26 {
+.emotion-17[aria-disabled='true'] .emotion-22 .emotion-24 {
   fill: #f3f3f4;
 }
 
-.emotion-19[data-checked='true'] {
+.emotion-17[data-checked='true'] {
   color: #641cb3;
 }
 
-.emotion-19[data-error='true'] {
+.emotion-17[data-error='true'] {
   color: #b3144d;
 }
 
-.emotion-19[aria-disabled='true'] {
+.emotion-17[aria-disabled='true'] {
   color: #b5b7bd;
 }
 
-.emotion-19:hover[aria-disabled='false']:not([data-checked='true']) .emotion-22+.emotion-24 {
+.emotion-17:hover[aria-disabled='false']:not([data-checked='true']) .emotion-20+.emotion-22 {
   fill: #d9dadd;
 }
 
-.emotion-19:hover[aria-disabled='false']:not([data-checked='true']) .emotion-22+.emotion-24 .emotion-26 {
+.emotion-17:hover[aria-disabled='false']:not([data-checked='true']) .emotion-20+.emotion-22 .emotion-24 {
   fill: #ffffff;
 }
 
-.emotion-19:hover[aria-disabled='false']:not([data-checked='true']) .emotion-22[aria-invalid='true']+.emotion-24 {
+.emotion-17:hover[aria-disabled='false']:not([data-checked='true']) .emotion-20[aria-invalid='true']+.emotion-22 {
   fill: #b3144d;
 }
 
-.emotion-19:hover[aria-disabled='false']:not([data-checked='true']) .emotion-22[aria-invalid='true']+.emotion-24 .emotion-26 {
+.emotion-17:hover[aria-disabled='false']:not([data-checked='true']) .emotion-20[aria-invalid='true']+.emotion-22 .emotion-24 {
   fill: #ffffff;
 }
 
-.emotion-19:hover[aria-disabled='false'] .emotion-22+.emotion-24 {
+.emotion-17:hover[aria-disabled='false'] .emotion-20+.emotion-22 {
   fill: #8c40ef;
 }
 
-.emotion-19:hover[aria-disabled='false'] .emotion-22+.emotion-24 .emotion-26 {
+.emotion-17:hover[aria-disabled='false'] .emotion-20+.emotion-22 .emotion-24 {
   fill: #ffffff;
 }
 
-.emotion-19:hover[aria-disabled='false'] .emotion-22[aria-invalid='true']+.emotion-24 {
+.emotion-17:hover[aria-disabled='false'] .emotion-20[aria-invalid='true']+.emotion-22 {
   fill: #b3144d;
 }
 
-.emotion-19:hover[aria-disabled='false'] .emotion-22[aria-invalid='true']+.emotion-24 .emotion-26 {
+.emotion-17:hover[aria-disabled='false'] .emotion-20[aria-invalid='true']+.emotion-22 .emotion-24 {
   fill: #ffffff;
 }
 
-.emotion-19 .emotion-22[aria-disabled='false']:active+.emotion-24 {
+.emotion-17 .emotion-20[aria-disabled='false']:active+.emotion-22 {
   background: none;
   fill: #8c40ef;
 }
 
-.emotion-19 .emotion-22[aria-disabled='false']:active+.emotion-24 .emotion-26 {
+.emotion-17 .emotion-20[aria-disabled='false']:active+.emotion-22 .emotion-24 {
   fill: #ffffff;
 }
 
-.emotion-21 {
+.emotion-19 {
   cursor: pointer;
   position: absolute;
   height: 1.5rem;
@@ -326,7 +322,7 @@ exports[`selectableCardOptionGroupField > should render correctly 1`] = `
   border-width: 0;
 }
 
-.emotion-21+.emotion-24 .emotion-28 {
+.emotion-19+.emotion-22 .emotion-26 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -336,48 +332,48 @@ exports[`selectableCardOptionGroupField > should render correctly 1`] = `
   transform: scale(0);
 }
 
-.emotion-21:checked+svg .emotion-28 {
+.emotion-19:checked+svg .emotion-26 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.emotion-21:checked[aria-disabled='false'][aria-invalid='false']+.emotion-24 {
+.emotion-19:checked[aria-disabled='false'][aria-invalid='false']+.emotion-22 {
   fill: #8c40ef;
 }
 
-.emotion-21:checked[aria-disabled='true'][aria-invalid='false']+.emotion-24 {
+.emotion-19:checked[aria-disabled='true'][aria-invalid='false']+.emotion-22 {
   fill: #d8c5fc;
 }
 
-.emotion-21[aria-invalid='true']:not([aria-disabled='true'])+.emotion-24 {
+.emotion-19[aria-invalid='true']:not([aria-disabled='true'])+.emotion-22 {
   fill: #e51963;
 }
 
-.emotion-21[aria-disabled='false']:active+.emotion-24 {
+.emotion-19[aria-disabled='false']:active+.emotion-22 {
   background-color: #5e127e40;
   fill: #8c40ef;
 }
 
-.emotion-21[aria-disabled='false']:active+.emotion-24 .emotion-26 {
+.emotion-19[aria-disabled='false']:active+.emotion-22 .emotion-24 {
   fill: #f1eefc;
 }
 
-.emotion-21[aria-disabled='false']:focus-visible+.emotion-24 {
+.emotion-19[aria-disabled='false']:focus-visible+.emotion-22 {
   outline: -webkit-focus-ring-color auto 1px;
 }
 
-.emotion-21[aria-invalid='true']:focus+.emotion-24 {
+.emotion-19[aria-invalid='true']:focus+.emotion-22 {
   background-color: #f91b6c40;
   fill: #e51963;
 }
 
-.emotion-21[aria-invalid='true']:focus+.emotion-24 .emotion-26 {
+.emotion-19[aria-invalid='true']:focus+.emotion-22 .emotion-24 {
   fill: #ffebf2;
 }
 
-.emotion-23 {
+.emotion-21 {
   height: 1.5rem;
   width: 1.5rem;
   min-width: 1.5rem;
@@ -386,11 +382,11 @@ exports[`selectableCardOptionGroupField > should render correctly 1`] = `
   fill: #d9dadd;
 }
 
-.emotion-23 .emotion-26 {
+.emotion-21 .emotion-24 {
   fill: #ffffff;
 }
 
-.emotion-29 {
+.emotion-27 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -413,19 +409,19 @@ exports[`selectableCardOptionGroupField > should render correctly 1`] = `
   flex-direction: column;
 }
 
-.emotion-29[data-has-label='true'] {
+.emotion-27[data-has-label='true'] {
   padding-left: 2rem;
 }
 
-.emotion-29[data-has-label='false'] {
+.emotion-27[data-has-label='false'] {
   display: contents;
 }
 
-.emotion-29[data-has-default-cursor='true'] {
+.emotion-27[data-has-default-cursor='true'] {
   cursor: default;
 }
 
-.emotion-31 {
+.emotion-29 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -452,7 +448,7 @@ exports[`selectableCardOptionGroupField > should render correctly 1`] = `
   height: 100%;
 }
 
-.emotion-33 {
+.emotion-31 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -477,12 +473,12 @@ exports[`selectableCardOptionGroupField > should render correctly 1`] = `
   padding: 0 1rem;
 }
 
-.emotion-35[data-disabled='true'] {
+.emotion-33[data-disabled='true'] {
   -webkit-filter: grayscale(1) opacity(25%);
   filter: grayscale(1) opacity(25%);
 }
 
-.emotion-37 {
+.emotion-35 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -506,7 +502,7 @@ exports[`selectableCardOptionGroupField > should render correctly 1`] = `
   gap: 0.25rem;
 }
 
-.emotion-40 {
+.emotion-38 {
   color: #641cb3;
   font-size: 1rem;
   font-family: Inter,sans-serif;
@@ -519,37 +515,37 @@ exports[`selectableCardOptionGroupField > should render correctly 1`] = `
   cursor: pointer;
 }
 
-.emotion-43 {
+.emotion-41 {
   width: 100%;
 }
 
-.emotion-43 .emotion-50 {
+.emotion-41 .emotion-48 {
   border-radius: 0 0 0.25rem 0.25rem;
   border-bottom: 0!important;
   border-right: 0!important;
   border-left: 0!important;
 }
 
-.emotion-43 .emotion-50:hover,
-.emotion-43 .emotion-50:focus,
-.emotion-43 .emotion-50:active {
+.emotion-41 .emotion-48:hover,
+.emotion-41 .emotion-48:focus,
+.emotion-41 .emotion-48:active {
   border-color: #d9dadd!important;
   outline: none;
 }
 
-.emotion-45 {
+.emotion-43 {
   display: inherit;
 }
 
-.emotion-45[data-container-full-height="true"] {
+.emotion-43[data-container-full-height="true"] {
   height: 100%;
 }
 
-.emotion-45[data-container-full-width="true"] {
+.emotion-43[data-container-full-width="true"] {
   width: 100%;
 }
 
-.emotion-47 {
+.emotion-45 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -572,7 +568,7 @@ exports[`selectableCardOptionGroupField > should render correctly 1`] = `
   gap: 0.25rem;
 }
 
-.emotion-49 {
+.emotion-47 {
   display: grid;
   width: 100%;
   gap: 0.5rem;
@@ -587,85 +583,85 @@ exports[`selectableCardOptionGroupField > should render correctly 1`] = `
   width: 100%;
 }
 
-.emotion-49[data-size='small'] {
+.emotion-47[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-49[data-size='medium'] {
+.emotion-47[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-49[data-size='large'] {
+.emotion-47[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-49[data-state='neutral'] {
+.emotion-47[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.emotion-49[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-47[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-49[data-state='neutral']:not([data-disabled='true']):hover {
+.emotion-47[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-49[data-state='neutral']:not([data-disabled='true']):focus-visible {
+.emotion-47[data-state='neutral']:not([data-disabled='true']):focus-visible {
   outline: 5px auto Highlight;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-.emotion-49[data-state='neutral'][data-dropdownvisible='true'] {
+.emotion-47[data-state='neutral'][data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.emotion-49[data-state='success'] {
+.emotion-47[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.emotion-49[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-47[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #1b533f;
   box-shadow: 0px 0px 0px 3px #45d19f40;
 }
 
-.emotion-49[data-state='success'][data-dropdownvisible='true'] {
+.emotion-47[data-state='success'][data-dropdownvisible='true'] {
   border-color: #1b533f;
 }
 
-.emotion-49[data-state='danger'] {
+.emotion-47[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-49[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-47[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-49[data-state='danger'][data-dropdownvisible='true'] {
+.emotion-47[data-state='danger'][data-dropdownvisible='true'] {
   border-color: #92103f;
 }
 
-.emotion-49:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-47:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-49[data-readonly='true'] {
+.emotion-47[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-49[data-disabled='true'] {
+.emotion-47[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-52 {
+.emotion-50 {
   color: #3f4250;
   font-size: 0.875rem;
   font-family: Inter,sans-serif;
@@ -683,7 +679,7 @@ exports[`selectableCardOptionGroupField > should render correctly 1`] = `
   align-self: center;
 }
 
-.emotion-54 {
+.emotion-52 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -711,7 +707,7 @@ exports[`selectableCardOptionGroupField > should render correctly 1`] = `
   display: flex;
 }
 
-.emotion-56 {
+.emotion-54 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1rem;
@@ -720,12 +716,12 @@ exports[`selectableCardOptionGroupField > should render correctly 1`] = `
   min-height: 1rem;
 }
 
-.emotion-56 .fillStroke {
+.emotion-54 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
 
-.emotion-85 {
+.emotion-83 {
   color: #3f4250;
   font-size: 1rem;
   font-family: Inter,sans-serif;
@@ -738,7 +734,7 @@ exports[`selectableCardOptionGroupField > should render correctly 1`] = `
   cursor: pointer;
 }
 
-.emotion-97 {
+.emotion-95 {
   color: #727683;
   font-size: 0.875rem;
   font-family: Inter,sans-serif;
@@ -761,28 +757,28 @@ exports[`selectableCardOptionGroupField > should render correctly 1`] = `
     data-testid="testing"
   >
     <form
-      class="emotion-0 emotion-1"
       novalidate=""
+      style="display: contents;"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="emotion-0 emotion-1"
       >
         <fieldset
-          class="emotion-4 emotion-5"
+          class="emotion-2 emotion-3"
         >
           <div
-            class="emotion-6 emotion-3"
+            class="emotion-4 emotion-1"
           >
             <legend
-              class="emotion-8 emotion-9 emotion-10"
+              class="emotion-6 emotion-7 emotion-8"
             >
               Select your OS
             </legend>
             <div
-              class="emotion-11 emotion-12"
+              class="emotion-9 emotion-10"
             >
               <div
-                class="emotion-13 emotion-14 emotion-15"
+                class="emotion-11 emotion-12 emotion-13"
                 data-checked="true"
                 data-disabled="false"
                 data-error="false"
@@ -794,11 +790,11 @@ exports[`selectableCardOptionGroupField > should render correctly 1`] = `
                 tabindex="0"
               >
                 <div
-                  class="emotion-16 emotion-17"
+                  class="emotion-14 emotion-15"
                 >
                   <div
                     aria-disabled="false"
-                    class="emotion-18 emotion-19 emotion-20"
+                    class="emotion-16 emotion-17 emotion-18"
                     data-checked="true"
                     data-error="false"
                   >
@@ -806,14 +802,14 @@ exports[`selectableCardOptionGroupField > should render correctly 1`] = `
                       aria-disabled="false"
                       aria-invalid="false"
                       checked=""
-                      class="emotion-21 emotion-22"
-                      id="_r_1_"
+                      class="emotion-19 emotion-20"
+                      id="«r1»"
                       tabindex="-1"
                       type="radio"
                       value="ubuntu"
                     />
                     <svg
-                      class="emotion-23 emotion-24"
+                      class="emotion-21 emotion-22"
                       viewBox="0 0 24 24"
                     >
                       <g>
@@ -824,13 +820,13 @@ exports[`selectableCardOptionGroupField > should render correctly 1`] = `
                           stroke-width="2"
                         />
                         <circle
-                          class="emotion-25 emotion-26"
+                          class="emotion-23 emotion-24"
                           cx="12"
                           cy="12"
                           r="8"
                         />
                         <circle
-                          class="emotion-27 emotion-28"
+                          class="emotion-25 emotion-26"
                           cx="12"
                           cy="12"
                           r="5"
@@ -840,29 +836,29 @@ exports[`selectableCardOptionGroupField > should render correctly 1`] = `
                   </div>
                 </div>
                 <div
-                  class="emotion-29 emotion-30"
+                  class="emotion-27 emotion-28"
                   data-has-default-cursor="false"
                   data-has-label="false"
                 >
                   <div
-                    class="emotion-31 emotion-32"
+                    class="emotion-29 emotion-30"
                   >
                     <div
-                      class="emotion-33 emotion-34"
+                      class="emotion-31 emotion-32"
                     >
                       <img
                         alt="Ubuntu"
-                        class="emotion-35 emotion-36"
+                        class="emotion-33 emotion-34"
                         height="56"
                         src="/src/components/SelectableCardOptionGroupField/__stories__/assets/ubuntu.svg"
                         width="56"
                       />
                       <div
-                        class="emotion-37 emotion-3"
+                        class="emotion-35 emotion-1"
                       >
                         <label
-                          class="emotion-8 emotion-40 emotion-10"
-                          for="_r_1_"
+                          class="emotion-6 emotion-38 emotion-8"
+                          for="«r1»"
                         >
                           Ubuntu
                         </label>
@@ -870,44 +866,44 @@ exports[`selectableCardOptionGroupField > should render correctly 1`] = `
                     </div>
                     <div
                       aria-label="selectable-card-option"
-                      class="emotion-42 emotion-43 emotion-44"
+                      class="emotion-40 emotion-41 emotion-42"
                     >
                       <div
-                        aria-controls="_r_7_"
-                        aria-describedby="_r_7_"
-                        class="emotion-45 emotion-46"
+                        aria-controls="«r7»"
+                        aria-describedby="«r7»"
+                        class="emotion-43 emotion-44"
                         data-container-full-width="true"
                         tabindex="-1"
                       >
                         <div
                           aria-label="Ubuntu option"
-                          class="emotion-47 emotion-3"
+                          class="emotion-45 emotion-1"
                         >
                           <div
-                            aria-controls="_r_7_"
+                            aria-controls="«r7»"
                             aria-expanded="false"
-                            class="emotion-49 emotion-50"
+                            class="emotion-47 emotion-48"
                             data-disabled="false"
                             data-dropdownvisible="false"
                             data-readonly="false"
                             data-size="medium"
                             data-state="neutral"
                             data-testid="select-input-selectable-card-option"
-                            id="_r_6_"
+                            id="«r6»"
                             role="combobox"
                             tabindex="0"
                           >
                             <div
-                              class="emotion-51 emotion-52 emotion-10"
+                              class="emotion-49 emotion-50 emotion-8"
                             >
                               Ubuntu 20.04 Focal Fossa
                             </div>
                             <div
-                              class="emotion-54 emotion-55"
+                              class="emotion-52 emotion-53"
                             >
                               <svg
                                 aria-label="show dropdown"
-                                class="emotion-56 emotion-57"
+                                class="emotion-54 emotion-55"
                                 viewBox="0 0 16 16"
                               >
                                 <path
@@ -925,7 +921,7 @@ exports[`selectableCardOptionGroupField > should render correctly 1`] = `
                 </div>
               </div>
               <div
-                class="emotion-13 emotion-14 emotion-15"
+                class="emotion-11 emotion-12 emotion-13"
                 data-checked="false"
                 data-disabled="false"
                 data-error="false"
@@ -937,25 +933,25 @@ exports[`selectableCardOptionGroupField > should render correctly 1`] = `
                 tabindex="0"
               >
                 <div
-                  class="emotion-16 emotion-17"
+                  class="emotion-14 emotion-15"
                 >
                   <div
                     aria-disabled="false"
-                    class="emotion-18 emotion-19 emotion-20"
+                    class="emotion-16 emotion-17 emotion-18"
                     data-checked="false"
                     data-error="false"
                   >
                     <input
                       aria-disabled="false"
                       aria-invalid="false"
-                      class="emotion-21 emotion-22"
-                      id="_r_b_"
+                      class="emotion-19 emotion-20"
+                      id="«rb»"
                       tabindex="-1"
                       type="radio"
                       value="debian"
                     />
                     <svg
-                      class="emotion-23 emotion-24"
+                      class="emotion-21 emotion-22"
                       viewBox="0 0 24 24"
                     >
                       <g>
@@ -966,13 +962,13 @@ exports[`selectableCardOptionGroupField > should render correctly 1`] = `
                           stroke-width="2"
                         />
                         <circle
-                          class="emotion-25 emotion-26"
+                          class="emotion-23 emotion-24"
                           cx="12"
                           cy="12"
                           r="8"
                         />
                         <circle
-                          class="emotion-27 emotion-28"
+                          class="emotion-25 emotion-26"
                           cx="12"
                           cy="12"
                           r="5"
@@ -982,29 +978,29 @@ exports[`selectableCardOptionGroupField > should render correctly 1`] = `
                   </div>
                 </div>
                 <div
-                  class="emotion-29 emotion-30"
+                  class="emotion-27 emotion-28"
                   data-has-default-cursor="false"
                   data-has-label="false"
                 >
                   <div
-                    class="emotion-31 emotion-32"
+                    class="emotion-29 emotion-30"
                   >
                     <div
-                      class="emotion-33 emotion-34"
+                      class="emotion-31 emotion-32"
                     >
                       <img
                         alt="Debian"
-                        class="emotion-35 emotion-36"
+                        class="emotion-33 emotion-34"
                         height="56"
                         src="/src/components/SelectableCardOptionGroupField/__stories__/assets/debian.svg"
                         width="56"
                       />
                       <div
-                        class="emotion-37 emotion-3"
+                        class="emotion-35 emotion-1"
                       >
                         <label
-                          class="emotion-8 emotion-85 emotion-10"
-                          for="_r_b_"
+                          class="emotion-6 emotion-83 emotion-8"
+                          for="«rb»"
                         >
                           Debian
                         </label>
@@ -1012,44 +1008,44 @@ exports[`selectableCardOptionGroupField > should render correctly 1`] = `
                     </div>
                     <div
                       aria-label="selectable-card-option"
-                      class="emotion-42 emotion-43 emotion-44"
+                      class="emotion-40 emotion-41 emotion-42"
                     >
                       <div
-                        aria-controls="_r_h_"
-                        aria-describedby="_r_h_"
-                        class="emotion-45 emotion-46"
+                        aria-controls="«rh»"
+                        aria-describedby="«rh»"
+                        class="emotion-43 emotion-44"
                         data-container-full-width="true"
                         tabindex="-1"
                       >
                         <div
                           aria-label="Debian option"
-                          class="emotion-47 emotion-3"
+                          class="emotion-45 emotion-1"
                         >
                           <div
-                            aria-controls="_r_h_"
+                            aria-controls="«rh»"
                             aria-expanded="false"
-                            class="emotion-49 emotion-50"
+                            class="emotion-47 emotion-48"
                             data-disabled="false"
                             data-dropdownvisible="false"
                             data-readonly="false"
                             data-size="medium"
                             data-state="neutral"
                             data-testid="select-input-selectable-card-option"
-                            id="_r_g_"
+                            id="«rg»"
                             role="combobox"
                             tabindex="0"
                           >
                             <p
-                              class="emotion-96 emotion-97 emotion-10"
+                              class="emotion-94 emotion-95 emotion-8"
                             >
                               Select item
                             </p>
                             <div
-                              class="emotion-54 emotion-55"
+                              class="emotion-52 emotion-53"
                             >
                               <svg
                                 aria-label="show dropdown"
-                                class="emotion-56 emotion-57"
+                                class="emotion-54 emotion-55"
                                 viewBox="0 0 16 16"
                               >
                                 <path
@@ -1067,7 +1063,7 @@ exports[`selectableCardOptionGroupField > should render correctly 1`] = `
                 </div>
               </div>
               <div
-                class="emotion-13 emotion-14 emotion-15"
+                class="emotion-11 emotion-12 emotion-13"
                 data-checked="false"
                 data-disabled="false"
                 data-error="false"
@@ -1079,25 +1075,25 @@ exports[`selectableCardOptionGroupField > should render correctly 1`] = `
                 tabindex="0"
               >
                 <div
-                  class="emotion-16 emotion-17"
+                  class="emotion-14 emotion-15"
                 >
                   <div
                     aria-disabled="false"
-                    class="emotion-18 emotion-19 emotion-20"
+                    class="emotion-16 emotion-17 emotion-18"
                     data-checked="false"
                     data-error="false"
                   >
                     <input
                       aria-disabled="false"
                       aria-invalid="false"
-                      class="emotion-21 emotion-22"
-                      id="_r_l_"
+                      class="emotion-19 emotion-20"
+                      id="«rl»"
                       tabindex="-1"
                       type="radio"
                       value="centos"
                     />
                     <svg
-                      class="emotion-23 emotion-24"
+                      class="emotion-21 emotion-22"
                       viewBox="0 0 24 24"
                     >
                       <g>
@@ -1108,13 +1104,13 @@ exports[`selectableCardOptionGroupField > should render correctly 1`] = `
                           stroke-width="2"
                         />
                         <circle
-                          class="emotion-25 emotion-26"
+                          class="emotion-23 emotion-24"
                           cx="12"
                           cy="12"
                           r="8"
                         />
                         <circle
-                          class="emotion-27 emotion-28"
+                          class="emotion-25 emotion-26"
                           cx="12"
                           cy="12"
                           r="5"
@@ -1124,29 +1120,29 @@ exports[`selectableCardOptionGroupField > should render correctly 1`] = `
                   </div>
                 </div>
                 <div
-                  class="emotion-29 emotion-30"
+                  class="emotion-27 emotion-28"
                   data-has-default-cursor="false"
                   data-has-label="false"
                 >
                   <div
-                    class="emotion-31 emotion-32"
+                    class="emotion-29 emotion-30"
                   >
                     <div
-                      class="emotion-33 emotion-34"
+                      class="emotion-31 emotion-32"
                     >
                       <img
                         alt="CentOS"
-                        class="emotion-35 emotion-36"
+                        class="emotion-33 emotion-34"
                         height="56"
                         src="/src/components/SelectableCardOptionGroupField/__stories__/assets/centos.svg"
                         width="56"
                       />
                       <div
-                        class="emotion-37 emotion-3"
+                        class="emotion-35 emotion-1"
                       >
                         <label
-                          class="emotion-8 emotion-85 emotion-10"
-                          for="_r_l_"
+                          class="emotion-6 emotion-83 emotion-8"
+                          for="«rl»"
                         >
                           CentOS
                         </label>
@@ -1154,44 +1150,44 @@ exports[`selectableCardOptionGroupField > should render correctly 1`] = `
                     </div>
                     <div
                       aria-label="selectable-card-option"
-                      class="emotion-42 emotion-43 emotion-44"
+                      class="emotion-40 emotion-41 emotion-42"
                     >
                       <div
-                        aria-controls="_r_r_"
-                        aria-describedby="_r_r_"
-                        class="emotion-45 emotion-46"
+                        aria-controls="«rr»"
+                        aria-describedby="«rr»"
+                        class="emotion-43 emotion-44"
                         data-container-full-width="true"
                         tabindex="-1"
                       >
                         <div
                           aria-label="CentOS option"
-                          class="emotion-47 emotion-3"
+                          class="emotion-45 emotion-1"
                         >
                           <div
-                            aria-controls="_r_r_"
+                            aria-controls="«rr»"
                             aria-expanded="false"
-                            class="emotion-49 emotion-50"
+                            class="emotion-47 emotion-48"
                             data-disabled="false"
                             data-dropdownvisible="false"
                             data-readonly="false"
                             data-size="medium"
                             data-state="neutral"
                             data-testid="select-input-selectable-card-option"
-                            id="_r_q_"
+                            id="«rq»"
                             role="combobox"
                             tabindex="0"
                           >
                             <p
-                              class="emotion-96 emotion-97 emotion-10"
+                              class="emotion-94 emotion-95 emotion-8"
                             >
                               Select item
                             </p>
                             <div
-                              class="emotion-54 emotion-55"
+                              class="emotion-52 emotion-53"
                             >
                               <svg
                                 aria-label="show dropdown"
-                                class="emotion-56 emotion-57"
+                                class="emotion-54 emotion-55"
                                 viewBox="0 0 16 16"
                               >
                                 <path

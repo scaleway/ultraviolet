@@ -2,16 +2,12 @@
 
 exports[`form > renders correctly with node children 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: contents;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <form
-      class="emotion-0 emotion-1"
       novalidate=""
+      style="display: contents;"
     >
       Test
     </form>
@@ -21,16 +17,12 @@ exports[`form > renders correctly with node children 1`] = `
 
 exports[`form > renders correctly with onSubmit 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: contents;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <form
-      class="emotion-0 emotion-1"
       novalidate=""
+      style="display: contents;"
     >
       <button
         type="submit"

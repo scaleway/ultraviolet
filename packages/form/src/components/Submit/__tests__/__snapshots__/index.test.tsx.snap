@@ -3,10 +3,6 @@
 exports[`submit > form is invalid 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  display: contents;
-}
-
-.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -29,7 +25,7 @@ exports[`submit > form is invalid 1`] = `
   gap: 0.25rem;
 }
 
-.emotion-5 {
+.emotion-3 {
   color: #3f4250;
   font-size: 1rem;
   font-family: Inter,sans-serif;
@@ -42,7 +38,7 @@ exports[`submit > form is invalid 1`] = `
   cursor: pointer;
 }
 
-.emotion-7 {
+.emotion-5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -56,69 +52,69 @@ exports[`submit > form is invalid 1`] = `
   border-radius: 0.25rem;
 }
 
-.emotion-7>.emotion-10 {
+.emotion-5>.emotion-8 {
   color: #3f4250;
 }
 
-.emotion-7>.emotion-10::-webkit-input-placeholder {
+.emotion-5>.emotion-8::-webkit-input-placeholder {
   color: #727683;
 }
 
-.emotion-7>.emotion-10::-moz-placeholder {
+.emotion-5>.emotion-8::-moz-placeholder {
   color: #727683;
 }
 
-.emotion-7>.emotion-10:-ms-input-placeholder {
+.emotion-5>.emotion-8:-ms-input-placeholder {
   color: #727683;
 }
 
-.emotion-7>.emotion-10::placeholder {
+.emotion-5>.emotion-8::placeholder {
   color: #727683;
 }
 
-.emotion-7[data-success='true'] {
+.emotion-5[data-success='true'] {
   border-color: #22674e;
 }
 
-.emotion-7[data-error='true'] {
+.emotion-5[data-error='true'] {
   border-color: #b3144d;
 }
 
-.emotion-7[data-readonly='true'] {
+.emotion-5[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
 }
 
-.emotion-7[data-disabled='true'] {
+.emotion-5[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
 }
 
-.emotion-7[data-disabled='true']>.emotion-10 {
+.emotion-5[data-disabled='true']>.emotion-8 {
   color: #b5b7bd;
 }
 
-.emotion-7[data-disabled='true']>.emotion-10::-webkit-input-placeholder {
+.emotion-5[data-disabled='true']>.emotion-8::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-7[data-disabled='true']>.emotion-10::-moz-placeholder {
+.emotion-5[data-disabled='true']>.emotion-8::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-7[data-disabled='true']>.emotion-10:-ms-input-placeholder {
+.emotion-5[data-disabled='true']>.emotion-8:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-7[data-disabled='true']>.emotion-10::placeholder {
+.emotion-5[data-disabled='true']>.emotion-8::placeholder {
   color: #b5b7bd;
 }
 
-.emotion-7:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-5:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-9 {
+.emotion-7 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -131,11 +127,11 @@ exports[`submit > form is invalid 1`] = `
   font-size: 0.875rem;
 }
 
-.emotion-9[data-size='large'] {
+.emotion-7[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-9[data-size='small'] {
+.emotion-7[data-size='small'] {
   padding-left: 0.5rem;
 }
 
@@ -143,21 +139,21 @@ exports[`submit > form is invalid 1`] = `
     data-testid="testing"
   >
     <form
-      class="emotion-0 emotion-1"
       novalidate=""
+      style="display: contents;"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="emotion-0 emotion-1"
       >
         <label
-          class="emotion-4 emotion-5 emotion-6"
-          for="_r_1_"
+          class="emotion-2 emotion-3 emotion-4"
+          for="«r1»"
         >
           test
         </label>
         <div>
           <div
-            class="emotion-7 emotion-8"
+            class="emotion-5 emotion-6"
             data-disabled="false"
             data-error="false"
             data-readonly="false"
@@ -165,9 +161,9 @@ exports[`submit > form is invalid 1`] = `
           >
             <input
               aria-invalid="false"
-              class="emotion-9 emotion-10"
+              class="emotion-7 emotion-8"
               data-size="large"
-              id="_r_1_"
+              id="«r1»"
               name="toto"
               type="text"
               value="4"
@@ -190,19 +186,15 @@ exports[`submit > form is invalid 1`] = `
 exports[`submit > form is submitting 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  display: contents;
-}
-
-.emotion-2 {
   -webkit-animation: spin 0.75s linear infinite;
   animation: spin 0.75s linear infinite;
 }
 
-.emotion-4 {
+.emotion-2 {
   stroke: #d9dadd;
 }
 
-.emotion-6 {
+.emotion-4 {
   -webkit-transition: stroke-dashoffset 0.5s ease 0s;
   transition: stroke-dashoffset 0.5s ease 0s;
 }
@@ -211,8 +203,8 @@ exports[`submit > form is submitting 1`] = `
     data-testid="testing"
   >
     <form
-      class="emotion-0 emotion-1"
       novalidate=""
+      style="display: contents;"
     >
       <button
         class=" uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoej uv_e1wcoeg uv_e1wcoe7 uv_e1wcoel"
@@ -225,13 +217,13 @@ exports[`submit > form is submitting 1`] = `
           aria-valuemin="0"
           aria-valuenow="20"
           aria-valuetext="20%"
-          class="emotion-2 emotion-3"
+          class="emotion-0 emotion-1"
           role="progressbar"
           style="height: 1rem; width: 1rem;"
           viewBox="0 0 100 100"
         >
           <circle
-            class="emotion-4 emotion-5"
+            class="emotion-2 emotion-3"
             cx="50"
             cy="50"
             fill="none"
@@ -239,7 +231,7 @@ exports[`submit > form is submitting 1`] = `
             stroke-width="16"
           />
           <circle
-            class="emotion-6"
+            class="emotion-4"
             cx="50"
             cy="50"
             fill="none"
@@ -260,16 +252,12 @@ exports[`submit > form is submitting 1`] = `
 
 exports[`submit > renders correctly  1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: contents;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <form
-      class="emotion-0 emotion-1"
       novalidate=""
+      style="display: contents;"
     >
       <button
         class=" uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoej uv_e1wcoeg uv_e1wcoe7 uv_e1wcoel"
