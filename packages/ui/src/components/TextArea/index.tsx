@@ -25,6 +25,7 @@ const STATE_ICON_SIZE = 'small'
 const StyledTextAreaWrapper = styled.div`
   position: relative;
   display: flex;
+  width: 100%;
 `
 
 const StyledTextAreaAbsoluteStack = styled(Stack)`
