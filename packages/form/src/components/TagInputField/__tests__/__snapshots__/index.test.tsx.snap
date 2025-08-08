@@ -3,10 +3,6 @@
 exports[`tagInputField > should render correctly 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  display: contents;
-}
-
-.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -29,7 +25,7 @@ exports[`tagInputField > should render correctly 1`] = `
   gap: 0.25rem;
 }
 
-.emotion-4 {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -43,35 +39,35 @@ exports[`tagInputField > should render correctly 1`] = `
   border-radius: 0.25rem;
 }
 
-.emotion-4:focus-within {
+.emotion-2:focus-within {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-4[data-success="true"] {
+.emotion-2[data-success="true"] {
   border-color: #22674e;
 }
 
-.emotion-4[data-error="true"] {
+.emotion-2[data-error="true"] {
   border-color: #b3144d;
 }
 
-.emotion-4:hover {
+.emotion-2:hover {
   border-color: #792dd4;
 }
 
-.emotion-4[data-readonly="true"] {
+.emotion-2[data-readonly="true"] {
   border-color: #d9dadd;
   background: #f9f9fa;
 }
 
-.emotion-4[data-disabled="true"] {
+.emotion-2[data-disabled="true"] {
   border-color: #e9eaeb;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.emotion-6 {
+.emotion-4 {
   height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -91,7 +87,7 @@ exports[`tagInputField > should render correctly 1`] = `
   flex: 1;
 }
 
-.emotion-8 {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -107,23 +103,23 @@ exports[`tagInputField > should render correctly 1`] = `
   height: 100%;
 }
 
-.emotion-8::-webkit-input-placeholder {
+.emotion-6::-webkit-input-placeholder {
   color: #727683;
 }
 
-.emotion-8::-moz-placeholder {
+.emotion-6::-moz-placeholder {
   color: #727683;
 }
 
-.emotion-8:-ms-input-placeholder {
+.emotion-6:-ms-input-placeholder {
   color: #727683;
 }
 
-.emotion-8::placeholder {
+.emotion-6::placeholder {
   color: #727683;
 }
 
-.emotion-8[data-size="large"] {
+.emotion-6[data-size="large"] {
   font-size: 1rem;
 }
 
@@ -131,27 +127,27 @@ exports[`tagInputField > should render correctly 1`] = `
     data-testid="testing"
   >
     <form
-      class="emotion-0 emotion-1"
       novalidate=""
+      style="display: contents;"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="emotion-0 emotion-1"
       >
         <div>
           <div
-            class="emotion-4 emotion-5"
+            class="emotion-2 emotion-3"
             data-disabled="false"
             data-error="false"
             data-readonly="false"
             data-success="false"
           >
             <div
-              class="emotion-6 emotion-7"
+              class="emotion-4 emotion-5"
             >
               <input
-                class="emotion-8 emotion-9"
+                class="emotion-6 emotion-7"
                 data-size="large"
-                id="_r_0_"
+                id="«r0»"
                 name="test"
                 placeholder="placeholder"
                 type="text"
@@ -169,10 +165,6 @@ exports[`tagInputField > should render correctly 1`] = `
 exports[`tagInputField > should render correctly with regex 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  display: contents;
-}
-
-.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -195,7 +187,7 @@ exports[`tagInputField > should render correctly with regex 1`] = `
   gap: 0.25rem;
 }
 
-.emotion-5 {
+.emotion-3 {
   color: #3f4250;
   font-size: 1rem;
   font-family: Inter,sans-serif;
@@ -208,7 +200,7 @@ exports[`tagInputField > should render correctly with regex 1`] = `
   cursor: pointer;
 }
 
-.emotion-7 {
+.emotion-5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -222,35 +214,35 @@ exports[`tagInputField > should render correctly with regex 1`] = `
   border-radius: 0.25rem;
 }
 
-.emotion-7:focus-within {
+.emotion-5:focus-within {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-7[data-success="true"] {
+.emotion-5[data-success="true"] {
   border-color: #22674e;
 }
 
-.emotion-7[data-error="true"] {
+.emotion-5[data-error="true"] {
   border-color: #b3144d;
 }
 
-.emotion-7:hover {
+.emotion-5:hover {
   border-color: #792dd4;
 }
 
-.emotion-7[data-readonly="true"] {
+.emotion-5[data-readonly="true"] {
   border-color: #d9dadd;
   background: #f9f9fa;
 }
 
-.emotion-7[data-disabled="true"] {
+.emotion-5[data-disabled="true"] {
   border-color: #e9eaeb;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.emotion-9 {
+.emotion-7 {
   height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -270,7 +262,7 @@ exports[`tagInputField > should render correctly with regex 1`] = `
   flex: 1;
 }
 
-.emotion-11 {
+.emotion-9 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -296,7 +288,7 @@ exports[`tagInputField > should render correctly with regex 1`] = `
   border: solid 1px #d9dadd;
 }
 
-.emotion-14 {
+.emotion-12 {
   font-size: 0.75rem;
   font-family: Inter,sans-serif;
   font-weight: 400;
@@ -311,7 +303,7 @@ exports[`tagInputField > should render correctly with regex 1`] = `
   max-width: 14.5rem;
 }
 
-.emotion-16 {
+.emotion-14 {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -321,7 +313,7 @@ exports[`tagInputField > should render correctly with regex 1`] = `
   padding: 0.125rem;
 }
 
-.emotion-18 {
+.emotion-16 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -330,12 +322,12 @@ exports[`tagInputField > should render correctly with regex 1`] = `
   min-height: 1rem;
 }
 
-.emotion-18 .fillStroke {
+.emotion-16 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.emotion-20 {
+.emotion-18 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -351,27 +343,27 @@ exports[`tagInputField > should render correctly with regex 1`] = `
   height: 100%;
 }
 
-.emotion-20::-webkit-input-placeholder {
+.emotion-18::-webkit-input-placeholder {
   color: #727683;
 }
 
-.emotion-20::-moz-placeholder {
+.emotion-18::-moz-placeholder {
   color: #727683;
 }
 
-.emotion-20:-ms-input-placeholder {
+.emotion-18:-ms-input-placeholder {
   color: #727683;
 }
 
-.emotion-20::placeholder {
+.emotion-18::placeholder {
   color: #727683;
 }
 
-.emotion-20[data-size="large"] {
+.emotion-18[data-size="large"] {
   font-size: 1rem;
 }
 
-.emotion-22 {
+.emotion-20 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -387,45 +379,45 @@ exports[`tagInputField > should render correctly with regex 1`] = `
     data-testid="testing"
   >
     <form
-      class="emotion-0 emotion-1"
       novalidate=""
+      style="display: contents;"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="emotion-0 emotion-1"
       >
         <label
-          class="emotion-4 emotion-5 emotion-6"
-          for="_r_2_"
+          class="emotion-2 emotion-3 emotion-4"
+          for="«r2»"
         >
           Test
         </label>
         <div>
           <div
-            class="emotion-7 emotion-8"
+            class="emotion-5 emotion-6"
             data-disabled="false"
             data-error="false"
             data-readonly="false"
             data-success="false"
           >
             <div
-              class="emotion-9 emotion-10"
+              class="emotion-7 emotion-8"
             >
               <span
-                class="emotion-11 emotion-12"
+                class="emotion-9 emotion-10"
               >
                 <div
-                  class="emotion-13 emotion-14 emotion-6"
+                  class="emotion-11 emotion-12 emotion-4"
                 >
                   4
                 </div>
                 <button
                   aria-label="Close tag"
-                  class="emotion-16 emotion-17 uv_e1wcoe0 uv_e1wcoe3 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
+                  class="emotion-14 emotion-15 uv_e1wcoe0 uv_e1wcoe3 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                   data-testid="close-tag"
                   type="button"
                 >
                   <svg
-                    class="emotion-18 emotion-19"
+                    class="emotion-16 emotion-17"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -435,9 +427,9 @@ exports[`tagInputField > should render correctly with regex 1`] = `
                 </button>
               </span>
               <input
-                class="emotion-20 emotion-21"
+                class="emotion-18 emotion-19"
                 data-size="large"
-                id="_r_2_"
+                id="«r2»"
                 name="test"
                 placeholder=""
                 type="text"
@@ -445,7 +437,7 @@ exports[`tagInputField > should render correctly with regex 1`] = `
               />
             </div>
             <div
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               <button
                 aria-label="clear value"
@@ -453,7 +445,7 @@ exports[`tagInputField > should render correctly with regex 1`] = `
                 type="button"
               >
                 <svg
-                  class="emotion-18 emotion-19"
+                  class="emotion-16 emotion-17"
                   viewBox="0 0 16 16"
                 >
                   <path
@@ -480,10 +472,6 @@ exports[`tagInputField > should render correctly with regex 1`] = `
 exports[`tagInputField > should works with defaultValues 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  display: contents;
-}
-
-.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -506,7 +494,7 @@ exports[`tagInputField > should works with defaultValues 1`] = `
   gap: 0.25rem;
 }
 
-.emotion-5 {
+.emotion-3 {
   color: #3f4250;
   font-size: 1rem;
   font-family: Inter,sans-serif;
@@ -519,7 +507,7 @@ exports[`tagInputField > should works with defaultValues 1`] = `
   cursor: pointer;
 }
 
-.emotion-7 {
+.emotion-5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -533,35 +521,35 @@ exports[`tagInputField > should works with defaultValues 1`] = `
   border-radius: 0.25rem;
 }
 
-.emotion-7:focus-within {
+.emotion-5:focus-within {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-7[data-success="true"] {
+.emotion-5[data-success="true"] {
   border-color: #22674e;
 }
 
-.emotion-7[data-error="true"] {
+.emotion-5[data-error="true"] {
   border-color: #b3144d;
 }
 
-.emotion-7:hover {
+.emotion-5:hover {
   border-color: #792dd4;
 }
 
-.emotion-7[data-readonly="true"] {
+.emotion-5[data-readonly="true"] {
   border-color: #d9dadd;
   background: #f9f9fa;
 }
 
-.emotion-7[data-disabled="true"] {
+.emotion-5[data-disabled="true"] {
   border-color: #e9eaeb;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.emotion-9 {
+.emotion-7 {
   height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -581,7 +569,7 @@ exports[`tagInputField > should works with defaultValues 1`] = `
   flex: 1;
 }
 
-.emotion-11 {
+.emotion-9 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -607,7 +595,7 @@ exports[`tagInputField > should works with defaultValues 1`] = `
   border: solid 1px #d9dadd;
 }
 
-.emotion-14 {
+.emotion-12 {
   font-size: 0.75rem;
   font-family: Inter,sans-serif;
   font-weight: 400;
@@ -622,7 +610,7 @@ exports[`tagInputField > should works with defaultValues 1`] = `
   max-width: 14.5rem;
 }
 
-.emotion-16 {
+.emotion-14 {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -632,7 +620,7 @@ exports[`tagInputField > should works with defaultValues 1`] = `
   padding: 0.125rem;
 }
 
-.emotion-18 {
+.emotion-16 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -641,12 +629,12 @@ exports[`tagInputField > should works with defaultValues 1`] = `
   min-height: 1rem;
 }
 
-.emotion-18 .fillStroke {
+.emotion-16 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.emotion-20 {
+.emotion-18 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -662,27 +650,27 @@ exports[`tagInputField > should works with defaultValues 1`] = `
   height: 100%;
 }
 
-.emotion-20::-webkit-input-placeholder {
+.emotion-18::-webkit-input-placeholder {
   color: #727683;
 }
 
-.emotion-20::-moz-placeholder {
+.emotion-18::-moz-placeholder {
   color: #727683;
 }
 
-.emotion-20:-ms-input-placeholder {
+.emotion-18:-ms-input-placeholder {
   color: #727683;
 }
 
-.emotion-20::placeholder {
+.emotion-18::placeholder {
   color: #727683;
 }
 
-.emotion-20[data-size="large"] {
+.emotion-18[data-size="large"] {
   font-size: 1rem;
 }
 
-.emotion-22 {
+.emotion-20 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -698,45 +686,45 @@ exports[`tagInputField > should works with defaultValues 1`] = `
     data-testid="testing"
   >
     <form
-      class="emotion-0 emotion-1"
       novalidate=""
+      style="display: contents;"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="emotion-0 emotion-1"
       >
         <label
-          class="emotion-4 emotion-5 emotion-6"
-          for="_r_9_"
+          class="emotion-2 emotion-3 emotion-4"
+          for="«r9»"
         >
           Test
         </label>
         <div>
           <div
-            class="emotion-7 emotion-8"
+            class="emotion-5 emotion-6"
             data-disabled="false"
             data-error="false"
             data-readonly="false"
             data-success="false"
           >
             <div
-              class="emotion-9 emotion-10"
+              class="emotion-7 emotion-8"
             >
               <span
-                class="emotion-11 emotion-12"
+                class="emotion-9 emotion-10"
               >
                 <div
-                  class="emotion-13 emotion-14 emotion-6"
+                  class="emotion-11 emotion-12 emotion-4"
                 >
                   First
                 </div>
                 <button
                   aria-label="Close tag"
-                  class="emotion-16 emotion-17 uv_e1wcoe0 uv_e1wcoe3 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
+                  class="emotion-14 emotion-15 uv_e1wcoe0 uv_e1wcoe3 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                   data-testid="close-tag"
                   type="button"
                 >
                   <svg
-                    class="emotion-18 emotion-19"
+                    class="emotion-16 emotion-17"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -746,9 +734,9 @@ exports[`tagInputField > should works with defaultValues 1`] = `
                 </button>
               </span>
               <input
-                class="emotion-20 emotion-21"
+                class="emotion-18 emotion-19"
                 data-size="large"
-                id="_r_9_"
+                id="«r9»"
                 name="test"
                 placeholder=""
                 type="text"
@@ -756,7 +744,7 @@ exports[`tagInputField > should works with defaultValues 1`] = `
               />
             </div>
             <div
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               <button
                 aria-label="clear value"
@@ -764,7 +752,7 @@ exports[`tagInputField > should works with defaultValues 1`] = `
                 type="button"
               >
                 <svg
-                  class="emotion-18 emotion-19"
+                  class="emotion-16 emotion-17"
                   viewBox="0 0 16 16"
                 >
                   <path

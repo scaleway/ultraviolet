@@ -21,26 +21,22 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
 }
 
 .emotion-0 {
-  display: contents;
+  width: 100%;
 }
 
 .emotion-2 {
+  display: inherit;
+}
+
+.emotion-2[data-container-full-height="true"] {
+  height: 100%;
+}
+
+.emotion-2[data-container-full-width="true"] {
   width: 100%;
 }
 
 .emotion-4 {
-  display: inherit;
-}
-
-.emotion-4[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-4[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -63,7 +59,7 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
   gap: 0.25rem;
 }
 
-.emotion-8 {
+.emotion-6 {
   display: grid;
   width: 100%;
   gap: 0.5rem;
@@ -78,85 +74,85 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
   width: 100%;
 }
 
-.emotion-8[data-size='small'] {
+.emotion-6[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-8[data-size='medium'] {
+.emotion-6[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-8[data-size='large'] {
+.emotion-6[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-8[data-state='neutral'] {
+.emotion-6[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.emotion-8[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-6[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-8[data-state='neutral']:not([data-disabled='true']):hover {
+.emotion-6[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-8[data-state='neutral']:not([data-disabled='true']):focus-visible {
+.emotion-6[data-state='neutral']:not([data-disabled='true']):focus-visible {
   outline: 5px auto Highlight;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-.emotion-8[data-state='neutral'][data-dropdownvisible='true'] {
+.emotion-6[data-state='neutral'][data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.emotion-8[data-state='success'] {
+.emotion-6[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.emotion-8[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-6[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #1b533f;
   box-shadow: 0px 0px 0px 3px #45d19f40;
 }
 
-.emotion-8[data-state='success'][data-dropdownvisible='true'] {
+.emotion-6[data-state='success'][data-dropdownvisible='true'] {
   border-color: #1b533f;
 }
 
-.emotion-8[data-state='danger'] {
+.emotion-6[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-8[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-6[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-8[data-state='danger'][data-dropdownvisible='true'] {
+.emotion-6[data-state='danger'][data-dropdownvisible='true'] {
   border-color: #92103f;
 }
 
-.emotion-8:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-6:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-8[data-readonly='true'] {
+.emotion-6[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-8[data-disabled='true'] {
+.emotion-6[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-11 {
+.emotion-9 {
   color: #3f4250;
   font-size: 1rem;
   font-family: Inter,sans-serif;
@@ -174,7 +170,7 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
   align-self: center;
 }
 
-.emotion-13 {
+.emotion-11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -202,7 +198,7 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
   display: flex;
 }
 
-.emotion-15 {
+.emotion-13 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1rem;
@@ -211,12 +207,12 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
   min-height: 1rem;
 }
 
-.emotion-15 .fillStroke {
+.emotion-13 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
 
-.emotion-18 {
+.emotion-16 {
   background: #151a2d;
   color: #ffffff;
   border-radius: 0.25rem;
@@ -244,12 +240,12 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
   margin-bottom: 5rem;
 }
 
-.emotion-18[data-animated="true"] {
+.emotion-16[data-animated="true"] {
   -webkit-animation: 0ms animation-0 forwards;
   animation: 0ms animation-0 forwards;
 }
 
-.emotion-18[data-has-arrow="true"]::after {
+.emotion-16[data-has-arrow="true"]::after {
   content: " ";
   position: absolute;
   top: -5px;
@@ -265,19 +261,19 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
   pointer-events: none;
 }
 
-.emotion-18[data-visible-in-dom="false"] {
+.emotion-16[data-visible-in-dom="false"] {
   display: none;
 }
 
-.emotion-18>.emotion-21 {
+.emotion-16>.emotion-19 {
   max-height: 100%;
 }
 
-.emotion-20[data-max-height="true"] {
+.emotion-18[data-max-height="true"] {
   overflow: auto;
 }
 
-.emotion-22 {
+.emotion-20 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -299,7 +295,7 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
   flex-direction: column;
 }
 
-.emotion-24 {
+.emotion-22 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -326,11 +322,11 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
   padding-top: 0.25rem;
 }
 
-.emotion-24[data-grouped="true"] {
+.emotion-22[data-grouped="true"] {
   padding-top: 0rem;
 }
 
-.emotion-26 {
+.emotion-24 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -353,13 +349,13 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
   gap: 0.125rem;
 }
 
-.emotion-28 {
+.emotion-26 {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
 }
 
-.emotion-30 {
+.emotion-28 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -389,21 +385,21 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
   margin-bottom: 0.125rem;
 }
 
-.emotion-30:focus {
+.emotion-28:focus {
   background-color: #f9f9fa;
   outline: none;
 }
 
-.emotion-30[data-selectgroup='true'] {
+.emotion-28[data-selectgroup='true'] {
   padding-left: 1rem;
   border-left: 0.25rem solid #f9f9fa;
 }
 
-.emotion-30[data-selectgroup='true']:focus {
+.emotion-28[data-selectgroup='true']:focus {
   background-color: #e9eaeb;
 }
 
-.emotion-32 {
+.emotion-30 {
   color: #3f4250;
   font-size: 0.75rem;
   font-family: Inter,sans-serif;
@@ -416,7 +412,7 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
   text-align: left;
 }
 
-.emotion-36 {
+.emotion-34 {
   text-align: left;
   border: none;
   background-color: #ffffff;
@@ -428,31 +424,31 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
   border: 1px transparent solid;
 }
 
-.emotion-36:hover,
-.emotion-36:focus {
+.emotion-34:hover,
+.emotion-34:focus {
   background-color: #f1eefc;
   color: #641cb3;
   cursor: pointer;
 }
 
-.emotion-36[aria-selected='true'] {
+.emotion-34[aria-selected='true'] {
   background-color: #f1eefc;
 }
 
-.emotion-36[aria-disabled="true"] {
+.emotion-34[aria-disabled="true"] {
   background-color: #f3f3f4;
   color: #b5b7bd;
 }
 
-.emotion-36[aria-disabled="true"]:hover,
-.emotion-36 [aria-disabled="true"]:focus {
+.emotion-34[aria-disabled="true"]:hover,
+.emotion-34 [aria-disabled="true"]:focus {
   background-color: #f3f3f4;
   color: #b5b7bd;
   cursor: not-allowed;
   outline: none;
 }
 
-.emotion-40 {
+.emotion-38 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -475,7 +471,7 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
   overflow: hidden;
 }
 
-.emotion-43 {
+.emotion-41 {
   font-size: 1rem;
   font-family: Inter,sans-serif;
   font-weight: 400;
@@ -497,7 +493,7 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
   max-width: 100%;
 }
 
-.emotion-45 {
+.emotion-43 {
   color: #727683;
   font-size: 0.875rem;
   font-family: Inter,sans-serif;
@@ -514,49 +510,49 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
     data-testid="testing"
   >
     <form
-      class="emotion-0 emotion-1"
       novalidate=""
+      style="display: contents;"
     >
       <div
         aria-label="test"
-        class="emotion-2 emotion-3"
+        class="emotion-0 emotion-1"
       >
         <div
-          aria-controls="_r_l_"
-          aria-describedby="_r_l_"
-          class="emotion-4 emotion-5"
+          aria-controls="«rl»"
+          aria-describedby="«rl»"
+          class="emotion-2 emotion-3"
           data-container-full-width="true"
           tabindex="-1"
         >
           <div
-            class="emotion-6 emotion-7"
+            class="emotion-4 emotion-5"
           >
             <div
-              aria-controls="_r_l_"
+              aria-controls="«rl»"
               aria-expanded="true"
               aria-label=""
-              class="emotion-8 emotion-9"
+              class="emotion-6 emotion-7"
               data-disabled="false"
               data-dropdownvisible="true"
               data-readonly="false"
               data-size="large"
               data-state="neutral"
               data-testid="select-input-test"
-              id="_r_k_"
+              id="«rk»"
               role="combobox"
               tabindex="0"
             >
               <div
-                class="emotion-10 emotion-11 emotion-12"
+                class="emotion-8 emotion-9 emotion-10"
               >
                 Mercury
               </div>
               <div
-                class="emotion-13 emotion-14"
+                class="emotion-11 emotion-12"
               >
                 <svg
                   aria-label="show dropdown"
-                  class="emotion-15 emotion-16"
+                  class="emotion-13 emotion-14"
                   viewBox="0 0 16 16"
                 >
                   <path
@@ -569,34 +565,34 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
             </div>
           </div>
           <div
-            class="emotion-17 emotion-18 emotion-19"
+            class="emotion-15 emotion-16 emotion-17"
             data-animated="false"
             data-has-arrow="false"
-            id="_r_l_"
+            id="«rl»"
             role="dialog"
             style="opacity: 1;"
           >
             <div
-              class="emotion-20 emotion-21"
+              class="emotion-18 emotion-19"
               data-max-height="false"
             >
               <div
-                class="emotion-22 emotion-7"
+                class="emotion-20 emotion-5"
               >
                 <div
-                  class="emotion-24 emotion-25"
+                  class="emotion-22 emotion-23"
                   data-grouped="true"
                   id="select-dropdown"
                   role="listbox"
                 >
                   <div
-                    class="emotion-26 emotion-7"
+                    class="emotion-24 emotion-5"
                   >
                     <div
-                      class="emotion-28 emotion-29"
+                      class="emotion-26 emotion-27"
                     >
                       <button
-                        class="emotion-30 emotion-31"
+                        class="emotion-28 emotion-29"
                         data-selectgroup="false"
                         data-testid="group-0"
                         role="group"
@@ -604,41 +600,41 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
                         type="button"
                       >
                         <span
-                          class="emotion-32 emotion-12"
+                          class="emotion-30 emotion-10"
                         >
                           JOVIAN PLANETS
                         </span>
                       </button>
                     </div>
                     <div
-                      class="emotion-26 emotion-7"
+                      class="emotion-24 emotion-5"
                       id="items"
                     >
                       <div
                         aria-disabled="false"
                         aria-label="jupiter"
                         aria-selected="false"
-                        class="emotion-36 emotion-37"
+                        class="emotion-34 emotion-35"
                         data-testid="option-jupiter"
                         id="option-0"
                         role="option"
                         tabindex="0"
                       >
                         <div
-                          class="emotion-6 emotion-7"
+                          class="emotion-4 emotion-5"
                           data-testid="option-stack-jupiter"
                         >
                           <div
-                            class="emotion-40 emotion-41"
+                            class="emotion-38 emotion-39"
                           >
                             <span
-                              class="emotion-42 emotion-43 emotion-12"
+                              class="emotion-40 emotion-41 emotion-10"
                             >
                               Jupiter
                             </span>
                           </div>
                           <span
-                            class="emotion-45 emotion-12"
+                            class="emotion-43 emotion-10"
                           >
                             Jupiter is the fifth planet from the Sun and the largest in the Solar System. It is a gas giant with a mass more than two and a half times that of all the other planets in the Solar System combined, and slightly less than one one-thousandth the mass of the Sun.
                           </span>
@@ -648,21 +644,21 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
                         aria-disabled="false"
                         aria-label="saturn"
                         aria-selected="false"
-                        class="emotion-36 emotion-37"
+                        class="emotion-34 emotion-35"
                         data-testid="option-saturn"
                         id="option-1"
                         role="option"
                         tabindex="0"
                       >
                         <div
-                          class="emotion-6 emotion-7"
+                          class="emotion-4 emotion-5"
                           data-testid="option-stack-saturn"
                         >
                           <div
-                            class="emotion-40 emotion-41"
+                            class="emotion-38 emotion-39"
                           >
                             <span
-                              class="emotion-42 emotion-43 emotion-12"
+                              class="emotion-40 emotion-41 emotion-10"
                             >
                               Saturn
                             </span>
@@ -673,21 +669,21 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
                         aria-disabled="false"
                         aria-label="uranus"
                         aria-selected="false"
-                        class="emotion-36 emotion-37"
+                        class="emotion-34 emotion-35"
                         data-testid="option-uranus"
                         id="option-2"
                         role="option"
                         tabindex="0"
                       >
                         <div
-                          class="emotion-6 emotion-7"
+                          class="emotion-4 emotion-5"
                           data-testid="option-stack-uranus"
                         >
                           <div
-                            class="emotion-40 emotion-41"
+                            class="emotion-38 emotion-39"
                           >
                             <span
-                              class="emotion-42 emotion-43 emotion-12"
+                              class="emotion-40 emotion-41 emotion-10"
                             >
                               Uranus
                             </span>
@@ -698,21 +694,21 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
                         aria-disabled="false"
                         aria-label="neptune"
                         aria-selected="false"
-                        class="emotion-36 emotion-37"
+                        class="emotion-34 emotion-35"
                         data-testid="option-neptune"
                         id="option-3"
                         role="option"
                         tabindex="0"
                       >
                         <div
-                          class="emotion-6 emotion-7"
+                          class="emotion-4 emotion-5"
                           data-testid="option-stack-neptune"
                         >
                           <div
-                            class="emotion-40 emotion-41"
+                            class="emotion-38 emotion-39"
                           >
                             <span
-                              class="emotion-42 emotion-43 emotion-12"
+                              class="emotion-40 emotion-41 emotion-10"
                             >
                               Neptune
                             </span>
@@ -722,13 +718,13 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
                     </div>
                   </div>
                   <div
-                    class="emotion-26 emotion-7"
+                    class="emotion-24 emotion-5"
                   >
                     <div
-                      class="emotion-28 emotion-29"
+                      class="emotion-26 emotion-27"
                     >
                       <button
-                        class="emotion-30 emotion-31"
+                        class="emotion-28 emotion-29"
                         data-selectgroup="false"
                         data-testid="group-1"
                         role="group"
@@ -736,35 +732,35 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
                         type="button"
                       >
                         <span
-                          class="emotion-32 emotion-12"
+                          class="emotion-30 emotion-10"
                         >
                           TERRESTRIAL PLANETS
                         </span>
                       </button>
                     </div>
                     <div
-                      class="emotion-26 emotion-7"
+                      class="emotion-24 emotion-5"
                       id="items"
                     >
                       <div
                         aria-disabled="false"
                         aria-label="mercury"
                         aria-selected="true"
-                        class="emotion-36 emotion-37"
+                        class="emotion-34 emotion-35"
                         data-testid="option-mercury"
                         id="option-0"
                         role="option"
                         tabindex="0"
                       >
                         <div
-                          class="emotion-6 emotion-7"
+                          class="emotion-4 emotion-5"
                           data-testid="option-stack-mercury"
                         >
                           <div
-                            class="emotion-40 emotion-41"
+                            class="emotion-38 emotion-39"
                           >
                             <span
-                              class="emotion-42 emotion-43 emotion-12"
+                              class="emotion-40 emotion-41 emotion-10"
                             >
                               Mercury
                             </span>
@@ -775,21 +771,21 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
                         aria-disabled="false"
                         aria-label="venus"
                         aria-selected="false"
-                        class="emotion-36 emotion-37"
+                        class="emotion-34 emotion-35"
                         data-testid="option-venus"
                         id="option-1"
                         role="option"
                         tabindex="0"
                       >
                         <div
-                          class="emotion-6 emotion-7"
+                          class="emotion-4 emotion-5"
                           data-testid="option-stack-venus"
                         >
                           <div
-                            class="emotion-40 emotion-41"
+                            class="emotion-38 emotion-39"
                           >
                             <span
-                              class="emotion-42 emotion-43 emotion-12"
+                              class="emotion-40 emotion-41 emotion-10"
                             >
                               Venus
                             </span>
@@ -800,27 +796,27 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
                         aria-disabled="false"
                         aria-label="earth"
                         aria-selected="false"
-                        class="emotion-36 emotion-37"
+                        class="emotion-34 emotion-35"
                         data-testid="option-earth"
                         id="option-2"
                         role="option"
                         tabindex="0"
                       >
                         <div
-                          class="emotion-6 emotion-7"
+                          class="emotion-4 emotion-5"
                           data-testid="option-stack-earth"
                         >
                           <div
-                            class="emotion-40 emotion-41"
+                            class="emotion-38 emotion-39"
                           >
                             <span
-                              class="emotion-42 emotion-43 emotion-12"
+                              class="emotion-40 emotion-41 emotion-10"
                             >
                               Earth
                             </span>
                           </div>
                           <span
-                            class="emotion-45 emotion-12"
+                            class="emotion-43 emotion-10"
                           >
                             Our home planet
                           </span>
@@ -830,21 +826,21 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
                         aria-disabled="true"
                         aria-label="mars"
                         aria-selected="false"
-                        class="emotion-36 emotion-37"
+                        class="emotion-34 emotion-35"
                         data-testid="option-mars"
                         id="option-3"
                         role="option"
                         tabindex="-1"
                       >
                         <div
-                          class="emotion-6 emotion-7"
+                          class="emotion-4 emotion-5"
                           data-testid="option-stack-mars"
                         >
                           <div
-                            class="emotion-40 emotion-41"
+                            class="emotion-38 emotion-39"
                           >
                             <span
-                              class="emotion-42 emotion-43 emotion-12"
+                              class="emotion-40 emotion-41 emotion-10"
                             >
                               Mars
                             </span>
@@ -855,27 +851,27 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
                         aria-disabled="false"
                         aria-label="pluto"
                         aria-selected="false"
-                        class="emotion-36 emotion-37"
+                        class="emotion-34 emotion-35"
                         data-testid="option-pluto"
                         id="option-4"
                         role="option"
                         tabindex="0"
                       >
                         <div
-                          class="emotion-6 emotion-7"
+                          class="emotion-4 emotion-5"
                           data-testid="option-stack-pluto"
                         >
                           <div
-                            class="emotion-40 emotion-41"
+                            class="emotion-38 emotion-39"
                           >
                             <span
-                              class="emotion-42 emotion-43 emotion-12"
+                              class="emotion-40 emotion-41 emotion-10"
                             >
                               Pluto
                             </span>
                           </div>
                           <span
-                            class="emotion-45 emotion-12"
+                            class="emotion-43 emotion-10"
                           >
                             Pluto does not fit the usual classification of either terrestrial or Jovian planets, but is rocky
                           </span>
@@ -897,26 +893,22 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
 exports[`selectInputField > should render correctly 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  display: contents;
+  width: 100%;
 }
 
 .emotion-2 {
+  display: inherit;
+}
+
+.emotion-2[data-container-full-height="true"] {
+  height: 100%;
+}
+
+.emotion-2[data-container-full-width="true"] {
   width: 100%;
 }
 
 .emotion-4 {
-  display: inherit;
-}
-
-.emotion-4[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-4[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -939,7 +931,7 @@ exports[`selectInputField > should render correctly 1`] = `
   gap: 0.25rem;
 }
 
-.emotion-8 {
+.emotion-6 {
   display: grid;
   width: 100%;
   gap: 0.5rem;
@@ -954,85 +946,85 @@ exports[`selectInputField > should render correctly 1`] = `
   width: 100%;
 }
 
-.emotion-8[data-size='small'] {
+.emotion-6[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-8[data-size='medium'] {
+.emotion-6[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-8[data-size='large'] {
+.emotion-6[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-8[data-state='neutral'] {
+.emotion-6[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.emotion-8[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-6[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-8[data-state='neutral']:not([data-disabled='true']):hover {
+.emotion-6[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-8[data-state='neutral']:not([data-disabled='true']):focus-visible {
+.emotion-6[data-state='neutral']:not([data-disabled='true']):focus-visible {
   outline: 5px auto Highlight;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-.emotion-8[data-state='neutral'][data-dropdownvisible='true'] {
+.emotion-6[data-state='neutral'][data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.emotion-8[data-state='success'] {
+.emotion-6[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.emotion-8[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-6[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #1b533f;
   box-shadow: 0px 0px 0px 3px #45d19f40;
 }
 
-.emotion-8[data-state='success'][data-dropdownvisible='true'] {
+.emotion-6[data-state='success'][data-dropdownvisible='true'] {
   border-color: #1b533f;
 }
 
-.emotion-8[data-state='danger'] {
+.emotion-6[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-8[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-6[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-8[data-state='danger'][data-dropdownvisible='true'] {
+.emotion-6[data-state='danger'][data-dropdownvisible='true'] {
   border-color: #92103f;
 }
 
-.emotion-8:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-6:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-8[data-readonly='true'] {
+.emotion-6[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-8[data-disabled='true'] {
+.emotion-6[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-11 {
+.emotion-9 {
   color: #727683;
   font-size: 1rem;
   font-family: Inter,sans-serif;
@@ -1051,7 +1043,7 @@ exports[`selectInputField > should render correctly 1`] = `
   align-self: center;
 }
 
-.emotion-13 {
+.emotion-11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1079,7 +1071,7 @@ exports[`selectInputField > should render correctly 1`] = `
   display: flex;
 }
 
-.emotion-15 {
+.emotion-13 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1rem;
@@ -1088,7 +1080,7 @@ exports[`selectInputField > should render correctly 1`] = `
   min-height: 1rem;
 }
 
-.emotion-15 .fillStroke {
+.emotion-13 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
@@ -1097,49 +1089,49 @@ exports[`selectInputField > should render correctly 1`] = `
     data-testid="testing"
   >
     <form
-      class="emotion-0 emotion-1"
       novalidate=""
+      style="display: contents;"
     >
       <div
         aria-label="test"
-        class="emotion-2 emotion-3"
+        class="emotion-0 emotion-1"
       >
         <div
-          aria-controls="_r_1_"
-          aria-describedby="_r_1_"
-          class="emotion-4 emotion-5"
+          aria-controls="«r1»"
+          aria-describedby="«r1»"
+          class="emotion-2 emotion-3"
           data-container-full-width="true"
           tabindex="-1"
         >
           <div
-            class="emotion-6 emotion-7"
+            class="emotion-4 emotion-5"
           >
             <div
-              aria-controls="_r_1_"
+              aria-controls="«r1»"
               aria-expanded="false"
               aria-label=""
-              class="emotion-8 emotion-9"
+              class="emotion-6 emotion-7"
               data-disabled="false"
               data-dropdownvisible="false"
               data-readonly="false"
               data-size="large"
               data-state="neutral"
               data-testid="select-input-test"
-              id="_r_0_"
+              id="«r0»"
               role="combobox"
               tabindex="0"
             >
               <p
-                class="emotion-10 emotion-11 emotion-12"
+                class="emotion-8 emotion-9 emotion-10"
               >
                 Select item
               </p>
               <div
-                class="emotion-13 emotion-14"
+                class="emotion-11 emotion-12"
               >
                 <svg
                   aria-label="show dropdown"
-                  class="emotion-15 emotion-16"
+                  class="emotion-13 emotion-14"
                   viewBox="0 0 16 16"
                 >
                   <path
@@ -1161,26 +1153,22 @@ exports[`selectInputField > should render correctly 1`] = `
 exports[`selectInputField > should render correctly disabled 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  display: contents;
+  width: 100%;
 }
 
 .emotion-2 {
+  display: inherit;
+}
+
+.emotion-2[data-container-full-height="true"] {
+  height: 100%;
+}
+
+.emotion-2[data-container-full-width="true"] {
   width: 100%;
 }
 
 .emotion-4 {
-  display: inherit;
-}
-
-.emotion-4[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-4[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1203,7 +1191,7 @@ exports[`selectInputField > should render correctly disabled 1`] = `
   gap: 0.25rem;
 }
 
-.emotion-8 {
+.emotion-6 {
   display: grid;
   width: 100%;
   gap: 0.5rem;
@@ -1218,85 +1206,85 @@ exports[`selectInputField > should render correctly disabled 1`] = `
   width: 100%;
 }
 
-.emotion-8[data-size='small'] {
+.emotion-6[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-8[data-size='medium'] {
+.emotion-6[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-8[data-size='large'] {
+.emotion-6[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-8[data-state='neutral'] {
+.emotion-6[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.emotion-8[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-6[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-8[data-state='neutral']:not([data-disabled='true']):hover {
+.emotion-6[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-8[data-state='neutral']:not([data-disabled='true']):focus-visible {
+.emotion-6[data-state='neutral']:not([data-disabled='true']):focus-visible {
   outline: 5px auto Highlight;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-.emotion-8[data-state='neutral'][data-dropdownvisible='true'] {
+.emotion-6[data-state='neutral'][data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.emotion-8[data-state='success'] {
+.emotion-6[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.emotion-8[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-6[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #1b533f;
   box-shadow: 0px 0px 0px 3px #45d19f40;
 }
 
-.emotion-8[data-state='success'][data-dropdownvisible='true'] {
+.emotion-6[data-state='success'][data-dropdownvisible='true'] {
   border-color: #1b533f;
 }
 
-.emotion-8[data-state='danger'] {
+.emotion-6[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-8[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-6[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-8[data-state='danger'][data-dropdownvisible='true'] {
+.emotion-6[data-state='danger'][data-dropdownvisible='true'] {
   border-color: #92103f;
 }
 
-.emotion-8:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-6:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-8[data-readonly='true'] {
+.emotion-6[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-8[data-disabled='true'] {
+.emotion-6[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-11 {
+.emotion-9 {
   color: #b5b7bd;
   font-size: 1rem;
   font-family: Inter,sans-serif;
@@ -1315,7 +1303,7 @@ exports[`selectInputField > should render correctly disabled 1`] = `
   align-self: center;
 }
 
-.emotion-13 {
+.emotion-11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1343,7 +1331,7 @@ exports[`selectInputField > should render correctly disabled 1`] = `
   display: flex;
 }
 
-.emotion-15 {
+.emotion-13 {
   vertical-align: middle;
   fill: #b5b7bd;
   height: 1rem;
@@ -1352,7 +1340,7 @@ exports[`selectInputField > should render correctly disabled 1`] = `
   min-height: 1rem;
 }
 
-.emotion-15 .fillStroke {
+.emotion-13 .fillStroke {
   stroke: #b5b7bd;
   fill: none;
 }
@@ -1361,49 +1349,49 @@ exports[`selectInputField > should render correctly disabled 1`] = `
     data-testid="testing"
   >
     <form
-      class="emotion-0 emotion-1"
       novalidate=""
+      style="display: contents;"
     >
       <div
         aria-label="test"
-        class="emotion-2 emotion-3"
+        class="emotion-0 emotion-1"
       >
         <div
-          aria-controls="_r_6_"
-          aria-describedby="_r_6_"
-          class="emotion-4 emotion-5"
+          aria-controls="«r6»"
+          aria-describedby="«r6»"
+          class="emotion-2 emotion-3"
           data-container-full-width="true"
           tabindex="-1"
         >
           <div
-            class="emotion-6 emotion-7"
+            class="emotion-4 emotion-5"
           >
             <div
-              aria-controls="_r_6_"
+              aria-controls="«r6»"
               aria-expanded="false"
               aria-label=""
-              class="emotion-8 emotion-9"
+              class="emotion-6 emotion-7"
               data-disabled="true"
               data-dropdownvisible="false"
               data-readonly="false"
               data-size="large"
               data-state="neutral"
               data-testid="select-input-test"
-              id="_r_5_"
+              id="«r5»"
               role="combobox"
               tabindex="0"
             >
               <p
-                class="emotion-10 emotion-11 emotion-12"
+                class="emotion-8 emotion-9 emotion-10"
               >
                 Select item
               </p>
               <div
-                class="emotion-13 emotion-14"
+                class="emotion-11 emotion-12"
               >
                 <svg
                   aria-label="show dropdown"
-                  class="emotion-15 emotion-16"
+                  class="emotion-13 emotion-14"
                   viewBox="0 0 16 16"
                 >
                   <path
@@ -1425,26 +1413,22 @@ exports[`selectInputField > should render correctly disabled 1`] = `
 exports[`selectInputField > should render correctly grouped 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  display: contents;
+  width: 100%;
 }
 
 .emotion-2 {
+  display: inherit;
+}
+
+.emotion-2[data-container-full-height="true"] {
+  height: 100%;
+}
+
+.emotion-2[data-container-full-width="true"] {
   width: 100%;
 }
 
 .emotion-4 {
-  display: inherit;
-}
-
-.emotion-4[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-4[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1467,7 +1451,7 @@ exports[`selectInputField > should render correctly grouped 1`] = `
   gap: 0.25rem;
 }
 
-.emotion-8 {
+.emotion-6 {
   display: grid;
   width: 100%;
   gap: 0.5rem;
@@ -1482,85 +1466,85 @@ exports[`selectInputField > should render correctly grouped 1`] = `
   width: 100%;
 }
 
-.emotion-8[data-size='small'] {
+.emotion-6[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-8[data-size='medium'] {
+.emotion-6[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-8[data-size='large'] {
+.emotion-6[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-8[data-state='neutral'] {
+.emotion-6[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.emotion-8[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-6[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-8[data-state='neutral']:not([data-disabled='true']):hover {
+.emotion-6[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-8[data-state='neutral']:not([data-disabled='true']):focus-visible {
+.emotion-6[data-state='neutral']:not([data-disabled='true']):focus-visible {
   outline: 5px auto Highlight;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-.emotion-8[data-state='neutral'][data-dropdownvisible='true'] {
+.emotion-6[data-state='neutral'][data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.emotion-8[data-state='success'] {
+.emotion-6[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.emotion-8[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-6[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #1b533f;
   box-shadow: 0px 0px 0px 3px #45d19f40;
 }
 
-.emotion-8[data-state='success'][data-dropdownvisible='true'] {
+.emotion-6[data-state='success'][data-dropdownvisible='true'] {
   border-color: #1b533f;
 }
 
-.emotion-8[data-state='danger'] {
+.emotion-6[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-8[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-6[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-8[data-state='danger'][data-dropdownvisible='true'] {
+.emotion-6[data-state='danger'][data-dropdownvisible='true'] {
   border-color: #92103f;
 }
 
-.emotion-8:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-6:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-8[data-readonly='true'] {
+.emotion-6[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-8[data-disabled='true'] {
+.emotion-6[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-11 {
+.emotion-9 {
   color: #727683;
   font-size: 1rem;
   font-family: Inter,sans-serif;
@@ -1579,7 +1563,7 @@ exports[`selectInputField > should render correctly grouped 1`] = `
   align-self: center;
 }
 
-.emotion-13 {
+.emotion-11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1607,7 +1591,7 @@ exports[`selectInputField > should render correctly grouped 1`] = `
   display: flex;
 }
 
-.emotion-15 {
+.emotion-13 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1rem;
@@ -1616,7 +1600,7 @@ exports[`selectInputField > should render correctly grouped 1`] = `
   min-height: 1rem;
 }
 
-.emotion-15 .fillStroke {
+.emotion-13 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
@@ -1625,49 +1609,49 @@ exports[`selectInputField > should render correctly grouped 1`] = `
     data-testid="testing"
   >
     <form
-      class="emotion-0 emotion-1"
       novalidate=""
+      style="display: contents;"
     >
       <div
         aria-label="test"
-        class="emotion-2 emotion-3"
+        class="emotion-0 emotion-1"
       >
         <div
-          aria-controls="_r_g_"
-          aria-describedby="_r_g_"
-          class="emotion-4 emotion-5"
+          aria-controls="«rg»"
+          aria-describedby="«rg»"
+          class="emotion-2 emotion-3"
           data-container-full-width="true"
           tabindex="-1"
         >
           <div
-            class="emotion-6 emotion-7"
+            class="emotion-4 emotion-5"
           >
             <div
-              aria-controls="_r_g_"
+              aria-controls="«rg»"
               aria-expanded="false"
               aria-label=""
-              class="emotion-8 emotion-9"
+              class="emotion-6 emotion-7"
               data-disabled="false"
               data-dropdownvisible="false"
               data-readonly="false"
               data-size="large"
               data-state="neutral"
               data-testid="select-input-test"
-              id="_r_f_"
+              id="«rf»"
               role="combobox"
               tabindex="0"
             >
               <p
-                class="emotion-10 emotion-11 emotion-12"
+                class="emotion-8 emotion-9 emotion-10"
               >
                 Select item
               </p>
               <div
-                class="emotion-13 emotion-14"
+                class="emotion-11 emotion-12"
               >
                 <svg
                   aria-label="show dropdown"
-                  class="emotion-15 emotion-16"
+                  class="emotion-13 emotion-14"
                   viewBox="0 0 16 16"
                 >
                   <path
@@ -1689,26 +1673,22 @@ exports[`selectInputField > should render correctly grouped 1`] = `
 exports[`selectInputField > should render correctly multiselect 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  display: contents;
+  width: 100%;
 }
 
 .emotion-2 {
+  display: inherit;
+}
+
+.emotion-2[data-container-full-height="true"] {
+  height: 100%;
+}
+
+.emotion-2[data-container-full-width="true"] {
   width: 100%;
 }
 
 .emotion-4 {
-  display: inherit;
-}
-
-.emotion-4[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-4[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1731,7 +1711,7 @@ exports[`selectInputField > should render correctly multiselect 1`] = `
   gap: 0.25rem;
 }
 
-.emotion-8 {
+.emotion-6 {
   display: grid;
   width: 100%;
   gap: 0.5rem;
@@ -1746,85 +1726,85 @@ exports[`selectInputField > should render correctly multiselect 1`] = `
   width: 100%;
 }
 
-.emotion-8[data-size='small'] {
+.emotion-6[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-8[data-size='medium'] {
+.emotion-6[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-8[data-size='large'] {
+.emotion-6[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-8[data-state='neutral'] {
+.emotion-6[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.emotion-8[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-6[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-8[data-state='neutral']:not([data-disabled='true']):hover {
+.emotion-6[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-8[data-state='neutral']:not([data-disabled='true']):focus-visible {
+.emotion-6[data-state='neutral']:not([data-disabled='true']):focus-visible {
   outline: 5px auto Highlight;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-.emotion-8[data-state='neutral'][data-dropdownvisible='true'] {
+.emotion-6[data-state='neutral'][data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.emotion-8[data-state='success'] {
+.emotion-6[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.emotion-8[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-6[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #1b533f;
   box-shadow: 0px 0px 0px 3px #45d19f40;
 }
 
-.emotion-8[data-state='success'][data-dropdownvisible='true'] {
+.emotion-6[data-state='success'][data-dropdownvisible='true'] {
   border-color: #1b533f;
 }
 
-.emotion-8[data-state='danger'] {
+.emotion-6[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-8[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-6[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-8[data-state='danger'][data-dropdownvisible='true'] {
+.emotion-6[data-state='danger'][data-dropdownvisible='true'] {
   border-color: #92103f;
 }
 
-.emotion-8:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-6:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-8[data-readonly='true'] {
+.emotion-6[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-8[data-disabled='true'] {
+.emotion-6[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-11 {
+.emotion-9 {
   color: #727683;
   font-size: 1rem;
   font-family: Inter,sans-serif;
@@ -1843,7 +1823,7 @@ exports[`selectInputField > should render correctly multiselect 1`] = `
   align-self: center;
 }
 
-.emotion-13 {
+.emotion-11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1871,7 +1851,7 @@ exports[`selectInputField > should render correctly multiselect 1`] = `
   display: flex;
 }
 
-.emotion-15 {
+.emotion-13 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1rem;
@@ -1880,7 +1860,7 @@ exports[`selectInputField > should render correctly multiselect 1`] = `
   min-height: 1rem;
 }
 
-.emotion-15 .fillStroke {
+.emotion-13 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
@@ -1889,49 +1869,49 @@ exports[`selectInputField > should render correctly multiselect 1`] = `
     data-testid="testing"
   >
     <form
-      class="emotion-0 emotion-1"
       novalidate=""
+      style="display: contents;"
     >
       <div
         aria-label="test"
-        class="emotion-2 emotion-3"
+        class="emotion-0 emotion-1"
       >
         <div
-          aria-controls="_r_b_"
-          aria-describedby="_r_b_"
-          class="emotion-4 emotion-5"
+          aria-controls="«rb»"
+          aria-describedby="«rb»"
+          class="emotion-2 emotion-3"
           data-container-full-width="true"
           tabindex="-1"
         >
           <div
-            class="emotion-6 emotion-7"
+            class="emotion-4 emotion-5"
           >
             <div
-              aria-controls="_r_b_"
+              aria-controls="«rb»"
               aria-expanded="false"
               aria-label=""
-              class="emotion-8 emotion-9"
+              class="emotion-6 emotion-7"
               data-disabled="false"
               data-dropdownvisible="false"
               data-readonly="false"
               data-size="large"
               data-state="neutral"
               data-testid="select-input-test"
-              id="_r_a_"
+              id="«ra»"
               role="combobox"
               tabindex="0"
             >
               <p
-                class="emotion-10 emotion-11 emotion-12"
+                class="emotion-8 emotion-9 emotion-10"
               >
                 Select item
               </p>
               <div
-                class="emotion-13 emotion-14"
+                class="emotion-11 emotion-12"
               >
                 <svg
                   aria-label="show dropdown"
-                  class="emotion-15 emotion-16"
+                  class="emotion-13 emotion-14"
                   viewBox="0 0 16 16"
                 >
                   <path
@@ -1953,26 +1933,22 @@ exports[`selectInputField > should render correctly multiselect 1`] = `
 exports[`selectInputField > should trigger events 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  display: contents;
+  width: 100%;
 }
 
 .emotion-2 {
+  display: inherit;
+}
+
+.emotion-2[data-container-full-height="true"] {
+  height: 100%;
+}
+
+.emotion-2[data-container-full-width="true"] {
   width: 100%;
 }
 
 .emotion-4 {
-  display: inherit;
-}
-
-.emotion-4[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-4[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1995,7 +1971,7 @@ exports[`selectInputField > should trigger events 1`] = `
   gap: 0.25rem;
 }
 
-.emotion-8 {
+.emotion-6 {
   display: grid;
   width: 100%;
   gap: 0.5rem;
@@ -2010,85 +1986,85 @@ exports[`selectInputField > should trigger events 1`] = `
   width: 100%;
 }
 
-.emotion-8[data-size='small'] {
+.emotion-6[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-8[data-size='medium'] {
+.emotion-6[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-8[data-size='large'] {
+.emotion-6[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-8[data-state='neutral'] {
+.emotion-6[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.emotion-8[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-6[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-8[data-state='neutral']:not([data-disabled='true']):hover {
+.emotion-6[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-8[data-state='neutral']:not([data-disabled='true']):focus-visible {
+.emotion-6[data-state='neutral']:not([data-disabled='true']):focus-visible {
   outline: 5px auto Highlight;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-.emotion-8[data-state='neutral'][data-dropdownvisible='true'] {
+.emotion-6[data-state='neutral'][data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.emotion-8[data-state='success'] {
+.emotion-6[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.emotion-8[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-6[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #1b533f;
   box-shadow: 0px 0px 0px 3px #45d19f40;
 }
 
-.emotion-8[data-state='success'][data-dropdownvisible='true'] {
+.emotion-6[data-state='success'][data-dropdownvisible='true'] {
   border-color: #1b533f;
 }
 
-.emotion-8[data-state='danger'] {
+.emotion-6[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-8[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-6[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-8[data-state='danger'][data-dropdownvisible='true'] {
+.emotion-6[data-state='danger'][data-dropdownvisible='true'] {
   border-color: #92103f;
 }
 
-.emotion-8:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-6:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-8[data-readonly='true'] {
+.emotion-6[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-8[data-disabled='true'] {
+.emotion-6[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-11 {
+.emotion-9 {
   color: #3f4250;
   font-size: 1rem;
   font-family: Inter,sans-serif;
@@ -2106,7 +2082,7 @@ exports[`selectInputField > should trigger events 1`] = `
   align-self: center;
 }
 
-.emotion-13 {
+.emotion-11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2134,7 +2110,7 @@ exports[`selectInputField > should trigger events 1`] = `
   display: flex;
 }
 
-.emotion-15 {
+.emotion-13 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1rem;
@@ -2143,7 +2119,7 @@ exports[`selectInputField > should trigger events 1`] = `
   min-height: 1rem;
 }
 
-.emotion-15 .fillStroke {
+.emotion-13 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
@@ -2152,49 +2128,49 @@ exports[`selectInputField > should trigger events 1`] = `
     data-testid="testing"
   >
     <form
-      class="emotion-0 emotion-1"
       novalidate=""
+      style="display: contents;"
     >
       <div
         aria-label="test"
-        class="emotion-2 emotion-3"
+        class="emotion-0 emotion-1"
       >
         <div
-          aria-controls="_r_29_"
-          aria-describedby="_r_29_"
-          class="emotion-4 emotion-5"
+          aria-controls="«r29»"
+          aria-describedby="«r29»"
+          class="emotion-2 emotion-3"
           data-container-full-width="true"
           tabindex="-1"
         >
           <div
-            class="emotion-6 emotion-7"
+            class="emotion-4 emotion-5"
           >
             <div
-              aria-controls="_r_29_"
+              aria-controls="«r29»"
               aria-expanded="false"
               aria-label=""
-              class="emotion-8 emotion-9"
+              class="emotion-6 emotion-7"
               data-disabled="false"
               data-dropdownvisible="false"
               data-readonly="false"
               data-size="large"
               data-state="neutral"
               data-testid="select-input-test"
-              id="_r_28_"
+              id="«r28»"
               role="combobox"
               tabindex="0"
             >
               <div
-                class="emotion-10 emotion-11 emotion-12"
+                class="emotion-8 emotion-9 emotion-10"
               >
                 Mercury
               </div>
               <div
-                class="emotion-13 emotion-14"
+                class="emotion-11 emotion-12"
               >
                 <svg
                   aria-label="show dropdown"
-                  class="emotion-15 emotion-16"
+                  class="emotion-13 emotion-14"
                   viewBox="0 0 16 16"
                 >
                   <path
