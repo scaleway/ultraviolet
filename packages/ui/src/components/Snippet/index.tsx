@@ -48,12 +48,14 @@ const StyledSpan = styled('span', {
   display: block;
 
 
-  &:after {
+  &:not([data-multiline]):after {
     content: "";
-    ${({ theme, multiline }) =>
-      multiline
-        ? `padding: ${theme.space['4']}`
-        : `padding-right: ${theme.space['8']}`};
+    ${({ theme }) => `padding-right: ${theme.space['8']}`};
+  }
+
+  &[data-multiline="true"]:nth-child(-n+2):after {
+    content: "";
+    ${({ theme }) => `padding-right: ${theme.space['8']}`};
   }
 
   ${({ prefix, theme }) =>
@@ -171,7 +173,7 @@ const CodeContent = ({
   >
     {multiline ? (
       Children.map(lines, child => (
-        <StyledSpan key={child} multiline prefix={prefix}>
+        <StyledSpan data-multiline="true" key={child} prefix={prefix}>
           {child}
         </StyledSpan>
       ))
