@@ -63,7 +63,12 @@ exports[`snippet > renders correctly 1`] = `
   display: block;
 }
 
-.emotion-7:after {
+.emotion-7:not([data-multiline]):after {
+  content: "";
+  padding-right: 4rem;
+}
+
+.emotion-7[data-multiline="true"]:nth-child(-n+2):after {
   content: "";
   padding-right: 4rem;
 }
@@ -234,9 +239,14 @@ exports[`snippet > renders correctly in multiline  1`] = `
   display: block;
 }
 
-.emotion-9:after {
+.emotion-9:not([data-multiline]):after {
   content: "";
-  padding: 2rem;
+  padding-right: 4rem;
+}
+
+.emotion-9[data-multiline="true"]:nth-child(-n+2):after {
+  content: "";
+  padding-right: 4rem;
 }
 
 .emotion-23 {
@@ -353,36 +363,43 @@ exports[`snippet > renders correctly in multiline  1`] = `
           >
             <span
               class="emotion-9 emotion-10"
+              data-multiline="true"
             >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </span>
             <span
               class="emotion-9 emotion-10"
+              data-multiline="true"
             >
               Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             </span>
             <span
               class="emotion-9 emotion-10"
+              data-multiline="true"
             >
               Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
             </span>
             <span
               class="emotion-9 emotion-10"
+              data-multiline="true"
             >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </span>
             <span
               class="emotion-9 emotion-10"
+              data-multiline="true"
             >
               Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             </span>
             <span
               class="emotion-9 emotion-10"
+              data-multiline="true"
             >
               Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
             </span>
             <span
               class="emotion-9 emotion-10"
+              data-multiline="true"
             />
           </pre>
         </div>
@@ -522,9 +539,14 @@ exports[`snippet > renders correctly in multiline with prefix command 1`] = `
   display: block;
 }
 
-.emotion-9:after {
+.emotion-9:not([data-multiline]):after {
   content: "";
-  padding: 2rem;
+  padding-right: 4rem;
+}
+
+.emotion-9[data-multiline="true"]:nth-child(-n+2):after {
+  content: "";
+  padding-right: 4rem;
 }
 
 .emotion-9:before {
@@ -656,36 +678,43 @@ exports[`snippet > renders correctly in multiline with prefix command 1`] = `
           >
             <span
               class="emotion-9 emotion-10"
+              data-multiline="true"
             >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </span>
             <span
               class="emotion-9 emotion-10"
+              data-multiline="true"
             >
               Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             </span>
             <span
               class="emotion-9 emotion-10"
+              data-multiline="true"
             >
               Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
             </span>
             <span
               class="emotion-9 emotion-10"
+              data-multiline="true"
             >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </span>
             <span
               class="emotion-9 emotion-10"
+              data-multiline="true"
             >
               Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             </span>
             <span
               class="emotion-9 emotion-10"
+              data-multiline="true"
             >
               Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
             </span>
             <span
               class="emotion-9 emotion-10"
+              data-multiline="true"
             />
           </pre>
         </div>
@@ -825,9 +854,14 @@ exports[`snippet > renders correctly in multiline with prefix lines number 1`] =
   display: block;
 }
 
-.emotion-9:after {
+.emotion-9:not([data-multiline]):after {
   content: "";
-  padding: 2rem;
+  padding-right: 4rem;
+}
+
+.emotion-9[data-multiline="true"]:nth-child(-n+2):after {
+  content: "";
+  padding-right: 4rem;
 }
 
 .emotion-9:before {
@@ -960,36 +994,43 @@ exports[`snippet > renders correctly in multiline with prefix lines number 1`] =
           >
             <span
               class="emotion-9 emotion-10"
+              data-multiline="true"
             >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </span>
             <span
               class="emotion-9 emotion-10"
+              data-multiline="true"
             >
               Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             </span>
             <span
               class="emotion-9 emotion-10"
+              data-multiline="true"
             >
               Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
             </span>
             <span
               class="emotion-9 emotion-10"
+              data-multiline="true"
             >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </span>
             <span
               class="emotion-9 emotion-10"
+              data-multiline="true"
             >
               Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             </span>
             <span
               class="emotion-9 emotion-10"
+              data-multiline="true"
             >
               Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
             </span>
             <span
               class="emotion-9 emotion-10"
+              data-multiline="true"
             />
           </pre>
         </div>
@@ -1120,7 +1161,12 @@ exports[`snippet > renders correctly with copiedText 1`] = `
   display: block;
 }
 
-.emotion-7:after {
+.emotion-7:not([data-multiline]):after {
+  content: "";
+  padding-right: 4rem;
+}
+
+.emotion-7[data-multiline="true"]:nth-child(-n+2):after {
   content: "";
   padding-right: 4rem;
 }
@@ -1282,7 +1328,12 @@ exports[`snippet > renders correctly with copyText 1`] = `
   display: block;
 }
 
-.emotion-7:after {
+.emotion-7:not([data-multiline]):after {
+  content: "";
+  padding-right: 4rem;
+}
+
+.emotion-7[data-multiline="true"]:nth-child(-n+2):after {
   content: "";
   padding-right: 4rem;
 }
@@ -1501,18 +1552,28 @@ exports[`snippet > renders correctly with custom number of rows 1`] = `
   display: block;
 }
 
-.emotion-7:after {
+.emotion-7:not([data-multiline]):after {
   content: "";
-  padding: 2rem;
+  padding-right: 4rem;
+}
+
+.emotion-7[data-multiline="true"]:nth-child(-n+2):after {
+  content: "";
+  padding-right: 4rem;
 }
 
 .emotion-7 {
   display: block;
 }
 
-.emotion-7:after {
+.emotion-7:not([data-multiline]):after {
   content: "";
-  padding: 2rem;
+  padding-right: 4rem;
+}
+
+.emotion-7[data-multiline="true"]:nth-child(-n+2):after {
+  content: "";
+  padding-right: 4rem;
 }
 
 .emotion-21 {
@@ -1601,36 +1662,43 @@ exports[`snippet > renders correctly with custom number of rows 1`] = `
         >
           <span
             class="emotion-7 emotion-8"
+            data-multiline="true"
           >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </span>
           <span
             class="emotion-7 emotion-8"
+            data-multiline="true"
           >
             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
           </span>
           <span
             class="emotion-7 emotion-8"
+            data-multiline="true"
           >
             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
           </span>
           <span
             class="emotion-7 emotion-8"
+            data-multiline="true"
           >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </span>
           <span
             class="emotion-7 emotion-8"
+            data-multiline="true"
           >
             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
           </span>
           <span
             class="emotion-7 emotion-8"
+            data-multiline="true"
           >
             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
           </span>
           <span
             class="emotion-7 emotion-8"
+            data-multiline="true"
           />
         </pre>
         <div
@@ -1744,9 +1812,14 @@ exports[`snippet > renders correctly with hideText 1`] = `
   display: block;
 }
 
-.emotion-9:after {
+.emotion-9:not([data-multiline]):after {
   content: "";
-  padding: 2rem;
+  padding-right: 4rem;
+}
+
+.emotion-9[data-multiline="true"]:nth-child(-n+2):after {
+  content: "";
+  padding-right: 4rem;
 }
 
 .emotion-23 {
@@ -1863,36 +1936,43 @@ exports[`snippet > renders correctly with hideText 1`] = `
           >
             <span
               class="emotion-9 emotion-10"
+              data-multiline="true"
             >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </span>
             <span
               class="emotion-9 emotion-10"
+              data-multiline="true"
             >
               Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             </span>
             <span
               class="emotion-9 emotion-10"
+              data-multiline="true"
             >
               Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
             </span>
             <span
               class="emotion-9 emotion-10"
+              data-multiline="true"
             >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </span>
             <span
               class="emotion-9 emotion-10"
+              data-multiline="true"
             >
               Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             </span>
             <span
               class="emotion-9 emotion-10"
+              data-multiline="true"
             >
               Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
             </span>
             <span
               class="emotion-9 emotion-10"
+              data-multiline="true"
             />
           </pre>
         </div>
@@ -2098,18 +2178,28 @@ exports[`snippet > renders correctly with initiallyExpanded 1`] = `
   display: block;
 }
 
-.emotion-9:after {
+.emotion-9:not([data-multiline]):after {
   content: "";
-  padding: 2rem;
+  padding-right: 4rem;
+}
+
+.emotion-9[data-multiline="true"]:nth-child(-n+2):after {
+  content: "";
+  padding-right: 4rem;
 }
 
 .emotion-9 {
   display: block;
 }
 
-.emotion-9:after {
+.emotion-9:not([data-multiline]):after {
   content: "";
-  padding: 2rem;
+  padding-right: 4rem;
+}
+
+.emotion-9[data-multiline="true"]:nth-child(-n+2):after {
+  content: "";
+  padding-right: 4rem;
 }
 
 .emotion-23 {
@@ -2294,36 +2384,43 @@ exports[`snippet > renders correctly with initiallyExpanded 1`] = `
           >
             <span
               class="emotion-9 emotion-10"
+              data-multiline="true"
             >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </span>
             <span
               class="emotion-9 emotion-10"
+              data-multiline="true"
             >
               Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             </span>
             <span
               class="emotion-9 emotion-10"
+              data-multiline="true"
             >
               Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
             </span>
             <span
               class="emotion-9 emotion-10"
+              data-multiline="true"
             >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </span>
             <span
               class="emotion-9 emotion-10"
+              data-multiline="true"
             >
               Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             </span>
             <span
               class="emotion-9 emotion-10"
+              data-multiline="true"
             >
               Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
             </span>
             <span
               class="emotion-9 emotion-10"
+              data-multiline="true"
             />
           </pre>
         </div>
@@ -2494,18 +2591,28 @@ exports[`snippet > renders correctly with noExpandable 1`] = `
   display: block;
 }
 
-.emotion-7:after {
+.emotion-7:not([data-multiline]):after {
   content: "";
-  padding: 2rem;
+  padding-right: 4rem;
+}
+
+.emotion-7[data-multiline="true"]:nth-child(-n+2):after {
+  content: "";
+  padding-right: 4rem;
 }
 
 .emotion-7 {
   display: block;
 }
 
-.emotion-7:after {
+.emotion-7:not([data-multiline]):after {
   content: "";
-  padding: 2rem;
+  padding-right: 4rem;
+}
+
+.emotion-7[data-multiline="true"]:nth-child(-n+2):after {
+  content: "";
+  padding-right: 4rem;
 }
 
 .emotion-21 {
@@ -2594,36 +2701,43 @@ exports[`snippet > renders correctly with noExpandable 1`] = `
         >
           <span
             class="emotion-7 emotion-8"
+            data-multiline="true"
           >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </span>
           <span
             class="emotion-7 emotion-8"
+            data-multiline="true"
           >
             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
           </span>
           <span
             class="emotion-7 emotion-8"
+            data-multiline="true"
           >
             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
           </span>
           <span
             class="emotion-7 emotion-8"
+            data-multiline="true"
           >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </span>
           <span
             class="emotion-7 emotion-8"
+            data-multiline="true"
           >
             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
           </span>
           <span
             class="emotion-7 emotion-8"
+            data-multiline="true"
           >
             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
           </span>
           <span
             class="emotion-7 emotion-8"
+            data-multiline="true"
           />
         </pre>
         <div
@@ -2803,18 +2917,28 @@ exports[`snippet > renders correctly with showText 1`] = `
   display: block;
 }
 
-.emotion-9:after {
+.emotion-9:not([data-multiline]):after {
   content: "";
-  padding: 2rem;
+  padding-right: 4rem;
+}
+
+.emotion-9[data-multiline="true"]:nth-child(-n+2):after {
+  content: "";
+  padding-right: 4rem;
 }
 
 .emotion-9 {
   display: block;
 }
 
-.emotion-9:after {
+.emotion-9:not([data-multiline]):after {
   content: "";
-  padding: 2rem;
+  padding-right: 4rem;
+}
+
+.emotion-9[data-multiline="true"]:nth-child(-n+2):after {
+  content: "";
+  padding-right: 4rem;
 }
 
 .emotion-23 {
@@ -3026,36 +3150,43 @@ exports[`snippet > renders correctly with showText 1`] = `
           >
             <span
               class="emotion-9 emotion-10"
+              data-multiline="true"
             >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </span>
             <span
               class="emotion-9 emotion-10"
+              data-multiline="true"
             >
               Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             </span>
             <span
               class="emotion-9 emotion-10"
+              data-multiline="true"
             >
               Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
             </span>
             <span
               class="emotion-9 emotion-10"
+              data-multiline="true"
             >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </span>
             <span
               class="emotion-9 emotion-10"
+              data-multiline="true"
             >
               Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             </span>
             <span
               class="emotion-9 emotion-10"
+              data-multiline="true"
             >
               Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
             </span>
             <span
               class="emotion-9 emotion-10"
+              data-multiline="true"
             />
           </pre>
         </div>
@@ -3186,7 +3317,12 @@ exports[`snippet > renders correctly with single line with prefix command 1`] = 
   display: block;
 }
 
-.emotion-7:after {
+.emotion-7:not([data-multiline]):after {
+  content: "";
+  padding-right: 4rem;
+}
+
+.emotion-7[data-multiline="true"]:nth-child(-n+2):after {
   content: "";
   padding-right: 4rem;
 }
@@ -3363,7 +3499,12 @@ exports[`snippet > renders correctly with single line with prefix lines number 1
   display: block;
 }
 
-.emotion-7:after {
+.emotion-7:not([data-multiline]):after {
+  content: "";
+  padding-right: 4rem;
+}
+
+.emotion-7[data-multiline="true"]:nth-child(-n+2):after {
   content: "";
   padding-right: 4rem;
 }
@@ -3616,18 +3757,28 @@ exports[`snippet > should click on extend button to display full content on  1`]
   display: block;
 }
 
-.emotion-9:after {
+.emotion-9:not([data-multiline]):after {
   content: "";
-  padding: 2rem;
+  padding-right: 4rem;
+}
+
+.emotion-9[data-multiline="true"]:nth-child(-n+2):after {
+  content: "";
+  padding-right: 4rem;
 }
 
 .emotion-9 {
   display: block;
 }
 
-.emotion-9:after {
+.emotion-9:not([data-multiline]):after {
   content: "";
-  padding: 2rem;
+  padding-right: 4rem;
+}
+
+.emotion-9[data-multiline="true"]:nth-child(-n+2):after {
+  content: "";
+  padding-right: 4rem;
 }
 
 .emotion-23 {
@@ -3813,36 +3964,43 @@ exports[`snippet > should click on extend button to display full content on  1`]
           >
             <span
               class="emotion-9 emotion-10"
+              data-multiline="true"
             >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </span>
             <span
               class="emotion-9 emotion-10"
+              data-multiline="true"
             >
               Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             </span>
             <span
               class="emotion-9 emotion-10"
+              data-multiline="true"
             >
               Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
             </span>
             <span
               class="emotion-9 emotion-10"
+              data-multiline="true"
             >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </span>
             <span
               class="emotion-9 emotion-10"
+              data-multiline="true"
             >
               Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             </span>
             <span
               class="emotion-9 emotion-10"
+              data-multiline="true"
             >
               Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
             </span>
             <span
               class="emotion-9 emotion-10"
+              data-multiline="true"
             />
           </pre>
         </div>
