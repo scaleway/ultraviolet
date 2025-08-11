@@ -3,7 +3,13 @@
 import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import { ArrowDownIcon, DragIcon } from '@ultraviolet/icons'
-import type { DragEvent, ForwardedRef, KeyboardEvent, ReactNode } from 'react'
+import type {
+  DetailsHTMLAttributes,
+  DragEvent,
+  ForwardedRef,
+  KeyboardEvent,
+  ReactNode,
+} from 'react'
 import { forwardRef, useCallback, useRef, useState } from 'react'
 import type { XOR } from '../../types'
 import { Stack } from '../Stack'
@@ -150,6 +156,8 @@ type CommonProps = {
   disabled?: boolean
   'data-testid'?: string
   className?: string
+  /** Uncontrolled but open by default */
+  open?: DetailsHTMLAttributes<HTMLDetailsElement>['open']
 } & DraggableProps
 
 type ExpandableCardProps = XOR<
@@ -173,6 +181,7 @@ const BaseExpandableCard = forwardRef(
       index,
       onKeyDown,
       'data-testid': dataTestId,
+      open,
     }: ExpandableCardProps,
     ref: ForwardedRef<HTMLDetailsElement>,
   ) => {
@@ -291,7 +300,7 @@ const BaseExpandableCard = forwardRef(
           data-testid={dataTestId}
           key={clicking ? 'closed' : 'open'}
           name={name}
-          open={expanded}
+          open={open ?? expanded}
           ref={ref}
           tabIndex={disabled ? -1 : undefined}
         >
