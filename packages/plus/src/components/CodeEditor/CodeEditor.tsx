@@ -8,9 +8,6 @@ import { consoleDarkTheme } from '@ultraviolet/themes'
 import { CopyButton, Label, Stack, Text } from '@ultraviolet/ui'
 import type { ComponentProps, ReactNode } from 'react'
 
-const ErrorText = styled(Text)`
-  padding-top: ${({ theme }) => `${theme.space['0.5']}`};
-`
 const EditorContainer = styled.div`
   position: relative;
   width: 100%;
@@ -190,15 +187,15 @@ export const CodeEditor = ({
         </StyledCopyButton>
       ) : null}
     </EditorContainer>
+    {error && typeof error !== 'boolean' ? (
+      <Text as="span" sentiment="danger" variant="caption">
+        {error}
+      </Text>
+    ) : null}
     {helper ? (
       <Text as="span" prominence="weak" sentiment="neutral" variant="caption">
         {helper}
       </Text>
-    ) : null}
-    {error ? (
-      <ErrorText as="span" sentiment="danger" variant="caption">
-        {error}
-      </ErrorText>
     ) : null}
   </StyledStack>
 )
