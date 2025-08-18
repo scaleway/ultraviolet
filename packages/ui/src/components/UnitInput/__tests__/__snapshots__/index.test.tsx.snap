@@ -913,15 +913,7 @@ exports[`UnitInput > renders click 1`] = `
   display: none;
 }
 
-.emotion-26>.emotion-29 {
-  max-height: 100%;
-}
-
-.emotion-28[data-max-height="true"] {
-  overflow: auto;
-}
-
-.emotion-30 {
+.emotion-28 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -943,7 +935,7 @@ exports[`UnitInput > renders click 1`] = `
   flex-direction: column;
 }
 
-.emotion-32 {
+.emotion-30 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -971,11 +963,11 @@ exports[`UnitInput > renders click 1`] = `
   padding-top: 0.25rem;
 }
 
-.emotion-32[data-grouped="true"] {
+.emotion-30[data-grouped="true"] {
   padding-top: 0rem;
 }
 
-.emotion-34 {
+.emotion-32 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -998,7 +990,7 @@ exports[`UnitInput > renders click 1`] = `
   gap: 0.125rem;
 }
 
-.emotion-36 {
+.emotion-34 {
   text-align: left;
   border: none;
   background-color: #ffffff;
@@ -1010,31 +1002,31 @@ exports[`UnitInput > renders click 1`] = `
   border: 1px transparent solid;
 }
 
-.emotion-36:hover,
-.emotion-36:focus {
+.emotion-34:hover,
+.emotion-34:focus {
   background-color: #f1eefc;
   color: #641cb3;
   cursor: pointer;
 }
 
-.emotion-36[aria-selected='true'] {
+.emotion-34[aria-selected='true'] {
   background-color: #f1eefc;
 }
 
-.emotion-36[aria-disabled="true"] {
+.emotion-34[aria-disabled="true"] {
   background-color: #f3f3f4;
   color: #b5b7bd;
 }
 
-.emotion-36[aria-disabled="true"]:hover,
-.emotion-36 [aria-disabled="true"]:focus {
+.emotion-34[aria-disabled="true"]:hover,
+.emotion-34 [aria-disabled="true"]:focus {
   background-color: #f3f3f4;
   color: #b5b7bd;
   cursor: not-allowed;
   outline: none;
 }
 
-.emotion-40 {
+.emotion-38 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1057,7 +1049,7 @@ exports[`UnitInput > renders click 1`] = `
   overflow: hidden;
 }
 
-.emotion-43 {
+.emotion-41 {
   font-size: 1rem;
   font-family: Inter,sans-serif;
   font-weight: 400;
@@ -1165,95 +1157,90 @@ exports[`UnitInput > renders click 1`] = `
               style="opacity: 1;"
             >
               <div
-                class="emotion-28 emotion-29"
-                data-max-height="false"
+                class="emotion-28 emotion-1"
               >
                 <div
-                  class="emotion-30 emotion-1"
+                  class="emotion-30 emotion-31"
+                  data-grouped="false"
+                  id="select-dropdown"
+                  role="listbox"
                 >
                   <div
-                    class="emotion-32 emotion-33"
-                    data-grouped="false"
-                    id="select-dropdown"
-                    role="listbox"
+                    class="emotion-32 emotion-1"
+                    id="items"
                   >
                     <div
-                      class="emotion-34 emotion-1"
-                      id="items"
+                      aria-disabled="false"
+                      aria-label="kb"
+                      aria-selected="false"
+                      class="emotion-34 emotion-35"
+                      data-testid="option-kb"
+                      id="option-0"
+                      role="option"
+                      tabindex="0"
                     >
                       <div
-                        aria-disabled="false"
-                        aria-label="kb"
-                        aria-selected="false"
-                        class="emotion-36 emotion-37"
-                        data-testid="option-kb"
-                        id="option-0"
-                        role="option"
-                        tabindex="0"
+                        class="emotion-0 emotion-1"
+                        data-testid="option-stack-kb"
                       >
                         <div
-                          class="emotion-0 emotion-1"
-                          data-testid="option-stack-kb"
+                          class="emotion-38 emotion-39"
                         >
-                          <div
-                            class="emotion-40 emotion-41"
+                          <span
+                            class="emotion-40 emotion-41 emotion-20"
                           >
-                            <span
-                              class="emotion-42 emotion-43 emotion-20"
-                            >
-                              KB
-                            </span>
-                          </div>
+                            KB
+                          </span>
                         </div>
                       </div>
+                    </div>
+                    <div
+                      aria-disabled="false"
+                      aria-label="mb"
+                      aria-selected="false"
+                      class="emotion-34 emotion-35"
+                      data-testid="option-mb"
+                      id="option-1"
+                      role="option"
+                      tabindex="0"
+                    >
                       <div
-                        aria-disabled="false"
-                        aria-label="mb"
-                        aria-selected="false"
-                        class="emotion-36 emotion-37"
-                        data-testid="option-mb"
-                        id="option-1"
-                        role="option"
-                        tabindex="0"
+                        class="emotion-0 emotion-1"
+                        data-testid="option-stack-mb"
                       >
                         <div
-                          class="emotion-0 emotion-1"
-                          data-testid="option-stack-mb"
+                          class="emotion-38 emotion-39"
                         >
-                          <div
-                            class="emotion-40 emotion-41"
+                          <span
+                            class="emotion-40 emotion-41 emotion-20"
                           >
-                            <span
-                              class="emotion-42 emotion-43 emotion-20"
-                            >
-                              MB
-                            </span>
-                          </div>
+                            MB
+                          </span>
                         </div>
                       </div>
+                    </div>
+                    <div
+                      aria-disabled="false"
+                      aria-label="gb"
+                      aria-selected="false"
+                      class="emotion-34 emotion-35"
+                      data-testid="option-gb"
+                      id="option-2"
+                      role="option"
+                      tabindex="0"
+                    >
                       <div
-                        aria-disabled="false"
-                        aria-label="gb"
-                        aria-selected="false"
-                        class="emotion-36 emotion-37"
-                        data-testid="option-gb"
-                        id="option-2"
-                        role="option"
-                        tabindex="0"
+                        class="emotion-0 emotion-1"
+                        data-testid="option-stack-gb"
                       >
                         <div
-                          class="emotion-0 emotion-1"
-                          data-testid="option-stack-gb"
+                          class="emotion-38 emotion-39"
                         >
-                          <div
-                            class="emotion-40 emotion-41"
+                          <span
+                            class="emotion-40 emotion-41 emotion-20"
                           >
-                            <span
-                              class="emotion-42 emotion-43 emotion-20"
-                            >
-                              GB
-                            </span>
-                          </div>
+                            GB
+                          </span>
                         </div>
                       </div>
                     </div>
