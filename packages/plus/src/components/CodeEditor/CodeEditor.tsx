@@ -145,7 +145,7 @@ export const CodeEditor = ({
   'aria-label': ariaLabel,
   'data-testid': dataTestId,
   className,
-  lineNumbers = false,
+  lineNumbers = true,
 }: CodeEditorProps) => (
   <StyledStack data-disabled={disabled} gap={0.5}>
     {label ? <Label labelDescription={labelDescription}>{label}</Label> : null}
