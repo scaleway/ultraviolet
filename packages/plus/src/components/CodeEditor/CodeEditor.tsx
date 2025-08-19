@@ -192,7 +192,7 @@ export const CodeEditor = ({
         {error}
       </Text>
     ) : null}
-    {helper ? (
+    {!error && helper ? (
       <Text as="span" prominence="weak" sentiment="neutral" variant="caption">
         {helper}
       </Text>
