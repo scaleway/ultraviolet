@@ -13,6 +13,7 @@ import { globalStyles } from './components/globalStyle'
 import { dark, light } from './storybookThemes'
 import '@ultraviolet/fonts/fonts.css'
 import { scan } from "react-scan"
+import { ThemeProvider as ThemeProviderUI } from '@ultraviolet/ui'
 
 const BREAKPOINT_ORDER = [
   'xlarge',
@@ -142,16 +143,16 @@ const withThemeProvider = (Story: StoryFn, context: { globals: { theme: string }
 }
 
 const decorators = [
-  (Story: StoryFn) => {
-    return (
+  (Story: StoryFn) => (
       <>
-        {
-          // eslint-disable-next-line react/jsx-curly-brace-presence
-          <Story />
-        }
+        <ThemeProviderUI>
+          {
+            // eslint-disable-next-line react/jsx-curly-brace-presence
+            <Story />
+          }
+        </ThemeProviderUI>
       </>
-    ) // Storybook is broken without this please refer to this issue: https://github.com/storybookjs/storybook/issues/24625
-  },
+    ), // Storybook is broken without this please refer to this issue: https://github.com/storybookjs/storybook/issues/24625
   withThemeFromJSXProvider({
     themes: {
       light: lightTheme,
