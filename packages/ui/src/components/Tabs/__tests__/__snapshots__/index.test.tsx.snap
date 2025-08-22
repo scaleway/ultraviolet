@@ -863,8 +863,8 @@ exports[`tabs > renders correctly with Tabs menu selected 1`] = `
         class="emotion-20 emotion-21"
       >
         <div
-          aria-controls="menu-_r_1r_"
-          aria-describedby="menu-_r_1r_"
+          aria-controls="menu-«r1r»"
+          aria-describedby="menu-«r1r»"
           class="emotion-22 emotion-23"
           tabindex="-1"
         >
@@ -1474,7 +1474,7 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
   flex-direction: row;
 }
 
-.emotion-10 {
+.emotion-9 {
   font-size: 0.75rem;
   font-family: Inter,sans-serif;
   font-weight: 400;
@@ -1484,71 +1484,11 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   white-space: nowrap;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  border-radius: 1rem;
-  padding: 0 0.75rem;
-  gap: 0.5rem;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: 1.5rem;
-  text-transform: uppercase;
-  color: #ffffff;
-  background: #8c40ef;
-  border: 1px solid #8c40ef;
   padding: 0 0.5rem;
   margin-left: 0.5rem;
 }
 
-.emotion-32 {
-  font-size: 0.75rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  white-space: nowrap;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  border-radius: 1rem;
-  padding: 0 0.75rem;
-  gap: 0.5rem;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: 1.5rem;
-  text-transform: uppercase;
-  color: #3f4250;
-  background: #f9f9fa;
-  border: 1px solid #d9dadd;
-  padding: 0 0.5rem;
-  margin-left: 0.5rem;
-}
-
-.emotion-54 {
+.emotion-50 {
   margin-left: 0.5rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1556,7 +1496,7 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
   display: flex;
 }
 
-.emotion-130 {
+.emotion-126 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1568,19 +1508,19 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
   right: 0;
 }
 
-.emotion-132 {
+.emotion-128 {
   display: inherit;
 }
 
-.emotion-132[data-container-full-height="true"] {
+.emotion-128[data-container-full-height="true"] {
   height: 100%;
 }
 
-.emotion-132[data-container-full-width="true"] {
+.emotion-128[data-container-full-width="true"] {
   width: 100%;
 }
 
-.emotion-134 {
+.emotion-130 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1622,71 +1562,71 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
   line-height: 1.5rem;
 }
 
-.emotion-134:hover,
-.emotion-134:active,
-.emotion-134:focus {
+.emotion-130:hover,
+.emotion-130:active,
+.emotion-130:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
   outline: none;
 }
 
-.emotion-134:focus-visible {
+.emotion-130:focus-visible {
   outline: auto;
 }
 
-.emotion-134[aria-selected='true'] {
+.emotion-130[aria-selected='true'] {
   color: #641cb3;
   border-bottom-color: #8c40ef;
 }
 
-.emotion-134[aria-selected='true'] .e1hzf7cr3 {
+.emotion-130[aria-selected='true'] .e1hzf7cr3 {
   color: #641cb3;
 }
 
-.emotion-134[aria-disabled='false']:not(:disabled):hover,
-.emotion-134[aria-disabled='false']:not(:disabled):focus,
-.emotion-134[aria-disabled='false']:not(:disabled):active {
+.emotion-130[aria-disabled='false']:not(:disabled):hover,
+.emotion-130[aria-disabled='false']:not(:disabled):focus,
+.emotion-130[aria-disabled='false']:not(:disabled):active {
   outline: none;
   color: #641cb3;
   border-bottom-color: #8c40ef;
 }
 
-.emotion-134[aria-disabled='false']:not(:disabled):hover[data-is-selected='false'] .emotion-8,
-.emotion-134[aria-disabled='false']:not(:disabled):focus[data-is-selected='false'] .emotion-8,
-.emotion-134[aria-disabled='false']:not(:disabled):active[data-is-selected='false'] .emotion-8 {
+.emotion-130[aria-disabled='false']:not(:disabled):hover[data-is-selected='false'] .emotion-8,
+.emotion-130[aria-disabled='false']:not(:disabled):focus[data-is-selected='false'] .emotion-8,
+.emotion-130[aria-disabled='false']:not(:disabled):active[data-is-selected='false'] .emotion-8 {
   background-color: #f1eefc;
   border-color: #f1eefc;
   color: #641cb3;
 }
 
-.emotion-134[aria-disabled='false']:not(:disabled):hover[data-is-selected='false'] .e1hzf7cr3,
-.emotion-134[aria-disabled='false']:not(:disabled):focus[data-is-selected='false'] .e1hzf7cr3,
-.emotion-134[aria-disabled='false']:not(:disabled):active[data-is-selected='false'] .e1hzf7cr3 {
+.emotion-130[aria-disabled='false']:not(:disabled):hover[data-is-selected='false'] .e1hzf7cr3,
+.emotion-130[aria-disabled='false']:not(:disabled):focus[data-is-selected='false'] .e1hzf7cr3,
+.emotion-130[aria-disabled='false']:not(:disabled):active[data-is-selected='false'] .e1hzf7cr3 {
   color: #641cb3;
 }
 
-.emotion-134[aria-disabled='true'],
-.emotion-134:disabled {
+.emotion-130[aria-disabled='true'],
+.emotion-130:disabled {
   cursor: not-allowed;
   -webkit-filter: grayscale(1) opacity(50%);
   filter: grayscale(1) opacity(50%);
 }
 
-.emotion-134 .emotion-136 {
+.emotion-130 .emotion-132 {
   color: inherit;
   margin-left: 0.5rem;
   -webkit-transition: 300ms -webkit-transform ease-out;
   transition: 300ms transform ease-out;
 }
 
-.emotion-134[aria-expanded='true'] .emotion-136 {
+.emotion-130[aria-expanded='true'] .emotion-132 {
   -webkit-transform: rotate(-180deg);
   -moz-transform: rotate(-180deg);
   -ms-transform: rotate(-180deg);
   transform: rotate(-180deg);
 }
 
-.emotion-137 {
+.emotion-133 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -1695,12 +1635,12 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
   min-height: 1rem;
 }
 
-.emotion-137 .fillStroke {
+.emotion-133 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.emotion-144 {
+.emotion-140 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1749,64 +1689,64 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
   box-shadow: 0px 0px 24px 6px #d9dadd66;
 }
 
-.emotion-144:hover,
-.emotion-144:active,
-.emotion-144:focus {
+.emotion-140:hover,
+.emotion-140:active,
+.emotion-140:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
   outline: none;
 }
 
-.emotion-144:focus-visible {
+.emotion-140:focus-visible {
   outline: auto;
 }
 
-.emotion-144[aria-selected='true'] {
+.emotion-140[aria-selected='true'] {
   color: #641cb3;
   border-bottom-color: #8c40ef;
 }
 
-.emotion-144[aria-selected='true'] .e1hzf7cr3 {
+.emotion-140[aria-selected='true'] .e1hzf7cr3 {
   color: #641cb3;
 }
 
-.emotion-144[aria-disabled='false']:not(:disabled):hover,
-.emotion-144[aria-disabled='false']:not(:disabled):focus,
-.emotion-144[aria-disabled='false']:not(:disabled):active {
+.emotion-140[aria-disabled='false']:not(:disabled):hover,
+.emotion-140[aria-disabled='false']:not(:disabled):focus,
+.emotion-140[aria-disabled='false']:not(:disabled):active {
   outline: none;
   color: #641cb3;
   border-bottom-color: #8c40ef;
 }
 
-.emotion-144[aria-disabled='false']:not(:disabled):hover[data-is-selected='false'] .emotion-8,
-.emotion-144[aria-disabled='false']:not(:disabled):focus[data-is-selected='false'] .emotion-8,
-.emotion-144[aria-disabled='false']:not(:disabled):active[data-is-selected='false'] .emotion-8 {
+.emotion-140[aria-disabled='false']:not(:disabled):hover[data-is-selected='false'] .emotion-8,
+.emotion-140[aria-disabled='false']:not(:disabled):focus[data-is-selected='false'] .emotion-8,
+.emotion-140[aria-disabled='false']:not(:disabled):active[data-is-selected='false'] .emotion-8 {
   background-color: #f1eefc;
   border-color: #f1eefc;
   color: #641cb3;
 }
 
-.emotion-144[aria-disabled='false']:not(:disabled):hover[data-is-selected='false'] .e1hzf7cr3,
-.emotion-144[aria-disabled='false']:not(:disabled):focus[data-is-selected='false'] .e1hzf7cr3,
-.emotion-144[aria-disabled='false']:not(:disabled):active[data-is-selected='false'] .e1hzf7cr3 {
+.emotion-140[aria-disabled='false']:not(:disabled):hover[data-is-selected='false'] .e1hzf7cr3,
+.emotion-140[aria-disabled='false']:not(:disabled):focus[data-is-selected='false'] .e1hzf7cr3,
+.emotion-140[aria-disabled='false']:not(:disabled):active[data-is-selected='false'] .e1hzf7cr3 {
   color: #641cb3;
 }
 
-.emotion-144[aria-disabled='true'],
-.emotion-144:disabled {
+.emotion-140[aria-disabled='true'],
+.emotion-140:disabled {
   cursor: not-allowed;
   -webkit-filter: grayscale(1) opacity(50%);
   filter: grayscale(1) opacity(50%);
 }
 
-.emotion-144 .emotion-136 {
+.emotion-140 .emotion-132 {
   color: inherit;
   margin-left: 0.5rem;
   -webkit-transition: 300ms -webkit-transform ease-out;
   transition: 300ms transform ease-out;
 }
 
-.emotion-144[aria-expanded='true'] .emotion-136 {
+.emotion-140[aria-expanded='true'] .emotion-132 {
   -webkit-transform: rotate(-180deg);
   -moz-transform: rotate(-180deg);
   -ms-transform: rotate(-180deg);
@@ -1836,7 +1776,7 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
           >
             First
             <span
-              class="emotion-8 emotion-9 emotion-10 emotion-11"
+              class="emotion-8 styles__1yf71jy0 styles_size_medium__1yf71jy2 styles_prominence_strong__1yf71jye styles_sentiment_primary__1yf71jy4 styles_undefined_compound_7__1yf71jyn emotion-9 emotion-10"
             >
               2
             </span>
@@ -1896,7 +1836,7 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
           >
             Counter
             <span
-              class="emotion-8 emotion-9 emotion-32 emotion-11"
+              class="emotion-8 styles__1yf71jy0 styles_size_medium__1yf71jy2 styles_prominence_default__1yf71jyd styles_sentiment_neutral__1yf71jya styles_undefined_compound_6__1yf71jym emotion-9 emotion-10"
             >
               12
             </span>
@@ -1920,7 +1860,7 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
           >
             Counter no items
             <span
-              class="emotion-8 emotion-9 emotion-32 emotion-11"
+              class="emotion-8 styles__1yf71jy0 styles_size_medium__1yf71jy2 styles_prominence_default__1yf71jyd styles_sentiment_neutral__1yf71jya styles_undefined_compound_6__1yf71jym emotion-9 emotion-10"
             >
               0
             </span>
@@ -1943,12 +1883,12 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
           >
             Conter and badge
             <span
-              class="emotion-8 emotion-9 emotion-32 emotion-11"
+              class="emotion-8 styles__1yf71jy0 styles_size_medium__1yf71jy2 styles_prominence_default__1yf71jyd styles_sentiment_neutral__1yf71jya styles_undefined_compound_6__1yf71jym emotion-9 emotion-10"
             >
               12
             </span>
             <span
-              class="emotion-54 emotion-55"
+              class="emotion-50 emotion-51"
             >
               Badge
             </span>
@@ -1971,7 +1911,7 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
           >
             Badge
             <span
-              class="emotion-54 emotion-55"
+              class="emotion-50 emotion-51"
             >
               Badge
             </span>
@@ -2177,25 +2117,25 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
         </div>
       </button>
       <div
-        class="emotion-130 emotion-131"
+        class="emotion-126 emotion-127"
       >
         <div
           aria-controls="menu-test"
           aria-describedby="menu-test"
-          class="emotion-132 emotion-133"
+          class="emotion-128 emotion-129"
           tabindex="-1"
         >
           <button
             aria-disabled="false"
             aria-expanded="true"
             aria-haspopup="dialog"
-            class="emotion-134 emotion-135"
+            class="emotion-130 emotion-131"
             role="tab"
             type="button"
           >
             Blabla
             <svg
-              class="emotion-136 emotion-137 emotion-138"
+              class="emotion-132 emotion-133 emotion-134"
               viewBox="0 0 16 16"
             >
               <path
@@ -2208,25 +2148,25 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
         </div>
       </div>
       <div
-        class="emotion-130 emotion-131"
+        class="emotion-126 emotion-127"
       >
         <div
-          aria-controls="menu-_r_o_"
-          aria-describedby="menu-_r_o_"
-          class="emotion-132 emotion-133"
+          aria-controls="menu-«ro»"
+          aria-describedby="menu-«ro»"
+          class="emotion-128 emotion-129"
           tabindex="-1"
         >
           <button
             aria-disabled="false"
             aria-expanded="true"
             aria-haspopup="dialog"
-            class="emotion-143 emotion-144 emotion-135"
+            class="emotion-139 emotion-140 emotion-131"
             role="tab"
             type="button"
           >
             More
             <svg
-              class="emotion-136 emotion-137 emotion-138"
+              class="emotion-132 emotion-133 emotion-134"
               viewBox="0 0 16 16"
             >
               <path
@@ -2827,7 +2767,7 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
   flex-direction: row;
 }
 
-.emotion-19 {
+.emotion-18 {
   font-size: 0.75rem;
   font-family: Inter,sans-serif;
   font-weight: 400;
@@ -2837,71 +2777,11 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   white-space: nowrap;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  border-radius: 1rem;
-  padding: 0 0.75rem;
-  gap: 0.5rem;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: 1.5rem;
-  text-transform: uppercase;
-  color: #ffffff;
-  background: #8c40ef;
-  border: 1px solid #8c40ef;
   padding: 0 0.5rem;
   margin-left: 0.5rem;
 }
 
-.emotion-41 {
-  font-size: 0.75rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  white-space: nowrap;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  border-radius: 1rem;
-  padding: 0 0.75rem;
-  gap: 0.5rem;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: 1.5rem;
-  text-transform: uppercase;
-  color: #3f4250;
-  background: #f9f9fa;
-  border: 1px solid #d9dadd;
-  padding: 0 0.5rem;
-  margin-left: 0.5rem;
-}
-
-.emotion-63 {
+.emotion-59 {
   margin-left: 0.5rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2909,7 +2789,7 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
   display: flex;
 }
 
-.emotion-139 {
+.emotion-135 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2921,19 +2801,19 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
   right: 0;
 }
 
-.emotion-141 {
+.emotion-137 {
   display: inherit;
 }
 
-.emotion-141[data-container-full-height="true"] {
+.emotion-137[data-container-full-height="true"] {
   height: 100%;
 }
 
-.emotion-141[data-container-full-width="true"] {
+.emotion-137[data-container-full-width="true"] {
   width: 100%;
 }
 
-.emotion-143 {
+.emotion-139 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2975,71 +2855,71 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
   line-height: 1.5rem;
 }
 
-.emotion-143:hover,
-.emotion-143:active,
-.emotion-143:focus {
+.emotion-139:hover,
+.emotion-139:active,
+.emotion-139:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
   outline: none;
 }
 
-.emotion-143:focus-visible {
+.emotion-139:focus-visible {
   outline: auto;
 }
 
-.emotion-143[aria-selected='true'] {
+.emotion-139[aria-selected='true'] {
   color: #641cb3;
   border-bottom-color: #8c40ef;
 }
 
-.emotion-143[aria-selected='true'] .e1hzf7cr3 {
+.emotion-139[aria-selected='true'] .e1hzf7cr3 {
   color: #641cb3;
 }
 
-.emotion-143[aria-disabled='false']:not(:disabled):hover,
-.emotion-143[aria-disabled='false']:not(:disabled):focus,
-.emotion-143[aria-disabled='false']:not(:disabled):active {
+.emotion-139[aria-disabled='false']:not(:disabled):hover,
+.emotion-139[aria-disabled='false']:not(:disabled):focus,
+.emotion-139[aria-disabled='false']:not(:disabled):active {
   outline: none;
   color: #641cb3;
   border-bottom-color: #8c40ef;
 }
 
-.emotion-143[aria-disabled='false']:not(:disabled):hover[data-is-selected='false'] .emotion-17,
-.emotion-143[aria-disabled='false']:not(:disabled):focus[data-is-selected='false'] .emotion-17,
-.emotion-143[aria-disabled='false']:not(:disabled):active[data-is-selected='false'] .emotion-17 {
+.emotion-139[aria-disabled='false']:not(:disabled):hover[data-is-selected='false'] .emotion-17,
+.emotion-139[aria-disabled='false']:not(:disabled):focus[data-is-selected='false'] .emotion-17,
+.emotion-139[aria-disabled='false']:not(:disabled):active[data-is-selected='false'] .emotion-17 {
   background-color: #f1eefc;
   border-color: #f1eefc;
   color: #641cb3;
 }
 
-.emotion-143[aria-disabled='false']:not(:disabled):hover[data-is-selected='false'] .e1hzf7cr3,
-.emotion-143[aria-disabled='false']:not(:disabled):focus[data-is-selected='false'] .e1hzf7cr3,
-.emotion-143[aria-disabled='false']:not(:disabled):active[data-is-selected='false'] .e1hzf7cr3 {
+.emotion-139[aria-disabled='false']:not(:disabled):hover[data-is-selected='false'] .e1hzf7cr3,
+.emotion-139[aria-disabled='false']:not(:disabled):focus[data-is-selected='false'] .e1hzf7cr3,
+.emotion-139[aria-disabled='false']:not(:disabled):active[data-is-selected='false'] .e1hzf7cr3 {
   color: #641cb3;
 }
 
-.emotion-143[aria-disabled='true'],
-.emotion-143:disabled {
+.emotion-139[aria-disabled='true'],
+.emotion-139:disabled {
   cursor: not-allowed;
   -webkit-filter: grayscale(1) opacity(50%);
   filter: grayscale(1) opacity(50%);
 }
 
-.emotion-143 .emotion-145 {
+.emotion-139 .emotion-141 {
   color: inherit;
   margin-left: 0.5rem;
   -webkit-transition: 300ms -webkit-transform ease-out;
   transition: 300ms transform ease-out;
 }
 
-.emotion-143[aria-expanded='true'] .emotion-145 {
+.emotion-139[aria-expanded='true'] .emotion-141 {
   -webkit-transform: rotate(-180deg);
   -moz-transform: rotate(-180deg);
   -ms-transform: rotate(-180deg);
   transform: rotate(-180deg);
 }
 
-.emotion-146 {
+.emotion-142 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -3048,7 +2928,7 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
   min-height: 1rem;
 }
 
-.emotion-146 .fillStroke {
+.emotion-142 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
@@ -3057,7 +2937,7 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
     class="emotion-0 emotion-1 emotion-2"
     data-animated="false"
     data-has-arrow="false"
-    id="menu-_r_o_"
+    id="menu-«ro»"
     role="dialog"
     style="opacity: 1; animation: none;"
   >
@@ -3091,7 +2971,7 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
                 >
                   First
                   <span
-                    class="emotion-17 emotion-18 emotion-19 emotion-20"
+                    class="emotion-17 styles__1yf71jy0 styles_size_medium__1yf71jy2 styles_prominence_strong__1yf71jye styles_sentiment_primary__1yf71jy4 styles_undefined_compound_7__1yf71jyn emotion-18 emotion-19"
                   >
                     2
                   </span>
@@ -3151,7 +3031,7 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
                 >
                   Counter
                   <span
-                    class="emotion-17 emotion-18 emotion-41 emotion-20"
+                    class="emotion-17 styles__1yf71jy0 styles_size_medium__1yf71jy2 styles_prominence_default__1yf71jyd styles_sentiment_neutral__1yf71jya styles_undefined_compound_6__1yf71jym emotion-18 emotion-19"
                   >
                     12
                   </span>
@@ -3175,7 +3055,7 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
                 >
                   Counter no items
                   <span
-                    class="emotion-17 emotion-18 emotion-41 emotion-20"
+                    class="emotion-17 styles__1yf71jy0 styles_size_medium__1yf71jy2 styles_prominence_default__1yf71jyd styles_sentiment_neutral__1yf71jya styles_undefined_compound_6__1yf71jym emotion-18 emotion-19"
                   >
                     0
                   </span>
@@ -3198,12 +3078,12 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
                 >
                   Conter and badge
                   <span
-                    class="emotion-17 emotion-18 emotion-41 emotion-20"
+                    class="emotion-17 styles__1yf71jy0 styles_size_medium__1yf71jy2 styles_prominence_default__1yf71jyd styles_sentiment_neutral__1yf71jya styles_undefined_compound_6__1yf71jym emotion-18 emotion-19"
                   >
                     12
                   </span>
                   <span
-                    class="emotion-63 emotion-64"
+                    class="emotion-59 emotion-60"
                   >
                     Badge
                   </span>
@@ -3226,7 +3106,7 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
                 >
                   Badge
                   <span
-                    class="emotion-63 emotion-64"
+                    class="emotion-59 emotion-60"
                   >
                     Badge
                   </span>
@@ -3432,25 +3312,25 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
               </div>
             </button>
             <div
-              class="emotion-139 emotion-140"
+              class="emotion-135 emotion-136"
             >
               <div
                 aria-controls="menu-test"
                 aria-describedby="menu-test"
-                class="emotion-141 emotion-142"
+                class="emotion-137 emotion-138"
                 tabindex="-1"
               >
                 <button
                   aria-disabled="false"
                   aria-expanded="true"
                   aria-haspopup="dialog"
-                  class="emotion-143 emotion-144"
+                  class="emotion-139 emotion-140"
                   role="tab"
                   type="button"
                 >
                   Blabla
                   <svg
-                    class="emotion-145 emotion-146 emotion-147"
+                    class="emotion-141 emotion-142 emotion-143"
                     viewBox="0 0 16 16"
                   >
                     <path

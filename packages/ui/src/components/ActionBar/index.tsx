@@ -1,28 +1,10 @@
 'use client'
 
-import styled from '@emotion/styled'
+import { theme } from '@ultraviolet/themes'
 import type { ReactNode } from 'react'
 import { createPortal } from 'react-dom'
-import { fadeIn } from '../../utils'
 import { Stack } from '../Stack'
-
-const StyledDiv = styled.div<{ rank: number }>`
-  background: ${({ theme }) => theme.colors.other.elevation.background.fixed};
-  border-radius: ${({ theme }) => theme.radii.default};
-  bottom: ${({ rank, theme }) => `calc(${theme.sizing['700']} * ${rank} + ${theme.space['2']})`};
-  box-shadow: ${({ theme }) => `${theme.shadows.fixed[0]}, ${theme.shadows.fixed[1]}`};
-  height: ${({ theme }) => theme.sizing['700']};
-  left: 50%;
-  position: fixed;
-  transform: translate(-50%, 0);
-  width: 37.5rem;
-  animation: ${fadeIn} 0.2s ease-in-out;
-`
-
-const Container = styled(Stack)`
-  height: 100%;
-  padding: 0 ${({ theme }) => theme.space['2']};
-`
+import { actionBar, stackActionBar } from './styles.css'
 
 type ActionBarProps = {
   children: ReactNode
@@ -50,13 +32,17 @@ export const ActionBar = ({
   'data-testid': dataTestId,
 }: ActionBarProps) =>
   createPortal(
-    <StyledDiv
-      className={className}
+    <div
+      className={`${className ? `${className} ` : ''}${actionBar}`}
       data-testid={dataTestId}
-      rank={rank}
       role={role}
+      style={{
+        bottom: `calc(${theme.sizing['700']} * ${rank} + ${theme.space['2']})`,
+      }}
     >
-      <Container alignItems="center">{children}</Container>
-    </StyledDiv>,
+      <Stack alignItems="center" className={stackActionBar}>
+        {children}
+      </Stack>
+    </div>,
     document.body,
   )

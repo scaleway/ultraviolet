@@ -223,7 +223,7 @@ exports[`tab > renders correctly with counter, badge and subtitle 1`] = `
   border-bottom-color: #8c40ef;
 }
 
-.emotion-0[aria-selected='true'] .emotion-14 {
+.emotion-0[aria-selected='true'] .emotion-13 {
   color: #641cb3;
 }
 
@@ -243,9 +243,9 @@ exports[`tab > renders correctly with counter, badge and subtitle 1`] = `
   color: #641cb3;
 }
 
-.emotion-0[aria-disabled='false']:not(:disabled):hover[data-is-selected='false'] .emotion-14,
-.emotion-0[aria-disabled='false']:not(:disabled):focus[data-is-selected='false'] .emotion-14,
-.emotion-0[aria-disabled='false']:not(:disabled):active[data-is-selected='false'] .emotion-14 {
+.emotion-0[aria-disabled='false']:not(:disabled):hover[data-is-selected='false'] .emotion-13,
+.emotion-0[aria-disabled='false']:not(:disabled):focus[data-is-selected='false'] .emotion-13,
+.emotion-0[aria-disabled='false']:not(:disabled):active[data-is-selected='false'] .emotion-13 {
   color: #641cb3;
 }
 
@@ -301,7 +301,7 @@ exports[`tab > renders correctly with counter, badge and subtitle 1`] = `
   flex-direction: row;
 }
 
-.emotion-8 {
+.emotion-7 {
   font-size: 0.75rem;
   font-family: Inter,sans-serif;
   font-weight: 400;
@@ -311,34 +311,11 @@ exports[`tab > renders correctly with counter, badge and subtitle 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   white-space: nowrap;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  border-radius: 1rem;
-  padding: 0 0.75rem;
-  gap: 0.5rem;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: 1.5rem;
-  text-transform: uppercase;
-  color: #3f4250;
-  background: #f9f9fa;
-  border: 1px solid #d9dadd;
   padding: 0 0.5rem;
   margin-left: 0.5rem;
 }
 
-.emotion-10 {
+.emotion-9 {
   margin-left: 0.5rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -346,7 +323,7 @@ exports[`tab > renders correctly with counter, badge and subtitle 1`] = `
   display: flex;
 }
 
-.emotion-12 {
+.emotion-11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -368,7 +345,7 @@ exports[`tab > renders correctly with counter, badge and subtitle 1`] = `
   flex-direction: row;
 }
 
-.emotion-15 {
+.emotion-14 {
   color: #727683;
   font-size: 0.875rem;
   font-family: Inter,sans-serif;
@@ -398,21 +375,21 @@ exports[`tab > renders correctly with counter, badge and subtitle 1`] = `
           class="emotion-4 emotion-3"
         >
           <span
-            class="emotion-6 emotion-7 emotion-8 emotion-9"
+            class="emotion-6 styles__1yf71jy0 styles_size_medium__1yf71jy2 styles_prominence_default__1yf71jyd styles_sentiment_neutral__1yf71jya styles_undefined_compound_6__1yf71jym emotion-7 emotion-8"
           >
             1
           </span>
           <span
-            class="emotion-10 emotion-11"
+            class="emotion-9 emotion-10"
           >
             badge
           </span>
         </div>
         <div
-          class="emotion-12 emotion-3"
+          class="emotion-11 emotion-3"
         >
           <span
-            class="emotion-14 emotion-15 emotion-9"
+            class="emotion-13 emotion-14 emotion-8"
           >
             subtitle
           </span>

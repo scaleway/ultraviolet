@@ -1579,7 +1579,7 @@ exports[`offerList > should work with badge 1`] = `
   top: 1rem;
 }
 
-.emotion-37 {
+.emotion-36 {
   font-size: 0.625rem;
   font-family: Inter,sans-serif;
   font-weight: 400;
@@ -1589,29 +1589,6 @@ exports[`offerList > should work with badge 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   white-space: nowrap;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  border-radius: 1rem;
-  padding: 0 0.5rem;
-  gap: 0.25rem;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: 1rem;
-  text-transform: uppercase;
-  color: #3f4250;
-  background: #f9f9fa;
-  border: 1px solid #d9dadd;
   position: absolute;
   left: 0.5rem;
   -webkit-transform: translateY(-150%);
@@ -1622,14 +1599,14 @@ exports[`offerList > should work with badge 1`] = `
   left: 1.5rem;
 }
 
-.emotion-39 {
+.emotion-38 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.emotion-41 {
+.emotion-40 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1652,7 +1629,7 @@ exports[`offerList > should work with badge 1`] = `
   gap: 0.25rem;
 }
 
-.emotion-43 {
+.emotion-42 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1668,47 +1645,47 @@ exports[`offerList > should work with badge 1`] = `
   gap: 0.5rem;
 }
 
-.emotion-43[aria-disabled='false'],
-.emotion-43[aria-disabled='false']>label {
+.emotion-42[aria-disabled='false'],
+.emotion-42[aria-disabled='false']>label {
   cursor: pointer;
 }
 
-.emotion-43:hover[aria-disabled='false'] .emotion-46+.emotion-48 {
+.emotion-42:hover[aria-disabled='false'] .emotion-45+.emotion-47 {
   fill: #8c40ef;
 }
 
-.emotion-43:hover[aria-disabled='false'] .emotion-46+.emotion-48 .emotion-50 {
+.emotion-42:hover[aria-disabled='false'] .emotion-45+.emotion-47 .emotion-49 {
   fill: #e5dbfd;
 }
 
-.emotion-43:hover[aria-disabled='false'] .emotion-46[aria-invalid='true']+.emotion-48 {
+.emotion-42:hover[aria-disabled='false'] .emotion-45[aria-invalid='true']+.emotion-47 {
   fill: #b3144d;
 }
 
-.emotion-43:hover[aria-disabled='false'] .emotion-46[aria-invalid='true']+.emotion-48 .emotion-50 {
+.emotion-42:hover[aria-disabled='false'] .emotion-45[aria-invalid='true']+.emotion-47 .emotion-49 {
   fill: #ffd3e3;
 }
 
-.emotion-43[aria-disabled='true'] {
+.emotion-42[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.emotion-43[aria-disabled='true']>label,
-.emotion-43[aria-disabled='true'] .emotion-46 {
+.emotion-42[aria-disabled='true']>label,
+.emotion-42[aria-disabled='true'] .emotion-45 {
   cursor: not-allowed;
 }
 
-.emotion-43[aria-disabled='true'] .emotion-48 {
+.emotion-42[aria-disabled='true'] .emotion-47 {
   fill: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-43[aria-disabled='true'] .emotion-48 .emotion-50 {
+.emotion-42[aria-disabled='true'] .emotion-47 .emotion-49 {
   fill: #f3f3f4;
 }
 
-.emotion-45 {
+.emotion-44 {
   cursor: pointer;
   position: absolute;
   height: 1.5rem;
@@ -1718,7 +1695,7 @@ exports[`offerList > should work with badge 1`] = `
   border-width: 0;
 }
 
-.emotion-45+.emotion-48 .emotion-52 {
+.emotion-44+.emotion-47 .emotion-51 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -1728,48 +1705,48 @@ exports[`offerList > should work with badge 1`] = `
   transform: scale(0);
 }
 
-.emotion-45:checked+svg .emotion-52 {
+.emotion-44:checked+svg .emotion-51 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.emotion-45:checked[aria-disabled='false'][aria-invalid='false']+.emotion-48 {
+.emotion-44:checked[aria-disabled='false'][aria-invalid='false']+.emotion-47 {
   fill: #8c40ef;
 }
 
-.emotion-45:checked[aria-disabled='true'][aria-invalid='false']+.emotion-48 {
+.emotion-44:checked[aria-disabled='true'][aria-invalid='false']+.emotion-47 {
   fill: #d8c5fc;
 }
 
-.emotion-45[aria-invalid='true']:not([aria-disabled='true'])+.emotion-48 {
+.emotion-44[aria-invalid='true']:not([aria-disabled='true'])+.emotion-47 {
   fill: #e51963;
 }
 
-.emotion-45[aria-disabled='false']:active+.emotion-48 {
+.emotion-44[aria-disabled='false']:active+.emotion-47 {
   background-color: #5e127e40;
   fill: #8c40ef;
 }
 
-.emotion-45[aria-disabled='false']:active+.emotion-48 .emotion-50 {
+.emotion-44[aria-disabled='false']:active+.emotion-47 .emotion-49 {
   fill: #f1eefc;
 }
 
-.emotion-45[aria-disabled='false']:focus-visible+.emotion-48 {
+.emotion-44[aria-disabled='false']:focus-visible+.emotion-47 {
   outline: -webkit-focus-ring-color auto 1px;
 }
 
-.emotion-45[aria-invalid='true']:focus+.emotion-48 {
+.emotion-44[aria-invalid='true']:focus+.emotion-47 {
   background-color: #f91b6c40;
   fill: #e51963;
 }
 
-.emotion-45[aria-invalid='true']:focus+.emotion-48 .emotion-50 {
+.emotion-44[aria-invalid='true']:focus+.emotion-47 .emotion-49 {
   fill: #ffebf2;
 }
 
-.emotion-47 {
+.emotion-46 {
   height: 1.5rem;
   width: 1.5rem;
   min-width: 1.5rem;
@@ -1778,11 +1755,11 @@ exports[`offerList > should work with badge 1`] = `
   fill: #d9dadd;
 }
 
-.emotion-47 .emotion-50 {
+.emotion-46 .emotion-49 {
   fill: #ffffff;
 }
 
-.emotion-56 {
+.emotion-55 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -1791,12 +1768,12 @@ exports[`offerList > should work with badge 1`] = `
   min-height: 1rem;
 }
 
-.emotion-56 .fillStroke {
+.emotion-55 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.emotion-59 {
+.emotion-58 {
   display: table-cell;
   vertical-align: middle;
   height: 3.75rem;
@@ -1880,33 +1857,33 @@ exports[`offerList > should work with badge 1`] = `
                 class="emotion-33 emotion-34"
               >
                 <span
-                  class="emotion-35 emotion-36 emotion-37 emotion-38"
+                  class="emotion-35 uv_1yf71jy0 uv_1yf71jy1 uv_1yf71jyd uv_1yf71jya uv_1yf71jym emotion-36 emotion-37"
                 >
                   text
                 </span>
               </div>
               <div
-                class="emotion-39 emotion-40"
+                class="emotion-38 emotion-39"
               >
                 <div
-                  class="emotion-41 emotion-42"
+                  class="emotion-40 emotion-41"
                 >
                   <div
                     aria-disabled="false"
-                    class="emotion-43 emotion-44"
+                    class="emotion-42 emotion-43"
                     data-checked="false"
                   >
                     <input
                       aria-disabled="false"
                       aria-invalid="false"
-                      class="emotion-45 emotion-46"
+                      class="emotion-44 emotion-45"
                       id="mercury"
                       name="radio-offer-list-mercury"
                       type="radio"
                       value="mercury"
                     />
                     <svg
-                      class="emotion-47 emotion-48"
+                      class="emotion-46 emotion-47"
                       viewBox="0 0 24 24"
                     >
                       <g>
@@ -1917,13 +1894,13 @@ exports[`offerList > should work with badge 1`] = `
                           stroke-width="2"
                         />
                         <circle
-                          class="emotion-49 emotion-50"
+                          class="emotion-48 emotion-49"
                           cx="12"
                           cy="12"
                           r="8"
                         />
                         <circle
-                          class="emotion-51 emotion-52"
+                          class="emotion-50 emotion-51"
                           cx="12"
                           cy="12"
                           r="5"
@@ -1944,7 +1921,7 @@ exports[`offerList > should work with badge 1`] = `
                 type="button"
               >
                 <svg
-                  class="emotion-56 emotion-57"
+                  class="emotion-55 emotion-56"
                   viewBox="0 0 16 16"
                 >
                   <path
@@ -1956,17 +1933,17 @@ exports[`offerList > should work with badge 1`] = `
               </button>
             </td>
             <td
-              class="emotion-58 emotion-59 emotion-32"
+              class="emotion-57 emotion-58 emotion-32"
             >
               Mercury
             </td>
             <td
-              class="emotion-58 emotion-59 emotion-32"
+              class="emotion-57 emotion-58 emotion-32"
             >
               0.307AU
             </td>
             <td
-              class="emotion-58 emotion-59 emotion-32"
+              class="emotion-57 emotion-58 emotion-32"
             >
               0.467AU
             </td>
@@ -1985,33 +1962,33 @@ exports[`offerList > should work with badge 1`] = `
                 class="emotion-33 emotion-34"
               >
                 <span
-                  class="emotion-35 emotion-36 emotion-37 emotion-38"
+                  class="emotion-35 uv_1yf71jy0 uv_1yf71jy1 uv_1yf71jyd uv_1yf71jya uv_1yf71jym emotion-36 emotion-37"
                 >
                   text
                 </span>
               </div>
               <div
-                class="emotion-39 emotion-40"
+                class="emotion-38 emotion-39"
               >
                 <div
-                  class="emotion-41 emotion-42"
+                  class="emotion-40 emotion-41"
                 >
                   <div
                     aria-disabled="false"
-                    class="emotion-43 emotion-44"
+                    class="emotion-42 emotion-43"
                     data-checked="false"
                   >
                     <input
                       aria-disabled="false"
                       aria-invalid="false"
-                      class="emotion-45 emotion-46"
+                      class="emotion-44 emotion-45"
                       id="venus"
                       name="radio-offer-list-venus"
                       type="radio"
                       value="venus"
                     />
                     <svg
-                      class="emotion-47 emotion-48"
+                      class="emotion-46 emotion-47"
                       viewBox="0 0 24 24"
                     >
                       <g>
@@ -2022,13 +1999,13 @@ exports[`offerList > should work with badge 1`] = `
                           stroke-width="2"
                         />
                         <circle
-                          class="emotion-49 emotion-50"
+                          class="emotion-48 emotion-49"
                           cx="12"
                           cy="12"
                           r="8"
                         />
                         <circle
-                          class="emotion-51 emotion-52"
+                          class="emotion-50 emotion-51"
                           cx="12"
                           cy="12"
                           r="5"
@@ -2049,7 +2026,7 @@ exports[`offerList > should work with badge 1`] = `
                 type="button"
               >
                 <svg
-                  class="emotion-56 emotion-57"
+                  class="emotion-55 emotion-56"
                   viewBox="0 0 16 16"
                 >
                   <path
@@ -2061,17 +2038,17 @@ exports[`offerList > should work with badge 1`] = `
               </button>
             </td>
             <td
-              class="emotion-58 emotion-59 emotion-32"
+              class="emotion-57 emotion-58 emotion-32"
             >
               Venus
             </td>
             <td
-              class="emotion-58 emotion-59 emotion-32"
+              class="emotion-57 emotion-58 emotion-32"
             >
               0.718AU
             </td>
             <td
-              class="emotion-58 emotion-59 emotion-32"
+              class="emotion-57 emotion-58 emotion-32"
             >
               0.728AU
             </td>
@@ -2090,33 +2067,33 @@ exports[`offerList > should work with badge 1`] = `
                 class="emotion-33 emotion-34"
               >
                 <span
-                  class="emotion-35 emotion-36 emotion-37 emotion-38"
+                  class="emotion-35 uv_1yf71jy0 uv_1yf71jy1 uv_1yf71jyd uv_1yf71jya uv_1yf71jym emotion-36 emotion-37"
                 >
                   text
                 </span>
               </div>
               <div
-                class="emotion-39 emotion-40"
+                class="emotion-38 emotion-39"
               >
                 <div
-                  class="emotion-41 emotion-42"
+                  class="emotion-40 emotion-41"
                 >
                   <div
                     aria-disabled="false"
-                    class="emotion-43 emotion-44"
+                    class="emotion-42 emotion-43"
                     data-checked="false"
                   >
                     <input
                       aria-disabled="false"
                       aria-invalid="false"
-                      class="emotion-45 emotion-46"
+                      class="emotion-44 emotion-45"
                       id="home-sweet-home"
                       name="radio-offer-list-home-sweet-home"
                       type="radio"
                       value="home-sweet-home"
                     />
                     <svg
-                      class="emotion-47 emotion-48"
+                      class="emotion-46 emotion-47"
                       viewBox="0 0 24 24"
                     >
                       <g>
@@ -2127,13 +2104,13 @@ exports[`offerList > should work with badge 1`] = `
                           stroke-width="2"
                         />
                         <circle
-                          class="emotion-49 emotion-50"
+                          class="emotion-48 emotion-49"
                           cx="12"
                           cy="12"
                           r="8"
                         />
                         <circle
-                          class="emotion-51 emotion-52"
+                          class="emotion-50 emotion-51"
                           cx="12"
                           cy="12"
                           r="5"
@@ -2154,7 +2131,7 @@ exports[`offerList > should work with badge 1`] = `
                 type="button"
               >
                 <svg
-                  class="emotion-56 emotion-57"
+                  class="emotion-55 emotion-56"
                   viewBox="0 0 16 16"
                 >
                   <path
@@ -2166,17 +2143,17 @@ exports[`offerList > should work with badge 1`] = `
               </button>
             </td>
             <td
-              class="emotion-58 emotion-59 emotion-32"
+              class="emotion-57 emotion-58 emotion-32"
             >
               Earth
             </td>
             <td
-              class="emotion-58 emotion-59 emotion-32"
+              class="emotion-57 emotion-58 emotion-32"
             >
               0.983AU
             </td>
             <td
-              class="emotion-58 emotion-59 emotion-32"
+              class="emotion-57 emotion-58 emotion-32"
             >
               1.017AU
             </td>
@@ -2195,33 +2172,33 @@ exports[`offerList > should work with badge 1`] = `
                 class="emotion-33 emotion-34"
               >
                 <span
-                  class="emotion-35 emotion-36 emotion-37 emotion-38"
+                  class="emotion-35 uv_1yf71jy0 uv_1yf71jy1 uv_1yf71jyd uv_1yf71jya uv_1yf71jym emotion-36 emotion-37"
                 >
                   text
                 </span>
               </div>
               <div
-                class="emotion-39 emotion-40"
+                class="emotion-38 emotion-39"
               >
                 <div
-                  class="emotion-41 emotion-42"
+                  class="emotion-40 emotion-41"
                 >
                   <div
                     aria-disabled="false"
-                    class="emotion-43 emotion-44"
+                    class="emotion-42 emotion-43"
                     data-checked="false"
                   >
                     <input
                       aria-disabled="false"
                       aria-invalid="false"
-                      class="emotion-45 emotion-46"
+                      class="emotion-44 emotion-45"
                       id="mars"
                       name="radio-offer-list-mars"
                       type="radio"
                       value="mars"
                     />
                     <svg
-                      class="emotion-47 emotion-48"
+                      class="emotion-46 emotion-47"
                       viewBox="0 0 24 24"
                     >
                       <g>
@@ -2232,13 +2209,13 @@ exports[`offerList > should work with badge 1`] = `
                           stroke-width="2"
                         />
                         <circle
-                          class="emotion-49 emotion-50"
+                          class="emotion-48 emotion-49"
                           cx="12"
                           cy="12"
                           r="8"
                         />
                         <circle
-                          class="emotion-51 emotion-52"
+                          class="emotion-50 emotion-51"
                           cx="12"
                           cy="12"
                           r="5"
@@ -2259,7 +2236,7 @@ exports[`offerList > should work with badge 1`] = `
                 type="button"
               >
                 <svg
-                  class="emotion-56 emotion-57"
+                  class="emotion-55 emotion-56"
                   viewBox="0 0 16 16"
                 >
                   <path
@@ -2271,17 +2248,17 @@ exports[`offerList > should work with badge 1`] = `
               </button>
             </td>
             <td
-              class="emotion-58 emotion-59 emotion-32"
+              class="emotion-57 emotion-58 emotion-32"
             >
               Mars
             </td>
             <td
-              class="emotion-58 emotion-59 emotion-32"
+              class="emotion-57 emotion-58 emotion-32"
             >
               1.381AU
             </td>
             <td
-              class="emotion-58 emotion-59 emotion-32"
+              class="emotion-57 emotion-58 emotion-32"
             >
               1.666AU
             </td>
@@ -2300,33 +2277,33 @@ exports[`offerList > should work with badge 1`] = `
                 class="emotion-33 emotion-34"
               >
                 <span
-                  class="emotion-35 emotion-36 emotion-37 emotion-38"
+                  class="emotion-35 uv_1yf71jy0 uv_1yf71jy1 uv_1yf71jyd uv_1yf71jya uv_1yf71jym emotion-36 emotion-37"
                 >
                   text
                 </span>
               </div>
               <div
-                class="emotion-39 emotion-40"
+                class="emotion-38 emotion-39"
               >
                 <div
-                  class="emotion-41 emotion-42"
+                  class="emotion-40 emotion-41"
                 >
                   <div
                     aria-disabled="false"
-                    class="emotion-43 emotion-44"
+                    class="emotion-42 emotion-43"
                     data-checked="false"
                   >
                     <input
                       aria-disabled="false"
                       aria-invalid="false"
-                      class="emotion-45 emotion-46"
+                      class="emotion-44 emotion-45"
                       id="jupiter"
                       name="radio-offer-list-jupiter"
                       type="radio"
                       value="jupiter"
                     />
                     <svg
-                      class="emotion-47 emotion-48"
+                      class="emotion-46 emotion-47"
                       viewBox="0 0 24 24"
                     >
                       <g>
@@ -2337,13 +2314,13 @@ exports[`offerList > should work with badge 1`] = `
                           stroke-width="2"
                         />
                         <circle
-                          class="emotion-49 emotion-50"
+                          class="emotion-48 emotion-49"
                           cx="12"
                           cy="12"
                           r="8"
                         />
                         <circle
-                          class="emotion-51 emotion-52"
+                          class="emotion-50 emotion-51"
                           cx="12"
                           cy="12"
                           r="5"
@@ -2364,7 +2341,7 @@ exports[`offerList > should work with badge 1`] = `
                 type="button"
               >
                 <svg
-                  class="emotion-56 emotion-57"
+                  class="emotion-55 emotion-56"
                   viewBox="0 0 16 16"
                 >
                   <path
@@ -2376,17 +2353,17 @@ exports[`offerList > should work with badge 1`] = `
               </button>
             </td>
             <td
-              class="emotion-58 emotion-59 emotion-32"
+              class="emotion-57 emotion-58 emotion-32"
             >
               Jupiter
             </td>
             <td
-              class="emotion-58 emotion-59 emotion-32"
+              class="emotion-57 emotion-58 emotion-32"
             >
               4.951AU
             </td>
             <td
-              class="emotion-58 emotion-59 emotion-32"
+              class="emotion-57 emotion-58 emotion-32"
             >
               5.457AU
             </td>
@@ -2405,33 +2382,33 @@ exports[`offerList > should work with badge 1`] = `
                 class="emotion-33 emotion-34"
               >
                 <span
-                  class="emotion-35 emotion-36 emotion-37 emotion-38"
+                  class="emotion-35 uv_1yf71jy0 uv_1yf71jy1 uv_1yf71jyd uv_1yf71jya uv_1yf71jym emotion-36 emotion-37"
                 >
                   text
                 </span>
               </div>
               <div
-                class="emotion-39 emotion-40"
+                class="emotion-38 emotion-39"
               >
                 <div
-                  class="emotion-41 emotion-42"
+                  class="emotion-40 emotion-41"
                 >
                   <div
                     aria-disabled="false"
-                    class="emotion-43 emotion-44"
+                    class="emotion-42 emotion-43"
                     data-checked="false"
                   >
                     <input
                       aria-disabled="false"
                       aria-invalid="false"
-                      class="emotion-45 emotion-46"
+                      class="emotion-44 emotion-45"
                       id="saturn"
                       name="radio-offer-list-saturn"
                       type="radio"
                       value="saturn"
                     />
                     <svg
-                      class="emotion-47 emotion-48"
+                      class="emotion-46 emotion-47"
                       viewBox="0 0 24 24"
                     >
                       <g>
@@ -2442,13 +2419,13 @@ exports[`offerList > should work with badge 1`] = `
                           stroke-width="2"
                         />
                         <circle
-                          class="emotion-49 emotion-50"
+                          class="emotion-48 emotion-49"
                           cx="12"
                           cy="12"
                           r="8"
                         />
                         <circle
-                          class="emotion-51 emotion-52"
+                          class="emotion-50 emotion-51"
                           cx="12"
                           cy="12"
                           r="5"
@@ -2469,7 +2446,7 @@ exports[`offerList > should work with badge 1`] = `
                 type="button"
               >
                 <svg
-                  class="emotion-56 emotion-57"
+                  class="emotion-55 emotion-56"
                   viewBox="0 0 16 16"
                 >
                   <path
@@ -2481,17 +2458,17 @@ exports[`offerList > should work with badge 1`] = `
               </button>
             </td>
             <td
-              class="emotion-58 emotion-59 emotion-32"
+              class="emotion-57 emotion-58 emotion-32"
             >
               Saturn
             </td>
             <td
-              class="emotion-58 emotion-59 emotion-32"
+              class="emotion-57 emotion-58 emotion-32"
             >
               9.041AU
             </td>
             <td
-              class="emotion-58 emotion-59 emotion-32"
+              class="emotion-57 emotion-58 emotion-32"
             >
               10.124AU
             </td>
@@ -2510,33 +2487,33 @@ exports[`offerList > should work with badge 1`] = `
                 class="emotion-33 emotion-34"
               >
                 <span
-                  class="emotion-35 emotion-36 emotion-37 emotion-38"
+                  class="emotion-35 uv_1yf71jy0 uv_1yf71jy1 uv_1yf71jyd uv_1yf71jya uv_1yf71jym emotion-36 emotion-37"
                 >
                   text
                 </span>
               </div>
               <div
-                class="emotion-39 emotion-40"
+                class="emotion-38 emotion-39"
               >
                 <div
-                  class="emotion-41 emotion-42"
+                  class="emotion-40 emotion-41"
                 >
                   <div
                     aria-disabled="false"
-                    class="emotion-43 emotion-44"
+                    class="emotion-42 emotion-43"
                     data-checked="false"
                   >
                     <input
                       aria-disabled="false"
                       aria-invalid="false"
-                      class="emotion-45 emotion-46"
+                      class="emotion-44 emotion-45"
                       id="uranus"
                       name="radio-offer-list-uranus"
                       type="radio"
                       value="uranus"
                     />
                     <svg
-                      class="emotion-47 emotion-48"
+                      class="emotion-46 emotion-47"
                       viewBox="0 0 24 24"
                     >
                       <g>
@@ -2547,13 +2524,13 @@ exports[`offerList > should work with badge 1`] = `
                           stroke-width="2"
                         />
                         <circle
-                          class="emotion-49 emotion-50"
+                          class="emotion-48 emotion-49"
                           cx="12"
                           cy="12"
                           r="8"
                         />
                         <circle
-                          class="emotion-51 emotion-52"
+                          class="emotion-50 emotion-51"
                           cx="12"
                           cy="12"
                           r="5"
@@ -2574,7 +2551,7 @@ exports[`offerList > should work with badge 1`] = `
                 type="button"
               >
                 <svg
-                  class="emotion-56 emotion-57"
+                  class="emotion-55 emotion-56"
                   viewBox="0 0 16 16"
                 >
                   <path
@@ -2586,17 +2563,17 @@ exports[`offerList > should work with badge 1`] = `
               </button>
             </td>
             <td
-              class="emotion-58 emotion-59 emotion-32"
+              class="emotion-57 emotion-58 emotion-32"
             >
               Uranus
             </td>
             <td
-              class="emotion-58 emotion-59 emotion-32"
+              class="emotion-57 emotion-58 emotion-32"
             >
               18.286AU
             </td>
             <td
-              class="emotion-58 emotion-59 emotion-32"
+              class="emotion-57 emotion-58 emotion-32"
             >
               20.097AU
             </td>
@@ -2615,33 +2592,33 @@ exports[`offerList > should work with badge 1`] = `
                 class="emotion-33 emotion-34"
               >
                 <span
-                  class="emotion-35 emotion-36 emotion-37 emotion-38"
+                  class="emotion-35 uv_1yf71jy0 uv_1yf71jy1 uv_1yf71jyd uv_1yf71jya uv_1yf71jym emotion-36 emotion-37"
                 >
                   text
                 </span>
               </div>
               <div
-                class="emotion-39 emotion-40"
+                class="emotion-38 emotion-39"
               >
                 <div
-                  class="emotion-41 emotion-42"
+                  class="emotion-40 emotion-41"
                 >
                   <div
                     aria-disabled="false"
-                    class="emotion-43 emotion-44"
+                    class="emotion-42 emotion-43"
                     data-checked="false"
                   >
                     <input
                       aria-disabled="false"
                       aria-invalid="false"
-                      class="emotion-45 emotion-46"
+                      class="emotion-44 emotion-45"
                       id="id-neptune"
                       name="radio-offer-list-id-neptune"
                       type="radio"
                       value="id-neptune"
                     />
                     <svg
-                      class="emotion-47 emotion-48"
+                      class="emotion-46 emotion-47"
                       viewBox="0 0 24 24"
                     >
                       <g>
@@ -2652,13 +2629,13 @@ exports[`offerList > should work with badge 1`] = `
                           stroke-width="2"
                         />
                         <circle
-                          class="emotion-49 emotion-50"
+                          class="emotion-48 emotion-49"
                           cx="12"
                           cy="12"
                           r="8"
                         />
                         <circle
-                          class="emotion-51 emotion-52"
+                          class="emotion-50 emotion-51"
                           cx="12"
                           cy="12"
                           r="5"
@@ -2679,7 +2656,7 @@ exports[`offerList > should work with badge 1`] = `
                 type="button"
               >
                 <svg
-                  class="emotion-56 emotion-57"
+                  class="emotion-55 emotion-56"
                   viewBox="0 0 16 16"
                 >
                   <path
@@ -2691,17 +2668,17 @@ exports[`offerList > should work with badge 1`] = `
               </button>
             </td>
             <td
-              class="emotion-58 emotion-59 emotion-32"
+              class="emotion-57 emotion-58 emotion-32"
             >
               Neptune
             </td>
             <td
-              class="emotion-58 emotion-59 emotion-32"
+              class="emotion-57 emotion-58 emotion-32"
             >
               29.81AU
             </td>
             <td
-              class="emotion-58 emotion-59 emotion-32"
+              class="emotion-57 emotion-58 emotion-32"
             >
               30.33AU
             </td>
