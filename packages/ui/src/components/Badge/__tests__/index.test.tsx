@@ -2,7 +2,8 @@ import { InformationOutlineIcon } from '@ultraviolet/icons'
 import { shouldMatchEmotionSnapshot } from '@utils/test'
 import { describe, test } from 'vitest'
 import { SENTIMENTS } from '../../../theme'
-import { Badge, PROMINENCES, SIZES } from '..'
+import { Badge } from '..'
+import { PROMINENCES, SIZES } from '../constant'
 
 describe('badge', () => {
   test('renders correctly with default values', () =>
