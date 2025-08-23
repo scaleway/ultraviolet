@@ -6,7 +6,8 @@
   "scripts": {
     "start": "vite",
     "e2e": "playwright test",
-    "e2e:debug": "playwright test --ui",
+    "e2e:ui": "playwright test --ui",
+    "e2e:debug": "PWDEBUG=1 pnpm playwright test",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
