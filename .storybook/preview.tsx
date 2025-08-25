@@ -3,6 +3,9 @@ import { withThemeFromJSXProvider } from '@storybook/addon-themes'
 import type { Preview, StoryFn } from '@storybook/react-vite'
 import { themes } from 'storybook/theming'
 import {
+  consoleDarkTheme,
+  consoleDarkerTheme,
+  consoleLightTheme,
   consoleDarkTheme as darkTheme,
   consoleDarkerTheme as darkerTheme,
   consoleLightTheme as lightTheme,
@@ -143,16 +146,25 @@ const withThemeProvider = (Story: StoryFn, context: { globals: { theme: string }
 }
 
 const decorators = [
-  (Story: StoryFn) => (
+  (Story: StoryFn, context: { globals: { theme: string } }) => {
+    const theme = context.globals.theme || "light"
+    const finalTheme = () => {
+      if (theme === "light") {return consoleLightTheme}
+      if (theme === "dark") {return consoleDarkTheme}
+
+      return consoleDarkerTheme
+    }
+    
+    return (
       <>
-        <ThemeProviderUI>
+        <ThemeProviderUI theme={finalTheme()}>
           {
             // eslint-disable-next-line react/jsx-curly-brace-presence
             <Story />
           }
         </ThemeProviderUI>
       </>
-    ), // Storybook is broken without this please refer to this issue: https://github.com/storybookjs/storybook/issues/24625
+    )}, // Storybook is broken without this please refer to this issue: https://github.com/storybookjs/storybook/issues/24625
   withThemeFromJSXProvider({
     themes: {
       light: lightTheme,
