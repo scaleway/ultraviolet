@@ -895,15 +895,15 @@ exports[`UnitInput > renders click 1`] = `
   display: none;
 }
 
-.emotion-26>.emotion-29 {
+.emotion-25>.emotion-28 {
   max-height: 100%;
 }
 
-.emotion-28[data-max-height="true"] {
+.emotion-27[data-max-height="true"] {
   overflow: auto;
 }
 
-.emotion-30 {
+.emotion-29 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -925,7 +925,7 @@ exports[`UnitInput > renders click 1`] = `
   flex-direction: column;
 }
 
-.emotion-32 {
+.emotion-31 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -953,11 +953,11 @@ exports[`UnitInput > renders click 1`] = `
   padding-top: 0.25rem;
 }
 
-.emotion-32[data-grouped="true"] {
+.emotion-31[data-grouped="true"] {
   padding-top: 0rem;
 }
 
-.emotion-34 {
+.emotion-33 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -980,7 +980,7 @@ exports[`UnitInput > renders click 1`] = `
   gap: 0.125rem;
 }
 
-.emotion-36 {
+.emotion-35 {
   text-align: left;
   border: none;
   background-color: #ffffff;
@@ -992,31 +992,31 @@ exports[`UnitInput > renders click 1`] = `
   border: 1px transparent solid;
 }
 
-.emotion-36:hover,
-.emotion-36:focus {
+.emotion-35:hover,
+.emotion-35:focus {
   background-color: #f1eefc;
   color: #641cb3;
   cursor: pointer;
 }
 
-.emotion-36[aria-selected='true'] {
+.emotion-35[aria-selected='true'] {
   background-color: #f1eefc;
 }
 
-.emotion-36[aria-disabled="true"] {
+.emotion-35[aria-disabled="true"] {
   background-color: #f3f3f4;
   color: #b5b7bd;
 }
 
-.emotion-36[aria-disabled="true"]:hover,
-.emotion-36 [aria-disabled="true"]:focus {
+.emotion-35[aria-disabled="true"]:hover,
+.emotion-35 [aria-disabled="true"]:focus {
   background-color: #f3f3f4;
   color: #b5b7bd;
   cursor: not-allowed;
   outline: none;
 }
 
-.emotion-40 {
+.emotion-39 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1039,16 +1039,7 @@ exports[`UnitInput > renders click 1`] = `
   overflow: hidden;
 }
 
-.emotion-43 {
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  text-align: left;
+.emotion-41 {
   overflow: auto;
   text-overflow: ellipsis;
   -webkit-flex-shrink: 0;
@@ -1147,27 +1138,27 @@ exports[`UnitInput > renders click 1`] = `
               style="opacity: 1;"
             >
               <div
-                class="emotion-28 emotion-29"
+                class="emotion-27 emotion-28"
                 data-max-height="false"
               >
                 <div
-                  class="emotion-30 emotion-1"
+                  class="emotion-29 emotion-1"
                 >
                   <div
-                    class="emotion-32 emotion-33"
+                    class="emotion-31 emotion-32"
                     data-grouped="false"
                     id="select-dropdown"
                     role="listbox"
                   >
                     <div
-                      class="emotion-34 emotion-1"
+                      class="emotion-33 emotion-1"
                       id="items"
                     >
                       <div
                         aria-disabled="false"
                         aria-label="kb"
                         aria-selected="false"
-                        class="emotion-36 emotion-37"
+                        class="emotion-35 emotion-36"
                         data-testid="option-kb"
                         id="option-0"
                         role="option"
@@ -1178,10 +1169,11 @@ exports[`UnitInput > renders click 1`] = `
                           data-testid="option-stack-kb"
                         >
                           <div
-                            class="emotion-40 emotion-41"
+                            class="emotion-39 emotion-40"
                           >
                             <span
-                              class="emotion-42 emotion-43 emotion-20"
+                              class="emotion-41 emotion-42 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+                              style="text-align: left;"
                             >
                               KB
                             </span>
@@ -1192,7 +1184,7 @@ exports[`UnitInput > renders click 1`] = `
                         aria-disabled="false"
                         aria-label="mb"
                         aria-selected="false"
-                        class="emotion-36 emotion-37"
+                        class="emotion-35 emotion-36"
                         data-testid="option-mb"
                         id="option-1"
                         role="option"
@@ -1203,10 +1195,11 @@ exports[`UnitInput > renders click 1`] = `
                           data-testid="option-stack-mb"
                         >
                           <div
-                            class="emotion-40 emotion-41"
+                            class="emotion-39 emotion-40"
                           >
                             <span
-                              class="emotion-42 emotion-43 emotion-20"
+                              class="emotion-41 emotion-42 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+                              style="text-align: left;"
                             >
                               MB
                             </span>
@@ -1217,7 +1210,7 @@ exports[`UnitInput > renders click 1`] = `
                         aria-disabled="false"
                         aria-label="gb"
                         aria-selected="false"
-                        class="emotion-36 emotion-37"
+                        class="emotion-35 emotion-36"
                         data-testid="option-gb"
                         id="option-2"
                         role="option"
@@ -1228,10 +1221,11 @@ exports[`UnitInput > renders click 1`] = `
                           data-testid="option-stack-gb"
                         >
                           <div
-                            class="emotion-40 emotion-41"
+                            class="emotion-39 emotion-40"
                           >
                             <span
-                              class="emotion-42 emotion-43 emotion-20"
+                              class="emotion-41 emotion-42 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+                              style="text-align: left;"
                             >
                               GB
                             </span>

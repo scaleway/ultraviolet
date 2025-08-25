@@ -496,15 +496,15 @@ exports[`DateInput > render correctly with showMonthYearPicker with default date
   display: none;
 }
 
-.emotion-18>.emotion-21 {
+.emotion-17>.emotion-20 {
   max-height: 100%;
 }
 
-.emotion-20[data-max-height="true"] {
+.emotion-19[data-max-height="true"] {
   overflow: auto;
 }
 
-.emotion-22 {
+.emotion-21 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -527,7 +527,7 @@ exports[`DateInput > render correctly with showMonthYearPicker with default date
   gap: 1rem;
 }
 
-.emotion-24 {
+.emotion-23 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -549,7 +549,7 @@ exports[`DateInput > render correctly with showMonthYearPicker with default date
   flex-direction: row;
 }
 
-.emotion-26 {
+.emotion-25 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -576,7 +576,7 @@ exports[`DateInput > render correctly with showMonthYearPicker with default date
   text-transform: capitalize;
 }
 
-.emotion-33 {
+.emotion-31 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 0.5rem;
@@ -590,28 +590,28 @@ exports[`DateInput > render correctly with showMonthYearPicker with default date
   justify-content: normal;
 }
 
-.emotion-35 {
+.emotion-33 {
   height: 1.5625rem;
   width: 100%;
   padding: 0;
   text-transform: capitalize;
 }
 
-.emotion-35[aria-label="in-range"] {
+.emotion-33[aria-label="in-range"] {
   color: #521094;
   background-color: #f1eefc;
 }
 
-.emotion-35[aria-label="in-range"]:hover {
+.emotion-33[aria-label="in-range"]:hover {
   color: #ffffff;
   background-color: #792dd4;
 }
 
-.emotion-35[aria-label="not-current"] {
+.emotion-33[aria-label="not-current"] {
   color: #b5b7bd;
 }
 
-.emotion-35[aria-label="selected"] {
+.emotion-33[aria-label="selected"] {
   color: #ffffff;
 }
 
@@ -682,14 +682,14 @@ exports[`DateInput > render correctly with showMonthYearPicker with default date
           style="opacity: 1;"
         >
           <div
-            class="emotion-20 emotion-21"
+            class="emotion-19 emotion-20"
             data-max-height="false"
           >
             <div
-              class="emotion-22 emotion-5"
+              class="emotion-21 emotion-5"
             >
               <div
-                class="emotion-24 emotion-5"
+                class="emotion-23 emotion-5"
               >
                 <button
                   class="styles__e1wcoe0 styles_size_xsmall__e1wcoe4 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
@@ -697,7 +697,7 @@ exports[`DateInput > render correctly with showMonthYearPicker with default date
                   type="button"
                 >
                   <svg
-                    class="emotion-26 emotion-16"
+                    class="emotion-25 emotion-15"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -708,7 +708,7 @@ exports[`DateInput > render correctly with showMonthYearPicker with default date
                   </svg>
                 </button>
                 <span
-                  class="emotion-28 emotion-29 emotion-8"
+                  class="emotion-27 emotion-28 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
                 >
                    1995
                 </span>
@@ -718,7 +718,7 @@ exports[`DateInput > render correctly with showMonthYearPicker with default date
                   type="button"
                 >
                   <svg
-                    class="emotion-26 emotion-16"
+                    class="emotion-25 emotion-15"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -730,88 +730,88 @@ exports[`DateInput > render correctly with showMonthYearPicker with default date
                 </button>
               </div>
               <div
-                class="emotion-33 emotion-34"
+                class="emotion-31 emotion-32"
               >
                 <button
                   aria-label="neutral"
-                  class="emotion-35 emotion-36 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-33 emotion-34 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   Jan
                 </button>
                 <button
                   aria-label="selected"
-                  class="emotion-35 emotion-36 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_filled__e1wcoeg styles_sentiment_primary__e1wcoe7 styles_undefined_compound_0__e1wcoel"
+                  class="emotion-33 emotion-34 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_filled__e1wcoeg styles_sentiment_primary__e1wcoe7 styles_undefined_compound_0__e1wcoel"
                   type="button"
                 >
                   Feb
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-35 emotion-36 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-33 emotion-34 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   Mar
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-35 emotion-36 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-33 emotion-34 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   Apr
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-35 emotion-36 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-33 emotion-34 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   May
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-35 emotion-36 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-33 emotion-34 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   Jun
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-35 emotion-36 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-33 emotion-34 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   Jul
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-35 emotion-36 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-33 emotion-34 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   Aug
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-35 emotion-36 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-33 emotion-34 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   Sep
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-35 emotion-36 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-33 emotion-34 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   Oct
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-35 emotion-36 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-33 emotion-34 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   Nov
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-35 emotion-36 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-33 emotion-34 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   Dec
@@ -1079,15 +1079,15 @@ exports[`DateInput > render correctly with showMonthYearPicker with excluded mon
   display: none;
 }
 
-.emotion-18>.emotion-21 {
+.emotion-17>.emotion-20 {
   max-height: 100%;
 }
 
-.emotion-20[data-max-height="true"] {
+.emotion-19[data-max-height="true"] {
   overflow: auto;
 }
 
-.emotion-22 {
+.emotion-21 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1110,7 +1110,7 @@ exports[`DateInput > render correctly with showMonthYearPicker with excluded mon
   gap: 1rem;
 }
 
-.emotion-24 {
+.emotion-23 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1132,7 +1132,7 @@ exports[`DateInput > render correctly with showMonthYearPicker with excluded mon
   flex-direction: row;
 }
 
-.emotion-26 {
+.emotion-25 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -1159,7 +1159,7 @@ exports[`DateInput > render correctly with showMonthYearPicker with excluded mon
   text-transform: capitalize;
 }
 
-.emotion-33 {
+.emotion-31 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 0.5rem;
@@ -1173,28 +1173,28 @@ exports[`DateInput > render correctly with showMonthYearPicker with excluded mon
   justify-content: normal;
 }
 
-.emotion-35 {
+.emotion-33 {
   height: 1.5625rem;
   width: 100%;
   padding: 0;
   text-transform: capitalize;
 }
 
-.emotion-35[aria-label="in-range"] {
+.emotion-33[aria-label="in-range"] {
   color: #521094;
   background-color: #f1eefc;
 }
 
-.emotion-35[aria-label="in-range"]:hover {
+.emotion-33[aria-label="in-range"]:hover {
   color: #ffffff;
   background-color: #792dd4;
 }
 
-.emotion-35[aria-label="not-current"] {
+.emotion-33[aria-label="not-current"] {
   color: #b5b7bd;
 }
 
-.emotion-35[aria-label="selected"] {
+.emotion-33[aria-label="selected"] {
   color: #ffffff;
 }
 
@@ -1265,14 +1265,14 @@ exports[`DateInput > render correctly with showMonthYearPicker with excluded mon
           style="opacity: 1;"
         >
           <div
-            class="emotion-20 emotion-21"
+            class="emotion-19 emotion-20"
             data-max-height="false"
           >
             <div
-              class="emotion-22 emotion-5"
+              class="emotion-21 emotion-5"
             >
               <div
-                class="emotion-24 emotion-5"
+                class="emotion-23 emotion-5"
               >
                 <button
                   class="styles__e1wcoe0 styles_size_xsmall__e1wcoe4 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
@@ -1280,7 +1280,7 @@ exports[`DateInput > render correctly with showMonthYearPicker with excluded mon
                   type="button"
                 >
                   <svg
-                    class="emotion-26 emotion-16"
+                    class="emotion-25 emotion-15"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -1291,7 +1291,7 @@ exports[`DateInput > render correctly with showMonthYearPicker with excluded mon
                   </svg>
                 </button>
                 <span
-                  class="emotion-28 emotion-29 emotion-8"
+                  class="emotion-27 emotion-28 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
                 >
                    1995
                 </span>
@@ -1301,7 +1301,7 @@ exports[`DateInput > render correctly with showMonthYearPicker with excluded mon
                   type="button"
                 >
                   <svg
-                    class="emotion-26 emotion-16"
+                    class="emotion-25 emotion-15"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -1313,18 +1313,18 @@ exports[`DateInput > render correctly with showMonthYearPicker with excluded mon
                 </button>
               </div>
               <div
-                class="emotion-33 emotion-34"
+                class="emotion-31 emotion-32"
               >
                 <button
                   aria-label="neutral"
-                  class="emotion-35 emotion-36 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-33 emotion-34 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   Jan
                 </button>
                 <button
                   aria-label="selected"
-                  class="emotion-35 emotion-36 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_true__e1wcoej styles_variant_filled__e1wcoeg styles_sentiment_primary__e1wcoe7 styles_undefined_compound_0__e1wcoel"
+                  class="emotion-33 emotion-34 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_true__e1wcoej styles_variant_filled__e1wcoeg styles_sentiment_primary__e1wcoe7 styles_undefined_compound_0__e1wcoel"
                   disabled=""
                   type="button"
                 >
@@ -1332,56 +1332,56 @@ exports[`DateInput > render correctly with showMonthYearPicker with excluded mon
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-35 emotion-36 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-33 emotion-34 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   Mar
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-35 emotion-36 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-33 emotion-34 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   Apr
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-35 emotion-36 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-33 emotion-34 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   May
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-35 emotion-36 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-33 emotion-34 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   Jun
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-35 emotion-36 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-33 emotion-34 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   Jul
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-35 emotion-36 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-33 emotion-34 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   Aug
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-35 emotion-36 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-33 emotion-34 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   Sep
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-35 emotion-36 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_true__e1wcoej styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-33 emotion-34 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_true__e1wcoej styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   disabled=""
                   type="button"
                 >
@@ -1389,14 +1389,14 @@ exports[`DateInput > render correctly with showMonthYearPicker with excluded mon
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-35 emotion-36 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-33 emotion-34 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   Nov
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-35 emotion-36 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-33 emotion-34 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   Dec
@@ -3851,15 +3851,15 @@ exports[`DateInput > renders correctly with a array of dates to exclude 1`] = `
   display: none;
 }
 
-.emotion-18>.emotion-21 {
+.emotion-17>.emotion-20 {
   max-height: 100%;
 }
 
-.emotion-20[data-max-height="true"] {
+.emotion-19[data-max-height="true"] {
   overflow: auto;
 }
 
-.emotion-22 {
+.emotion-21 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3882,7 +3882,7 @@ exports[`DateInput > renders correctly with a array of dates to exclude 1`] = `
   gap: 1rem;
 }
 
-.emotion-24 {
+.emotion-23 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3904,7 +3904,7 @@ exports[`DateInput > renders correctly with a array of dates to exclude 1`] = `
   flex-direction: row;
 }
 
-.emotion-26 {
+.emotion-25 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -3931,7 +3931,7 @@ exports[`DateInput > renders correctly with a array of dates to exclude 1`] = `
   text-transform: capitalize;
 }
 
-.emotion-33 {
+.emotion-31 {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   gap: 0.5rem;
@@ -3945,47 +3945,38 @@ exports[`DateInput > renders correctly with a array of dates to exclude 1`] = `
   justify-content: normal;
 }
 
-.emotion-36 {
-  color: #3f4250;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.emotion-33 {
   display: inline-block;
   text-transform: lowercase;
 }
 
-.emotion-36::first-letter {
+.emotion-33::first-letter {
   text-transform: uppercase;
 }
 
-.emotion-56 {
+.emotion-47 {
   height: 1.5625rem;
   width: 100%;
   padding: 0;
   color: #727683;
 }
 
-.emotion-56[aria-label="in-range"] {
+.emotion-47[aria-label="in-range"] {
   color: #521094;
   background-color: #f1eefc;
 }
 
-.emotion-56[aria-label="in-range"]:hover {
+.emotion-47[aria-label="in-range"]:hover {
   color: #ffffff;
   background-color: #792dd4;
 }
 
-.emotion-56[aria-label="not-current"],
-.emotion-56:disabled {
+.emotion-47[aria-label="not-current"],
+.emotion-47:disabled {
   color: #b5b7bd;
 }
 
-.emotion-56[aria-label="selected"] {
+.emotion-47[aria-label="selected"] {
   color: #ffffff;
 }
 
@@ -4056,14 +4047,14 @@ exports[`DateInput > renders correctly with a array of dates to exclude 1`] = `
           style="opacity: 1;"
         >
           <div
-            class="emotion-20 emotion-21"
+            class="emotion-19 emotion-20"
             data-max-height="false"
           >
             <div
-              class="emotion-22 emotion-5"
+              class="emotion-21 emotion-5"
             >
               <div
-                class="emotion-24 emotion-5"
+                class="emotion-23 emotion-5"
               >
                 <button
                   class="styles__e1wcoe0 styles_size_xsmall__e1wcoe4 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
@@ -4071,7 +4062,7 @@ exports[`DateInput > renders correctly with a array of dates to exclude 1`] = `
                   type="button"
                 >
                   <svg
-                    class="emotion-26 emotion-16"
+                    class="emotion-25 emotion-15"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -4082,7 +4073,7 @@ exports[`DateInput > renders correctly with a array of dates to exclude 1`] = `
                   </svg>
                 </button>
                 <span
-                  class="emotion-28 emotion-29 emotion-8"
+                  class="emotion-27 emotion-28 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
                 >
                   December 1995
                 </span>
@@ -4092,7 +4083,7 @@ exports[`DateInput > renders correctly with a array of dates to exclude 1`] = `
                   type="button"
                 >
                   <svg
-                    class="emotion-26 emotion-16"
+                    class="emotion-25 emotion-15"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -4104,46 +4095,46 @@ exports[`DateInput > renders correctly with a array of dates to exclude 1`] = `
                 </button>
               </div>
               <div
-                class="emotion-33 emotion-34"
+                class="emotion-31 emotion-32"
               >
                 <p
-                  class="emotion-35 emotion-36 emotion-8"
+                  class="emotion-33 emotion-34 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
                 >
                   Mo
                 </p>
                 <p
-                  class="emotion-35 emotion-36 emotion-8"
+                  class="emotion-33 emotion-34 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
                 >
                   Tu
                 </p>
                 <p
-                  class="emotion-35 emotion-36 emotion-8"
+                  class="emotion-33 emotion-34 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
                 >
                   We
                 </p>
                 <p
-                  class="emotion-35 emotion-36 emotion-8"
+                  class="emotion-33 emotion-34 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
                 >
                   Th
                 </p>
                 <p
-                  class="emotion-35 emotion-36 emotion-8"
+                  class="emotion-33 emotion-34 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
                 >
                   Fr
                 </p>
                 <p
-                  class="emotion-35 emotion-36 emotion-8"
+                  class="emotion-33 emotion-34 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
                 >
                   Sa
                 </p>
                 <p
-                  class="emotion-35 emotion-36 emotion-8"
+                  class="emotion-33 emotion-34 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
                 >
                   Su
                 </p>
                 <button
                   aria-label="not-current"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   data-testid="dayLastMonth"
                   type="button"
                 >
@@ -4151,7 +4142,7 @@ exports[`DateInput > renders correctly with a array of dates to exclude 1`] = `
                 </button>
                 <button
                   aria-label="not-current"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   data-testid="dayLastMonth"
                   type="button"
                 >
@@ -4159,7 +4150,7 @@ exports[`DateInput > renders correctly with a array of dates to exclude 1`] = `
                 </button>
                 <button
                   aria-label="not-current"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   data-testid="dayLastMonth"
                   type="button"
                 >
@@ -4167,7 +4158,7 @@ exports[`DateInput > renders correctly with a array of dates to exclude 1`] = `
                 </button>
                 <button
                   aria-label="not-current"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   data-testid="dayLastMonth"
                   type="button"
                 >
@@ -4175,84 +4166,84 @@ exports[`DateInput > renders correctly with a array of dates to exclude 1`] = `
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   1
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   2
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   3
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   4
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   5
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   6
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   7
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   8
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   9
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   10
                 </button>
                 <button
                   aria-label="selected"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_filled__e1wcoeg styles_sentiment_primary__e1wcoe7 styles_undefined_compound_0__e1wcoel"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_filled__e1wcoeg styles_sentiment_primary__e1wcoe7 styles_undefined_compound_0__e1wcoel"
                   type="button"
                 >
                   11
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_true__e1wcoej styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_true__e1wcoej styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   disabled=""
                   type="button"
                 >
@@ -4260,7 +4251,7 @@ exports[`DateInput > renders correctly with a array of dates to exclude 1`] = `
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_true__e1wcoej styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_true__e1wcoej styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   disabled=""
                   type="button"
                 >
@@ -4268,7 +4259,7 @@ exports[`DateInput > renders correctly with a array of dates to exclude 1`] = `
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_true__e1wcoej styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_true__e1wcoej styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   disabled=""
                   type="button"
                 >
@@ -4276,126 +4267,126 @@ exports[`DateInput > renders correctly with a array of dates to exclude 1`] = `
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   15
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   16
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   17
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   18
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   19
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   20
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   21
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   22
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   23
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   24
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   25
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   26
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   27
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   28
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   29
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   30
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   31
                 </button>
                 <button
                   aria-label="not-current"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   data-testid="dayNextMonth"
                   type="button"
                 >
@@ -4403,7 +4394,7 @@ exports[`DateInput > renders correctly with a array of dates to exclude 1`] = `
                 </button>
                 <button
                   aria-label="not-current"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   data-testid="dayNextMonth"
                   type="button"
                 >
@@ -4411,7 +4402,7 @@ exports[`DateInput > renders correctly with a array of dates to exclude 1`] = `
                 </button>
                 <button
                   aria-label="not-current"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   data-testid="dayNextMonth"
                   type="button"
                 >
@@ -4419,7 +4410,7 @@ exports[`DateInput > renders correctly with a array of dates to exclude 1`] = `
                 </button>
                 <button
                   aria-label="not-current"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   data-testid="dayNextMonth"
                   type="button"
                 >
@@ -4427,7 +4418,7 @@ exports[`DateInput > renders correctly with a array of dates to exclude 1`] = `
                 </button>
                 <button
                   aria-label="not-current"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   data-testid="dayNextMonth"
                   type="button"
                 >
@@ -4435,7 +4426,7 @@ exports[`DateInput > renders correctly with a array of dates to exclude 1`] = `
                 </button>
                 <button
                   aria-label="not-current"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   data-testid="dayNextMonth"
                   type="button"
                 >
@@ -4443,7 +4434,7 @@ exports[`DateInput > renders correctly with a array of dates to exclude 1`] = `
                 </button>
                 <button
                   aria-label="not-current"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   data-testid="dayNextMonth"
                   type="button"
                 >
@@ -4712,15 +4703,15 @@ exports[`DateInput > renders correctly with date-fns locale es 1`] = `
   display: none;
 }
 
-.emotion-18>.emotion-21 {
+.emotion-17>.emotion-20 {
   max-height: 100%;
 }
 
-.emotion-20[data-max-height="true"] {
+.emotion-19[data-max-height="true"] {
   overflow: auto;
 }
 
-.emotion-22 {
+.emotion-21 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4743,7 +4734,7 @@ exports[`DateInput > renders correctly with date-fns locale es 1`] = `
   gap: 1rem;
 }
 
-.emotion-24 {
+.emotion-23 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4765,7 +4756,7 @@ exports[`DateInput > renders correctly with date-fns locale es 1`] = `
   flex-direction: row;
 }
 
-.emotion-26 {
+.emotion-25 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -4792,7 +4783,7 @@ exports[`DateInput > renders correctly with date-fns locale es 1`] = `
   text-transform: capitalize;
 }
 
-.emotion-33 {
+.emotion-31 {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   gap: 0.5rem;
@@ -4806,47 +4797,38 @@ exports[`DateInput > renders correctly with date-fns locale es 1`] = `
   justify-content: normal;
 }
 
-.emotion-36 {
-  color: #3f4250;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.emotion-33 {
   display: inline-block;
   text-transform: lowercase;
 }
 
-.emotion-36::first-letter {
+.emotion-33::first-letter {
   text-transform: uppercase;
 }
 
-.emotion-56 {
+.emotion-47 {
   height: 1.5625rem;
   width: 100%;
   padding: 0;
   color: #727683;
 }
 
-.emotion-56[aria-label="in-range"] {
+.emotion-47[aria-label="in-range"] {
   color: #521094;
   background-color: #f1eefc;
 }
 
-.emotion-56[aria-label="in-range"]:hover {
+.emotion-47[aria-label="in-range"]:hover {
   color: #ffffff;
   background-color: #792dd4;
 }
 
-.emotion-56[aria-label="not-current"],
-.emotion-56:disabled {
+.emotion-47[aria-label="not-current"],
+.emotion-47:disabled {
   color: #b5b7bd;
 }
 
-.emotion-56[aria-label="selected"] {
+.emotion-47[aria-label="selected"] {
   color: #ffffff;
 }
 
@@ -4915,14 +4897,14 @@ exports[`DateInput > renders correctly with date-fns locale es 1`] = `
           style="opacity: 1;"
         >
           <div
-            class="emotion-20 emotion-21"
+            class="emotion-19 emotion-20"
             data-max-height="false"
           >
             <div
-              class="emotion-22 emotion-5"
+              class="emotion-21 emotion-5"
             >
               <div
-                class="emotion-24 emotion-5"
+                class="emotion-23 emotion-5"
               >
                 <button
                   class="styles__e1wcoe0 styles_size_xsmall__e1wcoe4 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
@@ -4930,7 +4912,7 @@ exports[`DateInput > renders correctly with date-fns locale es 1`] = `
                   type="button"
                 >
                   <svg
-                    class="emotion-26 emotion-16"
+                    class="emotion-25 emotion-15"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -4941,7 +4923,7 @@ exports[`DateInput > renders correctly with date-fns locale es 1`] = `
                   </svg>
                 </button>
                 <span
-                  class="emotion-28 emotion-29 emotion-8"
+                  class="emotion-27 emotion-28 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
                 >
                   enero 2021
                 </span>
@@ -4951,7 +4933,7 @@ exports[`DateInput > renders correctly with date-fns locale es 1`] = `
                   type="button"
                 >
                   <svg
-                    class="emotion-26 emotion-16"
+                    class="emotion-25 emotion-15"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -4963,46 +4945,46 @@ exports[`DateInput > renders correctly with date-fns locale es 1`] = `
                 </button>
               </div>
               <div
-                class="emotion-33 emotion-34"
+                class="emotion-31 emotion-32"
               >
                 <p
-                  class="emotion-35 emotion-36 emotion-8"
+                  class="emotion-33 emotion-34 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
                 >
                   lu
                 </p>
                 <p
-                  class="emotion-35 emotion-36 emotion-8"
+                  class="emotion-33 emotion-34 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
                 >
                   ma
                 </p>
                 <p
-                  class="emotion-35 emotion-36 emotion-8"
+                  class="emotion-33 emotion-34 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
                 >
                   mi
                 </p>
                 <p
-                  class="emotion-35 emotion-36 emotion-8"
+                  class="emotion-33 emotion-34 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
                 >
                   ju
                 </p>
                 <p
-                  class="emotion-35 emotion-36 emotion-8"
+                  class="emotion-33 emotion-34 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
                 >
                   vi
                 </p>
                 <p
-                  class="emotion-35 emotion-36 emotion-8"
+                  class="emotion-33 emotion-34 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
                 >
                   sá
                 </p>
                 <p
-                  class="emotion-35 emotion-36 emotion-8"
+                  class="emotion-33 emotion-34 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
                 >
                   do
                 </p>
                 <button
                   aria-label="not-current"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   data-testid="dayLastMonth"
                   type="button"
                 >
@@ -5010,7 +4992,7 @@ exports[`DateInput > renders correctly with date-fns locale es 1`] = `
                 </button>
                 <button
                   aria-label="not-current"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   data-testid="dayLastMonth"
                   type="button"
                 >
@@ -5018,7 +5000,7 @@ exports[`DateInput > renders correctly with date-fns locale es 1`] = `
                 </button>
                 <button
                   aria-label="not-current"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   data-testid="dayLastMonth"
                   type="button"
                 >
@@ -5026,7 +5008,7 @@ exports[`DateInput > renders correctly with date-fns locale es 1`] = `
                 </button>
                 <button
                   aria-label="not-current"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   data-testid="dayLastMonth"
                   type="button"
                 >
@@ -5034,224 +5016,224 @@ exports[`DateInput > renders correctly with date-fns locale es 1`] = `
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   1
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   2
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   3
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   4
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   5
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   6
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   7
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   8
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   9
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   10
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   11
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   12
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   13
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   14
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   15
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   16
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   17
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   18
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   19
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   20
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   21
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   22
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   23
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   24
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   25
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   26
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   27
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   28
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   29
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   30
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   31
                 </button>
                 <button
                   aria-label="not-current"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   data-testid="dayNextMonth"
                   type="button"
                 >
@@ -5259,7 +5241,7 @@ exports[`DateInput > renders correctly with date-fns locale es 1`] = `
                 </button>
                 <button
                   aria-label="not-current"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   data-testid="dayNextMonth"
                   type="button"
                 >
@@ -5267,7 +5249,7 @@ exports[`DateInput > renders correctly with date-fns locale es 1`] = `
                 </button>
                 <button
                   aria-label="not-current"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   data-testid="dayNextMonth"
                   type="button"
                 >
@@ -5275,7 +5257,7 @@ exports[`DateInput > renders correctly with date-fns locale es 1`] = `
                 </button>
                 <button
                   aria-label="not-current"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   data-testid="dayNextMonth"
                   type="button"
                 >
@@ -5283,7 +5265,7 @@ exports[`DateInput > renders correctly with date-fns locale es 1`] = `
                 </button>
                 <button
                   aria-label="not-current"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   data-testid="dayNextMonth"
                   type="button"
                 >
@@ -5291,7 +5273,7 @@ exports[`DateInput > renders correctly with date-fns locale es 1`] = `
                 </button>
                 <button
                   aria-label="not-current"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   data-testid="dayNextMonth"
                   type="button"
                 >
@@ -5299,7 +5281,7 @@ exports[`DateInput > renders correctly with date-fns locale es 1`] = `
                 </button>
                 <button
                   aria-label="not-current"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   data-testid="dayNextMonth"
                   type="button"
                 >
@@ -5568,15 +5550,15 @@ exports[`DateInput > renders correctly with date-fns locale fr 1`] = `
   display: none;
 }
 
-.emotion-18>.emotion-21 {
+.emotion-17>.emotion-20 {
   max-height: 100%;
 }
 
-.emotion-20[data-max-height="true"] {
+.emotion-19[data-max-height="true"] {
   overflow: auto;
 }
 
-.emotion-22 {
+.emotion-21 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5599,7 +5581,7 @@ exports[`DateInput > renders correctly with date-fns locale fr 1`] = `
   gap: 1rem;
 }
 
-.emotion-24 {
+.emotion-23 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5621,7 +5603,7 @@ exports[`DateInput > renders correctly with date-fns locale fr 1`] = `
   flex-direction: row;
 }
 
-.emotion-26 {
+.emotion-25 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -5648,7 +5630,7 @@ exports[`DateInput > renders correctly with date-fns locale fr 1`] = `
   text-transform: capitalize;
 }
 
-.emotion-33 {
+.emotion-31 {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   gap: 0.5rem;
@@ -5662,47 +5644,38 @@ exports[`DateInput > renders correctly with date-fns locale fr 1`] = `
   justify-content: normal;
 }
 
-.emotion-36 {
-  color: #3f4250;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.emotion-33 {
   display: inline-block;
   text-transform: lowercase;
 }
 
-.emotion-36::first-letter {
+.emotion-33::first-letter {
   text-transform: uppercase;
 }
 
-.emotion-56 {
+.emotion-47 {
   height: 1.5625rem;
   width: 100%;
   padding: 0;
   color: #727683;
 }
 
-.emotion-56[aria-label="in-range"] {
+.emotion-47[aria-label="in-range"] {
   color: #521094;
   background-color: #f1eefc;
 }
 
-.emotion-56[aria-label="in-range"]:hover {
+.emotion-47[aria-label="in-range"]:hover {
   color: #ffffff;
   background-color: #792dd4;
 }
 
-.emotion-56[aria-label="not-current"],
-.emotion-56:disabled {
+.emotion-47[aria-label="not-current"],
+.emotion-47:disabled {
   color: #b5b7bd;
 }
 
-.emotion-56[aria-label="selected"] {
+.emotion-47[aria-label="selected"] {
   color: #ffffff;
 }
 
@@ -5771,14 +5744,14 @@ exports[`DateInput > renders correctly with date-fns locale fr 1`] = `
           style="opacity: 1;"
         >
           <div
-            class="emotion-20 emotion-21"
+            class="emotion-19 emotion-20"
             data-max-height="false"
           >
             <div
-              class="emotion-22 emotion-5"
+              class="emotion-21 emotion-5"
             >
               <div
-                class="emotion-24 emotion-5"
+                class="emotion-23 emotion-5"
               >
                 <button
                   class="styles__e1wcoe0 styles_size_xsmall__e1wcoe4 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
@@ -5786,7 +5759,7 @@ exports[`DateInput > renders correctly with date-fns locale fr 1`] = `
                   type="button"
                 >
                   <svg
-                    class="emotion-26 emotion-16"
+                    class="emotion-25 emotion-15"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -5797,7 +5770,7 @@ exports[`DateInput > renders correctly with date-fns locale fr 1`] = `
                   </svg>
                 </button>
                 <span
-                  class="emotion-28 emotion-29 emotion-8"
+                  class="emotion-27 emotion-28 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
                 >
                   janvier 2021
                 </span>
@@ -5807,7 +5780,7 @@ exports[`DateInput > renders correctly with date-fns locale fr 1`] = `
                   type="button"
                 >
                   <svg
-                    class="emotion-26 emotion-16"
+                    class="emotion-25 emotion-15"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -5819,46 +5792,46 @@ exports[`DateInput > renders correctly with date-fns locale fr 1`] = `
                 </button>
               </div>
               <div
-                class="emotion-33 emotion-34"
+                class="emotion-31 emotion-32"
               >
                 <p
-                  class="emotion-35 emotion-36 emotion-8"
+                  class="emotion-33 emotion-34 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
                 >
                   lu
                 </p>
                 <p
-                  class="emotion-35 emotion-36 emotion-8"
+                  class="emotion-33 emotion-34 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
                 >
                   ma
                 </p>
                 <p
-                  class="emotion-35 emotion-36 emotion-8"
+                  class="emotion-33 emotion-34 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
                 >
                   me
                 </p>
                 <p
-                  class="emotion-35 emotion-36 emotion-8"
+                  class="emotion-33 emotion-34 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
                 >
                   je
                 </p>
                 <p
-                  class="emotion-35 emotion-36 emotion-8"
+                  class="emotion-33 emotion-34 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
                 >
                   ve
                 </p>
                 <p
-                  class="emotion-35 emotion-36 emotion-8"
+                  class="emotion-33 emotion-34 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
                 >
                   sa
                 </p>
                 <p
-                  class="emotion-35 emotion-36 emotion-8"
+                  class="emotion-33 emotion-34 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
                 >
                   di
                 </p>
                 <button
                   aria-label="not-current"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   data-testid="dayLastMonth"
                   type="button"
                 >
@@ -5866,7 +5839,7 @@ exports[`DateInput > renders correctly with date-fns locale fr 1`] = `
                 </button>
                 <button
                   aria-label="not-current"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   data-testid="dayLastMonth"
                   type="button"
                 >
@@ -5874,7 +5847,7 @@ exports[`DateInput > renders correctly with date-fns locale fr 1`] = `
                 </button>
                 <button
                   aria-label="not-current"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   data-testid="dayLastMonth"
                   type="button"
                 >
@@ -5882,7 +5855,7 @@ exports[`DateInput > renders correctly with date-fns locale fr 1`] = `
                 </button>
                 <button
                   aria-label="not-current"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   data-testid="dayLastMonth"
                   type="button"
                 >
@@ -5890,224 +5863,224 @@ exports[`DateInput > renders correctly with date-fns locale fr 1`] = `
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   1
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   2
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   3
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   4
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   5
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   6
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   7
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   8
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   9
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   10
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   11
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   12
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   13
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   14
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   15
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   16
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   17
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   18
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   19
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   20
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   21
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   22
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   23
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   24
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   25
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   26
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   27
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   28
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   29
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   30
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   31
                 </button>
                 <button
                   aria-label="not-current"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   data-testid="dayNextMonth"
                   type="button"
                 >
@@ -6115,7 +6088,7 @@ exports[`DateInput > renders correctly with date-fns locale fr 1`] = `
                 </button>
                 <button
                   aria-label="not-current"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   data-testid="dayNextMonth"
                   type="button"
                 >
@@ -6123,7 +6096,7 @@ exports[`DateInput > renders correctly with date-fns locale fr 1`] = `
                 </button>
                 <button
                   aria-label="not-current"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   data-testid="dayNextMonth"
                   type="button"
                 >
@@ -6131,7 +6104,7 @@ exports[`DateInput > renders correctly with date-fns locale fr 1`] = `
                 </button>
                 <button
                   aria-label="not-current"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   data-testid="dayNextMonth"
                   type="button"
                 >
@@ -6139,7 +6112,7 @@ exports[`DateInput > renders correctly with date-fns locale fr 1`] = `
                 </button>
                 <button
                   aria-label="not-current"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   data-testid="dayNextMonth"
                   type="button"
                 >
@@ -6147,7 +6120,7 @@ exports[`DateInput > renders correctly with date-fns locale fr 1`] = `
                 </button>
                 <button
                   aria-label="not-current"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   data-testid="dayNextMonth"
                   type="button"
                 >
@@ -6155,7 +6128,7 @@ exports[`DateInput > renders correctly with date-fns locale fr 1`] = `
                 </button>
                 <button
                   aria-label="not-current"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   data-testid="dayNextMonth"
                   type="button"
                 >
@@ -6424,15 +6397,15 @@ exports[`DateInput > renders correctly with date-fns locale ru 1`] = `
   display: none;
 }
 
-.emotion-18>.emotion-21 {
+.emotion-17>.emotion-20 {
   max-height: 100%;
 }
 
-.emotion-20[data-max-height="true"] {
+.emotion-19[data-max-height="true"] {
   overflow: auto;
 }
 
-.emotion-22 {
+.emotion-21 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6455,7 +6428,7 @@ exports[`DateInput > renders correctly with date-fns locale ru 1`] = `
   gap: 1rem;
 }
 
-.emotion-24 {
+.emotion-23 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6477,7 +6450,7 @@ exports[`DateInput > renders correctly with date-fns locale ru 1`] = `
   flex-direction: row;
 }
 
-.emotion-26 {
+.emotion-25 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -6504,7 +6477,7 @@ exports[`DateInput > renders correctly with date-fns locale ru 1`] = `
   text-transform: capitalize;
 }
 
-.emotion-33 {
+.emotion-31 {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   gap: 0.5rem;
@@ -6518,47 +6491,38 @@ exports[`DateInput > renders correctly with date-fns locale ru 1`] = `
   justify-content: normal;
 }
 
-.emotion-36 {
-  color: #3f4250;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.emotion-33 {
   display: inline-block;
   text-transform: lowercase;
 }
 
-.emotion-36::first-letter {
+.emotion-33::first-letter {
   text-transform: uppercase;
 }
 
-.emotion-56 {
+.emotion-47 {
   height: 1.5625rem;
   width: 100%;
   padding: 0;
   color: #727683;
 }
 
-.emotion-56[aria-label="in-range"] {
+.emotion-47[aria-label="in-range"] {
   color: #521094;
   background-color: #f1eefc;
 }
 
-.emotion-56[aria-label="in-range"]:hover {
+.emotion-47[aria-label="in-range"]:hover {
   color: #ffffff;
   background-color: #792dd4;
 }
 
-.emotion-56[aria-label="not-current"],
-.emotion-56:disabled {
+.emotion-47[aria-label="not-current"],
+.emotion-47:disabled {
   color: #b5b7bd;
 }
 
-.emotion-56[aria-label="selected"] {
+.emotion-47[aria-label="selected"] {
   color: #ffffff;
 }
 
@@ -6627,14 +6591,14 @@ exports[`DateInput > renders correctly with date-fns locale ru 1`] = `
           style="opacity: 1;"
         >
           <div
-            class="emotion-20 emotion-21"
+            class="emotion-19 emotion-20"
             data-max-height="false"
           >
             <div
-              class="emotion-22 emotion-5"
+              class="emotion-21 emotion-5"
             >
               <div
-                class="emotion-24 emotion-5"
+                class="emotion-23 emotion-5"
               >
                 <button
                   class="styles__e1wcoe0 styles_size_xsmall__e1wcoe4 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
@@ -6642,7 +6606,7 @@ exports[`DateInput > renders correctly with date-fns locale ru 1`] = `
                   type="button"
                 >
                   <svg
-                    class="emotion-26 emotion-16"
+                    class="emotion-25 emotion-15"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -6653,7 +6617,7 @@ exports[`DateInput > renders correctly with date-fns locale ru 1`] = `
                   </svg>
                 </button>
                 <span
-                  class="emotion-28 emotion-29 emotion-8"
+                  class="emotion-27 emotion-28 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
                 >
                   январь 2021
                 </span>
@@ -6663,7 +6627,7 @@ exports[`DateInput > renders correctly with date-fns locale ru 1`] = `
                   type="button"
                 >
                   <svg
-                    class="emotion-26 emotion-16"
+                    class="emotion-25 emotion-15"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -6675,46 +6639,46 @@ exports[`DateInput > renders correctly with date-fns locale ru 1`] = `
                 </button>
               </div>
               <div
-                class="emotion-33 emotion-34"
+                class="emotion-31 emotion-32"
               >
                 <p
-                  class="emotion-35 emotion-36 emotion-8"
+                  class="emotion-33 emotion-34 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
                 >
                   по
                 </p>
                 <p
-                  class="emotion-35 emotion-36 emotion-8"
+                  class="emotion-33 emotion-34 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
                 >
                   вт
                 </p>
                 <p
-                  class="emotion-35 emotion-36 emotion-8"
+                  class="emotion-33 emotion-34 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
                 >
                   ср
                 </p>
                 <p
-                  class="emotion-35 emotion-36 emotion-8"
+                  class="emotion-33 emotion-34 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
                 >
                   че
                 </p>
                 <p
-                  class="emotion-35 emotion-36 emotion-8"
+                  class="emotion-33 emotion-34 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
                 >
                   пя
                 </p>
                 <p
-                  class="emotion-35 emotion-36 emotion-8"
+                  class="emotion-33 emotion-34 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
                 >
                   су
                 </p>
                 <p
-                  class="emotion-35 emotion-36 emotion-8"
+                  class="emotion-33 emotion-34 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
                 >
                   во
                 </p>
                 <button
                   aria-label="not-current"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   data-testid="dayLastMonth"
                   type="button"
                 >
@@ -6722,7 +6686,7 @@ exports[`DateInput > renders correctly with date-fns locale ru 1`] = `
                 </button>
                 <button
                   aria-label="not-current"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   data-testid="dayLastMonth"
                   type="button"
                 >
@@ -6730,7 +6694,7 @@ exports[`DateInput > renders correctly with date-fns locale ru 1`] = `
                 </button>
                 <button
                   aria-label="not-current"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   data-testid="dayLastMonth"
                   type="button"
                 >
@@ -6738,7 +6702,7 @@ exports[`DateInput > renders correctly with date-fns locale ru 1`] = `
                 </button>
                 <button
                   aria-label="not-current"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   data-testid="dayLastMonth"
                   type="button"
                 >
@@ -6746,224 +6710,224 @@ exports[`DateInput > renders correctly with date-fns locale ru 1`] = `
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   1
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   2
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   3
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   4
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   5
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   6
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   7
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   8
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   9
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   10
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   11
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   12
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   13
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   14
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   15
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   16
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   17
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   18
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   19
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   20
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   21
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   22
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   23
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   24
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   25
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   26
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   27
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   28
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   29
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   30
                 </button>
                 <button
                   aria-label="neutral"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   type="button"
                 >
                   31
                 </button>
                 <button
                   aria-label="not-current"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   data-testid="dayNextMonth"
                   type="button"
                 >
@@ -6971,7 +6935,7 @@ exports[`DateInput > renders correctly with date-fns locale ru 1`] = `
                 </button>
                 <button
                   aria-label="not-current"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   data-testid="dayNextMonth"
                   type="button"
                 >
@@ -6979,7 +6943,7 @@ exports[`DateInput > renders correctly with date-fns locale ru 1`] = `
                 </button>
                 <button
                   aria-label="not-current"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   data-testid="dayNextMonth"
                   type="button"
                 >
@@ -6987,7 +6951,7 @@ exports[`DateInput > renders correctly with date-fns locale ru 1`] = `
                 </button>
                 <button
                   aria-label="not-current"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   data-testid="dayNextMonth"
                   type="button"
                 >
@@ -6995,7 +6959,7 @@ exports[`DateInput > renders correctly with date-fns locale ru 1`] = `
                 </button>
                 <button
                   aria-label="not-current"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   data-testid="dayNextMonth"
                   type="button"
                 >
@@ -7003,7 +6967,7 @@ exports[`DateInput > renders correctly with date-fns locale ru 1`] = `
                 </button>
                 <button
                   aria-label="not-current"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   data-testid="dayNextMonth"
                   type="button"
                 >
@@ -7011,7 +6975,7 @@ exports[`DateInput > renders correctly with date-fns locale ru 1`] = `
                 </button>
                 <button
                   aria-label="not-current"
-                  class="emotion-56 emotion-57 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                  class="emotion-47 emotion-48 styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                   data-testid="dayNextMonth"
                   type="button"
                 >
