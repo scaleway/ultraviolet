@@ -1,24 +1,27 @@
 # Change Log
 
-## 2.1.6
+## 3.0.0-beta.4
+
+### Major Changes
+
+- [`0ce72ef`](https://github.com/scaleway/ultraviolet/commit/0ce72ef33b9b21dfa4404f54d1b0aaa1f156e41c) Thanks [@lisalupi](https://github.com/lisalupi)! - Refactor components `ActionBar` and `Badge` to use vanilla-extract instead of Emotion
 
 ### Patch Changes
 
-- [#5606](https://github.com/scaleway/ultraviolet/pull/5606) [`e56c72e`](https://github.com/scaleway/ultraviolet/commit/e56c72e588b654b117144df28f74206df4633918) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `19.2.2`.
-  Updated dependency `@types/react-dom` to `19.2.1`.
-  Updated dependency `react` to `19.2.0`.
-  Updated dependency `react-dom` to `19.2.0`.
+- [`963df3d`](https://github.com/scaleway/ultraviolet/commit/963df3db19a71edf8118d8ddfc87dbd9d3270ccd) Thanks [@lisalupi](https://github.com/lisalupi)! - `ExpandableCard`: new prop "open" (uncontrolled version of prop "expanded)
 
-- [#5691](https://github.com/scaleway/ultraviolet/pull/5691) [`feda068`](https://github.com/scaleway/ultraviolet/commit/feda06818b5c7fb1d2943af67bf9797547c95edb) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react-dom` to `19.2.2`.
+- Updated dependencies [[`15512aa`](https://github.com/scaleway/ultraviolet/commit/15512aaad1da3218ea3765261451d15fb05d6660)]:
+  - @ultraviolet/icons@4.0.4-beta.1
 
-- Updated dependencies [[`e56c72e`](https://github.com/scaleway/ultraviolet/commit/e56c72e588b654b117144df28f74206df4633918), [`feda068`](https://github.com/scaleway/ultraviolet/commit/feda06818b5c7fb1d2943af67bf9797547c95edb)]:
-  - @ultraviolet/icons@4.1.2
-
-## 2.1.5
+## 3.0.0-beta.3
 
 ### Patch Changes
 
-- [#5657](https://github.com/scaleway/ultraviolet/pull/5657) [`e20eeab`](https://github.com/scaleway/ultraviolet/commit/e20eeab50d142fee1ef05260b01eb7eb75bd9976) Thanks [@iManu](https://github.com/iManu)! - Add `aria-keyshortcuts` attribute to Link & Button
+- [#5437](https://github.com/scaleway/ultraviolet/pull/5437) [`9187560`](https://github.com/scaleway/ultraviolet/commit/9187560d39c6f7b1145bbc2df76898d7a797b78a) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<Snippet />` improve selection by removing after element on most of the lines
+
+- [#5445](https://github.com/scaleway/ultraviolet/pull/5445) [`db1aedc`](https://github.com/scaleway/ultraviolet/commit/db1aedce578a5d1caedc299d666d8584250421b1) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<TextArea />` when tooltip is set
+
+- [#5438](https://github.com/scaleway/ultraviolet/pull/5438) [`cd7bed7`](https://github.com/scaleway/ultraviolet/commit/cd7bed7983dcae8c072b1140d1cbd92d8d026624) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<Button />` class having a space in the beggining
 
 ## 2.1.4
 
@@ -59,17 +62,7 @@
   Updated dependency `@babel/plugin-transform-runtime` to `7.28.3`.
   Updated dependency `@babel/preset-env` to `7.28.3`.
 - Updated dependencies [[`2779f6d`](https://github.com/scaleway/ultraviolet/commit/2779f6de81b6e4522cf304d94d09dcd4f2bcc6f7), [`0f049c0`](https://github.com/scaleway/ultraviolet/commit/0f049c044ba9208abf7a1a6a6ea0d911803ea542)]:
-  - @ultraviolet/icons@4.0.4
-
-## 3.0.0-beta.3
-
-### Patch Changes
-
-- [#5437](https://github.com/scaleway/ultraviolet/pull/5437) [`9187560`](https://github.com/scaleway/ultraviolet/commit/9187560d39c6f7b1145bbc2df76898d7a797b78a) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<Snippet />` improve selection by removing after element on most of the lines
-
-- [#5445](https://github.com/scaleway/ultraviolet/pull/5445) [`db1aedc`](https://github.com/scaleway/ultraviolet/commit/db1aedce578a5d1caedc299d666d8584250421b1) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<TextArea />` when tooltip is set
-
-- [#5438](https://github.com/scaleway/ultraviolet/pull/5438) [`cd7bed7`](https://github.com/scaleway/ultraviolet/commit/cd7bed7983dcae8c072b1140d1cbd92d8d026624) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<Button />` class having a space in the beggining
+    - @ultraviolet/icons@4.0.4
 
 ## 2.1.0
 
