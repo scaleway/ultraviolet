@@ -48,6 +48,12 @@
   Updated dependency `@babel/plugin-transform-runtime` to `7.28.3`.
   Updated dependency `@babel/preset-env` to `7.28.3`.
 
+## 4.0.4-beta.1
+
+### Patch Changes
+
+- [`15512aa`](https://github.com/scaleway/ultraviolet/commit/15512aaad1da3218ea3765261451d15fb05d6660) Thanks [@lisalupi](https://github.com/lisalupi)! - New category icon: `UseCasesCategoryIcon`
+
 ## 4.0.4-beta.0
 
 ### Patch Changes
