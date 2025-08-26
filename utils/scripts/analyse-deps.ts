@@ -114,3 +114,21 @@ const sortedComponent = sortGraphByDependencySize({
 const { info } = console
 info('sortedComponent', JSON.stringify(graph, null, 2))
 fs.writeFileSync('deps.json', JSON.stringify(sortedComponent, null, 2))
+
+const componentNames = new Set(
+  sortedComponent.sortedComponent.map(([name]) => name),
+)
+const asRecord = Object.fromEntries(
+  sortedComponent.sortedComponent
+    .map(([name, count]) => {
+      const { dependsOn } = count as { dependsOn: string[] }
+      const filteredDeps = dependsOn.filter(dependency =>
+        componentNames.has(dependency),
+      )
+
+      return [name, filteredDeps.length] as const
+    })
+    .sort(([, aCount], [, bCount]) => aCount - bCount),
+)
+
+fs.writeFileSync('depsFiltered.json', JSON.stringify(asRecord, null, 2))
