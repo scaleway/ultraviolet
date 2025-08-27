@@ -25,7 +25,7 @@ const StyledTextTitle = styled(Text)`
 
 const StyledModal = styled(Modal)`
     &[data-size="${DIALOG_SIZE}"] {
-      width: 27.5rem; // size is on purpose different than a modal
+      width: 32.5rem; // size is on purpose different than a modal
     }
 `
 
