@@ -3,41 +3,25 @@
 exports[`banner > renders correctly with a button 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  padding: 1.5rem;
-  border-radius: 0.5rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   gap: 1rem;
-  background: #f1eefc;
-  -webkit-background-position: right;
-  background-position: right;
-  background-repeat: no-repeat;
-  -webkit-background-size: contain;
-  background-size: contain;
-}
-
-.emotion-0>svg:first-child,
-.emotion-0>img {
-  height: 140px;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-0 button[name="close"] {
-  background: none;
-}
-
-.emotion-0 button[name="close"]:hover {
-  background: none;
 }
 
 .emotion-2 {
@@ -60,7 +44,6 @@ exports[`banner > renders correctly with a button 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  width: 140px;
 }
 
 .emotion-4 {
@@ -173,10 +156,10 @@ exports[`banner > renders correctly with a button 1`] = `
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__17sbfy0 styles_variant_intro__17sbfy3 styles_size_medium__17sbfy2 styles_undefined_compound_1__17sbfy6 emotion-0 emotion-1"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="styles_medium__17sbfya emotion-2 emotion-1"
       >
         <img
           alt=""
@@ -184,11 +167,11 @@ exports[`banner > renders correctly with a button 1`] = `
         />
       </div>
       <div
-        class="emotion-4 emotion-5"
+        class="emotion-4 emotion-1"
         style="flex: 1;"
       >
         <div
-          class="emotion-6 emotion-5"
+          class="emotion-6 emotion-1"
           style="flex: 1;"
         >
           <p
@@ -203,7 +186,7 @@ exports[`banner > renders correctly with a button 1`] = `
           </p>
         </div>
         <div
-          class="emotion-12 emotion-5"
+          class="emotion-12 emotion-1"
         >
           <button
             class="styles__e1wcoe0 styles_size_medium__e1wcoe2 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_filled__e1wcoeg styles_sentiment_primary__e1wcoe7 styles_undefined_compound_0__e1wcoel"
@@ -214,7 +197,7 @@ exports[`banner > renders correctly with a button 1`] = `
         </div>
       </div>
       <button
-        class="styles__e1wcoe0 styles_size_small__e1wcoe3 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+        class="styles__17sbfyb styles__e1wcoe0 styles_size_small__e1wcoe3 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
         name="close"
         type="button"
       >
@@ -235,41 +218,25 @@ exports[`banner > renders correctly with a button 1`] = `
 exports[`banner > renders correctly with a link 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  padding: 1.5rem;
-  border-radius: 0.5rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   gap: 1rem;
-  background: #f1eefc;
-  -webkit-background-position: right;
-  background-position: right;
-  background-repeat: no-repeat;
-  -webkit-background-size: contain;
-  background-size: contain;
-}
-
-.emotion-0>svg:first-child,
-.emotion-0>img {
-  height: 140px;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-0 button[name="close"] {
-  background: none;
-}
-
-.emotion-0 button[name="close"]:hover {
-  background: none;
 }
 
 .emotion-2 {
@@ -292,7 +259,6 @@ exports[`banner > renders correctly with a link 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  width: 140px;
 }
 
 .emotion-4 {
@@ -514,10 +480,10 @@ exports[`banner > renders correctly with a link 1`] = `
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__17sbfy0 styles_variant_intro__17sbfy3 styles_size_medium__17sbfy2 styles_undefined_compound_1__17sbfy6 emotion-0 emotion-1"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="styles_medium__17sbfya emotion-2 emotion-1"
       >
         <img
           alt=""
@@ -525,11 +491,11 @@ exports[`banner > renders correctly with a link 1`] = `
         />
       </div>
       <div
-        class="emotion-4 emotion-5"
+        class="emotion-4 emotion-1"
         style="flex: 1;"
       >
         <div
-          class="emotion-6 emotion-5"
+          class="emotion-6 emotion-1"
           style="flex: 1;"
         >
           <p
@@ -544,7 +510,7 @@ exports[`banner > renders correctly with a link 1`] = `
           </p>
         </div>
         <div
-          class="emotion-12 emotion-5"
+          class="emotion-12 emotion-1"
         >
           <a
             class="emotion-14 emotion-15"
@@ -575,7 +541,7 @@ exports[`banner > renders correctly with a link 1`] = `
         </div>
       </div>
       <button
-        class="styles__e1wcoe0 styles_size_small__e1wcoe3 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+        class="styles__17sbfyb styles__e1wcoe0 styles_size_small__e1wcoe3 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
         name="close"
         type="button"
       >
@@ -596,41 +562,25 @@ exports[`banner > renders correctly with a link 1`] = `
 exports[`banner > renders correctly with closable to false 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  padding: 1.5rem;
-  border-radius: 0.5rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   gap: 1rem;
-  background: #f1eefc;
-  -webkit-background-position: right;
-  background-position: right;
-  background-repeat: no-repeat;
-  -webkit-background-size: contain;
-  background-size: contain;
-}
-
-.emotion-0>svg:first-child,
-.emotion-0>img {
-  height: 140px;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-0 button[name="close"] {
-  background: none;
-}
-
-.emotion-0 button[name="close"]:hover {
-  background: none;
 }
 
 .emotion-2 {
@@ -653,7 +603,6 @@ exports[`banner > renders correctly with closable to false 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  width: 140px;
 }
 
 .emotion-4 {
@@ -729,10 +678,10 @@ exports[`banner > renders correctly with closable to false 1`] = `
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__17sbfy0 styles_variant_intro__17sbfy3 styles_size_medium__17sbfy2 styles_undefined_compound_1__17sbfy6 emotion-0 emotion-1"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="styles_medium__17sbfya emotion-2 emotion-1"
       >
         <img
           alt=""
@@ -740,11 +689,11 @@ exports[`banner > renders correctly with closable to false 1`] = `
         />
       </div>
       <div
-        class="emotion-4 emotion-5"
+        class="emotion-4 emotion-1"
         style="flex: 1;"
       >
         <div
-          class="emotion-6 emotion-5"
+          class="emotion-6 emotion-1"
           style="flex: 1;"
         >
           <p
@@ -767,41 +716,25 @@ exports[`banner > renders correctly with closable to false 1`] = `
 exports[`banner > renders correctly with default values 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  padding: 1.5rem;
-  border-radius: 0.5rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   gap: 1rem;
-  background: #f1eefc;
-  -webkit-background-position: right;
-  background-position: right;
-  background-repeat: no-repeat;
-  -webkit-background-size: contain;
-  background-size: contain;
-}
-
-.emotion-0>svg:first-child,
-.emotion-0>img {
-  height: 140px;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-0 button[name="close"] {
-  background: none;
-}
-
-.emotion-0 button[name="close"]:hover {
-  background: none;
 }
 
 .emotion-2 {
@@ -824,7 +757,6 @@ exports[`banner > renders correctly with default values 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  width: 140px;
 }
 
 .emotion-4 {
@@ -914,10 +846,10 @@ exports[`banner > renders correctly with default values 1`] = `
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__17sbfy0 styles_variant_intro__17sbfy3 styles_size_medium__17sbfy2 styles_undefined_compound_1__17sbfy6 emotion-0 emotion-1"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="styles_medium__17sbfya emotion-2 emotion-1"
       >
         <img
           alt=""
@@ -925,11 +857,11 @@ exports[`banner > renders correctly with default values 1`] = `
         />
       </div>
       <div
-        class="emotion-4 emotion-5"
+        class="emotion-4 emotion-1"
         style="flex: 1;"
       >
         <div
-          class="emotion-6 emotion-5"
+          class="emotion-6 emotion-1"
           style="flex: 1;"
         >
           <p
@@ -945,7 +877,7 @@ exports[`banner > renders correctly with default values 1`] = `
         </div>
       </div>
       <button
-        class="styles__e1wcoe0 styles_size_small__e1wcoe3 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+        class="styles__17sbfyb styles__e1wcoe0 styles_size_small__e1wcoe3 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
         name="close"
         type="button"
       >
@@ -966,41 +898,25 @@ exports[`banner > renders correctly with default values 1`] = `
 exports[`banner > renders correctly with direction row 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  padding: 1.5rem;
-  border-radius: 0.5rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   gap: 1rem;
-  background: #f1eefc;
-  -webkit-background-position: right;
-  background-position: right;
-  background-repeat: no-repeat;
-  -webkit-background-size: contain;
-  background-size: contain;
-}
-
-.emotion-0>svg:first-child,
-.emotion-0>img {
-  height: 140px;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-0 button[name="close"] {
-  background: none;
-}
-
-.emotion-0 button[name="close"]:hover {
-  background: none;
 }
 
 .emotion-2 {
@@ -1023,7 +939,6 @@ exports[`banner > renders correctly with direction row 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  width: 140px;
 }
 
 .emotion-4 {
@@ -1113,10 +1028,10 @@ exports[`banner > renders correctly with direction row 1`] = `
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__17sbfy0 styles_variant_intro__17sbfy3 styles_size_medium__17sbfy2 styles_undefined_compound_1__17sbfy6 emotion-0 emotion-1"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="styles_medium__17sbfya emotion-2 emotion-1"
       >
         <img
           alt=""
@@ -1124,11 +1039,11 @@ exports[`banner > renders correctly with direction row 1`] = `
         />
       </div>
       <div
-        class="emotion-4 emotion-5"
+        class="emotion-4 emotion-1"
         style="flex: 1;"
       >
         <div
-          class="emotion-6 emotion-5"
+          class="emotion-6 emotion-1"
           style="flex: 1;"
         >
           <p
@@ -1144,7 +1059,7 @@ exports[`banner > renders correctly with direction row 1`] = `
         </div>
       </div>
       <button
-        class="styles__e1wcoe0 styles_size_small__e1wcoe3 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+        class="styles__17sbfyb styles__e1wcoe0 styles_size_small__e1wcoe3 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
         name="close"
         type="button"
       >
@@ -1165,41 +1080,47 @@ exports[`banner > renders correctly with direction row 1`] = `
 exports[`banner > should render correctly with dark theme 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  padding: 1.5rem;
-  border-radius: 0.5rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   gap: 1rem;
-  background: #2d1c51;
-  -webkit-background-position: right;
-  background-position: right;
-  background-repeat: no-repeat;
-  -webkit-background-size: contain;
-  background-size: contain;
 }
 
-.emotion-0>svg:first-child,
-.emotion-0>img {
-  height: 140px;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-0 button[name="close"] {
-  background: none;
-}
-
-.emotion-0 button[name="close"]:hover {
-  background: none;
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 1rem;
 }
 
 .emotion-2 {
@@ -1222,7 +1143,6 @@ exports[`banner > should render correctly with dark theme 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  width: 140px;
 }
 
 .emotion-2 {
@@ -1245,7 +1165,6 @@ exports[`banner > should render correctly with dark theme 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  width: 140px;
 }
 
 .emotion-4 {
@@ -1329,7 +1248,7 @@ exports[`banner > should render correctly with dark theme 1`] = `
 }
 
 .emotion-10 {
-  color: #ffffff;
+  color: #b8bac0;
   font-size: 1rem;
   font-family: Inter,sans-serif;
   font-weight: 400;
@@ -1367,7 +1286,7 @@ exports[`banner > should render correctly with dark theme 1`] = `
   background-color: transparent;
   border: none;
   padding: 0;
-  color: #b8bac0;
+  color: #bf96f8;
   -webkit-text-decoration: underline;
   text-decoration: underline;
   text-decoration-thickness: 1px;
@@ -1412,8 +1331,8 @@ exports[`banner > should render correctly with dark theme 1`] = `
   -webkit-text-decoration: underline;
   text-decoration: underline;
   text-decoration-thickness: 1px;
-  color: #e9e9ec;
-  text-decoration-color: #e9e9ec;
+  color: #ccaefc;
+  text-decoration-color: #ccaefc;
 }
 
 .emotion-14:hover .e1afnb7a3,
@@ -1504,10 +1423,10 @@ exports[`banner > should render correctly with dark theme 1`] = `
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__17sbfy0 styles_variant_intro__17sbfy3 styles_size_medium__17sbfy2 styles_undefined_compound_1__17sbfy6 emotion-0 emotion-1"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="styles_medium__17sbfya emotion-2 emotion-1"
       >
         <img
           alt=""
@@ -1515,11 +1434,11 @@ exports[`banner > should render correctly with dark theme 1`] = `
         />
       </div>
       <div
-        class="emotion-4 emotion-5"
+        class="emotion-4 emotion-1"
         style="flex: 1;"
       >
         <div
-          class="emotion-6 emotion-5"
+          class="emotion-6 emotion-1"
           style="flex: 1;"
         >
           <p
@@ -1534,13 +1453,13 @@ exports[`banner > should render correctly with dark theme 1`] = `
           </p>
         </div>
         <div
-          class="emotion-12 emotion-5"
+          class="emotion-12 emotion-1"
         >
           <a
             class="emotion-14 emotion-15"
             data-variant="standalone"
             href=""
-            prominence="stronger"
+            prominence="default"
             rel="noopener noreferrer"
             target="_blank"
             variant="bodySmallStrong"
@@ -1565,7 +1484,7 @@ exports[`banner > should render correctly with dark theme 1`] = `
         </div>
       </div>
       <button
-        class="styles__e1wcoe0 styles_size_small__e1wcoe3 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+        class="styles__17sbfyb styles__e1wcoe0 styles_size_small__e1wcoe3 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
         name="close"
         type="button"
       >
@@ -1586,41 +1505,25 @@ exports[`banner > should render correctly with dark theme 1`] = `
 exports[`banner > sizes and variants > renders correctly with size medium and variant intro 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  padding: 1.5rem;
-  border-radius: 0.5rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   gap: 1rem;
-  background: #f1eefc;
-  -webkit-background-position: right;
-  background-position: right;
-  background-repeat: no-repeat;
-  -webkit-background-size: contain;
-  background-size: contain;
-}
-
-.emotion-0>svg:first-child,
-.emotion-0>img {
-  height: 140px;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-0 button[name="close"] {
-  background: none;
-}
-
-.emotion-0 button[name="close"]:hover {
-  background: none;
 }
 
 .emotion-2 {
@@ -1643,7 +1546,6 @@ exports[`banner > sizes and variants > renders correctly with size medium and va
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  width: 140px;
 }
 
 .emotion-4 {
@@ -1733,10 +1635,10 @@ exports[`banner > sizes and variants > renders correctly with size medium and va
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__17sbfy0 styles_variant_intro__17sbfy3 styles_size_medium__17sbfy2 styles_undefined_compound_1__17sbfy6 emotion-0 emotion-1"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="styles_medium__17sbfya emotion-2 emotion-1"
       >
         <img
           alt=""
@@ -1744,11 +1646,11 @@ exports[`banner > sizes and variants > renders correctly with size medium and va
         />
       </div>
       <div
-        class="emotion-4 emotion-5"
+        class="emotion-4 emotion-1"
         style="flex: 1;"
       >
         <div
-          class="emotion-6 emotion-5"
+          class="emotion-6 emotion-1"
           style="flex: 1;"
         >
           <p
@@ -1764,7 +1666,7 @@ exports[`banner > sizes and variants > renders correctly with size medium and va
         </div>
       </div>
       <button
-        class="styles__e1wcoe0 styles_size_small__e1wcoe3 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+        class="styles__17sbfyb styles__e1wcoe0 styles_size_small__e1wcoe3 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
         name="close"
         type="button"
       >
@@ -1785,41 +1687,25 @@ exports[`banner > sizes and variants > renders correctly with size medium and va
 exports[`banner > sizes and variants > renders correctly with size medium and variant promotional 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  padding: 1.5rem;
-  border-radius: 0.5rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   gap: 1rem;
-  background-image: linear-gradient(151deg, #03cfda 0%, #3d1862 28.91%, #151a2d 75.01%);
-  -webkit-background-position: right;
-  background-position: right;
-  background-repeat: no-repeat;
-  -webkit-background-size: contain;
-  background-size: contain;
-}
-
-.emotion-0>svg:first-child,
-.emotion-0>img {
-  height: 140px;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-0 button[name="close"] {
-  background: none;
-}
-
-.emotion-0 button[name="close"]:hover {
-  background: none;
 }
 
 .emotion-2 {
@@ -1842,7 +1728,6 @@ exports[`banner > sizes and variants > renders correctly with size medium and va
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  width: 140px;
 }
 
 .emotion-4 {
@@ -1932,10 +1817,10 @@ exports[`banner > sizes and variants > renders correctly with size medium and va
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__17sbfy0 styles_variant_promotional__17sbfy4 styles_size_medium__17sbfy2 styles_undefined_compound_3__17sbfy8 emotion-0 emotion-1"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="styles_medium__17sbfya emotion-2 emotion-1"
       >
         <img
           alt=""
@@ -1943,11 +1828,11 @@ exports[`banner > sizes and variants > renders correctly with size medium and va
         />
       </div>
       <div
-        class="emotion-4 emotion-5"
+        class="emotion-4 emotion-1"
         style="flex: 1;"
       >
         <div
-          class="emotion-6 emotion-5"
+          class="emotion-6 emotion-1"
           style="flex: 1;"
         >
           <p
@@ -1963,7 +1848,7 @@ exports[`banner > sizes and variants > renders correctly with size medium and va
         </div>
       </div>
       <button
-        class="styles__e1wcoe0 styles_size_small__e1wcoe3 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_filled__e1wcoeg styles_sentiment_primary__e1wcoe7 styles_undefined_compound_0__e1wcoel"
+        class="styles__17sbfyb styles__e1wcoe0 styles_size_small__e1wcoe3 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_filled__e1wcoeg styles_sentiment_primary__e1wcoe7 styles_undefined_compound_0__e1wcoel"
         name="close"
         type="button"
       >
@@ -1984,41 +1869,25 @@ exports[`banner > sizes and variants > renders correctly with size medium and va
 exports[`banner > sizes and variants > renders correctly with size small and variant intro 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  padding: 1rem;
-  border-radius: 0.5rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   gap: 1rem;
-  background: #f1eefc;
-  -webkit-background-position: left,right;
-  background-position: left,right;
-  background-repeat: no-repeat,no-repeat;
-  -webkit-background-size: contain,contain;
-  background-size: contain,contain;
-}
-
-.emotion-0>svg:first-child,
-.emotion-0>img {
-  height: 100px;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-0 button[name="close"] {
-  background: none;
-}
-
-.emotion-0 button[name="close"]:hover {
-  background: none;
 }
 
 .emotion-2 {
@@ -2041,7 +1910,6 @@ exports[`banner > sizes and variants > renders correctly with size small and var
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  width: 74px;
 }
 
 .emotion-4 {
@@ -2131,10 +1999,10 @@ exports[`banner > sizes and variants > renders correctly with size small and var
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__17sbfy0 styles_variant_intro__17sbfy3 styles_size_small__17sbfy1 styles_undefined_compound_0__17sbfy5 emotion-0 emotion-1"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="styles_small__17sbfy9 emotion-2 emotion-1"
       >
         <img
           alt=""
@@ -2142,11 +2010,11 @@ exports[`banner > sizes and variants > renders correctly with size small and var
         />
       </div>
       <div
-        class="emotion-4 emotion-5"
+        class="emotion-4 emotion-1"
         style="flex: 1;"
       >
         <div
-          class="emotion-6 emotion-5"
+          class="emotion-6 emotion-1"
           style="flex: 1;"
         >
           <p
@@ -2162,7 +2030,7 @@ exports[`banner > sizes and variants > renders correctly with size small and var
         </div>
       </div>
       <button
-        class="styles__e1wcoe0 styles_size_small__e1wcoe3 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+        class="styles__17sbfyb styles__e1wcoe0 styles_size_small__e1wcoe3 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
         name="close"
         type="button"
       >
@@ -2183,41 +2051,25 @@ exports[`banner > sizes and variants > renders correctly with size small and var
 exports[`banner > sizes and variants > renders correctly with size small and variant promotional 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  padding: 1rem;
-  border-radius: 0.5rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   gap: 1rem;
-  -webkit-background-position: left,right;
-  background-position: left,right;
-  background-image: linear-gradient(151deg, #03cfda 0%, #3d1862 28.91%, #151a2d 75.01%);
-  background-repeat: no-repeat,no-repeat;
-  -webkit-background-size: contain,contain;
-  background-size: contain,contain;
-}
-
-.emotion-0>svg:first-child,
-.emotion-0>img {
-  height: 100px;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-0 button[name="close"] {
-  background: none;
-}
-
-.emotion-0 button[name="close"]:hover {
-  background: none;
 }
 
 .emotion-2 {
@@ -2240,7 +2092,6 @@ exports[`banner > sizes and variants > renders correctly with size small and var
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  width: 74px;
 }
 
 .emotion-4 {
@@ -2330,10 +2181,10 @@ exports[`banner > sizes and variants > renders correctly with size small and var
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__17sbfy0 styles_variant_promotional__17sbfy4 styles_size_small__17sbfy1 styles_undefined_compound_2__17sbfy7 emotion-0 emotion-1"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="styles_small__17sbfy9 emotion-2 emotion-1"
       >
         <img
           alt=""
@@ -2341,11 +2192,11 @@ exports[`banner > sizes and variants > renders correctly with size small and var
         />
       </div>
       <div
-        class="emotion-4 emotion-5"
+        class="emotion-4 emotion-1"
         style="flex: 1;"
       >
         <div
-          class="emotion-6 emotion-5"
+          class="emotion-6 emotion-1"
           style="flex: 1;"
         >
           <p
@@ -2361,7 +2212,7 @@ exports[`banner > sizes and variants > renders correctly with size small and var
         </div>
       </div>
       <button
-        class="styles__e1wcoe0 styles_size_small__e1wcoe3 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_filled__e1wcoeg styles_sentiment_primary__e1wcoe7 styles_undefined_compound_0__e1wcoel"
+        class="styles__17sbfyb styles__e1wcoe0 styles_size_small__e1wcoe3 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_filled__e1wcoeg styles_sentiment_primary__e1wcoe7 styles_undefined_compound_0__e1wcoel"
         name="close"
         type="button"
       >
