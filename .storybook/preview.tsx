@@ -143,16 +143,29 @@ const withThemeProvider = (Story: StoryFn, context: { globals: { theme: string }
 }
 
 const decorators = [
-  (Story: StoryFn) => (
+  (Story: StoryFn, context: { globals: { theme: string } }) => {
+    const theme = context.globals.theme || "light"
+    const finalTheme = () => {
+      if (theme === "light") {
+        return lightTheme
+      }
+      if (theme === "dark") {
+        return darkTheme
+      }
+
+      return darkerTheme
+    }
+    
+    return (
       <>
-        <ThemeProviderUI>
+        <ThemeProviderUI theme={finalTheme()}>
           {
             // eslint-disable-next-line react/jsx-curly-brace-presence
             <Story />
           }
         </ThemeProviderUI>
       </>
-    ), // Storybook is broken without this please refer to this issue: https://github.com/storybookjs/storybook/issues/24625
+    )}, // Storybook is broken without this please refer to this issue: https://github.com/storybookjs/storybook/issues/24625
   withThemeFromJSXProvider({
     themes: {
       light: lightTheme,
