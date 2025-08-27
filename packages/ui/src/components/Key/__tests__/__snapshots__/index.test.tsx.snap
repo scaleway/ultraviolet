@@ -1,0 +1,851 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Key > renders correctly 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  cursor: default;
+  background: #f9f9fa;
+  border-radius: 0.25rem;
+  border: 0.5px solid #e9eaeb;
+  min-width: 1.5rem;
+  height: 1.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-0[data-prominence='strong'] {
+  background-color: #151a2d;
+  border-color: #d9dadd;
+}
+
+.emotion-0[data-prominence='strong'][data-disabled="true"] {
+  background-color: #e9eaeb;
+  border-color: #e9eaeb;
+}
+
+.emotion-0[data-disabled='true'] {
+  background-color: #f3f3f4;
+  border-color: #d9dadd;
+  cursor: not-allowed;
+}
+
+.emotion-0[data-sentiment="primary"] {
+  background-color: #f1eefc;
+  border-color: #8c40ef;
+}
+
+.emotion-0[data-sentiment="primary"][data-prominence='strong'] {
+  background-color: #8c40ef;
+}
+
+.emotion-0[data-sentiment="primary"][data-prominence='strong'][data-disabled="true"] {
+  background-color: #e5dbfd;
+}
+
+.emotion-0[data-sentiment="primary"][data-disabled='true'] {
+  background: #f6f5fd;
+  border-color: #e9eaeb;
+  cursor: not-allowed;
+}
+
+.emotion-0[data-size="small"] {
+  min-width: 1.25rem;
+  height: 1.25rem;
+}
+
+.emotion-2 {
+  color: #3f4250;
+  font-size: 0.75rem;
+  font-family: Inter,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<div
+    data-testid="testing"
+  >
+    <kbd
+      class="emotion-0 emotion-1"
+      data-prominence="default"
+      data-sentiment="neutral"
+      data-size="medium"
+    >
+      <span
+        class="emotion-2 emotion-3"
+      >
+        A
+      </span>
+    </kbd>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Key > renders disabled 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  cursor: default;
+  background: #f9f9fa;
+  border-radius: 0.25rem;
+  border: 0.5px solid #e9eaeb;
+  min-width: 1.5rem;
+  height: 1.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-0[data-prominence='strong'] {
+  background-color: #151a2d;
+  border-color: #d9dadd;
+}
+
+.emotion-0[data-prominence='strong'][data-disabled="true"] {
+  background-color: #e9eaeb;
+  border-color: #e9eaeb;
+}
+
+.emotion-0[data-disabled='true'] {
+  background-color: #f3f3f4;
+  border-color: #d9dadd;
+  cursor: not-allowed;
+}
+
+.emotion-0[data-sentiment="primary"] {
+  background-color: #f1eefc;
+  border-color: #8c40ef;
+}
+
+.emotion-0[data-sentiment="primary"][data-prominence='strong'] {
+  background-color: #8c40ef;
+}
+
+.emotion-0[data-sentiment="primary"][data-prominence='strong'][data-disabled="true"] {
+  background-color: #e5dbfd;
+}
+
+.emotion-0[data-sentiment="primary"][data-disabled='true'] {
+  background: #f6f5fd;
+  border-color: #e9eaeb;
+  cursor: not-allowed;
+}
+
+.emotion-0[data-size="small"] {
+  min-width: 1.25rem;
+  height: 1.25rem;
+}
+
+.emotion-2 {
+  color: #b5b7bd;
+  font-size: 0.75rem;
+  font-family: Inter,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<div
+    data-testid="testing"
+  >
+    <kbd
+      class="emotion-0 emotion-1"
+      data-disabled="true"
+      data-prominence="default"
+      data-sentiment="neutral"
+      data-size="medium"
+    >
+      <span
+        class="emotion-2 emotion-3"
+      >
+        A
+      </span>
+    </kbd>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Key > renders disabled primary 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  cursor: default;
+  background: #f9f9fa;
+  border-radius: 0.25rem;
+  border: 0.5px solid #e9eaeb;
+  min-width: 1.5rem;
+  height: 1.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-0[data-prominence='strong'] {
+  background-color: #151a2d;
+  border-color: #d9dadd;
+}
+
+.emotion-0[data-prominence='strong'][data-disabled="true"] {
+  background-color: #e9eaeb;
+  border-color: #e9eaeb;
+}
+
+.emotion-0[data-disabled='true'] {
+  background-color: #f3f3f4;
+  border-color: #d9dadd;
+  cursor: not-allowed;
+}
+
+.emotion-0[data-sentiment="primary"] {
+  background-color: #f1eefc;
+  border-color: #8c40ef;
+}
+
+.emotion-0[data-sentiment="primary"][data-prominence='strong'] {
+  background-color: #8c40ef;
+}
+
+.emotion-0[data-sentiment="primary"][data-prominence='strong'][data-disabled="true"] {
+  background-color: #e5dbfd;
+}
+
+.emotion-0[data-sentiment="primary"][data-disabled='true'] {
+  background: #f6f5fd;
+  border-color: #e9eaeb;
+  cursor: not-allowed;
+}
+
+.emotion-0[data-size="small"] {
+  min-width: 1.25rem;
+  height: 1.25rem;
+}
+
+.emotion-2 {
+  color: #d8c5fc;
+  font-size: 0.75rem;
+  font-family: Inter,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<div
+    data-testid="testing"
+  >
+    <kbd
+      class="emotion-0 emotion-1"
+      data-disabled="true"
+      data-prominence="default"
+      data-sentiment="primary"
+      data-size="medium"
+    >
+      <span
+        class="emotion-2 emotion-3"
+      >
+        A
+      </span>
+    </kbd>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Key > renders disabled strong 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  cursor: default;
+  background: #f9f9fa;
+  border-radius: 0.25rem;
+  border: 0.5px solid #e9eaeb;
+  min-width: 1.5rem;
+  height: 1.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-0[data-prominence='strong'] {
+  background-color: #151a2d;
+  border-color: #d9dadd;
+}
+
+.emotion-0[data-prominence='strong'][data-disabled="true"] {
+  background-color: #e9eaeb;
+  border-color: #e9eaeb;
+}
+
+.emotion-0[data-disabled='true'] {
+  background-color: #f3f3f4;
+  border-color: #d9dadd;
+  cursor: not-allowed;
+}
+
+.emotion-0[data-sentiment="primary"] {
+  background-color: #f1eefc;
+  border-color: #8c40ef;
+}
+
+.emotion-0[data-sentiment="primary"][data-prominence='strong'] {
+  background-color: #8c40ef;
+}
+
+.emotion-0[data-sentiment="primary"][data-prominence='strong'][data-disabled="true"] {
+  background-color: #e5dbfd;
+}
+
+.emotion-0[data-sentiment="primary"][data-disabled='true'] {
+  background: #f6f5fd;
+  border-color: #e9eaeb;
+  cursor: not-allowed;
+}
+
+.emotion-0[data-size="small"] {
+  min-width: 1.25rem;
+  height: 1.25rem;
+}
+
+.emotion-2 {
+  color: #b5b7bd;
+  font-size: 0.75rem;
+  font-family: Inter,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<div
+    data-testid="testing"
+  >
+    <kbd
+      class="emotion-0 emotion-1"
+      data-disabled="true"
+      data-prominence="strong"
+      data-sentiment="neutral"
+      data-size="medium"
+    >
+      <span
+        class="emotion-2 emotion-3"
+      >
+        A
+      </span>
+    </kbd>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Key > renders disabled strong primary 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  cursor: default;
+  background: #f9f9fa;
+  border-radius: 0.25rem;
+  border: 0.5px solid #e9eaeb;
+  min-width: 1.5rem;
+  height: 1.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-0[data-prominence='strong'] {
+  background-color: #151a2d;
+  border-color: #d9dadd;
+}
+
+.emotion-0[data-prominence='strong'][data-disabled="true"] {
+  background-color: #e9eaeb;
+  border-color: #e9eaeb;
+}
+
+.emotion-0[data-disabled='true'] {
+  background-color: #f3f3f4;
+  border-color: #d9dadd;
+  cursor: not-allowed;
+}
+
+.emotion-0[data-sentiment="primary"] {
+  background-color: #f1eefc;
+  border-color: #8c40ef;
+}
+
+.emotion-0[data-sentiment="primary"][data-prominence='strong'] {
+  background-color: #8c40ef;
+}
+
+.emotion-0[data-sentiment="primary"][data-prominence='strong'][data-disabled="true"] {
+  background-color: #e5dbfd;
+}
+
+.emotion-0[data-sentiment="primary"][data-disabled='true'] {
+  background: #f6f5fd;
+  border-color: #e9eaeb;
+  cursor: not-allowed;
+}
+
+.emotion-0[data-size="small"] {
+  min-width: 1.25rem;
+  height: 1.25rem;
+}
+
+.emotion-2 {
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-family: Inter,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<div
+    data-testid="testing"
+  >
+    <kbd
+      class="emotion-0 emotion-1"
+      data-disabled="true"
+      data-prominence="strong"
+      data-sentiment="primary"
+      data-size="medium"
+    >
+      <span
+        class="emotion-2 emotion-3"
+      >
+        A
+      </span>
+    </kbd>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Key > renders primary 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  cursor: default;
+  background: #f9f9fa;
+  border-radius: 0.25rem;
+  border: 0.5px solid #e9eaeb;
+  min-width: 1.5rem;
+  height: 1.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-0[data-prominence='strong'] {
+  background-color: #151a2d;
+  border-color: #d9dadd;
+}
+
+.emotion-0[data-prominence='strong'][data-disabled="true"] {
+  background-color: #e9eaeb;
+  border-color: #e9eaeb;
+}
+
+.emotion-0[data-disabled='true'] {
+  background-color: #f3f3f4;
+  border-color: #d9dadd;
+  cursor: not-allowed;
+}
+
+.emotion-0[data-sentiment="primary"] {
+  background-color: #f1eefc;
+  border-color: #8c40ef;
+}
+
+.emotion-0[data-sentiment="primary"][data-prominence='strong'] {
+  background-color: #8c40ef;
+}
+
+.emotion-0[data-sentiment="primary"][data-prominence='strong'][data-disabled="true"] {
+  background-color: #e5dbfd;
+}
+
+.emotion-0[data-sentiment="primary"][data-disabled='true'] {
+  background: #f6f5fd;
+  border-color: #e9eaeb;
+  cursor: not-allowed;
+}
+
+.emotion-0[data-size="small"] {
+  min-width: 1.25rem;
+  height: 1.25rem;
+}
+
+.emotion-2 {
+  color: #641cb3;
+  font-size: 0.75rem;
+  font-family: Inter,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<div
+    data-testid="testing"
+  >
+    <kbd
+      class="emotion-0 emotion-1"
+      data-prominence="default"
+      data-sentiment="primary"
+      data-size="medium"
+    >
+      <span
+        class="emotion-2 emotion-3"
+      >
+        A
+      </span>
+    </kbd>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Key > renders small 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  cursor: default;
+  background: #f9f9fa;
+  border-radius: 0.25rem;
+  border: 0.5px solid #e9eaeb;
+  min-width: 1.5rem;
+  height: 1.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-0[data-prominence='strong'] {
+  background-color: #151a2d;
+  border-color: #d9dadd;
+}
+
+.emotion-0[data-prominence='strong'][data-disabled="true"] {
+  background-color: #e9eaeb;
+  border-color: #e9eaeb;
+}
+
+.emotion-0[data-disabled='true'] {
+  background-color: #f3f3f4;
+  border-color: #d9dadd;
+  cursor: not-allowed;
+}
+
+.emotion-0[data-sentiment="primary"] {
+  background-color: #f1eefc;
+  border-color: #8c40ef;
+}
+
+.emotion-0[data-sentiment="primary"][data-prominence='strong'] {
+  background-color: #8c40ef;
+}
+
+.emotion-0[data-sentiment="primary"][data-prominence='strong'][data-disabled="true"] {
+  background-color: #e5dbfd;
+}
+
+.emotion-0[data-sentiment="primary"][data-disabled='true'] {
+  background: #f6f5fd;
+  border-color: #e9eaeb;
+  cursor: not-allowed;
+}
+
+.emotion-0[data-size="small"] {
+  min-width: 1.25rem;
+  height: 1.25rem;
+}
+
+.emotion-2 {
+  color: #3f4250;
+  font-size: 0.625rem;
+  font-family: Inter,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<div
+    data-testid="testing"
+  >
+    <kbd
+      class="emotion-0 emotion-1"
+      data-prominence="default"
+      data-sentiment="neutral"
+      data-size="small"
+    >
+      <span
+        class="emotion-2 emotion-3"
+      >
+        A
+      </span>
+    </kbd>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Key > renders strong 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  cursor: default;
+  background: #f9f9fa;
+  border-radius: 0.25rem;
+  border: 0.5px solid #e9eaeb;
+  min-width: 1.5rem;
+  height: 1.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-0[data-prominence='strong'] {
+  background-color: #151a2d;
+  border-color: #d9dadd;
+}
+
+.emotion-0[data-prominence='strong'][data-disabled="true"] {
+  background-color: #e9eaeb;
+  border-color: #e9eaeb;
+}
+
+.emotion-0[data-disabled='true'] {
+  background-color: #f3f3f4;
+  border-color: #d9dadd;
+  cursor: not-allowed;
+}
+
+.emotion-0[data-sentiment="primary"] {
+  background-color: #f1eefc;
+  border-color: #8c40ef;
+}
+
+.emotion-0[data-sentiment="primary"][data-prominence='strong'] {
+  background-color: #8c40ef;
+}
+
+.emotion-0[data-sentiment="primary"][data-prominence='strong'][data-disabled="true"] {
+  background-color: #e5dbfd;
+}
+
+.emotion-0[data-sentiment="primary"][data-disabled='true'] {
+  background: #f6f5fd;
+  border-color: #e9eaeb;
+  cursor: not-allowed;
+}
+
+.emotion-0[data-size="small"] {
+  min-width: 1.25rem;
+  height: 1.25rem;
+}
+
+.emotion-2 {
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-family: Inter,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<div
+    data-testid="testing"
+  >
+    <kbd
+      class="emotion-0 emotion-1"
+      data-prominence="strong"
+      data-sentiment="neutral"
+      data-size="medium"
+    >
+      <span
+        class="emotion-2 emotion-3"
+      >
+        A
+      </span>
+    </kbd>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Key > renders strong primary 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  cursor: default;
+  background: #f9f9fa;
+  border-radius: 0.25rem;
+  border: 0.5px solid #e9eaeb;
+  min-width: 1.5rem;
+  height: 1.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-0[data-prominence='strong'] {
+  background-color: #151a2d;
+  border-color: #d9dadd;
+}
+
+.emotion-0[data-prominence='strong'][data-disabled="true"] {
+  background-color: #e9eaeb;
+  border-color: #e9eaeb;
+}
+
+.emotion-0[data-disabled='true'] {
+  background-color: #f3f3f4;
+  border-color: #d9dadd;
+  cursor: not-allowed;
+}
+
+.emotion-0[data-sentiment="primary"] {
+  background-color: #f1eefc;
+  border-color: #8c40ef;
+}
+
+.emotion-0[data-sentiment="primary"][data-prominence='strong'] {
+  background-color: #8c40ef;
+}
+
+.emotion-0[data-sentiment="primary"][data-prominence='strong'][data-disabled="true"] {
+  background-color: #e5dbfd;
+}
+
+.emotion-0[data-sentiment="primary"][data-disabled='true'] {
+  background: #f6f5fd;
+  border-color: #e9eaeb;
+  cursor: not-allowed;
+}
+
+.emotion-0[data-size="small"] {
+  min-width: 1.25rem;
+  height: 1.25rem;
+}
+
+.emotion-2 {
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-family: Inter,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<div
+    data-testid="testing"
+  >
+    <kbd
+      class="emotion-0 emotion-1"
+      data-prominence="strong"
+      data-sentiment="primary"
+      data-size="medium"
+    >
+      <span
+        class="emotion-2 emotion-3"
+      >
+        A
+      </span>
+    </kbd>
+  </div>
+</DocumentFragment>
+`;

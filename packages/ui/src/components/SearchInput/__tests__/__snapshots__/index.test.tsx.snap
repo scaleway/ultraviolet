@@ -1,888 +1,5 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`SearchInput > Key > renders correctly with disabled 1`] = `
-<DocumentFragment>
-  .emotion-0 {
-  cursor: text;
-  background: #f9f9fa;
-  border-radius: 0.25rem;
-  border: 0.5px solid #d9dadd;
-  min-width: 1.5rem;
-  min-height: 1.5rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-0[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-}
-
-.emotion-0[data-children-length='true'] {
-  width: auto;
-  padding: 0 0.5rem;
-}
-
-.emotion-2 {
-  color: #b5b7bd;
-  font-size: 0.75rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-<div
-    data-testid="testing"
-  >
-    <div
-      class="emotion-0 emotion-1"
-      data-children-length="false"
-      data-disabled="true"
-      data-testid="key-K"
-    >
-      <span
-        class="emotion-2 emotion-3"
-      >
-        K
-      </span>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`SearchInput > Key > renders correctly with special   key 1`] = `
-<DocumentFragment>
-  .emotion-0 {
-  cursor: text;
-  background: #f9f9fa;
-  border-radius: 0.25rem;
-  border: 0.5px solid #d9dadd;
-  min-width: 1.5rem;
-  min-height: 1.5rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-0[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-}
-
-.emotion-0[data-children-length='true'] {
-  width: auto;
-  padding: 0 0.5rem;
-}
-
-.emotion-2 {
-  color: #3f4250;
-  font-size: 0.75rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-<div
-    data-testid="testing"
-  >
-    <div
-      class="emotion-0 emotion-1"
-      data-children-length="false"
-      data-testid="key- "
-    >
-      <span
-        class="emotion-2 emotion-3"
-      >
-        ␣
-      </span>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`SearchInput > Key > renders correctly with special Alt key 1`] = `
-<DocumentFragment>
-  .emotion-0 {
-  cursor: text;
-  background: #f9f9fa;
-  border-radius: 0.25rem;
-  border: 0.5px solid #d9dadd;
-  min-width: 1.5rem;
-  min-height: 1.5rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-0[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-}
-
-.emotion-0[data-children-length='true'] {
-  width: auto;
-  padding: 0 0.5rem;
-}
-
-.emotion-2 {
-  color: #3f4250;
-  font-size: 0.75rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-<div
-    data-testid="testing"
-  >
-    <div
-      class="emotion-0 emotion-1"
-      data-children-length="true"
-      data-testid="key-Alt"
-    >
-      <span
-        class="emotion-2 emotion-3"
-      >
-        Alt
-      </span>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`SearchInput > Key > renders correctly with special ArrowDown key 1`] = `
-<DocumentFragment>
-  .emotion-0 {
-  cursor: text;
-  background: #f9f9fa;
-  border-radius: 0.25rem;
-  border: 0.5px solid #d9dadd;
-  min-width: 1.5rem;
-  min-height: 1.5rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-0[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-}
-
-.emotion-0[data-children-length='true'] {
-  width: auto;
-  padding: 0 0.5rem;
-}
-
-.emotion-2 {
-  color: #3f4250;
-  font-size: 0.75rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-<div
-    data-testid="testing"
-  >
-    <div
-      class="emotion-0 emotion-1"
-      data-children-length="true"
-      data-testid="key-ArrowDown"
-    >
-      <span
-        class="emotion-2 emotion-3"
-      >
-        ↓
-      </span>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`SearchInput > Key > renders correctly with special ArrowLeft key 1`] = `
-<DocumentFragment>
-  .emotion-0 {
-  cursor: text;
-  background: #f9f9fa;
-  border-radius: 0.25rem;
-  border: 0.5px solid #d9dadd;
-  min-width: 1.5rem;
-  min-height: 1.5rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-0[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-}
-
-.emotion-0[data-children-length='true'] {
-  width: auto;
-  padding: 0 0.5rem;
-}
-
-.emotion-2 {
-  color: #3f4250;
-  font-size: 0.75rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-<div
-    data-testid="testing"
-  >
-    <div
-      class="emotion-0 emotion-1"
-      data-children-length="true"
-      data-testid="key-ArrowLeft"
-    >
-      <span
-        class="emotion-2 emotion-3"
-      >
-        ←
-      </span>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`SearchInput > Key > renders correctly with special ArrowRight key 1`] = `
-<DocumentFragment>
-  .emotion-0 {
-  cursor: text;
-  background: #f9f9fa;
-  border-radius: 0.25rem;
-  border: 0.5px solid #d9dadd;
-  min-width: 1.5rem;
-  min-height: 1.5rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-0[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-}
-
-.emotion-0[data-children-length='true'] {
-  width: auto;
-  padding: 0 0.5rem;
-}
-
-.emotion-2 {
-  color: #3f4250;
-  font-size: 0.75rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-<div
-    data-testid="testing"
-  >
-    <div
-      class="emotion-0 emotion-1"
-      data-children-length="true"
-      data-testid="key-ArrowRight"
-    >
-      <span
-        class="emotion-2 emotion-3"
-      >
-        →
-      </span>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`SearchInput > Key > renders correctly with special ArrowUp key 1`] = `
-<DocumentFragment>
-  .emotion-0 {
-  cursor: text;
-  background: #f9f9fa;
-  border-radius: 0.25rem;
-  border: 0.5px solid #d9dadd;
-  min-width: 1.5rem;
-  min-height: 1.5rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-0[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-}
-
-.emotion-0[data-children-length='true'] {
-  width: auto;
-  padding: 0 0.5rem;
-}
-
-.emotion-2 {
-  color: #3f4250;
-  font-size: 0.75rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-<div
-    data-testid="testing"
-  >
-    <div
-      class="emotion-0 emotion-1"
-      data-children-length="true"
-      data-testid="key-ArrowUp"
-    >
-      <span
-        class="emotion-2 emotion-3"
-      >
-        ↑
-      </span>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`SearchInput > Key > renders correctly with special Backspace key 1`] = `
-<DocumentFragment>
-  .emotion-0 {
-  cursor: text;
-  background: #f9f9fa;
-  border-radius: 0.25rem;
-  border: 0.5px solid #d9dadd;
-  min-width: 1.5rem;
-  min-height: 1.5rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-0[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-}
-
-.emotion-0[data-children-length='true'] {
-  width: auto;
-  padding: 0 0.5rem;
-}
-
-.emotion-2 {
-  color: #3f4250;
-  font-size: 0.75rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-<div
-    data-testid="testing"
-  >
-    <div
-      class="emotion-0 emotion-1"
-      data-children-length="true"
-      data-testid="key-Backspace"
-    >
-      <span
-        class="emotion-2 emotion-3"
-      >
-        ⌫
-      </span>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`SearchInput > Key > renders correctly with special CapsLock key 1`] = `
-<DocumentFragment>
-  .emotion-0 {
-  cursor: text;
-  background: #f9f9fa;
-  border-radius: 0.25rem;
-  border: 0.5px solid #d9dadd;
-  min-width: 1.5rem;
-  min-height: 1.5rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-0[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-}
-
-.emotion-0[data-children-length='true'] {
-  width: auto;
-  padding: 0 0.5rem;
-}
-
-.emotion-2 {
-  color: #3f4250;
-  font-size: 0.75rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-<div
-    data-testid="testing"
-  >
-    <div
-      class="emotion-0 emotion-1"
-      data-children-length="true"
-      data-testid="key-CapsLock"
-    >
-      <span
-        class="emotion-2 emotion-3"
-      >
-        Caps
-      </span>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`SearchInput > Key > renders correctly with special Control key 1`] = `
-<DocumentFragment>
-  .emotion-0 {
-  cursor: text;
-  background: #f9f9fa;
-  border-radius: 0.25rem;
-  border: 0.5px solid #d9dadd;
-  min-width: 1.5rem;
-  min-height: 1.5rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-0[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-}
-
-.emotion-0[data-children-length='true'] {
-  width: auto;
-  padding: 0 0.5rem;
-}
-
-.emotion-2 {
-  color: #3f4250;
-  font-size: 0.75rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-<div
-    data-testid="testing"
-  >
-    <div
-      class="emotion-0 emotion-1"
-      data-children-length="true"
-      data-testid="key-Control"
-    >
-      <span
-        class="emotion-2 emotion-3"
-      >
-        Ctrl
-      </span>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`SearchInput > Key > renders correctly with special Delete key 1`] = `
-<DocumentFragment>
-  .emotion-0 {
-  cursor: text;
-  background: #f9f9fa;
-  border-radius: 0.25rem;
-  border: 0.5px solid #d9dadd;
-  min-width: 1.5rem;
-  min-height: 1.5rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-0[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-}
-
-.emotion-0[data-children-length='true'] {
-  width: auto;
-  padding: 0 0.5rem;
-}
-
-.emotion-2 {
-  color: #3f4250;
-  font-size: 0.75rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-<div
-    data-testid="testing"
-  >
-    <div
-      class="emotion-0 emotion-1"
-      data-children-length="true"
-      data-testid="key-Delete"
-    >
-      <span
-        class="emotion-2 emotion-3"
-      >
-        ⌦
-      </span>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`SearchInput > Key > renders correctly with special Enter key 1`] = `
-<DocumentFragment>
-  .emotion-0 {
-  cursor: text;
-  background: #f9f9fa;
-  border-radius: 0.25rem;
-  border: 0.5px solid #d9dadd;
-  min-width: 1.5rem;
-  min-height: 1.5rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-0[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-}
-
-.emotion-0[data-children-length='true'] {
-  width: auto;
-  padding: 0 0.5rem;
-}
-
-.emotion-2 {
-  color: #3f4250;
-  font-size: 0.75rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-<div
-    data-testid="testing"
-  >
-    <div
-      class="emotion-0 emotion-1"
-      data-children-length="true"
-      data-testid="key-Enter"
-    >
-      <span
-        class="emotion-2 emotion-3"
-      >
-        ↵
-      </span>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`SearchInput > Key > renders correctly with special Escape key 1`] = `
-<DocumentFragment>
-  .emotion-0 {
-  cursor: text;
-  background: #f9f9fa;
-  border-radius: 0.25rem;
-  border: 0.5px solid #d9dadd;
-  min-width: 1.5rem;
-  min-height: 1.5rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-0[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-}
-
-.emotion-0[data-children-length='true'] {
-  width: auto;
-  padding: 0 0.5rem;
-}
-
-.emotion-2 {
-  color: #3f4250;
-  font-size: 0.75rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-<div
-    data-testid="testing"
-  >
-    <div
-      class="emotion-0 emotion-1"
-      data-children-length="true"
-      data-testid="key-Escape"
-    >
-      <span
-        class="emotion-2 emotion-3"
-      >
-        Esc
-      </span>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`SearchInput > Key > renders correctly with special Meta key 1`] = `
-<DocumentFragment>
-  .emotion-0 {
-  cursor: text;
-  background: #f9f9fa;
-  border-radius: 0.25rem;
-  border: 0.5px solid #d9dadd;
-  min-width: 1.5rem;
-  min-height: 1.5rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-0[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-}
-
-.emotion-0[data-children-length='true'] {
-  width: auto;
-  padding: 0 0.5rem;
-}
-
-.emotion-2 {
-  color: #3f4250;
-  font-size: 0.75rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-<div
-    data-testid="testing"
-  >
-    <div
-      class="emotion-0 emotion-1"
-      data-children-length="true"
-      data-testid="key-Meta"
-    >
-      <span
-        class="emotion-2 emotion-3"
-      >
-        ⌘
-      </span>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
 exports[`SearchInput > renders correctly without children props 1`] = `
 <DocumentFragment>
   .emotion-0 {
@@ -1102,8 +219,8 @@ exports[`SearchInput > renders correctly without children props 1`] = `
       style="width: 100%;"
     >
       <div
-        aria-controls="«re»"
-        aria-describedby="«re»"
+        aria-controls="«r0»"
+        aria-describedby="«r0»"
         class="emotion-0 emotion-1"
         tabindex="0"
       >
@@ -1142,7 +259,7 @@ exports[`SearchInput > renders correctly without children props 1`] = `
                 aria-invalid="false"
                 class="emotion-13 emotion-14"
                 data-size="large"
-                id="«rf»"
+                id="«r1»"
                 placeholder="Type something"
                 type="text"
                 value=""
@@ -1375,8 +492,8 @@ exports[`SearchInput > renders with disabled prop 1`] = `
       style="width: 100%;"
     >
       <div
-        aria-controls="«rh»"
-        aria-describedby="«rh»"
+        aria-controls="«r3»"
+        aria-describedby="«r3»"
         class="emotion-0 emotion-1"
         tabindex="0"
       >
@@ -1416,7 +533,7 @@ exports[`SearchInput > renders with disabled prop 1`] = `
                 class="emotion-13 emotion-14"
                 data-size="large"
                 disabled=""
-                id="«ri»"
+                id="«r4»"
                 placeholder="Type something"
                 type="text"
                 value=""
@@ -1699,8 +816,8 @@ exports[`SearchInput > renders with error prop 1`] = `
       style="width: 100%;"
     >
       <div
-        aria-controls="«rv»"
-        aria-describedby="«rv»"
+        aria-controls="«rh»"
+        aria-describedby="«rh»"
         class="emotion-0 emotion-1"
         tabindex="0"
       >
@@ -1739,7 +856,7 @@ exports[`SearchInput > renders with error prop 1`] = `
                 aria-invalid="true"
                 class="emotion-13 emotion-14"
                 data-size="large"
-                id="«r10»"
+                id="«ri»"
                 placeholder="Type something"
                 type="text"
                 value=""
@@ -2034,12 +1151,12 @@ exports[`SearchInput > renders with shortcut prop > as array of string 1`] = `
 }
 
 .emotion-19 {
-  cursor: text;
+  cursor: default;
   background: #f9f9fa;
   border-radius: 0.25rem;
-  border: 0.5px solid #d9dadd;
+  border: 0.5px solid #e9eaeb;
   min-width: 1.5rem;
-  min-height: 1.5rem;
+  height: 1.5rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2054,14 +1171,44 @@ exports[`SearchInput > renders with shortcut prop > as array of string 1`] = `
   align-items: center;
 }
 
-.emotion-19[data-disabled='true'] {
-  background: #f3f3f4;
+.emotion-19[data-prominence='strong'] {
+  background-color: #151a2d;
+  border-color: #d9dadd;
+}
+
+.emotion-19[data-prominence='strong'][data-disabled="true"] {
+  background-color: #e9eaeb;
   border-color: #e9eaeb;
 }
 
-.emotion-19[data-children-length='true'] {
-  width: auto;
-  padding: 0 0.5rem;
+.emotion-19[data-disabled='true'] {
+  background-color: #f3f3f4;
+  border-color: #d9dadd;
+  cursor: not-allowed;
+}
+
+.emotion-19[data-sentiment="primary"] {
+  background-color: #f1eefc;
+  border-color: #8c40ef;
+}
+
+.emotion-19[data-sentiment="primary"][data-prominence='strong'] {
+  background-color: #8c40ef;
+}
+
+.emotion-19[data-sentiment="primary"][data-prominence='strong'][data-disabled="true"] {
+  background-color: #e5dbfd;
+}
+
+.emotion-19[data-sentiment="primary"][data-disabled='true'] {
+  background: #f6f5fd;
+  border-color: #e9eaeb;
+  cursor: not-allowed;
+}
+
+.emotion-19[data-size="small"] {
+  min-width: 1.25rem;
+  height: 1.25rem;
 }
 
 .emotion-21 {
@@ -2083,8 +1230,8 @@ exports[`SearchInput > renders with shortcut prop > as array of string 1`] = `
       style="width: 100%;"
     >
       <div
-        aria-controls="«rp»"
-        aria-describedby="«rp»"
+        aria-controls="«rb»"
+        aria-describedby="«rb»"
         class="emotion-0 emotion-1"
         tabindex="0"
       >
@@ -2123,7 +1270,7 @@ exports[`SearchInput > renders with shortcut prop > as array of string 1`] = `
                 aria-invalid="false"
                 class="emotion-13 emotion-14"
                 data-size="large"
-                id="«rq»"
+                id="«rc»"
                 placeholder="Type something"
                 type="text"
                 value=""
@@ -2134,9 +1281,11 @@ exports[`SearchInput > renders with shortcut prop > as array of string 1`] = `
                 <div
                   class="emotion-17 emotion-18"
                 >
-                  <div
+                  <kbd
                     class="emotion-19 emotion-20"
-                    data-children-length="true"
+                    data-prominence="default"
+                    data-sentiment="neutral"
+                    data-size="medium"
                     data-testid="key-Ctrl"
                   >
                     <span
@@ -2144,21 +1293,25 @@ exports[`SearchInput > renders with shortcut prop > as array of string 1`] = `
                     >
                       Ctrl
                     </span>
-                  </div>
-                  <div
+                  </kbd>
+                  <kbd
                     class="emotion-19 emotion-20"
-                    data-children-length="true"
+                    data-prominence="default"
+                    data-sentiment="neutral"
+                    data-size="medium"
                     data-testid="key-Shift"
                   >
                     <span
                       class="emotion-21 emotion-22"
                     >
-                      Shift
+                      ⇧
                     </span>
-                  </div>
-                  <div
+                  </kbd>
+                  <kbd
                     class="emotion-19 emotion-20"
-                    data-children-length="false"
+                    data-prominence="default"
+                    data-sentiment="neutral"
+                    data-size="medium"
                     data-testid="key-A"
                   >
                     <span
@@ -2166,7 +1319,7 @@ exports[`SearchInput > renders with shortcut prop > as array of string 1`] = `
                     >
                       A
                     </span>
-                  </div>
+                  </kbd>
                 </div>
               </div>
             </div>
@@ -2440,12 +1593,12 @@ exports[`SearchInput > renders with shortcut prop > as boolean 1`] = `
 }
 
 .emotion-19 {
-  cursor: text;
+  cursor: default;
   background: #f9f9fa;
   border-radius: 0.25rem;
-  border: 0.5px solid #d9dadd;
+  border: 0.5px solid #e9eaeb;
   min-width: 1.5rem;
-  min-height: 1.5rem;
+  height: 1.5rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2460,14 +1613,44 @@ exports[`SearchInput > renders with shortcut prop > as boolean 1`] = `
   align-items: center;
 }
 
-.emotion-19[data-disabled='true'] {
-  background: #f3f3f4;
+.emotion-19[data-prominence='strong'] {
+  background-color: #151a2d;
+  border-color: #d9dadd;
+}
+
+.emotion-19[data-prominence='strong'][data-disabled="true"] {
+  background-color: #e9eaeb;
   border-color: #e9eaeb;
 }
 
-.emotion-19[data-children-length='true'] {
-  width: auto;
-  padding: 0 0.5rem;
+.emotion-19[data-disabled='true'] {
+  background-color: #f3f3f4;
+  border-color: #d9dadd;
+  cursor: not-allowed;
+}
+
+.emotion-19[data-sentiment="primary"] {
+  background-color: #f1eefc;
+  border-color: #8c40ef;
+}
+
+.emotion-19[data-sentiment="primary"][data-prominence='strong'] {
+  background-color: #8c40ef;
+}
+
+.emotion-19[data-sentiment="primary"][data-prominence='strong'][data-disabled="true"] {
+  background-color: #e5dbfd;
+}
+
+.emotion-19[data-sentiment="primary"][data-disabled='true'] {
+  background: #f6f5fd;
+  border-color: #e9eaeb;
+  cursor: not-allowed;
+}
+
+.emotion-19[data-size="small"] {
+  min-width: 1.25rem;
+  height: 1.25rem;
 }
 
 .emotion-21 {
@@ -2489,8 +1672,8 @@ exports[`SearchInput > renders with shortcut prop > as boolean 1`] = `
       style="width: 100%;"
     >
       <div
-        aria-controls="«rk»"
-        aria-describedby="«rk»"
+        aria-controls="«r6»"
+        aria-describedby="«r6»"
         class="emotion-0 emotion-1"
         tabindex="0"
       >
@@ -2529,7 +1712,7 @@ exports[`SearchInput > renders with shortcut prop > as boolean 1`] = `
                 aria-invalid="false"
                 class="emotion-13 emotion-14"
                 data-size="large"
-                id="«rl»"
+                id="«r7»"
                 placeholder="Type something"
                 type="text"
                 value=""
@@ -2540,9 +1723,11 @@ exports[`SearchInput > renders with shortcut prop > as boolean 1`] = `
                 <div
                   class="emotion-17 emotion-18"
                 >
-                  <div
+                  <kbd
                     class="emotion-19 emotion-20"
-                    data-children-length="true"
+                    data-prominence="default"
+                    data-sentiment="neutral"
+                    data-size="medium"
                     data-testid="key-Ctrl"
                   >
                     <span
@@ -2550,10 +1735,12 @@ exports[`SearchInput > renders with shortcut prop > as boolean 1`] = `
                     >
                       Ctrl
                     </span>
-                  </div>
-                  <div
+                  </kbd>
+                  <kbd
                     class="emotion-19 emotion-20"
-                    data-children-length="false"
+                    data-prominence="default"
+                    data-sentiment="neutral"
+                    data-size="medium"
                     data-testid="key-K"
                   >
                     <span
@@ -2561,7 +1748,7 @@ exports[`SearchInput > renders with shortcut prop > as boolean 1`] = `
                     >
                       K
                     </span>
-                  </div>
+                  </kbd>
                 </div>
               </div>
             </div>
