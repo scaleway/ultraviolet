@@ -1006,16 +1006,7 @@ exports[`lineChart > renders correctly when data is async 1`] = `
   flex: 6;
 }
 
-.emotion-6 {
-  color: #3f4250;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.emotion-5 {
   text-align: right;
   -webkit-flex: 1;
   -ms-flex: 1;
@@ -1026,16 +1017,7 @@ exports[`lineChart > renders correctly when data is async 1`] = `
   align-self: center;
 }
 
-.emotion-6 {
-  color: #3f4250;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.emotion-5 {
   text-align: right;
   -webkit-flex: 1;
   -ms-flex: 1;
@@ -1046,15 +1028,15 @@ exports[`lineChart > renders correctly when data is async 1`] = `
   align-self: center;
 }
 
-.emotion-17>:not(:last-child) {
+.emotion-13>:not(:last-child) {
   border-bottom: 1px solid #e9eaeb;
 }
 
-.emotion-17>:not(:last-child) {
+.emotion-13>:not(:last-child) {
   border-bottom: 1px solid #e9eaeb;
 }
 
-.emotion-18 {
+.emotion-14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1062,11 +1044,11 @@ exports[`lineChart > renders correctly when data is async 1`] = `
   padding: 0.25rem 0;
 }
 
-.emotion-18>:not(:last-child) {
+.emotion-14>:not(:last-child) {
   margin-right: 0.5rem;
 }
 
-.emotion-18 {
+.emotion-14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1074,11 +1056,11 @@ exports[`lineChart > renders correctly when data is async 1`] = `
   padding: 0.25rem 0;
 }
 
-.emotion-18>:not(:last-child) {
+.emotion-14>:not(:last-child) {
   margin-right: 0.5rem;
 }
 
-.emotion-21 {
+.emotion-17 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1091,65 +1073,65 @@ exports[`lineChart > renders correctly when data is async 1`] = `
   gap: 0.5rem;
 }
 
-.emotion-21 .emotion-34 {
+.emotion-17 .emotion-30 {
   cursor: pointer;
 }
 
-.emotion-21[aria-disabled='true'] {
+.emotion-17[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.emotion-21[aria-disabled='true'] .emotion-34 {
+.emotion-17[aria-disabled='true'] .emotion-30 {
   cursor: not-allowed;
 }
 
-.emotion-21[aria-disabled='true'] .emotion-26 {
+.emotion-17[aria-disabled='true'] .emotion-22 {
   fill: #e9eaeb;
 }
 
-.emotion-21[aria-disabled='true'] .emotion-26 .emotion-28 {
+.emotion-17[aria-disabled='true'] .emotion-22 .emotion-24 {
   stroke: #d9dadd;
   fill: #f3f3f4;
 }
 
-.emotion-21[aria-disabled='true'] .emotion-24[aria-invalid="true"]:checked+.emotion-26 {
+.emotion-17[aria-disabled='true'] .emotion-20[aria-invalid="true"]:checked+.emotion-22 {
   fill: #ffd3e3;
 }
 
-.emotion-21[aria-disabled='true'] .emotion-24[aria-invalid="true"]:checked+.emotion-26 .emotion-28 {
+.emotion-17[aria-disabled='true'] .emotion-20[aria-invalid="true"]:checked+.emotion-22 .emotion-24 {
   stroke: #ffd3e3;
   fill: #ffd3e3;
 }
 
-.emotion-21[aria-disabled='true'] .emotion-24[aria-invalid="true"]+.emotion-26 {
+.emotion-17[aria-disabled='true'] .emotion-20[aria-invalid="true"]+.emotion-22 {
   fill: #ffebf2;
 }
 
-.emotion-21[aria-disabled='true'] .emotion-24[aria-invalid="true"]+.emotion-26 .emotion-28 {
+.emotion-17[aria-disabled='true'] .emotion-20[aria-invalid="true"]+.emotion-22 .emotion-24 {
   stroke: #ffbbd3;
   fill: #ffebf2;
 }
 
-.emotion-21[aria-disabled='true'] .emotion-24:checked+.emotion-26 {
+.emotion-17[aria-disabled='true'] .emotion-20:checked+.emotion-22 {
   fill: #e5dbfd;
 }
 
-.emotion-21[aria-disabled='true'] .emotion-24:checked+.emotion-26 .emotion-28 {
+.emotion-17[aria-disabled='true'] .emotion-20:checked+.emotion-22 .emotion-24 {
   stroke: #d8c5fc;
   fill: #d8c5fc;
 }
 
-.emotion-21[aria-disabled='true'] .emotion-24[aria-checked="mixed"]+.emotion-26 {
+.emotion-17[aria-disabled='true'] .emotion-20[aria-checked="mixed"]+.emotion-22 {
   fill: #e5dbfd;
 }
 
-.emotion-21[aria-disabled='true'] .emotion-24[aria-checked="mixed"]+.emotion-26 .emotion-28 {
+.emotion-17[aria-disabled='true'] .emotion-20[aria-checked="mixed"]+.emotion-22 .emotion-24 {
   stroke: #e5dbfd;
   fill: #e5dbfd;
 }
 
-.emotion-21 .emotion-24:checked+.emotion-26 path {
+.emotion-17 .emotion-20:checked+.emotion-22 path {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -1163,60 +1145,60 @@ exports[`lineChart > renders correctly when data is async 1`] = `
   transform: translate(2px, 2px);
 }
 
-.emotion-21 .emotion-24:checked+.emotion-26 .emotion-28 {
+.emotion-17 .emotion-20:checked+.emotion-22 .emotion-24 {
   fill: #8c40ef;
   stroke: #8c40ef;
 }
 
-.emotion-21 .emotion-24[aria-invalid="true"]:checked+.emotion-26 .emotion-28 {
+.emotion-17 .emotion-20[aria-invalid="true"]:checked+.emotion-22 .emotion-24 {
   fill: #e51963;
   stroke: #e51963;
 }
 
-.emotion-21 .emotion-24[aria-checked="mixed"]+.emotion-26 .eqr7bqq5 {
+.emotion-17 .emotion-20[aria-checked="mixed"]+.emotion-22 .eqr7bqq5 {
   fill: #ffffff;
 }
 
-.emotion-21 .emotion-24[aria-checked="mixed"]+.emotion-26 .emotion-28 {
+.emotion-17 .emotion-20[aria-checked="mixed"]+.emotion-22 .emotion-24 {
   fill: #8c40ef;
   stroke: #8c40ef;
 }
 
-.emotion-21:hover[aria-disabled='false'] .emotion-24[aria-invalid='false'][aria-checked='false']+.emotion-26 .emotion-28 {
+.emotion-17:hover[aria-disabled='false'] .emotion-20[aria-invalid='false'][aria-checked='false']+.emotion-22 .emotion-24 {
   stroke: #792dd4;
   fill: #e5dbfd;
 }
 
-.emotion-21:hover[aria-disabled='false'] .emotion-24[aria-invalid='false'][aria-checked='true']+.emotion-26 .emotion-28 {
+.emotion-17:hover[aria-disabled='false'] .emotion-20[aria-invalid='false'][aria-checked='true']+.emotion-22 .emotion-24 {
   stroke: #792dd4;
   fill: #792dd4;
 }
 
-.emotion-21:hover[aria-disabled='false'] .emotion-24[aria-invalid='false'][aria-checked='mixed']+.emotion-26 .emotion-28 {
+.emotion-17:hover[aria-disabled='false'] .emotion-20[aria-invalid='false'][aria-checked='mixed']+.emotion-22 .emotion-24 {
   stroke: #792dd4;
   fill: #792dd4;
 }
 
-.emotion-21:hover[aria-disabled='false'] .emotion-24[aria-invalid='true'][aria-checked='false']+.emotion-26 .emotion-28 {
+.emotion-17:hover[aria-disabled='false'] .emotion-20[aria-invalid='true'][aria-checked='false']+.emotion-22 .emotion-24 {
   stroke: #92103f;
   fill: #ffd3e3;
 }
 
-.emotion-21:hover[aria-disabled='false'] .emotion-24[aria-invalid='true'][aria-checked='true']+.emotion-26 .emotion-28 {
+.emotion-17:hover[aria-disabled='false'] .emotion-20[aria-invalid='true'][aria-checked='true']+.emotion-22 .emotion-24 {
   stroke: #d6175c;
   fill: #d6175c;
 }
 
-.emotion-21 .emotion-24[aria-invalid="true"]+.emotion-26 {
+.emotion-17 .emotion-20[aria-invalid="true"]+.emotion-22 {
   fill: #e51963;
 }
 
-.emotion-21 .emotion-24[aria-invalid="true"]+.emotion-26 .emotion-28 {
+.emotion-17 .emotion-20[aria-invalid="true"]+.emotion-22 .emotion-24 {
   stroke: #e51963;
   fill: #ffebf2;
 }
 
-.emotion-21 {
+.emotion-17 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1229,65 +1211,65 @@ exports[`lineChart > renders correctly when data is async 1`] = `
   gap: 0.5rem;
 }
 
-.emotion-21 .emotion-34 {
+.emotion-17 .emotion-30 {
   cursor: pointer;
 }
 
-.emotion-21[aria-disabled='true'] {
+.emotion-17[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.emotion-21[aria-disabled='true'] .emotion-34 {
+.emotion-17[aria-disabled='true'] .emotion-30 {
   cursor: not-allowed;
 }
 
-.emotion-21[aria-disabled='true'] .emotion-26 {
+.emotion-17[aria-disabled='true'] .emotion-22 {
   fill: #e9eaeb;
 }
 
-.emotion-21[aria-disabled='true'] .emotion-26 .emotion-28 {
+.emotion-17[aria-disabled='true'] .emotion-22 .emotion-24 {
   stroke: #d9dadd;
   fill: #f3f3f4;
 }
 
-.emotion-21[aria-disabled='true'] .emotion-24[aria-invalid="true"]:checked+.emotion-26 {
+.emotion-17[aria-disabled='true'] .emotion-20[aria-invalid="true"]:checked+.emotion-22 {
   fill: #ffd3e3;
 }
 
-.emotion-21[aria-disabled='true'] .emotion-24[aria-invalid="true"]:checked+.emotion-26 .emotion-28 {
+.emotion-17[aria-disabled='true'] .emotion-20[aria-invalid="true"]:checked+.emotion-22 .emotion-24 {
   stroke: #ffd3e3;
   fill: #ffd3e3;
 }
 
-.emotion-21[aria-disabled='true'] .emotion-24[aria-invalid="true"]+.emotion-26 {
+.emotion-17[aria-disabled='true'] .emotion-20[aria-invalid="true"]+.emotion-22 {
   fill: #ffebf2;
 }
 
-.emotion-21[aria-disabled='true'] .emotion-24[aria-invalid="true"]+.emotion-26 .emotion-28 {
+.emotion-17[aria-disabled='true'] .emotion-20[aria-invalid="true"]+.emotion-22 .emotion-24 {
   stroke: #ffbbd3;
   fill: #ffebf2;
 }
 
-.emotion-21[aria-disabled='true'] .emotion-24:checked+.emotion-26 {
+.emotion-17[aria-disabled='true'] .emotion-20:checked+.emotion-22 {
   fill: #e5dbfd;
 }
 
-.emotion-21[aria-disabled='true'] .emotion-24:checked+.emotion-26 .emotion-28 {
+.emotion-17[aria-disabled='true'] .emotion-20:checked+.emotion-22 .emotion-24 {
   stroke: #d8c5fc;
   fill: #d8c5fc;
 }
 
-.emotion-21[aria-disabled='true'] .emotion-24[aria-checked="mixed"]+.emotion-26 {
+.emotion-17[aria-disabled='true'] .emotion-20[aria-checked="mixed"]+.emotion-22 {
   fill: #e5dbfd;
 }
 
-.emotion-21[aria-disabled='true'] .emotion-24[aria-checked="mixed"]+.emotion-26 .emotion-28 {
+.emotion-17[aria-disabled='true'] .emotion-20[aria-checked="mixed"]+.emotion-22 .emotion-24 {
   stroke: #e5dbfd;
   fill: #e5dbfd;
 }
 
-.emotion-21 .emotion-24:checked+.emotion-26 path {
+.emotion-17 .emotion-20:checked+.emotion-22 path {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -1301,60 +1283,60 @@ exports[`lineChart > renders correctly when data is async 1`] = `
   transform: translate(2px, 2px);
 }
 
-.emotion-21 .emotion-24:checked+.emotion-26 .emotion-28 {
+.emotion-17 .emotion-20:checked+.emotion-22 .emotion-24 {
   fill: #8c40ef;
   stroke: #8c40ef;
 }
 
-.emotion-21 .emotion-24[aria-invalid="true"]:checked+.emotion-26 .emotion-28 {
+.emotion-17 .emotion-20[aria-invalid="true"]:checked+.emotion-22 .emotion-24 {
   fill: #e51963;
   stroke: #e51963;
 }
 
-.emotion-21 .emotion-24[aria-checked="mixed"]+.emotion-26 .eqr7bqq5 {
+.emotion-17 .emotion-20[aria-checked="mixed"]+.emotion-22 .eqr7bqq5 {
   fill: #ffffff;
 }
 
-.emotion-21 .emotion-24[aria-checked="mixed"]+.emotion-26 .emotion-28 {
+.emotion-17 .emotion-20[aria-checked="mixed"]+.emotion-22 .emotion-24 {
   fill: #8c40ef;
   stroke: #8c40ef;
 }
 
-.emotion-21:hover[aria-disabled='false'] .emotion-24[aria-invalid='false'][aria-checked='false']+.emotion-26 .emotion-28 {
+.emotion-17:hover[aria-disabled='false'] .emotion-20[aria-invalid='false'][aria-checked='false']+.emotion-22 .emotion-24 {
   stroke: #792dd4;
   fill: #e5dbfd;
 }
 
-.emotion-21:hover[aria-disabled='false'] .emotion-24[aria-invalid='false'][aria-checked='true']+.emotion-26 .emotion-28 {
+.emotion-17:hover[aria-disabled='false'] .emotion-20[aria-invalid='false'][aria-checked='true']+.emotion-22 .emotion-24 {
   stroke: #792dd4;
   fill: #792dd4;
 }
 
-.emotion-21:hover[aria-disabled='false'] .emotion-24[aria-invalid='false'][aria-checked='mixed']+.emotion-26 .emotion-28 {
+.emotion-17:hover[aria-disabled='false'] .emotion-20[aria-invalid='false'][aria-checked='mixed']+.emotion-22 .emotion-24 {
   stroke: #792dd4;
   fill: #792dd4;
 }
 
-.emotion-21:hover[aria-disabled='false'] .emotion-24[aria-invalid='true'][aria-checked='false']+.emotion-26 .emotion-28 {
+.emotion-17:hover[aria-disabled='false'] .emotion-20[aria-invalid='true'][aria-checked='false']+.emotion-22 .emotion-24 {
   stroke: #92103f;
   fill: #ffd3e3;
 }
 
-.emotion-21:hover[aria-disabled='false'] .emotion-24[aria-invalid='true'][aria-checked='true']+.emotion-26 .emotion-28 {
+.emotion-17:hover[aria-disabled='false'] .emotion-20[aria-invalid='true'][aria-checked='true']+.emotion-22 .emotion-24 {
   stroke: #d6175c;
   fill: #d6175c;
 }
 
-.emotion-21 .emotion-24[aria-invalid="true"]+.emotion-26 {
+.emotion-17 .emotion-20[aria-invalid="true"]+.emotion-22 {
   fill: #e51963;
 }
 
-.emotion-21 .emotion-24[aria-invalid="true"]+.emotion-26 .emotion-28 {
+.emotion-17 .emotion-20[aria-invalid="true"]+.emotion-22 .emotion-24 {
   stroke: #e51963;
   fill: #ffebf2;
 }
 
-.emotion-23 {
+.emotion-19 {
   position: absolute;
   white-space: nowrap;
   height: 1.5rem;
@@ -1363,57 +1345,57 @@ exports[`lineChart > renders correctly when data is async 1`] = `
   border-width: 0;
 }
 
-.emotion-23:not(:disabled) {
+.emotion-19:not(:disabled) {
   cursor: pointer;
 }
 
-.emotion-23:disabled {
+.emotion-19:disabled {
   cursor: not-allowed;
 }
 
-.emotion-23:not(:disabled):checked+.emotion-26,
-.emotion-23:not(:disabled)[aria-checked='mixed']+.emotion-26 {
+.emotion-19:not(:disabled):checked+.emotion-22,
+.emotion-19:not(:disabled)[aria-checked='mixed']+.emotion-22 {
   fill: #8c40ef;
 }
 
-.emotion-23:not(:disabled):checked+.emotion-26 .emotion-28,
-.emotion-23:not(:disabled)[aria-checked='mixed']+.emotion-26 .emotion-28 {
+.emotion-19:not(:disabled):checked+.emotion-22 .emotion-24,
+.emotion-19:not(:disabled)[aria-checked='mixed']+.emotion-22 .emotion-24 {
   stroke: #8c40ef;
 }
 
-.emotion-23:not(:disabled)[aria-invalid='true']+.emotion-26,
-.emotion-23:not(:disabled)[aria-invalid='mixed']+.emotion-26 {
+.emotion-19:not(:disabled)[aria-invalid='true']+.emotion-22,
+.emotion-19:not(:disabled)[aria-invalid='mixed']+.emotion-22 {
   fill: #ffebf2;
 }
 
-.emotion-23:not(:disabled)[aria-invalid='true']+.emotion-26 .emotion-28,
-.emotion-23:not(:disabled)[aria-invalid='mixed']+.emotion-26 .emotion-28 {
+.emotion-19:not(:disabled)[aria-invalid='true']+.emotion-22 .emotion-24,
+.emotion-19:not(:disabled)[aria-invalid='mixed']+.emotion-22 .emotion-24 {
   stroke: #b3144d;
 }
 
-.emotion-23:focus+.emotion-26 {
+.emotion-19:focus+.emotion-22 {
   background-color: #f1eefc;
   fill: #ffebf2;
   outline: 1px solid 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-23:focus+.emotion-26 .emotion-28 {
+.emotion-19:focus+.emotion-22 .emotion-24 {
   stroke: #792dd4;
   fill: #e5dbfd;
 }
 
-.emotion-23[aria-invalid='true']:focus+.emotion-26 {
+.emotion-19[aria-invalid='true']:focus+.emotion-22 {
   background-color: #ffebf2;
   fill: #ffebf2;
   outline: 1px solid 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-23[aria-invalid='true']:focus+.emotion-26 .emotion-28 {
+.emotion-19[aria-invalid='true']:focus+.emotion-22 .emotion-24 {
   stroke: #92103f;
   fill: #ffd3e3;
 }
 
-.emotion-23 {
+.emotion-19 {
   position: absolute;
   white-space: nowrap;
   height: 1.5rem;
@@ -1422,57 +1404,57 @@ exports[`lineChart > renders correctly when data is async 1`] = `
   border-width: 0;
 }
 
-.emotion-23:not(:disabled) {
+.emotion-19:not(:disabled) {
   cursor: pointer;
 }
 
-.emotion-23:disabled {
+.emotion-19:disabled {
   cursor: not-allowed;
 }
 
-.emotion-23:not(:disabled):checked+.emotion-26,
-.emotion-23:not(:disabled)[aria-checked='mixed']+.emotion-26 {
+.emotion-19:not(:disabled):checked+.emotion-22,
+.emotion-19:not(:disabled)[aria-checked='mixed']+.emotion-22 {
   fill: #8c40ef;
 }
 
-.emotion-23:not(:disabled):checked+.emotion-26 .emotion-28,
-.emotion-23:not(:disabled)[aria-checked='mixed']+.emotion-26 .emotion-28 {
+.emotion-19:not(:disabled):checked+.emotion-22 .emotion-24,
+.emotion-19:not(:disabled)[aria-checked='mixed']+.emotion-22 .emotion-24 {
   stroke: #8c40ef;
 }
 
-.emotion-23:not(:disabled)[aria-invalid='true']+.emotion-26,
-.emotion-23:not(:disabled)[aria-invalid='mixed']+.emotion-26 {
+.emotion-19:not(:disabled)[aria-invalid='true']+.emotion-22,
+.emotion-19:not(:disabled)[aria-invalid='mixed']+.emotion-22 {
   fill: #ffebf2;
 }
 
-.emotion-23:not(:disabled)[aria-invalid='true']+.emotion-26 .emotion-28,
-.emotion-23:not(:disabled)[aria-invalid='mixed']+.emotion-26 .emotion-28 {
+.emotion-19:not(:disabled)[aria-invalid='true']+.emotion-22 .emotion-24,
+.emotion-19:not(:disabled)[aria-invalid='mixed']+.emotion-22 .emotion-24 {
   stroke: #b3144d;
 }
 
-.emotion-23:focus+.emotion-26 {
+.emotion-19:focus+.emotion-22 {
   background-color: #f1eefc;
   fill: #ffebf2;
   outline: 1px solid 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-23:focus+.emotion-26 .emotion-28 {
+.emotion-19:focus+.emotion-22 .emotion-24 {
   stroke: #792dd4;
   fill: #e5dbfd;
 }
 
-.emotion-23[aria-invalid='true']:focus+.emotion-26 {
+.emotion-19[aria-invalid='true']:focus+.emotion-22 {
   background-color: #ffebf2;
   fill: #ffebf2;
   outline: 1px solid 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-23[aria-invalid='true']:focus+.emotion-26 .emotion-28 {
+.emotion-19[aria-invalid='true']:focus+.emotion-22 .emotion-24 {
   stroke: #92103f;
   fill: #ffd3e3;
 }
 
-.emotion-25 {
+.emotion-21 {
   border-radius: 0.25rem;
   height: 1.5rem;
   width: 1.5rem;
@@ -1480,7 +1462,7 @@ exports[`lineChart > renders correctly when data is async 1`] = `
   min-height: 1.5rem;
 }
 
-.emotion-25 path {
+.emotion-21 path {
   fill: #ffffff;
   -webkit-transform: translate(2px, 2px);
   -moz-transform: translate(2px, 2px);
@@ -1492,7 +1474,7 @@ exports[`lineChart > renders correctly when data is async 1`] = `
   transform: scale(0);
 }
 
-.emotion-25 {
+.emotion-21 {
   border-radius: 0.25rem;
   height: 1.5rem;
   width: 1.5rem;
@@ -1500,7 +1482,7 @@ exports[`lineChart > renders correctly when data is async 1`] = `
   min-height: 1.5rem;
 }
 
-.emotion-25 path {
+.emotion-21 path {
   fill: #ffffff;
   -webkit-transform: translate(2px, 2px);
   -moz-transform: translate(2px, 2px);
@@ -1512,17 +1494,17 @@ exports[`lineChart > renders correctly when data is async 1`] = `
   transform: scale(0);
 }
 
-.emotion-27 {
+.emotion-23 {
   fill: #ffffff;
   stroke: #d9dadd;
 }
 
-.emotion-27 {
+.emotion-23 {
   fill: #ffffff;
   stroke: #d9dadd;
 }
 
-.emotion-29 {
+.emotion-25 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1548,7 +1530,7 @@ exports[`lineChart > renders correctly when data is async 1`] = `
   gap: 0.25rem;
 }
 
-.emotion-29 {
+.emotion-25 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1574,7 +1556,7 @@ exports[`lineChart > renders correctly when data is async 1`] = `
   gap: 0.25rem;
 }
 
-.emotion-31 {
+.emotion-27 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1600,7 +1582,7 @@ exports[`lineChart > renders correctly when data is async 1`] = `
   gap: 0.25rem;
 }
 
-.emotion-31 {
+.emotion-27 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1626,17 +1608,17 @@ exports[`lineChart > renders correctly when data is async 1`] = `
   gap: 0.25rem;
 }
 
-.emotion-33 {
+.emotion-29 {
   width: 100%;
   cursor: pointer;
 }
 
-.emotion-33 {
+.emotion-29 {
   width: 100%;
   cursor: pointer;
 }
 
-.emotion-35 {
+.emotion-31 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1647,7 +1629,7 @@ exports[`lineChart > renders correctly when data is async 1`] = `
   align-items: center;
 }
 
-.emotion-35 {
+.emotion-31 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1658,106 +1640,42 @@ exports[`lineChart > renders correctly when data is async 1`] = `
   align-items: center;
 }
 
-.emotion-37 {
-  color: #3f4250;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-37 {
-  color: #3f4250;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-39 {
+.emotion-33 {
   margin-left: 1rem;
   width: 2rem;
   height: 2px;
   background-color: #5e47be;
 }
 
-.emotion-39 {
+.emotion-33 {
   margin-left: 1rem;
   width: 2rem;
   height: 2px;
   background-color: #5e47be;
 }
 
-.emotion-41 {
-  color: #3f4250;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  text-align: right;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  min-width: 72px;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-41 {
-  color: #3f4250;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  text-align: right;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  min-width: 72px;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-73 {
+.emotion-61 {
   margin-left: 1rem;
   width: 2rem;
   height: 2px;
   background-color: #0083e6;
 }
 
-.emotion-73 {
+.emotion-61 {
   margin-left: 1rem;
   width: 2rem;
   height: 2px;
   background-color: #0083e6;
 }
 
-.emotion-107 {
+.emotion-89 {
   margin-left: 1rem;
   width: 2rem;
   height: 2px;
   background-color: #3ebd8f;
 }
 
-.emotion-107 {
+.emotion-89 {
   margin-left: 1rem;
   width: 2rem;
   height: 2px;
@@ -1786,57 +1704,57 @@ exports[`lineChart > renders correctly when data is async 1`] = `
           Legend
         </div>
         <span
-          class="emotion-5 emotion-6 emotion-7"
+          class="emotion-5 emotion-6 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
         >
           Minimum
         </span>
         <span
-          class="emotion-5 emotion-6 emotion-7"
+          class="emotion-5 emotion-6 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
         >
           Maximum
         </span>
         <span
-          class="emotion-5 emotion-6 emotion-7"
+          class="emotion-5 emotion-6 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
         >
           Average
         </span>
         <span
-          class="emotion-5 emotion-6 emotion-7"
+          class="emotion-5 emotion-6 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
         >
           Current
         </span>
       </div>
       <div
-        class="emotion-17"
+        class="emotion-13"
       >
         <div
-          class="emotion-18"
+          class="emotion-14"
         >
           <div
             class="emotion-3 emotion-4"
           >
             <div
               aria-disabled="false"
-              class="emotion-21 emotion-22"
+              class="emotion-17 emotion-18"
               data-checked="true"
               data-error="false"
             >
               <input
                 aria-checked="true"
                 aria-invalid="false"
-                class="emotion-23 emotion-24"
-                id="_r_1u_"
+                class="emotion-19 emotion-20"
+                id="«r1u»"
                 name="lineChartMultiple1"
                 type="checkbox"
               />
               <svg
-                class="emotion-25 emotion-26"
+                class="emotion-21 emotion-22"
                 fill="none"
                 viewBox="0 0 24 24"
               >
                 <g>
                   <rect
-                    class="emotion-27 emotion-28"
+                    class="emotion-23 emotion-24"
                     height="16"
                     rx="0.125rem"
                     stroke-width="2"
@@ -1857,25 +1775,25 @@ exports[`lineChart > renders correctly when data is async 1`] = `
                 </g>
               </svg>
               <div
-                class="emotion-29 emotion-30"
+                class="emotion-25 emotion-26"
               >
                 <div
-                  class="emotion-31 emotion-30"
+                  class="emotion-27 emotion-26"
                 >
                   <label
-                    class="emotion-33 emotion-34"
-                    for="_r_1u_"
+                    class="emotion-29 emotion-30"
+                    for="«r1u»"
                   >
                     <div
-                      class="emotion-35 emotion-36"
+                      class="emotion-31 emotion-32"
                     >
                       <span
-                        class="emotion-37 emotion-7"
+                        class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
                       >
                         Serie 1
                       </span>
                       <div
-                        class="emotion-39"
+                        class="emotion-33"
                         data-testid="label-lineChartMultiple1"
                       />
                     </div>
@@ -1885,54 +1803,54 @@ exports[`lineChart > renders correctly when data is async 1`] = `
             </div>
           </div>
           <span
-            class="emotion-5 emotion-41 emotion-7"
+            class="emotion-5 emotion-6 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
           >
             -9
           </span>
           <span
-            class="emotion-5 emotion-41 emotion-7"
+            class="emotion-5 emotion-6 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
           >
             55
           </span>
           <span
-            class="emotion-5 emotion-41 emotion-7"
+            class="emotion-5 emotion-6 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
           >
             9.27
           </span>
           <span
-            class="emotion-5 emotion-41 emotion-7"
+            class="emotion-5 emotion-6 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
           >
             0
           </span>
         </div>
         <div
-          class="emotion-18"
+          class="emotion-14"
         >
           <div
             class="emotion-3 emotion-4"
           >
             <div
               aria-disabled="false"
-              class="emotion-21 emotion-22"
+              class="emotion-17 emotion-18"
               data-checked="true"
               data-error="false"
             >
               <input
                 aria-checked="true"
                 aria-invalid="false"
-                class="emotion-23 emotion-24"
-                id="_r_25_"
+                class="emotion-19 emotion-20"
+                id="«r25»"
                 name="lineChartMultiple2"
                 type="checkbox"
               />
               <svg
-                class="emotion-25 emotion-26"
+                class="emotion-21 emotion-22"
                 fill="none"
                 viewBox="0 0 24 24"
               >
                 <g>
                   <rect
-                    class="emotion-27 emotion-28"
+                    class="emotion-23 emotion-24"
                     height="16"
                     rx="0.125rem"
                     stroke-width="2"
@@ -1953,25 +1871,25 @@ exports[`lineChart > renders correctly when data is async 1`] = `
                 </g>
               </svg>
               <div
-                class="emotion-29 emotion-30"
+                class="emotion-25 emotion-26"
               >
                 <div
-                  class="emotion-31 emotion-30"
+                  class="emotion-27 emotion-26"
                 >
                   <label
-                    class="emotion-33 emotion-34"
-                    for="_r_25_"
+                    class="emotion-29 emotion-30"
+                    for="«r25»"
                   >
                     <div
-                      class="emotion-35 emotion-36"
+                      class="emotion-31 emotion-32"
                     >
                       <span
-                        class="emotion-37 emotion-7"
+                        class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
                       >
                         Serie 2
                       </span>
                       <div
-                        class="emotion-73"
+                        class="emotion-61"
                         data-testid="label-lineChartMultiple2"
                       />
                     </div>
@@ -1981,54 +1899,54 @@ exports[`lineChart > renders correctly when data is async 1`] = `
             </div>
           </div>
           <span
-            class="emotion-5 emotion-41 emotion-7"
+            class="emotion-5 emotion-6 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
           >
             -14
           </span>
           <span
-            class="emotion-5 emotion-41 emotion-7"
+            class="emotion-5 emotion-6 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
           >
             76
           </span>
           <span
-            class="emotion-5 emotion-41 emotion-7"
+            class="emotion-5 emotion-6 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
           >
             7.73
           </span>
           <span
-            class="emotion-5 emotion-41 emotion-7"
+            class="emotion-5 emotion-6 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
           >
             0
           </span>
         </div>
         <div
-          class="emotion-18"
+          class="emotion-14"
         >
           <div
             class="emotion-3 emotion-4"
           >
             <div
               aria-disabled="false"
-              class="emotion-21 emotion-22"
+              class="emotion-17 emotion-18"
               data-checked="true"
               data-error="false"
             >
               <input
                 aria-checked="true"
                 aria-invalid="false"
-                class="emotion-23 emotion-24"
-                id="_r_2c_"
+                class="emotion-19 emotion-20"
+                id="«r2c»"
                 name="lineChartMultiple3"
                 type="checkbox"
               />
               <svg
-                class="emotion-25 emotion-26"
+                class="emotion-21 emotion-22"
                 fill="none"
                 viewBox="0 0 24 24"
               >
                 <g>
                   <rect
-                    class="emotion-27 emotion-28"
+                    class="emotion-23 emotion-24"
                     height="16"
                     rx="0.125rem"
                     stroke-width="2"
@@ -2049,25 +1967,25 @@ exports[`lineChart > renders correctly when data is async 1`] = `
                 </g>
               </svg>
               <div
-                class="emotion-29 emotion-30"
+                class="emotion-25 emotion-26"
               >
                 <div
-                  class="emotion-31 emotion-30"
+                  class="emotion-27 emotion-26"
                 >
                   <label
-                    class="emotion-33 emotion-34"
-                    for="_r_2c_"
+                    class="emotion-29 emotion-30"
+                    for="«r2c»"
                   >
                     <div
-                      class="emotion-35 emotion-36"
+                      class="emotion-31 emotion-32"
                     >
                       <span
-                        class="emotion-37 emotion-7"
+                        class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
                       >
                         Serie 3
                       </span>
                       <div
-                        class="emotion-107"
+                        class="emotion-89"
                         data-testid="label-lineChartMultiple3"
                       />
                     </div>
@@ -2077,22 +1995,22 @@ exports[`lineChart > renders correctly when data is async 1`] = `
             </div>
           </div>
           <span
-            class="emotion-5 emotion-41 emotion-7"
+            class="emotion-5 emotion-6 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
           >
             -38
           </span>
           <span
-            class="emotion-5 emotion-41 emotion-7"
+            class="emotion-5 emotion-6 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
           >
             93
           </span>
           <span
-            class="emotion-5 emotion-41 emotion-7"
+            class="emotion-5 emotion-6 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
           >
             21.53
           </span>
           <span
-            class="emotion-5 emotion-41 emotion-7"
+            class="emotion-5 emotion-6 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
           >
             34
           </span>
@@ -2159,16 +2077,7 @@ exports[`lineChart > renders correctly when legend is deselected 1`] = `
   flex: 6;
 }
 
-.emotion-6 {
-  color: #3f4250;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.emotion-5 {
   text-align: right;
   -webkit-flex: 1;
   -ms-flex: 1;
@@ -2179,16 +2088,7 @@ exports[`lineChart > renders correctly when legend is deselected 1`] = `
   align-self: center;
 }
 
-.emotion-6 {
-  color: #3f4250;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.emotion-5 {
   text-align: right;
   -webkit-flex: 1;
   -ms-flex: 1;
@@ -2199,15 +2099,15 @@ exports[`lineChart > renders correctly when legend is deselected 1`] = `
   align-self: center;
 }
 
-.emotion-17>:not(:last-child) {
+.emotion-13>:not(:last-child) {
   border-bottom: 1px solid #e9eaeb;
 }
 
-.emotion-17>:not(:last-child) {
+.emotion-13>:not(:last-child) {
   border-bottom: 1px solid #e9eaeb;
 }
 
-.emotion-18 {
+.emotion-14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2215,11 +2115,11 @@ exports[`lineChart > renders correctly when legend is deselected 1`] = `
   padding: 0.25rem 0;
 }
 
-.emotion-18>:not(:last-child) {
+.emotion-14>:not(:last-child) {
   margin-right: 0.5rem;
 }
 
-.emotion-18 {
+.emotion-14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2227,11 +2127,11 @@ exports[`lineChart > renders correctly when legend is deselected 1`] = `
   padding: 0.25rem 0;
 }
 
-.emotion-18>:not(:last-child) {
+.emotion-14>:not(:last-child) {
   margin-right: 0.5rem;
 }
 
-.emotion-21 {
+.emotion-17 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -2244,65 +2144,65 @@ exports[`lineChart > renders correctly when legend is deselected 1`] = `
   gap: 0.5rem;
 }
 
-.emotion-21 .emotion-34 {
+.emotion-17 .emotion-30 {
   cursor: pointer;
 }
 
-.emotion-21[aria-disabled='true'] {
+.emotion-17[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.emotion-21[aria-disabled='true'] .emotion-34 {
+.emotion-17[aria-disabled='true'] .emotion-30 {
   cursor: not-allowed;
 }
 
-.emotion-21[aria-disabled='true'] .emotion-26 {
+.emotion-17[aria-disabled='true'] .emotion-22 {
   fill: #e9eaeb;
 }
 
-.emotion-21[aria-disabled='true'] .emotion-26 .emotion-28 {
+.emotion-17[aria-disabled='true'] .emotion-22 .emotion-24 {
   stroke: #d9dadd;
   fill: #f3f3f4;
 }
 
-.emotion-21[aria-disabled='true'] .emotion-24[aria-invalid="true"]:checked+.emotion-26 {
+.emotion-17[aria-disabled='true'] .emotion-20[aria-invalid="true"]:checked+.emotion-22 {
   fill: #ffd3e3;
 }
 
-.emotion-21[aria-disabled='true'] .emotion-24[aria-invalid="true"]:checked+.emotion-26 .emotion-28 {
+.emotion-17[aria-disabled='true'] .emotion-20[aria-invalid="true"]:checked+.emotion-22 .emotion-24 {
   stroke: #ffd3e3;
   fill: #ffd3e3;
 }
 
-.emotion-21[aria-disabled='true'] .emotion-24[aria-invalid="true"]+.emotion-26 {
+.emotion-17[aria-disabled='true'] .emotion-20[aria-invalid="true"]+.emotion-22 {
   fill: #ffebf2;
 }
 
-.emotion-21[aria-disabled='true'] .emotion-24[aria-invalid="true"]+.emotion-26 .emotion-28 {
+.emotion-17[aria-disabled='true'] .emotion-20[aria-invalid="true"]+.emotion-22 .emotion-24 {
   stroke: #ffbbd3;
   fill: #ffebf2;
 }
 
-.emotion-21[aria-disabled='true'] .emotion-24:checked+.emotion-26 {
+.emotion-17[aria-disabled='true'] .emotion-20:checked+.emotion-22 {
   fill: #e5dbfd;
 }
 
-.emotion-21[aria-disabled='true'] .emotion-24:checked+.emotion-26 .emotion-28 {
+.emotion-17[aria-disabled='true'] .emotion-20:checked+.emotion-22 .emotion-24 {
   stroke: #d8c5fc;
   fill: #d8c5fc;
 }
 
-.emotion-21[aria-disabled='true'] .emotion-24[aria-checked="mixed"]+.emotion-26 {
+.emotion-17[aria-disabled='true'] .emotion-20[aria-checked="mixed"]+.emotion-22 {
   fill: #e5dbfd;
 }
 
-.emotion-21[aria-disabled='true'] .emotion-24[aria-checked="mixed"]+.emotion-26 .emotion-28 {
+.emotion-17[aria-disabled='true'] .emotion-20[aria-checked="mixed"]+.emotion-22 .emotion-24 {
   stroke: #e5dbfd;
   fill: #e5dbfd;
 }
 
-.emotion-21 .emotion-24:checked+.emotion-26 path {
+.emotion-17 .emotion-20:checked+.emotion-22 path {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -2316,60 +2216,60 @@ exports[`lineChart > renders correctly when legend is deselected 1`] = `
   transform: translate(2px, 2px);
 }
 
-.emotion-21 .emotion-24:checked+.emotion-26 .emotion-28 {
+.emotion-17 .emotion-20:checked+.emotion-22 .emotion-24 {
   fill: #8c40ef;
   stroke: #8c40ef;
 }
 
-.emotion-21 .emotion-24[aria-invalid="true"]:checked+.emotion-26 .emotion-28 {
+.emotion-17 .emotion-20[aria-invalid="true"]:checked+.emotion-22 .emotion-24 {
   fill: #e51963;
   stroke: #e51963;
 }
 
-.emotion-21 .emotion-24[aria-checked="mixed"]+.emotion-26 .eqr7bqq5 {
+.emotion-17 .emotion-20[aria-checked="mixed"]+.emotion-22 .eqr7bqq5 {
   fill: #ffffff;
 }
 
-.emotion-21 .emotion-24[aria-checked="mixed"]+.emotion-26 .emotion-28 {
+.emotion-17 .emotion-20[aria-checked="mixed"]+.emotion-22 .emotion-24 {
   fill: #8c40ef;
   stroke: #8c40ef;
 }
 
-.emotion-21:hover[aria-disabled='false'] .emotion-24[aria-invalid='false'][aria-checked='false']+.emotion-26 .emotion-28 {
+.emotion-17:hover[aria-disabled='false'] .emotion-20[aria-invalid='false'][aria-checked='false']+.emotion-22 .emotion-24 {
   stroke: #792dd4;
   fill: #e5dbfd;
 }
 
-.emotion-21:hover[aria-disabled='false'] .emotion-24[aria-invalid='false'][aria-checked='true']+.emotion-26 .emotion-28 {
+.emotion-17:hover[aria-disabled='false'] .emotion-20[aria-invalid='false'][aria-checked='true']+.emotion-22 .emotion-24 {
   stroke: #792dd4;
   fill: #792dd4;
 }
 
-.emotion-21:hover[aria-disabled='false'] .emotion-24[aria-invalid='false'][aria-checked='mixed']+.emotion-26 .emotion-28 {
+.emotion-17:hover[aria-disabled='false'] .emotion-20[aria-invalid='false'][aria-checked='mixed']+.emotion-22 .emotion-24 {
   stroke: #792dd4;
   fill: #792dd4;
 }
 
-.emotion-21:hover[aria-disabled='false'] .emotion-24[aria-invalid='true'][aria-checked='false']+.emotion-26 .emotion-28 {
+.emotion-17:hover[aria-disabled='false'] .emotion-20[aria-invalid='true'][aria-checked='false']+.emotion-22 .emotion-24 {
   stroke: #92103f;
   fill: #ffd3e3;
 }
 
-.emotion-21:hover[aria-disabled='false'] .emotion-24[aria-invalid='true'][aria-checked='true']+.emotion-26 .emotion-28 {
+.emotion-17:hover[aria-disabled='false'] .emotion-20[aria-invalid='true'][aria-checked='true']+.emotion-22 .emotion-24 {
   stroke: #d6175c;
   fill: #d6175c;
 }
 
-.emotion-21 .emotion-24[aria-invalid="true"]+.emotion-26 {
+.emotion-17 .emotion-20[aria-invalid="true"]+.emotion-22 {
   fill: #e51963;
 }
 
-.emotion-21 .emotion-24[aria-invalid="true"]+.emotion-26 .emotion-28 {
+.emotion-17 .emotion-20[aria-invalid="true"]+.emotion-22 .emotion-24 {
   stroke: #e51963;
   fill: #ffebf2;
 }
 
-.emotion-21 {
+.emotion-17 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -2382,65 +2282,65 @@ exports[`lineChart > renders correctly when legend is deselected 1`] = `
   gap: 0.5rem;
 }
 
-.emotion-21 .emotion-34 {
+.emotion-17 .emotion-30 {
   cursor: pointer;
 }
 
-.emotion-21[aria-disabled='true'] {
+.emotion-17[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.emotion-21[aria-disabled='true'] .emotion-34 {
+.emotion-17[aria-disabled='true'] .emotion-30 {
   cursor: not-allowed;
 }
 
-.emotion-21[aria-disabled='true'] .emotion-26 {
+.emotion-17[aria-disabled='true'] .emotion-22 {
   fill: #e9eaeb;
 }
 
-.emotion-21[aria-disabled='true'] .emotion-26 .emotion-28 {
+.emotion-17[aria-disabled='true'] .emotion-22 .emotion-24 {
   stroke: #d9dadd;
   fill: #f3f3f4;
 }
 
-.emotion-21[aria-disabled='true'] .emotion-24[aria-invalid="true"]:checked+.emotion-26 {
+.emotion-17[aria-disabled='true'] .emotion-20[aria-invalid="true"]:checked+.emotion-22 {
   fill: #ffd3e3;
 }
 
-.emotion-21[aria-disabled='true'] .emotion-24[aria-invalid="true"]:checked+.emotion-26 .emotion-28 {
+.emotion-17[aria-disabled='true'] .emotion-20[aria-invalid="true"]:checked+.emotion-22 .emotion-24 {
   stroke: #ffd3e3;
   fill: #ffd3e3;
 }
 
-.emotion-21[aria-disabled='true'] .emotion-24[aria-invalid="true"]+.emotion-26 {
+.emotion-17[aria-disabled='true'] .emotion-20[aria-invalid="true"]+.emotion-22 {
   fill: #ffebf2;
 }
 
-.emotion-21[aria-disabled='true'] .emotion-24[aria-invalid="true"]+.emotion-26 .emotion-28 {
+.emotion-17[aria-disabled='true'] .emotion-20[aria-invalid="true"]+.emotion-22 .emotion-24 {
   stroke: #ffbbd3;
   fill: #ffebf2;
 }
 
-.emotion-21[aria-disabled='true'] .emotion-24:checked+.emotion-26 {
+.emotion-17[aria-disabled='true'] .emotion-20:checked+.emotion-22 {
   fill: #e5dbfd;
 }
 
-.emotion-21[aria-disabled='true'] .emotion-24:checked+.emotion-26 .emotion-28 {
+.emotion-17[aria-disabled='true'] .emotion-20:checked+.emotion-22 .emotion-24 {
   stroke: #d8c5fc;
   fill: #d8c5fc;
 }
 
-.emotion-21[aria-disabled='true'] .emotion-24[aria-checked="mixed"]+.emotion-26 {
+.emotion-17[aria-disabled='true'] .emotion-20[aria-checked="mixed"]+.emotion-22 {
   fill: #e5dbfd;
 }
 
-.emotion-21[aria-disabled='true'] .emotion-24[aria-checked="mixed"]+.emotion-26 .emotion-28 {
+.emotion-17[aria-disabled='true'] .emotion-20[aria-checked="mixed"]+.emotion-22 .emotion-24 {
   stroke: #e5dbfd;
   fill: #e5dbfd;
 }
 
-.emotion-21 .emotion-24:checked+.emotion-26 path {
+.emotion-17 .emotion-20:checked+.emotion-22 path {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -2454,60 +2354,60 @@ exports[`lineChart > renders correctly when legend is deselected 1`] = `
   transform: translate(2px, 2px);
 }
 
-.emotion-21 .emotion-24:checked+.emotion-26 .emotion-28 {
+.emotion-17 .emotion-20:checked+.emotion-22 .emotion-24 {
   fill: #8c40ef;
   stroke: #8c40ef;
 }
 
-.emotion-21 .emotion-24[aria-invalid="true"]:checked+.emotion-26 .emotion-28 {
+.emotion-17 .emotion-20[aria-invalid="true"]:checked+.emotion-22 .emotion-24 {
   fill: #e51963;
   stroke: #e51963;
 }
 
-.emotion-21 .emotion-24[aria-checked="mixed"]+.emotion-26 .eqr7bqq5 {
+.emotion-17 .emotion-20[aria-checked="mixed"]+.emotion-22 .eqr7bqq5 {
   fill: #ffffff;
 }
 
-.emotion-21 .emotion-24[aria-checked="mixed"]+.emotion-26 .emotion-28 {
+.emotion-17 .emotion-20[aria-checked="mixed"]+.emotion-22 .emotion-24 {
   fill: #8c40ef;
   stroke: #8c40ef;
 }
 
-.emotion-21:hover[aria-disabled='false'] .emotion-24[aria-invalid='false'][aria-checked='false']+.emotion-26 .emotion-28 {
+.emotion-17:hover[aria-disabled='false'] .emotion-20[aria-invalid='false'][aria-checked='false']+.emotion-22 .emotion-24 {
   stroke: #792dd4;
   fill: #e5dbfd;
 }
 
-.emotion-21:hover[aria-disabled='false'] .emotion-24[aria-invalid='false'][aria-checked='true']+.emotion-26 .emotion-28 {
+.emotion-17:hover[aria-disabled='false'] .emotion-20[aria-invalid='false'][aria-checked='true']+.emotion-22 .emotion-24 {
   stroke: #792dd4;
   fill: #792dd4;
 }
 
-.emotion-21:hover[aria-disabled='false'] .emotion-24[aria-invalid='false'][aria-checked='mixed']+.emotion-26 .emotion-28 {
+.emotion-17:hover[aria-disabled='false'] .emotion-20[aria-invalid='false'][aria-checked='mixed']+.emotion-22 .emotion-24 {
   stroke: #792dd4;
   fill: #792dd4;
 }
 
-.emotion-21:hover[aria-disabled='false'] .emotion-24[aria-invalid='true'][aria-checked='false']+.emotion-26 .emotion-28 {
+.emotion-17:hover[aria-disabled='false'] .emotion-20[aria-invalid='true'][aria-checked='false']+.emotion-22 .emotion-24 {
   stroke: #92103f;
   fill: #ffd3e3;
 }
 
-.emotion-21:hover[aria-disabled='false'] .emotion-24[aria-invalid='true'][aria-checked='true']+.emotion-26 .emotion-28 {
+.emotion-17:hover[aria-disabled='false'] .emotion-20[aria-invalid='true'][aria-checked='true']+.emotion-22 .emotion-24 {
   stroke: #d6175c;
   fill: #d6175c;
 }
 
-.emotion-21 .emotion-24[aria-invalid="true"]+.emotion-26 {
+.emotion-17 .emotion-20[aria-invalid="true"]+.emotion-22 {
   fill: #e51963;
 }
 
-.emotion-21 .emotion-24[aria-invalid="true"]+.emotion-26 .emotion-28 {
+.emotion-17 .emotion-20[aria-invalid="true"]+.emotion-22 .emotion-24 {
   stroke: #e51963;
   fill: #ffebf2;
 }
 
-.emotion-23 {
+.emotion-19 {
   position: absolute;
   white-space: nowrap;
   height: 1.5rem;
@@ -2516,57 +2416,57 @@ exports[`lineChart > renders correctly when legend is deselected 1`] = `
   border-width: 0;
 }
 
-.emotion-23:not(:disabled) {
+.emotion-19:not(:disabled) {
   cursor: pointer;
 }
 
-.emotion-23:disabled {
+.emotion-19:disabled {
   cursor: not-allowed;
 }
 
-.emotion-23:not(:disabled):checked+.emotion-26,
-.emotion-23:not(:disabled)[aria-checked='mixed']+.emotion-26 {
+.emotion-19:not(:disabled):checked+.emotion-22,
+.emotion-19:not(:disabled)[aria-checked='mixed']+.emotion-22 {
   fill: #8c40ef;
 }
 
-.emotion-23:not(:disabled):checked+.emotion-26 .emotion-28,
-.emotion-23:not(:disabled)[aria-checked='mixed']+.emotion-26 .emotion-28 {
+.emotion-19:not(:disabled):checked+.emotion-22 .emotion-24,
+.emotion-19:not(:disabled)[aria-checked='mixed']+.emotion-22 .emotion-24 {
   stroke: #8c40ef;
 }
 
-.emotion-23:not(:disabled)[aria-invalid='true']+.emotion-26,
-.emotion-23:not(:disabled)[aria-invalid='mixed']+.emotion-26 {
+.emotion-19:not(:disabled)[aria-invalid='true']+.emotion-22,
+.emotion-19:not(:disabled)[aria-invalid='mixed']+.emotion-22 {
   fill: #ffebf2;
 }
 
-.emotion-23:not(:disabled)[aria-invalid='true']+.emotion-26 .emotion-28,
-.emotion-23:not(:disabled)[aria-invalid='mixed']+.emotion-26 .emotion-28 {
+.emotion-19:not(:disabled)[aria-invalid='true']+.emotion-22 .emotion-24,
+.emotion-19:not(:disabled)[aria-invalid='mixed']+.emotion-22 .emotion-24 {
   stroke: #b3144d;
 }
 
-.emotion-23:focus+.emotion-26 {
+.emotion-19:focus+.emotion-22 {
   background-color: #f1eefc;
   fill: #ffebf2;
   outline: 1px solid 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-23:focus+.emotion-26 .emotion-28 {
+.emotion-19:focus+.emotion-22 .emotion-24 {
   stroke: #792dd4;
   fill: #e5dbfd;
 }
 
-.emotion-23[aria-invalid='true']:focus+.emotion-26 {
+.emotion-19[aria-invalid='true']:focus+.emotion-22 {
   background-color: #ffebf2;
   fill: #ffebf2;
   outline: 1px solid 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-23[aria-invalid='true']:focus+.emotion-26 .emotion-28 {
+.emotion-19[aria-invalid='true']:focus+.emotion-22 .emotion-24 {
   stroke: #92103f;
   fill: #ffd3e3;
 }
 
-.emotion-23 {
+.emotion-19 {
   position: absolute;
   white-space: nowrap;
   height: 1.5rem;
@@ -2575,57 +2475,57 @@ exports[`lineChart > renders correctly when legend is deselected 1`] = `
   border-width: 0;
 }
 
-.emotion-23:not(:disabled) {
+.emotion-19:not(:disabled) {
   cursor: pointer;
 }
 
-.emotion-23:disabled {
+.emotion-19:disabled {
   cursor: not-allowed;
 }
 
-.emotion-23:not(:disabled):checked+.emotion-26,
-.emotion-23:not(:disabled)[aria-checked='mixed']+.emotion-26 {
+.emotion-19:not(:disabled):checked+.emotion-22,
+.emotion-19:not(:disabled)[aria-checked='mixed']+.emotion-22 {
   fill: #8c40ef;
 }
 
-.emotion-23:not(:disabled):checked+.emotion-26 .emotion-28,
-.emotion-23:not(:disabled)[aria-checked='mixed']+.emotion-26 .emotion-28 {
+.emotion-19:not(:disabled):checked+.emotion-22 .emotion-24,
+.emotion-19:not(:disabled)[aria-checked='mixed']+.emotion-22 .emotion-24 {
   stroke: #8c40ef;
 }
 
-.emotion-23:not(:disabled)[aria-invalid='true']+.emotion-26,
-.emotion-23:not(:disabled)[aria-invalid='mixed']+.emotion-26 {
+.emotion-19:not(:disabled)[aria-invalid='true']+.emotion-22,
+.emotion-19:not(:disabled)[aria-invalid='mixed']+.emotion-22 {
   fill: #ffebf2;
 }
 
-.emotion-23:not(:disabled)[aria-invalid='true']+.emotion-26 .emotion-28,
-.emotion-23:not(:disabled)[aria-invalid='mixed']+.emotion-26 .emotion-28 {
+.emotion-19:not(:disabled)[aria-invalid='true']+.emotion-22 .emotion-24,
+.emotion-19:not(:disabled)[aria-invalid='mixed']+.emotion-22 .emotion-24 {
   stroke: #b3144d;
 }
 
-.emotion-23:focus+.emotion-26 {
+.emotion-19:focus+.emotion-22 {
   background-color: #f1eefc;
   fill: #ffebf2;
   outline: 1px solid 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-23:focus+.emotion-26 .emotion-28 {
+.emotion-19:focus+.emotion-22 .emotion-24 {
   stroke: #792dd4;
   fill: #e5dbfd;
 }
 
-.emotion-23[aria-invalid='true']:focus+.emotion-26 {
+.emotion-19[aria-invalid='true']:focus+.emotion-22 {
   background-color: #ffebf2;
   fill: #ffebf2;
   outline: 1px solid 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-23[aria-invalid='true']:focus+.emotion-26 .emotion-28 {
+.emotion-19[aria-invalid='true']:focus+.emotion-22 .emotion-24 {
   stroke: #92103f;
   fill: #ffd3e3;
 }
 
-.emotion-25 {
+.emotion-21 {
   border-radius: 0.25rem;
   height: 1.5rem;
   width: 1.5rem;
@@ -2633,7 +2533,7 @@ exports[`lineChart > renders correctly when legend is deselected 1`] = `
   min-height: 1.5rem;
 }
 
-.emotion-25 path {
+.emotion-21 path {
   fill: #ffffff;
   -webkit-transform: translate(2px, 2px);
   -moz-transform: translate(2px, 2px);
@@ -2645,7 +2545,7 @@ exports[`lineChart > renders correctly when legend is deselected 1`] = `
   transform: scale(0);
 }
 
-.emotion-25 {
+.emotion-21 {
   border-radius: 0.25rem;
   height: 1.5rem;
   width: 1.5rem;
@@ -2653,7 +2553,7 @@ exports[`lineChart > renders correctly when legend is deselected 1`] = `
   min-height: 1.5rem;
 }
 
-.emotion-25 path {
+.emotion-21 path {
   fill: #ffffff;
   -webkit-transform: translate(2px, 2px);
   -moz-transform: translate(2px, 2px);
@@ -2665,17 +2565,17 @@ exports[`lineChart > renders correctly when legend is deselected 1`] = `
   transform: scale(0);
 }
 
-.emotion-27 {
+.emotion-23 {
   fill: #ffffff;
   stroke: #d9dadd;
 }
 
-.emotion-27 {
+.emotion-23 {
   fill: #ffffff;
   stroke: #d9dadd;
 }
 
-.emotion-29 {
+.emotion-25 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2701,7 +2601,7 @@ exports[`lineChart > renders correctly when legend is deselected 1`] = `
   gap: 0.25rem;
 }
 
-.emotion-29 {
+.emotion-25 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2727,7 +2627,7 @@ exports[`lineChart > renders correctly when legend is deselected 1`] = `
   gap: 0.25rem;
 }
 
-.emotion-31 {
+.emotion-27 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2753,7 +2653,7 @@ exports[`lineChart > renders correctly when legend is deselected 1`] = `
   gap: 0.25rem;
 }
 
-.emotion-31 {
+.emotion-27 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2779,17 +2679,17 @@ exports[`lineChart > renders correctly when legend is deselected 1`] = `
   gap: 0.25rem;
 }
 
-.emotion-33 {
+.emotion-29 {
   width: 100%;
   cursor: pointer;
 }
 
-.emotion-33 {
+.emotion-29 {
   width: 100%;
   cursor: pointer;
 }
 
-.emotion-35 {
+.emotion-31 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2800,7 +2700,7 @@ exports[`lineChart > renders correctly when legend is deselected 1`] = `
   align-items: center;
 }
 
-.emotion-35 {
+.emotion-31 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2811,82 +2711,18 @@ exports[`lineChart > renders correctly when legend is deselected 1`] = `
   align-items: center;
 }
 
-.emotion-37 {
-  color: #3f4250;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-37 {
-  color: #3f4250;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-39 {
+.emotion-33 {
   margin-left: 1rem;
   width: 2rem;
   height: 2px;
   background-color: #5e47be;
 }
 
-.emotion-39 {
+.emotion-33 {
   margin-left: 1rem;
   width: 2rem;
   height: 2px;
   background-color: #5e47be;
-}
-
-.emotion-41 {
-  color: #3f4250;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  text-align: right;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  min-width: 72px;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-41 {
-  color: #3f4250;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  text-align: right;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  min-width: 72px;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
 }
 
 <div
@@ -2911,38 +2747,38 @@ exports[`lineChart > renders correctly when legend is deselected 1`] = `
           Legend
         </div>
         <span
-          class="emotion-5 emotion-6 emotion-7"
+          class="emotion-5 emotion-6 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
         >
           Minimum
         </span>
         <span
-          class="emotion-5 emotion-6 emotion-7"
+          class="emotion-5 emotion-6 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
         >
           Maximum
         </span>
         <span
-          class="emotion-5 emotion-6 emotion-7"
+          class="emotion-5 emotion-6 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
         >
           Average
         </span>
         <span
-          class="emotion-5 emotion-6 emotion-7"
+          class="emotion-5 emotion-6 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
         >
           Current
         </span>
       </div>
       <div
-        class="emotion-17"
+        class="emotion-13"
       >
         <div
-          class="emotion-18"
+          class="emotion-14"
         >
           <div
             class="emotion-3 emotion-4"
           >
             <div
               aria-disabled="false"
-              class="emotion-21 emotion-22"
+              class="emotion-17 emotion-18"
               data-checked="false"
               data-error="false"
             >
@@ -2950,19 +2786,19 @@ exports[`lineChart > renders correctly when legend is deselected 1`] = `
                 aria-checked="false"
                 aria-invalid="false"
                 checked=""
-                class="emotion-23 emotion-24"
-                id="_r_1j_"
+                class="emotion-19 emotion-20"
+                id="«r1j»"
                 name="lineChartSerie"
                 type="checkbox"
               />
               <svg
-                class="emotion-25 emotion-26"
+                class="emotion-21 emotion-22"
                 fill="none"
                 viewBox="0 0 24 24"
               >
                 <g>
                   <rect
-                    class="emotion-27 emotion-28"
+                    class="emotion-23 emotion-24"
                     height="16"
                     rx="0.125rem"
                     stroke-width="2"
@@ -2983,25 +2819,25 @@ exports[`lineChart > renders correctly when legend is deselected 1`] = `
                 </g>
               </svg>
               <div
-                class="emotion-29 emotion-30"
+                class="emotion-25 emotion-26"
               >
                 <div
-                  class="emotion-31 emotion-30"
+                  class="emotion-27 emotion-26"
                 >
                   <label
-                    class="emotion-33 emotion-34"
-                    for="_r_1j_"
+                    class="emotion-29 emotion-30"
+                    for="«r1j»"
                   >
                     <div
-                      class="emotion-35 emotion-36"
+                      class="emotion-31 emotion-32"
                     >
                       <span
-                        class="emotion-37 emotion-7"
+                        class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
                       >
                         line chart values
                       </span>
                       <div
-                        class="emotion-39"
+                        class="emotion-33"
                         data-testid="label-lineChartSerie"
                       />
                     </div>
@@ -3011,22 +2847,22 @@ exports[`lineChart > renders correctly when legend is deselected 1`] = `
             </div>
           </div>
           <span
-            class="emotion-5 emotion-41 emotion-7"
+            class="emotion-5 emotion-6 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
           >
             -7
           </span>
           <span
-            class="emotion-5 emotion-41 emotion-7"
+            class="emotion-5 emotion-6 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
           >
             7
           </span>
           <span
-            class="emotion-5 emotion-41 emotion-7"
+            class="emotion-5 emotion-6 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
           >
             0.2
           </span>
           <span
-            class="emotion-5 emotion-41 emotion-7"
+            class="emotion-5 emotion-6 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
           >
             7
           </span>
@@ -3098,16 +2934,7 @@ exports[`lineChart > renders correctly with detailed legend 1`] = `
   flex: 6;
 }
 
-.emotion-6 {
-  color: #3f4250;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.emotion-5 {
   text-align: right;
   -webkit-flex: 1;
   -ms-flex: 1;
@@ -3118,11 +2945,11 @@ exports[`lineChart > renders correctly with detailed legend 1`] = `
   align-self: center;
 }
 
-.emotion-17>:not(:last-child) {
+.emotion-13>:not(:last-child) {
   border-bottom: 1px solid #e9eaeb;
 }
 
-.emotion-18 {
+.emotion-14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3130,11 +2957,11 @@ exports[`lineChart > renders correctly with detailed legend 1`] = `
   padding: 0.25rem 0;
 }
 
-.emotion-18>:not(:last-child) {
+.emotion-14>:not(:last-child) {
   margin-right: 0.5rem;
 }
 
-.emotion-21 {
+.emotion-17 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -3147,65 +2974,65 @@ exports[`lineChart > renders correctly with detailed legend 1`] = `
   gap: 0.5rem;
 }
 
-.emotion-21 .emotion-34 {
+.emotion-17 .emotion-30 {
   cursor: pointer;
 }
 
-.emotion-21[aria-disabled='true'] {
+.emotion-17[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.emotion-21[aria-disabled='true'] .emotion-34 {
+.emotion-17[aria-disabled='true'] .emotion-30 {
   cursor: not-allowed;
 }
 
-.emotion-21[aria-disabled='true'] .emotion-26 {
+.emotion-17[aria-disabled='true'] .emotion-22 {
   fill: #e9eaeb;
 }
 
-.emotion-21[aria-disabled='true'] .emotion-26 .emotion-28 {
+.emotion-17[aria-disabled='true'] .emotion-22 .emotion-24 {
   stroke: #d9dadd;
   fill: #f3f3f4;
 }
 
-.emotion-21[aria-disabled='true'] .emotion-24[aria-invalid="true"]:checked+.emotion-26 {
+.emotion-17[aria-disabled='true'] .emotion-20[aria-invalid="true"]:checked+.emotion-22 {
   fill: #ffd3e3;
 }
 
-.emotion-21[aria-disabled='true'] .emotion-24[aria-invalid="true"]:checked+.emotion-26 .emotion-28 {
+.emotion-17[aria-disabled='true'] .emotion-20[aria-invalid="true"]:checked+.emotion-22 .emotion-24 {
   stroke: #ffd3e3;
   fill: #ffd3e3;
 }
 
-.emotion-21[aria-disabled='true'] .emotion-24[aria-invalid="true"]+.emotion-26 {
+.emotion-17[aria-disabled='true'] .emotion-20[aria-invalid="true"]+.emotion-22 {
   fill: #ffebf2;
 }
 
-.emotion-21[aria-disabled='true'] .emotion-24[aria-invalid="true"]+.emotion-26 .emotion-28 {
+.emotion-17[aria-disabled='true'] .emotion-20[aria-invalid="true"]+.emotion-22 .emotion-24 {
   stroke: #ffbbd3;
   fill: #ffebf2;
 }
 
-.emotion-21[aria-disabled='true'] .emotion-24:checked+.emotion-26 {
+.emotion-17[aria-disabled='true'] .emotion-20:checked+.emotion-22 {
   fill: #e5dbfd;
 }
 
-.emotion-21[aria-disabled='true'] .emotion-24:checked+.emotion-26 .emotion-28 {
+.emotion-17[aria-disabled='true'] .emotion-20:checked+.emotion-22 .emotion-24 {
   stroke: #d8c5fc;
   fill: #d8c5fc;
 }
 
-.emotion-21[aria-disabled='true'] .emotion-24[aria-checked="mixed"]+.emotion-26 {
+.emotion-17[aria-disabled='true'] .emotion-20[aria-checked="mixed"]+.emotion-22 {
   fill: #e5dbfd;
 }
 
-.emotion-21[aria-disabled='true'] .emotion-24[aria-checked="mixed"]+.emotion-26 .emotion-28 {
+.emotion-17[aria-disabled='true'] .emotion-20[aria-checked="mixed"]+.emotion-22 .emotion-24 {
   stroke: #e5dbfd;
   fill: #e5dbfd;
 }
 
-.emotion-21 .emotion-24:checked+.emotion-26 path {
+.emotion-17 .emotion-20:checked+.emotion-22 path {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -3219,60 +3046,60 @@ exports[`lineChart > renders correctly with detailed legend 1`] = `
   transform: translate(2px, 2px);
 }
 
-.emotion-21 .emotion-24:checked+.emotion-26 .emotion-28 {
+.emotion-17 .emotion-20:checked+.emotion-22 .emotion-24 {
   fill: #8c40ef;
   stroke: #8c40ef;
 }
 
-.emotion-21 .emotion-24[aria-invalid="true"]:checked+.emotion-26 .emotion-28 {
+.emotion-17 .emotion-20[aria-invalid="true"]:checked+.emotion-22 .emotion-24 {
   fill: #e51963;
   stroke: #e51963;
 }
 
-.emotion-21 .emotion-24[aria-checked="mixed"]+.emotion-26 .eqr7bqq5 {
+.emotion-17 .emotion-20[aria-checked="mixed"]+.emotion-22 .eqr7bqq5 {
   fill: #ffffff;
 }
 
-.emotion-21 .emotion-24[aria-checked="mixed"]+.emotion-26 .emotion-28 {
+.emotion-17 .emotion-20[aria-checked="mixed"]+.emotion-22 .emotion-24 {
   fill: #8c40ef;
   stroke: #8c40ef;
 }
 
-.emotion-21:hover[aria-disabled='false'] .emotion-24[aria-invalid='false'][aria-checked='false']+.emotion-26 .emotion-28 {
+.emotion-17:hover[aria-disabled='false'] .emotion-20[aria-invalid='false'][aria-checked='false']+.emotion-22 .emotion-24 {
   stroke: #792dd4;
   fill: #e5dbfd;
 }
 
-.emotion-21:hover[aria-disabled='false'] .emotion-24[aria-invalid='false'][aria-checked='true']+.emotion-26 .emotion-28 {
+.emotion-17:hover[aria-disabled='false'] .emotion-20[aria-invalid='false'][aria-checked='true']+.emotion-22 .emotion-24 {
   stroke: #792dd4;
   fill: #792dd4;
 }
 
-.emotion-21:hover[aria-disabled='false'] .emotion-24[aria-invalid='false'][aria-checked='mixed']+.emotion-26 .emotion-28 {
+.emotion-17:hover[aria-disabled='false'] .emotion-20[aria-invalid='false'][aria-checked='mixed']+.emotion-22 .emotion-24 {
   stroke: #792dd4;
   fill: #792dd4;
 }
 
-.emotion-21:hover[aria-disabled='false'] .emotion-24[aria-invalid='true'][aria-checked='false']+.emotion-26 .emotion-28 {
+.emotion-17:hover[aria-disabled='false'] .emotion-20[aria-invalid='true'][aria-checked='false']+.emotion-22 .emotion-24 {
   stroke: #92103f;
   fill: #ffd3e3;
 }
 
-.emotion-21:hover[aria-disabled='false'] .emotion-24[aria-invalid='true'][aria-checked='true']+.emotion-26 .emotion-28 {
+.emotion-17:hover[aria-disabled='false'] .emotion-20[aria-invalid='true'][aria-checked='true']+.emotion-22 .emotion-24 {
   stroke: #d6175c;
   fill: #d6175c;
 }
 
-.emotion-21 .emotion-24[aria-invalid="true"]+.emotion-26 {
+.emotion-17 .emotion-20[aria-invalid="true"]+.emotion-22 {
   fill: #e51963;
 }
 
-.emotion-21 .emotion-24[aria-invalid="true"]+.emotion-26 .emotion-28 {
+.emotion-17 .emotion-20[aria-invalid="true"]+.emotion-22 .emotion-24 {
   stroke: #e51963;
   fill: #ffebf2;
 }
 
-.emotion-23 {
+.emotion-19 {
   position: absolute;
   white-space: nowrap;
   height: 1.5rem;
@@ -3281,57 +3108,57 @@ exports[`lineChart > renders correctly with detailed legend 1`] = `
   border-width: 0;
 }
 
-.emotion-23:not(:disabled) {
+.emotion-19:not(:disabled) {
   cursor: pointer;
 }
 
-.emotion-23:disabled {
+.emotion-19:disabled {
   cursor: not-allowed;
 }
 
-.emotion-23:not(:disabled):checked+.emotion-26,
-.emotion-23:not(:disabled)[aria-checked='mixed']+.emotion-26 {
+.emotion-19:not(:disabled):checked+.emotion-22,
+.emotion-19:not(:disabled)[aria-checked='mixed']+.emotion-22 {
   fill: #8c40ef;
 }
 
-.emotion-23:not(:disabled):checked+.emotion-26 .emotion-28,
-.emotion-23:not(:disabled)[aria-checked='mixed']+.emotion-26 .emotion-28 {
+.emotion-19:not(:disabled):checked+.emotion-22 .emotion-24,
+.emotion-19:not(:disabled)[aria-checked='mixed']+.emotion-22 .emotion-24 {
   stroke: #8c40ef;
 }
 
-.emotion-23:not(:disabled)[aria-invalid='true']+.emotion-26,
-.emotion-23:not(:disabled)[aria-invalid='mixed']+.emotion-26 {
+.emotion-19:not(:disabled)[aria-invalid='true']+.emotion-22,
+.emotion-19:not(:disabled)[aria-invalid='mixed']+.emotion-22 {
   fill: #ffebf2;
 }
 
-.emotion-23:not(:disabled)[aria-invalid='true']+.emotion-26 .emotion-28,
-.emotion-23:not(:disabled)[aria-invalid='mixed']+.emotion-26 .emotion-28 {
+.emotion-19:not(:disabled)[aria-invalid='true']+.emotion-22 .emotion-24,
+.emotion-19:not(:disabled)[aria-invalid='mixed']+.emotion-22 .emotion-24 {
   stroke: #b3144d;
 }
 
-.emotion-23:focus+.emotion-26 {
+.emotion-19:focus+.emotion-22 {
   background-color: #f1eefc;
   fill: #ffebf2;
   outline: 1px solid 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-23:focus+.emotion-26 .emotion-28 {
+.emotion-19:focus+.emotion-22 .emotion-24 {
   stroke: #792dd4;
   fill: #e5dbfd;
 }
 
-.emotion-23[aria-invalid='true']:focus+.emotion-26 {
+.emotion-19[aria-invalid='true']:focus+.emotion-22 {
   background-color: #ffebf2;
   fill: #ffebf2;
   outline: 1px solid 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-23[aria-invalid='true']:focus+.emotion-26 .emotion-28 {
+.emotion-19[aria-invalid='true']:focus+.emotion-22 .emotion-24 {
   stroke: #92103f;
   fill: #ffd3e3;
 }
 
-.emotion-25 {
+.emotion-21 {
   border-radius: 0.25rem;
   height: 1.5rem;
   width: 1.5rem;
@@ -3339,7 +3166,7 @@ exports[`lineChart > renders correctly with detailed legend 1`] = `
   min-height: 1.5rem;
 }
 
-.emotion-25 path {
+.emotion-21 path {
   fill: #ffffff;
   -webkit-transform: translate(2px, 2px);
   -moz-transform: translate(2px, 2px);
@@ -3351,12 +3178,12 @@ exports[`lineChart > renders correctly with detailed legend 1`] = `
   transform: scale(0);
 }
 
-.emotion-27 {
+.emotion-23 {
   fill: #ffffff;
   stroke: #d9dadd;
 }
 
-.emotion-29 {
+.emotion-25 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3382,7 +3209,7 @@ exports[`lineChart > renders correctly with detailed legend 1`] = `
   gap: 0.25rem;
 }
 
-.emotion-31 {
+.emotion-27 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3408,12 +3235,12 @@ exports[`lineChart > renders correctly with detailed legend 1`] = `
   gap: 0.25rem;
 }
 
-.emotion-33 {
+.emotion-29 {
   width: 100%;
   cursor: pointer;
 }
 
-.emotion-35 {
+.emotion-31 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3424,43 +3251,11 @@ exports[`lineChart > renders correctly with detailed legend 1`] = `
   align-items: center;
 }
 
-.emotion-37 {
-  color: #3f4250;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-39 {
+.emotion-33 {
   margin-left: 1rem;
   width: 2rem;
   height: 2px;
   background-color: #5e47be;
-}
-
-.emotion-41 {
-  color: #3f4250;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  text-align: right;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  min-width: 72px;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
 }
 
 <div
@@ -3485,38 +3280,38 @@ exports[`lineChart > renders correctly with detailed legend 1`] = `
           Legend
         </div>
         <span
-          class="emotion-5 emotion-6 emotion-7"
+          class="emotion-5 emotion-6 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
         >
           Minimum
         </span>
         <span
-          class="emotion-5 emotion-6 emotion-7"
+          class="emotion-5 emotion-6 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
         >
           Maximum
         </span>
         <span
-          class="emotion-5 emotion-6 emotion-7"
+          class="emotion-5 emotion-6 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
         >
           Average
         </span>
         <span
-          class="emotion-5 emotion-6 emotion-7"
+          class="emotion-5 emotion-6 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
         >
           Current
         </span>
       </div>
       <div
-        class="emotion-17"
+        class="emotion-13"
       >
         <div
-          class="emotion-18"
+          class="emotion-14"
         >
           <div
             class="emotion-3 emotion-4"
           >
             <div
               aria-disabled="false"
-              class="emotion-21 emotion-22"
+              class="emotion-17 emotion-18"
               data-checked="true"
               data-error="false"
             >
@@ -3524,19 +3319,19 @@ exports[`lineChart > renders correctly with detailed legend 1`] = `
                 aria-checked="true"
                 aria-invalid="false"
                 checked=""
-                class="emotion-23 emotion-24"
-                id="_r_4_"
+                class="emotion-19 emotion-20"
+                id="«r4»"
                 name="lineChartSerie"
                 type="checkbox"
               />
               <svg
-                class="emotion-25 emotion-26"
+                class="emotion-21 emotion-22"
                 fill="none"
                 viewBox="0 0 24 24"
               >
                 <g>
                   <rect
-                    class="emotion-27 emotion-28"
+                    class="emotion-23 emotion-24"
                     height="16"
                     rx="0.125rem"
                     stroke-width="2"
@@ -3557,25 +3352,25 @@ exports[`lineChart > renders correctly with detailed legend 1`] = `
                 </g>
               </svg>
               <div
-                class="emotion-29 emotion-30"
+                class="emotion-25 emotion-26"
               >
                 <div
-                  class="emotion-31 emotion-30"
+                  class="emotion-27 emotion-26"
                 >
                   <label
-                    class="emotion-33 emotion-34"
-                    for="_r_4_"
+                    class="emotion-29 emotion-30"
+                    for="«r4»"
                   >
                     <div
-                      class="emotion-35 emotion-36"
+                      class="emotion-31 emotion-32"
                     >
                       <span
-                        class="emotion-37 emotion-7"
+                        class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
                       >
                         line chart values
                       </span>
                       <div
-                        class="emotion-39"
+                        class="emotion-33"
                         data-testid="label-lineChartSerie"
                       />
                     </div>
@@ -3585,22 +3380,22 @@ exports[`lineChart > renders correctly with detailed legend 1`] = `
             </div>
           </div>
           <span
-            class="emotion-5 emotion-41 emotion-7"
+            class="emotion-5 emotion-6 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
           >
             -7
           </span>
           <span
-            class="emotion-5 emotion-41 emotion-7"
+            class="emotion-5 emotion-6 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
           >
             7
           </span>
           <span
-            class="emotion-5 emotion-41 emotion-7"
+            class="emotion-5 emotion-6 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
           >
             0.2
           </span>
           <span
-            class="emotion-5 emotion-41 emotion-7"
+            class="emotion-5 emotion-6 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
           >
             7
           </span>
@@ -3640,16 +3435,7 @@ exports[`lineChart > renders correctly with multiple series 1`] = `
   flex: 6;
 }
 
-.emotion-6 {
-  color: #3f4250;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.emotion-5 {
   text-align: right;
   -webkit-flex: 1;
   -ms-flex: 1;
@@ -3660,11 +3446,11 @@ exports[`lineChart > renders correctly with multiple series 1`] = `
   align-self: center;
 }
 
-.emotion-17>:not(:last-child) {
+.emotion-13>:not(:last-child) {
   border-bottom: 1px solid #e9eaeb;
 }
 
-.emotion-18 {
+.emotion-14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3672,11 +3458,11 @@ exports[`lineChart > renders correctly with multiple series 1`] = `
   padding: 0.25rem 0;
 }
 
-.emotion-18>:not(:last-child) {
+.emotion-14>:not(:last-child) {
   margin-right: 0.5rem;
 }
 
-.emotion-21 {
+.emotion-17 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -3689,65 +3475,65 @@ exports[`lineChart > renders correctly with multiple series 1`] = `
   gap: 0.5rem;
 }
 
-.emotion-21 .emotion-34 {
+.emotion-17 .emotion-30 {
   cursor: pointer;
 }
 
-.emotion-21[aria-disabled='true'] {
+.emotion-17[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.emotion-21[aria-disabled='true'] .emotion-34 {
+.emotion-17[aria-disabled='true'] .emotion-30 {
   cursor: not-allowed;
 }
 
-.emotion-21[aria-disabled='true'] .emotion-26 {
+.emotion-17[aria-disabled='true'] .emotion-22 {
   fill: #e9eaeb;
 }
 
-.emotion-21[aria-disabled='true'] .emotion-26 .emotion-28 {
+.emotion-17[aria-disabled='true'] .emotion-22 .emotion-24 {
   stroke: #d9dadd;
   fill: #f3f3f4;
 }
 
-.emotion-21[aria-disabled='true'] .emotion-24[aria-invalid="true"]:checked+.emotion-26 {
+.emotion-17[aria-disabled='true'] .emotion-20[aria-invalid="true"]:checked+.emotion-22 {
   fill: #ffd3e3;
 }
 
-.emotion-21[aria-disabled='true'] .emotion-24[aria-invalid="true"]:checked+.emotion-26 .emotion-28 {
+.emotion-17[aria-disabled='true'] .emotion-20[aria-invalid="true"]:checked+.emotion-22 .emotion-24 {
   stroke: #ffd3e3;
   fill: #ffd3e3;
 }
 
-.emotion-21[aria-disabled='true'] .emotion-24[aria-invalid="true"]+.emotion-26 {
+.emotion-17[aria-disabled='true'] .emotion-20[aria-invalid="true"]+.emotion-22 {
   fill: #ffebf2;
 }
 
-.emotion-21[aria-disabled='true'] .emotion-24[aria-invalid="true"]+.emotion-26 .emotion-28 {
+.emotion-17[aria-disabled='true'] .emotion-20[aria-invalid="true"]+.emotion-22 .emotion-24 {
   stroke: #ffbbd3;
   fill: #ffebf2;
 }
 
-.emotion-21[aria-disabled='true'] .emotion-24:checked+.emotion-26 {
+.emotion-17[aria-disabled='true'] .emotion-20:checked+.emotion-22 {
   fill: #e5dbfd;
 }
 
-.emotion-21[aria-disabled='true'] .emotion-24:checked+.emotion-26 .emotion-28 {
+.emotion-17[aria-disabled='true'] .emotion-20:checked+.emotion-22 .emotion-24 {
   stroke: #d8c5fc;
   fill: #d8c5fc;
 }
 
-.emotion-21[aria-disabled='true'] .emotion-24[aria-checked="mixed"]+.emotion-26 {
+.emotion-17[aria-disabled='true'] .emotion-20[aria-checked="mixed"]+.emotion-22 {
   fill: #e5dbfd;
 }
 
-.emotion-21[aria-disabled='true'] .emotion-24[aria-checked="mixed"]+.emotion-26 .emotion-28 {
+.emotion-17[aria-disabled='true'] .emotion-20[aria-checked="mixed"]+.emotion-22 .emotion-24 {
   stroke: #e5dbfd;
   fill: #e5dbfd;
 }
 
-.emotion-21 .emotion-24:checked+.emotion-26 path {
+.emotion-17 .emotion-20:checked+.emotion-22 path {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -3761,60 +3547,60 @@ exports[`lineChart > renders correctly with multiple series 1`] = `
   transform: translate(2px, 2px);
 }
 
-.emotion-21 .emotion-24:checked+.emotion-26 .emotion-28 {
+.emotion-17 .emotion-20:checked+.emotion-22 .emotion-24 {
   fill: #8c40ef;
   stroke: #8c40ef;
 }
 
-.emotion-21 .emotion-24[aria-invalid="true"]:checked+.emotion-26 .emotion-28 {
+.emotion-17 .emotion-20[aria-invalid="true"]:checked+.emotion-22 .emotion-24 {
   fill: #e51963;
   stroke: #e51963;
 }
 
-.emotion-21 .emotion-24[aria-checked="mixed"]+.emotion-26 .eqr7bqq5 {
+.emotion-17 .emotion-20[aria-checked="mixed"]+.emotion-22 .eqr7bqq5 {
   fill: #ffffff;
 }
 
-.emotion-21 .emotion-24[aria-checked="mixed"]+.emotion-26 .emotion-28 {
+.emotion-17 .emotion-20[aria-checked="mixed"]+.emotion-22 .emotion-24 {
   fill: #8c40ef;
   stroke: #8c40ef;
 }
 
-.emotion-21:hover[aria-disabled='false'] .emotion-24[aria-invalid='false'][aria-checked='false']+.emotion-26 .emotion-28 {
+.emotion-17:hover[aria-disabled='false'] .emotion-20[aria-invalid='false'][aria-checked='false']+.emotion-22 .emotion-24 {
   stroke: #792dd4;
   fill: #e5dbfd;
 }
 
-.emotion-21:hover[aria-disabled='false'] .emotion-24[aria-invalid='false'][aria-checked='true']+.emotion-26 .emotion-28 {
+.emotion-17:hover[aria-disabled='false'] .emotion-20[aria-invalid='false'][aria-checked='true']+.emotion-22 .emotion-24 {
   stroke: #792dd4;
   fill: #792dd4;
 }
 
-.emotion-21:hover[aria-disabled='false'] .emotion-24[aria-invalid='false'][aria-checked='mixed']+.emotion-26 .emotion-28 {
+.emotion-17:hover[aria-disabled='false'] .emotion-20[aria-invalid='false'][aria-checked='mixed']+.emotion-22 .emotion-24 {
   stroke: #792dd4;
   fill: #792dd4;
 }
 
-.emotion-21:hover[aria-disabled='false'] .emotion-24[aria-invalid='true'][aria-checked='false']+.emotion-26 .emotion-28 {
+.emotion-17:hover[aria-disabled='false'] .emotion-20[aria-invalid='true'][aria-checked='false']+.emotion-22 .emotion-24 {
   stroke: #92103f;
   fill: #ffd3e3;
 }
 
-.emotion-21:hover[aria-disabled='false'] .emotion-24[aria-invalid='true'][aria-checked='true']+.emotion-26 .emotion-28 {
+.emotion-17:hover[aria-disabled='false'] .emotion-20[aria-invalid='true'][aria-checked='true']+.emotion-22 .emotion-24 {
   stroke: #d6175c;
   fill: #d6175c;
 }
 
-.emotion-21 .emotion-24[aria-invalid="true"]+.emotion-26 {
+.emotion-17 .emotion-20[aria-invalid="true"]+.emotion-22 {
   fill: #e51963;
 }
 
-.emotion-21 .emotion-24[aria-invalid="true"]+.emotion-26 .emotion-28 {
+.emotion-17 .emotion-20[aria-invalid="true"]+.emotion-22 .emotion-24 {
   stroke: #e51963;
   fill: #ffebf2;
 }
 
-.emotion-23 {
+.emotion-19 {
   position: absolute;
   white-space: nowrap;
   height: 1.5rem;
@@ -3823,57 +3609,57 @@ exports[`lineChart > renders correctly with multiple series 1`] = `
   border-width: 0;
 }
 
-.emotion-23:not(:disabled) {
+.emotion-19:not(:disabled) {
   cursor: pointer;
 }
 
-.emotion-23:disabled {
+.emotion-19:disabled {
   cursor: not-allowed;
 }
 
-.emotion-23:not(:disabled):checked+.emotion-26,
-.emotion-23:not(:disabled)[aria-checked='mixed']+.emotion-26 {
+.emotion-19:not(:disabled):checked+.emotion-22,
+.emotion-19:not(:disabled)[aria-checked='mixed']+.emotion-22 {
   fill: #8c40ef;
 }
 
-.emotion-23:not(:disabled):checked+.emotion-26 .emotion-28,
-.emotion-23:not(:disabled)[aria-checked='mixed']+.emotion-26 .emotion-28 {
+.emotion-19:not(:disabled):checked+.emotion-22 .emotion-24,
+.emotion-19:not(:disabled)[aria-checked='mixed']+.emotion-22 .emotion-24 {
   stroke: #8c40ef;
 }
 
-.emotion-23:not(:disabled)[aria-invalid='true']+.emotion-26,
-.emotion-23:not(:disabled)[aria-invalid='mixed']+.emotion-26 {
+.emotion-19:not(:disabled)[aria-invalid='true']+.emotion-22,
+.emotion-19:not(:disabled)[aria-invalid='mixed']+.emotion-22 {
   fill: #ffebf2;
 }
 
-.emotion-23:not(:disabled)[aria-invalid='true']+.emotion-26 .emotion-28,
-.emotion-23:not(:disabled)[aria-invalid='mixed']+.emotion-26 .emotion-28 {
+.emotion-19:not(:disabled)[aria-invalid='true']+.emotion-22 .emotion-24,
+.emotion-19:not(:disabled)[aria-invalid='mixed']+.emotion-22 .emotion-24 {
   stroke: #b3144d;
 }
 
-.emotion-23:focus+.emotion-26 {
+.emotion-19:focus+.emotion-22 {
   background-color: #f1eefc;
   fill: #ffebf2;
   outline: 1px solid 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-23:focus+.emotion-26 .emotion-28 {
+.emotion-19:focus+.emotion-22 .emotion-24 {
   stroke: #792dd4;
   fill: #e5dbfd;
 }
 
-.emotion-23[aria-invalid='true']:focus+.emotion-26 {
+.emotion-19[aria-invalid='true']:focus+.emotion-22 {
   background-color: #ffebf2;
   fill: #ffebf2;
   outline: 1px solid 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-23[aria-invalid='true']:focus+.emotion-26 .emotion-28 {
+.emotion-19[aria-invalid='true']:focus+.emotion-22 .emotion-24 {
   stroke: #92103f;
   fill: #ffd3e3;
 }
 
-.emotion-25 {
+.emotion-21 {
   border-radius: 0.25rem;
   height: 1.5rem;
   width: 1.5rem;
@@ -3881,7 +3667,7 @@ exports[`lineChart > renders correctly with multiple series 1`] = `
   min-height: 1.5rem;
 }
 
-.emotion-25 path {
+.emotion-21 path {
   fill: #ffffff;
   -webkit-transform: translate(2px, 2px);
   -moz-transform: translate(2px, 2px);
@@ -3893,12 +3679,12 @@ exports[`lineChart > renders correctly with multiple series 1`] = `
   transform: scale(0);
 }
 
-.emotion-27 {
+.emotion-23 {
   fill: #ffffff;
   stroke: #d9dadd;
 }
 
-.emotion-29 {
+.emotion-25 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3924,7 +3710,7 @@ exports[`lineChart > renders correctly with multiple series 1`] = `
   gap: 0.25rem;
 }
 
-.emotion-31 {
+.emotion-27 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3950,12 +3736,12 @@ exports[`lineChart > renders correctly with multiple series 1`] = `
   gap: 0.25rem;
 }
 
-.emotion-33 {
+.emotion-29 {
   width: 100%;
   cursor: pointer;
 }
 
-.emotion-35 {
+.emotion-31 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3966,53 +3752,21 @@ exports[`lineChart > renders correctly with multiple series 1`] = `
   align-items: center;
 }
 
-.emotion-37 {
-  color: #3f4250;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-39 {
+.emotion-33 {
   margin-left: 1rem;
   width: 2rem;
   height: 2px;
   background-color: #5e47be;
 }
 
-.emotion-41 {
-  color: #3f4250;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  text-align: right;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  min-width: 72px;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-73 {
+.emotion-61 {
   margin-left: 1rem;
   width: 2rem;
   height: 2px;
   background-color: #0083e6;
 }
 
-.emotion-107 {
+.emotion-89 {
   margin-left: 1rem;
   width: 2rem;
   height: 2px;
@@ -4041,38 +3795,38 @@ exports[`lineChart > renders correctly with multiple series 1`] = `
           Legend
         </div>
         <span
-          class="emotion-5 emotion-6 emotion-7"
+          class="emotion-5 emotion-6 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
         >
           Minimum
         </span>
         <span
-          class="emotion-5 emotion-6 emotion-7"
+          class="emotion-5 emotion-6 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
         >
           Maximum
         </span>
         <span
-          class="emotion-5 emotion-6 emotion-7"
+          class="emotion-5 emotion-6 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
         >
           Average
         </span>
         <span
-          class="emotion-5 emotion-6 emotion-7"
+          class="emotion-5 emotion-6 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
         >
           Current
         </span>
       </div>
       <div
-        class="emotion-17"
+        class="emotion-13"
       >
         <div
-          class="emotion-18"
+          class="emotion-14"
         >
           <div
             class="emotion-3 emotion-4"
           >
             <div
               aria-disabled="false"
-              class="emotion-21 emotion-22"
+              class="emotion-17 emotion-18"
               data-checked="true"
               data-error="false"
             >
@@ -4080,19 +3834,19 @@ exports[`lineChart > renders correctly with multiple series 1`] = `
                 aria-checked="true"
                 aria-invalid="false"
                 checked=""
-                class="emotion-23 emotion-24"
-                id="_r_q_"
+                class="emotion-19 emotion-20"
+                id="«rq»"
                 name="lineChartMultiple1"
                 type="checkbox"
               />
               <svg
-                class="emotion-25 emotion-26"
+                class="emotion-21 emotion-22"
                 fill="none"
                 viewBox="0 0 24 24"
               >
                 <g>
                   <rect
-                    class="emotion-27 emotion-28"
+                    class="emotion-23 emotion-24"
                     height="16"
                     rx="0.125rem"
                     stroke-width="2"
@@ -4113,25 +3867,25 @@ exports[`lineChart > renders correctly with multiple series 1`] = `
                 </g>
               </svg>
               <div
-                class="emotion-29 emotion-30"
+                class="emotion-25 emotion-26"
               >
                 <div
-                  class="emotion-31 emotion-30"
+                  class="emotion-27 emotion-26"
                 >
                   <label
-                    class="emotion-33 emotion-34"
-                    for="_r_q_"
+                    class="emotion-29 emotion-30"
+                    for="«rq»"
                   >
                     <div
-                      class="emotion-35 emotion-36"
+                      class="emotion-31 emotion-32"
                     >
                       <span
-                        class="emotion-37 emotion-7"
+                        class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
                       >
                         Serie 1
                       </span>
                       <div
-                        class="emotion-39"
+                        class="emotion-33"
                         data-testid="label-lineChartMultiple1"
                       />
                     </div>
@@ -4141,35 +3895,35 @@ exports[`lineChart > renders correctly with multiple series 1`] = `
             </div>
           </div>
           <span
-            class="emotion-5 emotion-41 emotion-7"
+            class="emotion-5 emotion-6 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
           >
             -9
           </span>
           <span
-            class="emotion-5 emotion-41 emotion-7"
+            class="emotion-5 emotion-6 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
           >
             55
           </span>
           <span
-            class="emotion-5 emotion-41 emotion-7"
+            class="emotion-5 emotion-6 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
           >
             9.27
           </span>
           <span
-            class="emotion-5 emotion-41 emotion-7"
+            class="emotion-5 emotion-6 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
           >
             0
           </span>
         </div>
         <div
-          class="emotion-18"
+          class="emotion-14"
         >
           <div
             class="emotion-3 emotion-4"
           >
             <div
               aria-disabled="false"
-              class="emotion-21 emotion-22"
+              class="emotion-17 emotion-18"
               data-checked="true"
               data-error="false"
             >
@@ -4177,19 +3931,19 @@ exports[`lineChart > renders correctly with multiple series 1`] = `
                 aria-checked="true"
                 aria-invalid="false"
                 checked=""
-                class="emotion-23 emotion-24"
-                id="_r_11_"
+                class="emotion-19 emotion-20"
+                id="«r11»"
                 name="lineChartMultiple2"
                 type="checkbox"
               />
               <svg
-                class="emotion-25 emotion-26"
+                class="emotion-21 emotion-22"
                 fill="none"
                 viewBox="0 0 24 24"
               >
                 <g>
                   <rect
-                    class="emotion-27 emotion-28"
+                    class="emotion-23 emotion-24"
                     height="16"
                     rx="0.125rem"
                     stroke-width="2"
@@ -4210,25 +3964,25 @@ exports[`lineChart > renders correctly with multiple series 1`] = `
                 </g>
               </svg>
               <div
-                class="emotion-29 emotion-30"
+                class="emotion-25 emotion-26"
               >
                 <div
-                  class="emotion-31 emotion-30"
+                  class="emotion-27 emotion-26"
                 >
                   <label
-                    class="emotion-33 emotion-34"
-                    for="_r_11_"
+                    class="emotion-29 emotion-30"
+                    for="«r11»"
                   >
                     <div
-                      class="emotion-35 emotion-36"
+                      class="emotion-31 emotion-32"
                     >
                       <span
-                        class="emotion-37 emotion-7"
+                        class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
                       >
                         Serie 2
                       </span>
                       <div
-                        class="emotion-73"
+                        class="emotion-61"
                         data-testid="label-lineChartMultiple2"
                       />
                     </div>
@@ -4238,35 +3992,35 @@ exports[`lineChart > renders correctly with multiple series 1`] = `
             </div>
           </div>
           <span
-            class="emotion-5 emotion-41 emotion-7"
+            class="emotion-5 emotion-6 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
           >
             -14
           </span>
           <span
-            class="emotion-5 emotion-41 emotion-7"
+            class="emotion-5 emotion-6 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
           >
             76
           </span>
           <span
-            class="emotion-5 emotion-41 emotion-7"
+            class="emotion-5 emotion-6 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
           >
             7.73
           </span>
           <span
-            class="emotion-5 emotion-41 emotion-7"
+            class="emotion-5 emotion-6 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
           >
             0
           </span>
         </div>
         <div
-          class="emotion-18"
+          class="emotion-14"
         >
           <div
             class="emotion-3 emotion-4"
           >
             <div
               aria-disabled="false"
-              class="emotion-21 emotion-22"
+              class="emotion-17 emotion-18"
               data-checked="true"
               data-error="false"
             >
@@ -4274,19 +4028,19 @@ exports[`lineChart > renders correctly with multiple series 1`] = `
                 aria-checked="true"
                 aria-invalid="false"
                 checked=""
-                class="emotion-23 emotion-24"
-                id="_r_18_"
+                class="emotion-19 emotion-20"
+                id="«r18»"
                 name="lineChartMultiple3"
                 type="checkbox"
               />
               <svg
-                class="emotion-25 emotion-26"
+                class="emotion-21 emotion-22"
                 fill="none"
                 viewBox="0 0 24 24"
               >
                 <g>
                   <rect
-                    class="emotion-27 emotion-28"
+                    class="emotion-23 emotion-24"
                     height="16"
                     rx="0.125rem"
                     stroke-width="2"
@@ -4307,25 +4061,25 @@ exports[`lineChart > renders correctly with multiple series 1`] = `
                 </g>
               </svg>
               <div
-                class="emotion-29 emotion-30"
+                class="emotion-25 emotion-26"
               >
                 <div
-                  class="emotion-31 emotion-30"
+                  class="emotion-27 emotion-26"
                 >
                   <label
-                    class="emotion-33 emotion-34"
-                    for="_r_18_"
+                    class="emotion-29 emotion-30"
+                    for="«r18»"
                   >
                     <div
-                      class="emotion-35 emotion-36"
+                      class="emotion-31 emotion-32"
                     >
                       <span
-                        class="emotion-37 emotion-7"
+                        class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
                       >
                         Serie 3
                       </span>
                       <div
-                        class="emotion-107"
+                        class="emotion-89"
                         data-testid="label-lineChartMultiple3"
                       />
                     </div>
@@ -4335,22 +4089,22 @@ exports[`lineChart > renders correctly with multiple series 1`] = `
             </div>
           </div>
           <span
-            class="emotion-5 emotion-41 emotion-7"
+            class="emotion-5 emotion-6 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
           >
             -38
           </span>
           <span
-            class="emotion-5 emotion-41 emotion-7"
+            class="emotion-5 emotion-6 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
           >
             93
           </span>
           <span
-            class="emotion-5 emotion-41 emotion-7"
+            class="emotion-5 emotion-6 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
           >
             21.53
           </span>
           <span
-            class="emotion-5 emotion-41 emotion-7"
+            class="emotion-5 emotion-6 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
           >
             34
           </span>
@@ -4406,16 +4160,7 @@ exports[`lineChart > renders correctly with timeline data 1`] = `
   flex: 6;
 }
 
-.emotion-6 {
-  color: #3f4250;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.emotion-5 {
   text-align: right;
   -webkit-flex: 1;
   -ms-flex: 1;
@@ -4426,11 +4171,11 @@ exports[`lineChart > renders correctly with timeline data 1`] = `
   align-self: center;
 }
 
-.emotion-17>:not(:last-child) {
+.emotion-13>:not(:last-child) {
   border-bottom: 1px solid #e9eaeb;
 }
 
-.emotion-18 {
+.emotion-14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4438,11 +4183,11 @@ exports[`lineChart > renders correctly with timeline data 1`] = `
   padding: 0.25rem 0;
 }
 
-.emotion-18>:not(:last-child) {
+.emotion-14>:not(:last-child) {
   margin-right: 0.5rem;
 }
 
-.emotion-21 {
+.emotion-17 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -4455,65 +4200,65 @@ exports[`lineChart > renders correctly with timeline data 1`] = `
   gap: 0.5rem;
 }
 
-.emotion-21 .emotion-34 {
+.emotion-17 .emotion-30 {
   cursor: pointer;
 }
 
-.emotion-21[aria-disabled='true'] {
+.emotion-17[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.emotion-21[aria-disabled='true'] .emotion-34 {
+.emotion-17[aria-disabled='true'] .emotion-30 {
   cursor: not-allowed;
 }
 
-.emotion-21[aria-disabled='true'] .emotion-26 {
+.emotion-17[aria-disabled='true'] .emotion-22 {
   fill: #e9eaeb;
 }
 
-.emotion-21[aria-disabled='true'] .emotion-26 .emotion-28 {
+.emotion-17[aria-disabled='true'] .emotion-22 .emotion-24 {
   stroke: #d9dadd;
   fill: #f3f3f4;
 }
 
-.emotion-21[aria-disabled='true'] .emotion-24[aria-invalid="true"]:checked+.emotion-26 {
+.emotion-17[aria-disabled='true'] .emotion-20[aria-invalid="true"]:checked+.emotion-22 {
   fill: #ffd3e3;
 }
 
-.emotion-21[aria-disabled='true'] .emotion-24[aria-invalid="true"]:checked+.emotion-26 .emotion-28 {
+.emotion-17[aria-disabled='true'] .emotion-20[aria-invalid="true"]:checked+.emotion-22 .emotion-24 {
   stroke: #ffd3e3;
   fill: #ffd3e3;
 }
 
-.emotion-21[aria-disabled='true'] .emotion-24[aria-invalid="true"]+.emotion-26 {
+.emotion-17[aria-disabled='true'] .emotion-20[aria-invalid="true"]+.emotion-22 {
   fill: #ffebf2;
 }
 
-.emotion-21[aria-disabled='true'] .emotion-24[aria-invalid="true"]+.emotion-26 .emotion-28 {
+.emotion-17[aria-disabled='true'] .emotion-20[aria-invalid="true"]+.emotion-22 .emotion-24 {
   stroke: #ffbbd3;
   fill: #ffebf2;
 }
 
-.emotion-21[aria-disabled='true'] .emotion-24:checked+.emotion-26 {
+.emotion-17[aria-disabled='true'] .emotion-20:checked+.emotion-22 {
   fill: #e5dbfd;
 }
 
-.emotion-21[aria-disabled='true'] .emotion-24:checked+.emotion-26 .emotion-28 {
+.emotion-17[aria-disabled='true'] .emotion-20:checked+.emotion-22 .emotion-24 {
   stroke: #d8c5fc;
   fill: #d8c5fc;
 }
 
-.emotion-21[aria-disabled='true'] .emotion-24[aria-checked="mixed"]+.emotion-26 {
+.emotion-17[aria-disabled='true'] .emotion-20[aria-checked="mixed"]+.emotion-22 {
   fill: #e5dbfd;
 }
 
-.emotion-21[aria-disabled='true'] .emotion-24[aria-checked="mixed"]+.emotion-26 .emotion-28 {
+.emotion-17[aria-disabled='true'] .emotion-20[aria-checked="mixed"]+.emotion-22 .emotion-24 {
   stroke: #e5dbfd;
   fill: #e5dbfd;
 }
 
-.emotion-21 .emotion-24:checked+.emotion-26 path {
+.emotion-17 .emotion-20:checked+.emotion-22 path {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -4527,60 +4272,60 @@ exports[`lineChart > renders correctly with timeline data 1`] = `
   transform: translate(2px, 2px);
 }
 
-.emotion-21 .emotion-24:checked+.emotion-26 .emotion-28 {
+.emotion-17 .emotion-20:checked+.emotion-22 .emotion-24 {
   fill: #8c40ef;
   stroke: #8c40ef;
 }
 
-.emotion-21 .emotion-24[aria-invalid="true"]:checked+.emotion-26 .emotion-28 {
+.emotion-17 .emotion-20[aria-invalid="true"]:checked+.emotion-22 .emotion-24 {
   fill: #e51963;
   stroke: #e51963;
 }
 
-.emotion-21 .emotion-24[aria-checked="mixed"]+.emotion-26 .eqr7bqq5 {
+.emotion-17 .emotion-20[aria-checked="mixed"]+.emotion-22 .eqr7bqq5 {
   fill: #ffffff;
 }
 
-.emotion-21 .emotion-24[aria-checked="mixed"]+.emotion-26 .emotion-28 {
+.emotion-17 .emotion-20[aria-checked="mixed"]+.emotion-22 .emotion-24 {
   fill: #8c40ef;
   stroke: #8c40ef;
 }
 
-.emotion-21:hover[aria-disabled='false'] .emotion-24[aria-invalid='false'][aria-checked='false']+.emotion-26 .emotion-28 {
+.emotion-17:hover[aria-disabled='false'] .emotion-20[aria-invalid='false'][aria-checked='false']+.emotion-22 .emotion-24 {
   stroke: #792dd4;
   fill: #e5dbfd;
 }
 
-.emotion-21:hover[aria-disabled='false'] .emotion-24[aria-invalid='false'][aria-checked='true']+.emotion-26 .emotion-28 {
+.emotion-17:hover[aria-disabled='false'] .emotion-20[aria-invalid='false'][aria-checked='true']+.emotion-22 .emotion-24 {
   stroke: #792dd4;
   fill: #792dd4;
 }
 
-.emotion-21:hover[aria-disabled='false'] .emotion-24[aria-invalid='false'][aria-checked='mixed']+.emotion-26 .emotion-28 {
+.emotion-17:hover[aria-disabled='false'] .emotion-20[aria-invalid='false'][aria-checked='mixed']+.emotion-22 .emotion-24 {
   stroke: #792dd4;
   fill: #792dd4;
 }
 
-.emotion-21:hover[aria-disabled='false'] .emotion-24[aria-invalid='true'][aria-checked='false']+.emotion-26 .emotion-28 {
+.emotion-17:hover[aria-disabled='false'] .emotion-20[aria-invalid='true'][aria-checked='false']+.emotion-22 .emotion-24 {
   stroke: #92103f;
   fill: #ffd3e3;
 }
 
-.emotion-21:hover[aria-disabled='false'] .emotion-24[aria-invalid='true'][aria-checked='true']+.emotion-26 .emotion-28 {
+.emotion-17:hover[aria-disabled='false'] .emotion-20[aria-invalid='true'][aria-checked='true']+.emotion-22 .emotion-24 {
   stroke: #d6175c;
   fill: #d6175c;
 }
 
-.emotion-21 .emotion-24[aria-invalid="true"]+.emotion-26 {
+.emotion-17 .emotion-20[aria-invalid="true"]+.emotion-22 {
   fill: #e51963;
 }
 
-.emotion-21 .emotion-24[aria-invalid="true"]+.emotion-26 .emotion-28 {
+.emotion-17 .emotion-20[aria-invalid="true"]+.emotion-22 .emotion-24 {
   stroke: #e51963;
   fill: #ffebf2;
 }
 
-.emotion-23 {
+.emotion-19 {
   position: absolute;
   white-space: nowrap;
   height: 1.5rem;
@@ -4589,57 +4334,57 @@ exports[`lineChart > renders correctly with timeline data 1`] = `
   border-width: 0;
 }
 
-.emotion-23:not(:disabled) {
+.emotion-19:not(:disabled) {
   cursor: pointer;
 }
 
-.emotion-23:disabled {
+.emotion-19:disabled {
   cursor: not-allowed;
 }
 
-.emotion-23:not(:disabled):checked+.emotion-26,
-.emotion-23:not(:disabled)[aria-checked='mixed']+.emotion-26 {
+.emotion-19:not(:disabled):checked+.emotion-22,
+.emotion-19:not(:disabled)[aria-checked='mixed']+.emotion-22 {
   fill: #8c40ef;
 }
 
-.emotion-23:not(:disabled):checked+.emotion-26 .emotion-28,
-.emotion-23:not(:disabled)[aria-checked='mixed']+.emotion-26 .emotion-28 {
+.emotion-19:not(:disabled):checked+.emotion-22 .emotion-24,
+.emotion-19:not(:disabled)[aria-checked='mixed']+.emotion-22 .emotion-24 {
   stroke: #8c40ef;
 }
 
-.emotion-23:not(:disabled)[aria-invalid='true']+.emotion-26,
-.emotion-23:not(:disabled)[aria-invalid='mixed']+.emotion-26 {
+.emotion-19:not(:disabled)[aria-invalid='true']+.emotion-22,
+.emotion-19:not(:disabled)[aria-invalid='mixed']+.emotion-22 {
   fill: #ffebf2;
 }
 
-.emotion-23:not(:disabled)[aria-invalid='true']+.emotion-26 .emotion-28,
-.emotion-23:not(:disabled)[aria-invalid='mixed']+.emotion-26 .emotion-28 {
+.emotion-19:not(:disabled)[aria-invalid='true']+.emotion-22 .emotion-24,
+.emotion-19:not(:disabled)[aria-invalid='mixed']+.emotion-22 .emotion-24 {
   stroke: #b3144d;
 }
 
-.emotion-23:focus+.emotion-26 {
+.emotion-19:focus+.emotion-22 {
   background-color: #f1eefc;
   fill: #ffebf2;
   outline: 1px solid 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-23:focus+.emotion-26 .emotion-28 {
+.emotion-19:focus+.emotion-22 .emotion-24 {
   stroke: #792dd4;
   fill: #e5dbfd;
 }
 
-.emotion-23[aria-invalid='true']:focus+.emotion-26 {
+.emotion-19[aria-invalid='true']:focus+.emotion-22 {
   background-color: #ffebf2;
   fill: #ffebf2;
   outline: 1px solid 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-23[aria-invalid='true']:focus+.emotion-26 .emotion-28 {
+.emotion-19[aria-invalid='true']:focus+.emotion-22 .emotion-24 {
   stroke: #92103f;
   fill: #ffd3e3;
 }
 
-.emotion-25 {
+.emotion-21 {
   border-radius: 0.25rem;
   height: 1.5rem;
   width: 1.5rem;
@@ -4647,7 +4392,7 @@ exports[`lineChart > renders correctly with timeline data 1`] = `
   min-height: 1.5rem;
 }
 
-.emotion-25 path {
+.emotion-21 path {
   fill: #ffffff;
   -webkit-transform: translate(2px, 2px);
   -moz-transform: translate(2px, 2px);
@@ -4659,12 +4404,12 @@ exports[`lineChart > renders correctly with timeline data 1`] = `
   transform: scale(0);
 }
 
-.emotion-27 {
+.emotion-23 {
   fill: #ffffff;
   stroke: #d9dadd;
 }
 
-.emotion-29 {
+.emotion-25 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4690,7 +4435,7 @@ exports[`lineChart > renders correctly with timeline data 1`] = `
   gap: 0.25rem;
 }
 
-.emotion-31 {
+.emotion-27 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4716,12 +4461,12 @@ exports[`lineChart > renders correctly with timeline data 1`] = `
   gap: 0.25rem;
 }
 
-.emotion-33 {
+.emotion-29 {
   width: 100%;
   cursor: pointer;
 }
 
-.emotion-35 {
+.emotion-31 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4732,43 +4477,11 @@ exports[`lineChart > renders correctly with timeline data 1`] = `
   align-items: center;
 }
 
-.emotion-37 {
-  color: #3f4250;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-39 {
+.emotion-33 {
   margin-left: 1rem;
   width: 2rem;
   height: 2px;
   background-color: #5e47be;
-}
-
-.emotion-41 {
-  color: #3f4250;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  text-align: right;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  min-width: 72px;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
 }
 
 <div
@@ -4793,38 +4506,38 @@ exports[`lineChart > renders correctly with timeline data 1`] = `
           Legend
         </div>
         <span
-          class="emotion-5 emotion-6 emotion-7"
+          class="emotion-5 emotion-6 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
         >
           Minimum
         </span>
         <span
-          class="emotion-5 emotion-6 emotion-7"
+          class="emotion-5 emotion-6 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
         >
           Maximum
         </span>
         <span
-          class="emotion-5 emotion-6 emotion-7"
+          class="emotion-5 emotion-6 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
         >
           Average
         </span>
         <span
-          class="emotion-5 emotion-6 emotion-7"
+          class="emotion-5 emotion-6 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
         >
           Current
         </span>
       </div>
       <div
-        class="emotion-17"
+        class="emotion-13"
       >
         <div
-          class="emotion-18"
+          class="emotion-14"
         >
           <div
             class="emotion-3 emotion-4"
           >
             <div
               aria-disabled="false"
-              class="emotion-21 emotion-22"
+              class="emotion-17 emotion-18"
               data-checked="true"
               data-error="false"
             >
@@ -4832,19 +4545,19 @@ exports[`lineChart > renders correctly with timeline data 1`] = `
                 aria-checked="true"
                 aria-invalid="false"
                 checked=""
-                class="emotion-23 emotion-24"
-                id="_r_f_"
+                class="emotion-19 emotion-20"
+                id="«rf»"
                 name="lineChartHours"
                 type="checkbox"
               />
               <svg
-                class="emotion-25 emotion-26"
+                class="emotion-21 emotion-22"
                 fill="none"
                 viewBox="0 0 24 24"
               >
                 <g>
                   <rect
-                    class="emotion-27 emotion-28"
+                    class="emotion-23 emotion-24"
                     height="16"
                     rx="0.125rem"
                     stroke-width="2"
@@ -4865,25 +4578,25 @@ exports[`lineChart > renders correctly with timeline data 1`] = `
                 </g>
               </svg>
               <div
-                class="emotion-29 emotion-30"
+                class="emotion-25 emotion-26"
               >
                 <div
-                  class="emotion-31 emotion-30"
+                  class="emotion-27 emotion-26"
                 >
                   <label
-                    class="emotion-33 emotion-34"
-                    for="_r_f_"
+                    class="emotion-29 emotion-30"
+                    for="«rf»"
                   >
                     <div
-                      class="emotion-35 emotion-36"
+                      class="emotion-31 emotion-32"
                     >
                       <span
-                        class="emotion-37 emotion-7"
+                        class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
                       >
                         line chart hours values
                       </span>
                       <div
-                        class="emotion-39"
+                        class="emotion-33"
                         data-testid="label-lineChartHours"
                       />
                     </div>
@@ -4893,22 +4606,22 @@ exports[`lineChart > renders correctly with timeline data 1`] = `
             </div>
           </div>
           <span
-            class="emotion-5 emotion-41 emotion-7"
+            class="emotion-5 emotion-6 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
           >
             -14
           </span>
           <span
-            class="emotion-5 emotion-41 emotion-7"
+            class="emotion-5 emotion-6 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
           >
             76
           </span>
           <span
-            class="emotion-5 emotion-41 emotion-7"
+            class="emotion-5 emotion-6 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
           >
             7.73
           </span>
           <span
-            class="emotion-5 emotion-41 emotion-7"
+            class="emotion-5 emotion-6 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
           >
             0
           </span>

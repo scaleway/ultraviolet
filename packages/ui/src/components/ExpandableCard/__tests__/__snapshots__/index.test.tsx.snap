@@ -43,7 +43,7 @@ exports[`expandableCard > renders correctly with complex header 1`] = `
   border-color: #8c40ef;
 }
 
-.emotion-2[open]>.emotion-14 {
+.emotion-2[open]>.emotion-10 {
   border-color: #8c40ef;
 }
 
@@ -98,29 +98,6 @@ exports[`expandableCard > renders correctly with complex header 1`] = `
 }
 
 .emotion-9 {
-  color: #3f4250;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-11 {
-  font-size: 0.75rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-13 {
   border-top: 1px solid #d9dadd;
   padding: 1.5rem;
 }
@@ -151,19 +128,19 @@ exports[`expandableCard > renders correctly with complex header 1`] = `
           </svg>
           <div>
             <h2
-              class="emotion-9 emotion-10"
+              class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
             >
               Title
             </h2>
             <p
-              class="emotion-11 emotion-10"
+              class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
             >
               Description
             </p>
           </div>
         </summary>
         <div
-          class="emotion-13 emotion-14"
+          class="emotion-9 emotion-10"
         >
           Content
         </div>
@@ -216,7 +193,7 @@ exports[`expandableCard > renders correctly with default values 1`] = `
   border-color: #8c40ef;
 }
 
-.emotion-2[open]>.emotion-12 {
+.emotion-2[open]>.emotion-10 {
   border-color: #8c40ef;
 }
 
@@ -271,18 +248,6 @@ exports[`expandableCard > renders correctly with default values 1`] = `
 }
 
 .emotion-9 {
-  color: #3f4250;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-11 {
   border-top: 1px solid #d9dadd;
   padding: 1.5rem;
 }
@@ -312,13 +277,13 @@ exports[`expandableCard > renders correctly with default values 1`] = `
             />
           </svg>
           <h2
-            class="emotion-9 emotion-10"
+            class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
           >
             Title
           </h2>
         </summary>
         <div
-          class="emotion-11 emotion-12"
+          class="emotion-9 emotion-10"
         >
           Content
         </div>
@@ -440,7 +405,7 @@ exports[`expandableCard > works properly draggable 1`] = `
   border-color: #8c40ef;
 }
 
-.emotion-8[open]>.emotion-18 {
+.emotion-8[open]>.emotion-16 {
   border-color: #8c40ef;
 }
 
@@ -495,23 +460,11 @@ exports[`expandableCard > works properly draggable 1`] = `
 }
 
 .emotion-15 {
-  color: #3f4250;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-17 {
   border-top: 1px solid #d9dadd;
   padding: 1.5rem;
 }
 
-.emotion-19 {
+.emotion-17 {
   height: 1.5rem;
   border-bottom: 2px solid;
   border-color: transparent;
@@ -521,11 +474,11 @@ exports[`expandableCard > works properly draggable 1`] = `
   position: absolute;
 }
 
-.emotion-19[data-first="true"] {
+.emotion-17[data-first="true"] {
   top: -1.5rem;
 }
 
-.emotion-19::after {
+.emotion-17::after {
   content: '';
   left: 0;
   bottom: -4px;
@@ -543,7 +496,7 @@ exports[`expandableCard > works properly draggable 1`] = `
   position: absolute;
 }
 
-.emotion-29 {
+.emotion-27 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1rem;
@@ -552,7 +505,7 @@ exports[`expandableCard > works properly draggable 1`] = `
   min-height: 1rem;
 }
 
-.emotion-29 .fillStroke {
+.emotion-27 .fillStroke {
   stroke: #727683;
   fill: none;
 }
@@ -606,23 +559,23 @@ exports[`expandableCard > works properly draggable 1`] = `
             />
           </svg>
           <h2
-            class="emotion-15 emotion-16"
+            class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
           >
             Title
           </h2>
         </summary>
         <div
-          class="emotion-17 emotion-18"
+          class="emotion-15 emotion-16"
         >
           Content
         </div>
       </details>
       <div
-        class="emotion-19 emotion-20"
+        class="emotion-17 emotion-18"
         data-first="true"
       />
       <div
-        class="emotion-19 emotion-20"
+        class="emotion-17 emotion-18"
         data-testid="card-1-dropable-area"
         style="border-color: transparent;"
       />
@@ -645,7 +598,7 @@ exports[`expandableCard > works properly draggable 1`] = `
           tabindex="0"
         >
           <svg
-            class="emotion-29 emotion-7"
+            class="emotion-27 emotion-7"
             viewBox="0 0 16 16"
           >
             <path
@@ -673,19 +626,19 @@ exports[`expandableCard > works properly draggable 1`] = `
             />
           </svg>
           <h2
-            class="emotion-15 emotion-16"
+            class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
           >
             Title
           </h2>
         </summary>
         <div
-          class="emotion-17 emotion-18"
+          class="emotion-15 emotion-16"
         >
           Content
         </div>
       </details>
       <div
-        class="emotion-19 emotion-20"
+        class="emotion-17 emotion-18"
         data-testid="card-2-dropable-area"
       />
     </div>
@@ -707,7 +660,7 @@ exports[`expandableCard > works properly draggable 1`] = `
           tabindex="0"
         >
           <svg
-            class="emotion-29 emotion-7"
+            class="emotion-27 emotion-7"
             viewBox="0 0 16 16"
           >
             <path
@@ -735,19 +688,19 @@ exports[`expandableCard > works properly draggable 1`] = `
             />
           </svg>
           <h2
-            class="emotion-15 emotion-16"
+            class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
           >
             Title
           </h2>
         </summary>
         <div
-          class="emotion-17 emotion-18"
+          class="emotion-15 emotion-16"
         >
           Content
         </div>
       </details>
       <div
-        class="emotion-19 emotion-20"
+        class="emotion-17 emotion-18"
         data-testid="card-3-dropable-area"
       />
     </div>

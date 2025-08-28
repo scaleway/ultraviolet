@@ -54,20 +54,11 @@ exports[`selectableCardGroup > renders correctly 1`] = `
   gap: 0.75rem;
 }
 
-.emotion-7 {
-  color: #3f4250;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.emotion-6 {
   cursor: text;
 }
 
-.emotion-9 {
+.emotion-8 {
   display: grid;
   grid-template-columns: repeat(1, minmax(0, 1fr));
   gap: 1rem;
@@ -81,7 +72,7 @@ exports[`selectableCardGroup > renders correctly 1`] = `
   justify-content: normal;
 }
 
-.emotion-11 {
+.emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -116,54 +107,54 @@ exports[`selectableCardGroup > renders correctly 1`] = `
   color: #3f4250;
 }
 
-.emotion-11[data-has-label='false']>:first-child {
+.emotion-10[data-has-label='false']>:first-child {
   margin-bottom: -0.25rem;
 }
 
-.emotion-11[data-has-default-cursor='true'] {
+.emotion-10[data-has-default-cursor='true'] {
   cursor: default;
 }
 
-.emotion-11[data-checked='true'] {
+.emotion-10[data-checked='true'] {
   border: 1px solid #8c40ef;
 }
 
-.emotion-11[data-error='true'] {
+.emotion-10[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-11[data-disabled='true'] {
+.emotion-10[data-disabled='true'] {
   border: 1px solid #e9eaeb;
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.emotion-11[data-image="illustration"] {
+.emotion-10[data-image="illustration"] {
   padding: 0rem;
 }
 
-.emotion-11[data-image="icon"] {
+.emotion-10[data-image="icon"] {
   padding: 0rem;
   padding-right: 1rem;
 }
 
-.emotion-11:hover:not([data-error='true']):not([data-disabled='true']),
-.emotion-11:active:not([data-error='true']):not([data-disabled='true']) {
+.emotion-10:hover:not([data-error='true']):not([data-disabled='true']),
+.emotion-10:active:not([data-error='true']):not([data-disabled='true']) {
   border: 1px solid #8c40ef;
 }
 
-.emotion-11:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.emotion-11:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
+.emotion-10:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
+.emotion-10:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
 
-.emotion-11[data-has-label='true'] .ehkrmld6,
-.emotion-11[data-has-label='true'] .emotion-15 {
+.emotion-10[data-has-label='true'] .ehkrmld6,
+.emotion-10[data-has-label='true'] .emotion-14 {
   width: 100%;
 }
 
-.emotion-14 {
+.emotion-13 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -184,65 +175,65 @@ exports[`selectableCardGroup > renders correctly 1`] = `
   align-items: start;
 }
 
-.emotion-14 .eqr7bqq3 {
+.emotion-13 .eqr7bqq3 {
   cursor: pointer;
 }
 
-.emotion-14[aria-disabled='true'] {
+.emotion-13[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.emotion-14[aria-disabled='true'] .eqr7bqq3 {
+.emotion-13[aria-disabled='true'] .eqr7bqq3 {
   cursor: not-allowed;
 }
 
-.emotion-14[aria-disabled='true'] .emotion-19 {
+.emotion-13[aria-disabled='true'] .emotion-18 {
   fill: #e9eaeb;
 }
 
-.emotion-14[aria-disabled='true'] .emotion-19 .emotion-21 {
+.emotion-13[aria-disabled='true'] .emotion-18 .emotion-20 {
   stroke: #d9dadd;
   fill: #f3f3f4;
 }
 
-.emotion-14[aria-disabled='true'] .emotion-17[aria-invalid="true"]:checked+.emotion-19 {
+.emotion-13[aria-disabled='true'] .emotion-16[aria-invalid="true"]:checked+.emotion-18 {
   fill: #ffd3e3;
 }
 
-.emotion-14[aria-disabled='true'] .emotion-17[aria-invalid="true"]:checked+.emotion-19 .emotion-21 {
+.emotion-13[aria-disabled='true'] .emotion-16[aria-invalid="true"]:checked+.emotion-18 .emotion-20 {
   stroke: #ffd3e3;
   fill: #ffd3e3;
 }
 
-.emotion-14[aria-disabled='true'] .emotion-17[aria-invalid="true"]+.emotion-19 {
+.emotion-13[aria-disabled='true'] .emotion-16[aria-invalid="true"]+.emotion-18 {
   fill: #ffebf2;
 }
 
-.emotion-14[aria-disabled='true'] .emotion-17[aria-invalid="true"]+.emotion-19 .emotion-21 {
+.emotion-13[aria-disabled='true'] .emotion-16[aria-invalid="true"]+.emotion-18 .emotion-20 {
   stroke: #ffbbd3;
   fill: #ffebf2;
 }
 
-.emotion-14[aria-disabled='true'] .emotion-17:checked+.emotion-19 {
+.emotion-13[aria-disabled='true'] .emotion-16:checked+.emotion-18 {
   fill: #e5dbfd;
 }
 
-.emotion-14[aria-disabled='true'] .emotion-17:checked+.emotion-19 .emotion-21 {
+.emotion-13[aria-disabled='true'] .emotion-16:checked+.emotion-18 .emotion-20 {
   stroke: #d8c5fc;
   fill: #d8c5fc;
 }
 
-.emotion-14[aria-disabled='true'] .emotion-17[aria-checked="mixed"]+.emotion-19 {
+.emotion-13[aria-disabled='true'] .emotion-16[aria-checked="mixed"]+.emotion-18 {
   fill: #e5dbfd;
 }
 
-.emotion-14[aria-disabled='true'] .emotion-17[aria-checked="mixed"]+.emotion-19 .emotion-21 {
+.emotion-13[aria-disabled='true'] .emotion-16[aria-checked="mixed"]+.emotion-18 .emotion-20 {
   stroke: #e5dbfd;
   fill: #e5dbfd;
 }
 
-.emotion-14 .emotion-17:checked+.emotion-19 path {
+.emotion-13 .emotion-16:checked+.emotion-18 path {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -256,107 +247,107 @@ exports[`selectableCardGroup > renders correctly 1`] = `
   transform: translate(2px, 2px);
 }
 
-.emotion-14 .emotion-17:checked+.emotion-19 .emotion-21 {
+.emotion-13 .emotion-16:checked+.emotion-18 .emotion-20 {
   fill: #8c40ef;
   stroke: #8c40ef;
 }
 
-.emotion-14 .emotion-17[aria-invalid="true"]:checked+.emotion-19 .emotion-21 {
+.emotion-13 .emotion-16[aria-invalid="true"]:checked+.emotion-18 .emotion-20 {
   fill: #e51963;
   stroke: #e51963;
 }
 
-.emotion-14 .emotion-17[aria-checked="mixed"]+.emotion-19 .eqr7bqq5 {
+.emotion-13 .emotion-16[aria-checked="mixed"]+.emotion-18 .eqr7bqq5 {
   fill: #ffffff;
 }
 
-.emotion-14 .emotion-17[aria-checked="mixed"]+.emotion-19 .emotion-21 {
+.emotion-13 .emotion-16[aria-checked="mixed"]+.emotion-18 .emotion-20 {
   fill: #8c40ef;
   stroke: #8c40ef;
 }
 
-.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='false'][aria-checked='false']+.emotion-19 .emotion-21 {
+.emotion-13:hover[aria-disabled='false'] .emotion-16[aria-invalid='false'][aria-checked='false']+.emotion-18 .emotion-20 {
   stroke: #792dd4;
   fill: #e5dbfd;
 }
 
-.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='false'][aria-checked='true']+.emotion-19 .emotion-21 {
+.emotion-13:hover[aria-disabled='false'] .emotion-16[aria-invalid='false'][aria-checked='true']+.emotion-18 .emotion-20 {
   stroke: #792dd4;
   fill: #792dd4;
 }
 
-.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='false'][aria-checked='mixed']+.emotion-19 .emotion-21 {
+.emotion-13:hover[aria-disabled='false'] .emotion-16[aria-invalid='false'][aria-checked='mixed']+.emotion-18 .emotion-20 {
   stroke: #792dd4;
   fill: #792dd4;
 }
 
-.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='true'][aria-checked='false']+.emotion-19 .emotion-21 {
+.emotion-13:hover[aria-disabled='false'] .emotion-16[aria-invalid='true'][aria-checked='false']+.emotion-18 .emotion-20 {
   stroke: #92103f;
   fill: #ffd3e3;
 }
 
-.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='true'][aria-checked='true']+.emotion-19 .emotion-21 {
+.emotion-13:hover[aria-disabled='false'] .emotion-16[aria-invalid='true'][aria-checked='true']+.emotion-18 .emotion-20 {
   stroke: #d6175c;
   fill: #d6175c;
 }
 
-.emotion-14 .emotion-17[aria-invalid="true"]+.emotion-19 {
+.emotion-13 .emotion-16[aria-invalid="true"]+.emotion-18 {
   fill: #e51963;
 }
 
-.emotion-14 .emotion-17[aria-invalid="true"]+.emotion-19 .emotion-21 {
+.emotion-13 .emotion-16[aria-invalid="true"]+.emotion-18 .emotion-20 {
   stroke: #e51963;
   fill: #ffebf2;
 }
 
-.emotion-14[data-checked='true'] {
+.emotion-13[data-checked='true'] {
   color: #641cb3;
 }
 
-.emotion-14[data-error='true'] {
+.emotion-13[data-error='true'] {
   color: #b3144d;
 }
 
-.emotion-14[aria-disabled='true'] {
+.emotion-13[aria-disabled='true'] {
   color: #b5b7bd;
 }
 
-.emotion-14 input+svg {
+.emotion-13 input+svg {
   display: none;
 }
 
-.emotion-14 label {
+.emotion-13 label {
   width: 100%;
 }
 
-.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='false'][aria-checked='false']+.emotion-19 .emotion-21 {
+.emotion-13:hover[aria-disabled='false'] .emotion-16[aria-invalid='false'][aria-checked='false']+.emotion-18 .emotion-20 {
   fill: #ffffff;
   stroke: #d9dadd;
 }
 
-.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='false'][aria-checked='true']+.emotion-19 .emotion-21 {
+.emotion-13:hover[aria-disabled='false'] .emotion-16[aria-invalid='false'][aria-checked='true']+.emotion-18 .emotion-20 {
   stroke: #8c40ef;
   fill: #8c40ef;
 }
 
-.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='false'][aria-checked='mixed']+.emotion-19 .emotion-21 {
+.emotion-13:hover[aria-disabled='false'] .emotion-16[aria-invalid='false'][aria-checked='mixed']+.emotion-18 .emotion-20 {
   stroke: #8c40ef;
   fill: #8c40ef;
 }
 
-.emotion-14 .emotion-17:focus+.emotion-19,
-.emotion-14 .emotion-17:active+.emotion-19 {
+.emotion-13 .emotion-16:focus+.emotion-18,
+.emotion-13 .emotion-16:active+.emotion-18 {
   outline: none;
   background-color: #ffffff;
   fill: #ffffff;
 }
 
-.emotion-14 .emotion-17[aria-checked='false'] .emotion-21 {
+.emotion-13 .emotion-16[aria-checked='false'] .emotion-20 {
   fill: #ffffff;
   stroke: #d9dadd;
 }
 
-.emotion-16 {
+.emotion-15 {
   position: absolute;
   white-space: nowrap;
   height: 1.5rem;
@@ -365,57 +356,57 @@ exports[`selectableCardGroup > renders correctly 1`] = `
   border-width: 0;
 }
 
-.emotion-16:not(:disabled) {
+.emotion-15:not(:disabled) {
   cursor: pointer;
 }
 
-.emotion-16:disabled {
+.emotion-15:disabled {
   cursor: not-allowed;
 }
 
-.emotion-16:not(:disabled):checked+.emotion-19,
-.emotion-16:not(:disabled)[aria-checked='mixed']+.emotion-19 {
+.emotion-15:not(:disabled):checked+.emotion-18,
+.emotion-15:not(:disabled)[aria-checked='mixed']+.emotion-18 {
   fill: #8c40ef;
 }
 
-.emotion-16:not(:disabled):checked+.emotion-19 .emotion-21,
-.emotion-16:not(:disabled)[aria-checked='mixed']+.emotion-19 .emotion-21 {
+.emotion-15:not(:disabled):checked+.emotion-18 .emotion-20,
+.emotion-15:not(:disabled)[aria-checked='mixed']+.emotion-18 .emotion-20 {
   stroke: #8c40ef;
 }
 
-.emotion-16:not(:disabled)[aria-invalid='true']+.emotion-19,
-.emotion-16:not(:disabled)[aria-invalid='mixed']+.emotion-19 {
+.emotion-15:not(:disabled)[aria-invalid='true']+.emotion-18,
+.emotion-15:not(:disabled)[aria-invalid='mixed']+.emotion-18 {
   fill: #ffebf2;
 }
 
-.emotion-16:not(:disabled)[aria-invalid='true']+.emotion-19 .emotion-21,
-.emotion-16:not(:disabled)[aria-invalid='mixed']+.emotion-19 .emotion-21 {
+.emotion-15:not(:disabled)[aria-invalid='true']+.emotion-18 .emotion-20,
+.emotion-15:not(:disabled)[aria-invalid='mixed']+.emotion-18 .emotion-20 {
   stroke: #b3144d;
 }
 
-.emotion-16:focus+.emotion-19 {
+.emotion-15:focus+.emotion-18 {
   background-color: #f1eefc;
   fill: #ffebf2;
   outline: 1px solid 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-16:focus+.emotion-19 .emotion-21 {
+.emotion-15:focus+.emotion-18 .emotion-20 {
   stroke: #792dd4;
   fill: #e5dbfd;
 }
 
-.emotion-16[aria-invalid='true']:focus+.emotion-19 {
+.emotion-15[aria-invalid='true']:focus+.emotion-18 {
   background-color: #ffebf2;
   fill: #ffebf2;
   outline: 1px solid 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-16[aria-invalid='true']:focus+.emotion-19 .emotion-21 {
+.emotion-15[aria-invalid='true']:focus+.emotion-18 .emotion-20 {
   stroke: #92103f;
   fill: #ffd3e3;
 }
 
-.emotion-18 {
+.emotion-17 {
   border-radius: 0.25rem;
   height: 1.5rem;
   width: 1.5rem;
@@ -423,7 +414,7 @@ exports[`selectableCardGroup > renders correctly 1`] = `
   min-height: 1.5rem;
 }
 
-.emotion-18 path {
+.emotion-17 path {
   fill: #ffffff;
   -webkit-transform: translate(2px, 2px);
   -moz-transform: translate(2px, 2px);
@@ -435,12 +426,12 @@ exports[`selectableCardGroup > renders correctly 1`] = `
   transform: scale(0);
 }
 
-.emotion-20 {
+.emotion-19 {
   fill: #ffffff;
   stroke: #d9dadd;
 }
 
-.emotion-22 {
+.emotion-21 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -466,7 +457,7 @@ exports[`selectableCardGroup > renders correctly 1`] = `
   gap: 0.25rem;
 }
 
-.emotion-24 {
+.emotion-23 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -492,16 +483,7 @@ exports[`selectableCardGroup > renders correctly 1`] = `
   gap: 0.25rem;
 }
 
-.emotion-27 {
-  color: #3f4250;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.emotion-25 {
   width: 100%;
   cursor: pointer;
 }
@@ -519,15 +501,15 @@ exports[`selectableCardGroup > renders correctly 1`] = `
           class="emotion-4 emotion-1"
         >
           <legend
-            class="emotion-6 emotion-7 emotion-8"
+            class="emotion-6 emotion-7 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
           >
             Label
           </legend>
           <div
-            class="emotion-9 emotion-10"
+            class="emotion-8 emotion-9"
           >
             <div
-              class="emotion-11 emotion-12"
+              class="emotion-10 emotion-11"
               data-checked="true"
               data-disabled="false"
               data-error="false"
@@ -540,7 +522,7 @@ exports[`selectableCardGroup > renders correctly 1`] = `
             >
               <div
                 aria-disabled="false"
-                class="emotion-13 emotion-14 emotion-15"
+                class="emotion-12 emotion-13 emotion-14"
                 data-checked="true"
                 data-error="false"
               >
@@ -548,21 +530,21 @@ exports[`selectableCardGroup > renders correctly 1`] = `
                   aria-checked="true"
                   aria-invalid="false"
                   checked=""
-                  class="emotion-16 emotion-17"
-                  id="_r_2_"
+                  class="emotion-15 emotion-16"
+                  id="«r2»"
                   name="checkbox"
                   tabindex="-1"
                   type="checkbox"
                   value="value-1"
                 />
                 <svg
-                  class="emotion-18 emotion-19"
+                  class="emotion-17 emotion-18"
                   fill="none"
                   viewBox="0 0 24 24"
                 >
                   <g>
                     <rect
-                      class="emotion-20 emotion-21"
+                      class="emotion-19 emotion-20"
                       height="16"
                       rx="0.125rem"
                       stroke-width="2"
@@ -583,14 +565,14 @@ exports[`selectableCardGroup > renders correctly 1`] = `
                   </g>
                 </svg>
                 <div
-                  class="emotion-22 emotion-1"
+                  class="emotion-21 emotion-1"
                 >
                   <div
-                    class="emotion-24 emotion-1"
+                    class="emotion-23 emotion-1"
                   >
                     <label
-                      class="emotion-26 emotion-27 emotion-8"
-                      for="_r_2_"
+                      class="emotion-25 emotion-26 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+                      for="«r2»"
                     >
                       Checkbox 1
                     </label>
@@ -599,7 +581,7 @@ exports[`selectableCardGroup > renders correctly 1`] = `
               </div>
             </div>
             <div
-              class="emotion-11 emotion-12"
+              class="emotion-10 emotion-11"
               data-checked="false"
               data-disabled="false"
               data-error="false"
@@ -612,28 +594,28 @@ exports[`selectableCardGroup > renders correctly 1`] = `
             >
               <div
                 aria-disabled="false"
-                class="emotion-13 emotion-14 emotion-15"
+                class="emotion-12 emotion-13 emotion-14"
                 data-checked="false"
                 data-error="false"
               >
                 <input
                   aria-checked="false"
                   aria-invalid="false"
-                  class="emotion-16 emotion-17"
-                  id="_r_6_"
+                  class="emotion-15 emotion-16"
+                  id="«r6»"
                   name="checkbox"
                   tabindex="-1"
                   type="checkbox"
                   value="value-2"
                 />
                 <svg
-                  class="emotion-18 emotion-19"
+                  class="emotion-17 emotion-18"
                   fill="none"
                   viewBox="0 0 24 24"
                 >
                   <g>
                     <rect
-                      class="emotion-20 emotion-21"
+                      class="emotion-19 emotion-20"
                       height="16"
                       rx="0.125rem"
                       stroke-width="2"
@@ -654,14 +636,14 @@ exports[`selectableCardGroup > renders correctly 1`] = `
                   </g>
                 </svg>
                 <div
-                  class="emotion-22 emotion-1"
+                  class="emotion-21 emotion-1"
                 >
                   <div
-                    class="emotion-24 emotion-1"
+                    class="emotion-23 emotion-1"
                   >
                     <label
-                      class="emotion-26 emotion-27 emotion-8"
-                      for="_r_6_"
+                      class="emotion-25 emotion-26 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+                      for="«r6»"
                     >
                       Checkbox 2
                     </label>
@@ -731,20 +713,11 @@ exports[`selectableCardGroup > renders correctly as a radio 1`] = `
   gap: 0.75rem;
 }
 
-.emotion-7 {
-  color: #3f4250;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.emotion-6 {
   cursor: text;
 }
 
-.emotion-9 {
+.emotion-8 {
   display: grid;
   grid-template-columns: repeat(1, minmax(0, 1fr));
   gap: 1rem;
@@ -758,7 +731,7 @@ exports[`selectableCardGroup > renders correctly as a radio 1`] = `
   justify-content: normal;
 }
 
-.emotion-11 {
+.emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -793,54 +766,54 @@ exports[`selectableCardGroup > renders correctly as a radio 1`] = `
   color: #3f4250;
 }
 
-.emotion-11[data-has-label='false']>:first-child {
+.emotion-10[data-has-label='false']>:first-child {
   margin-bottom: -0.25rem;
 }
 
-.emotion-11[data-has-default-cursor='true'] {
+.emotion-10[data-has-default-cursor='true'] {
   cursor: default;
 }
 
-.emotion-11[data-checked='true'] {
+.emotion-10[data-checked='true'] {
   border: 1px solid #8c40ef;
 }
 
-.emotion-11[data-error='true'] {
+.emotion-10[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-11[data-disabled='true'] {
+.emotion-10[data-disabled='true'] {
   border: 1px solid #e9eaeb;
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.emotion-11[data-image="illustration"] {
+.emotion-10[data-image="illustration"] {
   padding: 0rem;
 }
 
-.emotion-11[data-image="icon"] {
+.emotion-10[data-image="icon"] {
   padding: 0rem;
   padding-right: 1rem;
 }
 
-.emotion-11:hover:not([data-error='true']):not([data-disabled='true']),
-.emotion-11:active:not([data-error='true']):not([data-disabled='true']) {
+.emotion-10:hover:not([data-error='true']):not([data-disabled='true']),
+.emotion-10:active:not([data-error='true']):not([data-disabled='true']) {
   border: 1px solid #8c40ef;
 }
 
-.emotion-11:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.emotion-11:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
+.emotion-10:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
+.emotion-10:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
 
-.emotion-11[data-has-label='true'] .emotion-14,
-.emotion-11[data-has-label='true'] .eqr7bqq0 {
+.emotion-10[data-has-label='true'] .emotion-13,
+.emotion-10[data-has-label='true'] .eqr7bqq0 {
   width: 100%;
 }
 
-.emotion-13 {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -863,7 +836,7 @@ exports[`selectableCardGroup > renders correctly as a radio 1`] = `
   gap: 0.25rem;
 }
 
-.emotion-16 {
+.emotion-15 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -887,104 +860,104 @@ exports[`selectableCardGroup > renders correctly as a radio 1`] = `
   align-items: start;
 }
 
-.emotion-16[aria-disabled='false'],
-.emotion-16[aria-disabled='false']>label {
+.emotion-15[aria-disabled='false'],
+.emotion-15[aria-disabled='false']>label {
   cursor: pointer;
 }
 
-.emotion-16:hover[aria-disabled='false'] .emotion-19+.emotion-21 {
+.emotion-15:hover[aria-disabled='false'] .emotion-18+.emotion-20 {
   fill: #8c40ef;
 }
 
-.emotion-16:hover[aria-disabled='false'] .emotion-19+.emotion-21 .emotion-23 {
+.emotion-15:hover[aria-disabled='false'] .emotion-18+.emotion-20 .emotion-22 {
   fill: #e5dbfd;
 }
 
-.emotion-16:hover[aria-disabled='false'] .emotion-19[aria-invalid='true']+.emotion-21 {
+.emotion-15:hover[aria-disabled='false'] .emotion-18[aria-invalid='true']+.emotion-20 {
   fill: #b3144d;
 }
 
-.emotion-16:hover[aria-disabled='false'] .emotion-19[aria-invalid='true']+.emotion-21 .emotion-23 {
+.emotion-15:hover[aria-disabled='false'] .emotion-18[aria-invalid='true']+.emotion-20 .emotion-22 {
   fill: #ffd3e3;
 }
 
-.emotion-16[aria-disabled='true'] {
+.emotion-15[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.emotion-16[aria-disabled='true']>label,
-.emotion-16[aria-disabled='true'] .emotion-19 {
+.emotion-15[aria-disabled='true']>label,
+.emotion-15[aria-disabled='true'] .emotion-18 {
   cursor: not-allowed;
 }
 
-.emotion-16[aria-disabled='true'] .emotion-21 {
+.emotion-15[aria-disabled='true'] .emotion-20 {
   fill: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-16[aria-disabled='true'] .emotion-21 .emotion-23 {
+.emotion-15[aria-disabled='true'] .emotion-20 .emotion-22 {
   fill: #f3f3f4;
 }
 
-.emotion-16[data-checked='true'] {
+.emotion-15[data-checked='true'] {
   color: #641cb3;
 }
 
-.emotion-16[data-error='true'] {
+.emotion-15[data-error='true'] {
   color: #b3144d;
 }
 
-.emotion-16[aria-disabled='true'] {
+.emotion-15[aria-disabled='true'] {
   color: #b5b7bd;
 }
 
-.emotion-16 input+svg {
+.emotion-15 input+svg {
   display: none;
 }
 
-.emotion-16:hover[aria-disabled='false']:not([data-checked='true']) .emotion-19+.emotion-21 {
+.emotion-15:hover[aria-disabled='false']:not([data-checked='true']) .emotion-18+.emotion-20 {
   fill: #d9dadd;
 }
 
-.emotion-16:hover[aria-disabled='false']:not([data-checked='true']) .emotion-19+.emotion-21 .emotion-23 {
+.emotion-15:hover[aria-disabled='false']:not([data-checked='true']) .emotion-18+.emotion-20 .emotion-22 {
   fill: #ffffff;
 }
 
-.emotion-16:hover[aria-disabled='false']:not([data-checked='true']) .emotion-19[aria-invalid='true']+.emotion-21 {
+.emotion-15:hover[aria-disabled='false']:not([data-checked='true']) .emotion-18[aria-invalid='true']+.emotion-20 {
   fill: #b3144d;
 }
 
-.emotion-16:hover[aria-disabled='false']:not([data-checked='true']) .emotion-19[aria-invalid='true']+.emotion-21 .emotion-23 {
+.emotion-15:hover[aria-disabled='false']:not([data-checked='true']) .emotion-18[aria-invalid='true']+.emotion-20 .emotion-22 {
   fill: #ffffff;
 }
 
-.emotion-16:hover[aria-disabled='false'] .emotion-19+.emotion-21 {
+.emotion-15:hover[aria-disabled='false'] .emotion-18+.emotion-20 {
   fill: #8c40ef;
 }
 
-.emotion-16:hover[aria-disabled='false'] .emotion-19+.emotion-21 .emotion-23 {
+.emotion-15:hover[aria-disabled='false'] .emotion-18+.emotion-20 .emotion-22 {
   fill: #ffffff;
 }
 
-.emotion-16:hover[aria-disabled='false'] .emotion-19[aria-invalid='true']+.emotion-21 {
+.emotion-15:hover[aria-disabled='false'] .emotion-18[aria-invalid='true']+.emotion-20 {
   fill: #b3144d;
 }
 
-.emotion-16:hover[aria-disabled='false'] .emotion-19[aria-invalid='true']+.emotion-21 .emotion-23 {
+.emotion-15:hover[aria-disabled='false'] .emotion-18[aria-invalid='true']+.emotion-20 .emotion-22 {
   fill: #ffffff;
 }
 
-.emotion-16 .emotion-19[aria-disabled='false']:active+.emotion-21 {
+.emotion-15 .emotion-18[aria-disabled='false']:active+.emotion-20 {
   background: none;
   fill: #8c40ef;
 }
 
-.emotion-16 .emotion-19[aria-disabled='false']:active+.emotion-21 .emotion-23 {
+.emotion-15 .emotion-18[aria-disabled='false']:active+.emotion-20 .emotion-22 {
   fill: #ffffff;
 }
 
-.emotion-18 {
+.emotion-17 {
   cursor: pointer;
   position: absolute;
   height: 1.5rem;
@@ -994,7 +967,7 @@ exports[`selectableCardGroup > renders correctly as a radio 1`] = `
   border-width: 0;
 }
 
-.emotion-18+.emotion-21 .emotion-25 {
+.emotion-17+.emotion-20 .emotion-24 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -1004,48 +977,48 @@ exports[`selectableCardGroup > renders correctly as a radio 1`] = `
   transform: scale(0);
 }
 
-.emotion-18:checked+svg .emotion-25 {
+.emotion-17:checked+svg .emotion-24 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.emotion-18:checked[aria-disabled='false'][aria-invalid='false']+.emotion-21 {
+.emotion-17:checked[aria-disabled='false'][aria-invalid='false']+.emotion-20 {
   fill: #8c40ef;
 }
 
-.emotion-18:checked[aria-disabled='true'][aria-invalid='false']+.emotion-21 {
+.emotion-17:checked[aria-disabled='true'][aria-invalid='false']+.emotion-20 {
   fill: #d8c5fc;
 }
 
-.emotion-18[aria-invalid='true']:not([aria-disabled='true'])+.emotion-21 {
+.emotion-17[aria-invalid='true']:not([aria-disabled='true'])+.emotion-20 {
   fill: #e51963;
 }
 
-.emotion-18[aria-disabled='false']:active+.emotion-21 {
+.emotion-17[aria-disabled='false']:active+.emotion-20 {
   background-color: #5e127e40;
   fill: #8c40ef;
 }
 
-.emotion-18[aria-disabled='false']:active+.emotion-21 .emotion-23 {
+.emotion-17[aria-disabled='false']:active+.emotion-20 .emotion-22 {
   fill: #f1eefc;
 }
 
-.emotion-18[aria-disabled='false']:focus-visible+.emotion-21 {
+.emotion-17[aria-disabled='false']:focus-visible+.emotion-20 {
   outline: -webkit-focus-ring-color auto 1px;
 }
 
-.emotion-18[aria-invalid='true']:focus+.emotion-21 {
+.emotion-17[aria-invalid='true']:focus+.emotion-20 {
   background-color: #f91b6c40;
   fill: #e51963;
 }
 
-.emotion-18[aria-invalid='true']:focus+.emotion-21 .emotion-23 {
+.emotion-17[aria-invalid='true']:focus+.emotion-20 .emotion-22 {
   fill: #ffebf2;
 }
 
-.emotion-20 {
+.emotion-19 {
   height: 1.5rem;
   width: 1.5rem;
   min-width: 1.5rem;
@@ -1054,35 +1027,15 @@ exports[`selectableCardGroup > renders correctly as a radio 1`] = `
   fill: #d9dadd;
 }
 
-.emotion-20 .emotion-23 {
+.emotion-19 .emotion-22 {
   fill: #ffffff;
 }
 
-.emotion-27 {
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.emotion-25 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
   cursor: pointer;
-}
-
-.emotion-47 {
-  color: #b3144d;
-  font-size: 0.75rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
 }
 
 <div
@@ -1098,15 +1051,15 @@ exports[`selectableCardGroup > renders correctly as a radio 1`] = `
           class="emotion-4 emotion-1"
         >
           <legend
-            class="emotion-6 emotion-7 emotion-8"
+            class="emotion-6 emotion-7 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
           >
             Label
           </legend>
           <div
-            class="emotion-9 emotion-10"
+            class="emotion-8 emotion-9"
           >
             <div
-              class="emotion-11 emotion-12"
+              class="emotion-10 emotion-11"
               data-checked="true"
               data-disabled="false"
               data-error="true"
@@ -1118,11 +1071,11 @@ exports[`selectableCardGroup > renders correctly as a radio 1`] = `
               tabindex="0"
             >
               <div
-                class="emotion-13 emotion-14"
+                class="emotion-12 emotion-13"
               >
                 <div
                   aria-disabled="false"
-                  class="emotion-15 emotion-16 emotion-17"
+                  class="emotion-14 emotion-15 emotion-16"
                   data-checked="true"
                   data-error="true"
                 >
@@ -1130,15 +1083,15 @@ exports[`selectableCardGroup > renders correctly as a radio 1`] = `
                     aria-disabled="false"
                     aria-invalid="true"
                     checked=""
-                    class="emotion-18 emotion-19"
-                    id="_r_1i_"
+                    class="emotion-17 emotion-18"
+                    id="«r1i»"
                     name="radio"
                     tabindex="-1"
                     type="radio"
                     value="value-1"
                   />
                   <svg
-                    class="emotion-20 emotion-21"
+                    class="emotion-19 emotion-20"
                     viewBox="0 0 24 24"
                   >
                     <g>
@@ -1149,13 +1102,13 @@ exports[`selectableCardGroup > renders correctly as a radio 1`] = `
                         stroke-width="2"
                       />
                       <circle
-                        class="emotion-22 emotion-23"
+                        class="emotion-21 emotion-22"
                         cx="12"
                         cy="12"
                         r="8"
                       />
                       <circle
-                        class="emotion-24 emotion-25"
+                        class="emotion-23 emotion-24"
                         cx="12"
                         cy="12"
                         r="5"
@@ -1163,8 +1116,8 @@ exports[`selectableCardGroup > renders correctly as a radio 1`] = `
                     </g>
                   </svg>
                   <label
-                    class="emotion-26 emotion-27 emotion-8"
-                    for="_r_1i_"
+                    class="emotion-25 emotion-26 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+                    for="«r1i»"
                   >
                     Radio 1
                   </label>
@@ -1172,7 +1125,7 @@ exports[`selectableCardGroup > renders correctly as a radio 1`] = `
               </div>
             </div>
             <div
-              class="emotion-11 emotion-12"
+              class="emotion-10 emotion-11"
               data-checked="false"
               data-disabled="false"
               data-error="true"
@@ -1184,26 +1137,26 @@ exports[`selectableCardGroup > renders correctly as a radio 1`] = `
               tabindex="0"
             >
               <div
-                class="emotion-13 emotion-14"
+                class="emotion-12 emotion-13"
               >
                 <div
                   aria-disabled="false"
-                  class="emotion-15 emotion-16 emotion-17"
+                  class="emotion-14 emotion-15 emotion-16"
                   data-checked="false"
                   data-error="true"
                 >
                   <input
                     aria-disabled="false"
                     aria-invalid="true"
-                    class="emotion-18 emotion-19"
-                    id="_r_1m_"
+                    class="emotion-17 emotion-18"
+                    id="«r1m»"
                     name="radio"
                     tabindex="-1"
                     type="radio"
                     value="value-2"
                   />
                   <svg
-                    class="emotion-20 emotion-21"
+                    class="emotion-19 emotion-20"
                     viewBox="0 0 24 24"
                   >
                     <g>
@@ -1214,13 +1167,13 @@ exports[`selectableCardGroup > renders correctly as a radio 1`] = `
                         stroke-width="2"
                       />
                       <circle
-                        class="emotion-22 emotion-23"
+                        class="emotion-21 emotion-22"
                         cx="12"
                         cy="12"
                         r="8"
                       />
                       <circle
-                        class="emotion-24 emotion-25"
+                        class="emotion-23 emotion-24"
                         cx="12"
                         cy="12"
                         r="5"
@@ -1228,8 +1181,8 @@ exports[`selectableCardGroup > renders correctly as a radio 1`] = `
                     </g>
                   </svg>
                   <label
-                    class="emotion-26 emotion-27 emotion-8"
-                    for="_r_1m_"
+                    class="emotion-25 emotion-26 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+                    for="«r1m»"
                   >
                     Radio 2
                   </label>
@@ -1240,7 +1193,7 @@ exports[`selectableCardGroup > renders correctly as a radio 1`] = `
         </div>
       </fieldset>
       <span
-        class="emotion-47 emotion-8"
+        class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_danger__m4c9owd style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_8__m4c9ow1k style_undefined_compound_72__m4c9ow3c"
       >
         Error content
       </span>
@@ -1326,32 +1279,11 @@ exports[`selectableCardGroup > renders correctly required and showTick 1`] = `
   gap: 0.25rem;
 }
 
-.emotion-9 {
-  color: #3f4250;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.emotion-8 {
   cursor: text;
 }
 
-.emotion-11 {
-  color: #b3144d;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-13 {
+.emotion-10 {
   display: grid;
   grid-template-columns: repeat(1, minmax(0, 1fr));
   gap: 1rem;
@@ -1365,7 +1297,7 @@ exports[`selectableCardGroup > renders correctly required and showTick 1`] = `
   justify-content: normal;
 }
 
-.emotion-15 {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1400,54 +1332,54 @@ exports[`selectableCardGroup > renders correctly required and showTick 1`] = `
   color: #3f4250;
 }
 
-.emotion-15[data-has-label='false']>:first-child {
+.emotion-12[data-has-label='false']>:first-child {
   margin-bottom: -0.25rem;
 }
 
-.emotion-15[data-has-default-cursor='true'] {
+.emotion-12[data-has-default-cursor='true'] {
   cursor: default;
 }
 
-.emotion-15[data-checked='true'] {
+.emotion-12[data-checked='true'] {
   border: 1px solid #8c40ef;
 }
 
-.emotion-15[data-error='true'] {
+.emotion-12[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-15[data-disabled='true'] {
+.emotion-12[data-disabled='true'] {
   border: 1px solid #e9eaeb;
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.emotion-15[data-image="illustration"] {
+.emotion-12[data-image="illustration"] {
   padding: 0rem;
 }
 
-.emotion-15[data-image="icon"] {
+.emotion-12[data-image="icon"] {
   padding: 0rem;
   padding-right: 1rem;
 }
 
-.emotion-15:hover:not([data-error='true']):not([data-disabled='true']),
-.emotion-15:active:not([data-error='true']):not([data-disabled='true']) {
+.emotion-12:hover:not([data-error='true']):not([data-disabled='true']),
+.emotion-12:active:not([data-error='true']):not([data-disabled='true']) {
   border: 1px solid #8c40ef;
 }
 
-.emotion-15:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.emotion-15:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
+.emotion-12:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
+.emotion-12:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
 
-.emotion-15[data-has-label='true'] .ehkrmld6,
-.emotion-15[data-has-label='true'] .emotion-19 {
+.emotion-12[data-has-label='true'] .ehkrmld6,
+.emotion-12[data-has-label='true'] .emotion-16 {
   width: 100%;
 }
 
-.emotion-18 {
+.emotion-15 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1468,65 +1400,65 @@ exports[`selectableCardGroup > renders correctly required and showTick 1`] = `
   align-items: start;
 }
 
-.emotion-18 .eqr7bqq3 {
+.emotion-15 .eqr7bqq3 {
   cursor: pointer;
 }
 
-.emotion-18[aria-disabled='true'] {
+.emotion-15[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.emotion-18[aria-disabled='true'] .eqr7bqq3 {
+.emotion-15[aria-disabled='true'] .eqr7bqq3 {
   cursor: not-allowed;
 }
 
-.emotion-18[aria-disabled='true'] .emotion-23 {
+.emotion-15[aria-disabled='true'] .emotion-20 {
   fill: #e9eaeb;
 }
 
-.emotion-18[aria-disabled='true'] .emotion-23 .emotion-25 {
+.emotion-15[aria-disabled='true'] .emotion-20 .emotion-22 {
   stroke: #d9dadd;
   fill: #f3f3f4;
 }
 
-.emotion-18[aria-disabled='true'] .emotion-21[aria-invalid="true"]:checked+.emotion-23 {
+.emotion-15[aria-disabled='true'] .emotion-18[aria-invalid="true"]:checked+.emotion-20 {
   fill: #ffd3e3;
 }
 
-.emotion-18[aria-disabled='true'] .emotion-21[aria-invalid="true"]:checked+.emotion-23 .emotion-25 {
+.emotion-15[aria-disabled='true'] .emotion-18[aria-invalid="true"]:checked+.emotion-20 .emotion-22 {
   stroke: #ffd3e3;
   fill: #ffd3e3;
 }
 
-.emotion-18[aria-disabled='true'] .emotion-21[aria-invalid="true"]+.emotion-23 {
+.emotion-15[aria-disabled='true'] .emotion-18[aria-invalid="true"]+.emotion-20 {
   fill: #ffebf2;
 }
 
-.emotion-18[aria-disabled='true'] .emotion-21[aria-invalid="true"]+.emotion-23 .emotion-25 {
+.emotion-15[aria-disabled='true'] .emotion-18[aria-invalid="true"]+.emotion-20 .emotion-22 {
   stroke: #ffbbd3;
   fill: #ffebf2;
 }
 
-.emotion-18[aria-disabled='true'] .emotion-21:checked+.emotion-23 {
+.emotion-15[aria-disabled='true'] .emotion-18:checked+.emotion-20 {
   fill: #e5dbfd;
 }
 
-.emotion-18[aria-disabled='true'] .emotion-21:checked+.emotion-23 .emotion-25 {
+.emotion-15[aria-disabled='true'] .emotion-18:checked+.emotion-20 .emotion-22 {
   stroke: #d8c5fc;
   fill: #d8c5fc;
 }
 
-.emotion-18[aria-disabled='true'] .emotion-21[aria-checked="mixed"]+.emotion-23 {
+.emotion-15[aria-disabled='true'] .emotion-18[aria-checked="mixed"]+.emotion-20 {
   fill: #e5dbfd;
 }
 
-.emotion-18[aria-disabled='true'] .emotion-21[aria-checked="mixed"]+.emotion-23 .emotion-25 {
+.emotion-15[aria-disabled='true'] .emotion-18[aria-checked="mixed"]+.emotion-20 .emotion-22 {
   stroke: #e5dbfd;
   fill: #e5dbfd;
 }
 
-.emotion-18 .emotion-21:checked+.emotion-23 path {
+.emotion-15 .emotion-18:checked+.emotion-20 path {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -1540,103 +1472,103 @@ exports[`selectableCardGroup > renders correctly required and showTick 1`] = `
   transform: translate(2px, 2px);
 }
 
-.emotion-18 .emotion-21:checked+.emotion-23 .emotion-25 {
+.emotion-15 .emotion-18:checked+.emotion-20 .emotion-22 {
   fill: #8c40ef;
   stroke: #8c40ef;
 }
 
-.emotion-18 .emotion-21[aria-invalid="true"]:checked+.emotion-23 .emotion-25 {
+.emotion-15 .emotion-18[aria-invalid="true"]:checked+.emotion-20 .emotion-22 {
   fill: #e51963;
   stroke: #e51963;
 }
 
-.emotion-18 .emotion-21[aria-checked="mixed"]+.emotion-23 .eqr7bqq5 {
+.emotion-15 .emotion-18[aria-checked="mixed"]+.emotion-20 .eqr7bqq5 {
   fill: #ffffff;
 }
 
-.emotion-18 .emotion-21[aria-checked="mixed"]+.emotion-23 .emotion-25 {
+.emotion-15 .emotion-18[aria-checked="mixed"]+.emotion-20 .emotion-22 {
   fill: #8c40ef;
   stroke: #8c40ef;
 }
 
-.emotion-18:hover[aria-disabled='false'] .emotion-21[aria-invalid='false'][aria-checked='false']+.emotion-23 .emotion-25 {
+.emotion-15:hover[aria-disabled='false'] .emotion-18[aria-invalid='false'][aria-checked='false']+.emotion-20 .emotion-22 {
   stroke: #792dd4;
   fill: #e5dbfd;
 }
 
-.emotion-18:hover[aria-disabled='false'] .emotion-21[aria-invalid='false'][aria-checked='true']+.emotion-23 .emotion-25 {
+.emotion-15:hover[aria-disabled='false'] .emotion-18[aria-invalid='false'][aria-checked='true']+.emotion-20 .emotion-22 {
   stroke: #792dd4;
   fill: #792dd4;
 }
 
-.emotion-18:hover[aria-disabled='false'] .emotion-21[aria-invalid='false'][aria-checked='mixed']+.emotion-23 .emotion-25 {
+.emotion-15:hover[aria-disabled='false'] .emotion-18[aria-invalid='false'][aria-checked='mixed']+.emotion-20 .emotion-22 {
   stroke: #792dd4;
   fill: #792dd4;
 }
 
-.emotion-18:hover[aria-disabled='false'] .emotion-21[aria-invalid='true'][aria-checked='false']+.emotion-23 .emotion-25 {
+.emotion-15:hover[aria-disabled='false'] .emotion-18[aria-invalid='true'][aria-checked='false']+.emotion-20 .emotion-22 {
   stroke: #92103f;
   fill: #ffd3e3;
 }
 
-.emotion-18:hover[aria-disabled='false'] .emotion-21[aria-invalid='true'][aria-checked='true']+.emotion-23 .emotion-25 {
+.emotion-15:hover[aria-disabled='false'] .emotion-18[aria-invalid='true'][aria-checked='true']+.emotion-20 .emotion-22 {
   stroke: #d6175c;
   fill: #d6175c;
 }
 
-.emotion-18 .emotion-21[aria-invalid="true"]+.emotion-23 {
+.emotion-15 .emotion-18[aria-invalid="true"]+.emotion-20 {
   fill: #e51963;
 }
 
-.emotion-18 .emotion-21[aria-invalid="true"]+.emotion-23 .emotion-25 {
+.emotion-15 .emotion-18[aria-invalid="true"]+.emotion-20 .emotion-22 {
   stroke: #e51963;
   fill: #ffebf2;
 }
 
-.emotion-18[data-checked='true'] {
+.emotion-15[data-checked='true'] {
   color: #641cb3;
 }
 
-.emotion-18[data-error='true'] {
+.emotion-15[data-error='true'] {
   color: #b3144d;
 }
 
-.emotion-18[aria-disabled='true'] {
+.emotion-15[aria-disabled='true'] {
   color: #b5b7bd;
 }
 
-.emotion-18 label {
+.emotion-15 label {
   width: 100%;
 }
 
-.emotion-18:hover[aria-disabled='false'] .emotion-21[aria-invalid='false'][aria-checked='false']+.emotion-23 .emotion-25 {
+.emotion-15:hover[aria-disabled='false'] .emotion-18[aria-invalid='false'][aria-checked='false']+.emotion-20 .emotion-22 {
   fill: #ffffff;
   stroke: #d9dadd;
 }
 
-.emotion-18:hover[aria-disabled='false'] .emotion-21[aria-invalid='false'][aria-checked='true']+.emotion-23 .emotion-25 {
+.emotion-15:hover[aria-disabled='false'] .emotion-18[aria-invalid='false'][aria-checked='true']+.emotion-20 .emotion-22 {
   stroke: #8c40ef;
   fill: #8c40ef;
 }
 
-.emotion-18:hover[aria-disabled='false'] .emotion-21[aria-invalid='false'][aria-checked='mixed']+.emotion-23 .emotion-25 {
+.emotion-15:hover[aria-disabled='false'] .emotion-18[aria-invalid='false'][aria-checked='mixed']+.emotion-20 .emotion-22 {
   stroke: #8c40ef;
   fill: #8c40ef;
 }
 
-.emotion-18 .emotion-21:focus+.emotion-23,
-.emotion-18 .emotion-21:active+.emotion-23 {
+.emotion-15 .emotion-18:focus+.emotion-20,
+.emotion-15 .emotion-18:active+.emotion-20 {
   outline: none;
   background-color: #ffffff;
   fill: #ffffff;
 }
 
-.emotion-18 .emotion-21[aria-checked='false'] .emotion-25 {
+.emotion-15 .emotion-18[aria-checked='false'] .emotion-22 {
   fill: #ffffff;
   stroke: #d9dadd;
 }
 
-.emotion-20 {
+.emotion-17 {
   position: absolute;
   white-space: nowrap;
   height: 1.5rem;
@@ -1645,57 +1577,57 @@ exports[`selectableCardGroup > renders correctly required and showTick 1`] = `
   border-width: 0;
 }
 
-.emotion-20:not(:disabled) {
+.emotion-17:not(:disabled) {
   cursor: pointer;
 }
 
-.emotion-20:disabled {
+.emotion-17:disabled {
   cursor: not-allowed;
 }
 
-.emotion-20:not(:disabled):checked+.emotion-23,
-.emotion-20:not(:disabled)[aria-checked='mixed']+.emotion-23 {
+.emotion-17:not(:disabled):checked+.emotion-20,
+.emotion-17:not(:disabled)[aria-checked='mixed']+.emotion-20 {
   fill: #8c40ef;
 }
 
-.emotion-20:not(:disabled):checked+.emotion-23 .emotion-25,
-.emotion-20:not(:disabled)[aria-checked='mixed']+.emotion-23 .emotion-25 {
+.emotion-17:not(:disabled):checked+.emotion-20 .emotion-22,
+.emotion-17:not(:disabled)[aria-checked='mixed']+.emotion-20 .emotion-22 {
   stroke: #8c40ef;
 }
 
-.emotion-20:not(:disabled)[aria-invalid='true']+.emotion-23,
-.emotion-20:not(:disabled)[aria-invalid='mixed']+.emotion-23 {
+.emotion-17:not(:disabled)[aria-invalid='true']+.emotion-20,
+.emotion-17:not(:disabled)[aria-invalid='mixed']+.emotion-20 {
   fill: #ffebf2;
 }
 
-.emotion-20:not(:disabled)[aria-invalid='true']+.emotion-23 .emotion-25,
-.emotion-20:not(:disabled)[aria-invalid='mixed']+.emotion-23 .emotion-25 {
+.emotion-17:not(:disabled)[aria-invalid='true']+.emotion-20 .emotion-22,
+.emotion-17:not(:disabled)[aria-invalid='mixed']+.emotion-20 .emotion-22 {
   stroke: #b3144d;
 }
 
-.emotion-20:focus+.emotion-23 {
+.emotion-17:focus+.emotion-20 {
   background-color: #f1eefc;
   fill: #ffebf2;
   outline: 1px solid 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-20:focus+.emotion-23 .emotion-25 {
+.emotion-17:focus+.emotion-20 .emotion-22 {
   stroke: #792dd4;
   fill: #e5dbfd;
 }
 
-.emotion-20[aria-invalid='true']:focus+.emotion-23 {
+.emotion-17[aria-invalid='true']:focus+.emotion-20 {
   background-color: #ffebf2;
   fill: #ffebf2;
   outline: 1px solid 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-20[aria-invalid='true']:focus+.emotion-23 .emotion-25 {
+.emotion-17[aria-invalid='true']:focus+.emotion-20 .emotion-22 {
   stroke: #92103f;
   fill: #ffd3e3;
 }
 
-.emotion-22 {
+.emotion-19 {
   border-radius: 0.25rem;
   height: 1.5rem;
   width: 1.5rem;
@@ -1703,7 +1635,7 @@ exports[`selectableCardGroup > renders correctly required and showTick 1`] = `
   min-height: 1.5rem;
 }
 
-.emotion-22 path {
+.emotion-19 path {
   fill: #ffffff;
   -webkit-transform: translate(2px, 2px);
   -moz-transform: translate(2px, 2px);
@@ -1715,12 +1647,12 @@ exports[`selectableCardGroup > renders correctly required and showTick 1`] = `
   transform: scale(0);
 }
 
-.emotion-24 {
+.emotion-21 {
   fill: #ffffff;
   stroke: #d9dadd;
 }
 
-.emotion-26 {
+.emotion-23 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1746,7 +1678,7 @@ exports[`selectableCardGroup > renders correctly required and showTick 1`] = `
   gap: 0.25rem;
 }
 
-.emotion-28 {
+.emotion-25 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1772,16 +1704,7 @@ exports[`selectableCardGroup > renders correctly required and showTick 1`] = `
   gap: 0.25rem;
 }
 
-.emotion-31 {
-  color: #3f4250;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.emotion-27 {
   width: 100%;
   cursor: pointer;
 }
@@ -1802,21 +1725,21 @@ exports[`selectableCardGroup > renders correctly required and showTick 1`] = `
             class="emotion-6 emotion-1"
           >
             <legend
-              class="emotion-8 emotion-9 emotion-10"
+              class="emotion-8 emotion-9 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
             >
               Label
             </legend>
             <span
-              class="emotion-11 emotion-10"
+              class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_danger__m4c9owd style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_8__m4c9ow1k style_undefined_compound_72__m4c9ow3c"
             >
               *
             </span>
           </div>
           <div
-            class="emotion-13 emotion-14"
+            class="emotion-10 emotion-11"
           >
             <div
-              class="emotion-15 emotion-16"
+              class="emotion-12 emotion-13"
               data-checked="true"
               data-disabled="false"
               data-error="false"
@@ -1829,7 +1752,7 @@ exports[`selectableCardGroup > renders correctly required and showTick 1`] = `
             >
               <div
                 aria-disabled="false"
-                class="emotion-17 emotion-18 emotion-19"
+                class="emotion-14 emotion-15 emotion-16"
                 data-checked="true"
                 data-error="false"
               >
@@ -1837,21 +1760,21 @@ exports[`selectableCardGroup > renders correctly required and showTick 1`] = `
                   aria-checked="true"
                   aria-invalid="false"
                   checked=""
-                  class="emotion-20 emotion-21"
-                  id="_r_v_"
+                  class="emotion-17 emotion-18"
+                  id="«rv»"
                   name="checkbox"
                   tabindex="-1"
                   type="checkbox"
                   value="value-1"
                 />
                 <svg
-                  class="emotion-22 emotion-23"
+                  class="emotion-19 emotion-20"
                   fill="none"
                   viewBox="0 0 24 24"
                 >
                   <g>
                     <rect
-                      class="emotion-24 emotion-25"
+                      class="emotion-21 emotion-22"
                       height="16"
                       rx="0.125rem"
                       stroke-width="2"
@@ -1872,14 +1795,14 @@ exports[`selectableCardGroup > renders correctly required and showTick 1`] = `
                   </g>
                 </svg>
                 <div
-                  class="emotion-26 emotion-1"
+                  class="emotion-23 emotion-1"
                 >
                   <div
-                    class="emotion-28 emotion-1"
+                    class="emotion-25 emotion-1"
                   >
                     <label
-                      class="emotion-30 emotion-31 emotion-10"
-                      for="_r_v_"
+                      class="emotion-27 emotion-28 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+                      for="«rv»"
                     >
                       Checkbox 1
                     </label>
@@ -1888,7 +1811,7 @@ exports[`selectableCardGroup > renders correctly required and showTick 1`] = `
               </div>
             </div>
             <div
-              class="emotion-15 emotion-16"
+              class="emotion-12 emotion-13"
               data-checked="false"
               data-disabled="false"
               data-error="false"
@@ -1901,28 +1824,28 @@ exports[`selectableCardGroup > renders correctly required and showTick 1`] = `
             >
               <div
                 aria-disabled="false"
-                class="emotion-17 emotion-18 emotion-19"
+                class="emotion-14 emotion-15 emotion-16"
                 data-checked="false"
                 data-error="false"
               >
                 <input
                   aria-checked="false"
                   aria-invalid="false"
-                  class="emotion-20 emotion-21"
-                  id="_r_13_"
+                  class="emotion-17 emotion-18"
+                  id="«r13»"
                   name="checkbox"
                   tabindex="-1"
                   type="checkbox"
                   value="value-2"
                 />
                 <svg
-                  class="emotion-22 emotion-23"
+                  class="emotion-19 emotion-20"
                   fill="none"
                   viewBox="0 0 24 24"
                 >
                   <g>
                     <rect
-                      class="emotion-24 emotion-25"
+                      class="emotion-21 emotion-22"
                       height="16"
                       rx="0.125rem"
                       stroke-width="2"
@@ -1943,14 +1866,14 @@ exports[`selectableCardGroup > renders correctly required and showTick 1`] = `
                   </g>
                 </svg>
                 <div
-                  class="emotion-26 emotion-1"
+                  class="emotion-23 emotion-1"
                 >
                   <div
-                    class="emotion-28 emotion-1"
+                    class="emotion-25 emotion-1"
                   >
                     <label
-                      class="emotion-30 emotion-31 emotion-10"
-                      for="_r_13_"
+                      class="emotion-27 emotion-28 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+                      for="«r13»"
                     >
                       Checkbox 2
                     </label>
@@ -2020,20 +1943,11 @@ exports[`selectableCardGroup > renders correctly with direction multiple columns
   gap: 0.75rem;
 }
 
-.emotion-7 {
-  color: #3f4250;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.emotion-6 {
   cursor: text;
 }
 
-.emotion-9 {
+.emotion-8 {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1rem;
@@ -2047,7 +1961,7 @@ exports[`selectableCardGroup > renders correctly with direction multiple columns
   justify-content: normal;
 }
 
-.emotion-11 {
+.emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2082,54 +1996,54 @@ exports[`selectableCardGroup > renders correctly with direction multiple columns
   color: #3f4250;
 }
 
-.emotion-11[data-has-label='false']>:first-child {
+.emotion-10[data-has-label='false']>:first-child {
   margin-bottom: -0.25rem;
 }
 
-.emotion-11[data-has-default-cursor='true'] {
+.emotion-10[data-has-default-cursor='true'] {
   cursor: default;
 }
 
-.emotion-11[data-checked='true'] {
+.emotion-10[data-checked='true'] {
   border: 1px solid #8c40ef;
 }
 
-.emotion-11[data-error='true'] {
+.emotion-10[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-11[data-disabled='true'] {
+.emotion-10[data-disabled='true'] {
   border: 1px solid #e9eaeb;
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.emotion-11[data-image="illustration"] {
+.emotion-10[data-image="illustration"] {
   padding: 0rem;
 }
 
-.emotion-11[data-image="icon"] {
+.emotion-10[data-image="icon"] {
   padding: 0rem;
   padding-right: 1rem;
 }
 
-.emotion-11:hover:not([data-error='true']):not([data-disabled='true']),
-.emotion-11:active:not([data-error='true']):not([data-disabled='true']) {
+.emotion-10:hover:not([data-error='true']):not([data-disabled='true']),
+.emotion-10:active:not([data-error='true']):not([data-disabled='true']) {
   border: 1px solid #8c40ef;
 }
 
-.emotion-11:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.emotion-11:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
+.emotion-10:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
+.emotion-10:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
 
-.emotion-11[data-has-label='true'] .ehkrmld6,
-.emotion-11[data-has-label='true'] .emotion-15 {
+.emotion-10[data-has-label='true'] .ehkrmld6,
+.emotion-10[data-has-label='true'] .emotion-14 {
   width: 100%;
 }
 
-.emotion-14 {
+.emotion-13 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -2150,65 +2064,65 @@ exports[`selectableCardGroup > renders correctly with direction multiple columns
   align-items: start;
 }
 
-.emotion-14 .eqr7bqq3 {
+.emotion-13 .eqr7bqq3 {
   cursor: pointer;
 }
 
-.emotion-14[aria-disabled='true'] {
+.emotion-13[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.emotion-14[aria-disabled='true'] .eqr7bqq3 {
+.emotion-13[aria-disabled='true'] .eqr7bqq3 {
   cursor: not-allowed;
 }
 
-.emotion-14[aria-disabled='true'] .emotion-19 {
+.emotion-13[aria-disabled='true'] .emotion-18 {
   fill: #e9eaeb;
 }
 
-.emotion-14[aria-disabled='true'] .emotion-19 .emotion-21 {
+.emotion-13[aria-disabled='true'] .emotion-18 .emotion-20 {
   stroke: #d9dadd;
   fill: #f3f3f4;
 }
 
-.emotion-14[aria-disabled='true'] .emotion-17[aria-invalid="true"]:checked+.emotion-19 {
+.emotion-13[aria-disabled='true'] .emotion-16[aria-invalid="true"]:checked+.emotion-18 {
   fill: #ffd3e3;
 }
 
-.emotion-14[aria-disabled='true'] .emotion-17[aria-invalid="true"]:checked+.emotion-19 .emotion-21 {
+.emotion-13[aria-disabled='true'] .emotion-16[aria-invalid="true"]:checked+.emotion-18 .emotion-20 {
   stroke: #ffd3e3;
   fill: #ffd3e3;
 }
 
-.emotion-14[aria-disabled='true'] .emotion-17[aria-invalid="true"]+.emotion-19 {
+.emotion-13[aria-disabled='true'] .emotion-16[aria-invalid="true"]+.emotion-18 {
   fill: #ffebf2;
 }
 
-.emotion-14[aria-disabled='true'] .emotion-17[aria-invalid="true"]+.emotion-19 .emotion-21 {
+.emotion-13[aria-disabled='true'] .emotion-16[aria-invalid="true"]+.emotion-18 .emotion-20 {
   stroke: #ffbbd3;
   fill: #ffebf2;
 }
 
-.emotion-14[aria-disabled='true'] .emotion-17:checked+.emotion-19 {
+.emotion-13[aria-disabled='true'] .emotion-16:checked+.emotion-18 {
   fill: #e5dbfd;
 }
 
-.emotion-14[aria-disabled='true'] .emotion-17:checked+.emotion-19 .emotion-21 {
+.emotion-13[aria-disabled='true'] .emotion-16:checked+.emotion-18 .emotion-20 {
   stroke: #d8c5fc;
   fill: #d8c5fc;
 }
 
-.emotion-14[aria-disabled='true'] .emotion-17[aria-checked="mixed"]+.emotion-19 {
+.emotion-13[aria-disabled='true'] .emotion-16[aria-checked="mixed"]+.emotion-18 {
   fill: #e5dbfd;
 }
 
-.emotion-14[aria-disabled='true'] .emotion-17[aria-checked="mixed"]+.emotion-19 .emotion-21 {
+.emotion-13[aria-disabled='true'] .emotion-16[aria-checked="mixed"]+.emotion-18 .emotion-20 {
   stroke: #e5dbfd;
   fill: #e5dbfd;
 }
 
-.emotion-14 .emotion-17:checked+.emotion-19 path {
+.emotion-13 .emotion-16:checked+.emotion-18 path {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -2222,107 +2136,107 @@ exports[`selectableCardGroup > renders correctly with direction multiple columns
   transform: translate(2px, 2px);
 }
 
-.emotion-14 .emotion-17:checked+.emotion-19 .emotion-21 {
+.emotion-13 .emotion-16:checked+.emotion-18 .emotion-20 {
   fill: #8c40ef;
   stroke: #8c40ef;
 }
 
-.emotion-14 .emotion-17[aria-invalid="true"]:checked+.emotion-19 .emotion-21 {
+.emotion-13 .emotion-16[aria-invalid="true"]:checked+.emotion-18 .emotion-20 {
   fill: #e51963;
   stroke: #e51963;
 }
 
-.emotion-14 .emotion-17[aria-checked="mixed"]+.emotion-19 .eqr7bqq5 {
+.emotion-13 .emotion-16[aria-checked="mixed"]+.emotion-18 .eqr7bqq5 {
   fill: #ffffff;
 }
 
-.emotion-14 .emotion-17[aria-checked="mixed"]+.emotion-19 .emotion-21 {
+.emotion-13 .emotion-16[aria-checked="mixed"]+.emotion-18 .emotion-20 {
   fill: #8c40ef;
   stroke: #8c40ef;
 }
 
-.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='false'][aria-checked='false']+.emotion-19 .emotion-21 {
+.emotion-13:hover[aria-disabled='false'] .emotion-16[aria-invalid='false'][aria-checked='false']+.emotion-18 .emotion-20 {
   stroke: #792dd4;
   fill: #e5dbfd;
 }
 
-.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='false'][aria-checked='true']+.emotion-19 .emotion-21 {
+.emotion-13:hover[aria-disabled='false'] .emotion-16[aria-invalid='false'][aria-checked='true']+.emotion-18 .emotion-20 {
   stroke: #792dd4;
   fill: #792dd4;
 }
 
-.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='false'][aria-checked='mixed']+.emotion-19 .emotion-21 {
+.emotion-13:hover[aria-disabled='false'] .emotion-16[aria-invalid='false'][aria-checked='mixed']+.emotion-18 .emotion-20 {
   stroke: #792dd4;
   fill: #792dd4;
 }
 
-.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='true'][aria-checked='false']+.emotion-19 .emotion-21 {
+.emotion-13:hover[aria-disabled='false'] .emotion-16[aria-invalid='true'][aria-checked='false']+.emotion-18 .emotion-20 {
   stroke: #92103f;
   fill: #ffd3e3;
 }
 
-.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='true'][aria-checked='true']+.emotion-19 .emotion-21 {
+.emotion-13:hover[aria-disabled='false'] .emotion-16[aria-invalid='true'][aria-checked='true']+.emotion-18 .emotion-20 {
   stroke: #d6175c;
   fill: #d6175c;
 }
 
-.emotion-14 .emotion-17[aria-invalid="true"]+.emotion-19 {
+.emotion-13 .emotion-16[aria-invalid="true"]+.emotion-18 {
   fill: #e51963;
 }
 
-.emotion-14 .emotion-17[aria-invalid="true"]+.emotion-19 .emotion-21 {
+.emotion-13 .emotion-16[aria-invalid="true"]+.emotion-18 .emotion-20 {
   stroke: #e51963;
   fill: #ffebf2;
 }
 
-.emotion-14[data-checked='true'] {
+.emotion-13[data-checked='true'] {
   color: #641cb3;
 }
 
-.emotion-14[data-error='true'] {
+.emotion-13[data-error='true'] {
   color: #b3144d;
 }
 
-.emotion-14[aria-disabled='true'] {
+.emotion-13[aria-disabled='true'] {
   color: #b5b7bd;
 }
 
-.emotion-14 input+svg {
+.emotion-13 input+svg {
   display: none;
 }
 
-.emotion-14 label {
+.emotion-13 label {
   width: 100%;
 }
 
-.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='false'][aria-checked='false']+.emotion-19 .emotion-21 {
+.emotion-13:hover[aria-disabled='false'] .emotion-16[aria-invalid='false'][aria-checked='false']+.emotion-18 .emotion-20 {
   fill: #ffffff;
   stroke: #d9dadd;
 }
 
-.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='false'][aria-checked='true']+.emotion-19 .emotion-21 {
+.emotion-13:hover[aria-disabled='false'] .emotion-16[aria-invalid='false'][aria-checked='true']+.emotion-18 .emotion-20 {
   stroke: #8c40ef;
   fill: #8c40ef;
 }
 
-.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='false'][aria-checked='mixed']+.emotion-19 .emotion-21 {
+.emotion-13:hover[aria-disabled='false'] .emotion-16[aria-invalid='false'][aria-checked='mixed']+.emotion-18 .emotion-20 {
   stroke: #8c40ef;
   fill: #8c40ef;
 }
 
-.emotion-14 .emotion-17:focus+.emotion-19,
-.emotion-14 .emotion-17:active+.emotion-19 {
+.emotion-13 .emotion-16:focus+.emotion-18,
+.emotion-13 .emotion-16:active+.emotion-18 {
   outline: none;
   background-color: #ffffff;
   fill: #ffffff;
 }
 
-.emotion-14 .emotion-17[aria-checked='false'] .emotion-21 {
+.emotion-13 .emotion-16[aria-checked='false'] .emotion-20 {
   fill: #ffffff;
   stroke: #d9dadd;
 }
 
-.emotion-16 {
+.emotion-15 {
   position: absolute;
   white-space: nowrap;
   height: 1.5rem;
@@ -2331,57 +2245,57 @@ exports[`selectableCardGroup > renders correctly with direction multiple columns
   border-width: 0;
 }
 
-.emotion-16:not(:disabled) {
+.emotion-15:not(:disabled) {
   cursor: pointer;
 }
 
-.emotion-16:disabled {
+.emotion-15:disabled {
   cursor: not-allowed;
 }
 
-.emotion-16:not(:disabled):checked+.emotion-19,
-.emotion-16:not(:disabled)[aria-checked='mixed']+.emotion-19 {
+.emotion-15:not(:disabled):checked+.emotion-18,
+.emotion-15:not(:disabled)[aria-checked='mixed']+.emotion-18 {
   fill: #8c40ef;
 }
 
-.emotion-16:not(:disabled):checked+.emotion-19 .emotion-21,
-.emotion-16:not(:disabled)[aria-checked='mixed']+.emotion-19 .emotion-21 {
+.emotion-15:not(:disabled):checked+.emotion-18 .emotion-20,
+.emotion-15:not(:disabled)[aria-checked='mixed']+.emotion-18 .emotion-20 {
   stroke: #8c40ef;
 }
 
-.emotion-16:not(:disabled)[aria-invalid='true']+.emotion-19,
-.emotion-16:not(:disabled)[aria-invalid='mixed']+.emotion-19 {
+.emotion-15:not(:disabled)[aria-invalid='true']+.emotion-18,
+.emotion-15:not(:disabled)[aria-invalid='mixed']+.emotion-18 {
   fill: #ffebf2;
 }
 
-.emotion-16:not(:disabled)[aria-invalid='true']+.emotion-19 .emotion-21,
-.emotion-16:not(:disabled)[aria-invalid='mixed']+.emotion-19 .emotion-21 {
+.emotion-15:not(:disabled)[aria-invalid='true']+.emotion-18 .emotion-20,
+.emotion-15:not(:disabled)[aria-invalid='mixed']+.emotion-18 .emotion-20 {
   stroke: #b3144d;
 }
 
-.emotion-16:focus+.emotion-19 {
+.emotion-15:focus+.emotion-18 {
   background-color: #f1eefc;
   fill: #ffebf2;
   outline: 1px solid 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-16:focus+.emotion-19 .emotion-21 {
+.emotion-15:focus+.emotion-18 .emotion-20 {
   stroke: #792dd4;
   fill: #e5dbfd;
 }
 
-.emotion-16[aria-invalid='true']:focus+.emotion-19 {
+.emotion-15[aria-invalid='true']:focus+.emotion-18 {
   background-color: #ffebf2;
   fill: #ffebf2;
   outline: 1px solid 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-16[aria-invalid='true']:focus+.emotion-19 .emotion-21 {
+.emotion-15[aria-invalid='true']:focus+.emotion-18 .emotion-20 {
   stroke: #92103f;
   fill: #ffd3e3;
 }
 
-.emotion-18 {
+.emotion-17 {
   border-radius: 0.25rem;
   height: 1.5rem;
   width: 1.5rem;
@@ -2389,7 +2303,7 @@ exports[`selectableCardGroup > renders correctly with direction multiple columns
   min-height: 1.5rem;
 }
 
-.emotion-18 path {
+.emotion-17 path {
   fill: #ffffff;
   -webkit-transform: translate(2px, 2px);
   -moz-transform: translate(2px, 2px);
@@ -2401,12 +2315,12 @@ exports[`selectableCardGroup > renders correctly with direction multiple columns
   transform: scale(0);
 }
 
-.emotion-20 {
+.emotion-19 {
   fill: #ffffff;
   stroke: #d9dadd;
 }
 
-.emotion-22 {
+.emotion-21 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2432,7 +2346,7 @@ exports[`selectableCardGroup > renders correctly with direction multiple columns
   gap: 0.25rem;
 }
 
-.emotion-24 {
+.emotion-23 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2458,16 +2372,7 @@ exports[`selectableCardGroup > renders correctly with direction multiple columns
   gap: 0.25rem;
 }
 
-.emotion-27 {
-  color: #3f4250;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.emotion-25 {
   width: 100%;
   cursor: pointer;
 }
@@ -2485,15 +2390,15 @@ exports[`selectableCardGroup > renders correctly with direction multiple columns
           class="emotion-4 emotion-1"
         >
           <legend
-            class="emotion-6 emotion-7 emotion-8"
+            class="emotion-6 emotion-7 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
           >
             Label
           </legend>
           <div
-            class="emotion-9 emotion-10"
+            class="emotion-8 emotion-9"
           >
             <div
-              class="emotion-11 emotion-12"
+              class="emotion-10 emotion-11"
               data-checked="true"
               data-disabled="false"
               data-error="false"
@@ -2506,7 +2411,7 @@ exports[`selectableCardGroup > renders correctly with direction multiple columns
             >
               <div
                 aria-disabled="false"
-                class="emotion-13 emotion-14 emotion-15"
+                class="emotion-12 emotion-13 emotion-14"
                 data-checked="true"
                 data-error="false"
               >
@@ -2514,21 +2419,21 @@ exports[`selectableCardGroup > renders correctly with direction multiple columns
                   aria-checked="true"
                   aria-invalid="false"
                   checked=""
-                  class="emotion-16 emotion-17"
-                  id="_r_b_"
+                  class="emotion-15 emotion-16"
+                  id="«rb»"
                   name="checkbox"
                   tabindex="-1"
                   type="checkbox"
                   value="value-1"
                 />
                 <svg
-                  class="emotion-18 emotion-19"
+                  class="emotion-17 emotion-18"
                   fill="none"
                   viewBox="0 0 24 24"
                 >
                   <g>
                     <rect
-                      class="emotion-20 emotion-21"
+                      class="emotion-19 emotion-20"
                       height="16"
                       rx="0.125rem"
                       stroke-width="2"
@@ -2549,14 +2454,14 @@ exports[`selectableCardGroup > renders correctly with direction multiple columns
                   </g>
                 </svg>
                 <div
-                  class="emotion-22 emotion-1"
+                  class="emotion-21 emotion-1"
                 >
                   <div
-                    class="emotion-24 emotion-1"
+                    class="emotion-23 emotion-1"
                   >
                     <label
-                      class="emotion-26 emotion-27 emotion-8"
-                      for="_r_b_"
+                      class="emotion-25 emotion-26 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+                      for="«rb»"
                     >
                       Checkbox 1
                     </label>
@@ -2565,7 +2470,7 @@ exports[`selectableCardGroup > renders correctly with direction multiple columns
               </div>
             </div>
             <div
-              class="emotion-11 emotion-12"
+              class="emotion-10 emotion-11"
               data-checked="false"
               data-disabled="false"
               data-error="false"
@@ -2578,28 +2483,28 @@ exports[`selectableCardGroup > renders correctly with direction multiple columns
             >
               <div
                 aria-disabled="false"
-                class="emotion-13 emotion-14 emotion-15"
+                class="emotion-12 emotion-13 emotion-14"
                 data-checked="false"
                 data-error="false"
               >
                 <input
                   aria-checked="false"
                   aria-invalid="false"
-                  class="emotion-16 emotion-17"
-                  id="_r_f_"
+                  class="emotion-15 emotion-16"
+                  id="«rf»"
                   name="checkbox"
                   tabindex="-1"
                   type="checkbox"
                   value="value-2"
                 />
                 <svg
-                  class="emotion-18 emotion-19"
+                  class="emotion-17 emotion-18"
                   fill="none"
                   viewBox="0 0 24 24"
                 >
                   <g>
                     <rect
-                      class="emotion-20 emotion-21"
+                      class="emotion-19 emotion-20"
                       height="16"
                       rx="0.125rem"
                       stroke-width="2"
@@ -2620,14 +2525,14 @@ exports[`selectableCardGroup > renders correctly with direction multiple columns
                   </g>
                 </svg>
                 <div
-                  class="emotion-22 emotion-1"
+                  class="emotion-21 emotion-1"
                 >
                   <div
-                    class="emotion-24 emotion-1"
+                    class="emotion-23 emotion-1"
                   >
                     <label
-                      class="emotion-26 emotion-27 emotion-8"
-                      for="_r_f_"
+                      class="emotion-25 emotion-26 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+                      for="«rf»"
                     >
                       Checkbox 2
                     </label>
@@ -2697,20 +2602,11 @@ exports[`selectableCardGroup > renders correctly with error content 1`] = `
   gap: 0.75rem;
 }
 
-.emotion-7 {
-  color: #3f4250;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.emotion-6 {
   cursor: text;
 }
 
-.emotion-9 {
+.emotion-8 {
   display: grid;
   grid-template-columns: repeat(1, minmax(0, 1fr));
   gap: 1rem;
@@ -2724,7 +2620,7 @@ exports[`selectableCardGroup > renders correctly with error content 1`] = `
   justify-content: normal;
 }
 
-.emotion-11 {
+.emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2759,54 +2655,54 @@ exports[`selectableCardGroup > renders correctly with error content 1`] = `
   color: #3f4250;
 }
 
-.emotion-11[data-has-label='false']>:first-child {
+.emotion-10[data-has-label='false']>:first-child {
   margin-bottom: -0.25rem;
 }
 
-.emotion-11[data-has-default-cursor='true'] {
+.emotion-10[data-has-default-cursor='true'] {
   cursor: default;
 }
 
-.emotion-11[data-checked='true'] {
+.emotion-10[data-checked='true'] {
   border: 1px solid #8c40ef;
 }
 
-.emotion-11[data-error='true'] {
+.emotion-10[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-11[data-disabled='true'] {
+.emotion-10[data-disabled='true'] {
   border: 1px solid #e9eaeb;
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.emotion-11[data-image="illustration"] {
+.emotion-10[data-image="illustration"] {
   padding: 0rem;
 }
 
-.emotion-11[data-image="icon"] {
+.emotion-10[data-image="icon"] {
   padding: 0rem;
   padding-right: 1rem;
 }
 
-.emotion-11:hover:not([data-error='true']):not([data-disabled='true']),
-.emotion-11:active:not([data-error='true']):not([data-disabled='true']) {
+.emotion-10:hover:not([data-error='true']):not([data-disabled='true']),
+.emotion-10:active:not([data-error='true']):not([data-disabled='true']) {
   border: 1px solid #8c40ef;
 }
 
-.emotion-11:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.emotion-11:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
+.emotion-10:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
+.emotion-10:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
 
-.emotion-11[data-has-label='true'] .ehkrmld6,
-.emotion-11[data-has-label='true'] .emotion-15 {
+.emotion-10[data-has-label='true'] .ehkrmld6,
+.emotion-10[data-has-label='true'] .emotion-14 {
   width: 100%;
 }
 
-.emotion-14 {
+.emotion-13 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -2827,65 +2723,65 @@ exports[`selectableCardGroup > renders correctly with error content 1`] = `
   align-items: start;
 }
 
-.emotion-14 .eqr7bqq3 {
+.emotion-13 .eqr7bqq3 {
   cursor: pointer;
 }
 
-.emotion-14[aria-disabled='true'] {
+.emotion-13[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.emotion-14[aria-disabled='true'] .eqr7bqq3 {
+.emotion-13[aria-disabled='true'] .eqr7bqq3 {
   cursor: not-allowed;
 }
 
-.emotion-14[aria-disabled='true'] .emotion-19 {
+.emotion-13[aria-disabled='true'] .emotion-18 {
   fill: #e9eaeb;
 }
 
-.emotion-14[aria-disabled='true'] .emotion-19 .emotion-21 {
+.emotion-13[aria-disabled='true'] .emotion-18 .emotion-20 {
   stroke: #d9dadd;
   fill: #f3f3f4;
 }
 
-.emotion-14[aria-disabled='true'] .emotion-17[aria-invalid="true"]:checked+.emotion-19 {
+.emotion-13[aria-disabled='true'] .emotion-16[aria-invalid="true"]:checked+.emotion-18 {
   fill: #ffd3e3;
 }
 
-.emotion-14[aria-disabled='true'] .emotion-17[aria-invalid="true"]:checked+.emotion-19 .emotion-21 {
+.emotion-13[aria-disabled='true'] .emotion-16[aria-invalid="true"]:checked+.emotion-18 .emotion-20 {
   stroke: #ffd3e3;
   fill: #ffd3e3;
 }
 
-.emotion-14[aria-disabled='true'] .emotion-17[aria-invalid="true"]+.emotion-19 {
+.emotion-13[aria-disabled='true'] .emotion-16[aria-invalid="true"]+.emotion-18 {
   fill: #ffebf2;
 }
 
-.emotion-14[aria-disabled='true'] .emotion-17[aria-invalid="true"]+.emotion-19 .emotion-21 {
+.emotion-13[aria-disabled='true'] .emotion-16[aria-invalid="true"]+.emotion-18 .emotion-20 {
   stroke: #ffbbd3;
   fill: #ffebf2;
 }
 
-.emotion-14[aria-disabled='true'] .emotion-17:checked+.emotion-19 {
+.emotion-13[aria-disabled='true'] .emotion-16:checked+.emotion-18 {
   fill: #e5dbfd;
 }
 
-.emotion-14[aria-disabled='true'] .emotion-17:checked+.emotion-19 .emotion-21 {
+.emotion-13[aria-disabled='true'] .emotion-16:checked+.emotion-18 .emotion-20 {
   stroke: #d8c5fc;
   fill: #d8c5fc;
 }
 
-.emotion-14[aria-disabled='true'] .emotion-17[aria-checked="mixed"]+.emotion-19 {
+.emotion-13[aria-disabled='true'] .emotion-16[aria-checked="mixed"]+.emotion-18 {
   fill: #e5dbfd;
 }
 
-.emotion-14[aria-disabled='true'] .emotion-17[aria-checked="mixed"]+.emotion-19 .emotion-21 {
+.emotion-13[aria-disabled='true'] .emotion-16[aria-checked="mixed"]+.emotion-18 .emotion-20 {
   stroke: #e5dbfd;
   fill: #e5dbfd;
 }
 
-.emotion-14 .emotion-17:checked+.emotion-19 path {
+.emotion-13 .emotion-16:checked+.emotion-18 path {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -2899,107 +2795,107 @@ exports[`selectableCardGroup > renders correctly with error content 1`] = `
   transform: translate(2px, 2px);
 }
 
-.emotion-14 .emotion-17:checked+.emotion-19 .emotion-21 {
+.emotion-13 .emotion-16:checked+.emotion-18 .emotion-20 {
   fill: #8c40ef;
   stroke: #8c40ef;
 }
 
-.emotion-14 .emotion-17[aria-invalid="true"]:checked+.emotion-19 .emotion-21 {
+.emotion-13 .emotion-16[aria-invalid="true"]:checked+.emotion-18 .emotion-20 {
   fill: #e51963;
   stroke: #e51963;
 }
 
-.emotion-14 .emotion-17[aria-checked="mixed"]+.emotion-19 .eqr7bqq5 {
+.emotion-13 .emotion-16[aria-checked="mixed"]+.emotion-18 .eqr7bqq5 {
   fill: #ffffff;
 }
 
-.emotion-14 .emotion-17[aria-checked="mixed"]+.emotion-19 .emotion-21 {
+.emotion-13 .emotion-16[aria-checked="mixed"]+.emotion-18 .emotion-20 {
   fill: #8c40ef;
   stroke: #8c40ef;
 }
 
-.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='false'][aria-checked='false']+.emotion-19 .emotion-21 {
+.emotion-13:hover[aria-disabled='false'] .emotion-16[aria-invalid='false'][aria-checked='false']+.emotion-18 .emotion-20 {
   stroke: #792dd4;
   fill: #e5dbfd;
 }
 
-.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='false'][aria-checked='true']+.emotion-19 .emotion-21 {
+.emotion-13:hover[aria-disabled='false'] .emotion-16[aria-invalid='false'][aria-checked='true']+.emotion-18 .emotion-20 {
   stroke: #792dd4;
   fill: #792dd4;
 }
 
-.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='false'][aria-checked='mixed']+.emotion-19 .emotion-21 {
+.emotion-13:hover[aria-disabled='false'] .emotion-16[aria-invalid='false'][aria-checked='mixed']+.emotion-18 .emotion-20 {
   stroke: #792dd4;
   fill: #792dd4;
 }
 
-.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='true'][aria-checked='false']+.emotion-19 .emotion-21 {
+.emotion-13:hover[aria-disabled='false'] .emotion-16[aria-invalid='true'][aria-checked='false']+.emotion-18 .emotion-20 {
   stroke: #92103f;
   fill: #ffd3e3;
 }
 
-.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='true'][aria-checked='true']+.emotion-19 .emotion-21 {
+.emotion-13:hover[aria-disabled='false'] .emotion-16[aria-invalid='true'][aria-checked='true']+.emotion-18 .emotion-20 {
   stroke: #d6175c;
   fill: #d6175c;
 }
 
-.emotion-14 .emotion-17[aria-invalid="true"]+.emotion-19 {
+.emotion-13 .emotion-16[aria-invalid="true"]+.emotion-18 {
   fill: #e51963;
 }
 
-.emotion-14 .emotion-17[aria-invalid="true"]+.emotion-19 .emotion-21 {
+.emotion-13 .emotion-16[aria-invalid="true"]+.emotion-18 .emotion-20 {
   stroke: #e51963;
   fill: #ffebf2;
 }
 
-.emotion-14[data-checked='true'] {
+.emotion-13[data-checked='true'] {
   color: #641cb3;
 }
 
-.emotion-14[data-error='true'] {
+.emotion-13[data-error='true'] {
   color: #b3144d;
 }
 
-.emotion-14[aria-disabled='true'] {
+.emotion-13[aria-disabled='true'] {
   color: #b5b7bd;
 }
 
-.emotion-14 input+svg {
+.emotion-13 input+svg {
   display: none;
 }
 
-.emotion-14 label {
+.emotion-13 label {
   width: 100%;
 }
 
-.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='false'][aria-checked='false']+.emotion-19 .emotion-21 {
+.emotion-13:hover[aria-disabled='false'] .emotion-16[aria-invalid='false'][aria-checked='false']+.emotion-18 .emotion-20 {
   fill: #ffffff;
   stroke: #d9dadd;
 }
 
-.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='false'][aria-checked='true']+.emotion-19 .emotion-21 {
+.emotion-13:hover[aria-disabled='false'] .emotion-16[aria-invalid='false'][aria-checked='true']+.emotion-18 .emotion-20 {
   stroke: #8c40ef;
   fill: #8c40ef;
 }
 
-.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='false'][aria-checked='mixed']+.emotion-19 .emotion-21 {
+.emotion-13:hover[aria-disabled='false'] .emotion-16[aria-invalid='false'][aria-checked='mixed']+.emotion-18 .emotion-20 {
   stroke: #8c40ef;
   fill: #8c40ef;
 }
 
-.emotion-14 .emotion-17:focus+.emotion-19,
-.emotion-14 .emotion-17:active+.emotion-19 {
+.emotion-13 .emotion-16:focus+.emotion-18,
+.emotion-13 .emotion-16:active+.emotion-18 {
   outline: none;
   background-color: #ffffff;
   fill: #ffffff;
 }
 
-.emotion-14 .emotion-17[aria-checked='false'] .emotion-21 {
+.emotion-13 .emotion-16[aria-checked='false'] .emotion-20 {
   fill: #ffffff;
   stroke: #d9dadd;
 }
 
-.emotion-16 {
+.emotion-15 {
   position: absolute;
   white-space: nowrap;
   height: 1.5rem;
@@ -3008,57 +2904,57 @@ exports[`selectableCardGroup > renders correctly with error content 1`] = `
   border-width: 0;
 }
 
-.emotion-16:not(:disabled) {
+.emotion-15:not(:disabled) {
   cursor: pointer;
 }
 
-.emotion-16:disabled {
+.emotion-15:disabled {
   cursor: not-allowed;
 }
 
-.emotion-16:not(:disabled):checked+.emotion-19,
-.emotion-16:not(:disabled)[aria-checked='mixed']+.emotion-19 {
+.emotion-15:not(:disabled):checked+.emotion-18,
+.emotion-15:not(:disabled)[aria-checked='mixed']+.emotion-18 {
   fill: #8c40ef;
 }
 
-.emotion-16:not(:disabled):checked+.emotion-19 .emotion-21,
-.emotion-16:not(:disabled)[aria-checked='mixed']+.emotion-19 .emotion-21 {
+.emotion-15:not(:disabled):checked+.emotion-18 .emotion-20,
+.emotion-15:not(:disabled)[aria-checked='mixed']+.emotion-18 .emotion-20 {
   stroke: #8c40ef;
 }
 
-.emotion-16:not(:disabled)[aria-invalid='true']+.emotion-19,
-.emotion-16:not(:disabled)[aria-invalid='mixed']+.emotion-19 {
+.emotion-15:not(:disabled)[aria-invalid='true']+.emotion-18,
+.emotion-15:not(:disabled)[aria-invalid='mixed']+.emotion-18 {
   fill: #ffebf2;
 }
 
-.emotion-16:not(:disabled)[aria-invalid='true']+.emotion-19 .emotion-21,
-.emotion-16:not(:disabled)[aria-invalid='mixed']+.emotion-19 .emotion-21 {
+.emotion-15:not(:disabled)[aria-invalid='true']+.emotion-18 .emotion-20,
+.emotion-15:not(:disabled)[aria-invalid='mixed']+.emotion-18 .emotion-20 {
   stroke: #b3144d;
 }
 
-.emotion-16:focus+.emotion-19 {
+.emotion-15:focus+.emotion-18 {
   background-color: #f1eefc;
   fill: #ffebf2;
   outline: 1px solid 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-16:focus+.emotion-19 .emotion-21 {
+.emotion-15:focus+.emotion-18 .emotion-20 {
   stroke: #792dd4;
   fill: #e5dbfd;
 }
 
-.emotion-16[aria-invalid='true']:focus+.emotion-19 {
+.emotion-15[aria-invalid='true']:focus+.emotion-18 {
   background-color: #ffebf2;
   fill: #ffebf2;
   outline: 1px solid 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-16[aria-invalid='true']:focus+.emotion-19 .emotion-21 {
+.emotion-15[aria-invalid='true']:focus+.emotion-18 .emotion-20 {
   stroke: #92103f;
   fill: #ffd3e3;
 }
 
-.emotion-18 {
+.emotion-17 {
   border-radius: 0.25rem;
   height: 1.5rem;
   width: 1.5rem;
@@ -3066,7 +2962,7 @@ exports[`selectableCardGroup > renders correctly with error content 1`] = `
   min-height: 1.5rem;
 }
 
-.emotion-18 path {
+.emotion-17 path {
   fill: #ffffff;
   -webkit-transform: translate(2px, 2px);
   -moz-transform: translate(2px, 2px);
@@ -3078,12 +2974,12 @@ exports[`selectableCardGroup > renders correctly with error content 1`] = `
   transform: scale(0);
 }
 
-.emotion-20 {
+.emotion-19 {
   fill: #ffffff;
   stroke: #d9dadd;
 }
 
-.emotion-22 {
+.emotion-21 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3109,7 +3005,7 @@ exports[`selectableCardGroup > renders correctly with error content 1`] = `
   gap: 0.25rem;
 }
 
-.emotion-24 {
+.emotion-23 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3135,30 +3031,9 @@ exports[`selectableCardGroup > renders correctly with error content 1`] = `
   gap: 0.25rem;
 }
 
-.emotion-27 {
-  color: #3f4250;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.emotion-25 {
   width: 100%;
   cursor: pointer;
-}
-
-.emotion-47 {
-  color: #b3144d;
-  font-size: 0.75rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
 }
 
 <div
@@ -3174,15 +3049,15 @@ exports[`selectableCardGroup > renders correctly with error content 1`] = `
           class="emotion-4 emotion-1"
         >
           <legend
-            class="emotion-6 emotion-7 emotion-8"
+            class="emotion-6 emotion-7 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
           >
             Label
           </legend>
           <div
-            class="emotion-9 emotion-10"
+            class="emotion-8 emotion-9"
           >
             <div
-              class="emotion-11 emotion-12"
+              class="emotion-10 emotion-11"
               data-checked="true"
               data-disabled="false"
               data-error="true"
@@ -3195,30 +3070,30 @@ exports[`selectableCardGroup > renders correctly with error content 1`] = `
             >
               <div
                 aria-disabled="false"
-                class="emotion-13 emotion-14 emotion-15"
+                class="emotion-12 emotion-13 emotion-14"
                 data-checked="true"
                 data-error="true"
               >
                 <input
                   aria-checked="true"
-                  aria-describedby="_r_18_-hint"
+                  aria-describedby="«r18»-hint"
                   aria-invalid="true"
                   checked=""
-                  class="emotion-16 emotion-17"
-                  id="_r_18_"
+                  class="emotion-15 emotion-16"
+                  id="«r18»"
                   name="checkbox"
                   tabindex="-1"
                   type="checkbox"
                   value="value-1"
                 />
                 <svg
-                  class="emotion-18 emotion-19"
+                  class="emotion-17 emotion-18"
                   fill="none"
                   viewBox="0 0 24 24"
                 >
                   <g>
                     <rect
-                      class="emotion-20 emotion-21"
+                      class="emotion-19 emotion-20"
                       height="16"
                       rx="0.125rem"
                       stroke-width="2"
@@ -3239,14 +3114,14 @@ exports[`selectableCardGroup > renders correctly with error content 1`] = `
                   </g>
                 </svg>
                 <div
-                  class="emotion-22 emotion-1"
+                  class="emotion-21 emotion-1"
                 >
                   <div
-                    class="emotion-24 emotion-1"
+                    class="emotion-23 emotion-1"
                   >
                     <label
-                      class="emotion-26 emotion-27 emotion-8"
-                      for="_r_18_"
+                      class="emotion-25 emotion-26 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+                      for="«r18»"
                     >
                       Checkbox 1
                     </label>
@@ -3255,7 +3130,7 @@ exports[`selectableCardGroup > renders correctly with error content 1`] = `
               </div>
             </div>
             <div
-              class="emotion-11 emotion-12"
+              class="emotion-10 emotion-11"
               data-checked="false"
               data-disabled="false"
               data-error="true"
@@ -3268,29 +3143,29 @@ exports[`selectableCardGroup > renders correctly with error content 1`] = `
             >
               <div
                 aria-disabled="false"
-                class="emotion-13 emotion-14 emotion-15"
+                class="emotion-12 emotion-13 emotion-14"
                 data-checked="false"
                 data-error="true"
               >
                 <input
                   aria-checked="false"
-                  aria-describedby="_r_1c_-hint"
+                  aria-describedby="«r1c»-hint"
                   aria-invalid="true"
-                  class="emotion-16 emotion-17"
-                  id="_r_1c_"
+                  class="emotion-15 emotion-16"
+                  id="«r1c»"
                   name="checkbox"
                   tabindex="-1"
                   type="checkbox"
                   value="value-2"
                 />
                 <svg
-                  class="emotion-18 emotion-19"
+                  class="emotion-17 emotion-18"
                   fill="none"
                   viewBox="0 0 24 24"
                 >
                   <g>
                     <rect
-                      class="emotion-20 emotion-21"
+                      class="emotion-19 emotion-20"
                       height="16"
                       rx="0.125rem"
                       stroke-width="2"
@@ -3311,14 +3186,14 @@ exports[`selectableCardGroup > renders correctly with error content 1`] = `
                   </g>
                 </svg>
                 <div
-                  class="emotion-22 emotion-1"
+                  class="emotion-21 emotion-1"
                 >
                   <div
-                    class="emotion-24 emotion-1"
+                    class="emotion-23 emotion-1"
                   >
                     <label
-                      class="emotion-26 emotion-27 emotion-8"
-                      for="_r_1c_"
+                      class="emotion-25 emotion-26 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+                      for="«r1c»"
                     >
                       Checkbox 2
                     </label>
@@ -3330,7 +3205,7 @@ exports[`selectableCardGroup > renders correctly with error content 1`] = `
         </div>
       </fieldset>
       <span
-        class="emotion-47 emotion-8"
+        class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_danger__m4c9owd style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_8__m4c9ow1k style_undefined_compound_72__m4c9ow3c"
       >
         Error content
       </span>
@@ -3393,20 +3268,11 @@ exports[`selectableCardGroup > renders correctly with helper content 1`] = `
   gap: 0.75rem;
 }
 
-.emotion-7 {
-  color: #3f4250;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.emotion-6 {
   cursor: text;
 }
 
-.emotion-9 {
+.emotion-8 {
   display: grid;
   grid-template-columns: repeat(1, minmax(0, 1fr));
   gap: 1rem;
@@ -3420,7 +3286,7 @@ exports[`selectableCardGroup > renders correctly with helper content 1`] = `
   justify-content: normal;
 }
 
-.emotion-11 {
+.emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3455,54 +3321,54 @@ exports[`selectableCardGroup > renders correctly with helper content 1`] = `
   color: #3f4250;
 }
 
-.emotion-11[data-has-label='false']>:first-child {
+.emotion-10[data-has-label='false']>:first-child {
   margin-bottom: -0.25rem;
 }
 
-.emotion-11[data-has-default-cursor='true'] {
+.emotion-10[data-has-default-cursor='true'] {
   cursor: default;
 }
 
-.emotion-11[data-checked='true'] {
+.emotion-10[data-checked='true'] {
   border: 1px solid #8c40ef;
 }
 
-.emotion-11[data-error='true'] {
+.emotion-10[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-11[data-disabled='true'] {
+.emotion-10[data-disabled='true'] {
   border: 1px solid #e9eaeb;
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.emotion-11[data-image="illustration"] {
+.emotion-10[data-image="illustration"] {
   padding: 0rem;
 }
 
-.emotion-11[data-image="icon"] {
+.emotion-10[data-image="icon"] {
   padding: 0rem;
   padding-right: 1rem;
 }
 
-.emotion-11:hover:not([data-error='true']):not([data-disabled='true']),
-.emotion-11:active:not([data-error='true']):not([data-disabled='true']) {
+.emotion-10:hover:not([data-error='true']):not([data-disabled='true']),
+.emotion-10:active:not([data-error='true']):not([data-disabled='true']) {
   border: 1px solid #8c40ef;
 }
 
-.emotion-11:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.emotion-11:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
+.emotion-10:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
+.emotion-10:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
 
-.emotion-11[data-has-label='true'] .ehkrmld6,
-.emotion-11[data-has-label='true'] .emotion-15 {
+.emotion-10[data-has-label='true'] .ehkrmld6,
+.emotion-10[data-has-label='true'] .emotion-14 {
   width: 100%;
 }
 
-.emotion-14 {
+.emotion-13 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -3523,65 +3389,65 @@ exports[`selectableCardGroup > renders correctly with helper content 1`] = `
   align-items: start;
 }
 
-.emotion-14 .eqr7bqq3 {
+.emotion-13 .eqr7bqq3 {
   cursor: pointer;
 }
 
-.emotion-14[aria-disabled='true'] {
+.emotion-13[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.emotion-14[aria-disabled='true'] .eqr7bqq3 {
+.emotion-13[aria-disabled='true'] .eqr7bqq3 {
   cursor: not-allowed;
 }
 
-.emotion-14[aria-disabled='true'] .emotion-19 {
+.emotion-13[aria-disabled='true'] .emotion-18 {
   fill: #e9eaeb;
 }
 
-.emotion-14[aria-disabled='true'] .emotion-19 .emotion-21 {
+.emotion-13[aria-disabled='true'] .emotion-18 .emotion-20 {
   stroke: #d9dadd;
   fill: #f3f3f4;
 }
 
-.emotion-14[aria-disabled='true'] .emotion-17[aria-invalid="true"]:checked+.emotion-19 {
+.emotion-13[aria-disabled='true'] .emotion-16[aria-invalid="true"]:checked+.emotion-18 {
   fill: #ffd3e3;
 }
 
-.emotion-14[aria-disabled='true'] .emotion-17[aria-invalid="true"]:checked+.emotion-19 .emotion-21 {
+.emotion-13[aria-disabled='true'] .emotion-16[aria-invalid="true"]:checked+.emotion-18 .emotion-20 {
   stroke: #ffd3e3;
   fill: #ffd3e3;
 }
 
-.emotion-14[aria-disabled='true'] .emotion-17[aria-invalid="true"]+.emotion-19 {
+.emotion-13[aria-disabled='true'] .emotion-16[aria-invalid="true"]+.emotion-18 {
   fill: #ffebf2;
 }
 
-.emotion-14[aria-disabled='true'] .emotion-17[aria-invalid="true"]+.emotion-19 .emotion-21 {
+.emotion-13[aria-disabled='true'] .emotion-16[aria-invalid="true"]+.emotion-18 .emotion-20 {
   stroke: #ffbbd3;
   fill: #ffebf2;
 }
 
-.emotion-14[aria-disabled='true'] .emotion-17:checked+.emotion-19 {
+.emotion-13[aria-disabled='true'] .emotion-16:checked+.emotion-18 {
   fill: #e5dbfd;
 }
 
-.emotion-14[aria-disabled='true'] .emotion-17:checked+.emotion-19 .emotion-21 {
+.emotion-13[aria-disabled='true'] .emotion-16:checked+.emotion-18 .emotion-20 {
   stroke: #d8c5fc;
   fill: #d8c5fc;
 }
 
-.emotion-14[aria-disabled='true'] .emotion-17[aria-checked="mixed"]+.emotion-19 {
+.emotion-13[aria-disabled='true'] .emotion-16[aria-checked="mixed"]+.emotion-18 {
   fill: #e5dbfd;
 }
 
-.emotion-14[aria-disabled='true'] .emotion-17[aria-checked="mixed"]+.emotion-19 .emotion-21 {
+.emotion-13[aria-disabled='true'] .emotion-16[aria-checked="mixed"]+.emotion-18 .emotion-20 {
   stroke: #e5dbfd;
   fill: #e5dbfd;
 }
 
-.emotion-14 .emotion-17:checked+.emotion-19 path {
+.emotion-13 .emotion-16:checked+.emotion-18 path {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -3595,107 +3461,107 @@ exports[`selectableCardGroup > renders correctly with helper content 1`] = `
   transform: translate(2px, 2px);
 }
 
-.emotion-14 .emotion-17:checked+.emotion-19 .emotion-21 {
+.emotion-13 .emotion-16:checked+.emotion-18 .emotion-20 {
   fill: #8c40ef;
   stroke: #8c40ef;
 }
 
-.emotion-14 .emotion-17[aria-invalid="true"]:checked+.emotion-19 .emotion-21 {
+.emotion-13 .emotion-16[aria-invalid="true"]:checked+.emotion-18 .emotion-20 {
   fill: #e51963;
   stroke: #e51963;
 }
 
-.emotion-14 .emotion-17[aria-checked="mixed"]+.emotion-19 .eqr7bqq5 {
+.emotion-13 .emotion-16[aria-checked="mixed"]+.emotion-18 .eqr7bqq5 {
   fill: #ffffff;
 }
 
-.emotion-14 .emotion-17[aria-checked="mixed"]+.emotion-19 .emotion-21 {
+.emotion-13 .emotion-16[aria-checked="mixed"]+.emotion-18 .emotion-20 {
   fill: #8c40ef;
   stroke: #8c40ef;
 }
 
-.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='false'][aria-checked='false']+.emotion-19 .emotion-21 {
+.emotion-13:hover[aria-disabled='false'] .emotion-16[aria-invalid='false'][aria-checked='false']+.emotion-18 .emotion-20 {
   stroke: #792dd4;
   fill: #e5dbfd;
 }
 
-.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='false'][aria-checked='true']+.emotion-19 .emotion-21 {
+.emotion-13:hover[aria-disabled='false'] .emotion-16[aria-invalid='false'][aria-checked='true']+.emotion-18 .emotion-20 {
   stroke: #792dd4;
   fill: #792dd4;
 }
 
-.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='false'][aria-checked='mixed']+.emotion-19 .emotion-21 {
+.emotion-13:hover[aria-disabled='false'] .emotion-16[aria-invalid='false'][aria-checked='mixed']+.emotion-18 .emotion-20 {
   stroke: #792dd4;
   fill: #792dd4;
 }
 
-.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='true'][aria-checked='false']+.emotion-19 .emotion-21 {
+.emotion-13:hover[aria-disabled='false'] .emotion-16[aria-invalid='true'][aria-checked='false']+.emotion-18 .emotion-20 {
   stroke: #92103f;
   fill: #ffd3e3;
 }
 
-.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='true'][aria-checked='true']+.emotion-19 .emotion-21 {
+.emotion-13:hover[aria-disabled='false'] .emotion-16[aria-invalid='true'][aria-checked='true']+.emotion-18 .emotion-20 {
   stroke: #d6175c;
   fill: #d6175c;
 }
 
-.emotion-14 .emotion-17[aria-invalid="true"]+.emotion-19 {
+.emotion-13 .emotion-16[aria-invalid="true"]+.emotion-18 {
   fill: #e51963;
 }
 
-.emotion-14 .emotion-17[aria-invalid="true"]+.emotion-19 .emotion-21 {
+.emotion-13 .emotion-16[aria-invalid="true"]+.emotion-18 .emotion-20 {
   stroke: #e51963;
   fill: #ffebf2;
 }
 
-.emotion-14[data-checked='true'] {
+.emotion-13[data-checked='true'] {
   color: #641cb3;
 }
 
-.emotion-14[data-error='true'] {
+.emotion-13[data-error='true'] {
   color: #b3144d;
 }
 
-.emotion-14[aria-disabled='true'] {
+.emotion-13[aria-disabled='true'] {
   color: #b5b7bd;
 }
 
-.emotion-14 input+svg {
+.emotion-13 input+svg {
   display: none;
 }
 
-.emotion-14 label {
+.emotion-13 label {
   width: 100%;
 }
 
-.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='false'][aria-checked='false']+.emotion-19 .emotion-21 {
+.emotion-13:hover[aria-disabled='false'] .emotion-16[aria-invalid='false'][aria-checked='false']+.emotion-18 .emotion-20 {
   fill: #ffffff;
   stroke: #d9dadd;
 }
 
-.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='false'][aria-checked='true']+.emotion-19 .emotion-21 {
+.emotion-13:hover[aria-disabled='false'] .emotion-16[aria-invalid='false'][aria-checked='true']+.emotion-18 .emotion-20 {
   stroke: #8c40ef;
   fill: #8c40ef;
 }
 
-.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='false'][aria-checked='mixed']+.emotion-19 .emotion-21 {
+.emotion-13:hover[aria-disabled='false'] .emotion-16[aria-invalid='false'][aria-checked='mixed']+.emotion-18 .emotion-20 {
   stroke: #8c40ef;
   fill: #8c40ef;
 }
 
-.emotion-14 .emotion-17:focus+.emotion-19,
-.emotion-14 .emotion-17:active+.emotion-19 {
+.emotion-13 .emotion-16:focus+.emotion-18,
+.emotion-13 .emotion-16:active+.emotion-18 {
   outline: none;
   background-color: #ffffff;
   fill: #ffffff;
 }
 
-.emotion-14 .emotion-17[aria-checked='false'] .emotion-21 {
+.emotion-13 .emotion-16[aria-checked='false'] .emotion-20 {
   fill: #ffffff;
   stroke: #d9dadd;
 }
 
-.emotion-16 {
+.emotion-15 {
   position: absolute;
   white-space: nowrap;
   height: 1.5rem;
@@ -3704,57 +3570,57 @@ exports[`selectableCardGroup > renders correctly with helper content 1`] = `
   border-width: 0;
 }
 
-.emotion-16:not(:disabled) {
+.emotion-15:not(:disabled) {
   cursor: pointer;
 }
 
-.emotion-16:disabled {
+.emotion-15:disabled {
   cursor: not-allowed;
 }
 
-.emotion-16:not(:disabled):checked+.emotion-19,
-.emotion-16:not(:disabled)[aria-checked='mixed']+.emotion-19 {
+.emotion-15:not(:disabled):checked+.emotion-18,
+.emotion-15:not(:disabled)[aria-checked='mixed']+.emotion-18 {
   fill: #8c40ef;
 }
 
-.emotion-16:not(:disabled):checked+.emotion-19 .emotion-21,
-.emotion-16:not(:disabled)[aria-checked='mixed']+.emotion-19 .emotion-21 {
+.emotion-15:not(:disabled):checked+.emotion-18 .emotion-20,
+.emotion-15:not(:disabled)[aria-checked='mixed']+.emotion-18 .emotion-20 {
   stroke: #8c40ef;
 }
 
-.emotion-16:not(:disabled)[aria-invalid='true']+.emotion-19,
-.emotion-16:not(:disabled)[aria-invalid='mixed']+.emotion-19 {
+.emotion-15:not(:disabled)[aria-invalid='true']+.emotion-18,
+.emotion-15:not(:disabled)[aria-invalid='mixed']+.emotion-18 {
   fill: #ffebf2;
 }
 
-.emotion-16:not(:disabled)[aria-invalid='true']+.emotion-19 .emotion-21,
-.emotion-16:not(:disabled)[aria-invalid='mixed']+.emotion-19 .emotion-21 {
+.emotion-15:not(:disabled)[aria-invalid='true']+.emotion-18 .emotion-20,
+.emotion-15:not(:disabled)[aria-invalid='mixed']+.emotion-18 .emotion-20 {
   stroke: #b3144d;
 }
 
-.emotion-16:focus+.emotion-19 {
+.emotion-15:focus+.emotion-18 {
   background-color: #f1eefc;
   fill: #ffebf2;
   outline: 1px solid 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-16:focus+.emotion-19 .emotion-21 {
+.emotion-15:focus+.emotion-18 .emotion-20 {
   stroke: #792dd4;
   fill: #e5dbfd;
 }
 
-.emotion-16[aria-invalid='true']:focus+.emotion-19 {
+.emotion-15[aria-invalid='true']:focus+.emotion-18 {
   background-color: #ffebf2;
   fill: #ffebf2;
   outline: 1px solid 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-16[aria-invalid='true']:focus+.emotion-19 .emotion-21 {
+.emotion-15[aria-invalid='true']:focus+.emotion-18 .emotion-20 {
   stroke: #92103f;
   fill: #ffd3e3;
 }
 
-.emotion-18 {
+.emotion-17 {
   border-radius: 0.25rem;
   height: 1.5rem;
   width: 1.5rem;
@@ -3762,7 +3628,7 @@ exports[`selectableCardGroup > renders correctly with helper content 1`] = `
   min-height: 1.5rem;
 }
 
-.emotion-18 path {
+.emotion-17 path {
   fill: #ffffff;
   -webkit-transform: translate(2px, 2px);
   -moz-transform: translate(2px, 2px);
@@ -3774,12 +3640,12 @@ exports[`selectableCardGroup > renders correctly with helper content 1`] = `
   transform: scale(0);
 }
 
-.emotion-20 {
+.emotion-19 {
   fill: #ffffff;
   stroke: #d9dadd;
 }
 
-.emotion-22 {
+.emotion-21 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3805,7 +3671,7 @@ exports[`selectableCardGroup > renders correctly with helper content 1`] = `
   gap: 0.25rem;
 }
 
-.emotion-24 {
+.emotion-23 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3831,30 +3697,9 @@ exports[`selectableCardGroup > renders correctly with helper content 1`] = `
   gap: 0.25rem;
 }
 
-.emotion-27 {
-  color: #3f4250;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.emotion-25 {
   width: 100%;
   cursor: pointer;
-}
-
-.emotion-47 {
-  color: #727683;
-  font-size: 0.75rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
 }
 
 <div
@@ -3870,15 +3715,15 @@ exports[`selectableCardGroup > renders correctly with helper content 1`] = `
           class="emotion-4 emotion-1"
         >
           <legend
-            class="emotion-6 emotion-7 emotion-8"
+            class="emotion-6 emotion-7 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
           >
             Label
           </legend>
           <div
-            class="emotion-9 emotion-10"
+            class="emotion-8 emotion-9"
           >
             <div
-              class="emotion-11 emotion-12"
+              class="emotion-10 emotion-11"
               data-checked="true"
               data-disabled="false"
               data-error="false"
@@ -3891,7 +3736,7 @@ exports[`selectableCardGroup > renders correctly with helper content 1`] = `
             >
               <div
                 aria-disabled="false"
-                class="emotion-13 emotion-14 emotion-15"
+                class="emotion-12 emotion-13 emotion-14"
                 data-checked="true"
                 data-error="false"
               >
@@ -3899,21 +3744,21 @@ exports[`selectableCardGroup > renders correctly with helper content 1`] = `
                   aria-checked="true"
                   aria-invalid="false"
                   checked=""
-                  class="emotion-16 emotion-17"
-                  id="_r_k_"
+                  class="emotion-15 emotion-16"
+                  id="«rk»"
                   name="checkbox"
                   tabindex="-1"
                   type="checkbox"
                   value="value-1"
                 />
                 <svg
-                  class="emotion-18 emotion-19"
+                  class="emotion-17 emotion-18"
                   fill="none"
                   viewBox="0 0 24 24"
                 >
                   <g>
                     <rect
-                      class="emotion-20 emotion-21"
+                      class="emotion-19 emotion-20"
                       height="16"
                       rx="0.125rem"
                       stroke-width="2"
@@ -3934,14 +3779,14 @@ exports[`selectableCardGroup > renders correctly with helper content 1`] = `
                   </g>
                 </svg>
                 <div
-                  class="emotion-22 emotion-1"
+                  class="emotion-21 emotion-1"
                 >
                   <div
-                    class="emotion-24 emotion-1"
+                    class="emotion-23 emotion-1"
                   >
                     <label
-                      class="emotion-26 emotion-27 emotion-8"
-                      for="_r_k_"
+                      class="emotion-25 emotion-26 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+                      for="«rk»"
                     >
                       Checkbox 1
                     </label>
@@ -3950,7 +3795,7 @@ exports[`selectableCardGroup > renders correctly with helper content 1`] = `
               </div>
             </div>
             <div
-              class="emotion-11 emotion-12"
+              class="emotion-10 emotion-11"
               data-checked="false"
               data-disabled="false"
               data-error="false"
@@ -3963,28 +3808,28 @@ exports[`selectableCardGroup > renders correctly with helper content 1`] = `
             >
               <div
                 aria-disabled="false"
-                class="emotion-13 emotion-14 emotion-15"
+                class="emotion-12 emotion-13 emotion-14"
                 data-checked="false"
                 data-error="false"
               >
                 <input
                   aria-checked="false"
                   aria-invalid="false"
-                  class="emotion-16 emotion-17"
-                  id="_r_o_"
+                  class="emotion-15 emotion-16"
+                  id="«ro»"
                   name="checkbox"
                   tabindex="-1"
                   type="checkbox"
                   value="value-2"
                 />
                 <svg
-                  class="emotion-18 emotion-19"
+                  class="emotion-17 emotion-18"
                   fill="none"
                   viewBox="0 0 24 24"
                 >
                   <g>
                     <rect
-                      class="emotion-20 emotion-21"
+                      class="emotion-19 emotion-20"
                       height="16"
                       rx="0.125rem"
                       stroke-width="2"
@@ -4005,14 +3850,14 @@ exports[`selectableCardGroup > renders correctly with helper content 1`] = `
                   </g>
                 </svg>
                 <div
-                  class="emotion-22 emotion-1"
+                  class="emotion-21 emotion-1"
                 >
                   <div
-                    class="emotion-24 emotion-1"
+                    class="emotion-23 emotion-1"
                   >
                     <label
-                      class="emotion-26 emotion-27 emotion-8"
-                      for="_r_o_"
+                      class="emotion-25 emotion-26 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+                      for="«ro»"
                     >
                       Checkbox 2
                     </label>
@@ -4024,7 +3869,7 @@ exports[`selectableCardGroup > renders correctly with helper content 1`] = `
         </div>
       </fieldset>
       <span
-        class="emotion-47 emotion-8"
+        class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
       >
         Helper content
       </span>

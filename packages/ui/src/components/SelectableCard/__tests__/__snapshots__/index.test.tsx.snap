@@ -500,7 +500,7 @@ exports[`selectableCard > checkbox > renders correctly with aria label 1`] = `
             aria-invalid="false"
             aria-label="test"
             class="emotion-7 emotion-8"
-            id="_r_1p_"
+            id="«r1p»"
             name="test"
             tabindex="-1"
             type="radio"
@@ -1006,7 +1006,7 @@ exports[`selectableCard > checkbox > renders correctly with checked prop 1`] = `
           aria-label="test"
           checked=""
           class="emotion-5 emotion-6"
-          id="_r_1v_"
+          id="«r1v»"
           name="test"
           tabindex="-1"
           type="checkbox"
@@ -1547,21 +1547,12 @@ exports[`selectableCard > checkbox > renders correctly with complex children 1`]
   gap: 0.25rem;
 }
 
-.emotion-16 {
-  color: #3f4250;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.emotion-15 {
   width: 100%;
   cursor: pointer;
 }
 
-.emotion-18 {
+.emotion-17 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1584,19 +1575,19 @@ exports[`selectableCard > checkbox > renders correctly with complex children 1`]
   flex-direction: column;
 }
 
-.emotion-18[data-has-label='true'] {
+.emotion-17[data-has-label='true'] {
   padding-left: 2rem;
 }
 
-.emotion-18[data-has-label='false'] {
+.emotion-17[data-has-label='false'] {
   display: contents;
 }
 
-.emotion-18[data-has-default-cursor='true'] {
+.emotion-17[data-has-default-cursor='true'] {
   cursor: default;
 }
 
-.emotion-18 {
+.emotion-17 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1619,15 +1610,15 @@ exports[`selectableCard > checkbox > renders correctly with complex children 1`]
   flex-direction: column;
 }
 
-.emotion-18[data-has-label='true'] {
+.emotion-17[data-has-label='true'] {
   padding-left: 2rem;
 }
 
-.emotion-18[data-has-label='false'] {
+.emotion-17[data-has-label='false'] {
   display: contents;
 }
 
-.emotion-18[data-has-default-cursor='true'] {
+.emotion-17[data-has-default-cursor='true'] {
   cursor: default;
 }
 
@@ -1655,7 +1646,7 @@ exports[`selectableCard > checkbox > renders correctly with complex children 1`]
           aria-invalid="false"
           class="emotion-5 emotion-6"
           disabled=""
-          id="_r_2d_"
+          id="«r2d»"
           name="test"
           tabindex="-1"
           type="checkbox"
@@ -1695,8 +1686,8 @@ exports[`selectableCard > checkbox > renders correctly with complex children 1`]
             class="emotion-13 emotion-12"
           >
             <label
-              class="emotion-15 emotion-16 emotion-17"
-              for="_r_2d_"
+              class="emotion-15 emotion-16 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+              for="«r2d»"
             >
               test
             </label>
@@ -1704,7 +1695,7 @@ exports[`selectableCard > checkbox > renders correctly with complex children 1`]
         </div>
       </div>
       <div
-        class="emotion-18 emotion-19"
+        class="emotion-17 emotion-18"
         data-has-default-cursor="true"
         data-has-label="false"
       >
@@ -2321,37 +2312,21 @@ exports[`selectableCard > checkbox > renders correctly with default props 1`] = 
   fill: #ffffff;
 }
 
-.emotion-16 {
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.emotion-15 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
   cursor: pointer;
 }
 
-.emotion-16 {
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.emotion-15 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
   cursor: pointer;
 }
 
-.emotion-18 {
+.emotion-17 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2374,19 +2349,19 @@ exports[`selectableCard > checkbox > renders correctly with default props 1`] = 
   flex-direction: column;
 }
 
-.emotion-18[data-has-label='true'] {
+.emotion-17[data-has-label='true'] {
   padding-left: 2rem;
 }
 
-.emotion-18[data-has-label='false'] {
+.emotion-17[data-has-label='false'] {
   display: contents;
 }
 
-.emotion-18[data-has-default-cursor='true'] {
+.emotion-17[data-has-default-cursor='true'] {
   cursor: default;
 }
 
-.emotion-18 {
+.emotion-17 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2409,15 +2384,15 @@ exports[`selectableCard > checkbox > renders correctly with default props 1`] = 
   flex-direction: column;
 }
 
-.emotion-18[data-has-label='true'] {
+.emotion-17[data-has-label='true'] {
   padding-left: 2rem;
 }
 
-.emotion-18[data-has-label='false'] {
+.emotion-17[data-has-label='false'] {
   display: contents;
 }
 
-.emotion-18[data-has-default-cursor='true'] {
+.emotion-17[data-has-default-cursor='true'] {
   cursor: default;
 }
 
@@ -2447,7 +2422,7 @@ exports[`selectableCard > checkbox > renders correctly with default props 1`] = 
             aria-disabled="false"
             aria-invalid="false"
             class="emotion-7 emotion-8"
-            id="_r_1l_"
+            id="«r1l»"
             name="test"
             tabindex="-1"
             type="radio"
@@ -2479,15 +2454,15 @@ exports[`selectableCard > checkbox > renders correctly with default props 1`] = 
             </g>
           </svg>
           <label
-            class="emotion-15 emotion-16 emotion-17"
-            for="_r_1l_"
+            class="emotion-15 emotion-16 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+            for="«r1l»"
           >
             test
           </label>
         </div>
       </div>
       <div
-        class="emotion-18 emotion-19"
+        class="emotion-17 emotion-18"
         data-has-default-cursor="false"
         data-has-label="false"
       >
@@ -2958,7 +2933,7 @@ exports[`selectableCard > checkbox > renders correctly with disabled prop 1`] = 
           aria-label="test"
           class="emotion-5 emotion-6"
           disabled=""
-          id="_r_22_"
+          id="«r22»"
           name="test"
           tabindex="-1"
           type="checkbox"
@@ -3547,21 +3522,12 @@ exports[`selectableCard > checkbox > renders correctly with illustration 1`] = `
   gap: 0.25rem;
 }
 
-.emotion-20 {
-  color: #3f4250;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.emotion-19 {
   width: 100%;
   cursor: pointer;
 }
 
-.emotion-22 {
+.emotion-21 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3584,19 +3550,19 @@ exports[`selectableCard > checkbox > renders correctly with illustration 1`] = `
   flex-direction: column;
 }
 
-.emotion-22[data-has-label='true'] {
+.emotion-21[data-has-label='true'] {
   padding-left: 2rem;
 }
 
-.emotion-22[data-has-label='false'] {
+.emotion-21[data-has-label='false'] {
   display: contents;
 }
 
-.emotion-22[data-has-default-cursor='true'] {
+.emotion-21[data-has-default-cursor='true'] {
   cursor: default;
 }
 
-.emotion-22 {
+.emotion-21 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3619,19 +3585,19 @@ exports[`selectableCard > checkbox > renders correctly with illustration 1`] = `
   flex-direction: column;
 }
 
-.emotion-22[data-has-label='true'] {
+.emotion-21[data-has-label='true'] {
   padding-left: 2rem;
 }
 
-.emotion-22[data-has-label='false'] {
+.emotion-21[data-has-label='false'] {
   display: contents;
 }
 
-.emotion-22[data-has-default-cursor='true'] {
+.emotion-21[data-has-default-cursor='true'] {
   cursor: default;
 }
 
-.emotion-24 {
+.emotion-23 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3653,7 +3619,7 @@ exports[`selectableCard > checkbox > renders correctly with illustration 1`] = `
   flex-direction: column;
 }
 
-.emotion-26 {
+.emotion-25 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3676,7 +3642,7 @@ exports[`selectableCard > checkbox > renders correctly with illustration 1`] = `
   overflow: hidden;
 }
 
-.emotion-28 {
+.emotion-27 {
   object-fit: cover;
   position: absolute;
   min-width: 13.75rem;
@@ -3714,7 +3680,7 @@ exports[`selectableCard > checkbox > renders correctly with illustration 1`] = `
               aria-checked="false"
               aria-invalid="false"
               class="emotion-9 emotion-10"
-              id="_r_2h_"
+              id="«r2h»"
               name="label-14"
               tabindex="-1"
               type="checkbox"
@@ -3754,8 +3720,8 @@ exports[`selectableCard > checkbox > renders correctly with illustration 1`] = `
                 class="emotion-17 emotion-3"
               >
                 <label
-                  class="emotion-19 emotion-20 emotion-21"
-                  for="_r_2h_"
+                  class="emotion-19 emotion-20 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+                  for="«r2h»"
                 >
                   label
                 </label>
@@ -3763,7 +3729,7 @@ exports[`selectableCard > checkbox > renders correctly with illustration 1`] = `
             </div>
           </div>
           <div
-            class="emotion-22 emotion-23"
+            class="emotion-21 emotion-22"
             data-has-default-cursor="false"
             data-has-label="true"
           >
@@ -3771,14 +3737,14 @@ exports[`selectableCard > checkbox > renders correctly with illustration 1`] = `
           </div>
         </div>
         <div
-          class="emotion-24 emotion-3"
+          class="emotion-23 emotion-3"
         />
         <div
-          class="emotion-26 emotion-27"
+          class="emotion-25 emotion-26"
         >
           <img
             alt="illustration"
-            class="emotion-28 emotion-29"
+            class="emotion-27 emotion-28"
             src="/src/components/SelectableCard/__tests__/illustrationTest.svg"
             width="220"
           />
@@ -4284,21 +4250,12 @@ exports[`selectableCard > checkbox > renders correctly with isError prop 1`] = `
   gap: 0.25rem;
 }
 
-.emotion-16 {
-  color: #3f4250;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.emotion-15 {
   width: 100%;
   cursor: pointer;
 }
 
-.emotion-18 {
+.emotion-17 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4321,19 +4278,19 @@ exports[`selectableCard > checkbox > renders correctly with isError prop 1`] = `
   flex-direction: column;
 }
 
-.emotion-18[data-has-label='true'] {
+.emotion-17[data-has-label='true'] {
   padding-left: 2rem;
 }
 
-.emotion-18[data-has-label='false'] {
+.emotion-17[data-has-label='false'] {
   display: contents;
 }
 
-.emotion-18[data-has-default-cursor='true'] {
+.emotion-17[data-has-default-cursor='true'] {
   cursor: default;
 }
 
-.emotion-18 {
+.emotion-17 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4356,15 +4313,15 @@ exports[`selectableCard > checkbox > renders correctly with isError prop 1`] = `
   flex-direction: column;
 }
 
-.emotion-18[data-has-label='true'] {
+.emotion-17[data-has-label='true'] {
   padding-left: 2rem;
 }
 
-.emotion-18[data-has-label='false'] {
+.emotion-17[data-has-label='false'] {
   display: contents;
 }
 
-.emotion-18[data-has-default-cursor='true'] {
+.emotion-17[data-has-default-cursor='true'] {
   cursor: default;
 }
 
@@ -4391,10 +4348,10 @@ exports[`selectableCard > checkbox > renders correctly with isError prop 1`] = `
       >
         <input
           aria-checked="false"
-          aria-describedby="_r_25_-hint"
+          aria-describedby="«r25»-hint"
           aria-invalid="true"
           class="emotion-5 emotion-6"
-          id="_r_25_"
+          id="«r25»"
           name="test"
           tabindex="-1"
           type="checkbox"
@@ -4434,8 +4391,8 @@ exports[`selectableCard > checkbox > renders correctly with isError prop 1`] = `
             class="emotion-13 emotion-12"
           >
             <label
-              class="emotion-15 emotion-16 emotion-17"
-              for="_r_25_"
+              class="emotion-15 emotion-16 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+              for="«r25»"
             >
               test
             </label>
@@ -4443,7 +4400,7 @@ exports[`selectableCard > checkbox > renders correctly with isError prop 1`] = `
         </div>
       </div>
       <div
-        class="emotion-18 emotion-19"
+        class="emotion-17 emotion-18"
         data-has-default-cursor="false"
         data-has-label="false"
       >
@@ -4997,21 +4954,12 @@ exports[`selectableCard > checkbox > renders correctly with productIcon 1`] = `
   gap: 0.25rem;
 }
 
-.emotion-20 {
-  color: #3f4250;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.emotion-19 {
   width: 100%;
   cursor: pointer;
 }
 
-.emotion-22 {
+.emotion-21 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5034,19 +4982,19 @@ exports[`selectableCard > checkbox > renders correctly with productIcon 1`] = `
   flex-direction: column;
 }
 
-.emotion-22[data-has-label='true'] {
+.emotion-21[data-has-label='true'] {
   padding-left: 2rem;
 }
 
-.emotion-22[data-has-label='false'] {
+.emotion-21[data-has-label='false'] {
   display: contents;
 }
 
-.emotion-22[data-has-default-cursor='true'] {
+.emotion-21[data-has-default-cursor='true'] {
   cursor: default;
 }
 
-.emotion-22 {
+.emotion-21 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5069,19 +5017,19 @@ exports[`selectableCard > checkbox > renders correctly with productIcon 1`] = `
   flex-direction: column;
 }
 
-.emotion-22[data-has-label='true'] {
+.emotion-21[data-has-label='true'] {
   padding-left: 2rem;
 }
 
-.emotion-22[data-has-label='false'] {
+.emotion-21[data-has-label='false'] {
   display: contents;
 }
 
-.emotion-22[data-has-default-cursor='true'] {
+.emotion-21[data-has-default-cursor='true'] {
   cursor: default;
 }
 
-.emotion-24 {
+.emotion-23 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5103,27 +5051,27 @@ exports[`selectableCard > checkbox > renders correctly with productIcon 1`] = `
   flex-direction: column;
 }
 
-.emotion-26 {
+.emotion-25 {
   width: 3rem;
   min-width: 3rem;
   height: 3rem;
 }
 
-.emotion-26 path[fill].fill,
-.emotion-26 g[fill].fill>*,
-.emotion-26 g.fill>* {
+.emotion-25 path[fill].fill,
+.emotion-25 g[fill].fill>*,
+.emotion-25 g.fill>* {
   fill: #521094;
 }
 
-.emotion-26 path[fill].fillStrong,
-.emotion-26 g[fill].fillStrong>*,
-.emotion-26 g.fillStrong>* {
+.emotion-25 path[fill].fillStrong,
+.emotion-25 g[fill].fillStrong>*,
+.emotion-25 g.fillStrong>* {
   fill: #a060f6;
 }
 
-.emotion-26 path[fill].fillWeak,
-.emotion-26 g[fill].fillWeak>*,
-.emotion-26 g.fillWeak>* {
+.emotion-25 path[fill].fillWeak,
+.emotion-25 g[fill].fillWeak>*,
+.emotion-25 g.fillWeak>* {
   fill: #f1eefc;
 }
 
@@ -5157,7 +5105,7 @@ exports[`selectableCard > checkbox > renders correctly with productIcon 1`] = `
               aria-checked="false"
               aria-invalid="false"
               class="emotion-9 emotion-10"
-              id="_r_2l_"
+              id="«r2l»"
               name="label-14"
               tabindex="-1"
               type="checkbox"
@@ -5197,8 +5145,8 @@ exports[`selectableCard > checkbox > renders correctly with productIcon 1`] = `
                 class="emotion-17 emotion-3"
               >
                 <label
-                  class="emotion-19 emotion-20 emotion-21"
-                  for="_r_2l_"
+                  class="emotion-19 emotion-20 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+                  for="«r2l»"
                 >
                   label
                 </label>
@@ -5206,7 +5154,7 @@ exports[`selectableCard > checkbox > renders correctly with productIcon 1`] = `
             </div>
           </div>
           <div
-            class="emotion-22 emotion-23"
+            class="emotion-21 emotion-22"
             data-has-default-cursor="false"
             data-has-label="true"
           >
@@ -5214,10 +5162,10 @@ exports[`selectableCard > checkbox > renders correctly with productIcon 1`] = `
           </div>
         </div>
         <div
-          class="emotion-24 emotion-3"
+          class="emotion-23 emotion-3"
         >
           <svg
-            class="emotion-26 emotion-27"
+            class="emotion-25 emotion-26"
             viewBox="0 0 64 64"
           >
             <g
@@ -5718,7 +5666,7 @@ exports[`selectableCard > checkbox > renders correctly with showTick 1`] = `
           aria-invalid="false"
           aria-label="test"
           class="emotion-5 emotion-6"
-          id="_r_1s_"
+          id="«r1s»"
           name="test"
           tabindex="-1"
           type="checkbox"
@@ -6296,21 +6244,12 @@ exports[`selectableCard > checkbox > renders correctly with tooltip prop 1`] = `
   gap: 0.25rem;
 }
 
-.emotion-20 {
-  color: #3f4250;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.emotion-19 {
   width: 100%;
   cursor: pointer;
 }
 
-.emotion-22 {
+.emotion-21 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6333,19 +6272,19 @@ exports[`selectableCard > checkbox > renders correctly with tooltip prop 1`] = `
   flex-direction: column;
 }
 
-.emotion-22[data-has-label='true'] {
+.emotion-21[data-has-label='true'] {
   padding-left: 2rem;
 }
 
-.emotion-22[data-has-label='false'] {
+.emotion-21[data-has-label='false'] {
   display: contents;
 }
 
-.emotion-22[data-has-default-cursor='true'] {
+.emotion-21[data-has-default-cursor='true'] {
   cursor: default;
 }
 
-.emotion-22 {
+.emotion-21 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6368,15 +6307,15 @@ exports[`selectableCard > checkbox > renders correctly with tooltip prop 1`] = `
   flex-direction: column;
 }
 
-.emotion-22[data-has-label='true'] {
+.emotion-21[data-has-label='true'] {
   padding-left: 2rem;
 }
 
-.emotion-22[data-has-label='false'] {
+.emotion-21[data-has-label='false'] {
   display: contents;
 }
 
-.emotion-22[data-has-default-cursor='true'] {
+.emotion-21[data-has-default-cursor='true'] {
   cursor: default;
 }
 
@@ -6387,8 +6326,8 @@ exports[`selectableCard > checkbox > renders correctly with tooltip prop 1`] = `
       class="emotion-0 emotion-1"
     >
       <div
-        aria-controls="_r_28_"
-        aria-describedby="_r_28_"
+        aria-controls="«r28»"
+        aria-describedby="«r28»"
         class="emotion-2 emotion-3"
         data-container-full-height="true"
         tabindex="0"
@@ -6414,7 +6353,7 @@ exports[`selectableCard > checkbox > renders correctly with tooltip prop 1`] = `
               aria-checked="false"
               aria-invalid="false"
               class="emotion-9 emotion-10"
-              id="_r_29_"
+              id="«r29»"
               name="test"
               tabindex="-1"
               type="checkbox"
@@ -6454,8 +6393,8 @@ exports[`selectableCard > checkbox > renders correctly with tooltip prop 1`] = `
                 class="emotion-17 emotion-1"
               >
                 <label
-                  class="emotion-19 emotion-20 emotion-21"
-                  for="_r_29_"
+                  class="emotion-19 emotion-20 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+                  for="«r29»"
                 >
                   test
                 </label>
@@ -6463,7 +6402,7 @@ exports[`selectableCard > checkbox > renders correctly with tooltip prop 1`] = `
             </div>
           </div>
           <div
-            class="emotion-22 emotion-23"
+            class="emotion-21 emotion-22"
             data-has-default-cursor="false"
             data-has-label="false"
           >
@@ -6844,7 +6783,7 @@ exports[`selectableCard > radio > renders correctly with aria label 1`] = `
             aria-invalid="false"
             aria-label="test"
             class="emotion-7 emotion-8"
-            id="_r_5_"
+            id="«r5»"
             name="test"
             tabindex="-1"
             type="radio"
@@ -7258,7 +7197,7 @@ exports[`selectableCard > radio > renders correctly with checked prop 1`] = `
             aria-label="test"
             checked=""
             class="emotion-7 emotion-8"
-            id="_r_b_"
+            id="«rb»"
             name="test"
             tabindex="-1"
             type="radio"
@@ -7605,22 +7544,14 @@ exports[`selectableCard > radio > renders correctly with complex children 1`] = 
   fill: #ffffff;
 }
 
-.emotion-16 {
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.emotion-15 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
   cursor: pointer;
 }
 
-.emotion-18 {
+.emotion-17 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -7643,15 +7574,15 @@ exports[`selectableCard > radio > renders correctly with complex children 1`] = 
   flex-direction: column;
 }
 
-.emotion-18[data-has-label='true'] {
+.emotion-17[data-has-label='true'] {
   padding-left: 2rem;
 }
 
-.emotion-18[data-has-label='false'] {
+.emotion-17[data-has-label='false'] {
   display: contents;
 }
 
-.emotion-18[data-has-default-cursor='true'] {
+.emotion-17[data-has-default-cursor='true'] {
   cursor: default;
 }
 
@@ -7681,7 +7612,7 @@ exports[`selectableCard > radio > renders correctly with complex children 1`] = 
             aria-invalid="false"
             class="emotion-7 emotion-8"
             disabled=""
-            id="_r_p_"
+            id="«rp»"
             name="test"
             tabindex="-1"
             type="radio"
@@ -7713,15 +7644,15 @@ exports[`selectableCard > radio > renders correctly with complex children 1`] = 
             </g>
           </svg>
           <label
-            class="emotion-15 emotion-16 emotion-17"
-            for="_r_p_"
+            class="emotion-15 emotion-16 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+            for="«rp»"
           >
             test
           </label>
         </div>
       </div>
       <div
-        class="emotion-18 emotion-19"
+        class="emotion-17 emotion-18"
         data-has-default-cursor="false"
         data-has-label="false"
       >
@@ -8038,22 +7969,14 @@ exports[`selectableCard > radio > renders correctly with default props 1`] = `
   fill: #ffffff;
 }
 
-.emotion-16 {
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.emotion-15 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
   cursor: pointer;
 }
 
-.emotion-18 {
+.emotion-17 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -8076,15 +7999,15 @@ exports[`selectableCard > radio > renders correctly with default props 1`] = `
   flex-direction: column;
 }
 
-.emotion-18[data-has-label='true'] {
+.emotion-17[data-has-label='true'] {
   padding-left: 2rem;
 }
 
-.emotion-18[data-has-label='false'] {
+.emotion-17[data-has-label='false'] {
   display: contents;
 }
 
-.emotion-18[data-has-default-cursor='true'] {
+.emotion-17[data-has-default-cursor='true'] {
   cursor: default;
 }
 
@@ -8114,7 +8037,7 @@ exports[`selectableCard > radio > renders correctly with default props 1`] = `
             aria-disabled="false"
             aria-invalid="false"
             class="emotion-7 emotion-8"
-            id="_r_1_"
+            id="«r1»"
             name="test"
             tabindex="-1"
             type="radio"
@@ -8146,15 +8069,15 @@ exports[`selectableCard > radio > renders correctly with default props 1`] = `
             </g>
           </svg>
           <label
-            class="emotion-15 emotion-16 emotion-17"
-            for="_r_1_"
+            class="emotion-15 emotion-16 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+            for="«r1»"
           >
             test
           </label>
         </div>
       </div>
       <div
-        class="emotion-18 emotion-19"
+        class="emotion-17 emotion-18"
         data-has-default-cursor="false"
         data-has-label="false"
       >
@@ -8533,7 +8456,7 @@ exports[`selectableCard > radio > renders correctly with disabled prop 1`] = `
             aria-label="test"
             class="emotion-7 emotion-8"
             disabled=""
-            id="_r_e_"
+            id="«re»"
             name="test"
             tabindex="-1"
             type="radio"
@@ -8928,22 +8851,14 @@ exports[`selectableCard > radio > renders correctly with illustration 1`] = `
   fill: #ffffff;
 }
 
-.emotion-20 {
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.emotion-19 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
   cursor: pointer;
 }
 
-.emotion-22 {
+.emotion-21 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -8966,19 +8881,19 @@ exports[`selectableCard > radio > renders correctly with illustration 1`] = `
   flex-direction: column;
 }
 
-.emotion-22[data-has-label='true'] {
+.emotion-21[data-has-label='true'] {
   padding-left: 2rem;
 }
 
-.emotion-22[data-has-label='false'] {
+.emotion-21[data-has-label='false'] {
   display: contents;
 }
 
-.emotion-22[data-has-default-cursor='true'] {
+.emotion-21[data-has-default-cursor='true'] {
   cursor: default;
 }
 
-.emotion-24 {
+.emotion-23 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -9000,7 +8915,7 @@ exports[`selectableCard > radio > renders correctly with illustration 1`] = `
   flex-direction: column;
 }
 
-.emotion-26 {
+.emotion-25 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -9023,7 +8938,7 @@ exports[`selectableCard > radio > renders correctly with illustration 1`] = `
   overflow: hidden;
 }
 
-.emotion-28 {
+.emotion-27 {
   object-fit: cover;
   position: absolute;
   min-width: 13.75rem;
@@ -9063,7 +8978,7 @@ exports[`selectableCard > radio > renders correctly with illustration 1`] = `
                 aria-disabled="false"
                 aria-invalid="false"
                 class="emotion-11 emotion-12"
-                id="_r_t_"
+                id="«rt»"
                 name="label-14"
                 tabindex="-1"
                 type="radio"
@@ -9095,15 +9010,15 @@ exports[`selectableCard > radio > renders correctly with illustration 1`] = `
                 </g>
               </svg>
               <label
-                class="emotion-19 emotion-20 emotion-21"
-                for="_r_t_"
+                class="emotion-19 emotion-20 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+                for="«rt»"
               >
                 label
               </label>
             </div>
           </div>
           <div
-            class="emotion-22 emotion-23"
+            class="emotion-21 emotion-22"
             data-has-default-cursor="false"
             data-has-label="true"
           >
@@ -9111,14 +9026,14 @@ exports[`selectableCard > radio > renders correctly with illustration 1`] = `
           </div>
         </div>
         <div
-          class="emotion-24 emotion-3"
+          class="emotion-23 emotion-3"
         />
         <div
-          class="emotion-26 emotion-27"
+          class="emotion-25 emotion-26"
         >
           <img
             alt="illustration"
-            class="emotion-28 emotion-29"
+            class="emotion-27 emotion-28"
             src="/src/components/SelectableCard/__tests__/illustrationTest.svg"
             width="220"
           />
@@ -9431,22 +9346,14 @@ exports[`selectableCard > radio > renders correctly with isError prop 1`] = `
   fill: #ffffff;
 }
 
-.emotion-16 {
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.emotion-15 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
   cursor: pointer;
 }
 
-.emotion-18 {
+.emotion-17 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -9469,15 +9376,15 @@ exports[`selectableCard > radio > renders correctly with isError prop 1`] = `
   flex-direction: column;
 }
 
-.emotion-18[data-has-label='true'] {
+.emotion-17[data-has-label='true'] {
   padding-left: 2rem;
 }
 
-.emotion-18[data-has-label='false'] {
+.emotion-17[data-has-label='false'] {
   display: contents;
 }
 
-.emotion-18[data-has-default-cursor='true'] {
+.emotion-17[data-has-default-cursor='true'] {
   cursor: default;
 }
 
@@ -9509,7 +9416,7 @@ exports[`selectableCard > radio > renders correctly with isError prop 1`] = `
             aria-disabled="false"
             aria-invalid="true"
             class="emotion-7 emotion-8"
-            id="_r_h_"
+            id="«rh»"
             name="test"
             tabindex="-1"
             type="radio"
@@ -9541,15 +9448,15 @@ exports[`selectableCard > radio > renders correctly with isError prop 1`] = `
             </g>
           </svg>
           <label
-            class="emotion-15 emotion-16 emotion-17"
-            for="_r_h_"
+            class="emotion-15 emotion-16 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+            for="«rh»"
           >
             test
           </label>
         </div>
       </div>
       <div
-        class="emotion-18 emotion-19"
+        class="emotion-17 emotion-18"
         data-has-default-cursor="false"
         data-has-label="false"
       >
@@ -9910,22 +9817,14 @@ exports[`selectableCard > radio > renders correctly with productIcon 1`] = `
   fill: #ffffff;
 }
 
-.emotion-20 {
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.emotion-19 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
   cursor: pointer;
 }
 
-.emotion-22 {
+.emotion-21 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -9948,19 +9847,19 @@ exports[`selectableCard > radio > renders correctly with productIcon 1`] = `
   flex-direction: column;
 }
 
-.emotion-22[data-has-label='true'] {
+.emotion-21[data-has-label='true'] {
   padding-left: 2rem;
 }
 
-.emotion-22[data-has-label='false'] {
+.emotion-21[data-has-label='false'] {
   display: contents;
 }
 
-.emotion-22[data-has-default-cursor='true'] {
+.emotion-21[data-has-default-cursor='true'] {
   cursor: default;
 }
 
-.emotion-24 {
+.emotion-23 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -9982,27 +9881,27 @@ exports[`selectableCard > radio > renders correctly with productIcon 1`] = `
   flex-direction: column;
 }
 
-.emotion-26 {
+.emotion-25 {
   width: 3rem;
   min-width: 3rem;
   height: 3rem;
 }
 
-.emotion-26 path[fill].fill,
-.emotion-26 g[fill].fill>*,
-.emotion-26 g.fill>* {
+.emotion-25 path[fill].fill,
+.emotion-25 g[fill].fill>*,
+.emotion-25 g.fill>* {
   fill: #521094;
 }
 
-.emotion-26 path[fill].fillStrong,
-.emotion-26 g[fill].fillStrong>*,
-.emotion-26 g.fillStrong>* {
+.emotion-25 path[fill].fillStrong,
+.emotion-25 g[fill].fillStrong>*,
+.emotion-25 g.fillStrong>* {
   fill: #a060f6;
 }
 
-.emotion-26 path[fill].fillWeak,
-.emotion-26 g[fill].fillWeak>*,
-.emotion-26 g.fillWeak>* {
+.emotion-25 path[fill].fillWeak,
+.emotion-25 g[fill].fillWeak>*,
+.emotion-25 g.fillWeak>* {
   fill: #f1eefc;
 }
 
@@ -10038,7 +9937,7 @@ exports[`selectableCard > radio > renders correctly with productIcon 1`] = `
                 aria-disabled="false"
                 aria-invalid="false"
                 class="emotion-11 emotion-12"
-                id="_r_11_"
+                id="«r11»"
                 name="label-14"
                 tabindex="-1"
                 type="radio"
@@ -10070,15 +9969,15 @@ exports[`selectableCard > radio > renders correctly with productIcon 1`] = `
                 </g>
               </svg>
               <label
-                class="emotion-19 emotion-20 emotion-21"
-                for="_r_11_"
+                class="emotion-19 emotion-20 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+                for="«r11»"
               >
                 label
               </label>
             </div>
           </div>
           <div
-            class="emotion-22 emotion-23"
+            class="emotion-21 emotion-22"
             data-has-default-cursor="false"
             data-has-label="true"
           >
@@ -10086,10 +9985,10 @@ exports[`selectableCard > radio > renders correctly with productIcon 1`] = `
           </div>
         </div>
         <div
-          class="emotion-24 emotion-3"
+          class="emotion-23 emotion-3"
         >
           <svg
-            class="emotion-26 emotion-27"
+            class="emotion-25 emotion-26"
             viewBox="0 0 64 64"
           >
             <g
@@ -10498,7 +10397,7 @@ exports[`selectableCard > radio > renders correctly with showTick 1`] = `
             aria-invalid="false"
             aria-label="test"
             class="emotion-7 emotion-8"
-            id="_r_8_"
+            id="«r8»"
             name="test"
             tabindex="-1"
             type="radio"
@@ -10882,22 +10781,14 @@ exports[`selectableCard > radio > renders correctly with tooltip prop 1`] = `
   fill: #ffffff;
 }
 
-.emotion-20 {
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.emotion-19 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
   cursor: pointer;
 }
 
-.emotion-22 {
+.emotion-21 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -10920,15 +10811,15 @@ exports[`selectableCard > radio > renders correctly with tooltip prop 1`] = `
   flex-direction: column;
 }
 
-.emotion-22[data-has-label='true'] {
+.emotion-21[data-has-label='true'] {
   padding-left: 2rem;
 }
 
-.emotion-22[data-has-label='false'] {
+.emotion-21[data-has-label='false'] {
   display: contents;
 }
 
-.emotion-22[data-has-default-cursor='true'] {
+.emotion-21[data-has-default-cursor='true'] {
   cursor: default;
 }
 
@@ -10939,8 +10830,8 @@ exports[`selectableCard > radio > renders correctly with tooltip prop 1`] = `
       class="emotion-0 emotion-1"
     >
       <div
-        aria-controls="_r_k_"
-        aria-describedby="_r_k_"
+        aria-controls="«rk»"
+        aria-describedby="«rk»"
         class="emotion-2 emotion-3"
         data-container-full-height="true"
         tabindex="0"
@@ -10968,7 +10859,7 @@ exports[`selectableCard > radio > renders correctly with tooltip prop 1`] = `
                 aria-disabled="false"
                 aria-invalid="false"
                 class="emotion-11 emotion-12"
-                id="_r_l_"
+                id="«rl»"
                 name="test"
                 tabindex="-1"
                 type="radio"
@@ -11000,15 +10891,15 @@ exports[`selectableCard > radio > renders correctly with tooltip prop 1`] = `
                 </g>
               </svg>
               <label
-                class="emotion-19 emotion-20 emotion-21"
-                for="_r_l_"
+                class="emotion-19 emotion-20 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+                for="«rl»"
               >
                 test
               </label>
             </div>
           </div>
           <div
-            class="emotion-22 emotion-23"
+            class="emotion-21 emotion-22"
             data-has-default-cursor="false"
             data-has-label="false"
           >
