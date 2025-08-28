@@ -143,7 +143,7 @@ exports[`tagInput > should renders correctly 1`] = `
             <input
               class="emotion-6 emotion-7"
               data-size="large"
-              id="_r_0_"
+              id="«r0»"
               type="text"
               value=""
             />
@@ -409,7 +409,7 @@ exports[`tagInput > should renders correctly readOnly 1`] = `
             <input
               class="emotion-6 emotion-7"
               data-size="large"
-              id="_r_4_"
+              id="«r4»"
               readonly=""
               type="text"
               value=""
@@ -571,18 +571,6 @@ exports[`tagInput > should renders correctly with error 1`] = `
   fill: none;
 }
 
-.emotion-12 {
-  color: #b3144d;
-  font-size: 0.75rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
 <div
     data-testid="testing"
   >
@@ -603,7 +591,7 @@ exports[`tagInput > should renders correctly with error 1`] = `
             <input
               class="emotion-6 emotion-7"
               data-size="large"
-              id="_r_c_"
+              id="«rc»"
               type="text"
               value=""
             />
@@ -625,7 +613,7 @@ exports[`tagInput > should renders correctly with error 1`] = `
         </div>
       </div>
       <span
-        class="emotion-12 emotion-13"
+        class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_danger__m4c9owd style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_8__m4c9ow1k style_undefined_compound_72__m4c9ow3c"
       >
         This is an error
       </span>
@@ -659,20 +647,11 @@ exports[`tagInput > should renders correctly with label 1`] = `
   gap: 0.25rem;
 }
 
-.emotion-3 {
-  color: #3f4250;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.emotion-2 {
   cursor: pointer;
 }
 
-.emotion-5 {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -686,35 +665,35 @@ exports[`tagInput > should renders correctly with label 1`] = `
   border-radius: 0.25rem;
 }
 
-.emotion-5:focus-within {
+.emotion-4:focus-within {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-5[data-success="true"] {
+.emotion-4[data-success="true"] {
   border-color: #22674e;
 }
 
-.emotion-5[data-error="true"] {
+.emotion-4[data-error="true"] {
   border-color: #b3144d;
 }
 
-.emotion-5:hover {
+.emotion-4:hover {
   border-color: #792dd4;
 }
 
-.emotion-5[data-readonly="true"] {
+.emotion-4[data-readonly="true"] {
   border-color: #d9dadd;
   background: #f9f9fa;
 }
 
-.emotion-5[data-disabled="true"] {
+.emotion-4[data-disabled="true"] {
   border-color: #e9eaeb;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.emotion-7 {
+.emotion-6 {
   height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -734,7 +713,7 @@ exports[`tagInput > should renders correctly with label 1`] = `
   flex: 1;
 }
 
-.emotion-9 {
+.emotion-8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -750,23 +729,23 @@ exports[`tagInput > should renders correctly with label 1`] = `
   height: 100%;
 }
 
-.emotion-9::-webkit-input-placeholder {
+.emotion-8::-webkit-input-placeholder {
   color: #727683;
 }
 
-.emotion-9::-moz-placeholder {
+.emotion-8::-moz-placeholder {
   color: #727683;
 }
 
-.emotion-9:-ms-input-placeholder {
+.emotion-8:-ms-input-placeholder {
   color: #727683;
 }
 
-.emotion-9::placeholder {
+.emotion-8::placeholder {
   color: #727683;
 }
 
-.emotion-9[data-size="large"] {
+.emotion-8[data-size="large"] {
   font-size: 1rem;
 }
 
@@ -777,26 +756,26 @@ exports[`tagInput > should renders correctly with label 1`] = `
       class="emotion-0 emotion-1"
     >
       <label
-        class="emotion-2 emotion-3 emotion-4"
-        for="_r_6_"
+        class="emotion-2 emotion-3 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+        for="«r6»"
       >
         Label
       </label>
       <div>
         <div
-          class="emotion-5 emotion-6"
+          class="emotion-4 emotion-5"
           data-disabled="false"
           data-error="false"
           data-readonly="false"
           data-success="false"
         >
           <div
-            class="emotion-7 emotion-8"
+            class="emotion-6 emotion-7"
           >
             <input
-              class="emotion-9 emotion-10"
+              class="emotion-8 emotion-9"
               data-size="large"
-              id="_r_6_"
+              id="«r6»"
               type="text"
               value=""
             />
@@ -856,20 +835,11 @@ exports[`tagInput > should renders correctly with labelDescription 1`] = `
   gap: 0.5rem;
 }
 
-.emotion-5 {
-  color: #3f4250;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.emotion-4 {
   cursor: pointer;
 }
 
-.emotion-7 {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -883,35 +853,35 @@ exports[`tagInput > should renders correctly with labelDescription 1`] = `
   border-radius: 0.25rem;
 }
 
-.emotion-7:focus-within {
+.emotion-6:focus-within {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-7[data-success="true"] {
+.emotion-6[data-success="true"] {
   border-color: #22674e;
 }
 
-.emotion-7[data-error="true"] {
+.emotion-6[data-error="true"] {
   border-color: #b3144d;
 }
 
-.emotion-7:hover {
+.emotion-6:hover {
   border-color: #792dd4;
 }
 
-.emotion-7[data-readonly="true"] {
+.emotion-6[data-readonly="true"] {
   border-color: #d9dadd;
   background: #f9f9fa;
 }
 
-.emotion-7[data-disabled="true"] {
+.emotion-6[data-disabled="true"] {
   border-color: #e9eaeb;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.emotion-9 {
+.emotion-8 {
   height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -931,7 +901,7 @@ exports[`tagInput > should renders correctly with labelDescription 1`] = `
   flex: 1;
 }
 
-.emotion-11 {
+.emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -947,23 +917,23 @@ exports[`tagInput > should renders correctly with labelDescription 1`] = `
   height: 100%;
 }
 
-.emotion-11::-webkit-input-placeholder {
+.emotion-10::-webkit-input-placeholder {
   color: #727683;
 }
 
-.emotion-11::-moz-placeholder {
+.emotion-10::-moz-placeholder {
   color: #727683;
 }
 
-.emotion-11:-ms-input-placeholder {
+.emotion-10:-ms-input-placeholder {
   color: #727683;
 }
 
-.emotion-11::placeholder {
+.emotion-10::placeholder {
   color: #727683;
 }
 
-.emotion-11[data-size="large"] {
+.emotion-10[data-size="large"] {
   font-size: 1rem;
 }
 
@@ -977,8 +947,8 @@ exports[`tagInput > should renders correctly with labelDescription 1`] = `
         class="emotion-2 emotion-1"
       >
         <label
-          class="emotion-4 emotion-5 emotion-6"
-          for="_r_9_"
+          class="emotion-4 emotion-5 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+          for="«r9»"
         />
         <div>
           label description
@@ -986,19 +956,19 @@ exports[`tagInput > should renders correctly with labelDescription 1`] = `
       </div>
       <div>
         <div
-          class="emotion-7 emotion-8"
+          class="emotion-6 emotion-7"
           data-disabled="false"
           data-error="false"
           data-readonly="false"
           data-success="false"
         >
           <div
-            class="emotion-9 emotion-10"
+            class="emotion-8 emotion-9"
           >
             <input
-              class="emotion-11 emotion-12"
+              class="emotion-10 emotion-11"
               data-size="large"
-              id="_r_9_"
+              id="«r9»"
               type="text"
               value=""
             />
@@ -1153,7 +1123,7 @@ exports[`tagInput > should renders correctly with placeholder 1`] = `
             <input
               class="emotion-6 emotion-7"
               data-size="large"
-              id="_r_i_"
+              id="«ri»"
               placeholder="Enter a value here"
               type="text"
               value=""
@@ -1279,22 +1249,11 @@ exports[`tagInput > should renders correctly with some tags 1`] = `
   border: solid 1px #d9dadd;
 }
 
-.emotion-9 {
-  font-size: 0.75rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
+.emotion-8 {
   max-width: 14.5rem;
 }
 
-.emotion-11 {
+.emotion-10 {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -1304,7 +1263,7 @@ exports[`tagInput > should renders correctly with some tags 1`] = `
   padding: 0.125rem;
 }
 
-.emotion-13 {
+.emotion-12 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -1313,12 +1272,12 @@ exports[`tagInput > should renders correctly with some tags 1`] = `
   min-height: 1rem;
 }
 
-.emotion-13 .fillStroke {
+.emotion-12 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.emotion-24 {
+.emotion-22 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1334,23 +1293,23 @@ exports[`tagInput > should renders correctly with some tags 1`] = `
   height: 100%;
 }
 
-.emotion-24::-webkit-input-placeholder {
+.emotion-22::-webkit-input-placeholder {
   color: #727683;
 }
 
-.emotion-24::-moz-placeholder {
+.emotion-22::-moz-placeholder {
   color: #727683;
 }
 
-.emotion-24:-ms-input-placeholder {
+.emotion-22:-ms-input-placeholder {
   color: #727683;
 }
 
-.emotion-24::placeholder {
+.emotion-22::placeholder {
   color: #727683;
 }
 
-.emotion-24[data-size="large"] {
+.emotion-22[data-size="large"] {
   font-size: 1rem;
 }
 
@@ -1375,18 +1334,18 @@ exports[`tagInput > should renders correctly with some tags 1`] = `
               class="emotion-6 emotion-7"
             >
               <div
-                class="emotion-8 emotion-9 emotion-10"
+                class="emotion-8 emotion-9 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_true__m4c9ow7 style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
               >
                 hello
               </div>
               <button
                 aria-label="Close tag"
-                class="emotion-11 emotion-12 styles__e1wcoe0 styles_size_small__e1wcoe3 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                class="emotion-10 emotion-11 styles__e1wcoe0 styles_size_small__e1wcoe3 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                 data-testid="close-tag"
                 type="button"
               >
                 <svg
-                  class="emotion-13 emotion-14"
+                  class="emotion-12 emotion-13"
                   viewBox="0 0 16 16"
                 >
                   <path
@@ -1399,18 +1358,18 @@ exports[`tagInput > should renders correctly with some tags 1`] = `
               class="emotion-6 emotion-7"
             >
               <div
-                class="emotion-8 emotion-9 emotion-10"
+                class="emotion-8 emotion-9 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_true__m4c9ow7 style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
               >
                 world
               </div>
               <button
                 aria-label="Close tag"
-                class="emotion-11 emotion-12 styles__e1wcoe0 styles_size_small__e1wcoe3 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                class="emotion-10 emotion-11 styles__e1wcoe0 styles_size_small__e1wcoe3 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                 data-testid="close-tag"
                 type="button"
               >
                 <svg
-                  class="emotion-13 emotion-14"
+                  class="emotion-12 emotion-13"
                   viewBox="0 0 16 16"
                 >
                   <path
@@ -1420,9 +1379,9 @@ exports[`tagInput > should renders correctly with some tags 1`] = `
               </button>
             </span>
             <input
-              class="emotion-24 emotion-25"
+              class="emotion-22 emotion-23"
               data-size="large"
-              id="_r_k_"
+              id="«rk»"
               name="radio"
               placeholder=""
               type="text"
@@ -1549,22 +1508,11 @@ exports[`tagInput > should renders correctly with some tags objects 1`] = `
   border: solid 1px #d9dadd;
 }
 
-.emotion-9 {
-  font-size: 0.75rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
+.emotion-8 {
   max-width: 14.5rem;
 }
 
-.emotion-11 {
+.emotion-10 {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -1574,7 +1522,7 @@ exports[`tagInput > should renders correctly with some tags objects 1`] = `
   padding: 0.125rem;
 }
 
-.emotion-13 {
+.emotion-12 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -1583,12 +1531,12 @@ exports[`tagInput > should renders correctly with some tags objects 1`] = `
   min-height: 1rem;
 }
 
-.emotion-13 .fillStroke {
+.emotion-12 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.emotion-24 {
+.emotion-22 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1604,23 +1552,23 @@ exports[`tagInput > should renders correctly with some tags objects 1`] = `
   height: 100%;
 }
 
-.emotion-24::-webkit-input-placeholder {
+.emotion-22::-webkit-input-placeholder {
   color: #727683;
 }
 
-.emotion-24::-moz-placeholder {
+.emotion-22::-moz-placeholder {
   color: #727683;
 }
 
-.emotion-24:-ms-input-placeholder {
+.emotion-22:-ms-input-placeholder {
   color: #727683;
 }
 
-.emotion-24::placeholder {
+.emotion-22::placeholder {
   color: #727683;
 }
 
-.emotion-24[data-size="large"] {
+.emotion-22[data-size="large"] {
   font-size: 1rem;
 }
 
@@ -1645,18 +1593,18 @@ exports[`tagInput > should renders correctly with some tags objects 1`] = `
               class="emotion-6 emotion-7"
             >
               <div
-                class="emotion-8 emotion-9 emotion-10"
+                class="emotion-8 emotion-9 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_true__m4c9ow7 style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
               >
                 hello
               </div>
               <button
                 aria-label="Close tag"
-                class="emotion-11 emotion-12 styles__e1wcoe0 styles_size_small__e1wcoe3 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                class="emotion-10 emotion-11 styles__e1wcoe0 styles_size_small__e1wcoe3 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                 data-testid="close-tag"
                 type="button"
               >
                 <svg
-                  class="emotion-13 emotion-14"
+                  class="emotion-12 emotion-13"
                   viewBox="0 0 16 16"
                 >
                   <path
@@ -1669,18 +1617,18 @@ exports[`tagInput > should renders correctly with some tags objects 1`] = `
               class="emotion-6 emotion-7"
             >
               <div
-                class="emotion-8 emotion-9 emotion-10"
+                class="emotion-8 emotion-9 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_true__m4c9ow7 style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
               >
                 world
               </div>
               <button
                 aria-label="Close tag"
-                class="emotion-11 emotion-12 styles__e1wcoe0 styles_size_small__e1wcoe3 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+                class="emotion-10 emotion-11 styles__e1wcoe0 styles_size_small__e1wcoe3 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
                 data-testid="close-tag"
                 type="button"
               >
                 <svg
-                  class="emotion-13 emotion-14"
+                  class="emotion-12 emotion-13"
                   viewBox="0 0 16 16"
                 >
                   <path
@@ -1690,9 +1638,9 @@ exports[`tagInput > should renders correctly with some tags objects 1`] = `
               </button>
             </span>
             <input
-              class="emotion-24 emotion-25"
+              class="emotion-22 emotion-23"
               data-size="large"
-              id="_r_q_"
+              id="«rq»"
               name="radio"
               placeholder=""
               type="text"
@@ -1855,18 +1803,6 @@ exports[`tagInput > should renders correctly with success 1`] = `
   fill: none;
 }
 
-.emotion-12 {
-  color: #22674e;
-  font-size: 0.75rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
 <div
     data-testid="testing"
   >
@@ -1887,7 +1823,7 @@ exports[`tagInput > should renders correctly with success 1`] = `
             <input
               class="emotion-6 emotion-7"
               data-size="large"
-              id="_r_f_"
+              id="«rf»"
               type="text"
               value=""
             />
@@ -1909,7 +1845,7 @@ exports[`tagInput > should renders correctly with success 1`] = `
         </div>
       </div>
       <span
-        class="emotion-12 emotion-13"
+        class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_success__m4c9owc style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_16__m4c9ow1s style_undefined_compound_72__m4c9ow3c"
       >
         This is a success
       </span>

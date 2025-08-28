@@ -235,9 +235,9 @@ exports[`tab > renders correctly with counter, badge and subtitle 1`] = `
   border-bottom-color: #8c40ef;
 }
 
-.emotion-0[aria-disabled='false']:not(:disabled):hover[data-is-selected='false'] .emotion-6,
-.emotion-0[aria-disabled='false']:not(:disabled):focus[data-is-selected='false'] .emotion-6,
-.emotion-0[aria-disabled='false']:not(:disabled):active[data-is-selected='false'] .emotion-6 {
+.emotion-0[aria-disabled='false']:not(:disabled):hover[data-is-selected='false'] .emotion-7,
+.emotion-0[aria-disabled='false']:not(:disabled):focus[data-is-selected='false'] .emotion-7,
+.emotion-0[aria-disabled='false']:not(:disabled):active[data-is-selected='false'] .emotion-7 {
   background-color: #f1eefc;
   border-color: #f1eefc;
   color: #641cb3;
@@ -301,21 +301,12 @@ exports[`tab > renders correctly with counter, badge and subtitle 1`] = `
   flex-direction: row;
 }
 
-.emotion-7 {
-  font-size: 0.75rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  white-space: nowrap;
+.emotion-6 {
   padding: 0 0.5rem;
   margin-left: 0.5rem;
 }
 
-.emotion-9 {
+.emotion-8 {
   margin-left: 0.5rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -323,7 +314,7 @@ exports[`tab > renders correctly with counter, badge and subtitle 1`] = `
   display: flex;
 }
 
-.emotion-11 {
+.emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -345,18 +336,6 @@ exports[`tab > renders correctly with counter, badge and subtitle 1`] = `
   flex-direction: row;
 }
 
-.emotion-14 {
-  color: #727683;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
 <div
     data-testid="testing"
   >
@@ -375,21 +354,22 @@ exports[`tab > renders correctly with counter, badge and subtitle 1`] = `
           class="emotion-4 emotion-3"
         >
           <span
-            class="emotion-6 styles__1yf71jy0 styles_size_medium__1yf71jy2 styles_prominence_default__1yf71jyd styles_sentiment_neutral__1yf71jya styles_undefined_compound_6__1yf71jym emotion-7 emotion-8"
+            class="emotion-6 emotion-7 styles__1yf71jy0 styles_size_medium__1yf71jy2 styles_prominence_default__1yf71jyd styles_sentiment_neutral__1yf71jya styles_undefined_compound_6__1yf71jym style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+            style="white-space: nowrap;"
           >
             1
           </span>
           <span
-            class="emotion-9 emotion-10"
+            class="emotion-8 emotion-9"
           >
             badge
           </span>
         </div>
         <div
-          class="emotion-11 emotion-3"
+          class="emotion-10 emotion-3"
         >
           <span
-            class="emotion-13 emotion-14 emotion-8"
+            class="emotion-12 emotion-13 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
           >
             subtitle
           </span>
@@ -461,7 +441,7 @@ exports[`tab > renders correctly with subtitle 1`] = `
   border-bottom-color: #8c40ef;
 }
 
-.emotion-0[aria-selected='true'] .emotion-8 {
+.emotion-0[aria-selected='true'] .emotion-9 {
   color: #641cb3;
 }
 
@@ -481,9 +461,9 @@ exports[`tab > renders correctly with subtitle 1`] = `
   color: #641cb3;
 }
 
-.emotion-0[aria-disabled='false']:not(:disabled):hover[data-is-selected='false'] .emotion-8,
-.emotion-0[aria-disabled='false']:not(:disabled):focus[data-is-selected='false'] .emotion-8,
-.emotion-0[aria-disabled='false']:not(:disabled):active[data-is-selected='false'] .emotion-8 {
+.emotion-0[aria-disabled='false']:not(:disabled):hover[data-is-selected='false'] .emotion-9,
+.emotion-0[aria-disabled='false']:not(:disabled):focus[data-is-selected='false'] .emotion-9,
+.emotion-0[aria-disabled='false']:not(:disabled):active[data-is-selected='false'] .emotion-9 {
   color: #641cb3;
 }
 
@@ -561,18 +541,6 @@ exports[`tab > renders correctly with subtitle 1`] = `
   flex-direction: row;
 }
 
-.emotion-9 {
-  color: #727683;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
 <div
     data-testid="testing"
   >
@@ -594,7 +562,7 @@ exports[`tab > renders correctly with subtitle 1`] = `
           class="emotion-6 emotion-3"
         >
           <span
-            class="emotion-8 emotion-9 emotion-10"
+            class="emotion-8 emotion-9 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
           >
             test
           </span>

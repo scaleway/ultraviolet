@@ -3,17 +3,6 @@
 exports[`checkbox > renders correctly 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  font-size: 0.75rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -54,47 +43,47 @@ exports[`checkbox > renders correctly 1`] = `
   user-select: none;
 }
 
-.emotion-2[data-disabled="false"]:hover {
+.emotion-0[data-disabled="false"]:hover {
   background-color: #e9eaeb;
   border-color: #92959d;
   color: #222638;
 }
 
-.emotion-2[data-disabled="true"] {
+.emotion-0[data-disabled="true"] {
   background-color: #f3f3f4;
   border-color: #d9dadd;
   color: #b5b7bd;
   cursor: not-allowed;
 }
 
-.emotion-2[data-active="true"] {
+.emotion-0[data-active="true"] {
   background-color: #8c40ef;
   border-color: #8c40ef;
   color: #ffffff;
 }
 
-.emotion-2[data-active="true"][data-disabled="false"]:hover {
+.emotion-0[data-active="true"][data-disabled="false"]:hover {
   background-color: #792dd4;
   border-color: #792dd4;
   color: #f9f9fa;
 }
 
-.emotion-2[data-active="true"][data-disabled="true"] {
+.emotion-0[data-active="true"][data-disabled="true"] {
   background-color: #e5dbfd;
   border: none;
 }
 
-.emotion-2[data-size='medium'] {
+.emotion-0[data-size='medium'] {
   height: 1.5rem;
   padding: 0.25rem 0.75rem;
 }
 
-.emotion-2[data-size='large'] {
+.emotion-0[data-size='large'] {
   height: 2rem;
   padding: 0.25rem 1rem;
 }
 
-.emotion-2[data-trailing-icon="true"] {
+.emotion-0[data-trailing-icon="true"] {
   padding-right: 0.5rem;
 }
 
@@ -102,10 +91,10 @@ exports[`checkbox > renders correctly 1`] = `
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="emotion-0 emotion-1"
         data-active="false"
         data-disabled="false"
         data-prominence="default"
@@ -122,17 +111,6 @@ exports[`checkbox > renders correctly 1`] = `
 exports[`checkbox > renders correctly active 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  font-size: 0.75rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -173,51 +151,51 @@ exports[`checkbox > renders correctly active 1`] = `
   user-select: none;
 }
 
-.emotion-2[data-disabled="false"]:hover {
+.emotion-0[data-disabled="false"]:hover {
   background-color: #e9eaeb;
   border-color: #92959d;
   color: #222638;
 }
 
-.emotion-2[data-disabled="true"] {
+.emotion-0[data-disabled="true"] {
   background-color: #f3f3f4;
   border-color: #d9dadd;
   color: #b5b7bd;
   cursor: not-allowed;
 }
 
-.emotion-2[data-active="true"] {
+.emotion-0[data-active="true"] {
   background-color: #8c40ef;
   border-color: #8c40ef;
   color: #ffffff;
 }
 
-.emotion-2[data-active="true"][data-disabled="false"]:hover {
+.emotion-0[data-active="true"][data-disabled="false"]:hover {
   background-color: #792dd4;
   border-color: #792dd4;
   color: #f9f9fa;
 }
 
-.emotion-2[data-active="true"][data-disabled="true"] {
+.emotion-0[data-active="true"][data-disabled="true"] {
   background-color: #e5dbfd;
   border: none;
 }
 
-.emotion-2[data-size='medium'] {
+.emotion-0[data-size='medium'] {
   height: 1.5rem;
   padding: 0.25rem 0.75rem;
 }
 
-.emotion-2[data-size='large'] {
+.emotion-0[data-size='large'] {
   height: 2rem;
   padding: 0.25rem 1rem;
 }
 
-.emotion-2[data-trailing-icon="true"] {
+.emotion-0[data-trailing-icon="true"] {
   padding-right: 0.5rem;
 }
 
-.emotion-4 {
+.emotion-2 {
   background: none;
   border: none;
   cursor: pointer;
@@ -225,19 +203,19 @@ exports[`checkbox > renders correctly active 1`] = `
   border-radius: 0.25rem;
 }
 
-.emotion-4[data-has-onclick="true"][data-active="false"]:hover {
+.emotion-2[data-has-onclick="true"][data-active="false"]:hover {
   background-color: #d9dadd;
 }
 
-.emotion-4[data-has-onclick="true"][data-active="true"]:hover {
+.emotion-2[data-has-onclick="true"][data-active="true"]:hover {
   background-color: #8c40ef;
 }
 
-.emotion-4[data-disabled="true"] {
+.emotion-2[data-disabled="true"] {
   cursor: not-allowed;
 }
 
-.emotion-6 {
+.emotion-4 {
   vertical-align: middle;
   fill: #ffffff;
   height: 1rem;
@@ -246,7 +224,7 @@ exports[`checkbox > renders correctly active 1`] = `
   min-height: 1rem;
 }
 
-.emotion-6 .fillStroke {
+.emotion-4 .fillStroke {
   stroke: #ffffff;
   fill: none;
 }
@@ -255,10 +233,10 @@ exports[`checkbox > renders correctly active 1`] = `
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="emotion-0 emotion-1"
         data-active="true"
         data-disabled="false"
         data-prominence="stronger"
@@ -267,13 +245,13 @@ exports[`checkbox > renders correctly active 1`] = `
       >
         test 
         <div
-          class="emotion-4 emotion-5"
+          class="emotion-2 emotion-3"
           data-active="true"
           data-disabled="false"
           data-has-onclick="false"
         >
           <svg
-            class="emotion-6 emotion-7"
+            class="emotion-4 emotion-5"
             viewBox="0 0 16 16"
           >
             <path
@@ -292,17 +270,6 @@ exports[`checkbox > renders correctly active 1`] = `
 exports[`checkbox > renders correctly active disabled 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  font-size: 0.75rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -343,51 +310,51 @@ exports[`checkbox > renders correctly active disabled 1`] = `
   user-select: none;
 }
 
-.emotion-2[data-disabled="false"]:hover {
+.emotion-0[data-disabled="false"]:hover {
   background-color: #e9eaeb;
   border-color: #92959d;
   color: #222638;
 }
 
-.emotion-2[data-disabled="true"] {
+.emotion-0[data-disabled="true"] {
   background-color: #f3f3f4;
   border-color: #d9dadd;
   color: #b5b7bd;
   cursor: not-allowed;
 }
 
-.emotion-2[data-active="true"] {
+.emotion-0[data-active="true"] {
   background-color: #8c40ef;
   border-color: #8c40ef;
   color: #ffffff;
 }
 
-.emotion-2[data-active="true"][data-disabled="false"]:hover {
+.emotion-0[data-active="true"][data-disabled="false"]:hover {
   background-color: #792dd4;
   border-color: #792dd4;
   color: #f9f9fa;
 }
 
-.emotion-2[data-active="true"][data-disabled="true"] {
+.emotion-0[data-active="true"][data-disabled="true"] {
   background-color: #e5dbfd;
   border: none;
 }
 
-.emotion-2[data-size='medium'] {
+.emotion-0[data-size='medium'] {
   height: 1.5rem;
   padding: 0.25rem 0.75rem;
 }
 
-.emotion-2[data-size='large'] {
+.emotion-0[data-size='large'] {
   height: 2rem;
   padding: 0.25rem 1rem;
 }
 
-.emotion-2[data-trailing-icon="true"] {
+.emotion-0[data-trailing-icon="true"] {
   padding-right: 0.5rem;
 }
 
-.emotion-4 {
+.emotion-2 {
   background: none;
   border: none;
   cursor: pointer;
@@ -395,19 +362,19 @@ exports[`checkbox > renders correctly active disabled 1`] = `
   border-radius: 0.25rem;
 }
 
-.emotion-4[data-has-onclick="true"][data-active="false"]:hover {
+.emotion-2[data-has-onclick="true"][data-active="false"]:hover {
   background-color: #d9dadd;
 }
 
-.emotion-4[data-has-onclick="true"][data-active="true"]:hover {
+.emotion-2[data-has-onclick="true"][data-active="true"]:hover {
   background-color: #8c40ef;
 }
 
-.emotion-4[data-disabled="true"] {
+.emotion-2[data-disabled="true"] {
   cursor: not-allowed;
 }
 
-.emotion-6 {
+.emotion-4 {
   vertical-align: middle;
   fill: #f3f3f4;
   height: 1rem;
@@ -416,7 +383,7 @@ exports[`checkbox > renders correctly active disabled 1`] = `
   min-height: 1rem;
 }
 
-.emotion-6 .fillStroke {
+.emotion-4 .fillStroke {
   stroke: #f3f3f4;
   fill: none;
 }
@@ -425,10 +392,10 @@ exports[`checkbox > renders correctly active disabled 1`] = `
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="emotion-0 emotion-1"
         data-active="true"
         data-disabled="true"
         data-prominence="stronger"
@@ -437,13 +404,13 @@ exports[`checkbox > renders correctly active disabled 1`] = `
       >
         test 
         <div
-          class="emotion-4 emotion-5"
+          class="emotion-2 emotion-3"
           data-active="true"
           data-disabled="true"
           data-has-onclick="false"
         >
           <svg
-            class="emotion-6 emotion-7"
+            class="emotion-4 emotion-5"
             viewBox="0 0 16 16"
           >
             <path
@@ -462,17 +429,6 @@ exports[`checkbox > renders correctly active disabled 1`] = `
 exports[`checkbox > renders correctly disabled 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  font-size: 0.75rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -513,51 +469,51 @@ exports[`checkbox > renders correctly disabled 1`] = `
   user-select: none;
 }
 
-.emotion-2[data-disabled="false"]:hover {
+.emotion-0[data-disabled="false"]:hover {
   background-color: #e9eaeb;
   border-color: #92959d;
   color: #222638;
 }
 
-.emotion-2[data-disabled="true"] {
+.emotion-0[data-disabled="true"] {
   background-color: #f3f3f4;
   border-color: #d9dadd;
   color: #b5b7bd;
   cursor: not-allowed;
 }
 
-.emotion-2[data-active="true"] {
+.emotion-0[data-active="true"] {
   background-color: #8c40ef;
   border-color: #8c40ef;
   color: #ffffff;
 }
 
-.emotion-2[data-active="true"][data-disabled="false"]:hover {
+.emotion-0[data-active="true"][data-disabled="false"]:hover {
   background-color: #792dd4;
   border-color: #792dd4;
   color: #f9f9fa;
 }
 
-.emotion-2[data-active="true"][data-disabled="true"] {
+.emotion-0[data-active="true"][data-disabled="true"] {
   background-color: #e5dbfd;
   border: none;
 }
 
-.emotion-2[data-size='medium'] {
+.emotion-0[data-size='medium'] {
   height: 1.5rem;
   padding: 0.25rem 0.75rem;
 }
 
-.emotion-2[data-size='large'] {
+.emotion-0[data-size='large'] {
   height: 2rem;
   padding: 0.25rem 1rem;
 }
 
-.emotion-2[data-trailing-icon="true"] {
+.emotion-0[data-trailing-icon="true"] {
   padding-right: 0.5rem;
 }
 
-.emotion-4 {
+.emotion-2 {
   background: none;
   border: none;
   cursor: pointer;
@@ -565,19 +521,19 @@ exports[`checkbox > renders correctly disabled 1`] = `
   border-radius: 0.25rem;
 }
 
-.emotion-4[data-has-onclick="true"][data-active="false"]:hover {
+.emotion-2[data-has-onclick="true"][data-active="false"]:hover {
   background-color: #d9dadd;
 }
 
-.emotion-4[data-has-onclick="true"][data-active="true"]:hover {
+.emotion-2[data-has-onclick="true"][data-active="true"]:hover {
   background-color: #8c40ef;
 }
 
-.emotion-4[data-disabled="true"] {
+.emotion-2[data-disabled="true"] {
   cursor: not-allowed;
 }
 
-.emotion-6 {
+.emotion-4 {
   vertical-align: middle;
   fill: #b5b7bd;
   height: 1rem;
@@ -586,7 +542,7 @@ exports[`checkbox > renders correctly disabled 1`] = `
   min-height: 1rem;
 }
 
-.emotion-6 .fillStroke {
+.emotion-4 .fillStroke {
   stroke: #b5b7bd;
   fill: none;
 }
@@ -595,10 +551,10 @@ exports[`checkbox > renders correctly disabled 1`] = `
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="emotion-0 emotion-1"
         data-active="false"
         data-disabled="true"
         data-prominence="weak"
@@ -607,13 +563,13 @@ exports[`checkbox > renders correctly disabled 1`] = `
       >
         test 
         <div
-          class="emotion-4 emotion-5"
+          class="emotion-2 emotion-3"
           data-active="false"
           data-disabled="true"
           data-has-onclick="false"
         >
           <svg
-            class="emotion-6 emotion-7"
+            class="emotion-4 emotion-5"
             viewBox="0 0 16 16"
           >
             <path
@@ -632,17 +588,6 @@ exports[`checkbox > renders correctly disabled 1`] = `
 exports[`checkbox > renders correctly large 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -683,51 +628,51 @@ exports[`checkbox > renders correctly large 1`] = `
   user-select: none;
 }
 
-.emotion-2[data-disabled="false"]:hover {
+.emotion-0[data-disabled="false"]:hover {
   background-color: #e9eaeb;
   border-color: #92959d;
   color: #222638;
 }
 
-.emotion-2[data-disabled="true"] {
+.emotion-0[data-disabled="true"] {
   background-color: #f3f3f4;
   border-color: #d9dadd;
   color: #b5b7bd;
   cursor: not-allowed;
 }
 
-.emotion-2[data-active="true"] {
+.emotion-0[data-active="true"] {
   background-color: #8c40ef;
   border-color: #8c40ef;
   color: #ffffff;
 }
 
-.emotion-2[data-active="true"][data-disabled="false"]:hover {
+.emotion-0[data-active="true"][data-disabled="false"]:hover {
   background-color: #792dd4;
   border-color: #792dd4;
   color: #f9f9fa;
 }
 
-.emotion-2[data-active="true"][data-disabled="true"] {
+.emotion-0[data-active="true"][data-disabled="true"] {
   background-color: #e5dbfd;
   border: none;
 }
 
-.emotion-2[data-size='medium'] {
+.emotion-0[data-size='medium'] {
   height: 1.5rem;
   padding: 0.25rem 0.75rem;
 }
 
-.emotion-2[data-size='large'] {
+.emotion-0[data-size='large'] {
   height: 2rem;
   padding: 0.25rem 1rem;
 }
 
-.emotion-2[data-trailing-icon="true"] {
+.emotion-0[data-trailing-icon="true"] {
   padding-right: 0.5rem;
 }
 
-.emotion-4 {
+.emotion-2 {
   background: none;
   border: none;
   cursor: pointer;
@@ -735,19 +680,19 @@ exports[`checkbox > renders correctly large 1`] = `
   border-radius: 0.25rem;
 }
 
-.emotion-4[data-has-onclick="true"][data-active="false"]:hover {
+.emotion-2[data-has-onclick="true"][data-active="false"]:hover {
   background-color: #d9dadd;
 }
 
-.emotion-4[data-has-onclick="true"][data-active="true"]:hover {
+.emotion-2[data-has-onclick="true"][data-active="true"]:hover {
   background-color: #8c40ef;
 }
 
-.emotion-4[data-disabled="true"] {
+.emotion-2[data-disabled="true"] {
   cursor: not-allowed;
 }
 
-.emotion-6 {
+.emotion-4 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1rem;
@@ -756,7 +701,7 @@ exports[`checkbox > renders correctly large 1`] = `
   min-height: 1rem;
 }
 
-.emotion-6 .fillStroke {
+.emotion-4 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
@@ -765,10 +710,10 @@ exports[`checkbox > renders correctly large 1`] = `
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="emotion-0 emotion-1"
         data-active="false"
         data-disabled="false"
         data-prominence="default"
@@ -777,13 +722,13 @@ exports[`checkbox > renders correctly large 1`] = `
       >
         test 
         <div
-          class="emotion-4 emotion-5"
+          class="emotion-2 emotion-3"
           data-active="false"
           data-disabled="false"
           data-has-onclick="false"
         >
           <svg
-            class="emotion-6 emotion-7"
+            class="emotion-4 emotion-5"
             viewBox="0 0 16 16"
           >
             <path
@@ -802,17 +747,6 @@ exports[`checkbox > renders correctly large 1`] = `
 exports[`checkbox > renders correctly wiht icon 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  font-size: 0.75rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -853,51 +787,51 @@ exports[`checkbox > renders correctly wiht icon 1`] = `
   user-select: none;
 }
 
-.emotion-2[data-disabled="false"]:hover {
+.emotion-0[data-disabled="false"]:hover {
   background-color: #e9eaeb;
   border-color: #92959d;
   color: #222638;
 }
 
-.emotion-2[data-disabled="true"] {
+.emotion-0[data-disabled="true"] {
   background-color: #f3f3f4;
   border-color: #d9dadd;
   color: #b5b7bd;
   cursor: not-allowed;
 }
 
-.emotion-2[data-active="true"] {
+.emotion-0[data-active="true"] {
   background-color: #8c40ef;
   border-color: #8c40ef;
   color: #ffffff;
 }
 
-.emotion-2[data-active="true"][data-disabled="false"]:hover {
+.emotion-0[data-active="true"][data-disabled="false"]:hover {
   background-color: #792dd4;
   border-color: #792dd4;
   color: #f9f9fa;
 }
 
-.emotion-2[data-active="true"][data-disabled="true"] {
+.emotion-0[data-active="true"][data-disabled="true"] {
   background-color: #e5dbfd;
   border: none;
 }
 
-.emotion-2[data-size='medium'] {
+.emotion-0[data-size='medium'] {
   height: 1.5rem;
   padding: 0.25rem 0.75rem;
 }
 
-.emotion-2[data-size='large'] {
+.emotion-0[data-size='large'] {
   height: 2rem;
   padding: 0.25rem 1rem;
 }
 
-.emotion-2[data-trailing-icon="true"] {
+.emotion-0[data-trailing-icon="true"] {
   padding-right: 0.5rem;
 }
 
-.emotion-4 {
+.emotion-2 {
   background: none;
   border: none;
   cursor: pointer;
@@ -905,19 +839,19 @@ exports[`checkbox > renders correctly wiht icon 1`] = `
   border-radius: 0.25rem;
 }
 
-.emotion-4[data-has-onclick="true"][data-active="false"]:hover {
+.emotion-2[data-has-onclick="true"][data-active="false"]:hover {
   background-color: #d9dadd;
 }
 
-.emotion-4[data-has-onclick="true"][data-active="true"]:hover {
+.emotion-2[data-has-onclick="true"][data-active="true"]:hover {
   background-color: #8c40ef;
 }
 
-.emotion-4[data-disabled="true"] {
+.emotion-2[data-disabled="true"] {
   cursor: not-allowed;
 }
 
-.emotion-6 {
+.emotion-4 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1rem;
@@ -926,7 +860,7 @@ exports[`checkbox > renders correctly wiht icon 1`] = `
   min-height: 1rem;
 }
 
-.emotion-6 .fillStroke {
+.emotion-4 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
@@ -935,10 +869,10 @@ exports[`checkbox > renders correctly wiht icon 1`] = `
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="emotion-0 emotion-1"
         data-active="false"
         data-disabled="false"
         data-prominence="default"
@@ -946,13 +880,13 @@ exports[`checkbox > renders correctly wiht icon 1`] = `
         data-trailing-icon="false"
       >
         <button
-          class="emotion-4 emotion-5"
+          class="emotion-2 emotion-3"
           data-active="false"
           data-disabled="false"
           data-has-onclick="true"
         >
           <svg
-            class="emotion-6 emotion-7"
+            class="emotion-4 emotion-5"
             viewBox="0 0 16 16"
           >
             <path

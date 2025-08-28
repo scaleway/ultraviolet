@@ -40,16 +40,7 @@ exports[`snippet > renders correctly 1`] = `
   width: 100%;
 }
 
-.emotion-5 {
-  font-size: 0.875rem;
-  font-family: JetBrains,monospace;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  white-space: nowrap;
+.emotion-4 {
   margin: 0;
   padding: 1rem;
   padding-right: 4.5rem;
@@ -59,21 +50,21 @@ exports[`snippet > renders correctly 1`] = `
   overflow-y: hidden;
 }
 
-.emotion-7 {
+.emotion-6 {
   display: block;
 }
 
-.emotion-7:not([data-multiline]):after {
+.emotion-6:not([data-multiline]):after {
   content: "";
   padding-right: 4rem;
 }
 
-.emotion-7[data-multiline="true"]:nth-child(-n+2):after {
+.emotion-6[data-multiline="true"]:nth-child(-n+2):after {
   content: "";
   padding-right: 4rem;
 }
 
-.emotion-9 {
+.emotion-8 {
   position: absolute;
   top: 0;
   right: 0;
@@ -84,19 +75,19 @@ exports[`snippet > renders correctly 1`] = `
   box-shadow: -27px 0 19px -11px #f9f9fa;
 }
 
-.emotion-11 {
+.emotion-10 {
   display: inherit;
 }
 
-.emotion-11[data-container-full-height="true"] {
+.emotion-10[data-container-full-height="true"] {
   height: 100%;
 }
 
-.emotion-11[data-container-full-width="true"] {
+.emotion-10[data-container-full-width="true"] {
   width: 100%;
 }
 
-.emotion-13 {
+.emotion-12 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -105,7 +96,7 @@ exports[`snippet > renders correctly 1`] = `
   min-height: 1rem;
 }
 
-.emotion-13 .fillStroke {
+.emotion-12 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
@@ -120,21 +111,22 @@ exports[`snippet > renders correctly 1`] = `
         class="emotion-2 emotion-3"
       >
         <pre
-          class="emotion-4 emotion-5 emotion-6"
+          class="emotion-4 emotion-5 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_code__m4c9owy style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+          style="white-space: nowrap;"
         >
           <span
-            class="emotion-7 emotion-8"
+            class="emotion-6 emotion-7"
           >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </span>
         </pre>
         <div
-          class="emotion-9 emotion-10"
+          class="emotion-8 emotion-9"
         >
           <div
-            aria-controls="_r_1_"
-            aria-describedby="_r_1_"
-            class="emotion-11 emotion-12"
+            aria-controls="«r1»"
+            aria-describedby="«r1»"
+            class="emotion-10 emotion-11"
             data-container-full-width="false"
             tabindex="0"
           >
@@ -144,7 +136,7 @@ exports[`snippet > renders correctly 1`] = `
               type="button"
             >
               <svg
-                class="emotion-13 emotion-14"
+                class="emotion-12 emotion-13"
                 viewBox="0 0 16 16"
               >
                 <path
@@ -217,15 +209,7 @@ exports[`snippet > renders correctly in multiline  1`] = `
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
 }
 
-.emotion-7 {
-  font-size: 0.875rem;
-  font-family: JetBrains,monospace;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.emotion-6 {
   margin: 0;
   padding: 1rem;
   padding-right: 4.5rem;
@@ -235,21 +219,21 @@ exports[`snippet > renders correctly in multiline  1`] = `
   overflow-y: hidden;
 }
 
-.emotion-9 {
+.emotion-8 {
   display: block;
 }
 
-.emotion-9:not([data-multiline]):after {
+.emotion-8:not([data-multiline]):after {
   content: "";
   padding-right: 4rem;
 }
 
-.emotion-9[data-multiline="true"]:nth-child(-n+2):after {
+.emotion-8[data-multiline="true"]:nth-child(-n+2):after {
   content: "";
   padding-right: 4rem;
 }
 
-.emotion-23 {
+.emotion-22 {
   position: absolute;
   top: 0;
   right: 0;
@@ -259,19 +243,19 @@ exports[`snippet > renders correctly in multiline  1`] = `
   border: 2px solid transparent;
 }
 
-.emotion-25 {
+.emotion-24 {
   display: inherit;
 }
 
-.emotion-25[data-container-full-height="true"] {
+.emotion-24[data-container-full-height="true"] {
   height: 100%;
 }
 
-.emotion-25[data-container-full-width="true"] {
+.emotion-24[data-container-full-width="true"] {
   width: 100%;
 }
 
-.emotion-27 {
+.emotion-26 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -280,17 +264,17 @@ exports[`snippet > renders correctly in multiline  1`] = `
   min-height: 1rem;
 }
 
-.emotion-27 .fillStroke {
+.emotion-26 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.emotion-29 {
+.emotion-28 {
   width: 100%;
   box-shadow: 0px -22px 19px -6px #f9f9fa;
 }
 
-.emotion-31 {
+.emotion-30 {
   width: 100%;
   background: none;
   border: none;
@@ -299,16 +283,7 @@ exports[`snippet > renders correctly in multiline  1`] = `
   cursor: pointer;
 }
 
-.emotion-34 {
-  color: #3f4250;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.emotion-32 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -323,7 +298,7 @@ exports[`snippet > renders correctly in multiline  1`] = `
   align-items: center;
 }
 
-.emotion-37 {
+.emotion-35 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -339,7 +314,7 @@ exports[`snippet > renders correctly in multiline  1`] = `
   transition: transform 300ms ease-in-out;
 }
 
-.emotion-37 .fillStroke {
+.emotion-35 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
@@ -359,57 +334,57 @@ exports[`snippet > renders correctly in multiline  1`] = `
           style="max-height: 112px; overflow: hidden;"
         >
           <pre
-            class="emotion-6 emotion-7 emotion-8"
+            class="emotion-6 emotion-7 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_code__m4c9owy style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
           >
             <span
-              class="emotion-9 emotion-10"
+              class="emotion-8 emotion-9"
               data-multiline="true"
             >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </span>
             <span
-              class="emotion-9 emotion-10"
+              class="emotion-8 emotion-9"
               data-multiline="true"
             >
               Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             </span>
             <span
-              class="emotion-9 emotion-10"
+              class="emotion-8 emotion-9"
               data-multiline="true"
             >
               Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
             </span>
             <span
-              class="emotion-9 emotion-10"
+              class="emotion-8 emotion-9"
               data-multiline="true"
             >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </span>
             <span
-              class="emotion-9 emotion-10"
+              class="emotion-8 emotion-9"
               data-multiline="true"
             >
               Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             </span>
             <span
-              class="emotion-9 emotion-10"
+              class="emotion-8 emotion-9"
               data-multiline="true"
             >
               Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
             </span>
             <span
-              class="emotion-9 emotion-10"
+              class="emotion-8 emotion-9"
               data-multiline="true"
             />
           </pre>
         </div>
         <div
-          class="emotion-23 emotion-24"
+          class="emotion-22 emotion-23"
         >
           <div
-            aria-controls="_r_3_"
-            aria-describedby="_r_3_"
-            class="emotion-25 emotion-26"
+            aria-controls="«r3»"
+            aria-describedby="«r3»"
+            class="emotion-24 emotion-25"
             data-container-full-width="false"
             tabindex="0"
           >
@@ -419,7 +394,7 @@ exports[`snippet > renders correctly in multiline  1`] = `
               type="button"
             >
               <svg
-                class="emotion-27 emotion-28"
+                class="emotion-26 emotion-27"
                 viewBox="0 0 16 16"
               >
                 <path
@@ -437,19 +412,19 @@ exports[`snippet > renders correctly in multiline  1`] = `
           </div>
         </div>
         <div
-          class="emotion-29 emotion-30"
+          class="emotion-28 emotion-29"
         >
           <button
             aria-expanded="false"
-            class="emotion-31 emotion-32"
+            class="emotion-30 emotion-31"
             type="button"
           >
             <span
-              class="emotion-33 emotion-34 emotion-8"
+              class="emotion-32 emotion-33 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmallStrong__m4c9owo style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
             >
               Show 
               <svg
-                class="emotion-36 emotion-37 emotion-28"
+                class="emotion-34 emotion-35 emotion-27"
                 viewBox="0 0 16 16"
               >
                 <path
@@ -517,15 +492,7 @@ exports[`snippet > renders correctly in multiline with prefix command 1`] = `
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
 }
 
-.emotion-7 {
-  font-size: 0.875rem;
-  font-family: JetBrains,monospace;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.emotion-6 {
   margin: 0;
   padding: 1rem;
   padding-right: 4.5rem;
@@ -535,21 +502,21 @@ exports[`snippet > renders correctly in multiline with prefix command 1`] = `
   overflow-y: hidden;
 }
 
-.emotion-9 {
+.emotion-8 {
   display: block;
 }
 
-.emotion-9:not([data-multiline]):after {
+.emotion-8:not([data-multiline]):after {
   content: "";
   padding-right: 4rem;
 }
 
-.emotion-9[data-multiline="true"]:nth-child(-n+2):after {
+.emotion-8[data-multiline="true"]:nth-child(-n+2):after {
   content: "";
   padding-right: 4rem;
 }
 
-.emotion-9:before {
+.emotion-8:before {
   color: #727683;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -564,7 +531,7 @@ exports[`snippet > renders correctly in multiline with prefix command 1`] = `
   padding-right: 0.5rem;
 }
 
-.emotion-23 {
+.emotion-22 {
   position: absolute;
   top: 0;
   right: 0;
@@ -574,19 +541,19 @@ exports[`snippet > renders correctly in multiline with prefix command 1`] = `
   border: 2px solid transparent;
 }
 
-.emotion-25 {
+.emotion-24 {
   display: inherit;
 }
 
-.emotion-25[data-container-full-height="true"] {
+.emotion-24[data-container-full-height="true"] {
   height: 100%;
 }
 
-.emotion-25[data-container-full-width="true"] {
+.emotion-24[data-container-full-width="true"] {
   width: 100%;
 }
 
-.emotion-27 {
+.emotion-26 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -595,17 +562,17 @@ exports[`snippet > renders correctly in multiline with prefix command 1`] = `
   min-height: 1rem;
 }
 
-.emotion-27 .fillStroke {
+.emotion-26 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.emotion-29 {
+.emotion-28 {
   width: 100%;
   box-shadow: 0px -22px 19px -6px #f9f9fa;
 }
 
-.emotion-31 {
+.emotion-30 {
   width: 100%;
   background: none;
   border: none;
@@ -614,16 +581,7 @@ exports[`snippet > renders correctly in multiline with prefix command 1`] = `
   cursor: pointer;
 }
 
-.emotion-34 {
-  color: #3f4250;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.emotion-32 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -638,7 +596,7 @@ exports[`snippet > renders correctly in multiline with prefix command 1`] = `
   align-items: center;
 }
 
-.emotion-37 {
+.emotion-35 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -654,7 +612,7 @@ exports[`snippet > renders correctly in multiline with prefix command 1`] = `
   transition: transform 300ms ease-in-out;
 }
 
-.emotion-37 .fillStroke {
+.emotion-35 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
@@ -674,57 +632,57 @@ exports[`snippet > renders correctly in multiline with prefix command 1`] = `
           style="max-height: 112px; overflow: hidden;"
         >
           <pre
-            class="emotion-6 emotion-7 emotion-8"
+            class="emotion-6 emotion-7 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_code__m4c9owy style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
           >
             <span
-              class="emotion-9 emotion-10"
+              class="emotion-8 emotion-9"
               data-multiline="true"
             >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </span>
             <span
-              class="emotion-9 emotion-10"
+              class="emotion-8 emotion-9"
               data-multiline="true"
             >
               Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             </span>
             <span
-              class="emotion-9 emotion-10"
+              class="emotion-8 emotion-9"
               data-multiline="true"
             >
               Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
             </span>
             <span
-              class="emotion-9 emotion-10"
+              class="emotion-8 emotion-9"
               data-multiline="true"
             >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </span>
             <span
-              class="emotion-9 emotion-10"
+              class="emotion-8 emotion-9"
               data-multiline="true"
             >
               Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             </span>
             <span
-              class="emotion-9 emotion-10"
+              class="emotion-8 emotion-9"
               data-multiline="true"
             >
               Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
             </span>
             <span
-              class="emotion-9 emotion-10"
+              class="emotion-8 emotion-9"
               data-multiline="true"
             />
           </pre>
         </div>
         <div
-          class="emotion-23 emotion-24"
+          class="emotion-22 emotion-23"
         >
           <div
-            aria-controls="_r_9_"
-            aria-describedby="_r_9_"
-            class="emotion-25 emotion-26"
+            aria-controls="«r9»"
+            aria-describedby="«r9»"
+            class="emotion-24 emotion-25"
             data-container-full-width="false"
             tabindex="0"
           >
@@ -734,7 +692,7 @@ exports[`snippet > renders correctly in multiline with prefix command 1`] = `
               type="button"
             >
               <svg
-                class="emotion-27 emotion-28"
+                class="emotion-26 emotion-27"
                 viewBox="0 0 16 16"
               >
                 <path
@@ -752,19 +710,19 @@ exports[`snippet > renders correctly in multiline with prefix command 1`] = `
           </div>
         </div>
         <div
-          class="emotion-29 emotion-30"
+          class="emotion-28 emotion-29"
         >
           <button
             aria-expanded="false"
-            class="emotion-31 emotion-32"
+            class="emotion-30 emotion-31"
             type="button"
           >
             <span
-              class="emotion-33 emotion-34 emotion-8"
+              class="emotion-32 emotion-33 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmallStrong__m4c9owo style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
             >
               Show 
               <svg
-                class="emotion-36 emotion-37 emotion-28"
+                class="emotion-34 emotion-35 emotion-27"
                 viewBox="0 0 16 16"
               >
                 <path
@@ -832,15 +790,7 @@ exports[`snippet > renders correctly in multiline with prefix lines number 1`] =
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
 }
 
-.emotion-7 {
-  font-size: 0.875rem;
-  font-family: JetBrains,monospace;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.emotion-6 {
   margin: 0;
   padding: 1rem;
   padding-right: 4.5rem;
@@ -850,21 +800,21 @@ exports[`snippet > renders correctly in multiline with prefix lines number 1`] =
   overflow-y: hidden;
 }
 
-.emotion-9 {
+.emotion-8 {
   display: block;
 }
 
-.emotion-9:not([data-multiline]):after {
+.emotion-8:not([data-multiline]):after {
   content: "";
   padding-right: 4rem;
 }
 
-.emotion-9[data-multiline="true"]:nth-child(-n+2):after {
+.emotion-8[data-multiline="true"]:nth-child(-n+2):after {
   content: "";
   padding-right: 4rem;
 }
 
-.emotion-9:before {
+.emotion-8:before {
   color: #727683;
   width: 35px;
   display: -webkit-inline-box;
@@ -880,7 +830,7 @@ exports[`snippet > renders correctly in multiline with prefix lines number 1`] =
   padding-right: 0.5rem;
 }
 
-.emotion-23 {
+.emotion-22 {
   position: absolute;
   top: 0;
   right: 0;
@@ -890,19 +840,19 @@ exports[`snippet > renders correctly in multiline with prefix lines number 1`] =
   border: 2px solid transparent;
 }
 
-.emotion-25 {
+.emotion-24 {
   display: inherit;
 }
 
-.emotion-25[data-container-full-height="true"] {
+.emotion-24[data-container-full-height="true"] {
   height: 100%;
 }
 
-.emotion-25[data-container-full-width="true"] {
+.emotion-24[data-container-full-width="true"] {
   width: 100%;
 }
 
-.emotion-27 {
+.emotion-26 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -911,17 +861,17 @@ exports[`snippet > renders correctly in multiline with prefix lines number 1`] =
   min-height: 1rem;
 }
 
-.emotion-27 .fillStroke {
+.emotion-26 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.emotion-29 {
+.emotion-28 {
   width: 100%;
   box-shadow: 0px -22px 19px -6px #f9f9fa;
 }
 
-.emotion-31 {
+.emotion-30 {
   width: 100%;
   background: none;
   border: none;
@@ -930,16 +880,7 @@ exports[`snippet > renders correctly in multiline with prefix lines number 1`] =
   cursor: pointer;
 }
 
-.emotion-34 {
-  color: #3f4250;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.emotion-32 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -954,7 +895,7 @@ exports[`snippet > renders correctly in multiline with prefix lines number 1`] =
   align-items: center;
 }
 
-.emotion-37 {
+.emotion-35 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -970,7 +911,7 @@ exports[`snippet > renders correctly in multiline with prefix lines number 1`] =
   transition: transform 300ms ease-in-out;
 }
 
-.emotion-37 .fillStroke {
+.emotion-35 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
@@ -990,57 +931,57 @@ exports[`snippet > renders correctly in multiline with prefix lines number 1`] =
           style="max-height: 112px; overflow: hidden;"
         >
           <pre
-            class="emotion-6 emotion-7 emotion-8"
+            class="emotion-6 emotion-7 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_code__m4c9owy style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
           >
             <span
-              class="emotion-9 emotion-10"
+              class="emotion-8 emotion-9"
               data-multiline="true"
             >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </span>
             <span
-              class="emotion-9 emotion-10"
+              class="emotion-8 emotion-9"
               data-multiline="true"
             >
               Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             </span>
             <span
-              class="emotion-9 emotion-10"
+              class="emotion-8 emotion-9"
               data-multiline="true"
             >
               Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
             </span>
             <span
-              class="emotion-9 emotion-10"
+              class="emotion-8 emotion-9"
               data-multiline="true"
             >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </span>
             <span
-              class="emotion-9 emotion-10"
+              class="emotion-8 emotion-9"
               data-multiline="true"
             >
               Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             </span>
             <span
-              class="emotion-9 emotion-10"
+              class="emotion-8 emotion-9"
               data-multiline="true"
             >
               Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
             </span>
             <span
-              class="emotion-9 emotion-10"
+              class="emotion-8 emotion-9"
               data-multiline="true"
             />
           </pre>
         </div>
         <div
-          class="emotion-23 emotion-24"
+          class="emotion-22 emotion-23"
         >
           <div
-            aria-controls="_r_6_"
-            aria-describedby="_r_6_"
-            class="emotion-25 emotion-26"
+            aria-controls="«r6»"
+            aria-describedby="«r6»"
+            class="emotion-24 emotion-25"
             data-container-full-width="false"
             tabindex="0"
           >
@@ -1050,7 +991,7 @@ exports[`snippet > renders correctly in multiline with prefix lines number 1`] =
               type="button"
             >
               <svg
-                class="emotion-27 emotion-28"
+                class="emotion-26 emotion-27"
                 viewBox="0 0 16 16"
               >
                 <path
@@ -1068,19 +1009,19 @@ exports[`snippet > renders correctly in multiline with prefix lines number 1`] =
           </div>
         </div>
         <div
-          class="emotion-29 emotion-30"
+          class="emotion-28 emotion-29"
         >
           <button
             aria-expanded="false"
-            class="emotion-31 emotion-32"
+            class="emotion-30 emotion-31"
             type="button"
           >
             <span
-              class="emotion-33 emotion-34 emotion-8"
+              class="emotion-32 emotion-33 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmallStrong__m4c9owo style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
             >
               Show 
               <svg
-                class="emotion-36 emotion-37 emotion-28"
+                class="emotion-34 emotion-35 emotion-27"
                 viewBox="0 0 16 16"
               >
                 <path
@@ -1138,16 +1079,7 @@ exports[`snippet > renders correctly with copiedText 1`] = `
   width: 100%;
 }
 
-.emotion-5 {
-  font-size: 0.875rem;
-  font-family: JetBrains,monospace;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  white-space: nowrap;
+.emotion-4 {
   margin: 0;
   padding: 1rem;
   padding-right: 4.5rem;
@@ -1157,21 +1089,21 @@ exports[`snippet > renders correctly with copiedText 1`] = `
   overflow-y: hidden;
 }
 
-.emotion-7 {
+.emotion-6 {
   display: block;
 }
 
-.emotion-7:not([data-multiline]):after {
+.emotion-6:not([data-multiline]):after {
   content: "";
   padding-right: 4rem;
 }
 
-.emotion-7[data-multiline="true"]:nth-child(-n+2):after {
+.emotion-6[data-multiline="true"]:nth-child(-n+2):after {
   content: "";
   padding-right: 4rem;
 }
 
-.emotion-9 {
+.emotion-8 {
   position: absolute;
   top: 0;
   right: 0;
@@ -1182,19 +1114,19 @@ exports[`snippet > renders correctly with copiedText 1`] = `
   box-shadow: -27px 0 19px -11px #f9f9fa;
 }
 
-.emotion-11 {
+.emotion-10 {
   display: inherit;
 }
 
-.emotion-11[data-container-full-height="true"] {
+.emotion-10[data-container-full-height="true"] {
   height: 100%;
 }
 
-.emotion-11[data-container-full-width="true"] {
+.emotion-10[data-container-full-width="true"] {
   width: 100%;
 }
 
-.emotion-13 {
+.emotion-12 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -1203,7 +1135,7 @@ exports[`snippet > renders correctly with copiedText 1`] = `
   min-height: 1rem;
 }
 
-.emotion-13 .fillStroke {
+.emotion-12 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
@@ -1218,21 +1150,22 @@ exports[`snippet > renders correctly with copiedText 1`] = `
         class="emotion-2 emotion-3"
       >
         <pre
-          class="emotion-4 emotion-5 emotion-6"
+          class="emotion-4 emotion-5 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_code__m4c9owy style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+          style="white-space: nowrap;"
         >
           <span
-            class="emotion-7 emotion-8"
+            class="emotion-6 emotion-7"
           >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </span>
         </pre>
         <div
-          class="emotion-9 emotion-10"
+          class="emotion-8 emotion-9"
         >
           <div
-            aria-controls="_r_i_"
-            aria-describedby="_r_i_"
-            class="emotion-11 emotion-12"
+            aria-controls="«ri»"
+            aria-describedby="«ri»"
+            class="emotion-10 emotion-11"
             data-container-full-width="false"
             tabindex="0"
           >
@@ -1242,7 +1175,7 @@ exports[`snippet > renders correctly with copiedText 1`] = `
               type="button"
             >
               <svg
-                class="emotion-13 emotion-14"
+                class="emotion-12 emotion-13"
                 viewBox="0 0 16 16"
               >
                 <path
@@ -1305,16 +1238,7 @@ exports[`snippet > renders correctly with copyText 1`] = `
   width: 100%;
 }
 
-.emotion-5 {
-  font-size: 0.875rem;
-  font-family: JetBrains,monospace;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  white-space: nowrap;
+.emotion-4 {
   margin: 0;
   padding: 1rem;
   padding-right: 4.5rem;
@@ -1324,21 +1248,21 @@ exports[`snippet > renders correctly with copyText 1`] = `
   overflow-y: hidden;
 }
 
-.emotion-7 {
+.emotion-6 {
   display: block;
 }
 
-.emotion-7:not([data-multiline]):after {
+.emotion-6:not([data-multiline]):after {
   content: "";
   padding-right: 4rem;
 }
 
-.emotion-7[data-multiline="true"]:nth-child(-n+2):after {
+.emotion-6[data-multiline="true"]:nth-child(-n+2):after {
   content: "";
   padding-right: 4rem;
 }
 
-.emotion-9 {
+.emotion-8 {
   position: absolute;
   top: 0;
   right: 0;
@@ -1349,19 +1273,19 @@ exports[`snippet > renders correctly with copyText 1`] = `
   box-shadow: -27px 0 19px -11px #f9f9fa;
 }
 
-.emotion-11 {
+.emotion-10 {
   display: inherit;
 }
 
-.emotion-11[data-container-full-height="true"] {
+.emotion-10[data-container-full-height="true"] {
   height: 100%;
 }
 
-.emotion-11[data-container-full-width="true"] {
+.emotion-10[data-container-full-width="true"] {
   width: 100%;
 }
 
-.emotion-13 {
+.emotion-12 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -1370,7 +1294,7 @@ exports[`snippet > renders correctly with copyText 1`] = `
   min-height: 1rem;
 }
 
-.emotion-13 .fillStroke {
+.emotion-12 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
@@ -1385,21 +1309,22 @@ exports[`snippet > renders correctly with copyText 1`] = `
         class="emotion-2 emotion-3"
       >
         <pre
-          class="emotion-4 emotion-5 emotion-6"
+          class="emotion-4 emotion-5 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_code__m4c9owy style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+          style="white-space: nowrap;"
         >
           <span
-            class="emotion-7 emotion-8"
+            class="emotion-6 emotion-7"
           >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </span>
         </pre>
         <div
-          class="emotion-9 emotion-10"
+          class="emotion-8 emotion-9"
         >
           <div
-            aria-controls="_r_g_"
-            aria-describedby="_r_g_"
-            class="emotion-11 emotion-12"
+            aria-controls="«rg»"
+            aria-describedby="«rg»"
+            class="emotion-10 emotion-11"
             data-container-full-width="false"
             tabindex="0"
           >
@@ -1409,7 +1334,7 @@ exports[`snippet > renders correctly with copyText 1`] = `
               type="button"
             >
               <svg
-                class="emotion-13 emotion-14"
+                class="emotion-12 emotion-13"
                 viewBox="0 0 16 16"
               >
                 <path
@@ -1512,15 +1437,7 @@ exports[`snippet > renders correctly with custom number of rows 1`] = `
   width: 100%;
 }
 
-.emotion-5 {
-  font-size: 0.875rem;
-  font-family: JetBrains,monospace;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.emotion-4 {
   margin: 0;
   padding: 1rem;
   padding-right: 4.5rem;
@@ -1530,15 +1447,7 @@ exports[`snippet > renders correctly with custom number of rows 1`] = `
   overflow-y: hidden;
 }
 
-.emotion-5 {
-  font-size: 0.875rem;
-  font-family: JetBrains,monospace;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.emotion-4 {
   margin: 0;
   padding: 1rem;
   padding-right: 4.5rem;
@@ -1548,35 +1457,35 @@ exports[`snippet > renders correctly with custom number of rows 1`] = `
   overflow-y: hidden;
 }
 
-.emotion-7 {
+.emotion-6 {
   display: block;
 }
 
-.emotion-7:not([data-multiline]):after {
+.emotion-6:not([data-multiline]):after {
   content: "";
   padding-right: 4rem;
 }
 
-.emotion-7[data-multiline="true"]:nth-child(-n+2):after {
+.emotion-6[data-multiline="true"]:nth-child(-n+2):after {
   content: "";
   padding-right: 4rem;
 }
 
-.emotion-7 {
+.emotion-6 {
   display: block;
 }
 
-.emotion-7:not([data-multiline]):after {
+.emotion-6:not([data-multiline]):after {
   content: "";
   padding-right: 4rem;
 }
 
-.emotion-7[data-multiline="true"]:nth-child(-n+2):after {
+.emotion-6[data-multiline="true"]:nth-child(-n+2):after {
   content: "";
   padding-right: 4rem;
 }
 
-.emotion-21 {
+.emotion-20 {
   position: absolute;
   top: 0;
   right: 0;
@@ -1586,7 +1495,7 @@ exports[`snippet > renders correctly with custom number of rows 1`] = `
   border: 2px solid transparent;
 }
 
-.emotion-21 {
+.emotion-20 {
   position: absolute;
   top: 0;
   right: 0;
@@ -1596,31 +1505,31 @@ exports[`snippet > renders correctly with custom number of rows 1`] = `
   border: 2px solid transparent;
 }
 
-.emotion-23 {
+.emotion-22 {
   display: inherit;
 }
 
-.emotion-23[data-container-full-height="true"] {
+.emotion-22[data-container-full-height="true"] {
   height: 100%;
 }
 
-.emotion-23[data-container-full-width="true"] {
+.emotion-22[data-container-full-width="true"] {
   width: 100%;
 }
 
-.emotion-23 {
+.emotion-22 {
   display: inherit;
 }
 
-.emotion-23[data-container-full-height="true"] {
+.emotion-22[data-container-full-height="true"] {
   height: 100%;
 }
 
-.emotion-23[data-container-full-width="true"] {
+.emotion-22[data-container-full-width="true"] {
   width: 100%;
 }
 
-.emotion-25 {
+.emotion-24 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -1629,12 +1538,12 @@ exports[`snippet > renders correctly with custom number of rows 1`] = `
   min-height: 1rem;
 }
 
-.emotion-25 .fillStroke {
+.emotion-24 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.emotion-25 {
+.emotion-24 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -1643,7 +1552,7 @@ exports[`snippet > renders correctly with custom number of rows 1`] = `
   min-height: 1rem;
 }
 
-.emotion-25 .fillStroke {
+.emotion-24 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
@@ -1658,56 +1567,56 @@ exports[`snippet > renders correctly with custom number of rows 1`] = `
         class="emotion-2 emotion-3"
       >
         <pre
-          class="emotion-4 emotion-5 emotion-6"
+          class="emotion-4 emotion-5 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_code__m4c9owy style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
         >
           <span
-            class="emotion-7 emotion-8"
+            class="emotion-6 emotion-7"
             data-multiline="true"
           >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </span>
           <span
-            class="emotion-7 emotion-8"
+            class="emotion-6 emotion-7"
             data-multiline="true"
           >
             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
           </span>
           <span
-            class="emotion-7 emotion-8"
+            class="emotion-6 emotion-7"
             data-multiline="true"
           >
             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
           </span>
           <span
-            class="emotion-7 emotion-8"
+            class="emotion-6 emotion-7"
             data-multiline="true"
           >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </span>
           <span
-            class="emotion-7 emotion-8"
+            class="emotion-6 emotion-7"
             data-multiline="true"
           >
             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
           </span>
           <span
-            class="emotion-7 emotion-8"
+            class="emotion-6 emotion-7"
             data-multiline="true"
           >
             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
           </span>
           <span
-            class="emotion-7 emotion-8"
+            class="emotion-6 emotion-7"
             data-multiline="true"
           />
         </pre>
         <div
-          class="emotion-21 emotion-22"
+          class="emotion-20 emotion-21"
         >
           <div
-            aria-controls="_r_10_"
-            aria-describedby="_r_10_"
-            class="emotion-23 emotion-24"
+            aria-controls="«r10»"
+            aria-describedby="«r10»"
+            class="emotion-22 emotion-23"
             data-container-full-width="false"
             tabindex="0"
           >
@@ -1717,7 +1626,7 @@ exports[`snippet > renders correctly with custom number of rows 1`] = `
               type="button"
             >
               <svg
-                class="emotion-25 emotion-26"
+                class="emotion-24 emotion-25"
                 viewBox="0 0 16 16"
               >
                 <path
@@ -1790,15 +1699,7 @@ exports[`snippet > renders correctly with hideText 1`] = `
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
 }
 
-.emotion-7 {
-  font-size: 0.875rem;
-  font-family: JetBrains,monospace;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.emotion-6 {
   margin: 0;
   padding: 1rem;
   padding-right: 4.5rem;
@@ -1808,21 +1709,21 @@ exports[`snippet > renders correctly with hideText 1`] = `
   overflow-y: hidden;
 }
 
-.emotion-9 {
+.emotion-8 {
   display: block;
 }
 
-.emotion-9:not([data-multiline]):after {
+.emotion-8:not([data-multiline]):after {
   content: "";
   padding-right: 4rem;
 }
 
-.emotion-9[data-multiline="true"]:nth-child(-n+2):after {
+.emotion-8[data-multiline="true"]:nth-child(-n+2):after {
   content: "";
   padding-right: 4rem;
 }
 
-.emotion-23 {
+.emotion-22 {
   position: absolute;
   top: 0;
   right: 0;
@@ -1832,19 +1733,19 @@ exports[`snippet > renders correctly with hideText 1`] = `
   border: 2px solid transparent;
 }
 
-.emotion-25 {
+.emotion-24 {
   display: inherit;
 }
 
-.emotion-25[data-container-full-height="true"] {
+.emotion-24[data-container-full-height="true"] {
   height: 100%;
 }
 
-.emotion-25[data-container-full-width="true"] {
+.emotion-24[data-container-full-width="true"] {
   width: 100%;
 }
 
-.emotion-27 {
+.emotion-26 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -1853,17 +1754,17 @@ exports[`snippet > renders correctly with hideText 1`] = `
   min-height: 1rem;
 }
 
-.emotion-27 .fillStroke {
+.emotion-26 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.emotion-29 {
+.emotion-28 {
   width: 100%;
   box-shadow: 0px -22px 19px -6px #f9f9fa;
 }
 
-.emotion-31 {
+.emotion-30 {
   width: 100%;
   background: none;
   border: none;
@@ -1872,16 +1773,7 @@ exports[`snippet > renders correctly with hideText 1`] = `
   cursor: pointer;
 }
 
-.emotion-34 {
-  color: #3f4250;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.emotion-32 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1896,7 +1788,7 @@ exports[`snippet > renders correctly with hideText 1`] = `
   align-items: center;
 }
 
-.emotion-37 {
+.emotion-35 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -1912,7 +1804,7 @@ exports[`snippet > renders correctly with hideText 1`] = `
   transition: transform 300ms ease-in-out;
 }
 
-.emotion-37 .fillStroke {
+.emotion-35 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
@@ -1932,57 +1824,57 @@ exports[`snippet > renders correctly with hideText 1`] = `
           style="max-height: 112px; overflow: hidden;"
         >
           <pre
-            class="emotion-6 emotion-7 emotion-8"
+            class="emotion-6 emotion-7 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_code__m4c9owy style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
           >
             <span
-              class="emotion-9 emotion-10"
+              class="emotion-8 emotion-9"
               data-multiline="true"
             >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </span>
             <span
-              class="emotion-9 emotion-10"
+              class="emotion-8 emotion-9"
               data-multiline="true"
             >
               Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             </span>
             <span
-              class="emotion-9 emotion-10"
+              class="emotion-8 emotion-9"
               data-multiline="true"
             >
               Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
             </span>
             <span
-              class="emotion-9 emotion-10"
+              class="emotion-8 emotion-9"
               data-multiline="true"
             >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </span>
             <span
-              class="emotion-9 emotion-10"
+              class="emotion-8 emotion-9"
               data-multiline="true"
             >
               Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             </span>
             <span
-              class="emotion-9 emotion-10"
+              class="emotion-8 emotion-9"
               data-multiline="true"
             >
               Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
             </span>
             <span
-              class="emotion-9 emotion-10"
+              class="emotion-8 emotion-9"
               data-multiline="true"
             />
           </pre>
         </div>
         <div
-          class="emotion-23 emotion-24"
+          class="emotion-22 emotion-23"
         >
           <div
-            aria-controls="_r_k_"
-            aria-describedby="_r_k_"
-            class="emotion-25 emotion-26"
+            aria-controls="«rk»"
+            aria-describedby="«rk»"
+            class="emotion-24 emotion-25"
             data-container-full-width="false"
             tabindex="0"
           >
@@ -1992,7 +1884,7 @@ exports[`snippet > renders correctly with hideText 1`] = `
               type="button"
             >
               <svg
-                class="emotion-27 emotion-28"
+                class="emotion-26 emotion-27"
                 viewBox="0 0 16 16"
               >
                 <path
@@ -2010,19 +1902,19 @@ exports[`snippet > renders correctly with hideText 1`] = `
           </div>
         </div>
         <div
-          class="emotion-29 emotion-30"
+          class="emotion-28 emotion-29"
         >
           <button
             aria-expanded="false"
-            class="emotion-31 emotion-32"
+            class="emotion-30 emotion-31"
             type="button"
           >
             <span
-              class="emotion-33 emotion-34 emotion-8"
+              class="emotion-32 emotion-33 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmallStrong__m4c9owo style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
             >
               Show 
               <svg
-                class="emotion-36 emotion-37 emotion-28"
+                class="emotion-34 emotion-35 emotion-27"
                 viewBox="0 0 16 16"
               >
                 <path
@@ -2138,15 +2030,7 @@ exports[`snippet > renders correctly with initiallyExpanded 1`] = `
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
 }
 
-.emotion-7 {
-  font-size: 0.875rem;
-  font-family: JetBrains,monospace;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.emotion-6 {
   margin: 0;
   padding: 1rem;
   padding-right: 4.5rem;
@@ -2156,15 +2040,7 @@ exports[`snippet > renders correctly with initiallyExpanded 1`] = `
   overflow-y: hidden;
 }
 
-.emotion-7 {
-  font-size: 0.875rem;
-  font-family: JetBrains,monospace;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.emotion-6 {
   margin: 0;
   padding: 1rem;
   padding-right: 4.5rem;
@@ -2174,35 +2050,35 @@ exports[`snippet > renders correctly with initiallyExpanded 1`] = `
   overflow-y: hidden;
 }
 
-.emotion-9 {
+.emotion-8 {
   display: block;
 }
 
-.emotion-9:not([data-multiline]):after {
+.emotion-8:not([data-multiline]):after {
   content: "";
   padding-right: 4rem;
 }
 
-.emotion-9[data-multiline="true"]:nth-child(-n+2):after {
+.emotion-8[data-multiline="true"]:nth-child(-n+2):after {
   content: "";
   padding-right: 4rem;
 }
 
-.emotion-9 {
+.emotion-8 {
   display: block;
 }
 
-.emotion-9:not([data-multiline]):after {
+.emotion-8:not([data-multiline]):after {
   content: "";
   padding-right: 4rem;
 }
 
-.emotion-9[data-multiline="true"]:nth-child(-n+2):after {
+.emotion-8[data-multiline="true"]:nth-child(-n+2):after {
   content: "";
   padding-right: 4rem;
 }
 
-.emotion-23 {
+.emotion-22 {
   position: absolute;
   top: 0;
   right: 0;
@@ -2212,7 +2088,7 @@ exports[`snippet > renders correctly with initiallyExpanded 1`] = `
   border: 2px solid transparent;
 }
 
-.emotion-23 {
+.emotion-22 {
   position: absolute;
   top: 0;
   right: 0;
@@ -2222,31 +2098,31 @@ exports[`snippet > renders correctly with initiallyExpanded 1`] = `
   border: 2px solid transparent;
 }
 
-.emotion-25 {
+.emotion-24 {
   display: inherit;
 }
 
-.emotion-25[data-container-full-height="true"] {
+.emotion-24[data-container-full-height="true"] {
   height: 100%;
 }
 
-.emotion-25[data-container-full-width="true"] {
+.emotion-24[data-container-full-width="true"] {
   width: 100%;
 }
 
-.emotion-25 {
+.emotion-24 {
   display: inherit;
 }
 
-.emotion-25[data-container-full-height="true"] {
+.emotion-24[data-container-full-height="true"] {
   height: 100%;
 }
 
-.emotion-25[data-container-full-width="true"] {
+.emotion-24[data-container-full-width="true"] {
   width: 100%;
 }
 
-.emotion-27 {
+.emotion-26 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -2255,12 +2131,12 @@ exports[`snippet > renders correctly with initiallyExpanded 1`] = `
   min-height: 1rem;
 }
 
-.emotion-27 .fillStroke {
+.emotion-26 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.emotion-27 {
+.emotion-26 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -2269,17 +2145,17 @@ exports[`snippet > renders correctly with initiallyExpanded 1`] = `
   min-height: 1rem;
 }
 
-.emotion-27 .fillStroke {
+.emotion-26 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.emotion-29 {
+.emotion-28 {
   width: 100%;
   box-shadow: none;
 }
 
-.emotion-31 {
+.emotion-30 {
   width: 100%;
   background: none;
   border: none;
@@ -2288,7 +2164,7 @@ exports[`snippet > renders correctly with initiallyExpanded 1`] = `
   cursor: pointer;
 }
 
-.emotion-31 {
+.emotion-30 {
   width: 100%;
   background: none;
   border: none;
@@ -2297,16 +2173,7 @@ exports[`snippet > renders correctly with initiallyExpanded 1`] = `
   cursor: pointer;
 }
 
-.emotion-34 {
-  color: #3f4250;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.emotion-32 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2321,16 +2188,7 @@ exports[`snippet > renders correctly with initiallyExpanded 1`] = `
   align-items: center;
 }
 
-.emotion-34 {
-  color: #3f4250;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.emotion-32 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2345,7 +2203,7 @@ exports[`snippet > renders correctly with initiallyExpanded 1`] = `
   align-items: center;
 }
 
-.emotion-37 {
+.emotion-35 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -2361,7 +2219,7 @@ exports[`snippet > renders correctly with initiallyExpanded 1`] = `
   transition: transform 300ms ease-in-out;
 }
 
-.emotion-37 .fillStroke {
+.emotion-35 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
@@ -2380,57 +2238,57 @@ exports[`snippet > renders correctly with initiallyExpanded 1`] = `
           data-is-animated="false"
         >
           <pre
-            class="emotion-6 emotion-7 emotion-8"
+            class="emotion-6 emotion-7 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_code__m4c9owy style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
           >
             <span
-              class="emotion-9 emotion-10"
+              class="emotion-8 emotion-9"
               data-multiline="true"
             >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </span>
             <span
-              class="emotion-9 emotion-10"
+              class="emotion-8 emotion-9"
               data-multiline="true"
             >
               Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             </span>
             <span
-              class="emotion-9 emotion-10"
+              class="emotion-8 emotion-9"
               data-multiline="true"
             >
               Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
             </span>
             <span
-              class="emotion-9 emotion-10"
+              class="emotion-8 emotion-9"
               data-multiline="true"
             >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </span>
             <span
-              class="emotion-9 emotion-10"
+              class="emotion-8 emotion-9"
               data-multiline="true"
             >
               Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             </span>
             <span
-              class="emotion-9 emotion-10"
+              class="emotion-8 emotion-9"
               data-multiline="true"
             >
               Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
             </span>
             <span
-              class="emotion-9 emotion-10"
+              class="emotion-8 emotion-9"
               data-multiline="true"
             />
           </pre>
         </div>
         <div
-          class="emotion-23 emotion-24"
+          class="emotion-22 emotion-23"
         >
           <div
-            aria-controls="_r_q_"
-            aria-describedby="_r_q_"
-            class="emotion-25 emotion-26"
+            aria-controls="«rq»"
+            aria-describedby="«rq»"
+            class="emotion-24 emotion-25"
             data-container-full-width="false"
             tabindex="0"
           >
@@ -2440,7 +2298,7 @@ exports[`snippet > renders correctly with initiallyExpanded 1`] = `
               type="button"
             >
               <svg
-                class="emotion-27 emotion-28"
+                class="emotion-26 emotion-27"
                 viewBox="0 0 16 16"
               >
                 <path
@@ -2458,19 +2316,19 @@ exports[`snippet > renders correctly with initiallyExpanded 1`] = `
           </div>
         </div>
         <div
-          class="emotion-29 emotion-30"
+          class="emotion-28 emotion-29"
         >
           <button
             aria-expanded="true"
-            class="emotion-31 emotion-32"
+            class="emotion-30 emotion-31"
             type="button"
           >
             <span
-              class="emotion-33 emotion-34 emotion-8"
+              class="emotion-32 emotion-33 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmallStrong__m4c9owo style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
             >
               Hide 
               <svg
-                class="emotion-36 emotion-37 emotion-28"
+                class="emotion-34 emotion-35 emotion-27"
                 viewBox="0 0 16 16"
               >
                 <path
@@ -2568,15 +2426,7 @@ exports[`snippet > renders correctly with noExpandable 1`] = `
   width: 100%;
 }
 
-.emotion-5 {
-  font-size: 0.875rem;
-  font-family: JetBrains,monospace;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.emotion-4 {
   margin: 0;
   padding: 1rem;
   padding-right: 4.5rem;
@@ -2587,35 +2437,35 @@ exports[`snippet > renders correctly with noExpandable 1`] = `
   overflow-y: scroll;
 }
 
-.emotion-7 {
+.emotion-6 {
   display: block;
 }
 
-.emotion-7:not([data-multiline]):after {
+.emotion-6:not([data-multiline]):after {
   content: "";
   padding-right: 4rem;
 }
 
-.emotion-7[data-multiline="true"]:nth-child(-n+2):after {
+.emotion-6[data-multiline="true"]:nth-child(-n+2):after {
   content: "";
   padding-right: 4rem;
 }
 
-.emotion-7 {
+.emotion-6 {
   display: block;
 }
 
-.emotion-7:not([data-multiline]):after {
+.emotion-6:not([data-multiline]):after {
   content: "";
   padding-right: 4rem;
 }
 
-.emotion-7[data-multiline="true"]:nth-child(-n+2):after {
+.emotion-6[data-multiline="true"]:nth-child(-n+2):after {
   content: "";
   padding-right: 4rem;
 }
 
-.emotion-21 {
+.emotion-20 {
   position: absolute;
   top: 0;
   right: 0;
@@ -2625,7 +2475,7 @@ exports[`snippet > renders correctly with noExpandable 1`] = `
   border: 2px solid transparent;
 }
 
-.emotion-21 {
+.emotion-20 {
   position: absolute;
   top: 0;
   right: 0;
@@ -2635,31 +2485,31 @@ exports[`snippet > renders correctly with noExpandable 1`] = `
   border: 2px solid transparent;
 }
 
-.emotion-23 {
+.emotion-22 {
   display: inherit;
 }
 
-.emotion-23[data-container-full-height="true"] {
+.emotion-22[data-container-full-height="true"] {
   height: 100%;
 }
 
-.emotion-23[data-container-full-width="true"] {
+.emotion-22[data-container-full-width="true"] {
   width: 100%;
 }
 
-.emotion-23 {
+.emotion-22 {
   display: inherit;
 }
 
-.emotion-23[data-container-full-height="true"] {
+.emotion-22[data-container-full-height="true"] {
   height: 100%;
 }
 
-.emotion-23[data-container-full-width="true"] {
+.emotion-22[data-container-full-width="true"] {
   width: 100%;
 }
 
-.emotion-25 {
+.emotion-24 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -2668,12 +2518,12 @@ exports[`snippet > renders correctly with noExpandable 1`] = `
   min-height: 1rem;
 }
 
-.emotion-25 .fillStroke {
+.emotion-24 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.emotion-25 {
+.emotion-24 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -2682,7 +2532,7 @@ exports[`snippet > renders correctly with noExpandable 1`] = `
   min-height: 1rem;
 }
 
-.emotion-25 .fillStroke {
+.emotion-24 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
@@ -2697,56 +2547,56 @@ exports[`snippet > renders correctly with noExpandable 1`] = `
         class="emotion-2 emotion-3"
       >
         <pre
-          class="emotion-4 emotion-5 emotion-6"
+          class="emotion-4 emotion-5 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_code__m4c9owy style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
         >
           <span
-            class="emotion-7 emotion-8"
+            class="emotion-6 emotion-7"
             data-multiline="true"
           >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </span>
           <span
-            class="emotion-7 emotion-8"
+            class="emotion-6 emotion-7"
             data-multiline="true"
           >
             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
           </span>
           <span
-            class="emotion-7 emotion-8"
+            class="emotion-6 emotion-7"
             data-multiline="true"
           >
             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
           </span>
           <span
-            class="emotion-7 emotion-8"
+            class="emotion-6 emotion-7"
             data-multiline="true"
           >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </span>
           <span
-            class="emotion-7 emotion-8"
+            class="emotion-6 emotion-7"
             data-multiline="true"
           >
             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
           </span>
           <span
-            class="emotion-7 emotion-8"
+            class="emotion-6 emotion-7"
             data-multiline="true"
           >
             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
           </span>
           <span
-            class="emotion-7 emotion-8"
+            class="emotion-6 emotion-7"
             data-multiline="true"
           />
         </pre>
         <div
-          class="emotion-21 emotion-22"
+          class="emotion-20 emotion-21"
         >
           <div
-            aria-controls="_r_12_"
-            aria-describedby="_r_12_"
-            class="emotion-23 emotion-24"
+            aria-controls="«r12»"
+            aria-describedby="«r12»"
+            class="emotion-22 emotion-23"
             data-container-full-width="false"
             tabindex="0"
           >
@@ -2756,7 +2606,7 @@ exports[`snippet > renders correctly with noExpandable 1`] = `
               type="button"
             >
               <svg
-                class="emotion-25 emotion-26"
+                class="emotion-24 emotion-25"
                 viewBox="0 0 16 16"
               >
                 <path
@@ -2877,15 +2727,7 @@ exports[`snippet > renders correctly with showText 1`] = `
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
 }
 
-.emotion-7 {
-  font-size: 0.875rem;
-  font-family: JetBrains,monospace;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.emotion-6 {
   margin: 0;
   padding: 1rem;
   padding-right: 4.5rem;
@@ -2895,15 +2737,7 @@ exports[`snippet > renders correctly with showText 1`] = `
   overflow-y: hidden;
 }
 
-.emotion-7 {
-  font-size: 0.875rem;
-  font-family: JetBrains,monospace;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.emotion-6 {
   margin: 0;
   padding: 1rem;
   padding-right: 4.5rem;
@@ -2913,35 +2747,35 @@ exports[`snippet > renders correctly with showText 1`] = `
   overflow-y: hidden;
 }
 
-.emotion-9 {
+.emotion-8 {
   display: block;
 }
 
-.emotion-9:not([data-multiline]):after {
+.emotion-8:not([data-multiline]):after {
   content: "";
   padding-right: 4rem;
 }
 
-.emotion-9[data-multiline="true"]:nth-child(-n+2):after {
+.emotion-8[data-multiline="true"]:nth-child(-n+2):after {
   content: "";
   padding-right: 4rem;
 }
 
-.emotion-9 {
+.emotion-8 {
   display: block;
 }
 
-.emotion-9:not([data-multiline]):after {
+.emotion-8:not([data-multiline]):after {
   content: "";
   padding-right: 4rem;
 }
 
-.emotion-9[data-multiline="true"]:nth-child(-n+2):after {
+.emotion-8[data-multiline="true"]:nth-child(-n+2):after {
   content: "";
   padding-right: 4rem;
 }
 
-.emotion-23 {
+.emotion-22 {
   position: absolute;
   top: 0;
   right: 0;
@@ -2951,7 +2785,7 @@ exports[`snippet > renders correctly with showText 1`] = `
   border: 2px solid transparent;
 }
 
-.emotion-23 {
+.emotion-22 {
   position: absolute;
   top: 0;
   right: 0;
@@ -2961,31 +2795,31 @@ exports[`snippet > renders correctly with showText 1`] = `
   border: 2px solid transparent;
 }
 
-.emotion-25 {
+.emotion-24 {
   display: inherit;
 }
 
-.emotion-25[data-container-full-height="true"] {
+.emotion-24[data-container-full-height="true"] {
   height: 100%;
 }
 
-.emotion-25[data-container-full-width="true"] {
+.emotion-24[data-container-full-width="true"] {
   width: 100%;
 }
 
-.emotion-25 {
+.emotion-24 {
   display: inherit;
 }
 
-.emotion-25[data-container-full-height="true"] {
+.emotion-24[data-container-full-height="true"] {
   height: 100%;
 }
 
-.emotion-25[data-container-full-width="true"] {
+.emotion-24[data-container-full-width="true"] {
   width: 100%;
 }
 
-.emotion-27 {
+.emotion-26 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -2994,12 +2828,12 @@ exports[`snippet > renders correctly with showText 1`] = `
   min-height: 1rem;
 }
 
-.emotion-27 .fillStroke {
+.emotion-26 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.emotion-27 {
+.emotion-26 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -3008,22 +2842,22 @@ exports[`snippet > renders correctly with showText 1`] = `
   min-height: 1rem;
 }
 
-.emotion-27 .fillStroke {
+.emotion-26 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.emotion-29 {
+.emotion-28 {
   width: 100%;
   box-shadow: 0px -22px 19px -6px #f9f9fa;
 }
 
-.emotion-29 {
+.emotion-28 {
   width: 100%;
   box-shadow: 0px -22px 19px -6px #f9f9fa;
 }
 
-.emotion-31 {
+.emotion-30 {
   width: 100%;
   background: none;
   border: none;
@@ -3032,7 +2866,7 @@ exports[`snippet > renders correctly with showText 1`] = `
   cursor: pointer;
 }
 
-.emotion-31 {
+.emotion-30 {
   width: 100%;
   background: none;
   border: none;
@@ -3041,16 +2875,7 @@ exports[`snippet > renders correctly with showText 1`] = `
   cursor: pointer;
 }
 
-.emotion-34 {
-  color: #3f4250;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.emotion-32 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3065,16 +2890,7 @@ exports[`snippet > renders correctly with showText 1`] = `
   align-items: center;
 }
 
-.emotion-34 {
-  color: #3f4250;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.emotion-32 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3089,7 +2905,7 @@ exports[`snippet > renders correctly with showText 1`] = `
   align-items: center;
 }
 
-.emotion-37 {
+.emotion-35 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -3105,12 +2921,12 @@ exports[`snippet > renders correctly with showText 1`] = `
   transition: transform 300ms ease-in-out;
 }
 
-.emotion-37 .fillStroke {
+.emotion-35 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.emotion-37 {
+.emotion-35 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -3126,7 +2942,7 @@ exports[`snippet > renders correctly with showText 1`] = `
   transition: transform 300ms ease-in-out;
 }
 
-.emotion-37 .fillStroke {
+.emotion-35 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
@@ -3146,57 +2962,57 @@ exports[`snippet > renders correctly with showText 1`] = `
           style="max-height: 112px; overflow: hidden;"
         >
           <pre
-            class="emotion-6 emotion-7 emotion-8"
+            class="emotion-6 emotion-7 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_code__m4c9owy style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
           >
             <span
-              class="emotion-9 emotion-10"
+              class="emotion-8 emotion-9"
               data-multiline="true"
             >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </span>
             <span
-              class="emotion-9 emotion-10"
+              class="emotion-8 emotion-9"
               data-multiline="true"
             >
               Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             </span>
             <span
-              class="emotion-9 emotion-10"
+              class="emotion-8 emotion-9"
               data-multiline="true"
             >
               Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
             </span>
             <span
-              class="emotion-9 emotion-10"
+              class="emotion-8 emotion-9"
               data-multiline="true"
             >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </span>
             <span
-              class="emotion-9 emotion-10"
+              class="emotion-8 emotion-9"
               data-multiline="true"
             >
               Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             </span>
             <span
-              class="emotion-9 emotion-10"
+              class="emotion-8 emotion-9"
               data-multiline="true"
             >
               Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
             </span>
             <span
-              class="emotion-9 emotion-10"
+              class="emotion-8 emotion-9"
               data-multiline="true"
             />
           </pre>
         </div>
         <div
-          class="emotion-23 emotion-24"
+          class="emotion-22 emotion-23"
         >
           <div
-            aria-controls="_r_n_"
-            aria-describedby="_r_n_"
-            class="emotion-25 emotion-26"
+            aria-controls="«rn»"
+            aria-describedby="«rn»"
+            class="emotion-24 emotion-25"
             data-container-full-width="false"
             tabindex="0"
           >
@@ -3206,7 +3022,7 @@ exports[`snippet > renders correctly with showText 1`] = `
               type="button"
             >
               <svg
-                class="emotion-27 emotion-28"
+                class="emotion-26 emotion-27"
                 viewBox="0 0 16 16"
               >
                 <path
@@ -3224,19 +3040,19 @@ exports[`snippet > renders correctly with showText 1`] = `
           </div>
         </div>
         <div
-          class="emotion-29 emotion-30"
+          class="emotion-28 emotion-29"
         >
           <button
             aria-expanded="false"
-            class="emotion-31 emotion-32"
+            class="emotion-30 emotion-31"
             type="button"
           >
             <span
-              class="emotion-33 emotion-34 emotion-8"
+              class="emotion-32 emotion-33 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmallStrong__m4c9owo style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
             >
               Test 
               <svg
-                class="emotion-36 emotion-37 emotion-28"
+                class="emotion-34 emotion-35 emotion-27"
                 viewBox="0 0 16 16"
               >
                 <path
@@ -3294,16 +3110,7 @@ exports[`snippet > renders correctly with single line with prefix command 1`] = 
   width: 100%;
 }
 
-.emotion-5 {
-  font-size: 0.875rem;
-  font-family: JetBrains,monospace;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  white-space: nowrap;
+.emotion-4 {
   margin: 0;
   padding: 1rem;
   padding-right: 4.5rem;
@@ -3313,21 +3120,21 @@ exports[`snippet > renders correctly with single line with prefix command 1`] = 
   overflow-y: hidden;
 }
 
-.emotion-7 {
+.emotion-6 {
   display: block;
 }
 
-.emotion-7:not([data-multiline]):after {
+.emotion-6:not([data-multiline]):after {
   content: "";
   padding-right: 4rem;
 }
 
-.emotion-7[data-multiline="true"]:nth-child(-n+2):after {
+.emotion-6[data-multiline="true"]:nth-child(-n+2):after {
   content: "";
   padding-right: 4rem;
 }
 
-.emotion-7:before {
+.emotion-6:before {
   color: #727683;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -3342,7 +3149,7 @@ exports[`snippet > renders correctly with single line with prefix command 1`] = 
   padding-right: 0.5rem;
 }
 
-.emotion-9 {
+.emotion-8 {
   position: absolute;
   top: 0;
   right: 0;
@@ -3353,19 +3160,19 @@ exports[`snippet > renders correctly with single line with prefix command 1`] = 
   box-shadow: -27px 0 19px -11px #f9f9fa;
 }
 
-.emotion-11 {
+.emotion-10 {
   display: inherit;
 }
 
-.emotion-11[data-container-full-height="true"] {
+.emotion-10[data-container-full-height="true"] {
   height: 100%;
 }
 
-.emotion-11[data-container-full-width="true"] {
+.emotion-10[data-container-full-width="true"] {
   width: 100%;
 }
 
-.emotion-13 {
+.emotion-12 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -3374,7 +3181,7 @@ exports[`snippet > renders correctly with single line with prefix command 1`] = 
   min-height: 1rem;
 }
 
-.emotion-13 .fillStroke {
+.emotion-12 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
@@ -3389,21 +3196,22 @@ exports[`snippet > renders correctly with single line with prefix command 1`] = 
         class="emotion-2 emotion-3"
       >
         <pre
-          class="emotion-4 emotion-5 emotion-6"
+          class="emotion-4 emotion-5 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_code__m4c9owy style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+          style="white-space: nowrap;"
         >
           <span
-            class="emotion-7 emotion-8"
+            class="emotion-6 emotion-7"
           >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </span>
         </pre>
         <div
-          class="emotion-9 emotion-10"
+          class="emotion-8 emotion-9"
         >
           <div
-            aria-controls="_r_c_"
-            aria-describedby="_r_c_"
-            class="emotion-11 emotion-12"
+            aria-controls="«rc»"
+            aria-describedby="«rc»"
+            class="emotion-10 emotion-11"
             data-container-full-width="false"
             tabindex="0"
           >
@@ -3413,7 +3221,7 @@ exports[`snippet > renders correctly with single line with prefix command 1`] = 
               type="button"
             >
               <svg
-                class="emotion-13 emotion-14"
+                class="emotion-12 emotion-13"
                 viewBox="0 0 16 16"
               >
                 <path
@@ -3476,16 +3284,7 @@ exports[`snippet > renders correctly with single line with prefix lines number 1
   width: 100%;
 }
 
-.emotion-5 {
-  font-size: 0.875rem;
-  font-family: JetBrains,monospace;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  white-space: nowrap;
+.emotion-4 {
   margin: 0;
   padding: 1rem;
   padding-right: 4.5rem;
@@ -3495,21 +3294,21 @@ exports[`snippet > renders correctly with single line with prefix lines number 1
   overflow-y: hidden;
 }
 
-.emotion-7 {
+.emotion-6 {
   display: block;
 }
 
-.emotion-7:not([data-multiline]):after {
+.emotion-6:not([data-multiline]):after {
   content: "";
   padding-right: 4rem;
 }
 
-.emotion-7[data-multiline="true"]:nth-child(-n+2):after {
+.emotion-6[data-multiline="true"]:nth-child(-n+2):after {
   content: "";
   padding-right: 4rem;
 }
 
-.emotion-7:before {
+.emotion-6:before {
   color: #727683;
   width: 35px;
   display: -webkit-inline-box;
@@ -3525,7 +3324,7 @@ exports[`snippet > renders correctly with single line with prefix lines number 1
   padding-right: 0.5rem;
 }
 
-.emotion-9 {
+.emotion-8 {
   position: absolute;
   top: 0;
   right: 0;
@@ -3536,19 +3335,19 @@ exports[`snippet > renders correctly with single line with prefix lines number 1
   box-shadow: -27px 0 19px -11px #f9f9fa;
 }
 
-.emotion-11 {
+.emotion-10 {
   display: inherit;
 }
 
-.emotion-11[data-container-full-height="true"] {
+.emotion-10[data-container-full-height="true"] {
   height: 100%;
 }
 
-.emotion-11[data-container-full-width="true"] {
+.emotion-10[data-container-full-width="true"] {
   width: 100%;
 }
 
-.emotion-13 {
+.emotion-12 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -3557,7 +3356,7 @@ exports[`snippet > renders correctly with single line with prefix lines number 1
   min-height: 1rem;
 }
 
-.emotion-13 .fillStroke {
+.emotion-12 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
@@ -3572,21 +3371,22 @@ exports[`snippet > renders correctly with single line with prefix lines number 1
         class="emotion-2 emotion-3"
       >
         <pre
-          class="emotion-4 emotion-5 emotion-6"
+          class="emotion-4 emotion-5 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_code__m4c9owy style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+          style="white-space: nowrap;"
         >
           <span
-            class="emotion-7 emotion-8"
+            class="emotion-6 emotion-7"
           >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </span>
         </pre>
         <div
-          class="emotion-9 emotion-10"
+          class="emotion-8 emotion-9"
         >
           <div
-            aria-controls="_r_e_"
-            aria-describedby="_r_e_"
-            class="emotion-11 emotion-12"
+            aria-controls="«re»"
+            aria-describedby="«re»"
+            class="emotion-10 emotion-11"
             data-container-full-width="false"
             tabindex="0"
           >
@@ -3596,7 +3396,7 @@ exports[`snippet > renders correctly with single line with prefix lines number 1
               type="button"
             >
               <svg
-                class="emotion-13 emotion-14"
+                class="emotion-12 emotion-13"
                 viewBox="0 0 16 16"
               >
                 <path
@@ -3717,15 +3517,7 @@ exports[`snippet > should click on extend button to display full content on  1`]
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
 }
 
-.emotion-7 {
-  font-size: 0.875rem;
-  font-family: JetBrains,monospace;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.emotion-6 {
   margin: 0;
   padding: 1rem;
   padding-right: 4.5rem;
@@ -3735,15 +3527,7 @@ exports[`snippet > should click on extend button to display full content on  1`]
   overflow-y: hidden;
 }
 
-.emotion-7 {
-  font-size: 0.875rem;
-  font-family: JetBrains,monospace;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.emotion-6 {
   margin: 0;
   padding: 1rem;
   padding-right: 4.5rem;
@@ -3753,35 +3537,35 @@ exports[`snippet > should click on extend button to display full content on  1`]
   overflow-y: hidden;
 }
 
-.emotion-9 {
+.emotion-8 {
   display: block;
 }
 
-.emotion-9:not([data-multiline]):after {
+.emotion-8:not([data-multiline]):after {
   content: "";
   padding-right: 4rem;
 }
 
-.emotion-9[data-multiline="true"]:nth-child(-n+2):after {
+.emotion-8[data-multiline="true"]:nth-child(-n+2):after {
   content: "";
   padding-right: 4rem;
 }
 
-.emotion-9 {
+.emotion-8 {
   display: block;
 }
 
-.emotion-9:not([data-multiline]):after {
+.emotion-8:not([data-multiline]):after {
   content: "";
   padding-right: 4rem;
 }
 
-.emotion-9[data-multiline="true"]:nth-child(-n+2):after {
+.emotion-8[data-multiline="true"]:nth-child(-n+2):after {
   content: "";
   padding-right: 4rem;
 }
 
-.emotion-23 {
+.emotion-22 {
   position: absolute;
   top: 0;
   right: 0;
@@ -3791,7 +3575,7 @@ exports[`snippet > should click on extend button to display full content on  1`]
   border: 2px solid transparent;
 }
 
-.emotion-23 {
+.emotion-22 {
   position: absolute;
   top: 0;
   right: 0;
@@ -3801,31 +3585,31 @@ exports[`snippet > should click on extend button to display full content on  1`]
   border: 2px solid transparent;
 }
 
-.emotion-25 {
+.emotion-24 {
   display: inherit;
 }
 
-.emotion-25[data-container-full-height="true"] {
+.emotion-24[data-container-full-height="true"] {
   height: 100%;
 }
 
-.emotion-25[data-container-full-width="true"] {
+.emotion-24[data-container-full-width="true"] {
   width: 100%;
 }
 
-.emotion-25 {
+.emotion-24 {
   display: inherit;
 }
 
-.emotion-25[data-container-full-height="true"] {
+.emotion-24[data-container-full-height="true"] {
   height: 100%;
 }
 
-.emotion-25[data-container-full-width="true"] {
+.emotion-24[data-container-full-width="true"] {
   width: 100%;
 }
 
-.emotion-27 {
+.emotion-26 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -3834,12 +3618,12 @@ exports[`snippet > should click on extend button to display full content on  1`]
   min-height: 1rem;
 }
 
-.emotion-27 .fillStroke {
+.emotion-26 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.emotion-27 {
+.emotion-26 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -3848,17 +3632,17 @@ exports[`snippet > should click on extend button to display full content on  1`]
   min-height: 1rem;
 }
 
-.emotion-27 .fillStroke {
+.emotion-26 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.emotion-29 {
+.emotion-28 {
   width: 100%;
   box-shadow: none;
 }
 
-.emotion-31 {
+.emotion-30 {
   width: 100%;
   background: none;
   border: none;
@@ -3867,7 +3651,7 @@ exports[`snippet > should click on extend button to display full content on  1`]
   cursor: pointer;
 }
 
-.emotion-31 {
+.emotion-30 {
   width: 100%;
   background: none;
   border: none;
@@ -3876,16 +3660,7 @@ exports[`snippet > should click on extend button to display full content on  1`]
   cursor: pointer;
 }
 
-.emotion-34 {
-  color: #3f4250;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.emotion-32 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3900,16 +3675,7 @@ exports[`snippet > should click on extend button to display full content on  1`]
   align-items: center;
 }
 
-.emotion-34 {
-  color: #3f4250;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.emotion-32 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3924,7 +3690,7 @@ exports[`snippet > should click on extend button to display full content on  1`]
   align-items: center;
 }
 
-.emotion-37 {
+.emotion-35 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -3940,7 +3706,7 @@ exports[`snippet > should click on extend button to display full content on  1`]
   transition: transform 300ms ease-in-out;
 }
 
-.emotion-37 .fillStroke {
+.emotion-35 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
@@ -3960,57 +3726,57 @@ exports[`snippet > should click on extend button to display full content on  1`]
           style="max-height: 112px; overflow: hidden;"
         >
           <pre
-            class="emotion-6 emotion-7 emotion-8"
+            class="emotion-6 emotion-7 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_code__m4c9owy style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
           >
             <span
-              class="emotion-9 emotion-10"
+              class="emotion-8 emotion-9"
               data-multiline="true"
             >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </span>
             <span
-              class="emotion-9 emotion-10"
+              class="emotion-8 emotion-9"
               data-multiline="true"
             >
               Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             </span>
             <span
-              class="emotion-9 emotion-10"
+              class="emotion-8 emotion-9"
               data-multiline="true"
             >
               Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
             </span>
             <span
-              class="emotion-9 emotion-10"
+              class="emotion-8 emotion-9"
               data-multiline="true"
             >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </span>
             <span
-              class="emotion-9 emotion-10"
+              class="emotion-8 emotion-9"
               data-multiline="true"
             >
               Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             </span>
             <span
-              class="emotion-9 emotion-10"
+              class="emotion-8 emotion-9"
               data-multiline="true"
             >
               Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
             </span>
             <span
-              class="emotion-9 emotion-10"
+              class="emotion-8 emotion-9"
               data-multiline="true"
             />
           </pre>
         </div>
         <div
-          class="emotion-23 emotion-24"
+          class="emotion-22 emotion-23"
         >
           <div
-            aria-controls="_r_t_"
-            aria-describedby="_r_t_"
-            class="emotion-25 emotion-26"
+            aria-controls="«rt»"
+            aria-describedby="«rt»"
+            class="emotion-24 emotion-25"
             data-container-full-width="false"
             tabindex="0"
           >
@@ -4020,7 +3786,7 @@ exports[`snippet > should click on extend button to display full content on  1`]
               type="button"
             >
               <svg
-                class="emotion-27 emotion-28"
+                class="emotion-26 emotion-27"
                 viewBox="0 0 16 16"
               >
                 <path
@@ -4038,19 +3804,19 @@ exports[`snippet > should click on extend button to display full content on  1`]
           </div>
         </div>
         <div
-          class="emotion-29 emotion-30"
+          class="emotion-28 emotion-29"
         >
           <button
             aria-expanded="true"
-            class="emotion-31 emotion-32"
+            class="emotion-30 emotion-31"
             type="button"
           >
             <span
-              class="emotion-33 emotion-34 emotion-8"
+              class="emotion-32 emotion-33 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmallStrong__m4c9owo style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
             >
               Hide 
               <svg
-                class="emotion-36 emotion-37 emotion-28"
+                class="emotion-34 emotion-35 emotion-27"
                 viewBox="0 0 16 16"
               >
                 <path
