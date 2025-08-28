@@ -1,8 +1,9 @@
 'use client'
 
+import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type { ReactNode } from 'react'
 import type { SeparatorVariants } from './styles.css'
-import { hr, iconWraperSeparator } from './styles.css'
+import { hr, iconWraperSeparator, thicknessSeparator } from './styles.css'
 
 type SeparatorProps = {
   thickness?: number
@@ -31,20 +32,16 @@ export const Separator = ({
     >
       <hr
         className={hr({ direction, hasIcon: true, sentiment })}
-        style={
-          direction === 'vertical'
-            ? { width: `${thickness}px` }
-            : { height: `${thickness}px` }
-        }
+        style={assignInlineVars({
+          [thicknessSeparator]: `${thickness}px`,
+        })}
       />
       {children}
       <hr
         className={hr({ direction, hasIcon: true, sentiment })}
-        style={
-          direction === 'vertical'
-            ? { width: `${thickness}px` }
-            : { height: `${thickness}px` }
-        }
+        style={assignInlineVars({
+          [thicknessSeparator]: `${thickness}px`,
+        })}
       />
     </div>
   ) : (
@@ -53,10 +50,8 @@ export const Separator = ({
       className={`${className ? `${className} ` : ''}${hr({ direction, sentiment })}`}
       data-testid={dataTestId}
       role="separator"
-      style={
-        direction === 'vertical'
-          ? { width: `${thickness}px` }
-          : { height: `${thickness}px` }
-      }
+      style={assignInlineVars({
+        [thicknessSeparator]: `${thickness}px`,
+      })}
     />
   )

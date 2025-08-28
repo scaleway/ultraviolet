@@ -10,8 +10,8 @@ export const circle = style({
 })
 
 export const loader = style({
-  animationName: spin,
   animationDuration: '0.75s',
-  animationTimingFunction: 'linear',
   animationIterationCount: 'infinite',
+  animationName: spin,
+  animationTimingFunction: 'linear',
 })

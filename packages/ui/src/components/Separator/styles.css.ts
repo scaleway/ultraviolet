@@ -1,7 +1,10 @@
 import { theme } from '@ultraviolet/themes'
+import { createVar } from '@vanilla-extract/css'
 import type { RecipeVariants } from '@vanilla-extract/recipes'
 import { recipe } from '@vanilla-extract/recipes'
 import type { Color } from '../../theme'
+
+export const thicknessSeparator = createVar()
 
 function makeColors(isBackground: boolean, sentiment: Color) {
   if (isBackground) {
@@ -17,8 +20,12 @@ function makeColors(isBackground: boolean, sentiment: Color) {
 
 export const iconWraperSeparator = recipe({
   base: {
-    display: 'flex',
     alignItems: 'center',
+    display: 'flex',
+  },
+  defaultVariants: {
+    direction: 'horizontal',
+    sentiment: 'neutral',
   },
   variants: {
     direction: {
@@ -30,52 +37,50 @@ export const iconWraperSeparator = recipe({
       },
     },
     sentiment: {
+      danger: makeColors(false, 'danger'),
+      info: makeColors(false, 'info'),
       neutral: {
         color: theme.colors.neutral.borderWeak,
       },
       primary: makeColors(false, 'primary'),
       secondary: makeColors(false, 'secondary'),
-      danger: makeColors(false, 'danger'),
-      info: makeColors(false, 'info'),
       success: makeColors(false, 'success'),
       warning: makeColors(false, 'warning'),
     },
   },
-  defaultVariants: {
-    direction: 'horizontal',
-    sentiment: 'neutral',
-  },
 })
 export const hr = recipe({
   base: {
-    margin: 0,
     border: 0,
+    margin: 0,
   },
   variants: {
     direction: {
       horizontal: {
+        height: thicknessSeparator,
         width: 'auto',
       },
       vertical: {
         height: 'auto',
+        width: thicknessSeparator,
+      },
+    },
+    hasIcon: {
+      false: {},
+      true: {
+        flex: 1,
       },
     },
     sentiment: {
+      danger: makeColors(true, 'danger'),
+      info: makeColors(true, 'info'),
       neutral: {
         backgroundColor: theme.colors.neutral.borderWeak,
       },
       primary: makeColors(true, 'primary'),
       secondary: makeColors(true, 'secondary'),
-      danger: makeColors(true, 'danger'),
-      info: makeColors(true, 'info'),
       success: makeColors(true, 'success'),
       warning: makeColors(true, 'warning'),
-    },
-    hasIcon: {
-      true: {
-        flex: 1,
-      },
-      false: {},
     },
   },
 })
