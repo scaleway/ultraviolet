@@ -1,5 +1,720 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
+exports[`SearchInput > Key > renders correctly with disabled 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  cursor: text;
+  background: #f9f9fa;
+  border-radius: 0.25rem;
+  border: 0.5px solid #d9dadd;
+  min-width: 1.5rem;
+  min-height: 1.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-0[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
+}
+
+.emotion-0[data-children-length='true'] {
+  width: auto;
+  padding: 0 0.5rem;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+      data-children-length="false"
+      data-disabled="true"
+      data-testid="key-K"
+    >
+      <span
+        class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_true__m4c9ow1a style_undefined_compound_60__m4c9ow30"
+      >
+        K
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`SearchInput > Key > renders correctly with special   key 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  cursor: text;
+  background: #f9f9fa;
+  border-radius: 0.25rem;
+  border: 0.5px solid #d9dadd;
+  min-width: 1.5rem;
+  min-height: 1.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-0[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
+}
+
+.emotion-0[data-children-length='true'] {
+  width: auto;
+  padding: 0 0.5rem;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+      data-children-length="false"
+      data-testid="key- "
+    >
+      <span
+        class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+      >
+        ␣
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`SearchInput > Key > renders correctly with special Alt key 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  cursor: text;
+  background: #f9f9fa;
+  border-radius: 0.25rem;
+  border: 0.5px solid #d9dadd;
+  min-width: 1.5rem;
+  min-height: 1.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-0[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
+}
+
+.emotion-0[data-children-length='true'] {
+  width: auto;
+  padding: 0 0.5rem;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+      data-children-length="true"
+      data-testid="key-Alt"
+    >
+      <span
+        class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+      >
+        Alt
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`SearchInput > Key > renders correctly with special ArrowDown key 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  cursor: text;
+  background: #f9f9fa;
+  border-radius: 0.25rem;
+  border: 0.5px solid #d9dadd;
+  min-width: 1.5rem;
+  min-height: 1.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-0[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
+}
+
+.emotion-0[data-children-length='true'] {
+  width: auto;
+  padding: 0 0.5rem;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+      data-children-length="true"
+      data-testid="key-ArrowDown"
+    >
+      <span
+        class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+      >
+        ↓
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`SearchInput > Key > renders correctly with special ArrowLeft key 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  cursor: text;
+  background: #f9f9fa;
+  border-radius: 0.25rem;
+  border: 0.5px solid #d9dadd;
+  min-width: 1.5rem;
+  min-height: 1.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-0[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
+}
+
+.emotion-0[data-children-length='true'] {
+  width: auto;
+  padding: 0 0.5rem;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+      data-children-length="true"
+      data-testid="key-ArrowLeft"
+    >
+      <span
+        class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+      >
+        ←
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`SearchInput > Key > renders correctly with special ArrowRight key 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  cursor: text;
+  background: #f9f9fa;
+  border-radius: 0.25rem;
+  border: 0.5px solid #d9dadd;
+  min-width: 1.5rem;
+  min-height: 1.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-0[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
+}
+
+.emotion-0[data-children-length='true'] {
+  width: auto;
+  padding: 0 0.5rem;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+      data-children-length="true"
+      data-testid="key-ArrowRight"
+    >
+      <span
+        class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+      >
+        →
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`SearchInput > Key > renders correctly with special ArrowUp key 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  cursor: text;
+  background: #f9f9fa;
+  border-radius: 0.25rem;
+  border: 0.5px solid #d9dadd;
+  min-width: 1.5rem;
+  min-height: 1.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-0[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
+}
+
+.emotion-0[data-children-length='true'] {
+  width: auto;
+  padding: 0 0.5rem;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+      data-children-length="true"
+      data-testid="key-ArrowUp"
+    >
+      <span
+        class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+      >
+        ↑
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`SearchInput > Key > renders correctly with special Backspace key 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  cursor: text;
+  background: #f9f9fa;
+  border-radius: 0.25rem;
+  border: 0.5px solid #d9dadd;
+  min-width: 1.5rem;
+  min-height: 1.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-0[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
+}
+
+.emotion-0[data-children-length='true'] {
+  width: auto;
+  padding: 0 0.5rem;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+      data-children-length="true"
+      data-testid="key-Backspace"
+    >
+      <span
+        class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+      >
+        ⌫
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`SearchInput > Key > renders correctly with special CapsLock key 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  cursor: text;
+  background: #f9f9fa;
+  border-radius: 0.25rem;
+  border: 0.5px solid #d9dadd;
+  min-width: 1.5rem;
+  min-height: 1.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-0[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
+}
+
+.emotion-0[data-children-length='true'] {
+  width: auto;
+  padding: 0 0.5rem;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+      data-children-length="true"
+      data-testid="key-CapsLock"
+    >
+      <span
+        class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+      >
+        Caps
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`SearchInput > Key > renders correctly with special Control key 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  cursor: text;
+  background: #f9f9fa;
+  border-radius: 0.25rem;
+  border: 0.5px solid #d9dadd;
+  min-width: 1.5rem;
+  min-height: 1.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-0[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
+}
+
+.emotion-0[data-children-length='true'] {
+  width: auto;
+  padding: 0 0.5rem;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+      data-children-length="true"
+      data-testid="key-Control"
+    >
+      <span
+        class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+      >
+        Ctrl
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`SearchInput > Key > renders correctly with special Delete key 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  cursor: text;
+  background: #f9f9fa;
+  border-radius: 0.25rem;
+  border: 0.5px solid #d9dadd;
+  min-width: 1.5rem;
+  min-height: 1.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-0[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
+}
+
+.emotion-0[data-children-length='true'] {
+  width: auto;
+  padding: 0 0.5rem;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+      data-children-length="true"
+      data-testid="key-Delete"
+    >
+      <span
+        class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+      >
+        ⌦
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`SearchInput > Key > renders correctly with special Enter key 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  cursor: text;
+  background: #f9f9fa;
+  border-radius: 0.25rem;
+  border: 0.5px solid #d9dadd;
+  min-width: 1.5rem;
+  min-height: 1.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-0[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
+}
+
+.emotion-0[data-children-length='true'] {
+  width: auto;
+  padding: 0 0.5rem;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+      data-children-length="true"
+      data-testid="key-Enter"
+    >
+      <span
+        class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+      >
+        ↵
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`SearchInput > Key > renders correctly with special Escape key 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  cursor: text;
+  background: #f9f9fa;
+  border-radius: 0.25rem;
+  border: 0.5px solid #d9dadd;
+  min-width: 1.5rem;
+  min-height: 1.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-0[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
+}
+
+.emotion-0[data-children-length='true'] {
+  width: auto;
+  padding: 0 0.5rem;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+      data-children-length="true"
+      data-testid="key-Escape"
+    >
+      <span
+        class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+      >
+        Esc
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`SearchInput > Key > renders correctly with special Meta key 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  cursor: text;
+  background: #f9f9fa;
+  border-radius: 0.25rem;
+  border: 0.5px solid #d9dadd;
+  min-width: 1.5rem;
+  min-height: 1.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-0[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
+}
+
+.emotion-0[data-children-length='true'] {
+  width: auto;
+  padding: 0 0.5rem;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+      data-children-length="true"
+      data-testid="key-Meta"
+    >
+      <span
+        class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+      >
+        ⌘
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`SearchInput > renders correctly without children props 1`] = `
 <DocumentFragment>
   .emotion-0 {
@@ -797,18 +1512,6 @@ exports[`SearchInput > renders with error prop 1`] = `
   fill: none;
 }
 
-.emotion-19 {
-  color: #b3144d;
-  font-size: 0.75rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
 <div
     data-testid="testing"
   >
@@ -878,7 +1581,7 @@ exports[`SearchInput > renders with error prop 1`] = `
             </div>
           </div>
           <p
-            class="emotion-19 emotion-20"
+            class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_danger__m4c9owd style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_8__m4c9ow1k style_undefined_compound_72__m4c9ow3c"
           >
             there is an error
           </p>
@@ -1171,56 +1874,14 @@ exports[`SearchInput > renders with shortcut prop > as array of string 1`] = `
   align-items: center;
 }
 
-.emotion-19[data-prominence='strong'] {
-  background-color: #151a2d;
-  border-color: #d9dadd;
-}
-
-.emotion-19[data-prominence='strong'][data-disabled="true"] {
-  background-color: #e9eaeb;
-  border-color: #e9eaeb;
-}
-
 .emotion-19[data-disabled='true'] {
-  background-color: #f3f3f4;
-  border-color: #d9dadd;
-  cursor: not-allowed;
-}
-
-.emotion-19[data-sentiment="primary"] {
-  background-color: #f1eefc;
-  border-color: #8c40ef;
-}
-
-.emotion-19[data-sentiment="primary"][data-prominence='strong'] {
-  background-color: #8c40ef;
-}
-
-.emotion-19[data-sentiment="primary"][data-prominence='strong'][data-disabled="true"] {
-  background-color: #e5dbfd;
-}
-
-.emotion-19[data-sentiment="primary"][data-disabled='true'] {
-  background: #f6f5fd;
+  background: #f3f3f4;
   border-color: #e9eaeb;
-  cursor: not-allowed;
 }
 
-.emotion-19[data-size="small"] {
-  min-width: 1.25rem;
-  height: 1.25rem;
-}
-
-.emotion-21 {
-  color: #3f4250;
-  font-size: 0.75rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.emotion-19[data-children-length='true'] {
+  width: auto;
+  padding: 0 0.5rem;
 }
 
 <div
@@ -1289,7 +1950,7 @@ exports[`SearchInput > renders with shortcut prop > as array of string 1`] = `
                     data-testid="key-Ctrl"
                   >
                     <span
-                      class="emotion-21 emotion-22"
+                      class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
                     >
                       Ctrl
                     </span>
@@ -1302,7 +1963,7 @@ exports[`SearchInput > renders with shortcut prop > as array of string 1`] = `
                     data-testid="key-Shift"
                   >
                     <span
-                      class="emotion-21 emotion-22"
+                      class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
                     >
                       ⇧
                     </span>
@@ -1315,7 +1976,7 @@ exports[`SearchInput > renders with shortcut prop > as array of string 1`] = `
                     data-testid="key-A"
                   >
                     <span
-                      class="emotion-21 emotion-22"
+                      class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
                     >
                       A
                     </span>
@@ -1613,56 +2274,14 @@ exports[`SearchInput > renders with shortcut prop > as boolean 1`] = `
   align-items: center;
 }
 
-.emotion-19[data-prominence='strong'] {
-  background-color: #151a2d;
-  border-color: #d9dadd;
-}
-
-.emotion-19[data-prominence='strong'][data-disabled="true"] {
-  background-color: #e9eaeb;
-  border-color: #e9eaeb;
-}
-
 .emotion-19[data-disabled='true'] {
-  background-color: #f3f3f4;
-  border-color: #d9dadd;
-  cursor: not-allowed;
-}
-
-.emotion-19[data-sentiment="primary"] {
-  background-color: #f1eefc;
-  border-color: #8c40ef;
-}
-
-.emotion-19[data-sentiment="primary"][data-prominence='strong'] {
-  background-color: #8c40ef;
-}
-
-.emotion-19[data-sentiment="primary"][data-prominence='strong'][data-disabled="true"] {
-  background-color: #e5dbfd;
-}
-
-.emotion-19[data-sentiment="primary"][data-disabled='true'] {
-  background: #f6f5fd;
+  background: #f3f3f4;
   border-color: #e9eaeb;
-  cursor: not-allowed;
 }
 
-.emotion-19[data-size="small"] {
-  min-width: 1.25rem;
-  height: 1.25rem;
-}
-
-.emotion-21 {
-  color: #3f4250;
-  font-size: 0.75rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.emotion-19[data-children-length='true'] {
+  width: auto;
+  padding: 0 0.5rem;
 }
 
 <div
@@ -1731,7 +2350,7 @@ exports[`SearchInput > renders with shortcut prop > as boolean 1`] = `
                     data-testid="key-Ctrl"
                   >
                     <span
-                      class="emotion-21 emotion-22"
+                      class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
                     >
                       Ctrl
                     </span>
@@ -1744,7 +2363,7 @@ exports[`SearchInput > renders with shortcut prop > as boolean 1`] = `
                     data-testid="key-K"
                   >
                     <span
-                      class="emotion-21 emotion-22"
+                      class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
                     >
                       K
                     </span>
