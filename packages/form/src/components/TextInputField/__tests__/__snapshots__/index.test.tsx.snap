@@ -25,20 +25,11 @@ exports[`textInputField > should render correctly 1`] = `
   gap: 0.25rem;
 }
 
-.emotion-3 {
-  color: #3f4250;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.emotion-2 {
   cursor: pointer;
 }
 
-.emotion-5 {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -52,69 +43,69 @@ exports[`textInputField > should render correctly 1`] = `
   border-radius: 0.25rem;
 }
 
-.emotion-5>.emotion-8 {
+.emotion-4>.emotion-7 {
   color: #3f4250;
 }
 
-.emotion-5>.emotion-8::-webkit-input-placeholder {
+.emotion-4>.emotion-7::-webkit-input-placeholder {
   color: #727683;
 }
 
-.emotion-5>.emotion-8::-moz-placeholder {
+.emotion-4>.emotion-7::-moz-placeholder {
   color: #727683;
 }
 
-.emotion-5>.emotion-8:-ms-input-placeholder {
+.emotion-4>.emotion-7:-ms-input-placeholder {
   color: #727683;
 }
 
-.emotion-5>.emotion-8::placeholder {
+.emotion-4>.emotion-7::placeholder {
   color: #727683;
 }
 
-.emotion-5[data-success='true'] {
+.emotion-4[data-success='true'] {
   border-color: #22674e;
 }
 
-.emotion-5[data-error='true'] {
+.emotion-4[data-error='true'] {
   border-color: #b3144d;
 }
 
-.emotion-5[data-readonly='true'] {
+.emotion-4[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
 }
 
-.emotion-5[data-disabled='true'] {
+.emotion-4[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
 }
 
-.emotion-5[data-disabled='true']>.emotion-8 {
+.emotion-4[data-disabled='true']>.emotion-7 {
   color: #b5b7bd;
 }
 
-.emotion-5[data-disabled='true']>.emotion-8::-webkit-input-placeholder {
+.emotion-4[data-disabled='true']>.emotion-7::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-5[data-disabled='true']>.emotion-8::-moz-placeholder {
+.emotion-4[data-disabled='true']>.emotion-7::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-5[data-disabled='true']>.emotion-8:-ms-input-placeholder {
+.emotion-4[data-disabled='true']>.emotion-7:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-5[data-disabled='true']>.emotion-8::placeholder {
+.emotion-4[data-disabled='true']>.emotion-7::placeholder {
   color: #b5b7bd;
 }
 
-.emotion-5:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-4:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-7 {
+.emotion-6 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -127,11 +118,11 @@ exports[`textInputField > should render correctly 1`] = `
   font-size: 0.875rem;
 }
 
-.emotion-7[data-size='large'] {
+.emotion-6[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-7[data-size='small'] {
+.emotion-6[data-size='small'] {
   padding-left: 0.5rem;
 }
 
@@ -146,14 +137,14 @@ exports[`textInputField > should render correctly 1`] = `
         class="emotion-0 emotion-1"
       >
         <label
-          class="emotion-2 emotion-3 emotion-4"
+          class="emotion-2 emotion-3 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
           for="«r0»"
         >
           Test
         </label>
         <div>
           <div
-            class="emotion-5 emotion-6"
+            class="emotion-4 emotion-5"
             data-disabled="false"
             data-error="false"
             data-readonly="false"
@@ -161,7 +152,7 @@ exports[`textInputField > should render correctly 1`] = `
           >
             <input
               aria-invalid="false"
-              class="emotion-7 emotion-8"
+              class="emotion-6 emotion-7"
               data-size="large"
               id="«r0»"
               name="test"
@@ -224,32 +215,11 @@ exports[`textInputField > should render correctly generated 1`] = `
   gap: 0.25rem;
 }
 
-.emotion-5 {
-  color: #3f4250;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.emotion-4 {
   cursor: pointer;
 }
 
-.emotion-7 {
-  color: #b3144d;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-9 {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -263,69 +233,69 @@ exports[`textInputField > should render correctly generated 1`] = `
   border-radius: 0.25rem;
 }
 
-.emotion-9>.emotion-12 {
+.emotion-6>.emotion-9 {
   color: #3f4250;
 }
 
-.emotion-9>.emotion-12::-webkit-input-placeholder {
+.emotion-6>.emotion-9::-webkit-input-placeholder {
   color: #727683;
 }
 
-.emotion-9>.emotion-12::-moz-placeholder {
+.emotion-6>.emotion-9::-moz-placeholder {
   color: #727683;
 }
 
-.emotion-9>.emotion-12:-ms-input-placeholder {
+.emotion-6>.emotion-9:-ms-input-placeholder {
   color: #727683;
 }
 
-.emotion-9>.emotion-12::placeholder {
+.emotion-6>.emotion-9::placeholder {
   color: #727683;
 }
 
-.emotion-9[data-success='true'] {
+.emotion-6[data-success='true'] {
   border-color: #22674e;
 }
 
-.emotion-9[data-error='true'] {
+.emotion-6[data-error='true'] {
   border-color: #b3144d;
 }
 
-.emotion-9[data-readonly='true'] {
+.emotion-6[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
 }
 
-.emotion-9[data-disabled='true'] {
+.emotion-6[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
 }
 
-.emotion-9[data-disabled='true']>.emotion-12 {
+.emotion-6[data-disabled='true']>.emotion-9 {
   color: #b5b7bd;
 }
 
-.emotion-9[data-disabled='true']>.emotion-12::-webkit-input-placeholder {
+.emotion-6[data-disabled='true']>.emotion-9::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-9[data-disabled='true']>.emotion-12::-moz-placeholder {
+.emotion-6[data-disabled='true']>.emotion-9::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-9[data-disabled='true']>.emotion-12:-ms-input-placeholder {
+.emotion-6[data-disabled='true']>.emotion-9:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-9[data-disabled='true']>.emotion-12::placeholder {
+.emotion-6[data-disabled='true']>.emotion-9::placeholder {
   color: #b5b7bd;
 }
 
-.emotion-9:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-6:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-11 {
+.emotion-8 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -338,15 +308,15 @@ exports[`textInputField > should render correctly generated 1`] = `
   font-size: 0.875rem;
 }
 
-.emotion-11[data-size='large'] {
+.emotion-8[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-11[data-size='small'] {
+.emotion-8[data-size='small'] {
   padding-left: 0.5rem;
 }
 
-.emotion-13 {
+.emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -370,7 +340,7 @@ exports[`textInputField > should render correctly generated 1`] = `
   padding: 0 1rem;
 }
 
-.emotion-15 {
+.emotion-12 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -379,7 +349,7 @@ exports[`textInputField > should render correctly generated 1`] = `
   min-height: 1rem;
 }
 
-.emotion-15 .fillStroke {
+.emotion-12 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
@@ -398,20 +368,20 @@ exports[`textInputField > should render correctly generated 1`] = `
           class="emotion-2 emotion-1"
         >
           <label
-            class="emotion-4 emotion-5 emotion-6"
+            class="emotion-4 emotion-5 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
             for="«r3»"
           >
             Test
           </label>
           <span
-            class="emotion-7 emotion-6"
+            class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owd uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow1k uv_m4c9ow3c"
           >
             *
           </span>
         </div>
         <div>
           <div
-            class="emotion-9 emotion-10"
+            class="emotion-6 emotion-7"
             data-disabled="false"
             data-error="false"
             data-readonly="false"
@@ -419,7 +389,7 @@ exports[`textInputField > should render correctly generated 1`] = `
           >
             <input
               aria-invalid="false"
-              class="emotion-11 emotion-12"
+              class="emotion-8 emotion-9"
               data-size="large"
               id="«r3»"
               name="test"
@@ -428,7 +398,7 @@ exports[`textInputField > should render correctly generated 1`] = `
               value="This is an example"
             />
             <div
-              class="emotion-13 emotion-14"
+              class="emotion-10 emotion-11"
             >
               <button
                 aria-label="clear value"
@@ -436,7 +406,7 @@ exports[`textInputField > should render correctly generated 1`] = `
                 type="button"
               >
                 <svg
-                  class="emotion-15 emotion-16"
+                  class="emotion-12 emotion-13"
                   viewBox="0 0 16 16"
                 >
                   <path
