@@ -1,5 +1,12 @@
 # Change Log
 
+## 2.1.0
+
+### Minor Changes
+
+- [#5424](https://github.com/scaleway/ultraviolet/pull/5424) [`2be6ab9`](https://github.com/scaleway/ultraviolet/commit/2be6ab95b33591fb937f0c78e362a69702944bc4) Thanks [@lisalupi](https://github.com/lisalupi)! - - New component `Key`
+  - Use component `Key` in `SearchInput` instead of custom
+
 ## 2.0.6
 
 ### Patch Changes
