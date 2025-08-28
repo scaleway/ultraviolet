@@ -23,11 +23,6 @@ exports[`submitErrorAlert > should display an alert when submitError is present 
   -ms-flex-direction: row;
   flex-direction: row;
   gap: 0.5rem;
-  border-radius: 0.25rem;
-  padding: 1rem;
-  background-color: #ffebf2;
-  color: #b3144d;
-  border-left: 4px solid #b3144d;
 }
 
 .emotion-2 {
@@ -35,10 +30,10 @@ exports[`submitErrorAlert > should display an alert when submitError is present 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -50,11 +45,6 @@ exports[`submitErrorAlert > should display an alert when submitError is present 
   -ms-flex-direction: row;
   flex-direction: row;
   gap: 1rem;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  width: 100%;
 }
 
 .emotion-4 {
@@ -102,10 +92,10 @@ exports[`submitErrorAlert > should display an alert when submitError is present 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
@@ -121,22 +111,6 @@ exports[`submitErrorAlert > should display an alert when submitError is present 
   -ms-flex-direction: row;
   flex-direction: row;
   gap: 0.75rem;
-  color: #3f4250;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-
-.emotion-10 {
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
 }
 
 <div
@@ -154,13 +128,13 @@ exports[`submitErrorAlert > should display an alert when submitError is present 
         Submit
       </button>
       <div
-        class="emotion-0 emotion-1"
+        class="uv_1b838gx0 uv_1b838gx1 emotion-0 emotion-1"
       >
         <div
-          class="emotion-2 emotion-3"
+          class="uv_1b838gx6 emotion-2 emotion-1"
         >
           <div
-            class="emotion-4 emotion-5"
+            class="emotion-4 emotion-1"
           >
             <svg
               class="emotion-6 emotion-7"
@@ -173,10 +147,10 @@ exports[`submitErrorAlert > should display an alert when submitError is present 
               />
             </svg>
             <div
-              class="emotion-8 emotion-9"
+              class="uv_1b838gx7 emotion-8 emotion-1"
             >
               <p
-                class="emotion-10 emotion-11"
+                class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
               >
                 hello
               </p>
