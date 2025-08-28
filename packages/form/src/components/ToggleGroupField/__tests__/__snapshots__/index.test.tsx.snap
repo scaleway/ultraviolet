@@ -77,20 +77,11 @@ exports[`groupField > should render correctly checked 1`] = `
   gap: 0.25rem;
 }
 
-.emotion-9 {
-  color: #3f4250;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.emotion-8 {
   cursor: text;
 }
 
-.emotion-11 {
+.emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -113,7 +104,7 @@ exports[`groupField > should render correctly checked 1`] = `
   gap: 1rem;
 }
 
-.emotion-13 {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -132,16 +123,16 @@ exports[`groupField > should render correctly checked 1`] = `
   flex-direction: row-reverse;
 }
 
-.emotion-13:active .emotion-22[data-disabled='false']:after {
+.emotion-12:active .emotion-19[data-disabled='false']:after {
   width: calc(1rem * 1.3775);
 }
 
-.emotion-13[aria-disabled="true"] {
+.emotion-12[aria-disabled="true"] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.emotion-15 {
+.emotion-14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -164,7 +155,7 @@ exports[`groupField > should render correctly checked 1`] = `
   gap: 0.125rem;
 }
 
-.emotion-17 {
+.emotion-16 {
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 0.5rem;
@@ -178,19 +169,7 @@ exports[`groupField > should render correctly checked 1`] = `
   justify-content: normal;
 }
 
-.emotion-19 {
-  color: #3f4250;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-21 {
+.emotion-18 {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -212,11 +191,11 @@ exports[`groupField > should render correctly checked 1`] = `
   height: 1.5rem;
 }
 
-.emotion-21:hover {
+.emotion-18:hover {
   background-color: #d9dadd;
 }
 
-.emotion-21:after {
+.emotion-18:after {
   content: "";
   position: absolute;
   top: calc(1.5rem / 2 - 1rem / 2);
@@ -229,25 +208,25 @@ exports[`groupField > should render correctly checked 1`] = `
   transition: all 300ms;
 }
 
-.emotion-21:focus-within,
-.emotion-21:focus {
+.emotion-18:focus-within,
+.emotion-18:focus {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.emotion-21[data-disabled="false"]:active:after {
+.emotion-18[data-disabled="false"]:active:after {
   width: calc(1rem * 1.3775);
 }
 
-.emotion-21:has(:checked) {
+.emotion-18:has(:checked) {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.emotion-21:has(:checked):hover {
+.emotion-18:has(:checked):hover {
   background-color: #792dd4;
 }
 
-.emotion-21:has(:checked):after {
+.emotion-18:has(:checked):after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -255,41 +234,41 @@ exports[`groupField > should render correctly checked 1`] = `
   transform: translateX(-100%);
 }
 
-.emotion-21:has(:checked):focus-within,
-.emotion-21:has(:checked):focus {
+.emotion-18:has(:checked):focus-within,
+.emotion-18:has(:checked):focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-21[data-disabled="true"] {
+.emotion-18[data-disabled="true"] {
   background: #f3f3f4;
 }
 
-.emotion-21[data-disabled="true"]:has(:checked) {
+.emotion-18[data-disabled="true"]:has(:checked) {
   background: #e5dbfd;
 }
 
-.emotion-21[data-error="true"] {
+.emotion-18[data-error="true"] {
   background-color: #ffebf2;
 }
 
-.emotion-21[data-error="true"]:focus-within,
-.emotion-21[data-error="true"]:focus {
+.emotion-18[data-error="true"]:focus-within,
+.emotion-18[data-error="true"]:focus {
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-21[data-error="true"]:has(:checked) {
+.emotion-18[data-error="true"]:has(:checked) {
   background-color: #e51963;
 }
 
-.emotion-21[data-error="true"][data-disabled="true"] {
+.emotion-18[data-error="true"][data-disabled="true"] {
   background-color: #fff3f7;
 }
 
-.emotion-21[data-error="true"][data-disabled="true"]:has(:checked) {
+.emotion-18[data-error="true"][data-disabled="true"]:has(:checked) {
   background-color: #ffd3e3;
 }
 
-.emotion-23 {
+.emotion-20 {
   position: absolute;
   opacity: 0;
   top: 0;
@@ -299,7 +278,7 @@ exports[`groupField > should render correctly checked 1`] = `
   cursor: pointer;
 }
 
-.emotion-23[disabled] {
+.emotion-20[disabled] {
   cursor: not-allowed;
 }
 
@@ -323,39 +302,39 @@ exports[`groupField > should render correctly checked 1`] = `
               class="emotion-6 emotion-1"
             >
               <legend
-                class="emotion-8 emotion-9 emotion-10"
+                class="emotion-8 emotion-9 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
               >
                 Label
               </legend>
             </div>
             <div
-              class="emotion-11 emotion-1"
+              class="emotion-10 emotion-1"
             >
               <label
                 aria-disabled="false"
-                class="emotion-13 emotion-14"
+                class="emotion-12 emotion-13"
               >
                 <div
-                  class="emotion-15 emotion-1"
+                  class="emotion-14 emotion-1"
                 >
                   <div
-                    class="emotion-17 emotion-18"
+                    class="emotion-16 emotion-17"
                   >
                     <span
-                      class="emotion-19 emotion-10"
+                      class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
                     >
                       value 1
                     </span>
                   </div>
                 </div>
                 <div
-                  class="emotion-21 emotion-22"
+                  class="emotion-18 emotion-19"
                   data-disabled="false"
                   data-error="false"
                 >
                   <input
                     aria-invalid="false"
-                    class="emotion-23 emotion-24"
+                    class="emotion-20 emotion-21"
                     id="«r1»"
                     name="Group.value-1"
                     type="checkbox"
@@ -365,29 +344,29 @@ exports[`groupField > should render correctly checked 1`] = `
               </label>
               <label
                 aria-disabled="false"
-                class="emotion-13 emotion-14"
+                class="emotion-12 emotion-13"
               >
                 <div
-                  class="emotion-15 emotion-1"
+                  class="emotion-14 emotion-1"
                 >
                   <div
-                    class="emotion-17 emotion-18"
+                    class="emotion-16 emotion-17"
                   >
                     <span
-                      class="emotion-19 emotion-10"
+                      class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
                     >
                       value 1
                     </span>
                   </div>
                 </div>
                 <div
-                  class="emotion-21 emotion-22"
+                  class="emotion-18 emotion-19"
                   data-disabled="false"
                   data-error="false"
                 >
                   <input
                     aria-invalid="false"
-                    class="emotion-23 emotion-24"
+                    class="emotion-20 emotion-21"
                     id="«r4»"
                     name="Group.value-2"
                     type="checkbox"
@@ -504,32 +483,11 @@ exports[`groupField > should trigger events correctly with required prop 1`] = `
   gap: 0.25rem;
 }
 
-.emotion-11 {
-  color: #3f4250;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.emotion-10 {
   cursor: text;
 }
 
-.emotion-13 {
-  color: #b3144d;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-15 {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -552,7 +510,7 @@ exports[`groupField > should trigger events correctly with required prop 1`] = `
   gap: 1rem;
 }
 
-.emotion-17 {
+.emotion-14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -571,16 +529,16 @@ exports[`groupField > should trigger events correctly with required prop 1`] = `
   flex-direction: row-reverse;
 }
 
-.emotion-17:active .emotion-26[data-disabled='false']:after {
+.emotion-14:active .emotion-21[data-disabled='false']:after {
   width: calc(1rem * 1.3775);
 }
 
-.emotion-17[aria-disabled="true"] {
+.emotion-14[aria-disabled="true"] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.emotion-19 {
+.emotion-16 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -603,7 +561,7 @@ exports[`groupField > should trigger events correctly with required prop 1`] = `
   gap: 0.125rem;
 }
 
-.emotion-21 {
+.emotion-18 {
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 0.5rem;
@@ -617,19 +575,7 @@ exports[`groupField > should trigger events correctly with required prop 1`] = `
   justify-content: normal;
 }
 
-.emotion-23 {
-  color: #3f4250;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-25 {
+.emotion-20 {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -651,11 +597,11 @@ exports[`groupField > should trigger events correctly with required prop 1`] = `
   height: 1.5rem;
 }
 
-.emotion-25:hover {
+.emotion-20:hover {
   background-color: #d9dadd;
 }
 
-.emotion-25:after {
+.emotion-20:after {
   content: "";
   position: absolute;
   top: calc(1.5rem / 2 - 1rem / 2);
@@ -668,25 +614,25 @@ exports[`groupField > should trigger events correctly with required prop 1`] = `
   transition: all 300ms;
 }
 
-.emotion-25:focus-within,
-.emotion-25:focus {
+.emotion-20:focus-within,
+.emotion-20:focus {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.emotion-25[data-disabled="false"]:active:after {
+.emotion-20[data-disabled="false"]:active:after {
   width: calc(1rem * 1.3775);
 }
 
-.emotion-25:has(:checked) {
+.emotion-20:has(:checked) {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.emotion-25:has(:checked):hover {
+.emotion-20:has(:checked):hover {
   background-color: #792dd4;
 }
 
-.emotion-25:has(:checked):after {
+.emotion-20:has(:checked):after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -694,41 +640,41 @@ exports[`groupField > should trigger events correctly with required prop 1`] = `
   transform: translateX(-100%);
 }
 
-.emotion-25:has(:checked):focus-within,
-.emotion-25:has(:checked):focus {
+.emotion-20:has(:checked):focus-within,
+.emotion-20:has(:checked):focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-25[data-disabled="true"] {
+.emotion-20[data-disabled="true"] {
   background: #f3f3f4;
 }
 
-.emotion-25[data-disabled="true"]:has(:checked) {
+.emotion-20[data-disabled="true"]:has(:checked) {
   background: #e5dbfd;
 }
 
-.emotion-25[data-error="true"] {
+.emotion-20[data-error="true"] {
   background-color: #ffebf2;
 }
 
-.emotion-25[data-error="true"]:focus-within,
-.emotion-25[data-error="true"]:focus {
+.emotion-20[data-error="true"]:focus-within,
+.emotion-20[data-error="true"]:focus {
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-25[data-error="true"]:has(:checked) {
+.emotion-20[data-error="true"]:has(:checked) {
   background-color: #e51963;
 }
 
-.emotion-25[data-error="true"][data-disabled="true"] {
+.emotion-20[data-error="true"][data-disabled="true"] {
   background-color: #fff3f7;
 }
 
-.emotion-25[data-error="true"][data-disabled="true"]:has(:checked) {
+.emotion-20[data-error="true"][data-disabled="true"]:has(:checked) {
   background-color: #ffd3e3;
 }
 
-.emotion-27 {
+.emotion-22 {
   position: absolute;
   opacity: 0;
   top: 0;
@@ -738,20 +684,8 @@ exports[`groupField > should trigger events correctly with required prop 1`] = `
   cursor: pointer;
 }
 
-.emotion-27[disabled] {
+.emotion-22[disabled] {
   cursor: not-allowed;
-}
-
-.emotion-41 {
-  color: undefined;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
 }
 
 <div
@@ -777,45 +711,45 @@ exports[`groupField > should trigger events correctly with required prop 1`] = `
                 class="emotion-8 emotion-1"
               >
                 <legend
-                  class="emotion-10 emotion-11 emotion-12"
+                  class="emotion-10 emotion-11 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
                 >
                   ToggleGroupField events
                 </legend>
                 <span
-                  class="emotion-13 emotion-12"
+                  class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owd uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow1k uv_m4c9ow3c"
                 >
                   *
                 </span>
               </div>
             </div>
             <div
-              class="emotion-15 emotion-1"
+              class="emotion-12 emotion-1"
             >
               <label
                 aria-disabled="false"
-                class="emotion-17 emotion-18"
+                class="emotion-14 emotion-15"
               >
                 <div
-                  class="emotion-19 emotion-1"
+                  class="emotion-16 emotion-1"
                 >
                   <div
-                    class="emotion-21 emotion-22"
+                    class="emotion-18 emotion-19"
                   >
                     <span
-                      class="emotion-23 emotion-12"
+                      class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
                     >
                       value 1
                     </span>
                   </div>
                 </div>
                 <div
-                  class="emotion-25 emotion-26"
+                  class="emotion-20 emotion-21"
                   data-disabled="false"
                   data-error="true"
                 >
                   <input
                     aria-invalid="true"
-                    class="emotion-27 emotion-28"
+                    class="emotion-22 emotion-23"
                     id="«r9»"
                     name="test.value-1"
                     type="checkbox"
@@ -825,29 +759,29 @@ exports[`groupField > should trigger events correctly with required prop 1`] = `
               </label>
               <label
                 aria-disabled="false"
-                class="emotion-17 emotion-18"
+                class="emotion-14 emotion-15"
               >
                 <div
-                  class="emotion-19 emotion-1"
+                  class="emotion-16 emotion-1"
                 >
                   <div
-                    class="emotion-21 emotion-22"
+                    class="emotion-18 emotion-19"
                   >
                     <span
-                      class="emotion-23 emotion-12"
+                      class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
                     >
                       value 1
                     </span>
                   </div>
                 </div>
                 <div
-                  class="emotion-25 emotion-26"
+                  class="emotion-20 emotion-21"
                   data-disabled="false"
                   data-error="true"
                 >
                   <input
                     aria-invalid="true"
-                    class="emotion-27 emotion-28"
+                    class="emotion-22 emotion-23"
                     id="«rc»"
                     name="test.value-2"
                     type="checkbox"
@@ -859,7 +793,7 @@ exports[`groupField > should trigger events correctly with required prop 1`] = `
           </div>
         </fieldset>
         <p
-          class="emotion-41 emotion-12"
+          class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owd uv_m4c9owl uv_m4c9own uv_m4c9ow1b uv_m4c9ow1n uv_m4c9ow3f"
         >
           This field is required
         </p>

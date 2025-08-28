@@ -23,11 +23,6 @@ exports[`alert > renders correctly with all sentiments > renders correctly senti
   -ms-flex-direction: row;
   flex-direction: row;
   gap: 0.5rem;
-  border-radius: 0.25rem;
-  padding: 1rem;
-  background-color: #ffebf2;
-  color: #b3144d;
-  border-left: 4px solid #b3144d;
 }
 
 .emotion-2 {
@@ -35,10 +30,10 @@ exports[`alert > renders correctly with all sentiments > renders correctly senti
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -50,11 +45,6 @@ exports[`alert > renders correctly with all sentiments > renders correctly senti
   -ms-flex-direction: row;
   flex-direction: row;
   gap: 1rem;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  width: 100%;
 }
 
 .emotion-4 {
@@ -102,10 +92,10 @@ exports[`alert > renders correctly with all sentiments > renders correctly senti
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
@@ -121,35 +111,19 @@ exports[`alert > renders correctly with all sentiments > renders correctly senti
   -ms-flex-direction: row;
   flex-direction: row;
   gap: 0.75rem;
-  color: #3f4250;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-
-.emotion-10 {
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
 }
 
 <div
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__1b838gx0 styles_sentiment_danger__1b838gx1 emotion-0 emotion-1"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="styles__1b838gx6 emotion-2 emotion-1"
       >
         <div
-          class="emotion-4 emotion-5"
+          class="emotion-4 emotion-1"
         >
           <svg
             class="emotion-6 emotion-7"
@@ -162,10 +136,10 @@ exports[`alert > renders correctly with all sentiments > renders correctly senti
             />
           </svg>
           <div
-            class="emotion-8 emotion-9"
+            class="styles__1b838gx7 emotion-8 emotion-1"
           >
             <p
-              class="emotion-10 emotion-11"
+              class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
             >
               Sample Alert
             </p>
@@ -200,11 +174,6 @@ exports[`alert > renders correctly with all sentiments > renders correctly senti
   -ms-flex-direction: row;
   flex-direction: row;
   gap: 0.5rem;
-  border-radius: 0.25rem;
-  padding: 1rem;
-  background-color: #e0f2ff;
-  color: #005da3;
-  border-left: 4px solid #005da3;
 }
 
 .emotion-2 {
@@ -212,10 +181,10 @@ exports[`alert > renders correctly with all sentiments > renders correctly senti
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -227,11 +196,6 @@ exports[`alert > renders correctly with all sentiments > renders correctly senti
   -ms-flex-direction: row;
   flex-direction: row;
   gap: 1rem;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  width: 100%;
 }
 
 .emotion-4 {
@@ -279,10 +243,10 @@ exports[`alert > renders correctly with all sentiments > renders correctly senti
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
@@ -298,35 +262,19 @@ exports[`alert > renders correctly with all sentiments > renders correctly senti
   -ms-flex-direction: row;
   flex-direction: row;
   gap: 0.75rem;
-  color: #3f4250;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-
-.emotion-10 {
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
 }
 
 <div
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__1b838gx0 styles_sentiment_info__1b838gx2 emotion-0 emotion-1"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="styles__1b838gx6 emotion-2 emotion-1"
       >
         <div
-          class="emotion-4 emotion-5"
+          class="emotion-4 emotion-1"
         >
           <svg
             class="emotion-6 emotion-7"
@@ -338,10 +286,10 @@ exports[`alert > renders correctly with all sentiments > renders correctly senti
             />
           </svg>
           <div
-            class="emotion-8 emotion-9"
+            class="styles__1b838gx7 emotion-8 emotion-1"
           >
             <p
-              class="emotion-10 emotion-11"
+              class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
             >
               Sample Alert
             </p>
@@ -376,11 +324,6 @@ exports[`alert > renders correctly with all sentiments > renders correctly senti
   -ms-flex-direction: row;
   flex-direction: row;
   gap: 0.5rem;
-  border-radius: 0.25rem;
-  padding: 1rem;
-  background-color: #f9f9fa;
-  color: #3f4250;
-  border-left: 4px solid #151a2d;
 }
 
 .emotion-2 {
@@ -388,10 +331,10 @@ exports[`alert > renders correctly with all sentiments > renders correctly senti
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -403,11 +346,6 @@ exports[`alert > renders correctly with all sentiments > renders correctly senti
   -ms-flex-direction: row;
   flex-direction: row;
   gap: 1rem;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  width: 100%;
 }
 
 .emotion-4 {
@@ -455,10 +393,10 @@ exports[`alert > renders correctly with all sentiments > renders correctly senti
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
@@ -474,35 +412,19 @@ exports[`alert > renders correctly with all sentiments > renders correctly senti
   -ms-flex-direction: row;
   flex-direction: row;
   gap: 0.75rem;
-  color: #3f4250;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-
-.emotion-10 {
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
 }
 
 <div
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__1b838gx0 styles_sentiment_neutral__1b838gx5 emotion-0 emotion-1"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="styles__1b838gx6 emotion-2 emotion-1"
       >
         <div
-          class="emotion-4 emotion-5"
+          class="emotion-4 emotion-1"
         >
           <svg
             class="emotion-6 emotion-7"
@@ -517,10 +439,10 @@ exports[`alert > renders correctly with all sentiments > renders correctly senti
             />
           </svg>
           <div
-            class="emotion-8 emotion-9"
+            class="styles__1b838gx7 emotion-8 emotion-1"
           >
             <p
-              class="emotion-10 emotion-11"
+              class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
             >
               Sample Alert
             </p>
@@ -555,11 +477,6 @@ exports[`alert > renders correctly with all sentiments > renders correctly senti
   -ms-flex-direction: row;
   flex-direction: row;
   gap: 0.5rem;
-  border-radius: 0.25rem;
-  padding: 1rem;
-  background-color: #daf6ec;
-  color: #22674e;
-  border-left: 4px solid #22674e;
 }
 
 .emotion-2 {
@@ -567,10 +484,10 @@ exports[`alert > renders correctly with all sentiments > renders correctly senti
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -582,11 +499,6 @@ exports[`alert > renders correctly with all sentiments > renders correctly senti
   -ms-flex-direction: row;
   flex-direction: row;
   gap: 1rem;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  width: 100%;
 }
 
 .emotion-4 {
@@ -634,10 +546,10 @@ exports[`alert > renders correctly with all sentiments > renders correctly senti
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
@@ -653,35 +565,19 @@ exports[`alert > renders correctly with all sentiments > renders correctly senti
   -ms-flex-direction: row;
   flex-direction: row;
   gap: 0.75rem;
-  color: #3f4250;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-
-.emotion-10 {
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
 }
 
 <div
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__1b838gx0 styles_sentiment_success__1b838gx3 emotion-0 emotion-1"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="styles__1b838gx6 emotion-2 emotion-1"
       >
         <div
-          class="emotion-4 emotion-5"
+          class="emotion-4 emotion-1"
         >
           <svg
             class="emotion-6 emotion-7"
@@ -693,10 +589,10 @@ exports[`alert > renders correctly with all sentiments > renders correctly senti
             />
           </svg>
           <div
-            class="emotion-8 emotion-9"
+            class="styles__1b838gx7 emotion-8 emotion-1"
           >
             <p
-              class="emotion-10 emotion-11"
+              class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
             >
               Sample Alert
             </p>
@@ -731,11 +627,6 @@ exports[`alert > renders correctly with all sentiments > renders correctly senti
   -ms-flex-direction: row;
   flex-direction: row;
   gap: 0.5rem;
-  border-radius: 0.25rem;
-  padding: 1rem;
-  background-color: #fff6e6;
-  color: #7c5400;
-  border-left: 4px solid #7c5400;
 }
 
 .emotion-2 {
@@ -743,10 +634,10 @@ exports[`alert > renders correctly with all sentiments > renders correctly senti
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -758,11 +649,6 @@ exports[`alert > renders correctly with all sentiments > renders correctly senti
   -ms-flex-direction: row;
   flex-direction: row;
   gap: 1rem;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  width: 100%;
 }
 
 .emotion-4 {
@@ -810,10 +696,10 @@ exports[`alert > renders correctly with all sentiments > renders correctly senti
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
@@ -829,35 +715,19 @@ exports[`alert > renders correctly with all sentiments > renders correctly senti
   -ms-flex-direction: row;
   flex-direction: row;
   gap: 0.75rem;
-  color: #3f4250;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-
-.emotion-10 {
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
 }
 
 <div
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__1b838gx0 styles_sentiment_warning__1b838gx4 emotion-0 emotion-1"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="styles__1b838gx6 emotion-2 emotion-1"
       >
         <div
-          class="emotion-4 emotion-5"
+          class="emotion-4 emotion-1"
         >
           <svg
             class="emotion-6 emotion-7"
@@ -870,10 +740,10 @@ exports[`alert > renders correctly with all sentiments > renders correctly senti
             />
           </svg>
           <div
-            class="emotion-8 emotion-9"
+            class="styles__1b838gx7 emotion-8 emotion-1"
           >
             <p
-              class="emotion-10 emotion-11"
+              class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
             >
               Sample Alert
             </p>
@@ -908,11 +778,6 @@ exports[`alert > renders correctly with buttonText and onClickButton 1`] = `
   -ms-flex-direction: row;
   flex-direction: row;
   gap: 0.5rem;
-  border-radius: 0.25rem;
-  padding: 1rem;
-  background-color: #ffebf2;
-  color: #b3144d;
-  border-left: 4px solid #b3144d;
 }
 
 .emotion-2 {
@@ -920,10 +785,10 @@ exports[`alert > renders correctly with buttonText and onClickButton 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -935,11 +800,6 @@ exports[`alert > renders correctly with buttonText and onClickButton 1`] = `
   -ms-flex-direction: row;
   flex-direction: row;
   gap: 1rem;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  width: 100%;
 }
 
 .emotion-4 {
@@ -987,10 +847,10 @@ exports[`alert > renders correctly with buttonText and onClickButton 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
@@ -1006,39 +866,19 @@ exports[`alert > renders correctly with buttonText and onClickButton 1`] = `
   -ms-flex-direction: row;
   flex-direction: row;
   gap: 0.75rem;
-  color: #3f4250;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-
-.emotion-10 {
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-12 {
-  margin-left: 2.5rem;
 }
 
 <div
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__1b838gx0 styles_sentiment_danger__1b838gx1 emotion-0 emotion-1"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="styles__1b838gx6 emotion-2 emotion-1"
       >
         <div
-          class="emotion-4 emotion-5"
+          class="emotion-4 emotion-1"
         >
           <svg
             class="emotion-6 emotion-7"
@@ -1051,17 +891,17 @@ exports[`alert > renders correctly with buttonText and onClickButton 1`] = `
             />
           </svg>
           <div
-            class="emotion-8 emotion-9"
+            class="styles__1b838gx7 emotion-8 emotion-1"
           >
             <p
-              class="emotion-10 emotion-11"
+              class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
             >
               Sample Alert
             </p>
           </div>
         </div>
         <button
-          class="emotion-12 emotion-13 styles__e1wcoe0 styles_size_small__e1wcoe3 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_filled__e1wcoeg styles_sentiment_danger__e1wcoe9 styles_undefined_compound_2__e1wcoen"
+          class="styles__1b838gx8 styles__e1wcoe0 styles_size_small__e1wcoe3 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_filled__e1wcoeg styles_sentiment_danger__e1wcoe9 styles_undefined_compound_2__e1wcoen"
           type="button"
         >
           Button
@@ -1095,11 +935,6 @@ exports[`alert > renders correctly with children as component 1`] = `
   -ms-flex-direction: row;
   flex-direction: row;
   gap: 0.5rem;
-  border-radius: 0.25rem;
-  padding: 1rem;
-  background-color: #ffebf2;
-  color: #b3144d;
-  border-left: 4px solid #b3144d;
 }
 
 .emotion-2 {
@@ -1107,10 +942,10 @@ exports[`alert > renders correctly with children as component 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1122,11 +957,6 @@ exports[`alert > renders correctly with children as component 1`] = `
   -ms-flex-direction: row;
   flex-direction: row;
   gap: 1rem;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  width: 100%;
 }
 
 .emotion-4 {
@@ -1174,10 +1004,10 @@ exports[`alert > renders correctly with children as component 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
@@ -1193,24 +1023,19 @@ exports[`alert > renders correctly with children as component 1`] = `
   -ms-flex-direction: row;
   flex-direction: row;
   gap: 0.75rem;
-  color: #3f4250;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
 }
 
 <div
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__1b838gx0 styles_sentiment_danger__1b838gx1 emotion-0 emotion-1"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="styles__1b838gx6 emotion-2 emotion-1"
       >
         <div
-          class="emotion-4 emotion-5"
+          class="emotion-4 emotion-1"
         >
           <svg
             class="emotion-6 emotion-7"
@@ -1223,7 +1048,7 @@ exports[`alert > renders correctly with children as component 1`] = `
             />
           </svg>
           <div
-            class="emotion-8 emotion-9"
+            class="styles__1b838gx7 emotion-8 emotion-1"
           >
             <p>
               Sample Alert
@@ -1259,11 +1084,6 @@ exports[`alert > renders correctly with closable and onClose 1`] = `
   -ms-flex-direction: row;
   flex-direction: row;
   gap: 0.5rem;
-  border-radius: 0.25rem;
-  padding: 1rem;
-  background-color: #ffebf2;
-  color: #b3144d;
-  border-left: 4px solid #b3144d;
 }
 
 .emotion-2 {
@@ -1271,10 +1091,10 @@ exports[`alert > renders correctly with closable and onClose 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1286,11 +1106,6 @@ exports[`alert > renders correctly with closable and onClose 1`] = `
   -ms-flex-direction: row;
   flex-direction: row;
   gap: 1rem;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  width: 100%;
 }
 
 .emotion-4 {
@@ -1338,10 +1153,10 @@ exports[`alert > renders correctly with closable and onClose 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
@@ -1357,31 +1172,9 @@ exports[`alert > renders correctly with closable and onClose 1`] = `
   -ms-flex-direction: row;
   flex-direction: row;
   gap: 0.75rem;
-  color: #3f4250;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
 }
 
 .emotion-10 {
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-12 {
-  -webkit-align-self: start;
-  -ms-flex-item-align: start;
-  align-self: start;
-}
-
-.emotion-14 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -1390,7 +1183,7 @@ exports[`alert > renders correctly with closable and onClose 1`] = `
   min-height: 1rem;
 }
 
-.emotion-14 .fillStroke {
+.emotion-10 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
@@ -1399,13 +1192,13 @@ exports[`alert > renders correctly with closable and onClose 1`] = `
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__1b838gx0 styles_sentiment_danger__1b838gx1 emotion-0 emotion-1"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="styles__1b838gx6 emotion-2 emotion-1"
       >
         <div
-          class="emotion-4 emotion-5"
+          class="emotion-4 emotion-1"
         >
           <svg
             class="emotion-6 emotion-7"
@@ -1418,10 +1211,10 @@ exports[`alert > renders correctly with closable and onClose 1`] = `
             />
           </svg>
           <div
-            class="emotion-8 emotion-9"
+            class="styles__1b838gx7 emotion-8 emotion-1"
           >
             <p
-              class="emotion-10 emotion-11"
+              class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
             >
               Sample Alert
             </p>
@@ -1430,11 +1223,11 @@ exports[`alert > renders correctly with closable and onClose 1`] = `
       </div>
       <button
         aria-label="close"
-        class="emotion-12 emotion-13 styles__e1wcoe0 styles_size_small__e1wcoe3 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+        class="styles__1b838gx9 styles__e1wcoe0 styles_size_small__e1wcoe3 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
         type="button"
       >
         <svg
-          class="emotion-14 emotion-7"
+          class="emotion-10 emotion-7"
           viewBox="0 0 16 16"
         >
           <path
@@ -1470,11 +1263,6 @@ exports[`alert > renders correctly with default values 1`] = `
   -ms-flex-direction: row;
   flex-direction: row;
   gap: 0.5rem;
-  border-radius: 0.25rem;
-  padding: 1rem;
-  background-color: #ffebf2;
-  color: #b3144d;
-  border-left: 4px solid #b3144d;
 }
 
 .emotion-2 {
@@ -1482,10 +1270,10 @@ exports[`alert > renders correctly with default values 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1497,11 +1285,6 @@ exports[`alert > renders correctly with default values 1`] = `
   -ms-flex-direction: row;
   flex-direction: row;
   gap: 1rem;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  width: 100%;
 }
 
 .emotion-4 {
@@ -1549,10 +1332,10 @@ exports[`alert > renders correctly with default values 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
@@ -1568,35 +1351,19 @@ exports[`alert > renders correctly with default values 1`] = `
   -ms-flex-direction: row;
   flex-direction: row;
   gap: 0.75rem;
-  color: #3f4250;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-
-.emotion-10 {
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
 }
 
 <div
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__1b838gx0 styles_sentiment_danger__1b838gx1 emotion-0 emotion-1"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="styles__1b838gx6 emotion-2 emotion-1"
       >
         <div
-          class="emotion-4 emotion-5"
+          class="emotion-4 emotion-1"
         >
           <svg
             class="emotion-6 emotion-7"
@@ -1609,10 +1376,10 @@ exports[`alert > renders correctly with default values 1`] = `
             />
           </svg>
           <div
-            class="emotion-8 emotion-9"
+            class="styles__1b838gx7 emotion-8 emotion-1"
           >
             <p
-              class="emotion-10 emotion-11"
+              class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
             >
               Sample Alert
             </p>
@@ -1647,11 +1414,6 @@ exports[`alert > renders correctly with disabled 1`] = `
   -ms-flex-direction: row;
   flex-direction: row;
   gap: 0.5rem;
-  border-radius: 0.25rem;
-  padding: 1rem;
-  background-color: #ffebf2;
-  color: #b3144d;
-  border-left: 4px solid #b3144d;
 }
 
 .emotion-0 {
@@ -1675,11 +1437,6 @@ exports[`alert > renders correctly with disabled 1`] = `
   -ms-flex-direction: row;
   flex-direction: row;
   gap: 0.5rem;
-  border-radius: 0.25rem;
-  padding: 1rem;
-  background-color: #ffebf2;
-  color: #b3144d;
-  border-left: 4px solid #b3144d;
 }
 
 .emotion-2 {
@@ -1687,10 +1444,10 @@ exports[`alert > renders correctly with disabled 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1702,11 +1459,6 @@ exports[`alert > renders correctly with disabled 1`] = `
   -ms-flex-direction: row;
   flex-direction: row;
   gap: 1rem;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  width: 100%;
 }
 
 .emotion-2 {
@@ -1714,10 +1466,10 @@ exports[`alert > renders correctly with disabled 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1729,11 +1481,6 @@ exports[`alert > renders correctly with disabled 1`] = `
   -ms-flex-direction: row;
   flex-direction: row;
   gap: 1rem;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  width: 100%;
 }
 
 .emotion-4 {
@@ -1821,10 +1568,10 @@ exports[`alert > renders correctly with disabled 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
@@ -1840,11 +1587,6 @@ exports[`alert > renders correctly with disabled 1`] = `
   -ms-flex-direction: row;
   flex-direction: row;
   gap: 0.75rem;
-  color: #3f4250;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
 }
 
 .emotion-8 {
@@ -1852,10 +1594,10 @@ exports[`alert > renders correctly with disabled 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
@@ -1871,50 +1613,19 @@ exports[`alert > renders correctly with disabled 1`] = `
   -ms-flex-direction: row;
   flex-direction: row;
   gap: 0.75rem;
-  color: #3f4250;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-
-.emotion-10 {
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-10 {
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-12 {
-  margin-left: 2.5rem;
 }
 
 <div
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__1b838gx0 styles_sentiment_danger__1b838gx1 emotion-0 emotion-1"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="styles__1b838gx6 emotion-2 emotion-1"
       >
         <div
-          class="emotion-4 emotion-5"
+          class="emotion-4 emotion-1"
         >
           <svg
             class="emotion-6 emotion-7"
@@ -1927,17 +1638,17 @@ exports[`alert > renders correctly with disabled 1`] = `
             />
           </svg>
           <div
-            class="emotion-8 emotion-9"
+            class="styles__1b838gx7 emotion-8 emotion-1"
           >
             <p
-              class="emotion-10 emotion-11"
+              class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
             >
               Sample Alert
             </p>
           </div>
         </div>
         <button
-          class="emotion-12 emotion-13 styles__e1wcoe0 styles_size_small__e1wcoe3 styles_fullWidth_false__e1wcoe6 styles_disabled_true__e1wcoej styles_variant_filled__e1wcoeg styles_sentiment_danger__e1wcoe9 styles_undefined_compound_2__e1wcoen"
+          class="styles__1b838gx8 styles__e1wcoe0 styles_size_small__e1wcoe3 styles_fullWidth_false__e1wcoe6 styles_disabled_true__e1wcoej styles_variant_filled__e1wcoeg styles_sentiment_danger__e1wcoe9 styles_undefined_compound_2__e1wcoen"
           disabled=""
           type="button"
         >
@@ -1972,11 +1683,6 @@ exports[`alert > renders correctly with title 1`] = `
   -ms-flex-direction: row;
   flex-direction: row;
   gap: 0.5rem;
-  border-radius: 0.25rem;
-  padding: 1rem;
-  background-color: #ffebf2;
-  color: #b3144d;
-  border-left: 4px solid #b3144d;
 }
 
 .emotion-2 {
@@ -1984,10 +1690,10 @@ exports[`alert > renders correctly with title 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1999,11 +1705,6 @@ exports[`alert > renders correctly with title 1`] = `
   -ms-flex-direction: row;
   flex-direction: row;
   gap: 1rem;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  width: 100%;
 }
 
 .emotion-4 {
@@ -2051,10 +1752,10 @@ exports[`alert > renders correctly with title 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
@@ -2070,47 +1771,19 @@ exports[`alert > renders correctly with title 1`] = `
   -ms-flex-direction: row;
   flex-direction: row;
   gap: 0.75rem;
-  color: #3f4250;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-
-.emotion-10 {
-  color: #b3144d;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 600;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-12 {
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
 }
 
 <div
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__1b838gx0 styles_sentiment_danger__1b838gx1 emotion-0 emotion-1"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="styles__1b838gx6 emotion-2 emotion-1"
       >
         <div
-          class="emotion-4 emotion-5"
+          class="emotion-4 emotion-1"
         >
           <svg
             class="emotion-6 emotion-7"
@@ -2123,15 +1796,15 @@ exports[`alert > renders correctly with title 1`] = `
             />
           </svg>
           <div
-            class="emotion-8 emotion-9"
+            class="styles__1b838gx7 emotion-8 emotion-1"
           >
             <span
-              class="emotion-10 emotion-11"
+              class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_danger__m4c9owd style_prominence_default__m4c9owi style_variant_bodyStronger__m4c9owr style_disabled_false__m4c9ow1b style_undefined_compound_8__m4c9ow1k style_undefined_compound_72__m4c9ow3c"
             >
               title
             </span>
             <p
-              class="emotion-12 emotion-11"
+              class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
             >
               Sample Alert
             </p>
