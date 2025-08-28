@@ -1,5 +1,18 @@
 # Change Log
 
+## 3.0.0-beta.5
+
+### Major Changes
+
+- [#5471](https://github.com/scaleway/ultraviolet/pull/5471) [`8d11143`](https://github.com/scaleway/ultraviolet/commit/8d111439baf02a951bab616dfea637e269f0f7ec) Thanks [@scaleway-bot](https://github.com/scaleway-bot)! - Refactor components `Text` and `Alert` to use vanilla-extract instead of Emotion
+
+- [#5471](https://github.com/scaleway/ultraviolet/pull/5471) [`52f4748`](https://github.com/scaleway/ultraviolet/commit/52f47488f0b50e5d8dbdd1a78eb27d60786e6532) Thanks [@scaleway-bot](https://github.com/scaleway-bot)! - - Refactor component `Banner` to use vanilla-extract instead of Emotion
+  - Fix dark/darker theme on stories with vanilla extract
+
+### Patch Changes
+
+- [#5471](https://github.com/scaleway/ultraviolet/pull/5471) [`671427e`](https://github.com/scaleway/ultraviolet/commit/671427eab0dd3e7c72f7085c75a8e0dd77b26761) Thanks [@scaleway-bot](https://github.com/scaleway-bot)! - Fix `Dialog` width
+
 ## 3.0.0-beta.4
 
 ### Major Changes
@@ -72,7 +85,6 @@
   - Use component `Key` in `SearchInput` instead of custom
 
 ## 3.0.0-beta.2
-
 
 ### Patch Changes
 
