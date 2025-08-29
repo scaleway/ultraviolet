@@ -1,7 +1,6 @@
 'use client'
 
-import { css } from '@emotion/react'
-import styled from '@emotion/styled'
+import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type {
   HTMLAttributes,
   KeyboardEventHandler,
@@ -23,27 +22,38 @@ import {
 } from 'react'
 import { createPortal } from 'react-dom'
 import { isClientSide } from '../../helpers/isClientSide'
-import type { PositionsType } from './animations'
-import { animation, exitAnimation } from './animations'
 import type { PopupAlign, PopupPlacement } from './helpers'
+import { computePositions, DEFAULT_POSITIONS } from './helpers'
 import {
-  computePositions,
-  DEFAULT_ARROW_WIDTH,
-  DEFAULT_POSITIONS,
-} from './helpers'
+  animationPopup,
+  childrenContainerPopup,
+  containerPopup,
+  popup,
+} from './styles.css'
+import {
+  animationDurationPopup,
+  arrowLeft,
+  arrowTop,
+  arrowTransform,
+  maxHeightPopup,
+  maxWidthPopup,
+  popupInitialPosition,
+  popupPosition,
+} from './variables.css'
 
 const DEFAULT_ANIMATION_DURATION = 230 // in ms
 const DEFAULT_DEBOUNCE_DURATION = 200 // in ms
 
 const noop = () => {}
 
-type StyledPopupProps = {
-  maxWidth: number | string
-  positions: PositionsType
-  reverseAnimation: boolean
-  maxHeight?: number | string
-  animationDuration?: number
-  isDialog: boolean
+export type PositionsType = {
+  arrowLeft: number
+  arrowTop: number
+  arrowTransform: string
+  placement: string
+  rotate: number
+  popupInitialPosition: string
+  popupPosition: string
 }
 
 /**
@@ -52,88 +62,6 @@ type StyledPopupProps = {
 const stopClickPropagation: MouseEventHandler = event => {
   event.nativeEvent.stopImmediatePropagation()
 }
-const Container = styled.div`
-
-  &[data-max-height="true"] {
-    overflow: auto;
-  }
-`
-const StyledPopup = styled('div', {
-  shouldForwardProp: prop =>
-    ![
-      'maxWidth',
-      'positions',
-      'reverseAnimation',
-      'maxHeight',
-      'animationDuration',
-      'isDialog',
-    ].includes(prop),
-})<StyledPopupProps>`
-  background: ${({ theme }) => theme.colors.neutral.backgroundStronger};
-  color: ${({ theme }) => theme.colors.neutral.textStronger};
-  border-radius: ${({ theme }) => theme.radii.default};
-  padding: ${({ theme }) => `${theme.space['0.5']} ${theme.space['1']}`};
-  text-align: center;
-  position: absolute;
-  max-width: ${({ maxWidth }) =>
-    typeof maxWidth === 'number' ? `${maxWidth}px` : maxWidth};
-  max-height: ${({ maxHeight }) =>
-    typeof maxHeight === 'number' ? `${maxHeight}px` : maxHeight};
-  overflow-wrap: break-word;
-  font-size: 0.8rem;
-  inset: 0 auto auto 0;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  z-index: 1;
-  transform: ${({ positions }) => positions.popupPosition};
-
-  &[data-animated="true"] {
-    animation: ${({ positions, reverseAnimation, animationDuration }) => css`
-      ${animationDuration}ms ${
-        !reverseAnimation ? animation(positions) : exitAnimation(positions)
-      } forwards
-    `};
-  }
-
-  &[data-has-arrow="true"] {
-    &::after {
-      content: " ";
-      position: absolute;
-      top: ${({ positions }) => positions.arrowTop}px;
-      left: ${({ positions }) => positions.arrowLeft}px;
-      transform: ${({ positions }) => positions.arrowTransform}
-        rotate(${({ positions }) => positions.rotate}deg);
-      margin-left: -${DEFAULT_ARROW_WIDTH}px;
-      border-width: ${DEFAULT_ARROW_WIDTH}px;
-      border-style: solid;
-      border-color: ${({ theme }) => theme.colors.neutral.backgroundStronger}
-        transparent transparent transparent;
-      pointer-events: none;
-    }
-  }
-
-  &[data-visible-in-dom="false"] {
-    display: none;
-  }
-
-  & > ${Container} {
-  max-height: ${({ theme, maxHeight }) => (maxHeight ? `calc(${typeof maxHeight === 'number' ? `${maxHeight}px` : maxHeight} - ${theme.space[2]})` : '100%')}
-}
-`
-
-export const StyledChildrenContainer = styled.div`
-  display: inherit;
-
-
-  &[data-container-full-height="true"] {
-    height: 100%;
-  }
-
-  &[data-container-full-width="true"] {
-    width: 100%;
-  }
-`
 
 type PopupProps = {
   /**
@@ -290,6 +218,10 @@ export const Popup = forwardRef(
     const uniqueId = useId()
     const generatedId = id ?? uniqueId
     const isControlled = visible !== undefined
+    const isAnimated = useMemo(
+      () => animationDuration > 0 && !maxHeight,
+      [animationDuration, maxHeight],
+    )
 
     const generatePopupPositions = useCallback(() => {
       if (childrenRef.current && innerPopupRef.current) {
@@ -564,12 +496,14 @@ export const Popup = forwardRef(
       }
 
       return (
-        <StyledChildrenContainer
+        <div
           aria-controls={generatedId}
           aria-describedby={generatedId}
           aria-haspopup={ariaHasPopup}
-          data-container-full-height={containerFullHeight}
-          data-container-full-width={containerFullWidth}
+          className={childrenContainerPopup({
+            fullHeight: containerFullHeight,
+            fullWidth: containerFullWidth,
+          })}
           onBlur={!isControlled ? onPointerEvent(false) : noop}
           onFocus={!isControlled ? onPointerEvent(true) : noop}
           onKeyDown={event => {
@@ -581,7 +515,7 @@ export const Popup = forwardRef(
           tabIndex={tabIndex}
         >
           {children}
-        </StyledChildrenContainer>
+        </div>
       )
     }, [
       ariaHasPopup,
@@ -620,30 +554,45 @@ export const Popup = forwardRef(
         {renderChildren()}
         {shouldRender
           ? createPortal(
-              <StyledPopup
-                animationDuration={animationDuration}
-                className={className}
-                data-animated={animationDuration > 0 && !maxHeight}
-                data-has-arrow={hasArrow}
+              <div
+                className={`${className ? `${className} ` : ''}${popup({ hasArrow, visibleInDom: !dynamicDomRendering ? visibleInDom : undefined })} ${isAnimated ? animationPopup[reverseAnimation ? 'reverse' : 'notReverse'] : null}`}
                 data-testid={dataTestId}
                 data-visible-in-dom={
                   !dynamicDomRendering ? visibleInDom : undefined
                 }
                 id={generatedId}
-                isDialog={role === 'dialog'}
-                maxHeight={maxHeight}
-                maxWidth={maxWidth}
                 onClick={stopClickPropagation}
                 onKeyDown={role === 'dialog' ? handleFocusTrap : undefined}
                 onPointerEnter={!isControlled ? onPointerEvent(true) : noop}
                 onPointerLeave={!isControlled ? onPointerEvent(false) : noop}
-                positions={positions}
                 ref={innerPopupRef}
-                reverseAnimation={reverseAnimation}
                 role={role}
+                style={assignInlineVars({
+                  [arrowTop]: `${positions.arrowTop}px`,
+                  [arrowLeft]: `${positions.arrowLeft}px`,
+                  [arrowTransform]: `${positions.arrowTransform} rotate(${positions.rotate}deg)`,
+                  [popupPosition]: positions.popupPosition,
+                  [animationDurationPopup]: `${animationDuration}ms`,
+                  [popupInitialPosition]: positions.popupInitialPosition,
+                  [maxWidthPopup]: `${typeof maxWidth === 'number' ? `${maxWidth}px` : maxWidth}`,
+                  [maxHeightPopup]:
+                    typeof maxHeight === 'number'
+                      ? `${maxHeight}px`
+                      : maxHeight,
+                })}
               >
-                <Container data-max-height={!!maxHeight}>{text}</Container>
-              </StyledPopup>,
+                <div
+                  className={containerPopup({ hasMaxHeight: !!maxHeight })}
+                  style={assignInlineVars({
+                    [maxHeightPopup]:
+                      typeof maxHeight === 'number'
+                        ? `${maxHeight}px`
+                        : maxHeight,
+                  })}
+                >
+                  {text}
+                </div>
+              </div>,
               popupPortalTarget as HTMLElement,
             )
           : null}

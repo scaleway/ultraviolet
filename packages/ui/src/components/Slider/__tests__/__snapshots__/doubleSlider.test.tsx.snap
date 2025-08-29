@@ -5483,15 +5483,133 @@ exports[`Double slider > renders correctly double custom tooltip 1`] = `
 }
 
 .emotion-22 {
-  display: inherit;
-}
-
-.emotion-22[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-22[data-container-full-width="true"] {
+  position: absolute;
   width: 100%;
+  pointer-events: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  padding: 0;
+  background: transparent;
+  outline: none;
+}
+
+.emotion-22:focus::-moz-range-thumb {
+  border: 1.5px solid #8c40ef;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-22:focus::-webkit-slider-thumb {
+  border: 1.5px solid #8c40ef;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-22::-moz-range-track {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  -webkit-appearance: none;
+  box-shadow: none;
+  border: transparent;
+  background: transparent;
+}
+
+.emotion-22::-moz-range-thumb {
+  -webkit-appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  pointer-events: all;
+  width: 16px;
+  height: 16px;
+  background: #ffffff;
+  box-shadow: 0px 0px 2px 0px #22263829,0px 2px 4px 0px #2226381f;
+  border-radius: 100%;
+  border: none;
+  cursor: -webkit-grab;
+  cursor: grab;
+  -webkit-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
+  position: absolute;
+  left: calc(12% - 8px);
+  top: -8px;
+  -webkit-transform: translate(0, -10px);
+  -moz-transform: translate(0, -10px);
+  -ms-transform: translate(0, -10px);
+  transform: translate(0, -10px);
+}
+
+.emotion-22::-moz-range-thumb:hover,
+.emotion-22::-moz-range-thumb:active,
+.emotion-22::-moz-range-thumb:focus {
+  border: 1.5px solid #8c40ef;
+}
+
+.emotion-22::-moz-range-thumb:active,
+.emotion-22::-moz-range-thumb:focus {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+.emotion-22::-ms-track {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  -webkit-appearance: none;
+  box-shadow: none;
+  border: transparent;
+  background: transparent;
+}
+
+.emotion-22:focus::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  -webkit-appearance: none;
+  box-shadow: none;
+  border: transparent;
+  background: transparent;
+}
+
+.emotion-22::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  pointer-events: all;
+  width: 16px;
+  height: 16px;
+  background: #ffffff;
+  box-shadow: 0px 0px 2px 0px #22263829,0px 2px 4px 0px #2226381f;
+  border-radius: 100%;
+  border: none;
+  cursor: -webkit-grab;
+  cursor: grab;
+  -webkit-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
+  position: absolute;
+  left: calc(12% - 8px);
+  top: -8px;
+}
+
+.emotion-22::-webkit-slider-thumb:hover,
+.emotion-22::-webkit-slider-thumb:active,
+.emotion-22::-webkit-slider-thumb:focus {
+  border: 1.5px solid #8c40ef;
+}
+
+.emotion-22::-webkit-slider-thumb:active,
+.emotion-22::-webkit-slider-thumb:focus {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
 }
 
 .emotion-24 {
@@ -5546,7 +5664,7 @@ exports[`Double slider > renders correctly double custom tooltip 1`] = `
   -webkit-transition: background 0.3s ease-in-out;
   transition: background 0.3s ease-in-out;
   position: absolute;
-  left: calc(12% - 8px);
+  left: calc(14% - 8px);
   top: -8px;
   -webkit-transform: translate(0, -10px);
   -moz-transform: translate(0, -10px);
@@ -5607,7 +5725,7 @@ exports[`Double slider > renders correctly double custom tooltip 1`] = `
   -webkit-transition: background 0.3s ease-in-out;
   transition: background 0.3s ease-in-out;
   position: absolute;
-  left: calc(12% - 8px);
+  left: calc(14% - 8px);
   top: -8px;
 }
 
@@ -5619,136 +5737,6 @@ exports[`Double slider > renders correctly double custom tooltip 1`] = `
 
 .emotion-24::-webkit-slider-thumb:active,
 .emotion-24::-webkit-slider-thumb:focus {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-  cursor: -webkit-grabbing;
-  cursor: grabbing;
-}
-
-.emotion-28 {
-  position: absolute;
-  width: 100%;
-  pointer-events: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  padding: 0;
-  background: transparent;
-  outline: none;
-}
-
-.emotion-28:focus::-moz-range-thumb {
-  border: 1.5px solid #8c40ef;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-28:focus::-webkit-slider-thumb {
-  border: 1.5px solid #8c40ef;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-28::-moz-range-track {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  -webkit-appearance: none;
-  box-shadow: none;
-  border: transparent;
-  background: transparent;
-}
-
-.emotion-28::-moz-range-thumb {
-  -webkit-appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  pointer-events: all;
-  width: 16px;
-  height: 16px;
-  background: #ffffff;
-  box-shadow: 0px 0px 2px 0px #22263829,0px 2px 4px 0px #2226381f;
-  border-radius: 100%;
-  border: none;
-  cursor: -webkit-grab;
-  cursor: grab;
-  -webkit-transition: background 0.3s ease-in-out;
-  transition: background 0.3s ease-in-out;
-  position: absolute;
-  left: calc(14% - 8px);
-  top: -8px;
-  -webkit-transform: translate(0, -10px);
-  -moz-transform: translate(0, -10px);
-  -ms-transform: translate(0, -10px);
-  transform: translate(0, -10px);
-}
-
-.emotion-28::-moz-range-thumb:hover,
-.emotion-28::-moz-range-thumb:active,
-.emotion-28::-moz-range-thumb:focus {
-  border: 1.5px solid #8c40ef;
-}
-
-.emotion-28::-moz-range-thumb:active,
-.emotion-28::-moz-range-thumb:focus {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-  cursor: -webkit-grabbing;
-  cursor: grabbing;
-}
-
-.emotion-28::-ms-track {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  -webkit-appearance: none;
-  box-shadow: none;
-  border: transparent;
-  background: transparent;
-}
-
-.emotion-28:focus::-webkit-slider-runnable-track {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  -webkit-appearance: none;
-  box-shadow: none;
-  border: transparent;
-  background: transparent;
-}
-
-.emotion-28::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  pointer-events: all;
-  width: 16px;
-  height: 16px;
-  background: #ffffff;
-  box-shadow: 0px 0px 2px 0px #22263829,0px 2px 4px 0px #2226381f;
-  border-radius: 100%;
-  border: none;
-  cursor: -webkit-grab;
-  cursor: grab;
-  -webkit-transition: background 0.3s ease-in-out;
-  transition: background 0.3s ease-in-out;
-  position: absolute;
-  left: calc(14% - 8px);
-  top: -8px;
-}
-
-.emotion-28::-webkit-slider-thumb:hover,
-.emotion-28::-webkit-slider-thumb:active,
-.emotion-28::-webkit-slider-thumb:focus {
-  border: 1.5px solid #8c40ef;
-}
-
-.emotion-28::-webkit-slider-thumb:active,
-.emotion-28::-webkit-slider-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
@@ -5812,12 +5800,12 @@ exports[`Double slider > renders correctly double custom tooltip 1`] = `
             <div
               aria-controls="«r28»"
               aria-describedby="«r28»"
-              class="emotion-22 emotion-23"
+              class="styles__w40vpo9"
               tabindex="0"
             >
               <input
                 aria-label="Name"
-                class="emotion-24 emotion-25"
+                class="emotion-22 emotion-23"
                 data-direction="column"
                 data-testid="handle-left"
                 id="«r23»"
@@ -5832,12 +5820,12 @@ exports[`Double slider > renders correctly double custom tooltip 1`] = `
             <div
               aria-controls="«r29»"
               aria-describedby="«r29»"
-              class="emotion-22 emotion-23"
+              class="styles__w40vpo9"
               tabindex="0"
             >
               <input
                 aria-label="Name"
-                class="emotion-28 emotion-25"
+                class="emotion-24 emotion-23"
                 data-direction="column"
                 data-testid="handle-right"
                 id="«r23»"
@@ -6164,15 +6152,133 @@ exports[`Double slider > renders correctly double default toolipt  1`] = `
 }
 
 .emotion-22 {
-  display: inherit;
-}
-
-.emotion-22[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-22[data-container-full-width="true"] {
+  position: absolute;
   width: 100%;
+  pointer-events: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  padding: 0;
+  background: transparent;
+  outline: none;
+}
+
+.emotion-22:focus::-moz-range-thumb {
+  border: 1.5px solid #8c40ef;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-22:focus::-webkit-slider-thumb {
+  border: 1.5px solid #8c40ef;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-22::-moz-range-track {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  -webkit-appearance: none;
+  box-shadow: none;
+  border: transparent;
+  background: transparent;
+}
+
+.emotion-22::-moz-range-thumb {
+  -webkit-appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  pointer-events: all;
+  width: 16px;
+  height: 16px;
+  background: #ffffff;
+  box-shadow: 0px 0px 2px 0px #22263829,0px 2px 4px 0px #2226381f;
+  border-radius: 100%;
+  border: none;
+  cursor: -webkit-grab;
+  cursor: grab;
+  -webkit-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
+  position: absolute;
+  left: calc(12% - 8px);
+  top: -8px;
+  -webkit-transform: translate(0, -10px);
+  -moz-transform: translate(0, -10px);
+  -ms-transform: translate(0, -10px);
+  transform: translate(0, -10px);
+}
+
+.emotion-22::-moz-range-thumb:hover,
+.emotion-22::-moz-range-thumb:active,
+.emotion-22::-moz-range-thumb:focus {
+  border: 1.5px solid #8c40ef;
+}
+
+.emotion-22::-moz-range-thumb:active,
+.emotion-22::-moz-range-thumb:focus {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+.emotion-22::-ms-track {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  -webkit-appearance: none;
+  box-shadow: none;
+  border: transparent;
+  background: transparent;
+}
+
+.emotion-22:focus::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  -webkit-appearance: none;
+  box-shadow: none;
+  border: transparent;
+  background: transparent;
+}
+
+.emotion-22::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  pointer-events: all;
+  width: 16px;
+  height: 16px;
+  background: #ffffff;
+  box-shadow: 0px 0px 2px 0px #22263829,0px 2px 4px 0px #2226381f;
+  border-radius: 100%;
+  border: none;
+  cursor: -webkit-grab;
+  cursor: grab;
+  -webkit-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
+  position: absolute;
+  left: calc(12% - 8px);
+  top: -8px;
+}
+
+.emotion-22::-webkit-slider-thumb:hover,
+.emotion-22::-webkit-slider-thumb:active,
+.emotion-22::-webkit-slider-thumb:focus {
+  border: 1.5px solid #8c40ef;
+}
+
+.emotion-22::-webkit-slider-thumb:active,
+.emotion-22::-webkit-slider-thumb:focus {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
 }
 
 .emotion-24 {
@@ -6227,7 +6333,7 @@ exports[`Double slider > renders correctly double default toolipt  1`] = `
   -webkit-transition: background 0.3s ease-in-out;
   transition: background 0.3s ease-in-out;
   position: absolute;
-  left: calc(12% - 8px);
+  left: calc(14% - 8px);
   top: -8px;
   -webkit-transform: translate(0, -10px);
   -moz-transform: translate(0, -10px);
@@ -6288,7 +6394,7 @@ exports[`Double slider > renders correctly double default toolipt  1`] = `
   -webkit-transition: background 0.3s ease-in-out;
   transition: background 0.3s ease-in-out;
   position: absolute;
-  left: calc(12% - 8px);
+  left: calc(14% - 8px);
   top: -8px;
 }
 
@@ -6300,136 +6406,6 @@ exports[`Double slider > renders correctly double default toolipt  1`] = `
 
 .emotion-24::-webkit-slider-thumb:active,
 .emotion-24::-webkit-slider-thumb:focus {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-  cursor: -webkit-grabbing;
-  cursor: grabbing;
-}
-
-.emotion-28 {
-  position: absolute;
-  width: 100%;
-  pointer-events: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  padding: 0;
-  background: transparent;
-  outline: none;
-}
-
-.emotion-28:focus::-moz-range-thumb {
-  border: 1.5px solid #8c40ef;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-28:focus::-webkit-slider-thumb {
-  border: 1.5px solid #8c40ef;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-28::-moz-range-track {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  -webkit-appearance: none;
-  box-shadow: none;
-  border: transparent;
-  background: transparent;
-}
-
-.emotion-28::-moz-range-thumb {
-  -webkit-appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  pointer-events: all;
-  width: 16px;
-  height: 16px;
-  background: #ffffff;
-  box-shadow: 0px 0px 2px 0px #22263829,0px 2px 4px 0px #2226381f;
-  border-radius: 100%;
-  border: none;
-  cursor: -webkit-grab;
-  cursor: grab;
-  -webkit-transition: background 0.3s ease-in-out;
-  transition: background 0.3s ease-in-out;
-  position: absolute;
-  left: calc(14% - 8px);
-  top: -8px;
-  -webkit-transform: translate(0, -10px);
-  -moz-transform: translate(0, -10px);
-  -ms-transform: translate(0, -10px);
-  transform: translate(0, -10px);
-}
-
-.emotion-28::-moz-range-thumb:hover,
-.emotion-28::-moz-range-thumb:active,
-.emotion-28::-moz-range-thumb:focus {
-  border: 1.5px solid #8c40ef;
-}
-
-.emotion-28::-moz-range-thumb:active,
-.emotion-28::-moz-range-thumb:focus {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-  cursor: -webkit-grabbing;
-  cursor: grabbing;
-}
-
-.emotion-28::-ms-track {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  -webkit-appearance: none;
-  box-shadow: none;
-  border: transparent;
-  background: transparent;
-}
-
-.emotion-28:focus::-webkit-slider-runnable-track {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  -webkit-appearance: none;
-  box-shadow: none;
-  border: transparent;
-  background: transparent;
-}
-
-.emotion-28::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  pointer-events: all;
-  width: 16px;
-  height: 16px;
-  background: #ffffff;
-  box-shadow: 0px 0px 2px 0px #22263829,0px 2px 4px 0px #2226381f;
-  border-radius: 100%;
-  border: none;
-  cursor: -webkit-grab;
-  cursor: grab;
-  -webkit-transition: background 0.3s ease-in-out;
-  transition: background 0.3s ease-in-out;
-  position: absolute;
-  left: calc(14% - 8px);
-  top: -8px;
-}
-
-.emotion-28::-webkit-slider-thumb:hover,
-.emotion-28::-webkit-slider-thumb:active,
-.emotion-28::-webkit-slider-thumb:focus {
-  border: 1.5px solid #8c40ef;
-}
-
-.emotion-28::-webkit-slider-thumb:active,
-.emotion-28::-webkit-slider-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
@@ -6493,12 +6469,12 @@ exports[`Double slider > renders correctly double default toolipt  1`] = `
             <div
               aria-controls="«r2f»"
               aria-describedby="«r2f»"
-              class="emotion-22 emotion-23"
+              class="styles__w40vpo9"
               tabindex="0"
             >
               <input
                 aria-label="Name"
-                class="emotion-24 emotion-25"
+                class="emotion-22 emotion-23"
                 data-direction="column"
                 data-testid="handle-left"
                 id="«r2a»"
@@ -6513,12 +6489,12 @@ exports[`Double slider > renders correctly double default toolipt  1`] = `
             <div
               aria-controls="«r2g»"
               aria-describedby="«r2g»"
-              class="emotion-22 emotion-23"
+              class="styles__w40vpo9"
               tabindex="0"
             >
               <input
                 aria-label="Name"
-                class="emotion-28 emotion-25"
+                class="emotion-24 emotion-23"
                 data-direction="column"
                 data-testid="handle-right"
                 id="«r2a»"
@@ -12439,18 +12415,20 @@ exports[`Double slider > renders correctly double with single tooltip 1`] = `
 }
 
 .emotion-18 {
-  display: inherit;
-}
-
-.emotion-18[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-18[data-container-full-width="true"] {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  height: 0.5rem;
   width: 100%;
+  min-width: 13.75rem;
+  border-radius: 0.25rem;
+  background: #e9eaeb;
 }
 
-.emotion-20 {
+.emotion-18 {
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -12466,46 +12444,162 @@ exports[`Double slider > renders correctly double with single tooltip 1`] = `
 
 .emotion-20 {
   position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  height: 0.5rem;
+  height: 100%;
+  background-color: #8c40ef;
+  border-radius: 0.25rem;
+}
+
+.emotion-20[data-error='true'] {
+  background-color: #e51963;
+}
+
+.emotion-20[aria-disabled='true'] {
+  background-color: #d8c5fc;
+}
+
+.emotion-20 {
+  position: absolute;
+  height: 100%;
+  background-color: #8c40ef;
+  border-radius: 0.25rem;
+}
+
+.emotion-20[data-error='true'] {
+  background-color: #e51963;
+}
+
+.emotion-20[aria-disabled='true'] {
+  background-color: #d8c5fc;
+}
+
+.emotion-22 {
+  position: absolute;
   width: 100%;
-  min-width: 13.75rem;
-  border-radius: 0.25rem;
-  background: #e9eaeb;
+  pointer-events: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  padding: 0;
+  background: transparent;
+  outline: none;
 }
 
-.emotion-22 {
+.emotion-22:focus::-moz-range-thumb {
+  border: 1.5px solid #8c40ef;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-22:focus::-webkit-slider-thumb {
+  border: 1.5px solid #8c40ef;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-22::-moz-range-track {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  -webkit-appearance: none;
+  box-shadow: none;
+  border: transparent;
+  background: transparent;
+}
+
+.emotion-22::-moz-range-thumb {
+  -webkit-appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  pointer-events: all;
+  width: 16px;
+  height: 16px;
+  background: #ffffff;
+  box-shadow: 0px 0px 2px 0px #22263829,0px 2px 4px 0px #2226381f;
+  border-radius: 100%;
+  border: none;
+  cursor: -webkit-grab;
+  cursor: grab;
+  -webkit-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
   position: absolute;
-  height: 100%;
-  background-color: #8c40ef;
-  border-radius: 0.25rem;
+  left: calc(12% - 8px);
+  top: -8px;
+  -webkit-transform: translate(0, -10px);
+  -moz-transform: translate(0, -10px);
+  -ms-transform: translate(0, -10px);
+  transform: translate(0, -10px);
 }
 
-.emotion-22[data-error='true'] {
-  background-color: #e51963;
+.emotion-22::-moz-range-thumb:hover,
+.emotion-22::-moz-range-thumb:active,
+.emotion-22::-moz-range-thumb:focus {
+  border: 1.5px solid #8c40ef;
 }
 
-.emotion-22[aria-disabled='true'] {
-  background-color: #d8c5fc;
+.emotion-22::-moz-range-thumb:active,
+.emotion-22::-moz-range-thumb:focus {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
 }
 
-.emotion-22 {
+.emotion-22::-ms-track {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  -webkit-appearance: none;
+  box-shadow: none;
+  border: transparent;
+  background: transparent;
+}
+
+.emotion-22:focus::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  -webkit-appearance: none;
+  box-shadow: none;
+  border: transparent;
+  background: transparent;
+}
+
+.emotion-22::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  pointer-events: all;
+  width: 16px;
+  height: 16px;
+  background: #ffffff;
+  box-shadow: 0px 0px 2px 0px #22263829,0px 2px 4px 0px #2226381f;
+  border-radius: 100%;
+  border: none;
+  cursor: -webkit-grab;
+  cursor: grab;
+  -webkit-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
   position: absolute;
-  height: 100%;
-  background-color: #8c40ef;
-  border-radius: 0.25rem;
+  left: calc(12% - 8px);
+  top: -8px;
 }
 
-.emotion-22[data-error='true'] {
-  background-color: #e51963;
+.emotion-22::-webkit-slider-thumb:hover,
+.emotion-22::-webkit-slider-thumb:active,
+.emotion-22::-webkit-slider-thumb:focus {
+  border: 1.5px solid #8c40ef;
 }
 
-.emotion-22[aria-disabled='true'] {
-  background-color: #d8c5fc;
+.emotion-22::-webkit-slider-thumb:active,
+.emotion-22::-webkit-slider-thumb:focus {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
 }
 
 .emotion-24 {
@@ -12560,7 +12654,7 @@ exports[`Double slider > renders correctly double with single tooltip 1`] = `
   -webkit-transition: background 0.3s ease-in-out;
   transition: background 0.3s ease-in-out;
   position: absolute;
-  left: calc(12% - 8px);
+  left: calc(14% - 8px);
   top: -8px;
   -webkit-transform: translate(0, -10px);
   -moz-transform: translate(0, -10px);
@@ -12621,7 +12715,7 @@ exports[`Double slider > renders correctly double with single tooltip 1`] = `
   -webkit-transition: background 0.3s ease-in-out;
   transition: background 0.3s ease-in-out;
   position: absolute;
-  left: calc(12% - 8px);
+  left: calc(14% - 8px);
   top: -8px;
 }
 
@@ -12633,136 +12727,6 @@ exports[`Double slider > renders correctly double with single tooltip 1`] = `
 
 .emotion-24::-webkit-slider-thumb:active,
 .emotion-24::-webkit-slider-thumb:focus {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-  cursor: -webkit-grabbing;
-  cursor: grabbing;
-}
-
-.emotion-26 {
-  position: absolute;
-  width: 100%;
-  pointer-events: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  padding: 0;
-  background: transparent;
-  outline: none;
-}
-
-.emotion-26:focus::-moz-range-thumb {
-  border: 1.5px solid #8c40ef;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-26:focus::-webkit-slider-thumb {
-  border: 1.5px solid #8c40ef;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-26::-moz-range-track {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  -webkit-appearance: none;
-  box-shadow: none;
-  border: transparent;
-  background: transparent;
-}
-
-.emotion-26::-moz-range-thumb {
-  -webkit-appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  pointer-events: all;
-  width: 16px;
-  height: 16px;
-  background: #ffffff;
-  box-shadow: 0px 0px 2px 0px #22263829,0px 2px 4px 0px #2226381f;
-  border-radius: 100%;
-  border: none;
-  cursor: -webkit-grab;
-  cursor: grab;
-  -webkit-transition: background 0.3s ease-in-out;
-  transition: background 0.3s ease-in-out;
-  position: absolute;
-  left: calc(14% - 8px);
-  top: -8px;
-  -webkit-transform: translate(0, -10px);
-  -moz-transform: translate(0, -10px);
-  -ms-transform: translate(0, -10px);
-  transform: translate(0, -10px);
-}
-
-.emotion-26::-moz-range-thumb:hover,
-.emotion-26::-moz-range-thumb:active,
-.emotion-26::-moz-range-thumb:focus {
-  border: 1.5px solid #8c40ef;
-}
-
-.emotion-26::-moz-range-thumb:active,
-.emotion-26::-moz-range-thumb:focus {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-  cursor: -webkit-grabbing;
-  cursor: grabbing;
-}
-
-.emotion-26::-ms-track {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  -webkit-appearance: none;
-  box-shadow: none;
-  border: transparent;
-  background: transparent;
-}
-
-.emotion-26:focus::-webkit-slider-runnable-track {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  -webkit-appearance: none;
-  box-shadow: none;
-  border: transparent;
-  background: transparent;
-}
-
-.emotion-26::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  pointer-events: all;
-  width: 16px;
-  height: 16px;
-  background: #ffffff;
-  box-shadow: 0px 0px 2px 0px #22263829,0px 2px 4px 0px #2226381f;
-  border-radius: 100%;
-  border: none;
-  cursor: -webkit-grab;
-  cursor: grab;
-  -webkit-transition: background 0.3s ease-in-out;
-  transition: background 0.3s ease-in-out;
-  position: absolute;
-  left: calc(14% - 8px);
-  top: -8px;
-}
-
-.emotion-26::-webkit-slider-thumb:hover,
-.emotion-26::-webkit-slider-thumb:active,
-.emotion-26::-webkit-slider-thumb:focus {
-  border: 1.5px solid #8c40ef;
-}
-
-.emotion-26::-webkit-slider-thumb:active,
-.emotion-26::-webkit-slider-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
@@ -12816,22 +12780,22 @@ exports[`Double slider > renders correctly double with single tooltip 1`] = `
             <div
               aria-controls="«r2l»"
               aria-describedby="«r2l»"
-              class="emotion-18 emotion-19"
+              class="styles__w40vpo9"
               tabindex="0"
             >
               <div
-                class="emotion-20 emotion-21"
+                class="emotion-18 emotion-19"
               >
                 <div
                   aria-disabled="false"
-                  class="emotion-22 emotion-23"
+                  class="emotion-20 emotion-21"
                   data-error="false"
                   style="left: 12%; right: 86%;"
                 />
               </div>
               <input
                 aria-label="Name"
-                class="emotion-24 emotion-25"
+                class="emotion-22 emotion-23"
                 data-direction="column"
                 data-testid="handle-left"
                 id="«r2h»"
@@ -12844,7 +12808,7 @@ exports[`Double slider > renders correctly double with single tooltip 1`] = `
               />
               <input
                 aria-label="Name"
-                class="emotion-26 emotion-25"
+                class="emotion-24 emotion-23"
                 data-direction="column"
                 data-testid="handle-right"
                 id="«r2h»"

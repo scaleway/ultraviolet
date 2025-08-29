@@ -4046,18 +4046,6 @@ exports[`List > Should render correctly with info 1`] = `
 }
 
 .emotion-10 {
-  display: inherit;
-}
-
-.emotion-10[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-10[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-12 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1rem;
@@ -4066,12 +4054,12 @@ exports[`List > Should render correctly with info 1`] = `
   min-height: 1rem;
 }
 
-.emotion-12 .fillStroke {
+.emotion-10 .fillStroke {
   stroke: #727683;
   fill: none;
 }
 
-.emotion-46 {
+.emotion-36 {
   display: table-row;
   vertical-align: middle;
   position: relative;
@@ -4088,82 +4076,82 @@ exports[`List > Should render correctly with info 1`] = `
   animation: 3s linear;
 }
 
-.emotion-46[role='button row'] {
+.emotion-36[role='button row'] {
   cursor: pointer;
 }
 
-.emotion-46 td,
-.emotion-46 td:first-child,
-.emotion-46 td:last-child {
+.emotion-36 td,
+.emotion-36 td:first-child,
+.emotion-36 td:last-child {
   -webkit-transition: box-shadow 200ms ease,border-color 200ms ease;
   transition: box-shadow 200ms ease,border-color 200ms ease;
 }
 
-.emotion-46 td {
+.emotion-36 td {
   border-top: 1px solid #d9dadd;
   border-bottom: 1px solid #d9dadd;
 }
 
-.emotion-46 td:first-child {
+.emotion-36 td:first-child {
   border-left: 1px solid #d9dadd;
   border-radius: 0.25rem 0 0 0.25rem;
 }
 
-.emotion-46 td:last-child {
+.emotion-36 td:last-child {
   border-right: 1px solid #d9dadd;
   border-radius: 0 0.25rem 0.25rem 0;
 }
 
-.emotion-46:not([aria-disabled='true']):hover td,
-.emotion-46:not([aria-disabled='true']):hover td:first-child,
-.emotion-46:not([aria-disabled='true']):hover td:last-child {
+.emotion-36:not([aria-disabled='true']):hover td,
+.emotion-36:not([aria-disabled='true']):hover td:first-child,
+.emotion-36:not([aria-disabled='true']):hover td:last-child {
   border-color: #8c40ef;
 }
 
-.emotion-46:not([aria-disabled='true']):hover+.ei4uyz15 td {
+.emotion-36:not([aria-disabled='true']):hover+.ei4uyz15 td {
   border-color: #8c40ef;
 }
 
-.emotion-46[aria-expanded='true'] td {
+.emotion-36[aria-expanded='true'] td {
   border-bottom-color: #d9dadd;
 }
 
-.emotion-46[aria-expanded='true'] td:first-child {
+.emotion-36[aria-expanded='true'] td:first-child {
   border-left: 1px solid #d9dadd;
   border-radius: 0.25rem 0 0 0;
 }
 
-.emotion-46[aria-expanded='true'] td:last-child {
+.emotion-36[aria-expanded='true'] td:last-child {
   border-right: 1px solid #d9dadd;
   border-radius: 0 0.25rem 0 0;
 }
 
-.emotion-46 [data-expandable-content] {
+.emotion-36 [data-expandable-content] {
   border-color: #d9dadd;
 }
 
-.emotion-46:not([aria-disabled='true']):hover {
+.emotion-36:not([aria-disabled='true']):hover {
   border-color: #8c40ef;
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
 
-.emotion-46[data-highlight='true'] {
+.emotion-36[data-highlight='true'] {
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
 
-.emotion-46[data-highlight='true'] td,
-.emotion-46[data-highlight='true'] td:first-child,
-.emotion-46[data-highlight='true'] td:last-child {
+.emotion-36[data-highlight='true'] td,
+.emotion-36[data-highlight='true'] td:first-child,
+.emotion-36[data-highlight='true'] td:last-child {
   border-color: #8c40ef;
 }
 
-.emotion-46[aria-disabled='true'] {
+.emotion-36[aria-disabled='true'] {
   background-color: #f3f3f4;
   color: #b5b7bd;
   cursor: not-allowed;
 }
 
-.emotion-46 {
+.emotion-36 {
   display: table-row;
   vertical-align: middle;
   position: relative;
@@ -4180,89 +4168,89 @@ exports[`List > Should render correctly with info 1`] = `
   animation: 3s linear;
 }
 
-.emotion-46[role='button row'] {
+.emotion-36[role='button row'] {
   cursor: pointer;
 }
 
-.emotion-46 td,
-.emotion-46 td:first-child,
-.emotion-46 td:last-child {
+.emotion-36 td,
+.emotion-36 td:first-child,
+.emotion-36 td:last-child {
   -webkit-transition: box-shadow 200ms ease,border-color 200ms ease;
   transition: box-shadow 200ms ease,border-color 200ms ease;
 }
 
-.emotion-46 td {
+.emotion-36 td {
   border-top: 1px solid #d9dadd;
   border-bottom: 1px solid #d9dadd;
 }
 
-.emotion-46 td:first-child {
+.emotion-36 td:first-child {
   border-left: 1px solid #d9dadd;
   border-radius: 0.25rem 0 0 0.25rem;
 }
 
-.emotion-46 td:last-child {
+.emotion-36 td:last-child {
   border-right: 1px solid #d9dadd;
   border-radius: 0 0.25rem 0.25rem 0;
 }
 
-.emotion-46:not([aria-disabled='true']):hover td,
-.emotion-46:not([aria-disabled='true']):hover td:first-child,
-.emotion-46:not([aria-disabled='true']):hover td:last-child {
+.emotion-36:not([aria-disabled='true']):hover td,
+.emotion-36:not([aria-disabled='true']):hover td:first-child,
+.emotion-36:not([aria-disabled='true']):hover td:last-child {
   border-color: #8c40ef;
 }
 
-.emotion-46:not([aria-disabled='true']):hover+.ei4uyz15 td {
+.emotion-36:not([aria-disabled='true']):hover+.ei4uyz15 td {
   border-color: #8c40ef;
 }
 
-.emotion-46[aria-expanded='true'] td {
+.emotion-36[aria-expanded='true'] td {
   border-bottom-color: #d9dadd;
 }
 
-.emotion-46[aria-expanded='true'] td:first-child {
+.emotion-36[aria-expanded='true'] td:first-child {
   border-left: 1px solid #d9dadd;
   border-radius: 0.25rem 0 0 0;
 }
 
-.emotion-46[aria-expanded='true'] td:last-child {
+.emotion-36[aria-expanded='true'] td:last-child {
   border-right: 1px solid #d9dadd;
   border-radius: 0 0.25rem 0 0;
 }
 
-.emotion-46 [data-expandable-content] {
+.emotion-36 [data-expandable-content] {
   border-color: #d9dadd;
 }
 
-.emotion-46:not([aria-disabled='true']):hover {
+.emotion-36:not([aria-disabled='true']):hover {
   border-color: #8c40ef;
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
 
-.emotion-46[data-highlight='true'] {
+.emotion-36[data-highlight='true'] {
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
 
-.emotion-46[data-highlight='true'] td,
-.emotion-46[data-highlight='true'] td:first-child,
-.emotion-46[data-highlight='true'] td:last-child {
+.emotion-36[data-highlight='true'] td,
+.emotion-36[data-highlight='true'] td:first-child,
+.emotion-36[data-highlight='true'] td:last-child {
   border-color: #8c40ef;
 }
 
-.emotion-46[aria-disabled='true'] {
+.emotion-36[aria-disabled='true'] {
   background-color: #f3f3f4;
   color: #b5b7bd;
   cursor: not-allowed;
 }
 
-.emotion-48 {
+.emotion-38 {
   display: table-cell;
   vertical-align: middle;
   height: 3.75rem;
   padding: 0 1rem;
 }
 
-.emotion-48 {
+.emotion-38 {
   display: table-cell;
   vertical-align: middle;
   height: 3.75rem;
@@ -4293,11 +4281,11 @@ exports[`List > Should render correctly with info 1`] = `
                 <div
                   aria-controls="«ra9»"
                   aria-describedby="«ra9»"
-                  class="emotion-10 emotion-11"
+                  class="styles__w40vpo9"
                   tabindex="0"
                 >
                   <svg
-                    class="emotion-12 emotion-13"
+                    class="emotion-10 emotion-11"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -4320,11 +4308,11 @@ exports[`List > Should render correctly with info 1`] = `
                 <div
                   aria-controls="«raa»"
                   aria-describedby="«raa»"
-                  class="emotion-10 emotion-11"
+                  class="styles__w40vpo9"
                   tabindex="0"
                 >
                   <svg
-                    class="emotion-12 emotion-13"
+                    class="emotion-10 emotion-11"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -4347,11 +4335,11 @@ exports[`List > Should render correctly with info 1`] = `
                 <div
                   aria-controls="«rab»"
                   aria-describedby="«rab»"
-                  class="emotion-10 emotion-11"
+                  class="styles__w40vpo9"
                   tabindex="0"
                 >
                   <svg
-                    class="emotion-12 emotion-13"
+                    class="emotion-10 emotion-11"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -4374,11 +4362,11 @@ exports[`List > Should render correctly with info 1`] = `
                 <div
                   aria-controls="«rac»"
                   aria-describedby="«rac»"
-                  class="emotion-10 emotion-11"
+                  class="styles__w40vpo9"
                   tabindex="0"
                 >
                   <svg
-                    class="emotion-12 emotion-13"
+                    class="emotion-10 emotion-11"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -4401,11 +4389,11 @@ exports[`List > Should render correctly with info 1`] = `
                 <div
                   aria-controls="«rad»"
                   aria-describedby="«rad»"
-                  class="emotion-10 emotion-11"
+                  class="styles__w40vpo9"
                   tabindex="0"
                 >
                   <svg
-                    class="emotion-12 emotion-13"
+                    class="emotion-10 emotion-11"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -4421,311 +4409,311 @@ exports[`List > Should render correctly with info 1`] = `
         </thead>
         <tbody>
           <tr
-            class="emotion-46 emotion-47"
+            class="emotion-36 emotion-37"
             data-highlight="false"
             tabindex="-1"
           >
             <td
-              class="emotion-48 emotion-49"
+              class="emotion-38 emotion-39"
             >
               Row 1 Column 1
             </td>
             <td
-              class="emotion-48 emotion-49"
+              class="emotion-38 emotion-39"
             >
               Row 1 Column 2
             </td>
             <td
-              class="emotion-48 emotion-49"
+              class="emotion-38 emotion-39"
             >
               Row 1 Column 3
             </td>
             <td
-              class="emotion-48 emotion-49"
+              class="emotion-38 emotion-39"
             >
               Row 1 Column 4
             </td>
             <td
-              class="emotion-48 emotion-49"
+              class="emotion-38 emotion-39"
             >
               Row 1 Column 5
             </td>
           </tr>
           <tr
-            class="emotion-46 emotion-47"
+            class="emotion-36 emotion-37"
             data-highlight="false"
             tabindex="-1"
           >
             <td
-              class="emotion-48 emotion-49"
+              class="emotion-38 emotion-39"
             >
               Row 2 Column 1
             </td>
             <td
-              class="emotion-48 emotion-49"
+              class="emotion-38 emotion-39"
             >
               Row 2 Column 2
             </td>
             <td
-              class="emotion-48 emotion-49"
+              class="emotion-38 emotion-39"
             >
               Row 2 Column 3
             </td>
             <td
-              class="emotion-48 emotion-49"
+              class="emotion-38 emotion-39"
             >
               Row 2 Column 4
             </td>
             <td
-              class="emotion-48 emotion-49"
+              class="emotion-38 emotion-39"
             >
               Row 2 Column 5
             </td>
           </tr>
           <tr
-            class="emotion-46 emotion-47"
+            class="emotion-36 emotion-37"
             data-highlight="false"
             tabindex="-1"
           >
             <td
-              class="emotion-48 emotion-49"
+              class="emotion-38 emotion-39"
             >
               Row 3 Column 1
             </td>
             <td
-              class="emotion-48 emotion-49"
+              class="emotion-38 emotion-39"
             >
               Row 3 Column 2
             </td>
             <td
-              class="emotion-48 emotion-49"
+              class="emotion-38 emotion-39"
             >
               Row 3 Column 3
             </td>
             <td
-              class="emotion-48 emotion-49"
+              class="emotion-38 emotion-39"
             >
               Row 3 Column 4
             </td>
             <td
-              class="emotion-48 emotion-49"
+              class="emotion-38 emotion-39"
             >
               Row 3 Column 5
             </td>
           </tr>
           <tr
-            class="emotion-46 emotion-47"
+            class="emotion-36 emotion-37"
             data-highlight="false"
             tabindex="-1"
           >
             <td
-              class="emotion-48 emotion-49"
+              class="emotion-38 emotion-39"
             >
               Row 4 Column 1
             </td>
             <td
-              class="emotion-48 emotion-49"
+              class="emotion-38 emotion-39"
             >
               Row 4 Column 2
             </td>
             <td
-              class="emotion-48 emotion-49"
+              class="emotion-38 emotion-39"
             >
               Row 4 Column 3
             </td>
             <td
-              class="emotion-48 emotion-49"
+              class="emotion-38 emotion-39"
             >
               Row 4 Column 4
             </td>
             <td
-              class="emotion-48 emotion-49"
+              class="emotion-38 emotion-39"
             >
               Row 4 Column 5
             </td>
           </tr>
           <tr
-            class="emotion-46 emotion-47"
+            class="emotion-36 emotion-37"
             data-highlight="false"
             tabindex="-1"
           >
             <td
-              class="emotion-48 emotion-49"
+              class="emotion-38 emotion-39"
             >
               Row 5 Column 1
             </td>
             <td
-              class="emotion-48 emotion-49"
+              class="emotion-38 emotion-39"
             >
               Row 5 Column 2
             </td>
             <td
-              class="emotion-48 emotion-49"
+              class="emotion-38 emotion-39"
             >
               Row 5 Column 3
             </td>
             <td
-              class="emotion-48 emotion-49"
+              class="emotion-38 emotion-39"
             >
               Row 5 Column 4
             </td>
             <td
-              class="emotion-48 emotion-49"
+              class="emotion-38 emotion-39"
             >
               Row 5 Column 5
             </td>
           </tr>
           <tr
-            class="emotion-46 emotion-47"
+            class="emotion-36 emotion-37"
             data-highlight="false"
             tabindex="-1"
           >
             <td
-              class="emotion-48 emotion-49"
+              class="emotion-38 emotion-39"
             >
               Row 6 Column 1
             </td>
             <td
-              class="emotion-48 emotion-49"
+              class="emotion-38 emotion-39"
             >
               Row 6 Column 2
             </td>
             <td
-              class="emotion-48 emotion-49"
+              class="emotion-38 emotion-39"
             >
               Row 6 Column 3
             </td>
             <td
-              class="emotion-48 emotion-49"
+              class="emotion-38 emotion-39"
             >
               Row 6 Column 4
             </td>
             <td
-              class="emotion-48 emotion-49"
+              class="emotion-38 emotion-39"
             >
               Row 6 Column 5
             </td>
           </tr>
           <tr
-            class="emotion-46 emotion-47"
+            class="emotion-36 emotion-37"
             data-highlight="false"
             tabindex="-1"
           >
             <td
-              class="emotion-48 emotion-49"
+              class="emotion-38 emotion-39"
             >
               Row 7 Column 1
             </td>
             <td
-              class="emotion-48 emotion-49"
+              class="emotion-38 emotion-39"
             >
               Row 7 Column 2
             </td>
             <td
-              class="emotion-48 emotion-49"
+              class="emotion-38 emotion-39"
             >
               Row 7 Column 3
             </td>
             <td
-              class="emotion-48 emotion-49"
+              class="emotion-38 emotion-39"
             >
               Row 7 Column 4
             </td>
             <td
-              class="emotion-48 emotion-49"
+              class="emotion-38 emotion-39"
             >
               Row 7 Column 5
             </td>
           </tr>
           <tr
-            class="emotion-46 emotion-47"
+            class="emotion-36 emotion-37"
             data-highlight="false"
             tabindex="-1"
           >
             <td
-              class="emotion-48 emotion-49"
+              class="emotion-38 emotion-39"
             >
               Row 8 Column 1
             </td>
             <td
-              class="emotion-48 emotion-49"
+              class="emotion-38 emotion-39"
             >
               Row 8 Column 2
             </td>
             <td
-              class="emotion-48 emotion-49"
+              class="emotion-38 emotion-39"
             >
               Row 8 Column 3
             </td>
             <td
-              class="emotion-48 emotion-49"
+              class="emotion-38 emotion-39"
             >
               Row 8 Column 4
             </td>
             <td
-              class="emotion-48 emotion-49"
+              class="emotion-38 emotion-39"
             >
               Row 8 Column 5
             </td>
           </tr>
           <tr
-            class="emotion-46 emotion-47"
+            class="emotion-36 emotion-37"
             data-highlight="false"
             tabindex="-1"
           >
             <td
-              class="emotion-48 emotion-49"
+              class="emotion-38 emotion-39"
             >
               Row 9 Column 1
             </td>
             <td
-              class="emotion-48 emotion-49"
+              class="emotion-38 emotion-39"
             >
               Row 9 Column 2
             </td>
             <td
-              class="emotion-48 emotion-49"
+              class="emotion-38 emotion-39"
             >
               Row 9 Column 3
             </td>
             <td
-              class="emotion-48 emotion-49"
+              class="emotion-38 emotion-39"
             >
               Row 9 Column 4
             </td>
             <td
-              class="emotion-48 emotion-49"
+              class="emotion-38 emotion-39"
             >
               Row 9 Column 5
             </td>
           </tr>
           <tr
-            class="emotion-46 emotion-47"
+            class="emotion-36 emotion-37"
             data-highlight="false"
             tabindex="-1"
           >
             <td
-              class="emotion-48 emotion-49"
+              class="emotion-38 emotion-39"
             >
               Row 10 Column 1
             </td>
             <td
-              class="emotion-48 emotion-49"
+              class="emotion-38 emotion-39"
             >
               Row 10 Column 2
             </td>
             <td
-              class="emotion-48 emotion-49"
+              class="emotion-38 emotion-39"
             >
               Row 10 Column 3
             </td>
             <td
-              class="emotion-48 emotion-49"
+              class="emotion-38 emotion-39"
             >
               Row 10 Column 4
             </td>
             <td
-              class="emotion-48 emotion-49"
+              class="emotion-38 emotion-39"
             >
               Row 10 Column 5
             </td>

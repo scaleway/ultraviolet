@@ -1,4 +1,3 @@
-import styled from '@emotion/styled'
 import type { StoryFn } from '@storybook/react-vite'
 import type { ComponentProps } from 'react'
 import { useCallback, useState } from 'react'
@@ -7,10 +6,6 @@ import { Modal } from '../../Modal'
 import { SelectInput } from '../../SelectInput'
 import { TextInput } from '../../TextInput'
 import { Popover } from '../index'
-
-const StyledPopover = styled(Popover)`
-  height: 400px;
-`
 
 const options: ComponentProps<typeof SelectInput>['options'] = [
   {
@@ -31,7 +26,7 @@ export const AdvancedUsage: StoryFn<typeof Popover> = () => {
   }, [])
 
   return (
-    <StyledPopover
+    <Popover
       content={
         <>
           <Modal
@@ -62,7 +57,7 @@ export const AdvancedUsage: StoryFn<typeof Popover> = () => {
       <Button onClick={() => setOpened(true)} sentiment="neutral">
         Open Popover
       </Button>
-    </StyledPopover>
+    </Popover>
   )
 }
 
