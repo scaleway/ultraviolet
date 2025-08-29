@@ -1,104 +1,15 @@
 'use client'
 
-import type { Theme } from '@emotion/react'
-import { css } from '@emotion/react'
-import styled from '@emotion/styled'
-import type { consoleLightTheme as theme } from '@ultraviolet/themes'
 import type { ReactNode, SVGProps } from 'react'
 import { forwardRef } from 'react'
-import capitalize from '../../utils/capitalize'
-
-const SIZES = {
-  large: '300',
-  medium: '250',
-  small: '200',
-  xlarge: '400',
-  xsmall: '150',
-  xxlarge: '700',
-} as const
+import type { PROMINENCES, SENTIMENTS, SIZES } from './constants'
+import { icon } from './styles.css'
 
 type SizesProps = keyof typeof SIZES
 
-type Color = Extract<
-  keyof typeof theme.colors,
-  | 'primary'
-  | 'secondary'
-  | 'neutral'
-  | 'success'
-  | 'danger'
-  | 'warning'
-  | 'info'
->
-
-const sizeStyles = ({ size, theme }: { size: SizesProps; theme: Theme }) => css`
-    height: ${theme.sizing[SIZES[size]]};
-    width: ${theme.sizing[SIZES[size]]};
-    min-width: ${theme.sizing[SIZES[size]]};
-    min-height: ${theme.sizing[SIZES[size]]};
-    `
-
-const PROMINENCES = {
-  default: '',
-  strong: 'strong',
-  stronger: 'stronger',
-  weak: 'weak',
-}
+type Color = (typeof SENTIMENTS)[number]
 
 type ProminenceProps = keyof typeof PROMINENCES
-
-const StyledIcon = styled('svg', {
-  shouldForwardProp: prop =>
-    !['size', 'sentiment', 'prominence', 'disabled'].includes(prop),
-})<{
-  sentiment?: Color
-  size: SizesProps
-  prominence: ProminenceProps
-  disabled?: boolean
-}>`
-  vertical-align: middle;
-  fill: ${({ theme, sentiment, prominence, disabled }) => {
-    // stronger is available only for neutral sentiment
-    const definedProminence =
-      (sentiment !== 'neutral' && prominence === 'stronger') ||
-      prominence === 'weak'
-        ? capitalize(PROMINENCES.default)
-        : capitalize(PROMINENCES[prominence])
-
-    if (sentiment) {
-      const themeColor = theme.colors[sentiment]
-      const icon = `icon${definedProminence}${
-        disabled ? 'Disabled' : ''
-      }` as keyof typeof themeColor
-
-      return theme.colors?.[sentiment]?.[icon] || sentiment
-    }
-
-    return 'currentColor'
-  }};
-
-  .fillStroke {
-    stroke: ${({ theme, sentiment, prominence, disabled }) => {
-      // stronger is available only for neutral color
-      const definedProminence =
-        sentiment !== 'neutral' && prominence === 'stronger'
-          ? capitalize(PROMINENCES.default)
-          : capitalize(PROMINENCES[prominence])
-
-      if (sentiment) {
-        const themeColor = theme.colors[sentiment]
-        const icon = `icon${definedProminence}${
-          disabled ? 'Disabled' : ''
-        }` as keyof typeof themeColor
-
-        return theme.colors?.[sentiment]?.[icon] || sentiment
-      }
-
-      return 'currentColor'
-    }};
-    fill: none;
-  }
-  ${sizeStyles}
-`
 
 export type IconProps = {
   size?: SizesProps
@@ -133,16 +44,12 @@ export const Icon = forwardRef<SVGSVGElement, IconProps>(
     },
     ref,
   ) => (
-    <StyledIcon
+    <svg
       aria-label={ariaLabel}
-      className={className}
+      className={`${className ? `${className} ` : ''}${icon({ disabled, prominence, sentiment, size })}`}
       cursor={cursor}
       data-testid={dataTestId}
-      disabled={disabled}
-      prominence={prominence}
       ref={ref}
-      sentiment={sentiment}
-      size={size}
       stroke={stroke}
       strokeWidth={strokeWidth}
       viewBox={
@@ -152,6 +59,6 @@ export const Icon = forwardRef<SVGSVGElement, IconProps>(
       }
     >
       {children}
-    </StyledIcon>
+    </svg>
   ),
 )
