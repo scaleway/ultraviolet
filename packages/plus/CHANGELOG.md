@@ -1,5 +1,12 @@
 # @ultraviolet/plus
 
+## 2.0.0-beta.6
+
+### Patch Changes
+
+- Updated dependencies [[`1e2d2e6`](https://github.com/scaleway/ultraviolet/commit/1e2d2e6bb100e55f4f16b5afa38c8b84df682fee), [`77ba125`](https://github.com/scaleway/ultraviolet/commit/77ba1256952471654e2d0e378077c7e511e985e7)]:
+  - @ultraviolet/ui@3.0.0-beta.6
+
 ## 2.0.0-beta.5
 
 ### Patch Changes
