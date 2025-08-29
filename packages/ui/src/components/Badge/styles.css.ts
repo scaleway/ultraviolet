@@ -67,14 +67,7 @@ export const badge = recipe({
     width: 'fit-content',
     borderWidth: '1px',
     borderStyle: 'solid',
-    /**
-     * otherwise StyledText's "text-transform" overrides this one
-     */
-    selectors: {
-      '&&': {
-        textTransform: 'uppercase',
-      },
-    },
+    textTransform: 'uppercase',
   },
   variants: {
     size: {

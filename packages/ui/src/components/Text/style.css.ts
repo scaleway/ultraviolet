@@ -5,6 +5,7 @@ import type { ExtendedColor } from 'src/theme'
 import { typography } from '../../theme'
 import { PROMINENCES } from './constant'
 import capitalize from '../../utils/capitalize'
+import { placementText, whiteSpaceText } from './variables.css'
 
 type TypographyKey = keyof typeof typography
 type ProminenceProps = keyof typeof PROMINENCES
@@ -111,7 +112,10 @@ function getArrayOfVariantNoSentiment() {
 }
 
 export const text = recipe({
-  base: {},
+  base: {
+    textAlign: placementText,
+    whiteSpace: whiteSpaceText,
+  },
   variants: {
     strikeThrough: {
       true: {
