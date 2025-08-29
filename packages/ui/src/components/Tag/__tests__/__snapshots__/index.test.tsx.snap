@@ -376,15 +376,6 @@ exports[`tag > renders correctly with isLoading 1`] = `
 }
 
 .emotion-4 {
-  -webkit-animation: spin 0.75s linear infinite;
-  animation: spin 0.75s linear infinite;
-}
-
-.emotion-6 {
-  stroke: #d9dadd;
-}
-
-.emotion-8 {
   -webkit-transition: stroke-dashoffset 0.5s ease 0s;
   transition: stroke-dashoffset 0.5s ease 0s;
 }
@@ -406,13 +397,13 @@ exports[`tag > renders correctly with isLoading 1`] = `
         aria-valuemin="0"
         aria-valuenow="20"
         aria-valuetext="20%"
-        class="emotion-4 emotion-5"
+        class="styles__tkulld2"
         role="progressbar"
         style="height: 1rem; width: 1rem;"
         viewBox="0 0 100 100"
       >
         <circle
-          class="emotion-6 emotion-7"
+          class="styles__tkulld1"
           cx="50"
           cy="50"
           fill="none"
@@ -420,7 +411,7 @@ exports[`tag > renders correctly with isLoading 1`] = `
           stroke-width="16"
         />
         <circle
-          class="emotion-8"
+          class="emotion-4"
           cx="50"
           cy="50"
           fill="none"

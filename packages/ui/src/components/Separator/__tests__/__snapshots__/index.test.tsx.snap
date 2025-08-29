@@ -2,24 +2,14 @@
 
 exports[`separator > renders correctly horizontally 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  margin: 0;
-  border: 0;
-  width: auto;
-  height: 1px;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  background-color: #e9eaeb;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <hr
       aria-orientation="horizontal"
-      class="emotion-0 emotion-1"
+      class="styles__bu43fbb styles_direction_horizontal__bu43fbc styles_sentiment_neutral__bu43fbi"
       role="separator"
+      style="--bu43fb0: 1px;"
     />
   </div>
 </DocumentFragment>
@@ -27,24 +17,14 @@ exports[`separator > renders correctly horizontally 1`] = `
 
 exports[`separator > renders correctly vertically 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  margin: 0;
-  border: 0;
-  width: 1px;
-  height: auto;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  background-color: #e9eaeb;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <hr
       aria-orientation="vertical"
-      class="emotion-0 emotion-1"
+      class="styles__bu43fbb styles_direction_vertical__bu43fbd styles_sentiment_neutral__bu43fbi"
       role="separator"
+      style="--bu43fb0: 1px;"
     />
   </div>
 </DocumentFragment>
@@ -53,38 +33,6 @@ exports[`separator > renders correctly vertically 1`] = `
 exports[`separator > renders correctly with custom icon 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-0 svg {
-  fill: #e9eaeb;
-}
-
-.emotion-2 {
-  margin: 0;
-  border: 0;
-  width: auto;
-  height: 1px;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  background-color: #e9eaeb;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-
-.emotion-4 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -93,7 +41,7 @@ exports[`separator > renders correctly with custom icon 1`] = `
   min-height: 1rem;
 }
 
-.emotion-4 .fillStroke {
+.emotion-0 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
@@ -103,14 +51,15 @@ exports[`separator > renders correctly with custom icon 1`] = `
   >
     <div
       aria-orientation="horizontal"
-      class="emotion-0 emotion-1"
+      class="styles__bu43fb1 styles_direction_horizontal__bu43fb2 styles_sentiment_neutral__bu43fb6"
       role="separator"
     >
       <hr
-        class="emotion-2 emotion-3"
+        class="styles__bu43fbb styles_direction_horizontal__bu43fbc styles_hasIcon_true__bu43fbf styles_sentiment_neutral__bu43fbi"
+        style="--bu43fb0: 1px;"
       />
       <svg
-        class="emotion-4 emotion-5"
+        class="emotion-0 emotion-1"
         viewBox="0 0 16 16"
       >
         <path
@@ -123,7 +72,8 @@ exports[`separator > renders correctly with custom icon 1`] = `
         />
       </svg>
       <hr
-        class="emotion-2 emotion-3"
+        class="styles__bu43fbb styles_direction_horizontal__bu43fbc styles_hasIcon_true__bu43fbf styles_sentiment_neutral__bu43fbi"
+        style="--bu43fb0: 1px;"
       />
     </div>
   </div>
@@ -133,38 +83,6 @@ exports[`separator > renders correctly with custom icon 1`] = `
 exports[`separator > renders correctly with custom icon horizontally 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-0 svg {
-  fill: #e9eaeb;
-}
-
-.emotion-2 {
-  margin: 0;
-  border: 0;
-  width: auto;
-  height: 1px;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  background-color: #e9eaeb;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-
-.emotion-4 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -173,7 +91,7 @@ exports[`separator > renders correctly with custom icon horizontally 1`] = `
   min-height: 1rem;
 }
 
-.emotion-4 .fillStroke {
+.emotion-0 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
@@ -183,14 +101,15 @@ exports[`separator > renders correctly with custom icon horizontally 1`] = `
   >
     <div
       aria-orientation="horizontal"
-      class="emotion-0 emotion-1"
+      class="styles__bu43fb1 styles_direction_horizontal__bu43fb2 styles_sentiment_neutral__bu43fb6"
       role="separator"
     >
       <hr
-        class="emotion-2 emotion-3"
+        class="styles__bu43fbb styles_direction_horizontal__bu43fbc styles_hasIcon_true__bu43fbf styles_sentiment_neutral__bu43fbi"
+        style="--bu43fb0: 1px;"
       />
       <svg
-        class="emotion-4 emotion-5"
+        class="emotion-0 emotion-1"
         viewBox="0 0 16 16"
       >
         <path
@@ -203,7 +122,8 @@ exports[`separator > renders correctly with custom icon horizontally 1`] = `
         />
       </svg>
       <hr
-        class="emotion-2 emotion-3"
+        class="styles__bu43fbb styles_direction_horizontal__bu43fbc styles_hasIcon_true__bu43fbf styles_sentiment_neutral__bu43fbi"
+        style="--bu43fb0: 1px;"
       />
     </div>
   </div>
@@ -213,38 +133,6 @@ exports[`separator > renders correctly with custom icon horizontally 1`] = `
 exports[`separator > renders correctly with custom icon vertically 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-0 svg {
-  fill: #e9eaeb;
-}
-
-.emotion-2 {
-  margin: 0;
-  border: 0;
-  width: 1px;
-  height: auto;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  background-color: #e9eaeb;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-
-.emotion-4 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -253,7 +141,7 @@ exports[`separator > renders correctly with custom icon vertically 1`] = `
   min-height: 1rem;
 }
 
-.emotion-4 .fillStroke {
+.emotion-0 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
@@ -263,14 +151,15 @@ exports[`separator > renders correctly with custom icon vertically 1`] = `
   >
     <div
       aria-orientation="vertical"
-      class="emotion-0 emotion-1"
+      class="styles__bu43fb1 styles_direction_vertical__bu43fb3 styles_sentiment_neutral__bu43fb6"
       role="separator"
     >
       <hr
-        class="emotion-2 emotion-3"
+        class="styles__bu43fbb styles_direction_vertical__bu43fbd styles_hasIcon_true__bu43fbf styles_sentiment_neutral__bu43fbi"
+        style="--bu43fb0: 1px;"
       />
       <svg
-        class="emotion-4 emotion-5"
+        class="emotion-0 emotion-1"
         viewBox="0 0 16 16"
       >
         <path
@@ -283,7 +172,8 @@ exports[`separator > renders correctly with custom icon vertically 1`] = `
         />
       </svg>
       <hr
-        class="emotion-2 emotion-3"
+        class="styles__bu43fbb styles_direction_vertical__bu43fbd styles_hasIcon_true__bu43fbf styles_sentiment_neutral__bu43fbi"
+        style="--bu43fb0: 1px;"
       />
     </div>
   </div>
@@ -292,24 +182,14 @@ exports[`separator > renders correctly with custom icon vertically 1`] = `
 
 exports[`separator > renders correctly with custom sentiment 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  margin: 0;
-  border: 0;
-  width: auto;
-  height: 1px;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  background-color: #8c40ef;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <hr
       aria-orientation="horizontal"
-      class="emotion-0 emotion-1"
+      class="styles__bu43fbb styles_direction_horizontal__bu43fbc styles_sentiment_primary__bu43fbj"
       role="separator"
+      style="--bu43fb0: 1px;"
     />
   </div>
 </DocumentFragment>
@@ -318,38 +198,6 @@ exports[`separator > renders correctly with custom sentiment 1`] = `
 exports[`separator > renders correctly with custom sentiment and icon 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-0 svg {
-  fill: #8c40ef;
-}
-
-.emotion-2 {
-  margin: 0;
-  border: 0;
-  width: auto;
-  height: 1px;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  background-color: #8c40ef;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-
-.emotion-4 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -358,7 +206,7 @@ exports[`separator > renders correctly with custom sentiment and icon 1`] = `
   min-height: 1rem;
 }
 
-.emotion-4 .fillStroke {
+.emotion-0 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
@@ -368,14 +216,15 @@ exports[`separator > renders correctly with custom sentiment and icon 1`] = `
   >
     <div
       aria-orientation="horizontal"
-      class="emotion-0 emotion-1"
+      class="styles__bu43fb1 styles_direction_horizontal__bu43fb2 styles_sentiment_primary__bu43fb7"
       role="separator"
     >
       <hr
-        class="emotion-2 emotion-3"
+        class="styles__bu43fbb styles_direction_horizontal__bu43fbc styles_hasIcon_true__bu43fbf styles_sentiment_primary__bu43fbj"
+        style="--bu43fb0: 1px;"
       />
       <svg
-        class="emotion-4 emotion-5"
+        class="emotion-0 emotion-1"
         viewBox="0 0 16 16"
       >
         <path
@@ -388,7 +237,8 @@ exports[`separator > renders correctly with custom sentiment and icon 1`] = `
         />
       </svg>
       <hr
-        class="emotion-2 emotion-3"
+        class="styles__bu43fbb styles_direction_horizontal__bu43fbc styles_hasIcon_true__bu43fbf styles_sentiment_primary__bu43fbj"
+        style="--bu43fb0: 1px;"
       />
     </div>
   </div>
@@ -397,24 +247,14 @@ exports[`separator > renders correctly with custom sentiment and icon 1`] = `
 
 exports[`separator > renders correctly with custom thickness 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  margin: 0;
-  border: 0;
-  width: auto;
-  height: 3px;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  background-color: #e9eaeb;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <hr
       aria-orientation="horizontal"
-      class="emotion-0 emotion-1"
+      class="styles__bu43fbb styles_direction_horizontal__bu43fbc styles_sentiment_neutral__bu43fbi"
       role="separator"
+      style="--bu43fb0: 3px;"
     />
   </div>
 </DocumentFragment>
@@ -422,24 +262,14 @@ exports[`separator > renders correctly with custom thickness 1`] = `
 
 exports[`separator > renders correctly with default props 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  margin: 0;
-  border: 0;
-  width: auto;
-  height: 1px;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  background-color: #e9eaeb;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <hr
       aria-orientation="horizontal"
-      class="emotion-0 emotion-1"
+      class="styles__bu43fbb styles_direction_horizontal__bu43fbc styles_sentiment_neutral__bu43fbi"
       role="separator"
+      style="--bu43fb0: 1px;"
     />
   </div>
 </DocumentFragment>
