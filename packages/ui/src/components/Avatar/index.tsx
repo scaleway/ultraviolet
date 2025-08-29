@@ -10,14 +10,16 @@ import {
   colorsAvatar,
   containerAvatar,
   elementContainer,
-  finalColorAvatar,
-  finalSizeAvatar,
-  halvedColorAvatar,
   productIconContainer,
   svgAvatar,
   uploadContainer,
 } from './styles.css'
 import type { AvatarProps, SentimentColors } from './types'
+import {
+  finalColorAvatar,
+  finalSizeAvatar,
+  halvedColorAvatar,
+} from './variables.css'
 
 /**
  * The Avatar component is used to represent a user, product, or entity. It can be used to display an image, an icon, a text or a set of colors.

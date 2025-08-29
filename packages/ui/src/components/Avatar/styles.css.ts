@@ -1,11 +1,11 @@
 import { theme } from '@ultraviolet/themes'
-import { createVar } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
 import { RADIUS_SIZES, sizes } from './constants'
-
-export const finalSizeAvatar = createVar()
-export const finalColorAvatar = createVar()
-export const halvedColorAvatar = createVar()
+import {
+  finalColorAvatar,
+  finalSizeAvatar,
+  halvedColorAvatar,
+} from './variables.css'
 
 function getSquareStyle(size: keyof ReturnType<typeof sizes>) {
   return {
