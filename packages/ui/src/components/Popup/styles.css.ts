@@ -1,16 +1,17 @@
 import { theme } from '@ultraviolet/themes'
 import { recipe } from '@vanilla-extract/recipes'
 import { DEFAULT_ARROW_WIDTH } from './helpers'
-import { createVar, keyframes, styleVariants } from '@vanilla-extract/css'
-
-export const arrowTop = createVar()
-export const arrowLeft = createVar()
-export const arrowTransform = createVar()
-export const maxHeightPopup = createVar()
-export const popupPosition = createVar()
-export const animationDurationPopup = createVar()
-export const popupInitialPosition = createVar()
-export const maxWidthPopup = createVar()
+import { keyframes, styleVariants } from '@vanilla-extract/css'
+import {
+  animationDurationPopup,
+  arrowLeft,
+  arrowTop,
+  arrowTransform,
+  maxHeightPopup,
+  maxWidthPopup,
+  popupInitialPosition,
+  popupPosition,
+} from './variables.css'
 
 const animation = keyframes({
   ' 0%': {
