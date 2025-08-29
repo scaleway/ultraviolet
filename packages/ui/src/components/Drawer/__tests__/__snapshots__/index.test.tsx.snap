@@ -642,46 +642,48 @@ exports[`drawer > renders with disclosure and onClose 1`] = `
 }
 
 .emotion-9 {
-  margin: 0;
-  border: 0;
-  width: auto;
-  height: 1px;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  background-color: #e9eaeb;
+  overflow-y: auto;
+  height: 100%;
 }
 
 .emotion-9 {
-  margin: 0;
-  border: 0;
-  width: auto;
-  height: 1px;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  background-color: #e9eaeb;
-}
-
-.emotion-11 {
   overflow-y: auto;
   height: 100%;
 }
 
 .emotion-11 {
-  overflow-y: auto;
-  height: 100%;
+  padding-inline: 1rem;
 }
 
-.emotion-13 {
+.emotion-11 {
   padding-inline: 1rem;
 }
 
 .emotion-13 {
-  padding-inline: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 1rem;
+  padding-top: 0;
 }
 
-.emotion-15 {
+.emotion-13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -706,42 +708,18 @@ exports[`drawer > renders with disclosure and onClose 1`] = `
 }
 
 .emotion-15 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  padding: 1rem;
-  padding-top: 0;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
 }
 
-.emotion-17 {
+.emotion-15 {
   position: absolute;
   top: 1rem;
   right: 1rem;
 }
 
 .emotion-17 {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-}
-
-.emotion-19 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -750,12 +728,12 @@ exports[`drawer > renders with disclosure and onClose 1`] = `
   min-height: 1rem;
 }
 
-.emotion-19 .fillStroke {
+.emotion-17 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.emotion-19 {
+.emotion-17 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -764,7 +742,7 @@ exports[`drawer > renders with disclosure and onClose 1`] = `
   min-height: 1rem;
 }
 
-.emotion-19 .fillStroke {
+.emotion-17 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
@@ -800,14 +778,15 @@ exports[`drawer > renders with disclosure and onClose 1`] = `
           </h2>
           <hr
             aria-orientation="horizontal"
-            class="emotion-9 emotion-10"
+            class="styles__bu43fbb styles_direction_horizontal__bu43fbc styles_sentiment_neutral__bu43fbi"
             role="separator"
+            style="--bu43fb0: 1px;"
           />
           <div
-            class="emotion-11 emotion-12"
+            class="emotion-9 emotion-10"
           >
             <div
-              class="emotion-13 emotion-14"
+              class="emotion-11 emotion-12"
             >
               <div>
                 drawer
@@ -815,11 +794,11 @@ exports[`drawer > renders with disclosure and onClose 1`] = `
             </div>
           </div>
           <div
-            class="emotion-15 emotion-16"
+            class="emotion-13 emotion-14"
           />
         </div>
         <div
-          class="emotion-17 emotion-18"
+          class="emotion-15 emotion-16"
         >
           <button
             aria-label="close"
@@ -828,7 +807,7 @@ exports[`drawer > renders with disclosure and onClose 1`] = `
             type="button"
           >
             <svg
-              class="emotion-19 emotion-20"
+              class="emotion-17 emotion-18"
               viewBox="0 0 16 16"
             >
               <path

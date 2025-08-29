@@ -1,8 +1,8 @@
 'use client'
 
 import { css, useTheme } from '@emotion/react'
-import styled from '@emotion/styled'
 import type { ExtendedColor } from '../../theme'
+import { circle, loader } from './styles.css'
 
 const VIEWBOX_WIDTH = 100
 const VIEWBOX_HEIGHT = 100
@@ -18,26 +18,6 @@ export const SIZES = {
   xxlarge: '700',
 } as const
 
-const StyledSvg = styled('svg', {
-  shouldForwardProp: prop => !['active'].includes(prop),
-})<{ active: boolean }>`
-  ${({ active }) =>
-    active
-      ? `
-        animation: spin 0.75s linear infinite;
-
-        @keyframes spin {
-          from {
-            transform: rotate(0deg);
-          }
-          to {
-            transform: rotate(360deg);
-          }
-        }
-      `
-      : ''}
-`
-
 type LoaderProps = {
   active?: boolean
   sentiment?: ExtendedColor
@@ -48,10 +28,6 @@ type LoaderProps = {
    */
   label?: string
 }
-
-export const StyledCircle = styled.circle`
-stroke: ${({ theme }) => theme.colors.neutral.border};
-`
 
 /**
  * Loader is a circular progress indicator that can be used to indicate that an action is being performed.
@@ -70,13 +46,13 @@ export const Loader = ({
   const circleDiameter = Math.PI * 2 * circleRadius
 
   return (
-    <StyledSvg
-      active={active}
+    <svg
       aria-label={label}
       aria-valuemax={100}
       aria-valuemin={0}
       aria-valuenow={percentage}
       aria-valuetext={`${percentage}%`}
+      className={active ? loader : undefined}
       role="progressbar"
       style={{
         height: theme.sizing[SIZES[size]],
@@ -84,7 +60,8 @@ export const Loader = ({
       }}
       viewBox={`0 0 ${VIEWBOX_WIDTH} ${VIEWBOX_HEIGHT}`}
     >
-      <StyledCircle
+      <circle
+        className={circle}
         cx={HALF_VIEWBOX_WIDTH}
         cy={HALF_VIEWBOX_HEIGHT}
         fill="none"
@@ -110,6 +87,6 @@ export const Loader = ({
         strokeLinecap="round"
         strokeWidth={16}
       />
-    </StyledSvg>
+    </svg>
   )
 }
