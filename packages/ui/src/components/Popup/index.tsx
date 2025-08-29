@@ -25,19 +25,21 @@ import { isClientSide } from '../../helpers/isClientSide'
 import type { PopupAlign, PopupPlacement } from './helpers'
 import { computePositions, DEFAULT_POSITIONS } from './helpers'
 import {
-  animationDurationPopup,
   animationPopup,
+  childrenContainerPopup,
+  containerPopup,
+  popup,
+} from './styles.css'
+import {
+  animationDurationPopup,
   arrowLeft,
   arrowTop,
   arrowTransform,
-  childrenContainerPopup,
-  containerPopup,
   maxHeightPopup,
   maxWidthPopup,
-  popup,
   popupInitialPosition,
   popupPosition,
-} from './styles.css'
+} from './variables.css'
 
 const DEFAULT_ANIMATION_DURATION = 230 // in ms
 const DEFAULT_DEBOUNCE_DURATION = 200 // in ms
