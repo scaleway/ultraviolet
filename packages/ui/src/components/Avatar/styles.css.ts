@@ -1,7 +1,11 @@
 import { theme } from '@ultraviolet/themes'
-import { style } from '@vanilla-extract/css'
+import { createVar } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
 import { RADIUS_SIZES, sizes } from './constants'
+
+export const finalSizeAvatar = createVar()
+export const finalColorAvatar = createVar()
+export const halvedColorAvatar = createVar()
 
 function getSquareStyle(size: keyof ReturnType<typeof sizes>) {
   return {
@@ -119,7 +123,9 @@ export const productIconContainer = recipe({
   },
   variants: {
     shape: {
-      circle: {},
+      circle: {
+        borderRadius: theme.radii.circle,
+      },
       square: {},
     },
     size: {
@@ -146,7 +152,31 @@ export const elementContainer = recipe({
   },
 })
 
-export const colorsAvatar = style(baseStyle)
+export const colorsAvatar = recipe({
+  base: {
+    ...baseStyle,
+    borderBottom: `calc(${finalSizeAvatar} / 2) solid ${halvedColorAvatar}`,
+    borderLeft: `calc(${finalSizeAvatar} / 2) solid ${finalColorAvatar}`,
+    borderRight: `calc(${finalSizeAvatar} / 2) solid ${halvedColorAvatar}`,
+    borderTop: `calc(${finalSizeAvatar} / 2) solid ${finalColorAvatar}`,
+  },
+
+  variants: {
+    size: {
+      large: sizeStyle('large'),
+      medium: sizeStyle('medium'),
+      small: sizeStyle('small'),
+      xsmall: sizeStyle('xsmall'),
+    },
+    shape: {
+      circle: {
+        borderRadius: theme.radii.circle,
+      },
+      square: {},
+    },
+  },
+  compoundVariants: borderRadiusSquare,
+})
 
 export const svgAvatar = recipe({
   base: {

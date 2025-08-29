@@ -3,17 +3,16 @@
 import { UploadIcon } from '@ultraviolet/icons'
 import { UserProductIcon } from '@ultraviolet/icons/product'
 import { theme as UVTheme } from '@ultraviolet/themes'
+import { assignInlineVars } from '@vanilla-extract/dynamic'
 import { Text } from '../Text'
-import {
-  DEFAULT_COLORS,
-  RADIUS_SIZES,
-  sizes,
-  TEXT_VARIANT_BY_SIZE,
-} from './constants'
+import { DEFAULT_COLORS, sizes, TEXT_VARIANT_BY_SIZE } from './constants'
 import {
   colorsAvatar,
   containerAvatar,
   elementContainer,
+  finalColorAvatar,
+  finalSizeAvatar,
+  halvedColorAvatar,
   productIconContainer,
   svgAvatar,
   uploadContainer,
@@ -87,16 +86,12 @@ export const Avatar = ({
       ) : null}
       {variant === 'colors' ? (
         <span
-          className={colorsAvatar}
-          style={{
-            borderBottom: `calc(${finalSize} / 2) solid ${isHalved ? finalColors[1] : finalColors[0]}`,
-            borderLeft: `calc(${finalSize} / 2) solid ${finalColors[0]}`,
-            borderRadius: `${shape === 'circle' ? UVTheme.radii.circle : UVTheme.radii[RADIUS_SIZES[size]]}`,
-            borderRight: `calc(${finalSize} / 2) solid ${isHalved ? finalColors[1] : finalColors[0]}`,
-            borderTop: `calc(${finalSize} / 2) solid ${finalColors[0]}`,
-            height: sizes(UVTheme)[size],
-            width: sizes(UVTheme)[size],
-          }}
+          className={colorsAvatar({ shape, size })}
+          style={assignInlineVars({
+            [finalSizeAvatar]: finalSize,
+            [finalColorAvatar]: finalColors[0],
+            [halvedColorAvatar]: isHalved ? finalColors[1] : finalColors[0],
+          })}
         />
       ) : null}
     </div>
