@@ -80,7 +80,7 @@ const EditorContainer = styled.div`
 
     .cm-editor.cm-focused {
       box-shadow: none;
-      border: 1px solid transparent; 
+      border: 1px solid transparent;
     }
   }
 `
@@ -125,6 +125,7 @@ type CodeEditorProps = {
   'aria-label'?: string
   'data-testid'?: string
   className?: string
+  error?: string
 }
 
 export const CodeEditor = ({
@@ -144,6 +145,7 @@ export const CodeEditor = ({
   'aria-label': ariaLabel,
   'data-testid': dataTestId,
   className,
+  error,
 }: CodeEditorProps) => (
   <StyledStack data-disabled={disabled} gap={0.5}>
     {label ? <Label labelDescription={labelDescription}>{label}</Label> : null}
@@ -185,7 +187,12 @@ export const CodeEditor = ({
         </StyledCopyButton>
       ) : null}
     </EditorContainer>
-    {helper ? (
+    {error && typeof error !== 'boolean' ? (
+      <Text as="span" sentiment="danger" variant="caption">
+        {error}
+      </Text>
+    ) : null}
+    {!error && helper ? (
       <Text as="span" prominence="weak" sentiment="neutral" variant="caption">
         {helper}
       </Text>
