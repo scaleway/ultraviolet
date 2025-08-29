@@ -1,5 +1,13 @@
 # Change Log
 
+## 3.0.0-beta.6
+
+### Major Changes
+
+- [#5474](https://github.com/scaleway/ultraviolet/pull/5474) [`1e2d2e6`](https://github.com/scaleway/ultraviolet/commit/1e2d2e6bb100e55f4f16b5afa38c8b84df682fee) Thanks [@lisalupi](https://github.com/lisalupi)! - Refactor components `Loader` and `Separator` to use vanilla-extract instead of Emotion
+
+- [#5467](https://github.com/scaleway/ultraviolet/pull/5467) [`77ba125`](https://github.com/scaleway/ultraviolet/commit/77ba1256952471654e2d0e378077c7e511e985e7) Thanks [@lisalupi](https://github.com/lisalupi)! - Refactor components `Avatar` to use vanilla-extract instead of Emotion
+
 ## 3.0.0-beta.5
 
 ### Major Changes
