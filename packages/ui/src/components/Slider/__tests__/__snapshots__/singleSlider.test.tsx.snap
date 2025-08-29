@@ -1896,18 +1896,6 @@ exports[`Single slider > renders correctly custom tooltip 1`] = `
 }
 
 .emotion-14 {
-  display: inherit;
-}
-
-.emotion-14[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-14[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-16 {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -1925,31 +1913,31 @@ exports[`Single slider > renders correctly custom tooltip 1`] = `
   outline: none;
 }
 
-.emotion-16:focus::-moz-range-thumb {
+.emotion-14:focus::-moz-range-thumb {
   border: 1.5px solid #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-16:focus::-webkit-slider-thumb {
+.emotion-14:focus::-webkit-slider-thumb {
   border: 1.5px solid #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-16[data-error='true'] {
+.emotion-14[data-error='true'] {
   background-image: linear-gradient(#e51963, #e51963);
 }
 
-.emotion-16[data-direction='column'] {
+.emotion-14[data-direction='column'] {
   -webkit-align-self: baseline;
   -ms-flex-item-align: baseline;
   align-self: baseline;
 }
 
-.emotion-16[aria-disabled='true'] {
+.emotion-14[aria-disabled='true'] {
   background-image: linear-gradient(#d8c5fc, #d8c5fc);
 }
 
-.emotion-16::-moz-range-track {
+.emotion-14::-moz-range-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -1960,7 +1948,7 @@ exports[`Single slider > renders correctly custom tooltip 1`] = `
   background: transparent;
 }
 
-.emotion-16::-moz-range-thumb {
+.emotion-14::-moz-range-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -1982,20 +1970,20 @@ exports[`Single slider > renders correctly custom tooltip 1`] = `
   top: -4px;
 }
 
-.emotion-16::-moz-range-thumb:hover,
-.emotion-16::-moz-range-thumb:active,
-.emotion-16::-moz-range-thumb:focus {
+.emotion-14::-moz-range-thumb:hover,
+.emotion-14::-moz-range-thumb:active,
+.emotion-14::-moz-range-thumb:focus {
   border: 1.5px solid #8c40ef;
 }
 
-.emotion-16::-moz-range-thumb:active,
-.emotion-16::-moz-range-thumb:focus {
+.emotion-14::-moz-range-thumb:active,
+.emotion-14::-moz-range-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
 }
 
-.emotion-16::-webkit-slider-runnable-track {
+.emotion-14::-webkit-slider-runnable-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -2006,7 +1994,7 @@ exports[`Single slider > renders correctly custom tooltip 1`] = `
   background: transparent;
 }
 
-.emotion-16::-webkit-slider-thumb {
+.emotion-14::-webkit-slider-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -2028,14 +2016,14 @@ exports[`Single slider > renders correctly custom tooltip 1`] = `
   top: -4px;
 }
 
-.emotion-16::-webkit-slider-thumb:hover,
-.emotion-16::-webkit-slider-thumb:active,
-.emotion-16::-webkit-slider-thumb:focus {
+.emotion-14::-webkit-slider-thumb:hover,
+.emotion-14::-webkit-slider-thumb:active,
+.emotion-14::-webkit-slider-thumb:focus {
   border: 1.5px solid #8c40ef;
 }
 
-.emotion-16::-webkit-slider-thumb:active,
-.emotion-16::-webkit-slider-thumb:focus {
+.emotion-14::-webkit-slider-thumb:active,
+.emotion-14::-webkit-slider-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
@@ -2077,12 +2065,12 @@ exports[`Single slider > renders correctly custom tooltip 1`] = `
           <div
             aria-controls="«r2d»"
             aria-describedby="«r2d»"
-            class="emotion-14 emotion-15"
+            class="styles__w40vpoh"
             tabindex="0"
           >
             <input
               aria-label="Name"
-              class="emotion-16 emotion-17"
+              class="emotion-14 emotion-15"
               data-direction="column"
               data-error="false"
               id="«r2a»"
@@ -2234,18 +2222,6 @@ exports[`Single slider > renders correctly default tooltip 1`] = `
 }
 
 .emotion-14 {
-  display: inherit;
-}
-
-.emotion-14[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-14[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-16 {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -2263,31 +2239,31 @@ exports[`Single slider > renders correctly default tooltip 1`] = `
   outline: none;
 }
 
-.emotion-16:focus::-moz-range-thumb {
+.emotion-14:focus::-moz-range-thumb {
   border: 1.5px solid #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-16:focus::-webkit-slider-thumb {
+.emotion-14:focus::-webkit-slider-thumb {
   border: 1.5px solid #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-16[data-error='true'] {
+.emotion-14[data-error='true'] {
   background-image: linear-gradient(#e51963, #e51963);
 }
 
-.emotion-16[data-direction='column'] {
+.emotion-14[data-direction='column'] {
   -webkit-align-self: baseline;
   -ms-flex-item-align: baseline;
   align-self: baseline;
 }
 
-.emotion-16[aria-disabled='true'] {
+.emotion-14[aria-disabled='true'] {
   background-image: linear-gradient(#d8c5fc, #d8c5fc);
 }
 
-.emotion-16::-moz-range-track {
+.emotion-14::-moz-range-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -2298,7 +2274,7 @@ exports[`Single slider > renders correctly default tooltip 1`] = `
   background: transparent;
 }
 
-.emotion-16::-moz-range-thumb {
+.emotion-14::-moz-range-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -2320,20 +2296,20 @@ exports[`Single slider > renders correctly default tooltip 1`] = `
   top: -4px;
 }
 
-.emotion-16::-moz-range-thumb:hover,
-.emotion-16::-moz-range-thumb:active,
-.emotion-16::-moz-range-thumb:focus {
+.emotion-14::-moz-range-thumb:hover,
+.emotion-14::-moz-range-thumb:active,
+.emotion-14::-moz-range-thumb:focus {
   border: 1.5px solid #8c40ef;
 }
 
-.emotion-16::-moz-range-thumb:active,
-.emotion-16::-moz-range-thumb:focus {
+.emotion-14::-moz-range-thumb:active,
+.emotion-14::-moz-range-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
 }
 
-.emotion-16::-webkit-slider-runnable-track {
+.emotion-14::-webkit-slider-runnable-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -2344,7 +2320,7 @@ exports[`Single slider > renders correctly default tooltip 1`] = `
   background: transparent;
 }
 
-.emotion-16::-webkit-slider-thumb {
+.emotion-14::-webkit-slider-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -2366,14 +2342,14 @@ exports[`Single slider > renders correctly default tooltip 1`] = `
   top: -4px;
 }
 
-.emotion-16::-webkit-slider-thumb:hover,
-.emotion-16::-webkit-slider-thumb:active,
-.emotion-16::-webkit-slider-thumb:focus {
+.emotion-14::-webkit-slider-thumb:hover,
+.emotion-14::-webkit-slider-thumb:active,
+.emotion-14::-webkit-slider-thumb:focus {
   border: 1.5px solid #8c40ef;
 }
 
-.emotion-16::-webkit-slider-thumb:active,
-.emotion-16::-webkit-slider-thumb:focus {
+.emotion-14::-webkit-slider-thumb:active,
+.emotion-14::-webkit-slider-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
@@ -2415,12 +2391,12 @@ exports[`Single slider > renders correctly default tooltip 1`] = `
           <div
             aria-controls="«r2h»"
             aria-describedby="«r2h»"
-            class="emotion-14 emotion-15"
+            class="styles__w40vpoh"
             tabindex="0"
           >
             <input
               aria-label="Name"
-              class="emotion-16 emotion-17"
+              class="emotion-14 emotion-15"
               data-direction="column"
               data-error="false"
               id="«r2e»"
