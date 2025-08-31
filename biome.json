@@ -1,5 +1,6 @@
 {
   "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+   "experimentalScannerIgnores": [".git", "dist", "node_modules"],
   "assist": {
     "actions": {
       "source": {
@@ -9,11 +10,13 @@
         "useSortedProperties": "on"
       }
     },
+
     "includes": [
       "!**/package.json",
       "**/*.ts",
       "**/*.tsx",
       "!**/dist/**",
+      "!**/node_modules/**",
       "!**/build/**",
       "!**/.turbo/**",
       "!**/prebuild.ts",
