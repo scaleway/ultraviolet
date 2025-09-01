@@ -1,6 +1,8 @@
 import { theme } from '@ultraviolet/themes'
 import { fadeInVanillaExtract } from '../../utils'
-import { style } from '@vanilla-extract/css'
+import { createVar, style } from '@vanilla-extract/css'
+
+export const rankActionBar = createVar()
 
 export const stackActionBar = style({
   height: '100%',
@@ -17,4 +19,5 @@ export const actionBar = style({
   position: 'fixed',
   transform: 'translate(-50%, 0)',
   width: '37.5rem',
+  bottom: `calc(${theme.sizing['700']} * ${rankActionBar} + ${theme.space['2']})`,
 })
