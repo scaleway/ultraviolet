@@ -1,5 +1,18 @@
 # Change Log
 
+## 2.1.0
+
+### Minor Changes
+
+- [#5424](https://github.com/scaleway/ultraviolet/pull/5424) [`2be6ab9`](https://github.com/scaleway/ultraviolet/commit/2be6ab95b33591fb937f0c78e362a69702944bc4) Thanks [@lisalupi](https://github.com/lisalupi)! - - New component `Key`
+  - Use component `Key` in `SearchInput` instead of custom
+
+## 2.0.6
+
+### Patch Changes
+
+- [#5426](https://github.com/scaleway/ultraviolet/pull/5426) [`8a5652e`](https://github.com/scaleway/ultraviolet/commit/8a5652ea86f6bce6ff75f5123acfc5c6ae648ac7) Thanks [@lisalupi](https://github.com/lisalupi)! - `TagList`: arrow on popover should be visible
+
 ## 2.0.5
 
 ### Patch Changes

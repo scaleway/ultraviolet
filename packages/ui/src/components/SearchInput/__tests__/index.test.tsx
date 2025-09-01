@@ -3,19 +3,8 @@ import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
 import { describe, expect, test } from 'vitest'
 import { SearchInput } from '..'
-import { KEYS_MATCH, Key } from '../Key'
 
 describe('SearchInput', () => {
-  describe('Key', () => {
-    Object.keys(KEYS_MATCH).forEach(key => {
-      test(`renders correctly with special ${key} key`, () =>
-        shouldMatchEmotionSnapshot(<Key>{key}</Key>))
-    })
-
-    test('renders correctly with disabled', () =>
-      shouldMatchEmotionSnapshot(<Key disabled>K</Key>))
-  })
-
   test('renders correctly without children props', () =>
     shouldMatchEmotionSnapshot(
       <SearchInput

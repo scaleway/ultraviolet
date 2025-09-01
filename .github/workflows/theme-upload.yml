@@ -23,11 +23,11 @@ jobs:
       - name: Set up Python environment
         uses: actions/setup-python@v5
         with:
-          python-version: "3.13.6"
+          python-version: "3.13.7"
       - uses: pnpm/action-setup@v4.1.0
       - uses: actions/setup-node@v4.4.0
         with:
-          node-version: 22
+          node-version: 22.18.0
           cache: "pnpm"
       - run: pnpm install --frozen-lockfile
 
