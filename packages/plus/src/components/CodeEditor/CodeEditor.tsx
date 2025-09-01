@@ -125,6 +125,7 @@ type CodeEditorProps = {
   'aria-label'?: string
   'data-testid'?: string
   className?: string
+  error?: string
   lineNumbers?: boolean
 }
 
@@ -145,6 +146,7 @@ export const CodeEditor = ({
   'aria-label': ariaLabel,
   'data-testid': dataTestId,
   className,
+  error,
   lineNumbers = true,
 }: CodeEditorProps) => (
   <StyledStack data-disabled={disabled} gap={0.5}>
@@ -188,7 +190,12 @@ export const CodeEditor = ({
         </StyledCopyButton>
       ) : null}
     </EditorContainer>
-    {helper ? (
+    {error && typeof error !== 'boolean' ? (
+      <Text as="span" sentiment="danger" variant="caption">
+        {error}
+      </Text>
+    ) : null}
+    {!error && helper ? (
       <Text as="span" prominence="weak" sentiment="neutral" variant="caption">
         {helper}
       </Text>
