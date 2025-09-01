@@ -406,8 +406,8 @@ importers:
         specifier: 2.0.0
         version: 2.0.0(react@19.1.1)(schema-dts@1.1.5)(typescript@5.9.2)
       react-syntax-highlighter:
-        specifier: 15.6.1
-        version: 15.6.1(react@19.1.1)
+        specifier: 15.6.6
+        version: 15.6.6(react@19.1.1)
       react-use-clipboard:
         specifier: 1.0.9
         version: 1.0.9(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
@@ -6818,8 +6818,8 @@ packages:
     resolution: {integrity: sha512-t13BGPUlFDR7wRB5kQDG4jjl7XeuH6jbJGt11JHPL96qwsEHNX2+68tFXqc1/k+/jALsbSWJKUOT/hcYAZ5LkA==}
     engines: {node: '>=6'}
 
-  prismjs@1.29.0:
-    resolution: {integrity: sha512-Kx/1w86q/epKcmte75LNrEoT+lX8pBpavuAbvJWRXar7Hz8jrtF+e3vY751p0R8H9HdArwaCTNDDzHg/ScJK1Q==}
+  prismjs@1.30.0:
+    resolution: {integrity: sha512-DEvV2ZF2r2/63V+tK8hQvrR2ZGn10srHbXviTlcv7Kpzw8jWiNTqbVgjO3IY8RxrrOUF8VPMQQFysYYYv0YZxw==}
     engines: {node: '>=6'}
 
   progress@2.0.3:
@@ -6967,8 +6967,8 @@ packages:
       schema-dts: '>=0.7.4'
       typescript: '>=3.1.6'
 
-  react-syntax-highlighter@15.6.1:
-    resolution: {integrity: sha512-OqJ2/vL7lEeV5zTJyG7kmARppUjiB9h9udl4qHQjjgEos66z00Ia0OckwYfRxCSFrW8RJIBnsBwQsHZbVPspqg==}
+  react-syntax-highlighter@15.6.6:
+    resolution: {integrity: sha512-DgXrc+AZF47+HvAPEmn7Ua/1p10jNoVZVI/LoPiYdtY+OM+/nG5yefLHKJwdKqY1adMuHFbeyBaG9j64ML7vTw==}
     peerDependencies:
       react: '>= 0.14.0'
 
@@ -15384,7 +15384,7 @@ snapshots:
 
   prismjs@1.27.0: {}
 
-  prismjs@1.29.0: {}
+  prismjs@1.30.0: {}
 
   progress@2.0.3: {}
 
@@ -15567,13 +15567,13 @@ snapshots:
       schema-dts: 1.1.5
       typescript: 5.9.2
 
-  react-syntax-highlighter@15.6.1(react@19.1.1):
+  react-syntax-highlighter@15.6.6(react@19.1.1):
     dependencies:
-      '@babel/runtime': 7.26.9
+      '@babel/runtime': 7.28.2
       highlight.js: 10.7.3
       highlightjs-vue: 1.0.0
       lowlight: 1.20.0
-      prismjs: 1.29.0
+      prismjs: 1.30.0
       react: 19.1.1
       refractor: 3.6.0
 
