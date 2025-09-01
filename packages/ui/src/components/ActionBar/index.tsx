@@ -1,10 +1,10 @@
 'use client'
 
-import { theme } from '@ultraviolet/themes'
+import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type { ReactNode } from 'react'
 import { createPortal } from 'react-dom'
 import { Stack } from '../Stack'
-import { actionBar, stackActionBar } from './styles.css'
+import { actionBar, rankActionBar, stackActionBar } from './styles.css'
 
 type ActionBarProps = {
   children: ReactNode
@@ -36,9 +36,9 @@ export const ActionBar = ({
       className={`${className ? `${className} ` : ''}${actionBar}`}
       data-testid={dataTestId}
       role={role}
-      style={{
-        bottom: `calc(${theme.sizing['700']} * ${rank} + ${theme.space['2']})`,
-      }}
+      style={assignInlineVars({
+        [rankActionBar]: `${rank}`,
+      })}
     >
       <Stack alignItems="center" className={stackActionBar}>
         {children}
