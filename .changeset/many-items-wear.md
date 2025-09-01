@@ -2,4 +2,4 @@
 "@ultraviolet/plus": minor
 ---
 
-add lineNumbers prop
+Add lineNumber prop on `<CodeEditor />` component
