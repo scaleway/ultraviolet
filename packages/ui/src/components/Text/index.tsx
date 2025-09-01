@@ -1,5 +1,6 @@
 'use client'
 
+import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type { CSSProperties, ElementType, ReactNode } from 'react'
 import { useRef } from 'react'
 import recursivelyGetChildrenString from '../../helpers/recursivelyGetChildrenString'
@@ -9,6 +10,7 @@ import { typography } from '../../theme'
 import { Tooltip } from '../Tooltip'
 import type { PROMINENCES } from './constant'
 import { text } from './style.css'
+import { placementText, whiteSpaceText } from './variables.css'
 
 type ProminenceProps = keyof typeof PROMINENCES
 type PlacementProps = CSSProperties['textAlign']
@@ -75,10 +77,10 @@ export const Text = ({
         htmlFor={htmlFor}
         id={id}
         ref={elementRef}
-        style={{
-          textAlign: placement,
-          whiteSpace,
-        }}
+        style={assignInlineVars({
+          [placementText]: placement,
+          [whiteSpaceText]: whiteSpace,
+        })}
       >
         {children}
       </Component>
