@@ -2901,18 +2901,6 @@ exports[`toggle > renders correctly with non default size 1`] = `
 exports[`toggle > renders correctly with tooltip 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  display: inherit;
-}
-
-.emotion-0[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-0[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2931,16 +2919,16 @@ exports[`toggle > renders correctly with tooltip 1`] = `
   flex-direction: row-reverse;
 }
 
-.emotion-2:active .emotion-9[data-disabled='false']:after {
+.emotion-0:active .emotion-7[data-disabled='false']:after {
   width: calc(1rem * 1.3775);
 }
 
-.emotion-2[aria-disabled="true"] {
+.emotion-0[aria-disabled="true"] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.emotion-4 {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2963,7 +2951,7 @@ exports[`toggle > renders correctly with tooltip 1`] = `
   gap: 0.125rem;
 }
 
-.emotion-6 {
+.emotion-4 {
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 0.5rem;
@@ -2977,7 +2965,7 @@ exports[`toggle > renders correctly with tooltip 1`] = `
   justify-content: normal;
 }
 
-.emotion-8 {
+.emotion-6 {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -2999,11 +2987,11 @@ exports[`toggle > renders correctly with tooltip 1`] = `
   height: 1.5rem;
 }
 
-.emotion-8:hover {
+.emotion-6:hover {
   background-color: #d9dadd;
 }
 
-.emotion-8:after {
+.emotion-6:after {
   content: "";
   position: absolute;
   top: calc(1.5rem / 2 - 1rem / 2);
@@ -3016,25 +3004,25 @@ exports[`toggle > renders correctly with tooltip 1`] = `
   transition: all 300ms;
 }
 
-.emotion-8:focus-within,
-.emotion-8:focus {
+.emotion-6:focus-within,
+.emotion-6:focus {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.emotion-8[data-disabled="false"]:active:after {
+.emotion-6[data-disabled="false"]:active:after {
   width: calc(1rem * 1.3775);
 }
 
-.emotion-8:has(:checked) {
+.emotion-6:has(:checked) {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.emotion-8:has(:checked):hover {
+.emotion-6:has(:checked):hover {
   background-color: #792dd4;
 }
 
-.emotion-8:has(:checked):after {
+.emotion-6:has(:checked):after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -3042,41 +3030,41 @@ exports[`toggle > renders correctly with tooltip 1`] = `
   transform: translateX(-100%);
 }
 
-.emotion-8:has(:checked):focus-within,
-.emotion-8:has(:checked):focus {
+.emotion-6:has(:checked):focus-within,
+.emotion-6:has(:checked):focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-8[data-disabled="true"] {
+.emotion-6[data-disabled="true"] {
   background: #f3f3f4;
 }
 
-.emotion-8[data-disabled="true"]:has(:checked) {
+.emotion-6[data-disabled="true"]:has(:checked) {
   background: #e5dbfd;
 }
 
-.emotion-8[data-error="true"] {
+.emotion-6[data-error="true"] {
   background-color: #ffebf2;
 }
 
-.emotion-8[data-error="true"]:focus-within,
-.emotion-8[data-error="true"]:focus {
+.emotion-6[data-error="true"]:focus-within,
+.emotion-6[data-error="true"]:focus {
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-8[data-error="true"]:has(:checked) {
+.emotion-6[data-error="true"]:has(:checked) {
   background-color: #e51963;
 }
 
-.emotion-8[data-error="true"][data-disabled="true"] {
+.emotion-6[data-error="true"][data-disabled="true"] {
   background-color: #fff3f7;
 }
 
-.emotion-8[data-error="true"][data-disabled="true"]:has(:checked) {
+.emotion-6[data-error="true"][data-disabled="true"]:has(:checked) {
   background-color: #ffd3e3;
 }
 
-.emotion-10 {
+.emotion-8 {
   position: absolute;
   opacity: 0;
   top: 0;
@@ -3086,7 +3074,7 @@ exports[`toggle > renders correctly with tooltip 1`] = `
   cursor: pointer;
 }
 
-.emotion-10[disabled] {
+.emotion-8[disabled] {
   cursor: not-allowed;
 }
 
@@ -3096,18 +3084,18 @@ exports[`toggle > renders correctly with tooltip 1`] = `
     <div
       aria-controls="«rk»"
       aria-describedby="«rk»"
-      class="emotion-0 emotion-1"
+      class="styles__w40vpo9"
       tabindex="0"
     >
       <label
         aria-disabled="false"
-        class="emotion-2 emotion-3"
+        class="emotion-0 emotion-1"
       >
         <div
-          class="emotion-4 emotion-5"
+          class="emotion-2 emotion-3"
         >
           <div
-            class="emotion-6 emotion-7"
+            class="emotion-4 emotion-5"
           >
             <span
               class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
@@ -3117,13 +3105,13 @@ exports[`toggle > renders correctly with tooltip 1`] = `
           </div>
         </div>
         <div
-          class="emotion-8 emotion-9"
+          class="emotion-6 emotion-7"
           data-disabled="false"
           data-error="false"
         >
           <input
             aria-invalid="false"
-            class="emotion-10 emotion-11"
+            class="emotion-8 emotion-9"
             id="«rj»"
             name="test"
             type="checkbox"

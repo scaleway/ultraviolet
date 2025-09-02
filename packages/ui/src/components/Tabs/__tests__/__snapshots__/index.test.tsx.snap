@@ -634,18 +634,6 @@ exports[`tabs > renders correctly with Tabs menu selected 1`] = `
 }
 
 .emotion-22 {
-  display: inherit;
-}
-
-.emotion-22[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-22[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-24 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -687,71 +675,71 @@ exports[`tabs > renders correctly with Tabs menu selected 1`] = `
   line-height: 1.5rem;
 }
 
-.emotion-24:hover,
-.emotion-24:active,
-.emotion-24:focus {
+.emotion-22:hover,
+.emotion-22:active,
+.emotion-22:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
   outline: none;
 }
 
-.emotion-24:focus-visible {
+.emotion-22:focus-visible {
   outline: auto;
 }
 
-.emotion-24[aria-selected='true'] {
+.emotion-22[aria-selected='true'] {
   color: #641cb3;
   border-bottom-color: #8c40ef;
 }
 
-.emotion-24[aria-selected='true'] .e1hzf7cr3 {
+.emotion-22[aria-selected='true'] .e1hzf7cr3 {
   color: #641cb3;
 }
 
-.emotion-24[aria-disabled='false']:not(:disabled):hover,
-.emotion-24[aria-disabled='false']:not(:disabled):focus,
-.emotion-24[aria-disabled='false']:not(:disabled):active {
+.emotion-22[aria-disabled='false']:not(:disabled):hover,
+.emotion-22[aria-disabled='false']:not(:disabled):focus,
+.emotion-22[aria-disabled='false']:not(:disabled):active {
   outline: none;
   color: #641cb3;
   border-bottom-color: #8c40ef;
 }
 
-.emotion-24[aria-disabled='false']:not(:disabled):hover[data-is-selected='false'] .e1hzf7cr4,
-.emotion-24[aria-disabled='false']:not(:disabled):focus[data-is-selected='false'] .e1hzf7cr4,
-.emotion-24[aria-disabled='false']:not(:disabled):active[data-is-selected='false'] .e1hzf7cr4 {
+.emotion-22[aria-disabled='false']:not(:disabled):hover[data-is-selected='false'] .e1hzf7cr4,
+.emotion-22[aria-disabled='false']:not(:disabled):focus[data-is-selected='false'] .e1hzf7cr4,
+.emotion-22[aria-disabled='false']:not(:disabled):active[data-is-selected='false'] .e1hzf7cr4 {
   background-color: #f1eefc;
   border-color: #f1eefc;
   color: #641cb3;
 }
 
-.emotion-24[aria-disabled='false']:not(:disabled):hover[data-is-selected='false'] .e1hzf7cr3,
-.emotion-24[aria-disabled='false']:not(:disabled):focus[data-is-selected='false'] .e1hzf7cr3,
-.emotion-24[aria-disabled='false']:not(:disabled):active[data-is-selected='false'] .e1hzf7cr3 {
+.emotion-22[aria-disabled='false']:not(:disabled):hover[data-is-selected='false'] .e1hzf7cr3,
+.emotion-22[aria-disabled='false']:not(:disabled):focus[data-is-selected='false'] .e1hzf7cr3,
+.emotion-22[aria-disabled='false']:not(:disabled):active[data-is-selected='false'] .e1hzf7cr3 {
   color: #641cb3;
 }
 
-.emotion-24[aria-disabled='true'],
-.emotion-24:disabled {
+.emotion-22[aria-disabled='true'],
+.emotion-22:disabled {
   cursor: not-allowed;
   -webkit-filter: grayscale(1) opacity(50%);
   filter: grayscale(1) opacity(50%);
 }
 
-.emotion-24 .emotion-26 {
+.emotion-22 .emotion-24 {
   color: inherit;
   margin-left: 0.5rem;
   -webkit-transition: 300ms -webkit-transform ease-out;
   transition: 300ms transform ease-out;
 }
 
-.emotion-24[aria-expanded='true'] .emotion-26 {
+.emotion-22[aria-expanded='true'] .emotion-24 {
   -webkit-transform: rotate(-180deg);
   -moz-transform: rotate(-180deg);
   -ms-transform: rotate(-180deg);
   transform: rotate(-180deg);
 }
 
-.emotion-27 {
+.emotion-25 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -760,7 +748,7 @@ exports[`tabs > renders correctly with Tabs menu selected 1`] = `
   min-height: 1rem;
 }
 
-.emotion-27 .fillStroke {
+.emotion-25 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
@@ -834,20 +822,20 @@ exports[`tabs > renders correctly with Tabs menu selected 1`] = `
         <div
           aria-controls="menu-test"
           aria-describedby="menu-test"
-          class="emotion-22 emotion-23"
+          class="styles__w40vpo9"
           tabindex="-1"
         >
           <button
             aria-disabled="false"
             aria-expanded="true"
             aria-haspopup="dialog"
-            class="emotion-24 emotion-25"
+            class="emotion-22 emotion-23"
             role="tab"
             type="button"
           >
             More
             <svg
-              class="emotion-26 emotion-27 emotion-28"
+              class="emotion-24 emotion-25 emotion-26"
               viewBox="0 0 16 16"
             >
               <path
@@ -865,21 +853,21 @@ exports[`tabs > renders correctly with Tabs menu selected 1`] = `
         <div
           aria-controls="menu-«r1r»"
           aria-describedby="menu-«r1r»"
-          class="emotion-22 emotion-23"
+          class="styles__w40vpo9"
           tabindex="-1"
         >
           <button
             aria-disabled="true"
             aria-expanded="false"
             aria-haspopup="dialog"
-            class="emotion-24 emotion-25"
+            class="emotion-22 emotion-23"
             disabled=""
             role="tab"
             type="button"
           >
             More again
             <svg
-              class="emotion-26 emotion-27 emotion-28"
+              class="emotion-24 emotion-25 emotion-26"
               viewBox="0 0 16 16"
             >
               <path
@@ -1500,18 +1488,6 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
 }
 
 .emotion-124 {
-  display: inherit;
-}
-
-.emotion-124[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-124[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-126 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1553,71 +1529,71 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
   line-height: 1.5rem;
 }
 
-.emotion-126:hover,
-.emotion-126:active,
-.emotion-126:focus {
+.emotion-124:hover,
+.emotion-124:active,
+.emotion-124:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
   outline: none;
 }
 
-.emotion-126:focus-visible {
+.emotion-124:focus-visible {
   outline: auto;
 }
 
-.emotion-126[aria-selected='true'] {
+.emotion-124[aria-selected='true'] {
   color: #641cb3;
   border-bottom-color: #8c40ef;
 }
 
-.emotion-126[aria-selected='true'] .e1hzf7cr3 {
+.emotion-124[aria-selected='true'] .e1hzf7cr3 {
   color: #641cb3;
 }
 
-.emotion-126[aria-disabled='false']:not(:disabled):hover,
-.emotion-126[aria-disabled='false']:not(:disabled):focus,
-.emotion-126[aria-disabled='false']:not(:disabled):active {
+.emotion-124[aria-disabled='false']:not(:disabled):hover,
+.emotion-124[aria-disabled='false']:not(:disabled):focus,
+.emotion-124[aria-disabled='false']:not(:disabled):active {
   outline: none;
   color: #641cb3;
   border-bottom-color: #8c40ef;
 }
 
-.emotion-126[aria-disabled='false']:not(:disabled):hover[data-is-selected='false'] .emotion-9,
-.emotion-126[aria-disabled='false']:not(:disabled):focus[data-is-selected='false'] .emotion-9,
-.emotion-126[aria-disabled='false']:not(:disabled):active[data-is-selected='false'] .emotion-9 {
+.emotion-124[aria-disabled='false']:not(:disabled):hover[data-is-selected='false'] .emotion-9,
+.emotion-124[aria-disabled='false']:not(:disabled):focus[data-is-selected='false'] .emotion-9,
+.emotion-124[aria-disabled='false']:not(:disabled):active[data-is-selected='false'] .emotion-9 {
   background-color: #f1eefc;
   border-color: #f1eefc;
   color: #641cb3;
 }
 
-.emotion-126[aria-disabled='false']:not(:disabled):hover[data-is-selected='false'] .e1hzf7cr3,
-.emotion-126[aria-disabled='false']:not(:disabled):focus[data-is-selected='false'] .e1hzf7cr3,
-.emotion-126[aria-disabled='false']:not(:disabled):active[data-is-selected='false'] .e1hzf7cr3 {
+.emotion-124[aria-disabled='false']:not(:disabled):hover[data-is-selected='false'] .e1hzf7cr3,
+.emotion-124[aria-disabled='false']:not(:disabled):focus[data-is-selected='false'] .e1hzf7cr3,
+.emotion-124[aria-disabled='false']:not(:disabled):active[data-is-selected='false'] .e1hzf7cr3 {
   color: #641cb3;
 }
 
-.emotion-126[aria-disabled='true'],
-.emotion-126:disabled {
+.emotion-124[aria-disabled='true'],
+.emotion-124:disabled {
   cursor: not-allowed;
   -webkit-filter: grayscale(1) opacity(50%);
   filter: grayscale(1) opacity(50%);
 }
 
-.emotion-126 .emotion-128 {
+.emotion-124 .emotion-126 {
   color: inherit;
   margin-left: 0.5rem;
   -webkit-transition: 300ms -webkit-transform ease-out;
   transition: 300ms transform ease-out;
 }
 
-.emotion-126[aria-expanded='true'] .emotion-128 {
+.emotion-124[aria-expanded='true'] .emotion-126 {
   -webkit-transform: rotate(-180deg);
   -moz-transform: rotate(-180deg);
   -ms-transform: rotate(-180deg);
   transform: rotate(-180deg);
 }
 
-.emotion-129 {
+.emotion-127 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -1626,12 +1602,12 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
   min-height: 1rem;
 }
 
-.emotion-129 .fillStroke {
+.emotion-127 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.emotion-136 {
+.emotion-132 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1680,64 +1656,64 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
   box-shadow: 0px 0px 24px 6px #d9dadd66;
 }
 
-.emotion-136:hover,
-.emotion-136:active,
-.emotion-136:focus {
+.emotion-132:hover,
+.emotion-132:active,
+.emotion-132:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
   outline: none;
 }
 
-.emotion-136:focus-visible {
+.emotion-132:focus-visible {
   outline: auto;
 }
 
-.emotion-136[aria-selected='true'] {
+.emotion-132[aria-selected='true'] {
   color: #641cb3;
   border-bottom-color: #8c40ef;
 }
 
-.emotion-136[aria-selected='true'] .e1hzf7cr3 {
+.emotion-132[aria-selected='true'] .e1hzf7cr3 {
   color: #641cb3;
 }
 
-.emotion-136[aria-disabled='false']:not(:disabled):hover,
-.emotion-136[aria-disabled='false']:not(:disabled):focus,
-.emotion-136[aria-disabled='false']:not(:disabled):active {
+.emotion-132[aria-disabled='false']:not(:disabled):hover,
+.emotion-132[aria-disabled='false']:not(:disabled):focus,
+.emotion-132[aria-disabled='false']:not(:disabled):active {
   outline: none;
   color: #641cb3;
   border-bottom-color: #8c40ef;
 }
 
-.emotion-136[aria-disabled='false']:not(:disabled):hover[data-is-selected='false'] .emotion-9,
-.emotion-136[aria-disabled='false']:not(:disabled):focus[data-is-selected='false'] .emotion-9,
-.emotion-136[aria-disabled='false']:not(:disabled):active[data-is-selected='false'] .emotion-9 {
+.emotion-132[aria-disabled='false']:not(:disabled):hover[data-is-selected='false'] .emotion-9,
+.emotion-132[aria-disabled='false']:not(:disabled):focus[data-is-selected='false'] .emotion-9,
+.emotion-132[aria-disabled='false']:not(:disabled):active[data-is-selected='false'] .emotion-9 {
   background-color: #f1eefc;
   border-color: #f1eefc;
   color: #641cb3;
 }
 
-.emotion-136[aria-disabled='false']:not(:disabled):hover[data-is-selected='false'] .e1hzf7cr3,
-.emotion-136[aria-disabled='false']:not(:disabled):focus[data-is-selected='false'] .e1hzf7cr3,
-.emotion-136[aria-disabled='false']:not(:disabled):active[data-is-selected='false'] .e1hzf7cr3 {
+.emotion-132[aria-disabled='false']:not(:disabled):hover[data-is-selected='false'] .e1hzf7cr3,
+.emotion-132[aria-disabled='false']:not(:disabled):focus[data-is-selected='false'] .e1hzf7cr3,
+.emotion-132[aria-disabled='false']:not(:disabled):active[data-is-selected='false'] .e1hzf7cr3 {
   color: #641cb3;
 }
 
-.emotion-136[aria-disabled='true'],
-.emotion-136:disabled {
+.emotion-132[aria-disabled='true'],
+.emotion-132:disabled {
   cursor: not-allowed;
   -webkit-filter: grayscale(1) opacity(50%);
   filter: grayscale(1) opacity(50%);
 }
 
-.emotion-136 .emotion-128 {
+.emotion-132 .emotion-126 {
   color: inherit;
   margin-left: 0.5rem;
   -webkit-transition: 300ms -webkit-transform ease-out;
   transition: 300ms transform ease-out;
 }
 
-.emotion-136[aria-expanded='true'] .emotion-128 {
+.emotion-132[aria-expanded='true'] .emotion-126 {
   -webkit-transform: rotate(-180deg);
   -moz-transform: rotate(-180deg);
   -ms-transform: rotate(-180deg);
@@ -2117,20 +2093,20 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
         <div
           aria-controls="menu-test"
           aria-describedby="menu-test"
-          class="emotion-124 emotion-125"
+          class="styles__w40vpo9"
           tabindex="-1"
         >
           <button
             aria-disabled="false"
             aria-expanded="true"
             aria-haspopup="dialog"
-            class="emotion-126 emotion-127"
+            class="emotion-124 emotion-125"
             role="tab"
             type="button"
           >
             Blabla
             <svg
-              class="emotion-128 emotion-129 emotion-130"
+              class="emotion-126 emotion-127 emotion-128"
               viewBox="0 0 16 16"
             >
               <path
@@ -2148,20 +2124,20 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
         <div
           aria-controls="menu-«ro»"
           aria-describedby="menu-«ro»"
-          class="emotion-124 emotion-125"
+          class="styles__w40vpo9"
           tabindex="-1"
         >
           <button
             aria-disabled="false"
             aria-expanded="true"
             aria-haspopup="dialog"
-            class="emotion-135 emotion-136 emotion-127"
+            class="emotion-131 emotion-132 emotion-125"
             role="tab"
             type="button"
           >
             More
             <svg
-              class="emotion-128 emotion-129 emotion-130"
+              class="emotion-126 emotion-127 emotion-128"
               viewBox="0 0 16 16"
             >
               <path
@@ -2175,44 +2151,7 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
       </div>
     </div>
   </div>
-  @keyframes animation-0 {
-  0% {
-    opacity: 0;
-    -webkit-transform: translate3d(0px, 4px, 0);
-    -moz-transform: translate3d(0px, 4px, 0);
-    -ms-transform: translate3d(0px, 4px, 0);
-    transform: translate3d(0px, 4px, 0);
-  }
-
-  100% {
-    opacity: 1;
-    -webkit-transform: translate3d(0px, 4px, 0);
-    -moz-transform: translate3d(0px, 4px, 0);
-    -ms-transform: translate3d(0px, 4px, 0);
-    transform: translate3d(0px, 4px, 0);
-  }
-}
-
-.emotion-1 {
-  background: #151a2d;
-  color: #ffffff;
-  border-radius: 0.25rem;
-  padding: 0.25rem 0.5rem;
-  text-align: center;
-  position: absolute;
-  max-width: 14.5rem;
-  max-height: 30rem;
-  overflow-wrap: break-word;
-  font-size: 0.8rem;
-  inset: 0 auto auto 0;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  z-index: 1;
-  -webkit-transform: translate3d(0px, 4px, 0);
-  -moz-transform: translate3d(0px, 4px, 0);
-  -ms-transform: translate3d(0px, 4px, 0);
-  transform: translate3d(0px, 4px, 0);
+  .emotion-0 {
   background-color: #ffffff;
   box-shadow: 0px 4px 8px 0px #22263829,0px 8px 24px 0px #2226383d;
   padding: 0;
@@ -2221,44 +2160,11 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
   padding: 0.125rem 0;
 }
 
-.emotion-1[data-animated="true"] {
-  -webkit-animation: 0ms animation-0 forwards;
-  animation: 0ms animation-0 forwards;
-}
-
-.emotion-1[data-has-arrow="true"]::after {
-  content: " ";
-  position: absolute;
-  top: -5px;
-  left: 0px;
-  -webkit-transform: rotate(180deg);
-  -moz-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  transform: rotate(180deg);
-  margin-left: -8px;
-  border-width: 8px;
-  border-style: solid;
-  border-color: #151a2d transparent transparent transparent;
-  pointer-events: none;
-}
-
-.emotion-1[data-visible-in-dom="false"] {
-  display: none;
-}
-
-.emotion-1>.emotion-4 {
-  max-height: calc(30rem - 1rem);
-}
-
-.emotion-1[data-has-arrow='true']::after {
+.emotion-0[data-has-arrow='true']::after {
   border-color: #ffffff transparent transparent transparent;
 }
 
-.emotion-3[data-max-height="true"] {
-  overflow: auto;
-}
-
-.emotion-5 {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2287,8 +2193,8 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
   position: relative;
 }
 
-.emotion-5:after,
-.emotion-5:before {
+.emotion-2:after,
+.emotion-2:before {
   border: solid transparent;
   border-width: 9px;
   content: ' ';
@@ -2298,15 +2204,15 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
   pointer-events: none;
 }
 
-.emotion-5:after {
+.emotion-2:after {
   border-color: transparent;
 }
 
-.emotion-5:before {
+.emotion-2:before {
   border-color: transparent;
 }
 
-.emotion-7 {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2329,17 +2235,17 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
   overflow: auto;
 }
 
-.emotion-9 {
+.emotion-6 {
   border-bottom: 1px solid #d9dadd;
   padding: 0.25rem 0.25rem;
   width: 100%;
 }
 
-.emotion-9:last-child {
+.emotion-6:last-child {
   border: none;
 }
 
-.emotion-12 {
+.emotion-9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2370,51 +2276,49 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
   background: none;
 }
 
-.emotion-12 svg {
+.emotion-9 svg {
   fill: #3f4250;
 }
 
-.emotion-12:hover,
-.emotion-12:focus-visible,
-.emotion-12[data-active='true'] {
+.emotion-9:hover,
+.emotion-9:focus-visible,
+.emotion-9[data-active='true'] {
   background-color: #e9eaeb;
   color: #222638;
 }
 
-.emotion-12:hover svg,
-.emotion-12:focus-visible svg,
-.emotion-12[data-active='true'] svg {
+.emotion-9:hover svg,
+.emotion-9:focus-visible svg,
+.emotion-9[data-active='true'] svg {
   fill: #222638;
 }
 
-.emotion-12[aria-selected='true'] {
+.emotion-9[aria-selected='true'] {
   color: #641cb3;
 }
 
 <div
-    class="emotion-0 emotion-1 emotion-2"
-    data-animated="false"
-    data-has-arrow="false"
+    class="emotion-0 emotion-1 styles__w40vpo4 null"
     id="menu-test"
     role="dialog"
-    style="opacity: 1; animation: none;"
+    style="--ozfz3c0: -5px; --ozfz3c1: 0px; --ozfz3c2:  rotate(180deg); --ozfz3c4: translate3d(0px, 4px, 0); --ozfz3c5: 0ms; --ozfz3c6: translate3d(0px, 4px, 0); --ozfz3c7: 14.5rem; --ozfz3c3: 30rem; opacity: 1; animation: none;"
   >
     <div
-      class="emotion-3 emotion-4"
-      data-max-height="true"
+      class="styles__w40vpo2 styles_hasMaxHeight_true__w40vpo3"
+      style="--ozfz3c3: 30rem;"
     >
       <div
-        class="emotion-5 emotion-6"
+        class="emotion-2 emotion-3"
         role="menu"
       >
         <div
-          class="emotion-7 emotion-8"
+          class="emotion-4 emotion-5"
         >
           <div
-            class="emotion-9 emotion-10"
+            class="emotion-6 emotion-7"
           >
             <button
-              class="emotion-11 emotion-12 emotion-13"
+              class="emotion-8 emotion-9 emotion-10"
               data-active="false"
               data-is-disclosure="false"
               data-is-menu-item="true"
@@ -2425,10 +2329,10 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
             </button>
           </div>
           <div
-            class="emotion-9 emotion-10"
+            class="emotion-6 emotion-7"
           >
             <button
-              class="emotion-11 emotion-12 emotion-13"
+              class="emotion-8 emotion-9 emotion-10"
               data-active="false"
               data-is-disclosure="false"
               data-is-menu-item="true"
@@ -2442,44 +2346,7 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
       </div>
     </div>
   </div>
-  @keyframes animation-0 {
-  0% {
-    opacity: 0;
-    -webkit-transform: translate3d(0px, 4px, 0);
-    -moz-transform: translate3d(0px, 4px, 0);
-    -ms-transform: translate3d(0px, 4px, 0);
-    transform: translate3d(0px, 4px, 0);
-  }
-
-  100% {
-    opacity: 1;
-    -webkit-transform: translate3d(0px, 4px, 0);
-    -moz-transform: translate3d(0px, 4px, 0);
-    -ms-transform: translate3d(0px, 4px, 0);
-    transform: translate3d(0px, 4px, 0);
-  }
-}
-
-.emotion-1 {
-  background: #151a2d;
-  color: #ffffff;
-  border-radius: 0.25rem;
-  padding: 0.25rem 0.5rem;
-  text-align: center;
-  position: absolute;
-  max-width: 14.5rem;
-  max-height: 30rem;
-  overflow-wrap: break-word;
-  font-size: 0.8rem;
-  inset: 0 auto auto 0;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  z-index: 1;
-  -webkit-transform: translate3d(0px, 4px, 0);
-  -moz-transform: translate3d(0px, 4px, 0);
-  -ms-transform: translate3d(0px, 4px, 0);
-  transform: translate3d(0px, 4px, 0);
+  .emotion-0 {
   background-color: #ffffff;
   box-shadow: 0px 4px 8px 0px #22263829,0px 8px 24px 0px #2226383d;
   padding: 0;
@@ -2488,44 +2355,11 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
   padding: 0.125rem 0;
 }
 
-.emotion-1[data-animated="true"] {
-  -webkit-animation: 0ms animation-0 forwards;
-  animation: 0ms animation-0 forwards;
-}
-
-.emotion-1[data-has-arrow="true"]::after {
-  content: " ";
-  position: absolute;
-  top: -5px;
-  left: 0px;
-  -webkit-transform: rotate(180deg);
-  -moz-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  transform: rotate(180deg);
-  margin-left: -8px;
-  border-width: 8px;
-  border-style: solid;
-  border-color: #151a2d transparent transparent transparent;
-  pointer-events: none;
-}
-
-.emotion-1[data-visible-in-dom="false"] {
-  display: none;
-}
-
-.emotion-1>.emotion-4 {
-  max-height: calc(30rem - 1rem);
-}
-
-.emotion-1[data-has-arrow='true']::after {
+.emotion-0[data-has-arrow='true']::after {
   border-color: #ffffff transparent transparent transparent;
 }
 
-.emotion-3[data-max-height="true"] {
-  overflow: auto;
-}
-
-.emotion-5 {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2554,8 +2388,8 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
   position: relative;
 }
 
-.emotion-5:after,
-.emotion-5:before {
+.emotion-2:after,
+.emotion-2:before {
   border: solid transparent;
   border-width: 9px;
   content: ' ';
@@ -2565,15 +2399,15 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
   pointer-events: none;
 }
 
-.emotion-5:after {
+.emotion-2:after {
   border-color: transparent;
 }
 
-.emotion-5:before {
+.emotion-2:before {
   border-color: transparent;
 }
 
-.emotion-7 {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2596,7 +2430,7 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
   overflow: auto;
 }
 
-.emotion-9 {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2606,7 +2440,7 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
   flex-direction: column;
 }
 
-.emotion-9 .emotion-12 {
+.emotion-6 .emotion-9 {
   font-size: 0.875rem;
   line-height: 1.25rem;
   font-weight: inherit;
@@ -2618,14 +2452,14 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
   background-color: transparent;
 }
 
-.emotion-9 .emotion-12[aria-disabled='true'],
-.emotion-9 .emotion-12:disabled {
+.emotion-6 .emotion-9[aria-disabled='true'],
+.emotion-6 .emotion-9:disabled {
   cursor: not-allowed;
   -webkit-filter: grayscale(1) opacity(50%);
   filter: grayscale(1) opacity(50%);
 }
 
-.emotion-11 {
+.emotion-8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2667,57 +2501,57 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
   line-height: 1.5rem;
 }
 
-.emotion-11:hover,
-.emotion-11:active,
-.emotion-11:focus {
+.emotion-8:hover,
+.emotion-8:active,
+.emotion-8:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
   outline: none;
 }
 
-.emotion-11:focus-visible {
+.emotion-8:focus-visible {
   outline: auto;
 }
 
-.emotion-11[aria-selected='true'] {
+.emotion-8[aria-selected='true'] {
   color: #641cb3;
   border-bottom-color: #8c40ef;
 }
 
-.emotion-11[aria-selected='true'] .e1hzf7cr3 {
+.emotion-8[aria-selected='true'] .e1hzf7cr3 {
   color: #641cb3;
 }
 
-.emotion-11[aria-disabled='false']:not(:disabled):hover,
-.emotion-11[aria-disabled='false']:not(:disabled):focus,
-.emotion-11[aria-disabled='false']:not(:disabled):active {
+.emotion-8[aria-disabled='false']:not(:disabled):hover,
+.emotion-8[aria-disabled='false']:not(:disabled):focus,
+.emotion-8[aria-disabled='false']:not(:disabled):active {
   outline: none;
   color: #641cb3;
   border-bottom-color: #8c40ef;
 }
 
-.emotion-11[aria-disabled='false']:not(:disabled):hover[data-is-selected='false'] .emotion-18,
-.emotion-11[aria-disabled='false']:not(:disabled):focus[data-is-selected='false'] .emotion-18,
-.emotion-11[aria-disabled='false']:not(:disabled):active[data-is-selected='false'] .emotion-18 {
+.emotion-8[aria-disabled='false']:not(:disabled):hover[data-is-selected='false'] .emotion-15,
+.emotion-8[aria-disabled='false']:not(:disabled):focus[data-is-selected='false'] .emotion-15,
+.emotion-8[aria-disabled='false']:not(:disabled):active[data-is-selected='false'] .emotion-15 {
   background-color: #f1eefc;
   border-color: #f1eefc;
   color: #641cb3;
 }
 
-.emotion-11[aria-disabled='false']:not(:disabled):hover[data-is-selected='false'] .e1hzf7cr3,
-.emotion-11[aria-disabled='false']:not(:disabled):focus[data-is-selected='false'] .e1hzf7cr3,
-.emotion-11[aria-disabled='false']:not(:disabled):active[data-is-selected='false'] .e1hzf7cr3 {
+.emotion-8[aria-disabled='false']:not(:disabled):hover[data-is-selected='false'] .e1hzf7cr3,
+.emotion-8[aria-disabled='false']:not(:disabled):focus[data-is-selected='false'] .e1hzf7cr3,
+.emotion-8[aria-disabled='false']:not(:disabled):active[data-is-selected='false'] .e1hzf7cr3 {
   color: #641cb3;
 }
 
-.emotion-11[aria-disabled='true'],
-.emotion-11:disabled {
+.emotion-8[aria-disabled='true'],
+.emotion-8:disabled {
   cursor: not-allowed;
   -webkit-filter: grayscale(1) opacity(50%);
   filter: grayscale(1) opacity(50%);
 }
 
-.emotion-13 {
+.emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2740,7 +2574,7 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
   gap: 0.25rem;
 }
 
-.emotion-15 {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2762,12 +2596,12 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
   flex-direction: row;
 }
 
-.emotion-17 {
+.emotion-14 {
   padding: 0 0.5rem;
   margin-left: 0.5rem;
 }
 
-.emotion-55 {
+.emotion-52 {
   margin-left: 0.5rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2775,7 +2609,7 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
   display: flex;
 }
 
-.emotion-131 {
+.emotion-128 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2787,19 +2621,7 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
   right: 0;
 }
 
-.emotion-133 {
-  display: inherit;
-}
-
-.emotion-133[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-133[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-135 {
+.emotion-130 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2841,71 +2663,71 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
   line-height: 1.5rem;
 }
 
-.emotion-135:hover,
-.emotion-135:active,
-.emotion-135:focus {
+.emotion-130:hover,
+.emotion-130:active,
+.emotion-130:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
   outline: none;
 }
 
-.emotion-135:focus-visible {
+.emotion-130:focus-visible {
   outline: auto;
 }
 
-.emotion-135[aria-selected='true'] {
+.emotion-130[aria-selected='true'] {
   color: #641cb3;
   border-bottom-color: #8c40ef;
 }
 
-.emotion-135[aria-selected='true'] .e1hzf7cr3 {
+.emotion-130[aria-selected='true'] .e1hzf7cr3 {
   color: #641cb3;
 }
 
-.emotion-135[aria-disabled='false']:not(:disabled):hover,
-.emotion-135[aria-disabled='false']:not(:disabled):focus,
-.emotion-135[aria-disabled='false']:not(:disabled):active {
+.emotion-130[aria-disabled='false']:not(:disabled):hover,
+.emotion-130[aria-disabled='false']:not(:disabled):focus,
+.emotion-130[aria-disabled='false']:not(:disabled):active {
   outline: none;
   color: #641cb3;
   border-bottom-color: #8c40ef;
 }
 
-.emotion-135[aria-disabled='false']:not(:disabled):hover[data-is-selected='false'] .emotion-18,
-.emotion-135[aria-disabled='false']:not(:disabled):focus[data-is-selected='false'] .emotion-18,
-.emotion-135[aria-disabled='false']:not(:disabled):active[data-is-selected='false'] .emotion-18 {
+.emotion-130[aria-disabled='false']:not(:disabled):hover[data-is-selected='false'] .emotion-15,
+.emotion-130[aria-disabled='false']:not(:disabled):focus[data-is-selected='false'] .emotion-15,
+.emotion-130[aria-disabled='false']:not(:disabled):active[data-is-selected='false'] .emotion-15 {
   background-color: #f1eefc;
   border-color: #f1eefc;
   color: #641cb3;
 }
 
-.emotion-135[aria-disabled='false']:not(:disabled):hover[data-is-selected='false'] .e1hzf7cr3,
-.emotion-135[aria-disabled='false']:not(:disabled):focus[data-is-selected='false'] .e1hzf7cr3,
-.emotion-135[aria-disabled='false']:not(:disabled):active[data-is-selected='false'] .e1hzf7cr3 {
+.emotion-130[aria-disabled='false']:not(:disabled):hover[data-is-selected='false'] .e1hzf7cr3,
+.emotion-130[aria-disabled='false']:not(:disabled):focus[data-is-selected='false'] .e1hzf7cr3,
+.emotion-130[aria-disabled='false']:not(:disabled):active[data-is-selected='false'] .e1hzf7cr3 {
   color: #641cb3;
 }
 
-.emotion-135[aria-disabled='true'],
-.emotion-135:disabled {
+.emotion-130[aria-disabled='true'],
+.emotion-130:disabled {
   cursor: not-allowed;
   -webkit-filter: grayscale(1) opacity(50%);
   filter: grayscale(1) opacity(50%);
 }
 
-.emotion-135 .emotion-137 {
+.emotion-130 .emotion-132 {
   color: inherit;
   margin-left: 0.5rem;
   -webkit-transition: 300ms -webkit-transform ease-out;
   transition: 300ms transform ease-out;
 }
 
-.emotion-135[aria-expanded='true'] .emotion-137 {
+.emotion-130[aria-expanded='true'] .emotion-132 {
   -webkit-transform: rotate(-180deg);
   -moz-transform: rotate(-180deg);
   -ms-transform: rotate(-180deg);
   transform: rotate(-180deg);
 }
 
-.emotion-138 {
+.emotion-133 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -2914,50 +2736,48 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
   min-height: 1rem;
 }
 
-.emotion-138 .fillStroke {
+.emotion-133 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
 <div
-    class="emotion-0 emotion-1 emotion-2"
-    data-animated="false"
-    data-has-arrow="false"
+    class="emotion-0 emotion-1 styles__w40vpo4 null"
     id="menu-«ro»"
     role="dialog"
-    style="opacity: 1; animation: none;"
+    style="--ozfz3c0: -5px; --ozfz3c1: 0px; --ozfz3c2:  rotate(180deg); --ozfz3c4: translate3d(0px, 4px, 0); --ozfz3c5: 0ms; --ozfz3c6: translate3d(0px, 4px, 0); --ozfz3c7: 14.5rem; --ozfz3c3: 30rem; opacity: 1; animation: none;"
   >
     <div
-      class="emotion-3 emotion-4"
-      data-max-height="true"
+      class="styles__w40vpo2 styles_hasMaxHeight_true__w40vpo3"
+      style="--ozfz3c3: 30rem;"
     >
       <div
-        class="emotion-5 emotion-6"
+        class="emotion-2 emotion-3"
         role="menu"
       >
         <div
-          class="emotion-7 emotion-8"
+          class="emotion-4 emotion-5"
         >
           <div
-            class="emotion-9 emotion-10"
+            class="emotion-6 emotion-7"
           >
             <button
               aria-disabled="false"
               aria-selected="true"
-              class="emotion-11 emotion-12"
+              class="emotion-8 emotion-9"
               data-is-selected="true"
               role="tab"
               type="button"
             >
               <div
-                class="emotion-13 emotion-14"
+                class="emotion-10 emotion-11"
               >
                 <div
-                  class="emotion-15 emotion-14"
+                  class="emotion-12 emotion-11"
                 >
                   First
                   <span
-                    class="emotion-17 emotion-18 styles__1yf71jy0 styles_size_medium__1yf71jy2 styles_prominence_strong__1yf71jye styles_sentiment_primary__1yf71jy4 styles_undefined_compound_7__1yf71jyn style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+                    class="emotion-14 emotion-15 styles__1yf71jy0 styles_size_medium__1yf71jy2 styles_prominence_strong__1yf71jye styles_sentiment_primary__1yf71jy4 styles_undefined_compound_7__1yf71jyn style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
                     style="--qabug41: nowrap;"
                   >
                     2
@@ -2969,16 +2789,16 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
               aria-disabled="false"
               aria-label="1"
               aria-selected="false"
-              class="emotion-11 emotion-12"
+              class="emotion-8 emotion-9"
               data-is-selected="false"
               role="tab"
               type="button"
             >
               <div
-                class="emotion-13 emotion-14"
+                class="emotion-10 emotion-11"
               >
                 <div
-                  class="emotion-15 emotion-14"
+                  class="emotion-12 emotion-11"
                 >
                   Second
                 </div>
@@ -2987,16 +2807,16 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
             <button
               aria-disabled="false"
               aria-selected="false"
-              class="emotion-11 emotion-12"
+              class="emotion-8 emotion-9"
               data-is-selected="false"
               role="tab"
               type="button"
             >
               <div
-                class="emotion-13 emotion-14"
+                class="emotion-10 emotion-11"
               >
                 <div
-                  class="emotion-15 emotion-14"
+                  class="emotion-12 emotion-11"
                 >
                   Undefined
                 </div>
@@ -3005,20 +2825,20 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
             <button
               aria-disabled="false"
               aria-selected="false"
-              class="emotion-11 emotion-12"
+              class="emotion-8 emotion-9"
               data-is-selected="false"
               role="tab"
               type="button"
             >
               <div
-                class="emotion-13 emotion-14"
+                class="emotion-10 emotion-11"
               >
                 <div
-                  class="emotion-15 emotion-14"
+                  class="emotion-12 emotion-11"
                 >
                   Counter
                   <span
-                    class="emotion-17 emotion-18 styles__1yf71jy0 styles_size_medium__1yf71jy2 styles_prominence_default__1yf71jyd styles_sentiment_neutral__1yf71jya styles_undefined_compound_6__1yf71jym style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+                    class="emotion-14 emotion-15 styles__1yf71jy0 styles_size_medium__1yf71jy2 styles_prominence_default__1yf71jyd styles_sentiment_neutral__1yf71jya styles_undefined_compound_6__1yf71jym style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
                     style="--qabug41: nowrap;"
                   >
                     12
@@ -3030,20 +2850,20 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
               aria-disabled="false"
               aria-label="2"
               aria-selected="false"
-              class="emotion-11 emotion-12"
+              class="emotion-8 emotion-9"
               data-is-selected="false"
               role="tab"
               type="button"
             >
               <div
-                class="emotion-13 emotion-14"
+                class="emotion-10 emotion-11"
               >
                 <div
-                  class="emotion-15 emotion-14"
+                  class="emotion-12 emotion-11"
                 >
                   Counter no items
                   <span
-                    class="emotion-17 emotion-18 styles__1yf71jy0 styles_size_medium__1yf71jy2 styles_prominence_default__1yf71jyd styles_sentiment_neutral__1yf71jya styles_undefined_compound_6__1yf71jym style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+                    class="emotion-14 emotion-15 styles__1yf71jy0 styles_size_medium__1yf71jy2 styles_prominence_default__1yf71jyd styles_sentiment_neutral__1yf71jya styles_undefined_compound_6__1yf71jym style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
                     style="--qabug41: nowrap;"
                   >
                     0
@@ -3054,26 +2874,26 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
             <button
               aria-disabled="false"
               aria-selected="false"
-              class="emotion-11 emotion-12"
+              class="emotion-8 emotion-9"
               data-is-selected="false"
               role="tab"
               type="button"
             >
               <div
-                class="emotion-13 emotion-14"
+                class="emotion-10 emotion-11"
               >
                 <div
-                  class="emotion-15 emotion-14"
+                  class="emotion-12 emotion-11"
                 >
                   Conter and badge
                   <span
-                    class="emotion-17 emotion-18 styles__1yf71jy0 styles_size_medium__1yf71jy2 styles_prominence_default__1yf71jyd styles_sentiment_neutral__1yf71jya styles_undefined_compound_6__1yf71jym style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+                    class="emotion-14 emotion-15 styles__1yf71jy0 styles_size_medium__1yf71jy2 styles_prominence_default__1yf71jyd styles_sentiment_neutral__1yf71jya styles_undefined_compound_6__1yf71jym style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
                     style="--qabug41: nowrap;"
                   >
                     12
                   </span>
                   <span
-                    class="emotion-55 emotion-56"
+                    class="emotion-52 emotion-53"
                   >
                     Badge
                   </span>
@@ -3083,20 +2903,20 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
             <button
               aria-disabled="false"
               aria-selected="false"
-              class="emotion-11 emotion-12"
+              class="emotion-8 emotion-9"
               data-is-selected="false"
               role="tab"
               type="button"
             >
               <div
-                class="emotion-13 emotion-14"
+                class="emotion-10 emotion-11"
               >
                 <div
-                  class="emotion-15 emotion-14"
+                  class="emotion-12 emotion-11"
                 >
                   Badge
                   <span
-                    class="emotion-55 emotion-56"
+                    class="emotion-52 emotion-53"
                   >
                     Badge
                   </span>
@@ -3106,16 +2926,16 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
             <button
               aria-disabled="false"
               aria-selected="false"
-              class="emotion-11 emotion-12"
+              class="emotion-8 emotion-9"
               data-is-selected="false"
               role="tab"
               type="button"
             >
               <div
-                class="emotion-13 emotion-14"
+                class="emotion-10 emotion-11"
               >
                 <div
-                  class="emotion-15 emotion-14"
+                  class="emotion-12 emotion-11"
                 >
                   Very long tab name
                 </div>
@@ -3124,16 +2944,16 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
             <button
               aria-disabled="false"
               aria-selected="false"
-              class="emotion-11 emotion-12"
+              class="emotion-8 emotion-9"
               data-is-selected="false"
               role="tab"
               type="button"
             >
               <div
-                class="emotion-13 emotion-14"
+                class="emotion-10 emotion-11"
               >
                 <div
-                  class="emotion-15 emotion-14"
+                  class="emotion-12 emotion-11"
                 >
                   Very long tab name
                 </div>
@@ -3142,16 +2962,16 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
             <button
               aria-disabled="false"
               aria-selected="false"
-              class="emotion-11 emotion-12"
+              class="emotion-8 emotion-9"
               data-is-selected="false"
               role="tab"
               type="button"
             >
               <div
-                class="emotion-13 emotion-14"
+                class="emotion-10 emotion-11"
               >
                 <div
-                  class="emotion-15 emotion-14"
+                  class="emotion-12 emotion-11"
                 >
                   Very long tab name
                 </div>
@@ -3160,16 +2980,16 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
             <button
               aria-disabled="false"
               aria-selected="false"
-              class="emotion-11 emotion-12"
+              class="emotion-8 emotion-9"
               data-is-selected="false"
               role="tab"
               type="button"
             >
               <div
-                class="emotion-13 emotion-14"
+                class="emotion-10 emotion-11"
               >
                 <div
-                  class="emotion-15 emotion-14"
+                  class="emotion-12 emotion-11"
                 >
                   Very long tab name
                 </div>
@@ -3178,16 +2998,16 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
             <button
               aria-disabled="false"
               aria-selected="false"
-              class="emotion-11 emotion-12"
+              class="emotion-8 emotion-9"
               data-is-selected="false"
               role="tab"
               type="button"
             >
               <div
-                class="emotion-13 emotion-14"
+                class="emotion-10 emotion-11"
               >
                 <div
-                  class="emotion-15 emotion-14"
+                  class="emotion-12 emotion-11"
                 >
                   Very long tab name
                 </div>
@@ -3196,16 +3016,16 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
             <button
               aria-disabled="false"
               aria-selected="false"
-              class="emotion-11 emotion-12"
+              class="emotion-8 emotion-9"
               data-is-selected="false"
               role="tab"
               type="button"
             >
               <div
-                class="emotion-13 emotion-14"
+                class="emotion-10 emotion-11"
               >
                 <div
-                  class="emotion-15 emotion-14"
+                  class="emotion-12 emotion-11"
                 >
                   Very long tab name
                 </div>
@@ -3214,16 +3034,16 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
             <button
               aria-disabled="false"
               aria-selected="false"
-              class="emotion-11 emotion-12"
+              class="emotion-8 emotion-9"
               data-is-selected="false"
               role="tab"
               type="button"
             >
               <div
-                class="emotion-13 emotion-14"
+                class="emotion-10 emotion-11"
               >
                 <div
-                  class="emotion-15 emotion-14"
+                  class="emotion-12 emotion-11"
                 >
                   Very long tab name
                 </div>
@@ -3232,16 +3052,16 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
             <button
               aria-disabled="false"
               aria-selected="false"
-              class="emotion-11 emotion-12"
+              class="emotion-8 emotion-9"
               data-is-selected="false"
               role="tab"
               type="button"
             >
               <div
-                class="emotion-13 emotion-14"
+                class="emotion-10 emotion-11"
               >
                 <div
-                  class="emotion-15 emotion-14"
+                  class="emotion-12 emotion-11"
                 >
                   Very long tab name
                 </div>
@@ -3250,16 +3070,16 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
             <button
               aria-disabled="false"
               aria-selected="false"
-              class="emotion-11 emotion-12"
+              class="emotion-8 emotion-9"
               data-is-selected="false"
               role="tab"
               type="button"
             >
               <div
-                class="emotion-13 emotion-14"
+                class="emotion-10 emotion-11"
               >
                 <div
-                  class="emotion-15 emotion-14"
+                  class="emotion-12 emotion-11"
                 >
                   Very long tab name
                 </div>
@@ -3268,16 +3088,16 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
             <button
               aria-disabled="false"
               aria-selected="false"
-              class="emotion-11 emotion-12"
+              class="emotion-8 emotion-9"
               data-is-selected="false"
               role="tab"
               type="button"
             >
               <div
-                class="emotion-13 emotion-14"
+                class="emotion-10 emotion-11"
               >
                 <div
-                  class="emotion-15 emotion-14"
+                  class="emotion-12 emotion-11"
                 >
                   Very long tab name
                 </div>
@@ -3286,41 +3106,41 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
             <button
               aria-disabled="false"
               aria-selected="false"
-              class="emotion-11 emotion-12"
+              class="emotion-8 emotion-9"
               data-is-selected="false"
               role="tab"
               type="button"
             >
               <div
-                class="emotion-13 emotion-14"
+                class="emotion-10 emotion-11"
               >
                 <div
-                  class="emotion-15 emotion-14"
+                  class="emotion-12 emotion-11"
                 >
                   Very long tab name
                 </div>
               </div>
             </button>
             <div
-              class="emotion-131 emotion-132"
+              class="emotion-128 emotion-129"
             >
               <div
                 aria-controls="menu-test"
                 aria-describedby="menu-test"
-                class="emotion-133 emotion-134"
+                class="styles__w40vpo9"
                 tabindex="-1"
               >
                 <button
                   aria-disabled="false"
                   aria-expanded="true"
                   aria-haspopup="dialog"
-                  class="emotion-135 emotion-136"
+                  class="emotion-130 emotion-131"
                   role="tab"
                   type="button"
                 >
                   Blabla
                   <svg
-                    class="emotion-137 emotion-138 emotion-139"
+                    class="emotion-132 emotion-133 emotion-134"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -3337,44 +3157,7 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
       </div>
     </div>
   </div>
-  @keyframes animation-0 {
-  0% {
-    opacity: 0;
-    -webkit-transform: translate3d(8px, 0px, 0);
-    -moz-transform: translate3d(8px, 0px, 0);
-    -ms-transform: translate3d(8px, 0px, 0);
-    transform: translate3d(8px, 0px, 0);
-  }
-
-  100% {
-    opacity: 1;
-    -webkit-transform: translate3d(8px, 0px, 0);
-    -moz-transform: translate3d(8px, 0px, 0);
-    -ms-transform: translate3d(8px, 0px, 0);
-    transform: translate3d(8px, 0px, 0);
-  }
-}
-
-.emotion-1 {
-  background: #151a2d;
-  color: #ffffff;
-  border-radius: 0.25rem;
-  padding: 0.25rem 0.5rem;
-  text-align: center;
-  position: absolute;
-  max-width: 14.5rem;
-  max-height: 30rem;
-  overflow-wrap: break-word;
-  font-size: 0.8rem;
-  inset: 0 auto auto 0;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  z-index: 1;
-  -webkit-transform: translate3d(8px, 0px, 0);
-  -moz-transform: translate3d(8px, 0px, 0);
-  -ms-transform: translate3d(8px, 0px, 0);
-  transform: translate3d(8px, 0px, 0);
+  .emotion-0 {
   background-color: #ffffff;
   box-shadow: 0px 4px 8px 0px #22263829,0px 8px 24px 0px #2226383d;
   padding: 0;
@@ -3383,44 +3166,11 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
   padding: 0.125rem 0;
 }
 
-.emotion-1[data-animated="true"] {
-  -webkit-animation: 0ms animation-0 forwards;
-  animation: 0ms animation-0 forwards;
-}
-
-.emotion-1[data-has-arrow="true"]::after {
-  content: " ";
-  position: absolute;
-  top: 0px;
-  left: -5px;
-  -webkit-transform: translate(50%, -50%) rotate(90deg);
-  -moz-transform: translate(50%, -50%) rotate(90deg);
-  -ms-transform: translate(50%, -50%) rotate(90deg);
-  transform: translate(50%, -50%) rotate(90deg);
-  margin-left: -8px;
-  border-width: 8px;
-  border-style: solid;
-  border-color: #151a2d transparent transparent transparent;
-  pointer-events: none;
-}
-
-.emotion-1[data-visible-in-dom="false"] {
-  display: none;
-}
-
-.emotion-1>.emotion-4 {
-  max-height: calc(30rem - 1rem);
-}
-
-.emotion-1[data-has-arrow='true']::after {
+.emotion-0[data-has-arrow='true']::after {
   border-color: #ffffff transparent transparent transparent;
 }
 
-.emotion-3[data-max-height="true"] {
-  overflow: auto;
-}
-
-.emotion-5 {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3449,8 +3199,8 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
   position: relative;
 }
 
-.emotion-5:after,
-.emotion-5:before {
+.emotion-2:after,
+.emotion-2:before {
   border: solid transparent;
   border-width: 9px;
   content: ' ';
@@ -3460,15 +3210,15 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
   pointer-events: none;
 }
 
-.emotion-5:after {
+.emotion-2:after {
   border-color: transparent;
 }
 
-.emotion-5:before {
+.emotion-2:before {
   border-color: transparent;
 }
 
-.emotion-7 {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3491,17 +3241,17 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
   overflow: auto;
 }
 
-.emotion-9 {
+.emotion-6 {
   border-bottom: 1px solid #d9dadd;
   padding: 0.25rem 0.25rem;
   width: 100%;
 }
 
-.emotion-9:last-child {
+.emotion-6:last-child {
   border: none;
 }
 
-.emotion-12 {
+.emotion-9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3532,51 +3282,49 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
   background: none;
 }
 
-.emotion-12 svg {
+.emotion-9 svg {
   fill: #3f4250;
 }
 
-.emotion-12:hover,
-.emotion-12:focus-visible,
-.emotion-12[data-active='true'] {
+.emotion-9:hover,
+.emotion-9:focus-visible,
+.emotion-9[data-active='true'] {
   background-color: #e9eaeb;
   color: #222638;
 }
 
-.emotion-12:hover svg,
-.emotion-12:focus-visible svg,
-.emotion-12[data-active='true'] svg {
+.emotion-9:hover svg,
+.emotion-9:focus-visible svg,
+.emotion-9[data-active='true'] svg {
   fill: #222638;
 }
 
-.emotion-12[aria-selected='true'] {
+.emotion-9[aria-selected='true'] {
   color: #641cb3;
 }
 
 <div
-    class="emotion-0 emotion-1 emotion-2"
-    data-animated="false"
-    data-has-arrow="false"
+    class="emotion-0 emotion-1 styles__w40vpo4 null"
     id="menu-test"
     role="dialog"
-    style="opacity: 1; animation: none;"
+    style="--ozfz3c0: 0px; --ozfz3c1: -5px; --ozfz3c2: translate(50%, -50%) rotate(90deg); --ozfz3c4: translate3d(8px, 0px, 0); --ozfz3c5: 0ms; --ozfz3c6: translate3d(8px, 0px, 0); --ozfz3c7: 14.5rem; --ozfz3c3: 30rem; opacity: 1; animation: none;"
   >
     <div
-      class="emotion-3 emotion-4"
-      data-max-height="true"
+      class="styles__w40vpo2 styles_hasMaxHeight_true__w40vpo3"
+      style="--ozfz3c3: 30rem;"
     >
       <div
-        class="emotion-5 emotion-6"
+        class="emotion-2 emotion-3"
         role="menu"
       >
         <div
-          class="emotion-7 emotion-8"
+          class="emotion-4 emotion-5"
         >
           <div
-            class="emotion-9 emotion-10"
+            class="emotion-6 emotion-7"
           >
             <button
-              class="emotion-11 emotion-12 emotion-13"
+              class="emotion-8 emotion-9 emotion-10"
               data-active="false"
               data-is-disclosure="false"
               data-is-menu-item="true"
@@ -3587,10 +3335,10 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
             </button>
           </div>
           <div
-            class="emotion-9 emotion-10"
+            class="emotion-6 emotion-7"
           >
             <button
-              class="emotion-11 emotion-12 emotion-13"
+              class="emotion-8 emotion-9 emotion-10"
               data-active="false"
               data-is-disclosure="false"
               data-is-menu-item="true"

@@ -258,18 +258,6 @@ exports[`estimateCost - CustomUnitInput > render default values 1`] = `
 }
 
 .emotion-12 {
-  display: inherit;
-}
-
-.emotion-12[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-12[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -292,7 +280,7 @@ exports[`estimateCost - CustomUnitInput > render default values 1`] = `
   gap: 0.25rem;
 }
 
-.emotion-16 {
+.emotion-14 {
   display: grid;
   width: 100%;
   gap: 0.5rem;
@@ -307,85 +295,85 @@ exports[`estimateCost - CustomUnitInput > render default values 1`] = `
   width: 100%;
 }
 
-.emotion-16[data-size='small'] {
+.emotion-14[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-16[data-size='medium'] {
+.emotion-14[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-16[data-size='large'] {
+.emotion-14[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-16[data-state='neutral'] {
+.emotion-14[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.emotion-16[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-14[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-16[data-state='neutral']:not([data-disabled='true']):hover {
+.emotion-14[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-16[data-state='neutral']:not([data-disabled='true']):focus-visible {
+.emotion-14[data-state='neutral']:not([data-disabled='true']):focus-visible {
   outline: 5px auto Highlight;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-.emotion-16[data-state='neutral'][data-dropdownvisible='true'] {
+.emotion-14[data-state='neutral'][data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.emotion-16[data-state='success'] {
+.emotion-14[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.emotion-16[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-14[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #1b533f;
   box-shadow: 0px 0px 0px 3px #45d19f40;
 }
 
-.emotion-16[data-state='success'][data-dropdownvisible='true'] {
+.emotion-14[data-state='success'][data-dropdownvisible='true'] {
   border-color: #1b533f;
 }
 
-.emotion-16[data-state='danger'] {
+.emotion-14[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-16[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-14[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-16[data-state='danger'][data-dropdownvisible='true'] {
+.emotion-14[data-state='danger'][data-dropdownvisible='true'] {
   border-color: #92103f;
 }
 
-.emotion-16:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-14:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-16[data-readonly='true'] {
+.emotion-14[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-16[data-disabled='true'] {
+.emotion-14[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-18 {
+.emotion-16 {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
@@ -394,7 +382,7 @@ exports[`estimateCost - CustomUnitInput > render default values 1`] = `
   align-self: center;
 }
 
-.emotion-20 {
+.emotion-18 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -422,7 +410,7 @@ exports[`estimateCost - CustomUnitInput > render default values 1`] = `
   display: flex;
 }
 
-.emotion-22 {
+.emotion-20 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1rem;
@@ -431,7 +419,7 @@ exports[`estimateCost - CustomUnitInput > render default values 1`] = `
   min-height: 1rem;
 }
 
-.emotion-22 .fillStroke {
+.emotion-20 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
@@ -454,7 +442,7 @@ exports[`estimateCost - CustomUnitInput > render default values 1`] = `
             class="emotion-7 emotion-8"
             data-size="medium"
             data-testid="unit-input"
-            id="_r_0_"
+            id="«r0»"
             max="9007199254740991"
             min="1"
             name="iteration-value"
@@ -469,19 +457,18 @@ exports[`estimateCost - CustomUnitInput > render default values 1`] = `
           class="emotion-9 emotion-10 emotion-11"
         >
           <div
-            aria-controls="_r_2_"
-            aria-describedby="_r_2_"
-            class="emotion-12 emotion-13"
-            data-container-full-width="true"
+            aria-controls="«r2»"
+            aria-describedby="«r2»"
+            class="uv_w40vpo9 uv_w40vpob"
             tabindex="-1"
           >
             <div
-              class="emotion-14 emotion-1"
+              class="emotion-12 emotion-1"
             >
               <div
-                aria-controls="_r_2_"
+                aria-controls="«r2»"
                 aria-expanded="false"
-                class="emotion-16 emotion-17"
+                class="emotion-14 emotion-15"
                 data-disabled="false"
                 data-dropdownvisible="false"
                 data-readonly="false"
@@ -493,16 +480,16 @@ exports[`estimateCost - CustomUnitInput > render default values 1`] = `
                 tabindex="0"
               >
                 <div
-                  class="emotion-18 emotion-19 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+                  class="emotion-16 emotion-17 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
                 >
                   Hour(s)
                 </div>
                 <div
-                  class="emotion-20 emotion-21"
+                  class="emotion-18 emotion-19"
                 >
                   <svg
                     aria-label="show dropdown"
-                    class="emotion-22 emotion-23"
+                    class="emotion-20 emotion-21"
                     viewBox="0 0 16 16"
                   >
                     <path

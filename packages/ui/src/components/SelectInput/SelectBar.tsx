@@ -11,7 +11,6 @@ import {
 import type { ReactNode, RefObject } from 'react'
 import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react'
 import { Button } from '../Button'
-import { StyledChildrenContainer } from '../Popup'
 import { Stack } from '../Stack'
 import { Tag } from '../Tag'
 import { Text } from '../Text'
@@ -184,10 +183,6 @@ const CustomTag = styled(Tag, {
       : `
   text-overflow: ellipsis;
   overflow: hidden;`}
-
-  & > ${StyledChildrenContainer} {
-    overflow: hidden;
-  }
 `
 
 const SelectedValues = styled(Text)`

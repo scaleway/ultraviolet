@@ -1,6 +1,5 @@
 'use client'
 
-import styled from '@emotion/styled'
 import { CloseIcon } from '@ultraviolet/icons'
 import type { ComponentProps, ReactNode, Ref } from 'react'
 import {
@@ -17,47 +16,10 @@ import { ModalContext } from '../Modal/ModalProvider'
 import { Popup } from '../Popup'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
+import type { SIZES_WIDTH } from './constant'
+import { popover, stackPopover } from './styles.css'
 
 type SentimentType = 'neutral' | 'primary'
-
-const SIZES_WIDTH = {
-  large: 32.5,
-  medium: 26.25,
-  small: 20, // in rem
-}
-
-const StyledPopup = styled(Popup, {
-  shouldForwardProp: prop => !['sentiment', 'size'].includes(prop),
-})<{
-  sentiment: SentimentType
-  size: keyof typeof SIZES_WIDTH
-}>`
-  padding: ${({ theme }) => theme.space['2']};
-  width: ${({ size }) => SIZES_WIDTH[size]}rem;
-  max-width: ${({ size }) => SIZES_WIDTH[size]}rem;
-  text-align: initial;
-  box-shadow: ${({ theme }) => theme.shadows.popover};
-  background: ${({ theme, sentiment }) =>
-    sentiment === 'neutral'
-      ? theme.colors.neutral.background
-      : theme.colors.primary.backgroundStrong};
-
-  // Overrides the default popup arrow color to match the background color
-  &[data-has-arrow="true"] {
-    &::after {
-      border-color: ${({ theme, sentiment }) =>
-        sentiment === 'neutral'
-          ? theme.colors.neutral.background
-          : theme.colors.primary
-              .backgroundStrong} transparent transparent transparent; 
-    }
-  }
-`
-
-// This is to avoid having text inherit color from popup (which is white on white background)
-const StyledStack = styled(Stack)`
-  color: ${({ theme }) => theme.colors.neutral.text};
-`
 
 type ContentWrapperProps = Pick<
   PopoverProps,
@@ -70,7 +32,7 @@ const ContentWrapper = ({
   children,
   sentiment,
 }: ContentWrapperProps) => (
-  <StyledStack gap={1}>
+  <Stack className={stackPopover} gap={1}>
     <Stack direction="row" justifyContent="space-between">
       <Text
         as="h3"
@@ -102,7 +64,7 @@ const ContentWrapper = ({
     ) : (
       children
     )}
-  </StyledStack>
+  </Stack>
 )
 
 type PopoverProps = {
@@ -177,9 +139,9 @@ export const Popover = forwardRef(
     }, [isInsideModal, portalTarget])
 
     return (
-      <StyledPopup
+      <Popup
         align={align}
-        className={className}
+        className={`${className ? `${className} ` : ''}${popover({ sentiment, size })}`}
         data-testid={dataTestId}
         debounceDelay={0}
         dynamicDomRendering={dynamicDomRendering}
@@ -192,8 +154,6 @@ export const Popover = forwardRef(
         portalTarget={smartPortalTarget}
         ref={ref}
         role="dialog"
-        sentiment={sentiment}
-        size={size}
         tabIndex={-1}
         text={
           <ContentWrapper
@@ -207,7 +167,7 @@ export const Popover = forwardRef(
         visible={localVisible}
       >
         {children}
-      </StyledPopup>
+      </Popup>
     )
   },
 )
